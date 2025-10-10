@@ -1,171 +1,238 @@
-'use client'
-/**
- * Environment Configuration Manager;
- * Provides type-safe access to environment variables with validation;
- */
-export interface EnvConfig {}
-  nodeEnv: 'development' | 'production' | 'test'
-  apiUrl: string;
-  apiKey?: string;
-  enableAnalytics: boolean;
-  enableLogging: boolean;
-  logLevel: 'debug' | 'info' | 'warn' | 'error',
-  sentryDsn?: string;
-  gaTrackingId?: string;}
-}
-class EnvironmentConfig {
-  private config: EnvConfig;
-  private isInitialized = false;
-  constructor() {,
-    this.config = this.loadConfig(),
-    this.isInitialized = true;}
-  }
-  private loadConfig(): EnvConfig {
-    // Safely access environment variables with defaults;
-    return {
-class EnvironmentConfig {}
-  private config: EnvConfig
-  private isInitialized = false
-  constructor() {}
-    this.config = this.loadConfig()
-    this.isInitialized = true;}
-  }
-  private loadConfig(): EnvConfig {}
-    // Safely access environment variables with defaults
+// Environment configuration utility
 
-    return {}
-      nodeEnv,
-      apiUrl: process.env.NEXT_PUBLIC_API_URL || process.env.VITE_API_URL || 'http://localhost:3000/api'
-      apiKey: process.env.NEXT_PUBLIC_API_KEY || process.env.VITE_API_KEY;
-      enableAnalytics: process.env.NEXT_PUBLIC_ENABLE_ANALYTICS === 'true' || nodeEnv === 'production'
-      enableLogging: nodeEnv !== 'test'
-      logLevel: (process.env.NEXT_PUBLIC_LOG_LEVEL ||,
-        (nodeEnv === 'production' ? 'warn' : 'debug')) as EnvConfig['logLevel'],
-      sentryDsn: process.env.NEXT_PUBLIC_SENTRY_DSN || process.env.VITE_SENTRY_DSN;
-      gaTrackingId: process.env.NEXT_PUBLIC_GA_TRACKING_ID || process.env.VITE_GA_TRACKING_ID}
-    }
-export interface EnvConfig {/* TODO: Fix JSX expression */}
+export interface EnvConfigOptions {
+  prefix?: string;
+  required?: string[];
+  defaults?: Record<string, any>;
+  validators?: Record<string, (value: string) => boolean>;
+  transformers?: Record<string, (value: string) => any>;
 }
-class EnvironmentConfig {/* TODO: Fix JSX expression */}
-  }
-  private loadConfig(): EnvConfig {/* TODO: Fix JSX expression */}
+
+export class EnvConfig {
+  private options: Required<EnvConfigOptions>;
+  private config: Record<string, any> = {};
+
+  constructor(options: EnvConfigOptions = {}) {
+    this.options = {
+      prefix: 'REACT_APP_',
+      required: [],
+      defaults: {},
+      validators: {},
+      transformers: {},
+      ...options
     };
+
+    this.loadConfig();
+    this.validateConfig();
   }
+
   /**
-   * Get the entire configuration object;
+   * Get a configuration value
    */
-  public getConfig(): Readonly<EnvConfig> {}
-    return Object.freeze({ ...this.config })
-  public getConfig(): Readonly<EnvConfig> {/* TODO: Fix JSX expression */}
-    return Object.freeze({ ...this.config });
+  get<T = any>(key: string, defaultValue?: T): T {
+    return this.config[key] ?? defaultValue;
   }
+
   /**
-   * Get a specific configuration value;
+   * Check if a configuration key exists
    */
-  public get<K extends keyof EnvConfig>(key: K): EnvConfig[K] {,
-  public get<K extends keyof EnvConfig>(key: K): EnvConfig[K] {}
-    return this.config[key];}
-  public get<K extends keyof EnvConfig>(ke)
-  y: K): EnvConfig[K] {/* TODO: Fix JSX expression */}
+  has(key: string): boolean {
+    return key in this.config;
   }
+
   /**
-   * Check if running in production;
+   * Get all configuration
    */
-  public isProduction(): boolean {}
-    return this.config.nodeEnv === 'production';}
-  public isProduction(): boolean {/* TODO: Fix JSX expression */}
+  getAll(): Record<string, any> {
+    return { ...this.config };
   }
+
   /**
-   * Check if running in development;
+   * Set a configuration value
    */
-  public isDevelopment(): boolean {}
-    return this.config.nodeEnv === 'development';}
-  public isDevelopment(): boolean {/* TODO: Fix JSX expression */}
+  set(key: string, value: any): void {
+    this.config[key] = value;
   }
+
   /**
-   * Check if running in test mode;
+   * Load configuration from environment variables
    */
-  public isTest(): boolean {}
-    return this.config.nodeEnv === 'test';}
-  public isTest(): boolean {/* TODO: Fix JSX expression */}
+  private loadConfig(): void {
+    // Load from process.env
+    if (typeof process !== 'undefined' && process.env) {
+      this.loadFromProcessEnv();
+    }
+
+    // Load from window.env (for runtime configuration)
+    if (typeof window !== 'undefined' && (window as any).env) {
+      this.loadFromWindowEnv();
+    }
+
+    // Apply defaults
+    this.applyDefaults();
   }
+
   /**
-   * Validate required environment variables;
+   * Load from process.env
    */
-  public validate(requiredVars: (keyof EnvConfig)[]): {,
-    valid: boolean;
-    missing: string[];}
+  private loadFromProcessEnv(): void {
+    for (const [key, value] of Object.entries(process.env)) {
+      if (key.startsWith(this.options.prefix)) {
+        const configKey = key.substring(this.options.prefix.length);
+        this.config[configKey] = this.transformValue(configKey, value);
+      }
+    }
+  }
+
+  /**
+   * Load from window.env
+   */
+  private loadFromWindowEnv(): void {
+    const windowEnv = (window as any).env;
+    for (const [key, value] of Object.entries(windowEnv)) {
+      this.config[key] = this.transformValue(key, value);
+    }
+  }
+
+  /**
+   * Apply default values
+   */
+  private applyDefaults(): void {
+    for (const [key, value] of Object.entries(this.options.defaults)) {
+      if (!(key in this.config)) {
+        this.config[key] = value;
+      }
+    }
+  }
+
+  /**
+   * Transform value using transformers
+   */
+  private transformValue(key: string, value: string | undefined): any {
+    if (value === undefined) {
+      return undefined;
+    }
+
+    // Apply transformer if available
+    if (this.options.transformers[key]) {
+      return this.options.transformers[key](value);
+    }
+
+    // Default transformations
+    if (value === 'true') return true;
+    if (value === 'false') return false;
+    if (value === 'null') return null;
+    if (value === 'undefined') return undefined;
+    
+    // Try to parse as number
+    if (!isNaN(Number(value)) && value !== '') {
+      return Number(value);
+    }
+
+    // Try to parse as JSON
+    if (value.startsWith('{') || value.startsWith('[')) {
+      try {
+        return JSON.parse(value);
+      } catch {
+        // Return as string if JSON parsing fails
+      }
+    }
+
+    return value;
+  }
+
+  /**
+   * Validate configuration
+   */
+  private validateConfig(): void {
+    // Check required variables
+    for (const key of this.options.required) {
+      if (!(key in this.config)) {
+        throw new Error(`Required environment variable ${this.options.prefix}${key} is not set`);
+      }
+    }
+
+    // Validate values
+    for (const [key, value] of Object.entries(this.config)) {
+      if (this.options.validators[key]) {
+        if (!this.options.validators[key](String(value))) {
+          throw new Error(`Environment variable ${this.options.prefix}${key} has invalid value: ${value}`);
+        }
+      }
+    }
+  }
+
+  /**
+   * Get configuration as environment variables
+   */
+  toEnvVars(): Record<string, string> {
+    const envVars: Record<string, string> = {};
+    
+    for (const [key, value] of Object.entries(this.config)) {
+      envVars[`${this.options.prefix}${key}`] = String(value);
+    }
+    
+    return envVars;
+  }
+
+  /**
+   * Get configuration as URL search params
+   */
+  toSearchParams(): URLSearchParams {
+    const params = new URLSearchParams();
+    
+    for (const [key, value] of Object.entries(this.config)) {
+      params.set(key, String(value));
+    }
+    
+    return params;
+  }
+
+  /**
+   * Get configuration as query string
+   */
+  toQueryString(): string {
+    return this.toSearchParams().toString();
+  }
+
+  /**
+   * Load configuration from URL search params
+   */
+  loadFromSearchParams(searchParams: URLSearchParams): void {
+    for (const [key, value] of searchParams.entries()) {
+      this.config[key] = this.transformValue(key, value);
+    }
+  }
+
+  /**
+   * Load configuration from query string
+   */
+  loadFromQueryString(queryString: string): void {
+    const params = new URLSearchParams(queryString);
+    this.loadFromSearchParams(params);
+  }
+
+  /**
+   * Get configuration summary
+   */
+  getSummary(): {
+    totalKeys: number;
+    requiredKeys: string[];
+    missingKeys: string[];
+    optionalKeys: string[];
   } {
-    const missing: string[] = [],
-    for (const varName of requiredVars) {,
-      if (!this.config[varName]) {,
-        missing.push(varName);}
-      }
-    }
+    const allKeys = Object.keys(this.config);
+    const requiredKeys = this.options.required;
+    const missingKeys = requiredKeys.filter(key => !(key in this.config));
+    const optionalKeys = allKeys.filter(key => !requiredKeys.includes(key));
+
     return {
-      valid: missing.length === 0;
-  public validate(requiredVars: (keyof EnvConfig)[]): {}
-    valid: boolean
-    missing: string[];}
-  } {}
-    const missing: string[] = []
-    for (const varName of requiredVars) {}
-      if (!this.config[varName]) {}
-        missing.push(varName);}
-      }
-    }
-    return {}
-      valid: missing.length === 0,
-      missing}
-    }
-  public validate(requiredVar)
-  s: (keyof EnvConfig)[]): {/* TODO: Fix JSX expression */}
-  } {/* TODO: Fix JSX expression */}
-      }
-    }
-    return {/* TODO: Fix JSX expression */}
+      totalKeys: allKeys.length,
+      requiredKeys,
+      missingKeys,
+      optionalKeys
     };
-  }
-  /**
-   * Get API headers with authentication;
-   */
-  public getApiHeaders(): Record<string, string> {}
-    const headers: Record<string, string> = {}
-      'Content-Type': 'application/json'}
-    }
-    if (this.config.apiKey) {}
-      headers['Authorization'] = `Bearer ${this.config.apiKey}`
-  public getApiHeaders(): Record<string, string> {/* TODO: Fix JSX expression */}
-    };
-    if (this.config.apiKey) {/* TODO: Fix JSX expression */}
-      headers['Authorization'] = `Bearer ${this.config.apiKey}`;
-    }
-    return headers;
-  }
-  /**
-   * Log configuration in development mode;
-   */
-  public logConfig(): void {}
-    if (this.isDevelopment()) {}
-  public logConfig(): void {/* TODO: Fix JSX expression */}
-      });
-      console.groupEnd();
-    }
   }
 }
-// Export singleton instance;
-export const envConfig = new EnvironmentConfig()
-// Export convenient helper functions;
-export const isProduction = () => envConfig.isProduction()
-export const isDevelopment = () => envConfig.isDevelopment()
-export const isTest = () => envConfig.isTest()
-export const getConfig = () => envConfig.getConfig()
-export const getApiHeaders = () => envConfig.getApiHeaders()
-export const envConfig = new EnvironmentConfig();
-// Export convenient helper functions;
-export const isProduction = () => envConfig.isProduction();
-export const isDevelopment = () => envConfig.isDevelopment();
-export const isTest = () => envConfig.isTest();
-export const getConfig = () => envConfig.getConfig();
-export const getApiHeaders = () => envConfig.getApiHeaders();
-`
+
+export default EnvConfig;

@@ -1,84 +1,58 @@
+// Link utility component
 
-interface LinkProps {
-  href: string,
-    children: React.ReactNode
-interface LinkProps {}
-  href: string
-  children: React.ReactNode
-  className?: string
-  target?: string
-  rel?: string
-  onClick?: () => void
-  'aria-label'?: string;}
-}
-export const Link: React.FC<LinkProps>= ({
-export const Link: React.FC<LinkProps> = ({}
-  href,
-  href: string;
+import React from 'react';
+import { Link as RouterLink } from 'react-router-dom';
+
+export interface LinkProps {
+  to: string;
   children: React.ReactNode;
   className?: string;
-  target?: string;
+  target?: '_blank' | '_self' | '_parent' | '_top';
   rel?: string;
-  onClick?: () => void;
-  'aria-label'?: string;}
+  onClick?: (event: React.MouseEvent<HTMLAnchorElement>) => void;
+  [key: string]: any;
 }
-export const Link: React.FC<LinkProps> = ({,
-  href;
+
+export const Link: React.FC<LinkProps> = ({
+  to,
   children,
   className,
   target,
   rel,
   onClick,
-  'aria-label': ariaLabel,
-  ...props}
-}) => {}
-  const handleClick = useCallback((...args) => {}
-    if (onClick) {}
-      onClick();}
-    }
-    // Handle internal navigation;
-    if (href.startsWith('/') && !href.startsWith('//')) {
-    // Handle internal navigation
-    if (href.startsWith('/') && !href.startsWith('//')) {}
-      e.preventDefault()
-      window.location.href = href;}
-    }
-  }</LinkProps>
-  return (<a
+  ...props
+}) => {
+  // Check if it's an external link
+  const isExternal = to.startsWith('http') || to.startsWith('//');
+  
+  // Check if it's a mailto or tel link
+  const isSpecial = to.startsWith('mailto:') || to.startsWith('tel:');
+
+  if (isExternal || isSpecial) {
+    return (
+      <a
+        href={to}
+        className={className}
+        target={target || (isExternal ? '_blank' : undefined)}
+        rel={rel || (isExternal ? 'noopener noreferrer' : undefined)}
+        onClick={onClick}
+        {...props}
+      >
+        {children}
+      </a>
+    );
   }
-  return(<a;
-import React from 'react';
-interface LinkProps {/* TODO: Fix JSX expression */}
-}
-export const,
-  Link: React.FC<LinkProps> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
-    }
-    // Handle internal navigation;
-    if (href.startsWith('/') && !href.startsWith('//')) {/* TODO: Fix JSX expression */}
-    }
-  };
-  return (<a></a>
-      href={href}
+
+  return (
+    <RouterLink
+      to={to}
       className={className}
-      target={target}
-      rel={rel}
-      onClick={handleClick}
-      aria-label={ariaLabel}
+      onClick={onClick}
       {...props}
-    >{children}</a>
-    </a>
-      aria-label={ariaLabel})
-      {...props})
-    >)
-      {children})
-    </a>)
-  )
-}
-export default Link;
     >
       {children}
-    </a>)
+    </RouterLink>
   );
 };
+
 export default Link;

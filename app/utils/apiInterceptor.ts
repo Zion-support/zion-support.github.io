@@ -1,368 +1,214 @@
-/**
- * API Interceptor Utility;
- * Provides request/response interceptors for API calls;
- */
+// API interceptor utility
 
-interface InterceptorConfig {
-  onRequest?: (config: any) => any;
-  onResponse?: (response: any) => any;
-  onError?: (error: any) => any;
+export interface InterceptorConfig {
+  baseURL?: string;
+  timeout?: number;
+  retries?: number;
+  retryDelay?: number;
 }
 
-class APIInterceptor {
-  private requestInterceptors: Array<(config: any) => any> = [];
-  private responseInterceptors: Array<(response: any) => any> = [];
-  private errorInterceptors: Array<(error: any) => any> = [];
+export interface InterceptorRequest {
+  url: string;
+  method: string;
+  headers: Record<string, string>;
+  body?: any;
+  params?: Record<string, any>;
+}
 
-  // Add request interceptor;
-  addRequestInterceptor(interceptor: (config: any) => any): void {,
+export interface InterceptorResponse {
+  data: any;
+  status: number;
+  statusText: string;
+  headers: Record<string, string>;
+}
+
+export interface InterceptorError {
+  message: string;
+  status?: number;
+  statusText?: string;
+  data?: any;
+}
+
+export class APIInterceptor {
+  private config: Required<InterceptorConfig>;
+  private requestInterceptors: Array<(request: InterceptorRequest) => InterceptorRequest> = [];
+  private responseInterceptors: Array<(response: InterceptorResponse) => InterceptorResponse> = [];
+  private errorInterceptors: Array<(error: InterceptorError) => InterceptorError> = [];
+
+  constructor(config: InterceptorConfig = {}) {
+    this.config = {
+      baseURL: '',
+      timeout: 10000,
+      retries: 3,
+      retryDelay: 1000,
+      ...config
+    };
+  }
+
+  /**
+   * Add request interceptor
+   */
+  addRequestInterceptor(interceptor: (request: InterceptorRequest) => InterceptorRequest): void {
     this.requestInterceptors.push(interceptor);
   }
 
-  // Add response interceptor;
-  addResponseInterceptor(interceptor: (response: any) => any): void {,
+  /**
+   * Add response interceptor
+   */
+  addResponseInterceptor(interceptor: (response: InterceptorResponse) => InterceptorResponse): void {
     this.responseInterceptors.push(interceptor);
   }
 
-  // Add error interceptor;
-  addErrorInterceptor(interceptor: (error: any) => any): void {,
+  /**
+   * Add error interceptor
+   */
+  addErrorInterceptor(interceptor: (error: InterceptorError) => InterceptorError): void {
     this.errorInterceptors.push(interceptor);
   }
 
-  // Remove request interceptor;
-  removeRequestInterceptor(interceptor: (config: any) => any): void {,
+  /**
+   * Remove request interceptor
+   */
+  removeRequestInterceptor(interceptor: (request: InterceptorRequest) => InterceptorRequest): void {
     const index = this.requestInterceptors.indexOf(interceptor);
-    if (index > -1) {,
+    if (index > -1) {
       this.requestInterceptors.splice(index, 1);
     }
   }
 
-  // Remove response interceptor;
-  removeResponseInterceptor(interceptor: (response: any) => any): void {,
+  /**
+   * Remove response interceptor
+   */
+  removeResponseInterceptor(interceptor: (response: InterceptorResponse) => InterceptorResponse): void {
     const index = this.responseInterceptors.indexOf(interceptor);
-    if (index > -1) {,
+    if (index > -1) {
       this.responseInterceptors.splice(index, 1);
     }
   }
 
-  // Remove error interceptor;
-  removeErrorInterceptor(interceptor: (error: any) => any): void {,
+  /**
+   * Remove error interceptor
+   */
+  removeErrorInterceptor(interceptor: (error: InterceptorError) => InterceptorError): void {
     const index = this.errorInterceptors.indexOf(interceptor);
-    if (index > -1) {,
+    if (index > -1) {
       this.errorInterceptors.splice(index, 1);
     }
   }
 
-  // Apply request interceptors;
-  applyRequestInterceptors(config: any): any {,
-    return this.requestInterceptors.reduce((acc, interceptor) => {
-      try {
-        return interceptor(acc);
-      } catch (error) {
-        return acc;
+  /**
+   * Intercept and process request
+   */
+  interceptRequest(request: InterceptorRequest): InterceptorRequest {
+    let processedRequest = { ...request };
+
+    this.requestInterceptors.forEach(interceptor => {
+      processedRequest = interceptor(processedRequest);
+    });
+
+    return processedRequest;
+  }
+
+  /**
+   * Intercept and process response
+   */
+  interceptResponse(response: InterceptorResponse): InterceptorResponse {
+    let processedResponse = { ...response };
+
+    this.responseInterceptors.forEach(interceptor => {
+      processedResponse = interceptor(processedResponse);
+    });
+
+    return processedResponse;
+  }
+
+  /**
+   * Intercept and process error
+   */
+  interceptError(error: InterceptorError): InterceptorError {
+    let processedError = { ...error };
+
+    this.errorInterceptors.forEach(interceptor => {
+      processedError = interceptor(processedError);
+    });
+
+    return processedError;
+  }
+
+  /**
+   * Make a request with interceptors
+   */
+  async request(request: InterceptorRequest): Promise<InterceptorResponse> {
+    try {
+      // Apply request interceptors
+      const processedRequest = this.interceptRequest(request);
+
+      // Make the request
+      const response = await this.makeRequest(processedRequest);
+
+      // Apply response interceptors
+      return this.interceptResponse(response);
+    } catch (error) {
+      // Apply error interceptors
+      const processedError = this.interceptError(error as InterceptorError);
+      throw processedError;
+    }
+  }
+
+  /**
+   * Make the actual request
+   */
+  private async makeRequest(request: InterceptorRequest): Promise<InterceptorResponse> {
+    const url = `${this.config.baseURL}${request.url}`;
+    const queryString = request.params ? this.buildQueryString(request.params) : '';
+    const fullUrl = `${url}${queryString}`;
+
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), this.config.timeout);
+
+    try {
+      const response = await fetch(fullUrl, {
+        method: request.method,
+        headers: request.headers,
+        body: request.body ? JSON.stringify(request.body) : undefined,
+        signal: controller.signal
+      });
+
+      clearTimeout(timeoutId);
+
+      const data = await response.json();
+      const headers: Record<string, string> = {};
+      response.headers.forEach((value, key) => {
+        headers[key] = value;
+      });
+
+      return {
+        data,
+        status: response.status,
+        statusText: response.statusText,
+        headers
+      };
+    } catch (error) {
+      clearTimeout(timeoutId);
+      throw error;
+    }
+  }
+
+  /**
+   * Build query string from parameters
+   */
+  private buildQueryString(params: Record<string, any>): string {
+    const searchParams = new URLSearchParams();
+    
+    Object.entries(params).forEach(([key, value]) => {
+      if (value !== undefined && value !== null) {
+        searchParams.append(key, String(value));
       }
-    }, config);
-  }
+    });
 
-  // Apply response interceptors;
-  applyResponseInterceptors(response: any): any {,
-    return this.responseInterceptors.reduce((acc, interceptor) => {
-      try {
-        return interceptor(acc);
-      } catch (error) {
-        return acc;
-      }
-    }, response);
-  }
-
-  // Apply error interceptors;
-  applyErrorInterceptors(error: any): any {,
-    return this.errorInterceptors.reduce((acc, interceptor) => {
-      try {
-        return interceptor(acc);
-      } catch (interceptorError) {
-        return acc;
-      }
-    }, error);
-  }
-
-  // Clear all interceptors;
-  clearAll(): void {
-    this.requestInterceptors = [];
-    this.responseInterceptors = [];
-    this.errorInterceptors = [];
-  }
-
-  // Get interceptor counts;
-  getInterceptorCounts(): {
-    request: number;
-    response: number;
-    error: number;
-  } {
-    return {
-      request: this.requestInterceptors.length;
-      response: this.responseInterceptors.length;
-      error: this.errorInterceptors.length;
-    };
+    const queryString = searchParams.toString();
+    return queryString ? `?${queryString}` : '';
   }
 }
-
-// Create singleton instance;
-export const apiInterceptor = new APIInterceptor();
 
 export default APIInterceptor;
- * Centralized API request handling with error handling, retry logic, and caching;
- */
-// ErrorHandler class definition;
-class ErrorHandler {/* TODO: Fix JSX expression */}
-    }
-    return ErrorHandler.instance;
-  }
-  handleNetworkError(erro,
-  r: Error, ur)
-  l: string, config?: unknown): void {/* TODO: Fix JSX expression */}
-    }
-}
-export interface APIConfig {/* TODO: Fix JSX expression */}
-  };
-}
-export interface RequestConfig {/* TODO: Fix JSX expression */}
-}
-export interface APIResponse<T = unknown> {/* TODO: Fix JSX expression */}
-}
-export interface CacheEntry {/* TODO: Fix JSX expression */}
-}
-export class APIInterceptor {/* TODO: Fix JSX expression */}
-  g: Partial<APIConfig> = {}) {/* TODO: Fix JSX expression */}
-  headers: config.headers || {},
-      interceptor,
-  s: config.interceptors || {}
-    };
-    this.errorHandler = ErrorHandler.getInstance();
-  }
-  static getInstance(config?: Partial<APIConfig>): APIInterceptor {/* TODO: Fix JSX expression */}
-    }
-    return APIInterceptor.instance;
-  }
-  /**
-   * Make API request;
-   */
-  async request<T = unknown>(confi)
-  g: RequestConfig): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
-      }
-    }
-    // Check for pending identical requests;
-    if (this.pendingRequests.has(cacheKey)) {/* TODO: Fix JSX expression */}
-    }
-    // Create the request promise;
-    const requestPromise = this.executeRequest<T>(fullConfig);
-    this.pendingRequests.set(cacheKey, requestPromise as Promise<APIResponse>);
-    try {/* TODO: Fix JSX expression */}
-      }
-      return response;
-    } finally {/* TODO: Fix JSX expression */}
-    }
-  }
-  /**
-   * Execute the actual request;
-   */
-  private async executeRequest<T>(confi)
-  g: RequestConfig, attempt = 1): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
-      }
-      const url = this.buildURL(finalConfig);
-      const,
-  fetchOptions: RequestInit = {/* TODO: Fix JSX expression */}
-      };
-      const response = await fetch(url, fetchOptions);
-      const duration = performance.now() - startTime;
-      // Record performance metric;
-      performanceMetrics.recordNetworkRequest(url, duration, response.status);
-      // Handle non-2xx responses;
-      if (!response.ok) {/* TODO: Fix JSX expression */}
-        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
-      }
-      // Apply response interceptor;
-      let finalResponse = response;
-      if (this.config.interceptors?.response) {/* TODO: Fix JSX expression */}
-      }
-      // Parse response data;
-      const data = await this.parseResponse<T>(finalResponse);
-      return {/* TODO: Fix JSX expression */}
-      };
-    } catch (error) {/* TODO: Fix JSX expression */}
-      }
-      // Apply error interceptor;
-      if (this.config.interceptors?.error) {/* TODO: Fix JSX expression */}
-      }
-      throw err;
-    }
-  }
-  /**
-   * GET request;
-   */
-  async get<T = unknown>(ur,
-  l: string,
-    confi,
-  g: Partial<RequestConfig> = {})
-  ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
-  d: 'GET' });
-  }
-  /**
-   * POST request;
-   */
-  async post<T = unknown>(ur,
-  l: string,
-    body?: unknown,
-    confi,
-  g: Partial<RequestConfig> = {})
-  ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
-  d: 'POST', body });
-  }
-  /**
-   * PUT request;
-   */
-  async put<T = unknown>(ur,
-  l: string,
-    body?: unknown,
-    confi,
-  g: Partial<RequestConfig> = {})
-  ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
-  d: 'PUT', body });
-  }
-  /**
-   * DELETE request;
-   */
-  async delete<T = unknown>(ur,
-  l: string,
-    confi,
-  g: Partial<RequestConfig> = {})
-  ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
-  d: 'DELETE' });
-  }
-  /**
-   * PATCH request;
-   */
-  async patch<T = unknown>(ur,
-  l: string,
-    body?: unknown,
-    confi,
-  g: Partial<RequestConfig> = {})
-  ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
-  d: 'PATCH', body });
-  }
-  /**
-   * Prepare request configuration;
-   */
-  private prepareRequest(confi)
-  g: RequestConfig): RequestConfig {/* TODO: Fix JSX expression */}
-      },
-      timeou,
-  t: config.timeout || this.config.timeout,
-      retryAttempt,
-  s: config.retryAttempts ?? this.config.retryAttempts,
-      cach,
-  e: config.cache ?? this.config.enableCaching;
-    };
-  }
-  /**
-   * Build full URL with query parameters;
-   */
-  private buildURL(confi)
-  g: RequestConfig): string {/* TODO: Fix JSX expression */}`
-    let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${config.url}`;
-    if (config.params) {/* TODO: Fix JSX expression */}
-      });`
-      url += `?${params.toString()}`;
-    }
-    return url;
-  }
-  /**
-   * Build request headers;
-   */
-  private buildHeaders(confi)
-  g: RequestConfig): Headers {/* TODO: Fix JSX expression */}
-    Object.entries(config.headers || {}).forEach(([key, value]) => {/* TODO: Fix JSX expression */}
-    });
-    return headers;
-  }
-  /**
-   * Create abort signal for timeout;
-   */
-  private createAbortSignal(timeou)
-  t: number): AbortSignal {/* TODO: Fix JSX expression */}
-  }
-  /**
-   * Parse response based on content type;
-   */
-  private async parseResponse<T>(respons)
-  e: Response): Promise<T> {/* TODO: Fix JSX expression */}
-    }
-    if (contentType?.includes('text/')) {/* TODO: Fix JSX expression */}
-    }
-    return (await response.blob()) as T;
-  }
-  /**
-   * Get cache key for request;
-   */
-  private getCacheKey(confi)
-  g: RequestConfig): string {/* TODO: Fix JSX expression */}`
-    return `${config.method}:${url}`;
-  }
-  /**
-   * Get response from cache;
-   */
-  private getFromCache(ke)
-  y: string): APIResponse | null {/* TODO: Fix JSX expression */}
-    }
-    return entry.data as APIResponse;
-  }
-  /**
-   * Set response in cache;
-   */
-  private setInCache(ke,
-  y: string, respons)
-  e: APIResponse): void {/* TODO: Fix JSX expression */}
-    });
-  }
-  /**
-   * Clear cache;
-   */
-  clearCache(): void {/* TODO: Fix JSX expression */}
-  }
-  /**
-   * Clear expired cache entries;
-   */
-  clearExpiredCache(): void {/* TODO: Fix JSX expression */}
-      }
-    }
-  }
-  /**
-   * Get cache statistics;
-   */
-  getCacheStats() {/* TODO: Fix JSX expression */}
-    };
-  }
-  /**
-   * Delay helper for retry logic;
-   */
-  private delay(m)
-  s: number): Promise<void> {/* TODO: Fix JSX expression */}
-  }
-  /**
-   * Update configuration;
-   */
-  updateConfig(confi)
-  g: Partial<APIConfig>): void {/* TODO: Fix JSX expression */}
-    this.config = { ...this.config, ...config };
-  }
-  /**
-   * Get current configuration;
-   */
-  getConfig(): APIConfig {/* TODO: Fix JSX expression */}
-    return { ...this.config };
-  }
-}
-// Export singleton instance;
-export const apiInterceptor = APIInterceptor.getInstance();
-export default APIInterceptor;
-`

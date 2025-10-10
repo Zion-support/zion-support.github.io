@@ -1,238 +1,406 @@
-'use client'
-/**
- * Comprehensive Error Logging System;
- * Provides structured error logging with different severity levels;
- */
-export enum ErrorSeverity {}
-  LOW = 'low',
-  MEDIUM = 'medium',
-  HIGH = 'high',
-  CRITICAL = 'critical'}
+// Error logger utility
+
+export interface ErrorLoggerConfig {
+  enableConsole?: boolean;
+  enableServer?: boolean;
+  enableLocalStorage?: boolean;
+  enableSessionStorage?: boolean;
+  maxLogs?: number;
+  enableStackTraces?: boolean;
+  enablePerformance?: boolean;
+  enableUserContext?: boolean;
 }
+
 export interface ErrorLogEntry {
-  timestamp: string;
-  severity: ErrorSeverity;
+  id: string;
   message: string;
-  error?: Error;
-export interface ErrorLogEntry {}
-  timestamp: string
-  severity: ErrorSeverity
-  message: string
-  error?: Error
-  context?: Record<string, unknown>
-  userAgent?: string;
-  url?: string;
-  stackTrace?: string;}
+  stack?: string;
+  type: string;
+  severity: 'low' | 'medium' | 'high' | 'critical';
+  context: ErrorContext;
+  timestamp: number;
+  userId?: string;
+  sessionId: string;
+  userAgent: string;
+  url: string;
+  performance?: {
+    memory?: number;
+    timing?: number;
+  };
 }
-class ErrorLogger {}
-  private logs: ErrorLogEntry[] = []
-  private maxLogs = 1000;
-  /**
-   * Log an error with context;
-   */
-  log(message: string;),
-    severity: ErrorSeverity = ErrorSeverity.MEDIUM),
-    error?: Error),
-    context?: Record<string, unknown>
-  ): void {
-    const entry: ErrorLogEntry = {,
-  log()
-    message: string,
-    severity: ErrorSeverity = ErrorSeverity.MEDIUM,
-    error?: Error,
-    context?: Record<string, unknown>
-  ): void {}
-    const entry: ErrorLogEntry = {}
-      timestamp: new Date().toISOString(),
-      severity,
-      message,
-      error,
-      context,
-      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined;
-      url: typeof window !== 'undefined' ? window.location.href : undefined;
-      stackTrace: error?.stack}
-    }
-    // Add to internal log;
-    this.logs.push(entry)
-    if (this.logs.length > this.maxLogs) {}
-      this.logs.shift();}
-    }
-    // Console logging in development;
-    if (process.env['NODE_ENV'] === 'development') {
-      this.logToConsole(entry);}
-    }
-    // Send to external logging service in production;
-    if (process.env['NODE_ENV'] === 'production' && severity === ErrorSeverity.CRITICAL) {
-    // Console logging in development
-    if (process.env['NODE_ENV'] === 'development') {}
-      this.logToConsole(entry);}
-    }
-    // Send to external logging service in production
-    if (process.env['NODE_ENV'] === 'production' && severity === ErrorSeverity.CRITICAL) {}
-      this.sendToExternalService(entry);}
-export enum ErrorSeverity {/* TODO: Fix JSX expression */}
-}
-export interface ErrorLogEntry {/* TODO: Fix JSX expression */}
-}
-class ErrorLogger {/* TODO: Fix JSX expression */}
-    };
-    // Add to internal log;
-    this.logs.push(entry);
-    if (this.logs.length > this.maxLogs) {/* TODO: Fix JSX expression */}
-    }
-    // Console logging in development;
-    if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}
-    }
-    // Send to external logging service in production;
-    if (process.env['NODE_ENV'] === 'production' && severity === ErrorSeverity.CRITICAL) {/* TODO: Fix JSX expression */}
-    }
-  }
-  /**
-   * Log to console with appropriate styling;
-   */
-  private logToConsole(entry: ErrorLogEntry): void {,
-    const styles: Record<ErrorSeverity, string> = {
-  private logToConsole(entry: ErrorLogEntry): void {}
-    const styles: Record<ErrorSeverity, string> = {}
-      [ErrorSeverity.LOW]: 'color: #4ade80',
-      [ErrorSeverity.MEDIUM]: 'color: #fbbf24',
-      [ErrorSeverity.HIGH]: 'color: #fb923 c',
-      [ErrorSeverity.CRITICAL]: 'color: #ef4444; font-weight: bold'}
-    }
-    }] ${entry.message}`, styles[entry.severity])
-    if (entry.error) {}
-      }
-    if (entry.context) {}
-      }
-    if (entry.stackTrace) {}
-  private logToConsole(entr)
-  y: ErrorLogEntry): void {/* TODO: Fix JSX expression */}
-    };
-    console.group(`%c[${entry.severity.toUpperCase()}] ${entry.message}`, styles[entry.severity]);
-    if (entry.error) {/* TODO: Fix JSX expression */}
-      }
-    if (entry.context) {/* TODO: Fix JSX expression */}
-      }
-    if (entry.stackTrace) {/* TODO: Fix JSX expression */}
-      }
 
-  }
-  /**
-   * Send error to external logging service;
-   */
-  private async sendToExternalService(entry: ErrorLogEntry): Promise<void> {,
-    try {,
-  private async sendToExternalService(entry: ErrorLogEntry): Promise<void> {}
-    try {}
-      // In production, you would send to a service like Sentry, LogRocket, etc.
+export interface ErrorContext {
+  component?: string;
+  action?: string;
+  props?: Record<string, any>;
+  state?: Record<string, any>;
+  [key: string]: any;
+}
 
-      if (!endpoint) {}
-        return;}
+export class ErrorLogger {
+  private config: Required<ErrorLoggerConfig>;
+  private logs: ErrorLogEntry[] = [];
+  private sessionId: string;
+  private userId?: string;
+
+  constructor(config: ErrorLoggerConfig = {}) {
+    this.config = {
+      enableConsole: true,
+      enableServer: true,
+      enableLocalStorage: false,
+      enableSessionStorage: false,
+      maxLogs: 1000,
+      enableStackTraces: true,
+      enablePerformance: true,
+      enableUserContext: true,
+      ...config
+    };
+
+    this.sessionId = this.generateSessionId();
+    this.loadFromStorage();
+  }
+
+  /**
+   * Log an error
+   */
+  logError(error: Error, context: ErrorContext = {}): void {
+    const logEntry = this.createLogEntry(error, context);
+    
+    this.addToLogs(logEntry);
+    
+    if (this.config.enableConsole) {
+      this.logToConsole(logEntry);
+    }
+
+    if (this.config.enableServer) {
+      this.logToServer(logEntry);
+    }
+
+    if (this.config.enableLocalStorage) {
+      this.logToLocalStorage(logEntry);
+    }
+
+    if (this.config.enableSessionStorage) {
+      this.logToSessionStorage(logEntry);
+    }
+  }
+
+  /**
+   * Log React error boundary error
+   */
+  logReactError(error: Error, errorInfo: React.ErrorInfo, context: ErrorContext = {}): void {
+    this.logError(error, {
+      ...context,
+      componentStack: errorInfo.componentStack,
+      errorBoundary: true
+    });
+  }
+
+  /**
+   * Log async error
+   */
+  logAsyncError(error: Error, context: ErrorContext = {}): void {
+    this.logError(error, {
+      ...context,
+      async: true
+    });
+  }
+
+  /**
+   * Log network error
+   */
+  logNetworkError(error: Error, url: string, method: string, context: ErrorContext = {}): void {
+    this.logError(error, {
+      ...context,
+      network: true,
+      url,
+      method
+    });
+  }
+
+  /**
+   * Set user ID
+   */
+  setUserId(userId: string): void {
+    this.userId = userId;
+  }
+
+  /**
+   * Create log entry
+   */
+  private createLogEntry(error: Error, context: ErrorContext): ErrorLogEntry {
+    return {
+      id: this.generateLogId(),
+      message: error.message,
+      stack: this.config.enableStackTraces ? error.stack : undefined,
+      type: error.name,
+      severity: this.determineSeverity(error, context),
+      context: {
+        ...context,
+        timestamp: Date.now(),
+        sessionId: this.sessionId
+      },
+      timestamp: Date.now(),
+      userId: this.userId,
+      sessionId: this.sessionId,
+      userAgent: navigator.userAgent,
+      url: window.location.href,
+      performance: this.config.enablePerformance ? this.getPerformanceData() : undefined
+    };
+  }
+
+  /**
+   * Determine error severity
+   */
+  private determineSeverity(error: Error, context: ErrorContext): 'low' | 'medium' | 'high' | 'critical' {
+    // Critical errors
+    if (error.name === 'ChunkLoadError' || 
+        error.message.includes('Loading chunk') ||
+        error.message.includes('Script error')) {
+      return 'critical';
+    }
+
+    // High severity errors
+    if (error.name === 'TypeError' || 
+        error.name === 'ReferenceError' ||
+        error.name === 'SyntaxError') {
+      return 'high';
+    }
+
+    // Medium severity errors
+    if (error.name === 'NetworkError' || 
+        error.message.includes('fetch') ||
+        error.message.includes('timeout')) {
+      return 'medium';
+    }
+
+    // Low severity errors
+    return 'low';
+  }
+
+  /**
+   * Add log entry to logs array
+   */
+  private addToLogs(logEntry: ErrorLogEntry): void {
+    this.logs.push(logEntry);
+
+    // Enforce max logs
+    if (this.logs.length > this.config.maxLogs) {
+      this.logs.shift();
+    }
+  }
+
+  /**
+   * Log to console
+   */
+  private logToConsole(logEntry: ErrorLogEntry): void {
+    const logMessage = `[${logEntry.severity.toUpperCase()}] ${logEntry.message}`;
+    
+    switch (logEntry.severity) {
+      case 'critical':
+        console.error(logMessage, logEntry);
+        break;
+      case 'high':
+        console.error(logMessage, logEntry);
+        break;
+      case 'medium':
+        console.warn(logMessage, logEntry);
+        break;
+      case 'low':
+        console.info(logMessage, logEntry);
+        break;
+    }
+  }
+
+  /**
+   * Log to server
+   */
+  private logToServer(logEntry: ErrorLogEntry): void {
+    fetch('/api/errors/log', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(logEntry)
+    }).catch(error => {
+      console.error('Failed to send error log to server:', error);
+    });
+  }
+
+  /**
+   * Log to localStorage
+   */
+  private logToLocalStorage(logEntry: ErrorLogEntry): void {
+    try {
+      const existingLogs = JSON.parse(localStorage.getItem('error_logs') || '[]');
+      existingLogs.push(logEntry);
+      
+      // Keep only last 100 logs in localStorage
+      if (existingLogs.length > 100) {
+        existingLogs.splice(0, existingLogs.length - 100);
       }
-      await fetch(endpoint, {
-        method: 'POST')
-        headers: {)
-          'Content-Type': 'application/json'})
-        })
-        body: JSON.stringify({)
-          ...entry;)
-          error: entry.error;)
-            ? {),
-                message: entry.error.message),
-                name: entry.error.name),
-      await fetch(endpoint, {)}
-        method: 'POST',
-        headers: {}
-          'Content-Type': 'application/json'}
-        },
-        body: JSON.stringify({)}
-          ...entry,
-          error: entry.error
-            ? {}
-                message: entry.error.message,
-                name: entry.error.name,
-                stack: entry.error.stack}
-              }
-            : undefined;
-        })
-      })
-    } catch (error) {}
-      // Silently fail to avoid infinite loop}
-  private async sendToExternalService(entr)
-  y: ErrorLogEntry): Promise<void> {/* TODO: Fix JSX expression */}
+      
+      localStorage.setItem('error_logs', JSON.stringify(existingLogs));
+    } catch (error) {
+      console.error('Failed to save error log to localStorage:', error);
+    }
+  }
+
+  /**
+   * Log to sessionStorage
+   */
+  private logToSessionStorage(logEntry: ErrorLogEntry): void {
+    try {
+      const existingLogs = JSON.parse(sessionStorage.getItem('error_logs') || '[]');
+      existingLogs.push(logEntry);
+      
+      // Keep only last 50 logs in sessionStorage
+      if (existingLogs.length > 50) {
+        existingLogs.splice(0, existingLogs.length - 50);
       }
-      await fetch(endpoint, {/* TODO: Fix JSX expression */}
-        },
-        bod,
-  y: JSON.stringify({/* TODO: Fix JSX expression */}
-              }
-            : undefined;)
-        })
-      });
-    } catch (error) {/* TODO: Fix JSX expression */}
+      
+      sessionStorage.setItem('error_logs', JSON.stringify(existingLogs));
+    } catch (error) {
+      console.error('Failed to save error log to sessionStorage:', error);
+    }
+  }
+
+  /**
+   * Load logs from storage
+   */
+  private loadFromStorage(): void {
+    if (this.config.enableLocalStorage) {
+      try {
+        const logs = JSON.parse(localStorage.getItem('error_logs') || '[]');
+        this.logs = [...this.logs, ...logs];
+      } catch (error) {
+        console.error('Failed to load error logs from localStorage:', error);
       }
+    }
+
+    if (this.config.enableSessionStorage) {
+      try {
+        const logs = JSON.parse(sessionStorage.getItem('error_logs') || '[]');
+        this.logs = [...this.logs, ...logs];
+      } catch (error) {
+        console.error('Failed to load error logs from sessionStorage:', error);
+      }
+    }
   }
+
   /**
-   * Get recent logs;
+   * Get performance data
    */
-  getRecentLogs(count: number = 10): ErrorLogEntry[] {,
-  getRecentLogs(count: number = 10): ErrorLogEntry[] {}
-    return this.logs.slice(-count);}
-  getRecentLogs(coun)
-  t: number = 10): ErrorLogEntry[] {/* TODO: Fix JSX expression */}
+  private getPerformanceData(): { memory?: number; timing?: number } {
+    const performance: { memory?: number; timing?: number } = {};
+
+    // Memory usage
+    if ('memory' in performance) {
+      performance.memory = (performance as any).memory.usedJSHeapSize;
+    }
+
+    // Timing
+    if (window.performance) {
+      performance.timing = window.performance.now();
+    }
+
+    return performance;
   }
+
   /**
-   * Get logs by severity;
+   * Generate log ID
    */
-  getLogsBySeverity(severity: ErrorSeverity): ErrorLogEntry[] {,
-  getLogsBySeverity(severity: ErrorSeverity): ErrorLogEntry[] {}
-    return this.logs.filter(log => log.severity === severity);}
-  getLogsBySeverity(severit)
-  y: ErrorSeverity): ErrorLogEntry[] {/* TODO: Fix JSX expression */}
+  private generateLogId(): string {
+    return `log-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
   }
+
   /**
-   * Clear all logs;
+   * Generate session ID
    */
-  clearLogs(): void {}
-    this.logs = [];}
-  clearLogs(): void {/* TODO: Fix JSX expression */}
+  private generateSessionId(): string {
+    return `session-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
   }
+
   /**
-   * Export logs as JSON;
+   * Get all logs
    */
-  exportLogs(): string {}
-    return JSON.stringify(this.logs, null, 2);}
+  getLogs(): ErrorLogEntry[] {
+    return [...this.logs];
+  }
+
+  /**
+   * Get logs by severity
+   */
+  getLogsBySeverity(severity: string): ErrorLogEntry[] {
+    return this.logs.filter(log => log.severity === severity);
+  }
+
+  /**
+   * Get logs by type
+   */
+  getLogsByType(type: string): ErrorLogEntry[] {
+    return this.logs.filter(log => log.type === type);
+  }
+
+  /**
+   * Get logs by time range
+   */
+  getLogsByTimeRange(startTime: number, endTime: number): ErrorLogEntry[] {
+    return this.logs.filter(log => log.timestamp >= startTime && log.timestamp <= endTime);
+  }
+
+  /**
+   * Clear all logs
+   */
+  clearLogs(): void {
+    this.logs = [];
+    
+    if (this.config.enableLocalStorage) {
+      localStorage.removeItem('error_logs');
+    }
+    
+    if (this.config.enableSessionStorage) {
+      sessionStorage.removeItem('error_logs');
+    }
+  }
+
+  /**
+   * Export logs as JSON
+   */
+  exportLogs(): string {
+    return JSON.stringify(this.logs, null, 2);
+  }
+
+  /**
+   * Get log statistics
+   */
+  getLogStats(): {
+    totalLogs: number;
+    logsBySeverity: Record<string, number>;
+    logsByType: Record<string, number>;
+    oldestLog: number;
+    newestLog: number;
+  } {
+    const logsBySeverity: Record<string, number> = {};
+    const logsByType: Record<string, number> = {};
+    let oldestLog = Date.now();
+    let newestLog = 0;
+
+    this.logs.forEach(log => {
+      logsBySeverity[log.severity] = (logsBySeverity[log.severity] || 0) + 1;
+      logsByType[log.type] = (logsByType[log.type] || 0) + 1;
+      oldestLog = Math.min(oldestLog, log.timestamp);
+      newestLog = Math.max(newestLog, log.timestamp);
+    });
+
+    return {
+      totalLogs: this.logs.length,
+      logsBySeverity,
+      logsByType,
+      oldestLog,
+      newestLog
+    };
   }
 }
-// Singleton instance;
-const errorLogger = new ErrorLogger()
-// Convenience functions;
-export const logError = (message: string, error?: Error, context?: Record<string, unknown>) =>
-  errorLogger.log(message, ErrorSeverity.MEDIUM, error, context)
-export const logCritical = (message: string, error?: Error, context?: Record<string, unknown>) =>
-  errorLogger.log(message, ErrorSeverity.CRITICAL, error, context)
-export const logWarning = (message: string, context?: Record<string, unknown>) =>
-  errorLogger.log(message, ErrorSeverity.LOW, undefined, context)
-export const logInfo = (message: string, context?: Record<string, unknown>) =>
-  errorLogger.log(message, ErrorSeverity.LOW, undefined, context)
-export default errorLogger;
-  exportLogs(): string {/* TODO: Fix JSX expression */}
-  }
-}
-// Singleton instance;
-const errorLogger = new ErrorLogger();
-// Convenience functions;
-export const logError = (messag)
-  e: string, error?: Error, context?: Record<string, unknown>) =>
-  errorLogger.log(message, ErrorSeverity.MEDIUM, error, context);
-export const logCritical = (messag)
-  e: string, error?: Error, context?: Record<string, unknown>) =>
-  errorLogger.log(message, ErrorSeverity.CRITICAL, error, context);
-export const logWarning = (messag)
-  e: string, context?: Record<string, unknown>) =>
-  errorLogger.log(message, ErrorSeverity.LOW, undefined, context);
-export const logInfo = (messag)
-  e: string, context?: Record<string, unknown>) =>
-  errorLogger.log(message, ErrorSeverity.LOW, undefined, context);
-export default errorLogger;
-`
+
+export default ErrorLogger;

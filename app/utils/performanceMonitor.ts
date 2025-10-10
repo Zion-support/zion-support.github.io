@@ -1,439 +1,533 @@
-'use client';
-/**
- * Advanced Performance Monitoring Utility;
- * Tracks Core Web Vitals and custom metrics;
- */
-interface PerformanceMetrics {
-  fcp?: number; // First Contentful Paint;
-  lcp?: number; // Largest Contentful Paint;
-  fid?: number; // First Input Delay;
-  cls?: number; // Cumulative Layout Shift;
-  ttfb?: number; // Time to First Byte;
-  fmp?: number; // First Meaningful Paint;
-  customMetrics: Record<string, number>;
-}
-class PerformanceMonitor {
-  private metrics: PerformanceMetrics = {,
-interface PerformanceMetrics {}
-  fcp?: number; // First Contentful Paint
-  lcp?: number; // Largest Contentful Paint
-  fid?: number; // First Input Delay
-  cls?: number; // Cumulative Layout Shift
-  ttfb?: number; // Time to First Byte
-  fmp?: number; // First Meaningful Paint
-  customMetrics: Record<string, number>;</strin>
-}
-class PerformanceMonitor {}
-  private metrics: PerformanceMetrics = {}
-    customMetrics: {}
-interface PerformanceMetrics {/* TODO: Fix JSX expression */}
-}
-class PerformanceMonitor {/* TODO: Fix JSX expression */}
-  s: {}
+// Performance monitor utility
+
+export interface PerformanceMonitorConfig {
+  enableRealTimeMonitoring?: boolean;
+  enableResourceMonitoring?: boolean;
+  enableMemoryMonitoring?: boolean;
+  enableNetworkMonitoring?: boolean;
+  enableUserInteractionMonitoring?: boolean;
+  sampleRate?: number;
+  reportInterval?: number;
+  enableAlerts?: boolean;
+  alertThresholds?: {
+    memoryUsage?: number;
+    responseTime?: number;
+    errorRate?: number;
   };
-  private,
-  observers: PerformanceObserver[] = [];
-  private isInitialized = false;
-  init(): void {}
-    if (this.isInitialized || typeof window === 'undefined') return;
-    this.isInitialized = true;
-    this.setupWebVitals();
-    this.setupCustomMetrics();,
-    this.setupResourceTiming();
-  init(): void {/* TODO: Fix JSX expression */}
-  }
-  /**
-   * Initialize performance observers;
-   */
-  private initializeObservers(): void {
-    try {
-      // Observe paint metrics;
-      if ('PerformanceObserver' in window) {
-        // First Contentful Paint;
-        this.observeEntry('paint', (entries) => {
-          entries.forEach((entry) => {
-            if (entry.name === 'first-contentful-paint') {
-  private initializeObservers(): void {}
-    try {}
-      // Observe paint metrics
-      if ('PerformanceObserver' in window) {}
-        // First Contentful Paint
-        this.observeEntry('paint', (entries) => {}
-          entries.forEach((entry) => {}
-            if (entry.name === 'first-contentful-paint') {}
-              this.recordMetric('FCP', entry.startTime);
-            }
-
-
-        // Largest Contentful Paint;
-        this.observeEntry('largest-contentful-paint', entries => {)
-          const lastEntry = entries[entries.length - 1];)
-          if (lastEntry) {
-            this.recordMetric('LCP')
-              (lastEntry as any).renderTime || (lastEntry as any).loadTime || lastEntry.startTime;
-            );
-          }
-
-        // First Input Delay;
-        this.observeEntry('first-input', entries => {)
-          const firstInput = entries[0];)
-          if (firstInput && (firstInput as any).processingStart !== undefined) {
-        // Largest Contentful Paint
-        this.observeEntry('largest-contentful-paint', entries => {)}
-          const lastEntry = entries[entries.length - 1];
-          if (lastEntry) {}
-            this.recordMetric()
-              'LCP',
-              (lastEntry as any).renderTime || (lastEntry as any).loadTime || lastEntry.startTime
-            );
-          }
-
-        // First Input Delay
-        this.observeEntry('first-input', entries => {)}
-          const firstInput = entries[0];
-          if (firstInput && (firstInput as any).processingStart !== undefined) {}
-            const fid = (firstInput as any).processingStart - firstInput.startTime;
-            this.recordMetric('FID', fid);
-          }
-
-        // Cumulative Layout Shift;
-        this.observeEntry('layout-shift', (entries) => {
-          let clsValue = 0;
-          entries.forEach((entry: PerformanceEntry) => {,
-            if (!(entry as any).hadRecentInput) {,
-        // Cumulative Layout Shift
-        this.observeEntry('layout-shift', (entries) => {}
-          let clsValue = 0;
-          entries.forEach((entry: PerformanceEntry) => {}
-            if (!(entry as any).hadRecentInput) {}
-              clsValue += (entry as any).value;
-            }
-
-          if (clsValue > 0) {}
-            this.recordMetric('CLS', clsValue);
-  private initializeObservers(): void {/* TODO: Fix JSX expression */}
-            }
-          });
-        });
-        // Largest Contentful Paint;
-        this.observeEntry('largest-contentful-paint', entries => {/* TODO: Fix JSX expression */}
-          })
-        });
-        // First Input Delay;
-        this.observeEntry('first-input', entries => {/* TODO: Fix JSX expression */}
-          })
-        });
-        // Cumulative Layout Shift;
-        this.observeEntry('layout-shift', (entries) => {/* TODO: Fix JSX expression */}
-            }
-          });
-          if (clsValue > 0) {/* TODO: Fix JSX expression */}
-          }
-
-      }
-    } catch (error) {}
-      logger.error('Failed to initialize performance observers', error as Error);
-    }
-  }
-  private observePaint(name: string, metricKey: keyof PerformanceMetrics): void {
-    try {,
-      const observer = new PerformanceObserver((list) => {,
-        for (const entry of list.getEntries()) {,
-          if (entry.name === name) {,
-            (this.metrics as any)[metricKey] = entry.startTime;,
-  private observePaint(name: string, metricKey: keyof PerformanceMetrics): void {}
-    try {}
-      const observer = new PerformanceObserver((list) => {}
-        for (const entry of list.getEntries()) {}
-          if (entry.name === name) {}
-            (this.metrics as any)[metricKey] = entry.startTime;
-            this.logMetric(metricKey as string, entry.startTime);
-          }
-        }
-
-      observer.observe({ entryTypes: ['paint'] });
-      this.observers.push(observer);
-    } catch (error) {}
-      }
-  }
-  private observeLCP(): void {}
-    try {}
-      const observer = new PerformanceObserver((list) => {}
-        const entries = list.getEntries();
-        const lastEntry = entries[entries.length - 1];
-        this.metrics.lcp = lastEntry.startTime;
-        this.logMetric('lcp', lastEntry.startTime);
-
-      observer.observe({ entryTypes: ['largest-contentful-paint'] });
-      this.observers.push(observer);
-    } catch (error) {}
-      }
-  }
-  private observeFID(): void {}
-    try {}
-      const observer = new PerformanceObserver((list) => {}
-        for (const entry of list.getEntries()) {}
-          this.metrics.fid = (entry as any).processingStart - entry.startTime;
-          this.logMetric('fid', this.metrics.fid);
-        }
-
-      observer.observe({ entryTypes: ['first-input'] });
-      this.observers.push(observer);
-    } catch (error) {}
-      }
-  }
-  private observeCLS(): void {}
-    try {}
-      let clsValue = 0;
-      const observer = new PerformanceObserver((list) => {}
-        for (const entry of list.getEntries()) {}
-          if (!(entry as any).hadRecentInput) {}
-            clsValue += (entry as any).value;
-    } catch (error) {/* TODO: Fix JSX expression */}
-    }
-  }
-  private observePaint(nam,
-  e: string, metricKe)
-  y: keyof PerformanceMetrics): void {/* TODO: Fix JSX expression */}
-          }
-        }
-      });
-      observer.observe({/* TODO: Fix JSX expression */})
-  s: ['paint'] });
-      this.observers.push(observer);
-    } catch (error) {/* TODO: Fix JSX expression */}
-      }
-  }
-  private observeLCP(): void {/* TODO: Fix JSX expression */}
-      });
-      observer.observe({/* TODO: Fix JSX expression */})
-  s: ['largest-contentful-paint'] });
-      this.observers.push(observer);
-    } catch (error) {/* TODO: Fix JSX expression */}
-      }
-  }
-  private observeFID(): void {/* TODO: Fix JSX expression */}
-        }
-      });
-      observer.observe({/* TODO: Fix JSX expression */})
-  s: ['first-input'] });
-      this.observers.push(observer);
-    } catch (error) {/* TODO: Fix JSX expression */}
-      }
-  }
-  private observeCLS(): void {/* TODO: Fix JSX expression */}
-          }
-        }
-        this.metrics.cls = clsValue;
-        this.logMetric('cls', clsValue);
-
-      observer.observe({ entryTypes: ['layout-shift'] });
-      this.observers.push(observer);
-    } catch (error) {}
-      }
-  }
-  private setupCustomMetrics(): void {
-    // Time to First Byte;
-    if (performance.timing) {
-      this.metrics.ttfb = performance.timing.responseStart - performance.timing.navigationStart;
-      this.logMetric('ttfb', this.metrics.ttfb);
-    }
-    // Page Load Time;
-    if (performance.timing) {
-      const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
-      this.addCustomMetric('pageLoadTime', loadTime);
-    }
-    // DOM Content Loaded;
-    if (performance.timing) {
-  private setupCustomMetrics(): void {}
-    // Time to First Byte
-    if (performance.timing) {}
-      this.metrics.ttfb = performance.timing.responseStart - performance.timing.navigationStart;
-      this.logMetric('ttfb', this.metrics.ttfb);
-    }
-    // Page Load Time
-    if (performance.timing) {}
-      const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
-      this.addCustomMetric('pageLoadTime', loadTime);
-    }
-    // DOM Content Loaded
-    if (performance.timing) {}
-      const domContentLoaded = performance.timing.domContentLoadedEventEnd - performance.timing.navigationStart;
-      this.addCustomMetric('domContentLoaded', domContentLoaded);
-    }
-  }
-  private setupResourceTiming(): void {}
-    try {}
-      const observer = new PerformanceObserver((list) => {}
-        for (const entry of list.getEntries()) {}
-          if (entry.entryType === 'resource') {}
-            const resourceEntry = entry as PerformanceResourceTiming;
-            this.analyzeResource(resourceEntry);
-          }
-        }
-
-      observer.observe({ entryTypes: ['resource'] });
-      this.observers.push(observer);
-    } catch (error) {}
-      }
-  }
-  private analyzeResource(entry: PerformanceResourceTiming): void {}
-    const duration = entry.responseEnd - entry.startTime;
-    const size = entry.transferSize || 0;
-    // Track slow resources;
-    if (duration > 1000) {,
-      this.addCustomMetric(`slowResource_${entry.name}`, duration);
-    }
-    // Track large resources;
-    if (size > 100000) { // 100KB;
-      this.addCustomMetric(`largeResource_${entry.name}`, size);
-    }
-  }
-  addCustomMetric(name: string, value: number): void {,
-    this.metrics.customMetrics[name] = value;,
-    this.logMetric(name, value);
-  }
-  private logMetric(name: string, value: number): void {,
-    if (process.env.NODE_ENV === 'development') {}ms`);
-    }
-    // Send to analytics if available;
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'performance_metric', {)
-        metric_name: name),
-    // Track slow resources
-    if (duration > 1000) {}
-      this.addCustomMetric(`slowResource_${entry.name}`, duration);
-    }
-    // Track large resources
-    if (size > 100000) { // 100KB}
-      this.addCustomMetric(`largeResource_${entry.name}`, size);
-    }
-  }
-  addCustomMetric(name: string, value: number): void {}
-    this.metrics.customMetrics[name] = value;
-    this.logMetric(name, value);
-  }
-  private logMetric(name: string, value: number): void {}
-    if (process.env.NODE_ENV === 'development') {}
-      }ms`);
-    }
-    // Send to analytics if available
-    if (typeof window !== 'undefined' && (window as any).gtag) {}
-      (window as any).gtag('event', 'performance_metric', {)}
-        metric_name: name,
-        metric_value: Math.round(value),
-        event_category: 'performance',
 }
+
+export interface PerformanceData {
+  timestamp: number;
+  memory: {
+    used: number;
+    total: number;
+    limit: number;
+  };
+  resources: {
+    count: number;
+    totalSize: number;
+    loadTime: number;
+  };
+  network: {
+    requests: number;
+    totalSize: number;
+    averageResponseTime: number;
+  };
+  userInteractions: {
+    clicks: number;
+    scrolls: number;
+    keypresses: number;
+  };
+  errors: {
+    count: number;
+    rate: number;
+  };
+}
+
+export class PerformanceMonitor {
+  private config: Required<PerformanceMonitorConfig>;
+  private data: PerformanceData[] = [];
+  private reportTimer?: NodeJS.Timeout;
+  private isMonitoring = false;
+
+  constructor(config: PerformanceMonitorConfig = {}) {
+    this.config = {
+      enableRealTimeMonitoring: true,
+      enableResourceMonitoring: true,
+      enableMemoryMonitoring: true,
+      enableNetworkMonitoring: true,
+      enableUserInteractionMonitoring: true,
+      sampleRate: 1.0,
+      reportInterval: 5000, // 5 seconds
+      enableAlerts: true,
+      alertThresholds: {
+        memoryUsage: 80, // 80%
+        responseTime: 2000, // 2 seconds
+        errorRate: 5 // 5%
+      },
+      ...config
+    };
+
+    this.initializeMonitoring();
   }
-  getMetrics(): PerformanceMetrics {}
-    return { ...this.metrics };
+
+  /**
+   * Start monitoring
+   */
+  start(): void {
+    if (this.isMonitoring) return;
+
+    this.isMonitoring = true;
+    this.startDataCollection();
+    this.startReporting();
   }
-  getScore(): number {}
-    const scores = [];
-    // FCP scoring (0-100)
-    if (this.metrics.fcp) {}
-      if (this.metrics.fcp <= 1800) scores.push(100);
-      else if (this.metrics.fcp <= 4000) scores.push(50);
-      else scores.push(25);
-    }
-    // LCP scoring (0-100)
-    if (this.metrics.lcp) {}
-      if (this.metrics.lcp <= 2500) scores.push(100);
-      else if (this.metrics.lcp <= 4000) scores.push(75);
-      else if (this.metrics.lcp <= 6000) scores.push(50);
-      else scores.push(25);
-    }
-    // FID scoring (0-100)
-    if (this.metrics.fid) {}
-      if (this.metrics.fid <= 100) scores.push(100);
-      else if (this.metrics.fid <= 300) scores.push(75);
-      else if (this.metrics.fid <= 500) scores.push(50);
-      else scores.push(25);
-    }
-    // CLS scoring (0-100)
-    if (this.metrics.cls) {}
-      if (this.metrics.cls <= 0.1) scores.push(100);
-      else if (this.metrics.cls <= 0.25) scores.push(75);
-      else if (this.metrics.cls <= 0.4) scores.push(50);
-      else scores.push(25);
-    }
-    return scores.length > 0 ? Math.round(scores.reduce((a, b) => a + b, 0) / scores.length) : 0;
+
+  /**
+   * Stop monitoring
+   */
+  stop(): void {
+    this.isMonitoring = false;
+    this.stopDataCollection();
+    this.stopReporting();
   }
-  generateReport(): string {}
-      });
-      observer.observe({/* TODO: Fix JSX expression */})
-  s: ['layout-shift'] });
-      this.observers.push(observer);
-    } catch (error) {/* TODO: Fix JSX expression */}
+
+  /**
+   * Initialize monitoring
+   */
+  private initializeMonitoring(): void {
+    if (this.config.enableRealTimeMonitoring) {
+      this.setupRealTimeMonitoring();
+    }
+
+    if (this.config.enableResourceMonitoring) {
+      this.setupResourceMonitoring();
+    }
+
+    if (this.config.enableMemoryMonitoring) {
+      this.setupMemoryMonitoring();
+    }
+
+    if (this.config.enableNetworkMonitoring) {
+      this.setupNetworkMonitoring();
+    }
+
+    if (this.config.enableUserInteractionMonitoring) {
+      this.setupUserInteractionMonitoring();
+    }
+  }
+
+  /**
+   * Setup real-time monitoring
+   */
+  private setupRealTimeMonitoring(): void {
+    // Monitor page visibility changes
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) {
+        this.pauseMonitoring();
+      } else {
+        this.resumeMonitoring();
       }
+    });
+
+    // Monitor window focus changes
+    window.addEventListener('focus', () => {
+      this.resumeMonitoring();
+    });
+
+    window.addEventListener('blur', () => {
+      this.pauseMonitoring();
+    });
   }
-  private setupCustomMetrics(): void {/* TODO: Fix JSX expression */}
-    }
-    // Page Load Time;
-    if (performance.timing) {/* TODO: Fix JSX expression */}
-    }
-    // DOM Content Loaded;
-    if (performance.timing) {/* TODO: Fix JSX expression */}
-    }
-  }
-  private setupResourceTiming(): void {/* TODO: Fix JSX expression */}
+
+  /**
+   * Setup resource monitoring
+   */
+  private setupResourceMonitoring(): void {
+    if ('PerformanceObserver' in window) {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach(entry => {
+          if (entry.entryType === 'resource') {
+            this.trackResource(entry as PerformanceResourceTiming);
           }
-        }
+        });
       });
-      observer.observe({/* TODO: Fix JSX expression */})
-  s: ['resource'] });
-      this.observers.push(observer);
-    } catch (error) {/* TODO: Fix JSX expression */}
+      observer.observe({ entryTypes: ['resource'] });
+    }
+  }
+
+  /**
+   * Setup memory monitoring
+   */
+  private setupMemoryMonitoring(): void {
+    if ('memory' in performance) {
+      setInterval(() => {
+        this.collectMemoryData();
+      }, 1000);
+    }
+  }
+
+  /**
+   * Setup network monitoring
+   */
+  private setupNetworkMonitoring(): void {
+    // Override fetch to track requests
+    const originalFetch = window.fetch;
+    window.fetch = async (...args) => {
+      const startTime = performance.now();
+      const url = args[0] as string;
+      const method = args[1]?.method || 'GET';
+
+      try {
+        const response = await originalFetch(...args);
+        const duration = performance.now() - startTime;
+        
+        this.trackNetworkRequest(url, method, response.status, duration);
+        
+        return response;
+      } catch (error) {
+        const duration = performance.now() - startTime;
+        this.trackNetworkRequest(url, method, 0, duration);
+        throw error;
       }
-  }
-  private analyzeResource(entr)
-  y: PerformanceResourceTiming): void {/* TODO: Fix JSX expression */}
-      this.addCustomMetric(`slowResource_${entry.name}`, duration);
-    }
-    // Track large resources;
-    if (size > 100000) {/* TODO: Fix JSX expression */}`
-      this.addCustomMetric(`largeResource_${entry.name}`, size);
-    }
-  }
-  addCustomMetric(nam,
-  e: string, valu)
-  e: number): void {/* TODO: Fix JSX expression */}
-  }
-  private logMetric(nam,
-  e: string, valu)
-  e: number): void {/* TODO: Fix JSX expression */}`
-      }ms`);
-    }
-    // Send to analytics if available;
-    if (typeof window !== 'undefined' && (window as any).gtag) {/* TODO: Fix JSX expression */}
-      });
-    }
-  }
-  getMetrics(): PerformanceMetrics {/* TODO: Fix JSX expression */}
-    return { ...this.metrics };
-  }
-  getScore(): number {/* TODO: Fix JSX expression */}
-    }
-    // LCP scoring (0-100)
-    if (this.metrics.lcp) {/* TODO: Fix JSX expression */}
-    }
-    // FID scoring (0-100)
-    if (this.metrics.fid) {/* TODO: Fix JSX expression */}
-    }
-    // CLS scoring (0-100)
-    if (this.metrics.cls) {/* TODO: Fix JSX expression */}
-    }
-    return scores.length > 0 ? Math.round(scores.reduce((a, b) => a + b, 0) / scores.length) : 0;
+    };
   }
 
-  generateReport(): string {
-    const score = this.getScore();
-    const metrics = this.getMetrics();
-    return `
-Performance Report:
-Score: ${score}
-Metrics: ${JSON.stringify(metrics, null, 2)}
-    `;
+  /**
+   * Setup user interaction monitoring
+   */
+  private setupUserInteractionMonitoring(): void {
+    let clickCount = 0;
+    let scrollCount = 0;
+    let keypressCount = 0;
+
+    document.addEventListener('click', () => {
+      clickCount++;
+    });
+
+    document.addEventListener('scroll', () => {
+      scrollCount++;
+    });
+
+    document.addEventListener('keypress', () => {
+      keypressCount++;
+    });
+
+    // Reset counters periodically
+    setInterval(() => {
+      this.trackUserInteractions(clickCount, scrollCount, keypressCount);
+      clickCount = 0;
+      scrollCount = 0;
+      keypressCount = 0;
+    }, 1000);
   }
 
+  /**
+   * Start data collection
+   */
+  private startDataCollection(): void {
+    setInterval(() => {
+      if (this.isMonitoring && Math.random() < this.config.sampleRate) {
+        this.collectData();
+      }
+    }, 1000);
+  }
 
+  /**
+   * Stop data collection
+   */
+  private stopDataCollection(): void {
+    // Clear any existing timers
+    if (this.reportTimer) {
+      clearInterval(this.reportTimer);
+    }
+  }
+
+  /**
+   * Start reporting
+   */
+  private startReporting(): void {
+    this.reportTimer = setInterval(() => {
+      this.reportData();
+    }, this.config.reportInterval);
+  }
+
+  /**
+   * Stop reporting
+   */
+  private stopReporting(): void {
+    if (this.reportTimer) {
+      clearInterval(this.reportTimer);
+    }
+  }
+
+  /**
+   * Collect performance data
+   */
+  private collectData(): void {
+    const data: PerformanceData = {
+      timestamp: Date.now(),
+      memory: this.getMemoryData(),
+      resources: this.getResourceData(),
+      network: this.getNetworkData(),
+      userInteractions: this.getUserInteractionData(),
+      errors: this.getErrorData()
+    };
+
+    this.data.push(data);
+
+    // Keep only last 100 data points
+    if (this.data.length > 100) {
+      this.data.shift();
+    }
+
+    // Check for alerts
+    if (this.config.enableAlerts) {
+      this.checkAlerts(data);
+    }
+  }
+
+  /**
+   * Get memory data
+   */
+  private getMemoryData(): { used: number; total: number; limit: number } {
+    if ('memory' in performance) {
+      const memory = (performance as any).memory;
+      return {
+        used: memory.usedJSHeapSize,
+        total: memory.totalJSHeapSize,
+        limit: memory.jsHeapSizeLimit
+      };
+    }
+    return { used: 0, total: 0, limit: 0 };
+  }
+
+  /**
+   * Get resource data
+   */
+  private getResourceData(): { count: number; totalSize: number; loadTime: number } {
+    const resources = performance.getEntriesByType('resource') as PerformanceResourceTiming[];
+    let totalSize = 0;
+    let totalLoadTime = 0;
+
+    resources.forEach(resource => {
+      totalSize += resource.transferSize || 0;
+      totalLoadTime += resource.responseEnd - resource.responseStart;
+    });
+
+    return {
+      count: resources.length,
+      totalSize,
+      loadTime: totalLoadTime
+    };
+  }
+
+  /**
+   * Get network data
+   */
+  private getNetworkData(): { requests: number; totalSize: number; averageResponseTime: number } {
+    // This would be populated by the network monitoring
+    return {
+      requests: 0,
+      totalSize: 0,
+      averageResponseTime: 0
+    };
+  }
+
+  /**
+   * Get user interaction data
+   */
+  private getUserInteractionData(): { clicks: number; scrolls: number; keypresses: number } {
+    // This would be populated by the user interaction monitoring
+    return {
+      clicks: 0,
+      scrolls: 0,
+      keypresses: 0
+    };
+  }
+
+  /**
+   * Get error data
+   */
+  private getErrorData(): { count: number; rate: number } {
+    // This would be populated by error monitoring
+    return {
+      count: 0,
+      rate: 0
+    };
+  }
+
+  /**
+   * Track resource
+   */
+  private trackResource(resource: PerformanceResourceTiming): void {
+    // Track resource performance
+    console.log('Resource loaded:', resource.name, resource.duration);
+  }
+
+  /**
+   * Track network request
+   */
+  private trackNetworkRequest(url: string, method: string, status: number, duration: number): void {
+    // Track network request performance
+    console.log('Network request:', method, url, status, duration);
+  }
+
+  /**
+   * Track user interactions
+   */
+  private trackUserInteractions(clicks: number, scrolls: number, keypresses: number): void {
+    // Track user interaction metrics
+    console.log('User interactions:', { clicks, scrolls, keypresses });
+  }
+
+  /**
+   * Collect memory data
+   */
+  private collectMemoryData(): void {
+    if ('memory' in performance) {
+      const memory = (performance as any).memory;
+      const usage = (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100;
+      
+      if (usage > this.config.alertThresholds.memoryUsage) {
+        this.alert('High memory usage detected', { usage });
+      }
+    }
+  }
+
+  /**
+   * Check for alerts
+   */
+  private checkAlerts(data: PerformanceData): void {
+    const memoryUsage = (data.memory.used / data.memory.limit) * 100;
+    
+    if (memoryUsage > this.config.alertThresholds.memoryUsage) {
+      this.alert('High memory usage', { usage: memoryUsage });
+    }
+
+    if (data.network.averageResponseTime > this.config.alertThresholds.responseTime) {
+      this.alert('Slow network response', { responseTime: data.network.averageResponseTime });
+    }
+
+    if (data.errors.rate > this.config.alertThresholds.errorRate) {
+      this.alert('High error rate', { rate: data.errors.rate });
+    }
+  }
+
+  /**
+   * Show alert
+   */
+  private alert(message: string, data: any): void {
+    console.warn('Performance Alert:', message, data);
+    
+    // You could also send alerts to a monitoring service
+    // or show user notifications
+  }
+
+  /**
+   * Pause monitoring
+   */
+  private pauseMonitoring(): void {
+    // Pause data collection when page is not visible
+    this.isMonitoring = false;
+  }
+
+  /**
+   * Resume monitoring
+   */
+  private resumeMonitoring(): void {
+    // Resume data collection when page becomes visible
+    this.isMonitoring = true;
+  }
+
+  /**
+   * Report data
+   */
+  private reportData(): void {
+    if (this.data.length === 0) return;
+
+    const latestData = this.data[this.data.length - 1];
+    
+    // Send data to monitoring service
+    fetch('/api/performance/monitor', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(latestData)
+    }).catch(error => {
+      console.error('Failed to send performance data:', error);
+    });
+  }
+
+  /**
+   * Get performance data
+   */
+  getPerformanceData(): PerformanceData[] {
+    return [...this.data];
+  }
+
+  /**
+   * Get latest performance data
+   */
+  getLatestPerformanceData(): PerformanceData | null {
+    return this.data.length > 0 ? this.data[this.data.length - 1] : null;
+  }
+
+  /**
+   * Clear performance data
+   */
+  clearPerformanceData(): void {
+    this.data = [];
+  }
+
+  /**
+   * Get performance summary
+   */
+  getPerformanceSummary(): {
+    averageMemoryUsage: number;
+    averageResponseTime: number;
+    totalResources: number;
+    totalErrors: number;
+    uptime: number;
+  } {
+    if (this.data.length === 0) {
+      return {
+        averageMemoryUsage: 0,
+        averageResponseTime: 0,
+        totalResources: 0,
+        totalErrors: 0,
+        uptime: 0
+      };
+    }
+
+    const totalMemoryUsage = this.data.reduce((sum, data) => {
+      return sum + (data.memory.used / data.memory.limit) * 100;
+    }, 0);
+
+    const totalResponseTime = this.data.reduce((sum, data) => {
+      return sum + data.network.averageResponseTime;
+    }, 0);
+
+    const totalResources = this.data.reduce((sum, data) => {
+      return sum + data.resources.count;
+    }, 0);
+
+    const totalErrors = this.data.reduce((sum, data) => {
+      return sum + data.errors.count;
+    }, 0);
+
+    const uptime = this.data.length > 0 ? 
+      this.data[this.data.length - 1].timestamp - this.data[0].timestamp : 0;
+
+    return {
+      averageMemoryUsage: totalMemoryUsage / this.data.length,
+      averageResponseTime: totalResponseTime / this.data.length,
+      totalResources,
+      totalErrors,
+      uptime
+    };
+  }
+}
+
+export default PerformanceMonitor;

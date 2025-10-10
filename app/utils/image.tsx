@@ -1,139 +1,89 @@
-'use client'
-import React, { useState, useCallback } from 'react'
-interface ImageProps {
-  src: string,
-    alt: string
-interface ImageProps {}
-  src: string
-  alt: string
-  width?: number
-  height?: number
-  className?: string
-  priority?: boolean
-  _quality?: number
+// Image utility component
+
+import React, { useState, useCallback } from 'react';
+
+export interface ImageProps {
   src: string;
   alt: string;
-  width?: number;
-  height?: number;
+  width?: number | string;
+  height?: number | string;
   className?: string;
-  priority?: boolean;
-  _quality?: number;
-  _placeholder?: 'blur' | 'empty'
-  _blurDataURL?: string;
-  fill?: boolean;
-  sizes?: string;
-  style?: React.CSSProperties;
+  loading?: 'lazy' | 'eager';
+  placeholder?: string;
+  fallback?: string;
   onLoad?: () => void;
-  onError?: () => void;}
+  onError?: () => void;
+  [key: string]: any;
 }
-export const Image: React.FC<ImageProps>= ({
-export const Image: React.FC<ImageProps> = ({}
+
+export const Image: React.FC<ImageProps> = ({
   src,
-export const Image: React.FC<ImageProps> = ({,
-  src;
   alt,
   width,
   height,
   className,
-  priority = false,
-  quality = 75,
-  placeholder = 'empty',
-  blurDataURL,
-  fill = false,
-  sizes,
-  style,
+  loading = 'lazy',
+  placeholder,
+  fallback,
   onLoad,
   onError,
-  ...props}
-}) => {}
-  const [, setIsLoaded] = useState(false)
-  const [hasError, setHasError] = useState(false)
-  const handleLoad = useCallback(() => {}
-    setIsLoaded(true)
-    if (onLoad) onLoad();}
-  }, [onLoad])
-  const handleError = useCallback(() => {}
-    setHasError(true)
-    if (onError) onError();}
-  }, [onError])
-  const imageStyle: React.CSSProperties = {
-    ...style;
-    ...(fill && {
-      position: 'absolute'
-      top: 0;
-      left: 0;
-  const imageStyle: React.CSSProperties = {}
-    ...style,
-    ...(fill && {}
-      position: 'absolute',
-      top: 0,
-      left: 0,
-      width: '100%',
-      height: '100%',
-      objectFit: 'cover'}
-    })
-  }
-  if (hasError) {</ImageProps>
-    return (</ImageProps>
-  if (hasError) {}
-    return (
-      <div}
-  if (hasError) {
-    return(<div}
-'use client';
-import React, { useState, useCallback } from 'react';
-interface ImageProps {/* TODO: Fix JSX expression */}
-}
-export const,
-  Image: React.FC<ImageProps> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
-  }, [onLoad]);
-  const handleError = useCallback(() => {/* TODO: Fix JSX expression */}
-  }, [onError]);
-  const,
-  imageStyle: React.CSSProperties = {/* TODO: Fix JSX expression */}
-    })
-  };
-  if (hasError) {/* TODO: Fix JSX expression */}
-        className={`bg-gray-200 flex items-center justify-center ${className}`}
-        style={imageStyle}
-        {...props})
-      >)
-        <span className="text-gray-500 text-sm"><span className="sr-only">Screen reader: </span>Failed to load image</span>)
-      </div>)
-    ),
+  ...props
+}) => {
+  const [imageSrc, setImageSrc] = useState(placeholder || src);
+  const [isLoading, setIsLoading] = useState(true);
+  const [hasError, setHasError] = useState(false);
+
+  const handleLoad = useCallback(() => {
+    setIsLoading(false);
+    setImageSrc(src);
+    onLoad?.();
+  }, [src, onLoad]);
+
+  const handleError = useCallback(() => {
+    setIsLoading(false);
+    setHasError(true);
+    if (fallback) {
+      setImageSrc(fallback);
+    }
+    onError?.();
+  }, [fallback, onError]);
+
+  return (
+    <div className={`image-container ${className || ''}`} style={{ width, height }}>
+      {isLoading && placeholder && (
+        <div className="image-placeholder">
+          <div className="image-placeholder-content">
+            <div className="image-placeholder-spinner" />
+          </div>
+        </div>
+      )}
+      
+      <img
+        src={imageSrc}
+        alt={alt}
+        width={width}
+        height={height}
+        loading={loading}
+        onLoad={handleLoad}
+        onError={handleError}
+        style={{
+          display: isLoading ? 'none' : 'block',
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover'
+        }}
         {...props}
-      ></div>
-        <span className="text-gray-500 text-sm"></span><span className="sr-only">Screen reader: </span>Failed to load image</span>
-      </div>
-    )
-  }
-  return(<img;
-  return (<img></img>
-      src={src}
-      alt={alt}
-      width={width}
-      height={height}
-      className={className}
-      style={imageStyle}
-      sizes={sizes}
-      loading={priority ? 'eager' : 'lazy'}
-      onLoad={handleLoad}
-      onError={handleError}
-      {...props}
-    >)</img>
-}</img>
-export default Image</img>
-      loading={priority ? 'eager' : 'lazy'})
-      onLoad={handleLoad})
-      onError={handleError})
-      {...props})
-    />)
-  )
-}
-export default Image;
-    />)
+      />
+      
+      {hasError && !fallback && (
+        <div className="image-error">
+          <div className="image-error-content">
+            <span>Failed to load image</span>
+          </div>
+        </div>
+      )}
+    </div>
   );
 };
+
 export default Image;
-"`

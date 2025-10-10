@@ -1,382 +1,416 @@
-'use client'
-/**
- * Advanced Error Tracking and Reporting System;
- * Provides comprehensive error tracking with categorization and analytics;
- */
-export enum ErrorSeverity {/* TODO: Fix JSX expression */}
+// Error tracking utility
+
+export interface ErrorTrackingConfig {
+  enableConsoleLogging?: boolean;
+  enableServerReporting?: boolean;
+  enableUserFeedback?: boolean;
+  enablePerformanceTracking?: boolean;
+  maxQueueSize?: number;
+  flushInterval?: number;
+  enableRetry?: boolean;
+  maxRetries?: number;
 }
 
-export enum ErrorCategory {
-  Network = 'network',
-  Validation = 'validation',
-  Authorization = 'authorization',
-  Runtime = 'runtime',
-  Configuration = 'configuration',
-  ExternalService = 'external_service'
-}
-
-export interface ErrorMetadata {
-  category: ErrorCategory;
-  severity: ErrorSeverity;
-  userId?: string;
-  sessionId?: string;
-  context?: Record<string, unknown>
-  tags?: string[]
-  timestamp: number;
-  stackTrace?: string;
-  userAgent?: string;,
-  url?: string;
-}
-
-export interface TrackedError {
+export interface ErrorEvent {
   id: string;
   message: string;
-  metadata: ErrorMetadata;
-  occurrences: number;
-  firstSeen: number;
-  lastSeen: number;
+  stack?: string;
+  type: string;
+  severity: 'low' | 'medium' | 'high' | 'critical';
+  context: ErrorContext;
+  timestamp: number;
+  userId?: string;
+  sessionId: string;
+  userAgent: string;
+  url: string;
+  lineNumber?: number;
+  columnNumber?: number;
+  fileName?: string;
 }
 
-class ErrorTrackingService {
-  private static instance: ErrorTrackingService;
-  private errors: Map<string, TrackedError> = new Map()
-  private errorListeners: Array<(error: TrackedError) => void> = []
-  private maxStoredErrors = 1000;
-  private constructor() {,
-    this.setupGlobalErrorHandlers()}
-
-  static getInstance(): ErrorTrackingService {
-    if (!ErrorTrackingService.instance) {
-      ErrorTrackingService.instance = new ErrorTrackingService()
-    }
-    return ErrorTrackingService.instance;
-  }
-
-  private setupGlobalErrorHandlers(): void {
-    if (typeof window === 'undefined') return;
-    // Global error handler;
-    window.addEventListener('error', (event) => {
-      this.trackError(new Error(event.message), {
-        category: ErrorCategory.Runtime;
-        severity: ErrorSeverity.High;
-        context: {
-          filename: event.filename;
-          lineno: event.lineno;
-          colno: event.colno;
-        }
-      })
-    })
-
-    // Unhandled promise rejection handler;
-    window.addEventListener('unhandledrejection', (event) => {
-      this.trackError(new Error(`Unhandled Promise Rejection: ${event.reason}`), {
-        category: ErrorCategory.Runtime;
-        severity: ErrorSeverity.High;
-        context: { reason: event.reason }
-      })
-    })
-  }
-
-  trackError(error: Error),
-    metadata: Partial<ErrorMetadata> & { category: ErrorCategory; severity: ErrorSeverity }
-  ): string {
-    const errorId = this.generateErrorId(error.message)
-    const now = Date.now()
-
-    const trackedError: TrackedError = {
-      id: errorId;
-      message: error.message;
-      metadata: {
-        category: metadata.category;
-        severity: metadata.severity;
-        userId: metadata.userId;
-        sessionId: metadata.sessionId;
-        context: metadata.context;
-        tags: metadata.tags;
-        timestamp: now;
-        stackTrace: error.stack;
-        userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined;
-        url: typeof window !== 'undefined' ? window.location.href : undefined;
-      },
-      occurrences: 1;
-      firstSeen: now;
-      lastSeen: now;
-    }
-
-    // Check if error already exists;
-    const existingError = this.errors.get(errorId)
-    if (existingError) {
-      existingError.occurrences++
-      existingError.lastSeen = now;
-      this.errors.set(errorId, existingError)
-    } else {
-      this.errors.set(errorId, trackedError)
-
-      // Clean up old errors if we exceed the limit;
-      if (this.errors.size > this.maxStoredErrors) {
-        const oldestError = Array.from(this.errors.values())
-          .sort((a, b) => a.firstSeen - b.firstSeen)[0]
-        this.errors.delete(oldestError.id)
-      }
-    }
-
-    // Log the error;
-    logger.error('Error tracked', {)
-      errorId)
-      message: error.message),
-      category: metadata.category),
-      severity: metadata.severity;
-    })
-
-    // Notify listeners;
-    this.notifyListeners(trackedError)
-
-    // Report to external service (in production)
-    if (process.env.NODE_ENV === 'production') {
-      this.reportToExternalService(errorId).catch(err => {)
-        logger.error('Failed to report error to external service', { error: err.message })
-      })
-export enum ErrorCategory {/* TODO: Fix JSX expression */}
+export interface ErrorContext {
+  component?: string;
+  action?: string;
+  props?: Record<string, any>;
+  state?: Record<string, any>;
+  [key: string]: any;
 }
-export interface ErrorMetadata {/* TODO: Fix JSX expression */}
-}
-export interface TrackedError {/* TODO: Fix JSX expression */}
-}
-class ErrorTrackingService {/* TODO: Fix JSX expression */}
-  }
-  static getInstance(): ErrorTrackingService {/* TODO: Fix JSX expression */}
-    }
-    return ErrorTrackingService.instance;
-  }
-  /**
-   * Set up global error handlers;
-   */
-  private setupGlobalErrorHandlers(): void {/* TODO: Fix JSX expression */}
-        }
-      });
-    });
-    // Handle unhandled promise rejections;
-    window.addEventListener('unhandledrejection', event => {/* TODO: Fix JSX expression */})
-  Rejection: ${event.reason}`), {/* TODO: Fix JSX expression */}
-  n: event.reason }
-      });
-    });
-  }
-  /**
-   * Track an error with metadata;
-   */
-  trackError(erro,
-  r: Error,
-    metadat,
-  a: Partial<ErrorMetadata> & {/* TODO: Fix JSX expression */}
-  y: ErrorSeverity })
-  ): string {/* TODO: Fix JSX expression */}
+
+export class ErrorTracking {
+  private config: Required<ErrorTrackingConfig>;
+  private errorQueue: ErrorEvent[] = [];
+  private flushTimer?: NodeJS.Timeout;
+  private sessionId: string;
+  private userId?: string;
+
+  constructor(config: ErrorTrackingConfig = {}) {
+    this.config = {
+      enableConsoleLogging: true,
+      enableServerReporting: true,
+      enableUserFeedback: true,
+      enablePerformanceTracking: true,
+      maxQueueSize: 100,
+      flushInterval: 30000, // 30 seconds
+      enableRetry: true,
+      maxRetries: 3,
+      ...config
     };
-    const existingError = this.errors.get(errorId);
-    if (existingError) {/* TODO: Fix JSX expression */}
-    } else {/* TODO: Fix JSX expression */}
-      };
-      this.errors.set(errorId, trackedError);
-      // Notify listeners;
-      this.notifyListeners(trackedError);
-      // Maintain max stored errors;
-      if (this.errors.size > this.maxStoredErrors) {/* TODO: Fix JSX expression */}
-      }
+
+    this.sessionId = this.generateSessionId();
+    this.initializeGlobalHandlers();
+    this.startFlushTimer();
+  }
+
+  /**
+   * Track an error
+   */
+  trackError(error: Error, context: ErrorContext = {}): void {
+    const errorEvent = this.createErrorEvent(error, context);
+    
+    this.addToQueue(errorEvent);
+    
+    if (this.config.enableConsoleLogging) {
+      this.logError(errorEvent);
     }
-    // Log the error;`
-    logger.error(`[${metadata.severity.toUpperCase()}] ${error.message}`, error, 'ErrorTracking', {/* TODO: Fix JSX expression */}
+
+    if (this.config.enableUserFeedback) {
+      this.showUserFeedback(errorEvent);
+    }
+  }
+
+  /**
+   * Track React error boundary error
+   */
+  trackReactError(error: Error, errorInfo: React.ErrorInfo, context: ErrorContext = {}): void {
+    this.trackError(error, {
+      ...context,
+      componentStack: errorInfo.componentStack,
+      errorBoundary: true
     });
-    // Send to external service if critical;
-    if (metadata.severity === ErrorSeverity.Critical) {/* TODO: Fix JSX expression */}
+  }
+
+  /**
+   * Track async error
+   */
+  trackAsyncError(error: Error, context: ErrorContext = {}): void {
+    this.trackError(error, {
+      ...context,
+      async: true
+    });
+  }
+
+  /**
+   * Track network error
+   */
+  trackNetworkError(error: Error, url: string, method: string, context: ErrorContext = {}): void {
+    this.trackError(error, {
+      ...context,
+      network: true,
+      url,
+      method
+    });
+  }
+
+  /**
+   * Track performance error
+   */
+  trackPerformanceError(error: Error, metric: string, value: number, context: ErrorContext = {}): void {
+    this.trackError(error, {
+      ...context,
+      performance: true,
+      metric,
+      value
+    });
+  }
+
+  /**
+   * Set user ID
+   */
+  setUserId(userId: string): void {
+    this.userId = userId;
+  }
+
+  /**
+   * Add error to queue
+   */
+  private addToQueue(errorEvent: ErrorEvent): void {
+    this.errorQueue.push(errorEvent);
+
+    // Enforce max queue size
+    if (this.errorQueue.length > this.config.maxQueueSize) {
+      this.errorQueue.shift();
     }
 
-    return errorId;
-  }
-
-  private generateErrorId(message: string): string {,
-    const timestamp = Date.now().toString(36),
-    const hash = this.simpleHash(message),
-    return `err_${timestamp}_${hash}`
-  }
-
-  private simpleHash(str: string): string {
-    let hash = 0;
-    for (let i = 0; i < str.length; i++) {
-      const char = str.charCodeAt(i),
-      hash = ((hash << 5) - hash) + char;
-      hash = hash & hash // Convert to 32-bit integer;
+    // Flush immediately for critical errors
+    if (errorEvent.severity === 'critical') {
+      this.flushQueue();
     }
-    return Math.abs(hash).toString(36)
   }
 
-  addListener(listener: (error: TrackedError) => void): void {,
-    this.errorListeners.push(listener)}
+  /**
+   * Create error event
+   */
+  private createErrorEvent(error: Error, context: ErrorContext): ErrorEvent {
+    return {
+      id: this.generateErrorId(),
+      message: error.message,
+      stack: error.stack,
+      type: error.name,
+      severity: this.determineSeverity(error, context),
+      context,
+      timestamp: Date.now(),
+      userId: this.userId,
+      sessionId: this.sessionId,
+      userAgent: navigator.userAgent,
+      url: window.location.href,
+      lineNumber: this.extractLineNumber(error.stack),
+      columnNumber: this.extractColumnNumber(error.stack),
+      fileName: this.extractFileName(error.stack)
+    };
+  }
 
-  removeListener(listener: (error: TrackedError) => void): void {,
-    this.errorListeners = this.errorListeners.filter(l => l !== listener)}
+  /**
+   * Determine error severity
+   */
+  private determineSeverity(error: Error, context: ErrorContext): 'low' | 'medium' | 'high' | 'critical' {
+    // Critical errors
+    if (error.name === 'ChunkLoadError' || 
+        error.message.includes('Loading chunk') ||
+        error.message.includes('Script error')) {
+      return 'critical';
+    }
 
-  private notifyListeners(error: TrackedError): void {,
-    this.errorListeners.forEach(listener => {)
-      try {)
-        listener(error)} catch (listenerError) {
-        logger.error('Error in error listener', { error: listenerError.message })
-  /**
-   * Generate a unique error ID based on the message;
-   */
-  private generateErrorId(messag)
-  e: string): string {/* TODO: Fix JSX expression */}
-    }`
-    return `err_${Math.abs(hash).toString(36)}`;
+    // High severity errors
+    if (error.name === 'TypeError' || 
+        error.name === 'ReferenceError' ||
+        error.name === 'SyntaxError') {
+      return 'high';
+    }
+
+    // Medium severity errors
+    if (error.name === 'NetworkError' || 
+        error.message.includes('fetch') ||
+        error.message.includes('timeout')) {
+      return 'medium';
+    }
+
+    // Low severity errors
+    return 'low';
   }
+
   /**
-   * Add an error listener;
+   * Log error to console
    */
-  addListener(listene,
-  r: (erro)
-  r: TrackedError) => void): void {/* TODO: Fix JSX expression */}
+  private logError(errorEvent: ErrorEvent): void {
+    const logMessage = `[${errorEvent.severity.toUpperCase()}] ${errorEvent.message}`;
+    
+    switch (errorEvent.severity) {
+      case 'critical':
+        console.error(logMessage, errorEvent);
+        break;
+      case 'high':
+        console.error(logMessage, errorEvent);
+        break;
+      case 'medium':
+        console.warn(logMessage, errorEvent);
+        break;
+      case 'low':
+        console.info(logMessage, errorEvent);
+        break;
+    }
   }
+
   /**
-   * Remove an error listener;
+   * Show user feedback
    */
-  removeListener(listene,
-  r: (erro)
-  r: TrackedError) => void): void {/* TODO: Fix JSX expression */}
-  }
-  /**
-   * Notify all listeners of a new error;
-   */
-  private notifyListeners(erro)
-  r: TrackedError): void {/* TODO: Fix JSX expression */}
-      } catch (listenerError) {/* TODO: Fix JSX expression */}
+  private showUserFeedback(errorEvent: ErrorEvent): void {
+    // Only show feedback for high and critical errors
+    if (errorEvent.severity === 'low' || errorEvent.severity === 'medium') {
+      return;
+    }
+
+    // Create user feedback element
+    const feedback = document.createElement('div');
+    feedback.className = 'error-feedback';
+    feedback.innerHTML = `
+      <div class="error-feedback-content">
+        <h3>Something went wrong</h3>
+        <p>We're sorry, but something unexpected happened. Our team has been notified.</p>
+        <button onclick="this.parentElement.parentElement.remove()">Dismiss</button>
+      </div>
+    `;
+    
+    feedback.style.cssText = `
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #f8f9fa;
+      border: 1px solid #dee2e6;
+      border-radius: 8px;
+      padding: 16px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      z-index: 10000;
+      max-width: 300px;
+    `;
+
+    document.body.appendChild(feedback);
+
+    // Auto-remove after 10 seconds
+    setTimeout(() => {
+      if (feedback.parentElement) {
+        feedback.remove();
       }
-    })
+    }, 10000);
   }
 
-  private async reportToExternalService(errorId: string): Promise<void> {,
-    // In a real implementation, this would send to an external service;
-    // like Sentry, LogRocket, or a custom error reporting service;
-    logger.info('Error reported to external service', { errorId })
+  /**
+   * Flush error queue
+   */
+  private flushQueue(): void {
+    if (this.errorQueue.length === 0) return;
+
+    const errorsToSend = [...this.errorQueue];
+    this.errorQueue = [];
+
+    this.sendErrors(errorsToSend);
   }
 
-  getErrors(): TrackedError[] {
-    return Array.from(this.errors.values())
+  /**
+   * Send errors to server
+   */
+  private sendErrors(errors: ErrorEvent[]): void {
+    fetch('/api/errors/track', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ errors })
+    }).catch(error => {
+      console.error('Failed to send error reports:', error);
+      
+      // Re-add errors to queue for retry
+      if (this.config.enableRetry) {
+        this.errorQueue.unshift(...errors);
+      }
+    });
   }
 
-  getErrorById(id: string): TrackedError | undefined {,
-    return this.errors.get(id)}
-
-  clearErrors(): void {
-    this.errors.clear()
+  /**
+   * Start flush timer
+   */
+  private startFlushTimer(): void {
+    this.flushTimer = setInterval(() => {
+      this.flushQueue();
+    }, this.config.flushInterval);
   }
 
-  getErrorStats(): {
-    total: number;
-    byCategory: Record<ErrorCategory, number>
-    bySeverity: Record<ErrorSeverity, number>
-  } {
-    const errors = this.getErrors()
-    const byCategory: Record<ErrorCategory, number> = {} as Record<ErrorCategory, number>
-    const bySeverity: Record<ErrorSeverity, number> = {} as Record<ErrorSeverity, number>
-    // Initialize counters;
-    Object.values(ErrorCategory).forEach(category => {)
-      byCategory[category] = 0;)
-    })
-    Object.values(ErrorSeverity).forEach(severity => {)
-      bySeverity[severity] = 0;)
-    })
+  /**
+   * Initialize global error handlers
+   */
+  private initializeGlobalHandlers(): void {
+    // Global error handler
+    window.addEventListener('error', (event) => {
+      this.trackError(event.error, {
+        filename: event.filename,
+        lineno: event.lineno,
+        colno: event.colno
+      });
+    });
 
-    // Count errors;
-    errors.forEach(error => {)
-      byCategory[error.metadata.category]++)
-      bySeverity[error.metadata.severity]++)
-    })
+    // Unhandled promise rejection handler
+    window.addEventListener('unhandledrejection', (event) => {
+      this.trackAsyncError(new Error(event.reason), {
+        type: 'unhandled_promise_rejection'
+      });
+    });
+
+    // Network error handler
+    window.addEventListener('unhandledrejection', (event) => {
+      if (event.reason && event.reason.name === 'TypeError' && event.reason.message.includes('fetch')) {
+        this.trackNetworkError(event.reason, '', 'GET');
+      }
+    });
+  }
+
+  /**
+   * Extract line number from stack trace
+   */
+  private extractLineNumber(stack?: string): number | undefined {
+    if (!stack) return undefined;
+    
+    const match = stack.match(/at .*:(\d+):\d+/);
+    return match ? parseInt(match[1]) : undefined;
+  }
+
+  /**
+   * Extract column number from stack trace
+   */
+  private extractColumnNumber(stack?: string): number | undefined {
+    if (!stack) return undefined;
+    
+    const match = stack.match(/at .*:\d+:(\d+)/);
+    return match ? parseInt(match[1]) : undefined;
+  }
+
+  /**
+   * Extract file name from stack trace
+   */
+  private extractFileName(stack?: string): string | undefined {
+    if (!stack) return undefined;
+    
+    const match = stack.match(/at .* \((.+):\d+:\d+\)/);
+    return match ? match[1] : undefined;
+  }
+
+  /**
+   * Generate error ID
+   */
+  private generateErrorId(): string {
+    return `error-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
+  }
+
+  /**
+   * Generate session ID
+   */
+  private generateSessionId(): string {
+    return `session-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
+  }
+
+  /**
+   * Get error statistics
+   */
+  getErrorStats(): { totalErrors: number; errorsBySeverity: Record<string, number>; errorsByType: Record<string, number> } {
+    const errorsBySeverity: Record<string, number> = {};
+    const errorsByType: Record<string, number> = {};
+    
+    this.errorQueue.forEach(error => {
+      errorsBySeverity[error.severity] = (errorsBySeverity[error.severity] || 0) + 1;
+      errorsByType[error.type] = (errorsByType[error.type] || 0) + 1;
+    });
 
     return {
-      total: errors.length;
-      byCategory,
-      bySeverity;
+      totalErrors: this.errorQueue.length,
+      errorsBySeverity,
+      errorsByType
+    };
+  }
+
+  /**
+   * Clear error queue
+   */
+  clearErrorQueue(): void {
+    this.errorQueue = [];
+  }
+
+  /**
+   * Destroy error tracking
+   */
+  destroy(): void {
+    if (this.flushTimer) {
+      clearInterval(this.flushTimer);
     }
+    this.flushQueue();
   }
 }
 
-// Export singleton instance;
-export const errorTracking = ErrorTrackingService.getInstance()
-  /**
-   * Report critical errors to external service;
-   */
-  private async reportToExternalService(errorI)
-  d: string): Promise<void> {/* TODO: Fix JSX expression */}
-  s: { 'Content-Type': 'application/json' },
-          bod,
-  y: JSON.stringify(error)
-        });
-      }
-    } catch (reportError) {/* TODO: Fix JSX expression */}
-    }
-  }
-  /**
-   * Get all tracked errors;
-   */
-  getErrors(): TrackedError[] {/* TODO: Fix JSX expression */}
-  }
-  /**
-   * Get errors by category;
-   */
-  getErrorsByCategory(categor)
-  y: ErrorCategory): TrackedError[] {/* TODO: Fix JSX expression */}
-  }
-  /**
-   * Get errors by severity;
-   */
-  getErrorsBySeverity(severit)
-  y: ErrorSeverity): TrackedError[] {/* TODO: Fix JSX expression */}
-  }
-  /**
-   * Get error statistics;
-   */
-  getStatistics(): {/* TODO: Fix JSX expression */}
-  } {/* TODO: Fix JSX expression */}
-    const byCategory = {} as Record<ErrorCategory, number>;
-    const bySeverity = {} as Record<ErrorSeverity, number>;
-    errors.forEach(error => {/* TODO: Fix JSX expression */})
-    });
-    const topErrors = errors.sort((a, b) => b.occurrences - a.occurrences).slice(0, 10);
-    return {/* TODO: Fix JSX expression */}
-    };
-  }
-  /**
-   * Clear all errors;
-   */
-  clearErrors(): void {/* TODO: Fix JSX expression */}
-  }
-  /**
-   * Clear errors older than specified time;
-   */
-  clearOldErrors(maxAg)
-  e: number): void {/* TODO: Fix JSX expression */}
-      }
-    }
-  }
-}
-export const errorTracking = ErrorTrackingService.getInstance();
-export default ErrorTrackingService;
-// Export convenience functions for easier testing and usage;
-export const trackError = (erro)
-  r: Error, options?: Partial<Omit<ErrorMetadata, 'timestamp'>>) => {/* TODO: Fix JSX expression */}
-  });
-};
-export const getErrorStatistics = () => {/* TODO: Fix JSX expression */}
-  }));
-  return {/* TODO: Fix JSX expression */}
-  };
-};
-export const clearErrorHistory = () => errorTracking.clearErrors();
-export const addErrorListener = (listene,
-  r: (erro)
-  r: TrackedError) => void) =>
-  errorTracking.addListener(listener);
-export const removeErrorListener = (listene,
-  r: (erro)
-  r: TrackedError) => void) =>
-  errorTracking.removeListener(listener);
-`
+export default ErrorTracking;

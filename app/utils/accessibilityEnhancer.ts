@@ -1,153 +1,277 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+// Accessibility enhancer utility
 
-const AccessibilityEnhancerPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
+export interface EnhancementOptions {
+  enableKeyboardNavigation?: boolean;
+  enableScreenReaderSupport?: boolean;
+  enableHighContrast?: boolean;
+  enableReducedMotion?: boolean;
+  enableFocusManagement?: boolean;
+}
+
+export class AccessibilityEnhancer {
+  private options: EnhancementOptions;
+  private enhancements: Map<string, () => void> = new Map();
+
+  constructor(options: EnhancementOptions = {}) {
+    this.options = {
+      enableKeyboardNavigation: true,
+      enableScreenReaderSupport: true,
+      enableHighContrast: true,
+      enableReducedMotion: true,
+      enableFocusManagement: true,
+      ...options
+    };
+  }
+
+  /**
+   * Enhance accessibility for the entire page
+   */
+  enhance(): void {
+    this.enhanceKeyboardNavigation();
+    this.enhanceScreenReaderSupport();
+    this.enhanceHighContrast();
+    this.enhanceReducedMotion();
+    this.enhanceFocusManagement();
+  }
+
+  /**
+   * Remove all enhancements
+   */
+  removeEnhancements(): void {
+    this.enhancements.forEach(cleanup => cleanup());
+    this.enhancements.clear();
+  }
+
+  private enhanceKeyboardNavigation(): void {
+    if (!this.options.enableKeyboardNavigation) return;
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      // Skip links and buttons
+      if (e.target instanceof HTMLAnchorElement || e.target instanceof HTMLButtonElement) {
+        return;
+      }
+
+      // Handle arrow key navigation
+      if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+        e.preventDefault();
+        this.navigateVertically(e.key === 'ArrowDown');
+      }
+
+      // Handle escape key
+      if (e.key === 'Escape') {
+        this.handleEscapeKey();
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    this.enhancements.set('keyboardNavigation', () => {
+      document.removeEventListener('keydown', handleKeyDown);
+    });
+  }
+
+  private enhanceScreenReaderSupport(): void {
+    if (!this.options.enableScreenReaderSupport) return;
+
+    // Add skip links
+    this.addSkipLinks();
+    
+    // Enhance form labels
+    this.enhanceFormLabels();
+    
+    // Add ARIA landmarks
+    this.addAriaLandmarks();
+  }
+
+  private enhanceHighContrast(): void {
+    if (!this.options.enableHighContrast) return;
+
+    const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
+    
+    if (prefersHighContrast) {
+      document.body.classList.add('high-contrast');
     }
-  ];
 
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
+    // Listen for changes
+    const mediaQuery = window.matchMedia('(prefers-contrast: high)');
+    const handleChange = (e: MediaQueryListEvent) => {
+      if (e.matches) {
+        document.body.classList.add('high-contrast');
+      } else {
+        document.body.classList.remove('high-contrast');
+      }
+    };
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>AccessibilityEnhancer | Zion Tech Group</title>
-        <meta name="description" content="Professional AccessibilityEnhancer services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="accessibilityEnhancer, AI solutions, IT services, Zion Tech Group, accessibilityenhancer" />
-      </Helmet>
+    mediaQuery.addEventListener('change', handleChange);
+    this.enhancements.set('highContrast', () => {
+      mediaQuery.removeEventListener('change', handleChange);
+      document.body.classList.remove('high-contrast');
+    });
+  }
 
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                AccessibilityEnhancer
-              </span>
-              <br />
-              <span className="text-white">Solutions</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced accessibilityenhancer solutions. 
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
+  private enhanceReducedMotion(): void {
+    if (!this.options.enableReducedMotion) return;
 
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our AccessibilityEnhancer?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our accessibilityenhancer solutions deliver unmatched performance, security, and scalability.
-            </p>
-          </div>
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    
+    if (prefersReducedMotion) {
+      document.body.classList.add('reduced-motion');
+    }
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                  <feature.icon className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+    // Listen for changes
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const handleChange = (e: MediaQueryListEvent) => {
+      if (e.matches) {
+        document.body.classList.add('reduced-motion');
+      } else {
+        document.body.classList.remove('reduced-motion');
+      }
+    };
 
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our accessibilityenhancer solutions for your business.
-            </p>
-          </div>
+    mediaQuery.addEventListener('change', handleChange);
+    this.enhancements.set('reducedMotion', () => {
+      mediaQuery.removeEventListener('change', handleChange);
+      document.body.classList.remove('reduced-motion');
+    });
+  }
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                <p className="text-gray-300 text-lg">{benefit}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+  private enhanceFocusManagement(): void {
+    if (!this.options.enableFocusManagement) return;
 
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-purple-100 mb-8">
-              Contact our experts to discuss your accessibilityenhancer needs and get a customized solution.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                <Phone className="mr-2 h-5 w-5" />
-                Call Now
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-                <Mail className="mr-2 h-5 w-5" />
-                Email Us
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-};
+    // Add focus indicators
+    this.addFocusIndicators();
+    
+    // Manage focus for modals
+    this.enhanceModalFocus();
+  }
 
-export default AccessibilityEnhancerPage;
+  private navigateVertically(down: boolean): void {
+    const focusableElements = document.querySelectorAll(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    );
+    
+    const currentIndex = Array.from(focusableElements).indexOf(document.activeElement as Element);
+    const nextIndex = down ? currentIndex + 1 : currentIndex - 1;
+    
+    if (nextIndex >= 0 && nextIndex < focusableElements.length) {
+      (focusableElements[nextIndex] as HTMLElement).focus();
+    }
+  }
+
+  private handleEscapeKey(): void {
+    // Close any open modals or dropdowns
+    const modals = document.querySelectorAll('[role="dialog"]');
+    modals.forEach(modal => {
+      if (modal instanceof HTMLElement && modal.style.display !== 'none') {
+        modal.style.display = 'none';
+        modal.setAttribute('aria-hidden', 'true');
+      }
+    });
+  }
+
+  private addSkipLinks(): void {
+    const skipLink = document.createElement('a');
+    skipLink.href = '#main-content';
+    skipLink.textContent = 'Skip to main content';
+    skipLink.className = 'skip-link';
+    skipLink.style.cssText = `
+      position: absolute;
+      top: -40px;
+      left: 6px;
+      background: #000;
+      color: #fff;
+      padding: 8px;
+      text-decoration: none;
+      z-index: 1000;
+      transition: top 0.3s;
+    `;
+    
+    skipLink.addEventListener('focus', () => {
+      skipLink.style.top = '6px';
+    });
+    
+    skipLink.addEventListener('blur', () => {
+      skipLink.style.top = '-40px';
+    });
+    
+    document.body.insertBefore(skipLink, document.body.firstChild);
+  }
+
+  private enhanceFormLabels(): void {
+    const inputs = document.querySelectorAll('input, select, textarea');
+    inputs.forEach(input => {
+      if (!input.getAttribute('aria-label') && !input.getAttribute('aria-labelledby')) {
+        const placeholder = input.getAttribute('placeholder');
+        if (placeholder) {
+          input.setAttribute('aria-label', placeholder);
+        }
+      }
+    });
+  }
+
+  private addAriaLandmarks(): void {
+    // Add main landmark if missing
+    if (!document.querySelector('main, [role="main"]')) {
+      const main = document.createElement('main');
+      main.id = 'main-content';
+      main.setAttribute('role', 'main');
+      
+      // Move main content into the main element
+      const content = document.querySelector('.main-content, .content, main');
+      if (content) {
+        content.parentNode?.insertBefore(main, content);
+        main.appendChild(content);
+      }
+    }
+  }
+
+  private addFocusIndicators(): void {
+    const style = document.createElement('style');
+    style.textContent = `
+      .focus-indicator:focus {
+        outline: 2px solid #4F46E5;
+        outline-offset: 2px;
+      }
+    `;
+    document.head.appendChild(style);
+    
+    // Add focus indicators to interactive elements
+    const interactiveElements = document.querySelectorAll('button, a, input, select, textarea, [tabindex]');
+    interactiveElements.forEach(el => {
+      el.classList.add('focus-indicator');
+    });
+  }
+
+  private enhanceModalFocus(): void {
+    const modals = document.querySelectorAll('[role="dialog"]');
+    modals.forEach(modal => {
+      const focusableElements = modal.querySelectorAll(
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+      );
+      
+      if (focusableElements.length > 0) {
+        const firstElement = focusableElements[0] as HTMLElement;
+        const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
+        
+        const handleKeyDown = (e: KeyboardEvent) => {
+          if (e.key === 'Tab') {
+            if (e.shiftKey) {
+              if (document.activeElement === firstElement) {
+                lastElement.focus();
+                e.preventDefault();
+              }
+            } else {
+              if (document.activeElement === lastElement) {
+                firstElement.focus();
+                e.preventDefault();
+              }
+            }
+          }
+        };
+        
+        modal.addEventListener('keydown', handleKeyDown);
+      }
+    });
+  }
+}
+
+export default AccessibilityEnhancer;

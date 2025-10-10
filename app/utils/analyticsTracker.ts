@@ -1,153 +1,186 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+// Analytics tracker utility
 
-const AnalyticsTrackerPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
+export interface TrackerConfig {
+  enabled?: boolean;
+  debug?: boolean;
+  batchSize?: number;
+  flushInterval?: number;
+}
+
+export interface TrackedEvent {
+  id: string;
+  name: string;
+  properties: Record<string, any>;
+  timestamp: number;
+  userId?: string;
+  sessionId?: string;
+}
+
+export class AnalyticsTracker {
+  private config: Required<TrackerConfig>;
+  private events: TrackedEvent[] = [];
+  private flushTimer?: NodeJS.Timeout;
+  private sessionId: string;
+
+  constructor(config: TrackerConfig = {}) {
+    this.config = {
+      enabled: true,
+      debug: false,
+      batchSize: 10,
+      flushInterval: 30000, // 30 seconds
+      ...config
+    };
+
+    this.sessionId = this.generateSessionId();
+    this.startFlushTimer();
+  }
+
+  /**
+   * Track an event
+   */
+  track(name: string, properties: Record<string, any> = {}): void {
+    if (!this.config.enabled) return;
+
+    const event: TrackedEvent = {
+      id: this.generateEventId(),
+      name,
+      properties,
+      timestamp: Date.now(),
+      sessionId: this.sessionId
+    };
+
+    this.events.push(event);
+
+    if (this.config.debug) {
+      console.log('Tracked event:', event);
     }
-  ];
 
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
+    // Flush if batch size reached
+    if (this.events.length >= this.config.batchSize) {
+      this.flush();
+    }
+  }
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>AnalyticsTracker | Zion Tech Group</title>
-        <meta name="description" content="Professional AnalyticsTracker services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="analyticsTracker, AI solutions, IT services, Zion Tech Group, analyticstracker" />
-      </Helmet>
+  /**
+   * Track page view
+   */
+  trackPageView(page: string, title?: string): void {
+    this.track('page_view', {
+      page,
+      title: title || document.title,
+      url: window.location.href,
+      referrer: document.referrer
+    });
+  }
 
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                AnalyticsTracker
-              </span>
-              <br />
-              <span className="text-white">Solutions</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced analyticstracker solutions. 
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
+  /**
+   * Track user action
+   */
+  trackAction(action: string, target?: string, properties?: Record<string, any>): void {
+    this.track('action', {
+      action,
+      target,
+      ...properties
+    });
+  }
 
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our AnalyticsTracker?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our analyticstracker solutions deliver unmatched performance, security, and scalability.
-            </p>
-          </div>
+  /**
+   * Track conversion
+   */
+  trackConversion(conversionType: string, value?: number, properties?: Record<string, any>): void {
+    this.track('conversion', {
+      conversionType,
+      value,
+      ...properties
+    });
+  }
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                  <feature.icon className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+  /**
+   * Track error
+   */
+  trackError(error: Error, context?: Record<string, any>): void {
+    this.track('error', {
+      errorMessage: error.message,
+      errorStack: error.stack,
+      ...context
+    });
+  }
 
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our analyticstracker solutions for your business.
-            </p>
-          </div>
+  /**
+   * Set user ID
+   */
+  setUserId(userId: string): void {
+    // Update existing events with user ID
+    this.events.forEach(event => {
+      event.userId = userId;
+    });
+  }
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                <p className="text-gray-300 text-lg">{benefit}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+  /**
+   * Flush events to server
+   */
+  flush(): void {
+    if (this.events.length === 0) return;
 
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-purple-100 mb-8">
-              Contact our experts to discuss your analyticstracker needs and get a customized solution.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                <Phone className="mr-2 h-5 w-5" />
-                Call Now
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-                <Mail className="mr-2 h-5 w-5" />
-                Email Us
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-};
+    const eventsToSend = [...this.events];
+    this.events = [];
 
-export default AnalyticsTrackerPage;
+    this.sendEvents(eventsToSend);
+  }
+
+  /**
+   * Get pending events count
+   */
+  getPendingCount(): number {
+    return this.events.length;
+  }
+
+  /**
+   * Clear all events
+   */
+  clear(): void {
+    this.events = [];
+  }
+
+  private generateEventId(): string {
+    return `${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
+  }
+
+  private generateSessionId(): string {
+    return `session-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
+  }
+
+  private startFlushTimer(): void {
+    this.flushTimer = setInterval(() => {
+      this.flush();
+    }, this.config.flushInterval);
+  }
+
+  private sendEvents(events: TrackedEvent[]): void {
+    fetch('/api/analytics/track', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ events })
+    }).catch(error => {
+      if (this.config.debug) {
+        console.error('Failed to send analytics events:', error);
+      }
+      // Re-add events to queue for retry
+      this.events.unshift(...events);
+    });
+  }
+
+  /**
+   * Cleanup
+   */
+  destroy(): void {
+    if (this.flushTimer) {
+      clearInterval(this.flushTimer);
+    }
+    this.flush();
+  }
+}
+
+export default AnalyticsTracker;

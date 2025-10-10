@@ -1,365 +1,184 @@
-/**
- * API Client Utility;
- * Provides a centralized API client with error handling and caching;
- */
+// API client utility
 
-import { apiCache } from './apiCache';
-
-interface RequestConfig {}
-  method?: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
-  headers?: Record<string, string>;</string></<<<string>body</string></string>?: any;
-  cache?: boolean;
-  cacheTTL?: number;
+export interface APIClientConfig {
+  baseURL?: string;
+  timeout?: number;
+  headers?: Record<string, string>;
+  retries?: number;
+  retryDelay?: number;
 }
 
-interface APIResponse<T = any> {}
+export interface APIResponse<T = any> {
   data: T;
   status: number;
   statusText: string;
-  headers: Record<string, string>;</strin>
+  headers: Record<string, string>;
 }
 
-class APIClient {}
-  private baseURL: string;
-  private defaultHeaders: Record<string, string>;
-
-  constructor(baseURL: string = '', defaultHeaders: Record<string, string> = {}) {}
-    this.baseURL = baseURL;
-    this.defaultHeaders = {}
-      'Content-Type': 'application/json',
-      ...defaultHeaders;
-    };
-  }
-
-  private async makeRequest<T>(
-    endpoint: string;
-    config: RequestConfig = {}
-  ): Promise<APIResponse<T>> {}
-    const {}
-      method = 'GET',
-      headers = {},
-      body,
-      cache = false,
-      cacheTTL;
-    } = config;
-
-    const url = `${this.baseURL}${endpoint}`;
-    const cacheKey = apiCache.generateKey(url, body);
-
-    // Check cache for GET requests;
-    if (method === 'GET' && cache) {
-    // Check cache for GET requests
-    if (method === 'GET' && cache) {}
-      const cachedData = apiCache.get(cacheKey);
-      if (cachedData) {}
-        return cachedData;
-      }
-    }
-
-    try {
-      const response = await fetch(url, {)
-        method)
-        headers: {,
-          ...this.defaultHeaders),
-          ...headers;
-        })
-        body: body ? JSON.stringify(body) : undefined;
-      const data = await response.json();
-
-      const apiResponse: APIResponse<T> = {
-        data;
-        status: response.status;
-        statusText: response.statusText;
-        headers: Object.fromEntries(response.headers.entries())};
-
-      // Cache successful GET requests;
-      if (method === 'GET' && cache && response.ok) {
-    try {}
-      const response = await fetch(url, {)}
-        method,
-        headers: {}
-          ...this.defaultHeaders,
-          ...headers
-        },
-        body: body ? JSON.stringify(body) : undefined
-
-      const data = await response.json();
-
-      const apiResponse: APIResponse<T> = {}
-        data,
-        status: response.status,
-        statusText: response.statusText,
-        headers: Object.fromEntries(response.headers.entries())
-      };
-
-      // Cache successful GET requests
-      if (method === 'GET' && cache && response.ok) {}
-        apiCache.set(cacheKey, apiResponse, cacheTTL);
-      }
-
-      return apiResponse;
-    } catch (error) {}
-      throw new Error(`API request failed: ${error instanceof Error ? error.message : 'Unknown error'}`);
- * Enhanced API Client with retry logic, caching, and error handling;
- */
-export interface ApiClientConfig {/* TODO: Fix JSX expression */}
+export interface APIError {
+  message: string;
+  status?: number;
+  statusText?: string;
+  data?: any;
 }
-export interface RequestConfig extends Omit<RequestInit, 'cache'> {/* TODO: Fix JSX expression */}
-}
-export interface ApiResponse<T = unknown> {/* TODO: Fix JSX expression */}
-}
-export class ApiError extends Error {/* TODO: Fix JSX expression */}
-  }
-}
-class ApiClient {/* TODO: Fix JSX expression */}
-  };
-  private,
-  abortControllers: Map<string, AbortController> = new Map();
-  constructor(confi)
-  g: ApiClientConfig = {}) {/* TODO: Fix JSX expression */}
+
+export class APIClient {
+  private config: Required<APIClientConfig>;
+
+  constructor(config: APIClientConfig = {}) {
+    this.config = {
+      baseURL: '',
+      timeout: 10000,
+      headers: {
+        'Content-Type': 'application/json'
       },
-      cacheOption,
-  s: config.cacheOptions;
+      retries: 3,
+      retryDelay: 1000,
+      ...config
     };
   }
+
   /**
-   * GET request;
+   * Make a GET request
    */
-  async get<T = unknown>(ur,
-  l: string,
-    confi,
-  g: Omit<RequestConfig, 'url' | 'method' | 'body'> = {})
-  ): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */}
+  async get<T = any>(url: string, params?: Record<string, any>): Promise<APIResponse<T>> {
+    const queryString = params ? this.buildQueryString(params) : '';
+    const fullUrl = `${this.config.baseURL}${url}${queryString}`;
+    
+    return this.request<T>(fullUrl, {
+      method: 'GET',
+      headers: this.config.headers
     });
   }
+
   /**
-   * POST request;
+   * Make a POST request
    */
-  async post<T = unknown>(ur,
-  l: string,
-    data?: unknown,
-    confi,
-  g: Omit<RequestConfig, 'url' | 'method'> = {})
-  ): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */}
+  async post<T = any>(url: string, data?: any): Promise<APIResponse<T>> {
+    return this.request<T>(`${this.config.baseURL}${url}`, {
+      method: 'POST',
+      headers: this.config.headers,
+      body: data ? JSON.stringify(data) : undefined
     });
   }
+
   /**
-   * PUT request;
+   * Make a PUT request
    */
-  async put<T = unknown>(ur,
-  l: string,
-    data?: unknown,
-    confi,
-  g: Omit<RequestConfig, 'url' | 'method'> = {})
-  ): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */}
+  async put<T = any>(url: string, data?: any): Promise<APIResponse<T>> {
+    return this.request<T>(`${this.config.baseURL}${url}`, {
+      method: 'PUT',
+      headers: this.config.headers,
+      body: data ? JSON.stringify(data) : undefined
     });
   }
+
   /**
-   * DELETE request;
+   * Make a DELETE request
    */
-  async delete<T = unknown>(ur,
-  l: string,
-    confi,
-  g: Omit<RequestConfig, 'url' | 'method' | 'body'> = {})
-  ): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */}
+  async delete<T = any>(url: string): Promise<APIResponse<T>> {
+    return this.request<T>(`${this.config.baseURL}${url}`, {
+      method: 'DELETE',
+      headers: this.config.headers
     });
   }
+
   /**
-   * PATCH request;
+   * Make a PATCH request
    */
-  async patch<T = unknown>(ur,
-  l: string,
-    data?: unknown,
-    confi,
-  g: Omit<RequestConfig, 'url' | 'method'> = {})
-  ): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */}
+  async patch<T = any>(url: string, data?: any): Promise<APIResponse<T>> {
+    return this.request<T>(`${this.config.baseURL}${url}`, {
+      method: 'PATCH',
+      headers: this.config.headers,
+      body: data ? JSON.stringify(data) : undefined
     });
   }
+
   /**
-   * Main request method with retry logic;
+   * Make a request with retries
    */
-  private async request<T>(confi)
-  g: RequestConfig): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */}
-      headers = {},
-      cacheOption,
-  s: cacheConfig,
-      skipCache = false,
-      retries = this.config.retries,
-      timeout = this.config.timeout,
-      ...fetchConfig;
-    } = config;
-    const fullUrl = url.startsWith('http') ? url : `${this.config.baseURL}${url}`;`
-    const cacheKey = `${method}:${fullUrl}`;
-    // Check cache for GET requests;
-    if (method === 'GET' && !skipCache) {/* TODO: Fix JSX expression */}
-        };
-      }
-    }
-    // Create abort controller for timeout;
-    const controller = new AbortController();
-    this.abortControllers.set(cacheKey, controller);
-    const timeoutId = setTimeout(() => {/* TODO: Fix JSX expression */}
-    }, timeout);
-    let,
-  lastError: Error | null = null;
-    let attempt = 0;
-    while (attempt < retries) {/* TODO: Fix JSX expression */}
-          },
-          signa,
-  l: controller.signal;
+  private async request<T>(url: string, options: RequestInit): Promise<APIResponse<T>> {
+    let lastError: Error | null = null;
+
+    for (let attempt = 0; attempt <= this.config.retries; attempt++) {
+      try {
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), this.config.timeout);
+
+        const response = await fetch(url, {
+          ...options,
+          signal: controller.signal
         });
+
         clearTimeout(timeoutId);
-        this.abortControllers.delete(cacheKey);
-        if (!response.ok) {/* TODO: Fix JSX expression */}`
-            `HTTP ${response.status}: ${response.statusText}`,
-            response.status,
-            await response.text()
-          );
-        }
-        const contentType = response.headers.get('content-type');
-        let,
-  data: T;
-        if (contentType?.includes('application/json')) {/* TODO: Fix JSX expression */}
-        } else {/* TODO: Fix JSX expression */}
-        }
-        // Cache successful GET requests;
-        if (method === 'GET' && !skipCache) {/* TODO: Fix JSX expression */}
-          cacheManager.set(cacheKey, data, cacheConfig || this.config.cacheOptions || {});
-        }
-        return {/* TODO: Fix JSX expression */}
+
+        const data = await response.json();
+        const headers: Record<string, string> = {};
+        response.headers.forEach((value, key) => {
+          headers[key] = value;
+        });
+
+        return {
+          data,
+          status: response.status,
+          statusText: response.statusText,
+          headers
         };
-      } catch (error) {/* TODO: Fix JSX expression */}`
-            logCritical(`API request failed after ${retries} attempts`, error as Error, {/* TODO: Fix JSX expression */})
-            });
-          } else {/* TODO: Fix JSX expression */}
-            });
-          }
-        }
-        // Don't retry on certain errors;
-        if (error instanceof ApiError && error.status < 500) {/* TODO: Fix JSX expression */}
-        }
-        // Wait before retrying;
-        if (attempt < retries) {/* TODO: Fix JSX expression */}
+      } catch (error) {
+        lastError = error as Error;
+        
+        if (attempt < this.config.retries) {
+          await this.delay(this.config.retryDelay * Math.pow(2, attempt));
         }
       }
     }
-    clearTimeout(timeoutId);
-    this.abortControllers.delete(cacheKey);
-    throw lastError || new Error('Request failed');
+
+    throw new Error(`Request failed after ${this.config.retries + 1} attempts: ${lastError?.message}`);
   }
+
   /**
-   * Cancel a pending request;
+   * Build query string from parameters
    */
-  cancel(ur,
-  l: string, metho)
-  d: string = 'GET'): void {/* TODO: Fix JSX expression */}`
-    const cacheKey = `${method}:${url}`;
-    const controller = this.abortControllers.get(cacheKey);
-    if (controller) {/* TODO: Fix JSX expression */}
-    }
-  }
-  /**
-   * Cancel all pending requests;
-   */
-  cancelAll(): void {/* TODO: Fix JSX expression */}
+  private buildQueryString(params: Record<string, any>): string {
+    const searchParams = new URLSearchParams();
+    
+    Object.entries(params).forEach(([key, value]) => {
+      if (value !== undefined && value !== null) {
+        searchParams.append(key, String(value));
+      }
     });
-    this.abortControllers.clear();
+
+    const queryString = searchParams.toString();
+    return queryString ? `?${queryString}` : '';
   }
+
   /**
-   * Update default config;
+   * Delay execution
    */
-  setConfig(confi)
-  g: Partial<ApiClientConfig>): void {/* TODO: Fix JSX expression */}
-        ...(config.headers || {})
-      }
-    };
+  private delay(ms: number): Promise<void> {
+    return new Promise(resolve => setTimeout(resolve, ms));
   }
+
   /**
-   * Set authorization header;
+   * Set default headers
    */
-  setAuthToken(toke)
-  n: string): void {/* TODO: Fix JSX expression */}`
-    this.config.headers['Authorization'] = `Bearer ${token}`;
+  setHeaders(headers: Record<string, string>): void {
+    this.config.headers = { ...this.config.headers, ...headers };
   }
+
   /**
-   * Remove authorization header;
+   * Set base URL
    */
-  removeAuthToken(): void {/* TODO: Fix JSX expression */}
+  setBaseURL(baseURL: string): void {
+    this.config.baseURL = baseURL;
   }
+
   /**
-   * Delay helper;
+   * Set timeout
    */
-  private delay(m)
-  s: number): Promise<void> {/* TODO: Fix JSX expression */}
-  }
-  /**
-   * Health check;
-   */
-  async healthCheck(endpoin)
-  t: string = '/health'): Promise<boolean> {/* TODO: Fix JSX expression */}
-  s: 1 });
-      return response.status === 200;
-    } catch {/* TODO: Fix JSX expression */}
-    }
-  }
-
-  async get<T>(endpoint: string, config: Omit<RequestConfig, 'method' | 'body'> = {}): Promise<APIResponse<T>> {}
-    return this.makeRequest<T>(endpoint, { ...config, method: 'GET' });
-  }
-
-  async post<T>(endpoint: string, body?: any, config: Omit<RequestConfig, 'method'> = {}): Promise<APIResponse<T>> {}
-    return this.makeRequest<T>(endpoint, { ...config, method: 'POST', body });
-  }
-
-  async put<T>(endpoint: string, body?: any, config: Omit<RequestConfig, 'method'> = {}): Promise<APIResponse<T>> {}
-    return this.makeRequest<T>(endpoint, { ...config, method: 'PUT', body });
-  }
-
-  async patch<T>(endpoint: string, body?: any, config: Omit<RequestConfig, 'method'> = {}): Promise<APIResponse<T>> {}
-    return this.makeRequest<T>(endpoint, { ...config, method: 'PATCH', body });
-  }
-
-  async delete<T>(endpoint: string, config: Omit<RequestConfig, 'method' | 'body'> = {}): Promise<APIResponse<T>> {}
-    return this.makeRequest<T>(endpoint, { ...config, method: 'DELETE' });
-  }
-
-  // Set base URL;
-  setBaseURL(baseURL: string): void {,
-    this.baseURL = baseURL;
-  }
-
-  // Set default headers;
-  setDefaultHeaders(headers: Record<string, string>): void {
-    this.defaultHeaders = { ...this.defaultHeaders, ...headers };
-  }
-
-  // Clear cache;
-  clearCache(): void {
-  // Set base URL
-  setBaseURL(baseURL: string): void {}
-    this.baseURL = baseURL;
-  }
-
-  // Set default headers
-  setDefaultHeaders(headers: Record<string, string>): void {}
-    this.defaultHeaders = { ...this.defaultHeaders, ...headers };
-  }
-
-  // Clear cache
-  clearCache(): void {}
-    apiCache.clear();
+  setTimeout(timeout: number): void {
+    this.config.timeout = timeout;
   }
 }
-
-// Create singleton instance;
-export const apiClient = new APIClient();
 
 export default APIClient;
-// Create default instance;
-const apiClient = new ApiClient({/* TODO: Fix JSX expression */}
-  })
-});
-// Export both the class and default instance;
-export { apiClient };
-export default ApiClient;
-`

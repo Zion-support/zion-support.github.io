@@ -1,289 +1,261 @@
-'use client'
-/**
- * Advanced Logging System;
- * Provides structured logging with multiple levels and context;
- */
+// Logger utility
 
-export enum LogLevel {
-  DEBUG = 0,
-  INFO = 1,
-  WARN = 2,
-  ERROR = 3,
-  FATAL = 4;
+export interface LoggerConfig {
+  level?: 'debug' | 'info' | 'warn' | 'error';
+  enableConsole?: boolean;
+  enableServer?: boolean;
+  enableLocalStorage?: boolean;
+  maxLogs?: number;
+  enableTimestamps?: boolean;
+  enableStackTraces?: boolean;
 }
 
-export interface LogContext {
-  userId?: string;
-  sessionId?: string;
-  component?: string;
-  action?: string;
-  [key: string]: unknown;
+export interface LogEntry {
+  id: string;
+  level: string;
+  message: string;
+  data?: any;
+  timestamp: number;
+  stack?: string;
+  context?: Record<string, any>;
 }
 
-class Logger {
-  private logLevel: LogLevel = LogLevel.INFO;
-  private logs: Array<{
-    level: LogLevel;
-    message: string;
-    context?: LogContext;
-    metadata?: Record<string, unknown>
-    timestamp: number;
-  }> = []
+export class Logger {
+  private config: Required<LoggerConfig>;
+  private logs: LogEntry[] = [];
+  private logLevels = {
+    debug: 0,
+    info: 1,
+    warn: 2,
+    error: 3
+  };
 
-  setLogLevel(level: LogLevel): void {,
-    this.logLevel = level;
-  }
-
-  getLogLevel(): LogLevel {
-    return this.logLevel;
-  }
-
-  debug(message: string, context?: LogContext, metadata?: Record<string, unknown>): void {</string></<<<string>this</string></string>.log(LogLevel.DEBUG, message, context, metadata)
-  }
-
-  info(message: string, context?: LogContext, metadata?: Record<string, unknown>): void {</string></<<<string>this</string></string>.log(LogLevel.INFO, message, context, metadata)
-  }
-
-  warn(message: string, context?: LogContext, metadata?: Record<string, unknown>): void {</string></<<<string>this</string></string>.log(LogLevel.WARN, message, context, metadata)
+  constructor(config: LoggerConfig = {}) {
+    this.config = {
+      level: 'info',
+      enableConsole: true,
+      enableServer: false,
+      enableLocalStorage: false,
+      maxLogs: 1000,
+      enableTimestamps: true,
+      enableStackTraces: true,
+      ...config
+    };
   }
 
-  error(message: string;),
-    errorOrContextOrMetadata?: Error | string | Record<string, unknown>)
-    contextOrMetadata?: string | Record<string, unknown>)
-    metadata?: Record<string, unknown>
-  ): void {
-    let error: Error | undefined;
-    let context: LogContext | undefined;
-    let meta: Record<string, unknown> | undefined;
-    // Handle different parameter combinations;
-    if (errorOrContextOrMetadata instanceof Error) {
-      error = errorOrContextOrMetadata;
-      context = typeof contextOrMetadata === 'string' ? { action: contextOrMetadata } : contextOrMetadata;
-      meta = metadata;
-    } else if (typeof errorOrContextOrMetadata === 'string') {
-      context = { action: errorOrContextOrMetadata }
-      meta = typeof contextOrMetadata === 'object' ? contextOrMetadata : undefined;
-    } else if (typeof errorOrContextOrMetadata === 'object') {
-      context = errorOrContextOrMetadata;
-      meta = contextOrMetadata as Record<string, unknown>
- * Enhanced Logger Utility;
- * Provides structured logging with different levels and contexts;
- */
-export enum LogLevel {/* TODO: Fix JSX expression */}
-}
-export interface LogContext {/* TODO: Fix JSX expression */}
-}
-export interface LogMetadata {/* TODO: Fix JSX expression */}
-}
-class Logger {/* TODO: Fix JSX expression */}
-  }
   /**
-   * Set the minimum log level;
+   * Log debug message
    */
-  setLogLevel(leve)
-  l: LogLevel): void {/* TODO: Fix JSX expression */}
+  debug(message: string, data?: any, context?: Record<string, any>): void {
+    this.log('debug', message, data, context);
   }
+
   /**
-   * Get the current log level;
+   * Log info message
    */
-  getLogLevel(): LogLevel {/* TODO: Fix JSX expression */}
+  info(message: string, data?: any, context?: Record<string, any>): void {
+    this.log('info', message, data, context);
   }
+
   /**
-   * Log a debug message;
+   * Log warning message
    */
-  debug(messag)
-  e: string, context?: LogContext, metadata?: Record<string, unknown>): void {/* TODO: Fix JSX expression */}
+  warn(message: string, data?: any, context?: Record<string, any>): void {
+    this.log('warn', message, data, context);
   }
+
   /**
-   * Log an info message;
+   * Log error message
    */
-  info(messag)
-  e: string, context?: LogContext, metadata?: Record<string, unknown>): void {/* TODO: Fix JSX expression */}
+  error(message: string, data?: any, context?: Record<string, any>): void {
+    this.log('error', message, data, context);
   }
+
   /**
-   * Log a warning message;
+   * Log message with custom level
    */
-  warn(messag)
-  e: string, context?: LogContext, metadata?: Record<string, unknown>): void {/* TODO: Fix JSX expression */}
-  }
-  /**
-   * Log an error message;
-   */
-  error(messag,
-  e: string,
-    errorOrContextOrMetadata?: Error | string | Record<string, unknown>,
-    contextOrMetadata?: string | Record<string, unknown>,
-    metadata?: Record<string, unknown></string>)
-  ): void {/* TODO: Fix JSX expression */}
-    } else if (typeof errorOrContextOrMetadata === 'string') {/* TODO: Fix JSX expression */}
-  t: errorOrContextOrMetadata };
-      meta = contextOrMetadata as Record<string, unknown>;
-    } else if (typeof errorOrContextOrMetadata === 'object') {/* TODO: Fix JSX expression */}
+  log(level: string, message: string, data?: any, context?: Record<string, any>): void {
+    // Check if log level is enabled
+    if (this.logLevels[level as keyof typeof this.logLevels] < this.logLevels[this.config.level]) {
+      return;
     }
 
-    this.log(LogLevel.ERROR, message, context, { ...meta, error: error?.stack })
-  }
-
-  fatal(message: string, context?: LogContext, metadata?: Record<string, unknown>): void {</string></<<<string>this</string></string>.log(LogLevel.FATAL, message, context, metadata)
-  }
-
-  private log(level: LogLevel;),
-    message: string),
-    context?: LogContext),
-    metadata?: Record<string, unknown>
-  ): void {
-    if (level < this.logLevel) return;
-    const logEntry = {
+    const logEntry: LogEntry = {
+      id: this.generateLogId(),
       level,
       message,
-      context,
-      metadata,
-      timestamp: Date.now()}
-
-    this.logs.push(logEntry)
-
-    // Keep only last 1000 logs;
-    if (this.logs.length > 1000) {
-      this.logs = this.logs.slice(-1000)
-    }
-
-    // Console output;
-    const levelName = LogLevel[level]
-    const timestamp = new Date().toISOString()
-    const contextStr = context ? ` [${JSON.stringify(context)}]` : ''
-    const metaStr = metadata ? ` ${JSON.stringify(metadata)}` : ''
-
-    const logMessage = `[${timestamp}] ${levelName}: ${message}${contextStr}${metaStr}`
-
-    switch (level) {
-      case LogLevel.DEBUG: break;
-      case LogLevel.INFO:
-        break;
-      case LogLevel.WARN:
-        break;
-      case LogLevel.ERROR:
-        break;
-      case LogLevel.FATAL:,
-        break;
-    }
-  }
-
-  getLogs(level?: LogLevel): Array<{
-    level: LogLevel;
-    message: string;
-    context?: LogContext;
-    metadata?: Record<string, unknown>
-    timestamp: number;
-  }> {
-    if (level !== undefined) {
-      return this.logs.filter(log => log.level === level)
-  /**
-   * Log a fatal error message;
-   */
-  fatal(messag)
-  e: string, context?: LogContext, metadata?: Record<string, unknown>): void {/* TODO: Fix JSX expression */}
-  }
-  /**
-   * Core logging method;
-   */
-  private log(leve,
-  l: LogLevel,
-    messag,
-  e: string,
-    context?: LogContext,
-    metadata?: Record<string, unknown></string>)
-  ): void {/* TODO: Fix JSX expression */}
-    }
-    const,
-  logEntry: LogMetadata = {/* TODO: Fix JSX expression */}
+      data,
+      timestamp: Date.now(),
+      context
     };
-    // Format the log entry;
-    const formattedMessage = this.formatLogEntry(logEntry);
-    // Output to console in development;
-    if (this.isDevelopment && typeof console !== 'undefined') {/* TODO: Fix JSX expression */}
+
+    // Add stack trace if enabled
+    if (this.config.enableStackTraces && level === 'error') {
+      logEntry.stack = this.getStackTrace();
     }
-    // In production, you might want to send to a logging service;
-    if (!this.isDevelopment) {/* TODO: Fix JSX expression */}
+
+    // Add to logs array
+    this.addToLogs(logEntry);
+
+    // Console logging
+    if (this.config.enableConsole) {
+      this.logToConsole(logEntry);
     }
-  }
-  /**
-   * Format a log entry for output;
-   */
-  private formatLogEntry(entr)
-  y: LogMetadata): string {/* TODO: Fix JSX expression */}
-    const contextStr = entry.context ? ` [${this.formatContext(entry.context)}]` : '';`
-    const metadataStr = entry.metadata ? ` ${JSON.stringify(entry.metadata)}` : '';`
-    return `[${timestamp}] ${levelStr}${contextStr}: ${entry.message}${metadataStr}`;
-  }
-  /**
-   * Format context object for display;
-   */
-  private formatContext(contex)
-  t: LogContext): string {/* TODO: Fix JSX expression */}`
-  t:${context.component}`);`
-    if (context.action) parts.push(`actio)`
-  n:${context.action}`);`
-    if (context.userId) parts.push(`use)`
-  r:${context.userId}`);`
-    if (context.sessionId) parts.push(`sessio)`
-  n:${context.sessionId}`);`
-    if (context.requestId) parts.push(`reques)`
-  t:${context.requestId}`);
-    return parts.join(', ');
-  }
-  /**
-   * Output to console with appropriate styling;
-   */
-  private outputToConsole(leve,
-  l: LogLevel, messag,
-  e: string, entr)
-  y: LogMetadata): void {/* TODO: Fix JSX expression */}
+
+    // Server logging
+    if (this.config.enableServer) {
+      this.logToServer(logEntry);
     }
-  }
-  /**
-   * Get console styles for different log levels;
-   */
-  private getConsoleStyles(leve)
-  l: LogLevel): string {/* TODO: Fix JSX expression */}
+
+    // Local storage logging
+    if (this.config.enableLocalStorage) {
+      this.logToLocalStorage(logEntry);
     }
-    return [...this.logs]
-  }
-  /**
-   * Send log entry to external logging service;
-   */
-  private sendToLoggingService(entry: LogMetadata): void {,
-    // In a real application, you would send this to your logging service;
-    // For example: Sentry, LogRocket, DataDog, etc.
-    // Example implementation:
-    // fetch('/api/logs', {)
-    //   method: 'POST'),
-    //   headers: {// 'Content-Type': 'application/json'})
-    //   body: JSON.stringify(entry),
-    // }).catch(err => {)
-    //   // });
   }
 
+  /**
+   * Add log entry to logs array
+   */
+  private addToLogs(logEntry: LogEntry): void {
+    this.logs.push(logEntry);
+
+    // Enforce max logs
+    if (this.logs.length > this.config.maxLogs) {
+      this.logs.shift();
+    }
+  }
+
+  /**
+   * Log to console
+   */
+  private logToConsole(logEntry: LogEntry): void {
+    const timestamp = this.config.enableTimestamps ? `[${new Date(logEntry.timestamp).toISOString()}] ` : '';
+    const message = `${timestamp}[${logEntry.level.toUpperCase()}] ${logEntry.message}`;
+
+    switch (logEntry.level) {
+      case 'debug':
+        console.debug(message, logEntry.data, logEntry.context);
+        break;
+      case 'info':
+        console.info(message, logEntry.data, logEntry.context);
+        break;
+      case 'warn':
+        console.warn(message, logEntry.data, logEntry.context);
+        break;
+      case 'error':
+        console.error(message, logEntry.data, logEntry.context, logEntry.stack);
+        break;
+      default:
+        console.log(message, logEntry.data, logEntry.context);
+        break;
+    }
+  }
+
+  /**
+   * Log to server
+   */
+  private logToServer(logEntry: LogEntry): void {
+    fetch('/api/logs', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(logEntry)
+    }).catch(error => {
+      console.error('Failed to send log to server:', error);
+    });
+  }
+
+  /**
+   * Log to local storage
+   */
+  private logToLocalStorage(logEntry: LogEntry): void {
+    try {
+      const existingLogs = JSON.parse(localStorage.getItem('logger_logs') || '[]');
+      existingLogs.push(logEntry);
+      
+      // Keep only last 100 logs in localStorage
+      if (existingLogs.length > 100) {
+        existingLogs.splice(0, existingLogs.length - 100);
+      }
+      
+      localStorage.setItem('logger_logs', JSON.stringify(existingLogs));
+    } catch (error) {
+      console.error('Failed to save log to localStorage:', error);
+    }
+  }
+
+  /**
+   * Get stack trace
+   */
+  private getStackTrace(): string {
+    const stack = new Error().stack;
+    return stack ? stack.split('\n').slice(2).join('\n') : '';
+  }
+
+  /**
+   * Generate log ID
+   */
+  private generateLogId(): string {
+    return `log-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
+  }
+
+  /**
+   * Get all logs
+   */
+  getLogs(): LogEntry[] {
+    return [...this.logs];
+  }
+
+  /**
+   * Get logs by level
+   */
+  getLogsByLevel(level: string): LogEntry[] {
+    return this.logs.filter(log => log.level === level);
+  }
+
+  /**
+   * Get logs by time range
+   */
+  getLogsByTimeRange(startTime: number, endTime: number): LogEntry[] {
+    return this.logs.filter(log => log.timestamp >= startTime && log.timestamp <= endTime);
+  }
+
+  /**
+   * Clear all logs
+   */
+  clearLogs(): void {
+    this.logs = [];
+  }
+
+  /**
+   * Export logs as JSON
+   */
   exportLogs(): string {
-    return JSON.stringify(this.logs, null, 2)
+    return JSON.stringify(this.logs, null, 2);
+  }
+
+  /**
+   * Get log statistics
+   */
+  getLogStats(): { totalLogs: number; logsByLevel: Record<string, number>; oldestLog: number; newestLog: number } {
+    const logsByLevel: Record<string, number> = {};
+    let oldestLog = Date.now();
+    let newestLog = 0;
+
+    this.logs.forEach(log => {
+      logsByLevel[log.level] = (logsByLevel[log.level] || 0) + 1;
+      oldestLog = Math.min(oldestLog, log.timestamp);
+      newestLog = Math.max(newestLog, log.timestamp);
+    });
+
+    return {
+      totalLogs: this.logs.length,
+      logsByLevel,
+      oldestLog,
+      newestLog
+    };
   }
 }
 
-// Export singleton instance;
-export const logger = new Logger()
-  private sendToLoggingService(entr)
-  y: LogMetadata): void {/* TODO: Fix JSX expression */}
-  s: {// 'Content-Type': 'application/json'},
-    //   bod,
-  y: JSON.stringify(entry)
-    // }).catch(err => {/* TODO: Fix JSX expression */})
-    //   // });
-  }
-  /**
-   * Get string representation of log level;
-   */
-  private getLevelString(leve)
-  l: LogLevel): string {/* TODO: Fix JSX expression */}
-    }
-  }
-}
-export const logger = new Logger();`
+export default Logger;

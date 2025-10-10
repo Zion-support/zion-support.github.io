@@ -1,555 +1,257 @@
-'use client'
-/**
- * Cache Manager;
- * Provides in-memory and localStorage caching with TTL support;
- */
-export enum CacheStorage {}
-  Memory = 'memory',
-  LocalStorage = 'localStorage',
-  SessionStorage = 'sessionStorage'
-}
+// Cache manager utility
 
-export interface CacheOptions {
-  ttl?: number; // Time to live in milliseconds;
-export interface CacheOptions {}
-  ttl?: number; // Time to live in milliseconds
-  storage?: CacheStorage;
-  compress?: boolean;
-}
-
-export interface CacheConfig {}
-  storage?: CacheStorage;
+export interface CacheManagerOptions {
   defaultTTL?: number;
+  maxSize?: number;
+  storage?: 'memory' | 'localStorage' | 'sessionStorage';
+  enableCompression?: boolean;
 }
 
-export interface CacheEntry<T> {}
+export interface CacheEntry<T = any> {
   value: T;
   timestamp: number;
   ttl: number;
-}
-
-export interface CacheStats {}
   hits: number;
-  misses: number;
-  hitRate: number;
-  count: number;
-  entries: number;
+  lastAccessed: number;
 }
 
-export class CacheManager<T = unknown> {}
-  private cache: Map<string, CacheEntry<T>> = new Map();
-  private stats: CacheStats = {
-    hits: 0;
-    misses: 0;
-    hitRate: 0;
-    count: 0;
-    entries: 0;
-  };
-  private config: Required<CacheConfig>;
-,
-  constructor(config: CacheConfig = {}) {
-    this.config = {
-      storage: config.storage || CacheStorage.Memory;
-      defaultTTL: config.defaultTTL || 5 * 60 * 1000 // 5 minutes;
-  private stats: CacheStats = {}
+export class CacheManager {
+  private cache: Map<string, CacheEntry> = new Map();
+  private options: Required<CacheManagerOptions>;
+  private stats = {
     hits: 0,
     misses: 0,
-    hitRate: 0,
-    count: 0,
-    entries: 0
+    evictions: 0
   };
-  private config: Required<CacheConfig>;
 
-  constructor(config: CacheConfig = {}) {}
-    this.config = {}
-      storage: config.storage || CacheStorage.Memory,
-      defaultTTL: config.defaultTTL || 5 * 60 * 1000 // 5 minutes
+  constructor(options: CacheManagerOptions = {}) {
+    this.options = {
+      defaultTTL: 5 * 60 * 1000, // 5 minutes
+      maxSize: 1000,
+      storage: 'memory',
+      enableCompression: false,
+      ...options
     };
+
+    // Load from storage if needed
+    if (this.options.storage !== 'memory') {
+      this.loadFromStorage();
+    }
+
+    // Start cleanup interval
+    setInterval(() => this.cleanup(), 60000); // Cleanup every minute
   }
 
   /**
-   * Set a value in the cache;
+   * Set a value in the cache
    */
-  set(key: string, value: T, ttl?: number): void {
+  set<T>(key: string, value: T, ttl?: number): void {
     const entry: CacheEntry<T> = {
-      value;
-  set(key: string, value: T, ttl?: number): void {}
-    const entry: CacheEntry<T> = {}
       value,
       timestamp: Date.now(),
-      ttl: ttl || this.config.defaultTTL;
+      ttl: ttl || this.options.defaultTTL,
+      hits: 0,
+      lastAccessed: Date.now()
     };
 
     this.cache.set(key, entry);
-    this.stats.entries = this.cache.size;
 
-    // Save to persistent storage if needed;
-    if (this.config.storage !== CacheStorage.Memory) {
-    // Save to persistent storage if needed
-    if (this.config.storage !== CacheStorage.Memory) {}
-      this.saveToStorage();
-export enum CacheStorage {/* TODO: Fix JSX expression */}
-}
-export interface CacheOptions {/* TODO: Fix JSX expression */}
-}
-export interface CacheConfig {/* TODO: Fix JSX expression */}
-}
-export interface CacheEntry<T> {/* TODO: Fix JSX expression */}
-}
-export interface CacheStats {/* TODO: Fix JSX expression */}
-}
-export class CacheManager {/* TODO: Fix JSX expression */}
-  s: 0 };
-  constructor(confi)
-  g: CacheConfig = {}) {/* TODO: Fix JSX expression */}
-  }
-  /**
-   * Start periodic cleanup of expired entries;
-   */
-  private startCleanup(): void {/* TODO: Fix JSX expression */}
-    }, 60 * 1000); // Run every minute;
-  }
-  /**
-   * Stop cleanup interval;
-   */
-  stopCleanup(): void {/* TODO: Fix JSX expression */}
+    // Enforce max size
+    if (this.cache.size > this.options.maxSize) {
+      this.evictLeastRecentlyUsed();
     }
-  }
-  /**
-   * Remove expired entries;
-   */
-  private cleanup(): void {/* TODO: Fix JSX expression */}
-      }
-    }
-    // Clean localStorage;
-    if (typeof window !== 'undefined' && window.localStorage) {/* TODO: Fix JSX expression */}
-              }
-            }
-          } catch {/* TODO: Fix JSX expression */}
-          }
-        }
-      }
-      keysToRemove.forEach(key => localStorage.removeItem(key));
-    }
-    logger.debug('Cache cleanup completed');
-  }
-  /**
-   * Check if cache entry is expired;
-   */
-  private isExpired(entr)
-  y: CacheEntry<unknown>, now = Date.now()): boolean {/* TODO: Fix JSX expression */}
-  }
-  /**
-   * Get storage key with prefix;
-   */
-  private getStorageKey(ke)
-  y: string): string {/* TODO: Fix JSX expression */}
-    return `cache_${key}`;
-  }
-  /**
-   * Set cache entry;
-   */
-  set<T>(ke,
-  y: string, valu,
-  e: T, option)
-  s: { ttl?: number } = {}): void {/* TODO: Fix JSX expression */}
-    };`
-    performanceMonitoring.recordCustomMetric(`cache_set_${key}`, 1, 'count');
-    if (this.storage === CacheStorage.Memory) {/* TODO: Fix JSX expression */}
-    } else if (this.storage === CacheStorage.LocalStorage &&
-      typeof window !== 'undefined' &&
-      window.localStorage;)
-    ) {/* TODO: Fix JSX expression */}
-      } catch (error) {/* TODO: Fix JSX expression */}
-      }
-    } else if (this.storage === CacheStorage.SessionStorage &&
-      typeof window !== 'undefined' &&
-      window.sessionStorage;)
-    ) {/* TODO: Fix JSX expression */}
-      } catch (error) {/* TODO: Fix JSX expression */}
-      }
+
+    // Persist to storage if needed
+    if (this.options.storage !== 'memory') {
+      this.persistToStorage();
     }
   }
 
   /**
-   * Get a value from the cache;
+   * Get a value from the cache
    */
-  get(key: string): T | null {}
+  get<T>(key: string): T | null {
     const entry = this.cache.get(key);
-
-    if (!entry) {}
+    
+    if (!entry) {
       this.stats.misses++;
-      this.updateHitRate();
       return null;
     }
 
-    // Check if entry has expired;
-    if (Date.now() - entry.timestamp > entry.ttl) {
-    // Check if entry has expired
-    if (Date.now() - entry.timestamp > entry.ttl) {}
+    // Check if expired
+    if (this.isExpired(entry)) {
       this.cache.delete(key);
       this.stats.misses++;
-      this.stats.entries = this.cache.size;
-      this.updateHitRate();
       return null;
     }
 
+    // Update access info
+    entry.hits++;
+    entry.lastAccessed = Date.now();
     this.stats.hits++;
-    this.updateHitRate();
-   * Get cache entry;
-   */
-  get<T>(ke)
-  y: string): T | undefined {/* TODO: Fix JSX expression */}`
-    performanceMonitoring.recordCustomMetric(`cache_get_${key}`, 1, 'count');
-    let,
-  entry: CacheEntry<T> | null = null;
-    if (this.storage === CacheStorage.Memory) {/* TODO: Fix JSX expression */}
-    } else if (this.storage === CacheStorage.LocalStorage &&
-      typeof window !== 'undefined' &&
-      window.localStorage;)
-    ) {/* TODO: Fix JSX expression */}
-        }
-      } catch (error) {/* TODO: Fix JSX expression */}
-      }
-    } else if (this.storage === CacheStorage.SessionStorage &&
-      typeof window !== 'undefined' &&
-      window.sessionStorage;)
-    ) {/* TODO: Fix JSX expression */}
-        }
-      } catch (error) {/* TODO: Fix JSX expression */}
-      }
-    }
-    if (!entry) {/* TODO: Fix JSX expression */}`
-      performanceMonitoring.recordCustomMetric(`cache_miss_${key}`, 1, 'count');
-      return undefined;
-    }
-    if (this.isExpired(entry)) {/* TODO: Fix JSX expression */}`
-      performanceMonitoring.recordCustomMetric(`cache_expired_${key}`, 1, 'count');
-      return undefined;
-    }
-    this.stats.hits++;`
-    performanceMonitoring.recordCustomMetric(`cache_hit_${key}`, 1, 'count');
-    return entry.value;
+
+    return entry.value as T;
   }
 
   /**
-   * Check if a key exists in the cache;
+   * Check if a key exists and is not expired
    */
-  has(key: string): boolean {}
+  has(key: string): boolean {
     const entry = this.cache.get(key);
-,
-    if (!entry) {,
-      return false;
-    }
-
-    // Check if entry has expired;
-    if (Date.now() - entry.timestamp > entry.ttl) {
-
-    if (!entry) {}
-      return false;
-    }
-
-    // Check if entry has expired
-    if (Date.now() - entry.timestamp > entry.ttl) {}
-      this.cache.delete(key);
-      this.stats.entries = this.cache.size;
-      return false;
-    }
-
-    return true;
+    return entry ? !this.isExpired(entry) : false;
   }
 
   /**
-   * Delete a key from the cache;
+   * Delete a key from the cache
    */
-  delete(key: string): boolean {}
-    const deleted = this.cache.delete(key);
-    if (deleted) {}
-      this.stats.entries = this.cache.size;
-
-      // Save to persistent storage if needed;
-      if (this.config.storage !== CacheStorage.Memory) {,
-      // Save to persistent storage if needed
-      if (this.config.storage !== CacheStorage.Memory) {}
-        this.saveToStorage();
-   * Check if key exists and is not expired;
-   */
-  has(ke)
-  y: string): boolean {/* TODO: Fix JSX expression */}
-  }
-  /**
-   * Delete a cache entry;
-   */
-  delete(ke)
-  y: string): void {/* TODO: Fix JSX expression */}
-    } else if (this.storage === CacheStorage.LocalStorage &&
-      typeof window !== 'undefined' &&
-      window.localStorage;)
-    ) {/* TODO: Fix JSX expression */}
-    } else if (this.storage === CacheStorage.SessionStorage &&
-      typeof window !== 'undefined' &&
-      window.sessionStorage;)
-    ) {/* TODO: Fix JSX expression */}
-    }
-  }
-  /**
-   * Clear all cache entries;
-   */
-  clear(): void {/* TODO: Fix JSX expression */}
-    }
-    if (this.storage === CacheStorage.LocalStorage &&
-      typeof window !== 'undefined' &&
-      window.localStorage;)
-    ) {/* TODO: Fix JSX expression */}
-        }
-      }
-    }
-    return deleted;
+  delete(key: string): boolean {
+    return this.cache.delete(key);
   }
 
   /**
-   * Clear all entries from the cache;
+   * Clear all cache entries
    */
-  clear(): void {}
+  clear(): void {
     this.cache.clear();
-    this.stats.entries = 0;
-
-    // Clear persistent storage if needed;
-    if (this.config.storage !== CacheStorage.Memory) {
-    // Clear persistent storage if needed
-    if (this.config.storage !== CacheStorage.Memory) {}
+    
+    if (this.options.storage !== 'memory') {
       this.clearStorage();
     }
   }
 
   /**
-   * Get all keys in the cache;
+   * Get cache statistics
    */
-  keys(): string[] {}
-    return Array.from(this.cache.keys());
+  getStats(): {
+    size: number;
+    maxSize: number;
+    hitRate: number;
+    hits: number;
+    misses: number;
+    evictions: number;
+  } {
+    const total = this.stats.hits + this.stats.misses;
+    return {
+      size: this.cache.size,
+      maxSize: this.options.maxSize,
+      hitRate: total > 0 ? this.stats.hits / total : 0,
+      hits: this.stats.hits,
+      misses: this.stats.misses,
+      evictions: this.stats.evictions
+    };
   }
 
   /**
-   * Get cache statistics;
+   * Get cache entry info
    */
-  getStats(): CacheStats {}
-    return { ...this.stats };
+  getEntryInfo(key: string): {
+    exists: boolean;
+    expired: boolean;
+    hits: number;
+    age: number;
+    ttl: number;
+  } | null {
+    const entry = this.cache.get(key);
+    
+    if (!entry) {
+      return null;
+    }
+
+    return {
+      exists: true,
+      expired: this.isExpired(entry),
+      hits: entry.hits,
+      age: Date.now() - entry.timestamp,
+      ttl: entry.ttl
+    };
   }
 
   /**
-   * Get cache size;
+   * Clean up expired entries
    */
-  size(): number {}
-    return this.cache.size;
-  }
-
-  /**
-   * Clean expired entries;
-   */
-  cleanExpired(): number {}
+  cleanup(): void {
     const now = Date.now();
     let cleaned = 0;
 
-    for (const [key, entry] of this.cache.entries()) {}
-      if (now - entry.timestamp > entry.ttl) {}
+    for (const [key, entry] of this.cache.entries()) {
+      if (this.isExpired(entry)) {
         this.cache.delete(key);
         cleaned++;
-    if (this.storage === CacheStorage.SessionStorage &&
-      typeof window !== 'undefined' &&
-      window.sessionStorage;)
-    ) {/* TODO: Fix JSX expression */}
+      }
+    }
+
+    if (cleaned > 0 && this.options.storage !== 'memory') {
+      this.persistToStorage();
+    }
+  }
+
+  /**
+   * Evict least recently used entry
+   */
+  private evictLeastRecentlyUsed(): void {
+    let oldestKey = '';
+    let oldestTime = Date.now();
+
+    for (const [key, entry] of this.cache.entries()) {
+      if (entry.lastAccessed < oldestTime) {
+        oldestTime = entry.lastAccessed;
+        oldestKey = key;
+      }
+    }
+
+    if (oldestKey) {
+      this.cache.delete(oldestKey);
+      this.stats.evictions++;
+    }
+  }
+
+  /**
+   * Check if entry is expired
+   */
+  private isExpired(entry: CacheEntry): boolean {
+    return Date.now() - entry.timestamp > entry.ttl;
+  }
+
+  /**
+   * Persist cache to storage
+   */
+  private persistToStorage(): void {
+    if (this.options.storage === 'localStorage' || this.options.storage === 'sessionStorage') {
+      const storage = this.options.storage === 'localStorage' ? localStorage : sessionStorage;
+      const data = Array.from(this.cache.entries());
+      storage.setItem('cache_manager', JSON.stringify(data));
+    }
+  }
+
+  /**
+   * Load cache from storage
+   */
+  private loadFromStorage(): void {
+    if (this.options.storage === 'localStorage' || this.options.storage === 'sessionStorage') {
+      const storage = this.options.storage === 'localStorage' ? localStorage : sessionStorage;
+      const data = storage.getItem('cache_manager');
+      
+      if (data) {
+        try {
+          const entries = JSON.parse(data);
+          this.cache = new Map(entries);
+        } catch (error) {
+          console.error('Failed to load cache from storage:', error);
         }
       }
     }
-
-    this.stats.entries = this.cache.size;
-
-    // Save to persistent storage if needed;
-    if (this.config.storage !== CacheStorage.Memory && cleaned > 0) {
-    // Save to persistent storage if needed
-    if (this.config.storage !== CacheStorage.Memory && cleaned > 0) {}
-      this.saveToStorage();
-    }
-
-    return cleaned;
-    logger.info('Cache cleared', 'CacheManager', {/* TODO: Fix JSX expression */})
-  e: this.storage });
-  }
-  /**
-   * Get or set with function (handles both sync and async)
-   */
-  getOrSet<T>(ke,
-  y: string,
-    f)
-  n: () => T | Promise<T>,
-    option,
-  s: { ttl?: number } = {}
-  ): T | Promise<T> {/* TODO: Fix JSX expression */}
-    }
-    const start = performance.now();
-    const value = fn();
-    const duration = performance.now() - start;`
-    performanceMonitoring.recordCustomMetric(`cache_compute_${key}`, duration, 'ms');
-    // Handle both sync and async values;
-    if (value instanceof Promise) {/* TODO: Fix JSX expression */}
-      });
-    }
-    this.set(key, value, options);
-    return value;
   }
 
   /**
-   * Update hit rate;
+   * Clear storage
    */
-  private updateHitRate(): void {}
-    const total = this.stats.hits + this.stats.misses;
-    this.stats.hitRate = total > 0 ? this.stats.hits / total : 0;
-   * Get or set with async function;
-   */
-  async getOrSetAsync<T>(ke,
-  y: string,
-    f)
-  n: () => Promise<T> | T,
-    option,
-  s: { ttl?: number } = {}
-  ): Promise<T> {/* TODO: Fix JSX expression */}
-    }
-    const start = performance.now();
-    const value = await fn();
-    const duration = performance.now() - start;`
-    performanceMonitoring.recordCustomMetric(`cache_compute_${key}`, duration, 'ms');
-    this.set(key, value, options);
-    return value;
-  }
-  /**
-   * Memoize a function with caching;
-   */
-  memoize<TArgs extends unknown[], TResult>(f,
-  n: (...arg)
-  s: TArgs) => TResult,
-    option,
-  s: {/* TODO: Fix JSX expression */}
-  s: TArgs) => string } = {}
-  ): (...arg)
-  s: TArgs) => TResult {/* TODO: Fix JSX expression */}
-    const { keyGenerator, ...cacheOptions } = options;
-    return (...arg)
-  s: TArgs): TResult => {/* TODO: Fix JSX expression */}`
-        : `memoize_${fn.name}_${JSON.stringify(args)}`;
-      return this.getOrSet(key, () => fn(...args), cacheOptions) as TResult;
-    };
-  }
-  /**
-   * Get cache statistics;
-   */
-  getStatistics(): CacheStats {/* TODO: Fix JSX expression */}
-    };
-  }
-
-  /**
-   * Save cache to persistent storage;
-   */
-  private saveToStorage(): void {}
-    if (typeof window === 'undefined') return;
-
-    try {}
-      const storage = this.getStorage();
-      if (storage) {}
-        const data = {}
-          entries: Object.fromEntries(this.cache),
-          stats: this.stats;
-          timestamp: Date.now()};
-        storage.setItem('cache-manager', JSON.stringify(data));
-      }
-    } catch (error) {}
-      }
-  }
-
-  /**
-   * Load cache from persistent storage;
-   */
-  private loadFromStorage(): void {}
-    if (typeof window === 'undefined') return;
-
-    try {}
-      const storage = this.getStorage();
-      if (storage) {}
-        const data = storage.getItem('cache-manager');
-        if (data) {}
-          const parsed = JSON.parse(data);
-          this.cache = new Map(Object.entries(parsed.entries || {}));
-          this.stats = { ...this.stats, ...parsed.stats };
-        }
-      }
-    } catch (error) {}
-   * Get cache count;
-   */
-  getStats(): {/* TODO: Fix JSX expression */}
-  } {/* TODO: Fix JSX expression */}
-          }
-        }
-      }
-      if (window.sessionStorage) {/* TODO: Fix JSX expression */}
-          }
-        }
-      }
-  }
-
-  /**
-   * Clear persistent storage;
-   */
-  private clearStorage(): void {}
-    if (typeof window === 'undefined') return;
-
-    try {}
-      const storage = this.getStorage();
-      if (storage) {}
-        storage.removeItem('cache-manager');
-      }
-    } catch (error) {}
-      }
-  }
-
-  /**
-   * Get the appropriate storage object;
-   */
-  private getStorage(): Storage | null {}
-    if (typeof window === 'undefined') return null;
-
-    switch (this.config.storage) {
-      case CacheStorage.LocalStorage: return window.localStorage;
-    switch (this.config.storage) {}
-      case CacheStorage.LocalStorage:
-        return window.localStorage;
-      case CacheStorage.SessionStorage:
-        return window.sessionStorage;
-      default:,
-        return null;
+  private clearStorage(): void {
+    if (this.options.storage === 'localStorage') {
+      localStorage.removeItem('cache_manager');
+    } else if (this.options.storage === 'sessionStorage') {
+      sessionStorage.removeItem('cache_manager');
     }
   }
 }
 
-// Create singleton instances for different use cases;
-export const memoryCache = new CacheManager({ storage: CacheStorage.Memory });
-export const localStorageCache = new CacheManager({)
-  storage: CacheStorage.LocalStorage)
-  defaultTTL: 30 * 60 * 1000 // 30 minutes;
-export const sessionStorageCache = new CacheManager({)
-  storage: CacheStorage.SessionStorage),
-  defaultTTL: 60 * 60 * 1000 // 1 hour;
-export const localStorageCache = new CacheManager({)}
-  storage: CacheStorage.LocalStorage,
-  defaultTTL: 30 * 60 * 1000 // 30 minutes
-
-export const sessionStorageCache = new CacheManager({)}
-  storage: CacheStorage.SessionStorage,
-  defaultTTL: 60 * 60 * 1000 // 1 hour
-
 export default CacheManager;
-    return {/* TODO: Fix JSX expression */}
-    };
-  }
-}
-export const cacheManager = new CacheManager();
-export default CacheManager;
-`

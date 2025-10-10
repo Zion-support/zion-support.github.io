@@ -1,153 +1,141 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+// Advanced caching utility
 
-const AdvancedCachingPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
+export interface CacheOptions {
+  ttl?: number; // Time to live in milliseconds
+  maxSize?: number; // Maximum number of items
+  storage?: 'memory' | 'localStorage' | 'sessionStorage';
+}
+
+export interface CacheItem<T> {
+  value: T;
+  timestamp: number;
+  ttl: number;
+}
+
+export class AdvancedCache<T = any> {
+  private cache: Map<string, CacheItem<T>> = new Map();
+  private options: Required<CacheOptions>;
+
+  constructor(options: CacheOptions = {}) {
+    this.options = {
+      ttl: 5 * 60 * 1000, // 5 minutes
+      maxSize: 100,
+      storage: 'memory',
+      ...options
+    };
+  }
+
+  /**
+   * Set a value in the cache
+   */
+  set(key: string, value: T, ttl?: number): void {
+    const item: CacheItem<T> = {
+      value,
+      timestamp: Date.now(),
+      ttl: ttl || this.options.ttl
+    };
+
+    this.cache.set(key, item);
+
+    // Enforce max size
+    if (this.cache.size > this.options.maxSize) {
+      const firstKey = this.cache.keys().next().value;
+      this.cache.delete(firstKey);
     }
-  ];
 
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
+    // Persist to storage if needed
+    if (this.options.storage !== 'memory') {
+      this.persistToStorage();
+    }
+  }
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>AdvancedCaching | Zion Tech Group</title>
-        <meta name="description" content="Professional AdvancedCaching services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="advancedCaching, AI solutions, IT services, Zion Tech Group, advancedcaching" />
-      </Helmet>
+  /**
+   * Get a value from the cache
+   */
+  get(key: string): T | null {
+    const item = this.cache.get(key);
+    
+    if (!item) {
+      return null;
+    }
 
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                AdvancedCaching
-              </span>
-              <br />
-              <span className="text-white">Solutions</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced advancedcaching solutions. 
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
+    // Check if expired
+    if (this.isExpired(item)) {
+      this.cache.delete(key);
+      return null;
+    }
 
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our AdvancedCaching?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our advancedcaching solutions deliver unmatched performance, security, and scalability.
-            </p>
-          </div>
+    return item.value;
+  }
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                  <feature.icon className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+  /**
+   * Check if a key exists in the cache
+   */
+  has(key: string): boolean {
+    const item = this.cache.get(key);
+    return item ? !this.isExpired(item) : false;
+  }
 
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our advancedcaching solutions for your business.
-            </p>
-          </div>
+  /**
+   * Delete a key from the cache
+   */
+  delete(key: string): boolean {
+    return this.cache.delete(key);
+  }
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                <p className="text-gray-300 text-lg">{benefit}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+  /**
+   * Clear all cache entries
+   */
+  clear(): void {
+    this.cache.clear();
+    
+    if (this.options.storage !== 'memory') {
+      this.clearStorage();
+    }
+  }
 
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-purple-100 mb-8">
-              Contact our experts to discuss your advancedcaching needs and get a customized solution.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                <Phone className="mr-2 h-5 w-5" />
-                Call Now
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-                <Mail className="mr-2 h-5 w-5" />
-                Email Us
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-};
+  /**
+   * Get cache statistics
+   */
+  getStats(): { size: number; maxSize: number; hitRate: number } {
+    return {
+      size: this.cache.size,
+      maxSize: this.options.maxSize,
+      hitRate: 0 // Would need to track hits/misses for accurate hit rate
+    };
+  }
 
-export default AdvancedCachingPage;
+  /**
+   * Clean up expired entries
+   */
+  cleanup(): void {
+    const now = Date.now();
+    for (const [key, item] of this.cache.entries()) {
+      if (this.isExpired(item)) {
+        this.cache.delete(key);
+      }
+    }
+  }
+
+  private isExpired(item: CacheItem<T>): boolean {
+    return Date.now() - item.timestamp > item.ttl;
+  }
+
+  private persistToStorage(): void {
+    if (this.options.storage === 'localStorage' || this.options.storage === 'sessionStorage') {
+      const storage = this.options.storage === 'localStorage' ? localStorage : sessionStorage;
+      const data = Array.from(this.cache.entries());
+      storage.setItem('advanced_cache', JSON.stringify(data));
+    }
+  }
+
+  private clearStorage(): void {
+    if (this.options.storage === 'localStorage') {
+      localStorage.removeItem('advanced_cache');
+    } else if (this.options.storage === 'sessionStorage') {
+      sessionStorage.removeItem('advanced_cache');
+    }
+  }
+}
+
+export default AdvancedCache;

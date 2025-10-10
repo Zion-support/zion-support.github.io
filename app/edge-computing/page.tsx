@@ -8,8 +8,7 @@ import { CheckCircle, Zap, Cpu, Clock, Users, Shield, BarChart, ArrowRight } fro
 const EdgeComputingPage: React.FC = () => {
   const features = [
     {
-icon: Cpu,
-
+      icon: Cpu,
       title: 'Low-Latency Processing',
       description: 'Process data at the edge for ultra-low latency applications and real-time decision making.',
       benefits: ['< 1 ms latency', 'Real-time processing', 'Instant responses']
@@ -28,7 +27,7 @@ icon: Cpu,
     },
     {
       icon: Users,
-title: 'IoT Integration',
+      title: 'IoT Integration',
       description: 'Seamlessly integrate with IoT devices and sensors for comprehensive edge solutions.',
       benefits: ['IoT connectivity', 'Sensor integration', 'Device management']
     },
@@ -51,19 +50,19 @@ title: 'IoT Integration',
 
   const useCases = [
     {
-      title: 'Smart Cities',
-      description: 'Power smart city infrastructure with edge computing',
-      icon: '🏙️'
-    },
-    {
-      title: 'Industrial IoT',
-      description: 'Optimize manufacturing with edge-based monitoring',
+      title: 'Smart Manufacturing',
+      description: 'Real-time monitoring and control of production lines',
       icon: '🏭'
     },
     {
       title: 'Autonomous Vehicles',
-      description: 'Enable real-time decision making for autonomous systems',
+      description: 'Ultra-low latency processing for safety-critical decisions',
       icon: '🚗'
+    },
+    {
+      title: 'Smart Cities',
+      description: 'Manage traffic, utilities, and public services efficiently',
+      icon: '🏙️'
     },
     {
       title: 'Healthcare',
@@ -104,44 +103,36 @@ title: 'IoT Integration',
             <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
               Learn More
             </button>
-</div>
+          </div>
         </div>
       </section>
 
       {/* Features Section */}
-<section className="py-20 px-4">
+      <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Advanced Edge Computing Features<p className="text-xl text-gray-300 max-w-3xl mx-auto">Comprehensive edge computing solution designed for modern applications and IoT deployments<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300 group">
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-        <div className="max-w-7xl mx-auto"></section>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-4xl font-bold text-white mb-4">Advanced Edge Computing Features</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">Comprehensive edge computing solution designed for modern applications and IoT deployments</p><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300 group"></div>
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300"></div>
-                  <feature.icon className="w-6 h-6 text-white" />
             <h2 className="text-4xl font-bold text-white mb-4">Advanced Edge Computing Features</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive edge computing solution designed for modern applications and IoT deployments;
+              Comprehensive edge computing solution designed for modern applications and IoT deployments
             </p>
           </div>
-
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover: border-blue-400/50 transition-all duration-300 group">,
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">,
-                  <feature.icon className="w-6 h-6 text-white" />,
-                </div>,
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300 group">
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <feature.icon className="w-6 h-6 text-white" />
+                </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300 mb-4">{feature.description}</p><ul className="space-y-2">{feature.benefits.map((benefit, benefitIndex) => (</ul>
-                    <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" >{benefit}</CheckCircle>
-                    </CheckCircle>
+                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, benefitIndex) => (
+                    <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      {benefit}
+                    </li>
                   ))}
                 </ul>
-</div>
-
+              </div>
             ))}
           </div>
         </div>
@@ -151,9 +142,7 @@ title: 'IoT Integration',
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Use Cases
-            </h2>
+            <h2 className="text-4xl font-bold text-white mb-4">Use Cases</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Edge computing solutions are perfect for applications that require low latency, 
               real-time processing, and distributed computing power.
@@ -175,59 +164,83 @@ title: 'IoT Integration',
       {/* Benefits Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Why Choose Edge Computing?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the benefits of edge computing with our proven solutions and expertise.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-green-400 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <CheckCircle className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-lg font-semibold text-white">{benefit}</h3>
-
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-4xl font-bold text-white mb-6">Why Choose Edge Computing?</h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Edge computing brings processing power closer to where data is generated, 
+                enabling faster response times and more efficient resource utilization.
+              </p>
+              <div className="space-y-4">
+                {benefits.map((benefit, index) => (
+                  <div key={index} className="flex items-center">
+                    <CheckCircle className="w-6 h-6 text-green-400 mr-3 flex-shrink-0" />
+                    <span className="text-gray-300">{benefit}</span>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
+            <div className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl p-8 border border-white/10">
+              <h3 className="text-2xl font-bold text-white mb-4">Performance Metrics</h3>
+              <div className="space-y-6">
+                <div>
+                  <div className="flex justify-between text-sm text-gray-300 mb-2">
+                    <span>Latency Reduction</span>
+                    <span>90%</span>
+                  </div>
+                  <div className="w-full bg-gray-700 rounded-full h-2">
+                    <div className="bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full" style={{ width: '90%' }}></div>
+                  </div>
+                </div>
+                <div>
+                  <div className="flex justify-between text-sm text-gray-300 mb-2">
+                    <span>Performance Improvement</span>
+                    <span>80%</span>
+                  </div>
+                  <div className="w-full bg-gray-700 rounded-full h-2">
+                    <div className="bg-gradient-to-r from-purple-500 to-pink-500 h-2 rounded-full" style={{ width: '80%' }}></div>
+                  </div>
+                </div>
+                <div>
+                  <div className="flex justify-between text-sm text-gray-300 mb-2">
+                    <span>Cost Reduction</span>
+                    <span>70%</span>
+                  </div>
+                  <div className="w-full bg-gray-700 rounded-full h-2">
+                    <div className="bg-gradient-to-r from-green-500 to-blue-500 h-2 rounded-full" style={{ width: '70%' }}></div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-<section className="py-20 px-4">
-
+      <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Deploy Edge Computing?<p className="text-xl text-gray-300 mb-8">Join leading enterprises using edge computing to optimize their applications and reduce latency</p>
-        <div className="max-w-4xl mx-auto text-center"></section>
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Deploy Edge Computing?</h2><p className="text-xl text-gray-300 mb-8">Join leading enterprises using edge computing to optimize their applications and reduce latency</p>
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-            <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">Start Free Trial<button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">Contact Sales</button>
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Deploy Edge Computing?</h2>
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Ready to Deploy Edge Computing?
+          </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Join leading enterprises using edge computing to optimize their applications and reduce latency;
+            Transform your applications with edge computing solutions. 
+            Get started with our expert consultation and implementation services.
           </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-              Start Free Trial;
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+              Start Edge Computing Project
+              <ArrowRight className="inline-block ml-2 w-4 h-4" />
             </button>
-            <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              Contact Sales;
+            <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+              Schedule Consultation
             </button>
           </div>
         </div>
       </section>
 
-<Footer />
-
+      <Footer />
     </div>
   );
-
 };
 
 export default EdgeComputingPage;
