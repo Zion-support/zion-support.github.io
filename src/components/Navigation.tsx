@@ -18,6 +18,7 @@ import {
   TrendingUp,
   Settings,
   Globe,
+  DollarSign,
   Target,
   ArrowRight,
   Sparkles,
