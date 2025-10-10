@@ -4,7 +4,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Zap, Settings, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react';
 
-const AIOpsPage: React.FC = () => {,
+const AIOpsPage: React.FC = () => {
   const features = [,
     {,
       icon: Settings;
