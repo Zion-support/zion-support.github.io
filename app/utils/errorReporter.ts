@@ -169,7 +169,6 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
       if (process.env['NODE_ENV'] === 'development') {}
   private logToConsole(repor)
   t: ErrorReport): void {/* TODO: Fix JSX expression */}`
-    console.group(`%c[${report.severity.toUpperCase()}] Error Report`, style);
     if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}
       }
     if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}

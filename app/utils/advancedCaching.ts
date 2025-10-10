@@ -24,8 +24,6 @@ const AdvancedCachingPage: React.FC = () => {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
-<<<<<<< HEAD
-=======
 export interface CacheOptions {
   ttl?: number; // Time to live in milliseconds;
 export interface CacheOptions {}
@@ -64,7 +62,6 @@ class AdvancedCache<T = unknown> {}
     // Load from persistent storage if needed
     if (this.options.storage !== 'memory') {}
       this.loadFromStorage();
->>>>>>> origin/main
     }
   ];
 
@@ -192,8 +189,6 @@ class AdvancedCache<T = unknown> {}
 };
 
 export default AdvancedCachingPage;
-<<<<<<< HEAD
-=======
   private cleanExpired(): void {}
     const now = Date.now();
     const expiredKeys: string[] = [];
@@ -483,4 +478,3 @@ export function createCache<T = unknown>(options?: CacheOptions): AdvancedCache<
 // Export default cache instance;
 export const defaultCache = new AdvancedCache();
 export default AdvancedCache;
->>>>>>> origin/main

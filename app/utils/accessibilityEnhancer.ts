@@ -24,8 +24,6 @@ const AccessibilityEnhancerPage: React.FC = () => {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
-<<<<<<< HEAD
-=======
 /**
  * Advanced Accessibility Enhancement Utility;
  * Provides comprehensive accessibility improvements and monitoring;
@@ -182,7 +180,6 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
   t: KeyboardEvent, isShif)
   t: boolean): void {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}
->>>>>>> origin/main
     }
   ];
 
@@ -204,8 +201,6 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
         <meta name="description" content="Professional AccessibilityEnhancer services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="accessibilityEnhancer, AI solutions, IT services, Zion Tech Group, accessibilityenhancer" />
       </Helmet>
-<<<<<<< HEAD
-=======
   }
   /**
    * Handle arrow key navigation;
@@ -387,7 +382,6 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
       // Add error states;
       if (element.classList.contains('error') || element.getAttribute('aria-invalid') === 'true') {/* TODO: Fix JSX expression */}
       }
->>>>>>> origin/main
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -465,8 +459,6 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
   }
   /**
    * Setup ARIA labels;
@@ -776,7 +768,6 @@ Accessibility Report:
 
   getReport(): string {/* TODO: Fix JSX expression */}
 }}"`
->>>>>>> origin/main
 
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">

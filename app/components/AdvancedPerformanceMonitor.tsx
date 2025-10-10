@@ -52,7 +52,6 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         observers.push(lcpObserver);
       } catch (error) {
         // eslint-disable-next-line no-console
-        console.warn('LCP observer not supported:', error);
       }
     }
 
@@ -79,7 +78,6 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         observers.push(fidObserver);
       } catch (error) {
         // eslint-disable-next-line no-console
-        console.warn('FID observer not supported:', error);
       }
     }
 
@@ -107,7 +105,6 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         observers.push(clsObserver);
       } catch (error) {
         // eslint-disable-next-line no-console
-        console.warn('CLS observer not supported:', error);
       }
     }
 
@@ -132,7 +129,6 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       }));
     } catch (error) {
       // eslint-disable-next-line no-console
-      console.warn('Performance measurement failed:', error);
     }
 
     // Cleanup observers
@@ -142,7 +138,6 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           observer.disconnect();
         } catch (error) {
           // eslint-disable-next-line no-console
-          console.warn('Error disconnecting observer:', error);
         }
       });
     };
@@ -159,7 +154,6 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     if (slowResources.length > 0) {
        
       // eslint-disable-next-line no-console
-      console.warn(
         'Slow resources detected:',
         slowResources.map((r: PerformanceResourceTiming) => ({
           name: r.name,

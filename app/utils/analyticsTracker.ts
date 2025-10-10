@@ -24,8 +24,6 @@ const AnalyticsTrackerPage: React.FC = () => {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
-<<<<<<< HEAD
-=======
 interface AnalyticsEvent {}
   action: string,
   category: string,
@@ -104,7 +102,6 @@ class AnalyticsTracker {/* TODO: Fix JSX expression */}
     };
     if (this.isInitialized) {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}
->>>>>>> origin/main
     }
   ];
 
@@ -203,8 +200,6 @@ class AnalyticsTracker {/* TODO: Fix JSX expression */}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
   /**
    * Track user interaction;
    */
@@ -218,7 +213,6 @@ class AnalyticsTracker {/* TODO: Fix JSX expression */}
       action,
       category: 'user-interaction',
       label: element
->>>>>>> origin/main
 
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -248,8 +242,6 @@ class AnalyticsTracker {/* TODO: Fix JSX expression */}
 };
 
 export default AnalyticsTrackerPage;
-<<<<<<< HEAD
-=======
   /**
    * Track conversion;
    */
@@ -378,4 +370,3 @@ if (typeof window !== 'undefined') {/* TODO: Fix JSX expression */}
   }
 }
 export default analyticsTracker;
->>>>>>> origin/main

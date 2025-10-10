@@ -187,7 +187,6 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   private measureLoadTime(): void {/* TODO: Fix JSX expression */}
       }
     } catch (error) {
-      console.warn('Failed to measure load time:', error);
     }
   }
   /**

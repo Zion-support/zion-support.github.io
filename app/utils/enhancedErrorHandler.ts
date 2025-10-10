@@ -777,7 +777,6 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
     if (errorReport.stack) {}
   private logError(errorRepor)
   t: ErrorReport): void {/* TODO: Fix JSX expression */}`
-    console.group(`${emoji} Error)`
   Report: ${errorReport.id}`);
     if (errorReport.stack) {/* TODO: Fix JSX expression */}
       }

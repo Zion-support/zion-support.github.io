@@ -123,12 +123,7 @@ const AIAPIManagerPage: React.FC = () => {
             </div>
           </div>
         </section>
-
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
+      </div>
 
       <Footer />
     </>
