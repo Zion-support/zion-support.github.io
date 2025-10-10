@@ -144,13 +144,15 @@ const App: React.FC = memo(() => {
                   </main>
                   <Footer />
                 </div>
-                </Router>
-                </AppWithPerformanceMonitoring>
-              </EnhancedAccessibility>
+              </Router>
+            </AppWithPerformanceMonitoring>
+            </EnhancedAccessibility>
             </AccessibilityEnhancer>
           </PerformanceOptimizer>
         </AnalyticsProvider>
       </HelmetProvider>
     </ErrorBoundary>
   );
-}
+});
+
+export default App;
