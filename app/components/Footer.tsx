@@ -75,6 +75,7 @@ const Footer: React.FC = memo(() => {
     { name: 'Case Studies', url: '/case-studies' },
     { name: 'Careers', url: '/careers' },
     { name: 'News', url: '/news' },
+    { name: 'Partners', url: '/partners' },
     { name: 'Contact', url: '/contact' }
   ];
   const supportLinks = [
