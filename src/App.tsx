@@ -32,7 +32,7 @@ const AIMarketingPage = lazy(() => import('./ai-marketing/page'));
 const AIMobileAppDevelopmentPage = lazy(() => import('./ai-mobile-app-development/page'));
 const AISalesAutomationPage = lazy(() => import('./ai-sales-automation/page'));
 const AISchedulerPage = lazy(() => import('./ai-scheduler/page'));
-const AIServicesPage = lazy(() => import('../app/ai-services/page'));
+const AIServicesPage = lazy(() => import('./ai-services/page'));
 const AIWorkflowAutomationPage = lazy(() => import('./ai-workflow-automation/page'));
 const AIWritingAssistantPage = lazy(() => import('./ai-writing-assistant/page'));
 
@@ -59,9 +59,9 @@ const NetworkInfrastructurePage = lazy(() => import('./network-infrastructure/pa
 const ITSupportPage = lazy(() => import('./it-support/page'));
 
 // New Pages
-const WebDevelopmentPage = lazy(() => import('../app/web-development/page'));
-const AIFraudDetectionPage = lazy(() => import('../app/ai-fraud-detection/page'));
-const AIContentWriterPage = lazy(() => import('../app/ai-content-writer/page'));
+const WebDevelopmentPage = lazy(() => import('./web-development/page'));
+const AIFraudDetectionPage = lazy(() => import('./ai-fraud-detection/page'));
+const AIContentWriterPage = lazy(() => import('./ai-content-writer/page'));
 
 // Missing Pages
 const AICodeGenerationPage = lazy(() => import('./ai-code-generation/page'));
