@@ -86,7 +86,7 @@ const EnterprisePage: React.FC = () => {
     { number: '24/7', label: 'Support Available', icon: Clock }
   ];
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>;
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <SEOOptimizer;
         title="Enterprise Solutions - Zion Tech Group";
         description="Comprehensive enterprise-grade solutions for large-scale business operations.";
@@ -94,9 +94,9 @@ const EnterprisePage: React.FC = () => {
       />;
       <Navigation />;
       {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden"></section>;
-        <div className="absolute inset-0 bg-Service Feature animate-pulse" style={{ animationDelay: '1s' }} /></div>;
-        <div className="relative max-w-7xl mx-auto text-center"></div>;
+      <section className="relative py-20 px-4 overflow-hidden"></section>
+        <div className="absolute inset-0 bg-Service Feature animate-pulse" style={{ animationDelay: '1s' }} /></div>
+        <div className="relative max-w-7xl mx-auto text-center"></div>
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">;
             Enterprise</h1>;
             <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">;
@@ -107,7 +107,7 @@ const EnterprisePage: React.FC = () => {
             Comprehensive enterprise-grade solutions designed for large-scale business operations.;
             Transform your organization with cutting-edge technology and expert implementation.;
           </p>;
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>;
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">;
               Get Enterprise Consultation;
               <ArrowRight className="inline-block ml-2 w-5 h-5" />;
@@ -119,12 +119,12 @@ const EnterprisePage: React.FC = () => {
         </div>;
       </section>;
       {/* Stats Section */}
-      <section className="py-20 px-4"></section>;
-        <div className="max-w-7xl mx-auto"></div>;
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8"></div>;
+      <section className="py-20 px-4"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8"></div>
             {stats.map((stat, index) => (}
-              <div key={index} className="text-center"></div>;
-                <div className="flex justify-center mb-4"></div>;
+              <div key={index} className="text-center"></div>
+                <div className="flex justify-center mb-4"></div>
                   <stat.icon className="w-12 h-12 text-purple-400" />;
                 </div>;
                 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>;
@@ -135,9 +135,9 @@ const EnterprisePage: React.FC = () => {
         </div>;
       </section>;
       {/* Features Section */}
-      <section className="py-20 px-4"></section>;
-        <div className="max-w-7xl mx-auto"></div>;
-          <div className="text-center mb-16"></div>;
+      <section className="py-20 px-4"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
             <h2 className="text-4xl font-bold text-white mb-4">;
               Enterprise-Grade Features;
             </h2>;
@@ -145,7 +145,7 @@ const EnterprisePage: React.FC = () => {
               Built for scale, security, and performance to meet the demands of large organizations.;
             </p>;
           </div>;
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>;
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
                   <feature.icon className="w-8 h-8 text-purple-400 mr-3" />;
                   <h3 className="text-xl font-semibold text-white">{feature.title}</h3>;
                 </div>;
@@ -179,7 +179,7 @@ const EnterprisePage: React.FC = () => {
         </div>;
       </section>;
       {/* Benefits Section */}
-      <section className="py-20 px-4"></section>;
+      <section className="py-20 px-4"></section>
                 </button>;
               </div>;
             </div>;
@@ -187,15 +187,15 @@ const EnterprisePage: React.FC = () => {
         </div>;
       </section>;
       {/* CTA Section */}
-      <section className="py-20 px-4"></section>;
-        <div className="max-w-4xl mx-auto text-center"></div>;
+      <section className="py-20 px-4"></section>
+        <div className="max-w-4xl mx-auto text-center"></div>
           <h2 className="text-4xl font-bold text-white mb-6">;
             Ready to Transform Your Enterprise?;
           </h2>;
           <p className="text-xl text-gray-300 mb-8">;
             Join hundreds of enterprise clients who trust our solutions for their mission-critical operations.;
           </p>;
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>;
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">;
               Contact Enterprise Sales;
               <ArrowRight className="inline-block ml-2 w-5 h-5" />;

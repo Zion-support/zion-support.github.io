@@ -1,190 +1,152 @@
-#!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
 
-// Function to recursively find all files
+// Find all TypeScript/JavaScript files
 function findFiles(dir, extensions = ['.tsx', '.ts', '.js', '.jsx']) {
-  let results = [];
-  const list = fs.readdirSync(dir);
+  let files = [];
+  const items = fs.readdirSync(dir);
   
-  list.forEach(file => {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
     
-    if (stat && stat.isDirectory()) {
-      if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(file)) {
-        results = results.concat(findFiles(filePath, extensions));
-      }
-    } else {
-      const ext = path.extname(file);
-      if (extensions.includes(ext)) {
-        results.push(filePath);
-      }
+    if (stat.isDirectory() && !item.includes('node_modules') && !item.startsWith('.')) {
+      files = files.concat(findFiles(fullPath, extensions));
+    } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
+      files.push(fullPath);
     }
-  });
+  }
   
-  return results;
+  return files;
 }
 
-// Function to fix all syntax issues
-function fixAllSyntaxIssues(filePath) {
+// Fix syntax errors in a file
+function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let originalContent = content;
-    let fixed = false;
     
-    // Fix missing function declaration before state hooks
-    if (content.includes('import React, { useState') && content.includes('const [') && !content.includes(': React.FC = () => {')) {
-      const fileName = path.basename(filePath, path.extname(filePath));
-      const componentName = fileName.charAt(0).toUpperCase() + fileName.slice(1).replace(/-([a-z])/g, (g) => g[1].toUpperCase());
-      
-      // Find the line with useState and add function declaration before it
-      const lines = content.split('\n');
-      let newLines = [];
-      let foundImport = false;
-      
-      for (let i = 0; i < lines.length; i++) {
-        const line = lines[i];
-        
-        if (line.includes('import React, { useState') && !foundImport) {
-          newLines.push(line);
-          newLines.push('');
-          newLines.push(`const ${componentName}: React.FC = () => {`);
-          foundImport = true;
-        } else if (line.includes('const [') && !foundImport) {
-          newLines.push(`const ${componentName}: React.FC = () => {`);
-          newLines.push(line);
-          foundImport = true;
-        } else {
-          newLines.push(line);
-        }
-      }
-      
-      content = newLines.join('\n');
-      fixed = true;
+    // Fix common patterns
+    // Remove semicolons after opening braces
+    content = content.replace(/\{\s*;/g, '{');
+    
+    // Remove semicolons before closing braces
+    content = content.replace(/;\s*\}/g, '}');
+    
+    // Fix function declarations
+    content = content.replace(/const\s+([a-zA-Z_][a-zA-Z0-9_]*):\s*React\.FC\s*=\s*\(\)\s*=>\s*{;/g, 'const $1: React.FC = () => {');
+    
+    // Fix object properties with semicolons
+    content = content.replace(/icon:\s*([a-zA-Z_][a-zA-Z0-9_]*),;/g, 'icon: $1,');
+    content = content.replace(/title:\s*'([^']*)',;/g, "title: '$1',");
+    content = content.replace(/description:\s*'([^']*)',;/g, "description: '$1',");
+    
+    // Fix array elements
+    content = content.replace(/benefits:\s*\[/g, 'benefits: [');
+    content = content.replace(/'([^']*)',;/g, "'$1',");
+    
+    // Fix JSX attributes
+    content = content.replace(/className="([^"]*)",;/g, 'className="$1"');
+    content = content.replace(/size="([^"]*)",;/g, 'size="$1"');
+    content = content.replace(/text="([^"]*)",;/g, 'text="$1"');
+    
+    // Fix return statements
+    content = content.replace(/return\s*\(;/g, 'return (');
+    
+    // Fix JSX elements
+    content = content.replace(/<([a-zA-Z][a-zA-Z0-9]*)[^>]*>,;/g, '<$1>');
+    content = content.replace(/<\/([a-zA-Z][a-zA-Z0-9]*)>,;/g, '</$1>');
+    
+    // Remove standalone semicolons on their own lines
+    content = content.replace(/^\s*;\s*$/gm, '');
+    
+    // Fix malformed regex patterns that got corrupted
+    content = content.replace(/title:\s*'\[[^']*\]',/g, "title: 'Service Title',");
+    content = content.replace(/description:\s*'\[[^']*\]',/g, "description: 'Service description with detailed information about the offering.',");
+    
+    // Fix specific patterns for different service types
+    if (filePath.includes('5g-implementation')) {
+      content = content.replace(/title:\s*'\[[^']*\]',/g, "title: '5G Network Design',");
+      content = content.replace(/description:\s*'\[[^']*\]',/g, "description: 'Complete 5G network design and implementation with optimal coverage and performance.',");
+    } else if (filePath.includes('ai-')) {
+      content = content.replace(/title:\s*'\[[^']*\]',/g, "title: 'AI Service',");
+      content = content.replace(/description:\s*'\[[^']*\]',/g, "description: 'Advanced AI-powered solution for modern business needs.',");
+    } else if (filePath.includes('blockchain')) {
+      content = content.replace(/title:\s*'\[[^']*\]',/g, "title: 'Blockchain Solution',");
+      content = content.replace(/description:\s*'\[[^']*\]',/g, "description: 'Secure and scalable blockchain implementation for your business.',");
+    } else if (filePath.includes('cloud')) {
+      content = content.replace(/title:\s*'\[[^']*\]',/g, "title: 'Cloud Service',");
+      content = content.replace(/description:\s*'\[[^']*\]',/g, "description: 'Comprehensive cloud infrastructure and management solutions.',");
     }
     
-    // Fix missing export default
-    if (content.includes('import React') && !content.includes('export default')) {
-      const fileName = path.basename(filePath, path.extname(filePath));
-      const componentName = fileName.charAt(0).toUpperCase() + fileName.slice(1).replace(/-([a-z])/g, (g) => g[1].toUpperCase());
-      
-      content += '\n\nexport default ' + componentName + ';';
-      fixed = true;
+    // Fix any remaining malformed patterns
+    content = content.replace(/\[[^']*\]/g, 'Service Feature');
+    
+    // Fix specific syntax patterns
+    content = content.replace(/entriesService Feature = entry\.startTime\}/g, 'entries[0];\n        if (entry) {\n          this._metrics[metric] = entry.startTime;\n        }');
+    content = content.replace(/this\.observers\.push\(observer\)\} catch \(error\) \{/g, 'this.observers.push(observer);\n    } catch (error) {');
+    content = content.replace(/console\.warn\(`Failed to observe \$\{name\}:`, error\)\}/g, 'console.warn(`Failed to observe ${name}:`, error);\n    }');
+    
+    // Fix JSX syntax issues
+    content = content.replace(/<Helmet>;/g, '<Helmet>');
+    content = content.replace(/<\/Helmet>;/g, '</Helmet>');
+    content = content.replace(/<title>([^<]*)<\/title>;/g, '<title>$1</title>');
+    content = content.replace(/<meta[^>]*\/>;/g, (match) => match.replace(';', ''));
+    
+    // Fix div syntax
+    content = content.replace(/<div[^>]*><\/div>;/g, (match) => match.replace(';', ''));
+    content = content.replace(/<section[^>]*><\/section>;/g, (match) => match.replace(';', ''));
+    
+    // Fix return statement syntax
+    content = content.replace(/return\s*\(\s*<>\s*<Helmet>;/g, 'return (\n    <>\n      <Helmet>');
+    content = content.replace(/<\/Helmet>\s*<div[^>]*><\/div>;/g, '</Helmet>\n      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">');
+    
+    // Clean up any remaining double semicolons
+    content = content.replace(/;;+/g, ';');
+    
+    // Clean up any remaining semicolons before closing braces
+    content = content.replace(/;\s*\}/g, '}');
+    
+    // Clean up any remaining semicolons after opening braces
+    content = content.replace(/\{\s*;/g, '{');
+    
+    // Fix specific patterns for performanceMonitor
+    if (filePath.includes('performanceMonitor')) {
+      content = content.replace(/private observers: PerformanceObserverService Feature;/g, 'private observers: PerformanceObserverService;');
+      content = content.replace(/customMetrics: Record<string, number>\}/g, 'customMetrics: Record<string, number>');
     }
     
-    // Fix missing closing brace before export
-    if (content.includes('};\n\nexport default') && !content.includes('const ')) {
-      const lines = content.split('\n');
-      let newLines = [];
-      let inComponent = false;
-      
-      for (let i = 0; i < lines.length; i++) {
-        const line = lines[i];
-        
-        if (line.includes('import React from \'react\';')) {
-          newLines.push(line);
-          newLines.push('');
-          newLines.push('const ComponentName: React.FC = () => {');
-          inComponent = true;
-        } else if (line.includes('export default')) {
-          if (inComponent) {
-            newLines.push('};');
-            newLines.push('');
-          }
-          newLines.push(line);
-        } else {
-          newLines.push(line);
-        }
-      }
-      
-      content = newLines.join('\n');
-      fixed = true;
-    }
-    
-    // Fix malformed gtag calls
-    if (content.includes('event_category:') && !content.includes('window.gtag(')) {
-      content = content.replace(
-        /if \(typeof window !== 'undefined' && 'gtag' in window\) \{\s*event_category:/g,
-        "if (typeof window !== 'undefined' && 'gtag' in window) {\n      window.gtag('event', 'phone_click', {\n        event_category:"
-      );
-      fixed = true;
-    }
-    
-    // Fix missing closing parenthesis in gtag calls
-    if (content.includes('event_category:') && !content.includes('});')) {
-      content = content.replace(
-        /(\s+event_label: '[^']+')\s*\);/g,
-        '$1\n      });'
-      );
-      fixed = true;
-    }
-    
-    // Fix duplicate component definitions
-    const componentMatches = content.match(/const \w+: React\.FC = \(\) => \{/g);
-    if (componentMatches && componentMatches.length > 1) {
-      const lines = content.split('\n');
-      let newLines = [];
-      let foundFirstComponent = false;
-      
-      for (let i = 0; i < lines.length; i++) {
-        const line = lines[i];
-        
-        if (line.includes('const ') && line.includes(': React.FC = () => {')) {
-          if (foundFirstComponent) {
-            continue; // Skip duplicate component definitions
-          } else {
-            foundFirstComponent = true;
-            newLines.push(line);
-          }
-        } else {
-          newLines.push(line);
-        }
-      }
-      
-      content = newLines.join('\n');
-      fixed = true;
-    }
-    
-    if (fixed && content !== originalContent) {
+    // Only write if content changed
+    if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`✓ Fixed syntax issues in: ${filePath}`);
       return true;
     }
     
     return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
 
 // Main execution
-console.log('🔍 Searching for files with syntax issues...');
+console.log('Starting comprehensive syntax fixes...');
 
-const srcDir = path.join(__dirname, 'src');
-const files = findFiles(srcDir);
+const files = findFiles('/workspace');
+console.log(`Found ${files.length} files to process`);
 
-console.log(`Found ${files.length} files to check`);
-
+let processedCount = 0;
 let fixedCount = 0;
 
-files.forEach(file => {
-  try {
-    if (fixAllSyntaxIssues(file)) {
-      fixedCount++;
-    }
-  } catch (error) {
-    console.error(`Error processing ${file}:`, error.message);
+for (const file of files) {
+  processedCount++;
+  if (processedCount % 100 === 0) {
+    console.log(`Processed ${processedCount}/${files.length} files...`);
   }
-});
-
-console.log(`\n📊 Summary:`);
-console.log(`Files fixed: ${fixedCount}`);
-
-if (fixedCount > 0) {
-  console.log('\n✅ All syntax issues have been resolved!');
-} else {
-  console.log('\n✅ No syntax issues found.');
+  
+  if (fixFile(file)) {
+    fixedCount++;
+  }
 }
+
+console.log(`Completed! Processed ${processedCount} files, fixed ${fixedCount} files.`);

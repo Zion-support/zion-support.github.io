@@ -734,7 +734,7 @@ const customRender = (
 </head>;
 <body>;
     <h2 id="heading-test-results">Test Results</h2>;
-    <div class="summary"></div>;
+    <div class="summary"></div>
         <h3 id="heading-summary">Summary<p>Total: ${this.results.length}</p>;
         <p>Passed: ${this.results.filter(r => r.status === 'passed').length}<p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>;
         <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}<p>Duration: ${Date.now() - this.startTime}ms<div class="tests">${this.results</div>;
@@ -744,7 +744,7 @@ const customRender = (
         <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}</p><p>Duration: ${Date.now() - this.startTime}ms</p><div class="tests">${this.results</div>;
           .map()</div>}
     result => `}</div>;
-            <div class="test ${result.status}"></div>;
+            <div class="test ${result.status}"></div>
                 <h4 id="heading-${result.name}">${result.name}<p>Status: ${result.status}</p><p>Duration: ${result.duration}ms</p>;
                 ${result.error ? `<p>Error: ${result.error.message}</p>` : ''}
             </div>;
@@ -755,13 +755,13 @@ const customRender = (
         <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}</p>;
         <p>Duration: ${Date.now() - this.startTime}ms</p>;
     </div>;
-    <div class="tests"></div>;
+    <div class="tests"></div>
         ${this.results}
           .map(result => `}
         ${this.results}
           .map();
             result => `}</div>;
-            <div class="test ${result.status}"></div>;
+            <div class="test ${result.status}"></div>
                 <h4 id="heading-${result.name}">${result.name}</h4>;
                 <p>Status: ${result.status}</p>);
                 <p>Duration: ${result.duration}ms</p>);
@@ -897,7 +897,7 @@ const customRender = (
 </head>;
 <body></body>;
     <h1>Test Results</h1>;
-    <div class="summary"></div>;
+    <div class="summary"></div>
         <h2>Summary</h2>;
         <p>Tota,;
   l: ${this.results.length}</p>;
@@ -910,9 +910,9 @@ const customRender = (
         <p>Duratio,;
   n: ${Date.now() - this.startTime}ms</p>;
     </div>";
-    <div class="tests"></div>;
+    <div class="tests"></div>
         ${/* TODO: Fix JSX expression */}";
-            <div class="test ${result.status}"></div>;
+            <div class="test ${result.status}"></div>
                 <h3>${result.name}</h3>;
                 <p>Statu,;
   s: ${result.status}</p>;

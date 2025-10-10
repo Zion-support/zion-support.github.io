@@ -420,11 +420,11 @@ const ITConsultingPage: React.FC = () => {
     return matchesCategory && matchesSearch}
   });
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>;
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       {/* Hero Section */}</div>;
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 cyber-grid"></section>;
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20" aria-hidden="true"></div>;
-        <div className="relative z-10 max-w-7xl mx-auto text-center"></div>;
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 cyber-grid"></section>
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20" aria-hidden="true"></div>
+        <div className="relative z-10 max-w-7xl mx-auto text-center"></div>
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight cyber-text neon-pulse"></h1>;
             Professional <span className="holographic-text">IT Services</span>;
           </h1>;
@@ -432,7 +432,7 @@ const ITConsultingPage: React.FC = () => {
             Comprehensive IT solutions designed to optimize your technology infrastructure,;
             enhance security, and drive business growth. Expert consulting and implementation.;
           </p>;
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12"></div>;
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12"></div>
             <a;
               href="tel:+13024640950";
               className="cyber-button px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-cyan-400/50";
@@ -451,12 +451,12 @@ const ITConsultingPage: React.FC = () => {
         </div>;
       </section>;
       {/* Search and Filter Section */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8"></section>;
-        <div className="max-w-7xl mx-auto"></div>;
-          <div className="flex flex-col lg:flex-row gap-6 mb-8"></div>;
+      <section className="py-12 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="flex flex-col lg:flex-row gap-6 mb-8"></div>
             {/* Search */}</div>;
-            <div className="flex-1"></div>;
-              <div className="relative"></div>;
+            <div className="flex-1"></div>
+              <div className="relative"></div>
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />;
                 <input;
                   type="text";
@@ -468,7 +468,7 @@ const ITConsultingPage: React.FC = () => {
               </div>;
             </div>;
             {/* Category Filter */}
-            <div className="lg:w-64"></div>;
+            <div className="lg:w-64"></div>
               <select;
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
@@ -483,7 +483,7 @@ const ITConsultingPage: React.FC = () => {
             </div>;
           </div>;
           {/* Category Pills */}
-          <div className="flex flex-wrap gap-2 mb-8"></div>;
+          <div className="flex flex-wrap gap-2 mb-8"></div>
             {categories.map((category) => (</div>;
               <button}
                 key={category.id}
@@ -501,24 +501,24 @@ const ITConsultingPage: React.FC = () => {
         </div>;
       </section>;
       {/* Services Grid */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8"></section>;
-        <div className="max-w-7xl mx-auto"></div>;
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>;
+      <section className="py-12 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
             {filteredServices.map((service) => (</div>}
-              <div key={service.id} className="quantum-card p-6 group hover:scale-105 transition-all duration-300 energy-pulse"></div>;
-                <div className="flex items-start justify-between mb-4"></div>;
-                  <div className="text-cyan-400 group-hover:text-cyan-300 transition-colors"></div>;
+              <div key={service.id} className="quantum-card p-6 group hover:scale-105 transition-all duration-300 energy-pulse"></div>
+                <div className="flex items-start justify-between mb-4"></div>
+                  <div className="text-cyan-400 group-hover:text-cyan-300 transition-colors"></div>
                     <service.icon className="w-12 h-12" />;
                   </div>;
-                  <div className="text-right"></div>;
+                  <div className="text-right"></div>
                     <div className="text-2xl font-bold text-white">{service.price}</div>;
                     <div className="text-sm text-gray-400">starting price</div>;
                   </div>;
                 </div>;
                 <h3 className="text-xl font-bold text-white mb-3 neon-glow">{service.name}</h3>;
                 <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>;
-                <div className="space-y-3 mb-6"></div>;
-                  <div></div>;
+                <div className="space-y-3 mb-6"></div>
+                  <div></div>
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>;
                     <ul className="space-y-1">;
                       {service.features.slice(0, 4).map((feature, idx) => (}
@@ -529,7 +529,7 @@ const ITConsultingPage: React.FC = () => {
                       ))}
                     </ul>;
                   </div>;
-                  <div></div>;
+                  <div></div>
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Benefits:</h4>;
                     <ul className="space-y-1">;
                       {service.benefits.slice(0, 2).map((benefit, idx) => (}
@@ -541,16 +541,16 @@ const ITConsultingPage: React.FC = () => {
                     </ul>;
                   </div>;
                 </div>;
-                <div className="space-y-2 mb-6 text-sm"></div>;
-                  <div className="flex justify-between"></div>;
+                <div className="space-y-2 mb-6 text-sm"></div>
+                  <div className="flex justify-between"></div>
                     <span className="text-gray-400">Setup Time:</span>;
                     <span className="text-white">{service.setupTime}</span>;
                   </div>;
-                  <div className="flex justify-between"></div>;
+                  <div className="flex justify-between"></div>
                     <span className="text-gray-400">Free Consultation:</span>;
                     <span className="text-green-400">{service.freeConsultation}</span>;
                   </div>;
-                  <div className="flex justify-between"></div>;
+                  <div className="flex justify-between"></div>
                     <span className="text-gray-400">Target:</span>;
                     <span className="text-white">{service.targetAudience}</span>;
                   </div>;
@@ -560,7 +560,7 @@ const ITConsultingPage: React.FC = () => {
                     <p className="text-sm text-green-300 italic">"{service.caseStudy}"</p>;
                   </div>;
                 )}
-                <div className="space-y-3"></div>;
+                <div className="space-y-3"></div>
                   <a;
                     href={service.link}
                     target="_blank";
@@ -583,8 +583,8 @@ const ITConsultingPage: React.FC = () => {
         </div>;
       </section>;
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 cyber-scan-effect"></section>;
-        <div className="max-w-4xl mx-auto text-center"></div>;
+      <section className="py-20 px-4 sm:px-6 lg:px-8 cyber-scan-effect"></section>
+        <div className="max-w-4xl mx-auto text-center"></div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text neon-pulse">;
             Ready to Optimize Your IT Infrastructure?;
           </h2>;
@@ -592,7 +592,7 @@ const ITConsultingPage: React.FC = () => {
             Our certified IT professionals deliver reliable, secure, and scalable solutions.;
             All services include free consultations and ongoing support.;
           </p>;
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>;
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <a;
               href="tel:+13024640950";
               className="cyber-button px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 focus:outline-none focus:ring-4 focus:ring-cyan-400/50";

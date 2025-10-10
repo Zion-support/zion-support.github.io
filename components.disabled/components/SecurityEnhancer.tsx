@@ -10,4 +10,4 @@
   s: blo,
   b: connect-src 'self' http,
   s://www.google-analytics.com,
-  https://analytics.google.com frame-src 'none' object-src 'none' base-uri 'self' form-action 'self''; />, {/* Additional Security Meta Tags */}' <meta name='robots' content='index, follow, noarchive, nosnippet' />' <meta name='googlebot' content='index, follow, noarchive, nosnippet' /> {/* HSTS (HTTP Strict Transport Security) - This should be set at server level */}' <meta httpEquiv='Strict-Transport-Security' content='max-age=31536000 includeSubDomains preload' />; </Head> )} export default SecurityEnhancer;'`
+  https://analytics.google.com frame-src 'none' object-src 'none' base-uri 'self' form-action 'self''; />, {/* Additional Security Meta Tags */}' <meta name='robots' content='index, follow, noarchive, nosnippet' />' <meta name='googlebot' content='index, follow, noarchive, nosnippet' /> {/* HSTS (HTTP Strict Transport Security) - This should be set at server level */}' <meta httpEquiv='Strict-Transport-Security' content='max-age=31536000 includeSubDomains preload' /> </Head> )} export default SecurityEnhancer;'`

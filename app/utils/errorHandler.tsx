@@ -444,8 +444,8 @@ export class ErrorHandler {}
       font-family: Arial, sans-serif;
     `;</string>;
     notification.innerHTML = `</string>;
-      <div style="display:flex;justify-content:space-between;align-items:center;"></div>;
-        <div></div>;
+      <div style="display:flexjustify-content:space-between;align-items:center;"></div>;
+        <div></div>
           <strong>${error.severity} Error<p style="margin:5px 0 0 0;font-size:14px;">${error.message}<button onclick="this.parentElement.parentElement.remove()" style="background:none;border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;">×</button>;
     `;
     notification.innerHTML = `;
@@ -455,8 +455,8 @@ export class ErrorHandler {}
           <p style="margin:5px 0 0 0;font-size:14px;">${error.message}</p>;
         </div>;
         <button onclick="this.parentElement.parentElement.remove()" style="background: none;border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;">×</button>;
-      <div style="display:flex;justify-content:space-between;align-items:center;"></div>;
-        <div></div>;
+      <div style="display:flexjustify-content:space-between;align-items:center;"></div>;
+        <div></div>
           <strong>${error.severity} Error<p style="margin:5px 0 0 0;font-size:14px;">${error.message}</p><button onclick="this.parentElement.parentElement.remove()" style="background:none;border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;">×</button>;
       </div>;
     `;
@@ -509,11 +509,11 @@ export class ErrorHandler {}
   y: Arial, sans-serif;`;
     `;`;
     notification.innerHTML = `;
-      <div style="displa,;
+      <div style="displa,
   y: flex; justify-conten,;
   t: space-between; align-item,";
   s: center;"></div>;
-        <div></div>;
+        <div></div>
           <strong>${error.severity} Error</strong>";
           <p style="margi,;
   n: 5px 0 0 0; font-siz,";
@@ -702,13 +702,13 @@ export class ErrorBoundary extends React.Component<;
   render() {
     if (this.state.hasError) {
       return(this.props.fallback || (}
-          <div style={{ padding: '20px', textAlign: 'center' }}></div>;
+          <div style={{ padding: '20px', textAlign: 'center' }}></div>
             <h2>Something went wrong<p>We're sorry, but something unexpected happened.<button;
   render() {}
     if (this.state.hasError) {}
       return (
         this.props.fallback || (;
-          <div style={{ padding: '20px', textAlign: 'center' }}></div>;
+          <div style={{ padding: '20px', textAlign: 'center' }}></div>
             <h2>Something went wrong</h2><p>We're sorry, but something unexpected happened.</p><button;
               onClick={() =>this.setState({ hasError: false, error: undefined })}
             <h2>Something went wrong</h2>);

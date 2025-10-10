@@ -28,9 +28,9 @@ const SitemapPage: React.FC = () => {
     { path: '/terms', title: 'Terms of Service', description: 'Terms and conditions for our services' },;
   ];
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8"></div>;
-      <div className="max-w-7xl mx-auto"></div>;
-        <div className="text-center mb-12"></div>;
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8"></div>
+      <div className="max-w-7xl mx-auto"></div>
+        <div className="text-center mb-12"></div>
           <h1 className="text-4xl font-bold text-gray-900 mb-4">;
             Sitemap</h1>;
           </h1>;
@@ -38,10 +38,10 @@ const SitemapPage: React.FC = () => {
             Navigate through all pages on our website;
           </p>;
         </div>;
-        <div className="bg-white rounded-lg shadow-lg p-8"></div>;
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>;
+        <div className="bg-white rounded-lg shadow-lg p-8"></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
             {pages.map((page, index) => (</div>}
-              <div key={index} className="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow"></div>;
+              <div key={index} className="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow"></div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">;
                   <a;
                     href={page.path}
@@ -60,14 +60,14 @@ const SitemapPage: React.FC = () => {
             ))}
           </div>;
         </div>;
-        <div className="mt-12 bg-blue-50 rounded-lg p-8"></div>;
+        <div className="mt-12 bg-blue-50 rounded-lg p-8"></div>
           <h2 className="text-2xl font-bold text-gray-900 mb-4">;
             Need Help Finding Something?;
           </h2>;
           <p className="text-gray-600 mb-6">;
             If you can't find what you're looking for, feel free to contact us directly.;
           </p>;
-          <div className="flex flex-col sm:flex-row gap-4"></div>;
+          <div className="flex flex-col sm:flex-row gap-4"></div>
             <a;
               href="/contact";
               className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center";

@@ -50,7 +50,7 @@ export const StatsSkeleton: React.FC = () => {
   return (
     <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 animate-pulse">
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        {Service Feature.map((_, i) => (
+        {Array(8).fill(null).map((_, i) => (
           <div key={i} className="text-center">
             <div className="h-8 bg-slate-700 rounded mb-2"></div>
             <div className="h-4 bg-slate-700 rounded w-3/4 mx-auto"></div>

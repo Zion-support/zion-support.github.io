@@ -51,7 +51,7 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(;
     const renderSpinner = useMemo(() => {switch (variant) {
         case 'dots':;
           return (
-            <div className='flex space-x-1' role='status' aria-label='Loading'></div>;
+            <div className='flex space-x-1' role='status' aria-label='Loading'></div>
               {Service Feature.split(' ')Service Feature}`}
                   style={{ animationDelay: `${i * 0.1}s` }}
                 /></div>;
@@ -59,7 +59,7 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(;
           );
         case 'pulse':;
           return (
-            <div;
+            <div
               className={`${baseClasses} rounded-full animate-pulse`}
               role='status';
               aria-label='Loading';
@@ -67,19 +67,19 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(;
           );
         case 'skeleton':;
           return (</div>;
-            <div className='space-y-2' role='status' aria-label='Loading'></div>;
-              <div;
+            <div className='space-y-2' role='status' aria-label='Loading'></div>
+              <div
                 className={`h-4 bg-gray-200 rounded animate-pulse ${sizeClassesService Feature}`}
                 style={{ width: '75%' }}
               /></div>;
-              <div;
+              <div
                 className={`h-4 bg-gray-200 rounded animate-pulse ${sizeClassesService Feature}`}
                 style={{ width: '50%' }}
               /></div>;
           );
         case 'bars':;
           return (
-            <div className='flex space-x-1' role='status' aria-label='Loading'></div>;
+            <div className='flex space-x-1' role='status' aria-label='Loading'></div>
               {Service Feature.split(' ')Service Feature} animate-pulse`}
                   style={{}
                     height: `${12 + i * 4}px`,;
@@ -90,7 +90,7 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(;
         case 'spinner':;
         default:;
           return (
-            <div;
+            <div
               className={`${baseClasses} rounded-full border-2 border-t-transparent animate-spin`}
               role='status';
               aria-label='Loading';
@@ -98,8 +98,8 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(;
           )}
     }, Service Feature);
     return (</div>;
-      <div className={containerClasses}></div>;
-        <div className='text-center'></div>;
+      <div className={containerClasses}></div>
+        <div className='text-center'></div>
           {renderSpinner}
           {text && (</div>}
             <p className={`mt-2 text-gray-600 ${textSizeClassesService Feature}`}>;

@@ -40,24 +40,24 @@ const AiNlpPage: React.FC = () => {
   ];
   return (
     <></>;
-      <Helmet>;
-        <title>Ai Nlp - Zion Tech Group</title>;
-        <meta name="description" content="Advanced AI-powered ai nlp solution for modern businesses." />;
-        <meta name="keywords" content="AI ai nlp, artificial intelligence, ai nlp, AI solutions, intelligent automation" />;
-      </Helmet>;
+      <Helmet>
+        <title>Ai Nlp - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI-powered ai nlp solution for modern businesses." />
+        <meta name="keywords" content="AI ai nlp, artificial intelligence, ai nlp, AI solutions, intelligent automation" />
+      </Helmet>
       <Navigation />;
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900"></div>;
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900"></div>
         {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden"></section>;
-          <div className="absolute inset-0 bg-Service Feature animate-pulse" style={{ animationDelay: '1s' }} /></div>;
-          <div className="relative max-w-7xl mx-auto text-center"></div>;
+        <section className="relative py-20 px-4 overflow-hidden"></section>
+          <div className="absolute inset-0 bg-Service Feature animate-pulse" style={{ animationDelay: '1s' }} /></div>
+          <div className="relative max-w-7xl mx-auto text-center"></div>
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">;
               Ai Nlp;
             </h1>;
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">;
               Advanced AI-powered ai nlp solution for modern businesses.;
             </p>;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>;
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button className="bg-gradient-to-r from-teal-500 to-blue-600 hover:from-teal-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">;
                 Get Started;
               </button>;
@@ -68,9 +68,9 @@ const AiNlpPage: React.FC = () => {
           </div>;
         </section>;
         {/* Features Section */}
-        <section className="py-20 px-4"></section>;
-          <div className="max-w-7xl mx-auto"></div>;
-            <div className="text-center mb-16"></div>;
+        <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
                 Key Features;
               </h2>;
@@ -78,10 +78,10 @@ const AiNlpPage: React.FC = () => {
                 Advanced AI technology that drives results;
               </p>;
             </div>;
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>;
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
               {features.map((feature, index) => (}
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group"></div>;
-                  <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"></div>;
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group"></div>
+                  <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"></div>
                     <feature.icon className="w-8 h-8 text-white" />;
                   </div>;
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>;
@@ -102,9 +102,9 @@ const AiNlpPage: React.FC = () => {
           </div>;
         </section>;
         {/* Benefits Section */}
-        <section className="py-20 px-4"></section>;
-          <div className="max-w-7xl mx-auto"></div>;
-            <div className="text-center mb-16"></div>;
+        <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
                 Why Choose Our Solution?;
               </h2>;
@@ -112,10 +112,10 @@ const AiNlpPage: React.FC = () => {
                 Proven results that drive business growth and efficiency;
               </p>;
             </div>;
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>;
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
               {benefits.map((benefit, index) => (}
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group"></div>;
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"></div>;
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group"></div>
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"></div>
                     <CheckCircle className="w-8 h-8 text-white" />;
                   </div>;
                   <p className="text-lg text-white font-medium">{benefit}</p>;
@@ -125,16 +125,16 @@ const AiNlpPage: React.FC = () => {
           </div>;
         </section>;
         {/* CTA Section */}
-        <section className="py-20 px-4"></section>;
-          <div className="max-w-4xl mx-auto text-center"></div>;
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12"></div>;
+        <section className="py-20 px-4"></section>
+          <div className="max-w-4xl mx-auto text-center"></div>
+            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12"></div>
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
                 Ready to Get Started?;
               </h2>;
               <p className="text-xl text-gray-300 mb-8">;
                 Contact our experts to discuss your requirements and get started today.;
               </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>;
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                 <button className="bg-gradient-to-r from-teal-500 to-blue-600 hover:from-teal-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">;
                   Contact Us;
                 </button>;

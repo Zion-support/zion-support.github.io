@@ -27,8 +27,7 @@ class PerformanceMonitor {
     
     this.isInitialized = true;
     this.setupWebVitals();
-    this.setupCustomMetrics();
-  }
+    this.setupCustomMetrics()}
 
   private setupWebVitals(): void {
     // First Contentful Paint
@@ -49,27 +48,27 @@ class PerformanceMonitor {
         const entries = list.getEntries();
         const entry = entries[0];
         if (entry) {
-          this._metrics[metric] = entry.startTime;
-        }
+          this._metrics[metric] = entry.startTime}
       });
       observer.observe({ entryTypes: ['paint'] });
-      this.observers.push(observer);
-    } catch (error) {
-      console.warn(`Failed to observe ${name}:`, error);
-    }
+      this.observers.push(observer)} catch (error) {
+      console.warn(`Failed to observe ${name}:`, error)}
   }
 
   private observeLCP(): void {
     try {
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        const lastEntry = entriesService Feature;
+        const lastEntry = entries[entries.length - 1];
         if (lastEntry) {
-          this._metrics.lcp = lastEntry.startTime}
+          this._metrics.lcp = lastEntry.startTime;
+        }
       });
       observer.observe({ entryTypes: ['largest-contentful-paint'] });
-      this.observers.push(observer)} catch (error) {
-      console.warn('Failed to observe LCP:', error)}
+      this.observers.push(observer);
+    } catch (error) {
+      console.warn('Failed to observe LCP:', error);
+    }
   }
 
   private observeFID(): void {
@@ -77,10 +76,14 @@ class PerformanceMonitor {
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         entries.forEach((entry) => {
-          this._metrics.fid = entry.processingStart - entry.startTime})});
+          this._metrics.fid = entry.processingStart - entry.startTime;
+        });
+      });
       observer.observe({ entryTypes: ['first-input'] });
-      this.observers.push(observer)} catch (error) {
-      console.warn('Failed to observe FID:', error)}
+      this.observers.push(observer);
+    } catch (error) {
+      console.warn('Failed to observe FID:', error);
+    }
   }
 
   private observeCLS(): void {
@@ -90,29 +93,36 @@ class PerformanceMonitor {
         const entries = list.getEntries();
         entries.forEach((entry: any) => {
           if (!entry.hadRecentInput) {
-            clsValue += entry.value}
+            clsValue += entry.value;
+          }
         });
-        this._metrics.cls = clsValue});
+        this._metrics.cls = clsValue;
+      });
       observer.observe({ entryTypes: ['layout-shift'] });
-      this.observers.push(observer)} catch (error) {
-      console.warn('Failed to observe CLS:', error)}
+      this.observers.push(observer);
+    } catch (error) {
+      console.warn('Failed to observe CLS:', error);
+    }
   }
 
   private setupCustomMetrics(): void {
     // Time to First Byte
     if (performance.timing) {
-      this._metrics.ttfb = performance.timing.responseStart - performance.timing.navigationStart}
+      this._metrics.ttfb = performance.timing.responseStart - performance.timing.navigationStart;
+    }
 
     // Navigation timing
     if (performance.navigation) {
-      this.addCustomMetric('navigation_type', performance.navigation.type)}
+      this.addCustomMetric('navigation_type', performance.navigation.type);
+    }
   }
 
   addCustomMetric(name: string, value: number): void {
-    this._metrics.customMetricsService Feature = value}
+    this._metrics.customMetrics[name] = value;
+  }
 
   getMetrics(): PerformanceMetrics {
-    return { ...this._metrics }
+    return { ...this._metrics };
   }
 
   reportMetrics(): void {
@@ -129,13 +139,15 @@ class PerformanceMonitor {
         custom_parameter_1: this._metrics.fcp,
         custom_parameter_2: this._metrics.cls,
         custom_parameter_3: this._metrics.fid
-      })}
+      });
+    }
   }
 
   cleanup(): void {
     this.observers.forEach(observer => observer.disconnect());
-    this.observers = Service Feature;
-    this.isInitialized = false}
+    this.observers = [];
+    this.isInitialized = false;
+  }
 }
 
 // Global instance
