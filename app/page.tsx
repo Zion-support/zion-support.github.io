@@ -1,22 +1,51 @@
 'use client';
 
-import React, { memo, useMemo } from 'react';
-import { ArrowRight, Star, CheckCircle, Phone, Mail, MapPin, Brain, Zap, Target, BarChart, Shield, Users, Globe, Clock, Award, Rocket, TrendingUp, Building, Activity, Settings, Database, Heart, Home, Video, Palette, Code, FileText, Calculator, Scale, Package, ShoppingCart, Music, Eye, Factory, GraduationCap } from 'lucide-react';
-import Header from './components/Header';
+import React, { Suspense } from 'react';
+import { ArrowRight, Star, CheckCircle, Phone, Mail, MapPin } from 'lucide-react';
 import Footer from './components/Footer';
-import type { MicroSAASService, AIService, ITService, Testimonial, Stat } from '../../src/types';
+import SEOHead from './components/SEOHead';
+import ErrorBoundary from './components/ErrorBoundary';
+import Loading from './components/Loading';
+import PerformanceMonitor from './components/PerformanceMonitor';
+import ServiceCardSkeleton from './components/ServiceCardSkeleton';
+import LazyImage from './components/LazyImage';
+import AnimatedCounter from './components/AnimatedCounter';
+import Navigation from './components/Navigation';
+import { 
+  Brain, 
+  Zap, 
+  Target, 
+  BarChart, 
+  Shield, 
+  Users, 
+  Globe, 
+  Lock, 
+  Settings, 
+  FileText,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Clock,
+  Award,
+  Rocket,
+  Code,
+  Cloud,
+  Smartphone,
+  TrendingUp,
+  Award as Trophy,
+  Users as People,
+  CheckCircle2
+} from 'lucide-react';
 
 // Service data
-const microSAASServices: MicroSAASService[] = [
+const microSAASServices = [
   {
     name: "AI Project Manager Pro",
     description: "Intelligent project management with predictive analytics and automated resource allocation",
     price: "$99/mo",
     features: ["Smart Scheduling", "Risk Prediction", "Team Optimization", "Progress Tracking"],
     category: "Productivity",
-    popular: true,
-    icon: BarChart,
-    link: "https://ziontechgroup.com/ai-project-manager"
+    popular: true
   },
   {
     name: "AI Analytics Dashboard",
@@ -24,9 +53,7 @@ const microSAASServices: MicroSAASService[] = [
     price: "$149/mo",
     features: ["Real-time Analytics", "Predictive Insights", "Custom Reports", "Data Visualization"],
     category: "Analytics",
-    popular: true,
-    icon: Target,
-    link: "https://ziontechgroup.com/ai-analytics-dashboard"
+    popular: true
   },
   {
     name: "AI Customer Support Bot",
@@ -504,76 +531,25 @@ const itServices: ITService[] = [
   }
 ];
 
-// Testimonials data
-const testimonials: Testimonial[] = [
-  {
-    content: "Zion Tech Group transformed our business with their AI solutions. We've seen a 300% increase in efficiency and 70% cost reduction.",
-    name: "Sarah Johnson",
-    role: "CEO",
-    company: "TechCorp Inc.",
-    avatar: "SJ"
-  },
-  {
-    content: "The AI-powered analytics dashboard has revolutionized our decision-making process. The insights are incredible.",
-    name: "Michael Chen",
-    role: "CTO",
-    company: "DataFlow Systems",
-    avatar: "MC"
-  },
-  {
-    content: "Outstanding IT infrastructure support. They've kept our systems running 99.9% of the time with zero downtime.",
-    name: "Emily Rodriguez",
-    role: "IT Director",
-    company: "Global Enterprises",
-    avatar: "ER"
-  }
-];
+// Loading skeleton component
+const ServiceCardSkeleton = () => (
+  <div className="cyber-card p-6 animate-pulse">
+    <div className="h-8 bg-gray-700 rounded mb-4"></div>
+    <div className="h-4 bg-gray-700 rounded mb-2"></div>
+    <div className="h-4 bg-gray-700 rounded mb-4"></div>
+    <div className="h-6 bg-gray-700 rounded"></div>
+  </div>
+);
 
-// Stats data
-const stats: Stat[] = [
-  {
-    number: "500+",
-    label: "Projects Completed",
-    icon: Target
-  },
-  {
-    number: "99.9%",
-    label: "Uptime Guarantee",
-    icon: Shield
-  },
-  {
-    number: "24/7",
-    label: "Support Available",
-    icon: Clock
-  },
-  {
-    number: "50+",
-    label: "Expert Team Members",
-    icon: Users
-  }
-];
-
-const HomePage: React.FC = memo(() => {
-  // Memoize expensive calculations
-  const popularServices = useMemo(() => 
-    microSAASServices.filter(service => service.popular), 
-    []
-  );
-
-  const enterpriseServices = useMemo(() => 
-    aiServices.filter(service => service.enterprise), 
-    []
-  );
+const HomePage: React.FC = () => {
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <Header />
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Navigation />
+      
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Background Effects */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(0,255,255,0.1)_0%,transparent_50%)] animate-pulse" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(139,92,246,0.1)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.03)_1px,transparent_1px)] bg-[length:50px_50px]" />
+      <section className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -752,9 +728,9 @@ const HomePage: React.FC = memo(() => {
                   
                   <div className="text-center">
                     <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
-                    <div className="text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors group-hover:underline">
+                    <button className="text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors">
                       Learn More →
-                    </div>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -966,13 +942,17 @@ const HomePage: React.FC = memo(() => {
 
             </div>
           </div>
+          
+          <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
+            Get Free Consultation
+          </button>
         </div>
       </section>
 
-<Footer />
+      <Footer />
     </div>
   );
-});
+};
 
 HomePage.displayName = 'HomePage';
 
