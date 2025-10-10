@@ -17,7 +17,8 @@ import {
   Clock,
   Award,
   Stethoscope,
-  Truck
+  Truck,
+  Rocket
 } from 'lucide-react';
 
 const AIServicesPage: React.FC = () => {
@@ -309,10 +310,150 @@ const AIServicesPage: React.FC = () => {
         'Real-time tracking',
         'Predictive analytics'
       ]
+    },
+    {
+      id: 11,
+      name: 'AI Quantum Financial Oracle',
+      description: 'Revolutionary quantum-powered financial modeling and risk assessment for high-frequency trading and portfolio optimization',
+      icon: Brain,
+      features: [
+        'Quantum Risk Modeling',
+        'High-Frequency Trading',
+        'Portfolio Optimization',
+        'Market Prediction',
+        'Risk Assessment',
+        'Algorithmic Trading',
+        'Real-time Analysis',
+        'Quantum Computing Integration'
+      ],
+      category: 'Quantum Finance',
+      popular: true,
+      rating: 4.9,
+      users: '150+',
+      color: 'from-violet-500 to-purple-600',
+      pricing: 'Starting at $2,999/mo',
+      capabilities: [
+        '300% faster calculations',
+        '99.9% prediction accuracy',
+        'Quantum advantage',
+        'Real-time risk modeling'
+      ]
+    },
+    {
+      id: 12,
+      name: 'AI Climate Solutions Pro',
+      description: 'Advanced climate modeling and environmental impact analysis with carbon footprint optimization and sustainability planning',
+      icon: Globe,
+      features: [
+        'Climate Modeling',
+        'Carbon Footprint Analysis',
+        'Sustainability Planning',
+        'Environmental Impact Assessment',
+        'Renewable Energy Optimization',
+        'Emission Tracking',
+        'Green Technology Integration',
+        'Compliance Monitoring'
+      ],
+      category: 'Climate Tech',
+      popular: true,
+      rating: 4.8,
+      users: '400+',
+      color: 'from-green-500 to-emerald-600',
+      pricing: 'Starting at $1,299/mo',
+      capabilities: [
+        '50% carbon footprint reduction',
+        'Real-time environmental monitoring',
+        'Sustainability optimization',
+        'Climate risk assessment'
+      ]
+    },
+    {
+      id: 13,
+      name: 'AI Space Technology Pro',
+      description: 'Cutting-edge AI solutions for space exploration, satellite management, and space mission optimization',
+      icon: Rocket,
+      features: [
+        'Satellite Management',
+        'Mission Planning',
+        'Space Weather Prediction',
+        'Orbital Mechanics',
+        'Space Debris Tracking',
+        'Communication Optimization',
+        'Navigation Systems',
+        'Space Mission Analytics'
+      ],
+      category: 'Space Tech',
+      popular: false,
+      rating: 4.9,
+      users: '50+',
+      color: 'from-indigo-500 to-blue-600',
+      pricing: 'Starting at $4,999/mo',
+      capabilities: [
+        '99.9% mission success rate',
+        'Real-time space monitoring',
+        'Advanced orbital calculations',
+        'Space debris mitigation'
+      ]
+    },
+    {
+      id: 14,
+      name: 'AI Drug Discovery Pro',
+      description: 'Revolutionary AI-powered drug discovery platform with molecular modeling, clinical trial optimization, and personalized medicine',
+      icon: Stethoscope,
+      features: [
+        'Molecular Modeling',
+        'Drug Design',
+        'Clinical Trial Optimization',
+        'Personalized Medicine',
+        'Side Effect Prediction',
+        'Drug Interaction Analysis',
+        'Biomarker Discovery',
+        'Regulatory Compliance'
+      ],
+      category: 'Pharmaceutical AI',
+      popular: true,
+      rating: 4.9,
+      users: '200+',
+      color: 'from-red-500 to-pink-600',
+      pricing: 'Starting at $3,999/mo',
+      capabilities: [
+        '70% faster drug discovery',
+        '90% accuracy in predictions',
+        'Personalized treatment plans',
+        'Reduced clinical trial costs'
+      ]
+    },
+    {
+      id: 15,
+      name: 'AI Neural Memory Assistant',
+      description: 'Advanced AI system that mimics human memory patterns for enhanced learning, recall, and cognitive assistance',
+      icon: Brain,
+      features: [
+        'Memory Pattern Recognition',
+        'Learning Optimization',
+        'Cognitive Assistance',
+        'Knowledge Retention',
+        'Pattern Recognition',
+        'Adaptive Learning',
+        'Memory Enhancement',
+        'Cognitive Analytics'
+      ],
+      category: 'Cognitive AI',
+      popular: false,
+      rating: 4.7,
+      users: '300+',
+      color: 'from-cyan-500 to-blue-600',
+      pricing: 'Starting at $799/mo',
+      capabilities: [
+        '40% improved learning speed',
+        '90% better retention rates',
+        'Adaptive memory patterns',
+        'Cognitive enhancement'
+      ]
     }
   ];
 
-  const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Processing', 'Customer Experience', 'Content Creation', 'Industrial AI', 'Financial AI', 'Healthcare AI', 'Supply Chain'];
+  const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Processing', 'Customer Experience', 'Content Creation', 'Industrial AI', 'Financial AI', 'Healthcare AI', 'Supply Chain', 'Quantum Finance', 'Climate Tech', 'Space Tech', 'Pharmaceutical AI', 'Cognitive AI'];
 
   if (!isLoaded) {
     return (
@@ -323,17 +464,29 @@ const AIServicesPage: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 cyber-grid">
       {/* Header */}
       <div className="relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16 relative z-10">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
               AI Services
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto neon-glow-cyan">
               Transform your business with our comprehensive suite of AI-powered solutions
             </p>
+            <div className="flex flex-wrap justify-center gap-4 mb-8">
+              <div className="holographic px-6 py-3 rounded-lg">
+                <span className="text-cyan-400 font-semibold">15+ AI Platforms</span>
+              </div>
+              <div className="holographic px-6 py-3 rounded-lg">
+                <span className="text-purple-400 font-semibold">25,000+ Companies</span>
+              </div>
+              <div className="holographic px-6 py-3 rounded-lg">
+                <span className="text-pink-400 font-semibold">99.9% Accuracy</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -344,8 +497,8 @@ const AIServicesPage: React.FC = () => {
           {services.map((service) => (
             <div
               key={service.id}
-              className={`bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105 ${
-                service.popular ? 'ring-2 ring-purple-500' : ''
+              className={`futuristic-card hover-lift p-8 ${
+                service.popular ? 'ring-2 ring-purple-500 neon-glow-purple' : ''
               }`}
             >
               <div className="flex items-start justify-between mb-4">
@@ -423,14 +576,28 @@ const AIServicesPage: React.FC = () => {
       <div className="bg-gradient-to-r from-purple-600 to-blue-600 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Ready to Transform Your Business?
+            Ready to Transform Your Business with AI?
           </h2>
           <p className="text-xl text-purple-100 mb-8">
-            Join thousands of companies already using our AI solutions
+            Join 25,000+ companies already using our cutting-edge AI solutions. Start your free trial today!
           </p>
-          <button className="bg-white text-purple-600 py-4 px-8 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300">
-            Start Your Free Trial
-          </button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+            <a
+              href="https://ziontechgroup.com/contact"
+              className="bg-white text-purple-600 py-4 px-8 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300"
+            >
+              Start Your Free Trial
+            </a>
+            <a
+              href="tel:+13024640950"
+              className="border-2 border-white text-white py-4 px-8 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-600 transition-all duration-300"
+            >
+              Call: +1 (302) 464-0950
+            </a>
+          </div>
+          <div className="text-purple-100 text-sm">
+            <p>📧 kleber@ziontechgroup.com | 📍 364 E Main St STE 1008, Middletown, DE 19709</p>
+          </div>
         </div>
       </div>
     </div>
