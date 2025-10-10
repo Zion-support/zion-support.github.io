@@ -1,6 +1,5 @@
 'use client';
 import React, { useEffect } from 'react';
-import Head from 'next/head';
 
 interface SEOOptimizerProps {
   title?: string;
@@ -111,11 +110,11 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     if (structuredData) {
       let script = document.querySelector('script[type="application/ld+json"]');
       if (script) {
-        script.textContent = JSON.stringify(structuredData);
+        (script as HTMLScriptElement).textContent = JSON.stringify(structuredData);
       } else {
         script = document.createElement('script');
-        script.type = 'application/ld+json';
-        script.textContent = JSON.stringify(structuredData);
+        (script as HTMLScriptElement).type = 'application/ld+json';
+        (script as HTMLScriptElement).textContent = JSON.stringify(structuredData);
         document.head.appendChild(script);
       }
     }

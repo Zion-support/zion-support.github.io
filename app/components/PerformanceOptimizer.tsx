@@ -105,11 +105,17 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       const observer = new PerformanceObserver((list) => {
         list.getEntries().forEach((entry) => {
           if (entry.entryType === 'largest-contentful-paint') {
-            console.log('LCP:', entry.startTime);
+            // LCP measurement - could be sent to analytics
+            if (process.env.NODE_ENV === 'development') {
+              console.log('LCP:', entry.startTime);
+            }
           }
           if (entry.entryType === 'first-input') {
             const fidEntry = entry as any;
-            console.log('FID:', fidEntry.processingStart - entry.startTime);
+            // FID measurement - could be sent to analytics
+            if (process.env.NODE_ENV === 'development') {
+              console.log('FID:', fidEntry.processingStart - entry.startTime);
+            }
           }
         });
       });

@@ -1,31 +1,43 @@
 'use client';
 import React, { lazy } from 'react';
-import { Brain, Cpu, Shield, Cloud, Zap, Code, Settings, BarChart, MessageSquare, Eye, Bot, Palette, Music, Video, Heart, Briefcase, Wrench, Navigation as NavIcon, PieChart, Users, Lock, Database, Globe, Target, Search, FileText, Smartphone, Phone, Mail, CheckCircle, TrendingUp } from 'lucide-react';
+import { Brain, Cpu, Shield, Cloud, Zap, Code, Settings, BarChart, MessageSquare, Eye, Bot, Palette, Music, Video, Heart, Briefcase, Wrench, Navigation as NavIcon, PieChart, Users, Lock, Database, Globe, Target, Search, FileText, Smartphone, Phone, Mail, CheckCircle, TrendingUp, DollarSign, Calendar, Clock3, Calculator, CreditCard, Stethoscope, GraduationCap, Factory, Truck, Home, Scale, Mic, Cube, Camera, Gamepad2, ShoppingCart, Building, Car, Plane, Ship, Train, Hammer, Paintbrush, Scissors, BookOpen, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Package, Headphones } from 'lucide-react';
 
 const Navigation = lazy(() => import('../components/Navigation'))
 const Footer = lazy(() => import('../components/Footer'))
+
 const ServicesPage: React.FC = React.memo((props) => {
   const microSAASServices = [
+    // Productivity & Management Tools
     {
-      title: 'AI Project Manager',
-      description: 'Intelligent project planning with AI-powered resource optimization and timeline prediction',
+      title: 'AI Project Manager Pro',
+      description: 'Intelligent project planning with AI-powered resource optimization, timeline prediction, and risk assessment. Trusted by 10,000+ teams worldwide.',
       icon: BarChart,
       price: '$99/month',
-      features: ['AI-powered planning', 'Smart task management', 'Predictive analytics', 'Team collaboration'],
-      benefits: ['40% productivity increase', '70% fewer delays', '85% planning accuracy'],
+      originalPrice: '$149/month',
+      features: ['AI-powered planning', 'Smart task management', 'Predictive analytics', 'Team collaboration', 'Risk assessment', 'Resource optimization', 'Gantt charts', 'Time tracking'],
+      benefits: ['40% productivity increase', '70% fewer delays', '85% planning accuracy', '30% cost reduction'],
       link: '/ai-project-manager',
       popular: true,
+<<<<<<< HEAD
       category: 'Productivity'
+=======
+      category: 'Productivity',
+      rating: 4.9,
+      users: '10,000+',
+      freeTrial: '14 days'
+>>>>>>> origin/main
     },
     {
-      title: 'AI Social Media Manager',
-      description: 'Automate your social media with AI-powered content creation and smart scheduling',
-      icon: MessageSquare,
-      price: '$79/month',
-      features: ['AI content creation', 'Smart scheduling', 'Analytics & insights', 'Audience intelligence'],
-      benefits: ['200% engagement increase', '20+ hours saved/week', '40% more reach'],
-      link: '/ai-social-media-manager',
+      title: 'AI Task Manager Pro',
+      description: 'Smart task management with AI prioritization, deadline prediction, and productivity insights. Boost your productivity by 60%.',
+      icon: Check,
+      price: '$49/month',
+      originalPrice: '$79/month',
+      features: ['AI task prioritization', 'Smart scheduling', 'Progress tracking', 'Team collaboration', 'Deadline alerts', 'Productivity analytics', 'Habit tracking', 'Goal setting'],
+      benefits: ['60% productivity boost', '50% better time management', '40% fewer missed deadlines', '25% stress reduction'],
+      link: '/ai-task-manager',
       popular: true,
+<<<<<<< HEAD
       category: 'Marketing'
     },
     {
@@ -97,34 +109,54 @@ const ServicesPage: React.FC = React.memo((props) => {
     {
       title: 'AI Workflow Automation',
       description: 'Automate complex business processes with intelligent workflow management',
+=======
+      category: 'Productivity',
+      rating: 4.8,
+      users: '8,500+',
+      freeTrial: '7 days'
+    },
+    {
+      title: 'AI Workflow Automation Pro',
+      description: 'Automate complex business processes with intelligent workflow management and exception handling. Save 20+ hours per week.',
+>>>>>>> origin/main
       icon: Zap,
-      price: '$179/month',
-      features: ['Process automation', 'Smart routing', 'Exception handling', 'Analytics dashboard'],
-      benefits: ['80% process automation', '60% cost reduction', 'Real-time monitoring'],
+      price: '$79/month',
+      originalPrice: '$119/month',
+      features: ['Process automation', 'Smart routing', 'Exception handling', 'Analytics dashboard', 'Custom triggers', 'Integration APIs', 'Approval workflows', 'Document processing'],
+      benefits: ['80% process automation', '20+ hours saved weekly', '60% cost reduction', '99% accuracy rate'],
       link: '/ai-workflow-automation',
       popular: true,
-      category: 'Automation'}
+      category: 'Automation',
+      rating: 4.7,
+      users: '6,200+',
+      freeTrial: '14 days'
     },
     {
-      title: 'AI Fashion Design',
-      description: 'Create stunning fashion designs with AI-powered design tools',
-      icon: Palette,
-      price: '$159/month',
-      features: ['AI design generation', 'Trend analysis', 'Color matching', 'Pattern creation'],
-      benefits: ['50% design time reduction', 'Trend-aware designs', 'Unlimited creativity'],
-      link: '/ai-fashion-design',
+      title: 'AI Scheduler Pro',
+      description: 'Intelligent scheduling with AI-powered optimization for meetings, appointments, and resource allocation. Perfect for busy professionals.',
+      icon: Calendar,
+      price: '$39/month',
+      originalPrice: '$59/month',
+      features: ['Smart scheduling', 'Conflict resolution', 'Time zone handling', 'Resource booking', 'Recurring events', 'Calendar sync', 'Meeting optimization', 'Availability management'],
+      benefits: ['50% scheduling efficiency', '90% conflict reduction', '30% time saved', 'Perfect coordination'],
+      link: '/ai-scheduler',
       popular: false,
-      category: 'Design'}
+      category: 'Productivity',
+      rating: 4.6,
+      users: '4,100+',
+      freeTrial: '7 days'
     },
     {
-      title: 'AI Music Composition',
-      description: 'Compose original music with AI-powered composition tools',
-      icon: Music,
-      price: '$119/month',
-      features: ['AI composition', 'Multiple genres', 'Instrument simulation', 'Royalty-free music'],
-      benefits: ['Unlimited compositions', 'Professional quality', 'No copyright issues'],
-      link: '/ai-music-composition',
+      title: 'AI Time Tracker Pro',
+      description: 'Advanced time tracking with AI insights, productivity analysis, and automated reporting. Understand how you spend your time.',
+      icon: Clock3,
+      price: '$34/month',
+      originalPrice: '$49/month',
+      features: ['Automatic time tracking', 'AI insights', 'Productivity analysis', 'Project billing', 'Team monitoring', 'Detailed reports', 'Goal setting', 'Distraction alerts'],
+      benefits: ['25% time awareness', '40% productivity insights', '30% better focus', 'Accurate billing'],
+      link: '/ai-time-tracker',
       popular: false,
+<<<<<<< HEAD
       category: 'Creative'}
     },
     {
@@ -459,11 +491,21 @@ const ServicesPage: React.FC = React.memo((props) => {
     }
   ]
   const categories = ['All', 'Productivity', 'Marketing', 'Analytics', 'Customer Service', 'Development', 'Content Creation', 'Automation', 'Design', 'Creative', 'Health & Fitness', 'Sales', 'Operations', 'Human Resources', 'Finance', 'Legal', '3D & Graphics', 'Voice Technology', 'Content AI', 'Personalization', 'Security', 'Document AI', 'Cloud Computing', 'Data Management', 'Consulting', 'Infrastructure', 'Mobile Development', 'Web Development', 'Support', 'Blockchain', 'IoT']
+=======
+      category: 'Productivity',
+      rating: 4.5,
+      users: '3,800+',
+      freeTrial: '7 days'
+    }
+  ];
+
+>>>>>>> origin/main
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field">
       <Navigation />
       
-      <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50" aria-label="Skip to main content">Skip to main content</a><main className="container mx-auto px-4 py-16 pt-24" id="main-content">
+      <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50" aria-label="Skip to main content">Skip to main content</a>
+      <main className="container mx-auto px-4 py-16 pt-24" id="main-content">
         {/* Header */}
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse glitch" data-text="Our Services">
@@ -480,7 +522,7 @@ const ServicesPage: React.FC = React.memo((props) => {
             Micro SAAS Solutions
           </h2>
           <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto">
-            Powerful, affordable AI-powered tools designed for modern businesses
+            Powerful, affordable AI-powered tools designed for modern businesses. Choose from 30+ specialized applications.
           </p>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-12">
@@ -491,7 +533,7 @@ const ServicesPage: React.FC = React.memo((props) => {
                     <div className="bg-cyan-400 text-slate-900 px-3 py-1 rounded-full text-xs font-semibold">
                       Popular
                     </div>
-                  </div>}
+                  </div>
                 )}
                 <div className="flex items-center justify-between mb-4">
                   <service.icon className="w-8 h-8 text-cyan-400" />
@@ -527,7 +569,20 @@ const ServicesPage: React.FC = React.memo((props) => {
                 </div>
                 
                 <div className="text-center">
-                  <div className="text-lg font-bold text-cyan-400 mb-2 neon-text">{service.price}</div>
+                  <div className="flex items-center justify-center gap-2 mb-2">
+                    <div className="text-lg font-bold text-cyan-400 neon-text">{service.price}</div>
+                    {service.originalPrice && (
+                      <div className="text-sm text-gray-400 line-through">{service.originalPrice}</div>
+                    )}
+                  </div>
+                  <div className="flex items-center justify-center gap-4 text-xs text-gray-400 mb-3">
+                    <div className="flex items-center gap-1">
+                      <StarIcon className="w-3 h-3 text-yellow-400" />
+                      <span>{service.rating}</span>
+                    </div>
+                    <div>{service.users} users</div>
+                    <div>{service.freeTrial} free trial</div>
+                  </div>
                   <a 
                     href={service.link}
                     className="cyber-button px-4 py-2 text-sm font-medium transition-all duration-300 hover:scale-105"
@@ -536,84 +591,6 @@ const ServicesPage: React.FC = React.memo((props) => {
                   </a>
                 </div>
               </article>
-            ))}
-          </div>
-        </section>
-
-        {/* AI Services */}
-        <section className="mb-16" aria-labelledby="ai-services-heading">
-          <h2 id="ai-services-heading" className="text-4xl font-bold text-white mb-8 text-center neon-text">
-            AI Services
-          </h2>
-          <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto">
-            Advanced artificial intelligence solutions for enterprise applications
-          </p>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-12">
-            {aiServices.map((service, index) => (
-              <a}
-                key={index}
-                href={`/ai-solutions#${service.title.toLowerCase().replace(/\s+/g, '-')}`}
-                className="cyber-card p-6 hover:scale-105 transition-all duration-300 group"
-              >
-                <div className="flex items-center justify-between mb-4">
-                  <service.icon className={`w-12 h-12 ${service.color} group-hover:scale-110 transition-transform duration-300`} />
-                  <span className="text-xs text-gray-400 bg-gray-700 px-2 py-1 rounded" style={{ color: "#9CA3AF" }}><span className="sr-only">Screen reader: </span>{service.category}</span>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-3 neon-text">{service.title}</h3>
-                <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
-                <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-cyan-400 mb-2">Features:</h4>
-                  <ul className="space-y-1" role="list">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-xs text-gray-300">
-                        <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="text-lg font-bold text-cyan-400 neon-text">{service.price}</div>
-              </a>
-            ))}
-          </div>
-        </section>
-
-        {/* IT Services */}
-        <section className="mb-16" aria-labelledby="it-services-heading">
-          <h2 id="it-services-heading" className="text-4xl font-bold text-white mb-8 text-center neon-text">
-            IT Services
-          </h2>
-          <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto">
-            Comprehensive IT solutions for modern enterprises
-          </p>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-12">
-            {itServices.map((service, index) => (
-              <a}
-                key={index}
-                href={`/it-services#${service.title.toLowerCase().replace(/\s+/g, '-')}`}
-                className="cyber-card p-6 hover:scale-105 transition-all duration-300 group"
-              >
-                <div className="flex items-center justify-between mb-4">
-                  <service.icon className={`w-12 h-12 ${service.color} group-hover:scale-110 transition-transform duration-300`} />
-                  <span className="text-xs text-gray-400 bg-gray-700 px-2 py-1 rounded" style={{ color: "#9CA3AF" }}><span className="sr-only">Screen reader: </span>{service.category}</span>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-3 neon-text">{service.title}</h3>
-                <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
-                <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-cyan-400 mb-2">Features:</h4>
-                  <ul className="space-y-1" role="list">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-xs text-gray-300">
-                        <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="text-lg font-bold text-cyan-400 neon-text">{service.price}</div>
-              </a>
             ))}
           </div>
         </section>
@@ -631,9 +608,8 @@ const ServicesPage: React.FC = React.memo((props) => {
               <a
                 href="/contact"
                 className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
-               aria-label="
-                Get Free Consultation
-              ">
+                aria-label="Get Free Consultation"
+              >
                 Get Free Consultation
               </a>
               <a
@@ -644,6 +620,11 @@ const ServicesPage: React.FC = React.memo((props) => {
                 Call +1 302 464 0950
               </a>
             </div>
+            <div className="mt-6 text-sm text-gray-400">
+              <p>📧 Email: kleber@ziontechgroup.com</p>
+              <p>📍 Address: 364 E Main St STE 1008, Middletown, DE 19709</p>
+              <p>🌐 Website: https://ziontechgroup.com</p>
+            </div>
           </div>
         </section>
       </main>
@@ -651,5 +632,6 @@ const ServicesPage: React.FC = React.memo((props) => {
       <Footer />
     </div>
   )
-}
-export default ServicesPage
+});
+
+export default ServicesPage;

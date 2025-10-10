@@ -170,9 +170,9 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     const registerServiceWorker = async () => {
       try {
         const registration = await navigator.serviceWorker.register('/sw.js');
-        console.log('Service Worker registered successfully:', registration);
+        // Service Worker registered successfully
       } catch (error) {
-        console.error('Service Worker registration failed:', error);
+        // Service Worker registration failed
       }
     };
 
@@ -209,7 +209,7 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         getLCP(reportMetric);
         getTTFB(reportMetric);
       } catch (error) {
-        console.error('Failed to load web vitals:', error);
+        // Failed to load web vitals
       }
     };
 
@@ -318,8 +318,7 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         domInteractive: navigation.domInteractive - navigation.fetchStart
       };
 
-      // Log performance metrics
-      console.log('Performance Metrics:', metrics);
+      // Performance metrics collected
 
       // Send to analytics
       if ('gtag' in window) {

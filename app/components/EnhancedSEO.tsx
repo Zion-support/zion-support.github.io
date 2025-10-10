@@ -2,7 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-interface SEOProps {
+interface EnhancedSEOProps {
   title?: string;
   description?: string;
   keywords?: string[];
@@ -11,17 +11,33 @@ interface SEOProps {
   ogType?: string;
   twitterCard?: string;
   structuredData?: any;
-  noindex?: boolean;
-  nofollow?: boolean;
-  alternateLanguages?: { [key: string]: string };
-  preloadResources?: Array<{
+  noIndex?: boolean;
+  noFollow?: boolean;
+  author?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  section?: string;
+  tags?: string[];
+  locale?: string;
+  alternateLocales?: string[];
+  robots?: string;
+  viewport?: string;
+  themeColor?: string;
+  colorScheme?: string;
+  preload?: Array<{
     href: string;
     as: string;
     type?: string;
   }>;
+  prefetch?: Array<{
+    href: string;
+    as: string;
+  }>;
+  dnsPrefetch?: string[];
+  preconnect?: string[];
 }
 
-const EnhancedSEO: React.FC<SEOProps> = ({
+const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.',
   keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services', 'artificial intelligence', 'business intelligence', 'data analytics', 'cybersecurity', 'cloud migration', 'DevOps', 'IT consulting'],
@@ -30,43 +46,38 @@ const EnhancedSEO: React.FC<SEOProps> = ({
   ogType = 'website',
   twitterCard = 'summary_large_image',
   structuredData,
-  noindex = false,
-  nofollow = false,
-  alternateLanguages = {},
-  preloadResources = []
+  noIndex = false,
+  noFollow = false,
+  author = 'Zion Tech Group',
+  publishedTime,
+  modifiedTime,
+  section,
+  tags = [],
+  locale = 'en_US',
+  alternateLocales = [],
+  robots,
+  viewport = 'width=device-width, initial-scale=1, viewport-fit=cover',
+  themeColor = '#0f172a',
+  colorScheme = 'dark light',
+  preload = [],
+  prefetch = [],
+  dnsPrefetch = [],
+  preconnect = []
 }) => {
-  const robotsContent = [
-    noindex ? 'noindex' : 'index',
-    nofollow ? 'nofollow' : 'follow',
-    'max-snippet:-1',
-    'max-image-preview:large',
-    'max-video-preview:-1'
-  ].join(', ');
-
+  const robotsContent = robots || `${noIndex ? 'noindex' : 'index'}, ${noFollow ? 'nofollow' : 'follow'}`;
+  
   const defaultStructuredData = {
     '@context': 'https://schema.org',
-    '@type': 'TechCompany',
+    '@type': 'Organization',
     name: 'Zion Tech Group',
-    url: canonicalUrl,
-    description: description,
-    foundingDate: '2020',
-    numberOfEmployees: '50-100',
-    industry: 'Technology',
-    services: [
-      'AI Solutions',
-      'Quantum Computing',
-      'Autonomous Systems',
-      'Digital Transformation',
-      'Cloud Services',
-      'Automation',
-      'Business Intelligence'
-    ],
+    description: 'Advanced AI and IT Solutions',
+    url: 'https://ziontechgroup.com',
+    logo: 'https://ziontechgroup.com/logo.png',
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: '+1-302-464-0950',
-      contactType: 'Customer Service',
-      areaServed: 'US',
-      availableLanguage: 'en'
+      contactType: 'customer service',
+      email: 'kleber@ziontechgroup.com',
     },
     address: {
       '@type': 'PostalAddress',
@@ -74,13 +85,24 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       addressLocality: 'Middletown',
       addressRegion: 'DE',
       postalCode: '19709',
-      addressCountry: 'US'
+      addressCountry: 'US',
     },
     sameAs: [
-      'https://www.linkedin.com/company/zion-tech-group',
+      'https://linkedin.com/company/zion-tech-group',
       'https://twitter.com/ziontechgroup',
-      'https://github.com/ziontechgroup'
-    ]
+      'https://facebook.com/ziontechgroup',
+      'https://instagram.com/ziontechgroup',
+      'https://github.com/ziontechgroup',
+      'https://youtube.com/@ziontechgroup'
+    ],
+    offers: {
+      '@type': 'Offer',
+      name: 'AI Enterprise Transformation Services',
+      description: 'Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains',
+      price: '50000',
+      priceCurrency: 'USD',
+      availability: 'https://schema.org/InStock',
+    },
   };
 
   const finalStructuredData = structuredData || defaultStructuredData;
@@ -91,16 +113,22 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords.join(', ')} />
-      <meta name="author" content="Zion Tech Group" />
+      <meta name="author" content={author} />
       <meta name="robots" content={robotsContent} />
-      <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+      <meta name="viewport" content={viewport} />
+      <meta name="theme-color" content={themeColor} />
+      <meta name="color-scheme" content={colorScheme} />
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       <meta name="format-detection" content="telephone=no,address=no,email=no" />
-      <meta name="color-scheme" content="dark light" />
-      <meta name="theme-color" content="#0f172a" />
       
       {/* Canonical URL */}
       <link rel="canonical" href={canonicalUrl} />
+      
+      {/* Language and Locale */}
+      <html lang={locale.split('_')[0]} />
+      {alternateLocales.map((altLocale) => (
+        <link key={altLocale} rel="alternate" hrefLang={altLocale} href={`${canonicalUrl}?lang=${altLocale}`} />
+      ))}
       
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={ogType} />
@@ -112,7 +140,13 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       <meta property="og:image:height" content="630" />
       <meta property="og:image:alt" content={title} />
       <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content="en_US" />
+      <meta property="og:locale" content={locale} />
+      {publishedTime && <meta property="article:published_time" content={publishedTime} />}
+      {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
+      {section && <meta property="article:section" content={section} />}
+      {tags.map((tag) => (
+        <meta key={tag} property="article:tag" content={tag} />
+      ))}
       
       {/* Twitter */}
       <meta name="twitter:card" content={twitterCard} />
@@ -124,35 +158,18 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       <meta name="twitter:site" content="@ziontechgroup" />
       <meta name="twitter:creator" content="@ziontechgroup" />
       
-      {/* Additional SEO Meta Tags */}
-      <meta name="application-name" content="Zion Tech Group" />
-      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-      <meta name="mobile-web-app-capable" content="yes" />
-      <meta name="msapplication-TileColor" content="#0f172a" />
-      <meta name="msapplication-config" content="/browserconfig.xml" />
-      
-      {/* Security Headers */}
-      <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
-      <meta httpEquiv="X-Frame-Options" content="DENY" />
-      <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
-      <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
-      
       {/* Preconnect to external domains */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link rel="preconnect" href="https://www.google-analytics.com" />
-      <link rel="preconnect" href="https://www.googletagmanager.com" />
+      {preconnect.map((domain) => (
+        <link key={domain} rel="preconnect" href={domain} crossOrigin="anonymous" />
+      ))}
       
       {/* DNS Prefetch */}
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-      <link rel="dns-prefetch" href="//fonts.gstatic.com" />
-      <link rel="dns-prefetch" href="//www.google-analytics.com" />
-      <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+      {dnsPrefetch.map((domain) => (
+        <link key={domain} rel="dns-prefetch" href={domain} />
+      ))}
       
       {/* Preload critical resources */}
-      {preloadResources.map((resource, index) => (
+      {preload.map((resource, index) => (
         <link
           key={index}
           rel="preload"
@@ -162,15 +179,14 @@ const EnhancedSEO: React.FC<SEOProps> = ({
         />
       ))}
       
-      {/* Favicon and Icons */}
-      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-      <link rel="icon" type="image/png" href="/favicon.png" />
-      <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-      <link rel="manifest" href="/manifest.json" />
-      
-      {/* Alternate Languages */}
-      {Object.entries(alternateLanguages).map(([lang, url]) => (
-        <link key={lang} rel="alternate" hrefLang={lang} href={url} />
+      {/* Prefetch likely next pages */}
+      {prefetch.map((resource, index) => (
+        <link
+          key={index}
+          rel="prefetch"
+          href={resource.href}
+          as={resource.as}
+        />
       ))}
       
       {/* Structured Data */}
@@ -178,28 +194,28 @@ const EnhancedSEO: React.FC<SEOProps> = ({
         {JSON.stringify(finalStructuredData)}
       </script>
       
-      {/* Additional Structured Data for Services */}
-      <script type="application/ld+json">
-        {JSON.stringify({
-          '@context': 'https://schema.org',
-          '@type': 'Service',
-          name: 'AI and IT Solutions',
-          provider: {
-            '@type': 'TechCompany',
-            name: 'Zion Tech Group',
-            url: canonicalUrl
-          },
-          description: description,
-          serviceType: 'Technology Services',
-          areaServed: 'Worldwide',
-          availableChannel: {
-            '@type': 'ServiceChannel',
-            serviceUrl: canonicalUrl,
-            servicePhone: '+1-302-464-0950',
-            serviceEmail: 'kleber@ziontechgroup.com'
-          }
-        })}
-      </script>
+      {/* Additional SEO Meta Tags */}
+      <meta name="google-site-verification" content="your-google-verification-code" />
+      <meta name="msvalidate.01" content="your-bing-verification-code" />
+      <meta name="yandex-verification" content="your-yandex-verification-code" />
+      
+      {/* Security Headers */}
+      <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
+      <meta httpEquiv="X-Frame-Options" content="DENY" />
+      <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
+      <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+      
+      {/* Performance Hints */}
+      <meta httpEquiv="Accept-CH" content="DPR, Viewport-Width, Width" />
+      <meta name="mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
+      
+      {/* Favicon and Icons */}
+      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+      <link rel="apple-touch-icon" href="/logo192.png" />
+      <link rel="manifest" href="/manifest.json" />
     </Helmet>
   );
 };

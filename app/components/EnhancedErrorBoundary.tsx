@@ -38,7 +38,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error Boundary caught an error:', error, errorInfo);
+      // Error Boundary caught an error
     }
 
     // Report error to analytics
@@ -82,7 +82,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         navigator.sendBeacon('/api/analytics/errors', JSON.stringify(errorData));
       }
     } catch (reportingError) {
-      console.error('Failed to report error:', reportingError);
+      // Failed to report error
     }
   };
 

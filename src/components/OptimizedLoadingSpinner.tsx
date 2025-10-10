@@ -37,10 +37,6 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
       []
     );
     
-    const baseClasses = useMemo(
-      () => `bg-${color}-500 ${sizeClasses[size]}`,
-      [color, size, sizeClasses]
-    );
     const colorClasses = useMemo(
       () => ({
         blue: 'border-blue-600 bg-blue-600',
