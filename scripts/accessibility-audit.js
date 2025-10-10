@@ -5,315 +5,298 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-console.log('♿ Starting accessibility audit...');
-
-// Accessibility checklist
-const accessibilityChecklist = {
-  semanticHTML: {
-    description: 'Use semantic HTML elements',
-    checks: [
-      'Use proper heading hierarchy (h1, h2, h3, etc.)',
-      'Use semantic elements (main, nav, section, article, aside, header, footer)',
-      'Use proper form elements (label, fieldset, legend)',
-      'Use list elements (ul, ol, li) for lists'
-    ]
-  },
-  keyboardNavigation: {
-    description: 'Ensure keyboard accessibility',
-    checks: [
-      'All interactive elements are keyboard accessible',
-      'Focus indicators are visible',
-      'Tab order is logical',
-      'Skip links are provided',
-      'No keyboard traps'
-    ]
-  },
-  colorContrast: {
-    description: 'Ensure sufficient color contrast',
-    checks: [
-      'Text has at least 4.5:1 contrast ratio',
-      'Large text has at least 3:1 contrast ratio',
-      'Color is not the only way to convey information',
-      'Interactive elements have sufficient contrast'
-    ]
-  },
-  images: {
-    description: 'Provide alternative text for images',
-    checks: [
-      'All images have alt attributes',
-      'Decorative images have empty alt attributes',
-      'Complex images have detailed descriptions',
-      'Images of text are avoided'
-    ]
-  },
-  forms: {
-    description: 'Make forms accessible',
-    checks: [
-      'All form controls have labels',
-      'Error messages are associated with form controls',
-      'Required fields are clearly marked',
-      'Form validation is accessible'
-    ]
-  },
-  multimedia: {
-    description: 'Provide alternatives for multimedia',
-    checks: [
-      'Videos have captions',
-      'Audio has transcripts',
-      'Media controls are accessible',
-      'Auto-playing media can be paused'
-    ]
-  },
-  responsive: {
-    description: 'Ensure responsive design',
-    checks: [
-      'Content is readable at 200% zoom',
-      'Layout works on mobile devices',
-      'Text is not cut off on small screens',
-      'Touch targets are at least 44px'
-    ]
+// Accessibility audit script
+class AccessibilityAuditor {
+  constructor() {
+    this.issues = [];
+    this.score = 100;
+    this.recommendations = [];
   }
-};
 
-// Check HTML files for accessibility issues
-function auditHTMLFiles() {
-  console.log('📄 Auditing HTML files...');
-  
-  const distDir = path.join(__dirname, '../dist');
-  const htmlFiles = fs.readdirSync(distDir).filter(file => file.endsWith('.html'));
-  
-  htmlFiles.forEach(file => {
-    const filePath = path.join(distDir, file);
-    const content = fs.readFileSync(filePath, 'utf8');
+  // Check for alt attributes on images
+  checkImageAltText(content) {
+    const imgRegex = /<img[^>]*>/g;
+    const images = content.match(imgRegex) || [];
     
-    console.log(`  - Auditing ${file}`);
-    
-    // Check for semantic HTML
-    if (!content.includes('<main')) {
-      console.log('    ⚠️  Missing <main> element');
-    }
-    
-    if (!content.includes('<nav')) {
-      console.log('    ⚠️  Missing <nav> element');
-    }
-    
-    // Check for alt attributes
-    const imgTags = content.match(/<img[^>]*>/g) || [];
-    imgTags.forEach(img => {
+    images.forEach((img, index) => {
       if (!img.includes('alt=')) {
-        console.log('    ⚠️  Image missing alt attribute');
+        this.addIssue('error', 'Images', `Image ${index + 1} missing alt attribute`, 'high');
+      } else if (img.includes('alt=""')) {
+        this.addIssue('warning', 'Images', `Image ${index + 1} has empty alt attribute`, 'medium');
       }
     });
-    
-    // Check for heading hierarchy
-    const headings = content.match(/<h[1-6][^>]*>/g) || [];
-    if (headings.length === 0) {
-      console.log('    ⚠️  No heading elements found');
-    }
-    
-    // Check for skip links
-    if (!content.includes('skip') && !content.includes('Skip')) {
-      console.log('    ⚠️  No skip links found');
-    }
-  });
-}
+  }
 
-// Check CSS files for accessibility issues
-function auditCSSFiles() {
-  console.log('🎨 Auditing CSS files...');
-  
-  const distDir = path.join(__dirname, '../dist');
-  const cssFiles = fs.readdirSync(distDir).filter(file => file.endsWith('.css'));
-  
-  cssFiles.forEach(file => {
-    const filePath = path.join(distDir, file);
-    const content = fs.readFileSync(filePath, 'utf8');
+  // Check for heading hierarchy
+  checkHeadingHierarchy(content) {
+    const headingRegex = /<h([1-6])[^>]*>.*?<\/h[1-6]>/g;
+    const headings = content.match(headingRegex) || [];
+    const headingLevels = headings.map(h => parseInt(h.match(/<h([1-6])/)[1]));
     
-    console.log(`  - Auditing ${file}`);
+    let previousLevel = 0;
+    headingLevels.forEach((level, index) => {
+      if (level > previousLevel + 1) {
+        this.addIssue('warning', 'Headings', `Heading hierarchy skipped from h${previousLevel} to h${level}`, 'medium');
+      }
+      previousLevel = level;
+    });
+  }
+
+  // Check for form labels
+  checkFormLabels(content) {
+    const inputRegex = /<input[^>]*>/g;
+    const inputs = content.match(inputRegex) || [];
     
-    // Check for focus styles
-    if (!content.includes(':focus')) {
-      console.log('    ⚠️  No focus styles found');
-    }
-    
-    // Check for high contrast support
-    if (!content.includes('prefers-contrast')) {
-      console.log('    ⚠️  No high contrast support');
-    }
-    
-    // Check for reduced motion support
-    if (!content.includes('prefers-reduced-motion')) {
-      console.log('    ⚠️  No reduced motion support');
-    }
-  });
-}
-
-// Generate accessibility report
-function generateAccessibilityReport() {
-  console.log('📊 Generating accessibility report...');
-  
-  const report = {
-    timestamp: new Date().toISOString(),
-    checklist: accessibilityChecklist,
-    recommendations: [
-      'Add ARIA labels to interactive elements',
-      'Implement focus management for modals',
-      'Add live regions for dynamic content',
-      'Ensure all interactive elements are keyboard accessible',
-      'Test with screen readers',
-      'Validate HTML markup',
-      'Test with keyboard-only navigation',
-      'Check color contrast ratios',
-      'Test with high contrast mode',
-      'Test with zoom up to 200%'
-    ],
-    tools: [
-      'axe-core for automated testing',
-      'WAVE for visual accessibility testing',
-      'Lighthouse for accessibility audit',
-      'Screen reader testing (NVDA, JAWS, VoiceOver)',
-      'Keyboard-only navigation testing',
-      'Color contrast analyzers'
-    ]
-  };
-  
-  fs.writeFileSync(
-    path.join(__dirname, '../accessibility-report.json'), 
-    JSON.stringify(report, null, 2)
-  );
-  
-  console.log('  - Generated accessibility-report.json');
-}
-
-// Generate accessibility improvements
-function generateAccessibilityImprovements() {
-  console.log('🔧 Generating accessibility improvements...');
-  
-  const improvements = `
-// Accessibility improvements to implement
-
-// 1. Add ARIA labels to interactive elements
-<button aria-label="Close dialog">×</button>
-<input aria-describedby="email-help" type="email" />
-<div id="email-help">Enter your email address</div>
-
-// 2. Implement focus management
-const trapFocus = (element) => {
-  const focusableElements = element.querySelectorAll(
-    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-  );
-  const firstElement = focusableElements[0];
-  const lastElement = focusableElements[focusableElements.length - 1];
-  
-  element.addEventListener('keydown', (e) => {
-    if (e.key === 'Tab') {
-      if (e.shiftKey) {
-        if (document.activeElement === firstElement) {
-          lastElement.focus();
-          e.preventDefault();
-        }
-      } else {
-        if (document.activeElement === lastElement) {
-          firstElement.focus();
-          e.preventDefault();
+    inputs.forEach((input, index) => {
+      if (input.includes('type="text"') || input.includes('type="email"') || input.includes('type="password"')) {
+        if (!input.includes('aria-label=') && !input.includes('aria-labelledby=')) {
+          // Check if there's a label element nearby
+          const hasLabel = content.includes(`for="input-${index}"`) || content.includes(`<label`);
+          if (!hasLabel) {
+            this.addIssue('error', 'Forms', `Input ${index + 1} missing label or aria-label`, 'high');
+          }
         }
       }
-    }
-  });
-};
+    });
+  }
 
-// 3. Add live regions for dynamic content
-<div aria-live="polite" aria-atomic="true" className="sr-only">
-  {announcement}
-</div>
-
-// 4. Ensure proper heading hierarchy
-<h1>Main Page Title</h1>
-  <h2>Section Title</h2>
-    <h3>Subsection Title</h3>
-
-// 5. Add skip links
-<a href="#main-content" className="skip-link">
-  Skip to main content
-</a>
-
-// 6. Use semantic HTML
-<main>
-  <nav aria-label="Main navigation">
-    <ul>
-      <li><a href="/">Home</a></li>
-    </ul>
-  </nav>
-  <section>
-    <h2>Section Title</h2>
-    <article>
-      <h3>Article Title</h3>
-    </article>
-  </section>
-</main>
-
-// 7. Form accessibility
-<form>
-  <fieldset>
-    <legend>Contact Information</legend>
-    <label htmlFor="email">Email Address</label>
-    <input 
-      id="email" 
-      type="email" 
-      required 
-      aria-describedby="email-error"
-    />
-    <div id="email-error" role="alert" aria-live="polite">
-      {emailError}
-    </div>
-  </fieldset>
-</form>
-
-// 8. Image accessibility
-<img 
-  src="chart.png" 
-  alt="Sales chart showing 25% increase in Q3 2024"
-  role="img"
-/>
-
-// 9. Color contrast considerations
-// Ensure sufficient contrast ratios:
-// - Normal text: 4.5:1
-// - Large text: 3:1
-// - UI components: 3:1
-
-// 10. Keyboard navigation
-// All interactive elements should be:
-// - Focusable with Tab key
-// - Activable with Enter/Space
-// - Have visible focus indicators
-// - Follow logical tab order
-`;
-
-  fs.writeFileSync(
-    path.join(__dirname, '../accessibility-improvements.js'), 
-    improvements
-  );
-  
-  console.log('  - Generated accessibility-improvements.js');
-}
-
-// Main audit function
-function audit() {
-  try {
-    auditHTMLFiles();
-    auditCSSFiles();
-    generateAccessibilityReport();
-    generateAccessibilityImprovements();
+  // Check for color contrast (basic check)
+  checkColorContrast(content) {
+    const colorRegex = /color:\s*#([0-9a-fA-F]{6})/g;
+    const colors = content.match(colorRegex) || [];
     
-    console.log('✅ Accessibility audit completed successfully!');
-    console.log('📋 Check accessibility-report.json for detailed results');
-    console.log('🔧 Check accessibility-improvements.js for implementation guide');
-  } catch (error) {
-    console.error('❌ Error during accessibility audit:', error);
-    process.exit(1);
+    // Basic contrast check for common problematic colors
+    const problematicColors = ['#000000', '#ffffff', '#cccccc', '#999999'];
+    colors.forEach(color => {
+      if (problematicColors.some(problematic => color.toLowerCase().includes(problematic))) {
+        this.addIssue('warning', 'Color Contrast', `Potentially low contrast color: ${color}`, 'medium');
+      }
+    });
+  }
+
+  // Check for keyboard navigation
+  checkKeyboardNavigation(content) {
+    const interactiveElements = ['<button', '<a', '<input', '<select', '<textarea'];
+    
+    interactiveElements.forEach(element => {
+      const regex = new RegExp(element + '[^>]*>', 'g');
+      const elements = content.match(regex) || [];
+      
+      elements.forEach((el, index) => {
+        if (!el.includes('tabindex=') && !el.includes('href=') && !el.includes('type=')) {
+          this.addIssue('warning', 'Keyboard Navigation', `Interactive element may not be keyboard accessible`, 'medium');
+        }
+      });
+    });
+  }
+
+  // Check for ARIA attributes
+  checkARIA(content) {
+    const ariaRegex = /aria-([a-z-]+)=/g;
+    const ariaAttributes = content.match(ariaRegex) || [];
+    
+    // Check for proper ARIA usage
+    if (content.includes('role=') && !content.includes('aria-label=') && !content.includes('aria-labelledby=')) {
+      this.addIssue('warning', 'ARIA', 'Elements with role should have accessible names', 'medium');
+    }
+  }
+
+  // Check for focus management
+  checkFocusManagement(content) {
+    if (content.includes('onClick=') && !content.includes('onKeyDown=') && !content.includes('onKeyPress=')) {
+      this.addIssue('warning', 'Focus Management', 'Click handlers should have keyboard equivalents', 'medium');
+    }
+  }
+
+  // Add issue to the list
+  addIssue(type, category, message, impact) {
+    this.issues.push({
+      type,
+      category,
+      message,
+      impact,
+      timestamp: new Date().toISOString()
+    });
+    
+    // Deduct points based on impact
+    if (impact === 'high') this.score -= 10;
+    else if (impact === 'medium') this.score -= 5;
+    else if (impact === 'low') this.score -= 2;
+  }
+
+  // Generate recommendations
+  generateRecommendations() {
+    const recommendations = [
+      {
+        category: 'Images',
+        message: 'Add descriptive alt text to all images',
+        priority: 'high'
+      },
+      {
+        category: 'Headings',
+        message: 'Maintain proper heading hierarchy (h1 → h2 → h3)',
+        priority: 'medium'
+      },
+      {
+        category: 'Forms',
+        message: 'Associate labels with form inputs',
+        priority: 'high'
+      },
+      {
+        category: 'Color',
+        message: 'Ensure sufficient color contrast (4.5:1 for normal text)',
+        priority: 'high'
+      },
+      {
+        category: 'Keyboard',
+        message: 'Ensure all interactive elements are keyboard accessible',
+        priority: 'high'
+      },
+      {
+        category: 'ARIA',
+        message: 'Use ARIA attributes to enhance accessibility',
+        priority: 'medium'
+      },
+      {
+        category: 'Focus',
+        message: 'Provide visible focus indicators',
+        priority: 'medium'
+      },
+      {
+        category: 'Testing',
+        message: 'Test with screen readers and keyboard navigation',
+        priority: 'high'
+      }
+    ];
+
+    this.recommendations = recommendations;
+  }
+
+  // Audit a file
+  auditFile(filePath) {
+    try {
+      const content = fs.readFileSync(filePath, 'utf8');
+      
+      console.log(`🔍 Auditing: ${path.basename(filePath)}`);
+      
+      this.checkImageAltText(content);
+      this.checkHeadingHierarchy(content);
+      this.checkFormLabels(content);
+      this.checkColorContrast(content);
+      this.checkKeyboardNavigation(content);
+      this.checkARIA(content);
+      this.checkFocusManagement(content);
+      
+    } catch (error) {
+      console.error(`❌ Error reading file ${filePath}:`, error.message);
+    }
+  }
+
+  // Audit all files in directory
+  auditDirectory(dirPath) {
+    const files = this.getAllFiles(dirPath);
+    const reactFiles = files.filter(file => 
+      file.endsWith('.tsx') || file.endsWith('.jsx') || file.endsWith('.ts') || file.endsWith('.js')
+    );
+
+    console.log(`📁 Found ${reactFiles.length} files to audit\n`);
+
+    reactFiles.forEach(file => {
+      this.auditFile(file);
+    });
+  }
+
+  // Get all files recursively
+  getAllFiles(dir) {
+    let files = [];
+    
+    if (!fs.existsSync(dir)) {
+      return files;
+    }
+
+    const items = fs.readdirSync(dir);
+
+    items.forEach(item => {
+      const fullPath = path.join(dir, item);
+      const stat = fs.statSync(fullPath);
+
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+        files = files.concat(this.getAllFiles(fullPath));
+      } else if (stat.isFile()) {
+        files.push(fullPath);
+      }
+    });
+
+    return files;
+  }
+
+  // Generate report
+  generateReport() {
+    this.generateRecommendations();
+
+    const report = {
+      timestamp: new Date().toISOString(),
+      score: Math.max(0, this.score),
+      totalIssues: this.issues.length,
+      issues: this.issues,
+      recommendations: this.recommendations,
+      summary: {
+        errors: this.issues.filter(i => i.type === 'error').length,
+        warnings: this.issues.filter(i => i.type === 'warning').length,
+        info: this.issues.filter(i => i.type === 'info').length
+      }
+    };
+
+    const reportPath = path.join(__dirname, '../accessibility-report.json');
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+
+    console.log('\n📊 Accessibility Audit Results:');
+    console.log(`   Score: ${report.score}/100`);
+    console.log(`   Total Issues: ${report.totalIssues}`);
+    console.log(`   Errors: ${report.summary.errors}`);
+    console.log(`   Warnings: ${report.summary.warnings}`);
+    console.log(`   Info: ${report.summary.info}`);
+
+    console.log('\n🎯 Issues Found:');
+    this.issues.forEach((issue, index) => {
+      const icon = issue.type === 'error' ? '❌' : issue.type === 'warning' ? '⚠️' : '💡';
+      console.log(`   ${index + 1}. ${icon} [${issue.category}] ${issue.message}`);
+    });
+
+    console.log('\n💡 Recommendations:');
+    this.recommendations.forEach((rec, index) => {
+      const priority = rec.priority === 'high' ? '🔴' : rec.priority === 'medium' ? '🟡' : '🟢';
+      console.log(`   ${index + 1}. ${priority} [${rec.category}] ${rec.message}`);
+    });
+
+    console.log(`\n📄 Full report saved to: ${reportPath}`);
+
+    return report;
+  }
+
+  // Run the audit
+  run() {
+    console.log('♿ Starting Accessibility Audit...\n');
+    
+    const srcPath = path.join(__dirname, '../src');
+    const appPath = path.join(__dirname, '../app');
+    
+    if (fs.existsSync(srcPath)) {
+      this.auditDirectory(srcPath);
+    }
+    
+    if (fs.existsSync(appPath)) {
+      this.auditDirectory(appPath);
+    }
+    
+    const report = this.generateReport();
+    
+    console.log('\n✅ Accessibility audit complete!');
+    
+    return report;
   }
 }
 
-// Run audit
-audit();
+// Run the accessibility auditor
+const auditor = new AccessibilityAuditor();
+auditor.run();
