@@ -3,6 +3,65 @@
 /* Import base futuristic styles */
 @import './futuristic.css';
 
+/* Ultra-Advanced CSS Variables for Next-Gen Futuristic Theme */
+:root {
+  /* Ultra-Advanced Neon Colors */
+  --neon-cyan: #00ffff;
+  --neon-purple: #8b5cf6;
+  --neon-pink: #ec4899;
+  --neon-green: #10b981;
+  --neon-blue: #3b82f6;
+  --neon-orange: #f97316;
+  --neon-yellow: #eab308;
+  --neon-red: #ef4444;
+  --neon-indigo: #6366f1;
+  --neon-teal: #14b8a6;
+  --neon-lime: #84cc16;
+  --neon-rose: #f43f5e;
+  --neon-violet: #8b5cf6;
+  
+  /* Ultra-Advanced Dark Theme Colors */
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #111111;
+  --bg-tertiary: #1a1a1a;
+  --bg-card: #1e1e1e;
+  --bg-glass: rgba(255, 255, 255, 0.05);
+  --bg-glass-strong: rgba(255, 255, 255, 0.1);
+  --bg-holographic: rgba(0, 255, 255, 0.02);
+  --bg-matrix: rgba(0, 255, 0, 0.01);
+  
+  /* Ultra-Enhanced Text Colors */
+  --text-primary: #ffffff;
+  --text-secondary: #a1a1aa;
+  --text-accent: #00ffff;
+  --text-muted: #71717a;
+  --text-glow: #00ffff;
+  --text-holographic: #00ffff;
+  --text-matrix: #00ff00;
+  
+  /* Ultra-Advanced Gradients */
+  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --gradient-neon: linear-gradient(135deg, #00ffff 0%, #8b5cf6 50%, #ec4899 100%);
+  --gradient-cyber: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+  --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+  --gradient-holographic: linear-gradient(45deg, #00ffff, #8b5cf6, #ec4899, #10b981, #00ffff);
+  --gradient-matrix: linear-gradient(90deg, #00ff00, #00ffff, #0080ff, #8000ff, #ff00ff, #ff0080, #ff0000, #ff8000, #ffff00, #80ff00);
+  --gradient-cyberpunk: linear-gradient(135deg, #ff0080 0%, #00ffff 25%, #8000ff 50%, #ff8000 75%, #ff0080 100%);
+  --gradient-neural: linear-gradient(45deg, #00ffff, #8b5cf6, #ec4899, #10b981, #f97316, #00ffff);
+  --gradient-quantum: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 25%, #16213e 50%, #0f3460 75%, #0f0f23 100%);
+  
+  /* Ultra-Enhanced Shadows */
+  --shadow-neon: 0 0 20px rgba(0, 255, 255, 0.3);
+  --shadow-neon-purple: 0 0 20px rgba(139, 92, 246, 0.3);
+  --shadow-neon-pink: 0 0 20px rgba(236, 72, 153, 0.3);
+  --shadow-glow: 0 0 40px rgba(0, 255, 255, 0.2);
+  --shadow-holographic: 0 0 50px rgba(0, 255, 255, 0.4);
+  --shadow-matrix: 0 0 30px rgba(0, 255, 0, 0.5);
+  --shadow-cyberpunk: 0 0 60px rgba(255, 0, 128, 0.3);
+  --shadow-neural: 0 0 40px rgba(139, 92, 246, 0.4);
+  --shadow-quantum: 0 0 80px rgba(0, 255, 255, 0.2);
+}
+
 /* Enhanced CSS Variables for Advanced Futuristic Theme */
 :root {
   /* Advanced Neon Colors */

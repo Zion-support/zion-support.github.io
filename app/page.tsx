@@ -1501,11 +1501,7 @@ description: 'Custom API development, third-party integrations, and microservice
         enableHighContrast={true}
         enableFocusManagement={true}
       />
-<<<<<<< HEAD
-                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced neural-network-bg-enhanced matrix-rain-enhanced futuristic-bg-enhanced">
-=======
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced neural-network-bg matrix-bg quantum-particles neural-connections">
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a8d8
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain">
         {/* Navigation */}
         <Navigation />
         {/* Skip to main content for accessibility */}
@@ -1530,7 +1526,6 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
             }`}
             aria-labelledby="hero-heading"
           >
-<<<<<<< HEAD
             <div className="max-w-6xl mx-auto">
               <h1 
                 id="hero-heading" 

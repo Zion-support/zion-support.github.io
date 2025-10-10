@@ -53,7 +53,8 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Customer Service',
       popular: true,
-      icon: MessageSquare
+      icon: MessageSquare,
+      link: 'https://ziontechgroup.com/ai-chatbots'
     },
     {
       id: 'ai-content',

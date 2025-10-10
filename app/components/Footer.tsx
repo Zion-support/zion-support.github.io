@@ -53,7 +53,6 @@ const Footer: React.FC = memo(() => {
   ];
 
   const itServices = [
-<<<<<<< HEAD
     { name: 'Cloud Infrastructure', url: '/cloud-infrastructure', description: 'AWS, Azure, GCP' },
     { name: 'DevOps & CI/CD', url: '/devops-cicd', description: 'Automation pipelines' },
     { name: 'Cybersecurity Solutions', url: '/cybersecurity-solutions', description: 'Security solutions' },
@@ -86,52 +85,7 @@ const Footer: React.FC = memo(() => {
     { name: 'Data Visualization & BI', url: '/data-visualization', description: 'Advanced dashboards' },
     { name: 'Workflow Automation', url: '/workflow-automation', description: 'Process automation' },
     { name: 'Cloud-Native Security', url: '/cloud-native-security', description: 'Container security' }
-  ]
-=======
-    { name: 'IT Services', url: '/it-services', description: 'Comprehensive IT support' },
-    { name: 'IT Infrastructure', url: '/it-infrastructure', description: 'Enterprise infrastructure' },
-    { name: 'Cybersecurity', url: '/cybersecurity', description: 'Security solutions' },
-    { name: 'Cloud Infrastructure', url: '/ai-cloud-infrastructure', description: 'Cloud migration & setup' },
-    { name: 'E-commerce Solutions', url: '/ai-ecommerce-solutions', description: 'E-commerce platforms' },
-    { name: 'Mobile App Development', url: '/ai-mobile-app-development', description: 'Mobile applications' },
-    { name: 'Database Services', url: '/ai-data-analytics', description: 'Database management' }
   ];
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a8d8
-
-  const microSaasServices = [
-    { name: 'Zion Analytics Pro', url: '/zion-analytics-pro', description: 'Business intelligence' },
-    { name: 'Zion Chat AI', url: '/zion-chat-ai', description: 'AI customer support' },
-    { name: 'Zion Security Shield', url: '/zion-security-shield', description: 'Cybersecurity monitoring' },
-    { name: 'Zion Cloud Vault', url: '/zion-cloud-vault', description: 'Cloud backup & recovery' },
-    { name: 'Zion Content Studio', url: '/zion-content-studio', description: 'AI content creation' },
-    { name: 'Zion CRM Intelligence', url: '/zion-crm-intelligence', description: 'AI-enhanced CRM' },
-    { name: 'Zion Lead Magnet', url: '/zion-lead-magnet', description: 'Lead generation' },
-    { name: 'Zion Project Master', url: '/zion-project-master', description: 'Project management' },
-    { name: 'Zion Email Automation', url: '/zion-email-automation', description: 'Email marketing' },
-    { name: 'Zion Invoice Genius', url: '/zion-invoice-genius', description: 'Invoice generation' },
-    { name: 'Zion Workflow Automation', url: '/zion-workflow-automation', description: 'Process automation' },
-    { name: 'Zion Social Scheduler', url: '/zion-social-scheduler', description: 'Social media management' },
-    { name: 'Zion AI Video Editor', url: '/zion-ai-video-editor', description: 'AI video editing' },
-    { name: 'Zion AI Translator Pro', url: '/zion-ai-translator-pro', description: 'Advanced translation' },
-    { name: 'Zion AI Code Reviewer', url: '/zion-ai-code-reviewer', description: 'Intelligent code review' },
-    { name: 'Zion Customer Insights Pro', url: '/zion-customer-insights', description: 'Customer analytics' },
-    { name: 'Zion AI Email Assistant', url: '/zion-ai-email-assistant', description: 'Smart email management' },
-    { name: 'Zion AI Meeting Assistant', url: '/zion-ai-meeting-assistant', description: 'Meeting automation' },
-    { name: 'Zion AI SEO Optimizer', url: '/zion-ai-seo-optimizer', description: 'SEO optimization' },
-    { name: 'Zion AI Data Cleaner', url: '/zion-ai-data-cleaner', description: 'Data cleaning & validation' },
-    { name: 'Zion AI Contract Analyzer', url: '/zion-ai-contract-analyzer', description: 'Contract analysis' },
-    { name: 'Zion AI Survey Builder', url: '/zion-ai-survey-builder', description: 'Intelligent surveys' },
-    { name: 'Zion AI Accounting Assistant', url: '/zion-ai-accounting-assistant', description: 'AI accounting' },
-    { name: 'Zion AI Recruitment Pro', url: '/zion-ai-recruitment-pro', description: 'AI recruitment' },
-    { name: 'Zion AI Content Moderation', url: '/zion-ai-content-moderation', description: 'Content moderation' },
-    { name: 'Zion AI Predictive Maintenance', url: '/zion-ai-predictive-maintenance', description: 'Equipment maintenance' },
-    { name: 'Zion AI Energy Manager', url: '/zion-ai-energy-manager', description: 'Energy optimization' },
-    { name: 'Zion AI Supply Chain Optimizer', url: '/zion-ai-supply-chain-optimizer', description: 'Supply chain AI' },
-    { name: 'Zion AI Fraud Detector', url: '/zion-ai-fraud-detector', description: 'Fraud detection' },
-    { name: 'Zion AI Customer Service Pro', url: '/zion-ai-customer-service-pro', description: 'Advanced customer service' },
-    { name: 'Zion AI Marketing Automation', url: '/zion-ai-marketing-automation', description: 'Marketing AI' },
-    { name: 'Zion AI Document AI', url: '/zion-ai-document-ai', description: 'Document processing' }
-  ]
 
   const companyLinks = [
     { name: 'About Us', url: '/about' },

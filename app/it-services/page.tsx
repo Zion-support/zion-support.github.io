@@ -22,7 +22,10 @@ import {
   ShoppingCart,
   Monitor,
   Headphones,
-  BarChart
+  BarChart,
+  Phone,
+  Mail,
+  MapPin
 } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -53,7 +56,8 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Cloud',
       popular: true,
-      icon: Cloud
+      icon: Cloud,
+      link: 'https://ziontechgroup.com/cloud-infrastructure'
     },
     {
       id: 'cybersecurity',
@@ -293,32 +297,385 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'API Development',
       popular: false,
-      icon: Code
+      icon: Code,
+      link: 'https://ziontechgroup.com/api-development'
     },
     {
-      id: 'ecommerce-solutions',
-      name: 'E-commerce Solutions',
-      description: 'Complete e-commerce platform development and optimization services',
+      id: 'blockchain-development',
+      name: 'Blockchain Development',
+      description: 'Enterprise blockchain solutions including smart contracts, DeFi, and NFT platforms',
+      price: '$5,000/project',
+      marketPrice: '$10000-50000/project',
+      features: [
+        'Smart contract development',
+        'DeFi protocol creation',
+        'NFT marketplace development',
+        'Blockchain integration',
+        'Cryptocurrency wallet development',
+        'Security auditing'
+      ],
+      benefits: [
+        'Decentralized solutions',
+        'Enhanced security',
+        'Transparent transactions',
+        'Future-proof technology'
+      ],
+      category: 'Blockchain',
+      popular: true,
+      icon: Shield,
+      link: 'https://ziontechgroup.com/blockchain-development'
+    },
+    {
+      id: 'iot-solutions',
+      name: 'IoT Solutions',
+      description: 'Internet of Things development and implementation for smart devices and systems',
+      price: '$3,500/project',
+      marketPrice: '$7000-25000/project',
+      features: [
+        'IoT device development',
+        'Sensor integration',
+        'Data collection and analysis',
+        'Real-time monitoring',
+        'Mobile app integration',
+        'Cloud connectivity'
+      ],
+      benefits: [
+        'Automated processes',
+        'Real-time insights',
+        'Cost reduction',
+        'Improved efficiency'
+      ],
+      category: 'IoT',
+      popular: false,
+      icon: Wifi,
+      link: 'https://ziontechgroup.com/iot-solutions'
+    },
+    {
+      id: 'ai-ml-integration',
+      name: 'AI/ML Integration',
+      description: 'Artificial Intelligence and Machine Learning integration into existing systems',
+      price: '$4,000/project',
+      marketPrice: '$8000-30000/project',
+      features: [
+        'Machine learning model development',
+        'AI algorithm integration',
+        'Data preprocessing',
+        'Model training and optimization',
+        'API integration',
+        'Performance monitoring'
+      ],
+      benefits: [
+        'Intelligent automation',
+        'Predictive analytics',
+        'Improved decision making',
+        'Competitive advantage'
+      ],
+      category: 'AI/ML',
+      popular: true,
+      icon: TrendingUp,
+      link: 'https://ziontechgroup.com/ai-ml-integration'
+    },
+    {
+      id: 'microservices-architecture',
+      name: 'Microservices Architecture',
+      description: 'Modern microservices architecture design and implementation for scalable applications',
+      price: '$6,000/project',
+      marketPrice: '$12000-40000/project',
+      features: [
+        'Microservices design',
+        'Container orchestration',
+        'Service mesh implementation',
+        'API gateway setup',
+        'Monitoring and logging',
+        'Scalability optimization'
+      ],
+      benefits: [
+        'Improved scalability',
+        'Better maintainability',
+        'Faster development',
+        'Independent deployments'
+      ],
+      category: 'Architecture',
+      popular: false,
+      icon: Server,
+      link: 'https://ziontechgroup.com/microservices'
+    },
+    {
+      id: 'cyber-security-audit',
+      name: 'Cybersecurity Audit',
+      description: 'Comprehensive security assessment and penetration testing services',
+      price: '$2,500/audit',
+      marketPrice: '$5000-15000/audit',
+      features: [
+        'Vulnerability assessment',
+        'Penetration testing',
+        'Security compliance audit',
+        'Risk assessment',
+        'Security recommendations',
+        'Follow-up support'
+      ],
+      benefits: [
+        'Identify security gaps',
+        'Compliance assurance',
+        'Risk mitigation',
+        'Enhanced security posture'
+      ],
+      category: 'Security',
+      popular: true,
+      icon: Shield,
+      link: 'https://ziontechgroup.com/security-audit'
+    },
+    {
+      id: 'cloud-native-development',
+      name: 'Cloud-Native Development',
+      description: 'Cloud-native application development using modern technologies and best practices',
+      price: '$4,500/project',
+      marketPrice: '$9000-35000/project',
+      features: [
+        'Cloud-native architecture',
+        'Container development',
+        'Serverless functions',
+        'Cloud service integration',
+        'Auto-scaling implementation',
+        'Monitoring and observability'
+      ],
+      benefits: [
+        'Optimal cloud performance',
+        'Cost efficiency',
+        'Automatic scaling',
+        'Modern architecture'
+      ],
+      category: 'Cloud',
+      popular: false,
+      icon: Cloud,
+      link: 'https://ziontechgroup.com/cloud-native'
+    },
+    {
+      id: 'data-engineering',
+      name: 'Data Engineering',
+      description: 'Data pipeline development and ETL processes for big data analytics',
+      price: '$3,000/project',
+      marketPrice: '$6000-20000/project',
+      features: [
+        'Data pipeline design',
+        'ETL process development',
+        'Data warehousing',
+        'Real-time data processing',
+        'Data quality assurance',
+        'Analytics platform setup'
+      ],
+      benefits: [
+        'Better data insights',
+        'Automated data processing',
+        'Improved data quality',
+        'Scalable data architecture'
+      ],
+      category: 'Data',
+      popular: false,
+      icon: Database,
+      link: 'https://ziontechgroup.com/data-engineering'
+    },
+    {
+      id: 'enterprise-integration',
+      name: 'Enterprise Integration',
+      description: 'Seamless integration of enterprise systems and applications',
+      price: '$5,500/project',
+      marketPrice: '$11000-40000/project',
+      features: [
+        'System integration design',
+        'API development',
+        'Data synchronization',
+        'Workflow automation',
+        'Legacy system modernization',
+        'Integration testing'
+      ],
+      benefits: [
+        'Unified system landscape',
+        'Improved efficiency',
+        'Data consistency',
+        'Reduced manual work'
+      ],
+      category: 'Integration',
+      popular: true,
+      icon: Settings,
+      link: 'https://ziontechgroup.com/enterprise-integration'
+    },
+    {
+      id: 'digital-transformation',
+      name: 'Digital Transformation',
+      description: 'Complete digital transformation strategy and implementation for modern businesses',
       price: '$10,000/project',
       marketPrice: '$20000-100000/project',
       features: [
-        'Custom e-commerce development',
-        'Payment gateway integration',
-        'Inventory management',
-        'Order processing automation',
-        'Mobile commerce optimization',
-        'SEO and marketing tools'
+        'Digital strategy development',
+        'Process digitization',
+        'Technology modernization',
+        'Change management',
+        'Training and support',
+        'Performance monitoring'
       ],
       benefits: [
-        'Increased online sales',
-        'Better user experience',
-        'Mobile optimization',
-        'Scalable platform'
+        'Modern business processes',
+        'Improved efficiency',
+        'Better customer experience',
+        'Competitive advantage'
       ],
-      category: 'E-commerce',
+      category: 'Transformation',
       popular: true,
-      icon: ShoppingCart
+      icon: TrendingUp,
+      link: 'https://ziontechgroup.com/digital-transformation'
     },
+    {
+      id: 'quality-assurance',
+      name: 'Quality Assurance & Testing',
+      description: 'Comprehensive software testing and quality assurance services',
+      price: '$1,500/project',
+      marketPrice: '$3000-12000/project',
+      features: [
+        'Automated testing setup',
+        'Manual testing services',
+        'Performance testing',
+        'Security testing',
+        'User acceptance testing',
+        'Test documentation'
+      ],
+      benefits: [
+        'Higher software quality',
+        'Reduced bugs',
+        'Better user experience',
+        'Faster delivery'
+      ],
+      category: 'Testing',
+      popular: false,
+      icon: CheckCircle,
+      link: 'https://ziontechgroup.com/quality-assurance'
+    },
+    {
+      id: 'technical-support',
+      name: '24/7 Technical Support',
+      description: 'Round-the-clock technical support and maintenance services',
+      price: '$800/month',
+      marketPrice: '$1500-5000/month',
+      features: [
+        '24/7 help desk support',
+        'Remote troubleshooting',
+        'System monitoring',
+        'Incident management',
+        'Performance optimization',
+        'Regular maintenance'
+      ],
+      benefits: [
+        'Minimized downtime',
+        'Quick issue resolution',
+        'Proactive maintenance',
+        'Peace of mind'
+      ],
+      category: 'Support',
+      popular: true,
+      icon: Headphones,
+      link: 'https://ziontechgroup.com/technical-support'
+    },
+    {
+      id: 'compliance-consulting',
+      name: 'Compliance Consulting',
+      description: 'IT compliance consulting for GDPR, HIPAA, SOX, and other regulatory requirements',
+      price: '$2,000/month',
+      marketPrice: '$4000-15000/month',
+      features: [
+        'Compliance assessment',
+        'Policy development',
+        'Audit preparation',
+        'Training programs',
+        'Documentation review',
+        'Ongoing support'
+      ],
+      benefits: [
+        'Regulatory compliance',
+        'Risk mitigation',
+        'Audit readiness',
+        'Expert guidance'
+      ],
+      category: 'Compliance',
+      popular: false,
+      icon: Shield,
+      link: 'https://ziontechgroup.com/compliance-consulting'
+    },
+    {
+      id: 'disaster-recovery',
+      name: 'Disaster Recovery Solutions',
+      description: 'Comprehensive disaster recovery planning and implementation services',
+      price: '$2,800/month',
+      marketPrice: '$5000-20000/month',
+      features: [
+        'Disaster recovery planning',
+        'Backup strategy design',
+        'Recovery testing',
+        'Business continuity planning',
+        'Cloud backup solutions',
+        'Recovery time optimization'
+      ],
+      benefits: [
+        'Business continuity',
+        'Minimized data loss',
+        'Faster recovery times',
+        'Reduced downtime costs'
+      ],
+      category: 'Recovery',
+      popular: false,
+      icon: Server,
+      link: 'https://ziontechgroup.com/disaster-recovery'
+    },
+    {
+      id: 'performance-optimization',
+      name: 'Performance Optimization',
+      description: 'System and application performance optimization for maximum efficiency',
+      price: '$1,800/project',
+      marketPrice: '$3500-12000/project',
+      features: [
+        'Performance analysis',
+        'Code optimization',
+        'Database tuning',
+        'Infrastructure optimization',
+        'Load testing',
+        'Monitoring setup'
+      ],
+      benefits: [
+        'Faster application performance',
+        'Better user experience',
+        'Reduced server costs',
+        'Improved scalability'
+      ],
+      category: 'Optimization',
+      popular: false,
+      icon: Zap,
+      link: 'https://ziontechgroup.com/performance-optimization'
+    },
+    {
+      id: 'staff-augmentation',
+      name: 'IT Staff Augmentation',
+      description: 'Skilled IT professionals to augment your existing team on a project or ongoing basis',
+      price: '$75-150/hour',
+      marketPrice: '$100-300/hour',
+      features: [
+        'Expert developers',
+        'System administrators',
+        'DevOps engineers',
+        'Security specialists',
+        'Project managers',
+        'Flexible engagement models'
+      ],
+      benefits: [
+        'Access to top talent',
+        'Flexible scaling',
+        'Cost-effective solution',
+        'Quick team expansion'
+      ],
+      category: 'Staffing',
+      popular: true,
+      icon: Users,
+      link: 'https://ziontechgroup.com/staff-augmentation'
+    }
+  ];
     {
       id: 'enterprise-software',
       name: 'Enterprise Software Development',
