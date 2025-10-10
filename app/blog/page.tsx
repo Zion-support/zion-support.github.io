@@ -68,11 +68,9 @@ const BlogPage: React.FC = () => {
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Tech Insights & Blog
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Tech Insights & Blog</h1>
               </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Stay ahead with the latest trends, insights, and best practices in AI, cloud computing, and technology.
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Stay ahead with the latest trends, insights, and best practices in AI, cloud computing, and technology.</p>
               </p>
             </div>
 
@@ -82,29 +80,22 @@ const BlogPage: React.FC = () => {
                 <input
                   type="text"
                   placeholder="Search articles..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400/50 focus:ring-2 focus:ring-cyan-400/20"
-                />
+                  value={searchQuery}, onChange={(e) =>setSearchQuery(e.target.value)}, className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400/50 focus:ring-2 focus:ring-cyan-400/20"
+                /></input>
               </div>
             </div>
 
-            <div className="flex flex-wrap justify-center gap-4 mb-12">
-              {categories.map((category) => (
+            <div className="flex flex-wrap justify-center gap-4 mb-12">{categories.map((category) => (</div>
                 <button
-                  key={category}
-                  className="px-6 py-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-full text-white hover:bg-white/20 transition-all duration-300"
-                >
-                  {category}
+                  key={category}, className="px-6 py-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-full text-white hover:bg-white/20 transition-all duration-300"
+                >{category}</button>
                 </button>
               ))}
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredPosts.map((post) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{filteredPosts.map((post) => (</div>
                 <article
-                  key={post.id}
-                  className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-cyan-400/30 transition-all duration-300 group"
+                  key={post.id}, className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-cyan-400/30 transition-all duration-300 group"
                 >
                   <div className="aspect-video bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-xl mb-6 flex items-center justify-center">
                     <div className="text-6xl opacity-50">📝</div>
@@ -112,30 +103,24 @@ const BlogPage: React.FC = () => {
                   
                   <div className="flex items-center gap-4 text-sm text-gray-400 mb-4">
                     <span className="flex items-center gap-1">
-                      <Calendar className="w-4 h-4" />
-                      {post.date}
+                      <Calendar className="w-4 h-4" />{post.date}</Calendar>
                     </span>
                     <span className="flex items-center gap-1">
-                      <Clock className="w-4 h-4" />
-                      {post.readTime}
+                      <Clock className="w-4 h-4" />{post.readTime}</Clock>
                     </span>
                   </div>
 
-                  <h2 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
-                    {post.title}
+                  <h2 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">{post.title}</h2>
                   </h2>
                   
-                  <p className="text-gray-300 mb-4 line-clamp-3">
-                    {post.excerpt}
+                  <p className="text-gray-300 mb-4 line-clamp-3">{post.excerpt}</p>
                   </p>
 
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2 text-sm text-gray-400">
-                      <User className="w-4 h-4" />
-                      {post.author}
+                      <User className="w-4 h-4" />{post.author}</User>
                     </div>
-                    <button className="flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors">
-                      Read More
+                    <button className="flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors">Read More</button>
                       <ArrowRight className="w-4 h-4" />
                     </button>
                   </div>

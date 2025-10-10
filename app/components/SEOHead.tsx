@@ -11,7 +11,7 @@ interface SEOHeadProps {
   structuredData?: object
   }
 }
-const SEOHead: React.FC<SEOHeadProps> = ({
+const SEOHead: React.FC<SEOHeadProps>= ({
     title = 'Zion Tech Group - Advanced AI & IT Solutions',
   description = 'Transform your business with cutting-edge artificial intelligence, cloud infrastructure, and innovative technology solutions. Expert AI and IT consulting services.',
   keywords = 'AI solutions, IT consulting, cloud infrastructure, cybersecurity, automation, machine learning, artificial intelligence, business transformation',
@@ -54,39 +54,32 @@ const defaultStructuredData = {
       "https: //twitter.com/ziontechgroup"
     ],
   }
-return (
-    <Helmet>
-      {/* Basic Meta Tags */}
+return (</SEOHeadProps>
+    <Helmet>{/* Basic Meta Tags */}</Helmet>
       <title>{fullTitle}</title>
       <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
-      <meta>
-      {/* Canonical URL */},
+      <meta>{/* Canonical URL */},</meta>
     {canonicalUrl && <link rel="canonical" href={canonicalUrl} />},
-    {/* Open Graph Meta Tags */}
+    {/* Open Graph Meta Tags */}</link>
       <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
-      <meta>
-      {/* Twitter Card Meta Tags */}
+      <meta>{/* Twitter Card Meta Tags */}</meta>
       <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       <meta name="description" content="AI-powered solution" />
-        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
-      {/* Additional SEO Meta Tags */}
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />{/* Additional SEO Meta Tags */}</meta>
       <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       <meta name="description" content="AI-powered solution" />
-        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
-
-      {/* Structured Data */}
-      <script>
-        {JSON.stringify(structuredData || defaultStructuredData)}
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />{/* Structured Data */}</meta>
+      <script>{JSON.stringify(structuredData || defaultStructuredData)}</script>
       </script>
     </Helmet>
   );

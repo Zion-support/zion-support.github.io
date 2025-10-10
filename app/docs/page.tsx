@@ -14,7 +14,7 @@ const DocsPage: React.FC = () => {
     { id: 'it-services', name: 'IT Services', icon: Cloud },
     { id: 'api', name: 'API Reference', icon: Code },
     { id: 'security', name: 'Security', icon: Shield }
-  ];];];
+  ];
   const documentation = [
     {
       id: 1,
@@ -112,7 +112,7 @@ const DocsPage: React.FC = () => {
     { title: 'Tutorials', url: '/tutorials', icon: BookOpen },
     { title: 'Community', url: '/community', icon: Users },
     { title: 'Support', url: '/support', icon: Shield }
-  ];];];
+  ];
   const filteredDocs = selectedCategory === 'all' 
     ? documentation ;
     : documentation.filter(doc => doc.category === selectedCategory);
@@ -134,20 +134,17 @@ const DocsPage: React.FC = () => {
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16 pt-24">
-          {/* Header */}
+        <div className="container mx-auto px-4 py-16 pt-24">{/* Header */}</div>
           <div className="text-center mb-16">
             <div className="flex items-center justify-center mb-6">
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4">
                 <BookOpen className="w-8 h-8 text-white" />
               </div>
-              <h1 className="text-4xl md:text-5xl font-bold text-white neon-text-enhanced">
-                Documentation
+              <h1 className="text-4xl md:text-5xl font-bold text-white neon-text-enhanced">Documentation</h1>
               </h1>
             </div>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Complete documentation for all our AI, IT, and Micro SaaS services. 
-              Find guides, API references, and best practices to help you build amazing applications.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">Complete documentation for all our AI, IT, and Micro SaaS services. 
+              Find guides, API references, and best practices to help you build amazing applications.</p>
             </p>
           </div>
 
@@ -158,20 +155,15 @@ const DocsPage: React.FC = () => {
               <input
                 type="text"
                 placeholder="Search documentation..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-4 py-4 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-              />
+                value={searchQuery}, onChange={(e) =>setSearchQuery(e.target.value)}, className="w-full pl-12 pr-4 py-4 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+              /></input>
             </div>
           </div>
 
           {/* Quick Links */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
-            {quickLinks.map((link, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">{quickLinks.map((link, index) => (</div>
               <a
-                key={index}
-                href={link.url}
-                className="cyber-card-enhanced p-6 text-center group hover:scale-105 transition-all duration-300"
+                key={index}, href={link.url}, className="cyber-card-enhanced p-6 text-center group hover:scale-105 transition-all duration-300"
               >
                 <link.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4 group-hover:text-cyan-300" />
                 <h3 className="text-lg font-semibold text-white group-hover:text-cyan-300">{link.title}</h3>
@@ -182,17 +174,14 @@ const DocsPage: React.FC = () => {
           {/* Category Filter */}
           <div className="mb-8">
             <h2 className="text-2xl font-bold text-white mb-6">Browse by Category</h2>
-            <div className="flex flex-wrap gap-4">
-              {categories.map((category) => (
+            <div className="flex flex-wrap gap-4">{categories.map((category) => (</div>
                 <button
-                  key={category.id}
-                  onClick={() => setSelectedCategory(category.id)}
-                  className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                  key={category.id}, onClick={() =>setSelectedCategory(category.id)}, className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                     selectedCategory === category.id
                       ? 'bg-cyan-500 text-white'
                       : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
                   }`}
-                >
+                ></button>
                   <category.icon className="w-5 h-5" />
                   <span>{category.name}</span>
                 </button>
@@ -201,29 +190,23 @@ const DocsPage: React.FC = () => {
           </div>
 
           {/* Documentation List */}
-          <div className="space-y-6">
-            {searchResults.map((doc) => (
-              <div key={doc.id} className="cyber-card-enhanced p-8 group hover:scale-105 transition-all duration-300">
+          <div className="space-y-6">{searchResults.map((doc) => (</div>
+              <div key={doc.id}, className="cyber-card-enhanced p-8 group hover:scale-105 transition-all duration-300">
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
-                      {doc.title}
+                    <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">{doc.title}</h3>
                     </h3>
-                    <p className="text-gray-300 mb-4 leading-relaxed">
-                      {doc.description}
+                    <p className="text-gray-300 mb-4 leading-relaxed">{doc.description}</p>
                     </p>
                     <div className="flex items-center space-x-6 text-sm text-gray-400 mb-4">
                       <span className="flex items-center">
-                        <FileText className="w-4 h-4 mr-1" />
-                        {doc.readTime} read
+                        <FileText className="w-4 h-4 mr-1" />{doc.readTime} read</FileText>
                       </span>
                       <span className="flex items-center">
-                        <Settings className="w-4 h-4 mr-1" />
-                        {doc.difficulty}
+                        <Settings className="w-4 h-4 mr-1" />{doc.difficulty}</Settings>
                       </span>
                       <span className="flex items-center">
-                        <Database className="w-4 h-4 mr-1" />
-                        Updated {doc.lastUpdated}
+                        <Database className="w-4 h-4 mr-1" />Updated {doc.lastUpdated}</Database>
                       </span>
                     </div>
                   </div>
@@ -234,19 +217,16 @@ const DocsPage: React.FC = () => {
                         : doc.difficulty === 'Intermediate'
                         ? 'bg-yellow-600 text-white'
                         : 'bg-red-600 text-white'
-                    }`}>
-                      {doc.difficulty}
+                    }`}>{doc.difficulty}</span>
                     </span>
                   </div>
                 </div>
                 
                 <div className="mb-6">
                   <h4 className="text-white font-semibold mb-3">Sections:</h4>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2">
-                    {doc.sections.map((section, sectionIndex) => (
-                      <div key={sectionIndex} className="flex items-center text-gray-300 text-sm">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                        {section}
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2">{doc.sections.map((section, sectionIndex) => (</div>
+                      <div key={sectionIndex}, className="flex items-center text-gray-300 text-sm">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />{section}</CheckCircle>
                       </div>
                     ))}
                   </div>
@@ -257,16 +237,14 @@ const DocsPage: React.FC = () => {
                     <a
                       href={`/docs/${doc.id}`}
                       className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 flex items-center"
-                    >
-                      Read Guide
+                    >Read Guide</a>
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </a>
                     <a
                       href={`/docs/${doc.id}/download`}
                       className="border-2 border-cyan-400 text-cyan-400 px-6 py-2 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center"
                     >
-                      <Download className="w-4 h-4 mr-2" />
-                      Download PDF
+                      <Download className="w-4 h-4 mr-2" />Download PDF</Download>
                     </a>
                   </div>
                 </div>
@@ -279,14 +257,12 @@ const DocsPage: React.FC = () => {
             <div className="cyber-card-enhanced p-8 text-center">
               <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">No results found</h3>
-              <p className="text-gray-300 mb-6">
-                Try adjusting your search terms or browse our documentation categories.
+              <p className="text-gray-300 mb-6">Try adjusting your search terms or browse our documentation categories.</p>
               </p>
               <button
-                onClick={() => setSearchQuery('')}
-                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
+                onClick={() =>setSearchQuery('')}, className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
               >
-                Clear Search
+                Clear Search</button>
               </button>
             </div>
           )},

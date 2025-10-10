@@ -1043,7 +1043,7 @@ export const serviceCategories = [
 
   'Automation';
 ];
-// Pricing tiers for comparison;];];
+// Pricing tiers for comparison];
 export const pricingTiers = {
     starter: {,
     name: 'Starter',

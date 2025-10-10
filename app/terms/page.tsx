@@ -108,49 +108,41 @@ const TermsPage: React.FC = () => {
       
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
         <div className="container mx-auto px-4 py-16">
-          <div className="max-w-4xl mx-auto">
-            {/* Header */}
+          <div className="max-w-4xl mx-auto">{/* Header */}</div>
             <div className="text-center mb-16">
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-6">
                 <Scale className="w-8 h-8 text-white" />
               </div>
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Terms of Service
+              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Terms of Service</h1>
               </h1>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                These terms and conditions outline the rules and regulations for the use of Zion Tech Group's website and services.
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">These terms and conditions outline the rules and regulations for the use of Zion Tech Group's website and services.</p>
               </p>
-              <div className="mt-4 text-sm text-gray-400">
-                Last updated: {lastUpdated}
+              <div className="mt-4 text-sm text-gray-400">Last updated: {lastUpdated}</div>
               </div>
             </div>
 
             {/* Introduction */}
             <div className="bg-slate-800/50 rounded-lg p-8 mb-12">
               <h2 className="text-2xl font-bold text-white mb-4">Introduction</h2>
-              <p className="text-gray-300 leading-relaxed mb-4">
-                Welcome to Zion Tech Group. These Terms of Service ("Terms") govern your use of our website located at 
-                ziontechgroup.com (the "Service") operated by Zion Tech Group ("us", "we", or "our").
+              <p className="text-gray-300 leading-relaxed mb-4">Welcome to Zion Tech Group. These Terms of Service ("Terms") govern your use of our website located at 
+                ziontechgroup.com (the "Service") operated by Zion Tech Group ("us", "we", or "our").</p>
               </p>
-              <p className="text-gray-300 leading-relaxed">
-                By accessing or using our Service, you agree to be bound by these Terms. If you disagree with any part 
-                of these terms, then you may not access the Service.
+              <p className="text-gray-300 leading-relaxed">By accessing or using our Service, you agree to be bound by these Terms. If you disagree with any part 
+                of these terms, then you may not access the Service.</p>
               </p>
             </div>
 
             {/* Main Sections */}
-            <div className="space-y-8">
-              {sections.map((section, index) => (
-                <div key={index} className="bg-slate-800/50 rounded-lg p-8">
+            <div className="space-y-8">{sections.map((section, index) => (</div>
+                <div key={index}, className="bg-slate-800/50 rounded-lg p-8">
                   <div className="flex items-start space-x-4 mb-6">
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
                       <section.icon className="w-6 h-6 text-white" />
                     </div>
                     <h2 className="text-2xl font-bold text-white">{section.title}</h2>
                   </div>
-                  <ul className="space-y-4">
-                    {section.content.map((item, itemIndex) => (
-                      <li key={itemIndex} className="flex items-start space-x-3">
+                  <ul className="space-y-4">{section.content.map((item, itemIndex) => (</ul>
+                      <li key={itemIndex}, className="flex items-start space-x-3">
                         <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
                         <p className="text-gray-300 leading-relaxed">{item}</p>
                       </li>
@@ -161,9 +153,8 @@ const TermsPage: React.FC = () => {
             </div>
 
             {/* Additional Sections */}
-            <div className="mt-12 space-y-8">
-              {additionalSections.map((section, index) => (
-                <div key={index} className="bg-slate-800/50 rounded-lg p-8">
+            <div className="mt-12 space-y-8">{additionalSections.map((section, index) => (</div>
+                <div key={index}, className="bg-slate-800/50 rounded-lg p-8">
                   <h2 className="text-2xl font-bold text-white mb-4">{section.title}</h2>
                   <p className="text-gray-300 leading-relaxed">{section.content}</p>
                 </div>
@@ -208,8 +199,7 @@ const TermsPage: React.FC = () => {
             <div className="bg-slate-800/50 rounded-lg p-8 mt-8">
               <h2 className="text-2xl font-bold text-white mb-6">Payment Terms</h2>
               <div className="space-y-4 text-gray-300">
-                <p>
-                  Payment terms for our services are defined in individual service agreements. Generally:
+                <p>Payment terms for our services are defined in individual service agreements. Generally:</p>
                 </p>
                 <ul className="space-y-2 ml-6">
                   <li>• Invoices are due within 30 days of receipt unless otherwise specified</li>
@@ -223,8 +213,7 @@ const TermsPage: React.FC = () => {
             {/* Contact Information */}
             <div className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 border border-cyan-500/20 rounded-lg p-8 mt-12">
               <h2 className="text-2xl font-bold text-white mb-6">Contact Information</h2>
-              <p className="text-gray-300 mb-6">
-                If you have any questions about these Terms of Service, please contact us:
+              <p className="text-gray-300 mb-6">If you have any questions about these Terms of Service, please contact us:</p>
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="flex items-center space-x-3">

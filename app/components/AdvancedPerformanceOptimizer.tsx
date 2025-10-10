@@ -4,7 +4,7 @@ interface PerformanceOptimizerProps {
     children: React.ReactNode,
   enableOptimizations?: boolean
   }
-const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
+const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps>= ({
   children,
   enableOptimizations = true
 }) => {
@@ -95,10 +95,9 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] })
     return () => observer.disconnect();
   }, []);
-  return (
-    <div className="performance-optimized" data-optimized={isOptimized}>
-      {children},
-    {process.env.NODE_ENV === 'development' && (
+  return (</PerformanceOptimizerProps>
+    <div className="performance-optimized" data-optimized={isOptimized}>{children},
+    {process.env.NODE_ENV === 'development' && (</div>
         <div className="optimization-debug" style={{
           position: 'fixed',
           bottom: '10px',

@@ -21,23 +21,19 @@ import { Helmet } from 'react-helmet-async';
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center"></div>
             <h1>
-              <span>
-                Page
+              <span>Page</span>
               </span>
               <br>
               <span className="text-white">Solutions</span>
             </h1>
-            <p>
-              Transform your business with our advanced page solutions.;
-              Powered by cutting-edge AI technology and industry expertise.
+            <p>Transform your business with our advanced page solutions.;
+              Powered by cutting-edge AI technology and industry expertise.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <button>
-                Get Started
+              <button>Get Started</button>
                 <ArrowRight>
               </button>
-              <button>
-                Learn More
+              <button>Learn More</button>
               </button>
             </div>
           </div>

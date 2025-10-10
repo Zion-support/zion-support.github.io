@@ -66,7 +66,7 @@ const services = [
       description: 'System monitoring and alerts'
   }
     }
-  ];];];
+  ];
 const incidents = [
     {
     id: 1,
@@ -94,17 +94,13 @@ const getStatusIcon = (;
     switch (status) {
     case 'operational':;
 
-        return <CheckCircle>
-      case 'degraded':;
-        return <AlertTriangle>
-      case 'outage':;
-        return <XCircle>
-
-      default:;) => {
+        return <CheckCircle>case 'degraded':;</CheckCircle>
+        return <AlertTriangle>case 'outage':;</AlertTriangle>
+        return <XCircle>default:;) => {
   return (
     $3
   )
-  }
+  }</XCircle>
         return <Clock>}
     }
   }
@@ -145,30 +141,26 @@ const overallStatus = services.every(service => service.status === 'operational'
     : services.some(service => service.status === 'outage');
       ? 'outage';
       : 'degraded';
-return (
+return (</Clock>
           </h1>
-          <p>
-            Real-time status of all our services. We're committed to providing reliable,
-            high-performance AI and IT solutions.
+          <p>Real-time status of all our services. We're committed to providing reliable,
+            high-performance AI and IT solutions.</p>
           </p>
           <div className="flex items-center justify-center gap-4 mb-8"></div>
             <div className="flex items-center gap-2"></div>
 
               {getStatusIcon(overallStatus)}
-              <span>
-                {
+              <span>{
     overallStatus === 'operational' ? 'All Systems Operational' :
   }
-                 overallStatus === 'degraded' ? 'Degraded Performance' : 'Service Outage'}
+                 overallStatus === 'degraded' ? 'Degraded Performance' : 'Service Outage'}</span>
               </span>
             </div>
             <button>
-              <RefreshCw>
-              Refresh
+              <RefreshCw>Refresh</RefreshCw>
             </button>
           </div>
-          <p>
-            Last updated: {lastUpdated.toLocaleString()}
+          <p>Last updated: {lastUpdated.toLocaleString()}</p>
           </p>
         </div>
       </section>
@@ -188,15 +180,14 @@ return (
             {
     services.map((service, index) => (
   }
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300"></div>
+              <div key={index}, className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300"></div>
                 <div className="flex items-center justify-between mb-4"></div>
                   <div className="flex items-center gap-3"></div>
                     {getStatusIcon(service.status)}
                     <h3 className="text-lg font-semibold text-white">{service.name}</h3>
                   </div>
-                  <span>
-                    {service.status}
-
+                  <span>{service.status}
+</span>
                   </span>
                 </div>
                 <p className="text-gray-300 text-sm mb-4">{service.description}</p>
@@ -235,7 +226,7 @@ return (
             {
     incidents.map((incident) => (
   }
-              <div key={incident.id} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10"></div>
+              <div key={incident.id}, className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10"></div>
                 <div className="flex items-start justify-between mb-4"></div>
                   <div />
                     <h3 className="text-xl font-semibold text-white mb-2">{incident.title}</h3>
@@ -245,12 +236,10 @@ return (
                     </div>
                   </div>
                   <div className="flex items-center gap-2"></div>
-                    <span>
-                      {incident.severity}
+                    <span>{incident.severity}</span>
                     </span>
-                    <span>
-                      {incident.status}
-
+                    <span>{incident.status}
+</span>
                     </span>
                   </div>
                 </div>
@@ -313,22 +302,18 @@ return (
           </div>
         </section>
         <div className="max-w-4xl mx-auto text-center"></div>
-          <h2>
-            Need More Information?
+          <h2>Need More Information?</h2>
           </h2>
-          <p>
-            Subscribe to status updates or contact our support team for more details.
+          <p>Subscribe to status updates or contact our support team for more details.</p>
           </p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
-            <button>
-              Subscribe to Updates
+            <button>Subscribe to Updates</button>
             </button>
-            <button>
-              Contact Support
+            <button>Contact Support</button>
             </button>
           </div>
         </div>
       </section>
-      <Footer />
-  );
+      <Footer />);
 };
+</Footer>

@@ -10,7 +10,7 @@ interface AnimatedCounterProps {
   className?: string;
 }
 
-const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
+const AnimatedCounter: React.FC<AnimatedCounterProps>= ({
   end,
   duration = 2000,
   prefix = '',
@@ -32,7 +32,7 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
       const currentCount = Math.floor(easeOutQuart * end);
       
       setCount(currentCount);
-
+</AnimatedCounterProps>
       if (progress < 1) {
         animationFrame = requestAnimationFrame(animate);
       }
@@ -48,8 +48,7 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   }, [end, duration]);
 
   return (
-    <span className={className}>
-      {prefix}{count.toLocaleString()}{suffix}
+    <span className={className}>{prefix}{count.toLocaleString()}{suffix}</span>
     </span>
   );
 };

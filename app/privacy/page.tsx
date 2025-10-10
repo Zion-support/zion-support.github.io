@@ -62,7 +62,7 @@ const PrivacyPage: React.FC = () => {
       ]
     }
 <<<<<<< HEAD
-  ];];];
+  ];
   const purposes = [
     {
     }
@@ -103,50 +103,42 @@ const PrivacyPage: React.FC = () => {
       
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
         <div className="container mx-auto px-4 py-16">
-          <div className="max-w-4xl mx-auto">
-            {/* Header */}
+          <div className="max-w-4xl mx-auto">{/* Header */}</div>
             <div className="text-center mb-16">
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-6">
                 <Shield className="w-8 h-8 text-white" />
               </div>
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Privacy Policy
+              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Privacy Policy</h1>
               </h1>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Your privacy is important to us. This policy explains how we collect, use, and protect your personal information.
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">Your privacy is important to us. This policy explains how we collect, use, and protect your personal information.</p>
               </p>
-              <div className="mt-4 text-sm text-gray-400">
-                Last updated: {lastUpdated}
+              <div className="mt-4 text-sm text-gray-400">Last updated: {lastUpdated}</div>
               </div>
             </div>
 
             {/* Introduction */}
             <div className="bg-slate-800/50 rounded-lg p-8 mb-12">
               <h2 className="text-2xl font-bold text-white mb-4">Introduction</h2>
-              <p className="text-gray-300 leading-relaxed mb-4">
-                Zion Tech Group ("we," "our," or "us") is committed to protecting your privacy and personal information. 
+              <p className="text-gray-300 leading-relaxed mb-4">Zion Tech Group ("we," "our," or "us") is committed to protecting your privacy and personal information. 
                 This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit 
-                our website or use our services.
+                our website or use our services.</p>
               </p>
-              <p className="text-gray-300 leading-relaxed">
-                By using our website or services, you agree to the collection and use of information in accordance with this policy. 
-                If you do not agree with the terms of this Privacy Policy, please do not use our services.
+              <p className="text-gray-300 leading-relaxed">By using our website or services, you agree to the collection and use of information in accordance with this policy. 
+                If you do not agree with the terms of this Privacy Policy, please do not use our services.</p>
               </p>
             </div>
 
             {/* Policy Sections */}
-            <div className="space-y-8">
-              {sections.map((section, index) => (
-                <div key={index} className="bg-slate-800/50 rounded-lg p-8">
+            <div className="space-y-8">{sections.map((section, index) => (</div>
+                <div key={index}, className="bg-slate-800/50 rounded-lg p-8">
                   <div className="flex items-start space-x-4 mb-6">
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
                       <section.icon className="w-6 h-6 text-white" />
                     </div>
                     <h2 className="text-2xl font-bold text-white">{section.title}</h2>
                   </div>
-                  <ul className="space-y-4">
-                    {section.content.map((item, itemIndex) => (
-                      <li key={itemIndex} className="flex items-start space-x-3">
+                  <ul className="space-y-4">{section.content.map((item, itemIndex) => (</ul>
+                      <li key={itemIndex}, className="flex items-start space-x-3">
                         <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
                         <p className="text-gray-300 leading-relaxed">{item}</p>
                       </li>
@@ -160,13 +152,11 @@ const PrivacyPage: React.FC = () => {
             <div className="bg-slate-800/50 rounded-lg p-8 mt-12">
               <h2 className="text-2xl font-bold text-white mb-6">Cookies and Tracking Technologies</h2>
               <div className="space-y-4 text-gray-300">
-                <p>
-                  We use cookies and similar tracking technologies to enhance your browsing experience and analyze website traffic. 
-                  Cookies are small data files stored on your device that help us remember your preferences and improve our services.
+                <p>We use cookies and similar tracking technologies to enhance your browsing experience and analyze website traffic. 
+                  Cookies are small data files stored on your device that help us remember your preferences and improve our services.</p>
                 </p>
-                <p>
-                  You can control cookie settings through your browser preferences. However, disabling cookies may affect 
-                  the functionality of our website and services.
+                <p>You can control cookie settings through your browser preferences. However, disabling cookies may affect 
+                  the functionality of our website and services.</p>
                 </p>
               </div>
             </div>
@@ -175,13 +165,11 @@ const PrivacyPage: React.FC = () => {
             <div className="bg-slate-800/50 rounded-lg p-8 mt-8">
               <h2 className="text-2xl font-bold text-white mb-6">Third-Party Services</h2>
               <div className="space-y-4 text-gray-300">
-                <p>
-                  We may use third-party services for analytics, marketing, and other business purposes. These services 
-                  may collect information about your use of our website and services.
+                <p>We may use third-party services for analytics, marketing, and other business purposes. These services 
+                  may collect information about your use of our website and services.</p>
                 </p>
-                <p>
-                  We carefully select our third-party partners and ensure they comply with applicable privacy laws and 
-                  maintain appropriate security measures.
+                <p>We carefully select our third-party partners and ensure they comply with applicable privacy laws and 
+                  maintain appropriate security measures.</p>
                 </p>
               </div>
             </div>
@@ -190,13 +178,11 @@ const PrivacyPage: React.FC = () => {
             <div className="bg-slate-800/50 rounded-lg p-8 mt-8">
               <h2 className="text-2xl font-bold text-white mb-6">Data Retention</h2>
               <div className="space-y-4 text-gray-300">
-                <p>
-                  We retain your personal information only for as long as necessary to fulfill the purposes outlined in this 
-                  Privacy Policy, unless a longer retention period is required or permitted by law.
+                <p>We retain your personal information only for as long as necessary to fulfill the purposes outlined in this 
+                  Privacy Policy, unless a longer retention period is required or permitted by law.</p>
                 </p>
-                <p>
-                  When we no longer need your personal information, we will securely delete or anonymize it in accordance 
-                  with our data retention policies.
+                <p>When we no longer need your personal information, we will securely delete or anonymize it in accordance 
+                  with our data retention policies.</p>
                 </p>
               </div>
             </div>
@@ -205,9 +191,8 @@ const PrivacyPage: React.FC = () => {
             <div className="bg-slate-800/50 rounded-lg p-8 mt-8">
               <h2 className="text-2xl font-bold text-white mb-6">International Data Transfers</h2>
               <div className="space-y-4 text-gray-300">
-                <p>
-                  Your information may be transferred to and processed in countries other than your country of residence. 
-                  We ensure that such transfers comply with applicable data protection laws and implement appropriate safeguards.
+                <p>Your information may be transferred to and processed in countries other than your country of residence. 
+                  We ensure that such transfers comply with applicable data protection laws and implement appropriate safeguards.</p>
                 </p>
               </div>
             </div>
@@ -216,10 +201,9 @@ const PrivacyPage: React.FC = () => {
             <div className="bg-slate-800/50 rounded-lg p-8 mt-8">
               <h2 className="text-2xl font-bold text-white mb-6">Children's Privacy</h2>
               <div className="space-y-4 text-gray-300">
-                <p>
-                  Our services are not intended for children under 13 years of age. We do not knowingly collect personal 
+                <p>Our services are not intended for children under 13 years of age. We do not knowingly collect personal 
                   information from children under 13. If we become aware that we have collected personal information from 
-                  a child under 13, we will take steps to delete such information.
+                  a child under 13, we will take steps to delete such information.</p>
                 </p>
               </div>
             </div>
@@ -228,13 +212,11 @@ const PrivacyPage: React.FC = () => {
             <div className="bg-slate-800/50 rounded-lg p-8 mt-8">
               <h2 className="text-2xl font-bold text-white mb-6">Changes to This Privacy Policy</h2>
               <div className="space-y-4 text-gray-300">
-                <p>
-                  We may update this Privacy Policy from time to time. We will notify you of any changes by posting the 
-                  new Privacy Policy on this page and updating the "Last updated" date.
+                <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the 
+                  new Privacy Policy on this page and updating the "Last updated" date.</p>
                 </p>
-                <p>
-                  We encourage you to review this Privacy Policy periodically for any changes. Changes to this Privacy 
-                  Policy are effective when they are posted on this page.
+                <p>We encourage you to review this Privacy Policy periodically for any changes. Changes to this Privacy 
+                  Policy are effective when they are posted on this page.</p>
                 </p>
               </div>
             </div>
@@ -242,8 +224,7 @@ const PrivacyPage: React.FC = () => {
             {/* Contact Information */}
             <div className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 border border-cyan-500/20 rounded-lg p-8 mt-12">
               <h2 className="text-2xl font-bold text-white mb-6">Contact Us</h2>
-              <p className="text-gray-300 mb-6">
-                If you have any questions about this Privacy Policy or our data practices, please contact us:
+              <p className="text-gray-300 mb-6">If you have any questions about this Privacy Policy or our data practices, please contact us:</p>
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="flex items-center space-x-3">

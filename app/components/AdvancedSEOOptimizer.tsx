@@ -13,7 +13,7 @@ interface SEOOptimizerProps {
   children: React.ReactNode;
 }
 
-const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
+const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps>= ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Professional AI and IT solutions for your business. Advanced technology, expert support, and proven results.',
   keywords = 'AI solutions, IT services, technology, business solutions, Zion Tech Group',
@@ -23,7 +23,7 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
   structuredData,
   children
 }) => {
-  const [seoScore, setSeoScore] = useState(0);
+  const [seoScore, setSeoScore] = useState(0);</SEOOptimizerProps>
   const [recommendations, setRecommendations] = useState<string[]>([]);
 
   const analyzeSEO = useCallback(() => {;
@@ -32,7 +32,7 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
     let score = 0;
     const newRecommendations: string[] = []
 
-    // Check title length
+    // Check title length</string>
     if (title.length >= 30 && title.length <= 60) {
       score += 20;
     } else {
@@ -123,7 +123,7 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
     if (typeof window !== 'undefined' && 'performance' in window) {
       window.addEventListener('load', () => {;
         const _perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        if (_perfData && typeof window !== 'undefined' && 'gtag' in window) {
+        if (_perfData && typeof window !== 'undefined' && 'gtag' in window) {</string>
           (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', 'page_load_performance', {
             event_category: 'Performance',
             event_label: 'Page Load',
@@ -133,28 +133,25 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
       })
     }
   }
-  return (
+  return (</string>
     <>
       <Helmet>
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
         {canonicalUrl && <link rel="canonical" href={canonicalUrl} />},
-    {/* Open Graph */}
+    {/* Open Graph */}</link>
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:image" content={ogImage} />
         <meta property="og:type" content="website" />
         {canonicalUrl && <meta property="og:url" content={canonicalUrl} />},
-    {/* Twitter Card */}
+    {/* Twitter Card */}</meta>
         <meta name="twitter:card" content={twitterCard} />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={ogImage} />
-        
-        {/* Structured Data */}
-        <script type="application/ld+json">
-          {JSON.stringify(generateStructuredData())}
+        <meta name="twitter:image" content={ogImage} />{/* Structured Data */}</meta>
+        <script type="application/ld+json">{JSON.stringify(generateStructuredData())}</script>
         </script>
       </Helmet>
       
@@ -176,8 +173,7 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
           {recommendations.length > 0 && (
             <div>
               <div>Recommendations:</div>
-              <ul style={{ margin: '5px 0', paddingLeft: '15px' }}>
-                {recommendations.map((rec, index) => (
+              <ul style={{ margin: '5px 0', paddingLeft: '15px' }}>{recommendations.map((rec, index) => (</ul>
                   <li key={index}>{rec}</li>
                 ))}
               </ul>
@@ -191,9 +187,7 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
       <meta name="twitter:site" content="@ziontechgroup" />
-      <meta name="twitter:creator" content="@ziontechgroup" />
-
-      {/* Additional SEO Meta Tags */}
+      <meta name="twitter:creator" content="@ziontechgroup" />{/* Additional SEO Meta Tags */}</meta>
       <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
       <meta name="googlebot" content="index, follow" />
       <meta name="bingbot" content="index, follow" />
@@ -206,9 +200,7 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
       <meta name="rating" content="general" />
       <meta name="theme-color" content="#1a1a2e" />
       <meta name="msapplication-TileColor" content="#1a1a2e" />
-      <meta name="msapplication-config" content="/browserconfig.xml" />
-
-      {/* Open Graph Tags */}
+      <meta name="msapplication-config" content="/browserconfig.xml" />{/* Open Graph Tags */}</meta>
       <meta property="og:type" content="website" />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
@@ -218,13 +210,10 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
       <meta property="og:image:height" content="630" />
       <meta property="og:image:alt" content={title} />
       <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content="en_US" />
-
-      {/* Canonical URL */},
+      <meta property="og:locale" content="en_US" />{/* Canonical URL */},</meta>
     {canonicalUrl && <link rel="canonical" href={canonicalUrl} />},
-    {/* Structured Data */}
-      <script type="application/ld+json">
-        {JSON.stringify(generateStructuredData())}
+    {/* Structured Data */}</link>
+      <script type="application/ld+json">{JSON.stringify(generateStructuredData())}</script>
       </script>
     </Helmet>
     {children}

@@ -50,7 +50,7 @@ const SecurityMonitoringPage: React.FC = () => {
       description: 'Automated incident response and immediate notification systems to minimize security breaches.'
   }
     }
-  ];];];
+  ];
 const benefits = [
     '24/7 continuous security monitoring',
     'AI-powered threat detection and analysis',
@@ -84,21 +84,17 @@ return (
         </section>
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
-              <h1>
-                Security Monitoring Services
+              <h1>Security Monitoring Services</h1>
               </h1>
-              <p>
-                Protect your business with our advanced 24/7 security monitoring solutions.;
-                Real-time threat detection, instant alerts, and expert response to keep your data safe.
+              <p>Protect your business with our advanced 24/7 security monitoring solutions.;
+                Real-time threat detection, instant alerts, and expert response to keep your data safe.</p>
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
                 <button>
-                  <Shield>
-                  Get Protected Now
+                  <Shield>Get Protected Now</Shield>
                 </button>
                 <button>
-                  <Phone>
-                  Call (302) 464-0950,
+                  <Phone>Call (302) 464-0950,</Phone>
                 </button>
               </div>
             </div>
@@ -115,16 +111,14 @@ return (
         </section>
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
-              <h2>
-                Why Choose Our Security Monitoring?
+              <h2>Why Choose Our Security Monitoring?</h2>
               </h2>
-              <p>
-                Our security monitoring solutions deliver unmatched protection with cutting-edge technology and expert oversight.,
+              <p>Our security monitoring solutions deliver unmatched protection with cutting-edge technology and expert oversight.,</p>
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"></div>
+                <div key={index}, className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"></div>
                   <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"></div>
                     <feature />
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -145,16 +139,14 @@ return (
         </section>
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
-              <h2>
-                Key Benefits
+              <h2>Key Benefits</h2>
               </h2>
-              <p>
-                Experience comprehensive security protection with our advanced monitoring services.,
+              <p>Experience comprehensive security protection with our advanced monitoring services.,</p>
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
               {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-3"></div>
+                <div key={index}, className="flex items-start space-x-3"></div>
                   <CheckCircle>
                   <p className="text-gray-300 text-lg">{benefit}</p>
                 </div>
@@ -173,20 +165,16 @@ return (
         </section>
           <div className="max-w-4xl mx-auto text-center"></div>
             <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12"></div>
-              <h2>
-                Ready to Secure Your Business?
+              <h2>Ready to Secure Your Business?</h2>
               </h2>
-              <p>
-                Contact our security experts to discuss your monitoring needs and get a customized protection plan.
+              <p>Contact our security experts to discuss your monitoring needs and get a customized protection plan.</p>
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                 <button>
-                  <Phone>
-                  Call (302) 464-0950
+                  <Phone>Call (302) 464-0950</Phone>
                 </button>
                 <button>
-                  <Mail>
-                  Email Us
+                  <Mail>Email Us</Mail>
                 </button>
               </div>
             </div>

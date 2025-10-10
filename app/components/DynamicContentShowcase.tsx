@@ -48,7 +48,7 @@ const DynamicContentShowcase: React.FC = () => {
       icon: Globe,
       color: 'from-teal-500 to-cyan-600'
     }
-  ];];];
+  ];
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -93,23 +93,18 @@ const DynamicContentShowcase: React.FC = () => {
   }, [features.length]);
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      {/* Features Showcase */}
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">{/* Features Showcase */}</div>
       <div className="text-center mb-16">
-        <h2 className="text-3xl font-bold text-white mb-4">
-          Dynamic Content Showcase
+        <h2 className="text-3xl font-bold text-white mb-4">Dynamic Content Showcase</h2>
         </h2>
-        <p className="text-gray-300 max-w-2xl mx-auto">
-          Experience our cutting-edge solutions through interactive demonstrations
+        <p className="text-gray-300 max-w-2xl mx-auto">Experience our cutting-edge solutions through interactive demonstrations</p>
         </p>
       </div>
 
       {/* Feature Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-        {features.map((feature, index) => (
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">{features.map((feature, index) => (</div>
           <div
-            key={feature.id}
-            className={`bg-gradient-to-br ${feature.color} p-6 rounded-2xl text-white transform transition-all duration-500 ${
+            key={feature.id}, className={`bg-gradient-to-br ${feature.color} p-6 rounded-2xl text-white transform transition-all duration-500 ${
               index === currentIndex ? 'scale-105 shadow-2xl' : 'scale-100'
             }`}
           >
@@ -127,9 +122,8 @@ const DynamicContentShowcase: React.FC = () => {
       {/* Benefits Section */}
       <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 mb-16">
         <h3 className="text-2xl font-bold text-white mb-6 text-center">Key Benefits</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          {benefits.map((benefit, index) => (
-            <div key={index} className="flex items-center space-x-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">{benefits.map((benefit, index) => (</div>
+            <div key={index}, className="flex items-center space-x-3">
               <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
               <span className="text-gray-300">{benefit}</span>
             </div>
@@ -138,13 +132,10 @@ const DynamicContentShowcase: React.FC = () => {
       </div>
 
       {/* Testimonials */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {testimonials.map((testimonial, index) => (
-          <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10">
-            <div className="flex items-center mb-4">
-              {[...Array(testimonial.rating)].map((_, i) => (
-                <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-              ))}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">{testimonials.map((testimonial, index) => (</div>
+          <div key={index}, className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10">
+            <div className="flex items-center mb-4">{[...Array(testimonial.rating)].map((_, i) => (</div>
+                <Star key={i}, className="w-5 h-5 text-yellow-400 fill-current" />))}</Star>
             </div>
             <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
             <div className="border-t border-white/10 pt-4">
@@ -157,8 +148,7 @@ const DynamicContentShowcase: React.FC = () => {
 
       {/* CTA Section */}
       <div className="text-center mt-16">
-        <button className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
-          Get Started Today
+        <button className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">Get Started Today</button>
           <ArrowRight className="w-5 h-5 ml-2" />
         </button>
       </div>

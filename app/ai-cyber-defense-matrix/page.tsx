@@ -15,8 +15,10 @@ const AICyberDefenseMatrix: React.FC = () => {
       icon: Shield,
       title: 'AI Threat Detection',
       description: 'Advanced AI algorithms for real-time threat detection and automated response',
-      benefits: ['99.9% threat detection rate', 'Real-time monitoring', 'Automated response'];
+      benefits: ['99.9% threat detection rate', 'Real-time monitoring', 'Automated response'],
+
     },
+
     {
       icon: Zap,
       title: 'Zero-Trust Architecture',
@@ -35,7 +37,7 @@ const AICyberDefenseMatrix: React.FC = () => {
       description: 'Intelligent incident response with automated containment and remediation',
       benefits: ['Automated containment', 'Rapid response', 'Minimal downtime']
     },
-  ];];];
+  ];
   const pricingPlans = [
     {
       name: 'Essential',
@@ -114,7 +116,7 @@ const AICyberDefenseMatrix: React.FC = () => {
       icon: Zap,
       results: '100% infrastructure protection'
     }
-  ];];];
+  ];
   return (
     <>
       <Helmet>
@@ -128,8 +130,7 @@ const AICyberDefenseMatrix: React.FC = () => {
         <link rel="canonical" href="https://ziontechgroup.com/ai-cyber-defense-matrix" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 text-white">
-        {/* Hero Section */}
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 text-white">{/* Hero Section */}</div>
         <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-red-500/10 via-orange-500/10 to-yellow-500/10"></div>
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-red-500/20 via-transparent to-transparent"></div>
@@ -141,13 +142,11 @@ const AICyberDefenseMatrix: React.FC = () => {
                 <span className="text-red-400 font-semibold">Cyber Defense</span>
               </div>
               
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent">
-                AI Cyber Defense Matrix
+              <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent">AI Cyber Defense Matrix</h1>
               </h1>
               
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Revolutionary AI-powered cyber defense platform with 99.9% threat detection, 
-                zero-trust architecture, and automated incident response for enterprise security.
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">Revolutionary AI-powered cyber defense platform with 99.9% threat detection, 
+                zero-trust architecture, and automated incident response for enterprise security.</p>
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
@@ -170,15 +169,13 @@ const AICyberDefenseMatrix: React.FC = () => {
                   href="tel:+13024640950"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-xl hover:from-red-600 hover:to-orange-700 transition-all duration-300 shadow-lg shadow-red-500/25 hover:shadow-red-500/40 hover:scale-105"
                 >
-                  <Phone className="w-5 h-5 mr-2" />
-                  Call (302) 464-0950
+                  <Phone className="w-5 h-5 mr-2" />Call (302) 464-0950</Phone>
                 </a>
                 <a
                   href="mailto:kleber@ziontechgroup.com"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-500 to-yellow-600 text-white font-semibold rounded-xl hover:from-orange-600 hover:to-yellow-700 transition-all duration-300 shadow-lg shadow-orange-500/25 hover:shadow-orange-500/40 hover:scale-105"
                 >
-                  <Mail className="w-5 h-5 mr-2" />
-                  Get Quote
+                  <Mail className="w-5 h-5 mr-2" />Get Quote</Mail>
                 </a>
               </div>
             </div>
@@ -189,31 +186,25 @@ const AICyberDefenseMatrix: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">
-                Advanced Cyber Defense Features
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">Advanced Cyber Defense Features</h2>
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our AI-powered cyber defense matrix provides comprehensive security solutions 
-                with advanced threat detection and automated response capabilities.
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">Our AI-powered cyber defense matrix provides comprehensive security solutions 
+                with advanced threat detection and automated response capabilities.</p>
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{features.map((feature, index) => (</div>
                 <div
-                  key={index}
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-8 border border-red-500/20 hover:border-red-500/40 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-red-500/10"
+                  key={index}, className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-8 border border-red-500/20 hover:border-red-500/40 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-red-500/10"
                 >
                   <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-600 rounded-xl flex items-center justify-center mb-6">
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold mb-4 text-white">{feature.title}</h3>
                   <p className="text-gray-300 mb-6">{feature.description}</p>
-                  <ul className="space-y-2">
-                    {feature.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-red-400">
-                        <CheckCircle className="w-4 h-4 mr-2 flex-shrink-0" />
-                        {benefit}
+                  <ul className="space-y-2">{feature.benefits.map((benefit, idx) => (</ul>
+                      <li key={idx}, className="flex items-center text-sm text-red-400">
+                        <CheckCircle className="w-4 h-4 mr-2 flex-shrink-0" />{benefit}</CheckCircle>
                       </li>
                     ))}
                   </ul>
@@ -227,28 +218,23 @@ const AICyberDefenseMatrix: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/30 to-slate-900/30">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent">
-                Enterprise Security Applications
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent">Enterprise Security Applications</h2>
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our AI cyber defense matrix is trusted by leading organizations 
-                across various industries for mission-critical security protection.
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">Our AI cyber defense matrix is trusted by leading organizations 
+                across various industries for mission-critical security protection.</p>
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {useCases.map((useCase, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{useCases.map((useCase, index) => (</div>
                 <div
-                  key={index}
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-8 border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300 hover:scale-105"
+                  key={index}, className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-8 border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300 hover:scale-105"
                 >
                   <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-yellow-600 rounded-xl flex items-center justify-center mb-6">
                     <useCase.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold mb-4 text-white">{useCase.title}</h3>
                   <p className="text-gray-300 mb-4">{useCase.description}</p>
-                  <div className="text-red-400 font-semibold text-sm">
-                    {useCase.results}
+                  <div className="text-red-400 font-semibold text-sm">{useCase.results}</div>
                   </div>
                 </div>
               ))}
@@ -260,29 +246,23 @@ const AICyberDefenseMatrix: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-yellow-400 to-red-400 bg-clip-text text-transparent">
-                Security-First Pricing
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-yellow-400 to-red-400 bg-clip-text text-transparent">Security-First Pricing</h2>
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the perfect cyber defense plan for your organization. 
-                All plans include our advanced AI threat detection and response capabilities.
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">Choose the perfect cyber defense plan for your organization. 
+                All plans include our advanced AI threat detection and response capabilities.</p>
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (</div>
                 <div
-                  key={index}
-                  className={`relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-xl ${
+                  key={index}, className={`relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-xl ${
                     plan.popular 
                       ? 'border-red-500/50 shadow-red-500/20' 
                       : 'border-gray-700/50 hover:border-red-500/30'
                   }`}
-                >
-                  {plan.popular && (
+                >{plan.popular && (</div>
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <div className="bg-gradient-to-r from-red-500 to-orange-600 text-white px-6 py-2 rounded-full text-sm font-semibold">
-                        Most Popular
+                      <div className="bg-gradient-to-r from-red-500 to-orange-600 text-white px-6 py-2 rounded-full text-sm font-semibold">Most Popular</div>
                       </div>
                     </div>
                   )}
@@ -296,11 +276,9 @@ const AICyberDefenseMatrix: React.FC = () => {
                     </div>
                   </div>
                   
-                  <ul className="space-y-4 mb-8">
-                    {plan.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-red-400 mr-3 flex-shrink-0" />
-                        {feature}
+                  <ul className="space-y-4 mb-8">{plan.features.map((feature, idx) => (</ul>
+                      <li key={idx}, className="flex items-center text-gray-300">
+                        <CheckCircle className="w-5 h-5 text-red-400 mr-3 flex-shrink-0" />{feature}</CheckCircle>
                       </li>
                     ))}
                   </ul>
@@ -312,8 +290,7 @@ const AICyberDefenseMatrix: React.FC = () => {
                         ? 'bg-gradient-to-r from-red-500 to-orange-600 text-white hover:from-red-600 hover:to-orange-700'
                         : 'bg-gradient-to-r from-gray-700 to-gray-600 text-white hover:from-gray-600 hover:to-gray-500'
                     }`}
-                  >
-                    Get Started
+                  >Get Started</a>
                   </a>
                 </div>
               ))}
@@ -324,27 +301,23 @@ const AICyberDefenseMatrix: React.FC = () => {
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-red-500/10 via-orange-500/10 to-yellow-500/10">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-red-400 to-yellow-400 bg-clip-text text-transparent">
-              Secure Your Digital Future
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-red-400 to-yellow-400 bg-clip-text text-transparent">Secure Your Digital Future</h2>
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join leading organizations using our AI-powered cyber defense matrix 
-              to protect against evolving cyber threats and ensure business continuity.
+            <p className="text-xl text-gray-300 mb-8">Join leading organizations using our AI-powered cyber defense matrix 
+              to protect against evolving cyber threats and ensure business continuity.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-xl hover:from-red-600 hover:to-orange-700 transition-all duration-300 shadow-lg shadow-red-500/25 hover:shadow-red-500/40 hover:scale-105"
               >
-                <Phone className="w-5 h-5 mr-2" />
-                Call (302) 464-0950
+                <Phone className="w-5 h-5 mr-2" />Call (302) 464-0950</Phone>
               </a>
               <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-500 to-yellow-600 text-white font-semibold rounded-xl hover:from-orange-600 hover:to-yellow-700 transition-all duration-300 shadow-lg shadow-orange-500/25 hover:shadow-orange-500/40 hover:scale-105"
               >
-                <Mail className="w-5 h-5 mr-2" />
-                Get Free Quote
+                <Mail className="w-5 h-5 mr-2" />Get Free Quote</Mail>
               </a>
             </div>
           </div>

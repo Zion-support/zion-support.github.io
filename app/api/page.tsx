@@ -143,7 +143,7 @@ const ApiPage: React.FC = () => {
         }
   ]
     }
-  ];];];
+  ];
   const authenticationMethods = [
     {
       name: 'API Key',
@@ -168,7 +168,7 @@ const ApiPage: React.FC = () => {
     { tier: 'Free', requests: '1,000/month', burst: '10/minute' },
     { tier: 'Pro', requests: '50,000/month', burst: '100/minute' },
     { tier: 'Enterprise', requests: 'Unlimited', burst: '1,000/minute' }
-  ];];];
+  ];
   return (
     <>
       <Helmet>
@@ -179,34 +179,28 @@ const ApiPage: React.FC = () => {
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16 pt-24">
-          {/* Header */}
+        <div className="container mx-auto px-4 py-16 pt-24">{/* Header */}</div>
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text-enhanced">
-              API Reference
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text-enhanced">API Reference</h1>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Comprehensive API documentation for all Zion Tech Group services. 
-              Build powerful applications with our AI, IT, and Micro SaaS APIs.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">Comprehensive API documentation for all Zion Tech Group services. 
+              Build powerful applications with our AI, IT, and Micro SaaS APIs.</p>
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a
                 href="#getting-started"
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
-              >
-                Get Started
+              >Get Started</a>
               </a>
               <a
                 href="#authentication"
                 className="border-2 border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-              >
-                Authentication
+              >Authentication</a>
               </a>
               <a
                 href="#endpoints"
                 className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300"
-              >
-                View Endpoints
+              >View Endpoints</a>
               </a>
             </div>
           </div>
@@ -240,26 +234,23 @@ const ApiPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-white mb-8 text-center">Getting Started</h2>
             <div className="cyber-card-enhanced p-8">
               <h3 className="text-xl font-semibold text-white mb-4">1. Get Your API Key</h3>
-              <p className="text-gray-300 mb-6">
-                Sign up for a free account and get your API key from the dashboard.
+              <p className="text-gray-300 mb-6">Sign up for a free account and get your API key from the dashboard.</p>
               </p>
               
               <h3 className="text-xl font-semibold text-white mb-4">2. Make Your First Request</h3>
               <div className="bg-slate-800 rounded-lg p-4 mb-6">
-                <pre className="text-green-400 text-sm overflow-x-auto">
-{`curl -X POST https://api.ziontechgroup.com/v1/ai/chat \\
+                <pre className="text-green-400 text-sm overflow-x-auto">{`curl -X POST https://api.ziontechgroup.com/v1/ai/chat \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json" \\
   -d '{
     "message": "Hello, world!",
     "model": "gpt-4"
-  }'`}
+  }'`}</pre>
                 </pre>
               </div>
 
               <h3 className="text-xl font-semibold text-white mb-4">3. Explore the Documentation</h3>
-              <p className="text-gray-300">
-                Browse our comprehensive API documentation to discover all available endpoints and features.
+              <p className="text-gray-300">Browse our comprehensive API documentation to discover all available endpoints and features.</p>
               </p>
             </div>
           </section>
@@ -267,9 +258,8 @@ const ApiPage: React.FC = () => {
           {/* Authentication */}
           <section id="authentication" className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">Authentication</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {authenticationMethods.map((method, index) => (
-                <div key={index} className="cyber-card-enhanced p-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">{authenticationMethods.map((method, index) => (</div>
+                <div key={index}, className="cyber-card-enhanced p-6">
                   <h3 className="text-lg font-semibold text-white mb-3">{method.name}</h3>
                   <p className="text-gray-300 mb-4">{method.description}</p>
                   <div className="bg-slate-800 rounded p-3 mb-4">
@@ -279,8 +269,7 @@ const ApiPage: React.FC = () => {
                     <span className="text-sm text-gray-400">Security Level:</span>
                     <span className={`text-sm font-semibold ${
                       method.security === 'Very High' ? 'text-green-400' : 'text-yellow-400'
-                    }`}>
-                      {method.security}
+                    }`}>{method.security}</span>
                     </span>
                   </div>
                 </div>
@@ -301,9 +290,8 @@ const ApiPage: React.FC = () => {
                       <th className="text-left text-white py-3 px-4">Burst Limit</th>
                     </tr>
                   </thead>
-                  <tbody>
-                    {rateLimits.map((limit, index) => (
-                      <tr key={index} className="border-b border-gray-800">
+                  <tbody>{rateLimits.map((limit, index) => (</tbody>
+                      <tr key={index}, className="border-b border-gray-800">
                         <td className="py-3 px-4 text-white font-semibold">{limit.tier}</td>
                         <td className="py-3 px-4 text-gray-300">{limit.requests}</td>
                         <td className="py-3 px-4 text-gray-300">{limit.burst}</td>
@@ -318,24 +306,20 @@ const ApiPage: React.FC = () => {
           {/* API Endpoints */}
           <section id="endpoints" className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">API Endpoints</h2>
-            <div className="space-y-8">
-              {apiEndpoints.map((category, categoryIndex) => (
-                <div key={categoryIndex} className="cyber-card-enhanced p-8">
+            <div className="space-y-8">{apiEndpoints.map((category, categoryIndex) => (</div>
+                <div key={categoryIndex}, className="cyber-card-enhanced p-8">
                   <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
-                    <Database className="w-6 h-6 mr-3 text-cyan-400" />
-                    {category.category}
+                    <Database className="w-6 h-6 mr-3 text-cyan-400" />{category.category}</Database>
                   </h3>
-                  <div className="space-y-6">
-                    {category.endpoints.map((endpoint, endpointIndex) => (
-                      <div key={endpointIndex} className="border border-gray-700 rounded-lg p-6">
+                  <div className="space-y-6">{category.endpoints.map((endpoint, endpointIndex) => (</div>
+                      <div key={endpointIndex}, className="border border-gray-700 rounded-lg p-6">
                         <div className="flex items-center justify-between mb-4">
                           <div className="flex items-center space-x-4">
                             <span className={`px-3 py-1 rounded text-sm font-semibold ${
                               endpoint.method === 'GET' 
                                 ? 'bg-green-600 text-white' 
                                 : 'bg-blue-600 text-white'
-                            }`}>
-                              {endpoint.method}
+                            }`}>{endpoint.method}</span>
                             </span>
                             <code className="text-cyan-400 font-mono">{endpoint.path}</code>
                           </div>
@@ -345,9 +329,8 @@ const ApiPage: React.FC = () => {
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                           <div>
                             <h4 className="text-white font-semibold mb-2">Parameters</h4>
-                            <ul className="space-y-1">
-                              {endpoint.parameters.map((param, paramIndex) => (
-                                <li key={paramIndex} className="text-gray-300 text-sm">
+                            <ul className="space-y-1">{endpoint.parameters.map((param, paramIndex) => (</ul>
+                                <li key={paramIndex}, className="text-gray-300 text-sm">
                                   <code className="text-cyan-400">{param}</code>
                                 </li>
                               ))}
@@ -357,12 +340,10 @@ const ApiPage: React.FC = () => {
                             <h4 className="text-white font-semibold mb-2">Example</h4>
                             <div className="bg-slate-800 rounded p-3">
                               <div className="text-xs text-gray-400 mb-2">Request:</div>
-                              <pre className="text-green-400 text-xs overflow-x-auto">
-                                {JSON.stringify(endpoint.example.request, null, 2)}
+                              <pre className="text-green-400 text-xs overflow-x-auto">{JSON.stringify(endpoint.example.request, null, 2)}</pre>
                               </pre>
                               <div className="text-xs text-gray-400 mb-2 mt-3">Response:</div>
-                              <pre className="text-blue-400 text-xs overflow-x-auto">
-                                {JSON.stringify(endpoint.example.response, null, 2)}
+                              <pre className="text-blue-400 text-xs overflow-x-auto">{JSON.stringify(endpoint.example.response, null, 2)}</pre>
                               </pre>
                             </div>
                           </div>
@@ -410,27 +391,23 @@ const ApiPage: React.FC = () => {
           <section className="mb-16">
             <div className="cyber-card-enhanced p-8 text-center">
               <h2 className="text-2xl font-bold text-white mb-4">Need Help?</h2>
-              <p className="text-gray-300 mb-6">
-                Our developer support team is here to help you integrate our APIs successfully.
+              <p className="text-gray-300 mb-6">Our developer support team is here to help you integrate our APIs successfully.</p>
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <a
                   href="/contact"
                   className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
-                >
-                  Contact Support
+                >Contact Support</a>
                 </a>
                 <a
                   href="/docs"
                   className="border-2 border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-                >
-                  View Documentation
+                >View Documentation</a>
                 </a>
                 <a
                   href="/community"
                   className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300"
-                >
-                  Join Community
+                >Join Community</a>
                 </a>
               </div>
             </div>

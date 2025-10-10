@@ -12,10 +12,10 @@ interface PerformanceMonitorProps {
     onMetricsUpdate?: (metrics: PerformanceMetrics) => void,
   enableRealTimeMonitoring?: boolean
   }
-const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
+const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps>= ({
   onMetricsUpdate,
   enableRealTimeMonitoring = true,
-}) => {
+}) => {</PerformanceMonitorProps>
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     fcp: null,
     lcp: null,
@@ -236,7 +236,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   }, [metrics]);
   const _recommendations = getPerformanceRecommendations();
   if (process.env.NODE_ENV === 'development') {
-    return (
+    return (</PerformanceMetrics>
       <div className='fixed bottom-4 right-4 bg-white p-4 rounded-lg shadow-lg border max-w-sm z-50'>
         <h3 className='font-semibold text-sm mb-2'>Performance Monitor</h3>
         <div className='text-xs space-y-1'>
@@ -245,20 +245,17 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           <div>FID: {metrics.fid ? `${metrics.fid.toFixed(0)}ms` : 'N/A'}</div>
           <div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}</div>
           <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : 'N/A'}</div>
-          <div>
-            Memory:{' '},
+          <div>Memory:{' '},
     {metrics.memory
               ? `${(metrics.memory / 1024 / 1024).toFixed(1)}MB`
-              : 'N/A'}
+              : 'N/A'}</div>
           </div>
         </div>
         {_recommendations.length > 0 && (
           <div className='mt-2'>
-            <h4 className='font-semibold text-xs text-red-600'>
-              Recommendations:
+            <h4 className='font-semibold text-xs text-red-600'>Recommendations:</h4>
             </h4>
-            <ul className='text-xs text-red-600'>
-              {_recommendations.map((rec, index) => (
+            <ul className='text-xs text-red-600'>{_recommendations.map((rec, index) => (</ul>
                 <li key={index}>• {rec}</li>
               ))}
             </ul>

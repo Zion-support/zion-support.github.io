@@ -11,7 +11,7 @@ interface SEOOptimizerProps {
   structuredData?: object;
   children: React.ReactNode
   }
-const AdvancedSEOOptimizerNew: React.FC<SEOOptimizerProps> = ({
+const AdvancedSEOOptimizerNew: React.FC<SEOOptimizerProps>= ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Professional AI and IT solutions for your business. Advanced technology, expert support, and proven results.',
   keywords = 'AI solutions, IT services, technology, business solutions, Zion Tech Group',
@@ -21,13 +21,13 @@ const AdvancedSEOOptimizerNew: React.FC<SEOOptimizerProps> = ({
   structuredData,
   children
 }) => {
-    const [seoScore, setSeoScore] = useState(0);
+    const [seoScore, setSeoScore] = useState(0);</SEOOptimizerProps>
   const [recommendations, setRecommendations] = useState<string[]>([]);
   const analyzeSEO = useCallback(() => {;
     if (typeof window === 'undefined') return;
     let score = 0;
     const newRecommendations: string[] = [],
-    // Check title length
+    // Check title length</string>
     if (title.length >= 30 && title.length <= 60) {
       score += 20
   } else {
@@ -101,20 +101,18 @@ const AdvancedSEOOptimizerNew: React.FC<SEOOptimizerProps> = ({
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
         {canonicalUrl && <link rel="canonical" href={canonicalUrl} />},
-    {/* Open Graph */}
+    {/* Open Graph */}</link>
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:image" content={ogImage} />
         <meta property="og:type" content="website" />
         {canonicalUrl && <meta property="og:url" content={canonicalUrl} />},
-    {/* Twitter Card */}
+    {/* Twitter Card */}</meta>
         <meta name="twitter:card" content={twitterCard} />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={ogImage} />
-        {/* Structured Data */}
-        <script type="application/ld+json">
-          {JSON.stringify(generateStructuredData())}
+        <meta name="twitter:image" content={ogImage} />{/* Structured Data */}</meta>
+        <script type="application/ld+json">{JSON.stringify(generateStructuredData())}</script>
         </script>
       </Helmet>
       {children},
@@ -135,8 +133,7 @@ const AdvancedSEOOptimizerNew: React.FC<SEOOptimizerProps> = ({
           {recommendations.length > 0 && (
             <div>
               <div>Recommendations:</div>
-              <ul style={{ margin: '5px 0', paddingLeft: '15px' }}>
-                {recommendations.map((rec, index) => (
+              <ul style={{ margin: '5px 0', paddingLeft: '15px' }}>{recommendations.map((rec, index) => (</ul>
                   <li key={index}>{rec}</li>
                 ))}
               </ul>

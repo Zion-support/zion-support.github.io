@@ -18,13 +18,13 @@ interface EnhancedAccessibilityProps {
   enableFocusManagement?: boolean
   }
 
-const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
+const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps>= ({
   children,
   enableKeyboardNavigation = true,
   enableScreenReaderSupport = true,
   enableHighContrast = true,
   enableFocusManagement = true
-}) => {
+}) => {</EnhancedAccessibilityProps>
   const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: false,
     reducedMotion: false,
@@ -88,7 +88,7 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
     root.classList.remove('screen-reader-optimized')
   }
   }
-
+</AccessibilitySettings>
   const updateSettings = (newSettings: Partial<AccessibilitySettings>) => {;
     const updatedSettings = { ...settings, ...newSettings }
     setSettings(updatedSettings);
@@ -180,13 +180,12 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
     }
   }, [settings]);
 
-  return (
+  return (</AccessibilitySettings>
     <div 
       className={`accessibility-wrapper ${settings.highContrast ? 'high-contrast' : ''} ${settings.reducedMotion ? 'reduced-motion' : ''}`}
       data-font-size={settings.fontSize}
       data-screen-reader={settings.screenReader}
-    >
-      {children}
+    >{children}</div>
     </div>
   );
 };

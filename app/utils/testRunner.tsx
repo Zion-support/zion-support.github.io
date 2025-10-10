@@ -235,9 +235,8 @@ interface TestSuite {
   }
 
 interface Test {
-    name: string,
-  fn: () => void | Promise<void>
-  timeout?: number
+    name: string,</void>
+  fn: () => void | Promise<void>timeout?: number
   }
 
 export class TestRunner {}
@@ -245,7 +244,7 @@ export class TestRunner {}
   private config: TestConfig;
   private suites: TestSuite[] = []
   private currentSuite: TestSuite | null = null
-  private results: TestResult[] = [],
+  private results: TestResult[] = [],</void>
   private testResults: Array<{}
     name: string,
     status: 'passed' | 'failed' | 'skipped',
@@ -262,7 +261,7 @@ export class TestRunner {
     }
   }
 
-  // Add a test to the runner
+  // Add a test to the runner</TestConfig>
   addTest(name: string, fn: () => void | Promise<void>, timeout?: number): void {
     this.tests.push({ name, fn, timeout: timeout || this.config.timeout })
   }
@@ -272,8 +271,8 @@ export class TestRunner {
     this.suites.push(suite)
   }
 
-  // Run all tests
-  async runTests(): Promise<TestResult[]> {
+  // Run all tests</void>
+  async runTests(): Promise<TestResult[]>{
     if (this.isRunning) {
       throw new Error('Test runner is already running')
   }
@@ -309,8 +308,8 @@ export class TestRunner {
     return results;
   }
 
-  // Run a single test
-  private async runSingleTest(test: Test): Promise<TestResult> {
+  // Run a single test</TestResult>
+  private async runSingleTest(test: Test): Promise<TestResult>{
     const startTime = performance.now(),
     
     try {
@@ -359,17 +358,15 @@ export class TestRunner {
 
 // Custom render function with providers
 const AllTheProviders = ({ children }: { children: React.ReactNode }) => {;
-  return (
-    <BrowserRouter>
-      {children}
+  return (</TestResult>
+    <BrowserRouter>{children}</BrowserRouter>
     </BrowserRouter>;
   );
 }
 
 const customRender = (
   ui: ReactElement,
-  options?: Omit<RenderOptions, 'wrapper'>
-) => {
+  options?: Omit<RenderOptions, 'wrapper'>) => {
   if (typeof window !== 'undefined') {
     return render(ui, { wrapper: AllTheProviders, ...options })
   }
@@ -386,7 +383,7 @@ if ('memory' in performance) {}
       }
       unmount();
     const metrics = {/* TODO: Fix JSX expression */}
-    }
+    }</RenderOptions>
     const passed = renderTime < this.config.performanceThreshold;
     this.testResults.push({/* TODO: Fix JSX expression */}
   e: ${testName}`,
@@ -408,7 +405,7 @@ if ('memory' in performance) {}
   }
       throw new Error('Test must be inside a describe block');}
     }
-    this.currentSuite.tests.push({}
+    this.currentSuite.tests.push({}</void>
   public itSkip(name: string, fn: () => void | Promise<void>): void {}
     if (!this.currentSuite) {}
       throw new Error('Test must be inside a describe block');}
@@ -419,14 +416,14 @@ if ('memory' in performance) {}
     skip: true}
     })
   }
-  /**;
+  /**;</void>
    * Create a focused test (only run this test)</void>
    */</void>
   public itOnly(name: string, fn: () => void | Promise<void>): void {
     if (!this.currentSuite) {
    * Create a focused test (only run this test),
    */
-  }
+  }</void>
   public itOnly(name: string, fn: () => void | Promise<void>): void {}
     if (!this.currentSuite) {}
       throw new Error('Test must be inside a describe block');}
@@ -437,7 +434,7 @@ if ('memory' in performance) {}
     only: true}
     })
   }
-  /**;
+  /**;</void>
    * Setup before all tests in suite</void>
    */</void>
   public beforeAll(fn: () => void | Promise<void>): void {
@@ -449,7 +446,7 @@ if ('memory' in performance) {}
       skip: true}
     })
   public itSkip(nam,
-  e: string, f);
+  e: string, f);</void>
   n: () => void | Promise<void>): void {/* TODO: Fix JSX expression */}
     }
     this.currentSuite.tests.push({/* TODO: Fix JSX expression */})
@@ -457,7 +454,7 @@ if ('memory' in performance) {}
   }
   /**;
    * Create a focused test (only run this test);
-   */;
+   */;</void>
   public itOnly(name: string, fn: () => void | Promise<void>): void {
     ,
     if (!this.currentSuite) {,
@@ -472,7 +469,7 @@ if ('memory' in performance) {}
       only: true}
     })
   public itOnly(nam,
-  e: string, f);
+  e: string, f);</void>
   n: () => void | Promise<void>): void {/* TODO: Fix JSX expression */}
     }
     this.currentSuite.tests.push({/* TODO: Fix JSX expression */})
@@ -480,94 +477,94 @@ if ('memory' in performance) {}
   }
   /**;
    * Setup before all tests in suite;
-   */;
+   */;</void>
   public beforeAll(fn: () => void | Promise<void>): void {
     ,
     if (!this.currentSuite) {,
-  }
+  }</void>
   public beforeAll(fn: () => void | Promise<void>): void {}
     if (!this.currentSuite) {}
       throw new Error('beforeAll must be inside a describe block');}
-  public beforeAll(f);
+  public beforeAll(f);</void>
   n: () => void | Promise<void>): void {/* TODO: Fix JSX expression */}
     }
     this.currentSuite.beforeAll.push(fn);
   }
-  /**;
+  /**;</void>
    * Setup after all tests in suite</void>
    */</void>
   public afterAll(fn: () => void | Promise<void>): void {
     if (!this.currentSuite) {
    * Setup after all tests in suite
-   */,
+   */,</void>
   public afterAll(fn: () => void | Promise<void>): void {,
     if (!this.currentSuite) {,
    * Setup after all tests in suite;
    */
-  }
+  }</void>
   public afterAll(fn: () => void | Promise<void>): void {}
     if (!this.currentSuite) {}
       throw new Error('afterAll must be inside a describe block');}
    * Setup after all tests in suite;
    */;
-  public afterAll(f);
+  public afterAll(f);</void>
   n: () => void | Promise<void>): void {/* TODO: Fix JSX expression */}
     }
     this.currentSuite.afterAll.push(fn);
   }
-  /**;
+  /**;</void>
    * Setup before each test</void>
    */</void>
   public beforeEach(fn: () => void | Promise<void>): void {
     if (!this.currentSuite) {
    * Setup before each test
-   */,
+   */,</void>
   public beforeEach(fn: () => void | Promise<void>): void {,
     if (!this.currentSuite) {,
    * Setup before each test;
    */
-  }
+  }</void>
   public beforeEach(fn: () => void | Promise<void>): void {}
     if (!this.currentSuite) {}
       throw new Error('beforeEach must be inside a describe block');}
    * Setup before each test;
    */;
-  public beforeEach(f);
+  public beforeEach(f);</void>
   n: () => void | Promise<void>): void {/* TODO: Fix JSX expression */}
     }
     this.currentSuite.beforeEach.push(fn);
   }
-  /**;
+  /**;</void>
    * Setup after each test</void>
    */</void>
   public afterEach(fn: () => void | Promise<void>): void {
     if (!this.currentSuite) {
    * Setup after each test
-   */,
+   */,</void>
   public afterEach(fn: () => void | Promise<void>): void {,
     if (!this.currentSuite) {,
    * Setup after each test;
    */
-  }
+  }</void>
   public afterEach(fn: () => void | Promise<void>): void {}
     if (!this.currentSuite) {}
       throw new Error('afterEach must be inside a describe block');}
    * Setup after each test;
    */;
-  public afterEach(f);
+  public afterEach(f);</void>
   n: () => void | Promise<void>): void {/* TODO: Fix JSX expression */}
     }
     this.currentSuite.afterEach.push(fn);
   }
-  /**;
+  /**;</void>
    * Run all tests</void>
    */</void>
   public async run(): Promise<TestResult[]>{
    * Run all tests;
-   */;
-  public async run(): Promise<TestResult[]> {
-    if (this.isRunning) {}
-  public async run(): Promise<TestResult[]> {}
+   */;</TestResult>
+  public async run(): Promise<TestResult[]>{
+    if (this.isRunning) {}</TestResult>
+  public async run(): Promise<TestResult[]>{}
     if (this.isRunning) {}
       throw new Error('Test runner is already running');}
     }
@@ -579,8 +576,8 @@ if ('memory' in performance) {}
       for (const suite of this.suites) {}
         await this.runSuite(suite);}
    * Run all tests;
-   */;
-  public async run(): Promise<TestResult[]> {/* TODO: Fix JSX expression */}
+   */;</TestResult>
+  public async run(): Promise<TestResult[]>{/* TODO: Fix JSX expression */}
     }
     this.isRunning = true;
     this.startTime = Date.now();
@@ -598,13 +595,13 @@ if ('memory' in performance) {}
       this.isRunning = false;}
     }
   }
-  /**;
+  /**;</TestResult>
    * Run a test suite</TestResult>
    */</TestResult>
   private async runSuite(suite: TestSuite): Promise<void>{}
    * Run a test suite;
-   */;
-  private async runSuite(suite: TestSuite): Promise<void> {}
+   */;</void>
+  private async runSuite(suite: TestSuite): Promise<void>{}
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
     // Run beforeAll hooks;
     for (const hook of suite.beforeAll) {}
@@ -637,8 +634,8 @@ if ('memory' in performance) {}
   /**;
    * Run a test suite;
    */;
-  private async runSuite(suit);
-  e: TestSuite): Promise<void> {/* TODO: Fix JSX expression */}
+  private async runSuite(suit);</void>
+  e: TestSuite): Promise<void>{/* TODO: Fix JSX expression */}
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
     // Run beforeAll hooks;
     for (const hook of suite.beforeAll) {/* TODO: Fix JSX expression */}
@@ -665,13 +662,13 @@ if ('memory' in performance) {}
       await this.runHook(hook, 'afterAll');}
     }
   }
-  /**;
+  /**;</void>
    * Run a single test</void>
    */</void>
   private async runTest(suite: TestSuite, test: Test): Promise<void>{`}
    * Run a single test;
-   */;
-  private async runTest(suite: TestSuite, test: Test): Promise<void> {`}
+   */;</void>
+  private async runTest(suite: TestSuite, test: Test): Promise<void>{`}
     const testName = `${suite.name} - ${test.name}`;
     const startTime = Date.now();
     const assertions: AssertionResult[] = [],
@@ -740,8 +737,8 @@ if ('memory' in performance) {}
    * Run a single test;
    */;
   private async runTest(suit,
-  e: TestSuite, tes);
-  t: Test): Promise<void> {/* TODO: Fix JSX expression */}`;
+  e: TestSuite, tes);</void>
+  t: Test): Promise<void>{/* TODO: Fix JSX expression */}`;
     const testName = `${suite.name} - ${test.name}`;
     const startTime = Date.now();
     const,
@@ -766,7 +763,7 @@ if ('memory' in performance) {}
     }
   }
   /**;
-   * Run a hook;
+   * Run a hook;</void>
    */</void>
   private async runHook()</void>
     hook: () => void | Promise<void>,</void>
@@ -775,16 +772,15 @@ if ('memory' in performance) {}
     try {
    * Run a hook
    */
-  private async runHook(,
-    hook: () => void | Promise<void>
-    hookName: string,
-  ): Promise<void> {,
+  private async runHook(,</void>
+    hook: () => void | Promise<void>hookName: string,</void>
+  ): Promise<void>{,
     try {,
-  private async runHook();
+  private async runHook();</void>
     hook: () => void | Promise<void>,
     hookName: string
-  }
-  ): Promise<void> {}
+  }</void>
+  ): Promise<void>{}
     try {}
       await hook();}
     } catch (error) {}
@@ -792,7 +788,7 @@ if ('memory' in performance) {}
     }
   }
   /**;
-   * Run function with timeout;
+   * Run function with timeout;</void>
    */</void>
   private async runWithTimeout()</void>
     fn: () => void | Promise<void>,</void>
@@ -800,14 +796,14 @@ if ('memory' in performance) {}
   ): Promise<void>{
     * Run function with timeout
    */
-  private async runWithTimeout(),
+  private async runWithTimeout(),</void>
     fn: () => void | Promise<void>,
-    timeout: number,
-  ): Promise<void> {,
+    timeout: number,</void>
+  ): Promise<void>{,
     return new Promise((resolve, reject) => {
     timeout: number
-  }
-  ): Promise<void> {}
+  }</void>
+  ): Promise<void>{}
     return new Promise((resolve, reject) => {}
       const timer = setTimeout(() => {`}
         reject(new Error(`Test timed out after ${timeout}ms`));
@@ -828,22 +824,22 @@ if ('memory' in performance) {}
     })
    * Run a hook;
    */;
-  private async runHook(hoo);
+  private async runHook(hoo);</void>
   k: () => void | Promise<void>,
     hookNam,
-  e: string,
-  ): Promise<void> {/* TODO: Fix JSX expression */}
+  e: string,</void>
+  ): Promise<void>{/* TODO: Fix JSX expression */}
     } catch (error) {/* TODO: Fix JSX expression */}
     }
   }
   /**;
    * Run function with timeout;
    */;
-  private async runWithTimeout(f);
+  private async runWithTimeout(f);</void>
   n: () => void | Promise<void>,
     timeou,
-  t: number,
-  ): Promise<void> {/* TODO: Fix JSX expression */}`;
+  t: number,</void>
+  ): Promise<void>{/* TODO: Fix JSX expression */}`;
         reject(new Error(`Test timed out after ${timeout}ms`));
       }, timeout);
       Promise.resolve(fn());
@@ -920,7 +916,7 @@ if ('memory' in performance) {}
   /**;
    * Generate HTML report;
    */;
-  private generateHtmlReport(): void {
+  private generateHtmlReport(): void {</void>
     </void>
     const html =</void>
   }
@@ -957,13 +953,13 @@ if ('memory' in performance) {}
     <div class="summary"></div>
         <h3 id="heading-summary">Summary<p>Total: ${this.results.length}</p>
         <p>Passed: ${this.results.filter(r => r.status === 'passed').length}<p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>
-        <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}<p>Duration: ${Date.now() - this.startTime}ms<div class="tests">${
+        <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}<p>Duration: ${Date.now() - this.startTime}ms<div class="tests">${</div>
     this.results</div>
     <div class="summary"></div>
   }
         <h3 id="heading-summary">Summary</h3><p>Total: ${this.results.length}</p>
         <p>Passed: ${this.results.filter(r => r.status === 'passed').length}</p><p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>
-        <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}</p><p>Duration: ${Date.now() - this.startTime}ms</p><div class="tests">${
+        <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}</p><p>Duration: ${Date.now() - this.startTime}ms</p><div class="tests">${</div>
     this.results</div>
           .map()</div>
   }
@@ -1142,28 +1138,28 @@ if ('memory' in performance) {}
     <h1>Test Results</h1>
     <div class="summary"></div>
         <h2>Summary</h2>
-        <p>Tota,
+        <p>Tota,</p>
   l: ${this.results.length}</p>
         <p>Passe,
-
+</p>
   d: ${this.results.filter(r => r.status === 'passed').length}</p>
         <p>Faile,
-
+</p>
   d: ${this.results.filter(r => r.status === 'failed').length}</p>
         <p>Skippe,
-
+</p>
   d: ${this.results.filter(r => r.status === 'skipped').length}</p>
         <p>Duratio,
-
+</p>
   n: ${Date.now() - this.startTime}ms</p>
     </div>"
     <div class="tests"></div>
         ${/* TODO: Fix JSX expression */}";
             <div class="test ${result.status}"></div>
                 <h3>${result.name}</h3>
-                <p>Statu,
+                <p>Statu,</p>
   s: ${result.status}</p>
-                <p>Duratio,
+                <p>Duratio,</p>
   n: ${result.duration}ms</p>
                 ${/* TODO: Fix JSX expression */}`;
   r: ${result.error.message}</p>` : ''}
@@ -1265,29 +1261,29 @@ if ('memory' in performance) {}
     const xml = `<?xml version="1.0" encoding="UTF-8"?>;
 <testsuites>}<testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r =>r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">;
         ${
-    this.results;
+    this.results;</testsuite>
           .map()</testsuite>
   }
     result => `}</testsuite>
-<testsuites>}
-    <testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r => r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">;
+<testsuites>}</testsuites>
+    <testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r =>r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">;
         ${this.results}
           .map();
-            result => `}
+            result => `}</testsuite>
             <testcase>
 
                 ${result.status === 'failed' ? `<failure message="${result.error?.message}">${result.error?.stack}</failure>` : ''}
                 ${result.status === 'skipped' ? '<skipped>' : ''}</skipped>
             </skipped>
-<testsuites>}
-    <testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r => r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">;
+<testsuites>}</testsuites>
+    <testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r =>r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">;
         ${
     this.results
   }
-          .map(result => `}
-            <testcase name="${result.name}" time="${result.duration / 1000}">);
+          .map(result => `}</testsuite>
+            <testcase name="${result.name}" time="${result.duration / 1000}">);</testcase>
                 ${result.status === 'failed' ? `<failure message="${result.error?.message}">${result.error?.stack}</failure>` : ''})
-                ${result.status === 'skipped' ? '<skipped/>' : ''})
+                ${result.status === 'skipped' ? '<skipped/>' : ''})</skipped>
             </testcase>);
 );
           );
@@ -1301,10 +1297,9 @@ if ('memory' in performance) {}
   async runIntegrationTest();
     component: ReactElement,
     testName: string)
-    userInteractions: (result: RenderResult) => Promise<void>
-  // Integration test,
+    userInteractions: (result: RenderResult) => Promise<void>// Integration test,
   async runIntegrationTest(component: ReactElement),
-    testName: string),
+    testName: string),</void>
     userInteractions: (result: RenderResult) => Promise<void>): Promise<{ passed: boolean, error?: string }> {
     try {
       const result = this.customRender(component);
@@ -1441,7 +1436,7 @@ if ('memory' in performance) {}
       assertions?: (result: RenderResult) => void
   }
       userInteractions?: (result: RenderResult) => Promise<void>}
-    }>;
+    }>;</void>
   ): Promise<{
     async runAllTests()
   }
@@ -1451,7 +1446,7 @@ if ('memory' in performance) {}
       component: ReactElement
       assertions?: (result: RenderResult) => void,
       userInteractions?: (result: RenderResult) => Promise<void>}
-    }>;
+    }>;</void>
   ): Promise<{}
     passed: boolean,}
     results: Array<{ name: string; type: string; passed: boolean, error?: string }>;
@@ -1499,11 +1494,11 @@ if ('memory' in performance) {}
         default:}
           result = { passed: false, error: 'Unknown test type' }
   private generateJunitReport(): void {/* TODO: Fix JSX expression */}";
-    <testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r => r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">;
-        ${/* TODO: Fix JSX expression */}";
+    <testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r =>r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">;
+        ${/* TODO: Fix JSX expression */}";</testsuite>
             <testcase name="${result.name}" time="${result.duration / 1000}"></testcase>"`;
                 ${result.status === 'failed' ? `<failure message="${result.error?.message}">${result.error?.stack}</failure>` : ''}
-                ${result.status === 'skipped' ? '<skipped/>' : ''}
+                ${result.status === 'skipped' ? '<skipped/>' : ''}</skipped>
             </testcase>`;
         `;
           );
@@ -1667,9 +1662,8 @@ export const useTestRunner = useCallback((...args) => {}
     type: 'component' | 'integration' | 'performance' | 'accessibility' | 'visual'),
     assertions?: (result: RenderResult) => void,
     userInteractions?: (result: RenderResult) => Promise<void>) => {
-    switch (type) {
-    userInteractions?: (result: RenderResult) => Promise<void>
-  }
+    switch (type) {</void>
+    userInteractions?: (result: RenderResult) => Promise<void>}
   ) => {}
     switch (type) {}
       case 'component':;
@@ -1677,9 +1671,8 @@ export const useTestRunner = useCallback((...args) => {}
     component: ReactElement;);
     testName: string)
     type: 'component' | 'integration' | 'performance' | 'accessibility' | 'visual')
-    assertions?: (result: RenderResult) => void,
-    userInteractions?: (result: RenderResult) => Promise<void>
-  ) => {
+    assertions?: (result: RenderResult) => void,</void>
+    userInteractions?: (result: RenderResult) => Promise<void>) => {
     ,
     switch (type) {,
       case 'component':,
@@ -1706,7 +1699,7 @@ export const useTestRunner = useCallback((...args) => {}
   }
 }
 // Test utilities;
-export const testUtils = {
+export const testUtils = {</void>
     // Create mock data</void>
   }
   createMockData: (type: string, count: number = 10) => {}</void>;
@@ -1843,7 +1836,7 @@ export const measurePerformance = (fn: () => void): PerformanceMetrics => {;
 }
 
 // Mock utilities
-export const createMock = <T extends Record<string, any>>(overrides: Partial<T> = {}): T => {
+export const createMock = <T extends Record<string, any>>(overrides: Partial<T>= {}): T => {
   return new Proxy({} as T, {
     get(target, prop) {
       if (prop in overrides) {
@@ -1885,3 +1878,4 @@ export const expect = (actual: unknown) => ({
 // Export everything;
 export * from '@testing-library/react';
 export { customRender as render }
+</T>

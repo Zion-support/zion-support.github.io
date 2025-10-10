@@ -23,11 +23,9 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
         </section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
-            <h2>
-              Key Benefits
+            <h2>Key Benefits</h2>
             </h2>
-            <p>
-              Experience the power of our page solutions for your business.
+            <p>Experience the power of our page solutions for your business.</p>
             </p>
             </div>
           </div>

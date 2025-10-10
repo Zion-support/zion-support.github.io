@@ -9,7 +9,7 @@ interface PerformanceOptimizerProps {
   enableCodeSplitting?: boolean;
 }
 
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps>= ({
   children,
   enableImageOptimization = true,
   enableLazyLoading = true,
@@ -119,7 +119,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         }
 
         // Send metrics to analytics
-        if (typeof window !== 'undefined' && 'gtag' in window) {;
+        if (typeof window !== 'undefined' && 'gtag' in window) {;</PerformanceOptimizerProps>
           const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
           gtag('event', 'performance_metrics', {
             event_category: 'performance',
@@ -134,7 +134,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     window.addEventListener('load', measurePerformance);
     return () => window.removeEventListener('load', measurePerformance);
   }, []);
-
+</string>
   return <>{children}</>;
 };
 

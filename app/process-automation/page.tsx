@@ -51,7 +51,7 @@ const ProcessAutomationPage: React.FC = () => {
       description: 'Track and optimize your automated processes with real-time analytics and reporting.'
   }
     }
-  ];];];
+  ];
 const benefits = [
     'Reduce manual work and human errors',
     'Increase operational efficiency',
@@ -85,21 +85,17 @@ return (
         </section>
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
-              <h1>
-                Process Automation Services
+              <h1>Process Automation Services</h1>
               </h1>
-              <p>
-                Streamline your business operations with intelligent automation solutions.;
-                Reduce costs, improve efficiency, and scale your business with AI-powered process automation.
+              <p>Streamline your business operations with intelligent automation solutions.;
+                Reduce costs, improve efficiency, and scale your business with AI-powered process automation.</p>
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
                 <button>
-                  <Zap>
-                  Automate Now
+                  <Zap>Automate Now</Zap>
                 </button>
                 <button>
-                  <Phone>
-                  Call (302) 464-0950,
+                  <Phone>Call (302) 464-0950,</Phone>
                 </button>
               </div>
             </div>
@@ -116,16 +112,14 @@ return (
         </section>
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
-              <h2>
-                Our Automation Solutions
+              <h2>Our Automation Solutions</h2>
               </h2>
-              <p>
-                We provide comprehensive process automation services to transform your business operations.,
+              <p>We provide comprehensive process automation services to transform your business operations.,</p>
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"></div>
+                <div key={index}, className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"></div>
                   <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"></div>
                     <feature />
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -146,16 +140,14 @@ return (
         </section>
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
-              <h2>
-                Key Benefits
+              <h2>Key Benefits</h2>
               </h2>
-              <p>
-                Transform your business with our comprehensive process automation services.,
+              <p>Transform your business with our comprehensive process automation services.,</p>
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
               {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-3"></div>
+                <div key={index}, className="flex items-start space-x-3"></div>
                   <CheckCircle>
                   <p className="text-gray-300 text-lg">{benefit}</p>
                 </div>
@@ -174,20 +166,16 @@ return (
         </section>
           <div className="max-w-4xl mx-auto text-center"></div>
             <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12"></div>
-              <h2>
-                Ready to Automate Your Processes?
+              <h2>Ready to Automate Your Processes?</h2>
               </h2>
-              <p>
-                Contact our automation experts to discuss your process optimization needs.
+              <p>Contact our automation experts to discuss your process optimization needs.</p>
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                 <button>
-                  <Phone>
-                  Call (302) 464-0950
+                  <Phone>Call (302) 464-0950</Phone>
                 </button>
                 <button>
-                  <Mail>
-                  Email Us
+                  <Mail>Email Us</Mail>
                 </button>
               </div>
             </div>

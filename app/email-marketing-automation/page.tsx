@@ -50,7 +50,7 @@ const EmailMarketingAutomationPage: React.FC = () => {
       description: 'Behavior-based triggers and workflows to send the right message at the right time.'
   }
     }
-  ];];];
+  ];
 const benefits = [
     'Increase email engagement rates',
     'Automate repetitive marketing tasks',
@@ -84,21 +84,17 @@ return (
         </section>
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
-              <h1>
-                Email Marketing Automation
+              <h1>Email Marketing Automation</h1>
               </h1>
-              <p>
-                Transform your email marketing with our AI-powered automation platform.;
-                Create engaging campaigns, automate workflows, and drive better results.
+              <p>Transform your email marketing with our AI-powered automation platform.;
+                Create engaging campaigns, automate workflows, and drive better results.</p>
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
                 <button>
-                  <Mail>
-                  Start Free Trial
+                  <Mail>Start Free Trial</Mail>
                 </button>
                 <button>
-                  <Phone>
-                  Call (302) 464-0950,
+                  <Phone>Call (302) 464-0950,</Phone>
                 </button>
               </div>
             </div>
@@ -115,16 +111,14 @@ return (
         </section>
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
-              <h2>
-                Platform Features
+              <h2>Platform Features</h2>
               </h2>
-              <p>
-                Our email marketing automation platform provides everything you need to succeed.,
+              <p>Our email marketing automation platform provides everything you need to succeed.,</p>
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"></div>
+                <div key={index}, className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"></div>
                   <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"></div>
                     <feature />
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -145,16 +139,14 @@ return (
         </section>
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
-              <h2>
-                Key Benefits
+              <h2>Key Benefits</h2>
               </h2>
-              <p>
-                Drive better results with our comprehensive email marketing automation platform.,
+              <p>Drive better results with our comprehensive email marketing automation platform.,</p>
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
               {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-3"></div>
+                <div key={index}, className="flex items-start space-x-3"></div>
                   <CheckCircle>
                   <p className="text-gray-300 text-lg">{benefit}</p>
                 </div>
@@ -173,20 +165,16 @@ return (
         </section>
           <div className="max-w-4xl mx-auto text-center"></div>
             <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12"></div>
-              <h2>
-                Ready to Automate Your Marketing?
+              <h2>Ready to Automate Your Marketing?</h2>
               </h2>
-              <p>
-                Start your free trial today and transform your email marketing with automation.
+              <p>Start your free trial today and transform your email marketing with automation.</p>
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                 <button>
-                  <Phone>
-                  Call (302) 464-0950
+                  <Phone>Call (302) 464-0950</Phone>
                 </button>
                 <button>
-                  <Mail>
-                  Email Us
+                  <Mail>Email Us</Mail>
                 </button>
               </div>
             </div>

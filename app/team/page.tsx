@@ -19,11 +19,9 @@ const TeamPage: React.FC = () => {
                 Our Team</h1>
               </h1>
               <div className="prose prose-lg max-w-none"></div>
-                <p>
-                  Meet the experts behind our success.
+                <p>Meet the experts behind our success.</p>
                 </p>
-                <p>
-                  Coming soon - stay tuned to meet our team!
+                <p>Coming soon - stay tuned to meet our team!</p>
                 </p>
               </div>
             </div>

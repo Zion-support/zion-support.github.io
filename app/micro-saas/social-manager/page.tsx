@@ -27,17 +27,15 @@ const SocialMediaManagerPage: React.FC = () => {
               AI Social Media </h1>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400"> Automation</span>
             </h1>
-            <p>
-              AI-powered social media management and automation. Schedule posts, analyze engagement,
-              and grow your social presence with intelligent automation.
+            <p>AI-powered social media management and automation. Schedule posts, analyze engagement,
+              and grow your social presence with intelligent automation.</p>
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
               <button>
                 <span>Get Started</span>
                 <ArrowRight>
               </button>
-              <button>
-                View Demo
+              <button>View Demo</button>
               </button>
             </div>
           </div>
@@ -53,8 +51,7 @@ const SocialMediaManagerPage: React.FC = () => {
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Coming Soon</h2>
-              <p>
-                We're developing powerful social media management solutions. Stay tuned for updates!
+              <p>We're developing powerful social media management solutions. Stay tuned for updates!</p>
               </p>
             </div>
           </div>

@@ -27,17 +27,15 @@ const EmailMarketingSuitePage: React.FC = () => {
               AI Email </h1>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400"> Campaigns</span>
             </h1>
-            <p>
-              AI-powered email marketing automation. Create, send, and optimize email campaigns;
-              with intelligent automation and personalization.
+            <p>AI-powered email marketing automation. Create, send, and optimize email campaigns;
+              with intelligent automation and personalization.</p>
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
               <button>
                 <span>Get Started</span>
                 <ArrowRight>
               </button>
-              <button>
-                View Demo
+              <button>View Demo</button>
               </button>
             </div>
           </div>
@@ -53,8 +51,7 @@ const EmailMarketingSuitePage: React.FC = () => {
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Coming Soon</h2>
-              <p>
-                We're developing powerful email marketing solutions. Stay tuned for updates!
+              <p>We're developing powerful email marketing solutions. Stay tuned for updates!</p>
               </p>
             </div>
           </div>

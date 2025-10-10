@@ -19,7 +19,7 @@ const FuturisticBackground: React.FC = () => {
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
 
-    // Quantum particles
+    // Quantum particles</HTMLCanvasElement>
     const particles: Array<{
       x: number;
       y: number;
@@ -116,11 +116,10 @@ const FuturisticBackground: React.FC = () => {
 
   return (
     <canvas
-      ref={canvasRef}
-      className="fixed top-0 left-0 w-full h-full pointer-events-none z-0"
+      ref={canvasRef}, className="fixed top-0 left-0 w-full h-full pointer-events-none z-0"
       style={{ background: 'transparent' }}
-    />
-  );
+    />);
 };
 
 export default FuturisticBackground;
+</canvas>

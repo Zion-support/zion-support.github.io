@@ -6,7 +6,7 @@ interface UserExperienceEnhancerProps {
     children: React.ReactNode
   }
 }
-const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ children }) => {}
+const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps>= ({ children }) => {}</UserExperienceEnhancerProps>
   const [loadingStates, setLoadingStates] = useState<Record<string, boolean>>({})
 useEffect(() => {
     // UX enhancement logic;
@@ -41,7 +41,7 @@ useEffect(() => {
       document.head.appendChild(style);
     }
 enhanceUX();
-  }, []);
+  }, []);</Record>
 return <>{children}</>
 };
 

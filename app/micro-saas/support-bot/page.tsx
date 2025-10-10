@@ -27,17 +27,15 @@ const SmartSupportBotPage: React.FC = () => {
               AI Customer Service </h1>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400"> Automation</span>
             </h1>
-            <p>
-              AI-powered customer service automation with intelligent support bot.;
-              24/7 customer assistance and automated responses.
+            <p>AI-powered customer service automation with intelligent support bot.;
+              24/7 customer assistance and automated responses.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button>
                 <span>Get Started</span>
                 <ArrowRight>
               </button>
-              <button>
-                View Demo
+              <button>View Demo</button>
               </button>
             </div>
           </div>
@@ -53,8 +51,7 @@ const SmartSupportBotPage: React.FC = () => {
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Coming Soon</h2>
-              <p>
-                We're developing powerful AI support bot solutions. Stay tuned for updates!
+              <p>We're developing powerful AI support bot solutions. Stay tuned for updates!</p>
               </p>
             </div>
           </div>

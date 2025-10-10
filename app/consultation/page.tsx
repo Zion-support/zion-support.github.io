@@ -78,7 +78,7 @@ const ConsultationPage: React.FC = () => {
       price: 'Free',
       features: ['Process analysis', 'Technology selection', 'Change management', 'Timeline planning']
     }
-  ];
+  ];</HTMLInputElement>
 <<<<<<< HEAD
   const process = [
     {
@@ -96,7 +96,7 @@ const ConsultationPage: React.FC = () => {
       step: '4',
       title: 'Ongoing Support',
     }
-  ];];];
+  ];
 =======
 
 >>>>>>> cursor/website-audit-and-update-with-deployment-26c5
@@ -111,24 +111,20 @@ const ConsultationPage: React.FC = () => {
       
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
         <div className="container mx-auto px-4 py-16">
-          <div className="max-w-6xl mx-auto">
-            {/* Header */}
+          <div className="max-w-6xl mx-auto">{/* Header */}</div>
             <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Free Consultation
+              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Free Consultation</h1>
               </h1>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Get expert advice on AI implementation, IT strategy, and digital transformation. 
-                Our consultation is completely free and tailored to your business needs.
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">Get expert advice on AI implementation, IT strategy, and digital transformation. 
+                Our consultation is completely free and tailored to your business needs.</p>
               </p>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              {/* Consultation Types */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">{/* Consultation Types */}</div>
               <div className="space-y-8">
                 <h2 className="text-2xl font-bold text-white mb-6">Consultation Types</h2>
                 {consultationTypes.map((type, index) => (
-                  <div key={index} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300">
+                  <div key={index}, className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300">
                     <div className="flex items-start space-x-4">
                       <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
                         <type.icon className="w-6 h-6 text-white" />
@@ -139,17 +135,14 @@ const ConsultationPage: React.FC = () => {
                         <div className="flex items-center justify-between mb-4">
                           <div className="flex items-center space-x-4 text-sm text-gray-400">
                             <span className="flex items-center">
-                              <Clock className="w-4 h-4 mr-1" />
-                              {type.duration}
+                              <Clock className="w-4 h-4 mr-1" />{type.duration}</Clock>
                             </span>
                             <span className="text-cyan-400 font-semibold">{type.price}</span>
                           </div>
                         </div>
-                        <ul className="space-y-2">
-                          {type.features.map((feature, featureIndex) => (
-                            <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                              <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                              {feature}
+                        <ul className="space-y-2">{type.features.map((feature, featureIndex) => (</ul>
+                            <li key={featureIndex}, className="flex items-center text-sm text-gray-300">
+                              <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />{feature}</CheckCircle>
                             </li>
                           ))}
                         </ul>
@@ -164,29 +157,25 @@ const ConsultationPage: React.FC = () => {
                 <h2 className="text-2xl font-bold text-white mb-6">Schedule Your Free Consultation</h2>
                 
                 {submitStatus === 'success' && (
-                  <div className="bg-green-500/20 border border-green-500 text-green-400 px-4 py-3 rounded-lg mb-6">
-                    Thank you! We'll contact you within 24 hours to schedule your consultation.
+                  <div className="bg-green-500/20 border border-green-500 text-green-400 px-4 py-3 rounded-lg mb-6">Thank you! We'll contact you within 24 hours to schedule your consultation.</div>
                   </div>
                 )}
                 
                 {submitStatus === 'error' && (
-                  <div className="bg-red-500/20 border border-red-500 text-red-400 px-4 py-3 rounded-lg mb-6">
-                    Sorry, there was an error submitting your request. Please try again.
+                  <div className="bg-red-500/20 border border-red-500 text-red-400 px-4 py-3 rounded-lg mb-6">Sorry, there was an error submitting your request. Please try again.</div>
                   </div>
                 )}
 
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form onSubmit={handleSubmit}, className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
-                        Name *
+                      <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">Name *</label>
                       </label>
                       <input
                         type="text"
                         id="name"
                         name="name"
-                        value={formData.name}
-                        onChange={handleInputChange}
+                        value={formData.name}, onChange={handleInputChange}
                         required
                         className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                         placeholder="Your full name"
@@ -194,15 +183,13 @@ const ConsultationPage: React.FC = () => {
                     </div>
                     
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                        Email *
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">Email *</label>
                       </label>
                       <input
                         type="email"
                         id="email"
                         name="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
+                        value={formData.email}, onChange={handleInputChange}
                         required
                         className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                         placeholder="your@email.com"
@@ -212,46 +199,37 @@ const ConsultationPage: React.FC = () => {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
-                        Company
+                      <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">Company</label>
                       </label>
                       <input
                         type="text"
                         id="company"
                         name="company"
-                        value={formData.company}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                        value={formData.company}, onChange={handleInputChange}, className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                         placeholder="Your company name"
                       />
                     </div>
                     
                     <div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
-                        Phone
+                      <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">Phone</label>
                       </label>
                       <input
                         type="tel"
                         id="phone"
                         name="phone"
-                        value={formData.phone}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                        value={formData.phone}, onChange={handleInputChange}, className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                         placeholder="+1 (555) 123-4567"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
-                      Service Interest
+                    <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">Service Interest</label>
                     </label>
                     <select
                       id="service"
                       name="service"
-                      value={formData.service}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                      value={formData.service}, onChange={handleInputChange}, className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     >
                       <option value="">Select a service</option>
                       <option value="ai-strategy">AI Strategy Consultation</option>
@@ -266,15 +244,12 @@ const ConsultationPage: React.FC = () => {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <label htmlFor="timeline" className="block text-sm font-medium text-gray-300 mb-2">
-                        Project Timeline
+                      <label htmlFor="timeline" className="block text-sm font-medium text-gray-300 mb-2">Project Timeline</label>
                       </label>
                       <select
                         id="timeline"
                         name="timeline"
-                        value={formData.timeline}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                        value={formData.timeline}, onChange={handleInputChange}, className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                       >
                         <option value="">Select timeline</option>
                         <option value="immediate">Immediate (1-2 weeks)</option>
@@ -285,15 +260,12 @@ const ConsultationPage: React.FC = () => {
                     </div>
                     
                     <div>
-                      <label htmlFor="budget" className="block text-sm font-medium text-gray-300 mb-2">
-                        Budget Range
+                      <label htmlFor="budget" className="block text-sm font-medium text-gray-300 mb-2">Budget Range</label>
                       </label>
                       <select
                         id="budget"
                         name="budget"
-                        value={formData.budget}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                        value={formData.budget}, onChange={handleInputChange}, className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                       >
                         <option value="">Select budget range</option>
                         <option value="under-10k">Under $10,000</option>
@@ -306,27 +278,22 @@ const ConsultationPage: React.FC = () => {
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-                      Project Details *
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">Project Details *</label>
                     </label>
                     <textarea
                       id="message"
                       name="message"
-                      value={formData.message}
-                      onChange={handleInputChange}
+                      value={formData.message}, onChange={handleInputChange}
                       required
-                      rows={5}
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                      rows={5}, className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                       placeholder="Tell us about your project, challenges, and goals..."
                     />
                   </div>
 
                   <button
                     type="submit"
-                    disabled={isSubmitting}
-                    className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
-                  >
-                    {isSubmitting ? (
+                    disabled={isSubmitting}, className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
+                  >{isSubmitting ? (</button>
                       <>
                         <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
                         <span>Submitting...</span>
@@ -381,9 +348,8 @@ const ConsultationPage: React.FC = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               <div>
                 <h3 className="text-2xl font-bold text-white mb-6">What's Included</h3>
-                <ul className="space-y-4">
-                  {selectedConsultation.features.map((feature, index) => (
-                    <li key={index} className="flex items-start text-gray-300">
+                <ul className="space-y-4">{selectedConsultation.features.map((feature, index) => (</ul>
+                    <li key={index}, className="flex items-start text-gray-300">
                       <CheckCircle className="w-6 h-6 text-green-400 mr-3 flex-shrink-0 mt-0.5" />
                       <span>{feature}</span>
                     </li>
@@ -407,8 +373,7 @@ const ConsultationPage: React.FC = () => {
                     <span>Team of 2-3 experts</span>
                   </div>
                 </div>
-                <button className="w-full mt-6 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300">
-                  Book Now
+                <button className="w-full mt-6 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300">Book Now</button>
                 </button>
 >>>>>>> cursor/website-audit-and-update-with-deployment-1f73
               </div>
@@ -418,8 +383,7 @@ const ConsultationPage: React.FC = () => {
 =======
       </main>
       
-      <Footer />
->>>>>>> cursor/website-audit-and-update-with-deployment-26c5
+      <Footer />>>>>>>> cursor/website-audit-and-update-with-deployment-26c5</Footer>
     </>
   );
 };
@@ -431,14 +395,12 @@ const ConsultationPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">Our Process</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              A structured approach to delivering exceptional consultation services
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">A structured approach to delivering exceptional consultation services</p>
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {process.map((step, index) => (
-              <div key={index} className="text-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{process.map((step, index) => (</div>
+              <div key={index}, className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <step.icon className="w-8 h-8 text-white" />
                 </div>
@@ -494,19 +456,15 @@ const ConsultationPage: React.FC = () => {
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Transform Your Business Today
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Transform Your Business Today</h2>
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Let our expert consultants help you navigate the complex world of AI and technology.
+            <p className="text-xl text-gray-300 mb-8">Let our expert consultants help you navigate the complex world of AI and technology.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Schedule Free Consultation
+              <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">Schedule Free Consultation</button>
                 <ArrowRight className="inline-block ml-2 w-5 h-5" />
               </button>
-              <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                View Case Studies
+              <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">View Case Studies</button>
               </button>
             </div>
           </div>

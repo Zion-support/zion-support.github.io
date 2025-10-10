@@ -80,8 +80,7 @@ const services = [
 
     'Consulting',
 
-    'Other';
-  ];];];
+    'Other'];];
 const contactInfo = [
     {
     icon: Phone,
@@ -109,7 +108,7 @@ const contactInfo = [
   }
     }
   ];
-return (
+return (</HTMLInputElement>
     <>
       <Helmet>
         <title>Contact Us - Zion Tech Group | Get in Touch</title>
@@ -120,15 +119,12 @@ return (
         <div className="container mx-auto px-4"></div>
           {/* Header */}
           <div className="text-center mb-16"></div>
-            <h1>
-              Get in;
-              <span>
-                {' '}Touch
+            <h1>Get in;</h1>
+              <span>{' '}Touch</span>
               </span>
             </h1>
-            <p>
-              Ready to transform your business? Let's discuss your project and explore;
-              how our AI and IT solutions can help you achieve your goals.
+            <p>Ready to transform your business? Let's discuss your project and explore;
+              how our AI and IT solutions can help you achieve your goals.</p>
             </p>
           </div>
         </section>
@@ -154,16 +150,14 @@ return (
 <form>
                 <div className="grid grid-cols-1 md: grid-cols-2 gap-6"></div>
                   <div />
-                    <label>
-                      Full Name *
+                    <label>Full Name *</label>
                     </label>
                     <div className="relative"></div>
                       <User>
                       <input />
                   </div>
                   <div />
-                    <label>
-                      Email Address *
+                    <label>Email Address *</label>
                     </label>
                     <div className="relative"></div>
                       <Mail>
@@ -172,16 +166,14 @@ return (
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
                   <div />
-                    <label>
-                      Company
+                    <label>Company</label>
                     </label>
                     <div className="relative"></div>
                       <Building>
                       <input />
                   </div>
                   <div />
-                    <label>
-                      Phone Number
+                    <label>Phone Number</label>
                     </label>
                     <div className="relative"></div>
                       <Phone>
@@ -189,8 +181,7 @@ return (
                   </div>
                 </div>
                 <div />
-                  <label>
-                    Service Interest,
+                  <label>Service Interest,</label>
                   </label>
                   <div className="relative"></div>
                     <Globe>
@@ -199,9 +190,7 @@ return (
                       {
     services.map((service) => (
   }
-                        <option>
-
-                          {service}
+                        <option>{service}</option>
                         </option>
                       ))}
 
@@ -209,16 +198,14 @@ return (
                   </div>
                 </div>
                 <div />
-                  <label>
-                    Message *
+                  <label>Message *</label>
                   </label>
                   <div className="relative"></div>
                     <MessageCircle>
                     <textarea />
                 </div>
-                <button>
-                  {
-    isSubmitting ? (;
+                <button>{
+    isSubmitting ? (;</button>
                     <>
                       <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
                       <span>Sending...</span>
@@ -237,17 +224,15 @@ return (
             <div className="space-y-8"></div>
               <div />
                 <h2 className="text-3xl font-bold text-white mb-6">Contact Information</h2>
-                <p>
-                  We're here to help! Reach out to us through any of these channels;
-                  and we'll get back to you as soon as possible.
+                <p>We're here to help! Reach out to us through any of these channels;
+                  and we'll get back to you as soon as possible.</p>
                 </p>
               </div>
               {/* Contact Information */}
               <div className="space-y-8"></div>
                 <div />
                   <h2 className="text-3xl font-bold text-white mb-6">Get in Touch</h2>
-                  <p>
-                    We're here to help you transform your business with cutting-edge AI and technology solutions.
+                  <p>We're here to help you transform your business with cutting-edge AI and technology solutions.</p>
                   </p>
                 </div>
                 <div className="space-y-6"></div>
@@ -255,16 +240,12 @@ return (
                     <div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center mr-4"></div>
                       <Phone />
                     <div />
-<h3>
-
-                        {info.title}
+<h3>{info.title}</h3>
                       </h3>
-                      <p>
-                        {info.details}
+                      <p>{info.details}</p>
                       </p>
-                      <p>
-                        {info.description}
-
+                      <p>{info.description}
+</p>
                       </p>
                     </div>
                   </div>

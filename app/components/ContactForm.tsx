@@ -23,12 +23,12 @@ interface FormStatus {
     service: '',
     message: ''
   })
-
+</FormData>
   const [status, setStatus] = useState<FormStatus>({
     type: 'idle',
     message: ''
   })
-
+</FormStatus>
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -75,22 +75,19 @@ interface FormStatus {
     'Data Analytics',
     'Cybersecurity',
     'IT Consulting',
-    'Other';
-  ];];];
-  return (
+    'Other'];];
+  return (</HTMLInputElement>
     <div className="max-w-2xl mx-auto p-6">
       <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Get In Touch</h2>
-      <form onSubmit={handleSubmit} className="space-y-6">
+      <form onSubmit={handleSubmit}, className="space-y-6">
         <div>
-          <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-            Full Name
+          <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
           </label>
               <input
                 type="text"
                 id="name"
                 name="name"
-                value={formData.name}
-                onChange={handleChange}
+                value={formData.name}, onChange={handleChange}
                 required
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
                 placeholder="Your full name"
@@ -98,15 +95,13 @@ interface FormStatus {
         </div>
 
         <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                Email Address *
+              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">Email Address *</label>
               </label>
               <input
                 type="email"
                 id="email"
                 name="email"
-                value={formData.email}
-                onChange={handleChange}
+                value={formData.email}, onChange={handleChange}
                 required
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
                 placeholder="your.email@company.com"
@@ -115,60 +110,47 @@ interface FormStatus {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
-                Company
+              <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">Company</label>
               </label>
               <input
                 type="text"
                 id="company"
                 name="company"
-                value={formData.company}
-                onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                value={formData.company}, onChange={handleChange}, className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
                 placeholder="Your company name"
               />
             </div>
 
             <div>
-              <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                Phone Number
+              <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
               </label>
               <input
                 type="tel"
                 id="phone"
                 name="phone"
-                value={formData.phone}
-                onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                value={formData.phone}, onChange={handleChange}, className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
                 placeholder="+1 (555) 123-4567"
               />
             </div>
           </div>
 
           <div>
-            <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
-              Service Interest
+            <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">Service Interest</label>
             </label>
             <select
               id="service"
               name="service"
-              value={formData.service}
-              onChange={handleChange}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
-            >
-              ) : (
-                <div className="h-5 w-5 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" />
-              )}
+              value={formData.service}, onChange={handleChange}, className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+            >) : (</select>
+                <div className="h-5 w-5 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" />)}</div>
               <span className="text-sm font-medium">{status.message}</span>
             </div>
           )}
 
           <button
             type="submit"
-            disabled={status.type === 'loading'}
-            className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-blue-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
-          >
-            {status.type === 'loading' ? (
+            disabled={status.type === 'loading'}, className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-blue-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
+          >{status.type === 'loading' ? (</button>
               <>
                 <div className="h-5 w-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
                 <span>Sending...</span>

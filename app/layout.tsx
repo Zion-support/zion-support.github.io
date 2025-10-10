@@ -21,17 +21,14 @@ const LayoutPage: React.FC = () => {
 
               <span className="text-white">Solutions</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced layout solutions.
-              Powered by cutting-edge AI technology and industry expertise.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your business with our advanced layout solutions.
+              Powered by cutting-edge AI technology and industry expertise.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center gap-2">
-                Get Started
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center gap-2">Get Started</button>
                 <ArrowRight className="w-5 h-5" />
               </button>
-              <button className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
-                Learn More
+              <button className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">Learn More</button>
               </button>
             </div>
           </div>
@@ -50,8 +47,7 @@ const LayoutPage: React.FC = () => {
 
               Key Benefits
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our layout solutions for your business.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the power of our layout solutions for your business.</p>
             </p>
           </div>
 
@@ -67,12 +63,10 @@ const LayoutPage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center gap-2">
-                <Phone className="w-5 h-5" />
-                Call Now
+                <Phone className="w-5 h-5" />Call Now</Phone>
               </button>
               <button className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center gap-2">
-                <Mail className="w-5 h-5" />
-                Email Us
+                <Mail className="w-5 h-5" />Email Us</Mail>
               </button>
             </div>
           </div>
@@ -80,5 +74,5 @@ const LayoutPage: React.FC = () => {
       </section>
     </div>
 ;
-};];];
+}];
 export default LayoutPage;

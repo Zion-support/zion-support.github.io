@@ -25,7 +25,7 @@ const PagePage: React.FC = () => {
       description: 'Worldwide deployment and support for international businesses'
   }
     }
-  ];];];
+  ];
 const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -59,39 +59,33 @@ return (
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center"></div>
             <h1>
-              <span>
-                Page
+              <span>Page</span>
               </span>
               <br>
               <span className="text-white">Solutions</span>
             </h1>
-            <p>
-              Transform your business with our advanced page solutions.;
-              Powered by cutting-edge AI technology and industry expertise.
+            <p>Transform your business with our advanced page solutions.;
+              Powered by cutting-edge AI technology and industry expertise.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <button>
-                Get Started
+              <button>Get Started</button>
                 <ArrowRight>
               </button>
-              <button>
-                Learn More,
+              <button>Learn More,</button>
               </button>
             </div>
           </div>
         </div>
       </section>
             </h2>
-            <p>
-              Our page solutions deliver unmatched performance, security, and scalability.
+            <p>Our page solutions deliver unmatched performance, security, and scalability.</p>
             </p>
           </div>
           </div>
         </div>
       </section>
             </h2>
-            <p>
-              Experience the power of our page solutions for your business.
+            <p>Experience the power of our page solutions for your business.</p>
             </p>
           </div>
           </div>
@@ -99,17 +93,14 @@ return (
       </section>
               Ready to Get Started?
             </h2>
-            <p>
-              Contact our experts to discuss your page needs and get a customized solution.
+            <p>Contact our experts to discuss your page needs and get a customized solution.</p>
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
               <button>
-                <Phone>
-                Call Now
+                <Phone>Call Now</Phone>
               </button>
               <button>
-                <Mail>
-                Email Us
+                <Mail>Email Us</Mail>
               </button>
             </div>
           </div>

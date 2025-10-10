@@ -165,27 +165,21 @@ const PricingPage: React.FC = () => {
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Transparent Pricing
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Transparent Pricing</h1>
               </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Choose the perfect plan for your business needs. All plans include our core AI and IT services.
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Choose the perfect plan for your business needs. All plans include our core AI and IT services.</p>
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {plans.map((plan, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">{plans.map((plan, index) => (</div>
                 <div
-                  key={index}
-                  className={`bg-white/5 backdrop-blur-lg rounded-2xl p-8 border transition-all duration-300 ${
+                  key={index}, className={`bg-white/5 backdrop-blur-lg rounded-2xl p-8 border transition-all duration-300 ${
                     plan.popular 
                       ? 'border-cyan-400/50 scale-105' 
                       : 'border-white/10 hover:border-cyan-400/30'
                   }`}
-                >
-                  {plan.popular && (
-                    <div className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-sm font-semibold py-2 px-4 rounded-full text-center mb-6">
-                      Most Popular
+                >{plan.popular && (</div>
+                    <div className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-sm font-semibold py-2 px-4 rounded-full text-center mb-6">Most Popular</div>
                     </div>
                   )}
                   
@@ -197,11 +191,9 @@ const PricingPage: React.FC = () => {
                     <span className="text-gray-400 ml-2">/month</span>
                   </div>
 
-                  <ul className="space-y-3 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                        {feature}
+                  <ul className="space-y-3 mb-8">{plan.features.map((feature, featureIndex) => (</ul>
+                      <li key={featureIndex}, className="flex items-center text-gray-300">
+                        <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />{feature}</CheckCircle>
                       </li>
                     ))}
                   </ul>
@@ -210,8 +202,7 @@ const PricingPage: React.FC = () => {
                     plan.popular
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:from-cyan-600 hover:to-purple-600'
                       : 'bg-white/10 text-white hover:bg-white/20'
-                  }`}>
-                    {plan.popular ? 'Get Started' : 'Choose Plan'}
+                  }`}>{plan.popular ? 'Get Started' : 'Choose Plan'}</button>
                   </button>
                 </div>
               ))}
@@ -219,11 +210,9 @@ const PricingPage: React.FC = () => {
 
             <div className="text-center mt-16">
               <h2 className="text-3xl font-bold text-white mb-4">Need a Custom Solution?</h2>
-              <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-                We offer tailored AI and IT solutions for enterprise clients. Contact us for a personalized quote.
+              <p className="text-gray-300 mb-8 max-w-2xl mx-auto">We offer tailored AI and IT solutions for enterprise clients. Contact us for a personalized quote.</p>
               </p>
-              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
-                Contact Sales
+              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">Contact Sales</button>
               </button>
             </div>
           </div>

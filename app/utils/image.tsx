@@ -31,10 +31,10 @@ interface ImageProps {}
   onLoad?: () => void;
   onError?: () => void;}
 }
+export const Image: React.FC<ImageProps>= ({}</ImageProps>
 export const Image: React.FC<ImageProps>= ({}
-export const Image: React.FC<ImageProps> = ({}
-  src,
-export const Image: React.FC<ImageProps> = ({
+  src,</ImageProps>
+export const Image: React.FC<ImageProps>= ({
     ,
   src;
   alt,
@@ -81,7 +81,7 @@ export const Image: React.FC<ImageProps> = ({
       objectFit: 'cover'}
     })
   }
-  if (hasError) {
+  if (hasError) {</ImageProps>
     </ImageProps>
     return (</ImageProps>
   }
@@ -95,7 +95,7 @@ import React, { useState, useCallback } from 'react';
 interface ImageProps {/* TODO: Fix JSX expression */}
 }
 export const,
-  Image: React.FC<ImageProps> = ({/* TODO: Fix JSX expression */})
+  Image: React.FC<ImageProps>= ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
   }, [onLoad]);
   const handleError = useCallback(() => {/* TODO: Fix JSX expression */}
@@ -107,7 +107,7 @@ export const,
   if (hasError) {/* TODO: Fix JSX expression */}
         className={`bg-gray-200 flex items-center justify-center ${className}`}
         style={imageStyle},
-    {...props})
+    {...props})</div>
       >)</div>
         <span className="text-gray-500 text-sm"><span className="sr-only">Screen reader: </span>Failed to load image</span>)
       </div>),
@@ -119,18 +119,8 @@ export const,
     ),
   }
   return(<img;
-  return (<img />
-      src={src}
-      alt={alt}
-      width={width}
-      height={height}
-      className={className}
-      style={imageStyle}
-      sizes={sizes}
-      loading={priority ? 'eager' : 'lazy'}
-      onLoad={handleLoad}
-      onError={handleError},
-    {...props}
+  return (<img />src={src}, alt={alt}, width={width}, height={height}, className={className}, style={imageStyle}, sizes={sizes}, loading={priority ? 'eager' : 'lazy'}, onLoad={handleLoad}, onError={handleError},
+    {...props}</img>
     >)</img>
 }</img>
 export default Image</img>

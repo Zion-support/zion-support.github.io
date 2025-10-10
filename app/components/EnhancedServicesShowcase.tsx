@@ -35,7 +35,7 @@ const EnhancedServicesShowcase: React.FC = () => {
       stats: '95% Efficiency'
   }
     }
-  ];];];
+  ];
 return (
     <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -47,18 +47,16 @@ return (
         </section>
       <div className="container mx-auto px-4"></div>
         <div className="text-center mb-16"></div>
-          <h2>
-            Our Core Services
+          <h2>Our Core Services</h2>
           </h2>
-          <p>
-            Comprehensive AI and IT solutions designed to transform your business and drive innovation
+          <p>Comprehensive AI and IT solutions designed to transform your business and drive innovation</p>
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
           {
     services.map((service, index) => (</div>
   }
-            <div key={index} className="cyber-card hologram-card p-6 group hover:scale-105 transition-all duration-300"></div>
+            <div key={index}, className="cyber-card hologram-card p-6 group hover:scale-105 transition-all duration-300"></div>
               <div className="flex items-center mb-4"></div>
                 <service>
                 <div />
@@ -66,14 +64,11 @@ return (
                   <div className="text-sm text-cyan-400 font-semibold">{service.stats}</div>
               </div>
               <p className="text-gray-300 mb-4">{service.description}</p>
-              <ul>
-                {
+              <ul>{
     service.features.map((feature, featureIndex) => (
-  }
+  }</ul>
                   <li>
-                    <CheckCircle>
-
-                    {feature}
+                    <CheckCircle>{feature}</CheckCircle>
                   </li>
                 ))}
 
@@ -85,8 +80,7 @@ return (
           ))}
         </div>
         <div className="text-center mt-12"></div>
-          <a>
-            View All Services;
+          <a>View All Services;</a>
             <ArrowRight>
           </a>
         </div>

@@ -24,7 +24,7 @@ const CompliancePage: React.FC = () => {
       title: 'Audit Readiness',
       description: 'Stay audit-ready with continuous compliance monitoring and reporting'
     }
-  ];];];
+  ];
   const benefits = [
     'Advanced compliance technology integration',
     'Real-time compliance monitoring',
@@ -44,20 +44,16 @@ const CompliancePage: React.FC = () => {
       </Helmet>
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Compliance
+          <h1 className="text-5xl font-bold text-white mb-6">Compliance</h1>
   </
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Ensure your business meets all regulatory and compliance requirements. 
-            Powered by advanced AI technology and industry expertise.
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Ensure your business meets all regulatory and compliance requirements. 
+            Powered by advanced AI technology and industry expertise.</p>
           </p>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Our compliance solutions deliver unmatched performance, security, and scalability.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">Our compliance solutions deliver unmatched performance, security, and scalability.</p>
           </p>
         </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {features.map((feature, index) => (
-            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">{features.map((feature, index) => (</div>
+            <div key={index}, className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
               <feature.icon className="h-12 w-12 text-purple-400 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
               <p className="text-gray-300">{feature.description}</p>
@@ -65,12 +61,10 @@ const CompliancePage: React.FC = () => {
           ))}
         </div>
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-8">
-            Why Choose Our Compliance Solutions?
+          <h2 className="text-3xl font-bold text-white text-center mb-8">Why Choose Our Compliance Solutions?</h2>
           </h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center space-x-3">
+          <div className="grid md:grid-cols-2 gap-6">{benefits.map((benefit, index) => (</div>
+              <div key={index}, className="flex items-center space-x-3">
                 <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
                 <span className="text-gray-300">{benefit}</span>
               </div>
@@ -78,20 +72,16 @@ const CompliancePage: React.FC = () => {
           </div>
         </div>
         <div className="text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Ready to Get Started?
+          <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>
           </h2>
-          <p className="text-xl text-purple-100 mb-8">
-            Contact our experts to discuss your compliance needs and get a customized solution.
+          <p className="text-xl text-purple-100 mb-8">Contact our experts to discuss your compliance needs and get a customized solution.</p>
           </p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-              <Phone className="mr-2 h-5 w-5" />
-              Call Now
+              <Phone className="mr-2 h-5 w-5" />Call Now</Phone>
   </
             <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-              <Mail className="mr-2 h-5 w-5" />
-              Email Us
+              <Mail className="mr-2 h-5 w-5" />Email Us</Mail>
   </
           </div>
         </div>

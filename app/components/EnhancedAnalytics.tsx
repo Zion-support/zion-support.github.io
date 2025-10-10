@@ -2,11 +2,11 @@
 import React, { createContext, useContext, useEffect, useCallback } from 'react';
 
 interface AnalyticsContextType {
-    track: (event: string, parameters?: Record<string, any>) => void;
-  page: (pageName: string, parameters?: Record<string, any>) => void;
+    track: (event: string, parameters?: Record<string, any>) => void;</string>
+  page: (pageName: string, parameters?: Record<string, any>) => void;</string>
   identify: (userId: string, traits?: Record<string, any>) => void
   }
-
+</string>
 const AnalyticsContext = createContext<AnalyticsContextType | null>(null);
 
 export const useAnalytics = () => {;
@@ -22,8 +22,8 @@ interface AnalyticsProviderProps {
     children: React.ReactNode,
   trackingId?: string
   }
-
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
+</AnalyticsContextType>
+export const AnalyticsProvider: React.FC<AnalyticsProviderProps>= ({
   children,
   trackingId = 'G-XXXXXXXXXX'
 }) => {
@@ -50,7 +50,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       })
     }
   }, [trackingId]);
-
+</AnalyticsProviderProps>
   const track = useCallback((event: string, parameters?: Record<string, any>) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', event, {
@@ -61,7 +61,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       })
     }
   }, []);
-
+</string>
   const page = useCallback((pageName: string, parameters?: Record<string, any>) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', trackingId, {
@@ -71,7 +71,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       })
     }
   }, [trackingId]);
-
+</string>
   const identify = useCallback((userId: string, traits?: Record<string, any>) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', trackingId, {
@@ -87,9 +87,8 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     identify
   }
 
-  return (
-    <AnalyticsContext.Provider value={value}>
-      {children}
+  return (</string>
+    <AnalyticsContext.Provider value={value}>{children}</AnalyticsContext>
     </AnalyticsContext.Provider>
   );
 };

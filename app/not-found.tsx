@@ -9,24 +9,19 @@ export default function NotFound() {
             <span className="text-4xl">404</span>
           </div>
         </div>
-        <h1>
-          Page Not Found
+        <h1>Page Not Found</h1>
         </h1>
-        <p>
-          Sorry, we couldn't find the page you're looking for. It might have been moved, deleted, or doesn't exist.
+        <p>Sorry, we couldn't find the page you're looking for. It might have been moved, deleted, or doesn't exist.</p>
         </p>
         <div className="flex flex-col sm: flex-row gap-3"></div>
           <Link>
-            <Home>
-            Go Home,
+            <Home>Go Home,</Home>
           </Link>
           <button
   }
-            onClick={() => window.history.back()}
-            className="flex items-center justify-center px-6 py-3 border-2 border-gray-600 text-gray-300 hover: bg-gray-700 font-medium rounded-lg transition-colors"
-          >
-            <ArrowLeft>
-            Go Back,
+            onClick={() =>window.history.back()}, className="flex items-center justify-center px-6 py-3 border-2 border-gray-600 text-gray-300 hover: bg-gray-700 font-medium rounded-lg transition-colors"
+          ></button>
+            <ArrowLeft>Go Back,</ArrowLeft>
           </button>
         </div>
         <div className="mt-6 text-sm text-gray-400"></div>

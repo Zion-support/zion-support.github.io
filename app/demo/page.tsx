@@ -62,7 +62,7 @@ const DemoPage: React.FC = () => {
     },
     {
       id: 'ai-analytics',
-      title: 'AI Analytics Dashboard',
+      title: 'AI Analytics Dashboard',</HTMLInputElement>
 <<<<<<< HEAD
       description: 'See how our AI analytics can transform your business intelligence',
       duration: '5 min',
@@ -136,33 +136,27 @@ const DemoPage: React.FC = () => {
       
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
         <div className="container mx-auto px-4 py-16">
-          <div className="max-w-6xl mx-auto">
-            {/* Header */}
+          <div className="max-w-6xl mx-auto">{/* Header */}</div>
             <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Request a Demo
+              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Request a Demo</h1>
               </h1>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See our AI and IT solutions in action with a personalized demo tailored to your business needs. 
-                Our experts will show you exactly how our technology can transform your operations.
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">See our AI and IT solutions in action with a personalized demo tailored to your business needs. 
+                Our experts will show you exactly how our technology can transform your operations.</p>
               </p>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              {/* Demo Options */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">{/* Demo Options */}</div>
               <div className="space-y-8">
                 <h2 className="text-2xl font-bold text-white mb-6">Available Demos</h2>
-                <div className="space-y-4">
-                  {demos.map((demo) => (
+                <div className="space-y-4">{demos.map((demo) => (</div>
                     <div
-                      key={demo.id}
-                      className={`p-6 rounded-lg cursor-pointer transition-all duration-300 ${
+                      key={demo.id}, className={`p-6 rounded-lg cursor-pointer transition-all duration-300 ${
                         selectedDemo === demo.id
                           ? 'bg-cyan-500/20 border-2 border-cyan-500'
                           : 'bg-slate-800/50 hover:bg-slate-800/70 border-2 border-transparent'
                       }`}
-                      onClick={() => setSelectedDemo(demo.id)}
-                    >
+                      onClick={() =>setSelectedDemo(demo.id)}
+                    ></div>
                       <div className="flex items-start space-x-4">
                         <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
                           <demo.icon className="w-6 h-6 text-white" />
@@ -175,10 +169,8 @@ const DemoPage: React.FC = () => {
                           <p className="text-gray-300 mb-3">{demo.description}</p>
                           <div className="flex items-center justify-between">
                             <span className="text-sm text-gray-400">{demo.category}</span>
-                            <div className="flex space-x-2">
-                              {demo.features.slice(0, 2).map((feature, index) => (
-                                <span key={index} className="text-xs bg-slate-700 text-gray-300 px-2 py-1 rounded">
-                                  {feature}
+                            <div className="flex space-x-2">{demo.features.slice(0, 2).map((feature, index) => (</div>
+                                <span key={index}, className="text-xs bg-slate-700 text-gray-300 px-2 py-1 rounded">{feature}</span>
                                 </span>
                               ))}
                             </div>
@@ -191,11 +183,9 @@ const DemoPage: React.FC = () => {
 
                 <div className="bg-slate-800/50 rounded-lg p-6">
                   <h3 className="text-lg font-semibold text-white mb-4">What You'll Get</h3>
-                  <ul className="space-y-2">
-                    {benefits.map((benefit, index) => (
-                      <li key={index} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                        {benefit}
+                  <ul className="space-y-2">{benefits.map((benefit, index) => (</ul>
+                      <li key={index}, className="flex items-center text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />{benefit}</CheckCircle>
                       </li>
                     ))}
                   </ul>
@@ -207,29 +197,25 @@ const DemoPage: React.FC = () => {
                 <h2 className="text-2xl font-bold text-white mb-6">Schedule Your Demo</h2>
                 
                 {submitStatus === 'success' && (
-                  <div className="bg-green-500/20 border border-green-500 text-green-400 px-4 py-3 rounded-lg mb-6">
-                    Thank you! We'll contact you within 24 hours to schedule your demo.
+                  <div className="bg-green-500/20 border border-green-500 text-green-400 px-4 py-3 rounded-lg mb-6">Thank you! We'll contact you within 24 hours to schedule your demo.</div>
                   </div>
                 )}
                 
                 {submitStatus === 'error' && (
-                  <div className="bg-red-500/20 border border-red-500 text-red-400 px-4 py-3 rounded-lg mb-6">
-                    Sorry, there was an error submitting your request. Please try again.
+                  <div className="bg-red-500/20 border border-red-500 text-red-400 px-4 py-3 rounded-lg mb-6">Sorry, there was an error submitting your request. Please try again.</div>
                   </div>
                 )}
 
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form onSubmit={handleSubmit}, className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
-                        Name *
+                      <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">Name *</label>
                       </label>
                       <input
                         type="text"
                         id="name"
                         name="name"
-                        value={formData.name}
-                        onChange={handleInputChange}
+                        value={formData.name}, onChange={handleInputChange}
                         required
                         className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                         placeholder="Your full name"
@@ -237,15 +223,13 @@ const DemoPage: React.FC = () => {
                     </div>
                     
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                        Email *
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">Email *</label>
                       </label>
                       <input
                         type="email"
                         id="email"
                         name="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
+                        value={formData.email}, onChange={handleInputChange}
                         required
                         className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                         placeholder="your@email.com"
@@ -255,77 +239,61 @@ const DemoPage: React.FC = () => {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
-                        Company
+                      <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">Company</label>
                       </label>
                       <input
                         type="text"
                         id="company"
                         name="company"
-                        value={formData.company}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                        value={formData.company}, onChange={handleInputChange}, className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                         placeholder="Your company name"
                       />
                     </div>
                     
                     <div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
-                        Phone
+                      <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">Phone</label>
                       </label>
                       <input
                         type="tel"
                         id="phone"
                         name="phone"
-                        value={formData.phone}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                        value={formData.phone}, onChange={handleInputChange}, className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                         placeholder="+1 (555) 123-4567"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label htmlFor="demo" className="block text-sm font-medium text-gray-300 mb-2">
-                      Demo Type
+                    <label htmlFor="demo" className="block text-sm font-medium text-gray-300 mb-2">Demo Type</label>
                     </label>
                     <select
                       id="demo"
                       name="demo"
-                      value={formData.demo}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                      value={formData.demo}, onChange={handleInputChange}, className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     >
                       <option value="">Select a demo</option>
                       {demos.map((demo) => (
-                        <option key={demo.id} value={demo.id}>
-                          {demo.title} ({demo.duration})
+                        <option key={demo.id}, value={demo.id}>{demo.title} ({demo.duration})</option>
                         </option>
                       ))}
                     </select>
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-                      Additional Requirements
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">Additional Requirements</label>
                     </label>
                     <textarea
                       id="message"
                       name="message"
-                      value={formData.message}
-                      onChange={handleInputChange}
-                      rows={4}
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                      value={formData.message}, onChange={handleInputChange}, rows={4}, className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                       placeholder="Tell us about your specific needs, challenges, or questions..."
                     />
                   </div>
 
                   <button
                     type="submit"
-                    disabled={isSubmitting}
-                    className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
-                  >
-                    {isSubmitting ? (
+                    disabled={isSubmitting}, className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
+                  >{isSubmitting ? (</button>
                       <>
                         <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
                         <span>Submitting...</span>

@@ -5,8 +5,8 @@ interface StructuredDataProps {
   type?: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'LocalBusiness';
   data?: Record<string, unknown>;
 }
-
-const StructuredData: React.FC<StructuredDataProps> = ({ 
+</string>
+const StructuredData: React.FC<StructuredDataProps>= ({ 
   type = 'Organization', 
   data 
 }) => {
@@ -169,14 +169,14 @@ const StructuredData: React.FC<StructuredDataProps> = ({
 
   const structuredData = data || getDefaultData();
 
-  return (
+  return (</StructuredDataProps>
     <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{
         __html: JSON.stringify(structuredData, null, 2)
       }}
-    />
-  );
+    />);
 };
 
 export default StructuredData;
+</script>

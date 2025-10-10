@@ -51,7 +51,7 @@ const DataAnalyticsPage: React.FC = () => {
       description: 'Forecast future trends and make data-driven decisions with predictive modeling.'
   }
     }
-  ];];];
+  ];
 const benefits = [
     'Make data-driven business decisions',
     'Identify new opportunities and trends',
@@ -85,21 +85,17 @@ return (
         </section>
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
-              <h1>
-                Data Analytics Services
+              <h1>Data Analytics Services</h1>
               </h1>
-              <p>
-                Transform your data into actionable insights with our advanced analytics solutions.;
-                Make smarter decisions and drive business growth with AI-powered data analysis.
+              <p>Transform your data into actionable insights with our advanced analytics solutions.;
+                Make smarter decisions and drive business growth with AI-powered data analysis.</p>
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
                 <button>
-                  <BarChart>
-                  Get Analytics Now
+                  <BarChart>Get Analytics Now</BarChart>
                 </button>
                 <button>
-                  <Phone>
-                  Call (302) 464-0950,
+                  <Phone>Call (302) 464-0950,</Phone>
                 </button>
               </div>
             </div>
@@ -116,16 +112,14 @@ return (
         </section>
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
-              <h2>
-                Our Analytics Solutions
+              <h2>Our Analytics Solutions</h2>
               </h2>
-              <p>
-                We provide comprehensive data analytics services to help you unlock the power of your data.,
+              <p>We provide comprehensive data analytics services to help you unlock the power of your data.,</p>
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"></div>
+                <div key={index}, className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"></div>
                   <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"></div>
                     <feature />
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -146,16 +140,14 @@ return (
         </section>
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
-              <h2>
-                Key Benefits
+              <h2>Key Benefits</h2>
               </h2>
-              <p>
-                Drive business success with our comprehensive data analytics services.,
+              <p>Drive business success with our comprehensive data analytics services.,</p>
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
               {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-3"></div>
+                <div key={index}, className="flex items-start space-x-3"></div>
                   <CheckCircle>
                   <p className="text-gray-300 text-lg">{benefit}</p>
                 </div>
@@ -174,20 +166,16 @@ return (
         </section>
           <div className="max-w-4xl mx-auto text-center"></div>
             <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12"></div>
-              <h2>
-                Ready to Unlock Your Data?
+              <h2>Ready to Unlock Your Data?</h2>
               </h2>
-              <p>
-                Contact our analytics experts to discuss your data needs and get a customized solution.
+              <p>Contact our analytics experts to discuss your data needs and get a customized solution.</p>
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                 <button>
-                  <Phone>
-                  Call (302) 464-0950
+                  <Phone>Call (302) 464-0950</Phone>
                 </button>
                 <button>
-                  <Mail>
-                  Email Us
+                  <Mail>Email Us</Mail>
                 </button>
               </div>
             </div>

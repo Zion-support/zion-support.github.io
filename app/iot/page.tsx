@@ -162,15 +162,12 @@ return (
               <h1>
                 IoT Solutions</h1>
               </h1>
-              <p>
-                Connect, monitor, and optimize your world with intelligent Internet of Things solutions
+              <p>Connect, monitor, and optimize your world with intelligent Internet of Things solutions</p>
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
-                <button>
-                  Explore IoT Solutions
+                <button>Explore IoT Solutions</button>
                 </button>
-                <button>
-                  Schedule IoT Consultation,
+                <button>Schedule IoT Consultation,</button>
                 </button>
               </div>
             </div>
@@ -187,11 +184,9 @@ return (
         </section>
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"></div>
             <div className="text-center mb-12"></div>
-              <h2>
-                Why Choose Our IoT Services?,
+              <h2>Why Choose Our IoT Services?,</h2>
               </h2>
-              <p>
-                End-to-end IoT solutions with proven expertise in connectivity, security, and analytics
+              <p>End-to-end IoT solutions with proven expertise in connectivity, security, and analytics</p>
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
@@ -236,11 +231,9 @@ return (
         </section>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
               <div className="text-center mb-12"></div>
-                <h2>
-                  {category} Solutions
+                <h2>{category} Solutions</h2>
                 </h2>
-                <p>
-                  Specialized {category.toLowerCase()} solutions powered by IoT technology
+                <p>Specialized {category.toLowerCase()} solutions powered by IoT technology</p>
                 </p>
               </div>
               <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div>
@@ -249,7 +242,7 @@ return (
                   .filter(service => service.category === category),
                   .map((service, index) => (</div>
   }
-                    <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"></div>
+                    <div key={index}, className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"></div>
                       <div className="text-4xl mb-4">{service.icon}</div>
                       <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
                       <p className="text-gray-600 mb-4">{service.description}</p>
@@ -264,14 +257,11 @@ return (
                       </div>
                       <div className="mb-4"></div>
                         <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
-                        <ul>
-                          {
+                        <ul>{
     service.features.map((feature, featureIndex) => (
-  }
+  }</ul>
                             <li>
-                              <CheckCircle>
-
-                              {feature}
+                              <CheckCircle>{feature}</CheckCircle>
                             </li>
                           ))}
 
@@ -283,9 +273,7 @@ return (
                           {
     service.technologies.map((tech, techIndex) => (</div>
   }
-                            <span>
-
-                              {tech}
+                            <span>{tech}</span>
                             </span>
                           ))}
 
@@ -293,21 +281,17 @@ return (
                       </div>
                       <div className="mb-6"></div>
                         <h4 className="font-semibold text-gray-900 mb-2">Business Benefits:</h4>
-                        <ul>
-                          {
+                        <ul>{
     service.benefits.map((benefit, benefitIndex) => (
-  }
+  }</ul>
                             <li>
-                              <Star>
-
-                              {benefit}
+                              <Star>{benefit}</Star>
                             </li>
                           ))}
 
                         </ul>
                       </div>
-                      <button>
-                        Get IoT Quote
+                      <button>Get IoT Quote</button>
                       </button>
                     </div>
 
@@ -327,11 +311,9 @@ return (
         </section>
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"></div>
             <div className="text-center mb-12"></div>
-              <h2>
-                Our IoT Capabilities
+              <h2>Our IoT Capabilities</h2>
               </h2>
-              <p>
-                Comprehensive IoT technologies and methodologies for connected solutions,
+              <p>Comprehensive IoT technologies and methodologies for connected solutions,</p>
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
@@ -378,18 +360,14 @@ return (
           </div>
         </section>
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center"></div>
-            <h2>
-              Ready to Connect Your World?
+            <h2>Ready to Connect Your World?</h2>
             </h2>
-            <p>
-              Contact our IoT experts for a free consultation and custom IoT strategy development
+            <p>Contact our IoT experts for a free consultation and custom IoT strategy development</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <a>
-                📞 +1 302 464 0950
+              <a>📞 +1 302 464 0950</a>
               </a>
-              <a>
-                ✉️ kleber@ziontechgroup.com,
+              <a>✉️ kleber@ziontechgroup.com,</a>
               </a>
             </div>
             <div className="mt-8 text-sm text-green-200"></div>

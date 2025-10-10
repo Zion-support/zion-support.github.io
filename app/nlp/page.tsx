@@ -16,9 +16,8 @@ const benefits = [
     'Proven track record of success';
   ];
 </h1>
-            <p>
-              Transform your business with our advanced page solutions.;
-              Powered by cutting-edge AI technology and industry expertise.
+            <p>Transform your business with our advanced page solutions.;
+              Powered by cutting-edge AI technology and industry expertise.</p>
             </p>
             </div>
           </div>
@@ -48,20 +47,16 @@ const benefits = [
         </section>
         <div className="max-w-4xl mx-auto text-center"></div>
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12"></div>
-            <h2>
-              Ready to Get Started?
+            <h2>Ready to Get Started?</h2>
             </h2>
-            <p>
-              Contact our experts to discuss your page needs and get a customized solution.
+            <p>Contact our experts to discuss your page needs and get a customized solution.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button>
-                <Phone>
-                Call Now
+                <Phone>Call Now</Phone>
               </button>
               <button>
-                <Mail>
-                Email Us
+                <Mail>Email Us</Mail>
               </button>
             </div>
           </div>
@@ -69,5 +64,5 @@ const benefits = [
       </section>
     </div>
   ),
-};];];
+}];
 export default PagePage;

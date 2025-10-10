@@ -50,7 +50,7 @@ const SupportPage: React.FC = () => {
       color: 'from-orange-500 to-red-600'
     }
 <<<<<<< HEAD
-  ];];];
+  ];
   const filteredFaqs = faqs.filter(faq =>
     faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
     faq.answer.toLowerCase().includes(searchQuery.toLowerCase())
@@ -167,24 +167,20 @@ const SupportPage: React.FC = () => {
       
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
         <div className="container mx-auto px-4 py-16">
-          <div className="max-w-6xl mx-auto">
-            {/* Header */}
+          <div className="max-w-6xl mx-auto">{/* Header */}</div>
             <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Support Center
+              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Support Center</h1>
               </h1>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Get the help you need with our comprehensive support options. 
-                Our expert team is here to assist you 24/7 with any questions or issues.
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">Get the help you need with our comprehensive support options. 
+                Our expert team is here to assist you 24/7 with any questions or issues.</p>
               </p>
             </div>
 
             {/* Support Channels */}
             <div className="mb-16">
               <h2 className="text-2xl font-bold text-white mb-8 text-center">Get Support</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {supportChannels.map((channel, index) => (
-                  <div key={index} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{supportChannels.map((channel, index) => (</div>
+                  <div key={index}, className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300">
                     <div className={`w-12 h-12 bg-gradient-to-r ${channel.color} rounded-lg flex items-center justify-center mb-4`}>
                       <channel.icon className="w-6 h-6 text-white" />
                     </div>
@@ -192,24 +188,19 @@ const SupportPage: React.FC = () => {
                     <p className="text-gray-300 mb-4">{channel.description}</p>
                     <div className="space-y-2 text-sm">
                       <div className="flex items-center text-gray-400">
-                        <Clock className="w-4 h-4 mr-2" />
-                        {channel.availability}
+                        <Clock className="w-4 h-4 mr-2" />{channel.availability}</Clock>
                       </div>
-                      <div className="text-cyan-400 font-semibold">
-                        Response: {channel.responseTime}
+                      <div className="text-cyan-400 font-semibold">Response: {channel.responseTime}</div>
                       </div>
                     </div>
-                    <div className="mt-4">
-                      {channel.contact.startsWith('+') || channel.contact.includes('@') ? (
+                    <div className="mt-4">{channel.contact.startsWith('+') || channel.contact.includes('@') ? (</div>
                         <a
                           href={channel.contact.startsWith('+') ? `tel:${channel.contact}` : `mailto:${channel.contact}`}
                           className="text-cyan-400 hover:text-cyan-300 font-semibold"
-                        >
-                          {channel.contact}
+                        >{channel.contact}</a>
                         </a>
                       ) : (
-                        <button className="text-cyan-400 hover:text-cyan-300 font-semibold">
-                          {channel.contact}
+                        <button className="text-cyan-400 hover:text-cyan-300 font-semibold">{channel.contact}</button>
                         </button>
                       )}
                     </div>
@@ -230,20 +221,15 @@ const SupportPage: React.FC = () => {
                     <input
                       type="text"
                       placeholder="Search FAQs..."
-                      value={searchTerm}
-                      onChange={(e) => setSearchTerm(e.target.value)}
-                      className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    />
+                      value={searchTerm}, onChange={(e) =>setSearchTerm(e.target.value)}, className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    /></input>
                   </div>
                   <select
-                    value={selectedCategory}
-                    onChange={(e) => setSelectedCategory(e.target.value)}
-                    className="px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                  >
+                    value={selectedCategory}, onChange={(e) =>setSelectedCategory(e.target.value)}, className="px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                  ></select>
                     <option value="all">All Categories</option>
                     {faqCategories.map(category => (
-                      <option key={category.id} value={category.id}>
-                        {category.title}
+                      <option key={category.id}, value={category.id}>{category.title}</option>
                       </option>
                     ))}
                   </select>
@@ -251,9 +237,8 @@ const SupportPage: React.FC = () => {
               </div>
 
               {/* FAQ Items */}
-              <div className="space-y-6">
-                {filteredQuestions.map((faq, index) => (
-                  <div key={index} className="bg-slate-800/50 rounded-lg p-6">
+              <div className="space-y-6">{filteredQuestions.map((faq, index) => (</div>
+                  <div key={index}, className="bg-slate-800/50 rounded-lg p-6">
                     <h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3>
                     <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
                   </div>
@@ -264,19 +249,16 @@ const SupportPage: React.FC = () => {
             {/* Resources */}
             <div className="mb-16">
               <h2 className="text-2xl font-bold text-white mb-8 text-center">Additional Resources</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {resources.map((resource, index) => (
-                  <div key={index} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300 group">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{resources.map((resource, index) => (</div>
+                  <div key={index}, className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300 group">
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                       <resource.icon className="w-6 h-6 text-white" />
                     </div>
                     <h3 className="text-xl font-bold text-white mb-2">{resource.title}</h3>
                     <p className="text-gray-300 mb-4">{resource.description}</p>
                     <a
-                      href={resource.link}
-                      className="text-cyan-400 hover:text-cyan-300 font-semibold flex items-center group-hover:translate-x-1 transition-all"
-                    >
-                      Access Resource
+                      href={resource.link}, className="text-cyan-400 hover:text-cyan-300 font-semibold flex items-center group-hover:translate-x-1 transition-all"
+                    >Access Resource</a>
                       <ArrowRight className="w-4 h-4 ml-1" />
                     </a>
                   </div>
@@ -287,11 +269,9 @@ const SupportPage: React.FC = () => {
             {/* Contact CTA */}
             <div className="text-center">
               <div className="bg-slate-800/50 rounded-lg p-8">
-                <h2 className="text-2xl font-bold text-white mb-4">
-                  Still Need Help?
+                <h2 className="text-2xl font-bold text-white mb-4">Still Need Help?</h2>
                 </h2>
-                <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-                  Can't find what you're looking for? Our support team is ready to help you with any questions or issues.
+                <p className="text-gray-300 mb-6 max-w-2xl mx-auto">Can't find what you're looking for? Our support team is ready to help you with any questions or issues.</p>
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a

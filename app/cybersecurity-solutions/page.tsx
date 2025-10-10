@@ -13,20 +13,17 @@ const CybersecuritySolutionsPage: React.FC = () => {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-white mb-6">
-              Cybersecurity Solutions
+            <h1 className="text-5xl font-bold text-white mb-6">Cybersecurity Solutions</h1>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Protect your organization with comprehensive cybersecurity solutions including 
-              threat detection, vulnerability assessment, and 24/7 security monitoring.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Protect your organization with comprehensive cybersecurity solutions including 
+              threat detection, vulnerability assessment, and 24/7 security monitoring.</p>
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
               <h3 className="text-2xl font-bold text-cyan-400 mb-4">Threat Detection</h3>
-              <p className="text-gray-300 mb-4">
-                Advanced threat detection systems to identify and respond to security threats in real-time.
+              <p className="text-gray-300 mb-4">Advanced threat detection systems to identify and respond to security threats in real-time.</p>
               </p>
               <ul className="text-sm text-gray-400 space-y-2">
                 <li>• Real-time monitoring</li>
@@ -38,8 +35,7 @@ const CybersecuritySolutionsPage: React.FC = () => {
 
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
               <h3 className="text-2xl font-bold text-cyan-400 mb-4">Vulnerability Assessment</h3>
-              <p className="text-gray-300 mb-4">
-                Comprehensive vulnerability scanning and assessment to identify security weaknesses.
+              <p className="text-gray-300 mb-4">Comprehensive vulnerability scanning and assessment to identify security weaknesses.</p>
               </p>
               <ul className="text-sm text-gray-400 space-y-2">
                 <li>• Network scanning</li>
@@ -51,8 +47,7 @@ const CybersecuritySolutionsPage: React.FC = () => {
 
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
               <h3 className="text-2xl font-bold text-cyan-400 mb-4">Security Monitoring</h3>
-              <p className="text-gray-300 mb-4">
-                24/7 security operations center (SOC) monitoring and incident response.
+              <p className="text-gray-300 mb-4">24/7 security operations center (SOC) monitoring and incident response.</p>
               </p>
               <ul className="text-sm text-gray-400 space-y-2">
                 <li>• 24/7 monitoring</li>
@@ -64,8 +59,7 @@ const CybersecuritySolutionsPage: React.FC = () => {
 
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
               <h3 className="text-2xl font-bold text-cyan-400 mb-4">Compliance Management</h3>
-              <p className="text-gray-300 mb-4">
-                Ensure compliance with industry regulations and security standards.
+              <p className="text-gray-300 mb-4">Ensure compliance with industry regulations and security standards.</p>
               </p>
               <ul className="text-sm text-gray-400 space-y-2">
                 <li>• GDPR compliance</li>
@@ -77,8 +71,7 @@ const CybersecuritySolutionsPage: React.FC = () => {
 
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
               <h3 className="text-2xl font-bold text-cyan-400 mb-4">Data Protection</h3>
-              <p className="text-gray-300 mb-4">
-                Advanced data protection and encryption solutions for sensitive information.
+              <p className="text-gray-300 mb-4">Advanced data protection and encryption solutions for sensitive information.</p>
               </p>
               <ul className="text-sm text-gray-400 space-y-2">
                 <li>• Data encryption</li>
@@ -90,8 +83,7 @@ const CybersecuritySolutionsPage: React.FC = () => {
 
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
               <h3 className="text-2xl font-bold text-cyan-400 mb-4">Security Training</h3>
-              <p className="text-gray-300 mb-4">
-                Comprehensive security awareness training for your employees.
+              <p className="text-gray-300 mb-4">Comprehensive security awareness training for your employees.</p>
               </p>
               <ul className="text-sm text-gray-400 space-y-2">
                 <li>• Phishing simulation</li>
@@ -103,8 +95,7 @@ const CybersecuritySolutionsPage: React.FC = () => {
           </div>
 
           <div className="text-center">
-            <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
-              Secure Your Organization
+            <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">Secure Your Organization</button>
             </button>
           </div>
         </div>

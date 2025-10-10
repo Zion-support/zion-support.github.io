@@ -6,8 +6,7 @@ const MicroSaaSPage: React.FC = () => {
   const title = serviceName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
 return (
     <>,
-      <Helmet>
-  }
+      <Helmet>}</Helmet>
         <title>{title} | Zion Tech Group - Micro SaaS Solutions</title>
         <meta>
         <link>
@@ -30,16 +29,14 @@ return (
               {title} </h1>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400"> Solution</span>
             </h1>
-            <p>
-              Powerful {title.toLowerCase()} micro SaaS solution designed for modern businesses.
+            <p>Powerful {title.toLowerCase()} micro SaaS solution designed for modern businesses.</p>
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
               <button>
                 <span>Get Started</span>
                 <ArrowRight>
               </button>
-              <button>
-                View Demo,
+              <button>View Demo,</button>
               </button>
             </div>
           </div>
@@ -55,8 +52,7 @@ return (
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Coming Soon</h2>
-              <p>
-                We're developing powerful {title.toLowerCase()} solutions. Stay tuned for updates!
+              <p>We're developing powerful {title.toLowerCase()} solutions. Stay tuned for updates!</p>
               </p>
             </div>
           </div>

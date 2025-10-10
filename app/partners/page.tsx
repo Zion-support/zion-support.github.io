@@ -44,28 +44,22 @@ const PartnersPage: React.FC = () => {
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Our Technology Partners
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Our Technology Partners</h1>
               </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                We work with leading technology companies to deliver the best solutions for our clients.
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">We work with leading technology companies to deliver the best solutions for our clients.</p>
               </p>
             </div>
 
-            <div className="flex flex-wrap justify-center gap-4 mb-12">
-              {categories.map((category) => (
+            <div className="flex flex-wrap justify-center gap-4 mb-12">{categories.map((category) => (</div>
                 <button
-                  key={category}
-                  className="px-6 py-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-full text-white hover:bg-white/20 transition-all duration-300"
-                >
-                  {category}
+                  key={category}, className="px-6 py-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-full text-white hover:bg-white/20 transition-all duration-300"
+                >{category}</button>
                 </button>
               ))}
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-              {partners.map((partner, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-cyan-400/30 transition-all duration-300">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">{partners.map((partner, index) => (</div>
+                <div key={index}, className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-cyan-400/30 transition-all duration-300">
                   <div className="aspect-video bg-white/10 rounded-xl mb-4 flex items-center justify-center">
                     <div className="text-4xl opacity-50">🏢</div>
                   </div>
@@ -84,7 +78,7 @@ const PartnersPage: React.FC = () => {
         </section>
       </div>
     </>
-  const categories = ['all', ...Array.from(new Set(partners.map(partner => partner.category)))];];];
+  const categories = ['all', ...Array.from(new Set(partners.map(partner => partner.category)))];
   const tiers = ['all', ...Array.from(new Set(partners.map(partner => partner.tier)))];
 
   const filteredPartners = partners.filter(partner => {;
@@ -110,16 +104,16 @@ const PartnersPage: React.FC = () => {
     switch (tier) {
       case 'strategic':;
         return <Star className="w-4 h-4" />;
-      case 'preferred':
+      case 'preferred':</Star>
         return <Award className="w-4 h-4" />;
-      case 'certified':
+      case 'certified':</Award>
         return <CheckCircle className="w-4 h-4" />;
-      default:
+      default:</CheckCircle>
         return <Handshake className="w-4 h-4" />;
     }
   };
 
-  return (
+  return (</Handshake>
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Partners - Zion Tech Group | Strategic Partnerships</title>
@@ -133,9 +127,8 @@ const PartnersPage: React.FC = () => {
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
             Our <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Partners</span>
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            We work with industry leaders to deliver the best AI and IT solutions. 
-            Our strategic partnerships enable us to provide comprehensive, cutting-edge technology.
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">We work with industry leaders to deliver the best AI and IT solutions. 
+            Our strategic partnerships enable us to provide comprehensive, cutting-edge technology.</p>
           </p>
         </div>
       </section>
@@ -145,8 +138,7 @@ const PartnersPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">Why Partner With Us?</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We offer comprehensive partnership programs that benefit both our partners and our clients
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">We offer comprehensive partnership programs that benefit both our partners and our clients</p>
             </p>
           </div>
 
@@ -156,8 +148,7 @@ const PartnersPage: React.FC = () => {
                 <Handshake className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Strategic Collaboration</h3>
-              <p className="text-gray-300">
-                Work together to develop innovative solutions that benefit both organizations and their customers.
+              <p className="text-gray-300">Work together to develop innovative solutions that benefit both organizations and their customers.</p>
               </p>
             </div>
 
@@ -166,8 +157,7 @@ const PartnersPage: React.FC = () => {
                 <Users className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Joint Go-to-Market</h3>
-              <p className="text-gray-300">
-                Leverage our combined expertise and market presence to reach new customers and expand market share.
+              <p className="text-gray-300">Leverage our combined expertise and market presence to reach new customers and expand market share.</p>
               </p>
             </div>
 
@@ -176,8 +166,7 @@ const PartnersPage: React.FC = () => {
                 <Award className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Certification Programs</h3>
-              <p className="text-gray-300">
-                Access to training, certification, and technical resources to stay ahead of technology trends.
+              <p className="text-gray-300">Access to training, certification, and technical resources to stay ahead of technology trends.</p>
               </p>
             </div>
           </div>
@@ -189,39 +178,31 @@ const PartnersPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row gap-4 mb-12">
             <select
-              value={selectedCategory}
-              onChange={(e) => setSelectedCategory(e.target.value)}
-              className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+              value={selectedCategory}, onChange={(e) =>setSelectedCategory(e.target.value)}, className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
             >
-              {categories.map(category => (
-                <option key={category} value={category}>
-                  {category === 'all' ? 'All Categories' : category}
+              {categories.map(category => (</select>
+                <option key={category}, value={category}>{category === 'all' ? 'All Categories' : category}</option>
                 </option>
               ))}
             </select>
             <select
-              value={selectedTier}
-              onChange={(e) => setSelectedTier(e.target.value)}
-              className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+              value={selectedTier}, onChange={(e) =>setSelectedTier(e.target.value)}, className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
             >
-              {tiers.map(tier => (
-                <option key={tier} value={tier}>
-                  {tier === 'all' ? 'All Tiers' : tier.charAt(0).toUpperCase() + tier.slice(1)}
+              {tiers.map(tier => (</select>
+                <option key={tier}, value={tier}>{tier === 'all' ? 'All Tiers' : tier.charAt(0).toUpperCase() + tier.slice(1)}</option>
                 </option>
               ))}
             </select>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredPartners.map((partner) => (
-              <div key={partner.id} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 border border-white/20">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{filteredPartners.map((partner) => (</div>
+              <div key={partner.id}, className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 border border-white/20">
                 <div className="flex items-center justify-between mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-gray-500 to-gray-600 rounded-lg flex items-center justify-center">
                     <span className="text-white font-bold text-lg">{partner.name.charAt(0)}</span>
                   </div>
-                  <div className={`px-3 py-1 rounded-full text-xs font-medium text-white bg-gradient-to-r ${getTierColor(partner.tier)} flex items-center gap-1`}>
-                    {getTierIcon(partner.tier)},
-    {partner.tier.charAt(0).toUpperCase() + partner.tier.slice(1)}
+                  <div className={`px-3 py-1 rounded-full text-xs font-medium text-white bg-gradient-to-r ${getTierColor(partner.tier)} flex items-center gap-1`}>{getTierIcon(partner.tier)},
+    {partner.tier.charAt(0).toUpperCase() + partner.tier.slice(1)}</div>
                   </div>
                 </div>
 
@@ -231,12 +212,10 @@ const PartnersPage: React.FC = () => {
 
                 <div className="flex items-center justify-between">
                   <a
-                    href={partner.website}
-                    target="_blank"
+                    href={partner.website}, target="_blank"
                     rel="noopener noreferrer"
                     className="text-blue-400 hover:text-blue-300 font-medium transition-colors flex items-center gap-2"
-                  >
-                    Visit Website
+                  >Visit Website</a>
                     <ExternalLink className="w-4 h-4" />
                   </a>
                 </div>
@@ -257,8 +236,7 @@ const PartnersPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">Partnership Tiers</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We offer different partnership levels to meet the needs of various organizations
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">We offer different partnership levels to meet the needs of various organizations</p>
             </p>
           </div>
 
@@ -351,19 +329,15 @@ const PartnersPage: React.FC = () => {
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Become Our Partner
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Become Our Partner</h2>
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join our partner ecosystem and help us deliver innovative AI and IT solutions to businesses worldwide.
+            <p className="text-xl text-gray-300 mb-8">Join our partner ecosystem and help us deliver innovative AI and IT solutions to businesses worldwide.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Apply for Partnership
+              <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">Apply for Partnership</button>
                 <ArrowRight className="inline-block ml-2 w-5 h-5" />
               </button>
-              <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                Learn More
+              <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">Learn More</button>
               </button>
             </div>
           </div>

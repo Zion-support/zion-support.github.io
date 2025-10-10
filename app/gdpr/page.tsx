@@ -32,11 +32,9 @@ const benefits = [
         </section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
-            <h2>
-              Why Choose Our Page?,
+            <h2>Why Choose Our Page?,</h2>
             </h2>
-            <p>
-              Our page solutions deliver unmatched performance, security, and scalability.
+            <p>Our page solutions deliver unmatched performance, security, and scalability.</p>
             </p>
           </div>
                 </div>
@@ -47,5 +45,5 @@ const benefits = [
           </div>
         </div>
       </section>
-};];];
+}];
 export default PagePage;

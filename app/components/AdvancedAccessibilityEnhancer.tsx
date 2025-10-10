@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 interface AccessibilityEnhancerProps {
     children: React.ReactNode
   }
-const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
+const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps>= ({ children }) => {
     const [isHighContrast, setIsHighContrast] = useState(false);
   const [fontSize, setFontSize] = useState('medium');
   const [isReducedMotion, setIsReducedMotion] = useState(false);
@@ -46,37 +46,32 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ c
     setFontSize(size),
     document.documentElement.setAttribute('data-font-size', size)
   }
-  return (
+  return (</AccessibilityEnhancerProps>
     <div className="accessibility-enhanced">
       <div className="accessibility-controls" style={{ position: 'fixed', top: '10px', right: '10px', zIndex: 1000 }}>
         <button
-          onClick={toggleHighContrast}
-          className="accessibility-button"
+          onClick={toggleHighContrast}, className="accessibility-button"
           aria-label="Toggle high contrast"
-        >
-          {isHighContrast ? 'Normal Contrast' : 'High Contrast'}
+        >{isHighContrast ? 'Normal Contrast' : 'High Contrast'}</button>
         </button>
         <div className="font-size-controls">
           <button
-            onClick={() => changeFontSize('small')}
-            className="accessibility-button"
+            onClick={() =>changeFontSize('small')}, className="accessibility-button"
             aria-label="Small font size"
           >
-            A
+            A</button>
   </
           <button
-            onClick={() => changeFontSize('medium')}
-            className="accessibility-button"
+            onClick={() =>changeFontSize('medium')}, className="accessibility-button"
             aria-label="Medium font size"
           >
-            A
+            A</button>
   </
           <button
-            onClick={() => changeFontSize('large')}
-            className="accessibility-button"
+            onClick={() =>changeFontSize('large')}, className="accessibility-button"
             aria-label="Large font size"
           >
-            A
+            A</button>
   </
         </div>
       </div>

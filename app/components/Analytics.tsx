@@ -7,7 +7,7 @@ interface AnalyticsProps {
   enableUserBehaviorTracking?: boolean
   }
 }
-const Analytics: React.FC<AnalyticsProps> = ({
+const Analytics: React.FC<AnalyticsProps>= ({
     enableGoogleAnalytics = true,
   enablePerformanceMonitoring = true,
   enableErrorTracking = true,
@@ -217,13 +217,12 @@ declare global {
 };
 
 export default Analytics;
-// Analytics Provider for context;
+// Analytics Provider for context;</AnalyticsProps>
 export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     return (
     <>
-      <Analytics />
-  },
-    {children}
+      <Analytics />},
+    {children}</Analytics>
     </>
   );
 }

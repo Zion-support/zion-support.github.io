@@ -14,8 +14,7 @@ const benefits = [
 
     'Cost-effective pricing plans',
 
-    'Proven track record of success';
-  ];];];
+    'Proven track record of success'];];
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet>
@@ -35,23 +34,19 @@ return (
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center"></div>
             <h1>
-              <span>
-                FuturisticServiceCard
+              <span>FuturisticServiceCard</span>
               </span>
               <br>
               <span className="text-white">Solutions</span>
             </h1>
-            <p>
-              Transform your business with our advanced futuristicservicecard solutions.;
-              Powered by cutting-edge AI technology and industry expertise.
+            <p>Transform your business with our advanced futuristicservicecard solutions.;
+              Powered by cutting-edge AI technology and industry expertise.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <button>
-                Get Started
+              <button>Get Started</button>
                 <ArrowRight>
               </button>
-              <button>
-                Learn More
+              <button>Learn More</button>
               </button>
             </div>
           </div>

@@ -480,7 +480,7 @@ const itServices = [;
       caseStudy: 'Healthcare provider achieved 100% HIPAA compliance and passed all audits'
   }
     }
-  ];];];
+  ];
 const categories = [
     { id: 'all', name: 'All IT Services', icon: Grid3X3 },
     { id: 'infrastructure', name: 'Infrastructure', icon: Server },
@@ -517,18 +517,15 @@ return (
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight cyber-text neon-pulse"></h1>
             Professional <span className="holographic-text">IT Services</span>
           </h1>
-          <p>
-            Comprehensive IT solutions designed to optimize your technology infrastructure,
-            enhance security, and drive business growth. Expert consulting and implementation.
+          <p>Comprehensive IT solutions designed to optimize your technology infrastructure,
+            enhance security, and drive business growth. Expert consulting and implementation.</p>
           </p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center mb-12"></div>
             <a>
-              <Phone>
-              Call (302) 464-0950
+              <Phone>Call (302) 464-0950</Phone>
             </a>
             <a>
-              <Mail>
-              Get IT Consultation,
+              <Mail>Get IT Consultation,</Mail>
             </a>
           </div>
         </div>
@@ -552,28 +549,20 @@ return (
                 <input;
                   type="text";
                   placeholder="Search IT services...";
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-
-                  className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-                />,
+                  value={searchTerm}, onChange={(e) =>setSearchTerm(e.target.value)}, className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+                />,</input>
               </div>
             </div>
 
             {/* Category Filter */}
             <div className="lg: w-64"></div>
               <select,
-                value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
-
-                className="w-full px-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+                value={selectedCategory}, onChange={(e) =>setSelectedCategory(e.target.value)}, className="w-full px-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
               >,
                 {
     categories.map((category) => (
-  }
-                  <option>
-
-                    {category.name}
+  }</select>
+                  <option>{category.name}</option>
                   </option>
                 ))}
 
@@ -587,9 +576,7 @@ return (
     categories.map((category) => (</div>
               <button
   }
-                key={category.id}
-                onClick={() => setSelectedCategory(category.id)}
-                className={
+                key={category.id}, onClick={() =>setSelectedCategory(category.id)}, className={
     `px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                   selectedCategory === category.id;
                     ? 'bg-cyan-500 text-white';
@@ -597,7 +584,7 @@ return (
   }
                 }`}
               >;
-                {category.name}
+                {category.name}</button>
               </button>
             ))}
 
@@ -618,7 +605,7 @@ return (
             {
     filteredServices.map((service) => (</div>
   }
-              <div key={service.id} className="quantum-card p-6 group hover:scale-105 transition-all duration-300 energy-pulse"></div>
+              <div key={service.id}, className="quantum-card p-6 group hover:scale-105 transition-all duration-300 energy-pulse"></div>
                 <div className="flex items-start justify-between mb-4"></div>
                   <div className="text-cyan-400 group-hover:text-cyan-300 transition-colors"></div>
                     <service />
@@ -632,10 +619,9 @@ return (
                 <div className="space-y-3 mb-6"></div>
                   <div />
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
-                    <ul>
-                      {
+                    <ul>{
     service.features.slice(0, 4).map((feature, idx) => (
-  }
+  }</ul>
                         <li>
                           <CheckCircle>
                           <span>{feature}</span>
@@ -645,10 +631,9 @@ return (
                   </div>
                   <div />
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Benefits:</h4>
-                    <ul>
-                      {
+                    <ul>{
     service.benefits.slice(0, 2).map((benefit, idx) => (
-  }
+  }</ul>
                         <li>
                           <TrendingUp>
                           <span>{benefit}</span>
@@ -679,12 +664,10 @@ return (
                   </div>
                 )}
 <div className="space-y-3"></div>
-                  <a>
-                    Get Free Consultation
+                  <a>Get Free Consultation</a>
                   </a>
                   <a>
-                    <Phone>
-                    Call for Quote
+                    <Phone>Call for Quote</Phone>
                   </a>
                 </div>
               </div>
@@ -702,21 +685,17 @@ return (
           </div>
         </section>
         <div className="max-w-4xl mx-auto text-center"></div>
-          <h2>
-            Ready to Optimize Your IT Infrastructure?,
+          <h2>Ready to Optimize Your IT Infrastructure?,</h2>
           </h2>
-          <p>
-            Our certified IT professionals deliver reliable, secure, and scalable solutions.;
-            All services include free consultations and ongoing support.
+          <p>Our certified IT professionals deliver reliable, secure, and scalable solutions.;
+            All services include free consultations and ongoing support.</p>
           </p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             <a>
-              <Phone>
-              Call (302) 464-0950
+              <Phone>Call (302) 464-0950</Phone>
             </a>
             <a>
-              <Mail>
-              Get Custom IT Strategy
+              <Mail>Get Custom IT Strategy</Mail>
             </a>
           </div>
         </div>

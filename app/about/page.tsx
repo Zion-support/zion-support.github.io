@@ -16,19 +16,16 @@ const AboutPage: React.FC = () => {
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               About <span className="text-cyan-400">Zion Tech Group</span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We are passionate about transforming businesses through cutting-edge AI and IT solutions.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">We are passionate about transforming businesses through cutting-edge AI and IT solutions.</p>
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
             <div>
               <h2 className="text-3xl font-bold text-white mb-6">Our Mission</h2>
-              <p className="text-gray-300 mb-6 leading-relaxed">
-                To empower businesses with innovative AI and IT solutions that drive growth, efficiency, and competitive advantage in the digital age.
+              <p className="text-gray-300 mb-6 leading-relaxed">To empower businesses with innovative AI and IT solutions that drive growth, efficiency, and competitive advantage in the digital age.</p>
               </p>
-              <p className="text-gray-300 leading-relaxed">
-                We believe technology should be accessible, powerful, and transformative. Our team of experts works tirelessly to deliver solutions that not only meet today's needs but anticipate tomorrow's challenges.
+              <p className="text-gray-300 leading-relaxed">We believe technology should be accessible, powerful, and transformative. Our team of experts works tirelessly to deliver solutions that not only meet today's needs but anticipate tomorrow's challenges.</p>
               </p>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/20">

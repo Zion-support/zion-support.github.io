@@ -47,8 +47,10 @@ const HomePage: React.FC = () => {
       icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Cutting-edge artificial intelligence solutions that transform your business operations.',
-      benefits: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'];
+      benefits: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
+
     },
+
     {
       icon: Cloud,
       title: 'Cloud Infrastructure',
@@ -79,7 +81,7 @@ const HomePage: React.FC = () => {
       description: 'Expert guidance to help you navigate digital transformation and technology adoption.',
       benefits: ['Strategy Planning', 'Technology Assessment', 'Implementation Support', 'Training']
     },
-  ];];];
+  ];
   const services = [
     {
       icon: Brain,
@@ -103,13 +105,12 @@ const HomePage: React.FC = () => {
       features: ['Custom SaaS', 'API Integration', 'Scalable Solutions', 'Maintenance']
     }
   ];
-  return (
+  return (</string>
     <>
       <SEOOptimizer
         title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
-        keywords={['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services']}
-        canonicalUrl="https://ziontechgroup.com"
+        keywords={['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services']}, canonicalUrl="https://ziontechgroup.com"
         structuredData={{
           '@context': 'https://schema.org',
           '@type': 'TechCompany',
@@ -146,27 +147,17 @@ const HomePage: React.FC = () => {
         }}
       />
       <PerformanceOptimizer
-        enableImageOptimization={true}
-        enableLazyLoading={true}
-        enablePreloading={true}
-        enableCodeSplitting={true}
+        enableImageOptimization={true}, enableLazyLoading={true}, enablePreloading={true}, enableCodeSplitting={true}
 
       >
         <AccessibilityEnhancer
-          enableKeyboardNavigation={true}
-          enableScreenReaderSupport={true}
-          enableHighContrast={true}
-          enableFocusManagement={true}
+          enableKeyboardNavigation={true}, enableScreenReaderSupport={true}, enableHighContrast={true}, enableFocusManagement={true}
         >
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain">
-            {/* Navigation */}
-            <Navigation />
-            
-            {/* Skip to main content for accessibility */}
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain">{/* Navigation */}</div>
+            <Navigation />{/* Skip to main content for accessibility */}</Navigation>
             <a
               href="#main-content"
-              className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50">
-              Skip to main content
+              className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50">Skip to main content</a>
             </a>
 
             {/* Hero Section */}
@@ -176,22 +167,18 @@ const HomePage: React.FC = () => {
                 <div className="text-center">
                   <div className="mb-8">
                     <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-medium mb-6">
-                      <Sparkles className="w-4 h-4 mr-2" />
-                      Trusted by 500+ Companies Worldwide
+                      <Sparkles className="w-4 h-4 mr-2" />Trusted by 500+ Companies Worldwide</Sparkles>
                     </div>
                   </div>
                   <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-                    <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent neon-text">
-                      Advanced AI & IT Solutions
+                    <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent neon-text">Advanced AI & IT Solutions</span>
                     </span>
                     <br />
-                    <span className="text-3xl md:text-5xl lg:text-6xl">
-                      for the Future
+                    <span className="text-3xl md:text-5xl lg:text-6xl">for the Future</span>
                     </span>
                   </h1>
-                  <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                    Transform your business with cutting-edge artificial intelligence, quantum computing, 
-                    and autonomous systems. We deliver enterprise-grade solutions that drive innovation and growth.
+                  <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">Transform your business with cutting-edge artificial intelligence, quantum computing, 
+                    and autonomous systems. We deliver enterprise-grade solutions that drive innovation and growth.</p>
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
                     <a
@@ -203,8 +190,7 @@ const HomePage: React.FC = () => {
                     </a>
                     <a
                       href="tel:+13024640950"
-                      onClick={handlePhoneClick}
-                      className="cyber-button-secondary text-lg px-8 py-4 inline-flex items-center space-x-2 group"
+                      onClick={handlePhoneClick}, className="cyber-button-secondary text-lg px-8 py-4 inline-flex items-center space-x-2 group"
                       aria-label="Call us at (302) 464-0950">
                       <Phone className="w-5 h-5" />
                       <span>(302) 464-0950</span>
@@ -246,8 +232,10 @@ const HomePage: React.FC = memo(() => {
       icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Cutting-edge artificial intelligence solutions that transform your business operations.',
-      benefits: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'];
+      benefits: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
+
     },
+
     {
       icon: Cloud,
       title: 'Cloud Infrastructure',
@@ -278,7 +266,7 @@ const HomePage: React.FC = memo(() => {
       description: 'Expert guidance to help you make the right technology decisions.',
       benefits: ['Technology Strategy', 'Digital Transformation', 'Process Optimization', 'Training']
     },
-  ];];];
+  ];
   const stats = [
     { number: '500+', label: 'Projects Completed' },
     { number: '99.9%', label: 'Uptime Guarantee' },
@@ -297,19 +285,16 @@ const HomePage: React.FC = memo(() => {
       
       <Navigation />
       
-      <main>
-        {/* Hero Section */}
+      <main>{/* Hero Section */}</main>
         <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden" aria-labelledby="hero-heading">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" aria-hidden="true" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} aria-hidden="true" />
           <div className="relative max-w-7xl mx-auto text-center">
-            <h1 id="hero-heading" className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Transform Your Business with
+            <h1 id="hero-heading" className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">Transform Your Business with</h1>
               <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> AI & IT Solutions</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              We help businesses leverage cutting-edge technology to drive growth, 
-              improve efficiency, and stay ahead of the competition.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">We help businesses leverage cutting-edge technology to drive growth, 
+              improve efficiency, and stay ahead of the competition.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
 
@@ -331,18 +316,14 @@ const HomePage: React.FC = memo(() => {
             <section className="py-20 bg-slate-800/50 backdrop-blur-sm">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
-                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                    Our Core Services
+                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Our Core Services</h2>
                   </h2>
-                  <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                    Comprehensive technology solutions designed to accelerate your digital transformation
+                  <p className="text-xl text-gray-300 max-w-3xl mx-auto">Comprehensive technology solutions designed to accelerate your digital transformation</p>
                   </p>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {services.map((service, index) => (
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{services.map((service, index) => (</div>
                     <div
-                      key={service.title}
-                      className="cyber-card group hover:scale-105 transition-all duration-300"
+                      key={service.title}, className="cyber-card group hover:scale-105 transition-all duration-300"
                       style={{ animationDelay: `${index * 100}ms` }}
                     >
                       <div className="p-8">
@@ -351,17 +332,15 @@ const HomePage: React.FC = memo(() => {
                         </div>
                         <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
                         <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
-                        <div className="space-y-2 mb-6">
-                          {service.features.map((feature, featureIndex) => (
-                            <div key={featureIndex} className="flex items-center space-x-2">
+                        <div className="space-y-2 mb-6">{service.features.map((feature, featureIndex) => (</div>
+                            <div key={featureIndex}, className="flex items-center space-x-2">
                               <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
                               <span className="text-sm text-gray-300">{feature}</span>
                             </div>
                           ))}
                         </div>
                         <a
-                          href={service.href}
-                          className="inline-flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 font-medium group-hover:translate-x-1 transition-transform"
+                          href={service.href}, className="inline-flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 font-medium group-hover:translate-x-1 transition-transform"
                         >
                           <span>Learn More</span>
                           <ArrowRight className="w-4 h-4" />
@@ -378,18 +357,14 @@ const HomePage: React.FC = memo(() => {
             <section className="py-20">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
-                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                    Why Choose Zion Tech Group?
+                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Zion Tech Group?</h2>
                   </h2>
-                  <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                    We combine cutting-edge technology with deep industry expertise to deliver exceptional results
+                  <p className="text-xl text-gray-300 max-w-3xl mx-auto">We combine cutting-edge technology with deep industry expertise to deliver exceptional results</p>
                   </p>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {features.map((feature, index) => (
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
                     <div
-                      key={feature.title}
-                      className="cyber-card group hover:scale-105 transition-all duration-300"
+                      key={feature.title}, className="cyber-card group hover:scale-105 transition-all duration-300"
                       style={{ animationDelay: `${index * 100}ms` }}
                     >
                       <div className="p-8">
@@ -398,9 +373,8 @@ const HomePage: React.FC = memo(() => {
                         </div>
                         <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
                         <p className="text-gray-300 mb-6 leading-relaxed">{feature.description}</p>
-                        <div className="space-y-2">
-                          {feature.benefits.map((benefit, benefitIndex) => (
-                            <div key={benefitIndex} className="flex items-center space-x-2">
+                        <div className="space-y-2">{feature.benefits.map((benefit, benefitIndex) => (</div>
+                            <div key={benefitIndex}, className="flex items-center space-x-2">
                               <CheckCircle className="w-4 h-4 text-purple-400 flex-shrink-0" />
                               <span className="text-sm text-gray-300">{benefit}</span>
                             </div>
@@ -417,28 +391,22 @@ const HomePage: React.FC = memo(() => {
             <section className="py-20 bg-slate-900/50">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
-                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                    What Our Clients Say
+                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">What Our Clients Say</h2>
                   </h2>
-                  <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                    Don't just take our word for it. Here's what industry leaders say about our solutions.
+                  <p className="text-xl text-gray-300 max-w-3xl mx-auto">Don't just take our word for it. Here's what industry leaders say about our solutions.</p>
                   </p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   <div className="cyber-card">
                     <div className="flex items-center mb-4">
-                      <div className="flex text-yellow-400">
-                        {[...Array(5)].map((_, i) => (
-                          <Star key={i} className="w-5 h-5 fill-current" />
-                        ))}
+                      <div className="flex text-yellow-400">{[...Array(5)].map((_, i) => (</div>
+                          <Star key={i}, className="w-5 h-5 fill-current" />))}</Star>
                       </div>
                     </div>
-                    <p className="text-gray-300 mb-4">
-                      "Zion Tech Group transformed our entire IT infrastructure. Their AI solutions increased our efficiency by 300%."
+                    <p className="text-gray-300 mb-4">"Zion Tech Group transformed our entire IT infrastructure. Their AI solutions increased our efficiency by 300%."</p>
                     </p>
                     <div className="flex items-center">
-                      <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center text-white font-bold mr-3">
-                        JS
+                      <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center text-white font-bold mr-3">JS</div>
                       </div>
                       <div>
                         <div className="text-white font-semibold">John Smith</div>
@@ -448,18 +416,14 @@ const HomePage: React.FC = memo(() => {
                   </div>
                   <div className="cyber-card">
                     <div className="flex items-center mb-4">
-                      <div className="flex text-yellow-400">
-                        {[...Array(5)].map((_, i) => (
-                          <Star key={i} className="w-5 h-5 fill-current" />
-                        ))}
+                      <div className="flex text-yellow-400">{[...Array(5)].map((_, i) => (</div>
+                          <Star key={i}, className="w-5 h-5 fill-current" />))}</Star>
                       </div>
                     </div>
-                    <p className="text-gray-300 mb-4">
-                      "Outstanding service and cutting-edge technology. They delivered our project ahead of schedule."
+                    <p className="text-gray-300 mb-4">"Outstanding service and cutting-edge technology. They delivered our project ahead of schedule."</p>
                     </p>
                     <div className="flex items-center">
-                      <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center text-white font-bold mr-3">
-                        MJ
+                      <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center text-white font-bold mr-3">MJ</div>
                       </div>
                       <div>
                         <div className="text-white font-semibold">Maria Johnson</div>
@@ -469,18 +433,14 @@ const HomePage: React.FC = memo(() => {
                   </div>
                   <div className="cyber-card">
                     <div className="flex items-center mb-4">
-                      <div className="flex text-yellow-400">
-                        {[...Array(5)].map((_, i) => (
-                          <Star key={i} className="w-5 h-5 fill-current" />
-                        ))}
+                      <div className="flex text-yellow-400">{[...Array(5)].map((_, i) => (</div>
+                          <Star key={i}, className="w-5 h-5 fill-current" />))}</Star>
                       </div>
                     </div>
-                    <p className="text-gray-300 mb-4">
-                      "The best IT partner we've ever worked with. Their expertise in AI and cloud solutions is unmatched."
+                    <p className="text-gray-300 mb-4">"The best IT partner we've ever worked with. Their expertise in AI and cloud solutions is unmatched."</p>
                     </p>
                     <div className="flex items-center">
-                      <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center text-white font-bold mr-3">
-                        DW
+                      <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center text-white font-bold mr-3">DW</div>
                       </div>
                       <div>
                         <div className="text-white font-semibold">David Wilson</div>
@@ -495,11 +455,9 @@ const HomePage: React.FC = memo(() => {
             {/* CTA Section */}
             <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                  Ready to Transform Your Business?
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
                 </h2>
-                <p className="text-xl text-cyan-100 mb-8 max-w-3xl mx-auto">
-                  Let's discuss how our AI and IT solutions can drive your digital transformation and accelerate growth.
+                <p className="text-xl text-cyan-100 mb-8 max-w-3xl mx-auto">Let's discuss how our AI and IT solutions can drive your digital transformation and accelerate growth.</p>
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                   <a
@@ -511,8 +469,7 @@ const HomePage: React.FC = memo(() => {
                   </a>
                   <a
                     href="tel:+13024640950"
-                    onClick={handlePhoneClick}
-                    className="border-2 border-white text-white hover:bg-white hover:text-cyan-600 px-8 py-4 rounded-lg font-semibold text-lg transition-colors inline-flex items-center space-x-2"
+                    onClick={handlePhoneClick}, className="border-2 border-white text-white hover:bg-white hover:text-cyan-600 px-8 py-4 rounded-lg font-semibold text-lg transition-colors inline-flex items-center space-x-2"
                   >
                     <Phone className="w-5 h-5" />
                     <span>(302) 464-0950</span>

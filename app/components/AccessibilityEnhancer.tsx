@@ -9,7 +9,7 @@ interface AccessibilityEnhancerProps {
   enableFocusManagement?: boolean;
 }
 
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps>= ({
   children,
   enableKeyboardNavigation = true,
   enableScreenReaderSupport = true,
@@ -135,7 +135,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       return () => prefersHighContrast.removeEventListener('change', updateHighContrast);
     }
   }, [enableKeyboardNavigation, enableScreenReaderSupport, enableHighContrast, enableFocusManagement]);
-
+</AccessibilityEnhancerProps>
   return <React.Fragment>{children}</React.Fragment>;
 };
 

@@ -11,8 +11,10 @@ const AiWorkflowAutomationPage: React.FC = () => {
       icon: Brain,
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis'];
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis'],
+
     },
+
     {
       icon: BarChart,
       title: 'Advanced Analytics',
@@ -31,7 +33,7 @@ const AiWorkflowAutomationPage: React.FC = () => {
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     },
-  ];];];
+  ];
   const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
@@ -49,22 +51,18 @@ const AiWorkflowAutomationPage: React.FC = () => {
       </Helmet>
       <Navigation />
       
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}</main>
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                AI Workflow Automation
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">AI Workflow Automation</h1>
               </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Transform your business processes with intelligent automation. 
-                Streamline operations, reduce costs, and scale efficiently with AI-powered workflows.
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your business processes with intelligent automation. 
+                Streamline operations, reduce costs, and scale efficiently with AI-powered workflows.</p>
               </p>
 
                 </button>
-                <button className="border border-gray-300 text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition-colors">
-                  Learn More
+                <button className="border border-gray-300 text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition-colors">Learn More</button>
                 </button>
 
               </div>

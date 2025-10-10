@@ -31,12 +31,11 @@ export interface ErrorBoundaryConfig {
   /**;
    * Custom error messages by error type;
    */;
-  customMessages: Record<string>
-/**
+  customMessages: Record<string>/**
    * Fallback UI components
    */,
   fallbackComponents: {}
-
+</string>
     default: React.ComponentType<{ error: Error, resetError: () => void }>;
     network: React.ComponentType<{ error: Error, resetError: () => void }>;
     notFound: React.ComponentType<{ error: Error, resetError: () => void }>;
@@ -85,12 +84,9 @@ function DefaultErrorFallback({ error, resetError }: { error: Error, resetError:
             <path>
           </svg>
         </div>
-        <h2>
-          Oops! Something went wrong
+        <h2>Oops! Something went wrong</h2>
         </h2>
-        <p>
-
-          {error.message || 'An unexpected error occurred'}
+        <p>{error.message || 'An unexpected error occurred'}</p>
         </p>
         {
     process.env['NODE_ENV'] === 'development' && (
@@ -98,14 +94,12 @@ function DefaultErrorFallback({ error, resetError }: { error: Error, resetError:
           <pre className="mt-4 p-4 bg-gray-100 rounded text-xs overflow-auto">{error.stack}</pre>
         )}
         <div className="mt-6 flex gap-4"></div>
-          <button>
-            Try Again
+          <button>Try Again</button>
           </button>
           <button;
-            onClick={() => (window.location.href = '/')}
-            className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover: bg-gray-300 transition-colors";
+            onClick={() =>(window.location.href = '/')}, className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover: bg-gray-300 transition-colors";
           >
-            Go Home
+            Go Home</button>
           </button>
         </div>
       </div>
@@ -124,12 +118,10 @@ function NetworkErrorFallback({ resetError }: { error: Error, resetError: () => 
           </svg>
         </div>
         <h2 className="mt-4 text-2xl font-bold text-center text-gray-900">Connection Issue</h2>
-        <p>
-          Unable to connect to the server. Please check your internet connection and try again.
+        <p>Unable to connect to the server. Please check your internet connection and try again.</p>
         </p>
         <div className="mt-6"></div>
-          <button>
-            Retry Connection
+          <button>Retry Connection</button>
           </button>
         </div>
       </div>
@@ -144,22 +136,19 @@ function NotFoundFallback(): JSX.Element {
       <div className="max-w-md w-full text-center"></div>
         <h1 className="text-6xl font-bold text-gray-900">404</h1>
         <h2 className="mt-4 text-2xl font-bold text-gray-900">Page Not Found</h2>
-        <p>
-          The page you're looking for doesn't exist or has been moved.
+        <p>The page you're looking for doesn't exist or has been moved.</p>
         </p>
         <div className="mt-6 flex gap-4 justify-center"></div>
           <button
   }
-            onClick={() => (window.location.href = '/')}
-            className="bg-blue-600 text-white px-6 py-2 rounded-lg hover: bg-blue-700 transition-colors";
+            onClick={() =>(window.location.href = '/')}, className="bg-blue-600 text-white px-6 py-2 rounded-lg hover: bg-blue-700 transition-colors";
           >
-            Go Home
+            Go Home</button>
           </button>
           <button,
-            onClick={() => window.history.back()}
-            className="bg-gray-200 text-gray-800 px-6 py-2 rounded-lg hover: bg-gray-300 transition-colors";
+            onClick={() =>window.history.back()}, className="bg-gray-200 text-gray-800 px-6 py-2 rounded-lg hover: bg-gray-300 transition-colors";
           >
-            Go Back
+            Go Back</button>
           </button>
         </div>
       </div>
@@ -196,7 +185,7 @@ export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES 
 /**;
  * Format error for logging;
  */;
-export function formatErrorForLogging(error: Error): Record<string, unknown> {
+export function formatErrorForLogging(error: Error): Record<string, unknown>{
     return {
     message: error.message,
     stack: error.stack,
@@ -210,3 +199,4 @@ export function formatErrorForLogging(error: Error): Record<string, unknown> {
 };
 
 export default getErrorBoundaryConfig;
+</string>
