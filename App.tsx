@@ -178,20 +178,7 @@ const App: React.FC = memo(() => {
                   <main id="main-content" className="w-full">
                     <Suspense fallback={<PageLoader message="Loading Zion Tech Group..." />}>
                     <Routes>
-<<<<<<< HEAD
-                      <Route path="/" element={
-                        <div className="w-full">
-                          <UnifiedContentPromotion />
-                          <InteractiveAIROICalculator />
-                          <ContentShowcase />
-                          <InteractiveContentShowcase2026 />
-                        </div>
-                      } />
-                      
-                      {/* Main Pages */}
-=======
                       <Route path="/" element={<HomePage />} />
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8860
                       <Route path="/about" element={<AboutPage />} />
                       <Route path="/contact" element={<ContactPage />} />
                       <Route path="/pricing" element={<PricingPage />} />
