@@ -10,10 +10,11 @@ bad, g, e: stri, n, g;
 gradie, n, t: stri, n, g;
 ic, o, n: Rea, c, t.ReactNo, d, e;
 l, i, n;
-  k: stri, n, g;
-}
+  k: stri, n, g}
 const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {
-  const, featuredConte, n;
+return (
+;
+const, featuredConte, n;
   t: FeaturedConte, n, t[] = [
     {
       id: 0;
@@ -24,7 +25,9 @@ const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {
       reade, r, s: '2, 5, K+','
       bad, g, e: 'N, E, W','
       gradie, n, t: 'fr, o, m-pi, n, k-500, t, o-r, e, d-5, 0, 0','
-      ic, o, n: <Sparkles, className="w-6 h-6/>,"</Sparkles>li</Sparkles>, n, k: '/bl, o, g/ai-20, 2, 5-o, c, t-03-govern, e, d-age, n, t-rollbac, k, s}
+      ic, o, n: <Sparkles, className="w-6 h-6/>,"</Sparkles>li</Sparkles>
+);
+}, n, k: '/bl, o, g/ai-20, 2, 5-o, c, t-03-govern, e, d-age, n, t-rollbac, k, s}
     {
       id: 7;
       tit, l, e: 'Consentless, Personalizatio, n (Ed, g, e)','

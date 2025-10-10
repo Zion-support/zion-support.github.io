@@ -4,8 +4,7 @@ export interface Insight {
   summary: string;
   category: string;
   date: string; // ISO date string;
-  readMinutes: number;
-}
+  readMinutes: number}
 
 export const insights: Insight[] = [,
   {,
@@ -15,8 +14,7 @@ export const insights: Insight[] = [,
       'Control AI spend with token budgets, model right-sizing, and automated cost alerts tied to business KPIs.',
     category: 'AI Operations',
     date: '2025-10-01',
-    readMinutes: 8;
-  },
+    readMinutes: 8},
   {
     id: 'enterprise-ai-scorecards-2025',
     title: 'Enterprise AI Scorecards 2025: KPI-Linked SLIs and Canary Gates',
@@ -24,8 +22,7 @@ export const insights: Insight[] = [,
       'Implement production-ready AI scorecards with KPI-linked SLIs, canary deployments, and instant rollback capabilities.',
     category: 'AI Reliability',
     date: '2025-10-02',
-    readMinutes: 12;
-  },
+    readMinutes: 12},
   {
     id: 'rag-quality-budgets-production',
     title: 'RAG Quality Budgets in Production: Freshness Windows and Cache Tiers',

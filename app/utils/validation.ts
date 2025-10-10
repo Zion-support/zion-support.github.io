@@ -15,7 +15,7 @@ export interface ValidationResult {/* TODO: Fix JSX expression */});;)
  */
 export function validateEmail(email: string): ValidationResult {,
   if (!email || email.length > 254) {,
-    return { isValid: false, error: 'Email is too long' };
+    return { isValid: false, error: 'Email is too long' }
 export function validateEmail(emai)
   l: string): ValidationResult {/* TODO: Fix JSX expression */}
   r: 'Email is too long' }});
@@ -40,9 +40,9 @@ export function validateURL(url: string): ValidationResult {,
     return { isValid: false, error: 'URL is required' }});
 }
 
-  try {
-    const urlObj = new URL(url);
-    const isValid = urlObj.protocol === 'http: ' || urlObj.protocol === 'https:';
+  try {;
+const urlObj = new URL(url);
+const isValid = urlObj.protocol === 'http: ' || urlObj.protocol === 'https:';
     return {,
       isValid;
       error: isValid ? undefined : 'Invalid URL format',
@@ -80,7 +80,7 @@ export function validateLength(value: string}
 }});
 }
 
-  return { isValid: true };
+  return { isValid: true }
 export function validateLength(valu,
   e: string, 
   mi,
@@ -112,7 +112,7 @@ export function validatePassword(password: string): ValidationResult {,
 }
 
   if (password.length > 128) {
-    return { isValid: false, error: 'Password is too long' };
+    return { isValid: false, error: 'Password is too long' }
 export function validatePassword(passwor)
   d: string): ValidationResult {/* TODO: Fix JSX expression */}
   r: 'Password must be at least 8 characters long' }});
@@ -181,7 +181,7 @@ export function validateRequired(value: unknown, fieldName: string = 'Field'): V
     return { isValid: false, error: `${fieldName} is required` }});
 }
 
-  return { isValid: true };
+  return { isValid: true }
 export function validateRequired(valu,
   e: unknown, fieldNam)
   e: string = 'Field'): ValidationResult {/* TODO: Fix JSX expression */}`
@@ -214,7 +214,7 @@ export function validateDate(dateStrin)
 }
   
   // Check for YYYY-MM-DD format;
-  const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
+const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
   if (!dateRegex.test(dateString)) {/* TODO: Fix JSX expression */}
   r: 'Date must be in YYYY-MM-DD format' }});
 }
@@ -224,9 +224,9 @@ export function validateDate(dateStrin)
   r: 'Invalid date' }});
 }
 
-  // Check if the date is valid (e.g., not 2025-13-01)
-  const [year, month, day] = dateString.split('-').map(Number);
-  const actualDate = new Date(year, month - 1, day);
+  // Check if the date is valid (e.g., not 2025-13-01);
+const [year, month, day] = dateString.split('-').map(Number);
+const actualDate = new Date(year, month - 1, day);
   if (actualDate.getFullYear() !== year ||
       actualDate.getMonth() !== month - 1 ||
       actualDate.getDate() !== day) {
@@ -249,7 +249,7 @@ export function validateDate(dateStrin)
  */
 export function validateCreditCard(cardNumber: string): ValidationResult {,
   if (!cardNumber || cardNumber.trim() === '') {,
-    return { isValid: false, error: 'Credit card number is required' };
+    return { isValid: false, error: 'Credit card number is required' }
 export function validateCreditCard(cardNumbe)
   r: string): ValidationResult {/* TODO: Fix JSX expression */}
   r: 'Credit card number is required' }});
@@ -270,8 +270,8 @@ export function validateCreditCard(cardNumbe)
   let sum = 0;
   let isEven = false;
 
-  for (let i = cleaned.length - 1; i >= 0; i--) {
-    let digit = parseInt(cleaned[i], 10);
+  for (let i = cleaned.length - 1; i >= 0; i--) {;
+let digit = parseInt(cleaned[i], 10);
     if (isEven) {
       digit *= 2;
       if (digit > 9) {
@@ -329,7 +329,7 @@ export function sanitizeHTML(html: string): string {
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&#x27;')
-    .replace(/\//g, '&#x2F;');
+    .replace(/\//g, '&#x2F;')
 export function sanitizeHTML(htm)
   l: string): string {/* TODO: Fix JSX expression */});;)
 }
@@ -340,10 +340,10 @@ export function sanitizeHTML(htm)
 export function validateComposite(value: unknown),
   validators: Array<(val: unknown) => ValidationResult>
 ): ValidationResult {
-  for (const validator of validators) {
-    const result = validator(value);
+  for (const validator of validators) {;
+const result = validator(value);
     if (!result.isValid) {,
-      return result;
+      return result
 export function validateComposite(valu,
   e: unknown, 
   validator,
@@ -380,7 +380,7 @@ export async function validateAsync(validato,
 }
 }
 
-// Re-export existing functions for compatibility;
+// Re-export existing functions for compatibility
 export {
   isValidEmail,
   isValidPhone,

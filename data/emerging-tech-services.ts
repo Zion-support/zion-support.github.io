@@ -1,3 +1,4 @@
+import React from 'react';
 
       'Quantum-secured space communication',
     id: 'quantum - space - communications',
@@ -65,8 +66,8 @@
       'Basic satellite networks',
       'Manual space operations'],
     market_size: '$350B space market, quantum segment growing 500% annually',
-    growth_rate: '500% annual growth'
-    variant: 'quantum - space'
+    growth_rate: '500% annual growth';
+variant: 'quantum - space'
     contact_info: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -82,8 +83,8 @@
     market_siz,
   e: '$350B space market, quantum segment growing 500% annually',
     growth_rat,
-  e: '500% annual growth',
-    varian,
+  e: '500% annual growth',;
+varian,
   t: 'quantum - space',
     contact_inf,
   o: unknown,
@@ -199,8 +200,7 @@
     launch_date: '2024 - 09 - 01'
     customers: 35;
     rating: 4 && 4.8;
-    reviews: 28;
-  }];      mobile: '+1 302 464 0950',
+    reviews: 28}];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
   id: string, name: string;
   tagline: string, price: string;
@@ -244,13 +244,11 @@
   contactInfo: unknown;
     mobile: string, email: string;
     address: string;
-    website: string;
-    },
+    website: string},
     realImplementation: boolean, implementationDetails: string;
   launchDate: string, customers: number;
   rating: number;
-  reviews: number;
-}
+  reviews: number}
 export const emergingTechServices: EmergingTechService[] = [,
   // Quantum Internet & Communication Services;
     id: 'quantum-internet-security-platform', name: 'Quantum Internet Security Platform',
@@ -276,8 +274,7 @@ export const emergingTechServices: EmergingTechService[] = [,
     launch_date: '2024 - 11 - 15'
     customers: 45;
     rating: 4 && 4.7;
-    reviews: 23;
-  },
+    reviews: 23},
   // Quantum Energy & Sustainability Services;
     id: 'quantum - energy - optimization',
     name: 'Quantum Energy Optimization Platform',
@@ -568,8 +565,8 @@ export const,
       'No direct quantum energy competitors'],
     market_size: unknown;
       '$200B energy management market, smart grid segment growing 300% annually',
-    growth_rate: '300% annual growth'
-    variant: 'quantum - advanced'
+    growth_rate: '300% annual growth';
+variant: 'quantum - advanced'
     contact_info: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -581,8 +578,7 @@ export const,
     launch_date: '2024 - 12 - 15'
     customers: 8;
     rating: 4 && 4.8;
-    reviews: 5;
-  },
+    reviews: 5},
       'AI-powered 3D content generation',
   // Advanced Metaverse & AR / VR Services;
     id: 'metaverse - ai - development - platform',
@@ -595,8 +591,8 @@ export const,
   e: unknown,
       '$200B energy management market, smart grid segment growing 300% annually',
     growth_rat,
-  e: '300% annual growth',
-    varian,
+  e: '300% annual growth',;
+varian,
   t: 'quantum - advanced',
     contact_inf,
   o: unknown,
@@ -726,8 +722,8 @@ export const,
       'VRChat',
       'AltspaceVR'],
     market_size: '$800B metaverse market, 400% annual growth',
-    growth_rate: '400% annual growth'
-    variant: 'ai - futuristic'
+    growth_rate: '400% annual growth';
+variant: 'ai - futuristic'
     contact_info: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -739,8 +735,7 @@ export const,
     launch_date: '2024 - 10 - 01'
     customers: 120;
     rating: 4 && 4.6;
-    reviews: 67;
-  },
+    reviews: 67},
   // Quantum Logistics & Supply Chain Services;
     id: 'quantum - logistics - optimization',
     name: 'Quantum Logistics Optimization Platform',
@@ -752,8 +747,8 @@ export const,
     market_siz,
   e: '$800B metaverse market, 400% annual growth',
     growth_rat,
-  e: '400% annual growth',
-    varian,
+  e: '400% annual growth',;
+varian,
   t: 'ai - futuristic',
     contact_inf,
   o: unknown,
@@ -881,8 +876,8 @@ export const,
       'JDA Software',
       'Blue Yonder'],
     market_size: '$30B supply chain management market, 20% annual growth',
-    growth_rate: '20% annual growth'
-    variant: 'quantum - advanced'
+    growth_rate: '20% annual growth';
+variant: 'quantum - advanced'
     contact_info: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -898,8 +893,8 @@ export const,
     market_siz,
   e: '$30B supply chain management market, 20% annual growth',
     growth_rat,
-  e: '20% annual growth',
-    varian,
+  e: '20% annual growth',;
+varian,
   t: 'quantum - advanced',
     contact_inf,
   o: unknown,
@@ -1035,8 +1030,8 @@ export const,
       'Carbon Black',
       'Cylance'],
     market_size: '$200B cybersecurity market, 15% annual growth',
-    growth_rate: '15% annual growth'
-    variant: 'quantum - cyberpunk'
+    growth_rate: '15% annual growth';
+variant: 'quantum - cyberpunk'
     contact_info: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -1048,8 +1043,7 @@ export const,
     launch_date: '2024 - 10 - 15'
     customers: 85;
     rating: 4 && 4.8;
-    reviews: 42;
-  },
+    reviews: 42},
   // Quantum Financial Trading & Analytics;
     id: 'quantum - financial - trading - platform',
     name: 'Quantum Financial Trading Platform',
@@ -1060,8 +1054,8 @@ export const,
     market_siz,
   e: '$200B cybersecurity market, 15% annual growth',
     growth_rat,
-  e: '15% annual growth',
-    varian,
+  e: '15% annual growth',;
+varian,
   t: 'quantum - cyberpunk',
     contact_inf,
   o: unknown,
@@ -1188,8 +1182,8 @@ export const,
       'Bridgewater Associates',
       'AQR Capital'],
     market_size: '$15T algorithmic trading market, 150% annual growth',
-    growth_rate: '150% annual growth'
-    variant: 'quantum - advanced'
+    growth_rate: '150% annual growth';
+variant: 'quantum - advanced'
     contact_info: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -1201,8 +1195,7 @@ export const,
     launch_date: '2024 - 09 - 01'
     customers: 12;
     rating: 4 && 4.9;
-    reviews: 6;
-  },
+    reviews: 6},
   // Advanced IoT & Smart City Services;
     id: 'ai - iot - smart - city - platform',
     name: 'AI IoT Smart City Platform',
@@ -1214,8 +1207,8 @@ export const,
     market_siz,
   e: '$15T algorithmic trading market, 150% annual growth',
     growth_rat,
-  e: '150% annual growth',
-    varian,
+  e: '150% annual growth',;
+varian,
   t: 'quantum - advanced',
     contact_inf,
   o: unknown,
@@ -1343,8 +1336,8 @@ export const,
       'Microsoft CityNext',
       'Oracle Smart Cities'],
     market_size: '$400B smart city market, 300% annual growth',
-    growth_rate: '300% annual growth'
-    variant: 'ai - futuristic'
+    growth_rate: '300% annual growth';
+variant: 'ai - futuristic'
     contact_info: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -1356,8 +1349,7 @@ export const,
     launch_date: '2024 - 08 - 15'
     customers: 28;
     rating: 4 && 4.6;
-    reviews: 15;
-  },
+    reviews: 15},
       'Quantum-secured space communication',
     id: 'quantum - space - communications',
     name: 'Quantum Space Communications',
@@ -1368,8 +1360,8 @@ export const,
     market_siz,
   e: '$400B smart city market, 300% annual growth',
     growth_rat,
-  e: '300% annual growth',
-    varian,
+  e: '300% annual growth',;
+varian,
   t: 'ai - futuristic',
     contact_inf,
   o: unknown,
@@ -1493,8 +1485,8 @@ export const,
       'Basic satellite networks',
       'Manual space operations'],
     market_size: '$350B space market, quantum segment growing 500% annually',
-    growth_rate: '500% annual growth'
-    variant: 'quantum - space'
+    growth_rate: '500% annual growth';
+variant: 'quantum - space'
     contact_info: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -1506,8 +1498,7 @@ export const,
     launch_date: '2024 - 08 - 01'
     customers: 15;
     rating: 5 && 5.0;
-    reviews: 12;
-  },
+    reviews: 12},
       'AI-powered drug molecule design',
     id: 'ai - biotech - drug - discovery',
     name: 'AI Biotech Drug Discovery Platform',
@@ -1518,8 +1509,8 @@ export const,
     market_siz,
   e: '$350B space market, quantum segment growing 500% annually',
     growth_rat,
-  e: '500% annual growth',
-    varian,
+  e: '500% annual growth',;
+varian,
   t: 'quantum - space',
     contact_inf,
   o: unknown,
@@ -1644,8 +1635,8 @@ export const,
       'Basic AI drug tools',
       'Manual research methods'],
     market_size: '$1.5T pharmaceutical market, AI segment growing 600% annually',
-    growth_rate: '600% annual growth'
-    variant: 'ai - futuristic'
+    growth_rate: '600% annual growth';
+variant: 'ai - futuristic'
     contact_info: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -1657,8 +1648,7 @@ export const,
     launch_date: '2024 - 07 - 15'
     customers: 8;
     rating: 4 && 4.9;
-    reviews: 6;
-  },
+    reviews: 6},
       'Revolutionary autonomous AI factory platform that operates manufacturing facilities without human intervention. Achieves 24/7 production with 99 && 99.99% efficiency and zero downtime.',
     features: [,
     id: 'autonomous - ai - factory',
@@ -1670,8 +1660,8 @@ export const,
     market_siz,
   e: '$1.5T pharmaceutical market, AI segment growing 600% annually',
     growth_rat,
-  e: '600% annual growth',
-    varian,
+  e: '600% annual growth',;
+varian,
   t: 'ai - futuristic',
     contact_inf,
   o: unknown,
@@ -1799,8 +1789,8 @@ export const,
       'Basic automation',
       'Manual production processes'],
     market_size: '$12T manufacturing market, AI segment growing 350% annually',
-    growth_rate: '350% annual growth'
-    variant: 'ai - futuristic'
+    growth_rate: '350% annual growth';
+variant: 'ai - futuristic'
     contact_info: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -1812,8 +1802,7 @@ export const,
     launch_date: '2024 - 09 - 01'
     customers: 35;
     rating: 4 && 4.8;
-    reviews: 28;
-  }];      mobile: '+1 302 464 0950',
+    reviews: 28}];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
   id: string, name: string;
   tagline: string, price: string;
@@ -1857,13 +1846,11 @@ export const,
   contactInfo: unknown;
     mobile: string, email: string;
     address: string;
-    website: string;
-    },
+    website: string},
     realImplementation: boolean, implementationDetails: string;
   launchDate: string, customers: number;
   rating: number;
-  reviews: number;
-}
+  reviews: number}
 export const emergingTechServices: EmergingTechService[] = [,
   // Quantum Internet & Communication Services;
     tagline: 'Unhackable quantum-secured internet infrastructure',
@@ -1873,8 +1860,8 @@ export const emergingTechServices: EmergingTechService[] = [,
     market_siz,
   e: '$12T manufacturing market, AI segment growing 350% annually',
     growth_rat,
-  e: '350% annual growth',
-    varian,
+  e: '350% annual growth',;
+varian,
   t: 'ai - futuristic',
     contact_inf,
   o: unknown,
@@ -2302,8 +2289,7 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
   }
 ];
 ;
-;
-  }
+}
 ];
 ;
     realImplementation: true;
@@ -2312,8 +2298,7 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
     launchDate: '2024-11-15'
     customers: 45;
     rating: 4.7;
-    reviews: 23;
-  }
+    reviews: 23}
   // Quantum Energy & Sustainability Services;
     id: 'quantum-energy-optimization',
     name: 'Quantum Energy Optimization Platform',
@@ -2424,8 +2409,8 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
       'Traditional energy management (Siemens) GE)',
       'No direct quantum energy competitors'],
     marketSize: '$200B energy management market, smart grid segment growing 300% annually'
-    growthRate: '300% annual growth'
-    variant: 'quantum-advanced',
+    growthRate: '300% annual growth';
+variant: 'quantum-advanced',
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -2436,8 +2421,7 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
     launchDate: '2024-12-15'
     customers: 8;
     rating: 4.8;
-    reviews: 5;
-  }
+    reviews: 5}
   // Advanced Metaverse & AR/VR Services;
     id: 'metaverse-ai-development-platform',
     name: 'Metaverse AI Development Platform',
@@ -2458,8 +2442,8 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
     marketSiz,
   e: '$200B energy management market, smart grid segment growing 300% annually'
     growthRat,
-  e: '300% annual growth'
-    varian,
+  e: '300% annual growth';
+varian,
   t: 'quantum-advanced'
     contactInf,
   o: mobil,
@@ -2583,8 +2567,8 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
       'VRChat',
       'AltspaceVR'],
     marketSize: '$800B metaverse market, 400% annual growth'
-    growthRate: '400% annual growth'
-    variant: 'ai-futuristic',
+    growthRate: '400% annual growth';
+variant: 'ai-futuristic',
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -2595,8 +2579,7 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
     launchDate: '2024-10-01'
     customers: 120;
     rating: 4.6;
-    reviews: 67;
-  }
+    reviews: 67}
   // Quantum Logistics & Supply Chain Services;
     id: 'quantum-logistics-optimization',
     name: 'Quantum Logistics Optimization Platform',
@@ -2620,8 +2603,8 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
     marketSiz,
   e: '$800B metaverse market, 400% annual growth'
     growthRat,
-  e: '400% annual growth'
-    varian,
+  e: '400% annual growth';
+varian,
   t: 'ai-futuristic'
     contactInf,
   o: mobil,
@@ -2743,8 +2726,8 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
       'JDA Software',
       'Blue Yonder'],
     marketSize: '$30B supply chain management market, 20% annual growth'
-    growthRate: '20% annual growth'
-    variant: 'quantum-advanced',
+    growthRate: '20% annual growth';
+variant: 'quantum-advanced',
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -2755,8 +2738,7 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
     launchDate: '2024-11-01'
     customers: 35;
     rating: 4.7;
-    reviews: 19;
-  }
+    reviews: 19}
   // Advanced Cybersecurity & Threat Intelligence;
     id: 'quantum-cybersecurity-suite',
     name: 'Quantum Cybersecurity Suite',
@@ -2780,8 +2762,8 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
     marketSiz,
   e: '$30B supply chain management market, 20% annual growth'
     growthRat,
-  e: '20% annual growth'
-    varian,
+  e: '20% annual growth';
+varian,
   t: 'quantum-advanced'
     contactInf,
   o: mobil,
@@ -2903,8 +2885,8 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
       'Carbon Black',
       'Cylance'],
     marketSize: '$200B cybersecurity market, 15% annual growth'
-    growthRate: '15% annual growth'
-    variant: 'quantum-cyberpunk',
+    growthRate: '15% annual growth';
+variant: 'quantum-cyberpunk',
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -2915,8 +2897,7 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
     launchDate: '2024-10-15'
     customers: 85;
     rating: 4.8;
-    reviews: 42;
-  }
+    reviews: 42}
   // Quantum Financial Trading & Analytics;
     id: 'quantum-financial-trading-platform',
     name: 'Quantum Financial Trading Platform',
@@ -2940,8 +2921,8 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
     marketSiz,
   e: '$200B cybersecurity market, 15% annual growth'
     growthRat,
-  e: '15% annual growth'
-    varian,
+  e: '15% annual growth';
+varian,
   t: 'quantum-cyberpunk'
     contactInf,
   o: mobil,
@@ -3063,8 +3044,8 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
       'Bridgewater Associates',
       'AQR Capital'],
     marketSize: '$15T algorithmic trading market, 150% annual growth'
-    growthRate: '150% annual growth'
-    variant: 'quantum-advanced',
+    growthRate: '150% annual growth';
+variant: 'quantum-advanced',
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -3075,8 +3056,7 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
     launchDate: '2024-09-01'
     customers: 12;
     rating: 4.9;
-    reviews: 6;
-  }
+    reviews: 6}
   // Advanced IoT & Smart City Services;
     id: 'ai-iot-smart-city-platform',
     name: 'AI IoT Smart City Platform',
@@ -3100,8 +3080,8 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
     marketSiz,
   e: '$15T algorithmic trading market, 150% annual growth'
     growthRat,
-  e: '150% annual growth'
-    varian,
+  e: '150% annual growth';
+varian,
   t: 'quantum-advanced'
     contactInf,
   o: mobil,
@@ -3223,8 +3203,8 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
       'Microsoft CityNext',
       'Oracle Smart Cities'],
     marketSize: '$400B smart city market, 300% annual growth'
-    growthRate: '300% annual growth'
-    variant: 'ai-futuristic',
+    growthRate: '300% annual growth';
+variant: 'ai-futuristic',
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -3235,8 +3215,7 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
     launchDate: '2024-08-15'
     customers: 28;
     rating: 4.6;
-    reviews: 15;
-  }
+    reviews: 15}
     id: 'quantum-space-communications',
     name: 'Quantum Space Communications',
     tagline: 'Revolutionary quantum-secured space communication network',
@@ -3261,8 +3240,8 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
     marketSiz,
   e: '$400B smart city market, 300% annual growth'
     growthRat,
-  e: '300% annual growth'
-    varian,
+  e: '300% annual growth';
+varian,
   t: 'ai-futuristic'
     contactInf,
   o: mobil,
@@ -3378,8 +3357,8 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
       'Basic satellite networks',
       'Manual space operations'],
     marketSize: '$350B space market, quantum segment growing 500% annually'
-    growthRate: '500% annual growth'
-    variant: 'quantum-space',
+    growthRate: '500% annual growth';
+variant: 'quantum-space',
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -3390,8 +3369,7 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
     launchDate: '2024-08-01'
     customers: 15;
     rating: 5.0;
-    reviews: 12;
-  }
+    reviews: 12}
     id: 'ai-biotech-drug-discovery',
     name: 'AI Biotech Drug Discovery Platform',
     tagline: 'Revolutionary AI-powered drug discovery and development',
@@ -3409,8 +3387,8 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
     marketSiz,
   e: '$350B space market, quantum segment growing 500% annually'
     growthRat,
-  e: '500% annual growth'
-    varian,
+  e: '500% annual growth';
+varian,
   t: 'quantum-space'
     contactInf,
   o: mobil,
@@ -3528,8 +3506,8 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
       'Basic AI drug tools',
       'Manual research methods'],
     marketSize: '$1.5T pharmaceutical market, AI segment growing 600% annually'
-    growthRate: '600% annual growth'
-    variant: 'ai-futuristic',
+    growthRate: '600% annual growth';
+variant: 'ai-futuristic',
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -3540,8 +3518,7 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
     launchDate: '2024-07-15'
     customers: 8;
     rating: 4.9;
-    reviews: 6;
-  }
+    reviews: 6}
     id: 'autonomous-ai-factory',
     name: 'Autonomous AI Factory Platform',
     tagline: 'Fully autonomous AI-powered manufacturing and production',
@@ -3560,8 +3537,8 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
     marketSiz,
   e: '$1.5T pharmaceutical market, AI segment growing 600% annually'
     growthRat,
-  e: '600% annual growth'
-    varian,
+  e: '600% annual growth';
+varian,
   t: 'ai-futuristic'
     contactInf,
   o: mobil,
@@ -3679,8 +3656,8 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
       'Basic automation',
       'Manual production processes'],
     marketSize: '$12T manufacturing market, AI segment growing 350% annually'
-    growthRate: '350% annual growth'
-    variant: 'ai-futuristic',
+    growthRate: '350% annual growth';
+variant: 'ai-futuristic',
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -3691,14 +3668,12 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
     launchDate: '2024-09-01'
     customers: 35;
     rating: 4.8;
-    reviews: 28;
-  }
+    reviews: 28}
       'Advanced autonomous AI factory platform with full manufacturing automation, quality control, and operational optimization capabilities.',
     launchDate: '2024-09-01'
     customers: 35;
     rating: 4.8;
-    reviews: 28;
-  };
+    reviews: 28};
 ];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -3720,8 +3695,8 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
     marketSiz,
   e: '$12T manufacturing market, AI segment growing 350% annually'
     growthRat,
-  e: '350% annual growth'
-    varian,
+  e: '350% annual growth';
+varian,
   t: 'ai-futuristic'
     contactInf,
   o: mobil,
@@ -3846,8 +3821,7 @@ export const,
     launchDate: '2024-12-01';
     customers: 15;
     rating: 4.9;
-    reviews: 8;
-  };
+    reviews: 8};
   // Advanced AI & Robotics Services;
   {;
     id: 'ai-robotics-automation-platform';
@@ -3889,8 +3863,7 @@ export const,
     launchDate: '2024-11-15';
     customers: 45;
     rating: 4.7;
-    reviews: 23;
-  };
+    reviews: 23};
   // Quantum Energy & Sustainability Services;
   {;
     id: 'quantum-energy-optimization';
@@ -3932,8 +3905,7 @@ export const,
     launchDate: '2024-12-15';
     customers: 8;
     rating: 4.8;
-    reviews: 5;
-  };
+    reviews: 5};
   // Advanced Metaverse & AR/VR Services;
   {;
     id: 'metaverse-ai-development-platform';
@@ -3975,8 +3947,7 @@ export const,
     launchDate: '2024-10-01';
     customers: 120;
     rating: 4.6;
-    reviews: 67;
-  };
+    reviews: 67};
   // Quantum Logistics & Supply Chain Services;
   {;
     id: 'quantum-logistics-optimization';
@@ -4018,8 +3989,7 @@ export const,
     launchDate: '2024-11-01';
     customers: 35;
     rating: 4.7;
-    reviews: 19;
-  };
+    reviews: 19};
   // Advanced Cybersecurity & Threat Intelligence;
   {;
     id: 'quantum-cybersecurity-suite';
@@ -4061,8 +4031,7 @@ export const,
     launchDate: '2024-10-15';
     customers: 85;
     rating: 4.8;
-    reviews: 42;
-  };
+    reviews: 42};
   // Quantum Financial Trading & Analytics;
   {;
     id: 'quantum-financial-trading-platform';
@@ -4104,8 +4073,7 @@ export const,
     launchDate: '2024-09-01';
     customers: 12;
     rating: 4.9;
-    reviews: 6;
-  };
+    reviews: 6};
   // Advanced IoT & Smart City Services;
   {;
     id: 'ai-iot-smart-city-platform';
@@ -4147,8 +4115,7 @@ export const,
     launchDate: '2024-08-15';
     customers: 28;
     rating: 4.6;
-    reviews: 15;
-  };
+    reviews: 15};
   {;
     id: 'quantum-space-communications';
     name: 'Quantum Space Communications';
@@ -4189,8 +4156,7 @@ export const,
     launchDate: '2024-08-01';
     customers: 15;
     rating: 5.0;
-    reviews: 12;
-  };
+    reviews: 12};
   {;
     id: 'ai-biotech-drug-discovery';
     name: 'AI Biotech Drug Discovery Platform';
@@ -4231,8 +4197,7 @@ export const,
     launchDate: '2024-07-15';
     customers: 8;
     rating: 4.9;
-    reviews: 6;
-  };
+    reviews: 6};
   {;
     id: 'autonomous-ai-factory';
     name: 'Autonomous AI Factory Platform';
@@ -4567,8 +4532,7 @@ export const,
   g: 4.8;
     review,
   s: 28}
-];
-  }
+]}
 ];
 export interface EmergingTechService {id: string;
   name: string;
@@ -4642,8 +4606,8 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
       'Basic satellite networks',
       'Manual space operations'],
     marketSize: '$350B space market, quantum segment growing 500% annually'
-    growthRate: '500% annual growth'
-    variant: 'quantum-space'
+    growthRate: '500% annual growth';
+variant: 'quantum-space'
     contactInfo: unknown;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -4668,8 +4632,8 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
     marketSiz,
   e: '$350B space market, quantum segment growing 500% annually'
     growthRat,
-  e: '500% annual growth'
-    varian,
+  e: '500% annual growth';
+varian,
   t: 'quantum-space'
     contactInf,
   o: unknown,
@@ -4870,8 +4834,8 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
       'Basic automation',
       'Manual production processes'],
     marketSize: '$12T manufacturing market, AI segment growing 350% annually'
-    growthRate: '350% annual growth'
-    variant: 'ai-futuristic'
+    growthRate: '350% annual growth';
+variant: 'ai-futuristic'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -4883,8 +4847,7 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 09 - 01'
     customers: 35;
     rating: 4 && 4.8;
-    reviews: 28;
-  }];      mobile: '+1 302 464 0950',
+    reviews: 28}];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
   id: string, name: string;
   tagline: string, price: string;
@@ -4902,13 +4865,11 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
   contactInfo: unknown;
     mobile: string, email: string;
     address: string;
-    website: string;
-    },
+    website: string},
     realImplementation: boolean, implementationDetails: string;
   launchDate: string, customers: number;
   rating: number;
-  reviews: number;
-}
+  reviews: number}
 export const emergingTechServices: EmergingTechService[] = [
   // Quantum Internet & Communication Services;
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -4931,8 +4892,8 @@ export const emergingTechServices: EmergingTechService[] = [
     marketSiz,
   e: '$12T manufacturing market, AI segment growing 350% annually'
     growthRat,
-  e: '350% annual growth'
-    varian,
+  e: '350% annual growth';
+varian,
   t: 'ai-futuristic'
     contactInf,
   o: unknown,
@@ -5687,7 +5648,7 @@ export const,
   e: '2024 - 09 - 01' customer,
   s: 35, ratin,
   g: 4.8, review,
-  s: 28} export interface EmergingTechService {; } ]; ; } ]; realImplementatio,
+  s: 28} export interface EmergingTechService {} ]; } ]; realImplementatio,
   n: true,
   implementationDetails:' 'Fully functional AI robotics platform with computer vision, predictive maintenance, and multi-robot coordination. Includes robotic operations center and 24/7 support.'' launchDat,
   e: '2024-11-15' customer,
@@ -6183,7 +6144,7 @@ export const,
   e: '2024-09-01'; customer,
   s: 35; ratin,
   g: 4.8; review,
-  s: 28} ]; } ]; export interface EmergingTechService,
+  s: 28} ]} ]; export interface EmergingTechService,
   id: string; nam,
   e: string; taglin,
   e: string; pric,

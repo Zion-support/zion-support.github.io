@@ -224,8 +224,8 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
     data?: Record<string></string>)
     error?: Error)
     source?: string;
-  ): void {
-    const logData = { ...data }
+  ): void {;
+const logData = { ...data }
     if (error) {
       logData.error = {
         name: error.name;
@@ -264,8 +264,8 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
     data?: Record<string></string>)
     error?: Error)
     source?: string;
-  ): void {
-    const logData = { ...data }
+  ): void {;
+const logData = { ...data }
     if (error) {
       logData.error = {
         name: error.name;
@@ -317,7 +317,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    */
   public endPerformance(markName: string, data?: Record<string></string>): number | undefined {
     if (!this.config.enablePerformance) return undefined;
-    const startTime = this.performanceMarks.get(markName)
+const startTime = this.performanceMarks.get(markName)
     if (!startTime) {
       this.warn(`Performance mark "${markName}" not found`, undefined, 'EnhancedLogger')
       return undefined});
@@ -362,7 +362,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
   ): void {
     // Check if log level meets minimum threshold;
     if (level < this.config.minLevel) return;
-    const logEntry: LogEntry = {,
+const logEntry: LogEntry = {,
       id: this.generateLogId(),
       level,
       message,
@@ -424,13 +424,12 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    * @private;
    * @param entry - Log entry to output;
    */
-  private logToConsole(entry: LogEntry): void {,
-    const levelName = LogLevel[entry.level],
-    const timestamp = entry.timestamp.toISOString(),
-    const source = entry.source ? ` [${entry.source}]` : ''
-    const message = `[${timestamp}] ${levelName}${source}: ${entry.message}`
-    if (this.config.enableStructured) {
-      const structuredLog = {
+  private logToConsole(entry: LogEntry): void {,;
+const levelName = LogLevel[entry.level],;
+const timestamp = entry.timestamp.toISOString(),;
+const source = entry.source ? ` [${entry.source}]` : '';
+const message = `[${timestamp}] ${levelName}${source}: ${entry.message}`
+    if ($1) { const structuredLog = {
         timestamp: entry.timestamp;
         level: levelName,
         message: entry.message;
@@ -582,8 +581,8 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    */
   private getSessionId(): string | undefined {
     if (typeof window === 'undefined') return undefined;
-    try {
-      let sessionId = sessionStorage.getItem('sessionId')
+    try {;
+let sessionId = sessionStorage.getItem('sessionId')
       if (!sessionId) {
         sessionId = `session_${Date.now();_${Math.random().toString(36).substr(2, 9);`
         sessionStorage.setItem('sessionId', sessionId)
@@ -686,9 +685,9 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
     );)
 }
 }
-// Export singleton instance;
+// Export singleton instance
 export const logger = EnhancedLogger.getInstance()
-// Export default;
+// Export default
 export default EnhancedLogger;
   public exportLogs(): string {/* TODO: Fix JSX expression */});;)
 });),
@@ -697,9 +696,9 @@ export default EnhancedLogger;
     );)
 }
 }
-// Export singleton instance;
+// Export singleton instance
 export const logger = EnhancedLogger.getInstance();
-// Export default;
+// Export default
 export default EnhancedLogger;
 "`
 }

@@ -4,43 +4,9 @@ import { Helmet } from 'react-helmet-async';
 import { FileText, PenTool, Globe, BarChart, Zap, Users, Target, TrendingUp, Phone } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
-
-const AiContentWriterPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-9948
 import { CheckCircle, ArrowRight } from 'lucide-react';
-
-const AIContentWriterPage: React.FC = () => {
-  const features = [
+;
+const AIContentWriterPage: React.FC = () => {const features = [
     {
       title: 'AI Writing Assistant',
       description: 'Generate high-quality content using advanced AI algorithms',
@@ -54,18 +20,11 @@ const AIContentWriterPage: React.FC = () => {
     {
       title: 'SEO Optimization',
       description: 'Optimize content for search engines automatically',
-<<<<<<< HEAD
       benefits: ['Keyword research', 'SEO scoring', 'Content suggestions']
     }
   ];
 
   const benefits = [
-<<<<<<< HEAD
-=======
-    'Increase efficiency by up to 50%',
-=======
-      benefits: ['Keyword research', 'SEO scoring', 'Content suggestions']    'Increase efficiency by up to 50%',
->>>>>>> cursor/analyze-improve-and-deploy-application-9948
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
@@ -102,13 +61,11 @@ const AIContentWriterPage: React.FC = () => {
               </button>
             </div>
           </div>
-<<<<<<< HEAD
         </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
+;
+const benefits = [
     'Increase content production by 10x',
-=======
         </section>    'Increase content production by 10x',
->>>>>>> cursor/analyze-improve-and-deploy-application-9948
     'Improve engagement by 200%',
     'Save 50+ hours per week',
     'Reduce content costs by 70%',
@@ -118,10 +75,7 @@ const AIContentWriterPage: React.FC = () => {
 
   return (
     <>
-<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-bba0
       <Helmet>
         <title>AI Content Writer | Zion Tech Group</title>
         <meta name="description" content="Professional AI content writer solutions by Zion Tech Group. Advanced AI and IT solutions for your business." />
@@ -182,10 +136,10 @@ const AIContentWriterPage: React.FC = () => {
                       <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
                       {benefit}
                     </li>
-                  ))}
+                  ));
                 </ul>
               </div>
-            ))}
+            ));
           </div>
         </div>
       </section>
@@ -208,7 +162,7 @@ const AIContentWriterPage: React.FC = () => {
                 </div>
                 <h3 className="text-lg font-semibold text-white">{benefit}</h3>
               </div>
-            ))}
+            ));
           </div>
         </div>
       </section>
@@ -229,7 +183,6 @@ const AIContentWriterPage: React.FC = () => {
             </button>
           </div>
         </div>
-<<<<<<< HEAD
       </section>
 
         {/* Features Section */}
@@ -259,11 +212,10 @@ const AIContentWriterPage: React.FC = () => {
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                           {benefit}
                         </li>
-                      ))}
-                    </ul>
-                  )}
+                      ));
+                    </ul>);
                 </div>
-              ))}
+              ));
             </div>
           </div>
         </section>
@@ -288,7 +240,7 @@ const AIContentWriterPage: React.FC = () => {
                   </div>
                   <p className="text-lg text-white font-medium">{benefit}</p>
                 </div>
-              ))}
+              ));
             </div>
           </div>
         </section>
@@ -314,29 +266,18 @@ const AIContentWriterPage: React.FC = () => {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         <Footer />
       </div>
-<<<<<<< HEAD
       <Footer />
       </div>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-bba0
     </>
-=======
         
         <Footer />
       </div>
     </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-9d11
   );
 };
 
-<<<<<<< HEAD
-=======
-export default AiContentWriterPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
+    </div>)
 export default AIContentWriterPage;
-=======
       </section>export default AiContentWriterPage;export default AIContentWriterPage;
->>>>>>> cursor/analyze-improve-and-deploy-application-9948

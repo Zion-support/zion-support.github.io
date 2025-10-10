@@ -360,8 +360,8 @@ export class ConsoleSpy {}
   private originalConsole: Console
   private logs: string[] = []
   private errors: string[] = []
-  private warnings: string[] = []
-  constructor() {}
+  private warnings: string[] = [];
+constructor() {}
     this.originalConsole = { ...console }
     this.mock();)
 }
@@ -486,7 +486,7 @@ export const retryWithBackoff = async <T></T>(f)
 } catch (error) {}
       lastError = error as Error
       if (i < maxRetries - 1) {}
-        await wait(initialDelay * Math.pow(2, i));}
+        await wait(initialDelay * Math.pow(2, i));
   initialDelay = 1000;
 ): Promise<T></T> => {/* TODO: Fix JSX expression */});
 } catch (error) {/* TODO: Fix JSX expression */});

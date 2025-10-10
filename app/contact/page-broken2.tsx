@@ -12,9 +12,8 @@ import {
   Send,
   CheckCircle;)
 } from 'lucide-react';
-
-const ContactPage: React.FC = () => {
-  const [formData, setFormData] = useState({
+;
+const ContactPage: React.FC = () => {const [formData, setFormData] = useState({
     name: '',
     email: '',
     company: '',
@@ -61,8 +60,8 @@ phone: '',
       setIsSubmitting(false);)
 }
   };
-
-  const services = [
+;
+const services = [
     'AI Solutions',
     'Cloud Computing',
     'Mobile App Development',
@@ -73,8 +72,8 @@ phone: '',
     'Consulting',
     'Other'
   ];
-
-  const contactInfo = [
+;
+const contactInfo = [
     {
       icon: Phone,
       title: 'Phone',
@@ -271,7 +270,7 @@ phone: '',
                       <span></spa>Sending...</span>
                     </>
                   ) : (
-                    <>
+                    <React.Fragment>
                       <Send className="w-5 h-5" />
                       <span></spa>Send Message</span>
                     </>

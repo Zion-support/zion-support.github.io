@@ -23,9 +23,8 @@ import {
   Calendar,
   FileText
 } from 'lucide-react';
-
-const ProjectManagementProPage: React.FC = () => {
-  const features = [
+;
+const ProjectManagementProPage: React.FC = () => {const features = [
     {
       icon: CheckSquare,
       title: 'Task Management',
@@ -47,8 +46,8 @@ const ProjectManagementProPage: React.FC = () => {
       description: 'Automate repetitive tasks and workflows to improve efficiency and productivity.'
     }
   ];
-
-  const benefits = [
+;
+const benefits = [
     'Improve project delivery times',
     'Enhance team collaboration',
     'Track progress and performance',
@@ -60,7 +59,7 @@ const ProjectManagementProPage: React.FC = () => {
   ];
 
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         <title>Project Management Pro - Zion Tech Group | Project Management Platform</title>
         <meta name="description" content="Advanced project management platform by Zion Tech Group. Manage projects, teams, and tasks with AI-powered insights and automation." />
@@ -114,7 +113,7 @@ const ProjectManagementProPage: React.FC = () => {
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
                 </div>
-              ))}
+              ));
             </div>
           </div>
         </section>
@@ -137,7 +136,7 @@ const ProjectManagementProPage: React.FC = () => {
                   <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                   <p className="text-gray-300 text-lg">{benefit}</p>
                 </div>
-              ))}
+              ));
             </div>
           </div>
         </section>
@@ -166,8 +165,5 @@ const ProjectManagementProPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
-  );
-};
-
+    </React.Fragment>)
 export default ProjectManagementProPage;

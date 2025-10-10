@@ -5,9 +5,9 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { BarChart, Target, Zap, Settings, CheckCircle } from 'lucide-react';
-
-const AIAnalyticsPage: React.FC = () => {
-  const features = [
+;
+const AIAnalyticsPage: React.FC = () => {;
+const features = [
     {
       icon: BarChart,
       title: 'Real-time Analytics',
@@ -101,7 +101,6 @@ const AIAnalyticsPage: React.FC = () => {
 
       <Footer />
     </div>
-  );
-};
+  )};
 
 export default AIAnalyticsPage;

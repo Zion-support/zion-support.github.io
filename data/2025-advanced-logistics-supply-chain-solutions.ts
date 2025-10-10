@@ -192,8 +192,8 @@ export const,
       roi: 'Reduce inventory costs by 25%. Improve forecast accuracy by 40%. Cut logistics costs by 30%.',
       competitors: ['SAP, Oracle, Manhattan Associates, Blue Yonder, Kinaxis'],
       market_size: '$45B supply chain management market'
-      growth_rate: '28% annual growth'
-      variant: 'logistics'
+      growth_rate: '28% annual growth';
+variant: 'logistics'
       contact_info: unknown;
         mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -205,8 +205,7 @@ export const,
       launch_date: '2025 - 01 - 26'
       customers: 156;
       rating: 4 && 4.8;
-      reviews: 98;
-    },
+      reviews: 98},
       id: 'quantum - logistics - optimization - platform',
       name: 'Quantum Logistics Optimization Platform',
       tagline: 'Quantum computing for complex logistics problems',
@@ -220,8 +219,8 @@ export const,
       market_siz,
   e: '$45B supply chain management market',
       growth_rat,
-  e: '28% annual growth',
-      varian,
+  e: '28% annual growth',;
+varian,
   t: 'logistics',
       contact_inf,
   o: unknown,
@@ -326,8 +325,8 @@ export const,
   s: [,
         'IBM Quantum, Google Quantum, Microsoft Azure Quantum, D - Wave, Rigetti'],
       market_size: '$8B quantum computing market'
-      growth_rate: '65% annual growth'
-      variant: 'quantum - logistics'
+      growth_rate: '65% annual growth';
+variant: 'quantum - logistics'
       contact_info: unknown;
         mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -339,8 +338,7 @@ export const,
       launch_date: '2025 - 02 - 02'
       customers: 34;
       rating: 4 && 4.9;
-      reviews: 23;
-    },
+      reviews: 23},
         'Real-time tracking',
       id: 'iot - fleet - management - platform'
       name: 'IoT Fleet Management Platform',
@@ -351,8 +349,8 @@ export const,
       market_siz,
   e: '$8B quantum computing market',
       growth_rat,
-  e: '65% annual growth',
-      varian,
+  e: '65% annual growth',;
+varian,
   t: 'quantum - logistics',
       contact_inf,
   o: unknown,
@@ -458,8 +456,8 @@ export const,
   s: [,
         'Verizon Connect, Geotab, Samsara, Fleet Complete, Trimble'],
       market_size: '$30B fleet management market'
-      growth_rate: '32% annual growth'
-      variant: 'iot - futuristic'
+      growth_rate: '32% annual growth';
+variant: 'iot - futuristic'
       contact_info: unknown;
         mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -471,8 +469,7 @@ export const,
       launch_date: '2025 - 02 - 07'
       customers: 234;
       rating: 4 && 4.7;
-      reviews: 145;
-    },
+      reviews: 145},
         'End-to-end traceability',
       id: 'blockchain - supply - chain - transparency'
       name: 'Blockchain Supply Chain Transparency Platform',
@@ -483,8 +480,8 @@ export const,
       market_siz,
   e: '$30B fleet management market',
       growth_rat,
-  e: '32% annual growth',
-      varian,
+  e: '32% annual growth',;
+varian,
   t: 'iot - futuristic',
       contact_inf,
   o: unknown,
@@ -590,8 +587,8 @@ export const,
   s: [,
         'IBM Food Trust, VeChain, WaltonChain, OriginTrail, Provenance'],
       market_size: '$22B blockchain supply chain market'
-      growth_rate: '45% annual growth'
-      variant: 'blockchain - futuristic'
+      growth_rate: '45% annual growth';
+variant: 'blockchain - futuristic'
       contact_info: unknown;
         mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -607,8 +604,8 @@ export const,
       market_siz,
   e: '$22B blockchain supply chain market',
       growth_rat,
-  e: '45% annual growth',
-      varian,
+  e: '45% annual growth',;
+varian,
   t: 'blockchain - futuristic',
       contact_inf,
   o: unknown,
@@ -698,8 +695,8 @@ export const,
   s: [,
         'Locus Robotics, 6 River Systems, Fetch Robotics, RightHand Robotics, AutoStore'],
       market_size: '$28B warehouse automation market'
-      growth_rate: '38% annual growth'
-      variant: 'ai - supply - chain - enterprise'
+      growth_rate: '38% annual growth';
+variant: 'ai - supply - chain - enterprise'
       contact_info: unknown;
         mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -710,8 +707,8 @@ export const,
       market_siz,
   e: '$28B warehouse automation market',
       growth_rat,
-  e: '38% annual growth',
-      varian,
+  e: '38% annual growth',;
+varian,
   t: 'ai - supply - chain - enterprise',
       contact_inf,
   o: unknown,
@@ -734,8 +731,7 @@ export const,
         'Production-ready AI warehouse platform with comprehensive automation and optimization capabilities.',
       launchDate: '2025-02-18',      customers: 178;
       rating: 4 && 4.8;
-      reviews: 112;
-    };
+      reviews: 112};
   ];    features: [,
 export interface AdvancedLogisticsSupplyChainSolution2025 {id: string, name: string;
   tagline: string, price: string;
@@ -758,8 +754,7 @@ export interface AdvancedLogisticsSupplyChainSolution2025 {id: string, name: str
     realImplementation: boolean, implementationDetails: string;
   launchDate: string, customers: number;
   rating: number;
-  reviews: number;
-}
+  reviews: number}
 export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] = [,
     id: 'ai-powered-supply-chain-optimization', name: 'AI-Powered Supply Chain Optimization',
     tagline: 'Intelligent supply chain planning and optimization',
@@ -890,8 +885,8 @@ export const,
         'Locus Robotics, 6 River Systems, Fetch Robotics, RightHand Robotics, AutoStore'
       ]
       marketSize: '$28 B warehouse automation market'
-      growthRate: '38% annual growth'
-      variant: 'ai-supply-chain-enterprise',
+      growthRate: '38% annual growth';
+variant: 'ai-supply-chain-enterprise',
       contactInfo: mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -911,8 +906,8 @@ export const,
       marketSiz,
   e: '$28B warehouse automation market'
       growthRat,
-  e: '38% annual growth'
-      varian,
+  e: '38% annual growth';
+varian,
   t: 'ai-supply-chain-enterprise'
       contactInf,
   o: mobil,
@@ -970,7 +965,7 @@ export const,
     popula,
   r: true, ico,
   n: ''];
-;;}
+;}
 ];
 ;
       'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentPerformance analyticsReal-time monitoringAPI integration'
@@ -981,11 +976,11 @@ export const,
     useCases: ['Demand forecasting, Inventory management, Route optimization, Supplier optimization, Risk management'];
     roi: 'Reduce inventory costs by 25%. Improve forecast accuracy by 40%. Cut logistics costs by 30%.',
     competitors: ['SAP, Oracle, Manhattan Associates, Blue Yonder, Kinaxis'];
-    marketSize: '$45B supply chain management market', growthRate: '28% annual growth',
-    variant: 'logistics',
+    marketSize: '$45B supply chain management market', growthRate: '28% annual growth',;
+variant: 'logistics',
     contactInfo: unknown;
-    marketSize: '$28B warehouse automation market', growthRate: '38% annual growth'
-    variant: 'ai-supply-chain-enterprise'
+    marketSize: '$28B warehouse automation market', growthRate: '38% annual growth';
+variant: 'ai-supply-chain-enterprise'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
@@ -1009,15 +1004,15 @@ export const,
   s: ['SAP, Oracle, Manhattan Associates, Blue Yonder, Kinaxis'];
     marketSiz,
   e: '$45B supply chain management market', growthRat,
-  e: '28% annual growth'
-    varian,
+  e: '28% annual growth';
+varian,
   t: 'logistics'
     contactInf,
   o: unknown,
     marketSiz,
   e: '$28B warehouse automation market', growthRat,
-  e: '38% annual growth'
-    varian,
+  e: '38% annual growth';
+varian,
   t: 'ai-supply-chain-enterprise'
     contactInf,
   o: unknown,
@@ -1085,8 +1080,8 @@ export const,
     roi: 'Reduce fuel costs by 20%. Improve fleet utilization by 25%. Cut maintenance costs by 30%.',
     competitors: ['Verizon Connect, Geotab, Samsara, Fleet Complete, Trimble'],
     marketSize: '$30B fleet management market'
-    growthRate: '32% annual growth'
-    variant: 'iot-futuristic'
+    growthRate: '32% annual growth';
+variant: 'iot-futuristic'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
@@ -1134,8 +1129,8 @@ export const,
     marketSiz,
   e: '$30B fleet management market',
     growthRat,
-  e: '32% annual growth',
-    varian,
+  e: '32% annual growth',;
+varian,
   t: 'iot-futuristic',
     contactInf,
   o: unknown,
@@ -1203,8 +1198,8 @@ export const,
     roi: 'Improve traceability by 100%. Reduce compliance costs by 40%. Enhance brand trust by 60%.',
     competitors: ['IBM Food Trust, VeChain, WaltonChain, OriginTrail, Provenance'],
     marketSize: '$22B blockchain supply chain market'
-    growthRate: '45% annual growth'
-    variant: 'blockchain-futuristic'
+    growthRate: '45% annual growth';
+variant: 'blockchain-futuristic'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
@@ -1252,8 +1247,8 @@ export const,
     marketSiz,
   e: '$22B blockchain supply chain market',
     growthRat,
-  e: '45% annual growth',
-    varian,
+  e: '45% annual growth',;
+varian,
   t: 'blockchain-futuristic',
     contactInf,
   o: unknown,
@@ -1321,8 +1316,8 @@ export const,
     roi: 'Improve picking efficiency by 40%. Reduce labor costs by 30%. Increase throughput by 35%.',
     competitors: ['Locus Robotics, 6 River Systems, Fetch Robotics, RightHand Robotics, AutoStore'],
     marketSize: '$28B warehouse automation market'
-    growthRate: '38% annual growth'
-    variant: 'ai-manufacturing-enterprise'
+    growthRate: '38% annual growth';
+variant: 'ai-manufacturing-enterprise'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
@@ -1370,8 +1365,8 @@ export const,
     marketSiz,
   e: '$28B warehouse automation market',
     growthRat,
-  e: '38% annual growth',
-    varian,
+  e: '38% annual growth',;
+varian,
   t: 'ai-manufacturing-enterprise',
     contactInf,
   o: unknown,
@@ -1408,8 +1403,7 @@ export interface AdvancedLogisticsSupplyChainSolution2025 {/* TODO: Fix JSX expr
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
-}
+  reviews: number}
 ;
 export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] = [;
   {
@@ -1452,8 +1446,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     launchDate: '2025-01-26';
     customers: 156;
     rating: 4.8;
-    reviews: 98;
-  };
+    reviews: 98};
   {;
     id: 'quantum-logistics-optimization-platform';
     name: 'Quantum Logistics Optimization Platform';
@@ -1494,8 +1487,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     launchDate: '2025-02-02';
     customers: 34;
     rating: 4.9;
-    reviews: 23;
-  };
+    reviews: 23};
   {;
     id: 'iot-fleet-management-platform';
     name: 'IoT Fleet Management Platform';
@@ -1536,8 +1528,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     launchDate: '2025-02-07';
     customers: 234;
     rating: 4.7;
-    reviews: 145;
-  };
+    reviews: 145};
   {;
     id: 'blockchain-supply-chain-transparency';
     name: 'Blockchain Supply Chain Transparency Platform';
@@ -1578,8 +1569,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     launchDate: '2025-02-12';
     customers: 89;
     rating: 4.6;
-    reviews: 56;
-  };
+    reviews: 56};
   {;
     id: 'ai-powered-warehouse-automation';
     name: 'AI-Powered Warehouse Automation Platform';
@@ -2092,7 +2082,7 @@ i,
   r: false, ico,
   n: '⛓️']; ' popula,
   r: true, ico,
-  n: '🏭']; ; } ];' 'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentPerformance analyticsReal-time monitoringAPI integration'' 'Custom algorithmsCompliance tools' ];' technolog,
+  n: '🏭']; } ];' 'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentPerformance analyticsReal-time monitoringAPI integration'' 'Custom algorithmsCompliance tools' ];' technolog,
   y: ['Machine Learning, Predictive Analytics, Supply Chain Management, Optimization Algorithms, AI/ML'];' integration,
   s: ['ERP systems, WMS platforms, TMS solutions, E-commerce platforms, Analytics tools'];' useCase,
   s: ['Demand forecasting, Inventory management, Route optimization, Supplier optimization, Risk management'];' ro,

@@ -3,12 +3,11 @@ import React, { useState } from 'react';
 import { Search, BookOpen, Code, FileText, Download, ArrowRight, ChevronRight, Globe, Brain, Cloud, Shield, Settings, Users, Database, Zap, Eye, Sparkles } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-
-export default function DocsPage() {
-  const [searchQuery, setSearchQuery] = useState('');
-
-  const docCategories = [
+import SEOOptimizer from '../components/SEOOptimizer'
+export default function DocsPage() {;
+const [searchQuery, setSearchQuery] = useState('');
+;
+const docCategories = [
     {
       title: 'Getting Started',
       icon: 'rocket',
@@ -50,15 +49,15 @@ export default function DocsPage() {
       ]
     }
   ];
-
-  const popularDocs = [
+;
+const popularDocs = [
     { title: 'Quick Start Guide', description: 'Get started in minutes', category: 'Getting Started', link: '/docs/quick-start' },
     { title: 'API Authentication', description: 'Learn how to authenticate', category: 'API Reference', link: '/docs/api/auth' },
     { title: 'AI Model Training', description: 'Train your own models', category: 'AI Solutions', link: '/docs/ai/training' },
     { title: 'Cloud Security', description: 'Secure your cloud infrastructure', category: 'Cloud Services', link: '/docs/cloud/security' }
   ];
-
-  const filteredDocs = docCategories.map(category => ({
+;
+const filteredDocs = docCategories.map(category => ({
     ...category,
     docs: category.docs.filter(doc => 
       doc.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -105,7 +104,7 @@ export default function DocsPage() {
                   <ArrowRight className="w-4 h-4" />
                 </a>
               </div>
-            ))}
+            ));
           </div>
         </div>
       </section>
@@ -144,10 +143,10 @@ export default function DocsPage() {
                         <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-purple-400 transition-colors" />
                       </div>
                     </a>
-                  ))}
+                  ));
                 </div>
               </div>
-            ))}
+            ));
           </div>
         </div>
       </section>
@@ -173,6 +172,4 @@ export default function DocsPage() {
       </section>
 
       <Footer />
-    </div>
-  );
-}
+    </div>);

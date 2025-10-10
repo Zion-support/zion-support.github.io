@@ -1029,14 +1029,10 @@ export const cuttingEdgeITServices2025 = [
   s: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'];
     complianc,
   e: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']}
-];
-  }
-];
-  }
-];
-  }
-];
-  }];
+]}
+]}
+]}
+]}];
     integration,
   s: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'];
     complianc,
@@ -1312,6 +1308,6 @@ export const cuttingEdgeITServices2025 = [ export const cuttingEdgeITServices202
   e: 'AI-powered DevOps automation, predictive monitoring, intelligent incident response'; useCase,
   s: [,' 'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation' ];' integration,
   s: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'];' complianc,
-  e: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']} ]; } ]; } ]; } ]; }];' integration,
+  e: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']} ]} ]} ]} ]}];' integration,
   s: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'];' complianc,
   e: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']} ]; '

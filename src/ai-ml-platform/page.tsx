@@ -11,9 +11,9 @@ import { Link } from 'react-router-dom';
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
-const AIMLPlatformPage: React.FC = () => {
-  const features = [
+;
+const AIMLPlatformPage: React.FC = () => {;
+const features = [
     {
       icon: Brain,
       title: 'Complete ML Platform',
@@ -34,8 +34,8 @@ const AIMLPlatformPage: React.FC = () => {
       benefits: ['Shared workspaces', 'Version control', 'Knowledge sharing']
     }
   ];
-
-  const pricingPlans = [
+;
+const pricingPlans = [
       name: 'Developer',
       price: '$999',
       period: '/month',
@@ -50,10 +50,10 @@ const AIMLPlatformPage: React.FC = () => {
       popular: false
       name: 'Team',
       price: '$2,499',
-      description: 'Ideal for development teams',
-  const features = [];
+      description: 'Ideal for development teams',;
+const features = [];
   return (
-    {// TODO: Add content;}
+    {// TODO: Add content}
 
 };
   ico,
@@ -63,8 +63,7 @@ const AIMLPlatformPage: React.FC = () => {
       descriptio,
   n: 'End-to-end machine learning platform with model development, training, and deployment',
       benefit,
-  s: ['Rapid model development', 'Automated training', 'Seamless deployment'];
-    },
+  s: ['Rapid model development', 'Automated training', 'Seamless deployment']},
       ico,
   n: TrendingUp,
       titl,
@@ -116,10 +115,9 @@ const AIMLPlatformPage: React.FC = () => {
         'Custom compute',
         'Custom analytics',
         'White-label options',
-        'API access'
-
-  const stats = [
-  const stats = [
+        'API access';
+const stats = [;
+const stats = [
   // TOD,
   O: Add items;
 ];;
@@ -175,8 +173,7 @@ Learn More;
       <Footer />
     </div>
 
-  );
-};
+  )};
 
 
 export default $1;

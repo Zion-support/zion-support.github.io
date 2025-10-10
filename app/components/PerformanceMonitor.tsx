@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-<<<<<<< HEAD
 
 interface PerformanceMetrics {
   fcp: number | null;
@@ -82,36 +81,33 @@ const PerformanceMonitor: React.FC = () => {
       }, 10000);
     };
 
-<<<<<<< HEAD
     // Show performance panel after 3 seconds
     const timer = setTimeout(() => setIsVisible(true), 3000);
     return () => clearTimeout(timer);
   }, []);
 
   if (!isVisible || Object.keys(metrics).length === 0) {
-    return null;
-  }
-
-  const getScoreColor = (value: number, thresholds: { good: number; poor: number }) => {
-    if (value <= thresholds.good) return 'text-green-400';
+    return null}
+;
+const getScoreColor = (value: number, thresholds: { good: number; poor: number }) => {
+if (value <= thresholds.good) return 'text-green-400';
     if (value <= thresholds.poor) return 'text-yellow-400';
-    return 'text-red-400';
-  };
-
-  const getScoreText = (value: number, thresholds: { good: number; poor: number }) => {
+    return 'text-red-400'};
+;
+const getScoreText = (value: number, thresholds: { good: number; poor: number }) =>
+);
+} {
     if (value <= thresholds.good) return 'Good';
     if (value <= thresholds.poor) return 'Needs Improvement';
-    return 'Poor';
-  };
+    return 'Poor'};
 
   return (
     <div className="fixed bottom-4 right-4 bg-slate-800/90 backdrop-blur-sm border border-slate-700 rounded-lg p-4 text-xs text-white z-50 max-w-xs">
       <div className="flex items-center justify-between mb-2">
         <h3 className="font-semibold text-cyan-400">Performance</h3>
         <button
-          onClick={() => setIsVisible(false)}
+          onClick={() => setIsVisible(false);
           className="text-gray-400 hover:text-white"
-=======
 import { useAnalytics } from './AnalyticsProvider';
 
 interface PerformanceMetrics {
@@ -314,18 +310,10 @@ const PerformanceMonitor: React.FC = () => {
         <button
           onClick={() => setIsVisible(false)}
           className="text-gray-400 hover:text-gray-600"
->>>>>>> cursor/analyze-improve-and-deploy-application-9948
         >
           ×
         </button>
       </div>
-<<<<<<< HEAD
-=======
-    // Resource timing analysis
-    const analyzeResources = () => {
-      const resources = performance.getEntriesByType('resource');
-      const slowResources = resources.filter((resource: any) => resource.duration > 1000);
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
       
       if (slowResources.length > 0) {
         console.warn('Slow resources detected:', slowResources.map((r: any) => ({
@@ -380,16 +368,13 @@ const PerformanceMonitor: React.FC = () => {
       if (typeof window !== 'undefined' && 'gtag' in window) {
         const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
         
-<<<<<<< HEAD
         {metrics.fcp && (
           <div className="flex justify-between">
             <span>FCP:</span>
             <span className={getScoreColor(metrics.fcp, { good: 1800, poor: 3000 })}>
               {Math.round(metrics.fcp)}ms ({getScoreText(metrics.fcp, { good: 1800, poor: 3000 })})
             </span>
-          </div>
-        )}
-        
+          </div>);
         {metrics.ttfb && (
           <div className="flex justify-between">
             <span>TTFB:</span>
@@ -398,87 +383,9 @@ const PerformanceMonitor: React.FC = () => {
             </span>
           </div>
         )}
-=======
-
-      <div className="space-y-3">
-        {/* FCP */}
-        <div className="flex justify-between items-center">
-          <span className="text-sm font-medium text-gray-700">First Contentful Paint</span>
-          <div className="text-right">
-            <span className={`text-sm font-bold ${getScoreColor(metrics.fcp, { good: 1800, needsImprovement: 3000 })}`}>
-              {metrics.fcp ? `${Math.round(metrics.fcp)}ms` : 'N/A'}
-            </span>
-            <div className="text-xs text-gray-500">
-              {getScoreText(metrics.fcp, { good: 1800, needsImprovement: 3000 })}
-            </div>
-          </div>
-        </div>
-
-        {/* LCP */}
-        <div className="flex justify-between items-center">
-          <span className="text-sm font-medium text-gray-700">Largest Contentful Paint</span>
-          <div className="text-right">
-            <span className={`text-sm font-bold ${getScoreColor(metrics.lcp, { good: 2500, needsImprovement: 4000 })}`}>
-              {metrics.lcp ? `${Math.round(metrics.lcp)}ms` : 'N/A'}
-            </span>
-            <div className="text-xs text-gray-500">
-              {getScoreText(metrics.lcp, { good: 2500, needsImprovement: 4000 })}
-            </div>
-          </div>
-        </div>
-
-        {/* FID */}
-        <div className="flex justify-between items-center">
-          <span className="text-sm font-medium text-gray-700">First Input Delay</span>
-          <div className="text-right">
-            <span className={`text-sm font-bold ${getScoreColor(metrics.fid, { good: 100, needsImprovement: 300 })}`}>
-              {metrics.fid ? `${Math.round(metrics.fid)}ms` : 'N/A'}
-            </span>
-            <div className="text-xs text-gray-500">
-              {getScoreText(metrics.fid, { good: 100, needsImprovement: 300 })}
-            </div>
-          </div>
-        </div>
-
-        {/* CLS */}
-        <div className="flex justify-between items-center">
-          <span className="text-sm font-medium text-gray-700">Cumulative Layout Shift</span>
-          <div className="text-right">
-            <span className={`text-sm font-bold ${getScoreColor(metrics.cls, { good: 0.1, needsImprovement: 0.25 })}`}>
-              {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}
-            </span>
-            <div className="text-xs text-gray-500">
-              {getScoreText(metrics.cls, { good: 0.1, needsImprovement: 0.25 })}
-            </div>
-          </div>
-        </div>
-
-        {/* TTFB */}
-        <div className="flex justify-between items-center">
-          <span className="text-sm font-medium text-gray-700">Time to First Byte</span>
-          <div className="text-right">
-            <span className={`text-sm font-bold ${getScoreColor(metrics.ttfb, { good: 800, needsImprovement: 1800 })}`}>
-              {metrics.ttfb ? `${Math.round(metrics.ttfb)}ms` : 'N/A'}
-            </span>
-            <div className="text-xs text-gray-500">
-              {getScoreText(metrics.ttfb, { good: 800, needsImprovement: 1800 })}
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="mt-4 pt-3 border-t border-gray-200">
-        <button
-          onClick={() => window.location.reload()}
-          className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors text-sm"
-        >
-          Refresh Metrics
-        </button>
->>>>>>> cursor/analyze-improve-and-deploy-application-9948
       </div>
     </div>
   );
-=======
         if (metrics.fcp) gtag('event', 'web_vitals', { metric_name: 'FCP', metric_value: Math.round(metrics.fcp) });
         if (metrics.lcp) gtag('event', 'web_vitals', { metric_name: 'LCP', metric_value: Math.round(metrics.lcp) });
         if (metrics.fid) gtag('event', 'web_vitals', { metric_name: 'FID', metric_value: Math.round(metrics.fid) });
@@ -497,7 +404,9 @@ const PerformanceMonitor: React.FC = () => {
 
   // Don't render anything visible
   return null;
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
 };
 
+          </div>);
+      </div>
+    </div>)
 export default PerformanceMonitor;

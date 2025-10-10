@@ -2,26 +2,23 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-
+;
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
+// __dirname removed
 // Function to fix lint warnings in a file;
 function fixLintWarnings(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
+  try {;
+let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     
     // Fix unused variables by prefixing with underscore;
     content = content.replace(/const (\w+) = /g, (match, varName) => {
       if (varName.startsWith('_')) return match;
 function fixLintWarnings(filePath) {/* TODO: Fix JSX expression */}
-      return `const _${varName} = `;
-    });
+      return `const _${varName} = `});
     
     content = content.replace(/let (\w+) = /g, (match, varName) => {/* TODO: Fix JSX expression */}`
-      return `let _${varName} = `;
-    });
+      return `let _${varName} = `});
     
     // Fix unused imports;
     content = content.replace(/import React from 'react';/g, '');
@@ -48,8 +45,7 @@ function fixLintWarnings(filePath) {/* TODO: Fix JSX expression */}
     }
     
     if (filePath.includes('offline/page.tsx')) {/* TODO: Fix JSX expression */}
-      content = content.replace(/import { Link } from 'react-router-dom';/g, '');
-    }
+      content = content.replace(/import { Link } from 'react-router-dom';/g, '')}
     
     if (filePath.includes('service-template.tsx')) {/* TODO: Fix JSX expression */}
     }
@@ -68,27 +64,24 @@ function fixLintWarnings(filePath) {/* TODO: Fix JSX expression */}
     
     // Write the cleaned content back;
     fs.writeFileSync(filePath, content, 'utf8');
-    return true;
-  } catch (error) {/* TODO: Fix JSX expression */}`
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
-  }
+    return true} catch (error) {/* TODO: Fix JSX expression */}`
+    // console.error removed for production
+return false}
 }
 
 // Function to find all files that need lint fixing;
-function findFilesToFix(dir) {
-  const files = [];
-  
-  function walkDir(currentPath) {
-    const items = fs.readdirSync(currentPath);
+function findFilesToFix(dir) {;
+const files = [];
+  ;
+function walkDir(currentPath) {;
+const items = fs.readdirSync(currentPath);
     
-    for (const item of items) {
-      const fullPath = path.join(currentPath, item);
+    for (const item of items) {;
+const fullPath = path.join(currentPath, item);
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        walkDir(fullPath);
-      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
+        walkDir(fullPath)} else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
         files.push(fullPath);
 function findFilesToFix(dir) {/* TODO: Fix JSX expression */}
       } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {/* TODO: Fix JSX expression */}
@@ -97,19 +90,19 @@ function findFilesToFix(dir) {/* TODO: Fix JSX expression */}
   }
   
   walkDir(dir);
-  return files;
-}
+  return files}
 
 // Main execution;
 const srcDir = path.join(__dirname, 'src');
-console.log('Fixing lint warnings...');
-
+// console.log removed for production
+;
 const filesToFix = findFilesToFix(srcDir);`
-console.log(`Processing ${filesToFix.length} files`);
-
+// console.log removed for production
+;
 let fixedCount = 0;
 for (const file of filesToFix) {/* TODO: Fix JSX expression */}
   }
 }
 `
-console.log(`Processed ${fixedCount} files`);`
+// console.log removed for production
+`

@@ -196,8 +196,8 @@ export const,
       roi: 'Enterprises report 800% ROI through reduced security incidents and operational costs.',
       competitors: ['AWS, Microsoft Azure, Google Cloud, IBM Cloud'],
       market_size: '$397.4B cloud computing market'
-      growth_rate: '23% annual growth'
-      variant: 'quantum - cloud - enterprise'
+      growth_rate: '23% annual growth';
+variant: 'quantum - cloud - enterprise'
       contact_info: unknown;
         mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -209,8 +209,7 @@ export const,
       launch_date: '2025 - 01 - 10'
       customers: 8;
       rating: 4 && 4.9;
-      reviews: 5;
-    },
+      reviews: 5},
     // Edge Computing Orchestration Platform;
       id: 'edge - computing - orchestration - platform',
       name: 'Edge Computing Orchestration Platform',
@@ -226,8 +225,8 @@ export const,
       market_siz,
   e: '$397.4B cloud computing market',
       growth_rat,
-  e: '23% annual growth',
-      varian,
+  e: '23% annual growth',;
+varian,
   t: 'quantum - cloud - enterprise',
       contact_inf,
   o: unknown,
@@ -286,8 +285,8 @@ export const,
       roi: 'Companies report 500% ROI through improved performance and reduced bandwidth costs.',
       competitors: ['AWS CloudFront, Cloudflare, Fastly, Akamai'],
       marketSize: '$67 && 67.8B edge computing market'
-      growthRate: '37% annual growth'
-      variant: 'edge-computing-enterprise'
+      growthRate: '37% annual growth';
+variant: 'edge-computing-enterprise'
       contactInfo: unknown;
       color: 'from - green - 600 to - teal - 600'
       text_color: 'text - green - 400',
@@ -314,8 +313,8 @@ export const,
       marketSiz,
   e: '$67 && 67.8B edge computing market',
       growthRat,
-  e: '37% annual growth',
-      varian,
+  e: '37% annual growth',;
+varian,
   t: 'edge-computing-enterprise',
       contactInf,
   o: unknown,
@@ -352,8 +351,8 @@ export const,
       roi: 'Companies report 500% ROI through improved performance and reduced bandwidth costs.',
       competitors: ['AWS CloudFront, Cloudflare, Fastly, Akamai'],
       market_size: '$67.8B edge computing market'
-      growth_rate: '37% annual growth'
-      variant: 'edge - computing - enterprise'
+      growth_rate: '37% annual growth';
+variant: 'edge - computing - enterprise'
       contact_info: unknown;
         mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -365,8 +364,7 @@ export const,
       launch_date: '2025 - 01 - 15'
       customers: 25;
       rating: 4 && 4.8;
-      reviews: 18;
-    },
+      reviews: 18},
         'AI-powered code review and testing',
     // Autonomous DevOps Platform;
       id: 'autonomous - devops - platform',
@@ -383,8 +381,8 @@ export const,
       market_siz,
   e: '$67.8B edge computing market',
       growth_rat,
-  e: '37% annual growth',
-      varian,
+  e: '37% annual growth',;
+varian,
   t: 'edge - computing - enterprise',
       contact_inf,
   o: unknown,
@@ -444,8 +442,8 @@ export const,
       roi: 'Development teams report 600% ROI through faster deployments and reduced operational overhead.',
       competitors: ['GitLab, GitHub Enterprise, Azure DevOps, Jenkins'],
       marketSize: '$8 && 8.2B DevOps market'
-      growthRate: '24% annual growth'
-      variant: 'autonomous-devops-enterprise'
+      growthRate: '24% annual growth';
+variant: 'autonomous-devops-enterprise'
       contactInfo: unknown;
       color: 'from - purple - 600 to - pink - 600'
       text_color: 'text - purple - 400',
@@ -471,8 +469,8 @@ export const,
       marketSiz,
   e: '$8 && 8.2B DevOps market',
       growthRat,
-  e: '24% annual growth',
-      varian,
+  e: '24% annual growth',;
+varian,
   t: 'autonomous-devops-enterprise',
       contactInf,
   o: unknown,
@@ -510,8 +508,8 @@ export const,
       roi: 'Development teams report 600% ROI through faster deployments and reduced operational overhead.',
       competitors: ['GitLab, GitHub Enterprise, Azure DevOps, Jenkins'],
       market_size: '$8.2B DevOps market'
-      growth_rate: '24% annual growth'
-      variant: 'autonomous - devops - enterprise'
+      growth_rate: '24% annual growth';
+variant: 'autonomous - devops - enterprise'
       contact_info: unknown;
         mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -523,8 +521,7 @@ export const,
       launch_date: '2025 - 01 - 20'
       customers: 38;
       rating: 4 && 4.7;
-      reviews: 25;
-    },
+      reviews: 25},
     // Blockchain Infrastructure Platform;
       id: 'blockchain - infrastructure - platform',
       name: 'Enterprise Blockchain Infrastructure Platform',
@@ -540,8 +537,8 @@ export const,
       market_siz,
   e: '$8.2B DevOps market',
       growth_rat,
-  e: '24% annual growth',
-      varian,
+  e: '24% annual growth',;
+varian,
   t: 'autonomous - devops - enterprise',
       contact_inf,
   o: unknown,
@@ -598,8 +595,8 @@ export const,
       icon: '',
         'IBM Blockchain Platform, AWS Managed Blockchain, Azure Blockchain Service'],
       marketSize: '$19 && 19.9B blockchain market'
-      growthRate: '87% annual growth'
-      variant: 'blockchain-enterprise'
+      growthRate: '87% annual growth';
+variant: 'blockchain-enterprise'
       contactInfo: unknown;
       color: 'from - orange - 600 to - red - 600'
       text_color: 'text - orange - 400',
@@ -621,8 +618,8 @@ export const,
       marketSiz,
   e: '$19 && 19.9B blockchain market',
       growthRat,
-  e: '87% annual growth',
-      varian,
+  e: '87% annual growth',;
+varian,
   t: 'blockchain-enterprise',
       contactInf,
   o: unknown,
@@ -663,8 +660,8 @@ export const,
   s: [,
         'IBM Blockchain Platform, AWS Managed Blockchain, Azure Blockchain Service'],
       market_size: '$19.9B blockchain market'
-      growth_rate: '87% annual growth'
-      variant: 'blockchain - enterprise'
+      growth_rate: '87% annual growth';
+variant: 'blockchain - enterprise'
       contact_info: unknown;
         mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -676,8 +673,7 @@ export const,
       launch_date: '2025 - 01 - 25'
       customers: 15;
       rating: 4 && 4.8;
-      reviews: 12;
-    },
+      reviews: 12},
       id: 'quantum - networking - platform',
       name: 'Quantum Networking Platform',
       tagline: unknown;
@@ -688,8 +684,8 @@ export const,
       market_siz,
   e: '$19.9B blockchain market',
       growth_rat,
-  e: '87% annual growth',
-      varian,
+  e: '87% annual growth',;
+varian,
   t: 'blockchain - enterprise',
       contact_inf,
   o: unknown,
@@ -792,8 +788,8 @@ export const,
       roi: 'Organizations report 1000% ROI through improved security and network performance.',
       competitors: ['Cisco, Juniper, Arista, Huawei'],
       market_size: '$25.3B quantum computing market'
-      growth_rate: '32% annual growth'
-      variant: 'quantum - networking - enterprise'
+      growth_rate: '32% annual growth';
+variant: 'quantum - networking - enterprise'
       contact_info: unknown;
         mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -808,8 +804,8 @@ export const,
       market_siz,
   e: '$25.3B quantum computing market',
       growth_rat,
-  e: '32% annual growth',
-      varian,
+  e: '32% annual growth',;
+varian,
   t: 'quantum - networking - enterprise',
       contact_inf,
   o: unknown,
@@ -833,8 +829,7 @@ export const,
       launchDate: '2025-02-01'
       customers: 6;
       rating: 4 && 4.9;
-      reviews: 4;
-    };
+      reviews: 4};
   ];    features: [,
 export interface CuttingEdgeITInfrastructureService {id: string, name: string;
   tagline: string, price: string;
@@ -857,8 +852,7 @@ export interface CuttingEdgeITInfrastructureService {id: string, name: string;
     realImplementation: boolean, implementationDetails: string;
   launchDate: string, customers: number;
   rating: number;
-  reviews: number;
-}
+  reviews: number}
 export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService[] = [,
   // Quantum-Secure Cloud Infrastructure;
     id: 'quantum-secure-cloud-infrastructure', name: 'Quantum-Secure Cloud Infrastructure Platform',
@@ -874,8 +868,8 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
       roi: 'Organizations report 1000% ROI through improved security and network performance.',
       competitors: ['Cisco, Juniper, Arista, Huawei']
       marketSize: '$25.3 B quantum computing market'
-      growthRate: '32% annual growth'
-      variant: 'quantum-networking-enterprise',
+      growthRate: '32% annual growth';
+variant: 'quantum-networking-enterprise',
       contactInfo: mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -886,14 +880,12 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
       launchDate: '2025-02-01'
       customers: 6;
       rating: 4.9;
-      reviews: 4;
-    }
+      reviews: 4}
         'Quantum networking platform with quantum encryption, AI optimization, and autonomous network management for ultra-secure communications.',
       launchDate: '2025-02-01'
       customers: 6;
       rating: 4.9;
-      reviews: 4;
-    };
+      reviews: 4};
   ];    features: [;
       'Quantum encryption protocolsAI-powered traffic optimizationAutonomous network managementZero-latency routingQuantum key distributionReal-time security monitoringGlobal network optimizationAPI for network integration',
       'Performance analytics24/7 network monitoring'],
@@ -909,8 +901,8 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     useCases: ['Enterprise applications, Government systems, Financial platforms, Healthcare systems, Defense applications'];
     roi: 'Enterprises report 800% ROI through reduced security incidents and operational costs.',
     competitors: ['AWS, Microsoft Azure, Google Cloud, IBM Cloud'];
-    marketSize: '$397.4B cloud computing market', growthRate: '23% annual growth'
-    variant: 'quantum-cloud-enterprise'
+    marketSize: '$397.4B cloud computing market', growthRate: '23% annual growth';
+variant: 'quantum-cloud-enterprise'
     contactInfo: unknown;
   ];    features: [;
       'Quantum encryption protocolsAI - powered traffic optimization_autonomous network management_zero - latency routing_quantum key distribution_real - time security monitoring_global network optimizationAPI for network integration',
@@ -927,8 +919,8 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     use_cases: ['Government communications, Defense networks, Financial trading, Healthcare systems, Research networks'];
     roi: 'Organizations report 1000% ROI through improved security and network performance.',
     competitors: ['Cisco, Juniper, Arista, Huawei'];
-    market_size: '$25.3 B quantum computing market', growth_rate: '32% annual growth',
-    variant: 'quantum - networking - enterprise',
+    market_size: '$25.3 B quantum computing market', growth_rate: '32% annual growth',;
+variant: 'quantum - networking - enterprise',
     contact_info: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -945,8 +937,8 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     useCases: ['Government communications, Defense networks, Financial trading, Healthcare systems, Research networks'];
     roi: 'Organizations report 1000% ROI through improved security and network performance.',
     competitors: ['Cisco, Juniper, Arista, Huawei'];
-    marketSize: '$25 && 25.3 B quantum computing market', growthRate: '32% annual growth',
-    variant: 'quantum-networking-enterprise',
+    marketSize: '$25 && 25.3 B quantum computing market', growthRate: '32% annual growth',;
+variant: 'quantum-networking-enterprise',
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1050,8 +1042,8 @@ export const,
       marketSiz,
   e: '$25.3B quantum computing market'
       growthRat,
-  e: '32% annual growth'
-      varian,
+  e: '32% annual growth';
+varian,
   t: 'quantum-networking-enterprise'
       contactInf,
   o: mobil,
@@ -1123,8 +1115,8 @@ export const,
   s: ['AWS, Microsoft Azure, Google Cloud, IBM Cloud'];
     marketSiz,
   e: '$397.4B cloud computing market', growthRat,
-  e: '23% annual growth',
-    varian,
+  e: '23% annual growth',;
+varian,
   t: 'quantum-cloud-enterprise',
     contactInf,
   o: unknown;
@@ -1165,8 +1157,8 @@ export const,
   s: ['Cisco, Juniper, Arista, Huawei'];
     market_siz,
   e: '$25.3B quantum computing market', growth_rat,
-  e: '32% annual growth',
-    varian,
+  e: '32% annual growth',;
+varian,
   t: 'quantum - networking - enterprise',
     contact_inf,
   o: unknown,
@@ -1211,8 +1203,8 @@ export const,
   s: ['Cisco, Juniper, Arista, Huawei'];
     marketSiz,
   e: '$25 && 25.3B quantum computing market', growthRat,
-  e: '32% annual growth',
-    varian,
+  e: '32% annual growth',;
+varian,
   t: 'quantum-networking-enterprise',
     contactInf,
   o: unknown,
@@ -1309,8 +1301,7 @@ export const,
     launchDate: '2025-01-10';
     customers: 8;
     rating: 4.9;
-    reviews: 5;
-  };
+    reviews: 5};
   // Edge Computing Orchestration Platform;
   {;
     id: 'edge-computing-orchestration-platform';
@@ -1352,8 +1343,7 @@ export const,
     launchDate: '2025-01-15';
     customers: 25;
     rating: 4.8;
-    reviews: 18;
-  };
+    reviews: 18};
   // Autonomous DevOps Platform;
   {;
     id: 'autonomous-devops-platform';
@@ -1395,8 +1385,7 @@ export const,
     launchDate: '2025-01-20';
     customers: 38;
     rating: 4.7;
-    reviews: 25;
-  };
+    reviews: 25};
   // Blockchain Infrastructure Platform;
   {;
     id: 'blockchain-infrastructure-platform';
@@ -1438,8 +1427,7 @@ export const,
     launchDate: '2025-01-25';
     customers: 15;
     rating: 4.8;
-    reviews: 12;
-  };
+    reviews: 12};
   // Quantum Networking Platform;
   {;
     id: 'quantum-networking-platform';
@@ -1613,11 +1601,9 @@ export const,
 ]}
 ];
 ;
-;
-  }
+}
 ];
-;
-  }
+}
 ];
 export interface CuttingEdgeITInfrastructureService {/* TODO: Fix JSX expression */}
   s: string}
@@ -1686,8 +1672,7 @@ export const,
     launchDate: '2025-01-10';
     customers: 8;
     rating: 4.9;
-    reviews: 5;
-  };
+    reviews: 5};
   // Edge Computing Orchestration Platform;
   {;
     id: 'edge-computing-orchestration-platform';
@@ -1729,8 +1714,7 @@ export const,
     launchDate: '2025-01-15';
     customers: 25;
     rating: 4.8;
-    reviews: 18;
-  };
+    reviews: 18};
   // Autonomous DevOps Platform;
   {;
     id: 'autonomous-devops-platform';
@@ -1772,8 +1756,7 @@ export const,
     launchDate: '2025-01-20';
     customers: 38;
     rating: 4.7;
-    reviews: 25;
-  };
+    reviews: 25};
   // Blockchain Infrastructure Platform;
   {;
     id: 'blockchain-infrastructure-platform';
@@ -1815,8 +1798,7 @@ export const,
     launchDate: '2025-01-25';
     customers: 15;
     rating: 4.8;
-    reviews: 12;
-  };
+    reviews: 12};
   // Quantum Networking Platform;
   {;
     id: 'quantum-networking-platform';
@@ -2466,7 +2448,7 @@ i,
   e: '2025-02-01'; customer,
   s: 6; ratin,
   g: 4.9; review,
-  s: 4; ]} ]; ; } ]; } ];' import { ServiceVariant } from '../types/service-variants'; export interface CuttingEdgeITInfrastructureService {/* TODO: Fix JSX expression */}
+  s: 4; ]} ]; } ]} ];' import { ServiceVariant } from '../types/service-variants'; export interface CuttingEdgeITInfrastructureService {/* TODO: Fix JSX expression */}
   s: string} websit,
   e: string} }; realImplementatio,
   n: boolean; implementationDetail,

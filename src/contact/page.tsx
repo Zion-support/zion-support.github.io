@@ -4,12 +4,12 @@ import {Phone, Mail, MapPin, Clock, Send, CheckCircle, Users, Award, TrendingUp,
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import React from 'react';
-
+;
 const ContactPage: React.FC = () => {
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle, MessageSquare, Calendar, User, Building, Globe, Shield, Brain, Zap, Cloud, Database, Code, BarChart, Users, Award, Target, Star, TrendingUp, ArrowRight } from 'lucide-react';
 
-export default function ContactPage() {
-  const [formData, setFormData] = useState({
+export default function ContactPage() {;
+const [formData, setFormData] = useState({
     name: '',
     email: '',
     company: '',
@@ -17,31 +17,30 @@ export default function ContactPage() {
     service: '',
     message:   ,
 $4});
-
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const _handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+;
+const [isSubmitted, setIsSubmitted] = useState(false);
+;
+const _handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     message: '',
     budget: '',
     timeline: ''
   });
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
+;
+const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
+;
+const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
+const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
+    }))};
+;
+const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Here you would typically send the form data to your backend
-    // console.log('Form submitted:', formData);
-    setIsSubmitted(true);
+    // // console.log removed for production
+setIsSubmitted(true);
     // Reset form after 3 seconds
     setTimeout(() => {
       setIsSubmitted(false);
@@ -54,17 +53,16 @@ $4});
     await new Promise(resolve => setTimeout(resolve, 2000));
     
     setIsSubmitted(true);
-    setIsSubmitting(false);
-  };
-
-  const contactInfo = {
+    setIsSubmitting(false)};
+;
+const contactInfo = {
     phone: '+1 (302) 464-0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008, Middletown, DE 19709',
     hours: 'Mon-Fri: 9AM-6PM EST'
   };
-
-  const services = [
+;
+const services = [
     'AI Services',
     'IT Services',
     'Micro SAAS Solutions',
@@ -76,8 +74,8 @@ $4});
     'Custom Development',
     'Other'
   ];
-
-  const achievements = [
+;
+const achievements = [
     { icon: Users, text: '100+ Happy Clients' },
     { icon: Award, text: '50+ Successful Projects' },
     { icon: TrendingUp, text: '300% Average ROI' },
@@ -103,8 +101,8 @@ export default ContactPage;
     'Consulting',
     'Other'
   ];
-
-  const budgetRanges = [
+;
+const budgetRanges = [
     'Under $10K',
     '$10K - $50K',
     '$50K - $100K',
@@ -112,8 +110,8 @@ export default ContactPage;
     '$500K+',
     'Not sure'
   ];
-
-  const timelines = [
+;
+const timelines = [
     'ASAP',
     'Within 1 month',
     '1-3 months',
@@ -121,8 +119,8 @@ export default ContactPage;
     '6+ months',
     'Just exploring'
   ];
-
-  const offices = [
+;
+const offices = [
     {
       city: 'Middletown, DE',
       address: '364 E Main St STE 1008, Middletown, DE 19709',
@@ -148,8 +146,8 @@ export default ContactPage;
       timezone: 'Greenwich Mean Time'
     }
   ];
-
-  const faqs = [
+;
+const faqs = [
     {
       question: 'How quickly can you start my project?',
       answer: 'We can typically begin most projects within 1-2 weeks of contract signing. For urgent projects, we offer expedited onboarding.'
@@ -209,8 +207,7 @@ export default ContactPage;
           </div>
         </div>
       </div>
-    );
-  }
+    )}
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -381,15 +378,15 @@ export default ContactPage;
                   className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-lg font-bold hover:from-cyan-600 hover:to-purple-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
                 >
                   {isSubmitting ? (
-                    <>
+                    <React.Fragment>
                       <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
                       Sending...
-                    </>
+                    </React.Fragment>
                   ) : (
-                    <>
+                    <React.Fragment>
                       <Send className="w-5 h-5 mr-2" />
                       Send Message
-                    </>
+                    </React.Fragment>
                   )}
                 </button>
               </form>
@@ -541,5 +538,4 @@ export default ContactPage;
         </div>
       </section>
     </div>
-  );
-}
+  )}

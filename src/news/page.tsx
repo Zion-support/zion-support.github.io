@@ -4,9 +4,9 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { Calendar, ArrowRight, TrendingUp, Users, Award, Globe, Zap, Brain, Shield, Code, BarChart, MessageSquare, Eye, Cpu, Target, Lock, BarChart3, FileText, Search, Bot, Calculator, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Clock3, Compass, PieChart, TrendingDown, Activity } from 'lucide-react';
-
-const NewsPage: React.FC = () => {
-  const newsArticles = [
+;
+const NewsPage: React.FC = () => {;
+const newsArticles = [
     {
       id: 1,
       title: 'Zion Tech Group Launches Revolutionary AI Analytics Dashboard',
@@ -68,10 +68,10 @@ const NewsPage: React.FC = () => {
       readTime: '5 min read'
     }
   ];
-
-  const categories = ['All', 'Product Launch', 'Success Story', 'Technology', 'Innovation', 'Security'];
-
-  const stats = [
+;
+const categories = ['All', 'Product Launch', 'Success Story', 'Technology', 'Innovation', 'Security'];
+;
+const stats = [
     { icon: Users, number: '100+', label: 'Happy Clients' },
     { icon: Award, number: '50+', label: 'Awards Won' },
     { icon: TrendingUp, number: '300%', label: 'Average ROI' },
@@ -79,7 +79,7 @@ const NewsPage: React.FC = () => {
   ];
 
   return (
-    <>
+    <React.Fragment>
       <SEOOptimizer
         title="News & Updates - Zion Tech Group"
         description="Stay updated with the latest news, product launches, and success stories from Zion Tech Group. Discover our AI innovations and enterprise transformations."
@@ -235,8 +235,7 @@ const NewsPage: React.FC = () => {
 
         <Footer />
       </div>
-    </>
-  );
-};
+    </React.Fragment>
+  )};
 
 export default NewsPage;

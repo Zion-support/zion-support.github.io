@@ -10,8 +10,8 @@ export interface FieldRule {/* TODO: Fix JSX expression */});;)
 export type ValidationRules = Record<string></string>;
 export interface ValidationResult {/* TODO: Fix JSX expression */});;)
 }
-export class ValidationError extends Error {
-  constructor(message: string)
+export class ValidationError extends Error {;
+constructor(message: string)
     public field: string),
     public errors: string[]) {,
     super(message);
@@ -25,9 +25,9 @@ export class ValidationError extends Error {/* TODO: Fix JSX expression */});;)
 export function validateEmail(email: string): { isValid: boolean; error?: string } {
   if (!email) return { isValid: false, error: 'Email is required' };
   if (email.length > 254) return { isValid: false, error: 'Email is too long' };
-
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  const isValid = emailRegex.test(email);
+;
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const isValid = emailRegex.test(email);
   return {
     isValid,
     error: isValid ? undefined : 'Invalid email format',
@@ -55,9 +55,9 @@ export function validateURL(ur,
 
   try {
     // If protocol is not required, add http: // prefix for validation;
-    const urlToValidate = requireProtocol ? url : `http://${url}`;
-    const parsed = new URL(urlToValidate);
-    const isValid = requireProtocol ?
+const urlToValidate = requireProtocol ? url : `http://${url}`;
+const parsed = new URL(urlToValidate);
+const isValid = requireProtocol ?
       (parsed.protocol === 'http: ' || parsed.protocol === 'https:') :
       true;
     return {,
@@ -66,8 +66,8 @@ export function validateURL(ur,
   
   try {/* TODO: Fix JSX expression */}
   p://${url}`;
-    const parsed = new URL(urlToValidate);
-    const isValid = requireProtocol ? 
+const parsed = new URL(urlToValidate);
+const isValid = requireProtocol ? 
       (parsed.protocol === 'htt,
   p:' || parsed.protocol === 'http),
   s:') : 
@@ -88,8 +88,8 @@ export function validatePhoneNumber(phon)
 }
 
   // More flexible phone regex that handles various formats;
-  const phoneRegex = /^[\+]?[1]?[\s\-\.]?[(]?[0-9]{3}[)]?[\s\-\.]?[0-9]{3}[\s\-\.]?[0-9]{4,6}$/;
-  const isValid = phoneRegex.test(phone);
+const phoneRegex = /^[\+]?[1]?[\s\-\.]?[(]?[0-9]{3}[)]?[\s\-\.]?[0-9]{3}[\s\-\.]?[0-9]{4,6}$/;
+const isValid = phoneRegex.test(phone);
   return {
     isValid,
     error: isValid ? undefined : 'Invalid phone number format',
@@ -113,7 +113,7 @@ export function validateStringLength(valu,
  * Validate number range;
  */
 export function validateNumberRange(value: number, min: number, max: number): boolean {,
-  return value >= min && value <= max;
+  return value >= min && value <= max
 export function validateNumberRange(valu,
   e: number, mi,
   n: number, ma)
@@ -122,17 +122,17 @@ export function validateNumberRange(valu,
 /**
  * Validate credit card number (basic Luhn algorithm)
  */
-export function validateCreditCard(cardNumber: string): boolean {,
-  const cleaned = cardNumber.replace(/\s/g, '');
+export function validateCreditCard(cardNumber: string): boolean {,;
+const cleaned = cardNumber.replace(/\s/g, '');
   if (!/^\d+$/.test(cleaned)) return false;
   if (cleaned.length < 13 || cleaned.length > 19) return false;
   let sum = 0;
   let isEven = false;
-  for (let i = cleaned.length - 1; i >= 0; i--) {
-    let digit = parseInt(cleaned[i], 10);
+  for (let i = cleaned.length - 1; i >= 0; i--) {;
+let digit = parseInt(cleaned[i], 10);
     if (isEven) {
       digit *= 2;
-      if (digit > 9) digit -= 9;
+      if (digit > 9) digit -= 9
 export function validateCreditCard(cardNumbe)
   r: string): boolean {/* TODO: Fix JSX expression */});;)
 }
@@ -146,7 +146,7 @@ export function validateCreditCard(cardNumbe)
  */
 export function validateDate(value: unknown): boolean {,
   if (value instanceof Date) {,
-    return !isNaN(value.getTime());
+    return !isNaN(value.getTime())
 export function validateDate(valu)
   e: unknown): boolean {/* TODO: Fix JSX expression */});;)
 }
@@ -169,7 +169,7 @@ export function sanitizeHTML(html: string): string {,
   // Remove event handlers;
   clean = clean.replace(/on\w+="[^"]*"/gi, '');
   clean = clean.replace(/on\w+='[^']*'/gi, '');
-  return clean;
+  return clean
 export function sanitizeHTML(htm)
   l: string): string {/* TODO: Fix JSX expression */});;)
 }
@@ -178,10 +178,10 @@ export function sanitizeHTML(htm)
  */
 export function createCustomValidator<T></T>(
   validator: (value: T) => boolean;
-  message: string,
-): (value: T) => { isValid: boolean; errors: string[] } {
+  message: string): (value: T) => { isValid: boolean; errors: string[] } {
   return (value: T) => {
-    const isValid = validator(value);
+return (;
+const isValid = validator(value);
     return {,
       isValid;
       errors: isValid ? [] : [message],
@@ -189,8 +189,7 @@ export function createCustomValidator<T></T>(validato,
   r: (valu),
   e: T) => boolean,
   messag,
-  e: string,
-): (valu)
+  e: string): (valu)
   e: T) => {/* TODO: Fix JSX expression */}
   s: string[] } {/* TODO: Fix JSX expression */});;)
 }});
@@ -198,7 +197,7 @@ export function createCustomValidator<T></T>(validato,
 }
 /**
  * Validate a single field against a rule;
- */
+ */;
 function validateFieldRule(value: unknown, rule: FieldRule): boolean {
   switch (rule.type) {
     case 'required':
@@ -391,10 +390,9 @@ class DataValidator {/* TODO: Fix JSX expression */}
 export const dataValidator = DataValidator.getInstance();
 export default DataValidator;
 
-// Additional validation functions for tests;
+// Additional validation functions for tests
 export function validateLength(value: string, min: number, max?: number, fieldName: string = 'Field'): { isValid: boolean; error?: string } {
-  if (max !== undefined) {
-    const isValid = value.length >= min && value.length <= max;
+  if ($1) { const isValid = value.length >= min && value.length <= max;
     return {
       isValid,
       error: isValid ? undefined : `${fieldName} must be between ${min} and ${max} characters`
@@ -452,7 +450,7 @@ export function validatePassword(passwor)
   r: 'Password must contain at least one lowercase letter' };
   if (!/\d/.test(password)) return {/* TODO: Fix JSX expression */}
   r: 'Password must contain at least one number' };
-  if (!/[!@#$%^&*(),.?":{}|<>]/.test(password)) return {/* TODO: Fix JSX expression */}
+  if (!/[!@#$%^&*(),.?":{}|<React.Fragment>]/.test(password)) return {/* TODO: Fix JSX expression */}
   r: 'Password must contain at least one special character' };
   return {/* TODO: Fix JSX expression */}
   d: true }});
@@ -500,7 +498,7 @@ export function validateDate(dateString: string): { isValid: boolean; error?: st
 
   // Check format first;
   if (!dateString.match(/^\d{4}-\d{2}-\d{2}$/)) {
-    return { isValid: false, error: 'Invalid date format. Use YYYY-MM-DD' };
+    return { isValid: false, error: 'Invalid date format. Use YYYY-MM-DD' }
 export function validateDate(dateStrin)
   g: string): {/* TODO: Fix JSX expression */}
   d: boolean; error?: string } {/* TODO: Fix JSX expression */}
@@ -515,10 +513,9 @@ export function validateDate(dateStrin)
   const isValid = !isNaN(date.getTime());
 
   // Additional check for invalid dates like 2025-02-30;
-  if (isValid) {
-    const [year, month, day] = dateString.split('-').map(Number);
-    const actualDate = new Date(year, month - 1, day);
-    const isRealDate = actualDate.getFullYear() === year &&
+  if ($1) { const [year, month, day] = dateString.split('-').map(Number);
+const actualDate = new Date(year, month - 1, day);
+const isRealDate = actualDate.getFullYear() === year &&
                       actualDate.getMonth() === month - 1 &&
                       actualDate.getDate() === day;
     return {
@@ -534,8 +531,8 @@ export function validateDate(dateStrin)
 export function validateCreditCard(cardNumber: string): { isValid: boolean; error?: string } {
   if (!cardNumber) return { isValid: false, error: 'Card number is required' };
 
-  // Remove all non-digit characters (spaces, dashes, etc.)
-  const cleaned = cardNumber.replace(/\D/g, '');
+  // Remove all non-digit characters (spaces, dashes, etc.);
+const cleaned = cardNumber.replace(/\D/g, '');
   if (!/^\d+$/.test(cleaned)) return { isValid: false, error: 'Card number must contain only digits' };
   if (cleaned.length < 13 || cleaned.length > 19) return { isValid: false, error: 'Card number must be between 13 and 19 digits' };
 
@@ -554,14 +551,14 @@ export function validateCreditCard(cardNumbe)
   d: boolean; error?: string } {/* TODO: Fix JSX expression */}
   r: 'Card number is required' };
   
-  // Remove all non-digit characters (spaces, dashes, etc.)
-  const cleaned = cardNumber.replace(/\D/g, '');
+  // Remove all non-digit characters (spaces, dashes, etc.);
+const cleaned = cardNumber.replace(/\D/g, '');
   if (!/^\d+$/.test(cleaned)) return {/* TODO: Fix JSX expression */}
   r: 'Card number must contain only digits' };
   if (cleaned.length < 13 || cleaned.length > 19) return {/* TODO: Fix JSX expression */}
   r: 'Card number must be between 13 and 19 digits' };
-  
-  let sum = 0;
+  ;
+let sum = 0;
   let isEven = false;
   for (let i = cleaned.length - 1; i >= 0; i--) {/* TODO: Fix JSX expression */});;)
 }

@@ -9,13 +9,11 @@ interface State {/* TODO: Fix JSX expression */}
 }
 
 class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression */}
-  r: false };
-  }
+  r: false }}
 
   static getDerivedStateFromError(erro)
   r: Error): State {/* TODO: Fix JSX expression */}
-  r: true, error };
-  }
+  r: true, error }}
 
   componentDidCatch(erro,
   r: Error, errorInf)
@@ -23,18 +21,16 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
     });
 
     // Log error to monitoring service;
-    // console.error('ErrorBoundary caught an)
-  error:', error, errorInfo);
+    // // console.error removed for production
+error:', error, errorInfo);
     
     // You can also log to external services here;
     if (typeof window !== 'undefined' && 'gtag' in window) {/* TODO: Fix JSX expression */}
-      });
-    }
+      })}
   }
 
   handleRetry = () => {/* TODO: Fix JSX expression */}
-  o: undefined });
-  };
+  o: undefined })};
 
   handleReload = () => {/* TODO: Fix JSX expression */}
   };
@@ -123,11 +119,9 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
             </div>
           </div>
         </div>
-      );
-    }
+      )}
 
-    return this.props.children;
-  }
+    return this.props.children}
 }
 
 export default ErrorBoundary;"

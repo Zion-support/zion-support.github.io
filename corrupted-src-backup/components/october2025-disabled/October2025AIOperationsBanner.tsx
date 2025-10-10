@@ -34,9 +34,9 @@ const October2025AIOperationsBanne, r = () => {/* TODO: Fix JSX expression */}
         </div>)
         {/* Articles, Gri, d */})
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">)
-          { newArticl, e, s.m, a, p((art, i, c, l, e, ind, e, x) = > {
-            const Ico, n = artic, l, e.ic, o, n; return(<Link, ke, y = { in, d, e, x  }, to={ artic, l, e.li, n, k } className="group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-whi, t, e/30, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l"
-            const Ico, n = artic, l, e.ic, o, n; return (</div>
+          { newArticl, e, s.m, a, p((art, i, c, l, e, ind, e, x) = > {;
+const Ico, n = artic, l, e.ic, o, n; return(<Link, ke, y = { in, d, e, x  }, to={ artic, l, e.li, n, k } className="group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-whi, t, e/30, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l";
+const Ico, n = artic, l, e.ic, o, n; return (</div>
               <Link, ke, y = { in, d, e, x  }, to={ artic, l, e.li, n, k } className="group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-whi, t, e/30, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l"
               >
                 {/* Gradient, over, l, a, y */}
@@ -111,8 +111,7 @@ const October2025AIOperationsBanne, r = () => {/* TODO: Fix JSX expression */}
                   </div>
                 </div>
               </Li, n, k>)
-            );
-          })}
+            )})}
         </div>
         {/* Bottom, CT, A */}
         <div, classNam, e = "te, x, t-cent, e, r"></div>
@@ -159,7 +158,6 @@ const October2025AIOperationsBanne, r = () => {/* TODO: Fix JSX expression */}
         </div>
       </div>
     </div>
-  );
-};
+  )};
 export default October2025AIOperationsBanner;
 "`

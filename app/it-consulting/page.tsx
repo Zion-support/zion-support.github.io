@@ -74,12 +74,11 @@ import {
   Keyboard as KeyboardIcon, Mouse as MouseIcon,
   Webcam as WebcamIcon, Speaker as SpeakerIcon;)
 } from 'lucide-react';
-
-const ITConsultingPage: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
-
-  const itServices = [
+;
+const ITConsultingPage: React.FC = () => {const [selectedCategory, setSelectedCategory] = useState('all');
+const [searchTerm, setSearchTerm] = useState('');
+;
+const itServices = [
     // IT Infrastructure Services
     {
       id: 'it-infrastructure-design',
@@ -402,8 +401,8 @@ const ITConsultingPage: React.FC = () => {
       caseStudy: 'Healthcare provider achieved 100% HIPAA compliance and passed all audits';)
 }
   ];
-
-  const categories = [
+;
+const categories = [
     { id: 'all', name: 'All IT Services', icon: Grid3X3 },
     { id: 'infrastructure', name: 'Infrastructure', icon: Server },
     { id: 'cloud', name: 'Cloud Services', icon: Cloud },
@@ -416,10 +415,10 @@ const ITConsultingPage: React.FC = () => {
     { id: 'recovery', name: 'Disaster Recovery', icon: RefreshCw },
     { id: 'compliance', name: 'Compliance', icon: CheckSquare }
   ];
-
-  const filteredServices = itServices.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+;
+const filteredServices = itServices.filter(service => {;
+const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;)
 });;

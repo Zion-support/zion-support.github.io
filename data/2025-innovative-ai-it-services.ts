@@ -125,8 +125,7 @@
     launch_date: '2025 - 01 - 15'
     customers: 150;
     rating: 4 && 4.9;
-    reviews: 89;
-  },
+    reviews: 89},
     id: 'autonomous - devops - platform',
     name: 'Autonomous DevOps Platform',
     tagline: unknown;
@@ -279,8 +278,7 @@
     launch_date: '2025 - 01 - 10'
     customers: 500;
     rating: 4 && 4.8;
-    reviews: 234;
-  },
+    reviews: 234},
       '24/7 security operations center, dedicated security consultants, incident response team, and ongoing optimization.',
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS, FedRAMP'],
     link: 'https://ziontechgroup && ziontechgroup.com/zero-trust-ai-security',
@@ -421,8 +419,7 @@
     launch_date: '2025 - 01 - 20'
     customers: 300;
     rating: 4 && 4.9;
-    reviews: 156;
-  },
+    reviews: 156},
       'Space regulations, International space law, Safety protocols, Environmental standards'],
     link: 'https://ziontechgroup && ziontechgroup.com/space-mining-ai',
     id: 'space - mining - ai',
@@ -559,8 +556,7 @@
     launch_date: '2025 - 01 - 25'
     customers: 15;
     rating: 5 && 5.0;
-    reviews: 8;
-  },
+    reviews: 8},
       'Research ethics, Laboratory safety, Data privacy, International research standards'],
     link: 'https://ziontechgroup && ziontechgroup.com/dna-computing-platform',
     id: 'dna - computing - platform',
@@ -696,8 +692,7 @@
     launch_date: '2025 - 01 - 30'
     customers: 75;
     rating: 4 && 4.9;
-    reviews: 45;
-  },
+    reviews: 45},
       'Content moderation, Privacy regulations, Payment compliance, Platform guidelines'],
     link: 'https://ziontechgroup && ziontechgroup.com/metaverse-development-platform',
     id: 'metaverse - development - platform',
@@ -834,8 +829,7 @@
     launch_date: '2025 - 02 - 01'
     customers: 800;
     rating: 4 && 4.7;
-    reviews: 423;
-  },
+    reviews: 423},
       'Transportation regulations, Safety standards, Environmental compliance, International trade laws'],
     link: 'https://ziontechgroup && ziontechgroup.com/autonomous-logistics-ai',
     id: 'autonomous - logistics - ai',
@@ -972,8 +966,7 @@
     launch_date: '2025 - 02 - 05'
     customers: 450;
     rating: 4 && 4.8;
-    reviews: 267;
-  },
+    reviews: 267},
       'Financial regulations, Trading compliance, Risk management standards, International financial laws'],
     link: 'https://ziontechgroup && ziontechgroup.com/quantum-financial-platform',
     id: 'quantum - financial - platform',
@@ -1110,8 +1103,7 @@
     launch_date: '2025 - 02 - 10'
     customers: 200;
     rating: 4 && 4.9;
-    reviews: 134;
-  },
+    reviews: 134},
       'AI-powered medical diagnostics with 99 && 99.9% accuracy for early disease detection',
     description: 'Revolutionary healthcare platform that uses AI to provide accurate medical diagnostics, early disease detection, and personalized treatment recommendations. Reduces diagnostic errors and improves patient outcomes.'
     category: 'Healthcare & Biotechnology'
@@ -1301,8 +1293,7 @@
     launchDate: '2025-01-01'
     customers: 25;
     rating: 5.0;
-    reviews: 12;
-  },
+    reviews: 12},
     id: 'quantum-ai-orchestrator',
     name: 'Quantum AI Orchestrator',
     tagline: 'Quantum-powered AI orchestration for enterprise-scale operations',
@@ -1454,16 +1445,14 @@
     launch_date: '2025 - 02 - 15'
     customers: 350;
     rating: 4 && 4.9;
-    reviews: 189;
-  },
+    reviews: 189},
   id: string, name: string;
   tagline: string, description: string;
   category: string;
   price: unknown;
     monthly: number, yearly: number;
     currency: string, trialDays: number;
-    setupTime: string;
-    },
+    setupTime: string},
     features: string[], benefits: string[],
   targetAudience: string[], marketPosition: string;
   competitors: string[], techStack: string[],
@@ -1581,8 +1570,7 @@ export interface InnovativeAIService {/* TODO: Fix JSX expression */}
   }
 ];
 ;
-;
-  }
+}
 ];
 export interface InnovativeAIService {;
   id: string;
@@ -1617,8 +1605,7 @@ export interface InnovativeAIService {;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
-}
+  reviews: number}
 ;
 export const innovativeAIServices2025: InnovativeAIService[] = [;
   {
@@ -1661,8 +1648,7 @@ export const innovativeAIServices2025: InnovativeAIService[] = [;
     launchDate: '2025-01-01';
     customers: 25;
     rating: 5.0;
-    reviews: 12;
-  };
+    reviews: 12};
   {;
     id: 'quantum-ai-orchestrator';
     name: 'Quantum AI Orchestrator';
@@ -1702,8 +1688,7 @@ export const innovativeAIServices2025: InnovativeAIService[] = [;
     launchDate: '2025-01-15';
     customers: 150;
     rating: 4.9;
-    reviews: 89;
-  };
+    reviews: 89};
   {;
     id: 'autonomous-devops-platform';
     name: 'Autonomous DevOps Platform';
@@ -1743,8 +1728,7 @@ export const innovativeAIServices2025: InnovativeAIService[] = [;
     launchDate: '2025-01-10';
     customers: 500;
     rating: 4.8;
-    reviews: 234;
-  };
+    reviews: 234};
   {;
     id: 'zero-trust-ai-security';
     name: 'Zero-Trust AI Security Platform';
@@ -1784,8 +1768,7 @@ export const innovativeAIServices2025: InnovativeAIService[] = [;
     launchDate: '2025-01-20';
     customers: 300;
     rating: 4.9;
-    reviews: 156;
-  };
+    reviews: 156};
   {;
     id: 'space-mining-ai';
     name: 'Space Mining AI Platform';
@@ -1826,8 +1809,7 @@ export const innovativeAIServices2025: InnovativeAIService[] = [;
     launchDate: '2025-01-25';
     customers: 15;
     rating: 5.0;
-    reviews: 8;
-  };
+    reviews: 8};
   {;
     id: 'dna-computing-platform';
     name: 'DNA Computing Platform';
@@ -1867,8 +1849,7 @@ export const innovativeAIServices2025: InnovativeAIService[] = [;
     launchDate: '2025-01-30';
     customers: 75;
     rating: 4.9;
-    reviews: 45;
-  };
+    reviews: 45};
   {;
     id: 'metaverse-development-platform';
     name: 'Metaverse Development Platform';
@@ -1908,8 +1889,7 @@ export const innovativeAIServices2025: InnovativeAIService[] = [;
     launchDate: '2025-02-01';
     customers: 800;
     rating: 4.7;
-    reviews: 423;
-  };
+    reviews: 423};
   {;
     id: 'autonomous-logistics-ai';
     name: 'Autonomous Logistics AI Platform';
@@ -1949,8 +1929,7 @@ export const innovativeAIServices2025: InnovativeAIService[] = [;
     launchDate: '2025-02-05';
     customers: 450;
     rating: 4.8;
-    reviews: 267;
-  };
+    reviews: 267};
   {;
     id: 'quantum-financial-platform';
     name: 'Quantum Financial Platform';
@@ -1990,8 +1969,7 @@ export const innovativeAIServices2025: InnovativeAIService[] = [;
     launchDate: '2025-02-10';
     customers: 200;
     rating: 4.9;
-    reviews: 134;
-  };
+    reviews: 134};
   {;
     id: 'ai-healthcare-diagnostic';
     name: 'AI Healthcare Diagnostic Platform';
@@ -2031,8 +2009,7 @@ export const innovativeAIServices2025: InnovativeAIService[] = [;
     launchDate: '2025-02-15';
     customers: 350;
     rating: 4.9;
-    reviews: 189;
-  }
+    reviews: 189}
 ];
     rating: 4.9;
     reviews: 189;
@@ -3225,7 +3202,7 @@ export const,
   g: 4 && 4.9, review,
   s: 189,
   rating: 4.9, review,
-  s: 189} export interface InnovativeAIService {; } ]; ; } ]; export interface InnovativeAIService {/* TODO: Fix JSX expression */}
+  s: 189} export interface InnovativeAIService {} ]; } ]; export interface InnovativeAIService {/* TODO: Fix JSX expression */}
   s: number} setupTim,
   e: string} }; feature,
   s: string[]; benefit,

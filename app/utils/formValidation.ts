@@ -163,10 +163,10 @@ export const validationRules = {/* TODO: Fix JSX expression */});;)
       const hasUpperCase = /[A-Z]/.test(value),
       const hasLowerCase = /[a-z]/.test(value)): ValidationRule<string></string> => ({}
     validate: (value: string) => {}
-      const hasUpperCase = /[A-Z]/.test(value)
-      const hasLowerCase = /[a-z]/.test(value)
-      const hasNumber = /[0-9]/.test(value);}
-      const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(value)
+      const hasUpperCase = /[A-Z]/.test(value);
+const hasLowerCase = /[a-z]/.test(value);
+const hasNumber = /[0-9]/.test(value);
+const hasSpecialChar = /[!@#$%^&*(),.?":{}|<React.Fragment>]/.test(value)
   strongPasswor,
   d: (message = 'Password must be at least 8 characters with uppercase, lowercase, number, and special character')
   ): ValidationRule<string></string> => ({/* TODO: Fix JSX expression */});
@@ -310,11 +310,11 @@ export function getFormErrors<T></T>>(validationResult,
 export function sanitizeInput(input: string): string {,
   return input;
     .trim(),
-    .replace(/[<>]/g, '') // Remove potential HTML tags;
+    .replace(/[<React.Fragment>]/g, '') // Remove potential HTML tags
 export function sanitizeInput(input: string): string {}
   return input
     .trim()
-    .replace(/[<>]/g, '') // Remove potential HTML tags
+    .replace(/[<React.Fragment>]/g, '') // Remove potential HTML tags
     .replace(/[^\w\s@.-]/gi, ''); // Keep only alphanumeric, spaces, @, ., -}
 export function sanitizeInput(inpu)
   t: string): string {/* TODO: Fix JSX expression */});;)

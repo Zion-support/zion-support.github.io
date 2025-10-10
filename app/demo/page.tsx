@@ -2,9 +2,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Play, ArrowRight, CheckCircle } from 'lucide-react';
-
-const DemoPage: React.FC = () => {
-  const demos = [
+;
+const DemoPage: React.FC = () => {const demos = [
     {
       title: 'AI Analytics Dashboard',
       description: 'See how our AI analytics can transform your business intelligence',
@@ -26,7 +25,7 @@ const DemoPage: React.FC = () => {
   ];
 
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         <title>Demo - Zion Tech Group | See Our AI Solutions in Action</title>
         <meta name="description" content="Experience our AI and IT solutions through interactive demos. See how our technology can transform your business." />
@@ -62,14 +61,14 @@ const DemoPage: React.FC = () => {
                         <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
                         {feature}
                       </li>
-                    ))}
+                    ));
                   </ul>
                   <button className="w-full bg-cyan-500 hover:bg-cyan-600 text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center">
                     <Play className="w-4 h-4 mr-2" />
                     Watch Demo
                   </button>
                 </div>
-              ))}
+              ));
             </div>
           </div>
         </section>
@@ -92,8 +91,5 @@ const DemoPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
-  );
-};
-
+    </React.Fragment>)
 export default DemoPage;

@@ -7,21 +7,20 @@
  * Performance Metrics Interface;
  * Defines the structure for performance monitoring data;
  */
-export interface PerformanceMetrics {fcp?: number; // First Contentful Paint;}
+export interface PerformanceMetrics {fcp?: number; // First Contentful Paint}
   lcp?: number; // Largest Contentful Paint;
   fid?: number; // First Input Delay;
   cls?: number; // Cumulative Layout Shift;
   ttfb?: number; // Time to First Byte;
   fmp?: number; // First Meaningful Paint;
   customMetrics?: Record;
-          <string, number>;
-}
+          <string, number>}
 /**
  * Performance Report Interface;
  * Complete performance report structure;
  */
 
-export interface PerformanceReport {// TODO: Add content;}
+export interface PerformanceReport {// TODO: Add content}
 };
   webVitals: Partial;
 
@@ -31,14 +30,13 @@ export interface PerformanceReport {// TODO: Add content;}
     memor,
   y: MemoryStats | null;,
     timestam,
-  p: number;
-}
+  p: number}
 /**
  * Resource Statistics Interface;
  * Tracks resource loading statistics;
  */
 
-export interface ResourceStats {// TODO: Add content;}
+export interface ResourceStats {// TODO: Add content}
 };
   total: number;,
     scripts: number;,
@@ -52,7 +50,7 @@ export interface ResourceStats {// TODO: Add content;}
  * Browser memory usage statistics;
  */
 
-export interface MemoryStats {// TODO: Add content;}
+export interface MemoryStats {// TODO: Add content}
 };
   usedJSHeapSize: number;,
     totalJSHeapSize: number;,
@@ -64,7 +62,7 @@ export interface MemoryStats {// TODO: Add content;}
  * Structure for performance alerts and warnings;
  */
 
-export interface PerformanceAlert {// TODO: Add content;}
+export interface PerformanceAlert {// TODO: Add content}
 };
   type: 'warning' | 'error' | 'info';,
     message: string;,
@@ -79,7 +77,7 @@ export interface PerformanceAlert {// TODO: Add content;}
  * Extends PerformanceEntry for layout shift tracking;
  */
 
-export interface LayoutShift extends PerformanceEntry {// TODO: Add content;}
+export interface LayoutShift extends PerformanceEntry {// TODO: Add content}
 };
   value: number;,
     hadRecentInput: boolean
@@ -90,12 +88,12 @@ export interface LayoutShift extends PerformanceEntry {// TODO: Add content;}
  * Extends Performance API with memory information;
  */
 
-export interface PerformanceWithMemory extends Performance {// TODO: Add content;}
+export interface PerformanceWithMemory extends Performance {// TODO: Add content}
 
 }
   memor,
   y: {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
 
   usedJSHeapSize: number;,

@@ -14,43 +14,10 @@ interface BreadcrumbItem {
 const Breadcrumb: React.FC = () => {
   const location = useLocation();
   
-<<<<<<< HEAD
-=======
-  const generateBreadcrumbs = (): BreadcrumbItem[] => {
-    const pathSegments = location.pathname.split('/').filter(segment => segment !== '');
-    const breadcrumbs: BreadcrumbItem[] = [
-      { name: 'Home', href: '/' }
-    ];
-
-    let currentPath = '';
-    pathSegments.forEach((segment, index) => {
-      currentPath += `/${segment}`;
-      const isLast = index === pathSegments.length - 1;
-      
-      // Convert segment to readable name
-      const name = segment
-        .split('-')
-        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-        .join(' ');
-
-      breadcrumbs.push({
-        name,
-        href: currentPath,
-        current: isLast
-      });
-    });
-
-    return breadcrumbs;
-  };
-
-  const breadcrumbs = generateBreadcrumbs();
-
->>>>>>> cursor/analyze-improve-and-deploy-application-9948
   // Don't show breadcrumb on home page
   if (location.pathname === '/') {
     return null;
   }
-<<<<<<< HEAD
 
   const pathSegments = location.pathname.split('/').filter(segment => segment !== '');
   
@@ -58,11 +25,10 @@ const Breadcrumb: React.FC = () => {
     { name: 'Home', path: '/', icon: Home }
   ];
 
-  pathSegments.forEach((segment, index) => {
-    const path = '/' + pathSegments.slice(0, index + 1).join('/');
-    const name = segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' ');
-    breadcrumbItems.push({ name, path, icon: null });
-  });
+  pathSegments.forEach((segment, index) => {;
+const path = '/' + pathSegments.slice(0, index + 1).join('/');
+const name = segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' ');
+    breadcrumbItems.push({ name, path, icon: null })});
 
   return (
     <nav aria-label="Breadcrumb" className="bg-slate-800/50 backdrop-blur-sm border-b border-slate-700">
@@ -71,8 +37,7 @@ const Breadcrumb: React.FC = () => {
           {breadcrumbItems.map((item, index) => (
             <li key={item.path} className="flex items-center">
               {index > 0 && (
-                <ChevronRight className="w-4 h-4 text-gray-400 mx-2" />
-              )}
+                <ChevronRight className="w-4 h-4 text-gray-400 mx-2" />);
               <a
                 href={item.path}
                 className={`flex items-center space-x-1 transition-colors duration-200 ${
@@ -84,7 +49,6 @@ const Breadcrumb: React.FC = () => {
                 {item.icon && <item.icon className="w-4 h-4" />}
                 <span>{item.name}</span>
               </a>
-=======
 
   return (
     <nav className="bg-gray-900/50 backdrop-blur-sm border-b border-gray-700/50" aria-label="Breadcrumb">
@@ -117,13 +81,9 @@ const Breadcrumb: React.FC = () => {
                   {item.name}
                 </Link>
               )}
->>>>>>> cursor/analyze-improve-and-deploy-application-9948
             </li>
-          ))}
+          ));
         </ol>
       </div>
-    </nav>
-  );
-};
-
+    </nav>)
 export default Breadcrumb;

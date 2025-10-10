@@ -1791,8 +1791,7 @@ export const real2036AIServices = [
     ]}
   }
 ];
-;
-  };
+};
 ];      'Autonomous vehiclesFleet managementTraffic optimizationSafety systems'
     ]
 export const real2036AIServices = [
@@ -2447,7 +2446,7 @@ export const real2036AIServices = [ i,
   s: [}' 'Market researchAcademic researchBusiness intelligenceCompetitive analysis' ]} }; {/* TODO: Fix JSX expression */}
   s: [}' 'Financial decisionsOperational decisionsStrategic planningRisk management' ]} }; {/* TODO: Fix JSX expression */}
   s: [}' 'Business partnershipsPlatform ecosystemsSupply chain managementDigital transformation' ]} }; {/* TODO: Fix JSX expression */}
-  s: [}' 'Autonomous vehiclesFleet managementTraffic optimizationSafety systems' ]} } ]; };' ]; 'Autonomous vehiclesFleet managementTraffic optimizationSafety systems' ] export const real2036AIServices = [; {/* TODO: Fix JSX expression */}
+  s: [}' 'Autonomous vehiclesFleet managementTraffic optimizationSafety systems' ]} } ]};' ]; 'Autonomous vehiclesFleet managementTraffic optimizationSafety systems' ] export const real2036AIServices = [; {/* TODO: Fix JSX expression */}
   s: [}' 'Customer serviceMental health supportEducation technologyHuman resources' ]} }; {/* TODO: Fix JSX expression */}
   s: [}' 'Marketing campaignsProduct designContent creationResearch and development' ]} }; {/* TODO: Fix JSX expression */}
   s: [}' 'Mental health supportPsychological researchPersonal developmentTherapeutic applications' ]} }; {/* TODO: Fix JSX expression */}

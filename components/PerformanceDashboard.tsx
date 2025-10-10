@@ -4,48 +4,46 @@ interface PerformanceMetrics {
   loadTime: number;
   renderTime: number;
   memoryUsage: number;
-  fps: number;
-}
-
+  fps: number}
+;
 const PerformanceDashboard: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+return (
+;
+const [metrics, setMetrics] = useState<PerformanceMetrics>
+);
+}({
     loadTime: 0,
     renderTime: 0,
     memoryUsage: 0,
-    fps: 0,
-  });
+    fps: 0});
   const [isVisible, setIsVisible] = useState(false);
 
-  useEffect(() => {
-    const updateMetrics = () => {
-      const navigation = performance.getEntriesByType(
+  useEffect(() => {;
+const updateMetrics = () => {;
+const navigation = performance.getEntriesByType(
         'navigation'
       )[0] as PerformanceNavigationTiming;
       const loadTime = navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;
-
-      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
+;
+const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
       const memoryUsage = memory ? memory.usedJSHeapSize / 1024 / 1024 : 0;
 
       setMetrics(prev => ({
         ...prev,
         loadTime,
-        memoryUsage,
-      }));
-    };
+        memoryUsage}))};
 
     //Update metrics on load
     updateMetrics();
 
-    //Update metrics periodically
-    const interval = setInterval(updateMetrics, 1000);
+    //Update metrics periodically;
+const interval = setInterval(updateMetrics, 1000);
 
-    return () => clearInterval(interval);
-  }, []);
+    return () => clearInterval(interval)}, []);
 
   //Only show in development
   if (process.env['NODE_ENV'] !== 'development') {
-    return null;
-  }
+    return null}
 
   return (
     <div className="fixed bottom-4 right-4 z-50">
@@ -77,7 +75,6 @@ const PerformanceDashboard: React.FC = () => {
         </div>
       )}
     </div>
-  );
-};
+  )};
 
 export default PerformanceDashboard;

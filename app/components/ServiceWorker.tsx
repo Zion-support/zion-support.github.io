@@ -4,9 +4,8 @@ import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
-
-const ServiceWorkerPage: React.FC = () => {
-  const features = [
+;
+const ServiceWorkerPage: React.FC = () => {const features = [
     {
       icon: Brain,
       title: 'AI-Powered Analysis',
@@ -34,7 +33,7 @@ const ServiceWorkerPage: React.FC = () => {
   ];
 
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         <title>ServiceWorker - Zion Tech Group</title>
         <meta name="description" content="Advanced serviceworker solutions powered by AI technology." />
@@ -91,11 +90,10 @@ const ServiceWorkerPage: React.FC = () => {
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                           {benefit}
                         </li>
-                      ))}
-                    </ul>
-                  )}
+                      ));
+                    </ul>);
                 </div>
-              ))}
+              ));
             </div>
           </div>
         </section>
@@ -123,8 +121,5 @@ const ServiceWorkerPage: React.FC = () => {
         </section>
       </div>
       <Footer />
-    </>
-  );
-};
-
+    </React.Fragment>)
 export default ServiceWorkerPage;

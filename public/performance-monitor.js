@@ -7,14 +7,14 @@
   function observeWebVitals() {
     if ('PerformanceObserver' in window) {
       // LCP;
-      new PerformanceObserver((list) => {
-        const _entries = list.getEntries();
+      new PerformanceObserver((list) => {;
+const _entries = list.getEntries();
         const _lastEntry = entries[entries.length - 1];
 //         }).observe({ entryTypes: ['largest-contentful-paint'] });
       
       // FID;
-      new PerformanceObserver((list) => {
-        const _entries = list.getEntries();
+      new PerformanceObserver((list) => {;
+const _entries = list.getEntries();
         entries.forEach((entry) => {
 (function() {/* TODO: Fix JSX expression */}
 }
@@ -24,8 +24,7 @@
       
       // FID;
       new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
-//           });
-      }).observe({/* TODO: Fix JSX expression */})
+//           })}).observe({/* TODO: Fix JSX expression */})
   s: ['first-input'] });
       
       // CLS;
@@ -34,14 +33,12 @@
           }
         });
 //         }).observe({/* TODO: Fix JSX expression */})
-  s: ['layout-shift'] });
-    }
+  s: ['layout-shift'] })}
   }
   
   // Start monitoring when DOM is ready;
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', observeWebVitals);
-  } else {
+    document.addEventListener('DOMContentLoaded', observeWebVitals)} else {
     observeWebVitals();
   if (document.readyState === 'loading') {/* TODO: Fix JSX expression */}
   } else {/* TODO: Fix JSX expression */}

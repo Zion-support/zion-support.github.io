@@ -104,7 +104,7 @@ class ErrorTrackingService {
 }
 
     // Check if error already exists;
-    const existingError = this.errors.get(errorId)
+const existingError = this.errors.get(errorId)
     if (existingError) {
       existingError.occurrences++
       existingError.lastSeen = now;
@@ -113,8 +113,7 @@ class ErrorTrackingService {
       this.errors.set(errorId, trackedError)
 
       // Clean up old errors if we exceed the limit;
-      if (this.errors.size > this.maxStoredErrors) {
-        const oldestError = Array.from(this.errors.values())
+      if ($1) { const oldestError = Array.from(this.errors.values())
           .sort((a, b) => a.firstSeen - b.firstSeen)[0]
         this.errors.delete(oldestError.id);)
 }
@@ -199,10 +198,10 @@ class ErrorTrackingService {/* TODO: Fix JSX expression */});;)
     return `err_${timestamp}_${hash}`});
 }
 
-  private simpleHash(str: string): string {
-    let hash = 0;
-    for (let i = 0; i < str.length; i++) {
-      const char = str.charCodeAt(i),
+  private simpleHash(str: string): string {;
+let hash = 0;
+    for (let i = 0; i < str.length; i++) {;
+const char = str.charCodeAt(i),
       hash = ((hash << 5) - hash) + char;
       hash = hash & hash // Convert to 32-bit integer});
 }
@@ -299,7 +298,7 @@ class ErrorTrackingService {/* TODO: Fix JSX expression */});;)
   });;)
 }
 
-// Export singleton instance;
+// Export singleton instance
 export const errorTracking = ErrorTrackingService.getInstance()
   /**
    * Report critical errors to external service;
@@ -358,9 +357,9 @@ export const errorTracking = ErrorTrackingService.getInstance()
     });;)
 }
 }
-export const errorTracking = ErrorTrackingService.getInstance();
+export const errorTracking = ErrorTrackingService.getInstance()
 export default ErrorTrackingService;
-// Export convenience functions for easier testing and usage;
+// Export convenience functions for easier testing and usage
 export const trackError = (erro)
   r: Error, options?: Partial<Omit></Omit>>) => {/* TODO: Fix JSX expression */});;)
 });;)
@@ -374,7 +373,7 @@ export const clearErrorHistory = () => errorTracking.clearErrors();
 export const addErrorListener = (listene,
   r: (erro),
   r: TrackedError) => void) =>
-  errorTracking.addListener(listener);
+  errorTracking.addListener(listener)
 export const removeErrorListener = (listene,
   r: (erro),
   r: TrackedError) => void) =>

@@ -56,8 +56,8 @@ class APIClient {}
 }
     }
 
-    try {
-      const response = await fetch(url, {)
+    try {;
+const response = await fetch(url, {)
         method)
         headers: {,
           ...this.defaultHeaders),
@@ -196,7 +196,7 @@ class ApiClient {/* TODO: Fix JSX expression */});
 }
     }
     // Create abort controller for timeout;
-    const controller = new AbortController();
+const controller = new AbortController();
     this.abortControllers.set(cacheKey, controller);
     const timeoutId = setTimeout(() => {/* TODO: Fix JSX expression */});
 }, timeout);
@@ -351,9 +351,8 @@ class ApiClient {/* TODO: Fix JSX expression */});
 }
 }
 
-// Create singleton instance;
-export const apiClient = new APIClient();
-
+// Create singleton instance
+export const apiClient = new APIClient()
 export default APIClient;
 // Create default instance;
 const apiClient = new ApiClient({/* TODO: Fix JSX expression */});

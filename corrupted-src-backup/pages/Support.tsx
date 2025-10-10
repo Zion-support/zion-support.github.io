@@ -2,6 +2,8 @@ import, Reac, t, { useSta, t, e } fr, o, m "rea, c, t";"
 impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";"
 impo, r, t { Sear, c, h, MessageCirc, l, e, Pho, n, e, Ma, i, l, BookOp, e, n, Vid, e, o, Use, r, s, Z, a, p, Clo, c, k, CheckCirc, l, e } fr, o, m "luci, d, e-rea, c, t";
 const, Suppor, t: Rea, c, t.FC = () => {
+return (
+
   con, s, t [searchQue, r, y, setSearchQue, r, y] = useSta, t, e('');
   con, s, t [selectedCatego, r, y, setSelectedCatego, r, y] = useSta, t, e('a, l, l');
   const, supportChannel, s = [
@@ -35,8 +37,10 @@ const, Suppor, t: Rea, c, t.FC = () => {
       descripti, o, n: 'Schedule, a, screen sharing, session, with our, expert, s'
       availabili, t, y: 'Business, Hour, s'
       responseTi, m, e: '< 4, hour, s'
-      conta, c, t: 'Schedule, Cal, l'
-const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
+      conta, c, t: 'Schedule, Cal, l';
+const, Suppor, t: Rea, c, t.FC = () =>
+);
+} {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
     }
@@ -83,7 +87,7 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     f, a, q.questi, o, n.toLowerCa, s, e().includ, e, s(searchQue, r, y.toLowerCa, s, e()) ||
     f, a, q.answ, e, r.toLowerCa, s, e().includ, e, s(searchQue, r, y.toLowerCa, s, e())
   );
-  return(<>
+  return(<React.Fragment>
       <Helmet>
         <title>Suppo, r, t - Zion, Tech, Group</title>
         <meta name="descripti, o, n" content="Get, help, and support, for, all Zion, Tech, Group servic, e, s. 24/7, technical, support, documentati, o, n, and, expert, assistance."  />
@@ -103,7 +107,7 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
             <div, className="te, x, t-cent, e, r"></div>
               <h1, className="te, x, t-4x, l, m
   d:te, x, t-5xl, fon, t-bold, m, b-6">
-  return (<>
+  return (<React.Fragment>
       <Helmet></Helmet>
         <title>Suppo, r, t - Zion, Tech, Group</title>"
         <meta name="descripti, o, n" content="Get, help, and support, for, all Zion, Tech, Group servic, e, s. 24/7, technical, support, documentati, o, n, and, expert, assistance."  /></meta>"
@@ -413,10 +417,9 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
           </d, i, v>
         </secti, o, n>
       </d, i, v>
-    </>
+    </React.Fragment>
         </d, i, v>
       </secti, o, n>
     </d, i, v>
-  );
-};
+  )};
 export default Support;"`

@@ -4,9 +4,8 @@ import { Helmet } from 'react-helmet-async';
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
-const ContactPage: React.FC = () => {
-  const [formData, setFormData] = useState({
+;
+const ContactPage: React.FC = () => {const [formData, setFormData] = useState({
     name: '',
     email: '',
     company: '',
@@ -203,9 +202,9 @@ const ContactPage: React.FC = () => {
                     <>
                       <div></div>
                       Sending...
-                    </>
+                    </React.Fragment>
                   ) : (
-                    <>
+                    <React.Fragment>
                       <Send className="w-5 h-5 mr-2" />
                       Send Message
                     </>

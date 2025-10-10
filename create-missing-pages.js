@@ -1,10 +1,9 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-
+;
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
+// __dirname removed
 // Read the missing pages from the analysis;
 const analysisData = JSON.parse(fs.readFileSync('/workspace/navigation-analysis.json', 'utf8'));
 const missingPages = analysisData.missingPagesList;
@@ -18,15 +17,19 @@ import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import PerformanceOptimizer from '../components/PerformanceOptimizer';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
-
+;
 const ${title.replace(/[^a-zA-Z0-9]/g, '')}Page = () => {
+return (
+
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOOptimizer;
         title="${title} - Zion Tech Group"
         description="${description}"
         keywords={['${category}', 'AI', 'Technology', 'Solutions', 'Enterprise']}
         canonicalUrl="https://ziontechgroup.com${route}"
-      /></SEOOptimizer>
+      />
+);
+}</SEOOptimizer>
       <PerformanceOptimizer /></PerformanceOptimizer>
       <AccessibilityEnhancer enableKeyboardNavigation enableScreenReaderSupport enableHighContrast enableFocusManagement enableSkipLinks></AccessibilityEnhancer>
         <div /></div>
@@ -115,26 +118,24 @@ const ${title.replace(/[^a-zA-Z0-9]/g, '')}Page = () => {
       </section>
 
       <Footer />,
-    </div>);
-};
+    </div>)};
 
 export default ${title.replace(/[^a-zA-Z0-9]/g, '')}Page;
 `;
 
 // Function to create a page;
-const createPage = (route, title, description, category) => {
-  const pageContent = createPageTemplate(route, title, description, category);
+const createPage = (route, title, description, category) => {;
+const pageContent = createPageTemplate(route, title, description, category);
   const pagePath = path.join('/workspace/src', route, 'page.tsx');
   
   // Create directory if it doesn't exist;
   const dir = path.dirname(pagePath);
   if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true });
-  }
+    fs.mkdirSync(dir, { recursive: true })}
   
   // Write the page file;
   fs.writeFileSync(pagePath, pageContent);
-  console.log(`Created page: ${route}`);
+  // console.log removed for production
 };
 
 // Page configurations;
@@ -289,17 +290,16 @@ const pageConfigs = {
 let createdCount = 0;
 const batchSize = 10;
 
-console.log(`Creating ${missingPages.length} missing pages...`);
-
+// console.log removed for production
 for (const route of missingPages) {
-  if (pageConfigs[route]) {
-    const config = pageConfigs[route];
+  if (pageConfigs[route]) {;
+const config = pageConfigs[route];
     createPage(route, config.title, config.description, config.category);
     createdCount++;
     
     if (createdCount % batchSize === 0) {
-      console.log(`Created ${createdCount} pages...`);
-    }
+      // console.log removed for production
+}
   } else {
     // Create a generic page for routes without specific configs;
     const title = route.split('/').pop().replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
@@ -307,9 +307,8 @@ for (const route of missingPages) {
     const category = 'Technology';
     
     createPage(route, title, description, category);
-    createdCount++;
-  }
+    createdCount++}
 }
 
-console.log(`\n✅ Successfully created ${createdCount} missing pages!`);
-console.log('All navigation links should now work properly.');
+// console.log removed for production
+// console.log removed for production

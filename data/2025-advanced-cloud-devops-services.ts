@@ -1,3 +1,4 @@
+import React from 'react';
 export interface CloudDevOpsService {/* TODO: Fix JSX expression */}
   s: number}
     setupTim,
@@ -23,8 +24,7 @@ export interface CloudDevOpsService {/* TODO: Fix JSX expression */}
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
-}
+  reviews: number}
 export const advancedCloudDevOpsServices2025: CloudDevOpsService[] = [,
     id: 'multi-cloud-orchestration-platform',
     name: 'Multi-Cloud Orchestration Platform',
@@ -176,8 +176,7 @@ export const,
     launchDate: '2024-12-01'
     customers: 110;
     rating: 4.8;
-    reviews: 167;
-  },
+    reviews: 167},
     id: 'intelligent-devops-automation-suite',
     name: 'Intelligent DevOps Automation Suite',
     tagline: 'AI-powered DevOps automation with intelligent CI/CD and infrastructure management',
@@ -307,8 +306,7 @@ export const,
     launchDate: '2024-12-01'
     customers: 95;
     rating: 4.7;
-    reviews: 145;
-  },
+    reviews: 145},
     id: 'enterprise-kubernetes-management-platform',
     name: 'Enterprise Kubernetes Management Platform',
     tagline: 'Enterprise-grade Kubernetes management with advanced monitoring and automation',
@@ -438,8 +436,7 @@ export const,
     launchDate: '2024-11-15'
     customers: 75;
     rating: 4.8;
-    reviews: 112;
-  },
+    reviews: 112},
     id: 'intelligent-infrastructure-monitoring',
     name: 'Intelligent Infrastructure Monitoring',
     tagline: 'AI-powered infrastructure monitoring with predictive analytics and automated alerting',
@@ -569,8 +566,7 @@ export const,
     launchDate: '2024-12-01'
     customers: 160;
     rating: 4.8;
-    reviews: 234;
-  },
+    reviews: 234},
     id: 'cloud-security-posture-management',
     name: 'Cloud Security Posture Management',
     tagline: 'Comprehensive cloud security management with automated compliance and threat detection',

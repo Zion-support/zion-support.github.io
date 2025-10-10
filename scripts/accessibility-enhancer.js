@@ -7,27 +7,25 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-
+;
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-console.log('♿ Starting accessibility enhancements...');
-
-// Create accessibility improvements for the main HTML file
+// __dirname removed
+// console.log removed for production
+// Create accessibility improvements for the main HTML file;
 const indexPath = path.join(__dirname, '../dist/index.html');
-if (fs.existsSync(indexPath)) {
-  let indexContent = fs.readFileSync(indexPath, 'utf8');
+if (fs.existsSync(indexPath)) {;
+let indexContent = fs.readFileSync(indexPath, 'utf8');
   
-  // Add accessibility improvements
-  const accessibilityScript = `
+  // Add accessibility improvements;
+const accessibilityScript = `
     <script></scrip>
       // Accessibility enhancements
       (function() {
         'use strict';
         
-        // Skip to main content functionality
-        function addSkipLink() {
-          const skipLink = document.createElement('a');
+        // Skip to main content functionality;
+function addSkipLink() {;
+const skipLink = document.createElement('a');
           skipLink.href = '#main-content';
           skipLink.textContent = 'Skip to main content';
           skipLink.className = 'skip-link';
@@ -44,17 +42,14 @@ if (fs.existsSync(indexPath)) {
             transition: top 0.3 s;
           \`;
           skipLink.addEventListener('focus', function() {
-            this.style.top = '6 px';
-          });
+            this.style.top = '6 px'});
           skipLink.addEventListener('blur', function() {
-            this.style.top = '-40 px';
-          });
-          document.body.insertBefore(skipLink, document.body.firstChild);
-        }
+            this.style.top = '-40 px'});
+          document.body.insertBefore(skipLink, document.body.firstChild)}
         
-        // High contrast mode toggle
-        function addHighContrastToggle() {
-          const toggle = document.createElement('button');
+        // High contrast mode toggle;
+function addHighContrastToggle() {;
+const toggle = document.createElement('button');
           toggle.textContent = 'High Contrast';
           toggle.className = 'accessibility-toggle';
           toggle.style.cssText = \`
@@ -72,14 +67,12 @@ if (fs.existsSync(indexPath)) {
           \`;
           toggle.addEventListener('click', function() {
             document.body.classList.toggle('high-contrast');
-            this.textContent = document.body.classList.contains('high-contrast') ? 'Normal Contrast' : 'High Contrast';
-          });
-          document.body.appendChild(toggle);
-        }
+            this.textContent = document.body.classList.contains('high-contrast') ? 'Normal Contrast' : 'High Contrast'});
+          document.body.appendChild(toggle)}
         
-        // Font size controls
-        function addFontSizeControls() {
-          const controls = document.createElement('div');
+        // Font size controls;
+function addFontSizeControls() {;
+const controls = document.createElement('div');
           controls.className = 'font-size-controls';
           controls.style.cssText = \`
             position: fixed;
@@ -94,41 +87,37 @@ if (fs.existsSync(indexPath)) {
             flex-direction: column;
             gap: 5 px;
           \`;
-          
-          const increaseBtn = document.createElement('button');
+          ;
+const increaseBtn = document.createElement('button');
           increaseBtn.textContent = 'A+';
-          increaseBtn.addEventListener('click', () => {
-            const currentSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
-            document.documentElement.style.fontSize = (currentSize + 2) + 'px';
-          });
-          
-          const decreaseBtn = document.createElement('button');
+          increaseBtn.addEventListener('click', () => {;
+const currentSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
+            document.documentElement.style.fontSize = (currentSize + 2) + 'px'});
+          ;
+const decreaseBtn = document.createElement('button');
           decreaseBtn.textContent = 'A-';
-          decreaseBtn.addEventListener('click', () => {
-            const currentSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
-            document.documentElement.style.fontSize = Math.max(currentSize - 2, 12) + 'px';
-          });
-          
-          const resetBtn = document.createElement('button');
+          decreaseBtn.addEventListener('click', () => {;
+const currentSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
+            document.documentElement.style.fontSize = Math.max(currentSize - 2, 12) + 'px'});
+          ;
+const resetBtn = document.createElement('button');
           resetBtn.textContent = 'Reset';
           resetBtn.addEventListener('click', () => {
-            document.documentElement.style.fontSize = '16 px';
-          });
+            document.documentElement.style.fontSize = '16 px'});
           
           controls.appendChild(increaseBtn);
           controls.appendChild(decreaseBtn);
           controls.appendChild(resetBtn);
-          document.body.appendChild(controls);
-        }
+          document.body.appendChild(controls)}
         
-        // Focus management for modals and dropdowns
-        function enhanceFocusManagement() {
+        // Focus management for modals and dropdowns;
+function enhanceFocusManagement() {
           // Trap focus in modals
           document.addEventListener('keydown', function(e) {
-            if (e.key === 'Tab') {
-              const modal = document.querySelector('.modal:not([style*="display: none"])');
-              if (modal) {
-                const focusableElements = modal.querySelectorAll(
+            if (e.key === 'Tab') {;
+const modal = document.querySelector('.modal:not([style*="display: none"])');
+              if (modal) {;
+const focusableElements = modal.querySelectorAll(
                   'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
                 );
                 const firstElement = focusableElements[0];
@@ -137,61 +126,53 @@ if (fs.existsSync(indexPath)) {
                 if (e.shiftKey) {
                   if (document.activeElement === firstElement) {
                     lastElement.focus();
-                    e.preventDefault();
-                  }
+                    e.preventDefault()}
                 } else {
                   if (document.activeElement === lastElement) {
                     firstElement.focus();
-                    e.preventDefault();
-                  }
+                    e.preventDefault()}
                 }
               }
             }
             
             // Close modals with Escape key
-            if (e.key === 'Escape') {
-              const modal = document.querySelector('.modal:not([style*="display: none"])');
-              if (modal) {
-                const closeBtn = modal.querySelector('[aria-label="Close"], .close-btn');
-                if (closeBtn) closeBtn.click();
-              }
+            if (e.key === 'Escape') {;
+const modal = document.querySelector('.modal:not([style*="display: none"])');
+              if (modal) {;
+const closeBtn = modal.querySelector('[aria-label="Close"], .close-btn');
+                if (closeBtn) closeBtn.click()}
             }
-          });
-        }
+          })}
         
-        // Add ARIA labels to interactive elements
-        function addAriaLabels() {
-          // Add aria-labels to buttons without text
-          const iconButtons = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])');
-          iconButtons.forEach(button => {
-            const icon = button.querySelector('svg, i');
-            if (icon) {
-              const iconName = icon.getAttribute('class') || icon.tagName.toLowerCase();
-              button.setAttribute('aria-label', \`\${iconName} button\`);
-            }
+        // Add ARIA labels to interactive elements;
+function addAriaLabels() {
+          // Add aria-labels to buttons without text;
+const iconButtons = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])');
+          iconButtons.forEach(button => {;
+const icon = button.querySelector('svg, i');
+            if (icon) {;
+const iconName = icon.getAttribute('class') || icon.tagName.toLowerCase();
+              button.setAttribute('aria-label', \`\${iconName} button\`)}
           });
           
-          // Add role="button" to clickable divs
-          const clickableDivs = document.querySelectorAll('div[onclick], div[class*="cursor-pointer"]');
+          // Add role="button" to clickable divs;
+const clickableDivs = document.querySelectorAll('div[onclick], div[class*="cursor-pointer"]');
           clickableDivs.forEach(div => {
             if (!div.getAttribute('role')) {
               div.setAttribute('role', 'button');
-              div.setAttribute('tabindex', '0');
-            }
+              div.setAttribute('tabindex', '0')}
           });
           
-          // Add aria-expanded to collapsible elements
-          const collapsibles = document.querySelectorAll('[class*="dropdown"], [class*="collapse"]');
+          // Add aria-expanded to collapsible elements;
+const collapsibles = document.querySelectorAll('[class*="dropdown"], [class*="collapse"]');
           collapsibles.forEach(element => {
             if (!element.getAttribute('aria-expanded')) {
-              element.setAttribute('aria-expanded', 'false');
-            }
-          });
-        }
+              element.setAttribute('aria-expanded', 'false')}
+          })}
         
-        // Announce page changes to screen readers
-        function addLiveRegion() {
-          const liveRegion = document.createElement('div');
+        // Announce page changes to screen readers;
+function addLiveRegion() {;
+const liveRegion = document.createElement('div');
           liveRegion.setAttribute('aria-live', 'polite');
           liveRegion.setAttribute('aria-atomic', 'true');
           liveRegion.className = 'sr-only';
@@ -208,13 +189,11 @@ if (fs.existsSync(indexPath)) {
           \`;
           document.body.appendChild(liveRegion);
           
-          // Announce navigation changes
-          const originalPushState = history.pushState;
+          // Announce navigation changes;
+const originalPushState = history.pushState;
           history.pushState = function() {
             originalPushState.apply(history, arguments);
-            liveRegion.textContent = 'Page navigation complete';
-          };
-        }
+            liveRegion.textContent = 'Page navigation complete'}}
         
         // Initialize accessibility features
         document.addEventListener('DOMContentLoaded', function() {
@@ -223,27 +202,22 @@ if (fs.existsSync(indexPath)) {
           addFontSizeControls();
           enhanceFocusManagement();
           addAriaLabels();
-          addLiveRegion();
-        });
+          addLiveRegion()});
         
-        // Add high contrast styles
-        const highContrastStyles = \`
+        // Add high contrast styles;
+const highContrastStyles = \`
           .high-contrast {
-            filter: contrast(150%) brightness(120%);
-          }
+            filter: contrast(150%) brightness(120%)}
           .high-contrast * {
-            border-color: currentColor !important;
-          }
+            border-color: currentColor !important}
           .high-contrast button,
           .high-contrast a {
-            border: 2 px solid currentColor !important;
-          }
+            border: 2 px solid currentColor !important}
         \`;
-        
-        const styleSheet = document.createElement('style');
+        ;
+const styleSheet = document.createElement('style');
         styleSheet.textContent = highContrastStyles;
-        document.head.appendChild(styleSheet);
-      })();
+        document.head.appendChild(styleSheet)})();
     </script>
   `;
   
@@ -251,24 +225,23 @@ if (fs.existsSync(indexPath)) {
   indexContent = indexContent.replace('</body>', `${accessibilityScript}</body>`);
   
   fs.writeFileSync(indexPath, indexContent);
-  console.log('✅ Enhanced accessibility features');
+  // console.log removed for production
 }
 
-// Create accessibility statement
+// Create accessibility statement;
 const accessibilityStatement = `# Accessibility Statement
 // 1. Generate accessibility report;
 function generateAccessibilityReport() {
-  console.log('📊 Generating accessibility report...');
-  
-  const accessibilityReport = {
+  // console.log removed for production
+;
+const accessibilityReport = {
     timestamp: new Date().toISOString()
     version: "1.0.0"
     summary: {
       totalIssues: 0;
       criticalIssues: 0;
       warnings: 0;
-      passed: 0;
-    },
+      passed: 0},
     checks: [
       {,
         id: "alt-text",
@@ -325,14 +298,14 @@ function generateAccessibilityReport() {
     path.join(__dirname, '../public/accessibility-report.json'), 
     JSON.stringify(accessibilityReport, null, 2)
   );
-  console.log('✅ Accessibility report generated');
+  // console.log removed for production
 }
 
 // 2. Generate accessibility checklist;
 function generateAccessibilityChecklist() {
-  console.log('✅ Generating accessibility checklist...');
-  
-  const checklist = {
+  // console.log removed for production
+;
+const checklist = {
     title: "Zion Tech Group Accessibility Checklist"
     version: "1.0.0"
     lastUpdated: new Date().toISOString()
@@ -389,14 +362,14 @@ function generateAccessibilityChecklist() {
     path.join(__dirname, '../public/accessibility-checklist.json'), 
     JSON.stringify(checklist, null, 2)
   );
-  console.log('✅ Accessibility checklist generated');
+  // console.log removed for production
 }
 
 // 3. Generate accessibility improvements;
 function generateAccessibilityImprovements() {
-  console.log('🔧 Generating accessibility improvements...');
-  
-  const improvements = [
+  // console.log removed for production
+;
+const improvements = [
     {
       id: "skip-links",
       title: "Add Skip Links",
@@ -433,14 +406,14 @@ function generateAccessibilityImprovements() {
     path.join(__dirname, '../public/accessibility-improvements.json'), 
     JSON.stringify(improvements, null, 2)
   );
-  console.log('✅ Accessibility improvements generated');
+  // console.log removed for production
 }
 
 // 4. Generate accessibility testing guide;
 function generateAccessibilityTestingGuide() {
-  console.log('🧪 Generating accessibility testing guide...');
-  
-  const testingGuide = {
+  // console.log removed for production
+;
+const testingGuide = {
     title: "Accessibility Testing Guide"
     version: "1.0.0"
     lastUpdated: new Date().toISOString()
@@ -493,11 +466,10 @@ async function runAccessibilityEnhancements() {
     generateAccessibilityImprovements();
     generateAccessibilityTestingGuide();
     
-    console.log('🎉 Accessibility enhancement completed successfully!');
-  } catch (error) {
-    console.error('❌ Error during accessibility enhancement:', error);
-    process.exit(1);
-  }
+    // console.log removed for production
+} catch (error) {
+    // console.error removed for production
+process.exit(1)}
 }
 
 ## Accessibility Features
@@ -538,6 +510,5 @@ If you have any questions or concerns about our accessibility efforts, please co
 `;
 
 fs.writeFileSync(path.join(__dirname, '../dist/accessibility-statement.md'), accessibilityStatement);
-console.log('✅ Created accessibility statement');
-
-console.log('♿ Accessibility enhancements completed!');
+// console.log removed for production
+// console.log removed for production

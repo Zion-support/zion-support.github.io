@@ -4,7 +4,7 @@ import Navigation from '../app/components/Navigation';
 import Footer from '../app/components/Footer';
 import SEOOptimizer from '../app/components/SEOOptimizer';
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, DollarSign, Award, Lock, Database, Cloud, Code, Smartphone, Settings, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Globe2, Map, Navigation as NavIcon, PieChart, TrendingDown, Activity } from 'lucide-react';
-
+;
 const PageTemplate: React.FC<{
   title: string;
   description: string;
@@ -12,15 +12,18 @@ const PageTemplate: React.FC<{
   benefits: string[];
   price: string;
   category: string;
-  keywords: string[];
-}> = ({ title, description, icon: Icon, features, benefits, price, category, keywords }) => {
+  keywords: string[]}> = ({ title, description, icon: Icon, features, benefits, price, category, keywords }) => {
+return (
+
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)
       <SEOOptimizer;)
         title={`${title} - Zion Tech Group`})
         description={description})
         keywords={keywords})
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+);
+}</div>
       <SEOOptimizer
         title={`${title} - Zion Tech Group`}
         description={description}
@@ -200,7 +203,6 @@ const PageTemplate: React.FC<{
       </main>
 
       <Footer />,
-    </div>);
-};
+    </div>)};
 
 export default PageTemplate;

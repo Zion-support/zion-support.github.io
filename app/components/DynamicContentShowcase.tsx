@@ -9,9 +9,7 @@ interface Feature {
   description: string;
   stats?: {
     value: string;
-    label: string;
-  }[];
-}
+    label: string}[]}
 
 interface Testimonial {
   name: string;
@@ -19,14 +17,12 @@ interface Testimonial {
   role: string;
   content: string;
   rating: number;
-  avatar?: string;
-}
-
-const DynamicContentShowcase: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(true);
-
-  const features: Feature[] = [
+  avatar?: string}
+;
+const DynamicContentShowcase: React.FC = () => {const [currentIndex, setCurrentIndex] = useState(0);
+const [isPlaying, setIsPlaying] = useState(true);
+;
+const features: Feature[] = [
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',
@@ -68,8 +64,8 @@ const DynamicContentShowcase: React.FC = () => {
       ]
     }
   ];
-
-  const benefits = [
+;
+const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -79,8 +75,8 @@ const DynamicContentShowcase: React.FC = () => {
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
-
-  const testimonials: Testimonial[] = [
+;
+const testimonials: Testimonial[] = [
     {
       name: 'Sarah Johnson',
       company: 'TechCorp Inc.',
@@ -113,27 +109,22 @@ const DynamicContentShowcase: React.FC = () => {
 
   useEffect(() => {
     if (!isPlaying) return;
+    ;
+const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % testimonials.length)}, 4000);
     
-    const timer = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-    }, 4000);
-    
-    return () => clearInterval(timer);
-  }, [isPlaying, testimonials.length]);
-
-  const nextTestimonial = () => {
+    return () => clearInterval(timer)}, [isPlaying, testimonials.length]);
+;
+const nextTestimonial = () => {
     setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-  };
-
-  const prevTestimonial = () => {
+;
+const prevTestimonial = () => {
     setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
-
-  const togglePlayPause = () => {
+;
+const togglePlayPause = () => {
     setIsPlaying(!isPlaying);
-  };
-
-  const currentTestimonial = testimonials[currentIndex];
+;
+const currentTestimonial = testimonials[currentIndex];
 
   return (
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 min-h-screen">
@@ -190,11 +181,10 @@ const DynamicContentShowcase: React.FC = () => {
                         <div className="text-lg font-bold text-white">{stat.value}</div>
                         <div className="text-gray-400 text-xs">{stat.label}</div>
                       </div>
-                    ))}
-                  </div>
-                )}
+                    ));
+                  </div>);
               </div>
-            ))}
+            ));
           </div>
         </div>
       </section>
@@ -215,7 +205,7 @@ const DynamicContentShowcase: React.FC = () => {
                 <div className="flex justify-center mb-6">
                   {[...Array(currentTestimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
-                  ))}
+                  ));
                 </div>
                 
                 <blockquote className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
@@ -269,7 +259,7 @@ const DynamicContentShowcase: React.FC = () => {
                     index === currentIndex ? 'bg-white' : 'bg-white/30'
                   }`}
                 />
-              ))}
+              ));
             </div>
           </div>
         </div>
@@ -292,7 +282,7 @@ const DynamicContentShowcase: React.FC = () => {
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                   <span>{benefit}</span>
                 </div>
-              ))}
+              ));
             </div>
           </div>
         </div>
@@ -301,7 +291,6 @@ const DynamicContentShowcase: React.FC = () => {
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
-<<<<<<< HEAD
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Business?
           </h2>
@@ -317,29 +306,8 @@ const DynamicContentShowcase: React.FC = () => {
               <ArrowRight className="w-5 h-5" />
               Schedule Demo
             </button>
-=======
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-12">
-            <h2 className="text-3xl font-bold text-white mb-6">
-              Ready to Experience the Future?
-            </h2>
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Join thousands of businesses that have already transformed their operations with our cutting-edge solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center space-x-2">
-                <Zap className="w-5 h-5" />
-                <span>Start Free Trial</span>
-              </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200">
-                Schedule Demo
-              </button>
-            </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
           </div>
         </div>
       </section>
-    </div>
-  );
-};
-
+    </div>)
 export default DynamicContentShowcase;

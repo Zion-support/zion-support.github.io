@@ -75,8 +75,7 @@ export interface PracticalBusinessSolution2028 {/* TODO: Fix JSX expression */}
   realImplementation: boolean;
   contactInfo: unknown;
     mobile: string, email: string;
-    address: string;
-  }
+    address: string}
 }
 export const practicalBusinessSolutions2028: PracticalBusinessSolution2028[] = [,
     id: "2028-practical-business-solution", name: "2028 Practical Business Solution Platform",

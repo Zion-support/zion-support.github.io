@@ -1,5 +1,6 @@
+import React from 'react';
 // Real Micro SAAS Services for Zion Tech Group;
-// Comprehensive list of innovative, real-world micro SAAS solutions;
+// Comprehensive list of innovative, real-world micro SAAS solutions
 export interface MicroSaasService {
   id: string,
   title: string,
@@ -29,15 +30,12 @@ export interface MicroSaasService {
     languages: string[];
     frameworks: string[];
     databases: string[];
-    cloudProviders: string[];
-  };
+    cloudProviders: string[]};
   pricing: {
     monthly: number,
     yearly: number,
     enterprise: number,
-    features: string[];
-  };
-}
+    features: string[]}}
 
 export const microSaasServices: MicroSaasService[] = [
   // AI-Powered Productivity Tools;
@@ -850,7 +848,7 @@ export const microSaasServices: MicroSaasService[] = [
   }
 ];
 
-// Service categories for filtering and organization;
+// Service categories for filtering and organization
 export const serviceCategories = [
   'All',
   'Productivity',
@@ -866,7 +864,7 @@ export const serviceCategories = [
   'Automation'
 ];
 
-// Pricing tiers for comparison;
+// Pricing tiers for comparison
 export const pricingTiers = {
   starter: {,
     name: 'Starter',
@@ -885,7 +883,7 @@ export const pricingTiers = {
   }
 };
 
-// Contact information;
+// Contact information
 export const contactInfo = {
   phone: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',

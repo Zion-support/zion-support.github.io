@@ -12,11 +12,9 @@ export interface ExtraService {id: string;
     mobile: string}
     email: string}
 }
-    address: string;
-  }
+    address: string}
 export const extraServices: ExtraService[] = [;
-    address: string;
-  }
+    address: string}
 ;
 export const extra_services: ExtraService[] = [
     id: 'cloud - migration - expert',
@@ -83,9 +81,7 @@ export const,
   contactInfo: unknown;
     mobile: string;
     email: string;
-    address: string;
-  };
-}
+    address: string}}
 }
     address: string;
     lin,
@@ -148,8 +144,7 @@ export const,
     emai,
   l: string;
     addres,
-  s: string};
-}
+  s: string}}
 }
     addres,
   s: string}
@@ -577,7 +572,7 @@ export interface ExtraService,
   o: mobil,
   e: string; emai,
   l: string; addres,
-  s: string}; } } addres,
+  s: string}} } addres,
   s: string} export const,
   extraServices: ExtraService[] = [ ' i,
   d: 'cloud-migration-expert'' nam,

@@ -39,7 +39,7 @@ export const throttle = <T></T> any>(,
 }
   });;)
 }
-// Intersection Observer hook for lazy loading;
+// Intersection Observer hook for lazy loading
 export const useIntersectionObserver = (
   callback: (entries: IntersectionObserverEntry[]) => void;
   options: IntersectionObserverInit = {}
@@ -57,16 +57,16 @@ export const useIntersectionObserver = (
 });
         : null,
     [callback, options]
-  )
-  const observe = useCallback(
+  );
+const observe = useCallback(
     (element: Element | null) => {,
       if (observer && element) {,
-        observer.observe(element),
-  const observe = useCallback()
+        observer.observe(element),;
+const observe = useCallback()
     (element: Element | null) => {}
       if (observer && element) {}
         observer.observe(element)
-        return () => observer.unobserve(element);}
+        return () => observer.unobserve(element);
 'use client';
 // Performance optimization utilities;
 // Debounce utility for performance;
@@ -105,8 +105,8 @@ export const useIntersectionObserver = (callbac,
       return () => {});;)
 },
     [observer]
-  )
-  const disconnect = useCallback(() => {}
+  );
+const disconnect = useCallback(() => {}
     if (observer) {}
       observer.disconnect();});;)
 }
@@ -116,21 +116,21 @@ export const useIntersectionObserver = (callbac,
 }, [disconnect])
   return { observe, disconnect });;)
 }
-// Image lazy loading hook;
-export const useLazyImage = useCallback((...args) => {
-  const [imageSrc, setImageSrc] = useState(placeholder || '')
-  const [isLoaded, setIsLoaded] = useState(false)
-  const [isError, setIsError] = useState(false);}
-  const { observe } = useIntersectionObserver(useCallback()
+// Image lazy loading hook
+export const useLazyImage = useCallback((...args) => {;
+const [imageSrc, setImageSrc] = useState(placeholder || '');
+const [isLoaded, setIsLoaded] = useState(false);
+const [isError, setIsError] = useState(false);
+const { observe } = useIntersectionObserver(useCallback()
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting && !isLoaded && !isError) {
 // Image lazy loading hook
 export const useLazyImage = useCallback((...args) => {}
-  const [imageSrc, setImageSrc] = useState(placeholder || '')
-  const [isLoaded, setIsLoaded] = useState(false)
-  const [isError, setIsError] = useState(false);}
-  const { observe } = useIntersectionObserver()
+  const [imageSrc, setImageSrc] = useState(placeholder || '');
+const [isLoaded, setIsLoaded] = useState(false);
+const [isError, setIsError] = useState(false);
+const { observe } = useIntersectionObserver()
     useCallback()
       (entries) => {}
         entries.forEach((entry) => {}
@@ -168,9 +168,10 @@ export const useLazyImage = (sr)
   )
   return { imageSrc, isLoaded, isError, observe });;)
 }
-// Performance monitoring hook;
+// Performance monitoring hook
 export const usePerformanceMonitoring = useCallback((...args) => {
-  const [metrics, setMetrics] = useState<{
+return (;
+const [metrics, setMetrics] = useState<{
     fcp?: number;
     lcp?: number;
     fid?: number;
@@ -179,11 +180,11 @@ export const usePerformanceMonitoring = useCallback((...args) => {
 }>({});
   useEffect(() => {
     if (typeof window === 'undefined') return;
-    const updateMetrics = useCallback((...args) => {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const paint = performance.getEntriesByType('paint')
-      const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime;
-      const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime;
+const updateMetrics = useCallback((...args) => {;
+const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+const paint = performance.getEntriesByType('paint');
+const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime;
+const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime;
       setMetrics({)
         fcp)
         lcp)
@@ -238,15 +239,16 @@ export const usePerformanceMonitoring = useCallback((...args) => {}
 }
 // Memory usage monitoring;
 export const useMemoryMonitoring = useCallback((...args) => {
-  const [memoryInfo, setMemoryInfo] = useState<{
+return (;
+const [memoryInfo, setMemoryInfo] = useState<{
     usedJSHeapSize?: number;
     totalJSHeapSize?: number;
     jsHeapSizeLimit?: number;});;)
 }>({});
   useEffect(() => {
     if (typeof window === 'undefined' || !('memory' in performance)) return;
-    const updateMemoryInfo = useCallback((...args) => {
-      const memory = (performance as any).memory;
+const updateMemoryInfo = useCallback((...args) => {;
+const memory = (performance as any).memory;
       if (memory) {
         setMemoryInfo({)
           usedJSHeapSize: memory.usedJSHeapSize),
@@ -259,8 +261,8 @@ export const useMemoryMonitoring = useCallback((...args) => {}
     jsHeapSizeLimit?: number;});;)
 }>({});
   useEffect(() => {}
-    if (typeof window === 'undefined' || !('memory' in performance)) return
-    const updateMemoryInfo = useCallback((...args) => {}
+    if (typeof window === 'undefined' || !('memory' in performance)) return;
+const updateMemoryInfo = useCallback((...args) => {}
       const memory = (performance as any).memory
       if (memory) {}
         setMemoryInfo({);
@@ -318,14 +320,14 @@ export const preloadResource = useCallback((...args) => {
   if (typeof window === 'undefined') return;
 // Resource preloading utility
 export const preloadResource = useCallback((...args) => {}
-  if (typeof window === 'undefined') return
-  const link = document.createElement('link')
+  if (typeof window === 'undefined') return;
+const link = document.createElement('link')
   link.rel = 'preload'
   link.href = href;
   link.as = as;
   document.head.appendChild(link);});;)
 }
-// Critical resource preloading;
+// Critical resource preloading
 export const preloadCriticalResources = useCallback((...args) => {
   if (typeof window === 'undefined') return;
   // Preload critical fonts;
@@ -341,9 +343,10 @@ export const preloadCriticalResources = useCallback((...args) => {}
   // Preload critical CSS;
   preloadResource('/styles/critical.css', 'style');});;)
 }
-// Bundle size monitoring;
+// Bundle size monitoring
 export const useBundleSizeMonitoring = useCallback((...args) => {
-  const [bundleSize, setBundleSize] = useState<{
+return (;
+const [bundleSize, setBundleSize] = useState<{
     totalSize?: number;
     jsSize?: number;
     cssSize?: number;
@@ -351,14 +354,14 @@ export const useBundleSizeMonitoring = useCallback((...args) => {
 }>({});
   useEffect(() => {
     if (typeof window === 'undefined') return;
-    const calculateBundleSize = useCallback((...args) => {
-      const resources = performance.getEntriesByType('resource')
-      let totalSize = 0;
+const calculateBundleSize = useCallback((...args) => {;
+const resources = performance.getEntriesByType('resource');
+let totalSize = 0;
       let jsSize = 0;
       let cssSize = 0;
       let imageSize = 0;
-      resources.forEach((resource) => {
-        const size = (resource as PerformanceResourceTiming).transferSize || 0;
+      resources.forEach((resource) => {;
+const size = (resource as PerformanceResourceTiming).transferSize || 0;
         totalSize += size;
         if (resource.name.includes('.js')) {
 // Bundle size monitoring
@@ -370,13 +373,13 @@ export const useBundleSizeMonitoring = useCallback((...args) => {}
     imageSize?: number;});;)
 }>({});
   useEffect(() => {}
-    if (typeof window === 'undefined') return
-    const calculateBundleSize = useCallback((...args) => {}
-      const resources = performance.getEntriesByType('resource')
-      let totalSize = 0
-      let jsSize = 0
-      let cssSize = 0
-      let imageSize = 0
+    if (typeof window === 'undefined') return;
+const calculateBundleSize = useCallback((...args) => {}
+      const resources = performance.getEntriesByType('resource');
+let totalSize = 0;
+let jsSize = 0;
+let cssSize = 0;
+let imageSize = 0
       resources.forEach((resource) => {}
         const size = (resource as PerformanceResourceTiming).transferSize || 0
         totalSize += size
@@ -428,7 +431,7 @@ export default {}
   useBundleSizeMonitoring});;)
 }
 };
-// Resource preloading utility;
+// Resource preloading utility
 export const preloadResource = (hre,
   f: string, a)
   s: string) => {/* TODO: Fix JSX expression */});;)

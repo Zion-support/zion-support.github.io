@@ -1,5 +1,5 @@
-const, October2025FeaturedContentBanne, r = () => {
-  const, featuredConten, t = [
+const, October2025FeaturedContentBanne, r = () => {;
+const, featuredConten, t = [
     {
       tit, l, e: "Enterprise, AI, Value Realizati, o, n"
       descripti, o, n: "90, days, to shipped, outcom, e;
@@ -245,13 +245,19 @@ const, October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression *
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12">")
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12">";)
           {featuredConte, n, t.m, a, p((conte, n, t, ind, e, x) => {
-            const, Ico, n = conte, n, t.ic, o, n;
+return (
+;
+const, Ico, n = conte, n, t.ic, o, n;
             return(<Li, n, k;
         {/* Featured, Content, Cards */}
-        <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12">"</div>
+        <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12">
+);
+}"</div>
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12">";
           {featuredConte, n, t.m, a, p((conte, n, t, ind, e, x) => {
-            const, Ico, n = conte, n, t.ic, o, n;
+return (
+;
+const, Ico, n = conte, n, t.ic, o, n;
             return (</div>
               <Li, n, k
   k, e, y={ind, e, x}
@@ -260,6 +266,8 @@ const, October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression *
   r:shad, o, w-2, x, l"
                 sty, l, e={{ borderCol, o, r: conte, n, t.borderCol, o, r }}
               >
+);
+}
                 <div, className={`absolute, inse, t-0, b, g-gradie, n, t-to-br ${conte, n, t.bgGradie, n, t} opaci, t, y-50, grou, p-hov, e, r:opaci, t, y-70, transitio, n-opaci, t, y`}></d, i, v>`;`
                 <div, className="relativ, e, p-8">
                   {/* Ic, o, n & Tit, l, e */}</div>
@@ -362,8 +370,7 @@ const, October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression *
                 {/* Hover, Effect, Overlay */}`
                 <div, className={`absolute, inse, t-0, b, g-gradie, n, t-to-r ${conte, n, t.gradie, n, t} opaci, t, y-0, grou, p-hov, e, r:opaci, t, y-10, transitio, n-opaci, t, y`}></d, i, v>`;`
               </Li, n, k>
-            );
-          })}
+            )})}
         </d, i, v>
         {/* Bottom, CT, A */}
         <div, className="te, x, t-cent, e, r">";
@@ -430,7 +437,6 @@ const, October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression *
         </d, i, v>
       </d, i, v>
     </d, i, v>
-  );
-};
+  )};
 export default October2025FeaturedContentBanner;
 ;"`

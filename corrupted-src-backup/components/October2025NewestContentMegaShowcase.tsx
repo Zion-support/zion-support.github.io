@@ -222,6 +222,5 @@ export, default, function October2025NewestContentMegaShowca, s, e(): vo, i, d {
         </d, i, v>
       </d, i, v>
     </secti, o, n>
-  );
-}
+  )}
 ;"`

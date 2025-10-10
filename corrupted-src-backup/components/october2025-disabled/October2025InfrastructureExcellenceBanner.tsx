@@ -53,8 +53,8 @@ const October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX expr
         </div>
         {/* Articles, Gri, d */}
         <div, classNam, e = 'grid, ga, p-6, m, d: gr, i, d-co, l, s-3, m, b-10'>
-          { newArticl, e, s.m, a, p(artic, l, e = > {
-            const Ico, n = artic, l, e.ic, o, n; return (</div>
+          { newArticl, e, s.m, a, p(artic, l, e = > {;
+const Ico, n = artic, l, e.ic, o, n; return (</div>
         <div, classNam, e = 'grid, ga, p-6, m, d: gr, i, d-co, l, s-3, m, b-10'></div>
           {/* TODO: Fix JSX expression */}
               <Link, ke, y = { artic, l, e., i, d  }, to={ artic, l, e.li, n, k } className='group, relative, overflow-hidden, rounde, d-2xl, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, border, border-whi, t, e/1, 0, p-6, transitio, n-all, duratio, n-300, hove, r: bg-whi, t, e/10, hove, r:bord, e, r-whi, t, e/20, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l'
@@ -101,8 +101,7 @@ const October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX expr
                   </div>
                 </div>
               </Li, n, k>
-            );
-          })}
+            )})}
         </div>
         {/* CTA, Sectio, n */}
         <div, classNam, e = 'te, x, t-cent, e, r'></div>
@@ -141,7 +140,6 @@ const October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX expr
         </div>
       </div>
     </div>
-  );
-};
+  )};
 export default October2025InfrastructureExcellenceBanner;
 "`

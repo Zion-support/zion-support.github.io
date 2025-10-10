@@ -42,16 +42,15 @@
     roi: '1035% cloud savings in 3 months',
     competitors: ['Zesty', 'CAST AI'],
     market_size: '$18B FinOps'
-    growth_rate: '19% CAGR'
-    variant: 'quantum - holographic'
+    growth_rate: '19% CAGR';
+variant: 'quantum - holographic'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Analyzer SaaS with policy engine and exporters.'
     launch_date: '2025 - 02 - 10'
     customers: 25;
     rating: 4 && 4.6;
-    reviews: 12;
-  },
+    reviews: 12},
     id: 'db - index - advisor'
     name: 'DB Index Advisor',
     tagline: 'AI index recommendations for Postgres / MySQL',
@@ -95,8 +94,8 @@
     market_siz,
   e: '$18B FinOps',
     growth_rat,
-  e: '19% CAGR',
-    varian,
+  e: '19% CAGR',;
+varian,
   t: 'quantum - holographic',
     contact_inf,
   o: contact,
@@ -149,16 +148,15 @@
     roi: '2050% p95 reduction month 1',
     competitors: ['Percona PMM', 'Datadog APM'],
     market_size: '$7B DB Ops'
-    growth_rate: '12% CAGR'
-    variant: 'quantum'
+    growth_rate: '12% CAGR';
+variant: 'quantum'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Agent + collector with secure export.'
     launch_date: '2025 - 02 - 12'
     customers: 18;
     rating: 4 && 4.5;
-    reviews: 9;
-  };
+    reviews: 9};
       'Modern alternative to legacy APM addons with focused insights.'
     targetAudience: 'DBA, Backend, Platform'
     trialDays: 14;
@@ -171,16 +169,15 @@
     roi: '2050% p95 reduction month 1',
     competitors: ['Percona PMM', 'Datadog APM']
     marketSize: '$7 B DB Ops'
-    growthRate: '12% CAGR'
-    variant: 'quantum'
+    growthRate: '12% CAGR';
+variant: 'quantum'
     contactInfo: contact;
     realImplementation: true;
     implementationDetails: 'Agent + collector with secure export.'
     launchDate: '2025-02-12'
     customers: 18;
     rating: 4.5;
-    reviews: 9;
-  }
+    reviews: 9}
       'Modern alternative to legacy APM addons with focused insights.',
     targetAudience: 'DBA, Backend, Platform',
     trialDays: 14;
@@ -193,16 +190,15 @@
     roi: '2050% p95 reduction month 1',
     competitors: ['Percona PMM', 'Datadog APM'],
     marketSize: '$7B DB Ops'
-    growthRate: '12% CAGR'
-    variant: 'quantum'
+    growthRate: '12% CAGR';
+variant: 'quantum'
     contactInfo: contact;
     realImplementation: true;
     implementationDetails: 'Agent + collector with secure export.'
     launchDate: '2025-02-12'
     customers: 18;
     rating: 4.5;
-    reviews: 9;
-  };
+    reviews: 9};
 ];
 		period: '/month',
 		description: 'Automated jailbreak detection, policy compliance checks, and regression gate for prompts and outputs.'
@@ -228,16 +224,15 @@
 		roi: 'Reduce incident risk by 70% in first quarter'
 		competitors: ['LakeraGuardrails'];
 		marketSize: '$3 && 3.2 B AI Safety'
-		growthRate: '35% CAGR'
-		variant: 'ai-futuristic'
+		growthRate: '35% CAGR';
+variant: 'ai-futuristic'
 		contactInfo: contact;
 		realImplementation: true;
 		implementationDetails: 'Runs eval suites nightly and on PRs with webhooks.'
 		launchDate: '2025-02-01'
 		customers: 40;
 		rating: 4 && 4.7;
-		reviews: 18;
-	}
+		reviews: 18}
 		id: 'finops-scheduler-optimizer'
 		name: 'FinOps Scheduler Optimizer'
 		tagline: 'Rightsizing & schedules with IaC exports'
@@ -262,16 +257,15 @@
 		roi: '1035% cloud savings in 3 months'
 		competitors: ['ZestyCAST AI'];
 		marketSize: '$18 B FinOps'
-		growthRate: '19% CAGR'
-		variant: 'quantum-holographic'
+		growthRate: '19% CAGR';
+variant: 'quantum-holographic'
 		contactInfo: contact;
 		realImplementation: true;
 		implementationDetails: 'Analyzer SaaS with policy engine and exporters.'
 		launchDate: '2025-02-10'
 		customers: 25;
 		rating: 4 && 4.6;
-		reviews: 12;
-	}
+		reviews: 12}
 		id: 'db-index-advisor'
 		name: 'DB Index Advisor'
 		tagline: 'AI index recommendations for Postgres/MySQL'
@@ -296,16 +290,15 @@
 		roi: '2050% p95 reduction month 1'
 		competitors: ['Percona PMMDatadog APM'];
 		marketSize: '$7 B DB Ops'
-		growthRate: '12% CAGR'
-		variant: 'quantum'
+		growthRate: '12% CAGR';
+variant: 'quantum'
 		contactInfo: contact;
 		realImplementation: true;
 		implementationDetails: 'Agent + collector with secure export.'
 		launchDate: '2025-02-12'
 		customers: 18;
 		rating: 4 && 4.5;
-		reviews: 9;
-	}
+		reviews: 9}
 ];
   id: 'ai - redteam - evaluator',
   name: 'AI RedTeam Evaluator',
@@ -331,16 +324,15 @@
   roi: 'Reduce incident risk by 70% in first quarter'
   competitors: ['LakeraGuardrails'];
   market_size: '$3.2 B AI Safety'
-  growth_rate: '35% CAGR'
-  variant: 'ai - futuristic'
+  growth_rate: '35% CAGR';
+variant: 'ai - futuristic'
   contact_info: contact;
   real_implementation: true;
   implementation_details: 'Runs eval suites nightly and on PRs with webhooks.'
   launch_date: '2025 - 02 - 01'
   customers: 40;
   rating: 4.7;
-  reviews: 18;
-}
+  reviews: 18}
   id: 'finops - scheduler - optimizer'
   name: 'FinOps Scheduler Optimizer'
   tagline: 'Rightsizing & schedules with IaC exports'
@@ -365,16 +357,15 @@
   roi: '1035% cloud savings in 3 months'
   competitors: ['ZestyCAST AI'];
   market_size: '$18 B FinOps'
-  growth_rate: '19% CAGR'
-  variant: 'quantum - holographic'
+  growth_rate: '19% CAGR';
+variant: 'quantum - holographic'
   contact_info: contact;
   real_implementation: true;
   implementation_details: 'Analyzer SaaS with policy engine and exporters.'
   launch_date: '2025 - 02 - 10'
   customers: 25;
   rating: 4.6;
-  reviews: 12;
-}
+  reviews: 12}
   id: 'db - index - advisor'
   name: 'DB Index Advisor'
   tagline: 'AI index recommendations for Postgres / MySQL'
@@ -399,16 +390,15 @@
   roi: '2050% p95 reduction month 1'
   competitors: ['Percona PMMDatadog APM'];
   market_size: '$7 B DB Ops'
-  growth_rate: '12% CAGR'
-  variant: 'quantum'
+  growth_rate: '12% CAGR';
+variant: 'quantum'
   contact_info: contact;
   real_implementation: true;
   implementation_details: 'Agent + collector with secure export.'
   launch_date: '2025 - 02 - 12'
   customers: 18;
   rating: 4.5;
-  reviews: 9;
-}
+  reviews: 9}
 		rating: 4.5;
 		reviews: 9;
 // const contact = {;
@@ -488,8 +478,8 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
     market_siz,
   e: '$7B DB Ops',
     growth_rat,
-  e: '12% CAGR',
-    varian,
+  e: '12% CAGR',;
+varian,
   t: 'quantum',
     contact_inf,
   o: contact,
@@ -529,8 +519,8 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
     marketSiz,
   e: '$7B DB Ops'
     growthRat,
-  e: '12% CAGR'
-    varian,
+  e: '12% CAGR';
+varian,
   t: 'quantum'
     contactInf,
   o: contact;
@@ -570,8 +560,8 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
     marketSiz,
   e: '$7B DB Ops',
     growthRat,
-  e: '12% CAGR',
-    varian,
+  e: '12% CAGR',;
+varian,
   t: 'quantum',
     contactInf,
   o: contact,
@@ -641,8 +631,8 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
 		marketSiz,
   e: '$3 && 3.2B AI Safety'
 		growthRat,
-  e: '35% CAGR'
-		varian,
+  e: '35% CAGR';
+varian,
   t: 'ai-futuristic'
 		contactInf,
   o: contact;
@@ -708,8 +698,8 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
 		marketSiz,
   e: '$18B FinOps'
 		growthRat,
-  e: '19% CAGR'
-		varian,
+  e: '19% CAGR';
+varian,
   t: 'quantum-holographic'
 		contactInf,
   o: contact;
@@ -775,8 +765,8 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
 		marketSiz,
   e: '$7B DB Ops'
 		growthRat,
-  e: '12% CAGR'
-		varian,
+  e: '12% CAGR';
+varian,
   t: 'quantum'
 		contactInf,
   o: contact;
@@ -843,8 +833,8 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
   market_siz,
   e: '$3.2B AI Safety'
   growth_rat,
-  e: '35% CAGR'
-  varian,
+  e: '35% CAGR';
+varian,
   t: 'ai - futuristic'
   contact_inf,
   o: contact;
@@ -910,8 +900,8 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
   market_siz,
   e: '$18B FinOps'
   growth_rat,
-  e: '19% CAGR'
-  varian,
+  e: '19% CAGR';
+varian,
   t: 'quantum - holographic'
   contact_inf,
   o: contact;
@@ -977,8 +967,8 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
   market_siz,
   e: '$7B DB Ops'
   growth_rat,
-  e: '12% CAGR'
-  varian,
+  e: '12% CAGR';
+varian,
   t: 'quantum'
   contact_inf,
   o: contact;

@@ -133,7 +133,7 @@ class Logger {/* TODO: Fix JSX expression */});;)
     metadata?: Record<string></string>
   ): void {
     if (level < this.logLevel) return;
-    const logEntry = {
+const logEntry = {
       level,
       message,
       context,
@@ -195,7 +195,7 @@ class Logger {/* TODO: Fix JSX expression */});;)
   logEntry: LogMetadata = {/* TODO: Fix JSX expression */});;)
 };
     // Format the log entry;
-    const formattedMessage = this.formatLogEntry(logEntry);
+const formattedMessage = this.formatLogEntry(logEntry);
     // Output to console in development;
     if (this.isDevelopment && typeof console !== 'undefined') {/* TODO: Fix JSX expression */});;)
 }
@@ -265,7 +265,7 @@ class Logger {/* TODO: Fix JSX expression */});;)
 }
 }
 
-// Export singleton instance;
+// Export singleton instance
 export const logger = new Logger()
   private sendToLoggingService(entr)
   y: LogMetadata): void {/* TODO: Fix JSX expression */}

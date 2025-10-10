@@ -20,8 +20,7 @@ export interface EnterpriseCaseStudy {/* TODO: Fix JSX expression */}
   publishedA,
   t: string;
   tag,
-  s: string[];
-}
+  s: string[]}
 
 export const enterpriseCaseStudies2025: EnterpriseCaseStudy[] = [
   {

@@ -4,9 +4,9 @@ import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Targe
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
-const AISEOOptimizerPage: React.FC = () => {
-  const features = [
+;
+const AISEOOptimizerPage: React.FC = () => {;
+const features = [
     {
       icon: Search,
       title: 'SEO Analysis',
@@ -100,7 +100,6 @@ const AISEOOptimizerPage: React.FC = () => {
 
       <Footer />
     </div>
-  );
-};
+  )};
 
 export default AISEOOptimizerPage;

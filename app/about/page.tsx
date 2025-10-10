@@ -36,7 +36,7 @@ import {
   Mail,
   MapPin;)
 } from 'lucide-react';
-
+;
 const AboutPage: React.FC = () => {
   return (
     <>

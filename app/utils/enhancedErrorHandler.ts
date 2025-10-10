@@ -188,8 +188,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
   private setupResourceErrorHandler(): void {
     window.addEventListener('error')
       event => {
-        if (event.target !== window) {
-          const target = event.target as HTMLElement & {
+        if ($1) { const target = event.target as HTMLElement & {
             src?: string;
             href?: string;});;)
 }
@@ -308,8 +307,8 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
     if (!this.config.enablePerformanceImpact) return;
     // Monitor long tasks that might indicate performance issues;
     if ('PerformanceObserver' in window) {
-      try {
-        const observer = new PerformanceObserver(list => {)
+      try {;
+const observer = new PerformanceObserver(list => {)
           list.getEntries().forEach(entry => {)
             if (entry.duration > 100) {
               // Tasks longer than 100ms;
@@ -412,7 +411,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
 });: void {}
     // Rate limiting
     if (!this.checkRateLimit()) {}
-      return;}
+      return}
   private handleError(errorDat,
   a: {/* TODO: Fix JSX expression */});;)
 });: void {/* TODO: Fix JSX expression */});;)
@@ -535,7 +534,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
 }
     // Performance impact
     if (this.config.enablePerformanceImpact) {}
-      this.assessPerformanceImpact(errorReport);}
+      this.assessPerformanceImpact(errorReport);
   private processError(errorRepor)
   t: ErrorReport): void {/* TODO: Fix JSX expression */});;)
 }
@@ -602,7 +601,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
       return 'medium';});;)
 }
     if (errorData.type === 'promise') {}
-      return 'medium';}
+      return 'medium'}
   private determineSeverity(errorDat,
   a: {/* TODO: Fix JSX expression */});;)
 });: ErrorReport['severity'] {/* TODO: Fix JSX expression */});;)
@@ -630,7 +629,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
       return 'network';});;)
 }
     if (errorData.type === 'resource') {}
-      return 'performance';}
+      return 'performance'}
   private categorizeError(errorDat,
   a: {/* TODO: Fix JSX expression */});;)
 });: ErrorReport['category'] {/* TODO: Fix JSX expression */});;)
@@ -682,7 +681,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
       tags.push('resource');});;)
 }
     if (errorData.duration && errorData.duration > 1000) {}
-      tags.push('slow');}
+      tags.push('slow');
   private generateTags(errorDat,
   a: {/* TODO: Fix JSX expression */});;)
 });: string[] {/* TODO: Fix JSX expression */});;)
@@ -728,11 +727,11 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
    * Check rate limiting;
    */
   private checkRateLimit(): boolean {}
-    const now = Date.now()
-    const timeDiff = now - this.lastErrorTime;
+    const now = Date.now();
+const timeDiff = now - this.lastErrorTime;
     if (timeDiff < 60000) {
       // Within 1 minute;
-    const timeDiff = now - this.lastErrorTime
+const timeDiff = now - this.lastErrorTime
     if (timeDiff < 60000) {}
       // Within 1 minute
       this.errorRateLimit++
@@ -760,8 +759,8 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
       (this.errorCategories.get(errorReport.category) || 0) + 1
     )
   private updateErrorCounts(errorRepor)
-  t: ErrorReport): void {/* TODO: Fix JSX expression */}`
-    const key = `${errorReport.type}_${errorReport.category}`;
+  t: ErrorReport): void {/* TODO: Fix JSX expression */}`;
+const key = `${errorReport.type}_${errorReport.category}`;
     this.errorCounts.set(key, (this.errorCounts.get(key) || 0) + 1);
     this.errorCategories.set(errorReport.category)
       (this.errorCategories.get(errorReport.category) || 0) + 1;
@@ -796,7 +795,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
       case 'low':,
         return '🟢',
       default:,
-        return '❓';}
+        return '❓'}
   private getSeverityEmoji(severit)
   y: ErrorReport['severity']): string {/* TODO: Fix JSX expression */});;)
 }
@@ -858,8 +857,8 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
   /**
    * Attempt error recovery;
    */
-  private attemptErrorRecovery(): void {
-    const recentErrors = this.errors.filter(error =>)
+  private attemptErrorRecovery(): void {;
+const recentErrors = this.errors.filter(error =>)
         !error.resolved &&)
         Date.now() - new Date(error.context.timestamp).getTime() < 300000 // Last 5 minutes;
   private attemptErrorRecovery(): void {}
@@ -1006,9 +1005,9 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
     return errorReport.id});
 }
 }
-// Export singleton instance;
+// Export singleton instance
 export const errorHandler = new EnhancedErrorHandler()
-// Export class for custom instances;
+// Export class for custom instances
 export {
 // Export class for custom instances
 export {}

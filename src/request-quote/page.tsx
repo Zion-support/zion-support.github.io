@@ -9,8 +9,8 @@ import Footer from '../components/Footer';
 
 'use client';
 import React, { useState } from 'react';
-const RequestQuotePage: React.FC = () => {
-  const [formData, setFormData] = useState({
+const RequestQuotePage: React.FC = () => {;
+const [formData, setFormData] = useState({
     name: '',
     email: '',
     company: '',
@@ -22,11 +22,11 @@ const RequestQuotePage: React.FC = () => {
     description: '',
     requirements:   ,
 $4});
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
+;
+const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const _serviceTypes = [
+;
+const _serviceTypes = [
     'AI Services',
     'IT Infrastructure',
     'Cybersecurity',
@@ -37,15 +37,15 @@ $4});
     'Consulting Services',
     'Other'
   ];
-
-  const projectSizes = [
+;
+const projectSizes = [
     'Small (1-10 employees)',
     'Medium (11-100 employees)',
     'Large (101-1000 employees)',
     'Enterprise (1000+ employees)'
   ];
-
-  const timelines = [
+;
+const timelines = [
     'ASAP',
     '1-3 months',
     '3-6 months',
@@ -53,8 +53,8 @@ $4});
     '12+ months',
     'Flexible'
   ];
-
-  const budgetRanges = [
+;
+const budgetRanges = [
     'Under $10,000',
     '$10,000 - $50,000',
     '$50,000 - $100,000',
@@ -62,16 +62,15 @@ $4});
     '$500,000+',
     'To be discussed'
   ];
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
+;
+const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
+const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
+    }))};
+;
+const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
@@ -79,10 +78,9 @@ $4});
     await new Promise(resolve => setTimeout(resolve, 2000));
     
     setIsSubmitting(false);
-    setIsSubmitted(true);
-  };
-
-  const benefits = [
+    setIsSubmitted(true)};
+;
+const benefits = [
     {
       icon: Calculator,
       title: 'Free Quote',
@@ -104,8 +102,8 @@ $4},
       description:     ,
 $4}
   ];
-
-  const whyChooseUs = [
+;
+const whyChooseUs = [
     {
       icon: Users,
       title: '50+ Successful Projects',
@@ -130,7 +128,7 @@ $4}
 
   if (isSubmitted) {
     return (
-      <>
+      <React.Fragment>
         <Navigation />
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
           <div className="container mx-auto px-4 py-16 pt-24">
@@ -182,12 +180,11 @@ $4}
           </div>
         </div>
         <Footer />
-      </>
-    );
-  }
+      </React.Fragment>
+    )}
 
   return (
-    <>
+    <React.Fragment>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16 pt-24">
@@ -456,10 +453,9 @@ $4}
                 </div>
     <div>Coming Soon</div>
 
-  );
-};
+  )};
   const [formData, setFormData] = useState({/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   nam,
   e: '',
@@ -531,32 +527,30 @@ $4}
   ];
   const handleInputChange = (e: React.ChangeEvent;)
           <HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
     const { name, value } = e.target;
     setFormData(prev => ({/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
 //       ...prev,
       [name]: value;)
-    }));
-  };
+    }))};
   const handleSubmit = async (e: React.FormEvent) => {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
     e.preventDefault();
     setIsSubmitting(true);
     // Simulate form submission;
     await new Promise(resolve => setTimeout(resolve, 2000));
     setIsSubmitting(false);
-    setIsSubmitted(true);
-  };
+    setIsSubmitted(true)};
   const benefits = [
   // TOD,
   O: Add items;
 ];;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   ico,
   n: Calculator,
@@ -566,7 +560,7 @@ $4}
   n: 'Get a detailed, no-obligation quote within 24 hours'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   ico,
   n: Clock,
@@ -576,7 +570,7 @@ $4}
   n: 'We respond to all quote requests within 4 hours'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   ico,
   n: CheckCircle,
@@ -586,7 +580,7 @@ $4}
   n: 'Clear, detailed pricing with no hidden fees'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   ico,
   n: Star,
@@ -601,7 +595,7 @@ $4}
   O: Add items;
 ];;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   ico,
   n: Users,
@@ -611,7 +605,7 @@ $4}
   n: 'Proven track record of delivering results'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   ico,
   n: Award,
@@ -621,7 +615,7 @@ $4}
   n: 'Our clients see significant returns on investment'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   ico,
   n: Clock,
@@ -631,7 +625,7 @@ $4}
   n: 'Round-the-clock support for all our clients'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   ico,
   n: Star,
@@ -642,12 +636,12 @@ $4}
     }
   ];
   if (isSubmitted) {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
     return (<div>Coming Soon</div>)
   )
       
-          <>
+          <React.Fragment>
         <Navigation /></Navigation>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
           <div className="container mx-auto px-4 py-16 pt-24"></div>"
@@ -738,15 +732,14 @@ $4}
         </div>
       </div>
       <Footer />
-    </>
+    </React.Fragment>
         <Footer /></Footer>
-      </>
-    );
-  }
+      </React.Fragment>
+    )}
   return (<div>Coming Soon</div>)
   )
     
-          <>
+          <React.Fragment>
       <Navigation /></Navigation>"
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
         <div className="container mx-auto px-4 py-16 pt-24"></div>
@@ -1147,8 +1140,7 @@ type="submit" disabled={isSubmitting}
       <Footer /></Footer>
 
     </div>
-  );
-};
+  )};
 
 
 export default RequestQuotePage;

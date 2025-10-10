@@ -124,4 +124,5 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
   return null;
 };
 
+  return <React.Fragment>{children}</React.Fragment>}
 export default SecurityEnhancer;

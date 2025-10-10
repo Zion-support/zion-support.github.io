@@ -20,14 +20,14 @@ import {
   MapPin,
   Clock;)
 } from 'lucide-react';
-
+;
 const Sidebar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [expandedSections, setExpandedSections] = useState<Set<string></Set>>(new Set(['ai-services', 'micro-saas', 'it-services']));
   const location = useLocation();
 
-  useEffect(() => {
-    const handleResize = () => {
+  useEffect(() => {;
+const handleResize = () => {
       if (window.innerWidth >= 1024) {
         setIsOpen(false);)
 }
@@ -131,8 +131,8 @@ const Sidebar: React.FC = () => {
       ];)
 }
   ];
-
-  const contactInfo = {
+;
+const contactInfo = {
     phone: '(302) 464-0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown, DE 19709',
@@ -140,7 +140,7 @@ const Sidebar: React.FC = () => {
 };
 
   return (
-    <>
+    <React.Fragment>
       {/* Mobile Menu Button */}
       <button
         onClick={() =></button> setIsOpen(true);

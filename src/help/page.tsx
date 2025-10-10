@@ -7,13 +7,12 @@ import { Link } from 'react-router-dom';
 
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
-
-const HelpPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
+;
+const HelpPage: React.FC = () => {;
+const [searchTerm, setSearchTerm] = useState('');
   const [activeCategory, setActiveCategory] = useState('getting-started');
-
-  const categories = [
+;
+const categories = [
     {
       id: 'getting-started',
       name: 'Getting Started',
@@ -38,8 +37,8 @@ idid: 'technical',
       bgColor:     ,
 $4}
   ];
-
-  const helpArticles = {
+;
+const helpArticles = {
     'getting-started': [
         title: 'How to Get Started with AI Services',
         description: 'Complete guide to setting up your AI services and making the most of our platform',
@@ -96,8 +95,8 @@ titletitle: 'Security Best Practices',
         title: 'Monitoring and Logging',
         description: 'Set up monitoring and logging for your AI services and applications']
   };
-
-  const resources = [
+;
+const resources = [
       title: 'Video Tutorials',
       description: 'Step-by-step video guides for all our services',
       icon: Video,
@@ -111,9 +110,8 @@ titletitle: 'API Reference',
 titletitle: 'Download Center',
       description: 'SDKs, tools, and resources for developers',
       icon: Download,
-      count: '25+ downloads'
-
-  const supportChannels = [
+      count: '25+ downloads';
+const supportChannels = [
       title: 'Live Chat',
       description: 'Get instant help from our support team',
       color: 'text-cyan-400',
@@ -131,9 +129,8 @@ titletitle: 'Phone Support',
 titletitle: 'Community Forum',
       description: 'Connect with other users and share knowledge',
       icon: Users,
-      responseTime: 'Community driven'
-
-  const faqs = [
+      responseTime: 'Community driven';
+const faqs = [
       question: 'How quickly can I get started with your AI services?',
       answer: 'Most of our AI services can be set up within 24-48 hours. We provide comprehensive onboarding support to ensure you\'re up and running quickly.'
       question: 'Do you offer training for our team?',
@@ -143,21 +140,24 @@ questionquestion: 'What kind of support do you provide?',
 questionquestion: 'Can I integrate your services with my existing systems?',
       answer:       ,
 questionquestion: 'Is there a free trial available?',
-      answer: 'Yes, we offer a 14-day free trial for most of our services. This allows you to test our platform and see how it fits your business needs before committing to a paid plan.'
+      answer: 'Yes, we offer a 14-day free trial for most of our services. This allows you to test our platform and see how it fits your business needs before committing to a paid plan.';
+const getCurrentArticles = () => {
+return (
 
-  const getCurrentArticles = () => {
     return helpArticles[activeCategory as keyof typeof helpArticles] || [];
-
-  const filteredArticles = getCurrentArticles().filter(article =>
+;
+const filteredArticles = getCurrentArticles().filter(article =>
     article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
     article.description.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   return (
-    <>
+    <React.Fragment>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16 pt-24">
+);
+}
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
@@ -285,17 +285,16 @@ questionquestion: 'Is there a free trial available?',
                 <Mail className="w-4 h-4 mr-2" />
                 Email Us
       <Footer />
-    </>
+    </React.Fragment>
   return (
     <div>Coming Soon</div>
 
-  );
-};
+  )};
   const [searchTerm, setSearchTerm] = useState('');
   const [activeCategory, setActiveCategory] = useState('getting-started');
 const categories = [
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   i,
   d: 'getting-started',
@@ -332,7 +331,7 @@ const categories = [
     }
   ];
   const helpArticles = {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
     'getting-started': [;
   titl,
@@ -409,7 +408,7 @@ const categories = [
 
                 Email Us;
       <Footer /></Footer>
-    </>
+    </React.Fragment>
 export default HelpPage;
 
 

@@ -16,8 +16,7 @@
   contactInfo: unknown;
     mobile: string;
     email: string;
-    address: string;
-  }
+    address: string}
   category: string;
   technology: string[];
   benefits: string[];
@@ -1999,8 +1998,7 @@ export interface InnovativeMicroSaasService2029V2 {/* TODO: Fix JSX expression *
       "Employee retention strategies","
       "Performance management","
       "Workforce planning"
-    ];
-  }
+    ]}
 ];
 ;
 ];"
@@ -2626,4 +2624,4 @@ i,
   y: "HR Analytics", technolog,"
   y: ["AI/ML", "Predictive Analytics", "People Analytics", "Machine Learning"], benefit,"
   s: [ "Reduce employee turnover by 35%", "Improve hiring success rate by 45%", "Increase employee productivity by 25%", "Reduce HR operational costs by 30%" ]; useCase,"
-  s: [ "Performance management" "Workforce planning" ] } ]; "Talent acquisition optimization", "Employee retention strategies", "Performance management", "Workforce planning" ]; } ]; ]; "Talent acquisition optimization", "Employee retention strategies", "Performance management", "Workforce planning" ] } ]; ]; '"
+  s: [ "Performance management" "Workforce planning" ] } ]; "Talent acquisition optimization", "Employee retention strategies", "Performance management", "Workforce planning" ]} ]; ]; "Talent acquisition optimization", "Employee retention strategies", "Performance management", "Workforce planning" ] } ]; ]; '"

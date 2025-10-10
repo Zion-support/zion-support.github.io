@@ -87,8 +87,8 @@ const defaultConfig: AppConfig = {,
 }
 
 class ConfigManager {
-  private config: AppConfig,
-  constructor() {,
+  private config: AppConfig,;
+constructor() {,
     this.config = { ...defaultConfig }
     this.loadEnvironmentConfig();)
 }
@@ -153,7 +153,7 @@ class ConfigManager {
 }
 }
 
-// Export singleton instance;
+// Export singleton instance
 export const configManager = new ConfigManager()
 export default configManager;
 export type Environment = 'development' | 'staging' | 'production' | 'test';
@@ -450,7 +450,7 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
 }});
 }
 }
-// Export singleton instance;
-export const configManager = ConfigManager.getInstance();
+// Export singleton instance
+export const configManager = ConfigManager.getInstance()
 export default ConfigManager;
 }

@@ -135,8 +135,6 @@ Ready to Transform Your Business?
               <p className="text-gray-400 text-sm">
 © 2026 Zion Tech Group. All rights reserved.
       </footer>
-  );
-
-}
+  )}
 
 

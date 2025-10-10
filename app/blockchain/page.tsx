@@ -1,9 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Link, Shield, Zap, Target, BarChart, Cpu, Sparkles } from 'lucide-react';
-
-const BlockchainPage: React.FC = () => {
-  const blockchainServices = [
+;
+const BlockchainPage: React.FC = () => {const blockchainServices = [
     {
       title: 'Smart Contract Development',
       description: 'Custom smart contract development for DeFi, NFTs, and enterprise blockchain applications.',
@@ -137,8 +136,8 @@ const BlockchainPage: React.FC = () => {
       technologies: ['Strategic Planning', 'Technology Evaluation', 'Risk Assessment', 'ROI Analysis'];)
 }
   ];
-
-  const categories = [...new Set(blockchainServices.map(service => service.category))];
+;
+const categories = [...new Set(blockchainServices.map(service => service.category))];
 
   return (
     <>

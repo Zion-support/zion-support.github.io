@@ -2,8 +2,8 @@
 import React, { useState, useEffect } from 'react';
 const UltimateBusinessIntelligence2025Banner = () => {
 import { Link } from 'react-router-dom';
-const _UltimateBusinessIntelligence2025Banner = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
+const _UltimateBusinessIntelligence2025Banner = () => {;
+const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
   const content = [
     {
@@ -40,15 +40,12 @@ tagstags: ['Case Study', 'Fortune 500', 'ROI', '2025']
 tagstags: ['Automation', 'Enterprise', 'Productivity', 'Efficiency', '2025']
     }
   ];
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % content.length);
-    }, 5000);
-    return () => clearInterval(timer);
-  }, [content.length]);
+  useEffect(() => {;
+const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % content.length)}, 5000);
+    return () => clearInterval(timer)}, [content.length]);
   const handleClose = () => {
-    setIsVisible(false);
-  };
+    setIsVisible(false)};
 
   if (!isVisible) return null;return (
     <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
@@ -163,7 +160,7 @@ import React, { useState, useEffect } from 'react';
 const UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expression */}
 import { Link } from 'react-router-dom';
 const _UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
@@ -172,7 +169,7 @@ const _UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expressi
   O: Add items;
 ];;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   i,
   d: 'ultimate-business-intelligence-revolution',
@@ -187,7 +184,7 @@ const _UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expressi
   e: 'Blog Post',
       metric,
   s: {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   efficienc,
   y: '300%',
@@ -268,8 +265,7 @@ const _UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expressi
               <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}</div>"
               <div className="text-gray-300">{stat.label}</div>
     </section>
-  );
-};
+  )};
 
 export default UltimateBusinessIntelligence2025Banner;"
 

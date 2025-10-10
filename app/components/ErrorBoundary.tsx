@@ -15,8 +15,8 @@ interface State {
   errorInfo: ErrorInfo | null;
 }
 
-class ErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
+class ErrorBoundary extends Component<Props, State> {;
+constructor(props: Props) {
     super(props);
     this.state = {
       hasError: false,
@@ -86,7 +86,7 @@ class ErrorBoundary extends Component<Props, State> {
       errorInfo: null
     });
   };
-
+  
   handleGoHome = () => {
     window.location.href = '/';
   };
@@ -173,12 +173,8 @@ class ErrorBoundary extends Component<Props, State> {
               </p>
             </div>
           </div>
-        </div>
-      );
-    }
-
-    return this.props.children;
-  }
+        </div>);
+    return this.props.children}
 }
 
 export default ErrorBoundary;

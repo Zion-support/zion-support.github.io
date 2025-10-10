@@ -77,15 +77,15 @@ class SEOOptimizer {/* TODO: Fix JSX expression */});;)
   setPageData(data: PageSEOData): void {}
     this.currentPageData = data
     this.updateMetaTags()
-    this.updateStructuredData();}
+    this.updateStructuredData();
   setPageData(dat)
   a: PageSEOData): void {/* TODO: Fix JSX expression */});;)
 }
   /**
    * Generate optimized title;
    */
-  generateTitle(pageTitle?: string): string {
-    const title = pageTitle || this.currentPageData?.title || this.config.defaultTitle;
+  generateTitle(pageTitle?: string): string {;
+const title = pageTitle || this.currentPageData?.title || this.config.defaultTitle;
   generateTitle(pageTitle?: string): string {}
     const title = pageTitle || this.currentPageData?.title || this.config.defaultTitle
     return title.includes(this.config.siteName)
@@ -97,8 +97,8 @@ class SEOOptimizer {/* TODO: Fix JSX expression */});;)
   /**
    * Generate optimized description;
    */
-  generateDescription(pageDescription?: string): string {
-    const description = pageDescription || this.currentPageData?.description || this.config.defaultDescription;
+  generateDescription(pageDescription?: string): string {;
+const description = pageDescription || this.currentPageData?.description || this.config.defaultDescription;
     return description.length > 160;
   generateDescription(pageDescription?: string): string {}
     const description = pageDescription || this.currentPageData?.description || this.config.defaultDescription
@@ -121,12 +121,12 @@ class SEOOptimizer {/* TODO: Fix JSX expression */});;)
   private updateMetaTags(): void {
     if (!this.currentPageData) return;
   private updateMetaTags(): void {}
-    if (!this.currentPageData) return
-    const title = this.generateTitle()
-    const description = this.generateDescription()
-    const keywords = this.generateKeywords()
-    const image = this.currentPageData.image || this.config.defaultImage;
-    const url = this.currentPageData.url || window.location.href;
+    if (!this.currentPageData) return;
+const title = this.generateTitle();
+const description = this.generateDescription();
+const keywords = this.generateKeywords();
+const image = this.currentPageData.image || this.config.defaultImage;
+const url = this.currentPageData.url || window.location.href;
     // Update title;
     document.title = title;
     // Update or create meta tags;
@@ -174,12 +174,11 @@ class SEOOptimizer {/* TODO: Fix JSX expression */});;)
    */
   private setMetaTag(name: string, content: string, attribute: string = 'name'): void {`}
     let meta = document.querySelector(`meta[${attribute}="${name}"]`) as HTMLMetaElement;
-    if (!meta) {
-    let meta = document.querySelector(`meta[${attribute}="${name}"]`) as HTMLMetaElement
+    if ($1) { let meta = document.querySelector(`meta[${attribute}="${name}"]`) as HTMLMetaElement
     if (!meta) {}
       meta = document.createElement('meta')
       meta.setAttribute(attribute, name)
-      document.head.appendChild(meta);}
+      document.head.appendChild(meta);
   private setMetaTag(nam,
   e: string, conten,
   t: string, attribut)
@@ -193,8 +192,8 @@ class SEOOptimizer {/* TODO: Fix JSX expression */});;)
    * Get robots content;
    */
   private getRobotsContent(): string {}
-    if (!this.currentPageData) return 'index, follow'
-    const directives = []
+    if (!this.currentPageData) return 'index, follow';
+const directives = []
     if (!this.currentPageData.noindex) {}
       directives.push('noindex');});;)
 }
@@ -226,7 +225,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */});;)
    */
   private updateStructuredData(): void {
     if (!this.currentPageData) return;
-    const structuredData = {
+const structuredData = {
       '@context': 'https: //schema.org',
       '@type': this.currentPageData.type === 'article' ? 'Article' : 'WebPage',
       headline: this.generateTitle(),
@@ -235,8 +234,8 @@ class SEOOptimizer {/* TODO: Fix JSX expression */});;)
       image: this.currentPageData.image || this.config.defaultImage;
       publisher: {,
   private updateStructuredData(): void {}
-    if (!this.currentPageData) return
-    const structuredData = {}
+    if (!this.currentPageData) return;
+const structuredData = {}
       '@context': 'https://schema.org',
       '@type': this.currentPageData.type === 'article' ? 'Article' : 'WebPage',
       headline: this.generateTitle(),
@@ -322,8 +321,8 @@ class SEOOptimizer {/* TODO: Fix JSX expression */});;)
     if (typeof window !== 'undefined' && 'performance' in window) {}
       // Monitor LCP (Largest Contentful Paint)
       new PerformanceObserver((list) => {}
-        const entries = list.getEntries()
-        const lastEntry = entries[entries.length - 1]
+        const entries = list.getEntries();
+const lastEntry = entries[entries.length - 1]
         if (lastEntry.startTime > 4000) { // Poor LCP;
         if (lastEntry.startTime > 4000) { // Poor LCP}
           this.trackSEOMetric('poor_lcp', lastEntry.startTime);});;)
@@ -437,17 +436,17 @@ Disallo,`
   checkSEOIssues(): string[] {}
     const issues: string[] = []
     // Check title length;
-    const title = document.title;,
+const title = document.title;,
     if (title.length < 30) {,
-    // Check title length
-    const title = document.title
+    // Check title length;
+const title = document.title
     if (title.length < 30) {}
       issues.push('Title is too short (less than 30 characters)');});;)
 } else if (title.length > 60) {}
       issues.push('Title is too long (more than 60 characters)');});;)
 }
     // Check description length;
-    const description = document.querySelector('meta[name="description"]')?.getAttribute('content')
+const description = document.querySelector('meta[name="description"]')?.getAttribute('content')
     if (!description) {}
       issues.push('Missing meta description');});;)
 } else if (description.length < 120) {}
@@ -456,14 +455,14 @@ Disallo,`
       issues.push('Description is too long (more than 160 characters)');});;)
 }
     // Check for images without alt text;
-    const images = document.querySelectorAll('img')
+const images = document.querySelectorAll('img')
     images.forEach((img, index) => {}
       if (!img.alt) {`}
         issues.push(`Image ${index + 1} is missing alt text`);)
 }
     });
     // Check for heading structure;
-    const h1s = document.querySelectorAll('h1')
+const h1s = document.querySelectorAll('h1')
     if (h1s.length === 0) {}
       issues.push('Page is missing H1 tag');});;)
 } else if (h1s.length > 1) {}
@@ -478,7 +477,7 @@ Disallo,`
 } else if (description.length > 160) {/* TODO: Fix JSX expression */});;)
 }
     // Check for images without alt text;
-    const images = document.querySelectorAll('img');
+const images = document.querySelectorAll('img');
     images.forEach((img, index) => {/* TODO: Fix JSX expression */}`
         issues.push(`Image ${index + 1} is missing alt text`);)
 }
@@ -504,7 +503,7 @@ Disallo,`
 const defaultConfig: SEOConfig = {,
   siteName: 'Zion Tech Group',
   siteUrl: 'https://zion.app'
-// Default configuration
+// Default configuration;
 const defaultConfig: SEOConfig = {}
   siteName: 'Zion Tech Group',
   siteUrl: 'https://zion.app',

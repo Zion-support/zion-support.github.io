@@ -14,8 +14,8 @@ interface OptimizedLoadingSpinnerProps {
 
 const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps></OptimizedLoadingSpinnerProps> = memo(
   ({
-    size = 'md',
-    variant = 'spinner',
+    size = 'md',;
+variant = 'spinner',
     text = 'Loading...',
     className = '',
     color = 'blue',
@@ -31,8 +31,8 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps></Optimized
 });,
       []
     );
-
-    const textSizeClasses = useMemo(
+;
+const textSizeClasses = useMemo(
       () => ({
         xs: 'text-xs',
         sm: 'text-sm',
@@ -42,8 +42,8 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps></Optimized
 });,
       []
     );
-
-    const colorClasses = useMemo(
+;
+const colorClasses = useMemo(
       () => ({
         blue: 'border-blue-600 bg-blue-600',
         gray: 'border-gray-600 bg-gray-600',
@@ -53,8 +53,10 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps></Optimized
 });,
       []
     );
-
-    const renderSpinner = useMemo(() => {switch (variant) {
+;
+const renderSpinner = useMemo(() => {
+return (
+switch (variant) {
         case 'dots':
           return (
             <div className='flex space-x-1' role='status' aria-label='Loading'></div>
@@ -128,7 +130,6 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps></Optimized
 }
 );
 
-OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';
-
+OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner'
 export default OptimizedLoadingSpinner;
 }

@@ -2,9 +2,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Smartphone, Monitor, Cloud } from 'lucide-react';
-
-const BusinessAppsPage: React.FC = () => {
-  const features = [
+;
+const BusinessAppsPage: React.FC = () => {const features = [
     {
       icon: Smartphone,
       title: 'Mobile Apps',
@@ -26,8 +25,8 @@ const BusinessAppsPage: React.FC = () => {
       description: 'Advanced AI integration for enhanced functionality'
     }
   ];
-
-  const benefits = [
+;
+const benefits = [
     'Custom mobile and web applications',
     'Cross-platform compatibility',
     'Modern UI/UX design',
@@ -78,7 +77,7 @@ const BusinessAppsPage: React.FC = () => {
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
-            ))}
+            ));
           </div>
         </div>
       </section>
@@ -101,7 +100,7 @@ const BusinessAppsPage: React.FC = () => {
                 <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
                 <span className="text-gray-300">{benefit}</span>
               </div>
-            ))}
+            ));
           </div>
         </div>
       </section>
@@ -127,8 +126,5 @@ const BusinessAppsPage: React.FC = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
-};
-
+    </div>)
 export default BusinessAppsPage;

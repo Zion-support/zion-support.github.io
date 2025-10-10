@@ -5,9 +5,8 @@ import { Shield, AlertTriangle, Eye, Zap, BarChart, Lock, Users, TrendingDown, P
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
-
-const AiFraudDetectionPage: React.FC = () => {
-  const features = [
+;
+const AiFraudDetectionPage: React.FC = () => {const features = [
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',
@@ -33,8 +32,8 @@ const AiFraudDetectionPage: React.FC = () => {
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
   ];
-
-  const benefits = [
+;
+const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
@@ -43,7 +42,7 @@ const AiFraudDetectionPage: React.FC = () => {
   ];
 
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         <title>Ai Fraud Detection - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai fraud detection solution for modern businesses." />
@@ -101,11 +100,10 @@ const AiFraudDetectionPage: React.FC = () => {
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                           {benefit}
                         </li>
-                      ))}
-                    </ul>
-                  )}
+                      ));
+                    </ul>);
                 </div>
-              ))}
+              ));
             </div>
           </div>
         </section>
@@ -130,7 +128,7 @@ const AiFraudDetectionPage: React.FC = () => {
                   </div>
                   <p className="text-lg text-white font-medium">{benefit}</p>
                 </div>
-              ))}
+              ));
             </div>
           </div>
         </section>
@@ -158,8 +156,5 @@ const AiFraudDetectionPage: React.FC = () => {
         </section>
       </div>
       <Footer />
-    </>
-  );
-};
-
+    </React.Fragment>)
 export default AiFraudDetectionPage;

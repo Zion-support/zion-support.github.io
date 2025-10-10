@@ -14,15 +14,14 @@ async function reportWebVitals() {/* TODO: Fix JSX expression */}
     onCLS(log);
     onLCP(log);
     onFCP(log);
-    onTTFB(log);
-  } catch (error) {/* TODO: Fix JSX expression */}
+    onTTFB(log)} catch (error) {/* TODO: Fix JSX expression */}
     //     }
 }
 
 // const container = document.getElementById('root');
 if (!container) {/* TODO: Fix JSX expression */}
 }
-
+;
 const _root = createRoot(container);
 root.render(<React.StrictMode>)
     <App />)

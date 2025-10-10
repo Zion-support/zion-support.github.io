@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 export default function CaseStudy(): React.JSX.Element {
-  return(<>
+  return(<React.Fragment>
       <Header />
       <div className="min-h-screen bg-gradient-to-br from-blue-600 via-blue-700 to-purple-800 text-white"></div>
         <Helmet>
@@ -106,6 +106,5 @@ export default function CaseStudy(): React.JSX.Element {/* TODO: Fix JSX express
           </div>
         </div>
       </div>,
-    </>);
-}
+    </React.Fragment>)}
 "`

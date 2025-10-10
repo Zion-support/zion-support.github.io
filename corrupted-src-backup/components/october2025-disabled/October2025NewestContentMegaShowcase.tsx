@@ -159,7 +159,6 @@ export default function October2025NewestContentMegaShowca, s, e() {/* TODO: Fix
         </div>
       </div>
     </sec, t, i, o, n>
-  );
-}
+  )}
 
 }"`

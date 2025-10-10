@@ -1,6 +1,7 @@
+import React from 'react';
 
-export default function ServicesSection() {
-  const services = [
+export default function ServicesSection() {;
+const services = [
     {
       title: 'AI & Machine Learning',
       description: 'Custom AI solutions including predictive analytics, natural language processing, and computer vision.',
@@ -153,5 +154,4 @@ export default function ServicesSection() {
         </div>
       </div>
     </section>
-  );
-}
+  )}

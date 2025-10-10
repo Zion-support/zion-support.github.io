@@ -4,9 +4,8 @@ import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Zap, Cpu, Globe, Shield, ArrowRight, Cloud, Database, Wifi, Server } from 'lucide-react';
-
-const EdgeComputingPage: React.FC = () => {
-  const features = [
+;
+const EdgeComputingPage: React.FC = () => {const features = [
     {
       icon: Cpu,
       title: 'Edge Processing',
@@ -44,8 +43,8 @@ const EdgeComputingPage: React.FC = () => {
       benefits: ['High availability', 'Auto-scaling', 'Load balancing', 'Fault tolerance']
     }
   ];
-
-  const services = [
+;
+const services = [
     {
       icon: '⚡',
       title: 'Edge Analytics',
@@ -67,8 +66,8 @@ const EdgeComputingPage: React.FC = () => {
       description: 'Mobile edge computing for 5G and mobile applications'
     }
   ];
-
-  const benefits = [
+;
+const benefits = [
     'Ultra-Low Latency',
     'Reduced Bandwidth Costs',
     'Improved Reliability',
@@ -76,8 +75,8 @@ const EdgeComputingPage: React.FC = () => {
     'Real-time Processing',
     'Global Scalability'
   ];
-
-  const useCases = [
+;
+const useCases = [
     {
       title: 'Autonomous Vehicles',
       description: 'Real-time decision making for self-driving cars',
@@ -171,10 +170,10 @@ const EdgeComputingPage: React.FC = () => {
                       <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
                       {benefit}
                     </li>
-                  ))}
+                  ));
                 </ul>
               </div>
-            ))}
+            ));
           </div>
         </div>
       </section>
@@ -196,7 +195,7 @@ const EdgeComputingPage: React.FC = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-300">{service.description}</p>
               </div>
-            ))}
+            ));
           </div>
         </div>
       </section>
@@ -218,7 +217,7 @@ const EdgeComputingPage: React.FC = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
                 <p className="text-gray-300">{useCase.description}</p>
               </div>
-            ))}
+            ));
           </div>
         </div>
       </section>
@@ -241,7 +240,7 @@ const EdgeComputingPage: React.FC = () => {
                 </div>
                 <h3 className="text-lg font-semibold text-white">{benefit}</h3>
               </div>
-            ))}
+            ));
           </div>
         </div>
       </section>
@@ -265,8 +264,5 @@ const EdgeComputingPage: React.FC = () => {
       </section>
 
       <Footer />
-    </div>
-  );
-};
-
+    </div>)
 export default EdgeComputingPage;

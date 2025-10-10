@@ -565,7 +565,6 @@ const DistributedAITrainingScale2026 = () =>
         </article>
       </div>
     
-  );
-};
+  )};
 export default DistributedAITrainingScale2026;
 "

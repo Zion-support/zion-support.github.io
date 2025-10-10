@@ -2,9 +2,8 @@
 
 import React, { useState, useEffect } from 'react';
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, Award, Clock, Star, BarChart3, Target, Rocket } from 'lucide-react';
-
-const ContentStatistics: React.FC = () => {
-  const [counters, setCounters] = useState({
+;
+const ContentStatistics: React.FC = () => {const [counters, setCounters] = useState({
     clients: 0,
     projects: 0,
     satisfaction: 0,
@@ -12,8 +11,8 @@ const ContentStatistics: React.FC = () => {
     countries: 0,
     uptime: 0
   });
-
-  const targetCounters = {
+;
+const targetCounters = {
     clients: 10000,
     projects: 5000,
     satisfaction: 99,
@@ -21,8 +20,8 @@ const ContentStatistics: React.FC = () => {
     countries: 50,
     uptime: 99
   };
-
-  const statistics = [
+;
+const statistics = [
     {
       icon: Users,
       value: counters.clients,
@@ -72,8 +71,8 @@ const ContentStatistics: React.FC = () => {
       description: 'Service reliability'
     }
   ];
-
-  const features = [
+;
+const features = [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -99,8 +98,8 @@ const ContentStatistics: React.FC = () => {
       stats: ['50+ Countries', '15+ Languages', '24/7 Support']
     }
   ];
-
-  const benefits = [
+;
+const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -110,8 +109,8 @@ const ContentStatistics: React.FC = () => {
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
-
-  const achievements = [
+;
+const achievements = [
     {
       icon: Star,
       title: 'Industry Recognition',
@@ -132,32 +131,27 @@ const ContentStatistics: React.FC = () => {
     }
   ];
 
-  useEffect(() => {
-    const duration = 3000; // 3 seconds
-    const steps = 60;
-    const stepDuration = duration / steps;
-
-    const timers = Object.keys(targetCounters).map((key) => {
-      const target = targetCounters[key as keyof typeof targetCounters];
-      const increment = target / steps;
+  useEffect(() => {;
+const duration = 3000; // 3 seconds;
+const steps = 60;
+const stepDuration = duration / steps;
+;
+const timers = Object.keys(targetCounters).map((key) => {;
+const target = targetCounters[key as keyof typeof targetCounters];
+const increment = target / steps;
       let current = 0;
 
       return setInterval(() => {
         current += increment;
         if (current >= target) {
-          current = target;
-        }
+          current = target}
         setCounters(prev => ({
           ...prev,
           [key]: Math.floor(current)
-        }));
-      }, stepDuration);
-    });
+        }))}, stepDuration)});
 
     return () => {
-      timers.forEach(timer => clearInterval(timer));
-    };
-  }, []);
+      timers.forEach(timer => clearInterval(timer))}}, []);
 
   return (
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
@@ -185,7 +179,7 @@ const ContentStatistics: React.FC = () => {
               <div className="text-lg font-semibold text-white mb-2">{stat.label}</div>
               <div className="text-gray-400 text-sm">{stat.description}</div>
             </div>
-          ))}
+          ));
         </div>
 
         {/* Features Section */}
@@ -213,10 +207,10 @@ const ContentStatistics: React.FC = () => {
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                       <span>{stat}</span>
                     </div>
-                  ))}
+                  ));
                 </div>
               </div>
-            ))}
+            ));
           </div>
         </div>
 
@@ -241,7 +235,7 @@ const ContentStatistics: React.FC = () => {
                 <h4 className="text-lg font-semibold text-white mb-2">{achievement.title}</h4>
                 <p className="text-gray-300 text-sm">{achievement.description}</p>
               </div>
-            ))}
+            ));
           </div>
         </div>
 
@@ -260,36 +254,9 @@ const ContentStatistics: React.FC = () => {
                 <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                 <span>{benefit}</span>
               </div>
-            ))}
+            ));
           </div>
         </div>
-<<<<<<< HEAD
-=======
-
-        {/* CTA Section */}
-        <div className="text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-12">
-            <h3 className="text-3xl font-bold text-white mb-4">
-              Ready to Join Our Success Stories?
-            </h3>
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Be part of our growing community of successful businesses. Start your transformation journey today.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center space-x-2">
-                <Zap className="w-5 h-5" />
-                <span>Get Started</span>
-              </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200">
-                View Case Studies
-              </button>
-            </div>
-          </div>
-        </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
       </div>
-    </div>
-  );
-};
-
+    </div>)
 export default ContentStatistics;

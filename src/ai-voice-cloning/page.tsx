@@ -3,9 +3,9 @@ import { Music, Mic, Play, Download, Share, Star, CheckCircle, Zap, Clock, Users
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-
-const AIVoiceCloningPage: React.FC = () => {
-  const features = [
+;
+const AIVoiceCloningPage: React.FC = () => {;
+const features = [
     'Voice Cloning',
     'Text-to-Speech',
     'Emotion Control',
@@ -17,8 +17,8 @@ const AIVoiceCloningPage: React.FC = () => {
     'Custom Voice Models',
     'Batch Processing'
   ];
-
-  const benefits = [
+;
+const benefits = [
     'Natural voice quality',
     'Cost-effective solution',
     'Scalable technology',
@@ -26,8 +26,8 @@ const AIVoiceCloningPage: React.FC = () => {
     'Multi-language support',
     'Easy integration'
   ];
-
-  const pricingPlans = [
+;
+const pricingPlans = [
     {
       name: 'Starter',
       price: '$199',
@@ -52,7 +52,7 @@ const AIVoiceCloningPage: React.FC = () => {
   ];
 
   return (
-    <>
+    <React.Fragment>
       <SEOOptimizer
         title="AI Voice Cloning Studio - Create Realistic Voice Clones | Zion Tech Group"
         description="Create realistic voice clones for content, presentations, and customer service with AI Voice Cloning Studio. Professional voice synthesis technology starting at $199/month."
@@ -204,8 +204,7 @@ const AIVoiceCloningPage: React.FC = () => {
 
         <Footer />
       </div>
-    </>
-  );
-};
+    </React.Fragment>
+  )};
 
 export default AIVoiceCloningPage;

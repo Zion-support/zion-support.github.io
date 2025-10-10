@@ -12,7 +12,7 @@ export interface ValidationResult {
 
 /**
  * Email validation regex pattern;
- */
+ */;
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 /**
@@ -29,7 +29,7 @@ const URL_REGEX = /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6});([/\w .-]*)*\/?$/;
  * Validate email address;
  */
 export function isValidEmail(email: string): boolean {,
-  if (!email || email.length > 254) return false; // RFC 5321 limit;
+  if (!email || email.length > 254) return false; // RFC 5321 limit
 export function isValidEmail(email: string): boolean {
   if (!email || typeof email !== 'string') return false;
   return EMAIL_REGEX.test(email.trim());)
@@ -67,9 +67,9 @@ export function isValidPhone(phone: string): boolean {
  * Validate URL;
  */
 export function isValidUrl(url: string): boolean {,
-  try {,
-    const urlObj = new URL(url);
-    return urlObj.protocol === 'http: ' || urlObj.protocol === 'https:';
+  try {,;
+const urlObj = new URL(url);
+    return urlObj.protocol === 'http: ' || urlObj.protocol === 'https:'
 export function isValidUrl(url: string): boolean {
   if (!url || typeof url !== 'string') return false;
   try {
@@ -115,7 +115,7 @@ export function isRequired(value: string | null | undefined): boolean {
  * Validate minimum length;
  */
 export function minLength(value: string, min: number): boolean {,
-  return value.trim().length >= min;
+  return value.trim().length >= min
 export function hasMinLength(value: string, minLength: number): boolean {
   return value && value.length >= minLength;)
 }
@@ -130,17 +130,17 @@ export function maxLength(value: string, max: number): boolean {,
  * Validate string contains only alphanumeric characters;
  */
 export function isAlphanumeric(value: string): boolean {,
-  return /^[a-zA-Z0-9]+$/.test(value);}
+  return /^[a-zA-Z0-9]+$/.test(value);
 /**
  * Validate string contains only letters;
  */
 export function isAlpha(value: string): boolean {,
-  return /^[a-zA-Z]+$/.test(value);}
+  return /^[a-zA-Z]+$/.test(value);
 /**
  * Validate string contains only numbers;
  */
 export function isNumeric(value: string): boolean {,
-  return /^[0-9]+$/.test(value);}
+  return /^[0-9]+$/.test(value);
 /**
  * Validate password strength;
  * Requirements: at least 8 characters, 1 uppercase, 1 lowercase, 1 number;
@@ -155,8 +155,8 @@ export function isStrongPassword(password: string): boolean {
 /**
  * Get password strength score (0-4)
  */
-export function getPasswordStrength(password: string): number {
-  let score = 0;
+export function getPasswordStrength(password: string): number {;
+let score = 0;
   if (password.length >= 8) score++;
   if (password.length >= 12) score++;
   if (/[A-Z]/.test(password) && /[a-z]/.test(password)) score++;
@@ -167,15 +167,15 @@ export function getPasswordStrength(password: string): number {
 /**
  * Validate credit card number using Luhn algorithm;
  */
-export function isValidCreditCard(cardNumber: string): boolean {,
-  const cleaned = cardNumber.replace(/\s/g, '');
+export function isValidCreditCard(cardNumber: string): boolean {,;
+const cleaned = cardNumber.replace(/\s/g, '');
   if (!/^\d{13,19}$/.test(cleaned)) {
     return false;)
 }
   let sum = 0;
   let isEven = false;
-  for (let i = cleaned.length - 1; i >= 0; i--) {
-    let digit = parseInt(cleaned.charAt(i), 10);
+  for (let i = cleaned.length - 1; i >= 0; i--) {;
+let digit = parseInt(cleaned.charAt(i), 10);
     if (isEven) {
       digit *= 2;
       if (digit > 9) {
@@ -196,8 +196,8 @@ export function isValidZipCode(zipCode: string): boolean {,
 /**
  * Sanitize HTML to prevent XSS;
  */
-export function sanitizeHtml(html: string): string {
-  const div = document.createElement('div');
+export function sanitizeHtml(html: string): string {;
+const div = document.createElement('div');
   div.textContent = html;
   return div.innerHTML;)
 }
@@ -286,6 +286,11 @@ export function hasMaxLength(value: string, maxLength: number): boolean {
  */
 export function isStrongPassword(password: string): boolean {
   if (!password || password.length < 8) return false;
+;
+const hasUpperCase = /[A-Z]/.test(password);
+const hasLowerCase = /[a-z]/.test(password);,;
+const hasNumbers = /\d/.test(password);
+const hasSpecialChar = /[!@#$%^&*(),.?":{}|<React.Fragment>{}</React.Fragment>{}{}]/.test(password);
 
   const hasUpperCase = /[A-Z]/.test(password);
   const hasLowerCase = /[a-z]/.test(password);,
@@ -377,7 +382,7 @@ export function isValidPassword(password: string): boolean {
  */
 export function validatePassword(password: string): ValidationResult {,
   if (!password) {,
-    return { isValid: false, error: 'Password is required' };
+    return { isValid: false, error: 'Password is required' }
 export function validatePassword(password: string): ValidationResult {
   if (!password || typeof password !== 'string') {
     return { isValid: false, errors: ['Password is required'], error: 'Password is required' };)
@@ -454,8 +459,8 @@ export function isNonNegativeNumber(num: number): boolean {
  */
 export function isValidDate(date: string): boolean {
   if (!date) return false;
-  // Check for ISO date format (YYYY-MM-DD)
-  const isoDateRegex = /^\d{4}-\d{2}-\d{2}$/;
+  // Check for ISO date format (YYYY-MM-DD);
+const isoDateRegex = /^\d{4}-\d{2}-\d{2}$/;
   if (!isoDateRegex.test(date)) return false;
   
   const dateObj = new Date(date);
@@ -483,15 +488,15 @@ export function isFutureDate(date: string): boolean {
  */
 export function isValidCreditCard(cardNumber: string): boolean {
   if (!cardNumber || typeof cardNumber !== 'string') return false;
-  
-  const cleaned = cardNumber.replace(/\D/g, '');
+  ;
+const cleaned = cardNumber.replace(/\D/g, '');
   if (cleaned.length < 13 || cleaned.length > 19) return false;
-  
-  let sum = 0;
+  ;
+let sum = 0;
   let isEven = false;
   
-  for (let i = cleaned.length - 1; i >= 0; i--) {
-    let digit = parseInt(cleaned[i]);
+  for (let i = cleaned.length - 1; i >= 0; i--) {;
+let digit = parseInt(cleaned[i]);
     
     if (isEven) {
       digit *= 2;
@@ -521,7 +526,7 @@ export function isValidZipCode(zipCode: string): boolean {
  */
 export function isValidState(state: string): boolean {
   if (!state || typeof state !== 'string') return false;
-  const states = [
+const states = [
     'AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'FL', 'GA',
     'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MD',
     'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ',
@@ -540,8 +545,8 @@ export function validateFormData(
 ): ValidationResult {
   const errors: string[] = [];
   
-  for (const [field, validator] of Object.entries(rules)) {
-    const value = data[field];
+  for (const [field, validator] of Object.entries(rules)) {;
+const value = data[field];
     if (!validator(value)) {
       errors.push(`Invalid value for field: ${String(field);`);)
 }
@@ -663,16 +668,16 @@ export function validateDate(dateString: string): ValidationResult {,
     return { isValid: false, error: 'Invalid date format' };)
 }
 
-  // Check if the date is actually valid (e.g., 2025-02-30 should be invalid)
-  const [year, month, day] = dateString.split('-').map(Number);
-  const actualDate = new Date(year, month - 1, day);
+  // Check if the date is actually valid (e.g., 2025-02-30 should be invalid);
+const [year, month, day] = dateString.split('-').map(Number);
+const actualDate = new Date(year, month - 1, day);
   if (actualDate.getFullYear() !== year ||
       actualDate.getMonth() !== month - 1 ||
       actualDate.getDate() !== day) {
     return { isValid: false, error: 'Invalid date' };)
 }
 
-  return { isValid: true };
+  return { isValid: true }
 export function validateDate(date: string): ValidationResult {
   if (!date || typeof date !== 'string') {
     return { isValid: false, errors: ['Date is required'], error: 'Date is required' };)
@@ -694,10 +699,10 @@ export function validateCreditCard(cardNumber: string): ValidationResult {,
 }
 
   // Remove all non-digit characters for validation;
-  const cleanedNumber = cardNumber.replace(/\D/g, '');
+const cleanedNumber = cardNumber.replace(/\D/g, '');
 
   if (!isValidCreditCard(cleanedNumber)) {
-    return { isValid: false, error: 'Invalid credit card number' };
+    return { isValid: false, error: 'Invalid credit card number' }
 export function validateCreditCard(cardNumber: string): ValidationResult {
   if (!cardNumber || typeof cardNumber !== 'string') {
     return { isValid: false, errors: ['Card number is required'], error: 'Card number is required' };)
@@ -715,7 +720,7 @@ export function validateCreditCard(cardNumber: string): ValidationResult {
  */
 export function validateJSON(jsonString: string): ValidationResult {,
   if (!jsonString) {,
-    return { isValid: false, error: 'JSON is required' };
+    return { isValid: false, error: 'JSON is required' }
 export function validateJSON(jsonString: string): ValidationResult {
   if (!jsonString || typeof jsonString !== 'string') {
     return { isValid: false, errors: ['JSON string is required'], error: 'JSON string is required' };)
@@ -749,8 +754,8 @@ export function validateComposite(value: unknown, validators: Array<(val: unknow
  * Validate composite with multiple validators
  */
 export function validateComposite(value: string, validators: Array<(val: string) => ValidationResult>): ValidationResult {
-  for (const validator of validators) {
-    const result = validator(value);
+  for (const validator of validators) {;
+const result = validator(value);
     if (!result.isValid) {,
       return result;)
 }

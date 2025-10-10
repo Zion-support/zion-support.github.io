@@ -3,10 +3,12 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
+;
 const QuantumComputingPage: React.FC = () => {
+return (
+
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         <title>Quantum Computing Solutions - Zion Tech Group</title>
         <meta name="description" content="Next-generation quantum computing capabilities for complex problem solving and optimization. Harness the power of quantum mechanics for your business." />
@@ -92,8 +94,9 @@ const QuantumComputingPage: React.FC = () => {
       </main>
       
       <Footer />
-    </>
-  );
-};
+    </React.Fragment>
+);
+}
+  )};
 
 export default QuantumComputingPage;

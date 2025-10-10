@@ -3,43 +3,9 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
-
-const AiCloudInfrastructurePage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-9948
 import { CheckCircle, ArrowRight } from 'lucide-react';
-
-const PagePage: React.FC = () => {
-  const features = [
+;
+const PagePage: React.FC = () => {const features = [
     {
       title: 'Feature 1',
       description: 'Description of feature 1',
@@ -53,18 +19,11 @@ const PagePage: React.FC = () => {
     {
       title: 'Feature 3',
       description: 'Description of feature 3',
-<<<<<<< HEAD
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
     }
   ];
 
   const benefits = [
-<<<<<<< HEAD
-=======
-    'Increase efficiency by up to 50%',
-=======
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']    'Increase efficiency by up to 50%',
->>>>>>> cursor/analyze-improve-and-deploy-application-9948
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
@@ -157,13 +116,11 @@ const PagePage: React.FC = () => {
                   <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                     <CheckCircle className="w-8 h-8 text-white" />
                   </div>
-<<<<<<< HEAD
                   <p className="text-lg text-white font-medium">{benefit}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
+;
+const benefits = [
     'Benefit 1',
-=======
                   <p className="text-lg text-white font-medium">{benefit}</p>    'Benefit 1',
->>>>>>> cursor/analyze-improve-and-deploy-application-9948
     'Benefit 2',
     'Benefit 3',
     'Benefit 4',
@@ -221,7 +178,6 @@ const PagePage: React.FC = () => {
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300 group">
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-<<<<<<< HEAD
                   <CheckCircle className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -232,20 +188,14 @@ const PagePage: React.FC = () => {
                       <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
                       {benefit}
                     </li>
-                  ))}
+                  ));
                 </ul>
               </div>
-            ))}
+            ));
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-=======
-        {/* CTA Section */}
-=======
-                  <CheckCircle className="w-6 h-6 text-white" />        {/* CTA Section */}
->>>>>>> cursor/analyze-improve-and-deploy-application-9948
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
@@ -266,13 +216,9 @@ const PagePage: React.FC = () => {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
       </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
       {/* Benefits Section */}
-=======
       </div>      {/* Benefits Section */}
->>>>>>> cursor/analyze-improve-and-deploy-application-9948
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -290,7 +236,7 @@ const PagePage: React.FC = () => {
                 </div>
                 <h3 className="text-lg font-semibold text-white">{benefit}</h3>
               </div>
-            ))}
+            ));
           </div>
         </div>
       </section>
@@ -312,18 +258,12 @@ const PagePage: React.FC = () => {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 
       <Footer />
     </div>
   );
 };
 
-<<<<<<< HEAD
-=======
-export default AiCloudInfrastructurePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
+    </div>)
 export default PagePage;
-=======
 export default AiCloudInfrastructurePage;export default PagePage;
->>>>>>> cursor/analyze-improve-and-deploy-application-9948

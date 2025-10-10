@@ -1,3 +1,4 @@
+import React from 'react';
 
 
 
@@ -7,9 +8,9 @@ import Footer from '../components/Footer';
 
 import { TestTube, Target, Settings, CheckCircle } from 'lucide-react';
 import { TestTube, Target, Zap, Settings, CheckCircle } from 'lucide-react';
-
-const AIABTestingPage: React.FC = () => {
-  const features = [
+;
+const AIABTestingPage: React.FC = () => {;
+const features = [
     {
       icon: TestTube,
       title: 'A/B Testing',
@@ -91,8 +92,7 @@ const AIABTestingPage: React.FC = () => {
       <Footer /></Footer>
 
     </div>
-  );
-};
+  )};
 
 
 export default AIABTestingPage;

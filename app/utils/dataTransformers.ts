@@ -138,11 +138,11 @@ export function sortBy<T></T>(arra,
 ): T[] {/* TODO: Fix JSX expression */});
 }
       // Convert to comparable values;
-      const aComp =
+const aComp =
         typeof aVal === 'string' || typeof aVal === 'number' || typeof aVal === 'boolean'
           ? aVal;
           : String(aVal);
-      const bComp =
+const bComp =
         typeof bVal === 'string' || typeof bVal === 'number' || typeof bVal === 'boolean'
           ? bVal;
           : String(bVal);

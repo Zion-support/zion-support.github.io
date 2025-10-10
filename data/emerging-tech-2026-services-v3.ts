@@ -75,8 +75,7 @@ export interface EmergingTech2026ServiceV3 {/* TODO: Fix JSX expression */}
   realImplementation: boolean;
   contactInfo: unknown;
     mobile: string, email: string;
-    address: string;
-  }
+    address: string}
 }
 export const emergingTech2026 ServicesV3: EmergingTech2026 ServiceV3[] = [,
     id: "2026-emerging-tech-v3", name: "2026 Emerging Tech Platform V3",

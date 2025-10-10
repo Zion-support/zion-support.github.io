@@ -1,5 +1,4 @@
 'use client';
-import React from 'react';
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
@@ -8,7 +7,7 @@ import PerformanceMonitor from './components/PerformanceMonitor';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import LoadingSpinner from './components/LoadingSpinner';
 
-// Lazy load pages for better performance
+// Lazy load pages for better performance;
 const HomePage = lazy(() => import('./page'));
 const AboutPage = lazy(() => import('./about/page'));
 const ContactPage = lazy(() => import('./contact/page'));
@@ -22,7 +21,7 @@ const PrivacyPage = lazy(() => import('./privacy/page'));
 const TermsPage = lazy(() => import('./terms/page'));
 const CookiesPage = lazy(() => import('./cookies/page'));
 
-// AI Services
+// AI Services;
 const AiServicesPage = lazy(() => import('./ai-services/page'));
 const AiMarketingPage = lazy(() => import('./ai-marketing/page'));
 const AiAutomationPage = lazy(() => import('./ai-automation/page'));
@@ -36,31 +35,31 @@ const AiCustomerSupportPage = lazy(() => import('./ai-customer-support/page'));
 const AiSalesAutomationPage = lazy(() => import('./ai-sales-automation/page'));
 const AiDataVisualizationPage = lazy(() => import('./ai-data-visualization/page'));
 
-// IT Services
+// IT Services;
 const ItServicesPage = lazy(() => import('./it-services/page'));
 const ItInfrastructurePage = lazy(() => import('./it-infrastructure/page'));
 const ItSupportPage = lazy(() => import('./it-support/page'));
 const CloudInfrastructurePage = lazy(() => import('./cloud-infrastructure/page'));
 const CybersecurityPage = lazy(() => import('./cybersecurity/page'));
 
-// Emerging Technologies
+// Emerging Technologies;
 const BlockchainPage = lazy(() => import('./blockchain/page'));
 const QuantumComputingPage = lazy(() => import('./quantum-computing/page'));
 const IoTEdgeComputingPage = lazy(() => import('./iot-edge-computing/page'));
 const ARVRSolutionsPage = lazy(() => import('./ar-vr-solutions/page'));
 const AutonomousSystemsPage = lazy(() => import('./autonomous-systems/page'));
 
-// Micro SaaS
+// Micro SaaS;
 const MicroSaasPage = lazy(() => import('./micro-saas/page'));
 
-// Support Pages
+// Support Pages;
 const DocsPage = lazy(() => import('./docs/page'));
 const ApiDocsPage = lazy(() => import('./api-docs/page'));
 const SupportPage = lazy(() => import('./support/page'));
 const StatusPage = lazy(() => import('./status/page'));
 const ConsultationPage = lazy(() => import('./consultation/page'));
 
-// Loading component
+// Loading component;
 const AppLoadingSpinner = () => (
   <LoadingSpinner 
     size="xl" 
@@ -68,7 +67,6 @@ const AppLoadingSpinner = () => (
     fullScreen 
   />
 );
-
 const App: React.FC = () => {
   return (
     <ErrorBoundary>
@@ -137,6 +135,5 @@ const App: React.FC = () => {
       </HelmetProvider>
     </ErrorBoundary>
   );
-};
-
+}
 export default App;

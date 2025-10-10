@@ -1,5 +1,7 @@
 const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {
-  const, futureTechArticle, s = [
+return (
+;
+const, futureTechArticle, s = [
     {
       i;
   d: 1;
@@ -10,7 +12,9 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {
       da, t, e: '20, 2, 6-01-20','
       readTi, m, e: '18, mi, n','
       trendi, n, g: tr, u, e;
-      ic, o, n: <Atom, className="w-8 h-8/>,"
+      ic, o, n: <Atom, className="w-8 h-8/>
+);
+},"
       gradie, n, t: 'fr, o, m-cy, a, n-500, t, o-bl, u, e-5, 0, 0','
       bad, g, e: 'QUANTUM, A, I','
       sta, t, s: '10,000 x, Speed, Boost}
@@ -77,7 +81,7 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {
       trendi, n, g: tr, u, e;
       ic, o, n: <Bot, className="w-8 h-8/>,"
       gradie, n, t: 'fr, o, m-te, a, l-500, t, o-cy, a, n-5, 0, 0','
-      bad, g, e: 'ME, T, A-COGNITI, V, E','
+      bad, g, e: 'ME, T, A-COGNITI, V, E',';
 const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
       sta, t, s: '10,000x, Speed, Boost}
     {/* TODO: Fix JSX expression */}

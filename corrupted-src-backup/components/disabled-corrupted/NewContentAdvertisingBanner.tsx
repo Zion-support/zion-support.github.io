@@ -1,8 +1,10 @@
 import React from 'react';
 interface FeaturedConten, t {/* TODO: Fix JSX expression */}
 }
-const NewContentAdvertisingBanne, r: React.FC = () => { ,
-  const featuredConten, t: FeaturedConte, n, t[] = [
+const NewContentAdvertisingBanne, r: React.FC = () => {
+return (
+ ,;
+const featuredConten, t: FeaturedConte, n, t[] = [
     {
       id: , 0,
       title: 'Governed, Agent, Rollback, s',
@@ -12,8 +14,10 @@ const NewContentAdvertisingBanne, r: React.FC = () => { ,
       reade, r, s: '25, K+',
       bad, g, e: 'NE, W',
       gradie, n, t: 'fr, o, m-pi, n, k-500, t, o-r, e, d-50, 0',
-      ic, o, n: <Sparkles, classNam, e = "w-6 , h-, 6" / > ,
-      li, n, k: '/bl, o, g/ai-20, 2, 5-o, c, t-03-govern, e, d-age, n, t-rollba, c, k, s'
+      ic, o, n: <Sparkles, classNam, e = "w-6 , h-, 6" / >
+);
+} ,
+      li, n, k: '/bl, o, g/ai-20, 2, 5-o, c, t-03-govern, e, d-age, n, t-rollba, c, k, s';
 const NewContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX expression */}
      },
     {/* TODO: Fix JSX expression */}
@@ -305,6 +309,5 @@ const NewContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX expressi
         </div>
       </div>
     </div>
-  );
-};
+  )};
 export default NewContentAdvertisingBanner;"`

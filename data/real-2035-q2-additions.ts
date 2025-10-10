@@ -22,8 +22,8 @@
     roi: 'Cuts manual email time by 6080%',
     competitors: ['Superhuman AI', 'Front AI', 'Gmail add-ons']
     marketSize: '$10B+ email productivity',
-    growthRate: '15% CAGR',
-    variant: 'network-futuristic',
+    growthRate: '15% CAGR',;
+variant: 'network-futuristic',
     contactInfo: contact;
     realImplementation: true;
     popula,
@@ -62,8 +62,8 @@
     marketSiz,
   e: '$10B+ email productivity'
     growthRat,
-  e: '15% CAGR'
-    varian,
+  e: '15% CAGR';
+varian,
   t: 'network-futuristic'
     contactInf,
   o: contact;
@@ -96,12 +96,11 @@
     launchDate: '2025-08-20'
     customers: 48;
     rating: 4.7;
-    reviews: 12;
-  }
+    reviews: 12}
     competitors: ['Superhuman AI', 'Front AI', 'Gmail add - ons'],
     market_size: '$10B+ email productivity'
-    growth_rate: '15% CAGR'
-    variant: 'network - futuristic'
+    growth_rate: '15% CAGR';
+variant: 'network - futuristic'
     contact_info: contact;
     real_implementation: true;
     implementation_details: unknown;
@@ -109,8 +108,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 48;
     rating: 4 && 4.7;
-    reviews: 12;
-  },
+    reviews: 12},
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
     link: 'https://ziontechgroup.com/services/ai-email-responder';
@@ -126,8 +124,8 @@
     roi: 'Cuts manual email time by 6080%',
     competitors: ['Superhuman AI', 'Front AI', 'Gmail add-ons'],
     marketSize: '$10B+ email productivity'
-    growthRate: '15% CAGR'
-    variant: 'network-futuristic'
+    growthRate: '15% CAGR';
+variant: 'network-futuristic'
     contactInfo: contact;
     realImplementation: true;
     implementationDetails: 'OAuth + mailbox sync + policy rules + reply generator + SLA dashboard'
@@ -181,8 +179,8 @@
     market_siz,
   e: '$10B+ email productivity',
     growth_rat,
-  e: '15% CAGR',
-    varian,
+  e: '15% CAGR',;
+varian,
   t: 'network - futuristic',
     contact_inf,
   o: contact,
@@ -231,8 +229,8 @@
     marketSiz,
   e: '$10B+ email productivity',
     growthRat,
-  e: '15% CAGR',
-    varian,
+  e: '15% CAGR',;
+varian,
   t: 'network-futuristic',
     contactInf,
   o: contact,
@@ -297,8 +295,8 @@
     roi: '24 x higher completion on mobile',
     competitors: ['Typeform', 'SurveyMonkey'],
     market_size: '$7B research tooling'
-    growth_rate: '9% CAGR'
-    variant: 'holographic - matrix'
+    growth_rate: '9% CAGR';
+variant: 'holographic - matrix'
     contact_info: contact;
     real_implementation: true;
     implementation_details: unknown;
@@ -306,8 +304,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 22;
     rating: 4 && 4.6;
-    reviews: 9;
-  },
+    reviews: 9},
     id: 'niche - productivity - planner',
     name: 'Niche Productivity Planner',
     tagline: unknown;
@@ -351,8 +348,8 @@
     market_siz,
   e: '$7B research tooling',
     growth_rat,
-  e: '9% CAGR',
-    varian,
+  e: '9% CAGR',;
+varian,
   t: 'holographic - matrix',
     contact_inf,
   o: contact,
@@ -407,16 +404,15 @@
     roi: 'Saves 35 hrs / week per user',
     competitors: ['Notion templates', 'ClickUp'],
     market_size: '$3B productivity niche'
-    growth_rate: '8% CAGR'
-    variant: 'ai - futuristic'
+    growth_rate: '8% CAGR';
+variant: 'ai - futuristic'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Templates + KPI widgets + export'
     launch_date: '2025 - 08 - 20'
     customers: 18;
     rating: 4 && 4.5;
-    reviews: 7;
-  },
+    reviews: 7},
       'QR tickets + check-in',
       'Email/SMS reminders',
     id: 'event - management - dashboard',
@@ -461,8 +457,8 @@
     market_siz,
   e: '$3B productivity niche',
     growth_rat,
-  e: '8% CAGR',
-    varian,
+  e: '8% CAGR',;
+varian,
   t: 'ai - futuristic',
     contact_inf,
   o: contact,
@@ -517,16 +513,15 @@
     roi: 'Saves 50% ops time per event',
     competitors: ['Eventbrite', 'Hopin (basic)'],
     market_size: '$6B event tooling'
-    growth_rate: '10% CAGR'
-    variant: 'network - futuristic'
+    growth_rate: '10% CAGR';
+variant: 'network - futuristic'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Ticketing + agenda + comms + analytics'
     launch_date: '2025 - 08 - 20'
     customers: 31;
     rating: 4 && 4.7;
-    reviews: 11;
-  },
+    reviews: 11},
     id: 'affiliate - tracking - suite',
     name: 'Affiliate Tracking Suite',
     tagline: 'Links, attribution, commission rules, and payouts',
@@ -569,8 +564,8 @@
     market_siz,
   e: '$6B event tooling',
     growth_rat,
-  e: '10% CAGR',
-    varian,
+  e: '10% CAGR',;
+varian,
   t: 'network - futuristic',
     contact_inf,
   o: contact,
@@ -623,16 +618,15 @@
     roi: '+1525% new revenue from partners',
     competitors: ['FirstPromoter', 'Rewardful'],
     market_size: '$12B affiliate'
-    growth_rate: '9% CAGR'
-    variant: 'holographic - matrix'
+    growth_rate: '9% CAGR';
+variant: 'holographic - matrix'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Link generator + rules + exports'
     launch_date: '2025 - 08 - 20'
     customers: 12;
     rating: 4 && 4.5;
-    reviews: 5;
-  },
+    reviews: 5},
     id: 'smb - analytics - lite',
     name: 'SMB Analytics Lite',
     tagline: 'Traffic, funnels, and conversions without complexity',
@@ -675,8 +669,8 @@
     market_siz,
   e: '$12B affiliate',
     growth_rat,
-  e: '9% CAGR',
-    varian,
+  e: '9% CAGR',;
+varian,
   t: 'holographic - matrix',
     contact_inf,
   o: contact,
@@ -729,16 +723,15 @@
     roi: 'Clarity on what converts, 1020% lift',
     competitors: ['Fathom', 'Plausible'],
     market_size: '$2B privacy analytics'
-    growth_rate: '14% CAGR'
-    variant: 'network - futuristic'
+    growth_rate: '14% CAGR';
+variant: 'network - futuristic'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Tracker script + dashboard'
     launch_date: '2025 - 08 - 20'
     customers: 40;
     rating: 4 && 4.6;
-    reviews: 8;
-  },
+    reviews: 8},
       'Email-to-ticket',
     id: 'it - helpdesk - portal',
     name: 'IT Helpdesk Portal',
@@ -782,8 +775,8 @@
     market_siz,
   e: '$2B privacy analytics',
     growth_rat,
-  e: '14% CAGR',
-    varian,
+  e: '14% CAGR',;
+varian,
   t: 'network - futuristic',
     contact_inf,
   o: contact,
@@ -837,16 +830,15 @@
     roi: '2540% faster resolution time',
     competitors: ['Freshservice', 'Jira Service Management'],
     market_size: '$10B ITSM SMB'
-    growth_rate: '11% CAGR'
-    variant: 'ai - futuristic'
+    growth_rate: '11% CAGR';
+variant: 'ai - futuristic'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Ticketing + KB + SLAs + reports'
     launch_date: '2025 - 08 - 20'
     customers: 16;
     rating: 4 && 4.7;
-    reviews: 6;
-  },
+    reviews: 6},
       'Self-serve returns portal',
     id: 'ecommerce - returns - manager'
     name: 'Ecommerce Returns Manager',
@@ -890,8 +882,8 @@
     market_siz,
   e: '$10B ITSM SMB',
     growth_rat,
-  e: '11% CAGR',
-    varian,
+  e: '11% CAGR',;
+varian,
   t: 'ai - futuristic',
     contact_inf,
   o: contact,
@@ -945,16 +937,15 @@
     roi: 'Reduce returns costs by 1020%',
     competitors: ['Loop Returns', 'Happy Returns (PayPal)'],
     market_size: '$4B returns tooling'
-    growth_rate: '13% CAGR'
-    variant: 'holographic - matrix'
+    growth_rate: '13% CAGR';
+variant: 'holographic - matrix'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Portal + labels + analytics'
     launch_date: '2025 - 08 - 20'
     customers: 14;
     rating: 4 && 4.6;
-    reviews: 5;
-  },
+    reviews: 5},
     id: 'automated - email - followups'
     name: 'Automated Email Followups',
     tagline: 'No - lead - left - behind sequences across inboxes',
@@ -997,8 +988,8 @@
     market_siz,
   e: '$4B returns tooling',
     growth_rat,
-  e: '13% CAGR',
-    varian,
+  e: '13% CAGR',;
+varian,
   t: 'holographic - matrix',
     contact_inf,
   o: contact,
@@ -1051,8 +1042,8 @@
     roi: '+1025% more replies',
     competitors: ['Mailshake (lite)', 'GMass'],
     market_size: '$5B sales engagement (SMB)'
-    growth_rate: '10% CAGR'
-    variant: 'network - futuristic'
+    growth_rate: '10% CAGR';
+variant: 'network - futuristic'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Sequencer + inbox + analytics'
@@ -1096,8 +1087,8 @@
     market_siz,
   e: '$5B sales engagement (SMB)',
     growth_rat,
-  e: '10% CAGR',
-    varian,
+  e: '10% CAGR',;
+varian,
   t: 'network - futuristic',
     contact_inf,
   o: contact,
@@ -1150,16 +1141,15 @@
     roi: 'Saves 24 hrs / episode',
     competitors: ['Rev', 'Descript (lite)'],
     market_size: '$1B+ transcription'
-    growth_rate: '12% CAGR'
-    variant: 'ai - futuristic'
+    growth_rate: '12% CAGR';
+variant: 'ai - futuristic'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Uploader + ASR + export'
     launch_date: '2025 - 08 - 20'
     customers: 20;
     rating: 4 && 4.6;
-    reviews: 6;
-  },
+    reviews: 6},
       'On-page audits',
     id: 'ai - seo - content - optimizer'
     name: 'AI SEO Content Optimizer',
@@ -1203,8 +1193,8 @@
     market_siz,
   e: '$1B+ transcription',
     growth_rat,
-  e: '12% CAGR',
-    varian,
+  e: '12% CAGR',;
+varian,
   t: 'ai - futuristic',
     contact_inf,
   o: contact,
@@ -1258,16 +1248,15 @@
     roi: '+2040% organic traffic lift',
     competitors: ['Surfer SEO', 'MarketMuse'],
     market_size: '$2B SEO tooling'
-    growth_rate: '11% CAGR'
-    variant: 'network - futuristic'
+    growth_rate: '11% CAGR';
+variant: 'network - futuristic'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Crawler + editor plugin + suggestions'
     launch_date: '2025 - 08 - 20'
     customers: 33;
     rating: 4 && 4.7;
-    reviews: 10;
-  },
+    reviews: 10},
     id: 'social - scheduler - ai',
     name: 'Social Scheduler AI',
     tagline: 'Auto - generate, schedule, and repurpose posts cross - platform',
@@ -1310,8 +1299,8 @@
     market_siz,
   e: '$2B SEO tooling',
     growth_rat,
-  e: '11% CAGR',
-    varian,
+  e: '11% CAGR',;
+varian,
   t: 'network - futuristic',
     contact_inf,
   o: contact,
@@ -1364,16 +1353,15 @@
     roi: 'Saves 46 hrs / week',
     competitors: ['Buffer', 'Hootsuite (lite)'],
     market_size: '$4B social tooling'
-    growth_rate: '10% CAGR'
-    variant: 'holographic - matrix'
+    growth_rate: '10% CAGR';
+variant: 'holographic - matrix'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Calendar + generator + queue'
     launch_date: '2025 - 08 - 20'
     customers: 26;
     rating: 4 && 4.5;
-    reviews: 7;
-  },
+    reviews: 7},
     id: 'lead - enrichment - api',
     name: 'Lead Enrichment API',
     tagline: 'Company, role, and social signals from an email / domain',
@@ -1416,8 +1404,8 @@
     market_siz,
   e: '$4B social tooling',
     growth_rat,
-  e: '10% CAGR',
-    varian,
+  e: '10% CAGR',;
+varian,
   t: 'holographic - matrix',
     contact_inf,
   o: contact,
@@ -1470,16 +1458,15 @@
     roi: 'Improves MQLSQL by 1020%',
     competitors: ['Clearbit (lite)', 'Apollo enrichment'],
     market_size: '$3B enrichment'
-    growth_rate: '9% CAGR'
-    variant: 'ai - futuristic'
+    growth_rate: '9% CAGR';
+variant: 'ai - futuristic'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'REST + dashboard + quotas'
     launch_date: '2025 - 08 - 20'
     customers: 9;
     rating: 4 && 4.4;
-    reviews: 4;
-  },
+    reviews: 4},
     id: 'consent - management - cmp',
     name: 'Consent Management CMP',
     tagline: 'GDPR / CCPA consent banners, preferences, and audit logs',
@@ -1522,8 +1509,8 @@
     market_siz,
   e: '$3B enrichment',
     growth_rat,
-  e: '9% CAGR',
-    varian,
+  e: '9% CAGR',;
+varian,
   t: 'ai - futuristic',
     contact_inf,
   o: contact,
@@ -1576,16 +1563,15 @@
     roi: 'Avoid fines, preserve UX',
     competitors: ['OneTrust (lite)', 'CookieYes'],
     market_size: '$4B privacy tooling'
-    growth_rate: '14% CAGR'
-    variant: 'network - futuristic'
+    growth_rate: '14% CAGR';
+variant: 'network - futuristic'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Banner + preferences + logs'
     launch_date: '2025 - 08 - 20'
     customers: 37;
     rating: 4 && 4.7;
-    reviews: 10;
-  },
+    reviews: 10},
     id: 'cookie - scanner - pro'
     name: 'Cookie Scanner Pro',
     tagline: 'Auto - detects cookies + trackers and updates your policy',
@@ -1628,8 +1614,8 @@
     market_siz,
   e: '$4B privacy tooling',
     growth_rat,
-  e: '14% CAGR',
-    varian,
+  e: '14% CAGR',;
+varian,
   t: 'network - futuristic',
     contact_inf,
   o: contact,
@@ -1682,16 +1668,15 @@
     roi: 'Automates tedious checks'
     competitors: ['Cookiebot (lite)']
     market_size: '$1B cookie tools'
-    growth_rate: '8% CAGR'
-    variant: 'holographic - matrix'
+    growth_rate: '8% CAGR';
+variant: 'holographic - matrix'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Scanner + policy generator'
     launch_date: '2025 - 08 - 20'
     customers: 19;
     rating: 4 && 4.5;
-    reviews: 5;
-  },
+    reviews: 5},
     id: 'statuspage - sla - tracker'
     name: 'StatusPage SLA Tracker',
     tagline: 'Track uptime / incidents and publish SLA reports',
@@ -1734,8 +1719,8 @@
     market_siz,
   e: '$1B cookie tools',
     growth_rat,
-  e: '8% CAGR',
-    varian,
+  e: '8% CAGR',;
+varian,
   t: 'holographic - matrix',
     contact_inf,
   o: contact,
@@ -1788,16 +1773,15 @@
     roi: 'Reduce support tickets ~20%'
     competitors: ['Statuspage (lite)']
     market_size: '$1B status tools'
-    growth_rate: '9% CAGR'
-    variant: 'ai - futuristic'
+    growth_rate: '9% CAGR';
+variant: 'ai - futuristic'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Monitors + incidents + pages'
     launch_date: '2025 - 08 - 20'
     customers: 11;
     rating: 4 && 4.4;
-    reviews: 3;
-  },
+    reviews: 3},
     id: 'agentic - lead - qualifier'
     name: 'Agentic Lead Qualifier',
     tagline: 'Website chat agent that pre - qualifies and routes leads',
@@ -1840,8 +1824,8 @@
     market_siz,
   e: '$1B status tools',
     growth_rat,
-  e: '9% CAGR',
-    varian,
+  e: '9% CAGR',;
+varian,
   t: 'ai - futuristic',
     contact_inf,
   o: contact,
@@ -1885,16 +1869,15 @@
     use_cases: ['Lead capture', 'Meeting booking'],
     competitors: ['Drift (lite)', 'Intercom Fin'],
     market_size: '$3B chatbots'
-    growth_rate: '12% CAGR'
-    variant: 'network - futuristic'
+    growth_rate: '12% CAGR';
+variant: 'network - futuristic'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Widget + flows + routing'
     launch_date: '2025 - 08 - 20'
     customers: 23;
     rating: 4 && 4.6;
-    reviews: 7;
-  },
+    reviews: 7},
     id: 'gdpr - dsar - portal - lite',
     name: 'GDPR DSAR Portal Lite',
     tagline: 'Accept, verify, export, and fulfill data subject requests',
@@ -1918,8 +1901,8 @@
     market_siz,
   e: '$3B chatbots',
     growth_rat,
-  e: '12% CAGR',
-    varian,
+  e: '12% CAGR',;
+varian,
   t: 'network - futuristic',
     contact_inf,
   o: contact,
@@ -1961,16 +1944,15 @@
     roi: 'Avoid compliance toil and risk',
     competitors: ['Transcend (lite)', 'Osano'],
     market_size: '$6B privacy ops'
-    growth_rate: '18% CAGR'
-    variant: 'holographic - matrix'
+    growth_rate: '18% CAGR';
+variant: 'holographic - matrix'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Portal + workflow + exports'
     launch_date: '2025 - 08 - 20'
     customers: 10;
     rating: 4 && 4.5;
-    reviews: 4;
-  },
+    reviews: 4},
     period: '/month',
     description: unknown;
     popula,
@@ -1986,8 +1968,8 @@
     market_siz,
   e: '$6B privacy ops',
     growth_rat,
-  e: '18% CAGR',
-    varian,
+  e: '18% CAGR',;
+varian,
   t: 'holographic - matrix',
     contact_inf,
   o: contact,
@@ -2032,16 +2014,15 @@
     roi: '+1530% qualified demos',
     competitors: ['Drift (lite)', 'Intercom Fin'],
     market_size: '$3B chatbots'
-    growth_rate: '12% CAGR'
-    variant: 'network - futuristic'
+    growth_rate: '12% CAGR';
+variant: 'network - futuristic'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Widget + flows + routing'
     launch_date: '2025 - 08 - 20'
     customers: 23;
     rating: 4 && 4.6;
-    reviews: 7;
-  },
+    reviews: 7},
     id: 'gdpr - dsar - portal - lite',
     name: 'GDPR DSAR Portal Lite',
     tagline: 'Accept, verify, export, and fulfill data subject requests',
@@ -2084,8 +2065,8 @@
     market_siz,
   e: '$3B chatbots',
     growth_rat,
-  e: '12% CAGR',
-    varian,
+  e: '12% CAGR',;
+varian,
   t: 'network - futuristic',
     contact_inf,
   o: contact,
@@ -2138,16 +2119,15 @@
     roi: 'Avoid compliance toil and risk',
     competitors: ['Transcend (lite)', 'Osano'],
     market_size: '$6B privacy ops'
-    growth_rate: '18% CAGR'
-    variant: 'holographic - matrix'
+    growth_rate: '18% CAGR';
+variant: 'holographic - matrix'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Portal + workflow + exports'
     launch_date: '2025 - 08 - 20'
     customers: 10;
     rating: 4 && 4.5;
-    reviews: 4;
-  },
+    reviews: 4},
     id: 'feature-flag-auditor'
     name: 'Feature Flag Auditor',
     tagline: 'Flag hygiene checks and end-of-life automation',
@@ -2190,8 +2170,8 @@
     market_siz,
   e: '$6B privacy ops',
     growth_rat,
-  e: '18% CAGR',
-    varian,
+  e: '18% CAGR',;
+varian,
   t: 'holographic - matrix',
     contact_inf,
   o: contact,
@@ -2245,8 +2225,8 @@
     roi: 'Avoid outages, reduce toil',
   competitors: ['LaunchDarkly add-ons'];
     marketSize: '$1 B flags'
-    growthRate: '10% CAGR'
-    variant: 'ai-futuristic'
+    growthRate: '10% CAGR';
+variant: 'ai-futuristic'
     contactInfo: contact;
     realImplementation: true;
     implementationDetails: 'Scanner + PR bot'
@@ -2290,8 +2270,8 @@
     marketSiz,
   e: '$1B flags'
     growthRat,
-  e: '10% CAGR'
-    varian,
+  e: '10% CAGR';
+varian,
   t: 'ai-futuristic'
     contactInf,
   o: contact;
@@ -2329,16 +2309,15 @@
     roi: 'Avoid outages, reduce toil',
     competitors: ['LaunchDarkly add - ons']
     market_size: '$1B flags'
-    growth_rate: '10% CAGR'
-    variant: 'ai - futuristic'
+    growth_rate: '10% CAGR';
+variant: 'ai - futuristic'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Scanner + PR bot'
     launch_date: '2025 - 08 - 20'
     customers: 8;
     rating: 4 && 4.4;
-    reviews: 3;
-  },
+    reviews: 3},
     id: 'postgres - index - advisor - pro'
     name: 'Postgres Index Advisor Pro',
     tagline: 'Index recommendations and controlled PR rollouts',
@@ -2381,8 +2360,8 @@
     market_siz,
   e: '$1B flags',
     growth_rat,
-  e: '10% CAGR',
-    varian,
+  e: '10% CAGR',;
+varian,
   t: 'ai - futuristic',
     contact_inf,
   o: contact,
@@ -2427,8 +2406,8 @@
     roi: 'Cut query costs 2050%'
     competitors: ['pganalyze (adjacent)']
     market_size: '$2B DB tuning'
-    growth_rate: '9% CAGR'
-    variant: 'network - futuristic'
+    growth_rate: '9% CAGR';
+variant: 'network - futuristic'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Collector + advisor + PRs'
@@ -2455,8 +2434,8 @@
     market_siz,
   e: '$2B DB tuning',
     growth_rat,
-  e: '9% CAGR',
-    varian,
+  e: '9% CAGR',;
+varian,
   t: 'network - futuristic',
     contact_inf,
   o: contact,
@@ -2486,8 +2465,8 @@
     roi: 'Save 1030% storage spend'
     competitors: ['Kubecost (adjacent)']
     market_size: '$3B cloud cost'
-    growth_rate: '12% CAGR'
-    variant: 'holographic - matrix'
+    growth_rate: '12% CAGR';
+variant: 'holographic - matrix'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Analyzer + simulator + rule export'
@@ -2514,8 +2493,8 @@
     market_siz,
   e: '$3B cloud cost',
     growth_rat,
-  e: '12% CAGR',
-    varian,
+  e: '12% CAGR',;
+varian,
   t: 'holographic - matrix',
     contact_inf,
   o: contact,
@@ -2545,16 +2524,15 @@
     roi: 'Avoid incidents and fines',
     competitors: ['Google DLP', 'AWS Macie'],
     market_size: '$5B data security'
-    growth_rate: '15% CAGR'
-    variant: 'ai - futuristic'
+    growth_rate: '15% CAGR';
+variant: 'ai - futuristic'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Connectors + scan jobs + exports'
     launch_date: '2025 - 08 - 20'
     customers: 13;
     rating: 4 && 4.6;
-    reviews: 5;
-  },
+    reviews: 5},
     id: 'api-breaking-change-watcher'
     name: 'API Breaking Change Watcher',
     tagline: 'Schema diffs with CI gates and notifications',
@@ -2572,16 +2550,15 @@
     roi: 'Fewer incidents, faster integration',
     competitors: ['Stoplight (adjacent)']
     market_size: '$1B API tooling'
-    growth_rate: '9% CAGR'
-    variant: 'network - futuristic'
+    growth_rate: '9% CAGR';
+variant: 'network - futuristic'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Registry + diff engine + CI'
     launch_date: '2025 - 08 - 20'
     customers: 12;
     rating: 4 && 4.5;
-    reviews: 3;
-  },
+    reviews: 3},
     id: 'postgres-index-advisor-pro'
     name: 'Postgres Index Advisor Pro',
     tagline: 'Index recommendations and controlled PR rollouts',
@@ -2607,8 +2584,8 @@
     market_siz,
   e: '$5B data security',
     growth_rat,
-  e: '15% CAGR',
-    varian,
+  e: '15% CAGR',;
+varian,
   t: 'ai - futuristic',
     contact_inf,
   o: contact,
@@ -2658,8 +2635,8 @@
     market_siz,
   e: '$1B API tooling',
     growth_rat,
-  e: '9% CAGR',
-    varian,
+  e: '9% CAGR',;
+varian,
   t: 'network - futuristic',
     contact_inf,
   o: contact,
@@ -2713,8 +2690,8 @@
     roi: 'Cut query costs 2050%'
     competitors: ['pganalyze (adjacent)'];
     marketSize: '$2 B DB tuning'
-    growthRate: '9% CAGR'
-    variant: 'network-futuristic'
+    growthRate: '9% CAGR';
+variant: 'network-futuristic'
     contactInfo: contact;
     realImplementation: true;
     implementationDetails: 'Collector + advisor + PRs'
@@ -2758,8 +2735,8 @@
     marketSiz,
   e: '$2B DB tuning'
     growthRat,
-  e: '9% CAGR'
-    varian,
+  e: '9% CAGR';
+varian,
   t: 'network-futuristic'
     contactInf,
   o: contact;
@@ -2812,16 +2789,15 @@
     roi: 'Save 1030% storage spend'
     competitors: ['Kubecost (adjacent)'];
     marketSize: '$3 B cloud cost'
-    growthRate: '12% CAGR'
-    variant: 'holographic-matrix'
+    growthRate: '12% CAGR';
+variant: 'holographic-matrix'
     contactInfo: contact;
     realImplementation: true;
     implementationDetails: 'Analyzer + simulator + rule export'
     launchDate: '2025-08-20'
     customers: 17;
     rating: 4.5;
-    reviews: 4;
-  }
+    reviews: 4}
     id: 'pii-discovery-scanner'
     name: 'PII Discovery Scanner',
     tagline: 'Scan buckets and DBs for PII/PHI with evidence exports',
@@ -2864,8 +2840,8 @@
     marketSiz,
   e: '$3B cloud cost'
     growthRat,
-  e: '12% CAGR'
-    varian,
+  e: '12% CAGR';
+varian,
   t: 'holographic-matrix'
     contactInf,
   o: contact;
@@ -2919,8 +2895,8 @@
     roi: 'Avoid incidents and fines',
     competitors: ['Google DLP', 'AWS Macie']
     marketSize: '$5 B data security'
-    growthRate: '15% CAGR'
-    variant: 'ai-futuristic'
+    growthRate: '15% CAGR';
+variant: 'ai-futuristic'
     contactInfo: contact;
     realImplementation: true;
     implementationDetails: 'Connectors + scan jobs + exports'
@@ -2964,8 +2940,8 @@
     marketSiz,
   e: '$5B data security'
     growthRat,
-  e: '15% CAGR'
-    varian,
+  e: '15% CAGR';
+varian,
   t: 'ai-futuristic'
     contactInf,
   o: contact;
@@ -3003,16 +2979,15 @@
     roi: 'Avoid outages, reduce toil',
     competitors: ['LaunchDarkly add-ons']
     marketSize: '$1B flags'
-    growthRate: '10% CAGR'
-    variant: 'ai-futuristic'
+    growthRate: '10% CAGR';
+variant: 'ai-futuristic'
     contactInfo: contact;
     realImplementation: true;
     implementationDetails: 'Scanner + PR bot'
     launchDate: '2025-08-20'
     customers: 8;
     rating: 4.4;
-    reviews: 3;
-  },
+    reviews: 3},
     id: 'postgres - index - advisor - pro'
     name: 'Postgres Index Advisor Pro',
     tagline: 'Index recommendations and controlled PR rollouts',
@@ -3055,8 +3030,8 @@
     marketSiz,
   e: '$1B flags',
     growthRat,
-  e: '10% CAGR',
-    varian,
+  e: '10% CAGR',;
+varian,
   t: 'ai-futuristic',
     contactInf,
   o: contact,
@@ -3109,16 +3084,15 @@
     roi: 'Cut query costs 2050%'
     competitors: ['pganalyze (adjacent)']
     market_size: '$2B DB tuning'
-    growth_rate: '9% CAGR'
-    variant: 'network - futuristic'
+    growth_rate: '9% CAGR';
+variant: 'network - futuristic'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Collector + advisor + PRs'
     launch_date: '2025 - 08 - 20'
     customers: 15;
     rating: 4 && 4.6;
-    reviews: 5;
-  },
+    reviews: 5},
     id: 's3 - lifecycle - optimizer'
     name: 'S3 Lifecycle Optimizer',
     tagline: 'Move objects between storage classes to cut costs',
@@ -3161,8 +3135,8 @@
     market_siz,
   e: '$2B DB tuning',
     growth_rat,
-  e: '9% CAGR',
-    varian,
+  e: '9% CAGR',;
+varian,
   t: 'network - futuristic',
     contact_inf,
   o: contact,
@@ -3215,16 +3189,15 @@
     roi: 'Save 1030% storage spend'
     competitors: ['Kubecost (adjacent)']
     market_size: '$3B cloud cost'
-    growth_rate: '12% CAGR'
-    variant: 'holographic - matrix'
+    growth_rate: '12% CAGR';
+variant: 'holographic - matrix'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Analyzer + simulator + rule export'
     launch_date: '2025 - 08 - 20'
     customers: 17;
     rating: 4 && 4.5;
-    reviews: 4;
-  },
+    reviews: 4},
     id: 'pii - discovery - scanner'
     name: 'PII Discovery Scanner',
     tagline: 'Scan buckets and DBs for PII / PHI with evidence exports',
@@ -3267,8 +3240,8 @@
     market_siz,
   e: '$3B cloud cost',
     growth_rat,
-  e: '12% CAGR',
-    varian,
+  e: '12% CAGR',;
+varian,
   t: 'holographic - matrix',
     contact_inf,
   o: contact,
@@ -3321,16 +3294,15 @@
     roi: 'Avoid incidents and fines',
     competitors: ['Google DLP', 'AWS Macie'],
     market_size: '$5B data security'
-    growth_rate: '15% CAGR'
-    variant: 'ai - futuristic'
+    growth_rate: '15% CAGR';
+variant: 'ai - futuristic'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Connectors + scan jobs + exports'
     launch_date: '2025 - 08 - 20'
     customers: 13;
     rating: 4 && 4.6;
-    reviews: 5;
-  },
+    reviews: 5},
     id: 'api-breaking-change-watcher'
     name: 'API Breaking Change Watcher',
     tagline: 'Schema diffs with CI gates and notifications',
@@ -3380,8 +3352,8 @@
     market_siz,
   e: '$5B data security',
     growth_rat,
-  e: '15% CAGR',
-    varian,
+  e: '15% CAGR',;
+varian,
   t: 'ai - futuristic',
     contact_inf,
   o: contact,
@@ -3447,8 +3419,8 @@
     roi: 'Fewer incidents, faster integration',
     competitors: ['Stoplight (adjacent)']
     market_size: '$1B API tooling'
-    growth_rate: '9% CAGR'
-    variant: 'network - futuristic'
+    growth_rate: '9% CAGR';
+variant: 'network - futuristic'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Registry + diff engine + CI'
@@ -3492,8 +3464,8 @@
     market_siz,
   e: '$1B API tooling',
     growth_rat,
-  e: '9% CAGR',
-    varian,
+  e: '9% CAGR',;
+varian,
   t: 'network - futuristic',
     contact_inf,
   o: contact,
@@ -3535,16 +3507,15 @@
     roi: 'Fewer incidents, faster integration',
   competitors: ['Stoplight (adjacent)'];
     marketSize: '$1 B API tooling'
-    growthRate: '9% CAGR'
-    variant: 'network-futuristic'
+    growthRate: '9% CAGR';
+variant: 'network-futuristic'
     contactInfo: contact;
     realImplementation: true;
     implementationDetails: 'Registry + diff engine + CI'
     launchDate: '2025-08-20'
     customers: 12;
     rating: 4.5;
-    reviews: 3;
-  }
+    reviews: 3}
     id: 'feature - flag - auditor'
     name: 'Feature Flag Auditor',
     tagline: 'Flag hygiene checks and end - of - life automation',
@@ -3587,8 +3558,8 @@
     marketSiz,
   e: '$1B API tooling'
     growthRat,
-  e: '9% CAGR'
-    varian,
+  e: '9% CAGR';
+varian,
   t: 'network-futuristic'
     contactInf,
   o: contact;
@@ -3641,16 +3612,15 @@
     roi: 'Avoid outages, reduce toil',
     competitors: ['LaunchDarkly add - ons']
     market_size: '$1B flags'
-    growth_rate: '10% CAGR'
-    variant: 'ai - futuristic'
+    growth_rate: '10% CAGR';
+variant: 'ai - futuristic'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Scanner + PR bot'
     launch_date: '2025 - 08 - 20'
     customers: 8;
     rating: 4 && 4.4;
-    reviews: 3;
-  },
+    reviews: 3},
     id: 'postgres - index - advisor - pro'
     name: 'Postgres Index Advisor Pro',
     tagline: 'Index recommendations and controlled PR rollouts',
@@ -3693,8 +3663,8 @@
     market_siz,
   e: '$1B flags',
     growth_rat,
-  e: '10% CAGR',
-    varian,
+  e: '10% CAGR',;
+varian,
   t: 'ai - futuristic',
     contact_inf,
   o: contact,
@@ -3747,16 +3717,15 @@
     roi: 'Cut query costs 2050%'
     competitors: ['pganalyze (adjacent)']
     market_size: '$2B DB tuning'
-    growth_rate: '9% CAGR'
-    variant: 'network - futuristic'
+    growth_rate: '9% CAGR';
+variant: 'network - futuristic'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Collector + advisor + PRs'
     launch_date: '2025 - 08 - 20'
     customers: 15;
     rating: 4 && 4.6;
-    reviews: 5;
-  },
+    reviews: 5},
     id: 's3 - lifecycle - optimizer'
     name: 'S3 Lifecycle Optimizer',
     tagline: 'Move objects between storage classes to cut costs',
@@ -3799,8 +3768,8 @@
     market_siz,
   e: '$2B DB tuning',
     growth_rat,
-  e: '9% CAGR',
-    varian,
+  e: '9% CAGR',;
+varian,
   t: 'network - futuristic',
     contact_inf,
   o: contact,
@@ -3853,16 +3822,15 @@
     roi: 'Save 1030% storage spend'
     competitors: ['Kubecost (adjacent)']
     market_size: '$3B cloud cost'
-    growth_rate: '12% CAGR'
-    variant: 'holographic - matrix'
+    growth_rate: '12% CAGR';
+variant: 'holographic - matrix'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Analyzer + simulator + rule export'
     launch_date: '2025 - 08 - 20'
     customers: 17;
     rating: 4 && 4.5;
-    reviews: 4;
-  },
+    reviews: 4},
     id: 'pii - discovery - scanner'
     name: 'PII Discovery Scanner',
     tagline: 'Scan buckets and DBs for PII / PHI with evidence exports',
@@ -3905,8 +3873,8 @@
     market_siz,
   e: '$3B cloud cost',
     growth_rat,
-  e: '12% CAGR',
-    varian,
+  e: '12% CAGR',;
+varian,
   t: 'holographic - matrix',
     contact_inf,
   o: contact,
@@ -3959,16 +3927,15 @@
     roi: 'Avoid incidents and fines',
     competitors: ['Google DLP', 'AWS Macie'],
     market_size: '$5B data security'
-    growth_rate: '15% CAGR'
-    variant: 'ai - futuristic'
+    growth_rate: '15% CAGR';
+variant: 'ai - futuristic'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Connectors + scan jobs + exports'
     launch_date: '2025 - 08 - 20'
     customers: 13;
     rating: 4 && 4.6;
-    reviews: 5;
-  },
+    reviews: 5},
     id: 'api-breaking-change-watcher'
     name: 'API Breaking Change Watcher',
     tagline: 'Schema diffs with CI gates and notifications',
@@ -4019,8 +3986,8 @@
     market_siz,
   e: '$5B data security',
     growth_rat,
-  e: '15% CAGR',
-    varian,
+  e: '15% CAGR',;
+varian,
   t: 'ai - futuristic',
     contact_inf,
   o: contact,
@@ -4088,16 +4055,15 @@
     roi: 'Fewer incidents, faster integration',
     competitors: ['Stoplight (adjacent)']
     market_size: '$1B API tooling'
-    growth_rate: '9% CAGR'
-    variant: 'network - futuristic'
+    growth_rate: '9% CAGR';
+variant: 'network - futuristic'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Registry + diff engine + CI'
     launch_date: '2025 - 08 - 20'
     customers: 12;
     rating: 4 && 4.5;
-    reviews: 3;
-  },
+    reviews: 3},
     id: 'synthetic - journey - monitor'
     name: 'Synthetic Journey Monitor',
     tagline: 'Record and replay user flows with SLO alerts',
@@ -4140,8 +4106,8 @@
     market_siz,
   e: '$1B API tooling',
     growth_rat,
-  e: '9% CAGR',
-    varian,
+  e: '9% CAGR',;
+varian,
   t: 'network - futuristic',
     contact_inf,
   o: contact,
@@ -4194,16 +4160,15 @@
     roi: 'Prevent broken funnels',
     competitors: ['Checkly', 'Datadog Synthetics'],
     market_size: '$2B testing / obs'
-    growth_rate: '10% CAGR'
-    variant: 'holographic - matrix'
+    growth_rate: '10% CAGR';
+variant: 'holographic - matrix'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Recorder + runner + alerts'
     launch_date: '2025 - 08 - 20'
     customers: 21;
     rating: 4 && 4.5;
-    reviews: 6;
-  },
+    reviews: 6},
     id: 'iam - permission - analyzer',
     name: 'IAM Permission Analyzer',
     tagline: unknown;
@@ -4247,8 +4212,8 @@
     market_siz,
   e: '$2B testing / obs',
     growth_rat,
-  e: '10% CAGR',
-    varian,
+  e: '10% CAGR',;
+varian,
   t: 'holographic - matrix',
     contact_inf,
   o: contact,
@@ -4302,16 +4267,15 @@
     roi: 'Reduce risk + audit toil'
     competitors: ['Cloud Custodian (DIY)']
     market_size: '$3B cloud sec'
-    growth_rate: '13% CAGR'
-    variant: 'ai - futuristic'
+    growth_rate: '13% CAGR';
+variant: 'ai - futuristic'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Collector + analyzer + PRs'
     launch_date: '2025 - 08 - 20'
     customers: 9;
     rating: 4 && 4.6;
-    reviews: 3;
-  },
+    reviews: 3},
     id: 'warehouse - cost - optimizer'
     name: 'Data Warehouse Cost Optimizer',
     tagline: 'Right - size warehouses and schedule off - peak workloads',
@@ -4354,8 +4318,8 @@
     market_siz,
   e: '$3B cloud sec',
     growth_rat,
-  e: '13% CAGR',
-    varian,
+  e: '13% CAGR',;
+varian,
   t: 'ai - futuristic',
     contact_inf,
   o: contact,
@@ -4408,16 +4372,15 @@
     roi: '1030% lower DW costs'
     competitors: ['SelectStar (adjacent)']
     market_size: '$2B finops DW'
-    growth_rate: '12% CAGR'
-    variant: 'network - futuristic'
+    growth_rate: '12% CAGR';
+variant: 'network - futuristic'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Analyzer + simulator + PRs'
     launch_date: '2025 - 08 - 20'
     customers: 7;
     rating: 4 && 4.5;
-    reviews: 3;
-  },
+    reviews: 3},
     id: 'email - warmup - monitor'
     name: 'Email Warmup & Reputation Monitor',
     tagline: 'Track sender reputation and run inbox placement tests',
@@ -4460,8 +4423,8 @@
     market_siz,
   e: '$2B finops DW',
     growth_rat,
-  e: '12% CAGR',
-    varian,
+  e: '12% CAGR',;
+varian,
   t: 'network - futuristic',
     contact_inf,
   o: contact,
@@ -4514,16 +4477,15 @@
     roi: 'Protects domain reputation',
     competitors: ['Warmup Inbox', 'Mailreach'],
     market_size: '$1B deliverability'
-    growth_rate: '9% CAGR'
-    variant: 'holographic - matrix'
+    growth_rate: '9% CAGR';
+variant: 'holographic - matrix'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Warmup + tests + alerts'
     launch_date: '2025 - 08 - 20'
     customers: 16;
     rating: 4 && 4.5;
-    reviews: 4;
-  },
+    reviews: 4},
     id: 'ai - meeting - to - ticket'
     name: 'AI MeetingtoTicket Copilot',
     tagline: 'Turn meeting action items into Jira / GitHub tickets',
@@ -4566,8 +4528,8 @@
     market_siz,
   e: '$1B deliverability',
     growth_rat,
-  e: '9% CAGR',
-    varian,
+  e: '9% CAGR',;
+varian,
   t: 'holographic - matrix',
     contact_inf,
   o: contact,
@@ -4620,16 +4582,15 @@
     roi: 'Close the loop on action items'
     competitors: ['Fathom + manual']
     market_size: '$2B productivity'
-    growth_rate: '9% CAGR'
-    variant: 'ai - futuristic'
+    growth_rate: '9% CAGR';
+variant: 'ai - futuristic'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Transcribe + extract + tickets'
     launch_date: '2025 - 08 - 20'
     customers: 24;
     rating: 4 && 4.6;
-    reviews: 6;
-  }];
+    reviews: 6}];
 const contact =
 	mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -4670,8 +4631,8 @@ const contact =
     market_siz,
   e: '$2B productivity',
     growth_rat,
-  e: '9% CAGR',
-    varian,
+  e: '9% CAGR',;
+varian,
   t: 'ai - futuristic',
     contact_inf,
   o: contact,
@@ -4730,16 +4691,15 @@ export const,
 		roi: 'Cuts manual email time by 6080%'
 		competitors: ['Superhuman AIFront AIGmail add-ons'];
 		marketSize: '$10 B+ email productivity'
-		growthRate: '15% CAGR'
-		variant: 'network-futuristic'
+		growthRate: '15% CAGR';
+variant: 'network-futuristic'
 		contactInfo: contact;
 		realImplementation: true;
 		implementationDetails: 'OAuth + mailbox sync + policy rules + reply generator + SLA dashboard'
 		launchDate: '2025-08-20'
 		customers: 48;
 		rating: 4 && 4.7;
-		reviews: 12;
-	}
+		reviews: 12}
 		id: 'mobile-survey-studio',
 		name: 'Mobile Survey Studio',
 		tagline: 'Adaptive, mobile-first surveys with branching logic and analytics'
@@ -4766,16 +4726,15 @@ export const,
 		roi: '24 x higher completion on mobile'
 		competitors: ['TypeformSurveyMonkey'];
 		marketSize: '$7 B research tooling'
-		growthRate: '9% CAGR'
-		variant: 'holographic-matrix'
+		growthRate: '9% CAGR';
+variant: 'holographic-matrix'
 		contactInfo: contact;
 		realImplementation: true;
 		implementationDetails: 'Survey builder + delivery channels + analytics + export'
 		launchDate: '2025-08-20'
 		customers: 22;
 		rating: 4 && 4.6;
-		reviews: 9;
-	}
+		reviews: 9}
 		id: 'niche-productivity-planner',
 		name: 'Niche Productivity Planner',
 		tagline: 'Industry-specific planners with templates, rituals, and benchmarks'
@@ -4802,16 +4761,15 @@ export const,
 		roi: 'Saves 35 hrs/week per user'
 		competitors: ['Notion templatesClickUp'];
 		marketSize: '$3 B productivity niche'
-		growthRate: '8% CAGR'
-		variant: 'ai-futuristic'
+		growthRate: '8% CAGR';
+variant: 'ai-futuristic'
 		contactInfo: contact;
 		realImplementation: true;
 		implementationDetails: 'Templates + KPI widgets + export'
 		launchDate: '2025-08-20'
 		customers: 18;
 		rating: 4 && 4.5;
-		reviews: 7;
-	}
+		reviews: 7}
 		id: 'event-management-dashboard',
 		name: 'Event Management Dashboard',
 		tagline: 'Tickets, scheduling, comms, and post-event analytics'
@@ -4838,16 +4796,15 @@ export const,
 		roi: 'Saves 50% ops time per event'
 		competitors: ['EventbriteHopin (basic)'];
 		marketSize: '$6 B event tooling'
-		growthRate: '10% CAGR'
-		variant: 'network-futuristic'
+		growthRate: '10% CAGR';
+variant: 'network-futuristic'
 		contactInfo: contact;
 		realImplementation: true;
 		implementationDetails: 'Ticketing + agenda + comms + analytics'
 		launchDate: '2025-08-20'
 		customers: 31;
 		rating: 4 && 4.7;
-		reviews: 11;
-	}
+		reviews: 11}
 		id: 'affiliate-tracking-suite',
 		name: 'Affiliate Tracking Suite',
 		tagline: 'Links, attribution, commission rules, and payouts'
@@ -4872,16 +4829,15 @@ export const,
 		roi: '+1525% new revenue from partners'
 		competitors: ['FirstPromoterRewardful'];
 		marketSize: '$12 B affiliate'
-		growthRate: '9% CAGR'
-		variant: 'holographic-matrix'
+		growthRate: '9% CAGR';
+variant: 'holographic-matrix'
 		contactInfo: contact;
 		realImplementation: true;
 		implementationDetails: 'Link generator + rules + exports'
 		launchDate: '2025-08-20'
 		customers: 12;
 		rating: 4 && 4.5;
-		reviews: 5;
-	}
+		reviews: 5}
 		id: 'smb-analytics-lite',
 		name: 'SMB Analytics Lite',
 		tagline: 'Traffic, funnels, and conversions without complexity'
@@ -4906,16 +4862,15 @@ export const,
 		roi: 'Clarity on what converts, 1020% lift'
 		competitors: ['FathomPlausible'];
 		marketSize: '$2 B privacy analytics'
-		growthRate: '14% CAGR'
-		variant: 'network-futuristic'
+		growthRate: '14% CAGR';
+variant: 'network-futuristic'
 		contactInfo: contact;
 		realImplementation: true;
 		implementationDetails: 'Tracker script + dashboard'
 		launchDate: '2025-08-20'
 		customers: 40;
 		rating: 4 && 4.6;
-		reviews: 8;
-	}
+		reviews: 8}
 		id: 'it-helpdesk-portal',
 		name: 'IT Helpdesk Portal',
 		tagline: 'Tickets, knowledge base, SLAs, and client portal'
@@ -4940,16 +4895,15 @@ export const,
 		roi: '2540% faster resolution time'
 		competitors: ['FreshserviceJira Service Management'];
 		marketSize: '$10 B ITSM SMB'
-		growthRate: '11% CAGR'
-		variant: 'ai-futuristic'
+		growthRate: '11% CAGR';
+variant: 'ai-futuristic'
 		contactInfo: contact;
 		realImplementation: true;
 		implementationDetails: 'Ticketing + KB + SLAs + reports'
 		launchDate: '2025-08-20'
 		customers: 16;
 		rating: 4 && 4.7;
-		reviews: 6;
-	}
+		reviews: 6}
 		id: 'ecommerce-returns-manager',
 		name: 'Ecommerce Returns Manager',
 		tagline: 'Customer-friendly returns with labels and status tracking',
@@ -4974,16 +4928,15 @@ export const,
 		roi: 'Reduce returns costs by 1020%'
 		competitors: ['Loop ReturnsHappy Returns (PayPal)'];
 		marketSize: '$4 B returns tooling'
-		growthRate: '13% CAGR'
-		variant: 'holographic-matrix'
+		growthRate: '13% CAGR';
+variant: 'holographic-matrix'
 		contactInfo: contact;
 		realImplementation: true;
 		implementationDetails: 'Portal + labels + analytics'
 		launchDate: '2025-08-20'
 		customers: 14;
 		rating: 4 && 4.6;
-		reviews: 5;
-	}
+		reviews: 5}
 		id: 'automated-email-followups'
 		name: 'Automated Email Followups'
 		tagline: 'No-lead-left-behind sequences across inboxes'
@@ -5008,16 +4961,15 @@ export const,
 		roi: '+1025% more replies'
 		competitors: ['Mailshake (lite)GMass'];
 		marketSize: '$5 B sales engagement (SMB)'
-		growthRate: '10% CAGR'
-		variant: 'network-futuristic'
+		growthRate: '10% CAGR';
+variant: 'network-futuristic'
 		contactInfo: contact;
 		realImplementation: true;
 		implementationDetails: 'Sequencer + inbox + analytics'
 		launchDate: '2025-08-20'
 		customers: 28;
 		rating: 4 && 4.5;
-		reviews: 8;
-	}
+		reviews: 8}
 		id: 'podcast-transcription-service',
 		name: 'Podcast Transcription Service',
 		tagline: 'Accurate transcripts, chapters, and SEO blog exports'
@@ -5042,16 +4994,15 @@ export const,
 		roi: 'Saves 24 hrs/episode'
 		competitors: ['RevDescript (lite)'];
 		marketSize: '$1 B+ transcription'
-		growthRate: '12% CAGR'
-		variant: 'ai-futuristic'
+		growthRate: '12% CAGR';
+variant: 'ai-futuristic'
 		contactInfo: contact;
 		realImplementation: true;
 		implementationDetails: 'Uploader + ASR + export'
 		launchDate: '2025-08-20'
 		customers: 20;
 		rating: 4 && 4.6;
-		reviews: 6;
-	}
+		reviews: 6}
 		id: 'ai-seo-content-optimizer',
 		name: 'AI SEO Content Optimizer',
 		tagline: 'Live on-page audits and SEO-aware rewrites',
@@ -5076,16 +5027,15 @@ export const,
 		roi: '+2040% organic traffic lift'
 		competitors: ['Surfer SEOMarketMuse'];
 		marketSize: '$2 B SEO tooling'
-		growthRate: '11% CAGR'
-		variant: 'network-futuristic'
+		growthRate: '11% CAGR';
+variant: 'network-futuristic'
 		contactInfo: contact;
 		realImplementation: true;
 		implementationDetails: 'Crawler + editor plugin + suggestions'
 		launchDate: '2025-08-20'
 		customers: 33;
 		rating: 4 && 4.7;
-		reviews: 10;
-	}
+		reviews: 10}
 		id: 'social-scheduler-ai',
 		name: 'Social Scheduler AI',
 		tagline: 'Auto-generate, schedule, and repurpose posts cross-platform'
@@ -5110,16 +5060,15 @@ export const,
 		roi: 'Saves 46 hrs/week'
 		competitors: ['BufferHootsuite (lite)'];
 		marketSize: '$4 B social tooling'
-		growthRate: '10% CAGR'
-		variant: 'holographic-matrix'
+		growthRate: '10% CAGR';
+variant: 'holographic-matrix'
 		contactInfo: contact;
 		realImplementation: true;
 		implementationDetails: 'Calendar + generator + queue'
 		launchDate: '2025-08-20'
 		customers: 26;
 		rating: 4 && 4.5;
-		reviews: 7;
-	}
+		reviews: 7}
 		id: 'lead-enrichment-api',
 		name: 'Lead Enrichment API',
 		tagline: 'Company, role, and social signals from an email/domain'
@@ -5144,16 +5093,15 @@ export const,
 		roi: 'Improves MQLSQL by 1020%'
 		competitors: ['Clearbit (lite)Apollo enrichment'];
 		marketSize: '$3 B enrichment'
-		growthRate: '9% CAGR'
-		variant: 'ai-futuristic'
+		growthRate: '9% CAGR';
+variant: 'ai-futuristic'
 		contactInfo: contact;
 		realImplementation: true;
 		implementationDetails: 'REST + dashboard + quotas'
 		launchDate: '2025-08-20'
 		customers: 9;
 		rating: 4 && 4.4;
-		reviews: 4;
-	}
+		reviews: 4}
 		id: 'consent-management-cmp',
 		name: 'Consent Management CMP',
 		tagline: 'GDPR/CCPA consent banners, preferences, and audit logs'
@@ -5178,16 +5126,15 @@ export const,
 		roi: 'Avoid fines, preserve UX'
 		competitors: ['OneTrust (lite)CookieYes'];
 		marketSize: '$4 B privacy tooling'
-		growthRate: '14% CAGR'
-		variant: 'network-futuristic'
+		growthRate: '14% CAGR';
+variant: 'network-futuristic'
 		contactInfo: contact;
 		realImplementation: true;
 		implementationDetails: 'Banner + preferences + logs'
 		launchDate: '2025-08-20'
 		customers: 37;
 		rating: 4 && 4.7;
-		reviews: 10;
-	}
+		reviews: 10}
 		id: 'cookie-scanner-pro',
 		name: 'Cookie Scanner Pro',
 		tagline: 'Auto-detects cookies + trackers and updates your policy',
@@ -5212,16 +5159,15 @@ export const,
 		roi: 'Automates tedious checks'
 		competitors: ['Cookiebot (lite)'];
 		marketSize: '$1 B cookie tools'
-		growthRate: '8% CAGR'
-		variant: 'holographic-matrix'
+		growthRate: '8% CAGR';
+variant: 'holographic-matrix'
 		contactInfo: contact;
 		realImplementation: true;
 		implementationDetails: 'Scanner + policy generator'
 		launchDate: '2025-08-20'
 		customers: 19;
 		rating: 4 && 4.5;
-		reviews: 5;
-	}
+		reviews: 5}
 		id: 'statuspage-sla-tracker',
 		name: 'StatusPage SLA Tracker',
 		tagline: 'Track uptime/incidents and publish SLA reports',
@@ -5246,16 +5192,15 @@ export const,
 		roi: 'Reduce support tickets ~20%'
 		competitors: ['Statuspage (lite)'];
 		marketSize: '$1 B status tools'
-		growthRate: '9% CAGR'
-		variant: 'ai-futuristic'
+		growthRate: '9% CAGR';
+variant: 'ai-futuristic'
 		contactInfo: contact;
 		realImplementation: true;
 		implementationDetails: 'Monitors + incidents + pages'
 		launchDate: '2025-08-20'
 		customers: 11;
 		rating: 4 && 4.4;
-		reviews: 3;
-	}
+		reviews: 3}
 		id: 'agentic-lead-qualifier',
 		name: 'Agentic Lead Qualifier',
 		tagline: 'Website chat agent that pre-qualifies and routes leads',
@@ -5280,16 +5225,15 @@ export const,
 		roi: '+1530% qualified demos'
 		competitors: ['Drift (lite)Intercom Fin'];
 		marketSize: '$3 B chatbots'
-		growthRate: '12% CAGR'
-		variant: 'network-futuristic'
+		growthRate: '12% CAGR';
+variant: 'network-futuristic'
 		contactInfo: contact;
 		realImplementation: true;
 		implementationDetails: 'Widget + flows + routing'
 		launchDate: '2025-08-20'
 		customers: 23;
 		rating: 4 && 4.6;
-		reviews: 7;
-	}
+		reviews: 7}
 		id: 'gdpr-dsar-portal-lite',
 		name: 'GDPR DSAR Portal Lite',
 		tagline: 'Accept, verify, export, and fulfill data subject requests'
@@ -5314,16 +5258,15 @@ export const,
 		roi: 'Avoid compliance toil and risk'
 		competitors: ['Transcend (lite)Osano'];
 		marketSize: '$6 B privacy ops'
-		growthRate: '18% CAGR'
-		variant: 'holographic-matrix'
+		growthRate: '18% CAGR';
+variant: 'holographic-matrix'
 		contactInfo: contact;
 		realImplementation: true;
 		implementationDetails: 'Portal + workflow + exports'
 		launchDate: '2025-08-20'
 		customers: 10;
 		rating: 4 && 4.5;
-		reviews: 4;
-	}
+		reviews: 4}
 		id: 'feature-flag-auditor',
 		name: 'Feature Flag Auditor',
 		tagline: 'Flag hygiene checks and end-of-life automation',
@@ -5348,16 +5291,15 @@ export const,
 		roi: 'Avoid outages, reduce toil'
 		competitors: ['LaunchDarkly add-ons'];
 		marketSize: '$1 B flags'
-		growthRate: '10% CAGR'
-		variant: 'ai-futuristic'
+		growthRate: '10% CAGR';
+variant: 'ai-futuristic'
 		contactInfo: contact;
 		realImplementation: true;
 		implementationDetails: 'Scanner + PR bot'
 		launchDate: '2025-08-20'
 		customers: 8;
 		rating: 4 && 4.4;
-		reviews: 3;
-	}
+		reviews: 3}
 		id: 'postgres-index-advisor-pro',
 		name: 'Postgres Index Advisor Pro',
 		tagline: 'Index recommendations and controlled PR rollouts',
@@ -5382,16 +5324,15 @@ export const,
 		roi: 'Cut query costs 2050%'
 		competitors: ['pganalyze (adjacent)'];
 		marketSize: '$2 B DB tuning'
-		growthRate: '9% CAGR'
-		variant: 'network-futuristic'
+		growthRate: '9% CAGR';
+variant: 'network-futuristic'
 		contactInfo: contact;
 		realImplementation: true;
 		implementationDetails: 'Collector + advisor + PRs'
 		launchDate: '2025-08-20'
 		customers: 15;
 		rating: 4 && 4.6;
-		reviews: 5;
-	}
+		reviews: 5}
 		id: 's3-lifecycle-optimizer'
 		name: 'S3 Lifecycle Optimizer'
 		tagline: 'Move objects between storage classes to cut costs'
@@ -5416,16 +5357,15 @@ export const,
 		roi: 'Save 1030% storage spend'
 		competitors: ['Kubecost (adjacent)'];
 		marketSize: '$3 B cloud cost'
-		growthRate: '12% CAGR'
-		variant: 'holographic-matrix'
+		growthRate: '12% CAGR';
+variant: 'holographic-matrix'
 		contactInfo: contact;
 		realImplementation: true;
 		implementationDetails: 'Analyzer + simulator + rule export'
 		launchDate: '2025-08-20'
 		customers: 17;
 		rating: 4 && 4.5;
-		reviews: 4;
-	}
+		reviews: 4}
 		id: 'pii-discovery-scanner',
 		name: 'PII Discovery Scanner',
 		tagline: 'Scan buckets and DBs for PII/PHI with evidence exports',
@@ -5450,16 +5390,15 @@ export const,
 		roi: 'Avoid incidents and fines'
 		competitors: ['Google DLPAWS Macie'];
 		marketSize: '$5 B data security'
-		growthRate: '15% CAGR'
-		variant: 'ai-futuristic'
+		growthRate: '15% CAGR';
+variant: 'ai-futuristic'
 		contactInfo: contact;
 		realImplementation: true;
 		implementationDetails: 'Connectors + scan jobs + exports'
 		launchDate: '2025-08-20'
 		customers: 13;
 		rating: 4 && 4.6;
-		reviews: 5;
-	}
+		reviews: 5}
 		id: 'api-breaking-change-watcher',
 		name: 'API Breaking Change Watcher',
 		tagline: 'Schema diffs with CI gates and notifications',
@@ -5484,16 +5423,15 @@ export const,
 		roi: 'Fewer incidents, faster integration'
 		competitors: ['Stoplight (adjacent)'];
 		marketSize: '$1 B API tooling'
-		growthRate: '9% CAGR'
-		variant: 'network-futuristic'
+		growthRate: '9% CAGR';
+variant: 'network-futuristic'
 		contactInfo: contact;
 		realImplementation: true;
 		implementationDetails: 'Registry + diff engine + CI'
 		launchDate: '2025-08-20'
 		customers: 12;
 		rating: 4 && 4.5;
-		reviews: 3;
-	}
+		reviews: 3}
 		id: 'synthetic-journey-monitor',
 		name: 'Synthetic Journey Monitor',
 		tagline: 'Record and replay user flows with SLO alerts',
@@ -5518,16 +5456,15 @@ export const,
 		roi: 'Prevent broken funnels'
 		competitors: ['ChecklyDatadog Synthetics'];
 		marketSize: '$2 B testing/obs'
-		growthRate: '10% CAGR'
-		variant: 'holographic-matrix'
+		growthRate: '10% CAGR';
+variant: 'holographic-matrix'
 		contactInfo: contact;
 		realImplementation: true;
 		implementationDetails: 'Recorder + runner + alerts'
 		launchDate: '2025-08-20'
 		customers: 21;
 		rating: 4 && 4.5;
-		reviews: 6;
-	}
+		reviews: 6}
 		id: 'iam-permission-analyzer'
 		name: 'IAM Permission Analyzer'
 		tagline: 'Detect over-privileged access and propose least-privilege policies'
@@ -5552,16 +5489,15 @@ export const,
 		roi: 'Reduce risk + audit toil'
 		competitors: ['Cloud Custodian (DIY)'];
 		marketSize: '$3 B cloud sec'
-		growthRate: '13% CAGR'
-		variant: 'ai-futuristic'
+		growthRate: '13% CAGR';
+variant: 'ai-futuristic'
 		contactInfo: contact;
 		realImplementation: true;
 		implementationDetails: 'Collector + analyzer + PRs'
 		launchDate: '2025-08-20'
 		customers: 9;
 		rating: 4 && 4.6;
-		reviews: 3;
-	}
+		reviews: 3}
 		id: 'warehouse-cost-optimizer'
 		name: 'Data Warehouse Cost Optimizer'
 		tagline: 'Right-size warehouses and schedule off-peak workloads'
@@ -5586,16 +5522,15 @@ export const,
 		roi: '1030% lower DW costs'
 		competitors: ['SelectStar (adjacent)'];
 		marketSize: '$2 B finops DW'
-		growthRate: '12% CAGR'
-		variant: 'network-futuristic'
+		growthRate: '12% CAGR';
+variant: 'network-futuristic'
 		contactInfo: contact;
 		realImplementation: true;
 		implementationDetails: 'Analyzer + simulator + PRs'
 		launchDate: '2025-08-20'
 		customers: 7;
 		rating: 4 && 4.5;
-		reviews: 3;
-	}
+		reviews: 3}
 		id: 'email-warmup-monitor'
 		name: 'Email Warmup & Reputation Monitor'
 		tagline: 'Track sender reputation and run inbox placement tests'
@@ -5620,16 +5555,15 @@ export const,
 		roi: 'Protects domain reputation'
 		competitors: ['Warmup InboxMailreach'];
 		marketSize: '$1 B deliverability'
-		growthRate: '9% CAGR'
-		variant: 'holographic-matrix'
+		growthRate: '9% CAGR';
+variant: 'holographic-matrix'
 		contactInfo: contact;
 		realImplementation: true;
 		implementationDetails: 'Warmup + tests + alerts'
 		launchDate: '2025-08-20'
 		customers: 16;
 		rating: 4 && 4.5;
-		reviews: 4;
-	}
+		reviews: 4}
 		id: 'ai-meeting-to-ticket',
 		name: 'AI MeetingtoTicket Copilot',
 		tagline: 'Turn meeting action items into Jira/GitHub tickets',
@@ -5654,16 +5588,15 @@ export const,
 		roi: 'Close the loop on action items'
 		competitors: ['Fathom + manual'];
 		marketSize: '$2 B productivity'
-		growthRate: '9% CAGR'
-		variant: 'ai-futuristic'
+		growthRate: '9% CAGR';
+variant: 'ai-futuristic'
 		contactInfo: contact;
 		realImplementation: true;
 		implementationDetails: 'Transcribe + extract + tickets'
 		launchDate: '2025-08-20'
 		customers: 24;
 		rating: 4 && 4.6;
-		reviews: 6;
-	}
+		reviews: 6}
 ];
   id: 'ai - email - responder',
   name: 'AI Email Responder',
@@ -5691,16 +5624,15 @@ export const,
   roi: 'Cuts manual email time by 6080%'
   competitors: ['Superhuman AIFront AIGmail add - ons'];
   market_size: '$10 B+ email productivity'
-  growth_rate: '15% CAGR'
-  variant: 'network - futuristic'
+  growth_rate: '15% CAGR';
+variant: 'network - futuristic'
   contact_info: contact;
   real_implementation: true;
   implementation_details: 'OAuth + mailbox sync + policy rules + reply generator + SLA dashboard'
   launch_date: '2025 - 08 - 20'
   customers: 48;
   rating: 4.7;
-  reviews: 12;
-}
+  reviews: 12}
   id: 'mobile - survey - studio',
   name: 'Mobile Survey Studio',
   tagline: 'Adaptive, mobile - first surveys with branching logic and analytics'
@@ -5727,16 +5659,15 @@ export const,
   roi: '24 x higher completion on mobile'
   competitors: ['TypeformSurveyMonkey'];
   market_size: '$7 B research tooling'
-  growth_rate: '9% CAGR'
-  variant: 'holographic - matrix'
+  growth_rate: '9% CAGR';
+variant: 'holographic - matrix'
   contact_info: contact;
   real_implementation: true;
   implementation_details: 'Survey builder + delivery channels + analytics + export'
   launch_date: '2025 - 08 - 20'
   customers: 22;
   rating: 4.6;
-  reviews: 9;
-}
+  reviews: 9}
   id: 'niche - productivity - planner',
   name: 'Niche Productivity Planner',
   tagline: 'Industry - specific planners with templates, rituals, and benchmarks'
@@ -5763,16 +5694,15 @@ export const,
   roi: 'Saves 35 hrs / week per user'
   competitors: ['Notion templatesClickUp'];
   market_size: '$3 B productivity niche'
-  growth_rate: '8% CAGR'
-  variant: 'ai - futuristic'
+  growth_rate: '8% CAGR';
+variant: 'ai - futuristic'
   contact_info: contact;
   real_implementation: true;
   implementation_details: 'Templates + KPI widgets + export'
   launch_date: '2025 - 08 - 20'
   customers: 18;
   rating: 4.5;
-  reviews: 7;
-}
+  reviews: 7}
   id: 'event - management - dashboard',
   name: 'Event Management Dashboard',
   tagline: 'Tickets, scheduling, comms, and post - event analytics'
@@ -5799,16 +5729,15 @@ export const,
   roi: 'Saves 50% ops time per event'
   competitors: ['EventbriteHopin (basic)'];
   market_size: '$6 B event tooling'
-  growth_rate: '10% CAGR'
-  variant: 'network - futuristic'
+  growth_rate: '10% CAGR';
+variant: 'network - futuristic'
   contact_info: contact;
   real_implementation: true;
   implementation_details: 'Ticketing + agenda + comms + analytics'
   launch_date: '2025 - 08 - 20'
   customers: 31;
   rating: 4.7;
-  reviews: 11;
-}
+  reviews: 11}
   id: 'affiliate - tracking - suite',
   name: 'Affiliate Tracking Suite',
   tagline: 'Links, attribution, commission rules, and payouts'
@@ -5833,16 +5762,15 @@ export const,
   roi: '+1525% new revenue from partners'
   competitors: ['FirstPromoterRewardful'];
   market_size: '$12 B affiliate'
-  growth_rate: '9% CAGR'
-  variant: 'holographic - matrix'
+  growth_rate: '9% CAGR';
+variant: 'holographic - matrix'
   contact_info: contact;
   real_implementation: true;
   implementation_details: 'Link generator + rules + exports'
   launch_date: '2025 - 08 - 20'
   customers: 12;
   rating: 4.5;
-  reviews: 5;
-}
+  reviews: 5}
   id: 'smb - analytics - lite',
   name: 'SMB Analytics Lite',
   tagline: 'Traffic, funnels, and conversions without complexity'
@@ -5867,16 +5795,15 @@ export const,
   roi: 'Clarity on what converts, 1020% lift'
   competitors: ['FathomPlausible'];
   market_size: '$2 B privacy analytics'
-  growth_rate: '14% CAGR'
-  variant: 'network - futuristic'
+  growth_rate: '14% CAGR';
+variant: 'network - futuristic'
   contact_info: contact;
   real_implementation: true;
   implementation_details: 'Tracker script + dashboard'
   launch_date: '2025 - 08 - 20'
   customers: 40;
   rating: 4.6;
-  reviews: 8;
-}
+  reviews: 8}
   id: 'it - helpdesk - portal',
   name: 'IT Helpdesk Portal',
   tagline: 'Tickets, knowledge base, SLAs, and client portal'
@@ -5901,16 +5828,15 @@ export const,
   roi: '2540% faster resolution time'
   competitors: ['FreshserviceJira Service Management'];
   market_size: '$10 B ITSM SMB'
-  growth_rate: '11% CAGR'
-  variant: 'ai - futuristic'
+  growth_rate: '11% CAGR';
+variant: 'ai - futuristic'
   contact_info: contact;
   real_implementation: true;
   implementation_details: 'Ticketing + KB + SLAs + reports'
   launch_date: '2025 - 08 - 20'
   customers: 16;
   rating: 4.7;
-  reviews: 6;
-}
+  reviews: 6}
   id: 'ecommerce - returns - manager',
   name: 'Ecommerce Returns Manager',
   tagline: 'Customer - friendly returns with labels and status tracking',
@@ -5935,16 +5861,15 @@ export const,
   roi: 'Reduce returns costs by 1020%'
   competitors: ['Loop ReturnsHappy Returns (PayPal)'];
   market_size: '$4 B returns tooling'
-  growth_rate: '13% CAGR'
-  variant: 'holographic - matrix'
+  growth_rate: '13% CAGR';
+variant: 'holographic - matrix'
   contact_info: contact;
   real_implementation: true;
   implementation_details: 'Portal + labels + analytics'
   launch_date: '2025 - 08 - 20'
   customers: 14;
   rating: 4.6;
-  reviews: 5;
-}
+  reviews: 5}
   id: 'automated - email - followups'
   name: 'Automated Email Followups'
   tagline: 'No - lead - left - behind sequences across inboxes'
@@ -5969,16 +5894,15 @@ export const,
   roi: '+1025% more replies'
   competitors: ['Mailshake (lite)GMass'];
   market_size: '$5 B sales engagement (SMB)'
-  growth_rate: '10% CAGR'
-  variant: 'network - futuristic'
+  growth_rate: '10% CAGR';
+variant: 'network - futuristic'
   contact_info: contact;
   real_implementation: true;
   implementation_details: 'Sequencer + inbox + analytics'
   launch_date: '2025 - 08 - 20'
   customers: 28;
   rating: 4.5;
-  reviews: 8;
-}
+  reviews: 8}
   id: 'podcast - transcription - service',
   name: 'Podcast Transcription Service',
   tagline: 'Accurate transcripts, chapters, and SEO blog exports'
@@ -6003,16 +5927,15 @@ export const,
   roi: 'Saves 24 hrs / episode'
   competitors: ['RevDescript (lite)'];
   market_size: '$1 B+ transcription'
-  growth_rate: '12% CAGR'
-  variant: 'ai - futuristic'
+  growth_rate: '12% CAGR';
+variant: 'ai - futuristic'
   contact_info: contact;
   real_implementation: true;
   implementation_details: 'Uploader + ASR + export'
   launch_date: '2025 - 08 - 20'
   customers: 20;
   rating: 4.6;
-  reviews: 6;
-}
+  reviews: 6}
   id: 'ai - seo - content - optimizer',
   name: 'AI SEO Content Optimizer',
   tagline: 'Live on - page audits and SEO - aware rewrites',
@@ -6037,16 +5960,15 @@ export const,
   roi: '+2040% organic traffic lift'
   competitors: ['Surfer SEOMarketMuse'];
   market_size: '$2 B SEO tooling'
-  growth_rate: '11% CAGR'
-  variant: 'network - futuristic'
+  growth_rate: '11% CAGR';
+variant: 'network - futuristic'
   contact_info: contact;
   real_implementation: true;
   implementation_details: 'Crawler + editor plugin + suggestions'
   launch_date: '2025 - 08 - 20'
   customers: 33;
   rating: 4.7;
-  reviews: 10;
-}
+  reviews: 10}
   id: 'social - scheduler - ai',
   name: 'Social Scheduler AI',
   tagline: 'Auto - generate, schedule, and repurpose posts cross - platform'
@@ -6071,16 +5993,15 @@ export const,
   roi: 'Saves 46 hrs / week'
   competitors: ['BufferHootsuite (lite)'];
   market_size: '$4 B social tooling'
-  growth_rate: '10% CAGR'
-  variant: 'holographic - matrix'
+  growth_rate: '10% CAGR';
+variant: 'holographic - matrix'
   contact_info: contact;
   real_implementation: true;
   implementation_details: 'Calendar + generator + queue'
   launch_date: '2025 - 08 - 20'
   customers: 26;
   rating: 4.5;
-  reviews: 7;
-}
+  reviews: 7}
   id: 'lead - enrichment - api',
   name: 'Lead Enrichment API',
   tagline: 'Company, role, and social signals from an email / domain'
@@ -6105,16 +6026,15 @@ export const,
   roi: 'Improves MQLSQL by 1020%'
   competitors: ['Clearbit (lite)Apollo enrichment'];
   market_size: '$3 B enrichment'
-  growth_rate: '9% CAGR'
-  variant: 'ai - futuristic'
+  growth_rate: '9% CAGR';
+variant: 'ai - futuristic'
   contact_info: contact;
   real_implementation: true;
   implementation_details: 'REST + dashboard + quotas'
   launch_date: '2025 - 08 - 20'
   customers: 9;
   rating: 4.4;
-  reviews: 4;
-}
+  reviews: 4}
   id: 'consent - management - cmp',
   name: 'Consent Management CMP',
   tagline: 'GDPR / CCPA consent banners, preferences, and audit logs'
@@ -6139,16 +6059,15 @@ export const,
   roi: 'Avoid fines, preserve UX'
   competitors: ['OneTrust (lite)CookieYes'];
   market_size: '$4 B privacy tooling'
-  growth_rate: '14% CAGR'
-  variant: 'network - futuristic'
+  growth_rate: '14% CAGR';
+variant: 'network - futuristic'
   contact_info: contact;
   real_implementation: true;
   implementation_details: 'Banner + preferences + logs'
   launch_date: '2025 - 08 - 20'
   customers: 37;
   rating: 4.7;
-  reviews: 10;
-}
+  reviews: 10}
   id: 'cookie - scanner - pro',
   name: 'Cookie Scanner Pro',
   tagline: 'Auto - detects cookies + trackers and updates your policy',
@@ -6173,16 +6092,15 @@ export const,
   roi: 'Automates tedious checks'
   competitors: ['Cookiebot (lite)'];
   market_size: '$1 B cookie tools'
-  growth_rate: '8% CAGR'
-  variant: 'holographic - matrix'
+  growth_rate: '8% CAGR';
+variant: 'holographic - matrix'
   contact_info: contact;
   real_implementation: true;
   implementation_details: 'Scanner + policy generator'
   launch_date: '2025 - 08 - 20'
   customers: 19;
   rating: 4.5;
-  reviews: 5;
-}
+  reviews: 5}
   id: 'statuspage - sla - tracker',
   name: 'StatusPage SLA Tracker',
   tagline: 'Track uptime / incidents and publish SLA reports',
@@ -6207,16 +6125,15 @@ export const,
   roi: 'Reduce support tickets ~20%'
   competitors: ['Statuspage (lite)'];
   market_size: '$1 B status tools'
-  growth_rate: '9% CAGR'
-  variant: 'ai - futuristic'
+  growth_rate: '9% CAGR';
+variant: 'ai - futuristic'
   contact_info: contact;
   real_implementation: true;
   implementation_details: 'Monitors + incidents + pages'
   launch_date: '2025 - 08 - 20'
   customers: 11;
   rating: 4.4;
-  reviews: 3;
-}
+  reviews: 3}
   id: 'agentic - lead - qualifier',
   name: 'Agentic Lead Qualifier',
   tagline: 'Website chat agent that pre - qualifies and routes leads',
@@ -6241,16 +6158,15 @@ export const,
   roi: '+1530% qualified demos'
   competitors: ['Drift (lite)Intercom Fin'];
   market_size: '$3 B chatbots'
-  growth_rate: '12% CAGR'
-  variant: 'network - futuristic'
+  growth_rate: '12% CAGR';
+variant: 'network - futuristic'
   contact_info: contact;
   real_implementation: true;
   implementation_details: 'Widget + flows + routing'
   launch_date: '2025 - 08 - 20'
   customers: 23;
   rating: 4.6;
-  reviews: 7;
-}
+  reviews: 7}
   id: 'gdpr - dsar - portal - lite',
   name: 'GDPR DSAR Portal Lite',
   tagline: 'Accept, verify, export, and fulfill data subject requests'
@@ -6275,16 +6191,15 @@ export const,
   roi: 'Avoid compliance toil and risk'
   competitors: ['Transcend (lite)Osano'];
   market_size: '$6 B privacy ops'
-  growth_rate: '18% CAGR'
-  variant: 'holographic - matrix'
+  growth_rate: '18% CAGR';
+variant: 'holographic - matrix'
   contact_info: contact;
   real_implementation: true;
   implementation_details: 'Portal + workflow + exports'
   launch_date: '2025 - 08 - 20'
   customers: 10;
   rating: 4.5;
-  reviews: 4;
-}
+  reviews: 4}
   id: 'feature - flag - auditor',
   name: 'Feature Flag Auditor',
   tagline: 'Flag hygiene checks and end - of - life automation',
@@ -6309,16 +6224,15 @@ export const,
   roi: 'Avoid outages, reduce toil'
   competitors: ['LaunchDarkly add - ons'];
   market_size: '$1 B flags'
-  growth_rate: '10% CAGR'
-  variant: 'ai - futuristic'
+  growth_rate: '10% CAGR';
+variant: 'ai - futuristic'
   contact_info: contact;
   real_implementation: true;
   implementation_details: 'Scanner + PR bot'
   launch_date: '2025 - 08 - 20'
   customers: 8;
   rating: 4.4;
-  reviews: 3;
-}
+  reviews: 3}
   id: 'postgres - index - advisor - pro',
   name: 'Postgres Index Advisor Pro',
   tagline: 'Index recommendations and controlled PR rollouts',
@@ -6343,16 +6257,15 @@ export const,
   roi: 'Cut query costs 2050%'
   competitors: ['pganalyze (adjacent)'];
   market_size: '$2 B DB tuning'
-  growth_rate: '9% CAGR'
-  variant: 'network - futuristic'
+  growth_rate: '9% CAGR';
+variant: 'network - futuristic'
   contact_info: contact;
   real_implementation: true;
   implementation_details: 'Collector + advisor + PRs'
   launch_date: '2025 - 08 - 20'
   customers: 15;
   rating: 4.6;
-  reviews: 5;
-}
+  reviews: 5}
   id: 's3 - lifecycle - optimizer'
   name: 'S3 Lifecycle Optimizer'
   tagline: 'Move objects between storage classes to cut costs'
@@ -6377,16 +6290,15 @@ export const,
   roi: 'Save 1030% storage spend'
   competitors: ['Kubecost (adjacent)'];
   market_size: '$3 B cloud cost'
-  growth_rate: '12% CAGR'
-  variant: 'holographic - matrix'
+  growth_rate: '12% CAGR';
+variant: 'holographic - matrix'
   contact_info: contact;
   real_implementation: true;
   implementation_details: 'Analyzer + simulator + rule export'
   launch_date: '2025 - 08 - 20'
   customers: 17;
   rating: 4.5;
-  reviews: 4;
-}
+  reviews: 4}
   id: 'pii - discovery - scanner',
   name: 'PII Discovery Scanner',
   tagline: 'Scan buckets and DBs for PII / PHI with evidence exports',
@@ -6411,16 +6323,15 @@ export const,
   roi: 'Avoid incidents and fines'
   competitors: ['Google DLPAWS Macie'];
   market_size: '$5 B data security'
-  growth_rate: '15% CAGR'
-  variant: 'ai - futuristic'
+  growth_rate: '15% CAGR';
+variant: 'ai - futuristic'
   contact_info: contact;
   real_implementation: true;
   implementation_details: 'Connectors + scan jobs + exports'
   launch_date: '2025 - 08 - 20'
   customers: 13;
   rating: 4.6;
-  reviews: 5;
-}
+  reviews: 5}
   id: 'api - breaking - change - watcher',
   name: 'API Breaking Change Watcher',
   tagline: 'Schema diffs with CI gates and notifications',
@@ -6445,16 +6356,15 @@ export const,
   roi: 'Fewer incidents, faster integration'
   competitors: ['Stoplight (adjacent)'];
   market_size: '$1 B API tooling'
-  growth_rate: '9% CAGR'
-  variant: 'network - futuristic'
+  growth_rate: '9% CAGR';
+variant: 'network - futuristic'
   contact_info: contact;
   real_implementation: true;
   implementation_details: 'Registry + diff engine + CI'
   launch_date: '2025 - 08 - 20'
   customers: 12;
   rating: 4.5;
-  reviews: 3;
-}
+  reviews: 3}
   id: 'synthetic - journey - monitor',
   name: 'Synthetic Journey Monitor',
   tagline: 'Record and replay user flows with SLO alerts',
@@ -6479,16 +6389,15 @@ export const,
   roi: 'Prevent broken funnels'
   competitors: ['ChecklyDatadog Synthetics'];
   market_size: '$2 B testing / obs'
-  growth_rate: '10% CAGR'
-  variant: 'holographic - matrix'
+  growth_rate: '10% CAGR';
+variant: 'holographic - matrix'
   contact_info: contact;
   real_implementation: true;
   implementation_details: 'Recorder + runner + alerts'
   launch_date: '2025 - 08 - 20'
   customers: 21;
   rating: 4.5;
-  reviews: 6;
-}
+  reviews: 6}
   id: 'iam - permission - analyzer'
   name: 'IAM Permission Analyzer'
   tagline: 'Detect over - privileged access and propose least - privilege policies'
@@ -6513,16 +6422,15 @@ export const,
   roi: 'Reduce risk + audit toil'
   competitors: ['Cloud Custodian (DIY)'];
   market_size: '$3 B cloud sec'
-  growth_rate: '13% CAGR'
-  variant: 'ai - futuristic'
+  growth_rate: '13% CAGR';
+variant: 'ai - futuristic'
   contact_info: contact;
   real_implementation: true;
   implementation_details: 'Collector + analyzer + PRs'
   launch_date: '2025 - 08 - 20'
   customers: 9;
   rating: 4.6;
-  reviews: 3;
-}
+  reviews: 3}
   id: 'warehouse - cost - optimizer'
   name: 'Data Warehouse Cost Optimizer'
   tagline: 'Right - size warehouses and schedule off - peak workloads'
@@ -6547,16 +6455,15 @@ export const,
   roi: '1030% lower DW costs'
   competitors: ['SelectStar (adjacent)'];
   market_size: '$2 B finops DW'
-  growth_rate: '12% CAGR'
-  variant: 'network - futuristic'
+  growth_rate: '12% CAGR';
+variant: 'network - futuristic'
   contact_info: contact;
   real_implementation: true;
   implementation_details: 'Analyzer + simulator + PRs'
   launch_date: '2025 - 08 - 20'
   customers: 7;
   rating: 4.5;
-  reviews: 3;
-}
+  reviews: 3}
   id: 'email - warmup - monitor'
   name: 'Email Warmup & Reputation Monitor'
   tagline: 'Track sender reputation and run inbox placement tests'
@@ -6581,16 +6488,15 @@ export const,
   roi: 'Protects domain reputation'
   competitors: ['Warmup InboxMailreach'];
   market_size: '$1 B deliverability'
-  growth_rate: '9% CAGR'
-  variant: 'holographic - matrix'
+  growth_rate: '9% CAGR';
+variant: 'holographic - matrix'
   contact_info: contact;
   real_implementation: true;
   implementation_details: 'Warmup + tests + alerts'
   launch_date: '2025 - 08 - 20'
   customers: 16;
   rating: 4.5;
-  reviews: 4;
-}
+  reviews: 4}
   id: 'ai - meeting - to - ticket',
   name: 'AI MeetingtoTicket Copilot',
   tagline: 'Turn meeting action items into Jira / GitHub tickets',
@@ -6615,16 +6521,15 @@ export const,
   roi: 'Close the loop on action items'
   competitors: ['Fathom + manual'];
   market_size: '$2 B productivity'
-  growth_rate: '9% CAGR'
-  variant: 'ai - futuristic'
+  growth_rate: '9% CAGR';
+variant: 'ai - futuristic'
   contact_info: contact;
   real_implementation: true;
   implementation_details: 'Transcribe + extract + tickets'
   launch_date: '2025 - 08 - 20'
   customers: 24;
   rating: 4.6;
-  reviews: 6;
-}
+  reviews: 6}
 		rating: 4.6;
 		reviews: 6;
 // const contact = {;
@@ -6816,8 +6721,8 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		marketSiz,
   e: '$10B+ email productivity'
 		growthRat,
-  e: '15% CAGR'
-		varian,
+  e: '15% CAGR';
+varian,
   t: 'network-futuristic'
 		contactInf,
   o: contact;
@@ -6885,8 +6790,8 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		marketSiz,
   e: '$7B research tooling'
 		growthRat,
-  e: '9% CAGR'
-		varian,
+  e: '9% CAGR';
+varian,
   t: 'holographic-matrix'
 		contactInf,
   o: contact;
@@ -6954,8 +6859,8 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		marketSiz,
   e: '$3B productivity niche'
 		growthRat,
-  e: '8% CAGR'
-		varian,
+  e: '8% CAGR';
+varian,
   t: 'ai-futuristic'
 		contactInf,
   o: contact;
@@ -7023,8 +6928,8 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		marketSiz,
   e: '$6B event tooling'
 		growthRat,
-  e: '10% CAGR'
-		varian,
+  e: '10% CAGR';
+varian,
   t: 'network-futuristic'
 		contactInf,
   o: contact;
@@ -7090,8 +6995,8 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		marketSiz,
   e: '$12B affiliate'
 		growthRat,
-  e: '9% CAGR'
-		varian,
+  e: '9% CAGR';
+varian,
   t: 'holographic-matrix'
 		contactInf,
   o: contact;
@@ -7157,8 +7062,8 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		marketSiz,
   e: '$2B privacy analytics'
 		growthRat,
-  e: '14% CAGR'
-		varian,
+  e: '14% CAGR';
+varian,
   t: 'network-futuristic'
 		contactInf,
   o: contact;
@@ -7224,8 +7129,8 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		marketSiz,
   e: '$10B ITSM SMB'
 		growthRat,
-  e: '11% CAGR'
-		varian,
+  e: '11% CAGR';
+varian,
   t: 'ai-futuristic'
 		contactInf,
   o: contact;
@@ -7291,8 +7196,8 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		marketSiz,
   e: '$4B returns tooling'
 		growthRat,
-  e: '13% CAGR'
-		varian,
+  e: '13% CAGR';
+varian,
   t: 'holographic-matrix'
 		contactInf,
   o: contact;
@@ -7358,8 +7263,8 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		marketSiz,
   e: '$5B sales engagement (SMB)'
 		growthRat,
-  e: '10% CAGR'
-		varian,
+  e: '10% CAGR';
+varian,
   t: 'network-futuristic'
 		contactInf,
   o: contact;
@@ -7425,8 +7330,8 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		marketSiz,
   e: '$1B+ transcription'
 		growthRat,
-  e: '12% CAGR'
-		varian,
+  e: '12% CAGR';
+varian,
   t: 'ai-futuristic'
 		contactInf,
   o: contact;
@@ -7492,8 +7397,8 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		marketSiz,
   e: '$2B SEO tooling'
 		growthRat,
-  e: '11% CAGR'
-		varian,
+  e: '11% CAGR';
+varian,
   t: 'network-futuristic'
 		contactInf,
   o: contact;
@@ -7559,8 +7464,8 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		marketSiz,
   e: '$4B social tooling'
 		growthRat,
-  e: '10% CAGR'
-		varian,
+  e: '10% CAGR';
+varian,
   t: 'holographic-matrix'
 		contactInf,
   o: contact;
@@ -7626,8 +7531,8 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		marketSiz,
   e: '$3B enrichment'
 		growthRat,
-  e: '9% CAGR'
-		varian,
+  e: '9% CAGR';
+varian,
   t: 'ai-futuristic'
 		contactInf,
   o: contact;
@@ -7693,8 +7598,8 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		marketSiz,
   e: '$4B privacy tooling'
 		growthRat,
-  e: '14% CAGR'
-		varian,
+  e: '14% CAGR';
+varian,
   t: 'network-futuristic'
 		contactInf,
   o: contact;
@@ -7760,8 +7665,8 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		marketSiz,
   e: '$1B cookie tools'
 		growthRat,
-  e: '8% CAGR'
-		varian,
+  e: '8% CAGR';
+varian,
   t: 'holographic-matrix'
 		contactInf,
   o: contact;
@@ -7827,8 +7732,8 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		marketSiz,
   e: '$1B status tools'
 		growthRat,
-  e: '9% CAGR'
-		varian,
+  e: '9% CAGR';
+varian,
   t: 'ai-futuristic'
 		contactInf,
   o: contact;
@@ -7894,8 +7799,8 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		marketSiz,
   e: '$3B chatbots'
 		growthRat,
-  e: '12% CAGR'
-		varian,
+  e: '12% CAGR';
+varian,
   t: 'network-futuristic'
 		contactInf,
   o: contact;
@@ -7961,8 +7866,8 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		marketSiz,
   e: '$6B privacy ops'
 		growthRat,
-  e: '18% CAGR'
-		varian,
+  e: '18% CAGR';
+varian,
   t: 'holographic-matrix'
 		contactInf,
   o: contact;
@@ -8028,8 +7933,8 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		marketSiz,
   e: '$1B flags'
 		growthRat,
-  e: '10% CAGR'
-		varian,
+  e: '10% CAGR';
+varian,
   t: 'ai-futuristic'
 		contactInf,
   o: contact;
@@ -8095,8 +8000,8 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		marketSiz,
   e: '$2B DB tuning'
 		growthRat,
-  e: '9% CAGR'
-		varian,
+  e: '9% CAGR';
+varian,
   t: 'network-futuristic'
 		contactInf,
   o: contact;
@@ -8162,8 +8067,8 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		marketSiz,
   e: '$3B cloud cost'
 		growthRat,
-  e: '12% CAGR'
-		varian,
+  e: '12% CAGR';
+varian,
   t: 'holographic-matrix'
 		contactInf,
   o: contact;
@@ -8229,8 +8134,8 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		marketSiz,
   e: '$5B data security'
 		growthRat,
-  e: '15% CAGR'
-		varian,
+  e: '15% CAGR';
+varian,
   t: 'ai-futuristic'
 		contactInf,
   o: contact;
@@ -8296,8 +8201,8 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		marketSiz,
   e: '$1B API tooling'
 		growthRat,
-  e: '9% CAGR'
-		varian,
+  e: '9% CAGR';
+varian,
   t: 'network-futuristic'
 		contactInf,
   o: contact;
@@ -8363,8 +8268,8 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		marketSiz,
   e: '$2B testing/obs'
 		growthRat,
-  e: '10% CAGR'
-		varian,
+  e: '10% CAGR';
+varian,
   t: 'holographic-matrix'
 		contactInf,
   o: contact;
@@ -8430,8 +8335,8 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		marketSiz,
   e: '$3B cloud sec'
 		growthRat,
-  e: '13% CAGR'
-		varian,
+  e: '13% CAGR';
+varian,
   t: 'ai-futuristic'
 		contactInf,
   o: contact;
@@ -8497,8 +8402,8 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		marketSiz,
   e: '$2B finops DW'
 		growthRat,
-  e: '12% CAGR'
-		varian,
+  e: '12% CAGR';
+varian,
   t: 'network-futuristic'
 		contactInf,
   o: contact;
@@ -8564,8 +8469,8 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		marketSiz,
   e: '$1B deliverability'
 		growthRat,
-  e: '9% CAGR'
-		varian,
+  e: '9% CAGR';
+varian,
   t: 'holographic-matrix'
 		contactInf,
   o: contact;
@@ -8631,8 +8536,8 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		marketSiz,
   e: '$2B productivity'
 		growthRat,
-  e: '9% CAGR'
-		varian,
+  e: '9% CAGR';
+varian,
   t: 'ai-futuristic'
 		contactInf,
   o: contact;
@@ -8701,8 +8606,8 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   market_siz,
   e: '$10B+ email productivity'
   growth_rat,
-  e: '15% CAGR'
-  varian,
+  e: '15% CAGR';
+varian,
   t: 'network - futuristic'
   contact_inf,
   o: contact;
@@ -8770,8 +8675,8 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   market_siz,
   e: '$7B research tooling'
   growth_rat,
-  e: '9% CAGR'
-  varian,
+  e: '9% CAGR';
+varian,
   t: 'holographic - matrix'
   contact_inf,
   o: contact;
@@ -8839,8 +8744,8 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   market_siz,
   e: '$3B productivity niche'
   growth_rat,
-  e: '8% CAGR'
-  varian,
+  e: '8% CAGR';
+varian,
   t: 'ai - futuristic'
   contact_inf,
   o: contact;
@@ -8908,8 +8813,8 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   market_siz,
   e: '$6B event tooling'
   growth_rat,
-  e: '10% CAGR'
-  varian,
+  e: '10% CAGR';
+varian,
   t: 'network - futuristic'
   contact_inf,
   o: contact;
@@ -8975,8 +8880,8 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   market_siz,
   e: '$12B affiliate'
   growth_rat,
-  e: '9% CAGR'
-  varian,
+  e: '9% CAGR';
+varian,
   t: 'holographic - matrix'
   contact_inf,
   o: contact;
@@ -9042,8 +8947,8 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   market_siz,
   e: '$2B privacy analytics'
   growth_rat,
-  e: '14% CAGR'
-  varian,
+  e: '14% CAGR';
+varian,
   t: 'network - futuristic'
   contact_inf,
   o: contact;
@@ -9109,8 +9014,8 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   market_siz,
   e: '$10B ITSM SMB'
   growth_rat,
-  e: '11% CAGR'
-  varian,
+  e: '11% CAGR';
+varian,
   t: 'ai - futuristic'
   contact_inf,
   o: contact;
@@ -9176,8 +9081,8 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   market_siz,
   e: '$4B returns tooling'
   growth_rat,
-  e: '13% CAGR'
-  varian,
+  e: '13% CAGR';
+varian,
   t: 'holographic - matrix'
   contact_inf,
   o: contact;
@@ -9243,8 +9148,8 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   market_siz,
   e: '$5B sales engagement (SMB)'
   growth_rat,
-  e: '10% CAGR'
-  varian,
+  e: '10% CAGR';
+varian,
   t: 'network - futuristic'
   contact_inf,
   o: contact;
@@ -9310,8 +9215,8 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   market_siz,
   e: '$1B+ transcription'
   growth_rat,
-  e: '12% CAGR'
-  varian,
+  e: '12% CAGR';
+varian,
   t: 'ai - futuristic'
   contact_inf,
   o: contact;
@@ -9377,8 +9282,8 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   market_siz,
   e: '$2B SEO tooling'
   growth_rat,
-  e: '11% CAGR'
-  varian,
+  e: '11% CAGR';
+varian,
   t: 'network - futuristic'
   contact_inf,
   o: contact;
@@ -9444,8 +9349,8 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   market_siz,
   e: '$4B social tooling'
   growth_rat,
-  e: '10% CAGR'
-  varian,
+  e: '10% CAGR';
+varian,
   t: 'holographic - matrix'
   contact_inf,
   o: contact;
@@ -9511,8 +9416,8 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   market_siz,
   e: '$3B enrichment'
   growth_rat,
-  e: '9% CAGR'
-  varian,
+  e: '9% CAGR';
+varian,
   t: 'ai - futuristic'
   contact_inf,
   o: contact;
@@ -9578,8 +9483,8 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   market_siz,
   e: '$4B privacy tooling'
   growth_rat,
-  e: '14% CAGR'
-  varian,
+  e: '14% CAGR';
+varian,
   t: 'network - futuristic'
   contact_inf,
   o: contact;
@@ -9645,8 +9550,8 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   market_siz,
   e: '$1B cookie tools'
   growth_rat,
-  e: '8% CAGR'
-  varian,
+  e: '8% CAGR';
+varian,
   t: 'holographic - matrix'
   contact_inf,
   o: contact;
@@ -9712,8 +9617,8 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   market_siz,
   e: '$1B status tools'
   growth_rat,
-  e: '9% CAGR'
-  varian,
+  e: '9% CAGR';
+varian,
   t: 'ai - futuristic'
   contact_inf,
   o: contact;
@@ -9779,8 +9684,8 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   market_siz,
   e: '$3B chatbots'
   growth_rat,
-  e: '12% CAGR'
-  varian,
+  e: '12% CAGR';
+varian,
   t: 'network - futuristic'
   contact_inf,
   o: contact;
@@ -9846,8 +9751,8 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   market_siz,
   e: '$6B privacy ops'
   growth_rat,
-  e: '18% CAGR'
-  varian,
+  e: '18% CAGR';
+varian,
   t: 'holographic - matrix'
   contact_inf,
   o: contact;
@@ -9913,8 +9818,8 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   market_siz,
   e: '$1B flags'
   growth_rat,
-  e: '10% CAGR'
-  varian,
+  e: '10% CAGR';
+varian,
   t: 'ai - futuristic'
   contact_inf,
   o: contact;
@@ -9980,8 +9885,8 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   market_siz,
   e: '$2B DB tuning'
   growth_rat,
-  e: '9% CAGR'
-  varian,
+  e: '9% CAGR';
+varian,
   t: 'network - futuristic'
   contact_inf,
   o: contact;
@@ -10047,8 +9952,8 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   market_siz,
   e: '$3B cloud cost'
   growth_rat,
-  e: '12% CAGR'
-  varian,
+  e: '12% CAGR';
+varian,
   t: 'holographic - matrix'
   contact_inf,
   o: contact;
@@ -10114,8 +10019,8 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   market_siz,
   e: '$5B data security'
   growth_rat,
-  e: '15% CAGR'
-  varian,
+  e: '15% CAGR';
+varian,
   t: 'ai - futuristic'
   contact_inf,
   o: contact;
@@ -10181,8 +10086,8 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   market_siz,
   e: '$1B API tooling'
   growth_rat,
-  e: '9% CAGR'
-  varian,
+  e: '9% CAGR';
+varian,
   t: 'network - futuristic'
   contact_inf,
   o: contact;
@@ -10248,8 +10153,8 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   market_siz,
   e: '$2B testing / obs'
   growth_rat,
-  e: '10% CAGR'
-  varian,
+  e: '10% CAGR';
+varian,
   t: 'holographic - matrix'
   contact_inf,
   o: contact;
@@ -10315,8 +10220,8 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   market_siz,
   e: '$3B cloud sec'
   growth_rat,
-  e: '13% CAGR'
-  varian,
+  e: '13% CAGR';
+varian,
   t: 'ai - futuristic'
   contact_inf,
   o: contact;
@@ -10382,8 +10287,8 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   market_siz,
   e: '$2B finops DW'
   growth_rat,
-  e: '12% CAGR'
-  varian,
+  e: '12% CAGR';
+varian,
   t: 'network - futuristic'
   contact_inf,
   o: contact;
@@ -10449,8 +10354,8 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   market_siz,
   e: '$1B deliverability'
   growth_rat,
-  e: '9% CAGR'
-  varian,
+  e: '9% CAGR';
+varian,
   t: 'holographic - matrix'
   contact_inf,
   o: contact;
@@ -10516,8 +10421,8 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   market_siz,
   e: '$2B productivity'
   growth_rat,
-  e: '9% CAGR'
-  varian,
+  e: '9% CAGR';
+varian,
   t: 'ai - futuristic'
   contact_inf,
   o: contact;

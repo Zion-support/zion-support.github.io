@@ -10,13 +10,13 @@ import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import Analytics from './components/Analytics';
 import SecurityEnhancer from './components/SecurityEnhancer';
-// Dynamically import heavy components for better performance
+// Dynamically import heavy components for better performance;
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
 const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
 const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
 const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
 const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
-// Preload critical components
+// Preload critical components;
 const preloadComponents = () => {
   if (typeof window !== 'undefined') {
     // Preload critical components after initial render
@@ -26,7 +26,7 @@ const preloadComponents = () => {
 }, 100);)
 }
 };
-// Loading skeleton component
+// Loading skeleton component;
 const ServiceCardSkeleton: React.FC = memo(() => (
   <div></div>
     <div></div>
@@ -35,14 +35,14 @@ const ServiceCardSkeleton: React.FC = memo(() => (
   </div>
 ));
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
-const HomePage: React.FC = memo(() => {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
+const HomePage: React.FC = memo(() => {;
+const [isLoaded, setIsLoaded] = useState(false);
+const [isVisible, setIsVisible] = useState(false);
   
   useEffect(() => {
     setIsLoaded(true);
-    // Trigger visibility animation
-    const timer = setTimeout(() => setIsVisible(true), 100);
+    // Trigger visibility animation;
+const timer = setTimeout(() => setIsVisible(true), 100);
     // Preload components
     preloadComponents();
     return () => clearTimeout(timer);)
@@ -57,7 +57,7 @@ const HomePage: React.FC = memo(() => {
 }
   }, []);
   return (
-    <>
+    <React.Fragment>
       <SEOOptimizer
         title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
@@ -1470,5 +1470,5 @@ const HomePage: React.FC = memo(() => {
   );)
 });;
 
-HomePage.displayName = 'HomePage';
+HomePage.displayName = 'HomePage'
 export default HomePage;

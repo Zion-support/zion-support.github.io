@@ -75,8 +75,7 @@ export interface Revolutionary2027AiService {/* TODO: Fix JSX expression */}
   realImplementation: boolean;
   contactInfo: unknown;
     mobile: string, email: string;
-    address: string;
-  }
+    address: string}
 }
 export const revolutionary2027 AIServices: Revolutionary2027 AiService[] = [,
     id: "2027-revolutionary-ai", name: "2027 Revolutionary AI Platform",

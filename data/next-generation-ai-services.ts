@@ -1,3 +1,4 @@
+import React from 'react';
 export interface NextGenerationAIService;
 export interface NextGenerationAIService {;
   id: string;
@@ -134,20 +135,17 @@ export interface NextGenerationAIService {}
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
-}
+  reviews: number}
   reviews: number;    mobile: string;
     email: string;
     address: string;
-    website: string;
-  }
+    website: string}
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
-}
+  reviews: number}
 export const nextGenerationAIServices: NextGenerationAIService[] = [
   // Advanced AI Agents & Autonomous Systems;
     id: 'ai-autonomous-business-agent',
@@ -234,8 +232,8 @@ export const,
     roi: 'Average customer sees 800% ROI within 6 months through 24/7 operations and intelligent decision-making.',
     competitors: ['No direct competitors', 'Partial solutions: UiPath, Automation Anywhere'],
     marketSize: '$50B autonomous systems market'
-    growthRate: '400% annual growth'
-    variant: 'ai-futuristic'
+    growthRate: '400% annual growth';
+variant: 'ai-futuristic'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
@@ -246,8 +244,7 @@ export const,
     launchDate: '2024-12-01'
     customers: 150;
     rating: 4.9;
-    reviews: 89;
-  },
+    reviews: 89},
   // Quantum AI Computing Platform;
     id: 'quantum-ai-computing-platform',
     name: 'Quantum AI Computing Platform',
@@ -293,8 +290,8 @@ export const,
     marketSiz,
   e: '$50B autonomous systems market',
     growthRat,
-  e: '400% annual growth',
-    varian,
+  e: '400% annual growth',;
+varian,
   t: 'ai-futuristic',
     contactInf,
   o: unknown,
@@ -362,8 +359,8 @@ export const,
     roi: 'Research institutions report 1000%+ ROI through breakthrough discoveries and accelerated research timelines.',
     competitors: ['IBM Quantum', 'Google Quantum AI', 'Microsoft Azure Quantum', 'Amazon Braket'],
     marketSize: '$1.5B quantum computing market'
-    growthRate: '500% annual growth'
-    variant: 'quantum-advanced'
+    growthRate: '500% annual growth';
+variant: 'quantum-advanced'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
@@ -374,8 +371,7 @@ export const,
     launchDate: '2024-11-15'
     customers: 75;
     rating: 4.8;
-    reviews: 45;
-  },
+    reviews: 45},
   // Neural Interface Development Platform;
     id: 'neural-interface-development-platform',
     name: 'Neural Interface Development Platform',
@@ -420,8 +416,8 @@ export const,
     marketSiz,
   e: '$1.5B quantum computing market',
     growthRat,
-  e: '500% annual growth',
-    varian,
+  e: '500% annual growth',;
+varian,
   t: 'quantum-advanced',
     contactInf,
   o: unknown,
@@ -489,8 +485,8 @@ export const,
     roi: 'Medical device companies report 500% ROI through accelerated development and improved patient outcomes.',
     competitors: ['Neuralink', 'Kernel', 'CTRL-labs', 'Paradromics'],
     marketSize: '$2.5B brain-computer interface market'
-    growthRate: '350% annual growth'
-    variant: 'neural-quantum'
+    growthRate: '350% annual growth';
+variant: 'neural-quantum'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
@@ -501,8 +497,7 @@ export const,
     launchDate: '2024-10-01'
     customers: 120;
     rating: 4.7;
-    reviews: 67;
-  },
+    reviews: 67},
   // AI-Powered Space Exploration Platform;
     id: 'ai-space-exploration-platform',
     name: 'AI-Powered Space Exploration Platform',
@@ -547,8 +542,8 @@ export const,
     marketSiz,
   e: '$2.5B brain-computer interface market',
     growthRat,
-  e: '350% annual growth',
-    varian,
+  e: '350% annual growth',;
+varian,
   t: 'neural-quantum',
     contactInf,
   o: unknown,
@@ -616,8 +611,8 @@ export const,
     roi: 'Space companies report 600% ROI through improved mission success rates and reduced operational costs.',
     competitors: ['SpaceX', 'Blue Origin', 'Traditional space agencies', 'Satellite companies'],
     marketSize: '$400B space economy'
-    growthRate: '250% annual growth'
-    variant: 'quantum-space'
+    growthRate: '250% annual growth';
+variant: 'quantum-space'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
@@ -628,8 +623,7 @@ export const,
     launchDate: '2024-09-15'
     customers: 45;
     rating: 4.9;
-    reviews: 28;
-  },
+    reviews: 28},
   // Biotech AI Drug Discovery Platform;
     id: 'biotech-ai-drug-discovery',
     name: 'Biotech AI Drug Discovery Platform',
@@ -674,8 +668,8 @@ export const,
     marketSiz,
   e: '$400B space economy',
     growthRat,
-  e: '250% annual growth',
-    varian,
+  e: '250% annual growth',;
+varian,
   t: 'quantum-space',
     contactInf,
   o: unknown,
@@ -743,8 +737,8 @@ export const,
     roi: 'Pharmaceutical companies report 800% ROI through accelerated drug development and improved success rates.',
     competitors: ['Insilico Medicine', 'BenevolentAI', 'Atomwise', 'Recursion Pharmaceuticals'],
     marketSize: '$50B AI drug discovery market'
-    growthRate: '400% annual growth'
-    variant: 'ai-futuristic'
+    growthRate: '400% annual growth';
+variant: 'ai-futuristic'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
@@ -755,8 +749,7 @@ export const,
     launchDate: '2024-08-01'
     customers: 85;
     rating: 4.8;
-    reviews: 52;
-  },
+    reviews: 52},
   // Quantum Financial Trading Platform;
     id: 'quantum-financial-trading-platform',
     name: 'Quantum Financial Trading Platform',
@@ -801,8 +794,8 @@ export const,
     marketSiz,
   e: '$50B AI drug discovery market',
     growthRat,
-  e: '400% annual growth',
-    varian,
+  e: '400% annual growth',;
+varian,
   t: 'ai-futuristic',
     contactInf,
   o: unknown,
@@ -870,8 +863,8 @@ export const,
     roi: 'Investment firms report 400% ROI through improved trading performance and risk management.',
     competitors: ['Traditional trading platforms', 'Quantitative trading firms', 'Quantum computing companies'],
     marketSize: '$15B algorithmic trading market'
-    growthRate: '300% annual growth'
-    variant: 'quantum-advanced'
+    growthRate: '300% annual growth';
+variant: 'quantum-advanced'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
@@ -882,8 +875,7 @@ export const,
     launchDate: '2024-07-15'
     customers: 95;
     rating: 4.7;
-    reviews: 58;
-  },
+    reviews: 58},
   // AI-Powered Metaverse Development Platform;
     id: 'ai-metaverse-development-platform',
     name: 'AI-Powered Metaverse Development Platform',
@@ -928,8 +920,8 @@ export const,
     marketSiz,
   e: '$15B algorithmic trading market',
     growthRat,
-  e: '300% annual growth',
-    varian,
+  e: '300% annual growth',;
+varian,
   t: 'quantum-advanced',
     contactInf,
   o: unknown,
@@ -997,8 +989,8 @@ export const,
     roi: 'Gaming companies report 500% ROI through increased user engagement and reduced development costs.',
     competitors: ['Unity', 'Unreal Engine', 'Roblox', 'Meta Platforms'],
     marketSize: '$800B metaverse market'
-    growthRate: '350% annual growth'
-    variant: 'ai-futuristic'
+    growthRate: '350% annual growth';
+variant: 'ai-futuristic'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
@@ -1009,8 +1001,7 @@ export const,
     launchDate: '2024-06-01'
     customers: 180;
     rating: 4.6;
-    reviews: 95;
-  },
+    reviews: 95},
   // Autonomous Vehicle AI Platform;
     id: 'autonomous-vehicle-ai-platform',
     name: 'Autonomous Vehicle AI Platform',
@@ -1055,8 +1046,8 @@ export const,
     marketSiz,
   e: '$800B metaverse market',
     growthRat,
-  e: '350% annual growth',
-    varian,
+  e: '350% annual growth',;
+varian,
   t: 'ai-futuristic',
     contactInf,
   o: unknown,
@@ -1124,8 +1115,8 @@ export const,
     roi: 'Transportation companies report 600% ROI through reduced accidents and improved operational efficiency.',
     competitors: ['Tesla', 'Waymo', 'Cruise', 'Traditional automotive companies'],
     marketSize: '$100B autonomous vehicle market'
-    growthRate: '400% annual growth'
-    variant: 'ai-futuristic'
+    growthRate: '400% annual growth';
+variant: 'ai-futuristic'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
@@ -1136,8 +1127,7 @@ export const,
     launchDate: '2024-05-15'
     customers: 65;
     rating: 4.8;
-    reviews: 42;
-  },
+    reviews: 42},
   // Quantum Internet Security Platform;
     id: 'quantum-internet-security-platform',
     name: 'Quantum Internet Security Platform',
@@ -1182,8 +1172,8 @@ export const,
     marketSiz,
   e: '$100B autonomous vehicle market',
     growthRat,
-  e: '400% annual growth',
-    varian,
+  e: '400% annual growth',;
+varian,
   t: 'ai-futuristic',
     contactInf,
   o: unknown,
@@ -1251,8 +1241,8 @@ export const,
     roi: 'Government agencies report 1000% ROI through enhanced security and reduced cyber threats.',
     competitors: ['No direct competitors', 'Traditional cybersecurity companies'],
     marketSize: '$150B cybersecurity market'
-    growthRate: '400% annual growth'
-    variant: 'quantum-cyberpunk'
+    growthRate: '400% annual growth';
+variant: 'quantum-cyberpunk'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
@@ -1263,8 +1253,7 @@ export const,
     launchDate: '2024-04-01'
     customers: 55;
     rating: 4.9;
-    reviews: 33;
-  },
+    reviews: 33},
   // AI-Powered Manufacturing Platform;
     id: 'ai-manufacturing-platform',
     name: 'AI-Powered Manufacturing Platform',
@@ -1309,8 +1298,8 @@ export const,
     marketSiz,
   e: '$150B cybersecurity market',
     growthRat,
-  e: '400% annual growth',
-    varian,
+  e: '400% annual growth',;
+varian,
   t: 'quantum-cyberpunk',
     contactInf,
   o: unknown,
@@ -1378,8 +1367,8 @@ export const,
     roi: 'Manufacturing companies report 400% ROI through improved efficiency and reduced downtime.',
     competitors: ['Siemens', 'GE Digital', 'PTC', 'Traditional manufacturing software'],
     marketSize: '$200B Industry 4.0 market'
-    growthRate: '250% annual growth'
-    variant: 'ai-futuristic'
+    growthRate: '250% annual growth';
+variant: 'ai-futuristic'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
@@ -1428,8 +1417,8 @@ export const,
     marketSiz,
   e: '$200B Industry 4.0 market',
     growthRat,
-  e: '250% annual growth',
-    varian,
+  e: '250% annual growth',;
+varian,
   t: 'ai-futuristic',
     contactInf,
   o: unknown,

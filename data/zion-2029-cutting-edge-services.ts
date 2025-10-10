@@ -31,8 +31,7 @@ export type ZionCuttingEdgeService2029 =
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  };
+    website: string};
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -44,9 +43,7 @@ export type ZionCuttingEdgeService2029 =
     professional: number;
     enterprise: number;
     currency: string;
-    period: string;
-  };
-}
+    period: string}}
 export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
   // 1. AI-Powered Quantum Computing Optimization Platform;
     id: 'ai-quantum-computing-optimization',
@@ -145,8 +142,7 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
     currenc,
   y: string;
     perio,
-  d: string};
-}
+  d: string}}
 export const,
   zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [,
   // 1. AI-Powered Quantum Computing Optimization Platform,
@@ -199,8 +195,8 @@ export const,
     roi: 'Average customer achieves 300% ROI within 6 months through quantum advantage in optimization problems.',
     competitors: ['IBM Quantum', 'Google Quantum AI', 'Rigetti', 'D-Wave', 'IonQ'],
     marketSize: '$1.3B quantum computing market'
-    growthRate: '32.1% annual growth'
-    variant: 'quantum-ai-futuristic'
+    growthRate: '32.1% annual growth';
+variant: 'quantum-ai-futuristic'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
@@ -265,8 +261,8 @@ export const,
     marketSiz,
   e: '$1.3B quantum computing market',
     growthRat,
-  e: '32.1% annual growth',
-    varian,
+  e: '32.1% annual growth',;
+varian,
   t: 'quantum-ai-futuristic',
     contactInf,
   o: unknown,
@@ -356,8 +352,8 @@ export const,
     roi: 'Average customer achieves 200% ROI within 12 months through reduced delivery costs and improved efficiency.',
     competitors: ['DroneDeploy', 'Skydio', 'DJI Enterprise', 'PrecisionHawk', 'Parrot'],
     marketSize: '$45.8B drone market'
-    growthRate: '16.3% annual growth'
-    variant: 'autonomous-robotics'
+    growthRate: '16.3% annual growth';
+variant: 'autonomous-robotics'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
@@ -422,8 +418,8 @@ export const,
     marketSiz,
   e: '$45.8B drone market',
     growthRat,
-  e: '16.3% annual growth',
-    varian,
+  e: '16.3% annual growth',;
+varian,
   t: 'autonomous-robotics',
     contactInf,
   o: unknown,
@@ -513,8 +509,8 @@ export const,
     roi: 'Average customer achieves 150% ROI within 8 months through reduced fraud and compliance costs.',
     competitors: ['Microsoft Entra', 'Okta', 'Auth0', 'Sovrin', 'uPort'],
     marketSize: '$28.6B identity management market'
-    growthRate: '18.2% annual growth'
-    variant: 'blockchain-identity'
+    growthRate: '18.2% annual growth';
+variant: 'blockchain-identity'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
@@ -579,8 +575,8 @@ export const,
     marketSiz,
   e: '$28.6B identity management market',
     growthRat,
-  e: '18.2% annual growth',
-    varian,
+  e: '18.2% annual growth',;
+varian,
   t: 'blockchain-identity',
     contactInf,
   o: unknown,
@@ -670,8 +666,8 @@ export const,
     roi: 'Average customer achieves 180% ROI within 12 months through reduced climate risks and improved sustainability.',
     competitors: ['ClimateAI', 'Jupiter Intelligence', 'One Concern', 'Climate Corp', 'The Climate Service'],
     marketSize: '$15.2B climate tech market'
-    growthRate: '24.5% annual growth'
-    variant: 'climate-ai-sustainability'
+    growthRate: '24.5% annual growth';
+variant: 'climate-ai-sustainability'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
@@ -736,8 +732,8 @@ export const,
     marketSiz,
   e: '$15.2B climate tech market',
     growthRat,
-  e: '24.5% annual growth',
-    varian,
+  e: '24.5% annual growth',;
+varian,
   t: 'climate-ai-sustainability',
     contactInf,
   o: unknown,
@@ -827,8 +823,8 @@ export const,
     roi: 'Average customer achieves 250% ROI within 18 months through reduced power costs and new AI capabilities.',
     competitors: ['Intel Loihi', 'IBM TrueNorth', 'BrainChip', 'SynSense', 'General Vision'],
     marketSize: '$8.7B neuromorphic computing market'
-    growthRate: '28.9% annual growth'
-    variant: 'neuromorphic-ai-futuristic'
+    growthRate: '28.9% annual growth';
+variant: 'neuromorphic-ai-futuristic'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
@@ -893,8 +889,8 @@ export const,
     marketSiz,
   e: '$8.7B neuromorphic computing market',
     growthRat,
-  e: '28.9% annual growth',
-    varian,
+  e: '28.9% annual growth',;
+varian,
   t: 'neuromorphic-ai-futuristic',
     contactInf,
   o: unknown,
@@ -984,8 +980,8 @@ export const,
     roi: 'Average customer achieves 200% ROI within 12 months through reduced costs and improved efficiency.',
     competitors: ['SAP Ariba', 'Oracle SCM', 'Manhattan Associates', 'JDA Software', 'Blue Yonder'],
     marketSize: '$19.2B supply chain management market'
-    growthRate: '11.8% annual growth'
-    variant: 'supply-chain-ai'
+    growthRate: '11.8% annual growth';
+variant: 'supply-chain-ai'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
@@ -1050,8 +1046,8 @@ export const,
     marketSiz,
   e: '$19.2B supply chain management market',
     growthRat,
-  e: '11.8% annual growth',
-    varian,
+  e: '11.8% annual growth',;
+varian,
   t: 'supply-chain-ai',
     contactInf,
   o: unknown,
@@ -1141,8 +1137,8 @@ export const,
     roi: 'Average customer achieves 180% ROI within 12 months through improved diagnostics and reduced costs.',
     competitors: ['IBM Watson Health', 'Google Health AI', 'Microsoft Healthcare', 'Nuance', 'Zebra Medical'],
     marketSize: '$45.2B AI healthcare market'
-    growthRate: '23.7% annual growth'
-    variant: 'healthcare-ai'
+    growthRate: '23.7% annual growth';
+variant: 'healthcare-ai'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
@@ -1207,8 +1203,8 @@ export const,
     marketSiz,
   e: '$45.2B AI healthcare market',
     growthRat,
-  e: '23.7% annual growth',
-    varian,
+  e: '23.7% annual growth',;
+varian,
   t: 'healthcare-ai',
     contactInf,
   o: unknown,
@@ -1298,8 +1294,8 @@ export const,
     roi: 'Average customer achieves 300% ROI within 12 months through improved returns and reduced costs.',
     competitors: ['Alpaca', 'Robinhood', 'Interactive Brokers', 'TD Ameritrade', 'E*TRADE'],
     marketSize: '$12.8B algorithmic trading market'
-    growthRate: '19.4% annual growth'
-    variant: 'fintech-ai-autonomous'
+    growthRate: '19.4% annual growth';
+variant: 'fintech-ai-autonomous'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
@@ -1364,8 +1360,8 @@ export const,
     marketSiz,
   e: '$12.8B algorithmic trading market',
     growthRat,
-  e: '19.4% annual growth',
-    varian,
+  e: '19.4% annual growth',;
+varian,
   t: 'fintech-ai-autonomous',
     contactInf,
   o: unknown,
@@ -1455,8 +1451,8 @@ export const,
     roi: 'Average customer achieves 200% ROI within 12 months through reduced security incidents and compliance costs.',
     competitors: ['CrowdStrike', 'SentinelOne', 'Darktrace', 'Cylance', 'FireEye'],
     marketSize: '$182.3B cybersecurity market'
-    growthRate: '13.4% annual growth'
-    variant: 'cybersecurity-ai'
+    growthRate: '13.4% annual growth';
+variant: 'cybersecurity-ai'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
@@ -1521,8 +1517,8 @@ export const,
     marketSiz,
   e: '$182.3B cybersecurity market',
     growthRat,
-  e: '13.4% annual growth',
-    varian,
+  e: '13.4% annual growth',;
+varian,
   t: 'cybersecurity-ai',
     contactInf,
   o: unknown,
@@ -1612,8 +1608,8 @@ export const,
     roi: 'Average customer achieves 250% ROI within 18 months through reduced costs and improved efficiency.',
     competitors: ['Cisco Smart Cities', 'Siemens City Performance', 'IBM Smarter Cities', 'Microsoft CityNext', 'Oracle Smart City'],
     marketSize: '$225.1B smart city market'
-    growthRate: '14.8% annual growth'
-    variant: 'smart-city-ai'
+    growthRate: '14.8% annual growth';
+variant: 'smart-city-ai'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
@@ -1673,8 +1669,8 @@ export const getServicesByCategory = (category: string) =>;
     marketSiz,
   e: '$225.1B smart city market',
     growthRat,
-  e: '14.8% annual growth',
-    varian,
+  e: '14.8% annual growth',;
+varian,
   t: 'smart-city-ai',
     contactInf,
   o: unknown,
@@ -1717,15 +1713,12 @@ export const getServicesByCategory = (category: string) =>;
 ];
 export const getServicesByCategory = (categor)
   y: string) =>;
-  return zionCuttingEdgeServices2029.filter(service => service.category === category);
-};
+  return zionCuttingEdgeServices2029.filter(service => service.category === category)};
 export const getPopularServices = () =>
-  return zionCuttingEdgeServices2029.filter(service => service.popular);
-};
+  return zionCuttingEdgeServices2029.filter(service => service.popular)};
 export const getServicesByPriceRange = (minPrice: number) maxPrice: number) =>;
   return zionCuttingEdgeServices2029.filter(service => //     const starterPrice = service.pricing.starter;)
-    return starterPrice >= minPrice && starterPrice <= maxPrice)});
-};
+    return starterPrice >= minPrice && starterPrice <= maxPrice)})};
 export const getServicesByTechnology = (technology: string) =>;
   return zionCuttingEdgeServices2029.filter(service =>),
     service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase())),
@@ -1735,14 +1728,12 @@ export const getServicesByPriceRange = (minPric)
   return zionCuttingEdgeServices2029.filter(service =>
 //     const starterPrice = service.pricing.starter;)
     return starterPrice >= minPrice && starterPrice <= maxPrice)
-  });
-};
+  })};
 export const getServicesByTechnology = (technolog)
   y: string) =>;
   return zionCuttingEdgeServices2029.filter(service =>)
     service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase()))
-  );
-};
+  )};
 export type ZionCuttingEdgeService2029 = i,
   d: string; nam,
   e: string; taglin,
@@ -1788,7 +1779,7 @@ export type ZionCuttingEdgeService2029 = i,
   l: number; enterpris,
   e: number; currenc,
   y: string; perio,
-  d: string}; } export const,
+  d: string}} export const,
   zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [ // 1. AI-Powered Quantum Computing Optimization Platform,
   id: 'ai-quantum-computing-optimization',' nam,
   e: 'AI-Powered Quantum Computing Optimization Platform',' taglin,
@@ -2260,7 +2251,7 @@ export type ZionCuttingEdgeService2029 = i,
   e: 29999,' currenc,
   y: 'USD',' perio,
   d: 'month' } } ]; export const getServicesByCategory = (categor)
-  y: string) => return zionCuttingEdgeServices2029.filter(service => service.category === category); }; export const getPopularServices = () => return zionCuttingEdgeServices2029.filter(service => service.popular); }; export const getServicesByPriceRange = (minPric)
+  y: string) => return zionCuttingEdgeServices2029.filter(service => service.category === category)}; export const getPopularServices = () => return zionCuttingEdgeServices2029.filter(service => service.popular)}; export const getServicesByPriceRange = (minPric)
   e: number) maxPric,
-  e: number) => return zionCuttingEdgeServices2029.filter(service => const starterPrice = service.pricing.starter; return starterPrice >= minPrice && starterPrice <= maxPrice) }); }; export const getServicesByTechnology = (technolog)
-  y: string) => return zionCuttingEdgeServices2029.filter(service => service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase())) ); };'
+  e: number) => return zionCuttingEdgeServices2029.filter(service => const starterPrice = service.pricing.starter; return starterPrice >= minPrice && starterPrice <= maxPrice) })}; export const getServicesByTechnology = (technolog)
+  y: string) => return zionCuttingEdgeServices2029.filter(service => service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase())) )};'

@@ -3,9 +3,9 @@ import {BarChart, Target, Zap, Brain, Shield, CheckCircle, Star, Phone, Mail, Ma
 import { Link } from 'react-router-dom';
 
 import React from 'react';
-
-const SmartAnalyticsPage: React.FC = () => {
-  const features = [
+;
+const SmartAnalyticsPage: React.FC = () => {;
+const features = [
     {
       icon: BarChart,
       title: 'Real-time Dashboards',
@@ -34,8 +34,8 @@ iconicon: Shield,
       benefit:     ,
 $4}
   ];
-
-  const pricingPlans = [
+;
+const pricingPlans = [
       name: 'Starter',
       price: '$299',
       period: '/month',
@@ -152,10 +152,10 @@ $4}
 
 
 import { Link } from 'react-router-dom';
-const SmartAnalyticsPage: React.FC = () => {
-  const features = [];
+const SmartAnalyticsPage: React.FC = () => {;
+const features = [];
   return (
-    {// TODO: Add content;}
+    {// TODO: Add content}
 
 };
   ico,
@@ -176,9 +176,10 @@ const SmartAnalyticsPage: React.FC = () => {
 
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
-
+;
 const PagePage: React.FC = () => {
+return (
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -197,6 +198,8 @@ const PagePage: React.FC = () => {
       </main>
       <Footer />
     </div>
+);
+}
 
       icon: Shield,
       title: 'Enterprise Security',
@@ -232,8 +235,7 @@ const PagePage: React.FC = () => {
                 </ul>
                   className={`w-full block text-center py-3 rounded-lg font-semibold transition-colors ${}
   // TOD,
-  O: Add content;
-}
+  O: Add content}
 //                     plan.popular;
                       ? 'bg-cyan-600 text-white,
   hover:bg-cyan-700'
@@ -282,8 +284,7 @@ const PagePage: React.FC = () => {
                 <MapPin className="w-5 h-5 mr-2 text-cyan-400" />
 
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>
-  );
-};
+  )};
 
 
 export default SmartAnalyticsPage;

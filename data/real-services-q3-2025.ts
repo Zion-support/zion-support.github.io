@@ -39,10 +39,10 @@ export interface Q3Service {id: string, name: string;
   roi?: string;
   competitors?: string[];
   market_size?: string;
-  growth_rate?: string;,
-  variant?: ServiceVariant;
+  growth_rate?: string;,;
+variant?: ServiceVariant;
   customers?: number}
-  rating?: number,
+  rating?: number,;
 const contact =
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -73,7 +73,7 @@ export const realServicesQ32025: Q3Service[] = [,
   k: string,
 export interface Q3Service {/* TODO: Fix JSX expression */}
   customers?: number}
-  rating?: number,
+  rating?: number,;
 const contact =
   mobil,
   e: '+1 302 464 0950'
@@ -97,7 +97,7 @@ const contact =
   s: '364 E Main St STE 1008 Middletown DE 19709'
   websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s://ziontechgroup.com';
 const contact =
   mobile: '+1 302 464 0950'
   address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -124,8 +124,7 @@ export const realServicesQ32025: Q3Service[] = [,
     name: 'Subscription Analytics & Revenue Optimization'}
   address: '364 E Main St STE 1008 Middletown DE 19709',
 export const realServicesQ32025: Q3Service[] = [,
-  {  reviews?: number;
-}
+  {  reviews?: number}
 const contact =
   mobile: '+1 302 464 0950'};
 export const realServicesQ32025: Q3Service[] = [,
@@ -248,8 +247,8 @@ export const,
     roi: '310% ARR lift from churn reduction and pricing wins.'
     competitors: ['ProfitWell MetricsChartMogulBaremetrics'];
     market_size: '$30 B+ subscription economy tooling'
-    growth_rate: '30% YoY'
-    variant: 'ai - futuristic'
+    growth_rate: '30% YoY';
+variant: 'ai - futuristic'
     customers: 24;
     rating: 4 && 4.9;
     reviews: 31;
@@ -261,8 +260,7 @@ export const,
     // @ts-expect-error augment common shape for UI components that expect contactInfo;
     contactInfo: contact;
     // @ts - expect - error augment common shape for UI components that expect contact_info;,
-    contact_info: contact;
-  }
+    contact_info: contact}
     id: 'digital - product - commerce - stack',
     name: 'Digital Product Commerce Stack',
     tagline: 'End - to - end setup for selling downloads, licenses, and subscriptions'
@@ -290,8 +288,7 @@ export const,
     rating: 4 && 4.8;
     reviews: 18;
     // @ts - expect - error augment common shape for UI components that expect contact_info;,
-    contact_info: contact;
-  }
+    contact_info: contact}
     id: 'wordpress - internal - linking - automation',
     name: 'WordPress Internal Linking Automation',
     tagline: 'AI - guided internal links that improve SEO structure and topical authority',
@@ -327,8 +324,7 @@ export const,
     // @ts-expect-error augment common shape for UI components that expect contactInfo;
     contactInfo: contact;
     // @ts - expect - error augment common shape for UI components that expect contact_info;,
-    contact_info: contact;
-  }
+    contact_info: contact}
     name: 'Ecommerce Reviews & UGC Activation',
     tagline: 'Deploy reviews and UGC workflows that increase trust and conversion',
     price: '$999',
@@ -436,8 +432,8 @@ export const,
     market_siz,
   e: '$30B+ subscription economy tooling'
     growth_rat,
-  e: '30% YoY'
-    varian,
+  e: '30% YoY';
+varian,
   t: 'ai - futuristic'
     customer,
   s: 24;
@@ -644,8 +640,7 @@ export const,
     description: 'We implement and operate a revenue analytics stack that surfaces churn drivers, LTV/CAC ratios, cohort trends, and pricing experiment outcomes. Includes instrumentation templates and weekly executive reports.',
     features: [;
     // @ts-expect-error augment common shape for UI components that expect contactInfo;
-    contactInfo: contact;
-  }
+    contactInfo: contact}
     targetAudience: 'SaaS startups, PLG companies, finance and growth teams'
     trialDays: 14;
     category: 'AI & Data',
@@ -655,14 +650,13 @@ export const,
     useCases: [,
     competitors: ['ProfitWell Metrics', 'ChartMogul', 'Baremetrics']
     marketSize: '$30 B+ subscription economy tooling'
-    growthRate: '30% YoY'
-    variant: 'ai-futuristic'
+    growthRate: '30% YoY';
+variant: 'ai-futuristic'
     customers: 24;
     rating: 4.9;
     reviews: 31;
     // @ts-expect-error augment common shape for UI components that expect contactInfo;,
-    contactInfo: contact;
-  }
+    contactInfo: contact}
     id: 'digital-product-commerce-stack',
     name: 'Digital Product Commerce Stack',
     tagline:,
@@ -705,8 +699,8 @@ export const,
     marketSiz,
   e: '$30B+ subscription economy tooling'
     growthRat,
-  e: '30% YoY'
-    varian,
+  e: '30% YoY';
+varian,
   t: 'ai-futuristic'
     customer,
   s: 24;
@@ -764,8 +758,7 @@ export const,
     rating: 4.8;
     reviews: 18;
     // @ts-expect-error augment common shape for UI components that expect contactInfo;,
-    contactInfo: contact;
-  }
+    contactInfo: contact}
     id: 'wordpress-internal-linking-automation'
     name: 'WordPress Internal Linking Automation',
     tagline: 'AI-guided internal links that improve SEO structure and topical authority',
@@ -852,8 +845,7 @@ export const,
     rating: 4.7;
     reviews: 22;
     // @ts-expect-error augment common shape for UI components that expect contactInfo;,
-    contactInfo: contact;
-  }
+    contactInfo: contact}
     id: 'reviews-ugc-activation'
     name: 'Ecommerce Reviews & UGC Activation',
     tagline: 'Deploy reviews and UGC workflows that increase trust and conversion',
@@ -942,8 +934,7 @@ export const,
     rating: 4.8;
     reviews: 12;
     // @ts-expect-error augment common shape for UI components that expect contactInfo;,
-    contactInfo: contact;
-  }];    contactInfo: contact;
+    contactInfo: contact}];    contactInfo: contact;
     ico,
   n: '';
     colo,
@@ -993,8 +984,7 @@ export const,
     textColor: 'text-emerald-300'
     link: 'https://ziontechgroup.com/services/subscription-analytics-revenue-optimization',
     marketPosition: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.',
-    contactInfo: contact;
-  },
+    contactInfo: contact},
     marketPosition: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.',
     targetAudience: 'SaaS startups, PLG companies, finance and growth teams',
     trialDays: 14;
@@ -1002,8 +992,8 @@ export const,
     category: 'AI & Data'
     realService: true;
     marketSize: '$30B+ subscription economy tooling'
-    growthRate: '30% YoY'
-    variant: 'ai-futuristic'
+    growthRate: '30% YoY';
+variant: 'ai-futuristic'
     customers: 24;
     rating: 4.9;
     reviews: 31;
@@ -1037,8 +1027,8 @@ export const,
     marketSiz,
   e: '$30B+ subscription economy tooling',
     growthRat,
-  e: '30% YoY',
-    varian,
+  e: '30% YoY',;
+varian,
   t: 'ai-futuristic',
     customer,
   s: 24,
@@ -1046,8 +1036,7 @@ export const,
   g: 4.9,
     review,
   s: 31,
-    // @ts-expect-error augment common shape for UI components that expect contactInfo;
-  },
+    // @ts-expect-error augment common shape for UI components that expect contactInfo},
     i,
   d: 'digital-product-commerce-stack',
     nam,
@@ -1086,8 +1075,7 @@ export const,
   g: 4.8,
     review,
   s: 18,
-    // @ts-expect-error augment common shape for UI components that expect contactInfo;
-  },
+    // @ts-expect-error augment common shape for UI components that expect contactInfo},
     i,
   d: 'wordpress-internal-linking-automation',
     nam,
@@ -1129,8 +1117,7 @@ export const,
   g: 4.7,
     review,
   s: 22,
-    // @ts-expect-error augment common shape for UI components that expect contactInfo;
-  },
+    // @ts-expect-error augment common shape for UI components that expect contactInfo},
     i,
   d: 'reviews-ugc-activation',
     nam,
@@ -1169,10 +1156,8 @@ export const,
   g: 4.8,
     review,
   s: 12,
-    // @ts-expect-error augment common shape for UI components that expect contactInfo;
-  }
+    // @ts-expect-error augment common shape for UI components that expect contactInfo}
 ];
-;
 }
 };
 export const,
@@ -1201,8 +1186,7 @@ export const,
     textColor: 'text-emerald-300'
     link: 'https://ziontechgroup.com/services/subscription-analytics-revenue-optimization',
     marketPosition: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.',
-    contactInfo: contact;
-  },
+    contactInfo: contact},
     marketPosition: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.',
     targetAudience: 'SaaS startups, PLG companies, finance and growth teams',
     trialDays: 14;
@@ -1256,8 +1240,8 @@ export const,
     roi: '310% ARR lift from churn reduction and pricing wins.',
     competitors: ['ProfitWell MetricsChartMogul', 'Baremetrics'],
     marketSize: '$30B+ subscription economy tooling'
-    growthRate: '30% YoY'
-    variant: 'ai-futuristic'
+    growthRate: '30% YoY';
+variant: 'ai-futuristic'
     customers: 24;
     rating: 4.9;
     reviews: 31;
@@ -1282,8 +1266,8 @@ export const,
     marketSiz,
   e: '$30B+ subscription economy tooling',
     growthRat,
-  e: '30% YoY',
-    varian,
+  e: '30% YoY',;
+varian,
   t: 'ai-futuristic',
     customer,
   s: 24,
@@ -1595,8 +1579,7 @@ export const,
     reviews: 12;
     // @ts-expect-error augment common shape for UI components that expect contactInfo;
     contactInfo: contact;
-    contactInfo: contact;
-  }];    contactInfo: contact;
+    contactInfo: contact}];    contactInfo: contact;
     contactInfo: contact;
     ico,
   n: '',
@@ -1654,8 +1637,7 @@ export const,
   o: contact;
     contactInf,
   o: contact}
-];
-  }
+]}
 ];
 i,
   d: string; nam,
@@ -2029,7 +2011,7 @@ i,
   e: true, customer,
   s: 10, ratin,
   g: 4.8, review,
-  s: 12, // @ts-expect-error augment common shape for UI components that expect contactInfo } ]; } }; export const,
+  s: 12, // @ts-expect-error augment common shape for UI components that expect contactInfo } ]} }; export const,
   realServicesQ32025: Q3Service[] = [ ' i,
   d: 'subscription-analytics-revenue-optimization',' nam,
   e: 'Subscription Analytics & Revenue Optimization',' taglin,
@@ -2192,4 +2174,4 @@ i,
   contactInfo: contact,
   contactInfo: contact}]; contactInf,
   o: contact,
-  contactInfo: contact } ]; } ]; '
+  contactInfo: contact } ]} ]; '

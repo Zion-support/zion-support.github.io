@@ -24,8 +24,7 @@ export interface RevolutionaryBreakthroughContent {/* TODO: Fix JSX expression *
   };
   consciousnessLevel?: string;
   transcendenceLevel?: string;
-  superintelligenceLevel?: string;
-}
+  superintelligenceLevel?: string}
 
 export const december2025RevolutionaryBreakthroughContent: RevolutionaryBreakthroughContent[] = [
   {

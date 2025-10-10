@@ -4,9 +4,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { CheckCircle, Star, ArrowRight, Zap } from 'lucide-react';
-
-const PricingPage: React.FC = () => {
-  const plans = [
+;
+const PricingPage: React.FC = () => {const plans = [
     {
       name: 'Starter',
       price: '$2,999',
@@ -57,7 +56,7 @@ const PricingPage: React.FC = () => {
   ];
 
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         <title>Pricing - Zion Tech Group | Transparent AI & IT Pricing</title>
         <meta name="description" content="Transparent pricing for AI and IT solutions. Choose from Starter, Professional, or Enterprise plans. Custom solutions available. Get started today." />
@@ -67,10 +66,7 @@ const PricingPage: React.FC = () => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/pricing" />
       </Helmet>
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center mb-16">
@@ -98,9 +94,7 @@ const PricingPage: React.FC = () => {
                       <Star className="w-4 h-4 mr-2" />
                       Most Popular
                     </div>
-                  </div>
-                )}
-
+                  </div>);
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-gray-300 mb-6">{plan.description}</p>
@@ -116,7 +110,7 @@ const PricingPage: React.FC = () => {
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       <span>{feature}</span>
                     </li>
-                  ))}
+                  ));
                 </ul>
 
                 <button
@@ -130,7 +124,7 @@ const PricingPage: React.FC = () => {
                   <ArrowRight className="w-5 h-5 ml-2 inline" />
                 </button>
               </div>
-            ))}
+            ));
           </div>
 
           <div className="text-center mt-16">
@@ -143,8 +137,5 @@ const PricingPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
-};
-
+    </React.Fragment>)
 export default PricingPage;

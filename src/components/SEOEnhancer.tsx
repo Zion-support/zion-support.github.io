@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 
 interface SEOEnhancerProps {/* TODO: Fix JSX expression */}
 }
-
+;
 const,
   SEOEnhancer: React.FC<SEOEnhancerProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
@@ -12,10 +12,10 @@ const,
     addres,
   s: {/* TODO: Fix JSX expression */}
     }};
+;
+const finalStructuredData = structuredData || defaultStructuredData;
 
-  const finalStructuredData = structuredData || defaultStructuredData;
-
-  return (<>
+  return (<React.Fragment>
       <Helmet></Helmet>
         {/* Basic Meta Tags */}
         <title>{title}</title>
@@ -85,9 +85,8 @@ const,
         <link rel="dns-prefetch" href="//www.googletagmanager.com" /></link>
       </Helmet>
       {children}
-    </>
-  );
-};
+    </React.Fragment>
+  )};
 
 export default SEOEnhancer;
 "

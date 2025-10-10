@@ -6,25 +6,22 @@ async function handler(req, res) {
     res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Method not allowed' }));
-    return;
-  }
+    return}
 
-  try {
-    const { email } = req.body || {};
+  try {;
+const { email } = req.body || {};
 
     if (!email) {
       res.statusCode = 400;
       res.setHeader('Content-Type', 'application/json');
       res.end(JSON.stringify({ error: 'Email is required' }));
-      return;
-    }
+      return}
 
     if (!isValidEmail(email)) {
       res.statusCode = 400;
       res.setHeader('Content-Type', 'application/json');
       res.end(JSON.stringify({ error: 'Invalid email format' }));
-      return;
-    }
+      return}
 
     // Save subscription logic here
     // In a real application, you would:
@@ -32,7 +29,8 @@ async function handler(req, res) {
     // 2. Add to your email marketing service (Mailchimp, ConvertKit, etc.)
     // 3. Send confirmation email
 
-    console.log('Newsletter subscription:', { email, timestamp: new Date().toISOString() });
+    // console.log removed for production
+.toISOString() });
 
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
@@ -40,17 +38,14 @@ async function handler(req, res) {
       success: true, 
       message: 'Successfully subscribed to newsletter',
       email 
-    }));
-
-  } catch (error) {
-    console.error('Newsletter subscription error:', error);
-    res.statusCode = 500;
+    }))} catch (error) {
+    // console.error removed for production
+res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
       error: 'Failed to subscribe to newsletter',
       details: process.env.NODE_ENV === 'development' ? error.message : undefined
-    }));
-  }
+    }))}
 }
 
 module.exports = withSentry(handler);

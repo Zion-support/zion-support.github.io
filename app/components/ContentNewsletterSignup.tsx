@@ -142,9 +142,9 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps></ContentNe
                   <>
                     <div></div>
                     Subscribing...
-                  </>
+                  </React.Fragment>
                 ) : (
-                  <>
+                  <React.Fragment>
                     {buttonText}
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </>

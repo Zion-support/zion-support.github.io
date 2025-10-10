@@ -10,10 +10,8 @@
   s: NextApiResponse ) {/* TODO: Fix JSX expression */}
   r: 'Method not allowed' })} try {/* TODO: Fix JSX expression */}
   errorReport: ErrorReport = req.body} // Validate required fields if (!errorReport.error || !errorReport.error.message) {/* TODO: Fix JSX expression */}
-  r: 'Missing required fields' })} // Add timestamp if not provided if (!errorReport.timestamp) { errorReport.timestamp = new Date().toISOString()} // Add to error reports errorReports.push(errorReport); // Log for debugging' // console.error('Error,
-  Report: ' {/* TODO: Fix JSX expression */}
-  l: errorReport.url} timestam)
-  p: errorReport.timestamp }); // Send to external error monitoring services await sendToErrorMonitoringServices(errorReport); // Send alerts for critical errors if (isCriticalError(errorReport)) { await sendCriticalErrorAlert(errorReport)} res.status(200).json({/* TODO: Fix JSX expression */})
+  r: 'Missing required fields' })} // Add timestamp if not provided if (!errorReport.timestamp) { errorReport.timestamp = new Date().toISOString()} // Add to error reports errorReports.push(errorReport); // Log for debugging' // // console.error removed for production
+p: errorReport.timestamp }); // Send to external error monitoring services await sendToErrorMonitoringServices(errorReport); // Send alerts for critical errors if (isCriticalError(errorReport)) { await sendCriticalErrorAlert(errorReport)} res.status(200).json({/* TODO: Fix JSX expression */})
   s: true })} catch (error) {/* TODO: Fix JSX expression */}
   r: 'Internal server error' })} } async function sendToErrorMonitoringServices(errorRepor)
   t: ErrorReport) {/* TODO: Fix JSX expression */}

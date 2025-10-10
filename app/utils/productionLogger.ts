@@ -16,8 +16,8 @@ class ProductionLogger {}
   private isDevelopment = process.env.NODE_ENV === 'development';
   private isProduction = process.env.NODE_ENV === 'production';
 
-  private log(level: LogLevel, message: string, data?: unknown, context?: string): void {
-    const entry: LogEntry = {,
+  private log(level: LogLevel, message: string, data?: unknown, context?: string): void {;
+const entry: LogEntry = {,
       level;
   private log(level: LogLevel, message: string, data?: unknown, context?: string): void {}
     const entry: LogEntry = {}
@@ -90,5 +90,5 @@ class ProductionLogger {}
 }
 }
 
-export const logger = new ProductionLogger();
+export const logger = new ProductionLogger()
 export default logger;

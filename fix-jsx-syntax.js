@@ -1,3 +1,4 @@
+import React from 'react';
 #!/usr/bin/env node;
 import fs from 'fs';
 import path from 'path';
@@ -9,7 +10,9 @@ function fixJSXSyntax(content) {
   //Fix function declarations with malformed comments;
   fixed = fixed.replace(
     /const\s+(\w+):\s+React\.FC\s*=\s*\(\)\s*=>\s*\{\/\*\s*content\s*\/\}/g,
-    'const $1: React.FC = () => {'
+    'const $1: React.FC = () => {
+return (
+'
   );
 ,
   //Fix malformed JSX elements that are self-closing but shouldn't be;
@@ -17,7 +20,9 @@ function fixJSXSyntax(content) {
   fixed = fixed.replace(/<(\w+)([^>]*?)><\/\1>\s*([^<]+)/g, '<$1$2>$3</$1>');
 
   //Fix malformed JSX elements with attributes;
-  fixed = fixed.replace(/<(\w+)([^>]*?)><\/\1>\s*<(\w+)([^>]*?)><\/\3>/g, '<$1$2><$3$4></$3></$1>');
+  fixed = fixed.replace(/<(\w+)([^>]*?)><\/\1>\s*<(\w+)([^>]*?)><\/\3>/g, '<$1$2><$3$4></$3></$1>
+);
+}');
 
   //Fix array syntax issues;
   fixed = fixed.replace(/\[\s*\{\/\*\s*content\s*\/\}/g, '[{');
@@ -26,7 +31,7 @@ function fixJSXSyntax(content) {
   fixed = fixed.replace(/\{\/\*\s*content\s*\/\}/g, '{');
 
   //Fix missing closing braces for objects;
-  fixed = fixed.replace(
+  fixed = fixed.replace(;
 function fixJSXSyntax(content) {/* TODO: Fix JSX expression */}
     /const\s+(\w+):\s+React\.FC\s*=\s*\(\)\s*=>\s*\{\/\*\s*content\s*\/\}/g,
     'const $1: React.FC = () => {/* TODO: Fix JSX expression */}
@@ -36,8 +41,7 @@ function fixJSXSyntax(content) {/* TODO: Fix JSX expression */}
     "$1: '$2',\n      $3: '$4',\n      $5: '$6',\n      $7: '$8'\n    }"
   );
 
-  return fixed;
-}
+  return fixed}
 
 //Function to process a single file;
 function processFile(filePath) {
@@ -52,44 +56,40 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
   },
   // Fix malformed JSX fragments
   {
-    pattern: /<>\s*<div([^>]*)>([^<]*?)<\/div>\s*<\/>/g,
+    pattern: /<React.Fragment>\s*<div([^>]*)>([^<]*?)<\/div>\s*<\/>/g,
     replacement: '<div$1>$2</div>'
   }
 ];
-
+;
 function fixFile(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
+  try {;
+let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     
-    fixes.forEach(fix => {
-      const newContent = content.replace(fix.pattern, fix.replacement);
+    fixes.forEach(fix => {;
+const newContent = content.replace(fix.pattern, fix.replacement);
       if (newContent !== content) {
         content = newContent;
-        modified = true;
-      }
+        modified = true}
     });
     
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
-      return true;
-    }
+      // console.log removed for production
+return true}
     
-    return false;
-  } catch (error) {/* TODO: Fix JSX expression */}
+    return false} catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 
 //Main function;
 async function main() {
-  // Get all TSX files in the app directory
-  const files = await glob('app/**/*.tsx', { cwd: process.cwd() });
+  // Get all TSX files in the app directory;
+const files = await glob('app/**/*.tsx', { cwd: process.cwd() });
 
-  console.log(`Found ${files.length} TSX files to check...`);
-
-  for (const pattern of patterns) {
-    const files = await glob(pattern, {
+  // console.log removed for production
+for (const pattern of patterns) {;
+const files = await glob(pattern, {
       ignore: [,
         '**/node_modules/**',
         '**/dist/**',
@@ -127,6 +127,4 @@ if (import.meta.url === `fil)`
   e://${process.argv[1]}`) {/* TODO: Fix JSX expression */}
 }
 
-export { fixJSXSyntax, processFile };
-
-}"`
+export { fixJSXSyntax, processFile }}"`

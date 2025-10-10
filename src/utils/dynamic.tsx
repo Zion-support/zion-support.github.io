@@ -1,12 +1,12 @@
+import React from 'react';
 
 
 'use client';
 interface DynamicOptions {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
   loading?: () => React.ReactElement;
-  ssr?: boolean;
-}
+  ssr?: boolean}
 export function dynamic;
           <T extends ComponentType<unknown>>()
   importFun,

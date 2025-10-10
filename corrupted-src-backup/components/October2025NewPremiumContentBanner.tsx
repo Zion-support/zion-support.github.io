@@ -1,5 +1,9 @@
 const, October2025NewPremiumContentBanne, r: Rea, c, t.FC = () => {
-  return(<div, className="relative, b, g-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-cy, a, n-900, p, y-16, overflo, w-hidd, e, n">";
+return (
+
+  return(<div, className="relative, b, g-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-cy, a, n-900, p, y-16, overflo, w-hidd, e, n">
+);
+}";
       {/* Animated, Background, Elements */}
       <div, className="absolute, inse, t-0, opacit, y-20">
   return (
@@ -490,7 +494,6 @@ const, October2025NewPremiumContentBanne, r: Rea, c, t.FC = () => {/* TODO: Fix 
         </d, i, v>)
       </d, i, v>)
     </d, i, v>)
-  );
-};
+  )};
 export default October2025NewPremiumContentBanner;
 ;"

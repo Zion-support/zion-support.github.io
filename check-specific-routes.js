@@ -1,10 +1,9 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-
+;
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
+// __dirname removed
 // Read the current App.tsx;
 const appContent = fs.readFileSync('/workspace/src/App.tsx', 'utf8');
 
@@ -15,35 +14,39 @@ const missingPages = analysisData.missingPagesList;
 // Check which routes are missing from App.tsx;
 const missingRoutes = [];
 
-for (const route of missingPages) {
-  const routePattern = `path="${route}"`;
+for (const route of missingPages) {;
+const routePattern = `path="${route}"`;
   if (!appContent.includes(routePattern)) {
-    missingRoutes.push(route);
-  }
+    missingRoutes.push(route)}
 }
 
-console.log(`Found ${missingRoutes.length} routes missing from App.tsx: `);
-missingRoutes.forEach(route => console.log(`- ${route}`));
+// console.log removed for production
+missingRoutes.forEach(route => // console.log removed for production
+);
 
 // Generate import statements for missing routes;
-const generateImportStatement = (route) => {
-  const componentName = route.split('/').pop().replace(/-/g, '').replace(/\b\w/g, l => l.toUpperCase()) + 'Page';
-  return `const ${componentName} = lazy(() => import('.${route}/page'));`;
-};
+const generateImportStatement = (route) => {;
+const componentName = route.split('/').pop().replace(/-/g, '').replace(/\b\w/g, l => l.toUpperCase()) + 'Page';
+  return `const ${componentName} = lazy(() => import('.${route}/page'));`};
 
 // Generate route statements;
 const generateRouteStatement = (route) => {
-  const componentName = route.split('/').pop().replace(/-/g, '').replace(/\b\w/g, l => l.toUpperCase()) + 'Page';
-  return `            <Route path="${route}" element={<${componentName} />} />`;</Route>
+return (
+;
+const componentName = route.split('/').pop().replace(/-/g, '').replace(/\b\w/g, l => l.toUpperCase()) + 'Page';
+  return `            <Route path="${route}" element={<${componentName} />
+);
+}} />`;</Route>
 };
 
 if (missingRoutes.length > 0) {
-  console.log('\n=== IMPORT STATEMENTS ===');
-  missingRoutes.forEach(route => console.log(generateImportStatement(route)));
+  // console.log removed for production
+missingRoutes.forEach(route => // console.log removed for production
+));
   
-  console.log('\n=== ROUTE STATEMENTS ===');
-  missingRoutes.forEach(route => console.log(generateRouteStatement(route)));
-}
+  // console.log removed for production
+missingRoutes.forEach(route => // console.log removed for production
+))}
 
 // Write missing routes to a file;
 fs.writeFileSync('/workspace/missing-routes.json', JSON.stringify({)
@@ -51,4 +54,4 @@ fs.writeFileSync('/workspace/missing-routes.json', JSON.stringify({)
   importStatements: missingRoutes.map(generateImportStatement),
   routeStatements: missingRoutes.map(generateRouteStatement)}, null, 2));
 
-console.log(`\n✅ Analysis complete. Results saved to missing-routes.json`);
+// console.log removed for production

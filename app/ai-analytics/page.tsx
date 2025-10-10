@@ -4,9 +4,8 @@ import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
-
-const AiAnalyticsPage: React.FC = () => {
-  const features = [
+;
+const AiAnalyticsPage: React.FC = () => {const features = [
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',
@@ -15,27 +14,6 @@ const AiAnalyticsPage: React.FC = () => {
     },
     {
       icon: BarChart,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-9948
       title: 'Real-Time Dashboards',
       description: 'Monitor your business metrics in real-time with customizable, interactive dashboards.',
       benefits: ['Live data updates', 'Custom widgets', 'Interactive charts', 'Mobile responsive']
@@ -62,12 +40,11 @@ const AiAnalyticsPage: React.FC = () => {
       icon: Shield,
       title: 'Data Security',
       description: 'Enterprise-grade security to protect your sensitive business data and analytics.',
-<<<<<<< HEAD
       benefits: ['End-to-end encryption', 'Access controls', 'Audit trails', 'Compliance support']
     }
   ];
-
-  const benefits = [
+;
+const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
@@ -75,23 +52,15 @@ const AiAnalyticsPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ];
 
-<<<<<<< HEAD
-=======
-  return (
-=======
-      benefits: ['End-to-end encryption', 'Access controls', 'Audit trails', 'Compliance support']  return (
->>>>>>> cursor/analyze-improve-and-deploy-application-9948
     <>
       <Helmet>
         <title>Ai Analytics - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai analytics solution for modern businesses." />
-<<<<<<< HEAD
         <meta name="keywords" content="AI ai analytics, artificial intelligence, ai analytics, AI solutions, intelligent automation" />
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
   const useCases = [
-=======
         <meta name="keywords" content="AI ai analytics, artificial intelligence, ai analytics, AI solutions, intelligent automation" />  const useCases = [
->>>>>>> cursor/analyze-improve-and-deploy-application-9948
+;
+const useCases = [
     {
       title: 'Business Intelligence',
       description: 'Transform raw data into actionable business insights',
@@ -125,10 +94,9 @@ const AiAnalyticsPage: React.FC = () => {
   ];
 
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         <title>AI Analytics - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name="description" content="Transform your data into actionable insights with our AI-powered analytics platform. Get real-time dashboards, predictive analytics, and automated reporting." />
       </Helmet>
 
@@ -183,11 +151,10 @@ const AiAnalyticsPage: React.FC = () => {
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                           {benefit}
                         </li>
-                      ))}
-                    </ul>
-                  )}
+                      ));
+                    </ul>);
                 </div>
-              ))}
+              ));
             </div>
           </div>
         </section>
@@ -212,7 +179,7 @@ const AiAnalyticsPage: React.FC = () => {
                   </div>
                   <p className="text-lg text-white font-medium">{benefit}</p>
                 </div>
-              ))}
+              ));
             </div>
           </div>
         </section>
@@ -245,6 +212,5 @@ const AiAnalyticsPage: React.FC = () => {
 };
 
 export default AiAnalyticsPage;
-=======
-        <meta name="description" content="Transform your data into actionable insights with our AI-powered analytics platform. Get real-time dashboards, predictive analytics, and automated reporting." />
->>>>>>> cursor/analyze-improve-and-deploy-application-9948
+    </React.Fragment>)
+export default AiAnalyticsPage;

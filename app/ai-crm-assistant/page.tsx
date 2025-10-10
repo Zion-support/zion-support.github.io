@@ -3,43 +3,9 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
-
-const AiCrmAssistantPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-9948
 import { CheckCircle, ArrowRight } from 'lucide-react';
-
-const AICrmAssistantPage: React.FC = () => {
-  const features = [
+;
+const AICrmAssistantPage: React.FC = () => {const features = [
     {
       title: 'AI Customer Management',
       description: 'Intelligent customer relationship management with AI insights',
@@ -53,45 +19,29 @@ const AICrmAssistantPage: React.FC = () => {
     {
       title: 'Customer Support',
       description: 'Enhanced customer support with AI-powered assistance',
-<<<<<<< HEAD
       benefits: ['Ticket management', 'Response automation', 'Customer satisfaction']
     }
   ];
 
   const benefits = [
-<<<<<<< HEAD
-=======
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
+;
+const benefits = [
     'Increase sales by 30%',
-=======
       benefits: ['Ticket management', 'Response automation', 'Customer satisfaction']    'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'    'Increase sales by 30%',
->>>>>>> cursor/analyze-improve-and-deploy-application-9948
     'Improve customer satisfaction',
     'Reduce manual work by 60%',
     'Better lead qualification',
     'Automated follow-ups',
-<<<<<<< HEAD
     'Enhanced customer insights'
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
-<<<<<<< HEAD
-=======
-        <title>Ai Crm Assistant - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered ai crm assistant solution for modern businesses." />
-        <meta name="keywords" content="AI ai crm assistant, artificial intelligence, ai crm assistant, AI solutions, intelligent automation" />
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
         <title>AI CRM Assistant | Zion Tech Group</title>
         <meta name="description" content="Professional AI CRM assistant solutions by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="ai crm assistant, AI solutions, IT services, Zion Tech Group" />
@@ -99,16 +49,6 @@ const AICrmAssistantPage: React.FC = () => {
       
       <Navigation />
 
-<<<<<<< HEAD
-=======
-      <Navigation />
-=======
-    'Enhanced customer insights'        <title>Ai Crm Assistant - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered ai crm assistant solution for modern businesses." />
-        <meta name="keywords" content="AI ai crm assistant, artificial intelligence, ai crm assistant, AI solutions, intelligent automation" />        <title>AI CRM Assistant | Zion Tech Group</title>
-        <meta name="description" content="Professional AI CRM assistant solutions by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="ai crm assistant, AI solutions, IT services, Zion Tech Group" />      <Navigation />
->>>>>>> cursor/analyze-improve-and-deploy-application-9948
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-violet-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
@@ -209,13 +149,9 @@ const AICrmAssistantPage: React.FC = () => {
                 </button>
                 <button className="border border-violet-400 text-violet-400 hover:bg-violet-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                   Learn More
-<<<<<<< HEAD
                 </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
       {/* Hero Section */}
-=======
                 </button>      {/* Hero Section */}
->>>>>>> cursor/analyze-improve-and-deploy-application-9948
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
@@ -267,21 +203,13 @@ const AICrmAssistantPage: React.FC = () => {
                       {benefit}
                     </li>
                   ))}
-<<<<<<< HEAD
                 </ul>
               </div>
-            ))}
+            ));
           </div>
-<<<<<<< HEAD
-=======
-        </section>
-      </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
         </div>
-=======
                 </ul>        </section>
       </div>        </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-9948
       </section>
 
       {/* Benefits Section */}
@@ -302,7 +230,7 @@ const AICrmAssistantPage: React.FC = () => {
                 </div>
                 <h3 className="text-lg font-semibold text-white">{benefit}</h3>
               </div>
-            ))}
+            ));
           </div>
         </div>
       </section>
@@ -324,18 +252,12 @@ const AICrmAssistantPage: React.FC = () => {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 
       <Footer />
     </div>
   );
 };
 
-<<<<<<< HEAD
-=======
-export default AiCrmAssistantPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
+    </div>)
 export default AICrmAssistantPage;
-=======
 export default AiCrmAssistantPage;export default AICrmAssistantPage;
->>>>>>> cursor/analyze-improve-and-deploy-application-9948

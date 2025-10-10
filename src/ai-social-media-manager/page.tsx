@@ -2,9 +2,9 @@ import React from 'react';
 import {Share2, TrendingUp, Users, Calendar, BarChart, CheckCircle, ArrowRight, Star, MessageSquare} from 'lucide-react';
 
 import React from 'react';
-
-const AISocialMediaManagerPage: React.FC = () => {
-  const features = [
+;
+const AISocialMediaManagerPage: React.FC = () => {;
+const features = [
     {
       icon: Share2,
       title: 'AI Content Creation',
@@ -27,23 +27,22 @@ icon$5: MessageSquare,
       description:     ,
 $4}
   ];
-
-  const benefits = [
+;
+const benefits = [
     'Increase engagement by 300%',
     'Save 20+ hours per week',
     'Grow followers by 150%',
     'Boost brand awareness by 200%',
-    'Improve content performance by 250%'
-
-  const platforms = [
+    'Improve content performance by 250%';
+const platforms = [
     { name: 'Facebook', icon: '📘', color: 'text-blue-500' },
     { name: 'Instagram', icon: '📷', color: 'text-pink-500' },
     { name: 'Twitter', icon: '🐦', color: 'text-blue-400' },
     { name: 'LinkedIn', icon: '💼', color: 'text-blue-600' },
     { name: 'TikTok', icon: '🎵', color: 'text-black' },
     { name: 'YouTube', icon: '📺', color: 'text-red-500' }
-
-  const pricing = [
+;
+const pricing = [
       name: 'Starter',
       price: '$29',
       period: '/month',
@@ -192,8 +191,7 @@ $4}
           <p className="text-xl text-gray-300 mb-8">
             Join thousands of brands already using AI Social Media Manager to grow their presence
               Contact Sales
-  );
-};
+  )};
 
 'use client';
 import React, { useState, useEffect } from 'react';

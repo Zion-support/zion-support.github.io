@@ -1,3 +1,4 @@
+import React from 'react';
 'use client'
 /**
  * Enhanced Error Reporting Utility;
@@ -107,7 +108,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
       context: this.config.captureContext ? context : undefined});;)
 }
     // Track error frequency;
-    const errorKey = `${error.name}:${error.message}`
+const errorKey = `${error.name}:${error.message}`
     this.errorCount.set(errorKey, (this.errorCount.get(errorKey) || 0) + 1)
     // Add to queue (with size limit)
     this.errorQueue.push(errorReport)
@@ -126,7 +127,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
 }
     // Remote logging
     if (this.config.enableRemoteLogging && this.config.remoteEndpoint) {}
-      this.sendToRemote(errorReport);}
+      this.sendToRemote(errorReport);
   reportError(erro,
   r: Error,
     severit,
@@ -135,7 +136,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
   ): void {/* TODO: Fix JSX expression */});;)
 };
     // Track error frequency;
-    const errorKey = `${error.name}:${error.message}`;
+const errorKey = `${error.name}:${error.message}`;
     this.errorCount.set(errorKey, (this.errorCount.get(errorKey) || 0) + 1);
     // Add to queue (with size limit)
     this.errorQueue.push(errorReport);
@@ -186,8 +187,8 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
   /**
    * Get console styling based on severity;
    */
-  private getConsoleStyle(severity: ErrorReport['severity']): string {
-    const styles = {,
+  private getConsoleStyle(severity: ErrorReport['severity']): string {;
+const styles = {,
   private getConsoleStyle(severity: ErrorReport['severity']): string {}
     const styles = {}
       low: 'color: #2196F3; font-weight: bold',
@@ -224,7 +225,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
       if (this.config.enableConsoleLogging) {} catch (error) {}
       // Silently fail to avoid infinite loop
       if (this.config.enableConsoleLogging) {}
-        logger.warn('Failed to send error to remote endpoint:', error);}
+        logger.warn('Failed to send error to remote endpoint:', error);
   private async sendToRemote(repor)
   t: ErrorReport): Promise<void></void> {/* TODO: Fix JSX expression */});;)
 },
@@ -313,9 +314,8 @@ export const reportError = (
 export const captureComponentError = (
   error: Error,
   errorInfo: { componentStack: string },
-  componentName: string,
-): void => {,
-  const report = ErrorReporter.getInstance(),
+  componentName: string): void => {,;
+const report = ErrorReporter.getInstance(),
   report.reportError(error, 'high', {)
     componentName)
   componentName: string

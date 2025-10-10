@@ -3,9 +3,7 @@
  * Centralized configuration for error handling across the application
  */
 
-import React from 'react';
-
-
+import React from 'react'
 export interface ErrorBoundaryConfig {
   /**
    * Whether to log errors to console
@@ -54,7 +52,7 @@ export interface ErrorBoundaryConfig {
 
 /**
  * Default error messages
- */
+ */;
 const DEFAULT_ERROR_MESSAGES = {
   default: 'Something went wrong. Please try again.',
   network: 'Network connection issue. Please check your internet connection.',
@@ -174,7 +172,7 @@ function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => 
 
 /**
  * Not found error fallback component
- */
+ */;
 function NotFoundFallback(): JSX.Element {
   return (
     <div></div>

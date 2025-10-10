@@ -2,7 +2,7 @@
   s: NextApiResponse, messag)
   e: string) code = 400) {/* TODO: Fix JSX expression */}
   k: false} erro,"
-  r: message }); } import type {NextApiRequest} NextApiResponse } from "next" import { v4 as uuidv4 } from "uuid" import { getDemoUser } from "../../../utils/marketplace/auth" import {getProjectById} saveProject } from "../../../utils/marketplace/store" import {Project, ProjectDocument} ProjectNote;; } from "../../../utils/marketplace/types" import type {NextApiRequest} NextApiResponse } from 'next' function bad(re,
+  r: message })} import type {NextApiRequest} NextApiResponse } from "next" import { v4 as uuidv4 } from "uuid" import { getDemoUser } from "../../../utils/marketplace/auth" import {getProjectById} saveProject } from "../../../utils/marketplace/store" import {Project, ProjectDocument} ProjectNote;} from "../../../utils/marketplace/types" import type {NextApiRequest} NextApiResponse } from 'next' function bad(re,
   s: NextApiResponse, messag)
   e: string) code = 400) {/* TODO: Fix JSX expression */}
   k: false} erro,"
@@ -16,7 +16,7 @@
   q: NextApiRequest} re)
   s: NextApiResponse) {try { const user = getDemoUser(req)} } catch (error) {/* TODO: Fix JSX expression */}"
   r: ") error)} return res.status(500).json({/* TODO: Fix JSX expression */}")
-  r: "Internal server error" }); } } function canAccess(use)
+  r: "Internal server error" })} } function canAccess(use)
   r: ReturnType<typeof getDemoUser>) projec,"
   t: Project) {if (user.role === "client" && user.id === project.clientId) return true} if (user.role === "talent" && user.talentSlug === project.talentSlug) return true} return false } export default function handler(re)
   q: NextApiRequest) re,"

@@ -7,13 +7,12 @@ import { Link } from 'react-router-dom';
 
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
-
-const MarketplacePage: React.FC = () => {
-  const [activeCategory, setActiveCategory] = useState('products');
+;
+const MarketplacePage: React.FC = () => {;
+const [activeCategory, setActiveCategory] = useState('products');
   const [searchTerm, setSearchTerm] = useState('');
-
-  const categories = [
+;
+const categories = [
     {
       id: 'products',
       name: 'Products',
@@ -36,8 +35,8 @@ idid: 'equipment',
       description:     ,
 $4}
   ];
-
-  const products = [
+;
+const products = [
       id: 1,
       name: 'AI Project Manager Pro',
       description: 'Intelligent project management with AI-powered insights and automation',
@@ -77,9 +76,8 @@ $4}
       reviews: 45,
       image: '🔒',
       features: ['Quantum Encryption', 'Threat Detection', 'Compliance', 'Real-time Monitoring'],
-      vendor: 'QuantumSec',
-
-  const talent = [
+      vendor: 'QuantumSec',;
+const talent = [
       name: 'Dr. Sarah Chen',
       title: 'AI Research Scientist',
       expertise: ['Machine Learning', 'Deep Learning', 'Computer Vision'],
@@ -103,9 +101,8 @@ $4}
       projects: 89,
       rate: '$180/hour',
       image: '👩‍🔬',
-      available: false
-
-  const equipment = [
+      available: false;
+const equipment = [
       name: 'AI Workstation Pro',
       description: 'High-performance workstation optimized for AI development and training',
       category: 'Hardware',
@@ -122,9 +119,8 @@ $4}
       reviews: 15,
       image: '⚛️',
       features: ['100 qubits', '24/7 access', 'API integration', 'Expert support'],
-      vendor: 'QuantumCloud',
-
-  const getCurrentItems = () => {
+      vendor: 'QuantumCloud',;
+const getCurrentItems = () => {
     switch (activeCategory) {
       case 'products':
         return products;
@@ -133,15 +129,14 @@ $4}
       case 'equipment':
         return equipment;
       default:
-        return [];
-  };
-
-  const filteredItems = getCurrentItems().filter(item =>
+        return []};
+;
+const filteredItems = getCurrentItems().filter(item =>
     item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
     item.description.toLowerCase().includes(searchTerm.toLowerCase())
   );
-
-  const stats = [
+;
+const stats = [
       value: '500+',
       label: 'Products Available',
       color:       ,
@@ -154,9 +149,8 @@ valuevalue: '100+',
 iconicon: Star,
       value: '4.8',
       label: 'Average Rating',
-      color: 'text-yellow-400'
-
-  const benefits = [
+      color: 'text-yellow-400';
+const benefits = [
       icon: CheckCircle,
       title: 'Verified Vendors',
       description:       ,
@@ -171,7 +165,7 @@ icon$5: Award,
       description: '100% satisfaction guarantee on all purchases'
 
   return (
-    <>
+    <React.Fragment>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16 pt-24">
@@ -266,7 +260,7 @@ icon$5: Award,
                           <span className="text-sm text-white font-medium">{item.rating}</span>
                           <span className="text-sm text-gray-400 ml-1">({item.reviews} reviews)</span>
                         <div className="text-lg font-bold text-cyan-400">{item.price}</div>
-                    </>
+                    </React.Fragment>
 
                   {activeCategory === 'talent' && (
                         <h4 className="text-sm font-semibold text-cyan-400 mb-2">Expertise:</h4>
@@ -330,13 +324,12 @@ icon$5: Award,
   return (
     <div>Coming Soon</div>
 
-  );
-};
+  )};
   const [activeCategory, setActiveCategory] = useState('products');
   const [searchTerm, setSearchTerm] = useState('');
 const categories = [
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   i,
   d: 'products',

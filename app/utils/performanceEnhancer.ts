@@ -173,7 +173,7 @@ export class PerformanceMonitor {/* TODO: Fix JSX expression */});;)
     this.observers = []});
 }
 }
-// React hook for performance monitoring;
+// React hook for performance monitoring
 export const usePerformanceMonitor = (componentName: string) => {
 // React hook for performance monitoring
 export const usePerformanceMonitor = (componentName: string) => {}
@@ -205,7 +205,7 @@ export const usePerformanceMonitor = (componentName: string) => {}
   cleanup() {/* TODO: Fix JSX expression */});;)
 }
 }
-// React hook for performance monitoring;
+// React hook for performance monitoring
 export const usePerformanceMonitor = (componentNam)
   e: string) => {/* TODO: Fix JSX expression */});;)
 }});
@@ -220,8 +220,8 @@ export const lazyLoadImages = () => {
 // Image lazy loading utility
 export const lazyLoadImages = () => {}
   if (typeof window === 'undefined') return;
-  const images = document.querySelectorAll('img[data-src]');
-  const imageObserver = new IntersectionObserver((entries) => {}
+const images = document.querySelectorAll('img[data-src]');
+const imageObserver = new IntersectionObserver((entries) => {}
     entries.forEach((entry) => {}
       if (entry.isIntersecting) {}
         const img = entry.target as HTMLImageElement;
@@ -240,7 +240,7 @@ export const preloadCriticalResources = () => {
 // Preload critical resources
 export const preloadCriticalResources = () => {}
   if (typeof window === 'undefined') return;
-  const criticalResources = [
+const criticalResources = [
     '/fonts/inter-var.woff2',
     '/css/critical.css'];
   criticalResources.forEach((resource) => {}
@@ -260,15 +260,15 @@ export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */});
 export const optimizeScrollPerformance = () => {
   if (typeof window === 'undefined') return;
   let ticking = false;
-  const updateScrollPosition = () => {
+const updateScrollPosition = () => {
     // Update scroll position indicators;
 // Optimize scroll performance
 export const optimizeScrollPerformance = () => {}
   if (typeof window === 'undefined') return;
   let ticking = false;
-  const updateScrollPosition = () => {}
-    // Update scroll position indicators
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+const updateScrollPosition = () => {}
+    // Update scroll position indicators;
+const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     document.documentElement.style.setProperty('--scroll-top', `${scrollTop}px`);
     ticking = false});
 };
@@ -279,12 +279,11 @@ export const optimizeScrollPerformance = () => {}
 }
   };
   // Track Core Web Vitals;
-  const trackCLS = () => {
-    let clsValue = 0;
+const trackCLS = () => {let clsValue = 0;
     let clsEntries: PerformanceEntry[] = [];
     interface LayoutShiftEntry extends PerformanceEntry {,
-  // Track Core Web Vitals
-  const trackCLS = () => {}
+  // Track Core Web Vitals;
+const trackCLS = () => {}
     let clsValue = 0;
     let clsEntries: PerformanceEntry[] = [];
     interface LayoutShiftEntry extends PerformanceEntry {}
@@ -373,9 +372,9 @@ export const optimizeScrollPerformance = () => {/* TODO: Fix JSX expression */}`
   window.addEventListener('scroll', requestTick, {/* TODO: Fix JSX expression */});
   e: true });;
   // Start tracking;
-  const cleanupCLS = trackCLS();
-  const cleanupLCP = trackLCP();
-  const cleanupFID = trackFID();
+const cleanupCLS = trackCLS();
+const cleanupLCP = trackLCP();
+const cleanupFID = trackFID();
   return () => {}
     cleanupCLS();
     cleanupLCP();
@@ -398,8 +397,8 @@ export const getMemoryUsage = () => {
 // Performance metrics collection;
 export const collectPerformanceMetrics = () => {
   if (typeof window === 'undefined') return null;
-  const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-  const paint = performance.getEntriesByType('paint');
+const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+const paint = performance.getEntriesByType('paint');
   return {
     navigation: {
 // domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;
@@ -425,8 +424,8 @@ export const getMemoryUsage = () => {}
 // Performance metrics collection
 export const collectPerformanceMetrics = () => {}
   if (typeof window === 'undefined') return null;
-  const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-  const paint = performance.getEntriesByType('paint');
+const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+const paint = performance.getEntriesByType('paint');
   return {}
     navigation: {}
 // domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
@@ -451,7 +450,7 @@ export const initializePerformanceEnhancements = () => {}
   // Optimize scroll performance;
   optimizeScrollPerformance();
   // Collect performance metrics;
-  const metrics = collectPerformanceMetrics();
+const metrics = collectPerformanceMetrics();
   if (metrics && (process.env['NODE_ENV'] === 'development' || import.meta.env.DEV)) {}
   return () => {/* TODO: Fix JSX expression */});;)
 }});

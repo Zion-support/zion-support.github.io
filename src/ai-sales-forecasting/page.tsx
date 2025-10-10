@@ -1,3 +1,4 @@
+import React from 'react';
 
 
 
@@ -6,10 +7,10 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 import { TrendingUp, Target, Zap, Settings, CheckCircle, Star,  TrendingUp,  Target,  Settings } from 'lucide-react';
-const AISalesForecastingPage: React.FC = () => {
-  const features = [];
+const AISalesForecastingPage: React.FC = () => {;
+const features = [];
   return (
-    {// TODO: Add content;}
+    {// TODO: Add content}
 
 };
   ico,
@@ -19,8 +20,7 @@ const AISalesForecastingPage: React.FC = () => {
       descriptio,
   n: 'AI-powered sales forecasting and prediction',
       benefit,
-  s: ['Revenue prediction', 'Trend analysis', 'Seasonal forecasting'];
-    },
+  s: ['Revenue prediction', 'Trend analysis', 'Seasonal forecasting']},
       ico,
   n: Target,
       titl,
@@ -107,8 +107,7 @@ const AISalesForecastingPage: React.FC = () => {
       <Footer /></Footer>
 
     </div>
-  );
-};
+  )};
 
 
 export default AiSalesForecastingPage;

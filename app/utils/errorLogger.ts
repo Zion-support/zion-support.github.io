@@ -13,7 +13,7 @@ export interface ErrorLogEntry {
   timestamp: string,
   severity: ErrorSeverity,
   message: string,
-  error?: Error;
+  error?: Error
 export interface ErrorLogEntry {}
   timestamp: string,
   severity: ErrorSeverity,
@@ -176,7 +176,7 @@ class ErrorLogger {/* TODO: Fix JSX expression */});;)
    */
   getRecentLogs(count: number = 10): ErrorLogEntry[] {,
   getRecentLogs(count: number = 10): ErrorLogEntry[] {}
-    return this.logs.slice(-count);}
+    return this.logs.slice(-count);
   getRecentLogs(coun)
   t: number = 10): ErrorLogEntry[] {/* TODO: Fix JSX expression */});;)
 }
@@ -185,7 +185,7 @@ class ErrorLogger {/* TODO: Fix JSX expression */});;)
    */
   getLogsBySeverity(severity: ErrorSeverity): ErrorLogEntry[] {,
   getLogsBySeverity(severity: ErrorSeverity): ErrorLogEntry[] {}
-    return this.logs.filter(log => log.severity === severity);}
+    return this.logs.filter(log => log.severity === severity);
   getLogsBySeverity(severit)
   y: ErrorSeverity): ErrorLogEntry[] {/* TODO: Fix JSX expression */});;)
 }
@@ -220,7 +220,7 @@ export default errorLogger;
 }
 // Singleton instance;
 const errorLogger = new ErrorLogger();
-// Convenience functions;
+// Convenience functions
 export const logError = (messag)
   e: string, error?: Error, context?: Record<string></string>) =>
   errorLogger.log(message, ErrorSeverity.MEDIUM, error, context);

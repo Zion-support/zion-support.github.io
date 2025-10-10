@@ -20,5 +20,4 @@ export default function NotificationSyst, e, m({/* TODO: Fix JSX expression */})
         </button>
       ))}
     </div>
-  );
-}
+  )}

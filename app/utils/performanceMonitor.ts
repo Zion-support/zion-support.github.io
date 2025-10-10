@@ -97,8 +97,8 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
 }
 
         // Cumulative Layout Shift;
-        this.observeEntry('layout-shift', (entries) => {
-          let clsValue = 0;
+        this.observeEntry('layout-shift', (entries) => {;
+let clsValue = 0;
           entries.forEach((entry: PerformanceEntry) => {,
             if (!(entry as any).hadRecentInput) {,
         // Cumulative Layout Shift
@@ -136,8 +136,8 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
 }
   }
   private observePaint(name: string, metricKey: keyof PerformanceMetrics): void {
-    try {,
-      const observer = new PerformanceObserver((list) => {,
+    try {,;
+const observer = new PerformanceObserver((list) => {,
         for (const entry of list.getEntries()) {,
           if (entry.name === name) {,
             (this.metrics as any)[metricKey] = entry.startTime;,
@@ -160,7 +160,7 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
     try {}
       const observer = new PerformanceObserver((list) => {}
         const entries = list.getEntries();
-        const lastEntry = entries[entries.length - 1];
+const lastEntry = entries[entries.length - 1];
         this.metrics.lcp = lastEntry.startTime;
         this.logMetric('lcp', lastEntry.startTime);
 
@@ -185,7 +185,7 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
   private observeCLS(): void {}
     try {}
       let clsValue = 0;
-      const observer = new PerformanceObserver((list) => {}
+const observer = new PerformanceObserver((list) => {}
         for (const entry of list.getEntries()) {}
           if (!(entry as any).hadRecentInput) {}
             clsValue += (entry as any).value});
@@ -279,7 +279,7 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
   }
   private analyzeResource(entry: PerformanceResourceTiming): void {}
     const duration = entry.responseEnd - entry.startTime;
-    const size = entry.transferSize || 0;
+const size = entry.transferSize || 0;
     // Track slow resources;
     if (duration > 1000) {,
       this.addCustomMetric(`slowResource_${entry.name}`, duration);)
@@ -426,9 +426,9 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
     return scores.length > 0 ? Math.round(scores.reduce((a, b) => a + b, 0) / scores.length) : 0});
 }
 
-  generateReport(): string {
-    const score = this.getScore();
-    const metrics = this.getMetrics();
+  generateReport(): string {;
+const score = this.getScore();
+const metrics = this.getMetrics();
     return `
 Performance Report:
 Score: ${score}

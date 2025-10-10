@@ -9,10 +9,10 @@ import Footer from '../components/Footer';
 
 'use client';
 import React, { useState } from 'react';
-const ResearchDevelopmentPage: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('ai');
-
-  const _researchAreas = [
+const ResearchDevelopmentPage: React.FC = () => {;
+const [activeTab, setActiveTab] = useState('ai');
+;
+const _researchAreas = [
     {
       id: 'ai',
       name: 'Artificial Intelligence',
@@ -46,8 +46,8 @@ $4},
       description:     ,
 $4}
   ];
-
-  const researchProjects = {
+;
+const researchProjects = {
     ai: [
       {
         title: 'Consensus Intelligence Framework',
@@ -192,8 +192,8 @@ $4},
 $4}
     ]
   };
-
-  const publications = [
+;
+const publications = [
     {
       title: 'Consensus Intelligence: A Framework for Multi-Agent Decision Making',
       authors: 'Dr. Sarah Chen, Dr. Michael Rodriguez, et al.',
@@ -227,8 +227,8 @@ $4},
       link:     ,
 $4}
   ];
-
-  const achievements = [
+;
+const achievements = [
     {
       icon: Award,
       title: '50+ Research Papers',
@@ -252,7 +252,7 @@ $4}
   ];
 
   return (
-    <>
+    <React.Fragment>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16 pt-24">
@@ -290,15 +290,14 @@ $4}
               <p className="text-gray-300 max-w-2xl mx-auto">
     <div>Coming Soon</div>
 
-  );
-};
+  )};
   const [activeTab, setActiveTab] = useState('ai');
   const _researchAreas = [
   // TOD,
   O: Add items;
 ];;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   i,
   d: 'ai',
@@ -314,7 +313,7 @@ $4}
   n: 'Advancing the frontiers of AI and machine learning'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   i,
   d: 'quantum',
@@ -330,7 +329,7 @@ $4}
   n: 'Exploring quantum algorithms and quantum advantage'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   i,
   d: 'autonomous',
@@ -346,7 +345,7 @@ $4}
   n: 'Developing self-managing and intelligent systems'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   i,
   d: 'emerging',
@@ -363,14 +362,14 @@ $4}
     }
   ];
   const researchProjects = {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   a,
   i: [
   // TOD,
   O: Add items]
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   titl,
   e: 'Consensus Intelligence Framework',
@@ -398,7 +397,7 @@ $4}
   r: 'text-purple-400'
       },
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   titl,
   e: 'Autonomous Business Intelligence',
@@ -426,7 +425,7 @@ $4}
   r: 'text-green-400'
       },
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   titl,
   e: 'Neural Architecture Search for Enterprise',
@@ -459,7 +458,7 @@ $4}
   // TOD,
   O: Add items]
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   titl,
   e: 'Quantum Machine Learning Algorithms',
@@ -487,7 +486,7 @@ $4}
   r: 'text-blue-400'
       },
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   titl,
   e: 'Quantum Error Correction for Business Applications',
@@ -520,7 +519,7 @@ $4}
   // TOD,
   O: Add items]
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   titl,
   e: 'Autonomous Enterprise Operations',
@@ -548,7 +547,7 @@ $4}
   r: 'text-green-400'
       },
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   titl,
   e: 'Multi-Agent Coordination Systems',
@@ -581,7 +580,7 @@ $4}
   // TOD,
   O: Add items]
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   titl,
   e: 'Neuromorphic Computing for AI',
@@ -609,7 +608,7 @@ $4}
   r: 'text-yellow-400'
       },
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   titl,
   e: 'Edge AI for IoT Systems',
@@ -643,7 +642,7 @@ $4}
   O: Add items;
 ];;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   titl,
   e: 'Consensus,
@@ -660,7 +659,7 @@ $4}
   k: '#'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   titl,
   e: 'Autonomous Business Process Optimization Using Reinforcement Learning',
@@ -676,7 +675,7 @@ $4}
   k: '#'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   titl,
   e: 'Quantum Machine Learning for Financial Risk Assessment',
@@ -692,7 +691,7 @@ $4}
   k: '#'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   titl,
   e: 'Multi-Agent Coordination in Distributed Systems',
@@ -713,7 +712,7 @@ $4}
   O: Add items;
 ];;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   ico,
   n: Award,
@@ -723,7 +722,7 @@ $4}
   n: 'Published in top-tier conferences and journals'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   ico,
   n: Users,
@@ -733,7 +732,7 @@ $4}
   n: 'World-class research team across multiple disciplines'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   ico,
   n: Target,
@@ -743,7 +742,7 @@ $4}
   n: 'Innovative technologies and methodologies'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   ico,
   n: Globe,
@@ -756,7 +755,7 @@ $4}
   return (<div>Coming Soon</div>)
   )
     
-          <>
+          <React.Fragment>
       <Navigation /></Navigation>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
         <div className="container mx-auto px-4 py-16 pt-24"></div>
@@ -781,8 +780,7 @@ $4}
                   onClick={() => setActiveTab(area.id)}
                   className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${}
   // TOD,
-  O: Add content;
-}
+  O: Add content}
                     activeTab === area.id;`
                       ? `${area.bgColor} ${area.color} border-2 border-current`
                       : 'bg-slate-800/50 text-gray-300,
@@ -881,8 +879,7 @@ $4}
                       <div className="text-sm text-gray-400 mb-1">Status</div>`
                       <div className={`text-sm font-medium ${}
   // TOD,
-  O: Add content;
-}
+  O: Add content}
                         project.status === 'Completed' ? 'text-green-400' :
                         project.status === 'In Progress' ? 'text-blue-400' : 'text-yellow-400'`
                       }`}></div>
@@ -975,8 +972,7 @@ $4}
                         <span>{pub.year}</span>`
                         <span className={`px-2 py-1 rounded text-xs ${}
   // TOD,
-  O: Add content;
-}
+  O: Add content}
                           pub.impact === 'High' ? 'bg-green-500/20 text-green-400' : 'bg-blue-500/20 text-blue-400'`
                         }`}></span>
                           {pub.impact} Impact;
@@ -1135,11 +1131,10 @@ $4}
       </div>
 
       <Footer />
-    </>
+    </React.Fragment>
 
     </div>
-  );
-};
+  )};
 
 
 export default ResearchDevelopmentPage;

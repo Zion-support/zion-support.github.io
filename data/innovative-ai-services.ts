@@ -73,8 +73,7 @@ export interface InnovativeAIService {/* TODO: Fix JSX expression */}
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
-}
+  reviews: number}
 export const innovativeAIServices: InnovativeAIService[] = [,
     id: 'quantum - ai - brain - computer - interface',
     name: 'Quantum AI Brain - Computer Interface',
@@ -136,8 +135,8 @@ export const,
       'Kernel ($50)000+/month)',
       'Synchron'],
     marketSize: '$1 && 1.5B BCI market'
-    growthRate: '300% annual growth'
-    variant: 'quantum-neural-advanced'
+    growthRate: '300% annual growth';
+variant: 'quantum-neural-advanced'
     contactInfo: unknown;
     color: 'from - purple - 600 to - indigo - 700'
     text_color: 'text - purple - 400',
@@ -154,8 +153,8 @@ export const,
     marketSiz,
   e: '$1 && 1.5B BCI market',
     growthRat,
-  e: '300% annual growth',
-    varian,
+  e: '300% annual growth',;
+varian,
   t: 'quantum-neural-advanced',
     contactInf,
   o: unknown,
@@ -207,8 +206,8 @@ export const,
       'Kernel ($50) 000+/month)',
       'Synchron'],
     market_size: '$1.5B BCI market'
-    growth_rate: '300% annual growth'
-    variant: 'quantum - neural - advanced'
+    growth_rate: '300% annual growth';
+variant: 'quantum - neural - advanced'
     contact_info: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -220,8 +219,7 @@ export const,
     launch_date: '2024 - 12 - 01'
     customers: 15;
     rating: 4 && 4.9;
-    reviews: 8;
-  },
+    reviews: 8},
       'Enterprise-grade autonomous driving platform with advanced AI, computer vision, and safety systems. Enable commercial fleets to operate autonomously with 99 && 99.99% safety record.',
     features: [,
     id: 'autonomous - vehicle - ai - platform',
@@ -233,8 +231,8 @@ export const,
     market_siz,
   e: '$1.5B BCI market',
     growth_rat,
-  e: '300% annual growth',
-    varian,
+  e: '300% annual growth',;
+varian,
   t: 'quantum - neural - advanced',
     contact_inf,
   o: unknown,
@@ -355,8 +353,8 @@ export const,
       'Cruise ($100) 000+/month)',
       'Tesla FSD'],
     market_size: '$556B autonomous vehicle market'
-    growth_rate: '250% annual growth'
-    variant: 'ai - futuristic'
+    growth_rate: '250% annual growth';
+variant: 'ai - futuristic'
     contact_info: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -368,8 +366,7 @@ export const,
     launch_date: '2024 - 10 - 15'
     customers: 25;
     rating: 4 && 4.8;
-    reviews: 12;
-  },
+    reviews: 12},
     id: 'biotech - ai - platform',
     name: 'Biotech AI Platform',
     tagline: 'AI - powered drug discovery and genetic engineering',
@@ -379,8 +376,8 @@ export const,
     market_siz,
   e: '$556B autonomous vehicle market',
     growth_rat,
-  e: '250% annual growth',
-    varian,
+  e: '250% annual growth',;
+varian,
   t: 'ai - futuristic',
     contact_inf,
   o: unknown,
@@ -497,8 +494,8 @@ export const,
       'Recursion ($2B+ funding)',
       'Atomwise'],
     market_size: '$150B AI in healthcare'
-    growth_rate: '250% annual growth'
-    variant: 'holographic - matrix'
+    growth_rate: '250% annual growth';
+variant: 'holographic - matrix'
     contact_info: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -510,8 +507,7 @@ export const,
     launch_date: '2024 - 09 - 01'
     customers: 45;
     rating: 4 && 4.7;
-    reviews: 23;
-  },
+    reviews: 23},
     id: 'quantum - financial - trading - platform',
     name: 'Quantum Financial Trading Platform',
     tagline: 'Quantum AI - powered algorithmic trading with nanosecond precision',
@@ -521,8 +517,8 @@ export const,
     market_siz,
   e: '$150B AI in healthcare',
     growth_rat,
-  e: '250% annual growth',
-    varian,
+  e: '250% annual growth',;
+varian,
   t: 'holographic - matrix',
     contact_inf,
   o: unknown,
@@ -639,8 +635,8 @@ export const,
       'Two Sigma ($60B+ AUM)',
       'Citadel'],
     market_size: '$15T algorithmic trading'
-    growth_rate: '150% annual growth'
-    variant: 'quantum - cyberpunk'
+    growth_rate: '150% annual growth';
+variant: 'quantum - cyberpunk'
     contact_info: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -652,8 +648,7 @@ export const,
     launch_date: '2024 - 11 - 01'
     customers: 18;
     rating: 4 && 4.9;
-    reviews: 9;
-  },
+    reviews: 9},
     id: 'space - technology - platform',
     name: 'Space Technology Platform',
     tagline: 'Complete space mission management and satellite operations',
@@ -663,8 +658,8 @@ export const,
     market_siz,
   e: '$15T algorithmic trading',
     growth_rat,
-  e: '150% annual growth',
-    varian,
+  e: '150% annual growth',;
+varian,
   t: 'quantum - cyberpunk',
     contact_inf,
   o: unknown,
@@ -781,8 +776,8 @@ export const,
       'OneWeb ($50 / month)',
       'Planet Labs'],
     market_size: '$469B space economy'
-    growth_rate: '400% annual growth'
-    variant: 'quantum - space'
+    growth_rate: '400% annual growth';
+variant: 'quantum - space'
     contact_info: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -794,8 +789,7 @@ export const,
     launch_date: '2024 - 08 - 15'
     customers: 32;
     rating: 4 && 4.8;
-    reviews: 16;
-  },
+    reviews: 16},
       'AI-powered world generation',
     id: 'metaverse - ai - development - platform',
     name: 'Metaverse AI Development Platform',
@@ -806,8 +800,8 @@ export const,
     market_siz,
   e: '$469B space economy',
     growth_rat,
-  e: '400% annual growth',
-    varian,
+  e: '400% annual growth',;
+varian,
   t: 'quantum - space',
     contact_inf,
   o: unknown,
@@ -925,8 +919,8 @@ export const,
       'Roblox ($500+/month)',
       'Decentraland'],
     market_size: '$800B metaverse market'
-    growth_rate: '300% annual growth'
-    variant: 'holographic - neural'
+    growth_rate: '300% annual growth';
+variant: 'holographic - neural'
     contact_info: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -938,8 +932,7 @@ export const,
     launch_date: '2024 - 07 - 01'
     customers: 78;
     rating: 4 && 4.6;
-    reviews: 42;
-  },
+    reviews: 42},
     id: 'quantum - robotics - platform',
     name: 'Quantum Robotics Platform',
     tagline: 'Quantum AI - powered robotics and automation',
@@ -949,8 +942,8 @@ export const,
     market_siz,
   e: '$800B metaverse market',
     growth_rat,
-  e: '300% annual growth',
-    varian,
+  e: '300% annual growth',;
+varian,
   t: 'holographic - neural',
     contact_inf,
   o: unknown,
@@ -1062,8 +1055,8 @@ export const,
     roi: '400% ROI within 18 months through increased efficiency and reduced errors',
     competitors: ['ABB ($50) 000+/month)', 'KUKA ($100) 000+/month)', 'FANUC'],
     market_size: '$200B industrial robotics'
-    growth_rate: '200% annual growth'
-    variant: 'quantum - robotics'
+    growth_rate: '200% annual growth';
+variant: 'quantum - robotics'
     contact_info: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -1075,8 +1068,7 @@ export const,
     launch_date: '2024 - 09 - 15'
     customers: 28;
     rating: 4 && 4.7;
-    reviews: 15;
-  },
+    reviews: 15},
       'Quantum-resistant encryption',
     id: 'quantum - cybersecurity - platform',
     name: 'Quantum Cybersecurity Platform',
@@ -1091,8 +1083,8 @@ export const,
     market_siz,
   e: '$200B industrial robotics',
     growth_rat,
-  e: '200% annual growth',
-    varian,
+  e: '200% annual growth',;
+varian,
   t: 'quantum - robotics',
     contact_inf,
   o: unknown,
@@ -1210,8 +1202,8 @@ export const,
       'Palo Alto Networks ($10000+/month)',
       'SentinelOne'],
     market_size: '$200B cybersecurity market'
-    growth_rate: '180% annual growth'
-    variant: 'quantum - cyberpunk'
+    growth_rate: '180% annual growth';
+variant: 'quantum - cyberpunk'
     contact_info: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -1223,8 +1215,7 @@ export const,
     launch_date: '2024 - 10 - 01'
     customers: 95;
     rating: 4 && 4.8;
-    reviews: 48;
-  },
+    reviews: 48},
     id: 'quantum - internet - security',
     name: 'Quantum Internet Security Platform',
     tagline: 'Quantum - secured internet infrastructure',
@@ -1234,8 +1225,8 @@ export const,
     market_siz,
   e: '$200B cybersecurity market',
     growth_rat,
-  e: '180% annual growth',
-    varian,
+  e: '180% annual growth',;
+varian,
   t: 'quantum - cyberpunk',
     contact_inf,
   o: unknown,
@@ -1352,8 +1343,8 @@ export const,
       'Security providers',
       'Network equipment vendors'],
     market_size: '$100B quantum internet market'
-    growth_rate: '400% annual growth'
-    variant: 'quantum - entanglement'
+    growth_rate: '400% annual growth';
+variant: 'quantum - entanglement'
     contact_info: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -1365,20 +1356,17 @@ export const,
     launch_date: '2024 - 11 - 15'
     customers: 12;
     rating: 4 && 4.9;
-    reviews: 6;
-  },
+    reviews: 6},
       'Quantum AI logistics platform with supply chain optimization and real-time analytics capabilities.'
     launchDate: '2024-08-01'
     customers: 67;
     rating: 4.7;
-    reviews: 34;
-  }
+    reviews: 34}
       'Quantum AI logistics platform with supply chain optimization and real-time analytics capabilities.',
     launchDate: '2024-08-01'
     customers: 67;
     rating: 4 && 4.7;
-    reviews: 34;
-  };
+    reviews: 34};
     id: 'quantum - logistics - platform',
     name: 'Quantum Logistics Platform',
     tagline: 'Quantum AI - powered supply chain optimization',
@@ -1388,8 +1376,8 @@ export const,
     market_siz,
   e: '$100B quantum internet market',
     growth_rat,
-  e: '400% annual growth',
-    varian,
+  e: '400% annual growth',;
+varian,
   t: 'quantum - entanglement',
     contact_inf,
   o: unknown,
@@ -1524,8 +1512,8 @@ export const,
       'Oracle ($8000+/month)',
       'Manhattan Associates'],
     market_size: '$300B supply chain management'
-    growth_rate: '200% annual growth'
-    variant: 'quantum - matrix'
+    growth_rate: '200% annual growth';
+variant: 'quantum - matrix'
     contact_info: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -1537,8 +1525,7 @@ export const,
     launch_date: '2024 - 08 - 01'
     customers: 67;
     rating: 4 && 4.7;
-    reviews: 34;
-  }];      mobile: '+1 302 464 0950',
+    reviews: 34}];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
@@ -1547,15 +1534,14 @@ export const,
     launch_date: '2024 - 08 - 01'
     customers: 67;
     rating: 4 && 4.7;
-    reviews: 34;
-  }
+    reviews: 34}
 ];
     reviews: 34;
     market_siz,
   e: '$300B supply chain management',
     growth_rat,
-  e: '200% annual growth',
-    varian,
+  e: '200% annual growth',;
+varian,
   t: 'quantum - matrix',
     contact_inf,
   o: unknown,
@@ -1605,8 +1591,7 @@ export const,
 ];
     review,
   s: 34}
-];
-  }
+]}
 ];
   id: string, name: string;
   tagline: string, price: string;
@@ -1624,8 +1609,7 @@ export const,
   contactInfo: unknown;
     mobile: string, email: string;
     address: string;
-    website: string;
-    },
+    website: string},
     realImplementation: boolean, implementationDetails: string;
   launchDate: string, customers: number;
   rating: number;
@@ -1746,8 +1730,8 @@ export const,
     technology: ['Quantum ComputingNeural NetworksBrain-Computer InterfaceAI/MLQuantum Encryption'], integrations: ['Research APIsMedical devicesData analysis toolsCloud platforms'],
     useCases: ['Medical researchCognitive enhancementNeural rehabilitationAI development'], roi: '1000% ROI within 6 months through breakthrough discoveries and patents',
     competitors: ['Neuralink ($10)000+/month)', 'Kernel ($50)000+/month)', 'Synchron'],
-    marketSize: '$1.5 B BCI market', growthRate: '300% annual growth',
-    variant: 'quantum-neural-advanced',
+    marketSize: '$1.5 B BCI market', growthRate: '300% annual growth',;
+variant: 'quantum-neural-advanced',
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1785,8 +1769,8 @@ export const,
   s: ['Neuralink ($10)000+/month)', 'Kernel ($50)000+/month)', 'Synchron'],
     marketSiz,
   e: '$1.5B BCI market', growthRat,
-  e: '300% annual growth',
-    varian,
+  e: '300% annual growth',;
+varian,
   t: 'quantum-neural-advanced',
     contactInf,
   o: unknown,
@@ -1844,8 +1828,8 @@ export const,
     useCases: ['Commercial deliveryPassenger transportLogistics operationsEmergency services'], roi: '300% ROI within 12 months through reduced labor costs and increased efficiency',
     competitors: ['Waymo ($50)000+/month)', 'Cruise ($100)000+/month)', 'Tesla FSD'],
     marketSize: '$556 B autonomous vehicle market',
-    growthRate: '250% annual growth',
-    variant: 'ai-futuristic',
+    growthRate: '250% annual growth',;
+variant: 'ai-futuristic',
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1884,8 +1868,8 @@ export const,
     marketSiz,
   e: '$556B autonomous vehicle market',
     growthRat,
-  e: '250% annual growth',
-    varian,
+  e: '250% annual growth',;
+varian,
   t: 'ai-futuristic',
     contactInf,
   o: unknown,
@@ -1946,8 +1930,8 @@ export const,
     roi: '500% ROI within 18 months through accelerated drug development and cost savings',
     competitors: ['Insitro ($100 M+ funding)', 'Recursion ($2 B+ funding)', 'Atomwise'],
     marketSize: '$150 B AI in healthcare',
-    growthRate: '250% annual growth',
-    variant: 'holographic-matrix',
+    growthRate: '250% annual growth',;
+variant: 'holographic-matrix',
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1990,8 +1974,8 @@ export const,
     marketSiz,
   e: '$150B AI in healthcare',
     growthRat,
-  e: '250% annual growth',
-    varian,
+  e: '250% annual growth',;
+varian,
   t: 'holographic-matrix',
     contactInf,
   o: unknown,
@@ -2331,8 +2315,8 @@ export const,
     technology: ['Quantum ComputingAI/MLRoboticsIoTIndustrial Automation'], integrations: ['Manufacturing systemsQuality controlMaintenance softwareSafety systems'],
     useCases: ['Industrial automationPrecision manufacturingQuality controlResearch robotics'], roi: '400% ROI within 18 months through increased efficiency and reduced errors',
     competitors: ['ABB ($50)000+/month)KUKA ($100)000+/month)FANUC'];
-    marketSize: '$200 B industrial robotics', growthRate: '200% annual growth',
-    variant: 'quantum-robotics',
+    marketSize: '$200 B industrial robotics', growthRate: '200% annual growth',;
+variant: 'quantum-robotics',
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -2341,8 +2325,7 @@ export const,
     implementationDetails: 'Quantum AI robotics platform with industrial automation, safety systems, and performance optimization.',
     launchDate: '2024-09-15', customers: 28;
     rating: 4.7;
-    reviews: 15;
-  };
+    reviews: 15};
     id: 'quantum-cybersecurity-platform', name: 'Quantum Cybersecurity Platform',
     tagline: 'Quantum-resistant security with AI threat detection',
     price: '$2,999',
@@ -2365,8 +2348,8 @@ export const,
     roi: '500% ROI within 12 months through threat prevention and compliance savings',
     competitors: ['CrowdStrike ($5000+/month)', 'Palo Alto Networks ($10000+/month)', 'SentinelOne'],
     marketSize: '$200 B cybersecurity market',
-    growthRate: '180% annual growth',
-    variant: 'quantum-cyberpunk',
+    growthRate: '180% annual growth',;
+variant: 'quantum-cyberpunk',
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -2376,8 +2359,7 @@ export const,
     launchDate: '2024-10-01'
     customers: 95;
     rating: 4.8;
-    reviews: 48;
-  };
+    reviews: 48};
     id: 'quantum-internet-security', name: 'Quantum Internet Security Platform',
     tagline: 'Quantum-secured internet infrastructure',
     price: '$4,999',
@@ -2401,8 +2383,8 @@ export const,
     roi: '600% ROI within 18 months through security improvements and compliance benefits',
     competitors: ['Traditional ISPs', 'Security providers', 'Network equipment vendors'],
     marketSize: '$100 B quantum internet market',
-    growthRate: '400% annual growth',
-    variant: 'quantum-entanglement',
+    growthRate: '400% annual growth',;
+variant: 'quantum-entanglement',
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -2412,8 +2394,7 @@ export const,
     launchDate: '2024-11-15'
     customers: 12;
     rating: 4.9;
-    reviews: 6;
-  };
+    reviews: 6};
     id: 'quantum-logistics-platform', name: 'Quantum Logistics Platform',
     tagline: 'Quantum AI-powered supply chain optimization',
     price: '$3,499',
@@ -2436,8 +2417,8 @@ export const,
     roi: '400% ROI within 12 months through operational efficiency and cost savings',
     competitors: ['SAP ($5000+/month)', 'Oracle ($8000+/month)', 'Manhattan Associates'],
     marketSize: '$300 B supply chain management',
-    growthRate: '200% annual growth',
-    variant: 'quantum-matrix',
+    growthRate: '200% annual growth',;
+variant: 'quantum-matrix',
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -2476,8 +2457,8 @@ export const,
   s: ['ABB ($50)000+/month)KUKA ($100)000+/month)FANUC'];
     marketSiz,
   e: '$200B industrial robotics', growthRat,
-  e: '200% annual growth',
-    varian,
+  e: '200% annual growth',;
+varian,
   t: 'quantum-robotics',
     contactInf,
   o: unknown,
@@ -2550,8 +2531,8 @@ export const,
     marketSiz,
   e: '$200B cybersecurity market',
     growthRat,
-  e: '180% annual growth',
-    varian,
+  e: '180% annual growth',;
+varian,
   t: 'quantum-cyberpunk',
     contactInf,
   o: unknown,
@@ -2626,8 +2607,8 @@ export const,
     marketSiz,
   e: '$100B quantum internet market',
     growthRat,
-  e: '400% annual growth',
-    varian,
+  e: '400% annual growth',;
+varian,
   t: 'quantum-entanglement',
     contactInf,
   o: unknown,
@@ -2701,8 +2682,8 @@ export const,
     marketSiz,
   e: '$300B supply chain management',
     growthRat,
-  e: '200% annual growth',
-    varian,
+  e: '200% annual growth',;
+varian,
   t: 'quantum-matrix',
     contactInf,
   o: unknown,
@@ -2729,8 +2710,7 @@ export const,
   s: 34}
 ];
 ];
-;
-  }
+}
 ];
 export interface InnovativeAIService,
   id: string; nam,
@@ -3207,7 +3187,7 @@ export interface InnovativeAIService,
   s: 67, ratin,
   g: 4 && 4.7, review,
   s: 34 } ]; review,
-  s: 34 } ]; } ]; i,
+  s: 34 } ]} ]; i,
   d: string, nam,
   e: string, taglin,
   e: string, pric,
@@ -3643,4 +3623,4 @@ export interface InnovativeAIService,
   e: '2024-08-01', customer,
   s: 67, ratin,
   g: 4.7, review,
-  s: 34 } ]; ]; } ]; '"
+  s: 34 } ]; ]} ]; '"

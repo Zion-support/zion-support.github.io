@@ -3,7 +3,7 @@
  * SEO Enhancement Utilities;
  * Tools to improve search engine optimization;
  */
-// Generate meta tags;
+// Generate meta tags
 export const generateMetaTags = (data: {
 // Generate meta tags
 export const generateMetaTags = (data: {}
@@ -46,7 +46,7 @@ export const generateMetaTags = (data: {}
     {}
       name: 'twitter:image',
       content: data.twitterImage || data.ogImage || '/og-image.webp',
-// Generate meta tags;
+// Generate meta tags
 export const generateMetaTags = (dat,
   a: {/* TODO: Fix JSX expression */});;)
 }); => {/* TODO: Fix JSX expression */}
@@ -114,7 +114,7 @@ const defaultSEOConfig: SEOConfig = {,
   title: 'Zion Holdings',
   description: 'Leading provider of AI-powered business solutions',
   keywords: []
-// Default SEO config
+// Default SEO config;
 const defaultSEOConfig: SEOConfig = {}
   title: 'Zion Holdings',
   description: 'Leading provider of AI-powered business solutions',
@@ -131,7 +131,7 @@ const defaultSEOConfig: SEOConfig = {}
   locale: 'en_US',
   siteName: 'Zion Holdings',
   author: 'Zion Holdings'}
-// Generate structured data;
+// Generate structured data
 export const generateStructuredData = (data: {
 // Generate structured data
 export const generateStructuredData = (data: {}
@@ -156,7 +156,7 @@ export const generateStructuredData = (data: {}
 }
   return { ...baseStructure, ...data });;)
 }
-// SEO Enhancer class;
+// SEO Enhancer class
 export class SEOEnhancer {
   private static instance: SEOEnhancer,
 // SEO Enhancer class
@@ -186,8 +186,8 @@ export class SEOEnhancer {}
     this.updateMetaTag('keywords', keywords.join(', '));});;)
 }
   // Update canonical URL;
-  updateCanonicalUrl(url: string) {
-    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
+  updateCanonicalUrl(url: string) {;
+let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
     if (!canonical) {,
       canonical = document.createElement('link'),
       canonical.rel = 'canonical',
@@ -259,9 +259,9 @@ export class SEOEnhancer {}
     script.type = 'application/ld+json'
     script.textContent = JSON.stringify(data)
     // Remove existing structured data;
-    const existingScript = document.querySelector('script[type="application/ld+json"]')
+const existingScript = document.querySelector('script[type="application/ld+json"]')
     if (existingScript) {}
-      existingScript.remove();}
+      existingScript.remove();
 // SEO Config interface;
 interface SEOConfig {/* TODO: Fix JSX expression */});;)
 }
@@ -280,7 +280,7 @@ const,
   autho,
   r: 'Zion Holdings'});
 };
-// Generate structured data;
+// Generate structured data
 export const generateStructuredData = (dat,
   a: {/* TODO: Fix JSX expression */});;)
 }); => {/* TODO: Fix JSX expression */});;)
@@ -471,8 +471,8 @@ ${pages}
     return sitemap});
 }
   // Generate robots.txt;
-  generateRobotsTxt(disallowPaths: string[] = []) {,
-    const robots = `User-agent: *,
+  generateRobotsTxt(disallowPaths: string[] = []) {,;
+const robots = `User-agent: *,
   // Generate robots.txt
   generateRobotsTxt(disallowPaths: string[] = []) {}
     const robots = `User-agent: *,
@@ -515,7 +515,7 @@ Sitemap: ${this.config.canonicalUrl}/sitemap.xml`
 }
   });;)
 }
-// Generate structured data with type-specific properties;
+// Generate structured data with type-specific properties
 export const generateAdvancedStructuredData = (data: {
 // Generate structured data with type-specific properties
 export const generateAdvancedStructuredData = (data: {}
@@ -602,7 +602,7 @@ Sitema,`
 }});
 }
 }
-// Generate structured data with type-specific properties;
+// Generate structured data with type-specific properties
 export const generateAdvancedStructuredData = (dat,
   a: {/* TODO: Fix JSX expression */});;)
 }); => {/* TODO: Fix JSX expression */});;)
@@ -684,7 +684,7 @@ export const generateSitemapData = useCallback((...args) => {}
 }
   });;)
 }
-// Generate robots.txt content;
+// Generate robots.txt content
 export const generateRobotsTxt = useCallback((...args) => {`}
   const disallowRules = disallowPaths.map(path => `Disallow: ${path}`).join('\n')
   return `User-agent: *,
@@ -776,7 +776,7 @@ export const generateBreadcrumbData = useCallback((...args) => {}
 }););)
 }
 }
-// Initialize SEO enhancements;
+// Initialize SEO enhancements
 export const initializeSEOEnhancements = useCallback((...args) => {
   if (typeof document === 'undefined') return;
   // Add structured data for organization;

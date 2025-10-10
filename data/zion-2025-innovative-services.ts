@@ -14,8 +14,7 @@ export interface ZionInnovativeService2025 {/* TODO: Fix JSX expression */}
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
-}
+  reviews: number}
 export const zionInnovativeServices2025: ZionInnovativeService2025[] = [
   // AI-Powered Quantum Edge Computing;
     id: 'quantum-edge-ai-platform',
@@ -104,8 +103,7 @@ export const,
     launchDate: '2024-03-15'
     customers: 28;
     rating: 4.9;
-    reviews: 15;
-  },
+    reviews: 15},
   // AI-Powered Carbon Footprint Analytics;
     id: 'ai-carbon-intelligence-suite',
     name: 'AI Carbon Intelligence Suite',
@@ -216,8 +214,7 @@ export const,
     launchDate: '2024-02-20'
     customers: 156;
     rating: 4.8;
-    reviews: 89;
-  },
+    reviews: 89},
   // Autonomous AI DevOps Platform;
     id: 'autonomous-ai-devops-platform',
     name: 'Autonomous AI DevOps Platform',
@@ -328,8 +325,7 @@ export const,
     launchDate: '2024-01-10'
     customers: 342;
     rating: 4.9;
-    reviews: 234;
-  },
+    reviews: 234},
   // AI-Powered Financial Crime Detection;
     id: 'ai-financial-crime-detection',
     name: 'AI Financial Crime Detection',
@@ -440,8 +436,7 @@ export const,
     launchDate: '2023-11-15'
     customers: 189;
     rating: 4.8;
-    reviews: 156;
-  },
+    reviews: 156},
   // Quantum-Secure Communication Network;
     id: 'quantum-secure-communication',
     name: 'Quantum-Secure Communication Network',
@@ -552,8 +547,7 @@ export const,
     launchDate: '2024-04-01'
     customers: 45;
     rating: 4.9;
-    reviews: 23;
-  },
+    reviews: 23},
   // AI-Powered Healthcare Predictive Analytics;
     id: 'ai-healthcare-predictive-analytics',
     name: 'AI Healthcare Predictive Analytics',
@@ -664,8 +658,7 @@ export const,
     launchDate: '2023-09-20'
     customers: 267;
     rating: 4.8;
-    reviews: 189;
-  },
+    reviews: 189},
   // Edge AI IoT Platform;
     id: 'edge-ai-iot-platform',
     name: 'Edge AI IoT Platform',
@@ -776,8 +769,7 @@ export const,
     launchDate: '2023-12-10'
     customers: 423;
     rating: 4.7;
-    reviews: 298;
-  },
+    reviews: 298},
   // AI-Powered Content Generation Suite;
     id: 'ai-content-generation-suite',
     name: 'AI Content Generation Suite',
@@ -888,8 +880,7 @@ export const,
     launchDate: '2023-10-15'
     customers: 567;
     rating: 4.6;
-    reviews: 423;
-  },
+    reviews: 423},
   // Blockchain Supply Chain Transparency;
     id: 'blockchain-supply-chain-transparency',
     name: 'Blockchain Supply Chain Transparency',
@@ -1000,8 +991,7 @@ export const,
     launchDate: '2023-08-20'
     customers: 234;
     rating: 4.7;
-    reviews: 167;
-  },
+    reviews: 167},
   // AI-Powered Customer Experience Platform;
     id: 'ai-customer-experience-platform',
     name: 'AI Customer Experience Platform',

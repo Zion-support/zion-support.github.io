@@ -1,3 +1,4 @@
+import React from 'react';
 
   id: string;
   name: string;
@@ -107,8 +108,7 @@
     launch_date: '2024 - 09 - 01'
     customers: 123;
     rating: 4 && 4.8;
-    reviews: 52;
-  }];      mobile: '+1 302 464 0950',
+    reviews: 52}];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
@@ -139,8 +139,7 @@ export interface InnovativeITService2025 {id: string, name: string;
     realImplementation: boolean, implementationDetails: string;
   launchDate: string, customers: number;
   rating: number;
-  reviews: number;
-}
+  reviews: number}
 export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
   // Quantum Cloud Infrastructure Platform;
     id: 'quantum-cloud-infrastructure', name: 'Quantum Cloud Infrastructure Platform',
@@ -163,8 +162,8 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
     useCases: ['High-performance computing, Quantum research, Financial modeling, Drug discovery, Climate modeling'];
     roi: 'Organizations report 500% performance improvement and 90% reduction in security risks.',
     competitors: ['AWS, Azure, GCP, IBM Cloud, Oracle Cloud'];
-    marketSize: '$500 B cloud computing market', growthRate: '35% annual growth',
-    variant: 'quantum-cloud-enterprise',
+    marketSize: '$500 B cloud computing market', growthRate: '35% annual growth',;
+variant: 'quantum-cloud-enterprise',
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -173,8 +172,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
     implementationDetails: 'Quantum-enhanced cloud infrastructure with advanced algorithms, quantum encryption, and comprehensive cloud management tools.',
     launchDate: '2024-12-01', customers: 23;
     rating: 4.9;
-    reviews: 15;
-  };
+    reviews: 15};
   // Zero Trust Security Platform;
     id: 'zero-trust-security-platform', name: 'Zero Trust Security Platform',
     tagline: 'Advanced cybersecurity with zero trust architecture and AI threat detection', price: '$799',
@@ -194,8 +192,8 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
     useCases: ['Network security, Identity management, Threat detection, Compliance management, Incident response'];
     roi: 'Organizations report 90% reduction in security incidents and 95% improvement in compliance scores.',
     competitors: ['CrowdStrike, Palo Alto Networks, Fortinet, Check Point, Cisco'];
-    marketSize: '$424 B cybersecurity market', growthRate: '13% annual growth',
-    variant: 'zero-trust-enterprise',
+    marketSize: '$424 B cybersecurity market', growthRate: '13% annual growth',;
+variant: 'zero-trust-enterprise',
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -204,8 +202,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
     implementationDetails: 'Zero trust security platform with advanced authentication, continuous monitoring, and AI-powered threat detection.',
     launchDate: '2024-11-15', customers: 67;
     rating: 4.8;
-    reviews: 42;
-  };
+    reviews: 42};
   // Edge Computing Orchestration Platform;
     id: 'edge-computing-orchestration', name: 'Edge Computing Orchestration Platform',
     tagline: 'Optimize edge computing with intelligent orchestration and automation', price: '$599',
@@ -225,8 +222,8 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
     useCases: ['IoT device management, Edge analytics, Smart manufacturing, Autonomous vehicles, Smart cities'];
     roi: 'Organizations report 60% reduction in latency and 40% improvement in edge computing efficiency.',
     competitors: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT Edge, EdgeX Foundry'];
-    marketSize: '$111 B edge computing market', growthRate: '37% annual growth',
-    variant: 'edge-computing-enterprise',
+    marketSize: '$111 B edge computing market', growthRate: '37% annual growth',;
+variant: 'edge-computing-enterprise',
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -235,8 +232,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
     implementationDetails: 'Edge computing orchestration platform with intelligent resource management, automated optimization, and comprehensive monitoring tools.',
     launchDate: '2024-10-20', customers: 89;
     rating: 4.7;
-    reviews: 56;
-  };
+    reviews: 56};
   // Blockchain Enterprise Platform;
     id: 'blockchain-enterprise-platform', name: 'Blockchain Enterprise Platform',
     tagline: 'Enterprise-grade blockchain solutions for business transformation',
@@ -256,8 +252,8 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
     useCases: ['Supply chain tracking, Digital identity, Smart contracts, Asset tokenization, Decentralized finance'];
     roi: 'Organizations report 200% improvement in transparency and 80% reduction in fraud incidents.',
     competitors: ['IBM Blockchain, AWS Managed Blockchain, Azure Blockchain, ConsenSys'];
-    marketSize: '$67 B blockchain market', growthRate: '87% annual growth',
-    variant: 'blockchain-enterprise',
+    marketSize: '$67 B blockchain market', growthRate: '87% annual growth',;
+variant: 'blockchain-enterprise',
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -266,8 +262,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
     implementationDetails: 'Enterprise blockchain platform with smart contract capabilities, digital asset management, and comprehensive business integration tools.',
     launchDate: '2024-09-15', customers: 45;
     rating: 4.8;
-    reviews: 31;
-  };
+    reviews: 31};
   // AI-Powered DevOps Platform;
     id: 'ai-powered-devops-platform', name: 'AI-Powered DevOps Platform',
     tagline: 'Intelligent DevOps automation that learns and improves over time',
@@ -287,8 +282,8 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
     useCases: ['Software development automation, Testing optimization, Deployment automation, Performance monitoring, Team collaboration'];
     roi: 'Development teams report 200% improvement in deployment speed and 150% reduction in bugs.',
     competitors: ['GitLab, GitHub Enterprise, Azure DevOps, AWS CodePipeline'];
-    marketSize: '$25 B DevOps market', growthRate: '20% annual growth',
-    variant: 'ai-devops-enterprise',
+    marketSize: '$25 B DevOps market', growthRate: '20% annual growth',;
+variant: 'ai-devops-enterprise',
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -296,8 +291,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
     realImplementation: true, implementationDetails: 'Cloud-based DevOps platform with AI-driven automation and optimization.',
     launchDate: '2024-08-15', customers: 234;
     rating: 4.9;
-    reviews: 167;
-  };
+    reviews: 167};
   // Quantum Networking Platform;
     id: 'quantum-networking', name: 'Quantum Networking Platform',
     tagline: 'Unbreakable communication with quantum networking technology',
@@ -317,8 +311,8 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
     useCases: ['Secure communications, Government communications, Financial transactions, Healthcare data, Defense communications'];
     roi: 'Organizations report 100% security improvement and elimination of communication vulnerabilities.',
     competitors: ['Traditional VPN providers, SD-WAN solutions, Security companies'];
-    marketSize: '$15 B quantum networking market', growthRate: '500% annual growth',
-    variant: 'quantum-networking-enterprise',
+    marketSize: '$15 B quantum networking market', growthRate: '500% annual growth',;
+variant: 'quantum-networking-enterprise',
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -327,8 +321,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
     implementationDetails: 'Quantum networking platform with quantum key distribution, entanglement networks, and unbreakable security protocols.',
     launchDate: '2024-07-30', customers: 18;
     rating: 4.9;
-    reviews: 12;
-  };
+    reviews: 12};
   // Autonomous IT Operations Platform;
     id: 'autonomous-it-operations', name: 'Autonomous IT Operations Platform',
     tagline: 'Self-managing IT infrastructure with AI-powered automation', price: '$899',
@@ -348,8 +341,8 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
     useCases: ['Infrastructure management, Problem resolution, Performance optimization, Security automation, Compliance management'];
     roi: 'IT teams report 80% reduction in manual tasks and 90% improvement in system reliability.',
     competitors: ['ServiceNow, BMC Helix, Ivanti, Micro Focus'];
-    marketSize: '$35 B IT operations market', growthRate: '28% annual growth',
-    variant: 'autonomous-it-enterprise',
+    marketSize: '$35 B IT operations market', growthRate: '28% annual growth',;
+variant: 'autonomous-it-enterprise',
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -358,8 +351,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
     implementationDetails: 'Autonomous IT operations platform with AI-powered automation, predictive maintenance, and self-healing capabilities.',
     launchDate: '2024-06-20', customers: 78;
     rating: 4.8;
-    reviews: 52;
-  };
+    reviews: 52};
   // Quantum Data Center Platform;
     id: 'quantum-data-center', name: 'Quantum Data Center Platform',
     tagline: 'Next-generation data centers powered by quantum technology',
@@ -380,8 +372,8 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
     useCases: ['High-performance computing, Quantum research, Big data processing, AI training, Scientific computing'];
     roi: 'Organizations report 1000% performance improvement and 70% reduction in energy costs.',
     competitors: ['Equinix, Digital Realty, CyrusOne, CoreSite'];
-    marketSize: '$200 B data center market', growthRate: '25% annual growth',
-    variant: 'quantum-datacenter-enterprise',
+    marketSize: '$200 B data center market', growthRate: '25% annual growth',;
+variant: 'quantum-datacenter-enterprise',
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -390,8 +382,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
     implementationDetails: 'Quantum-enhanced data center platform with advanced computing capabilities, energy optimization, and comprehensive management tools.',
     launchDate: '2024-05-15', customers: 12;
     rating: 4.9;
-    reviews: 8;
-  };
+    reviews: 8};
   // Quantum Cybersecurity Platform;
     id: 'quantum-cybersecurity', name: 'Quantum Cybersecurity Platform',
     tagline: 'Unbreakable security with quantum encryption and AI threat detection',
@@ -412,8 +403,8 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
     useCases: ['Network security, Application security, Data protection, Compliance, Threat detection'];
     roi: 'Organizations report 95% reduction in security incidents and 100% improvement in encryption strength.',
     competitors: ['CrowdStrike, Palo Alto Networks, Fortinet, Check Point, Symantec'];
-    marketSize: '$424 B cybersecurity market', growthRate: '13% annual growth',
-    variant: 'quantum-security-enterprise',
+    marketSize: '$424 B cybersecurity market', growthRate: '13% annual growth',;
+variant: 'quantum-security-enterprise',
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -422,8 +413,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
     implementationDetails: 'Quantum cybersecurity platform with unbreakable encryption, AI threat detection, and comprehensive security management tools.',
     launchDate: '2024-04-25', customers: 34;
     rating: 4.9;
-    reviews: 23;
-  };
+    reviews: 23};
   // Quantum Cloud Migration Platform;
     id: 'quantum-cloud-migration', name: 'Quantum Cloud Migration Platform',
     tagline: 'Seamless cloud migration with quantum-enhanced optimization',
@@ -444,8 +434,8 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
     useCases: ['Cloud migration, Performance optimization, Cost optimization, Security assessment, Compliance validation'];
     roi: 'Organizations report 90% reduction in migration time and 80% improvement in post-migration performance.',
     competitors: ['Migration consulting firms, Cloud migration tools, Professional services'];
-    marketSize: '$45 B cloud migration market', growthRate: '35% annual growth',
-    variant: 'quantum-migration-enterprise',
+    marketSize: '$45 B cloud migration market', growthRate: '35% annual growth',;
+variant: 'quantum-migration-enterprise',
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -454,8 +444,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
     implementationDetails: 'Quantum cloud migration platform with optimization algorithms, automated migration, and comprehensive cloud transition tools.',
     launchDate: '2024-03-30', customers: 56;
     rating: 4.8;
-    reviews: 38;
-  };
+    reviews: 38};
   // Cloud-Native Application Development Platform;
     id: 'cloud-native-app-development-platform', name: 'Cloud-Native Application Development Platform',
     tagline: 'Build scalable applications for the cloud era', price: '$599',
@@ -475,8 +464,8 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
     useCases: ['Cost optimization, Resource management, Budget planning, Performance optimization, Waste reduction'];
     roi: 'Organizations report 40% reduction in cloud costs and 200% improvement in resource efficiency.',
     competitors: ['CloudHealth, CloudCheckr, AWS Cost Explorer, Azure Cost Management'];
-    marketSize: '$22.5 B cloud management market', growthRate: '28% annual growth',
-    variant: 'cloud-cost-enterprise',
+    marketSize: '$22.5 B cloud management market', growthRate: '28% annual growth',;
+variant: 'cloud-cost-enterprise',
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -484,8 +473,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
     realImplementation: true, implementationDetails: 'Cloud-native application development platform with microservices architecture and container orchestration.',
     launchDate: '2024-12-01', customers: 41;
     rating: 4.8;
-    reviews: 33;
-  };
+    reviews: 33};
   // Zero-Trust Security Architecture Platform;
     id: 'zero-trust-security-architecture', name: 'Zero-Trust Security Architecture Platform',
     tagline: 'Secure your network with zero-trust principles', price: '$799',
@@ -505,8 +493,8 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
     useCases: ['Network security, Access control, Threat prevention, Compliance management, Risk mitigation'];
     roi: 'Organizations report 400% improvement in security posture and 300% reduction in security incidents.',
     competitors: ['Palo Alto Networks, Cisco, Fortinet, Check Point'];
-    marketSize: '$28.9 B zero-trust security market', growthRate: '40% annual growth',
-    variant: 'zero-trust-enterprise',
+    marketSize: '$28.9 B zero-trust security market', growthRate: '40% annual growth',;
+variant: 'zero-trust-enterprise',
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -514,8 +502,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
     realImplementation: true, implementationDetails: 'Zero-trust security platform with comprehensive identity management and continuous monitoring capabilities.',
     launchDate: '2024-11-15', customers: 26;
     rating: 4.9;
-    reviews: 21;
-  };
+    reviews: 21};
   // Edge Computing Orchestration Platform;
     id: 'edge-computing-orchestration-platform', name: 'Edge Computing Orchestration Platform',
     tagline: 'Orchestrate computing at the edge of your network', price: '$649',
@@ -535,8 +522,8 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
     useCases: ['IoT device management, Edge analytics, Real-time processing, Latency optimization, Distributed computing'];
     roi: 'IoT companies report 300% improvement in processing speed and 200% reduction in latency.',
     competitors: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT, EdgeX Foundry'];
-    marketSize: '$19.8 B edge computing market', growthRate: '32% annual growth',
-    variant: 'edge-computing-enterprise',
+    marketSize: '$19.8 B edge computing market', growthRate: '32% annual growth',;
+variant: 'edge-computing-enterprise',
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -544,8 +531,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
     realImplementation: true, implementationDetails: 'Edge computing orchestration platform with distributed computing management and real-time optimization.',
     launchDate: '2024-10-15', customers: 34;
     rating: 4.7;
-    reviews: 28;
-  };
+    reviews: 28};
   // API Gateway and Management Platform;
     id: 'api-gateway-management-platform', name: 'API Gateway and Management Platform',
     tagline: 'Manage and secure your APIs with enterprise-grade tools', price: '$449',
@@ -565,8 +551,8 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
     useCases: ['API management, Microservices integration, Developer experience, API security, Performance optimization'];
     roi: 'Development teams report 250% improvement in API development speed and 200% reduction in integration time.',
     competitors: ['Kong, AWS API Gateway, Azure API Management, Google Cloud Endpoints'];
-    marketSize: '$16.2 B API management market', growthRate: '28% annual growth',
-    variant: 'api-management-enterprise',
+    marketSize: '$16.2 B API management market', growthRate: '28% annual growth',;
+variant: 'api-management-enterprise',
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -574,8 +560,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
     realImplementation: true, implementationDetails: 'API gateway and management platform with comprehensive security and developer tools.',
     launchDate: '2024-09-15', customers: 48;
     rating: 4.6;
-    reviews: 39;
-  };
+    reviews: 39};
   // Data Pipeline and ETL Platform;
     id: 'data-pipeline-etl-platform', name: 'Data Pipeline and ETL Platform',
     tagline: 'Build robust data pipelines with intelligent automation', price: '$549',
@@ -595,8 +580,8 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
     useCases: ['Data integration, ETL automation, Real-time processing, Data quality management, Analytics pipeline'];
     roi: 'Data teams report 300% improvement in data processing speed and 250% reduction in manual work.',
     competitors: ['Apache Airflow, Talend, Informatica, DataStage'];
-    marketSize: '$18.5 B ETL market', growthRate: '26% annual growth',
-    variant: 'data-pipeline-enterprise',
+    marketSize: '$18.5 B ETL market', growthRate: '26% annual growth',;
+variant: 'data-pipeline-enterprise',
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -604,8 +589,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
     realImplementation: true, implementationDetails: 'Data pipeline and ETL platform with real-time processing and comprehensive monitoring capabilities.',
     launchDate: '2024-08-15', customers: 36;
     rating: 4.7;
-    reviews: 29;
-  };
+    reviews: 29};
   // Infrastructure as Code Platform;
     id: 'infrastructure-as-code-platform', name: 'Infrastructure as Code Platform',
     tagline: 'Manage infrastructure with code and automation', price: '$399',
@@ -625,8 +609,8 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
     useCases: ['Infrastructure automation, Multi-cloud management, Configuration management, Deployment automation, Cost optimization'];
     roi: 'DevOps teams report 300% improvement in deployment speed and 200% reduction in infrastructure errors.',
     competitors: ['HashiCorp Terraform, AWS CloudFormation, Azure Resource Manager, Google Cloud Deployment Manager'];
-    marketSize: '$14.8 B infrastructure automation market', growthRate: '30% annual growth',
-    variant: 'iac-enterprise',
+    marketSize: '$14.8 B infrastructure automation market', growthRate: '30% annual growth',;
+variant: 'iac-enterprise',
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -634,8 +618,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
     realImplementation: true, implementationDetails: 'Infrastructure as code platform with multi-cloud support and comprehensive automation tools.',
     launchDate: '2024-07-15', customers: 42;
     rating: 4.8;
-    reviews: 35;
-  };
+    reviews: 35};
   // Database Performance Optimization Platform;
     id: 'database-performance-optimization-platform', name: 'Database Performance Optimization Platform',
     tagline: 'Optimize your database performance with intelligent insights', price: '$499',
@@ -655,8 +638,8 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
     useCases: ['Database optimization, Query tuning, Performance monitoring, Capacity planning, Troubleshooting'];
     roi: 'Database teams report 300% improvement in query performance and 200% reduction in response time.',
     competitors: ['SolarWinds, Datadog, New Relic, AppDynamics'];
-    marketSize: '$13.2 B database management market', growthRate: '24% annual growth',
-    variant: 'database-optimization-enterprise',
+    marketSize: '$13.2 B database management market', growthRate: '24% annual growth',;
+variant: 'database-optimization-enterprise',
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -664,8 +647,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
     realImplementation: true, implementationDetails: 'Database performance optimization platform with real-time monitoring and intelligent tuning recommendations.',
     launchDate: '2024-06-15', customers: 38;
     rating: 4.7;
-    reviews: 31;
-  };
+    reviews: 31};
   // Network Monitoring and Analytics Platform;
     id: 'network-monitoring-analytics-platform', name: 'Network Monitoring and Analytics Platform',
     tagline: 'Monitor and analyze your network with intelligent insights', price: '$449',
@@ -685,8 +667,8 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
     useCases: ['Network monitoring, Performance optimization, Troubleshooting, Capacity planning, Security monitoring'];
     roi: 'Network teams report 300% improvement in issue resolution time and 200% reduction in downtime.',
     competitors: ['SolarWinds, PRTG, Nagios, Zabbix'];
-    marketSize: '$16.8 B network monitoring market', growthRate: '26% annual growth',
-    variant: 'network-monitoring-enterprise',
+    marketSize: '$16.8 B network monitoring market', growthRate: '26% annual growth',;
+variant: 'network-monitoring-enterprise',
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -694,8 +676,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
     realImplementation: true, implementationDetails: 'Network monitoring and analytics platform with AI-powered insights and comprehensive visibility.',
     launchDate: '2024-05-15', customers: 45;
     rating: 4.6;
-    reviews: 37;
-  };
+    reviews: 37};
   // IT Asset Management and Discovery Platform;
     id: 'it-asset-management-discovery-platform', name: 'IT Asset Management and Discovery Platform',
     tagline: 'Discover and manage your IT assets with intelligent automation', price: '$349',
@@ -715,8 +696,8 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
     useCases: ['Asset discovery, License management, Compliance reporting, Cost optimization, Lifecycle management'];
     roi: 'IT teams report 300% improvement in asset visibility and 200% reduction in compliance risks.',
     competitors: ['ServiceNow, BMC Helix, Ivanti, Cherwell'];
-    marketSize: '$12.5 B IT asset management market', growthRate: '22% annual growth',
-    variant: 'itam-enterprise',
+    marketSize: '$12.5 B IT asset management market', growthRate: '22% annual growth',;
+variant: 'itam-enterprise',
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -724,8 +705,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
     realImplementation: true, implementationDetails: 'IT asset management and discovery platform with automated discovery and comprehensive lifecycle management.',
     launchDate: '2024-04-15', customers: 52;
     rating: 4.8;
-    reviews: 43;
-  };
+    reviews: 43};
   // Quantum-Secure Cloud Infrastructure;
     id: 'quantum-secure-cloud-infrastructure', name: 'Quantum-Secure Cloud Infrastructure',
     tagline: 'Future-proof cloud infrastructure with quantum-resistant encryption',
@@ -746,8 +726,8 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
     useCases: ['Secure cloud migration, Compliance requirements, Data sovereignty, High-security applications, Research computing'];
     roi: 'Financial institutions report 200% ROI through reduced security risks and compliance costs.',
     competitors: ['AWS, Microsoft Azure, Google Cloud, IBM Cloud'];
-    marketSize: '$500 B cloud infrastructure market', growthRate: '30% annual growth',
-    variant: 'quantum-cloud-enterprise',
+    marketSize: '$500 B cloud infrastructure market', growthRate: '30% annual growth',;
+variant: 'quantum-cloud-enterprise',
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -755,8 +735,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
     realImplementation: true, implementationDetails: 'Cloud-native infrastructure with quantum-resistant security and multi-cloud orchestration.',
     launchDate: '2024-12-01', customers: 18;
     rating: 4.9;
-    reviews: 12;
-  };
+    reviews: 12};
   // Autonomous IT Operations Center;
     id: 'autonomous-it-operations-center', name: 'Autonomous IT Operations Center',
     tagline: 'Self-healing IT infrastructure that manages itself 24/7',
@@ -777,8 +756,8 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
     useCases: ['IT operations automation, Incident management, Infrastructure monitoring, Performance optimization, Cost management'];
     roi: 'Enterprises report 60% reduction in IT operational costs and 80% faster incident resolution.',
     competitors: ['ServiceNow, BMC, PagerDuty, Splunk, Datadog'];
-    marketSize: '$35 B IT operations market', growthRate: '25% annual growth',
-    variant: 'autonomous-it-enterprise',
+    marketSize: '$35 B IT operations market', growthRate: '25% annual growth',;
+variant: 'autonomous-it-enterprise',
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -786,8 +765,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
     realImplementation: true, implementationDetails: 'Cloud-based IT operations platform with AI-driven automation and monitoring.',
     launchDate: '2024-11-01', customers: 67;
     rating: 4.8;
-    reviews: 45;
-  };
+    reviews: 45};
   // Edge Computing Orchestration Platform;
     id: 'edge-computing-orchestration-platform', name: 'Edge Computing Orchestration Platform',
     tagline: 'Orchestrate edge computing resources across global networks',
@@ -808,8 +786,8 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
     useCases: ['IoT device management, Real-time analytics, Autonomous vehicles, Smart cities, Industrial automation'];
     roi: 'IoT companies report 300% improvement in processing speed and 40% reduction in latency.',
     competitors: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT, IBM Watson IoT'];
-    marketSize: '$45 B edge computing market', growthRate: '35% annual growth',
-    variant: 'edge-orchestration-enterprise',
+    marketSize: '$45 B edge computing market', growthRate: '35% annual growth',;
+variant: 'edge-orchestration-enterprise',
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -817,8 +795,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
     realImplementation: true, implementationDetails: 'Cloud-native edge orchestration platform with global network optimization.',
     launchDate: '2024-10-15', customers: 89;
     rating: 4.7;
-    reviews: 56;
-  };
+    reviews: 56};
   // Blockchain Infrastructure Platform;
     id: 'blockchain-infrastructure-platform', name: 'Blockchain Infrastructure Platform',
     tagline: 'Enterprise-grade blockchain infrastructure for modern applications',
@@ -839,8 +816,8 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
     useCases: ['DeFi applications, Supply chain tracking, Digital identity, Asset tokenization, Gaming platforms'];
     roi: 'Financial services report 250% ROI through reduced transaction costs and improved transparency.',
     competitors: ['ConsenSys, R3 Corda, Hyperledger, Alchemy, Infura'];
-    marketSize: '$19 B blockchain market', growthRate: '40% annual growth',
-    variant: 'blockchain-enterprise',
+    marketSize: '$19 B blockchain market', growthRate: '40% annual growth',;
+variant: 'blockchain-enterprise',
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -985,8 +962,8 @@ export const,
   s: ['AWS, Azure, GCP, IBM Cloud, Oracle Cloud'];
     marketSiz,
   e: '$500B cloud computing market', growthRat,
-  e: '35% annual growth',
-    varian,
+  e: '35% annual growth',;
+varian,
   t: 'quantum-cloud-enterprise',
     contactInf,
   o: unknown,
@@ -1054,8 +1031,8 @@ export const,
   s: ['CrowdStrike, Palo Alto Networks, Fortinet, Check Point, Cisco'];
     marketSiz,
   e: '$424B cybersecurity market', growthRat,
-  e: '13% annual growth',
-    varian,
+  e: '13% annual growth',;
+varian,
   t: 'zero-trust-enterprise',
     contactInf,
   o: unknown,
@@ -1123,8 +1100,8 @@ export const,
   s: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT Edge, EdgeX Foundry'];
     marketSiz,
   e: '$111B edge computing market', growthRat,
-  e: '37% annual growth',
-    varian,
+  e: '37% annual growth',;
+varian,
   t: 'edge-computing-enterprise',
     contactInf,
   o: unknown,
@@ -1192,8 +1169,8 @@ export const,
   s: ['IBM Blockchain, AWS Managed Blockchain, Azure Blockchain, ConsenSys'];
     marketSiz,
   e: '$67B blockchain market', growthRat,
-  e: '87% annual growth',
-    varian,
+  e: '87% annual growth',;
+varian,
   t: 'blockchain-enterprise',
     contactInf,
   o: unknown,
@@ -1261,8 +1238,8 @@ export const,
   s: ['GitLab, GitHub Enterprise, Azure DevOps, AWS CodePipeline'];
     marketSiz,
   e: '$25B DevOps market', growthRat,
-  e: '20% annual growth',
-    varian,
+  e: '20% annual growth',;
+varian,
   t: 'ai-devops-enterprise',
     contactInf,
   o: unknown,
@@ -1329,8 +1306,8 @@ export const,
   s: ['Traditional VPN providers, SD-WAN solutions, Security companies'];
     marketSiz,
   e: '$15B quantum networking market', growthRat,
-  e: '500% annual growth',
-    varian,
+  e: '500% annual growth',;
+varian,
   t: 'quantum-networking-enterprise',
     contactInf,
   o: unknown,
@@ -1398,8 +1375,8 @@ export const,
   s: ['ServiceNow, BMC Helix, Ivanti, Micro Focus'];
     marketSiz,
   e: '$35B IT operations market', growthRat,
-  e: '28% annual growth',
-    varian,
+  e: '28% annual growth',;
+varian,
   t: 'autonomous-it-enterprise',
     contactInf,
   o: unknown,
@@ -1468,8 +1445,8 @@ export const,
   s: ['Equinix, Digital Realty, CyrusOne, CoreSite'];
     marketSiz,
   e: '$200B data center market', growthRat,
-  e: '25% annual growth',
-    varian,
+  e: '25% annual growth',;
+varian,
   t: 'quantum-datacenter-enterprise',
     contactInf,
   o: unknown,
@@ -1538,8 +1515,8 @@ export const,
   s: ['CrowdStrike, Palo Alto Networks, Fortinet, Check Point, Symantec'];
     marketSiz,
   e: '$424B cybersecurity market', growthRat,
-  e: '13% annual growth',
-    varian,
+  e: '13% annual growth',;
+varian,
   t: 'quantum-security-enterprise',
     contactInf,
   o: unknown,
@@ -1608,8 +1585,8 @@ export const,
   s: ['Migration consulting firms, Cloud migration tools, Professional services'];
     marketSiz,
   e: '$45B cloud migration market', growthRat,
-  e: '35% annual growth',
-    varian,
+  e: '35% annual growth',;
+varian,
   t: 'quantum-migration-enterprise',
     contactInf,
   o: unknown,
@@ -1677,8 +1654,8 @@ export const,
   s: ['CloudHealth, CloudCheckr, AWS Cost Explorer, Azure Cost Management'];
     marketSiz,
   e: '$22.5B cloud management market', growthRat,
-  e: '28% annual growth',
-    varian,
+  e: '28% annual growth',;
+varian,
   t: 'cloud-cost-enterprise',
     contactInf,
   o: unknown,
@@ -1745,8 +1722,8 @@ export const,
   s: ['Palo Alto Networks, Cisco, Fortinet, Check Point'];
     marketSiz,
   e: '$28.9B zero-trust security market', growthRat,
-  e: '40% annual growth',
-    varian,
+  e: '40% annual growth',;
+varian,
   t: 'zero-trust-enterprise',
     contactInf,
   o: unknown,
@@ -1813,8 +1790,8 @@ export const,
   s: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT, EdgeX Foundry'];
     marketSiz,
   e: '$19.8B edge computing market', growthRat,
-  e: '32% annual growth',
-    varian,
+  e: '32% annual growth',;
+varian,
   t: 'edge-computing-enterprise',
     contactInf,
   o: unknown,
@@ -1881,8 +1858,8 @@ export const,
   s: ['Kong, AWS API Gateway, Azure API Management, Google Cloud Endpoints'];
     marketSiz,
   e: '$16.2B API management market', growthRat,
-  e: '28% annual growth',
-    varian,
+  e: '28% annual growth',;
+varian,
   t: 'api-management-enterprise',
     contactInf,
   o: unknown,
@@ -1949,8 +1926,8 @@ export const,
   s: ['Apache Airflow, Talend, Informatica, DataStage'];
     marketSiz,
   e: '$18.5B ETL market', growthRat,
-  e: '26% annual growth',
-    varian,
+  e: '26% annual growth',;
+varian,
   t: 'data-pipeline-enterprise',
     contactInf,
   o: unknown,
@@ -2017,8 +1994,8 @@ export const,
   s: ['HashiCorp Terraform, AWS CloudFormation, Azure Resource Manager, Google Cloud Deployment Manager'];
     marketSiz,
   e: '$14.8B infrastructure automation market', growthRat,
-  e: '30% annual growth',
-    varian,
+  e: '30% annual growth',;
+varian,
   t: 'iac-enterprise',
     contactInf,
   o: unknown,
@@ -2085,8 +2062,8 @@ export const,
   s: ['SolarWinds, Datadog, New Relic, AppDynamics'];
     marketSiz,
   e: '$13.2B database management market', growthRat,
-  e: '24% annual growth',
-    varian,
+  e: '24% annual growth',;
+varian,
   t: 'database-optimization-enterprise',
     contactInf,
   o: unknown,
@@ -2153,8 +2130,8 @@ export const,
   s: ['SolarWinds, PRTG, Nagios, Zabbix'];
     marketSiz,
   e: '$16.8B network monitoring market', growthRat,
-  e: '26% annual growth',
-    varian,
+  e: '26% annual growth',;
+varian,
   t: 'network-monitoring-enterprise',
     contactInf,
   o: unknown,
@@ -2221,8 +2198,8 @@ export const,
   s: ['ServiceNow, BMC Helix, Ivanti, Cherwell'];
     marketSiz,
   e: '$12.5B IT asset management market', growthRat,
-  e: '22% annual growth',
-    varian,
+  e: '22% annual growth',;
+varian,
   t: 'itam-enterprise',
     contactInf,
   o: unknown,
@@ -2290,8 +2267,8 @@ export const,
   s: ['AWS, Microsoft Azure, Google Cloud, IBM Cloud'];
     marketSiz,
   e: '$500B cloud infrastructure market', growthRat,
-  e: '30% annual growth',
-    varian,
+  e: '30% annual growth',;
+varian,
   t: 'quantum-cloud-enterprise',
     contactInf,
   o: unknown,
@@ -2359,8 +2336,8 @@ export const,
   s: ['ServiceNow, BMC, PagerDuty, Splunk, Datadog'];
     marketSiz,
   e: '$35B IT operations market', growthRat,
-  e: '25% annual growth',
-    varian,
+  e: '25% annual growth',;
+varian,
   t: 'autonomous-it-enterprise',
     contactInf,
   o: unknown,
@@ -2428,8 +2405,8 @@ export const,
   s: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT, IBM Watson IoT'];
     marketSiz,
   e: '$45B edge computing market', growthRat,
-  e: '35% annual growth',
-    varian,
+  e: '35% annual growth',;
+varian,
   t: 'edge-orchestration-enterprise',
     contactInf,
   o: unknown,
@@ -2497,8 +2474,8 @@ export const,
   s: ['ConsenSys, R3 Corda, Hyperledger, Alchemy, Infura'];
     marketSiz,
   e: '$19B blockchain market', growthRat,
-  e: '40% annual growth',
-    varian,
+  e: '40% annual growth',;
+varian,
   t: 'blockchain-enterprise',
     contactInf,
   o: unknown,
@@ -2582,8 +2559,7 @@ export const,
     launchDate: '2024-12-01';
     customers: 23;
     rating: 4.9;
-    reviews: 15;
-  };
+    reviews: 15};
   // Zero Trust Security Platform;
   {;
     id: 'zero-trust-security-platform';
@@ -2625,8 +2601,7 @@ export const,
     launchDate: '2024-11-15';
     customers: 67;
     rating: 4.8;
-    reviews: 42;
-  };
+    reviews: 42};
   // Edge Computing Orchestration Platform;
   {;
     id: 'edge-computing-orchestration';
@@ -2668,8 +2643,7 @@ export const,
     launchDate: '2024-10-20';
     customers: 89;
     rating: 4.7;
-    reviews: 56;
-  };
+    reviews: 56};
   // Blockchain Enterprise Platform;
   {;
     id: 'blockchain-enterprise-platform';
@@ -2711,8 +2685,7 @@ export const,
     launchDate: '2024-09-15';
     customers: 45;
     rating: 4.8;
-    reviews: 31;
-  };
+    reviews: 31};
   // AI-Powered DevOps Platform;
   {;
     id: 'ai-powered-devops-platform';
@@ -2754,8 +2727,7 @@ export const,
     launchDate: '2024-08-15';
     customers: 234;
     rating: 4.9;
-    reviews: 167;
-  };
+    reviews: 167};
   // Quantum Networking Platform;
   {;
     id: 'quantum-networking';
@@ -2797,8 +2769,7 @@ export const,
     launchDate: '2024-07-30';
     customers: 18;
     rating: 4.9;
-    reviews: 12;
-  };
+    reviews: 12};
   // Autonomous IT Operations Platform;
   {;
     id: 'autonomous-it-operations';
@@ -2840,8 +2811,7 @@ export const,
     launchDate: '2024-06-20';
     customers: 78;
     rating: 4.8;
-    reviews: 52;
-  };
+    reviews: 52};
   // Quantum Data Center Platform;
   {;
     id: 'quantum-data-center';
@@ -2883,8 +2853,7 @@ export const,
     launchDate: '2024-05-15';
     customers: 12;
     rating: 4.9;
-    reviews: 8;
-  };
+    reviews: 8};
   // Quantum Cybersecurity Platform;
   {;
     id: 'quantum-cybersecurity';
@@ -2926,8 +2895,7 @@ export const,
     launchDate: '2024-04-25';
     customers: 34;
     rating: 4.9;
-    reviews: 23;
-  };
+    reviews: 23};
   // Quantum Cloud Migration Platform;
   {;
     id: 'quantum-cloud-migration';
@@ -2969,8 +2937,7 @@ export const,
     launchDate: '2024-03-30';
     customers: 56;
     rating: 4.8;
-    reviews: 38;
-  };
+    reviews: 38};
   // Cloud-Native Application Development Platform;
   {;
     id: 'cloud-native-app-development-platform';
@@ -3012,8 +2979,7 @@ export const,
     launchDate: '2024-12-01';
     customers: 41;
     rating: 4.8;
-    reviews: 33;
-  };
+    reviews: 33};
   // Zero-Trust Security Architecture Platform;
   {;
     id: 'zero-trust-security-architecture';
@@ -3055,8 +3021,7 @@ export const,
     launchDate: '2024-11-15';
     customers: 26;
     rating: 4.9;
-    reviews: 21;
-  };
+    reviews: 21};
   // Edge Computing Orchestration Platform;
   {;
     id: 'edge-computing-orchestration-platform';
@@ -3098,8 +3063,7 @@ export const,
     launchDate: '2024-10-15';
     customers: 34;
     rating: 4.7;
-    reviews: 28;
-  };
+    reviews: 28};
   // API Gateway and Management Platform;
   {;
     id: 'api-gateway-management-platform';
@@ -3141,8 +3105,7 @@ export const,
     launchDate: '2024-09-15';
     customers: 48;
     rating: 4.6;
-    reviews: 39;
-  };
+    reviews: 39};
   // Data Pipeline and ETL Platform;
   {;
     id: 'data-pipeline-etl-platform';
@@ -3184,8 +3147,7 @@ export const,
     launchDate: '2024-08-15';
     customers: 36;
     rating: 4.7;
-    reviews: 29;
-  };
+    reviews: 29};
   // Infrastructure as Code Platform;
   {;
     id: 'infrastructure-as-code-platform';
@@ -3227,8 +3189,7 @@ export const,
     launchDate: '2024-07-15';
     customers: 42;
     rating: 4.8;
-    reviews: 35;
-  };
+    reviews: 35};
   // Database Performance Optimization Platform;
   {;
     id: 'database-performance-optimization-platform';
@@ -3270,8 +3231,7 @@ export const,
     launchDate: '2024-06-15';
     customers: 38;
     rating: 4.7;
-    reviews: 31;
-  };
+    reviews: 31};
   // Network Monitoring and Analytics Platform;
   {;
     id: 'network-monitoring-analytics-platform';
@@ -3313,8 +3273,7 @@ export const,
     launchDate: '2024-05-15';
     customers: 45;
     rating: 4.6;
-    reviews: 37;
-  };
+    reviews: 37};
   // IT Asset Management and Discovery Platform;
   {;
     id: 'it-asset-management-discovery-platform';
@@ -3356,8 +3315,7 @@ export const,
     launchDate: '2024-04-15';
     customers: 52;
     rating: 4.8;
-    reviews: 43;
-  };
+    reviews: 43};
   // Quantum-Secure Cloud Infrastructure;
   {;
     id: 'quantum-secure-cloud-infrastructure';
@@ -3399,8 +3357,7 @@ export const,
     launchDate: '2024-12-01';
     customers: 18;
     rating: 4.9;
-    reviews: 12;
-  };
+    reviews: 12};
   // Autonomous IT Operations Center;
   {;
     id: 'autonomous-it-operations-center';
@@ -3442,8 +3399,7 @@ export const,
     launchDate: '2024-11-01';
     customers: 67;
     rating: 4.8;
-    reviews: 45;
-  };
+    reviews: 45};
   // Edge Computing Orchestration Platform;
   {;
     id: 'edge-computing-orchestration-platform';
@@ -3485,8 +3441,7 @@ export const,
     launchDate: '2024-10-15';
     customers: 89;
     rating: 4.7;
-    reviews: 56;
-  };
+    reviews: 56};
   // Blockchain Infrastructure Platform;
   {;
     id: 'blockchain-infrastructure-platform';
@@ -3528,8 +3483,7 @@ export const,
     launchDate: '2024-09-01';
     customers: 123;
     rating: 4.8;
-    reviews: 52;
-  }
+    reviews: 52}
 ];
 ;
     rating: 4.8;
@@ -4285,8 +4239,7 @@ export const,
     launchDate: '2024-12-01';
     customers: 23;
     rating: 4.9;
-    reviews: 15;
-  };
+    reviews: 15};
   // Zero Trust Security Platform;
   {;
     id: 'zero-trust-security-platform';
@@ -4328,8 +4281,7 @@ export const,
     launchDate: '2024-11-15';
     customers: 67;
     rating: 4.8;
-    reviews: 42;
-  };
+    reviews: 42};
   // Edge Computing Orchestration Platform;
   {;
     id: 'edge-computing-orchestration';
@@ -4371,8 +4323,7 @@ export const,
     launchDate: '2024-10-20';
     customers: 89;
     rating: 4.7;
-    reviews: 56;
-  };
+    reviews: 56};
   // Blockchain Enterprise Platform;
   {;
     id: 'blockchain-enterprise-platform';
@@ -4414,8 +4365,7 @@ export const,
     launchDate: '2024-09-15';
     customers: 45;
     rating: 4.8;
-    reviews: 31;
-  };
+    reviews: 31};
   // AI-Powered DevOps Platform;
   {;
     id: 'ai-powered-devops-platform';
@@ -4457,8 +4407,7 @@ export const,
     launchDate: '2024-08-15';
     customers: 234;
     rating: 4.9;
-    reviews: 167;
-  };
+    reviews: 167};
   // Quantum Networking Platform;
   {;
     id: 'quantum-networking';
@@ -4500,8 +4449,7 @@ export const,
     launchDate: '2024-07-30';
     customers: 18;
     rating: 4.9;
-    reviews: 12;
-  };
+    reviews: 12};
   // Autonomous IT Operations Platform;
   {;
     id: 'autonomous-it-operations';
@@ -4543,8 +4491,7 @@ export const,
     launchDate: '2024-06-20';
     customers: 78;
     rating: 4.8;
-    reviews: 52;
-  };
+    reviews: 52};
   // Quantum Data Center Platform;
   {;
     id: 'quantum-data-center';
@@ -4586,8 +4533,7 @@ export const,
     launchDate: '2024-05-15';
     customers: 12;
     rating: 4.9;
-    reviews: 8;
-  };
+    reviews: 8};
   // Quantum Cybersecurity Platform;
   {;
     id: 'quantum-cybersecurity';
@@ -4629,8 +4575,7 @@ export const,
     launchDate: '2024-04-25';
     customers: 34;
     rating: 4.9;
-    reviews: 23;
-  };
+    reviews: 23};
   // Quantum Cloud Migration Platform;
   {;
     id: 'quantum-cloud-migration';
@@ -4672,8 +4617,7 @@ export const,
     launchDate: '2024-03-30';
     customers: 56;
     rating: 4.8;
-    reviews: 38;
-  };
+    reviews: 38};
   // Cloud-Native Application Development Platform;
   {;
     id: 'cloud-native-app-development-platform';
@@ -4715,8 +4659,7 @@ export const,
     launchDate: '2024-12-01';
     customers: 41;
     rating: 4.8;
-    reviews: 33;
-  };
+    reviews: 33};
   // Zero-Trust Security Architecture Platform;
   {;
     id: 'zero-trust-security-architecture';
@@ -4758,8 +4701,7 @@ export const,
     launchDate: '2024-11-15';
     customers: 26;
     rating: 4.9;
-    reviews: 21;
-  };
+    reviews: 21};
   // Edge Computing Orchestration Platform;
   {;
     id: 'edge-computing-orchestration-platform';
@@ -4801,8 +4743,7 @@ export const,
     launchDate: '2024-10-15';
     customers: 34;
     rating: 4.7;
-    reviews: 28;
-  };
+    reviews: 28};
   // API Gateway and Management Platform;
   {;
     id: 'api-gateway-management-platform';
@@ -4844,8 +4785,7 @@ export const,
     launchDate: '2024-09-15';
     customers: 48;
     rating: 4.6;
-    reviews: 39;
-  };
+    reviews: 39};
   // Data Pipeline and ETL Platform;
   {;
     id: 'data-pipeline-etl-platform';
@@ -4887,8 +4827,7 @@ export const,
     launchDate: '2024-08-15';
     customers: 36;
     rating: 4.7;
-    reviews: 29;
-  };
+    reviews: 29};
   // Infrastructure as Code Platform;
   {;
     id: 'infrastructure-as-code-platform';
@@ -4930,8 +4869,7 @@ export const,
     launchDate: '2024-07-15';
     customers: 42;
     rating: 4.8;
-    reviews: 35;
-  };
+    reviews: 35};
   // Database Performance Optimization Platform;
   {;
     id: 'database-performance-optimization-platform';
@@ -4973,8 +4911,7 @@ export const,
     launchDate: '2024-06-15';
     customers: 38;
     rating: 4.7;
-    reviews: 31;
-  };
+    reviews: 31};
   // Network Monitoring and Analytics Platform;
   {;
     id: 'network-monitoring-analytics-platform';
@@ -5016,8 +4953,7 @@ export const,
     launchDate: '2024-05-15';
     customers: 45;
     rating: 4.6;
-    reviews: 37;
-  };
+    reviews: 37};
   // IT Asset Management and Discovery Platform;
   {;
     id: 'it-asset-management-discovery-platform';
@@ -5059,8 +4995,7 @@ export const,
     launchDate: '2024-04-15';
     customers: 52;
     rating: 4.8;
-    reviews: 43;
-  };
+    reviews: 43};
   // Quantum-Secure Cloud Infrastructure;
   {;
     id: 'quantum-secure-cloud-infrastructure';
@@ -5102,8 +5037,7 @@ export const,
     launchDate: '2024-12-01';
     customers: 18;
     rating: 4.9;
-    reviews: 12;
-  };
+    reviews: 12};
   // Autonomous IT Operations Center;
   {;
     id: 'autonomous-it-operations-center';
@@ -5145,8 +5079,7 @@ export const,
     launchDate: '2024-11-01';
     customers: 67;
     rating: 4.8;
-    reviews: 45;
-  };
+    reviews: 45};
   // Edge Computing Orchestration Platform;
   {;
     id: 'edge-computing-orchestration-platform';
@@ -5188,8 +5121,7 @@ export const,
     launchDate: '2024-10-15';
     customers: 89;
     rating: 4.7;
-    reviews: 56;
-  };
+    reviews: 56};
   // Blockchain Infrastructure Platform;
   {;
     id: 'blockchain-infrastructure-platform';

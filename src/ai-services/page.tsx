@@ -6,9 +6,9 @@ import { Helmet } from 'react-helmet-async';
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
-const AIServicesPage: React.FC = () => {
-  const services = [
+;
+const AIServicesPage: React.FC = () => {;
+const services = [
     {
       title: 'AI Strategy & Consulting',
       description: 'Comprehensive AI strategy development and implementation consulting',
@@ -33,8 +33,8 @@ titletitle: 'AI Analytics & Insights',
       price:     ,
 $4}
   ];
-
-  const benefits = [
+;
+const benefits = [
     '300% Average ROI Increase',
     '95% Process Automation',
     '50% Cost Reduction',
@@ -64,8 +64,7 @@ $4}
           </div>
       
       <Footer />
-  );
-};
+  )};
 
 
 export default $1;
@@ -78,15 +77,14 @@ import {
   Cpu, Database, Globe, Lock, Sparkles, Code, Eye, MessageSquare
 } from 'lucide-react';
 
-export default function AIServicesPage() {
-  const [activeTab, setActiveTab] = useState('overview');
+export default function AIServicesPage() {;
+const [activeTab, setActiveTab] = useState('overview');
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
-  const aiServices = [
+    setIsVisible(true)}, []);
+;
+const aiServices = [
     {
       id: 'ai-automation',
       title: 'AI Process Automation',
@@ -214,8 +212,8 @@ export default function AIServicesPage() {
       popular: false
     }
   ];
-
-  const stats = [
+;
+const stats = [
     { icon: Users, value: '500+', label: 'AI Models Deployed', color: 'text-cyan-400' },
     { icon: TrendingUp, value: '300%', label: 'Average ROI', color: 'text-green-400' },
     { icon: Clock, value: '24/7', label: 'AI Monitoring', color: 'text-blue-400' },
@@ -223,7 +221,7 @@ export default function AIServicesPage() {
   ];
 
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         <title>AI Services - Zion Tech Group | Advanced AI Solutions & Pricing</title>
         <meta name="description" content="Comprehensive AI services including automation, analytics, customer support, content generation, cybersecurity, and ML platforms. Get 300% ROI with our AI solutions." />
@@ -389,6 +387,5 @@ export default function AIServicesPage() {
           </div>
         </section>
       </div>
-    </>
-  );
-}
+    </React.Fragment>
+  )}

@@ -1,3 +1,4 @@
+import React from 'react';
 
   id: string;
   name: string;
@@ -29,8 +30,7 @@
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  }
+    website: string}
   real_implementation: boolean;
   implementation_details: string;
   launch_date: string;
@@ -40,7 +40,7 @@
   benefits: string[];
   capabilities: string[];
   market_advantage: string;
-
+;
 const contact =
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -159,7 +159,7 @@ export interface SpecializedEnterpriseService {id: string, name: string;
   s: string[];
   market_advantag,
   e: string;
-,
+,;
 const contact =
   mobil,
   e: '+1 302 464 0950',
@@ -309,8 +309,8 @@ export const,
     roi: 'Strategic investment in cutting-edge AI research with long-term scientific and commercial benefits'
     competitors: ['No direct competitors in consciousness simulation'];
     marketSize: 'Emerging research market'
-    growthRate: 'Projected 500% annual growth'
-    variant: 'ai-futuristic'
+    growthRate: 'Projected 500% annual growth';
+variant: 'ai-futuristic'
     contactInfo: contact;
     realImplementation: true;
     implementationDetails: color: 'from - purple - 600 to - pink - 600'
@@ -332,8 +332,8 @@ export const,
     marketSiz,
   e: 'Emerging research market'
     growthRat,
-  e: 'Projected 500% annual growth'
-    varian,
+  e: 'Projected 500% annual growth';
+varian,
   t: 'ai-futuristic'
     contactInf,
   o: contact;
@@ -374,8 +374,8 @@ export const,
     roi: 'Strategic investment in cutting - edge AI research with long - term scientific and commercial benefits'
     competitors: ['No direct competitors in consciousness simulation']
     market_size: 'Emerging research market'
-    growth_rate: 'Projected 500% annual growth'
-    variant: 'ai - futuristic'
+    growth_rate: 'Projected 500% annual growth';
+variant: 'ai - futuristic'
     contact_info: contact;
     real_implementation: true;
     implementation_details: unknown;
@@ -391,8 +391,8 @@ export const,
     market_siz,
   e: 'Emerging research market',
     growth_rat,
-  e: 'Projected 500% annual growth',
-    varian,
+  e: 'Projected 500% annual growth',;
+varian,
   t: 'ai - futuristic',
     contact_inf,
   o: contact,
@@ -518,8 +518,8 @@ export const,
     roi: 'Solve previously intractable problems and accelerate research by 100x',
     competitors: ['IBM Quantum, Google Quantum AI, Rigetti, D - Wave'],
     market_size: '$10B+ quantum computing market'
-    growth_rate: '250% YoY'
-    variant: 'quantum - futuristic'
+    growth_rate: '250% YoY';
+variant: 'quantum - futuristic'
     contact_info: contact;
     real_implementation: true;
     implementation_details: unknown;
@@ -535,8 +535,8 @@ export const,
     market_siz,
   e: '$10B+ quantum computing market',
     growth_rat,
-  e: '250% YoY',
-    varian,
+  e: '250% YoY',;
+varian,
   t: 'quantum - futuristic',
     contact_inf,
   o: contact,
@@ -665,8 +665,8 @@ export const,
     roi: 'Future - proof security infrastructure and maintain compliance with emerging standards',
     competitors: ['NIST post - quantum candidates, PQShield, PQSecure, ISARA'],
     market_size: '$8B+ post - quantum cryptography market'
-    growth_rate: '300% YoY'
-    variant: 'cybersecurity - futuristic'
+    growth_rate: '300% YoY';
+variant: 'cybersecurity - futuristic'
     contact_info: contact;
     real_implementation: true;
     implementation_details: unknown;
@@ -683,8 +683,8 @@ export const,
     market_siz,
   e: '$8B+ post - quantum cryptography market',
     growth_rat,
-  e: '300% YoY',
-    varian,
+  e: '300% YoY',;
+varian,
   t: 'cybersecurity - futuristic',
     contact_inf,
   o: contact,
@@ -809,8 +809,8 @@ export const,
     roi: 'Optimize satellite operations by 400% and reduce mission costs by 60%',
     competitors: ['Maxar, Planet Labs, Spire, ICEYE'],
     market_size: '$5B+ satellite operations market'
-    growth_rate: '400% YoY'
-    variant: 'space - futuristic'
+    growth_rate: '400% YoY';
+variant: 'space - futuristic'
     contact_info: contact;
     real_implementation: true;
     implementation_details: unknown;
@@ -827,8 +827,8 @@ export const,
     market_siz,
   e: '$5B+ satellite operations market',
     growth_rat,
-  e: '400% YoY',
-    varian,
+  e: '400% YoY',;
+varian,
   t: 'space - futuristic',
     contact_inf,
   o: contact,
@@ -953,8 +953,8 @@ export const,
     roi: 'Revolutionary medical applications and breakthrough research capabilities',
     competitors: ['Neuralink, CTRL - labs, Kernel, Paradromics'],
     market_size: '$3B+ BCI market'
-    growth_rate: '600% YoY'
-    variant: 'neural - futuristic'
+    growth_rate: '600% YoY';
+variant: 'neural - futuristic'
     contact_info: contact;
     real_implementation: true;
     implementation_details: unknown;
@@ -971,8 +971,8 @@ export const,
     market_siz,
   e: '$3B+ BCI market',
     growth_rat,
-  e: '600% YoY',
-    varian,
+  e: '600% YoY',;
+varian,
   t: 'neural - futuristic',
     contact_inf,
   o: contact,
@@ -1097,8 +1097,8 @@ export const,
     roi: 'Reduce IoT management costs by 70% and improve operational efficiency by 50%',
     competitors: ['AWS IoT, Azure IoT, Google Cloud IoT, PTC ThingWorx'],
     market_size: '$20B+ industrial IoT market'
-    growth_rate: '180% YoY'
-    variant: 'iot - futuristic'
+    growth_rate: '180% YoY';
+variant: 'iot - futuristic'
     contact_info: contact;
     real_implementation: true;
     implementation_details: unknown;
@@ -1115,8 +1115,8 @@ export const,
     market_siz,
   e: '$20B+ industrial IoT market',
     growth_rat,
-  e: '180% YoY',
-    varian,
+  e: '180% YoY',;
+varian,
   t: 'iot - futuristic',
     contact_inf,
   o: contact,
@@ -1264,8 +1264,8 @@ export const,
     roi: 'Improve decision - making accuracy by 60% and reduce operational costs by 35%',
     competitors: ['SAS, IBM SPSS, RapidMiner, Alteryx'],
     market_size: '$30B+ predictive analytics market'
-    growth_rate: '160% YoY'
-    variant: 'analytics - futuristic'
+    growth_rate: '160% YoY';
+variant: 'analytics - futuristic'
     contact_info: contact;
     real_implementation: true;
     implementation_details: unknown;
@@ -1285,8 +1285,8 @@ export default specializedEnterpriseServices;    id: 'quantum-machine-learning-p
     market_siz,
   e: '$30B+ predictive analytics market',
     growth_rat,
-  e: '160% YoY',
-    varian,
+  e: '160% YoY',;
+varian,
   t: 'analytics - futuristic',
     contact_inf,
   o: contact,
@@ -1390,8 +1390,8 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     roi: 'Solve previously intractable problems and accelerate research by 100x',
     competitors: ['IBM Quantum, Google Quantum AI, Rigetti, D - Wave'];
     market_size: '$10 B+ quantum computing market'
-    growth_rate: '250% YoY'
-    variant: 'quantum - futuristic'
+    growth_rate: '250% YoY';
+variant: 'quantum - futuristic'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Multi - quantum backend platform with hybrid computing capabilities'
@@ -1434,8 +1434,8 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     roi: 'Future - proof security infrastructure and maintain compliance with emerging standards',
     competitors: ['NIST post - quantum candidates, PQShield, PQSecure, ISARA'];
     market_size: '$8 B+ post - quantum cryptography market'
-    growth_rate: '300% YoY'
-    variant: 'cybersecurity - futuristic'
+    growth_rate: '300% YoY';
+variant: 'cybersecurity - futuristic'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Enterprise - grade quantum - resistant cryptography platform with migration tools'
@@ -1478,8 +1478,8 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     roi: 'Optimize satellite operations by 400% and reduce mission costs by 60%',
     competitors: ['Maxar, Planet Labs, Spire, ICEYE'];
     market_size: '$5 B+ satellite operations market'
-    growth_rate: '400% YoY'
-    variant: 'space - futuristic'
+    growth_rate: '400% YoY';
+variant: 'space - futuristic'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Custom satellite orchestration platform with AI - powered optimization'
@@ -1522,8 +1522,8 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     roi: 'Revolutionary medical applications and breakthrough research capabilities',
     competitors: ['Neuralink, CTRL - labs, Kernel, Paradromics'];
     market_size: '$3 B+ BCI market'
-    growth_rate: '600% YoY'
-    variant: 'neural - futuristic'
+    growth_rate: '600% YoY';
+variant: 'neural - futuristic'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Advanced BCI platform with medical - grade hardware and research tools'
@@ -1566,8 +1566,8 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     roi: 'Reduce IoT management costs by 70% and improve operational efficiency by 50%',
     competitors: ['AWS IoT, Azure IoT, Google Cloud IoT, PTC ThingWorx'];
     market_size: '$20 B+ industrial IoT market'
-    growth_rate: '180% YoY'
-    variant: 'iot - futuristic'
+    growth_rate: '180% YoY';
+variant: 'iot - futuristic'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Industrial - grade autonomous IoT platform with AI - powered management'
@@ -1610,8 +1610,8 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     roi: 'Improve decision - making accuracy by 60% and reduce operational costs by 35%',
     competitors: ['SAS, IBM SPSS, RapidMiner, Alteryx'];
     market_size: '$30 B+ predictive analytics market'
-    growth_rate: '160% YoY'
-    variant: 'analytics - futuristic'
+    growth_rate: '160% YoY';
+variant: 'analytics - futuristic'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Enterprise - grade predictive analytics platform with custom model development'
@@ -1702,8 +1702,8 @@ export default specializedEnterpriseServices;    i,
     market_siz,
   e: '$10B+ quantum computing market'
     growth_rat,
-  e: '250% YoY'
-    varian,
+  e: '250% YoY';
+varian,
   t: 'quantum - futuristic'
     contact_inf,
   o: contact;
@@ -1785,8 +1785,8 @@ export default specializedEnterpriseServices;    i,
     market_siz,
   e: '$8B+ post - quantum cryptography market'
     growth_rat,
-  e: '300% YoY'
-    varian,
+  e: '300% YoY';
+varian,
   t: 'cybersecurity - futuristic'
     contact_inf,
   o: contact;
@@ -1868,8 +1868,8 @@ export default specializedEnterpriseServices;    i,
     market_siz,
   e: '$5B+ satellite operations market'
     growth_rat,
-  e: '400% YoY'
-    varian,
+  e: '400% YoY';
+varian,
   t: 'space - futuristic'
     contact_inf,
   o: contact;
@@ -1951,8 +1951,8 @@ export default specializedEnterpriseServices;    i,
     market_siz,
   e: '$3B+ BCI market'
     growth_rat,
-  e: '600% YoY'
-    varian,
+  e: '600% YoY';
+varian,
   t: 'neural - futuristic'
     contact_inf,
   o: contact;
@@ -2034,8 +2034,8 @@ export default specializedEnterpriseServices;    i,
     market_siz,
   e: '$20B+ industrial IoT market'
     growth_rat,
-  e: '180% YoY'
-    varian,
+  e: '180% YoY';
+varian,
   t: 'iot - futuristic'
     contact_inf,
   o: contact;
@@ -2117,8 +2117,8 @@ export default specializedEnterpriseServices;    i,
     market_siz,
   e: '$30B+ predictive analytics market'
     growth_rat,
-  e: '160% YoY'
-    varian,
+  e: '160% YoY';
+varian,
   t: 'analytics - futuristic'
     contact_inf,
   o: contact;
@@ -2166,8 +2166,7 @@ export interface SpecializedEnterpriseService {/* TODO: Fix JSX expression */}
   reviews: number;
   benefits: string[];
   capabilities: string[];
-  marketAdvantage: string;
-}
+  marketAdvantage: string}
 ;
 // const contact = {;
   mobile: '+1 302 464 0950';

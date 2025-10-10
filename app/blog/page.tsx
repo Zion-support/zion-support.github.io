@@ -1,13 +1,10 @@
 'use client';
 
-<<<<<<< HEAD
 import React, { useState, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
-=======
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
 import { Search, Calendar, User, Clock, ArrowRight, Tag } from 'lucide-react';
 
 interface BlogPost {
@@ -20,26 +17,28 @@ interface BlogPost {
   readTime: string;
   category: string;
   tags: string[];
-<<<<<<< HEAD
   featured: boolean;
   image: string;
-=======
-  image: string;
-  featured: boolean;
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
 }
 
 const BlogPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
-<<<<<<< HEAD
 
   // Sample blog posts data
-=======
-  const [filteredPosts, setFilteredPosts] = useState<BlogPost[]>([]);
-
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
   const blogPosts: BlogPost[] = [
+  image: string;
+  featured: boolean}
+;
+const BlogPage: React.FC = () => {
+return (;
+const [searchTerm, setSearchTerm] = useState('');
+const [selectedCategory, setSelectedCategory] = useState('all');
+const [filteredPosts, setFilteredPosts] = useState<BlogPost[]>
+);
+}([]);
+;
+const blogPosts: BlogPost[] = [
     {
       id: '1',
       title: 'The Future of AI in Enterprise Solutions',
@@ -50,7 +49,6 @@ const BlogPage: React.FC = () => {
       readTime: '5 min read',
       category: 'AI & Machine Learning',
       tags: ['AI', 'Enterprise', 'Innovation'],
-<<<<<<< HEAD
       featured: true,
       image: '/images/blog/ai-enterprise.jpg'
     },
@@ -135,88 +133,22 @@ const BlogPage: React.FC = () => {
 
   const featuredPosts = blogPosts.filter(post => post.featured);
   const recentPosts = blogPosts.slice(0, 3);
-=======
-      image: '/images/blog/ai-enterprise.jpg',
-      featured: true
-    },
-    {
-      id: '2',
-      title: 'Cloud Migration Best Practices',
-      excerpt: 'A comprehensive guide to successfully migrating your infrastructure to the cloud.',
-      content: 'Full article content...',
-      author: 'Michael Rodriguez',
-      date: '2024-01-10',
-      readTime: '7 min read',
-      category: 'Cloud Computing',
-      tags: ['Cloud', 'Migration', 'Best Practices'],
-      image: '/images/blog/cloud-migration.jpg',
-      featured: false
-    },
-    {
-      id: '3',
-      title: 'Cybersecurity Trends for 2024',
-      excerpt: 'Stay ahead of the latest cybersecurity threats and protection strategies.',
-      content: 'Full article content...',
-      author: 'Alex Thompson',
-      date: '2024-01-05',
-      readTime: '6 min read',
-      category: 'Cybersecurity',
-      tags: ['Security', 'Trends', 'Protection'],
-      image: '/images/blog/cybersecurity.jpg',
-      featured: true
-    },
-    {
-      id: '4',
-      title: 'Building Scalable Web Applications',
-      excerpt: 'Learn the principles and techniques for creating applications that can handle millions of users.',
-      content: 'Full article content...',
-      author: 'Emma Wilson',
-      date: '2024-01-01',
-      readTime: '8 min read',
-      category: 'Development',
-      tags: ['Web Development', 'Scalability', 'Architecture'],
-      image: '/images/blog/scalable-apps.jpg',
-      featured: false
-    }
-  ];
-
-  const categories = ['all', 'AI & Machine Learning', 'Cloud Computing', 'Cybersecurity', 'Development'];
-
-  useEffect(() => {
-    let filtered = blogPosts;
-
-    if (searchTerm) {
-      filtered = filtered.filter(post =>
-        post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        post.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
-      );
-    }
-
-    if (selectedCategory !== 'all') {
-      filtered = filtered.filter(post => post.category === selectedCategory);
     }
 
     setFilteredPosts(filtered);
   }, [searchTerm, selectedCategory]);
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
+    setFilteredPosts(filtered)}, [searchTerm, selectedCategory]);
 
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         <title>Blog - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name="description" content="Stay updated with the latest insights on AI, cybersecurity, cloud computing, and technology trends from Zion Tech Group experts." />
         <meta name="keywords" content="technology blog, AI insights, cybersecurity, cloud computing, digital transformation" />
-=======
-        <meta name="description" content="Latest insights on AI, blockchain, cloud computing, and IT solutions from Zion Tech Group experts." />
-        <meta name="keywords" content="tech blog, AI insights, blockchain news, cloud computing, IT solutions" />
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
       </Helmet>
 
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-<<<<<<< HEAD
         <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
@@ -240,7 +172,6 @@ const BlogPage: React.FC = () => {
                   />
                 </div>
               </div>
-=======
         <section className="relative py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -279,13 +210,16 @@ const BlogPage: React.FC = () => {
                   {category}
                 </button>
               ))}
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
+                  value={searchQuery}
+                  onChange={(e) => handleSearch(e.target.value);
+                  className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                />
+              </div>
             </div>
           </div>
         </section>
 
         {/* Featured Posts */}
-<<<<<<< HEAD
         {featuredPosts.length > 0 && (
           <section className="py-16 bg-white">
             <div className="container mx-auto px-4">
@@ -456,7 +390,6 @@ const BlogPage: React.FC = () => {
                   </div>
                 )}
               </main>
-=======
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">
@@ -528,7 +461,7 @@ const BlogPage: React.FC = () => {
                   </div>
                   <div className="flex items-center justify-between">
                     <span className="text-gray-400 text-sm">
-                      {new Date(post.date).toLocaleDateString()}
+                      {new Date(post.date).toLocaleDateString();
                     </span>
                     <button className="flex items-center space-x-1 text-cyan-400 hover:text-cyan-300 transition-colors font-medium">
                       <span>Read</span>
@@ -536,7 +469,7 @@ const BlogPage: React.FC = () => {
                     </button>
                   </div>
                 </article>
-              ))}
+              ));
             </div>
             
             {filteredPosts.length === 0 && searchTerm && (
@@ -565,7 +498,6 @@ const BlogPage: React.FC = () => {
               <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300">
                 Subscribe
               </button>
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
             </div>
           </div>
         </section>

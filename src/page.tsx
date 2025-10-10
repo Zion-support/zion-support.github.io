@@ -114,24 +114,22 @@ import Analytics from './components/Analytics';
 import SecurityEnhancer from './components/SecurityEnhancer';
 import { initializePerformanceOptimizations } from './utils/performanceOptimizations';
 
-// Dynamically import heavy components for better performance
+// Dynamically import heavy components for better performance;
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
 const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
 const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
 const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
 const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
 
-// Preload critical components
+// Preload critical components;
 const preloadComponents = () => {
   if (typeof window !== 'undefined') {
     setTimeout(() => {
       import('./components/ContentPromotionBanner');
-      import('./components/ContentCarousel');
-    }, 100);
-  }
+      import('./components/ContentCarousel')}, 100)}
 };
 
-// Loading skeleton component
+// Loading skeleton component;
 const ServiceCardSkeleton: React.FC = memo(() => (
   <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
     <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
@@ -140,9 +138,9 @@ const ServiceCardSkeleton: React.FC = memo(() => (
   </div>
 ));
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
-
-const HomePage: React.FC = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
+;
+const HomePage: React.FC = () => {;
+const [isLoaded, setIsLoaded] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -153,21 +151,19 @@ const HomePage: React.FC = () => {
     // Initialize performance optimizations
     initializePerformanceOptimizations();
     
-    return () => clearTimeout(timer);
-  }, []);
+    return () => clearTimeout(timer)}, []);
 
-  // Analytics tracking for phone clicks - optimized
-  const handlePhoneClick = useCallback(() => {
+  // Analytics tracking for phone clicks - optimized;
+const handlePhoneClick = useCallback(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', 'phone_click', {
         event_category: 'engagement',
         event_label: 'main_phone_number'
-      });
-    }
+      })}
   }, []);
 
-  // Enhanced Micro SAAS Services with real functionality and pricing
-  const microSAASServices = [
+  // Enhanced Micro SAAS Services with real functionality and pricing;
+const microSAASServices = [
     {
       title: 'AI Project Manager Pro',
       description: 'Intelligent project planning with AI-powered resource optimization and timeline prediction',
@@ -378,8 +374,8 @@ const HomePage: React.FC = () => {
     }
   ];
 
-  // Enhanced AI Services with real capabilities and market pricing
-  const aiServices = [
+  // Enhanced AI Services with real capabilities and market pricing;
+const aiServices = [
     {
       title: 'Machine Learning Solutions',
       description: 'Custom ML models for predictive analytics and decision-making with 99.9% accuracy',
@@ -478,8 +474,8 @@ const HomePage: React.FC = () => {
     }
   ];
 
-  // Enhanced IT Services with comprehensive capabilities
-  const itServices = [
+  // Enhanced IT Services with comprehensive capabilities;
+const itServices = [
     {
       title: 'Cloud Migration & Management',
       description: 'Complete cloud transformation with AWS, Azure, and GCP expertise',
@@ -578,8 +574,8 @@ const HomePage: React.FC = () => {
     }
   ];
 
-  // Specialized Services
-  const specializedServices = [
+  // Specialized Services;
+const specializedServices = [
     {
       title: 'AI-Powered Business Intelligence',
       description: 'Transform your data into actionable business insights with advanced AI analytics',
@@ -1107,7 +1103,6 @@ const HomePage: React.FC = () => {
       {/* Footer */}
       <Footer />
     </div>
-  );
-};
+  )};
 
 export default HomePage;

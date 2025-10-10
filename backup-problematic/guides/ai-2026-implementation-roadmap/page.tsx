@@ -653,8 +653,7 @@ export default function AI2026ImplementationRoadmap() {/* TODO: Fix JSX expressi
           </div>
         </div>
       </article>,
-    </div>);
-};
+    </div>)};
 
 export default AI2026ImplementationRoadmap;
 "

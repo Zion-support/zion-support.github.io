@@ -1,7 +1,7 @@
 import React from 'react';
 
-export default function EnterpriseAISolutions(): React.JSX.Element {
-  const solutions = [
+export default function EnterpriseAISolutions(): React.JSX.Element {;
+const solutions = [
     {
       icon: <Building className="w-8 h-8" />,</Building>title</Building>: 'Enterprise AI Platform',
       description: 'Comprehensive AI platform designed for large-scale enterprise deployments.',
@@ -112,6 +112,5 @@ export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix
         </div>
       </div>
     </div>
-  );
-}
+  )}
 "

@@ -10,7 +10,7 @@ export enum CacheStorage {}
 }
 
 export interface CacheOptions {
-  ttl?: number; // Time to live in milliseconds;
+  ttl?: number; // Time to live in milliseconds
 export interface CacheOptions {}
   ttl?: number; // Time to live in milliseconds
   storage?: CacheStorage;
@@ -387,8 +387,8 @@ export class CacheManager {/* TODO: Fix JSX expression */}
   ): T | Promise<T></T> {/* TODO: Fix JSX expression */});;)
 }
     const start = performance.now();
-    const value = fn();
-    const duration = performance.now() - start;`
+const value = fn();
+const duration = performance.now() - start;`
     performanceMonitoring.recordCustomMetric(`cache_compute_${key}`, duration, 'ms');
     // Handle both sync and async values;
     if (value instanceof Promise) {/* TODO: Fix JSX expression */});;)
@@ -415,8 +415,8 @@ export class CacheManager {/* TODO: Fix JSX expression */}
   ): Promise<T></T> {/* TODO: Fix JSX expression */});;)
 }
     const start = performance.now();
-    const value = await fn();
-    const duration = performance.now() - start;`
+const value = await fn();
+const duration = performance.now() - start;`
     performanceMonitoring.recordCustomMetric(`cache_compute_${key}`, duration, 'ms');
     this.set(key, value, options);
     return value});
@@ -550,7 +550,7 @@ export default CacheManager;
 }});
 }
 }
-export const cacheManager = new CacheManager();
+export const cacheManager = new CacheManager()
 export default CacheManager;
 `
 }

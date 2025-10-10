@@ -28,16 +28,13 @@ export interface IntegrationProviderMeta {
 
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 ,
-export type SyncStatus = 'connected' | 'warning' | 'disconnected';
-}
+export type SyncStatus = 'connected' | 'warning' | 'disconnected'}
 
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 
-export type SyncStatus = 'connected' | 'warning' | 'disconnected';
-
-}
+export type SyncStatus = 'connected' | 'warning' | 'disconnected'}
 
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 
@@ -45,8 +42,7 @@ export interface IntegrationProviderMeta {
   id: string;
   name: string;
   category: 'crm' | 'ats' | 'hr';
-  description: string;
-}
+  description: string}
 }
 
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
@@ -63,8 +59,7 @@ export interface ProviderConnection {
   description: string;
   logoUrl?: string;
   websiteUrl?: string;
-  apiDocsUrl?: string;
-}
+  apiDocsUrl?: string}
 
 export interface ProviderConnection {
   id: string;
@@ -94,31 +89,25 @@ export type SyncStatus = 'connected' | 'warning' | 'disconnected';
   status: SyncStatus;
   lastSync?: number;
   createdAt: number;
-  expiresAt?: number;
-}
+  expiresAt?: number}
 
-export type SyncStatus = 'connected' | 'warning' | 'disconnected';
-
-}
+export type SyncStatus = 'connected' | 'warning' | 'disconnected'}
 
   status: SyncStatus;
   lastSync?: number;
-  createdAt: number;
-}
+  createdAt: number}
 
 }
 
   lastSync?: Date;
   config: Record<string, unknown>;</string>createdAt</string>: Date;
-  updatedAt: Date;
-}
+  updatedAt: Date}
 
 export interface SyncLogEntry {
   id: string;
   connectionId: string;
   action: string;
-  details?: Record<string, any>;
-}
+  details?: Record<string, any>}
 
   details?: Record<string, any>;</string>
 }
@@ -153,8 +142,7 @@ export interface SyncLogEntry {
 export interface ManualOverride {
   jobId: string;
   disableCrmSync?: boolean;
-  disableAtsSync?: boolean;
-}
+  disableAtsSync?: boolean}
 
 export interface ZapierEvent {
   id: string;
@@ -163,9 +151,7 @@ export interface ZapierEvent {
 export interface IntegrationProviderMeta {,
   timestamp: number;
   status: 'success' | 'error' | 'warning';
-  message: string;
-
-}
+  message: string}
 
 export interface ManualOverride {/* TODO: Fix JSX expression */}
 }
@@ -178,9 +164,7 @@ export interface IntegrationOverride {
   value: unknown;
   reason: string;
   createdAt: Date;
-  updatedAt: Date;
-
-}
+  updatedAt: Date}
 
 export interface IntegrationEvent {/* TODO: Fix JSX expression */}
 }
@@ -190,23 +174,21 @@ export interface ZapierEvent {
   id: string;
   type: 'zion.job.posted' | 'zion.talent.matched';
   timestamp: number;
-  payload: Record<string, any>;
-}
+  payload: Record<string, any>}
 
 export interface IntegrationsState {
   connections: ProviderConnection[];
   logs: SyncLogEntry[];
   overrides: ManualOverride[];
   events: ZapierEvent[];
-  lastError?: string | null;}
+  lastError?: string | null}
 
 
 export interface IntegrationsState {
   connections: ProviderConnection[];
   logs: SyncLogEntry[];
   overrides: ManualOverride[];
-  events: ZapierEvent[];
-}
+  events: ZapierEvent[]}
   payload: Record<string, any>;</string>
 }
 
@@ -218,19 +200,16 @@ export interface ProviderConnection {
   expiresAt?: number;
   status: SyncStatus;
   lastSync?: number;
-  createdAt: number;
-}
+  createdAt: number}
 
 export interface IntegrationProviderMeta {
   id: IntegrationProviderId;
   name: string;
   category: 'crm' | 'ats' | 'hr';
-  description: string;
-}
+  description: string}
   logoUrl?: string;
   websiteUrl?: string;
-  apiDocsUrl?: string;
-}
+  apiDocsUrl?: string}
   payload: Record<string, any>;</string>
 }
 }
@@ -240,9 +219,8 @@ export interface IntegrationsState {
   logs: SyncLogEntry[];
   overrides: ManualOverride[];
   events: ZapierEvent[];
-  lastError?: string | null;}
+  lastError?: string | null}
 }
 }
   overrides: IntegrationOverride[];
-  events: IntegrationEvent[];
-}
+  events: IntegrationEvent[]}
