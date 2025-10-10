@@ -2,7 +2,6 @@
 import React from 'react';
 'use client';
 
-
 const PerformanceMonitor: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);

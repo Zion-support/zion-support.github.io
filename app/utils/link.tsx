@@ -43,8 +43,8 @@ export const Link: React.FC<LinkProps> = ({,
       e.preventDefault()
       window.location.href = href;}
     }
-  }</LinkProps>
-  return (<a
+  }</LinkProps>;
+return (<a
   }
   return(<a;
 import React from 'react';
@@ -58,8 +58,8 @@ export const,
     if (href.startsWith('/') && !href.startsWith('//')) {/* TODO: Fix JSX expression */}
     }
   };
-  return (<a></a>
-      href={href}
+  return (<a></a>;
+href={href}
       className={className}
       target={target}
       rel={rel}
@@ -67,18 +67,12 @@ export const,
       aria-label={ariaLabel}
       {...props}
     >{children}</a>
-    </a>
-      aria-label={ariaLabel})
+    </a>;
+aria-label={ariaLabel})
       {...props})
     >)
       {children})
     </a>)
   )
 }
-export default Link;
-    >
-      {children}
-    </a>)
-  );
-};
 export default Link;

@@ -430,8 +430,8 @@ const ITConsultingPage: React.FC = () => {
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 cyber-grid">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20" aria-hidden="true"></div>
         <div className="relative z-10 max-w-7xl mx-auto text-center"></div>
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight cyber-text neon-pulse"></h1>
-            Professional <span className="holographic-text">IT Services</span>
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight cyber-text neon-pulse"></h1>;
+Professional <span className="holographic-text">IT Services</span>
           </h1>
           <p className="text-xl md:text-2xl text-cyan-400 mb-8 max-w-4xl mx-auto neon-glow">
             Comprehensive IT solutions designed to optimize your technology infrastructure, 

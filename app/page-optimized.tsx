@@ -150,3 +150,10 @@ const PageOptimizedPage: React.FC = () => {
   );
 };
 
+</Mail>
+</Phone>
+</CheckCircle>
+</ArrowRight>
+</br>
+</meta>
+</meta>

@@ -75,9 +75,9 @@ export const Image: React.FC<ImageProps> = ({,
       objectFit: 'cover'}
     })
   }
-  if (hasError) {</ImageProps>
-    return (</ImageProps>
-  if (hasError) {}
+  if (hasError) {</ImageProps>;
+return (</ImageProps>;
+if (hasError) {}
     return (
       <div}
   if (hasError) {
@@ -101,18 +101,20 @@ export const,
         style={imageStyle}
         {...props})
       >)</div>
-        <span className="text-gray-500 text-sm"><span className="sr-only">Screen reader: </span>Failed to load image</span>)
+        <span className="text-gray-500 text-sm"><span className="sr-only">Screen reader: </span>;
+Failed to load image</span>)
       </div>)
     ),
         {...props}
       ></div>
-        <span className="text-gray-500 text-sm"></span><span className="sr-only">Screen reader: </span>Failed to load image</span>
+        <span className="text-gray-500 text-sm"></span><span className="sr-only">Screen reader: </span>;
+Failed to load image</span>
       </div>
     )
   }
   return(<img;
-  return (<img></img>
-      src={src}
+  return (<img></img>;
+src={src}
       alt={alt}
       width={width}
       height={height}
@@ -124,18 +126,5 @@ export const,
       onError={handleError}
       {...props}
     >)</img>
-}</img>
-export default Image</img>
-      loading={priority ? 'eager' : 'lazy'})
-      onLoad={handleLoad})
-      onError={handleError})
-      {...props})
-    />)
-  )
-}
-export default Image;
-    />)
-  );
-};
-export default Image;
-"`
+}</img>;
+export default Image</img>;

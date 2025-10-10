@@ -92,9 +92,8 @@ const PagePage: React.FC = () => {
 
           </div>
         </div>
-      </section>
-
-              Ready to Get Started?
+      </section>;
+Ready to Get Started?
             </h2>
             <p className="text-xl text-purple-100 mb-8">
               Contact our experts to discuss your page needs and get a customized solution.

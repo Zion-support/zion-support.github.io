@@ -196,13 +196,3 @@ declare global {
 }
 
 export default Analytics;
-
-// Analytics Provider for context
-export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  return (
-    <>
-      <Analytics />
-      {children}
-    </>
-  );
-};
