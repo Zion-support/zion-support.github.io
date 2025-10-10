@@ -6,15 +6,16 @@ import { Play, BookOpen, Code, Zap, Shield, Cloud, Brain, Users, Clock, Star, Ar
 const TutorialsPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const categories = const categories = const categories = [
+  const categories = [
     { id: 'all', name: 'All Tutorials', icon: BookOpen },
     { id: 'ai', name: 'AI Services', icon: Brain },
     { id: 'it', name: 'IT Services', icon: Cloud },
     { id: 'saas', name: 'Micro SaaS', icon: Zap },
-    { id: 'security', name: 'Security', icon: Shield },;
-    { id: 'integration', name: 'Integration', icon: Code };
+    { id: 'security', name: 'Security', icon: Shield },
+    { id: 'integration', name: 'Integration', icon: Code }
   ];
-  const tutorials = const tutorials = const tutorials = [
+
+  const tutorials = [
     {
       id: 1,
       title: 'Getting Started with AI Chat API',
@@ -32,10 +33,10 @@ const TutorialsPage: React.FC = () => {
         steps: [
           'Set up your development environment',
           'Get your API key from the dashboard',
-          'Make your first API call',;
-          'Handle responses and errors',;
-          'Implement advanced features';
-        ];
+          'Make your first API call',
+          'Handle responses and errors',
+          'Implement advanced features'
+        ]
       }
     },
     {
@@ -154,20 +155,69 @@ const TutorialsPage: React.FC = () => {
       }
     }
   ];
-  const filteredTutorials = const filteredTutorials = selectedCategory === 'all' ;
-    ? tutorials ;
+
+  const filteredTutorials = selectedCategory === 'all' 
+    ? tutorials 
     : tutorials.filter(tutorial => tutorial.category === selectedCategory);
 
   const featuredTutorials = tutorials.filter(tutorial => tutorial.rating >= 4.8).slice(0, 3);
 
-  return() {featuredTutorials.map((tutorial) => ()
-                      {tutorial.tags.slice(0, 3).map((tag, index) => ()
+  return (
+    <>
+      <Helmet>
+        <title>Tutorials - Zion Tech Group</title>
+        <meta name="description" content="Learn how to use our AI and IT services with comprehensive tutorials and guides." />
+      </Helmet>
+      <div className="min-h-screen py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Tutorials & <span className="text-cyan-400">Guides</span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Learn how to use our AI and IT services with comprehensive tutorials and guides.
+            </p>
+          </div>
+
+          {/* Featured Tutorials */}
+          <section className="mb-16">
+            <h2 className="text-3xl font-bold text-white mb-8 text-center">Featured Tutorials</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {featuredTutorials.map((tutorial) => (
+                <div key={tutorial.id} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-500/20 rounded-lg overflow-hidden hover:border-cyan-400/40 transition-all duration-300">
+                  <div className="p-6">
+                    <div className="flex items-center justify-between mb-4">
+                      <span className="text-sm text-cyan-400 font-semibold">{tutorial.difficulty}</span>
+                      <div className="flex items-center space-x-1">
+                        <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                        <span className="text-sm text-gray-300">{tutorial.rating}</span>
+                      </div>
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-3">{tutorial.title}</h3>
+                    <p className="text-gray-300 mb-4">{tutorial.description}</p>
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="flex items-center space-x-4 text-sm text-gray-400">
+                        <span className="flex items-center">
+                          <Clock className="w-4 h-4 mr-1" />
+                          {tutorial.duration}
+                        </span>
+                        <span className="flex items-center">
+                          <Users className="w-4 h-4 mr-1" />
+                          {tutorial.students}
+                        </span>
+                      </div>
+                    </div>
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {tutorial.tags.slice(0, 3).map((tag, index) => (
+                        <span key={index} className="text-xs bg-slate-700 text-gray-300 px-2 py-1 rounded">
+                          {tag}
+                        </span>
                       ))}
                     </div>
                     <a href={`/tutorials/${tutorial.id}`}
-                      className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-4 py-2 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center" /></a>
+                      className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-4 py-2 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center">
                       Start Tutorial
-                      <ArrowRight className="w-4 h-4 ml-2" / /></ArrowRight>
+                      <ArrowRight className="w-4 h-4 ml-2" />
                     </a>
                   </div>
                 </div>
@@ -176,10 +226,12 @@ const TutorialsPage: React.FC = () => {
           </section>
 
           {/* Category Filter */}
-          <section className="mb-12" /></section>
+          <section className="mb-12">
             <h2 className="text-2xl font-bold text-white mb-6 text-center">Browse by Category</h2>
-            <div className="flex flex-wrap justify-center gap-4" /></div>
-              {categories.map((category) => ()
+            <div className="flex flex-wrap justify-center gap-4">
+              {categories.map((category) => (
+                <button
+                  key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
                   className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                     selectedCategory === category.id
@@ -187,7 +239,7 @@ const TutorialsPage: React.FC = () => {
                       : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
                   }`}
                 >
-                  <category.icon className="w-5 h-5" /></category>
+                  <category.icon className="w-5 h-5" />
                   <span>{category.name}</span>
                 </button>
               ))}
@@ -195,17 +247,44 @@ const TutorialsPage: React.FC = () => {
           </section>
 
           {/* All Tutorials */}
-          <section id="all-tutorials" className="mb-16" /></section>
+          <section id="all-tutorials" className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">All Tutorials</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" /></div>
-              {filteredTutorials.map((tutorial) => ()
-                      {tutorial.tags.map((tag, index) => ()
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredTutorials.map((tutorial) => (
+                <div key={tutorial.id} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-500/20 rounded-lg overflow-hidden hover:border-cyan-400/40 transition-all duration-300">
+                  <div className="p-6">
+                    <div className="flex items-center justify-between mb-4">
+                      <span className="text-sm text-cyan-400 font-semibold">{tutorial.difficulty}</span>
+                      <div className="flex items-center space-x-1">
+                        <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                        <span className="text-sm text-gray-300">{tutorial.rating}</span>
+                      </div>
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-3">{tutorial.title}</h3>
+                    <p className="text-gray-300 mb-4">{tutorial.description}</p>
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="flex items-center space-x-4 text-sm text-gray-400">
+                        <span className="flex items-center">
+                          <Clock className="w-4 h-4 mr-1" />
+                          {tutorial.duration}
+                        </span>
+                        <span className="flex items-center">
+                          <Users className="w-4 h-4 mr-1" />
+                          {tutorial.students}
+                        </span>
+                      </div>
+                    </div>
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {tutorial.tags.map((tag, index) => (
+                        <span key={index} className="text-xs bg-slate-700 text-gray-300 px-2 py-1 rounded">
+                          {tag}
+                        </span>
                       ))}
                     </div>
                     <a href={`/tutorials/${tutorial.id}`}
-                      className="w-full bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-4 py-2 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center" /></a>
+                      className="w-full bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-4 py-2 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center">
                       Start Tutorial
-                      <ArrowRight className="w-4 h-4 ml-2" / /></ArrowRight>
+                      <ArrowRight className="w-4 h-4 ml-2" />
                     </a>
                   </div>
                 </div>
@@ -214,156 +293,156 @@ const TutorialsPage: React.FC = () => {
           </section>
 
           {/* Learning Paths */}
-          <section className="mb-16" /></section>
+          <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">Learning Paths</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" /></div>
-              <div className="cyber-card-enhanced p-8" /></div>
-                <div className="flex items-center mb-4" /></div>
-                  <Brain className="w-8 h-8 text-cyan-400 mr-3" / /></Brain>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-500/20 rounded-lg p-8 hover:border-cyan-400/40 transition-all duration-300">
+                <div className="flex items-center mb-4">
+                  <Brain className="w-8 h-8 text-cyan-400 mr-3" />
                   <h3 className="text-xl font-bold text-white">AI Developer Path</h3>
                 </div>
-                <p className="text-gray-300 mb-6" /></p>
+                <p className="text-gray-300 mb-6">
                   Master AI development from basics to advanced implementations.
                 </p>
-                <ul className="space-y-2 mb-6" /></ul>
-                  <li className="flex items-center text-sm text-gray-300" /></li>
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" / /></CheckCircle>
+                <ul className="space-y-2 mb-6">
+                  <li className="flex items-center text-sm text-gray-300">
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                     AI Fundamentals
                   </li>
-                  <li className="flex items-center text-sm text-gray-300" /></li>
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" / /></CheckCircle>
+                  <li className="flex items-center text-sm text-gray-300">
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                     API Integration
                   </li>
-                  <li className="flex items-center text-sm text-gray-300" /></li>
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" / /></CheckCircle>
+                  <li className="flex items-center text-sm text-gray-300">
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                     Advanced AI Features
                   </li>
                 </ul>
-                <a href="#" className="text-cyan-400 hover:text-cyan-300 font-semibold" /></a>
-                  Start Learning Path <ArrowRight className="w-4 h-4 inline ml-1" / /></ArrowRight>
+                <a href="#" className="text-cyan-400 hover:text-cyan-300 font-semibold">
+                  Start Learning Path <ArrowRight className="w-4 h-4 inline ml-1" />
                 </a>
               </div>
 
-              <div className="cyber-card-enhanced p-8" /></div>
-                <div className="flex items-center mb-4" /></div>
-                  <Cloud className="w-8 h-8 text-green-400 mr-3" / /></Cloud>
+              <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-500/20 rounded-lg p-8 hover:border-cyan-400/40 transition-all duration-300">
+                <div className="flex items-center mb-4">
+                  <Cloud className="w-8 h-8 text-green-400 mr-3" />
                   <h3 className="text-xl font-bold text-white">Cloud Architect Path</h3>
                 </div>
-                <p className="text-gray-300 mb-6" /></p>
+                <p className="text-gray-300 mb-6">
                   Learn cloud architecture and infrastructure management.
                 </p>
-                <ul className="space-y-2 mb-6" /></ul>
-                  <li className="flex items-center text-sm text-gray-300" /></li>
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" / /></CheckCircle>
+                <ul className="space-y-2 mb-6">
+                  <li className="flex items-center text-sm text-gray-300">
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                     Cloud Fundamentals
                   </li>
-                  <li className="flex items-center text-sm text-gray-300" /></li>
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" / /></CheckCircle>
+                  <li className="flex items-center text-sm text-gray-300">
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                     Security & Compliance
                   </li>
-                  <li className="flex items-center text-sm text-gray-300" /></li>
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" / /></CheckCircle>
+                  <li className="flex items-center text-sm text-gray-300">
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                     Advanced Architecture
                   </li>
                 </ul>
-                <a href="#" className="text-green-400 hover:text-green-300 font-semibold" /></a>
-                  Start Learning Path <ArrowRight className="w-4 h-4 inline ml-1" / /></ArrowRight>
+                <a href="#" className="text-green-400 hover:text-green-300 font-semibold">
+                  Start Learning Path <ArrowRight className="w-4 h-4 inline ml-1" />
                 </a>
               </div>
 
-              <div className="cyber-card-enhanced p-8" /></div>
-                <div className="flex items-center mb-4" /></div>
-                  <Zap className="w-8 h-8 text-purple-400 mr-3" / /></Zap>
+              <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-500/20 rounded-lg p-8 hover:border-cyan-400/40 transition-all duration-300">
+                <div className="flex items-center mb-4">
+                  <Zap className="w-8 h-8 text-purple-400 mr-3" />
                   <h3 className="text-xl font-bold text-white">SaaS Entrepreneur Path</h3>
                 </div>
-                <p className="text-gray-300 mb-6" /></p>
+                <p className="text-gray-300 mb-6">
                   Build and scale your own SaaS business from scratch.
                 </p>
-                <ul className="space-y-2 mb-6" /></ul>
-                  <li className="flex items-center text-sm text-gray-300" /></li>
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" / /></CheckCircle>
+                <ul className="space-y-2 mb-6">
+                  <li className="flex items-center text-sm text-gray-300">
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                     SaaS Fundamentals
                   </li>
-                  <li className="flex items-center text-sm text-gray-300" /></li>
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" / /></CheckCircle>
+                  <li className="flex items-center text-sm text-gray-300">
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                     Business Models
                   </li>
-                  <li className="flex items-center text-sm text-gray-300" /></li>
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" / /></CheckCircle>
+                  <li className="flex items-center text-sm text-gray-300">
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                     Scaling & Growth
                   </li>
                 </ul>
-                <a href="#" className="text-purple-400 hover:text-purple-300 font-semibold" /></a>
-                  Start Learning Path <ArrowRight className="w-4 h-4 inline ml-1" / /></ArrowRight>
+                <a href="#" className="text-purple-400 hover:text-purple-300 font-semibold">
+                  Start Learning Path <ArrowRight className="w-4 h-4 inline ml-1" />
                 </a>
               </div>
             </div>
           </section>
 
           {/* Resources */}
-          <section className="mb-16" /></section>
+          <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">Additional Resources</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" /></div>
-              <div className="cyber-card-enhanced p-6 text-center" /></div>
-                <Code className="w-12 h-12 text-cyan-400 mx-auto mb-4" / /></Code>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-500/20 rounded-lg p-6 text-center hover:border-cyan-400/40 transition-all duration-300">
+                <Code className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-white mb-2">Code Examples</h3>
-                <p className="text-gray-300 mb-4 text-sm" /></p>
+                <p className="text-gray-300 mb-4 text-sm">
                   Ready-to-use code examples for all our services
                 </p>
-                <a href="#" className="text-cyan-400 hover:text-cyan-300 text-sm" /></a>
-                  Browse Examples <ExternalLink className="w-4 h-4 inline ml-1" / /></ExternalLink>
+                <a href="#" className="text-cyan-400 hover:text-cyan-300 text-sm">
+                  Browse Examples <ExternalLink className="w-4 h-4 inline ml-1" />
                 </a>
               </div>
 
-              <div className="cyber-card-enhanced p-6 text-center" /></div>
-                <Download className="w-12 h-12 text-green-400 mx-auto mb-4" / /></Download>
+              <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-500/20 rounded-lg p-6 text-center hover:border-cyan-400/40 transition-all duration-300">
+                <Download className="w-12 h-12 text-green-400 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-white mb-2">SDKs & Libraries</h3>
-                <p className="text-gray-300 mb-4 text-sm" /></p>
+                <p className="text-gray-300 mb-4 text-sm">
                   Official SDKs for popular programming languages
                 </p>
-                <a href="/api" className="text-green-400 hover:text-green-300 text-sm" /></a>
-                  View SDKs <ExternalLink className="w-4 h-4 inline ml-1" / /></ExternalLink>
+                <a href="/api" className="text-green-400 hover:text-green-300 text-sm">
+                  View SDKs <ExternalLink className="w-4 h-4 inline ml-1" />
                 </a>
               </div>
 
-              <div className="cyber-card-enhanced p-6 text-center" /></div>
-                <Users className="w-12 h-12 text-purple-400 mx-auto mb-4" / /></Users>
+              <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-500/20 rounded-lg p-6 text-center hover:border-cyan-400/40 transition-all duration-300">
+                <Users className="w-12 h-12 text-purple-400 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-white mb-2">Community</h3>
-                <p className="text-gray-300 mb-4 text-sm" /></p>
+                <p className="text-gray-300 mb-4 text-sm">
                   Join our developer community for support and discussions
                 </p>
-                <a href="/community" className="text-purple-400 hover:text-purple-300 text-sm" /></a>
-                  Join Community <ExternalLink className="w-4 h-4 inline ml-1" / /></ExternalLink>
+                <a href="/community" className="text-purple-400 hover:text-purple-300 text-sm">
+                  Join Community <ExternalLink className="w-4 h-4 inline ml-1" />
                 </a>
               </div>
 
-              <div className="cyber-card-enhanced p-6 text-center" /></div>
-                <BookOpen className="w-12 h-12 text-orange-400 mx-auto mb-4" / /></BookOpen>
+              <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-500/20 rounded-lg p-6 text-center hover:border-cyan-400/40 transition-all duration-300">
+                <BookOpen className="w-12 h-12 text-orange-400 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-white mb-2">Documentation</h3>
-                <p className="text-gray-300 mb-4 text-sm" /></p>
+                <p className="text-gray-300 mb-4 text-sm">
                   Comprehensive API and service documentation
                 </p>
-                <a href="/docs" className="text-orange-400 hover:text-orange-300 text-sm" /></a>
-                  View Docs <ExternalLink className="w-4 h-4 inline ml-1" / /></ExternalLink>
+                <a href="/docs" className="text-orange-400 hover:text-orange-300 text-sm">
+                  View Docs <ExternalLink className="w-4 h-4 inline ml-1" />
                 </a>
               </div>
             </div>
           </section>
 
           {/* CTA */}
-          <section className="mb-16" /></section>
-            <div className="cyber-card-enhanced p-8 text-center" /></div>
+          <section className="mb-16">
+            <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-500/20 rounded-lg p-8 text-center">
               <h2 className="text-2xl font-bold text-white mb-4">Ready to Start Learning?</h2>
-              <p className="text-gray-300 mb-6" /></p>
+              <p className="text-gray-300 mb-6">
                 Join thousands of developers who are already building amazing applications with our services.
               </p>
-              <div className="flex flex-wrap justify-center gap-4" /></div>
+              <div className="flex flex-wrap justify-center gap-4">
                 <a href="/contact"
-                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300" /></a>
+                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300">
                   Get Started Free
                 </a>
                 <a href="/demo"
-                  className="border-2 border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300" /></a>
+                  className="border-2 border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
                   Request Demo
                 </a>
               </div>
