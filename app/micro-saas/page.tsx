@@ -1,15 +1,10 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield } from 'lucide-react';
-=======
-import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe } from 'lucide-react';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-d277
+import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Users, TrendingUp, Star, BarChart3, MessageSquare, Target, Settings, Cpu, Smartphone, Lock, FileText, Search, Calendar, Mail, Phone, MapPin, Clock } from 'lucide-react';
 const MicroSaasPage: React.FC = () => {
   const products = [
     {
