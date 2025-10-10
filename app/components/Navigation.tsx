@@ -55,7 +55,16 @@ const Navigation: React.FC = () => {
     { name: 'AI Data Visualization', href: '/ai-data-visualization', icon: BarChart, description: 'Data Viz AI' },
     { name: 'AI Lead Generation', href: '/ai-lead-generation', icon: Target, description: 'Lead Gen AI' },
     { name: 'AI Document Processing', href: '/ai-document-processing', icon: Code, description: 'Document AI' },
-    { name: 'AI Process Automation', href: '/ai-automation', icon: Zap, description: 'Process Automation' }
+    { name: 'AI Process Automation', href: '/ai-automation', icon: Zap, description: 'Process Automation' },
+    { name: 'AI Quantum Computing', href: '/ai-quantum-computing', icon: Cpu, description: 'Quantum AI Solutions' },
+    { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems', icon: Brain, description: 'Self-Managing AI' },
+    { name: 'AI Holographic Workspace', href: '/ai-holographic-workspace', icon: Brain, description: 'Holographic AI' },
+    { name: 'AI 3D Generation', href: '/ai-3d-generation', icon: Brain, description: '3D AI Solutions' },
+    { name: 'AI Agricultural Intelligence', href: '/ai-agricultural-intelligence-pro', icon: Brain, description: 'Smart Farming AI' },
+    { name: 'AI Climate Solutions', href: '/ai-climate-solutions-pro', icon: Brain, description: 'Environmental AI' },
+    { name: 'AI Drug Discovery', href: '/ai-drug-discovery-pro', icon: Brain, description: 'Pharmaceutical AI' },
+    { name: 'AI Energy Grid Management', href: '/ai-energy-grid-management-pro', icon: Brain, description: 'Energy AI' },
+    { name: 'AI Financial Crime Detection', href: '/ai-financial-crime-detection-pro', icon: Brain, description: 'Fraud Detection AI' }
   ];
   const itServices = [
     { name: 'Cloud Services', href: '/cloud-services', icon: Cloud, description: 'Cloud Solutions' },
@@ -71,7 +80,31 @@ const Navigation: React.FC = () => {
     { name: 'Data Analytics', href: '/data-analytics', icon: BarChart, description: 'Business Intelligence' },
     { name: 'Mobile Development', href: '/mobile-development', icon: Smartphone, description: 'Mobile Apps' },
     { name: 'Web Development', href: '/web-development', icon: Globe, description: 'Web Applications' },
-    { name: 'Process Automation', href: '/process-automation', icon: Zap, description: 'Workflow Automation' }
+    { name: 'Process Automation', href: '/process-automation', icon: Zap, description: 'Workflow Automation' },
+    { name: 'Multi-Cloud Management', href: '/multi-cloud-management', icon: Cloud, description: 'Multi-Cloud Strategy' },
+    { name: 'Edge Computing Solutions', href: '/edge-computing-solutions', icon: Cloud, description: 'Edge AI Deployment' },
+    { name: 'Serverless Architecture', href: '/serverless-architecture', icon: Cloud, description: 'Auto-scaling Apps' },
+    { name: 'Cloud-Native Development', href: '/cloud-native-development', icon: Cloud, description: 'Containerization' },
+    { name: 'Zero Trust Security', href: '/zero-trust-security', icon: Shield, description: 'Zero Trust Architecture' },
+    { name: 'AI-Powered Threat Hunting', href: '/ai-threat-hunting', icon: Shield, description: 'Proactive Security' },
+    { name: 'Security Orchestration', href: '/security-orchestration', icon: Shield, description: 'Security Automation' },
+    { name: 'Compliance Automation', href: '/compliance-automation', icon: Shield, description: 'Regulatory Compliance' },
+    { name: 'Real-Time Analytics', href: '/real-time-analytics', icon: BarChart, description: 'Streaming Analytics' },
+    { name: 'Predictive Analytics', href: '/predictive-analytics', icon: BarChart, description: 'Forecasting' },
+    { name: 'Data Lake Solutions', href: '/data-lake-solutions', icon: BarChart, description: 'Big Data Storage' },
+    { name: 'Customer Analytics', href: '/customer-analytics', icon: BarChart, description: 'Customer Insights' },
+    { name: 'Cross-Platform Development', href: '/cross-platform-development', icon: Smartphone, description: 'Native Quality Apps' },
+    { name: 'Progressive Web Apps', href: '/progressive-web-apps', icon: Smartphone, description: 'App-like Web' },
+    { name: 'Mobile AI Integration', href: '/mobile-ai-integration', icon: Smartphone, description: 'AI Mobile Apps' },
+    { name: 'NoSQL Database Solutions', href: '/nosql-database-solutions', icon: Database, description: 'Scalable Storage' },
+    { name: 'Graph Database Solutions', href: '/graph-database-solutions', icon: Database, description: 'Relationship Data' },
+    { name: 'Time Series Databases', href: '/time-series-databases', icon: Database, description: 'IoT Data Storage' },
+    { name: 'Intelligent Process Automation', href: '/intelligent-process-automation', icon: Zap, description: 'AI Automation' },
+    { name: 'Robotic Process Automation', href: '/robotic-process-automation', icon: Zap, description: 'Software Robots' },
+    { name: 'Hyperautomation', href: '/hyperautomation', icon: Zap, description: 'Multi-tool Automation' },
+    { name: 'Progressive Web Applications', href: '/progressive-web-applications', icon: Globe, description: 'Modern Web Apps' },
+    { name: 'Microservices Architecture', href: '/microservices-architecture', icon: Globe, description: 'Scalable Architecture' },
+    { name: 'Headless CMS Solutions', href: '/headless-cms-solutions', icon: Globe, description: 'API-first CMS' }
   ];
   const microSaasServices = [
     { name: 'Micro SAAS Solutions', href: '/micro-saas', icon: Cpu, description: '50+ AI Tools' },
@@ -101,7 +134,12 @@ const Navigation: React.FC = () => {
     { name: 'Autonomous Systems', href: '/autonomous-systems', icon: Zap, description: 'Self-Managing Systems' },
     { name: '5G Implementation', href: '/5g-implementation', icon: Globe, description: '5G Solutions' },
     { name: 'AI 3D Generation', href: '/ai-3d-generation', icon: Brain, description: '3D AI Solutions' },
-    { name: 'Holographic Workspace', href: '/ai-holographic-workspace', icon: Brain, description: 'Holographic AI' }
+    { name: 'Holographic Workspace', href: '/ai-holographic-workspace', icon: Brain, description: 'Holographic AI' },
+    { name: 'AR/VR Development', href: '/ar-vr-development', icon: Globe, description: 'Immersive Experiences' },
+    { name: 'IoT Platform Development', href: '/iot-platform-development', icon: Globe, description: 'Connected Systems' },
+    { name: 'Blockchain Solutions', href: '/blockchain-solutions', icon: Shield, description: 'Decentralized Apps' },
+    { name: 'Edge Computing Solutions', href: '/edge-computing-solutions', icon: Cloud, description: 'Edge AI' },
+    { name: '5G Network Design', href: '/5g-network-design', icon: Globe, description: 'Ultra-fast Connectivity' }
   ];
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${

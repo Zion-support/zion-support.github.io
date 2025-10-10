@@ -22,7 +22,16 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Data Visualization', url: '/ai-data-visualization', description: 'Advanced data visualization' },
     { name: 'AI Lead Generation', url: '/ai-lead-generation', description: 'AI-powered lead generation' },
     { name: 'AI Document Processing', url: '/ai-document-processing', description: 'AI document processing' },
-    { name: 'AI Process Automation', url: '/ai-automation', description: 'Intelligent process automation' }
+    { name: 'AI Process Automation', url: '/ai-automation', description: 'Intelligent process automation' },
+    { name: 'AI Quantum Computing', url: '/ai-quantum-computing', description: 'Quantum AI solutions' },
+    { name: 'AI Autonomous Systems', url: '/ai-autonomous-systems', description: 'Self-managing AI' },
+    { name: 'AI Holographic Workspace', url: '/ai-holographic-workspace', description: 'Holographic AI' },
+    { name: 'AI 3D Generation', url: '/ai-3d-generation', description: '3D AI solutions' },
+    { name: 'AI Agricultural Intelligence', url: '/ai-agricultural-intelligence-pro', description: 'Smart farming AI' },
+    { name: 'AI Climate Solutions', url: '/ai-climate-solutions-pro', description: 'Environmental AI' },
+    { name: 'AI Drug Discovery', url: '/ai-drug-discovery-pro', description: 'Pharmaceutical AI' },
+    { name: 'AI Energy Grid Management', url: '/ai-energy-grid-management-pro', description: 'Energy AI' },
+    { name: 'AI Financial Crime Detection', url: '/ai-financial-crime-detection-pro', description: 'Fraud detection AI' }
   ];
   const itServices = [
     { name: 'Cloud Services', url: '/cloud-services', description: 'Cloud solutions' },
@@ -38,7 +47,31 @@ const Footer: React.FC = memo(() => {
     { name: 'Data Analytics', url: '/data-analytics', description: 'Business intelligence' },
     { name: 'Mobile Development', url: '/mobile-development', description: 'Mobile applications' },
     { name: 'Web Development', url: '/web-development', description: 'Web applications' },
-    { name: 'Process Automation', url: '/process-automation', description: 'Workflow automation' }
+    { name: 'Process Automation', url: '/process-automation', description: 'Workflow automation' },
+    { name: 'Multi-Cloud Management', url: '/multi-cloud-management', description: 'Multi-cloud strategy' },
+    { name: 'Edge Computing Solutions', url: '/edge-computing-solutions', description: 'Edge AI deployment' },
+    { name: 'Serverless Architecture', url: '/serverless-architecture', description: 'Auto-scaling apps' },
+    { name: 'Cloud-Native Development', url: '/cloud-native-development', description: 'Containerization' },
+    { name: 'Zero Trust Security', url: '/zero-trust-security', description: 'Zero trust architecture' },
+    { name: 'AI-Powered Threat Hunting', url: '/ai-threat-hunting', description: 'Proactive security' },
+    { name: 'Security Orchestration', url: '/security-orchestration', description: 'Security automation' },
+    { name: 'Compliance Automation', url: '/compliance-automation', description: 'Regulatory compliance' },
+    { name: 'Real-Time Analytics', url: '/real-time-analytics', description: 'Streaming analytics' },
+    { name: 'Predictive Analytics', url: '/predictive-analytics', description: 'Forecasting' },
+    { name: 'Data Lake Solutions', url: '/data-lake-solutions', description: 'Big data storage' },
+    { name: 'Customer Analytics', url: '/customer-analytics', description: 'Customer insights' },
+    { name: 'Cross-Platform Development', url: '/cross-platform-development', description: 'Native quality apps' },
+    { name: 'Progressive Web Apps', url: '/progressive-web-apps', description: 'App-like web' },
+    { name: 'Mobile AI Integration', url: '/mobile-ai-integration', description: 'AI mobile apps' },
+    { name: 'NoSQL Database Solutions', url: '/nosql-database-solutions', description: 'Scalable storage' },
+    { name: 'Graph Database Solutions', url: '/graph-database-solutions', description: 'Relationship data' },
+    { name: 'Time Series Databases', url: '/time-series-databases', description: 'IoT data storage' },
+    { name: 'Intelligent Process Automation', url: '/intelligent-process-automation', description: 'AI automation' },
+    { name: 'Robotic Process Automation', url: '/robotic-process-automation', description: 'Software robots' },
+    { name: 'Hyperautomation', url: '/hyperautomation', description: 'Multi-tool automation' },
+    { name: 'Progressive Web Applications', url: '/progressive-web-applications', description: 'Modern web apps' },
+    { name: 'Microservices Architecture', url: '/microservices-architecture', description: 'Scalable architecture' },
+    { name: 'Headless CMS Solutions', url: '/headless-cms-solutions', description: 'API-first CMS' }
   ];
   const microSaasServices = [
     { name: 'Micro SAAS Solutions', url: '/micro-saas', description: '50+ AI-powered tools' },
@@ -67,7 +100,12 @@ const Footer: React.FC = memo(() => {
     { name: 'Autonomous Systems', url: '/autonomous-systems', description: 'Self-managing systems' },
     { name: '5G Implementation', url: '/5g-implementation', description: '5G solutions' },
     { name: 'AI 3D Generation', url: '/ai-3d-generation', description: '3D AI solutions' },
-    { name: 'Holographic Workspace', url: '/ai-holographic-workspace', description: 'Holographic AI' }
+    { name: 'Holographic Workspace', url: '/ai-holographic-workspace', description: 'Holographic AI' },
+    { name: 'AR/VR Development', url: '/ar-vr-development', description: 'Immersive experiences' },
+    { name: 'IoT Platform Development', url: '/iot-platform-development', description: 'Connected systems' },
+    { name: 'Blockchain Solutions', url: '/blockchain-solutions', description: 'Decentralized apps' },
+    { name: 'Edge Computing Solutions', url: '/edge-computing-solutions', description: 'Edge AI' },
+    { name: '5G Network Design', url: '/5g-network-design', description: 'Ultra-fast connectivity' }
   ];
   const companyLinks = [
     { name: 'About Us', url: '/about' },

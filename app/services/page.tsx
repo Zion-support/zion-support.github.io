@@ -22,11 +22,13 @@ const ServicesPage: React.FC = () => {
     {
       icon: Brain,
       title: 'AI Solutions',
-      description: 'Advanced artificial intelligence solutions to automate and optimize your business processes.',
-      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics', 'AI Consulting'],
+      description: 'Advanced artificial intelligence solutions to automate and optimize your business processes with cutting-edge machine learning and deep learning technologies.',
+      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics', 'AI Consulting', 'Deep Learning', 'Neural Networks', 'AI Model Training'],
       price: 'Starting at $1,500/month',
       category: 'AI Services',
-      popular: true
+      popular: true,
+      trial: '30-day free trial',
+      setup: '2-week implementation'
     },
     {
       icon: Brain,
@@ -282,6 +284,431 @@ const ServicesPage: React.FC = () => {
       features: ['Technology Assessment', 'Strategic Planning', 'Cost Optimization', 'Digital Transformation', 'Training'],
       price: 'Starting at $299/hour',
       category: 'IT Services'
+    },
+    
+    // Advanced AI Services
+    {
+      icon: Brain,
+      title: 'AI Quantum Computing',
+      description: 'Revolutionary quantum computing solutions for complex problem solving and optimization.',
+      features: ['Quantum Algorithms', 'Quantum Machine Learning', 'Optimization Problems', 'Cryptography', 'Simulation'],
+      price: 'Starting at $5,000/month',
+      category: 'AI Services',
+      popular: true,
+      trial: '14-day free trial',
+      setup: '4-week implementation'
+    },
+    {
+      icon: Brain,
+      title: 'AI Autonomous Systems',
+      description: 'Self-managing AI systems that operate independently with minimal human intervention.',
+      features: ['Autonomous Decision Making', 'Self-Learning', 'Adaptive Behavior', 'Real-time Processing', 'Safety Systems'],
+      price: 'Starting at $3,500/month',
+      category: 'AI Services',
+      popular: true,
+      trial: '21-day free trial',
+      setup: '3-week implementation'
+    },
+    {
+      icon: Brain,
+      title: 'AI Holographic Workspace',
+      description: 'Next-generation holographic AI workspace for immersive collaboration and visualization.',
+      features: ['3D Holographic Display', 'Gesture Control', 'Spatial Computing', 'Collaborative Workspace', 'AR/VR Integration'],
+      price: 'Starting at $2,999/month',
+      category: 'AI Services',
+      popular: true,
+      trial: '7-day free trial',
+      setup: '2-week implementation'
+    },
+    {
+      icon: Brain,
+      title: 'AI 3D Generation',
+      description: 'Create stunning 3D models, animations, and virtual environments with AI-powered generation.',
+      features: ['3D Model Generation', 'Animation Creation', 'Texture Generation', 'Lighting Optimization', 'Rendering'],
+      price: 'Starting at $1,299/month',
+      category: 'AI Services',
+      popular: true,
+      trial: '14-day free trial',
+      setup: '1-week implementation'
+    },
+    {
+      icon: Brain,
+      title: 'AI Agricultural Intelligence',
+      description: 'Smart farming solutions with AI-powered crop monitoring, yield prediction, and resource optimization.',
+      features: ['Crop Monitoring', 'Yield Prediction', 'Soil Analysis', 'Pest Detection', 'Resource Optimization'],
+      price: 'Starting at $899/month',
+      category: 'AI Services',
+      popular: true,
+      trial: '30-day free trial',
+      setup: '2-week implementation'
+    },
+    {
+      icon: Brain,
+      title: 'AI Climate Solutions',
+      description: 'Environmental AI solutions for climate monitoring, carbon tracking, and sustainability optimization.',
+      features: ['Climate Monitoring', 'Carbon Tracking', 'Sustainability Analytics', 'Environmental Impact', 'Green Energy'],
+      price: 'Starting at $1,199/month',
+      category: 'AI Services',
+      popular: true,
+      trial: '21-day free trial',
+      setup: '3-week implementation'
+    },
+    {
+      icon: Brain,
+      title: 'AI Drug Discovery',
+      description: 'Accelerate pharmaceutical research with AI-powered drug discovery and molecular analysis.',
+      features: ['Molecular Analysis', 'Drug Design', 'Toxicity Prediction', 'Clinical Trials', 'Regulatory Compliance'],
+      price: 'Starting at $4,999/month',
+      category: 'AI Services',
+      popular: true,
+      trial: '14-day free trial',
+      setup: '4-week implementation'
+    },
+    {
+      icon: Brain,
+      title: 'AI Energy Grid Management',
+      description: 'Intelligent energy grid optimization with AI-powered load balancing and renewable energy integration.',
+      features: ['Load Balancing', 'Renewable Integration', 'Demand Forecasting', 'Grid Optimization', 'Energy Storage'],
+      price: 'Starting at $2,499/month',
+      category: 'AI Services',
+      popular: true,
+      trial: '21-day free trial',
+      setup: '3-week implementation'
+    },
+    {
+      icon: Brain,
+      title: 'AI Financial Crime Detection',
+      description: 'Advanced fraud detection and financial crime prevention with AI-powered analysis.',
+      features: ['Fraud Detection', 'Money Laundering', 'Transaction Analysis', 'Risk Assessment', 'Compliance'],
+      price: 'Starting at $1,799/month',
+      category: 'AI Services',
+      popular: true,
+      trial: '14-day free trial',
+      setup: '2-week implementation'
+    },
+    
+    // Advanced Cloud Services
+    {
+      icon: Cloud,
+      title: 'Multi-Cloud Management',
+      description: 'Comprehensive multi-cloud strategy with seamless integration across AWS, Azure, and Google Cloud.',
+      features: ['Multi-Cloud Strategy', 'Cost Optimization', 'Security Management', 'Performance Monitoring', 'Disaster Recovery'],
+      price: 'Starting at $1,999/month',
+      category: 'Cloud Services',
+      popular: true,
+      trial: '30-day free trial',
+      setup: '3-week implementation'
+    },
+    {
+      icon: Cloud,
+      title: 'Edge Computing Solutions',
+      description: 'Deploy AI and applications at the edge for ultra-low latency and real-time processing.',
+      features: ['Edge AI Deployment', 'Real-time Processing', 'Low Latency', 'Offline Capability', 'IoT Integration'],
+      price: 'Starting at $1,499/month',
+      category: 'Cloud Services',
+      popular: true,
+      trial: '21-day free trial',
+      setup: '2-week implementation'
+    },
+    {
+      icon: Cloud,
+      title: 'Serverless Architecture',
+      description: 'Build and deploy serverless applications with automatic scaling and cost optimization.',
+      features: ['Auto-scaling', 'Cost Optimization', 'Event-driven Architecture', 'Microservices', 'API Management'],
+      price: 'Starting at $799/month',
+      category: 'Cloud Services',
+      popular: true,
+      trial: '14-day free trial',
+      setup: '1-week implementation'
+    },
+    {
+      icon: Cloud,
+      title: 'Cloud-Native Development',
+      description: 'Modern cloud-native application development with containerization and orchestration.',
+      features: ['Containerization', 'Kubernetes', 'Microservices', 'CI/CD Pipelines', 'Monitoring'],
+      price: 'Starting at $1,299/month',
+      category: 'Cloud Services',
+      popular: true,
+      trial: '21-day free trial',
+      setup: '2-week implementation'
+    },
+    
+    // Advanced Cybersecurity
+    {
+      icon: Shield,
+      title: 'Zero Trust Security',
+      description: 'Implement zero trust security architecture with continuous verification and least privilege access.',
+      features: ['Identity Verification', 'Device Trust', 'Network Segmentation', 'Continuous Monitoring', 'Threat Detection'],
+      price: 'Starting at $1,599/month',
+      category: 'Cybersecurity',
+      popular: true,
+      trial: '14-day free trial',
+      setup: '3-week implementation'
+    },
+    {
+      icon: Shield,
+      title: 'AI-Powered Threat Hunting',
+      description: 'Proactive threat hunting with AI-powered analysis and behavioral detection.',
+      features: ['Behavioral Analysis', 'Threat Hunting', 'Incident Response', 'Forensics', 'Threat Intelligence'],
+      price: 'Starting at $2,299/month',
+      category: 'Cybersecurity',
+      popular: true,
+      trial: '7-day free trial',
+      setup: '2-week implementation'
+    },
+    {
+      icon: Shield,
+      title: 'Security Orchestration',
+      description: 'Automate security operations with AI-powered orchestration and response.',
+      features: ['Security Automation', 'Incident Response', 'Workflow Orchestration', 'Integration', 'Analytics'],
+      price: 'Starting at $1,399/month',
+      category: 'Cybersecurity',
+      popular: true,
+      trial: '14-day free trial',
+      setup: '2-week implementation'
+    },
+    {
+      icon: Shield,
+      title: 'Compliance Automation',
+      description: 'Automate compliance monitoring and reporting for various regulatory frameworks.',
+      features: ['Regulatory Compliance', 'Automated Reporting', 'Risk Assessment', 'Audit Trails', 'Documentation'],
+      price: 'Starting at $999/month',
+      category: 'Cybersecurity',
+      popular: true,
+      trial: '21-day free trial',
+      setup: '1-week implementation'
+    },
+    
+    // Advanced Data Analytics
+    {
+      icon: BarChart3,
+      title: 'Real-Time Analytics',
+      description: 'Process and analyze data in real-time with streaming analytics and instant insights.',
+      features: ['Streaming Analytics', 'Real-time Processing', 'Instant Insights', 'Event Processing', 'Alerting'],
+      price: 'Starting at $1,199/month',
+      category: 'Data Analytics',
+      popular: true,
+      trial: '14-day free trial',
+      setup: '1-week implementation'
+    },
+    {
+      icon: BarChart3,
+      title: 'Predictive Analytics',
+      description: 'Forecast future trends and behaviors with advanced predictive modeling and machine learning.',
+      features: ['Predictive Modeling', 'Forecasting', 'Trend Analysis', 'Risk Assessment', 'Scenario Planning'],
+      price: 'Starting at $1,599/month',
+      category: 'Data Analytics',
+      popular: true,
+      trial: '21-day free trial',
+      setup: '2-week implementation'
+    },
+    {
+      icon: BarChart3,
+      title: 'Data Lake Solutions',
+      description: 'Store and process massive amounts of structured and unstructured data with data lake architecture.',
+      features: ['Data Lake Architecture', 'Data Ingestion', 'Data Processing', 'Data Governance', 'Analytics'],
+      price: 'Starting at $1,899/month',
+      category: 'Data Analytics',
+      popular: true,
+      trial: '30-day free trial',
+      setup: '3-week implementation'
+    },
+    {
+      icon: BarChart3,
+      title: 'Customer Analytics',
+      description: 'Deep insights into customer behavior, preferences, and lifetime value with advanced analytics.',
+      features: ['Customer Segmentation', 'Behavior Analysis', 'Lifetime Value', 'Churn Prediction', 'Personalization'],
+      price: 'Starting at $1,299/month',
+      category: 'Data Analytics',
+      popular: true,
+      trial: '14-day free trial',
+      setup: '2-week implementation'
+    },
+    
+    // Advanced Mobile Development
+    {
+      icon: Smartphone,
+      title: 'Cross-Platform Development',
+      description: 'Build native-quality mobile apps for iOS and Android with a single codebase.',
+      features: ['React Native', 'Flutter', 'Xamarin', 'Native Performance', 'Code Reuse'],
+      price: 'Starting at $2,499/month',
+      category: 'Mobile Development',
+      popular: true,
+      trial: '21-day free trial',
+      setup: '3-week implementation'
+    },
+    {
+      icon: Smartphone,
+      title: 'Progressive Web Apps',
+      description: 'Create app-like web experiences that work offline and can be installed on devices.',
+      features: ['Offline Functionality', 'App-like Experience', 'Push Notifications', 'Installation', 'Responsive Design'],
+      price: 'Starting at $1,799/month',
+      category: 'Mobile Development',
+      popular: true,
+      trial: '14-day free trial',
+      setup: '2-week implementation'
+    },
+    {
+      icon: Smartphone,
+      title: 'Mobile AI Integration',
+      description: 'Integrate AI capabilities into mobile apps for enhanced user experiences.',
+      features: ['On-device AI', 'Computer Vision', 'Natural Language Processing', 'Machine Learning', 'Real-time Processing'],
+      price: 'Starting at $2,199/month',
+      category: 'Mobile Development',
+      popular: true,
+      trial: '21-day free trial',
+      setup: '3-week implementation'
+    },
+    
+    // Advanced Database Services
+    {
+      icon: Database,
+      title: 'NoSQL Database Solutions',
+      description: 'Design and implement NoSQL databases for scalable, flexible data storage.',
+      features: ['MongoDB', 'Cassandra', 'Redis', 'DynamoDB', 'CouchDB'],
+      price: 'Starting at $1,099/month',
+      category: 'Database Services',
+      popular: true,
+      trial: '14-day free trial',
+      setup: '1-week implementation'
+    },
+    {
+      icon: Database,
+      title: 'Graph Database Solutions',
+      description: 'Build knowledge graphs and relationship databases for complex data relationships.',
+      features: ['Neo4j', 'Graph Analytics', 'Relationship Mapping', 'Knowledge Graphs', 'Network Analysis'],
+      price: 'Starting at $1,399/month',
+      category: 'Database Services',
+      popular: true,
+      trial: '21-day free trial',
+      setup: '2-week implementation'
+    },
+    {
+      icon: Database,
+      title: 'Time Series Databases',
+      description: 'Optimize databases for time-series data with high-performance storage and analytics.',
+      features: ['InfluxDB', 'TimescaleDB', 'High Performance', 'Time Series Analytics', 'IoT Data'],
+      price: 'Starting at $899/month',
+      category: 'Database Services',
+      popular: true,
+      trial: '14-day free trial',
+      setup: '1-week implementation'
+    },
+    
+    // Advanced Automation
+    {
+      icon: Zap,
+      title: 'Intelligent Process Automation',
+      description: 'Automate complex business processes with AI-powered decision making and exception handling.',
+      features: ['Process Mining', 'Workflow Automation', 'Exception Handling', 'AI Decision Making', 'Process Optimization'],
+      price: 'Starting at $1,499/month',
+      category: 'Automation',
+      popular: true,
+      trial: '21-day free trial',
+      setup: '2-week implementation'
+    },
+    {
+      icon: Zap,
+      title: 'Robotic Process Automation',
+      description: 'Deploy software robots to automate repetitive tasks and improve efficiency.',
+      features: ['Task Automation', 'UI Automation', 'Data Processing', 'Integration', 'Monitoring'],
+      price: 'Starting at $999/month',
+      category: 'Automation',
+      popular: true,
+      trial: '14-day free trial',
+      setup: '1-week implementation'
+    },
+    {
+      icon: Zap,
+      title: 'Hyperautomation',
+      description: 'Combine multiple automation technologies with AI and machine learning for maximum efficiency.',
+      features: ['Multi-tool Integration', 'AI Enhancement', 'End-to-end Automation', 'Continuous Improvement', 'Analytics'],
+      price: 'Starting at $2,299/month',
+      category: 'Automation',
+      popular: true,
+      trial: '21-day free trial',
+      setup: '3-week implementation'
+    },
+    
+    // Advanced Web Development
+    {
+      icon: Globe,
+      title: 'Progressive Web Applications',
+      description: 'Build modern web applications with app-like features and offline capabilities.',
+      features: ['Service Workers', 'Offline Support', 'Push Notifications', 'App Shell', 'Responsive Design'],
+      price: 'Starting at $1,599/month',
+      category: 'Web Development',
+      popular: true,
+      trial: '14-day free trial',
+      setup: '2-week implementation'
+    },
+    {
+      icon: Globe,
+      title: 'Microservices Architecture',
+      description: 'Design and implement microservices architecture for scalable, maintainable applications.',
+      features: ['Service Decomposition', 'API Gateway', 'Service Discovery', 'Load Balancing', 'Monitoring'],
+      price: 'Starting at $2,199/month',
+      category: 'Web Development',
+      popular: true,
+      trial: '21-day free trial',
+      setup: '3-week implementation'
+    },
+    {
+      icon: Globe,
+      title: 'Headless CMS Solutions',
+      description: 'Build content management systems with flexible, API-first architecture.',
+      features: ['API-first Design', 'Multi-channel Publishing', 'Content Modeling', 'Developer Experience', 'Scalability'],
+      price: 'Starting at $1,299/month',
+      category: 'Web Development',
+      popular: true,
+      trial: '14-day free trial',
+      setup: '1-week implementation'
+    },
+    
+    // Emerging Technologies
+    {
+      icon: Globe,
+      title: '5G Implementation',
+      description: 'Leverage 5G technology for ultra-fast connectivity and new application possibilities.',
+      features: ['5G Network Design', 'Edge Computing', 'IoT Integration', 'Low Latency', 'High Bandwidth'],
+      price: 'Starting at $3,999/month',
+      category: 'Emerging Technologies',
+      popular: true,
+      trial: '14-day free trial',
+      setup: '4-week implementation'
+    },
+    {
+      icon: Globe,
+      title: 'Blockchain Solutions',
+      description: 'Implement blockchain technology for secure, transparent, and decentralized applications.',
+      features: ['Smart Contracts', 'Decentralized Apps', 'Cryptocurrency Integration', 'Supply Chain', 'Identity Management'],
+      price: 'Starting at $2,999/month',
+      category: 'Emerging Technologies',
+      popular: true,
+      trial: '21-day free trial',
+      setup: '3-week implementation'
+    },
+    {
+      icon: Globe,
+      title: 'IoT Platform Development',
+      description: 'Build comprehensive IoT platforms for connected devices and data management.',
+      features: ['Device Management', 'Data Collection', 'Real-time Processing', 'Analytics', 'Security'],
+      price: 'Starting at $1,899/month',
+      category: 'Emerging Technologies',
+      popular: true,
+      trial: '30-day free trial',
+      setup: '3-week implementation'
+    },
+    {
+      icon: Globe,
+      title: 'AR/VR Development',
+      description: 'Create immersive augmented and virtual reality experiences for various industries.',
+      features: ['3D Modeling', 'Spatial Computing', 'Gesture Recognition', 'Haptic Feedback', 'Multi-platform'],
+      price: 'Starting at $2,499/month',
+      category: 'Emerging Technologies',
+      popular: true,
+      trial: '14-day free trial',
+      setup: '3-week implementation'
     }
   ];
 
@@ -295,7 +722,8 @@ const ServicesPage: React.FC = () => {
     'Database Services',
     'Automation',
     'Web Development',
-    'IT Services'
+    'IT Services',
+    'Emerging Technologies'
   ];
 
   const [selectedCategory, setSelectedCategory] = React.useState('All');
@@ -441,7 +869,15 @@ const ServicesPage: React.FC = () => {
                   
                   <div className="mb-6">
                     <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
-                    <div className="text-sm text-gray-300">Contact for custom pricing</div>
+                    {service.trial && (
+                      <div className="text-sm text-green-400 font-medium mb-1">{service.trial}</div>
+                    )}
+                    {service.setup && (
+                      <div className="text-sm text-gray-400">{service.setup}</div>
+                    )}
+                    {!service.trial && !service.setup && (
+                      <div className="text-sm text-gray-300">Contact for custom pricing</div>
+                    )}
                   </div>
                   
                   <div className="flex flex-col sm:flex-row gap-3">
