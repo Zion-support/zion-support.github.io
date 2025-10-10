@@ -37,6 +37,10 @@ const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
 const MicroSaasPage = React.lazy(() => import('./app/micro-saas/page'));
 const AiServicesPage = React.lazy(() => import('./app/ai-services/page'));
 const ItServicesPage = React.lazy(() => import('./app/it-services/page'));
+const AIVoiceAssistantPage = React.lazy(() => import('./app/ai-voice-assistant/page'));
+const AIPredictiveMaintenancePage = React.lazy(() => import('./app/ai-predictive-maintenance/page'));
+const AIInvoiceGeneratorPage = React.lazy(() => import('./app/ai-invoice-generator/page'));
+const CloudMigrationPage = React.lazy(() => import('./app/cloud-migration/page'));
 
 // Performance monitoring hook
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -80,6 +84,10 @@ const App: React.FC = () => {
                             <Route path="/micro-saas" element={<MicroSaasPage />} />
                             <Route path="/ai-services" element={<AiServicesPage />} />
                             <Route path="/it-services" element={<ItServicesPage />} />
+                            <Route path="/ai-voice-assistant" element={<AIVoiceAssistantPage />} />
+                            <Route path="/ai-predictive-maintenance" element={<AIPredictiveMaintenancePage />} />
+                            <Route path="/ai-invoice-generator" element={<AIInvoiceGeneratorPage />} />
+                            <Route path="/cloud-migration" element={<CloudMigrationPage />} />
                           </Routes>
                         </Suspense>
                       </main>
