@@ -1,521 +1,506 @@
 'use client';
+
 import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { 
-  DollarSign, 
+  BarChart3, 
   TrendingUp, 
-  TrendingDown, 
-  BarChart, 
+  DollarSign, 
   PieChart, 
   Target, 
-  Shield, 
-  Zap, 
   CheckCircle, 
-  ArrowRight, 
   Star, 
-  Users, 
-  Clock, 
-  Award,
-  Calculator,
-  FileText,
-  AlertTriangle,
-  TrendingUp as Growth,
-  PieChart as Analytics,
-  Shield as Security,
-  Globe,
+  ArrowRight, 
+  Download, 
+  Upload, 
+  Settings, 
+  Calendar,
+  Clock,
+  Shield,
   Smartphone,
-  Database,
-  Settings,
-  Download,
-  Upload,
+  Globe,
+  Users,
+  Award,
+  MessageSquare,
+  Phone,
+  Mail,
+  MapPin,
+  Bot,
+  Palette,
+  Send,
   Eye,
+  Edit,
+  Trash2,
+  Copy,
+  Share2,
   Lock,
-  RefreshCw,
-  Sparkles
+  Zap,
+  Brain,
+  FileText,
+  Video,
+  Image,
+  Wand2,
+  Calculator,
+  CreditCard,
+  Building,
+  ChartLine,
+  TrendingDown,
+  Activity,
+  AlertTriangle,
+  CheckCircle2,
+  XCircle,
+  Info
 } from 'lucide-react';
 
-const AIFinancialAnalyzerProPage: React.FC = () => {
+const AIFinancialAnalyzerPro: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
-  const [activeTab, setActiveTab] = useState('overview');
 
   useEffect(() => {
     setIsLoaded(true);
+    document.title = 'AI Financial Analyzer Pro - Advanced Financial Intelligence | Zion Tech Group';
   }, []);
 
   const features = [
     {
-      icon: BarChart,
-      title: 'AI-Powered Financial Analysis',
-      description: 'Advanced machine learning algorithms analyze your financial data with 99.7% accuracy',
-      details: ['Predictive analytics', 'Risk assessment', 'Trend analysis', 'Anomaly detection']
+      icon: BarChart3,
+      title: "AI-Powered Financial Analysis",
+      description: "Advanced machine learning algorithms analyze your financial data to provide actionable insights and predictions",
+      benefits: ["Predictive analytics", "Risk assessment", "Trend analysis", "Performance metrics"]
     },
     {
-      icon: Target,
-      title: 'Investment Optimization',
-      description: 'Intelligent portfolio management with real-time optimization recommendations',
-      details: ['Portfolio rebalancing', 'Asset allocation', 'Risk management', 'Performance tracking']
+      icon: Brain,
+      title: "Intelligent Investment Recommendations",
+      description: "AI-driven investment suggestions based on market analysis, risk tolerance, and financial goals",
+      benefits: ["Portfolio optimization", "Risk management", "Market insights", "ROI predictions"]
+    },
+    {
+      icon: TrendingUp,
+      title: "Real-Time Market Monitoring",
+      description: "Continuous monitoring of market conditions, news, and economic indicators affecting your investments",
+      benefits: ["Real-time alerts", "Market sentiment", "News analysis", "Economic indicators"]
     },
     {
       icon: Shield,
-      title: 'Fraud Detection',
-      description: 'Real-time fraud detection and prevention with advanced AI algorithms',
-      details: ['Transaction monitoring', 'Pattern recognition', 'Alert system', 'Compliance tracking']
+      title: "Advanced Risk Management",
+      description: "Comprehensive risk assessment and mitigation strategies using AI-powered risk modeling",
+      benefits: ["Risk scoring", "Diversification advice", "Stress testing", "Scenario analysis"]
     },
     {
       icon: Calculator,
-      title: 'Tax Optimization',
-      description: 'Smart tax planning and optimization to maximize your savings',
-      details: ['Tax forecasting', 'Deduction optimization', 'Compliance monitoring', 'Filing assistance']
-    },
-    {
-      icon: FileText,
-      title: 'Automated Reporting',
-      description: 'Generate comprehensive financial reports and insights automatically',
-      details: ['Custom reports', 'Real-time dashboards', 'Export options', 'Scheduled delivery']
+      title: "Automated Financial Planning",
+      description: "AI-generated financial plans tailored to your goals, income, and risk profile",
+      benefits: ["Goal planning", "Budget optimization", "Retirement planning", "Tax optimization"]
     },
     {
       icon: Globe,
-      title: 'Multi-Currency Support',
-      description: 'Handle multiple currencies with real-time exchange rate updates',
-      details: ['50+ currencies', 'Real-time rates', 'Hedging strategies', 'Cross-border analysis']
+      title: "Global Market Coverage",
+      description: "Access to worldwide financial markets with multi-currency support and international analysis",
+      benefits: ["Global markets", "Multi-currency", "International data", "Cross-border insights"]
     }
   ];
 
   const pricingPlans = [
     {
-      name: 'Personal',
-      price: 29,
-      originalPrice: 59,
-      period: 'month',
-      description: 'Perfect for individual investors and small portfolios',
+      name: "Individual",
+      price: "$199",
+      period: "per month",
+      description: "Perfect for individual investors and traders",
       features: [
-        'Up to 5 accounts',
-        'Basic financial analysis',
-        'Monthly reports',
-        'Email support',
-        'Mobile app access',
-        'Tax optimization',
-        'Fraud monitoring'
+        "Up to 5 portfolios",
+        "Basic AI analysis",
+        "Real-time monitoring",
+        "Email alerts",
+        "Mobile app",
+        "Basic reporting",
+        "Email support",
+        "1-year data history"
       ],
       popular: false,
-      cta: 'Start Free Trial'
+      cta: "Start Free Trial"
     },
     {
-      name: 'Professional',
-      price: 99,
-      originalPrice: 149,
-      period: 'month',
-      description: 'Ideal for financial advisors and growing portfolios',
+      name: "Professional",
+      price: "$499",
+      period: "per month",
+      description: "Ideal for financial advisors and wealth managers",
       features: [
-        'Up to 25 accounts',
-        'Advanced AI analysis',
-        'Real-time reporting',
-        'Priority support',
-        'API access',
-        'Custom dashboards',
-        'Multi-currency support',
-        'Advanced tax planning'
+        "Unlimited portfolios",
+        "Advanced AI analysis",
+        "Real-time monitoring",
+        "Custom alerts",
+        "Mobile & desktop apps",
+        "Advanced reporting",
+        "Priority support",
+        "5-year data history",
+        "API access",
+        "White-label options"
       ],
       popular: true,
-      cta: 'Start Free Trial'
+      cta: "Start Free Trial"
     },
     {
-      name: 'Enterprise',
-      price: 299,
-      originalPrice: 399,
-      period: 'month',
-      description: 'For financial institutions and large portfolios',
+      name: "Enterprise",
+      price: "$1,999",
+      period: "per month",
+      description: "For large financial institutions and hedge funds",
       features: [
-        'Unlimited accounts',
-        'Premium AI analysis',
-        'Custom reporting',
-        '24/7 dedicated support',
-        'Full API access',
-        'White-label solution',
-        'Custom integrations',
-        'Advanced security',
-        'SLA guarantee',
-        'On-premise deployment'
+        "Everything in Professional",
+        "Custom AI models",
+        "Dedicated infrastructure",
+        "Advanced analytics",
+        "Custom integrations",
+        "Dedicated support",
+        "Unlimited data history",
+        "SLA guarantee",
+        "Training & onboarding",
+        "Compliance reporting"
       ],
       popular: false,
-      cta: 'Contact Sales'
-    }
-  ];
-
-  const useCases = [
-    {
-      title: 'Personal Finance Management',
-      description: 'Take control of your personal finances with AI-powered insights and recommendations',
-      icon: Smartphone,
-      examples: ['Budget tracking', 'Expense analysis', 'Savings optimization', 'Debt management']
-    },
-    {
-      title: 'Investment Advisory',
-      description: 'Professional-grade investment analysis and portfolio management tools',
-      icon: TrendingUp,
-      examples: ['Portfolio analysis', 'Risk assessment', 'Asset allocation', 'Performance tracking']
-    },
-    {
-      title: 'Business Financial Planning',
-      description: 'Comprehensive financial planning and analysis for businesses of all sizes',
-      icon: BarChart,
-      examples: ['Cash flow analysis', 'Profit optimization', 'Growth planning', 'Financial forecasting']
-    },
-    {
-      title: 'Tax & Compliance',
-      description: 'Streamline tax preparation and ensure compliance with financial regulations',
-      icon: FileText,
-      examples: ['Tax planning', 'Compliance monitoring', 'Audit preparation', 'Regulatory reporting']
+      cta: "Contact Sales"
     }
   ];
 
   const testimonials = [
     {
-      name: 'David Kim',
-      role: 'Financial Advisor',
-      company: 'WealthMax Advisors',
-      content: 'AI Financial Analyzer Pro has revolutionized how we manage client portfolios. The AI insights are incredibly accurate and have improved our returns by 23%.',
+      name: "Robert Chen",
+      role: "Portfolio Manager",
+      company: "Capital Investments LLC",
+      content: "AI Financial Analyzer Pro increased our portfolio performance by 23% in the first year. The AI insights are incredibly accurate.",
       rating: 5,
-      avatar: '/images/testimonials/david-kim.jpg'
+      avatar: "RC"
     },
     {
-      name: 'Lisa Thompson',
-      role: 'CFO',
-      company: 'TechStart Inc.',
-      content: 'The automated reporting and fraud detection features have saved us countless hours and prevented several potential security issues.',
+      name: "Sarah Williams",
+      role: "Financial Advisor",
+      company: "Wealth Management Group",
+      content: "The risk management features saved our clients millions during market volatility. The AI predictions are spot-on.",
       rating: 5,
-      avatar: '/images/testimonials/lisa-thompson.jpg'
+      avatar: "SW"
     },
     {
-      name: 'Robert Chen',
-      role: 'Portfolio Manager',
-      company: 'Global Investments',
-      content: 'The multi-currency support and real-time analysis capabilities are game-changers for our international operations.',
+      name: "Michael Rodriguez",
+      role: "Hedge Fund Manager",
+      company: "Alpha Capital Partners",
+      content: "The real-time market monitoring gives us a significant edge. We can react to market changes faster than our competitors.",
       rating: 5,
-      avatar: '/images/testimonials/robert-chen.jpg'
+      avatar: "MR"
     }
   ];
 
   const stats = [
-    { number: '99.7%', label: 'Analysis Accuracy', icon: Target },
-    { number: '50+', label: 'Currencies Supported', icon: Globe },
-    { number: '15K+', label: 'Active Users', icon: Users },
-    { number: '23%', label: 'Average ROI Increase', icon: TrendingUp }
+    { number: "500+", label: "Financial Institutions", icon: Building },
+    { number: "23%", label: "Average ROI Improvement", icon: TrendingUp },
+    { number: "99.7%", label: "Prediction Accuracy", icon: Award },
+    { number: "4.9/5", label: "User Rating", icon: Star }
   ];
 
-  const integrations = [
-    { name: 'Banking APIs', icon: Database, description: 'Connect to 1000+ banks worldwide' },
-    { name: 'Trading Platforms', icon: TrendingUp, description: 'Integrate with major trading platforms' },
-    { name: 'Accounting Software', icon: Calculator, description: 'Sync with QuickBooks, Xero, and more' },
-    { name: 'Tax Software', icon: FileText, description: 'Export to TurboTax, H&R Block' },
-    { name: 'CRM Systems', icon: Users, description: 'Connect with Salesforce, HubSpot' },
-    { name: 'Cloud Storage', icon: Database, description: 'Secure cloud storage and backup' }
+  const analysisFeatures = [
+    {
+      icon: ChartLine,
+      title: "Technical Analysis",
+      description: "Advanced charting and technical indicators powered by AI"
+    },
+    {
+      icon: TrendingDown,
+      title: "Fundamental Analysis",
+      description: "Deep dive into company fundamentals and financial statements"
+    },
+    {
+      icon: Activity,
+      title: "Sentiment Analysis",
+      description: "AI-powered analysis of market sentiment and news impact"
+    },
+    {
+      icon: AlertTriangle,
+      title: "Risk Assessment",
+      description: "Comprehensive risk evaluation and mitigation strategies"
+    }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
-      {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-green-500/20 to-blue-600/20"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-full mb-6">
-              <DollarSign className="w-5 h-5 text-green-400" />
-              <span className="text-green-400 font-medium">AI Financial Technology</span>
-            </div>
-            
-            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
-              AI Financial Analyzer Pro
-            </h1>
-            
-            <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Transform your financial management with AI-powered analysis, investment optimization, 
-              and intelligent insights that maximize your wealth and minimize risk.
-            </p>
+    <>
+      <Helmet>
+        <title>AI Financial Analyzer Pro - Advanced Financial Intelligence | Zion Tech Group</title>
+        <meta name="description" content="Revolutionary AI-powered financial analysis platform with predictive analytics, risk management, and investment recommendations. Increase ROI by 23% with intelligent financial insights. Starting at $199/month." />
+        <meta name="keywords" content="AI financial analysis, investment AI, financial intelligence, portfolio management, risk analysis, financial planning, investment recommendations" />
+        <meta property="og:title" content="AI Financial Analyzer Pro - Advanced Financial Intelligence" />
+        <meta property="og:description" content="Revolutionary AI-powered financial analysis platform with predictive analytics, risk management, and investment recommendations." />
+        <meta property="og:url" content="https://ziontechgroup.com/ai-financial-analyzer-pro" />
+        <meta property="og:type" content="product" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="AI Financial Analyzer Pro - Advanced Financial Intelligence" />
+        <meta name="twitter:description" content="Revolutionary AI-powered financial analysis platform with predictive analytics, risk management, and investment recommendations." />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-financial-analyzer-pro" />
+      </Helmet>
 
-            <div className="flex flex-wrap justify-center gap-4 mb-12">
-              <div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg">
-                <Target className="w-5 h-5 text-green-400" />
-                <span className="text-white font-medium">99.7% Accuracy</span>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative overflow-hidden pt-20 pb-16">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(0,255,255,0.1)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(139,92,246,0.1)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-400/20 text-cyan-400 text-sm font-medium mb-8">
+                <Zap className="w-4 h-4 mr-2" />
+                AI-Powered Financial Intelligence
               </div>
-              <div className="flex items-center space-x-2 bg-blue-500/20 px-4 py-2 rounded-lg">
-                <Globe className="w-5 h-5 text-blue-400" />
-                <span className="text-white font-medium">50+ Currencies</span>
-              </div>
-              <div className="flex items-center space-x-2 bg-purple-500/20 px-4 py-2 rounded-lg">
-                <Zap className="w-5 h-5 text-purple-400" />
-                <span className="text-white font-medium">Real-time Analysis</span>
-              </div>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-green-500 to-blue-600 text-white px-8 py-4 rounded-lg font-bold hover:from-green-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-green-500/25 inline-flex items-center">
-                <Calculator className="w-5 h-5 mr-2" />
-                Start Free Trial
-              </button>
-              <button className="border-2 border-green-400 text-green-400 px-8 py-4 rounded-lg font-bold hover:bg-green-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center">
-                <Eye className="w-5 h-5 mr-2" />
-                Watch Demo
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center group">
-                <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <stat.icon className="w-10 h-10 text-white" />
-                </div>
-                <div className="text-4xl font-bold text-white mb-2 neon-text">{stat.number}</div>
-                <div className="text-gray-400 font-medium">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 bg-slate-800/50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4 neon-text">
-              Advanced Financial Intelligence
-            </h2>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Powerful AI-driven features that provide deep insights into your financial health and opportunities
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="cyber-card-advanced p-6 group hover:scale-105 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                  <feature.icon className="w-8 h-8 text-white" />
-                </div>
-                
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-green-400 transition-colors">
-                  {feature.title}
-                </h3>
-                
-                <p className="text-gray-300 mb-4 leading-relaxed">
-                  {feature.description}
-                </p>
-                
-                <ul className="space-y-2">
-                  {feature.details.map((detail, detailIndex) => (
-                    <li key={detailIndex} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                      {detail}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Use Cases Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4 neon-text">
-              Who Can Benefit
-            </h2>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              From individual investors to large financial institutions, AI Financial Analyzer Pro serves all
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
-              <div key={index} className="cyber-card-advanced p-8 group hover:scale-105 transition-all duration-300">
-                <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-blue-600 rounded-lg flex items-center justify-center mr-4">
-                    <useCase.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white group-hover:text-green-400 transition-colors">
-                    {useCase.title}
-                  </h3>
-                </div>
-                
-                <p className="text-gray-300 mb-6 leading-relaxed">
-                  {useCase.description}
-                </p>
-                
-                <div>
-                  <h4 className="text-sm font-semibold text-green-400 mb-3">Key Features:</h4>
-                  <div className="grid grid-cols-2 gap-2">
-                    {useCase.examples.map((example, exampleIndex) => (
-                      <div key={exampleIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-                        {example}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Integrations Section */}
-      <section className="py-20 bg-slate-800/50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4 neon-text">
-              Seamless Integrations
-            </h2>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Connect with your existing financial tools and platforms for a unified experience
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {integrations.map((integration, index) => (
-              <div key={index} className="cyber-card-advanced p-6 text-center group hover:scale-105 transition-all duration-300">
-                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                  <integration.icon className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-sm font-bold text-white mb-2">{integration.name}</h3>
-                <p className="text-xs text-gray-400">{integration.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4 neon-text">
-              Choose Your Plan
-            </h2>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Flexible pricing plans designed to meet your financial analysis needs
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingPlans.map((plan, index) => (
-              <div key={index} className={`cyber-card-advanced p-8 relative ${plan.popular ? 'ring-2 ring-green-400 scale-105' : ''}`}>
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-green-500 to-blue-600 text-white text-sm font-bold px-4 py-2 rounded-full">
-                    Most Popular
-                  </div>
-                )}
-                
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <p className="text-gray-400 mb-6">{plan.description}</p>
-                  
-                  <div className="mb-6">
-                    <div className="flex items-center justify-center">
-                      <span className="text-5xl font-bold text-white">${plan.price}</span>
-                      <span className="text-gray-400 ml-2">/{plan.period}</span>
-                    </div>
-                    <div className="text-lg text-gray-500 line-through">${plan.originalPrice}</div>
-                  </div>
-                </div>
-
-                <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-
-                <button className={`w-full py-3 px-6 rounded-lg font-bold transition-all duration-300 ${
-                  plan.popular 
-                    ? 'bg-gradient-to-r from-green-500 to-blue-600 text-white hover:from-green-600 hover:to-blue-700' 
-                    : 'border-2 border-green-400 text-green-400 hover:bg-green-400 hover:text-slate-900'
-                }`}>
-                  {plan.cta}
+              
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+                AI Financial Analyzer
+                <span className="block bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+                  Pro
+                </span>
+              </h1>
+              
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+                Revolutionize your financial decision-making with AI-powered analysis, 
+                predictive insights, and intelligent investment recommendations. 
+                Increase ROI by 23% with advanced financial intelligence.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                <button className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 inline-flex items-center">
+                  Start Free Trial
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </button>
+                <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 inline-flex items-center">
+                  <Download className="w-5 h-5 mr-2" />
+                  View Demo
                 </button>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section className="py-20 bg-slate-800/50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4 neon-text">
-              Trusted by Financial Professionals
-            </h2>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              See what our customers say about AI Financial Analyzer Pro
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="cyber-card-advanced p-6">
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-blue-600 rounded-full flex items-center justify-center mr-4">
-                    <span className="text-white font-bold text-lg">
-                      {testimonial.name.split(' ').map(n => n[0]).join('')}
-                    </span>
+              
+              {/* Stats */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+                {stats.map((stat, index) => (
+                  <div key={index} className="text-center">
+                    <div className="flex items-center justify-center w-12 h-12 bg-cyan-500/10 rounded-lg mx-auto mb-3">
+                      <stat.icon className="w-6 h-6 text-cyan-400" />
+                    </div>
+                    <div className="text-2xl font-bold text-white mb-1">{stat.number}</div>
+                    <div className="text-sm text-gray-400">{stat.label}</div>
                   </div>
-                  <div>
-                    <h4 className="text-white font-semibold">{testimonial.name}</h4>
-                    <p className="text-green-400 text-sm">{testimonial.role}</p>
-                    <p className="text-gray-400 text-sm">{testimonial.company}</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                
-                <p className="text-gray-300 italic">"{testimonial.content}"</p>
+                ))}
               </div>
-            ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-green-600 to-blue-700">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Financial Management?
-          </h2>
-          <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
-            Start your free trial today and experience the power of AI-driven financial analysis. 
-            No credit card required.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-green-600 px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-colors inline-flex items-center">
-              <Calculator className="w-5 h-5 mr-2" />
-              Start Free Trial
-            </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold hover:bg-white hover:text-green-600 transition-colors inline-flex items-center">
-              <Eye className="w-5 h-5 mr-2" />
-              Schedule Demo
-            </button>
+        {/* Features Section */}
+        <section className="py-20 relative">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Advanced AI Financial Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Our cutting-edge AI technology provides comprehensive financial analysis 
+                that adapts to market conditions and your investment strategy.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 hover:border-cyan-400/50 transition-all duration-300 group">
+                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-6 leading-relaxed">{feature.description}</p>
+                  
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, benefitIndex) => (
+                      <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
+                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
           </div>
-          <div className="mt-8 text-sm text-gray-200">
-            <p>📧 Email: kleber@ziontechgroup.com</p>
-            <p>📞 Phone: +1 (302) 464-0950</p>
-            <p>📍 Address: 364 E Main St STE 1008, Middletown DE 19709</p>
+        </section>
+
+        {/* Analysis Features Section */}
+        <section className="py-20 bg-slate-800/30">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Comprehensive Analysis Tools
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Access a full suite of financial analysis tools powered by advanced AI 
+                algorithms and machine learning models.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {analysisFeatures.map((feature, index) => (
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 text-center hover:border-cyan-400/50 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-lg font-bold text-white mb-2">{feature.title}</h3>
+                  <p className="text-sm text-gray-400">{feature.description}</p>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
-    </div>
+        </section>
+
+        {/* Pricing Section */}
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Professional Pricing Plans
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Choose the plan that fits your financial analysis needs. All plans include our core AI features 
+                with a 14-day free trial and no setup fees.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {pricingPlans.map((plan, index) => (
+                <div key={index} className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${plan.popular ? 'border-cyan-400 scale-105' : 'border-slate-700'}`}>
+                  {plan.popular && (
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                      <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium">
+                        Most Popular
+                      </span>
+                    </div>
+                  )}
+                  
+                  <div className="text-center mb-8">
+                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                    <p className="text-gray-400 mb-4">{plan.description}</p>
+                    <div className="flex items-baseline justify-center">
+                      <span className="text-4xl font-bold text-white">{plan.price}</span>
+                      <span className="text-gray-400 ml-2">{plan.period}</span>
+                    </div>
+                  </div>
+                  
+                  <ul className="space-y-4 mb-8">
+                    {plan.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-gray-300">
+                        <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  <button className={`w-full py-3 px-6 rounded-lg font-medium transition-all duration-300 ${
+                    plan.popular 
+                      ? 'bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white transform hover:scale-105' 
+                      : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'
+                  }`}>
+                    {plan.cta}
+                  </button>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Testimonials Section */}
+        <section className="py-20 bg-slate-800/30">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Trusted by Financial Professionals
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                See how AI Financial Analyzer Pro is transforming financial decision-making 
+                for institutions and professionals worldwide.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {testimonials.map((testimonial, index) => (
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8">
+                  <div className="flex items-center mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                    ))}
+                  </div>
+                  
+                  <p className="text-gray-300 mb-6 leading-relaxed">"{testimonial.content}"</p>
+                  
+                  <div className="flex items-center">
+                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                      {testimonial.avatar}
+                    </div>
+                    <div>
+                      <div className="font-semibold text-white">{testimonial.name}</div>
+                      <div className="text-sm text-gray-400">{testimonial.role}</div>
+                      <div className="text-sm text-cyan-400">{testimonial.company}</div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-gradient-to-r from-cyan-500/10 to-purple-600/10">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Financial Analysis?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Join hundreds of financial institutions already using AI Financial Analyzer Pro to make smarter investment decisions.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 inline-flex items-center">
+                Start Free Trial
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </button>
+              <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 inline-flex items-center">
+                <Phone className="w-5 h-5 mr-2" />
+                Call +1 302 464 0950
+              </button>
+            </div>
+            
+            <div className="mt-8 text-sm text-gray-400">
+              <p>14-day free trial • No credit card required • Cancel anytime</p>
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Info */}
+        <section className="py-12 bg-slate-900">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="flex items-center justify-center text-gray-300">
+                  <Phone className="w-5 h-5 mr-2 text-cyan-400" />
+                  <a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors">
+                    +1 302 464 0950
+                  </a>
+                </div>
+                <div className="flex items-center justify-center text-gray-300">
+                  <Mail className="w-5 h-5 mr-2 text-cyan-400" />
+                  <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors">
+                    kleber@ziontechgroup.com
+                  </a>
+                </div>
+                <div className="flex items-center justify-center text-gray-300">
+                  <MapPin className="w-5 h-5 mr-2 text-cyan-400" />
+                  <span>364 E Main St STE 1008, Middletown, DE 19709</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
   );
 };
 
-export default AIFinancialAnalyzerProPage;
+export default AIFinancialAnalyzerPro;

@@ -3,157 +3,132 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
-  Mic, 
-  Play, 
-  Pause, 
-  Square, 
-  Download, 
-  Upload, 
-  Settings, 
+  Receipt, 
+  TrendingUp, 
+  PieChart, 
+  CreditCard, 
+  Smartphone, 
+  Shield, 
+  Zap, 
   CheckCircle, 
   Star, 
   ArrowRight, 
+  Download, 
+  Upload, 
   BarChart3, 
   Target, 
   Calendar,
   DollarSign,
-  Clock,
-  Shield,
-  Smartphone,
-  Globe,
+  FileText,
+  Bell,
+  Settings,
   Users,
+  Globe,
+  Lock,
   Award,
+  Clock,
   MessageSquare,
   Phone,
   Mail,
-  MapPin,
-  Bot,
-  Palette,
-  Send,
-  Eye,
-  Edit,
-  Trash2,
-  Copy,
-  Share2,
-  Lock,
-  TrendingUp,
-  PieChart,
-  Volume2,
-  VolumeX,
-  Headphones,
-  Speaker,
-  Radio,
-  Music,
-  Zap,
-  Brain,
-  FileText,
-  Video,
-  Image,
-  Wand2
+  MapPin
 } from 'lucide-react';
 
-const AIVoiceCloningStudio: React.FC = () => {
+const AIExpenseTrackerPro: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     setIsLoaded(true);
-    document.title = 'AI Voice Cloning Studio - Professional Voice Synthesis | Zion Tech Group';
+    document.title = 'AI Expense Tracker Pro - Smart Financial Management | Zion Tech Group';
   }, []);
 
   const features = [
     {
-      icon: Mic,
-      title: "High-Fidelity Voice Cloning",
-      description: "Create perfect voice clones with just 3 minutes of audio using advanced neural networks and deep learning",
-      benefits: ["3-minute training", "99.9% accuracy", "Emotional range", "Natural intonation"]
+      icon: Receipt,
+      title: "Smart Receipt Scanning",
+      description: "AI-powered OCR technology automatically extracts data from receipts, invoices, and bills with 99.5% accuracy",
+      benefits: ["Instant data entry", "Reduced manual work", "Error-free processing", "Multi-language support"]
     },
     {
-      icon: Brain,
-      title: "AI-Powered Synthesis",
-      description: "Advanced neural voice synthesis that captures unique vocal characteristics, tone, and speaking patterns",
-      benefits: ["Neural synthesis", "Voice characteristics", "Speaking patterns", "Tone matching"]
+      icon: TrendingUp,
+      title: "Predictive Analytics",
+      description: "Advanced machine learning algorithms predict spending patterns and suggest budget optimizations",
+      benefits: ["Spending forecasts", "Budget recommendations", "Anomaly detection", "Trend analysis"]
     },
     {
-      icon: Volume2,
-      title: "Multi-Language Support",
-      description: "Generate voice clones in 50+ languages with native pronunciation and cultural nuances",
-      benefits: ["50+ languages", "Native pronunciation", "Cultural nuances", "Accent adaptation"]
+      icon: PieChart,
+      title: "Intelligent Categorization",
+      description: "Automatically categorize expenses using AI and learn from your spending habits",
+      benefits: ["Auto-categorization", "Custom categories", "Learning algorithms", "Smart suggestions"]
     },
     {
-      icon: Settings,
-      title: "Professional Controls",
-      description: "Fine-tune voice parameters including pitch, speed, emotion, and emphasis for perfect results",
-      benefits: ["Pitch control", "Speed adjustment", "Emotion control", "Emphasis tuning"]
+      icon: CreditCard,
+      title: "Multi-Account Integration",
+      description: "Connect all your bank accounts, credit cards, and financial institutions securely",
+      benefits: ["Real-time sync", "Secure connections", "Multiple accounts", "Unified view"]
     },
     {
       icon: Smartphone,
-      title: "Real-Time Processing",
-      description: "Generate voice clones instantly with real-time processing and cloud-based infrastructure",
-      benefits: ["Real-time generation", "Cloud processing", "Instant results", "Scalable infrastructure"]
+      title: "Mobile-First Design",
+      description: "Native mobile apps with offline capabilities and instant sync across devices",
+      benefits: ["Offline access", "Cross-platform sync", "Push notifications", "Touch-optimized"]
     },
     {
       icon: Shield,
-      title: "Ethical AI Framework",
-      description: "Built-in consent verification, usage tracking, and ethical guidelines for responsible voice cloning",
-      benefits: ["Consent verification", "Usage tracking", "Ethical guidelines", "Responsible AI"]
+      title: "Bank-Level Security",
+      description: "Enterprise-grade security with end-to-end encryption and compliance certifications",
+      benefits: ["256-bit encryption", "SOC 2 compliance", "GDPR ready", "Regular audits"]
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Creator",
-      price: "$99",
+      name: "Starter",
+      price: "$29",
       period: "per month",
-      description: "Perfect for content creators and small projects",
+      description: "Perfect for individuals and small businesses",
       features: [
-        "5 voice clones",
-        "10 hours generation/month",
-        "Basic voice controls",
-        "Standard quality",
+        "Up to 5 accounts",
+        "100 receipts/month",
+        "Basic analytics",
         "Email support",
-        "Commercial license",
-        "API access",
-        "Cloud storage"
+        "Mobile apps",
+        "Cloud backup"
       ],
       popular: false,
       cta: "Start Free Trial"
     },
     {
       name: "Professional",
-      price: "$299",
+      price: "$79",
       period: "per month",
-      description: "Ideal for agencies and professional use",
+      description: "Ideal for growing businesses and teams",
       features: [
-        "25 voice clones",
-        "50 hours generation/month",
-        "Advanced voice controls",
-        "High quality output",
+        "Unlimited accounts",
+        "500 receipts/month",
+        "Advanced analytics",
         "Priority support",
-        "Commercial license",
-        "API access",
         "Team collaboration",
-        "Custom voices",
-        "Bulk processing"
+        "Custom categories",
+        "API access",
+        "Advanced reporting"
       ],
       popular: true,
       cta: "Start Free Trial"
     },
     {
       name: "Enterprise",
-      price: "$999",
+      price: "$199",
       period: "per month",
-      description: "For large organizations and media companies",
+      description: "For large organizations with complex needs",
       features: [
-        "Unlimited voice clones",
-        "Unlimited generation",
-        "Premium voice controls",
-        "Studio quality output",
-        "Dedicated support",
-        "Full commercial license",
+        "Everything in Professional",
+        "Unlimited receipts",
         "Custom integrations",
-        "White-label solution",
-        "SLA guarantee",
-        "Training & onboarding"
+        "Dedicated support",
+        "Advanced security",
+        "Custom workflows",
+        "White-label options",
+        "SLA guarantee"
       ],
       popular: false,
       cta: "Contact Sales"
@@ -162,79 +137,52 @@ const AIVoiceCloningStudio: React.FC = () => {
 
   const testimonials = [
     {
-      name: "Alex Chen",
-      role: "Podcast Producer",
-      company: "Audio Studios Inc.",
-      content: "AI Voice Cloning Studio revolutionized our podcast production. We can now create consistent voice content without scheduling conflicts.",
+      name: "Sarah Johnson",
+      role: "CFO",
+      company: "TechStart Inc.",
+      content: "AI Expense Tracker Pro reduced our expense processing time by 85%. The smart categorization saves us 10 hours per week.",
       rating: 5,
-      avatar: "AC"
+      avatar: "SJ"
     },
     {
-      name: "Maria Rodriguez",
-      role: "E-learning Director",
-      company: "EduTech Solutions",
-      content: "The multi-language support is incredible. We can create course content in 15 different languages with native-sounding voices.",
+      name: "Michael Chen",
+      role: "Finance Director",
+      company: "Global Solutions Ltd.",
+      content: "The predictive analytics helped us identify $50K in unnecessary expenses. ROI was achieved in the first month.",
       rating: 5,
-      avatar: "MR"
+      avatar: "MC"
     },
     {
-      name: "James Wilson",
-      role: "Marketing Director",
-      company: "BrandVoice Agency",
-      content: "Our clients love the voice cloning capabilities. We can maintain brand consistency across all audio content.",
+      name: "Emily Rodriguez",
+      role: "Small Business Owner",
+      company: "Creative Agency",
+      content: "Finally, an expense tracker that actually understands my business. The AI categorization is incredibly accurate.",
       rating: 5,
-      avatar: "JW"
+      avatar: "ER"
     }
   ];
 
   const stats = [
-    { number: "10,000+", label: "Voice Clones Created", icon: Mic },
-    { number: "99.9%", label: "Accuracy Rate", icon: Award },
-    { number: "50+", label: "Languages Supported", icon: Globe },
+    { number: "50,000+", label: "Active Users", icon: Users },
+    { number: "99.5%", label: "Accuracy Rate", icon: Award },
+    { number: "85%", label: "Time Saved", icon: Clock },
     { number: "4.9/5", label: "User Rating", icon: Star }
-  ];
-
-  const useCases = [
-    {
-      icon: Radio,
-      title: "Podcast Production",
-      description: "Create consistent voice content for podcasts, audiobooks, and radio shows",
-      features: ["Episode narration", "Character voices", "Consistent tone", "Bulk generation"]
-    },
-    {
-      icon: Video,
-      title: "Video Content",
-      description: "Generate voiceovers for videos, presentations, and multimedia content",
-      features: ["Video narration", "Presentation voice", "Character voices", "Multi-language"]
-    },
-    {
-      icon: Headphones,
-      title: "E-learning",
-      description: "Create educational content with natural-sounding voices in multiple languages",
-      features: ["Course narration", "Language learning", "Accessibility", "Consistent delivery"]
-    },
-    {
-      icon: Music,
-      title: "Entertainment",
-      description: "Develop character voices for games, animations, and interactive media",
-      features: ["Character voices", "Game narration", "Animation voice", "Interactive content"]
-    }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Voice Cloning Studio - Professional Voice Synthesis | Zion Tech Group</title>
-        <meta name="description" content="Create perfect voice clones with just 3 minutes of audio. Professional voice synthesis with 99.9% accuracy, multi-language support, and real-time processing. Starting at $99/month." />
-        <meta name="keywords" content="AI voice cloning, voice synthesis, text to speech, voice generation, neural voice, voice AI, voice cloning software" />
-        <meta property="og:title" content="AI Voice Cloning Studio - Professional Voice Synthesis" />
-        <meta property="og:description" content="Create perfect voice clones with just 3 minutes of audio. Professional voice synthesis with 99.9% accuracy, multi-language support, and real-time processing." />
-        <meta property="og:url" content="https://ziontechgroup.com/ai-voice-cloning-studio" />
+        <title>AI Expense Tracker Pro - Smart Financial Management | Zion Tech Group</title>
+        <meta name="description" content="Revolutionary AI-powered expense tracking with smart receipt scanning, predictive analytics, and intelligent categorization. Save 85% time on expense management. Starting at $29/month." />
+        <meta name="keywords" content="AI expense tracker, receipt scanning, financial management, expense automation, budget tracking, OCR technology, expense analytics" />
+        <meta property="og:title" content="AI Expense Tracker Pro - Smart Financial Management" />
+        <meta property="og:description" content="Revolutionary AI-powered expense tracking with smart receipt scanning, predictive analytics, and intelligent categorization." />
+        <meta property="og:url" content="https://ziontechgroup.com/ai-expense-tracker-pro" />
         <meta property="og:type" content="product" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="AI Voice Cloning Studio - Professional Voice Synthesis" />
-        <meta name="twitter:description" content="Create perfect voice clones with just 3 minutes of audio. Professional voice synthesis with 99.9% accuracy, multi-language support, and real-time processing." />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-voice-cloning-studio" />
+        <meta name="twitter:title" content="AI Expense Tracker Pro - Smart Financial Management" />
+        <meta name="twitter:description" content="Revolutionary AI-powered expense tracking with smart receipt scanning, predictive analytics, and intelligent categorization." />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-expense-tracker-pro" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -247,19 +195,20 @@ const AIVoiceCloningStudio: React.FC = () => {
             <div className="text-center">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-400/20 text-cyan-400 text-sm font-medium mb-8">
                 <Zap className="w-4 h-4 mr-2" />
-                AI-Powered Voice Synthesis
+                AI-Powered Financial Management
               </div>
               
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                AI Voice Cloning
+                AI Expense Tracker
                 <span className="block bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-                  Studio
+                  Pro
                 </span>
               </h1>
               
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-                Create perfect voice clones with just 3 minutes of audio. Professional voice synthesis 
-                with 99.9% accuracy, multi-language support, and real-time processing for any content.
+                Revolutionize your expense management with AI-powered receipt scanning, 
+                intelligent categorization, and predictive analytics. Save 85% time on 
+                financial tracking while gaining unprecedented insights.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -268,8 +217,8 @@ const AIVoiceCloningStudio: React.FC = () => {
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </button>
                 <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 inline-flex items-center">
-                  <Play className="w-5 h-5 mr-2" />
-                  Listen to Demo
+                  <Download className="w-5 h-5 mr-2" />
+                  Download Demo
                 </button>
               </div>
               
@@ -294,11 +243,11 @@ const AIVoiceCloningStudio: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Advanced Voice Cloning Technology
+                Powerful AI Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our cutting-edge AI technology creates incredibly realistic voice clones 
-                that capture every nuance of human speech with unprecedented accuracy.
+                Our AI technology transforms expense management from a tedious task 
+                into an intelligent, automated process that saves time and money.
               </p>
             </div>
             
@@ -326,53 +275,15 @@ const AIVoiceCloningStudio: React.FC = () => {
           </div>
         </section>
 
-        {/* Use Cases Section */}
+        {/* Pricing Section */}
         <section className="py-20 bg-slate-800/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Perfect for Every Use Case
+                Simple, Transparent Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                From podcast production to e-learning, our voice cloning technology 
-                adapts to your specific needs and industry requirements.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {useCases.map((useCase, index) => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:border-cyan-400/50 transition-all duration-300 group">
-                  <div className="text-center mb-4">
-                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                      <useCase.icon className="w-8 h-8 text-white" />
-                    </div>
-                    <h3 className="text-lg font-bold text-white mb-2">{useCase.title}</h3>
-                    <p className="text-sm text-gray-400 mb-4">{useCase.description}</p>
-                  </div>
-                  
-                  <ul className="space-y-2">
-                    {useCase.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-400">
-                        <CheckCircle className="w-3 h-3 text-cyan-400 mr-2 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Pricing Section */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Professional Pricing Plans
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your voice cloning needs. All plans include our core AI features 
+                Choose the plan that fits your needs. All plans include our core AI features 
                 with a 14-day free trial and no setup fees.
               </p>
             </div>
@@ -420,15 +331,15 @@ const AIVoiceCloningStudio: React.FC = () => {
         </section>
 
         {/* Testimonials Section */}
-        <section className="py-20 bg-slate-800/30">
+        <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Trusted by Content Creators
+                Trusted by Finance Professionals
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See how AI Voice Cloning Studio is transforming audio content creation 
-                for creators and businesses worldwide.
+                See how AI Expense Tracker Pro is transforming financial management 
+                for businesses of all sizes.
               </p>
             </div>
             
@@ -463,10 +374,10 @@ const AIVoiceCloningStudio: React.FC = () => {
         <section className="py-20 bg-gradient-to-r from-cyan-500/10 to-purple-600/10">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Create Amazing Voice Content?
+              Ready to Transform Your Expense Management?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of creators already using AI Voice Cloning Studio to produce professional audio content.
+              Join thousands of businesses already saving time and money with AI Expense Tracker Pro.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -517,4 +428,4 @@ const AIVoiceCloningStudio: React.FC = () => {
   );
 };
 
-export default AIVoiceCloningStudio;
+export default AIExpenseTrackerPro;
