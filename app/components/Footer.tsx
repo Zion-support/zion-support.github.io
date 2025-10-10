@@ -53,41 +53,6 @@ const Footer: React.FC = memo(() => {
   ];
 
   const itServices = [
-<<<<<<< HEAD
-    { name: 'Cloud Infrastructure', url: '/cloud-infrastructure', description: 'AWS, Azure, GCP' },
-    { name: 'DevOps & CI/CD', url: '/devops-cicd', description: 'Automation pipelines' },
-    { name: 'Cybersecurity Solutions', url: '/cybersecurity-solutions', description: 'Security solutions' },
-    { name: 'Web Development', url: '/web-development', description: 'Modern web apps' },
-    { name: 'Mobile Development', url: '/mobile-development', description: 'iOS & Android' },
-    { name: 'API Development', url: '/api-development', description: 'API solutions' },
-    { name: 'IT Support', url: '/it-support', description: '24/7 technical support' },
-    { name: 'Data Analytics & BI', url: '/data-analytics-bi', description: 'Business intelligence' },
-    { name: 'Custom Software', url: '/custom-software', description: 'Tailored solutions' },
-    { name: 'Database Management', url: '/database-management', description: 'Database optimization' },
-    { name: 'Network Infrastructure', url: '/network-infrastructure', description: 'Network setup' },
-    { name: 'IT Asset Management', url: '/it-asset-management', description: 'Asset lifecycle' },
-    { name: 'Cloud-Native Development', url: '/cloud-native-development', description: 'Microservices & containers' },
-    { name: 'AI Integration Services', url: '/ai-integration-services', description: 'AI model integration' },
-    { name: 'Blockchain Development', url: '/blockchain-development', description: 'Smart contracts & DeFi' },
-    { name: 'IoT Development', url: '/iot-development', description: 'Connected device solutions' },
-    { name: 'E-commerce Development', url: '/e-commerce-development', description: 'Online store platforms' },
-    { name: 'Advanced API Development', url: '/api-development-advanced', description: 'Enterprise-grade APIs' },
-    { name: 'Data Engineering', url: '/data-engineering', description: 'Data pipeline development' },
-    { name: 'Advanced Cybersecurity', url: '/cybersecurity-advanced', description: 'Threat hunting & response' },
-    { name: 'Cloud Migration', url: '/cloud-migration-advanced', description: 'Zero-downtime migration' },
-    { name: 'Advanced DevOps & SRE', url: '/devops-advanced', description: 'Site reliability engineering' },
-    { name: 'MLOps & AI Operations', url: '/machine-learning-ops', description: 'ML model deployment' },
-    { name: 'Enterprise Integration', url: '/enterprise-integration', description: 'System integration' },
-    { name: 'Performance Optimization', url: '/performance-optimization', description: 'App & infrastructure optimization' },
-    { name: 'Disaster Recovery', url: '/disaster-recovery-advanced', description: 'Business continuity' },
-    { name: 'Compliance Automation', url: '/compliance-automation', description: 'Regulatory compliance' },
-    { name: 'Cloud Cost Optimization', url: '/cloud-cost-optimization', description: 'Cost reduction' },
-    { name: 'Security Automation', url: '/security-automation', description: 'Automated security' },
-    { name: 'Data Visualization & BI', url: '/data-visualization', description: 'Advanced dashboards' },
-    { name: 'Workflow Automation', url: '/workflow-automation', description: 'Process automation' },
-    { name: 'Cloud-Native Security', url: '/cloud-native-security', description: 'Container security' }
-  ]
-=======
     { name: 'IT Services', url: '/it-services', description: 'Comprehensive IT support' },
     { name: 'IT Infrastructure', url: '/it-infrastructure', description: 'Enterprise infrastructure' },
     { name: 'Cybersecurity', url: '/cybersecurity', description: 'Security solutions' },
@@ -96,7 +61,6 @@ const Footer: React.FC = memo(() => {
     { name: 'Mobile App Development', url: '/ai-mobile-app-development', description: 'Mobile applications' },
     { name: 'Database Services', url: '/ai-data-analytics', description: 'Database management' }
   ];
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a8d8
 
   const microSaasServices = [
     { name: 'Zion Analytics Pro', url: '/zion-analytics-pro', description: 'Business intelligence' },
