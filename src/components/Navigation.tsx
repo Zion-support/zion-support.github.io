@@ -1,10 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Globe, Database, Settings, Target, MessageSquare, Eye, Cpu, Lock, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Truck, Smartphone, TrendingUp, DollarSign } from 'lucide-react';
-=======
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Globe, Database, Settings, Target, MessageSquare, Eye, Cpu, Lock, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Truck, Smartphone, CheckCircle, TrendingUp } from 'lucide-react';
->>>>>>> cursor/website-audit-and-update-with-deployment-cbd8
 
 const Navigation: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -48,10 +44,13 @@ const Navigation: React.FC = () => {
   };
 
   const microSAASServices = [
+    // Productivity & Management
     { name: 'AI Project Manager', href: '/ai-project-manager', icon: BarChart, category: 'Productivity' },
     { name: 'AI Task Manager Pro', href: '/task-manager-pro', icon: Check, category: 'Productivity' },
     { name: 'AI Workflow Automation', href: '/ai-workflow-automation', icon: Settings, category: 'Productivity' },
     { name: 'AI Scheduler Pro', href: '/ai-scheduler', icon: Calendar, category: 'Productivity' },
+    
+    // Content & Marketing
     { name: 'AI Writing Assistant', href: '/ai-writing-assistant', icon: FileText, category: 'Content' },
     { name: 'AI Content Generator', href: '/ai-content-generation', icon: FileText, category: 'Content' },
     { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: MessageSquare, category: 'Marketing' },
@@ -59,27 +58,41 @@ const Navigation: React.FC = () => {
     { name: 'AI Marketing Automation', href: '/ai-marketing', icon: Target, category: 'Marketing' },
     { name: 'AI SEO Optimizer', href: '/ai-seo-optimizer', icon: Search, category: 'Marketing' },
     { name: 'AI Lead Generation', href: '/ai-lead-generation', icon: Target, category: 'Marketing' },
+    
+    // Business & Finance
     { name: 'AI CRM Intelligence', href: '/ai-crm', icon: Users, category: 'Business' },
     { name: 'AI Fintech Analyzer', href: '/ai-fintech', icon: CreditCard, category: 'Finance' },
     { name: 'AI Financial Analyzer', href: '/ai-financial-analyzer', icon: Calculator, category: 'Finance' },
     { name: 'AI Expense Tracker', href: '/expense-tracker', icon: Calculator, category: 'Finance' },
     { name: 'AI E-commerce Assistant', href: '/ai-ecommerce-solutions', icon: ShoppingCart, category: 'Business' },
+    
+    // Customer Service
     { name: 'AI Customer Support Bot', href: '/ai-customer-support-bot', icon: Bot, category: 'Support' },
     { name: 'AI Chatbot Builder', href: '/ai-chatbot-builder', icon: Bot, category: 'Support' },
     { name: 'AI Email Assistant', href: '/ai-email-assistant', icon: Mail, category: 'Support' },
+    
+    // Development & Technical
     { name: 'AI Code Review Assistant', href: '/ai-code-generation', icon: Code, category: 'Development' },
     { name: 'AI Mobile App Builder', href: '/ai-mobile-app-development', icon: Smartphone, category: 'Development' },
     { name: 'AI Cybersecurity Shield', href: '/ai-cybersecurity', icon: Shield, category: 'Security' },
     { name: 'AI Document Processor', href: '/ai-document-processing', icon: FileText, category: 'Development' },
+    
+    // Analytics & Data
     { name: 'AI Data Analytics Pro', href: '/ai-data-analytics', icon: BarChart3, category: 'Analytics' },
     { name: 'AI Data Visualization', href: '/ai-data-visualization', icon: BarChart, category: 'Analytics' },
+    
+    // Creative & Media
     { name: 'AI Video Generator Pro', href: '/ai-video-generation', icon: Video, category: 'Creative' },
     { name: 'AI Voice Cloning Studio', href: '/ai-voice-cloning', icon: Music, category: 'Creative' },
     { name: 'AI Music Composer', href: '/ai-music-composition', icon: Music, category: 'Creative' },
     { name: 'AI Fashion Designer', href: '/ai-fashion-design', icon: Palette, category: 'Creative' },
     { name: 'AI 3D Generation Studio', href: '/ai-3d-generation', icon: Camera, category: 'Creative' },
+    
+    // Health & Wellness
     { name: 'AI Healthcare Assistant', href: '/ai-healthcare', icon: Heart, category: 'Health' },
     { name: 'AI Fitness Coach', href: '/ai-fitness-coach', icon: Heart, category: 'Health' },
+    
+    // Sales & Business
     { name: 'AI Sales Automation', href: '/ai-sales-automation', icon: Target, category: 'Sales' }
   ];
 
@@ -289,29 +302,24 @@ const Navigation: React.FC = () => {
               )}
             </div>
 
-            <a href="/about" className="text-white hover:text-cyan-400 transition-colors">
+            <Link to="/about" className="text-white hover:text-cyan-400 transition-colors">
               About
-            </a>
-            <a href="/blog" className="text-white hover:text-cyan-400 transition-colors">
+            </Link>
+            <Link to="/blog" className="text-white hover:text-cyan-400 transition-colors">
               Blog
-            </a>
-            <a href="/case-studies" className="text-white hover:text-cyan-400 transition-colors">
+            </Link>
+            <Link to="/case-studies" className="text-white hover:text-cyan-400 transition-colors">
               Case Studies
-            </a>
-            <a href="/pricing" className="text-white hover:text-cyan-400 transition-colors">
+            </Link>
+            <Link to="/pricing" className="text-white hover:text-cyan-400 transition-colors">
               Pricing
-<<<<<<< HEAD
             </Link>
             <Link to="/enterprise" className="text-white hover:text-cyan-400 transition-colors">
               Enterprise
             </Link>
             <Link to="/contact" className="text-white hover:text-cyan-400 transition-colors">
-=======
-            </a>
-            <a href="/contact" className="text-white hover:text-cyan-400 transition-colors">
->>>>>>> cursor/website-audit-and-update-with-deployment-cbd8
               Contact
-            </a>
+            </Link>
             
             <div className="flex items-center space-x-4">
               <a
@@ -366,12 +374,12 @@ const Navigation: React.FC = () => {
                       </div>
                     </div>
                     <div>
-                      <h4 className="text-cyan-400 font-semibold mb-2">AI Services</h4>
+                      <h4 className="text-purple-400 font-semibold mb-2">AI Services</h4>
                       <div className="space-y-2">
                         {aiServices.slice(0, 4).map((service) => (
                           <Link key={service.name}
                             to={service.href}
-                            className="block text-sm text-gray-300 hover:text-cyan-400 transition-colors"
+                            className="block text-sm text-gray-300 hover:text-purple-400 transition-colors"
                             onClick={closeAllMenus}
                           >
                             {service.name}
@@ -379,12 +387,34 @@ const Navigation: React.FC = () => {
                         ))}
                       </div>
                     </div>
-                    <Link to="/services"
-                      className="block text-cyan-400 hover:text-white transition-colors"
-                      onClick={closeAllMenus}
-                    >
-                      View All Services →
-                    </Link>
+                    <div>
+                      <h4 className="text-green-400 font-semibold mb-2">IT Services</h4>
+                      <div className="space-y-2">
+                        {itServices.slice(0, 4).map((service) => (
+                          <Link key={service.name}
+                            to={service.href}
+                            className="block text-sm text-gray-300 hover:text-green-400 transition-colors"
+                            onClick={closeAllMenus}
+                          >
+                            {service.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-400 font-semibold mb-2">Specialized</h4>
+                      <div className="space-y-2">
+                        {specializedServices.slice(0, 4).map((service) => (
+                          <Link key={service.name}
+                            to={service.href}
+                            className="block text-sm text-gray-300 hover:text-orange-400 transition-colors"
+                            onClick={closeAllMenus}
+                          >
+                            {service.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
                   </div>
                 )}
               </div>
@@ -400,31 +430,24 @@ const Navigation: React.FC = () => {
               </Link>
               <Link to="/pricing" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
                 Pricing
-<<<<<<< HEAD
+              </Link>
+              <Link to="/enterprise" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
+                Enterprise
               </Link>
               <Link to="/contact" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
                 Contact
               </Link>
-=======
-              </a>
-              <a href="/enterprise" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
-                Enterprise
-              </a>
-              <a href="/contact" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
-                  Contact
-                </a>
->>>>>>> cursor/website-audit-and-update-with-deployment-cbd8
               
               <div className="pt-4 border-t border-gray-700">
                 <a
                   href="tel:+13024640950"
-                  className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors mb-4"
+                  className="flex items-center space-x-2 text-cyan-400 hover:text-white transition-colors mb-2"
                 >
                   <Phone className="w-4 h-4" />
                   <span>+1 302 464 0950</span>
                 </a>
                 <Link to="/contact"
-                  className="block cyber-button px-4 py-2 text-center"
+                  className="cyber-button px-4 py-2 text-sm inline-block"
                   onClick={closeAllMenus}
                 >
                   Get Started
