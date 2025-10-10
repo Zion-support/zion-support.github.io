@@ -19,10 +19,10 @@ import {
   Star,
   Users,
   Shield,
-  Zap;
+  Zap
 } from 'lucide-react';
 
-const SupportPage: React.FC = () => {,
+const SupportPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
@@ -30,359 +30,231 @@ const SupportPage: React.FC = () => {,
     { name: 'all', label: 'All Topics', count: 25 },
     { name: 'getting-started', label: 'Getting Started', count: 8 },
     { name: 'billing', label: 'Billing & Plans', count: 5 },
-    { name: 'technical', label: 'Technical Issues', count: 7 },
-    { name: 'api', label: 'API & Integration', count: 5 }
+    { name: 'technical', label: 'Technical Support', count: 7 },
+    { name: 'api', label: 'API Support', count: 5 }
   ];
 
-  const faqs = [
+  const faqItems = [
     {
-      id: 1;
-      question: 'How do I get started with your AI services?',
-      answer: 'Getting started is easy! Simply sign up for an account, choose your plan, and follow our quick start guide. Our team will help you set up your first AI project within 24 hours.',
+      id: 1,
       category: 'getting-started',
-      helpful: 95;
+      question: 'How do I get started with your platform?',
+      answer: 'Getting started is easy! Simply sign up for an account, verify your email, and follow our quick start guide. You can also schedule a demo with our team for personalized assistance.',
+      helpful: 45
     },
     {
-      id: 2;
+      id: 2,
+      category: 'billing',
       question: 'What payment methods do you accept?',
-      answer: 'We accept all major credit cards (Visa, MasterCard, American Express), PayPal, and bank transfers. Enterprise clients can also set up invoicing and payment terms.',
-      category: 'billing',
-      helpful: 88;
+      answer: 'We accept all major credit cards (Visa, MasterCard, American Express), PayPal, and bank transfers for enterprise customers. All payments are processed securely through our PCI-compliant payment system.',
+      helpful: 38
     },
     {
-      id: 3;
-      question: 'How secure is my data?',
-      answer: 'Security is our top priority. We use enterprise-grade encryption, SOC 2 compliance, and regular security audits. Your data is never shared with third parties without your explicit consent.',
+      id: 3,
       category: 'technical',
-      helpful: 92;
+      question: 'How do I integrate your API?',
+      answer: 'Our API integration is straightforward. First, obtain your API key from the dashboard, then refer to our comprehensive API documentation. We also provide SDKs for popular programming languages.',
+      helpful: 52
     },
     {
-      id: 4;
-      question: 'Can I integrate your AI services with my existing systems?',
-      answer: 'Yes! We provide comprehensive APIs and SDKs for all major programming languages. Our integration team can help you connect with your existing CRM, ERP, or custom systems.',
+      id: 4,
+      category: 'technical',
+      question: 'What are your system requirements?',
+      answer: 'Our platform is cloud-based and works on any modern web browser. For mobile apps, we support iOS 12+ and Android 8+. No special hardware requirements needed.',
+      helpful: 41
+    },
+    {
+      id: 5,
+      category: 'billing',
+      question: 'Can I change my plan anytime?',
+      answer: 'Yes! You can upgrade or downgrade your plan at any time. Changes take effect immediately, and we prorate any billing differences. Enterprise plans can be customized based on your needs.',
+      helpful: 29
+    },
+    {
+      id: 6,
       category: 'api',
-      helpful: 90;
-    },
-    {
-      id: 5;
-      question: 'What kind of support do you offer?',
-      answer: 'We offer 24/7 support via chat, email, and phone. Enterprise clients get dedicated account managers and priority support. We also provide extensive documentation and video tutorials.',
-      category: 'getting-started',
-      helpful: 87;
-    },
-    {
-      id: 6;
-      question: 'How do I upgrade or downgrade my plan?',
-      answer: 'You can change your plan anytime from your account dashboard. Upgrades take effect immediately, while downgrades take effect at the end of your current billing period.',
-      category: 'billing',
-      helpful: 85;
-    },
-    {
-      id: 7;
-      question: 'Do you offer custom AI model development?'
-      answer: 'Yes! Our AI research team can develop custom models tailored to your specific needs. We work with you to understand your requirements and deliver solutions that fit your business perfectly.',
-      category: 'technical',
-      helpful: 93;
-    },
-    {
-      id: 8;
-      question: 'What is your uptime guarantee?',
-      answer: 'We guarantee 99.9% uptime for all our services. If we fall below this threshold, you\'ll receive service credits. Our infrastructure is designed for high availability and redundancy.',
-      category: 'technical',
-      helpful: 89;
+      question: 'What are your API rate limits?',
+      answer: 'Our API rate limits vary by plan: Free tier allows 100 requests/hour, Pro tier allows 1,000 requests/hour, and Enterprise plans have custom limits. Contact us for higher limits.',
+      helpful: 33
     }
   ];
 
   const supportChannels = [
     {
-      icon: MessageCircle;
-      title: 'Live Chat'
-      description: 'Get instant help from our support team'
-      availability: '24/7'
+      icon: MessageCircle,
+      title: 'Live Chat',
+      description: 'Get instant help from our support team',
+      availability: '24/7',
       responseTime: '< 2 minutes',
-      color: 'text-green-400',
-      bgColor: 'bg-green-500/10'},
+      color: 'from-blue-500 to-cyan-500'
+    },
     {
-      icon: Phone;
-      title: 'Phone Support'
-      description: 'Speak directly with our experts'
-      availability: '24/7'
+      icon: Phone,
+      title: 'Phone Support',
+      description: 'Speak directly with our technical experts',
+      availability: 'Mon-Fri 9AM-6PM EST',
       responseTime: 'Immediate',
-      color: 'text-blue-400',
-      bgColor: 'bg-blue-500/10'},
+      color: 'from-green-500 to-emerald-500'
+    },
     {
-      icon: Mail;
-      title: 'Email Support'
-      description: 'Detailed responses to complex issues'
-      availability: '24/7'
+      icon: Mail,
+      title: 'Email Support',
+      description: 'Send us detailed questions and get comprehensive answers',
+      availability: '24/7',
       responseTime: '< 4 hours',
-      color: 'text-purple-400',
-      bgColor: 'bg-purple-500/10'},
+      color: 'from-purple-500 to-pink-500'
+    },
     {
-      icon: Video;
-      title: 'Video Call'
-      description: 'Screen sharing and live demonstrations'
-      availability: 'Business Hours'
-      responseTime: 'Scheduled',
-      color: 'text-orange-400',
-      bgColor: 'bg-orange-500/10'}
+      icon: Video,
+      title: 'Video Call',
+      description: 'Schedule a screen sharing session for complex issues',
+      availability: 'By appointment',
+      responseTime: 'Same day',
+      color: 'from-orange-500 to-red-500'
+    }
   ];
 
-  const resources = [
-    {
-      icon: BookOpen;
-      title: 'Documentation'
-      description: 'Comprehensive guides and API references',
-      link: '/docs',
-      type: 'Guide'},
-    {
-      icon: Video;
-      title: 'Video Tutorials'
-      description: 'Step-by-step video guides',
-      link: '/tutorials',
-      type: 'Video'},
-    {
-      icon: FileText;
-      title: 'Knowledge Base'
-      description: 'Searchable articles and FAQs',
-      link: '/knowledge-base',
-      type: 'Article'},
-    {
-      icon: Users;
-      title: 'Community Forum'
-      description: 'Connect with other users',
-      link: '/community',
-      type: 'Community'}
-  ];
-
-  const filteredFaqs = faqs.filter(faq => {)
-    const matchesSearch = faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         faq.answer.toLowerCase().includes(searchQuery.toLowerCase());
-    const matchesCategory = selectedCategory === 'all' || faq.category === selectedCategory;
+  const filteredFaqs = faqItems.filter(item => {
+    const matchesSearch = item.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         item.answer.toLowerCase().includes(searchQuery.toLowerCase());
+    const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
 
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-
-      <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
-        <section className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">Support Center</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Get help when you need it. Our support team is here 24/7 to assist you with any questions or issues.</p>
+      
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+        <div className="relative max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            Support <span className="bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">Center</span>
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            Get help when you need it. Our comprehensive support resources and expert team are here to assist you.
           </p>
-          
-      <main className="container mx-auto px-4 py-16 pt-24">
-        {/* Hero Section */}
-        <section className="text-center mb-16">
-          <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text">
-            Support Center;)
-          </h1>)
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">)
-            Get help when you need it. Our support team is here 24/7 to assist you with any questions or issues.)
-          </p>)),
-          {/* Search Bar */}
-          <div className="max-w-2xl mx-auto mb-8"></section>
-            <div className="relative"></div>
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-              <input;
-                type="text"
-                placeholder="Search for help..."
-                value={searchQuery}
-                onChange={(e) =>setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-cyan-400/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"</input>
-              /></input>
-            </div>
-          </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Support Channels */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center">Get Help Now<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{supportChannels.map((channel, index) => (</div>
-              <div key={index} className="cyber-card p-6 text-center group hover:scale-105 transition-transform">
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-cyan-400/30 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-              />,
-            </div>,
-          </div>,
-        </section>,
-,
-        {/* Support Channels */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center">Get Help Now</h2>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">,
+      {/* Search Section */}
+      <section className="py-8 px-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="relative">
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+            <input
+              type="text"
+              placeholder="Search for help articles, FAQs, and guides..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="w-full pl-10 pr-4 py-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Support Channels */}
+      <section className="py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-white mb-8 text-center">Get Help</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {supportChannels.map((channel, index) => (
-              <div key={index} className="cyber-card p-6 text-center group hover: scale-105 transition-transform">,
-                <div className={`w-16 h-16 ${channel.bgColor} rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform`}>
-                  <channel.icon className={`w-8 h-8 ${channel.color}`} />
-                <h3 className="text-xl font-bold text-white mb-2">{channel.title}</h3><p className="text-gray-300 mb-4">{channel.description}</p>
-                <div className="space-y-2 text-sm">
-                  <div className="flex justify-between">
-                    <span className="text-gray-400">Availability:<span className="text-cyan-400">{channel.availability}</span>
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300">
+                <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r ${channel.color} rounded-full mb-4`}>
+                  <channel.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{channel.title}</h3>
+                <p className="text-gray-300 mb-4">{channel.description}</p>
+                <div className="space-y-2 text-sm text-gray-400">
+                  <div className="flex items-center justify-center gap-2">
+                    <Clock className="w-4 h-4" />
+                    <span>{channel.availability}</span>
                   </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-400">Response:<span className="text-cyan-400">{channel.responseTime}</span>
-                    <span className="text-gray-400">Availability: </span>,
-                    <span className="text-cyan-400">{channel.availability}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-400">Response: </span>,
-                    <span className="text-cyan-400">{channel.responseTime}</span>
-          <h2 className="text-3xl font-bold text-white mb-8 text-center">Get Help Now</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{supportChannels.map((channel, index) => (</section>
-              <div key={index} className="cyber-card p-6 text-center group hover:scale-105 transition-transform"></div>
-                <div className={`w-16 h-16 ${channel.bgColor} rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform`}></div>
-                  <channel.icon className={`w-8 h-8 ${channel.color}`} />
-                <h3 className="text-xl font-bold text-white mb-2">{channel.title}</h3><p className="text-gray-300 mb-4">{channel.description}</p>
-                <div className="space-y-2 text-sm"></div>
-                  <div className="flex justify-between"></div>
-                    <span className="text-gray-400">Availability:</span><span className="text-cyan-400">{channel.availability}</span>
-                  </div>
-                  <div className="flex justify-between"></div>
-                    <span className="text-gray-400">Response:</span><span className="text-cyan-400">{channel.responseTime}</span>
+                  <div className="flex items-center justify-center gap-2">
+                    <Zap className="w-4 h-4" />
+                    <span>{channel.responseTime}</span>
                   </div>
                 </div>
               </div>
             ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* FAQ Section */}
-        <section className="mb-16">
-          <div className="text-center mb-8"></section>
-            <h2 className="text-3xl font-bold text-white mb-4">Frequently Asked Questions</h2><p className="text-gray-300 mb-6">Find answers to common questions</p>
-            
-            {/* Category Filter */}
-            <div className="flex flex-wrap justify-center gap-2 mb-8">{categories.map((category) => (<button
-            <div className="flex flex-wrap justify-center gap-2 mb-8">
-              {categories.map((category) => (
-                <button;
-            <div className="flex flex-wrap justify-center gap-2 mb-8">{categories.map((category) => (</div><button
-                  key={category.name}
-                  onClick={() =>setSelectedCategory(category.name)}
-                  className={`px-4 py-2 rounded-lg font-medium transition-all ${
-                    selectedCategory === category.name;
-                      ? 'bg-cyan-500 text-white'}
-                      : 'bg-slate-800 text-gray-300 hover:bg-slate-700'}
-                  }`}
-                ></button>
-                  {category.label} ({category.count})</button>
-                </button>
-              ))}
-            <div className="max-w-4xl mx-auto space-y-4">{filteredFaqs.map((faq) => (</div>
-              <div key={faq.id} className="cyber-card p-6"></div>
-                <div className="flex items-start justify-between"></div>
-                  <div className="flex-1"></div>
-                    <h3 className="text-xl font-bold text-white mb-3">{faq.question}</h3><p className="text-gray-300 leading-relaxed">{faq.answer}</p>
-                  </div>
-                  <div className="ml-4 flex items-center space-x-2"></div>
-                    <div className="flex items-center text-sm text-gray-400"></div>
-                      <Star className="w-4 h-4 text-yellow-400 mr-1" >{faq.helpful}%</Star>
-                    </Star>
-                  </div>
-                </div>
+      {/* FAQ Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col md:flex-row gap-8">
+            {/* Categories */}
+            <div className="md:w-1/4">
+              <h3 className="text-xl font-semibold text-white mb-4">Categories</h3>
+              <div className="space-y-2">
+                {categories.map((category) => (
+                  <button
+                    key={category.name}
+                    onClick={() => setSelectedCategory(category.name)}
+                    className={`w-full text-left px-4 py-3 rounded-lg transition-all duration-300 ${
+                      selectedCategory === category.name
+                        ? 'bg-gradient-to-r from-purple-500 to-blue-500 text-white'
+                        : 'bg-white/5 text-gray-300 hover:bg-white/10'
+                    }`}
+                  >
+                    {category.label} ({category.count})
+                  </button>
+                ))}
               </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Resources */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center">Helpful Resources<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{resources.map((resource, index) => (</div>
-          <h2 className="text-3xl font-bold text-white mb-8 text-center">Helpful Resources</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{resources.map((resource, index) => (</section>
-              <Link
-                key={index}
-                to={resource.link}
-                className="cyber-card p-6 text-center group hover:scale-105 transition-transform"
-              >
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform"></div>
-                  <resource.icon className="w-8 h-8 text-white" />
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">{resource.title}<p className="text-gray-300 mb-4">{resource.description}</p>
-          <h2 className="text-3xl font-bold text-white mb-8 text-center">Helpful Resources</h2>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">,
-            {resources.map((resource, index) => (
-              <Link;
-                key={index}
-                to={resource.link}
-                className="cyber-card p-6 text-center group hover: scale-105 transition-transform"
-              >,
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">,
-                  <resource.icon className="w-8 h-8 text-white" />,
-                </div>,
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">,
-                  {resource.title}
-                </h3>
-                <p className="text-gray-300 mb-4">{resource.description}</p>
-                <div className="flex items-center justify-center text-cyan-400 text-sm">
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">{resource.title}</h3><p className="text-gray-300 mb-4">{resource.description}</p>
-                <div className="flex items-center justify-center text-cyan-400 text-sm"></div>
-                  <span>{resource.type}</span>
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform" />,
-                </div>,
-              </Link>))}
-          </div>
-        </section>
-
-        {/* Contact CTA */}
-        <section className="text-center">
-          <div className="cyber-card p-8 max-w-4xl mx-auto"></section>
-            <h2 className="text-3xl font-bold text-white mb-4">Still Need Help?</h2><p className="text-xl text-gray-300 mb-8">Our support team is standing by to help you succeed. Get in touch with us today.</p>
-            </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">
-              <Link;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all inline-flex items-center"
-              >
-                <MessageCircle className="w-5 h-5 mr-2" >Contact Support</MessageCircle>
-              </MessageCircle>
-              <a
-                href="tel:+13024640950"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all inline-flex items-center"
-              ></a>
-                <Phone className="w-5 h-5 mr-2" >Call: (302) 464-0950</Phon>
-              </Phone>
-                <MessageCircle className="w-5 h-5 mr-2" />
-                Contact Support;
-              </Link>
-              <a;
-                href="tel:+13024640950"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all inline-flex items-center"
-              >
-                <Phone className="w-5 h-5 mr-2" />
-                Call: (302) 464-0950;
-              </a>
             </div>
-          </div>
-        </section>
-      </main>
 
-      <Footer />,
-    </div>,
-import React from 'react';
-
-
-const SupportPage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold text-gray-900 mb-8">Support</h1>
-        <div className="bg-white rounded-lg shadow p-6">
-          <h2 className="text-xl font-semibold text-gray-900 mb-4">Get Help</h2>
-          <p className="text-gray-600 mb-4">We're here to help you with any questions or issues.</p>
-          <div className="space-y-4">
-            <div>
-              <h3 className="font-semibold text-gray-900">Email Support</h3>
-              <p className="text-gray-600">support@ziontechgroup.com</p>
-            </div>
-            <div>
-              <h3 className="font-semibold text-gray-900">Phone Support</h3>
-              <p className="text-gray-600">+1 (302) 464-0950</p>
+            {/* FAQ Items */}
+            <div className="md:w-3/4">
+              <h3 className="text-xl font-semibold text-white mb-6">Frequently Asked Questions</h3>
+              <div className="space-y-4">
+                {filteredFaqs.map((item) => (
+                  <div key={item.id} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
+                    <h4 className="text-lg font-semibold text-white mb-3">{item.question}</h4>
+                    <p className="text-gray-300 mb-4">{item.answer}</p>
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-2 text-sm text-gray-400">
+                        <Star className="w-4 h-4" />
+                        <span>{item.helpful} people found this helpful</span>
+                      </div>
+                      <div className="flex gap-2">
+                        <button className="text-green-400 hover:text-green-300 text-sm">
+                          Yes
+                        </button>
+                        <button className="text-red-400 hover:text-red-300 text-sm">
+                          No
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
+      {/* Contact Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">Still Need Help?</h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Can't find what you're looking for? Our support team is here to help you succeed.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+              Contact Support
+            </button>
+            <button className="border border-white/20 text-white hover:bg-white/10 font-bold py-4 px-8 rounded-lg transition-all duration-300">
+              Schedule Demo
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
     </div>
   );
 };
