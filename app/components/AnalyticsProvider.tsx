@@ -37,7 +37,8 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       gtag('config', trackingId, {
         page_title: document.title,
         page_location: window.location.href,
-
+        send_page_view: true
+      });
     }
   }, [trackingId]);
 

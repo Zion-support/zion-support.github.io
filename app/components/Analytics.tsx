@@ -51,7 +51,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
       page_title: document.title,
       page_location: window.location.href,
       send_page_view: true
-
+    });
   };
 
   const initializePerformanceMonitoring = () => {
