@@ -1,5 +1,5 @@
-'use client';
 import React, { useEffect, useState } from 'react';
+
 interface PerformanceMetrics {
   fcp: number | null;
   lcp: number | null;
@@ -7,6 +7,7 @@ interface PerformanceMetrics {
   cls: number | null;
   ttfb: number | null;
 }
+
 const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     fcp: null,
@@ -15,83 +16,142 @@ const PerformanceMonitor: React.FC = () => {
     cls: null,
     ttfb: null
   });
+
   useEffect(() => {
-    // Only run in production
-    if (process.env.NODE_ENV !== 'production') return;
-    const measurePerformance = () => {
-      // Measure First Contentful Paint
-      if ('PerformanceObserver' in window) {
-        const observer = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
-              setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
-            }
+    if (typeof window === 'undefined') return;
+
+    // Measure First Contentful Paint (FCP)
+    const measureFCP = () => {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
+        if (fcpEntry) {
+          setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
+        }
+      });
+      observer.observe({ entryTypes: ['paint'] });
+    };
+
+    // Measure Largest Contentful Paint (LCP)
+    const measureLCP = () => {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const lastEntry = entries[entries.length - 1];
+        setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
+      });
+      observer.observe({ entryTypes: ['largest-contentful-paint'] });
+    };
+
+    // Measure First Input Delay (FID)
+    const measureFID = () => {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry: any) => {
+          setMetrics(prev => ({ 
+            ...prev, 
+            fid: entry.processingStart - entry.startTime 
+          }));
+        });
+      });
+      observer.observe({ entryTypes: ['first-input'] });
+    };
+
+    // Measure Cumulative Layout Shift (CLS)
+    const measureCLS = () => {
+      let clsValue = 0;
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry: any) => {
+          if (!entry.hadRecentInput) {
+            clsValue += entry.value;
           }
         });
-        observer.observe({ entryTypes: ['paint'] });
-      }
-      // Measure Largest Contentful Paint
-      if ('PerformanceObserver' in window) {
-        const lcpObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          const lastEntry = entries[entries.length - 1];
-          setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
-        });
-        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-      }
-      // Measure First Input Delay
-      if ('PerformanceObserver' in window) {
-        const fidObserver = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            if (entry.entryType === 'first-input') {
-              const fidEntry = entry as any;
-              setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - entry.startTime }));
-            }
-          }
-        });
-        fidObserver.observe({ entryTypes: ['first-input'] });
-      }
-      // Measure Cumulative Layout Shift
-      if ('PerformanceObserver' in window) {
-        let clsValue = 0;
-        const clsObserver = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            if (!(entry as any).hadRecentInput) {
-              clsValue += (entry as any).value;
-            }
-          }
-          setMetrics(prev => ({ ...prev, cls: clsValue }));
-        });
-        clsObserver.observe({ entryTypes: ['layout-shift'] });
-      }
-      // Measure Time to First Byte
-      const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      if (navigationEntry) {
+        setMetrics(prev => ({ ...prev, cls: clsValue }));
+      });
+      observer.observe({ entryTypes: ['layout-shift'] });
+    };
+
+    // Measure Time to First Byte (TTFB)
+    const measureTTFB = () => {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      if (navigation) {
         setMetrics(prev => ({ 
           ...prev, 
-          ttfb: navigationEntry.responseStart - navigationEntry.requestStart 
+          ttfb: navigation.responseStart - navigation.requestStart 
         }));
       }
     };
-    // Measure after page load
-    if (document.readyState === 'complete') {
-      measurePerformance();
-    } else {
-      window.addEventListener('load', measurePerformance);
+
+    // Initialize measurements
+    measureFCP();
+    measureLCP();
+    measureFID();
+    measureCLS();
+    measureTTFB();
+
+    // Send metrics to analytics
+    const sendMetricsToAnalytics = () => {
+      if (typeof window !== 'undefined' && 'gtag' in window) {
+        const gtag = (window as any).gtag;
+        
+        if (metrics.fcp) {
+          gtag('event', 'web_vitals', {
+            name: 'FCP',
+            value: Math.round(metrics.fcp),
+            event_category: 'Performance'
+          });
+        }
+        
+        if (metrics.lcp) {
+          gtag('event', 'web_vitals', {
+            name: 'LCP',
+            value: Math.round(metrics.lcp),
+            event_category: 'Performance'
+          });
+        }
+        
+        if (metrics.fid) {
+          gtag('event', 'web_vitals', {
+            name: 'FID',
+            value: Math.round(metrics.fid),
+            event_category: 'Performance'
+          });
+        }
+        
+        if (metrics.cls) {
+          gtag('event', 'web_vitals', {
+            name: 'CLS',
+            value: Math.round(metrics.cls * 1000) / 1000,
+            event_category: 'Performance'
+          });
+        }
+        
+        if (metrics.ttfb) {
+          gtag('event', 'web_vitals', {
+            name: 'TTFB',
+            value: Math.round(metrics.ttfb),
+            event_category: 'Performance'
+          });
+        }
+      }
+    };
+
+    // Send metrics after a delay to ensure all measurements are complete
+    const timeoutId = setTimeout(sendMetricsToAnalytics, 5000);
+
+    return () => {
+      clearTimeout(timeoutId);
+    };
+  }, [metrics]);
+
+  // Log metrics in development
+  useEffect(() => {
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Performance Metrics:', metrics);
     }
-  }, []);
-  return (
-    <div className="performance-monitor">
-      <h3>Performance Metrics</h3>
-      <div className="metrics">
-        <div>LCP: {metrics.lcp || 'N/A'}</div>
-        <div>FID: {metrics.fid || 'N/A'}</div>
-        <div>CLS: {metrics.cls || 'N/A'}</div>
-        <div>FCP: {metrics.fcp || 'N/A'}</div>
-        <div>TTFB: {metrics.ttfb || 'N/A'}</div>
-        <div>Memory: N/A</div>
-      </div>
-    </div>
-  );
+  }, [metrics]);
+
+  return null; // This component doesn't render anything
 };
+
 export default PerformanceMonitor;
