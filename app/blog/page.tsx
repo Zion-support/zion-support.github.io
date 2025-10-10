@@ -117,14 +117,6 @@ const BlogPage: React.FC = () => {
     }
     setFilteredPosts(filtered);
   }, [searchTerm, selectedCategory]);
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Calendar, User, Tag } from 'lucide-react';
-const BlogPage: React.FC = () => {
   const blogPosts = [
     {
       id: 1,
@@ -163,9 +155,9 @@ const BlogPage: React.FC = () => {
       readTime: '7 min read'
     }
   ];
-  const categories = ['All', 'AI & Technology', 'Cloud Services', 'Cybersecurity', 'Micro SaaS', 'Industry Insights'];
+
   return (
-    <React.Fragment>
+    <div className="min-h-screen bg-gray-50">
       <Helmet>
         <title>Blog | Zion Tech Group - AI & IT Insights</title>
         <meta name="description" content="Stay updated with the latest insights on AI, cloud computing, cybersecurity, and technology trends from Zion Tech Group experts." />

@@ -282,7 +282,8 @@ const HomePage: React.FC = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </article>
+            </Suspense>
               {/* Quick Contact Form */}
               <div className="cyber-card hologram-card p-8">
                 <h3 className="text-2xl font-bold text-white mb-6 neon-text">Get Free Consultation</h3>
@@ -453,7 +454,10 @@ const HomePage: React.FC = () => {
                 <a href="mailto:kleber@ziontechgroup.com" className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 text-center">
                   Email kleber@ziontechgroup.com
                 </a>
-            </section>
+              </div>
+            </div>
+          </div>
+        </section>
 
             {/* Services Section */}
             <section className="py-20 bg-slate-800/50 backdrop-blur-sm">
@@ -650,12 +654,8 @@ const HomePage: React.FC = () => {
 
             {/* Footer */}
             <Footer />
-          </div>
-        </section>
       </main>
-      
-      <Footer />
-    </div>
+      </div>
     </React.Fragment>
   );
 };
