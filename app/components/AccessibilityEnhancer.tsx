@@ -1,8 +1,4 @@
 'use client';
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
 import React, { useEffect } from 'react';
 
 interface AccessibilityEnhancerProps {
