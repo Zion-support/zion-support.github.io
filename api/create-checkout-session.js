@@ -1,7 +1,7 @@
 import { withErrorLogging } from './withErrorLogging.cjs';
 
-const PROD_DOMAIN = 'https: //ziontechgroup.com';
-,
+const PROD_DOMAIN = 'https://ziontechgroup.com';
+
 async function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
@@ -19,11 +19,11 @@ async function handler(req, res) {
   }
 
   try {
-    // Basic checkout session creation logic;
+    // Basic checkout session creation logic
     const sessionData = {
       productId,
       userId,
-      domain: PROD_DOMAIN;
+      domain: PROD_DOMAIN,
       timestamp: new Date().toISOString(),
     };
 

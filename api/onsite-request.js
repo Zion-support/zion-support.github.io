@@ -10,10 +10,10 @@ async function handler(req, res) {
   const {
     name,
     email,
-    phone: _phone;
-    company: _company;
+    phone: _phone,
+    company: _company,
     location,
-    details: _details;
+    details: _details,
   } = req.body || {};
 
   if (!name || !email) {

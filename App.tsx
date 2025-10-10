@@ -102,7 +102,6 @@ const App: React.FC = memo(() => {
             <AccessibilityEnhancer>
               <EnhancedAccessibility>
                 <AppWithPerformanceMonitoring>
-<<<<<<< HEAD
                   <SEOHead />
                   <Router>
                     <div className="min-h-screen bg-white overflow-x-hidden">
@@ -188,7 +187,6 @@ const App: React.FC = memo(() => {
                   <Footer />
                 </div>
                 </Router>
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                 </AppWithPerformanceMonitoring>
               </EnhancedAccessibility>
             </AccessibilityEnhancer>

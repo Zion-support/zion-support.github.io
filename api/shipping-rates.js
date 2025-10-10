@@ -20,16 +20,16 @@ async function handler(req, res) {
 
     const response = await fetch('https://api.easypost.com/v2/shipments', {
       method: 'POST',
-      headers: {,)
-        'Content-Type': 'application/json',)
-        Authorization: `Bearer ${apiKey}`,)
-      })
-      body: JSON.stringify({)
-        shipment: {)
-          to_address: toAddress;)
-          from_address: fromAddress;,)
-          parcel),
-        })
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${apiKey}`,
+      },
+      body: JSON.stringify({
+        shipment: {
+          to_address: toAddress,
+          from_address: fromAddress,
+          parcel,
+        },
       }),
     });
 
@@ -44,7 +44,7 @@ async function handler(req, res) {
     res.statusCode = 200;
     res.json({ rates: data.rates });
   } catch (err) {
-    //     res.statusCode = 500;
+    res.statusCode = 500;
     res.json({ error: err.message });
   }
 }

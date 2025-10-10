@@ -17,16 +17,16 @@ import {
   Settings,
   Shield,
   Globe,
-  Heart;
+  Heart,
 } from 'lucide-react';
 
-const AccessibilityPage: React.FC = () => {,
-  const features = [,
-    {,
-      icon: Eye;
+const AccessibilityPage: React.FC = () => {
+  const features = [
+    {
+      icon: Eye,
       title: 'Visual Accessibility',
       description: 'High contrast modes, text scaling, and screen reader compatibility',
-      details: [,
+      details: [
         'High contrast color schemes',
         'Adjustable text sizes',
         'Screen reader optimization',
@@ -35,10 +35,10 @@ const AccessibilityPage: React.FC = () => {,
       ]
     },
     {
-      icon: Ear;
-      title: 'Audio Accessibility'
+      icon: Ear,
+      title: 'Audio Accessibility',
       description: 'Audio alternatives and assistive technologies support',
-      details: [,
+      details: [
         'Audio descriptions for videos',
         'Transcripts for audio content',
         'Volume controls and audio cues',
@@ -47,10 +47,10 @@ const AccessibilityPage: React.FC = () => {,
       ]
     },
     {
-      icon: MousePointer;
-      title: 'Motor Accessibility'
+      icon: MousePointer,
+      title: 'Motor Accessibility',
       description: 'Alternative input methods and navigation options',
-      details: [,
+      details: [
         'Voice navigation support',
         'Switch control compatibility',
         'Large click targets',
@@ -59,10 +59,10 @@ const AccessibilityPage: React.FC = () => {,
       ]
     },
     {
-      icon: Keyboard;
-      title: 'Keyboard Navigation'
+      icon: Keyboard,
+      title: 'Keyboard Navigation',
       description: 'Full keyboard accessibility and shortcuts',
-      details: [,
+      details: [
         'Tab navigation support',
         'Keyboard shortcuts',
         'Skip links for main content',
