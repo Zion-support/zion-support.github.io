@@ -1,12 +1,9 @@
 #!/usr/bin/env node
-
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-
 // const __filename = fileURLToPath(import.meta.url);
 // const __dirname = path.dirname(__filename);
-
 //Files that need to be fixed
 const filesToFix = [
   'src/components/SiteHeader.tsx',
@@ -27,21 +24,17 @@ const filesToFix = [
   'src/types/index.ts',
   'src/types/next-stubs.d.ts',
 ];
-
 function createBasicComponent(filePath) {
   const _fileName = path.basename(filePath);
   const _componentName = fileName.replace(/\.(tsx?|jsx?)$/, '');
   //   const isTsx = fileName.endsWith('.tsx');
   //   const isTs = fileName.endsWith('.ts');
-
   if (isTsx) {
     return `import React from 'react';
-
 interface ${componentName}Props {
   className?: string;
   children?: React.ReactNode;
 }
-
 const ${componentName}: React.FC<${componentName}Props> = ({ 
   className = '', 
   children 
@@ -57,46 +50,36 @@ const ${componentName}: React.FC<${componentName}Props> = ({
     </div>
   );
 };
-
 export default ${componentName};
 `;
   } else if (isTs) {
     return `//${componentName} - TypeScript definitions and utilities
-
 export interface ${componentName}Config {
   //Configuration properties
 }
-
 export const default${componentName}Config: ${componentName}Config = {
   //Default configuration
 };
-
 export default {
   default${componentName}Config
 };
 `;
   } else {
     return `//${componentName} - JavaScript module
-
 export const ${componentName} = {
   //Module implementation
 };
-
 export default ${componentName};
 `;
   }
 }
-
 function fixFile(filePath) {
   try {
     //     const fullPath = path.join(__dirname, filePath);
-
     if (!fs.existsSync(fullPath)) {
       //       return;
     }
-
     const _content = fs.readFileSync(fullPath, 'utf8');
-
     // Check if file has severe corruption
     if (
       content.includes('<< HEAD') ||
@@ -117,7 +100,5 @@ function fixFile(filePath) {
   } catch (error) {
     //     }
 }
-
 // filesToFix.forEach(fixFile);
-
 // 

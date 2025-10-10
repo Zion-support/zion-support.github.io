@@ -1,77 +1,157 @@
 import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
-  loadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  cumulativeLayoutShift: number;
-  firstInputDelay: number;
+  fcp: number | null;
+  lcp: number | null;
+  fid: number | null;
+  cls: number | null;
+  ttfb: number | null;
 }
 
-export const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [isVisible, setIsVisible] = useState(false);
+const PerformanceMonitor: React.FC = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    fcp: null,
+    lcp: null,
+    fid: null,
+    cls: null,
+    ttfb: null
+  });
 
   useEffect(() => {
-    const measurePerformance = () => {
-      const navigation = performance.getEntriesByType(
-        'navigation'
-      )[0] as PerformanceNavigationTiming;
-      const paintEntries = performance.getEntriesByType('paint');
-      const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
-      const lcp = performance.getEntriesByType('largest-contentful-paint')[0] as PerformanceEntry;
+    if (typeof window === 'undefined') return;
 
-      const metrics: PerformanceMetrics = {
-        loadTime: navigation.loadEventEnd - navigation.loadEventStart,
-        firstContentfulPaint: fcp ? fcp.startTime : 0,
-        largestContentfulPaint: lcp ? lcp.startTime : 0,
-        cumulativeLayoutShift: 0, // Would need to be measured with observer
-        firstInputDelay: 0, // Would need to be measured with observer
-      };
-
-      setMetrics(metrics);
+    // Measure First Contentful Paint (FCP)
+    const measureFCP = () => {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
+        if (fcpEntry) {
+          setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
+        }
+      });
+      observer.observe({ entryTypes: ['paint'] });
     };
 
-    // Measure after page load
-    if (document.readyState === 'complete') {
-      measurePerformance();
-    } else {
-      window.addEventListener('load', measurePerformance);
-    }
-
-    return () => {
-      window.removeEventListener('load', measurePerformance);
+    // Measure Largest Contentful Paint (LCP)
+    const measureLCP = () => {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const lastEntry = entries[entries.length - 1];
+        setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
+      });
+      observer.observe({ entryTypes: ['largest-contentful-paint'] });
     };
-  }, []);
 
-  // Toggle visibility with keyboard shortcut (Ctrl+Shift+P)
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.ctrlKey && e.shiftKey && e.key === 'P') {
-        setIsVisible(prev => !prev);
+    // Measure First Input Delay (FID)
+    const measureFID = () => {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry: any) => {
+          setMetrics(prev => ({ 
+            ...prev, 
+            fid: entry.processingStart - entry.startTime 
+          }));
+        });
+      });
+      observer.observe({ entryTypes: ['first-input'] });
+    };
+
+    // Measure Cumulative Layout Shift (CLS)
+    const measureCLS = () => {
+      let clsValue = 0;
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry: any) => {
+          if (!entry.hadRecentInput) {
+            clsValue += entry.value;
+          }
+        });
+        setMetrics(prev => ({ ...prev, cls: clsValue }));
+      });
+      observer.observe({ entryTypes: ['layout-shift'] });
+    };
+
+    // Measure Time to First Byte (TTFB)
+    const measureTTFB = () => {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      if (navigation) {
+        setMetrics(prev => ({ 
+          ...prev, 
+          ttfb: navigation.responseStart - navigation.requestStart 
+        }));
       }
     };
 
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, []);
+    // Initialize measurements
+    measureFCP();
+    measureLCP();
+    measureFID();
+    measureCLS();
+    measureTTFB();
 
-  if (!isVisible || !metrics) return null;
+    // Send metrics to analytics
+    const sendMetricsToAnalytics = () => {
+      if (typeof window !== 'undefined' && 'gtag' in window) {
+        const gtag = (window as any).gtag;
+        
+        if (metrics.fcp) {
+          gtag('event', 'web_vitals', {
+            name: 'FCP',
+            value: Math.round(metrics.fcp),
+            event_category: 'Performance'
+          });
+        }
+        
+        if (metrics.lcp) {
+          gtag('event', 'web_vitals', {
+            name: 'LCP',
+            value: Math.round(metrics.lcp),
+            event_category: 'Performance'
+          });
+        }
+        
+        if (metrics.fid) {
+          gtag('event', 'web_vitals', {
+            name: 'FID',
+            value: Math.round(metrics.fid),
+            event_category: 'Performance'
+          });
+        }
+        
+        if (metrics.cls) {
+          gtag('event', 'web_vitals', {
+            name: 'CLS',
+            value: Math.round(metrics.cls * 1000) / 1000,
+            event_category: 'Performance'
+          });
+        }
+        
+        if (metrics.ttfb) {
+          gtag('event', 'web_vitals', {
+            name: 'TTFB',
+            value: Math.round(metrics.ttfb),
+            event_category: 'Performance'
+          });
+        }
+      }
+    };
 
-  return (
-    <div className="fixed bottom-4 right-4 bg-black bg-opacity-90 text-white p-4 rounded-lg text-sm font-mono z-50">
-      <div className="flex items-center justify-between mb-2">
-        <h3 className="font-bold">Performance Metrics</h3>
-        <button onClick={() => setIsVisible(false)} className="text-gray-400 hover:text-white">
-          ×
-        </button>
-      </div>
-      <div className="space-y-1">
-        <div>Load Time: {metrics.loadTime.toFixed(2)}ms</div>
-        <div>FCP: {metrics.firstContentfulPaint.toFixed(2)}ms</div>
-        <div>LCP: {metrics.largestContentfulPaint.toFixed(2)}ms</div>
-        <div className="text-xs text-gray-400 mt-2">Press Ctrl+Shift+P to toggle</div>
-      </div>
-    </div>
-  );
+    // Send metrics after a delay to ensure all measurements are complete
+    const timeoutId = setTimeout(sendMetricsToAnalytics, 5000);
+
+    return () => {
+      clearTimeout(timeoutId);
+    };
+  }, [metrics]);
+
+  // Log metrics in development
+  useEffect(() => {
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Performance Metrics:', metrics);
+    }
+  }, [metrics]);
+
+  return null; // This component doesn't render anything
 };
+
+export default PerformanceMonitor;

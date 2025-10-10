@@ -1,15 +1,19 @@
+'use client';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
 
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  enableReporting?: boolean;
 }
 
 interface State {
   hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
+  errorId?: string;
 }
 
 class EnhancedErrorBoundary extends Component<Props, State> {
@@ -19,120 +23,71 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   }
 
   static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
+    return {
+      hasError: true,
+      error,
+      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+    };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
-      errorInfo
+      errorInfo,
     });
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
+      console.error('Error Boundary caught an error:', error, errorInfo);
     }
 
-    // Call custom error handler if provided
-    if (this.props.onError) {
-      this.props.onError(error, errorInfo);
-    }
-
-    // Enhanced error reporting
-    if (this.props.enableErrorReporting) {
+    // Report error to analytics
+    if (this.props.enableReporting !== false) {
       this.reportError(error, errorInfo);
     }
 
-    // Log to console in development
-    if (process.env.NODE_ENV === 'development') {
-      // eslint-disable-next-line no-console
-      console.group('🚨 Error Boundary Caught Error');
-      // eslint-disable-next-line no-console
-      console.error('Error:', error);
-      // eslint-disable-next-line no-console
-      console.error('Error Info:', errorInfo);
-      // eslint-disable-next-line no-console
-      console.error('Component Stack:', errorInfo.componentStack);
-      // eslint-disable-next-line no-console
-      console.groupEnd();
+    // Call custom error handler
+    if (this.props.onError) {
+      this.props.onError(error, errorInfo);
     }
   }
 
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
-    const errorReport = {
-      errorId: this.state.errorId,
-      message: error.message,
-      stack: error.stack,
-      componentStack: errorInfo.componentStack,
-      timestamp: new Date().toISOString(),
-      userAgent: navigator.userAgent,
-      url: window.location.href,
-      retryCount: this.state.retryCount,
-      userId: this.getUserId(),
-      sessionId: this.getSessionId(),
-    };
-
-    // Send to error reporting service
-    this.sendErrorReport(errorReport);
-
-    // Send to analytics if available
-    if (typeof window !== 'undefined' && (window as unknown as { gtag: unknown }).gtag) {
-      (window as unknown as { gtag: (command: string, event: string, data: Record<string, unknown>) => void }).gtag('event', 'exception', {
-        description: error.message,
-        fatal: false,
-        custom_map: {
-          error_id: this.state.errorId,
-          retry_count: this.state.retryCount,
-        }
-      });
-    }
-  };
-
-  private sendErrorReport = async (errorReport: Record<string, unknown>) => {
     try {
-      // In a real app, you would send this to your error reporting service
-      // For now, we'll just log it
-      // eslint-disable-next-line no-console
-      console.log('Error Report:', errorReport);
-      origin/cursor/fix-errors-and-merge-to-main-6395
-      // Example: Send to error reporting service
-      // await fetch('/api/errors', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify(errorReport)
-      // });
+      // Send to Google Analytics
+      if (typeof window !== 'undefined' && 'gtag' in window) {
+        (window as any).gtag('event', 'exception', {
+          description: error.message,
+          fatal: false,
+          custom_map: {
+            error_stack: error.stack,
+            component_stack: errorInfo.componentStack,
+            error_id: this.state.errorId,
+          },
+        });
+      }
+
+      // Send to custom error reporting endpoint
+      if (typeof window !== 'undefined' && navigator.sendBeacon) {
+        const errorData = {
+          message: error.message,
+          stack: error.stack,
+          componentStack: errorInfo.componentStack,
+          errorId: this.state.errorId,
+          url: window.location.href,
+          userAgent: navigator.userAgent,
+          timestamp: new Date().toISOString(),
+        };
+
+        navigator.sendBeacon('/api/analytics/errors', JSON.stringify(errorData));
+      }
     } catch (reportingError) {
-      // eslint-disable-next-line no-console
-      console.warn('Failed to send error report:', reportingError);origin/cursor/fix-errors-and-merge-to-main-6395
+      console.error('Failed to report error:', reportingError);
     }
-  };
-
-  private getUserId = (): string | null => {
-    // Get user ID from localStorage, cookies, or context
-    return localStorage.getItem('userId') || null;
-  };
-
-  private getSessionId = (): string => {
-    let _sessionId = sessionStorage.getItem('sessionId');
-    if (!sessionId) {
-      sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-      sessionStorage.setItem('sessionId', sessionId);
-    }
-    return sessionId;
   };
 
   private handleRetry = () => {
-    if (this.state.retryCount < this.maxRetries) {
-      this.setState(prevState => ({
-        hasError: false,
-        error: undefined,
-        errorInfo: undefined,
-        retryCount: prevState.retryCount + 1
-      }));
-    } else {
-      // Max retries reached, reload the page
-      window.location.reload();
-    }
+    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
   };
 
   private handleReload = () => {
@@ -143,40 +98,21 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     window.location.href = '/';
   };
 
-  private copyErrorDetails = () => {
+  private handleReportBug = () => {
     const errorDetails = {
-      errorId: this.state.errorId,
-      message: this.state.error?.message,
+      error: this.state.error?.message,
       stack: this.state.error?.stack,
       componentStack: this.state.errorInfo?.componentStack,
-      timestamp: new Date().toISOString(),
+      errorId: this.state.errorId,
       url: window.location.href,
+      userAgent: navigator.userAgent,
     };
 
-    navigator.clipboard.writeText(JSON.stringify(errorDetails, null, 2))
-      .then(() => {
-        // Show success message
-        const _button = document.getElementById('copy-error-details');
-        if (button) {
-          const _originalText = button.textContent;
-          button.textContent = 'Copied!';
-          setTimeout(() => {
-            button.textContent = originalText;
-          }, 2000);
-        }
-      })
-      .catch(() => {
-        // eslint-disable-next-line no-console
-        console.warn('Failed to copy error details');
-      });
+    const subject = `Bug Report - Error ID: ${this.state.errorId}`;
+    const body = `Error Details:\n\n${JSON.stringify(errorDetails, null, 2)}`;
+    
+    window.open(`mailto:kleber@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`);
   };
-
-  // In production, you might want to send this to an error reporting service
-  if (process.env.NODE_ENV === 'production') {
-    // Example: send to error reporting service
-    // errorReportingService.captureException(error, { extra: errorInfo });
-  }
-}
 
   render() {
     if (this.state.hasError) {
@@ -187,40 +123,87 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       const { retryCount, error, errorId } = this.state;
       const _canRetry = retryCount < this.maxRetries;
       return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">
-          <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">
-            <div className="text-6xl mb-4">⚠️</div>
-            <h1 className="text-2xl font-bold text-gray-900 mb-4">
-              Oops! Something went wrong
-            </h1>
-            <p className="text-gray-600 mb-6">
-              We're sorry, but something unexpected happened. Please try refreshing the page.
-            </p>
-            <div className="space-y-4">
-              <button
-                onClick={() => window.location.reload()}
-                className="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
-              >
-                Refresh Page
-              </button>
-              <button
-                onClick={() => window.history.back()}
-                className="w-full bg-gray-200 text-gray-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-300 transition-colors"
-              >
-                Go Back
-              </button>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
+          <div className="max-w-2xl w-full">
+            <div className="cyber-card p-8 text-center">
+              <div className="w-20 h-20 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <AlertTriangle className="w-10 h-10 text-red-400" />
+              </div>
+              
+              <h1 className="text-3xl font-bold text-white mb-4">
+                Oops! Something went wrong
+              </h1>
+              
+              <p className="text-gray-300 mb-6">
+                We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
+              </p>
+
+              {process.env.NODE_ENV === 'development' && this.state.error && (
+                <div className="bg-red-900/20 border border-red-500/30 rounded-lg p-4 mb-6 text-left">
+                  <h3 className="text-red-400 font-semibold mb-2">Error Details:</h3>
+                  <pre className="text-xs text-red-300 whitespace-pre-wrap overflow-auto max-h-32">
+                    {this.state.error.message}
+                    {this.state.error.stack && `\n\nStack Trace:\n${this.state.error.stack}`}
+                  </pre>
+                </div>
+              )}
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button
+                  onClick={this.handleRetry}
+                  className="cyber-button px-6 py-3 flex items-center gap-2"
+                >
+                  <RefreshCw className="w-4 h-4" />
+                  Try Again
+                </button>
+                
+                <button
+                  onClick={this.handleReload}
+                  className="border-2 border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center gap-2"
+                >
+                  <RefreshCw className="w-4 h-4" />
+                  Reload Page
+                </button>
+                
+                <button
+                  onClick={this.handleGoHome}
+                  className="border-2 border-purple-400 text-purple-400 px-6 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 flex items-center gap-2"
+                >
+                  <Home className="w-4 h-4" />
+                  Go Home
+                </button>
+              </div>
+
+              <div className="mt-8 pt-6 border-t border-gray-700">
+                <p className="text-sm text-gray-400 mb-4">
+                  If this problem persists, please contact our support team.
+                </p>
+                
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <button
+                    onClick={this.handleReportBug}
+                    className="text-cyan-400 hover:text-cyan-300 transition-colors flex items-center gap-2 text-sm"
+                  >
+                    <Mail className="w-4 h-4" />
+                    Report Bug
+                  </button>
+                  
+                  <a
+                    href="tel:+13024640950"
+                    className="text-purple-400 hover:text-purple-300 transition-colors flex items-center gap-2 text-sm"
+                  >
+                    <Mail className="w-4 h-4" />
+                    Call Support
+                  </a>
+                </div>
+
+                {this.state.errorId && (
+                  <p className="text-xs text-gray-500 mt-4">
+                    Error ID: {this.state.errorId}
+                  </p>
+                )}
+              </div>
             </div>
-            {process.env.NODE_ENV === 'development' && this.state.error && (
-              <details className="mt-6 text-left">
-                <summary className="cursor-pointer text-sm text-gray-500">
-                  Error Details (Development)
-                </summary>
-                <pre className="mt-2 text-xs text-red-600 bg-red-50 p-2 rounded overflow-auto">
-                  {this.state.error.toString()}
-                  {this.state.errorInfo?.componentStack}
-                </pre>
-              </details>
-            )}
           </div>
         </div>
       );

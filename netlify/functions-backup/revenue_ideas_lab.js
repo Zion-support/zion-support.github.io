@@ -9,7 +9,7 @@ exports.handler = async function (event, context) {try {
         function: 'revenue_ideas_lab'}
       });
     };
-//   } catch (error) {console.error('❌ revenue_ideas_lab function failed: ') error
+//   } catch (error) {// console.error('❌ revenue_ideas_lab function failed: ') error
       }
     return {
       statusCode: 500,

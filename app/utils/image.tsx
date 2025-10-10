@@ -1,22 +1,21 @@
-import React, { useState, useCallback } from 'react';
-
+'use client'
+import React, { useState, useCallback } from 'react'
 interface ImageProps {
-  src: string;
-  alt: string;
-  width?: number;
-  height?: number;
-  className?: string;
-  priority?: boolean;
-  _quality?: number;
-  _placeholder?: 'blur' | 'empty';
-  _blurDataURL?: string;
-  fill?: boolean;
-  sizes?: string;
-  style?: React.CSSProperties;
-  onLoad?: () => void;
-  onError?: () => void;
+  src: string
+  alt: string
+  width?: number
+  height?: number
+  className?: string
+  priority?: boolean
+  _quality?: number
+  _placeholder?: 'blur' | 'empty'
+  _blurDataURL?: string
+  fill?: boolean
+  sizes?: string
+  style?: React.CSSProperties
+  onLoad?: () => void
+  onError?: () => void;}
 }
-
 export const Image: React.FC<ImageProps> = ({
   src,
   alt,
@@ -32,21 +31,18 @@ export const Image: React.FC<ImageProps> = ({
   style,
   onLoad,
   onError,
-  ...props
+  ...props}
 }) => {
-  const [, setIsLoaded] = useState(false);
-  const [hasError, setHasError] = useState(false);
-
+  const [, setIsLoaded] = useState(false)
+  const [hasError, setHasError] = useState(false)
   const handleLoad = useCallback(() => {
-    setIsLoaded(true);
-    if (onLoad) onLoad();
-  }, [onLoad]);
-
+    setIsLoaded(true)
+    if (onLoad) onLoad();}
+  }, [onLoad])
   const handleError = useCallback(() => {
-    setHasError(true);
-    if (onError) onError();
-  }, [onError]);
-
+    setHasError(true)
+    if (onError) onError();}
+  }, [onError])
   const imageStyle: React.CSSProperties = {
     ...style,
     ...(fill && {
@@ -55,22 +51,20 @@ export const Image: React.FC<ImageProps> = ({
       left: 0,
       width: '100%',
       height: '100%',
-      objectFit: 'cover',
-    }),
-  };
-
+      objectFit: 'cover'}
+    })
+  }
   if (hasError) {
     return (
-      <div
+      <div}
         className={`bg-gray-200 flex items-center justify-center ${className}`}
         style={imageStyle}
         {...props}
       >
-        <span className="text-gray-500 text-sm">Failed to load image</span>
+        <span className="text-gray-500 text-sm"><span className="sr-only">Screen reader: </span>Failed to load image</span>
       </div>
-    );
+    )
   }
-
   return (
     <img
       src={src}
@@ -85,7 +79,6 @@ export const Image: React.FC<ImageProps> = ({
       onError={handleError}
       {...props}
     />
-  );
-};
-
-export default Image;
+  )
+}
+export default Image

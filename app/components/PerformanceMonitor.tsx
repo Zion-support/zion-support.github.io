@@ -1,152 +1,108 @@
-import React, { useEffect } from 'react';
+'use client';
+import { useEffect } from 'react';
+import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
 
-interface PerformanceMetrics {
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  fcp: number | null;
-  ttfb: number | null;
+interface PerformanceMonitorProps {
+  enableReporting?: boolean;
+  enableConsoleLogging?: boolean;
 }
 
-const PerformanceMonitor: React.FC = () => {
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
+  enableReporting = true,
+  enableConsoleLogging = false
+}) => {
   useEffect(() => {
-    const metrics: PerformanceMetrics = {
-      lcp: null,
-      fid: null,
-      cls: null,
-      fcp: null,
-      ttfb: null
+    if (!enableReporting) return;
+
+    const reportMetric = (metric: any) => {
+      if (enableConsoleLogging) {
+        console.log('Performance Metric:', metric);
+      }
+
+      // Send to analytics
+      if (typeof window !== 'undefined' && 'gtag' in window) {
+        (window as any).gtag('event', 'web_vitals', {
+          event_category: 'Performance',
+          event_label: metric.name,
+          value: Math.round(metric.value),
+          non_interaction: true,
+        });
+      }
+
+      // Send to custom analytics endpoint
+      if (typeof window !== 'undefined' && navigator.sendBeacon) {
+        const data = JSON.stringify({
+          name: metric.name,
+          value: metric.value,
+          delta: metric.delta,
+          id: metric.id,
+          navigationType: metric.navigationType,
+          timestamp: Date.now(),
+          url: window.location.href,
+          userAgent: navigator.userAgent,
+        });
+
+        navigator.sendBeacon('/api/analytics/performance', data);
+      }
     };
 
     // Measure Core Web Vitals
-    const measureWebVitals = () => {
-      // LCP - Largest Contentful Paint
-      if ('PerformanceObserver' in window) {
-        const lcpObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          const lastEntry = entries[entries.length - 1];
-          metrics.lcp = lastEntry.startTime;
-        });
+    getCLS(reportMetric);
+    getFID(reportMetric);
+    getFCP(reportMetric);
+    getLCP(reportMetric);
+    getTTFB(reportMetric);
+
+    // Additional performance monitoring
+    const measurePageLoad = () => {
+      if (typeof window !== 'undefined' && window.performance) {
+        const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         
-        try {
-          lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-        } catch (e) {
-          console.warn('LCP observer not supported');
-        }
-
-        // FID - First Input Delay
-        const fidObserver = new PerformanceObserver((list) => {
-          list.getEntries().forEach((entry: any) => {
-            metrics.fid = entry.processingStart - entry.startTime;
-          });
-        });
-        
-        try {
-          fidObserver.observe({ entryTypes: ['first-input'] });
-        } catch (e) {
-          console.warn('FID observer not supported');
-        }
-
-        // CLS - Cumulative Layout Shift
-        let clsValue = 0;
-        const clsObserver = new PerformanceObserver((list) => {
-          list.getEntries().forEach((entry: any) => {
-            if (!entry.hadRecentInput) {
-              clsValue += entry.value;
-            }
-          });
-          metrics.cls = clsValue;
-        });
-        
-        try {
-          clsObserver.observe({ entryTypes: ['layout-shift'] });
-        } catch (e) {
-          console.warn('CLS observer not supported');
-        }
-
-        // FCP - First Contentful Paint
-        const fcpObserver = new PerformanceObserver((list) => {
-          list.getEntries().forEach((entry) => {
-            if (entry.name === 'first-contentful-paint') {
-              metrics.fcp = entry.startTime;
-            }
-          });
-        });
-        
-        try {
-          fcpObserver.observe({ entryTypes: ['paint'] });
-        } catch (e) {
-          console.warn('FCP observer not supported');
-        }
-      }
-
-      // TTFB - Time to First Byte
-      if ('performance' in window && 'timing' in performance) {
-        const timing = performance.timing;
-        metrics.ttfb = timing.responseStart - timing.navigationStart;
-      }
-
-      // Send metrics to analytics after page load
-      window.addEventListener('load', () => {
-        setTimeout(() => {
-          // Send to Google Analytics if available
-          if (typeof window !== 'undefined' && (window as any).gtag) {
-            if (metrics.lcp !== null) {
-              (window as any).gtag('event', 'web_vitals', {
-                event_category: 'Performance',
-                event_label: 'LCP',
-                value: Math.round(metrics.lcp)
-              });
-            }
-            if (metrics.fid !== null) {
-              (window as any).gtag('event', 'web_vitals', {
-                event_category: 'Performance',
-                event_label: 'FID',
-                value: Math.round(metrics.fid)
-              });
-            }
-            if (metrics.cls !== null) {
-              (window as any).gtag('event', 'web_vitals', {
-                event_category: 'Performance',
-                event_label: 'CLS',
-                value: Math.round(metrics.cls * 1000) / 1000
-              });
-            }
-          }
-
-          // Log metrics for debugging
-          console.log('Performance Metrics:', metrics);
-        }, 2000);
-      });
-    };
-
-    measureWebVitals();
-
-    // Monitor resource loading
-    const monitorResources = () => {
-      if ('PerformanceObserver' in window) {
-        const resourceObserver = new PerformanceObserver((list) => {
-          list.getEntries().forEach((entry) => {
-            if (entry.duration > 1000) { // Log slow resources
-              console.warn('Slow resource:', entry.name, entry.duration + 'ms');
-            }
-          });
-        });
-        
-        try {
-          resourceObserver.observe({ entryTypes: ['resource'] });
-        } catch (e) {
-          console.warn('Resource observer not supported');
+        if (navigation) {
+          const metrics = {
+            name: 'page_load_time',
+            value: navigation.loadEventEnd - navigation.fetchStart,
+            delta: navigation.loadEventEnd - navigation.fetchStart,
+            id: 'page-load',
+            navigationType: navigation.type,
+          };
+          
+          reportMetric(metrics);
         }
       }
     };
 
-    monitorResources();
+    // Measure when page is fully loaded
+    if (document.readyState === 'complete') {
+      measurePageLoad();
+    } else {
+      window.addEventListener('load', measurePageLoad);
+    }
+
+    // Monitor memory usage (if available)
+    const measureMemory = () => {
+      if (typeof window !== 'undefined' && 'memory' in performance) {
+        const memory = (performance as any).memory;
+        const memoryMetrics = {
+          name: 'memory_usage',
+          value: memory.usedJSHeapSize / 1024 / 1024, // Convert to MB
+          delta: memory.usedJSHeapSize / 1024 / 1024,
+          id: 'memory-usage',
+          navigationType: 'navigate',
+        };
+        
+        reportMetric(memoryMetrics);
+      }
+    };
+
+    // Measure memory usage periodically
+    const memoryInterval = setInterval(measureMemory, 30000); // Every 30 seconds
 
     return () => {
-      // Cleanup observers if needed
+      window.removeEventListener('load', measurePageLoad);
+      clearInterval(memoryInterval);
     };
-  }, []);
+  }, [enableReporting, enableConsoleLogging]);
 
   return null;
 };

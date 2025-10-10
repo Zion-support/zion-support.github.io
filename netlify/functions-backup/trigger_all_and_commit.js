@@ -9,7 +9,7 @@ exports.handler = async function (event, context) {try {
         function: 'trigger_all_and_commit'}
       });
     };
-//   } catch (error) {console.error('❌ trigger_all_and_commit function failed: ') error
+//   } catch (error) {// console.error('❌ trigger_all_and_commit function failed: ') error
       }
     return {
       statusCode: 500,

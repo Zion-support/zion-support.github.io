@@ -236,28 +236,6 @@ const HomePage: React.FC = () => {
                 </div>
               </article>
             </Suspense>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-            <Suspense fallback={<ServiceCardSkeleton />}>
-              <article className="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
-                <div className="text-5xl mb-6 text-center">🔄</div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Autonomous Systems</h3>
-                <p className="text-gray-600 mb-6 text-center leading-relaxed">
-                  Self-managing and self-optimizing systems for enterprise operations and infrastructure.
-                </p>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-green-600 mb-2">Starting at $2,500/month</div>
-                  <a href="/autonomous-systems" className="text-green-600 hover:text-green-700 font-medium">
-                    Learn More →
-                  </a>
-                </div>
-              </article>
-            </Suspense>
->>>>>>> cursor/analyze-improve-and-deploy-application-144c
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-26dd
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
@@ -305,37 +283,16 @@ const HomePage: React.FC = () => {
               </ul>
             </article>
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-          
-          <div className="text-center mt-8">
-            <a 
-              href="/services"
-              className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-indigo-300"
-            >
-              View All Services
-            </a>
-          </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-144c
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-26dd
         </section>
 
         {/* Content Carousel */}
-        <Suspense fallback={<div className="h-64 bg-gray-100 rounded-lg animate-pulse"></div>}>
-          <ContentCarousel />
-        </Suspense>
+        <ContentCarousel />
 
         {/* Dynamic Content Showcase */}
-        <Suspense fallback={<div className="h-64 bg-gray-100 rounded-lg animate-pulse"></div>}>
-          <DynamicContentShowcase />
-        </Suspense>
+        <DynamicContentShowcase />
 
         {/* Content Statistics */}
-        <Suspense fallback={<div className="h-64 bg-gray-100 rounded-lg animate-pulse"></div>}>
-          <ContentStatistics />
-        </Suspense>
+        <ContentStatistics />
 
         {/* Social Proof Section */}
         <section className="bg-gray-50 py-16" aria-labelledby="social-proof-heading">
@@ -395,9 +352,7 @@ const HomePage: React.FC = () => {
         </section>
 
         {/* Newsletter Signup */}
-        <Suspense fallback={<div className="h-32 bg-gray-100 rounded-lg animate-pulse"></div>}>
-          <ContentNewsletterSignup />
-        </Suspense>
+        <ContentNewsletterSignup />
 
         {/* Call to Action Section */}
         <section className="text-center bg-gradient-to-r from-indigo-50 to-purple-50 rounded-2xl p-12" aria-labelledby="cta-heading">

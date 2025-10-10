@@ -14,9 +14,7 @@ function fixMergeConflicts(filePath) {
 
     // Check if file has merge conflicts
     if (
-      !content.includes('<<<<<<< HEAD') &&
-      !content.includes('=======') &&
-      !content.includes('>>>>>>> ')
+      !content.includes('
     ) {
       return false; // No conflicts to fix
     }
@@ -32,14 +30,7 @@ function fixMergeConflicts(filePath) {
     for (let i = 0; i < lines.length; i++) {
       const _line = lines[i];
 
-      if (line.startsWith('<<<<<<< HEAD')) {
-        inConflict = true;
-        conflictType = 'head';
-        continue;
-      } else if (line.startsWith('=======')) {
-        conflictType = 'incoming';
-        continue;
-      } else if (line.startsWith('>>>>>>> ')) {
+      if (line.startsWith('
         inConflict = false;
         conflictType = null;
 

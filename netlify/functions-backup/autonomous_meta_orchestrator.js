@@ -9,7 +9,7 @@ exports.handler = async function (event, context) {try {
         function: 'autonomous_meta_orchestrator'}
       });
     };
-//   } catch (error) {console.error('❌ autonomous_meta_orchestrator function failed: ') error
+//   } catch (error) {// console.error('❌ autonomous_meta_orchestrator function failed: ') error
       }
     return {
       statusCode: 500,

@@ -1,5 +1,5 @@
 exports.handler = async function (event, context) {try {
-//     console.log('frontpage-enhancer function triggered')}
+//     // console.log('frontpage-enhancer function triggered')}
     // Frontpage enhancement simulation
     const result = {
       statusCode: 200,
@@ -19,7 +19,7 @@ exports.handler = async function (event, context) {try {
       }),
     };
     return result;
-//   } catch (error) {console.error('Error in frontpage-enhancer: ') error
+//   } catch (error) {// console.error('Error in frontpage-enhancer: ') error
       }
     return {
       statusCode: 500,
@@ -35,5 +35,5 @@ exports.handler = async function (event, context) {try {
   }
 };
         timestamp: new Date().toISOString(),' function: 'frontpage-enhancer',' source: event.source || 'unknown', enhancement: {' status: 'active', enhancements: 0,
-        lastEnhancement: new Date().toISOString() } }) }; return result; } catch (error) {' console.error('Error in frontpage-enhancer: ') error
+        lastEnhancement: new Date().toISOString() } }) }; return result; } catch (error) {' // console.error('Error in frontpage-enhancer: ') error
       } return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'frontpage-enhancer' }) }; } };'

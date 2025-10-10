@@ -1,107 +1,48 @@
+'use client';
 import React from 'react';
 
-interface SkeletonProps {
-  className?: string;
-  width?: string | number;
-  height?: string | number;
-  rounded?: boolean;
-  animated?: boolean;
-}
-
-const Skeleton: React.FC<SkeletonProps> = ({
-  className = '',
-  width,
-  height,
-  rounded = false,
-  animated = true
-}) => {
-  const baseClasses = 'bg-gray-200';
-  const roundedClasses = rounded ? 'rounded' : '';
-  const animatedClasses = animated ? 'animate-pulse' : '';
-  
-  return (
-    <div
-      className={`${baseClasses} ${roundedClasses} ${animatedClasses} ${className}`}
-      style={{ width, height }}
-      role="status"
-      aria-label="Loading content"
-    >
-      <span className="sr-only">Loading...</span>
+export const ServiceCardSkeleton: React.FC = () => (
+  <div className="cyber-card p-6 animate-pulse">
+    <div className="w-16 h-16 bg-gray-700 rounded-xl mx-auto mb-6"></div>
+    <div className="h-6 bg-gray-700 rounded mb-3"></div>
+    <div className="h-4 bg-gray-700 rounded mb-4"></div>
+    <div className="space-y-2 mb-4">
+      <div className="h-3 bg-gray-700 rounded"></div>
+      <div className="h-3 bg-gray-700 rounded"></div>
+      <div className="h-3 bg-gray-700 rounded w-3/4"></div>
     </div>
-  );
-};
+    <div className="h-8 bg-gray-700 rounded"></div>
+  </div>
+);
 
-// Predefined skeleton components for common use cases
+export const HeroSkeleton: React.FC = () => (
+  <div className="text-center mb-16 animate-pulse">
+    <div className="h-16 bg-gray-700 rounded mb-6 mx-auto max-w-2xl"></div>
+    <div className="h-8 bg-gray-700 rounded mb-8 mx-auto max-w-4xl"></div>
+    <div className="h-6 bg-gray-700 rounded mb-8 mx-auto max-w-3xl"></div>
+    <div className="flex justify-center gap-4">
+      <div className="h-12 bg-gray-700 rounded w-48"></div>
+      <div className="h-12 bg-gray-700 rounded w-48"></div>
+    </div>
+  </div>
+);
+
+export const ContentSkeleton: React.FC = () => (
+  <div className="animate-pulse">
+    <div className="h-8 bg-gray-700 rounded mb-4"></div>
+    <div className="h-4 bg-gray-700 rounded mb-2"></div>
+    <div className="h-4 bg-gray-700 rounded mb-2"></div>
+    <div className="h-4 bg-gray-700 rounded w-3/4"></div>
+  </div>
+);
+
 export const CardSkeleton: React.FC = () => (
-  <div className="bg-white rounded-lg shadow-lg p-6">
-    <Skeleton height="24px" width="75%" className="mb-4" />
-    <Skeleton height="16px" width="100%" className="mb-2" />
-    <Skeleton height="16px" width="90%" className="mb-4" />
-    <Skeleton height="40px" width="120px" rounded />
+  <div className="cyber-card p-6 animate-pulse">
+    <div className="h-6 bg-gray-700 rounded mb-4"></div>
+    <div className="h-4 bg-gray-700 rounded mb-2"></div>
+    <div className="h-4 bg-gray-700 rounded mb-2"></div>
+    <div className="h-4 bg-gray-700 rounded w-2/3"></div>
   </div>
 );
 
-export const TextSkeleton: React.FC<{ lines?: number }> = ({ lines = 3 }) => (
-  <div className="space-y-2">
-    {Array.from({ length: lines }).map((_, index) => (
-      <Skeleton
-        key={index}
-        height="16px"
-        width={index === lines - 1 ? '75%' : '100%'}
-      />
-    ))}
-  </div>
-);
-
-export const ImageSkeleton: React.FC<{ aspectRatio?: string }> = ({ 
-  aspectRatio = '16/9' 
-}) => (
-  <div 
-    className="bg-gray-200 rounded-lg animate-pulse"
-    style={{ aspectRatio }}
-    role="status"
-    aria-label="Loading image"
-  >
-    <span className="sr-only">Loading image...</span>
-  </div>
-);
-
-export const ListSkeleton: React.FC<{ items?: number }> = ({ items = 5 }) => (
-  <div className="space-y-3">
-    {Array.from({ length: items }).map((_, index) => (
-      <div key={index} className="flex items-center space-x-3">
-        <Skeleton height="40px" width="40px" rounded />
-        <div className="flex-1 space-y-2">
-          <Skeleton height="16px" width="80%" />
-          <Skeleton height="14px" width="60%" />
-        </div>
-      </div>
-    ))}
-  </div>
-);
-
-export const TableSkeleton: React.FC<{ rows?: number; columns?: number }> = ({ 
-  rows = 5, 
-  columns = 4 
-}) => (
-  <div className="overflow-hidden">
-    <div className="grid gap-4 mb-4" style={{ gridTemplateColumns: `repeat(${columns}, 1fr)` }}>
-      {Array.from({ length: columns }).map((_, index) => (
-        <Skeleton key={index} height="20px" />
-      ))}
-    </div>
-    {Array.from({ length: rows }).map((_, rowIndex) => (
-      <div 
-        key={rowIndex} 
-        className="grid gap-4 mb-2" 
-        style={{ gridTemplateColumns: `repeat(${columns}, 1fr)` }}
-      >
-        {Array.from({ length: columns }).map((_, colIndex) => (
-          <Skeleton key={colIndex} height="16px" />
-        ))}
-      </div>
-    ))}
-  </div>
-);
-
-export default Skeleton;
+export default ServiceCardSkeleton;

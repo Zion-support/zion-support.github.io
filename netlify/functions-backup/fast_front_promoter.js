@@ -9,7 +9,7 @@ exports.handler = async function (event, context) {try {
         function: 'fast_front_promoter'}
       });
     };
-//   } catch (error) {console.error('❌ fast_front_promoter function failed: ') error
+//   } catch (error) {// console.error('❌ fast_front_promoter function failed: ') error
       }
     return {
       statusCode: 500,

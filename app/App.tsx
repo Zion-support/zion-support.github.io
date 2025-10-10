@@ -171,19 +171,12 @@ const App: React.FC = () => {
                         <Route path="/enterprise" element={<_EnterprisePage />} />
                         <Route path="/services-advertising" element={<_ServicesAdvertisingPage />} />
                         <Route path="/case-studies" element={<_CaseStudiesPage />} />
-<<<<<<< HEAD
-=======
                         <Route path="/sitemap" element={<_SitemapPage />} />
->>>>>>> cursor/website-audit-and-update-with-deployment-26dd
                       </Routes>
                     </Suspense>
                   </main>
                   <Footer />
-<<<<<<< HEAD
-
-=======
                   
->>>>>>> cursor/website-audit-and-update-with-deployment-26dd
                   {/* Performance Dashboard */}
                   <PerformanceDashboard />
                   

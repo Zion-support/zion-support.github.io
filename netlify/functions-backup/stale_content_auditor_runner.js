@@ -9,7 +9,7 @@ exports.handler = async function (event, context) {try {
         function: 'stale_content_auditor_runner'}
       });
     };
-//   } catch (error) {console.error('❌ stale_content_auditor_runner function failed: ') error
+//   } catch (error) {// console.error('❌ stale_content_auditor_runner function failed: ') error
       }
     return {
       statusCode: 500,

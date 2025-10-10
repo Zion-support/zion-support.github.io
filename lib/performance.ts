@@ -11,12 +11,8 @@ declare global {
     gtag?: (...args: unknown[]) => void;
   }
 }
-import { onCLS, onFCP, onLCP, onTTFB, type Metric } from 'web-vitals';
-import { onCLS, onFCP, onLCP, onTTFB, type Metric } from 'web-vitals';
-import { onCLS, onFCP, onLCP, onTTFB, type Metric } from 'web-vitals';
-
-// Types
-interface PerformanceMetric {
+import { onCLS, onFCP, onLCP, onTTFB } from 'web-vitals';;
+import { onCimport { onCLS, onFCP, onLCP, onTTFB } from 'web-vitals';;CLS, onFCP, oimport { onCLS, onFCP, onLCP, onTTFB } from 'web-vitals';;formanceMetric {
   name: string;
   value: number;
   rating: 'good' | 'needs-improvement' | 'poor';
@@ -54,19 +50,6 @@ const THRESHOLDS = {
   FID: { good: 100, poor: 300 },
   FCP: { good: 1800, poor: 3000 },
   LCP: { good: 2500, poor: 4000 },
-  TTFB: { good: 800, poor: 1800 }
-  TTFB: { good: 800, poor: 1800 }
-  TTFB: { good: 800, poor: 1800 },
-  TTFB: { good: 800, poor: 1800 },
-  TTFB: { good: 800, poor: 1800 },
-  TTFB: { good: 800, poor: 1800 },
-  TTFB: { good: 800, poor: 1800 },
-  TTFB: { good: 800, poor: 1800 },
-  TTFB: { good: 800, poor: 1800 },
-  TTFB: { good: 800, poor: 1800 },
-  TTFB: { good: 800, poor: 1800 },
-  TTFB: { good: 800, poor: 1800 },
-  TTFB: { good: 800, poor: 1800 },
   TTFB: { good: 800, poor: 1800 },
 };
 
@@ -174,7 +157,7 @@ function sendToAnalytics(metric: Metric): void {
         userAgent: navigator.userAgent,
       }),
       keepalive: true,
-//     }).catch(error => console.error('Performance reporting error:', error));
+//     }).catch(error => // console.error('Performance reporting error:', error));
   }
     });
   }
@@ -311,7 +294,7 @@ export function generatePerformanceReport(): PerformanceReport {
   }
 
   if (process.env['NODE_ENV'] === 'development') {
-//     console.log(`Performance: ${name} took ${duration.toFixed(2)}ms`);
+//     // console.log(`Performance: ${name} took ${duration.toFixed(2)}ms`);
   }
 
 
@@ -376,7 +359,7 @@ export function measurePerformance(name: string, startTime: number): number {
   if (process.env['NODE_ENV'] === 'development') {
      
     // eslint-disable-next-line no-console
-//     console.log(`Performance: ${name} took ${duration.toFixed(2)}ms`);
+//     // console.log(`Performance: ${name} took ${duration.toFixed(2)}ms`);
   }
 
   return duration;

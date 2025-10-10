@@ -9,7 +9,7 @@ exports.handler = async function (event, context) {try {
         function: 'todo_summary_runner'}
       });
     };
-//   } catch (error) {console.error('❌ todo_summary_runner function failed: ') error
+//   } catch (error) {// console.error('❌ todo_summary_runner function failed: ') error
       }
     return {
       statusCode: 500,

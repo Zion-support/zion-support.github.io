@@ -1,5 +1,8 @@
 import React, { memo, useMemo, Suspense } from 'react';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
+import EnhancedSEO from './src/components/EnhancedSEO';
+import PerformanceMonitor from './src/components/PerformanceMonitor';
+import AccessibilityEnhancer from './src/components/AccessibilityEnhancer';
 
 // Memoized components for better performance
 const UnifiedContentPromotion = memo(() => (
@@ -65,11 +68,11 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
     return { hasError: true, error };
   }
 
-  override componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+  override componentDidCatch() {
     // Log error for debugging in development
     if (process.env.NODE_ENV === 'development') {
-      // eslint-disable-next-line no-console
-      console.error('App Error Boundary caught an error:', error, errorInfo);
+       
+      // console.error('App Error Boundary caught an error');
     }
   }
 
@@ -138,44 +141,24 @@ export default function App() {
   return (
     <ErrorBoundary>
       <HelmetProvider>
-        <Helmet>
-          <title>Zion Tech Group - AI & IT Solutions</title>
-          <meta
-            name="description"
-            content="Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve 300% ROI with our cutting-edge AI technology."
-          />
-          <meta
-            name="keywords"
-            content="AI, artificial intelligence, enterprise solutions, digital transformation, IT services"
-          />
-          <meta property="og:title" content="Zion Tech Group - AI & IT Solutions" />
-          <meta
-            property="og:description"
-            content="Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains"
-          />
-          <meta property="og:type" content="website" />
-          <meta property="og:url" content="https://ziontechgroup.com" />
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content="Zion Tech Group - AI & IT Solutions" />
-          <meta
-            name="twitter:description"
-            content="Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains"
-          />
-          <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
-        </Helmet>
+        <EnhancedSEO structuredData={structuredData} />
+        <PerformanceMonitor />
+        <AccessibilityEnhancer />
         <div className="min-h-screen bg-white">
-          <Suspense fallback={<LoadingSpinner />}>
-            <UnifiedContentPromotion />
-          </Suspense>
-          <Suspense fallback={<LoadingSpinner />}>
-            <InteractiveAIROICalculator />
-          </Suspense>
-          <Suspense fallback={<LoadingSpinner />}>
-            <ContentShowcase />
-          </Suspense>
-          <Suspense fallback={<LoadingSpinner />}>
-            <InteractiveContentShowcase2026 />
-          </Suspense>
+          <main id="main-content" role="main" aria-label="Main content">
+            <Suspense fallback={<LoadingSpinner />}>
+              <UnifiedContentPromotion />
+            </Suspense>
+            <Suspense fallback={<LoadingSpinner />}>
+              <InteractiveAIROICalculator />
+            </Suspense>
+            <Suspense fallback={<LoadingSpinner />}>
+              <ContentShowcase />
+            </Suspense>
+            <Suspense fallback={<LoadingSpinner />}>
+              <InteractiveContentShowcase2026 />
+            </Suspense>
+          </main>
         </div>
       </HelmetProvider>
     </ErrorBoundary>

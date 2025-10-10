@@ -9,7 +9,7 @@ exports.handler = async function (event, context) {try {
         function: 'headers_enforcer'}
       });
     };
-//   } catch (error) {console.error('❌ headers_enforcer function failed: ') error
+//   } catch (error) {// console.error('❌ headers_enforcer function failed: ') error
       }
     return {
       statusCode: 500,

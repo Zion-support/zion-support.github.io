@@ -9,7 +9,7 @@ exports.handler = async function (event, context) {try {
         function: 'docs_search_index_runner'}
       });
     };
-//   } catch (error) {console.error('❌ docs_search_index_runner function failed: ') error
+//   } catch (error) {// console.error('❌ docs_search_index_runner function failed: ') error
       }
     return {
       statusCode: 500,

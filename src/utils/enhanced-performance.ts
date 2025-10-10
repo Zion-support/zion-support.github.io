@@ -3,8 +3,25 @@
  * Comprehensive performance tracking and optimization utilities
  */
 
-import type { PerformanceMetrics } from '../types/app.types';
+// import type { PerformanceMetrics } from '../../app/utils/performanceOptimizer';
 
+// Define PerformanceMetrics interface locally since the import path is incorrect
+interface PerformanceMetrics {
+  loadTime: number;
+  renderTime: number;
+  memoryUsage: number;
+  bundleSize: number;
+  cacheHitRate: number;
+  lazyLoading: boolean;
+  firstContentfulPaint?: number;
+  fcp?: number;
+  lcp?: number;
+  fid?: number;
+  cls?: number;
+  fmp?: number;
+  ttfb?: number;
+  memory?: number;
+}
 /**
  * Performance Observer Wrapper
  */
@@ -174,7 +191,7 @@ export class PerformanceMonitor {
       const measures = performance.getEntriesByName(name, 'measure');
       return measures[measures.length - 1]?.duration || 0;
     } catch (error) {
-//       console.error('Performance measurement failed:', error);
+//       // console.error('Performance measurement failed:', error);
       return 0;
     }
   }
@@ -249,47 +266,17 @@ export class PerformanceMonitor {
   }
 }
 
-// ============================================================================
 // Types
-// ============================================================================
 
-interface PerformanceReport {
-  webVitals: Partial<PerformanceMetrics>;
-  resources: ResourceStats;
-  memory: MemoryStats | null;
-  timestamp: number;
-}
+import type { 
+  PerformanceReport, 
+  ResourceStats, 
+  MemoryStats, 
+  PerformanceWithMemory, 
+  LayoutShift 
+} from '../types/app.types';
 
-interface ResourceStats {
-  total: number;
-  scripts: number;
-  styles: number;
-  images: number;
-  fonts: number;
-}
-
-interface MemoryStats {
-  usedJSHeapSize: number;
-  totalJSHeapSize: number;
-  jsHeapSizeLimit: number;
-}
-
-interface PerformanceWithMemory extends Performance {
-  memory: {
-    usedJSHeapSize: number;
-    totalJSHeapSize: number;
-    jsHeapSizeLimit: number;
-  };
-}
-
-interface LayoutShift extends PerformanceEntry {
-  value: number;
-  hadRecentInput: boolean;
-}
-
-// ============================================================================
 // Utility Functions
-// ============================================================================
 
 /**
  * Measure function execution time
@@ -303,7 +290,7 @@ export function measureExecutionTime<T extends (...args: unknown[]) => any>(
     const result = fn(...args);
     const end = performance.now();
     
-    console.log(`${label || fn.name} took ${(end - start).toFixed(2)}ms`);
+    // console.log(`Function ${fn.name} took ${(end - start).toFixed(2)}ms`);
     
     return result;
   }) as T;
