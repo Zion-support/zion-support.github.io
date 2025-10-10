@@ -1,7 +1,7 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight } from 'lucide-react';
+import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,7 +21,6 @@ const Navigation: React.FC = () => {
         setServicesOpen(false);
         setAiServicesOpen(false);
         setItServicesOpen(false);
-        setMicroSaasOpen(false);
       }
     };
 
@@ -42,8 +41,6 @@ const Navigation: React.FC = () => {
 
   const serviceCategories = [
     {
-<<<<<<< HEAD
-=======
       title: 'Micro SAAS Solutions',
       icon: Zap,
       color: 'text-cyan-400',
@@ -61,29 +58,11 @@ const Navigation: React.FC = () => {
       ]
     },
     {
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-804c
       title: 'AI Services',
       icon: Brain,
       color: 'text-purple-600',
       bgColor: 'bg-purple-50',
       services: [
-<<<<<<< HEAD
-        { name: 'AI Services', path: '/ai-services' },
-        { name: 'AI Marketing', path: '/ai-marketing' },
-        { name: 'AI Automation', path: '/ai-automation' },
-        { name: 'AI Healthcare', path: '/ai-healthcare' },
-        { name: 'AI Fintech', path: '/ai-fintech' },
-        { name: 'AI Data Analytics', path: '/ai-data-analytics' },
-        { name: 'AI Cybersecurity', path: '/ai-cybersecurity' },
-        { name: 'AI Workflow Automation', path: '/ai-workflow-automation' },
-        { name: 'AI Cloud Infrastructure', path: '/ai-cloud-infrastructure' },
-        { name: 'AI E-commerce Solutions', path: '/ai-ecommerce-solutions' },
-        { name: 'AI Mobile App Development', path: '/ai-mobile-app-development' },
-        { name: 'AI Content Generation', path: '/ai-content-generation' },
-        { name: 'AI Customer Support', path: '/ai-customer-support' },
-        { name: 'AI Sales Automation', path: '/ai-sales-automation' },
-        { name: 'AI Data Visualization', path: '/ai-data-visualization' }
-=======
         { name: 'AI Workflow Automation Platform', path: '/ai-workflow-automation', description: 'End-to-end business process automation', icon: '⚡', popular: true },
         { name: 'AI Customer Support Suite', path: '/ai-customer-support', description: 'Advanced 24/7 customer support', icon: '🤖', popular: true },
         { name: 'AI Data Analytics Platform', path: '/ai-data-analytics', description: 'Advanced analytics with ML predictions', icon: '📊', popular: true },
@@ -93,7 +72,6 @@ const Navigation: React.FC = () => {
         { name: 'AI Computer Vision Platform', path: '/ai-computer-vision', description: 'Advanced image recognition', icon: '👁️', popular: false },
         { name: 'AI Machine Learning Platform', path: '/ai-ml-platform', description: 'Complete ML platform', icon: '🧠', popular: false },
         { name: 'AI Quantum Computing', path: '/ai-quantum-computing', description: 'Next-gen quantum solutions', icon: '⚛️', popular: false }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-804c
       ]
     },
     {
@@ -102,41 +80,6 @@ const Navigation: React.FC = () => {
       color: 'text-blue-600',
       bgColor: 'bg-blue-50',
       services: [
-<<<<<<< HEAD
-        { name: 'IT Infrastructure', path: '/it-infrastructure' },
-        { name: 'IT Services', path: '/it-services' },
-        { name: 'Cybersecurity', path: '/cybersecurity' },
-        { name: 'Cloud Services', path: '/ai-cloud-infrastructure' },
-        { name: 'DevOps', path: '/ai-workflow-automation' },
-        { name: 'Database Services', path: '/ai-data-analytics' },
-        { name: 'Network Services', path: '/networking' }
-      ]
-    },
-    {
-      title: 'Micro SAAS',
-      icon: Code,
-      color: 'text-green-600',
-      bgColor: 'bg-green-50',
-      services: [
-        { name: 'Micro SAAS', path: '/micro-saas' },
-        { name: 'Developer Tools', path: '/micro-saas' },
-        { name: 'Business Apps', path: '/micro-saas' },
-        { name: 'Productivity Tools', path: '/micro-saas' },
-        { name: 'Marketing Tools', path: '/micro-saas' }
-      ]
-    },
-    {
-      title: 'Specialized',
-      icon: Zap,
-      color: 'text-orange-600',
-      bgColor: 'bg-orange-50',
-      services: [
-        { name: 'Quantum Computing', path: '/quantum-computing' },
-        { name: 'Autonomous Systems', path: '/autonomous-systems' },
-        { name: 'Blockchain & Web3', path: '/blockchain-web3' },
-        { name: 'IoT & Edge Computing', path: '/iot-edge-computing' },
-        { name: 'Business Intelligence', path: '/business-intelligence' }
-=======
         { name: 'Cloud Migration & Setup', path: '/cloud-migration', description: 'Seamless cloud migration', icon: '☁️', popular: true },
         { name: 'Enterprise Cybersecurity Suite', path: '/cybersecurity', description: 'Comprehensive security solutions', icon: '🛡️', popular: true },
         { name: 'IT Infrastructure Design', path: '/it-infrastructure', description: 'Scalable infrastructure architecture', icon: '🏗️', popular: true },
@@ -162,7 +105,6 @@ const Navigation: React.FC = () => {
         { name: 'Smart Cities', path: '/smart-cities', description: 'Urban technology solutions', icon: '🏙️', popular: false },
         { name: 'Digital Transformation', path: '/digital-transformation', description: 'Business modernization', icon: '🔄', popular: true },
         { name: 'Innovation Labs', path: '/innovation-labs', description: 'R&D and prototyping', icon: '🧪', popular: false }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-804c
       ]
     }
   ];
@@ -196,10 +138,6 @@ const Navigation: React.FC = () => {
             >
               Home
             </Link>
-            <Link href="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">
-              About
-            </Link>
-            
             <Link 
               to="/about" 
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
@@ -235,7 +173,7 @@ const Navigation: React.FC = () => {
                           {category.services.slice(0, 6).map((service, serviceIndex) => (
                             <Link
                               key={serviceIndex}
-                              href={service.path}
+                              to={service.path}
                               className="block px-3 py-2 text-sm text-gray-300 hover:bg-cyan-400/20 hover:text-cyan-400 rounded-lg transition-colors"
                               onClick={closeAllMenus}
                             >
