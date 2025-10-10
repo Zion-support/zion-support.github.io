@@ -10,51 +10,54 @@ const Footer: React.FC = memo(() => {
       title: 'AI Services',
       icon: Brain,
       services: [
-        { name: 'AI Services', href: '/ai-services' },
-        { name: 'AI Marketing', href: '/ai-marketing' },
-        { name: 'AI Automation', href: '/ai-automation' },
-        { name: 'AI Healthcare', href: '/ai-healthcare' },
-        { name: 'AI Fintech', href: '/ai-fintech' },
-        { name: 'AI Content Generation', href: '/ai-content-generation' },
-        { name: 'AI Sentiment Analyzer', href: '/ai-sentiment-analyzer' },
-        { name: 'AI Video Generator', href: '/ai-video-generator' },
-        { name: 'AI Code Assistant', href: '/ai-code-assistant' },
-        { name: 'AI Social Media Scheduler', href: '/ai-social-media-scheduler' },
-        { name: 'AI Cybersecurity Monitor', href: '/ai-cybersecurity-monitor' },
-        { name: 'AI Expense Tracker', href: '/ai-expense-tracker' }
+        { name: 'AI Drug Discovery Pro', href: '/ai-drug-discovery-pro' },
+        { name: 'AI Climate Solutions Pro', href: '/ai-climate-solutions-pro' },
+        { name: 'AI Space Technology Pro', href: '/ai-space-technology-pro' },
+        { name: 'AI Financial Crime Detection Pro', href: '/ai-financial-crime-detection-pro' },
+        { name: 'AI Supply Chain Optimization Pro', href: '/ai-supply-chain-optimization-pro' },
+        { name: 'AI Energy Grid Management Pro', href: '/ai-energy-grid-management-pro' },
+        { name: 'AI Agricultural Intelligence Pro', href: '/ai-agricultural-intelligence-pro' },
+        { name: 'AI Legal Research Pro', href: '/ai-legal-research-pro' }
       ]
     },
     {
       title: 'IT Services',
       icon: Cloud,
       services: [
-        { name: 'IT Infrastructure', href: '/it-infrastructure' },
-        { name: 'Cloud Services', href: '/cloud-services' },
-        { name: 'Cybersecurity', href: '/cybersecurity' },
-        { name: 'DevOps', href: '/devops' },
-        { name: 'Database Services', href: '/database-services' }
+        { name: 'AI Infrastructure Monitoring Pro', href: '/ai-infrastructure-monitoring' },
+        { name: 'Blockchain Integration Services Pro', href: '/blockchain-integration-services' },
+        { name: 'AI API Management Pro', href: '/ai-api-management' },
+        { name: 'Intelligent Database Migration Pro', href: '/intelligent-database-migration' },
+        { name: 'AI Load Testing Pro', href: '/ai-load-testing' },
+        { name: 'Smart Contract Security Audit Pro', href: '/smart-contract-security-audit' },
+        { name: 'AI Content Delivery Network Pro', href: '/ai-content-delivery-network' },
+        { name: 'Intelligent Email Infrastructure Pro', href: '/intelligent-email-infrastructure' }
       ]
     },
     {
       title: 'Micro SAAS',
       icon: Code,
       services: [
-        { name: 'Micro SAAS Solutions', href: '/micro-saas' },
-        { name: 'Developer Tools', href: '/micro-saas' },
-        { name: 'Business Apps', href: '/micro-saas' },
-        { name: 'Marketing Tools', href: '/micro-saas' },
-        { name: 'Analytics Tools', href: '/micro-saas' }
+        { name: 'AI Voice Cloning Studio Pro', href: '/ai-voice-cloning-studio' },
+        { name: 'AI Code Security Auditor Pro', href: '/ai-code-security-auditor' },
+        { name: 'AI Mental Health Companion Pro', href: '/ai-mental-health-companion' },
+        { name: 'AI Smart Home Controller Pro', href: '/ai-smart-home-controller' },
+        { name: 'AI Investment Portfolio Optimizer Pro', href: '/ai-investment-optimizer' },
+        { name: 'AI Language Learning Tutor Pro', href: '/ai-language-tutor' },
+        { name: 'AI Fitness Coach Pro', href: '/ai-fitness-coach' },
+        { name: 'AI Email Security Shield Pro', href: '/ai-email-security-shield' }
       ]
     },
     {
       title: 'Specialized',
       icon: Zap,
       services: [
-        { name: 'Quantum Computing', href: '/quantum-computing' },
+        { name: 'Quantum Computing Solutions', href: '/quantum-computing' },
         { name: 'Autonomous Systems', href: '/autonomous-systems' },
         { name: 'Blockchain & Web3', href: '/blockchain-web3' },
         { name: 'IoT & Edge Computing', href: '/iot-edge-computing' },
-        { name: 'Business Intelligence', href: '/business-intelligence' }
+        { name: 'Business Intelligence', href: '/business-intelligence' },
+        { name: 'Robotics Solutions', href: '/robotics' }
       ]
     }
   ];
