@@ -21,7 +21,9 @@ import {
   Play,
   Award,
   Clock,
-  DollarSign
+  DollarSign,
+  Mic,
+  Activity
 } from 'lucide-react';
 
 interface UnifiedContentPromotionProps {
@@ -86,60 +88,67 @@ export default function UnifiedContentPromotion({
   const featuredServices = [
     {
       title: "AI Drug Discovery Pro",
-      description: "Accelerate pharmaceutical research with AI-powered molecular analysis",
-      price: "$4,500/mo",
-      features: ["Molecular Modeling", "Drug Interaction Analysis", "Clinical Trial Optimization"],
+      description: "Accelerate pharmaceutical research with AI-powered molecular analysis and drug design",
+      price: "$7,500/mo",
+      features: ["Molecular Design", "Virtual Screening", "ADMET Prediction", "Clinical Optimization"],
       icon: Brain,
       category: "Healthcare AI",
       link: "/ai-drug-discovery-pro"
     },
     {
-      title: "AI Climate Solutions Pro",
-      description: "Combat climate change with intelligent environmental monitoring and prediction",
-      price: "$3,200/mo",
-      features: ["Carbon Footprint Analysis", "Weather Prediction", "Sustainability Planning"],
-      icon: Globe,
-      category: "Environmental AI",
-      link: "/ai-climate-solutions-pro"
+      title: "AI Voice Cloning Studio Pro",
+      description: "Create perfect voice clones with AI-powered technology for content and applications",
+      price: "$149/mo",
+      features: ["Voice Cloning", "Multi-language Support", "Real-time Generation", "Enterprise Security"],
+      icon: Mic,
+      category: "Creative AI",
+      link: "/ai-voice-cloning-studio"
     },
     {
-      title: "AI Space Technology Pro",
-      description: "Advanced space exploration and satellite management solutions",
-      price: "$5,500/mo",
-      features: ["Satellite Operations", "Space Mission Planning", "Astronomical Data Analysis"],
-      icon: Rocket,
-      category: "Space Technology",
-      link: "/ai-space-technology-pro"
-    },
-    {
-      title: "AI Financial Crime Detection Pro",
-      description: "Real-time fraud detection and financial security monitoring",
-      price: "$2,800/mo",
-      features: ["Fraud Detection", "Risk Assessment", "Compliance Monitoring"],
-      icon: Shield,
+      title: "AI Financial Analyzer Pro",
+      description: "Transform financial management with AI-powered analysis and investment optimization",
+      price: "$299/mo",
+      features: ["Investment Optimization", "Fraud Detection", "Tax Planning", "Multi-currency Support"],
+      icon: DollarSign,
       category: "Financial AI",
-      link: "/ai-financial-crime-detection-pro"
+      link: "/ai-financial-analyzer-pro"
+    },
+    {
+      title: "AI Infrastructure Monitoring Pro",
+      description: "Monitor and optimize infrastructure with AI-powered insights and automated remediation",
+      price: "$499/mo",
+      features: ["Real-time Monitoring", "AI Analytics", "Security Monitoring", "Multi-cloud Support"],
+      icon: Activity,
+      category: "IT Infrastructure",
+      link: "/ai-infrastructure-monitoring-pro"
     }
   ];
 
   return (
     <div className={`relative min-h-screen overflow-hidden ${className}`}>
       {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-matrix">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
         
-        {/* Floating Elements */}
-        <div className="absolute top-20 left-10 w-20 h-20 bg-cyan-400/10 rounded-full blur-xl animate-pulse"></div>
-        <div className="absolute top-40 right-20 w-32 h-32 bg-purple-400/10 rounded-full blur-xl animate-pulse delay-1000"></div>
-        <div className="absolute bottom-20 left-1/4 w-24 h-24 bg-blue-400/10 rounded-full blur-xl animate-pulse delay-2000"></div>
-        <div className="absolute bottom-40 right-1/3 w-28 h-28 bg-pink-400/10 rounded-full blur-xl animate-pulse delay-3000"></div>
+        {/* Enhanced Floating Elements */}
+        <div className="absolute top-20 left-10 w-20 h-20 bg-cyan-400/10 rounded-full blur-xl quantum-float"></div>
+        <div className="absolute top-40 right-20 w-32 h-32 bg-purple-400/10 rounded-full blur-xl quantum-float" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute bottom-20 left-1/4 w-24 h-24 bg-blue-400/10 rounded-full blur-xl quantum-float" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute bottom-40 right-1/3 w-28 h-28 bg-pink-400/10 rounded-full blur-xl quantum-float" style={{ animationDelay: '3s' }}></div>
+        
+        {/* Neural Network Pattern */}
+        <div className="absolute inset-0 neural-pulse-advanced"></div>
+        
+        {/* Quantum Ripples */}
+        <div className="absolute top-1/4 left-1/4 w-40 h-40 quantum-ripple"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-60 h-60 quantum-ripple" style={{ animationDelay: '1s' }}></div>
       </div>
 
       {/* Hero Section */}
       <div className="relative z-10 container mx-auto px-4 py-20">
         <div className="text-center mb-16">
           <div className={`transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent neon-text">
+            <h1 className="text-6xl md:text-8xl font-bold mb-6 cyber-text-ultra neon-text-advanced">
               {currentSlideData.title}
             </h1>
             <p className="text-2xl md:text-3xl text-gray-300 mb-4 font-light">
@@ -212,8 +221,8 @@ export default function UnifiedContentPromotion({
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {featuredServices.map((service, index) => (
-              <div key={index} className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-cyan-400/50 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10">
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <div key={index} className="group relative cyber-card-ultra p-6 hover:scale-105 transition-all duration-300">
+                <div className="absolute inset-0 holographic-shimmer rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 
                 <div className="relative z-10">
                   <div className="flex items-center justify-between mb-4">

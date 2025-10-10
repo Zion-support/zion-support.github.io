@@ -1,362 +1,342 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+'use client';
+import React, { useState, useEffect } from 'react';
 import { 
-  Users, 
   Mic, 
-  Volume2, 
   Play, 
   Pause, 
   Download, 
   Upload, 
   Settings, 
-  Zap, 
+  Star, 
+  Users, 
+  Clock, 
   CheckCircle, 
   ArrowRight, 
-  Star, 
-  Clock, 
-  Globe,
-  Shield,
-  Brain,
-  MessageSquare,
-  FileText,
-  BarChart3,
-  Activity,
-  AlertTriangle,
-  CheckSquare,
-  Share2,
-  Bell,
-  Filter,
-  Search,
-  Plus,
-  Edit,
-  Trash2,
-  Eye,
-  EyeOff,
-  Lock,
-  Unlock,
-  RefreshCw,
-  Save,
-  Copy,
-  ExternalLink,
-  Phone,
-  Mail,
-  MapPin,
+  Zap, 
+  Globe, 
+  Shield, 
   Headphones,
-  Radio,
-  Music,
-  Video,
-  Camera,
-  Mic as Microphone,
-  Speaker,
-  VolumeX,
-  Volume1
+  Volume2,
+  FileAudio,
+  Wand2,
+  Languages,
+  Timer,
+  Award,
+  TrendingUp,
+  Target,
+  Sparkles
 } from 'lucide-react';
 
-export default function AIVoiceCloningStudioPro() {
+const AIVoiceCloningStudioPage: React.FC = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [activeTab, setActiveTab] = useState('overview');
+
+  useEffect(() => {
+    setIsLoaded(true);
+  }, []);
+
   const features = [
     {
-      title: "Voice Synthesis",
-      description: "Create natural-sounding voices from just a few seconds of audio samples using advanced neural networks.",
       icon: Mic,
-      benefits: ["99% accuracy", "5-second samples", "Real-time generation"]
+      title: 'AI Voice Cloning',
+      description: 'Create perfect voice clones with just 3 minutes of audio sample',
+      details: ['Neural voice synthesis', 'Emotion control', 'Accent preservation', 'Gender adaptation']
     },
     {
-      title: "Emotion Control",
-      description: "Fine-tune voice characteristics including emotion, tone, pace, and speaking style for perfect results.",
+      icon: Languages,
+      title: 'Multi-Language Support',
+      description: 'Generate voice content in 50+ languages with native pronunciation',
+      details: ['50+ languages', 'Native pronunciation', 'Cultural adaptation', 'Regional accents']
+    },
+    {
       icon: Volume2,
-      benefits: ["8 emotions", "Custom tones", "Style adaptation"]
+      title: 'Voice Customization',
+      description: 'Fine-tune pitch, speed, tone, and emotional expression',
+      details: ['Pitch adjustment', 'Speed control', 'Tone modification', 'Emotion injection']
     },
     {
-      title: "Multi-language Support",
-      description: "Generate voices in over 50 languages with native pronunciation and accent accuracy.",
-      icon: Globe,
-      benefits: ["50+ languages", "Native accents", "Cultural adaptation"]
+      icon: FileAudio,
+      title: 'Audio Processing',
+      description: 'Professional-grade audio processing and enhancement',
+      details: ['Noise reduction', 'Audio enhancement', 'Format conversion', 'Quality optimization']
     },
     {
-      title: "Real-time Processing",
-      description: "Generate high-quality voice clones in real-time for live applications and streaming.",
-      icon: Zap,
-      benefits: ["<100ms latency", "Live streaming", "Interactive apps"]
+      icon: Wand2,
+      title: 'Real-time Generation',
+      description: 'Generate voice content in real-time with instant preview',
+      details: ['Instant generation', 'Live preview', 'Real-time editing', 'Quick iterations']
     },
     {
-      title: "Voice Library",
-      description: "Access a vast library of pre-trained voices and create custom voice models for your brand.",
-      icon: Headphones,
-      benefits: ["100+ voices", "Custom models", "Brand voices"]
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Bank-level security with voice data protection and compliance',
+      details: ['End-to-end encryption', 'GDPR compliance', 'Data retention policies', 'Audit trails']
+    }
+  ];
+
+  const pricingPlans = [
+    {
+      name: 'Starter',
+      price: 49,
+      originalPrice: 99,
+      period: 'month',
+      description: 'Perfect for content creators and small businesses',
+      features: [
+        '3 voice clones',
+        '10 hours/month generation',
+        'Basic voice customization',
+        'Standard quality output',
+        'Email support',
+        'Commercial license'
+      ],
+      popular: false,
+      cta: 'Start Free Trial'
     },
     {
-      title: "API Integration",
-      description: "Seamlessly integrate voice cloning into your applications with our comprehensive API.",
-      icon: Settings,
-      benefits: ["REST API", "SDK support", "Webhooks"]
+      name: 'Professional',
+      price: 149,
+      originalPrice: 199,
+      period: 'month',
+      description: 'Ideal for agencies and growing businesses',
+      features: [
+        '10 voice clones',
+        '50 hours/month generation',
+        'Advanced voice customization',
+        'High quality output',
+        'Priority support',
+        'API access',
+        'Team collaboration',
+        'Custom integrations'
+      ],
+      popular: true,
+      cta: 'Start Free Trial'
+    },
+    {
+      name: 'Enterprise',
+      price: 499,
+      originalPrice: 699,
+      period: 'month',
+      description: 'For large organizations with custom needs',
+      features: [
+        'Unlimited voice clones',
+        'Unlimited generation',
+        'Premium voice customization',
+        'Studio quality output',
+        '24/7 dedicated support',
+        'Full API access',
+        'White-label solution',
+        'Custom training',
+        'SLA guarantee',
+        'On-premise deployment'
+      ],
+      popular: false,
+      cta: 'Contact Sales'
     }
   ];
 
   const useCases = [
     {
-      title: "Content Creation",
-      description: "Create engaging audio content for podcasts, audiobooks, and video narration.",
-      icon: Video,
-      examples: ["Podcast narration", "Audiobook production", "Video voiceovers"]
+      title: 'Content Creation',
+      description: 'Create engaging voiceovers for videos, podcasts, and presentations',
+      icon: Play,
+      examples: ['YouTube videos', 'Podcast intros', 'E-learning content', 'Marketing videos']
     },
     {
-      title: "Accessibility",
-      description: "Help people with speech impairments communicate using their own voice.",
-      icon: Users,
-      examples: ["Speech therapy", "Communication aids", "Personal assistants"]
+      title: 'Customer Service',
+      description: 'Deploy AI voice assistants for 24/7 customer support',
+      icon: Headphones,
+      examples: ['IVR systems', 'Chatbots', 'Phone support', 'Interactive guides']
     },
     {
-      title: "Entertainment",
-      description: "Develop interactive games and entertainment experiences with custom voices.",
-      icon: Gamepad2,
-      examples: ["Game characters", "Interactive stories", "Virtual assistants"]
+      title: 'Accessibility',
+      description: 'Make content accessible with voice narration and reading assistance',
+      icon: Globe,
+      examples: ['Screen readers', 'Audiobooks', 'Language learning', 'Assistive technology']
     },
     {
-      title: "Business Applications",
-      description: "Create professional voice content for marketing, training, and customer service.",
-      icon: BarChart3,
-      examples: ["IVR systems", "Training videos", "Marketing content"]
-    }
-  ];
-
-  const pricingTiers = [
-    {
-      name: "Creator",
-      price: "$149",
-      period: "/month",
-      description: "Perfect for content creators and small businesses",
-      features: [
-        "10 voice models",
-        "100 hours/month generation",
-        "5 languages",
-        "Basic emotion control",
-        "Standard quality",
-        "Email support",
-        "API access"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: "$299",
-      period: "/month",
-      description: "Ideal for agencies and growing businesses",
-      features: [
-        "50 voice models",
-        "500 hours/month generation",
-        "25 languages",
-        "Advanced emotion control",
-        "High quality output",
-        "Priority support",
-        "Advanced API",
-        "Custom integrations",
-        "Analytics dashboard"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: "$599",
-      period: "/month",
-      description: "For large organizations with advanced needs",
-      features: [
-        "Unlimited voice models",
-        "Unlimited generation",
-        "All languages",
-        "Full emotion control",
-        "Studio quality",
-        "Dedicated support",
-        "Custom API",
-        "White-label options",
-        "Advanced analytics",
-        "SLA guarantee"
-      ],
-      popular: false
+      title: 'Entertainment',
+      description: 'Create unique voice experiences for games, apps, and media',
+      icon: Sparkles,
+      examples: ['Game characters', 'Virtual assistants', 'Interactive stories', 'Social media content']
     }
   ];
 
   const testimonials = [
     {
-      name: "Alex Thompson",
-      role: "Podcast Producer",
-      company: "Audio Innovations",
-      content: "AI Voice Cloning Studio Pro has revolutionized our podcast production. We can now create consistent, high-quality narration in multiple languages, saving us 60% of our production time.",
+      name: 'Sarah Chen',
+      role: 'Content Creator',
+      company: 'TechTutorials',
+      content: 'AI Voice Cloning Studio transformed my content creation process. I can now produce professional voiceovers in minutes instead of hours.',
       rating: 5,
-      avatar: "AT"
+      avatar: '/images/testimonials/sarah-chen.jpg'
     },
     {
-      name: "Maria Garcia",
-      role: "Accessibility Specialist",
-      company: "Tech for Good",
-      content: "This tool has been life-changing for our clients with speech impairments. The ability to create personalized voices for communication devices is incredible.",
+      name: 'Michael Rodriguez',
+      role: 'Marketing Director',
+      company: 'GlobalCorp',
+      content: 'The multilingual capabilities are incredible. We can now create localized content for all our markets with consistent brand voice.',
       rating: 5,
-      avatar: "MG"
+      avatar: '/images/testimonials/michael-rodriguez.jpg'
     },
     {
-      name: "David Kim",
-      role: "Game Developer",
-      company: "Interactive Studios",
-      content: "The real-time voice generation is perfect for our interactive games. Players can have unique conversations with AI characters that sound completely natural.",
+      name: 'Emily Watson',
+      role: 'E-learning Manager',
+      company: 'EduTech Solutions',
+      content: 'Our students love the personalized voice experience. It makes learning more engaging and accessible for everyone.',
       rating: 5,
-      avatar: "DK"
+      avatar: '/images/testimonials/emily-watson.jpg'
     }
   ];
 
   const stats = [
-    { number: "10K+", label: "Voice Models Created", icon: Mic },
-    { number: "99.2%", label: "Accuracy Rate", icon: CheckCircle },
-    { number: "50+", label: "Languages Supported", icon: Globe },
-    { number: "<100ms", label: "Generation Speed", icon: Zap }
+    { number: '95%', label: 'Voice Accuracy', icon: Target },
+    { number: '50+', label: 'Languages Supported', icon: Globe },
+    { number: '10K+', label: 'Happy Customers', icon: Users },
+    { number: '99.9%', label: 'Uptime Guarantee', icon: Shield }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
       {/* Hero Section */}
-      <div className="relative py-20 overflow-hidden">
-        {/* Animated Background */}
-        <div className="absolute inset-0">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-400/5 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-pink-400/5 rounded-full blur-3xl animate-pulse delay-2000"></div>
-        </div>
-
-        <div className="relative z-10 container mx-auto px-4">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center space-x-2 bg-purple-400/10 text-purple-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
-              <Users className="w-4 h-4" />
-              <span>Creative AI Solution</span>
+      <section className="relative py-20 lg:py-32 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-full mb-6">
+              <Mic className="w-5 h-5 text-cyan-400" />
+              <span className="text-cyan-400 font-medium">AI Voice Technology</span>
             </div>
             
-            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent neon-text-advanced">
+            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
               AI Voice Cloning Studio Pro
             </h1>
             
-            <p className="text-2xl md:text-3xl text-gray-300 mb-4 font-light">
-              Professional Voice Synthesis and Cloning Platform
-            </p>
-            
-            <p className="text-lg text-gray-400 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Create natural-sounding voice clones from just a few seconds of audio. 
-              Perfect for content creators, accessibility applications, and entertainment projects.
+            <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
+              Create perfect voice clones with AI-powered technology. Generate professional voiceovers, 
+              multilingual content, and personalized voice experiences in minutes.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link
-                to="/contact"
-                className="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25"
-              >
-                <span className="relative z-10">Start Free Trial</span>
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl blur opacity-30 group-hover:opacity-50 transition-opacity"></div>
-              </Link>
-              
-              <Link
-                to="/demo"
-                className="group inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-xl hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 transform hover:scale-105"
-              >
-                <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
-                Listen to Samples
-              </Link>
+            <div className="flex flex-wrap justify-center gap-4 mb-12">
+              <div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg">
+                <Star className="w-5 h-5 text-cyan-400" />
+                <span className="text-white font-medium">95% Voice Accuracy</span>
+              </div>
+              <div className="flex items-center space-x-2 bg-purple-500/20 px-4 py-2 rounded-lg">
+                <Globe className="w-5 h-5 text-purple-400" />
+                <span className="text-white font-medium">50+ Languages</span>
+              </div>
+              <div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg">
+                <Zap className="w-5 h-5 text-green-400" />
+                <span className="text-white font-medium">Real-time Generation</span>
+              </div>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-bold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 inline-flex items-center">
+                <Play className="w-5 h-5 mr-2" />
+                Start Free Trial
+              </button>
+              <button className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-bold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center">
+                <Download className="w-5 h-5 mr-2" />
+                Watch Demo
+              </button>
             </div>
           </div>
+        </div>
+      </section>
 
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20">
+      {/* Stats Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center group">
-                <div className="relative mb-4">
-                  <div className="w-16 h-16 mx-auto bg-gradient-to-r from-purple-400 to-pink-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <stat.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-pink-600 rounded-full blur opacity-30 group-hover:opacity-50 transition-opacity"></div>
+                <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <stat.icon className="w-10 h-10 text-white" />
                 </div>
-                <div className="text-3xl md:text-4xl font-bold text-white mb-2 neon-text">{stat.number}</div>
+                <div className="text-4xl font-bold text-white mb-2 neon-text">{stat.number}</div>
                 <div className="text-gray-400 font-medium">{stat.label}</div>
               </div>
             ))}
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Features Section */}
-      <div className="py-20">
+      <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent neon-text">
-              Advanced Voice Technology
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4 neon-text">
+              Powerful Voice Cloning Features
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Powered by cutting-edge AI and neural networks for the most realistic voice synthesis
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+              Advanced AI technology that creates incredibly realistic voice clones with professional-grade quality
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-purple-400/50 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/10">
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                
-                <div className="relative z-10">
-                  <div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform mb-6">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  
-                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors">
-                    {feature.title}
-                  </h3>
-                  
-                  <p className="text-gray-400 mb-6 leading-relaxed">
-                    {feature.description}
-                  </p>
-                  
-                  <div className="space-y-2">
-                    {feature.benefits.map((benefit, benefitIndex) => (
-                      <div key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />
-                        {benefit}
-                      </div>
-                    ))}
-                  </div>
+              <div key={index} className="cyber-card-advanced p-6 group hover:scale-105 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <feature.icon className="w-8 h-8 text-white" />
                 </div>
+                
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                  {feature.title}
+                </h3>
+                
+                <p className="text-gray-300 mb-4 leading-relaxed">
+                  {feature.description}
+                </p>
+                
+                <ul className="space-y-2">
+                  {feature.details.map((detail, detailIndex) => (
+                    <li key={detailIndex} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      {detail}
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Use Cases Section */}
-      <div className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+      <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent neon-text">
-              Endless Possibilities
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4 neon-text">
+              Use Cases & Applications
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              From content creation to accessibility, discover how voice cloning can transform your projects
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+              Discover how AI Voice Cloning Studio can transform your business across various industries
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
-              <div key={index} className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-cyan-400/50 transition-all duration-300 transform hover:scale-105">
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-blue-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                
-                <div className="relative z-10">
-                  <div className="flex items-center mb-6">
-                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-blue-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform mr-4">
-                      <useCase.icon className="w-6 h-6 text-white" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-white group-hover:text-cyan-400 transition-colors">
-                      {useCase.title}
-                    </h3>
+              <div key={index} className="cyber-card-advanced p-8 group hover:scale-105 transition-all duration-300">
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mr-4">
+                    <useCase.icon className="w-6 h-6 text-white" />
                   </div>
-                  
-                  <p className="text-gray-400 mb-6 leading-relaxed">
-                    {useCase.description}
-                  </p>
-                  
-                  <div className="space-y-2">
+                  <h3 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">
+                    {useCase.title}
+                  </h3>
+                </div>
+                
+                <p className="text-gray-300 mb-6 leading-relaxed">
+                  {useCase.description}
+                </p>
+                
+                <div>
+                  <h4 className="text-sm font-semibold text-cyan-400 mb-3">Examples:</h4>
+                  <div className="grid grid-cols-2 gap-2">
                     {useCase.examples.map((example, exampleIndex) => (
                       <div key={exampleIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
+                        <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                         {example}
                       </div>
                     ))}
@@ -366,147 +346,133 @@ export default function AIVoiceCloningStudioPro() {
             ))}
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Pricing Section */}
-      <div className="py-20">
+      <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent neon-text">
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4 neon-text">
               Choose Your Plan
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Flexible pricing options for creators, professionals, and enterprises
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+              Flexible pricing plans designed to scale with your voice cloning needs
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingTiers.map((tier, index) => (
-              <div key={index} className={`relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-purple-400/50 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/10 ${tier.popular ? 'ring-2 ring-purple-400/30' : ''}`}>
-                {tier.popular && (
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-purple-400 to-pink-600 text-white text-xs font-bold px-4 py-2 rounded-full">
-                      Most Popular
-                    </span>
+            {pricingPlans.map((plan, index) => (
+              <div key={index} className={`cyber-card-advanced p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400 scale-105' : ''}`}>
+                {plan.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-sm font-bold px-4 py-2 rounded-full">
+                    Most Popular
                   </div>
                 )}
                 
                 <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
-                  <p className="text-gray-400 mb-6">{tier.description}</p>
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                  <p className="text-gray-400 mb-6">{plan.description}</p>
                   
                   <div className="mb-6">
-                    <span className="text-5xl font-bold text-white">{tier.price}</span>
-                    <span className="text-gray-400 text-lg">{tier.period}</span>
-                  </div>
-                  
-                  <Link
-                    to="/contact"
-                    className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                      tier.popular
-                        ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:from-purple-600 hover:to-pink-700'
-                        : 'border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-slate-900'
-                    }`}
-                  >
-                    Get Started
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Link>
-                </div>
-                
-                <div className="space-y-4">
-                  {tier.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
-                      {feature}
+                    <div className="flex items-center justify-center">
+                      <span className="text-5xl font-bold text-white">${plan.price}</span>
+                      <span className="text-gray-400 ml-2">/{plan.period}</span>
                     </div>
-                  ))}
+                    <div className="text-lg text-gray-500 line-through">${plan.originalPrice}</div>
+                  </div>
                 </div>
+
+                <ul className="space-y-4 mb-8">
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+
+                <button className={`w-full py-3 px-6 rounded-lg font-bold transition-all duration-300 ${
+                  plan.popular 
+                    ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700' 
+                    : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
+                }`}>
+                  {plan.cta}
+                </button>
               </div>
             ))}
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Testimonials Section */}
-      <div className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 bg-clip-text text-transparent neon-text">
-              Success Stories
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4 neon-text">
+              What Our Customers Say
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              See how our customers are using AI Voice Cloning Studio Pro to create amazing content
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+              Join thousands of satisfied customers who trust AI Voice Cloning Studio
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300">
-                <div className="flex justify-center mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                
-                <p className="text-gray-300 italic mb-6 leading-relaxed">
-                  "{testimonial.content}"
-                </p>
-                
-                <div className="flex items-center">
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
-                    {testimonial.avatar}
+              <div key={index} className="cyber-card-advanced p-6">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mr-4">
+                    <span className="text-white font-bold text-lg">
+                      {testimonial.name.split(' ').map(n => n[0]).join('')}
+                    </span>
                   </div>
                   <div>
-                    <h4 className="text-white font-bold">{testimonial.name}</h4>
-                    <p className="text-purple-400 text-sm">{testimonial.role}</p>
+                    <h4 className="text-white font-semibold">{testimonial.name}</h4>
+                    <p className="text-cyan-400 text-sm">{testimonial.role}</p>
                     <p className="text-gray-400 text-sm">{testimonial.company}</p>
                   </div>
                 </div>
+                
+                <div className="flex items-center mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                
+                <p className="text-gray-300 italic">"{testimonial.content}"</p>
               </div>
             ))}
           </div>
         </div>
-      </div>
+      </section>
 
       {/* CTA Section */}
-      <div className="py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10">
-        <div className="container mx-auto px-4">
-          <div className="text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Ready to Create Amazing Voices?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join thousands of creators, developers, and businesses using AI Voice Cloning Studio Pro to bring their ideas to life.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link
-                to="/contact"
-                className="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25"
-              >
-                <span className="relative z-10">Start Your Free Trial</span>
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl blur opacity-30 group-hover:opacity-50 transition-opacity"></div>
-              </Link>
-              
-              <div className="flex items-center space-x-6 text-gray-300">
-                <div className="flex items-center">
-                  <Phone className="w-4 h-4 text-purple-400 mr-2" />
-                  <a href="tel:+13024640950" className="hover:text-purple-400 transition-colors">
-                    +1 (302) 464-0950
-                  </a>
-                </div>
-                <div className="flex items-center">
-                  <Mail className="w-4 h-4 text-purple-400 mr-2" />
-                  <a href="mailto:kleber@ziontechgroup.com" className="hover:text-purple-400 transition-colors">
-                    kleber@ziontechgroup.com
-                  </a>
-                </div>
-              </div>
-            </div>
+      <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+            Ready to Transform Your Voice Content?
+          </h2>
+          <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
+            Start your free trial today and experience the power of AI voice cloning. No credit card required.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-white text-cyan-600 px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-colors inline-flex items-center">
+              <Play className="w-5 h-5 mr-2" />
+              Start Free Trial
+            </button>
+            <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold hover:bg-white hover:text-cyan-600 transition-colors inline-flex items-center">
+              <Download className="w-5 h-5 mr-2" />
+              Schedule Demo
+            </button>
+          </div>
+          <div className="mt-8 text-sm text-gray-200">
+            <p>📧 Email: kleber@ziontechgroup.com</p>
+            <p>📞 Phone: +1 (302) 464-0950</p>
+            <p>📍 Address: 364 E Main St STE 1008, Middletown DE 19709</p>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   );
-}
+};
+
+export default AIVoiceCloningStudioPage;

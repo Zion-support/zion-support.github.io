@@ -75,6 +75,12 @@ const DemoPage = React.lazy(() => import('./app/demo/page'));
 const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
 const ServicesPage = React.lazy(() => import('./app/services/page'));
 
+// New AI Services
+const AIVoiceCloningStudioPage = React.lazy(() => import('./app/ai-voice-cloning-studio/page'));
+const AIFinancialAnalyzerProPage = React.lazy(() => import('./app/ai-financial-analyzer-pro/page'));
+const AIInfrastructureMonitoringProPage = React.lazy(() => import('./app/ai-infrastructure-monitoring-pro/page'));
+const AIDrugDiscoveryProPage = React.lazy(() => import('./app/ai-drug-discovery-pro/page'));
+
 // Error Boundary Component
 interface ErrorBoundaryState {
   hasError: boolean;
@@ -190,6 +196,12 @@ const App: React.FC = memo(() => {
                   <Route path="/demo" element={<DemoPage />} />
                   <Route path="/consultation" element={<ConsultationPage />} />
                   <Route path="/services" element={<ServicesPage />} />
+                  
+                  {/* New AI Services Routes */}
+                  <Route path="/ai-voice-cloning-studio" element={<AIVoiceCloningStudioPage />} />
+                  <Route path="/ai-financial-analyzer-pro" element={<AIFinancialAnalyzerProPage />} />
+                  <Route path="/ai-infrastructure-monitoring-pro" element={<AIInfrastructureMonitoringProPage />} />
+                  <Route path="/ai-drug-discovery-pro" element={<AIDrugDiscoveryProPage />} />
                 </Routes>
               </Suspense>
             </main>

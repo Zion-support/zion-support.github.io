@@ -49,7 +49,11 @@ const Footer: React.FC = memo(() => {
         { name: 'AI Code Assistant Pro', href: '/ai-code-assistant' },
         { name: 'AI API Manager Pro', href: '/ai-api-manager' },
         { name: 'AI Cybersecurity Monitor Pro', href: '/ai-cybersecurity-monitor' },
-        { name: 'AI Password Manager Pro', href: '/ai-password-manager' }
+        { name: 'AI Password Manager Pro', href: '/ai-password-manager' },
+        { name: 'AI Voice Cloning Studio Pro', href: '/ai-voice-cloning-studio' },
+        { name: 'AI Financial Analyzer Pro', href: '/ai-financial-analyzer-pro' },
+        { name: 'AI Infrastructure Monitoring Pro', href: '/ai-infrastructure-monitoring-pro' },
+        { name: 'AI Drug Discovery Pro', href: '/ai-drug-discovery-pro' }
       ]
     },
     {
@@ -94,22 +98,26 @@ const Footer: React.FC = memo(() => {
   ];
 
   return (
-    <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 backdrop-blur-sm border-t border-cyan-400/30 relative overflow-hidden">
-      {/* Futuristic Background Effects */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(0,255,255,0.05)_0%,transparent_50%)] animate-pulse" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(139,92,246,0.05)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+    <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 backdrop-blur-sm border-t border-cyan-400/30 relative overflow-hidden cyber-matrix">
+      {/* Enhanced Futuristic Background Effects */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(0,255,255,0.05)_0%,transparent_50%)] neural-pulse-advanced" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(139,92,246,0.05)_0%,transparent_50%)] neural-pulse-advanced" style={{ animationDelay: '1s' }} />
       <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.02)_1px,transparent_1px)] bg-[length:50px_50px]" />
+      
+      {/* Quantum Ripples */}
+      <div className="absolute top-1/4 left-1/4 w-32 h-32 quantum-ripple"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-48 h-48 quantum-ripple" style={{ animationDelay: '2s' }}></div>
       
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
-            <div className="flex items-center space-x-2 mb-6 group">
-              <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-400/25">
+            <div className="flex items-center space-x-2 mb-6 group quantum-ripple">
+              <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-400/25 cyber-pulse">
               <Zap className="w-5 h-5 text-white" />
             </div>
-            <span className="text-white font-bold text-xl bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">Zion Tech Group</span>
+            <span className="text-white font-bold text-xl cyber-text-ultra neon-text-advanced">Zion Tech Group</span>
             </div>
             
             <p className="text-gray-300 mb-6 leading-relaxed">

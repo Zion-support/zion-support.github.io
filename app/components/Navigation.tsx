@@ -77,7 +77,9 @@ import {
   ChefHat,
   Rocket,
   Sprout,
-  Scale
+  Scale,
+  Mic,
+  FlaskConical
 } from 'lucide-react';
 
 const Navigation: React.FC = () => {
@@ -192,11 +194,14 @@ const Navigation: React.FC = () => {
     { name: 'AI Social Media Manager Pro', href: '/ai-social-media-manager', icon: Smartphone, category: 'Marketing', price: '$99/mo' },
     { name: 'AI Email Marketing Suite', href: '/ai-email-marketing', icon: Mail, category: 'Marketing', price: '$79/mo' },
     { name: 'AI CRM Assistant Pro', href: '/ai-crm-assistant', icon: Users, category: 'Business', price: '$149/mo' },
-    { name: 'AI Financial Analyzer Pro', href: '/ai-financial-analyzer', icon: DollarSign, category: 'Finance', price: '$299/mo' },
+        { name: 'AI Financial Analyzer Pro', href: '/ai-financial-analyzer-pro', icon: DollarSign, category: 'Finance', price: '$299/mo' },
     { name: 'AI Code Assistant Pro', href: '/ai-code-assistant', icon: Code, category: 'Development', price: '$99/mo' },
     { name: 'AI API Manager Pro', href: '/ai-api-manager', icon: Settings, category: 'Development', price: '$179/mo' },
     { name: 'AI Cybersecurity Monitor Pro', href: '/ai-cybersecurity-monitor', icon: Shield, category: 'Security', price: '$249/mo' },
-    { name: 'AI Password Manager Pro', href: '/ai-password-manager', icon: Lock, category: 'Security', price: '$49/mo' }
+    { name: 'AI Password Manager Pro', href: '/ai-password-manager', icon: Lock, category: 'Security', price: '$49/mo' },
+    { name: 'AI Voice Cloning Studio Pro', href: '/ai-voice-cloning-studio', icon: Mic, category: 'Creative', price: '$149/mo' },
+    { name: 'AI Infrastructure Monitoring Pro', href: '/ai-infrastructure-monitoring-pro', icon: Activity, category: 'IT', price: '$499/mo' },
+    { name: 'AI Drug Discovery Pro', href: '/ai-drug-discovery-pro', icon: FlaskConical, category: 'Healthcare', price: '$7,500/mo' }
   ];
 
   const aiServices = [
@@ -231,7 +236,7 @@ const Navigation: React.FC = () => {
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 cyber-glow-advanced ${
       isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg border-b border-cyan-400/20' : 'bg-transparent'
     }`}>
       <div className="container mx-auto px-4">
@@ -239,13 +244,13 @@ const Navigation: React.FC = () => {
           {/* Logo */}
           <Link 
             to="/" 
-            className="flex items-center space-x-2 text-2xl font-bold group"
+            className="flex items-center space-x-2 text-2xl font-bold group quantum-ripple"
             onClick={closeAllMenus}
           >
-            <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-400/25">
+            <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-400/25 cyber-pulse">
             <Zap className="w-5 h-5 text-white" />
           </div>
-          <span className="text-white bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent font-bold">
+          <span className="text-white cyber-text-ultra font-bold neon-text-advanced">
             Zion Tech Group
             </span>
           </Link>
@@ -254,21 +259,21 @@ const Navigation: React.FC = () => {
           <div className="hidden lg:flex items-center space-x-8">
             <Link
               to="/"
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium neon-glow"
+              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium neon-glow cyber-scan-effect"
               onClick={closeAllMenus}
             >
               Home
             </Link>
             <Link 
               to="/about" 
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium neon-glow cyber-scan-effect"
               onClick={closeAllMenus}
             >
               About
             </Link>
             <Link 
               to="/services" 
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium neon-glow cyber-scan-effect"
               onClick={closeAllMenus}
             >
               Services
@@ -350,7 +355,7 @@ const Navigation: React.FC = () => {
             {/* CTA Button */}
             <Link
               to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-2 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 inline-flex items-center"
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-2 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 inline-flex items-center cyber-button quantum-ripple"
               onClick={closeAllMenus}
             >
               Get Started
@@ -370,11 +375,11 @@ const Navigation: React.FC = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden bg-slate-900/95 backdrop-blur-md rounded-lg mt-2 p-4">
+          <div className="lg:hidden cyber-card-ultra mt-2 p-4">
             <div className="space-y-4">
               <Link
                 to="/"
-                className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
+                className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2 neon-glow cyber-scan-effect"
                 onClick={closeAllMenus}
               >
                 Home
@@ -382,14 +387,14 @@ const Navigation: React.FC = () => {
               
               <Link 
                 to="/about" 
-                className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
+                className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2 neon-glow cyber-scan-effect"
                 onClick={closeAllMenus}
               >
                 About
               </Link>
               <Link 
                 to="/services" 
-                className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
+                className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2 neon-glow cyber-scan-effect"
                 onClick={closeAllMenus}
               >
                 Services
@@ -455,7 +460,7 @@ const Navigation: React.FC = () => {
               {/* Mobile CTA */}
               <Link
                 to="/contact"
-                className="block bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg font-medium transition-colors text-center mt-4"
+                className="block bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg font-medium transition-colors text-center mt-4 cyber-button quantum-ripple"
                 onClick={closeAllMenus}
               >
                 Get Started
