@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Brain, Cloud, Code, Zap, ArrowRight, Database, Bot } from 'lucide-react';
 
 const microSaasServices = [
@@ -145,20 +145,20 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               {microSaasServices.map((service) => (
                 <li key={service.name}>
-                  <a href={service.url}
+                  <Link to={service.url}
                     className="group flex items-center text-sm text-gray-300 hover:text-cyan-400 transition-colors"
                   >
                     <span>{service.name}</span>
                     <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
-            <a href="/services"
+            <Link to="/services"
               className="inline-flex items-center text-cyan-400 hover:text-white transition-colors mt-4"
             >
               View All Micro SAAS →
-            </a>
+            </Link>
           </div>
 
           {/* AI & IT Services */}
@@ -187,21 +187,21 @@ const Footer: React.FC = () => {
                 <ul className="space-y-1">
                   {itServices.slice(0, 3).map((service) => (
                     <li key={service.name}>
-                      <a href={service.url}
+                      <Link to={service.url}
                         className="text-sm text-gray-300 hover:text-cyan-400 transition-colors"
                       >
                         {service.name}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
               </div>
             </div>
-            <a href="/services"
+            <Link to="/services"
               className="inline-flex items-center text-cyan-400 hover:text-white transition-colors mt-4"
             >
               View All Services →
-            </a>
+            </Link>
           </div>
 
           {/* Additional AI Services */}
@@ -282,15 +282,15 @@ const Footer: React.FC = () => {
               © 2024 Zion Tech Group. All rights reserved.
             </div>
             <div className="flex space-x-6">
-              <a href="/privacy" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
+              <Link to="/privacy" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
                 Privacy Policy
-              </a>
-              <a href="/terms" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
+              </Link>
+              <Link to="/terms" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
                 Terms of Service
-              </a>
-              <a href="/contact" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
+              </Link>
+              <Link to="/contact" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
                 Contact Us
-              </a>
+              </Link>
             </div>
           </div>
         </div>

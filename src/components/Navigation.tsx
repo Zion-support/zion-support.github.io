@@ -202,14 +202,14 @@ const Navigation: React.FC = () => {
                       </h3>
                       <div className="space-y-2">
                         {microSAASServices.slice(0, 6).map((service) => (
-                          <a key={service.name}
-                            href={service.href}
+                          <Link key={service.name}
+                            to={service.href}
                             className="flex items-center space-x-2 text-sm text-gray-300 hover:text-cyan-400 transition-colors"
                             onClick={closeAllMenus}
                           >
                             <service.icon className="w-3 h-3" />
                             <span>{service.name}</span>
-                          </a>
+                          </Link>
                         ))}
                       </div>
                     </div>
@@ -220,14 +220,14 @@ const Navigation: React.FC = () => {
                       </h3>
                       <div className="space-y-2">
                         {aiServices.slice(0, 6).map((service) => (
-                          <a key={service.name}
-                            href={service.href}
+                          <Link key={service.name}
+                            to={service.href}
                             className="flex items-center space-x-2 text-sm text-gray-300 hover:text-cyan-400 transition-colors"
                             onClick={closeAllMenus}
                           >
                             <service.icon className="w-3 h-3" />
                             <span>{service.name}</span>
-                          </a>
+                          </Link>
                         ))}
                       </div>
                     </div>
@@ -238,15 +238,15 @@ const Navigation: React.FC = () => {
                       </h3>
                       <div className="space-y-2">
                         {itServices.slice(0, 6).map((service) => (
-                          <a
+                          <Link
                             key={service.name}
-                            href={service.href}
+                            to={service.href}
                             className="flex items-center space-x-2 text-sm text-gray-300 hover:text-cyan-400 transition-colors"
                             onClick={closeAllMenus}
                           >
                             <service.icon className="w-3 h-3" />
                             <span>{service.name}</span>
-                          </a>
+                          </Link>
                         ))}
                       </div>
                     </div>
@@ -261,35 +261,35 @@ const Navigation: React.FC = () => {
                         <span>View All Services</span>
                         <ArrowRight className="w-4 h-4" />
                       </Link>
-                      <a
-                        href="/specialized-services"
+                      <Link
+                        to="/services"
                         className="flex items-center justify-center space-x-2 text-purple-400 hover:text-white transition-colors"
                         onClick={closeAllMenus}
                       >
                         <span>Specialized Solutions</span>
                         <ArrowRight className="w-4 h-4" />
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
               )}
             </div>
 
-            <a href="/about" className="text-white hover:text-cyan-400 transition-colors">
+            <Link to="/about" className="text-white hover:text-cyan-400 transition-colors">
               About
-            </a>
-            <a href="/blog" className="text-white hover:text-cyan-400 transition-colors">
+            </Link>
+            <Link to="/blog" className="text-white hover:text-cyan-400 transition-colors">
               Blog
-            </a>
-            <a href="/case-studies" className="text-white hover:text-cyan-400 transition-colors">
+            </Link>
+            <Link to="/case-studies" className="text-white hover:text-cyan-400 transition-colors">
               Case Studies
-            </a>
-            <a href="/pricing" className="text-white hover:text-cyan-400 transition-colors">
+            </Link>
+            <Link to="/pricing" className="text-white hover:text-cyan-400 transition-colors">
               Pricing
-            </a>
-            <a href="/contact" className="text-white hover:text-cyan-400 transition-colors">
+            </Link>
+            <Link to="/contact" className="text-white hover:text-cyan-400 transition-colors">
               Contact
-            </a>
+            </Link>
             
             <div className="flex items-center space-x-4">
               <a
@@ -349,13 +349,13 @@ const Navigation: React.FC = () => {
                       <h4 className="text-cyan-400 font-semibold mb-2">AI Services</h4>
                       <div className="space-y-2">
                         {aiServices.slice(0, 4).map((service) => (
-                          <a key={service.name}
-                            href={service.href}
+                          <Link key={service.name}
+                            to={service.href}
                             className="block text-sm text-gray-300 hover:text-cyan-400 transition-colors"
                             onClick={closeAllMenus}
                           >
                             {service.name}
-                          </a>
+                          </Link>
                         ))}
                       </div>
                     </div>
@@ -369,24 +369,24 @@ const Navigation: React.FC = () => {
                 )}
               </div>
 
-              <a href="/about" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
+              <Link to="/about" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
                 About
-              </a>
-              <a href="/blog" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
+              </Link>
+              <Link to="/blog" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
                 Blog
-              </a>
-              <a href="/case-studies" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
+              </Link>
+              <Link to="/case-studies" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
                 Case Studies
-              </a>
-              <a href="/pricing" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
+              </Link>
+              <Link to="/pricing" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
                 Pricing
-              </a>
-              <a href="/enterprise" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
+              </Link>
+              <Link to="/enterprise" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
                 Enterprise
-              </a>
-              <a href="/contact" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
+              </Link>
+              <Link to="/contact" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
                   Contact
-                </a>
+                </Link>
               
               <div className="pt-4 border-t border-gray-700">
                 <a
