@@ -3,8 +3,6 @@
  * Application Health Check Utility
  * Monitors application health and provides diagnostic information
  */
-<<<<<<< HEAD
-=======
 import React from 'react'
 import { logger } from './logger'
 import { performanceMonitor } from './performanceMonitor'
@@ -17,7 +15,6 @@ const coreWebVitals = {
   fcp: { good: 1800, needsImprovement: 3000 },
   ttfb: { good: 800, needsImprovement: 1800 }
 }
->>>>>>> origin/temp-pr-28049
 export interface HealthStatus {
   status: 'healthy' | 'degraded' | 'unhealthy';
   timestamp: number;
@@ -368,15 +365,6 @@ $4};
       const report = performanceMonitor.getReport()
       const { poor, needsImprovement, good } = report.summary
       let status: 'pass' | 'warn' | 'fail' = 'pass'
-<<<<<<< HEAD
-      let message = `Performance: ${good} good, ${needsImprovement} needs improvement, ${poor} poor`
-      if (poor > 0) {
-        status = 'warn'
-      }
-      if (poor > 2) {
-        status = 'fail'
-        message = `Critical performance issues: ${poor} poor metrics`
-=======
       let message = 'Performance metrics available'
       
       // Check if any critical metrics are missing or poor
@@ -412,22 +400,16 @@ $4};
       if (missingMetrics.length > 3) {
         status = 'fail'
         message = `Critical performance data unavailable: ${missingMetrics.join(', ')}`
->>>>>>> origin/temp-pr-28049
       }
       return {
         name: 'performance',
         status,
         message,
         details: {
-<<<<<<< HEAD
-          metrics: report.metrics,
-          summary: report.summary
-=======
           vitals,
           poor,
           needsImprovement,
           good
->>>>>>> origin/temp-pr-28049
         }
       }
     } catch (error) {
@@ -826,31 +808,3 @@ export const registerHealthCheck = (name: string, checkFn: HealthCheckFunction) 
 export const getUptime = () => healthCheck.getUptime()
 export const getFormattedUptime = () => healthCheck.getFormattedUptime()
 export default healthCheck
-<<<<<<< HEAD
-   * Clear cached status;
-   */
-
-  clearCache(): void {// TODO: Add content;}
-
-}
-    this.cachedStatus = undefined;
-    this.lastCheckTime = 0;
-  }
-}
-// Export singleton instance;
-export const healthCheck = new HealthCheckService()
-// Export convenience functions;
-export const runHealthChecks = () => healthCheck.runChecks()
-export const getHealthStatus = () => healthCheck.getStatus()
-export const registerHealthCheck = (nam,
-  e: string, checkF)
-  n: HealthCheckFunction) =>
-//   healthCheck.register(name, checkFn)
-export const getUptime = () => healthCheck.getUptime()
-export const getFormattedUptime = () => healthCheck.getFormattedUptime()
-export default healthCheck;"`
-
-
-
-=======
->>>>>>> origin/temp-pr-28049

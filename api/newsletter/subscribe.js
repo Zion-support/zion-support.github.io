@@ -1,68 +1,29 @@
-const { withSentry } = require('../withSentry.cjs');
-const { isValidEmail } = require('../emailUtils.cjs');
+import { withSentry } from '@sentry/nextjs';
 
-async function handler(req, res) {
+const handler = async (req, res) => {
   if (req.method !== 'POST') {
-<<<<<<< HEAD
-    res.statusCode = 405;
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Method not allowed' }));
-    return;
+    return res.status(405).json({ error: 'Method not allowed' });
   }
 
-=======
->>>>>>> origin/resolve-merge-conflicts
+  const { email, name, preferences } = req.body;
+
+  if (!email) {
+    return res.status(400).json({ error: 'Email is required' });
+  }
+
   try {
-    const { email } = req.body || {};
-
-    if (!email) {
-<<<<<<< HEAD
-      res.statusCode = 400;
-      res.setHeader('Content-Type', 'application/json');
-      res.end(JSON.stringify({ error: 'Email is required' }));
-      return;
-    }
-
-    if (!isValidEmail(email)) {
-      res.statusCode = 400;
-      res.setHeader('Content-Type', 'application/json');
-      res.end(JSON.stringify({ error: 'Invalid email format' }));
-      return;
-    }
-
-    // Save subscription logic here
-    const subscription = {
-      email,
-      subscribedAt: new Date().toISOString(),
-      status: 'active'
-    };
-
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({
-      message: 'Successfully subscribed to newsletter',
-      subscription
-    }));
-  } catch (error) {
-    console.error('Newsletter subscription error:', error);
-    res.statusCode = 500;
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Failed to subscribe to newsletter' }));
-  }
-}
-
-module.exports = withSentry(handler);
-=======
-    };
-
-    res.statusCode = 200;
-    res.json({ success: true, subscription });
+    // Here you would typically integrate with your email service provider
+    // For now, we'll just log the subscription
+    console.log('New newsletter subscription:', { email, name, preferences });
+    
+    res.status(200).json({ 
+      success: true, 
+      message: 'Successfully subscribed to newsletter' 
+    });
   } catch (err) {
-    console.error("Error:", err);
     console.error('Error subscribing to newsletter:', err);
     res.status(500).json({ error: 'Failed to subscribe to newsletter' });
   }
-}
+};
 
 export default withSentry(handler);
->>>>>>> origin/resolve-merge-conflicts

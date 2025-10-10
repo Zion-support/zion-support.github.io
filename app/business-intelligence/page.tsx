@@ -50,8 +50,6 @@ const BusinessIntelligencePage: React.FC = () => {
       marketPrice: '$8,000-25,000/month',
       category: 'AI-Powered BI',
       technologies: ['Machine Learning', 'NLP', 'Computer Vision', 'AutoML', 'Custom AI Models']
-<<<<<<< HEAD
-=======
     },
     {
       title: 'Customer Analytics & Segmentation',
@@ -140,7 +138,6 @@ const BusinessIntelligencePage: React.FC = () => {
       marketPrice: '$500-1,200/hour',
       category: 'BI Consulting',
       technologies: ['Strategic Planning', 'Technology Assessment', 'Change Management', 'Training Programs']
->>>>>>> origin/resolve-merge-conflicts-1759965566
     }
   ];
 
@@ -330,29 +327,6 @@ const BusinessIntelligencePage: React.FC = () => {
               </Phone>
               <a
                 href="mailto:kleber@ziontechgroup.com"
-<<<<<<< HEAD
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors inline-flex items-center"
-              ></a>
-                <Mail className="w-5 h-5 mr-2" >kleber@ziontechgroup.com</Mai>
-              </Mail>
-            </div>
-            <div className="mt-8 text-sm text-purple-200 flex items-center justify-center"></div>
-              <MapPin className="w-4 h-4 mr-2" />
-                <Phone className="w-5 h-5 mr-2" />
-                +1 302 464 0950;
-              </a>
-              <a;
-                href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors inline-flex items-center"
-              >
-                <Mail className="w-5 h-5 mr-2" />
-                kleber@ziontechgroup.com;
-              </a>
-            </div>,
-            <div className="mt-8 text-sm text-purple-200 flex items-center justify-center">,
-              <MapPin className="w-4 h-4 mr-2" />,
-              <p>364 E Main St STE 1008, Middletown DE 19709</p>
-=======
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
               >
                 ✉️ kleber@ziontechgroup.com
@@ -360,7 +334,6 @@ const BusinessIntelligencePage: React.FC = () => {
             </div>
             <div className="mt-8 text-sm text-purple-200">
               <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
->>>>>>> origin/resolve-merge-conflicts-1759965566
             </div>
           </div>
         </section>

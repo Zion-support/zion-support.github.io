@@ -1,11 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { Shield, Globe, CheckCircle, ArrowRight, Star, Users, Database, Lock, Code, DollarSign } from 'lucide-react';
-=======
 
->>>>>>> origin/resolve-merge-conflicts-1759965566
 
 const BlockchainWeb3Page: React.FC = () => {,
   const services = [,
@@ -51,77 +47,8 @@ const BlockchainWeb3Page: React.FC = () => {,
       features: ['Code review', 'Vulnerability assessment', 'Penetration testing', 'Compliance checking'],
       benefits: ['Zero vulnerabilities', 'Compliance ready', 'Security best practices', 'Risk mitigation']
     }
-<<<<<<< HEAD
-  ];
-
-  const platforms = [
-    { name: 'Ethereum', icon: 'Ξ', description: 'Smart contracts & DeFi' },
-    { name: 'Polygon', icon: '⬟', description: 'Scalable Ethereum L2' },
-    { name: 'Binance Smart Chain', icon: 'B', description: 'Low-cost transactions' },
-    { name: 'Solana', icon: '◎', description: 'High-speed blockchain' },
-    { name: 'Avalanche', icon: '🔺', description: 'Fast finality' },
-    { name: 'Polkadot', icon: '●', description: 'Interoperability' }
-  ];
-
-  const stats = [
-    { number: '500+', label: 'Smart Contracts Deployed', icon: Code },
-    { number: '50+', label: 'DApps Built', icon: Globe },
-    { number: '$100 M+', label: 'Total Value Locked', icon: DollarSign },
-    { number: '99.9%', label: 'Security Uptime', icon: Shield }
-  ];
-
-  const pricing = [
-    {
-      title: 'Smart Contract Development',
-      price: 'Starting at $15,000',
-      features: [,
-        'Custom smart contract development',
-        'Security audit included',
-        'Gas optimization',
-        'Multi-chain deployment',
-        '6 months support'
-      ]
-    },
-    {
-      title: 'DApp Development',
-      price: 'Starting at $25,000',
-      features: [,
-        'Full-stack DApp development',
-        'Web3 integration',
-        'Mobile responsive design',
-        'Wallet connectivity',
-        '12 months support'
-      ]
-    },
-    {
-      title: 'DeFi Platform',
-      price: 'Starting at $50,000',
-      features: [,
-        'Complete DeFi protocol',
-        'DEX development',
-        'Liquidity management',
-        'Yield farming features',
-        '24 months support'
-      ]
-    },
-    {
-      title: 'NFT Marketplace',
-      price: 'Starting at $30,000',
-      features: [,
-        'NFT minting platform',
-        'Marketplace functionality',
-        'Auction system',
-        'Royalty management',
-        '18 months support'
-      ]
-    }
-  ];
-
-  return(<>
-=======
   ];return (
     <>
->>>>>>> origin/resolve-merge-conflicts-1759965566
       <Helmet>
         <title>Blockchain & Web3 Development - Zion Tech Group | DeFi & NFT Solutions</title>
         <meta name="description" content="Expert blockchain and Web3 development services. Smart contracts, DApps, DeFi platforms, NFT marketplaces, and enterprise blockchain solutions." />

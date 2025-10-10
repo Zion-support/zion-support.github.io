@@ -14,13 +14,6 @@ describe('validation', () => {
     expect(result).toBe(2);
   });
 
-<<<<<<< HEAD
-  it('handles async validation errors', async () => {
-    const asyncFunction = async () => {
-      return new Promise((resolve) => {
-        setTimeout(() => resolve('success'), 100);
-      });
-=======
   test('rejects invalid URLs', () => {
     expect(isValidUrl('')).toBe(false);
     expect(isValidUrl('not a url')).toBe(false);
@@ -158,7 +151,6 @@ describe('Async Validation', () => {
   test('handles successful async validation', async () => {
     const asyncValidator = async (val: unknown) => {
       return { isValid: true, errors: [] };
->>>>>>> origin/resolve-merge-conflicts
     };
     
     const result = await asyncFunction();

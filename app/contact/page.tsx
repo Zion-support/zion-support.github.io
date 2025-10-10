@@ -1,14 +1,8 @@
-<<<<<<< HEAD
-import React, { useState, useCallback } from 'react';
-import { Phone, Mail, MapPin, Clock, Send, CheckCircle, AlertCircle } from 'lucide-react';
-import { lazy } from 'react';
-=======
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle, AlertCircle, Calendar, User, Building, MessageSquare, Target, Zap, Shield, Cloud, Brain, Code, Settings, Headphones, Globe, Award, Star, ArrowRight, Check, X, Plus, Minus, Search, Filter, Eye, EyeOff, Lock, Unlock, Download, Upload, RotateCcw, RotateCw, Maximize, Minimize, X as XIcon, Plus as PlusIcon, Minus as MinusIcon, Divide, Equal, Percent, Hash, AtSign, Euro, Pound, Yen, Bitcoin, Wallet, Banknote, Coins, Receipt, Archive, Folder, File, Image, Film, Headphones as Headphone, Mic, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, Repeat, Shuffle, Radio, Tv, Tablet, Watch, Headphones as Headset, Gamepad2, Joystick, Mouse, Keyboard, Webcam, Wifi, Bluetooth, Usb, Hdmi, Ethernet, WifiOff, Signal, SignalZero, SignalLow, SignalMedium, SignalHigh, SignalFull, Send as SendIcon, Reply, Forward, Share, Copy, Paste, Cut, Save, Download as DownloadIcon, Upload as UploadIcon, RotateCcw as RotateCcwIcon, RotateCw as RotateCwIcon, Maximize as MaximizeIcon, Minimize as MinimizeIcon, X as XIcon2, Plus as PlusIcon2, Minus as MinusIcon2, Divide as DivideIcon, Equal as EqualIcon, Percent as PercentIcon, Hash as HashIcon, AtSign as AtSignIcon, Euro as EuroIcon, Pound as PoundIcon, Yen as YenIcon, Bitcoin as BitcoinIcon, Wallet as WalletIcon, Banknote as BanknoteIcon, Coins as CoinsIcon, Receipt as ReceiptIcon, Archive as ArchiveIcon, Folder as FolderIcon, File as FileIcon, Image as ImageIcon, Film as FilmIcon, Music, Headphones as HeadphoneIcon, Mic as Microphone, Speaker as SpeakerIcon, Volume2 as Volume2Icon, VolumeX as VolumeXIcon, Play as PlayIcon, Pause as PauseIcon, Stop as StopIcon, SkipBack as SkipBackIcon, SkipForward as SkipForwardIcon, Repeat as RepeatIcon, Shuffle as ShuffleIcon, Radio as RadioIcon, Tv as TvIcon, Monitor, Laptop, Printer, Key, AlertTriangle, Headphones as Headphone2, MessageSquare as Message, Calendar as CalendarIcon, FileText, Download as DownloadIcon2, Upload as UploadIcon2, RotateCcw as RotateCcwIcon2, RotateCw as RotateCwIcon2, Maximize as MaximizeIcon2, Minimize as MinimizeIcon2, X as XIcon3, Plus as PlusIcon3, Minus as MinusIcon3, Divide as DivideIcon2, Equal as EqualIcon2, Percent as PercentIcon2, Hash as HashIcon2, AtSign as AtSignIcon2, Euro as EuroIcon2, Pound as PoundIcon2, Yen as YenIcon2, Bitcoin as BitcoinIcon2, Wallet as WalletIcon2, Banknote as BanknoteIcon2, Coins as CoinsIcon2, Receipt as ReceiptIcon2, Archive as ArchiveIcon2, Folder as FolderIcon2, File as FileIcon2, Image as ImageIcon2, Film as FilmIcon2, Music as MusicIcon, Headphones as HeadphoneIcon2, Mic as MicrophoneIcon, Speaker as SpeakerIcon2, Volume2 as Volume2Icon2, VolumeX as VolumeXIcon2, Play as PlayIcon2, Pause as PauseIcon2, Stop as StopIcon2, SkipBack as SkipBackIcon2, SkipForward as SkipForwardIcon2, Repeat as RepeatIcon2, Shuffle as ShuffleIcon2, Radio as RadioIcon2, Tv as TvIcon2, Monitor as MonitorIcon, Laptop as LaptopIcon, Smartphone, Tablet, Watch as WatchIcon, Headphones as HeadsetIcon, Gamepad2 as Gamepad, Joystick as JoystickIcon, Mouse as MouseIcon, Keyboard as KeyboardIcon, Webcam as WebcamIcon, Wifi as WifiSignalIcon, Bluetooth as BluetoothIcon, Usb as UsbIcon, Hdmi as HdmiIcon, Ethernet as EthernetIcon, WifiOff as WifiOffSignalIcon, Signal as SignalIcon, SignalZero as Signal0Icon, SignalLow as Signal1Icon, SignalMedium as Signal2Icon, SignalHigh as Signal3Icon, SignalFull as Signal4Icon, Wifi as WifiIcon2, WifiOff as WifiOffIcon2, Loader2 } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
->>>>>>> origin/resolve-merge-conflicts
 
 const Navigation = lazy(() => import('../components/Navigation'));
 const Footer = lazy(() => import('../components/Footer'));
@@ -79,14 +73,6 @@ const ContactPage: React.FC = React.memo(() => {
   const handleSubmit = useCallback(async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-<<<<<<< HEAD
-    setSubmitStatus('idle');
-
-    try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      setSubmitStatus('success');
-=======
     
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 2000));
@@ -96,7 +82,6 @@ const ContactPage: React.FC = React.memo(() => {
     
     // Reset form after successful submission
     setTimeout(() => {
->>>>>>> origin/resolve-merge-conflicts
       setFormData({
         name: '',
         email: '',
@@ -108,62 +93,6 @@ const ContactPage: React.FC = React.memo(() => {
         urgency: 'normal',
         preferredContact: 'email'
       });
-<<<<<<< HEAD
-    } catch (error) {
-      setSubmitStatus('error');
-    } finally {
-      setIsSubmitting(false);
-    }
-  }, []);
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-gray-100">
-      <Navigation />
-      
-      <main className="py-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              Contact Us
-            </h1>
-            <p className="text-xl text-gray-600">
-              Get in touch with our team of experts
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Information */}
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                Get In Touch
-              </h2>
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <MapPin className="w-6 h-6 text-blue-600 mt-1" />
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                      Address
-                    </h3>
-                    <p className="text-gray-600">
-                      364 E Main St STE 1008<br />
-                      Middletown, DE 19709<br />
-                      United States
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-4">
-                  <Phone className="w-6 h-6 text-blue-600 mt-1" />
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                      Phone
-                    </h3>
-                    <p className="text-gray-600">
-                      <a href="tel:+13024640950" className="text-blue-600 hover:text-blue-700">
-                        +1 (302) 464-0950
-                      </a>
-                    </p>
-=======
       setSubmitStatus('idle');
     }, 3000);
   };
@@ -324,53 +253,12 @@ const ContactPage: React.FC = React.memo(() => {
                         ))}
                       </select>
                     </div>
->>>>>>> origin/resolve-merge-conflicts
                   </div>
                 </div>
                 
                 <div className="flex items-start space-x-4">
                   <Mail className="w-6 h-6 text-blue-600 mt-1" />
                   <div>
-<<<<<<< HEAD
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                      Email
-                    </h3>
-                    <p className="text-gray-600">
-                      <a href="mailto:kleber@ziontechgroup.com" className="text-blue-600 hover:text-blue-700">
-                        kleber@ziontechgroup.com
-                      </a>
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-4">
-                  <Clock className="w-6 h-6 text-blue-600 mt-1" />
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                      Business Hours
-                    </h3>
-                    <p className="text-gray-600">
-                      Monday - Friday: 9:00 AM - 6:00 PM<br />
-                      Saturday: 10:00 AM - 4:00 PM<br />
-                      Sunday: Closed
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Contact Form */}
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                Send us a Message
-              </h2>
-              
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Name *
-=======
                     <label htmlFor="urgency" className="block text-sm font-medium text-white mb-2">
                       Project Urgency
                     </label>
@@ -424,7 +312,6 @@ const ContactPage: React.FC = React.memo(() => {
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium text-white mb-2">
                       Project Details *
->>>>>>> origin/resolve-merge-conflicts
                     </label>
                     <input
                       type="text"
@@ -432,72 +319,6 @@ const ContactPage: React.FC = React.memo(() => {
                       value={formData.name}
                       onChange={handleInputChange}
                       required
-<<<<<<< HEAD
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Email *
-                    </label>
-                    <input
-                      type="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    />
-                  </div>
-                </div>
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Company
-                    </label>
-                    <input
-                      type="text"
-                      name="company"
-                      value={formData.company}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Phone
-                    </label>
-                    <input
-                      type="tel"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    />
-                  </div>
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Service Interest
-                  </label>
-                  <select
-                    name="service"
-                    value={formData.service}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  >
-                    <option value="">Select a service</option>
-                    <option value="ai-services">AI Services</option>
-                    <option value="it-services">IT Services</option>
-                    <option value="micro-saas">Micro SAAS</option>
-                    <option value="consultation">Consultation</option>
-                    <option value="other">Other</option>
-                  </select>
-=======
                       rows={5}
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400"
                       placeholder="Tell us about your project, goals, and any specific requirements..."
@@ -649,7 +470,6 @@ const ContactPage: React.FC = React.memo(() => {
                       </div>
                     </div>
                   </div>
->>>>>>> origin/resolve-merge-conflicts
                 </div>
                 
                 <div>
@@ -702,13 +522,6 @@ const ContactPage: React.FC = React.memo(() => {
               </form>
             </div>
           </div>
-<<<<<<< HEAD
-        </div>
-      </main>
-      
-      <Footer />
-    </div>
-=======
 
           {/* CTA Section */}
           <section className="container mx-auto px-4 py-16">
@@ -742,13 +555,7 @@ const ContactPage: React.FC = React.memo(() => {
         <Footer />
       </div>
     </>
->>>>>>> origin/resolve-merge-conflicts
   );
 });
 
-<<<<<<< HEAD
-ContactPage.displayName = 'ContactPage';
-
-=======
->>>>>>> origin/resolve-merge-conflicts
 export default ContactPage;

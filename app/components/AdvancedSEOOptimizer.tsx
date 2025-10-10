@@ -227,17 +227,12 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
           name: 'What makes Zion Tech Group different?',
           acceptedAnswer: {
             '@type': 'Answer',
-<<<<<<< HEAD
-            text: 'We combine cutting-edge AI technology with deep industry expertise to deliver transformative solutions that drive real business value.'}}]};
-  }, [seoData, enableTwitterCards]);
-=======
             text: 'We combine cutting-edge AI technology with deep industry expertise to deliver transformative solutions that drive real business value.',
           },
         },
       ],
     };
   }, [enableTwitterCards]);
->>>>>>> origin/resolve-merge-conflicts
 
   // Generate meta tags
   const generateMetaTags = useCallback(() => {}
@@ -304,12 +299,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
     return {}
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
-<<<<<<< HEAD
-      mainEntity: seoData.faqs.map(faq => ({)}
-      mainEntity: seoData.faq.map((faq: any) => ({
-=======
       mainEntity: seoData.faq.map((faq: { question: string; answer: string }) => ({
->>>>>>> origin/resolve-merge-conflicts
         '@type': 'Question',
         name: faq.question,
         acceptedAnswer: {}
@@ -354,63 +344,9 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
     }
   }, [seoData]);
 
-<<<<<<< HEAD
-  const addStructuredData = (data: Record<string, unknown>) => {
-    // Remove existing structured data;
-    if (structuredDataRef.current) {
-  const addStructuredData = (data: Record<string, unknown>) => {}
-    // Remove existing structured data
-    if (structuredDataRef.current) {}
-      structuredDataRef.current.remove();
-    }
-
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(data);
-    document.head.appendChild(script);
-    structuredDataRef.current = script;
-  };
-
-  useEffect(() => {}
-    if (structuredData) {}
-      addStructuredData(structuredData);
-    }
-  }, [structuredData]);
-
-  useEffect(() => {
-    if (breadcrumbData) {
-      addStructuredData(breadcrumbData);
-    }
-  }, [breadcrumbData]);
-
-  useEffect(() => {
-    if (faqData) {
-      addStructuredData(faqData);
-    }
-  }, [faqData]);
-
-  useEffect(() => {
-    // Track page performance;
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      if (perfData) {
-<<<<<<< HEAD
-        // Track performance metrics;
-        if (typeof (window as any).gtag === 'function') {
-          (window as any).gtag('event', 'page_load_performance', {
-  useEffect(() => {}
-    // Track page performance
-    if (typeof window !== 'undefined' && 'performance' in window) {}
-      const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      if (perfData) {}
-        // Track performance metrics
-        if (typeof (window as any).gtag === 'function') {}
-          (window as any).gtag('event', 'page_load_performance', {)}
-=======
         // Track performance metrics
         if (typeof (window as unknown as { gtag?: (...args: unknown[]) => void }).gtag === 'function') {
           (window as unknown as { gtag: (...args: unknown[]) => void }).gtag('event', 'page_load_performance', {
->>>>>>> origin/resolve-merge-conflicts
             event_category: 'Performance',
             event_label: 'Page Load',
             value: Math.round(perfData.loadEventEnd - perfData.fetchStart)
@@ -428,7 +364,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
       <title>{seoData.title}</title>)
       {metaTags.map((tag, index) => (
 =======
->>>>>>> origin/resolve-merge-conflicts-1759965566
   return (
     <Helmet></Helme>
       {/* Basic Meta Tags */}

@@ -1,10 +1,5 @@
 'use client';
 /**
-<<<<<<< HEAD
- * Comprehensive Monitoring Utility;
- * Real-time application monitoring, performance tracking, and error reporting;
- */
-=======
  * Comprehensive Monitoring Utility
  * Real-time application monitoring, performance tracking, and error reporting
  */
@@ -193,4 +188,3 @@ class MonitoringService {
 // Singleton instance
 const monitoring = new MonitoringService()
 export default monitoring
->>>>>>> origin/temp-pr-28049

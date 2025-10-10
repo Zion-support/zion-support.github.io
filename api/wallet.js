@@ -1,181 +1,70 @@
-const { withSentry } = require('./withSentry.cjs');
+const fs = require('fs');
+const path = require('path');
 
-async function handler(req, res) {
+const dir = path.join(process.cwd(), 'data');
+const file = path.join(dir, 'wallets.json');
+
+export default function handler(req, res) {
   if (req.method !== 'POST') {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    return res.status(405).json({ error: 'Method not allowed' });
->>>>>>> cursor/fix-errors-and-merge-to-main-e8ab
     res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Method not allowed' }));
     return;
-=======
->>>>>>> origin/resolve-merge-conflicts
   }
 
-  const { action, amount, currency = 'USD' } = req.body || {};
+  const { address, type, name, userId } = req.body || {};
 
-  if (!action) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    return res.status(400).json({ error: 'Action is required' });
->>>>>>> cursor/fix-errors-and-merge-to-main-e8ab
-    res.statusCode = 400;
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Action is required' }));
-    return;
-=======
->>>>>>> origin/resolve-merge-conflicts
+  if (!address || !type) {
+    return res.status(400).json({ error: 'Address and type are required' });
   }
+
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir, { recursive: true });
+  }
+
+  let existing = [];
+  try {
+    if (fs.existsSync(file)) {
+      const data = fs.readFileSync(file, 'utf8');
+      existing = JSON.parse(data);
+      if (!Array.isArray(existing)) existing = [];
+    }
+  } catch (error) {
+    console.error('Error reading existing wallets:', error);
+    existing = [];
+  }
+
+  // Check if wallet address already exists
+  const existingWallet = existing.find(wallet => wallet.address === address);
+  if (existingWallet) {
+    return res.status(400).json({ error: 'Wallet address already exists' });
+  }
+
+  const newWallet = {
+    id: Date.now().toString(),
+    address,
+    type,
+    name: name || '',
+    userId: userId || '',
+    timestamp: new Date().toISOString(),
+    status: 'active'
+  };
+
+  existing.push(newWallet);
 
   try {
-    switch (action) {
-      case 'create_payment_intent': {
-        if (!amount) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-          return res.status(400).json({ error: 'Amount is required for payment intent' });
->>>>>>> cursor/fix-errors-and-merge-to-main-e8ab
-          res.statusCode = 400;
-          res.setHeader('Content-Type', 'application/json');
-          res.end(JSON.stringify({ error: 'Amount is required for payment intent' }));
-          return;
-        }
-
-        const paymentIntent = {
-<<<<<<< HEAD
-          id: 'pi_' + Math.random().toString(36).substr(2, 9),
-          amount: Math.round(amount * 100), // Convert to cents
-          currency,
-          status: 'requires_payment_method',
-          created: Math.floor(Date.now() / 1000)
-=======
-          id: 'pi_' + timestamp;
-          amount: Math.round(amount * 100)
-          currency: currency.toLowerCase(),
-          status: 'requires_payment_method',
-          client_secret: 'pi_' + timestamp + '_secret_' + random;
-          id: `pi_${timestamp}_${random}`,
-          amount: Math.round(amount * 100), // Convert to cents
-          currency,
-          status: 'requires_payment_method',
-          created: timestamp
-          id: `pi_${timestamp}_${random}`,
-          amount,
-          currency,
-          status: 'requires_payment_method',
-          createdAt: new Date().toISOString()
-          id: 'pi_' + timestamp,
-          amount: Math.round(amount * 100),
-          currency: currency.toLowerCase(),
-          status: 'requires_payment_method',
-          client_secret: 'pi_' + timestamp + '_secret_' + random
->>>>>>> cursor/fix-errors-and-merge-to-main-e8ab
-        };
-
-        res.statusCode = 200;
-        res.setHeader('Content-Type', 'application/json');
-        res.end(JSON.stringify({
-          message: 'Payment intent created successfully',
-          paymentIntent
-        }));
-=======
-        }
-
-        const timestamp = Date.now();
-        const random = Math.random().toString(36).substr(2, 9);
-        const paymentIntent = {
-          id: `pi_${timestamp}_${random}`,
-        };
-
-        res.statusCode = 200;
-        res.json({ success: true, paymentIntent });
->>>>>>> origin/resolve-merge-conflicts
-        break;
-      }
-
-      case 'get_balance': {
-        const balance = {
-<<<<<<< HEAD
-<<<<<<< HEAD
-          currency,
-          amount: 0, // In a real app, this would come from a database
-          lastUpdated: new Date().toISOString()
-=======
-          available: 1000.0;
-          pending: 0.0;
-          currency: currency.toUpperCase(),
-          available: 0,
-          pending: 0,
-          currency
-          amount: 0,
-          currency: 'USD',
-          lastUpdated: new Date().toISOString()
-          available: 1000.0,
-          pending: 0.0,
-          currency: currency.toUpperCase()
->>>>>>> cursor/fix-errors-and-merge-to-main-e8ab
-        };
-
-        res.statusCode = 200;
-        res.setHeader('Content-Type', 'application/json');
-        res.end(JSON.stringify({
-          message: 'Balance retrieved successfully',
-          balance
-        }));
-        break;
-      }
-
-<<<<<<< HEAD
-      default: {
-        res.statusCode = 400;
-        res.setHeader('Content-Type', 'application/json');
-        res.end(JSON.stringify({ error: 'Invalid action' }));
-        break;
-      }
-    }
+    fs.writeFileSync(file, JSON.stringify(existing, null, 2));
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ 
+      success: true, 
+      message: 'Wallet added successfully',
+      id: newWallet.id
+    }));
   } catch (error) {
-    console.error('Wallet operation error:', error);
+    console.error('Error saving wallet:', error);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Failed to process wallet operation' }));
-=======
-      default: res.statusCode = 400;
-        res.json({ error: 'Invalid action' });
-    }
-  } catch (error) {
-    console.error('Wallet operation error:', error);
-    res.status(500).json({ error: 'Wallet operation failed' });
-      default:
-        res.statusCode = 400;
-        res.json({ error: 'Invalid action' });
-    }
-  } catch {
-    res.statusCode = 500;
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Wallet operation failed' }));
->>>>>>> cursor/fix-errors-and-merge-to-main-e8ab
-=======
-        };
-
-        res.statusCode = 200;
-        res.json({ success: true, balance });
-        break;
-      }
-
-      default:
-        res.statusCode = 400;
-        res.json({ error: 'Invalid action' });
-    }
-  } catch (err) {
-    console.error("Error:", err);
-    res.status(500).json({ error: 'Wallet operation failed' });
->>>>>>> origin/resolve-merge-conflicts
+    res.end(JSON.stringify({ error: 'Failed to save wallet' }));
   }
 }
-
-module.exports = withSentry(handler);

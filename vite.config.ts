@@ -2,21 +2,6 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { resolve } from 'path';
 
-<<<<<<< HEAD
-export default defineConfig({)
-  plugins: [react()],
-  root: '.',
-  publicDir: 'public',
-  resolve: {,
-    alias: {,
-      '@': resolve(__dirname, 'app'),
-      '@components': resolve(__dirname, 'app/components'),
-      '@utils': resolve(__dirname, 'app/utils'),
-      '@hooks': resolve(__dirname, 'app/hooks'),
-      '@types': resolve(__dirname, 'app/types'),
-
-=======
->>>>>>> origin/resolve-merge-conflicts
 export default defineConfig({
   plugins: [react()],
   resolve: {
@@ -32,21 +17,6 @@ export default defineConfig({
       '@/content': resolve(__dirname, './content')
     }
   },
-<<<<<<< HEAD
-  buil,
-  d: {/* TODO: Fix JSX expression */}
-export default defineConfig({
-  plugins: [react()],
-  resolve: {
-    alias: {
-      '@': resolve(__dirname, './src'),
-      '@components': resolve(__dirname, './src/components'),
-      '@utils': resolve(__dirname, './src/utils'),
-      '@hooks': resolve(__dirname, './src/hooks'),
-      '@types': resolve(__dirname, './src/types'),
-      '@app': resolve(__dirname, './app')}},
-=======
->>>>>>> origin/resolve-merge-conflicts
   build: {
     target: 'esnext'
     minify: 'terser'
@@ -222,28 +192,6 @@ export default defineConfig({
           if (id.includes('/app/components/')) {
             return 'components';
           }
-<<<<<<< HEAD
-export default defineConfig({
-  plugins: [react()],
-  resolve: {
-    alias: {
-      '@': resolve(__dirname, './src')}},
-  build: {
-    outDir: 'dist',
-    assetsDir: 'assets',
-    sourcemap: false,
-    minify: 'terser',
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-          router: ['react-router-dom'],
-          ui: ['framer-motion', 'lucide-react', '@heroicons/react'],
-          router: ['react-router-dom'],
-          utils: ['clsx', 'tailwind-merge']
-          return null;
-=======
->>>>>>> origin/resolve-merge-conflicts
           return 'app';
         },
         chunkFileNames: 'assets/[name]-[hash].js'
@@ -283,20 +231,6 @@ export default defineConfig({
     terserOptions: {
       compress: {
         drop_console: true,
-<<<<<<< HEAD
-        drop_debugger: true},
-      mangle: {
-        safari10: true},
-      format: {
-        comments: false,
-        drop_debugger: true
-      },
-      mangle: {
-        safari10: true
-      },
-      format: {
-        comments: false
-=======
         drop_debugger: true,
         pure_funcs: ['console.log', 'console.info', 'console.debug'],
         passes: 2,
@@ -310,34 +244,15 @@ export default defineConfig({
       format: {
         comments: false,
         ascii_only: true
->>>>>>> origin/resolve-merge-conflicts
       }
     },
     chunkSizeWarningLimit: 500,
     reportCompressedSize: true,
     cssCodeSplit: true,
-<<<<<<< HEAD
-    assetsInlineLimit: 4096},
-  server: {
-    port: 3000,
-    open: true},
-  preview: {
-    port: 4173,
-    open: true},
-  optimizeDeps: {
-    include: ['react', 'react-dom', 'react-router-dom']},
-  css: {
-    devSourcemap: true},
-    assetsInlineLimit: 4096
-  },
-  server: {
-    port: 3000,
-=======
     assetsInlineLimit: 4096,
   },
   server: {
     port: 3000,
->>>>>>> origin/resolve-merge-conflicts
     host: true
   },
   preview: {
@@ -350,8 +265,4 @@ export default defineConfig({
   css: {
     devSourcemap: true
   }
-<<<<<<< HEAD
 });
-=======
-});
->>>>>>> origin/resolve-merge-conflicts

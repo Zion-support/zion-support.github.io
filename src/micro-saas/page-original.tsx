@@ -10573,19 +10573,6 @@ const categories = [
           </h2>"
           <p className="text-xl text-purple-100 mb-8"></p>
 // Get started with our micro SAAS solutions today and see the difference AI can make.
-<<<<<<< HEAD
-          
-          
-          
-          
-          
-          
-          
-          
-          
-
-=======
->>>>>>> origin/resolve-merge-conflicts
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -10604,10 +10591,4 @@ const categories = [
     </div>
   );
 };
-<<<<<<< HEAD
-export default MicroSAASPage;
-
 export default MicroSAASPage;"`
-=======
-export default MicroSAASPage;"`
->>>>>>> origin/resolve-merge-conflicts

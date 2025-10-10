@@ -1,11 +1,5 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-import Navigation from '../../components/Navigation';
-import Footer from '../../components/Footer';
-import SEOOptimizer from '../../components/SEOOptimizer';
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin, ShoppingCart, Navigation } from 'lucide-react';
-=======
 import { Helmet } from 'react-helmet-async';
 
 
@@ -198,7 +192,6 @@ const AIEcommerceSolutionsPage: React.FC = () => {
     { metric: '35%', description: 'Average Order Value Boost' },
     { metric: '95%', description: 'Fraud Detection Accuracy' }
   ];
->>>>>>> origin/resolve-merge-conflicts-1759965566
 
 const AiEcommerceSolutionsPage: React.FC = () => {,
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">,

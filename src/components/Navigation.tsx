@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Globe, Database, Settings, Target, MessageSquare, Eye, Cpu, Lock, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
-
-const Navigation: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-=======
 import React, { useState, useEffect, memo } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown, Phone, Menu, X, Brain, Cloud, Zap } from 'lucide-react';
@@ -12,7 +5,6 @@ import { ChevronDown, Phone, Menu, X, Brain, Cloud, Zap } from 'lucide-react';
 const Navigation: React.FC = memo(() => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
->>>>>>> origin/resolve-merge-conflicts
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isAIOpen, setIsAIOpen] = useState(false);
   const [isITOpen, setIsITOpen] = useState(false);
@@ -37,18 +29,6 @@ const Navigation: React.FC = memo(() => {
   }, []);
 
   const closeAllMenus = () => {
-<<<<<<< HEAD
-    setIsMenuOpen(false);
-    setIsServicesOpen(false);
-    setIsAIOpen(false);
-    setIsITOpen(false);
-    setIsSpecializedOpen(false);
-  };
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-    if (isMenuOpen) {
-=======
     setIsServicesOpen(false);
     setIsOpen(false);
   };
@@ -56,113 +36,10 @@ const Navigation: React.FC = memo(() => {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
     if (isOpen) {
->>>>>>> origin/resolve-merge-conflicts
       closeAllMenus();
     }
   };
 
-<<<<<<< HEAD
-  const toggleServices = () => {
-    setIsServicesOpen(!isServicesOpen);
-    if (isServicesOpen) {
-      setIsAIOpen(false);
-      setIsITOpen(false);
-      setIsSpecializedOpen(false);
-    }
-  };
-
-  const toggleAI = () => {
-    setIsAIOpen(!isAIOpen);
-    if (isAIOpen) {
-      setIsITOpen(false);
-      setIsSpecializedOpen(false);
-    }
-  };
-
-  const toggleIT = () => {
-    setIsITOpen(!isITOpen);
-    if (isITOpen) {
-      setIsAIOpen(false);
-      setIsSpecializedOpen(false);
-    }
-  };
-
-  const toggleSpecialized = () => {
-    setIsSpecializedOpen(!isSpecializedOpen);
-    if (isSpecializedOpen) {
-      setIsAIOpen(false);
-      setIsITOpen(false);
-    }
-  };
-
-  const microSAASServices = [
-    { name: 'AI Project Manager', href: '/ai-project-manager', icon: BarChart },
-    { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: MessageSquare },
-    { name: 'AI Analytics Dashboard', href: '/ai-analytics-dashboard', icon: BarChart3 },
-    { name: 'AI Email Marketing', href: '/ai-email-marketing', icon: Mail },
-    { name: 'AI Customer Support Bot', href: '/ai-customer-support-bot', icon: Bot },
-    { name: 'AI Code Review Assistant', href: '/ai-code-generation', icon: Code },
-    { name: 'AI Content Generator', href: '/ai-content-generation', icon: FileText },
-    { name: 'AI Lead Generation', href: '/ai-lead-generation', icon: Target },
-    { name: 'AI Document Processor', href: '/ai-document-processing', icon: FileText },
-    { name: 'AI SEO Optimizer', href: '/ai-seo-optimizer', icon: Search },
-    { name: 'AI E-commerce Assistant', href: '/ai-ecommerce-solutions', icon: ShoppingCart },
-    { name: 'AI Financial Analyzer', href: '/ai-financial-analyzer', icon: Calculator },
-    { name: 'AI Video Generator Pro', href: '/ai-video-generation', icon: Video },
-    { name: 'AI Voice Cloning Studio', href: '/ai-voice-cloning', icon: Music },
-    { name: 'AI Music Composer', href: '/ai-music-composition', icon: Music },
-    { name: 'AI Fashion Designer', href: '/ai-fashion-design', icon: Palette },
-    { name: 'AI Fitness Coach', href: '/ai-fitness-coach', icon: Heart },
-    { name: 'AI Workflow Automation', href: '/ai-workflow-automation', icon: Settings },
-    { name: 'AI Sales Automation', href: '/ai-sales-automation', icon: Target },
-    { name: 'AI Data Visualization', href: '/ai-data-visualization', icon: BarChart },
-    { name: 'AI 3D Generation Studio', href: '/ai-3d-generation', icon: Camera }
-  ];
-
-  const aiServices = [
-    { name: 'Machine Learning Solutions', href: '/machine-learning', icon: Brain },
-    { name: 'Natural Language Processing', href: '/nlp', icon: MessageSquare },
-    { name: 'Computer Vision', href: '/computer-vision', icon: Eye },
-    { name: 'AI Automation', href: '/ai-automation', icon: Zap },
-    { name: 'Quantum AI Computing', href: '/quantum-ai', icon: Cpu },
-    { name: 'AI Cybersecurity', href: '/ai-cybersecurity', icon: Shield },
-    { name: 'AI Healthcare Solutions', href: '/ai-healthcare', icon: Stethoscope },
-    { name: 'AI Fintech Solutions', href: '/ai-fintech', icon: CreditCard },
-    { name: 'AI Mobile App Development', href: '/ai-mobile-app-development', icon: Smartphone },
-    { name: 'AI CRM Solutions', href: '/ai-crm', icon: Users },
-    { name: 'AI Email Assistant', href: '/ai-email-assistant', icon: Mail },
-    { name: 'AI Scheduler Pro', href: '/ai-scheduler', icon: Calendar }
-  ];
-
-  const itServices = [
-    { name: 'Cloud Services', href: '/cloud-services', icon: Cloud },
-    { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield },
-    { name: 'DevOps & CI/CD', href: '/devops', icon: Settings },
-    { name: 'Database Services', href: '/database-services', icon: Database },
-    { name: 'Network Infrastructure', href: '/network-infrastructure', icon: Globe },
-    { name: 'IT Support & Helpdesk', href: '/it-support', icon: Users },
-    { name: 'IT Consulting', href: '/it-consulting', icon: Briefcase },
-    { name: 'Cloud Migration', href: '/cloud-migration', icon: Cloud },
-    { name: 'Compliance & Governance', href: '/compliance', icon: FileText },
-    { name: 'Developer Tools', href: '/developer-tools', icon: Code },
-    { name: 'Marketing Tools', href: '/marketing-tools', icon: Target },
-    { name: 'Productivity Solutions', href: '/productivity', icon: BarChart }
-  ];
-
-  const specializedServices = [
-    { name: 'Quantum Computing', href: '/quantum-computing', icon: Cpu },
-    { name: 'Autonomous Systems', href: '/autonomous-systems', icon: Settings },
-    { name: 'Blockchain & Web3', href: '/blockchain', icon: Lock },
-    { name: 'IoT & Edge Computing', href: '/iot-edge', icon: Globe },
-    { name: 'Business Intelligence', href: '/business-intelligence', icon: BarChart },
-    { name: 'Robotics Solutions', href: '/robotics', icon: Settings },
-    { name: 'Enterprise Solutions', href: '/enterprise', icon: Building },
-    { name: 'Analytics Tools', href: '/analytics-tools', icon: BarChart3 },
-    { name: 'Business Apps', href: '/business-apps', icon: Briefcase },
-    { name: 'Expense Tracker Pro', href: '/expense-tracker', icon: Calculator },
-    { name: 'Task Manager Pro', href: '/task-manager-pro', icon: CheckCircle },
-    { name: 'Smart Analytics', href: '/smart-analytics', icon: TrendingUp }
-=======
   const serviceCategories = [
     {
       title: 'Micro SAAS Solutions',
@@ -217,21 +94,10 @@ const Navigation: React.FC = memo(() => {
         { name: 'IT Disaster Recovery', path: '/it-disaster-recovery', description: 'Disaster recovery solutions' }
       ]
     }
->>>>>>> origin/resolve-merge-conflicts
   ];
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-<<<<<<< HEAD
-      isScrolled ? 'bg-slate-900/95 backdrop-blur-md border-b border-cyan-400/20' : 'bg-transparent'
-    }`}>
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <a href="/" className="flex items-center space-x-2" onClick={closeAllMenus}>
-            <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">
-              <Brain className="w-5 h-5 text-white" />
-=======
       isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -240,7 +106,6 @@ const Navigation: React.FC = memo(() => {
           <Link to="/" className="flex items-center space-x-2" onClick={closeAllMenus}>
             <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-lg">Z</span>
->>>>>>> origin/resolve-merge-conflicts
             </div>
             <span className="text-xl font-bold text-white neon-text">Zion Tech Group</span>
           </a>
@@ -256,85 +121,6 @@ const Navigation: React.FC = memo(() => {
                 <ChevronDown className={`w-4 h-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
               </button>
               {isServicesOpen && (
-<<<<<<< HEAD
-                <div className="absolute top-full left-0 mt-2 w-[800px] bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg shadow-xl p-6">
-                  <div className="grid grid-cols-3 gap-6">
-                    <div>
-                      <h3 className="text-cyan-400 font-semibold mb-3 flex items-center">
-                        <Zap className="w-4 h-4 mr-2" />
-                        Micro SAAS
-                      </h3>
-                      <div className="space-y-2">
-                        {microSAASServices.slice(0, 6).map((service) => (
-                          <a key={service.name}
-                            href={service.href}
-                            className="flex items-center space-x-2 text-sm text-gray-300 hover:text-cyan-400 transition-colors"
-                            onClick={closeAllMenus}
-                          >
-                            <service.icon className="w-3 h-3" />
-                            <span>{service.name}</span>
-                          </a>
-                        ))}
-                      </div>
-                    </div>
-                    <div>
-                      <h3 className="text-cyan-400 font-semibold mb-3 flex items-center">
-                        <Brain className="w-4 h-4 mr-2" />
-                        AI Services
-                      </h3>
-                      <div className="space-y-2">
-                        {aiServices.slice(0, 6).map((service) => (
-                          <a key={service.name}
-                            href={service.href}
-                            className="flex items-center space-x-2 text-sm text-gray-300 hover:text-cyan-400 transition-colors"
-                            onClick={closeAllMenus}
-                          >
-                            <service.icon className="w-3 h-3" />
-                            <span>{service.name}</span>
-                          </a>
-                        ))}
-                      </div>
-                    </div>
-                    <div>
-                      <h3 className="text-cyan-400 font-semibold mb-3 flex items-center">
-                        <Settings className="w-4 h-4 mr-2" />
-                        IT Services
-                      </h3>
-                      <div className="space-y-2">
-                        {itServices.slice(0, 6).map((service) => (
-                          <Link
-                            key={service.name}
-                            to={service.href}
-                            className="flex items-center space-x-2 text-sm text-gray-300 hover:text-cyan-400 transition-colors"
-                            onClick={closeAllMenus}
-                          >
-                            <service.icon className="w-3 h-3" />
-                            <span>{service.name}</span>
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                  <div className="mt-4 pt-4 border-t border-gray-700">
-                    <div className="grid grid-cols-2 gap-4">
-                      <Link
-                        to="/services"
-                        className="flex items-center justify-center space-x-2 text-cyan-400 hover:text-white transition-colors"
-                        onClick={closeAllMenus}
-                      >
-                        <span>View All Services</span>
-                        <ArrowRight className="w-4 h-4" />
-                      </Link>
-                      <Link
-                        to="/specialized-services"
-                        className="flex items-center justify-center space-x-2 text-purple-400 hover:text-white transition-colors"
-                        onClick={closeAllMenus}
-                      >
-                        <span>Specialized Solutions</span>
-                        <ArrowRight className="w-4 h-4" />
-                      </Link>
-                    </div>
-=======
                 <div
                   className="absolute top-full left-0 mt-2 w-[800px] bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-slate-700 p-6"
                   onMouseEnter={() => setIsServicesOpen(true)}
@@ -377,7 +163,6 @@ const Navigation: React.FC = memo(() => {
                         </ul>
                       </div>
                     ))}
->>>>>>> origin/resolve-merge-conflicts
                   </div>
                 </div>
               )}
@@ -428,74 +213,6 @@ const Navigation: React.FC = memo(() => {
         {isMenuOpen && (
           <div className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-cyan-400/20">
             <div className="px-4 py-6 space-y-4">
-<<<<<<< HEAD
-              <div>
-                <button
-                  onClick={toggleServices}
-                  className="flex items-center justify-between w-full text-white hover:text-cyan-400 transition-colors"
-                >
-                  <span>Services</span>
-                  <ChevronDown className={`w-4 h-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
-                </button>
-                
-                {isServicesOpen && (
-                  <div className="mt-4 pl-4 space-y-3">
-                    <div>
-                      <h4 className="text-cyan-400 font-semibold mb-2">Micro SAAS</h4>
-                      <div className="space-y-2">
-                        {microSAASServices.slice(0, 4).map((service) => (
-                          <a key={service.name}
-                            href={service.href}
-                            className="block text-sm text-gray-300 hover:text-cyan-400 transition-colors"
-                            onClick={closeAllMenus}
-                          >
-                            {service.name}
-                          </a>
-                        ))}
-                      </div>
-                    </div>
-                    <div>
-                      <h4 className="text-cyan-400 font-semibold mb-2">AI Services</h4>
-                      <div className="space-y-2">
-                        {aiServices.slice(0, 4).map((service) => (
-                          <a key={service.name}
-                            href={service.href}
-                            className="block text-sm text-gray-300 hover:text-cyan-400 transition-colors"
-                            onClick={closeAllMenus}
-                          >
-                            {service.name}
-                          </a>
-                        ))}
-                      </div>
-                    </div>
-                    <a href="/services"
-                      className="block text-cyan-400 hover:text-white transition-colors"
-                      onClick={closeAllMenus}
-                    >
-                      View All Services →
-                    </a>
-                  </div>
-                )}
-              </div>
-
-              <Link to="/about" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
-                About
-              </Link>
-              <Link to="/blog" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
-                Blog
-              </Link>
-              <Link to="/case-studies" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
-                Case Studies
-              </Link>
-              <Link to="/pricing" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
-                Pricing
-              </Link>
-              <Link to="/contact" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
-                Contact
-              </Link>
-              
-              <div className="pt-4 border-t border-gray-700">
-=======
               <Link
                 to="/"
                 className="block text-white hover:text-cyan-400 transition-colors duration-300"
@@ -564,7 +281,6 @@ const Navigation: React.FC = memo(() => {
 
               {/* Mobile CTA */}
               <div className="pt-4 border-t border-slate-700">
->>>>>>> origin/resolve-merge-conflicts
                 <a
                   href="tel:+13024640950"
                   className="flex items-center space-x-2 text-cyan-400 hover:text-white transition-colors mb-4"
@@ -572,14 +288,9 @@ const Navigation: React.FC = memo(() => {
                   <Phone className="w-4 h-4" />
                   <span>+1 302 464 0950</span>
                 </a>
-<<<<<<< HEAD
-                <a href="/contact"
-                  className="block cyber-button px-4 py-2 text-center"
-=======
                 <Link
                   to="/contact"
                   className="block bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg text-center hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
->>>>>>> origin/resolve-merge-conflicts
                   onClick={closeAllMenus}
                 >
                   Get Started
@@ -591,14 +302,8 @@ const Navigation: React.FC = memo(() => {
       </div>
     </nav>
   );
-<<<<<<< HEAD
-};
-
-export default Navigation;
-=======
 });
 
 Navigation.displayName = 'Navigation';
 
 export default Navigation;
->>>>>>> origin/resolve-merge-conflicts
