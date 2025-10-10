@@ -1,196 +1,149 @@
-
-
-
-import { Link } from 'react-router-dom';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
 const CloudServicesPage: React.FC = () => {
-  return (
-    <div>Coming Soon</div>
-
-  );
-};
-  const _services = [
-  // TOD,
-  O: Add items;
-];;
-    {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
-  ico,
-  n: Cloud,
-      titl,
-  e: 'Cloud Migration',
-      descriptio,
-  n: 'Seamless migration of your infrastructure to leading cloud platforms',
-      feature,
-  s: ['AWS Migration', 'Azure Migration', 'Google Cloud Migration', 'Zero Downtime']
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced AI technology to transform your business operations and improve efficiency'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
-  ico,
-  n: Shield,
-      titl,
-  e: 'Cloud Security',
-      descriptio,
-  n: 'Comprehensive security solutions for your cloud infrastructure',
-      feature,
-  s: ['Identity Management', 'Data Encryption', 'Compliance', 'Threat Detection']
+    {
+      icon: Zap,
+      title: 'High Performance',
+      description: 'Lightning-fast processing and real-time analytics for optimal results'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
-  ico,
-  n: Zap,
-      titl,
-  e: 'Auto Scaling',
-      descriptio,
-  n: 'Dynamic resource allocation based on demand',
-      feature,
-  s: ['Load Balancing', 'Resource Optimization', 'Cost Management', 'Performance Monitoring']
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Bank-level security with encryption and compliance standards'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
-  ico,
-  n: BarChart,
-      titl,
-  e: 'Cloud Analytics',
-      descriptio,
-  n: 'Advanced analytics and monitoring for cloud resources',
-      feature,
-  s: ['Real-time Monitoring', 'Cost Analytics', 'Performance Metrics', 'Predictive Insights']
+    {
+      icon: Globe,
+      title: 'Global Reach',
+      description: 'Worldwide deployment and support for international businesses'
     }
   ];
+
   const benefits = [
-  // TOD,
-  O: Add items;
-];;
-//     '99.9% Uptime Guarantee',
-//     '24/7 Expert Support',
-//     'Cost Optimization',
-//     'Scalable Infrastructure',
-//     'Enhanced Security',
-//     'Global CDN'
+    'Advanced AI technology integration',
+    'Real-time processing and analytics',
+    'Enterprise-grade security and compliance',
+    'Scalable and flexible solutions',
+    '24/7 technical support',
+    'Easy integration with existing systems',
+    'Cost-effective pricing plans',
+    'Proven track record of success'
   ];
-  return (<div>Coming Soon</div>)
-  )
-    
 
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-// Cloud Services;
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="tel:+13024640950" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
-// >
-//               Get Started Today;
-          </a>
-            <a
-              href="/contact" className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all"
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Cloud Services | Zion Tech Group</title>
+        <meta name="description" content="Professional cloud services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="keywords" content="cloud services, AI solutions, IT services, Zion Tech Group" />
+      </Helmet>
 
-// >
-//               Learn More;
-          </a>
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                Cloud Services
+              </span>
+              <br />
+              <span className="text-white">Solutions</span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your business with our advanced cloud solutions. 
+              Powered by cutting-edge AI technology and industry expertise.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
           </div>
-        </section>
-        {/* Services Grid */}"
-        <section className="mb-16"></section>"
-          <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Cloud Services</h2>"
-          <div className="grid grid-cols-1,
-  md:grid-cols-2,"
-  lg:grid-cols-4 gap-8"></div>
-            {services.map((service, index) => ()}"
-          <div key={index} className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20"></div>"
-                <service.icon className="w-12 h-12 text-cyan-400 mb-4" /></service>"
-                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>"
-                <p className="text-gray-300 mb-4">{service.description}</p>"
-                <ul className="space-y-2"></ul>
-                  {service.features.map((feature, featureIndex) => ()}"
-          <li key={featureIndex} className="flex items-center text-sm text-gray-300"></li>"
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" /></CheckCircle>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Why Choose Our Cloud Solutions?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our cloud solutions deliver unmatched performance, security, and scalability.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
+                <feature.icon className="h-12 w-12 text-purple-400 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
           </div>
-        </section>
-        {/* Benefits Section */}"
-        <section className="mb-16"></section>"
-          <h2 className="text-3xl font-bold text-white mb-12 text-center">Why Choose Our Cloud Services?</h2>"
-          <div className="grid grid-cols-2,
-  md:grid-cols-3,"
-  lg:grid-cols-6 gap-6"></div>
-            {benefits.map((benefit, index) => ()}"
-          <div key={index} className="text-center"></div>"
-                <div className="bg-gradient-to-r from-cyan-500 to-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>"
-                  <CheckCircle className="w-8 h-8 text-white" /></CheckCircle>
-                </div>"
-                <p className="text-white font-medium">{benefit}</p>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Key Benefits
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Experience the power of our cloud solutions for your business.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-center space-x-3">
+                <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
+                <span className="text-gray-300">{benefit}</span>
               </div>
             ))}
           </div>
-        </section>
-        {/* CTA Section */}"
-        <section className="text-center bg-gradient-to-r from-slate-800 to-purple-900 rounded-2xl p-12"></section>"
-          <h2 className="text-3xl font-bold text-white mb-4"></h2>
-// Ready to Transform Your Infrastructure?
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          </h2>"
-          <p className="text-gray-300 mb-8 max-w-2xl mx-auto"></p>
-// Let our cloud experts help you migrate, optimize, and secure your cloud infrastructure.
-          
-          
-          
-          
-          
-          
-          
-          
-          
+        </div>
+      </section>
 
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Ready to Get Started?
+          </h2>
+          <p className="text-xl text-purple-100 mb-8">
+            Contact our experts to discuss your cloud needs and get a customized solution.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="tel:+13024640950" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
-// >
-//               Call (302) 464-0950;
-          </a>
-            <a
-              href="/contact" className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all"
-
-// >
-//               Get Free Consultation;
-          </a>
+            <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
+              <Phone className="mr-2 h-5 w-5" />
+              Call Now
+            </button>
+            <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
+              <Mail className="mr-2 h-5 w-5" />
+              Email Us
+            </button>
           </div>
-        </section>
-      </main>
-      <Footer /></Footer>
-
+        </div>
+      </section>
     </div>
   );
 };
 
-
 export default CloudServicesPage;
-
-

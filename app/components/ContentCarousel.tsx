@@ -248,10 +248,6 @@ const ContentCarousel: React.FC = () => {
                 <div className="text-gray-400 text-sm">Uptime</div>
               </div>
             </div>
-                <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
-                <span className="text-gray-300">{benefit}</span>
-              </div>
-            ))}
           </div>
         </div>
       </div>
