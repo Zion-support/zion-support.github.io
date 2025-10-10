@@ -130,18 +130,18 @@ const EnhancedAccessibility: React.FC = () => {
           role="dialog"
           aria-labelledby="accessibility-title"
           aria-modal="true"
-        >
-          <div className="flex justify-between items-center mb-4">
-            <h2 id="accessibility-title" className="text-lg font-semibold text-gray-900">Accessibility Settings<button
+        ></div>
+          <div className="flex justify-between items-center mb-4"></div>
+            <h2 id="accessibility-title" className="text-lg font-semibold text-gray-900">Accessibility Settings</h2><button
               onClick={() =>setIsVisible(false)}
               className="text-gray-400 hover:text-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-300 rounded"
               aria-label="Close accessibility settings"</button>
             ></button>
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></p>
               <div className="space-y-4">{/* Font Size */}</div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">Font Size<div className="flex space-x-2">{(['small', 'medium', 'large'] as const).map((size) => (<button
+            <div></div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Font Size<div className="flex space-x-2">{(['small', 'medium', 'large'] as const).map((size) => (</div><button
                     key={size}
                     onClick={() =>{
                       updateSetting('fontSize', size);
@@ -160,7 +160,7 @@ const EnhancedAccessibility: React.FC = () => {
             </div>
 
             {/* High Contrast */}
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between"></div>
               <label className="text-sm font-medium text-gray-700">High Contrast<button
                 onClick={() =>{
                   updateSetting('highContrast', !settings.highContrast);
@@ -181,7 +181,7 @@ const EnhancedAccessibility: React.FC = () => {
             </div>
 
             {/* Reduced Motion */}
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between"></div>
               <label className="text-sm font-medium text-gray-700">Reduced Motion<button
                 onClick={() =>{
                   updateSetting('reducedMotion', !settings.reducedMotion);
@@ -202,7 +202,7 @@ const EnhancedAccessibility: React.FC = () => {
             </div>
 
             {/* Screen Reader Optimizations */}
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between"></div>
               <label className="text-sm font-medium text-gray-700">Screen Reader Optimized<button
                 onClick={() =>{
                   updateSetting('screenReader', !settings.screenReader);
@@ -223,7 +223,7 @@ const EnhancedAccessibility: React.FC = () => {
             </div>
 
             {/* Keyboard Navigation */}
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between"></div>
               <label className="text-sm font-medium text-gray-700">Enhanced Keyboard Navigation<button
                 onClick={() =>{
                   updateSetting('keyboardNavigation', !settings.keyboardNavigation);

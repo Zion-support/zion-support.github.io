@@ -33,7 +33,7 @@ export default function EnterpriseAISolutions(): React.JSX.Element {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100"></div>
       <Helmet>
         <title>Enterprise AI Solutions - Zion Website</title>
         <meta
@@ -42,8 +42,8 @@ export default function EnterpriseAISolutions(): React.JSX.Element {
         />
       </Helmet>
 
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
+      <div className="container mx-auto px-4 py-16"></div>
+        <div className="text-center mb-16"></div>
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Enterprise AI Solutions</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Comprehensive AI solutions designed for enterprise-scale deployments and large
@@ -52,12 +52,12 @@ export default function EnterpriseAISolutions(): React.JSX.Element {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {solutions.map((solution, index) => (
+          {solutions.map((solution, index) => (</div>
             <div
               key={index}
               className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
-            >
-              <div className="flex items-center mb-4">
+            ></div>
+              <div className="flex items-center mb-4"></div>
                 <div className="text-blue-600 mr-3">{solution.icon}</div>
                 <h3 className="text-xl font-semibold text-gray-900">{solution.title}</h3>
               </div>

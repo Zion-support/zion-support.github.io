@@ -191,18 +191,18 @@ defa, u, l
   };
   const, Ico, n = currentIt, e, m.ic, o, n;
   return (
-    <div, className="bg-gradie, n, t-to-r, fro, m-zi, o, n-bl, u, e/20, t, o-zi, o, n-purp, l, e/20, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/1, 0, p-6, hove, r: shad, o, w-2xl, transitio, n-all, duratio, n-500, grou, p">"
-      <div, className="flex, item, s-center, justif, y-betwe, e, n">
-        <div, className="fl, e, x-1">
-          <div, className="flex, item, s-center, ga, p-3, m, b-3">
-            <div, className="flex, item, s-center, ga, p-2">
+    <div, className="bg-gradie, n, t-to-r, fro, m-zi, o, n-bl, u, e/20, t, o-zi, o, n-purp, l, e/20, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/1, 0, p-6, hove, r: shad, o, w-2xl, transitio, n-all, duratio, n-500, grou, p">"</div>
+      <div, className="flex, item, s-center, justif, y-betwe, e, n"></div>
+        <div, className="fl, e, x-1"></div>
+          <div, className="flex, item, s-center, ga, p-3, m, b-3"></div>
+            <div, className="flex, item, s-center, ga, p-2"></div>
               <TrendingUp, className="w-5 h-5, tex, t-zi, o, n-cyan, animat, e-pul, s, e  />
               <span, className="te, x, t-sm, fon, t-semibold, tex, t-zi, o, n-cy, a, n">TRENDING, NO, W</sp, a, n>
-    <div, className="bg-gradie, n, t-to-r, fro, m-zi, o, n-bl, u, e/20, t, o-zi, o, n-purp, l, e/20, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/1, 0, p-6, hove, r: shad, o, w-2xl, transitio, n-all, duratio, n-500, grou, p">";
-      <div, className="flex, item, s-center, justif, y-betwe, e, n">";
-        <div, className="fl, e, x-1">";
-          <div, className="flex, item, s-center, ga, p-3, m, b-3">";
-            <div, className="flex, item, s-center, ga, p-2">";
+    <div, className="bg-gradie, n, t-to-r, fro, m-zi, o, n-bl, u, e/20, t, o-zi, o, n-purp, l, e/20, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/1, 0, p-6, hove, r: shad, o, w-2xl, transitio, n-all, duratio, n-500, grou, p">";</div>
+      <div, className="flex, item, s-center, justif, y-betwe, e, n">";</div>
+        <div, className="fl, e, x-1">";</div>
+          <div, className="flex, item, s-center, ga, p-3, m, b-3">";</div>
+            <div, className="flex, item, s-center, ga, p-2">";</div>
               <TrendingUp, className="w-5 h-5, tex, t-zi, o, n-cyan, animat, e-pul, s, e" />";
               <span, className="te, x, t-sm, fon, t-semibold, tex, t-zi, o, n-cy, a, n">TRENDING, NO, W</sp, a, n>";
             </d, i, v>
@@ -210,48 +210,48 @@ defa, u, l
               {currentIt, e, m.bad, g, e}
             </d, i, v>
           </d, i, v>
-          <div, className="flex, item, s-start, ga, p-4">
-            <div, className="bg-zi, o, n-bl, u, e/2, 0, p-3, rounde, d-lg, grou, p-hov, e, r: bg-zi, o, n-bl, u, e/30, transitio, n-colo, r, s">"
+          <div, className="flex, item, s-start, ga, p-4"></div>
+            <div, className="bg-zi, o, n-bl, u, e/2, 0, p-3, rounde, d-lg, grou, p-hov, e, r: bg-zi, o, n-bl, u, e/30, transitio, n-colo, r, s">"</div>
               <Icon, className="w-6 h-6, tex, t-zi, o, n-cyan, grou, p-hov, e, r: sca, l, e-110, transitio, n-transfo, r, m/>"
-          <div, className="flex, item, s-start, ga, p-4">";
-            <div, className="bg-zi, o, n-bl, u, e/2, 0, p-3, rounde, d-lg, grou, p-hov, e, r: bg-zi, o, n-bl, u, e/30, transitio, n-colo, r, s">";
+          <div, className="flex, item, s-start, ga, p-4">";</div>
+            <div, className="bg-zi, o, n-bl, u, e/2, 0, p-3, rounde, d-lg, grou, p-hov, e, r: bg-zi, o, n-bl, u, e/30, transitio, n-colo, r, s">";</div>
               <Icon, className="w-6 h-6, tex, t-zi, o, n-cyan, grou, p-ho, v, e
   r: sca, l, e-110, transitio, n-transfo, r, m" />";
             </d, i, v>
-            <div, className="fl, e, x-1">";
-              <div, className="flex, item, s-center, ga, p-2, m, b-1">";
+            <div, className="fl, e, x-1">";</div>
+              <div, className="flex, item, s-center, ga, p-2, m, b-1">";</div>
                 <span, className="te, x, t-xs, fon, t-medium, tex, t-zi, o, n-sla, t, e-light, uppercase, tracking-wid, e, r">";
                   {currentIt, e, m.catego, r, y}
                 </sp, a, n>
               </d, i, v>
-              <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-zi, o, n-cyan, transitio, n-colo, r, s">"
+              <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-zi, o, n-cyan, transitio, n-colo, r, s">"</h3>
               <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-zi, o, n-cyan, transitio, n-colo, r, s">";
                 {currentIt, e, m.tit, l, e}
               </h3>
               <p, className="te, x, t-zi, o, n-sla, t, e-light, tex, t-sm, m, b-3">";
                 {currentIt, e, m.descripti, o, n}
               </p>
-              <div, className="flex, item, s-center, ga, p-4, tex, t-xs, tex, t-zi, o, n-sla, t, e-lig, h, t">
-                <div, className="flex, item, s-center, ga, p-1">
+              <div, className="flex, item, s-center, ga, p-4, tex, t-xs, tex, t-zi, o, n-sla, t, e-lig, h, t"></div>
+                <div, className="flex, item, s-center, ga, p-1"></div>
                   <Eye, className="w-3 h-3  />
                   <sp, a, n>{currentIt, e, m.vie, w, s} vie, w, s</sp, a, n>
                 </d, i, v>
-                <div, className="flex, item, s-center, ga, p-1">
+                <div, className="flex, item, s-center, ga, p-1"></div>
                   <Clock, className="w-3 h-3  />
                   <sp, a, n>{currentIt, e, m.readTi, m, e} re, a, d</sp, a, n>
                 </d, i, v>
-                <div, className="flex, item, s-center, ga, p-1">
+                <div, className="flex, item, s-center, ga, p-1"></div>
                   <Star, className="w-3 h-3, tex, t-yell, o, w-4, 0, 0  />
-              <div, className="flex, item, s-center, ga, p-4, tex, t-xs, tex, t-zi, o, n-sla, t, e-lig, h, t">";
-                <div, className="flex, item, s-center, ga, p-1">";
+              <div, className="flex, item, s-center, ga, p-4, tex, t-xs, tex, t-zi, o, n-sla, t, e-lig, h, t">";</div>
+                <div, className="flex, item, s-center, ga, p-1">";</div>
                   <Eye, className="w-3 h-3" />";
                   <sp, a, n>{currentIt, e, m.vie, w, s} vie, w, s</sp, a, n>
                 </d, i, v>
-                <div, className="flex, item, s-center, ga, p-1">";
+                <div, className="flex, item, s-center, ga, p-1">";</div>
                   <Clock, className="w-3 h-3" />";
                   <sp, a, n>{currentIt, e, m.readTi, m, e} re, a, d</sp, a, n>
                 </d, i, v>
-                <div, className="flex, item, s-center, ga, p-1">";
+                <div, className="flex, item, s-center, ga, p-1">";</div>
                   <Star, className="w-3 h-3, tex, t-yell, o, w-4, 0, 0" />";
                   <sp, a, n>4.9/5</sp, a, n>
                 </d, i, v>
@@ -259,7 +259,7 @@ defa, u, l
             </d, i, v>
           </d, i, v>
         </d, i, v>
-        <div, className="flex, fle, x-col, item, s-end, ga, p-3">";
+        <div, className="flex, fle, x-col, item, s-end, ga, p-3">";</div>
           <Li, n, k
   to={currentIt, e, m.li, n, k}
             classNa, m, e="bg-zi, o, n-cyan, tex, t-white, hove, r: bg-zi, o, n-bl, u, e-light, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, tex, t-sm, transitio, n-all, duratio, n-300, hov, e
@@ -274,7 +274,7 @@ defa, u, l
           </Li, n, k>
           {/* Navigation, dot, s */}
           <div, className="flex, ga, p-2">";
-            {trendingIte, m, s.m, a, p((_, ind, e, x) => (
+            {trendingIte, m, s.m, a, p((_, ind, e, x) => (</div>
               <butt, o, n
   k, e, y={ind, e, x}
                 onCli, c, k={() => setCurrentInd, e, x(ind, e, x)}
@@ -290,7 +290,7 @@ defa, u, l
         </d, i, v>
       </d, i, v>
       {/* Progress, ba, r */}
-      <div, className="mt-4 w-full, b, g-whi, t, e/10, rounde, d-ful, l, h-1">";
+      <div, className="mt-4 w-full, b, g-whi, t, e/10, rounde, d-ful, l, h-1">";</div>
         <d, i, v 
   classNa, m, e="bg-gradie, n, t-to-r, fro, m-zi, o, n-cyan, t, o-zi, o, n-bl, u, e-ligh, t, h-1, rounde, d-full, transitio, n-all, duratio, n-100, eas, e-line, a, r"
           sty, l, e={{ wid, t, h: `${((currentInd, e, x + 1) / trendingIte, m, s.leng, t, h) * 1, 0, 0}%` }}`;`  />

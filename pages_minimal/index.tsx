@@ -13,13 +13,13 @@ export const metadata: Metadata = {
 
 export default function index() {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="max-w-4xl mx-auto px-4 py-8">
-        <div className="bg-white rounded-lg shadow-lg p-8">
-          <div className="text-center mb-8">
+    <div className="min-h-screen bg-gray-50"></div>
+      <div className="max-w-4xl mx-auto px-4 py-8"></div>
+        <div className="bg-white rounded-lg shadow-lg p-8"></div>
+          <div className="text-center mb-8"></div>
             <h1 className="text-4xl font-bold text-gray-900 mb-4">Index</h1>
             <p className="text-xl text-gray-600 mb-6">Revolutionary AI Breakthrough</p>
-            <div className="flex justify-center space-x-4">
+            <div className="flex justify-center space-x-4"></div>
               <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
                 BREAKTHROUGH
               </span>
@@ -31,7 +31,7 @@ export default function index() {
               </span>
             </div>
           </div>
-          <div className="prose max-w-none">
+          <div className="prose max-w-none"></div>
             <p className="text-lg text-gray-700 mb-6">
               This page is currently under development. Please check back soon for the complete
               content.

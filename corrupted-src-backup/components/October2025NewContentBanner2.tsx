@@ -69,20 +69,20 @@ const, October2025NewContentBanner, 2 = () => {
   return (
     <section, className="py-20, p, x-4, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">";
       {/* Animated, background, elements */}
-      <div, className="absolute, inse, t-0, opacit, y-10">";
+      <div, className="absolute, inse, t-0, opacit, y-10">";</section>
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pulse, dela, y-10, 0, 0"></d, i, v>";
       </d, i, v>
       <div, className="m, a, x-w-7xl, m, x-auto, relative, z-10">";
-        {/* Head, e, r */}
-        <div, className="text-center mb-12">
-          <div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, p, x-6, p, y-2, rounde, d-full, border, border-purp, l, e-5, 0, 0/30, m, b-6">
+        {/* Head, e, r */}</div>
+        <div, className="text-center mb-12"></div>
+          <div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, p, x-6, p, y-2, rounde, d-full, border, border-purp, l, e-5, 0, 0/30, m, b-6"></div>
             <Brain, className="w-5 h-5, tex, t-purp, l, e-400, animat, e-pul, s, e  />
             <span, className="te, x, t-purp, l, e-300, fon, t-semibo, l, d">FRESH, INSIGHT, S | October, 202, 5</sp, a, n>
           </d, i, v>
-          <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4">"
-        <div, className="text-center mb-12">";
-          <div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, p, x-6, p, y-2, rounde, d-full, border, border-purp, l, e-5, 0, 0/30, m, b-6">";
+          <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4">"</h2>
+        <div, className="text-center mb-12">";</div>
+          <div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, p, x-6, p, y-2, rounde, d-full, border, border-purp, l, e-5, 0, 0/30, m, b-6">";</div>
             <Brain, className="w-5 h-5, tex, t-purp, l, e-400, animat, e-pul, s, e" />";
             <span, className="te, x, t-purp, l, e-300, fon, t-semibo, l, d">FRESH, INSIGHT, S | October, 202, 5</sp, a, n>";
           </d, i, v>
@@ -94,11 +94,11 @@ const, October2025NewContentBanner, 2 = () => {
           </p>
         </d, i, v>
         {/* Articles, Gri, d */}
-        <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-12">"
+        <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-12">"</div>
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-12">";
           {newArticl, e, s.m, a, p((artic, l, e) => {
             const, Ico, n = artic, l, e.ic, o, n;
-            return (
+            return (</div>
               <Li, n, k
   k, e, y={artic, l, e.sl, u, g}
                 to={`/bl, o, g/${artic, l, e.sl, u, g}`}`;`
@@ -106,17 +106,17 @@ const, October2025NewContentBanner, 2 = () => {
   r:-transla, t, e-y-1"
               >
                 {/* Bad, g, e */}
-                <div, className="absolute, to, p-4, righ, t-4">";
+                <div, className="absolute, to, p-4, righ, t-4">";</div>
                   <span, className="px-3, p, y-1, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, tex, t-purp, l, e-300, tex, t-xs, fon, t-semibold, rounde, d-full, border, border-purp, l, e-5, 0, 0/30">";
                     {artic, l, e.bad, g, e}
                   </sp, a, n>
                 </d, i, v>
                 {/* Ic, o, n */}
-                <div, className={`w-1, 6, h-16, rounde, d-xl, b, g-gradie, n, t-to-br ${artic, l, e.gradie, n, t} flex, item, s-center, justif, y-center, m, b-4, grou, p-hov, e, r:sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0`}>`;`
+                <div, className={`w-1, 6, h-16, rounde, d-xl, b, g-gradie, n, t-to-br ${artic, l, e.gradie, n, t} flex, item, s-center, justif, y-center, m, b-4, grou, p-hov, e, r:sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0`}>`;`</div>
                   <Icon, className="w-8 h-8, tex, t-whi, t, e  />
                 </d, i, v>
                 {/* Conte, n, t */}
-                <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-purp, l, e-400, transitio, n-colo, r, s">"
+                <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-purp, l, e-400, transitio, n-colo, r, s">"</h3>
                   <Icon, className="w-8 h-8, tex, t-whi, t, e" />";
                 </d, i, v>
                 {/* Conte, n, t */}
@@ -127,10 +127,10 @@ const, October2025NewContentBanner, 2 = () => {
                   {artic, l, e.descripti, o, n}
                 </p>
                 {/* Read, More, Link */}
-                <div, className="flex, item, s-center, ga, p-2, tex, t-purp, l, e-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">"
+                <div, className="flex, item, s-center, ga, p-2, tex, t-purp, l, e-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">"</div>
                   <sp, a, n>Read, Articl, e</sp, a, n>
                   <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-                <div, className="flex, item, s-center, ga, p-2, tex, t-purp, l, e-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">";
+                <div, className="flex, item, s-center, ga, p-2, tex, t-purp, l, e-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">";</div>
                   <sp, a, n>Read, Articl, e</sp, a, n>
                   <ArrowRight, className="w-5 h-5, grou, p-ho, v, e
   r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
@@ -142,7 +142,7 @@ const, October2025NewContentBanner, 2 = () => {
           })}
         </d, i, v>
         {/* CTA, Sectio, n */}
-        <div, className="te, x, t-cent, e, r">";
+        <div, className="te, x, t-cent, e, r">";</div>
           <Li, n, k
   to="/bl, o, g"
             classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-bl, u, e-600, hove, r: fr, o, m-purp, l, e-700, hove, r:to-bl, u, e-700, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-semibold, transitio, n-all, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, hov, e

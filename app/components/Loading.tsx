@@ -25,12 +25,12 @@ const Loading: React.FC<LoadingProps>= ({
   };
 </LoadingProps>
   const content = (</LoadingProps>
-    <div className="flex flex-col items-center justify-center space-y-4">
-      <div className="relative">
-        <div className={`${sizeClasses[size]} animate-spin`}>
+    <div className="flex flex-col items-center justify-center space-y-4"></div>
+      <div className="relative"></div>
+        <div className={`${sizeClasses[size]} animate-spin`}></div>
           <Loader2 className="w-full h-full text-cyan-400" />
         </div>
-        <div className="absolute inset-0 flex items-center justify-center">
+        <div className="absolute inset-0 flex items-center justify-center"></div>
           <Zap className={`${size === 'sm' ? 'w-2 h-2' : size === 'md' ? 'w-4 h-4' : 'w-6 h-6'} text-purple-500 animate-pulse`} />
         </div>
       </div>

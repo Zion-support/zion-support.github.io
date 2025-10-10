@@ -27,7 +27,7 @@ const EnhancedLoading: React.FC<LoadingProps>= ({
 </LoadingProps>
   const renderSpinner = () => (<div className={`${sizeClasses[size]} border-2 border-cyan-400/20 border-t-cyan-400 rounded-full animate-spin`} >);
 </div>
-  const renderDots = () => (<div className="flex space-x-1">{[0, 1, 2].map((i) => (<div
+  const renderDots = () => (<div className="flex space-x-1">{[0, 1, 2].map((i) => (</div><div
           key={i}
           className={`w-2 h-2 bg-cyan-400 rounded-full animate-pulse`}
           style={{ animationDelay: `${i * 0.2}s` }}
@@ -39,9 +39,9 @@ const EnhancedLoading: React.FC<LoadingProps>= ({
     <div className={`${sizeClasses[size]} bg-cyan-400 rounded-full animate-pulse`} >);
 </div>
   const renderSkeleton = () => (</div>
-    </div><div className="space-y-2">
-      <div className="h-4 bg-gray-700 rounded animate-pulse" />
-      <div className="h-4 bg-gray-700 rounded animate-pulse w-3/4" />
+    </div><div className="space-y-2"></div>
+      <div className="h-4 bg-gray-700 rounded animate-pulse" /></div>
+      <div className="h-4 bg-gray-700 rounded animate-pulse w-3/4" /></div>
       <div className="h-4 bg-gray-700 rounded animate-pulse w-1/2" >);
 
   const renderLoader = () => {
@@ -58,7 +58,7 @@ const EnhancedLoading: React.FC<LoadingProps>= ({
   };
 </div>
   return (</div>
-    </div><div className="flex flex-col items-center justify-center space-y-4 p-8">
+    </div><div className="flex flex-col items-center justify-center space-y-4 p-8"></div>
       <div className="relative">{renderLoader()}</div>
         {variant === 'spinner' && (<div className="absolute inset-0 border-2 border-transparent border-t-purple-400 rounded-full animate-spin" 
                style={{ animationDirection: 'reverse', animationDuration: '1.5s' }} >)}</div>

@@ -80,11 +80,11 @@ const ContactForm: React.FC = () => {
   ];
 
   return (
-    <div className="max-w-4xl mx-auto">
+    <div className="max-w-4xl mx-auto"></div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-        {/* Contact Information */}
-        <div className="space-y-8">
-          <div>
+        {/* Contact Information */}</div>
+        <div className="space-y-8"></div>
+          <div></div>
             <h2 className="text-3xl font-bold text-white mb-4">
               Get in Touch
             </h2>
@@ -93,12 +93,12 @@ const ContactForm: React.FC = () => {
             </p>
           </div>
 
-          <div className="space-y-6">
-            <div className="flex items-start space-x-4">
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0">
+          <div className="space-y-6"></div>
+            <div className="flex items-start space-x-4"></div>
+              <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0"></div>
                 <Phone className="w-6 h-6 text-white" />
               </div>
-              <div>
+              <div></div>
                 <h3 className="text-white font-semibold mb-1">Phone</h3>
                 <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 transition-colors">
                   +1 (302) 464-0950
@@ -107,11 +107,11 @@ const ContactForm: React.FC = () => {
               </div>
             </div>
 
-            <div className="flex items-start space-x-4">
-              <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">
+            <div className="flex items-start space-x-4"></div>
+              <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0"></div>
                 <Mail className="w-6 h-6 text-white" />
               </div>
-              <div>
+              <div></div>
                 <h3 className="text-white font-semibold mb-1">Email</h3>
                 <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 transition-colors">
                   kleber@ziontechgroup.com
@@ -120,14 +120,14 @@ const ContactForm: React.FC = () => {
               </div>
             </div>
 
-            <div className="flex items-start space-x-4">
-              <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-500 rounded-lg flex items-center justify-center flex-shrink-0">
+            <div className="flex items-start space-x-4"></div>
+              <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-500 rounded-lg flex items-center justify-center flex-shrink-0"></div>
                 <MapPin className="w-6 h-6 text-white" />
               </div>
-              <div>
+              <div></div>
                 <h3 className="text-white font-semibold mb-1">Office</h3>
                 <p className="text-gray-300">
-                  364 E Main St STE 1008<br />
+                  364 E Main St STE 1008</p><br />
                   Middletown, DE 19709
                 </p>
                 <p className="text-gray-400 text-sm mt-1">United States</p>
@@ -137,10 +137,10 @@ const ContactForm: React.FC = () => {
         </div>
 
         {/* Contact Form */}
-        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20"></div>
           <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+              <div></div>
                 <label htmlFor="name" className="block text-white font-medium mb-2">
                   Full Name *
                 </label>
@@ -156,7 +156,7 @@ const ContactForm: React.FC = () => {
                 />
               </div>
 
-              <div>
+              <div></div>
                 <label htmlFor="email" className="block text-white font-medium mb-2">
                   Email Address *
                 </label>
@@ -173,8 +173,8 @@ const ContactForm: React.FC = () => {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+              <div></div>
                 <label htmlFor="company" className="block text-white font-medium mb-2">
                   Company
                 </label>
@@ -189,7 +189,7 @@ const ContactForm: React.FC = () => {
                 />
               </div>
 
-              <div>
+              <div></div>
                 <label htmlFor="phone" className="block text-white font-medium mb-2">
                   Phone Number
                 </label>
@@ -205,7 +205,7 @@ const ContactForm: React.FC = () => {
               </div>
             </div>
 
-            <div>
+            <div></div>
               <label htmlFor="service" className="block text-white font-medium mb-2">
                 Service Interest
               </label>
@@ -225,7 +225,7 @@ const ContactForm: React.FC = () => {
               </select>
             </div>
 
-            <div>
+            <div></div>
               <label htmlFor="message" className="block text-white font-medium mb-2">
                 Message *
               </label>
@@ -247,7 +247,7 @@ const ContactForm: React.FC = () => {
                 status.type === 'error' ? 'bg-red-500/20 text-red-300' :
                 'bg-blue-500/20 text-blue-300'
               }`}>
-                {status.type === 'success' ? (
+                {status.type === 'success' ? (</div>
                   <CheckCircle className="w-5 h-5 flex-shrink-0" />
                 ) : status.type === 'error' ? (
                   <AlertCircle className="w-5 h-5 flex-shrink-0" />

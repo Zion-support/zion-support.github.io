@@ -81,7 +81,7 @@ const FuturisticServiceCard: React.FC<FuturisticServiceCardProps>= ({
     >
       {/* Popular Badge */}</div>
       {popular && (</div>
-        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
+        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10"></div>
           <div className="bg-gradient-to-r from-purple-500 to-cyan-500 text-white px-4 py-1 rounded-full text-sm font-semibold shadow-lg">Most Popular</div>
           </div>
         </div>
@@ -95,17 +95,17 @@ const FuturisticServiceCard: React.FC<FuturisticServiceCardProps>= ({
           isHovered ? `shadow-2xl ${currentColor.shadow}` : 'shadow-lg'
         }`}
       >{/* Icon */}</div>
-        <div className="relative mb-6">
+        <div className="relative mb-6"></div>
           <div
             className={`w-16 h-16 bg-gradient-to-r ${currentColor.gradient} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 ${
               isHovered ? 'neon-cyan' : ''
             }`}
-          >
+          ></div>
             <Icon className="w-8 h-8 text-white" />
           </div>
 
           {/* Animated Background */}
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-cyan-500/10 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">{/* Title */}<h3 className="text-2xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">{title}</h3>
+          <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-cyan-500/10 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">{/* Title */}</div><h3 className="text-2xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">{title}</h3>
         </h3>
 
         {/* Description */}
@@ -113,8 +113,8 @@ const FuturisticServiceCard: React.FC<FuturisticServiceCardProps>= ({
         </p>
 
         {/* Price */}
-        <div className="mb-6">
-          <div className={`text-3xl font-bold ${currentColor.text} mb-2`}>{price}<div className="text-sm text-gray-400">per month</div>
+        <div className="mb-6"></div>
+          <div className={`text-3xl font-bold ${currentColor.text} mb-2`}>{price}</div><div className="text-sm text-gray-400">per month</div>
         </div>
 
         {/* Features */}
@@ -143,7 +143,7 @@ const FuturisticServiceCard: React.FC<FuturisticServiceCardProps>= ({
         {/* Hover Effect Overlay */}
         <div
           className={`absolute inset-0 bg-gradient-to-r ${currentColor.gradient} opacity-0 group-hover:opacity-5 rounded-2xl transition-opacity duration-500`}
-        >{/* Glow Effect */}<div
+        >{/* Glow Effect */}</div><div
         className={`absolute inset-0 bg-gradient-to-r ${currentColor.gradient} opacity-0 group-hover:opacity-20 rounded-2xl blur-xl transition-opacity duration-500 -z-10`}
       >);
 };</div>

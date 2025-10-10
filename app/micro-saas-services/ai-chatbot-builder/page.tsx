@@ -8,18 +8,18 @@ const AIChatbotBuilder: React.FC = () => {
   const [botPurpose, setBotPurpose] = useState('');
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg"></div>
       <Navigation />
 
       <main className="container mx-auto px-4 py-16 pt-24">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text text-center">AI Chatbot Builder<p className="text-xl text-gray-300 text-center mb-12">Create intelligent chatbots for your website without coding</p>
+        <div className="max-w-4xl mx-auto"></div>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text text-center">AI Chatbot Builder</h1><p className="text-xl text-gray-300 text-center mb-12">Create intelligent chatbots for your website without coding</p>
           </p>
 
-          <div className="cyber-card p-8 mb-8">
+          <div className="cyber-card p-8 mb-8"></div>
             <h2 className="text-2xl font-bold text-white mb-6">Build Your Chatbot</h2>
-            <div className="space-y-6">
-              <div>
+            <div className="space-y-6"></div>
+              <div></div>
                 <label className="block text-white font-medium mb-2">Bot Name<input
                   type="text"
                   value={botName}
@@ -28,7 +28,7 @@ const AIChatbotBuilder: React.FC = () => {
                   placeholder="Enter your bot name..."</input>
                 /></input>
               </div>
-              <div>
+              <div></div>
                 <label className="block text-white font-medium mb-2">Bot Purpose<select
                   value={botPurpose}
                   onChange={(e) =>setBotPurpose(e.target.value)}
@@ -41,57 +41,57 @@ const AIChatbotBuilder: React.FC = () => {
             </div>
           </div>
 
-          <div className="cyber-card p-8 mb-8">
+          <div className="cyber-card p-8 mb-8"></div>
             <h2 className="text-2xl font-bold text-white mb-6">Features</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-cyan-400 rounded-full"><span className="text-gray-300">Drag-and-drop builder</span>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+              <div className="space-y-4"></div>
+                <div className="flex items-center space-x-3"></div>
+                  <div className="w-2 h-2 bg-cyan-400 rounded-full"></div><span className="text-gray-300">Drag-and-drop builder</span>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-cyan-400 rounded-full"><span className="text-gray-300">Natural language processing</span>
+                <div className="flex items-center space-x-3"></div>
+                  <div className="w-2 h-2 bg-cyan-400 rounded-full"></div><span className="text-gray-300">Natural language processing</span>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-cyan-400 rounded-full"><span className="text-gray-300">Multi-language support</span>
+                <div className="flex items-center space-x-3"></div>
+                  <div className="w-2 h-2 bg-cyan-400 rounded-full"></div><span className="text-gray-300">Multi-language support</span>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-cyan-400 rounded-full"><span className="text-gray-300">Analytics dashboard</span>
+                <div className="flex items-center space-x-3"></div>
+                  <div className="w-2 h-2 bg-cyan-400 rounded-full"></div><span className="text-gray-300">Analytics dashboard</span>
                 </div>
               </div>
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-pink-400 rounded-full"><span className="text-gray-300">Integration with CRM</span>
+              <div className="space-y-4"></div>
+                <div className="flex items-center space-x-3"></div>
+                  <div className="w-2 h-2 bg-pink-400 rounded-full"></div><span className="text-gray-300">Integration with CRM</span>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-pink-400 rounded-full"><span className="text-gray-300">Custom branding</span>
+                <div className="flex items-center space-x-3"></div>
+                  <div className="w-2 h-2 bg-pink-400 rounded-full"></div><span className="text-gray-300">Custom branding</span>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-pink-400 rounded-full"><span className="text-gray-300">Live chat handoff</span>
+                <div className="flex items-center space-x-3"></div>
+                  <div className="w-2 h-2 bg-pink-400 rounded-full"></div><span className="text-gray-300">Live chat handoff</span>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-pink-400 rounded-full"><span className="text-gray-300">API access</span>
+                <div className="flex items-center space-x-3"></div>
+                  <div className="w-2 h-2 bg-pink-400 rounded-full"></div><span className="text-gray-300">API access</span>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            <div className="cyber-card p-6 text-center">
-              <h3 className="text-xl font-bold text-white mb-4">Basic<div className="text-3xl font-bold text-cyan-400 mb-4">$49/month</div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"></div>
+            <div className="cyber-card p-6 text-center"></div>
+              <h3 className="text-xl font-bold text-white mb-4">Basic</h3><div className="text-3xl font-bold text-cyan-400 mb-4">$49/month</div>
               <ul className="text-gray-300 space-y-2">
                 <li>1 chatbot<li>1,000 conversations/month</li>
                 <li>Basic templates<li>Email support</li>
               </ul>
             </div>
-            <div className="cyber-card p-6 text-center border-2 border-cyan-400">
-              <h3 className="text-xl font-bold text-white mb-4">Professional<div className="text-3xl font-bold text-cyan-400 mb-4">$149/month</div>
+            <div className="cyber-card p-6 text-center border-2 border-cyan-400"></div>
+              <h3 className="text-xl font-bold text-white mb-4">Professional</h3><div className="text-3xl font-bold text-cyan-400 mb-4">$149/month</div>
               <ul className="text-gray-300 space-y-2">
                 <li>5 chatbots<li>10,000 conversations/month</li>
                 <li>Advanced features<li>Priority support<li>Analytics</li>
               </ul>
             </div>
-            <div className="cyber-card p-6 text-center">
-              <h3 className="text-xl font-bold text-white mb-4">Enterprise<div className="text-3xl font-bold text-cyan-400 mb-4">$399/month</div>
+            <div className="cyber-card p-6 text-center"></div>
+              <h3 className="text-xl font-bold text-white mb-4">Enterprise</h3><div className="text-3xl font-bold text-cyan-400 mb-4">$399/month</div>
               <ul className="text-gray-300 space-y-2">
                 <li>Unlimited chatbots<li>Unlimited conversations</li>
                 <li>Custom integrations<li>24/7 support<li>White-label option</li>
@@ -99,7 +99,7 @@ const AIChatbotBuilder: React.FC = () => {
             </div>
           </div>
 
-          <div className="text-center">
+          <div className="text-center"></div>
             <a
               href="tel:+13024640950"
               className="cyber-button mr-4"

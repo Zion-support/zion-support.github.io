@@ -142,30 +142,30 @@ const AIPredictiveMaintenancePage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900"></div>
       <Navigation >{/* Hero Section */}</Navigation>
       </Navigation><section className="pt-20 pb-16 px-4">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-600 to-blue-600 rounded-full mb-6">
+        <div className="container mx-auto max-w-6xl"></section>
+          <div className="text-center mb-16"></div>
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-600 to-blue-600 rounded-full mb-6"></div>
               <Settings className="w-10 h-10 text-white" />
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">AI Predictive Maintenance<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your maintenance operations with AI-powered predictive analytics. Reduce costs by 30-50%, prevent unexpected failures, and optimize equipment performance with machine learning algorithms.</p>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">AI Predictive Maintenance</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your maintenance operations with AI-powered predictive analytics. Reduce costs by 30-50%, prevent unexpected failures, and optimize equipment performance with machine learning algorithms.</p>
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-              <div className="flex items-center space-x-2 text-green-400">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8"></div>
+              <div className="flex items-center space-x-2 text-green-400"></div>
                 <CheckCircle className="w-5 h-5" />
                 <span>30-50% cost reduction</span>
               </div>
-              <div className="flex items-center space-x-2 text-blue-400">
+              <div className="flex items-center space-x-2 text-blue-400"></div>
                 <Users className="w-5 h-5" />
                 <span>200+ successful implementations</span>
               </div>
-              <div className="flex items-center space-x-2 text-yellow-400">
+              <div className="flex items-center space-x-2 text-yellow-400"></div>
                 <Star className="w-5 h-5 fill-current" />
                 <span>4.9/5 client rating</span>
               </div>
             </div>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <a
                 href="#contact"
                 className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
@@ -183,14 +183,14 @@ const AIPredictiveMaintenancePage: React.FC = () => {
 
       {/* Features Section */}
       <section className="py-16 px-4 bg-slate-800/50">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Advanced Predictive Features<p className="text-xl text-gray-300 max-w-3xl mx-auto">Comprehensive AI-powered predictive maintenance solution with real-time monitoring and intelligent insights.<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
-              <div key={index} className="bg-slate-800/80 backdrop-blur-sm border border-green-400/20 rounded-xl p-6 hover:border-green-400/40 transition-all duration-300">
-                <div className="flex items-center space-x-3 mb-4">
-                  <div className="w-10 h-10 bg-gradient-to-r from-green-600 to-blue-600 rounded-lg flex items-center justify-center">
+        <div className="container mx-auto max-w-6xl"></section>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Advanced Predictive Features</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">Comprehensive AI-powered predictive maintenance solution with real-time monitoring and intelligent insights.</p><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
+              <div key={index} className="bg-slate-800/80 backdrop-blur-sm border border-green-400/20 rounded-xl p-6 hover:border-green-400/40 transition-all duration-300"></div>
+                <div className="flex items-center space-x-3 mb-4"></div>
+                  <div className="w-10 h-10 bg-gradient-to-r from-green-600 to-blue-600 rounded-lg flex items-center justify-center"></div>
                     <Brain className="w-5 h-5 text-white" />
-                  <h3 className="text-lg font-semibold text-white">{feature}<p className="text-gray-300 text-sm">{feature === 'Machine learning algorithms for failure prediction' && 'Advanced ML models analyze historical data and sensor readings to predict equipment failures with 95%+ accuracy.'}
+                  <h3 className="text-lg font-semibold text-white">{feature}</h3><p className="text-gray-300 text-sm">{feature === 'Machine learning algorithms for failure prediction' && 'Advanced ML models analyze historical data and sensor readings to predict equipment failures with 95%+ accuracy.'}
                   {feature === 'Real-time sensor data analysis' && 'Continuous monitoring of sensor data with real-time analysis to detect anomalies and potential issues immediately.'}
                   {feature === 'Predictive maintenance scheduling' && 'Intelligent scheduling system that optimizes maintenance windows based on predicted failure timelines and operational requirements.'}
                   {feature === 'Equipment health monitoring' && 'Comprehensive health scoring system that tracks equipment condition and provides actionable insights for maintenance teams.'}
@@ -211,16 +211,16 @@ const AIPredictiveMaintenancePage: React.FC = () => {
 
       {/* Industries Section */}
       <section className="py-16 px-4">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Industry Applications<p className="text-xl text-gray-300 max-w-3xl mx-auto">Proven results across multiple industries with significant cost savings and improved reliability.<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{industries.map((industry, index) => (</div>
-              <div key={index} className="bg-slate-800/80 backdrop-blur-sm border border-green-400/20 rounded-xl p-6 hover:border-green-400/40 transition-all duration-300">
-                <div className="flex items-center space-x-3 mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-green-600 to-blue-600 rounded-lg flex items-center justify-center">
+        <div className="container mx-auto max-w-6xl"></section>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Industry Applications</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">Proven results across multiple industries with significant cost savings and improved reliability.</p><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{industries.map((industry, index) => (</div>
+              <div key={index} className="bg-slate-800/80 backdrop-blur-sm border border-green-400/20 rounded-xl p-6 hover:border-green-400/40 transition-all duration-300"></div>
+                <div className="flex items-center space-x-3 mb-4"></div>
+                  <div className="w-12 h-12 bg-gradient-to-r from-green-600 to-blue-600 rounded-lg flex items-center justify-center"></div>
                     <industry.icon className="w-6 h-6 text-white" />
                   </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-white">{industry.name}<p className="text-green-400 text-sm font-semibold">{industry.savings}<p className="text-gray-300 text-sm">{industry.description}</p>
+                  <div></div>
+                    <h3 className="text-lg font-semibold text-white">{industry.name}</h3><p className="text-green-400 text-sm font-semibold">{industry.savings}</p><p className="text-gray-300 text-sm">{industry.description}</p>
               </div>
             ))}
           </div>
@@ -229,13 +229,13 @@ const AIPredictiveMaintenancePage: React.FC = () => {
 
       {/* Benefits Section */}
       <section className="py-16 px-4 bg-slate-800/50">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Proven Business Benefits<p className="text-xl text-gray-300 max-w-3xl mx-auto">Transform your maintenance operations with measurable results and significant cost savings.<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{benefits.map((benefit, index) => (</div>
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+        <div className="container mx-auto max-w-6xl"></section>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Proven Business Benefits</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">Transform your maintenance operations with measurable results and significant cost savings.</p><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{benefits.map((benefit, index) => (</div>
+              <div key={index} className="text-center"></div>
+                <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                   <CheckCircle className="w-8 h-8 text-white" />
-                <h3 className="text-xl font-semibold text-white mb-2">{benefit}<p className="text-gray-300">{benefit === 'Reduce maintenance costs by 30-50%' && 'Optimize maintenance schedules and prevent unnecessary repairs, resulting in significant cost savings.'}
+                <h3 className="text-xl font-semibold text-white mb-2">{benefit}</h3><p className="text-gray-300">{benefit === 'Reduce maintenance costs by 30-50%' && 'Optimize maintenance schedules and prevent unnecessary repairs, resulting in significant cost savings.'}
                   {benefit === 'Increase equipment uptime by 25%' && 'Predict and prevent failures before they occur, maximizing equipment availability and productivity.'}
                   {benefit === 'Prevent unexpected breakdowns' && 'AI algorithms identify potential failures weeks or months in advance, allowing for planned maintenance.'}
                   {benefit === 'Optimize maintenance schedules' && 'Intelligent scheduling ensures maintenance is performed at the optimal time, balancing cost and reliability.'}
@@ -250,19 +250,19 @@ const AIPredictiveMaintenancePage: React.FC = () => {
 
       {/* Pricing Section */}
       <section id="pricing" className="py-16 px-4">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Choose Your Plan<p className="text-xl text-gray-300 max-w-3xl mx-auto">Flexible pricing plans designed to meet your predictive maintenance needs at any scale.<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (<div key={index} className={`bg-slate-800/80 backdrop-blur-sm border rounded-xl p-8 relative ${plan.popular ? 'border-green-400/40 ring-2 ring-green-400/20' : 'border-gray-600/40'}`}>{plan.popular && (</div>
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+        <div className="container mx-auto max-w-6xl"></section>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Choose Your Plan</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">Flexible pricing plans designed to meet your predictive maintenance needs at any scale.</p><div className="grid grid-cols-1 md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (</div><div key={index} className={`bg-slate-800/80 backdrop-blur-sm border rounded-xl p-8 relative ${plan.popular ? 'border-green-400/40 ring-2 ring-green-400/20' : 'border-gray-600/40'}`}>{plan.popular && (</div>
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
                     <span className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">Most Popular</span>
                     </span>
                   </div>
                 )}
 
-                <div className="text-center mb-8">
+                <div className="text-center mb-8"></div>
                   <h3 className="text-2xl font-bold text-white mb-4">{plan.name}</h3>
-                  <div className="flex items-center justify-center space-x-2 mb-2">
-                    <span className="text-4xl font-bold text-white">{plan.price}<span className="text-gray-400">{plan.period}</span>
+                  <div className="flex items-center justify-center space-x-2 mb-2"></div>
+                    <span className="text-4xl font-bold text-white">{plan.price}</span><span className="text-gray-400">{plan.period}</span>
                   </div>
                   {plan.originalPrice && (
                     <span className="text-gray-400 line-through text-lg">{plan.originalPrice}</span>
@@ -290,13 +290,13 @@ const AIPredictiveMaintenancePage: React.FC = () => {
 
       {/* Testimonials Section */}
       <section className="py-16 px-4 bg-slate-800/50">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Client Success Stories<p className="text-xl text-gray-300 max-w-3xl mx-auto">See how AI Predictive Maintenance has transformed operations across various industries.<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{testimonials.map((testimonial, index) => (</div>
-              <div key={index} className="bg-slate-800/80 backdrop-blur-sm border border-green-400/20 rounded-xl p-6">
-                <div className="flex items-center space-x-1 mb-4">{[...Array(testimonial.rating)].map((_, i) => (<Star key={i} className="w-5 h-5 text-yellow-400 fill-current" >))}<p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
-                <div>
-                  <p className="font-semibold text-white">{testimonial.name}<p className="text-gray-400 text-sm">{testimonial.role}</p>
+        <div className="container mx-auto max-w-6xl"></section>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Client Success Stories</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">See how AI Predictive Maintenance has transformed operations across various industries.</p><div className="grid grid-cols-1 md:grid-cols-3 gap-8">{testimonials.map((testimonial, index) => (</div>
+              <div key={index} className="bg-slate-800/80 backdrop-blur-sm border border-green-400/20 rounded-xl p-6"></div>
+                <div className="flex items-center space-x-1 mb-4">{[...Array(testimonial.rating)].map((_, i) => (</div><Star key={i} className="w-5 h-5 text-yellow-400 fill-current" >))}<p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
+                <div></div>
+                  <p className="font-semibold text-white">{testimonial.name}</p><p className="text-gray-400 text-sm">{testimonial.role}</p>
                 </div>
               </div>
             ))}
@@ -306,10 +306,10 @@ const AIPredictiveMaintenancePage: React.FC = () => {
 
       {/* Contact Section */}
       <section id="contact" className="py-16 px-4 bg-gradient-to-r from-green-600 to-blue-600">
-        <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Transform Your Maintenance?<p className="text-xl text-green-100 mb-8">Contact us today for a free predictive maintenance assessment and ROI analysis.</p>
+        <div className="container mx-auto max-w-4xl text-center"></section>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Transform Your Maintenance?</h2><p className="text-xl text-green-100 mb-8">Contact us today for a free predictive maintenance assessment and ROI analysis.</p>
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
             <a
               href="tel:+13024640950"
               className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-50 transition-colors flex items-center space-x-2"
@@ -325,8 +325,8 @@ const AIPredictiveMaintenancePage: React.FC = () => {
               <span>kleber@ziontechgroup.com</span>
             </a>
           </div>
-          <div className="mt-8 text-green-100">
-            <p className="flex items-center justify-center space-x-2">
+          <div className="mt-8 text-green-100"></div>
+            <p className="flex items-center justify-center space-x-2"></p>
               <MapPin className="w-4 h-4" />
               <span>364 E Main St STE 1008, Middletown, DE 19709</span>
             </p>

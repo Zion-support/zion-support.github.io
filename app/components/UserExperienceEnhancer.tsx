@@ -192,11 +192,11 @@ export const UserExperienceEnhancer: React.FC = () => {
       </button>
 
       {/* User Preferences Panel */}
-      <div className="fixed bottom-4 left-4 bg-gray-900 text-white p-4 rounded-lg shadow-lg z-40 max-w-xs">
+      <div className="fixed bottom-4 left-4 bg-gray-900 text-white p-4 rounded-lg shadow-lg z-40 max-w-xs"></div>
         <h3 className="text-sm font-bold mb-3">Preferences</h3>
 
-        <div className="space-y-2 text-sm">
-          <div>
+        <div className="space-y-2 text-sm"></div>
+          <div></div>
             <label className="block text-xs text-gray-300 mb-1">Theme<select
               value={preferences.theme}
               onChange={(e) =>handleThemeChange(e.target.value as 'light' | 'dark' | 'auto')}
@@ -206,7 +206,7 @@ export const UserExperienceEnhancer: React.FC = () => {
             </select>
           </div>
 
-          <div>
+          <div></div>
             <label className="block text-xs text-gray-300 mb-1">Language<select
               value={preferences.language}
               onChange={(e) =>handleLanguageChange(e.target.value)}
@@ -217,7 +217,7 @@ export const UserExperienceEnhancer: React.FC = () => {
             </select>
           </div>
 
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-2"></div>
             <input
               type="checkbox"
               id="notifications"
@@ -227,7 +227,7 @@ export const UserExperienceEnhancer: React.FC = () => {
             /><label htmlFor="notifications" className="text-xs">Notifications</label>
           </div>
 
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-2"></div>
             <input
               type="checkbox"
               id="analytics"
@@ -238,7 +238,7 @@ export const UserExperienceEnhancer: React.FC = () => {
           </div>
         </div>
 
-        <div className="mt-3 pt-2 border-t border-gray-700">
+        <div className="mt-3 pt-2 border-t border-gray-700"></div>
           <p className="text-xs text-gray-400">Shortcuts: Ctrl+K (search), Ctrl+D (theme)</p>
           </p>
         </div>

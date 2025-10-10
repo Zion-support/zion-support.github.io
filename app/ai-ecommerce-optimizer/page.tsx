@@ -158,20 +158,20 @@ const AIEcommerceOptimizerPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation >{/* Hero Section */}</Navigation>
       </Navigation><section className="pt-24 pb-16 px-4">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center space-x-2 bg-cyan-400/10 text-cyan-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
+        <div className="container mx-auto max-w-6xl"></section>
+          <div className="text-center mb-16"></div>
+            <div className="inline-flex items-center space-x-2 bg-cyan-400/10 text-cyan-400 px-4 py-2 rounded-full text-sm font-medium mb-6"></div>
               <Brain className="w-4 h-4" />
               <span>AI-Powered E-commerce Optimization</span>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              AI E-commerce <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Optimizer<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your online store with AI-powered optimization. Increase conversions, reduce cart abandonment,</p>
+              AI E-commerce</h1> <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Optimizer</span><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your online store with AI-powered optimization. Increase conversions, reduce cart abandonment,</p>
               and maximize revenue with intelligent automation and analytics.</p>
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <a href="/contact" className="cyber-button px-8 py-4 text-lg">Get Started Today</a>
                 <ArrowRight className="w-5 h-5 ml-2" />
               <a href="/demo" className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400/10 transition-colors text-lg">View Demo</a>
@@ -180,18 +180,18 @@ const AIEcommerceOptimizerPage: React.FC = () => {
           </div>
 
           {/* Key Metrics */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">45%<div className="text-gray-300">Conversion Increase</div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"></div>
+            <div className="text-center"></div>
+              <div className="text-3xl font-bold text-cyan-400 mb-2">45%</div><div className="text-gray-300">Conversion Increase</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-purple-400 mb-2">35%<div className="text-gray-300">Cart Abandonment Reduction</div>
+            <div className="text-center"></div>
+              <div className="text-3xl font-bold text-purple-400 mb-2">35%</div><div className="text-gray-300">Cart Abandonment Reduction</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-green-400 mb-2">30%<div className="text-gray-300">Revenue Growth</div>
+            <div className="text-center"></div>
+              <div className="text-3xl font-bold text-green-400 mb-2">30%</div><div className="text-gray-300">Revenue Growth</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-yellow-400 mb-2">50%<div className="text-gray-300">Faster Checkout</div>
+            <div className="text-center"></div>
+              <div className="text-3xl font-bold text-yellow-400 mb-2">50%</div><div className="text-gray-300">Faster Checkout</div>
             </div>
           </div>
         </div>
@@ -199,14 +199,14 @@ const AIEcommerceOptimizerPage: React.FC = () => {
 
       {/* Features Section */}
       <section className="py-16 px-4">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-6">Powerful AI Features for E-commerce Success<p className="text-xl text-gray-300 max-w-3xl mx-auto">Our AI-powered platform provides comprehensive optimization tools to maximize your online store's performance.<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-6 hover:border-cyan-400/40 transition-colors">
-                <div className="w-12 h-12 bg-cyan-400/10 rounded-lg flex items-center justify-center mb-4">
+        <div className="container mx-auto max-w-6xl"></section>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-4xl font-bold text-white mb-6">Powerful AI Features for E-commerce Success</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">Our AI-powered platform provides comprehensive optimization tools to maximize your online store's performance.</p><div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-6 hover:border-cyan-400/40 transition-colors"></div>
+                <div className="w-12 h-12 bg-cyan-400/10 rounded-lg flex items-center justify-center mb-4"></div>
                   <feature.icon className="w-6 h-6 text-cyan-400" />
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300 mb-4">{feature.description}<ul className="space-y-2">{feature.benefits.map((benefit, idx) => (</ul>
+                <p className="text-gray-300 mb-4">{feature.description}</p><ul className="space-y-2">{feature.benefits.map((benefit, idx) => (</ul>
                     <li key={idx} className="flex items-center text-sm text-gray-300">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" >{benefit}</CheckCircle>
                     </CheckCircle>
@@ -220,15 +220,15 @@ const AIEcommerceOptimizerPage: React.FC = () => {
 
       {/* Optimization Areas */}
       <section className="py-16 px-4 bg-slate-800/30">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-6">Comprehensive E-commerce Optimization<p className="text-xl text-gray-300 max-w-3xl mx-auto">Every aspect of your online store optimized with AI for maximum performance and customer satisfaction.<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{optimizationAreas.map((area, index) => (</div>
-              <div key={index} className="bg-slate-900/50 backdrop-blur-sm border border-purple-400/20 rounded-lg p-6 hover:border-purple-400/40 transition-colors">
-                <div className="w-12 h-12 bg-purple-400/10 rounded-lg flex items-center justify-center mb-4">
+        <div className="container mx-auto max-w-6xl"></section>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-4xl font-bold text-white mb-6">Comprehensive E-commerce Optimization</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">Every aspect of your online store optimized with AI for maximum performance and customer satisfaction.</p><div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{optimizationAreas.map((area, index) => (</div>
+              <div key={index} className="bg-slate-900/50 backdrop-blur-sm border border-purple-400/20 rounded-lg p-6 hover:border-purple-400/40 transition-colors"></div>
+                <div className="w-12 h-12 bg-purple-400/10 rounded-lg flex items-center justify-center mb-4"></div>
                   <area.icon className="w-6 h-6 text-purple-400" />
                 <h3 className="text-xl font-semibold text-white mb-3">{area.title}</h3>
-                <p className="text-gray-300 mb-4">{area.description}<div className="space-y-2">{area.metrics.map((metric, idx) => (</div>
-                    <div key={idx} className="flex items-center text-sm text-green-400">
+                <p className="text-gray-300 mb-4">{area.description}</p><div className="space-y-2">{area.metrics.map((metric, idx) => (</div>
+                    <div key={idx} className="flex items-center text-sm text-green-400"></div>
                       <TrendingUp className="w-4 h-4 mr-2" >{metric}</TrendingUp>
                     </TrendingUp>
                   ))}
@@ -241,20 +241,20 @@ const AIEcommerceOptimizerPage: React.FC = () => {
 
       {/* Pricing Section */}
       <section className="py-16 px-4">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-6">Choose Your Optimization Plan<p className="text-xl text-gray-300 max-w-3xl mx-auto">Flexible pricing plans designed to scale with your business growth.<div className="grid md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (<div key={index} className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-lg p-8 ${
+        <div className="container mx-auto max-w-6xl"></section>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-4xl font-bold text-white mb-6">Choose Your Optimization Plan</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">Flexible pricing plans designed to scale with your business growth.</p><div className="grid md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (</div><div key={index} className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-lg p-8 ${
                 plan.popular
                   ? 'border-cyan-400/40 ring-2 ring-cyan-400/20'
                   : 'border-gray-600/50'
               }`}>{plan.popular && (</div>
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
                     <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-medium">Most Popular</span>
                     </span>
                   </div>
                 )}
-                <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}<div className="text-4xl font-bold text-cyan-400 mb-2">{plan.price}<p className="text-gray-300">{plan.description}<ul className="space-y-3 mb-8">{plan.features.map((feature, idx) => (</ul>
+                <div className="text-center mb-6"></div>
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3><div className="text-4xl font-bold text-cyan-400 mb-2">{plan.price}</div><p className="text-gray-300">{plan.description}</p><ul className="space-y-3 mb-8">{plan.features.map((feature, idx) => (</ul>
                     <li key={idx} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3" >{feature}</CheckCircle>
                     </CheckCircle>
@@ -273,13 +273,13 @@ const AIEcommerceOptimizerPage: React.FC = () => {
 
       {/* Testimonials */}
       <section className="py-16 px-4 bg-slate-800/30">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-6">What Our Customers Say<p className="text-xl text-gray-300 max-w-3xl mx-auto">Join thousands of successful e-commerce businesses using AI optimization.<div className="grid md:grid-cols-3 gap-8">{testimonials.map((testimonial, index) => (</div>
-              <div key={index} className="bg-slate-900/50 backdrop-blur-sm border border-gray-600/50 rounded-lg p-6">
-                <div className="flex items-center mb-4">{[...Array(testimonial.rating)].map((_, i) => (<Star key={i} className="w-5 h-5 text-yellow-400 fill-current" >))}<p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
-                <div>
-                  <div className="font-semibold text-white">{testimonial.name}<div className="text-cyan-400 text-sm">{testimonial.role}<div className="text-gray-400 text-sm">{testimonial.company}</div>
+        <div className="container mx-auto max-w-6xl"></section>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-4xl font-bold text-white mb-6">What Our Customers Say</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">Join thousands of successful e-commerce businesses using AI optimization.</p><div className="grid md:grid-cols-3 gap-8">{testimonials.map((testimonial, index) => (</div>
+              <div key={index} className="bg-slate-900/50 backdrop-blur-sm border border-gray-600/50 rounded-lg p-6"></div>
+                <div className="flex items-center mb-4">{[...Array(testimonial.rating)].map((_, i) => (</div><Star key={i} className="w-5 h-5 text-yellow-400 fill-current" >))}<p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
+                <div></div>
+                  <div className="font-semibold text-white">{testimonial.name}</div><div className="text-cyan-400 text-sm">{testimonial.role}</div><div className="text-gray-400 text-sm">{testimonial.company}</div>
                 </div>
               </div>
             ))}
@@ -289,10 +289,10 @@ const AIEcommerceOptimizerPage: React.FC = () => {
 
       {/* CTA Section */}
       <section className="py-16 px-4">
-        <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Optimize Your E-commerce Store?<p className="text-xl text-gray-300 mb-8">Start your AI-powered optimization journey today and see immediate results.</p>
+        <div className="container mx-auto max-w-4xl text-center"></section>
+          <h2 className="text-4xl font-bold text-white mb-6">Ready to Optimize Your E-commerce Store?</h2><p className="text-xl text-gray-300 mb-8">Start your AI-powered optimization journey today and see immediate results.</p>
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <a href="/contact" className="cyber-button px-8 py-4 text-lg">Start Free Trial</a>
               <ArrowRight className="w-5 h-5 ml-2" />
             <a href="/demo" className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400/10 transition-colors text-lg">Schedule Demo</a>

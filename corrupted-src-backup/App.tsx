@@ -21,7 +21,7 @@ function App() {
 
   return (
     <ErrorBoundary>
-      <div>
+      <div></div>
         <Router>
           <Suspense fallback={<div>Loading...</div>}>
             <Routes>
@@ -62,8 +62,8 @@ class ErrorBoundary extends React.Component<
     if (this.state.hasError) {
       return (
         this.props.fallback || (
-          <div className="min-h-screen flex items-center justify-center bg-gray-50">
-            <div className="text-center">
+          <div className="min-h-screen flex items-center justify-center bg-gray-50"></div>
+            <div className="text-center"></div>
               <h1 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong</h1>
               <button
                 onClick={() => this.setState({ hasError: false })}

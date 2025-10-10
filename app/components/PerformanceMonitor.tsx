@@ -112,11 +112,11 @@ const PerformanceMonitor: React.FC = () => {
   };
 
   return (
-    <div className="fixed bottom-4 right-4 bg-slate-900/95 backdrop-blur-sm border border-cyan-400/30 rounded-lg p-4 shadow-lg z-50 max-w-sm">
-      <div className="flex items-center justify-between mb-3">
-        <div className="flex items-center space-x-2">
+    <div className="fixed bottom-4 right-4 bg-slate-900/95 backdrop-blur-sm border border-cyan-400/30 rounded-lg p-4 shadow-lg z-50 max-w-sm"></div>
+      <div className="flex items-center justify-between mb-3"></div>
+        <div className="flex items-center space-x-2"></div>
           <BarChart3 className="w-4 h-4 text-cyan-400" />
-          <h3 className="text-white font-semibold text-sm">Performance<button
+          <h3 className="text-white font-semibold text-sm">Performance</h3><button
           onClick={() =>setIsVisible(false)}
           className="text-gray-400 hover:text-white transition-colors"
         ></button>
@@ -124,33 +124,33 @@ const PerformanceMonitor: React.FC = () => {
         </button>
       </div>
 
-      <div className="space-y-2 text-xs">
-        <div className="flex justify-between items-center">
-          <span className="text-gray-300">Load Time:<span className={getPerformanceColor(metrics.loadTime, { good: 2000, needsImprovement: 4000 })}>{metrics.loadTime}ms</span>
+      <div className="space-y-2 text-xs"></div>
+        <div className="flex justify-between items-center"></div>
+          <span className="text-gray-300">Load Time:</span><span className={getPerformanceColor(metrics.loadTime, { good: 2000, needsImprovement: 4000 })}>{metrics.loadTime}ms</span>
           </span>
         </div>
 
-        <div className="flex justify-between items-center">
-          <span className="text-gray-300">First Paint:<span className={getPerformanceColor(metrics.firstContentfulPaint, { good: 1800, needsImprovement: 3000 })}>{metrics.firstContentfulPaint}ms</span>
+        <div className="flex justify-between items-center"></div>
+          <span className="text-gray-300">First Paint:</span><span className={getPerformanceColor(metrics.firstContentfulPaint, { good: 1800, needsImprovement: 3000 })}>{metrics.firstContentfulPaint}ms</span>
           </span>
         </div>
 
-        <div className="flex justify-between items-center">
-          <span className="text-gray-300">Largest Paint:<span className={getPerformanceColor(metrics.largestContentfulPaint, { good: 2500, needsImprovement: 4000 })}>{metrics.largestContentfulPaint}ms</span>
+        <div className="flex justify-between items-center"></div>
+          <span className="text-gray-300">Largest Paint:</span><span className={getPerformanceColor(metrics.largestContentfulPaint, { good: 2500, needsImprovement: 4000 })}>{metrics.largestContentfulPaint}ms</span>
           </span>
         </div>
 
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center"></div>
           <span className="text-gray-300">Connection:</span>
-          <div className="flex items-center space-x-1">
+          <div className="flex items-center space-x-1"></div>
             <Wifi className="w-3 h-3 text-cyan-400" />
             <span className="text-cyan-400">{metrics.connectionSpeed}</span>
           </div>
         </div>
       </div>
 
-      <div className="mt-3 pt-2 border-t border-gray-700">
-        <div className="flex items-center space-x-1 text-xs text-gray-400">
+      <div className="mt-3 pt-2 border-t border-gray-700"></div>
+        <div className="flex items-center space-x-1 text-xs text-gray-400"></div>
           <Clock className="w-3 h-3" />
           <span>Measured at {new Date().toLocaleTimeString()}</span>
         </div>

@@ -4214,7 +4214,7 @@ const HomePage: React.FC = () => {
             Transform your business with cutting-edge AI technology. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.
           </p>
           
-<div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
             <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center">
               Get Started Today
               <ArrowRight className="w-5 h-5 ml-2" />
@@ -4243,7 +4243,7 @@ const HomePage: React.FC = () => {
               <div className="text-gray-400">Uptime Guarantee</div>
             </div>
           </div>
-</div>
+        </div>
       </section>
 
       {/* Services Section */}
@@ -4269,10 +4269,10 @@ const HomePage: React.FC = () => {
                     
                     <div className="space-y-2 mb-6">
                       {service.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
-                          {feature}
-                        </div>
+                          <div key={featureIndex} className="flex items-center text-sm text-gray-300">
+                            <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
+                            {feature}
+                          </div>
                       ))}
                     </div>
                     
@@ -4295,14 +4295,14 @@ const HomePage: React.FC = () => {
               {aiServices.map((service, index) => (
                 <div key={index} className={`holographic-advanced p-6 hover:scale-105 transition-all duration-300 group cursor-pointer ${service.enterprise ? 'ring-2 ring-purple-400/30' : ''}`} onClick={() => window.open(service.link, '_blank')}>
                   {service.enterprise && (
-                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2"></div>
                       <span className="bg-gradient-to-r from-purple-400 to-pink-600 text-white text-xs font-bold px-3 py-1 rounded-full">
                         Enterprise
                       </span>
                     </div>
                   )}
-                  <div className="text-center mb-4">
-                    <div className="w-16 h-16 bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-purple-400/25">
+                  <div className="text-center mb-4"></div>
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-purple-400/25"></div>
                       <service.icon className="w-8 h-8 text-white" />
                     </div>
                     <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">{service.name}</h3>
@@ -4310,14 +4310,14 @@ const HomePage: React.FC = () => {
                     
                     <div className="space-y-2 mb-6">
                       {service.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="flex items-center text-sm text-gray-300">
+                        <div key={featureIndex} className="flex items-center text-sm text-gray-300"></div>
                           <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />
                           {feature}
                         </div>
                       ))}
                     </div>
                     
-                    <div className="text-center">
+                    <div className="text-center"></div>
                       <div className="text-2xl font-bold text-purple-400 mb-2">{service.price}</div>
                       <button className="neon-button-enhanced text-sm">
                         Learn More →
@@ -4330,13 +4330,13 @@ const HomePage: React.FC = () => {
           </div>
 
           {/* IT Services */}
-          <div className="mb-24">
+          <div className="mb-24"></div>
             <h3 className="text-3xl font-bold text-white mb-12 text-center">IT Infrastructure Services</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
               {itServices.map((service, index) => (
-                <div key={index} className="cyber-grid-advanced p-6 hover:scale-105 transition-all duration-300 group cursor-pointer" onClick={() => window.open(service.link, '_blank')}>
-                  <div className="text-center mb-4">
-                    <div className="w-16 h-16 bg-gradient-to-r from-green-400 via-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-green-400/25">
+                <div key={index} className="cyber-grid-advanced p-6 hover:scale-105 transition-all duration-300 group cursor-pointer" onClick={() => window.open(service.link, '_blank')}></div>
+                  <div className="text-center mb-4"></div>
+                    <div className="w-16 h-16 bg-gradient-to-r from-green-400 via-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-green-400/25"></div>
                       <service.icon className="w-8 h-8 text-white" />
                     </div>
                     <h3 className="text-xl font-bold text-white mb-3 group-hover:text-green-400 transition-colors">{service.name}</h3>
@@ -4344,14 +4344,14 @@ const HomePage: React.FC = () => {
                     
                     <div className="space-y-2 mb-6">
                       {service.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="flex items-center text-sm text-gray-300">
+                        <div key={featureIndex} className="flex items-center text-sm text-gray-300"></div>
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                           {feature}
                         </div>
                       ))}
                     </div>
                     
-                    <div className="text-center">
+                    <div className="text-center"></div>
                       <div className="text-2xl font-bold text-green-400 mb-2">{service.price}</div>
                       <button className="neon-button text-sm">
                         Learn More →
@@ -4363,12 +4363,13 @@ const HomePage: React.FC = () => {
             </div>
           </div>
         </div>
+        </div>
       </section>
 
       {/* AI Services Section */}
       <section className="py-16 bg-gradient-to-r from-purple-900/20 to-blue-900/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></section>
+          <div className="text-center mb-16"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Enterprise AI Solutions
             </h2>
@@ -4386,16 +4387,16 @@ const HomePage: React.FC = () => {
                 }`}
                 onClick={() => window.open(service.link, '_blank')}
               >
-                {service.enterprise && (
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                {service.enterprise && (</div>
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2"></div>
                     <span className="bg-gradient-to-r from-purple-400 to-pink-600 text-white text-xs font-bold px-3 py-1 rounded-full">
                       Enterprise
                     </span>
                   </div>
                 )}
                 
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-600 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div className="text-center"></div>
+                  <div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-600 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300"></div>
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors">{service.name}</h3>
@@ -4403,14 +4404,14 @@ const HomePage: React.FC = () => {
                   
                   <div className="grid grid-cols-2 gap-3 mb-6">
                     {service.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center text-sm text-gray-300">
+                      <div key={featureIndex} className="flex items-center text-sm text-gray-300"></div>
                         <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />
                         {feature}
                       </div>
                     ))}
                   </div>
                   
-                  <div className="text-center">
+                  <div className="text-center"></div>
                     <div className="text-3xl font-bold text-white mb-4">{service.price}</div>
                     <div className="bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold px-6 py-3 rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all group-hover:shadow-lg group-hover:shadow-purple-500/25">
                       Get Started
@@ -4421,12 +4422,13 @@ const HomePage: React.FC = () => {
             ))}
           </div>
         </div>
+        </div>
       </section>
 
       {/* IT Services Section */}
       <section className="py-16 bg-white/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></section>
+          <div className="text-center mb-16"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               IT Infrastructure Services
             </h2>
@@ -4441,9 +4443,9 @@ const HomePage: React.FC = () => {
                 key={index} 
                 className="cyber-card p-6 hover:scale-105 transition-all duration-300 group cursor-pointer"
                 onClick={() => window.open(service.link, '_blank')}
-              >
-                <div className="text-center">
-                  <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+              ></div>
+                <div className="text-center"></div>
+                  <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300"></div>
                     <service.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-lg font-bold text-white mb-3 group-hover:text-green-400 transition-colors">{service.name}</h3>
@@ -4451,14 +4453,14 @@ const HomePage: React.FC = () => {
                   
                   <div className="space-y-2 mb-4">
                     {service.features.slice(0, 3).map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center text-xs text-gray-300">
+                      <div key={featureIndex} className="flex items-center text-xs text-gray-300"></div>
                         <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                         {feature}
                       </div>
                     ))}
                   </div>
                   
-                  <div className="text-center">
+                  <div className="text-center"></div>
                     <div className="text-lg font-bold text-white mb-2">{service.price}</div>
                     <div className="text-green-400 hover:text-green-300 font-semibold text-sm transition-colors group-hover:underline">
                       Learn More →
@@ -4469,12 +4471,13 @@ const HomePage: React.FC = () => {
             ))}
           </div>
         </div>
+        </div>
       </section>
 
       {/* Testimonials Section */}
       <section className="py-24 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></section>
+          <div className="text-center mb-20"></div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Client Success Stories
             </h2>
@@ -4485,8 +4488,8 @@ const HomePage: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="holographic-card p-8 hover:scale-105 transition-all duration-300 group">
-                <div className="flex items-center mb-4">
+              <div key={index} className="holographic-card p-8 hover:scale-105 transition-all duration-300 group"></div>
+                <div className="flex items-center mb-4"></div>
                   <div className="flex text-yellow-400">
                     {[...Array(5)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 fill-current" />
@@ -4496,11 +4499,11 @@ const HomePage: React.FC = () => {
                 <p className="text-gray-300 mb-6 italic leading-relaxed">
                   "{testimonial.content}"
                 </p>
-                <div className="flex items-center">
+                <div className="flex items-center"></div>
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full flex items-center justify-center text-white font-bold mr-4 group-hover:scale-110 transition-transform duration-300">
                     {testimonial.avatar}
                   </div>
-                  <div>
+                  <div></div>
                     <h4 className="text-white font-semibold group-hover:text-cyan-400 transition-colors">{testimonial.name}</h4>
                     <p className="text-gray-400 text-sm">{testimonial.role}</p>
                     <p className="text-gray-500 text-xs">{testimonial.company}</p>
@@ -4510,16 +4513,17 @@ const HomePage: React.FC = () => {
             ))}
           </div>
         </div>
+        </div>
       </section>
 
       {/* Stats Section */}
       <section className="py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></section>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
             {stats.map((stat, index) => (
-              <div key={index} className="text-center group cyber-card p-6 hover:scale-105 transition-all duration-300">
-                <div className="relative mb-4">
-                  <div className="w-16 h-16 mx-auto bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-400/25">
+              <div key={index} className="text-center group cyber-card p-6 hover:scale-105 transition-all duration-300"></div>
+                <div className="relative mb-4"></div>
+                  <div className="w-16 h-16 mx-auto bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-400/25"></div>
                     <stat.icon className="w-8 h-8 text-white" />
                   </div>
                   <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full blur opacity-30 group-hover:opacity-50 transition-opacity"></div>
@@ -4530,11 +4534,12 @@ const HomePage: React.FC = () => {
             ))}
           </div>
         </div>
+        </div>
       </section>
 
       {/* Contact CTA Section */}
       <section className="py-24 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></section>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
             Ready to Transform Your Business?
           </h2>
@@ -4542,8 +4547,8 @@ const HomePage: React.FC = () => {
             Contact us today for a free consultation and discover how our AI and IT solutions can revolutionize your operations.
           </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            <div className="text-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"></div>
+            <div className="text-center"></div>
               <div className="text-2xl mb-2">📞</div>
               <h3 className="text-lg font-bold text-white mb-2">Phone</h3>
               <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 font-medium">
@@ -4551,7 +4556,7 @@ const HomePage: React.FC = () => {
               </a>
             </div>
             
-            <div className="text-center">
+            <div className="text-center"></div>
               <div className="text-2xl mb-2">✉️</div>
               <h3 className="text-lg font-bold text-white mb-2">Email</h3>
               <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 font-medium">
@@ -4559,7 +4564,7 @@ const HomePage: React.FC = () => {
               </a>
             </div>
             
-            <div className="text-center">
+            <div className="text-center"></div>
               <div className="text-2xl mb-2">📍</div>
               <h3 className="text-lg font-bold text-white mb-2">Location</h3>
               <p className="text-cyan-400 font-medium">
@@ -4572,6 +4577,7 @@ const HomePage: React.FC = () => {
           <button className="neon-button-ultra text-lg py-4 px-8">
             Get Free Consultation
           </button>
+        </div>
         </div>
       </section>
 

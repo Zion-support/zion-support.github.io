@@ -13,12 +13,12 @@ const January2026NewContentShowcaseBanne, r: React.FC = () => {
       classNa, m, e = "relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, rounde, d-2x, l, p-8, tex, t-whi, t, e"
     >
       {/* Background, Patter, n */}
-      <div, className="absolute, inse, t-0, opacit, y-10">
+      <div, className="absolute, inse, t-0, opacit, y-10"></div>
         <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-whi, t, e/5, t, o-transpare, n, t" />
       </div>
       <div, className="relativ, e, z-10">
-        {/* Head, e, r */}
-        <div, className="te, x, t-center, m, b-8">
+        {/* Head, e, r */}</div>
+        <div, className="te, x, t-center, m, b-8"></div>
           <moti, o, n.div, initia, l={{ sca, l, e: , 0., 9 }}
             anima, t, e = {{ sc, a, l, e:  , 1 }}
             transiti, o, n = {{ del, a, y: , 0., 2, duration: 0., 6 }}
@@ -45,7 +45,7 @@ const January2026NewContentShowcaseBanne, r: React.FC = () => {
         </div>
         {/* Features, Gri, d */}
         <div, classNam, e = "grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-5, ga, p-6, m, b-8">
-          { featur, e, s.m, a, p((fea, t, u, r, e, ind, e, x) = > (
+          { featur, e, s.m, a, p((fea, t, u, r, e, ind, e, x) = > (</div>
             <moti, o, n.div, ke, y = { featu, r, e.ti, t, l, e  }, initi, a, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
               anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
               transiti, o, n = {{ del, a, y: 0.5 + ind, e, x * , 0., 1, duration: 0., 6 }}
@@ -63,17 +63,17 @@ const January2026NewContentShowcaseBanne, r: React.FC = () => {
           transiti, o, n = {{ del, a, y: , 0., 8, duration: 0., 6 }}
           classNa, m, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, m, b-8"
         >
-          <div, className="te, x, t-cent, e, r">
+          <div, className="te, x, t-cent, e, r"></div>
             <div, className="te, x, t-3xl, fon, t-bold, tex, t-purp, l, e-300, m, b-1">99.7%</div>
           </div>
-          <div, className="te, x, t-cent, e, r">
+          <div, className="te, x, t-cent, e, r"></div>
             <div, className="te, x, t-sm, tex, t-bl, u, e-2, 0, 0">Speed, Boos, t</div>
           </div>
-          <div, className="te, x, t-cent, e, r">
+          <div, className="te, x, t-cent, e, r"></div>
             <div, className="te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-300, m, b-1">$50, 0, B</div>
             <div, className="te, x, t-sm, tex, t-bl, u, e-2, 0, 0">Enterprise, Valu, e</div>
           </div>
-          <div, className="te, x, t-cent, e, r">
+          <div, className="te, x, t-cent, e, r"></div>
             <div, className="te, x, t-3xl, fon, t-bold, tex, t-yell, o, w-300, m, b-1">95%</div>
           </div>
         </moti, o, n.d, i, v>
@@ -92,7 +92,7 @@ const January2026NewContentShowcaseBanne, r: React.FC = () => {
         </moti, o, n.d, i, v>
       </div>
       {/* Floating, Eleme, n, t, s */}
-      <div, classNam, e = "absolute, to, p-10, lef, t-1, 0, w-2, 0, h-20, b, g-purp, l, e-5, 0, 0/20, rounde, d-full, blu, r-xl, animat, e-pul, s, e" />
+      <div, classNam, e = "absolute, to, p-10, lef, t-1, 0, w-2, 0, h-20, b, g-purp, l, e-5, 0, 0/20, rounde, d-full, blu, r-xl, animat, e-pul, s, e" /></div>
       <div, className="absolute, botto, m-10, righ, t-1, 0, w-3, 2, h-32, b, g-bl, u, e-5, 0, 0/20, rounde, d-full, blu, r-xl, animat, e-pulse, dela, y-10, 0, 0" />
     </moti, o, n.di, v>
   );

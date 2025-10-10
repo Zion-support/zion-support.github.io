@@ -143,7 +143,7 @@ const AI3DGenerationPage: React.FC = () => {
     }
   ]
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet>
         <title>AI 3D Model Generation - Zion Tech Group | Zion Tech Group - AI & IT Solutions</title>
         <meta name="description" content="Generate high-quality 3D models using AI. Create characters, environments, and objects from text descriptions. Starting at $199/month." />
@@ -152,42 +152,42 @@ const AI3DGenerationPage: React.FC = () => {
 
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="inline-flex items-center bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
-            <Cube className="w-4 h-4 mr-2" >Revolutionary 3D Technology<h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">AI 3D Model Generation<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Create stunning 3D models, characters, and environments from simple text descriptions.</p>
+        <div className="max-w-7xl mx-auto text-center"></section>
+          <div className="inline-flex items-center bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-medium mb-6"></div>
+            <Cube className="w-4 h-4 mr-2" >Revolutionary 3D Technology<h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">AI 3D Model Generation</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Create stunning 3D models, characters, and environments from simple text descriptions.</p>
             Transform your ideas into photorealistic 3D assets in minutes, not months.</p>
           </p>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">90%<div className="text-gray-300">Time Saved</div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12"></div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div>
+              <div className="text-3xl font-bold text-cyan-400 mb-2">90%</div><div className="text-gray-300">Time Saved</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-green-400 mb-2">80%<div className="text-gray-300">Cost Reduction</div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div>
+              <div className="text-3xl font-bold text-green-400 mb-2">80%</div><div className="text-gray-300">Cost Reduction</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-purple-400 mb-2">5min<div className="text-gray-300">Generation Time</div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div>
+              <div className="text-3xl font-bold text-purple-400 mb-2">5min</div><div className="text-gray-300">Generation Time</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-orange-400 mb-2">24/7<div className="text-gray-300">Support</div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div>
+              <div className="text-3xl font-bold text-orange-400 mb-2">24/7</div><div className="text-gray-300">Support</div>
             </div>
           </div>
 
           {/* Contact Info */}
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12">
-            <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
-              <div className="flex items-center space-x-2">
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12"></div>
+            <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8"></div>
+              <div className="flex items-center space-x-2"></div>
                 <Phone className="w-5 h-5" />
-                <span className="text-white font-medium"><span className="sr-only">Screen reader: </span>+1 302 464 0950</span>
+                <span className="text-white font-medium"></span><span className="sr-only">Screen reader: </span>+1 302 464 0950</span>
               </div>
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center space-x-2"></div>
                 <Mail className="w-5 h-5" />
-                <span className="text-white font-medium"><span className="sr-only">Screen reader: </span>kleber@ziontechgroup.com</span>
+                <span className="text-white font-medium"></span><span className="sr-only">Screen reader: </span>kleber@ziontechgroup.com</span>
               </div>
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center space-x-2"></div>
                 <MapPin className="w-5 h-5" />
-                <span className="text-white font-medium"><span className="sr-only">Screen reader: </span>Middletown, DE</span>
+                <span className="text-white font-medium"></span><span className="sr-only">Screen reader: </span>Middletown, DE</span>
               </div>
             </div>
           </div>
@@ -196,22 +196,22 @@ const AI3DGenerationPage: React.FC = () => {
 
       {/* Features Section */}
       <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto"></section>
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">Powerful 3D Generation Features</h2>
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
             <div className="space-y-4">{features.map((feature, index) => (</div>
-                <div key={index} className="flex items-start space-x-3">
+                <div key={index} className="flex items-start space-x-3"></div>
                   <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
-                  <span className="text-gray-300"><span className="sr-only">Screen reader: </span>{feature}</span>
+                  <span className="text-gray-300"></span><span className="sr-only">Screen reader: </span>{feature}</span>
                 </div>
               ))}
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
-              <h3 className="text-2xl font-bold text-white mb-6">Why Choose Our 3D Generation?<div className="space-y-4">{benefits.map((benefit, index) => (</div>
-                  <div key={index} className="flex items-start space-x-3">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8"></div>
+              <h3 className="text-2xl font-bold text-white mb-6">Why Choose Our 3D Generation?</h3><div className="space-y-4">{benefits.map((benefit, index) => (</div>
+                  <div key={index} className="flex items-start space-x-3"></div>
                     <TrendingUp className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
-                    <span className="text-gray-300"><span className="sr-only">Screen reader: </span>{benefit}</span>
+                    <span className="text-gray-300"></span><span className="sr-only">Screen reader: </span>{benefit}</span>
                   </div>
                 ))}
               </div>
@@ -222,12 +222,12 @@ const AI3DGenerationPage: React.FC = () => {
 
       {/* Workflow */}
       <section className="py-16 px-4 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">Simple 4-Step Process<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{workflow.map((step, index) => (</div>
-              <div key={index} className="text-center">
-                <div className="bg-gradient-to-r from-purple-600 to-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl"><span className="sr-only">Screen reader: </span>{step.icon}<div className="bg-purple-100 text-purple-800 text-sm font-medium px-3 py-1 rounded-full inline-block mb-3">Step {step.step}</div>
-                <h3 className="text-xl font-bold text-white mb-2">{step.title}<p className="text-gray-300 text-sm">{step.description}</p>
+        <div className="max-w-7xl mx-auto"></section>
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">Simple 4-Step Process</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{workflow.map((step, index) => (</div>
+              <div key={index} className="text-center"></div>
+                <div className="bg-gradient-to-r from-purple-600 to-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>
+                  <span className="text-2xl"></span><span className="sr-only">Screen reader: </span>{step.icon}<div className="bg-purple-100 text-purple-800 text-sm font-medium px-3 py-1 rounded-full inline-block mb-3">Step {step.step}</div>
+                <h3 className="text-xl font-bold text-white mb-2">{step.title}</h3><p className="text-gray-300 text-sm">{step.description}</p>
               </div>
             ))}
           </div>
@@ -236,11 +236,11 @@ const AI3DGenerationPage: React.FC = () => {
 
       {/* Applications */}
       <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">Applications & Use Cases<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{applications.map((app, index) => (</div>
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300">
-                <div className="text-4xl mb-4">{app.icon}<h3 className="text-xl font-bold text-white mb-3">{app.title}<p className="text-gray-300 mb-4">{app.description}</p>
-                <div className="space-y-2">
+        <div className="max-w-7xl mx-auto"></section>
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">Applications & Use Cases</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{applications.map((app, index) => (</div>
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300"></div>
+                <div className="text-4xl mb-4">{app.icon}</div><h3 className="text-xl font-bold text-white mb-3">{app.title}</h3><p className="text-gray-300 mb-4">{app.description}</p>
+                <div className="space-y-2"></div>
                   <h4 className="text-sm font-semibold text-cyan-400">Examples:<ul className="space-y-1" role="list">{app.examples.map((example, exampleIndex) => (</ul>
                       <li key={exampleIndex} className="text-sm text-gray-400 flex items-center" style={{ color: "#9CA3AF" }}>
                         <ArrowRight className="w-3 h-3 mr-2" >{example}</ArrowRight>
@@ -256,17 +256,17 @@ const AI3DGenerationPage: React.FC = () => {
 
       {/* Pricing */}
       <section className="py-16 px-4 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">Flexible Pricing Plans<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{pricing.map((plan, index) => (<div key={index} className={`bg-white rounded-xl shadow-lg p-8 relative ${plan.popular ? 'ring-2 ring-purple-500 scale-105' : ''}`}>{plan.popular && (</div>
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-purple-500 text-white px-4 py-1 rounded-full text-sm font-medium"><span className="sr-only">Screen reader: </span>
+        <div className="max-w-7xl mx-auto"></section>
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">Flexible Pricing Plans</h2><div className="grid grid-cols-1 md:grid-cols-3 gap-8">{pricing.map((plan, index) => (</div><div key={index} className={`bg-white rounded-xl shadow-lg p-8 relative ${plan.popular ? 'ring-2 ring-purple-500 scale-105' : ''}`}>{plan.popular && (</div>
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
+                    <span className="bg-purple-500 text-white px-4 py-1 rounded-full text-sm font-medium"></span><span className="sr-only">Screen reader: </span>
                       Most Popular
                     </span>
                   </div>
                 )}
-                <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}<p className="text-gray-600 mb-4">{plan.description}</p>
-                  <div className="text-4xl font-bold text-purple-600 mb-2">{plan.price}<p className="text-gray-500">per month<ul className="space-y-3 mb-8" role="list">{plan.features.map((feature, featureIndex) => (</ul>
+                <div className="text-center mb-6"></div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3><p className="text-gray-600 mb-4">{plan.description}</p>
+                  <div className="text-4xl font-bold text-purple-600 mb-2">{plan.price}</div><p className="text-gray-500">per month</p><ul className="space-y-3 mb-8" role="list">{plan.features.map((feature, featureIndex) => (</ul>
                     <li key={featureIndex} className="flex items-center text-gray-600">
                       <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" >{feature}</CheckCircle>
                     </CheckCircle>
@@ -288,9 +288,9 @@ const AI3DGenerationPage: React.FC = () => {
 
       {/* Technologies */}
       <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">Advanced Technologies<div className="flex flex-wrap justify-center gap-4">{technologies.map((tech, index) => (</div>
-              <span key={index} className="bg-white/10 text-white px-4 py-2 rounded-full text-sm"><span className="sr-only">Screen reader: </span>
+        <div className="max-w-7xl mx-auto"></section>
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">Advanced Technologies</h2><div className="flex flex-wrap justify-center gap-4">{technologies.map((tech, index) => (</div>
+              <span key={index} className="bg-white/10 text-white px-4 py-2 rounded-full text-sm"></span><span className="sr-only">Screen reader: </span>
                 {tech}
               </span>
             ))}
@@ -300,10 +300,10 @@ const AI3DGenerationPage: React.FC = () => {
 
       {/* CTA Section */}
       <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Generate 3D Models?<p className="text-xl text-purple-100 mb-8">Start creating stunning 3D assets with our AI-powered generation technology.</p>
+        <div className="max-w-4xl mx-auto text-center"></section>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Generate 3D Models?</h2><p className="text-xl text-purple-100 mb-8">Start creating stunning 3D assets with our AI-powered generation technology.</p>
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <a
               href="tel:+13024640950"
               className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"

@@ -260,21 +260,21 @@ export default function TeamPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}</div>
       <section className="relative py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"><div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">Meet Our Team<p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">World-class experts in AI, quantum computing, and enterprise technology</p>
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></section><div className="container mx-auto px-4 relative z-10"></div>
+          <div className="max-w-4xl mx-auto text-center"></div>
+            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">Meet Our Team</h1><p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">World-class experts in AI, quantum computing, and enterprise technology</p>
               working together to transform your business.</p>
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg">
+            <div className="flex flex-wrap justify-center gap-4"></div>
+              <div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg"></div>
                 <Users className="w-5 h-5 text-cyan-400" />
                 <span className="text-white font-medium">100+ Experts</span>
               </div>
-              <div className="flex items-center space-x-2 bg-purple-500/20 px-4 py-2 rounded-lg">
+              <div className="flex items-center space-x-2 bg-purple-500/20 px-4 py-2 rounded-lg"></div>
                 <Award className="w-5 h-5 text-purple-400" />
                 <span className="text-white font-medium">50+ Patents</span>
               </div>
-              <div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg">
+              <div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg"></div>
                 <Star className="w-5 h-5 text-green-400" />
                 <span className="text-white font-medium">99% Satisfaction</span>
               </div>
@@ -285,12 +285,12 @@ export default function TeamPage() {
 
       {/* Stats Section */}
       <section className="py-20">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4"></section>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">{stats.map((stat, index) => (</div>
-              <div key={index} className="text-center group">
-                <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+              <div key={index} className="text-center group"></div>
+                <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300"></div>
                   <stat.icon className="w-10 h-10 text-white" />
-                <div className="text-4xl font-bold text-white mb-2">{stat.number}<div className="text-gray-300 font-medium">{stat.label}</div>
+                <div className="text-4xl font-bold text-white mb-2">{stat.number}</div><div className="text-gray-300 font-medium">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -299,25 +299,25 @@ export default function TeamPage() {
 
       {/* Leadership Team */}
       <section className="py-20 bg-slate-800/50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Leadership Team<p className="text-lg text-gray-300 max-w-3xl mx-auto">Meet the visionary leaders driving innovation and growth at Zion Tech Group<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{teamMembers.map((member) => (</div>
-              <div key={member.id} className="bg-slate-800/50 rounded-lg p-8 text-center group hover:bg-slate-700/50 transition-all duration-300">
-                <div className="w-32 h-32 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-4xl font-bold text-white">{member.name.split(' ').map(n => n[0]).join('')}<h3 className="text-2xl font-bold text-white mb-2">{member.name}</h3>
-                <p className="text-cyan-400 font-medium mb-3">{member.role}<p className="text-gray-300 text-sm mb-4">{member.bio}</p>
+        <div className="container mx-auto px-4"></section>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Leadership Team</h2><p className="text-lg text-gray-300 max-w-3xl mx-auto">Meet the visionary leaders driving innovation and growth at Zion Tech Group</p><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{teamMembers.map((member) => (</div>
+              <div key={member.id} className="bg-slate-800/50 rounded-lg p-8 text-center group hover:bg-slate-700/50 transition-all duration-300"></div>
+                <div className="w-32 h-32 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300"></div>
+                  <span className="text-4xl font-bold text-white">{member.name.split(' ').map(n => n[0]).join('')}</span><h3 className="text-2xl font-bold text-white mb-2">{member.name}</h3>
+                <p className="text-cyan-400 font-medium mb-3">{member.role}</p><p className="text-gray-300 text-sm mb-4">{member.bio}</p>
 
-                <div className="space-y-2 mb-6">
-                  <div className="text-sm text-gray-400">
+                <div className="space-y-2 mb-6"></div>
+                  <div className="text-sm text-gray-400"></div>
                     <strong>Experience:</strong> {member.experience}
                   </div>
-                  <div className="text-sm text-gray-400">
+                  <div className="text-sm text-gray-400"></div>
                     <strong>Education:</strong> {member.education}
                   </div>
                 </div>
 
-                <div className="mb-6">
-                  <h4 className="text-sm font-semibold text-cyan-400 mb-2">Expertise:<div className="flex flex-wrap justify-center gap-2">{member.expertise.slice(0, 3).map((skill, index) => (<span key={index} className="px-2 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded">{skill}</span>
+                <div className="mb-6"></div>
+                  <h4 className="text-sm font-semibold text-cyan-400 mb-2">Expertise:<div className="flex flex-wrap justify-center gap-2">{member.expertise.slice(0, 3).map((skill, index) => (</div><span key={index} className="px-2 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded">{skill}</span>
                       </span>
                     ))}
                   <div className="flex justify-center space-x-4">{member.social.linkedin && (</div>
@@ -349,15 +349,15 @@ export default function TeamPage() {
 
       {/* Departments */}
       <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Our Departments<p className="text-lg text-gray-300 max-w-3xl mx-auto">Organized teams working together to deliver exceptional results<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{departments.map((dept, index) => (</div>
-              <div key={index} className="bg-slate-800/50 rounded-lg p-6 text-center group hover:bg-slate-700/50 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+        <div className="container mx-auto px-4"></section>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Our Departments</h2><p className="text-lg text-gray-300 max-w-3xl mx-auto">Organized teams working together to deliver exceptional results</p><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{departments.map((dept, index) => (</div>
+              <div key={index} className="bg-slate-800/50 rounded-lg p-6 text-center group hover:bg-slate-700/50 transition-all duration-300"></div>
+                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300"></div>
                   <dept.icon className="w-8 h-8 text-white" />
                 <h3 className="text-xl font-bold text-white mb-2">{dept.name}</h3>
-                <p className="text-gray-300 text-sm mb-4">{dept.description}<div className="text-cyan-400 font-medium mb-4">{dept.members} Members</div>
-                <div className="space-y-1">{dept.specialties.map((specialty, specIndex) => (<div key={specIndex} className="text-xs text-gray-400">{specialty}</div>
+                <p className="text-gray-300 text-sm mb-4">{dept.description}</p><div className="text-cyan-400 font-medium mb-4">{dept.members} Members</div>
+                <div className="space-y-1">{dept.specialties.map((specialty, specIndex) => (</div><div key={specIndex} className="text-xs text-gray-400">{specialty}</div>
                     </div>
                   ))}
                 </div>
@@ -369,13 +369,13 @@ export default function TeamPage() {
 
       {/* Values */}
       <section className="py-20 bg-slate-800/50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Our Values<p className="text-lg text-gray-300 max-w-3xl mx-auto">The principles that guide everything we do and shape our culture<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{values.map((value, index) => (</div>
-              <div key={index} className="text-center group">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+        <div className="container mx-auto px-4"></section>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Our Values</h2><p className="text-lg text-gray-300 max-w-3xl mx-auto">The principles that guide everything we do and shape our culture</p><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{values.map((value, index) => (</div>
+              <div key={index} className="text-center group"></div>
+                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300"></div>
                   <value.icon className="w-8 h-8 text-white" />
-                <h3 className="text-xl font-bold text-white mb-3">{value.title}<p className="text-gray-300 text-sm leading-relaxed">{value.description}</p>
+                <h3 className="text-xl font-bold text-white mb-3">{value.title}</h3><p className="text-gray-300 text-sm leading-relaxed">{value.description}</p>
               </div>
             ))}
           </div>
@@ -384,11 +384,11 @@ export default function TeamPage() {
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">Join Our Team<p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">We're always looking for talented individuals who share our passion for AI and technology.</p>
+        <div className="container mx-auto px-4 text-center"></section>
+          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">Join Our Team</h2><p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">We're always looking for talented individuals who share our passion for AI and technology.</p>
             Join us in building the future.</p>
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <Link
               to="/careers"
               className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors inline-flex items-center"

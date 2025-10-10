@@ -37,19 +37,19 @@ const January2026RevolutionaryContentBanne, r: React.FC = () => {
   ]; return (
     <section, classNam, e = 'py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n'>
       {/* Animated, Backgroun, d */}
-      <div, className='absolute, inse, t-0, overflo, w-hidden, opacit, y-20'>
-        <div, className='absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e' />
+      <div, className='absolute, inse, t-0, overflo, w-hidden, opacit, y-20'></section>
+        <div, className='absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e' /></div>
         <div, className='absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e'
           sty, l, e={{ animationDel, a, y: ', 2, s' }}
-         />
+         /></div>
         <div, classNam, e = 'absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e'
           sty, l, e={{ animationDel, a, y: ', 4, s' }}
          />
       </div>
       <div, classNam, e = 'container, m, x-auto, p, x-6, relative, z-10'>
-        {/* Head, e, r */}
-        <div, className='te, x, t-center, m, b-16'>
-          <div, className='inli, n, e-flex, item, s-center, ga, p-2, p, x-6, p, y-3, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, border, border-bl, u, e-5, 0, 0/30, m, b-8'>
+        {/* Head, e, r */}</div>
+        <div, className='te, x, t-center, m, b-16'></div>
+          <div, className='inli, n, e-flex, item, s-center, ga, p-2, p, x-6, p, y-3, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, border, border-bl, u, e-5, 0, 0/30, m, b-8'></div>
             <Sparkles, className='w-5 h-5, tex, t-bl, u, e-4, 0, 0' />
             <span, className='te, x, t-bl, u, e-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e'>
               January, 202, 6 • Revolutionary, Content, Launch
@@ -64,13 +64,13 @@ const January2026RevolutionaryContentBanne, r: React.FC = () => {
         </div>
         {/* Content, Gri, d */}
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12'>
-          { revolutionaryConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > (
+          { revolutionaryConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > (</div>
             <div, ke, y = { in, d, e, x  }, classNa, m, e = 'group, b, g-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-bl, u, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-1, 0, 5'
             >
-              {/* Content, Hea, d, e, r */}
-              <div, classNam, e = 'flex, item, s-start, justif, y-between, m, b-4'>
+              {/* Content, Hea, d, e, r */}</div>
+              <div, classNam, e = 'flex, item, s-start, justif, y-between, m, b-4'></div>
                 <div, className='te, x, t-4, x, l'>{conte, n, t.emo, j, i}</div>
-                <div, className='flex, fle, x-col, item, s-end, ga, p-2'>
+                <div, className='flex, fle, x-col, item, s-end, ga, p-2'></div>
                   <span, className='bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-500, tex, t-white, tex, t-xs, fon, t-bold, p, x-3, p, y-1, rounde, d-fu, l, l'>
                     {conte, n, t.highlig, h, t}
                   </sp, a, n>
@@ -80,7 +80,7 @@ const January2026RevolutionaryContentBanne, r: React.FC = () => {
                 </div>
               </div>
               {/* Content, Inf, o */}
-              <div, className='mb-4'>
+              <div, className='mb-4'></div>
                 <span, className='te, x, t-bl, u, e-400, tex, t-sm, fon, t-semibold, uppercase, tracking-wi, d, e'>
                   {conte, n, t.category}
                 </sp, a, n>
@@ -92,8 +92,8 @@ const January2026RevolutionaryContentBanne, r: React.FC = () => {
                 </p>
               </div>
               {/* Impact, Badg, e */}
-              <div, className='mb-6'>
-                <div, className='inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-gre, e, n-5, 0, 0/20, t, o-emera, l, d-5, 0, 0/20, border, border-gre, e, n-5, 0, 0/30, rounde, d-fu, l, l'>
+              <div, className='mb-6'></div>
+                <div, className='inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-gre, e, n-5, 0, 0/20, t, o-emera, l, d-5, 0, 0/20, border, border-gre, e, n-5, 0, 0/30, rounde, d-fu, l, l'></div>
                   <Target, className='w-4 h-4, tex, t-gre, e, n-4, 0, 0' />
                   <span, className='te, x, t-gre, e, n-400, fon, t-bold, tex, t-sm'>
                     Impa, c, t: {conte, n, t.im, p, a, c, t}
@@ -137,9 +137,9 @@ const January2026RevolutionaryContentBanne, r: React.FC = () => {
               ic, o, n: '⚡',
               col, o, r: 'fr, o, m-yell, o, w-400, t, o-oran, g, e-40, 0',
             },
-          ].m, a, p((st, a, t, ind, e, x) => (
+          ].m, a, p((st, a, t, ind, e, x) => (</div>
             <div, ke, y = { in, d, e, x }, classNa, m, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-4, border, border-whi, t, e/10, tex, t-cent, e, r'
-            >
+            ></div>
               <div, className='te, x, t-3xl, m, b-2'>{st, a, t.ic, o, n}</d, i, v > <div, classNam, e = { `te, x, t-2xl, fon, t-extrabold, b, g-gradie, n, t-to-r ${st, a, t.co, l, o, r }, bg-cl, i, p-text, tex, t-transparent, m, b-1`}
               >
                 {st, a, t.val, u, e}
@@ -151,15 +151,15 @@ const January2026RevolutionaryContentBanne, r: React.FC = () => {
           ))}
         </div>
         {/* Call, to, Action */}
-        <div, classNam, e = 'te, x, t-cent, e, r'>
-          <div, className='bg-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/10, t, o-purp, l, e-5, 0, 0/10, border, border-bl, u, e-5, 0, 0/20, rounde, d-2x, l, p-8'>
+        <div, classNam, e = 'te, x, t-cent, e, r'></div>
+          <div, className='bg-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/10, t, o-purp, l, e-5, 0, 0/10, border, border-bl, u, e-5, 0, 0/20, rounde, d-2x, l, p-8'></div>
             <h3, className='te, x, t-2xl, fon, t-bold, m, b-4, tex, t-whi, t, e'>
               Ready, to, Experience the, AI, Revolution?
             </h3>
             <p, className='te, x, t-gr, a, y-300, m, b-6, ma, x-w-2xl, m, x-au, t, o'>
               Join, the, Fortune 500, companies, already transforming, their, operations with, Zion, Tech Gro, u, p's, breakthrough, AI solutio, n, s.
             </p>
-            <div, className='flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r'>
+            <div, className='flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r'></div>
               <Link, t, o='/conta, c, t'
                 className='bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, hove, r:fr, o, m-bl, u, e-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-bl, u, e-5, 0, 0/50, transform, hover:-transla, t, e-y-1'
               >

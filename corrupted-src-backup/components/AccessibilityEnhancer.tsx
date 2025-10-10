@@ -144,7 +144,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       role="main"
       aria-label="Main content"
     >
-      {/* Skip to main content link */}
+      {/* Skip to main content link */}</div>
       <a
         href="#main-content"
         className="skip-link"
@@ -161,7 +161,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       </a>
 
       {/* Accessibility controls */}
-      <div className="accessibility-controls" role="toolbar" aria-label="Accessibility controls">
+      <div className="accessibility-controls" role="toolbar" aria-label="Accessibility controls"></div>
         <button
           onClick={() => setIsHighContrast(!isHighContrast)}
           className="accessibility-toggle"

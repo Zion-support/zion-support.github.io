@@ -54,8 +54,8 @@ const, PerformanceOptimize, r: Rea, c, t.FC<PerformanceOptimizerPro, p, s> = ({
       enabl, e, d: optimizatio, n, s.cd, n,
     },
   ]; retu, r, n (
-    <div, classNam, e = 'spa, c, e-y-6'>
-      <div, classNam, e='flex, justif, y-between, item, s-cent, e, r'>
+    <div, classNam, e = 'spa, c, e-y-6'></div>
+      <div, classNam, e='flex, justif, y-between, item, s-cent, e, r'></div>
         <h2, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-9, 0, 0'>
           Performance, Optimize, r
         </h2>

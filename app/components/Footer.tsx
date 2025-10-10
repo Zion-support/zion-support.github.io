@@ -153,23 +153,23 @@ const Footer: React.FC = memo(() => {
   return (
     <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 backdrop-blur-sm border-t border-cyan-400/30 relative overflow-hidden cyber-grid">
       {/* Futuristic Background Effects */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(0,255,255,0.05)_0%,transparent_50%)] animate-pulse" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(139,92,246,0.05)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(0,255,255,0.05)_0%,transparent_50%)] animate-pulse" /></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(139,92,246,0.05)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
       <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.02)_1px,transparent_1px)] bg-[length:50px_50px]" />
       
-      {/* Quantum Particles */}
-      <div className="absolute top-10 left-10 w-2 h-2 bg-cyan-400 rounded-full quantum-particle" style={{ animationDelay: '0s' }} />
-      <div className="absolute top-20 right-20 w-1 h-1 bg-purple-400 rounded-full quantum-particle" style={{ animationDelay: '1s' }} />
-      <div className="absolute bottom-20 left-1/4 w-1.5 h-1.5 bg-pink-400 rounded-full quantum-particle" style={{ animationDelay: '2s' }} />
+      {/* Quantum Particles */}</div>
+      <div className="absolute top-10 left-10 w-2 h-2 bg-cyan-400 rounded-full quantum-particle" style={{ animationDelay: '0s' }} /></div>
+      <div className="absolute top-20 right-20 w-1 h-1 bg-purple-400 rounded-full quantum-particle" style={{ animationDelay: '1s' }} /></div>
+      <div className="absolute bottom-20 left-1/4 w-1.5 h-1.5 bg-pink-400 rounded-full quantum-particle" style={{ animationDelay: '2s' }} /></div>
       <div className="absolute bottom-10 right-1/3 w-1 h-1 bg-blue-400 rounded-full quantum-particle" style={{ animationDelay: '3s' }} />
       
-      {/* Main Footer Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      {/* Main Footer Content */}</div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16"></div>
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
-          {/* Company Info */}
-          <div className="lg:col-span-2">
-            <div className="flex items-center space-x-2 mb-6 group">
-              <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-400/25 neon-glow">
+          {/* Company Info */}</div>
+          <div className="lg:col-span-2"></div>
+            <div className="flex items-center space-x-2 mb-6 group"></div>
+              <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-400/25 neon-glow"></div>
                 <Zap className="w-5 h-5 text-white" />
               </div>
               <span className="text-white font-bold text-xl bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent cyber-text">Zion Tech Group</span>
@@ -181,25 +181,25 @@ const Footer: React.FC = memo(() => {
             </p>
 
             {/* Contact Info */}
-            <div className="space-y-3 mb-6">
-              <div className="flex items-center space-x-3 text-gray-300 group">
+            <div className="space-y-3 mb-6"></div>
+              <div className="flex items-center space-x-3 text-gray-300 group"></div>
                 <Phone className="w-4 h-4 text-cyan-400 group-hover:text-cyan-300 transition-colors" />
                 <a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors font-medium">+1 (302) 464-0950</a>
               </div>
-              <div className="flex items-center space-x-3 text-gray-300 group">
+              <div className="flex items-center space-x-3 text-gray-300 group"></div>
                 <Mail className="w-4 h-4 text-cyan-400 group-hover:text-cyan-300 transition-colors" />
                 <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors font-medium">kleber@ziontechgroup.com</a>
               </div>
-              <div className="flex items-start space-x-3 text-gray-300 group">
+              <div className="flex items-start space-x-3 text-gray-300 group"></div>
                 <MapPin className="w-4 h-4 text-cyan-400 mt-0.5 group-hover:text-cyan-300 transition-colors" />
-                <div>
+                <div></div>
                   <div className="font-medium">364 E Main St STE 1008</div>
                   <div>Middletown, DE 19709</div>
                 </div>
               </div>
-              <div className="flex items-center space-x-3 text-gray-300 group">
+              <div className="flex items-center space-x-3 text-gray-300 group"></div>
                 <Clock className="w-4 h-4 text-cyan-400 group-hover:text-cyan-300 transition-colors" />
-                <div>
+                <div></div>
                   <div className="font-medium">Mon - Fri: 9:00 AM - 6:00 PM EST</div>
                   <div className="text-sm text-cyan-400">24/7 Emergency Support</div>
                 </div>
@@ -207,7 +207,7 @@ const Footer: React.FC = memo(() => {
             </div>
 
             {/* Social Links */}
-            <div className="flex space-x-4">
+            <div className="flex space-x-4"></div>
               <a href="https://linkedin.com/company/zion-tech-group" className="text-gray-400 hover:text-cyan-400 transition-colors" target="_blank" rel="noopener noreferrer">
                 <Linkedin className="w-5 h-5" />
               </a>
@@ -221,12 +221,12 @@ const Footer: React.FC = memo(() => {
           </div>
 
           {/* Services */}
-          <div className="lg:col-span-3">
+          <div className="lg:col-span-3"></div>
             <h3 className="text-white font-semibold text-lg mb-6 neon-glow-cyan">Our Services</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {serviceCategories.map((category, index) => (
-                <div key={index}>
-                  <div className="flex items-center space-x-2 mb-4">
+              {serviceCategories.map((category, index) => (</div>
+                <div key={index}></div>
+                  <div className="flex items-center space-x-2 mb-4"></div>
                     <category.icon className="w-5 h-5 text-cyan-400" />
                     <h4 className="text-white font-medium">{category.title}</h4>
                   </div>
@@ -248,10 +248,10 @@ const Footer: React.FC = memo(() => {
           </div>
 
           {/* Quick Links */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-2"></div>
             <div className="space-y-8">
-              {/* Company */}
-              <div>
+              {/* Company */}</div>
+              <div></div>
                 <h4 className="text-white font-semibold mb-4">Company</h4>
                 <ul className="space-y-2">
                   {companyLinks.map((link, index) => (
@@ -268,7 +268,7 @@ const Footer: React.FC = memo(() => {
               </div>
 
               {/* Support */}
-              <div>
+              <div></div>
                 <h4 className="text-white font-semibold mb-4">Support</h4>
                 <ul className="space-y-2">
                   {supportLinks.map((link, index) => (
@@ -285,7 +285,7 @@ const Footer: React.FC = memo(() => {
               </div>
 
               {/* Legal */}
-              <div>
+              <div></div>
                 <h4 className="text-white font-semibold mb-4">Legal</h4>
                 <ul className="space-y-2">
                   {legalLinks.map((link, index) => (
@@ -305,14 +305,14 @@ const Footer: React.FC = memo(() => {
         </div>
 
         {/* Newsletter Signup */}
-        <div className="mt-12 pt-8 border-t border-gray-700">
-          <div className="max-w-2xl mx-auto text-center">
+        <div className="mt-12 pt-8 border-t border-gray-700"></div>
+          <div className="max-w-2xl mx-auto text-center"></div>
             <h3 className="text-white font-semibold text-lg mb-4 neon-text cyber-text">Stay Updated with Our Latest Innovations</h3>
             <p className="text-gray-300 mb-6">
               Get the latest news about AI breakthroughs, quantum computing advances,
               technology updates, and industry insights delivered to your inbox.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto"></div>
               <input
                 type="email"
                 placeholder="Enter your email address"
@@ -328,21 +328,21 @@ const Footer: React.FC = memo(() => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-gray-700 bg-slate-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+      <div className="border-t border-gray-700 bg-slate-900"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6"></div>
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0"></div>
             <div className="text-gray-400 text-sm">© {currentYear} Zion Tech Group. All rights reserved.</div>
 
-            <div className="flex items-center space-x-6 text-sm text-gray-400">
-              <div className="flex items-center space-x-2">
+            <div className="flex items-center space-x-6 text-sm text-gray-400"></div>
+              <div className="flex items-center space-x-2"></div>
                 <Shield className="w-4 h-4 text-green-400" />
                 <span>SSL Secured</span>
               </div>
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center space-x-2"></div>
                 <Award className="w-4 h-4 text-yellow-400" />
                 <span>ISO 27001 Certified</span>
               </div>
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center space-x-2"></div>
                 <BarChart className="w-4 h-4 text-blue-400" />
                 <span>99.9% Uptime</span>
               </div>

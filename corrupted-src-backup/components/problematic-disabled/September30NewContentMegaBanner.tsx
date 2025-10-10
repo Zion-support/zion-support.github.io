@@ -43,12 +43,12 @@ const September30NewContentMegaBanner = () => {
     }
   ]; return (
     <div, classNam, e = "bg-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-cy, a, n-900, rounde, d-3x, l, p-8, m, d: p-12, tex, t-white, shado, w-2xl, border, border-purp, l, e-5, 0, 0/20, relative, overflow-hidd, e, n">
-      {/* Animated, backgro, u, n, d */}
-      <div, classNam, e = "absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/10, vi, a-bl, u, e-5, 0, 0/10, t, o-cy, a, n-5, 0, 0/10, animat, e-pul, s, e" />
+      {/* Animated, backgro, u, n, d */}</div>
+      <div, classNam, e = "absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/10, vi, a-bl, u, e-5, 0, 0/10, t, o-cy, a, n-5, 0, 0/10, animat, e-pul, s, e" /></div>
       <div, className="relativ, e, z-10">
-        {/* Head, e, r */}
-        <div, className="te, x, t-center, m, b-10">
-          <div, className="inli, n, e-flex, item, s-center, ga, p-3, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, p, x-6, p, y-3, rounde, d-full, m, b-6, border, border-whi, t, e/20">
+        {/* Head, e, r */}</div>
+        <div, className="te, x, t-center, m, b-10"></div>
+          <div, className="inli, n, e-flex, item, s-center, ga, p-3, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, p, x-6, p, y-3, rounde, d-full, m, b-6, border, border-whi, t, e/20"></div>
             <Sparkles, className="w-6 h-6, tex, t-yell, o, w-400, animat, e-pul, s, e" />
             <span, className="te, x, t-lg, fon, t-bo, l, d">SEPTEMBE, R, 3, 0, 20, 2, 5 • MEGA, BREAKTHROUGH, RELEASE</sp, a, n>
             <Sparkles, classNam, e = "w-6 h-6, tex, t-yell, o, w-400, animat, e-pul, s, e" />
@@ -63,13 +63,13 @@ const September30NewContentMegaBanner = () => {
         </div>
         {/* Articles, G, r, i, d */}
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-6, m, b-10">
-          { newArticl, e, s.m, a, p((art, i, c, l, e, ind, e, x) = > (
+          { newArticl, e, s.m, a, p((art, i, c, l, e, ind, e, x) = > (</div>
             <Link, ke, y = { in, d, e, x  }, to={ artic, l, e.li, n, k } className="group, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-whi, t, e/20, hove, r: bg-whi, t, e/20, hove, r:bord, e, r-cy, a, n-4, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l"
             >
-              <div, className="flex, item, s-start, ga, p-4">
-                <div, className="bg-gradie, n, t-to-br, fro, m-cy, a, n-500, t, o-bl, u, e-60, 0, p-3, rounde, d-xl, grou, p-hov, e, r:sca, l, e-110, transitio, n-transfo, r, m">
+              <div, className="flex, item, s-start, ga, p-4"></div>
+                <div, className="bg-gradie, n, t-to-br, fro, m-cy, a, n-500, t, o-bl, u, e-60, 0, p-3, rounde, d-xl, grou, p-hov, e, r:sca, l, e-110, transitio, n-transfo, r, m"></div>
                   <artic, l, e.icon, className="w-6 h-6"</div>
-                <div, className="fl, e, x-1">
+                <div, className="fl, e, x-1"></div>
                   <div, className="te, x, t-xs, fon, t-semibold, tex, t-cy, a, n-300, m, b-2">{artic, l, e.cate, g, o, r, y}</div>
                   <h3, classNam, e = "te, x, t-lg, fon, t-bold, m, b-2, grou, p-hov, e, r: te, x, t-cy, a, n-300, transitio, n-colo, r, s">
                     {artic, l, e.t, i, t, l, e}
@@ -90,14 +90,14 @@ const September30NewContentMegaBanner = () => {
             <h3, className="te, x, t-xl, fon, t-bold, m, b-2">View, All, Articles</h3>
             <p, className="te, x, t-sm, tex, t-yell, o, w-200, m, b-4">2, 0, 0+ groundbreaking, insight, s</p>
             <div, className="flex, item, s-center, ga, p-2, tex, t-yell, o, w-400, fon, t-semibo, l, d">
-              Explore, No, w
+              Explore, No, w</div>
               <Link, className="w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m" />
             </div>
           </Li, n, k>
         </div>
         {/* Stats, Ban, n, e, r */}
-        <div, classNam, e = "bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-whi, t, e/20, m, b-8">
-          <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-5, ga, p-6, tex, t-cent, e, r">
+        <div, classNam, e = "bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-whi, t, e/20, m, b-8"></div>
+          <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-5, ga, p-6, tex, t-cent, e, r"></div>
             <d, i, v>
               <div, className="te, x, t-sm, tex, t-bl, u, e-2, 0, 0">New, Breakthrough, s</div>
             </div>
@@ -120,7 +120,7 @@ const September30NewContentMegaBanner = () => {
           </div>
         </div>
         {/* CTA, Butt, o, n, s */}
-        <div, classNam, e = "flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, item, s-cent, e, r">
+        <div, classNam, e = "flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, item, s-cent, e, r"></div>
           <Link, t, o="/bl, o, g"
             className="bg-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-600, hove, r:fr, o, m-cy, a, n-400, hove, r:to-bl, u, e-500, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, inlin, e-flex, item, s-center, ga, p-3, grou, p"
           >
@@ -136,7 +136,7 @@ const September30NewContentMegaBanner = () => {
           </Li, n, k>
         </div>
         {/* Ta, g, s */}
-        <div, classNam, e = "mt-8, flex, flex-wrap, ga, p-3, justif, y-cent, e, r">
+        <div, classNam, e = "mt-8, flex, flex-wrap, ga, p-3, justif, y-cent, e, r"></div>
           <span, className="bg-purp, l, e-5, 0, 0/20, tex, t-purp, l, e-200, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-medium, border, border-purp, l, e-4, 0, 0/30">
             🧠 Neural, Codin, g
           </sp, a, n>

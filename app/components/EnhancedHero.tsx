@@ -77,8 +77,8 @@ const EnhancedHero: React.FC = () => {
       animate={isVisible ? "visible" : "hidden"}
       variants={containerVariants}
     >{/* Animated Background */}</motion>
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="absolute inset-0 cyber-grid opacity-20"><div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10">{/* Floating Elements */}</div>
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+        <div className="absolute inset-0 cyber-grid opacity-20"></div><div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10">{/* Floating Elements */}</div>
         </div><motion.div
           className="absolute top-20 left-20 w-32 h-32 bg-cyan-500/20 rounded-full blur-xl"
           animate={{
@@ -107,7 +107,7 @@ const EnhancedHero: React.FC = () => {
         />
       </div>
 
-      <div className="relative z-10 container mx-auto px-4 py-16 pt-24">
+      <div className="relative z-10 container mx-auto px-4 py-16 pt-24"></div>
         <motion.div
           className="text-center max-w-6xl mx-auto"
           variants={itemVariants}
@@ -144,7 +144,7 @@ const EnhancedHero: React.FC = () => {
                 animate="visible"
                 exit="exit"
               >
-                <div className="text-2xl sm:text-3xl font-bold text-cyan-400 mb-2">{stats[currentStat].clients}+<div className="text-gray-300 text-sm sm:text-base">Enterprise Clients</div>
+                <div className="text-2xl sm:text-3xl font-bold text-cyan-400 mb-2">{stats[currentStat].clients}+</div><div className="text-gray-300 text-sm sm:text-base">Enterprise Clients</div>
               </motion.div>
             </AnimatePresence>
 
@@ -157,7 +157,7 @@ const EnhancedHero: React.FC = () => {
                 animate="visible"
                 exit="exit"
               >
-                <div className="text-2xl sm:text-3xl font-bold text-green-400 mb-2">{stats[currentStat].savings}<div className="text-gray-300 text-sm sm:text-base">Cost Savings</div>
+                <div className="text-2xl sm:text-3xl font-bold text-green-400 mb-2">{stats[currentStat].savings}</div><div className="text-gray-300 text-sm sm:text-base">Cost Savings</div>
               </motion.div>
             </AnimatePresence>
 
@@ -170,7 +170,7 @@ const EnhancedHero: React.FC = () => {
                 animate="visible"
                 exit="exit"
               >
-                <div className="text-2xl sm:text-3xl font-bold text-purple-400 mb-2">{stats[currentStat].uptime}<div className="text-gray-300 text-sm sm:text-base">Uptime</div>
+                <div className="text-2xl sm:text-3xl font-bold text-purple-400 mb-2">{stats[currentStat].uptime}</div><div className="text-gray-300 text-sm sm:text-base">Uptime</div>
               </motion.div>
             </AnimatePresence>
 
@@ -183,7 +183,7 @@ const EnhancedHero: React.FC = () => {
                 animate="visible"
                 exit="exit"
               >
-                <div className="text-2xl sm:text-3xl font-bold text-orange-400 mb-2">{stats[currentStat].support}<div className="text-gray-300 text-sm sm:text-base">Support</div>
+                <div className="text-2xl sm:text-3xl font-bold text-orange-400 mb-2">{stats[currentStat].support}</div><div className="text-gray-300 text-sm sm:text-base">Support</div>
               </motion.div>
             </AnimatePresence>
           </motion.div>
@@ -217,8 +217,8 @@ const EnhancedHero: React.FC = () => {
             className="mt-16 flex flex-wrap justify-center items-center gap-8 opacity-60"
             variants={itemVariants}
           >
-            <div className="text-gray-400 text-sm">Trusted by Fortune 500 Companies<div className="text-gray-400 text-sm">•</div>
-            <div className="text-gray-400 text-sm">SOC 2 Compliant<div className="text-gray-400 text-sm">•<div className="text-gray-400 text-sm">ISO 27001 Certified</div>
+            <div className="text-gray-400 text-sm">Trusted by Fortune 500 Companies</div><div className="text-gray-400 text-sm">•</div>
+            <div className="text-gray-400 text-sm">SOC 2 Compliant</div><div className="text-gray-400 text-sm">•</div><div className="text-gray-400 text-sm">ISO 27001 Certified</div>
           </motion.div>
         </motion.div>
       </div>
@@ -229,7 +229,7 @@ const EnhancedHero: React.FC = () => {
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
       >
-        <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
+        <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center"></div>
           <motion.div
             className="w-1 h-3 bg-white/60 rounded-full mt-2"
             animate={{ y: [0, 12, 0] }}

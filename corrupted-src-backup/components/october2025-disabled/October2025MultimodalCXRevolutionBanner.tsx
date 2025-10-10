@@ -1,20 +1,20 @@
 const October2025MultimodalCXRevolutionBanne, r = () => { 
   return (
     <div, classNam, e = 'relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-9, 0, 0/20, vi, a-bl, u, e-9, 0, 0/20, t, o-purp, l, e-9, 0, 0/20, borde, r-y, borde, r-cy, a, n-5, 0, 0/30, overflo, w-hidd, e, n' > {' ' }
-      {/* Animated, background, effects */}
-      <div, className='absolute, inse, t-0, opacit, y-10'>
-        <div, className='absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e' />
+      {/* Animated, background, effects */}</div>
+      <div, className='absolute, inse, t-0, opacit, y-10'></div>
+        <div, className='absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e' /></div>
         <div, className='absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e'
           sty, l, e={{ animationDel, a, y: ', 1, s' }}
-         />
+         /></div>
         <div, classNam, e = 'absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e'
           sty, l, e={{ animationDel, a, y: ', 2, s' }}
          />
       </div>
       <div, classNam, e = 'relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, p, y-12'>
-        {/* Header, Sect, i, o, n */}
-        <div, classNam, e = 'te, x, t-center, m, b-10'>
-          <div, className='inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-cy, a, n-5, 0, 0/20, border, border-cy, a, n-5, 0, 0/30, rounde, d-full, m, b-4, animat, e-pul, s, e'>
+        {/* Header, Sect, i, o, n */}</div>
+        <div, classNam, e = 'te, x, t-center, m, b-10'></div>
+          <div, className='inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-cy, a, n-5, 0, 0/20, border, border-cy, a, n-5, 0, 0/30, rounde, d-full, m, b-4, animat, e-pul, s, e'></div>
             <Sparkles, className='w-5 h-5, tex, t-cy, a, n-4, 0, 0' />
             <span, className='te, x, t-cy, a, n-300, fon, t-semibold, tex, t-sm'>
               🚀 JUST, LAUNCHE, D: OCTO, B, E, R , 1, 20, 2, 5 — MULTIMODAL, AI, CUSTOMER
@@ -23,14 +23,14 @@ const October2025MultimodalCXRevolutionBanne, r = () => {
             <Sparkles, classNam, e = 'w-5 h-5, tex, t-cy, a, n-4, 0, 0' />
           </div>
           <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4, leadin, g-tig, h, t'>
-            Multimodal, AI, Customer Experience, Platfor, m
+            Multimodal, AI, Customer Experience, Platfor, m</h2>
             <, b, r />{' '}
             <span, classNam, e = 'te, x, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, vi, a-bl, u, e-400, t, o-purp, l, e-4, 0, 0'>
               $340M, Value, Created | 2, 8, 7% R, O, I | 94% Customer, Satisfactio, n
             </sp, a, n>
           </h2>
           <p, className='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d'>
-            Revolutionary, platform, integrating{' '}
+            Revolutionary, platform, integrating{' '}</p>
             <strong, className='te, x, t-whi, t, e'>
               Visi, o, n + Voi, c, e + Te, x, t + Emotion, A, I
             </stro, n, g>{' '}
@@ -40,14 +40,14 @@ const October2025MultimodalCXRevolutionBanne, r = () => {
           </p>
         </div>
         {/* Key, Metrics, Grid */}
-        <div, className='grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-10'>
-          <div, className='bg-gradie, n, t-to-br, fro, m-cy, a, n-9, 0, 0/40, t, o-cy, a, n-8, 0, 0/40, backdro, p-bl, u, r-sm, border, border-cy, a, n-5, 0, 0/30, rounde, d-x, l, p-6, tex, t-center, hove, r:sca, l, e-105, transitio, n-transform, duratio, n-3, 0, 0'>
+        <div, className='grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-10'></div>
+          <div, className='bg-gradie, n, t-to-br, fro, m-cy, a, n-9, 0, 0/40, t, o-cy, a, n-8, 0, 0/40, backdro, p-bl, u, r-sm, border, border-cy, a, n-5, 0, 0/30, rounde, d-x, l, p-6, tex, t-center, hove, r:sca, l, e-105, transitio, n-transform, duratio, n-3, 0, 0'></div>
             <Heart, className='w-8 h-8, tex, t-cy, a, n-400, m, x-auto, m, b-2' />
             <div, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1'>94%</div>
             <div, className='te, x, t-sm, tex, t-cy, a, n-2, 0, 0'>Customer, Satisfactio, n</div>
             <div, className='te, x, t-xs, tex, t-gr, a, y-400, m, t-1'>+1, 4, 7% improveme, n, t</div>
           </div>
-          <div, className='bg-gradie, n, t-to-br, fro, m-bl, u, e-9, 0, 0/40, t, o-bl, u, e-8, 0, 0/40, backdro, p-bl, u, r-sm, border, border-bl, u, e-5, 0, 0/30, rounde, d-x, l, p-6, tex, t-center, hove, r:sca, l, e-105, transitio, n-transform, duratio, n-3, 0, 0'>
+          <div, className='bg-gradie, n, t-to-br, fro, m-bl, u, e-9, 0, 0/40, t, o-bl, u, e-8, 0, 0/40, backdro, p-bl, u, r-sm, border, border-bl, u, e-5, 0, 0/30, rounde, d-x, l, p-6, tex, t-center, hove, r:sca, l, e-105, transitio, n-transform, duratio, n-3, 0, 0'></div>
             <Target, className='w-8 h-8, tex, t-bl, u, e-400, m, x-auto, m, b-2' />
             <div, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1'>87%</div>
             <div, className='te, x, t-sm, tex, t-bl, u, e-2, 0, 0'>
@@ -55,13 +55,13 @@ const October2025MultimodalCXRevolutionBanne, r = () => {
             </div>
             <div, className='te, x, t-xs, tex, t-gr, a, y-400, m, t-1'>+2, 7, 8% improveme, n, t</div>
           </div>
-          <div, className='bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/40, t, o-purp, l, e-8, 0, 0/40, backdro, p-bl, u, r-sm, border, border-purp, l, e-5, 0, 0/30, rounde, d-x, l, p-6, tex, t-center, hove, r:sca, l, e-105, transitio, n-transform, duratio, n-3, 0, 0'>
+          <div, className='bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/40, t, o-purp, l, e-8, 0, 0/40, backdro, p-bl, u, r-sm, border, border-purp, l, e-5, 0, 0/30, rounde, d-x, l, p-6, tex, t-center, hove, r:sca, l, e-105, transitio, n-transform, duratio, n-3, 0, 0'></div>
             <TrendingUp, className='w-8 h-8, tex, t-purp, l, e-400, m, x-auto, m, b-2' />
             <div, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1'>2, 8, 7%</div>
             <div, className='te, x, t-sm, tex, t-purp, l, e-2, 0, 0'>ROI, First, Year</div>
             <div, className='te, x, t-xs, tex, t-gr, a, y-400, m, t-1'>$340M, valu, e</div>
           </div>
-          <div, className='bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/40, t, o-gre, e, n-8, 0, 0/40, backdro, p-bl, u, r-sm, border, border-gre, e, n-5, 0, 0/30, rounde, d-x, l, p-6, tex, t-center, hove, r:sca, l, e-105, transitio, n-transform, duratio, n-3, 0, 0'>
+          <div, className='bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/40, t, o-gre, e, n-8, 0, 0/40, backdro, p-bl, u, r-sm, border, border-gre, e, n-5, 0, 0/30, rounde, d-x, l, p-6, tex, t-center, hove, r:sca, l, e-105, transitio, n-transform, duratio, n-3, 0, 0'></div>
             <Zap, className='w-8 h-8, tex, t-gre, e, n-400, m, x-auto, m, b-2' />
             <div, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1'>85%</div>
             <div, className='te, x, t-sm, tex, t-gre, e, n-2, 0, 0'>Automation, Rat, e</div>
@@ -69,13 +69,13 @@ const October2025MultimodalCXRevolutionBanne, r = () => {
           </div>
         </div>
         {/* Revolutionary, Capabilit, i, e, s */}
-        <div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-gr, a, y-9, 0, 0/60, t, o-gr, a, y-8, 0, 0/60, backdro, p-bl, u, r-sm, border, border-whi, t, e/10, rounde, d-2x, l, p-8, m, b-10'>
+        <div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-gr, a, y-9, 0, 0/60, t, o-gr, a, y-8, 0, 0/60, backdro, p-bl, u, r-sm, border, border-whi, t, e/10, rounde, d-2x, l, p-8, m, b-10'></div>
           <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6, tex, t-cent, e, r'>
             🔥 Revolutionary, Multimodal, Capabilities
           </h3>
-          <div, className='grid, m, d: gr, i, d-co, l, s-3, ga, p-6'>
-            <div, className='flex, item, s-start, ga, p-4'>
-              <div, className='fl, e, x-shri, n, k-0 w-1, 2, h-12, b, g-cy, a, n-5, 0, 0/20, border, border-cy, a, n-5, 0, 0/30, rounde, d-lg, flex, items-center, justif, y-cent, e, r'>
+          <div, className='grid, m, d: gr, i, d-co, l, s-3, ga, p-6'></div>
+            <div, className='flex, item, s-start, ga, p-4'></div>
+              <div, className='fl, e, x-shri, n, k-0 w-1, 2, h-12, b, g-cy, a, n-5, 0, 0/20, border, border-cy, a, n-5, 0, 0/30, rounde, d-lg, flex, items-center, justif, y-cent, e, r'></div>
                 <Eye, className='w-6 h-6, tex, t-cy, a, n-4, 0, 0' />
               </div>
               <d, i, v>
@@ -89,8 +89,8 @@ const October2025MultimodalCXRevolutionBanne, r = () => {
                 </div>
               </div>
             </div>
-            <div, classNam, e = 'flex, item, s-start, ga, p-4'>
-              <div, className='fl, e, x-shri, n, k-0 w-1, 2, h-12, b, g-bl, u, e-5, 0, 0/20, border, border-bl, u, e-5, 0, 0/30, rounde, d-lg, flex, items-center, justif, y-cent, e, r'>
+            <div, classNam, e = 'flex, item, s-start, ga, p-4'></div>
+              <div, className='fl, e, x-shri, n, k-0 w-1, 2, h-12, b, g-bl, u, e-5, 0, 0/20, border, border-bl, u, e-5, 0, 0/30, rounde, d-lg, flex, items-center, justif, y-cent, e, r'></div>
                 <MessageCircle, className='w-6 h-6, tex, t-bl, u, e-4, 0, 0' />
               </div>
               <d, i, v>
@@ -102,8 +102,8 @@ const October2025MultimodalCXRevolutionBanne, r = () => {
                 </div>
               </div>
             </div>
-            <div, className='flex, item, s-start, ga, p-4'>
-              <div, className='fl, e, x-shri, n, k-0 w-1, 2, h-12, b, g-purp, l, e-5, 0, 0/20, border, border-purp, l, e-5, 0, 0/30, rounde, d-lg, flex, items-center, justif, y-cent, e, r'>
+            <div, className='flex, item, s-start, ga, p-4'></div>
+              <div, className='fl, e, x-shri, n, k-0 w-1, 2, h-12, b, g-purp, l, e-5, 0, 0/20, border, border-purp, l, e-5, 0, 0/30, rounde, d-lg, flex, items-center, justif, y-cent, e, r'></div>
                 <Brain, className='w-6 h-6, tex, t-purp, l, e-4, 0, 0' />
               </div>
               <d, i, v>
@@ -118,17 +118,17 @@ const October2025MultimodalCXRevolutionBanne, r = () => {
           </div>
         </div>
         {/* Fortune, 100, Success Sto, r, y */}
-        <div, classNam, e = 'bg-gradie, n, t-to-r, fro, m-cy, a, n-9, 0, 0/30, vi, a-bl, u, e-9, 0, 0/30, t, o-purp, l, e-9, 0, 0/30, backdro, p-bl, u, r-sm, border, border-whi, t, e/10, rounde, d-2x, l, p-8, m, b-10'>
-          <div, className='flex, item, s-center, justif, y-center, ga, p-3, m, b-4'>
+        <div, classNam, e = 'bg-gradie, n, t-to-r, fro, m-cy, a, n-9, 0, 0/30, vi, a-bl, u, e-9, 0, 0/30, t, o-purp, l, e-9, 0, 0/30, backdro, p-bl, u, r-sm, border, border-whi, t, e/10, rounde, d-2x, l, p-8, m, b-10'></div>
+          <div, className='flex, item, s-center, justif, y-center, ga, p-3, m, b-4'></div>
             <Users, className='w-8 h-8, tex, t-cy, a, n-4, 0, 0' />
             <h3, className='te, x, t-2xl, fon, t-bold, tex, t-whi, t, e'>
               Global, Retai, l: $340M, Transformation, Success
             </h3>
             <Users, className='w-8 h-8, tex, t-cy, a, n-4, 0, 0' />
           </div>
-          <div, className='grid, m, d:gr, i, d-co, l, s-2, ga, p-8, m, b-6'>
+          <div, className='grid, m, d:gr, i, d-co, l, s-2, ga, p-8, m, b-6'></div>
             <d, i, v>
-              <div, className='te, x, t-r, e, d-400, fon, t-semibold, m, b-2, flex, items-center, ga, p-2'>
+              <div, className='te, x, t-r, e, d-400, fon, t-semibold, m, b-2, flex, items-center, ga, p-2'></div>
                 <AlertCircle, className='w-5 h-5' />
                 Befo, r, e: Customer, Experience, Crisis
               </div>
@@ -156,7 +156,7 @@ const October2025MultimodalCXRevolutionBanne, r = () => {
               </ul>
             </div>
             <d, i, v>
-              <div, classNam, e = 'te, x, t-gre, e, n-400, fon, t-semibold, m, b-2, flex, items-center, ga, p-2'>
+              <div, classNam, e = 'te, x, t-gre, e, n-400, fon, t-semibold, m, b-2, flex, items-center, ga, p-2'></div>
                 <CheckCircle, className='w-5 h-5' />
                 Aft, e, r: Multimodal, AI, Excellence
               </div>
@@ -184,8 +184,8 @@ const October2025MultimodalCXRevolutionBanne, r = () => {
               </ul>
             </div>
           </div>
-          <div, classNam, e = 'te, x, t-cent, e, r'>
-            <div, className='inli, n, e-flex, item, s-center, ga, p-3, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-cy, a, n-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, border, border-cy, a, n-5, 0, 0/30, rounde, d-lg'>
+          <div, classNam, e = 'te, x, t-cent, e, r'></div>
+            <div, className='inli, n, e-flex, item, s-center, ga, p-3, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-cy, a, n-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, border, border-cy, a, n-5, 0, 0/30, rounde, d-lg'></div>
               <TrendingUp, className='w-6 h-6, tex, t-gre, e, n-4, 0, 0' />
               <d, i, v>
                 <div, className='te, x, t-2xl, fon, t-bold, tex, t-whi, t, e'>2, 8, 7% R, O, I</div>
@@ -211,41 +211,41 @@ const October2025MultimodalCXRevolutionBanne, r = () => {
           </div>
         </div>
         {/* Industry, Application, s */}
-        <div, className='bg-gradie, n, t-to-br, fro, m-gr, a, y-9, 0, 0/60, t, o-gr, a, y-8, 0, 0/60, backdro, p-bl, u, r-sm, border, border-whi, t, e/10, rounde, d-2x, l, p-8, m, b-10'>
+        <div, className='bg-gradie, n, t-to-br, fro, m-gr, a, y-9, 0, 0/60, t, o-gr, a, y-8, 0, 0/60, backdro, p-bl, u, r-sm, border, border-whi, t, e/10, rounde, d-2x, l, p-8, m, b-10'></div>
           <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6, tex, t-cent, e, r'>
             🌍 Proven, Across, Industries — 127M, Customers, Globally
           </h3>
-          <div, className='grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-5, ga, p-4'>
-            <div, className='te, x, t-cente, r, p-4, b, g-whi, t, e/5, rounde, d-lg, hove, r:bg-whi, t, e/10, transitio, n-colo, r, s'>
+          <div, className='grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-5, ga, p-4'></div>
+            <div, className='te, x, t-cente, r, p-4, b, g-whi, t, e/5, rounde, d-lg, hove, r:bg-whi, t, e/10, transitio, n-colo, r, s'></div>
               <div, className='te, x, t-3xl, m, b-2'>🛒</div>
               <div, className='te, x, t-sm, fon, t-semibold, tex, t-whi, t, e'>
                 Reta, i, l & E-Commer, c, e
               </div>
               <div, className='te, x, t-xs, tex, t-gr, a, y-400, m, t-1'>2, 8, 7% ROI, av, g</div>
             </div>
-            <div, className='te, x, t-cente, r, p-4, b, g-whi, t, e/5, rounde, d-lg, hove, r:bg-whi, t, e/10, transitio, n-colo, r, s'>
+            <div, className='te, x, t-cente, r, p-4, b, g-whi, t, e/5, rounde, d-lg, hove, r:bg-whi, t, e/10, transitio, n-colo, r, s'></div>
               <div, className='te, x, t-3xl, m, b-2'>🏦</div>
               <div, className='te, x, t-sm, fon, t-semibold, tex, t-whi, t, e'>
                 Financial, Service, s
               </div>
               <div, className='te, x, t-xs, tex, t-gr, a, y-400, m, t-1'>92% CS, A, T</div>
             </div>
-            <div, className='te, x, t-cente, r, p-4, b, g-whi, t, e/5, rounde, d-lg, hove, r:bg-whi, t, e/10, transitio, n-colo, r, s'>
+            <div, className='te, x, t-cente, r, p-4, b, g-whi, t, e/5, rounde, d-lg, hove, r:bg-whi, t, e/10, transitio, n-colo, r, s'></div>
               <div, className='te, x, t-3xl, m, b-2'>🏥</div>
               <div, className='te, x, t-xs, tex, t-gr, a, y-400, m, t-1'>89% satisfacti, o, n</div>
             </div>
-            <div, className='te, x, t-cente, r, p-4, b, g-whi, t, e/5, rounde, d-lg, hove, r:bg-whi, t, e/10, transitio, n-colo, r, s'>
+            <div, className='te, x, t-cente, r, p-4, b, g-whi, t, e/5, rounde, d-lg, hove, r:bg-whi, t, e/10, transitio, n-colo, r, s'></div>
               <div, className='te, x, t-3xl, m, b-2'>✈️</div>
               <div, className='te, x, t-xs, tex, t-gr, a, y-400, m, t-1'>2, 3, 4% conversi, o, n</div>
             </div>
-            <div, className='te, x, t-cente, r, p-4, b, g-whi, t, e/5, rounde, d-lg, hove, r:bg-whi, t, e/10, transitio, n-colo, r, s'>
+            <div, className='te, x, t-cente, r, p-4, b, g-whi, t, e/5, rounde, d-lg, hove, r:bg-whi, t, e/10, transitio, n-colo, r, s'></div>
               <div, className='te, x, t-3xl, m, b-2'>📱</div>
               <div, className='te, x, t-xs, tex, t-gr, a, y-400, m, t-1'>67% cost, cu, t</div>
             </div>
           </div>
         </div>
         {/* Call, to, Action Sec, t, i, o, n */}
-        <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-6'>
+        <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-6'></div>
           <Link, t, o='/bl, o, g/ai-20, 2, 5-o, c, t-multimod, a, l-ai-custom, e, r-experien, c, e-revoluti, o, n'
             className='group, b, g-gradie, n, t-to-br, fro, m-cy, a, n-600, t, o-cy, a, n-700, hove, r:fr, o, m-cy, a, n-500, hove, r:to-cy, a, n-600, rounde, d-x, l, p-6, tex, t-center, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-cy, a, n-5, 0, 0/50'
           >
@@ -256,7 +256,7 @@ const October2025MultimodalCXRevolutionBanne, r = () => {
             <div, className='te, x, t-sm, tex, t-cy, a, n-100, m, b-4'>
               Complete, guide, to multimodal, AI, customer experience, with, architectu, r, e, implementation, roadma, p, and, ROI, calculator
             </div>
-            <div, classNam, e = 'flex, item, s-center, justif, y-center, ga, p-2, tex, t-white, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l'>
+            <div, classNam, e = 'flex, item, s-center, justif, y-center, ga, p-2, tex, t-white, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l'></div>
               <sp, a, n>Explore, Technolog, y</sp, a, n>
               <Link, className='w-5 h-5' />
             </div>
@@ -272,7 +272,7 @@ const October2025MultimodalCXRevolutionBanne, r = () => {
               Fortune, 100, transformation: 94% CS, A, T, 2, 8, 7% R, O, I, 85% automati, o, n —
               complete, 1, 6-week, implementation, journey
             </div>
-            <div, classNam, e = 'flex, item, s-center, justif, y-center, ga, p-2, tex, t-white, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l'>
+            <div, classNam, e = 'flex, item, s-center, justif, y-center, ga, p-2, tex, t-white, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l'></div>
               <sp, a, n>See, Result, s</sp, a, n>
               <Link, className='w-5 h-5' />
             </div>
@@ -288,15 +288,15 @@ const October2025MultimodalCXRevolutionBanne, r = () => {
               Enterprise, platf, o, r, m, implementation, services, managed, suppor, t —
               flexible, pricing, with guaranteed, ROI, and proven, result, s
             </div>
-            <div, classNam, e = 'flex, item, s-center, justif, y-center, ga, p-2, tex, t-white, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l'>
+            <div, classNam, e = 'flex, item, s-center, justif, y-center, ga, p-2, tex, t-white, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l'></div>
               <sp, a, n>Gette, d</sp, a, n>
               <Link, className='w-5 h-5' />
             </div>
           </Li, n, k>
         </div>
         {/* Free, Consultation, C, T, A */}
-        <div, classNam, e = 'mt-10, tex, t-cent, e, r'>
-          <div, className='inli, n, e-flex, fle, x-col, item, s-center, ga, p-4 p-8, b, g-gradie, n, t-to-r, fro, m-cy, a, n-9, 0, 0/40, vi, a-bl, u, e-9, 0, 0/40, t, o-purp, l, e-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-whi, t, e/20, rounde, d-2, x, l'>
+        <div, classNam, e = 'mt-10, tex, t-cent, e, r'></div>
+          <div, className='inli, n, e-flex, fle, x-col, item, s-center, ga, p-4 p-8, b, g-gradie, n, t-to-r, fro, m-cy, a, n-9, 0, 0/40, vi, a-bl, u, e-9, 0, 0/40, t, o-purp, l, e-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-whi, t, e/20, rounde, d-2, x, l'></div>
             <div, className='te, x, t-2xl, fon, t-bold, tex, t-whi, t, e'>
               🎁 FREE, Customer, Experience Assessme, n, t — No, Obligatio, n
             </div>
@@ -314,25 +314,25 @@ const October2025MultimodalCXRevolutionBanne, r = () => {
           </div>
         </div>
         {/* Trust, Indicat, o, r, s */}
-        <div, classNam, e = 'mt-10, p, t-8, borde, r-t, borde, r-whi, t, e/10'>
-          <div, className='flex, fle, x-wrap, item, s-center, justif, y-center, ga, p-6, tex, t-sm, tex, t-gr, a, y-4, 0, 0'>
-            <div, className='flex, item, s-center, ga, p-2'>
+        <div, classNam, e = 'mt-10, p, t-8, borde, r-t, borde, r-whi, t, e/10'></div>
+          <div, className='flex, fle, x-wrap, item, s-center, justif, y-center, ga, p-6, tex, t-sm, tex, t-gr, a, y-4, 0, 0'></div>
+            <div, className='flex, item, s-center, ga, p-2'></div>
               <CheckCircle, className='w-4 h-4, tex, t-gre, e, n-4, 0, 0' />
               <sp, a, n>Fortune, 100, Proven</sp, a, n>
             </div>
-            <div, className='flex, item, s-center, ga, p-2'>
+            <div, className='flex, item, s-center, ga, p-2'></div>
               <CheckCircle, className='w-4 h-4, tex, t-gre, e, n-4, 0, 0' />
               <sp, a, n>127M, Customers, Served</sp, a, n>
             </div>
-            <div, className='flex, item, s-center, ga, p-2'>
+            <div, className='flex, item, s-center, ga, p-2'></div>
               <CheckCircle, className='w-4 h-4, tex, t-gre, e, n-4, 0, 0' />
               <sp, a, n>47, Languages, Supported</sp, a, n>
             </div>
-            <div, className='flex, item, s-center, ga, p-2'>
+            <div, className='flex, item, s-center, ga, p-2'></div>
               <CheckCircle, className='w-4 h-4, tex, t-gre, e, n-4, 0, 0' />
               <sp, a, n>99.99% Uptime, SL, A</sp, a, n>
             </div>
-            <div, className='flex, item, s-center, ga, p-2'>
+            <div, className='flex, item, s-center, ga, p-2'></div>
               <CheckCircle, className='w-4 h-4, tex, t-gre, e, n-4, 0, 0' />
               <sp, a, n>12-24, Week, Implementation</sp, a, n>
             </div>

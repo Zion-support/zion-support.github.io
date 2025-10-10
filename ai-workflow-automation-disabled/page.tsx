@@ -87,12 +87,12 @@ const AIWorkflowAutomationPage: React.FC = () => {
         keywords={['workflow automation', 'business process automation', 'AI workflows', 'process optimization', 'workflow builder']}
         canonicalUrl="https://ziontechgroup.com/ai-workflow-automation"
       />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         <Navigation />
         <main className="pt-16">
           {/* Hero Section */}
           <section className="container mx-auto px-4 py-16 text-center">
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-4xl mx-auto"></section>
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
                 AI Workflow Automation Platform
               </h1>
@@ -103,7 +103,7 @@ const AIWorkflowAutomationPage: React.FC = () => {
                 Our AI-powered workflow automation platform helps businesses eliminate manual tasks, 
                 reduce errors by 75%, and save 90% of processing time with intelligent automation.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"></div>
                 <a
                   href="tel:+13024640950"
                   className="cyber-button flex items-center space-x-2"
@@ -142,12 +142,12 @@ const AIWorkflowAutomationPage: React.FC = () => {
 
 const AIWorkflowAutomationPage = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg"></div>
       <Navigation />
       
       <main className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
-          {/* Hero Section */}
+          {/* Hero Section */}</div>
           <section className="text-center mb-16">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
               AI Workflow Automation
@@ -156,7 +156,7 @@ const AIWorkflowAutomationPage = () => {
               Automate complex business workflows with AI-powered intelligence that learns, 
               adapts, and optimizes your processes continuously.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></section>
               <a
                 href="tel:+13024640950"
                 className="cyber-button inline-flex items-center space-x-2"
@@ -178,8 +178,8 @@ const AIWorkflowAutomationPage = () => {
               Key Features
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
+              {features.map((feature, index) => (</section>
+                <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300"></div>
                   <feature.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                   <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
@@ -201,8 +201,8 @@ const AIWorkflowAutomationPage = () => {
               Automate Any Business Process
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {useCases.map((useCase, index) => (
-                <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
+              {useCases.map((useCase, index) => (</section>
+                <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300"></div>
                   <useCase.icon className="w-12 h-12 text-cyan-400 mb-4" />
                   <h3 className="text-xl font-bold text-white mb-3">{useCase.title}</h3>
                   <p className="text-gray-300">{useCase.description}</p>
@@ -217,10 +217,10 @@ const AIWorkflowAutomationPage = () => {
               Pricing Plans
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricing.map((plan, index) => (
+              {pricing.map((plan, index) => (</section>
                 <div key={index} className={`cyber-card p-8 ${index === 1 ? 'ring-2 ring-cyan-400' : ''}`}>
-                  {index === 1 && (
-                    <div className="text-center mb-4">
+                  {index === 1 && (</div>
+                    <div className="text-center mb-4"></div>
                       <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
@@ -255,7 +255,7 @@ const AIWorkflowAutomationPage = () => {
             <p className="text-xl text-purple-100 mb-8">
               Contact us today to learn how AI workflow automation can transform your business processes.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></section>
               <a
                 href="tel:+13024640950"
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"

@@ -40,11 +40,11 @@ const ContentNewsletterSignup: React.FC = () => {
   if (isSubscribed) {
     return (
       <section className="py-16" aria-labelledby="newsletter-success">
-        <div className="container mx-auto px-4">
-          <div className="max-w-2xl mx-auto text-center">
-            <div className="bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl p-8 cyber-card">
+        <div className="container mx-auto px-4"></section>
+          <div className="max-w-2xl mx-auto text-center"></div>
+            <div className="bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl p-8 cyber-card"></div>
               <CheckCircle className="w-16 h-16 text-white mx-auto mb-4" />
-              <h2 id="newsletter-success" className="text-3xl font-bold text-white mb-4">Welcome to Zion Tech Group!<p className="text-white/90 text-lg mb-6">Thank you for subscribing! You'll receive our latest updates and exclusive content.<button
+              <h2 id="newsletter-success" className="text-3xl font-bold text-white mb-4">Welcome to Zion Tech Group!</h2><p className="text-white/90 text-lg mb-6">Thank you for subscribing! You'll receive our latest updates and exclusive content.</p><button
                 onClick={() =>setIsSubscribed(false)}
                 className="bg-white/20 hover:bg-white/30 text-white px-6 py-2 rounded-lg transition-all duration-300"
               ></button>
@@ -59,34 +59,34 @@ const ContentNewsletterSignup: React.FC = () => {
 
   return (
     <section className="py-16" aria-labelledby="newsletter-heading">
-      <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 md:p-12 cyber-card">
+      <div className="container mx-auto px-4"></section>
+        <div className="max-w-4xl mx-auto"></div>
+          <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 md:p-12 cyber-card"></div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">{/* Content */}</div>
-              <div>
-                <h2 id="newsletter-heading" className="text-3xl md:text-4xl font-bold text-white mb-4 neon-text">Stay Updated<p className="text-gray-300 text-lg mb-6 leading-relaxed">Join thousands of professionals who trust us for the latest in AI and IT solutions.</p>
+              <div></div>
+                <h2 id="newsletter-heading" className="text-3xl md:text-4xl font-bold text-white mb-4 neon-text">Stay Updated</h2><p className="text-gray-300 text-lg mb-6 leading-relaxed">Join thousands of professionals who trust us for the latest in AI and IT solutions.</p>
                   Get exclusive insights, early access to new features, and expert tips delivered to your inbox.<div className="space-y-4 mb-8">{benefits.map((benefit, index) => (</div>
-                    <div key={index} className="flex items-start space-x-3">
-                      <div className="p-2 bg-cyan-500/20 rounded-lg">
+                    <div key={index} className="flex items-start space-x-3"></div>
+                      <div className="p-2 bg-cyan-500/20 rounded-lg"></div>
                         <benefit.icon className="w-5 h-5 text-cyan-400" />
                       </div>
-                      <div>
-                        <h3 className="font-semibold text-white mb-1">{benefit.title}<p className="text-gray-400 text-sm">{benefit.description}</p>
+                      <div></div>
+                        <h3 className="font-semibold text-white mb-1">{benefit.title}</h3><p className="text-gray-400 text-sm">{benefit.description}</p>
                       </div>
                     </div>
                   ))}
                 </div>
 
-                <div className="flex items-center space-x-4 text-sm text-gray-400">
-                  <div className="flex items-center space-x-1">
+                <div className="flex items-center space-x-4 text-sm text-gray-400"></div>
+                  <div className="flex items-center space-x-1"></div>
                     <Shield className="w-4 h-4" />
                     <span>100% Secure</span>
                   </div>
-                  <div className="flex items-center space-x-1">
+                  <div className="flex items-center space-x-1"></div>
                     <Mail className="w-4 h-4" />
                     <span>Weekly Updates</span>
                   </div>
-                  <div className="flex items-center space-x-1">
+                  <div className="flex items-center space-x-1"></div>
                     <CheckCircle className="w-4 h-4" />
                     <span>Easy Unsubscribe</span>
                   </div>
@@ -94,11 +94,11 @@ const ContentNewsletterSignup: React.FC = () => {
               </div>
 
               {/* Form */}
-              <div className="bg-slate-700/50 rounded-xl p-6">
+              <div className="bg-slate-700/50 rounded-xl p-6"></div>
                 <h3 className="text-xl font-semibold text-white mb-4">Get Started Today</h3>
 
                 <form onSubmit={handleSubmit} className="space-y-4">
-                  <div>
+                  <div></div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">Email Address<input
                       type="email"
                       id="email"
@@ -113,7 +113,7 @@ const ContentNewsletterSignup: React.FC = () => {
                     className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white py-3 px-6 rounded-lg font-medium transition-all duration-300 flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
                   >{isLoading ? (</button>
                       <>
-                        <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"><span>Subscribing...</span>
+                        <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div><span>Subscribing...</span>
                       </>
                     ) : (
                       <>

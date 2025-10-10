@@ -141,14 +141,14 @@ const HelpPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation />
 
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></section>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
             Help Center
           </h1>
@@ -157,8 +157,8 @@ const HelpPage: React.FC = () => {
           </p>
 
           {/* Search Bar */}
-          <div className="max-w-2xl mx-auto">
-            <div className="relative">
+          <div className="max-w-2xl mx-auto"></div>
+            <div className="relative"></div>
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
                 type="text"
@@ -174,8 +174,8 @@ const HelpPage: React.FC = () => {
 
       {/* Quick Links */}
       <section className="py-16 bg-white/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></section>
+          <div className="text-center mb-16"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Quick Links
             </h2>
@@ -185,20 +185,20 @@ const HelpPage: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {quickLinks.map((link, index) => (
+            {quickLinks.map((link, index) => (</div>
               <a
                 key={index}
                 href={link.link}
                 className="cyber-card p-6 hover:scale-105 transition-all duration-300 group"
               >
-                <div className="flex items-center mb-4">
+                <div className="flex items-center mb-4"></div>
                   <link.icon className={`w-8 h-8 ${link.color} mr-3`} />
                   <h3 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">
                     {link.title}
                   </h3>
                 </div>
                 <p className="text-gray-300 mb-4">{link.description}</p>
-                <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors">
+                <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors"></div>
                   <span className="text-sm font-medium">Learn More</span>
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </div>
@@ -210,8 +210,8 @@ const HelpPage: React.FC = () => {
 
       {/* FAQ Section */}
       <section className="py-16 bg-gradient-to-r from-purple-900/20 to-blue-900/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></section>
+          <div className="text-center mb-16"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Frequently Asked Questions
             </h2>
@@ -221,13 +221,13 @@ const HelpPage: React.FC = () => {
           </div>
 
           <div className="space-y-6">
-            {faqCategories.map((category, categoryIndex) => (
-              <div key={categoryIndex} className="cyber-card">
+            {faqCategories.map((category, categoryIndex) => (</div>
+              <div key={categoryIndex} className="cyber-card"></div>
                 <button
                   onClick={() => toggleCategory(category.title)}
                   className="w-full flex items-center justify-between p-6 text-left"
                 >
-                  <div className="flex items-center">
+                  <div className="flex items-center"></div>
                     <category.icon className="w-6 h-6 text-cyan-400 mr-4" />
                     <h3 className="text-xl font-bold text-white">{category.title}</h3>
                   </div>
@@ -240,8 +240,8 @@ const HelpPage: React.FC = () => {
 
                 {expandedCategory === category.title && (
                   <div className="px-6 pb-6 space-y-4">
-                    {category.questions.map((faq, faqIndex) => (
-                      <div key={faqIndex} className="border-l-2 border-cyan-400/30 pl-4">
+                    {category.questions.map((faq, faqIndex) => (</div>
+                      <div key={faqIndex} className="border-l-2 border-cyan-400/30 pl-4"></div>
                         <h4 className="text-lg font-semibold text-white mb-2">{faq.question}</h4>
                         <p className="text-gray-300">{faq.answer}</p>
                       </div>
@@ -256,8 +256,8 @@ const HelpPage: React.FC = () => {
 
       {/* Contact Support */}
       <section className="py-16 bg-white/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></section>
+          <div className="text-center mb-16"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Still Need Help?
             </h2>
@@ -267,9 +267,9 @@ const HelpPage: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {contactMethods.map((method, index) => (
-              <div key={index} className="cyber-card p-8 text-center hover:scale-105 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
+            {contactMethods.map((method, index) => (</div>
+              <div key={index} className="cyber-card p-8 text-center hover:scale-105 transition-all duration-300"></div>
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6"></div>
                   <method.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">{method.title}</h3>

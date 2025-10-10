@@ -278,9 +278,9 @@ export class ErrorHandler {
       font-family: Arial, sans-serif;
     `;</string>
     notification.innerHTML = `</string>
-      <div style="display:flex;justify-content:space-between;align-items:center;">
-        <div>
-          <strong>${error.severity} Error<p style="margin:5px 0 0 0;font-size:14px;">${error.message}<button onclick="this.parentElement.parentElement.remove()" style="background:none;border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;">×</button>
+      <div style="display:flex;justify-content:space-between;align-items:center;"></div>
+        <div></div>
+          <strong>${error.severity} Error<p style="margin:5px 0 0 0;font-size:14px;">${error.message}</p><button onclick="this.parentElement.parentElement.remove()" style="background:none;border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;">×</button>
       </div>
     `;
     document.body.appendChild(notification);
@@ -440,8 +440,8 @@ export class ErrorBoundary extends React.Component<
     if (this.state.hasError) {
       return (
         this.props.fallback || (
-          <div style={{ padding: '20px', textAlign: 'center' }}>
-            <h2>Something went wrong<p>We're sorry, but something unexpected happened.<button
+          <div style={{ padding: '20px', textAlign: 'center' }}></div>
+            <h2>Something went wrong</h2><p>We're sorry, but something unexpected happened.</p><button
               onClick={() =>this.setState({ hasError: false, error: undefined })}
               style={{
                 padding: '10px 20px',

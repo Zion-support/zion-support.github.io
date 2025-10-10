@@ -17,15 +17,15 @@ const ModernNavigation: React.FC<ModernNavigationProps> = ({ className = '' }) =
 
   return (
     <nav className={`bg-white shadow-md ${className}`}>
-      <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center py-4">
+      <div className="container mx-auto px-4"></div>
+        <div className="flex justify-between items-center py-4"></div>
           <Link href="/" className="text-xl font-bold text-blue-600">
             Zion Tech Group
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
-            {navigationItems.map(item => (
+            {navigationItems.map(item => (</div>
               <Link
                 key={item.name}
                 href={item.href}
@@ -45,7 +45,7 @@ const ModernNavigation: React.FC<ModernNavigationProps> = ({ className = '' }) =
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden py-4 border-t">
-            {navigationItems.map(item => (
+            {navigationItems.map(item => (</div>
               <Link
                 key={item.name}
                 href={item.href}

@@ -5,7 +5,7 @@ export default function BlogPost(): React.JSX.Element {
   return (
     <>
       <Header />
-      <div className="min-h-screen bg-gradient-to-br from-blue-600 via-blue-700 to-purple-800 text-white">
+      <div className="min-h-screen bg-gradient-to-br from-blue-600 via-blue-700 to-purple-800 text-white"></div>
         <Helmet>
           <title>Genai 2025 Oct 02 Cache Playbook V2 - Zion Tech Group</title>
           <meta
@@ -14,12 +14,12 @@ export default function BlogPost(): React.JSX.Element {
           />
         </Helmet>
 
-        <div className="max-w-4xl mx-auto px-4 py-20">
-          <div className="mb-12">
+        <div className="max-w-4xl mx-auto px-4 py-20"></div>
+          <div className="mb-12"></div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
               Genai 2025 Oct 02 Cache Playbook V2
             </h1>
-            <div className="flex flex-wrap items-center gap-6 text-sm text-gray-300 mb-8">
+            <div className="flex flex-wrap items-center gap-6 text-sm text-gray-300 mb-8"></div>
               <span>By Zion Tech Group Team</span>
               <span>•</span>
               <span>2025-10-03</span>
@@ -28,8 +28,8 @@ export default function BlogPost(): React.JSX.Element {
             </div>
           </div>
 
-          <div className="prose prose-lg prose-invert max-w-none">
-            <div className="text-gray-200 leading-relaxed">
+          <div className="prose prose-lg prose-invert max-w-none"></div>
+            <div className="text-gray-200 leading-relaxed"></div>
               <h2>Introduction</h2>
               <p>
                 This is a placeholder blog post. The content for "Genai 2025 Oct 02 Cache Playbook
@@ -50,11 +50,11 @@ export default function BlogPost(): React.JSX.Element {
             </div>
           </div>
 
-          <div className="mt-16 pt-8 border-t border-white border-opacity-20">
-            <div className="flex flex-col sm:flex-row justify-between items-center gap-6">
-              <div>
+          <div className="mt-16 pt-8 border-t border-white border-opacity-20"></div>
+            <div className="flex flex-col sm:flex-row justify-between items-center gap-6"></div>
+              <div></div>
                 <h3 className="text-xl font-bold mb-2">Share this article</h3>
-                <div className="flex gap-4">
+                <div className="flex gap-4"></div>
                   <a
                     href={`https://twitter.com/intent/tweet?text=${encodeURIComponent('Genai 2025 Oct 02 Cache Playbook V2')}&url=${encodeURIComponent(window.location.href)}`}
                     target="_blank"
