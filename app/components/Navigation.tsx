@@ -125,7 +125,9 @@ const Navigation: React.FC = () => {
         { name: 'AI Customer Support Bot', path: '/ai-customer-support-bot', description: '24/7 AI customer support', icon: '🤖', popular: true },
         { name: 'AI Content Studio', path: '/ai-content-studio', description: 'Complete content creation suite', icon: '✍️', popular: true },
         { name: 'AI Financial Advisor', path: '/ai-financial-advisor', description: 'Personalized financial planning', icon: '💰', popular: false },
-        { name: 'AI Workflow Automation', path: '/ai-workflow-automation', description: 'Visual workflow builder', icon: '⚡', popular: true }
+        { name: 'AI Workflow Automation Pro', path: '/ai-workflow-automation-pro', description: 'Advanced workflow automation platform', icon: '⚡', popular: true },
+        { name: 'AI Smart Calendar Pro', path: '/ai-smart-calendar-pro', description: 'Intelligent calendar management', icon: '📅', popular: true },
+        { name: 'AI Sentiment Analyzer Pro', path: '/ai-sentiment-analyzer-pro', description: 'Advanced sentiment analysis platform', icon: '🧠', popular: true }
       ]
     },
     {
@@ -153,6 +155,8 @@ const Navigation: React.FC = () => {
       services: [
         { name: 'Cloud Migration & Setup', path: '/cloud-migration', description: 'Seamless cloud migration', icon: '☁️', popular: true },
         { name: 'Enterprise Cybersecurity Suite', path: '/cybersecurity', description: 'Comprehensive security solutions', icon: '🛡️', popular: true },
+        { name: 'AI Cybersecurity Pro', path: '/ai-cybersecurity-pro', description: 'Next-generation AI cybersecurity', icon: '🔒', popular: true },
+        { name: 'AI Cloud Optimization Pro', path: '/ai-cloud-optimization-pro', description: 'Intelligent cloud infrastructure management', icon: '☁️', popular: true },
         { name: 'IT Infrastructure Design', path: '/it-infrastructure', description: 'Scalable infrastructure architecture', icon: '🏗️', popular: true },
         { name: '24/7 IT Support & Monitoring', path: '/it-support', description: 'Round-the-clock technical support', icon: '🔄', popular: true },
         { name: 'Custom Software Development', path: '/custom-development', description: 'Tailored software solutions', icon: '💻', popular: true },
@@ -204,7 +208,7 @@ const Navigation: React.FC = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-6">
             <Link
               to="/"
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium neon-glow"
@@ -247,7 +251,7 @@ const Navigation: React.FC = () => {
               </button>
               
               {servicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-96 bg-white rounded-xl shadow-2xl border border-gray-200 py-6 z-50">
+                <div className="absolute top-full left-0 mt-2 w-96 bg-white rounded-xl shadow-2xl border border-gray-200 py-6 z-50 max-h-96 overflow-y-auto">
                   <div className="grid grid-cols-2 gap-6 px-6">
                     {serviceCategories.map((category, index) => (
                       <div key={index} className="space-y-3">
@@ -330,7 +334,7 @@ const Navigation: React.FC = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden bg-slate-900/95 backdrop-blur-md rounded-lg mt-2 p-4">
+          <div className="lg:hidden bg-slate-900/95 backdrop-blur-md rounded-lg mt-2 p-4 max-h-screen overflow-y-auto">
             <div className="space-y-4">
               <Link
                 to="/"
@@ -375,16 +379,19 @@ const Navigation: React.FC = () => {
                   <ChevronDown className={`w-4 h-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
                 </button>
                 {servicesOpen && (
-                  <div className="ml-4 space-y-2 mt-2">
+                  <div className="ml-4 space-y-3 mt-2 max-h-64 overflow-y-auto">
                     {serviceCategories.map((category, categoryIndex) => (
                       <div key={categoryIndex}>
-                        <div className="text-gray-300 font-semibold text-sm mb-2">{category.title}</div>
+                        <div className="text-gray-300 font-semibold text-sm mb-2 flex items-center space-x-2">
+                          <category.icon className="w-4 h-4" />
+                          <span>{category.title}</span>
+                        </div>
                         <div className="ml-4 space-y-1">
-                          {category.services.slice(0, 4).map((service, serviceIndex) => (
+                          {category.services.slice(0, 3).map((service, serviceIndex) => (
                             <Link
                               key={serviceIndex}
                               to={service.path}
-                              className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors py-1"
+                              className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors py-1 pl-2 border-l border-gray-600 hover:border-cyan-400"
                               onClick={closeAllMenus}
                             >
                               {service.name}

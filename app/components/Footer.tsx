@@ -10,58 +10,54 @@ const Footer: React.FC = memo(() => {
       title: 'AI Services',
       icon: Brain,
       services: [
-        { name: 'AI Drug Discovery Pro', href: '/ai-drug-discovery-pro' },
-        { name: 'AI Climate Solutions Pro', href: '/ai-climate-solutions-pro' },
-        { name: 'AI Space Technology Pro', href: '/ai-space-technology-pro' },
-        { name: 'AI Financial Crime Detection Pro', href: '/ai-financial-crime-detection-pro' },
-        { name: 'AI Supply Chain Optimization Pro', href: '/ai-supply-chain-optimization-pro' },
-        { name: 'AI Energy Grid Management Pro', href: '/ai-energy-grid-management-pro' },
-        { name: 'AI Agricultural Intelligence Pro', href: '/ai-agricultural-intelligence-pro' },
-        { name: 'AI Legal Research Pro', href: '/ai-legal-research-pro' }
+        { name: 'AI Workflow Automation Pro', href: '/ai-workflow-automation-pro' },
+        { name: 'AI Sentiment Analyzer Pro', href: '/ai-sentiment-analyzer-pro' },
+        { name: 'AI Customer Support Suite', href: '/ai-customer-support' },
+        { name: 'AI Data Analytics Platform', href: '/ai-data-analytics' },
+        { name: 'AI Content Generation Studio', href: '/ai-content-generation' },
+        { name: 'AI Healthcare Solutions', href: '/ai-healthcare' },
+        { name: 'AI Fintech Platform', href: '/ai-fintech' },
+        { name: 'AI Computer Vision Platform', href: '/ai-computer-vision' }
       ]
     },
     {
       title: 'IT Services',
       icon: Cloud,
       services: [
-        { name: 'AI Infrastructure Monitoring Pro', href: '/ai-infrastructure-monitoring' },
-        { name: 'Blockchain Integration Services Pro', href: '/blockchain-integration-services' },
-        { name: 'AI API Management Pro', href: '/ai-api-management' },
-        { name: 'Intelligent Database Migration Pro', href: '/intelligent-database-migration' },
-        { name: 'AI Load Testing Pro', href: '/ai-load-testing' },
-        { name: 'Smart Contract Security Audit Pro', href: '/smart-contract-security-audit' },
-        { name: 'AI Content Delivery Network Pro', href: '/ai-content-delivery-network' },
-        { name: 'Intelligent Email Infrastructure Pro', href: '/intelligent-email-infrastructure' }
+        { name: 'AI Cybersecurity Pro', href: '/ai-cybersecurity-pro' },
+        { name: 'AI Cloud Optimization Pro', href: '/ai-cloud-optimization-pro' },
+        { name: 'Cloud Migration & Setup', href: '/cloud-migration' },
+        { name: 'Enterprise Cybersecurity Suite', href: '/cybersecurity' },
+        { name: 'IT Infrastructure Design', href: '/it-infrastructure' },
+        { name: '24/7 IT Support & Monitoring', href: '/it-support' },
+        { name: 'Custom Software Development', href: '/custom-development' },
+        { name: 'DevOps & CI/CD Implementation', href: '/devops-cicd' }
       ]
     },
     {
       title: 'Micro SAAS',
       icon: Code,
       services: [
+        { name: 'AI Smart Calendar Pro', href: '/ai-smart-calendar-pro' },
         { name: 'AI Project Manager Pro', href: '/ai-project-manager' },
-        { name: 'AI Smart Calendar Pro', href: '/ai-smart-calendar' },
         { name: 'AI Content Writer Pro', href: '/ai-content-writer' },
-        { name: 'AI Video Generator Pro', href: '/ai-video-generator' },
         { name: 'AI Social Media Manager Pro', href: '/ai-social-media-manager' },
         { name: 'AI Email Marketing Suite', href: '/ai-email-marketing' },
-        { name: 'AI CRM Assistant Pro', href: '/ai-crm-assistant' },
         { name: 'AI Financial Analyzer Pro', href: '/ai-financial-analyzer' },
         { name: 'AI Code Assistant Pro', href: '/ai-code-assistant' },
-        { name: 'AI API Manager Pro', href: '/ai-api-manager' },
-        { name: 'AI Cybersecurity Monitor Pro', href: '/ai-cybersecurity-monitor' },
-        { name: 'AI Password Manager Pro', href: '/ai-password-manager' }
+        { name: 'AI Analytics Dashboard', href: '/ai-analytics-dashboard' }
       ]
     },
     {
-      title: 'Specialized',
+      title: 'Emerging Technologies',
       icon: Zap,
       services: [
-        { name: 'Quantum Computing Solutions', href: '/quantum-computing' },
-        { name: 'Autonomous Systems', href: '/autonomous-systems' },
-        { name: 'Blockchain & Web3', href: '/blockchain-web3' },
+        { name: 'Quantum Computing Solutions', href: '/ai-quantum-computing' },
+        { name: 'Autonomous Systems', href: '/ai-autonomous-systems' },
+        { name: 'Blockchain & Web3', href: '/ai-blockchain-solutions' },
         { name: 'IoT & Edge Computing', href: '/iot-edge-computing' },
-        { name: 'Business Intelligence', href: '/business-intelligence' },
-        { name: 'Robotics Solutions', href: '/robotics' }
+        { name: 'AR/VR Solutions', href: '/ar-vr-solutions' },
+        { name: 'Smart Cities', href: '/smart-cities' }
       ]
     }
   ];
@@ -72,7 +68,9 @@ const Footer: React.FC = memo(() => {
     { name: 'Careers', href: '/careers' },
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'Blog', href: '/blog' },
-    { name: 'Pricing', href: '/pricing' }
+    { name: 'Pricing', href: '/pricing' },
+    { name: 'Partners', href: '/partners' },
+    { name: 'Investors', href: '/investors' }
   ];
 
   const supportLinks = [
@@ -81,7 +79,9 @@ const Footer: React.FC = memo(() => {
     { name: 'Documentation', href: '/docs' },
     { name: 'API Reference', href: '/api-docs' },
     { name: 'Status Page', href: '/status' },
-    { name: 'System Health', href: '/health' }
+    { name: 'System Health', href: '/health' },
+    { name: 'Knowledge Base', href: '/knowledge-base' },
+    { name: 'Community Forum', href: '/community' }
   ];
 
   const legalLinks = [
@@ -90,7 +90,9 @@ const Footer: React.FC = memo(() => {
     { name: 'Cookie Policy', href: '/cookies' },
     { name: 'GDPR Compliance', href: '/gdpr' },
     { name: 'Security', href: '/security' },
-    { name: 'Compliance', href: '/compliance' }
+    { name: 'Compliance', href: '/compliance' },
+    { name: 'Data Processing Agreement', href: '/dpa' },
+    { name: 'Service Level Agreement', href: '/sla' }
   ];
 
   return (
@@ -101,9 +103,9 @@ const Footer: React.FC = memo(() => {
       <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.02)_1px,transparent_1px)] bg-[length:50px_50px]" />
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
-          <div className="lg:col-span-1">
+          <div className="md:col-span-2 lg:col-span-1">
             <div className="flex items-center space-x-2 mb-6 group">
               <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-400/25">
                 <Zap className="w-5 h-5 text-white" />
@@ -161,9 +163,9 @@ const Footer: React.FC = memo(() => {
           </div>
 
           {/* Services */}
-          <div className="lg:col-span-2">
+          <div className="md:col-span-2 lg:col-span-2">
             <h3 className="text-white font-semibold text-lg mb-6 neon-text">Our Services</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {serviceCategories.map((category, index) => (
                 <div key={index}>
                   <div className="flex items-center space-x-2 mb-4">
@@ -188,8 +190,8 @@ const Footer: React.FC = memo(() => {
           </div>
 
           {/* Quick Links */}
-          <div className="lg:col-span-1">
-            <div className="space-y-8">
+          <div className="md:col-span-2 lg:col-span-1">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-8">
               {/* Company */}
               <div>
                 <h4 className="text-white font-semibold mb-4">Company</h4>

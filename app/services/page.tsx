@@ -1,5 +1,6 @@
 'use client';
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { 
   Brain, 
   Cloud, 
@@ -90,32 +91,36 @@ const ServicesPage: React.FC = () => {
       description: 'Advanced AI solutions powered by machine learning and artificial intelligence',
       services: [
         {
-          name: 'AI Analytics Platform',
-          description: 'Predictive analytics and real-time insights',
-          price: 'Starting at $299/mo',
-          features: ['Predictive Analytics', 'Real-time Processing', 'Custom Dashboards'],
-          popular: true
-        },
-        {
-          name: 'AI Workflow Automation',
-          description: 'Intelligent business process automation',
-          price: 'Starting at $199/mo',
-          features: ['Visual Workflow Builder', 'Smart Triggers', 'Error Handling'],
-          popular: true
-        },
-        {
-          name: 'AI Cybersecurity Platform',
-          description: 'Next-gen security with AI threat detection',
+          name: 'AI Workflow Automation Pro',
+          description: 'Intelligent business process automation with visual workflow builder',
           price: 'Starting at $399/mo',
-          features: ['Threat Detection', 'Anomaly Analysis', 'Automated Response'],
-          popular: true
+          features: ['Visual Workflow Builder', 'AI-Powered Automation', 'Advanced Analytics', 'Enterprise Security'],
+          popular: true,
+          link: '/ai-workflow-automation-pro'
         },
         {
-          name: 'AI Content Generation',
-          description: 'Advanced content creation with AI',
-          price: 'Starting at $179/mo',
-          features: ['Multi-format Creation', 'SEO Optimization', 'Brand Voice Training'],
-          popular: true
+          name: 'AI Sentiment Analyzer Pro',
+          description: 'Advanced sentiment analysis platform with real-time insights',
+          price: 'Starting at $299/mo',
+          features: ['Real-time Analysis', 'Multi-language Support', 'Advanced Analytics', 'Enterprise Security'],
+          popular: true,
+          link: '/ai-sentiment-analyzer-pro'
+        },
+        {
+          name: 'AI Customer Support Suite',
+          description: 'Advanced 24/7 customer support with AI chatbots',
+          price: 'Starting at $199/mo',
+          features: ['24/7 Support', 'Multi-channel Integration', 'Smart Routing', 'Analytics Dashboard'],
+          popular: true,
+          link: '/ai-customer-support'
+        },
+        {
+          name: 'AI Data Analytics Platform',
+          description: 'Advanced analytics with ML predictions and insights',
+          price: 'Starting at $349/mo',
+          features: ['Predictive Analytics', 'Real-time Processing', 'Custom Dashboards', 'API Access'],
+          popular: true,
+          link: '/ai-data-analytics'
         }
       ]
     },
@@ -127,32 +132,36 @@ const ServicesPage: React.FC = () => {
       description: 'Comprehensive IT solutions for modern businesses',
       services: [
         {
+          name: 'AI Cybersecurity Pro',
+          description: 'Next-generation AI cybersecurity with advanced threat detection',
+          price: 'Starting at $799/mo',
+          features: ['AI Threat Detection', 'Multi-layer Security', '24/7 Monitoring', 'Compliance & Governance'],
+          popular: true,
+          link: '/ai-cybersecurity-pro'
+        },
+        {
+          name: 'AI Cloud Optimization Pro',
+          description: 'Intelligent cloud infrastructure management and optimization',
+          price: 'Starting at $499/mo',
+          features: ['AI-Powered Optimization', 'Real-time Analytics', 'Security & Compliance', 'Automated Scaling'],
+          popular: true,
+          link: '/ai-cloud-optimization-pro'
+        },
+        {
           name: 'Cloud Migration & Setup',
           description: 'Seamless migration to AWS, Azure, or GCP',
           price: 'Starting at $10,000',
-          features: ['Multi-cloud Strategy', 'Cost Optimization', 'Security Implementation'],
-          popular: true
-        },
-        {
-          name: 'Enterprise Cybersecurity',
-          description: 'Comprehensive security solutions',
-          price: 'Starting at $8,000/mo',
-          features: ['Threat Detection', 'Vulnerability Assessment', '24/7 Monitoring'],
-          popular: true
+          features: ['Multi-cloud Strategy', 'Cost Optimization', 'Security Implementation', '24/7 Support'],
+          popular: true,
+          link: '/cloud-migration'
         },
         {
           name: '24/7 IT Support',
-          description: 'Round-the-clock technical support',
+          description: 'Round-the-clock technical support and monitoring',
           price: 'Starting at $2,000/mo',
-          features: ['Help Desk Support', 'Remote Monitoring', 'Proactive Maintenance'],
-          popular: true
-        },
-        {
-          name: 'Custom Software Development',
-          description: 'Tailored software solutions',
-          price: 'Starting at $15,000',
-          features: ['Web Applications', 'Mobile Apps', 'API Development'],
-          popular: true
+          features: ['Help Desk Support', 'Remote Monitoring', 'Proactive Maintenance', 'SLA Guarantee'],
+          popular: true,
+          link: '/it-support'
         }
       ]
     },
@@ -164,32 +173,36 @@ const ServicesPage: React.FC = () => {
       description: 'Powerful AI-powered micro SaaS tools for business operations',
       services: [
         {
+          name: 'AI Smart Calendar Pro',
+          description: 'Intelligent calendar management with AI-powered scheduling',
+          price: '$49/mo',
+          features: ['AI-Powered Scheduling', 'Team Collaboration', 'Automation & Integration', 'Analytics & Insights'],
+          popular: true,
+          link: '/ai-smart-calendar-pro'
+        },
+        {
           name: 'AI Project Manager Pro',
           description: 'Intelligent project management with AI insights',
           price: '$199/mo',
-          features: ['Smart Task Assignment', 'Progress Tracking', 'Resource Optimization'],
-          popular: true
+          features: ['Smart Task Assignment', 'Progress Tracking', 'Resource Optimization', 'Team Collaboration'],
+          popular: true,
+          link: '/ai-project-manager'
         },
         {
           name: 'AI Content Writer Pro',
-          description: 'Advanced AI content creation',
+          description: 'Advanced AI content creation and optimization',
           price: '$129/mo',
-          features: ['SEO Optimization', 'Brand Voice', 'Multi-language Support'],
-          popular: true
+          features: ['SEO Optimization', 'Brand Voice Training', 'Multi-language Support', 'Content Analytics'],
+          popular: true,
+          link: '/ai-content-writer'
         },
         {
-          name: 'AI Financial Advisor Pro',
-          description: 'Personalized financial planning and advice',
+          name: 'AI Financial Analyzer Pro',
+          description: 'Personalized financial analysis and planning',
           price: '$299/mo',
-          features: ['Portfolio Analysis', 'Risk Assessment', 'Investment Recommendations'],
-          popular: true
-        },
-        {
-          name: 'AI Code Assistant Pro',
-          description: 'Advanced AI coding assistant',
-          price: '$179/mo',
-          features: ['Code Generation', 'Debug Assistant', 'Code Review'],
-          popular: true
+          features: ['Portfolio Analysis', 'Risk Assessment', 'Investment Recommendations', 'Real-time Monitoring'],
+          popular: true,
+          link: '/ai-financial-analyzer'
         }
       ]
     }
@@ -381,9 +394,12 @@ const ServicesPage: React.FC = () => {
                         </ul>
                       </div>
                       <div className="text-lg font-bold text-cyan-400 mb-4">{service.price}</div>
-                      <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-purple-700 transition-all">
+                      <Link 
+                        to={service.link || '#'}
+                        className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-purple-700 transition-all inline-block text-center"
+                      >
                         Learn More
-                      </button>
+                      </Link>
                     </div>
                   ))}
                 </div>
