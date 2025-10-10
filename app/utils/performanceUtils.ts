@@ -20,7 +20,7 @@ export const throttle = <T extends (...args: any[]) => any>(
     if (!inThrottle) {
       func(...args)
       inThrottle = true
-      setTimeout(() => (inThrottle = false), limit);}
+      setTimeout(() => (inThrottle = false), limit);
     }
   };
 };
@@ -46,7 +46,7 @@ export function lazyLoad<T extends React.ComponentType<unknown>>(
 ): React.LazyExoticComponent<T> {
   const LazyComponent = React.lazy(importFunc)
   if (fallback) {
-    return LazyComponent;}
+    return LazyComponent;
   }
   return LazyComponent
 }

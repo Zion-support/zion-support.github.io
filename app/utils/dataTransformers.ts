@@ -1,353 +1,210 @@
 'use client'
 /**
- * Data Transformation Utilities
- * Provides utilities for transforming and formatting data
+ * Data Transformers Utility
+ * Provides data transformation and formatting functions
  */
-/**
- * Deep clone an object
- */
-export function deepClone<T>(obj: T): T {
-  if (obj === null || typeof obj !== 'object') {
-    return obj;}
-  }
-  if (obj instanceof Date) {
-    return new Date(obj.getTime()) as unknown as T;}
-  }
-  if (obj instanceof Array) {
-    return obj.map(item => deepClone(item)) as unknown as T;}
-  }
-  if (obj instanceof Object) {}
-    const clonedObj = {} as T
-    for (const key in obj) {
-      if (Object.prototype.hasOwnProperty.call(obj, key)) {
-        clonedObj[key] = deepClone(obj[key]);}
+
+export interface TransformOptions {
+  format?: 'json' | 'xml' | 'csv' | 'yaml';
+  encoding?: 'utf8' | 'base64';
+  pretty?: boolean;
+}
+
+export interface DataMapping {
+  [key: string]: string | DataMapping;
+}
+
+class DataTransformer {
+  /**
+   * Transform data according to a mapping schema
+   */
+  transform<T, R>(data: T, mapping: DataMapping): R {
+    const result: any = {};
+    
+    for (const [targetKey, sourceKey] of Object.entries(mapping)) {
+      if (typeof sourceKey === 'string') {
+        result[targetKey] = this.getNestedValue(data, sourceKey);
+      } else if (typeof sourceKey === 'object') {
+        result[targetKey] = this.transform(data, sourceKey);
       }
     }
-    return clonedObj
+    
+    return result as R;
   }
-  return obj
-}
-/**
- * Deep merge two objects
- */
-export function deepMerge<T extends Record<string, unknown>>(target: T, source: Partial<T>): T {}
-  const output = { ...target }
-  for (const key in source) {
-    if (Object.prototype.hasOwnProperty.call(source, key)) {
-      const sourceValue = source[key]
-      const targetValue = output[key]
-      if (
-        sourceValue &&
-        typeof sourceValue === 'object' &&
-        !Array.isArray(sourceValue) &&
-        targetValue &&
-        typeof targetValue === 'object' &&
-        !Array.isArray(targetValue)
-      ) {
-        output[key] = deepMerge(
-          targetValue as Record<string, unknown>,
-          sourceValue as Record<string, unknown>
-        ) as T[Extract<keyof T, string>];}
-      } else {
-        output[key] = sourceValue as T[Extract<keyof T, string>];}
-      }
+
+  /**
+   * Get nested value from object using dot notation
+   */
+  private getNestedValue(obj: any, path: string): any {
+    return path.split('.').reduce((current, key) => current?.[key], obj);
+  }
+
+  /**
+   * Format data to specified format
+   */
+  format(data: any, options: TransformOptions = {}): string {
+    const { format = 'json', pretty = false } = options;
+    
+    switch (format) {
+      case 'json':
+        return JSON.stringify(data, null, pretty ? 2 : 0);
+      case 'xml':
+        return this.toXML(data, pretty);
+      case 'csv':
+        return this.toCSV(data);
+      case 'yaml':
+        return this.toYAML(data, pretty);
+      default:
+        return JSON.stringify(data, null, pretty ? 2 : 0);
     }
   }
-  return output
-}
-/**
- * Flatten a nested object
- */
-export function flattenObject(
-  obj: Record<string, unknown>,
-  prefix = '',
-  separator = '.'
-): Record<string, unknown> {}
-  const flattened: Record<string, unknown> = {}
-  for (const key in obj) {
-    if (Object.prototype.hasOwnProperty.call(obj, key)) {
-      const value = obj[key];}
-      const newKey = prefix ? `${prefix}${separator}${key}` : key
-      if (value && typeof value === 'object' && !Array.isArray(value)) {
-        Object.assign(
-          flattened,
-          flattenObject(value as Record<string, unknown>, newKey, separator)
-        );}
-      } else {
-        flattened[newKey] = value;}
-      }
+
+  /**
+   * Convert data to XML format
+   */
+  private toXML(data: any, pretty: boolean = false): string {
+    const indent = pretty ? '  ' : '';
+    const newline = pretty ? '\n' : '';
+    
+    if (Array.isArray(data)) {
+      return data.map(item => this.toXML(item, pretty)).join(newline);
     }
-  }
-  return flattened
-}
-/**
- * Unflatten a flattened object
- */
-export function unflattenObject(
-  obj: Record<string, unknown>,
-  separator = '.'
-): Record<string, unknown> {}
-  const result: Record<string, unknown> = {}
-  for (const key in obj) {
-    if (Object.prototype.hasOwnProperty.call(obj, key)) {
-      const keys = key.split(separator)
-      let current = result
-      for (let i = 0; i < keys.length; i++) {
-        const k = keys[i]
-        if (i === keys.length - 1) {
-          current[k] = obj[key];}
-        } else {}
-          current[k] = current[k] || {}
-          current = current[k] as Record<string, unknown>
+    
+    if (typeof data === 'object' && data !== null) {
+      let xml = '';
+      for (const [key, value] of Object.entries(data)) {
+        if (typeof value === 'object' && value !== null) {
+          xml += `${indent}<${key}>${newline}${this.toXML(value, pretty)}${newline}${indent}</${key}>${newline}`;
+        } else {
+          xml += `${indent}<${key}>${value}</${key}>${newline}`;
         }
       }
+      return xml;
     }
+    
+    return String(data);
   }
-  return result
-}
-/**
- * Pick specific keys from an object
- */
-export function pick<T extends Record<string, unknown>, K extends keyof T>(
-  obj: T,
-  keys: K[]
-): Pick<T, K> {}
-  const result = {} as Pick<T, K>
-  keys.forEach(key => {
-    if (key in obj) {
-      result[key] = obj[key];}
+
+  /**
+   * Convert data to CSV format
+   */
+  private toCSV(data: any[]): string {
+    if (!Array.isArray(data) || data.length === 0) {
+      return '';
     }
-  })
-  return result
-}
-/**
- * Omit specific keys from an object
- */
-export function omit<T extends Record<string, unknown>, K extends keyof T>(
-  obj: T,
-  keys: K[]
-): Omit<T, K> {}
-  const result = { ...obj }
-  keys.forEach(key => {
-    delete result[key];}
-  })
-  return result as Omit<T, K>
-}
-/**
- * Group array items by a key
- */
-export function groupBy<T>(
-  array: T[],
-  key: keyof T | ((item: T) => string | number)
-): Record<string, T[]> {
-  return array.reduce(
-    (result, item) => {
-      const groupKey = typeof key === 'function' ? String(key(item)) : String(item[key])
-      (result[groupKey] = result[groupKey] || []).push(item)
-      return result;}
-    },
-    {} as Record<string, T[]>
-  )
-}
-/**
- * Get unique items from an array
- */
-export function unique<T>(array: T[], key?: keyof T): T[] {
-  if (!key) {
-    return Array.from(new Set(array));}
+    
+    const headers = Object.keys(data[0]);
+    const csvHeaders = headers.join(',');
+    
+    const csvRows = data.map(row => 
+      headers.map(header => {
+        const value = row[header];
+        return typeof value === 'string' && value.includes(',') 
+          ? `"${value.replace(/"/g, '""')}"` 
+          : value;
+      }).join(',')
+    );
+    
+    return [csvHeaders, ...csvRows].join('\n');
   }
-  const seen = new Set()
-  return array.filter(item => {
-    const value = item[key]
-    if (seen.has(value)) {
-      return false;}
+
+  /**
+   * Convert data to YAML format
+   */
+  private toYAML(data: any, pretty: boolean = false): string {
+    const indent = pretty ? '  ' : '';
+    
+    if (Array.isArray(data)) {
+      return data.map(item => `- ${this.toYAML(item, pretty)}`).join('\n');
     }
-    seen.add(value)
-    return true
-  })
-}
-/**
- * Sort array by multiple keys
- */
-export function sortBy<T>(
-  array: T[],
-  keys: Array<keyof T | ((item: T) => unknown)>,
-  orders: Array<'asc' | 'desc'> = []
-): T[] {
-  return [...array].sort((a, b) => {
-    for (let i = 0; i < keys.length; i++) {
-      const key = keys[i]
-      const order = orders[i] || 'asc'
-      const aVal = typeof key === 'function' ? key(a) : a[key]
-      const bVal = typeof key === 'function' ? key(b) : b[key]
-      // Handle comparison with type safety
-      if (aVal == null || bVal == null) {
-        if (aVal == null && bVal == null) continue
-        return aVal == null ? 1 : -1;}
+    
+    if (typeof data === 'object' && data !== null) {
+      let yaml = '';
+      for (const [key, value] of Object.entries(data)) {
+        if (typeof value === 'object' && value !== null) {
+          yaml += `${key}:\n${this.toYAML(value, pretty).split('\n').map(line => indent + line).join('\n')}\n`;
+        } else {
+          yaml += `${key}: ${value}\n`;
+        }
       }
-      // Convert to comparable values
-      const aComp =
-        typeof aVal === 'string' || typeof aVal === 'number' || typeof aVal === 'boolean'
-          ? aVal
-          : String(aVal)
-      const bComp =
-        typeof bVal === 'string' || typeof bVal === 'number' || typeof bVal === 'boolean'
-          ? bVal
-          : String(bVal)
-      if (aComp < bComp) return order === 'asc' ? -1 : 1
-      if (aComp > bComp) return order === 'asc' ? 1 : -1
+      return yaml;
     }
-    return 0
-  })
-}
-/**
- * Chunk array into smaller arrays
- */
-export function chunk<T>(array: T[], size: number): T[][] {
-  const chunks: T[][] = []
-  for (let i = 0; i < array.length; i += size) {
-    chunks.push(array.slice(i, i + size));}
+    
+    return String(data);
   }
-  return chunks
-}
-/**
- * Zip multiple arrays together
- */
-export function zip<T>(...arrays: T[][]): T[][] {
-  const length = Math.max(...arrays.map(arr => arr.length))
-  const result: T[][] = []
-  for (let i = 0; i < length; i++) {
-    result.push(arrays.map(arr => arr[i]));}
+
+  /**
+   * Normalize data structure
+   */
+  normalize<T>(data: T): T {
+    if (Array.isArray(data)) {
+      return data.map(item => this.normalize(item)) as T;
+    }
+    
+    if (typeof data === 'object' && data !== null) {
+      const normalized: any = {};
+      for (const [key, value] of Object.entries(data)) {
+        const normalizedKey = key.toLowerCase().replace(/[^a-z0-9]/g, '_');
+        normalized[normalizedKey] = this.normalize(value);
+      }
+      return normalized as T;
+    }
+    
+    return data;
   }
-  return result
+
+  /**
+   * Filter data based on criteria
+   */
+  filter<T>(data: T[], criteria: (item: T) => boolean): T[] {
+    return data.filter(criteria);
+  }
+
+  /**
+   * Sort data by specified key
+   */
+  sort<T>(data: T[], key: keyof T, direction: 'asc' | 'desc' = 'asc'): T[] {
+    return [...data].sort((a, b) => {
+      const aVal = a[key];
+      const bVal = b[key];
+      
+      if (aVal < bVal) return direction === 'asc' ? -1 : 1;
+      if (aVal > bVal) return direction === 'asc' ? 1 : -1;
+      return 0;
+    });
+  }
+
+  /**
+   * Group data by specified key
+   */
+  groupBy<T>(data: T[], key: keyof T): Record<string, T[]> {
+    return data.reduce((groups, item) => {
+      const groupKey = String(item[key]);
+      if (!groups[groupKey]) {
+        groups[groupKey] = [];
+      }
+      groups[groupKey].push(item);
+      return groups;
+    }, {} as Record<string, T[]>);
+  }
+
+  /**
+   * Paginate data
+   */
+  paginate<T>(data: T[], page: number, pageSize: number): { data: T[]; total: number; pages: number } {
+    const start = (page - 1) * pageSize;
+    const end = start + pageSize;
+    const paginatedData = data.slice(start, end);
+    
+    return {
+      data: paginatedData,
+      total: data.length,
+      pages: Math.ceil(data.length / pageSize)
+    };
+  }
 }
-/**
- * Format bytes to human readable string
- */
-export function formatBytes(bytes: number, decimals = 2): string {
-  if (bytes === 0) return '0 Bytes'
-  const k = 1024
-  const dm = decimals < 0 ? 0 : decimals
-  const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB']
-  const i = Math.floor(Math.log(bytes) / Math.log(k));`}
-  return `${parseFloat((bytes / Math.pow(k, i)).toFixed(dm))} ${sizes[i]}`
-}
-/**
- * Format number with separators
- */
-export function formatNumber(num: number, locale = 'en-US'): string {
-  return new Intl.NumberFormat(locale).format(num);}
-}
-/**
- * Format currency
- */
-export function formatCurrency(amount: number, currency = 'USD', locale = 'en-US'): string {
-  return new Intl.NumberFormat(locale, {
-    style: 'currency',
-    currency}
-  }).format(amount)
-}
-/**
- * Format date
- */
-export function formatDate(
-  date: Date | string | number,
-  options: Intl.DateTimeFormatOptions = {},
-  locale = 'en-US'
-): string {
-  const d = typeof date === 'string' || typeof date === 'number' ? new Date(date) : date
-  return new Intl.DateTimeFormat(locale, options).format(d);}
-}
-/**
- * Format relative time
- */
-export function formatRelativeTime(date: Date | string | number): string {
-  const d = typeof date === 'string' || typeof date === 'number' ? new Date(date) : date
-  const now = new Date()
-  const diff = now.getTime() - d.getTime()
-  const seconds = Math.floor(diff / 1000)
-  const minutes = Math.floor(seconds / 60)
-  const hours = Math.floor(minutes / 60)
-  const days = Math.floor(hours / 24)
-  const weeks = Math.floor(days / 7)
-  const months = Math.floor(days / 30)
-  const years = Math.floor(days / 365)
-  if (seconds < 60) return 'just now';`}
-  if (minutes < 60) return `${minutes} minute${minutes > 1 ? 's' : ''} ago`
-  if (hours < 24) return `${hours} hour${hours > 1 ? 's' : ''} ago`
-  if (days < 7) return `${days} day${days > 1 ? 's' : ''} ago`
-  if (weeks < 4) return `${weeks} week${weeks > 1 ? 's' : ''} ago`
-  if (months < 12) return `${months} month${months > 1 ? 's' : ''} ago`
-  return `${years} year${years > 1 ? 's' : ''} ago`
-}
-/**
- * Truncate string
- */
-export function truncate(str: string, length: number, suffix = '...'): string {
-  if (str.length <= length) return str
-  return str.substring(0, length - suffix.length) + suffix;}
-}
-/**
- * Capitalize first letter
- */
-export function capitalize(str: string): string {
-  return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();}
-}
-/**
- * Convert to title case
- */
-export function titleCase(str: string): string {
-  return str
-    .toLowerCase()
-    .split(' ')
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(' ');}
-}
-/**
- * Convert to kebab case
- */
-export function kebabCase(str: string): string {
-  return str
-    .replace(/([a-z])([A-Z])/g, '$1-$2')
-    .replace(/[\s_]+/g, '-')
-    .toLowerCase();}
-}
-/**
- * Convert to camel case
- */
-export function camelCase(str: string): string {
-  return str.toLowerCase().replace(/[^a-zA-Z0-9]+(.)/g, (_, chr) => chr.toUpperCase());}
-}
-/**
- * Convert to snake case
- */
-export function snakeCase(str: string): string {
-  return str
-    .replace(/([a-z])([A-Z])/g, '$1_$2')
-    .replace(/[\s-]+/g, '_')
-    .toLowerCase();}
-}
-export default {
-  deepClone,
-  deepMerge,
-  flattenObject,
-  unflattenObject,
-  pick,
-  omit,
-  groupBy,
-  unique,
-  sortBy,
-  chunk,
-  zip,
-  formatBytes,
-  formatNumber,
-  formatCurrency,
-  formatDate,
-  formatRelativeTime,
-  truncate,
-  capitalize,
-  titleCase,
-  kebabCase,
-  camelCase,
-  snakeCase}
-}
+
+// Create singleton instance
+export const dataTransformer = new DataTransformer();
+
+export default DataTransformer;

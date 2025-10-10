@@ -144,4 +144,4 @@ const App: React.FC = memo(() => {
       </HelmetProvider>
     </EnhancedErrorBoundary>
   );
-}
+};
