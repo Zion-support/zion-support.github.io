@@ -21,7 +21,6 @@ const AIAnalyticsPage: React.FC = () => {
     },
     {
       icon: TrendingUp,
-<<<<<<< HEAD
       title: 'Performance Tracking',
       description: 'Track and analyze performance metrics across all your business operations.',
       benefits: ['KPI monitoring', 'ROI analysis', 'Growth tracking', 'Benchmarking']
@@ -45,9 +44,6 @@ const AIAnalyticsPage: React.FC = () => {
       benefits: ['End-to-end encryption', 'Access controls', 'Audit trails', 'Compliance support']
     }
   ];
-=======
-      title: 'Performance Optimization',
-      description: 'Optimize your business performance with AI-driven recommendations and insights.',
       benefits: ['Performance tracking', 'Optimization suggestions', 'ROI analysis', 'Growth strategies']
     },
     {
