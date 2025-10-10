@@ -42,11 +42,32 @@ const Navigation: React.FC = () => {
 
   const serviceCategories = [
     {
+<<<<<<< HEAD
+=======
+      title: 'Micro SAAS Solutions',
+      icon: Zap,
+      color: 'text-cyan-400',
+      bgColor: 'bg-cyan-500/10',
+      hoverColor: 'hover:bg-cyan-500/20',
+      services: [
+        { name: 'AI Project Manager Pro', path: '/ai-project-manager', description: 'Intelligent project planning with predictive analytics', icon: '📊', popular: true },
+        { name: 'AI Social Media Manager', path: '/ai-social-media-manager', description: 'Automated social media management', icon: '📱', popular: true },
+        { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard', description: 'AI-powered business intelligence', icon: '📈', popular: true },
+        { name: 'AI Email Marketing Suite', path: '/ai-email-marketing', description: 'Intelligent email campaigns', icon: '📧', popular: true },
+        { name: 'AI Customer Support Bot', path: '/ai-customer-support-bot', description: '24/7 AI customer support', icon: '🤖', popular: true },
+        { name: 'AI Content Studio', path: '/ai-content-studio', description: 'Complete content creation suite', icon: '✍️', popular: true },
+        { name: 'AI Financial Advisor', path: '/ai-financial-advisor', description: 'Personalized financial planning', icon: '💰', popular: false },
+        { name: 'AI Workflow Automation', path: '/ai-workflow-automation', description: 'Visual workflow builder', icon: '⚡', popular: true }
+      ]
+    },
+    {
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-804c
       title: 'AI Services',
       icon: Brain,
       color: 'text-purple-600',
       bgColor: 'bg-purple-50',
       services: [
+<<<<<<< HEAD
         { name: 'AI Services', path: '/ai-services' },
         { name: 'AI Marketing', path: '/ai-marketing' },
         { name: 'AI Automation', path: '/ai-automation' },
@@ -62,6 +83,17 @@ const Navigation: React.FC = () => {
         { name: 'AI Customer Support', path: '/ai-customer-support' },
         { name: 'AI Sales Automation', path: '/ai-sales-automation' },
         { name: 'AI Data Visualization', path: '/ai-data-visualization' }
+=======
+        { name: 'AI Workflow Automation Platform', path: '/ai-workflow-automation', description: 'End-to-end business process automation', icon: '⚡', popular: true },
+        { name: 'AI Customer Support Suite', path: '/ai-customer-support', description: 'Advanced 24/7 customer support', icon: '🤖', popular: true },
+        { name: 'AI Data Analytics Platform', path: '/ai-data-analytics', description: 'Advanced analytics with ML predictions', icon: '📊', popular: true },
+        { name: 'AI Content Generation Studio', path: '/ai-content-generation', description: 'Complete content creation suite', icon: '✍️', popular: true },
+        { name: 'AI Healthcare Solutions', path: '/ai-healthcare', description: 'Medical AI and diagnosis support', icon: '🏥', popular: true },
+        { name: 'AI Fintech Platform', path: '/ai-fintech', description: 'Financial AI and fraud detection', icon: '💳', popular: true },
+        { name: 'AI Computer Vision Platform', path: '/ai-computer-vision', description: 'Advanced image recognition', icon: '👁️', popular: false },
+        { name: 'AI Machine Learning Platform', path: '/ai-ml-platform', description: 'Complete ML platform', icon: '🧠', popular: false },
+        { name: 'AI Quantum Computing', path: '/ai-quantum-computing', description: 'Next-gen quantum solutions', icon: '⚛️', popular: false }
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-804c
       ]
     },
     {
@@ -70,6 +102,7 @@ const Navigation: React.FC = () => {
       color: 'text-blue-600',
       bgColor: 'bg-blue-50',
       services: [
+<<<<<<< HEAD
         { name: 'IT Infrastructure', path: '/it-infrastructure' },
         { name: 'IT Services', path: '/it-services' },
         { name: 'Cybersecurity', path: '/cybersecurity' },
@@ -103,6 +136,33 @@ const Navigation: React.FC = () => {
         { name: 'Blockchain & Web3', path: '/blockchain-web3' },
         { name: 'IoT & Edge Computing', path: '/iot-edge-computing' },
         { name: 'Business Intelligence', path: '/business-intelligence' }
+=======
+        { name: 'Cloud Migration & Setup', path: '/cloud-migration', description: 'Seamless cloud migration', icon: '☁️', popular: true },
+        { name: 'Enterprise Cybersecurity Suite', path: '/cybersecurity', description: 'Comprehensive security solutions', icon: '🛡️', popular: true },
+        { name: 'IT Infrastructure Design', path: '/it-infrastructure', description: 'Scalable infrastructure architecture', icon: '🏗️', popular: true },
+        { name: '24/7 IT Support & Monitoring', path: '/it-support', description: 'Round-the-clock technical support', icon: '🔄', popular: true },
+        { name: 'Custom Software Development', path: '/custom-development', description: 'Tailored software solutions', icon: '💻', popular: true },
+        { name: 'DevOps & CI/CD Implementation', path: '/devops-cicd', description: 'Streamlined development processes', icon: '⚙️', popular: false },
+        { name: 'Database Management & Optimization', path: '/database-management', description: 'Performance tuning & security', icon: '🗄️', popular: false },
+        { name: 'Network Design & Implementation', path: '/network-design', description: 'Secure network infrastructure', icon: '🌐', popular: false }
+      ]
+    },
+    {
+      title: 'Emerging Technologies',
+      icon: Sparkles,
+      color: 'text-pink-400',
+      bgColor: 'bg-pink-500/10',
+      hoverColor: 'hover:bg-pink-500/20',
+      services: [
+        { name: 'Quantum Computing Solutions', path: '/ai-quantum-computing', description: 'Next-gen quantum solutions', icon: '⚛️', popular: true },
+        { name: 'Autonomous Systems', path: '/autonomous-systems', description: 'Self-managing systems', icon: '🤖', popular: true },
+        { name: 'Blockchain & Web3', path: '/blockchain-web3', description: 'Decentralized solutions', icon: '⛓️', popular: false },
+        { name: 'IoT & Edge Computing', path: '/iot-edge-computing', description: 'Connected devices', icon: '📡', popular: false },
+        { name: 'AR/VR Solutions', path: '/ar-vr-solutions', description: 'Immersive experiences', icon: '🥽', popular: false },
+        { name: 'Smart Cities', path: '/smart-cities', description: 'Urban technology solutions', icon: '🏙️', popular: false },
+        { name: 'Digital Transformation', path: '/digital-transformation', description: 'Business modernization', icon: '🔄', popular: true },
+        { name: 'Innovation Labs', path: '/innovation-labs', description: 'R&D and prototyping', icon: '🧪', popular: false }
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-804c
       ]
     }
   ];
