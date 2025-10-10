@@ -2,7 +2,7 @@
 import React from 'react';
 
 const PerformanceMonitor: React.FC = () => {
-  return null; // Performance monitor placeholder
+  return null;
 };
 
 export default PerformanceMonitor;

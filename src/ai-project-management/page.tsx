@@ -1,6 +1,4 @@
-'use client';
-import { Helmet } from 'react-helmet-async';
-export default function AIProjectManagementPage() {/* TODO: Fix JSX expression */}
+'use client'import { Helmet  } from 'react-helmet-async'export default function AIProjectManagementPage() {/* TODO: Fix JSX expression */}
 }
   return (<div><Helmet></Helmet>
         <title>AI Project Management Solutions - Zion Tech Group</title>
@@ -17,10 +15,10 @@ export default function AIProjectManagementPage() {/* TODO: Fix JSX expression *
           <section className="text-center mb-16"></section>"
             <h1 className="text-4xl,"
   md:text-6xl font-bold text-white mb-6 neon-text cyber-text"></h1>
-              AI Project Management;
+              AI Project Management
             </h1>"
             <p className="text-xl text-cyan-400 mb-8 font-medium"></p>
-              Intelligent project management powered by AI;
+              Intelligent project management powered by AI
             </p>"
             <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8"></p>
               Revolutionize your project management with AI-driven insights, predictive analytics, and automated resource optimization that delivers projects 40% faster and 30% under budget.
@@ -170,12 +168,12 @@ export default function AIProjectManagementPage() {/* TODO: Fix JSX expression *
               <a href="te,"
   l:+13024640950" className="cyber-button"></a>
                 📞 Cal)
-  l: (302) 464-0950;
+  l: (302) 464-0950
               </a>"
               <a href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold,
   hover:bg-white,"
   hover:text-indigo-600 transition-all duration-300"></a>
-                Get Free Trial;
+                Get Free Trial
               </a>
             </div>
           </section>
@@ -183,5 +181,5 @@ export default function AIProjectManagementPage() {/* TODO: Fix JSX expression *
         <Footer /></Footer>
       </div>
     </div>
-  );
+  )
 }"

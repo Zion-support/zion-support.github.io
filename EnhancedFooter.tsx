@@ -1,6 +1,7 @@
 import { Facebook, Github, Linkedin, Mail, MapPin, Phone, Twitter } from 'lucide-react';
 import React from 'react';
 import { Link } from 'react-router-dom';
+
 const EnhancedFooter: React.FC = () => {
   const currentYear = new Date().getFullYear();
   const services = [
@@ -25,6 +26,7 @@ const EnhancedFooter: React.FC = () => {
     { name: 'Privacy Policy', href: '/legal/privacy' },
     { name: 'Terms of Service', href: '/legal/terms' },
   ];
+
   return (
     <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-12">
@@ -157,7 +159,5 @@ const EnhancedFooter: React.FC = () => {
         </div>
       </div>
     </footer>
-  );
-};
-
-export default EnhancedFooter;
+  )}
+export default EnhancedFooter

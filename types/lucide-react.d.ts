@@ -1,138 +1,89 @@
 declare module 'lucide-react' {/* TODO: Fix JSX expression */}
   }
-
-  export type LucideIcon = ComponentType<LucideProps>;
-
+  export type LucideIcon = ComponentType<LucideProps>export const,
+  Calendar: LucideIcon
   export const,
-  Calendar: LucideIcon;
+  Clock: LucideIconexport const,
+  ListChecks: LucideIcon
   export const,
-  Clock: LucideIcon;
+  FileWarning: LucideIconexport const,
+  RefreshCw: LucideIcon
   export const,
-  ListChecks: LucideIcon;
+  ArrowLeft: LucideIconexport const,
+  User: LucideIcon
   export const,
-  FileWarning: LucideIcon;
+  Tag: LucideIconexport const,
+  DollarSign: LucideIcon
   export const,
-  RefreshCw: LucideIcon;
+  Users: LucideIconexport const,
+  Target: LucideIcon
   export const,
-  ArrowLeft: LucideIcon;
+  Brain: LucideIconexport const,
+  ArrowRight: LucideIcon
   export const,
-  User: LucideIcon;
+  Cog: LucideIconexport const,
+  Award: LucideIcon
   export const,
-  Tag: LucideIcon;
-  export const,
-  DollarSign: LucideIcon;
-  export const,
-  Users: LucideIcon;
-  export const,
-  Target: LucideIcon;
-  export const,
-  Brain: LucideIcon;
-  export const,
-  ArrowRight: LucideIcon;
-  export const,
-  Cog: LucideIcon;
-  export const,
-  Award: LucideIcon;
-  export const,
-  TrendingUp: LucideIcon;
-  export const,
-  Zap: LucideIcon;
-
-  // Social media icons;
-  export const Github: LucideIcon;
-  export const Linkedin: LucideIcon;
-  export const Twitter: LucideIcon;
-
-  // Communication icons;
-  export const Mail: LucideIcon;
-  export const Phone: LucideIcon;
-
-  // Location icons;
-  export const MapPin: LucideIcon;
-
-  // UI icons;
-  export const Menu: LucideIcon;
-  export const X: LucideIcon;
-  export const Star: LucideIcon;
-  export const CheckCircle: LucideIcon;
-  export const AlertTriangle: LucideIcon;
-  export const Home: LucideIcon;
-  export const Sparkles: LucideIcon;
-  export const Cpu: LucideIcon;
-  export const BookOpen: LucideIcon;
-  export const Shield: LucideIcon;
-  export const Settings: LucideIcon;
-  export const BarChart3: LucideIcon;
-  export const Code: LucideIcon;
-  export const ExternalLink: LucideIcon;
-  export const Atom: LucideIcon;
-  export const Calculator: LucideIcon;
-  export const Share2: LucideIcon;
-  export const Search: LucideIcon;
-  export const Globe: LucideIcon;
-  export const Database: LucideIcon;
-  export const Cloud: LucideIcon;
+  TrendingUp: LucideIconexport const,
+  Zap: LucideIcon
+  export const Github: LucideIcon
+  export const Linkedin: LucideIconexport const Twitter: LucideIcon
+  export const Mail: LucideIcon
+  export const Phone: LucideIcon
+  export const MapPin: LucideIcon
+  export const Menu: LucideIconexport const X: LucideIcon
+  export const Star: LucideIconexport const CheckCircle: LucideIcon
+  export const AlertTriangle: LucideIconexport const Home: LucideIcon
+  export const Sparkles: LucideIconexport const Cpu: LucideIcon
+  export const BookOpen: LucideIconexport const Shield: LucideIcon
+  export const Settings: LucideIconexport const BarChart3: LucideIcon
+  export const Code: LucideIconexport const ExternalLink: LucideIcon
+  export const Atom: LucideIconexport const Calculator: LucideIcon
+  export const Share2: LucideIconexport const Search: LucideIcon
+  export const Globe: LucideIconexport const Database: LucideIcon
+  export const Cloud: LucideIcon
 ,
   export const,
-  Github: LucideIcon;
+  Github: LucideIconexport const,
+  Linkedin: LucideIcon
   export const,
-  Linkedin: LucideIcon;
+  Twitter: LucideIcon
   export const,
-  Twitter: LucideIcon;
-
-  // Communication icons;
+  Mail: LucideIconexport const,
+  Phone: LucideIcon
   export const,
-  Mail: LucideIcon;
+  MapPin: LucideIcon
   export const,
-  Phone: LucideIcon;
-
-  // Location icons;
+  Menu: LucideIcon
   export const,
-  MapPin: LucideIcon;
-
-  // UI icons;
+  X: LucideIconexport const,
+  Star: LucideIcon
   export const,
-  Menu: LucideIcon;
+  CheckCircle: LucideIconexport const,
+  AlertTriangle: LucideIcon
   export const,
-  X: LucideIcon;
+  Home: LucideIconexport const,
+  Sparkles: LucideIcon
   export const,
-  Star: LucideIcon;
+  Cpu: LucideIconexport const,
+  BookOpen: LucideIcon
   export const,
-  CheckCircle: LucideIcon;
+  Shield: LucideIconexport const,
+  Settings: LucideIcon
   export const,
-  AlertTriangle: LucideIcon;
+  BarChart3: LucideIconexport const,
+  Code: LucideIcon
   export const,
-  Home: LucideIcon;
+  ExternalLink: LucideIconexport const,
+  Atom: LucideIcon
   export const,
-  Sparkles: LucideIcon;
+  Calculator: LucideIconexport const,
+  Share2: LucideIcon
   export const,
-  Cpu: LucideIcon;
+  Search: LucideIconexport const,
+  Globe: LucideIcon
   export const,
-  BookOpen: LucideIcon;
+  Database: LucideIcon
   export const,
-  Shield: LucideIcon;
-  export const,
-  Settings: LucideIcon;
-  export const,
-  BarChart3: LucideIcon;
-  export const,
-  Code: LucideIcon;
-  export const,
-  ExternalLink: LucideIcon;
-  export const,
-  Atom: LucideIcon;
-  export const,
-  Calculator: LucideIcon;
-  export const,
-  Share2: LucideIcon;
-  export const,
-  Search: LucideIcon;
-  export const,
-  Globe: LucideIcon;
-  export const,
-  Database: LucideIcon;
-  export const,
-  Cloud: LucideIcon;
-
-  // Add more icons as needed;
+  Cloud: LucideIcon
 }

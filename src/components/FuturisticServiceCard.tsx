@@ -1,6 +1,5 @@
-'use client';
-import React, { useState } from 'react';
-import { ArrowRight, Star, Zap, CheckCircle } from 'lucide-react';
+'use client'import React, { useState } from 'react'
+import { ArrowRight, Star, Zap, CheckCircle  } from 'lucide-react'
 interface FuturisticServiceCardProps {/* TODO: Fix JSX expression */}
 }
 const,
@@ -22,9 +21,8 @@ const,
     orang,
   e: {/* TODO: Fix JSX expression */}
     }
-  };
-  const currentColor = colorClasses[color];
-  return (<div></div>
+  }
+  const currentColor = colorClasses[color]return (<div></div>
       className={/* TODO: Fix JSX expression */}
       }`})
       onMouseEnter={() => setIsHovered(true)}
@@ -104,7 +102,6 @@ const,
   r:opacity-20 rounded-2xl blur-xl transition-opacity duration-500 -z-10`}
       ></div>
     </div>
-  );
-};
+  )}
 export default FuturisticServiceCard;"`
   </FuturisticServiceCardProps>

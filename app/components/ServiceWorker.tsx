@@ -2,7 +2,7 @@
 import React from 'react';
 
 const ServiceWorker: React.FC = () => {
-  return null; // Service worker placeholder
+  return null;
 };
 
 export default ServiceWorker;

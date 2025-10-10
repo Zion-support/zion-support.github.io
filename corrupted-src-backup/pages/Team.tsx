@@ -1,3 +1,2 @@
-import React from 'react';
-// import Footer from '../components/Footer';
-export default Team;
+import React from 'react'
+export default Team

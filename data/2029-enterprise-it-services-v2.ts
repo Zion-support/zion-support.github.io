@@ -1,41 +1,40 @@
-
-export interface EnterpriseITService2029V2 {;
-  id: string;
-  name: string;
-  description: string;
-  category: string[];
-  price: string;
-  features: string[];
-  benefits: string[];
-  useCases: string[];
-  marketSize: string;
-  competitors: string[];
-  technology: string[];
-  integration: string[];
-  support: string[];
-  compliance: string[];
-  scalability: string;
-  roi: string;
-  deployment: string;
-  maintenance: string;
-  training: string;
-  documentation: string;
-  api: string;
-  mobile: string;
-  security: string;
-  backup: string;
-  monitoring: string;
-  analytics: string;
-  customization: string;
-  whiteLabel: string;
-  affiliate: string;
-  referral: string;
-  partnership: string;
-  funding: string;
-  exit: string;
-  contact: unknown;
-    mobile: string;
-    email: string;
+export interface EnterpriseITService2029V2 {
+  id: string
+  name: string
+  description: string
+  category: string[]
+  price: string
+  features: string[]
+  benefits: string[]
+  useCases: string[]
+  marketSize: string
+  competitors: string[]
+  technology: string[]
+  integration: string[]
+  support: string[]
+  compliance: string[]
+  scalability: string
+  roi: string
+  deployment: string
+  maintenance: string
+  training: string
+  documentation: string
+  api: string
+  mobile: string
+  security: string
+  backup: string
+  monitoring: string
+  analytics: string
+  customization: string
+  whiteLabel: string
+  affiliate: string
+  referral: string
+  partnership: string
+  funding: string
+  exit: string
+  contact: unknown
+    mobile: string
+    email: string
     website: string}
     address: string}
   }
@@ -62,7 +61,7 @@ export const,
     pric,
   e: '$6,999/month'
     feature,
-  s: [;
+  s: [
       'Autonomous infrastructure management'
       'Self-healing systems'
       'Automated deployment pipelines'
@@ -73,7 +72,7 @@ export const,
       'Predictive maintenance'
     ]
     benefit,
-  s: [;
+  s: [
       'Reduce operational costs by 90%'
       'Improve system reliability by 99.9%'
       'Accelerate deployment cycles by 10 x'
@@ -130,7 +129,7 @@ export const,
       'Security',
       'Performance'],
     price: '$18,999/month'
-    features: [;
+    features: [
       'Performance optimization'
     ]
     marketSiz,
@@ -213,7 +212,7 @@ export const,
     pric,
   e: '$18,999/month'
     feature,
-  s: [;
+  s: [
       'Quantum computing resources'
       'Quantum-safe encryption'
       'Hybrid quantum-classical computing'
@@ -224,7 +223,7 @@ export const,
       'Scalable quantum resources'
     ]
     benefit,
-  s: [;
+  s: [
       'Quantum computing capabilities'
       'Unbreakable security'
       'Exponential performance gains'
@@ -243,7 +242,7 @@ export const,
       'Research and development'],
     marketSize: '$35.2B by 2029',
     competitors: ['AWS', 'Microsoft Azure', 'Google Cloud', 'IBM Cloud']
-    technology: [;
+    technology: [
       'Research and development'
     ]
     marketSiz,
@@ -251,7 +250,7 @@ export const,
     competitor,
   s: ['AWS', 'Microsoft Azure', 'Google Cloud', 'IBM Cloud']
     technolog,
-  y: [;
+  y: [
       'Quantum Computing'
       'Cloud Infrastructure'
       'Quantum Security'
@@ -292,7 +291,7 @@ export const,
       'Threat Detection',
       'Automation'],
     price: '$9,999/month'
-    features: [;
+    features: [
     integratio,
   n: [,
       'Existing cloud platforms'
@@ -365,7 +364,7 @@ export const,
     pric,
   e: '$9,999/month'
     feature,
-  s: [;
+  s: [
       'AI-powered threat detection'
       'Real-time security monitoring'
       'Automated incident response'
@@ -376,7 +375,7 @@ export const,
       'Compliance management'
     ]
     benefit,
-  s: [;
+  s: [
       'Detect threats 10x faster'
       'Reduce false positives by 80%'
       'Automate security responses'
@@ -435,7 +434,7 @@ export const,
       'Monitoring',
       'Management'],
     price: '$14,999/month'
-    features: [;
+    features: [
       'Risk assessment'
     ]
     marketSiz,
@@ -521,7 +520,7 @@ export const,
     pric,
   e: '$14,999/month'
     feature,
-  s: [;
+  s: [
       'Autonomous infrastructure management'
       'Self-healing systems'
       'Predictive maintenance'
@@ -532,7 +531,7 @@ export const,
       'Continuous optimization'
     ]
     benefit,
-  s: [;
+  s: [
       'Achieve 99.99% uptime'
       'Reduce operational costs by 85%'
       'Eliminate manual interventions'
@@ -638,14 +637,14 @@ export const,
   e: 'http,
   s://ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}};
+  s: '364 E Main St STE 1008 Middletown DE 19709'}}
 ];      'Enterprise IT operationsData center managementApplication performance managementInfrastructure automationService desk automationIT service management'
-    ];
+    ]
     benefit,
-  s: [;
+  s: [
       'Quantum computing capabilitiesUnbreakable securityExponential performance gainsFuture-proof infrastructureCompetitive advantageLong-term investment value'
-    ];
-    useCases: [;
+    ]
+    useCases: [
       'Scientific computingFinancial modelingCryptography researchMachine learning accelerationOptimization problemsResearch and development'],
     marketSize: '$35.2 B by 2029', competitors: ['AWSMicrosoft AzureGoogle CloudIBM Cloud'],
     technology: ['Quantum ComputingCloud InfrastructureQuantum SecurityHybrid Computing'], integration: ['Existing cloud platformsQuantum applicationsEnterprise systems'],
@@ -667,12 +666,12 @@ export const,
     partnership: 'Strategic cloud partnerships',
     funding: 'Series C funding, $400 M valuation',
     exit: 'IPO or cloud acquisition',
-    contact: unknown;
+    contact: unknown
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
     useCase,
-  s: [;
+  s: [
       'Scientific computingFinancial modelingCryptography researchMachine learning accelerationOptimization problemsResearch and development'
     ],
     marketSiz,
@@ -731,7 +730,7 @@ export const,
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
     }
-  };
+  }
     i,
   d: 'ai-powered-enterprise-security', nam,
   e: 'AI-Powered Enterprise Security',
@@ -742,14 +741,14 @@ export const,
     pric,
   e: '$9,999/month',
     feature,
-  s: [;
+  s: [
       'AI-powered threat detectionReal-time security monitoringAutomated incident responsePredictive threat analyticsBehavioral analysisZero-day threat protectionSecurity automationCompliance management'
-    ];
+    ]
     benefit,
-  s: [;
+  s: [
       'Detect threats 10x fasterReduce false positives by 80%Automate security responsesImprove threat preventionEnhance compliance postureReduce security team workload'
-    ];
-    useCases: [;
+    ]
+    useCases: [
       'Enterprise security operationsThreat intelligenceIncident responseCompliance managementSecurity automationRisk assessment'],
     marketSize: '$38.7 B by 2029', competitors: ['CrowdStrikeSentinelOneDarktraceCylance'],
     technology: ['AI/MLMachine LearningBehavioral AnalysisSecurity'], integration: ['SIEM systemsEDR platformsSecurity tools'],
@@ -771,12 +770,12 @@ export const,
     partnership: 'Strategic security partnerships',
     funding: 'Series C funding, $250 M valuation',
     exit: 'IPO or security acquisition',
-    contact: unknown;
+    contact: unknown
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
     useCase,
-  s: [;
+  s: [
       'Enterprise security operationsThreat intelligenceIncident responseCompliance managementSecurity automationRisk assessment'
     ],
     marketSiz,
@@ -835,7 +834,7 @@ export const,
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
     }
-  };
+  }
     i,
   d: 'autonomous-it-operations-center', nam,
   e: 'Autonomous IT Operations Center',
@@ -846,14 +845,14 @@ export const,
     pric,
   e: '$14,999/month',
     feature,
-  s: [;
+  s: [
       'Autonomous infrastructure managementSelf-healing systemsPredictive maintenancePerformance optimizationCapacity planningAutomated troubleshootingIntelligent resource allocationContinuous optimization'
-    ];
+    ]
     benefit,
-  s: [;
+  s: [
       'Achieve 99.99% uptimeReduce operational costs by 85%Eliminate manual interventionsImprove system performanceEnhance user experienceOptimize resource utilization'
-    ];
-    useCases: [;
+    ]
+    useCases: [
       'Enterprise IT operationsData center managementApplication performance managementInfrastructure automationService desk automationIT service management'],
     marketSize: '$28.9 B by 2029', competitors: ['ServiceNowBMCMicro FocusIvanti'],
     technology: ['AI/MLAutomationMonitoringITSM'], integration: ['ITSM platformsMonitoring toolsEnterprise systems'],
@@ -872,7 +871,7 @@ export const,
     roi: '450% within 18 months',
     deployment: 'Cloud-native, hybrid options'
     useCase,
-  s: [;
+  s: [
       'Enterprise IT operationsData center managementApplication performance managementInfrastructure automationService desk automationIT service management'
     ],
     marketSiz,
@@ -914,14 +913,13 @@ export const,
   t: 'Cloud-native, hybrid options'
     }
   }
-];
-;
+]
 ];      'Enterprise IT operations_data center management_application performance management_infrastructure automation_service desk automationIT service management'
-    ];
+    ]
     market_size: '$28.9B by 2029'
-    competitors: ['ServiceNowBMCMicro FocusIvanti'];
-    technology: ['AI / MLAutomationMonitoringITSM'];
-    integration: ['ITSM platforms_monitoring tools_enterprise systems'];
+    competitors: ['ServiceNowBMCMicro FocusIvanti']
+    technology: ['AI / MLAutomationMonitoringITSM']
+    integration: ['ITSM platforms_monitoring tools_enterprise systems']
     support: ['24 / 7 operations supportIT experts_implementation team'],
     compliance: ['SOC 2 ISO 27001 ITILCOBIT'],
     scalability: 'Enterprise - grade, multi - tenant support'
@@ -939,11 +937,11 @@ export const,
     customization: 'Custom workflows, integration templates'
     funding: 'Series B funding, $180 M valuation'
     exit: 'IPO or enterprise acquisition'
-    contact: unknown;
+    contact: unknown
       mobile: '+1 302 464 0950',
       address: '364 E Main St STE 1008 Middletown DE 19709'}
   }
-];
+]
     api: 'Operations management APIs', mobile: 'Mobile operations apps',
     security: 'Enterprise security, access controls',
     backup: 'Automated backup, disaster recovery',
@@ -955,18 +953,18 @@ export const,
     partnership: 'Strategic enterprise partnerships',
     funding: 'Series B funding, $180 M valuation',
     exit: 'IPO or enterprise acquisition',
-    contact: unknown;
+    contact: unknown
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
     market_siz,
   e: '$28.9B by 2029'
     competitor,
-  s: ['ServiceNowBMCMicro FocusIvanti'];
+  s: ['ServiceNowBMCMicro FocusIvanti']
     technolog,
-  y: ['AI / MLAutomationMonitoringITSM'];
+  y: ['AI / MLAutomationMonitoringITSM']
     integratio,
-  n: ['ITSM platforms_monitoring tools_enterprise systems'];
+  n: ['ITSM platforms_monitoring tools_enterprise systems']
     suppor,
   t: ['24 / 7 operations supportIT experts_implementation team'],
     complianc,
@@ -1009,7 +1007,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709'
     }
   }
-];
+]
     ap,
   i: 'Operations management APIs', mobil,
   e: 'Mobile operations apps',
@@ -1046,8 +1044,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709'
     }
   }
-];
-;
+]
 export interface EnterpriseITService2029V2 {/* TODO: Fix JSX expression */}
   e: string} addres,
   s: string} } export const,
@@ -1212,7 +1209,7 @@ export interface EnterpriseITService2029V2 {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com',' websit,
   e: 'http,
   s://ziontechgroup.com',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}};' ]; 'Enterprise IT operationsData center managementApplication performance managementInfrastructure automationService desk automationIT service management' ]; benefit,
+  s: '364 E Main St STE 1008 Middletown DE 19709'}} ' ]; 'Enterprise IT operationsData center managementApplication performance managementInfrastructure automationService desk automationIT service management' ] benefit,
   s: [' 'Quantum computing capabilitiesUnbreakable securityExponential performance gainsFuture-proof infrastructureCompetitive advantageLong-term investment value' ]; useCase,
   s: [' 'Scientific computingFinancial modelingCryptography researchMachine learning accelerationOptimization problemsResearch and development' ],' marketSiz,
   e: '$35.2B by 2029', competitor,
@@ -1313,7 +1310,7 @@ export interface EnterpriseITService2029V2 {/* TODO: Fix JSX expression */}
   e: ['SOC 2ISO 27001ITILCOBIT']' scalabilit,
   y: 'Enterprise-grade, multi-tenant support'' ro,
   i: '450% within 18 months'' deploymen,
-  t: 'Cloud-native, hybrid options' } } ]; ' ]; 'Enterprise IT operations_data center management_application performance management_infrastructure automation_service desk automationIT service management' ];' market_siz,
+  t: 'Cloud-native, hybrid options' } } ] ' ]; 'Enterprise IT operations_data center management_application performance management_infrastructure automation_service desk automationIT service management' ]' market_siz,
   e: '$28.9B by 2029'' competitor,
   s: ['ServiceNowBMCMicro FocusIvanti'];' technolog,
   y: ['AI / MLAutomationMonitoringITSM'];' integratio,

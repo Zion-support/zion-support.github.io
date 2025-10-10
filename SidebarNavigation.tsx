@@ -5,6 +5,7 @@ interface SidebarNavigationProps {
   isOpen: boolean;
   onClose: () => void;
 }
+
 const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }) => {
   const navigationItems = [
     { name: 'Home', href: '/', icon: Home },
@@ -12,6 +13,7 @@ const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }
     { name: 'Services', href: '/services', icon: Settings },
     { name: 'Contact', href: '/contact', icon: HelpCircle },
   ];
+
   return (
     <React.Fragment>
       {/* Overlay */}
@@ -50,7 +52,5 @@ const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }
         </nav>
       </div>
     </React.Fragment>
-  );
-};
-
-export default SidebarNavigation;
+  )}
+export default SidebarNavigation

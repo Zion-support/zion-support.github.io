@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 interface BreadcrumbNavigationProps {/* TODO: Fix JSX expression */}
 }
 const BreadcrumbNavigation = React.memo(function BreadcrumbNavigation({)
@@ -17,7 +17,6 @@ const BreadcrumbNavigation = React.memo(function BreadcrumbNavigation({/* TODO: 
       <h3 className="text-lg font-semibold text-blue-800">BreadcrumbNavigation</h3>"
       <p className="text-blue-600">This component is under development.</p>
     </div>
-  );
-});
-export default BreadcrumbNavigation;
+  )
+})export default BreadcrumbNavigation
 "`

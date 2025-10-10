@@ -1,8 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import {CheckCircle, Star, TrendingUp, Brain, Target, BarChart, Phone, Mail, MapPin} from 'lucide-react';
-import React from 'react';
-const AnalyticsToolsPage: React.FC = () => {
+import React from 'react'import { Helmet  } from 'react-helmet-async'
+import { CheckCircle, Star, TrendingUp, Brain, Target, BarChart, Phone, Mail, MapPin } from 'lucide-react'import React from 'react'const AnalyticsToolsPage: React.FC  = () => {
   const analyticsTools = [
     {
       title: 'AI Business Intelligence',
@@ -43,7 +40,7 @@ titletitle: 'AI Financial Analytics',
       icon: '💳',
       category:     ,
 $4}
-  ];
+  ]
   const benefits = [
       icon: TrendingUp,
       title: 'Data-Driven Decisions',
@@ -59,10 +56,8 @@ icon$5: Brain,
       description: 'Leverage advanced AI algorithms for deeper insights and automation'
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-import { Link } from 'react-router-dom';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-const PagePage: React.FC = () => {
+import { Link  } from 'react-router-dom'import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'const PagePage: React.FC  = () => {
   return (
           <div>Coming Soon</div>
   )
@@ -76,7 +71,7 @@ const PagePage: React.FC = () => {
       <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-            AI Analytics Tools;
+            AI Analytics Tools
   </
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your data into actionable insights with AI-powered analytics tools for business intelligence, marketing, and performance tracking.
@@ -86,10 +81,10 @@ const PagePage: React.FC = () => {
           <h1 className="text-4xl,
   sm:text-5xl,"
   md:text-6xl font-bold text-white mb-6"></h1>
-// AI Analytics Tools;
+// AI Analytics Tools
           </h1>
           <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon;
+            Coming Soon
   </
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
@@ -118,7 +113,7 @@ const PagePage: React.FC = () => {
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-            Our Analytics Tools;
+            Our Analytics Tools
   </
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {analyticsTools.map((tool, index) => (
@@ -144,7 +139,7 @@ const PagePage: React.FC = () => {
                   <a
                     href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${tool.title}`}
                     className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all inline-block">
-                    Get Started;
+                    Get Started
   </
       {/* Benefits Section */}
             Why Choose Our Analytics Tools?
@@ -181,7 +176,7 @@ const PagePage: React.FC = () => {
         <div className="max-w-7xl mx-auto"></div>"
           <h2 className="text-3xl,"
   md:text-4xl font-bold text-white text-center mb-12 neon-text"></h2>
-// Our Analytics Tools;
+// Our Analytics Tools
           </h2>"
           <div className="grid grid-cols-1,
   md:grid-cols-2,"
@@ -215,7 +210,7 @@ const PagePage: React.FC = () => {
   hover:from-cyan-600,"
   hover:to-blue-700 transition-all inline-block"
 // >
-//                     Get Started;
+//                     Get Started
           </a>
       {/* Benefits Section */}
 Why Choose Our Analytics Tools?"
@@ -242,19 +237,17 @@ Why Choose Our Analytics Tools?"
               href="mailto:kleber@ziontechgroup.com"
               className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
               Email Us
-  );
-};
+  )}
 Ready to Unlock Your Data?
           <p className="text-xl text-purple-100 mb-8">
             Get started with our AI analytics tools today and transform your data into actionable insights.
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
               href="tel:+13024640950" className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
-Call (302) 464-0950;
+Call (302) 464-0950
               href="mailto:kleber@ziontechgroup.com" className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
-              Email Us;
-  );
-};
-export default AnalyticsToolsPage;
+              Email Us
+  )}
+export default AnalyticsToolsPage
   </div>
   </p>
   </div>

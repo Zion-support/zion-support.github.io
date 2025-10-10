@@ -1,14 +1,8 @@
-import React from 'react';
-import { Brain, TrendingUp, Shield, BarChart, Users, Clock, Star } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import {CheckCircle, Star, Users, TrendingUp, Clock, Shield, Brain, Phone} from 'lucide-react';
-import { Brain, TrendingUp, Shield, Users, Clock, Star } from 'lucide-react';
-import { Link } from 'react-router-dom';
-'use client';
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-const AIMLPlatformPage: React.FC = () => {
+import React from 'react'import { Brain, TrendingUp, Shield, BarChart, Users, Clock, Star  } from 'lucide-react'
+import { Helmet  } from 'react-helmet-async'import { CheckCircle, Star, Users, TrendingUp, Clock, Shield, Brain, Phone } from 'lucide-react'
+import { Brain, TrendingUp, Shield, Users, Clock, Star  } from 'lucide-react'import { Link  } from 'react-router-dom'
+'use client'import React from 'react'
+import Navigation from '../components/Navigation'import Footer from '../components/Footer'const AIMLPlatformPage: React.FC  = () => {
   const features = [
     {
       icon: Brain,
@@ -29,7 +23,7 @@ const AIMLPlatformPage: React.FC = () => {
       description: 'Collaborative tools for data scientists and ML engineers',
       benefits: ['Shared workspaces', 'Version control', 'Knowledge sharing']
     }
-  ];
+  ]
   const pricingPlans = [
       name: 'Developer',
       price: '$999',
@@ -46,10 +40,9 @@ const AIMLPlatformPage: React.FC = () => {
     name: 'Team',
       price: '$2,499',
       description: 'Ideal for development teams',
-  const features = [];
-  return (
-    {// TODO: Add content;}
-};
+  const features = []return (
+    {// TODO: Add content}
+}
   ico,
   n: Brain,
       titl,
@@ -57,7 +50,7 @@ const AIMLPlatformPage: React.FC = () => {
       descriptio,
   n: 'End-to-end machine learning platform with model development, training, and deployment',
       benefit,
-  s: ['Rapid model development', 'Automated training', 'Seamless deployment'];
+  s: ['Rapid model development', 'Automated training', 'Seamless deployment']
     },
       ico,
   n: TrendingUp,
@@ -76,7 +69,7 @@ const AIMLPlatformPage: React.FC = () => {
       benefit,
   s: ['Shared workspaces', 'Version control', 'Knowledge sharing']
     }
-  ];
+  ]
   const pricingPlans = [
       nam,
   e: 'Team',
@@ -113,8 +106,8 @@ const AIMLPlatformPage: React.FC = () => {
   const stats = [
   const stats = [
   // TOD,
-  O: Add items;
-];;
+  O: Add items
+]
     { icon: Users, value: '500+', label: 'Data Scientists' },
     { icon: TrendingUp, value: '95%', label: 'Model Accuracy' },
     { icon: Clock, value: '70%', label: 'Faster Development' },
@@ -134,35 +127,33 @@ const AIMLPlatformPage: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-              Contact Us;
+              Contact Us
   </
             <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
-              Learn More;
+              Learn More
   </
       <Footer />
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page;
+            Page
   </
           <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon;
+            Coming Soon
   </
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-// Contact Us;
+// Contact Us
           </button>"
             <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg,
   hover:bg-cyan-400,"
   hover:text-slate-900 transition-colors"></button>
-Learn More;
+Learn More
           </div>
       <Footer />
     </div>
-  );
-};
-export default $1;
-export default AiMlPlatformPage;
+  )}
+export default $1export default AiMlPlatformPage
   </p>
   </h1>
   </section>

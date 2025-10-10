@@ -1,9 +1,6 @@
-import {BarChart, TrendingUp, Target, Zap, Brain, CheckCircle, Phone, Mail, Star, Users, Award} from 'lucide-react';
-'use client';
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-const AIAnalyticsPage: React.FC = () => {
+import { BarChart, TrendingUp, Target, Zap, Brain, CheckCircle, Phone, Mail, Star, Users, Award } from 'lucide-react'
+'use client'import React from 'react'
+import Navigation from '../components/Navigation'import Footer from '../components/Footer'const AIAnalyticsPage: React.FC  = () => {
   const features = [
     {
       icon: Brain,
@@ -19,14 +16,11 @@ const AIAnalyticsPage: React.FC = () => {
       icon: BarChart,
       title: 'Real-time Dashboards',
       description: 'Interactive dashboards that provide instant insights into your business performance',
-import { Link } from 'react-router-dom';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-const AIAnalyticsPage: React.FC = () => {
-  const features = [];
-  return (
-    {// TODO: Add content;}
-};
+import { Link  } from 'react-router-dom'
+import Navigation from '../components/Navigation'import Footer from '../components/Footer'const AIAnalyticsPage: React.FC  = () => {
+  const features = []return (
+    {// TODO: Add content}
+}
   ico,
   n: Brain,
       titl,
@@ -36,8 +30,7 @@ const AIAnalyticsPage: React.FC = () => {
       benefit,
   s: [
   // TOD,
-  O: Add items];
-//         '95% accuracy in predictions',
+  O: Add items]
 //         'Real-time data processing',
 //         'Automated trend detection',
 //         'Custom prediction models'
@@ -80,7 +73,7 @@ ico,
         'Risk assessment',
         'Automated responses'
     }
-  ];
+  ]
   const useCases = [
       title: 'Sales Performance Analysis',
       description: 'Track sales metrics, identify top performers, and optimize sales strategies',
@@ -159,7 +152,7 @@ icon$5: Award,
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              AI Analytics Services;
+              AI Analytics Services
   </
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Transform your data into actionable insights with our advanced AI-powered analytics platform. 
@@ -179,7 +172,7 @@ icon$5: Award,
           {/* Features */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-              Key Features;
+              Key Features
   </
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {features.map((feature, index) => (
@@ -194,10 +187,10 @@ icon$5: Award,
                     {feature.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="text-sm text-gray-300 flex items-start">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-// AI Analytics Services;
+// AI Analytics Services
           </h1>
           <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon;
+            Coming Soon
   </
             <div className="flex flex-wrap justify-center gap-4">
               <div className="flex items-center text-cyan-400">
@@ -213,7 +206,7 @@ icon$5: Award,
           {/* Features */}"
           <div className="mb-16"></div>"
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text"></h2>
-// Key Features;
+// Key Features
           </h2>"
             <div className="grid grid-cols-1,"
   md:grid-cols-2 gap-8"></div>)
@@ -251,7 +244,7 @@ icon$5: Award,
                   {tier.popular && (
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                       <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-medium">
-                        Most Popular;
+                        Most Popular
   </
                   )}
                   <div className="text-center mb-6">
@@ -272,7 +265,7 @@ icon$5: Award,
                         : 'bg-slate-700 text-white hover:bg-slate-600'
                     }`}
                   >
-                    Get Started;
+                    Get Started
   </
           {/* Benefits */}
               Why Choose Our AI Analytics?
@@ -302,9 +295,8 @@ icon$5: Award,
                 Email Us
       <Footer />
     </React.Fragment>
-  );
-};
-export default AIAnalyticsPage;
+  )}
+export default AIAnalyticsPage
 {/* Use Cases */}
               Use Cases;"
             <div className="grid grid-cols-1,
@@ -326,7 +318,7 @@ export default AIAnalyticsPage;
                   {tier.popular && ()}"
           <div className="absolute -top-3 left-1/2 transform -translate-x-1/2"></div>"
                       <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-medium"></span>
-// Most Popular;
+// Most Popular
           </span>
                   )}"
                   <div className="text-center mb-6"></div>"
@@ -341,16 +333,16 @@ export default AIAnalyticsPage;
                         {feature}
                   <a
                     href="/contact" className={`w-full block text-center py-3 px-4 rounded-lg font-medium transition-all duration-300 ${}
-  // TODO: Add content;
+  // TODO: Add content
 }
-//                       tier.popular;
+//                       tier.popular
                         ? 'bg-cyan-400 text-slate-900,
   hover:bg-cyan-300'
                         : 'bg-slate-700 text-white,
   hover:bg-slate-600'`
                     }`}
 //                   >
-//                     Get Started;
+//                     Get Started
           </a>
 {/* Benefits */}
               Why Choose Our AI Analytics?
@@ -365,21 +357,20 @@ export default AIAnalyticsPage;
             <h2 className="text-2xl font-bold text-white mb-4"></h2>
               Ready to Transform Your Data?"
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto"></p>
-              Start your journey with AI analytics today. Get a free consultation and discover;
+              Start your journey with AI analytics today. Get a free consultation and discover
               how our platform can revolutionize your business intelligence.
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105" Get Free Consultation;
+                className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105" Get Free Consultation
                 href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Phone className="w-4 h-4 mr-2" />
-                (302) 464-0950;
+                (302) 464-0950
                 href="mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Mail className="w-4 h-4 mr-2" />
-                Email Us;
+                Email Us
       <Footer />
     </div>
-  );
-};
-export default AiAnalyticsPage;
+  )}
+export default AiAnalyticsPage
   </div>
   </p>
   </h2>

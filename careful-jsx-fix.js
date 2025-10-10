@@ -1,7 +1,4 @@
-import fs from 'fs';
-import { glob } from 'glob';
-
-// Very specific and safe JSX fixes
+import fs from 'fs'import { glob  } from 'glob'
 const fixes = [
   // Fix corrupted closing tags
   {
@@ -29,39 +26,33 @@ const fixes = [
     pattern: /<\/\w+><\/\w+>/g,
     replacement: (match) => {
       // Extract the first closing tag
-      const firstTag = match.match(/<\/(\w+)>/)[1];
-      return `</${firstTag}>`;
+      const firstTag = match.match(/<\/(\w+)>/)[1]
+      return `</${firstTag}>`
     }
   }
-];
-
+]
 function fixFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-    
-    // Apply fixes
+    let content = fs.readFileSync(filePath, 'utf8')
+    let modified = false
     for (const fix of fixes) {
-      const newContent = content.replace(fix.pattern, fix.replacement);
+      const newContent = content.replace(fix.pattern, fix.replacement)
       if (newContent !== content) {
-        content = newContent;
-        modified = true;
+        content = newContent
+        modified = true
       }
     }
-    
     if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
-      return true;
+      fs.writeFileSync(filePath, content, 'utf8')
+      console.log(`Fixed: ${filePath}`)
+      return true
     }
-    
-    return false;
+    return false
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
+    console.error(`Error fixing ${filePath}:`, error.message)
+    return false
   }
 }
-
 // Main function
 async function main() {
   // Focus on the most problematic files first
@@ -69,29 +60,23 @@ async function main() {
     'app/**/*.tsx',
     'app/**/*.ts',
     'App.tsx'
-  ];
-  
-  let allFiles = [];
+  ]
+  let allFiles = []
   for (const pattern of priorityFiles) {
     const files = await glob(pattern, {
       ignore: ['node_modules/**', 'dist/**', '.next/**', 'out/**']
-    });
-    allFiles = [...allFiles, ...files];
+    })
+    allFiles = [...allFiles, ...files]
   }
-  
   // Remove duplicates
-  allFiles = [...new Set(allFiles)];
-  
-  console.log(`Found ${allFiles.length} files to check...`);
-
-  let fixedCount = 0;
+  allFiles = [...new Set(allFiles)]
+  console.log(`Found ${allFiles.length} files to check...`)
+  let fixedCount = 0
   for (const file of allFiles) {
     if (fixFile(file)) {
-      fixedCount++;
+      fixedCount++
     }
   }
-
-  console.log(`Fixed ${fixedCount} files`);
+  console.log(`Fixed ${fixedCount} files`)
 }
-
-main().catch(console.error);
+main().catch(console.error)

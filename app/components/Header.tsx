@@ -1,28 +1,20 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import Navigation from './Navigation';
-<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
 const Header: React.FC = () => {
-  return (
-    <React.Fragment>
+return (
+    <React.Fragment></React>
       <Navigation />
-      {/* Spacer to prevent content from going under fixed header */}
+      {/* Spacer to prevent content from going under fixed header */}</Navigation>
       <div className="h-16 lg:h-20" />
     </React.Fragment>
   );
 };
-=======
-;
-const Header: React.FC = () => {;
-  return (;
-    <></>;
-      <Navigation />;}
-      {/* Spacer to prevent content from going under fixed header */}
-      <div className="h-16 lg:h-20" /></div>;
-    </>;
-  );
-};
-;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+<<<<<<< HEAD
 export default Header;
 ;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853

@@ -1,13 +1,9 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { Shield, Target, Zap, Settings, CheckCircle, Star,  Shield,  Target,  Settings } from 'lucide-react';
-const AISecurityMonitorPage: React.FC = () => {
-  const features = [];
-  return (
-    {// TODO: Add content;}
-};
+import React from 'react'import { Link  } from 'react-router-dom'
+import Navigation from '../components/Navigation'import Footer from '../components/Footer'
+import { Shield, Target, Zap, Settings, CheckCircle, Star,  Shield,  Target,  Settings  } from 'lucide-react'const AISecurityMonitorPage: React.FC  = () => {
+  const features = []return (
+    {// TODO: Add content}
+}
   ico,
   n: Shield,
       titl,
@@ -15,7 +11,7 @@ const AISecurityMonitorPage: React.FC = () => {
       descriptio,
   n: 'AI-powered threat detection and monitoring',
       benefit,
-  s: ['Real-time monitoring', 'Threat analysis', 'Incident response'];
+  s: ['Real-time monitoring', 'Threat analysis', 'Incident response']
     },
       ico,
   n: Target,
@@ -34,8 +30,7 @@ const AISecurityMonitorPage: React.FC = () => {
       benefit,
   s: ['Security metrics', 'Threat intelligence', 'Performance reports']
     }
-  ];
-  return (
+  ]return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
@@ -84,6 +79,5 @@ const AISecurityMonitorPage: React.FC = () => {
       </main>
       <Footer /></Footer>
     </div>
-  );
-};
-export default AiSecurityMonitorPage;
+  )}
+export default AiSecurityMonitorPage

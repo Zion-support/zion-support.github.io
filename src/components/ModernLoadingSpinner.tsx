@@ -1,10 +1,10 @@
-import React from 'react';
-'use client';
+import React from 'react'
+'use client'
 interface ModernLoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-  color?: 'primary' | 'secondary' | 'accent';
-  text?: string;
-  fullScreen?: boolean;
+  size?: 'sm' | 'md' | 'lg' | 'xl'
+  color?: 'primary' | 'secondary' | 'accent'
+  text?: string
+  fullScreen?: boolean
 }
 const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({
   size = 'md',
@@ -16,12 +16,12 @@ const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({
     md: 'w-8 h-8',
     lg: 'w-12 h-12',
     xl:   ,
-$4};
+$4}
   const colorClasses = {
     primary: 'text-cyan-400',
     secondary: 'text-purple-400',
     accent:   ,
-$4};
+$4}
   const spinnerClasses = `
     ${sizeClasses[size]}
     ${colorClasses[color]}
@@ -30,11 +30,10 @@ $4};
     border-current
     border-t-transparent
     rounded-full
-  `;
+  `
   const containerClasses = fullScreen
     ? 'fixed inset-0 bg-slate-900 bg-opacity-90 flex items-center justify-center z-50'
-    : 'flex items-center justify-center p-4';
-  return (
+    : 'flex items-center justify-center p-4'return (
     <div className={containerClasses} role="status" aria-label="Loading">
       <div className="flex flex-col items-center space-y-4">
         <div className="relative">
@@ -45,24 +44,24 @@ $4};
           <p className="text-sm text-gray-300 animate-pulse">{text}</p>
         )}
       </div>
-'use client';
+'use client'
 interface ModernLoadingSpinnerProps {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-  color?: 'primary' | 'secondary' | 'accent';
-  text?: string;
-  fullScreen?: boolean;
+  size?: 'sm' | 'md' | 'lg' | 'xl'
+  color?: 'primary' | 'secondary' | 'accent'
+  text?: string
+  fullScreen?: boolean
 }
 const,
-  ModernLoadingSpinner: React.FC;
+  ModernLoadingSpinner: React.FC
           <ModernLoadingSpinnerProps> = ({/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
   size = 'md',
   color = 'primary',
   text = 'Loading...',
-  fullScreen = false;)
+  fullScreen = false)
 }) => {/* TODO: Fix JSX expression */}
   m: 'w-4 h-4'}
     m,
@@ -71,30 +70,26 @@ const,
   g: 'w-12 h-12',
     x,
   l: 'w-16 h-16'
-  };
+  }
   const colorClasses = {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   primar,
   y: 'text-cyan-400',
     secondar,
   y: 'text-purple-400',
     accen,
   t: 'text-pink-400'
-  };
+  }
   const spinnerClasses = `
     ${sizeClasses[size]}
     ${colorClasses[color]}
-//     animate-spin;
-//     border-2;
-//     border-current;
-//     border-t-transparent;
+//     animate-spin
+//     border-current
 //     rounded-full;`
-  `;
-  const containerClasses = fullScreen;
-//     ? 'fixed inset-0 bg-slate-900 bg-opacity-90 flex items-center justify-center z-50'
-    : 'flex items-center justify-center p-4';
-  return (<div>Coming Soon</div>)
+  `
+  const containerClasses = fullScreen
+    : 'flex items-center justify-center p-4'return (<div>Coming Soon</div>)
   )
           <div className={containerClasses} role="status" aria-label="Loading"></div>"
       <div className="flex flex-col items-center space-y-4"></div>"
@@ -108,9 +103,7 @@ const,
       </div>"
       <span className="sr-only">Loading content, please wait...</span>
     </div>
-  );
-};
-export default ModernLoadingSpinner;
-export default ModernLoadingSpinner;"`
+  )}
+export default ModernLoadingSpinnerexport default ModernLoadingSpinner;"`
   </ModernLoadingSpinnerProps>
   </ModernLoadingSpinnerProps>

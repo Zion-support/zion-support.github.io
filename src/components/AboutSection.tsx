@@ -1,11 +1,10 @@
-import React from 'react';
-export default function AboutSection() {
+import React from 'react'export default function AboutSection() {
   const stats = [
     { number: '500+', label: 'Projects Completed' },
     { number: '50+', label: 'Happy Clients' },
     { number: '5+', label: 'Years Experience' },
     { number: '99%', label: 'Success Rate' }
-  ];
+  ]
   const values = [
     {
       title: 'Innovation First',
@@ -34,8 +33,7 @@ export default function AboutSection() {
         </svg>
       )
     }
-  ];
-  return (
+  ]return (
     <section id="about" className="py-20 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
@@ -183,7 +181,7 @@ export default function AboutSection() {
         </div>
       </div>
     </section>
-  );
+  )
 }
   </h3>
   </h3>

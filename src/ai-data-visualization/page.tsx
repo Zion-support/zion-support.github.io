@@ -1,9 +1,6 @@
-'use client';
-import { Helmet } from 'react-helmet-async';
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression */}
+'use client'import { Helmet  } from 'react-helmet-async'
+import React from 'react'import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression */}
 }
   return (<div><Helmet></Helmet>
         <title>AI Data Visualization Solutions - Zion Tech Group</title>
@@ -20,10 +17,10 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
           <section className="text-center mb-16"></section>"
             <h1 className="text-4xl,"
   md:text-6xl font-bold text-white mb-6 neon-text cyber-text"></h1>
-              AI Data Visualization;
+              AI Data Visualization
             </h1>"
             <p className="text-xl text-cyan-400 mb-8 font-medium"></p>
-              Transform data into actionable insights with AI;
+              Transform data into actionable insights with AI
             </p>"
             <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8"></p>
               Turn complex data into beautiful, interactive visualizations with AI-powered insights that help you make data-driven decisions faster and more accurately.
@@ -173,12 +170,12 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
               <a href="te,"
   l:+13024640950" className="cyber-button"></a>
                 📞 Cal)
-  l: (302) 464-0950;
+  l: (302) 464-0950
               </a>"
               <a href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold,
   hover:bg-white,"
   hover:text-indigo-600 transition-all duration-300"></a>
-                Get Free Demo;
+                Get Free Demo
               </a>
             </div>
           </section>
@@ -186,5 +183,5 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
         <Footer /></Footer>
       </div>
     </div>
-  );
+  )
 }"

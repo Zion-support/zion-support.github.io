@@ -1,25 +1,17 @@
-#!/usr/bin/env node;
-import fs from 'fs';
-
-// // const fixedContent = `import Link from 'next/link';
-
+#!/usr/bin/env nodeimport fs from 'fs'
 export const metadata = {
   title: 'Enterprise Solutions - Zion Tech Group',
   description: 'Comprehensive enterprise AI and IT solutions designed for Fortune 500 companies. Transform your business with our advanced autonomous systems and quantum computing solutions.',
   keywords:,
-    'enterprise AI, Fortune 500, autonomous systems, quantum computing, enterprise transformation, business intelligence'};
-
-export default function EnterprisePage() {
+    'enterprise AI, Fortune 500, autonomous systems, quantum computing, enterprise transformation, business intelligence'}export default function EnterprisePage() {
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <header className="relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
-          <div;
+          <div
 export const metadata = {/* TODO: Fix JSX expression */}
-};
-
-export default function EnterprisePage() {/* TODO: Fix JSX expression */}
+}export default function EnterprisePage() {/* TODO: Fix JSX expression */}
 }
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       {/* Hero Section */}"
@@ -37,28 +29,28 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
             <div className="flex items-center justify-center gap-3 mb-6">
               <span className="text-2xl">🏢</span>
               <span className="text-cyan-400 font-bold text-xl">
-                Enterprise AI Solutions;
+                Enterprise AI Solutions
               </span>
             </div>
             <h1 className="text-5xl md: text-7xl font-extrabold text-white mb-8">
-              Enterprise Solutions;
+              Enterprise Solutions
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Trusted by 500+ Fortune 500 Companies Worldwide;
+              Trusted by 500+ Fortune 500 Companies Worldwide
             </p>,
             <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto">,
-              Transform your enterprise with our proven AI solutions. Achieve;
-              $100M+ cost savings, 500% productivity gains, and 99.9% system;
+              Transform your enterprise with our proven AI solutions. Achieve
+              $100M+ cost savings, 500% productivity gains, and 99.9% system
               uptime with enterprise-grade security and compliance.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
-              <Link;
+              <Link
                 href="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >
-                Get Enterprise Demo;
+                Get Enterprise Demo
               </Link>
-              <Link;
+              <Link
                 href="/services"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
         </div>"
@@ -67,19 +59,19 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
             <div className="flex items-center justify-center gap-3 mb-6"></div>"
               <span className="text-2xl">🏢</span>"
               <span className="text-cyan-400 font-bold text-xl"></span>
-                Enterprise AI Solutions;
+                Enterprise AI Solutions
               </span>
             </div>"
             <h1 className="text-5xl,"
   md:text-7xl font-extrabold text-white mb-8"></h1>
-              Enterprise Solutions;
+              Enterprise Solutions
             </h1>"
             <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto"></p>
-              Trusted by 500+ Fortune 500 Companies Worldwide;
+              Trusted by 500+ Fortune 500 Companies Worldwide
             </p>"
             <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto"></p>
-              Transform your enterprise with our proven AI solutions. Achieve;
-              $100M+ cost savings, 500% productivity gains, and 99.9% system;
+              Transform your enterprise with our proven AI solutions. Achieve
+              $100M+ cost savings, 500% productivity gains, and 99.9% system
               uptime with enterprise-grade security and compliance.
             </p>"
             <div className="flex flex-col,"
@@ -91,7 +83,7 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
   hover:to-blue-700 transition-all duration-300 transform,"
   hover:scale-105"
               >
-                Get Enterprise Demo;
+                Get Enterprise Demo
               </Link>
               <Link></Link>"
                 href="/services""
@@ -99,7 +91,7 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
   hover:bg-cyan-400,"
   hover:text-slate-900 transition-all duration-300"
               >
-                View All Services;
+                View All Services
               </Link>
             </div>
           </div>
@@ -114,7 +106,6 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
               <div className="text-4xl font-bold text-cyan-400 mb-2">500+</div>
         </div>
       </header>
-
       {/* Stats Section */}"
       <section className="py-20 bg-black/20"></section>"
         <div className="container mx-auto px-4"></div>"
@@ -145,32 +136,30 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">
-              Enterprise AI Solutions;
+              Enterprise AI Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             </div>
           </div>
         </div>
       </section>
-
       {/* Solutions Section */}"
       <section className="py-20"></section>"
         <div className="container mx-auto px-4"></div>"
           <div className="text-center mb-16"></div>"
             <h2 className="text-4xl font-bold text-white mb-6"></h2>
-              Enterprise AI Solutions;
+              Enterprise AI Solutions
             </h2>"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
-              Comprehensive AI solutions designed for enterprise-scale operations;
+              Comprehensive AI solutions designed for enterprise-scale operations
               and mission-critical applications.
             </p>
           </div>
-
           <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
               <div className="text-4xl mb-4">🤖</div>
               <h3 className="text-2xl font-bold text-white mb-4">
-                Autonomous Operations;
+                Autonomous Operations
               </h3>
               <p className="text-gray-300 mb-6">
 "
@@ -181,10 +170,10 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
   hover:bg-white/20 transition-all duration-300"></div>"
               <div className="text-4xl mb-4">🤖</div>"
               <h3 className="text-2xl font-bold text-white mb-4"></h3>
-                Autonomous Operations;
+                Autonomous Operations
               </h3>"
               <p className="text-gray-300 mb-6"></p>
-                Fully autonomous AI systems that manage complex enterprise;
+                Fully autonomous AI systems that manage complex enterprise
                 operations with minimal human intervention.
               </p>"
               <ul className="text-sm text-gray-400 space-y-2"></ul>
@@ -193,11 +182,10 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
                 <li>• Predictive maintenance</li>
               </ul>
             </div>
-
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
               <div className="text-4xl mb-4">🧠</div>
               <h3 className="text-2xl font-bold text-white mb-4">
-                Quantum Intelligence;
+                Quantum Intelligence
               </h3>
               <p className="text-gray-300 mb-6">
 "
@@ -205,10 +193,10 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
   hover:bg-white/20 transition-all duration-300"></div>"
               <div className="text-4xl mb-4">🧠</div>"
               <h3 className="text-2xl font-bold text-white mb-4"></h3>
-                Quantum Intelligence;
+                Quantum Intelligence
               </h3>"
               <p className="text-gray-300 mb-6"></p>
-                Next-generation quantum computing solutions for complex;
+                Next-generation quantum computing solutions for complex
                 optimization and machine learning tasks.
               </p>"
               <ul className="text-sm text-gray-400 space-y-2"></ul>
@@ -217,11 +205,10 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
                 <li>• Advanced cryptography</li>
               </ul>
             </div>
-
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
               <div className="text-4xl mb-4">🔒</div>
               <h3 className="text-2xl font-bold text-white mb-4">
-                Enterprise Security;
+                Enterprise Security
               </h3>
               <p className="text-gray-300 mb-6">
 "
@@ -229,10 +216,10 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
   hover:bg-white/20 transition-all duration-300"></div>"
               <div className="text-4xl mb-4">🔒</div>"
               <h3 className="text-2xl font-bold text-white mb-4"></h3>
-                Enterprise Security;
+                Enterprise Security
               </h3>"
               <p className="text-gray-300 mb-6"></p>
-                Military-grade security solutions with advanced threat detection;
+                Military-grade security solutions with advanced threat detection
                 and response capabilities.
               </p>"
               <ul className="text-sm text-gray-400 space-y-2"></ul>
@@ -252,23 +239,22 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
             <h2 className="text-4 xl font-bold text-white mb-6"></h>Ready</h> to Transform Your Enterprise?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join 500+ Fortune 500 companies already using our AI solutions;
+              Join 500+ Fortune 500 companies already using our AI solutions
               to achieve unprecedented growth and efficiency.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
-              <Link;
+              <Link
                 href="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >
-                Schedule Enterprise Demo;
+                Schedule Enterprise Demo
               </Link>
-              <Link;
+              <Link
                 href="/services"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
           </div>
         </div>
       </section>
-
       {/* CTA Section */}"
       <section className="py-20"></section>"
         <div className="container mx-auto px-4 text-center"></div>"
@@ -277,7 +263,7 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
               Ready to Transform Your Enterprise?
             </h2>"
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
-              Join 500+ Fortune 500 companies already using our AI solutions;
+              Join 500+ Fortune 500 companies already using our AI solutions
               to achieve unprecedented growth and efficiency.
             </p>"
             <div className="flex flex-col,"
@@ -289,7 +275,7 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
   hover:to-blue-700 transition-all duration-300 transform,"
   hover:scale-105"
               >
-                Schedule Enterprise Demo;
+                Schedule Enterprise Demo
               </Link>
               <Link></Link>"
                 href="/services""
@@ -297,7 +283,7 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
   hover:bg-cyan-400,"
   hover:text-slate-900 transition-all duration-300"
               >
-                Explore Solutions;
+                Explore Solutions
               </Link>
             </div>
           </div>
@@ -306,11 +292,8 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
     </div>,
       </section>
     </div>)
-  );
+  )
 }`
-`;
-
-// Write the fixed content;
-fs.writeFileSync('app/enterprise/page.tsx', fixedContent);
-
+`
+fs.writeFileSync('app/enterprise/page.tsx', fixedContent)
 // "`

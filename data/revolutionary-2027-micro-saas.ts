@@ -9,7 +9,7 @@ export const revolutionary2027MicroSaasServices = [{name: 'Revolutionary 2027 Mi
       'Performance optimization',
       'Real-time monitoring'
     ],
-    pricing: unknown;
+    pricing: unknown
       starter: '$399/month',
       professional: '$799/month'}
       enterprise: 'Custom'}
@@ -43,7 +43,7 @@ export const revolutionary2027MicroSaasServices = [{/* TODO: Fix JSX expression 
       'Advanced reporting',
       'Performance monitoring'
     ],
-    pricing: unknown;
+    pricing: unknown
       starter: '$199/month',
       professional: '$399/month',
       enterprise: 'Custom',
@@ -57,19 +57,17 @@ export const revolutionary2027MicroSaasServices = [{/* TODO: Fix JSX expression 
   e: 'Custom'
     }
   }
-];
-export const revolutionary2027 MicroSaasCategories = [
+]export const revolutionary2027 MicroSaasCategories = [
   'Platform Development',
   'Analytics & Insights',
   'User Management',
   'Revenue Optimization'
-];
+]
 export const revolutionary2027MicroSaasStats =
-  totalServices: 2;
-  categories: 4;
-  averageRating: 4.9;
-  activeUsers: 2500;
-export const revolutionary2027MicroSaasStats = {};
+  totalServices: 2
+  categories: 4
+  averageRating: 4.9
+  activeUsers: 2500export const revolutionary2027MicroSaasStats = {}
   totalService,
   s: 2,
   categorie,
@@ -77,8 +75,7 @@ export const revolutionary2027MicroSaasStats = {};
   averageRatin,
   g: 4.9,
   activeUser,
-  s: 2500};
-export const revolutionary2027MicroSaasServices = [ nam,
+  s: 2500}export const revolutionary2027MicroSaasServices = [ nam,
   e: 'Revolutionary 2027 Micro-SaaS Platform',' pat,
   h: '/services/revolutionary-2027-micro-saas-platform',' descriptio,
   n: 'Next-generation 2027 micro-SaaS development and deployment',' ico,
@@ -98,7 +95,7 @@ export const revolutionary2027MicroSaasServices = [ nam,
   g: ' starte,
   r: '$199/month',' professiona,
   l: '$399/month',' enterpris,
-  e: 'Custom' } } ]; export const revolutionary2027MicroSaasCategories = [' 'Platform Development',' 'Analytics & Insights',' 'User Management',' 'Revenue Optimization' ]; export const revolutionary2027MicroSaasStats = totalService,
+  e: 'Custom' } } ]; export const revolutionary2027MicroSaasCategories = [' 'Platform Development',' 'Analytics & Insights',' 'User Management',' 'Revenue Optimization' ]export const revolutionary2027MicroSaasStats = totalService,
   s: 2, categorie,
   s: 4, averageRatin,
   g: 4.9, activeUser,

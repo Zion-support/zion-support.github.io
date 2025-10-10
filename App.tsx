@@ -36,6 +36,7 @@ const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
 const MicroSaasPage = React.lazy(() => import('./app/micro-saas/page'));
 const AiServicesPage = React.lazy(() => import('./app/ai-services/page'));
 const ItServicesPage = React.lazy(() => import('./app/it-services/page'));
+
 // Performance monitoring hook
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   usePerformanceMonitor();

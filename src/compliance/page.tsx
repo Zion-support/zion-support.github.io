@@ -1,26 +1,21 @@
-'use client';
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowLeft, CheckCircle, Shield, FileText, Users, Lock,  Shield,  FileText,  Users } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-const CompliancePage: React.FC = () => {
-  const certifications = [];
-  return (
+'use client'import React from 'react'
+import { Link  } from 'react-router-dom'import { ArrowLeft, CheckCircle, Shield, FileText, Users, Lock,  Shield,  FileText,  Users  } from 'lucide-react'
+import Navigation from '../components/Navigation'import Footer from '../components/Footer'const CompliancePage: React.FC  = () => {
+  const certifications = []return (
     { name: 'SOC 2 Type II', status: 'Certified' },
     { name: 'ISO 27001', status: 'Certified' },
     { name: 'GDPR Compliant', status: 'Certified' },
     { name: 'HIPAA Compliant', status: 'Certified' },
     { name: 'PCI DSS Level 1', status: 'Certified' },
     { name: 'NIST Framework', status: 'Implemented' }
-  ];
+  ]
   const complianceAreas = [
   // TOD,
-  O: Add items;
-];;
+  O: Add items
+]
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   ico,
   n: Shield,
       titl,
@@ -60,7 +55,7 @@ const CompliancePage: React.FC = () => {
 // >
           "
           <ArrowLeft className="w-4 h-4 mr-2" /></ArrowLeft>
-// Back to Privacy Policy;
+// Back to Privacy Policy
           </Link>"
               <h1 className="text-2xl font-bold text-gray-900">Compliance & Certifications</h1>
             </div>
@@ -72,12 +67,11 @@ const CompliancePage: React.FC = () => {
           <section className="mb-16"></section>"
             <div className="text-center mb-12"></div>"
               <h2 className="text-3xl font-bold text-gray-900 mb-4"></h2>
-// Our Commitment to Compliance;
+// Our Commitment to Compliance
           </h2>"
               <p className="text-lg text-gray-600 max-w-3xl mx-auto"></p>
 // At Zion Tech Group, we maintain the highest standards of compliance and security.
-                Our certifications and adherence to industry standards ensure your data is protected;
-//                 and our services meet the most stringent requirements.
+                Our certifications and adherence to industry standards ensure your data is protected
           </p>
             {/* Certifications Grid */}"
             <div className="grid grid-cols-1,
@@ -119,14 +113,13 @@ Compliance Areas;"
               security measures, or data protection practices.
             <a
               href="mailto:compliance@ziontechgroup.com" className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors duration-200"
-              Contact Compliance Team;
+              Contact Compliance Team
             </a>"
             <div className="mt-8 text-sm text-blue-200"></div>
               <p>Compliance team available Monday-Friday, 9 AM - 5 PM EST</p>
         </main>
         <Footer />
-  );
-};
-export default CompliancePage;
+  )}
+export default CompliancePage
   </div>
   </div>
