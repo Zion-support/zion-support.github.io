@@ -98,14 +98,6 @@ const BlogPage: React.FC = () => {
 
     setFilteredPosts(filtered);
   }, [searchTerm, selectedCategory]);
-=======
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Search, User, Calendar, Clock, ArrowRight } from 'lucide-react';
-
-const BlogPage: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [searchResults, setSearchResults] = useState([]);
 
   const blogPosts = [
     {

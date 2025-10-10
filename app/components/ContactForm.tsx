@@ -150,30 +150,63 @@ interface FormStatus {
               onChange={handleChange}
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
             >
-              ) : (
-                <div className="h-5 w-5 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" />
-              )}
-              <span className="text-sm font-medium">{status.message}</span>
-            </div>
-          )}
+              <option value="">Select a service</option>
+              <option value="ai-solutions">AI Solutions</option>
+              <option value="it-consulting">IT Consulting</option>
+              <option value="cloud-services">Cloud Services</option>
+              <option value="cybersecurity">Cybersecurity</option>
+              <option value="data-analytics">Data Analytics</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div>
+            <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+              Message *
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              required
+              rows={6}
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 resize-vertical"
+              placeholder="Tell us about your project or requirements..."
+            />
+          </div>
 
           <button
             type="submit"
-            disabled={status.type === 'loading'}
-            className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-blue-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
+            disabled={isSubmitting}
+            className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 flex items-center justify-center"
           >
-            {status.type === 'loading' ? (
-              <>
-                <div className="h-5 w-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
-                <span>Sending...</span>
-              </>
+            {isSubmitting ? (
+              <div className="flex items-center">
+                <div className="h-5 w-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2" />
+                Sending...
+              </div>
             ) : (
-              <>
-                <Send className="h-5 w-5" />
-                <span>Send Message</span>
-              </>
+              'Send Message'
             )}
           </button>
+
+          {status.message && (
+            <div className={`text-center p-3 rounded-lg ${
+              status.type === 'success' 
+                ? 'bg-green-100 text-green-700 border border-green-200' 
+                : 'bg-red-100 text-red-700 border border-red-200'
+            }`}>
+              <div className="flex items-center justify-center">
+                {status.type === 'success' ? (
+                  <CheckCircle className="h-5 w-5 mr-2" />
+                ) : (
+                  <div className="h-5 w-5 border-2 border-red-500 border-t-transparent rounded-full animate-spin mr-2" />
+                )}
+                <span className="text-sm font-medium">{status.message}</span>
+              </div>
+            </div>
+          )}
         </form>
 
         <div className="mt-8 pt-8 border-t border-gray-200">
