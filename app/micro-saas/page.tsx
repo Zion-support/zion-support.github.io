@@ -24,14 +24,16 @@ const MicroSaasPage: React.FC = () => {
       id: '1',
       icon: '📊',
       title: 'Zion Analytics Pro',
-      description: 'Advanced real-time business intelligence and analytics platform with AI-powered insights',
+      description: 'Advanced real-time business intelligence and analytics platform with AI-powered insights and predictive modeling',
       features: [
-        'Real-time data visualization',
-        'Custom dashboard builder',
-        'AI-powered insights',
-        'Advanced reporting',
-        'API integration',
-        'Mobile-responsive dashboard'
+        'Real-time data visualization & dashboards',
+        'Custom dashboard builder with drag-and-drop',
+        'AI-powered insights & recommendations',
+        'Advanced reporting & automated alerts',
+        'API integration with 100+ data sources',
+        'Mobile-responsive dashboard & app',
+        'Predictive analytics & forecasting',
+        'White-label customization options'
       ],
       price: '$89/month',
       users: 'Up to 25 users',
@@ -42,14 +44,16 @@ const MicroSaasPage: React.FC = () => {
       id: '2',
       icon: '💬',
       title: 'Zion Chat AI',
-      description: 'Next-generation AI customer support platform with advanced NLP and sentiment analysis',
+      description: 'Next-generation AI customer support platform with advanced NLP, sentiment analysis, and multi-language support',
       features: [
-        'Advanced AI chatbot with natural language processing',
-        'Multi-channel support (web, mobile, social)',
-        'Sentiment analysis and mood tracking',
-        'Live chat integration',
-        'Knowledge base management',
-        'Performance analytics'
+        'Advanced AI chatbot with GPT-4 integration',
+        'Multi-channel support (web, mobile, social, WhatsApp)',
+        'Sentiment analysis & mood tracking',
+        'Live chat integration & handoff',
+        'Knowledge base management & training',
+        'Performance analytics & optimization',
+        'Voice & video call support',
+        'Custom branding & white-labeling'
       ],
       price: '$149/month',
       users: 'Up to 50 users',
@@ -60,14 +64,16 @@ const MicroSaasPage: React.FC = () => {
       id: '3',
       icon: '🔐',
       title: 'Zion Security Shield',
-      description: 'Enterprise-grade cybersecurity monitoring with AI threat detection and automated response',
+      description: 'Enterprise-grade cybersecurity monitoring with AI threat detection, automated response, and compliance management',
       features: [
-        'Real-time threat monitoring',
-        'AI-powered threat detection',
-        'Automated incident response',
-        'Compliance reporting',
-        'Vulnerability scanning',
-        'Security analytics dashboard'
+        'Real-time threat monitoring & detection',
+        'AI-powered behavioral analysis',
+        'Automated incident response & remediation',
+        'Compliance reporting (SOC2, GDPR, HIPAA)',
+        'Vulnerability scanning & assessment',
+        'Security analytics dashboard',
+        '24/7 security operations center',
+        'Custom security policies & rules'
       ],
       price: '$299/month',
       users: 'Up to 100 users',
@@ -78,14 +84,16 @@ const MicroSaasPage: React.FC = () => {
       id: '4',
       icon: '☁️',
       title: 'Zion Cloud Vault',
-      description: 'Intelligent cloud backup and disaster recovery with AI-powered optimization',
+      description: 'Intelligent cloud backup and disaster recovery with AI-powered optimization and automated failover',
       features: [
-        'Automated cloud backup',
-        'Disaster recovery planning',
-        'Version control and file history',
+        'Automated cloud backup & synchronization',
+        'Disaster recovery planning & testing',
+        'Version control & file history tracking',
         'AI-powered storage optimization',
-        'Cross-platform sync',
-        'Advanced encryption'
+        'Cross-platform sync (Windows, Mac, Linux)',
+        'Advanced encryption & security',
+        'Bandwidth throttling & scheduling',
+        'Multi-cloud provider support'
       ],
       price: '$79/month',
       users: 'Up to 30 users',
@@ -96,14 +104,16 @@ const MicroSaasPage: React.FC = () => {
       id: '5',
       icon: '📈',
       title: 'Zion Performance AI',
-      description: 'Advanced application performance monitoring with AI-powered optimization recommendations',
+      description: 'Advanced application performance monitoring with AI-powered optimization recommendations and predictive scaling',
       features: [
         'Real-time performance monitoring',
         'AI-powered optimization suggestions',
-        'Error tracking and alerting',
-        'User experience analytics',
+        'Error tracking & alerting system',
+        'User experience analytics & heatmaps',
         'Database performance insights',
-        'Mobile app performance tracking'
+        'Mobile app performance tracking',
+        'Predictive scaling recommendations',
+        'Custom performance metrics & KPIs'
       ],
       price: '$129/month',
       users: 'Up to 40 users',
@@ -114,14 +124,16 @@ const MicroSaasPage: React.FC = () => {
       id: '6',
       icon: '🤖',
       title: 'Zion AI Workflow',
-      description: 'Intelligent business process automation with custom AI models and workflow optimization',
+      description: 'Intelligent business process automation with custom AI models, workflow optimization, and no-code automation',
       features: [
-        'Visual workflow builder',
+        'Visual workflow builder & designer',
         'AI-powered process optimization',
-        'Custom automation rules',
-        'Integration with 200+ tools',
-        'Advanced analytics',
-        'Multi-tenant architecture'
+        'Custom automation rules & triggers',
+        'Integration with 200+ tools & APIs',
+        'Advanced analytics & reporting',
+        'Multi-tenant architecture',
+        'No-code automation creation',
+        'Machine learning model training'
       ],
       price: '$199/month',
       users: 'Up to 75 users',
@@ -132,14 +144,16 @@ const MicroSaasPage: React.FC = () => {
       id: '7',
       icon: '📧',
       title: 'Zion Email Marketing AI',
-      description: 'AI-powered email marketing platform with advanced segmentation and personalization',
+      description: 'AI-powered email marketing platform with advanced segmentation, personalization, and automated campaign optimization',
       features: [
-        'AI-powered content generation',
-        'Advanced audience segmentation',
-        'Automated campaign optimization',
-        'A/B testing and analytics',
-        'Template library',
-        'Deliverability optimization'
+        'AI-powered content generation & optimization',
+        'Advanced audience segmentation & targeting',
+        'Automated campaign optimization & A/B testing',
+        'Email deliverability optimization',
+        'Template library & custom designs',
+        'Advanced analytics & ROI tracking',
+        'Multi-channel marketing automation',
+        'GDPR compliance & data protection'
       ],
       price: '$99/month',
       users: 'Up to 60 users',
@@ -150,23 +164,105 @@ const MicroSaasPage: React.FC = () => {
       id: '8',
       icon: '💰',
       title: 'Zion Finance AI',
-      description: 'Intelligent financial management and accounting automation platform',
+      description: 'Intelligent financial management and accounting automation platform with AI-powered insights and forecasting',
       features: [
-        'Automated bookkeeping',
-        'AI-powered expense categorization',
-        'Financial forecasting',
-        'Invoice generation and tracking',
-        'Tax preparation assistance',
-        'Multi-currency support'
+        'Automated bookkeeping & transaction categorization',
+        'AI-powered expense tracking & analysis',
+        'Financial forecasting & budgeting',
+        'Invoice generation & automated billing',
+        'Tax preparation assistance & filing',
+        'Multi-currency support & conversion',
+        'Real-time financial dashboards',
+        'Integration with banks & payment systems'
       ],
       price: '$179/month',
       users: 'Up to 20 users',
       popular: false,
       category: 'Finance'
+    },
+    {
+      id: '9',
+      icon: '📱',
+      title: 'Zion Mobile App Builder',
+      description: 'No-code mobile app development platform with AI-powered design suggestions and automated testing',
+      features: [
+        'Drag-and-drop app builder',
+        'AI-powered design suggestions',
+        'Cross-platform deployment (iOS/Android)',
+        'Automated testing & quality assurance',
+        'App store optimization & publishing',
+        'Real-time preview & debugging',
+        'Backend integration & APIs',
+        'Push notifications & analytics'
+      ],
+      price: '$249/month',
+      users: 'Up to 10 apps',
+      popular: false,
+      category: 'Development'
+    },
+    {
+      id: '10',
+      icon: '🎯',
+      title: 'Zion Lead Generation AI',
+      description: 'AI-powered lead generation and qualification platform with automated outreach and scoring',
+      features: [
+        'AI-powered lead identification & scoring',
+        'Automated outreach & follow-up sequences',
+        'Multi-channel lead capture forms',
+        'CRM integration & synchronization',
+        'Lead nurturing & drip campaigns',
+        'Advanced analytics & conversion tracking',
+        'A/B testing & optimization',
+        'Custom lead qualification rules'
+      ],
+      price: '$159/month',
+      users: 'Up to 1000 leads/month',
+      popular: true,
+      category: 'Sales'
+    },
+    {
+      id: '11',
+      icon: '📚',
+      title: 'Zion Learning Management AI',
+      description: 'Intelligent learning management system with AI-powered course recommendations and automated assessments',
+      features: [
+        'AI-powered course recommendations',
+        'Automated assessment & grading',
+        'Interactive content creation tools',
+        'Progress tracking & analytics',
+        'Gamification & achievement system',
+        'Multi-language support',
+        'Mobile learning app',
+        'Integration with video platforms'
+      ],
+      price: '$199/month',
+      users: 'Up to 500 learners',
+      popular: false,
+      category: 'Education'
+    },
+    {
+      id: '12',
+      icon: '🏥',
+      title: 'Zion Health Analytics',
+      description: 'AI-powered health data analytics platform with predictive health insights and wellness recommendations',
+      features: [
+        'Health data integration & analysis',
+        'Predictive health insights & alerts',
+        'Wellness recommendations & tracking',
+        'Telemedicine integration',
+        'Medication management & reminders',
+        'Health goal setting & monitoring',
+        'Privacy-compliant data handling',
+        'Integration with wearables & devices'
+      ],
+      price: '$299/month',
+      users: 'Up to 200 patients',
+      popular: false,
+      category: 'Healthcare'
     }
   ];
 
-  const categories = ['All', 'Analytics', 'Communication', 'Security', 'Storage', 'Monitoring', 'AI', 'Marketing', 'Finance'];
+  const categories = ['All', 'Analytics', 'Communication', 'Security', 'Storage', 'Monitoring', 'AI', 'Marketing', 'Finance', 'Development', 'Sales', 'Education', 'Healthcare'];
 
   const filteredProducts = selectedCategory === 'All' 
     ? products 

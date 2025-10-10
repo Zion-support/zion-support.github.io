@@ -2,6 +2,8 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 import {
   Brain,
   Cloud,
@@ -29,105 +31,138 @@ import {
   Search,
   Filter
 } from 'lucide-react';
-<<<<<<< HEAD
-=======
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
 
 const ServicesPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const services = [
-<<<<<<< HEAD
     // AI Services
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
     {
       id: 1,
-      title: 'AI Solutions',
-      description: 'Comprehensive artificial intelligence solutions including machine learning, natural language processing, and computer vision.',
-      icon: Brain,
+      title: 'AI-Powered Chatbots',
+      description: 'Intelligent conversational AI that understands context and provides human-like responses',
+      icon: MessageCircle,
       category: 'AI',
-      price: 'Starting at $2,999/month',
-      features: ['Machine Learning Models', 'NLP Processing', 'Computer Vision', 'Predictive Analytics']
+      price: 'Starting at $1,299/month',
+      features: ['Natural language processing', 'Multi-channel support', 'Sentiment analysis', '24/7 availability']
     },
     {
       id: 2,
-      title: 'Cloud Computing',
-      description: 'Scalable cloud infrastructure solutions for modern businesses with high availability and security.',
-      icon: Cloud,
-      category: 'Cloud',
-      price: 'Starting at $1,999/month',
-      features: ['AWS/Azure/GCP', 'Auto-scaling', 'Load Balancing', 'Disaster Recovery']
+      title: 'Machine Learning Solutions',
+      description: 'Custom ML models for predictive analytics, pattern recognition, and automation',
+      icon: Brain,
+      category: 'AI',
+      price: 'Starting at $2,499/month',
+      features: ['Custom model training', 'Predictive analytics', 'Data preprocessing', 'Model optimization']
     },
     {
       id: 3,
-      title: 'Cybersecurity',
-      description: 'Advanced security solutions to protect your business from cyber threats and ensure compliance.',
-      icon: Shield,
-      category: 'Security',
-      price: 'Starting at $3,999/month',
-      features: ['Threat Detection', 'Vulnerability Assessment', 'Compliance', 'Incident Response']
+      title: 'Computer Vision',
+      description: 'Image and video analysis for quality control, security, and automation',
+      icon: Target,
+      category: 'AI',
+      price: 'Starting at $1,899/month',
+      features: ['Object detection', 'Image classification', 'Quality inspection', 'Real-time analysis']
     },
+    // Cloud Services
     {
       id: 4,
-      title: 'Data Analytics',
-      description: 'Transform your data into actionable insights with our advanced analytics and visualization tools.',
-      icon: BarChart,
-      category: 'Analytics',
-      price: 'Starting at $2,499/month',
-      features: ['Real-time Analytics', 'Data Visualization', 'Business Intelligence', 'Custom Dashboards']
+      title: 'Cloud Infrastructure',
+      description: 'Scalable and secure cloud solutions that grow with your business',
+      icon: Cloud,
+      category: 'Cloud',
+      price: 'Starting at $1,599/month',
+      features: ['Cloud migration', 'Server management', 'Auto-scaling', '24/7 monitoring']
     },
     {
       id: 5,
-      title: 'Software Development',
-      description: 'Custom software solutions tailored to your business needs with modern technologies and best practices.',
-      icon: Code,
-      category: 'Development',
-      price: 'Starting at $4,999/month',
-      features: ['Custom Applications', 'API Development', 'Mobile Apps', 'Web Development']
+      title: 'DevOps & CI/CD',
+      description: 'Automated development workflows and deployment pipelines',
+      icon: Settings,
+      category: 'Cloud',
+      price: 'Starting at $2,999/month',
+      features: ['CI/CD pipeline setup', 'Container orchestration', 'Infrastructure as Code', 'Deployment automation']
     },
+    // Security Services
     {
       id: 6,
-      title: 'Database Services',
-      description: 'Comprehensive database management and optimization services for improved performance and reliability.',
-      icon: Database,
-      category: 'Database',
-      price: 'Starting at $1,499/month',
-      features: ['Database Design', 'Performance Tuning', 'Backup & Recovery', 'Migration Services']
+      title: 'Cybersecurity Solutions',
+      description: 'Advanced security solutions to protect your digital assets',
+      icon: Shield,
+      category: 'Security',
+      price: 'Starting at $2,999/month',
+      features: ['Threat detection', 'Security audits', 'Compliance management', 'Incident response']
     },
     {
       id: 7,
-      title: 'Mobile Development',
-      description: 'Native and cross-platform mobile applications for iOS and Android with modern UI/UX design.',
-      icon: Smartphone,
-      category: 'Development',
-      price: 'Starting at $3,499/month',
-      features: ['iOS Development', 'Android Development', 'Cross-platform', 'App Store Optimization']
+      title: 'Security Monitoring',
+      description: '24/7 security monitoring and threat detection',
+      icon: Lock,
+      category: 'Security',
+      price: 'Starting at $1,799/month',
+      features: ['Real-time monitoring', 'Threat intelligence', 'Automated response', 'Security reporting']
     },
+    // Development Services
     {
       id: 8,
-      title: 'IT Consulting',
-      description: 'Strategic IT consulting services to help you make informed technology decisions and optimize your infrastructure.',
-      icon: Users,
-      category: 'Consulting',
-      price: 'Starting at $1,999/month',
-      features: ['Technology Strategy', 'Architecture Review', 'Cost Optimization', 'Digital Transformation']
+      title: 'Custom Software Development',
+      description: 'Bespoke software solutions designed specifically for your requirements',
+      icon: Code,
+      category: 'Development',
+      price: 'Starting at $5,999/project',
+      features: ['Custom applications', 'API development', 'Database design', 'System integration']
     },
     {
       id: 9,
-      title: 'Automation Solutions',
-      description: 'Streamline your business processes with intelligent automation solutions that reduce manual work.',
+      title: 'Mobile App Development',
+      description: 'Native and cross-platform mobile applications for iOS and Android',
+      icon: Smartphone,
+      category: 'Development',
+      price: 'Starting at $8,999/project',
+      features: ['Native iOS/Android apps', 'Cross-platform development', 'UI/UX design', 'App store deployment']
+    },
+    // Analytics Services
+    {
+      id: 10,
+      title: 'Business Intelligence',
+      description: 'Transform your data into actionable insights with our analytics solutions',
+      icon: BarChart,
+      category: 'Analytics',
+      price: 'Starting at $1,399/month',
+      features: ['Data visualization', 'Custom dashboards', 'Real-time reporting', 'Predictive analytics']
+    },
+    {
+      id: 11,
+      title: 'Data Analytics',
+      description: 'Advanced data processing and analysis with AI-powered insights',
+      icon: Database,
+      category: 'Analytics',
+      price: 'Starting at $1,599/month',
+      features: ['Big data processing', 'Data mining', 'Statistical analysis', 'Machine learning insights']
+    },
+    // Automation Services
+    {
+      id: 12,
+      title: 'Process Automation',
+      description: 'Intelligent automation of repetitive tasks and workflows',
       icon: Zap,
-      category: 'AI',
-      price: 'Starting at $2,999/month',
-      features: ['Process Automation', 'Workflow Optimization', 'RPA Implementation', 'Integration Services']
+      category: 'Automation',
+      price: 'Starting at $1,599/month',
+      features: ['Workflow automation', 'Document processing', 'Email automation', 'Task scheduling']
+    },
+    {
+      id: 13,
+      title: 'RPA Solutions',
+      description: 'Robotic Process Automation for business process optimization',
+      icon: Settings,
+      category: 'Automation',
+      price: 'Starting at $2,299/month',
+      features: ['Bot development', 'Process mapping', 'Integration', 'Performance monitoring']
     }
   ];
 
-  const categories = ['all', 'AI', 'Cloud', 'Security', 'Analytics', 'Development', 'Database', 'Consulting'];
+  const categories = ['all', 'AI', 'Cloud', 'Security', 'Development', 'Analytics', 'Automation'];
 
   const filteredServices = services.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -140,13 +175,14 @@ const ServicesPage: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Services - Zion Tech Group | AI & IT Solutions</title>
-        <meta name="description" content="Comprehensive AI and IT services including AI solutions, cloud services, cybersecurity, data analytics, and more." />
-        <meta name="keywords" content="services, AI solutions, cloud services, cybersecurity, data analytics, mobile development, database services" />
+        <meta name="description" content="Comprehensive AI and IT services including machine learning, cloud computing, cybersecurity, software development, and more." />
+        <meta name="keywords" content="AI services, IT services, cloud computing, cybersecurity, software development, business intelligence, automation" />
       </Helmet>
-<<<<<<< HEAD
-
+      
+      <Navigation />
+      
       {/* Hero Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
             Our
@@ -155,41 +191,17 @@ const ServicesPage: React.FC = () => {
             </span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Comprehensive AI and IT solutions designed to transform your business and drive growth.
+            Comprehensive AI and IT solutions designed to accelerate your business growth and digital transformation.
           </p>
         </div>
       </section>
 
       {/* Search and Filter Section */}
-      <section className="py-10 px-4 sm:px-6 lg:px-8">
+      <section className="py-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row gap-4 mb-8">
             <div className="flex-1">
               <div className="relative">
-=======
-      
-      <Navigation />
-      
-      <main className="pt-20">
-        {/* Hero Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Our Services
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Comprehensive AI and IT solutions designed to transform your business 
-              and drive growth.
-            </p>
-          </div>
-        </section>
-
-        {/* Search and Filter Section */}
-        <section className="py-10 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="flex flex-col md:flex-row gap-4 mb-8">
-              <div className="relative flex-1">
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
                   type="text"
@@ -199,7 +211,6 @@ const ServicesPage: React.FC = () => {
                   className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
                 />
               </div>
-<<<<<<< HEAD
             </div>
             <div className="flex items-center space-x-2">
               <Filter className="w-5 h-5 text-gray-400" />
@@ -220,7 +231,7 @@ const ServicesPage: React.FC = () => {
       </section>
 
       {/* Services Grid */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredServices.map((service) => (
@@ -237,46 +248,13 @@ const ServicesPage: React.FC = () => {
                 <div className="mb-6">
                   <h4 className="text-sm font-medium text-gray-400 mb-3">Key Features:</h4>
                   <ul className="space-y-2">
-=======
-              <div className="relative">
-                <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <select
-                  value={selectedCategory}
-                  onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="pl-10 pr-8 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent appearance-none"
-                >
-                  {categories.map(category => (
-                    <option key={category} value={category} className="bg-slate-800">
-                      {category === 'all' ? 'All Categories' : category}
-                    </option>
-                  ))}
-                </select>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Services Grid */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredServices.map((service) => (
-                <div key={service.id} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <service.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
-                  <p className="text-gray-300 mb-4">{service.description}</p>
-                  <ul className="space-y-2 mb-6">
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
                     {service.features.map((feature, index) => (
                       <li key={index} className="flex items-center text-sm text-gray-300">
-                        <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-3"></div>
+                        <CheckSquare className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
                   </ul>
-<<<<<<< HEAD
                 </div>
                 
                 <div className="mb-6">
@@ -288,7 +266,7 @@ const ServicesPage: React.FC = () => {
                     to="/contact"
                     className="flex-1 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold py-3 px-6 rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 text-center"
                   >
-                    Get Started
+                    Get Quote
                   </Link>
                   <button className="flex-1 border border-cyan-500 text-cyan-400 font-semibold py-3 px-6 rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300 flex items-center justify-center">
                     Learn More
@@ -302,14 +280,14 @@ const ServicesPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl font-bold text-white mb-6">
               Ready to Get Started?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Let's discuss your project and find the perfect solution for your business needs.
+              Contact our experts to discuss your requirements and get a customized solution that drives real results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -320,55 +298,18 @@ const ServicesPage: React.FC = () => {
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <Link
-                to="/pricing"
+                to="/consultation"
                 className="border border-cyan-500 text-cyan-400 font-semibold py-3 px-8 rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300 flex items-center justify-center space-x-2"
               >
-                <span>View Pricing</span>
+                <span>Free Consultation</span>
                 <ArrowRight className="w-5 h-5" />
               </Link>
             </div>
           </div>
         </div>
       </section>
-=======
-                  <div className="flex items-center justify-between">
-                    <span className="text-blue-400 font-semibold">{service.price}</span>
-                    <button className="flex items-center text-white hover:text-blue-400 transition-colors">
-                      Learn More
-                      <ArrowRight className="w-4 h-4 ml-1" />
-                    </button>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Get Started?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Contact our experts to discuss your requirements and get a customized solution.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Get Quote
-                </button>
-                <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Contact Us
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
-      
       <Footer />
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
     </div>
   );
 };

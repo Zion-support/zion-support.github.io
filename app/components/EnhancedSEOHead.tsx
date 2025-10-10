@@ -6,25 +6,13 @@ import { useLocation } from 'react-router-dom';
 interface SEOHeadProps {
   title?: string;
   description?: string;
-  keywords?: string;
+  keywords?: string | string[];
   image?: string;
   url?: string;
   type?: string;
-<<<<<<< HEAD
   siteName?: string;
-  structuredData?: object;
-}
-
-const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
-  title = "Zion Tech Group - AI & IT Solutions",
-  description = "Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.",
-  keywords = "AI solutions, IT services, cybersecurity, cloud computing, digital transformation, enterprise software, automation, machine learning",
-  image = "/images/og-image.jpg",
-  url,
-  type = 'website',
-  siteName = 'Zion Tech Group',
-=======
   structuredData?: any;
+  canonicalUrl?: string;
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({
@@ -34,63 +22,17 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   image = 'https://ziontechgroup.com/og-image.jpg',
   url,
   type = 'website',
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
-  structuredData
+  siteName = 'Zion Tech Group',
+  structuredData,
+  canonicalUrl
 }) => {
   const location = useLocation();
-  const currentUrl = url || `https://ziontechgroup.com${location.pathname}`;
+  const currentUrl = url || canonicalUrl || `https://ziontechgroup.com${location.pathname}`;
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
+  const keywordsString = Array.isArray(keywords) ? keywords.join(', ') : keywords;
+  const fullImageUrl = image.startsWith('http') ? image : `https://ziontechgroup.com${image}`;
 
   const defaultStructuredData = {
-<<<<<<< HEAD
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Zion Tech Group",
-    "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/favicon.svg",
-    "description": description,
-    "foundingDate": "2020",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "364 E Main St STE 1008",
-      "addressLocality": "Middletown",
-      "addressRegion": "DE",
-      "postalCode": "19709",
-      "addressCountry": "US"
-    },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-302-464-0950",
-      "contactType": "sales",
-      "email": "kleber@ziontechgroup.com"
-    },
-    "sameAs": [
-      "https://www.linkedin.com/company/ziontechgroup",
-      "https://twitter.com/ziontechgroup",
-      "https://github.com/zion-tech-group"
-    ]
-  };
-
-  const websiteStructuredData = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Zion Tech Group",
-    "url": "https://ziontechgroup.com",
-    "description": description,
-    "publisher": {
-      "@type": "Organization",
-      "name": "Zion Tech Group"
-    },
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://ziontechgroup.com/search?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
-  };
-
-  const finalStructuredData = structuredData || defaultStructuredData;
-
-=======
     '@context': 'https://schema.org',
     '@type': 'TechCompany',
     name: 'Zion Tech Group',
@@ -125,13 +67,11 @@ const SEOHead: React.FC<SEOHeadProps> = ({
     }
   };
 
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
   return (
     <Helmet>
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-<<<<<<< HEAD
+      <meta name="keywords" content={keywordsString} />
       <meta name="author" content="Zion Tech Group" />
       <meta name="robots" content="index, follow" />
       <meta name="googlebot" content="index, follow" />
@@ -179,35 +119,10 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       
       {/* Structured Data */}
       <script type="application/ld+json">
-        {JSON.stringify(finalStructuredData)}
-      </script>
-      <script type="application/ld+json">
-        {JSON.stringify(websiteStructuredData)}
-=======
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
-      <meta property="og:url" content={currentUrl} />
-      <meta property="og:type" content={type} />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
-      <link rel="canonical" href={currentUrl} />
-      <meta name="robots" content="index, follow" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="theme-color" content="#0f172a" />
-      <script type="application/ld+json">
         {JSON.stringify(structuredData || defaultStructuredData)}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
       </script>
     </Helmet>
   );
 };
 
-<<<<<<< HEAD
-export default EnhancedSEOHead;
-=======
 export default SEOHead;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619

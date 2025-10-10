@@ -1,5 +1,4 @@
 'use client';
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
@@ -48,48 +47,28 @@ const PerformanceMonitor: React.FC = () => {
           if (entry.entryType === 'first-input') {
             updateMetrics({ fid: entry.processingStart - entry.startTime });
           }
-          if (entry.entryType === 'paint') {
-            if (entry.name === 'first-contentful-paint') {
-              updateMetrics({ fcp: entry.startTime });
-            }
-          }
         });
       });
 
       try {
-        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'paint'] });
+        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input'] });
       } catch (e) {
-        console.warn('Performance Observer not supported:', e);
+        // Fallback for older browsers
+        console.warn('Performance Observer not supported');
       }
-
-      return () => observer.disconnect();
     }
 
-    // Show performance panel after 3 seconds
-    const timer = setTimeout(() => setIsVisible(true), 3000);
+    // Show monitor after 2 seconds
+    const timer = setTimeout(() => setIsVisible(true), 2000);
     return () => clearTimeout(timer);
   }, []);
 
-  if (!isVisible || Object.keys(metrics).length === 0) {
-    return null;
-  }
-
-  const getScoreColor = (value: number, thresholds: { good: number; poor: number }) => {
-    if (value <= thresholds.good) return 'text-green-400';
-    if (value <= thresholds.poor) return 'text-yellow-400';
-    return 'text-red-400';
-  };
-
-  const getScoreText = (value: number, thresholds: { good: number; poor: number }) => {
-    if (value <= thresholds.good) return 'Good';
-    if (value <= thresholds.poor) return 'Needs Improvement';
-    return 'Poor';
-  };
+  if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-4 right-4 bg-slate-800/90 backdrop-blur-sm border border-slate-700 rounded-lg p-4 text-xs text-white z-50 max-w-xs">
+    <div className="fixed bottom-4 right-4 bg-slate-800 text-white p-4 rounded-lg shadow-lg z-50 max-w-xs">
       <div className="flex items-center justify-between mb-2">
-        <h3 className="font-semibold text-cyan-400">Performance</h3>
+        <h3 className="text-sm font-semibold">Performance</h3>
         <button
           onClick={() => setIsVisible(false)}
           className="text-gray-400 hover:text-white"
@@ -97,142 +76,50 @@ const PerformanceMonitor: React.FC = () => {
           ×
         </button>
       </div>
-      
-      <div className="space-y-1">
+      <div className="space-y-1 text-xs">
         {metrics.lcp && (
           <div className="flex justify-between">
             <span>LCP:</span>
-            <span className={getScoreColor(metrics.lcp, { good: 2500, poor: 4000 })}>
-              {Math.round(metrics.lcp)}ms ({getScoreText(metrics.lcp, { good: 2500, poor: 4000 })})
+            <span className={metrics.lcp < 2500 ? 'text-green-400' : 'text-red-400'}>
+              {Math.round(metrics.lcp)}ms
             </span>
           </div>
         )}
-        
         {metrics.fid && (
           <div className="flex justify-between">
             <span>FID:</span>
-            <span className={getScoreColor(metrics.fid, { good: 100, poor: 300 })}>
-              {Math.round(metrics.fid)}ms ({getScoreText(metrics.fid, { good: 100, poor: 300 })})
+            <span className={metrics.fid < 100 ? 'text-green-400' : 'text-red-400'}>
+              {Math.round(metrics.fid)}ms
             </span>
           </div>
         )}
-        
         {metrics.cls && (
           <div className="flex justify-between">
             <span>CLS:</span>
-            <span className={getScoreColor(metrics.cls, { good: 0.1, poor: 0.25 })}>
-              {metrics.cls.toFixed(3)} ({getScoreText(metrics.cls, { good: 0.1, poor: 0.25 })})
+            <span className={metrics.cls < 0.1 ? 'text-green-400' : 'text-red-400'}>
+              {metrics.cls.toFixed(3)}
             </span>
           </div>
         )}
-        
         {metrics.fcp && (
           <div className="flex justify-between">
             <span>FCP:</span>
-            <span className={getScoreColor(metrics.fcp, { good: 1800, poor: 3000 })}>
-              {Math.round(metrics.fcp)}ms ({getScoreText(metrics.fcp, { good: 1800, poor: 3000 })})
+            <span className={metrics.fcp < 1800 ? 'text-green-400' : 'text-red-400'}>
+              {Math.round(metrics.fcp)}ms
             </span>
           </div>
         )}
-        
         {metrics.ttfb && (
           <div className="flex justify-between">
             <span>TTFB:</span>
-            <span className={getScoreColor(metrics.ttfb, { good: 800, poor: 1800 })}>
-              {Math.round(metrics.ttfb)}ms ({getScoreText(metrics.ttfb, { good: 800, poor: 1800 })})
+            <span className={metrics.ttfb < 800 ? 'text-green-400' : 'text-red-400'}>
+              {Math.round(metrics.ttfb)}ms
             </span>
           </div>
         )}
       </div>
     </div>
   );
-=======
-import React, { useEffect } from 'react';
-
-const PerformanceMonitor: React.FC = () => {
-  useEffect(() => {
-    if (typeof window === 'undefined' || !('performance' in window)) return;
-
-    const measurePerformance = () => {
-      // Measure Core Web Vitals
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const paint = performance.getEntriesByType('paint');
-      
-      const metrics = {
-        // Navigation timing
-        domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-        loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
-        
-        // Paint timing
-        firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime || 0,
-        firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
-        
-        // Resource timing
-        totalResources: performance.getEntriesByType('resource').length,
-        
-        // Memory usage (if available)
-        memoryUsage: (performance as any).memory ? {
-          used: (performance as any).memory.usedJSHeapSize,
-          total: (performance as any).memory.totalJSHeapSize,
-          limit: (performance as any).memory.jsHeapSizeLimit
-        } : null
-      };
-
-      // Log metrics in development
-      if (process.env.NODE_ENV === 'development') {
-        console.log('Performance Metrics:', metrics);
-      }
-
-      // Send metrics to analytics
-      if (typeof window !== 'undefined' && 'gtag' in window) {
-        const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
-        
-        gtag('event', 'performance_metrics', {
-          event_category: 'performance',
-          dom_content_loaded: Math.round(metrics.domContentLoaded),
-          load_complete: Math.round(metrics.loadComplete),
-          first_paint: Math.round(metrics.firstPaint),
-          first_contentful_paint: Math.round(metrics.firstContentfulPaint),
-          total_resources: metrics.totalResources
-        });
-      }
-
-      // Check for performance issues
-      if (metrics.firstContentfulPaint > 3000) {
-        console.warn('Slow First Contentful Paint detected:', metrics.firstContentfulPaint);
-      }
-      
-      if (metrics.loadComplete > 5000) {
-        console.warn('Slow page load detected:', metrics.loadComplete);
-      }
-    };
-
-    // Measure performance after page load
-    if (document.readyState === 'complete') {
-      measurePerformance();
-    } else {
-      window.addEventListener('load', measurePerformance);
-    }
-
-    // Monitor for performance regressions
-    const observer = new PerformanceObserver((list) => {
-      for (const entry of list.getEntries()) {
-        if (entry.entryType === 'measure') {
-          console.log('Performance measure:', entry.name, entry.duration);
-        }
-      }
-    });
-
-    observer.observe({ entryTypes: ['measure'] });
-
-    return () => {
-      window.removeEventListener('load', measurePerformance);
-      observer.disconnect();
-    };
-  }, []);
-
-  return null;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
 };
 
 export default PerformanceMonitor;

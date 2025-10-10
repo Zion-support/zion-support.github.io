@@ -1,541 +1,214 @@
 'use client';
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
-import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, Clock, Award, Play, Pause, ChevronLeft, ChevronRight } from 'lucide-react';
-interface Feature {
-  icon: React.ComponentType<any>;
-  title: string;
-  description: string;
-  stats?: {
-    value: string;
-    label: string;
-  }[];
-}
-=======
-import { CheckCircle, ArrowRight, Star, Quote, ChevronLeft, ChevronRight, Zap, Shield, Brain, Globe, Users, TrendingUp } from 'lucide-react';
-=======
-import React from 'react';
-import { CheckCircle, Star, ArrowRight, Zap, Shield, Brain, Globe } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-d277
+import { Brain, Cloud, Shield, Code, BarChart, Users, Zap, Target, ArrowRight, CheckCircle } from 'lucide-react';
 
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-interface Testimonial {
-  id: number;
-  name: string;
-  company: string;
-  role: string;
-  content: string;
-  rating: number;
-  avatar: string;
-}
-
-interface Feature {
-  icon: React.ComponentType<any>;
-  title: string;
-  description: string;
-  benefits: string[];
-}
 const DynamicContentShowcase: React.FC = () => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(true);
-=======
-  const [currentTestimonial, setCurrentTestimonial] = useState(0);
+  const [activeTab, setActiveTab] = useState(0);
 
-  const testimonials: Testimonial[] = [
+  const showcaseData = [
+    {
+      id: 0,
+      title: "AI-Powered Solutions",
+      description: "Transform your business with cutting-edge artificial intelligence",
+      icon: Brain,
+      color: "cyan",
+      features: [
+        "Machine Learning Models",
+        "Natural Language Processing", 
+        "Computer Vision",
+        "Predictive Analytics",
+        "AI Automation",
+        "Custom AI Development"
+      ],
+      stats: {
+        efficiency: "300%",
+        accuracy: "95%",
+        costReduction: "50%"
+      }
+    },
     {
       id: 1,
-      name: 'Sarah Johnson',
-      company: 'TechCorp Solutions',
-      role: 'CTO',
-      content: 'Zion Tech Group transformed our entire infrastructure. The AI solutions they implemented have increased our efficiency by 300% and reduced costs significantly.',
-      rating: 5,
-      avatar: '/images/avatars/sarah.jpg'
+      title: "Cloud Infrastructure",
+      description: "Scalable and secure cloud solutions for modern businesses",
+      icon: Cloud,
+      color: "blue",
+      features: [
+        "Cloud Migration",
+        "Server Management",
+        "Auto-scaling",
+        "24/7 Monitoring",
+        "Disaster Recovery",
+        "Cost Optimization"
+      ],
+      stats: {
+        uptime: "99.9%",
+        scalability: "Unlimited",
+        security: "Enterprise"
+      }
     },
     {
       id: 2,
-      name: 'Michael Chen',
-      company: 'Global Finance Inc.',
-      role: 'VP of Technology',
-      content: 'Their cloud migration services were exceptional. Zero downtime, seamless transition, and the team was incredibly professional throughout the process.',
-      rating: 5,
-      avatar: '/images/avatars/michael.jpg'
+      title: "Cybersecurity",
+      description: "Comprehensive security solutions to protect your digital assets",
+      icon: Shield,
+      color: "purple",
+      features: [
+        "Threat Detection",
+        "Security Audits",
+        "Compliance Management",
+        "Incident Response",
+        "Vulnerability Scanning",
+        "Security Training"
+      ],
+      stats: {
+        protection: "100%",
+        responseTime: "< 1min",
+        compliance: "100%"
+      }
     },
     {
       id: 3,
-      name: 'Emily Rodriguez',
-      company: 'HealthTech Systems',
-      role: 'CEO',
-      content: 'The cybersecurity solutions provided by Zion Tech Group gave us peace of mind. Our data is now more secure than ever, and compliance is no longer a concern.',
-      rating: 5,
-      avatar: '/images/avatars/emily.jpg'
+      title: "Custom Development",
+      description: "Bespoke software solutions designed specifically for your requirements",
+      icon: Code,
+      color: "green",
+      features: [
+        "Web Applications",
+        "Mobile Apps",
+        "API Development",
+        "Database Design",
+        "System Integration",
+        "Maintenance & Support"
+      ],
+      stats: {
+        delivery: "On Time",
+        quality: "100%",
+        support: "24/7"
+      }
     }
   ];
 
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-  const features: Feature[] = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced artificial intelligence to automate and optimize your business processes',
-      benefits: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
-=======
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
->>>>>>> cursor/fix-errors-and-merge-to-main-d277
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-<<<<<<< HEAD
-      description: 'Lightning-fast processing and real-time analytics for optimal results',
-      benefits: ['Real-time Processing', 'Scalable Architecture', 'Optimized Performance', 'Low Latency']
-=======
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
->>>>>>> cursor/fix-errors-and-merge-to-main-d277
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-<<<<<<< HEAD
-      description: 'Bank-level security with encryption and compliance standards',
-      benefits: ['End-to-End Encryption', 'Compliance Standards', 'Security Audits', '24/7 Monitoring']
-=======
-      description: 'Bank-level security with encryption and compliance standards'
->>>>>>> cursor/fix-errors-and-merge-to-main-d277
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-<<<<<<< HEAD
-      description: 'Worldwide deployment and support for international businesses',
-      benefits: ['Multi-Region Support', 'Local Compliance', 'Global CDN', 'International Support']
-=======
-      description: 'Worldwide deployment and support for international businesses'
->>>>>>> cursor/fix-errors-and-merge-to-main-d277
-    }
-  ];
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
-<<<<<<< HEAD
-  const testimonials: Testimonial[] = [
-    {
-      name: 'Sarah Johnson',
-      role: 'CTO',
-<<<<<<< HEAD
-      content: 'This solution transformed our operations completely. The AI insights are incredible and have helped us make data-driven decisions that increased our efficiency by 300%.',
-=======
-      company: 'TechCorp',
-      content: 'Zion Tech Group transformed our entire IT infrastructure. Their AI solutions increased our efficiency by 300%.',
->>>>>>> cursor/fix-errors-and-merge-to-main-d277
-      rating: 5
-    },
-    {
-      name: 'Michael Chen',
-      role: 'CEO',
-<<<<<<< HEAD
-content: 'The performance improvements we\'ve seen are remarkable. Highly recommended!',
-=======
-      company: 'DataFlow Inc',
-      content: 'Outstanding service and support. The team delivered exactly what we needed on time and within budget.',
->>>>>>> cursor/fix-errors-and-merge-to-main-d277
-      rating: 5
-    },
-    {
-      name: 'Emily Rodriguez',
-<<<<<<< HEAD
-company: 'InnovateLab',
-      role: 'Product Manager',
-      content: 'The best investment we made this year. ROI was evident within the first month, and the support team is absolutely fantastic.',
-      rating: 5
-    },
-    {
-      name: 'David Kim',
-      company: 'CloudFirst Solutions',
-      role: 'VP Engineering',
-      content: 'Seamless integration with our existing systems. The scalability and performance exceeded our expectations.',
-=======
-      role: 'Operations Director',
-      company: 'Global Solutions',
-      content: 'The best technology partner we\'ve ever worked with. Highly recommend their services.',
->>>>>>> cursor/fix-errors-and-merge-to-main-d277
-      rating: 5
-    }
-  ];
   useEffect(() => {
-    if (!isPlaying) return;
     const timer = setInterval(() => {
-setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+      setActiveTab((prev) => (prev + 1) % showcaseData.length);
     }, 4000);
-    return () => clearInterval(timer);
-  }, [isPlaying, testimonials.length]);
-=======
-
-  const stats = [
-    { icon: Users, value: '10,000+', label: 'Happy Customers' },
-    { icon: TrendingUp, value: '99.9%', label: 'Uptime' },
-    { icon: Star, value: '4.9/5', label: 'Rating' },
-    { icon: Zap, value: '24/7', label: 'Support' }
-  ];
-
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-  const nextTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-  };
-  const prevTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
-<<<<<<< HEAD
-  const togglePlayPause = () => {
-    setIsPlaying(!isPlaying);
-  };
-  const currentTestimonial = testimonials[currentIndex];
-=======
-
-<<<<<<< HEAD
-  useEffect(() => {
-    const timer = setInterval(nextTestimonial, 5000);
     return () => clearInterval(timer);
   }, []);
 
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+  const currentData = showcaseData[activeTab];
+
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Hero Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Transform Your Business with <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">AI Solutions</span>
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Join thousands of businesses that have revolutionized their operations with our cutting-edge AI and IT solutions.
-=======
-  return (
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-6">Our Solutions</h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover how our cutting-edge AI and IT solutions can transform your business
->>>>>>> cursor/fix-errors-and-merge-to-main-d277
+    <section className="py-16 bg-slate-800/50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+            Our Core Capabilities
+          </h2>
+          <p className="text-gray-300 text-lg max-w-3xl mx-auto">
+            We combine cutting-edge technology with industry expertise to deliver solutions that drive real business value.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
-            <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
-              <Play className="w-5 h-5" />
-              Start Demo;
-  </
-            <button className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
-=======
-            <button className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
-              <Zap className="w-5 h-5" />
-              Get Started Today
-            </button>
-            <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200 flex items-center justify-center gap-2">
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-              <ArrowRight className="w-5 h-5" />
-              Learn More;
-  </
-          </div>
         </div>
-<<<<<<< HEAD
-{/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {features.map((feature, index) => (
-            <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-cyan-400/50 transition-all duration-300">
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center mb-4">
-                <feature.icon className="w-6 h-6 text-white" />
+
+        {/* Tab Navigation */}
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
+          {showcaseData.map((item, index) => (
+            <button
+              key={item.id}
+              onClick={() => setActiveTab(index)}
+              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                activeTab === index
+                  ? `bg-${item.color}-500 text-white shadow-lg`
+                  : `bg-slate-700/50 text-gray-300 hover:bg-slate-600/50`
+              }`}
+            >
+              <div className="flex items-center space-x-2">
+                <item.icon className="w-5 h-5" />
+                <span>{item.title}</span>
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-              <p className="text-gray-300">{feature.description}</p>
-            </div>
+            </button>
           ))}
         </div>
-        {/* Benefits Section */}
-        <div className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10 mb-16">
-          <h3 className="text-2xl font-bold text-white mb-6 text-center">Why Choose Us?</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center">
-                <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
-                <span className="text-gray-300">{benefit}</span>
+
+        {/* Content Display */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Left Side - Content */}
+          <div className="space-y-8">
+            <div className="flex items-center space-x-4">
+              <div className={`w-16 h-16 bg-gradient-to-r from-${currentData.color}-500 to-${currentData.color}-600 rounded-xl flex items-center justify-center`}>
+                <currentData.icon className="w-8 h-8 text-white" />
               </div>
-            ))}
-          </div>
-        </div>
-        {/* Testimonials */}
-        <div className="text-center">
-          <h3 className="text-2xl font-bold text-white mb-8">What Our Clients Say</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">
-=======
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-                <div className="flex justify-center mb-4">
-                  <stat.icon className="w-8 h-8 text-blue-400" />
-                </div>
-                <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-                <div className="text-gray-300">{stat.label}</div>
+              <div>
+                <h3 className="text-3xl font-bold text-white">{currentData.title}</h3>
+                <p className="text-gray-300 text-lg">{currentData.description}</p>
               </div>
-            ))}
-          </div>
-        </div>
-<<<<<<< HEAD
-      </div>
-<<<<<<< HEAD
-=======
-      </section>
+            </div>
 
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-      {/* Features Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive AI and IT solutions designed to transform your business operations.
-            </p>
-          </div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-=======
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl flex items-center justify-center mb-4">
-                  <feature.icon className="w-8 h-8 text-white" />
-                </div>
-<<<<<<< HEAD
-                <h3 className="text-xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-300 mb-6">{feature.description}</p>
-                {feature.stats && (
-                  <div className="grid grid-cols-3 gap-4">
-                    {feature.stats.map((stat, statIndex) => (
-                      <div key={statIndex} className="text-center">
-                        <div className="text-lg font-bold text-white">{stat.value}</div>
-                        <div className="text-gray-400 text-xs">{stat.label}</div>
-                      </div>
-                    ))}
+            <div className="space-y-4">
+              <h4 className="text-xl font-semibold text-white">Key Features:</h4>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {currentData.features.map((feature, index) => (
+                  <div key={index} className="flex items-center space-x-3">
+                    <CheckCircle className={`w-5 h-5 text-${currentData.color}-400 flex-shrink-0`} />
+                    <span className="text-gray-300">{feature}</span>
                   </div>
-                )}
-=======
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300 mb-4">{feature.description}</p>
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center text-gray-300 text-sm">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                      <span>{benefit}</span>
-                    </li>
-                  ))}
-                </ul>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+                ))}
               </div>
-            ))}
+            </div>
+
+            <div className="flex space-x-6">
+              {Object.entries(currentData.stats).map(([key, value], index) => (
+                <div key={index} className="text-center">
+                  <div className={`text-2xl font-bold text-${currentData.color}-400`}>{value}</div>
+                  <div className="text-gray-400 text-sm capitalize">{key.replace(/([A-Z])/g, ' $1')}</div>
+                </div>
+              ))}
+            </div>
+
+            <div className="flex space-x-4">
+              <a
+                href="/contact"
+                className={`bg-gradient-to-r from-${currentData.color}-500 to-${currentData.color}-600 text-white font-semibold py-3 px-6 rounded-lg hover:from-${currentData.color}-600 hover:to-${currentData.color}-700 transition-all duration-300 flex items-center space-x-2`}
+              >
+                <span>Get Started</span>
+                <ArrowRight className="w-4 h-4" />
+              </a>
+              <a
+                href={`/${currentData.title.toLowerCase().replace(/\s+/g, '-')}`}
+                className="border border-gray-600 text-gray-300 font-semibold py-3 px-6 rounded-lg hover:bg-gray-700 hover:text-white transition-all duration-300"
+              >
+                Learn More
+              </a>
+            </div>
           </div>
-        </div>
-      </section>
-      {/* Testimonials Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-white mb-6">What Our Customers Say</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Don't just take our word for it. Here's what our satisfied customers have to say about their experience.
-            </p>
-          </div>
+
+          {/* Right Side - Visual */}
           <div className="relative">
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-white/20">
+            <div className={`bg-gradient-to-br from-${currentData.color}-500/10 to-${currentData.color}-600/10 rounded-2xl p-8 border border-${currentData.color}-500/20`}>
               <div className="text-center">
-                <Quote className="w-12 h-12 text-blue-400 mx-auto mb-6" />
-                <p className="text-xl text-gray-300 mb-8 italic">
-                  "{testimonials[currentTestimonial].content}"
-                </p>
-                <div className="flex justify-center mb-4">
-                  {[...Array(testimonials[currentTestimonial].rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                <div className={`text-6xl mb-4 text-${currentData.color}-400`}>
+                  {currentData.icon === Brain && '🧠'}
+                  {currentData.icon === Cloud && '☁️'}
+                  {currentData.icon === Shield && '🛡️'}
+                  {currentData.icon === Code && '💻'}
+                </div>
+                <h4 className="text-2xl font-bold text-white mb-4">{currentData.title}</h4>
+                <p className="text-gray-300 mb-6">{currentData.description}</p>
+                
+                <div className="grid grid-cols-3 gap-4">
+                  {Object.entries(currentData.stats).map(([key, value], index) => (
+                    <div key={index} className="text-center">
+                      <div className={`text-xl font-bold text-${currentData.color}-400`}>{value}</div>
+                      <div className="text-gray-400 text-xs capitalize">{key.replace(/([A-Z])/g, ' $1')}</div>
+                    </div>
                   ))}
                 </div>
-<<<<<<< HEAD
-                <blockquote className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                  "{currentTestimonial.content}"
-                </blockquote>
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-                <div className="flex items-center justify-center gap-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center">
-                    <span className="text-white font-semibold text-lg">
-                      {testimonials[currentTestimonial].name.charAt(0)}
-                    </span>
-                  </div>
-                  <div className="text-left">
-                    <h4 className="text-lg font-semibold text-white">{testimonials[currentTestimonial].name}</h4>
-                    <p className="text-gray-400">{testimonials[currentTestimonial].role}</p>
-                    <p className="text-blue-400">{testimonials[currentTestimonial].company}</p>
-                  </div>
-                </div>
               </div>
             </div>
-<<<<<<< HEAD
-            {/* Navigation Controls */}
-            <div className="flex items-center justify-center gap-4 mt-8">
-              <button
-                onClick={prevTestimonial}
-                className="p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors duration-200">
-                <ChevronLeft className="w-6 h-6" />
-              </button>
-              <button
-                onClick={togglePlayPause}
-                className="p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors duration-200">
-                {isPlaying ? <Pause className="w-6 h-6" /> : <Play className="w-6 h-6" />}
-              </button>
-              <button
-                onClick={nextTestimonial}
-                className="p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors duration-200">
-                <ChevronRight className="w-6 h-6" />
-              </button>
-            </div>
-            {/* Dots Indicator */}
-            <div className="flex justify-center mt-6 space-x-2">
-              {testimonials.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentIndex(index)}
-                  className={`w-3 h-3 rounded-full transition-colors duration-200 ${
-                    index === currentIndex ? 'bg-purple-400' : 'bg-white/30'
-                  }`}
-                />
-              ))}
-            </div>
-=======
-
-            {/* Navigation Buttons */}
-            <button
-              onClick={prevTestimonial}
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20"
-            >
-              <ChevronLeft className="w-6 h-6" />
-            </button>
-            <button
-              onClick={nextTestimonial}
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20"
-            >
-              <ChevronRight className="w-6 h-6" />
-            </button>
-          </div>
-
-          {/* Testimonial Indicators */}
-          <div className="flex justify-center mt-8 space-x-2">
-            {testimonials.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentTestimonial(index)}
-                className={`w-3 h-3 rounded-full transition-colors duration-200 ${
-                  index === currentTestimonial ? 'bg-blue-400' : 'bg-white/30'
-                }`}
-              />
-            ))}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
           </div>
         </div>
-      </section>
-      {/* Benefits Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Key Benefits
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover the advantages that make our solutions the preferred choice for businesses worldwide.
-            </p>
-          </div>
-<<<<<<< HEAD
-          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-3">
-                  <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
-                  <span className="text-gray-300">{benefit}</span>
-                </div>
-              ))}
-            </div>
-=======
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center gap-3 bg-white/5 backdrop-blur-lg rounded-lg p-4 border border-white/10">
-                <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                <span className="text-gray-300">{benefit}</span>
-              </div>
-            ))}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-          </div>
-        </div>
-      </section>
-      {/* CTA Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join thousands of satisfied customers and start your transformation journey today.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
-                <Zap className="w-5 h-5" />
-                Get Started Today
-              </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200">
-                Schedule Demo;
-  </
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-};
-export default DynamicContentShowcase;
-  </button>
-  </button>
-  </button>
-  </button>
-  </section>
-  </any>
-=======
-    </div>
+      </div>
+    </section>
   );
 };
 
 export default DynamicContentShowcase;
->>>>>>> cursor/fix-errors-and-merge-to-main-d277

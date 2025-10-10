@@ -13,11 +13,11 @@ const ServiceWorker: React.FC = () => {
           console.log('Service Worker registration failed:', error);
         });
 
-<<<<<<< HEAD
       // Handle service worker updates
       navigator.serviceWorker.addEventListener('controllerchange', () => {
         window.location.reload();
-=======
+      });
+
       // Listen for updates
       navigator.serviceWorker.addEventListener('message', (event) => {
         if (event.data && event.data.type === 'SW_UPDATE') {
@@ -26,7 +26,6 @@ const ServiceWorker: React.FC = () => {
             window.location.reload();
           }
         }
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
       });
     }
   }, []);
