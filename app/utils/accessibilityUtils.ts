@@ -246,9 +246,12 @@ export const setupLandmarkNavigation = (): void => {
     subtree: true
   });
 };
+<<<<<<< HEAD
 /**
  * Accessibility Utilities
  * Provides accessibility enhancements and monitoring
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-7f4e
  */
 
 export interface AccessibilityMetrics {

@@ -361,6 +361,10 @@ const addStructuredData = (data: unknown): void => {
   
   document.head.appendChild(script);
 };
+<<<<<<< HEAD
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-7f4e
 
 class SEOOptimizer {
   private config: Partial<SEOConfig> = {};
