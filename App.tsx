@@ -5,8 +5,13 @@ import React, { Suspense, memo, useEffect } from 'react';
 import React, { Suspense, memo, lazy } from 'react';
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-fb25
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+<<<<<<< HEAD
 import { HelmetProvider } from 'react-helmet-async';
 import './src/styles/futuristic.css';
+=======
+import { HelmetProvider, Helmet } from 'react-helmet-async';
+import { ErrorBoundary } from 'react-error-boundary';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0013
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
 <<<<<<< HEAD
@@ -38,6 +43,13 @@ import ContentShowcase from './src/components/ContentShowcase';
 import InteractiveContentShowcase2026 from './src/components/InteractiveContentShowcase2026';
 import './src/styles/futuristic.css';
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e939
+
+// Lazy load pages
+const HomePage = React.lazy(() => import('./app/page'));
+const AboutPage = React.lazy(() => import('./app/about/page'));
+const ServicesPage = React.lazy(() => import('./app/services/page'));
+const ContactPage = React.lazy(() => import('./app/contact/page'));
+const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
 
 // Structured data for SEO
 const structuredData = {
@@ -626,6 +638,7 @@ const App: React.FC = memo(() => {
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 };
 =======
 });
@@ -642,3 +655,8 @@ const App: React.FC = memo(() => {
 
 export default App;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-fb25
+=======
+};
+
+export default App;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0013

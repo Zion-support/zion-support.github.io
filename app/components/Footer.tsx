@@ -424,12 +424,15 @@ const Footer: React.FC = memo(() => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 backdrop-blur-sm border-t border-cyan-400/30 relative overflow-hidden matrix-bg">
 =======
 =======
 >>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d44d
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5694
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0013
     <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 backdrop-blur-sm border-t border-cyan-400/30 relative overflow-hidden">
 >>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6164
       {/* Futuristic Background Effects */}
@@ -439,6 +442,7 @@ const Footer: React.FC = memo(() => {
 <<<<<<< HEAD
 <<<<<<< HEAD
       
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       {/* Quantum Particles */}
@@ -464,6 +468,8 @@ const Footer: React.FC = memo(() => {
 >>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6164
 =======
 >>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d44d
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0013
       {/* Main Footer Content */}
 <<<<<<< HEAD
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -497,6 +503,7 @@ const Footer: React.FC = memo(() => {
                 <Zap className="w-5 h-5 text-white" />
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
               <span className="text-white font-bold text-xl bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">Zion Tech Group</span>
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -519,6 +526,9 @@ const Footer: React.FC = memo(() => {
 =======
               <span className="text-white font-bold text-xl neon-text-advanced cyber-text">Zion Tech Group</span>
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5694
+=======
+              <span className="text-white font-bold text-xl bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">Zion Tech Group</span>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0013
             </div>
             
             <p className="text-gray-300 mb-6 leading-relaxed">

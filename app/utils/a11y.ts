@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-cb01
@@ -16,10 +17,15 @@ import { useCallback } from 'react';
 import { useCallback } from 'react'
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
+=======
+'use client';
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0013
 /**
  * Accessibility utilities for enhanced user experience
  */
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export interface A11yOptions {
   announceChanges?: boolean;
@@ -122,15 +128,21 @@ export class A11yManager {
           element.blur();
           break;
 =======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0013
 /**
  * Generate unique ID for aria-describedby and aria-labelledby
  */
 export function generateId(prefix = 'a11y'): string {
 <<<<<<< HEAD
+<<<<<<< HEAD
   return `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
 =======
   return `${prefix}-${Math.random().toString(36).substr(2, 9)}`
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
+=======
+  return `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0013
 }
 
 /**
@@ -141,6 +153,9 @@ export function announceToScreenReader(
   priority: 'polite' | 'assertive' = 'polite'
 ): void {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0013
   if (typeof document === 'undefined') return;
   
   const announcement = document.createElement('div');
@@ -157,6 +172,7 @@ export function announceToScreenReader(
   
   // Set message after a slight delay to ensure screen readers pick it up
   setTimeout(() => {
+<<<<<<< HEAD
 <<<<<<< HEAD
     announcement.textContent = message;
   }, 100);
@@ -198,6 +214,17 @@ export function announceToScreenReader(
     document.body.removeChild(announcement)
   }, 3000)
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
+=======
+    announcement.textContent = message;
+  }, 100);
+  
+  // Remove announcement after it's been read
+  setTimeout(() => {
+    if (document.body.contains(announcement)) {
+      document.body.removeChild(announcement);
+    }
+  }, 3000);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0013
 }
 
 /**
@@ -208,6 +235,7 @@ export function announceToScreenReader(
 export function trapFocus(element: HTMLElement): () => void {
   const focusableElements = element.querySelectorAll<HTMLElement>(
     'a[href], button:not([disabled]), textarea:not([disabled]), input:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])'
+<<<<<<< HEAD
   )
   
   const firstFocusable = focusableElements[0]
@@ -259,10 +287,23 @@ export function trapFocus(container: HTMLElement): () => void {
       if (e.shiftKey) {
         if (document.activeElement === firstElement) {
           lastElement.focus();
+=======
+  );
+  
+  const firstElement = focusableElements[0];
+  const lastElement = focusableElements[focusableElements.length - 1];
+  
+  const handleKeyDown = (e: KeyboardEvent) => {
+    if (e.key === 'Tab') {
+      if (e.shiftKey) {
+        if (document.activeElement === firstElement) {
+          lastElement?.focus();
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0013
           e.preventDefault();
         }
       } else {
         if (document.activeElement === lastElement) {
+<<<<<<< HEAD
           firstElement.focus();
           e.preventDefault();
         }
@@ -333,27 +374,73 @@ export function trapFocus(container: HTMLElement): () => void {
     element.removeEventListener('keydown', handleKeyDown)
   }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
+=======
+          firstElement?.focus();
+          e.preventDefault();
+        }
+      }
+    }
+  };
+  
+  element.addEventListener('keydown', handleKeyDown);
+  
+  // Return cleanup function
+  return () => {
+    element.removeEventListener('keydown', handleKeyDown);
+  };
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0013
 }
+
 /**
- * Check if element is keyboard accessible
+ * Check if element is visible to screen readers
  */
-export function isKeyboardAccessible(element: HTMLElement): boolean {
-  const tabindex = element.getAttribute('tabindex')
-  const role = element.getAttribute('role')
-  const isInteractive = ['button', 'link', 'input', 'select', 'textarea'].includes(
-    element.tagName.toLowerCase()
-  )
+export function isVisibleToScreenReader(element: HTMLElement): boolean {
+  const style = window.getComputedStyle(element);
   return (
+<<<<<<< HEAD
     isInteractive ||
     (tabindex !== null && tabindex !== '-1') ||
     (role !== null && ['button', 'link', 'checkbox', 'radio'].includes(role))
   )
+=======
+    style.display !== 'none' &&
+    style.visibility !== 'hidden' &&
+    element.getAttribute('aria-hidden') !== 'true'
+  );
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0013
 }
+
 /**
- * Add keyboard navigation support to custom interactive elements
+ * Get accessible name for an element
  */
-export function makeKeyboardAccessible(
+export function getAccessibleName(element: HTMLElement): string {
+  // Check for aria-label first
+  const ariaLabel = element.getAttribute('aria-label');
+  if (ariaLabel) return ariaLabel;
+  
+  // Check for aria-labelledby
+  const ariaLabelledBy = element.getAttribute('aria-labelledby');
+  if (ariaLabelledBy) {
+    const labelElement = document.getElementById(ariaLabelledBy);
+    if (labelElement) return labelElement.textContent || '';
+  }
+  
+  // Check for associated label
+  if (element.id) {
+    const label = document.querySelector(`label[for="${element.id}"]`);
+    if (label) return label.textContent || '';
+  }
+  
+  // Fall back to text content
+  return element.textContent || '';
+}
+
+/**
+ * Set focus with announcement
+ */
+export function focusWithAnnouncement(
   element: HTMLElement,
+<<<<<<< HEAD
   onClick: (e: Event) => void,
   options: {
 <<<<<<< HEAD
@@ -1169,3 +1256,39 @@ export default {
   useAccessibility
 };
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
+=======
+  announcement?: string
+): void {
+  element.focus();
+  if (announcement) {
+    announceToScreenReader(announcement);
+  }
+}
+
+/**
+ * Validate ARIA attributes
+ */
+export function validateAriaAttributes(element: HTMLElement): string[] {
+  const errors: string[] = [];
+  
+  // Check for required ARIA attributes
+  const role = element.getAttribute('role');
+  if (role) {
+    // Check for required attributes based on role
+    switch (role) {
+      case 'button':
+        if (!element.getAttribute('aria-label') && !element.textContent) {
+          errors.push('Button elements should have accessible text or aria-label');
+        }
+        break;
+      case 'link':
+        if (!element.getAttribute('aria-label') && !element.textContent) {
+          errors.push('Link elements should have accessible text or aria-label');
+        }
+        break;
+    }
+  }
+  
+  return errors;
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0013

@@ -492,7 +492,11 @@ import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Cube, ArrowRight } from '
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default AI3DGenerationPage;
 =======
 export default AI3DGenerationPage;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-fb25
+=======
+export default AI3DGenerationPage;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0013
