@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from 'react';
-import Navigation from '../../components/Navigation';
-import Footer from '../../components/Footer';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
 const CybersecurityAudit: React.FC = () => {
   const [auditType, setAuditType] = useState('');

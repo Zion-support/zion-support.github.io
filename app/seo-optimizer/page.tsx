@@ -3,7 +3,6 @@ import React from 'react';
 import { Search, TrendingUp, Target, BarChart, CheckCircle, ArrowRight, Phone, Globe, Zap, Users } from 'lucide-react';
 import Link from 'next/link';
 
-const SEOOptimizerPage: React.FC = () => {
   const features = [
     {
       icon: Search,
@@ -155,4 +154,3 @@ const SEOOptimizerPage: React.FC = () => {
   );
 };
 
-export default SEOOptimizerPage;

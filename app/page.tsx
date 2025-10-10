@@ -2,7 +2,7 @@
 
 import React, { Suspense } from 'react';
 import { ArrowRight, Star, CheckCircle, Phone, Mail, MapPin } from 'lucide-react';
-import Footer from './components/Footer';
+import Footer from ../components/Footer';
 import SEOHead from './components/SEOHead';
 import ErrorBoundary from './components/ErrorBoundary';
 import Loading from './components/Loading';
@@ -39,12 +39,40 @@ import {
 // Service data
 const microSAASServices = [
   {
+    name: "AI Smart Inventory Pro",
+    description: "Intelligent inventory management with predictive analytics and automated reordering",
+    price: "$199/mo",
+    features: ["Predictive Analytics", "Automated Reordering", "Stockout Prevention", "Cost Optimization"],
+    category: "Inventory",
+    popular: true,
+    link: "/ai-smart-inventory-pro"
+  },
+  {
+    name: "AI Voice Cloning Studio",
+    description: "Create natural-sounding voice clones with 99.9% accuracy in 50+ languages",
+    price: "$99/mo",
+    features: ["High-Quality Synthesis", "Multi-Language", "Real-Time Conversion", "Voice Security"],
+    category: "Audio",
+    popular: true,
+    link: "/ai-voice-cloning-studio"
+  },
+  {
+    name: "AI Personal Finance Manager",
+    description: "Smart budgeting, investment optimization, and automated savings with AI insights",
+    price: "$19.99/mo",
+    features: ["Smart Budgeting", "Investment Optimization", "Expense Tracking", "Goal Setting"],
+    category: "Finance",
+    popular: true,
+    link: "/ai-personal-finance-manager"
+  },
+  {
     name: "AI Project Manager Pro",
     description: "Intelligent project management with predictive analytics and automated resource allocation",
     price: "$99/mo",
     features: ["Smart Scheduling", "Risk Prediction", "Team Optimization", "Progress Tracking"],
     category: "Productivity",
-    popular: true
+    popular: true,
+    link: "/ai-project-manager"
   },
   {
     name: "AI Analytics Dashboard",
@@ -52,7 +80,8 @@ const microSAASServices = [
     price: "$149/mo",
     features: ["Real-time Analytics", "Predictive Insights", "Custom Reports", "Data Visualization"],
     category: "Analytics",
-    popular: true
+    popular: true,
+    link: "/ai-analytics-dashboard"
   },
   {
     name: "AI Customer Support Bot",
@@ -60,7 +89,8 @@ const microSAASServices = [
     price: "$199/mo",
     features: ["24/7 Support", "Multi-language", "Sentiment Analysis", "Escalation Management"],
     category: "Support",
-    popular: false
+    popular: false,
+    link: "/ai-customer-support-bot"
   },
   {
     name: "AI Content Generator",
@@ -68,18 +98,38 @@ const microSAASServices = [
     price: "$79/mo",
     features: ["Content Creation", "SEO Optimization", "Multi-format", "Brand Voice"],
     category: "Content",
-    popular: true
+    popular: true,
+    link: "/ai-content-generation"
+  },
+  {
+    name: "AI Workflow Automation",
+    description: "Visual workflow builder with AI-powered automation for business processes",
+    price: "$149/mo",
+    features: ["Visual Builder", "AI Automation", "Integration Hub", "Process Optimization"],
+    category: "Automation",
+    popular: true,
+    link: "/ai-workflow-automation"
   }
 ];
 
 const aiServices = [
+  {
+    name: "AI Quantum Financial Oracle",
+    description: "Revolutionary quantum-enhanced financial AI with 99.7% prediction accuracy and 300% ROI improvement",
+    price: "$9,999/mo",
+    features: ["Quantum Predictions", "Portfolio Optimization", "Risk Assessment", "Algorithmic Trading"],
+    category: "Quantum AI",
+    enterprise: true,
+    link: "/ai-quantum-financial-oracle"
+  },
   {
     name: "AI Drug Discovery Pro",
     description: "Accelerate pharmaceutical research with AI-powered molecular analysis and drug interaction prediction",
     price: "$4,500/mo",
     features: ["Molecular Modeling", "Drug Interaction Analysis", "Clinical Trial Optimization", "Patent Research"],
     category: "Healthcare AI",
-    enterprise: true
+    enterprise: true,
+    link: "/ai-drug-discovery-pro"
   },
   {
     name: "AI Climate Solutions Pro",
@@ -87,7 +137,8 @@ const aiServices = [
     price: "$3,200/mo",
     features: ["Carbon Analysis", "Weather Prediction", "Sustainability Planning", "Emission Tracking"],
     category: "Environmental AI",
-    enterprise: false
+    enterprise: false,
+    link: "/ai-climate-solutions-pro"
   },
   {
     name: "AI Space Technology Pro",
@@ -95,7 +146,8 @@ const aiServices = [
     price: "$5,500/mo",
     features: ["Satellite Operations", "Mission Planning", "Data Analysis", "Orbital Mechanics"],
     category: "Space Technology",
-    enterprise: true
+    enterprise: true,
+    link: "/ai-space-technology-pro"
   },
   {
     name: "AI Financial Crime Detection Pro",
@@ -103,38 +155,68 @@ const aiServices = [
     price: "$2,800/mo",
     features: ["Fraud Detection", "Risk Assessment", "Compliance Monitoring", "Transaction Analysis"],
     category: "Financial AI",
-    enterprise: false
+    enterprise: false,
+    link: "/ai-financial-crime-detection-pro"
+  },
+  {
+    name: "AI Neural Memory Assistant",
+    description: "Advanced AI assistant with enhanced memory capabilities for personalized user experiences",
+    price: "$1,999/mo",
+    features: ["Memory Enhancement", "Personalization", "Context Awareness", "Learning Adaptation"],
+    category: "Cognitive AI",
+    enterprise: false,
+    link: "/ai-neural-memory-assistant"
   }
 ];
 
 const itServices = [
   {
+    name: "AI-Powered DevOps Platform",
+    description: "Intelligent CI/CD with 10x faster deployments, 99.99% uptime, and 40% cost reduction",
+    price: "$999/mo",
+    features: ["Intelligent CI/CD", "Automated Infrastructure", "Security Automation", "Performance Analytics"],
+    category: "DevOps",
+    link: "/ai-powered-devops-platform"
+  },
+  {
     name: "Cloud Migration & Setup",
     description: "Seamless cloud migration with zero downtime and comprehensive security",
     price: "$2,500/mo",
     features: ["Zero Downtime", "Security Audit", "Performance Optimization", "24/7 Support"],
-    category: "Cloud Services"
+    category: "Cloud Services",
+    link: "/cloud-migration"
   },
   {
     name: "Cybersecurity Suite",
     description: "Comprehensive security solutions to protect your digital assets and data",
     price: "$1,800/mo",
     features: ["Threat Detection", "Vulnerability Scanning", "Incident Response", "Compliance"],
-    category: "Security"
+    category: "Security",
+    link: "/cybersecurity"
   },
   {
     name: "IT Infrastructure Design",
     description: "Scalable infrastructure architecture designed for your business needs",
     price: "$3,000/mo",
     features: ["Architecture Design", "Scalability Planning", "Performance Tuning", "Monitoring"],
-    category: "Infrastructure"
+    category: "Infrastructure",
+    link: "/it-infrastructure"
   },
   {
     name: "24/7 IT Support",
     description: "Round-the-clock technical support and monitoring for your systems",
     price: "$1,200/mo",
     features: ["24/7 Support", "Remote Monitoring", "Quick Response", "Proactive Maintenance"],
-    category: "Support"
+    category: "Support",
+    link: "/it-support"
+  },
+  {
+    name: "Custom Development",
+    description: "Tailored software solutions built specifically for your business requirements",
+    price: "$4,500/mo",
+    features: ["Custom Software", "API Development", "Integration Services", "Maintenance"],
+    category: "Development",
+    link: "/custom-development"
   }
 ];
 
@@ -210,7 +292,8 @@ const HomePage: React.FC = () => {
             {microSAASServices.map((service, index) => (
               <div
                 key={index}
-                className="cyber-card p-6 hover:scale-105 transition-all duration-300 relative"
+                className="cyber-card p-6 hover:scale-105 transition-all duration-300 relative cursor-pointer"
+                onClick={() => window.location.href = service.link}
               >
                 {service.popular && (
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
@@ -264,9 +347,10 @@ const HomePage: React.FC = () => {
             {aiServices.map((service, index) => (
               <div
                 key={index}
-                className={`cyber-card p-8 hover:scale-105 transition-all duration-300 relative ${
+                className={`cyber-card p-8 hover:scale-105 transition-all duration-300 relative cursor-pointer ${
                   service.enterprise ? 'ring-2 ring-purple-400/30' : ''
                 }`}
+                onClick={() => window.location.href = service.link}
               >
                 {service.enterprise && (
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
@@ -315,9 +399,9 @@ const HomePage: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {itServices.map((service, index) => (
-              <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
+              <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300 cursor-pointer" onClick={() => window.location.href = service.link}>
                 <div className="text-center">
                   <div className="text-4xl mb-4">⚙️</div>
                   <h3 className="text-lg font-bold text-white mb-3">{service.name}</h3>
