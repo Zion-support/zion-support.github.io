@@ -71,8 +71,14 @@ const AI3DGenerationPage: React.FC = React.memo(() => {
   const pricing = [
     {
       plan: 'Starter',
-      price: '$199/month',
-      features: ['Up to 10 models/month', 'Basic textures', 'Standard quality', 'Email support'],
+      price: '$199',
+      features: [
+        'Up to 100 3D models per month',
+        'Basic AI generation',
+        'Standard resolution output',
+        'Email support',
+        'Common 3D formats'
+      ],
       popular: false
     },
     {
@@ -110,16 +116,16 @@ const AI3DGenerationPage: React.FC = React.memo(() => {
   ];
 
   const technologies = [
-    'Neural Radiance Fields',
-    'Generative Adversarial Networks',
+    'Neural Radiance Fields (NeRF)',
+    'Generative Adversarial Networks (GANs)',
+    'Variational Autoencoders (VAEs)',
     '3D Convolutional Networks',
     'Point Cloud Processing',
     'Mesh Generation',
     'Texture Synthesis',
+    'Physics Simulation',
     'Real-time Rendering',
-    'Cloud Computing',
-    'GPU Acceleration',
-    'Machine Learning'
+    'Cloud Computing'
   ];
 
   return (
@@ -144,12 +150,11 @@ const AI3DGenerationPage: React.FC = React.memo(() => {
               Transform your ideas into reality in minutes, not months.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:+13024640950"
-                className="cyber-button inline-flex items-center space-x-2"
-              >
-                <Phone className="w-4 h-4" />
-                <span>Call (302) 464-0950</span>
+              <a href="/contact" className="cyber-button px-8 py-4 text-lg">
+                Get Started Today
+              </a>
+              <a href="mailto:info@ziontechgroup.com" className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors">
+                Email Us
               </a>
               <a
                 href="mailto:kleber@ziontechgroup.com"

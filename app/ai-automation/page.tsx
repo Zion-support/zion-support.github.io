@@ -59,7 +59,8 @@ const AIAutomationPage: React.FC = () => {
         'Priority support',
         'Custom integrations',
         'Advanced analytics',
-        'Workflow optimization'
+        'API access',
+        'Custom workflows'
       ],
       popular: true
     },
@@ -70,22 +71,42 @@ const AIAutomationPage: React.FC = () => {
       description: 'For large organizations',
       features: [
         'Unlimited processes',
-        'Premium AI features',
-        '24/7 support',
+        'Premium AI capabilities',
+        'Dedicated support',
+        'White-label solution',
         'Custom development',
-        'White-label options',
-        'API access',
-        'Dedicated support'
+        'On-premise deployment',
+        'SLA guarantee'
       ],
       popular: false
     }
   ];
 
-  const stats = [
-    { icon: Users, value: '200+', label: 'Automated Processes' },
-    { icon: TrendingUp, value: '80%', label: 'Efficiency Increase' },
-    { icon: Clock, value: '60%', label: 'Time Saved' },
-    { icon: Star, value: '4.9/5', label: 'Client Rating' }
+  const useCases = [
+    {
+      title: 'Customer Service',
+      description: 'Automate customer inquiries, ticket routing, and response generation',
+      icon: '🎧',
+      examples: ['Chatbot responses', 'Ticket classification', 'Escalation routing', 'Knowledge base updates']
+    },
+    {
+      title: 'Sales & Marketing',
+      description: 'Automate lead scoring, email campaigns, and customer segmentation',
+      icon: '📈',
+      examples: ['Lead qualification', 'Email sequences', 'Social media posting', 'Campaign optimization']
+    },
+    {
+      title: 'Finance & Accounting',
+      description: 'Automate invoice processing, expense management, and financial reporting',
+      icon: '💰',
+      examples: ['Invoice processing', 'Expense categorization', 'Financial reporting', 'Compliance checks']
+    },
+    {
+      title: 'HR & Operations',
+      description: 'Automate recruitment, onboarding, and employee management processes',
+      icon: '👥',
+      examples: ['Resume screening', 'Interview scheduling', 'Onboarding workflows', 'Performance tracking']
+    }
   ];
 
   return (
