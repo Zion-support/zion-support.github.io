@@ -259,79 +259,79 @@
         {/* Services Grid */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
-                {services.map((service) => (
-              <div
-                key={service.id}
-                className={`bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105 ${
-                  service.popular ? 'ring-2 ring-purple-500' : ''
-                }`}
-              >
-                {service.popular && (
-                  <div className="bg-gradient-to-r from-purple-500 to-pink-600 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
-                    Most Popular
-                  </div>
-                )}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {services.map((service) => (
+                <div
+                  key={service.id}
+                  className={`bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105 ${
+                    service.popular ? 'ring-2 ring-purple-500' : ''
+                  }`}
+                >
+                  {service.popular && (
+                    <div className="bg-gradient-to-r from-purple-500 to-pink-600 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
+                      Most Popular
+                    </div>
+                  )}
 
-                <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-pink-600 flex items-center justify-center mr-4">
-                    <service.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-white">{service.name}</h3>
-                    <div className="flex items-center text-sm text-gray-400">
-                      <Star className="w-4 h-4 text-yellow-400 mr-1" />
-                      {service.rating} ({service.users} users)
+                  <div className="flex items-center mb-6">
+                    <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-pink-600 flex items-center justify-center mr-4">
+                      <service.icon className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold text-white">{service.name}</h3>
+                      <div className="flex items-center text-sm text-gray-400">
+                        <Star className="w-4 h-4 text-yellow-400 mr-1" />
+                        {service.rating} ({service.users} users)
+                      </div>
                     </div>
                   </div>
+
+                  <p className="text-gray-300 mb-6">{service.description}</p>
+
+                  <div className="mb-6">
+                    <div className="flex items-center mb-2">
+                      <span className="text-3xl font-bold text-white">{service.price}</span>
+                      <span className="text-lg text-gray-400 line-through ml-2">{service.originalPrice}</span>
+                    </div>
+                    <div className="flex items-center text-sm text-gray-400">
+                      <Clock className="w-4 h-4 mr-1" />
+                      {service.freeTrial} free trial
+                    </div>
+                  </div>
+
+                  <div className="space-y-2 mb-6">
+                    <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
+                    {service.features.slice(0, 4).map((feature, index) => (
+                      <div key={index} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                        {feature}
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="space-y-2 mb-6">
+                    <h4 className="text-sm font-semibold text-white mb-2">Benefits:</h4>
+                    {service.benefits.slice(0, 2).map((benefit, index) => (
+                      <div key={index} className="flex items-center text-sm text-green-300">
+                        <TrendingUp className="w-4 h-4 mr-2" />
+                        {benefit}
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-sm text-gray-400">{service.category}</span>
+                    <span className="text-sm text-green-400 font-semibold">
+                      {service.freeTrial} free trial
+                    </span>
+                  </div>
+
+                  <button className="w-full bg-gradient-to-r from-purple-500 to-pink-600 text-white py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 flex items-center justify-center">
+                    Start Free Trial
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </button>
                 </div>
-
-                <p className="text-gray-300 mb-6">{service.description}</p>
-
-                <div className="mb-6">
-                  <div className="flex items-center mb-2">
-                    <span className="text-3xl font-bold text-white">{service.price}</span>
-                    <span className="text-lg text-gray-400 line-through ml-2">{service.originalPrice}</span>
-                  </div>
-                  <div className="flex items-center text-sm text-gray-400">
-                    <Clock className="w-4 h-4 mr-1" />
-                    {service.freeTrial} free trial
-                </div>
-              </div>
-
-              <div className="space-y-2 mb-6">
-                <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
-                {service.features.slice(0, 4).map((feature, index) => (
-                  <div key={index} className="flex items-center text-sm text-gray-300">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                    {feature}
-                  </div>
-                ))}
-              </div>
-
-              <div className="space-y-2 mb-6">
-                <h4 className="text-sm font-semibold text-white mb-2">Benefits:</h4>
-                {service.benefits.slice(0, 2).map((benefit, index) => (
-                  <div key={index} className="flex items-center text-sm text-green-300">
-                    <TrendingUp className="w-4 h-4 mr-2" />
-                    {benefit}
-                  </div>
-                ))}
-              </div>
-
-              <div className="flex items-center justify-between mb-4">
-                <span className="text-sm text-gray-400">{service.category}</span>
-                <span className="text-sm text-green-400 font-semibold">
-                  {service.freeTrial} free trial
-                </span>
-              </div>
-
-              <button className="w-full bg-gradient-to-r from-purple-500 to-pink-600 text-white py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 flex items-center justify-center">
-                Start Free Trial
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </button>
-            </div>
           ))}
-            </div>
           </div>
         </section>
 

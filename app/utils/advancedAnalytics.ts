@@ -3,6 +3,7 @@
  * Advanced Analytics System for Zion Tech Group Website
  * Provides comprehensive user behavior tracking and insights
  */
+
 interface UserEvent {
   id: string
   type: 'page_view' | 'click' | 'scroll' | 'form_submit' | 'download' | 'custom'
@@ -14,8 +15,9 @@ interface UserEvent {
   sessionId: string
   userId?: string
   url: string
-  metadata?: Record<string, unknown>;}
+  metadata?: Record<string, unknown>
 }
+
 interface UserSession {
   id: string
   startTime: string
@@ -29,8 +31,9 @@ interface UserSession {
   browser: string
   os: string
   country?: string
-  city?: string;}
+  city?: string
 }
+
 interface AnalyticsConfig {
   enableTracking: boolean
   enableHeatmaps: boolean
@@ -39,8 +42,9 @@ interface AnalyticsConfig {
   enableConversionTracking: boolean
   enablePerformanceTracking: boolean
   enableErrorTracking: boolean
-  enableUserJourneyTracking: boolean;}
+  enableUserJourneyTracking: boolean
 }
+
 class AdvancedAnalytics {
   private static instance: AdvancedAnalytics
   private config: AnalyticsConfig
@@ -48,6 +52,7 @@ class AdvancedAnalytics {
   private eventQueue: UserEvent[] = []
   private maxQueueSize = 1000
   private isOnline = true
+
   private constructor() {
     this.config = {
       enableTracking: true,
@@ -57,22 +62,25 @@ class AdvancedAnalytics {
       enableConversionTracking: true,
       enablePerformanceTracking: true,
       enableErrorTracking: true,
-      enableUserJourneyTracking: true}
+      enableUserJourneyTracking: true
     }
     this.currentSession = this.createNewSession()
     this.initializeTracking()
   }
+
   static getInstance(): AdvancedAnalytics {
     if (!AdvancedAnalytics.instance) {
-      AdvancedAnalytics.instance = new AdvancedAnalytics();}
+      AdvancedAnalytics.instance = new AdvancedAnalytics()
     }
     return AdvancedAnalytics.instance
   }
+
   /**
    * Initialize comprehensive analytics tracking
    */
   private initializeTracking(): void {
     if (typeof window === 'undefined' || !this.config.enableTracking) return
+    
     // Track page views
     this.trackPageView()
     // Track clicks
@@ -85,15 +93,16 @@ class AdvancedAnalytics {
     this.trackDownloads()
     // Track performance
     if (this.config.enablePerformanceTracking) {
-      this.trackPerformance();}
+      this.trackPerformance()
     }
     // Track user journey
     if (this.config.enableUserJourneyTracking) {
-      this.trackUserJourney();}
+      this.trackUserJourney()
     }
     // Setup network monitoring
     this.setupNetworkMonitoring()
   }
+
   /**
    * Create new user session
    */
@@ -103,17 +112,20 @@ class AdvancedAnalytics {
       startTime: new Date().toISOString(),
       pageViews: 0,
       events: [],
-      userAgent: navigator.userAgent,
+      userAgent: typeof window !== 'undefined' ? navigator.userAgent : '',
       device: this.detectDevice(),
       browser: this.detectBrowser(),
       os: this.detectOS(),
-      referrer: document.referrer}
+      referrer: typeof window !== 'undefined' ? document.referrer : ''
     }
   }
+
   /**
    * Track page views
    */
   trackPageView(url?: string, title?: string): void {
+    if (typeof window === 'undefined') return
+    
     const event: UserEvent = {
       id: this.generateEventId(),
       type: 'page_view',
@@ -128,17 +140,20 @@ class AdvancedAnalytics {
         referrer: document.referrer,
         viewport: {
           width: window.innerWidth,
-          height: window.innerHeight}
+          height: window.innerHeight
         }
       }
     }
     this.trackEvent(event)
     this.currentSession.pageViews++
   }
+
   /**
    * Track clicks
    */
   private trackClicks(): void {
+    if (typeof window === 'undefined') return
+    
     document.addEventListener('click', event => {
       const target = event.target as HTMLElement
       const element = this.getElementInfo(target)
@@ -154,22 +169,20 @@ class AdvancedAnalytics {
         url: window.location.href,
         metadata: {
           element: element.tagName,
-          id: element.id,
-          className: element.className,
-          text: element.text?.substring(0, 100),
-          position: {
-            x: event.clientX,
-            y: event.clientY}
-          }
+          text: element.text,
+          position: element.position
         }
       }
       this.trackEvent(clickEvent)
     })
   }
+
   /**
    * Track scrolls
    */
   private trackScrolls(): void {
+    if (typeof window === 'undefined') return
+    
     let scrollTimeout: NodeJS.Timeout
     window.addEventListener('scroll', () => {
       clearTimeout(scrollTimeout)
@@ -179,33 +192,26 @@ class AdvancedAnalytics {
           type: 'scroll',
           category: 'engagement',
           action: 'scroll',
-          value: Math.round(
-            (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100
-          ),
+          value: Math.round((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100),
           timestamp: new Date().toISOString(),
           sessionId: this.currentSession.id,
           userId: this.getUserId(),
-          url: window.location.href,
-          metadata: {
-            scrollY: window.scrollY,
-            scrollPercentage: Math.round(
-              (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100
-            )}
-          }
+          url: window.location.href
         }
         this.trackEvent(scrollEvent)
-      }, 100)
+      }, 150)
     })
   }
+
   /**
    * Track form submissions
    */
   private trackFormSubmissions(): void {
+    if (typeof window === 'undefined') return
+    
     document.addEventListener('submit', event => {
       const form = event.target as HTMLFormElement
-      const formData = new FormData(form)
-      const formFields = Array.from(formData.keys())
-      const submitEvent: UserEvent = {
+      const formEvent: UserEvent = {
         id: this.generateEventId(),
         type: 'form_submit',
         category: 'conversion',
@@ -218,18 +224,19 @@ class AdvancedAnalytics {
         metadata: {
           formId: form.id,
           formClass: form.className,
-          formAction: form.action,
-          formMethod: form.method,
-          fields: formFields}
+          formAction: form.action
         }
       }
-      this.trackEvent(submitEvent)
+      this.trackEvent(formEvent)
     })
   }
+
   /**
    * Track downloads
    */
   private trackDownloads(): void {
+    if (typeof window === 'undefined') return
+    
     document.addEventListener('click', event => {
       const target = event.target as HTMLElement
       const link = target.closest('a')
@@ -239,327 +246,299 @@ class AdvancedAnalytics {
           type: 'download',
           category: 'conversion',
           action: 'download',
-          label: link.href,
+          label: link.href.split('/').pop() || 'unknown_file',
           timestamp: new Date().toISOString(),
           sessionId: this.currentSession.id,
           userId: this.getUserId(),
           url: window.location.href,
           metadata: {
             downloadUrl: link.href,
-            downloadText: link.textContent?.substring(0, 100)}
+            downloadText: link.textContent || ''
           }
         }
         this.trackEvent(downloadEvent)
       }
     })
   }
+
   /**
    * Track performance metrics
    */
   private trackPerformance(): void {
-    if ('PerformanceObserver' in window) {
-      // Track Core Web Vitals
-      new PerformanceObserver(list => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'paint') {
-            const paintEvent: UserEvent = {
-              id: this.generateEventId(),
-              type: 'custom',
-              category: 'performance',
-              action: entry.name,
-              value: entry.startTime,
-              timestamp: new Date().toISOString(),
-              sessionId: this.currentSession.id,
-              userId: this.getUserId(),
-              url: window.location.href,
-              metadata: {
-                metric: entry.name,
-                value: entry.startTime}
-              }
-            }
-            this.trackEvent(paintEvent)
-          }
-        }
-      }).observe({ entryTypes: ['paint'] })
-      // Track navigation timing
-      window.addEventListener('load', () => {
-        const navigation = performance.getEntriesByType(
-          'navigation'
-        )[0] as PerformanceNavigationTiming
-        const performanceEvent: UserEvent = {
+    if (typeof window === 'undefined') return
+    
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+        const perfEvent: UserEvent = {
           id: this.generateEventId(),
           type: 'custom',
           category: 'performance',
           action: 'page_load',
-          value: navigation.loadEventEnd - navigation.loadEventStart,
+          value: Math.round(perfData.loadEventEnd - perfData.loadEventStart),
           timestamp: new Date().toISOString(),
           sessionId: this.currentSession.id,
           userId: this.getUserId(),
           url: window.location.href,
           metadata: {
-            loadTime: navigation.loadEventEnd - navigation.loadEventStart,
-            domContentLoaded:
-              navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-            firstByte: navigation.responseStart - navigation.requestStart}
+            loadTime: perfData.loadEventEnd - perfData.loadEventStart,
+            domContentLoaded: perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart,
+            firstPaint: this.getFirstPaint(),
+            firstContentfulPaint: this.getFirstContentfulPaint()
           }
         }
-        this.trackEvent(performanceEvent)
-      })
-    }
+        this.trackEvent(perfEvent)
+      }, 0)
+    })
   }
+
   /**
    * Track user journey
    */
   private trackUserJourney(): void {
+    if (typeof window === 'undefined') return
+    
     // Track page transitions
     let lastUrl = window.location.href
     const observer = new MutationObserver(() => {
       if (window.location.href !== lastUrl) {
         this.trackPageView()
-        lastUrl = window.location.href;}
+        lastUrl = window.location.href
       }
     })
-    observer.observe(document.body, {
-      childList: true,
-      subtree: true}
-    })
+    observer.observe(document, { subtree: true, childList: true })
   }
+
   /**
    * Setup network monitoring
    */
   private setupNetworkMonitoring(): void {
+    if (typeof window === 'undefined') return
+    
     window.addEventListener('online', () => {
       this.isOnline = true
-      this.flushEventQueue();}
+      this.flushEventQueue()
     })
+    
     window.addEventListener('offline', () => {
-      this.isOnline = false;}
+      this.isOnline = false
     })
   }
+
   /**
    * Track custom event
    */
-  trackEvent(event: UserEvent): void {
+  trackCustomEvent(category: string, action: string, label?: string, value?: number, metadata?: Record<string, unknown>): void {
+    const event: UserEvent = {
+      id: this.generateEventId(),
+      type: 'custom',
+      category,
+      action,
+      label,
+      value,
+      timestamp: new Date().toISOString(),
+      sessionId: this.currentSession.id,
+      userId: this.getUserId(),
+      url: typeof window !== 'undefined' ? window.location.href : '',
+      metadata
+    }
+    this.trackEvent(event)
+  }
+
+  /**
+   * Track event (internal method)
+   */
+  private trackEvent(event: UserEvent): void {
     this.currentSession.events.push(event)
     this.eventQueue.push(event)
-    // Keep queue size manageable
-    if (this.eventQueue.length > this.maxQueueSize) {
-      this.eventQueue.shift();}
+    
+    if (this.eventQueue.length >= this.maxQueueSize) {
+      this.flushEventQueue()
     }
-    // Send to analytics service
+    
     if (this.isOnline) {
-      this.sendEvent(event);}
+      this.sendEventToServer(event)
     }
   }
+
   /**
-   * Send event to analytics service
+   * Send event to server
    */
-  private async sendEvent(event: UserEvent): Promise<void> {
+  private async sendEventToServer(event: UserEvent): Promise<void> {
     try {
-      await fetch('/api/analytics', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'}
-        },
-        body: JSON.stringify(event)
-      })
-    } catch (error) {}
-      }
+      // In a real implementation, you would send to your analytics server
+      console.log('Analytics event:', event)
+    } catch (error) {
+      console.error('Failed to send analytics event:', error)
+    }
   }
+
   /**
-   * Flush event queue when back online
+   * Flush event queue
    */
-  private async flushEventQueue(): Promise<void> {
-    if (!this.isOnline) return
-    const eventsToSend = [...this.eventQueue]
+  private flushEventQueue(): void {
+    if (this.eventQueue.length === 0) return
+    
+    const events = [...this.eventQueue]
     this.eventQueue = []
-    for (const event of eventsToSend) {
-      await this.sendEvent(event);}
-    }
+    
+    // Send all events to server
+    events.forEach(event => this.sendEventToServer(event))
   }
+
   /**
-   * Get element information for tracking
+   * Generate unique session ID
    */
-  private getElementInfo(element: HTMLElement): {
-    category: string
-    label: string
-    tagName: string
-    id: string
-    className: string
-    text?: string;}
-  } {
-    const tagName = element.tagName.toLowerCase()
-    const id = element.id || ''
-    const className = element.className || ''
-    const text = element.textContent?.trim()
-    // Determine category based on element type
-    let category = 'interaction'
-    if (tagName === 'button' || element.closest('button')) {
-      category = 'button';}
-    } else if (tagName === 'a' || element.closest('a')) {
-      category = 'link';}
-    } else if (tagName === 'input' || tagName === 'select' || tagName === 'textarea') {
-      category = 'form';}
-    }
-    // Create label
-    let label = id || className || text?.substring(0, 50) || tagName
-    return {
-      category,
-      label,
-      tagName,
-      id,
-      className,
-      text}
-    }
+  private generateSessionId(): string {
+    return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
   }
+
   /**
-   * Check if link is a download
+   * Generate unique event ID
    */
-  private isDownloadLink(link: HTMLAnchorElement): boolean {
-    return (
-      link.download !== '' ||
-      !!link.href.match(/\.(pdf|doc|docx|xls|xlsx|ppt|pptx|zip|rar|7z|tar|gz)$/i) ||
-      link.getAttribute('data-download') === 'true'
-    );}
+  private generateEventId(): string {
+    return `event_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
   }
+
+  /**
+   * Get user ID from storage or generate new one
+   */
+  private getUserId(): string | undefined {
+    if (typeof window === 'undefined') return undefined
+    
+    let userId = localStorage.getItem('analytics_user_id')
+    if (!userId) {
+      userId = `user_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+      localStorage.setItem('analytics_user_id', userId)
+    }
+    return userId
+  }
+
   /**
    * Detect device type
    */
   private detectDevice(): 'desktop' | 'mobile' | 'tablet' {
+    if (typeof window === 'undefined') return 'desktop'
+    
     const width = window.innerWidth
     if (width < 768) return 'mobile'
     if (width < 1024) return 'tablet'
-    return 'desktop';}
+    return 'desktop'
   }
+
   /**
    * Detect browser
    */
   private detectBrowser(): string {
+    if (typeof window === 'undefined') return 'unknown'
+    
     const userAgent = navigator.userAgent
     if (userAgent.includes('Chrome')) return 'Chrome'
     if (userAgent.includes('Firefox')) return 'Firefox'
     if (userAgent.includes('Safari')) return 'Safari'
     if (userAgent.includes('Edge')) return 'Edge'
-    return 'Unknown';}
+    return 'Other'
   }
+
   /**
    * Detect operating system
    */
   private detectOS(): string {
+    if (typeof window === 'undefined') return 'unknown'
+    
     const userAgent = navigator.userAgent
     if (userAgent.includes('Windows')) return 'Windows'
     if (userAgent.includes('Mac')) return 'macOS'
     if (userAgent.includes('Linux')) return 'Linux'
     if (userAgent.includes('Android')) return 'Android'
     if (userAgent.includes('iOS')) return 'iOS'
-    return 'Unknown';}
+    return 'Other'
   }
+
   /**
-   * Generate session ID
+   * Get element information for click tracking
    */
-  private generateSessionId(): string {}
-    return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-  }
-  /**
-   * Generate event ID
-   */
-  private generateEventId(): string {`}
-    return `event_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-  }
-  /**
-   * Get user ID from storage or generate one
-   */
-  private getUserId(): string | undefined {
-    let userId = localStorage.getItem('analytics_user_id')
-    if (!userId) {`}
-      userId = `user_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-      localStorage.setItem('analytics_user_id', userId)
-    }
-    return userId
-  }
-  /**
-   * Get analytics summary
-   */
-  getAnalyticsSummary(): {
-    session: UserSession
-    totalEvents: number
-    eventsByType: Record<string, number>
-    eventsByCategory: Record<string, number>;}
-    topPages: Array<{ url: string; views: number }>
-    conversionRate: number
+  private getElementInfo(element: HTMLElement): {
+    category: string
+    label: string
+    tagName: string
+    text: string
+    position: { x: number; y: number }
   } {
-    const events = this.currentSession.events
-    const totalEvents = events.length
-    const eventsByType = events.reduce(
-      (acc, event) => {
-        acc[event.type] = (acc[event.type] || 0) + 1
-        return acc;}
-      },
-      {} as Record<string, number>
-    )
-    const eventsByCategory = events.reduce(
-      (acc, event) => {
-        acc[event.category] = (acc[event.category] || 0) + 1
-        return acc;}
-      },
-      {} as Record<string, number>
-    )
-    const topPages = pageViews
-      .reduce(
-        (acc, event) => {
-          const existing = acc.find(p => p.url === event.url)
-          if (existing) {
-            existing.views++;}
-          } else {}
-            acc.push({ url: event.url, views: 1 })
-          }
-          return acc
-        },
-        [] as Array<{ url: string; views: number }>
-      )
-      .sort((a, b) => b.views - a.views)
-    const conversions = events.filter(e => e.category === 'conversion').length
-    const conversionRate = totalEvents > 0 ? (conversions / totalEvents) * 100 : 0
+    const rect = element.getBoundingClientRect()
     return {
-      session: this.currentSession,
-      totalEvents,
-      eventsByType,
-      eventsByCategory,
-      topPages: topPages.slice(0, 10),
-      conversionRate}
+      category: this.getElementCategory(element),
+      label: element.id || element.className || element.tagName,
+      tagName: element.tagName,
+      text: element.textContent?.substring(0, 100) || '',
+      position: { x: rect.left, y: rect.top }
     }
   }
+
   /**
-   * Send session data to analytics service
+   * Get element category for analytics
    */
-  private async sendSessionData(session: UserSession): Promise<void> {
-    try {
-      await fetch('/api/analytics/session', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'}
-        },
-        body: JSON.stringify(session)
-      })
-    } catch (error) {}
-      }
+  private getElementCategory(element: HTMLElement): string {
+    if (element.tagName === 'A') return 'link'
+    if (element.tagName === 'BUTTON') return 'button'
+    if (element.tagName === 'INPUT') return 'input'
+    if (element.tagName === 'FORM') return 'form'
+    return 'other'
   }
+
   /**
-   * End current session
+   * Check if link is a download link
    */
-  endSession(): void {
-    this.currentSession.endTime = new Date().toISOString()
-    this.currentSession.duration =
-      new Date(this.currentSession.endTime).getTime() -
-      new Date(this.currentSession.startTime).getTime()
-    // Send session data
-    if (this.isOnline) {
-      this.sendSessionData(this.currentSession);}
-    }
-    // Create new session
-    this.currentSession = this.createNewSession()
+  private isDownloadLink(link: HTMLAnchorElement): boolean {
+    const downloadExtensions = ['.pdf', '.doc', '.docx', '.xls', '.xlsx', '.zip', '.rar', '.exe', '.dmg']
+    const href = link.href.toLowerCase()
+    return downloadExtensions.some(ext => href.includes(ext)) || link.hasAttribute('download')
+  }
+
+  /**
+   * Get first paint time
+   */
+  private getFirstPaint(): number | null {
+    if (typeof window === 'undefined') return null
+    
+    const paintEntries = performance.getEntriesByType('paint')
+    const firstPaint = paintEntries.find(entry => entry.name === 'first-paint')
+    return firstPaint ? firstPaint.startTime : null
+  }
+
+  /**
+   * Get first contentful paint time
+   */
+  private getFirstContentfulPaint(): number | null {
+    if (typeof window === 'undefined') return null
+    
+    const paintEntries = performance.getEntriesByType('paint')
+    const firstContentfulPaint = paintEntries.find(entry => entry.name === 'first-contentful-paint')
+    return firstContentfulPaint ? firstContentfulPaint.startTime : null
+  }
+
+  /**
+   * Get current session data
+   */
+  getSessionData(): UserSession {
+    return { ...this.currentSession }
+  }
+
+  /**
+   * Get analytics configuration
+   */
+  getConfig(): AnalyticsConfig {
+    return { ...this.config }
+  }
+
+  /**
+   * Update analytics configuration
+   */
+  updateConfig(newConfig: Partial<AnalyticsConfig>): void {
+    this.config = { ...this.config, ...newConfig }
   }
 }
+
 // Export singleton instance
-export const advancedAnalytics = AdvancedAnalytics.getInstance()
-export default advancedAnalytics
+export const analytics = AdvancedAnalytics.getInstance()
+export default analytics
