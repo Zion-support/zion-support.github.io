@@ -18,7 +18,25 @@ const generateSitemap = () => {
     '/demo',
     '/consultation',
     '/contact',
-    '/micro-saas'
+    '/micro-saas',
+    // IT Services
+    '/security-monitoring',
+    '/penetration-testing',
+    '/data-analytics',
+    '/process-automation',
+    // Micro SAAS Services
+    '/security-monitoring-suite',
+    '/cloud-infrastructure-manager',
+    '/email-marketing-automation',
+    '/project-management-pro',
+    '/ecommerce-analytics-pro',
+    '/ai-recruitment-assistant',
+    '/medical-records-manager',
+    '/ai-accounting-assistant',
+    '/property-management-ai',
+    '/legal-document-manager',
+    '/online-learning-platform',
+    '/supply-chain-optimizer'
   ];
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>

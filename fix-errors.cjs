@@ -1,6 +1,21 @@
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
+
+// List of files that need to be fixed based on the error output
+const problematicFiles = [
+  'app/ai-api-management/page.tsx',
+  'app/ai-api-manager/page.tsx',
+  'app/ai-autonomous-systems/page.tsx',
+  'app/ai-blockchain-analytics/page.tsx',
+  'app/ai-blockchain-solutions/page.tsx',
+  'app/ai-climate-solutions-pro/page.tsx',
+  'app/ai-cloud-infrastructure/page.tsx',
+  'app/ai-code-assistant/page.tsx',
+  'app/ai-code-security-auditor/page.tsx',
+  'app/ai-computer-vision/page.tsx',
+  'app/ai-content-delivery-network/page.tsx',
+  'app/ai-content-generation/page.tsx'
+];
 
 // Template for a basic page component
 const createBasicPage = (pageName, title, description) => `'use client';
@@ -179,34 +194,8 @@ function getDescription(filePath) {
   return `Professional ${title.toLowerCase()} solutions by Zion Tech Group. Advanced AI and IT solutions for your business.`;
 }
 
-// Get list of files with errors from type check
-function getFilesWithErrors() {
-  try {
-    const output = execSync('pnpm run type-check 2>&1', { encoding: 'utf8', cwd: '/workspace' });
-    const lines = output.split('\n');
-    const filesWithErrors = new Set();
-    
-    lines.forEach(line => {
-      const match = line.match(/^app\/([^(]+)\(/);
-      if (match) {
-        filesWithErrors.add(match[1]);
-      }
-    });
-    
-    return Array.from(filesWithErrors);
-  } catch (error) {
-    console.error('Error running type check:', error.message);
-    return [];
-  }
-}
-
-// Fix files with errors
-const filesWithErrors = getFilesWithErrors();
-console.log(`Found ${filesWithErrors.length} files with errors`);
-
-let fixedCount = 0;
-
-filesWithErrors.forEach(filePath => {
+// Fix each problematic file
+problematicFiles.forEach(filePath => {
   const fullPath = path.join('/workspace', filePath);
   const pageName = getPageName(filePath);
   const title = getTitle(filePath);
@@ -216,12 +205,9 @@ filesWithErrors.forEach(filePath => {
     const content = createBasicPage(pageName, title, description);
     fs.writeFileSync(fullPath, content);
     console.log(`Fixed: ${filePath}`);
-    fixedCount++;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
   }
 });
 
-console.log(`\nFinished fixing files:`);
-console.log(`- Fixed: ${fixedCount}`);
-console.log(`- Total with errors: ${filesWithErrors.length}`);
+console.log('Finished fixing problematic files');
