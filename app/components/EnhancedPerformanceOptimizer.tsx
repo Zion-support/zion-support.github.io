@@ -1,131 +1,76 @@
 'use client';
-<<<<<<< HEAD
 import React, { useEffect, useCallback, ReactNode } from 'react';
 import { useAnalytics } from './EnhancedAnalytics';
 
 interface PerformanceOptimizerProps {
   children: ReactNode;
-=======
-import React, { useEffect } from 'react';
-
-interface PerformanceOptimizerProps {
   enableImageOptimization?: boolean;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
   enableLazyLoading?: boolean;
   enablePreloading?: boolean;
   enableCodeSplitting?: boolean;
 }
 
-<<<<<<< HEAD
 const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   children,
-=======
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   enableImageOptimization = true,
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
   enableLazyLoading = true,
   enablePreloading = true,
   enableCodeSplitting = true
 }) => {
-<<<<<<< HEAD
   const { trackEvent } = useAnalytics();
 
-  // Performance monitoring
+  // Image optimization
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      // Track page load performance
-      const trackPerformance = () => {
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        if (navigation) {
-          const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
-          trackEvent('performance', 'page_load_time', loadTime);
+    if (!enableImageOptimization) return;
+
+    const optimizeImages = () => {
+      const images = document.querySelectorAll('img[data-src]');
+      images.forEach((img) => {
+        const imageElement = img as HTMLImageElement;
+        if (imageElement.dataset.src) {
+          imageElement.src = imageElement.dataset.src;
+          imageElement.removeAttribute('data-src');
         }
-      };
-
-      // Track Core Web Vitals
-      const trackWebVitals = () => {
-        if ('web-vitals' in window) {
-          import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-            getCLS(trackEvent);
-            getFID(trackEvent);
-            getFCP(trackEvent);
-            getLCP(trackEvent);
-            getTTFB(trackEvent);
-          });
-        }
-      };
-
-      // Track resource loading performance
-      const trackResourcePerformance = () => {
-        const resources = performance.getEntriesByType('resource');
-        resources.forEach((resource) => {
-          if (resource.duration > 1000) { // Track slow resources
-            trackEvent('performance', 'slow_resource', {
-              name: resource.name,
-              duration: resource.duration,
-              size: resource.transferSize
-            });
-=======
-  useEffect(() => {
-    if (typeof window === 'undefined') return;
-
-    // Image optimization
-    if (enableImageOptimization) {
-      const optimizeImages = () => {
-        const images = document.querySelectorAll('img[data-src]');
-        images.forEach((img) => {
-          const image = img as HTMLImageElement;
-          if (image.dataset.src) {
-            image.src = image.dataset.src;
-            image.removeAttribute('data-src');
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
-          }
-        });
-      };
-
-<<<<<<< HEAD
-      // Run performance tracking
-      if (document.readyState === 'complete') {
-        trackPerformance();
-        trackWebVitals();
-        trackResourcePerformance();
-      } else {
-        window.addEventListener('load', () => {
-          trackPerformance();
-          trackWebVitals();
-          trackResourcePerformance();
-        });
-      }
-    }
-  }, [trackEvent]);
-
-  // Lazy loading optimization
-  useEffect(() => {
-    if (enableLazyLoading && typeof window !== 'undefined' && 'IntersectionObserver' in window) {
-      const imageObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement;
-            if (img.dataset.src) {
-              img.src = img.dataset.src;
-              img.classList.remove('lazy');
-              imageObserver.unobserve(img);
-            }
-          }
-        });
       });
+    };
 
-      // Observe all lazy images
-      const lazyImages = document.querySelectorAll('img[data-src]');
-      lazyImages.forEach((img) => imageObserver.observe(img));
+    // Run immediately and on DOM changes
+    optimizeImages();
+    
+    const observer = new MutationObserver(optimizeImages);
+    observer.observe(document.body, { childList: true, subtree: true });
 
-      return () => imageObserver.disconnect();
-    }
+    return () => observer.disconnect();
+  }, [enableImageOptimization]);
+
+  // Lazy loading
+  useEffect(() => {
+    if (!enableLazyLoading) return;
+
+    const lazyElements = document.querySelectorAll('[data-lazy]');
+    
+    const lazyObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const element = entry.target as HTMLElement;
+          element.classList.add('loaded');
+          lazyObserver.unobserve(element);
+        }
+      });
+    });
+
+    lazyElements.forEach((element) => {
+      lazyObserver.observe(element);
+    });
+
+    return () => lazyObserver.disconnect();
   }, [enableLazyLoading]);
 
-  // Preload critical resources
+  // Preloading critical resources
   useEffect(() => {
-    if (enablePreloading && typeof window !== 'undefined') {
+    if (!enablePreloading) return;
+
+    const preloadCriticalResources = () => {
       // Preload critical CSS
       const criticalCSS = document.createElement('link');
       criticalCSS.rel = 'preload';
@@ -141,192 +86,84 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       criticalFont.type = 'font/woff2';
       criticalFont.crossOrigin = 'anonymous';
       document.head.appendChild(criticalFont);
+    };
 
-      // Preload critical images
-      const criticalImages = [
-        '/images/hero-bg.jpg',
-        '/images/logo.svg'
-      ];
-
-      criticalImages.forEach((src) => {
-        const link = document.createElement('link');
-        link.rel = 'preload';
-        link.href = src;
-        link.as = 'image';
-        document.head.appendChild(link);
-      });
-    }
+    preloadCriticalResources();
   }, [enablePreloading]);
 
   // Code splitting optimization
   useEffect(() => {
-    if (enableCodeSplitting && typeof window !== 'undefined') {
-      // Preload next likely routes
-      const preloadRoute = (route: string) => {
-        const link = document.createElement('link');
-        link.rel = 'prefetch';
-        link.href = route;
-        document.head.appendChild(link);
-      };
+    if (!enableCodeSplitting) return;
 
-      // Preload common routes
-      const commonRoutes = ['/about', '/services', '/contact'];
-      commonRoutes.forEach(preloadRoute);
-    }
+    const optimizeCodeSplitting = () => {
+      // Preload next likely routes
+      const links = document.querySelectorAll('a[href^="/"]');
+      links.forEach((link) => {
+        const href = link.getAttribute('href');
+        if (href && !href.includes('#')) {
+          link.addEventListener('mouseenter', () => {
+            // Preload the route component
+            import(`../${href.slice(1)}/page.tsx`).catch(() => {
+              // Route doesn't exist, ignore
+            });
+          }, { once: true });
+        }
+      });
+    };
+
+    // Run after a delay to avoid blocking initial render
+    const timeoutId = setTimeout(optimizeCodeSplitting, 1000);
+    return () => clearTimeout(timeoutId);
   }, [enableCodeSplitting]);
 
-  // Memory optimization
+  // Performance monitoring
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      // Clean up unused event listeners
-      const cleanup = () => {
-        // Remove unused event listeners
-        window.removeEventListener('scroll', () => {});
-        window.removeEventListener('resize', () => {});
-      };
-
-      // Run cleanup on page unload
-      window.addEventListener('beforeunload', cleanup);
-
-      return () => {
-        window.removeEventListener('beforeunload', cleanup);
-        cleanup();
-      };
-    }
-  }, []);
-
-  // Bundle size optimization
-  const optimizeBundle = useCallback(() => {
-    if (typeof window !== 'undefined') {
-      // Remove unused CSS
-      const unusedCSS = document.querySelectorAll('link[rel="stylesheet"]');
-      unusedCSS.forEach((link) => {
-        const href = link.getAttribute('href');
-        if (href && !document.querySelector(`[href="${href}"]`)) {
-          link.remove();
-        }
-      });
-
-      // Optimize images
-      const images = document.querySelectorAll('img');
-      images.forEach((img) => {
-        if (img.width > 800) {
-          img.style.maxWidth = '100%';
-          img.style.height = 'auto';
-        }
-      });
-    }
-  }, []);
-
-  useEffect(() => {
-    const timer = setTimeout(optimizeBundle, 2000);
-    return () => clearTimeout(timer);
-  }, [optimizeBundle]);
-
-  return <>{children}</>;
-};
-
-export default EnhancedPerformanceOptimizer;
-=======
-      // Use Intersection Observer for lazy loading
-      if ('IntersectionObserver' in window) {
-        const imageObserver = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              const img = entry.target as HTMLImageElement;
-              if (img.dataset.src) {
-                img.src = img.dataset.src;
-                img.removeAttribute('data-src');
-                imageObserver.unobserve(img);
-              }
-            }
-          });
-        });
-
-        const lazyImages = document.querySelectorAll('img[data-src]');
-        lazyImages.forEach((img) => imageObserver.observe(img));
-      } else {
-        // Fallback for older browsers
-        optimizeImages();
-      }
-    }
-
-    // Preload critical resources
-    if (enablePreloading) {
-      const preloadCriticalResources = () => {
-        const criticalResources = [
-          '/fonts/inter.woff2',
-          '/images/hero-bg.jpg',
-          '/images/logo.svg'
-        ];
-
-        criticalResources.forEach((resource) => {
-          const link = document.createElement('link');
-          link.rel = 'preload';
-          link.href = resource;
-          if (resource.endsWith('.woff2')) {
-            link.as = 'font';
-            link.type = 'font/woff2';
-            link.crossOrigin = 'anonymous';
-          } else if (resource.endsWith('.jpg') || resource.endsWith('.png')) {
-            link.as = 'image';
-          }
-          document.head.appendChild(link);
-        });
-      };
-
-      preloadCriticalResources();
-    }
-
-    // Performance monitoring
     const measurePerformance = () => {
       if ('performance' in window) {
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        const paint = performance.getEntriesByType('paint');
         
-        const metrics = {
-          domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-          loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
-          firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime || 0,
-          firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0
-        };
+        if (navigation) {
+          const metrics = {
+            domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+            loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
+            firstPaint: performance.getEntriesByName('first-paint')[0]?.startTime || 0,
+            firstContentfulPaint: performance.getEntriesByName('first-contentful-paint')[0]?.startTime || 0
+          };
 
-        // Log performance metrics in development
-        if (process.env.NODE_ENV === 'development') {
-          console.log('Performance Metrics:', metrics);
-        }
-
-        // Send metrics to analytics (if configured)
-        if (typeof window !== 'undefined' && 'gtag' in window) {
-          const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
-          gtag('event', 'performance_metrics', {
-            event_category: 'performance',
-            custom_map: {
-              'dom_content_loaded': Math.round(metrics.domContentLoaded),
-              'load_complete': Math.round(metrics.loadComplete),
-              'first_paint': Math.round(metrics.firstPaint),
-              'first_contentful_paint': Math.round(metrics.firstContentfulPaint)
-            }
-          });
+          trackEvent('performance_metrics', metrics);
         }
       }
     };
 
     // Measure performance after page load
-    if (document.readyState === 'complete') {
-      measurePerformance();
-    } else {
-      window.addEventListener('load', measurePerformance);
-    }
+    window.addEventListener('load', measurePerformance);
+    return () => window.removeEventListener('load', measurePerformance);
+  }, [trackEvent]);
 
-    // Cleanup
-    return () => {
-      window.removeEventListener('load', measurePerformance);
+  // Resource hints
+  useEffect(() => {
+    const addResourceHints = () => {
+      // DNS prefetch for external domains
+      const dnsPrefetchDomains = [
+        'fonts.googleapis.com',
+        'fonts.gstatic.com',
+        'images.unsplash.com'
+      ];
+
+      dnsPrefetchDomains.forEach(domain => {
+        const link = document.createElement('link');
+        link.rel = 'dns-prefetch';
+        link.href = `//${domain}`;
+        document.head.appendChild(link);
+      });
     };
-  }, [enableImageOptimization, enableLazyLoading, enablePreloading, enableCodeSplitting]);
 
-  return null;
+    addResourceHints();
+  }, []);
+
+  return <React.Fragment>{children}</React.Fragment>;
 };
 
-export default PerformanceOptimizer;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
+EnhancedPerformanceOptimizer.displayName = 'EnhancedPerformanceOptimizer';
+
+export default EnhancedPerformanceOptimizer;

@@ -1,5 +1,4 @@
 'use client';
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
@@ -8,6 +7,10 @@ interface PerformanceMetrics {
   cls?: number;
   fcp?: number;
   ttfb?: number;
+  domContentLoaded?: number;
+  loadComplete?: number;
+  firstPaint?: number;
+  firstContentfulPaint?: number;
 }
 
 const PerformanceMonitor: React.FC = () => {
@@ -18,221 +21,148 @@ const PerformanceMonitor: React.FC = () => {
     if (typeof window === 'undefined') return;
 
     // Only show in development or when performance monitoring is enabled
-    const shouldMonitor = process.env.NODE_ENV === 'development' || 
-                         localStorage.getItem('performance-monitoring') === 'true';
-
-    if (!shouldMonitor) return;
-
-    const updateMetrics = (newMetrics: Partial<PerformanceMetrics>) => {
-      setMetrics(prev => ({ ...prev, ...newMetrics }));
-    };
-
-    // Monitor Core Web Vitals
-    if ('web-vitals' in window) {
-      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-        getCLS((metric) => updateMetrics({ cls: metric.value }));
-        getFID((metric) => updateMetrics({ fid: metric.value }));
-        getFCP((metric) => updateMetrics({ fcp: metric.value }));
-        getLCP((metric) => updateMetrics({ lcp: metric.value }));
-        getTTFB((metric) => updateMetrics({ ttfb: metric.value }));
-      });
-    }
-
-    // Monitor performance with Performance Observer
-    if ('PerformanceObserver' in window) {
-      const observer = new PerformanceObserver((list) => {
-        list.getEntries().forEach((entry) => {
-          if (entry.entryType === 'largest-contentful-paint') {
-            updateMetrics({ lcp: entry.startTime });
-          }
-          if (entry.entryType === 'first-input') {
-            updateMetrics({ fid: entry.processingStart - entry.startTime });
-          }
-          if (entry.entryType === 'paint') {
-            if (entry.name === 'first-contentful-paint') {
-              updateMetrics({ fcp: entry.startTime });
-            }
-          }
-        });
-      });
-
-      try {
-        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'paint'] });
-      } catch (e) {
-        console.warn('Performance Observer not supported:', e);
-      }
-
-      return () => observer.disconnect();
-    }
-
-    // Show performance panel after 3 seconds
-    const timer = setTimeout(() => setIsVisible(true), 3000);
-    return () => clearTimeout(timer);
-  }, []);
-
-  if (!isVisible || Object.keys(metrics).length === 0) {
-    return null;
-  }
-
-  const getScoreColor = (value: number, thresholds: { good: number; poor: number }) => {
-    if (value <= thresholds.good) return 'text-green-400';
-    if (value <= thresholds.poor) return 'text-yellow-400';
-    return 'text-red-400';
-  };
-
-  const getScoreText = (value: number, thresholds: { good: number; poor: number }) => {
-    if (value <= thresholds.good) return 'Good';
-    if (value <= thresholds.poor) return 'Needs Improvement';
-    return 'Poor';
-  };
-
-  return (
-    <div className="fixed bottom-4 right-4 bg-slate-800/90 backdrop-blur-sm border border-slate-700 rounded-lg p-4 text-xs text-white z-50 max-w-xs">
-      <div className="flex items-center justify-between mb-2">
-        <h3 className="font-semibold text-cyan-400">Performance</h3>
-        <button
-          onClick={() => setIsVisible(false)}
-          className="text-gray-400 hover:text-white"
-        >
-          ×
-        </button>
-      </div>
-      
-      <div className="space-y-1">
-        {metrics.lcp && (
-          <div className="flex justify-between">
-            <span>LCP:</span>
-            <span className={getScoreColor(metrics.lcp, { good: 2500, poor: 4000 })}>
-              {Math.round(metrics.lcp)}ms ({getScoreText(metrics.lcp, { good: 2500, poor: 4000 })})
-            </span>
-          </div>
-        )}
-        
-        {metrics.fid && (
-          <div className="flex justify-between">
-            <span>FID:</span>
-            <span className={getScoreColor(metrics.fid, { good: 100, poor: 300 })}>
-              {Math.round(metrics.fid)}ms ({getScoreText(metrics.fid, { good: 100, poor: 300 })})
-            </span>
-          </div>
-        )}
-        
-        {metrics.cls && (
-          <div className="flex justify-between">
-            <span>CLS:</span>
-            <span className={getScoreColor(metrics.cls, { good: 0.1, poor: 0.25 })}>
-              {metrics.cls.toFixed(3)} ({getScoreText(metrics.cls, { good: 0.1, poor: 0.25 })})
-            </span>
-          </div>
-        )}
-        
-        {metrics.fcp && (
-          <div className="flex justify-between">
-            <span>FCP:</span>
-            <span className={getScoreColor(metrics.fcp, { good: 1800, poor: 3000 })}>
-              {Math.round(metrics.fcp)}ms ({getScoreText(metrics.fcp, { good: 1800, poor: 3000 })})
-            </span>
-          </div>
-        )}
-        
-        {metrics.ttfb && (
-          <div className="flex justify-between">
-            <span>TTFB:</span>
-            <span className={getScoreColor(metrics.ttfb, { good: 800, poor: 1800 })}>
-              {Math.round(metrics.ttfb)}ms ({getScoreText(metrics.ttfb, { good: 800, poor: 1800 })})
-            </span>
-          </div>
-        )}
-      </div>
-    </div>
-  );
-=======
-import React, { useEffect } from 'react';
-
-const PerformanceMonitor: React.FC = () => {
-  useEffect(() => {
-    if (typeof window === 'undefined' || !('performance' in window)) return;
+    const shouldShow = process.env.NODE_ENV === 'development' || 
+                      localStorage.getItem('performance-monitoring') === 'true';
+    
+    if (!shouldShow) return;
 
     const measurePerformance = () => {
-      // Measure Core Web Vitals
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const paint = performance.getEntriesByType('paint');
       
-      const metrics = {
+      const newMetrics: PerformanceMetrics = {
         // Navigation timing
         domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
         loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
         
         // Paint timing
-        firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime || 0,
-        firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
+        firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime,
+        firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime,
         
-        // Resource timing
-        totalResources: performance.getEntriesByType('resource').length,
-        
-        // Memory usage (if available)
-        memoryUsage: (performance as any).memory ? {
-          used: (performance as any).memory.usedJSHeapSize,
-          total: (performance as any).memory.totalJSHeapSize,
-          limit: (performance as any).memory.jsHeapSizeLimit
-        } : null
+        // Time to First Byte
+        ttfb: navigation.responseStart - navigation.requestStart,
       };
 
-      // Log metrics in development
-      if (process.env.NODE_ENV === 'development') {
-        console.log('Performance Metrics:', metrics);
+      // Web Vitals (if available)
+      if ('web-vitals' in window) {
+        // These would be set by web-vitals library
+        const vitals = (window as any).webVitals;
+        if (vitals) {
+          newMetrics.lcp = vitals.lcp;
+          newMetrics.fid = vitals.fid;
+          newMetrics.cls = vitals.cls;
+          newMetrics.fcp = vitals.fcp;
+        }
       }
 
-      // Send metrics to analytics
-      if (typeof window !== 'undefined' && 'gtag' in window) {
-        const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
-        
-        gtag('event', 'performance_metrics', {
-          event_category: 'performance',
-          dom_content_loaded: Math.round(metrics.domContentLoaded),
-          load_complete: Math.round(metrics.loadComplete),
-          first_paint: Math.round(metrics.firstPaint),
-          first_contentful_paint: Math.round(metrics.firstContentfulPaint),
-          total_resources: metrics.totalResources
-        });
-      }
-
-      // Check for performance issues
-      if (metrics.firstContentfulPaint > 3000) {
-        console.warn('Slow First Contentful Paint detected:', metrics.firstContentfulPaint);
-      }
-      
-      if (metrics.loadComplete > 5000) {
-        console.warn('Slow page load detected:', metrics.loadComplete);
-      }
+      setMetrics(newMetrics);
+      setIsVisible(true);
     };
 
-    // Measure performance after page load
+    // Measure after page load
     if (document.readyState === 'complete') {
       measurePerformance();
     } else {
       window.addEventListener('load', measurePerformance);
     }
 
-    // Monitor for performance regressions
-    const observer = new PerformanceObserver((list) => {
-      for (const entry of list.getEntries()) {
-        if (entry.entryType === 'measure') {
-          console.log('Performance measure:', entry.name, entry.duration);
-        }
+    // Measure on visibility change (for SPA navigation)
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === 'visible') {
+        measurePerformance();
       }
-    });
+    };
 
-    observer.observe({ entryTypes: ['measure'] });
+    document.addEventListener('visibilitychange', handleVisibilityChange);
 
     return () => {
       window.removeEventListener('load', measurePerformance);
-      observer.disconnect();
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
     };
   }, []);
 
-  return null;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
+  // Don't render in production unless explicitly enabled
+  if (process.env.NODE_ENV === 'production' && localStorage.getItem('performance-monitoring') !== 'true') {
+    return null;
+  }
+
+  if (!isVisible) return null;
+
+  const formatMetric = (value?: number) => {
+    if (value === undefined) return 'N/A';
+    return `${Math.round(value)}ms`;
+  };
+
+  const getPerformanceGrade = (metric: keyof PerformanceMetrics) => {
+    const value = metrics[metric];
+    if (value === undefined) return 'N/A';
+    
+    switch (metric) {
+      case 'lcp':
+        return value <= 2500 ? 'Good' : value <= 4000 ? 'Needs Improvement' : 'Poor';
+      case 'fid':
+        return value <= 100 ? 'Good' : value <= 300 ? 'Needs Improvement' : 'Poor';
+      case 'cls':
+        return value <= 0.1 ? 'Good' : value <= 0.25 ? 'Needs Improvement' : 'Poor';
+      case 'fcp':
+        return value <= 1800 ? 'Good' : value <= 3000 ? 'Needs Improvement' : 'Poor';
+      case 'ttfb':
+        return value <= 800 ? 'Good' : value <= 1800 ? 'Needs Improvement' : 'Poor';
+      default:
+        return 'N/A';
+    }
+  };
+
+  const getGradeColor = (grade: string) => {
+    switch (grade) {
+      case 'Good': return 'text-green-400';
+      case 'Needs Improvement': return 'text-yellow-400';
+      case 'Poor': return 'text-red-400';
+      default: return 'text-gray-400';
+    }
+  };
+
+  return (
+    <div className="fixed bottom-4 right-4 bg-slate-800/90 backdrop-blur-sm border border-slate-700 rounded-lg p-4 text-white text-xs font-mono z-50 max-w-xs">
+      <div className="flex items-center justify-between mb-2">
+        <h3 className="text-sm font-semibold text-cyan-400">Performance Monitor</h3>
+        <button
+          onClick={() => setIsVisible(false)}
+          className="text-gray-400 hover:text-white transition-colors"
+          aria-label="Close performance monitor"
+        >
+          ×
+        </button>
+      </div>
+      
+      <div className="space-y-1">
+        {Object.entries(metrics).map(([key, value]) => {
+          const grade = getPerformanceGrade(key as keyof PerformanceMetrics);
+          return (
+            <div key={key} className="flex justify-between items-center">
+              <span className="text-gray-300 capitalize">
+                {key.replace(/([A-Z])/g, ' $1').trim()}:
+              </span>
+              <div className="flex items-center space-x-2">
+                <span className="text-white">{formatMetric(value)}</span>
+                <span className={`text-xs ${getGradeColor(grade)}`}>
+                  {grade}
+                </span>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+      
+      <div className="mt-3 pt-2 border-t border-slate-700">
+        <div className="text-xs text-gray-400">
+          Press F12 to toggle
+        </div>
+      </div>
+    </div>
+  );
 };
+
+PerformanceMonitor.displayName = 'PerformanceMonitor';
 
 export default PerformanceMonitor;
