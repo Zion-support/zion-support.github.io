@@ -18,15 +18,16 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = memo(({ childr
               observer.unobserve(img);
             }
           }
-
+        });
       }, {
         rootMargin: '50px 0px',
         threshold: 0.01
+      });
 
       // Observe all lazy images
       document.querySelectorAll('img[data-src]').forEach(img => {
         imageObserver.observe(img);
-
+      });
     }
   }, []);
 
@@ -44,10 +45,10 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = memo(({ childr
         const link = document.createElement('link');
         Object.entries(resource).forEach(([key, value]) => {
           link.setAttribute(key, value as string);
-
+        });
         document.head.appendChild(link);
       }
-
+    });
   }, []);
 
   // Critical CSS inlining
@@ -83,7 +84,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = memo(({ childr
         link.as = 'image';
         link.href = src;
         document.head.appendChild(link);
-
+      });
     };
 
     // Optimize images
@@ -99,7 +100,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = memo(({ childr
         if (!img.hasAttribute('decoding')) {
           img.setAttribute('decoding', 'async');
         }
-
+      });
     };
 
     // Enable service worker for caching
@@ -108,14 +109,14 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = memo(({ childr
         navigator.serviceWorker.register('/sw.js')
           .then(registration => {
             if (process.env.NODE_ENV === 'development') {
-
+              console.log('Service worker registered:', registration);
             }
           })
           .catch(error => {
             if (process.env.NODE_ENV === 'development') {
-
+              console.log('Service worker registration failed:', error);
             }
-
+          });
       }
     };
 
@@ -128,7 +129,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = memo(({ childr
         if (!ticking) {
           requestAnimationFrame(() => {
             ticking = false;
-
+          });
           ticking = true;
         }
       };
@@ -163,7 +164,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = memo(({ childr
         import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
           const logMetric = (metric: any) => {
             if (process.env.NODE_ENV === 'development') {
-
+              console.log('Web Vital:', metric);
             }
             // Send to analytics in production
             if (process.env.NODE_ENV === 'production') {
@@ -176,7 +177,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = memo(({ childr
           getFCP(logMetric);
           getLCP(logMetric);
           getTTFB(logMetric);
-
+        });
       }
     };
 
@@ -184,6 +185,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = memo(({ childr
   }, []);
 
   return <>{children}</>;
+});
 
 PerformanceOptimizer.displayName = 'PerformanceOptimizer';
 

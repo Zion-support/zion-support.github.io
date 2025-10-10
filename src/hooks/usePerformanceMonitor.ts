@@ -36,10 +36,11 @@ export const usePerformanceMonitor = () => {
           if (entry.entryType === 'navigation') {
             const navEntry = entry as PerformanceNavigationTiming;
             if (process.env.NODE_ENV === 'development') {
-
+              console.log('Navigation timing:', navEntry);
             }
           }
         }
+      });
 
       observer.observe({ entryTypes: ['navigation', 'resource'] });
 
@@ -51,10 +52,11 @@ export const usePerformanceMonitor = () => {
       if ('memory' in performance) {
         const memory = (performance as any).memory;
         if (process.env.NODE_ENV === 'development') {
-           + ' MB',
+          console.log('Memory usage:', {
+            used: Math.round(memory.usedJSHeapSize / 1048576) + ' MB',
             total: Math.round(memory.totalJSHeapSize / 1048576) + ' MB',
             limit: Math.round(memory.jsHeapSizeLimit / 1048576) + ' MB'
-
+          });
         }
       }
     };

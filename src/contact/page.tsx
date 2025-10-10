@@ -93,6 +93,7 @@ const ContactPage: React.FC = () => {
     budget: '',
     message: '',
     urgency: 'normal'
+  });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
@@ -123,6 +124,7 @@ const ContactPage: React.FC = () => {
         budget: '',
         message: '',
         urgency: 'normal'
+      });
 
     } catch (error) {
       setSubmitStatus('error');
