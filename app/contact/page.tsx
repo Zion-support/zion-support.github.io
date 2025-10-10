@@ -225,11 +225,82 @@ const ContactPage: React.FC = () => {
                       className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     >
                       <option value="">Select a service</option>
-                      <option value="ai-services">AI Services</option>
-                      <option value="it-services">IT Services</option>
-                      <option value="micro-saas">Micro SaaS</option>
-                      <option value="consultation">Free Consultation</option>
-                      <option value="other">Other</option>
+                      <optgroup label="AI Services">
+                        <option value="ai-chatbots">AI-Powered Chatbots</option>
+                        <option value="ai-content-generation">AI Content Generation</option>
+                        <option value="ai-data-analytics">AI Data Analytics</option>
+                        <option value="ai-computer-vision">AI Computer Vision</option>
+                        <option value="ai-fraud-detection">AI Fraud Detection</option>
+                        <option value="ai-healthcare">AI Healthcare Diagnostics</option>
+                        <option value="ai-marketing">AI Marketing Automation</option>
+                        <option value="ai-predictive">AI Predictive Maintenance</option>
+                        <option value="ai-translation">AI Language Translation</option>
+                        <option value="ai-voice">AI Voice Recognition</option>
+                        <option value="ai-cybersecurity">AI Cybersecurity</option>
+                        <option value="ai-scheduling">AI Scheduling Assistant</option>
+                      </optgroup>
+                      <optgroup label="IT Services">
+                        <option value="cloud-infrastructure">Cloud Infrastructure & Migration</option>
+                        <option value="cybersecurity">Cybersecurity Solutions</option>
+                        <option value="database-management">Database Management</option>
+                        <option value="devops">DevOps & CI/CD</option>
+                        <option value="it-consulting">IT Consulting</option>
+                        <option value="custom-software">Custom Software Development</option>
+                        <option value="mobile-development">Mobile App Development</option>
+                        <option value="web-development">Web Development</option>
+                        <option value="network-infrastructure">Network Infrastructure</option>
+                        <option value="it-support">IT Support & Helpdesk</option>
+                        <option value="it-asset-management">IT Asset Management</option>
+                        <option value="business-intelligence">Business Intelligence & Analytics</option>
+                        <option value="data-backup">Data Backup & Recovery</option>
+                        <option value="system-administration">System Administration</option>
+                        <option value="performance-optimization">Performance Optimization</option>
+                      </optgroup>
+                      <optgroup label="Micro SaaS Solutions">
+                        <option value="zion-analytics">Zion Analytics Pro</option>
+                        <option value="zion-chat">Zion Chat AI</option>
+                        <option value="zion-invoice">Zion Invoice Genius</option>
+                        <option value="zion-lead">Zion Lead Magnet</option>
+                        <option value="zion-security">Zion Security Shield</option>
+                        <option value="zion-cloud">Zion Cloud Vault</option>
+                        <option value="zion-content">Zion Content Studio</option>
+                        <option value="zion-crm">Zion CRM Intelligence</option>
+                        <option value="zion-data-sync">Zion Data Sync</option>
+                        <option value="zion-project">Zion Project Master</option>
+                        <option value="zion-email">Zion Email Automation</option>
+                        <option value="zion-inventory">Zion Inventory Smart</option>
+                        <option value="zion-workflow">Zion Workflow Automation</option>
+                        <option value="zion-performance">Zion Performance Monitor</option>
+                        <option value="zion-compliance">Zion Compliance Manager</option>
+                        <option value="zion-social">Zion Social Scheduler</option>
+                        <option value="zion-video">Zion AI Video Editor</option>
+                        <option value="zion-translator">Zion AI Translator Pro</option>
+                        <option value="zion-code">Zion AI Code Reviewer</option>
+                        <option value="zion-customer-insights">Zion Customer Insights Pro</option>
+                        <option value="zion-email-assistant">Zion AI Email Assistant</option>
+                        <option value="zion-meeting">Zion AI Meeting Assistant</option>
+                        <option value="zion-seo">Zion AI SEO Optimizer</option>
+                        <option value="zion-data-cleaner">Zion AI Data Cleaner</option>
+                        <option value="zion-contract">Zion AI Contract Analyzer</option>
+                        <option value="zion-survey">Zion AI Survey Builder</option>
+                        <option value="zion-accounting">Zion AI Accounting Assistant</option>
+                        <option value="zion-recruitment">Zion AI Recruitment Pro</option>
+                        <option value="zion-content-moderation">Zion AI Content Moderation</option>
+                        <option value="zion-predictive-maintenance">Zion AI Predictive Maintenance</option>
+                        <option value="zion-energy">Zion AI Energy Manager</option>
+                        <option value="zion-supply-chain">Zion AI Supply Chain Optimizer</option>
+                        <option value="zion-fraud-detector">Zion AI Fraud Detector</option>
+                        <option value="zion-customer-service">Zion AI Customer Service Pro</option>
+                        <option value="zion-marketing-automation">Zion AI Marketing Automation</option>
+                        <option value="zion-document-ai">Zion AI Document AI</option>
+                      </optgroup>
+                      <optgroup label="General">
+                        <option value="consultation">Free Consultation</option>
+                        <option value="custom-solution">Custom Solution</option>
+                        <option value="partnership">Partnership Inquiry</option>
+                        <option value="support">Technical Support</option>
+                        <option value="other">Other</option>
+                      </optgroup>
                     </select>
                   </div>
 
