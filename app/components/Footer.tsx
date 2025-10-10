@@ -41,19 +41,7 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Content Generation Pro', url: '/ai-content-generation-pro', description: 'Advanced content creation' }
   ]
 
-  const microSaasServices = [
-    { name: 'AI Analytics Dashboard', url: '/ai-analytics-dashboard', description: 'Real-time BI & Analytics' },
-    { name: 'AI Chatbot Builder', url: '/ai-chatbot-builder', description: 'No-code Chatbot Platform' },
-    { name: 'AI Email Marketing', url: '/ai-email-marketing', description: 'Automated Email Campaigns' },
-    { name: 'Social Media AI', url: '/social-media-ai', description: 'AI Social Management' },
-    { name: 'AI Project Management', url: '/ai-project-management', description: 'Smart Project Tracking' },
-    { name: 'AI SEO Optimizer', url: '/ai-seo-optimizer', description: 'Automated SEO Tools' },
-    { name: 'AI Sales CRM', url: '/ai-sales-crm', description: 'Intelligent CRM System' },
-    { name: 'AI Design Studio', url: '/ai-design-studio', description: 'AI Design Tools' }
-  ];
-
   const itServices = [
-<<<<<<< HEAD
     { name: 'Cloud Infrastructure', url: '/cloud-infrastructure', description: 'AWS, Azure, GCP' },
     { name: 'DevOps & CI/CD', url: '/devops-cicd', description: 'Automation pipelines' },
     { name: 'Cybersecurity Solutions', url: '/cybersecurity-solutions', description: 'Security solutions' },
@@ -87,16 +75,6 @@ const Footer: React.FC = memo(() => {
     { name: 'Workflow Automation', url: '/workflow-automation', description: 'Process automation' },
     { name: 'Cloud-Native Security', url: '/cloud-native-security', description: 'Container security' }
   ]
-=======
-    { name: 'IT Services', url: '/it-services', description: 'Comprehensive IT support' },
-    { name: 'IT Infrastructure', url: '/it-infrastructure', description: 'Enterprise infrastructure' },
-    { name: 'Cybersecurity', url: '/cybersecurity', description: 'Security solutions' },
-    { name: 'Cloud Infrastructure', url: '/ai-cloud-infrastructure', description: 'Cloud migration & setup' },
-    { name: 'E-commerce Solutions', url: '/ai-ecommerce-solutions', description: 'E-commerce platforms' },
-    { name: 'Mobile App Development', url: '/ai-mobile-app-development', description: 'Mobile applications' },
-    { name: 'Database Services', url: '/ai-data-analytics', description: 'Database management' }
-  ];
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a8d8
 
   const microSaasServices = [
     { name: 'Zion Analytics Pro', url: '/zion-analytics-pro', description: 'Business intelligence' },
