@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import React, { useState, useEffect, memo } from 'react';
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
-=======
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -80,9 +76,8 @@ import {
   Smartphone,
   Box
 } from 'lucide-react';
->>>>>>> cursor/website-audit-and-update-with-deployment-bdbb
 
-const Navigation: React.FC = memo(() => {
+const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [aiServicesOpen, setAiServicesOpen] = useState(false);
@@ -251,9 +246,7 @@ const Navigation: React.FC = memo(() => {
         { name: 'Future Technologies', path: '/future-technologies', description: 'Emerging tech solutions' }
       ]
     }
-<<<<<<< HEAD
-=======
-  };
+  ];
 
   const toggleAI = () => {
     setIsAIOpen(!isAIOpen);
@@ -558,7 +551,6 @@ const Navigation: React.FC = memo(() => {
     { name: 'Space Technology Solutions', href: '/space-technology', icon: Globe, price: '$6,000/mo', description: 'Space technology development and satellite communication systems' },
     { name: 'Climate Technology Solutions', href: '/climate-tech', icon: Globe, price: '$3,200/mo', description: 'Climate monitoring, carbon tracking, and environmental technology solutions' },
     { name: 'Biotechnology IT Solutions', href: '/biotech-it', icon: Stethoscope, price: '$4,000/mo', description: 'Bioinformatics, genomic data analysis, and biotechnology IT infrastructure' }
->>>>>>> cursor/website-audit-and-update-with-deployment-bdbb
   ];
 
   return (
@@ -798,7 +790,7 @@ const Navigation: React.FC = memo(() => {
       </div>
     </nav>
   );
-});
+};
 
 Navigation.displayName = 'Navigation';
 export default Navigation;

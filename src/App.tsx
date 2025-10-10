@@ -1,13 +1,10 @@
-import React, { useEffect, useState, lazy } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import React, { useEffect, useState, lazy, Suspense } from 'react';
+import { Routes, Route, BrowserRouter as Router } from 'react-router-dom';
+import ErrorBoundary from './components/ErrorBoundary';
 
 // Lazy load components for better performance
 const HomePage = lazy(() => import('./pageOptimized'));
 
-<<<<<<< HEAD
-// Loading component
-const LoadingSpinner: React.FC = () => (
-=======
 // AI Services Pages
 const AIAnalyticsDashboardPage = lazy(() => import('./ai-analytics-dashboard/page'));
 const AIChatbotBuilderPage = lazy(() => import('./ai-chatbot-builder/page'));
@@ -152,7 +149,6 @@ const BlogAITrends2026FutureEnterpriseTransformationPage = lazy(() => import('./
 
 // Main loading component
 const MainLoadingSpinner = () => (
->>>>>>> cursor/website-audit-and-update-with-deployment-bdbb
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
     <div className="text-center">
       <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-400 mx-auto mb-4"></div>
@@ -208,13 +204,6 @@ const App: React.FC = () => {
   }
 
   return (
-<<<<<<< HEAD
-    <div className="App">
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-      </Routes>
-    </div>
-=======
     <ErrorBoundary>
       <Router>
         <Suspense fallback={<MainLoadingSpinner />}>
@@ -375,7 +364,6 @@ const App: React.FC = () => {
         </Suspense>
       </Router>
     </ErrorBoundary>
->>>>>>> cursor/website-audit-and-update-with-deployment-bdbb
   );
 };
 

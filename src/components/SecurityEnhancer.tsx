@@ -218,9 +218,10 @@ const SecurityEnhancer: React.FC = () => {
     };
   }, []);
 
+  // Monitor for unusual network requests
+  useEffect(() => {
     checkSuspiciousCode();
 
-    // Monitor for unusual network requests
     const originalFetch = window.fetch;
     window.fetch = async (...args) => {
       const url = args[0] as string;
@@ -234,6 +235,9 @@ const SecurityEnhancer: React.FC = () => {
       return originalFetch.apply(window, args);
     };
 
+    return () => {
+      window.fetch = originalFetch;
+    };
   }, [validateURL]);
 
   // Security headers validation
