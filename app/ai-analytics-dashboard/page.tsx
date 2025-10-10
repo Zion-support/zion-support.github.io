@@ -1,3 +1,6 @@
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import {
   BarChart3,
   TrendingUp,
@@ -47,13 +50,8 @@ import {
   GraduationCap,
   Briefcase,
   Wrench,
-  Zap,
-  Star as StarIcon,
-  CheckCircle as Check,
-  ArrowRight as Arrow,
-  Phone as PhoneIcon,
-  Mail as MailIcon,
-  MapPin as Location
+  Zap
+} from 'lucide-react';
 
 const AIAnalyticsDashboardPage: React.FC = () => {
   const features = [
@@ -71,39 +69,85 @@ const AIAnalyticsDashboardPage: React.FC = () => {
     },
     {
       title: "Custom Dashboards",
-      description: "Create personalized dashboards tailored to your specific business needs and KPIs.",
+      description: "Create personalized dashboards tailored to your business needs and KPIs.",
       icon: BarChart3,
-      benefits: ["Drag & drop builder", "Custom widgets", "Role-based views"]
+      benefits: ["Drag & drop interface", "Custom widgets", "Role-based views"]
     },
     {
       title: "Advanced Visualizations",
-      description: "Transform complex data into stunning, interactive charts and graphs that tell your story.",
+      description: "Transform complex data into clear, actionable visualizations and reports.",
       icon: PieChart,
-      benefits: ["Interactive charts", "3D visualizations", "Export options"]
+      benefits: ["Interactive charts", "Export capabilities", "Mobile responsive"]
     },
     {
-      title: "Automated Reporting",
-      description: "Generate comprehensive reports automatically and schedule them for delivery to stakeholders.",
-      icon: FileText,
-      benefits: ["Scheduled reports", "Email delivery", "Multiple formats"]
+      title: "AI Insights",
+      description: "Get intelligent recommendations and insights powered by machine learning algorithms.",
+      icon: Brain,
+      benefits: ["Smart recommendations", "Pattern recognition", "Automated insights"]
     },
     {
       title: "Data Integration",
-      description: "Connect to 100+ data sources including databases, APIs, and cloud services.",
+      description: "Connect and analyze data from multiple sources in one unified platform.",
       icon: Database,
-      benefits: ["100+ connectors", "Real-time sync", "Data transformation"]
+      benefits: ["Multi-source integration", "Real-time sync", "Data validation"]
     }
-  ],
+  ];
 
   const benefits = [
     'Reduce data analysis time by 90%',
+    'Increase decision-making speed by 5x',
+    'Improve forecast accuracy by 85%',
+    'Save 40+ hours per week on reporting',
+    'Boost team productivity by 60%',
+    'Reduce manual errors by 95%',
+    'Gain 360° business visibility',
+    'Make data-driven decisions instantly'
+  ];
 
   const useCases = [
     {
+      title: "E-commerce Analytics",
+      description: "Track sales, customer behavior, and inventory with real-time dashboards",
+      icon: ShoppingCart
+    },
+    {
+      title: "Financial Reporting",
+      description: "Monitor revenue, expenses, and profitability with automated reports",
+      icon: DollarSign
+    },
+    {
+      title: "Marketing Performance",
+      description: "Analyze campaign effectiveness and ROI across all channels",
+      icon: Target
+    },
+    {
+      title: "Operations Monitoring",
+      description: "Track KPIs, efficiency metrics, and operational performance",
+      icon: Settings
     }
-  ],
+  ];
 
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+  return (
+    <>
+      <Helmet>
+        <title>AI Analytics Dashboard - Zion Tech Group</title>
+        <meta name="description" content="Transform your data into actionable insights with our advanced AI Analytics Dashboard. Real-time analytics, predictive modeling, and custom dashboards for better business decisions." />
+        <meta name="keywords" content="AI analytics, business intelligence, data visualization, predictive analytics, dashboard, Zion Tech Group" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(6,182,212,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              AI Analytics
+              <span className="block bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400 bg-clip-text text-transparent">
+                Dashboard
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Transform your data into actionable insights with our advanced AI Analytics Dashboard. 
               Real-time analytics, predictive modeling, and custom dashboards for better business decisions.
             </p>
@@ -119,6 +163,36 @@ const AIAnalyticsDashboardPage: React.FC = () => {
           </div>
         </section>
 
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="container mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Powerful Analytics Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Advanced AI-powered analytics tools to transform your data into business intelligence
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
               ))}
             </div>
@@ -126,13 +200,13 @@ const AIAnalyticsDashboardPage: React.FC = () => {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
+        <section className="py-20 px-4">
+          <div className="container mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Why Choose Our AI Analytics Dashboard?
               </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Experience the future of data analytics with our revolutionary AI technology
               </p>
             </div>
@@ -149,24 +223,56 @@ const AIAnalyticsDashboardPage: React.FC = () => {
           </div>
         </section>
 
+        {/* Use Cases Section */}
+        <section className="py-20 px-4">
+          <div className="container mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Perfect for Every Industry
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                From e-commerce to finance, our AI analytics dashboard adapts to your business needs
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {useCases.map((useCase, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform">
+                    <useCase.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{useCase.title}</h3>
+                  <p className="text-gray-300">{useCase.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl p-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+        <section className="py-20 px-4">
+          <div className="container mx-auto text-center">
+            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12 max-w-4xl mx-auto">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Transform Your Data?
               </h2>
-              <p className="text-xl text-blue-100 mb-8">
-                Join thousands of businesses who are already using our AI Analytics Dashboard
+              <p className="text-xl text-gray-300 mb-8">
+                Start making smarter decisions with our AI-powered analytics dashboard today.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                  Get Started Now
-                  <ArrowRight className="ml-2 w-5 h-5" />
+                <button className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                  Get Started Free
                 </button>
-                <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300">
+                <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                   Schedule Demo
                 </button>
               </div>
             </div>
           </div>
+        </section>
+      </div>
+    </>
+  );
+};
+
+export default AIAnalyticsDashboardPage;

@@ -23,13 +23,18 @@ function getProblematicFiles() {
   }
 }
 
-// Fix a single file
+// Fix a single file with common patterns
 function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
-    // Check if file has basic structure issues
+    // Skip if file doesn't exist or is too small
+    if (content.length < 100) {
+      return false;
+    }
+
+    // Check if file has basic structure
     const hasReturnStatement = content.includes('return (');
     const hasReactFragment = content.includes('<>') || content.includes('<React.Fragment>');
     const hasHelmet = content.includes('<Helmet>');
@@ -37,6 +42,28 @@ function fixFile(filePath) {
     if (!hasReturnStatement) {
       console.log(`Skipping ${filePath} - no return statement found`);
       return false;
+    }
+
+    // Fix missing React import
+    if (!content.includes("import React from 'react'") && !content.includes('import React from "react"')) {
+      if (content.includes("'use client'")) {
+        content = content.replace("'use client';", "'use client';\nimport React from 'react';");
+      } else {
+        content = "import React from 'react';\n" + content;
+      }
+      modified = true;
+    }
+
+    // Fix missing Helmet import
+    if (content.includes('<Helmet>') && !content.includes("from 'react-helmet-async'")) {
+      const importMatch = content.match(/import React from ['"]react['"];?/);
+      if (importMatch) {
+        content = content.replace(
+          importMatch[0],
+          `${importMatch[0]}\nimport { Helmet } from 'react-helmet-async';`
+        );
+        modified = true;
+      }
     }
 
     // Fix missing React Fragment wrapper
@@ -55,7 +82,7 @@ function fixFile(filePath) {
       modified = true;
     }
 
-    // Fix missing opening tags for common patterns
+    // Fix missing closing tags for common patterns
     const patterns = [
       {
         // Fix missing opening div tags
@@ -71,6 +98,11 @@ function fixFile(filePath) {
         // Fix malformed section tags
         pattern: /<section className="py-20 px-4">\s*<div className="container mx-auto"><\/div>/g,
         replacement: '<section className="py-20 px-4">\n          <div className="container mx-auto">'
+      },
+      {
+        // Fix missing closing tags for main sections
+        pattern: /<\/section>\s*<\/div>\s*\);\s*$/m,
+        replacement: '        </section>\n      </div>\n    </>\n  );'
       }
     ];
 
@@ -97,7 +129,7 @@ function fixFile(filePath) {
 
 // Main function
 function main() {
-  console.log('Starting comprehensive JSX fixes...');
+  console.log('Starting bulk JSX fixes...');
   
   const problematicFiles = getProblematicFiles();
   console.log(`Found ${problematicFiles.length} files with errors`);
