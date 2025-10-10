@@ -18,16 +18,16 @@ const preloadComponents = () => {
     // Preload critical components after initial render
     setTimeout(() => {
       import('./components/ContentPromotionBanner');
-      import('./components/ContentCarousel');)
-}, 100);)
-}
+      import('./components/ContentCarousel');
+    }, 100);
+  }
 };
 // Loading skeleton component
 const ServiceCardSkeleton: React.FC = memo(() => (
-  <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card"></div>
-    <div></div>
-    <div></div>
-    <div></div>
+  <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
+    <div className="h-4 bg-gray-300 rounded mb-4"></div>
+    <div className="h-3 bg-gray-300 rounded mb-2"></div>
+    <div className="h-3 bg-gray-300 rounded"></div>
   </div>
 ));
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
