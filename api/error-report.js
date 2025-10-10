@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Error reporting API endpoint;
-=======
-// Error reporting API endpoint
->>>>>>> cursor/fix-errors-and-merge-to-main-14e4
-export default function handler(req, res) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });
-  }
-
-  try {
-    const { error, stack, componentStack, timestamp, userAgent, url } = req.body;
-=======
 // Error reporting API endpoint
 export default function handler(req, res) {
   if (req.method !== 'POST') {
@@ -22,49 +8,40 @@ export default function handler(req, res) {
   }
 
   try {
-    // const { error, stack, componentStack, timestamp, userAgent, url } = req.body;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233
+    const { error, stack, componentStack, timestamp, userAgent, url } = req.body;
 
     // Log error details (in production you would send this to your monitoring service)
     // In a real application, you would:
     // 1. Send to Sentry, LogRocket, Bugsnag, etc.
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    // 2. Store in database;
-    // 3. Send alerts to development team;
-    res.status(200).json({)
-      success: true),
-      message: 'Error reported successfully'),
+    // 2. Store in your database
+    // 3. Send alerts to your team
+
+    console.error('Client Error Report:', {
+      error: error?.message || error,
+      stack,
+      componentStack,
+      timestamp,
+      userAgent,
+      url,
+      serverTime: new Date().toISOString()
     });
-  } catch {
-    //     res.status(500).json({ error: 'Failed to process error report' });
-=======
-    // 2. Store in database
-    // 3. Send alerts to development team
-    console.error('Error reported:', { error, stack, componentStack, timestamp, userAgent, url });
-    
-    res.status(200).json({ success: true, message: 'Error reported successfully' });
-  } catch (err) {
-    console.error('Error processing error report:', err);
-    res.status(500).json({ error: 'Failed to process error report' });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-=======
-    // 2. Store in database
-    // 3. Send alerts to development team
-    res.status(200).json({ success: true });
-  } catch {
-    res.status(500).json({ error: 'Failed to process error report' });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233
-=======
-    // 2. Store in database
-    // 3. Send alerts to development team
-    res.status(200).json({
-      success: true,
-      message: 'Error reported successfully'
-    });
+
+    // For now, just acknowledge receipt
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ 
+      success: true, 
+      message: 'Error report received',
+      timestamp: new Date().toISOString()
+    }));
+
   } catch (error) {
-    res.status(500).json({ error: 'Failed to process error report' });
->>>>>>> cursor/fix-errors-and-merge-to-main-14e4
+    console.error('Error in error reporting handler:', error);
+    res.statusCode = 500;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ 
+      error: 'Failed to process error report',
+      details: process.env.NODE_ENV === 'development' ? error.message : undefined
+    }));
   }
 }

@@ -10,10 +10,7 @@
     "build:no-check": "vite build",
     "build:analyze": "vite build --mode analyze && npx vite-bundle-analyzer dist/stats.html",
     "preview": "vite preview",
-<<<<<<< HEAD
     "start": "vite preview",
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     "lint": "eslint . --ext .ts,.tsx,.js,.jsx --max-warnings 0",
     "lint:fix": "eslint . --ext .ts,.tsx,.js,.jsx --fix --max-warnings 0",
     "type-check": "tsc --noEmit --skipLibCheck",
@@ -98,8 +95,8 @@
     "build:fast": "NODE_OPTIONS=\"--max-old-space-size=2048\" vite build --mode production --minify esbuild",
     "optimize:enhanced": "npm run optimize:performance && npm run build:optimized",
     "deploy:production": "npm run optimize:enhanced && npm run build:check && echo 'Ready for production deployment'",
-    "generate:sitemap": "node scripts/generate-sitemap.js",
-    "optimize:performance": "node scripts/performance-optimizer.js",
+    "generate:sitemap": "node scripts/generate-sitemap.cjs",
+    "optimize:performance": "node scripts/performance-optimizer.cjs",
     "postbuild": "npm run generate:sitemap && npm run optimize:performance && echo \"Build completed successfully\""
   },
   "dependencies": {

@@ -1,473 +1,344 @@
 'use client';
+
 import React, { useState } from 'react';
-import { Calendar, Phone, Mail, CheckCircle, ArrowRight, Star, Users, Clock, Shield, Brain, Cloud, Zap } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import { Helmet } from 'react-helmet-async';
+import { Calendar, Clock, CheckCircle, ArrowRight, Users, Zap, Shield, BarChart } from 'lucide-react';
 
-const ConsultationPage: React.FC = () => {,
-  const [selectedService, setSelectedService] = useState('ai-services');
+const ConsultationPage: React.FC = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    phone: '',
+    industry: '',
+    projectType: '',
+    timeline: '',
+    budget: '',
+    message: ''
+  });
 
-  const services = [
-    {
-      id: 'ai-services',
-      title: 'AI Services Consultation',
-      description: 'Get expert advice on AI implementation, strategy, and optimization',
-      icon: Brain;
-      duration: '60 minutes'
-      price: 'Free',
-      features: [,
-        'AI Strategy Assessment',
-        'Technology Recommendations',
-        'Implementation Roadmap',
-        'ROI Analysis'
-      ]
-    },
-    {
-      id: 'it-services'
-      title: 'IT Services Consultation'
-      description: 'Comprehensive IT infrastructure and security consultation'
-      icon: Cloud;
-      duration: '90 minutes'
-      price: 'Free',
-      features: [,
-        'Infrastructure Assessment',
-        'Security Audit',
-        'Cloud Migration Planning',
-        'Cost Optimization'
-      ]
-    },
-    {
-      id: 'micro-saas'
-      title: 'Micro SAAS Consultation'
-      description: 'Discover how micro SAAS tools can streamline your business operations'
-      icon: Zap;
-      duration: '45 minutes'
-      price: 'Free',
-      features: [,
-        'Tool Recommendations',
-        'Integration Planning',
-        'Workflow Optimization',
-        'Training Requirements'
-      ]
-    },
-    {
-      id: 'custom'
-      title: 'Custom Solution Consultation'
-      description: 'Tailored consultation for complex business requirements'
-      icon: Users;
-      duration: '120 minutes'
-      price: 'Free',
-      features: [,
-        'Custom Solution Design',
-        'Technical Architecture',
-        'Project Planning',
-        'Budget Estimation'
-      ]
-    }
-  ];
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const consultationProcess = [
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    // Simulate form submission
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    
+    setIsSubmitting(false);
+    setIsSubmitted(true);
+  };
+
+  const consultationTypes = [
     {
-      step: 1;
-      title: 'Initial Assessment',
-      description: 'We analyze your current systems and business requirements',
-      duration: '15 minutes',
+      icon: Zap,
+      title: 'AI Strategy Consultation',
+      description: 'Develop a comprehensive AI strategy for your business',
+      duration: '2-3 hours',
+      price: 'Free'
     },
     {
-      step: 2;
-      title: 'Solution Design',
-      description: 'We design a customized solution based on your needs',
-      duration: '30 minutes',
+      icon: Shield,
+      title: 'Security Assessment',
+      description: 'Evaluate your current security posture and identify improvements',
+      duration: '1-2 hours',
+      price: 'Free'
     },
     {
-      step: 3;
-      title: 'Implementation Plan',
-      description: 'We create a detailed roadmap for implementation',
-      duration: '20 minutes',
-    },
-    {
-      step: 4;
-      title: 'Q&A Session',
-      description: 'We answer all your questions and address concerns',
-      duration: '15 minutes',
+      icon: BarChart,
+      title: 'Technology Audit',
+      description: 'Review your current technology stack and recommend optimizations',
+      duration: '2-4 hours',
+      price: 'Free'
     }
   ];
 
   const benefits = [
-    {
-      icon: CheckCircle;
-      title: 'Expert Analysis',
-      description: 'Get insights from our experienced consultants and solution architects',
-    },
-    {
-      icon: Star;
-      title: 'Customized Solutions',
-      description: 'Tailored recommendations based on your specific business needs',
-    },
-    {
-      icon: Shield;
-      title: 'Risk Assessment',
-      description: 'Identify potential challenges and mitigation strategies',
-    },
-    {
-      icon: Clock;
-      title: 'Quick Turnaround',
-      description: 'Get actionable recommendations within 24-48 hours',
-    }
+    'Free initial consultation',
+    'Customized recommendations',
+    'No obligation to proceed',
+    'Expert insights and advice',
+    'Detailed project roadmap',
+    'Transparent pricing'
   ];
 
-  const testimonials = [
-    {
-      name: 'David Kim',
-      company: 'TechStart Solutions',
-      role: 'CTO',
-      content: 'The consultation helped us identify the right AI tools for our business. The implementation roadmap was exactly what we needed.',
-      rating: 5;
-    },
-    {
-      name: 'Lisa Wang',
-      company: 'DataCorp Inc',
-      role: 'VP of Operations',
-      content: 'The IT consultation saved us thousands of dollars by identifying cost optimization opportunities we never knew existed.',
-      rating: 5;
-    },
-    {
-      name: 'Robert Johnson',
-      company: 'InnovateLab',
-      role: 'CEO',
-      content: 'The micro SAAS consultation opened our eyes to tools that have significantly improved our productivity and efficiency.',
-      rating: 5;
-    }
-  ];
-
-<<<<<<< HEAD
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
-      <Navigation />
-<<<<<<< HEAD
+    <>
+      <Helmet>
+        <title>Free Consultation - Zion Tech Group | Get Expert Advice</title>
+        <meta name="description" content="Schedule a free consultation with our AI and IT experts. Get personalized recommendations and a custom roadmap for your business transformation." />
+        <meta name="keywords" content="free consultation, AI strategy, technology audit, security assessment, expert advice, business transformation" />
+      </Helmet>
 
-      <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
-        <section className="text-center mb-16">
-<<<<<<< HEAD
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">Free Consultation<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Get expert advice on how to transform your business with AI and technology solutions. Our free consultation will help you identify opportunities and create a roadmap for success.</p>
-=======
-      <main className="container mx-auto px-4 py-16 pt-24">
-        {/* Hero Section */}
-        <section className="text-center mb-16">
-          <h1 className="text-4xl md: text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">
-            Free Consultation;
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Get expert advice on how to transform your business with AI and technology solutions. Our free consultation will help you identify opportunities and create a roadmap for success.
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">Free Consultation</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Get expert advice on how to transform your business with AI and technology solutions. Our free consultation will help you identify opportunities and create a roadmap for success.</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
-          </p>
-          <div className="flex flex-wrap justify-center gap-4"></section>
-            <div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg"></div>
-              <CheckCircle className="w-5 h-5 text-cyan-400" />
-              <span className="text-white font-medium">100% Free</span>
-            </div>
-            <div className="flex items-center space-x-2 bg-purple-500/20 px-4 py-2 rounded-lg"></div>
-              <Users className="w-5 h-5 text-purple-400" />
-              <span className="text-white font-medium">Expert Guidance</span>
-            </div>
-<<<<<<< HEAD
-            <div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg">
-              <Star className="w-5 h-5 text-green-400" />)
-              <span className="text-white font-medium">Customized Solutions</span>)
-            </div>)
-          </div>)
-        </section>),
-),
-        {/* Consultation Types */}
-        <section className="mb-16">
-<<<<<<< HEAD
-          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Choose Your Consultation<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{services.map((service) => (<div
-=======
-            <div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg"></div>
-              <Star className="w-5 h-5 text-green-400" />
-              <span className="text-white font-medium">Customized Solutions</span>
-            </div>
-          </div>
-        </section>
-
-        {/* Consultation Types */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Choose Your Consultation</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{services.map((service) => (</section><div
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
-                key={service.id}
-                onClick={() =>setSelectedService(service.id)}</div></<<<di>className</di></di>={`cyber-card p-6 cursor-pointer transition-all duration-300 ${
-                  selectedService === service.id ? 'ring-2 ring-cyan-400 bg-cyan-500/10' : 'hover:bg-slate-700/50'
-                }`}</div>
-              ></div>
-<<<<<<< HEAD
-=======
-          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Choose Your Consultation</h2>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">,
-            {services.map((service) => (,
-              <div;
-                key={service.id}
-                onClick={() => setSelectedService(service.id)}
-                className={`cyber-card p-6 cursor-pointer transition-all duration-300 ${}
-                  selectedService === service.id ? 'ring-2 ring-cyan-400 bg-cyan-500/10' : 'hover:bg-slate-700/50'}
-                }`}
-              >
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-                <div className="text-center">
-=======
-                <div className="text-center"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
-                  <service.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-                  <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3><p className="text-gray-300 text-sm mb-4">{service.description}</p>
-                  <div className="flex items-center justify-center text-cyan-400 text-sm mb-4"></div>
-                    <Clock className="w-4 h-4 mr-1" >{service.duration}<div className="text-2xl font-bold text-green-400 mb-4">{service.price}</div><ul className="space-y-1 text-xs text-gray-400">{service.features.map((feature, index) => (</ul>
-                      <li key={index} className="flex items-center">
-                        <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" >{feature}</CheckCircle>
-                      </CheckCircle>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Consultation Process */}
-        <section className="mb-16">
-<<<<<<< HEAD
-          <div className="cyber-card p-8">
-<<<<<<< HEAD
-            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Our Consultation Process<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{consultationProcess.map((step, index) => (</div>
-=======
-            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Our Consultation Process</h2>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">,
-              {consultationProcess.map((step, index) => (
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-                <div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl font-bold text-white">{step.step}<h3 className="text-lg font-bold text-white mb-2">{step.title}</h3>
-                  <p className="text-gray-300 text-sm mb-2">{step.description}<div className="text-cyan-400 text-xs">{step.duration}</div>
-=======
-          <div className="cyber-card p-8"></section>
-            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Our Consultation Process</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{consultationProcess.map((step, index) => (</div>
-                <div key={index} className="text-center"></div>
-                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4"></div>
-                    <span className="text-2xl font-bold text-white">{step.step}</span><h3 className="text-lg font-bold text-white mb-2">{step.title}</h3>
-                  <p className="text-gray-300 text-sm mb-2">{step.description}</p><div className="text-cyan-400 text-xs">{step.duration}</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Benefits */}
-        <section className="mb-16">
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Why Choose Our Consultation?<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{benefits.map((benefit, index) => (</div>
-=======
-          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Why Choose Our Consultation?</h2>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">,
-            {benefits.map((benefit, index) => (
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-              <div key={index} className="cyber-card p-6 text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-=======
-          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Why Choose Our Consultation?</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{benefits.map((benefit, index) => (</section>
-              <div key={index} className="cyber-card p-6 text-center"></div>
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
-                  <benefit.icon className="w-8 h-8 text-white" />
-                <h3 className="text-lg font-bold text-white mb-2">{benefit.title}</h3><p className="text-gray-300 text-sm">{benefit.description}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Testimonials */}
-        <section className="mb-16">
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">What Our Clients Say<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{testimonials.map((testimonial, index) => (</div>
-=======
-          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">What Our Clients Say</h2>
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">,
-            {testimonials.map((testimonial, index) => (
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-              <div key={index} className="cyber-card p-6">
-                <div className="flex justify-center mb-4">{[...Array(5)].map((_, i) => (<Star key={i} className="w-5 h-5 text-yellow-400 fill-current" >))}<p className="text-gray-300 italic mb-4">"{testimonial.content}"</p>
-                <div className="text-center">
-                  <h4 className="text-white font-bold">{testimonial.name}<p className="text-cyan-400 text-sm">{testimonial.role}<p className="text-gray-400 text-sm">{testimonial.company}</p>
-=======
-          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">What Our Clients Say</h2><div className="grid grid-cols-1 md:grid-cols-3 gap-8">{testimonials.map((testimonial, index) => (</section>
-              <div key={index} className="cyber-card p-6"></div>
-                <div className="flex justify-center mb-4">{[...Array(5)].map((_, i) => (</div><Star key={i} className="w-5 h-5 text-yellow-400 fill-current" >))}<p className="text-gray-300 italic mb-4">"{testimonial.content}"</p>
-                <div className="text-center"></div>
-                  <h4 className="text-white font-bold">{testimonial.name}<p className="text-cyan-400 text-sm">{testimonial.role}</p><p className="text-gray-400 text-sm">{testimonial.company}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Booking Form */}
-        <section className="mb-16">
-          <div className="cyber-card p-8"></section>
-            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Schedule Your Free Consultation</h2>
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
-              <div>
-<<<<<<< HEAD
-=======
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8"></div>
-              <div></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
-                <h3 className="text-xl font-semibold text-cyan-400 mb-4">Consultation Details</h3>
-                <div className="space-y-4"></div>
-                  <div></div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">Selected Service<div className="bg-slate-800/50 border border-gray-600 rounded-lg p-3 text-white">{services.find(s => s.id === selectedService)?.title}</div>
-=======
-                <h3 className="text-xl font-semibold text-cyan-400 mb-4">Consultation Details</h3>,
-                <div className="space-y-4">,
-                  <div>,
-                    <label className="block text-sm font-medium text-gray-300 mb-2">Selected Service</label>,
-                    <div className="bg-slate-800/50 border border-gray-600 rounded-lg p-3 text-white">,
-                      {services.find(s => s.id === selectedService)?.title}
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-                    </div>
-                  </div>
-                  <div></div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">Duration<div className="bg-slate-800/50 border border-gray-600 rounded-lg p-3 text-white">{services.find(s => s.id === selectedService)?.duration}</div>
-                    </div>
-                  </div>
-                  <div></div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">Company Name</label>
-                    <input;
-                      type="text"
-                      className="w-full bg-slate-800/50 border border-gray-600 rounded-lg p-3 text-white focus: outline-none focus:border-cyan-400"
-                      placeholder="Your company name"
-                    /></inpu>
-                  </div>
-                  <div></div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">Your Name</label>
-                    <input;
-                      type="text"
-                      className="w-full bg-slate-800/50 border border-gray-600 rounded-lg p-3 text-white focus:outline-none focus:border-cyan-400"
-                      placeholder="Your full name"
-                    /></inpu>
-                  </div>
-                  <div></div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">Email Address</label>
-                    <input;
-                      type="email"
-                      className="w-full bg-slate-800/50 border border-gray-600 rounded-lg p-3 text-white focus:outline-none focus:border-cyan-400"
-                      placeholder="your.email@company.com"
-                    /></inpu>
-                  </div>
-                  <div></div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">Phone Number</label>
-                    <input;
-                      type="tel"
-                      className="w-full bg-slate-800/50 border border-gray-600 rounded-lg p-3 text-white focus:outline-none focus:border-cyan-400"
-                      placeholder="+1 (555) 123-4567"
-                    /></inpu>
-                  </div>
-                </div>
-              </div>
-              <div></div>
-                <h3 className="text-xl font-semibold text-cyan-400 mb-4">Preferred Time</h3>
-                <div className="space-y-4"></div>
-                  <div></div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">Date</label>
-                    <input;
-                      type="date"
-                      className="w-full bg-slate-800/50 border border-gray-600 rounded-lg p-3 text-white focus:outline-none focus:border-cyan-400"
-                    /></inpu>
-                  </div>
-                  <div></div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">Time</label>
-                    <select className="w-full bg-slate-800/50 border border-gray-600 rounded-lg p-3 text-white focus:outline-none focus:border-cyan-400">
-                      <option>9:00 AM - 10:00 AM<option>10:00 AM - 11:00 AM</option>
-                      <option>11:00 AM - 12:00 PM<option>1:00 PM - 2:00 PM</option>
-                      <option>2:00 PM - 3:00 PM<option>3:00 PM - 4:00 PM<option>4:00 PM - 5:00 PM</option>
-                    </select>
-                  </div>
-                  <div></div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">Time Zone</label>
-                    <select className="w-full bg-slate-800/50 border border-gray-600 rounded-lg p-3 text-white focus:outline-none focus:border-cyan-400">
-                      <option>Eastern Time (ET)<option>Central Time (CT)</option>
-                      <option>Mountain Time (MT)<option>Pacific Time (PT)<option>GMT</option>
-                    </select>
-                  </div>
-<<<<<<< HEAD
-                  <div>,
-                    <label className="block text-sm font-medium text-gray-300 mb-2">Current Challenges</label>,
-                    <textarea;
-=======
-                  <div></div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">Current Challenges</label>
-                    <textarea
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
-                      rows={4}
-                      className="w-full bg-slate-800/50 border border-gray-600 rounded-lg p-3 text-white focus: outline-none focus:border-cyan-400"
-                      placeholder="Tell us about your current challenges and what you hope to achieve..."
-                    /></textare>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="mt-8 text-center"></div>
-              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-bold hover:from-cyan-600 hover:to-purple-700 transition-all inline-flex items-center">
-<<<<<<< HEAD
-                <Calendar className="w-5 h-5 mr-2" >Schedule Free Consultation</Calendar>
-                </Calendar><ArrowRight className="w-5 h-5 ml-2" />
-=======
-                <Calendar className="w-5 h-5 mr-2" />
-                Schedule Free Consultation;
-                <ArrowRight className="w-5 h-5 ml-2" />
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-              </button>
-            </div>
-          </div>,
-        </section>,
-,
-        {/* Contact Information */}
-        <section className="mb-16">
-          <div className="cyber-card p-8"></section>
-            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Need Help Scheduling?</h2><p className="text-gray-300 mb-6">If you need assistance scheduling your consultation or have questions about our services, our team is here to help.</p>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
+        <div className="container mx-auto px-4">
+          {/* Header */}
+          <div className="text-center mb-16">
+            <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6">
+              Free
+              <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+                {' '}Consultation
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Get expert advice on how AI and IT solutions can transform your business. 
+              No obligation, just valuable insights.
             </p>
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md: grid-cols-3 gap-6">
-              <div className="text-center">
-=======
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
-              <div className="text-center"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
-                <Phone className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
-                <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3><p className="text-gray-300 mb-2">+1 (302) 464-0950</p><p className="text-sm text-gray-400">Mon-Fri 9AM-6PM EST</p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Consultation Types */}
+            <div>
+              <h2 className="text-3xl font-bold text-white mb-8">Choose Your Consultation Type</h2>
+              <div className="space-y-6">
+                {consultationTypes.map((type, index) => (
+                  <div
+                    key={index}
+                    className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300"
+                  >
+                    <div className="flex items-start space-x-4">
+                      <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <type.icon className="w-6 h-6 text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-xl font-semibold text-white mb-2">{type.title}</h3>
+                        <p className="text-gray-300 mb-3">{type.description}</p>
+                        <div className="flex items-center space-x-4 text-sm text-gray-400">
+                          <div className="flex items-center space-x-1">
+                            <Clock className="w-4 h-4" />
+                            <span>{type.duration}</span>
+                          </div>
+                          <div className="text-cyan-400 font-semibold">{type.price}</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
               </div>
-              <div className="text-center"></div>
-                <Mail className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
-                <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3><p className="text-gray-300 mb-2">consultation@ziontechgroup.com</p><p className="text-sm text-gray-400">Response within 24 hours</p>
-              </div>
-              <div className="text-center"></div>
-                <Calendar className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
-                <h3 className="text-lg font-semibold text-white mb-2">Book Online</h3><p className="text-gray-300 mb-2">Instant scheduling</p><p className="text-sm text-gray-400">Available 24/7</p>
+
+              <div className="mt-8 bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">
+                <h3 className="text-xl font-semibold text-white mb-4">What You'll Get:</h3>
+                <div className="space-y-3">
+                  {benefits.map((benefit, index) => (
+                    <div key={index} className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 h-5 text-cyan-400" />
+                      <span className="text-gray-300">{benefit}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
+
+            {/* Consultation Form */}
+            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
+              <h2 className="text-3xl font-bold text-white mb-6">Schedule Your Consultation</h2>
+              
+              {isSubmitted ? (
+                <div className="text-center py-12">
+                  <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
+                  <h3 className="text-2xl font-bold text-white mb-2">Consultation Scheduled!</h3>
+                  <p className="text-gray-300 mb-6">
+                    Thank you for your interest. We'll contact you within 24 hours to schedule your free consultation.
+                  </p>
+                  <button
+                    onClick={() => setIsSubmitted(false)}
+                    className="bg-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-cyan-700 transition-colors"
+                  >
+                    Schedule Another
+                  </button>
+                </div>
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label className="block text-sm font-medium text-gray-300 mb-2">
+                        Full Name *
+                      </label>
+                      <input
+                        type="text"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
+                        placeholder="Your full name"
+                      />
+                    </div>
+                    
+                    <div>
+                      <label className="block text-sm font-medium text-gray-300 mb-2">
+                        Email Address *
+                      </label>
+                      <input
+                        type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
+                        placeholder="your@email.com"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label className="block text-sm font-medium text-gray-300 mb-2">
+                        Company
+                      </label>
+                      <input
+                        type="text"
+                        name="company"
+                        value={formData.company}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
+                        placeholder="Your company"
+                      />
+                    </div>
+                    
+                    <div>
+                      <label className="block text-sm font-medium text-gray-300 mb-2">
+                        Phone Number
+                      </label>
+                      <input
+                        type="tel"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
+                        placeholder="+1 (555) 123-4567"
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-gray-300 mb-2">
+                      Industry
+                    </label>
+                    <select
+                      name="industry"
+                      value={formData.industry}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white focus:outline-none focus:border-cyan-500"
+                    >
+                      <option value="">Select your industry</option>
+                      <option value="technology">Technology</option>
+                      <option value="healthcare">Healthcare</option>
+                      <option value="finance">Finance</option>
+                      <option value="manufacturing">Manufacturing</option>
+                      <option value="retail">Retail</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-gray-300 mb-2">
+                      Project Type
+                    </label>
+                    <select
+                      name="projectType"
+                      value={formData.projectType}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white focus:outline-none focus:border-cyan-500"
+                    >
+                      <option value="">Select project type</option>
+                      <option value="ai-strategy">AI Strategy</option>
+                      <option value="security-assessment">Security Assessment</option>
+                      <option value="technology-audit">Technology Audit</option>
+                      <option value="custom-development">Custom Development</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label className="block text-sm font-medium text-gray-300 mb-2">
+                        Timeline
+                      </label>
+                      <select
+                        name="timeline"
+                        value={formData.timeline}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white focus:outline-none focus:border-cyan-500"
+                      >
+                        <option value="">Select timeline</option>
+                        <option value="asap">ASAP</option>
+                        <option value="1-month">Within 1 month</option>
+                        <option value="3-months">Within 3 months</option>
+                        <option value="6-months">Within 6 months</option>
+                        <option value="flexible">Flexible</option>
+                      </select>
+                    </div>
+                    
+                    <div>
+                      <label className="block text-sm font-medium text-gray-300 mb-2">
+                        Budget Range
+                      </label>
+                      <select
+                        name="budget"
+                        value={formData.budget}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white focus:outline-none focus:border-cyan-500"
+                      >
+                        <option value="">Select budget range</option>
+                        <option value="under-10k">Under $10,000</option>
+                        <option value="10k-50k">$10,000 - $50,000</option>
+                        <option value="50k-100k">$50,000 - $100,000</option>
+                        <option value="100k-plus">$100,000+</option>
+                        <option value="discuss">Let's discuss</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-gray-300 mb-2">
+                      Additional Information
+                    </label>
+                    <textarea
+                      name="message"
+                      value={formData.message}
+                      onChange={handleInputChange}
+                      rows={4}
+                      className="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 resize-none"
+                      placeholder="Tell us about your project goals, challenges, or any specific requirements..."
+                    />
+                  </div>
+
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
+                  >
+                    {isSubmitting ? (
+                      <>
+                        <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                        <span>Scheduling...</span>
+                      </>
+                    ) : (
+                      <>
+                        <Calendar className="w-5 h-5" />
+                        <span>Schedule Free Consultation</span>
+                        <ArrowRight className="w-5 h-5" />
+                      </>
+                    )}
+                  </button>
+                </form>
+              )}
+            </div>
           </div>
-        </section>
-      </main>,
-,
-      <Footer />,
-    </div>,
+        </div>
+      </div>
+    </>
   );
 };
 

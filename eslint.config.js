@@ -6,11 +6,9 @@ import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 
 export default [
-<<<<<<< HEAD
   // Ignore disabled directories
   {
-<<<<<<< HEAD
-    ignores: [,
+    ignores: [
       'node_modules/**',
       '.next/**',
       'out/**',
@@ -18,139 +16,88 @@ export default [
       'dist/**',
       'next-env.d.ts',
       '**/zion-website_disabled/**',
-      '_app_disabled/**',
-      'app_disabled/**',
-      '_conflicted_disabled/**',
-      '_pages_api_disabled/**',
-      '_pages_disabled/**',
-=======
-    ignores: [
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-      'admin-api-disabled/**',
-=======
-  // Global ignores
-  {
-    ignores: [
-      'admin-api-disabled/**',
-      'ai-customer-support-disabled/**',
-      'ai-data-visualization-disabled/**',
-      'ai-sales-automation-disabled/**',
-      'ai-workflow-automation-disabled/**',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233
-      'api-disabled/**',
-      'api.disabled/**',
-      'api-backup/**',
-      'components-disabled/**',
-      'components.disabled/**',
-<<<<<<< HEAD
-      'automation_backup/**',
-      'backup*/**',
-      '*-disabled/**',
-      '*.disabled/**',
-      '*.broken',
-      '*.backup',
-      'temp-files/**',
-      'cache/**',
-      'dist/**',
-      'node_modules/**',
-      'analyze-*.js',
-      'check-*.js',
-      'clean-*.js',
-      'fix-*.js',
-      '*.cjs',
-      '*.js.broken'
-    ],
-  },
-  // Base JavaScript configuration;
-=======
-      'components.disabled_full/**',
-      'backup/**',
-      'backup-merge-conflicts/**',
-      'backup-pages/**',
-      'backup-problematic/**',
-      'backup-problematic-files/**',
-      'clean-build/**',
-      'cache/**',
-      'ci-cd-reports/**',
-      'automation_backup/**',
-      'apps.backup/**',
-      'node_modules/**',
-      'dist/**',
-      '.next/**',
-      'out/**',
-      '*.min.js',
-      '*.min.css',
-      'chunk-*.js'
+      '**/api-disabled/**',
+      '**/admin-api-disabled/**',
+      '**/ai-customer-support-disabled/**',
+      '**/ai-data-visualization-disabled/**',
+      '**/ai-sales-automation-disabled/**',
+      '**/ai-workflow-automation-disabled/**',
+      '**/backup-problematic/**',
+      '**/backup-problematic-files/**',
+      '**/clean-build/**',
+      '**/temp-files/**',
+      '**/cache/**',
+      '**/chunk-*.js',
+      '**/*.backup*',
+      '**/*.broken',
+      '**/netlify/functions-backup/**',
+      '**/automation_backup/**',
+      '**/apps.backup/**',
+      '**/backup-merge-conflicts/**',
+      '**/backup-pages/**',
+      '**/data_backup/**',
+      '**/extension/**',
+      '**/netlify/functions-backup/**',
+      '**/automation/backups/**',
+      '**/ci-cd-reports/**',
+      '**/cache/**',
+      '**/chunk-*.js',
+      '**/*.backup*',
+      '**/*.broken',
+      '**/netlify/functions-backup/**',
+      '**/automation_backup/**',
+      '**/apps.backup/**',
+      '**/backup-merge-conflicts/**',
+      '**/backup-pages/**',
+      '**/data_backup/**',
+      '**/extension/**',
+      '**/netlify/functions-backup/**',
+      '**/automation/backups/**',
+      '**/ci-cd-reports/**'
     ]
   },
-  // Base JavaScript configuration
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233
   {
-    files: ['**/*.{js,jsx}'],
-    languageOptions: {,
-      globals: { ...globals.browser, ...globals.node },
-      parserOptions: {,
+    files: ['**/*.{js,jsx,ts,tsx}'],
+    languageOptions: {
+      ecmaVersion: 2022,
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+        ...globals.es2022
+      },
+      parser: tsParser,
+      parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
-<<<<<<< HEAD
-        ecmaFeatures: {,
-          jsx: true;
-        },
-      },
+        ecmaFeatures: {
+          jsx: true
+        }
+      }
     },
-    rules: {,
-      ...js.configs.recommended.rules;
-      'no-unused-vars': 'warn',
-      'no-console': 'warn',
-=======
-      },
+    plugins: {
+      '@typescript-eslint': tseslint,
+      'react-hooks': reactHooks,
+      'react-refresh': reactRefresh
     },
     rules: {
       ...js.configs.recommended.rules,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-    },
-  },
-  // TypeScript configuration;
-  {
-    files: ['**/*.{ts,tsx}'],
-    languageOptions: {,
-      globals: { ...globals.browser, ...globals.node },
-      parser: tsParser;
-      parserOptions: {
-        ecmaVersion: 'latest'
-        sourceType: 'module',
-        ecmaFeatures: {,
-          jsx: true;
-        },
-      },
-    },
-    plugins: {,
-      '@typescript-eslint': tseslint;
-      'react-hooks': reactHooks,
-      'react-refresh': reactRefresh,
-    },
-<<<<<<< HEAD
-    rules: {,
-      ...tseslint.configs.recommended.rules;
-      ...reactHooks.configs.recommended.rules,
-=======
-    rules: {
       ...tseslint.configs.recommended.rules,
-      'react-hooks/rules-of-hooks': 'error',
-      'react-hooks/exhaustive-deps': 'warn',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
+      ...reactHooks.configs.recommended.rules,
       'react-refresh/only-export-components': [
         'warn',
-        { allowConstantExport: true },
+        { allowConstantExport: true }
       ],
-      '@typescript-eslint/no-unused-vars': 'off',
-      '@typescript-eslint/no-explicit-any': 'off',
+      '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+      '@typescript-eslint/no-explicit-any': 'warn',
       '@typescript-eslint/explicit-function-return-type': 'off',
       '@typescript-eslint/explicit-module-boundary-types': 'off',
-      '@typescript-eslint/no-non-null-assertion': 'off',
-      'no-console': 'off',
-      '@typescript-eslint/no-unused-vars': 'off',
-      'no-unused-vars': 'off',
-    },
-  },
+      '@typescript-eslint/no-empty-function': 'warn',
+      'no-console': 'warn',
+      'no-debugger': 'error',
+      'prefer-const': 'error',
+      'no-var': 'error',
+      'object-shorthand': 'error',
+      'prefer-template': 'error'
+    }
+  }
 ];
