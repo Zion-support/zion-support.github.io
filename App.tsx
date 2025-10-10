@@ -30,6 +30,10 @@ const PricingPage = React.lazy(() => import('./app/pricing/page'));
 const BlogPage = React.lazy(() => import('./app/blog/page'));
 const CaseStudiesPage = React.lazy(() => import('./app/case-studies/page'));
 const CareersPage = React.lazy(() => import('./app/careers/page'));
+const TutorialsPage = React.lazy(() => import('./app/tutorials/page'));
+const AiServicesPage = React.lazy(() => import('./app/ai-services/page'));
+const ItServicesPage = React.lazy(() => import('./app/it-services/page'));
+const MicroSaasPage = React.lazy(() => import('./app/micro-saas/page'));
 
 // Performance monitoring hook
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -67,6 +71,10 @@ const App: React.FC = () => {
                             <Route path="/blog" element={<BlogPage />} />
                             <Route path="/case-studies" element={<CaseStudiesPage />} />
                             <Route path="/careers" element={<CareersPage />} />
+                            <Route path="/tutorials" element={<TutorialsPage />} />
+                            <Route path="/ai-services" element={<AiServicesPage />} />
+                            <Route path="/it-services" element={<ItServicesPage />} />
+                            <Route path="/micro-saas" element={<MicroSaasPage />} />
                           </Routes>
                         </Suspense>
                       </main>
