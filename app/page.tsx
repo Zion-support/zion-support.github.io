@@ -69,7 +69,6 @@ const HomePage: React.FC = () => {
     }
   }, []);
 
-<<<<<<< HEAD
   // Contact information
   const contactInfo = {
     phone: '+1 302 464 0950',
@@ -4450,8 +4449,6 @@ const HomePage: React.FC = () => {
     }
   ];
 
-=======
->>>>>>> origin/main
   return (
     <ErrorBoundary>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced neural-network-bg particle-system">
@@ -4879,9 +4876,8 @@ const HomePage: React.FC = () => {
         </Suspense>
       </main>
 
-<<<<<<< HEAD
-        {/* Footer */}
-        <Footer />
+      {/* Footer */}
+      <Footer />
         
         {/* Skip to main content for accessibility */}
         <a
@@ -5306,14 +5302,9 @@ const HomePage: React.FC = () => {
           </section>
         </main>
 
-        <Footer />
-      </div>
-=======
       {/* Footer */}
       <Footer />
     </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-c40d
-    </>
   );
 };
 

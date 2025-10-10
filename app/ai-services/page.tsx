@@ -4,7 +4,6 @@ import { CheckCircle, Star, ArrowRight, Zap, Shield, Clock, Users, TrendingUp, G
 
   const aiServices = [
     {
-<<<<<<< HEAD
       id: 1,
       name: 'AI-Powered Business Intelligence',
       description: 'Advanced AI analytics platform that transforms raw data into actionable business insights',
@@ -114,7 +113,7 @@ import { CheckCircle, Star, ArrowRight, Zap, Shield, Clock, Users, TrendingUp, G
         'Automated campaign optimization',
         'Real-time performance tracking',
         'Predictive customer behavior'
-=======
+      ],
       category: 'AI Automation & Workflow',
       icon: Zap,
       color: 'text-yellow-400',
@@ -978,7 +977,6 @@ import { CheckCircle, Star, ArrowRight, Zap, Shield, Clock, Users, TrendingUp, G
                 <div className={`p-3 rounded-lg bg-gradient-to-r ${service.color} text-white`}>
                   {service.icon}
                 </div>
-<<<<<<< HEAD
                 <div className="flex items-center space-x-2">
                   {service.popular && (
                     <span className="px-2 py-1 bg-orange-500 text-white text-xs rounded-full flex items-center">
