@@ -16,18 +16,28 @@ const Navigation: React.FC = () => {
       if (window.innerWidth >= 1024) {
         setIsOpen(false)
       }
-    }const handleScroll  = () => {
-      setIsScrolled(window.scrollY > 50)}
+    }
+    
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50)
+    }
+    
     window.addEventListener('resize', handleResize)
-    window.addEventListener('scroll', handleScroll)return () => {
+    window.addEventListener('scroll', handleScroll)
+    
+    return () => {
       window.removeEventListener('resize', handleResize)
-      window.removeEventListener('scroll', handleScroll)}
+      window.removeEventListener('scroll', handleScroll)
+    }
   }, [])
+  
   const toggleMenu = () => setIsOpen(!isOpen)
   const toggleServices = () => setServicesOpen(!servicesOpen)
   const toggleAiServices = () => setAiServicesOpen(!aiServicesOpen)
   const toggleItServices = () => setItServicesOpen(!itServicesOpen)
-  const toggleMicroSaas = () => setMicroSaasOpen(!microSaasOpen)const closeAllMenus  = () => {
+  const toggleMicroSaas = () => setMicroSaasOpen(!microSaasOpen)
+  
+  const closeAllMenus = () => {
     setServicesOpen(false)
     setAiServicesOpen(false)
     setItServicesOpen(false)
