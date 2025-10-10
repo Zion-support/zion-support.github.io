@@ -321,3 +321,635 @@ input, textarea, select {
   border-radius: 8px;
   margin: 16px 0;
 }
+
+/* Enhanced Responsive Design */
+@media (max-width: 640px) {
+  .mobile-first {
+    padding: 1rem;
+    margin: 0.5rem;
+  }
+  
+  .mobile-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .mobile-text {
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+  
+  .mobile-button {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+  }
+  
+  .mobile-hidden {
+    display: none;
+  }
+  
+  .mobile-visible {
+    display: block;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .tablet-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .tablet-text {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .tablet-button {
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .desktop-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  
+  .desktop-text {
+    font-size: 1.125rem;
+    line-height: 1.7;
+  }
+  
+  .desktop-button {
+    padding: 1rem 2rem;
+    font-size: 1.125rem;
+  }
+}
+
+/* Enhanced Mobile Navigation */
+@media (max-width: 768px) {
+  .mobile-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(10px);
+  }
+  
+  .mobile-nav-toggle {
+    display: block;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .mobile-nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(15, 23, 42, 0.98);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(6, 182, 212, 0.3);
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+  }
+  
+  .mobile-nav-menu.open {
+    transform: translateY(0);
+  }
+  
+  .mobile-nav-link {
+    display: block;
+    padding: 1rem;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s ease;
+  }
+  
+  .mobile-nav-link:hover {
+    background: rgba(6, 182, 212, 0.1);
+  }
+}
+
+/* Enhanced Tablet Support */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .tablet-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+  }
+  
+  .tablet-nav-links {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .tablet-nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .tablet-nav-link:hover {
+    color: #06b6d4;
+  }
+}
+
+/* Enhanced Desktop Support */
+@media (min-width: 1025px) {
+  .desktop-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 3rem;
+  }
+  
+  .desktop-nav-links {
+    display: flex;
+    gap: 3rem;
+  }
+  
+  .desktop-nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .desktop-nav-link:hover {
+    color: #06b6d4;
+  }
+}
+
+/* Enhanced Service Cards Responsive Design */
+@media (max-width: 640px) {
+  .service-card {
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border-radius: 0.75rem;
+  }
+  
+  .service-card-title {
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .service-card-description {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+  
+  .service-card-features {
+    font-size: 0.75rem;
+    margin-bottom: 1rem;
+  }
+  
+  .service-card-pricing {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .service-card {
+    padding: 1.5rem;
+    margin: 1rem;
+    border-radius: 1rem;
+  }
+  
+  .service-card-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .service-card-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+  }
+  
+  .service-card-features {
+    font-size: 0.875rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  .service-card-pricing {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .service-card {
+    padding: 2rem;
+    margin: 1.5rem;
+    border-radius: 1.25rem;
+  }
+  
+  .service-card-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .service-card-description {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+  }
+  
+  .service-card-features {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .service-card-pricing {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Enhanced Footer Responsive Design */
+@media (max-width: 640px) {
+  .footer {
+    padding: 2rem 1rem;
+  }
+  
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .footer-section {
+    margin-bottom: 2rem;
+  }
+  
+  .footer-section-title {
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+  }
+  
+  .footer-link {
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .footer {
+    padding: 3rem 2rem;
+  }
+  
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+  
+  .footer-section {
+    margin-bottom: 2.5rem;
+  }
+  
+  .footer-section-title {
+    font-size: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  .footer-link {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .footer {
+    padding: 4rem 3rem;
+  }
+  
+  .footer-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+  }
+  
+  .footer-section {
+    margin-bottom: 3rem;
+  }
+  
+  .footer-section-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .footer-link {
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Enhanced Button Responsive Design */
+@media (max-width: 640px) {
+  .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+    border-radius: 0.5rem;
+  }
+  
+  .btn-lg {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    border-radius: 0.75rem;
+  }
+  
+  .btn-sm {
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+    border-radius: 0.375rem;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .btn {
+    padding: 0.875rem 1.75rem;
+    font-size: 1rem;
+    border-radius: 0.625rem;
+  }
+  
+  .btn-lg {
+    padding: 1.125rem 2.25rem;
+    font-size: 1.125rem;
+    border-radius: 0.875rem;
+  }
+  
+  .btn-sm {
+    padding: 0.625rem 1.25rem;
+    font-size: 0.875rem;
+    border-radius: 0.5rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .btn {
+    padding: 1rem 2rem;
+    font-size: 1.125rem;
+    border-radius: 0.75rem;
+  }
+  
+  .btn-lg {
+    padding: 1.25rem 2.5rem;
+    font-size: 1.25rem;
+    border-radius: 1rem;
+  }
+  
+  .btn-sm {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 0.625rem;
+  }
+}
+
+/* Enhanced Form Responsive Design */
+@media (max-width: 640px) {
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .form-label {
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .form-input {
+    padding: 0.75rem;
+    font-size: 0.875rem;
+    border-radius: 0.5rem;
+  }
+  
+  .form-textarea {
+    padding: 0.75rem;
+    font-size: 0.875rem;
+    border-radius: 0.5rem;
+    min-height: 120px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .form-group {
+    margin-bottom: 1.25rem;
+  }
+  
+  .form-label {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .form-input {
+    padding: 0.875rem;
+    font-size: 1rem;
+    border-radius: 0.625rem;
+  }
+  
+  .form-textarea {
+    padding: 0.875rem;
+    font-size: 1rem;
+    border-radius: 0.625rem;
+    min-height: 150px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-label {
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+  }
+  
+  .form-input {
+    padding: 1rem;
+    font-size: 1.125rem;
+    border-radius: 0.75rem;
+  }
+  
+  .form-textarea {
+    padding: 1rem;
+    font-size: 1.125rem;
+    border-radius: 0.75rem;
+    min-height: 180px;
+  }
+}
+
+/* Enhanced Typography Responsive Design */
+@media (max-width: 640px) {
+  .text-xs { font-size: 0.75rem; }
+  .text-sm { font-size: 0.875rem; }
+  .text-base { font-size: 1rem; }
+  .text-lg { font-size: 1.125rem; }
+  .text-xl { font-size: 1.25rem; }
+  .text-2xl { font-size: 1.5rem; }
+  .text-3xl { font-size: 1.875rem; }
+  .text-4xl { font-size: 2.25rem; }
+  .text-5xl { font-size: 3rem; }
+  .text-6xl { font-size: 3.75rem; }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .text-xs { font-size: 0.75rem; }
+  .text-sm { font-size: 0.875rem; }
+  .text-base { font-size: 1rem; }
+  .text-lg { font-size: 1.125rem; }
+  .text-xl { font-size: 1.25rem; }
+  .text-2xl { font-size: 1.5rem; }
+  .text-3xl { font-size: 1.875rem; }
+  .text-4xl { font-size: 2.25rem; }
+  .text-5xl { font-size: 3rem; }
+  .text-6xl { font-size: 3.75rem; }
+}
+
+@media (min-width: 1025px) {
+  .text-xs { font-size: 0.75rem; }
+  .text-sm { font-size: 0.875rem; }
+  .text-base { font-size: 1rem; }
+  .text-lg { font-size: 1.125rem; }
+  .text-xl { font-size: 1.25rem; }
+  .text-2xl { font-size: 1.5rem; }
+  .text-3xl { font-size: 1.875rem; }
+  .text-4xl { font-size: 2.25rem; }
+  .text-5xl { font-size: 3rem; }
+  .text-6xl { font-size: 3.75rem; }
+}
+
+/* Enhanced Spacing Responsive Design */
+@media (max-width: 640px) {
+  .p-1 { padding: 0.25rem; }
+  .p-2 { padding: 0.5rem; }
+  .p-3 { padding: 0.75rem; }
+  .p-4 { padding: 1rem; }
+  .p-5 { padding: 1.25rem; }
+  .p-6 { padding: 1.5rem; }
+  .p-8 { padding: 2rem; }
+  .p-10 { padding: 2.5rem; }
+  .p-12 { padding: 3rem; }
+  .p-16 { padding: 4rem; }
+  .p-20 { padding: 5rem; }
+  .p-24 { padding: 6rem; }
+  .p-32 { padding: 8rem; }
+  .p-40 { padding: 10rem; }
+  .p-48 { padding: 12rem; }
+  .p-56 { padding: 14rem; }
+  .p-64 { padding: 16rem; }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .p-1 { padding: 0.25rem; }
+  .p-2 { padding: 0.5rem; }
+  .p-3 { padding: 0.75rem; }
+  .p-4 { padding: 1rem; }
+  .p-5 { padding: 1.25rem; }
+  .p-6 { padding: 1.5rem; }
+  .p-8 { padding: 2rem; }
+  .p-10 { padding: 2.5rem; }
+  .p-12 { padding: 3rem; }
+  .p-16 { padding: 4rem; }
+  .p-20 { padding: 5rem; }
+  .p-24 { padding: 6rem; }
+  .p-32 { padding: 8rem; }
+  .p-40 { padding: 10rem; }
+  .p-48 { padding: 12rem; }
+  .p-56 { padding: 14rem; }
+  .p-64 { padding: 16rem; }
+}
+
+@media (min-width: 1025px) {
+  .p-1 { padding: 0.25rem; }
+  .p-2 { padding: 0.5rem; }
+  .p-3 { padding: 0.75rem; }
+  .p-4 { padding: 1rem; }
+  .p-5 { padding: 1.25rem; }
+  .p-6 { padding: 1.5rem; }
+  .p-8 { padding: 2rem; }
+  .p-10 { padding: 2.5rem; }
+  .p-12 { padding: 3rem; }
+  .p-16 { padding: 4rem; }
+  .p-20 { padding: 5rem; }
+  .p-24 { padding: 6rem; }
+  .p-32 { padding: 8rem; }
+  .p-40 { padding: 10rem; }
+  .p-48 { padding: 12rem; }
+  .p-56 { padding: 14rem; }
+  .p-64 { padding: 16rem; }
+}
+
+/* Enhanced Margin Responsive Design */
+@media (max-width: 640px) {
+  .m-1 { margin: 0.25rem; }
+  .m-2 { margin: 0.5rem; }
+  .m-3 { margin: 0.75rem; }
+  .m-4 { margin: 1rem; }
+  .m-5 { margin: 1.25rem; }
+  .m-6 { margin: 1.5rem; }
+  .m-8 { margin: 2rem; }
+  .m-10 { margin: 2.5rem; }
+  .m-12 { margin: 3rem; }
+  .m-16 { margin: 4rem; }
+  .m-20 { margin: 5rem; }
+  .m-24 { margin: 6rem; }
+  .m-32 { margin: 8rem; }
+  .m-40 { margin: 10rem; }
+  .m-48 { margin: 12rem; }
+  .m-56 { margin: 14rem; }
+  .m-64 { margin: 16rem; }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .m-1 { margin: 0.25rem; }
+  .m-2 { margin: 0.5rem; }
+  .m-3 { margin: 0.75rem; }
+  .m-4 { margin: 1rem; }
+  .m-5 { margin: 1.25rem; }
+  .m-6 { margin: 1.5rem; }
+  .m-8 { margin: 2rem; }
+  .m-10 { margin: 2.5rem; }
+  .m-12 { margin: 3rem; }
+  .m-16 { margin: 4rem; }
+  .m-20 { margin: 5rem; }
+  .m-24 { margin: 6rem; }
+  .m-32 { margin: 8rem; }
+  .m-40 { margin: 10rem; }
+  .m-48 { margin: 12rem; }
+  .m-56 { margin: 14rem; }
+  .m-64 { margin: 16rem; }
+}
+
+@media (min-width: 1025px) {
+  .m-1 { margin: 0.25rem; }
+  .m-2 { margin: 0.5rem; }
+  .m-3 { margin: 0.75rem; }
+  .m-4 { margin: 1rem; }
+  .m-5 { margin: 1.25rem; }
+  .m-6 { margin: 1.5rem; }
+  .m-8 { margin: 2rem; }
+  .m-10 { margin: 2.5rem; }
+  .m-12 { margin: 3rem; }
+  .m-16 { margin: 4rem; }
+  .m-20 { margin: 5rem; }
+  .m-24 { margin: 6rem; }
+  .m-32 { margin: 8rem; }
+  .m-40 { margin: 10rem; }
+  .m-48 { margin: 12rem; }
+  .m-56 { margin: 14rem; }
+  .m-64 { margin: 16rem; }
+}

@@ -287,6 +287,27 @@ const Navigation: React.FC = () => {
               Services
             </Link>
             <Link 
+              to="/micro-saas" 
+              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium hover:neon-glow-cyan"
+              onClick={closeAllMenus}
+            >
+              Micro SAAS
+            </Link>
+            <Link 
+              to="/ai-services" 
+              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium hover:neon-glow-cyan"
+              onClick={closeAllMenus}
+            >
+              AI Services
+            </Link>
+            <Link 
+              to="/it-services" 
+              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium hover:neon-glow-cyan"
+              onClick={closeAllMenus}
+            >
+              IT Services
+            </Link>
+            <Link 
               to="/pricing" 
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium hover:neon-glow-cyan"
               onClick={closeAllMenus}
@@ -422,6 +443,27 @@ const Navigation: React.FC = () => {
                 onClick={closeAllMenus}
               >
                 Services
+              </Link>
+              <Link 
+                to="/micro-saas" 
+                className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
+                onClick={closeAllMenus}
+              >
+                Micro SAAS
+              </Link>
+              <Link 
+                to="/ai-services" 
+                className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
+                onClick={closeAllMenus}
+              >
+                AI Services
+              </Link>
+              <Link 
+                to="/it-services" 
+                className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
+                onClick={closeAllMenus}
+              >
+                IT Services
               </Link>
               <Link 
                 to="/pricing" 

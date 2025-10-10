@@ -713,6 +713,206 @@ export default function ITServicesPage() {
           popular: true
         }
       ]
+    },
+    {
+      category: 'Advanced AI & Machine Learning Infrastructure',
+      icon: Brain,
+      color: 'text-purple-400',
+      bgColor: 'bg-purple-500/10',
+      services: [
+        {
+          name: 'AI Infrastructure Setup Pro',
+          description: 'Complete AI infrastructure with GPU clusters, ML pipelines, and model deployment',
+          features: ['GPU Cluster Setup', 'ML Pipeline Development', 'Model Deployment', 'Data Processing', 'Training Infrastructure', 'Monitoring Systems', 'Scalability Planning', 'Performance Optimization'],
+          pricing: 'Starting at $45,000',
+          trial: 'Free AI assessment',
+          timeline: '10-20 weeks',
+          link: 'https://ziontechgroup.com/ai-infrastructure-pro',
+          popular: true
+        },
+        {
+          name: 'Neural Network Optimization Pro',
+          description: 'Advanced neural network optimization with automated architecture search and performance tuning',
+          features: ['Architecture Search', 'Performance Tuning', 'Hyperparameter Optimization', 'Model Compression', 'Quantization', 'Pruning', 'Training Acceleration', 'Deployment Optimization'],
+          pricing: 'Starting at $25,000',
+          trial: 'Free optimization assessment',
+          timeline: '8-16 weeks',
+          link: 'https://ziontechgroup.com/neural-network-optimization-pro',
+          popular: true
+        },
+        {
+          name: 'AI Model Deployment & Management Pro',
+          description: 'Production-ready AI model deployment with monitoring, scaling, and lifecycle management',
+          features: ['Model Deployment', 'A/B Testing', 'Performance Monitoring', 'Auto-scaling', 'Version Control', 'Rollback Capabilities', 'API Management', 'Cost Optimization'],
+          pricing: 'Starting at $20,000',
+          trial: 'Free deployment assessment',
+          timeline: '6-12 weeks',
+          link: 'https://ziontechgroup.com/ai-model-deployment-pro',
+          popular: true
+        },
+        {
+          name: 'Quantum Machine Learning Integration Pro',
+          description: 'Quantum-enhanced machine learning with exponential speedup and advanced algorithms',
+          features: ['Quantum ML Algorithms', 'Hybrid Classical-Quantum', 'Exponential Speedup', 'Advanced Optimization', 'Quantum Simulation', 'Performance Monitoring', 'Custom Development', 'Training & Support'],
+          pricing: 'Starting at $60,000',
+          trial: 'Free quantum ML assessment',
+          timeline: '16-24 weeks',
+          link: 'https://ziontechgroup.com/quantum-ml-integration-pro',
+          popular: false
+        }
+      ]
+    },
+    {
+      category: 'Space Technology & Aerospace IT',
+      icon: Rocket,
+      color: 'text-indigo-400',
+      bgColor: 'bg-indigo-500/10',
+      services: [
+        {
+          name: 'Satellite Communication Systems Pro',
+          description: 'Advanced satellite communication infrastructure with ground stations and network management',
+          features: ['Ground Station Setup', 'Satellite Communication', 'Network Management', 'Signal Processing', 'Antenna Systems', 'Monitoring & Control', 'Security Implementation', 'Maintenance'],
+          pricing: 'Starting at $100,000',
+          trial: 'Free space tech consultation',
+          timeline: '20-40 weeks',
+          link: 'https://ziontechgroup.com/satellite-communication-pro',
+          popular: false
+        },
+        {
+          name: 'Space Mission Control Systems Pro',
+          description: 'Mission control infrastructure for space operations with real-time monitoring and control',
+          features: ['Mission Control Center', 'Real-time Monitoring', 'Command & Control', 'Data Processing', 'Visualization Systems', 'Alert Systems', 'Backup Systems', 'Training'],
+          pricing: 'Starting at $150,000',
+          trial: 'Free mission control assessment',
+          timeline: '24-48 weeks',
+          link: 'https://ziontechgroup.com/space-mission-control-pro',
+          popular: false
+        },
+        {
+          name: 'Space Debris Tracking System Pro',
+          description: 'AI-powered space debris tracking and collision avoidance system',
+          features: ['Debris Tracking', 'Collision Prediction', 'Real-time Monitoring', 'Orbital Analysis', 'Risk Assessment', 'Alert System', 'Historical Data', 'API Integration'],
+          pricing: 'Starting at $80,000',
+          trial: 'Free debris tracking demo',
+          timeline: '16-32 weeks',
+          link: 'https://ziontechgroup.com/space-debris-tracking-pro',
+          popular: true
+        }
+      ]
+    },
+    {
+      category: 'Biotechnology & Life Sciences IT',
+      icon: Stethoscope,
+      color: 'text-green-400',
+      bgColor: 'bg-green-500/10',
+      services: [
+        {
+          name: 'Bioinformatics Infrastructure Pro',
+          description: 'High-performance computing infrastructure for bioinformatics and genomic analysis',
+          features: ['HPC Cluster Setup', 'Genomic Data Processing', 'Bioinformatics Tools', 'Data Storage', 'Analysis Pipelines', 'Visualization Tools', 'Security & Compliance', 'Training'],
+          pricing: 'Starting at $60,000',
+          trial: 'Free bioinformatics assessment',
+          timeline: '12-24 weeks',
+          link: 'https://ziontechgroup.com/bioinformatics-infrastructure-pro',
+          popular: true
+        },
+        {
+          name: 'Laboratory Information Management Pro',
+          description: 'Comprehensive LIMS solution with sample tracking, data management, and compliance',
+          features: ['Sample Tracking', 'Data Management', 'Compliance Tools', 'Quality Control', 'Reporting', 'Integration', 'Security', 'Training'],
+          pricing: 'Starting at $35,000',
+          trial: 'Free LIMS consultation',
+          timeline: '10-20 weeks',
+          link: 'https://ziontechgroup.com/lims-solution-pro',
+          popular: true
+        },
+        {
+          name: 'Molecular Modeling Infrastructure Pro',
+          description: 'High-performance computing for molecular modeling and drug discovery',
+          features: ['HPC Setup', 'Molecular Modeling Software', 'GPU Acceleration', 'Data Processing', 'Visualization', 'Collaboration Tools', 'Security', 'Support'],
+          pricing: 'Starting at $50,000',
+          trial: 'Free molecular modeling demo',
+          timeline: '16-32 weeks',
+          link: 'https://ziontechgroup.com/molecular-modeling-pro',
+          popular: false
+        }
+      ]
+    },
+    {
+      category: 'Advanced Security & Compliance Pro',
+      icon: Shield,
+      color: 'text-red-400',
+      bgColor: 'bg-red-500/10',
+      services: [
+        {
+          name: 'Zero Trust Security Architecture Pro',
+          description: 'Complete zero trust security implementation with identity verification and micro-segmentation',
+          features: ['Identity Verification', 'Micro-segmentation', 'Device Management', 'Access Control', 'Continuous Monitoring', 'Policy Enforcement', 'Compliance Tools', 'Training'],
+          pricing: 'Starting at $40,000',
+          trial: 'Free zero trust assessment',
+          timeline: '10-20 weeks',
+          link: 'https://ziontechgroup.com/zero-trust-security-pro',
+          popular: true
+        },
+        {
+          name: 'Advanced Threat Detection Pro',
+          description: 'AI-powered threat detection with behavioral analysis and automated response',
+          features: ['Behavioral Analysis', 'Threat Detection', 'Automated Response', 'Incident Management', 'Forensics', 'Compliance Reporting', 'Training', 'Support'],
+          pricing: 'Starting at $30,000',
+          trial: 'Free threat assessment',
+          timeline: '8-16 weeks',
+          link: 'https://ziontechgroup.com/advanced-threat-detection-pro',
+          popular: true
+        },
+        {
+          name: 'Compliance Automation Platform Pro',
+          description: 'Automated compliance management for GDPR, HIPAA, SOX, and other regulations',
+          features: ['Compliance Monitoring', 'Automated Reporting', 'Policy Management', 'Audit Support', 'Risk Assessment', 'Documentation', 'Training', 'Support'],
+          pricing: 'Starting at $25,000',
+          trial: 'Free compliance audit',
+          timeline: '8-16 weeks',
+          link: 'https://ziontechgroup.com/compliance-automation-pro',
+          popular: true
+        }
+      ]
+    },
+    {
+      category: 'Green Technology & Sustainability Pro',
+      icon: Globe,
+      color: 'text-emerald-400',
+      bgColor: 'bg-emerald-500/10',
+      services: [
+        {
+          name: 'Green IT Infrastructure Pro',
+          description: 'Sustainable IT infrastructure with energy-efficient hardware and renewable energy integration',
+          features: ['Energy-efficient Hardware', 'Renewable Energy', 'Carbon Tracking', 'Waste Reduction', 'Green Data Centers', 'Sustainability Reporting', 'Compliance', 'Training'],
+          pricing: 'Starting at $60,000',
+          trial: 'Free green IT assessment',
+          timeline: '12-24 weeks',
+          link: 'https://ziontechgroup.com/green-it-infrastructure-pro',
+          popular: true
+        },
+        {
+          name: 'Carbon Footprint Management Pro',
+          description: 'AI-powered carbon footprint tracking and reduction strategies',
+          features: ['Carbon Tracking', 'Emission Analysis', 'Reduction Strategies', 'Reporting', 'Compliance', 'Sustainability Planning', 'Monitoring', 'Support'],
+          pricing: 'Starting at $20,000',
+          trial: 'Free carbon assessment',
+          timeline: '6-12 weeks',
+          link: 'https://ziontechgroup.com/carbon-footprint-management-pro',
+          popular: true
+        },
+        {
+          name: 'Sustainable Data Centers Pro',
+          description: 'Eco-friendly data center design and implementation with renewable energy',
+          features: ['Green Data Center Design', 'Renewable Energy', 'Cooling Optimization', 'Energy Monitoring', 'Waste Reduction', 'Sustainability Metrics', 'Compliance', 'Maintenance'],
+          pricing: 'Starting at $150,000',
+          trial: 'Free data center assessment',
+          timeline: '24-48 weeks',
+          link: 'https://ziontechgroup.com/sustainable-data-centers-pro',
+          popular: false
+        }
+      ]
     }
       ]
     }
