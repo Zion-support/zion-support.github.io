@@ -78,7 +78,14 @@ interface FormStatus {
     'Other'
   ];
 
-              </label>
+  return (
+    <div className="max-w-2xl mx-auto p-6">
+      <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Get In Touch</h2>
+      <form onSubmit={handleSubmit} className="space-y-6">
+        <div>
+          <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+            Full Name
+          </label>
               <input
                 type="text"
                 id="name"
@@ -89,9 +96,9 @@ interface FormStatus {
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
                 placeholder="Your full name"
               />
-            </div>
+        </div>
 
-            <div>
+        <div>
               <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                 Email Address *
               </label>
