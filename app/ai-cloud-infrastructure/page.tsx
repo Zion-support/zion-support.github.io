@@ -287,6 +287,7 @@ const AICloudInfrastructurePage: React.FC = memo(() => {
       </div>
     </div>
   );
+});
 
 AICloudInfrastructurePage.displayName = 'AICloudInfrastructurePage';
 

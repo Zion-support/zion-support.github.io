@@ -315,6 +315,7 @@ const AISocialMediaScheduler: React.FC = memo(() => {
       </div>
     </div>
   );
+});
 
 AISocialMediaScheduler.displayName = 'AISocialMediaScheduler';
 

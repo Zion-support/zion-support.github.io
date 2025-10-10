@@ -287,6 +287,7 @@ const AICybersecurityPage: React.FC = memo(() => {
       </div>
     </div>
   );
+});
 
 AICybersecurityPage.displayName = 'AICybersecurityPage';
 

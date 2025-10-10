@@ -287,6 +287,7 @@ const AIExpenseTracker: React.FC = memo(() => {
       </div>
     </div>
   );
+});
 
 AIExpenseTracker.displayName = 'AIExpenseTracker';
 

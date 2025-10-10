@@ -290,6 +290,7 @@ const AISentimentAnalyzer: React.FC = memo(() => {
       </div>
     </div>
   );
+});
 
 AISentimentAnalyzer.displayName = 'AISentimentAnalyzer';
 

@@ -161,7 +161,7 @@ const AIVoiceCloningPage: React.FC = () => {
                 <ul className="space-y-2">
                   <li className="flex items-center text-sm text-gray-600">
                     <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    <1 second generation
+                    &lt;1 second generation
                   </li>
                   <li className="flex items-center text-sm text-gray-600">
                     <CheckCircle className="w-4 h-4 text-green-500 mr-2" />

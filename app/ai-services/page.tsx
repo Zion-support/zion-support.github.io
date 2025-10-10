@@ -1181,7 +1181,7 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
   }
 
   return (
-
+    <>
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 relative overflow-hidden">
       {/* Futuristic Background Effects */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(0,255,255,0.1)_0%,transparent_50%)] animate-pulse" />
@@ -1407,6 +1407,7 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
         </div>
       </div>
     </div>
+    </>
   );
 };
 
