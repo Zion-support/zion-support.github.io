@@ -32,6 +32,7 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
     fontSize: 'normal',
     screenReader: false,
     keyboardNavigation: false
+  });
 
   // Detect user preferences
   useEffect(() => {

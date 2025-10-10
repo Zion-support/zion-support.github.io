@@ -103,48 +103,48 @@ const App: React.FC = memo(() => {
             <AccessibilityEnhancer>
               <EnhancedAccessibility>
                 <AppWithPerformanceMonitoring>
-                <SEOHead />
-                <Router>
-                <div className="min-h-screen bg-white overflow-x-hidden">
-                  <SkipLink to="#main-content">Skip to main content</SkipLink>
-                  <Navigation />
-                  <Breadcrumb />
-                  <main id="main-content" className="w-full">
-                    <Suspense fallback={<PageLoader message="Loading Zion Tech Group..." />}>
-                    <Routes>
-<Route path="/" element={<HomePage />} />
-                      <Route path="/about" element={<AboutPage />} />
-                      <Route path="/contact" element={<ContactPage />} />
-                      <Route path="/pricing" element={<PricingPage />} />
-                      <Route path="/ai-services" element={<AIServicesPage />} />
-                      <Route path="/it-services" element={<ITServicesPage />} />
-                      <Route path="/micro-saas" element={<MicroSaasPage />} />
-                      <Route path="/blog" element={<BlogPage />} />
-                      <Route path="/case-studies" element={<CaseStudiesPage />} />
-                      <Route path="/team" element={<TeamPage />} />
-                      <Route path="/careers" element={<CareersPage />} />
-                      <Route path="/privacy" element={<PrivacyPage />} />
-                      <Route path="/terms" element={<TermsPage />} />
-                      <Route path="/cookies" element={<CookiesPage />} />
-                      <Route path="/docs" element={<DocsPage />} />
-                      <Route path="/api-docs" element={<ApiDocsPage />} />
-                      <Route path="/support" element={<SupportPage />} />
-                      <Route path="/status" element={<StatusPage />} />
-                      <Route path="/demo" element={<DemoPage />} />
-                      <Route path="/consultation" element={<ConsultationPage />} />
-                      <Route path="/services" element={<ServicesPage />} />
-                      <Route path="/ai-ops" element={<AIOpsPage />} />
-                      <Route path="/healthcare-it" element={<HealthcareITPage />} />
-                      <Route path="/financial-it" element={<FinancialITPage />} />
-                      <Route path="/edge-computing" element={<EdgeComputingPage />} />
-                      <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
-                      <Route path="/iot-platform" element={<IoTPlatformPage />} />
-                    </Routes>
-                  </Suspense>
-                  </main>
-                  <Footer />
-                </div>
-                </Router>
+                  <SEOHead />
+                  <Router>
+                    <div className="min-h-screen bg-white overflow-x-hidden">
+                      <SkipLink to="#main-content">Skip to main content</SkipLink>
+                      <Navigation />
+                      <Breadcrumb />
+                      <main id="main-content" className="w-full">
+                        <Suspense fallback={<PageLoader message="Loading Zion Tech Group..." />}>
+                          <Routes>
+                            <Route path="/" element={<HomePage />} />
+                            <Route path="/about" element={<AboutPage />} />
+                            <Route path="/contact" element={<ContactPage />} />
+                            <Route path="/pricing" element={<PricingPage />} />
+                            <Route path="/ai-services" element={<AIServicesPage />} />
+                            <Route path="/it-services" element={<ITServicesPage />} />
+                            <Route path="/micro-saas" element={<MicroSaasPage />} />
+                            <Route path="/blog" element={<BlogPage />} />
+                            <Route path="/case-studies" element={<CaseStudiesPage />} />
+                            <Route path="/team" element={<TeamPage />} />
+                            <Route path="/careers" element={<CareersPage />} />
+                            <Route path="/privacy" element={<PrivacyPage />} />
+                            <Route path="/terms" element={<TermsPage />} />
+                            <Route path="/cookies" element={<CookiesPage />} />
+                            <Route path="/docs" element={<DocsPage />} />
+                            <Route path="/api-docs" element={<ApiDocsPage />} />
+                            <Route path="/support" element={<SupportPage />} />
+                            <Route path="/status" element={<StatusPage />} />
+                            <Route path="/demo" element={<DemoPage />} />
+                            <Route path="/consultation" element={<ConsultationPage />} />
+                            <Route path="/services" element={<ServicesPage />} />
+                            <Route path="/ai-ops" element={<AIOpsPage />} />
+                            <Route path="/healthcare-it" element={<HealthcareITPage />} />
+                            <Route path="/financial-it" element={<FinancialITPage />} />
+                            <Route path="/edge-computing" element={<EdgeComputingPage />} />
+                            <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
+                            <Route path="/iot-platform" element={<IoTPlatformPage />} />
+                          </Routes>
+                        </Suspense>
+                      </main>
+                      <Footer />
+                    </div>
+                  </Router>
                 </AppWithPerformanceMonitoring>
               </EnhancedAccessibility>
             </AccessibilityEnhancer>
@@ -153,7 +153,7 @@ const App: React.FC = memo(() => {
       </HelmetProvider>
     </ErrorBoundary>
   );
-});
+};
 
 App.displayName = 'App';
 
