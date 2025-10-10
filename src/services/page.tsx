@@ -1,185 +1,41 @@
 import React from 'react';
-
-
-
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChart, MessageSquare, Eye, Phone, Lock, Database, Cloud, Code, Settings, BarChart3, ShoppingCart, Car, Target, Globe, Cpu, Smartphone, FileText, Bot, Music, Video, CreditCard, Train, Home, Heart, GraduationCap } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
+import { microSaasServices, aiServices, itServices, specializedServices } from '../data/2025-comprehensive-real-services-enhanced';
 
 const ServicesPage: React.FC = () => {
-  const aiServices = [
-    {
-      icon: Brain,
-      title: 'AI Services',
-      description: 'Comprehensive AI solutions for every business need',
-      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
-      price: 'Starting at $1,500/month',
-      popular: true,
-      link: '/ai-services'
-    },
-    {
-      icon: Zap,
-      title: 'AI Automation',
-      description: 'Intelligent process automation and workflow optimization',
-      features: ['Workflow Automation', 'Smart Scheduling', 'Process Optimization', 'Task Management'],
-      price: 'Starting at $2,000/month',
-      popular: false,
-      link: '/ai-automation'
-    },
-    {
-      icon: BarChart,
-      title: 'AI Data Analytics',
-      description: 'Transform data into actionable insights with AI',
-      features: ['Predictive Analytics', 'Data Visualization', 'Business Intelligence', 'Real-time Insights'],
-      price: 'Starting at $1,800/month',
-      popular: false,
-      link: '/ai-data-analytics'
-    },
-    {
-      icon: MessageSquare,
-      title: 'AI Customer Support',
-      description: '24/7 AI-powered customer service solutions',
-      features: ['Chatbots', 'Voice Assistants', 'Ticket Management', 'Sentiment Analysis'],
-      price: 'Starting at $299/month',
-      popular: true,
-      link: '/ai-customer-support'
-    },
-    {
-      icon: Target,
-      title: 'AI Marketing',
-      description: 'Revolutionary AI-powered marketing automation',
-      features: ['Ad Optimization', 'Content Generation', 'Lead Scoring', 'Campaign Management'],
-      price: 'Starting at $199/month',
-      popular: true,
-      link: '/ai-marketing'
-    },
-    {
-      icon: Eye,
-      title: 'AI Computer Vision',
-      description: 'Advanced computer vision and image processing',
-      features: ['Object Detection', 'Image Recognition', 'Quality Control', 'Facial Recognition'],
-      price: 'Starting at $1,200/month',
-      popular: false,
-      link: '/ai-computer-vision'
-    }
-  ];
+  const aiServicesData = aiServices.map(service => ({
+    icon: Brain,
+    title: service.name,
+    description: service.description,
+    features: service.features.slice(0, 4),
+    price: `Starting at $${service.pricing.starter.price.toLocaleString()}/month`,
+    popular: service.pricing.starter.price < 3000,
+    link: service.website.replace('https://ziontechgroup.com', '')
+  }));
 
-  const itServices = [
-    {
-      icon: Database,
-      title: 'Database Management',
-      description: 'Comprehensive database solutions and optimization',
-      features: ['Database Design', 'Performance Tuning', 'Backup & Recovery', 'Monitoring'],
-      price: 'Starting at $1,000/month',
-      popular: false,
-      link: '/database-management'
-    },
-    {
-      icon: Lock,
-      title: 'Cybersecurity',
-      description: 'Comprehensive security solutions for your business',
-      features: ['Security Audits', 'Penetration Testing', 'Compliance', 'Incident Response'],
-      price: 'Starting at $1,500/month',
-      popular: true,
-      link: '/cybersecurity'
-    },
-    {
-      icon: Cloud,
-      title: 'Cloud Services',
-      description: 'Scalable cloud infrastructure and migration',
-      features: ['Cloud Migration', 'Infrastructure Setup', 'Monitoring', 'Cost Optimization'],
-      price: 'Starting at $800/month',
-      popular: true,
-      link: '/cloud-services'
-    },
-    {
-      icon: Code,
-      title: 'DevOps & CI/CD',
-      description: 'Automated development and deployment pipelines',
-      features: ['CI/CD Setup', 'Container Orchestration', 'Monitoring', 'Security Scanning'],
-      price: 'Starting at $1,200/month',
-      popular: false,
-      link: '/devops-cicd'
-    },
-    {
-      icon: Settings,
-      title: 'System Administration',
-      description: 'Complete system management and maintenance',
-      features: ['Server Management', 'Performance Tuning', 'Updates', 'Troubleshooting'],
-      price: 'Starting at $600/month',
-      popular: false,
-      link: '/system-administration'
-    },
-    {
-      icon: Globe,
-      title: 'Network Solutions',
-      description: 'Enterprise network infrastructure and security',
-      features: ['Network Design', 'Security Implementation', 'Monitoring', 'Optimization'],
-      price: 'Starting at $900/month',
-      popular: false,
-      link: '/network-solutions'
-    }
-  ];
+  const itServicesData = itServices.map(service => ({
+    icon: Database,
+    title: service.name,
+    description: service.description,
+    features: service.features.slice(0, 4),
+    price: `Starting at $${service.pricing.starter.price.toLocaleString()}/month`,
+    popular: service.pricing.starter.price < 2000,
+    link: service.website.replace('https://ziontechgroup.com', '')
+  }));
 
-  const microSaasServices = [
-    {
-      icon: BarChart3,
-      title: 'AI Analytics Dashboard',
-      description: 'Real-time business intelligence and analytics',
-      features: ['Custom Dashboards', 'Real-time Data', 'Predictive Insights', 'Export Reports'],
-      price: '$79/month',
-      popular: true,
-      link: '/ai-analytics-dashboard'
-    },
-    {
-      icon: ShoppingCart,
-      title: 'AI E-commerce Assistant',
-      description: 'Complete e-commerce automation and optimization',
-      features: ['Inventory Management', 'Order Processing', 'Customer Service', 'Analytics'],
-      price: '$99/month',
-      popular: true,
-      link: '/ai-ecommerce-solutions'
-    },
-    {
-      icon: Smartphone,
-      title: 'AI Mobile App Builder',
-      description: 'No-code mobile app development with AI',
-      features: ['Drag & Drop Builder', 'AI Code Generation', 'App Store Publishing', 'Analytics'],
-      price: '$149/month',
-      popular: false,
-      link: '/ai-mobile-app-development'
-    },
-    {
-      icon: FileText,
-      title: 'AI Document Processor',
-      description: 'Intelligent document processing and management',
-      features: ['OCR Processing', 'Data Extraction', 'Document Classification', 'Workflow Automation'],
-      price: '$59/month',
-      popular: true,
-      link: '/ai-document-processing'
-    },
-    {
-      icon: Bot,
-      title: 'AI Chatbot Builder',
-      description: 'Create intelligent chatbots for any platform',
-      features: ['Visual Builder', 'Multi-platform', 'Analytics', 'Custom Training'],
-      price: '$49/month',
-      popular: true,
-      link: '/ai-chatbot-builder'
-    },
-    {
-      icon: Music,
-      title: 'AI Content Creator',
-      description: 'AI-powered content generation and optimization',
-      features: ['Blog Writing', 'Social Media', 'Video Scripts', 'SEO Optimization'],
-      price: '$39/month',
-      popular: false,
-      link: '/ai-content-generation'
-    }
-  ];
+  const microSaasServicesData = microSaasServices.map(service => ({
+    icon: BarChart3,
+    title: service.name,
+    description: service.description,
+    features: service.features.slice(0, 4),
+    price: `$${service.pricing.starter.price}/month`,
+    popular: service.pricing.starter.price < 200,
+    link: service.website.replace('https://ziontechgroup.com', '')
+  }));
 
   const benefits = [
     {
@@ -279,7 +135,7 @@ const ServicesPage: React.FC = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {aiServices.map((service, index) => (
+            {aiServicesData.map((service, index) => (
               <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}>
                 {service.popular && (
                   <div className="flex items-center justify-center mb-4">
@@ -328,7 +184,7 @@ const ServicesPage: React.FC = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {itServices.map((service, index) => (
+            {itServicesData.map((service, index) => (
               <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}>
                 {service.popular && (
                   <div className="flex items-center justify-center mb-4">
@@ -377,7 +233,7 @@ const ServicesPage: React.FC = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {microSaasServices.map((service, index) => (
+            {microSaasServicesData.map((service, index) => (
               <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}>
                 {service.popular && (
                   <div className="flex items-center justify-center mb-4">

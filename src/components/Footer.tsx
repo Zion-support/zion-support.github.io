@@ -125,7 +125,7 @@ const Footer: React.FC = memo(() => {
           {/* Company Info */}
           <div className="space-y-6">
             <div>
-              <Link href="/" className="flex items-center space-x-2 group">
+              <Link to="/" className="flex items-center space-x-2 group">
                 <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <span className="text-white font-bold text-lg">Z</span>
                 </div>
@@ -165,7 +165,7 @@ const Footer: React.FC = memo(() => {
               {aiServices.slice(0, 8).map((service, index) => (
                 <li key={index}>
                   <Link 
-                    href={service.url}
+                    to={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
                   >
                     <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -176,7 +176,7 @@ const Footer: React.FC = memo(() => {
               ))}
               <li>
                 <Link 
-                  href="/ai-services"
+                  to="/ai-services"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
                 >
                   View All AI Services →
@@ -192,7 +192,7 @@ const Footer: React.FC = memo(() => {
               {itServices.slice(0, 6).map((service, index) => (
                 <li key={index}>
                   <Link 
-                    href={service.url}
+                    to={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
                   >
                     <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -203,7 +203,7 @@ const Footer: React.FC = memo(() => {
               ))}
               <li>
                 <Link 
-                  href="/it-services"
+                  to="/it-services"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
                 >
                   View All IT Services →
@@ -211,7 +211,7 @@ const Footer: React.FC = memo(() => {
               </li>
               <li>
                 <Link
-                href="/micro-saas"
+                to="/micro-saas"
                 className="text-cyan-400 hover:text-cyan-300 text-sm font-medium flex items-center group"
               >
                 View All Solutions
@@ -234,7 +234,7 @@ const Footer: React.FC = memo(() => {
                   {aiServices.slice(0, 4).map((service, index) => (
                     <Link
                       key={index}
-                      href={service.url}
+                      to={service.url}
                       className="flex items-center space-x-2 text-gray-300 hover:text-purple-400 transition-colors duration-300 text-sm"
                     >
                       <service.icon className="w-3 h-3" />
@@ -249,7 +249,7 @@ const Footer: React.FC = memo(() => {
                   {itServices.slice(0, 4).map((service, index) => (
                     <Link
                       key={index}
-                      href={service.url}
+                      to={service.url}
                       className="flex items-center space-x-2 text-gray-300 hover:text-blue-400 transition-colors duration-300 text-sm"
                     >
                       <service.icon className="w-3 h-3" />
@@ -305,7 +305,7 @@ const Footer: React.FC = memo(() => {
               {companyLinks.map((link, index) => (
                 <li key={index}>
                   <Link 
-                    href={link.url}
+                    to={link.url}
                     className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
                   >
                     {link.name}
@@ -320,7 +320,7 @@ const Footer: React.FC = memo(() => {
               {supportLinks.map((link, index) => (
                 <li key={index}>
                   <Link 
-                    href={link.url}
+                    to={link.url}
                     className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
                   >
                     {link.name}
@@ -332,10 +332,10 @@ const Footer: React.FC = memo(() => {
           <div>
             <h4 className="text-sm font-semibold text-white mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              <li><Link href="/services" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">All Services</Link></li>
-              <li><Link href="/pricing" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Pricing</Link></li>
-              <li><Link href="/demo" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Request Demo</Link></li>
-              <li><Link href="/consultation" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Free Consultation</Link></li>
+              <li><Link to="/services" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">All Services</Link></li>
+              <li><Link to="/pricing" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Pricing</Link></li>
+              <li><Link to="/demo" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Request Demo</Link></li>
+              <li><Link to="/consultation" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Free Consultation</Link></li>
             </ul>
           </div>
           <div>
@@ -363,13 +363,13 @@ const Footer: React.FC = memo(() => {
               © {currentYear} Zion Tech Group. All rights reserved.
             </div>
             <div className="flex space-x-6">
-              <Link href="/privacy" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
+              <Link to="/privacy" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
+              <Link to="/terms" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
                 Terms of Service
               </Link>
-              <Link href="/cookies" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
+              <Link to="/cookies" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
                 Cookie Policy
               </Link>
             </div>

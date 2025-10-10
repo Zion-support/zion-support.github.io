@@ -89,10 +89,9 @@ const DynamicContentShowcase: React.FC = () => {
             <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
               <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mb-4">
                 <feature.icon className="h-6 w-6 text-white" />
-              </div>
-<<<<<<< HEAD
-              <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-              <p className="text-gray-300">{feature.description}</p>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
             </div>
           ))}
         </div>
@@ -131,12 +130,6 @@ const DynamicContentShowcase: React.FC = () => {
           </div>
         </div>
       </div>
-=======
-            ))}
-          </div>
-        </div>
-      </section>
->>>>>>> cursor/website-audit-and-update-with-deployment-758b
     </div>
   );
 };
