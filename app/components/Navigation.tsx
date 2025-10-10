@@ -182,7 +182,7 @@ const Navigation: React.FC = () => {
 
 <<<<<<< HEAD
   const toggleServices = () => {
-    setIsServicesOpen(!isServicesOpen);
+    setServicesOpen(!servicesOpen);
   };
 
   const microSAASServices = [
@@ -231,8 +231,11 @@ const Navigation: React.FC = () => {
     { name: 'Robotics Solutions', href: '/robotics', icon: Settings, price: '$3,500/mo' }
   ];
 
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-a9e4
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-55ba
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg border-b border-cyan-400/20' : 'bg-transparent'

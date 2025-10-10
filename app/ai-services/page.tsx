@@ -51,7 +51,13 @@ const AIServicesPage: React.FC = () => {
         'Automated campaign optimization',
         'Real-time performance tracking',
         'Predictive customer behavior'
+<<<<<<< HEAD
       ],
+=======
+      ]
+    },
+    {
+>>>>>>> cursor/analyze-improve-and-deploy-application-55ba
       category: 'AI Automation & Workflow',
       icon: Zap,
       color: 'text-yellow-400',
@@ -289,7 +295,11 @@ const AIServicesPage: React.FC = () => {
           link: 'https://ziontechgroup.com/ai-quantum-computing',
           popular: false
         }
+<<<<<<< HEAD
       ],
+=======
+      ]
+>>>>>>> cursor/analyze-improve-and-deploy-application-55ba
       icon: Target,
       color: 'text-purple-600',
       bgColor: 'bg-purple-50'
@@ -299,11 +309,14 @@ const AIServicesPage: React.FC = () => {
       name: 'AI Document Processing',
       description: 'Intelligent document processing and data extraction with OCR and NLP',
       price: '$799/month',
+<<<<<<< HEAD
       features: [
         'OCR Technology',
         'Data Extraction',
         'Document Classification',
         'Automated Processing'
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-55ba
       ]
     },
     {
@@ -362,6 +375,46 @@ const AIServicesPage: React.FC = () => {
                 service.popular ? 'ring-2 ring-purple-500' : ''
               }`}
             >
+<<<<<<< HEAD
+=======
+              {category}
+            </button>
+          ))}
+        </div>
+
+        {/* Services Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {aiServices.map((service) => (
+            <div key={service.id} className="cyber-card hologram-card group hover:scale-105 transition-all duration-300">
+              {/* Service Header */}
+              <div className="flex items-start justify-between mb-4">
+                <div className={`p-3 rounded-lg bg-gradient-to-r ${service.color} text-white`}>
+                  {service.icon}
+                </div>
+                <div className="flex items-center space-x-2">
+                  {service.popular && (
+                    <span className="px-2 py-1 bg-orange-500 text-white text-xs rounded-full flex items-center">
+                      <Star className="w-3 h-3 mr-1" />
+                      Popular
+                    </span>
+                  )}
+                  <div className="flex items-center text-yellow-400">
+                    <Star className="w-4 h-4 fill-current" />
+                    <span className="ml-1 text-sm font-medium">{service.rating}</span>
+      {/* Services Grid */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {aiServices.map((service) => (
+            <div key={service.id} className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 group">
+              {service.popular && (
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                    Most Popular
+                  </span>
+                </div>
+              )}
+              
+>>>>>>> cursor/analyze-improve-and-deploy-application-55ba
               <div className="p-8">
                 <div className={`inline-flex items-center justify-center w-16 h-16 rounded-xl ${service.bgColor} mb-6`}>
                   <service.icon className={`h-8 w-8 ${service.color}`} />
@@ -426,6 +479,65 @@ const AIServicesPage: React.FC = () => {
                   ))}
                 </ul>
               </div>
+<<<<<<< HEAD
+=======
+            ) : (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {category.services.map((service, serviceIndex) => (
+                  <div key={serviceIndex} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-700/50 transition-all duration-300 relative">
+                      {service.popular && (
+                        <div className="absolute -top-2 -right-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+                          Popular
+                        </div>
+                      )}
+                      <h4 className="text-xl font-bold text-white mb-3">{service.name}</h4>
+                      <p className="text-gray-300 mb-4">{service.description}</p>
+                      <div className="space-y-3 mb-6">
+                        <h5 className="text-sm font-semibold text-cyan-400">Key Features:</h5>
+                        <ul className="space-y-1">
+                          {service.features.map((feature, featureIndex) => (
+                            <li key={featureIndex} className="flex items-center space-x-2 text-sm text-gray-300">
+                              <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+                              <span>{feature}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      <div className="space-y-2 mb-6">
+                        <div className="flex justify-between items-center">
+                          <span className="text-sm text-gray-400">Pricing:</span>
+                          <span className="text-sm font-medium text-white">{service.pricing}</span>
+                        </div>
+                        <div className="flex justify-between items-center">
+                          <span className="text-sm text-gray-400">Trial:</span>
+                          <span className="text-sm font-medium text-cyan-400">{service.trial}</span>
+                        </div>
+                        <div className="flex justify-between items-center">
+                          <span className="text-sm text-gray-400">Expected ROI:</span>
+                          <span className="text-sm font-medium text-green-400">{service.roi}</span>
+                        </div>
+                      </div>
+                      <div className="space-y-2">
+                        <a
+                          href={service.link}
+                          className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-purple-700 transition-all block text-center"
+                        >
+                          Learn More
+                        </a>
+                        <a
+                          href="/contact"
+                          className="w-full border border-cyan-400 text-cyan-400 py-2 px-4 rounded-lg font-medium hover:bg-cyan-400 hover:text-slate-900 transition-all block text-center"
+                        >
+                          Start Free Trial
+                        </a>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+            )}
+                </ul>
+              </div>
+>>>>>>> cursor/analyze-improve-and-deploy-application-55ba
 
               {/* Features */}
               <div className="mb-6">
