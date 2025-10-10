@@ -1,11 +1,6 @@
 'use client';
-<<<<<<< HEAD
-import React, { useEffect, useState, useCallback } from 'react';
-import { Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react';
-=======
 
 import React, { useEffect } from 'react';
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
 
 interface PerformanceOptimizerProps {
   enableImageOptimization?: boolean;
@@ -98,6 +93,23 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       } catch (e) {
         // Fallback for browsers that don't support these entry types
       }
+    }
+
+    // Resource hints for better performance
+    if (typeof window !== 'undefined') {
+      // DNS prefetch for external domains
+      const dnsPrefetchDomains = [
+        'fonts.googleapis.com',
+        'fonts.gstatic.com',
+        'www.google-analytics.com'
+      ];
+
+      dnsPrefetchDomains.forEach(domain => {
+        const link = document.createElement('link');
+        link.rel = 'dns-prefetch';
+        link.href = `//${domain}`;
+        document.head.appendChild(link);
+      });
     }
   }, [enableImageOptimization, enableLazyLoading, enablePreloading, enableCodeSplitting]);
 
