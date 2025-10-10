@@ -1008,6 +1008,292 @@ const ItServicesPage: React.FC = () => {
       category: 'Cloud Security',
       popular: true,
       icon: Shield
+    },
+    {
+      id: 'quantum-computing-infrastructure',
+      name: 'Quantum Computing Infrastructure',
+      description: 'Quantum computing infrastructure setup and quantum algorithm development services',
+      price: '$12,999/month',
+      marketPrice: '$25000-100000/month',
+      features: [
+        'Quantum computer setup and configuration',
+        'Quantum algorithm development',
+        'Quantum software development',
+        'Quantum error correction implementation',
+        'Quantum networking solutions',
+        'Hybrid classical-quantum systems',
+        'Quantum security implementation',
+        'Quantum optimization services'
+      ],
+      benefits: [
+        'Exponential computational power',
+        'Solve complex optimization problems',
+        'Future-proof technology infrastructure',
+        'Competitive advantage in quantum era'
+      ],
+      category: 'Quantum Computing',
+      popular: false,
+      icon: Cpu
+    },
+    {
+      id: 'space-technology-infrastructure',
+      name: 'Space Technology Infrastructure',
+      description: 'Ground-based infrastructure for space missions, satellite operations, and space data processing',
+      price: '$8,999/month',
+      marketPrice: '$18000-75000/month',
+      features: [
+        'Ground station infrastructure',
+        'Satellite communication systems',
+        'Space data processing centers',
+        'Mission control systems',
+        'Space weather monitoring',
+        'Orbital debris tracking systems',
+        'Space mission planning software',
+        'Astronomical data processing'
+      ],
+      benefits: [
+        'Enable space missions',
+        'Advanced satellite operations',
+        'Space data insights',
+        'Scientific discovery support'
+      ],
+      category: 'Space Technology',
+      popular: false,
+      icon: Globe
+    },
+    {
+      id: 'neural-interface-systems',
+      name: 'Neural Interface Systems',
+      description: 'Brain-computer interface infrastructure and neural signal processing systems',
+      price: '$15,999/month',
+      marketPrice: '$30000-150000/month',
+      features: [
+        'Neural signal acquisition systems',
+        'Brain-computer interface hardware',
+        'Neural data processing infrastructure',
+        'Real-time neural signal analysis',
+        'Neural control system development',
+        'Cognitive enhancement platforms',
+        'Neural feedback systems',
+        'Custom neural interface solutions'
+      ],
+      benefits: [
+        'Revolutionary human-computer interaction',
+        'Accessibility breakthroughs',
+        'Enhanced cognitive capabilities',
+        'Next-generation interface technology'
+      ],
+      category: 'Neural Technology',
+      popular: false,
+      icon: Brain
+    },
+    {
+      id: 'climate-tech-infrastructure',
+      name: 'Climate Technology Infrastructure',
+      description: 'Green technology infrastructure for environmental monitoring and sustainability solutions',
+      price: '$4,999/month',
+      marketPrice: '$10000-40000/month',
+      features: [
+        'Environmental monitoring systems',
+        'Carbon tracking infrastructure',
+        'Renewable energy management systems',
+        'Climate data processing centers',
+        'Sustainability reporting platforms',
+        'Green technology integration',
+        'Environmental sensor networks',
+        'Climate modeling infrastructure'
+      ],
+      benefits: [
+        'Accelerate climate solutions',
+        'Environmental impact optimization',
+        'Sustainability goal achievement',
+        'Green technology leadership'
+      ],
+      category: 'Climate Technology',
+      popular: true,
+      icon: Heart
+    },
+    {
+      id: 'augmented-reality-infrastructure',
+      name: 'Augmented Reality Infrastructure',
+      description: 'AR/VR infrastructure and spatial computing systems for immersive experiences',
+      price: '$6,999/month',
+      marketPrice: '$14000-60000/month',
+      features: [
+        'AR/VR hardware infrastructure',
+        'Spatial computing systems',
+        'Mixed reality platforms',
+        'AR content delivery networks',
+        'Gesture recognition systems',
+        'Holographic display infrastructure',
+        'AR analytics platforms',
+        'Custom AR/VR solutions'
+      ],
+      benefits: [
+        'Immersive business solutions',
+        'Enhanced user experiences',
+        'Spatial computing capabilities',
+        'Next-generation interaction methods'
+      ],
+      category: 'AR/VR Technology',
+      popular: true,
+      icon: Eye
+    },
+    {
+      id: 'robotics-infrastructure',
+      name: 'Robotics Infrastructure',
+      description: 'Robotic systems infrastructure and automation platforms for industrial applications',
+      price: '$9,999/month',
+      marketPrice: '$20000-80000/month',
+      features: [
+        'Robotic control systems',
+        'Industrial automation platforms',
+        'Robot fleet management',
+        'Human-robot collaboration systems',
+        'Robotic process automation infrastructure',
+        'Swarm robotics coordination',
+        'Robotic maintenance systems',
+        'Custom robotic solutions'
+      ],
+      benefits: [
+        'Automate complex operations',
+        'Improve operational efficiency',
+        'Reduce human error',
+        'Enable 24/7 operations'
+      ],
+      category: 'Robotics',
+      popular: true,
+      icon: Settings
+    },
+    {
+      id: 'blockchain-infrastructure',
+      name: 'Blockchain Infrastructure',
+      description: 'Blockchain infrastructure and distributed ledger technology solutions',
+      price: '$7,999/month',
+      marketPrice: '$16000-70000/month',
+      features: [
+        'Blockchain node infrastructure',
+        'Smart contract development platforms',
+        'DeFi protocol infrastructure',
+        'NFT marketplace development',
+        'Cryptocurrency exchange systems',
+        'Blockchain security solutions',
+        'Cross-chain integration',
+        'Custom blockchain solutions'
+      ],
+      benefits: [
+        'Decentralized applications',
+        'Enhanced security and transparency',
+        'Future-proof technology',
+        'Innovative business models'
+      ],
+      category: 'Blockchain',
+      popular: true,
+      icon: Link
+    },
+    {
+      id: 'edge-computing-advanced',
+      name: 'Advanced Edge Computing',
+      description: 'Next-generation edge computing infrastructure for real-time processing and low latency',
+      price: '$5,999/month',
+      marketPrice: '$12000-50000/month',
+      features: [
+        'Distributed edge infrastructure',
+        'Edge AI processing units',
+        'Real-time data processing',
+        'Edge-to-cloud integration',
+        'Edge security solutions',
+        'Autonomous edge systems',
+        'Edge analytics platforms',
+        'Custom edge solutions'
+      ],
+      benefits: [
+        'Ultra-low latency processing',
+        'Real-time decision making',
+        'Reduced bandwidth costs',
+        'Enhanced user experiences'
+      ],
+      category: 'Edge Computing',
+      popular: true,
+      icon: Server
+    },
+    {
+      id: '5g-network-infrastructure',
+      name: '5G Network Infrastructure',
+      description: '5G network infrastructure setup and optimization for ultra-fast connectivity',
+      price: '$11,999/month',
+      marketPrice: '$25000-100000/month',
+      features: [
+        '5G network deployment',
+        'Small cell infrastructure',
+        '5G core network setup',
+        'Network slicing implementation',
+        '5G security solutions',
+        'Edge computing integration',
+        'IoT connectivity optimization',
+        '5G performance monitoring'
+      ],
+      benefits: [
+        'Ultra-fast connectivity',
+        'Low latency communications',
+        'Massive IoT connectivity',
+        'Next-generation mobile services'
+      ],
+      category: '5G Technology',
+      popular: true,
+      icon: Wifi
+    },
+    {
+      id: 'ai-supercomputing',
+      name: 'AI Supercomputing Infrastructure',
+      description: 'High-performance computing infrastructure for AI training and inference',
+      price: '$19,999/month',
+      marketPrice: '$40000-200000/month',
+      features: [
+        'GPU cluster infrastructure',
+        'AI training environments',
+        'Distributed computing systems',
+        'High-speed data processing',
+        'AI model deployment platforms',
+        'Machine learning pipelines',
+        'AI research environments',
+        'Custom AI infrastructure'
+      ],
+      benefits: [
+        'Accelerated AI development',
+        'Large-scale model training',
+        'High-performance AI inference',
+        'Research and development acceleration'
+      ],
+      category: 'AI Infrastructure',
+      popular: true,
+      icon: Cpu
+    },
+    {
+      id: 'digital-twin-platform',
+      name: 'Digital Twin Platform',
+      description: 'Digital twin infrastructure for real-time monitoring and simulation of physical assets',
+      price: '$8,999/month',
+      marketPrice: '$18000-75000/month',
+      features: [
+        'Digital twin creation and management',
+        'Real-time data synchronization',
+        '3D modeling and visualization',
+        'Predictive analytics integration',
+        'IoT sensor integration',
+        'Simulation and testing environments',
+        'Digital twin analytics',
+        'Custom digital twin solutions'
+      ],
+      benefits: [
+        'Real-time asset monitoring',
+        'Predictive maintenance capabilities',
+        'Optimized operations',
+        'Reduced downtime and costs'
+      ],
+      category: 'Digital Twin',
+      popular: true,
+      icon: Monitor
     }
   ]
 

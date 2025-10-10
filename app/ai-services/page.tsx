@@ -1011,6 +1011,240 @@ const AiServicesPage: React.FC = () => {
       category: 'Content Generation',
       popular: true,
       icon: FileText
+    },
+    {
+      id: 'ai-quantum-computing',
+      name: 'AI Quantum Computing Solutions',
+      description: 'Quantum-enhanced AI algorithms for complex optimization and machine learning problems',
+      price: '$4,999/month',
+      marketPrice: '$10000-50000/month',
+      features: [
+        'Quantum machine learning algorithms',
+        'Quantum optimization solutions',
+        'Quantum neural networks',
+        'Quantum data processing',
+        'Hybrid classical-quantum AI',
+        'Quantum error correction',
+        'Quantum simulation services',
+        'Custom quantum AI models'
+      ],
+      benefits: [
+        'Exponential computational power',
+        'Solve complex optimization problems',
+        'Breakthrough AI capabilities',
+        'Future-proof technology'
+      ],
+      category: 'Quantum AI',
+      popular: false,
+      icon: Cpu
+    },
+    {
+      id: 'ai-neural-interface',
+      name: 'AI Neural Interface Technology',
+      description: 'Brain-computer interface AI for direct neural communication and control systems',
+      price: '$8,999/month',
+      marketPrice: '$20000-100000/month',
+      features: [
+        'Neural signal processing',
+        'Brain-computer interface AI',
+        'Thought-to-text conversion',
+        'Neural control systems',
+        'Cognitive enhancement AI',
+        'Neural pattern recognition',
+        'Real-time neural feedback',
+        'Custom neural interfaces'
+      ],
+      benefits: [
+        'Revolutionary human-AI interaction',
+        'Accessibility breakthroughs',
+        'Enhanced cognitive capabilities',
+        'Next-generation interfaces'
+      ],
+      category: 'Neural AI',
+      popular: false,
+      icon: Brain
+    },
+    {
+      id: 'ai-space-technology',
+      name: 'AI Space Technology Solutions',
+      description: 'AI-powered space exploration, satellite management, and space data analysis',
+      price: '$6,999/month',
+      marketPrice: '$15000-75000/month',
+      features: [
+        'Satellite constellation management',
+        'Space debris tracking AI',
+        'Planetary data analysis',
+        'Space mission optimization',
+        'Astronomical data processing',
+        'Space weather prediction',
+        'Autonomous space systems',
+        'Space resource optimization'
+      ],
+      benefits: [
+        'Advanced space exploration',
+        'Improved satellite operations',
+        'Space safety enhancement',
+        'Scientific discovery acceleration'
+      ],
+      category: 'Space AI',
+      popular: false,
+      icon: Globe
+    },
+    {
+      id: 'ai-climate-intelligence',
+      name: 'AI Climate Intelligence Platform',
+      description: 'Advanced AI for climate modeling, environmental monitoring, and sustainability solutions',
+      price: '$3,999/month',
+      marketPrice: '$8000-30000/month',
+      features: [
+        'Climate change modeling',
+        'Carbon footprint optimization',
+        'Environmental data analysis',
+        'Renewable energy optimization',
+        'Ecosystem monitoring',
+        'Sustainability reporting',
+        'Climate risk assessment',
+        'Green technology integration'
+      ],
+      benefits: [
+        'Accelerate climate solutions',
+        'Optimize environmental impact',
+        'Predict climate patterns',
+        'Drive sustainability goals'
+      ],
+      category: 'Climate AI',
+      popular: true,
+      icon: Heart
+    },
+    {
+      id: 'ai-augmented-reality',
+      name: 'AI Augmented Reality Solutions',
+      description: 'AI-powered AR applications for immersive experiences and spatial computing',
+      price: '$2,999/month',
+      marketPrice: '$6000-25000/month',
+      features: [
+        'AR object recognition',
+        'Spatial AI mapping',
+        'Real-time AR rendering',
+        'Gesture recognition AI',
+        'AR content generation',
+        'Mixed reality experiences',
+        'AR analytics and insights',
+        'Custom AR applications'
+      ],
+      benefits: [
+        'Enhanced user experiences',
+        'Immersive business solutions',
+        'Spatial computing capabilities',
+        'Next-gen interaction methods'
+      ],
+      category: 'AR AI',
+      popular: true,
+      icon: Eye
+    },
+    {
+      id: 'ai-robotics-automation',
+      name: 'AI Robotics & Automation',
+      description: 'Intelligent robotics solutions with advanced AI for industrial and service applications',
+      price: '$5,999/month',
+      marketPrice: '$12000-50000/month',
+      features: [
+        'Autonomous robot control',
+        'Computer vision for robots',
+        'Robotic process automation',
+        'Human-robot collaboration',
+        'Predictive maintenance for robots',
+        'Swarm robotics coordination',
+        'Robotic learning algorithms',
+        'Custom robotic solutions'
+      ],
+      benefits: [
+        'Automate complex tasks',
+        'Improve operational efficiency',
+        'Reduce human error',
+        'Enable 24/7 operations'
+      ],
+      category: 'Robotics AI',
+      popular: true,
+      icon: Settings
+    },
+    {
+      id: 'ai-cybersecurity-advanced',
+      name: 'AI Advanced Cybersecurity',
+      description: 'Next-generation AI-powered cybersecurity with threat hunting and automated response',
+      price: '$4,499/month',
+      marketPrice: '$9000-35000/month',
+      features: [
+        'AI threat hunting',
+        'Behavioral anomaly detection',
+        'Automated incident response',
+        'Zero-trust AI implementation',
+        'Quantum-safe encryption',
+        'AI-powered vulnerability assessment',
+        'Threat intelligence automation',
+        'Custom security AI models'
+      ],
+      benefits: [
+        'Proactive threat protection',
+        'Automated security response',
+        'Advanced threat detection',
+        'Reduced security incidents'
+      ],
+      category: 'Security',
+      popular: true,
+      icon: Shield
+    },
+    {
+      id: 'ai-financial-trading',
+      name: 'AI Financial Trading Platform',
+      description: 'Advanced AI for algorithmic trading, market analysis, and financial decision making',
+      price: '$7,999/month',
+      marketPrice: '$15000-60000/month',
+      features: [
+        'Algorithmic trading strategies',
+        'Real-time market analysis',
+        'Risk management AI',
+        'Portfolio optimization',
+        'Market sentiment analysis',
+        'High-frequency trading AI',
+        'Cryptocurrency trading bots',
+        'Custom trading algorithms'
+      ],
+      benefits: [
+        'Optimize trading performance',
+        'Reduce trading risks',
+        'Automate trading decisions',
+        'Maximize investment returns'
+      ],
+      category: 'Finance',
+      popular: true,
+      icon: TrendingUp
+    },
+    {
+      id: 'ai-drug-discovery',
+      name: 'AI Drug Discovery Platform',
+      description: 'AI-powered pharmaceutical research and drug discovery acceleration',
+      price: '$9,999/month',
+      marketPrice: '$20000-100000/month',
+      features: [
+        'Molecular design AI',
+        'Drug-target interaction prediction',
+        'Clinical trial optimization',
+        'Side effect prediction',
+        'Drug repurposing AI',
+        'Biomarker discovery',
+        'Personalized medicine AI',
+        'Regulatory compliance automation'
+      ],
+      benefits: [
+        'Accelerate drug development',
+        'Reduce research costs',
+        'Improve success rates',
+        'Enable personalized medicine'
+      ],
+      category: 'Healthcare',
+      popular: false,
+      icon: Heart
     }
   ]
 
@@ -1042,7 +1276,13 @@ const AiServicesPage: React.FC = () => {
     { id: 'Conversational AI', name: 'Conversational AI', count: services.filter(s => s.category === 'Conversational AI').length },
     { id: 'Knowledge Management', name: 'Knowledge Management', count: services.filter(s => s.category === 'Knowledge Management').length },
     { id: 'Reporting & Analytics', name: 'Reporting & Analytics', count: services.filter(s => s.category === 'Reporting & Analytics').length },
-    { id: 'Content Generation', name: 'Content Generation', count: services.filter(s => s.category === 'Content Generation').length }
+    { id: 'Content Generation', name: 'Content Generation', count: services.filter(s => s.category === 'Content Generation').length },
+    { id: 'Quantum AI', name: 'Quantum AI', count: services.filter(s => s.category === 'Quantum AI').length },
+    { id: 'Neural AI', name: 'Neural AI', count: services.filter(s => s.category === 'Neural AI').length },
+    { id: 'Space AI', name: 'Space AI', count: services.filter(s => s.category === 'Space AI').length },
+    { id: 'Climate AI', name: 'Climate AI', count: services.filter(s => s.category === 'Climate AI').length },
+    { id: 'AR AI', name: 'AR AI', count: services.filter(s => s.category === 'AR AI').length },
+    { id: 'Robotics AI', name: 'Robotics AI', count: services.filter(s => s.category === 'Robotics AI').length }
   ]
 
   const filteredServices = services.filter(service => 
