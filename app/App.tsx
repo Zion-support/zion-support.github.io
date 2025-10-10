@@ -6,12 +6,10 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Components
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import PerformanceDashboard from './components/PerformanceDashboard';
-import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
-import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
+import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import SEOEnhancer from './components/SEOEnhancer';
-import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
-import LoadingSpinner from './components/LoadingSpinner';
+import EnhancedSEOOptimizer from './components/EnhancedSEOOptimizer';
+import LoadingSkeleton from './components/LoadingSkeleton';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
@@ -29,13 +27,10 @@ import Analytics from './components/Analytics';
 // Lazy load pages for better performance
 const _HomePage = lazy(() => import('./page'));
 const _AboutPage = lazy(() => import('./about/page'));
-const _ServicesPage = lazy(() => import('./services/page'));
 const _ContactPage = lazy(() => import('./contact/page'));
-const _TeamPage = lazy(() => import('./team/page'));
 const _PrivacyPage = lazy(() => import('./privacy/page'));
 const _TermsPage = lazy(() => import('./terms/page'));
 const _EnterprisePage = lazy(() => import('./enterprise/page'));
-const _ServicesAdvertisingPage = lazy(() => import('./services-advertising/page'));
 const _CaseStudiesPage = lazy(() => import('./case-studies/page'));
 
 // AI Services Pages
@@ -47,26 +42,20 @@ const _AIFintechPage = lazy(() => import('./ai-fintech/page'));
 const _AIDataAnalyticsPage = lazy(() => import('./ai-data-analytics/page'));
 const _AICybersecurityPage = lazy(() => import('./ai-cybersecurity/page'));
 const _AIWorkflowAutomationPage = lazy(() => import('./ai-workflow-automation/page'));
-const _AICloudInfrastructurePage = lazy(() => import('./ai-cloud-infrastructure/page'));
 const _AIEcommerceSolutionsPage = lazy(() => import('./ai-ecommerce-solutions/page'));
 const _AIMobileAppDevelopmentPage = lazy(() => import('./ai-mobile-app-development/page'));
 
 // IT Services Pages
 const _ITServicesPage = lazy(() => import('./it-services/page'));
-const _MicroSAASPage = lazy(() => import('./micro-saas/page'));
 const _CybersecurityPage = lazy(() => import('./cybersecurity/page'));
 
 // Specialized Technology Pages
-const _QuantumComputingPage = lazy(() => import('./quantum-computing/page'));
 const _AutonomousSystemsPage = lazy(() => import('./autonomous-systems/page'));
 const _BusinessIntelligencePage = lazy(() => import('./business-intelligence/page'));
-const _BlockchainWeb3Page = lazy(() => import('./blockchain-web3/page'));
-const _IoTEdgeComputingPage = lazy(() => import('./iot-edge-computing/page'));
 
 // Additional Pages
-const _BlogPage = lazy(() => import('./blog-index'));
-const _GuidesPage = lazy(() => import('./guides/page'));
-const _SitemapPage = lazy(() => import('./sitemap-page'));
+const _BlogPage = lazy(() => import('./blog/page'));
+const _SitemapPage = lazy(() => import('./sitemap/page'));
 
 // Utils
 import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics, performanceOptimizer } from './utils/performanceOptimizer';
@@ -146,7 +135,7 @@ const App: React.FC = () => {
 
   return (
     <HelmetProvider>
-      <AdvancedErrorBoundary
+      <EnhancedErrorBoundary
         enableErrorReporting={true}
         enableRetry={true}
         onError={(error, errorInfo) => {
@@ -159,7 +148,7 @@ const App: React.FC = () => {
               title="Zion Tech Group - Advanced AI and IT Solutions"
               description="Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology."
             >
-              <AdvancedSEOOptimizer
+              <EnhancedSEOOptimizer
                 config={{
                   title: 'Zion Tech Group - Advanced AI and IT Solutions',
                   description: 'Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology.',
@@ -192,17 +181,14 @@ const App: React.FC = () => {
                   <Analytics trackingId="G-XXXXXXXXXX" />
                   <Navigation />
                   <main id="main-content">
-                    <Suspense fallback={<LoadingSpinner />}>
+                    <Suspense fallback={<LoadingSkeleton />}>
                       <Routes>
                         <Route path="/" element={<_HomePage />} />
                         <Route path="/about" element={<_AboutPage />} />
-                        <Route path="/services" element={<_ServicesPage />} />
                         <Route path="/contact" element={<_ContactPage />} />
-                        <Route path="/team" element={<_TeamPage />} />
                         <Route path="/privacy" element={<_PrivacyPage />} />
                         <Route path="/terms" element={<_TermsPage />} />
                         <Route path="/enterprise" element={<_EnterprisePage />} />
-                        <Route path="/services-advertising" element={<_ServicesAdvertisingPage />} />
                         <Route path="/case-studies" element={<_CaseStudiesPage />} />
                         
                         {/* AI Services Routes */}
@@ -214,49 +200,30 @@ const App: React.FC = () => {
                         <Route path="/ai-data-analytics" element={<_AIDataAnalyticsPage />} />
                         <Route path="/ai-cybersecurity" element={<_AICybersecurityPage />} />
                         <Route path="/ai-workflow-automation" element={<_AIWorkflowAutomationPage />} />
-                        <Route path="/ai-cloud-infrastructure" element={<_AICloudInfrastructurePage />} />
                         <Route path="/ai-ecommerce-solutions" element={<_AIEcommerceSolutionsPage />} />
                         <Route path="/ai-mobile-app-development" element={<_AIMobileAppDevelopmentPage />} />
                         
                         {/* IT Services Routes */}
                         <Route path="/it-services" element={<_ITServicesPage />} />
-                        <Route path="/micro-saas" element={<_MicroSAASPage />} />
                         <Route path="/cybersecurity" element={<_CybersecurityPage />} />
                         
                         {/* Specialized Technology Routes */}
-                        <Route path="/quantum-computing" element={<_QuantumComputingPage />} />
                         <Route path="/autonomous-systems" element={<_AutonomousSystemsPage />} />
                         <Route path="/business-intelligence" element={<_BusinessIntelligencePage />} />
-                        <Route path="/blockchain-web3" element={<_BlockchainWeb3Page />} />
-                        <Route path="/iot-edge-computing" element={<_IoTEdgeComputingPage />} />
                         
                         {/* Additional Routes */}
                         <Route path="/blog" element={<_BlogPage />} />
-                        <Route path="/guides" element={<_GuidesPage />} />
                         <Route path="/sitemap" element={<_SitemapPage />} />
                       </Routes>
                     </Suspense>
                   </main>
                   <Footer />
-
-                  {/* Performance Dashboard */}
-                  <PerformanceDashboard />
-                  
-                  {/* Advanced Performance Monitor */}
-                  <AdvancedPerformanceMonitor
-                    enableRealTimeMonitoring={process.env['NODE_ENV'] === 'development'}
-                    onMetricsUpdate={(metrics) => {
-                      if (process.env['NODE_ENV'] === 'development') {
-                        logger.info('Performance Metrics', { component: 'PerformanceMonitor', metrics });
-                      }
-                    }}
-                  />
                 </div>
               </Router>
             </SEOEnhancer>
           </AccessibilityEnhancer>
         </PerformanceOptimizer>
-      </AdvancedErrorBoundary>
+      </EnhancedErrorBoundary>
     </HelmetProvider>
   );
 };

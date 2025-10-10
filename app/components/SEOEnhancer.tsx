@@ -8,7 +8,7 @@ interface SEOEnhancerProps {
   ogImage?: string
   ogType?: string
   twitterCard?: string
-  structuredData?: object;}
+  structuredData?: object;
 }
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   title,
@@ -18,10 +18,10 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   ogImage = '/og-image.jpg',
   ogType = 'website',
   twitterCard = 'summary_large_image',
-  structuredData}
+  structuredData
 }) => {
   return (
-    <Head>}
+    <Head>
       {/* Basic Meta Tags */}
       <title>{title} | Zion Tech Group - AI & IT Solutions</title>
       <meta name="description" content={description} />
@@ -49,7 +49,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       
       {/* Structured Data */}
       {structuredData && (
-        <script type="application/ld+json">}
+        <script type="application/ld+json">
           {JSON.stringify(structuredData)}
         </script>
       )}

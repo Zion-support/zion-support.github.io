@@ -3168,7 +3168,6 @@ const HomePage: React.FC = () => {
 
           <Footer />
         </div>
-      </EnhancedSEO>
     </EnhancedErrorBoundary>
   );
 };

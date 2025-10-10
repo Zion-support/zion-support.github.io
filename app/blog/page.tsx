@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { Calendar, User, ArrowRight, Search, Filter, Clock, TrendingUp, BookOpen } from 'lucide-react';
 
 const BlogPage: React.FC = () => {
@@ -251,7 +251,7 @@ const BlogPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
