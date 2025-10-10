@@ -1,30 +1,50 @@
-
-
-import { Link } from 'react-router-dom';
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const Ai2025MarchAutonomousEnterpriseOperationsRevolutionPage: React.FC = () => {
+const pagePage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
+      <Helmet>
+        <title>Page - Zion Tech Group | AI & IT Solutions</title>
+        <meta name="description" content="Professional page services with cutting-edge technology and expert implementation." />
+      </Helmet>
+      
       <Navigation />
-      <div className="flex items-center justify-center min-h-screen">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-4">Ai 2025 March Autonomous Enterprise Operations Revolution</h1>
-          <p className="text-gray-300 mb-8">Coming Soon - Advanced ai 2025 march autonomous enterprise operations revolution solutions</p>
-          <Link 
-            to="/contact" 
-            className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors"
-          >
-            Contact Us
-          </Link>
+      
+      <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              Page
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Professional page services with cutting-edge technology and expert implementation.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Expert Implementation</h3>
+              <p className="text-gray-600">Professional implementation with industry best practices and cutting-edge technology.</p>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Advanced Technology</h3>
+              <p className="text-gray-600">Cutting-edge technology solutions designed for modern businesses and enterprises.</p>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
+              <p className="text-gray-600">Round-the-clock support and maintenance services to ensure optimal performance.</p>
+            </div>
+          </div>
         </div>
-      </div>
+      </main>
+      
       <Footer />
-    </div>
+    </>
   );
 };
 
-export default Ai2025MarchAutonomousEnterpriseOperationsRevolutionPage;
-
-
+export default pagePage;

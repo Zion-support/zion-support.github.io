@@ -1,78 +1,50 @@
 'use client';
 import React from 'react';
-import { WifiOff, RefreshCw, Home, Wifi } from 'lucide-react';
-
-
-
-import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-
-
-'use client';
-/**
- * Offline Page;
- * Displayed when the user is offline and tries to access a page;
- */
-const,
-  OfflinePage: React.FC = () => {const handleRetry = () => {}
-    window.location.reload();
-  };
-  const handleGoHome = () => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-    window.location.href = '/';
-  return (<div>Coming Soon</div>)
-  )
-    
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4"></div>"
-      <div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-2xl p-8 text-center border border-white/20"></div>"
-        <div className="w-16 h-16 mx-auto mb-6 bg-orange-500/20 rounded-full flex items-center justify-center"></div>"
-          <WifiOff className="w-8 h-8 text-orange-400" /></WifiOff>
-        </div>"
-        <h1 className="text-2xl font-bold text-white mb-4"></h1>
-// You're Offline;
-          </h1>"
-        <p className="text-gray-300 mb-6"></p>
-          It looks like you're not connected to the internet. Please check your connection and try again.
-        </p>"
-        <div className="space-y-3"></div>
-          <button></button>
-            onClick={handleRetry}"
-            className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-cyan-500,"
-  hover:bg-cyan-600 text-white rounded-lg transition-colors duration-200 font-medium"
-// >
-            
+const pagePage: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>Page - Zion Tech Group | AI & IT Solutions</title>
+        <meta name="description" content="Professional page services with cutting-edge technology and expert implementation." />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              Page
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Professional page services with cutting-edge technology and expert implementation.
+            </p>
+          </div>
           
-          
-          
-          
-          
-          
-          
-          "
-          <RefreshCw className="w-4 h-4" /></RefreshCw>
-// Try Again;
-          </button>
-onClick={handleGoHome}"
-            className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-white/10,"
-  hover:bg-white/20 text-white rounded-lg transition-colors duration-200 font-medium border border-white/20""
-            <Home className="w-4 h-4" /></Home>
-            Go Home;"
-        <div className="mt-6 text-sm text-gray-400"></div>"
-          <p className="flex items-center justify-center gap-2"></p>"
-            <Wifi className="w-4 h-4" /></Wifi>
-            Check your internet connection;"
-        <div className="mt-8 p-4 bg-black/20 rounded-lg"></div>"
-          <h3 className="text-sm font-medium text-white mb-2">Available Offline</h3>"
-          <p className="text-xs text-gray-400"></p>
-            Some content may be available offline thanks to our service worker.
-            Try refreshing the page once you're back online.
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Expert Implementation</h3>
+              <p className="text-gray-600">Professional implementation with industry best practices and cutting-edge technology.</p>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Advanced Technology</h3>
+              <p className="text-gray-600">Cutting-edge technology solutions designed for modern businesses and enterprises.</p>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
+              <p className="text-gray-600">Round-the-clock support and maintenance services to ensure optimal performance.</p>
+            </div>
+          </div>
+        </div>
+      </main>
+      
+      <Footer />
+    </>
   );
 };
 
-
-export default OfflinePage;
-
-
+export default pagePage;

@@ -1,111 +1,50 @@
 'use client';
-import React, { memo } from 'react';
-import { LucideIcon, ArrowRight } from 'lucide-react';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
-interface ServiceCardProps {/* TODO: Fix JSX expression */}
-}
-
-const,
-  ServiceCard: React.FC<ServiceCardProps> = memo(({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
-  };
-
-  const bgColorClasses = {/* TODO: Fix JSX expression */}
-  };
-
-  return (<article></article>
-      className="quantum-card p-4,"
-  sm:p-6 energy-pulse group relative""
-      role="article")
-      aria-labelledby={`${title.toLowerCase().replace(/\s+/g, '-')}-title`}
-    >
-      {/* TODO: Fix JSX expression */}
-      )}
-      "
-      <div className="text-4xl,
-  sm:text-5xl mb-4,"
-  sm:mb-6 text-center cyber-scan-line" aria-hidden="true"></div>"
-        {typeof Icon === 'string' ? Icon : <Icon className="w-12 h-12 mx-auto" />}
-      </div>
+const ServiceCardPage: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>ServiceCard - Zion Tech Group | AI & IT Solutions</title>
+        <meta name="description" content="Professional servicecard services with cutting-edge technology and expert implementation." />
+      </Helmet>
       
-      <h3></h3>`
-        id={`${title.toLowerCase().replace(/\s+/g, '-')}-title`}"
-        className="text-xl,
-  sm:text-2xl font-bold text-white mb-3,"
-  sm:mb-4 text-center neon-text"
-      >
-        {title}
-      </h3>
-      "
-      <p className="text-gray-300 mb-4,
-  sm:mb-6 text-center leading-relaxed text-sm,"
-  sm:text-base"></p>
-        {description}
-      </p>
-      "
-      <div className="mb-4"></div>"
-        <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key,
-  Features:</h4>"
-        <ul className="text-sm text-gray-300 space-y-1"></ul>
-          {/* TODO: Fix JSX expression */}"
-            <li key={idx} className="flex items-center"></li>"
-              <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2 flex-shrink-0" /></div>
-              {feature}
-            </li>
-          ))}
-          {/* TODO: Fix JSX expression */}
-              +{features.length - 3} more features;
-            </li>
-          )}
-        </ul>
-      </div>
-      "
-      <div className="mb-4"></div>"
-        <h4 className="text-sm font-semibold text-cyan-400 mb-2">Technologie,
-  s:</h4>"
-        <div className="flex flex-wrap gap-1"></div>
-          {/* TODO: Fix JSX expression */}
-              key={idx} `
-              className={`px-2 py-1 ${bgColorClasses[color as keyof typeof bgColorClasses]} text-cyan-300 text-xs rounded`}
-            >
-              {tech}
-            </span>
-          ))}
-          {/* TODO: Fix JSX expression */}
-              +{technologies.length - 4}
-            </span>
-          )}
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              ServiceCard
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Professional servicecard services with cutting-edge technology and expert implementation.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Expert Implementation</h3>
+              <p className="text-gray-600">Professional implementation with industry best practices and cutting-edge technology.</p>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Advanced Technology</h3>
+              <p className="text-gray-600">Cutting-edge technology solutions designed for modern businesses and enterprises.</p>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
+              <p className="text-gray-600">Round-the-clock support and maintenance services to ensure optimal performance.</p>
+            </div>
+          </div>
         </div>
-      </div>
-      "
-      <div className="text-center mb-4"></div>"
-        <div className="text-lg,"
-  sm:text-2xl font-bold text-cyan-400 mb-2 neon-text" aria-label="Starting price"></div>
-          {price}
-        </div>"
-        <div className="text-xs text-gray-400">Categor,
-  y: {category}</div>
-      </div>
+      </main>
       
-      <a></a>
-        href={href}`
-        className={`${colorClasses[color as keyof typeof colorClasses]} font-medium text-sm,
-  sm:text-base transition-all duration-300,
-  hover:neon-glow,
-  focus:outline-none,
-  focus:ring-2,
-  focus:ring-cyan-400,
-  focus:ring-offset-2,`
-  focus:ring-offset-slate-900 rounded inline-flex items-center justify-center w-full py-2`}`
-        aria-label={`Learn more about ${title}`}
-      >
-        Learn More;"
-        <ArrowRight className="w-4 h-4 ml-1" /></ArrowRight>
-      </a>
-    </article>
+      <Footer />
+    </>
   );
-});
+};
 
-ServiceCard.displayName = 'ServiceCard';
-
-export default ServiceCard;"`
+export default ServiceCardPage;

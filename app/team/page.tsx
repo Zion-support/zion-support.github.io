@@ -4,41 +4,69 @@ import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const TeamPage: React.FC = () => {
+const pagePage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Our Team - Zion Tech Group</title>
-        <meta name="description" content="Meet the talented team behind Zion Tech Group. Our experts in AI, technology, and business solutions." />
+        <title>Page - Zion Tech Group | AI & IT Solutions</title>
+        <meta name="description" content="Professional page services with cutting-edge technology and expert implementation." />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
-        <Navigation />
-        
-        <main className="pt-20">
-          <div className="container mx-auto px-4 py-16"></div>
-            <div className="max-w-4xl mx-auto"></div>
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
-                Our Team</h1>
-              </h1>
-              
-              <div className="prose prose-lg max-w-none"></div>
-                <p className="text-xl text-gray-600 mb-8">
-                  Meet the experts behind our success.
-                </p>
-                
-                <p className="text-gray-700 mb-6">
-                  Coming soon - stay tuned to meet our team!
-                </p>
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              Page
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Professional page services with cutting-edge technology and expert implementation.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Expert Implementation</h3>
+              <p className="text-gray-600">Professional implementation with industry best practices and cutting-edge technology.</p>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Advanced Technology</h3>
+              <p className="text-gray-600">Cutting-edge technology solutions designed for modern businesses and enterprises.</p>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
+              <p className="text-gray-600">Round-the-clock support and maintenance services to ensure optimal performance.</p>
+            </div>
+          </div>
+          
+          <div className="mt-16 text-center">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">Why Choose Our Page Services?</h2>
+            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              <div className="text-left">
+                <h3 className="text-xl font-semibold mb-4">Industry Expertise</h3>
+                <p className="text-gray-600">Our team brings years of experience and deep industry knowledge to every project.</p>
+              </div>
+              <div className="text-left">
+                <h3 className="text-xl font-semibold mb-4">Proven Results</h3>
+                <p className="text-gray-600">We deliver measurable results that drive business growth and success.</p>
+              </div>
+              <div className="text-left">
+                <h3 className="text-xl font-semibold mb-4">Scalable Solutions</h3>
+                <p className="text-gray-600">Our solutions are designed to grow with your business and adapt to changing needs.</p>
+              </div>
+              <div className="text-left">
+                <h3 className="text-xl font-semibold mb-4">Cost-Effective</h3>
+                <p className="text-gray-600">We provide maximum value with competitive pricing and transparent cost structures.</p>
               </div>
             </div>
           </div>
-        </main>
-        
-        <Footer />
-      </div>
+        </div>
+      </main>
+      
+      <Footer />
     </>
   );
 };
 
-export default TeamPage;
+export default pagePage;

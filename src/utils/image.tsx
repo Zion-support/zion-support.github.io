@@ -1,225 +1,50 @@
 'use client';
-import React, { useState, useCallback } from 'react';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
-const Image: React.FC = () => {
-interface ImageProps {
-  src: string;
-  alt: string;
-  width?: number;
-  height?: number;
-  className?: string;
-  priority?: boolean;
-  _quality?: number;
-  _placeholder?: 'blur' | 'empty';
-  _blurDataURL?: string;
-  fill?: boolean;
-  sizes?: string;
-  style?: React.CSSProperties;
-  onLoad?: () => void;
-  onError?: () => void;
-}
-export const Image: React.FC<ImageProps> = ({
-  src,
-  alt,
-  width,
-  height,
-  className,
-  priority = false,
-  quality = 75,
-  placeholder = 'empty',
-  blurDataURL,
-  fill = false,
-  sizes,
-  style,
-  onLoad,
-  onError,
-  ...props
-}) => {
-  const [, setIsLoaded] = useState(false);
-  const [hasError, setHasError] = useState(false);
-  const _handleLoad = useCallback(() => {
-    setIsLoaded(true);
-    if (onLoad) onLoad();
-  }, [onLoad]);
-  const handleError = useCallback(() => {
-    setHasError(true);
-    if (onError) onError();
-  }, [onError]);
-  const imageStyle: React.CSSProperties = {
-    ...style,
-    ...(fill && {
-      position: 'absolute',
-      top: 0,
-      left: 0,
-      width: '100%',
-      height: '100%',
-      objectFit:     ,
-$4})
-  };
-  if (hasError) {
-    return (
-      <div
-        className={`bg-gray-200 flex items-center justify-center ${className}`}
-        style={imageStyle}
-        {...props}
-      >
-        <span className="text-gray-500 text-sm">Failed to load image</span>
-      </div>
-    );
-  }
+const imagePage: React.FC = () => {
   return (
-    <img
-      src={src}
-      alt={alt}
-      width={width}
-      height={height}
-      className={className}
-      style={imageStyle}
-      sizes={sizes}
-      loading={priority ? 'eager' : 'lazy'}
-      onLoad={handleLoad}
-      onError={handleError}
-      {...props}
-    />
+    <>
+      <Helmet>
+        <title>Image - Zion Tech Group | AI & IT Solutions</title>
+        <meta name="description" content="Professional image services with cutting-edge technology and expert implementation." />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              Image
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Professional image services with cutting-edge technology and expert implementation.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Expert Implementation</h3>
+              <p className="text-gray-600">Professional implementation with industry best practices and cutting-edge technology.</p>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Advanced Technology</h3>
+              <p className="text-gray-600">Cutting-edge technology solutions designed for modern businesses and enterprises.</p>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
+              <p className="text-gray-600">Round-the-clock support and maintenance services to ensure optimal performance.</p>
+            </div>
+          </div>
+        </div>
+      </main>
+      
+      <Footer />
+    </>
   );
 };
-export default Image;
 
-
-'use client';
-import React, { useState, useCallback } from 'react';
-const,
-  Image: React.FC = () => {interface ImageProps {}
-  // TOD,
-  O: Add content;
-};
-
-  src: string;,
-    alt: string
-  width?: number
-  height?: number
-  className?: string
-  priority?: boolean
-  _quality?: number
-
-  _placeholder?: 'blur' | 'empty'
-  _blurDataURL?: string;
-  fill?: boolean;
-  sizes?: string;
-  style?: React.CSSProperties;
-  onLoad?: () => void;
-  onError?: () => void;
-}
-
-export const Image: React.FC;
-          <ImageProps> = ({// TODO: Add content;}
-
-}
-//   src,
-//   alt,
-//   width,
-//   height,
-//   className,
-  priority = false,
-quality = 75,
-  placeholder = 'empty',
-  blurDataURL,
-  fill = false,
-//   sizes,
-//   style,
-//   onLoad,
-//   onError,
-
-//   ...props;
-}) => {// TODO: Add content;}
-
-}
-  const [, setIsLoaded] = useState(false);
-  const [hasError, setHasError] = useState(false);
-  const _handleLoad = useCallback(() => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-    setIsLoaded(true);
-    if (onLoad) onLoad();
-  }, [onLoad]);
-  const handleError = useCallback(() => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-    setHasError(true);
-    if (onError) onError();
-  }, [onError]);
-  const,
-  imageStyle: React.CSSProperties = {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-//     ...style,
-    ...(fill && {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
-
-  position: 'absolute',
-      top: 0,
-      left: 0,
-      width: '100%',
-      height: '100%',
-      objectFit: 'cover'
-
-    })
-  };
-  if (hasError) {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-
-    return (
-    
-          
-          
-          
-          
-          
-          
-          
-          <div>Coming Soon</div>
-
-  )
-      
-          <div></div>
-className={`bg-gray-200 flex items-center justify-center ${className}`}
-        style={imageStyle}
-        {...props}
-// >
-        
-          
-          
-          
-          
-          
-          
-          
-          
-          <span className="text-gray-500 text-sm">Failed to load image</span>
-      </div>
-    )
-  }
-  return (<div>Coming Soon</div>)
-  )
-    
-          <img></img>
-      src={src}
-      alt={alt}
-      width={width}
-      height={height}
-      className={className}
-      style={imageStyle}
-      sizes={sizes}
-      loading={priority ? 'eager' : 'lazy'}
-      onLoad={handleLoad}
-      onError={handleError}
-      {...props}
-//     />
-  )
-}
-export default Image;"`
-
-
-
+export default imagePage;

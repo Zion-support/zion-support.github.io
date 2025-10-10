@@ -1,69 +1,72 @@
 'use client';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, ExternalLink } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
-const CaseStudiesPage: React.FC = () => {
-  const caseStudies = [
-    {
-      image: '/api/placeholder/600/400'
-    },
-    {
-      title: 'Cloud Migration for Financial Services',
-      client: 'FinanceCorp',
-      industry: 'Financial Services',
-      image: '/api/placeholder/600/400'
-    },
-    {
-      title: 'Cybersecurity Enhancement for Healthcare',
-      client: 'MediCare Plus',
-      industry: 'Healthcare',
-      image: '/api/placeholder/600/400'
-    }
-  ];
-
+const pagePage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Case Studies | Zion Tech Group</title>
-        <meta name="description" content="Explore our successful case studies and see how Zion Tech Group has helped businesses transform with AI and IT solutions." />
-        <meta name="keywords" content="case studies, success stories, AI solutions, IT services, business transformation" />
+        <title>Page - Zion Tech Group | AI & IT Solutions</title>
+        <meta name="description" content="Professional page services with cutting-edge technology and expert implementation." />
       </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                  Case Studies
-                </span>
-                <br />
-                <span className="text-white">& Success Stories</span>
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Discover how we've helped businesses transform with our AI and IT solutions.
-              </p>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              Page
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Professional page services with cutting-edge technology and expert implementation.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Expert Implementation</h3>
+              <p className="text-gray-600">Professional implementation with industry best practices and cutting-edge technology.</p>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Advanced Technology</h3>
+              <p className="text-gray-600">Cutting-edge technology solutions designed for modern businesses and enterprises.</p>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
+              <p className="text-gray-600">Round-the-clock support and maintenance services to ensure optimal performance.</p>
             </div>
           </div>
-        </section>
-
-        {/* Case Studies Grid */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* Placeholder for case studies */}
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-                <h3 className="text-xl font-bold text-white mb-3">Coming Soon</h3>
-                <p className="text-gray-300">Case studies will be added soon.</p>
+          
+          <div className="mt-16 text-center">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">Why Choose Our Page Services?</h2>
+            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              <div className="text-left">
+                <h3 className="text-xl font-semibold mb-4">Industry Expertise</h3>
+                <p className="text-gray-600">Our team brings years of experience and deep industry knowledge to every project.</p>
+              </div>
+              <div className="text-left">
+                <h3 className="text-xl font-semibold mb-4">Proven Results</h3>
+                <p className="text-gray-600">We deliver measurable results that drive business growth and success.</p>
+              </div>
+              <div className="text-left">
+                <h3 className="text-xl font-semibold mb-4">Scalable Solutions</h3>
+                <p className="text-gray-600">Our solutions are designed to grow with your business and adapt to changing needs.</p>
+              </div>
+              <div className="text-left">
+                <h3 className="text-xl font-semibold mb-4">Cost-Effective</h3>
+                <p className="text-gray-600">We provide maximum value with competitive pricing and transparent cost structures.</p>
               </div>
             </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </main>
+      
+      <Footer />
     </>
   );
 };
 
-export default CaseStudiesPage;
+export default pagePage;

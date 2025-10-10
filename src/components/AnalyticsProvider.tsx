@@ -1,107 +1,50 @@
-import React, { createContext, useContext, useEffect, ReactNode } from 'react';
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
-interface AnalyticsContextType {
-  track: (event: string, properties?: Record<string, any>) => void;
-  page: (name: string, properties?: Record<string, any>) => void;
-  identify: (userId: string, traits?: Record<string, any>) => void;
-}
-
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
-
-interface AnalyticsProviderProps {
-  children: ReactNode;
-  trackingId?: string;
-}
-
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ 
-  children, 
-  trackingId = 'G-XXXXXXXXXX' 
-}) => {
-  useEffect(() => {
-    // Initialize Google Analytics
-    if (typeof window !== 'undefined' && trackingId !== 'G-XXXXXXXXXX') {
-      // Load Google Analytics script
-      const script = document.createElement('script');
-      script.async = true;
-      script.src = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
-      document.head.appendChild(script);
-
-      // Initialize gtag
-      window.dataLayer = window.dataLayer || [];
-      function gtag(...args: any[]) {
-        window.dataLayer.push(args);
-      }
-      window.gtag = gtag;
-
-      gtag('js', new Date());
-      gtag('config', trackingId, {
-        page_title: document.title,
-        page_location: window.location.href});
-    }
-  }, [trackingId]);
-
-  const track = (event: string, properties?: Record<string, any>) => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', event, properties);
-    }
-    
-    // Also log in development
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Analytics Event:', event, properties);
-    }
-  };
-
-  const page = (name: string, properties?: Record<string, any>) => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('config', trackingId, {
-        page_title: name,
-        page_location: window.location.href,
-        ...properties});
-    }
-    
-    // Also log in development
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Analytics Page:', name, properties);
-    }
-  };
-
-  const identify = (userId: string, traits?: Record<string, any>) => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('config', trackingId, {
-        user_id: userId,
-        ...traits});
-    }
-    
-    // Also log in development
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Analytics Identify:', userId, traits);
-    }
-  };
-
-  const value: AnalyticsContextType = {
-    track,
-    page,
-    identify};
-
+const AnalyticsProviderPage: React.FC = () => {
   return (
-    <AnalyticsContext.Provider value={value}>
-      {children}
-    </AnalyticsContext.Provider>
+    <>
+      <Helmet>
+        <title>AnalyticsProvider - Zion Tech Group | AI & IT Solutions</title>
+        <meta name="description" content="Professional analyticsprovider services with cutting-edge technology and expert implementation." />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              AnalyticsProvider
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Professional analyticsprovider services with cutting-edge technology and expert implementation.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Expert Implementation</h3>
+              <p className="text-gray-600">Professional implementation with industry best practices and cutting-edge technology.</p>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Advanced Technology</h3>
+              <p className="text-gray-600">Cutting-edge technology solutions designed for modern businesses and enterprises.</p>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
+              <p className="text-gray-600">Round-the-clock support and maintenance services to ensure optimal performance.</p>
+            </div>
+          </div>
+        </div>
+      </main>
+      
+      <Footer />
+    </>
   );
 };
 
-export const useAnalytics = (): AnalyticsContextType => {
-  const context = useContext(AnalyticsContext);
-  if (context === undefined) {
-    throw new Error('useAnalytics must be used within an AnalyticsProvider');
-  }
-  return context;
-};
-
-// Declare global gtag function
-declare global {
-  interface Window {
-    dataLayer: any[];
-    gtag: (...args: any[]) => void;
-  }
-}
+export default AnalyticsProviderPage;

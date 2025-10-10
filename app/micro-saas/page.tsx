@@ -1,91 +1,72 @@
 'use client';
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
-const MicroSaasPage: React.FC = () => {
-  const microSaasProducts = [
-    {
-      icon: '📊',
-      title: 'AI Analytics Dashboard',
-      description: 'Real-time business intelligence and predictive analytics for small to medium businesses',
-      features: ['Real-time dashboards', 'Predictive analytics', 'Custom reports', 'Mobile app'],
-      price: '$99/month',
-      users: 'Up to 50 users',
-    },
-    {
-      icon: '👥',
-      title: 'AI-Powered CRM',
-      description: 'Intelligent customer relationship management with automated lead scoring and personalized interactions',
-      features: ['Lead management', 'Email automation', 'Sales forecasting', 'Integration APIs'],
-      price: '$149/month',
-      users: 'Up to 100 users',
-    },
-    {
-      icon: '🔒',
-      title: 'Security Monitoring Suite',
-      description: 'Comprehensive cybersecurity monitoring and threat detection for growing businesses',
-      features: ['Threat detection', 'Vulnerability scanning', 'Compliance reporting', '24/7 monitoring'],
-      price: '$199/month',
-      users: 'Up to 200 users',
-    },
-    {
-      icon: '☁️',
-      title: 'Cloud Infrastructure Manager',
-      description: 'Automated cloud resource management and cost optimization for multi-cloud environments',
-      features: ['Resource optimization', 'Cost tracking', 'Auto-scaling', 'Multi-cloud support'],
-      price: '$299/month',
-      users: 'Unlimited users',
-    }
-  ];
-
-  const benefits = [
-    'No upfront costs',
-    'Quick deployment',
-    'Scalable solutions',
-    'Regular updates',
-    '24/7 support',
-    'Easy integration'
-  ];
-
-
+const pagePage: React.FC = () => {
   return (
     <>
       <Helmet>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12">
-              <h2 className="text-4xl font-bold text-white mb-4">
-                Ready to Get Started?
-              </h2>
-              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Choose the micro SaaS solution that fits your business needs. 
-                Start with a free trial and scale as you grow.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/contact"
-                  className="bg-white text-cyan-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center space-x-2"
-                >
-                  <Zap className="w-5 h-5" />
-                  <span>Start Free Trial</span>
-                </Link>
-                <Link
-                  to="/pricing"
-                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200"
-                >
-                  View All Plans
-                </Link>
+        <title>Page - Zion Tech Group | AI & IT Solutions</title>
+        <meta name="description" content="Professional page services with cutting-edge technology and expert implementation." />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              Page
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Professional page services with cutting-edge technology and expert implementation.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Expert Implementation</h3>
+              <p className="text-gray-600">Professional implementation with industry best practices and cutting-edge technology.</p>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Advanced Technology</h3>
+              <p className="text-gray-600">Cutting-edge technology solutions designed for modern businesses and enterprises.</p>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
+              <p className="text-gray-600">Round-the-clock support and maintenance services to ensure optimal performance.</p>
+            </div>
+          </div>
+          
+          <div className="mt-16 text-center">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">Why Choose Our Page Services?</h2>
+            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              <div className="text-left">
+                <h3 className="text-xl font-semibold mb-4">Industry Expertise</h3>
+                <p className="text-gray-600">Our team brings years of experience and deep industry knowledge to every project.</p>
+              </div>
+              <div className="text-left">
+                <h3 className="text-xl font-semibold mb-4">Proven Results</h3>
+                <p className="text-gray-600">We deliver measurable results that drive business growth and success.</p>
+              </div>
+              <div className="text-left">
+                <h3 className="text-xl font-semibold mb-4">Scalable Solutions</h3>
+                <p className="text-gray-600">Our solutions are designed to grow with your business and adapt to changing needs.</p>
+              </div>
+              <div className="text-left">
+                <h3 className="text-xl font-semibold mb-4">Cost-Effective</h3>
+                <p className="text-gray-600">We provide maximum value with competitive pricing and transparent cost structures.</p>
               </div>
             </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </main>
+      
+      <Footer />
     </>
   );
 };
 
-export default MicroSaasPage;
+export default pagePage;

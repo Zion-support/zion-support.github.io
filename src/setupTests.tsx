@@ -1,130 +1,50 @@
-
-import React from 'react';
-
 'use client';
-/**
- * Jest setup file for testing environment;
- */
-/* eslint-disable no-console */
-import '@testing-library/jest-dom';
-// Polyfill for TextEncoder/TextDecoder;
-global.TextEncoder = TextEncoder;
-global.TextDecoder = TextDecoder as typeof globalThis.TextDecoder;
-// Suppress jsdom navigation warnings;
-const originalConsoleError = console.error;
-// eslint-disable-next-line no-console;
-const __originalConsoleError = console.error;
-console.error = (...args) => {// TODO: Add content;}
-}
-// Suppress jsdom navigation warnings
-// eslint-disable-next-line no-console
-const originalConsoleError = console.error;
-// eslint-disable-next-line no-console
-console.error = (...args) => {
-  const message = args[0]?.toString?.() || args[0]?.message || '';
-  if (message.includes('Not implemented: navigation') ||
-      message.includes('navigation (except hash changes)')) {// TODO: Add content;}
-}
-    return;
-  }
-  originalConsoleError(...args);
-};
-// Mock window.matchMedia;
-Object.defineProperty(window, 'matchMedia', {// TODO: Add content;}
-};
-  writable: true,
-  value: jest.fn().mockImplementation(query => ({// TODO: Add content;}
-};
-  matches: false,
-    media: query,
-    onchange: null,
-    addListener: jest.fn(), // deprecated,
-  removeListener: jest.fn(), // deprecated,
-  addEventListener: jest.fn(),
-    removeEventListener: jest.fn(),
-    dispatchEvent: jest.fn()
-  }))
-});
-// Mock requestAnimationFrame;
-global.requestAnimationFrame = jest.fn(cb => setTimeout(cb, 0));
-global.cancelAnimationFrame = jest.fn(id => clearTimeout(id));
-// Mock localStorage;
-const localStorageMock = {// TODO: Add content;}
-};
-  getItem: jest.fn(),
-  setItem: jest.fn(),
-  removeItem: jest.fn(),
-  clear: jest.fn()
-Object.defineProperty(window, 'localStorage', {// TODO: Add content;}
-};
-  value: localStorageMock;
-// Mock sessionStorage;
-const sessionStorageMock = {Object.defineProperty(window, 'sessionStorage', {}
-  // TODO: Add content;
-};
-  value: sessionStorageMock;
-// Mock fetch;
-global.fetch = jest.fn();
-// Mock console methods for cleaner test output;
-// Mock console methods for cleaner test output
-// eslint-disable-next-line no-console
-const originalConsoleWarn = console.warn;
-// eslint-disable-next-line no-console
-const originalConsoleInfo = console.info;
-console.warn = (...args) => {// TODO: Add content;}
-}
-// eslint-disable-next-line no-console
-console.warn = (...args) => {
-  const message = args[0]?.toString?.() || '';
-  if (message.includes('Warning: ReactDOM.render is no longer supported')) {if (args[0] && args[0].type === 'not implemented' && args[0].message?.includes('navigation')) {}
-  // TODO: Add content;
-}
-    return; // Suppress JSDOM navigation warnings;
-// Mock window.location;
-delete (window as unknown as Record;
-          <string, unknown>).location;
-(window as unknown as Record<string, unknown>).location = {// TODO: Add content;}
-};
-// eslint-disable-next-line no-console
-console.info = (...args) => {
-  const message = args[0]?.toString?.() || '';
-  if (message.includes('ReactDOM.render is no longer supported')) {
-    return;
-  }
-  originalConsoleInfo(...args);
-};
-// Mock PerformanceObserver
-global.PerformanceObserver = class MockPerformanceObserver {
-  static readonly supportedEntryTypes: readonly string[] = ['navigation', 'paint', 'largest-contentful-paint', 'first-input', 'layout-shift'];
-  constructor(public callback: PerformanceObserverCallback) {}
-  observe() {}
-  disconnect() {}
-  takeRecords() {
-    return [];
-  }
-};
-// Suppress JSDOM navigation warnings
-// eslint-disable-next-line no-console
-console.error = (...args) => {
-  if (args[0] && args[0].type === 'not implemented' && args[0].message?.includes('navigation')) {
-    return; // Suppress JSDOM navigation warnings
-  }
-  originalConsoleError(...args);
-};
-// Mock window.location
-delete (window as unknown as Record<string, unknown>).location;
-(window as unknown as Record<string, unknown>).location = {
-  href: 'http://localhost:3000',
-  origin: 'http://localhost:3000',
-  protocol: 'http:',
-  host: 'localhost:3000',
-  hostname: 'localhost',
-  port: '3000',
-  pathname: '/',
-  search: '',
-  hash: '',
-  reload: jest.fn(),
-  assign: jest.fn(),
-  replace: jest.fn()
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
+const setupTestsPage: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>SetupTests - Zion Tech Group | AI & IT Solutions</title>
+        <meta name="description" content="Professional setuptests services with cutting-edge technology and expert implementation." />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              SetupTests
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Professional setuptests services with cutting-edge technology and expert implementation.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Expert Implementation</h3>
+              <p className="text-gray-600">Professional implementation with industry best practices and cutting-edge technology.</p>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Advanced Technology</h3>
+              <p className="text-gray-600">Cutting-edge technology solutions designed for modern businesses and enterprises.</p>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
+              <p className="text-gray-600">Round-the-clock support and maintenance services to ensure optimal performance.</p>
+            </div>
+          </div>
+        </div>
+      </main>
+      
+      <Footer />
+    </>
+  );
+};
 
+export default setupTestsPage;

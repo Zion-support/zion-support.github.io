@@ -1,105 +1,50 @@
-
-
-
-import { Link } from 'react-router-dom';
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-import { CheckCircle, Star } from 'lucide-react';
-const BusinessAppsPage: React.FC = () => {
+const pagePage: React.FC = () => {
   return (
-    <div>
+    <>
+      <Helmet>
+        <title>Page - Zion Tech Group | AI & IT Solutions</title>
+        <meta name="description" content="Professional page services with cutting-edge technology and expert implementation." />
+      </Helmet>
+      
       <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This page is under development. Please check back soon for updates.
-          </p>
-        </section>
-        {/* Key Benefits */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">
-
-// Why Choose Our Business Apps?
+      
+      <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              Page
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Professional page services with cutting-edge technology and expert implementation.
+            </p>
+          </div>
           
-          
-          
-          
-          
-          
-          
-          
-          
-          </h2>"
-<div className="text-4xl mb-4">🚀</div>"
-              <h3 className="text-xl font-bold text-white mb-3">AI-Powered</h3>"
-              <p className="text-gray-300 text-sm">Intelligent automation and insights powered by advanced AI</p>"
-              <div className="text-4xl mb-4">⚡</div>"
-              <h3 className="text-xl font-bold text-white mb-3">Fast Implementation</h3>"
-              <p className="text-gray-300 text-sm">Quick deployment with minimal disruption to your workflow</p>"
-              <div className="text-4xl mb-4">🔒</div>"
-              <h3 className="text-xl font-bold text-white mb-3">Enterprise Security</h3>"
-              <p className="text-gray-300 text-sm">Bank-level security and compliance for your sensitive data</p>"
-              <div className="text-4xl mb-4">📊</div>"
-              <h3 className="text-xl font-bold text-white mb-3">Real-time Analytics</h3>"
-              <p className="text-gray-300 text-sm">Live insights and analytics to drive better decisions</p>
-        {/* Apps by Category */})
-        {categories.map(category => ()}"
-          <section key={category} className="mb-16"></section>"
-            <h3 className="text-2xl font-bold text-white mb-8 text-center neon-text">{category} Applications</h3>
-            <div>{businessApps;}
-                .filter(app => app.category === category)
-                .map((app, index) => ("
-<div className="text-4xl mb-4 text-center">{app.icon}</div>"
-                    <h4 className="text-xl font-bold text-white mb-3 text-center">{app.title}</h4>"
-                    <p className="text-gray-300 mb-4 text-sm text-center">{app.description}</p>"
-                        <span className="text-2xl font-bold text-cyan-400">{app.price}</span>"
-                        <span className="text-sm text-gray-400">Marke,
-  t: {app.marketPrice}</span>
-                      <div>Save up to 50% vs market rates</div>"
-                      <h5 className="font-semibold text-white mb-2 text-sm">Key,
-  Features:</h5>"
-                      <ul className="space-y-1"></ul>)
-                        {app.features.slice(0, 3).map((feature, featureIndex) => ()}"
-          <li key={featureIndex} className="flex items-center text-xs text-gray-300"></li>"
-                            <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" /></CheckCircle>
-                            {feature}
-                          </li>
-                        ))}
-                        {app.features.length > 3 && (}"
-<li className="text-xs text-gray-400">+{app.features.length - 3} more features</li>)
-                        )}
-                      </ul>"
-                      <h5 className="font-semibold text-white mb-2 text-sm">Benefit,
-  s:</h5>
-                        {app.benefits.map((benefit, benefitIndex) => ()}"
-          <li key={benefitIndex} className="flex items-center text-xs text-gray-300"></li>"
-                            <Star className="w-3 h-3 text-yellow-500 mr-2 flex-shrink-0" /></Star>
-                            {benefit}"
-className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg font-semibold,
-  hover:from-cyan-600,"
-  hover:to-blue-700 transition-all text-sm inline-block"
-                      >Get This App</a>
-        {/* CTA Section */}"
-        <section className="text-center"></section>"
-          <h2 className="text-3xl font-bold text-white mb-6 neon-text"></h2>
-            Need a Custom Business App?"
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">We can build custom business applications tailored to your specific needs and requirements</p>
-            >Get Custom Quote</a>"
-              href="te,"
-  l:+13024640950"
-            >Call (302) 464-0950</a>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Expert Implementation</h3>
+              <p className="text-gray-600">Professional implementation with industry best practices and cutting-edge technology.</p>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Advanced Technology</h3>
+              <p className="text-gray-600">Cutting-edge technology solutions designed for modern businesses and enterprises.</p>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
+              <p className="text-gray-600">Round-the-clock support and maintenance services to ensure optimal performance.</p>
+            </div>
+          </div>
+        </div>
       </main>
-      <Footer /></Footer>
-</div>);
-}
-export default BusinessAppsPage;
+      
+      <Footer />
+    </>
+  );
+};
 
-
-
+export default pagePage;

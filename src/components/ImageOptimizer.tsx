@@ -1,131 +1,50 @@
-import React, { useState, useRef, useEffect } from 'react';
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
-interface ImageOptimizerProps {
-  src: string;
-  alt: string;
-  className?: string;
-  width?: number;
-  height?: number;
-  priority?: boolean;
-  placeholder?: string;
-  onLoad?: () => void;
-  onError?: () => void;
-}
-
-const ImageOptimizer: React.FC<ImageOptimizerProps> = ({,
-  src;
-  alt,
-  className = '',
-  width,
-  height,
-  priority = false,
-  placeholder,
-  onLoad,
-  onError;
-}) => {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [isInView, setIsInView] = useState(priority);
-  const [hasError, setHasError] = useState(false);
-  const imgRef = useRef<HTMLImageElement>(null);</HTMLImageElement>useEffect</HTMLImageElement>(() => {
-    if (priority) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsInView(true);
-          observer.disconnect();
-        }
-      },
-      {
-        rootMargin: '50px 0px',
-        threshold: 0.01;
-      }
-    );
-
-    if (imgRef.current) {
-      observer.observe(imgRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, [priority]);
-
-  const handleLoad = () => {
-    setIsLoaded(true);
-    onLoad?.();
-  };
-
-  const handleError = () => {
-    setHasError(true);
-    onError?.();
-  };
-
-  const generatePlaceholder = () => {
-    if (placeholder) return placeholder;
-    
-    const svg = `
-      <svg width="${width || 400}" height="${height || 300}" xmlns="http: //www.w3.org/2000/svg">
-        <rect width="100%" height="100%" fill="#1e293b"/>
-        <rect x="0" y="0" width="100%" height="2" fill="#00ffff" opacity="0.3"/>
-        <rect x="0" y="0" width="2" height="100%" fill="#00ffff" opacity="0.3"/>
-        <rect x="0" y="98%" width="100%" height="2" fill="#00ffff" opacity="0.3"/>
-        <rect x="98%" y="0" width="2" height="100%" fill="#00ffff" opacity="0.3"/>
-        <text x="50%" y="50%" text-anchor="middle" fill="#64748b" font-family="monospace" font-size="14">
-          Loading...,
-        </text>,
-      </svg>,
-    `;
-    ,
-    return `data:image/svg+xml;base64,${btoa(svg)}`;
-  };
-
-  if (hasError) {
-    return(<div;
-        className={`bg-slate-800 flex items-center justify-center ${className}`}
-        style={{ width, height }}
-      ></div>
-        <div className="text-gray-400 text-center"></div>
-          <div className="text-4xl mb-2">⚠️</div>
-          <div className="text-sm">Image failed to load</div>)
-        </div>)
-      </div>)
-    );
-  }
-
-  return(<div;
-      ref={imgRef}
-      className={`relative overflow-hidden ${className}`}
-      style={{ width, height }}
-    >
-      {/* Placeholder */})
-      {!isLoaded && ()
-        <img;)
-      {/* Placeholder */}
-      {!isLoaded && (</div>
-        <img
-          src={generatePlaceholder()}
-          alt=""
-          className="absolute inset-0 w-full h-full object-cover animate-pulse"
-          style={{ filter: 'blur(1 px)' }}
-        /></img>
-      )}
+const ImageOptimizerPage: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>ImageOptimizer - Zion Tech Group | AI & IT Solutions</title>
+        <meta name="description" content="Professional imageoptimizer services with cutting-edge technology and expert implementation." />
+      </Helmet>
       
-      {/* Actual Image */}
-      {isInView && (
-        <img;
-          src={src}
-          alt={alt}
-          className={`w-full h-full object-cover transition-opacity duration-300 ${}
-            isLoaded ? 'opacity-100' : 'opacity-0'}
-          }`}
-          loading={priority ? 'eager' : 'lazy'}
-          decoding="async"
-          onLoad={handleLoad}
-          onError={handleError}
-          style={{ width, height }}
-        /></img>
-      )}
-    </div>
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              ImageOptimizer
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Professional imageoptimizer services with cutting-edge technology and expert implementation.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Expert Implementation</h3>
+              <p className="text-gray-600">Professional implementation with industry best practices and cutting-edge technology.</p>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Advanced Technology</h3>
+              <p className="text-gray-600">Cutting-edge technology solutions designed for modern businesses and enterprises.</p>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
+              <p className="text-gray-600">Round-the-clock support and maintenance services to ensure optimal performance.</p>
+            </div>
+          </div>
+        </div>
+      </main>
+      
+      <Footer />
+    </>
   );
 };
 
-export default ImageOptimizer;
+export default ImageOptimizerPage;

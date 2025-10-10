@@ -1,97 +1,49 @@
-'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from './src/components/Navigation';
+import Footer from './src/components/Footer';
 
-import React, { Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
-import './app/styles/futuristic.css';
-import Navigation from './app/components/Navigation';
-import Footer from './app/components/Footer';
-import HomePage from './app/page';
-import { PageLoader } from './app/components/LoadingStates';
-import ErrorBoundary from './app/components/ErrorBoundary';
-import SEOHead from './app/components/EnhancedSEOHead';
-import SkipLink from './app/components/SkipLink';
-import Breadcrumb from './app/components/Breadcrumb';
-import PerformanceOptimizer from './app/components/PerformanceOptimizer';
-import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
-import EnhancedAccessibility from './app/components/EnhancedAccessibility';
-import { usePerformanceMonitor } from './app/hooks/usePerformanceMonitor';
-import { AnalyticsProvider } from './app/components/AnalyticsProvider';
-import PerformanceMonitor from './app/components/PerformanceMonitor';
-
-// Structured data for SEO - moved to SEOHead component
-
-// Lazy load pages for better performance
-const AboutPage = React.lazy(() => import('./app/about/page'));
-const ContactPage = React.lazy(() => import('./app/contact/page'));
-const ServicesPage = React.lazy(() => import('./app/services/page'));
-const PricingPage = React.lazy(() => import('./app/pricing/page'));
-const BlogPage = React.lazy(() => import('./app/blog/page'));
-const CaseStudiesPage = React.lazy(() => import('./app/case-studies/page'));
-const CareersPage = React.lazy(() => import('./app/careers/page'));
-const PartnersPage = React.lazy(() => import('./app/partners/page'));
-const SupportPage = React.lazy(() => import('./app/support/page'));
-const FAQPage = React.lazy(() => import('./app/faq/page'));
-const DemoPage = React.lazy(() => import('./app/demo/page'));
-const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
-const MicroSaasPage = React.lazy(() => import('./app/micro-saas/page'));
-
-// Performance monitoring hook
-const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  usePerformanceMonitor();
-  return <>{children}</>;
-};
-
-// Main App Component
 const App: React.FC = () => {
   return (
-    <ErrorBoundary>
-      <HelmetProvider>
-        <SEOHead />
-        <SkipLink />
-        <Router>
-          <AppWithPerformanceMonitoring>
-            <AnalyticsProvider>
-              <PerformanceOptimizer>
-                <EnhancedAccessibility>
-                  <AccessibilityEnhancer>
-                    <PerformanceMonitor />
-                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-                      <Navigation />
-                      <Breadcrumb />
-                      <main id="main-content" className="flex-1">
-                        <Suspense fallback={<PageLoader />}>
-                          <Routes>
-                            <Route path="/" element={<HomePage />} />
-                            <Route path="/about" element={<AboutPage />} />
-                            <Route path="/contact" element={<ContactPage />} />
-                            <Route path="/services" element={<ServicesPage />} />
-                            <Route path="/pricing" element={<PricingPage />} />
-                            <Route path="/blog" element={<BlogPage />} />
-                            <Route path="/case-studies" element={<CaseStudiesPage />} />
-                            <Route path="/careers" element={<CareersPage />} />
-                            <Route path="/partners" element={<PartnersPage />} />
-                            <Route path="/support" element={<SupportPage />} />
-                            <Route path="/faq" element={<FAQPage />} />
-                            <Route path="/demo" element={<DemoPage />} />
-                            <Route path="/consultation" element={<ConsultationPage />} />
-                            <Route path="/micro-saas" element={<MicroSaasPage />} />
-                          </Routes>
-                        </Suspense>
-                      </main>
-                      <Footer />
-                    </div>
-                  </AccessibilityEnhancer>
-                </EnhancedAccessibility>
-              </PerformanceOptimizer>
-            </AnalyticsProvider>
-          </AppWithPerformanceMonitoring>
-        </Router>
-      </HelmetProvider>
-    </ErrorBoundary>
+    <>
+      <Helmet>
+        <title>Zion Tech Group - AI & IT Solutions</title>
+        <meta name="description" content="Professional AI and IT solutions with cutting-edge technology." />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              Welcome to Zion Tech Group
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Professional AI and IT solutions with cutting-edge technology and expert implementation.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">AI Solutions</h3>
+              <p className="text-gray-600">Advanced AI-powered solutions for modern businesses.</p>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">IT Services</h3>
+              <p className="text-gray-600">Comprehensive IT services and infrastructure solutions.</p>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Cloud Solutions</h3>
+              <p className="text-gray-600">Scalable cloud infrastructure and migration services.</p>
+            </div>
+          </div>
+        </div>
+      </main>
+      
+      <Footer />
+    </>
   );
 };
-
-App.displayName = 'App';
 
 export default App;

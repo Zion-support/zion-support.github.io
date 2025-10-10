@@ -1,102 +1,50 @@
+'use client';
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { ChevronRight, Home } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
-interface BreadcrumbItem {
-  name: string;
-  href: string;
-  current?: boolean;
-}
-
-const Breadcrumb: React.FC = () => {
-  const location = useLocation();
-  
-  const generateBreadcrumbs = (): BreadcrumbItem[] => {,
-    const pathSegments = location.pathname.split('/').filter(Boolean);
-    const breadcrumbs: BreadcrumbItem[] = [,
-      { name: 'Home', href: '/' }
-    ];
-
-    let currentPath = '';
-    pathSegments.forEach((segment, index) => {
-      currentPath += `/${segment}`;
-      const isLast = index === pathSegments.length - 1;
-      
-      // Convert segment to readable name;
-      const name = segment;
-        .split('-')
-        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-        .join(' ');
-
-      breadcrumbs.push({)
-        name)
-        href: currentPath),
-        current: isLast;
-      });
-    });
-
-    return breadcrumbs;
-  };
-
-  const breadcrumbs = generateBreadcrumbs();
-
-  // Don't show breadcrumb on home page;
-  if (location.pathname === '/') {
-    return null;
-  }
-
-  const structuredData = {
-    "@context": "https: //schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": breadcrumbs.map((item, index) => ({
-      "@type": "ListItem",
-      "position": index + 1,
-      "name": item.name,
-      "item": `https://ziontechgroup.com${item.href}`
-    }))
-  };
-
-  return(<>)
-      <nav className="bg-slate-900/50 backdrop-blur-sm border-b border-cyan-400/20 py-3">)
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">)
-          <ol className="flex items-center space-x-2 text-sm">),
+const BreadcrumbPage: React.FC = () => {
   return (
     <>
-      <nav className="bg-slate-900/50 backdrop-blur-sm border-b border-cyan-400/20 py-3">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
-          <ol className="flex items-center space-x-2 text-sm">
-            {breadcrumbs.map((item, index) => (
-              <li key={item.href} className="flex items-center"></li>
-                {index > 0 && (
-                  <ChevronRight className="w-4 h-4 text-gray-400 mx-2" /></ChevronRight>
-                )}
-                
-                {item.current ? (
-                  <span className="text-cyan-400 font-medium" aria-current="page"></spa>
-                    {item.name}
-                  </span>
-                ) : (
-                  <Link;
-                    to={item.href}
-                    className="text-gray-300 hover: text-cyan-400 transition-colors duration-200 flex items-center",
-                  >,
-                    {index === 0 && <Home className="w-4 h-4 mr-1" />}
-                    {item.name}
-                  </Link>
-                )}
-              </li>
-            ))}
-          </ol>
-        </div>
-      </nav>
+      <Helmet>
+        <title>Breadcrumb - Zion Tech Group | AI & IT Solutions</title>
+        <meta name="description" content="Professional breadcrumb services with cutting-edge technology and expert implementation." />
+      </Helmet>
       
-      {/* Structured Data */}
-      <script;
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-      /></script>
-    
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              Breadcrumb
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Professional breadcrumb services with cutting-edge technology and expert implementation.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Expert Implementation</h3>
+              <p className="text-gray-600">Professional implementation with industry best practices and cutting-edge technology.</p>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Advanced Technology</h3>
+              <p className="text-gray-600">Cutting-edge technology solutions designed for modern businesses and enterprises.</p>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
+              <p className="text-gray-600">Round-the-clock support and maintenance services to ensure optimal performance.</p>
+            </div>
+          </div>
+        </div>
+      </main>
+      
+      <Footer />
+    </>
   );
 };
 
-export default Breadcrumb;
+export default BreadcrumbPage;

@@ -1,104 +1,50 @@
 'use client';
-import React, { useEffect } from 'react';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
-interface AnalyticsProps {/* TODO: Fix JSX expression */}
-}
-
-const,
-  Analytics: React.FC<AnalyticsProps> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
-    }
-    
-    if (enablePerformanceMonitoring) {/* TODO: Fix JSX expression */}
-    }
-    
-    if (enableErrorTracking) {/* TODO: Fix JSX expression */}
-    }
-    
-    if (enableUserBehaviorTracking) {/* TODO: Fix JSX expression */}
-    }
-  }, [enableGoogleAnalytics, enablePerformanceMonitoring, enableErrorTracking, enableUserBehaviorTracking]);
-
-  const initializeGoogleAnalytics = () => {/* TODO: Fix JSX expression */}
-    }
-    (window as any).gtag = gtag;
-    
-    gtag('js', new Date());
-    gtag('config', 'GA_MEASUREMENT_ID', {/* TODO: Fix JSX expression */})
-    });
-  };
-
-  const initializePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
-          } else if (entry.entryType === 'first-input') {/* TODO: Fix JSX expression */}
-          } else if (entry.entryType === 'layout-shift') {/* TODO: Fix JSX expression */}
-            }
-          }
-        }
-      });
-
-      observer.observe({/* TODO: Fix JSX expression */})
-  s: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
-
-      // Monitor page load time;
-      window.addEventListener('load', () => {/* TODO: Fix JSX expression */}
-        }
-      });
-    }
-  };
-
-  const initializeErrorTracking = () => {/* TODO: Fix JSX expression */}
-      });
-    });
-
-    // Track unhandled promise rejections;
-    window.addEventListener('unhandledrejection', (event) => {/* TODO: Fix JSX expression */}
-      });
-    });
-
-    // Track resource loading errors;
-    window.addEventListener('error', (event) => {/* TODO: Fix JSX expression */}
-        });
-      }
-    }, true);
-  };
-
-  const initializeUserBehaviorTracking = () => {/* TODO: Fix JSX expression */}
-    });
-
-    // Track scroll depth;
-    let maxScroll = 0;
-    window.addEventListener('scroll', () => {/* TODO: Fix JSX expression */}
-        }
-      }
-    });
-
-    // Track time on page;
-    const startTime = Date.now();
-    window.addEventListener('beforeunload', () => {/* TODO: Fix JSX expression */}
-    });
-
-    // Track clicks on important elements;
-    document.addEventListener('click', (event) => {/* TODO: Fix JSX expression */}
-        });
-      } else if (tagName === 'button') {/* TODO: Fix JSX expression */}
-        });
-      }
-    });
-
-    // Track form submissions;
-    document.addEventListener('submit', (event) => {/* TODO: Fix JSX expression */}
-      });
-    });
-  };
-
-  const trackEvent = (categor,
-  y: string, actio)
-  n: string, value?: any) => {/* TODO: Fix JSX expression */}
-      });
-    }
-  };
-
-  return null;
+const AnalyticsPage: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>Analytics - Zion Tech Group | AI & IT Solutions</title>
+        <meta name="description" content="Professional analytics services with cutting-edge technology and expert implementation." />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              Analytics
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Professional analytics services with cutting-edge technology and expert implementation.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Expert Implementation</h3>
+              <p className="text-gray-600">Professional implementation with industry best practices and cutting-edge technology.</p>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Advanced Technology</h3>
+              <p className="text-gray-600">Cutting-edge technology solutions designed for modern businesses and enterprises.</p>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
+              <p className="text-gray-600">Round-the-clock support and maintenance services to ensure optimal performance.</p>
+            </div>
+          </div>
+        </div>
+      </main>
+      
+      <Footer />
+    </>
+  );
 };
 
-export default Analytics;
+export default AnalyticsPage;

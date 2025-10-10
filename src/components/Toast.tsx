@@ -1,130 +1,50 @@
-
-
 'use client';
-export type ToastType = 'success' | 'error' | 'warning' | 'info';
-export interface ToastProps {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
-  messag,
-  e: string;
-  type?: ToastType;
-  duration?: number;
-  onClose?: () => void;,
-    sho,
-  w: boolean;
-}
-const,
-  Toast: React.FC;
-          <ToastProps> = ({/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-//   message,
-  type = 'success',
-  duration = 3000,
-//   onClose,
-//   show;)
-}) => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-  const [isVisible, setIsVisible] = useState(show);
-  useEffect(() => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-    setIsVisible(show);
-    if (show && duration > 0) {setIsVisible(false);}
-        if (onClose) {/* TODO: Fix JSX expression */}
-        }
-      }, duration);
-      return () => clearTimeout(timer);
-    }
-    return undefined;
-  }, [show, duration, onClose]);
-  if (!isVisible) return null;
-  const getToastStyles = () => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-    switch (type) {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-      case 'success':
-        return 'bg-green-600 text-white';
-      case 'error':
-        return 'bg-red-600 text-white';
-      case 'warning':
-        return 'bg-yellow-500 text-white';
-      case 'info':
-        return 'bg-blue-600 text-white';
-      defaul,
-  t:
-        return 'bg-gray-800 text-white';
-    }
-  };
-  const getIcon = () => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-    switch (type) {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-      case 'success':
-        return '';
-      case 'error':
-        return '';
-      case 'warning':
-        return '';
-      case 'info':
-        return '';
-      defaul,
-  t:
-        return '';
-    }
-  };
-  return (<div>Coming Soon</div>)
-  )
-    
-          <div></div>
-className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-center gap-2 animate-fade-in ${getToastStyles()}`}
-      role="alert""
-      aria-live="polite"
-// >
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
+const ToastPage: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>Toast - Zion Tech Group | AI & IT Solutions</title>
+        <meta name="description" content="Professional toast services with cutting-edge technology and expert implementation." />
+      </Helmet>
       
-          
-          
-          
-          
-          
-          
-          
-          "
-          <span className="text-xl font-bold">{getIcon()}</span>
-      <span>{message}</span>
-      <button></button>
-        onClick={() => {}
-  // TOD,
-  O: Add content;
-}
-          setIsVisible(false);
-          if (onClose) onClose();
-        }}"
-        className="ml-4,"
-  hover:opacity-80 transition-opacity""
-        aria-label="Close notification"
-//       >
-//
+      <Navigation />
       
+      <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              Toast
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Professional toast services with cutting-edge technology and expert implementation.
+            </p>
+          </div>
           
-          
-          
-          
-          
-          
-          
-          
-          </button>
-    </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Expert Implementation</h3>
+              <p className="text-gray-600">Professional implementation with industry best practices and cutting-edge technology.</p>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Advanced Technology</h3>
+              <p className="text-gray-600">Cutting-edge technology solutions designed for modern businesses and enterprises.</p>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
+              <p className="text-gray-600">Round-the-clock support and maintenance services to ensure optimal performance.</p>
+            </div>
+          </div>
+        </div>
+      </main>
+      
+      <Footer />
+    </>
   );
 };
 
-export default Toast;"`
-
-
-
+export default ToastPage;

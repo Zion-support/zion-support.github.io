@@ -1,165 +1,50 @@
+'use client';
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
-
-interface ResponsiveContainerProps {// TODO: Add content;}
-
-};
-  childre,
-  n: React.ReactNode;
-  className?: string;
-  breakpoints?: {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-    sm?: string;
-    md?: string;
-    lg?: string;
-    xl?: string;
-    '2xl'?: string;
-  };
-  fallback?: React.ReactNode;
-}
-const,
-  ResponsiveContainer: React.FC;
-          <ResponsiveContainerProps> = ({/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-//   children,
-  className = '',
-  breakpoints = {},
-//   fallback)
-}) => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-  const [isClient, setIsClient] = useState(false);
-  const [screenSize, setScreenSize] = useState;
-          <'sm' | 'md' | 'lg' | 'xl' | '2xl'>('lg');
-  const isTablet = useMediaQuery({/* TODO: Fix JSX expression */})
-  h: 1023 });
-  const isDesktop = useMediaQuery({/* TODO: Fix JSX expression */})
-  h: 1024 });
-  const isLargeDesktop = useMediaQuery({/* TODO: Fix JSX expression */})
-  h: 1280 });
-  useEffect(() => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-    setIsClient(true);
-  }, []);
-  useEffect(() => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-    if (!isClient) return;
-    if (isLargeDesktop) {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-      setScreenSize('2xl');
-    } else if (isDesktop) {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-      setScreenSize('xl');
-    } else if (isTablet) {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-      setScreenSize('md');
-    } else {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-      setScreenSize('sm');
-    }
-  }, [isClient, isMobile, isTablet, isDesktop, isLargeDesktop]);
-  if (!isClient) {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-    return fallback || 
-          
-          
-          
-          
-          
-          
-          
-          
-          <div className={className}>{children}</div>;
-  }
-  const getResponsiveClasses = () => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-    const baseClasses = className;
-    const responsiveClasses = breakpoints[screenSize] || '';
-    return `${baseClasses} ${responsiveClasses}`.trim();
-  };
-
+const ResponsiveContainerPage: React.FC = () => {
   return (
-    <div className="responsivecontainer">
-
-      {/* Component content */}
-    </div>)
+    <>
+      <Helmet>
+        <title>ResponsiveContainer - Zion Tech Group | AI & IT Solutions</title>
+        <meta name="description" content="Professional responsivecontainer services with cutting-edge technology and expert implementation." />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              ResponsiveContainer
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Professional responsivecontainer services with cutting-edge technology and expert implementation.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Expert Implementation</h3>
+              <p className="text-gray-600">Professional implementation with industry best practices and cutting-edge technology.</p>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Advanced Technology</h3>
+              <p className="text-gray-600">Cutting-edge technology solutions designed for modern businesses and enterprises.</p>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
+              <p className="text-gray-600">Round-the-clock support and maintenance services to ensure optimal performance.</p>
+            </div>
+          </div>
+        </div>
+      </main>
+      
+      <Footer />
+    </>
   );
 };
-// Hook for responsive values;
-export const useResponsiveValue = {};
-          <T,>(value,
-  s: {// sm?: T;}
-// md?: T;
-// lg?: T;
-// xl?: T;
-// '2xl'?: T;
-// default?: T;)
-}): T => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-  const isMobile = useMediaQuery({/* TODO: Fix JSX expression */})
-  h: 767 });
-  const isTablet = useMediaQuery({/* TODO: Fix JSX expression */})
-  h: 1023 });
-  const isDesktop = useMediaQuery({/* TODO: Fix JSX expression */})
-  h: 1024 });
-  const isLargeDesktop = useMediaQuery({/* TODO: Fix JSX expression */})
-  h: 1280 });
-  if (isLargeDesktop && values['2xl'] !== undefined) {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-    return values['2xl'];
-  }
-  if (isDesktop && values.xl !== undefined) {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-    return values.xl;
-  }
-  if (isTablet && values.md !== undefined) {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-    return values.md;
-  }
-  if (isMobile && values.sm !== undefined) {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-    return values.sm;
-  }
-  return values.default || values.lg || values.md || values.sm || ({} as T);
-};
-// Hook for responsive breakpoints;
-export const useBreakpoint = () => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-  const isMobile = useMediaQuery({/* TODO: Fix JSX expression */})
-  h: 767 });
-  const isTablet = useMediaQuery({/* TODO: Fix JSX expression */})
-  h: 1023 });
-  const isDesktop = useMediaQuery({/* TODO: Fix JSX expression */})
-  h: 1024 });
-  const isLargeDesktop = useMediaQuery({/* TODO: Fix JSX expression */})
-  h: 1280 });
-  return {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-//     isMobile,
-//     isTablet,
-//     isDesktop,
-//     isLargeDesktop,
-    curren,
-  t: isLargeDesktop ? '2xl' : isDesktop ? 'xl' : isTablet ? 'md' : 'sm'};
-};
 
-export default ResponsiveContainer;
-
-
+export default ResponsiveContainerPage;

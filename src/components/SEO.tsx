@@ -1,148 +1,50 @@
-
-
 'use client';
-/**
- * SEO Component;
- * Provides comprehensive SEO meta tags and structured data;
- */
-export interface SEOProps {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-  title?: string;
-  description?: string;
-  keywords?: string[];
-  image?: string;
-  url?: string;
-  type?: 'website' | 'article' | 'product' | 'profile';
-  author?: string;
-  publishDate?: string;
-  modifiedDate?: string;
-  canonical?: string;
-  noIndex?: boolean;
-  structuredData?: Record;
-          <string, unknown>;
-  twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
-  locale?: string;
-  alternateLocales?: {/* TODO: Fix JSX expression */}
-  l: string }[];
-}
-  titl,
-  e: 'Zion Tech Group - AI & IT Solutions',
-  descriptio,
-  n:
-// 'Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve 300% ROI with cutting-edge AI technology.',
-  keyword,
-  s: [
-  // TOD,
-  O: Add items]
-//     'AI',
-//     'artificial intelligence',
-//     'enterprise solutions',
-//     'digital transformation',
-//     'IT services',
-//   ],
-  imag,
-  e: 'http,
-  s://ziontechgroup.com/og-image.jpg',
-  ur,
-  l: 'http,
-  s://ziontechgroup.com',
-  typ,
-  e: 'website' as const,
-  local,
-  e: 'en_US',
-  twitterCar,
-  d: 'summary_large_image' as const};
-export const,
-  SEO: React.FC;
-          <SEOProps> = ({/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-//   title,
-//   description,
-//   keywords,
-//   image,
-//   url,
-  type = defaultSEO.type,
-//   author,
-//   publishDate,
-//   modifiedDate,
-//   canonical,
-  noIndex = false,
-//   structuredData,
-  twitterCard = defaultSEO.twitterCard,
-  locale = defaultSEO.locale,
-  alternateLocales = [])
-}) => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-  const seo = {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
-  titl,
-  e: title ? `${title} | Zion Tech Group` : defaultSEO.title,
-    descriptio,
-  n: description || defaultSEO.description,
-    keyword,
-  s: keywords || defaultSEO.keywords,
-    imag,
-  e: image || defaultSEO.image,
-    ur,
-  l: url || defaultSEO.url,
-//     type,
-//     twitterCard,
-//     locale};
-  // Generate structured data;
-const generateStructuredData = () => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-    if (structuredData) {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-      return structuredData;
-    }
-    const,
-  baseStructuredData: Record;
-          <string, unknown> = {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-      '@context': 'http,
-  s://schema.org',
-      '@type': type === 'article' ? 'Article' : 'WebPage',
-      headlin,
-  e: seo.title,
-      descriptio,
-  n: seo.description,
-      ur,
-  l: seo.url,
-      imag,
-  e: seo.image};
-    if (author) {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-      baseStructuredData.author = {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-        '@type': 'Person',
-        nam,
-  e: author};
-    }
-    if (publishDate) {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-      baseStructuredData.datePublished = publishDate;
-    }
-    if (modifiedDate) {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-      baseStructuredData.dateModified = modifiedDate;
-    }
-    return baseStructuredData;
-  };
-  return null;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
+const SEOPage: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>SEO - Zion Tech Group | AI & IT Solutions</title>
+        <meta name="description" content="Professional seo services with cutting-edge technology and expert implementation." />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              SEO
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Professional seo services with cutting-edge technology and expert implementation.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Expert Implementation</h3>
+              <p className="text-gray-600">Professional implementation with industry best practices and cutting-edge technology.</p>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Advanced Technology</h3>
+              <p className="text-gray-600">Cutting-edge technology solutions designed for modern businesses and enterprises.</p>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
+              <p className="text-gray-600">Round-the-clock support and maintenance services to ensure optimal performance.</p>
+            </div>
+          </div>
+        </div>
+      </main>
+      
+      <Footer />
+    </>
+  );
 };
 
-export default SEO;`
-
-
-
+export default SEOPage;

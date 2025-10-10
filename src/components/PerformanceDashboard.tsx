@@ -1,99 +1,50 @@
-
-
 'use client';
-interface PerformanceMetrics {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
-  loadTim,
-  e: number;,
-    renderTim,
-  e: number;,
-    memoryUsag,
-  e: number;,
-    fp,
-  s: number;
-}
-interface PerformanceMetrics {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
-  loadTime: number;,
-    renderTime: number;,
-    memoryUsage: number;,
-    fps: number;
-  [key: string]: number;
-
-}
-
-const,
-  PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) => {/* TODO: Fix JSX expression */}
-  });
-
-<<<<<<< HEAD
-  useEffect(() => {
-    const updateMetrics = () => {
-      const navigation = performance.getEntriesByType(
-        'navigation'
-      )[0] as PerformanceNavigationTiming;
-      const loadTime = navigation
-        ? navigation.loadEventEnd - navigation.fetchStart
-        : 0;
+const PerformanceDashboardPage: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>PerformanceDashboard - Zion Tech Group | AI & IT Solutions</title>
+        <meta name="description" content="Professional performancedashboard services with cutting-edge technology and expert implementation." />
+      </Helmet>
       
-      // Measure render time
-      const renderStart = performance.now();
-      const renderTime = performance.now() - renderStart;
-      // Measure memory usage
-      let memoryUsage = 0;
-      if ('memory' in performance) {
-        const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
-        memoryUsage = memory?.usedJSHeapSize || 0;
-      }
+      <Navigation />
       
-      // Measure FPS (simplified)
-      let fps = 0;
-      if ('requestAnimationFrame' in window) {
-        let lastTime = performance.now();
-        let frameCount = 0;
-        const measureFPS = (currentTime: number) => {
-          frameCount++;
-          if (currentTime - lastTime >= 1000) {
-            fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
-            frameCount = 0;
-            lastTime = currentTime;
-          }
-          requestAnimationFrame(measureFPS);
-        };
-        requestAnimationFrame(measureFPS);
-      }
+      <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              PerformanceDashboard
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Professional performancedashboard services with cutting-edge technology and expert implementation.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Expert Implementation</h3>
+              <p className="text-gray-600">Professional implementation with industry best practices and cutting-edge technology.</p>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Advanced Technology</h3>
+              <p className="text-gray-600">Cutting-edge technology solutions designed for modern businesses and enterprises.</p>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
+              <p className="text-gray-600">Round-the-clock support and maintenance services to ensure optimal performance.</p>
+            </div>
+          </div>
+        </div>
+      </main>
       
-      setMetrics({
-        loadTime,
-        renderTime,
-        memoryUsage,
-        fps
-=======
-  useEffect(() => {/* TODO: Fix JSX expression */}
-  p: entry.startTime }));
-        }
->>>>>>> f7c4928b2138abffab75f9beb3ca62b8e0c3452d
-      });
-    });
-
-    try {/* TODO: Fix JSX expression */}
-  s: ['paint'] });
-      return () => observer.disconnect();
-    } catch (error) {/* TODO: Fix JSX expression */}
-    }
-  }, []);
-
-  useEffect(() => {/* TODO: Fix JSX expression */}
-    }
-  }, [metrics, onMetricsUpdate]);
-
-  return null;
+      <Footer />
+    </>
+  );
 };
 
-export default PerformanceDashboard;
-
-
-
+export default PerformanceDashboardPage;

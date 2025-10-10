@@ -1,93 +1,50 @@
-import React, { ReactNode } from 'react';
-
+'use client';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
-interface SEOEnhancerProps {/* TODO: Fix JSX expression */}
-}
-
-const,
-  SEOEnhancer: React.FC<SEOEnhancerProps> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
-    },
-    addres,
-  s: {/* TODO: Fix JSX expression */}
-    }};
-
-  const finalStructuredData = structuredData || defaultStructuredData;
-
-  return (<>
-      <Helmet></Helmet>
-        {/* Basic Meta Tags */}
-        <title>{title}</title>
-        <meta name="description" content={description} /></meta>")
-        <meta name="keywords" content={keywords.join(', ')} /></meta>"
-        <meta name="author" content="Zion Tech Group" /></meta>"
-        <meta name="robots" content={noIndex ? 'noindex,nofollow' : 'index,follow'} /></meta>"
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" /></meta>"
-        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" /></meta>"
-        <meta name="language" content="English" /></meta>"
-        <meta name="revisit-after" content="7 days" /></meta>"
-        <meta name="distribution" content="global" /></meta>"
-        <meta name="rating" content="general" /></meta>
-        {/* Canonical URL */}"
-        {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-
-        {/* Open Graph Tags */}"
-        <meta property="o,"
-  g:type" content={ogType} /></meta>"
-        <meta property="o,"
-  g:title" content={title} /></meta>"
-        <meta property="o,"
-  g:description" content={description} /></meta>"
-        <meta property="o,"
-  g:image" content={ogImage} /></meta>"
-        <meta property="o,"
-  g:url" content={/* TODO: Fix JSX expression */}
-  s://ziontechgroup.com'} /></meta>"
-        <meta property="o,"
-  g:site_name" content="Zion Tech Group" /></meta>"
-        <meta property="o,"
-  g:locale" content="en_US" /></meta>
-        {/* Twitter Card Tags */}"
-        <meta name="twitte,"
-  r:card" content="summary_large_image" /></meta>"
-        <meta name="twitte,"
-  r:title" content={title} /></meta>"
-        <meta name="twitte,"
-  r:description" content={description} /></meta>"
-        <meta name="twitte,"
-  r:image" content={ogImage} /></meta>"
-        <meta name="twitte,"
-  r:site" content="@ziontechgroup" /></meta>"
-        <meta name="twitte,"
-  r:creator" content="@ziontechgroup" /></meta>
-        {/* Additional SEO Tags */}"
-        <meta name="theme-color" content="#1f2937" /></meta>"
-        <meta name="msapplication-TileColor" content="#1f2937" /></meta>"
-        <meta name="apple-mobile-web-app-capable" content="yes" /></meta>"
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" /></meta>"
-        <meta name="apple-mobile-web-app-title" content="Zion Tech Group" /></meta>
-        {/* Structured Data */}"
-        <script type="application/ld+json">{JSON.stringify(finalStructuredData)}</script>
-
-        {/* Preconnect to external domains */}"
-        <link rel="preconnect" href="http,"
-  s://fonts.googleapis.com" /></link>"
-        <link rel="preconnect" href="http,"
-  s://fonts.gstatic.com" crossOrigin="anonymous" /></link>"
-        <link rel="preconnect" href="http,"
-  s://www.google-analytics.com" /></link>"
-        <link rel="preconnect" href="http,"
-  s://www.googletagmanager.com" /></link>
-        {/* DNS Prefetch */}"
-        <link rel="dns-prefetch" href="//fonts.googleapis.com" /></link>"
-        <link rel="dns-prefetch" href="//www.google-analytics.com" /></link>"
-        <link rel="dns-prefetch" href="//www.googletagmanager.com" /></link>
+const SEOEnhancerPage: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>SEOEnhancer - Zion Tech Group | AI & IT Solutions</title>
+        <meta name="description" content="Professional seoenhancer services with cutting-edge technology and expert implementation." />
       </Helmet>
-      {children}
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              SEOEnhancer
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Professional seoenhancer services with cutting-edge technology and expert implementation.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Expert Implementation</h3>
+              <p className="text-gray-600">Professional implementation with industry best practices and cutting-edge technology.</p>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Advanced Technology</h3>
+              <p className="text-gray-600">Cutting-edge technology solutions designed for modern businesses and enterprises.</p>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
+              <p className="text-gray-600">Round-the-clock support and maintenance services to ensure optimal performance.</p>
+            </div>
+          </div>
+        </div>
+      </main>
+      
+      <Footer />
     </>
   );
 };
 
-export default SEOEnhancer;
-"
+export default SEOEnhancerPage;

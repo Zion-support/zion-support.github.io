@@ -1,135 +1,72 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Phone, Mail, Calendar, CheckCircle, Clock, Users } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
-const ConsultationPage = () => {
-  const consultationServices = [
-    'AI Strategy & Implementation',
-    'Cloud Migration Planning',
-    'Cybersecurity Assessment',
-    'Digital Transformation',
-    'IT Infrastructure Review',
-    'Technology Roadmap Development'
-  ];
-
+const pagePage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
       <Helmet>
-        <title>Consultation - Zion Tech Group | Expert IT Consulting</title>
-        <meta name="description" content="Get expert consultation on AI, cloud computing, cybersecurity, and IT strategy. Book a consultation with our experienced team." />
-        <meta name="keywords" content="IT consultation, AI consulting, cloud consulting, cybersecurity consulting, technology strategy" />
+        <title>Page - Zion Tech Group | AI & IT Solutions</title>
+        <meta name="description" content="Professional page services with cutting-edge technology and expert implementation." />
       </Helmet>
-
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                Expert
-              </span>
-              <br />
-              <span className="text-white">Consultation</span>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              Page
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Get personalized guidance from our experienced team to transform your business with cutting-edge technology solutions.
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Professional page services with cutting-edge technology and expert implementation.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
-                <Calendar className="mr-2 h-5 w-5" />
-                Book Consultation
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300 flex items-center justify-center">
-                <Phone className="mr-2 h-5 w-5" />
-                Call Now
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">Consultation Services</h2>
-            <p className="text-xl text-gray-300">Comprehensive technology consulting tailored to your business needs</p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {consultationServices.map((service, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300">
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
-                  <CheckCircle className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{service}</h3>
-                <p className="text-gray-300">Expert guidance and strategic planning for your technology initiatives.</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Process Section */}
-      <section className="py-16 px-4 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">Our Process</h2>
-            <p className="text-xl text-gray-300">How we deliver exceptional consultation services</p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Expert Implementation</h3>
+              <p className="text-gray-600">Professional implementation with industry best practices and cutting-edge technology.</p>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Advanced Technology</h3>
+              <p className="text-gray-600">Cutting-edge technology solutions designed for modern businesses and enterprises.</p>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
+              <p className="text-gray-600">Round-the-clock support and maintenance services to ensure optimal performance.</p>
+            </div>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-white">1</span>
+          <div className="mt-16 text-center">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">Why Choose Our Page Services?</h2>
+            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              <div className="text-left">
+                <h3 className="text-xl font-semibold mb-4">Industry Expertise</h3>
+                <p className="text-gray-600">Our team brings years of experience and deep industry knowledge to every project.</p>
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Discovery</h3>
-              <p className="text-gray-300">We analyze your current technology landscape and business objectives.</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-white">2</span>
+              <div className="text-left">
+                <h3 className="text-xl font-semibold mb-4">Proven Results</h3>
+                <p className="text-gray-600">We deliver measurable results that drive business growth and success.</p>
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Strategy</h3>
-              <p className="text-gray-300">We develop a customized roadmap aligned with your goals.</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-white">3</span>
+              <div className="text-left">
+                <h3 className="text-xl font-semibold mb-4">Scalable Solutions</h3>
+                <p className="text-gray-600">Our solutions are designed to grow with your business and adapt to changing needs.</p>
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Implementation</h3>
-              <p className="text-gray-300">We guide you through execution and provide ongoing support.</p>
+              <div className="text-left">
+                <h3 className="text-xl font-semibold mb-4">Cost-Effective</h3>
+                <p className="text-gray-600">We provide maximum value with competitive pricing and transparent cost structures.</p>
+              </div>
             </div>
           </div>
         </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Schedule a consultation with our experts and discover how technology can drive your success.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
-              <Calendar className="mr-2 h-5 w-5" />
-              Schedule Consultation
-            </button>
-            <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300 flex items-center justify-center">
-              <Mail className="mr-2 h-5 w-5" />
-              Contact Us
-            </button>
-          </div>
-        </div>
-      </section>
-    </div>
+      </main>
+      
+      <Footer />
+    </>
   );
 };
 
-export default ConsultationPage;
+export default pagePage;

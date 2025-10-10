@@ -1,110 +1,50 @@
-import React, { useEffect, useState } from 'react';
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
-interface BeforeInstallPromptEvent extends Event {
-  prompt(): Promise<void>;
-  userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>;
-}
-
-const PWAInstaller: React.FC = () => {
-  const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
-  const [showInstallButton, setShowInstallButton] = useState(false);
-  const [isInstalled, setIsInstalled] = useState(false);
-
-  useEffect(() => {
-    // Check if app is already installed
-    if (window.matchMedia('(display-mode: standalone)').matches) {
-      setIsInstalled(true);
-      return;
-    }
-
-    // Listen for the beforeinstallprompt event
-    const handleBeforeInstallPrompt = (e: Event) => {
-      e.preventDefault();
-      setDeferredPrompt(e as BeforeInstallPromptEvent);
-      setShowInstallButton(true);
-    };
-
-    // Listen for the appinstalled event
-    const handleAppInstalled = () => {
-      setIsInstalled(true);
-      setShowInstallButton(false);
-      setDeferredPrompt(null);
-    };
-
-    window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
-    window.addEventListener('appinstalled', handleAppInstalled);
-
-    return () => {
-      window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
-      window.removeEventListener('appinstalled', handleAppInstalled);
-    };
-  }, []);
-
-  const handleInstallClick = async () => {
-    if (!deferredPrompt) return;
-
-    try {
-      await deferredPrompt.prompt();
-      const { outcome } = await deferredPrompt.userChoice;
-      
-      if (outcome === 'accepted') {
-        console.log('User accepted the install prompt');
-      } else {
-        console.log('User dismissed the install prompt');
-      }
-      
-      setDeferredPrompt(null);
-      setShowInstallButton(false);
-    } catch (error) {
-      console.error('Error installing PWA:', error);
-    }
-  };
-
-  if (isInstalled || !showInstallButton) {
-    return null;
-  }
-
+const PWAInstallerPage: React.FC = () => {
   return (
-    <div className="fixed bottom-4 left-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white p-4 rounded-lg shadow-lg z-50 max-w-sm">
-      <div className="flex items-start space-x-3">
-        <div className="flex-shrink-0">
-          <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
-            📱
+    <>
+      <Helmet>
+        <title>PWAInstaller - Zion Tech Group | AI & IT Solutions</title>
+        <meta name="description" content="Professional pwainstaller services with cutting-edge technology and expert implementation." />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              PWAInstaller
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Professional pwainstaller services with cutting-edge technology and expert implementation.
+            </p>
           </div>
-        </div>
-        
-        <div className="flex-1 min-w-0">
-          <h3 className="text-sm font-semibold mb-1">Install App</h3>
-          <p className="text-xs text-white/90 mb-3">
-            Install Zion Tech Group app for a better experience with offline access and faster loading.
-          </p>
           
-          <div className="flex space-x-2">
-            <button
-              onClick={handleInstallClick}
-              className="bg-white text-purple-600 text-xs font-medium px-3 py-1.5 rounded hover:bg-white/90 transition-colors duration-200"
-            >
-              Install
-            </button>
-            
-            <button
-              onClick={() => setShowInstallButton(false)}
-              className="text-white/70 text-xs px-3 py-1.5 hover:text-white transition-colors duration-200"
-            >
-              Maybe later
-            </button>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Expert Implementation</h3>
+              <p className="text-gray-600">Professional implementation with industry best practices and cutting-edge technology.</p>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Advanced Technology</h3>
+              <p className="text-gray-600">Cutting-edge technology solutions designed for modern businesses and enterprises.</p>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
+              <p className="text-gray-600">Round-the-clock support and maintenance services to ensure optimal performance.</p>
+            </div>
           </div>
         </div>
-        
-        <button
-          onClick={() => setShowInstallButton(false)}
-          className="flex-shrink-0 text-white/70 hover:text-white transition-colors duration-200"
-        >
-          ×
-        </button>
-      </div>
-    </div>
+      </main>
+      
+      <Footer />
+    </>
   );
 };
 
-export default PWAInstaller;
+export default PWAInstallerPage;

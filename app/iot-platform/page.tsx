@@ -3,100 +3,70 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react';
 
-    },
-    {
-      icon: Clock,
-      title: '24/7 Monitoring',
-      description: 'Continuous monitoring of IoT devices and systems with intelligent alerting.',
-      benefits: ['Continuous monitoring', 'Smart alerts', 'Predictive maintenance']
-    },
-    {
-    }
-  ];
-
+const pagePage: React.FC = () => {
   return (
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our IoT platform provides everything you need to build, deploy, and scale 
-              Internet of Things solutions for any industry or use case.
-            </p>
-          </div>
-                  ))}
-                </ul>
-</div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Use Cases Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
+    <>
+      <Helmet>
+        <title>Page - Zion Tech Group | AI & IT Solutions</title>
+        <meta name="description" content="Professional page services with cutting-edge technology and expert implementation." />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="container mx-auto px-4 py-16">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              IoT Use Cases
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our IoT platform supports a wide range of industries and applications, 
-              from smart manufacturing to connected cities.
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              Page
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Professional page services with cutting-edge technology and expert implementation.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300">
-                <div className="text-4xl mb-4">{useCase.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
-                <p className="text-gray-300">{useCase.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Why Choose Our IoT Platform?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the benefits of a comprehensive IoT platform designed for scale, 
-              security, and performance.
-            </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Expert Implementation</h3>
+              <p className="text-gray-600">Professional implementation with industry best practices and cutting-edge technology.</p>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Advanced Technology</h3>
+              <p className="text-gray-600">Cutting-edge technology solutions designed for modern businesses and enterprises.</p>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
+              <p className="text-gray-600">Round-the-clock support and maintenance services to ensure optimal performance.</p>
+            </div>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-green-400 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <CheckCircle className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-lg font-semibold text-white">{benefit}</h3>
+          <div className="mt-16 text-center">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">Why Choose Our Page Services?</h2>
+            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              <div className="text-left">
+                <h3 className="text-xl font-semibold mb-4">Industry Expertise</h3>
+                <p className="text-gray-600">Our team brings years of experience and deep industry knowledge to every project.</p>
               </div>
-            ))}
+              <div className="text-left">
+                <h3 className="text-xl font-semibold mb-4">Proven Results</h3>
+                <p className="text-gray-600">We deliver measurable results that drive business growth and success.</p>
+              </div>
+              <div className="text-left">
+                <h3 className="text-xl font-semibold mb-4">Scalable Solutions</h3>
+                <p className="text-gray-600">Our solutions are designed to grow with your business and adapt to changing needs.</p>
+              </div>
+              <div className="text-left">
+                <h3 className="text-xl font-semibold mb-4">Cost-Effective</h3>
+                <p className="text-gray-600">We provide maximum value with competitive pricing and transparent cost structures.</p>
+              </div>
+            </div>
           </div>
         </div>
-      </section>
-
-      {/* CTA Section */}
-          <p className="text-xl text-gray-300 mb-8">
-            Start building your IoT platform today. Get started with a free consultation 
-            and discover how we can help you succeed.
-          </p>
-            </button>
-            <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              Schedule Demo
-            </button>
-          </div>
-        </div>
-      </section>
-
+      </main>
+      
       <Footer />
-</div>
+    </>
   );
 };
 
-export default PagePage;
+export default pagePage;

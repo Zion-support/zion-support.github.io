@@ -1,107 +1,50 @@
-
-
-import { Link } from 'react-router-dom';
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AgentReleaseRunbooksV22026Page: React.FC = () => {
-
+const pagePage: React.FC = () => {
   return (
-
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
+      <Helmet>
+        <title>Page - Zion Tech Group | AI & IT Solutions</title>
+        <meta name="description" content="Professional page services with cutting-edge technology and expert implementation." />
+      </Helmet>
+      
       <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-
-          </h1>
-<p className='text-lg md:text-xl text-white/80 max-w-3xl'>Ship autonomous agents with budgeted actions, KPI;
-
-            canaries, approvals and one‑click rollback.
-          </p>
-          <div></div>
-            <div></div>
-              <Calendar /></Calendar>
-              <span>Jan 30, 2026</span>
+      
+      <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              Page
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Professional page services with cutting-edge technology and expert implementation.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Expert Implementation</h3>
+              <p className="text-gray-600">Professional implementation with industry best practices and cutting-edge technology.</p>
             </div>
-            <div></div>
-              <Clock /></Clock>
-              <span>18 min read</span>
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Advanced Technology</h3>
+              <p className="text-gray-600">Cutting-edge technology solutions designed for modern businesses and enterprises.</p>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
+              <p className="text-gray-600">Round-the-clock support and maintenance services to ensure optimal performance.</p>
             </div>
           </div>
         </div>
-      </header>
-      <section className='py-16'></section>
-        <div></div>
-          <h2>Release Safety Model</h2>
-<p>Operational safety hinges on three,
-  primitives: hard;
-            budgets, lightweight approvals and KPI-linked canaries that trigger;
-            automatic rollback when thresholds are breached.
-          </p>
-          <h3>Runbook Outline</h3>
-          <ol></ol>
-            <li>Define budgeted actions and guardrails</li>
-            <li>Attach canaries to product KPIs</li>
-            <li>Stage rollout with blast-radius limits</li>
-            <li>Automate rollback and postmortems</li>
-          </ol>
-        </div>
-      </section>
-      <section className='py-12 bg-white'></section>
-<div></div>
-          <div></div>
-            <div>Budgets</div>
-            <div className='text-slate-600'>Max cost, time, scope per release</div>
-          </div>
-          <div></div>
-            <div>Canaries</div>
-            <div>KPI-linked checks in CI and live</div>
-          </div>
-          <div></div>
-            <div>Rollback</div>
-            <div className='text-slate-600'>One click, under 60s MTR</div>
-          </div>
-        </div>
-      </section>
-      <section className='py-16'></section>
-        <div></div>
-          <div></div>
-            <div></div>
-              <h3 className='text-2xl font-bold flex items-center gap-2'></h3>
-                <FileWarning />Prevent Regressions</h3>
-              <p className='text-white/90'></p>
-// We implement v2 runbooks in 46 weeks with audits and training.
-              
-          
-          
-          
-          
-          
-          
-          
-          
-          </p>
-            </div>
-            <Link></Link>
-              href='/contact'
-              className='bg-white text-fuchsia-700 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2'
-// >
+      </main>
+      
+      <Footer />
+    </>
+  );
+};
 
-// Engage
-          <RefreshCw />
-
-            </Link>
-          </div>
-        </div>
-      </section>)
-    </main>)
-}
-
-
-
-
-export default AgentReleaseRunbooksV22026Page;
-
-
+export default pagePage;

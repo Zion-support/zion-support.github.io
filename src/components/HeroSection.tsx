@@ -1,110 +1,50 @@
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
-export default function HeroSection() {
+const HeroSectionPage: React.FC = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute inset-0 particle-field"></div>
-      <div className="absolute inset-0 cyber-scan-effect"></div>
+    <>
+      <Helmet>
+        <title>HeroSection - Zion Tech Group | AI & IT Solutions</title>
+        <meta name="description" content="Professional herosection services with cutting-edge technology and expert implementation." />
+      </Helmet>
       
-      {/* Main Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div className="space-y-8">
-          {/* Main Heading */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
-            <span className="block holographic-text cyber-text-3d">
-              Zion Tech Group
-            </span>
-            <span className="block text-white mt-4">
-              Advanced AI & IT Solutions
-            </span>
-          </h1>
-
-          {/* Subtitle */}
-          <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Transforming businesses through cutting-edge artificial intelligence, 
-            machine learning, and innovative IT solutions. We build the future, today.
-          </p>
-
-          {/* Key Features */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mt-12">
-            <div className="cyber-card p-6 text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2">AI Solutions</h3>
-              <p className="text-gray-400 text-sm">Custom AI implementations for your business needs</p>
-            </div>
-
-            <div className="cyber-card p-6 text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2">IT Services</h3>
-              <p className="text-gray-400 text-sm">Comprehensive technology solutions and support</p>
-            </div>
-
-            <div className="cyber-card p-6 text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-green-400 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Innovation</h3>
-              <p className="text-gray-400 text-sm">Leading-edge technology and digital transformation</p>
-            </div>
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              HeroSection
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Professional herosection services with cutting-edge technology and expert implementation.
+            </p>
           </div>
-
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-12">
-            <a
-              href="#services"
-              className="cyber-button px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
-            >
-              Explore Services
-            </a>
-            <a
-              href="#contact"
-              className="px-8 py-4 text-lg font-semibold text-cyan-400 border-2 border-cyan-400 rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 neon-glow"
-            >
-              Get Started
-            </a>
-          </div>
-
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto mt-16">
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-cyan-400 neon-pulse">500+</div>
-              <div className="text-gray-400 text-sm mt-2">Projects Completed</div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Expert Implementation</h3>
+              <p className="text-gray-600">Professional implementation with industry best practices and cutting-edge technology.</p>
             </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-purple-400 neon-pulse">50+</div>
-              <div className="text-gray-400 text-sm mt-2">Happy Clients</div>
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Advanced Technology</h3>
+              <p className="text-gray-600">Cutting-edge technology solutions designed for modern businesses and enterprises.</p>
             </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-green-400 neon-pulse">99%</div>
-              <div className="text-gray-400 text-sm mt-2">Success Rate</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-yellow-400 neon-pulse">24/7</div>
-              <div className="text-gray-400 text-sm mt-2">Support</div>
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
+              <p className="text-gray-600">Round-the-clock support and maintenance services to ensure optimal performance.</p>
             </div>
           </div>
         </div>
-      </div>
-
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-cyan-400 rounded-full mt-2 animate-pulse"></div>
-        </div>
-      </div>
-    </section>
+      </main>
+      
+      <Footer />
+    </>
   );
 };
 
-export default HeroSection;"`
-
+export default HeroSectionPage;

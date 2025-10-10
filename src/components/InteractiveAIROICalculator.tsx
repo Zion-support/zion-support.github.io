@@ -1,81 +1,50 @@
-
-
 'use client';
-import React, { useState } from 'react';
-const,
-  InteractiveAIROICalculator: React.FC = () => {return (}
-    <div>Coming Soon</div>)
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
+const InteractiveAIROICalculatorPage: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>InteractiveAIROICalculator - Zion Tech Group | AI & IT Solutions</title>
+        <meta name="description" content="Professional interactiveairoicalculator services with cutting-edge technology and expert implementation." />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              InteractiveAIROICalculator
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Professional interactiveairoicalculator services with cutting-edge technology and expert implementation.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Expert Implementation</h3>
+              <p className="text-gray-600">Professional implementation with industry best practices and cutting-edge technology.</p>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Advanced Technology</h3>
+              <p className="text-gray-600">Cutting-edge technology solutions designed for modern businesses and enterprises.</p>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
+              <p className="text-gray-600">Round-the-clock support and maintenance services to ensure optimal performance.</p>
+            </div>
+          </div>
+        </div>
+      </main>
+      
+      <Footer />
+    </>
   );
 };
-  const [currentCost, setCurrentCost] = useState(100000);
-  const [efficiencyGain, setEfficiencyGain] = useState(70);
-  const [timeframe, setTimeframe] = useState(12);
 
-  const calculateROI = () => {return Math.max(0, roi);
-  };return (
-    <section className='bg-white py-16 rounded-2xl shadow-lg'>
-      <div className='container mx-auto px-4'>
-        <h2 className='text-4xl font-bold text-center text-gray-900 mb-8'>
-          AI ROI Calculator
-        </h2>
-        <div className='max-w-4xl mx-auto'>
-          <div className='grid md:grid-cols-2 gap-8'>
-            <div className='space-y-6'>
-              <div>
-                <label className='block text-sm font-medium text-gray-700 mb-2'>
-                  Current Annual Cost ($)
-                </label>
-                <input
-                  type='number'
-                  value={currentCost}
-                  onChange={e => setCurrentCost(Number(e.target.value))}
-                  className='w-full px-4 py-2 border border-gray-300 rounded-lg,
-  focus:ring-2,
-  focus:ring-blue-500,
-  focus:border-transparent'
-// />
-              
-          
-          
-          
-          
-          
-          
-          
-          
-          </div>
-Expected Efficiency Gain (%)
-                  type='range'
-                  min='10'
-                  max='90'
-                  value={efficiencyGain}
-                  onChange={e => setEfficiencyGain(Number(e.target.value))}
-                  className='w-full'
-<div className='text-center text-sm text-gray-600'></div>
-                  {efficiencyGain}%
-                  Implementation Timeframe (months)
-                <select></select>
-                  value={timeframe}
-                  onChange={e => setTimeframe(Number(e.target.value))}
-                >
-                  <option value={6}>6 months</option>
-                  <option value={12}>12 months</option>
-                  <option value={18}>18 months</option>
-                  <option value={24}>24 months</option>
-                </select>
-            <div className='bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-2xl'></div>
-              <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'></h3>
-// Your ROI Projection;
-          </h3>
-              <div className='text-center'></div>
-                <div className='text-6xl font-bold text-blue-600 mb-4'></div>
-                  {roi.toFixed(0)}%
-                <p className='text-gray-600 text-sm'></p>
-                  Expected return on investment over {timeframe} months;
-                </p>
-    </section>
-  );
-
-export default InteractiveAIROICalculator;
-
-
+export default InteractiveAIROICalculatorPage;

@@ -1,116 +1,50 @@
+'use client';
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
-
-interface SEOProps {// TODO: Add content;}
-
-}
-  title?: string;
-  description?: string;
-  keywords?: string[];
-  canonicalUrl?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  twitterSite?: string;
-  structuredData?: unknown;
-  noindex?: boolean;
-  nofollow?: boolean;
-  lang?: string;
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
-}
-
-const EnhancedSEO: React.FC;
-          <SEOProps> = ({// TODO: Add content;}
-}
-
-const EnhancedSEO: React.FC<SEOProps> = ({
-
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',
-  description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.',
-  keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services'],
-//   canonicalUrl,
-  ogImage = 'https://ziontechgroup.com/og-image.jpg',
-  ogType = 'website',
-  twitterCard = 'summary_large_image',
-  twitterSite = '@ziontechgroup',
-//   structuredData,
-  noindex = false,
-  nofollow = false,
-  lang = 'en',
-  author = 'Zion Tech Group',
-//   publishedTime,
-//   modifiedTime,
-//   section,
-  tags = []}) => {const fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : description;}
-  const keywordsString = Array.isArray(keywords) ? keywords.join(', ') : keywords;
+const EnhancedSEOPage: React.FC = () => {
   return (
-    
-    // Update meta description
-
-    let metaDescription = document.querySelector('meta[name="description"]');
-    if (!metaDescription) {/* TODO: Fix JSX expression */}
-    }
-    metaDescription.setAttribute('content', description);
-    
-
-          <Helmet>
-      {/* Basic Meta Tags */}
-      <title>{fullTitle}</title><meta name="description" content={fullDescription} /><meta name="keywords" content={keywordsString} /><meta name="author" content={author} /><meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} /><meta name="language" content={lang} /><link rel="canonical" href={canonicalUrl} />
-      {/* Open Graph Meta Tags */}
-      <meta property="og:title" content={fullTitle} /><meta property="og:description" content={fullDescription} /><meta property="og:type" content={ogType} /><meta property="og:url" content={canonicalUrl} /><meta property="og:image" content={ogImage} /><meta property="og:image:width" content="1200" /><meta property="og:image:height" content="630" /><meta property="og:site_name" content="Zion Tech Group" /><meta property="og:locale" content="en_US" />
-      {/* Twitter Card Meta Tags */}
-      <meta name="twitter:card" content={twitterCard} /><meta name="twitter:site" content={twitterSite} /><meta name="twitter:title" content={fullTitle} /><meta name="twitter:description" content={fullDescription} /><meta name="twitter:image" content={ogImage} />
-      {/* Additional Meta Tags */}
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="theme-color" content="#00ffff" /><meta name="msapplication-TileColor" content="#00ffff" /><meta name="apple-mobile-web-app-capable" content="yes" /><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" /><meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
-
-      {/* Article Meta Tags */}
-      {/* TODO: Fix JSX expression */}"
-  e:published_time" content={publishedTime} />}
-      {/* TODO: Fix JSX expression */}"
-  e:modified_time" content={modifiedTime} />}
-      {/* TODO: Fix JSX expression */}"
-  e:section" content={section} />}
-      {tags.length > 0 && tags.map((tag, index) => ()}"
-          <meta key={index} property="articl,"
-  e:tag" content={tag} /></meta>
-      ))}
-      {/* Structured Data */}
-      {structuredData && ()}"
-          <script type="application/ld+json"></script>
-          {JSON.stringify(structuredData)}
-        </script>
-      )}
-      {/* Preconnect to external domains */}"
-<link rel="preconnect" href="http,"
-  s:// fonts.googleapis.com" /></link>"
-          <link rel="preconnect" href="http,"
-  s:// fonts.gstatic.com" crossOrigin="anonymous" /></link>"
-          <link rel="preconnect" href="http,"
-  s:// www.google-analytics.com" /></link>"
-          <link rel="preconnect" href="http,"
-  s:// www.googletagmanager.com" /></link>
-      {/* DNS Prefetch */}
+    <>
+      <Helmet>
+        <title>EnhancedSEO - Zion Tech Group | AI & IT Solutions</title>
+        <meta name="description" content="Professional enhancedseo services with cutting-edge technology and expert implementation." />
+      </Helmet>
       
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              EnhancedSEO
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Professional enhancedseo services with cutting-edge technology and expert implementation.
+            </p>
+          </div>
           
-          
-          
-          
-          
-          
-          
-          "
-          <link rel="dns-prefetch" href="// fonts.googleapis.com" /></link>"
-          <link rel="dns-prefetch" href="// www.google-analytics.com" /></link>"
-          <link rel="dns-prefetch" href="// www.googletagmanager.com" /></link>
-          </Helmet>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Expert Implementation</h3>
+              <p className="text-gray-600">Professional implementation with industry best practices and cutting-edge technology.</p>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Advanced Technology</h3>
+              <p className="text-gray-600">Cutting-edge technology solutions designed for modern businesses and enterprises.</p>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
+              <p className="text-gray-600">Round-the-clock support and maintenance services to ensure optimal performance.</p>
+            </div>
+          </div>
+        </div>
+      </main>
+      
+      <Footer />
+    </>
   );
 };
 
-export default EnhancedSEO;"`
-
-
-
+export default EnhancedSEOPage;

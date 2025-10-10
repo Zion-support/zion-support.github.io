@@ -1,14 +1,15 @@
-'use client';
 import React from 'react';
-import Navigation from './Navigation';
 
-const Header: React.FC = () => {
+interface HeaderProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const Header: React.FC<HeaderProps> = ({ className = '', children }) => {
   return (
-    <>
-      <Navigation />
-      {/* Spacer to prevent content from going under fixed header */}
-      <div className="h-16 lg:h-20" />
-    </>
+    <div className={`header-component ${className}`}>
+      {children}
+    </div>
   );
 };
 

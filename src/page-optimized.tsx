@@ -1,89 +1,50 @@
-
 'use client';
-import React, { lazy } from 'react';
-import SEOOptimizer from './components/SEOOptimizer';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import PerformanceMonitor from './components/PerformanceMonitor';
-// Fallback component;
-const EmptyComponent = () => null;
-// Lazy load heavy components - these may not exist, so make them optional;
-const UnifiedBanner = lazy(() =>
-  import('./components/NewestContent2025Banner').catch(() =>;
-    import('./components/EmptyComponent').catch(() => ({ default: EmptyComponent }))
-//   )
-);
-const ContentPromotion = lazy(() =>
-  import('./components/UltimateBusinessIntelligence2025Banner').catch(() => {// TODO: Add content;}
-}
-    return { default: EmptyComponent } as { default: React.ComponentType };
-  })
-const ContentShowcase = lazy(() =>
-  import('./components/UltimateBusinessIntelligenceShowcase2025').catch(() => ({// TODO: Add content;}
-};
-  default: EmptyComponent;
-  }))
-export default function OptimizedHomePage() {// TODO: Add content;}
-}
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
+const pageoptimizedPage: React.FC = () => {
   return (
-    
+    <>
+      <Helmet>
+        <title>Page Optimized - Zion Tech Group | AI & IT Solutions</title>
+        <meta name="description" content="Professional page optimized services with cutting-edge technology and expert implementation." />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              Page Optimized
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Professional page optimized services with cutting-edge technology and expert implementation.
+            </p>
+          </div>
           
-          
-          
-          
-          
-          
-          
-          <div>Coming Soon</div>
-  )
-    
-          <div className="min-h-screen bg-white">
-      <SEOOptimizer />
-      <AccessibilityEnhancer>
-        <div />
-      </AccessibilityEnhancer>
-      <PerformanceMonitor />
-      {/* Main Content */}
-      <main className="relative">
-        {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white overflow-hidden">
-          <div className="absolute inset-0 bg-black opacity-20"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-// AI Enterprise Transformation;
-          <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
-// That Delivers Results;
-          </span>
-              </h1>
-              <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-4xl mx-auto">
-// Transform your enterprise with AI-powered solutions that deliver 300% ROI,
-//                 70% cost reduction, and 90% efficiency gains. Expert AI consulting,
-//                 autonomous systems, and digital transformation services.
-              
-          
-          
-          
-          
-          
-          
-          
-          
-          </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="/contact" className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold text-lg"
-// >
-//                   Get Your Free AI Assessment;
-          </a>
-                  href="/case-studies" className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-900 transition-colors font-semibold text-lg"
-View Success Stories;
-              </div>
-        </section>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Expert Implementation</h3>
+              <p className="text-gray-600">Professional implementation with industry best practices and cutting-edge technology.</p>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Advanced Technology</h3>
+              <p className="text-gray-600">Cutting-edge technology solutions designed for modern businesses and enterprises.</p>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
+              <p className="text-gray-600">Round-the-clock support and maintenance services to ensure optimal performance.</p>
+            </div>
+          </div>
+        </div>
       </main>
+      
       <Footer />
-    </div>
+    </>
   );
+};
 
-}
-
-
+export default pageoptimizedPage;

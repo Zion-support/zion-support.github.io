@@ -1,106 +1,50 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Users, FileText, Calendar, TrendingUp, CheckCircle, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AIHRAssistantPage: React.FC = () => {
-  const features = [
-    {
-      icon: Users,
-      title: 'HR Automation',
-      description: 'AI-powered HR process automation',
-      benefits: ['Recruitment automation', 'Employee onboarding', 'Performance management']
-    },
-    {
-      icon: Target,
-      title: 'Talent Management',
-      description: 'Intelligent talent acquisition and management',
-      benefits: ['Candidate screening', 'Skill matching', 'Career development']
-    },
-    {
-      icon: Zap,
-      title: 'Employee Engagement',
-      description: 'Automated employee engagement and satisfaction',
-      benefits: ['Engagement surveys', 'Feedback analysis', 'Retention strategies']
-    },
-    {
-      icon: Settings,
-      title: 'HR Analytics',
-      description: 'Comprehensive HR analytics and insights',
-      benefits: ['Workforce analytics', 'Performance metrics', 'Predictive insights']
-    }
-  ];
-
+const pagePage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
+      <Helmet>
+        <title>Page - Zion Tech Group | AI & IT Solutions</title>
+        <meta name="description" content="Professional page services with cutting-edge technology and expert implementation." />
+      </Helmet>
+      
       <Navigation />
       
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
-            AI HR Assistant
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium neon-pulse">
-            Intelligent HR Management
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            Transform your HR operations with AI-powered automation and insights. 
-            Streamline recruitment, improve employee experience, and optimize workforce management.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
-              href="/contact"
-              className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
-            >
-              Get Started
-            </a>
-            <a
-              href="tel:+13024640950"
-              className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-            >
-              <Users className="w-5 h-5" />
-              +1 302 464 0950
-            </a>
+      <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              Page
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Professional page services with cutting-edge technology and expert implementation.
+            </p>
           </div>
-        </section>
-
-        <section className="mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
-            HR Assistant Features
-          </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
-                  <feature.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-4 text-center neon-text">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-300 mb-6 text-center text-sm leading-relaxed">
-                  {feature.description}
-                </p>
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center text-xs text-gray-300">
-                      <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Expert Implementation</h3>
+              <p className="text-gray-600">Professional implementation with industry best practices and cutting-edge technology.</p>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Advanced Technology</h3>
+              <p className="text-gray-600">Cutting-edge technology solutions designed for modern businesses and enterprises.</p>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
+              <p className="text-gray-600">Round-the-clock support and maintenance services to ensure optimal performance.</p>
+            </div>
           </div>
-        </section>
+        </div>
       </main>
-
+      
       <Footer />
-    </div>
+    </>
   );
 };
 
-export default AIHRAssistantPage;
+export default pagePage;
