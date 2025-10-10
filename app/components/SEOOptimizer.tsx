@@ -11,8 +11,8 @@ interface SEOOptimizerProps {
   structuredData?: any;
   ogImage?: string;
   ogType?: string;
-  twitterCard?: string}
-;
+  twitterCard?: string;
+};
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   title,
   description,
@@ -22,7 +22,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   ogImage = '/images/og-image.jpg',
   ogType = 'website',
   twitterCard = 'summary_large_image'
-}) => {;
+}) => {
 const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
 const fullDescription = description || 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.';
 
@@ -55,8 +55,9 @@ const fullDescription = description || 'Leading provider of AI-powered enterpris
       {/* Structured data */}
       {structuredData && (
         <script type="application/ld+json">
-          {JSON.stringify(structuredData);
-        </script>);
+          {JSON.stringify(structuredData)}
+        </script>
+      )}
     </Helmet>
   );
 }

@@ -82,7 +82,7 @@ const newSettings = { ...settings, [key]: value };
       
       {/* Accessibility Toggle Button */}
       <button
-        onClick={() => setIsOpen(!isOpen);
+        onClick={() => setIsOpen(!isOpen)}
         className="fixed bottom-4 right-4 z-50 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
         aria-label="Toggle accessibility settings"
       >
