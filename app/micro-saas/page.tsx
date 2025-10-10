@@ -1,5 +1,4 @@
 'use client';
-<<<<<<< HEAD
 import React, { useState, useMemo } from 'react';
 import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Brain, Cloud, Shield, Code, BarChart, Users, Award, Target, Star, ArrowRight, Sparkles, Cpu, Database, Smartphone, Lock, Zap, Globe, Calendar, FileText, Settings, CheckSquare, MessageSquare, Building, Clock, Send, DollarSign, Rocket, Shield as ShieldIcon, Users as UsersIcon, TrendingUp as TrendingUpIcon, Star as StarIcon, Award as AwardIcon, Target as TargetIcon, Brain as BrainIcon, Cloud as CloudIcon, Code as CodeIcon, BarChart as BarChartIcon, Users as UsersIcon2, Zap as ZapIcon, Globe as GlobeIcon, Database as DatabaseIcon, Smartphone as SmartphoneIcon, Lock as LockIcon, Settings as SettingsIcon, CheckSquare as CheckSquareIcon, MessageSquare as MessageSquareIcon, Building as BuildingIcon, Clock as ClockIcon, Send as SendIcon, DollarSign as DollarSignIcon, Rocket as RocketIcon } from 'lucide-react';
 import Navigation from '../components/Navigation';
@@ -19,11 +18,8 @@ export default function MicroSaasPage() {
       minimumFractionDigits: 0
     }).format(price);
   };
-<<<<<<< HEAD
 
 export default function MicroSaasPage() {
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-04a7
   const [activeTab, setActiveTab] = useState('overview');
 
   const microSaasServices = [
@@ -214,9 +210,6 @@ export default function MicroSaasPage() {
     }
   ];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   const categories = ['all', ...new Set(microSaasServices.flatMap(cat => cat.services.map(s => s.category)))];
 
   const filteredServices = useMemo(() => {
@@ -231,7 +224,6 @@ export default function MicroSaasPage() {
     );
   }, [selectedCategory, priceRange, searchTerm]);
 
->>>>>>> cursor/fix-errors-and-merge-to-main-04a7
   const benefits = [
     {
       icon: TrendingUp,
@@ -294,12 +286,9 @@ export default function MicroSaasPage() {
               Micro SAAS Solutions
             </h1>
             <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow">
-<<<<<<< HEAD
               Powerful AI-driven tools for modern businesses
-=======
   const categories = ['All', 'Productivity', 'Creative', 'Security', 'Health', 'IoT', 'Finance', 'Education'];
 
-=======
 import React, { useState, useEffect } from 'react';
 import { 
   BarChart, 
@@ -415,7 +404,6 @@ const MicroSaasPage: React.FC = () => {
     }
   ];
 
->>>>>>> cursor/fix-errors-and-merge-to-main-ea37
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="container mx-auto px-4 py-16">
@@ -454,7 +442,6 @@ const MicroSaasPage: React.FC = () => {
                   </div>
                 </div>
               </div>
-<<<<<<< HEAD
             )}
           </div>
         </section>
@@ -471,11 +458,9 @@ const MicroSaasPage: React.FC = () => {
             </h1>
             
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
-=======
               AI-Powered Business Tools for Modern Enterprises
             </p>
             <p className="text-lg text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
->>>>>>> cursor/fix-errors-and-merge-to-main-04a7
               Streamline your business operations with our intelligent micro SAAS applications. 
               From project management to customer support, we have the tools you need to succeed.
             </p>
@@ -531,13 +516,10 @@ const MicroSaasPage: React.FC = () => {
           </div>
         </section>
       </main>
-=======
         </div>
       </div>
-=======
 
               <p className="text-gray-300 mb-6">{service.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-ea37
 
               <div className="mb-6">
                 <div className="flex items-center mb-2">
@@ -585,16 +567,10 @@ const MicroSaasPage: React.FC = () => {
           ))}
         </div>
 
-<<<<<<< HEAD
       <Footer />
     </div>
   );
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
       {/* Benefits */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -790,11 +766,9 @@ const MicroSaasPage: React.FC = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Business?
-=======
         <div className="text-center mt-16">
           <h2 className="text-3xl font-bold text-white mb-8">
             Ready to Boost Your Productivity?
->>>>>>> cursor/fix-errors-and-merge-to-main-ea37
           </h2>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300">
@@ -810,13 +784,6 @@ const MicroSaasPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default MicroSaasPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-e12a
->>>>>>> 0cc94a9107be4e149f624d711393a8900b821eec
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-04a7
-=======
 export default MicroSaasPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-ea37

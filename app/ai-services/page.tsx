@@ -51,21 +51,9 @@ const AIServicesPage: React.FC = () => {
         'Automated campaign optimization',
         'Real-time performance tracking',
         'Predictive customer behavior'
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
       ]
     },
     {
->>>>>>> cursor/fix-errors-and-merge-to-main-7f4e
-      category: 'AI Automation & Workflow',
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-04a7
-      ],
       category: 'AI Automation & Workflow',
       icon: Zap,
       color: 'text-yellow-400',
@@ -304,18 +292,15 @@ const AIServicesPage: React.FC = () => {
           popular: false
         }
       ]
-=======
       icon: Target,
       color: 'text-purple-600',
       bgColor: 'bg-purple-50'
->>>>>>> cursor/fix-errors-and-merge-to-main-e12a
     },
     {
       id: 5,
       name: 'AI Document Processing',
       description: 'Intelligent document processing and data extraction with OCR and NLP',
       price: '$799/month',
-=======
       ]
     },
     {
@@ -323,7 +308,6 @@ const AIServicesPage: React.FC = () => {
       name: 'AI Workflow Automation',
       description: 'Streamline your business processes with intelligent automation',
       icon: Zap,
->>>>>>> cursor/fix-errors-and-merge-to-main-ea37
       features: [
         'Process Automation',
         'Task Scheduling',
@@ -375,7 +359,6 @@ const AIServicesPage: React.FC = () => {
                 service.popular ? 'ring-2 ring-purple-500' : ''
               }`}
             >
-<<<<<<< HEAD
               {category}
             </button>
           ))}
@@ -386,12 +369,10 @@ const AIServicesPage: React.FC = () => {
           {aiServices.map((service) => (
             <div key={service.id} className="cyber-card hologram-card group hover:scale-105 transition-all duration-300">
               {/* Service Header */}
-<<<<<<< HEAD
               <div className="flex items-start justify-between mb-4">
                 <div className={`p-3 rounded-lg bg-gradient-to-r ${service.color} text-white`}>
                   {service.icon}
                 </div>
-<<<<<<< HEAD
                 <div className="flex items-center space-x-2">
                   {service.popular && (
                     <span className="px-2 py-1 bg-orange-500 text-white text-xs rounded-full flex items-center">
@@ -402,8 +383,6 @@ const AIServicesPage: React.FC = () => {
                   <div className="flex items-center text-yellow-400">
                     <Star className="w-4 h-4 fill-current" />
                     <span className="ml-1 text-sm font-medium">{service.rating}</span>
-=======
-=======
       {/* Services Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -415,11 +394,8 @@ const AIServicesPage: React.FC = () => {
                     Most Popular
                   </span>
                 </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-e12a
               )}
               
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-04a7
               <div className="p-8">
                 <div className={`inline-flex items-center justify-center w-16 h-16 rounded-xl ${service.bgColor} mb-6`}>
                   <service.icon className={`h-8 w-8 ${service.color}`} />
@@ -448,10 +424,6 @@ const AIServicesPage: React.FC = () => {
                   </div>
                   <div className="text-3xl font-bold text-gray-900 mb-2">
                     {service.price}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-a74d
-=======
                   </div>
                   <div className="flex items-center space-x-2">
                     {service.popular && (
@@ -464,9 +436,6 @@ const AIServicesPage: React.FC = () => {
                       <Star className="w-4 h-4 fill-current" />
                       <span className="ml-1 text-sm font-medium">4.8</span>
                     </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-e12a
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-04a7
                   </div>
                 </div>
               </div>
@@ -488,7 +457,6 @@ const AIServicesPage: React.FC = () => {
                       <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                       {capability}
                     </li>
-<<<<<<< HEAD
                   ))}
                 </ul>
               </div>
@@ -543,17 +511,11 @@ const AIServicesPage: React.FC = () => {
                         </a>
                       </div>
                     </div>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-04a7
                   ))}
-<<<<<<< HEAD
                 </div>
             )}
-=======
                 </ul>
-<<<<<<< HEAD
               </div>
->>>>>>> 0cc94a9107be4e149f624d711393a8900b821eec
 
               {/* Features */}
               <div className="mb-6">
@@ -575,12 +537,10 @@ const AIServicesPage: React.FC = () => {
 
               {/* Pricing & Users */}
               <div className="flex items-center justify-between mb-4">
-=======
               <div className="flex items-center mb-6">
                 <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center mr-4`}>
                   {service.icon}
                 </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-ea37
                 <div>
                   <h3 className="text-xl font-semibold text-white">{service.name}</h3>
                   <div className="flex items-center text-sm text-gray-400">

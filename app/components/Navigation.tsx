@@ -181,10 +181,6 @@ const Navigation: React.FC = () => {
       ]
     }
   ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-ea37
 
   const toggleServices = () => {
     setIsServicesOpen(!isServicesOpen);
@@ -236,11 +232,6 @@ const Navigation: React.FC = () => {
     { name: 'Robotics Solutions', href: '/robotics', icon: Settings, price: '$3,500/mo' }
   ];
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-5aa9
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-ea37
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg border-b border-cyan-400/20' : 'bg-transparent'

@@ -74,7 +74,6 @@ const HomePage: React.FC = () => {
     website: 'https://ziontechgroup.com'
   };
 
-<<<<<<< HEAD
   const microSAASServices = [
     // Real AI-Powered Productivity Tools
     {
@@ -97,22 +96,14 @@ const HomePage: React.FC = () => {
       title: 'AI Smart Calendar Pro',
       description: 'Advanced calendar AI that learns your work patterns, optimizes meetings, and prevents burnout. Integrates with 50+ calendar apps.',
       icon: '📅',
-<<<<<<< HEAD
       price: '$89/month',
       originalPrice: '$129/month',
       features: ['Pattern learning AI', 'Auto-optimization', 'Energy mapping', 'Focus time blocks', 'Meeting intelligence', 'Travel optimization', 'Work-life balance', 'Smart suggestions'],
       benefits: ['35% more productive time', 'Better work-life balance', 'Reduced scheduling stress', 'Optimal energy usage'],
-=======
-      price: '$59/month',
-      originalPrice: '$89/month',
-      features: ['Smart scheduling', 'Pattern learning', 'Conflict resolution', 'Time blocking', 'Meeting optimization', 'Work-life balance', 'Integration support', 'Mobile sync'],
-      benefits: ['50% time saved', '90% fewer conflicts', 'Perfect work-life balance', '25% more productive'],
->>>>>>> cursor/fix-errors-and-merge-to-main-04a7
       link: '/ai-smart-calendar',
       popular: true,
       category: 'Productivity',
       rating: 4.8,
-<<<<<<< HEAD
       users: '35,000+',
       freeTrial: '21 days',
       realFeatures: ['Google Calendar sync', 'Outlook integration', 'Zoom scheduling', 'Calendly automation', 'Time zone management', 'Recurring events', 'Conflict resolution', 'Mobile notifications']
@@ -204,8 +195,6 @@ const HomePage: React.FC = () => {
       popular: true,
       category: 'Productivity',
       rating: 4.9,
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-04a7
       users: '5,000+',
       freeTrial: '7 days'
     },
@@ -215,7 +204,6 @@ const HomePage: React.FC = () => {
       icon: '🎤',
       price: '$149/month',
       originalPrice: '$199/month',
-<<<<<<< HEAD
       features: ['Lead scoring', 'Follow-up automation', 'Email sequences', 'CRM integration', 'Sales forecasting', 'Performance analytics', 'A/B testing', 'Team collaboration'],
       benefits: ['60% sales increase', 'Automated follow-ups', 'Better lead quality', 'Higher conversion'],
       link: '/ai-sales-automation',
@@ -673,12 +661,8 @@ const HomePage: React.FC = () => {
       freeTrial: '30 days'
     }
   ];
-<<<<<<< HEAD
 
   const additionalProducts = [
-=======
-<<<<<<< HEAD
->>>>>>> 0cc94a9107be4e149f624d711393a8900b821eec
     {
       title: 'AI Meeting Assistant Pro',
       description: 'Revolutionary meeting management with real-time transcription, action item extraction, and intelligent follow-ups. Used by Fortune 500 companies.',
@@ -1357,16 +1341,13 @@ const HomePage: React.FC = () => {
       originalPrice: '$129/month',
       features: ['Voice cloning', 'Text-to-speech', 'Voice conversion', 'Emotion control', 'Multi-language support', 'High-quality audio', 'API integration', 'Custom voices'],
       benefits: ['Professional quality', 'Time savings', 'Accessibility', 'Creative freedom'],
-=======
       features: ['Voice cloning', 'Text-to-speech', 'Emotion control', 'Multiple languages', 'Real-time processing', 'API integration', 'Custom voices', 'Batch processing'],
       benefits: ['95% voice accuracy', '80% cost reduction', '10x faster production', 'Unlimited usage'],
->>>>>>> cursor/fix-errors-and-merge-to-main-04a7
       link: '/ai-voice-cloning-studio',
       popular: false,
       category: 'Creative',
       rating: 4.7,
       users: '2,500+',
-<<<<<<< HEAD
       freeTrial: '14 days'
     },
     {
@@ -2976,22 +2957,12 @@ const HomePage: React.FC = () => {
       freeTrial: '30 days'
     }
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-a74d
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-e12a
 
-<<<<<<< HEAD
 export default function HomePage() {
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-7f4e
-=======
       freeTrial: '3 days'
     }
   ];
 
->>>>>>> cursor/fix-errors-and-merge-to-main-04a7
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-ea37
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <PerformanceOptimizer />
@@ -3148,10 +3119,8 @@ export default function HomePage() {
         </section>
       </main>
       
-<<<<<<< HEAD
       <Footer />
     </div>
-=======
       {/* Skip to main content for accessibility */}
       <a
           href="#main-content"
@@ -3578,7 +3547,6 @@ export default function HomePage() {
         <Footer />
       </div>
     </>
->>>>>>> cursor/fix-errors-and-merge-to-main-7f4e
   );
 };
 
