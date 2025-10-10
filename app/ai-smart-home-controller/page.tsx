@@ -705,6 +705,7 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
     thisWeek: 312.8,
     thisMonth: 1284.5,
     savings: 15.3
+  };
 
   const features = [
     {

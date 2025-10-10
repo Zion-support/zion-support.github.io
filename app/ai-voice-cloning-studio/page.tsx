@@ -718,6 +718,7 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
     speed: 1,
     emotion: 'neutral',
     language: 'en-US'
+  });
 
   const [isGenerating, setIsGenerating] = useState(false);
   const [generatedAudio, setGeneratedAudio] = useState<string | null>(null);
