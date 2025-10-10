@@ -6,13 +6,8 @@ import {
   ArrowRight, 
   BarChart3,
   Zap, 
-  Lightbulb, 
   Cloud, 
-  Settings, 
-  Brain, 
-  Server, 
-  Printer,
-  Clock
+  Settings
 } from 'lucide-react';
 
 const AIPoweredITAssetManagement = () => {
