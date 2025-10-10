@@ -3,8 +3,8 @@ import fs from 'fs';
 
 // Function to fix semicolons in arrays;
 function fixArraySemicolons(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
+  try {;
+let content = fs.readFileSync(filePath, 'utf8');
     
     // Fix semicolons after arrays in object properties;
     content = content.replace(/:\s*\[[^\]]+\];/g, (match) => {
@@ -13,17 +13,16 @@ function fixArraySemicolons(filePath) {/* TODO: Fix JSX expression */}
     });
     
     fs.writeFileSync(filePath, content);
-    console.log(`Fixed array semicolons)`
+    // console.log removed for production
+`
   in: ${filePath}`);
-    return true;
-  } catch (error) {/* TODO: Fix JSX expression */}`
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
-  }
+    return true} catch (error) {/* TODO: Fix JSX expression */}`
+    // console.error removed for production
+return false}
 }
 
 // Main function;
-function main() {
+function main() {;
 function main() {/* TODO: Fix JSX expression */}
 }
   const files = [
@@ -40,9 +39,9 @@ function main() {/* TODO: Fix JSX expression */}
     'src/test-page.tsx'
   ];
   
-  console.log('Fixing array semicolons...');
-  
-  let fixedCount = 0;
+  // console.log removed for production
+;
+let fixedCount = 0;
   files.forEach(file => {)
     if (fs.existsSync(file)) {
       if (fixArraySemicolons(file)) {
@@ -52,7 +51,7 @@ function main() {/* TODO: Fix JSX expression */}
     })
   });
   `
-  console.log(`Fixed ${fixedCount} files`);
+  // console.log removed for production
 }
 
 main();`

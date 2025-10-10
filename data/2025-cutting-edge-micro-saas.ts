@@ -713,14 +713,12 @@ export const cuttingEdgeMicroSaasServices2025 = [
   {/* TODO: Fix JSX expression */}
   d: 'month'}
         feature,
-  s: ['Up to 1}000 customersBasic AI featuresEmail support'];
-      };
+  s: ['Up to 1}000 customersBasic AI featuresEmail support']};
       professiona,
   l: {/* TODO: Fix JSX expression */}
   d: 'month'}
         feature,
-  s: ['Up to 10}000 customersAdvanced AI featuresPriority supportCustom workflows'];
-      };
+  s: ['Up to 10}000 customersAdvanced AI featuresPriority supportCustom workflows']};
       enterpris,
   e: {/* TODO: Fix JSX expression */}
   d: 'month'}
@@ -849,14 +847,12 @@ export const cuttingEdgeMicroSaasServices2025 = [
   {/* TODO: Fix JSX expression */}
   d: 'month'}
         feature,
-  s: ['Up to 1}000 verificationsBasic verification featuresEmail support'];
-      };
+  s: ['Up to 1}000 verificationsBasic verification featuresEmail support']};
       professiona,
   l: {/* TODO: Fix JSX expression */}
   d: 'month'}
         feature,
-  s: ['Up to 10}000 verificationsAdvanced verification featuresPriority supportCustom workflows'];
-      };
+  s: ['Up to 10}000 verificationsAdvanced verification featuresPriority supportCustom workflows']};
       enterpris,
   e: {/* TODO: Fix JSX expression */}
   d: 'month'}
@@ -923,8 +919,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
   l: {/* TODO: Fix JSX expression */}
   d: 'month'}
         feature,
-  s: ['Up to 5}000 employeesAdvanced analytics featuresPriority supportCustom reporting'];
-      };
+  s: ['Up to 5}000 employeesAdvanced analytics featuresPriority supportCustom reporting']};
       enterpris,
   e: {/* TODO: Fix JSX expression */}
   d: 'month'}
@@ -1037,14 +1032,10 @@ export const cuttingEdgeMicroSaasServices2025 = [
   s: ['Bloomberg TerminalReuters EikonTrading PlatformsRisk Management SystemsFinancial Data Providers'];
     complianc,
   e: ['Basel IIISolvency IIDodd-FrankFinancial RegulationsRisk Management Standards']}
-];
-  }
-];
-  }
-];
-  }
-];
-  }];
+]}
+]}
+]}
+]}];
     integration,
   s: ['Bloomberg TerminalReuters EikonTrading PlatformsRisk Management SystemsFinancial Data Providers'];
     complianc,
@@ -1216,10 +1207,10 @@ export const cuttingEdgeMicroSaasServices2025 = [ 'Basel III',' 'Solvency II',' 
   s: ['Bloomberg TerminalReuters EikonTrading PlatformsRisk Management SystemsFinancial Data Providers'];' complianc,
   e: ['Basel IIISolvency IIDodd-FrankFinancial RegulationsRisk Management Standards'] export const cuttingEdgeMicroSaasServices2025 = [; {/* TODO: Fix JSX expression */}
   d: 'month'}' feature,
-  s: ['Up to 1}000 customersBasic AI featuresEmail support']; }; professiona,
+  s: ['Up to 1}000 customersBasic AI featuresEmail support']}; professiona,
   l: {/* TODO: Fix JSX expression */}
   d: 'month'}' feature,
-  s: ['Up to 10}000 customersAdvanced AI featuresPriority supportCustom workflows']; }; enterpris,
+  s: ['Up to 10}000 customersAdvanced AI featuresPriority supportCustom workflows']}; enterpris,
   e: {/* TODO: Fix JSX expression */}
   d: 'month'}' feature,
   s: ['Unlimited customersFull AI platformDedicated specialists24/7 support']} } };' categor,
@@ -1258,10 +1249,10 @@ export const cuttingEdgeMicroSaasServices2025 = [ 'Basel III',' 'Solvency II',' 
   s: ['ERP SystemsWMS PlatformsTMS SolutionsE-commerce PlatformsAnalytics Tools'];' complianc,
   e: ['Supply Chain StandardsLogistics RegulationsData Privacy Laws']}; {/* TODO: Fix JSX expression */}
   d: 'month'}' feature,
-  s: ['Up to 1}000 verificationsBasic verification featuresEmail support']; }; professiona,
+  s: ['Up to 1}000 verificationsBasic verification featuresEmail support']}; professiona,
   l: {/* TODO: Fix JSX expression */}
   d: 'month'}' feature,
-  s: ['Up to 10}000 verificationsAdvanced verification featuresPriority supportCustom workflows']; }; enterpris,
+  s: ['Up to 10}000 verificationsAdvanced verification featuresPriority supportCustom workflows']}; enterpris,
   e: {/* TODO: Fix JSX expression */}
   d: 'month'}' feature,
   s: ['Unlimited verificationsFull verification platformDedicated specialists24/7 support']} } };' categor,
@@ -1282,7 +1273,7 @@ export const cuttingEdgeMicroSaasServices2025 = [ 'Basel III',' 'Solvency II',' 
   s: ['Up to 500 employeesBasic analytics featuresEmail support']} }; professiona,
   l: {/* TODO: Fix JSX expression */}
   d: 'month'}' feature,
-  s: ['Up to 5}000 employeesAdvanced analytics featuresPriority supportCustom reporting']; }; enterpris,
+  s: ['Up to 5}000 employeesAdvanced analytics featuresPriority supportCustom reporting']}; enterpris,
   e: {/* TODO: Fix JSX expression */}
   d: 'month'}' feature,
   s: ['Unlimited employeesFull analytics platformDedicated specialists24/7 support']} } };' categor,
@@ -1319,6 +1310,6 @@ export const cuttingEdgeMicroSaasServices2025 = [ 'Basel III',' 'Solvency II',' 
   e: 'Quantum-enhanced risk modeling, real-time optimization, advanced analytics'; useCase,
   s: [,' 'Portfolio risk assessmentInvestment strategy optimizationRegulatory compliance reportingRisk model developmentPerformance analysis and attribution' ];' integration,
   s: ['Bloomberg TerminalReuters EikonTrading PlatformsRisk Management SystemsFinancial Data Providers'];' complianc,
-  e: ['Basel IIISolvency IIDodd-FrankFinancial RegulationsRisk Management Standards']} ]; } ]; } ]; } ]; }];' integration,
+  e: ['Basel IIISolvency IIDodd-FrankFinancial RegulationsRisk Management Standards']} ]} ]} ]} ]}];' integration,
   s: ['Bloomberg TerminalReuters EikonTrading PlatformsRisk Management SystemsFinancial Data Providers'];' complianc,
   e: ['Basel IIISolvency IIDodd - FrankFinancial RegulationsRisk Management Standards']} ]; '

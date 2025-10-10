@@ -1791,8 +1791,7 @@ export const real2036ITServices = [
     ]}
   }
 ];
-;
-  };
+};
 ];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity'
     ]
 export const real2036ITServices = [
@@ -2447,7 +2446,7 @@ export const real2036ITServices = [ i,
   s: [}' 'Government communicationsFinancial networksResearch networksQuantum internet backbone' ]} }; {/* TODO: Fix JSX expression */}
   s: [}' 'Server monitoringNetwork monitoringApplication monitoringCloud infrastructure' ]} }; {/* TODO: Fix JSX expression */}
   s: [}' 'Big data storageData archivingCloud storageData backup' ]} }; {/* TODO: Fix JSX expression */}
-  s: [}' 'Data center recoveryCloud recoveryApplication recoveryBusiness continuity' ]} } ]; };' ]; 'Data center recoveryCloud recoveryApplication recoveryBusiness continuity' ] export const real2036ITServices = [; {/* TODO: Fix JSX expression */}
+  s: [}' 'Data center recoveryCloud recoveryApplication recoveryBusiness continuity' ]} } ]};' ]; 'Data center recoveryCloud recoveryApplication recoveryBusiness continuity' ] export const real2036ITServices = [; {/* TODO: Fix JSX expression */}
   s: [}' 'Scientific research computingFinancial modelingDrug discoveryClimate simulation' ]} }; {/* TODO: Fix JSX expression */}
   s: [}' 'Continuous deploymentInfrastructure automationTesting automationMonitoring and alerting' ]} }; {/* TODO: Fix JSX expression */}
   s: [}' 'Government securityFinancial institutionsHealthcare data protectionCritical infrastructure' ]} }; {/* TODO: Fix JSX expression */}

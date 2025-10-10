@@ -8,8 +8,8 @@ impo, r, t {/* TODO: Fix JSX expression */}"
 } fr, o, m "luci, d, e-rea, c, t";';"
 import, Header, from "../../componen, t, s/Head, e, r";';"
 import, Footer, from "../../componen, t, s/Foot, e, r";';
-const, AIVirtualAssistan, t: Rea, c, t.FC = () => {
-  const, feature, s = [
+const, AIVirtualAssistan, t: Rea, c, t.FC = () => {;
+const, feature, s = [
     {
       i, c, o;
   n: Bra, i, n;
@@ -60,12 +60,12 @@ const, AIVirtualAssistan, t: Rea, c, t.FC = () => {
       benef, i, t: "Perfect, customer, satisfaction"
     }
   ];
-  return(<>
+  return(<React.Fragment>
       <Helmet>
         <title>AI, Virtual, Assistant - Zion, Tech, Group | 24/7, Intelligent, Customer Suppo, r, t</title>
         <me, t, a;
   na, m, e="descripti, o, n"
-          content="Deploy, A, I-powered, virtual, assistants that, handle, customer inquiries, 2, 4/7, with, 95% accura, c, y. Mul, t, i-channel, suppor, t, 1, 2, 0+ languag, e, s, enterprise, securit, y." /><meta name="keywor, d, s" content="AI, virtual, assistant, chatb, o, t, customer, support, automation, conversational, A, I, virtual, agen, t, AI, customer, service" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/ai-virtu, a, l-assista, n, t/>"
+          content="Deploy, A, I-powered, virtual, assistants that, handle, customer inquiries, 2, 4/7, with, 95% accura, c, y. Mul, t, i-channel, suppor, t, 1, 2, 0+ languag, e, s, enterprise, securit, y." /><meta name="keywor, d, s" content="AI, virtual, assistant, chatb, o, t, customer, support, automation, conversational, A, I, virtual, agen, t, AI, customer, service" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/ai-virtu, a, l-assista, n, t/>";
 const, AIVirtualAssistan, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
@@ -79,7 +79,7 @@ const, AIVirtualAssistan, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
     {/* TODO: Fix JSX expression */}
     }
   ];
-  return (<>
+  return (<React.Fragment>
       <Helmet></Helmet>
         <title>AI, Virtual, Assistant - Zion, Tech, Group | 24/7, Intelligent, Customer Suppo, r, t</title>
         <me, t, a;"
@@ -321,8 +321,12 @@ const, AIVirtualAssistan, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;
   g:gr, i, d-co, l, s-3, ga, p-8">"
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
-                const, Ico, n = featu, r, e.ic, o, n;
-                return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
+return (
+;
+const, Ico, n = featu, r, e.ic, o, n;
+                return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">
+);
+}"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-purp, l, e-100, rounde, d-lg, m, b-4">
                 return (</div>
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"</div>
@@ -336,17 +340,25 @@ const, AIVirtualAssistan, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;)
   g:gr, i, d-co, l, s-3, ga, p-8">";)
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
-                const, Ico, n = featu, r, e.ic, o, n;
-                return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";
+return (
+;
+const, Ico, n = featu, r, e.ic, o, n;
+                return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">
+);
+}";
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-purp, l, e-100, rounde, d-lg, m, b-4">";
                     <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm"></div>
                       <CheckCircle, className="w-4 h-4, m, r-1  />
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-3, ga, p-8"></div>";
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
-                const, Ico, n = featu, r, e.ic, o, n;
+return (
+;
+const, Ico, n = featu, r, e.ic, o, n;
                 return (</div>
-                  <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";</div>
+                  <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">
+);
+}";</div>
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-purp, l, e-100, rounde, d-lg, m, b-4">";</div>
                       <Icon, className="w-6 h-6, tex, t-purp, l, e-6, 0, 0" />";
                     </d, i, v>
@@ -382,8 +394,7 @@ const, AIVirtualAssistan, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
                       {featu, r, e.benef, i, t}
                     </d, i, v>
                   </d, i, v>)
-                );
-              })}
+                )})}
             </d, i, v>
           </d, i, v>
         </secti, o, n>
@@ -450,9 +461,7 @@ const, AIVirtualAssistan, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
         </secti, o, n>
       </ma, i, n>
       <Foot, e, r   /></Foot>
-    </>
-  );
-};
+    </React.Fragment>
+  )};
 export default AIVirtualAssistant;
-;
 }}"

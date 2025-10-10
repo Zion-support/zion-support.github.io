@@ -31,5 +31,4 @@ export default function AutonomousSystemsPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

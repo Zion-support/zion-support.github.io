@@ -4,8 +4,8 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { Workflow, Zap, Brain, BarChart, Clock, Shield, Users, CheckCircle, Phone, Mail, ArrowRight, Settings, Database, Globe } from 'lucide-react';
-const AIWorkflowAutomationPage: React.FC = () => {
-  const features = [
+const AIWorkflowAutomationPage: React.FC = () => {;
+const features = [
     {
       icon: Zap;
       title: 'Intelligent Process Automation',
@@ -28,7 +28,7 @@ const AIWorkflowAutomationPage: React.FC = () => {
       icon: Users;
       title: 'Team Collaboration',
       description: 'Collaborate with your team on workflow design and management with role-based access control.',
-      benefits: ['Role-based Access', 'Team Collaboration', 'Version Control', 'Approval Workflows']
+      benefits: ['Role-based Access', 'Team Collaboration', 'Version Control', 'Approval Workflows'];
 const,
   AIWorkflowAutomationPage: React.FC = () => {/* TODO: Fix JSX expression */}
     },
@@ -61,25 +61,21 @@ const,
     {
       title: 'Customer Onboarding',
       description: 'Automate the entire customer onboarding process from signup to first value delivery with personalized workflows.',
-      icon: Users;
-    },
+      icon: Users},
     {
       title: 'Invoice Processing',
       description: 'Automatically process invoices, validate data, route for approval, and update accounting systems.',
-      icon: Database;
-    },
+      icon: Database},
     {
       title: 'Lead Management',
       description: 'Automate lead scoring, assignment, follow-up sequences, and CRM updates based on lead behavior.',
-      icon: Globe;
-    },
+      icon: Globe},
     {
       title: 'Employee Onboarding',
       description: 'Streamline new hire processes with automated document collection, system access, and training assignments.',
-      icon: Settings;
-    }
+      icon: Settings}
   ];
-  return(<>
+  return(<React.Fragment>
       <SEOOptimizer;
         title="AI Workflow Automation Platform - Zion Tech Group"
         description="Automate business processes with AI-powered workflows. 90% time savings, 500+ integrations, and intelligent decision making. No coding required."
@@ -126,7 +122,7 @@ const,
     {/* TODO: Fix JSX expression */}
     }
   ];
-  return (<>
+  return (<React.Fragment>
       <SEOOptimizer></SEOOptimizer>
         title="AI Workflow Automation Platform - Zion Tech Group""
         description="Automate business processes with AI-powered workflows. 90% time savings, 500+ integrations, and intelligent decision making. No coding required."
@@ -207,17 +203,20 @@ const,
         </main>
       </div>
     </div>
-    </>
-  );
-};
-
+    </React.Fragment>
+  )};
+;
 const AIWorkflowAutomationPage = () => {
+return (
+
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg"></div>
       <Navigation />
       <main className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
+);
+}
           {/* Hero Section */}</div>
           <section className="text-center mb-16">
             <h1 className="text-4xl sm: text-5xl md:text-6xl font-bold text-white mb-6 neon-text">)
@@ -366,8 +365,7 @@ const AIWorkflowAutomationPage = () => {
         </main>
         <Footer />
       </div>,
-    </div>);
-};
+    </div>)};
 
 
 

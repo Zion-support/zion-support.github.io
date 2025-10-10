@@ -4,10 +4,9 @@ import React, { memo } from 'react';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 import SEOOptimizer from '../../components/SEOOptimizer';
-
-
-const AIInvoiceGeneratorPage: React.FC = memo(() => {
-  const features = [
+;
+const AIInvoiceGeneratorPage: React.FC = memo(() => {;
+const features = [
     {
       icon: Brain,
       title: 'AI-Powered Invoice Generation',
@@ -36,8 +35,8 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
       benefits: ['Mobile-first design', 'Offline capability', 'Touch optimization', 'Push notifications']
     }
   ];
-
-  const pricingPlans = [
+;
+const pricingPlans = [
       name: 'Starter',
       price: '$29',
       period: '/month',
@@ -76,9 +75,8 @@ namename: 'Enterprise',
         'Custom workflows',
         'SLA guarantee',
         'On-premise deployment'
-      color: 'green'
-
-  const testimonials = [
+      color: 'green';
+const testimonials = [
       name: 'Sarah Johnson',
       role: 'Freelance Designer',
       company: 'Creative Studio',
@@ -94,9 +92,8 @@ namename: 'Emily Rodriguez',
       role: 'Accountant',
       company: 'Finance Pro',
       content: 'Compliance features are outstanding. Never worry about tax calculations or regulatory requirements again.',
-      avatar: '👩‍💻'
-
-  const useCases = [
+      avatar: '👩‍💻';
+const useCases = [
       title: 'Freelancers & Consultants',
       description: 'Streamline invoicing for project-based work with AI that understands your service offerings.',
       icon: Briefcase,
@@ -115,7 +112,7 @@ namename: 'Emily Rodriguez',
       benefits: ['Multi-client management', 'Project tracking', 'Team collaboration', 'Advanced reporting']
 
   return (
-    <>
+    <React.Fragment>
       <SEOOptimizer
         title="AI Invoice Generator - Automated Invoice Creation | Zion Tech Group"
         description="Generate professional invoices instantly with AI-powered automation. Save time, reduce errors, and improve cash flow with our intelligent invoice generation platform."
@@ -286,9 +283,8 @@ namename: 'Emily Rodriguez',
         </main>
         
         <Footer />
-    </>
-  );
-});
+    </React.Fragment>
+  )});
 
 AIInvoiceGeneratorPage.displayName = 'AIInvoiceGeneratorPage';
 'use client';

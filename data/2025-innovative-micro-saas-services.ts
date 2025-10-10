@@ -1,3 +1,4 @@
+import React from 'react';
 
   id: string;
   name: string;
@@ -214,8 +215,8 @@ export const,
         'Basic content generation tools',
         'Traditional CMS platforms'],
       market_size: '$50B+ market'
-      growth_rate: '250%+ annual growth'
-      variant: 'saas - content'
+      growth_rate: '250%+ annual growth';
+variant: 'saas - content'
       contact_info: unknown;
         mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -227,8 +228,7 @@ export const,
       launch_date: '2025 - 01 - 01'
       customers: 150;
       rating: 4 && 4.9;
-      reviews: 89;
-    },
+      reviews: 89},
         'AI-powered lead scoring',
     // CRM Intelligence Platform;
       id: 'crm - intelligence - platform',
@@ -240,8 +240,8 @@ export const,
       market_siz,
   e: '$50B+ market',
       growth_rat,
-  e: '250%+ annual growth',
-      varian,
+  e: '250%+ annual growth',;
+varian,
   t: 'saas - content',
       contact_inf,
   o: unknown,
@@ -363,8 +363,8 @@ export const,
       roi: 'Sales teams report 400%+ ROI through improved lead quality and conversion rates.',
       competitors: ['Basic CRM platforms', 'Traditional sales tools'],
       market_size: '$80B+ market'
-      growth_rate: '300%+ annual growth'
-      variant: 'saas - crm'
+      growth_rate: '300%+ annual growth';
+variant: 'saas - crm'
       contact_info: unknown;
         mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -384,8 +384,8 @@ export const,
       market_siz,
   e: '$80B+ market',
       growth_rat,
-  e: '300%+ annual growth',
-      varian,
+  e: '300%+ annual growth',;
+varian,
   t: 'saas - crm',
       contact_inf,
   o: unknown,
@@ -513,8 +513,8 @@ export const,
       roi: 'Enterprises report 500%+ ROI through improved decision - making and operational efficiency.',
       competitors: ['Basic analytics tools', 'Traditional BI platforms'],
       market_size: '$100B+ market'
-      growth_rate: '350%+ annual growth'
-      variant: 'saas - intelligence'
+      growth_rate: '350%+ annual growth';
+variant: 'saas - intelligence'
       contact_info: unknown;
         mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -526,8 +526,7 @@ export const,
       launch_date: '2025 - 01 - 20'
       customers: 120;
       rating: 4 && 4.9;
-      reviews: 78;
-    },
+      reviews: 78},
     // E - commerce Optimization Platform;
       id: 'ecommerce - optimization - platform',
       name: 'E - commerce AI Optimization Platform',
@@ -542,8 +541,8 @@ export const,
       market_siz,
   e: '$100B+ market',
       growth_rat,
-  e: '350%+ annual growth',
-      varian,
+  e: '350%+ annual growth',;
+varian,
   t: 'saas - intelligence',
       contact_inf,
   o: unknown,
@@ -668,8 +667,8 @@ export const,
         'Basic e - commerce tools',
         'Traditional analytics platforms'],
       market_size: '$60B+ market'
-      growth_rate: '280%+ annual growth'
-      variant: 'saas - ecommerce'
+      growth_rate: '280%+ annual growth';
+variant: 'saas - ecommerce'
       contact_info: unknown;
         mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -681,8 +680,7 @@ export const,
       launch_date: '2025 - 02 - 01'
       customers: 180;
       rating: 4 && 4.8;
-      reviews: 95;
-    },
+      reviews: 95},
     // HR Automation Platform;
       id: 'hr - automation - platform',
       name: 'AI - Powered HR Automation Platform',
@@ -694,8 +692,8 @@ export const,
       market_siz,
   e: '$60B+ market',
       growth_rat,
-  e: '280%+ annual growth',
-      varian,
+  e: '280%+ annual growth',;
+varian,
   t: 'saas - ecommerce',
       contact_inf,
   o: unknown,
@@ -816,8 +814,8 @@ export const,
       roi: 'HR departments report 300%+ ROI through improved efficiency and better talent management.',
       competitors: ['Basic HR platforms', 'Traditional recruitment tools'],
       market_size: '$40B+ market'
-      growth_rate: '250%+ annual growth'
-      variant: 'saas - hr'
+      growth_rate: '250%+ annual growth';
+variant: 'saas - hr'
       contact_info: unknown;
         mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -829,8 +827,7 @@ export const,
       launch_date: '2025 - 02 - 15'
       customers: 95;
       rating: 4 && 4.8;
-      reviews: 58;
-    },
+      reviews: 58},
     // Financial Analytics Platform;
       id: 'financial - analytics - platform',
       name: 'AI Financial Analytics & Intelligence Platform',
@@ -846,8 +843,8 @@ export const,
       market_siz,
   e: '$40B+ market',
       growth_rat,
-  e: '250%+ annual growth',
-      varian,
+  e: '250%+ annual growth',;
+varian,
   t: 'saas - hr',
       contact_inf,
   o: unknown,
@@ -966,8 +963,8 @@ export const,
       roi: 'Financial institutions report 450%+ ROI through improved analysis and risk management.',
       competitors: ['Basic financial tools', 'Traditional analytics platforms'],
       market_size: '$90B+ market'
-      growth_rate: '320%+ annual growth'
-      variant: 'saas - financial'
+      growth_rate: '320%+ annual growth';
+variant: 'saas - financial'
       contact_info: unknown;
         mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -979,8 +976,7 @@ export const,
       launch_date: '2025 - 02 - 10'
       customers: 85;
       rating: 4 && 4.9;
-      reviews: 52;
-    },
+      reviews: 52},
     // Supply Chain Intelligence Platform;
       id: 'supply - chain - intelligence',
       name: 'AI Supply Chain Intelligence Platform',
@@ -996,8 +992,8 @@ export const,
       market_siz,
   e: '$90B+ market',
       growth_rat,
-  e: '320%+ annual growth',
-      varian,
+  e: '320%+ annual growth',;
+varian,
   t: 'saas - financial',
       contact_inf,
   o: unknown,
@@ -1121,8 +1117,8 @@ export const,
         'Basic supply chain tools',
         'Traditional inventory management'],
       market_size: '$70B+ market'
-      growth_rate: '300%+ annual growth'
-      variant: 'saas - supply - chain'
+      growth_rate: '300%+ annual growth';
+variant: 'saas - supply - chain'
       contact_info: unknown;
         mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -1134,8 +1130,7 @@ export const,
       launch_date: '2025 - 03 - 01'
       customers: 65;
       rating: 4 && 4.8;
-      reviews: 38;
-    },
+      reviews: 38},
     // Marketing Automation Platform;
       id: 'marketing - automation - platform',
       name: 'AI Marketing Automation Platform',
@@ -1147,8 +1142,8 @@ export const,
       market_siz,
   e: '$70B+ market',
       growth_rat,
-  e: '300%+ annual growth',
-      varian,
+  e: '300%+ annual growth',;
+varian,
   t: 'saas - supply - chain',
       contact_inf,
   o: unknown,
@@ -1273,8 +1268,8 @@ export const,
         'Basic marketing tools',
         'Traditional automation platforms'],
       market_size: '$55B+ market'
-      growth_rate: '280%+ annual growth'
-      variant: 'saas - marketing'
+      growth_rate: '280%+ annual growth';
+variant: 'saas - marketing'
       contact_info: unknown;
         mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -1286,8 +1281,7 @@ export const,
       launch_date: '2025 - 02 - 20'
       customers: 140;
       rating: 4 && 4.9;
-      reviews: 82;
-    },
+      reviews: 82},
       id: 'project - management - intelligence',
       name: 'AI Project Management Intelligence Platform',
       tagline: unknown;
@@ -1298,8 +1292,8 @@ export const,
       market_siz,
   e: '$55B+ market',
       growth_rat,
-  e: '280%+ annual growth',
-      varian,
+  e: '280%+ annual growth',;
+varian,
   t: 'saas - marketing',
       contact_inf,
   o: unknown,
@@ -1423,8 +1417,8 @@ export const,
         'Basic project management tools',
         'Traditional planning platforms'],
       market_size: '$45B+ market'
-      growth_rate: '250%+ annual growth'
-      variant: 'saas - project'
+      growth_rate: '250%+ annual growth';
+variant: 'saas - project'
       contact_info: unknown;
         mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -1436,8 +1430,7 @@ export const,
       launch_date: '2025 - 03 - 05'
       customers: 75;
       rating: 4 && 4.8;
-      reviews: 45;
-    };
+      reviews: 45};
   ];    features: [,
 export interface InnovativeMicroSaasService2025 {id: string, name: string;
   tagline: string, price: string;
@@ -1460,8 +1453,7 @@ export interface InnovativeMicroSaasService2025 {id: string, name: string;
     realImplementation: boolean, implementationDetails: string;
   launchDate: string, customers: number;
   rating: number;
-  reviews: number;
-}
+  reviews: number}
 export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025[] = [,
   // AI Content Factory;
     id: 'ai-content-factory', name: 'AI Content Factory Platform',
@@ -1477,8 +1469,8 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       market_siz,
   e: '$45B+ market',
       growth_rat,
-  e: '250%+ annual growth',
-      varian,
+  e: '250%+ annual growth',;
+varian,
   t: 'saas - project',
       contact_inf,
   o: unknown,
@@ -1574,8 +1566,8 @@ export const,
         'Traditional planning platforms'
       ]
       marketSize: '$45 B+ market'
-      growthRate: '250%+ annual growth'
-      variant: 'saas-project'
+      growthRate: '250%+ annual growth';
+variant: 'saas-project'
       contactInfo: mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1586,8 +1578,7 @@ export const,
       launchDate: '2025-03-05'
       customers: 75;
       rating: 4.8;
-      reviews: 45;
-    }  ];    features: [;
+      reviews: 45}  ];    features: [;
       'AI project planningResource optimizationRisk assessmentPerformance trackingAutomated reportingTeam collaborationTimeline optimizationBudget management',
       'Integration capabilitiesCustom dashboards'],
     popular: true, icon: '',
@@ -1692,8 +1683,8 @@ export interface InnovativeMicroSaasService2025 {;
       marketSiz,
   e: '$45B+ market'
       growthRat,
-  e: '250%+ annual growth'
-      varian,
+  e: '250%+ annual growth';
+varian,
   t: 'saas-project'
       contactInf,
   o: mobil,
@@ -1926,8 +1917,7 @@ export const,
     launchDate: '2025-01-01';
     customers: 150;
     rating: 4.9;
-    reviews: 89;
-  };
+    reviews: 89};
   // CRM Intelligence Platform;
   {;
     id: 'crm-intelligence-platform';
@@ -1969,8 +1959,7 @@ export const,
     launchDate: '2025-01-15';
     customers: 200;
     rating: 4.9;
-    reviews: 125;
-  };
+    reviews: 125};
   // Decision Engine Platform;
   {;
     id: 'decision-engine-platform';
@@ -2012,8 +2001,7 @@ export const,
     launchDate: '2025-01-20';
     customers: 120;
     rating: 4.9;
-    reviews: 78;
-  };
+    reviews: 78};
   // E-commerce Optimization Platform;
   {;
     id: 'ecommerce-optimization-platform';
@@ -2055,8 +2043,7 @@ export const,
     launchDate: '2025-02-01';
     customers: 180;
     rating: 4.8;
-    reviews: 95;
-  };
+    reviews: 95};
   // HR Automation Platform;
   {;
     id: 'hr-automation-platform';
@@ -2098,8 +2085,7 @@ export const,
     launchDate: '2025-02-15';
     customers: 95;
     rating: 4.8;
-    reviews: 58;
-  };
+    reviews: 58};
   // Financial Analytics Platform;
   {;
     id: 'financial-analytics-platform';
@@ -2141,8 +2127,7 @@ export const,
     launchDate: '2025-02-10';
     customers: 85;
     rating: 4.9;
-    reviews: 52;
-  };
+    reviews: 52};
   // Supply Chain Intelligence Platform;
   {;
     id: 'supply-chain-intelligence';
@@ -2184,8 +2169,7 @@ export const,
     launchDate: '2025-03-01';
     customers: 65;
     rating: 4.8;
-    reviews: 38;
-  };
+    reviews: 38};
   // Marketing Automation Platform;
   {;
     id: 'marketing-automation-platform';
@@ -2227,8 +2211,7 @@ export const,
     launchDate: '2025-02-20';
     customers: 140;
     rating: 4.9;
-    reviews: 82;
-  };
+    reviews: 82};
   // Project Management Intelligence Platform;
   {;
     id: 'project-management-intelligence';
@@ -2510,11 +2493,9 @@ export const,
 ]}
 ];
 ;
-;
-  }
+}
 ];
-;
-  }
+}
 ];
 export interface InnovativeMicroSaasService2025 {/* TODO: Fix JSX expression */}
   s: string}
@@ -2583,8 +2564,7 @@ export const,
     launchDate: '2025-01-01';
     customers: 150;
     rating: 4.9;
-    reviews: 89;
-  };
+    reviews: 89};
   // CRM Intelligence Platform;
   {;
     id: 'crm-intelligence-platform';
@@ -2626,8 +2606,7 @@ export const,
     launchDate: '2025-01-15';
     customers: 200;
     rating: 4.9;
-    reviews: 125;
-  };
+    reviews: 125};
   // Decision Engine Platform;
   {;
     id: 'decision-engine-platform';
@@ -2669,8 +2648,7 @@ export const,
     launchDate: '2025-01-20';
     customers: 120;
     rating: 4.9;
-    reviews: 78;
-  };
+    reviews: 78};
   // E-commerce Optimization Platform;
   {;
     id: 'ecommerce-optimization-platform';
@@ -2712,8 +2690,7 @@ export const,
     launchDate: '2025-02-01';
     customers: 180;
     rating: 4.8;
-    reviews: 95;
-  };
+    reviews: 95};
   // HR Automation Platform;
   {;
     id: 'hr-automation-platform';
@@ -2755,8 +2732,7 @@ export const,
     launchDate: '2025-02-15';
     customers: 95;
     rating: 4.8;
-    reviews: 58;
-  };
+    reviews: 58};
   // Financial Analytics Platform;
   {;
     id: 'financial-analytics-platform';
@@ -2798,8 +2774,7 @@ export const,
     launchDate: '2025-02-10';
     customers: 85;
     rating: 4.9;
-    reviews: 52;
-  };
+    reviews: 52};
   // Supply Chain Intelligence Platform;
   {;
     id: 'supply-chain-intelligence';
@@ -2841,8 +2816,7 @@ export const,
     launchDate: '2025-03-01';
     customers: 65;
     rating: 4.8;
-    reviews: 38;
-  };
+    reviews: 38};
   // Marketing Automation Platform;
   {;
     id: 'marketing-automation-platform';
@@ -2884,8 +2858,7 @@ export const,
     launchDate: '2025-02-20';
     customers: 140;
     rating: 4.9;
-    reviews: 82;
-  };
+    reviews: 82};
   // Project Management Intelligence Platform;
   {;
     id: 'project-management-intelligence';
@@ -3819,7 +3792,7 @@ i,
   e: '2025-03-05'; customer,
   s: 75; ratin,
   g: 4.8; review,
-  s: 45; ]} ]; ; } ]; } ];' import { ServiceVariant } from '../types/service-variants'; export interface InnovativeMicroSaasService2025 {/* TODO: Fix JSX expression */}
+  s: 45; ]} ]; } ]} ];' import { ServiceVariant } from '../types/service-variants'; export interface InnovativeMicroSaasService2025 {/* TODO: Fix JSX expression */}
   s: string} websit,
   e: string} }; realImplementatio,
   n: boolean; implementationDetail,

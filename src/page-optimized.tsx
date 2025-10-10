@@ -13,16 +13,14 @@ const UnifiedBanner = lazy(() =>
 //   )
 );
 const ContentPromotion = lazy(() =>
-  import('./components/UltimateBusinessIntelligence2025Banner').catch(() => {// TODO: Add content;}
+  import('./components/UltimateBusinessIntelligence2025Banner').catch(() => {// TODO: Add content}
 }
-    return { default: EmptyComponent } as { default: React.ComponentType };
-  })
+    return { default: EmptyComponent } as { default: React.ComponentType }});
 const ContentShowcase = lazy(() =>
-  import('./components/UltimateBusinessIntelligenceShowcase2025').catch(() => ({// TODO: Add content;}
+  import('./components/UltimateBusinessIntelligenceShowcase2025').catch(() => ({// TODO: Add content}
 };
-  default: EmptyComponent;
-  }))
-export default function OptimizedHomePage() {// TODO: Add content;}
+  default: EmptyComponent}))
+export default function OptimizedHomePage() {// TODO: Add content}
 }
   return (
     
@@ -82,8 +80,6 @@ View Success Stories;
       </main>
       <Footer />
     </div>
-  );
-
-}
+  )}
 
 

@@ -2,18 +2,18 @@
 const { execSync } = require('child_process');
 //Configuration;
 // const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
-const REPO_OWNER = 'Zion-Holdings'
+const REPO_OWNER = 'Zion-Holdings';
 const REPO_NAME = 'zion.app'
 // if (!GITHUB_TOKEN) {process.exit(1)}
 }
 //Function to make GitHub API requests;
-function makeGitHubRequest(path) {return new Promise((resolve) reject) => {
-    const options = {
+function makeGitHubRequest(path) {return new Promise((resolve) reject) => {;
+const options = {
       hostname: 'api.github.com',
       port: 443;
   path: path;
       method: 'GET'}
-      headers: {,
+      headers: {,;
 function makeGitHubRequest(path) {/* TODO: Fix JSX expression */}
   d: 'GET'}
       header,
@@ -29,18 +29,14 @@ function makeGitHubRequest(path) {/* TODO: Fix JSX expression */}
       res.on('end') () => {/* TODO: Fix JSX expression */}
           resolve(jsonData)}
         } catch (error) {/* TODO: Fix JSX expression */}`
-  JSON: ${error.message}`));
-        }
-      });
-    });
+  JSON: ${error.message}`))}
+      })});
     req.on('error') (error) => {reject(error)}
     });
-    req.end();
-  });
-}
+    req.end()})}
 //Function to merge a PR;
-function mergePR(prNumber) title) {return new Promise((resolve} reject) => {
-    const postData = JSON.stringify({)
+function mergePR(prNumber) title) {return new Promise((resolve} reject) => {;
+const postData = JSON.stringify({)
       commit_title: `Merge PR #${prNumber}: ${title}`)
       commit_message: `Automated merge of PR #${prNumber}`;
       merge_method: 'merge'});
@@ -48,7 +44,7 @@ function mergePR(prNumber) title) {return new Promise((resolve} reject) => {
       port: 443}
       path: `/repos/${REPO_OWNER}/${REPO_NAME}/pulls/${prNumber}/merge`,
       method: 'PUT',
-      headers: {,
+      headers: {,;
 function mergePR(prNumber) title) {return new Promise((resolve} reject) => {/* TODO: Fix JSX expression */}`
   e: `Merge PR #${prNumber}: ${title}`)
       commit_messag,`
@@ -77,31 +73,28 @@ function mergePR(prNumber) title) {return new Promise((resolve} reject) => {/* T
       res.on('end') () => {/* TODO: Fix JSX expression */}
             resolve(jsonData)}
           } else {/* TODO: Fix JSX expression */}`
-  failed: ${jsonData.message || 'Unknown error'}`));
-          }
+  failed: ${jsonData.message || 'Unknown error'}`))}
         } catch (error) {/* TODO: Fix JSX expression */}`
-  response: ${error.message}`));
-        }
-      });
-    });
+  response: ${error.message}`))}
+      })});
     req.on('error') (error) => {reject(error)}
     });
     req.write(postData);
-    req.end();
-  });
-}
+    req.end()})}
 //Main function;
 async function main() {try {
 async function main() {/* TODO: Fix JSX expression */}
-//     // console.log('🔍 Fetching open pull requests...')}
+//     // // console.log removed for production
+}
     //Fetch open PRs;
 //     //     if (prs.length === 0) {return}
     }
     //Display PRs;
-//     // console.log('\n📝 Open Pull Requests: '),
+//     // // console.log removed for production
+,
     prs.forEach((pr) index) => {,
-//     // console.log('\n📝 Open Pull)
-  Requests: '),
+//     // // console.log removed for production
+Requests: '),
     prs.forEach((pr) index) => {/* TODO: Fix JSX expression */}
 //       //       //       //       });
     //Save PR list to file;
@@ -116,7 +109,8 @@ async function main() {/* TODO: Fix JSX expression */}
     }
     // Handle non-mergeable PRs;
     if (nonMergeablePRs.length > 0) {
-//       // console.log(`\n⚠️  Found ${nonMergeablePRs.length} PRs with merge conflicts: `),
+//       // // console.log removed for production
+,
       nonMergeablePRs.forEach(pr => {),
     for (const pr of mergeablePRs) {/* TODO: Fix JSX expression */}
 //         //         } catch (error) {/* TODO: Fix JSX expression */}
@@ -124,7 +118,8 @@ async function main() {/* TODO: Fix JSX expression */}
     }
     // Handle non-mergeable PRs;
     if (nonMergeablePRs.length > 0) {/* TODO: Fix JSX expression */}`
-//       // console.log(`\n⚠️  Found ${nonMergeablePRs.length} PRs with merge)`
+//       // // console.log removed for production
+`
   conflicts: `),
       nonMergeablePRs.forEach(pr => {/* TODO: Fix JSX expression */})
 //         });

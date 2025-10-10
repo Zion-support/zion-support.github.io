@@ -6,9 +6,9 @@ import { Bot, MessageSquare, Users, BarChart, TrendingUp, Clock, Star, CheckCirc
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
-const AICustomerSupportBotPage: React.FC = () => {
-  const features = [
+;
+const AICustomerSupportBotPage: React.FC = () => {;
+const features = [
     {
       icon: Bot,
       title: '24/7 AI Support',
@@ -29,8 +29,8 @@ const AICustomerSupportBotPage: React.FC = () => {
       benefits: ['Real-time analytics', 'Performance tracking', 'Continuous improvement']
     }
   ];
-
-  const pricingPlans = [
+;
+const pricingPlans = [
       name: 'Starter',
       price: '$149',
       period: '/month',
@@ -62,9 +62,8 @@ const AICustomerSupportBotPage: React.FC = () => {
         'Custom analytics',
         'White-label options',
         'API access',
-        'Custom training'
-
-  const stats = [
+        'Custom training';
+const stats = [
     { icon: Users, value: '1,000+', label: 'Happy Customers' },
     { icon: TrendingUp, value: '90%', label: 'Response Time Reduction' },
     { icon: Clock, value: '45%', label: 'Satisfaction Increase' },
@@ -141,8 +140,7 @@ const AICustomerSupportBotPage: React.FC = () => {
               View Case Studies
       
       <Footer />
-  );
-};
+  )};
 
 
 export default $1;

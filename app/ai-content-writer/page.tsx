@@ -5,9 +5,8 @@ import { FileText, PenTool, Globe, BarChart, Zap, Users, Target, TrendingUp, Pho
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight } from 'lucide-react';
-
-const AIContentWriterPage: React.FC = () => {
-  const features = [
+;
+const AIContentWriterPage: React.FC = () => {const features = [
     {
       title: 'AI Writing Assistant',
       description: 'Generate high-quality content using advanced AI algorithms',
@@ -26,7 +25,47 @@ const AIContentWriterPage: React.FC = () => {
   ];
 
   const benefits = [
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>Ai Content Writer - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI-powered ai content writer solution for modern businesses." />
+        <meta name="keywords" content="AI ai content writer, artificial intelligence, ai content writer, AI solutions, intelligent automation" />
+      </Helmet>
+
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              Ai Content Writer
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Advanced AI-powered ai content writer solution for modern businesses.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                View Demo
+              </button>
+            </div>
+          </div>
+        </section>
+;
+const benefits = [
     'Increase content production by 10x',
+        </section>    'Increase content production by 10x',
     'Improve engagement by 200%',
     'Save 50+ hours per week',
     'Reduce content costs by 70%',
@@ -35,14 +74,16 @@ const AIContentWriterPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+    <>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
         <title>AI Content Writer | Zion Tech Group</title>
         <meta name="description" content="Professional AI content writer solutions by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="ai content writer, AI solutions, IT services, Zion Tech Group" />
       </Helmet>
       
-      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+        <Navigation />
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
@@ -95,10 +136,10 @@ const AIContentWriterPage: React.FC = () => {
                       <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
                       {benefit}
                     </li>
-                  ))}
+                  ));
                 </ul>
               </div>
-            ))}
+            ));
           </div>
         </div>
       </section>
@@ -121,7 +162,7 @@ const AIContentWriterPage: React.FC = () => {
                 </div>
                 <h3 className="text-lg font-semibold text-white">{benefit}</h3>
               </div>
-            ))}
+            ));
           </div>
         </div>
       </section>
@@ -171,11 +212,10 @@ const AIContentWriterPage: React.FC = () => {
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                           {benefit}
                         </li>
-                      ))}
-                    </ul>
-                  )}
+                      ));
+                    </ul>);
                 </div>
-              ))}
+              ));
             </div>
           </div>
         </section>
@@ -200,7 +240,7 @@ const AIContentWriterPage: React.FC = () => {
                   </div>
                   <p className="text-lg text-white font-medium">{benefit}</p>
                 </div>
-              ))}
+              ));
             </div>
           </div>
         </section>
@@ -226,10 +266,18 @@ const AIContentWriterPage: React.FC = () => {
             </div>
           </div>
         </section>
+        <Footer />
       </div>
       <Footer />
+      </div>
+    </>
+        
+        <Footer />
+      </div>
     </div>
   );
 };
 
+    </div>)
 export default AIContentWriterPage;
+      </section>export default AiContentWriterPage;export default AIContentWriterPage;

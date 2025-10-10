@@ -1,3 +1,4 @@
+import React from 'react';
 
 export interface InnovativeITService {id: string;
   name: string;
@@ -145,8 +146,8 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
       'Okta',
       'CyberArk'],
     market_size: '$45B cybersecurity market'
-    growth_rate: '110% annual growth'
-    variant: 'cyberpunk'
+    growth_rate: '110% annual growth';
+variant: 'cyberpunk'
     contact_info: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -158,8 +159,7 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 01 - 01'
     customers: 800;
     rating: 4 && 4.9;
-    reviews: 400;
-  },
+    reviews: 400},
     id: 'edge - computing - platform'
     name: 'Edge Computing Platform',
     tagline: 'Distributed computing at the network edge',
@@ -169,8 +169,8 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     market_siz,
   e: '$45B cybersecurity market',
     growth_rat,
-  e: '110% annual growth',
-    varian,
+  e: '110% annual growth',;
+varian,
   t: 'cyberpunk',
     contact_inf,
   o: unknown,
@@ -300,8 +300,8 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
       'FogHorn',
       'ClearBlade'],
     market_size: '$15B edge computing market'
-    growth_rate: '180% annual growth'
-    variant: 'quantum'
+    growth_rate: '180% annual growth';
+variant: 'quantum'
     contact_info: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -313,8 +313,7 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 01 - 10'
     customers: 1500;
     rating: 4 && 4.8;
-    reviews: 750;
-  },
+    reviews: 750},
     id: 'quantum - computing - as - a-service'
     name: 'Quantum Computing as a Service',
     tagline: 'Access to quantum computing power',
@@ -324,8 +323,8 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     market_siz,
   e: '$15B edge computing market',
     growth_rat,
-  e: '180% annual growth',
-    varian,
+  e: '180% annual growth',;
+varian,
   t: 'quantum',
     contact_inf,
   o: unknown,
@@ -454,8 +453,8 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
       'Rigetti',
       'D - Wave'],
     market_size: '$8B quantum computing market'
-    growth_rate: '250% annual growth'
-    variant: 'quantum - advanced'
+    growth_rate: '250% annual growth';
+variant: 'quantum - advanced'
     contact_info: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -467,8 +466,7 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 01 - 05'
     customers: 300;
     rating: 4 && 4.9;
-    reviews: 150;
-  },
+    reviews: 150},
       'Multi-consensus algorithms',
     id: 'blockchain - enterprise - platform'
     name: 'Blockchain Enterprise Platform',
@@ -479,8 +477,8 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     market_siz,
   e: '$8B quantum computing market',
     growth_rat,
-  e: '250% annual growth',
-    varian,
+  e: '250% annual growth',;
+varian,
   t: 'quantum - advanced',
     contact_inf,
   o: unknown,
@@ -612,8 +610,8 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
       'Quorum',
       'Multichain'],
     market_size: '$19B blockchain market'
-    growth_rate: '160% annual growth'
-    variant: 'quantum - blockchain'
+    growth_rate: '160% annual growth';
+variant: 'quantum - blockchain'
     contact_info: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -625,8 +623,7 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 01 - 15'
     customers: 600;
     rating: 4 && 4.8;
-    reviews: 300;
-  },
+    reviews: 300},
       'CI/CD pipelines',
     id: 'devops - automation - platform'
     name: 'DevOps Automation Platform',
@@ -637,8 +634,8 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     market_siz,
   e: '$19B blockchain market',
     growth_rat,
-  e: '160% annual growth',
-    varian,
+  e: '160% annual growth',;
+varian,
   t: 'quantum - blockchain',
     contact_inf,
   o: unknown,
@@ -772,8 +769,8 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
       'GitHub Actions',
       'Azure DevOps'],
     market_size: '$12B DevOps market'
-    growth_rate: '130% annual growth'
-    variant: 'cyberpunk'
+    growth_rate: '130% annual growth';
+variant: 'cyberpunk'
     contact_info: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -785,8 +782,7 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 01 - 20'
     customers: 2500;
     rating: 4 && 4.7;
-    reviews: 1250;
-  }];      mobile: '+1 302 464 0950',
+    reviews: 1250}];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
   id: string, name: string;
   tagline: string, price: string;
@@ -804,13 +800,11 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
   contactInfo: unknown;
     mobile: string, email: string;
     address: string;
-    website: string;
-    },
+    website: string},
     realImplementation: boolean, implementationDetails: string;
   launchDate: string, customers: number;
   rating: number;
-  reviews: number;
-}
+  reviews: number}
 export const innovativeITServices: InnovativeITService[] = [,
     id: 'zero-trust-security-platform', name: 'Zero Trust Security Platform',
     tagline: 'Next-generation cybersecurity with zero trust architecture', price: '$599',
@@ -843,8 +837,8 @@ export const innovativeITServices: InnovativeITService[] = [,
     market_siz,
   e: '$12B DevOps market',
     growth_rat,
-  e: '130% annual growth',
-    varian,
+  e: '130% annual growth',;
+varian,
   t: 'cyberpunk',
     contact_inf,
   o: unknown,
@@ -1007,8 +1001,7 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
   }
 ];
 ;
-;
-  }
+}
 ];
 ;
     realImplementation: true;
@@ -1017,8 +1010,7 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     launchDate: '2024-01-01'
     customers: 800;
     rating: 4.9;
-    reviews: 400;
-  }
+    reviews: 400}
     id: 'edge-computing-platform'
     name: 'Edge Computing Platform',
     tagline: 'Distributed computing at the network edge',
@@ -1145,14 +1137,14 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
       'ClearBlade'
     ]
     marketSize: '$15B edge computing market'
-    growthRate: '180% annual growth',
-    variant: 'quantum',
+    growthRate: '180% annual growth',;
+variant: 'quantum',
     contactInfo: targetAudience: unknown;
     marketSiz,
   e: '$15B edge computing market'
     growthRat,
-  e: '180% annual growth'
-    varian,
+  e: '180% annual growth';
+varian,
   t: 'quantum'
     contactInf,
   o: targetAudienc,
@@ -1199,8 +1191,8 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
       'D-Wave'
     ]
     marketSize: '$8B quantum computing market'
-    growthRate: '250% annual growth',
-    variant: 'quantum-advanced',
+    growthRate: '250% annual growth',;
+variant: 'quantum-advanced',
     contactInfo: marketPosition: unknown;
       'Competitive with Hyperledger Fabric ($free), Ethereum Enterprise ($variable), and Corda ($variable). Our advantage: Better enterprise features, support, and integration capabilities.'
     targetAudience: 'Financial institutions, Supply chain companies, Healthcare organizations, Government agencies, Energy companies, Real estate'
@@ -1213,8 +1205,8 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     marketSiz,
   e: '$8B quantum computing market'
     growthRat,
-  e: '250% annual growth'
-    varian,
+  e: '250% annual growth';
+varian,
   t: 'quantum-advanced'
     contactInf,
   o: marketPositio,
@@ -1265,8 +1257,8 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
       'Multichain'
     ]
     marketSize: '$19B blockchain market'
-    growthRate: '160% annual growth',
-    variant: 'quantum-blockchain',
+    growthRate: '160% annual growth',;
+variant: 'quantum-blockchain',
     contactInfo: marketPosition: unknown;
       'Competitive with GitLab ($19-99), Jenkins ($free), and CircleCI ($15-300). Our advantage: Better automation, comprehensive features, and competitive pricing.'
     targetAudience: 'Development teams, DevOps engineers, IT operations, Software companiestups, Enterprises'
@@ -1279,8 +1271,8 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     marketSiz,
   e: '$19B blockchain market'
     growthRat,
-  e: '160% annual growth'
-    varian,
+  e: '160% annual growth';
+varian,
   t: 'quantum-blockchain'
     contactInf,
   o: marketPositio,
@@ -1333,8 +1325,8 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
       'Azure DevOps'
     ]
     marketSize: '$12B DevOps market'
-    growthRate: '130% annual growth'
-    variant: 'cyberpunk'
+    growthRate: '130% annual growth';
+variant: 'cyberpunk'
     contactInfo: mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1345,8 +1337,7 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     launchDate: '2024-01-20'
     customers: 2500;
     rating: 4.7;
-    reviews: 1250;
-  }];      mobile: '+1 302 464 0950',
+    reviews: 1250}];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
@@ -1359,8 +1350,8 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     marketSiz,
   e: '$12B DevOps market'
     growthRat,
-  e: '130% annual growth'
-    varian,
+  e: '130% annual growth';
+varian,
   t: 'cyberpunk'
     contactInf,
   o: mobil,
@@ -1418,8 +1409,7 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
-}
+  reviews: number}
 ;
 export const innovativeITServices: InnovativeITService[] = [;
   {
@@ -1504,8 +1494,7 @@ export const,
   g: 4.7,
     review,
   s: 1250}
-];
-  }
+]}
 ;
 export interface InnovativeITService,
   id: string; nam,
@@ -1818,7 +1807,7 @@ export interface InnovativeITService,
   e: '2024 - 01 - 20' customer,
   s: 2500, ratin,
   g: 4.7, review,
-  s: 1250} export interface InnovativeITService {; } ]; ; } ]; realImplementatio,
+  s: 1250} export interface InnovativeITService {} ]; } ]; realImplementatio,
   n: true,
   implementationDetails:' 'Enterprise-grade zero trust platform with advanced AI, real-time monitoring, and comprehensive security controls.'' launchDat,
   e: '2024-01-01' customer,
@@ -1940,4 +1929,4 @@ export interface InnovativeITService,
   e: '2024 - 01 - 20' customer,
   s: 2500, ratin,
   g: 4.7, review,
-  s: 1250} ]; } ; '
+  s: 1250} ]} ; '

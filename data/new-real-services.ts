@@ -1,3 +1,4 @@
+import React from 'react';
 
       'Prompt and response tracing',
       'Cost and token analytics',
@@ -31,8 +32,8 @@
     roi: 'Cut LLM cost 2045% while improving reliability'
     competitors: ['LangfuseArizeWeights & Biases'];
     marketSize: '$5 B+ AI Ops and Observability'
-    growthRate: 'Rapid growth with LLM adoption'
-    variant: 'quantum-holographic',
+    growthRate: 'Rapid growth with LLM adoption';
+variant: 'quantum-holographic',
     contactInfo: contact;
     realImplementation: true;
     implementationDetails: 'Agent SDKs, tracing collectors, and dashboards ready to deploy.'
@@ -64,16 +65,15 @@
     roi: 'Cut LLM cost 2045% while improving reliability'
     competitors: ['LangfuseArizeWeights & Biases'];
     market_size: '$5 B+ AI Ops and Observability'
-    growth_rate: 'Rapid growth with LLM adoption'
-    variant: 'quantum - holographic',
+    growth_rate: 'Rapid growth with LLM adoption';
+variant: 'quantum - holographic',
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Agent SDKs, tracing collectors, and dashboards ready to deploy.'
     launch_date: '2025 - 01 - 10'
     customers: 32;
     rating: 4.8;
-    reviews: 22;
-  }
+    reviews: 22}
     id: 'ai - sales - email - copilot'
     name: 'AI Sales Email Copilot',
     tagline: 'Personalized multi - touch outbound with real - time enrichment',
@@ -91,8 +91,8 @@
     roi: 'Increase replies 25 x with hyper-personalization'
     competitors: ['Copy && Copy.aiLavenderInstantly'];
     marketSize: '$15 B Sales Engagement'
-    growthRate: 'Strong growth'
-    variant: 'holographic',
+    growthRate: 'Strong growth';
+variant: 'holographic',
     contactInfo: contact;
     realImplementation: true;
     implementationDetails: 'Sequencer, enrichment adapters, and warm-up utilities.'
@@ -122,16 +122,15 @@
     roi: 'Increase replies 25 x with hyper - personalization'
     competitors: ['Copy.aiLavenderInstantly'];
     market_size: '$15 B Sales Engagement'
-    growth_rate: 'Strong growth'
-    variant: 'holographic',
+    growth_rate: 'Strong growth';
+variant: 'holographic',
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Sequencer, enrichment adapters, and warm - up utilities.'
     launch_date: '2024 - 12 - 20'
     customers: 120;
     rating: 4.7;
-    reviews: 58;
-  }
+    reviews: 58}
     id: 'security - posture - as - code'
     name: 'Security Posture as Code',
     tagline: 'CIS / NIST / Kyverno policy packs with drift remediation',
@@ -163,8 +162,8 @@
     roi: 'Reduce audit prep time by 70%'
     competitors: ['WizPrisma CloudSnyk'];
     market_size: '$30 B Cloud Security'
-    growth_rate: 'High growth'
-    variant: 'neural - quantum'
+    growth_rate: 'High growth';
+variant: 'neural - quantum'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Policy engine plus cloud / K8 s scanners and fix generators.'
@@ -173,8 +172,7 @@
     rating: 4 && 4.6;
     reviews: 14;
     rating: 4.6;
-    reviews: 14;
-  }
+    reviews: 14}
     id: 'etl - observability - starter'
     name: 'ETL Observability Starter',
     tagline: 'Data pipeline health with schema change and freshness alerts',
@@ -206,16 +204,15 @@
     roi: 'Reduce data incidents 3060%'
     competitors: ['Monte CarloBigeye'];
     market_size: '$3 B Data Observability'
-    growth_rate: 'Growing'
-    variant: 'quantum'
+    growth_rate: 'Growing';
+variant: 'quantum'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Light agents and metadata collectors with warehouse connectors.'
     launch_date: '2025 - 01 - 12'
     customers: 25;
     rating: 4 && 4.5;
-    reviews: 12;
-  }
+    reviews: 12}
     id: 'api-performance-shield',
     name: 'API Performance Shield',
     tagline: 'Global edge caching, rate limiting, and anomaly detection'
@@ -235,8 +232,7 @@
     trialDays: 14;
     setupTime: 'Same day',
     rating: 4.5;
-    reviews: 12;
-  }
+    reviews: 12}
     id: 'api - performance - shield',
     name: 'API Performance Shield',
     tagline: 'Global edge caching, rate limiting, and anomaly detection'
@@ -263,16 +259,15 @@
     roi: 'Reduce p99 latency up to 60%'
     competitors: ['Cloudflare EnterpriseAkamai API Acceleration'];
     market_size: '$10 B API Security'
-    growth_rate: 'Strong'
-    variant: 'quantum - matrix'
+    growth_rate: 'Strong';
+variant: 'quantum - matrix'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Managed edge configs and anomaly ML with safe rollout tools.'
     launch_date: '2025 - 01 - 15'
     customers: 14;
     rating: 4 && 4.7;
-    reviews: 9;
-  }
+    reviews: 9}
     id: 'ai-product-analytics',
     name: 'AI Product Analytics',
     tagline: 'Session insights, funnel auto-segmentation, and LLM-based insights'
@@ -295,8 +290,7 @@
     realService: true;
     technology: ['Next && Next.jsPostHogClickHouse'],
     rating: 4.7;
-    reviews: 9;
-  }
+    reviews: 9}
     id: 'ai - product - analytics',
     name: 'AI Product Analytics',
     tagline: 'Session insights, funnel auto - segmentation, and LLM - based insights'
@@ -323,16 +317,15 @@
     roi: 'Find growth levers 2 x faster'
     competitors: ['AmplitudeMixpanel'];
     market_size: '$8 B Product Analytics'
-    growth_rate: 'Growing'
-    variant: 'holographic - advanced'
+    growth_rate: 'Growing';
+variant: 'holographic - advanced'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Event capture SDKs and warehouse - first analytics.'
     launch_date: '2025 - 01 - 02'
     customers: 41;
     rating: 4 && 4.6;
-    reviews: 20;
-  }
+    reviews: 20}
     id: 'ai-support-deflection',
     name: 'AI Support Deflection',
     tagline: 'Self-serve answers with RAG, forms, and secure handoff'
@@ -355,8 +348,7 @@
     realService: true;
     technology: ['RAGVector DBNext && DBNext.js'],
     rating: 4.6;
-    reviews: 20;
-  }
+    reviews: 20}
     id: 'ai - support - deflection',
     name: 'AI Support Deflection',
     tagline: 'Self - serve answers with RAG, forms, and secure handoff'
@@ -383,16 +375,15 @@
     roi: 'Reduce tickets 3050%'
     competitors: ['Intercom FinAda'];
     market_size: '$10 B Support Tech'
-    growth_rate: 'Strong'
-    variant: 'quantum - cyberpunk'
+    growth_rate: 'Strong';
+variant: 'quantum - cyberpunk'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Embeddable widget and handoff connectors.'
     launch_date: '2024 - 12 - 15'
     customers: 75;
     rating: 4 && 4.7;
-    reviews: 48;
-  }
+    reviews: 48}
     id: 'cloud-cost-autopilot',
     name: 'Cloud Cost Autopilot',
     tagline: 'Automated rightsizing, anomaly alerts, and commitment planning'
@@ -412,8 +403,7 @@
     trialDays: 21;
     setupTime: '25 days',
     rating: 4.7;
-    reviews: 48;
-  }
+    reviews: 48}
     id: 'cloud - cost - autopilot',
     name: 'Cloud Cost Autopilot',
     tagline: 'Automated rightsizing, anomaly alerts, and commitment planning'
@@ -440,8 +430,8 @@
     roi: 'Save 1535% on cloud spend'
     competitors: ['CloudZeroKubecost'];
     market_size: '$6 B FinOps'
-    growth_rate: 'Growing'
-    variant: 'quantum - neural'
+    growth_rate: 'Growing';
+variant: 'quantum - neural'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Read - only billing analysis with PR - based changes.'
@@ -450,8 +440,7 @@
     rating: 4 && 4.5;
     reviews: 11;
     rating: 4.5;
-    reviews: 11;
-  }
+    reviews: 11}
     id: 'privacy - vault'
     name: 'Privacy Vault',
     tagline: 'Tokenize PII and control access with audit trails',
@@ -483,8 +472,8 @@
     roi: 'Reduce breach risk and compliance effort'
     competitors: ['SkyflowVery Good Security'];
     market_size: '$4 B Privacy Tech'
-    growth_rate: 'Growing'
-    variant: 'holographic - neural'
+    growth_rate: 'Growing';
+variant: 'holographic - neural'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Drop - in SDKs and proxy - based tokenization.'
@@ -544,8 +533,8 @@
     marketSiz,
   e: '$5B+ AI Ops and Observability'
     growthRat,
-  e: 'Rapid growth with LLM adoption'
-    varian,
+  e: 'Rapid growth with LLM adoption';
+varian,
   t: 'quantum-holographic'
     contactInf,
   o: contact;
@@ -610,8 +599,8 @@
     market_siz,
   e: '$5B+ AI Ops and Observability'
     growth_rat,
-  e: 'Rapid growth with LLM adoption'
-    varian,
+  e: 'Rapid growth with LLM adoption';
+varian,
   t: 'quantum - holographic'
     contact_inf,
   o: contact,
@@ -663,8 +652,8 @@
     marketSiz,
   e: '$15B Sales Engagement'
     growthRat,
-  e: 'Strong growth'
-    varian,
+  e: 'Strong growth';
+varian,
   t: 'holographic'
     contactInf,
   o: contact;
@@ -724,8 +713,8 @@
     market_siz,
   e: '$15B Sales Engagement'
     growth_rat,
-  e: 'Strong growth'
-    varian,
+  e: 'Strong growth';
+varian,
   t: 'holographic'
     contact_inf,
   o: contact,
@@ -804,8 +793,8 @@
     market_siz,
   e: '$30B Cloud Security'
     growth_rat,
-  e: 'High growth'
-    varian,
+  e: 'High growth';
+varian,
   t: 'neural - quantum'
     contact_inf,
   o: contact;
@@ -889,8 +878,8 @@
     market_siz,
   e: '$3B Data Observability'
     growth_rat,
-  e: 'Growing'
-    varian,
+  e: 'Growing';
+varian,
   t: 'quantum'
     contact_inf,
   o: contact;
@@ -997,8 +986,8 @@
     market_siz,
   e: '$10B API Security'
     growth_rat,
-  e: 'Strong'
-    varian,
+  e: 'Strong';
+varian,
   t: 'quantum - matrix'
     contact_inf,
   o: contact;
@@ -1111,8 +1100,8 @@
     market_siz,
   e: '$8B Product Analytics'
     growth_rat,
-  e: 'Growing'
-    varian,
+  e: 'Growing';
+varian,
   t: 'holographic - advanced'
     contact_inf,
   o: contact;
@@ -1225,8 +1214,8 @@
     market_siz,
   e: '$10B Support Tech'
     growth_rat,
-  e: 'Strong'
-    varian,
+  e: 'Strong';
+varian,
   t: 'quantum - cyberpunk'
     contact_inf,
   o: contact;
@@ -1335,8 +1324,8 @@
     market_siz,
   e: '$6B FinOps'
     growth_rat,
-  e: 'Growing'
-    varian,
+  e: 'Growing';
+varian,
   t: 'quantum - neural'
     contact_inf,
   o: contact;
@@ -1419,8 +1408,8 @@
     market_siz,
   e: '$4B Privacy Tech'
     growth_rat,
-  e: 'Growing'
-    varian,
+  e: 'Growing';
+varian,
   t: 'holographic - neural'
     contact_inf,
   o: contact;
@@ -1478,16 +1467,15 @@
     roi: 'Lower chargebacks by 3060%'
     competitors: ['SiftSEON'];
     market_size: '$10 B Fraud Prevention'
-    growth_rate: 'High'
-    variant: 'quantum - financial'
+    growth_rate: 'High';
+variant: 'quantum - financial'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Streaming and batch detectors with human - in - the - loop review.'
     launch_date: '2025 - 01 - 09'
     customers: 11;
     rating: 4 && 4.5;
-    reviews: 8;
-  }
+    reviews: 8}
     id: 'managed-postgres-ha-pro',
     name: 'Managed Postgres HA Pro',
     tagline: 'Turnkey HA, backups, PITR, and query tuning'
@@ -1507,8 +1495,7 @@
     trialDays: 14;
     setupTime: '12 days',
     rating: 4.5;
-    reviews: 8;
-  }
+    reviews: 8}
     id: 'managed - postgres - ha - pro',
     name: 'Managed Postgres HA Pro',
     tagline: 'Turnkey HA, backups, PITR, and query tuning'
@@ -1535,16 +1522,15 @@
     roi: 'Avoid outages and accelerate teams'
     competitors: ['CrunchyDataAiven'];
     market_size: '$12 B DBaaS'
-    growth_rate: 'High'
-    variant: 'quantum'
+    growth_rate: 'High';
+variant: 'quantum'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Managed cluster with observability and runbooks.'
     launch_date: '2025 - 01 - 16'
     customers: 8;
     rating: 4 && 4.6;
-    reviews: 5;
-  }
+    reviews: 5}
     id: 'browser-performance-monitor-pro',
     name: 'Browser Performance Monitor Pro',
     tagline: 'RUM, Core Web Vitals, and session replay'
@@ -1564,8 +1550,7 @@
     trialDays: 14;
     setupTime: '30 minutes',
     rating: 4.6;
-    reviews: 5;
-  }
+    reviews: 5}
     id: 'browser - performance - monitor - pro',
     name: 'Browser Performance Monitor Pro',
     tagline: 'RUM, Core Web Vitals, and session replay'
@@ -1592,21 +1577,19 @@
     roi: 'Lift conversion 210% by fixing performance'
     competitors: ['SentryNew Relic Browser'];
     market_size: '$5 B APM'
-    growth_rate: 'Growing'
-    variant: 'holographic'
+    growth_rate: 'Growing';
+variant: 'holographic'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Agent + dashboards + anomaly alerts.'
     launch_date: '2025 - 01 - 17'
     customers: 12;
     rating: 4 && 4.5;
-    reviews: 6;
-  }
+    reviews: 6}
     id: 'seo-automation-studio',
     name: 'SEO Automation Studio',
     rating: 4.5;
-    reviews: 6;
-  }
+    reviews: 6}
     id: 'seo - automation - studio',
     name: 'SEO Automation Studio',
     tagline: 'Programmatic SEO, audits, and internal linking automation'
@@ -1641,8 +1624,8 @@
     roi: 'Increase organic traffic 20100%'
     competitors: ['AhrefsSemrush']
     market_size: '$6B SEO Tools'
-    growth_rate: 'Stable'
-    variant: 'neural'
+    growth_rate: 'Stable';
+variant: 'neural'
     rating: 4 && 4.4;
     reviews: 4;
     contact_info: contact;
@@ -1651,8 +1634,7 @@
     launch_date: '2025 - 01 - 18'
     customers: 10;
     rating: 4.4;
-    reviews: 4;
-  }
+    reviews: 4}
     id: 'webhook - relay - replay - pro',
     name: 'Webhook Relay & Replay Pro',
     tagline: 'Reliable webhooks with DLQ and replays',
@@ -1687,8 +1669,8 @@
     roi: 'Reduce integration incidents 50%+'
     competitors: ['SvixHookdeck'];
     market_size: '$1 B Integration Tools'
-    growth_rate: 'Growing'
-    variant: 'quantum - matrix'
+    growth_rate: 'Growing';
+variant: 'quantum - matrix'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Broker + storage + replayer UI.'
@@ -1697,8 +1679,7 @@
     rating: 4 && 4.6;
     reviews: 3;
     rating: 4.6;
-    reviews: 3;
-  }
+    reviews: 3}
     id: 'pdf - render - api - pro'
     name: 'PDF Render API Pro',
     tagline: 'Fast HTML - to - PDF with brand - safe templates',
@@ -1730,8 +1711,7 @@
     roi: 'Save days of maintenance yearly'
     competitors: ['PDFShiftDocRaptor'],
     rating: 4 && 4.6;
-    reviews: 10;
-  }
+    reviews: 10}
     id: 'api-observability-starter-pro',
     name: 'API Observability Starter Pro',
     tagline: 'Traces, metrics, logs for APIs without the bloat'
@@ -1751,16 +1731,15 @@
     trialDays: 14;
     setupTime: '1 day'
     market_size: '$1 B Doc Gen'
-    growth_rate: 'Stable'
-    variant: 'holographic - advanced',
+    growth_rate: 'Stable';
+variant: 'holographic - advanced',
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Isolated renderer pool, signed URLs.'
     launch_date: '2025 - 01 - 18'
     customers: 22;
     rating: 4.6;
-    reviews: 10;
-  }
+    reviews: 10}
     id: 'api - observability - starter - pro',
     name: 'API Observability Starter Pro',
     tagline: 'Traces, metrics, logs for APIs without the bloat'
@@ -1787,21 +1766,19 @@
     roi: 'Reduce MTTR by 3050%'
     competitors: ['HoneycombLightstep'],
     rating: 4 && 4.5;
-    reviews: 4;
-  }
+    reviews: 4}
     id: 'sso-in-a-box-pro'
     name: 'SSO in a Box Pro'
     market_size: '$10B Observability',
-    growth_rate: 'High',
-    variant: 'quantum - holographic',
+    growth_rate: 'High',;
+variant: 'quantum - holographic',
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'SDKs, collectors, quick dashboards.'
     launch_date: '2025 - 01 - 17'
     customers: 9;
     rating: 4.5;
-    reviews: 4;
-  }
+    reviews: 4}
     id: 'sso - in - a-box - pro',
     name: 'SSO in a Box Pro',
     tagline: 'SAML, OIDC, SCIM with turnkey onboarding'
@@ -1828,8 +1805,8 @@
     roi: 'Unlock enterprise revenue faster'
     competitors: ['WorkosAuth0 Stytch'];
     market_size: '$8 B Identity'
-    growth_rate: 'High'
-    variant: 'neural - quantum'
+    growth_rate: 'High';
+variant: 'neural - quantum'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Hosted broker + mappings UI.'
@@ -1838,8 +1815,7 @@
     rating: 4 && 4.7;
     reviews: 3;
     rating: 4.7;
-    reviews: 3;
-  }
+    reviews: 3}
     id: 'it - asset - discovery - agent - pro',
     name: 'IT Asset Discovery Agent Pro',
     tagline: 'Agentless discovery with CMDB sync',
@@ -1866,11 +1842,10 @@
     roi: 'Reduce unknown assets and risk'
     competitors: ['Lansweeper']
     market_size: '$2B ITAM'
-    growth_rate: 'Growing'
-    variant: 'holographic',
+    growth_rate: 'Growing';
+variant: 'holographic',
     rating: 4 && 4.4;
-    reviews: 2;
-  }
+    reviews: 2}
     id: 'vendor-risk-automation-lite',
     name: 'Vendor Risk Automation Lite',
     contact_info: contact;
@@ -1879,8 +1854,7 @@
     launch_date: '2025 - 01 - 16'
     customers: 5;
     rating: 4.4;
-    reviews: 2;
-  }
+    reviews: 2}
     id: 'vendor - risk - automation - lite',
     name: 'Vendor Risk Automation Lite',
     tagline: 'Questionnaires, evidence, and continuous monitoring'
@@ -1915,8 +1889,8 @@
     roi: 'Cut cycle time by 50%+'
     competitors: ['WhisticOneTrust'];
     market_size: '$4 B Third - party Risk'
-    growth_rate: 'High'
-    variant: 'quantum - cyberpunk'
+    growth_rate: 'High';
+variant: 'quantum - cyberpunk'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Portal + integrations + reports.'
@@ -1927,8 +1901,7 @@
     rating: 4.5;
     reviews: 3;
     rating: 4.5;
-    reviews: 3;
-  }
+    reviews: 3}
 ];
     target_audience: 'AI product teams, platform engineers, data teams',
     trial_days: 21;
@@ -1984,8 +1957,8 @@
     market_siz,
   e: '$10B Fraud Prevention'
     growth_rat,
-  e: 'High'
-    varian,
+  e: 'High';
+varian,
   t: 'quantum - financial'
     contact_inf,
   o: contact;
@@ -2092,8 +2065,8 @@
     market_siz,
   e: '$12B DBaaS'
     growth_rat,
-  e: 'High'
-    varian,
+  e: 'High';
+varian,
   t: 'quantum'
     contact_inf,
   o: contact;
@@ -2200,8 +2173,8 @@
     market_siz,
   e: '$5B APM'
     growth_rat,
-  e: 'Growing'
-    varian,
+  e: 'Growing';
+varian,
   t: 'holographic'
     contact_inf,
   o: contact;
@@ -2294,8 +2267,8 @@
     market_siz,
   e: '$6B SEO Tools'
     growth_rat,
-  e: 'Stable'
-    varian,
+  e: 'Stable';
+varian,
   t: 'neural'
     ratin,
   g: 4 && 4.4,
@@ -2384,8 +2357,8 @@
     market_siz,
   e: '$1B Integration Tools'
     growth_rat,
-  e: 'Growing'
-    varian,
+  e: 'Growing';
+varian,
   t: 'quantum - matrix'
     contact_inf,
   o: contact;
@@ -2507,8 +2480,8 @@
     market_siz,
   e: '$1B Doc Gen'
     growth_rat,
-  e: 'Stable'
-    varian,
+  e: 'Stable';
+varian,
   t: 'holographic - advanced'
     contact_inf,
   o: contact,
@@ -2584,8 +2557,8 @@
     market_siz,
   e: '$10B Observability'
     growth_rat,
-  e: 'High'
-    varian,
+  e: 'High';
+varian,
   t: 'quantum - holographic'
     contact_inf,
   o: contact,
@@ -2653,8 +2626,8 @@
     market_siz,
   e: '$8B Identity'
     growth_rat,
-  e: 'High'
-    varian,
+  e: 'High';
+varian,
   t: 'neural - quantum'
     contact_inf,
   o: contact;
@@ -2726,8 +2699,8 @@
     market_siz,
   e: '$2B ITAM'
     growth_rat,
-  e: 'Growing'
-    varian,
+  e: 'Growing';
+varian,
   t: 'holographic'
     ratin,
   g: 4 && 4.4,
@@ -2820,8 +2793,8 @@
     market_siz,
   e: '$4B Third - party Risk'
     growth_rat,
-  e: 'High'
-    varian,
+  e: 'High';
+varian,
   t: 'quantum - cyberpunk'
     contact_inf,
   o: contact;
@@ -2869,8 +2842,8 @@
     roi: 'Cut LLM cost 2045% while improving reliability',
     competitors: ['Langfuse', 'Arize', 'Weights & Biases'],
     market_size: '$5B+ AI Ops and Observability'
-    growth_rate: 'Rapid growth with LLM adoption'
-    variant: 'quantum - holographic'
+    growth_rate: 'Rapid growth with LLM adoption';
+variant: 'quantum - holographic'
     contact_info: contact;
     real_implementation: true;
     implementation_details: unknown;
@@ -2878,8 +2851,7 @@
     launch_date: '2025 - 01 - 10'
     customers: 32;
     rating: 4 && 4.8;
-    reviews: 22;
-  },
+    reviews: 22},
     id: 'ai - sales - email - copilot'
     name: 'AI Sales Email Copilot',
     tagline: 'Personalized multi - touch outbound with real - time enrichment',
@@ -2895,8 +2867,8 @@
     market_siz,
   e: '$5B+ AI Ops and Observability',
     growth_rat,
-  e: 'Rapid growth with LLM adoption',
-    varian,
+  e: 'Rapid growth with LLM adoption',;
+varian,
   t: 'quantum - holographic',
     contact_inf,
   o: contact,
@@ -2952,8 +2924,8 @@
     roi: 'Increase replies 25 x with hyper - personalization',
     competitors: ['Copy.ai', 'Lavender', 'Instantly'],
     market_size: '$15B Sales Engagement'
-    growth_rate: 'Strong growth'
-    variant: 'holographic'
+    growth_rate: 'Strong growth';
+variant: 'holographic'
     contact_info: contact;
     real_implementation: true;
     implementation_details: unknown;
@@ -2961,8 +2933,7 @@
     launch_date: '2024 - 12 - 20'
     customers: 120;
     rating: 4 && 4.7;
-    reviews: 58;
-  },
+    reviews: 58},
       'Policy packs for CIS/NIST',
     id: 'security - posture - as - code'
     name: 'Security Posture as Code',
@@ -3007,8 +2978,8 @@
     market_siz,
   e: '$15B Sales Engagement',
     growth_rat,
-  e: 'Strong growth',
-    varian,
+  e: 'Strong growth',;
+varian,
   t: 'holographic',
     contact_inf,
   o: contact,
@@ -3066,8 +3037,8 @@
     roi: 'Reduce audit prep time by 70%',
     competitors: ['Wiz', 'Prisma Cloud', 'Snyk'],
     market_size: '$30B Cloud Security'
-    growth_rate: 'High growth'
-    variant: 'neural - quantum'
+    growth_rate: 'High growth';
+variant: 'neural - quantum'
     contact_info: contact;
     real_implementation: true;
     implementation_details: unknown;
@@ -3075,8 +3046,7 @@
     launch_date: '2025 - 01 - 05'
     customers: 18;
     rating: 4 && 4.6;
-    reviews: 14;
-  },
+    reviews: 14},
     id: 'etl - observability - starter'
     name: 'ETL Observability Starter',
     tagline: 'Data pipeline health with schema change and freshness alerts',
@@ -3125,8 +3095,8 @@
     market_siz,
   e: '$30B Cloud Security',
     growth_rat,
-  e: 'High growth',
-    varian,
+  e: 'High growth',;
+varian,
   t: 'neural - quantum',
     contact_inf,
   o: contact,
@@ -3181,8 +3151,8 @@
     roi: 'Reduce data incidents 3060%',
     competitors: ['Monte Carlo', 'Bigeye'],
     market_size: '$3B Data Observability'
-    growth_rate: 'Growing'
-    variant: 'quantum'
+    growth_rate: 'Growing';
+variant: 'quantum'
     contact_info: contact;
     real_implementation: true;
     implementation_details: unknown;
@@ -3190,8 +3160,7 @@
     launch_date: '2025 - 01 - 12'
     customers: 25;
     rating: 4 && 4.5;
-    reviews: 12;
-  },
+    reviews: 12},
     id: 'api - performance - shield',
     name: 'API Performance Shield',
     tagline: 'Global edge caching, rate limiting, and anomaly detection',
@@ -3235,8 +3204,8 @@
     market_siz,
   e: '$3B Data Observability',
     growth_rat,
-  e: 'Growing',
-    varian,
+  e: 'Growing',;
+varian,
   t: 'quantum',
     contact_inf,
   o: contact,
@@ -3289,8 +3258,8 @@
     roi: 'Reduce p99 latency up to 60%',
     competitors: ['Cloudflare Enterprise', 'Akamai API Acceleration'],
     market_size: '$10B API Security'
-    growth_rate: 'Strong'
-    variant: 'quantum - matrix'
+    growth_rate: 'Strong';
+variant: 'quantum - matrix'
     contact_info: contact;
     real_implementation: true;
     implementation_details: unknown;
@@ -3298,8 +3267,7 @@
     launch_date: '2025 - 01 - 15'
     customers: 14;
     rating: 4 && 4.7;
-    reviews: 9;
-  },
+    reviews: 9},
       'Auto-segmentation and cohorts',
     id: 'ai - product - analytics',
     name: 'AI Product Analytics',
@@ -3344,8 +3312,8 @@
     market_siz,
   e: '$10B API Security',
     growth_rat,
-  e: 'Strong',
-    varian,
+  e: 'Strong',;
+varian,
   t: 'quantum - matrix',
     contact_inf,
   o: contact,
@@ -3401,16 +3369,15 @@
     roi: 'Find growth levers 2 x faster',
     competitors: ['Amplitude', 'Mixpanel'],
     market_size: '$8B Product Analytics'
-    growth_rate: 'Growing'
-    variant: 'holographic - advanced'
+    growth_rate: 'Growing';
+variant: 'holographic - advanced'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Event capture SDKs and warehouse - first analytics.'
     launch_date: '2025 - 01 - 02'
     customers: 41;
     rating: 4 && 4.6;
-    reviews: 20;
-  },
+    reviews: 20},
       'Multi-channel widgets',
     id: 'ai - support - deflection',
     name: 'AI Support Deflection',
@@ -3455,8 +3422,8 @@
     market_siz,
   e: '$8B Product Analytics',
     growth_rat,
-  e: 'Growing',
-    varian,
+  e: 'Growing',;
+varian,
   t: 'holographic - advanced',
     contact_inf,
   o: contact,
@@ -3509,16 +3476,15 @@
     roi: 'Reduce tickets 3050%',
     competitors: ['Intercom Fin', 'Ada'],
     market_size: '$10B Support Tech'
-    growth_rate: 'Strong'
-    variant: 'quantum - cyberpunk'
+    growth_rate: 'Strong';
+variant: 'quantum - cyberpunk'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Embeddable widget and handoff connectors.'
     launch_date: '2024 - 12 - 15'
     customers: 75;
     rating: 4 && 4.7;
-    reviews: 48;
-  },
+    reviews: 48},
     id: 'cloud - cost - autopilot',
     name: 'Cloud Cost Autopilot',
     tagline: 'Automated rightsizing, anomaly alerts, and commitment planning',
@@ -3563,8 +3529,8 @@
     market_siz,
   e: '$10B Support Tech',
     growth_rat,
-  e: 'Strong',
-    varian,
+  e: 'Strong',;
+varian,
   t: 'quantum - cyberpunk',
     contact_inf,
   o: contact,
@@ -3617,16 +3583,15 @@
     roi: 'Save 1535% on cloud spend',
     competitors: ['CloudZero', 'Kubecost'],
     market_size: '$6B FinOps'
-    growth_rate: 'Growing'
-    variant: 'quantum - neural'
+    growth_rate: 'Growing';
+variant: 'quantum - neural'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Read - only billing analysis with PR - based changes.'
     launch_date: '2025 - 01 - 03'
     customers: 19;
     rating: 4 && 4.5;
-    reviews: 11;
-  },
+    reviews: 11},
       'Field-level encryption',
     id: 'privacy - vault'
     name: 'Privacy Vault',
@@ -3670,8 +3635,8 @@
     market_siz,
   e: '$6B FinOps',
     growth_rat,
-  e: 'Growing',
-    varian,
+  e: 'Growing',;
+varian,
   t: 'quantum - neural',
     contact_inf,
   o: contact,
@@ -3725,16 +3690,15 @@
     roi: 'Reduce breach risk and compliance effort',
     competitors: ['Skyflow', 'Very Good Security'],
     market_size: '$4B Privacy Tech'
-    growth_rate: 'Growing'
-    variant: 'holographic - neural'
+    growth_rate: 'Growing';
+variant: 'holographic - neural'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Drop - in SDKs and proxy - based tokenization.'
     launch_date: '2025 - 01 - 07'
     customers: 9;
     rating: 4 && 4.6;
-    reviews: 7;
-  },
+    reviews: 7},
       'Graph-based anomaly detection',
     id: 'ai - fraud - detection - lite'
     name: 'AI Fraud Detection Lite',
@@ -3779,8 +3743,8 @@
     market_siz,
   e: '$4B Privacy Tech',
     growth_rat,
-  e: 'Growing',
-    varian,
+  e: 'Growing',;
+varian,
   t: 'holographic - neural',
     contact_inf,
   o: contact,
@@ -3833,8 +3797,8 @@
     roi: 'Lower chargebacks by 3060%',
     competitors: ['Sift', 'SEON'],
     market_size: '$10B Fraud Prevention'
-    growth_rate: 'High'
-    variant: 'quantum - financial'
+    growth_rate: 'High';
+variant: 'quantum - financial'
     contact_info: contact;
     real_implementation: true;
     implementation_details: unknown;
@@ -3842,8 +3806,7 @@
     launch_date: '2025 - 01 - 09'
     customers: 11;
     rating: 4 && 4.5;
-    reviews: 8;
-  },
+    reviews: 8},
     id: 'managed - postgres - ha - pro',
     name: 'Managed Postgres HA Pro',
     tagline: 'Turnkey HA, backups, PITR, and query tuning',
@@ -3886,8 +3849,8 @@
     market_siz,
   e: '$10B Fraud Prevention',
     growth_rat,
-  e: 'High',
-    varian,
+  e: 'High',;
+varian,
   t: 'quantum - financial',
     contact_inf,
   o: contact,
@@ -3941,16 +3904,15 @@
     roi: 'Avoid outages and accelerate teams',
     competitors: ['CrunchyData', 'Aiven'],
     market_size: '$12B DBaaS'
-    growth_rate: 'High'
-    variant: 'quantum'
+    growth_rate: 'High';
+variant: 'quantum'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Managed cluster with observability and runbooks.'
     launch_date: '2025 - 01 - 16'
     customers: 8;
     rating: 4 && 4.6;
-    reviews: 5;
-  },
+    reviews: 5},
     id: 'browser - performance - monitor - pro',
     name: 'Browser Performance Monitor Pro',
     tagline: 'RUM, Core Web Vitals, and session replay',
@@ -3994,8 +3956,8 @@
     market_siz,
   e: '$12B DBaaS',
     growth_rat,
-  e: 'High',
-    varian,
+  e: 'High',;
+varian,
   t: 'quantum',
     contact_inf,
   o: contact,
@@ -4047,16 +4009,15 @@
     roi: 'Lift conversion 210% by fixing performance',
     competitors: ['Sentry', 'New Relic Browser'],
     market_size: '$5B APM'
-    growth_rate: 'Growing'
-    variant: 'holographic'
+    growth_rate: 'Growing';
+variant: 'holographic'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Agent + dashboards + anomaly alerts.'
     launch_date: '2025 - 01 - 17'
     customers: 12;
     rating: 4 && 4.5;
-    reviews: 6;
-  },
+    reviews: 6},
     id: 'seo - automation - studio',
     name: 'SEO Automation Studio',
     tagline: 'Programmatic SEO, audits, and internal linking automation',
@@ -4099,8 +4060,8 @@
     market_siz,
   e: '$5B APM',
     growth_rat,
-  e: 'Growing',
-    varian,
+  e: 'Growing',;
+varian,
   t: 'holographic',
     contact_inf,
   o: contact,
@@ -4152,16 +4113,15 @@
     roi: 'Increase organic traffic 20100%',
     competitors: ['Ahrefs', 'Semrush'],
     market_size: '$6 B SEO Tools',
-    growth_rate: 'Stable',
-    variant: 'neural',
+    growth_rate: 'Stable',;
+variant: 'neural',
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Crawlers, fixers, programmatic builder.',
     launch_date: '2025 - 01 - 18'
     customers: 10;
     rating: 4 && 4.4;
-    reviews: 4;
-  },
+    reviews: 4},
     id: 'webhook - relay - replay - pro'
     name: 'Webhook Relay & Replay Pro',
     tagline: 'Reliable webhooks with DLQ and replays',
@@ -4204,8 +4164,8 @@
     market_siz,
   e: '$6B SEO Tools',
     growth_rat,
-  e: 'Stable',
-    varian,
+  e: 'Stable',;
+varian,
   t: 'neural',
     contact_inf,
   o: contact,
@@ -4257,16 +4217,15 @@
     roi: 'Reduce integration incidents 50%+',
     competitors: ['Svix', 'Hookdeck'],
     market_size: '$1B Integration Tools'
-    growth_rate: 'Growing'
-    variant: 'quantum - matrix'
+    growth_rate: 'Growing';
+variant: 'quantum - matrix'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Broker + storage + replayer UI.'
     launch_date: '2025 - 01 - 19'
     customers: 7;
     rating: 4 && 4.6;
-    reviews: 3;
-  },
+    reviews: 3},
     id: 'pdf - render - api - pro'
     name: 'PDF Render API Pro',
     tagline: 'Fast HTML - to - PDF with brand - safe templates',
@@ -4309,8 +4268,8 @@
     market_siz,
   e: '$1B Integration Tools',
     growth_rat,
-  e: 'Growing',
-    varian,
+  e: 'Growing',;
+varian,
   t: 'quantum - matrix',
     contact_inf,
   o: contact,
@@ -4362,16 +4321,15 @@
     roi: 'Save days of maintenance yearly',
     competitors: ['PDFShift', 'DocRaptor'],
     market_size: '$1 B Doc Gen',
-    growth_rate: 'Stable',
-    variant: 'holographic - advanced',
+    growth_rate: 'Stable',;
+variant: 'holographic - advanced',
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Isolated renderer pool, signed URLs.',
     launch_date: '2025 - 01 - 18'
     customers: 22;
     rating: 4 && 4.6;
-    reviews: 10;
-  },
+    reviews: 10},
       'Auto-instrumentation',
     id: 'api - observability - starter - pro',
     name: 'API Observability Starter Pro',
@@ -4415,8 +4373,8 @@
     market_siz,
   e: '$1B Doc Gen',
     growth_rat,
-  e: 'Stable',
-    varian,
+  e: 'Stable',;
+varian,
   t: 'holographic - advanced',
     contact_inf,
   o: contact,
@@ -4469,16 +4427,15 @@
     roi: 'Reduce MTTR by 3050%',
     competitors: ['Honeycomb', 'Lightstep'],
     market_size: '$10 B Observability',
-    growth_rate: 'High',
-    variant: 'quantum - holographic',
+    growth_rate: 'High',;
+variant: 'quantum - holographic',
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'SDKs, collectors, quick dashboards.',
     launch_date: '2025 - 01 - 17'
     customers: 9;
     rating: 4 && 4.5;
-    reviews: 4;
-  },
+    reviews: 4},
     id: 'sso - in - a-box - pro',
     name: 'SSO in a Box Pro',
     tagline: 'SAML, OIDC, SCIM with turnkey onboarding',
@@ -4521,8 +4478,8 @@
     market_siz,
   e: '$10B Observability',
     growth_rat,
-  e: 'High',
-    varian,
+  e: 'High',;
+varian,
   t: 'quantum - holographic',
     contact_inf,
   o: contact,
@@ -4574,16 +4531,15 @@
     roi: 'Unlock enterprise revenue faster',
     competitors: ['Workos', 'Auth0', 'Stytch'],
     market_size: '$8B Identity'
-    growth_rate: 'High'
-    variant: 'neural - quantum'
+    growth_rate: 'High';
+variant: 'neural - quantum'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Hosted broker + mappings UI.'
     launch_date: '2025 - 01 - 17'
     customers: 6;
     rating: 4 && 4.7;
-    reviews: 3;
-  },
+    reviews: 3},
     id: 'it - asset - discovery - agent - pro'
     name: 'IT Asset Discovery Agent Pro',
     tagline: 'Agentless discovery with CMDB sync',
@@ -4626,8 +4582,8 @@
     market_siz,
   e: '$8B Identity',
     growth_rat,
-  e: 'High',
-    varian,
+  e: 'High',;
+varian,
   t: 'neural - quantum',
     contact_inf,
   o: contact,
@@ -4679,16 +4635,15 @@
     roi: 'Reduce unknown assets and risk'
     competitors: ['Lansweeper']
     market_size: '$2B ITAM',
-    growth_rate: 'Growing',
-    variant: 'holographic',
+    growth_rate: 'Growing',;
+variant: 'holographic',
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Scanners, parsers, CMDB sync.',
     launch_date: '2025 - 01 - 16'
     customers: 5;
     rating: 4 && 4.4;
-    reviews: 2;
-  },
+    reviews: 2},
     id: 'vendor - risk - automation - lite',
     name: 'Vendor Risk Automation Lite',
     tagline: 'Questionnaires, evidence, and continuous monitoring',
@@ -4731,8 +4686,8 @@
     market_siz,
   e: '$2B ITAM',
     growth_rat,
-  e: 'Growing',
-    varian,
+  e: 'Growing',;
+varian,
   t: 'holographic',
     contact_inf,
   o: contact,
@@ -4784,8 +4739,8 @@
     roi: 'Cut cycle time by 50%+',
     competitors: ['Whistic', 'OneTrust'],
     market_size: '$4B Third - party Risk'
-    growth_rate: 'High'
-    variant: 'quantum - cyberpunk'
+    growth_rate: 'High';
+variant: 'quantum - cyberpunk'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Portal + integrations + reports.'
@@ -4829,8 +4784,8 @@
     market_siz,
   e: '$4B Third - party Risk',
     growth_rat,
-  e: 'High',
-    varian,
+  e: 'High',;
+varian,
   t: 'quantum - cyberpunk',
     contact_inf,
   o: contact,
@@ -4875,8 +4830,7 @@
     implementationDetails: 'Agent SDKs, tracing collectors, and dashboards ready to deploy.',
     launchDate: '2025-01-10', customers: 32;
     rating: 4.8;
-    reviews: 22;
-  }
+    reviews: 22}
 ];
 ;
     id: 'ai-sales-email-copilot'
@@ -4887,8 +4841,7 @@
     description:,
       'Automate prospect research, write context-aware messages, and schedule follow-ups across email and LinkedIn. Built-in A/B testing and domain warmup best practices.'
     features: [;
-    reviews: 58;
-  }
+    reviews: 58}
     id: 'security-posture-as-code'
     name: 'Security Posture as Code',
     tagline: 'CIS/NIST/Kyverno policy packs with drift remediation',
@@ -4897,8 +4850,7 @@
     description:,
       'Continuously enforce security baselines across Kubernetes, cloud, and SaaS. GitOps-friendly with automatic fix PRs and evidence collection for audits.'
     features: [;
-    reviews: 14;
-  }
+    reviews: 14}
     id: 'etl-observability-starter'
     name: 'ETL Observability Starter',
     tagline: 'Data pipeline health with schema change and freshness alerts',
@@ -4907,8 +4859,7 @@
     description:,
       'Monitor data pipelines end-to-end: freshness, volume, schema drift, and SLA adherence. Lightweight agent and connectors for common warehouses.'
     features: [;
-    reviews: 12;
-  }
+    reviews: 12}
     id: 'api-performance-shield',
     name: 'API Performance Shield',
     tagline: 'Global edge caching, rate limiting, and anomaly detection'
@@ -4917,8 +4868,7 @@
     description:,
       'Protect and accelerate APIs with global edge caching, dynamic rate limits, and anomaly detection. Ship zero-downtime via traffic shadowing.'
     features: [;
-    reviews: 9;
-  }
+    reviews: 9}
     id: 'ai-product-analytics',
     name: 'AI Product Analytics',
     tagline:,
@@ -4928,8 +4878,7 @@
     description:,
       'Turn product usage into insights with automatic funnel detection, LLM-based querying, and anomaly alerts. Works alongside Amplitude/GA4.'
     features: [;
-    reviews: 20;
-  }
+    reviews: 20}
     id: 'ai-support-deflection',
     name: 'AI Support Deflection',
     tagline: 'Self-serve answers with RAG, forms, and secure handoff'
@@ -4938,8 +4887,7 @@
     description:,
       'Reduce support load with guided flows, knowledge base RAG, and ticket escalation. Multi-channel widgets with brand controls.'
     features: [;
-    reviews: 48;
-  }
+    reviews: 48}
     id: 'cloud-cost-autopilot',
     name: 'Cloud Cost Autopilot',
     tagline: 'Automated rightsizing, anomaly alerts, and commitment planning'
@@ -4948,8 +4896,7 @@
     description:,
       'Proactive optimization for AWS/Azure/GCP: anomaly alerts, rightsizing PRs, and commitment purchase planning with explainability.'
     features: [;
-    reviews: 11;
-  }
+    reviews: 11}
     id: 'privacy-vault'
     name: 'Privacy Vault',
     tagline: 'Tokenize PII and control access with audit trails',
@@ -4958,8 +4905,7 @@
     description:,
       'Centralize PII with field-level encryption, tokenization, and consent enforcement. Ship faster with privacy by design.'
     features: [;
-    reviews: 7;
-  }
+    reviews: 7}
     id: 'ai-fraud-detection-lite'
     name: 'AI Fraud Detection Lite'
     tagline: 'Graph-based anomalies with explainability for SMBs'
@@ -4967,8 +4913,7 @@
     period: '/month',
     description: 'Detect fraud across transactions with graph analytics and explainable decisions. Quick to integrate via event stream or batch.',
     features: [;
-    reviews: 8;
-  }
+    reviews: 8}
     id: 'managed-postgres-ha-pro',
     name: 'Managed Postgres HA Pro',
     tagline: 'Turnkey HA, backups, PITR, and query tuning'
@@ -4977,8 +4922,7 @@
     description:,
       'Production-grade PostgreSQL with high availability, automated backups, point-in-time recovery, and performance tuning insights.'
     features: [;
-    reviews: 5;
-  }
+    reviews: 5}
     id: 'browser-performance-monitor-pro',
     name: 'Browser Performance Monitor Pro',
     tagline: 'RUM, Core Web Vitals, and session replay'
@@ -4987,8 +4931,7 @@
     description:,
       'Real-user monitoring with Core Web Vitals tracking, JS error collection, and session replay for rapid issue resolution.'
     features: [;
-    reviews: 6;
-  }
+    reviews: 6}
     id: 'seo-automation-studio',
     name: 'SEO Automation Studio',
     tagline: 'Programmatic SEO, audits, and internal linking automation'
@@ -4997,8 +4940,7 @@
     description:,
       'Automate technical audits, fix issues, generate topic clusters, and build programmatic landing pages safely.'
     features: [;
-    reviews: 4;
-  }
+    reviews: 4}
     id: 'webhook-relay-replay-pro'
     name: 'Webhook Relay & Replay Pro',
     tagline: 'Reliable webhooks with DLQ and replays',

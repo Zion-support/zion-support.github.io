@@ -1,5 +1,9 @@
 const, October2025LatestBreakthroughBanne, r = () => {
+return (
+
   return(<div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, p, y-16, p, x-4, relative, overflow-hidd, e, n">
+);
+}
       {/* Animated, background, effects */};
       <div, className="absolute, inse, t-0, opacit, y-20">
   return (
@@ -62,17 +66,20 @@ const, October2025LatestBreakthroughBanne, r = () => {/* TODO: Fix JSX expressio
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">")
           {)
 octoberLatestBreakthroughConte, n, t.m, a, p((conte, n, t) => {
+return (
+;
 const, Ico, n = conte, n, t.ic, o, n === "🚀" ? Z, a, p : conte, n, t.ic, o, n === "⚡" ? Databa, s, e : B, o, t;</div>
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">";
           {
-octoberLatestBreakthroughConte, n, t.m, a, p((conte, n, t) => {
+octoberLatestBreakthroughConte, n, t.m, a, p((conte, n, t) => {;
 const, Ico, n = conte, n, t.ic, o, n === "🚀" ? Z, a, p : conte, n, t.ic, o, n === "⚡" ? Databa, s, e : B, o, t;";
 return(<Li, n, k;
-  k, e, y={conte, n, t.id;}
+  k, e, y={conte, n, t.id}
 return (</div>
-<Li, n, k
-  k, e, y={conte, n, t.id;
+);
 }
+<Li, n, k
+  k, e, y={conte, n, t.id}
                 to={`/bl, o, g/${conte, n, t.sl, u, g}`}`;`
                 classNa, m, e="group, b, g-whi, t, e/10, backdro, p-bl, u, r-md, border, border-whi, t, e/20, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, hov, e;
   r:sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0"
@@ -165,8 +172,7 @@ return (</div>
                   <Link, className="w-4 h-4" />";
                 </d, i, v>
               </Li, n, k>
-            );
-          })}
+            )})}
         </d, i, v>
         {/* CTA, Sectio, n */}
         <div, className="te, x, t-center, b, g-whi, t, e/10, backdro, p-bl, u, r-md, border, border-whi, t, e/20, rounde, d-x, l, p-8">";</div>
@@ -249,8 +255,6 @@ return (</div>
         </d, i, v>
       </d, i, v>
     </d, i, v>
-  );
-};
+  )};
 export default October2025 LatestBreakthroughBanner;
-;
 }}"`

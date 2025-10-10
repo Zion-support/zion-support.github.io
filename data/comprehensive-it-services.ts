@@ -1,3 +1,4 @@
+import React from 'react';
 
 export interface ComprehensiveITService {id: string;
   name: string;
@@ -144,8 +145,8 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     roi: 'Enterprises achieve 400% ROI through reduced IT costs, improved performance, and enhanced security',
     competitors: ['IBM Global Services', 'Accenture', 'Deloitte', 'PwC', 'EY'],
     market_size: '$1.2T IT services market, 8% annual growth',
-    growth_rate: '8% annual growth'
-    variant: 'enterprise - futuristic'
+    growth_rate: '8% annual growth';
+variant: 'enterprise - futuristic'
     contact_info: unknown;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -166,8 +167,8 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     market_siz,
   e: '$1.2T IT services market, 8% annual growth',
     growth_rat,
-  e: '8% annual growth',
-    varian,
+  e: '8% annual growth',;
+varian,
   t: 'enterprise - futuristic',
     contact_inf,
   o: unknown,
@@ -292,8 +293,8 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     roi: 'DevOps teams report 500% ROI through faster deployments and reduced operational overhead.',
     competitors: ['GitLab CI / CD', 'Jenkins', 'CircleCI', 'GitHub Actions'],
     market_size: '$8 B DevOps market, AI segment growing 350% annually',
-    growth_rate: '350% annual growth',
-    variant: 'ai - futuristic',
+    growth_rate: '350% annual growth',;
+variant: 'ai - futuristic',
     contact_info: unknown;
     ro,
   i: 'DevOps teams report 500% ROI through faster deployments and reduced operational overhead.',
@@ -302,8 +303,8 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     market_siz,
   e: '$8B DevOps market, AI segment growing 350% annually',
     growth_rat,
-  e: '350% annual growth',
-    varian,
+  e: '350% annual growth',;
+varian,
   t: 'ai - futuristic',
     contact_inf,
   o: unknown,
@@ -393,8 +394,8 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
       'Accenture',
       'Deloitte'],
     market_size: '$400B cloud services market, 20% annual growth',
-    growth_rate: '20% annual growth'
-    variant: 'cloud - futuristic'
+    growth_rate: '20% annual growth';
+variant: 'cloud - futuristic'
     contact_info: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -411,8 +412,8 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     market_siz,
   e: '$400B cloud services market, 20% annual growth',
     growth_rat,
-  e: '20% annual growth',
-    varian,
+  e: '20% annual growth',;
+varian,
   t: 'cloud - futuristic',
     contact_inf,
   o: unknown,
@@ -528,8 +529,8 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
       'Traditional security tools'],
     market_size: unknown;
       '$150B cybersecurity market, quantum segment growing 400% annually',
-    growth_rate: '400% annual growth',
-    variant: 'quantum - cyberpunk',
+    growth_rate: '400% annual growth',;
+variant: 'quantum - cyberpunk',
     contact_info: unknown;
       'Fully functional cloud migration service with comprehensive planning, execution, and optimization capabilities. Includes migration operations center and post - migration support.',
     launch_date: '2024 - 02 - 01'
@@ -540,8 +541,8 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
   e: unknown,
       '$150B cybersecurity market, quantum segment growing 400% annually',
     growth_rat,
-  e: '400% annual growth',
-    varian,
+  e: '400% annual growth',;
+varian,
   t: 'quantum - cyberpunk',
     contact_inf,
   o: unknown,
@@ -663,8 +664,8 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
       'Carbon Black',
       'Cylance'],
     market_size: '$200B cybersecurity market, 15% annual growth',
-    growth_rate: '15% annual growth'
-    variant: 'cybersecurity - futuristic'
+    growth_rate: '15% annual growth';
+variant: 'cybersecurity - futuristic'
     contact_info: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -688,13 +689,11 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
   contactInfo: unknown;
     mobile: string, email: string;
     address: string;
-    website: string;
-    },
+    website: string},
     realImplementation: boolean, implementationDetails: string;
   launchDate: string, customers: number;
   rating: number;
-  reviews: number;
-}
+  reviews: number}
 export const comprehensiveITServices: ComprehensiveITService[] = [,
   // Enterprise IT Infrastructure Services;
     id: 'enterprise-it-infrastructure', name: 'Enterprise IT Infrastructure Management',
@@ -725,8 +724,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [,
     launch_date: '2024 - 01 - 15'
     customers: 32;
     rating: 4 && 4.8;
-    reviews: 24;
-  },
+    reviews: 24},
   // Data Center Management Services;
     id: 'data - center - management',
     name: 'Data Center Management & Optimization',
@@ -737,8 +735,8 @@ export const comprehensiveITServices: ComprehensiveITService[] = [,
     market_siz,
   e: '$200B cybersecurity market, 15% annual growth',
     growth_rat,
-  e: '15% annual growth',
-    varian,
+  e: '15% annual growth',;
+varian,
   t: 'cybersecurity - futuristic',
     contact_inf,
   o: unknown,
@@ -982,8 +980,8 @@ export const,
       'CoreSite',
       'QTS Realty'],
     market_size: '$200B data center market, 12% annual growth',
-    growth_rate: '12% annual growth'
-    variant: 'datacenter - futuristic'
+    growth_rate: '12% annual growth';
+variant: 'datacenter - futuristic'
     contact_info: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -999,8 +997,8 @@ export const,
     market_siz,
   e: '$200B data center market, 12% annual growth',
     growth_rat,
-  e: '12% annual growth',
-    varian,
+  e: '12% annual growth',;
+varian,
   t: 'datacenter - futuristic',
     contact_inf,
   o: unknown,
@@ -1139,8 +1137,8 @@ export const,
       'Palo Alto Networks',
       'Juniper Networks'],
     market_size: '$8B SD - WAN market, 35% annual growth',
-    growth_rate: '35% annual growth'
-    variant: 'network - futuristic'
+    growth_rate: '35% annual growth';
+variant: 'network - futuristic'
     contact_info: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -1152,8 +1150,7 @@ export const,
     launch_date: '2024 - 02 - 15'
     customers: 28;
     rating: 4 && 4.6;
-    reviews: 19;
-  },
+    reviews: 19},
   // IT Project Management Services;
     id: 'it - project - management',
     name: 'IT Project Management & Consulting',
@@ -1164,8 +1161,8 @@ export const,
     market_siz,
   e: '$8B SD - WAN market, 35% annual growth',
     growth_rat,
-  e: '35% annual growth',
-    varian,
+  e: '35% annual growth',;
+varian,
   t: 'network - futuristic',
     contact_inf,
   o: unknown,
@@ -1285,8 +1282,8 @@ export const,
     roi: 'Enterprises achieve 300% ROI through successful project delivery and strategic guidance',
     competitors: ['McKinsey', 'BCG', 'Bain', 'Accenture', 'Deloitte'],
     market_size: '$50B IT consulting market, 10% annual growth',
-    growth_rate: '10% annual growth'
-    variant: 'consulting - futuristic'
+    growth_rate: '10% annual growth';
+variant: 'consulting - futuristic'
     contact_info: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -1298,8 +1295,7 @@ export const,
     launch_date: '2024 - 01 - 10'
     customers: 45;
     rating: 4 && 4.7;
-    reviews: 32;
-  },
+    reviews: 32},
   // IT Training & Certification Services;
     id: 'it - training - certification',
     name: 'IT Training & Certification Programs',
@@ -1314,8 +1310,8 @@ export const,
     market_siz,
   e: '$50B IT consulting market, 10% annual growth',
     growth_rat,
-  e: '10% annual growth',
-    varian,
+  e: '10% annual growth',;
+varian,
   t: 'consulting - futuristic',
     contact_inf,
   o: unknown,
@@ -1442,8 +1438,8 @@ export const,
       'AWS Training',
       'Google Cloud Training'],
     market_size: '$15B IT training market, 12% annual growth',
-    growth_rate: '12% annual growth'
-    variant: 'training - futuristic'
+    growth_rate: '12% annual growth';
+variant: 'training - futuristic'
     contact_info: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -1455,8 +1451,7 @@ export const,
     launch_date: '2024 - 01 - 05'
     customers: 120;
     rating: 4 && 4.8;
-    reviews: 89;
-  },
+    reviews: 89},
     id: 'quantum - cloud - infrastructure',
     name: 'Quantum Cloud Infrastructure',
     tagline: 'Next - generation quantum - powered cloud infrastructure',
@@ -1466,8 +1461,8 @@ export const,
     market_siz,
   e: '$15B IT training market, 12% annual growth',
     growth_rat,
-  e: '12% annual growth',
-    varian,
+  e: '12% annual growth',;
+varian,
   t: 'training - futuristic',
     contact_inf,
   o: unknown,
@@ -1594,8 +1589,8 @@ export const,
       'Google Cloud',
       'Traditional cloud providers'],
     market_size: '$400B cloud market, quantum segment growing 400% annually',
-    growth_rate: '400% annual growth'
-    variant: 'quantum - advanced'
+    growth_rate: '400% annual growth';
+variant: 'quantum - advanced'
     contact_info: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -1607,8 +1602,7 @@ export const,
     launch_date: '2024 - 11 - 15'
     customers: 45;
     rating: 4 && 4.9;
-    reviews: 32;
-  },
+    reviews: 32},
       'AI-powered deployment optimization',
     id: 'ai - powered - devops - automation',
     name: 'AI - Powered DevOps Automation',
@@ -1619,8 +1613,8 @@ export const,
     market_siz,
   e: '$400B cloud market, quantum segment growing 400% annually',
     growth_rat,
-  e: '400% annual growth',
-    varian,
+  e: '400% annual growth',;
+varian,
   t: 'quantum - advanced',
     contact_inf,
   o: unknown,
@@ -1744,8 +1738,8 @@ export const,
     roi: 'DevOps teams report 500% ROI through faster deployments and reduced operational overhead.',
     competitors: ['GitLab CI / CD', 'Jenkins', 'CircleCI', 'GitHub Actions'],
     market_size: '$8B DevOps market, AI segment growing 350% annually',
-    growth_rate: '350% annual growth'
-    variant: 'ai - futuristic'
+    growth_rate: '350% annual growth';
+variant: 'ai - futuristic'
     contact_info: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -1757,8 +1751,7 @@ export const,
     launch_date: '2024 - 10 - 01'
     customers: 320;
     rating: 4 && 4.8;
-    reviews: 245;
-  },
+    reviews: 245},
     id: 'quantum - cybersecurity - suite',
     name: 'Quantum Cybersecurity Suite',
     tagline: 'Unhackable quantum - secured cybersecurity platform',
@@ -1772,8 +1765,8 @@ export const,
     market_siz,
   e: '$8B DevOps market, AI segment growing 350% annually',
     growth_rat,
-  e: '350% annual growth',
-    varian,
+  e: '350% annual growth',;
+varian,
   t: 'ai - futuristic',
     contact_inf,
   o: unknown,
@@ -1898,8 +1891,8 @@ export const,
       'Traditional security tools'],
     market_size: unknown;
       '$150B cybersecurity market, quantum segment growing 400% annually',
-    growth_rate: '400% annual growth'
-    variant: 'quantum - cyberpunk'
+    growth_rate: '400% annual growth';
+variant: 'quantum - cyberpunk'
     contact_info: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -1911,8 +1904,7 @@ export const,
     launch_date: '2024 - 09 - 15'
     customers: 180;
     rating: 4 && 4.9;
-    reviews: 156;
-  }];      mobile: '+1 302 464 0950',
+    reviews: 156}];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
   id: string, name: string;
   tagline: string, price: string;
@@ -1956,13 +1948,11 @@ export const,
   contactInfo: unknown;
     mobile: string, email: string;
     address: string;
-    website: string;
-    },
+    website: string},
     realImplementation: boolean, implementationDetails: string;
   launchDate: string, customers: number;
   rating: number;
-  reviews: number;
-}
+  reviews: number}
 export const comprehensiveITServices: ComprehensiveITService[] = [,
   // Enterprise IT Infrastructure Services;
     price: '$25,999',
@@ -1972,8 +1962,8 @@ export const comprehensiveITServices: ComprehensiveITService[] = [,
   e: unknown,
       '$150B cybersecurity market, quantum segment growing 400% annually',
     growth_rat,
-  e: '400% annual growth',
-    varian,
+  e: '400% annual growth',;
+varian,
   t: 'quantum - cyberpunk',
     contact_inf,
   o: unknown,
@@ -2194,8 +2184,8 @@ export const,
     roi: 'Enterprises achieve 400% ROI through reduced IT costs, improved performance, and enhanced security',
     competitors: ['IBM Global Services', 'Accenture', 'Deloitte', 'PwC', 'EY'],
     marketSize: '$1 && 1.2 T IT services market, 8% annual growth',
-    growthRate: '8% annual growth',
-    variant: 'enterprise-futuristic',
+    growthRate: '8% annual growth',;
+variant: 'enterprise-futuristic',
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -2245,8 +2235,8 @@ export const,
     marketSiz,
   e: '$1 && 1.2T IT services market, 8% annual growth',
     growthRat,
-  e: '8% annual growth',
-    varian,
+  e: '8% annual growth',;
+varian,
   t: 'enterprise-futuristic',
     contactInf,
   o: unknown,
@@ -2402,8 +2392,7 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
   }
 ];
 ;
-;
-  }
+}
 ];
 ;
     realImplementation: true;
@@ -2412,8 +2401,7 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     launchDate: '2024-02-01'
     customers: 18;
     rating: 4.7;
-    reviews: 12;
-  }
+    reviews: 12}
   // Cybersecurity Operations Center;
     id: 'cybersecurity-operations-center',
     name: 'Cybersecurity Operations Center (SOC)',
@@ -2530,8 +2518,8 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
       'Carbon Black',
       'Cylance'],
     marketSize: '$200B cybersecurity market, 15% annual growth'
-    growthRate: '15% annual growth'
-    variant: 'cybersecurity-futuristic',
+    growthRate: '15% annual growth';
+variant: 'cybersecurity-futuristic',
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -2542,8 +2530,7 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     launchDate: '2024-01-15'
     customers: 32;
     rating: 4.8;
-    reviews: 24;
-  }
+    reviews: 24}
   // Data Center Management Services;
     id: 'data-center-management',
     name: 'Data Center Management & Optimization',
@@ -2564,8 +2551,8 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     marketSiz,
   e: '$200B cybersecurity market, 15% annual growth'
     growthRat,
-  e: '15% annual growth'
-    varian,
+  e: '15% annual growth';
+varian,
   t: 'cybersecurity-futuristic'
     contactInf,
   o: mobil,
@@ -2687,8 +2674,8 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
       'CoreSite',
       'QTS Realty'],
     marketSize: '$200B data center market, 12% annual growth'
-    growthRate: '12% annual growth'
-    variant: 'datacenter-futuristic',
+    growthRate: '12% annual growth';
+variant: 'datacenter-futuristic',
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -2698,8 +2685,7 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     launchDate: '2024-01-20'
     customers: 15;
     rating: 4.7;
-    reviews: 11;
-  }
+    reviews: 11}
   // Network Security & SD-WAN Services;
     id: 'network-security-sdwan',
     name: 'Network Security & SD-WAN Management',
@@ -2723,8 +2709,8 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     marketSiz,
   e: '$200B data center market, 12% annual growth'
     growthRat,
-  e: '12% annual growth'
-    varian,
+  e: '12% annual growth';
+varian,
   t: 'datacenter-futuristic'
     contactInf,
   o: mobil,
@@ -2845,8 +2831,8 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
       'Palo Alto Networks',
       'Juniper Networks'],
     marketSize: '$8B SD-WAN market, 35% annual growth'
-    growthRate: '35% annual growth'
-    variant: 'network-futuristic',
+    growthRate: '35% annual growth';
+variant: 'network-futuristic',
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -2856,8 +2842,7 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     launchDate: '2024-02-15'
     customers: 28;
     rating: 4.6;
-    reviews: 19;
-  }
+    reviews: 19}
   // IT Project Management Services;
     id: 'it-project-management',
     name: 'IT Project Management & Consulting',
@@ -2878,8 +2863,8 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     marketSiz,
   e: '$8B SD-WAN market, 35% annual growth'
     growthRat,
-  e: '35% annual growth'
-    varian,
+  e: '35% annual growth';
+varian,
   t: 'network-futuristic'
     contactInf,
   o: mobil,
@@ -2995,8 +2980,8 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     roi: 'Enterprises achieve 300% ROI through successful project delivery and strategic guidance',
     competitors: ['McKinsey', 'BCG', 'Bain', 'Accenture', 'Deloitte']
     marketSize: '$50 B IT consulting market, 10% annual growth'
-    growthRate: '10% annual growth'
-    variant: 'consulting-futuristic',
+    growthRate: '10% annual growth';
+variant: 'consulting-futuristic',
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -3006,8 +2991,7 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     launchDate: '2024-01-10'
     customers: 45;
     rating: 4.7;
-    reviews: 32;
-  }
+    reviews: 32}
   // IT Training & Certification Services;
     id: 'it-training-certification',
     name: 'IT Training & Certification Programs',
@@ -3024,8 +3008,8 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     marketSiz,
   e: '$50B IT consulting market, 10% annual growth'
     growthRat,
-  e: '10% annual growth'
-    varian,
+  e: '10% annual growth';
+varian,
   t: 'consulting-futuristic'
     contactInf,
   o: mobil,
@@ -3146,8 +3130,8 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
       'AWS Training',
       'Google Cloud Training'],
     marketSize: '$15B IT training market, 12% annual growth'
-    growthRate: '12% annual growth'
-    variant: 'training-futuristic',
+    growthRate: '12% annual growth';
+variant: 'training-futuristic',
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -3157,8 +3141,7 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     launchDate: '2024-01-05'
     customers: 120;
     rating: 4.8;
-    reviews: 89;
-  }
+    reviews: 89}
     id: 'quantum-cloud-infrastructure',
     name: 'Quantum Cloud Infrastructure',
     tagline: 'Next-generation quantum-powered cloud infrastructure',
@@ -3178,8 +3161,8 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     marketSiz,
   e: '$15B IT training market, 12% annual growth'
     growthRat,
-  e: '12% annual growth'
-    varian,
+  e: '12% annual growth';
+varian,
   t: 'training-futuristic'
     contactInf,
   o: mobil,
@@ -3295,8 +3278,8 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
       'Google Cloud',
       'Traditional cloud providers'],
     marketSize: '$400B cloud market, quantum segment growing 400% annually'
-    growthRate: '400% annual growth'
-    variant: 'quantum-advanced',
+    growthRate: '400% annual growth';
+variant: 'quantum-advanced',
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -3307,8 +3290,7 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     launchDate: '2024-11-15'
     customers: 45;
     rating: 4.9;
-    reviews: 32;
-  }
+    reviews: 32}
     id: 'ai-powered-devops-automation',
     name: 'AI-Powered DevOps Automation',
     tagline: 'Intelligent DevOps automation with AI-driven optimization',
@@ -3327,8 +3309,8 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     marketSiz,
   e: '$400B cloud market, quantum segment growing 400% annually'
     growthRat,
-  e: '400% annual growth'
-    varian,
+  e: '400% annual growth';
+varian,
   t: 'quantum-advanced'
     contactInf,
   o: mobil,
@@ -3447,8 +3429,8 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     roi: 'DevOps teams report 500% ROI through faster deployments and reduced operational overhead.',
     competitors: ['GitLab CI/CD', 'Jenkins', 'CircleCI', 'GitHub Actions']
     marketSize: '$8 B DevOps market, AI segment growing 350% annually'
-    growthRate: '350% annual growth'
-    variant: 'ai-futuristic',
+    growthRate: '350% annual growth';
+variant: 'ai-futuristic',
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -3459,8 +3441,7 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     launchDate: '2024-10-01'
     customers: 320;
     rating: 4.8;
-    reviews: 245;
-  }
+    reviews: 245}
     id: 'quantum-cybersecurity-suite',
     name: 'Quantum Cybersecurity Suite',
     tagline: 'Unhackable quantum-secured cybersecurity platform',
@@ -3477,8 +3458,8 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     marketSiz,
   e: '$8B DevOps market, AI segment growing 350% annually'
     growthRat,
-  e: '350% annual growth'
-    varian,
+  e: '350% annual growth';
+varian,
   t: 'ai-futuristic'
     contactInf,
   o: mobil,
@@ -3602,8 +3583,8 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
       'Traditional security tools'],
     marketSize:,
       '$150B cybersecurity market, quantum segment growing 400% annually'
-    growthRate: '400% annual growth'
-    variant: 'quantum-cyberpunk',
+    growthRate: '400% annual growth';
+variant: 'quantum-cyberpunk',
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -3614,14 +3595,12 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     launchDate: '2024-09-15'
     customers: 180;
     rating: 4.9;
-    reviews: 156;
-  }
+    reviews: 156}
       'Advanced quantum cybersecurity platform with quantum encryption, AI threat detection, and comprehensive security features.',
     launchDate: '2024-09-15'
     customers: 180;
     rating: 4.9;
-    reviews: 156;
-  };
+    reviews: 156};
 ];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -3645,8 +3624,8 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
   e:
       '$150B cybersecurity market, quantum segment growing 400% annually'
     growthRat,
-  e: '400% annual growth'
-    varian,
+  e: '400% annual growth';
+varian,
   t: 'quantum-cyberpunk'
     contactInf,
   o: mobil,
@@ -3771,8 +3750,7 @@ export const,
     launchDate: '2024-01-01';
     customers: 25;
     rating: 4.8;
-    reviews: 18;
-  };
+    reviews: 18};
   // Cloud Migration & Optimization Services;
   {;
     id: 'cloud-migration-optimization';
@@ -3814,8 +3792,7 @@ export const,
     launchDate: '2024-02-01';
     customers: 18;
     rating: 4.7;
-    reviews: 12;
-  };
+    reviews: 12};
   // Cybersecurity Operations Center;
   {;
     id: 'cybersecurity-operations-center';
@@ -3857,8 +3834,7 @@ export const,
     launchDate: '2024-01-15';
     customers: 32;
     rating: 4.8;
-    reviews: 24;
-  };
+    reviews: 24};
   // Data Center Management Services;
   {;
     id: 'data-center-management';
@@ -3900,8 +3876,7 @@ export const,
     launchDate: '2024-01-20';
     customers: 15;
     rating: 4.7;
-    reviews: 11;
-  };
+    reviews: 11};
   // Network Security & SD-WAN Services;
   {;
     id: 'network-security-sdwan';
@@ -3943,8 +3918,7 @@ export const,
     launchDate: '2024-02-15';
     customers: 28;
     rating: 4.6;
-    reviews: 19;
-  };
+    reviews: 19};
   // IT Project Management Services;
   {;
     id: 'it-project-management';
@@ -3986,8 +3960,7 @@ export const,
     launchDate: '2024-01-10';
     customers: 45;
     rating: 4.7;
-    reviews: 32;
-  };
+    reviews: 32};
   // IT Training & Certification Services;
   {;
     id: 'it-training-certification';
@@ -4029,8 +4002,7 @@ export const,
     launchDate: '2024-01-05';
     customers: 120;
     rating: 4.8;
-    reviews: 89;
-  };
+    reviews: 89};
   {;
     id: 'quantum-cloud-infrastructure';
     name: 'Quantum Cloud Infrastructure';
@@ -4071,8 +4043,7 @@ export const,
     launchDate: '2024-11-15';
     customers: 45;
     rating: 4.9;
-    reviews: 32;
-  };
+    reviews: 32};
   {;
     id: 'ai-powered-devops-automation';
     name: 'AI-Powered DevOps Automation';
@@ -4113,8 +4084,7 @@ export const,
     launchDate: '2024-10-01';
     customers: 320;
     rating: 4.8;
-    reviews: 245;
-  };
+    reviews: 245};
   {;
     id: 'quantum-cybersecurity-suite';
     name: 'Quantum Cybersecurity Suite';
@@ -4422,8 +4392,7 @@ export const,
   g: 4.9;
     review,
   s: 156}
-];
-  }
+]}
 ];
     website: string;
     websit,
@@ -4509,8 +4478,7 @@ export const,
     launch_date: '2024 - 01 - 01'
     customers: 25;
     rating: 4 && 4.8;
-    reviews: 18;
-  },
+    reviews: 18},
     id: 'enterprise-it-infrastructure',
     name: 'Enterprise IT Infrastructure Management',
     tagline: 'Complete enterprise IT infrastructure with 99.99% uptime guarantee',
@@ -4619,8 +4587,8 @@ export const,
     roi: 'Enterprises achieve 400% ROI through reduced IT costs, improved performance, and enhanced security'
     competitors: ['IBM Global Services', 'Accenture', 'Deloitte', 'PwC', 'EY']
     marketSize: '$1.2 T IT services market, 8% annual growth'
-    growthRate: '8% annual growth'
-    variant: 'enterprise-futuristic',
+    growthRate: '8% annual growth';
+variant: 'enterprise-futuristic',
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -4631,8 +4599,7 @@ export const,
     launchDate: '2024-01-01'
     customers: 25;
     rating: 4.8;
-    reviews: 18;
-  }
+    reviews: 18}
   // Cloud Migration & Optimization Services;
     id: 'cloud-migration-optimization',
     name: 'Cloud Migration & Optimization Service',
@@ -4651,8 +4618,8 @@ export const,
     marketSiz,
   e: '$1.2T IT services market, 8% annual growth'
     growthRat,
-  e: '8% annual growth'
-    varian,
+  e: '8% annual growth';
+varian,
   t: 'enterprise-futuristic'
     contactInf,
   o: mobil,
@@ -4761,8 +4728,8 @@ export const,
       'Accenture',
       'Deloitte'],
     marketSize: '$400B cloud services market, 20% annual growth'
-    growthRate: '20% annual growth'
-    variant: 'cloud-futuristic'
+    growthRate: '20% annual growth';
+variant: 'cloud-futuristic'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -4774,8 +4741,7 @@ export const,
     launch_date: '2024 - 02 - 01'
     customers: 18;
     rating: 4 && 4.7;
-    reviews: 12;
-  },
+    reviews: 12},
   // Cybersecurity Operations Center;
     id: 'cybersecurity-operations-center',
     name: 'Cybersecurity Operations Center (SOC)',
@@ -4796,8 +4762,8 @@ export const,
     marketSiz,
   e: '$400B cloud services market, 20% annual growth'
     growthRat,
-  e: '20% annual growth'
-    varian,
+  e: '20% annual growth';
+varian,
   t: 'cloud-futuristic'
     contactInf,
   o: unknown,
@@ -4904,8 +4870,8 @@ export const,
       'Carbon Black',
       'Cylance'],
     marketSize: '$200B cybersecurity market, 15% annual growth'
-    growthRate: '15% annual growth'
-    variant: 'cybersecurity-futuristic'
+    growthRate: '15% annual growth';
+variant: 'cybersecurity-futuristic'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -4931,8 +4897,8 @@ export const,
     marketSiz,
   e: '$200B cybersecurity market, 15% annual growth'
     growthRat,
-  e: '15% annual growth'
-    varian,
+  e: '15% annual growth';
+varian,
   t: 'cybersecurity-futuristic'
     contactInf,
   o: unknown,
@@ -5031,8 +4997,8 @@ export const,
       'CoreSite',
       'QTS Realty'],
     marketSize: '$200B data center market, 12% annual growth'
-    growthRate: '12% annual growth'
-    variant: 'datacenter-futuristic'
+    growthRate: '12% annual growth';
+variant: 'datacenter-futuristic'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -5044,8 +5010,7 @@ export const,
     launch_date: '2024 - 01 - 20'
     customers: 15;
     rating: 4 && 4.7;
-    reviews: 11;
-  },
+    reviews: 11},
   // Network Security & SD-WAN Services;
     id: 'network-security-sdwan',
     name: 'Network Security & SD-WAN Management',
@@ -5069,8 +5034,8 @@ export const,
     marketSiz,
   e: '$200B data center market, 12% annual growth'
     growthRat,
-  e: '12% annual growth'
-    varian,
+  e: '12% annual growth';
+varian,
   t: 'datacenter-futuristic'
     contactInf,
   o: unknown,
@@ -5175,8 +5140,8 @@ export const,
       'Palo Alto Networks',
       'Juniper Networks'],
     marketSize: '$8B SD-WAN market, 35% annual growth'
-    growthRate: '35% annual growth'
-    variant: 'network-futuristic'
+    growthRate: '35% annual growth';
+variant: 'network-futuristic'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -5188,8 +5153,7 @@ export const,
     launch_date: '2024 - 02 - 15'
     customers: 28;
     rating: 4 && 4.6;
-    reviews: 19;
-  },
+    reviews: 19},
   // IT Project Management Services;
     id: 'it-project-management',
     name: 'IT Project Management & Consulting',
@@ -5210,8 +5174,8 @@ export const,
     marketSiz,
   e: '$8B SD-WAN market, 35% annual growth'
     growthRat,
-  e: '35% annual growth'
-    varian,
+  e: '35% annual growth';
+varian,
   t: 'network-futuristic'
     contactInf,
   o: unknown,
@@ -5315,8 +5279,8 @@ export const,
     roi: 'Enterprises achieve 300% ROI through successful project delivery and strategic guidance',
     competitors: ['McKinsey', 'BCG', 'Bain', 'Accenture', 'Deloitte']
     marketSize: '$50 B IT consulting market, 10% annual growth'
-    growthRate: '10% annual growth'
-    variant: 'consulting-futuristic'
+    growthRate: '10% annual growth';
+variant: 'consulting-futuristic'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -5328,8 +5292,7 @@ export const,
     launch_date: '2024 - 01 - 10'
     customers: 45;
     rating: 4 && 4.7;
-    reviews: 32;
-  },
+    reviews: 32},
   // IT Training & Certification Services;
     id: 'it-training-certification',
     name: 'IT Training & Certification Programs',
@@ -5346,8 +5309,8 @@ export const,
     marketSiz,
   e: '$50B IT consulting market, 10% annual growth'
     growthRat,
-  e: '10% annual growth'
-    varian,
+  e: '10% annual growth';
+varian,
   t: 'consulting-futuristic'
     contactInf,
   o: unknown,
@@ -5456,8 +5419,8 @@ export const,
       'AWS Training',
       'Google Cloud Training'],
     marketSize: '$15B IT training market, 12% annual growth'
-    growthRate: '12% annual growth'
-    variant: 'training-futuristic'
+    growthRate: '12% annual growth';
+variant: 'training-futuristic'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -5483,8 +5446,8 @@ export const,
     marketSiz,
   e: '$15B IT training market, 12% annual growth'
     growthRat,
-  e: '12% annual growth'
-    varian,
+  e: '12% annual growth';
+varian,
   t: 'training-futuristic'
     contactInf,
   o: unknown,
@@ -5579,8 +5542,8 @@ export const,
       'Google Cloud',
       'Traditional cloud providers'],
     marketSize: '$400B cloud market, quantum segment growing 400% annually'
-    growthRate: '400% annual growth'
-    variant: 'quantum-advanced'
+    growthRate: '400% annual growth';
+variant: 'quantum-advanced'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -5605,8 +5568,8 @@ export const,
     marketSiz,
   e: '$400B cloud market, quantum segment growing 400% annually'
     growthRat,
-  e: '400% annual growth'
-    varian,
+  e: '400% annual growth';
+varian,
   t: 'quantum-advanced'
     contactInf,
   o: unknown,
@@ -5703,8 +5666,8 @@ export const,
     roi: 'DevOps teams report 500% ROI through faster deployments and reduced operational overhead.',
     competitors: ['GitLab CI/CD', 'Jenkins', 'CircleCI', 'GitHub Actions']
     marketSize: '$8 B DevOps market, AI segment growing 350% annually'
-    growthRate: '350% annual growth'
-    variant: 'ai-futuristic'
+    growthRate: '350% annual growth';
+variant: 'ai-futuristic'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -5726,8 +5689,8 @@ export const,
     marketSiz,
   e: '$8B DevOps market, AI segment growing 350% annually'
     growthRat,
-  e: '350% annual growth'
-    varian,
+  e: '350% annual growth';
+varian,
   t: 'ai-futuristic'
     contactInf,
   o: unknown,
@@ -5823,8 +5786,8 @@ export const,
       'Traditional security tools'],
     marketSize:,
       '$150B cybersecurity market, quantum segment growing 400% annually'
-    growthRate: '400% annual growth'
-    variant: 'quantum-cyberpunk'
+    growthRate: '400% annual growth';
+variant: 'quantum-cyberpunk'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -5836,8 +5799,7 @@ export const,
     launch_date: '2024 - 09 - 15'
     customers: 180;
     rating: 4 && 4.9;
-    reviews: 156;
-  }];      mobile: '+1 302 464 0950',
+    reviews: 156}];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
   id: string, name: string;
   tagline: string, price: string;
@@ -5855,13 +5817,11 @@ export const,
   contactInfo: unknown;
     mobile: string, email: string;
     address: string;
-    website: string;
-    },
+    website: string},
     realImplementation: boolean, implementationDetails: string;
   launchDate: string, customers: number;
   rating: number;
-  reviews: number;
-}
+  reviews: number}
 export const comprehensiveITServices: ComprehensiveITService[] = [,
       address: '364 E Main St STE 1008 Middletown DE 19709',
     reviews: 156;
@@ -5885,8 +5845,8 @@ export const comprehensiveITServices: ComprehensiveITService[] = [,
   e:
       '$150B cybersecurity market, quantum segment growing 400% annually'
     growthRat,
-  e: '400% annual growth'
-    varian,
+  e: '400% annual growth';
+varian,
   t: 'quantum-cyberpunk'
     contactInf,
   o: unknown,
@@ -6691,7 +6651,7 @@ export interface ComprehensiveITService,
   e: '2024 - 09 - 15' customer,
   s: 180, ratin,
   g: 4.9, review,
-  s: 156} export interface ComprehensiveITService {; } ]; ; } ]; realImplementatio,
+  s: 156} export interface ComprehensiveITService {} ]; } ]; realImplementatio,
   n: true,
   implementationDetails:' 'Fully functional cloud migration service with comprehensive planning, execution, and optimization capabilities. Includes migration operations center and post-migration support.'' launchDat,
   e: '2024-02-01' customer,
@@ -7138,7 +7098,7 @@ export interface ComprehensiveITService,
   e: '2024-09-15'; customer,
   s: 180; ratin,
   g: 4.9; review,
-  s: 156} ]; } ]; websit,
+  s: 156} ]} ]; websit,
   e: string}' 'Network infrastructure management',' 'Server and storage management',' 'Security monitoring and management',' '24 / 7 infrastructure monitoring',' 'Performance optimization',' 'Disaster recovery planning',' 'Compliance management',' 'IT asset management',' 'Help desk support',' 'Strategic IT consulting'], popula,
   r: true,' ico,
   n: '🏢',' 'Competes with IBM Global Services ($100K+), Accenture ($150K+), and Deloitte ($200K+). Our,

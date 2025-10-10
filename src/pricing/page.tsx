@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import { CheckCircle, X, Zap, Brain, Cloud, ArrowRight, Star, Users, Shield, Clock } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
-const PricingPage: React.FC = () => {
-  const plans = [
+;
+const PricingPage: React.FC = () => {;
+const plans = [
     {
       name: 'Starter',
       description: 'Perfect for small businesses getting started with AI',
@@ -75,8 +75,8 @@ const PricingPage: React.FC = () => {
       popular: false
     }
   ];
-
-  const addOns = [
+;
+const addOns = [
     {
       name: 'Additional AI Models',
       description: 'Extra custom AI models beyond your plan limits',
@@ -102,8 +102,8 @@ const PricingPage: React.FC = () => {
       period: '/day'
     }
   ];
-
-  const faqs = [
+;
+const faqs = [
     {
       question: 'Can I change my plan at any time?',
       answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes take effect at the beginning of your next billing cycle.'
@@ -129,8 +129,8 @@ const PricingPage: React.FC = () => {
       answer: 'Yes, you can cancel your subscription at any time. There are no long-term contracts or cancellation fees.'
     }
   ];
-
-  const getColorClasses = (color: string) => {
+;
+const getColorClasses = (color: string) => {
     switch (color) {
       case 'blue':
         return {
@@ -163,8 +163,7 @@ const PricingPage: React.FC = () => {
           border: 'border-gray-500',
           light: 'bg-gray-50',
           textLight: 'text-gray-600'
-        };
-    }
+        }}
   };
 
   return (
@@ -188,7 +187,9 @@ const PricingPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {plans.map((plan, index) => {
-              const colors = getColorClasses(plan.color);
+return (
+;
+const colors = getColorClasses(plan.color);
               return (
                 <div
                   key={index}
@@ -196,6 +197,8 @@ const PricingPage: React.FC = () => {
                     plan.popular ? colors.border : 'border-gray-200'
                   } overflow-hidden`}
                 >
+);
+}
                   {plan.popular && (
                     <div className={`absolute top-0 left-0 right-0 ${colors.bg} text-white text-center py-2 text-sm font-semibold`}>
                       Most Popular
@@ -253,8 +256,7 @@ const PricingPage: React.FC = () => {
                     </Link>
                   </div>
                 </div>
-              );
-            })}
+              )})}
           </div>
         </div>
       </section>
@@ -335,7 +337,6 @@ const PricingPage: React.FC = () => {
 
       <Footer />
     </div>
-  );
-};
+  )};
 
 export default PricingPage;

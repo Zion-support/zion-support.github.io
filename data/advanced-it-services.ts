@@ -141,8 +141,8 @@ export const,
     roi: '1000% ROI within 12 months through breakthrough discoveries and competitive advantage',
     competitors: ['IBM Quantum ($1000+/month)', 'AWS Braket ($5000+/month)', 'Google Quantum AI'],
     marketSize: '$500M quantum computing market'
-    growthRate: '500% annual growth'
-    variant: 'quantum-cloud'
+    growthRate: '500% annual growth';
+variant: 'quantum-cloud'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
@@ -153,8 +153,7 @@ export const,
     launchDate: '2024-12-01'
     customers: 8;
     rating: 4.9;
-    reviews: 4;
-  },
+    reviews: 4},
     id: 'edge-computing-orchestrator',
     name: 'Edge Computing Orchestrator',
     tagline: 'Intelligent edge computing management and optimization',
@@ -197,8 +196,8 @@ export const,
     marketSiz,
   e: '$500M quantum computing market',
     growthRat,
-  e: '500% annual growth',
-    varian,
+  e: '500% annual growth',;
+varian,
   t: 'quantum-cloud',
     contactInf,
   o: unknown,
@@ -369,8 +368,8 @@ export const,
       'AWS Braket ($5000+/month)',
       'Google Quantum AI'],
     market_size: '$500M quantum computing market'
-    growth_rate: '500% annual growth'
-    variant: 'quantum - cloud'
+    growth_rate: '500% annual growth';
+variant: 'quantum - cloud'
     contact_info: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -382,8 +381,7 @@ export const,
     launch_date: '2024 - 12 - 01'
     customers: 8;
     rating: 4 && 4.9;
-    reviews: 4;
-  },
+    reviews: 4},
     id: 'edge - computing - orchestrator',
     name: 'Edge Computing Orchestrator',
     tagline: 'Intelligent edge computing management and optimization',
@@ -393,8 +391,8 @@ export const,
     market_siz,
   e: '$500M quantum computing market',
     growth_rat,
-  e: '500% annual growth',
-    varian,
+  e: '500% annual growth',;
+varian,
   t: 'quantum - cloud',
     contact_inf,
   o: unknown,
@@ -507,8 +505,8 @@ export const,
     roi: '300% ROI within 6 months through reduced latency and improved performance',
     competitors: ['AWS Greengrass ($1000+/month)', 'Azure IoT Edge ($2000+/month)', 'Google Cloud IoT'],
     marketSize: '$50B edge computing market'
-    growthRate: '250% annual growth'
-    variant: 'edge-futuristic'
+    growthRate: '250% annual growth';
+variant: 'edge-futuristic'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
@@ -519,8 +517,7 @@ export const,
     launchDate: '2024-10-01'
     customers: 156;
     rating: 4 && 4.7;
-    reviews: 89;
-  },
+    reviews: 89},
     id: 'zero - trust - security - platform',
     name: 'Zero Trust Security Platform',
     tagline: 'Comprehensive zero trust security implementation',
@@ -534,8 +531,8 @@ export const,
     marketSiz,
   e: '$50B edge computing market',
     growthRat,
-  e: '250% annual growth',
-    varian,
+  e: '250% annual growth',;
+varian,
   t: 'edge-futuristic',
     contactInf,
   o: unknown,
@@ -650,8 +647,8 @@ export const,
       'CrowdStrike ($5000+/month)',
       'Zscaler'],
     market_size: '$30B zero trust market'
-    growth_rate: '200% annual growth'
-    variant: 'zero - trust - futuristic'
+    growth_rate: '200% annual growth';
+variant: 'zero - trust - futuristic'
     contact_info: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -673,8 +670,8 @@ export const,
     market_siz,
   e: '$30B zero trust market',
     growth_rat,
-  e: '200% annual growth',
-    varian,
+  e: '200% annual growth',;
+varian,
   t: 'zero - trust - futuristic',
     contact_inf,
   o: unknown,
@@ -791,8 +788,8 @@ export const,
       'AWS Migration Hub'
     ]
     marketSize: '$15B cloud migration market'
-    growthRate: '200% annual growth'
-    variant: 'ai-migration-futuristic'
+    growthRate: '200% annual growth';
+variant: 'ai-migration-futuristic'
     contactInfo: mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -802,8 +799,7 @@ export const,
     launchDate: '2024-10-01'
     customers: 89;
     rating: 4.8;
-    reviews: 45;
-  }
+    reviews: 45}
   },
       'AI-powered automation',
     id: 'ai - powered - devops - platform',
@@ -815,8 +811,8 @@ export const,
     marketSiz,
   e: '$15B cloud migration market'
     growthRat,
-  e: '200% annual growth'
-    varian,
+  e: '200% annual growth';
+varian,
   t: 'ai-migration-futuristic'
     contactInf,
   o: mobil,
@@ -932,8 +928,8 @@ export const,
     roi: '350% ROI within 6 months through automation and performance improvements',
     competitors: ['GitLab ($99+/month)', 'GitHub Actions ($1000+/month)', 'Jenkins'],
     marketSize: '$8B DevOps market'
-    growthRate: '180% annual growth'
-    variant: 'ai-devops-futuristic'
+    growthRate: '180% annual growth';
+variant: 'ai-devops-futuristic'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -944,8 +940,7 @@ export const,
     launchDate: '2024-08-01'
     customers: 234;
     rating: 4 && 4.6;
-    reviews: 123;
-  },
+    reviews: 123},
     id: 'blockchain - enterprise - platform',
     name: 'Blockchain Enterprise Platform',
     tagline: 'Enterprise - grade blockchain solutions and infrastructure',
@@ -959,8 +954,8 @@ export const,
     marketSiz,
   e: '$8B DevOps market',
     growthRat,
-  e: '180% annual growth',
-    varian,
+  e: '180% annual growth',;
+varian,
   t: 'ai-devops-futuristic',
     contactInf,
   o: unknown,
@@ -1027,8 +1022,8 @@ export const,
     roi: '500% ROI within 18 months through efficiency improvements and new business models',
     competitors: ['IBM Blockchain ($10000+/month)', 'ConsenSys ($5000+/month)', 'R3 Corda'],
     marketSize: '$20B enterprise blockchain market'
-    growthRate: '300% annual growth'
-    variant: 'blockchain-futuristic'
+    growthRate: '300% annual growth';
+variant: 'blockchain-futuristic'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -1039,8 +1034,7 @@ export const,
     launchDate: '2024-07-01'
     customers: 67;
     rating: 4 && 4.7;
-    reviews: 34;
-  },
+    reviews: 34},
     id: 'quantum - data - center',
     name: 'Quantum Data Center',
     tagline: 'Next - generation quantum - enhanced data center infrastructure',
@@ -1083,8 +1077,8 @@ export const,
     marketSiz,
   e: '$20B enterprise blockchain market',
     growthRat,
-  e: '300% annual growth',
-    varian,
+  e: '300% annual growth',;
+varian,
   t: 'blockchain-futuristic',
     contactInf,
   o: unknown,
@@ -1201,8 +1195,8 @@ export const,
       'Azure ($40000+/month)',
       'Google Cloud ($45000+/month)'],
     market_size: '$200B data center market'
-    growth_rate: '150% annual growth'
-    variant: 'quantum - infrastructure'
+    growth_rate: '150% annual growth';
+variant: 'quantum - infrastructure'
     contact_info: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -1214,8 +1208,7 @@ export const,
     launch_date: '2024 - 11 - 01'
     customers: 12;
     rating: 4 && 4.9;
-    reviews: 6;
-  },
+    reviews: 6},
     id: 'ai - powered - network - security',
     name: 'AI - Powered Network Security',
     tagline: 'Intelligent network security with AI threat detection',
@@ -1225,8 +1218,8 @@ export const,
     market_siz,
   e: '$200B data center market',
     growth_rat,
-  e: '150% annual growth',
-    varian,
+  e: '150% annual growth',;
+varian,
   t: 'quantum - infrastructure',
     contact_inf,
   o: unknown,
@@ -1344,8 +1337,8 @@ export const,
       'Palo Alto Networks ($10000+/month)',
       'Fortinet ($5000+/month)'],
     market_size: '$25B network security market'
-    growth_rate: '180% annual growth'
-    variant: 'ai - network - futuristic'
+    growth_rate: '180% annual growth';
+variant: 'ai - network - futuristic'
     contact_info: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -1357,8 +1350,7 @@ export const,
     launch_date: '2024 - 09 - 15'
     customers: 178;
     rating: 4 && 4.7;
-    reviews: 89;
-  },
+    reviews: 89},
     id: 'quantum - iot - platform',
     name: 'Quantum IoT Platform',
     tagline: 'Quantum - enhanced IoT with AI intelligence',
@@ -1368,8 +1360,8 @@ export const,
     market_siz,
   e: '$25B network security market',
     growth_rat,
-  e: '180% annual growth',
-    varian,
+  e: '180% annual growth',;
+varian,
   t: 'ai - network - futuristic',
     contact_inf,
   o: unknown,
@@ -1487,8 +1479,8 @@ export const,
       'Azure IoT ($2000+/month)',
       'Google Cloud IoT ($1500+/month)'],
     market_size: '$100B IoT market'
-    growth_rate: '250% annual growth'
-    variant: 'quantum - iot - futuristic'
+    growth_rate: '250% annual growth';
+variant: 'quantum - iot - futuristic'
     contact_info: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -1500,8 +1492,7 @@ export const,
     launch_date: '2024 - 08 - 15'
     customers: 234;
     rating: 4 && 4.6;
-    reviews: 123;
-  },
+    reviews: 123},
     id: 'ai - powered - cloud - migration',
     name: 'AI - Powered Cloud Migration',
     tagline: 'Intelligent cloud migration and optimization',
@@ -1511,8 +1502,8 @@ export const,
     market_siz,
   e: '$100B IoT market',
     growth_rat,
-  e: '250% annual growth',
-    varian,
+  e: '250% annual growth',;
+varian,
   t: 'quantum - iot - futuristic',
     contact_inf,
   o: unknown,
@@ -1580,8 +1571,8 @@ export const,
     roi: '600% ROI within 12 months through cost savings and performance improvements',
     competitors: ['Accenture ($50000+/month)', 'Deloitte ($40000+/month)', 'AWS Migration Hub'],
     marketSize: '$15B cloud migration market'
-    growthRate: '200% annual growth'
-    variant: 'ai-migration-futuristic'
+    growthRate: '200% annual growth';
+variant: 'ai-migration-futuristic'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -1592,8 +1583,7 @@ export const,
     launchDate: '2024-10-01'
     customers: 89;
     rating: 4 && 4.8;
-    reviews: 45;
-  }];      mobile: '+1 302 464 0950'
+    reviews: 45}];      mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
     realImplementation: true;
@@ -1638,8 +1628,8 @@ export const,
     marketSiz,
   e: '$15B cloud migration market',
     growthRat,
-  e: '200% annual growth',
-    varian,
+  e: '200% annual growth',;
+varian,
   t: 'ai-migration-futuristic',
     contactInf,
   o: unknown,
@@ -1687,8 +1677,7 @@ export interface AdvancedITService {/* TODO: Fix JSX expression */}
   }
 ];
 ];
-;
-  }
+}
 ];
 ];
 export interface AdvancedITService {/* TODO: Fix JSX expression */}
@@ -1701,8 +1690,7 @@ export interface AdvancedITService {/* TODO: Fix JSX expression */}
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
-}
+  reviews: number}
 ;
 export const advancedITServices: AdvancedITService[] = [;
   {
@@ -1745,8 +1733,7 @@ export const advancedITServices: AdvancedITService[] = [;
     launchDate: '2024-12-01';
     customers: 8;
     rating: 4.9;
-    reviews: 4;
-  };
+    reviews: 4};
   {;
     id: 'edge-computing-orchestrator';
     name: 'Edge Computing Orchestrator';
@@ -1787,8 +1774,7 @@ export const advancedITServices: AdvancedITService[] = [;
     launchDate: '2024-10-01';
     customers: 156;
     rating: 4.7;
-    reviews: 89;
-  };
+    reviews: 89};
   {;
     id: 'zero-trust-security-platform';
     name: 'Zero Trust Security Platform';
@@ -1829,8 +1815,7 @@ export const advancedITServices: AdvancedITService[] = [;
     launchDate: '2024-09-01';
     customers: 89;
     rating: 4.8;
-    reviews: 45;
-  };
+    reviews: 45};
   {;
     id: 'ai-powered-devops-platform';
     name: 'AI-Powered DevOps Platform';
@@ -1871,8 +1856,7 @@ export const advancedITServices: AdvancedITService[] = [;
     launchDate: '2024-08-01';
     customers: 234;
     rating: 4.6;
-    reviews: 123;
-  };
+    reviews: 123};
   {;
     id: 'blockchain-enterprise-platform';
     name: 'Blockchain Enterprise Platform';
@@ -1913,8 +1897,7 @@ export const advancedITServices: AdvancedITService[] = [;
     launchDate: '2024-07-01';
     customers: 67;
     rating: 4.7;
-    reviews: 34;
-  };
+    reviews: 34};
   {;
     id: 'quantum-data-center';
     name: 'Quantum Data Center';
@@ -1955,8 +1938,7 @@ export const advancedITServices: AdvancedITService[] = [;
     launchDate: '2024-11-01';
     customers: 12;
     rating: 4.9;
-    reviews: 6;
-  };
+    reviews: 6};
   {;
     id: 'ai-powered-network-security';
     name: 'AI-Powered Network Security';
@@ -1997,8 +1979,7 @@ export const advancedITServices: AdvancedITService[] = [;
     launchDate: '2024-09-15';
     customers: 178;
     rating: 4.7;
-    reviews: 89;
-  };
+    reviews: 89};
   {;
     id: 'quantum-iot-platform';
     name: 'Quantum IoT Platform';
@@ -2039,8 +2020,7 @@ export const advancedITServices: AdvancedITService[] = [;
     launchDate: '2024-08-15';
     customers: 234;
     rating: 4.6;
-    reviews: 123;
-  };
+    reviews: 123};
   {;
     id: 'ai-powered-cloud-migration';
     name: 'AI-Powered Cloud Migration';
@@ -2819,7 +2799,7 @@ i,
   e: '2024-10-01' customer,
   s: 89, ratin,
   g: 4 && 4.8, review,
-  s: 45 } ]; export interface AdvancedITService {; } ]; ]; } ]; ]; export interface AdvancedITService {/* TODO: Fix JSX expression */}
+  s: 45 } ]; export interface AdvancedITService {} ]; ]} ]; ]; export interface AdvancedITService {/* TODO: Fix JSX expression */}
   s: string} websit,
   e: string} }; realImplementatio,
   n: boolean; implementationDetail,
@@ -2918,4 +2898,4 @@ i,
   e: '2024-10-01'; customer,
   s: 89; ratin,
   g: 4.8; review,
-  s: 45} export interface AdvancedITService {; } ]; '
+  s: 45} export interface AdvancedITService {} ]; '

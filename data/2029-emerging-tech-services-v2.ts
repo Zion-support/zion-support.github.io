@@ -33,8 +33,7 @@
     mobile: string;
     email: string;
     website: string;
-    address: string;
-  }
+    address: string}
 ;
 export const emergingTechServices2029 V2: EmergingTechService2029 V2[] = [,
     id: 'quantum - internet - security - gateway',
@@ -1360,8 +1359,7 @@ export interface EmergingTechService2029V2 {/* TODO: Fix JSX expression */}
     }
   }
 ];
-;
-    }
+}
   }
 ];
 export interface EmergingTechService2029V2 {/* TODO: Fix JSX expression */}
@@ -2159,7 +2157,7 @@ i,
   p: 'Real - time backup, disaster recovery',' monitorin,
   g: 'Trading performance monitoring',' analytic,
   s: 'Trading analytics, performance reports',' customizatio,
-  n: 'Custom trading strategies, integration', export interface EmergingTechService2029V2 {; } } ]; } } ]; export interface EmergingTechService2029V2 {/* TODO: Fix JSX expression */}
+  n: 'Custom trading strategies, integration', export interface EmergingTechService2029V2 {} } ]} } ]; export interface EmergingTechService2029V2 {/* TODO: Fix JSX expression */}
   e: string} addres,
   s: string} } } ; export const,
   emergingTechServices2029V2: EmergingTechService2029V2[] = [; {/* TODO: Fix JSX expression */}

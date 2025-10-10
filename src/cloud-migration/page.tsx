@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import { Cloud, Shield, Zap, Target, TrendingUp, CheckCircle, ArrowRight, Star, Award, Globe, Server, Database, Users, Clock, Phone } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
+;
 const,
   CloudMigrationPage: React.FC = () => {/* TODO: Fix JSX expression */}
     },
@@ -58,8 +58,8 @@ const,
 
     }
   ];
-
-  const migrationSteps = [
+;
+const migrationSteps = [
 
       titl,
   e: 'Assessment & Planning',
@@ -108,9 +108,8 @@ const,
       ico,
   n: TrendingUp,
       duratio,
-  n: 'Ongoing'
-
-  const pricingPlans = [
+  n: 'Ongoing';
+const pricingPlans = [
       nam,
   e: 'Small Business',
       pric,
@@ -162,9 +161,8 @@ const,
         'Full monitoring suite',
         'Multi-cloud architecture',
         'Dedicated account manager',
-        'Custom integrations'
-
-  const benefits = [
+        'Custom integrations';
+const benefits = [
       titl,
   e: 'Cost Reduction',
       descriptio,
@@ -413,8 +411,7 @@ const,
   hover:bg-cyan-600 transition-colors"></a>
           Contact Us;
 
-  );
-};
+  )};
 
 
 export default CloudMigrationPage;

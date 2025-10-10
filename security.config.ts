@@ -20,8 +20,7 @@ export const securityConfig = {
       'frame-ancestors': ["'none'"],
       'base-uri': ["'self'"],
       'form-action': ["'self'"]},
-    reportOnly: false;
-  },
+    reportOnly: false},
 
   // Security Headers;
   headers: {,
@@ -36,16 +35,14 @@ export const securityConfig = {
   validation: {,
     maxInputLength: 10000;
     allowedFileTypes: ['image/jpeg', 'image/png', 'image/webp', 'image/gif', 'application/pdf'],
-    maxFileSize: 10 * 1024 * 1024, // 10MB;
-  },
+    maxFileSize: 10 * 1024 * 1024, // 10MB},
 
   // Rate limiting;
   rateLimit: {,
     windowMs: 15 * 60 * 1000, // 15 minutes;
     maxRequests: 100;
     skipSuccessfulRequests: false;
-    skipFailedRequests: false;
-  },
+    skipFailedRequests: false},
 
   // CORS configuration;
   cors: {,
@@ -53,8 +50,7 @@ export const securityConfig = {
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true;
-    maxAge: 86400, // 24 hours;
-  },
+    maxAge: 86400, // 24 hours},
 
   // Authentication;
   auth: {,
@@ -64,8 +60,7 @@ export const securityConfig = {
     passwordMinLength: 12;
     requireSpecialChars: true;
     requireNumbers: true;
-    requireUppercase: true;
-  },
+    requireUppercase: true},
 
   // Data sanitization;
   sanitization: {

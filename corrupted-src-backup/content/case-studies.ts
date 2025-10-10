@@ -1,3 +1,4 @@
+import React from 'react';
 export type CaseStudy = {
   id: string;
   title: string;
@@ -8,7 +9,7 @@ export type CaseStudy = {
   results: string[];
   technologies: string[];
   duration: string;
-  imageUrl?: string;};
+  imageUrl?: string};
 
 export const caseStudies: CaseStudy[] = [
   {

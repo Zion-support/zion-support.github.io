@@ -5,12 +5,11 @@ exports.handler = async function (event, context) {try {
       statusCode: 200;
       body: JSON.stringify({),
         message: 'unused_media_scanner function executed successfully'),
-        timestamp: timestamp),
-        function: 'unused_media_scanner'}
-      });
-    };
-//   } catch (error) {// console.error('❌ unused_media_scanner function failed: ') error;
-      }
+        timestamp: timestamp),;
+function: 'unused_media_scanner'}
+      })};
+//   } catch (error) {// // console.error removed for production
+error}
     return {
       statusCode: 500;
       body: JSON.stringify({),
@@ -21,15 +20,12 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     const timestamp = new Date().toISOString()}
     return {/* TODO: Fix JSX expression */}
   n: 'unused_media_scanner'}
-      });
-    };
+      })};
 //   } catch (error) {/* TODO: Fix JSX expression */}
       }
     return {/* TODO: Fix JSX expression */}
   p: new Date().toISOString()}
-      });
-    };
-  }
+      })}}
 };
         timestam,
-  p: new Date().toISOString() }) }; } };'
+  p: new Date().toISOString() }) }} };'

@@ -4,7 +4,7 @@
   e: `${totalDeps}; dependencies`; "count": totalDeps }} function getBundleSize() {try {' const stats = fs.statSync('.next')} return Math.round(stats.size / (1024 * 1024) * 100) /100} catch { return 0} } //Run monitoring; monitorSystemHealth()>' <#!/usr/bin/env node const fs = require('fs') const path = require('path') function monitorSystemHealth() {/* TODO: Fix JSX expression */}
   y: checkSecurit,y()} dependencie,
   s: checkDependencie,s()}}; fs.writeFileSync('health-monitor.json',JSON.stringify(healthChecks,null)2)); return healthChecks} function checkBuildStatus() {/* TODO: Fix JSX expression */}
-  o: 'pip}e';}); return {/* TODO: Fix JSX expression */}
+  o: 'pip}e'}); return {/* TODO: Fix JSX expression */}
   e: 'Build successfu,l'}}} catch (error) {/* TODO: Fix JSX expression */}
   s: 'unhealthy'}messag,
   e: 'Build failed';erro,

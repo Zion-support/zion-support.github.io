@@ -3,9 +3,9 @@ import { Video, Play, Download, Share, Star, CheckCircle, Zap, Clock, Users, Awa
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-
-const AIVideoGenerationPage: React.FC = () => {
-  const features = [
+;
+const AIVideoGenerationPage: React.FC = () => {;
+const features = [
     'AI Video Creation',
     'Auto-editing',
     'Voice Synthesis',
@@ -17,8 +17,8 @@ const AIVideoGenerationPage: React.FC = () => {
     'Real-time Preview',
     'Collaboration Tools'
   ];
-
-  const benefits = [
+;
+const benefits = [
     '90% time savings',
     'Professional quality',
     'Unlimited videos',
@@ -26,8 +26,8 @@ const AIVideoGenerationPage: React.FC = () => {
     'No technical skills needed',
     'Cost-effective solution'
   ];
-
-  const pricingPlans = [
+;
+const pricingPlans = [
     {
       name: 'Starter',
       price: '$199',
@@ -52,7 +52,7 @@ const AIVideoGenerationPage: React.FC = () => {
   ];
 
   return (
-    <>
+    <React.Fragment>
       <SEOOptimizer
         title="AI Video Generator Pro - Create Professional Videos with AI | Zion Tech Group"
         description="Transform your content creation with AI Video Generator Pro. Create professional videos, animations, and presentations with AI-powered editing and voice synthesis. Starting at $199/month."
@@ -204,8 +204,7 @@ const AIVideoGenerationPage: React.FC = () => {
 
         <Footer />
       </div>
-    </>
-  );
-};
+    </React.Fragment>
+  )};
 
 export default AIVideoGenerationPage;

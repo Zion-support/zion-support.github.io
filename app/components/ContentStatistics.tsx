@@ -2,9 +2,8 @@
 
 import React, { useState, useEffect } from 'react';
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, Award, Clock, Star, BarChart3, Target, Rocket } from 'lucide-react';
-
-const ContentStatistics: React.FC = () => {
-  const [counters, setCounters] = useState({
+;
+const ContentStatistics: React.FC = () => {const [counters, setCounters] = useState({
     clients: 0,
     projects: 0,
     satisfaction: 0,
@@ -12,8 +11,8 @@ const ContentStatistics: React.FC = () => {
     countries: 0,
     uptime: 0
   });
-
-  const targetCounters = {
+;
+const targetCounters = {
     clients: 10000,
     projects: 5000,
     satisfaction: 99,
@@ -21,8 +20,8 @@ const ContentStatistics: React.FC = () => {
     countries: 50,
     uptime: 99
   };
-
-  const statistics = [
+;
+const statistics = [
     {
       icon: Users,
       value: counters.clients,
@@ -72,8 +71,8 @@ const ContentStatistics: React.FC = () => {
       description: 'Service reliability'
     }
   ];
-
-  const features = [
+;
+const features = [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -99,8 +98,8 @@ const ContentStatistics: React.FC = () => {
       stats: ['50+ Countries', '15+ Languages', '24/7 Support']
     }
   ];
-
-  const benefits = [
+;
+const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -110,8 +109,8 @@ const ContentStatistics: React.FC = () => {
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
-
-  const achievements = [
+;
+const achievements = [
     {
       icon: Star,
       title: 'Industry Recognition',
@@ -132,32 +131,27 @@ const ContentStatistics: React.FC = () => {
     }
   ];
 
-  useEffect(() => {
-    const duration = 3000; // 3 seconds
-    const steps = 60;
-    const stepDuration = duration / steps;
-
-    const timers = Object.keys(targetCounters).map((key) => {
-      const target = targetCounters[key as keyof typeof targetCounters];
-      const increment = target / steps;
+  useEffect(() => {;
+const duration = 3000; // 3 seconds;
+const steps = 60;
+const stepDuration = duration / steps;
+;
+const timers = Object.keys(targetCounters).map((key) => {;
+const target = targetCounters[key as keyof typeof targetCounters];
+const increment = target / steps;
       let current = 0;
 
       return setInterval(() => {
         current += increment;
         if (current >= target) {
-          current = target;
-        }
+          current = target}
         setCounters(prev => ({
           ...prev,
           [key]: Math.floor(current)
-        }));
-      }, stepDuration);
-    });
+        }))}, stepDuration)});
 
     return () => {
-      timers.forEach(timer => clearInterval(timer));
-    };
-  }, []);
+      timers.forEach(timer => clearInterval(timer))}}, []);
 
   return (
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
@@ -185,79 +179,82 @@ const ContentStatistics: React.FC = () => {
               <div className="text-lg font-semibold text-white mb-2">{stat.label}</div>
               <div className="text-gray-400 text-sm">{stat.description}</div>
             </div>
-          ))}
+          ));
         </div>
 
         {/* Features Section */}
         <div className="mb-16">
           <div className="text-center mb-12">
-            <h3 className="text-2xl font-bold text-white mb-4">Why We're the Right Choice</h3>
-            <p className="text-gray-300 max-w-3xl mx-auto">
-              Our comprehensive solutions deliver measurable results across all key business metrics.
+            <h3 className="text-2xl font-bold text-white mb-4">Why Choose Our Solutions?</h3>
+            <p className="text-gray-300 max-w-2xl mx-auto">
+              Our comprehensive suite of AI and IT solutions delivers measurable results for businesses of all sizes.
             </p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-purple-400 transition-all duration-300 group">
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <feature.icon className="w-6 h-6 text-white" />
+              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-blue-400 transition-all duration-300">
+                <div className="flex justify-center mb-4">
+                  <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-3 rounded-full">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
                 </div>
-                <h4 className="text-lg font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
-                  {feature.title}
-                </h4>
-                <p className="text-gray-300 text-sm mb-4">{feature.description}</p>
+                <h4 className="text-xl font-bold text-white mb-3 text-center">{feature.title}</h4>
+                <p className="text-gray-300 text-center mb-4">{feature.description}</p>
                 <div className="space-y-2">
                   {feature.stats.map((stat, statIndex) => (
-                    <div key={statIndex} className="flex items-center text-xs text-gray-400">
-                      <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-                      {stat}
+                    <div key={statIndex} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      <span>{stat}</span>
                     </div>
-                  ))}
+                  ));
                 </div>
               </div>
-            ))}
+            ));
           </div>
         </div>
 
         {/* Achievements Section */}
         <div className="mb-16">
           <div className="text-center mb-12">
-            <h3 className="text-2xl font-bold text-white mb-4">Key Achievements</h3>
-            <p className="text-gray-300 max-w-3xl mx-auto">
+            <h3 className="text-2xl font-bold text-white mb-4">Our Achievements</h3>
+            <p className="text-gray-300 max-w-2xl mx-auto">
               Recognition and awards that validate our commitment to excellence and innovation.
             </p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <div className="grid md:grid-cols-3 gap-8">
             {achievements.map((achievement, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center hover:border-purple-400 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-6 flex items-center justify-center">
-                  <achievement.icon className="w-8 h-8 text-white" />
+              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center">
+                <div className="flex justify-center mb-4">
+                  <div className="bg-gradient-to-r from-yellow-500 to-orange-500 p-3 rounded-full">
+                    <achievement.icon className="w-8 h-8 text-white" />
+                  </div>
                 </div>
                 <div className="text-3xl font-bold text-white mb-2">{achievement.value}</div>
-                <div className="text-lg font-semibold text-white mb-2">{achievement.title}</div>
-                <div className="text-gray-400 text-sm">{achievement.description}</div>
+                <h4 className="text-lg font-semibold text-white mb-2">{achievement.title}</h4>
+                <p className="text-gray-300 text-sm">{achievement.description}</p>
               </div>
-            ))}
+            ));
           </div>
         </div>
 
         {/* Benefits Section */}
-        <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 mb-16">
+        <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
           <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-white mb-4">Comprehensive Benefits</h3>
-            <p className="text-gray-300 max-w-3xl mx-auto">
-              Our solutions provide a complete package of benefits designed to accelerate your business growth.
+            <h3 className="text-2xl font-bold text-white mb-4">What You Get</h3>
+            <p className="text-gray-300 max-w-2xl mx-auto">
+              Comprehensive benefits that come with choosing our AI and IT solutions.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
-                <span className="text-gray-300">{benefit}</span>
+              <div key={index} className="flex items-center text-gray-300">
+                <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                <span>{benefit}</span>
               </div>
+<<<<<<< HEAD
             ))}
           </div>
         </div>
@@ -280,11 +277,11 @@ const ContentStatistics: React.FC = () => {
                 View Case Studies
               </button>
             </div>
+=======
+            ));
+>>>>>>> main
           </div>
         </div>
       </div>
-    </div>
-  );
-};
-
+    </div>)
 export default ContentStatistics;

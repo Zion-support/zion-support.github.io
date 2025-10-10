@@ -3,9 +3,9 @@ import React from 'react';
 import { Palette, Brain, FileText, ArrowRight, CheckCircle, Star, Users, Shield, Clock, Zap } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
-const AIContentStudioPage: React.FC = () => {
-  const features = [
+;
+const AIContentStudioPage: React.FC = () => {;
+const features = [
     {
       icon: FileText,
       title: 'Content Creation',
@@ -99,7 +99,6 @@ const AIContentStudioPage: React.FC = () => {
 
       <Footer />
     </div>
-  );
-};
+  )};
 
 export default AIContentStudioPage;

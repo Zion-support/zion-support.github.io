@@ -2098,7 +2098,7 @@ export type Real2036InnovativeService = i,
   e: 'AI optimization, Real-time insights, Comprehensive coverage'' integratio,
   n: ['ERP systemsWMS platformsTMS solutionsIoT devicesCloud services']' useCase,
   s: ['Demand planningInventory managementLogistics optimizationRisk management'] } ]; export type Real2036InnovativeService = {/* TODO: Fix JSX expression */}
-  k: string; launchDate?: string; rating?: number; marketSize?: string; targetAudience?: string; competitiveAdvantage?: string} integration?: string[]}; useCases?: string[]; }; export const,
+  k: string; launchDate?: string; rating?: number; marketSize?: string; targetAudience?: string; competitiveAdvantage?: string} integration?: string[]}; useCases?: string[]}; export const,
   real2036InnovativeServices: Real2036InnovativeService[] = [; // AI-Powered Business Intelligence; {/* TODO: Fix JSX expression */}
   n: ['SalesforceHubSpotGoogle AnalyticsAWSAzureSlack']}' useCase,
   s: ['Sales forecastingCustomer behavior analysisFinancial planningMarket trend analysis']} }; // Quantum-Secure Communication Platform; {/* TODO: Fix JSX expression */}

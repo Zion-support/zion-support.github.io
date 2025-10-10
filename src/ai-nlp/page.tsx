@@ -1,3 +1,4 @@
+import React from 'react';
 
 
 
@@ -6,10 +7,10 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 import { MessageSquare, Brain, FileText, Globe, CheckCircle, Star,  MessageSquare,  Brain,  Globe } from 'lucide-react';
-const AINLPPage: React.FC = () => {
-  const features = [];
+const AINLPPage: React.FC = () => {;
+const features = [];
   return (
-    {// TODO: Add content;}
+    {// TODO: Add content}
 
 };
   ico,
@@ -19,8 +20,7 @@ const AINLPPage: React.FC = () => {
       descriptio,
   n: 'Advanced text processing and sentiment analysis',
       benefit,
-  s: ['Sentiment detection', 'Entity extraction', 'Language detection'];
-    },
+  s: ['Sentiment detection', 'Entity extraction', 'Language detection']},
       ico,
   n: Brain,
       titl,
@@ -98,8 +98,7 @@ const AINLPPage: React.FC = () => {
       <Footer /></Footer>
 
     </div>
-  );
-};
+  )};
 
 
 export default AiNlpPage;

@@ -8,7 +8,7 @@ import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 
 interface ServicePageProps {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   titl,
   e: string;,
@@ -19,18 +19,15 @@ interface ServicePageProps {/* TODO: Fix JSX expression */}
           <{ className?: string }>;
   service,
   s: Array<{/* TODO: Fix JSX expression */}
-  s: string[];}
+  s: string[]}
     pric,
-  e: string;
-
-  }>;
+  e: string}>;
   benefit,
-  s: string[];
-}
-
+  s: string[]}
+;
 const,
   ServicePage: React.FC<ServicePageProps> = ({ title, description, services, benefits }) => {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
 
   return (
@@ -118,8 +115,7 @@ Ready to Transform Your Business?"
       </main>
       <Footer /></Footer>
     </div>
-  );
-};
+  )};
 
 
 export default ServicePage;

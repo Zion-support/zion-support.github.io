@@ -24,9 +24,8 @@ import {
   Target,
   Monitor
 } from 'lucide-react';
-
-const SecurityMonitoringSuitePage: React.FC = () => {
-  const features = [
+;
+const SecurityMonitoringSuitePage: React.FC = () => {const features = [
     {
       icon: Monitor,
       title: 'Real-time Dashboard',
@@ -48,8 +47,8 @@ const SecurityMonitoringSuitePage: React.FC = () => {
       description: 'Automated incident response and threat mitigation to protect your systems 24/7.'
     }
   ];
-
-  const benefits = [
+;
+const benefits = [
     '24/7 security monitoring and protection',
     'Real-time threat detection and alerts',
     'Comprehensive security analytics',
@@ -61,7 +60,7 @@ const SecurityMonitoringSuitePage: React.FC = () => {
   ];
 
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         <title>Security Monitoring Suite - Zion Tech Group | Cybersecurity Platform</title>
         <meta name="description" content="Comprehensive security monitoring suite by Zion Tech Group. Advanced cybersecurity platform with real-time monitoring, alerts, and automated response." />
@@ -115,7 +114,7 @@ const SecurityMonitoringSuitePage: React.FC = () => {
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
                 </div>
-              ))}
+              ));
             </div>
           </div>
         </section>
@@ -138,7 +137,7 @@ const SecurityMonitoringSuitePage: React.FC = () => {
                   <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                   <p className="text-gray-300 text-lg">{benefit}</p>
                 </div>
-              ))}
+              ));
             </div>
           </div>
         </section>
@@ -167,8 +166,5 @@ const SecurityMonitoringSuitePage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
-  );
-};
-
+    </React.Fragment>)
 export default SecurityMonitoringSuitePage;

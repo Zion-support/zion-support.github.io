@@ -24,8 +24,8 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
       description: 'Worldwide deployment and support for international businesses'
     }
   ];
-
-  const benefits = [
+;
+const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -49,13 +49,13 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
       </section>
 
               </div>
-            ))}
+            ));
           </div>
         </div>
       </section>
 
               </div>
-            ))}
+            ));
           </div>
         </div>
       </section>
@@ -83,8 +83,5 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
           </div>
         </div>
       </section>
-    </div>
-  );
-};
-
+    </div>)
 export default PagePage;

@@ -1,10 +1,10 @@
 #!/usr/bin/env node;
 import fs from 'fs';
-
+;
 function fixJSXErrors(filePath) {
   try {
-    //Fix malformed JSX elements like: className="..." <span> -> className="..." /> <span>
-    const patterns = [
+    //Fix malformed JSX elements like: className="..." <span> -> className="..." /> <span>;
+const patterns = [
       {
         //Fix CheckCircleIcon and similar patterns;
         pattern: /(<CheckCircleIcon[^>]*>)\s*<span/g;
@@ -30,8 +30,7 @@ function fixJSXErrors(filePath) {
       //       const newContent = content.replace(fix.pattern, fix.replacement);
       if (newContent !== content) {
         content = newContent;
-        modified = true;
-      }
+        modified = true}
 function fixJSXErrors(filePath) {/* TODO: Fix JSX expression */}
       },
       {/* TODO: Fix JSX expression */}
@@ -49,8 +48,7 @@ function fixJSXErrors(filePath) {/* TODO: Fix JSX expression */}
 
     if (modified) {/* TODO: Fix JSX expression */}
     }
-    return false;
-  } catch (error) {/* TODO: Fix JSX expression */}
+    return false} catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 

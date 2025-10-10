@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { Users, Target, Brain, Shield } from 'lucide-react';
 import Footer from '../components/Footer';
-
-const AboutPage: React.FC = () => {
-  const team = [
+;
+const AboutPage: React.FC = () => {;
+const team = [
     {
       name: 'Kleber Santos',
       role: 'CEO & Founder',
@@ -23,15 +23,15 @@ const AboutPage: React.FC = () => {
       role: 'Lead AI Engineer',
       image: '/images/team/michael.jpg',
       bio: 'AI researcher and developer with expertise in deep learning and NLP.'}];
-
-  const stats = [
+;
+const stats = [
     { number: '500+', label: 'Projects Completed' },
     { number: '50+', label: 'Happy Clients' },
     { number: '5+', label: 'Years Experience' },
     { number: '99%', label: 'Client Satisfaction' }
   ];
-
-  const values = [
+;
+const values = [
     {
       icon: Brain,
       title: 'Innovation',
@@ -58,8 +58,8 @@ const AboutPage: React.FC = () => {
             We are a leading technology company specializing in AI and IT solutions that transform businesses and drive innovation.
           </p>
 import { Users, CheckCircle, Star, Shield, Award, Target, Globe, Brain, Cloud, Code, BarChart, TrendingUp, Phone, Mail, MapPin, Clock, ArrowRight, Zap, Cpu, Database, Lock, Smartphone, Settings, Calendar, FileText, MessageSquare, Star as StarIcon, Award as AwardIcon, Shield as ShieldIcon, Users as UsersIcon } from 'lucide-react';
-export default function AboutPage() {
-  const teamMembers = [
+export default function AboutPage() {;
+const teamMembers = [
     {
       name: 'Kleber Santos',
       role: 'CEO & Founder',
@@ -595,5 +595,4 @@ export default function AboutPage() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

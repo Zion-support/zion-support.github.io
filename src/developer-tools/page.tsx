@@ -8,8 +8,8 @@ import Footer from '../components/Footer';
 
 
 import { Code, Zap, BarChart, Target, Users, TrendingUp } from 'lucide-react';
-const DeveloperToolsPage: React.FC = () => {
-  const _devTools = [
+const DeveloperToolsPage: React.FC = () => {;
+const _devTools = [
     {
       title: 'AI Code Generator',
       description: 'Generate high-quality code using advanced AI models',
@@ -61,7 +61,7 @@ $4}
   ];
 
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         <title>Developer Tools - Zion Tech Group</title>
         <meta name="description" content="AI-powered developer tools and productivity suites. Code generation, API testing, database management, and DevOps automation tools." />
@@ -115,14 +115,13 @@ $4}
                   <MapPin className="w-5 h-5" />
     <div>Coming Soon</div>
 
-  );
-};
+  )};
   const _devTools = [
   // TOD,
   O: Add items;
 ];;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   titl,
   e: 'AI Code Generator',
@@ -138,7 +137,7 @@ $4}
   e: 'Starting at $99/month'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   titl,
   e: 'API Testing Suite',
@@ -154,7 +153,7 @@ $4}
   e: 'Starting at $149/month'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   titl,
   e: 'Database Management Tool',
@@ -170,7 +169,7 @@ $4}
   e: 'Starting at $199/month'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   titl,
   e: 'DevOps Automation',
@@ -186,7 +185,7 @@ $4}
   e: 'Starting at $299/month'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   titl,
   e: 'Code Review Assistant',
@@ -202,7 +201,7 @@ $4}
   e: 'Starting at $79/month'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   titl,
   e: 'Performance Profiler',
@@ -221,7 +220,7 @@ $4}
   return (<div>Coming Soon</div>)
   )
     
-          <>
+          <React.Fragment>
       <Helmet></Helmet>
         <title>Developer Tools - Zion Tech Group</title>
         <meta name="description" content="AI-powered developer tools and productivity suites. Code generation, API testing, database management, and DevOps automation tools." /></meta>"
@@ -419,7 +418,7 @@ $4}
 
         <Footer />
       </div>
-    </>
+    </React.Fragment>
         {/* CTA Section */}"
         <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600"></section>"
           <div className="max-w-4xl mx-auto text-center"></div>"
@@ -467,8 +466,7 @@ $4}
       <Footer /></Footer>
 
     </div>
-  );
-};
+  )};
 
 
 export default DeveloperToolsPage;

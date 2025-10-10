@@ -14,7 +14,7 @@ const options = {
 // const req = https.get(options, res => {
 )
   res.on('data', chunk => {)
-    data += chunk;)
+    data += chunk;);
 const options = {/* TODO: Fix JSX expression */}
   }};
 
@@ -30,8 +30,7 @@ const options = {/* TODO: Fix JSX expression */}
         //         }
     } catch (error) {/* TODO: Fix JSX expression */}
       //       //       }
-  });
-});
+  })});
 
 req.on('error', error => {)
 req.on('error', error => {/* TODO: Fix JSX expression */})

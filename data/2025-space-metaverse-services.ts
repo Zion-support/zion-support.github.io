@@ -1,3 +1,4 @@
+import React from 'react';
 
       'Unity, Unreal Engine, React, Node && Node.js, PostgreSQL, Redis, Blockchain platforms'],
     realImplementation: true;
@@ -154,8 +155,7 @@ export interface SpaceMetaverseService {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 01 - 15'
     customers: 3200;
     rating: 4 && 4.7;
-    reviews: 2400;
-  },
+    reviews: 2400},
       'International space law, Government security requirements, Industry standards'],
     link: 'https://ziontechgroup && ziontechgroup.com/quantum-space-communications-network',
     id: 'quantum - space - communications - network',
@@ -297,8 +297,7 @@ export interface SpaceMetaverseService {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 03 - 01'
     customers: 85;
     rating: 4 && 4.9;
-    reviews: 65;
-  },
+    reviews: 65},
       'Prevent 99 && 99.9% of space collisions',
     id: 'ai - powered - space - traffic - management',
     name: 'AI - Powered Space Traffic Management Platform',
@@ -471,8 +470,7 @@ export interface SpaceMetaverseService {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 02 - 15'
     customers: 420;
     rating: 4 && 4.8;
-    reviews: 320;
-  },
+    reviews: 320},
       'Leading enterprise VR platform. Competes with Pico ($299-599), Meta Quest Pro ($999), and HTC Vive ($699-1399). Our advantage: Enterprise-focused features and comprehensive solutions.',
     competitors: ['Pico, Meta Quest Pro, HTC Vive, Varjo, Magic Leap'],
     techStack: ['Unity, Unreal Engine, React, Node && Node.js, PostgreSQL, Redis'],
@@ -644,8 +642,7 @@ export interface SpaceMetaverseService {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 01 - 20'
     customers: 1800;
     rating: 4 && 4.7;
-    reviews: 1400;
-  },
+    reviews: 1400},
   id: string, name: string;
   tagline: string, description: string;
   category: string;
@@ -653,8 +650,7 @@ export interface SpaceMetaverseService {/* TODO: Fix JSX expression */}
     monthly: number, yearly: number;
     currency: string, trialDays: number;
     setupTime: string;
-    enterprise: string;
-    },
+    enterprise: string},
     features: string[], benefits: string[],
   targetAudience: string[], marketPosition: string;
   competitors: string[], techStack: string[],
@@ -665,8 +661,7 @@ export interface SpaceMetaverseService {/* TODO: Fix JSX expression */}
   icon: string, color: string;
   popular: boolean, launchDate: string;
   customers: number, rating: number;
-  reviews: number;
-}
+  reviews: number}
 ];      'Employee training_virtual meetings_product design review_safety training_remote collaboration_customer presentations'
     ];
     integrations: ['HR systems, Learning management systems, Project management tools, Custom enterprise systems'];
@@ -774,8 +769,7 @@ export interface SpaceMetaverseService {/* TODO: Fix JSX expression */}
   }
 ];
 ;
-;
-  }
+}
 ];
 export interface SpaceMetaverseService {;
   id: string;
@@ -811,8 +805,7 @@ export interface SpaceMetaverseService {;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
-}
+  reviews: number}
 ;
 export const spaceMetaverseServices2025: SpaceMetaverseService[] = [;
   {
@@ -855,8 +848,7 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [;
     launchDate: '2024-02-01';
     customers: 180;
     rating: 4.9;
-    reviews: 120;
-  };
+    reviews: 120};
   {;
     id: 'metaverse-development-platform';
     name: 'Metaverse Development Platform';
@@ -897,8 +889,7 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [;
     launchDate: '2024-01-15';
     customers: 3200;
     rating: 4.7;
-    reviews: 2400;
-  };
+    reviews: 2400};
   {;
     id: 'quantum-space-communications-network';
     name: 'Quantum Space Communications Network';
@@ -939,8 +930,7 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [;
     launchDate: '2024-03-01';
     customers: 85;
     rating: 4.9;
-    reviews: 65;
-  };
+    reviews: 65};
   {;
     id: 'ai-powered-space-traffic-management';
     name: 'AI-Powered Space Traffic Management Platform';
@@ -981,8 +971,7 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [;
     launchDate: '2024-02-15';
     customers: 420;
     rating: 4.8;
-    reviews: 320;
-  };
+    reviews: 320};
   {;
     id: 'virtual-reality-enterprise-platform';
     name: 'Virtual Reality Enterprise Platform';
@@ -1023,8 +1012,7 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [;
     launchDate: '2024-01-20';
     customers: 1800;
     rating: 4.7;
-    reviews: 1400;
-  }
+    reviews: 1400}
 ];
     rating: 4.7;
     reviews: 1400;
@@ -1657,7 +1645,7 @@ export const,
   g: 4 && 4.7, review,
   s: 1400,
   rating: 4.7, review,
-  s: 1400} export interface SpaceMetaverseService {; } ]; ; } ]; export interface SpaceMetaverseService {/* TODO: Fix JSX expression */}
+  s: 1400} export interface SpaceMetaverseService {} ]; } ]; export interface SpaceMetaverseService {/* TODO: Fix JSX expression */}
   e: string} enterpris,
   e: string} }; feature,
   s: string[]; benefit,

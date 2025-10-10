@@ -138,9 +138,9 @@ export default {
         '80': '80',
         '90': '90',
         '100': '100'}}},
-  plugins: [,
-    function({ addUtilities }) {
-      const newUtilities = {
+  plugins: [,;
+function({ addUtilities }) {;
+const newUtilities = {
         '.neon-text': {
           color: 'var(--neon-cyan)',
           animation: 'neon-glow 2 s ease-in-out infinite alternate'},
@@ -170,8 +170,8 @@ export default {
           padding: '12px 24px'
           borderRadius: '8px'
           fontWeight: '600'
-          textTransform: 'uppercase',
-          letterSpacing: '1 px',
+          textTransform: 'uppercase',;
+letterSpacing: '1 px',
           position: 'relative',
           overflow: 'hidden',
           transition: 'all 0.3 s ease'},

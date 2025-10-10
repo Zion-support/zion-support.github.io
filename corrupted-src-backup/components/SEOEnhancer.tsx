@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 
 interface SEOEnhancerProps {/* TODO: Fix JSX expression */}
 }
-
+;
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({,
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services. Discover cutting-edge technology solutions for modern businesses.',
@@ -22,10 +22,12 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({,
   twitterCard = 'summary_large_image',
   structuredData,
   children}) => {
+return (
+
   useEffect(() => {
     // Add structured data to the page;
-    if (structuredData) {
-      const _script = document.createElement('script');
+    if (structuredData) {;
+const _script = document.createElement('script');
       script.type = 'application/ld+json';
       script.text = JSON.stringify(structuredData);
       document.head.appendChild(script);
@@ -33,10 +35,11 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({,
       return () => {
         document.head.removeChild(script);
 const,
-  SEOEnhancer: React.FC<SEOEnhancerProps> = ({/* TODO: Fix JSX expression */})
+  SEOEnhancer: React.FC<SEOEnhancerProps>
+);
+} = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
-      };
-    }
+      }}
   }, [structuredData]);
 
   // Default structured data for organization;
@@ -52,8 +55,8 @@ const,
       '@type': 'ContactPoint',
       telephone: '+1-555-0123',
       contactType: 'customer service',
-      availableLanguage: 'English',
-  const defaultStructuredData = {/* TODO: Fix JSX expression */}
+      availableLanguage: 'English',;
+const defaultStructuredData = {/* TODO: Fix JSX expression */}
   o: `${window.location.origin}/logo.png`,
     sameA,
   s: ['http,
@@ -65,7 +68,7 @@ const,
 
   //   const finalStructuredData = structuredData || defaultStructuredData;
 
-  return(<>)
+  return(<React.Fragment>)
       <Helmet>)
         {/* Basic Meta Tags */})
         <title>{title}</title>)
@@ -117,7 +120,7 @@ const,
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
         {/* Structured Data */}
-  return (<>
+  return (<React.Fragment>
       <Helmet></Helmet>
         {/* Basic Meta Tags */}
         <title>{title}</title>
@@ -185,8 +188,7 @@ const,
       </Helmet>
       {children}
     
-  );
-};
+  )};
 
 export default SEOEnhancer;
 "`

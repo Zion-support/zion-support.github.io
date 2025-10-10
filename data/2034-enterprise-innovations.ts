@@ -1649,10 +1649,8 @@ export const,
   e: 'http,
   s://ziontechgroup.com/ai-autonomous-data-center'
   }
-];
-  }
-];
-  }
+]}
+]}
 ];
     contact: '+1 302 464 0950',
     website: 'https://ziontechgroup.com / ai - autonomous - data - center',
@@ -1925,7 +1923,7 @@ i,
   e: 'http,
   s://ziontechgroup.com / ai - autonomous - data - center' } export interface EnterpriseService2034 {/* TODO: Fix JSX expression */}
   t: string} websit,
-  e: string} } ; export interface EnterpriseService2034 {; } ]; export const,
+  e: string} } ; export interface EnterpriseService2034 {} ]; export const,
   enterprise2034Services: EnterpriseService2034[] = [; {/* TODO: Fix JSX expression */}
   e: '99.999% security platform availability'}' contac,
   t: '+1 302 464 0950'};' websit,
@@ -1950,7 +1948,7 @@ i,
   e: '99.999% data center platform availability'}' contac,
   t: '+1 302 464 0950'};' websit,
   e: 'http,
-  s://ziontechgroup.com/ai-autonomous-data-center' } ]; } ]; } ];' contac,
+  s://ziontechgroup.com/ai-autonomous-data-center' } ]} ]} ];' contac,
   t: '+1 302 464 0950',' websit,
   e: 'http,
   s://ziontechgroup.com / ai - autonomous - data - center' } ; '

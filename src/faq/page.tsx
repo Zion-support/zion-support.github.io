@@ -3,21 +3,23 @@ import {ChevronDown, ChevronUp, Search, Phone, Mail, MessageSquare} from 'lucide
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
-
+;
 const FAQPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [openItems, setOpenItems] = useState<number[]>([]);
-
-  const toggleItem = (index: number) => {
+return (
+;
+const [searchTerm, setSearchTerm] = useState('');
+  const [openItems, setOpenItems] = useState<number[]>
+);
+}([]);
+;
+const toggleItem = (index: number) => {
     setOpenItems(prev => 
       prev.includes(index) 
         ? prev.filter(i => i !== index)
         : [...prev, index]
-    );
-  };
-
-  const faqData = [
+    )};
+;
+const faqData = [
     {
       category: 'General Questions',
       questions: [
@@ -78,8 +80,8 @@ questionquestion: 'Do you offer remote support?',
 questionquestion: 'How quickly do you respond to support requests?',
           answer:   ,
 $4];
-
-  const filteredData = faqData.map(category => ({
+;
+const filteredData = faqData.map(category => ({
     ...category,
     questions: category.questions.filter(q => 
       q.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -88,7 +90,7 @@ $4];
   })).filter(category => category.questions.length > 0);
 
   return (
-    <>
+    <React.Fragment>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16 pt-24">
@@ -122,10 +124,14 @@ $4];
                 </h2>
                 <div className="space-y-4">
                   {category.questions.map((item, itemIndex) => {
-                    const globalIndex = categoryIndex * 100 + itemIndex;
+return (
+;
+const globalIndex = categoryIndex * 100 + itemIndex;
                     const isOpen = openItems.includes(globalIndex);
                     
                       <div key={itemIndex} className="bg-slate-800/50 rounded-lg border border-gray-700/50">
+);
+}
                         <button
                           onClick={() => toggleItem(globalIndex)}
                           className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-700/50 transition-colors"
@@ -165,7 +171,7 @@ $4];
                 <MessageSquare className="w-4 h-4 mr-2" />
                 Contact Form
       <Footer />
-    </>
+    </React.Fragment>
 
 export default FAQPage;
 
@@ -175,11 +181,14 @@ import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const FAQPage: React.FC = () => {
+return (
+
   return (
     <div>Coming Soon</div>
+);
+}
 
-  );
-};
+  )};
   const [searchTerm, setSearchTerm] = useState('');
   const [openItems, setOpenItems] = useState<number[]>([]);
 const toggleItem = (inde)
@@ -187,14 +196,13 @@ const toggleItem = (inde)
       prev.includes(index)
         ? prev.filter(i => i !== index)
         : [...prev, index]
-    );
-  };
+    )};
   const faqData = [
   // TOD,
   O: Add items;
 ];;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   categor,
   y: 'General Questions',
@@ -314,7 +322,7 @@ const toggleItem = (inde)
   r: 'We respond to support requests within 1 hour during business hours and within 4 hours for non-critical issues outside business hours. Critical issues receive immediate attention.'
   ];
   const filteredData = faqData.map(category => ({/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
 //     ...category,
     question,
@@ -326,7 +334,7 @@ const toggleItem = (inde)
   return (<div>Coming Soon</div>)
   )
     
-          <>
+          <React.Fragment>
       <Navigation /></Navigation>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
         <div className="container mx-auto px-4 py-16 pt-24"></div>
@@ -383,8 +391,7 @@ type="text" placeholder="Search FAQs..."
                 <div className="space-y-4"></div>
                   {category.questions.map((item, itemIndex) => {}
   // TOD,
-  O: Add content;
-}
+  O: Add content}
                     const globalIndex = categoryIndex * 100 + itemIndex;
                     const isOpen = openItems.includes(globalIndex);
                       
@@ -445,7 +452,7 @@ type="text" placeholder="Search FAQs..."
 
                 Contact Form;
       <Footer /></Footer>
-    </>
+    </React.Fragment>
 export default FAQPage;
 
 

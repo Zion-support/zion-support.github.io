@@ -1242,8 +1242,7 @@ export const advancedITServices2025 = [
     competitiveAdvantag,
   e: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration'
   }
-];
-  }
+]}
 ];
     market_size: '$15.7B',
     target_audience: unknown;
@@ -1695,7 +1694,7 @@ export const advancedITServices2025 = [
   e: 'Industry - first quantum - enhanced migration platform, zero - downtime migration, and comprehensive cloud platform integration'
   }
 ];
-;  }
+}
 ];
 ;
 export const advancedITServices2025 = [ }; marketSiz,
@@ -2165,7 +2164,7 @@ export const advancedITServices2025 = [ }; marketSiz,
   l: 'kleber@ziontechgroup.com' };' marketSiz,
   e: '$15.7B';' targetAudienc,
   e: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms';' competitiveAdvantag,
-  e: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration' } ]; } ];' market_siz,
+  e: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration' } ]} ];' market_siz,
   e: '$15.7B', target_audienc,
   e:  ,' 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms', competitive_advantag,
   e:  ,' 'Industry - first quantum - enhanced migration platform, zero - downtime migration, and comprehensive cloud platform integration'},' ]; phon,
@@ -2350,4 +2349,4 @@ export const advancedITServices2025 = [ }; marketSiz,
   e: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration' }' market_siz,
   e: '$15.7B',' target_audienc,
   e: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms'' competitive_advantag,
-  e: 'Industry - first quantum - enhanced migration platform, zero - downtime migration, and comprehensive cloud platform integration' } ]; } ]; '
+  e: 'Industry - first quantum - enhanced migration platform, zero - downtime migration, and comprehensive cloud platform integration' } ]} ]; '

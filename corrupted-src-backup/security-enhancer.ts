@@ -8,8 +8,7 @@ class SecurityEnhancer {
       location.protocol !== 'https: ' &&)
       location.hostname !== 'localhost')
     ) {,
-      location.replace('https: ' + window.location.href.substring(window.location.protocol.length));
-    }
+      location.replace('https: ' + window.location.href.substring(window.location.protocol.length))}
   }
 
   private setupXSSProtection(): void {
@@ -32,8 +31,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
 
   public static getInstance(): SecurityEnhancer {/* TODO: Fix JSX expression */}
     }
-    return SecurityEnhancer.instance;
-  }
+    return SecurityEnhancer.instance}
 
   public initialize(): void {/* TODO: Fix JSX expression */}
   }

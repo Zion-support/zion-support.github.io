@@ -1,6 +1,7 @@
+import React from 'react';
 import Reac, t, { useState } fr, o, m 'rea, c, t';
-interface NewContentPromotionBannerProp, s {
-  varia, n, t?: 'in, f, o' | 'succe, s, s' | 'warni, n, g' | 'err, o, r' | 'defau, l, t' | 'premi, u, m';
+interface NewContentPromotionBannerProp, s {;
+varia, n, t?: 'in, f, o' | 'succe, s, s' | 'warni, n, g' | 'err, o, r' | 'defau, l, t' | 'premi, u, m';
   title?: string;
   description?: string;
   ctaTe, x, t?: string;
@@ -44,8 +45,8 @@ const NewContentPromotionBanne, r: React.FC<NewContentPromotionBannerPro, p, s> 
           <div, className="fl, e, x-1"></div>
             <div, className="flex, item, s-center, ga, p-3, m, b-3"></div>
               <div, className="flex, item, s-center, ga, p-2" ></div> <Sparkles, classNam, e = { `w-5 h-5 ${iconClass, e, s[vari, a, n, t] }, anima, t, e-pul, s, e`} />
-                <span, classNam, e = "te, x, t-sm, fon, t-medium, uppercase, tracking-wider, opacit, y-90">
-  const variantClasse, s = {/* TODO: Fix JSX expression */}
+                <span, classNam, e = "te, x, t-sm, fon, t-medium, uppercase, tracking-wider, opacit, y-90">;
+const variantClasse, s = {/* TODO: Fix JSX expression */}
   }; const iconClasse, s = {/* TODO: Fix JSX expression */}
   }; return (<div, classNam, e = {`relative, overflo, w-hidden, border, rounded-x, l, p-6, m, b-8, animat, e-fa, d, e-in ${variantClass, e, s[varia, n, t]} ${classNa, m, e}`}></div>
       {/* Background, Patter, n */}
@@ -130,6 +131,5 @@ const NewContentPromotionBanne, r: React.FC<NewContentPromotionBannerPro, p, s> 
         </div>
       </div>
     </div>
-  );
-};
+  )};
 export default NewContentPromotionBanner;"`

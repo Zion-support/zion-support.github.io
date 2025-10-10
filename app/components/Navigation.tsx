@@ -9,15 +9,17 @@ const Navigation: React.FC = () => {
   const [itServicesOpen, setItServicesOpen] = useState(false);
   const [microSaasOpen, setMicroSaasOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const handleResize = () => {
+    if (window.innerWidth >= 1024) {
+      setIsOpen(false);
+    }
+  };
+  
+  const handleScroll = () => {
+    setIsScrolled(window.scrollY > 50);
+  };
+  
   useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth >= 1024) {
-        setIsOpen(false);
-      }
-    };
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
     window.addEventListener('resize', handleResize);
     window.addEventListener('scroll', handleScroll);
     return () => {
@@ -32,12 +34,11 @@ const Navigation: React.FC = () => {
     setMicroSaasOpen(false);
     setIsOpen(false);
   };
+  
   const toggleMenu = () => {
     setIsOpen(!isOpen);
-    if (isOpen) {
-      closeAllMenus();
-    }
   };
+  
   const aiServices = [
     { name: 'AI Solutions', href: '/ai-services', icon: Brain, description: 'Core AI Solutions' },
     { name: 'AI Marketing Automation', href: '/ai-marketing', icon: Target, description: 'AI-Powered Marketing' },
@@ -479,7 +480,8 @@ const Navigation: React.FC = () => {
           </div>
         )}
       </div>
-    </nav>
-  );
-};
+      </nav>
+    );
+  };
+
 export default Navigation;

@@ -1,22 +1,19 @@
 import withBundleAnalyzer from '@next/bundle-analyzer';
 import crypto from 'crypto';
-
+;
 const bundleAnalyzer = withBundleAnalyzer({
-  enabled: process.env.ANALYZE === 'true',
-});
+  enabled: process.env.ANALYZE === 'true'});
 
-/** @type {import('next').NextConfig} */
+/** @type {import('next').NextConfig} */;
 const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
   compress: true,
   productionBrowserSourceMaps: false,
   eslint: {
-    ignoreDuringBuilds: true,
-  },
+    ignoreDuringBuilds: true},
   typescript: {
-    ignoreBuildErrors: true,
-  },
+    ignoreBuildErrors: true},
   
   images: {
     domains: ['images.unsplash.com', 'via.placeholder.com', 'ziontechgroup.com'],
@@ -25,18 +22,15 @@ const nextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     minimumCacheTTL: 60,
     dangerouslyAllowSVG: true,
-    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
-  },
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;"},
 
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
     // Fix for "self is not defined" error by providing a polyfill
     if (isServer) {
       config.plugins.push(
         new webpack.DefinePlugin({
-          'self': 'undefined',
-        })
-      );
-    }
+          'self': 'undefined'})
+      )}
 
     // Optimize bundle size
     config.optimization = {
@@ -51,29 +45,24 @@ const nextConfig = {
             name: 'framework',
             test: /(?<!node_modules.*)[\\/]node_modules[\\/](react|react-dom|scheduler|prop-types|use-subscription)[\\/]/,
             priority: 40,
-            enforce: true,
-          },
+            enforce: true},
           lib: {
             test(module) {
               return (
                 module.size() > 160000 &&
                 /node_modules[/\\]/.test(module.identifier())
-              );
-            },
-            name(module) {
-              const _hash = crypto.createHash('sha1');
+              )},
+            name(module) {;
+const _hash = crypto.createHash('sha1');
               _hash.update(module.identifier());
-              return _hash.digest('hex').substring(0, 8);
-            },
+              return _hash.digest('hex').substring(0, 8)},
             priority: 30,
             minChunks: 1,
-            reuseExistingChunk: true,
-          },
+            reuseExistingChunk: true},
           commons: {
             name: 'commons',
             minChunks: 2,
-            priority: 20,
-          },
+            priority: 20},
           shared: {
             name(module, chunks) {
               return (
@@ -83,24 +72,18 @@ const nextConfig = {
                   .update(chunks.reduce((acc, chunk) => acc + chunk.name, ''))
                   .digest('hex')
                   .substring(0, 8)
-              );
-            },
+              )},
             priority: 10,
             minChunks: 2,
-            reuseExistingChunk: true,
-          },
-        },
+            reuseExistingChunk: true}},
         maxInitialRequests: 25,
-        minSize: 20000,
-      },
-      minimize: !dev,
-    };
+        minSize: 20000},
+      minimize: !dev};
 
     // Tree shaking
     config.optimization.usedExports = true;
 
-    return config;
-  },
+    return config},
 
   async headers() {
     return [
@@ -109,87 +92,60 @@ const nextConfig = {
         headers: [
           {
             key: 'X-Frame-Options',
-            value: 'DENY',
-          },
+            value: 'DENY'},
           {
             key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
+            value: 'nosniff'},
           {
             key: 'Referrer-Policy',
-            value: 'strict-origin-when-cross-origin',
-          },
+            value: 'strict-origin-when-cross-origin'},
           {
             key: 'X-XSS-Protection',
-            value: '1; mode=block',
-          },
+            value: '1; mode=block'},
           {
             key: 'Permissions-Policy',
-            value: 'camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()',
-          },
+            value: 'camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()'},
           {
             key: 'Strict-Transport-Security',
-            value: 'max-age=63072000; includeSubDomains; preload',
-          },
+            value: 'max-age=63072000; includeSubDomains; preload'},
           {
             key: 'Content-Security-Policy',
-            value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https: blob:; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';",
-          },
-        ],
-      },
+            value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https: blob:; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';"}]},
       {
         source: '/_next/static/:path*',
         headers: [
           {
             key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
-          },
-        ],
-      },
+            value: 'public, max-age=31536000, immutable'}]},
       {
         source: '/images/:path*',
         headers: [
           {
             key: 'Cache-Control',
-            value: 'public, max-age=86400, s-maxage=604800, stale-while-revalidate',
-          },
-        ],
-      },
-    ];
-  },
+            value: 'public, max-age=86400, s-maxage=604800, stale-while-revalidate'}]}]},
 
   async redirects() {
     return [
       {
         source: '/home',
         destination: '/',
-        permanent: true,
-      },
-    ];
-  },
+        permanent: true}]},
 
   experimental: {
     optimizeCss: true,
     optimizePackageImports: ['lucide-react', '@heroicons/react'],
-    webVitalsAttribution: ['CLS', 'LCP', 'FCP', 'FID', 'TTFB'],
-  },
+    webVitalsAttribution: ['CLS', 'LCP', 'FCP', 'FID', 'TTFB']},
 
   // Performance optimizations
   modularizeImports: {
     'lucide-react': {
-      transform: 'lucide-react/dist/esm/icons/{{kebabCase member}}',
-    },
+      transform: 'lucide-react/dist/esm/icons/{{kebabCase member}}'},
     '@heroicons/react': {
-      transform: '@heroicons/react/{{member}}',
-    },
-  },
+      transform: '@heroicons/react/{{member}}'}},
 
   // Compiler optimizations
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production' ? {
-      exclude: ['error', 'warn'],
-    } : false,
-  },
-};
+      exclude: ['error', 'warn']} : false}};
 
 export default bundleAnalyzer(nextConfig);

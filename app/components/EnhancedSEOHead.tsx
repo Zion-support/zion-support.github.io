@@ -5,40 +5,41 @@ import { Helmet } from 'react-helmet-async';
 
 const EnhancedSEOHead: React.FC = () => {
   return (
+;
+const EnhancedSEOHead: React.FC = () => {
+return (
     <Helmet>
+);
+}
       {/* Basic Meta Tags */}
-      <title>Zion Tech Group - Advanced AI and IT Solutions</title>
-      <meta name="description" content="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology." />
-      <meta name="keywords" content="AI solutions, quantum computing, autonomous systems, digital transformation, enterprise AI, machine learning, automation, cloud services, IT consulting, cybersecurity" />
-      <meta name="author" content="Zion Tech Group" />
-      <meta name="robots" content="index, follow" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>{fullTitle}</title>
+      <meta name="description" content={fullDescription} />
+      <meta name="keywords" content={fullKeywords.join(', ')} />
+      <meta name="author" content={author} />
+      <meta name="robots" content={noIndex ? 'noindex, nofollow' : 'index, follow'} />
+      <link rel="canonical" href={canonicalUrl} />
       
-      {/* Canonical URL */}
-      <link rel="canonical" href="https://ziontechgroup.com" />
-      
-      {/* Open Graph Meta Tags */}
-      <meta property="og:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
-      <meta property="og:description" content="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services." />
+      {/* Open Graph Tags */}
       <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://ziontechgroup.com" />
-      <meta property="og:image" content="https://ziontechgroup.com/images/og-image.jpg" />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
+      <meta property="og:title" content={fullTitle} />
+      <meta property="og:description" content={fullDescription} />
+      <meta property="og:image" content={ogImage} />
+      <meta property="og:url" content={canonicalUrl} />
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
       
-      {/* Twitter Card Meta Tags */}
+      {/* Twitter Card Tags */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
-      <meta name="twitter:description" content="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services." />
-      <meta name="twitter:image" content="https://ziontechgroup.com/images/og-image.jpg" />
+      <meta name="twitter:title" content={fullTitle} />
+      <meta name="twitter:description" content={fullDescription} />
+      <meta name="twitter:image" content={ogImage} />
       <meta name="twitter:site" content="@ziontechgroup" />
       <meta name="twitter:creator" content="@ziontechgroup" />
       
-      {/* Additional SEO Meta Tags */}
-      <meta name="theme-color" content="#00ffff" />
-      <meta name="msapplication-TileColor" content="#00ffff" />
+      {/* Additional SEO Tags */}
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="theme-color" content="#0f172a" />
+      <meta name="msapplication-TileColor" content="#0f172a" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
       
@@ -52,48 +53,80 @@ const EnhancedSEOHead: React.FC = () => {
       {/* Preconnect to external domains */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      {/* Article specific tags */}
+      {publishedTime && <meta property="article:published_time" content={publishedTime} />}
+      {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
+      {section && <meta property="article:section" content={section} />}
+      {tags.map((tag, index) => (
+        <meta key={index} property="article:tag" content={tag} />
+      ))}
       
       {/* Structured Data */}
+      {structuredData && (
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </script>
+      )}
+      
+      {/* Default Organization Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "TechCompany",
-          "name": "Zion Tech Group",
-          "url": "https://ziontechgroup.com",
-          "description": "Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.",
-          "foundingDate": "2020",
-          "numberOfEmployees": "50-100",
-          "industry": "Technology",
-          "services": [
-            "AI Solutions",
-            "Quantum Computing",
-            "Autonomous Systems",
-            "Digital Transformation",
-            "Cloud Services",
-            "Automation",
-            "Business Intelligence"
-          ],
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+1-302-464-0950",
-            "contactType": "Customer Service",
-            "areaServed": "US",
-            "availableLanguage": "en"
+          '@context': 'https://schema.org',
+          '@type': 'Organization',
+          name: 'Zion Tech Group',
+          url: 'https://ziontechgroup.com',
+          logo: 'https://ziontechgroup.com/logo.png',
+          description: 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
+          foundingDate: '2020',
+          numberOfEmployees: '50-100',
+          industry: 'Technology',
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: '364 E Main St STE 1008',
+            addressLocality: 'Middletown',
+            addressRegion: 'DE',
+            postalCode: '19709',
+            addressCountry: 'US'
           },
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "364 E Main St STE 1008",
-            "addressLocality": "Middletown",
-            "addressRegion": "DE",
-            "postalCode": "19709",
-            "addressCountry": "US"
+          contactPoint: {
+            '@type': 'ContactPoint',
+            telephone: '+1-302-464-0950',
+            contactType: 'Customer Service',
+            areaServed: 'US',
+            availableLanguage: 'en'
           },
-          "sameAs": [
-            "https://twitter.com/ziontechgroup",
-            "https://linkedin.com/company/ziontechgroup"
+          sameAs: [
+            'https://linkedin.com/company/ziontechgroup',
+            'https://twitter.com/ziontechgroup'
           ]
-        })}
+        });
       </script>
+      
+      <script type="application/ld+json">
+        {JSON.stringify(breadcrumbStructuredData)}
+      </script>
+      
+      {/* Additional SEO Meta Tags */}
+      <meta name="format-detection" content="telephone=yes" />
+      <meta name="geo.region" content="US-DE" />
+      <meta name="geo.placename" content="Middletown" />
+      <meta name="geo.position" content="39.4496;-75.7163" />
+      <meta name="ICBM" content="39.4496, -75.7163" />
+      
+      {/* Language and Content */}
+      <meta httpEquiv="content-language" content="en-US" />
+      <meta name="language" content="English" />
+      <meta name="revisit-after" content="7 days" />
+      <meta name="rating" content="General" />
+      
+      {/* Security Headers */}
+      <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
+      <meta httpEquiv="X-Frame-Options" content="SAMEORIGIN" />
+      <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
+      
+      {/* Performance Hints */}
+      <meta httpEquiv="x-dns-prefetch-control" content="on" />
+      <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
     </Helmet>
   );
 };

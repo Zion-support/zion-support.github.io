@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import { MapPin, Clock, Users, Briefcase, ArrowRight, CheckCircle, Star, Heart, Zap, Shield } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
-const CareersPage: React.FC = () => {
-  const openPositions = [
+;
+const CareersPage: React.FC = () => {;
+const openPositions = [
     {
       id: 'senior-ai-engineer',
       title: 'Senior AI Engineer',
@@ -109,8 +109,8 @@ const CareersPage: React.FC = () => {
       benefits: ['Competitive salary + commission', 'Health insurance', 'Travel budget', 'Sales training', 'Performance bonuses']
     }
   ];
-
-  const benefits = [
+;
+const benefits = [
     {
       icon: Heart,
       title: 'Health & Wellness',
@@ -132,8 +132,8 @@ const CareersPage: React.FC = () => {
       description: 'Performance bonuses, stock options, and recognition programs'
     }
   ];
-
-  const culture = [
+;
+const culture = [
     'Innovation-driven environment where creativity is encouraged',
     'Collaborative team culture with diverse perspectives',
     'Opportunities to work on cutting-edge AI and technology projects',
@@ -350,7 +350,6 @@ const CareersPage: React.FC = () => {
 
       <Footer />
     </div>
-  );
-};
+  )};
 
 export default CareersPage;

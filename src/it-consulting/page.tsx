@@ -4,9 +4,9 @@ import { Helmet } from 'react-helmet-async';
 import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Target, Users, BarChart, Shield, Zap, Clock, Award, ArrowRight, Brain, Cloud, Code, Database, Globe, Smartphone, Lock, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
-const ITConsultingPage: React.FC = () => {
-  const consultingServices = [
+;
+const ITConsultingPage: React.FC = () => {;
+const consultingServices = [
     {
 
       title: 'Digital Transformation',
@@ -27,7 +27,7 @@ const ITConsultingPage: React.FC = () => {
     }
   ];
 
-  return (<>
+  return (<React.Fragment>
       <Helmet></Helmet>
         <title>IT Consulting Services - Zion Tech Group</title>
         <meta name="description" content="Expert IT consulting services to transform your business. Strategic planning, digital transformation, cloud migration, and cybersecurity solutions." /></meta>"
@@ -143,9 +143,8 @@ const ITConsultingPage: React.FC = () => {
       </div>
 
 
-    </>
-  );
-};
+    </React.Fragment>
+  )};
 
 export default ITConsultingPage;
 

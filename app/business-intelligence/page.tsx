@@ -2,9 +2,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, BarChart, Database, TrendingUp } from 'lucide-react';
-
-const BusinessIntelligencePage: React.FC = () => {
-  const features = [
+;
+const BusinessIntelligencePage: React.FC = () => {const features = [
     {
       icon: BarChart,
       title: 'Advanced Analytics',
@@ -26,8 +25,8 @@ const BusinessIntelligencePage: React.FC = () => {
       description: 'Machine learning algorithms for predictive analytics and trend analysis'
     }
   ];
-
-  const benefits = [
+;
+const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -78,7 +77,7 @@ const BusinessIntelligencePage: React.FC = () => {
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
-            ))}
+            ));
           </div>
         </div>
       </section>
@@ -101,7 +100,7 @@ const BusinessIntelligencePage: React.FC = () => {
                 <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
                 <span className="text-gray-300">{benefit}</span>
               </div>
-            ))}
+            ));
           </div>
         </div>
       </section>
@@ -127,8 +126,5 @@ const BusinessIntelligencePage: React.FC = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
-};
-
+    </div>)
 export default BusinessIntelligencePage;

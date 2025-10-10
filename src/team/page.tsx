@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import { Users, Award, Brain, Shield, Linkedin, Mail, Github, Twitter } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
-const TeamPage: React.FC = () => {
-  const teamMembers = [
+;
+const TeamPage: React.FC = () => {;
+const teamMembers = [
     {
       name: 'Kleber Santos',
       role: 'CEO & Founder',
@@ -61,15 +61,15 @@ const TeamPage: React.FC = () => {
       expertise: ['Cybersecurity', 'Risk Assessment', 'Compliance']
     }
   ];
-
-  const stats = [
+;
+const stats = [
     { icon: Users, label: 'Team Members', value: '50+' },
     { icon: Award, label: 'Awards Won', value: '25+' },
     { icon: Brain, label: 'Years Experience', value: '15+' },
     { icon: Shield, label: 'Client Satisfaction', value: '99%' }
   ];
-
-  const values = [
+;
+const values = [
     {
       title: 'Innovation',
       description: 'We constantly push the boundaries of what\'s possible with AI and technology.',
@@ -236,7 +236,6 @@ const TeamPage: React.FC = () => {
 
       <Footer />
     </div>
-  );
-};
+  )};
 
 export default TeamPage;

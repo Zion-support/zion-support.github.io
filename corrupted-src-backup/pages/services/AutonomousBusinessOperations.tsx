@@ -1,9 +1,11 @@
 impo, r, t {/* TODO: Fix JSX expression */}
 } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-
-const AutonomousBusinessOperation, s = () => { 
-  return(<>
+;
+const AutonomousBusinessOperation, s = () => {
+return (
+ 
+  return(<React.Fragment>
       <Helm, e, t>
         <title>
           Autonomous, Business, Operations Platfo, r, m | 85% Cost, Reduction, in 90, Day, s | Zion, Tech, Group;
@@ -19,7 +21,9 @@ const AutonomousBusinessOperation, s = () => {
         />),
       </Helm, e, t>
 
-      <div, className='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-9, 0, 0' > {/* Hero, Sect, i, o, n */ }</div>
+      <div, className='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-9, 0, 0' >
+);
+} {/* Hero, Sect, i, o, n */ }</div>
         <section, classNam, e = 'relative, p, y-24, overflo, w-hidd, e, n'>
           <div, className='absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-bl, u, e-6, 0, 0/20, t, o-purp, l, e-6, 0, 0/20' />
             <div, classNam, e='flex, justif, y-center, m, b-8'>
@@ -82,7 +86,7 @@ const AutonomousBusinessOperation, s = () => {
                 <span, className='fo, n, t-semibo, l, d'>SOC, 2, Type II, Certifie, d</sp, a, n>
               </div>
               <div, className='flex, item, s-center, ga, p-2'></div>
-                <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-4, 0, 0' />
+                <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-4, 0, 0' />;
 const AutonomousBusinessOperation, s = () => {/* TODO: Fix JSX expression */}
       <div, className='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-9, 0, 0' > {/* Hero, Sect, i, o, n */ }
         <section, classNam, e = 'relative, p, y-24, overflo, w-hidd, e, n'></section>

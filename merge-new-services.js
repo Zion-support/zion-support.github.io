@@ -10,8 +10,7 @@ import fs from 'fs';
   execSync('git checkout main', { stdio: 'inherit' });
   execSync('git pull origin main', { stdio: 'inherit' });
 //   } catch (error) {
-//   process.exit(1);
-}
+//   process.exit(1)}
 
 //Step 2: Get new service branches;
 // const newServiceBranches = [,
@@ -59,8 +58,7 @@ function mergeServiceBranch(branchName) {,
       { stdio: 'inherit' }
     );
 
-//     return { success: true, method: 'direct' };
-  } catch (error) {
+//     return { success: true, method: 'direct' }} catch (error) {
 //     try {
       //Strategy 1: Auto-resolve with theirs (prefer incoming changes for new services),
       execSync('git reset --hard HEAD', { stdio: 'inherit' });
@@ -78,8 +76,7 @@ function mergeServiceBranch(branchName) {/* TODO: Fix JSX expression */}
     );
 
 //     return {/* TODO: Fix JSX expression */}
-  d: 'direct' };
-  } catch (error) {/* TODO: Fix JSX expression */}
+  d: 'direct' }} catch (error) {/* TODO: Fix JSX expression */}
   o: 'inherit' });
       execSync(")`
         `git merge origin/${branchName} -X theirs --no-ff -m "Auto-merge ${branchName} (theirs strategy)"`,
@@ -88,8 +85,7 @@ function mergeServiceBranch(branchName) {/* TODO: Fix JSX expression */}
       );
 
 //       return {/* TODO: Fix JSX expression */}
-  d: 'theirs' };
-    } catch (theirsError) {/* TODO: Fix JSX expression */}
+  d: 'theirs' }} catch (theirsError) {/* TODO: Fix JSX expression */}
   o: 'inherit' });
         execSync(")`
           `git merge origin/${branchName} -X ours --no-ff -m "Auto-merge ${branchName} (ours strategy)"`,
@@ -97,23 +93,18 @@ function mergeServiceBranch(branchName) {/* TODO: Fix JSX expression */}
   o: 'inherit' }
         );
 
-//         return { success: true, method: 'ours' };
-      } catch (oursError) {
+//         return { success: true, method: 'ours' }} catch (oursError) {
 //         //Abort and skip;
         try {
-          execSync('git reset --hard HEAD', { stdio: 'inherit' });
-        } catch (resetError) {
+          execSync('git reset --hard HEAD', { stdio: 'inherit' })} catch (resetError) {
           //Continue anyway;
 //         return {/* TODO: Fix JSX expression */}
-  d: 'ours' };
-      } catch (oursError) {/* TODO: Fix JSX expression */}
-  o: 'inherit' });
-        } catch (resetError) {/* TODO: Fix JSX expression */}
+  d: 'ours' }} catch (oursError) {/* TODO: Fix JSX expression */}
+  o: 'inherit' })} catch (resetError) {/* TODO: Fix JSX expression */}
         }
 
         return {/* TODO: Fix JSX expression */}
-  d: 'failed' };
-      }
+  d: 'failed' }}
     }
   }
 }
@@ -152,8 +143,8 @@ fs.writeFileSync('new-services-merge-report.json'),
 
 //Step 6: Display summary;
 // // // // // // // // // // if (results.failed.length > 0) {,
-//   //   results.failed.forEach(branch => // console.log(`  - ${branch}`));
-}
+//   //   results.failed.forEach(branch => // // console.log removed for production
+)}
 
 // Step 7: Push changes;
 // try {,
@@ -168,8 +159,8 @@ fs.writeFileSync('new-services-merge-report.json')
 //Step,
   6: Display summary;
 // // // // // // // // // // if (results.failed.length > 0) {/* TODO: Fix JSX expression */}`
-//   //   results.failed.forEach(branch => // console.log(`  - ${branch}`));
-}
+//   //   results.failed.forEach(branch => // // console.log removed for production
+)}
 
 // Step,
   7: Push changes;

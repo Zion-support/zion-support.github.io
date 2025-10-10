@@ -5,34 +5,32 @@ import { fileURLToPath } from 'url';
 
 // Function to fix blog files with parsing errors;
 function fixBlogFile(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
+  try {;
+let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
     // Fix missing closing parenthesis and return statement;
-    if (content.includes('};') && !content.includes('  );')) {
+    if (content.includes('};') && !content.includes('  );')) {;
 function fixBlogFile(filePath) {/* TODO: Fix JSX expression */}
     if (content.includes('};') && !content.includes('  );')) {/* TODO: Fix JSX expression */}
       content = content.replace(/};$/, '  );\n};');
-      modified = true;
-    }
+      modified = true}
 
     // Fix merge conflict markers;
-    if (content.includes('      console.log(`⚠ Found merge conflict markers in ${filePath}, skipping...`);
-      return;
-    }
+    if (content.includes('      // console.log removed for production
+return}
 
     if (modified) {/* TODO: Fix JSX expression */}`
-      console.log(`✓ Fixed ${filePath}`);
-    }
+      // console.log removed for production
+}
   } catch (error) {/* TODO: Fix JSX expression */}`
-    console.log(`✗ Error processing ${filePath}: ${error.message}`);
-  }
+    // console.log removed for production
+}
 }
 
 // Main execution;
-console.log('🔧 Fixing blog files...\n');
-
+// console.log removed for production
+;
 const blogFiles = [
   'src/blog/ai-2026-april-revolutionary-breakthrough/page.tsx',
   'src/blog/ai-2026-april-ultimate-breakthrough-revolution/page.tsx',
@@ -58,4 +56,5 @@ for (const file of blogFiles) {/* TODO: Fix JSX expression */}
   }
 }
 
-console.log('\n✅ Blog files fixed!');`
+// console.log removed for production
+`

@@ -4,19 +4,17 @@ import { Link } from 'react-router-dom';
 
 interface SidebarNavigationProps {
   isOpen: boolean;
-  onClose: () => void;
-}
-
-const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }) => {
-  const navigationItems = [
+  onClose: () => void}
+;
+const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }) => {;
+const navigationItems = [
     { name: 'Home', href: '/', icon: Home },
     { name: 'About', href: '/about', icon: User },
     { name: 'Services', href: '/services', icon: Settings },
-    { name: 'Contact', href: '/contact', icon: HelpCircle },
-  ];
+    { name: 'Contact', href: '/contact', icon: HelpCircle }];
 
   return (
-    <>
+    <React.Fragment>
       {/* Overlay */}
       {isOpen && (
         <div
@@ -55,8 +53,7 @@ const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }
           ))}
         </nav>
       </div>
-    </>
-  );
-};
+    </React.Fragment>
+  )};
 
 export default SidebarNavigation;

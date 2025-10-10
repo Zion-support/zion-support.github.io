@@ -980,11 +980,9 @@ export interface Service {/* TODO: Fix JSX expression */}
   }
 ];
 ;
-;
-  }
+}
 ];
-;
-  }
+}
 ];
 export interface Service {/* TODO: Fix JSX expression */}
   k: string}
@@ -1541,7 +1539,7 @@ i,
   s: ['Climate ModelingQuantum ComputingEnvironmentalWeatherResearch']} ' lin,
   k: 'http,
   s://ziontechgroup && ziontechgroup.com/services/quantum-climate-modeling',' tag,
-  s: ['Climate ModelingQuantum ComputingEnvironmentalWeatherResearch'] export interface Service {} ]; ; } ]; } ]; export interface Service {/* TODO: Fix JSX expression */}
+  s: ['Climate ModelingQuantum ComputingEnvironmentalWeatherResearch'] export interface Service {} ]; } ]} ]; export interface Service {/* TODO: Fix JSX expression */}
   k: string} tag,
   s: string[]} } ; export const,
   emergingTech2027Services: Service[] = [; {/* TODO: Fix JSX expression */}

@@ -1,3 +1,4 @@
+import React from 'react';
 
 
 
@@ -7,10 +8,10 @@ import Footer from '../components/Footer';
 import { Eye, Camera, Video, Target, Shield, CheckCircle, ArrowRight, Settings } from 'lucide-react';
 
 import { Target, Shield, Eye,  Camera,  Target,  Shield,  Settings } from 'lucide-react';
-const AIComputerVisionPage: React.FC = () => {
-  const features = [];
+const AIComputerVisionPage: React.FC = () => {;
+const features = [];
   return (
-    {// TODO: Add content;}
+    {// TODO: Add content}
 
 };
   ico,
@@ -20,8 +21,7 @@ const AIComputerVisionPage: React.FC = () => {
       descriptio,
   n: 'Advanced object detection and recognition with high accuracy',
       benefit,
-  s: ['Real-time detection', 'Multi-class recognition', 'Custom model training'];
-    },
+  s: ['Real-time detection', 'Multi-class recognition', 'Custom model training']},
       ico,
   n: Camera,
       titl,
@@ -56,8 +56,8 @@ const AIComputerVisionPage: React.FC = () => {
       ico,
   n: Settings,
       useCase,
-  s: ['Defect detection', 'Quality assurance', 'Process monitoring']
-  const pricing = [
+  s: ['Defect detection', 'Quality assurance', 'Process monitoring'];
+const pricing = [
       nam,
   e: 'Starter',
       pric,
@@ -74,9 +74,10 @@ const AIComputerVisionPage: React.FC = () => {
 //         'Standard API'
 //       ],
 
-      popular: false,
-
+      popular: false,;
 const PagePage: React.FC = () => {
+return (
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
 
@@ -103,6 +104,8 @@ Transform your business with cutting-edge computer vision technology. From objec
               +1 302 464 0950;
           </div>
         </section>
+);
+}
 
         {/* Features Section */}
         <section className="mb-16"></section>"
@@ -175,8 +178,7 @@ Most Popular;
                       {feature}`
                   className={`block w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}
   // TOD,
-  O: Add content;
-}
+  O: Add content}
 //                     plan.popular;
 //                       ? 'cyber-button'
                       : 'border-2 border-cyan-400 text-cyan-400,
@@ -210,8 +212,7 @@ Ready to See the Future?"
       <Footer /></Footer>
 
     </div>
-  );
-};
+  )};
 
 
 export default PagePage;

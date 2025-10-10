@@ -18,8 +18,8 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
       author: 'Zion Tech Group Team',
     {/* TODO: Fix JSX expression */}
     }];
-
-  const blogPosts = [
+;
+const blogPosts = [
     {
       slug: 'enterprise-ai-transformation-roadmap-2026',
       title: 'Enterprise AI Transformation Roadmap 2026',
@@ -52,8 +52,8 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
     },
     {/* TODO: Fix JSX expression */}
     }];
-
-  const featuredPosts = [
+;
+const featuredPosts = [
     {
       slug: 'autonomous-enterprise-operations-2026',
       title: 'Autonomous Enterprise Operations 2026',
@@ -109,8 +109,7 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
           </a>)
         </div>)
       </div>)
-    );
-  }
+    )}
 
   return(<div className="min-h-screen bg-gray-50">
   return (
@@ -278,6 +277,5 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
         </div>
       </div>
     </div>
-  );
-}
+  )}
 "`

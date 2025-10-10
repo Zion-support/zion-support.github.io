@@ -162,5 +162,4 @@ export default function ContentPromotionBanner() {/* TODO: Fix JSX expression */
         </div>
       </div>
     </div>
-  );
-}"
+  )}"

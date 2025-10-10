@@ -1,6 +1,6 @@
 'use client';
 import React, { useState, useCallback } from 'react';
-
+;
 const Image: React.FC = () => {
 interface ImageProps {
   src: string;
@@ -16,8 +16,7 @@ interface ImageProps {
   sizes?: string;
   style?: React.CSSProperties;
   onLoad?: () => void;
-  onError?: () => void;
-}
+  onError?: () => void}
 export const Image: React.FC<ImageProps> = ({
   src,
   alt,
@@ -34,17 +33,15 @@ export const Image: React.FC<ImageProps> = ({
   onLoad,
   onError,
   ...props
-}) => {
-  const [, setIsLoaded] = useState(false);
+}) => {;
+const [, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
   const _handleLoad = useCallback(() => {
     setIsLoaded(true);
-    if (onLoad) onLoad();
-  }, [onLoad]);
+    if (onLoad) onLoad()}, [onLoad]);
   const handleError = useCallback(() => {
     setHasError(true);
-    if (onError) onError();
-  }, [onError]);
+    if (onError) onError()}, [onError]);
   const imageStyle: React.CSSProperties = {
     ...style,
     ...(fill && {
@@ -65,8 +62,7 @@ $4})
       >
         <span className="text-gray-500 text-sm">Failed to load image</span>
       </div>
-    );
-  }
+    )}
   return (
     <img
       src={src}
@@ -81,8 +77,7 @@ $4})
       onError={handleError}
       {...props}
     />
-  );
-};
+  )};
 export default Image;
 
 
@@ -91,8 +86,7 @@ import React, { useState, useCallback } from 'react';
 const,
   Image: React.FC = () => {interface ImageProps {}
   // TOD,
-  O: Add content;
-};
+  O: Add content};
 
   src: string;,
     alt: string
@@ -108,11 +102,10 @@ const,
   sizes?: string;
   style?: React.CSSProperties;
   onLoad?: () => void;
-  onError?: () => void;
-}
+  onError?: () => void}
 
 export const Image: React.FC;
-          <ImageProps> = ({// TODO: Add content;}
+          <ImageProps> = ({// TODO: Add content}
 
 }
 //   src,
@@ -130,31 +123,28 @@ quality = 75,
 //   onLoad,
 //   onError,
 
-//   ...props;
-}) => {// TODO: Add content;}
+//   ...props}) => {// TODO: Add content}
 
 }
   const [, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
   const _handleLoad = useCallback(() => {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
     setIsLoaded(true);
-    if (onLoad) onLoad();
-  }, [onLoad]);
+    if (onLoad) onLoad()}, [onLoad]);
   const handleError = useCallback(() => {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
     setHasError(true);
-    if (onError) onError();
-  }, [onError]);
+    if (onError) onError()}, [onError]);
   const,
   imageStyle: React.CSSProperties = {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
 //     ...style,
     ...(fill && {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
 
   position: 'absolute',
@@ -167,7 +157,7 @@ quality = 75,
     })
   };
   if (hasError) {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
 
     return (

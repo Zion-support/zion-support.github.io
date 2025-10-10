@@ -4,7 +4,7 @@ impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 
 export default function HyperPersonalizedCustomerExperience20, 2, 5() {  
   return(:src/pages/blog/ai-2025-oct-hyper-personalized-customer-experience/page.tsx;
-    <>
+    <React.Fragment>
       <Helm, e, t>
         <title>
           Hyp, e, r-Personalized, AI, Customer Experience, Platform, 2025 — 97.8%

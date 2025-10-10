@@ -4,9 +4,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { CheckCircle, Star, ArrowRight, Zap } from 'lucide-react';
-
-const PricingPage: React.FC = () => {
-  const plans = [
+;
+const PricingPage: React.FC = () => {const plans = [
     {
       name: 'Starter',
       price: '$2,999',
@@ -57,7 +56,7 @@ const PricingPage: React.FC = () => {
   ];
 
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         <title>Pricing - Zion Tech Group | Transparent AI & IT Pricing</title>
         <meta name="description" content="Transparent pricing for AI and IT solutions. Choose from Starter, Professional, or Enterprise plans. Custom solutions available. Get started today." />
@@ -67,6 +66,10 @@ const PricingPage: React.FC = () => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/pricing" />
       </Helmet>
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center mb-16">
@@ -81,7 +84,7 @@ const PricingPage: React.FC = () => {
           <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {plans.map((plan, index) => (
               <div
-                key={plan.name}
+                key={index}
                 className={`relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border ${
                   plan.popular
                     ? 'border-purple-400 shadow-2xl shadow-purple-500/25 scale-105'
@@ -90,19 +93,17 @@ const PricingPage: React.FC = () => {
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <div className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-2 rounded-full text-sm font-semibold flex items-center gap-2">
-                      <Star className="w-4 h-4 fill-current" />
+                    <div className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-2 rounded-full text-sm font-semibold flex items-center">
+                      <Star className="w-4 h-4 mr-2" />
                       Most Popular
                     </div>
-                  </div>
-                )}
-
+                  </div>);
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-gray-300 mb-6">{plan.description}</p>
                   <div className="flex items-baseline justify-center">
-                    <span className="text-4xl font-bold text-white">{plan.price}</span>
-                    <span className="text-gray-400 ml-1">{plan.period}</span>
+                    <span className="text-5xl font-bold text-white">{plan.price}</span>
+                    <span className="text-gray-300 ml-2">{plan.period}</span>
                   </div>
                 </div>
 
@@ -110,47 +111,34 @@ const PricingPage: React.FC = () => {
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      {feature}
+                      <span>{feature}</span>
                     </li>
-                  ))}
+                  ));
                 </ul>
 
-                <Link
-                  to="/contact"
-                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 ${
+                <button
+                  className={`w-full py-4 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
                       ? 'bg-gradient-to-r from-purple-500 to-blue-500 text-white hover:from-purple-600 hover:to-blue-600 transform hover:scale-105'
-                      : 'bg-white/10 text-white border border-white/20 hover:bg-white/20'
+                      : 'bg-white/20 text-white hover:bg-white/30 border border-white/30'
                   }`}
                 >
-                  Get Started
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
+                  {plan.name === 'Enterprise' ? 'Contact Sales' : 'Get Started'}
+                  <ArrowRight className="w-5 h-5 ml-2 inline" />
+                </button>
               </div>
-            ))}
+            ));
           </div>
 
           <div className="text-center mt-16">
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 max-w-4xl mx-auto">
-              <h3 className="text-2xl font-bold text-white mb-4">
-                Need a Custom Solution?
-              </h3>
-              <p className="text-gray-300 mb-6">
-                We understand that every business is unique. Contact us for a personalized quote tailored to your specific requirements.
-              </p>
-              <Link
-                to="/contact"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
-              >
-                <Zap className="w-5 h-5" />
-                Get Custom Quote
-              </Link>
-            </div>
+            <p className="text-gray-300 mb-8">
+              Need a custom solution? We're here to help.
+            </p>
+            <button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105">
+              Contact Our Team
+            </button>
           </div>
         </div>
       </div>
-    </>
-  );
-};
-
+    </React.Fragment>)
 export default PricingPage;

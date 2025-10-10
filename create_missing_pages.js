@@ -503,21 +503,22 @@ const pageConfigs = {
 };
 
 // Create missing pages;
-missingPages.forEach(pageName => {)
-  const config = pageConfigs[pageName];)
+missingPages.forEach(pageName => {);
+const config = pageConfigs[pageName];)
   if (!config) {
-    console.log(`No configuration found for ${pageName}`);
-    return;
-  }
-
-  const pageContent = `'use client';
+    // console.log removed for production
+return}
+;
+const pageContent = `'use client';
 import React from 'react';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 import SEOOptimizer from '../../components/SEOOptimizer';
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, DollarSign, Award, Lock, Database, Cloud, Code, Smartphone, Settings, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Globe2, Map, Navigation as NavIcon, PieChart, TrendingDown, Activity } from 'lucide-react';
-
-const ${pageName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('')}Page: React.FC = () => {,
+;
+const ${pageName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('')}Page: React.FC = () => {
+return (
+,
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)
       <SEOOptimizer;),
         title="${config.title} - Zion Tech Group"
@@ -525,6 +526,8 @@ const ${pageName.split('-').map(word => word.charAt(0).toUpperCase() + word.slic
         keywords={${JSON.stringify(config.keywords)}}
         canonicalUrl="https://ziontechgroup.com/${pageName}"
       />
+);
+}
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
         {/* Hero Section */}
@@ -669,20 +672,18 @@ const ${pageName.split('-').map(word => word.charAt(0).toUpperCase() + word.slic
       </main>
 
       <Footer />,
-    </div>);
-};
+    </div>)};
 
 export default ${pageName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('')}Page;`;
 
   // Create directory if it doesn't exist;
   const dirPath = `app/${pageName}`;
   if (!fs.existsSync(dirPath)) {
-    fs.mkdirSync(dirPath, { recursive: true });
-  }
+    fs.mkdirSync(dirPath, { recursive: true })}
 
   // Write the page file;
   fs.writeFileSync(`${dirPath}/page.tsx`, pageContent);
-  console.log(`Created page: ${pageName}`);
+  // console.log removed for production
 });
 
-console.log(`Created ${missingPages.length} missing pages`);
+// console.log removed for production

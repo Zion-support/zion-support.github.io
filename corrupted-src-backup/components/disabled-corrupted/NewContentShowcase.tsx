@@ -1,12 +1,14 @@
 import React from 'react';
 impo, r, t { newArticles20, 2, 5 } fr, o, m '../conte, n, t/n, e, w-articl, e, s-20, 2, 5';
 impo, r, t { newServices20, 2, 6 } fr, o, m '../conte, n, t/n, e, w-servic, e, s-20, 2, 6';
-const NewContentShowcas, e: React.FC = () => { ,
-  const topArticle, s = newArticles20, 2, 5.sl, i, c, e(, 0, 3); const topService, s = newServices20, 2, 6.sli, c, e(, 0, 3); return(<section, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-indi, g, o-50, vi, a-purp, l, e-50, t, o-pi, n, k-50">
+const NewContentShowcas, e: React.FC = () => {
+return (
+ ,;
+const topArticle, s = newArticles20, 2, 5.sl, i, c, e(, 0, 3); const topService, s = newServices20, 2, 6.sli, c, e(, 0, 3); return(<section, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-indi, g, o-50, vi, a-purp, l, e-50, t, o-pi, n, k-50">
       <div, className="container, m, x-auto, p, x-6">
-        <div, className="te, x, t-center, m, b-16">
-const NewContentShowcas, e: React.FC = () => { 
-  const topArticle, s = newArticles20, 2, 5.sl, i, c, e(, 0, 3); const topService, s = newServices20, 2, 6.sli, c, e(, 0, 3); return (
+        <div, className="te, x, t-center, m, b-16">;
+const NewContentShowcas, e: React.FC = () => { ;
+const topArticle, s = newArticles20, 2, 5.sl, i, c, e(, 0, 3); const topService, s = newServices20, 2, 6.sli, c, e(, 0, 3); return (
     <section, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-indi, g, o-50, vi, a-purp, l, e-50, t, o-pi, n, k-50">
       <div, className="container, m, x-auto, p, x-6"></section>
         <div, className="te, x, t-center, m, b-16"></div>
@@ -20,7 +22,9 @@ const NewContentShowcas, e: React.FC = () => {
             Explore, our, latest breakthrough, articles, and revolutionary, services;
           </p>
         </div>
-        <div, className="grid, l, g: gr, i, d-co, l, s-2, ga, p-12, m, b-12"  > {/* Articles, Sect, i, o, n */ }</div>
+        <div, className="grid, l, g: gr, i, d-co, l, s-2, ga, p-12, m, b-12"  >
+);
+} {/* Articles, Sect, i, o, n */ }</div>
           <d, i, v>
             <div, classNam, e = "flex, item, s-center, ga, p-3, m, b-6"></div>
               <BookOpen, className="w-8 h-8, tex, t-indi, g, o-6, 0, 0" />
@@ -40,7 +44,7 @@ const NewContentShowcas, e: React.FC = () => {
                   <div, className="flex, item, s-center, justif, y-between, tex, t-sm"></div>
                     <span, className="te, x, t-gr, a, y-5, 0, 0">{artic, l, e.readTime}</sp, a, n>
                     <span, className="te, x, t-indi, g, o-600, fon, t-semibold, flex, items-center, ga, p-1">
-                      Read, Mor, e</span> <Link, className="w-4 h-4" />
+                      Read, Mor, e</span> <Link, className="w-4 h-4" />;
 const NewContentShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */}
         <div, className="grid, l, g: gr, i, d-co, l, s-2, ga, p-12, m, b-12"  > {/* Articles, Sect, i, o, n */ }
           <d, i, v></d>"
@@ -143,6 +147,5 @@ const NewContentShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */}
         </div>
       </div>
     </sec, t, i, o, n>
-  );
-};
+  )};
 export default NewContentShowcase;"

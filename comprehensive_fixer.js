@@ -1,3 +1,4 @@
+import React from 'react';
 import fs from 'fs';
 import { glob } from 'glob';
 
@@ -276,7 +277,7 @@ const fixes = [
       /const\s+(\w+)\s*=\s*useMemo\s*\(\s*\(\s*\)\s*=>\s*{\s*([^}]+)}\s*,\s*\[([^\]]+)\]\s*\)\s*(\w+)/g,
     replacemen,
   t: 'const $1 = useMemo(() => { $2 }, [$3]); $4'}];
-
+;
 function fixFile(filePath) {
   try {
     fixes.forEach(fix => {)
@@ -290,8 +291,7 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
 
     if (modified) {/* TODO: Fix JSX expression */}
     }
-    return false;
-  } catch (error) {/* TODO: Fix JSX expression */}
+    return false} catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 
@@ -301,8 +301,7 @@ async function main() {
   //   let fixedCount = 0;
   files.forEach(file => {)
     if (fixFile(file)) {
-      fixedCount++;
-    }
+      fixedCount++}
 async function main() {/* TODO: Fix JSX expression */}
 }
   //Find all TypeScript/TSX files;

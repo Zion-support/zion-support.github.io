@@ -2,10 +2,9 @@
 import React from 'react';
 import {Receipt, TrendingUp, Shield, Zap, Brain, Target, CheckCircle, Star, Phone} from 'lucide-react';
 import { Link } from 'react-router-dom';
-
-
-const ExpenseTrackerPage: React.FC = () => {
-  const features = [
+;
+const ExpenseTrackerPage: React.FC = () => {;
+const features = [
     {
       icon: Receipt,
       title: 'Smart Receipt Scanning',
@@ -34,8 +33,8 @@ iconicon: Shield,
       benefit:     ,
 $4}
   ];
-
-  const pricingPlans = [
+;
+const pricingPlans = [
       name: 'Personal',
       price: '$9',
       period: '/month',
@@ -71,9 +70,8 @@ $4}
         'Dedicated support',
         'White-label options',
         'Unlimited data retention',
-        'Custom compliance rules'
-
-  const integrations = [
+        'Custom compliance rules';
+const integrations = [
     { name: 'QuickBooks', icon: '📊', description: 'Accounting software' },
     { name: 'Xero', icon: '💰', description: 'Cloud accounting' },
     { name: 'Sage', icon: '📈', description: 'Business management' },
@@ -82,8 +80,8 @@ $4}
     { name: 'Slack', icon: '💬', description: 'Team communication' },
     { name: 'Microsoft Teams', icon: '👥', description: 'Collaboration' },
     { name: 'Google Workspace', icon: '📧', description: 'Productivity suite' }
-
-  const testimonials = [
+;
+const testimonials = [
       name: 'Michael Johnson',
       company: 'Small Business Owner',
       role: 'CEO',
@@ -225,10 +223,10 @@ $4}
 
 
 import { Link } from 'react-router-dom';
-const ExpenseTrackerPage: React.FC = () => {
-  const features = [];
+const ExpenseTrackerPage: React.FC = () => {;
+const features = [];
   return (
-    {// TODO: Add content;}
+    {// TODO: Add content}
 
 };
   ico,
@@ -249,9 +247,10 @@ const ExpenseTrackerPage: React.FC = () => {
 
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
-
+;
 const PagePage: React.FC = () => {
+return (
+
   return (
     
           
@@ -265,6 +264,8 @@ const PagePage: React.FC = () => {
   )
     
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+);
+}
 
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-16 pt-24"></section>"
@@ -360,8 +361,7 @@ Integrates with Your Tools;"
             {pricingPlans.map((plan, index) => ()}
           <div key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border-2 transition-all duration-300 ${}
   // TOD,
-  O: Add content;
-}
+  O: Add content}
 //                 plan.popular;
 //                   ? 'border-cyan-400 scale-105'
                   : 'border-slate-700,
@@ -414,8 +414,7 @@ Most Popular;
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto"></p>
             Join thousands of businesses using AI Expense Tracker to streamline financial;
             management and gain better control over their spending.
-  );
-};
+  )};
 
 
 export default ExpenseTrackerPage;

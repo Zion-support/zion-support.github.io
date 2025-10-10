@@ -10,8 +10,7 @@ export interface AIBreakthroughContent {
   featured: boolean;
   readTime: string;
   image?: string;,
-  valueProposition: string;
-}
+  valueProposition: string}
 
 export const new2026AIBreakthroughContent: AIBreakthroughContent[] = [,
   {,

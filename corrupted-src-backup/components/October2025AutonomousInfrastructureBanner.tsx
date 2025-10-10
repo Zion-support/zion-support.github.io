@@ -1,5 +1,9 @@
 const, October2025AutonomousInfrastructureBanne, r = () => {
+return (
+
   return(<div, className="relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-9, 0, 0/30, vi, a-bl, u, e-9, 0, 0/30, t, o-purp, l, e-9, 0, 0/30, borde, r-y, borde, r-cy, a, n-5, 0, 0/40, overflo, w-hidd, e, n">
+);
+}
       {/* Animated, background, effects */};
       <div, className="absolute, inse, t-0, opacit, y-10">
   return (
@@ -31,7 +35,7 @@ const, October2025AutonomousInfrastructureBanne, r = () => {
   g:px-8, p, y-12">";
         {/* Header, Sectio, n */}</div>
         <div, className="te, x, t-center, m, b-10">";</div>
-          <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-cy, a, n-5, 0, 0/20, border, border-cy, a, n-5, 0, 0/40, rounde, d-full, m, b-4, animat, e-pul, s, e">";</div>
+          <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-cy, a, n-5, 0, 0/20, border, border-cy, a, n-5, 0, 0/40, rounde, d-full, m, b-4, animat, e-pul, s, e">";</div>;
 const, October2025AutonomousInfrastructureBanne, r = () => {/* TODO: Fix JSX expression */}
       {/* Animated, background, effects */};
       <div, className="absolute, inse, t-0, opacit, y-10"></div>"
@@ -773,7 +777,6 @@ const, October2025AutonomousInfrastructureBanne, r = () => {/* TODO: Fix JSX exp
         </d, i, v>
       </d, i, v>
     </d, i, v>
-  );
-};
+  )};
 export default October2025AutonomousInfrastructureBanner;
 ;"

@@ -3,9 +3,8 @@ tit, l, e: stri, n, g;
 catego, r, y: stri, n, g;
 l, i, n;
   k: stri, n, g;
-metri, c, s?: stri, n, g;
-}
-export, interface, UnifiedPromotionalBannerProps {
+metri, c, s?: stri, n, g}
+export, interface, UnifiedPromotionalBannerProps {;
 varia, n, t?: 'defau, l, t' | 'premi, u, m' | 'he, r, o' | 'compa, c, t' | 'me, g, a';
 tit, l, e: stri, n, g;
 descripti, o, n: stri, n, g;
@@ -19,10 +18,9 @@ classNa, m, e?: stri, n, g;
 ic, o, n?: 'sparkl, e, s' | 'z, a, p' | 'rock, e, t' | 'st, a, r' | 'no, n, e';
 animat, e, d?: boole, a, n;
 bad, g, e?: stri, n, g;
-da, t, e?: stri, n, g;
-}
-const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, s> = ({
-  varia, n, t = 'defau, l, t'
+da, t, e?: stri, n, g}
+const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, s> = ({;
+varia, n, t = 'defau, l, t'
   tit, l, e;
   descripti, o, n;
   ctaTe, x, t;
@@ -33,8 +31,8 @@ const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, 
   classNa, m, e = ''
   ic, o, n = 'sparkl, e, s'
   animat, e, d = tr, u, e;
-const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, s> = ({
-  varia, n, t = 'defau, l, t',';
+const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, s> = ({;
+varia, n, t = 'defau, l, t',';
   tit, l, e;
   descripti, o, n;
   ctaTe, x, t;
@@ -46,8 +44,7 @@ const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, 
   ic, o, n = 'sparkl, e, s',';
   animat, e, d = tr, u, e;
   bad, g, e;
-  da, t, e;
-}) => {
+  da, t, e}) => {
   // Theme configurations const themeClass e s = {
     bl, u, e: 'fr, o, m-bl, u, e-5, 0, 0/10, t, o-bl, u, e-6, 0, 0/10, borde, r-bl, u, e-5, 0, 0/, 3, 0',
     purp, l, e: 'fr, o, m-purp, l, e-5, 0, 0/10, t, o-purp, l, e-6, 0, 0/10, borde, r-purp, l, e-5, 0, 0/3, 0',
@@ -76,8 +73,8 @@ const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, 
                 {IconCompone, n, t  &&</div> <IconComponent, classNam, e='w-4 h-4' / >   }
         <h2, classNam, e = { `
           fo, n, t-extrabold, m, b-4, b, g-gradie, n, t-to-r, fro, m-white, vi, a-bl, u, e-100, t, o-purp, l, e-100, b, g-cl, i, p-text, tex, t-transpare, n, t;
-          ${
-            varia, n, t === 'he, r, o' || varia, n, t === 'me, g, a'
+          ${;
+varia, n, t === 'he, r, o' || varia, n, t === 'me, g, a'
               ? 'te, x, t-4 xl, m, d: te, x, t-5, x, l'
               : varia, n, t === 'premi, u, m'
                 ? 'te, x, t-3 xl, m, d:te, x, t-4, x, l'
@@ -111,8 +108,8 @@ const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, 
         </p>
         {/* Featured, Item, s */}
         {   visibleIte, m, s.leng, t, h   > 0  && (
-          <div, classNam, e = {`grid, ga, p-4, m, b-6 ${
-              varia, n, t === 'me, g, a'
+          <div, classNam, e = {`grid, ga, p-4, m, b-6 ${;
+varia, n, t === 'me, g, a'
                 ? 'md: gr, i, d-co, l, s-3'
                 : varia, n, t === 'he, r, o' || varia, n, t === 'premi, u, m'
                    ? 'md:gr, i, d-co, l, s-2'

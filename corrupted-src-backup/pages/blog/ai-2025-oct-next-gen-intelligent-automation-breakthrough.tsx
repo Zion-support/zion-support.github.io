@@ -1,9 +1,11 @@
 impo, r, t {/* TODO: Fix JSX expression */}
 } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-
-const NextGenIntelligentAutomationBreakthroug, h = () => { 
-  return(<>
+;
+const NextGenIntelligentAutomationBreakthroug, h = () => {
+return (
+ 
+  return(<React.Fragment>
       <Helm, e, t>
         <title>
           Ne, x, t-Gen, Intelligent, Automation Breakthrou, g, h: AI-Powered, Workflows, Redefining Operatio, n, s | Zion, Tech, Group;
@@ -49,6 +51,8 @@ const NextGenIntelligentAutomationBreakthroug, h = () => {
                           <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
                 <h2, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3'></h2>
                   <Brain, classNam, e='w-8 h-8, tex, t-purp, l, e-4, 0, 0' />
+);
+}
                   Ne, x, t-Gen, Automation, Capabilities;
 const NextGenIntelligentAutomationBreakthroug, h = () => {/* TODO: Fix JSX expression */}
                 { val, u, e: '$3., 2, T', lab, e, l: 'Automation, Market, 202, 5' },

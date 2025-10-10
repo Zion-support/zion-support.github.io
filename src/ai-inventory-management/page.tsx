@@ -221,5 +221,4 @@ export default function AIInventoryManagementPage() {/* TODO: Fix JSX expression
         <Footer /></Footer>
       </div>
     </div>
-  );
-}"
+  )}"

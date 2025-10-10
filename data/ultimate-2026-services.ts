@@ -79,8 +79,7 @@ export interface Ultimate2026Service {/* TODO: Fix JSX expression */}
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-];
-  }
+]}
 }
     address: string;
     addres,
@@ -114,8 +113,7 @@ export const,
   realImplementation: boolean;
   contactInfo: unknown;
     mobile: string, email: string;
-    address: string;
-  }
+    address: string}
 }
 export const ultimate2026 Services: Ultimate2026 Service[] = [,
     id: "2026-ultimate-service", name: "2026 Ultimate Service Platform",
@@ -292,7 +290,7 @@ i,
   o: {/* TODO: Fix JSX expression */}
   l: string} addres,
   s: string} addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; } } addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]} } addres,
   s: string} export const,
   ultimate2026Services: Ultimate2026Service[] = [ feature,
   s: [ 'Ultimate platform'' 'All technologies'' 'Maximum capabilities'' 'Premium features'' '24/7 support' ]' lin,

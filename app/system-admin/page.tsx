@@ -1,8 +1,7 @@
 'use client';
 import React from 'react';
-
-const PagePage: React.FC = () => {
-  const features = [
+;
+const PagePage: React.FC = () => {const features = [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -24,8 +23,8 @@ const PagePage: React.FC = () => {
       description: 'Worldwide deployment and support for international businesses'
     }
   ];
-
-  const benefits = [
+;
+const benefits = [
           </div>
         </div>
       </section>
@@ -51,7 +50,7 @@ const PagePage: React.FC = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
-            ))}
+            ));
           </div>
         </div>
       </section>
@@ -74,7 +73,7 @@ const PagePage: React.FC = () => {
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-lg">{benefit}</p>
               </div>
-            ))}
+            ));
           </div>
         </div>
       </section>
@@ -102,8 +101,5 @@ const PagePage: React.FC = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
-};
-
+    </div>)
 export default PagePage;

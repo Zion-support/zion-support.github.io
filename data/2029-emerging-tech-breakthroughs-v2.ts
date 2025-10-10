@@ -1,3 +1,4 @@
+import React from 'react';
 
   id: string;
   name: string;
@@ -162,8 +163,8 @@ export const,
         'Neuralink, CTRL-labs, Kernel, Traditional assistive technology'
       ]
       marketSize: '$5 B market'
-      growthRate: '800% annual growth'
-      variant: 'space-futuristic'
+      growthRate: '800% annual growth';
+variant: 'space-futuristic'
       contactInfo: unknown;
       color: 'from - purple - 600 via - pink - 600 to - rose - 600'
       text_color: 'text - purple - 400',
@@ -186,8 +187,8 @@ export const,
       marketSiz,
   e: '$5B market'
       growthRat,
-  e: '800% annual growth'
-      varian,
+  e: '800% annual growth';
+varian,
   t: 'space-futuristic'
       contactInf,
   o: unknown,
@@ -227,8 +228,8 @@ export const,
   s: [,
         'Neuralink, CTRL - labs, Kernel, Traditional assistive technology'],
       market_size: '$5B market'
-      growth_rate: '800% annual growth'
-      variant: 'space - futuristic'
+      growth_rate: '800% annual growth';
+variant: 'space - futuristic'
       contact_info: unknown;
         mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -240,8 +241,7 @@ export const,
       launch_date: '2025 - 03 - 01'
       customers: 15;
       rating: 5 && 5.0;
-      reviews: 12;
-    },
+      reviews: 12},
     // Quantum Internet Gateway;
       id: 'quantum - internet - gateway - enterprise',
       name: 'Quantum Internet Gateway Enterprise',
@@ -252,8 +252,8 @@ export const,
       market_siz,
   e: '$5B market',
       growth_rat,
-  e: '800% annual growth',
-      varian,
+  e: '800% annual growth',;
+varian,
   t: 'space - futuristic',
       contact_inf,
   o: unknown,
@@ -325,8 +325,8 @@ export const,
         'IBM Quantum Network, Google Quantum Internet, Traditional internet providers'
       ]
       marketSize: '$8 B market'
-      growthRate: '600% annual growth'
-      variant: 'quantum-futuristic'
+      growthRate: '600% annual growth';
+variant: 'quantum-futuristic'
       contactInfo: unknown;
       color: 'from - blue - 600 via - indigo - 600 to - purple - 600'
       text_color: 'text - blue - 400',
@@ -349,8 +349,8 @@ export const,
       marketSiz,
   e: '$8B market'
       growthRat,
-  e: '600% annual growth'
-      varian,
+  e: '600% annual growth';
+varian,
   t: 'quantum-futuristic'
       contactInf,
   o: unknown,
@@ -390,8 +390,8 @@ export const,
   s: [,
         'IBM Quantum Network, Google Quantum Internet, Traditional internet providers'],
       market_size: '$8B market'
-      growth_rate: '600% annual growth'
-      variant: 'quantum - futuristic'
+      growth_rate: '600% annual growth';
+variant: 'quantum - futuristic'
       contact_info: unknown;
         mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -403,8 +403,7 @@ export const,
       launch_date: '2025 - 02 - 15'
       customers: 25;
       rating: 4 && 4.9;
-      reviews: 18;
-    },
+      reviews: 18},
     // Synthetic Biology Platform;
       id: 'synthetic - biology - platform - enterprise',
       name: 'Synthetic Biology Platform Enterprise',
@@ -416,8 +415,8 @@ export const,
       market_siz,
   e: '$8B market',
       growth_rat,
-  e: '600% annual growth',
-      varian,
+  e: '600% annual growth',;
+varian,
   t: 'quantum - futuristic',
       contact_inf,
   o: unknown,
@@ -490,8 +489,8 @@ export const,
         'Ginkgo Bioworks, Zymergen, Twist Bioscience, Traditional biotechnology'
       ]
       marketSize: '$18 B market'
-      growthRate: '500% annual growth'
-      variant: 'biotech-futuristic'
+      growthRate: '500% annual growth';
+variant: 'biotech-futuristic'
       contactInfo: unknown;
       color: 'from - green - 600 via - emerald - 600 to - teal - 600'
       text_color: 'text - green - 400',
@@ -514,8 +513,8 @@ export const,
       marketSiz,
   e: '$18B market'
       growthRat,
-  e: '500% annual growth'
-      varian,
+  e: '500% annual growth';
+varian,
   t: 'biotech-futuristic'
       contactInf,
   o: unknown,
@@ -555,8 +554,8 @@ export const,
   s: [,
         'Ginkgo Bioworks, Zymergen, Twist Bioscience, Traditional biotechnology'],
       market_size: '$18B market'
-      growth_rate: '500% annual growth'
-      variant: 'biotech - futuristic'
+      growth_rate: '500% annual growth';
+variant: 'biotech - futuristic'
       contact_info: unknown;
         mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -568,8 +567,7 @@ export const,
       launch_date: '2025 - 01 - 15'
       customers: 35;
       rating: 4 && 4.8;
-      reviews: 45;
-    },
+      reviews: 45},
         'Real-time fusion reactor monitoring',
     // Fusion Energy Management Platform;
       id: 'fusion - energy - management - platform',
@@ -581,8 +579,8 @@ export const,
       market_siz,
   e: '$18B market',
       growth_rat,
-  e: '500% annual growth',
-      varian,
+  e: '500% annual growth',;
+varian,
   t: 'biotech - futuristic',
       contact_inf,
   o: unknown,
@@ -655,8 +653,8 @@ export const,
         'ITER, Commonwealth Fusion Systems, TAE Technologies, Traditional energy management'
       ]
       marketSize: '$12 B market'
-      growthRate: '700% annual growth'
-      variant: 'quantum-energy-revolutionary'
+      growthRate: '700% annual growth';
+variant: 'quantum-energy-revolutionary'
       contactInfo: unknown;
       color: 'from - yellow - 600 via - orange - 600 to - red - 600'
       text_color: 'text - yellow - 400',
@@ -679,8 +677,8 @@ export const,
       marketSiz,
   e: '$12B market'
       growthRat,
-  e: '700% annual growth'
-      varian,
+  e: '700% annual growth';
+varian,
   t: 'quantum-energy-revolutionary'
       contactInf,
   o: unknown,
@@ -720,8 +718,8 @@ export const,
   s: [,
         'ITER, Commonwealth Fusion Systems, TAE Technologies, Traditional energy management'],
       market_size: '$12B market'
-      growth_rate: '700% annual growth'
-      variant: 'quantum - energy - revolutionary'
+      growth_rate: '700% annual growth';
+variant: 'quantum - energy - revolutionary'
       contact_info: unknown;
         mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -733,8 +731,7 @@ export const,
       launch_date: '2025 - 04 - 01'
       customers: 8;
       rating: 5 && 5.0;
-      reviews: 6;
-    },
+      reviews: 6},
     // Space Mining Operations Platform;
       id: 'space - mining - operations - platform',
       name: 'Space Mining Operations Platform',
@@ -745,8 +742,8 @@ export const,
       market_siz,
   e: '$12B market',
       growth_rat,
-  e: '700% annual growth',
-      varian,
+  e: '700% annual growth',;
+varian,
   t: 'quantum - energy - revolutionary',
       contact_inf,
   o: unknown,
@@ -818,8 +815,8 @@ export const,
         'Planetary Resources, Deep Space Industries, Traditional mining companies'
       ]
       marketSize: '$20 B market'
-      growthRate: '1000% annual growth'
-      variant: 'space-futuristic'
+      growthRate: '1000% annual growth';
+variant: 'space-futuristic'
       contactInfo: unknown;
       color: 'from - purple - 600 via - indigo - 600 to - blue - 600'
       text_color: 'text - purple - 400',
@@ -842,8 +839,8 @@ export const,
       marketSiz,
   e: '$20B market'
       growthRat,
-  e: '1000% annual growth'
-      varian,
+  e: '1000% annual growth';
+varian,
   t: 'space-futuristic'
       contactInf,
   o: unknown,
@@ -883,8 +880,8 @@ export const,
   s: [,
         'Planetary Resources, Deep Space Industries, Traditional mining companies'],
       market_size: '$20B market'
-      growth_rate: '1000% annual growth'
-      variant: 'space - futuristic'
+      growth_rate: '1000% annual growth';
+variant: 'space - futuristic'
       contact_info: unknown;
         mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -896,8 +893,7 @@ export const,
       launch_date: '2025 - 05 - 01'
       customers: 5;
       rating: 5 && 5.0;
-      reviews: 3;
-    },
+      reviews: 3},
     // Quantum AI Consciousness Platform;
       id: 'quantum - ai - consciousness - platform',
       name: 'Quantum AI Consciousness Platform',
@@ -908,8 +904,8 @@ export const,
       market_siz,
   e: '$20B market',
       growth_rat,
-  e: '1000% annual growth',
-      varian,
+  e: '1000% annual growth',;
+varian,
   t: 'space - futuristic',
       contact_inf,
   o: unknown,
@@ -979,8 +975,8 @@ export const,
       roi: 'Research institutions achieve breakthrough discoveries. AI companies develop superior AI systems with genuine consciousness.',
       competitors: ['OpenAI, Anthropic, DeepMind, Traditional AI companies']
       marketSize: '$8B market',
-      growthRate: '900% annual growth',
-      variant: 'ai-futuristic',
+      growthRate: '900% annual growth',;
+variant: 'ai-futuristic',
       contactInfo: unknown;
         'Production consciousness platform with research validation, ethical compliance, and ongoing support. Includes consciousness research training and certification.'
       launchDate: '2025-06-01'
@@ -994,8 +990,8 @@ export const,
       marketSiz,
   e: '$8B market'
       growthRat,
-  e: '900% annual growth'
-      varian,
+  e: '900% annual growth';
+varian,
   t: 'ai-futuristic'
       contactInf,
   o: unknown,

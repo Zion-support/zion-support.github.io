@@ -24,9 +24,8 @@ import {
   Server,
   Monitor
 } from 'lucide-react';
-
-const CloudInfrastructureManagerPage: React.FC = () => {
-  const features = [
+;
+const CloudInfrastructureManagerPage: React.FC = () => {const features = [
     {
       icon: Cloud,
       title: 'Multi-Cloud Management',
@@ -48,8 +47,8 @@ const CloudInfrastructureManagerPage: React.FC = () => {
       description: 'Seamless integration with CI/CD pipelines and DevOps tools for streamlined operations.'
     }
   ];
-
-  const benefits = [
+;
+const benefits = [
     'Centralized cloud infrastructure management',
     'Automated scaling and optimization',
     'Cost reduction and optimization',
@@ -61,7 +60,7 @@ const CloudInfrastructureManagerPage: React.FC = () => {
   ];
 
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         <title>Cloud Infrastructure Manager - Zion Tech Group | Cloud Management Platform</title>
         <meta name="description" content="Comprehensive cloud infrastructure management platform by Zion Tech Group. Manage, monitor, and optimize your cloud resources across multiple providers." />
@@ -115,7 +114,7 @@ const CloudInfrastructureManagerPage: React.FC = () => {
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
                 </div>
-              ))}
+              ));
             </div>
           </div>
         </section>
@@ -138,7 +137,7 @@ const CloudInfrastructureManagerPage: React.FC = () => {
                   <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                   <p className="text-gray-300 text-lg">{benefit}</p>
                 </div>
-              ))}
+              ));
             </div>
           </div>
         </section>
@@ -167,8 +166,5 @@ const CloudInfrastructureManagerPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
-  );
-};
-
+    </React.Fragment>)
 export default CloudInfrastructureManagerPage;

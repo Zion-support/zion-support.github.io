@@ -4,9 +4,8 @@ import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight } from 'lucide-react';
-
-const PagePage: React.FC = () => {
-  const features = [
+;
+const PagePage: React.FC = () => {const features = [
     {
       title: 'Feature 1',
       description: 'Description of feature 1',
@@ -25,7 +24,14 @@ const PagePage: React.FC = () => {
   ];
 
   const benefits = [
+;
+const benefits = [
     'Benefit 1',
+      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'    'Benefit 1',
     'Benefit 2',
     'Benefit 3',
     'Benefit 4',
@@ -34,16 +40,41 @@ const PagePage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+    <>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
         <title>Page | Zion Tech Group</title>
         <meta name="description" content="Professional page solutions by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group" />
       </Helmet>
       
-      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+        <Navigation />
 
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-cyan-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              Ai Api Management
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Advanced AI-powered ai api management solution for modern businesses.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                View Demo
+              </button>
+            </div>
+          </div>
+        </section>
       {/* Hero Section */}
+        </section>      {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
@@ -93,10 +124,10 @@ const PagePage: React.FC = () => {
                       <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
                       {benefit}
                     </li>
-                  ))}
+                  ));
                 </ul>
               </div>
-            ))}
+            ));
           </div>
         </div>
       </section>
@@ -119,7 +150,7 @@ const PagePage: React.FC = () => {
                 </div>
                 <h3 className="text-lg font-semibold text-white">{benefit}</h3>
               </div>
-            ))}
+            ));
           </div>
         </div>
       </section>
@@ -169,11 +200,10 @@ const PagePage: React.FC = () => {
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                           {benefit}
                         </li>
-                      ))}
-                    </ul>
-                  )}
+                      ));
+                    </ul>);
                 </div>
-              ))}
+              ));
             </div>
           </div>
         </section>
@@ -198,7 +228,7 @@ const PagePage: React.FC = () => {
                   </div>
                   <p className="text-lg text-white font-medium">{benefit}</p>
                 </div>
-              ))}
+              ));
             </div>
           </div>
         </section>
@@ -224,10 +254,18 @@ const PagePage: React.FC = () => {
             </div>
           </div>
         </section>
+        <Footer />
       </div>
       <Footer />
+      </div>
+    </>
+        
+        <Footer />
+      </div>
     </div>
   );
 };
 
+    </div>)
 export default PagePage;
+      </section>export default AiApiManagementPage;export default PagePage;

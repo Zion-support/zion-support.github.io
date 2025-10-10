@@ -1,3 +1,4 @@
+import React from 'react';
 
 
 
@@ -6,10 +7,10 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 import { Target, BarChart, Zap, Settings, CheckCircle, Star,  Target,  BarChart,  Settings } from 'lucide-react';
-const AILeadScoringPage: React.FC = () => {
-  const features = [];
+const AILeadScoringPage: React.FC = () => {;
+const features = [];
   return (
-    {// TODO: Add content;}
+    {// TODO: Add content}
 
 };
   ico,
@@ -19,8 +20,7 @@ const AILeadScoringPage: React.FC = () => {
       descriptio,
   n: 'AI-powered lead scoring and qualification',
       benefit,
-  s: ['Behavioral analysis', 'Demographic scoring', 'Engagement tracking'];
-    },
+  s: ['Behavioral analysis', 'Demographic scoring', 'Engagement tracking']},
       ico,
   n: BarChart,
       titl,
@@ -98,8 +98,7 @@ const AILeadScoringPage: React.FC = () => {
       <Footer /></Footer>
 
     </div>
-  );
-};
+  )};
 
 
 export default PagePage;

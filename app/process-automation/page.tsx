@@ -23,9 +23,8 @@ import {
   Workflow,
   Bot
 } from 'lucide-react';
-
-const ProcessAutomationPage: React.FC = () => {
-  const features = [
+;
+const ProcessAutomationPage: React.FC = () => {const features = [
     {
       icon: Zap,
       title: 'Workflow Automation',
@@ -47,8 +46,8 @@ const ProcessAutomationPage: React.FC = () => {
       description: 'Track and optimize your automated processes with real-time analytics and reporting.'
     }
   ];
-
-  const benefits = [
+;
+const benefits = [
     'Reduce manual work and human errors',
     'Increase operational efficiency',
     'Lower operational costs',
@@ -60,7 +59,7 @@ const ProcessAutomationPage: React.FC = () => {
   ];
 
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         <title>Process Automation Services - Zion Tech Group | Workflow Automation</title>
         <meta name="description" content="Professional process automation services by Zion Tech Group. Streamline workflows, reduce costs, and improve efficiency with AI-powered automation." />
@@ -114,7 +113,7 @@ const ProcessAutomationPage: React.FC = () => {
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
                 </div>
-              ))}
+              ));
             </div>
           </div>
         </section>
@@ -137,7 +136,7 @@ const ProcessAutomationPage: React.FC = () => {
                   <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                   <p className="text-gray-300 text-lg">{benefit}</p>
                 </div>
-              ))}
+              ));
             </div>
           </div>
         </section>
@@ -166,8 +165,5 @@ const ProcessAutomationPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
-  );
-};
-
+    </React.Fragment>)
 export default ProcessAutomationPage;

@@ -2,9 +2,8 @@
 
 import React from 'react';
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp } from 'lucide-react';
-
-const ContentPromotionBanner: React.FC = () => {
-  const features = [
+;
+const ContentPromotionBanner: React.FC = () => {const features = [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -26,8 +25,8 @@ const ContentPromotionBanner: React.FC = () => {
       description: 'Worldwide deployment with local support and compliance'
     }
   ];
-
-  const benefits = [
+;
+const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -37,8 +36,8 @@ const ContentPromotionBanner: React.FC = () => {
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
-
-  const stats = [
+;
+const stats = [
     {
       icon: Users,
       value: '10,000+',
@@ -77,54 +76,61 @@ const ContentPromotionBanner: React.FC = () => {
               Get Started Today
             </button>
             <button className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
-              <ArrowRight className="w-5 h-5" />
               Learn More
+              <ArrowRight className="w-5 h-5" />
             </button>
           </div>
         </div>
 
-        {/* Stats Section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          {stats.map((stat, index) => (
+        {/* Features Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          {features.map((feature, index) => (
             <div key={index} className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                <stat.icon className="w-8 h-8 text-white" />
+              <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
+                <div className="flex justify-center mb-4">
+                  <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-3 rounded-full">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
               </div>
-              <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-              <div className="text-gray-400 text-sm">{stat.label}</div>
-              <div className="text-gray-500 text-xs mt-1">{stat.description}</div>
             </div>
-          ))}
+          ));
         </div>
 
-        {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {features.map((feature, index) => (
-            <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 text-center hover:border-purple-400 transition-all duration-300">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                <feature.icon className="w-8 h-8 text-white" />
+        {/* Stats Section */}
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
+          {stats.map((stat, index) => (
+            <div key={index} className="text-center">
+              <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+                <div className="flex justify-center mb-4">
+                  <div className="bg-gradient-to-r from-green-500 to-blue-500 p-3 rounded-full">
+                    <stat.icon className="w-8 h-8 text-white" />
+                  </div>
+                </div>
+                <div className="text-4xl font-bold text-white mb-2">{stat.value}</div>
+                <div className="text-xl font-semibold text-gray-300 mb-2">{stat.label}</div>
+                <div className="text-gray-400">{stat.description}</div>
               </div>
-              <h3 className="text-lg font-bold text-white mb-3">{feature.title}</h3>
-              <p className="text-gray-300 text-sm">{feature.description}</p>
             </div>
-          ))}
+          ));
         </div>
 
         {/* Benefits Section */}
-        <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 mb-16">
+        <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-white mb-4">Why Choose Our Solutions?</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We provide comprehensive AI and IT solutions that deliver real results for your business.
-            </p>
+            <p className="text-xl text-gray-300">Experience the benefits that thousands of businesses already enjoy</p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
-                <span className="text-gray-300">{benefit}</span>
+              <div key={index} className="flex items-center text-gray-300">
+                <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                <span>{benefit}</span>
               </div>
+<<<<<<< HEAD
             ))}
           </div>
         </div>
@@ -147,11 +153,11 @@ const ContentPromotionBanner: React.FC = () => {
                 Schedule Demo
               </button>
             </div>
+=======
+            ));
+>>>>>>> main
           </div>
         </div>
       </div>
-    </div>
-  );
-};
-
+    </div>)
 export default ContentPromotionBanner;

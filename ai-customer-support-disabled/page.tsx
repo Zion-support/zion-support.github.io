@@ -4,8 +4,8 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { MessageCircle, Headphones, Bot, Zap, Shield, BarChart, Clock, Users, CheckCircle, Star, ArrowRight, Phone, Mail } from 'lucide-react';
-const AICustomerSupportPage: React.FC = () => {
-  const features = [
+const AICustomerSupportPage: React.FC = () => {;
+const features = [
     {
       icon: MessageCircle;
       title: '24/7 AI Chat Support',
@@ -28,7 +28,7 @@ const AICustomerSupportPage: React.FC = () => {
       icon: Shield;
       title: 'Knowledge Base Integration',
       description: 'Seamlessly integrated knowledge base that provides accurate, up-to-date information to both AI and human agents.',
-      benefits: ['Real-time Updates', 'Version Control', 'Search Optimization', 'Content Management']
+      benefits: ['Real-time Updates', 'Version Control', 'Search Optimization', 'Content Management'];
 const,
   AICustomerSupportPage: React.FC = () => {/* TODO: Fix JSX expression */}
     },
@@ -39,8 +39,8 @@ const,
     {/* TODO: Fix JSX expression */}
     }
   ];
-
-  const pricing = [
+;
+const pricing = [
     {/* TODO: Fix JSX expression */}
     },
     {/* TODO: Fix JSX expression */}
@@ -58,7 +58,7 @@ const,
     {/* TODO: Fix JSX expression */}
   l: 'Languages Supported' }
   ];
-  return(<>
+  return(<React.Fragment>
       <SEOOptimizer;
         title="AI Customer Support Solutions - Zion Tech Group"
         description="Revolutionary AI-powered customer support with chatbots, omnichannel support, and intelligent automation. Boost satisfaction by 95% and reduce costs by 60%."
@@ -91,7 +91,7 @@ const,
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"></div>
                 <a
                   href="tel:+13024640950"
-  return (<>
+  return (<React.Fragment>
       <SEOOptimizer></SEOOptimizer>
         title="AI Customer Support Solutions - Zion Tech Group""
         description="Revolutionary AI-powered customer support with chatbots, omnichannel support, and intelligent automation. Boost satisfaction by 95% and reduce costs by 60%."
@@ -170,16 +170,18 @@ const,
         </main>
       </div>
     </div>
-    </>
-  );
-};
-
-
+    </React.Fragment>
+  )};
+;
 const AICustomerSupportPage2: React.FC = () => {
+return (
+
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">)
       <Navigation />)
       <main className="pt-24 pb-16 px-4">)
-        <div className="max-w-7xl mx-auto">),
+        <div className="max-w-7xl mx-auto">
+);
+}),
           {/* Hero Section */}
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg"></div>
@@ -336,8 +338,7 @@ const AICustomerSupportPage2: React.FC = () => {
         </div>
       </main>
     </div>
-  );
-};
+  )};
 
 
 export default AICustomerSupportPage;

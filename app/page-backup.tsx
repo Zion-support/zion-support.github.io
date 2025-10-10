@@ -1,9 +1,8 @@
 'use client';
 import React from 'react';
 'use client';
-
-const PageBackupPage: React.FC = () => {
-  const features = [
+;
+const PageBackupPage: React.FC = () => {const features = [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -25,8 +24,8 @@ const PageBackupPage: React.FC = () => {
       description: 'Worldwide deployment and support for international businesses'
     }
   ];
-
-  const benefits = [
+;
+const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -52,7 +51,7 @@ const PageBackupPage: React.FC = () => {
                 <p className="text-gray-300">{feature.description}</p>
               </div>
               </div>
-            ))}
+            ));
           </div>
         </div>
       </section>
@@ -80,8 +79,5 @@ const PageBackupPage: React.FC = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
-};
-
+    </div>)
 export default PageBackupPage;

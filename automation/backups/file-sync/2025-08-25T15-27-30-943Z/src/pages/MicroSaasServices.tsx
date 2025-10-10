@@ -644,8 +644,8 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
           <div className="text-left"></div>
             <Search className="text-left" />
             <input;
-              type="text"
-  const _pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];"
+              type="text";
+const _pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];"
     <div className="text-left"></div>
       {/* Animated Background */}"
       <div className="text-left"></div>"

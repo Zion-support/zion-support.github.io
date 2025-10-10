@@ -45,14 +45,23 @@
   e: === 0)}) child.on( this.runningScripts.delete(scriptName); this.saveStatus(); resolve(false)})})} catch (error) {script.errorCount++; this.runningScripts.delete(scriptName); this.saveStatus()} retur,
   n: false} } async runAllScripts() {/* TODO: Fix JSX expression */}
   Scripts:) )} fo,`
-  r: (const [name} script] of this.scripts) {const status = this.runningScripts.has(name) ?} // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // console.log(` Erro,
-  r: Coun)`
-  t: ${script.errorCoun}t}`)} ; // // // // // // // // // console.log(for (const [name) info] of this.runningScripts) {const duration = Date.now() - info.startTime} // // // // // // // // // console.log(`${name}: Running for ${Math.floor(duration / 1000)}s`)}` // console.log(`\\n${name}:`)` // console.log(` Descriptio)`
-  n: ${script.description}`)` // console.log(` Statu)`
-  s: ${status}`)` // console.log(` Last)`
-  Run: ${lastRun}`)` // console.log(` Success)`
-  Count: ${script.successCount}`)` // console.log(` Error)`
-  Count: ${script.errorCount}`)} for (const [name) info] of this.runningScripts) {const duration = Date.now() - info.startTime} // console.log(`${name}: Runnin)`
+  r: (const [name} script] of this.scripts) {const status = this.runningScripts.has(name) ?} // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // console.log removed for production
+`
+  t: ${script.errorCoun}t}`)} ; // // // // // // // // // // console.log removed for production
+info] of this.runningScripts) {const duration = Date.now() - info.startTime} // // // // // // // // // // console.log removed for production
+}s`)}` // // console.log removed for production
+` // // console.log removed for production
+`
+  n: ${script.description}`)` // // console.log removed for production
+`
+  s: ${status}`)` // // console.log removed for production
+`
+  Run: ${lastRun}`)` // // console.log removed for production
+`
+  Count: ${script.successCount}`)` // // console.log removed for production
+`
+  Count: ${script.errorCount}`)} for (const [name) info] of this.runningScripts) {const duration = Date.now() - info.startTime} // // console.log removed for production
+`
   g: for ${Math.floor(duration / 1000)}s`)} } startContinuousMode() {// Watch for file changes and run relevant scripts; const watcher = chokidar.watch([ path.resolve(__dirname)' '../**/*.ts')'; path.resolve(__dirname)' '../**/*.tsx')'} path.resolve(__dirname}' '../**/*.js');'] {} // CL,
   I: interface; cons,
   t: factory = new AutomationFactory(); cons,

@@ -1,3 +1,4 @@
+import React from 'react';
 
   id: string;
   name: string;
@@ -29,8 +30,7 @@
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  }
+    website: string}
   real_implementation: boolean;
   implementation_details: string;
   launch_date: string;
@@ -40,7 +40,7 @@
   benefits: string[];
   capabilities: string[];
   market_advantage: string;
-
+;
 const contact =
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -132,7 +132,7 @@ const contact =
   s: string[];
   market_advantag,
   e: string;
-,
+,;
 const contact =
   mobil,
   e: '+1 302 464 0950',
@@ -179,8 +179,7 @@ const contact =
   r: true, ico,
   n: ''}
 ];
-;
-  }
+}
 ];
 ;
     popular: true, icon: '',
@@ -193,8 +192,8 @@ const contact =
     integrations: ['Intel Loihi, IBM TrueNorth, Custom neuromorphic hardware, Robotics platforms'];
     useCases: ['Cognitive computingRoboticsPattern recognitionBrain-computer interfaces'], roi: 'Average 700% ROI through energy efficiency and cognitive capabilities',
     competitors: ['Intel Loihi, IBM TrueNorth, BrainChip, General Vision'];
-    marketSize: '$2.1B neuromorphic computing market', growthRate: '450% annual growth',
-    variant: 'ai-futuristic', contactInfo: contact;
+    marketSize: '$2.1B neuromorphic computing market', growthRate: '450% annual growth',;
+variant: 'ai-futuristic', contactInfo: contact;
     realImplementation: true, implementationDetails: 'Enterprise-grade neuromorphic platform with brain-inspired computing and comprehensive AI capabilities',
     launchDate: '2024-02-15', customers: 45;
     rating: 4.8, reviews: 34;
@@ -229,8 +228,8 @@ const contact =
   s: ['Intel Loihi, IBM TrueNorth, BrainChip, General Vision'];
     marketSiz,
   e: '$2.1B neuromorphic computing market', growthRat,
-  e: '450% annual growth'
-    varian,
+  e: '450% annual growth';
+varian,
   t: 'ai-futuristic', contactInf,
   o: contact,
     realImplementatio,
@@ -262,16 +261,15 @@ export interface SpecializedEmergingTechService {/* TODO: Fix JSX expression */}
   reviews: number;
   benefits: string[];
   capabilities: string[];
-  marketAdvantage: string;
-}
+  marketAdvantage: string}
 ;
-    marketSize: '$2.1B neuromorphic computing market', growthRate: '450% annual growth',
-    variant: 'ai-futuristic', contactInfo: contact;
+    marketSize: '$2.1B neuromorphic computing market', growthRate: '450% annual growth',;
+variant: 'ai-futuristic', contactInfo: contact;
     realImplementation: true, implementationDetails: 'Enterprise-grade neuromorphic platform with brain-inspired computing and comprehensive AI capabilities',
     launchDate: '2024-02-15', customers: 45;
     rating: 4.8, reviews: 34;
     benefits: ['Energy efficiencyCognitive capabilitiesReal-time learningBrain-inspired processing'], capabilities: ['Neural architecturesCognitive computingHardware integrationCustom algorithms'];
-    marketAdvantage: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'
+    marketAdvantage: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities';
 const contact = {,
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
@@ -298,8 +296,8 @@ const contact = {,
 ;
     marketSiz,
   e: '$2.1B neuromorphic computing market', growthRat,
-  e: '450% annual growth'
-    varian,
+  e: '450% annual growth';
+varian,
   t: 'ai-futuristic', contactInf,
   o: contact,
     realImplementatio,
@@ -315,7 +313,7 @@ const contact = {,
   s: ['Energy efficiencyCognitive capabilitiesReal-time learningBrain-inspired processing'], capabilitie,
   s: ['Neural architecturesCognitive computingHardware integrationCustom algorithms'];
     marketAdvantag,
-  e: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'
+  e: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities';
 const contact = {/* TODO: Fix JSX expression */}
   s: '364 E Main St STE 1008 Middletown DE 19709'}
   websit,
@@ -868,7 +866,7 @@ i,
   n: 'Advanced neuromorphic computing platform that mimics the human brain's neural structure, enabling energy - efficient AI processing and cognitive computing applications.' feature,
   s: [;' 'Brain - inspired neural architectures_energy - efficient AI processing_spiking neural networks_cognitive computing capabilities_real - time learning and adaptation_neuromorphic hardware integration_brain - computer interface support_cognitive robotics applications'' 'Advanced pattern recognition_custom neuromorphic algorithms' ], ' popula,
   r: true, ico,
-  n: '🧠'} ]; } ];' popula,
+  n: '🧠'} ]} ];' popula,
   r: true, ico,
   n: '🧠',' colo,
   r: 'from - pink - 600 to - rose - 600', text_colo,

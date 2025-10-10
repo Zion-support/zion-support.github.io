@@ -75,8 +75,7 @@ export interface Revolutionary2027ItService {/* TODO: Fix JSX expression */}
   realImplementation: boolean;
   contactInfo: unknown;
     mobile: string, email: string;
-    address: string;
-  }
+    address: string}
 }
 export const revolutionary2027 ITServices: Revolutionary2027 ItService[] = [,
     id: "2027-revolutionary-it", name: "2027 Revolutionary IT Platform",

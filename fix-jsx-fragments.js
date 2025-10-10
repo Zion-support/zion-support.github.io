@@ -1,3 +1,4 @@
+import React from 'react';
 #!/usr/bin/env node;
 import fs from 'fs';
 
@@ -24,8 +25,8 @@ function processFile(filePath) {
     content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
 
     // Fix JSX fragment issues - ensure proper opening and closing;
-    if (content.includes('<>') && !content.includes('</>')) {
-      // Find the last closing div or main tag and add </> before it;
+    if (content.includes('<React.Fragment>') && !content.includes('</React.Fragment>')) {
+      // Find the last closing div or main tag and add </React.Fragment> before it;
       for (let i = lines.length - 1; i >= 0; i--) {
         if (
           lines[i].trim().startsWith('</') &&
@@ -55,8 +56,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
     content = content.replace()
       /export default function (\w+)\(\) \{/* TODO: Fix JSX expression */}
         content = content.replace(/^\s*}\s*$/, `  );\n};\n\nexport default ${componentName};`);
-        modified = true;
-      }
+        modified = true}
     }
 
     // Fix any remaining syntax issues;
@@ -70,16 +70,14 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
     if (modified) {/* TODO: Fix JSX expression */}
     }
 
-    return false;
-  } catch (error) {/* TODO: Fix JSX expression */}
+    return false} catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 
 // Process all files;
 filesToFix.forEach(file => {)
   if (processFile(file)) {
-    fixedCount++;
-  }
+    fixedCount++}
 filesToFix.forEach(file => {/* TODO: Fix JSX expression */}
   })
 });

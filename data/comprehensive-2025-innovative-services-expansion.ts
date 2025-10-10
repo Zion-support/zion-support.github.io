@@ -1,3 +1,4 @@
+import React from 'react';
 
   id: string;
   name: string;
@@ -29,8 +30,7 @@
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  }
+    website: string}
   real_implementation: boolean;
   implementation_details: string;
   launch_date: string;
@@ -40,8 +40,7 @@
   benefits: string[];
   marketAdvantage: string;
   capabilities: string[],
-  market_advantage: string;
-}
+  market_advantage: string}
 const contact =
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -75,8 +74,8 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     roi: 'Reduce content creation time by 80% and increase engagement by 40%',
     competitors: ['Jasper, Copy && Copy.ai, Writesonic, ContentBot'];
     marketSize: '$8 B+ content marketing market'
-    growthRate: '180% YoY'
-    variant: 'ai-futuristic'
+    growthRate: '180% YoY';
+variant: 'ai-futuristic'
     contactInfo: contact;
     realImplementation: true;
     implementationDetails: 'Cloud-native SaaS platform with enterprise SSO and custom integrations',
@@ -104,8 +103,8 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     roi: 'Reduce content creation time by 80% and increase engagement by 40%',
     competitors: ['Jasper, Copy.ai, Writesonic, ContentBot'];
     market_size: '$8 B+ content marketing market'
-    growth_rate: '180% YoY'
-    variant: 'ai - futuristic'
+    growth_rate: '180% YoY';
+variant: 'ai - futuristic'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Cloud - native SaaS platform with enterprise SSO and custom integrations'
@@ -156,8 +155,8 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     roi: 'Reduce security incidents by 90% and compliance costs by 60%',
     competitors: ['Okta, Ping Identity, ForgeRock, CyberArk'];
     market_size: '$25 B+ identity and access management market'
-    growth_rate: '140% YoY'
-    variant: 'cybersecurity - futuristic'
+    growth_rate: '140% YoY';
+variant: 'cybersecurity - futuristic'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Enterprise - grade zero - trust platform with custom integrations and 24 / 7 support'
@@ -211,8 +210,8 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     roi: 'Reduce deployment time by 70% and increase team productivity by 50%',
     competitors: ['GitLab, Jenkins, CircleCI, GitHub Actions, Azure DevOps'];
     market_size: '$18 B+ DevOps tools market'
-    growth_rate: '160% YoY'
-    variant: 'devops - futuristic'
+    growth_rate: '160% YoY';
+variant: 'devops - futuristic'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Cloud - native DevOps platform with enterprise integrations and AI - powered optimization'
@@ -266,8 +265,8 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     roi: 'Reduce latency by 80% and improve operational efficiency by 45%',
     competitors: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT Edge, EdgeX Foundry'];
     market_size: '$12 B+ edge computing market'
-    growth_rate: '220% YoY'
-    variant: 'edge - futuristic'
+    growth_rate: '220% YoY';
+variant: 'edge - futuristic'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Industrial - grade edge computing platform with custom hardware support'
@@ -321,8 +320,8 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     roi: 'Improve diagnostic accuracy by 25% and reduce reading time by 60%',
     competitors: ['Aidoc, Zebra Medical Vision, Arterys, Enlitic'];
     market_size: '$28 B+ medical imaging market'
-    growth_rate: '190% YoY'
-    variant: 'healthcare - futuristic'
+    growth_rate: '190% YoY';
+variant: 'healthcare - futuristic'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'FDA - cleared medical imaging platform with enterprise integrations'
@@ -373,8 +372,8 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     roi: 'Reduce risk losses by 40% and compliance costs by 50%',
     competitors: ['RiskMetrics, Bloomberg Risk, MSCI, S & P Global'];
     market_size: '$32 B+ risk management market'
-    growth_rate: '170% YoY'
-    variant: 'financial - futuristic'
+    growth_rate: '170% YoY';
+variant: 'financial - futuristic'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Enterprise - grade risk management platform with real - time data feeds'
@@ -425,8 +424,8 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     roi: 'Improve learning outcomes by 35% and reduce dropout rates by 50%',
     competitors: ['Coursera, Udemy, Khan Academy, Duolingo'];
     market_size: '$15 B+ edtech market'
-    growth_rate: '200% YoY'
-    variant: 'education - futuristic'
+    growth_rate: '200% YoY';
+variant: 'education - futuristic'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Cloud - native learning platform with AI - powered personalization'
@@ -477,8 +476,8 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     roi: 'Reduce inventory costs by 30% and improve delivery times by 40%',
     competitors: ['SAP Ariba, Oracle SCM, Blue Yonder, Manhattan Associates'];
     market_size: '$22 B+ supply chain management market'
-    growth_rate: '160% YoY'
-    variant: 'logistics - futuristic'
+    growth_rate: '160% YoY';
+variant: 'logistics - futuristic'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Enterprise supply chain platform with AI optimization and real - time tracking'
@@ -532,8 +531,8 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     roi: 'Reduce energy costs by 25% and improve sustainability metrics by 40%',
     competitors: ['Schneider Electric, Siemens, GE Digital, ABB'];
     market_size: '$18 B+ energy management market'
-    growth_rate: '180% YoY'
-    variant: 'energy - futuristic'
+    growth_rate: '180% YoY';
+variant: 'energy - futuristic'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Industrial energy management platform with AI optimization and IoT integration'
@@ -585,8 +584,7 @@ export interface ComprehensiveInnovativeService {;
   reviews: number;
   benefits: string[];
   capabilities: string[];
-  marketAdvantage: string;
-}
+  marketAdvantage: string}
 ;
 // const contact = {;
   mobile: '+1 302 464 0950';
@@ -776,8 +774,8 @@ export const,
     market_siz,
   e: '$25B+ identity and access management market'
     growth_rat,
-  e: '140% YoY'
-    varian,
+  e: '140% YoY';
+varian,
   t: 'cybersecurity - futuristic'
     contact_inf,
   o: contact;
@@ -882,8 +880,8 @@ export const,
     market_siz,
   e: '$18B+ DevOps tools market'
     growth_rat,
-  e: '160% YoY'
-    varian,
+  e: '160% YoY';
+varian,
   t: 'devops - futuristic'
     contact_inf,
   o: contact;
@@ -988,8 +986,8 @@ export const,
     market_siz,
   e: '$12B+ edge computing market'
     growth_rat,
-  e: '220% YoY'
-    varian,
+  e: '220% YoY';
+varian,
   t: 'edge - futuristic'
     contact_inf,
   o: contact;
@@ -1094,8 +1092,8 @@ export const,
     market_siz,
   e: '$28B+ medical imaging market'
     growth_rat,
-  e: '190% YoY'
-    varian,
+  e: '190% YoY';
+varian,
   t: 'healthcare - futuristic'
     contact_inf,
   o: contact;
@@ -1194,8 +1192,8 @@ export const,
     market_siz,
   e: '$32B+ risk management market'
     growth_rat,
-  e: '170% YoY'
-    varian,
+  e: '170% YoY';
+varian,
   t: 'financial - futuristic'
     contact_inf,
   o: contact;
@@ -1294,8 +1292,8 @@ export const,
     market_siz,
   e: '$15B+ edtech market'
     growth_rat,
-  e: '200% YoY'
-    varian,
+  e: '200% YoY';
+varian,
   t: 'education - futuristic'
     contact_inf,
   o: contact;
@@ -1394,8 +1392,8 @@ export const,
     market_siz,
   e: '$22B+ supply chain management market'
     growth_rat,
-  e: '160% YoY'
-    varian,
+  e: '160% YoY';
+varian,
   t: 'logistics - futuristic'
     contact_inf,
   o: contact;
@@ -1500,8 +1498,8 @@ export const,
     market_siz,
   e: '$18B+ energy management market'
     growth_rat,
-  e: '180% YoY'
-    varian,
+  e: '180% YoY';
+varian,
   t: 'energy - futuristic'
     contact_inf,
   o: contact;

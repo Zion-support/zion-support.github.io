@@ -75,8 +75,7 @@ export interface EmergingTechService2029 {/* TODO: Fix JSX expression */}
   realImplementation: boolean;
   contactInfo: unknown;
     mobile: string, email: string;
-    address: string;
-  }
+    address: string}
 }
 export const emergingTechServices2029: EmergingTechService2029[] = [,
     id: "2029-emerging-tech-service", name: "2029 Emerging Tech Service Platform",

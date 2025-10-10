@@ -1,3 +1,4 @@
+import React from 'react';
 
   id: string;
   name: string;
@@ -29,8 +30,7 @@
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  }
+    website: string}
 export interface InnovativeBusinessSolution {id: string, name: string;
   tagline: string, price: string;
   period: string, description: string;
@@ -52,8 +52,7 @@ export interface InnovativeBusinessSolution {id: string, name: string;
     realImplementation: boolean, implementationDetails: string;
   launchDate: string, customers: number;
   rating: number;
-  reviews: number;
-}
+  reviews: number}
 export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [,
   // AI Business Intelligence Suite;
     id: 'ai-business-intelligence-suite', name: 'AI Business Intelligence Suite',
@@ -73,8 +72,8 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [,
     realService: true, technology: ['Artificial IntelligenceMachine LearningBusiness AnalyticsData VisualizationPythonTensorFlowReact'],
     integrations: ['ERP systemsCRM platformsDatabasesCloud platformsBusiness applicationsAPI services'], useCases: ['Business analyticsPerformance monitoringPredictive insightsDecision supportBusiness optimization'],
     roi: 'Organizations report 380% ROI with 50% improvement in decision-making and 40% increase in business performance.', competitors: ['TableauPower BIQlikViewLooker'],
-    marketSize: '$7.8 B business intelligence market', growthRate: '28% annual growth',
-    variant: 'ai-business-intelligence',
+    marketSize: '$7.8 B business intelligence market', growthRate: '28% annual growth',;
+variant: 'ai-business-intelligence',
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -210,8 +209,8 @@ export const,
   s: ['TableauPower BIQlikViewLooker'],
     marketSiz,
   e: '$7.8B business intelligence market', growthRat,
-  e: '28% annual growth',
-    varian,
+  e: '28% annual growth',;
+varian,
   t: 'ai-business-intelligence',
     contactInf,
   o: unknown,
@@ -245,8 +244,7 @@ export const,
   s://ziontechgroup.com'
     }
 ];
-;
-  }
+}
 ];
 ;
     realImplementation: true;
@@ -255,8 +253,7 @@ export const,
     launchDate: '2025-02-15'
     customers: 89;
     rating: 4.7;
-    reviews: 62;
-  }
+    reviews: 62}
   // AI Sales Intelligence Platform;
     id: 'ai-sales-intelligence-platform-v2',
     name: 'AI Sales Intelligence Platform',
@@ -368,8 +365,8 @@ export const,
     roi: 'Sales teams report 400% ROI with 50% improvement in conversion rates and 40% increase in revenue.',
     competitors: ['Gong', 'Chorus.ai', 'SalesLoft', 'Outreach']
     marketSize: '$5.2 B sales intelligence market'
-    growthRate: '30% annual growth'
-    variant: 'ai-sales',
+    growthRate: '30% annual growth';
+variant: 'ai-sales',
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -380,8 +377,7 @@ export const,
     launchDate: '2025-03-01'
     customers: 67;
     rating: 4.9;
-    reviews: 45;
-  }
+    reviews: 45}
   // AI Customer Service Platform;
     id: 'ai-customer-service-platform',
     name: 'AI Customer Service Platform',
@@ -398,8 +394,8 @@ export const,
     marketSiz,
   e: '$5.2B sales intelligence market'
     growthRat,
-  e: '30% annual growth'
-    varian,
+  e: '30% annual growth';
+varian,
   t: 'ai-sales'
     contactInf,
   o: mobil,
@@ -516,8 +512,8 @@ export const,
     roi: 'Customer service teams report 350% ROI with 60% reduction in support costs and 45% improvement in customer satisfaction.',
     competitors: ['Zendesk', 'Intercom', 'Freshdesk', 'Help Scout']
     marketSize: '$4.8 B customer service market'
-    growthRate: '22% annual growth'
-    variant: 'ai-customer-service',
+    growthRate: '22% annual growth';
+variant: 'ai-customer-service',
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -528,8 +524,7 @@ export const,
     launchDate: '2025-03-15'
     customers: 54;
     rating: 4.7;
-    reviews: 38;
-  }
+    reviews: 38}
   // AI HR Management Platform;
     id: 'ai-hr-management-platform',
     name: 'AI HR Management Platform',
@@ -546,8 +541,8 @@ export const,
     marketSiz,
   e: '$4.8B customer service market'
     growthRat,
-  e: '22% annual growth'
-    varian,
+  e: '22% annual growth';
+varian,
   t: 'ai-customer-service'
     contactInf,
   o: mobil,
@@ -664,8 +659,8 @@ export const,
     roi: 'HR teams report 320% ROI with 50% improvement in recruitment efficiency and 40% increase in employee engagement.',
     competitors: ['Workday', 'BambooHR', 'Greenhouse', 'Lever']
     marketSize: '$6.2 B HR technology market'
-    growthRate: '26% annual growth'
-    variant: 'ai-hr',
+    growthRate: '26% annual growth';
+variant: 'ai-hr',
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -676,8 +671,7 @@ export const,
     launchDate: '2025-04-01'
     customers: 42;
     rating: 4.8;
-    reviews: 29;
-  }
+    reviews: 29}
   // AI Financial Analytics Platform;
     id: 'ai-financial-analytics-platform',
     name: 'AI Financial Analytics Platform',
@@ -694,8 +688,8 @@ export const,
     marketSiz,
   e: '$6.2B HR technology market'
     growthRat,
-  e: '26% annual growth'
-    varian,
+  e: '26% annual growth';
+varian,
   t: 'ai-hr'
     contactInf,
   o: mobil,
@@ -812,8 +806,8 @@ export const,
     roi: 'Finance teams report 450% ROI with 60% improvement in financial decision-making and 50% reduction in financial risks.',
     competitors: ['Bloomberg', 'Thomson Reuters', 'FactSet', 'Refinitiv']
     marketSize: '$8.5 B financial analytics market'
-    growthRate: '32% annual growth'
-    variant: 'ai-financial',
+    growthRate: '32% annual growth';
+variant: 'ai-financial',
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -824,8 +818,7 @@ export const,
     launchDate: '2025-04-15'
     customers: 28;
     rating: 4.9;
-    reviews: 19;
-  }
+    reviews: 19}
   // AI Project Management Platform;
     id: 'ai-project-management-platform',
     name: 'AI Project Management Platform',
@@ -842,8 +835,8 @@ export const,
     marketSiz,
   e: '$8.5B financial analytics market'
     growthRat,
-  e: '32% annual growth'
-    varian,
+  e: '32% annual growth';
+varian,
   t: 'ai-financial'
     contactInf,
   o: mobil,
@@ -960,8 +953,8 @@ export const,
     roi: 'Project teams report 350% ROI with 50% improvement in project delivery and 40% reduction in project costs.',
     competitors: ['Asana', 'Monday.com', 'ClickUp', 'Notion']
     marketSize: '$5.5 B project management market'
-    growthRate: '24% annual growth'
-    variant: 'ai-project-management',
+    growthRate: '24% annual growth';
+variant: 'ai-project-management',
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -972,8 +965,7 @@ export const,
     launchDate: '2025-05-01'
     customers: 38;
     rating: 4.7;
-    reviews: 26;
-  }];      mobile: '+1 302 464 0950',
+    reviews: 26}];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
@@ -992,8 +984,8 @@ export const,
     marketSiz,
   e: '$5.5B project management market'
     growthRat,
-  e: '24% annual growth'
-    varian,
+  e: '24% annual growth';
+varian,
   t: 'ai-project-management'
     contactInf,
   o: mobil,
@@ -1051,8 +1043,7 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
-}
+  reviews: number}
 ;
     realImplementation: true;
     implementationDetails:,
@@ -1060,8 +1051,7 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
     launchDate: '2025-02-15'
     customers: 89;
     rating: 4.7;
-    reviews: 62;
-  }
+    reviews: 62}
   // AI Sales Intelligence Platform;
     id: 'ai-sales-intelligence-platform-v2',
     name: 'AI Sales Intelligence Platform',
@@ -1600,7 +1590,7 @@ i,
   s: 26; ],' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup.com' } ]; } ]; realImplementatio,
+  s://ziontechgroup.com' } ]} ]; realImplementatio,
   n: true,
   implementationDetails:' 'Comprehensive AI-powered marketing automation platform with intelligent optimization, customer engagement, and seamless marketing tool integration.'' launchDat,
   e: '2025-02-15' customer,

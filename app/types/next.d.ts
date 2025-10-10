@@ -1,7 +1,57 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+// Next.js type definitions
+declare module '*.svg' {
+  const content: React.FunctionComponent<React.SVGAttributes<SVGElement>>;
+  export default content;
+}
+
+declare module '*.png' {
+  const content: string;
+  export default content;
+}
+
+declare module '*.jpg' {
+  const content: string;
+  export default content;
+}
+
+declare module '*.jpeg' {
+  const content: string;
+  export default content;
+}
+
+declare module '*.gif' {
+  const content: string;
+  export default content;
+}
+
+declare module '*.webp' {
+  const content: string;
+  export default content;
+}
+
+declare module '*.ico' {
+  const content: string;
+  export default content;
+}
+
+declare module '*.bmp' {
+  const content: string;
+  export default content;
+}
+
+declare module '*.tiff' {
+  const content: string;
+  export default content;
+}
+
+declare global {
+  interface Window {
+    gtag?: (...args: any[]) => void;
+    dataLayer?: any[];
+  }
+}
+
+export {};
 
 const Next.dPage: React.FC = () => {
   const features = [
@@ -26,8 +76,8 @@ const Next.dPage: React.FC = () => {
       description: 'Worldwide deployment and support for international businesses'
     }
   ];
-
-  const benefits = [
+;
+const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -95,7 +145,7 @@ const Next.dPage: React.FC = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
-            ))}
+            ));
           </div>
         </div>
       </section>
@@ -118,7 +168,7 @@ const Next.dPage: React.FC = () => {
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-lg">{benefit}</p>
               </div>
-            ))}
+            ));
           </div>
         </div>
       </section>
@@ -146,8 +196,5 @@ const Next.dPage: React.FC = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
-};
-
+    </div>)
 export default Next.dPage;

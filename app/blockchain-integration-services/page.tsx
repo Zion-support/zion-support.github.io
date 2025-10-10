@@ -2,9 +2,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-
-const BlockchainIntegrationServicesPage: React.FC = () => {
-  const features = [
+;
+const BlockchainIntegrationServicesPage: React.FC = () => {const features = [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -26,8 +25,8 @@ const BlockchainIntegrationServicesPage: React.FC = () => {
       description: 'Worldwide deployment and support for international businesses'
     }
   ];
-
-  const benefits = [
+;
+const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -80,7 +79,7 @@ const BlockchainIntegrationServicesPage: React.FC = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
-            ))}
+            ));
           </div>
         </div>
       </section>
@@ -103,7 +102,7 @@ const BlockchainIntegrationServicesPage: React.FC = () => {
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-lg">{benefit}</p>
               </div>
-            ))}
+            ));
           </div>
         </div>
       </section>
@@ -131,8 +130,5 @@ const BlockchainIntegrationServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
-};
-
+    </div>)
 export default BlockchainIntegrationServicesPage;

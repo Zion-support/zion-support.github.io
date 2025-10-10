@@ -17,7 +17,7 @@ const bannerComponents = {
   ),
   'cognitive-orchestration': lazy(
     () => import('./CognitiveOrchestrationMegaBanner')
-  ),
+  ),;
 const bannerComponents = {/* TODO: Fix JSX expression */}
 };
 
@@ -39,20 +39,25 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({,
   maxBanners = 3,
   rotationInterval = 10000,
   className = ''}) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+return (
+;
+const [currentIndex, setCurrentIndex] = useState(0);
   const [visibleBanners, setVisibleBanners] = useState<BannerKey[]>([]);</BannerKey>
+);
+}
 
   // Select banners to display (limit to maxBanners)
   useEffect(() => {
 //     const selected = banners.slice(0, maxBanners);
-    setVisibleBanners(selected);
-  }, [banners, maxBanners]);
+    setVisibleBanners(selected)}, [banners, maxBanners]);
 
   // Rotate banners at specified interval;
   useEffect(() => {
-    if (visibleBanners.length <= 1) return;
+return (
 
-    const interval = setInterval(() => {
+    if (visibleBanners.length <= 1) return;
+;
+const interval = setInterval(() => {
       setCurrentIndex(prev => (prev + 1) % visibleBanners.length);
  * Feature,
   s:
@@ -62,7 +67,9 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({,
  * - Provides fallback loading states;
  */
 export const,
-  BannerRotationManager: React.FC<BannerRotationManagerProps> = ({/* TODO: Fix JSX expression */})
+  BannerRotationManager: React.FC<BannerRotationManagerProps>
+);
+} = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
   }, [banners, maxBanners]);
 
@@ -70,8 +77,7 @@ export const,
   useEffect(() => {/* TODO: Fix JSX expression */}
     }, rotationInterval);
 
-    return () => clearInterval(interval);
-  }, [visibleBanners.length, rotationInterval]);
+    return () => clearInterval(interval)}, [visibleBanners.length, rotationInterval]);
 
   if (visibleBanners.length === 0) {/* TODO: Fix JSX expression */}
   }
@@ -122,8 +128,7 @@ export const,
         </button></div>
       )}
     </div>
-  );
-};
+  )};
 
 export default BannerRotationManager;
 `

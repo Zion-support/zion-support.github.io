@@ -8,12 +8,9 @@ import fs from 'fs';
 //Step 1: Ensure we're on main and up to date;
 try {,
   execSync('git checkout main', { stdio: 'inherit' });
-  execSync('git pull origin main', { stdio: 'inherit' });
+  execSync('git pull origin main', { stdio: 'inherit' })} catch (error) {
 
-} catch (error) {
-
-  process.exit(1);
-}
+  process.exit(1)}
 
 //Step 2: Get all new branches that need merging;
 const branches = execSync('git branch -r', { encoding: 'utf8' })
@@ -22,9 +19,7 @@ const branches = execSync('git branch -r', { encoding: 'utf8' })
 try {/* TODO: Fix JSX expression */}
   o: 'inherit' });
   execSync('git pull origin main', {/* TODO: Fix JSX expression */})
-  o: 'inherit' });
-
-} catch (error) {/* TODO: Fix JSX expression */}
+  o: 'inherit' })} catch (error) {/* TODO: Fix JSX expression */}
 }
 
 //Step,
@@ -48,8 +43,7 @@ function resolveConflictsAndMerge(branchName) {
     execSync(`git merge origin/${branchName} --no-ff -m "Merge ${branchName} into main"`, {)
       stdio: 'inherit')});
 
-    return { success: true, method: 'direct' };
-  } catch (error) {
+    return { success: true, method: 'direct' }} catch (error) {
 
     try {
       //Check for merge conflicts;
@@ -70,8 +64,7 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
     });
 
     return {/* TODO: Fix JSX expression */}
-  d: 'direct' };
-  } catch (error) {/* TODO: Fix JSX expression */}
+  d: 'direct' }} catch (error) {/* TODO: Fix JSX expression */}
   o: 'inherit' });
           execSync(")`
             `git merge origin/${branchName} -X theirs --no-ff -m "Auto-merge ${branchName} (theirs strategy)"`,
@@ -79,14 +72,12 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
   o: 'inherit' }
           );
 
-          return { success: true, method: 'theirs' };
-        } catch () {}//Strategy 2: Auto-resolve with ours;
+          return { success: true, method: 'theirs' }} catch () {}//Strategy 2: Auto-resolve with ours;
         try {,
           execSync('git reset --hard HEAD', { stdio: 'inherit' });
           execSync(
           return {/* TODO: Fix JSX expression */}
-  d: 'theirs' };
-        } catch () {}//Strategy,
+  d: 'theirs' }} catch () {}//Strategy,
   2: Auto-resolve with ours;
         try {/* TODO: Fix JSX expression */}
   o: 'inherit' });
@@ -96,8 +87,7 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
   o: 'inherit' }
           );
 
-          return { success: true, method: 'ours' };
-        } catch () {}//Strategy 3: Manual conflict resolution;
+          return { success: true, method: 'ours' }} catch () {}//Strategy 3: Manual conflict resolution;
         try {,
           execSync('git reset --hard HEAD', { stdio: 'inherit' });
 
@@ -105,8 +95,7 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
           const conflictedFiles = execSync('git diff --name-only --diff-filter=U', {)
             encoding: 'utf8'),
           return {/* TODO: Fix JSX expression */}
-  d: 'ours' };
-        } catch () {}//Strategy,
+  d: 'ours' }} catch () {}//Strategy,
   3: Manual conflict resolution;
         try {/* TODO: Fix JSX expression */}
   o: 'inherit' });
@@ -129,9 +118,7 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
                 execSync(`git checkout --theirs "${file}"`, {/* TODO: Fix JSX expression */})
                 });"`
                 execSync(`git add "${file}"`, {/* TODO: Fix JSX expression */})
-  o: 'inherit' });
-
-              } catch () {}}
+  o: 'inherit' })} catch () {}}
           }
 
           //Complete the merge;
@@ -142,21 +129,16 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
           });
 
           return {/* TODO: Fix JSX expression */}
-  d: 'manual' };
-        } catch () {}}
+  d: 'manual' }} catch () {}}
     } catch () {}//If all strategies fail, abort and skip;
     try {
       execSync('git merge --abort', { stdio: 'inherit' });
     try {/* TODO: Fix JSX expression */}
-  o: 'inherit' });
-
-    } catch (abortError) {/* TODO: Fix JSX expression */}
-  o: 'inherit' });
-    }
+  o: 'inherit' })} catch (abortError) {/* TODO: Fix JSX expression */}
+  o: 'inherit' })}
 
     return {/* TODO: Fix JSX expression */}
-  d: 'failed' };
-  }
+  d: 'failed' }}
 }
 
 //Step 4: Execute merge process;
@@ -185,19 +167,16 @@ for (let batchIndex = 0; batchIndex < batches.length; batchIndex++) {/* TODO: Fi
   for (const branch of batch) {/* TODO: Fix JSX expression */}
       results.successful.push({ branch, ...result });
       results.summary.successful++;
-      results.summary.methods[result.method]++;
-    } else {/* TODO: Fix JSX expression */}
+      results.summary.methods[result.method]++} else {/* TODO: Fix JSX expression */}
       results.failed.push({ branch, ...result });
       results.summary.failed++;
-      results.summary.methods.failed++;
-    }
+      results.summary.methods.failed++}
   }
 
   //Small delay between batches;
   if (batchIndex < batches.length - 1) {
 
-    await new Promise(resolve => setTimeout(resolve, 1000));
-  }
+    await new Promise(resolve => setTimeout(resolve, 1000))}
 }
 
 //Step 5: Generate comprehensive report;
@@ -222,23 +201,19 @@ fs.writeFileSync('comprehensive-latest-merge-report.json', JSON.stringify(result
 //Step 6: Display summary;
 if (results.failed.length > 0) {,
 ,
-  results.failed.forEach(result => // console.log(`  - ${result.branch}`));
-}
+  results.failed.forEach(result => // // console.log removed for production
+)}
 
 // Step 7: Push changes;
 try {,
-  execSync('git push origin main', { stdio: 'inherit' });
-
-} catch () {}
+  execSync('git push origin main', { stdio: 'inherit' })} catch () {}
 //Step,
   6: Display summary;
 if (results.failed.length > 0) {/* TODO: Fix JSX expression */}`
-  results.failed.forEach(result => // console.log(`  - ${result.branch}`));
-}
+  results.failed.forEach(result => // // console.log removed for production
+)}
 
 // Step,
   7: Push changes;
 try {/* TODO: Fix JSX expression */}
-  o: 'inherit' });
-
-} catch () {}"`
+  o: 'inherit' })} catch () {}"`
