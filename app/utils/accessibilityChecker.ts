@@ -46,7 +46,7 @@ const AccessibilityCheckerPage: React.FC = () => {
         <meta name="keywords" content="accessibilityChecker, AI solutions, IT services, Zion Tech Group, accessibilitychecker" />
       </Helmet>
 
-      {/* Hero Section */}
+      {}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
@@ -74,7 +74,7 @@ const AccessibilityCheckerPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Features Section */}
+      {}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -100,7 +100,7 @@ const AccessibilityCheckerPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Benefits Section */}
+      {}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -123,7 +123,7 @@ const AccessibilityCheckerPage: React.FC = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">

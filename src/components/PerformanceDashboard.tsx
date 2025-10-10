@@ -1,7 +1,7 @@
 
 
 'use client';
-interface PerformanceMetrics {/* TODO: Fix JSX expression */}
+interface PerformanceMetrics {}
   O: Add content;}
 };
   loadTim,
@@ -13,7 +13,7 @@ interface PerformanceMetrics {/* TODO: Fix JSX expression */}
     fp,
   s: number;
 }
-interface PerformanceMetrics {/* TODO: Fix JSX expression */}
+interface PerformanceMetrics {}
   O: Add content;}
 };
 
@@ -26,10 +26,9 @@ interface PerformanceMetrics {/* TODO: Fix JSX expression */}
 }
 
 const,
-  PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) => {/* TODO: Fix JSX expression */}
+  PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) => {}
   });
 
-<<<<<<< HEAD
   useEffect(() => {
     const updateMetrics = () => {
       const navigation = performance.getEntriesByType(
@@ -71,22 +70,17 @@ const,
         renderTime,
         memoryUsage,
         fps
-=======
-  useEffect(() => {/* TODO: Fix JSX expression */}
-  p: entry.startTime }));
-        }
->>>>>>> f7c4928b2138abffab75f9beb3ca62b8e0c3452d
       });
     });
 
-    try {/* TODO: Fix JSX expression */}
+    try {}
   s: ['paint'] });
       return () => observer.disconnect();
-    } catch (error) {/* TODO: Fix JSX expression */}
+    } catch (error) {}
     }
   }, []);
 
-  useEffect(() => {/* TODO: Fix JSX expression */}
+  useEffect(() => {}
     }
   }, [metrics, onMetricsUpdate]);
 
