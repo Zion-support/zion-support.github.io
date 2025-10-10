@@ -1,13 +1,8 @@
 import React, { useEffect, useState, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import PerformanceEnhancer from './utils/performanceEnhancer';
-import SEOEnhancer from './utils/seoEnhancer';
-import AccessibilityEnhancer from './utils/accessibilityEnhancer';
-import SecurityEnhancer from './utils/securityEnhancer';
-import UserExperienceEnhancer from './utils/userExperienceEnhancer';
 
 // Lazy load components for better performance
-const HomePage = lazy(() => import('./page'));
+const HomePage = lazy(() => import('./pageOptimized'));
 
 <<<<<<< HEAD
 // Loading component

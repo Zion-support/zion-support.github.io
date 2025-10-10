@@ -5,16 +5,107 @@ import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Clou
 const Footer: React.FC = memo(() => {
   const currentYear = new Date().getFullYear();
   
-  const microSaasServices = [
-    { name: 'AI Project Manager', url: '/ai-project-manager', description: 'Intelligent project planning', icon: '📊', popular: true },
-    { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'Automated social media', icon: '📱', popular: true },
-    { name: 'AI Analytics Dashboard', url: '/ai-analytics-dashboard', description: 'AI-powered analytics', icon: '📈', popular: true },
-    { name: 'AI Email Marketing', url: '/ai-email-marketing', description: 'Intelligent email campaigns', icon: '📧', popular: true },
-    { name: 'AI Customer Support Bot', url: '/ai-customer-support-bot', description: '24/7 AI support', icon: '🤖', popular: true },
-    { name: 'AI Code Review Assistant', url: '/ai-code-generation', description: 'Automated code analysis', icon: '🔍', popular: false },
-    { name: 'AI Content Generator', url: '/ai-content-generation', description: 'AI content creation', icon: '✍️', popular: false },
-    { name: 'AI SEO Optimizer', url: '/ai-marketing', description: 'AI-driven SEO', icon: '🎯', popular: false }
-  ];
+
+  const microSaasServices = {
+    'Productivity': [
+      { name: 'AI Project Manager Pro', url: '/ai-project-manager', description: 'Intelligent project planning' },
+      { name: 'AI Quantum Task Optimizer', url: '/ai-quantum-task-optimizer', description: 'Quantum-powered optimization' },
+      { name: 'AI Holographic Workspace', url: '/ai-holographic-workspace', description: '3D immersive workspace' },
+      { name: 'AI Neural Memory Assistant', url: '/ai-neural-memory-assistant', description: 'AI memory enhancement' },
+      { name: 'AI Telepathic Interface Pro', url: '/ai-telepathic-interface', description: 'Mind-controlled computing' },
+      { name: 'AI Predictive Analytics Engine', url: '/ai-predictive-analytics-engine', description: 'Advanced ML forecasting' },
+      { name: 'AI Quantum Neural Network', url: '/ai-quantum-neural-network', description: 'Quantum neural processing' },
+      { name: 'AI Autonomous Decision Engine', url: '/ai-autonomous-decision-engine', description: 'Self-learning AI decisions' }
+    ],
+    'Content & Marketing': [
+      { name: 'AI Content Writer Pro', url: '/ai-content-writer', description: 'AI content generation' },
+      { name: 'AI Holographic Content Studio', url: '/ai-holographic-content-studio', description: '3D holographic content' },
+      { name: 'AI Quantum Content Optimizer', url: '/ai-quantum-content-optimizer', description: 'Quantum content optimization' },
+      { name: 'AI Neural Story Architect', url: '/ai-neural-story-architect', description: 'AI story creation' },
+      { name: 'AI Telepathic Marketing Pro', url: '/ai-telepathic-marketing', description: 'Mind-reading marketing' }
+    ],
+    'Business & Finance': [
+      { name: 'AI CRM Intelligence', url: '/ai-crm', description: 'Smart CRM solutions' },
+      { name: 'AI Quantum Financial Oracle', url: '/ai-quantum-financial-oracle', description: 'Quantum financial prediction' },
+      { name: 'AI Holographic Boardroom', url: '/ai-holographic-boardroom', description: '3D boardroom experience' },
+      { name: 'AI Neural Business Strategist', url: '/ai-neural-business-strategist', description: 'AI business strategy' },
+      { name: 'AI Telepathic Sales Pro', url: '/ai-telepathic-sales', description: 'Mind-reading sales' }
+    ],
+    'Customer Service': [
+      { name: 'AI Customer Support Bot', url: '/ai-customer-support-bot', description: '24/7 AI support' },
+      { name: 'AI Chatbot Builder', url: '/ai-chatbot-builder', description: 'Custom chatbot creation' },
+      { name: 'AI Email Assistant', url: '/ai-email-assistant', description: 'Smart email management' }
+    ],
+    'Development': [
+      { name: 'AI Code Review Assistant', url: '/ai-code-generation', description: 'Automated code analysis' },
+      { name: 'AI Mobile App Builder', url: '/ai-mobile-app-development', description: 'Mobile app development' },
+      { name: 'AI Document Processor', url: '/ai-document-processing', description: 'Document automation' }
+    ],
+    'Analytics': [
+      { name: 'AI Analytics Dashboard', url: '/ai-analytics', description: 'Data insights & analytics' },
+      { name: 'AI Data Visualization Pro', url: '/ai-data-visualization', description: 'Interactive dashboards' },
+      { name: 'AI Data Analytics Pro', url: '/ai-data-analytics', description: 'Advanced data analysis' }
+    ],
+    'Creative': [
+      { name: 'AI Video Generator Pro', url: '/ai-video-generation', description: 'AI-powered video creation' },
+      { name: 'AI Holographic Design Studio', url: '/ai-holographic-design-studio', description: '3D holographic design' },
+      { name: 'AI Quantum Art Generator', url: '/ai-quantum-art-generator', description: 'Quantum art creation' },
+      { name: 'AI Neural Music Composer', url: '/ai-neural-music-composer', description: 'Neural music composition' },
+      { name: 'AI Telepathic Creative Assistant', url: '/ai-telepathic-creative-assistant', description: 'Mind-controlled creativity' }
+    ],
+    'Health & Wellness': [
+      { name: 'AI Healthcare Assistant', url: '/ai-healthcare', description: 'Medical AI support' },
+      { name: 'AI Quantum Health Optimizer', url: '/ai-quantum-health-optimizer', description: 'Quantum health optimization' },
+      { name: 'AI Holographic Medical Scanner', url: '/ai-holographic-medical-scanner', description: '3D medical scanning' },
+      { name: 'AI Neural Wellness Coach', url: '/ai-neural-wellness-coach', description: 'Neural wellness coaching' },
+      { name: 'AI Telepathic Therapy Pro', url: '/ai-telepathic-therapy', description: 'Mind-reading therapy' }
+    ],
+    'Sales': [
+      { name: 'AI Sales Automation Hub', url: '/ai-sales-automation', description: 'Sales optimization' }
+    ],
+    'Real Estate': [
+      { name: 'AI Real Estate Analyzer Pro', url: '/ai-real-estate-analyzer', description: 'Property analysis & valuation' },
+      { name: 'AI Property Management Suite', url: '/ai-property-management', description: 'Complete property management' }
+    ],
+    'E-commerce': [
+      { name: 'AI E-commerce Optimizer Pro', url: '/ai-ecommerce-optimizer', description: 'E-commerce optimization' },
+      { name: 'AI Inventory Management Pro', url: '/ai-inventory-management', description: 'Smart inventory management' }
+    ],
+    'Legal & Compliance': [
+      { name: 'AI Legal Assistant Pro', url: '/ai-legal-assistant', description: 'Legal AI assistance' },
+      { name: 'AI Compliance Monitor Pro', url: '/ai-compliance-monitor', description: 'Automated compliance' }
+    ],
+    'Education & Training': [
+      { name: 'AI Learning Management System', url: '/ai-learning-management', description: 'Intelligent LMS' },
+      { name: 'AI Corporate Training Platform', url: '/ai-corporate-training', description: 'Corporate training AI' }
+    ],
+    'Manufacturing': [
+      { name: 'AI Manufacturing Intelligence', url: '/ai-manufacturing-intelligence', description: 'Smart manufacturing' },
+      { name: 'AI Quality Assurance Pro', url: '/ai-quality-assurance', description: 'Automated quality control' }
+    ],
+    'Transportation': [
+      { name: 'AI Fleet Management Pro', url: '/ai-fleet-management', description: 'Fleet optimization' },
+      { name: 'AI Logistics Optimizer', url: '/ai-logistics-optimizer', description: 'Logistics optimization' }
+    ],
+    'Energy & Sustainability': [
+      { name: 'AI Energy Management Pro', url: '/ai-energy-management', description: 'Smart energy management' },
+      { name: 'AI Sustainability Tracker', url: '/ai-sustainability-tracker', description: 'Sustainability tracking' }
+    ],
+    'Insurance & Risk': [
+      { name: 'AI Insurance Analytics Pro', url: '/ai-insurance-analytics', description: 'Insurance AI analytics' },
+      { name: 'AI Risk Assessment Engine', url: '/ai-risk-assessment', description: 'Risk assessment AI' }
+    ],
+    'Human Resources': [
+      { name: 'AI Talent Acquisition Pro', url: '/ai-talent-acquisition', description: 'Smart talent acquisition' },
+      { name: 'AI Employee Engagement Platform', url: '/ai-employee-engagement', description: 'Employee engagement AI' }
+    ],
+    'Advanced Technology': [
+      { name: 'AI Blockchain Integration Pro', url: '/ai-blockchain-integration', description: 'Blockchain AI integration' },
+      { name: 'AI IoT Management Platform', url: '/ai-iot-management', description: 'IoT AI management' },
+      { name: 'AI Edge Computing Solutions', url: '/ai-edge-computing', description: 'Edge computing AI' },
+      { name: 'AI Metaverse Development Suite', url: '/ai-metaverse-development', description: 'Metaverse AI development' }
+    ]
+  };
 
   const aiServices = [
     { name: 'AI Services', url: '/ai-services', description: 'Comprehensive AI solutions' },

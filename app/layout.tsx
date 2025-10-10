@@ -1,62 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
-
-const inter = Inter({ subsets: ['latin'] });
-
-export const metadata: Metadata = {
-  title: 'Zion Tech Group - Advanced AI and IT Solutions',
-  description: 'Leading provider of AI and IT solutions for modern enterprises. Transform your business with cutting-edge technology and achieve unprecedented growth.',
-  keywords: ['AI', 'IT Solutions', 'Technology', 'Enterprise', 'Artificial Intelligence', 'Machine Learning', 'Cloud Computing', 'Digital Transformation'],
-  authors: [{ name: 'Zion Tech Group' }],
-  creator: 'Zion Tech Group',
-  publisher: 'Zion Tech Group',
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
-  metadataBase: new URL('https://ziontechgroup.com'),
-  alternates: {
-    canonical: '/',
-  },
-  openGraph: {
-    title: 'Zion Tech Group - Advanced AI and IT Solutions',
-    description: 'Leading provider of AI and IT solutions for modern enterprises. Transform your business with cutting-edge technology.',
-    url: 'https://ziontechgroup.com',
-    siteName: 'Zion Tech Group',
-    images: [
-      {
-        url: '/og-image.svg',
-        width: 1200,
-        height: 630,
-        alt: 'Zion Tech Group - AI and IT Solutions',
-      },
-    ],
-    locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Zion Tech Group - Advanced AI and IT Solutions',
-    description: 'Leading provider of AI and IT solutions for modern enterprises.',
-    images: ['/og-image.svg'],
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  verification: {
-    google: 'your-google-verification-code',
-  },
-};
+import PerformanceMonitor from './components/PerformanceMonitor';
 
 export default function RootLayout({
   children,
@@ -140,7 +85,8 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={inter.className}>
+      <body className='antialiased'>
+        <PerformanceMonitor />
         {children}
       </body>
     </html>
