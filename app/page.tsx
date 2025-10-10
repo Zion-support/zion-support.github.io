@@ -3,23 +3,11 @@ import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'r
 import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Cube, Mic, DollarSign, Truck, Link, HardDrive, FileCheck } from 'lucide-react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import SEOOptimizer from './components/SEOOptimizer';
-import SEOEnhancer from './components/SEOEnhancer';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import Analytics from './components/Analytics';
-import EnhancedSEOOptimizer from './components/EnhancedSEOOptimizer';
-import EnhancedPerformanceOptimizer from './components/EnhancedPerformanceOptimizer';
-import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnhancer';
-import EnhancedAnalytics from './components/EnhancedAnalytics';
-import SecurityEnhancer from './components/SecurityEnhancer';
 import ErrorBoundary from './components/ErrorBoundary';
-import SEOOptimizer from './components/SEOOptimizer';
-import ServiceWorker from './components/ServiceWorker';
-import { ServiceCardSkeleton, HeroSkeleton } from './components/LoadingSkeleton';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
-import PerformanceMonitor from './components/PerformanceMonitor';
 import EnhancedSEO from './components/EnhancedSEO';
+import PerformanceEnhancer from './components/PerformanceEnhancer';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 
 // Dynamically import heavy components for better performance
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
@@ -907,8 +895,8 @@ const HomePage: React.FC = () => {
   ];
 
   return (
-    <ErrorBoundary>
-      <SEOOptimizer
+    <EnhancedErrorBoundary>
+      <EnhancedSEO
         title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
         keywords={['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services', 'artificial intelligence', 'business intelligence', 'data analytics', 'cybersecurity', 'cloud migration', 'DevOps', 'IT consulting']}
@@ -936,7 +924,59 @@ const HomePage: React.FC = () => {
             "addressCountry": "US"
           }
         }}
+        preload={[
+          { href: '/fonts/inter.woff2', as: 'font', type: 'font/woff2' },
+          { href: '/images/hero-bg.jpg', as: 'image' }
+        ]}
+        prefetch={[
+          { href: '/services', as: 'document' },
+          { href: '/contact', as: 'document' },
+          { href: '/about', as: 'document' }
+        ]}
+        dnsPrefetch={[
+          'https://fonts.googleapis.com',
+          'https://fonts.gstatic.com',
+          'https://www.google-analytics.com'
+        ]}
+        preconnect={[
+          'https://fonts.googleapis.com',
+          'https://fonts.gstatic.com',
+          'https://www.google-analytics.com',
+          'https://www.googletagmanager.com'
+        ]}
       >
+        <PerformanceEnhancer
+          enableWebVitals={true}
+          enableResourceTiming={true}
+          enableMemoryMonitoring={true}
+          enableNetworkMonitoring={true}
+          enableUserTiming={true}
+          enableLongTaskMonitoring={true}
+          enableLayoutShiftMonitoring={true}
+          enableAnalytics={true}
+          enableErrorReporting={true}
+          performanceBudget={{
+            lcp: 2500,
+            fid: 100,
+            cls: 0.1,
+            fcp: 1800,
+            ttfb: 600
+          }}
+        />
+        <AccessibilityEnhancer
+          enableKeyboardNavigation={true}
+          enableScreenReaderSupport={true}
+          enableHighContrast={true}
+          enableFocusManagement={true}
+          enableAriaLabels={true}
+          enableSkipLinks={true}
+          enableColorContrast={true}
+          enableTextScaling={true}
+          enableMotionReduction={true}
+          enableVoiceNavigation={true}
+          enableAnalytics={true}
+          enableErrorReporting={true}
+        />
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
           <Navigation />
           
@@ -1281,8 +1321,8 @@ const HomePage: React.FC = () => {
 
           <Footer />
         </div>
-      </SEOOptimizer>
-    </ErrorBoundary>
+      </EnhancedSEO>
+    </EnhancedErrorBoundary>
   );
 };
 
