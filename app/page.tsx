@@ -184,6 +184,7 @@ const stats = [
 ];
 
 const HomePage: React.FC = () => {
+<<<<<<< HEAD
   // Structured data for SEO
   const structuredData = {
     "@context": "https://schema.org",
@@ -197,6 +198,32 @@ const HomePage: React.FC = () => {
       "telephone": "+1-302-464-0950",
       "contactType": "customer service",
       "email": "kleber@ziontechgroup.com"
+=======
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    setIsLoaded(true);
+    // Set page title
+    document.title = 'Zion Tech Group - Advanced AI and IT Solutions';
+  }, []);
+
+  const services = [
+    {
+      id: 1,
+      name: 'AI-Powered Analytics',
+      description: 'Advanced analytics solutions powered by machine learning and artificial intelligence',
+      icon: BarChart,
+      features: [
+        'Predictive Analytics',
+        'Real-time Data Processing',
+        'Custom Dashboard Creation',
+        'ROI Optimization'
+      ],
+      popular: true,
+      rating: 4.8,
+      users: '2,800+',
+      color: 'from-purple-500 to-pink-600'
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-04b6
     },
     "address": {
       "@type": "PostalAddress",
