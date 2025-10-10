@@ -215,4 +215,5 @@ const Footer: React.FC = React.memo(() => {
     </footer>
   )
 })
-Footer.displayName = 'Footer'export default Footer
+Footer.displayName = 'Footer'
+export default Footer

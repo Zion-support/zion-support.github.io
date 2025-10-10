@@ -1,4 +1,7 @@
-'use client'import React from 'react'const EnhancedSkipLink: React.FC  = () => {
+'use client'
+import React from 'react'
+
+const EnhancedSkipLink: React.FC = () => {
   return (
     <a
       href="#main-content"

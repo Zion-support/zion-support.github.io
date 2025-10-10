@@ -35,6 +35,41 @@ const ConsultationPage = React.lazy(() => import('./app/consultation/page'))
 const MicroSaasPage = React.lazy(() => import('./app/micro-saas/page'))
 const AiServicesPage = React.lazy(() => import('./app/ai-services/page'))
 const ItServicesPage = React.lazy(() => import('./app/it-services/page'))
+
+// Individual service pages
+const AiAnalyticsPage = React.lazy(() => import('./app/ai-analytics/page'))
+const AiAutomationPage = React.lazy(() => import('./app/ai-automation/page'))
+const AiChatbotBuilderPage = React.lazy(() => import('./app/ai-chatbot-builder/page'))
+const AiContentWriterPage = React.lazy(() => import('./app/ai-content-writer/page'))
+const AiCrmPage = React.lazy(() => import('./app/ai-crm/page'))
+const AiCybersecurityPage = React.lazy(() => import('./app/ai-cybersecurity/page'))
+const AiDataAnalyticsPage = React.lazy(() => import('./app/ai-data-analytics/page'))
+const AiMarketingPage = React.lazy(() => import('./app/ai-marketing/page'))
+
+// IT Services pages
+const CloudServicesPage = React.lazy(() => import('./app/cloud-services/page'))
+const CybersecurityPage = React.lazy(() => import('./app/cybersecurity/page'))
+const DevOpsPage = React.lazy(() => import('./app/devops/page'))
+const DatabaseManagementPage = React.lazy(() => import('./app/database-management/page'))
+const ItConsultingPage = React.lazy(() => import('./app/it-consulting/page'))
+const NetworkSecurityPage = React.lazy(() => import('./app/network-security/page'))
+const MobileDevelopmentPage = React.lazy(() => import('./app/mobile-development/page'))
+const WebDevelopmentPage = React.lazy(() => import('./app/web-development/page'))
+
+// Micro SaaS pages
+const AnalyticsDashboardPage = React.lazy(() => import('./app/micro-saas/analytics-dashboard/page'))
+const ContentGeneratorPage = React.lazy(() => import('./app/micro-saas/content-generator/page'))
+const EmailMarketingPage = React.lazy(() => import('./app/micro-saas/email-marketing/page'))
+const ExpenseTrackerPage = React.lazy(() => import('./app/micro-saas/expense-tracker/page'))
+const InventoryManagementPage = React.lazy(() => import('./app/micro-saas/inventory-management/page'))
+const LeadScoringPage = React.lazy(() => import('./app/micro-saas/lead-scoring/page'))
+const SeoOptimizerPage = React.lazy(() => import('./app/micro-saas/seo-optimizer/page'))
+const SocialManagerPage = React.lazy(() => import('./app/micro-saas/social-manager/page'))
+
+// Legal pages
+const PrivacyPage = React.lazy(() => import('./app/privacy/page'))
+const TermsPage = React.lazy(() => import('./app/terms/page'))
+const CookiesPage = React.lazy(() => import('./app/cookies/page'))
 // Performance monitoring hook
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 usePerformanceMonitor()
@@ -77,6 +112,41 @@ return (
 <Route path="/micro-saas" element={<MicroSaasPage />} />
 <Route path="/ai-services" element={<AiServicesPage />} />
 <Route path="/it-services" element={<ItServicesPage />} />
+
+{/* AI Services Routes */}
+<Route path="/ai-analytics" element={<AiAnalyticsPage />} />
+<Route path="/ai-automation" element={<AiAutomationPage />} />
+<Route path="/ai-chatbot-builder" element={<AiChatbotBuilderPage />} />
+<Route path="/ai-content-writer" element={<AiContentWriterPage />} />
+<Route path="/ai-crm" element={<AiCrmPage />} />
+<Route path="/ai-cybersecurity" element={<AiCybersecurityPage />} />
+<Route path="/ai-data-analytics" element={<AiDataAnalyticsPage />} />
+<Route path="/ai-marketing" element={<AiMarketingPage />} />
+
+{/* IT Services Routes */}
+<Route path="/cloud-services" element={<CloudServicesPage />} />
+<Route path="/cybersecurity" element={<CybersecurityPage />} />
+<Route path="/devops" element={<DevOpsPage />} />
+<Route path="/database-management" element={<DatabaseManagementPage />} />
+<Route path="/it-consulting" element={<ItConsultingPage />} />
+<Route path="/network-security" element={<NetworkSecurityPage />} />
+<Route path="/mobile-development" element={<MobileDevelopmentPage />} />
+<Route path="/web-development" element={<WebDevelopmentPage />} />
+
+{/* Micro SaaS Routes */}
+<Route path="/micro-saas/analytics-dashboard" element={<AnalyticsDashboardPage />} />
+<Route path="/micro-saas/content-generator" element={<ContentGeneratorPage />} />
+<Route path="/micro-saas/email-marketing" element={<EmailMarketingPage />} />
+<Route path="/micro-saas/expense-tracker" element={<ExpenseTrackerPage />} />
+<Route path="/micro-saas/inventory-management" element={<InventoryManagementPage />} />
+<Route path="/micro-saas/lead-scoring" element={<LeadScoringPage />} />
+<Route path="/micro-saas/seo-optimizer" element={<SeoOptimizerPage />} />
+<Route path="/micro-saas/social-manager" element={<SocialManagerPage />} />
+
+{/* Legal Pages */}
+<Route path="/privacy" element={<PrivacyPage />} />
+<Route path="/terms" element={<TermsPage />} />
+<Route path="/cookies" element={<CookiesPage />} />
 </Routes>
 </Suspense>
 </main>
