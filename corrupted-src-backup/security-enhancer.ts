@@ -6,7 +6,7 @@ class SecurityEnhancer {
   private setupHTTPSRedirect(): void {
     if(typeof location !== 'undefined' &&)
       location.protocol !== 'https: ' &&)
-      location.hostname !== 'localhost')
+      location.hostname !== ',localhost')
     ) {,
       location.replace('https: ' + window.location.href.substring(window.location.protocol.length))
   }

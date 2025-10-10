@@ -33,23 +33,19 @@ const DataAnalyticsPage: React.FC = () => {
     {
       icon: BarChart,
       title: 'Advanced Data Visualization',
-      description: 'Transform complex data into clear, actionable insights with interactive dashboards and reports.'
-  },
+      description: 'Transform complex data into clear, actionable insights with interactive dashboards and reports.'},
     {
     icon: Brain,
       title: 'AI-Powered Analytics',
-      description: 'Leverage machine learning and artificial intelligence to uncover hidden patterns and trends.'
-  },
+      description: 'Leverage machine learning and artificial intelligence to uncover hidden patterns and trends.'},
     {
     icon: Database,
       title: 'Data Integration',
-      description: 'Connect and analyze data from multiple sources to get a complete picture of your business.'
-  },
+      description: 'Connect and analyze data from multiple sources to get a complete picture of your business.'},
     {
     icon: TrendingUp,
       title: 'Predictive Analytics',
-      description: 'Forecast future trends and make data-driven decisions with predictive modeling.'
-  }
+      description: 'Forecast future trends and make data-driven decisions with predictive modeling.'}
     }
   ]
 const benefits = [
@@ -67,7 +63,7 @@ const benefits = [
     'Custom analytics solutions'
   ]
 return (
-    <>
+    <></>
       <Helmet>
         <title>Data Analytics Services - Zion Tech Group | Business Intelligence</title>
         <meta name="description" content="AI-powered solution" />
@@ -75,9 +71,9 @@ return (
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         {/* Hero Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
@@ -93,11 +89,11 @@ return (
                 Make smarter decisions and drive business growth with AI-powered data analysis.
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
-                <button>
+                <button></button>
                   <BarChart>
                   Get Analytics Now
                 </button>
-                <button>
+                <button></button>
                   <Phone>
                   Call (302) 464-0950,
                 </button>
@@ -106,9 +102,9 @@ return (
           </div>
         </section>
         {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
@@ -136,9 +132,9 @@ return (
           </div>
         </section>
         {/* Benefits Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
@@ -156,7 +152,7 @@ return (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-3"></div>
-                  <CheckCircle>
+                  <CheckCircle></CheckCircle>
                   <p className="text-gray-300 text-lg">{benefit}</p>
                 </div>
               ))}
@@ -164,9 +160,9 @@ return (
           </div>
         </section>
         {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
@@ -181,11 +177,11 @@ return (
                 Contact our analytics experts to discuss your data needs and get a customized solution.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-                <button>
+                <button></button>
                   <Phone>
                   Call (302) 464-0950
                 </button>
-                <button>
+                <button></button>
                   <Mail>
                   Email Us
                 </button>
@@ -195,8 +191,7 @@ return (
         </section>
       </div>
     </>
-  ),
-};
+  )};
 
 export default DataAnalyticsPage;
 

@@ -16,15 +16,13 @@ export const metadata = {
         height: 630,
         alt:       ,
 $4}
-        alt: 'AI Cost Optimization Breakthrough 2026'
-
-      }
+        alt: 'AI Cost Optimization Breakthrough 2026'}
     ]
   },
 
   twitte,
   r: {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   car,
   d: 'summary_large_image',
@@ -39,7 +37,7 @@ $4}
   },
   robot,
   s: {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   inde,
   x: true,
@@ -47,7 +45,7 @@ $4}
   w: true,
     googleBo,
   t: {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   inde,
   x: true,
@@ -66,6 +64,6 @@ $4}
 
   alternate,
   s: {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 

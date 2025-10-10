@@ -137,10 +137,10 @@ interface ErrorFallbackProps {
   }
 const ErrorFallback = memo<ErrorFallbackProps>(
   ({ error, errorInfo, errorId, onRetry }) => (
-    <div className='min-h-screen flex items-center justify-center bg-gray-50 px-4'>
-      <div className='max-w-md w-full bg-white rounded-lg shadow-lg p-6 text-center'>
-        <div className='mb-4'>
-          <div className='mx-auto w-12 h-12 bg-red-100 rounded-full flex items-center justify-center'>
+    <div className='min-h-screen flex items-center justify-center bg-gray-50 px-4'></div>
+      <div className='max-w-md w-full bg-white rounded-lg shadow-lg p-6 text-center'></div>
+        <div className='mb-4'></div>
+          <div className='mx-auto w-12 h-12 bg-red-100 rounded-full flex items-center justify-center'></div>
             <svg
               className='w-6 h-6 text-red-600'
               fill='none'
@@ -166,8 +166,8 @@ const ErrorFallback = memo<ErrorFallbackProps>(
             <summary className='cursor-pointer text-sm text-gray-500 hover:text-gray-700'>
               Error Details (Development)
             </summary>
-            <div className='mt-2 p-3 bg-gray-100 rounded text-xs font-mono text-gray-800 overflow-auto'>
-              <div className='mb-2'>
+            <div className='mt-2 p-3 bg-gray-100 rounded text-xs font-mono text-gray-800 overflow-auto'></div>
+              <div className='mb-2'></div>
                 <strong>Error:</strong> {error.message}
         {process.env['NODE_ENV'] === 'development' && error && ()}
           <details className='mb-4 text-left'></details>
@@ -186,10 +186,10 @@ const ErrorFallback = memo<ErrorFallbackProps>(
                 <pre className='whitespace-pre-wrap'>{error.stack}</pre>
               </div>
               {errorInfo && (
-                <div>
+                <div></div>
                   <strong>Component Stack:</strong>
                   <pre className='whitespace-pre-wrap'>
-              {errorInfo && ()}
+              {errorInfo && ()}</p>
           <div></div>
                   <strong>Component,
   Stack:</strong>

@@ -106,8 +106,7 @@ class APIInterceptor {
   getInterceptorCounts(): {
     request: number,
     response: number,
-    error: number,
-  }
+    error: number}
   } {
     return {
       request: this.requestInterceptors.length
@@ -214,7 +213,7 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
     confi,;
   g: Partial<RequestConfig> = {})
   ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
-  d: 'GET' })
+  d: 'GET'})
   }
   /**;
    * POST request;
@@ -246,7 +245,7 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
     confi,;
   g: Partial<RequestConfig> = {})
   ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
-  d: 'DELETE' })
+  d: 'DELETE'})
   }
   /**;
    * PATCH request;
@@ -269,8 +268,7 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
       retryAttempt,;
   s: config.retryAttempts ?? this.config.retryAttempts,
       cach,;
-  e: config.cache ?? this.config.enableCaching,
-    }
+  e: config.cache ?? this.config.enableCaching}
   }
   /**;
    * Build full URL with query parameters;

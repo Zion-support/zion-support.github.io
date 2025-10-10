@@ -12,8 +12,7 @@ const ContactPage: React.FC = () => {
     company: '',
     phone: '',
     service: '',
-    message: ''
-  })
+    message: ''})
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
@@ -40,8 +39,7 @@ const ContactPage: React.FC = () => {
         company: '',
         phone: '',
         service: '',
-        message: ''
-      })
+        message: ''})
     } catch (error) {
       setSubmitStatus('error');
     } finally {
@@ -50,7 +48,7 @@ const ContactPage: React.FC = () => {
   }, []);
 
   return (
-    <>
+    <></>
       <Helmet>
         <title>Contact Us - Zion Tech Group</title>
         <meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions. Contact us for consultations, support, and inquiries." />
@@ -58,10 +56,10 @@ const ContactPage: React.FC = () => {
       
       <Navigation />
       
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
-        <div className="container mx-auto px-4 py-16">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16"></main>
+        <div className="container mx-auto px-4 py-16"></div>
+          <div className="max-w-4xl mx-auto"></div>
+            <div className="text-center mb-12"></div>
               <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Contact Us
               </h1>
@@ -71,35 +69,35 @@ const ContactPage: React.FC = () => {
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              {/* Contact Information */}
-              <div className="space-y-8">
-                <div>
+              {/* Contact Information */}</div>
+              <div className="space-y-8"></div>
+                <div></div>
                   <h2 className="text-2xl font-bold text-white mb-6">Get in Touch</h2>
-                  <div className="space-y-6">
-                    <div className="flex items-start space-x-4">
+                  <div className="space-y-6"></div>
+                    <div className="flex items-start space-x-4"></div>
                       <Phone className="w-6 h-6 text-cyan-400 mt-1" />
-                      <div>
+                      <div></div>
                         <h3 className="text-lg font-semibold text-white">Phone</h3>
                         <p className="text-gray-300">+1 302 464 0950</p>
                         <p className="text-sm text-gray-400">Mon-Fri: 9AM-6PM EST</p>
                       </div>
                     </div>
                     
-                    <div className="flex items-start space-x-4">
+                    <div className="flex items-start space-x-4"></div>
                       <Mail className="w-6 h-6 text-cyan-400 mt-1" />
-                      <div>
+                      <div></div>
                         <h3 className="text-lg font-semibold text-white">Email</h3>
                         <p className="text-gray-300">kleber@ziontechgroup.com</p>
                         <p className="text-sm text-gray-400">We'll respond within 24 hours</p>
                       </div>
                     </div>
                     
-                    <div className="flex items-start space-x-4">
+                    <div className="flex items-start space-x-4"></div>
                       <MapPin className="w-6 h-6 text-cyan-400 mt-1" />
-                      <div>
+                      <div></div>
                         <h3 className="text-lg font-semibold text-white">Address</h3>
                         <p className="text-gray-300">
-                          364 E Main St STE 1008<br />
+                          364 E Main St STE 1008</p><br />
                           Middletown, DE 19709
                         </p>
                       </div>
@@ -107,23 +105,23 @@ const ContactPage: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="bg-slate-800/50 rounded-lg p-6">
+                <div className="bg-slate-800/50 rounded-lg p-6"></div>
                   <h3 className="text-lg font-semibold text-white mb-4">Why Choose Us?</h3>
                   <ul className="space-y-2 text-gray-300">
                     <li className="flex items-center space-x-2">
-                      <CheckCircle className="w-4 h-4 text-green-400" />
+                      <CheckCircle className="w-4 h-4 text-green-400" /></CheckCircle>
                       <span>Free consultation and assessment</span>
                     </li>
                     <li className="flex items-center space-x-2">
-                      <CheckCircle className="w-4 h-4 text-green-400" />
+                      <CheckCircle className="w-4 h-4 text-green-400" /></CheckCircle>
                       <span>24/7 technical support</span>
                     </li>
                     <li className="flex items-center space-x-2">
-                      <CheckCircle className="w-4 h-4 text-green-400" />
+                      <CheckCircle className="w-4 h-4 text-green-400" /></CheckCircle>
                       <span>Proven track record with 500+ projects</span>
                     </li>
                     <li className="flex items-center space-x-2">
-                      <CheckCircle className="w-4 h-4 text-green-400" />
+                      <CheckCircle className="w-4 h-4 text-green-400" /></CheckCircle>
                       <span>Custom solutions for your business</span>
                     </li>
                   </ul>
@@ -131,7 +129,7 @@ const ContactPage: React.FC = () => {
               </div>
 
               {/* Contact Form */}
-              <div className="bg-slate-800/50 rounded-lg p-8">
+              <div className="bg-slate-800/50 rounded-lg p-8"></div>
                 <h2 className="text-2xl font-bold text-white mb-6">Send us a Message</h2>
                 
                 {submitStatus === 'success' && (
@@ -147,8 +145,8 @@ const ContactPage: React.FC = () => {
                 )}
 
                 <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+                    <div></div>
                       <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                         Name *
                       </label>
@@ -164,7 +162,7 @@ const ContactPage: React.FC = () => {
                       />
                     </div>
                     
-                    <div>
+                    <div></div>
                       <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
                         Email *
                       </label>
@@ -181,8 +179,8 @@ const ContactPage: React.FC = () => {
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+                    <div></div>
                       <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
                         Company
                       </label>
@@ -197,7 +195,7 @@ const ContactPage: React.FC = () => {
                       />
                     </div>
                     
-                    <div>
+                    <div></div>
                       <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
                         Phone
                       </label>
@@ -213,7 +211,7 @@ const ContactPage: React.FC = () => {
                     </div>
                   </div>
 
-                  <div>
+                  <div></div>
                     <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
                       Service Interest
                     </label>
@@ -233,7 +231,7 @@ const ContactPage: React.FC = () => {
                     </select>
                   </div>
 
-                  <div>
+                  <div></div>
                     <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
                       Message *
                     </label>
@@ -254,13 +252,13 @@ const ContactPage: React.FC = () => {
                     disabled={isSubmitting}
                     className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
                   >
-                    {isSubmitting ? (
-                      <>
+                    {isSubmitting ? (</button>
+                      <></>
                         <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
                         <span>Sending...</span>
                       </>
                     ) : (
-                      <>
+                      <></>
                         <Send className="w-5 h-5" />
                         <span>Send Message</span>
                       </>

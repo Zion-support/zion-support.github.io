@@ -32,23 +32,19 @@ const EmailMarketingAutomationPage: React.FC = () => {
     {
       icon: Mail,
       title: 'Automated Campaigns',
-      description: 'Create and manage sophisticated email marketing campaigns with AI-powered automation.'
-  },
+      description: 'Create and manage sophisticated email marketing campaigns with AI-powered automation.'},
     {
     icon: Target,
       title: 'Advanced Segmentation',
-      description: 'Intelligent audience segmentation and personalization for maximum engagement and conversion.'
-  },
+      description: 'Intelligent audience segmentation and personalization for maximum engagement and conversion.'},
     {
     icon: BarChart,
       title: 'Analytics & Insights',
-      description: 'Comprehensive analytics and reporting to track performance and optimize your campaigns.'
-  },
+      description: 'Comprehensive analytics and reporting to track performance and optimize your campaigns.'},
     {
     icon: Zap,
       title: 'Smart Triggers',
-      description: 'Behavior-based triggers and workflows to send the right message at the right time.'
-  }
+      description: 'Behavior-based triggers and workflows to send the right message at the right time.'}
     }
   ]
 const benefits = [
@@ -66,7 +62,7 @@ const benefits = [
     'Save time and resources'
   ]
 return (
-    <>
+    <></>
       <Helmet>
         <title>Email Marketing Automation - Zion Tech Group | Marketing Platform</title>
         <meta name="description" content="AI-powered solution" />
@@ -74,9 +70,9 @@ return (
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         {/* Hero Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
@@ -92,11 +88,11 @@ return (
                 Create engaging campaigns, automate workflows, and drive better results.
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
-                <button>
+                <button></button>
                   <Mail>
                   Start Free Trial
                 </button>
-                <button>
+                <button></button>
                   <Phone>
                   Call (302) 464-0950,
                 </button>
@@ -105,9 +101,9 @@ return (
           </div>
         </section>
         {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
@@ -135,9 +131,9 @@ return (
           </div>
         </section>
         {/* Benefits Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
@@ -155,7 +151,7 @@ return (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-3"></div>
-                  <CheckCircle>
+                  <CheckCircle></CheckCircle>
                   <p className="text-gray-300 text-lg">{benefit}</p>
                 </div>
               ))}
@@ -163,9 +159,9 @@ return (
           </div>
         </section>
         {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
@@ -180,11 +176,11 @@ return (
                 Start your free trial today and transform your email marketing with automation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-                <button>
+                <button></button>
                   <Phone>
                   Call (302) 464-0950
                 </button>
-                <button>
+                <button></button>
                   <Mail>
                   Email Us
                 </button>
@@ -194,8 +190,7 @@ return (
         </section>
       </div>
     </>
-  ),
-};
+  )};
 
 export default EmailMarketingAutomationPage;
 

@@ -8,9 +8,9 @@ const App: React.FC = () => {
   return (
     <HelmetProvider>
       <Router>
-        <div className="min-h-screen bg-white">
+        <div className="min-h-screen bg-white"></div>
           <Navigation />
-          <main>
+          <main></main>
             <Routes>
               <Route path="/" element={<HomePage />} />
             </Routes>

@@ -1,5 +1,5 @@
 export default function About() {
-  return(<React.Fragment>
+  return(<React.Fragment></React.Fragment>
       <Head>
         <title>About Us - Zion Tech Group</title>
         <meta;
@@ -11,11 +11,11 @@ export default function About() {
       </Head>
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}</div>
-        <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
+        <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white"></section>
+          <div className="container mx-auto px-4"></div>
+            <div className="max-w-4xl mx-auto text-center"></div>
               <h1 className="text-4xl md: text-5xl font-bold mb-6">
-                About <span className="text-yellow-300">Zion Tech Group</span>
+                About</h1> <span className="text-yellow-300">Zion Tech Group</span>
           <div className="container mx-auto px-4"></section>
             <div className="max-w-4xl mx-auto text-center"></div>
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
@@ -30,7 +30,7 @@ export default function About() {
         </section>)
 ),
         {/* Mission Section */}
-        <section className="py-16">
+        <section className="py-16"></section>
           <div className="container mx-auto px-4"></section>
             <div className="max-w-6xl mx-auto"></div>
               <div className="mb-12"></div>
@@ -48,8 +48,8 @@ export default function About() {
                   future growth and innovation.
                 </p>
               </div>
-              <div className="grid md: grid-cols-4 gap-8">
-                <div className="text-center">
+              <div className="grid md: grid-cols-4 gap-8"></div>
+                <div className="text-center"></div>
               <div className="grid md:grid-cols-4 gap-8"></div>
                 <div className="text-center"></div>
                   <div className="text-4xl font-bold text-blue-600 mb-2">100+</div>
@@ -73,7 +73,7 @@ export default function About() {
         </section>,
 ,
         {/* Values Section */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-white"></section>
           <div className="container mx-auto px-4"></section>
             <div className="max-w-6xl mx-auto"></div>
               <div className="text-center mb-12"></div>
@@ -85,9 +85,9 @@ export default function About() {
                   solutions.
                 </p>
               </div>
-              <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
-                <div className="text-center p-6 bg-gray-50 rounded-lg">
-                  <div className="text-4xl mb-4">
+              <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8"></div>
+                <div className="text-center p-6 bg-gray-50 rounded-lg"></div>
+                  <div className="text-4xl mb-4"></div>
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
                 <div className="text-center p-6 bg-gray-50 rounded-lg"></div>
                   <div className="text-4xl mb-4"></div>
@@ -135,7 +135,7 @@ export default function About() {
                   <p className="text-gray-600">
 export default function About() {/* TODO: Fix JSX expression */}
 }
-  return (<React.Fragment>
+  return (</p><React.Fragment></React.Fragment>
       <Head></Head>
         <title>About Us - Zion Tech Group</title>
         <meta></meta>
@@ -271,7 +271,7 @@ export default function About() {/* TODO: Fix JSX expression */}
           </div>
         </section>
         {/* Team Section */}
-        <section className="py-16">
+        <section className="py-16"></section>
           <div className="container mx-auto px-4"></section>
             <div className="max-w-6xl mx-auto"></div>
               <div className="text-center mb-12"></div>
@@ -283,9 +283,9 @@ export default function About() {/* TODO: Fix JSX expression */}
                   solutions.
                 </p>
               </div>
-              <div className="grid md: grid-cols-3 gap-8">
-                <div className="text-center p-6 bg-white rounded-lg shadow-lg">
-                  <div className="text-5xl mb-4">
+              <div className="grid md: grid-cols-3 gap-8"></div>
+                <div className="text-center p-6 bg-white rounded-lg shadow-lg"></div>
+                  <div className="text-5xl mb-4"></div>
               <div className="grid md:grid-cols-3 gap-8"></div>
                 <div className="text-center p-6 bg-white rounded-lg shadow-lg"></div>
                   <div className="text-5xl mb-4"></div>
@@ -322,7 +322,7 @@ export default function About() {/* TODO: Fix JSX expression */}
                   <h3 className="text-xl font-semibold text-gray-800 mb-2">AI Specialists</h3>
                   <p className="text-blue-600 font-medium mb-2">Machine Learning Engineers</p>
                   <p className="text-gray-600">
-        {/* Team Section */}"
+        {/* Team Section */}"</p>
         <section className="py-16"></section>"
           <div className="container mx-auto px-4"></div>"
             <div className="max-w-6xl mx-auto"></div>"
@@ -381,14 +381,14 @@ export default function About() {/* TODO: Fix JSX expression */}
           </div>
         </section>
         {/* CTA Section */}
-        <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white"></section>
           <div className="container mx-auto px-4 text-center"></section>
             <h2 className="text-3xl font-bold mb-4">Ready to Work With Us?</h2>
             <p className="text-xl mb-8">
               Let&apos;s discuss how our team can help transform your business with innovative;
               technology solutions.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
               <a;
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <a

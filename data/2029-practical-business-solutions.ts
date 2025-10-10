@@ -144,15 +144,15 @@ export const,
   practicalBusinessSolutionServices2029: PracticalBusinessSolution2029[] =,
   [
       i,
-  d: '2029-practical-business-solution'
+  d: '2029-practical-business-solution',
       nam,
-  e: '2029 Practical Business Solution Platform'
+  e: '2029 Practical Business Solution Platform',
       taglin,
-  e: 'Practical business solutions for 2029'
+  e: 'Practical business solutions for 2029',
       pric,
-  e: '$299/month'
+  e: '$299/month',
       descriptio,
-  n: 'Practical business solution platform that provides real-world solutions for 2029.'
+  n: 'Practical business solution platform that provides real-world solutions for 2029.',
       feature,
   s: [
         'Practical solutions'
@@ -161,8 +161,8 @@ export const,
         'Easy integration'
         'Affordable pricing'
       ]
-      link: '/services/2029-practical-business-solution'
-      category: 'Practical Business Solutions 2029'
+      link: '/services/2029-practical-business-solution',
+      category: 'Practical Business Solutions 2029',
       realImplementation: true,
       contactInfo: mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
@@ -231,19 +231,18 @@ export interface PracticalBusinessSolution2029 {,
     realImplementation: true,
     contactInfo: unknown}
       lin,
-  k: '/services/2029-practical-business-solution'
+  k: '/services/2029-practical-business-solution',
       categor,
-  y: 'Practical Business Solutions 2029'
+  y: 'Practical Business Solutions 2029',
       realImplementatio,
   n: true,
       contactInf,
   o: mobil,
-  e: '+1 302 464 0950'
+  e: '+1 302 464 0950',
         emai,
-  l: 'kleber@ziontechgroup.com'
+  l: 'kleber@ziontechgroup.com',
         addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'
-      }
+  s: '364 E Main St STE 1008 Middletown DE 19709'}
     }
   ];    feature,
   s: [,
@@ -355,7 +354,7 @@ export interface PracticalBusinessSolution2029 {/* TODO: Fix JSX expression */}
   }
 export const practicalBusinessSolutionServices2029: PracticalBusinessSolution2029[] =
   [
-      id: '2029-practical-business-solution'
+      id: '2029-practical-business-solution',
       name: '2029 Practical Business Solution Platform',
       tagline: 'Practical business solutions for 2029',
       price: '$299/month',
@@ -381,8 +380,8 @@ export const,
         'Real-world use cases',
         'Easy integration',
         'Affordable pricing'],
-      link: '/services/2029-practical-business-solution'
-      category: 'Practical Business Solutions 2029'
+      link: '/services/2029-practical-business-solution',
+      category: 'Practical Business Solutions 2029',
       realImplementation: true
       contactInfo: unknown,
         mobile: '+1 302 464 0950',
@@ -587,19 +586,19 @@ export interface PracticalBusinessSolution2029 {/* TODO: Fix JSX expression */}"
   e: string, addres,
   s: string} export const,
   practicalBusinessSolutionServices2029: PracticalBusinessSolution2029[] = [ i,
-  d: '2029-practical-business-solution'' nam,
-  e: '2029 Practical Business Solution Platform'' taglin,
-  e: 'Practical business solutions for 2029'' pric,
-  e: '$299/month' descriptio,
-  n:' 'Practical business solution platform that provides real-world solutions for 2029.' feature,
+  d: '2029-practical-business-solution',' nam,
+  e: '2029 Practical Business Solution Platform',' taglin,
+  e: 'Practical business solutions for 2029',' pric,
+  e: '$299/month', descriptio,
+  n: ' ',Practical business solution platform that provides real-world solutions for 2029.' feature,
   s: [' 'Practical solutions'' 'Business applications'' 'Real-world use cases'' 'Easy integration'' 'Affordable pricing' ]' lin,
-  k: '/services/2029-practical-business-solution'' categor,
-  y: 'Practical Business Solutions 2029' realImplementatio,
+  k: '/services/2029-practical-business-solution',' categor,
+  y: 'Practical Business Solutions 2029', realImplementatio,
   n: true,
   contactInfo: ' mobil,
-  e: '+1 302 464 0950'' emai,
-  l: 'kleber@ziontechgroup.com'' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709' } } ]; feature,
+  e: ',+1 302 464 0950'' emai,
+  l: 'kleber@ziontechgroup.com',' addres,
+  s: '364 E Main St STE 1008 Middletown DE 19709'} } ]; feature,
   s: [ real_implementatio,
   n: boolean, contact_inf,
   o: mobil,
@@ -655,13 +654,13 @@ export interface PracticalBusinessSolution2029 {/* TODO: Fix JSX expression */}"
   e: '2029 Practical Business Solution Platform',' taglin,
   e: 'Practical business solutions for 2029',' pric,
   e: '$299/month', descriptio,
-  n: ' 'Practical business solution platform that provides real-world solutions for 2029.', feature,
+  n: ' ',Practical business solution platform that provides real-world solutions for 2029.', feature,
   s: [' 'Practical solutions',' 'Business applications',' 'Real-world use cases',' 'Easy integration',' 'Affordable pricing'],' lin,
   k: '/services/2029-practical-business-solution',' categor,
   y: 'Practical Business Solutions 2029', realImplementatio,
   n: true, contactInf,
   o: ' mobil,
-  e: '+1 302 464 0950',' emai,
+  e: ',+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}} ]; feature,"
   s: [ "Practical solutions" "Business applications" "Real-world use cases" "Easy integration" i,

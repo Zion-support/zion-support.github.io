@@ -5,7 +5,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const TeamPage: React.FC = () => {
     return (
-    <>
+    <></>
       <Helmet>
         <title>Our Team - Zion Tech Group</title>
         <meta>
@@ -30,8 +30,7 @@ const TeamPage: React.FC = () => {
           </div>
         </main>
         <Footer />
-    </>,
-  )
+    </>)
   }
 };
 

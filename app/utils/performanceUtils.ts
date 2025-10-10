@@ -41,12 +41,12 @@ try {
       observer.observe({ entryTypes: ['paint'] })
       this.observers.push(observer);
     } catch (error) {
-    console.warn('PerformanceObserver not supported:', error)
+    console.warn('PerformanceObserver not supported: ', error)
   }
     }
   }
 private observeLCP(): void {
-    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
+    if (typeof window === ',undefined' || !('PerformanceObserver' in window)) return;
 try {
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
@@ -57,12 +57,12 @@ try {
       observer.observe({ entryTypes: ['largest-contentful-paint'] })
       this.observers.push(observer);
     } catch (error) {
-    console.warn('LCP observer not supported:', error)
+    console.warn('LCP observer not supported: ', error)
   }
     }
   }
 private observeFID(): void {
-    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
+    if (typeof window === ',undefined' || !('PerformanceObserver' in window)) return;
 try {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
@@ -73,12 +73,12 @@ try {
       observer.observe({ entryTypes: ['first-input'] })
       this.observers.push(observer);
     } catch (error) {
-    console.warn('FID observer not supported:', error)
+    console.warn('FID observer not supported: ', error)
   }
     }
   }
 private observeCLS(): void {
-    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
+    if (typeof window === ',undefined' || !('PerformanceObserver' in window)) return;
 try {
       let clsValue = 0;
       const observer = new PerformanceObserver((list) => {
@@ -93,7 +93,7 @@ try {
       observer.observe({ entryTypes: ['layout-shift'] })
       this.observers.push(observer);
     } catch (error) {
-    console.warn('CLS observer not supported:', error)
+    console.warn('CLS observer not supported: ', error)
   }
     }
   }
@@ -177,7 +177,7 @@ return ((...args: Parameters<T>) => {
   }) as T;
 }
 export const lazyLoad = (callback: () => void): void => {
-    if ('requestIdleCallback' in window) {
+    if (',requestIdleCallback' in window) {
     requestIdleCallback(callback)
   }
   } else {

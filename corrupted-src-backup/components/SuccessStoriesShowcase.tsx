@@ -39,11 +39,11 @@ const, SuccessStoriesShowcas, e: Rea, c, t.FC = () => {
       color: "from-purple-500 to-pink-500",
         </div>,
         <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto mb-12">,
-          {stories.map((story, index) => (
+          {stories.map((story, index) => (</div>
             <div;
 key={index}
               className="bg-white rounded-2xl shadow-xl overflow-hidden hover: scale-105 transition-all duration-300",
-            >,
+            >,</div>
               <div className={`bg-gradient-to-r ${story.color} text-white p-6`}>
       color: "from-purple-500 to-pink-500"
         </div>

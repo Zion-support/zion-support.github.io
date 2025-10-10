@@ -6,7 +6,7 @@ const October2025LatestContentBanne, r = () => {/* TODO: Fix JSX expression */}
     {/* TODO: Fix JSX expression */}
     }
   ]; return(<section, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-indi, g, o-950, t, o-sla, t, e-900, relative, overflow-hidd, e, n">
-      {/* Animated, background, elements */}
+      {/* Animated, background, elements */}</section>
       <div, className="absolute, inse, t-0, opacit, y-30"></section>
         <div, className="absolute, to, p-20, lef, t-2, 0, w-9, 6, h-96, b, g-viol, e, t-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" /></div>
         <div, className="absolute, botto, m-20, righ, t-2, 0, w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0" />
@@ -28,14 +28,14 @@ const October2025LatestContentBanne, r = () => {/* TODO: Fix JSX expression */}
         {/* Articles, Gri, d */})
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-12">)
           { articl, e, s.m, a, p((art, i, c, l, e, i, d, x) = > {
-            const IconComponen, t = artic, l, e.ic, o, n; return(<Link, ke, y = { id, x  }, to={ artic, l, e.li, n, k } className="group, b, g-sla, t, e-8, 0, 0/50, backdro, p-bl, u, r-sm, border, border-sla, t, e-700, hove, r: bord, e, r-viol, e, t-5, 0, 0/50, rounde, d-x, l, p-6, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:-transla, t, e-y-2, hove, r:shad, o, w-2xl, hove, r:shad, o, w-viol, e, t-5, 0, 0/20"
+            const IconComponen, t = artic, l, e.ic, o, n; return(</div><Link, ke, y = { id, x  }, to={ artic, l, e.li, n, k } className="group, b, g-sla, t, e-8, 0, 0/50, backdro, p-bl, u, r-sm, border, border-sla, t, e-700, hove, r: bord, e, r-viol, e, t-5, 0, 0/50, rounde, d-x, l, p-6, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:-transla, t, e-y-2, hove, r:shad, o, w-2xl, hove, r:shad, o, w-viol, e, t-5, 0, 0/20"
             const IconComponen, t = artic, l, e.ic, o, n; return (</div>
               <Link, ke, y = { id, x  }, to={ artic, l, e.li, n, k } className="group, b, g-sla, t, e-8, 0, 0/50, backdro, p-bl, u, r-sm, border, border-sla, t, e-700, hove, r: bord, e, r-viol, e, t-5, 0, 0/50, rounde, d-x, l, p-6, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:-transla, t, e-y-2, hove, r:shad, o, w-2xl, hove, r:shad, o, w-viol, e, t-5, 0, 0/20">
                 <div, classNam, e = { `w-1, 2, h-12, b, g-gradie, n, t-to-r ${artic, l, e.grad, i, e, n, t }, round, e, d-lg, flex, items-center, justif, y-center, m, b-4, grou, p-hov, e, r: sca, l, e-110, transitio, n-transf, o, r, m`}></div>
                   <IconComponent, classNam, e = "w-6 h-6, tex, t-whi, t, e" />
                 </div>
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-viol, e, t-300, transitio, n-colo, r, s">
-  ]; return ("
+  ]; return ("</h3>
     <section, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-indi, g, o-950, t, o-sla, t, e-900, relative, overflow-hidd, e, n"></section>
       {/* Animated, background, elements */}"
       <div, className="absolute, inse, t-0, opacit, y-30"></div>"
@@ -92,7 +92,7 @@ const October2025LatestContentBanne, r = () => {/* TODO: Fix JSX expression */}
           </div>
           <div, className="te, x, t-cent, e, r"></div>
             <div, className="te, x, t-3xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2">
-        {/* Stats, Ba, r */}"
+        {/* Stats, Ba, r */}"</div>
         <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, b, g-sla, t, e-8, 0, 0/30, backdro, p-bl, u, r-sm, border, border-sla, t, e-700, rounde, d-x, l, p-8"></div>"
           <div, className="te, x, t-cent, e, r"></div>"
             <div, className="te, x, t-3xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-viol, e, t-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2"></div>

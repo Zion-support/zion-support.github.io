@@ -10,7 +10,7 @@ const,
   s: {/* TODO: Fix JSX expression */}
     }}
   const finalStructuredData = structuredData || defaultStructuredData;
-  return (<React.Fragment>
+  return (<React.Fragment></React.Fragment>
       <Helmet></Helmet>
         {/* Basic Meta Tags */}
         <title>{title}</title>

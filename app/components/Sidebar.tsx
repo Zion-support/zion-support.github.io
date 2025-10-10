@@ -67,8 +67,7 @@ const navigationSections = [
         { name: 'Services', path: '/services', icon: Settings },
         { name: 'Contact', path: '/contact', icon: Phone },
         { name: 'Blog', path: '/blog', icon: BarChart },
-        { name: 'Case Studies', path: '/case-studies', icon: BarChart },
-      ]
+        { name: 'Case Studies', path: '/case-studies', icon: BarChart }]
     },
     {
     title: 'AI Services',
@@ -87,8 +86,7 @@ const navigationSections = [
         { name: 'HR Analytics', path: '/ai-services/hr-analytics', icon: BarChart },
         { name: 'Process Automation', path: '/ai-services/process-automation', icon: Settings },
         { name: 'Quality Assurance', path: '/ai-services/quality-assurance', icon: Shield },
-        { name: 'Energy Management', path: '/ai-services/energy-management', icon: Settings },
-      ]
+        { name: 'Energy Management', path: '/ai-services/energy-management', icon: Settings }]
     },
     {
     title: 'Micro SaaS',
@@ -107,8 +105,7 @@ const navigationSections = [
         { name: 'Appointment Scheduler', path: '/micro-saas/appointment-scheduler', icon: Clock },
         { name: 'Chat Analytics', path: '/micro-saas/chat-analytics', icon: BarChart },
         { name: 'Expense Tracker', path: '/micro-saas/expense-tracker', icon: BarChart },
-        { name: 'Content Generator', path: '/micro-saas/content-generator', icon: Settings },
-      ]
+        { name: 'Content Generator', path: '/micro-saas/content-generator', icon: Settings }]
     },
     {
     title: 'IT Services',
@@ -123,8 +120,7 @@ const navigationSections = [
         { name: 'Cloud Migration', path: '/cloud-migration', icon: Cloud },
         { name: 'Cybersecurity', path: '/cybersecurity', icon: Shield },
         { name: 'Database Management', path: '/database-management', icon: Settings },
-        { name: 'Managed IT', path: '/managed-it', icon: Settings },
-      ]
+        { name: 'Managed IT', path: '/managed-it', icon: Settings }]
     },
     {
     title: 'Company',
@@ -133,8 +129,7 @@ const navigationSections = [
         { name: 'Team', path: '/team', icon: Users },
         { name: 'Careers', path: '/careers', icon: Users },
         { name: 'Consultation', path: '/consultation', icon: Phone },
-        { name: 'Pricing', path: '/pricing', icon: BarChart },
-      ]
+        { name: 'Pricing', path: '/pricing', icon: BarChart }]
     },
     {
     title: 'Resources',
@@ -143,27 +138,25 @@ const navigationSections = [
         { name: 'Documentation', path: '/docs', icon: Settings },
         { name: 'API Docs', path: '/api-docs', icon: Code },
         { name: 'Support', path: '/support', icon: Users },
-        { name: 'Status', path: '/status', icon: Settings },
-      ]
+        { name: 'Status', path: '/status', icon: Settings }]
     }
   ]
 const contactInfo = {
     phone: '(302) 464-0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown, DE 19709',
-    hours: 'Mon-Fri 9AM-6PM EST'
-  }
+    hours: 'Mon-Fri 9AM-6PM EST'}
   }
 return (
     <>
 
-      {/* Mobile Menu Button */}
+      {/* Mobile Menu Button */}</>
       <button;
         onClick={() => setIsOpen(true)}
 
         className="lg: hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hover:bg-slate-700/90 transition-all"
         aria-label="Open sidebar"
-      >,
+      >,</button>
         <Menu>
       </button>
 
@@ -184,7 +177,7 @@ return (
             <Link to="/" className="flex items-center space-x-3" onClick={() => setIsOpen(false)}>;
               <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center"></div>
                 <Brain />
-              <div />
+              <div /></div>
                 <h2 className="text-xl font-bold text-white cyber-text">Zion Tech Group</h2>
                 <p className="text-xs text-cyan-400">AI & IT Solutions</p>
               </div>
@@ -193,7 +186,7 @@ return (
               onClick={() => setIsOpen(false)}
               className="lg: hidden text-gray-400 hover:text-white transition-colors"
               aria-label="Close sidebar"
-            >,
+            >,</button>
               <X>
             </button>
           </div>

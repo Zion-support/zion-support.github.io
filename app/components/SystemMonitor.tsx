@@ -14,7 +14,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
               <button>
-                Get Started
+                Get Started</button>
                 <ArrowRight>
               </button>
               <button>
@@ -23,8 +23,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
             </div>
         </div>
     </div>
-  ),
-};
+  )};
 
 export default SystemMonitorPage;
 

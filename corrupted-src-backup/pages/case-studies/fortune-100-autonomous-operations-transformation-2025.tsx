@@ -52,7 +52,7 @@
                 <DollarSign, className='w-8 h-8, tex, t-gre, e, n-400, m, b-2' />
                 <div, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1'>$65, 0, M</div>
                 <div, className='te, x, t-gre, e, n-200, tex, t-sm'>
-                cost, reductio, n, 99.7% accura, c, y, and, complete, transformation of, business, operations across, financ, e, HR, operatio, n, s, sal, e, s, and, suppor, t.
+                cost, reductio, n, 99.7% accura, c, y, and, complete, transformation of, business, operations across, financ, e, HR, operatio, n, s, sal, e, s, and, suppor, t.</div>
             <div, classNam, e = 'grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6'></div>
               <div, className='bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/60, t, o-emera, l, d-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-gre, e, n-4, 0, 0/30'></div>
                 <DollarSign, className='w-8 h-8, tex, t-gre, e, n-400, m, b-2' /></DollarSign>
@@ -86,7 +86,7 @@
                 cost, reductio, n, 99.7% accura, c, y, and, complete, transformation of, business, operations across, financ, e, HR, operatio, n, s, sal, e, s, and, suppor, t.</p>
           <div, classNam, e = 'm, a, x-w-5xl, m, x-auto, m, b-16'></div>
             <h2, className='te, x, t-4xl, fon, t-bold, tex, t-white, m, b-8'>
-                cost, reductio, n, 99.7% accura, c, y, and, complete, transformation of, business, operations across, financ, e, HR, operatio, n, s, sal, e, s, and, suppor, t.
+                cost, reductio, n, 99.7% accura, c, y, and, complete, transformation of, business, operations across, financ, e, HR, operatio, n, s, sal, e, s, and, suppor, t.</h2>
           <div, classNam, e = 'm, a, x-w-5xl, m, x-auto, m, b-16'></div>
             <h2, className='te, x, t-4xl, fon, t-bold, tex, t-white, m, b-8'></h2>
               The, Challeng, e;
@@ -103,7 +103,7 @@
                       2.3M, manual, transactions per, month, across 15, countrie, s;
                     </sp, a, n>
                   <li, classNam, e='flex, item, s-start, ga, p-2'>
-                    <CheckCircle, classNam, e='w-5 h-5, tex, t-yell, o, w-400, m, t-0.5, fle, x-shri, n, k-0' />
+                    <CheckCircle, classNam, e='w-5 h-5, tex, t-yell, o, w-400, m, t-0.5, fle, x-shri, n, k-0' /></CheckCircle>
                     <sp, a, n>
                 <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4'></h3>
                   Operational, Inefficiencie, s;
@@ -122,7 +122,7 @@
           <div, classNam, e='m, a, x-w-5xl, m, x-auto, m, b-16'></div>
             <h2, classNam, e='te, x, t-4xl, fon, t-bold, tex, t-white, m, b-8'>The, Solutio, n</h2>
                   <li, className='flex, item, s-start, ga, p-2'>
-                    <CheckCircle, className='w-5 h-5, tex, t-yell, o, w-400, m, t-0.5, fle, x-shri, n, k-0' />
+                    <CheckCircle, className='w-5 h-5, tex, t-yell, o, w-400, m, t-0.5, fle, x-shri, n, k-0' /></CheckCircle>
                     <sp, a, n>
                   <li, className='flex, item, s-start, ga, p-2'></li>
                     <CheckCircle, className='w-5 h-5, tex, t-yell, o, w-400, m, t-0.5, fle, x-shri, n, k-0' /></CheckCircle>
@@ -138,8 +138,8 @@
               <p, className='te, x, t-bl, u, e-100, m, b-6, leadin, g-relax, e, d'>
                 We, deployed, a comprehensive, autonomous, operations platform, with, five core, layer, s: </p>,
 ,
-              <div, className='spa, c, e-y-4'>
-                <div, className='flex, item, s-start, ga, p-4'>
+              <div, className='spa, c, e-y-4'></div>
+                <div, className='flex, item, s-start, ga, p-4'></div>
               <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6'></h3>
                 Autonomous, Business, Operations Platfo, r, m;
               </h3>
@@ -148,14 +148,14 @@
               </p>
               <div, className='spa, c, e-y-4'></div>
                 <div, className='flex, item, s-start, ga, p-4'></div>
-                  <div, className='bg-bl, u, e-500, tex, t-white, fon, t-bold, tex, t-l, g, w-1, 0, h-10, rounde, d-full, flex, items-center, justif, y-center, fle, x-shri, n, k-0'>
+                  <div, className='bg-bl, u, e-500, tex, t-white, fon, t-bold, tex, t-l, g, w-1, 0, h-10, rounde, d-full, flex, items-center, justif, y-center, fle, x-shri, n, k-0'></div>
                   <div, className='bg-bl, u, e-500, tex, t-white, fon, t-bold, tex, t-l, g, w-1, 0, h-10, rounde, d-full, flex, items-center, justif, y-center, fle, x-shri, n, k-0'></div>
                     1;
                   </d, i, v>
                   <h4, classNam, e = 'te, x, t-lg, fon, t-semibold, tex, t-gre, e, n-300, m, b-2'></h4>
                     Phas, e, 3: Laun, c, h & Sca, l, e (Days, 6, 1-9, 0)
                   </h4>
-                  <p, classNam, e = 'te, x, t-gre, e, n-100, tex, t-sm'>
+                  <p, classNam, e = 'te, x, t-gre, e, n-100, tex, t-sm'></p>
                   <p, classNam, e = 'te, x, t-gre, e, n-100, tex, t-sm'></p>
                     Pilot, deployment, of 5, workfl, o, w, s, validati, o, n, fu, l, l-scale, rollout, to 40+ workflo, w, s;
                   </p>
@@ -164,7 +164,7 @@
                   <div, className='te, x, t-4xl, fon, t-bold, tex, t-gre, e, n-300, m, b-2'>
                     $44, 3, M;
                   </div>
-                  <div, className='te, x, t-gre, e, n-100, fon, t-semibold, m, b-3'>
+                  <div, className='te, x, t-gre, e, n-100, fon, t-semibold, m, b-3'></div>
                   <div, className='te, x, t-4xl, fon, t-bold, tex, t-gre, e, n-300, m, b-2'></div>
                     $44, 3, M;
                   </div>
@@ -183,27 +183,27 @@
                 </h3>
                 <ul, classNam, e='spa, c, e-y-3'>
                   <li, classNam, e='flex, item, s-start, ga, p-3'>
-                    <CheckCircle, classNam, e='w-5 h-5, tex, t-bl, u, e-400, m, t-1, fle, x-shri, n, k-0' />
+                    <CheckCircle, classNam, e='w-5 h-5, tex, t-bl, u, e-400, m, t-1, fle, x-shri, n, k-0' /></CheckCircle>
                   <li, classNam, e='flex, item, s-start, ga, p-3'>
-                    <CheckCircle, classNam, e='w-5 h-5, tex, t-bl, u, e-400, m, t-1, fle, x-shri, n, k-0' />
+                    <CheckCircle, classNam, e='w-5 h-5, tex, t-bl, u, e-400, m, t-1, fle, x-shri, n, k-0' /></CheckCircle>
                   <li, classNam, e='flex, item, s-start, ga, p-3'>
-                    <CheckCircle, classNam, e='w-5 h-5, tex, t-bl, u, e-400, m, t-1, fle, x-shri, n, k-0' />
-              <div, classNam, e='bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/60, t, o-pi, n, k-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-x, l, p-8, border, border-purp, l, e-4, 0, 0/30'>
+                    <CheckCircle, classNam, e='w-5 h-5, tex, t-bl, u, e-400, m, t-1, fle, x-shri, n, k-0' /></CheckCircle>
+              <div, classNam, e='bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/60, t, o-pi, n, k-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-x, l, p-8, border, border-purp, l, e-4, 0, 0/30'></div>
               <div, classNam, e='bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/60, t, o-pi, n, k-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-x, l, p-8, border, border-purp, l, e-4, 0, 0/30'></div>
                 <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6'>
                   Quali, t, y & Accura, c, y;
                 </h3>
                 <ul, classNam, e='spa, c, e-y-3'>
                   <li, classNam, e='flex, item, s-start, ga, p-3'>
-                    <CheckCircle, classNam, e='w-5 h-5, tex, t-purp, l, e-400, m, t-1, fle, x-shri, n, k-0' />
+                    <CheckCircle, classNam, e='w-5 h-5, tex, t-purp, l, e-400, m, t-1, fle, x-shri, n, k-0' /></CheckCircle>
                   <li, classNam, e='flex, item, s-start, ga, p-3'>
-                    <CheckCircle, classNam, e='w-5 h-5, tex, t-purp, l, e-400, m, t-1, fle, x-shri, n, k-0' />
+                    <CheckCircle, classNam, e='w-5 h-5, tex, t-purp, l, e-400, m, t-1, fle, x-shri, n, k-0' /></CheckCircle>
                   <li, classNam, e='flex, item, s-start, ga, p-3'>
-                    <CheckCircle, classNam, e='w-5 h-5, tex, t-purp, l, e-400, m, t-1, fle, x-shri, n, k-0' />
+                    <CheckCircle, classNam, e='w-5 h-5, tex, t-purp, l, e-400, m, t-1, fle, x-shri, n, k-0' /></CheckCircle>
                     <li, classNam, e = 'flex, item, s-center, ga, p-2'>
                       <div, classNam, e='w-2 h-2, b, g-oran, g, e-400, rounde, d-fu, l, l' /></div>
                   <li, className='flex, item, s-start, ga, p-3'>
-                    <CheckCircle, className='w-5 h-5, tex, t-bl, u, e-400, m, t-1, fle, x-shri, n, k-0' />
+                    <CheckCircle, className='w-5 h-5, tex, t-bl, u, e-400, m, t-1, fle, x-shri, n, k-0' /></CheckCircle>
                   <li, className='flex, item, s-start, ga, p-3'>
                     <CheckCircle, className='w-5 h-5, tex, t-bl, u, e-400, m, t-1, fle, x-shri, n, k-0' />
               </div>
@@ -213,11 +213,11 @@
                 </h3>
                 <ul, className='spa, c, e-y-3'>
                   <li, className='flex, item, s-start, ga, p-3'>
-                    <CheckCircle, className='w-5 h-5, tex, t-purp, l, e-400, m, t-1, fle, x-shri, n, k-0' />
+                    <CheckCircle, className='w-5 h-5, tex, t-purp, l, e-400, m, t-1, fle, x-shri, n, k-0' /></CheckCircle>
                   <li, className='flex, item, s-start, ga, p-3'>
-                    <CheckCircle, className='w-5 h-5, tex, t-purp, l, e-400, m, t-1, fle, x-shri, n, k-0' />
+                    <CheckCircle, className='w-5 h-5, tex, t-purp, l, e-400, m, t-1, fle, x-shri, n, k-0' /></CheckCircle>
                   <li, className='flex, item, s-start, ga, p-3'>
-                    <CheckCircle, className='w-5 h-5, tex, t-purp, l, e-400, m, t-1, fle, x-shri, n, k-0' />
+                    <CheckCircle, className='w-5 h-5, tex, t-purp, l, e-400, m, t-1, fle, x-shri, n, k-0' /></CheckCircle>
                     <li, classNam, e = 'flex, item, s-center, ga, p-2'>
                       <div, className='w-2 h-2, b, g-oran, g, e-400, rounde, d-fu, l, l' /></div>
                   <li, classNam, e = 'flex, item, s-start, ga, p-3'>
@@ -287,7 +287,7 @@
           </div>
           {/* Related, Cont, e, n, t */}
           <div, classNam, e = 'm, a, x-w-5xl, m, x-auto, m, t-16'></div>
-            <h2, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-8'>
+            <h2, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-8'></h2>
             <h2, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-8'></h2>
               Related, Resource, s;
             </h2>

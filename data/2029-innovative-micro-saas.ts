@@ -26,11 +26,9 @@ export interface InnovativeMicroSaas2029 {/* TODO: Fix JSX expression */}
   s: string}
   }
 }
-    address: string,
-  }
+    address: string}
 export const innovativeMicroSaasServices2029: InnovativeMicroSaas2029[] = [
-    address: string,
-  }
+    address: string}
 export const innovativeMicroSaasServices2029: InnovativeMicroSaas2029[] = [
     id: '2029 - innovative - micro - saas',
     name: '2029 Innovative Micro SAAS Platform',
@@ -63,8 +61,8 @@ export const,
       'Advanced technology',
       'Innovation platform',
       'Future - ready solutions'],
-    link: '/services / 2029 - innovative - micro - saas'
-    category: 'Innovative Micro SAAS 2029'
+    link: '/services / 2029 - innovative - micro - saas',
+    category: 'Innovative Micro SAAS 2029',
     real_implementation: true
     contact_info: unknown,
       mobile: '+1 302 464 0950',
@@ -100,8 +98,7 @@ export const,
   realImplementation: boolean
   contactInfo: unknown,
     mobile: string, email: string
-    address: string,
-  }
+    address: string}
 }
 export const innovativeMicroSaasServices2029: InnovativeMicroSaas2029[] = [,
     id: "2029-innovative-micro-saas", name: "2029 Innovative Micro SAAS Platform",
@@ -332,7 +329,7 @@ export interface InnovativeMicroSaas2029 export interface InnovativeMicroSaas202
   y: 'Innovative Micro SAAS 2029', real_implementatio,
   n: true, contact_inf,
   o: ' mobil,
-  e: '+1 302 464 0950',' emai,
+  e: ',+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup && ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}}]; mobil,"
   e: "+1 302 464 0950",

@@ -75,7 +75,7 @@ $4}
         '@type': 'GeoCoordinates',
         latitude: '39.8283',
         longitude:       ,
-geoRadiusgeoRadius: '1000000'
+geoRadiusgeoRadius: '1000000',
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: 'AI Technology Services',
@@ -176,15 +176,13 @@ export default RootLayout;
   }
 }
           '@type': 'PriceSpecification',
-          billingIncrement: 'P1M'
-        }
+          billingIncrement: 'P1M'}
   itemOffered: {
     // TODO: Add content
   }
 }
             '@type': 'Service',
             name: 'AI Enterprise Transformation',
-            description: 'Comprehensive AI implementation strategies for enterprise organizations'
-export default SrcPage,
-}
+            description: 'Comprehensive AI implementation strategies for enterprise organizations',
+export default SrcPage}
   </script>

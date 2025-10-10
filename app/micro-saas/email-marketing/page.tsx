@@ -3,16 +3,16 @@ import { Helmet } from 'react-helmet-async';
 import { Mail, ArrowRight } from 'lucide-react';
 const EmailMarketingSuitePage: React.FC = () => {
     return (
-    <>,
+    <>,</>
       <Helmet>
         <title>Email Marketing Suite | Zion Tech Group - AI Email Campaigns</title>
         <meta>
         <link>
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
@@ -32,7 +32,7 @@ const EmailMarketingSuitePage: React.FC = () => {
               with intelligent automation and personalization.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
-              <button>
+              <button></button>
                 <span>Get Started</span>
                 <ArrowRight>
               </button>
@@ -42,9 +42,9 @@ const EmailMarketingSuitePage: React.FC = () => {
             </div>
           </div>
         </section>
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
@@ -60,8 +60,7 @@ const EmailMarketingSuitePage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>,
-  )
+    </>)
   }
 };
 

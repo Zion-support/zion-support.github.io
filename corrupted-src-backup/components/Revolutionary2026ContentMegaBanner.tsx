@@ -161,15 +161,15 @@ featur, e, d: fal, s, e;
 }
   ];
   return(<div, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">
-      {/* Animated, background, effects */}
+      {/* Animated, background, effects */}</div>
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20">
-  return (
+  return (</div>
     <div, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">
       {/* Animated, background, effects */}</div>
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20"></div>
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>
-        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '3s' }}></d, i, v>
-        <div, className="absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1.5s' }}></d, i, v>
+        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '3s'}}></d, i, v>
+        <div, className="absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1.5s'}}></d, i, v>
       </d, i, v>
       <div, className="container, m, x-auto, p, x-6, relative, z-10">
         {/* Head, e, r */}</div>
@@ -186,8 +186,8 @@ featur, e, d: fal, s, e;
       {/* Animated, background, effects */}"
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20"></div>"
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>"
-        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '3s' }}></d, i, v>"
-        <div, className="absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1.5s' }}></d, i, v>
+        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '3s'}}></d, i, v>"
+        <div, className="absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1.5s'}}></d, i, v>
       </d, i, v>"
       <div, className="container, m, x-auto, p, x-6, relative, z-10"></div>
         {/* Head, e, r */}"
@@ -239,7 +239,7 @@ featur, e, d: fal, s, e;
         {/* Featured, Content, Grid */})
         <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l;)
   g:gr, i, d-co, l, s-3, ga, p-8, m, b-16">)
-          {revolutionaryConte, n, t.m, a, p((conte, n, t) => (
+          {revolutionaryConte, n, t.m, a, p((conte, n, t) => (</div>
             <d, i, v;
         {/* Featured, Content, Grid */}
         <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l
@@ -338,7 +338,7 @@ featur, e, d: fal, s, e;
                     <Zap, className="w-4 h-4, tex, t-purp, l, e-4, 0, 0"  /></Zap>
                     {conte, n, t.readTi, m, e}
                   </sp, a, n>
-                  <sp, a, n>{new, Dat, e(conte, n, t.da, t, e).toLocaleDateStri, n, g('en-US', { mon, t, h: 'sho, r, t', d, a, y: 'numer, i, c', ye, a, r: 'numer, i, c' })}</sp, a, n>
+                  <sp, a, n>{new, Dat, e(conte, n, t.da, t, e).toLocaleDateStri, n, g('en-US', { mon, t, h: 'sho, r, t', d, a, y: 'numer, i, c', ye, a, r: 'numer, i, c'})}</sp, a, n>
                 </d, i, v>
                 {/* CTA, Butto, n */}
                 <a;
@@ -366,7 +366,7 @@ featur, e, d: fal, s, e;
         <div, className="grid, gri, d-co, l, s-2, m, d:gr, i, d-co, l, s-4, ga, p-6, m, b-16"></div>
           <div, className="te, x, t-cente, r, p-6, b, g-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-xl, border, border-whi, t, e/10"></div>
             <div, className="te, x, t-4xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2">
-        {/* Revolutionary, Stat, s */}"
+        {/* Revolutionary, Stat, s */}"</div>
         <div, className="grid, gri, d-co, l, s-2, m, d:gr, i, d-co, l, s-4, ga, p-6, m, b-16"></div>"
           <div, className="te, x, t-cente, r, p-6, b, g-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-xl, border, border-whi, t, e/10"></div>"
             <div, className="te, x, t-4xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2"></div>
@@ -407,7 +407,7 @@ featur, e, d: fal, s, e;
           <div, className="inli, n, e-bloc, k, p-1, rounde, d-2xl, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, vi, a-bl, u, e-500, t, o-cy, a, n-5, 0, 0"></div>
             <div, className="bg-sla, t, e-900, rounde, d-xl, p, x-12, p, y-10"></div>
               <h3, className="te, x, t-4xl, fon, t-bold, tex, t-white, m, b-4">
-        {/* Ca, l, l-to-Action, Sectio, n */}"
+        {/* Ca, l, l-to-Action, Sectio, n */}"</h3>
         <div, className="te, x, t-cent, e, r"></div>"
           <div, className="inli, n, e-bloc, k, p-1, rounde, d-2xl, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, vi, a-bl, u, e-500, t, o-cy, a, n-5, 0, 0"></div>"
             <div, className="bg-sla, t, e-900, rounde, d-xl, p, x-12, p, y-10"></div>"

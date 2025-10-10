@@ -35,8 +35,7 @@ export interface PerformanceReport {
     memor,
   y: MemoryStats | null,,
     timestam,
-  p: number,
-}
+  p: number}
 /**
  * Resource Statistics Interface;
  * Tracks resource loading statistics;
@@ -76,7 +75,7 @@ export interface PerformanceAlert {
     // TODO: Add content
   }
 }
-  type: 'warning' | 'error' | 'info',,
+  type: 'warning', | 'error' | 'info',,
     message: string,,
     metric: keyof PerformanceMetrics,,
     value: number,,
@@ -109,7 +108,7 @@ export interface PerformanceWithMemory extends Performance {
 }
   memor,
   y: {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 
   usedJSHeapSize: number,,

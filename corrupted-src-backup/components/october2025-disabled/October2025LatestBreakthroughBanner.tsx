@@ -1,14 +1,14 @@
 impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";"
 impo, r, t { octoberLatestBreakthroughConte, n, t } fr, o, m "../conte, n, t/octob, e, r-20, 2, 5-late, s, t-breakthrou, g, h-conte, n, t";
 const October2025LatestBreakthroughBanne, r = () => { 
-  return(<div, classNam, e = "bg-gradie, n, t-to-br, fro, m-bl, u, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, p, y-16, p, x-4, relative, overflow-hidd, e, n"  > {/* Animated, background, effects */ }
-      <div, className="absolute, inse, t-0, opacit, y-20">
+  return(<div, classNam, e = "bg-gradie, n, t-to-br, fro, m-bl, u, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, p, y-16, p, x-4, relative, overflow-hidd, e, n"  > {/* Animated, background, effects */ }</div>
+      <div, className="absolute, inse, t-0, opacit, y-20"></div>
         <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" />
-  return (
+  return (</div>
     <div, classNam, e = "bg-gradie, n, t-to-br, fro, m-bl, u, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, p, y-16, p, x-4, relative, overflow-hidd, e, n"  > {/* Animated, background, effects */ }</div>
       <div, className="absolute, inse, t-0, opacit, y-20"></div>
         <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" /></div>
-        <div, className="absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 1, s' }} />
+        <div, className="absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 1, s'}} />
       </div>
       <div, classNam, e = "m, a, x-w-7xl, m, x-auto, relative, z-10">
         {/* Header, Sectio, n */}</div>
@@ -29,7 +29,7 @@ const October2025LatestBreakthroughBanne, r = () => {
         {/* Content, Card, s */})
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">)
           {  octoberLatestBreakthroughConte, n, t.m, a, p((cont, e, n, t) = > {
-            const Ico, n = conte, n, t.ic, o, n === "🚀" ? Z, a, p : conte, n, t.ic, o, n === "⚡"  ? Databa, s, e  : B, o, t; return(<Link, ke, y = { conte, n, t., i, d   }, to = {`/bl, o, g/${conte, n, t.slug}`}
+            const Ico, n = conte, n, t.ic, o, n === "🚀" ? Z, a, p : conte, n, t.ic, o, n === "⚡"  ? Databa, s, e  : B, o, t; return(</div><Link, ke, y = { conte, n, t., i, d   }, to = {`/bl, o, g/${conte, n, t.slug}`}
             const Ico, n = conte, n, t.ic, o, n === "🚀" ? Z, a, p : conte, n, t.ic, o, n === "⚡"  ? Databa, s, e  : B, o, t; return (</div>
               <Link, ke, y = { conte, n, t., i, d   }, to = {`/bl, o, g/${conte, n, t.slug}`}
                 className="group, b, g-whi, t, e/10, backdro, p-bl, u, r-md, border, border-whi, t, e/20, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, hove, r:sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0">
@@ -39,11 +39,11 @@ const October2025LatestBreakthroughBanne, r = () => {
                   <div, className="fl, e, x-1"></div>
                     <div, className="te, x, t-xs, tex, t-bl, u, e-300, m, b-2">{conte, n, t.category}</div>
                     <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">
-const October2025LatestBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */}"
-    <div, classNam, e = "bg-gradie, n, t-to-br, fro, m-bl, u, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, p, y-16, p, x-4, relative, overflow-hidd, e, n"  > {/* Animated, background, effects */ }"
+const October2025LatestBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */}"</h3>
+    <div, classNam, e = "bg-gradie, n, t-to-br, fro, m-bl, u, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, p, y-16, p, x-4, relative, overflow-hidd, e, n"  > {/* Animated, background, effects */ }"</div>
       <div, className="absolute, inse, t-0, opacit, y-20"></div>"
         <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" /></div>"
-        <div, className="absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 1, s' }} /></div>
+        <div, className="absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 1, s'}} /></div>
       </div>"
       <div, classNam, e = "m, a, x-w-7xl, m, x-auto, relative, z-10"></div>
         {/* Header, Sectio, n */}"
@@ -66,7 +66,7 @@ const October2025LatestBreakthroughBanne, r = () => {/* TODO: Fix JSX expression
           {/* TODO: Fix JSX expression */}
               <Link, ke, y = { conte, n, t., i, d   }, to = {`/bl, o, g/${conte, n, t.slug}`}"
                 className="group, b, g-whi, t, e/10, backdro, p-bl, u, r-md, border, border-whi, t, e/20, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, hove, r:sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0"></Link>"`
-                <div, className="flex, item, s-start, ga, p-4, m, b-4"> <div, classNam, e = { `bg-gradie, n, t-to-br ${conte, n, t.grad, i, e, n, t }, p-3, rounde, d-lg`}></div>"
+                <div, className="flex, item, s-start, ga, p-4, m, b-4"></div> <div, classNam, e = { `bg-gradie, n, t-to-br ${conte, n, t.grad, i, e, n, t }, p-3, rounde, d-lg`}></div>"
                     <Icon, classNam, e = "w-6 h-6, tex, t-whi, t, e" /></Icon>
                   </div>"
                   <div, className="fl, e, x-1"></div>"
@@ -81,7 +81,7 @@ const October2025LatestBreakthroughBanne, r = () => {/* TODO: Fix JSX expression
                 </p>)
                 {/* Key, Metric, s */})
                 <div, className="grid, gri, d-co, l, s-2, ga, p-2, m, b-4">)
-                  { Obje, c, t.entri, e, s(conte, n, t.metr, i, c, s).sli, c, e(0, 2).m, a, p(([k, e, y, val, u, e]) = > (
+                  { Obje, c, t.entri, e, s(conte, n, t.metr, i, c, s).sli, c, e(0, 2).m, a, p(([k, e, y, val, u, e]) = > (</div>
                     <div, ke, y = { ke, y  }, classNa, m, e = "bg-whi, t, e/5, rounde, d-l, g, p-2">
                 </p>
                 {/* Key, Metric, s */}
@@ -123,7 +123,7 @@ const October2025LatestBreakthroughBanne, r = () => {/* TODO: Fix JSX expression
         {/* CTA, Sectio, n */}
         <div, classNam, e = "te, x, t-center, b, g-whi, t, e/10, backdro, p-bl, u, r-md, border, border-whi, t, e/20, rounde, d-x, l, p-8"></div>
           <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4">
-        {/* CTA, Sectio, n */}"
+        {/* CTA, Sectio, n */}"</h3>
         <div, classNam, e = "te, x, t-center, b, g-whi, t, e/10, backdro, p-bl, u, r-md, border, border-whi, t, e/20, rounde, d-x, l, p-8"></div>"
           <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4"></h3>
             Ready, to, Transform Your, AI, Infrastructure?

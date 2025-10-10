@@ -43,7 +43,7 @@ export const _performanceConfig = {
   },
   // Resource hints
   preload: [
-    { href: '/fonts/inter-var.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' }],
+    { href: '/fonts/inter-var.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous'}],
   prefetch: [
     '/api/health',
     '/api/config'],
@@ -103,38 +103,32 @@ export const _performanceConfig = {
 // goo,
   d: 2500,
 // needsImprovemen,
-  t: 4000,
-    },
+  t: 4000},
 
     fid: {
     // TODO: Add content
   }
 }
   good: 100,
-      needsImprovement: 300,
-    },
+      needsImprovement: 300},
     cls: {
     // TODO: Add content
   }
 }
   good: 0.1,
-      needsImprovement: 0.25,
-    },
+      needsImprovement: 0.25},
     fcp: {
     // TODO: Add content
   }
 }
   good: 1800,
-      needsImprovement: 3000,
-    },
+      needsImprovement: 3000},
     ttfb: {
     // TODO: Add content
   }
 }
   good: 800,
-      needsImprovement: 1800,
-
-    }
+      needsImprovement: 1800}
   },
   // Cache strategies,
   cach,
@@ -167,7 +161,7 @@ export const _performanceConfig = {
   // TOD,
   O: Add items]
     {/* TODO: Fix JSX expression */}
-  n: 'anonymous' },
+  n: 'anonymous'},
 //   ],
   prefetc,
   h: [
@@ -187,8 +181,7 @@ export const _performanceConfig = {
 // minimumCacheTT,
   L: 60,
 // dangerouslyAllowSV,
-  G: false,
-  },
+  G: false},
   // Bundle optimization,
   bundl,
   e: {/* TODO: Fix JSX expression */}
@@ -204,8 +197,7 @@ export const _performanceConfig = {
 // priorit,
   y: -10,
 // reuseExistingChun,
-  k: true,
-        },
+  k: true},
 
         default: {
     // TODO: Add content
@@ -213,9 +205,7 @@ export const _performanceConfig = {
 }
   minChunks: 2,
           priority: -20,
-          reuseExistingChunk: true,
-
-        }
+          reuseExistingChunk: true}
       }
     }
   },
@@ -230,8 +220,7 @@ export const _performanceConfig = {
 // sendToAnalytic,
   s: true,
 // logThreshol,
-  d: 'needsImprovement'
-  }
+  d: 'needsImprovement'}
 }
 export type PerformanceConfig = typeof performanceConfig;
 export default performanceConfig;

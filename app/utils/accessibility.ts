@@ -3,8 +3,8 @@ export interface AccessibilityConfig {
     enableHighContrast: boolean;
   enableScreenReader: boolean
   enableKeyboardNavigation: boolean
-  fontSize: 'small' | 'medium' | 'large',
-  colorScheme: 'light' | 'dark' | 'auto'
+  fontSize: 'small', | 'medium' | 'large',
+  colorScheme: 'light', | 'dark' | 'auto'
   }
 }
 export const defaultAccessibilityConfig: AccessibilityConfig = {
@@ -12,8 +12,7 @@ export const defaultAccessibilityConfig: AccessibilityConfig = {
   enableScreenReader: true,
   enableKeyboardNavigation: true,
   fontSize: 'medium',
-  colorScheme: 'auto',
-  }
+  colorScheme: 'auto'}
 }
 export class AccessibilityManager {
     private config: AccessibilityConfig,

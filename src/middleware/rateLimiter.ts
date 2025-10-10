@@ -13,8 +13,7 @@ export interface RateLimitConfig {
   max: number; // Maximum number of requests per window;
   message?: string; // Custom error message
   skipSuccessfulRequests?: boolean
-  skipFailedRequests?: boolean,
-}
+  skipFailedRequests?: boolean}
 interface RequestRecord {
     count: number
   resetTime: number,
@@ -136,7 +135,7 @@ $4}),
   // API: 60 requests per minute
   api: new RateLimiter({
     max: 60,
-    message: 'API rate limit exceeded. Please try again later.'
+    message: 'API rate limit exceeded. Please try again later.',
   // Authentication: 5 login attempts per 15 minutes
   auth: new RateLimiter({
     max: 5,
@@ -159,8 +158,7 @@ export function getClientIdentifier(request: Request): string {
     this.requests.delete(identifier);
    * Cleanup expired entries;
   private cleanup(): void {for (const [key, record] of this.requests.entries()) {}
-  // TODO: Add content,
-}
+  // TODO: Add content}
       if (now > record.resetTime) {
     // TODO: Add content
   }
@@ -184,8 +182,7 @@ export const rateLimiters = {
 }
   windowMs: 60 * 1000,
     max: 10,
-    message: 'Too many requests. Please try again in a minute.'
-  }),
+    message: 'Too many requests. Please try again in a minute.'}),
   // Standard: 100 requests per 15 minutes,
   standard: new RateLimiter({
     // TODO: Add content
@@ -205,7 +202,7 @@ export const rateLimiters = {
 
     api: new RateLimiter({
     max: 60,
-    message: 'API rate limit exceeded. Please try again later.'
+    message: 'API rate limit exceeded. Please try again later.',
   // Authentication: 5 login attempts per 15 minutes,
 
     auth: new RateLimiter({max: 5,

@@ -4,12 +4,12 @@ export default function FeaturedContentBanner20, 2, 5() {/* TODO: Fix JSX expres
     },
     {/* TODO: Fix JSX expression */}
     }
-  ]; return(<section, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-9, 0, 0/80, t, o-bl, u, e-9, 0, 0/80, backdro, p-bl, u, r-lg">
-      <div, className="container, m, x-auto, p, x-6">
-        <div, className="te, x, t-center, m, b-16">
+  ]; return(<section, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-9, 0, 0/80, t, o-bl, u, e-9, 0, 0/80, backdro, p-bl, u, r-lg"></section>
+      <div, className="container, m, x-auto, p, x-6"></div>
+        <div, className="te, x, t-center, m, b-16"></div>
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-6, p, y-3, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, border, border-bl, u, e-5, 0, 0/30, m, b-6">
-  ]; return (
-    <section, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-9, 0, 0/80, t, o-bl, u, e-9, 0, 0/80, backdro, p-bl, u, r-lg">
+  ]; return (</div>
+    <section, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-9, 0, 0/80, t, o-bl, u, e-9, 0, 0/80, backdro, p-bl, u, r-lg"></section>
       <div, className="container, m, x-auto, p, x-6"></section>
         <div, className="te, x, t-center, m, b-16"></div>
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-6, p, y-3, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, border, border-bl, u, e-5, 0, 0/30, m, b-6"></div>
@@ -21,7 +21,7 @@ export default function FeaturedContentBanner20, 2, 5() {/* TODO: Fix JSX expres
             Featured, Conten, t;
           </h2>
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o">
-  ]; return (<section, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-9, 0, 0/80, t, o-bl, u, e-9, 0, 0/80, backdro, p-bl, u, r-lg"></section>"
+  ]; return (</p><section, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-9, 0, 0/80, t, o-bl, u, e-9, 0, 0/80, backdro, p-bl, u, r-lg"></section>"
       <div, className="container, m, x-auto, p, x-6"></div>"
         <div, className="te, x, t-center, m, b-16"></div>"
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-6, p, y-3, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, border, border-bl, u, e-5, 0, 0/30, m, b-6"></div>"
@@ -173,7 +173,7 @@ export default function FeaturedContentBanner20, 2, 5() {/* TODO: Fix JSX expres
               className="fl, e, x-1, p, x-4, p, y-3, b, g-whi, t, e/10, border, border-whi, t, e/20, rounde, d-lg, tex, t-white, placeholde, r-gr, a, y-400, focu, s:bord, e, r-bl, u, e-500, focu, s:outli, n, e-no, n, e"
 />
 <button, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, hove, r:fr, o, m-bl, u, e-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-lg, transitio, n-all, duratio, n-3, 0, 0">
-        {/* Newsletter, Sig, n, u, p */}"
+        {/* Newsletter, Sig, n, u, p */}"</button>
         <div, classNam, e = "mt-16, b, g-gradie, n, t-to-r, fro, m-sla, t, e-8, 0, 0/50, t, o-sla, t, e-9, 0, 0/50, border, border-whi, t, e/10, rounde, d-2x, l, p-8, tex, t-cent, e, r"></div>"
           <h3, className="te, x, t-2xl, fon, t-bold, m, b-4, tex, t-whi, t, e">Stay, Ahead, of the, AI, Revolution</h3>"
           <p, className="te, x, t-gr, a, y-300, m, b-6, ma, x-w-2xl, m, x-au, t, o"></p>

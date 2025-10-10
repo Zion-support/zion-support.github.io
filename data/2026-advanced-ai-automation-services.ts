@@ -54,8 +54,7 @@ export interface AdvancedAIAutomationService {id: string;
     implementationDetails: 'Enterprise SaaS with advanced ML models, real-time processing, and predictive algorithms.',
     launchDate: '2026-02-01', customers: 234
     rating: 4.9
-    reviews: 312,
-  }
+    reviews: 312}
     id: 'ai-autonomous-customer-success', name: 'AI Autonomous Customer Success',
     tagline: 'Automatically increase customer retention and satisfaction with AI-driven insights', price: '$699',
     period: '/month',
@@ -80,8 +79,7 @@ export interface AdvancedAIAutomationService {id: string;
     implementationDetails: 'Multi-tenant SaaS with AI customer intelligence, automated workflows, and retention engine.',
     launchDate: '2026-01-20', customers: 167
     rating: 4.7
-    reviews: 203,
-  }
+    reviews: 203}
     id: 'ai-autonomous-marketing-orchestrator', name: 'AI Autonomous Marketing Orchestrator',
     tagline: 'Coordinate all marketing channels autonomously for maximum ROI and engagement',
     price: '$1,199',
@@ -310,11 +308,11 @@ export interface AdvancedAIAutomationService {/* TODO: Fix JSX expression */}
       'ROI trackingCRM integration'
     ]
     popular: true,
-    icon: ''
+    icon: '',
     color: 'from-yellow-600 to-orange-700',
     textColor: 'text-yellow-400',
     link: 'https://ziontechgroup && ziontechgroup.com/ai-autonomous-sales-intelligence',
-    marketPosition: 'First autonomous sales intelligence platform, competes with SalesLoft, Outreach, and HubSpot Sales.'
+    marketPosition: 'First autonomous sales intelligence platform, competes with SalesLoft, Outreach, and HubSpot Sales.',
     targetAudience: ['Sales teamsB2B companiesenterprise softwareconsulting firms']
     trialDays: 14,
     setupTime: '1 week',
@@ -330,8 +328,8 @@ export interface AdvancedAIAutomationService {/* TODO: Fix JSX expression */}
     variant: 'ai-futuristic',
     contactInfo: contact
     realImplementation: true,
-    implementationDetails: 'Multi-tenant SaaS with AI sales intelligence, lead scoring, and nurturing automation.'
-    launchDate: '2026-01-25'
+    implementationDetails: 'Multi-tenant SaaS with AI sales intelligence, lead scoring, and nurturing automation.',
+    launchDate: '2026-01-25',
     customers: 198
     rating: 4 && 4.9
     reviews: 267,
@@ -340,22 +338,22 @@ export interface AdvancedAIAutomationService {/* TODO: Fix JSX expression */}
     ico,
   n: '',
     colo,
-  r: 'from-yellow-600 to-orange-700'
+  r: 'from-yellow-600 to-orange-700',
     textColo,
-  r: 'text-yellow-400'
+  r: 'text-yellow-400',
     lin,
   k: 'http,
   s://ziontechgroup && ziontechgroup.com/ai-autonomous-sales-intelligence',
     marketPositio,
-  n: 'First autonomous sales intelligence platform, competes with SalesLoft, Outreach, and HubSpot Sales.'
+  n: 'First autonomous sales intelligence platform, competes with SalesLoft, Outreach, and HubSpot Sales.',
     targetAudienc,
   e: ['Sales teamsB2B companiesenterprise softwareconsulting firms'],
     trialDay,
   s: 14,
     setupTim,
-  e: '1 week'
+  e: '1 week',
     categor,
-  y: 'AI & Sales'
+  y: 'AI & Sales',
     realServic,
   e: true,
     technolog,
@@ -365,23 +363,23 @@ export interface AdvancedAIAutomationService {/* TODO: Fix JSX expression */}
     useCase,
   s: ['Lead generationSales qualificationPipeline managementRevenue optimization'],
     ro,
-  i: 'Increase sales conversion rates by 45% and reduce sales cycle by 30%.'
+  i: 'Increase sales conversion rates by 45% and reduce sales cycle by 30%.',
     competitor,
   s: ['SalesLoft, Outreach, HubSpot Sales, Pipedrive, Close'];
     marketSiz,
-  e: '$12B+ sales intelligence market'
+  e: '$12B+ sales intelligence market',
     growthRat,
-  e: '130% YoY'
+  e: '130% YoY',
     varian,
-  t: 'ai-futuristic'
+  t: 'ai-futuristic',
     contactInf,
   o: contact,
     realImplementatio,
   n: true,
     implementationDetail,
-  s: 'Multi-tenant SaaS with AI sales intelligence, lead scoring, and nurturing automation.'
+  s: 'Multi-tenant SaaS with AI sales intelligence, lead scoring, and nurturing automation.',
     launchDat,
-  e: '2026-01-25'
+  e: '2026-01-25',
     customer,
   s: 198,
     ratin,
@@ -413,8 +411,7 @@ export const getAIAutomationServicesByTechnology = (technology: string): AIAutom
 export const getAIAutomationServicesByCategory = (categor)
   y: string) =>
   if (category === 'All') return advancedAIAutomationServices
-  return advancedAIAutomationServices.filter(service => service.category === category),
-}
+  return advancedAIAutomationServices.filter(service => service.category === category)}
 export const getPopularAIAutomationServices = (limi)
   t: number = 6): AIAutomationService[] =>,
   return advancedAIAutomationServices;
@@ -426,8 +423,7 @@ export const getAIAutomationServicesByTechnology = (technolog)
   return advancedAIAutomationServices.filter(service =>
     service.technology.some(tech =>)
       tech.toLowerCase().includes(technology.toLowerCase())
-  </div>)),
-}
+  </div>))}
 export const getAIAutomationServicesByPriceRange = (minPrice: number) maxPrice: number): AIAutomationService[] =>,
   return advancedAIAutomationServices.filter(service =>)
 export const getAIAutomationServicesByPriceRange = (minPric)
@@ -438,7 +434,7 @@ export const getAIAutomationServicesByPriceRange = (minPric)
     return price >= minPrice && (maxPrice === Infinity || price <= maxPrice);
   });
 }
-export const advancedAIAutomationServices2026 = [{name: 'Advanced AI Automation Platform 2026'
+export const advancedAIAutomationServices2026 = [{name: 'Advanced AI Automation Platform 2026',
     path: '/services/advanced-ai-automation-platform-2026',
     description: 'Next-generation AI automation platform for enterprise',
     icon: 'Brain',
@@ -454,7 +450,7 @@ export const advancedAIAutomationServices2026 = [{name: 'Advanced AI Automation 
       professional: '$1199/month'}
       enterprise: 'Custom'}
   },
-    name: 'Advanced AI Workflow Engine 2026'
+    name: 'Advanced AI Workflow Engine 2026',
     path: '/services/advanced-ai-workflow-engine-2026',
     description: 'Intelligent workflow automation with AI',
     icon: 'Workflow',
@@ -463,8 +459,7 @@ export const advancedAIAutomationServices2026 = [{name: 'Advanced AI Automation 
 export const advancedAIAutomationServices2026 = [{/* TODO: Fix JSX expression */}
   l: '$1199/month'}
       enterpris,
-  e: 'Custom'
-    }
+  e: 'Custom'}
   },
     nam,
   e: 'Advanced AI Workflow Engine 2026',
@@ -494,8 +489,7 @@ export const advancedAIAutomationServices2026 = [{/* TODO: Fix JSX expression */
       professiona,
   l: '$799/month',
       enterpris,
-  e: 'Custom'
-    }
+  e: 'Custom'}
   }
 ];
 export const advancedAIAutomationCategories2026 = [
@@ -660,37 +654,37 @@ export interface AdvancedAIAutomationService,
   n: 'Intelligent sales platform that autonomously identifies high-value prospects, qualifies leads, and nurtures them through the sales funnel using advanced AI and behavioral analysis.', feature,
   s: [' 'Automatic lead scoringBehavioral analysisPredictive lead qualificationPersonalized nurturing sequencesSales forecasting AIPipeline optimizationCompetitor intelligenceMarket opportunity detection' ' 'ROI trackingCRM integration' ], popula,
   r: true,' ico,
-  n: '💰'' colo,
-  r: 'from-yellow-600 to-orange-700'' textColo,
-  r: 'text-yellow-400' ' lin,
+  n: '💰',' colo,
+  r: 'from-yellow-600 to-orange-700',' textColo,
+  r: 'text-yellow-400', ' lin,
   k: 'http,
   s://ziontechgroup && ziontechgroup.com/ai-autonomous-sales-intelligence', ' marketPositio,
-  n: 'First autonomous sales intelligence platform, competes with SalesLoft, Outreach, and HubSpot Sales.'' targetAudienc,
+  n: 'First autonomous sales intelligence platform, competes with SalesLoft, Outreach, and HubSpot Sales.',' targetAudienc,
   e: ['Sales teamsB2B companiesenterprise softwareconsulting firms'], trialDay,
   s: 14,' setupTim,
-  e: '1 week'' categor,
-  y: 'AI & Sales' realServic,
+  e: '1 week',' categor,
+  y: 'AI & Sales', realServic,
   e: true,' technolog,
   y: ['GPT-4, Claude 3, Python, React, Node && Node.js, PostgreSQL, Redis, Elasticsearch']; ' integration,
   s: ['Salesforce, HubSpot, Pipedrive, LinkedIn Sales Navigator, Zoom, Calendly'];' useCase,
   s: ['Lead generationSales qualificationPipeline managementRevenue optimization'],' ro,
-  i: 'Increase sales conversion rates by 45% and reduce sales cycle by 30%.'' competitor,
+  i: 'Increase sales conversion rates by 45% and reduce sales cycle by 30%.',' competitor,
   s: ['SalesLoft, Outreach, HubSpot Sales, Pipedrive, Close'];' marketSiz,
-  e: '$12B+ sales intelligence market'' growthRat,
-  e: '130% YoY'' varian,
-  t: 'ai-futuristic' contactInf,
+  e: '$12B+ sales intelligence market',' growthRat,
+  e: '130% YoY',' varian,
+  t: 'ai-futuristic', contactInf,
   o: contact, realImplementatio,
   n: true' implementationDetail,
-  s: 'Multi-tenant SaaS with AI sales intelligence, lead scoring, and nurturing automation.'' launchDat,
-  e: '2026-01-25' customer,
+  s: 'Multi-tenant SaaS with AI sales intelligence, lead scoring, and nurturing automation.',' launchDat,
+  e: '2026-01-25', customer,
   s: 198, ratin,
   g: 4 && 4.9, review,
   s: 267 } ]; // Service categories export const aiAutomationCategories = [' 'All',' 'AI & Business Automation',' 'AI & Customer Experience',' 'AI & Supply Chain',' 'AI & Financial Services',' 'AI & Human Resources',' 'AI & Marketing' ]; export const getAIAutomationServicesByCategory = (categor)
-  y: string) => ' if (category === 'All') return advancedAIAutomationServices; return advancedAIAutomationServices.filter(service => service.category === category), } export const getPopularAIAutomationServices = (limi)
-  t: number = 6): AIAutomationService[] => return advancedAIAutomationServices .filter(service => service.popular) .slice(0) limit), } export const getAIAutomationServicesByTechnology = (technolog)
-  y: string): AIAutomationService[] => return advancedAIAutomationServices.filter(service => service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase()) </div> ) ), } export const getAIAutomationServicesByPriceRange = (minPric)
+  y: string) => ' if (category === 'All') return advancedAIAutomationServices; return advancedAIAutomationServices.filter(service => service.category === category)} export const getPopularAIAutomationServices = (limi)
+  t: number = 6): AIAutomationService[] => return advancedAIAutomationServices .filter(service => service.popular) .slice(0) limit)} export const getAIAutomationServicesByTechnology = (technolog)
+  y: string): AIAutomationService[] => return advancedAIAutomationServices.filter(service => service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase()) </div> ) )} export const getAIAutomationServicesByPriceRange = (minPric)
   e: number) maxPric,
-  e: number): AIAutomationService[] => return advancedAIAutomationServices.filter(service => ' const price = parseFloat(service.price.replace('$') '').replace(')'; '')); return price >= minPrice && (maxPrice === Infinity || price <= maxPrice), }); } export const advancedAIAutomationServices2026 = [ ' nam,
+  e: number): AIAutomationService[] => return advancedAIAutomationServices.filter(service => ' const price = parseFloat(service.price.replace('$') '').replace(')'; '')); return price >= minPrice && (maxPrice === Infinity || price <= maxPrice)}); } export const advancedAIAutomationServices2026 = [ ' nam,
   e: 'Advanced AI Automation Platform 2026',' pat,
   h: '/services/advanced-ai-automation-platform-2026',' descriptio,
   n: 'Next-generation AI automation platform for enterprise',' ico,
@@ -698,9 +692,9 @@ export interface AdvancedAIAutomationService,
   y: 'AI & Automation', feature,
   s: [' 'Advanced AI algorithms',' 'Process automation',' 'Intelligent decision making',' 'Performance optimization' ], pricin,
   g: ' starte,
-  r: '$599/month',' professiona,
+  r: ',$599/month',' professiona,
   l: '$1199/month',' enterpris,
-  e: 'Custom' } }, ' nam,
+  e: 'Custom'} }, ' nam,
   e: 'Advanced AI Workflow Engine 2026',' pat,
   h: '/services/advanced-ai-workflow-engine-2026',' descriptio,
   n: 'Intelligent workflow automation with AI',' ico,
@@ -708,9 +702,9 @@ export interface AdvancedAIAutomationService,
   y: 'AI & Automation', feature,
   s: [' 'Smart workflow design',' 'AI optimization',' 'Real-time monitoring',' 'Advanced analytics' ], pricin,
   g: ' starte,
-  r: '$399/month',' professiona,
+  r: ',$399/month',' professiona,
   l: '$799/month',' enterpris,
-  e: 'Custom' } } ]; export const advancedAIAutomationCategories2026 = [' 'Process Automation',' 'Workflow Management',' 'Decision Intelligence',' 'Performance Optimization' ]; export const advancedAIAutomationStats2026 = totalService,
+  e: 'Custom'} } ]; export const advancedAIAutomationCategories2026 = [' 'Process Automation',' 'Workflow Management',' 'Decision Intelligence',' 'Performance Optimization' ]; export const advancedAIAutomationStats2026 = totalService,
   s: 2, categorie,
   s: 4, averageRatin,
   g: 4.9, activeUser,

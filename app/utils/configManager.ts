@@ -10,8 +10,7 @@ export interface AppConfig {
     baseURL: string,
     timeout: number,
     retryAttempts: number,
-    enableCaching: boolean,
-  }
+    enableCaching: boolean}
   }
   features: {
     enableAnalytics: boolean,
@@ -19,84 +18,72 @@ export interface AppConfig {
     enablePerformanceMonitoring: boolean,
     enableAccessibility: boolean,
     enableSEO: boolean,
-    enablePWA: boolean,
-  }
+    enablePWA: boolean}
   }
   performance: {
     enableCodeSplitting: boolean,
     enableLazyLoading: boolean,
     enableImageOptimization: boolean,
-    enableCaching: boolean,
-  }
+    enableCaching: boolean}
   }
   security: {
     enableCSP: boolean,
     enableCORS: boolean,
     enableRateLimiting: boolean,
-    maxRequestsPerMinute: number,
-  }
+    maxRequestsPerMinute: number}
   }
   ui: {
     ,
-    theme: 'light' | 'dark' | 'auto',
+    theme: 'light', | 'dark' | 'auto',
     language: string,
-    timezone: string,
-  }
+    timezone: string}
   }
   logging: {
     ,
-    level: 'debug' | 'info' | 'warn' | 'error',
+    level: 'debug', | 'info' | 'warn' | 'error',
     enableConsole: boolean,
-    enableNetwork: boolean,
-  }
+    enableNetwork: boolean}
   }
 }
 const defaultConfig: AppConfig = {
-    environment: 'development'
+    environment: 'development',
   api: {
     baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
     timeout: 30000,
     retryAttempts: 3,
-    enableCaching: true,
-  },
+    enableCaching: true},
   features: {
     enableAnalytics: true,
     enableErrorReporting: true,
     enablePerformanceMonitoring: true,
     enableAccessibility: true,
     enableSEO: true,
-    enablePWA: true,
-  },
+    enablePWA: true},
   performance: {
     enableCodeSplitting: true,
     enableLazyLoading: true,
     enableImageOptimization: true,
-    enableCaching: true,
-  },
+    enableCaching: true},
   security: {
     enableCSP: true,
     enableCORS: true,
     enableRateLimiting: true,
-    maxRequestsPerMinute: 100,
-  },
+    maxRequestsPerMinute: 100},
   ui: {
     ,
     theme: 'auto',
-    language: 'en',
-  }
+    language: 'en'}
     timezone: 'UTC'},;
   logging: {
     ,
     level: 'info',
     enableConsole: true,
-    enableNetwork: false,
-  }
+    enableNetwork: false}
   }
 }
 class ConfigManager {
     private config: AppConfig,
-  constructor() {,
-  }
+  constructor() {}
     this.config = { ...defaultConfig }
     this.loadEnvironmentConfig();
   }
@@ -119,8 +106,7 @@ public getConfig(): AppConfig {}
     return { ...this.config }
   }
 public updateConfig(updates: Partial<AppConfig>): void {
-    ,
-  }
+    }
     this.config = { ...this.config, ...updates }
   }
 public getApiConfig() {

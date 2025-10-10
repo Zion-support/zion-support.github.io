@@ -50,13 +50,13 @@ const PerformanceOptimize, r: React.FC<PerformanceOptimizerPro, p, s> = ({/* TOD
     {/* TODO: Fix JSX expression */}
     },
     {/* TODO: Fix JSX expression */}
-    }]; return(<div, classNam, e = 'spa, c, e-y-6'>
+    }]; return(<div, classNam, e = 'spa, c, e-y-6'></div>
       <div, className='flex, justif, y-between, item, s-cent, e, r'>
-  ]; return (
+  ]; return (</div>
     <div, classNam, e = 'spa, c, e-y-6'></div>
       <div, className='flex, justif, y-between, item, s-cent, e, r'></div>
         <h2, className='te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-9, 0, 0'>
-  ]; return (<div, classNam, e = 'spa, c, e-y-6'></div>
+  ]; return (</h2><div, classNam, e = 'spa, c, e-y-6'></div>
       <div, className='flex, justif, y-between, item, s-cent, e, r'></div>
         <h2, className='te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-9, 0, 0'></h2>
           Performance, Optimize, r;
@@ -72,9 +72,9 @@ const PerformanceOptimize, r: React.FC<PerformanceOptimizerPro, p, s> = ({/* TOD
                  ? 'bord, e, r-gre, e, n-200, b, g-gre, e, n-50'
                  : 'bord, e, r-gr, a, y-200, b, g-gr, a, y-50'
              }`}
-          >
-            <div, className='flex, item, s-start, spac, e-x-3'>
-              <div, className='fl, e, x-shri, n, k-0' > <opti, o, n.icon, className={ `h-5 w-5 ${}
+          ></div>
+            <div, className='flex, item, s-start, spac, e-x-3'></div>
+              <div, className='fl, e, x-shri, n, k-0' ></div> <opti, o, n.icon, className={ `h-5 w-5 ${}
                     opti, o, n.enabl, e, d  ? 'te, x, t-gre, e, n-6, 0, 0'  : 'te, x, t-gr, a, y-4, 0, 0'}
           ></div>
             <div, className='flex, item, s-start, spac, e-x-3'></div>
@@ -86,7 +86,7 @@ const PerformanceOptimize, r: React.FC<PerformanceOptimizerPro, p, s> = ({/* TOD
              }`}
           ></div>
             <div, className='flex, item, s-start, spac, e-x-3'></div>
-              <div, className='fl, e, x-shri, n, k-0' > <opti, o, n.icon, className={/* TODO: Fix JSX expression */}`
+              <div, className='fl, e, x-shri, n, k-0' ></div> <opti, o, n.icon, className={/* TODO: Fix JSX expression */}`
                    }`}
                 /></opti>
               </div>

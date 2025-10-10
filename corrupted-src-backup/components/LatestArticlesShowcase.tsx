@@ -2,13 +2,13 @@ import, React, from 'rea, c, t';
 impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
 impo, r, t { newArticles20, 2, 5 } fr, o, m '../conte, n, t/n, e, w-articl, e, s-20, 2, 5';
 const, LatestArticlesShowcas, e: Rea, c, t.FC = () => { 
-  const, latestArticle, s = newArticles20, 2, 5.filt, e, r(a => a.featu, r, e, d).sli, c, e(, 0, 6); retu, r, n(<section, classNam, e = 'py-20, b, g-whi, t, e'>
-      <div, classNam, e='container, m, x-auto, p, x-6'>
-        <div, classNam, e='te, x, t-center, m, b-12'>
+  const, latestArticle, s = newArticles20, 2, 5.filt, e, r(a => a.featu, r, e, d).sli, c, e(, 0, 6); retu, r, n(<section, classNam, e = 'py-20, b, g-whi, t, e'></section>
+      <div, classNam, e='container, m, x-auto, p, x-6'></div>
+        <div, classNam, e='te, x, t-center, m, b-12'></div>
           <h2, classNam, e='te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4'>
             Latest, Article, s & Resear, c, h;
-  const, latestArticle, s = newArticles20, 2, 5.filt, e, r(a => a.featu, r, e, d).sli, c, e(, 0, 6); retu, r, n (
-    <section, classNam, e = 'py-20, b, g-whi, t, e'>
+  const, latestArticle, s = newArticles20, 2, 5.filt, e, r(a => a.featu, r, e, d).sli, c, e(, 0, 6); retu, r, n (</h2>
+    <section, classNam, e = 'py-20, b, g-whi, t, e'></section>
       <div, classNam, e='container, m, x-auto, p, x-6'></section>
         <div, classNam, e='te, x, t-center, m, b-12'></div>
           <h2, classNam, e='te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4'>

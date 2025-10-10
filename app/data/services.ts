@@ -19,8 +19,7 @@ export const microSAASServices = [
     popular: true,
     category: 'Productivity',
     rating: 4.9,
-    users: '10,000+',
-  }
+    users: '10,000+'}
     freeTrial: '14 days'},;
   {
     title: 'AI Meeting Assistant Pro',
@@ -34,8 +33,7 @@ export const microSAASServices = [
     popular: true,
     category: 'Productivity',
     rating: 4.8,
-    users: '20,000+',
-  }
+    users: '20,000+'}
     freeTrial: '14 days'},;
   {
     title: 'AI Document Intelligence Pro',
@@ -49,8 +47,7 @@ export const microSAASServices = [
     popular: true,
     category: 'Productivity',
     rating: 4.7,
-    users: '15,000+',
-  }
+    users: '15,000+'}
     freeTrial: '7 days'},;
   {
     title: 'AI Personal Assistant Pro',
@@ -64,8 +61,7 @@ export const microSAASServices = [
     popular: true,
     category: 'Productivity',
     rating: 4.9,
-    users: '45,000+',
-  }
+    users: '45,000+'}
     freeTrial: '14 days'},;
   {
     title: 'AI Team Collaboration Hub',
@@ -79,8 +75,7 @@ export const microSAASServices = [
     popular: true,
     category: 'Productivity',
     rating: 4.8,
-    users: '25,000+',
-  }
+    users: '25,000+'}
     freeTrial: '14 days'},;
   {
     title: 'AI Task Manager Pro',
@@ -94,8 +89,7 @@ export const microSAASServices = [
     popular: true,
     category: 'Productivity',
     rating: 4.8,
-    users: '25,000+',
-  }
+    users: '25,000+'}
     freeTrial: '7 days'},;
   {
     title: 'AI Workflow Automation Pro',
@@ -109,8 +103,7 @@ export const microSAASServices = [
     popular: true,
     category: 'Productivity',
     rating: 4.7,
-    users: '15,000+',
-  }
+    users: '15,000+'}
     freeTrial: '14 days'},;
   {
     title: 'AI Meeting Scheduler Pro',
@@ -124,8 +117,7 @@ export const microSAASServices = [
     popular: true,
     category: 'Productivity',
     rating: 4.8,
-    users: '30,000+',
-  }
+    users: '30,000+'}
     freeTrial: '7 days'},;
   {
     title: 'AI Time Tracker Pro',
@@ -139,8 +131,7 @@ export const microSAASServices = [
     popular: true,
     category: 'Productivity',
     rating: 4.6,
-    users: '50,000+',
-  }
+    users: '50,000+'}
     freeTrial: '14 days'},;
   // Content & Marketing Tools;
   {
@@ -155,8 +146,7 @@ export const microSAASServices = [
     popular: true,
     category: 'Content',
     rating: 4.9,
-    users: '40,000+',
-  }
+    users: '40,000+'}
     freeTrial: '7 days'},;
   {
     title: 'AI Video Creator Pro',
@@ -170,8 +160,7 @@ export const microSAASServices = [
     popular: true,
     category: 'Content',
     rating: 4.8,
-    users: '30,000+',
-  }
+    users: '30,000+'}
     freeTrial: '14 days'},;
   {
     title: 'AI Podcast Studio Pro',
@@ -185,8 +174,7 @@ export const microSAASServices = [
     popular: true,
     category: 'Content',
     rating: 4.7,
-    users: '18,000+',
-  }
+    users: '18,000+'}
     freeTrial: '7 days'},;
   {
     title: 'AI Graphic Design Studio',
@@ -200,8 +188,7 @@ export const microSAASServices = [
     popular: true,
     category: 'Content',
     rating: 4.8,
-    users: '35,000+',
-  }
+    users: '35,000+'}
     freeTrial: '14 days'},;
   {
     title: 'AI Website Builder Pro',
@@ -215,8 +202,7 @@ export const microSAASServices = [
     popular: true,
     category: 'Content',
     rating: 4.9,
-    users: '50,000+',
-  }
+    users: '50,000+'}
     freeTrial: '14 days'},;
   {
     title: 'AI Social Media Manager Pro',
@@ -230,14 +216,13 @@ export const microSAASServices = [
     popular: true,
     category: 'Marketing',
     rating: 4.7,
-    users: '35,000+',
-  }
+    users: '35,000+'}
     freeTrial: '14 days'},;
   {
     title: 'AI Email Marketing Suite',
     description: 'Intelligent email marketing with AI-powered personalization, A/B testing, and automation. Increase open rates by 150%.',;
-    icon: 'Email:',
-    price: '$59/month',
+    icon: 'Email: ',
+    price: ',$59/month',
     originalPrice: '$89/month',
     features: ['AI personalization', 'A/B testing', 'Email automation', 'Segmentation', 'Analytics dashboard', 'Template library', 'Deliverability optimization', 'List management'],;
     benefits: ['150% higher open rates', 'Better engagement', 'Automated campaigns', 'ROI tracking'],;
@@ -245,8 +230,7 @@ export const microSAASServices = [
     popular: true,
     category: 'Marketing',
     rating: 4.8,
-    users: '28,000+',
-  }
+    users: '28,000+'}
     freeTrial: '7 days'},;
   {
     title: 'AI SEO Optimizer Pro',
@@ -260,8 +244,7 @@ export const microSAASServices = [
     popular: true,
     category: 'Marketing',
     rating: 4.9,
-    users: '22,000+',
-  }
+    users: '22,000+'}
     freeTrial: '14 days'},;
   {
     title: 'AI Lead Generation Pro',
@@ -275,8 +258,7 @@ export const microSAASServices = [
     popular: true,
     category: 'Marketing',
     rating: 4.8,
-    users: '18,000+',
-  }
+    users: '18,000+'}
     freeTrial: '7 days'}
 ]
 export const aiServices = [
@@ -290,10 +272,9 @@ export const aiServices = [
     benefits: ['40% better predictions', 'Reduced development time', 'Scalable solutions', 'ROI tracking'],;
     link: '/machine-learning',
     popular: true,
-    category: 'AI Development'
+    category: 'AI Development',
     rating: 4.9,
-    users: '500+',
-  }
+    users: '500+'}
     freeTrial: '30 days'},;
   {
     title: 'AI Cybersecurity Shield Pro',
@@ -305,10 +286,9 @@ export const aiServices = [
     benefits: ['99.9% threat detection', 'Zero false positives', 'Automated response', 'Compliance ready'],;
     link: '/ai-cybersecurity',
     popular: true,
-    category: 'Security'
+    category: 'Security',
     rating: 4.8,
-    users: '300+',
-  }
+    users: '300+'}
     freeTrial: '30 days'},;
   {
     title: 'AI Healthcare Assistant Pro',
@@ -320,10 +300,9 @@ export const aiServices = [
     benefits: ['30% faster diagnosis', 'Better patient outcomes', 'Reduced errors', 'Cost savings'],;
     link: '/ai-healthcare',
     popular: true,
-    category: 'Healthcare'
+    category: 'Healthcare',
     rating: 4.9,
-    users: '200+',
-  }
+    users: '200+'}
     freeTrial: '30 days'},;
   {
     title: 'AI Financial Advisor Pro',
@@ -335,10 +314,9 @@ export const aiServices = [
     benefits: ['25% better returns', 'Risk reduction', 'Automated management', 'Tax optimization'],;
     link: '/ai-financial-advisor',
     popular: true,
-    category: 'Finance'
+    category: 'Finance',
     rating: 4.7,
-    users: '400+',
-  }
+    users: '400+'}
     freeTrial: '30 days'},;
   {
     title: 'AI Supply Chain Optimizer',
@@ -350,10 +328,9 @@ export const aiServices = [
     benefits: ['35% cost reduction', '99% on-time delivery', 'Better inventory management', 'Sustainability goals'],;
     link: '/ai-supply-chain',
     popular: true,
-    category: 'Logistics'
+    category: 'Logistics',
     rating: 4.8,
-    users: '250+',
-  }
+    users: '250+'}
     freeTrial: '30 days'},;
   {
     title: 'AI Legal Assistant Pro',
@@ -365,10 +342,9 @@ export const aiServices = [
     benefits: ['80% faster research', 'Better accuracy', 'Cost reduction', 'Risk mitigation'],;
     link: '/ai-legal-assistant',
     popular: true,
-    category: 'Legal'
+    category: 'Legal',
     rating: 4.6,
-    users: '150+',
-  }
+    users: '150+'}
     freeTrial: '30 days'},;
   {
     title: 'AI Manufacturing Intelligence',
@@ -380,10 +356,9 @@ export const aiServices = [
     benefits: ['40% efficiency increase', 'Zero downtime', 'Better quality', 'Cost savings'],;
     link: '/ai-manufacturing',
     popular: true,
-    category: 'Manufacturing'
+    category: 'Manufacturing',
     rating: 4.9,
-    users: '180+',
-  }
+    users: '180+'}
     freeTrial: '30 days'},;
   {
     title: 'AI Education Platform Pro',
@@ -395,10 +370,9 @@ export const aiServices = [
     benefits: ['50% better learning outcomes', 'Personalized education', 'Teacher efficiency', 'Student engagement'],;
     link: '/ai-education',
     popular: true,
-    category: 'Education'
+    category: 'Education',
     rating: 4.7,
-    users: '600+',
-  }
+    users: '600+'}
     freeTrial: '30 days'}
 ]
 export const itServices = [
@@ -412,10 +386,9 @@ export const itServices = [
     benefits: ['Zero downtime', 'Better performance', 'Cost savings', 'Enhanced security'],;
     link: '/cloud-migration',
     popular: true,
-    category: 'Cloud Services'
+    category: 'Cloud Services',
     rating: 4.8,
-    users: '600+',
-  }
+    users: '600+'}
     freeTrial: '30 days'},;
   {
     title: 'Enterprise IT Infrastructure',
@@ -427,10 +400,9 @@ export const itServices = [
     benefits: ['99.99% uptime', 'Unlimited scalability', 'Enterprise security', 'Cost optimization'],;
     link: '/enterprise-infrastructure',
     popular: true,
-    category: 'Infrastructure'
+    category: 'Infrastructure',
     rating: 4.9,
-    users: '100+',
-  }
+    users: '100+'}
     freeTrial: '30 days'},;
   {
     title: 'DevOps & CI/CD Automation',
@@ -442,10 +414,9 @@ export const itServices = [
     benefits: ['10x faster deployments', 'Zero downtime', 'Better quality', 'Team productivity'],;
     link: '/devops-automation',
     popular: true,
-    category: 'DevOps'
+    category: 'DevOps',
     rating: 4.8,
-    users: '400+',
-  }
+    users: '400+'}
     freeTrial: '30 days'},;
   {
     title: 'Database Management & Optimization',
@@ -457,10 +428,9 @@ export const itServices = [
     benefits: ['50% performance improvement', 'Zero data loss', 'Better security', 'Cost reduction'],;
     link: '/database-management',
     popular: true,
-    category: 'Database'
+    category: 'Database',
     rating: 4.7,
-    users: '350+',
-  }
+    users: '350+'}
     freeTrial: '30 days'},;
   {
     title: 'Network Security & Firewall',
@@ -472,10 +442,9 @@ export const itServices = [
     benefits: ['99.9% threat prevention', 'Zero breaches', 'Compliance ready', 'Better performance'],;
     link: '/network-security',
     popular: true,
-    category: 'Security'
+    category: 'Security',
     rating: 4.9,
-    users: '500+',
-  }
+    users: '500+'}
     freeTrial: '30 days'},;
   {
     title: 'IT Consulting & Strategy',
@@ -487,10 +456,9 @@ export const itServices = [
     benefits: ['Better IT strategy', 'Cost optimization', 'Risk reduction', 'Competitive advantage'],;
     link: '/it-consulting',
     popular: true,
-    category: 'Consulting'
+    category: 'Consulting',
     rating: 4.8,
-    users: '200+',
-  }
+    users: '200+'}
     freeTrial: '30 days'}
 ]
 export const specializedServices = [
@@ -504,10 +472,9 @@ export const specializedServices = [
     benefits: ['Exponential speedup', 'Complex problem solving', 'Competitive advantage', 'Future-ready technology'],;
     link: '/quantum-computing',
     popular: true,
-    category: 'Quantum'
+    category: 'Quantum',
     rating: 4.9,
-    users: '50+',
-  }
+    users: '50+'}
     freeTrial: '60 days'},;
   {
     title: 'Autonomous Systems',
@@ -519,10 +486,9 @@ export const specializedServices = [
     benefits: ['Cutting-edge technology', 'Automation solutions', 'Safety first', 'Innovation leadership'],;
     link: '/autonomous-systems',
     popular: true,
-    category: 'Autonomous'
+    category: 'Autonomous',
     rating: 4.8,
-    users: '100+',
-  }
+    users: '100+'}
     freeTrial: '30 days'},;
   {
     title: 'Blockchain & Web3',
@@ -534,10 +500,9 @@ export const specializedServices = [
     benefits: ['Decentralized solutions', 'Security & transparency', 'Future-ready technology', 'Innovation leadership'],;
     link: '/blockchain',
     popular: true,
-    category: 'Blockchain'
+    category: 'Blockchain',
     rating: 4.7,
-    users: '300+',
-  }
+    users: '300+'}
     freeTrial: '30 days'},;
   {
     title: 'IoT & Edge Computing',
@@ -549,23 +514,22 @@ export const specializedServices = [
     benefits: ['Connected solutions', 'Real-time insights', 'Edge efficiency', 'Scalable architecture'],;
     link: '/iot-edge',
     popular: true,
-    category: 'IoT'
+    category: 'IoT',
     rating: 4.8,
-    users: '400+',
-  }
+    users: '400+'}
     freeTrial: '30 days'}
 ]
 export interface Service {
     id: string,
   name: string,
-  category: 'ai' | 'it' | 'micro-saas' | 'emerging-tech',
+  category: 'ai', | 'it' | 'micro-saas' | 'emerging-tech',
   subcategory: string,
   description: string,
   features: string[],
   pricing: {
     starting: number,
     currency: string,
-    period: 'month' | 'year' | 'one-time',
+    period: 'month', | 'year' | 'one-time',
     custom?: boolean
   }
   }
@@ -578,14 +542,12 @@ export interface Service {
   contact: {
     phone: string,
     email: string,
-    demo: string,
-  }
+    demo: string}
   }
   marketPrice?: {
     min: number,
     max: number,
-    currency: string,
-  }
+    currency: string}
   }
 }
 export const services: Service[] = [
@@ -607,8 +569,7 @@ export const services: Service[] = [
     pricing: {
       starting: 299,
       currency: 'USD',
-      period: 'month'
-  },
+      period: 'month'},
     benefits: [,
       '40% faster project delivery',;
       '25% reduction in project costs',;
@@ -628,13 +589,11 @@ export const services: Service[] = [
     contact: {
     phone: '+1 (302) 464-0950',
       email: 'kleber@ziontechgroup.com',
-      demo: 'https://ziontechgroup.com/demo/ai-project-manager'
-  },
+      demo: 'https://ziontechgroup.com/demo/ai-project-manager'},
     marketPrice: {
     min: 200,
       max: 500,
-      currency: 'USD'
-  }
+      currency: 'USD'}
     },
   {
     id: 'ai-customer-support-bot',
@@ -653,8 +612,7 @@ export const services: Service[] = [
     pricing: {
       starting: 199,
       currency: 'USD',
-      period: 'month'
-  },
+      period: 'month'},
     benefits: [,
       '80% reduction in response time',;
       '24/7 availability',;
@@ -673,13 +631,11 @@ export const services: Service[] = [
     contact: {
     phone: '+1 (302) 464-0950',
       email: 'kleber@ziontechgroup.com',
-      demo: 'https://ziontechgroup.com/demo/ai-customer-support-bot'
-  },
+      demo: 'https://ziontechgroup.com/demo/ai-customer-support-bot'},
     marketPrice: {
     min: 150,
       max: 400,
-      currency: 'USD'
-  }
+      currency: 'USD'}
     },
   {
     id: 'ai-content-generator',
@@ -698,8 +654,7 @@ export const services: Service[] = [
     pricing: {
       starting: 149,
       currency: 'USD',
-      period: 'month'
-  },
+      period: 'month'},
     benefits: [,
       '10x faster content creation',;
       'Consistent brand messaging',;
@@ -718,13 +673,11 @@ export const services: Service[] = [
     contact: {
     phone: '+1 (302) 464-0950',
       email: 'kleber@ziontechgroup.com',
-      demo: 'https://ziontechgroup.com/demo/ai-content-generator'
-  },
+      demo: 'https://ziontechgroup.com/demo/ai-content-generator'},
     marketPrice: {
     min: 99,
       max: 300,
-      currency: 'USD'
-  }
+      currency: 'USD'}
     },
   {
     id: 'ai-data-analytics',
@@ -743,8 +696,7 @@ export const services: Service[] = [
     pricing: {
       starting: 499,
       currency: 'USD',
-      period: 'month'
-  },
+      period: 'month'},
     benefits: [,
       '50% faster insights generation',;
       'Predictive accuracy up to 95%',;
@@ -763,13 +715,11 @@ export const services: Service[] = [
     contact: {
     phone: '+1 (302) 464-0950',
       email: 'kleber@ziontechgroup.com',
-      demo: 'https://ziontechgroup.com/demo/ai-data-analytics'
-  },
+      demo: 'https://ziontechgroup.com/demo/ai-data-analytics'},
     marketPrice: {
     min: 300,
       max: 1000,
-      currency: 'USD'
-  }
+      currency: 'USD'}
     },
   {
     id: 'ai-cybersecurity',
@@ -788,8 +738,7 @@ export const services: Service[] = [
     pricing: {
       starting: 799,
       currency: 'USD',
-      period: 'month'
-  },
+      period: 'month'},
     benefits: [,
       '99.9% threat detection accuracy',;
       '50% faster incident response',;
@@ -808,13 +757,11 @@ export const services: Service[] = [
     contact: {
     phone: '+1 (302) 464-0950',
       email: 'kleber@ziontechgroup.com',
-      demo: 'https://ziontechgroup.com/demo/ai-cybersecurity'
-  },
+      demo: 'https://ziontechgroup.com/demo/ai-cybersecurity'},
     marketPrice: {
     min: 500,
       max: 2000,
-      currency: 'USD'
-  }
+      currency: 'USD'}
     },
   // Micro SAAS Services;
   {
@@ -834,8 +781,7 @@ export const services: Service[] = [
     pricing: {
       starting: 79,
       currency: 'USD',
-      period: 'month'
-  },
+      period: 'month'},
     benefits: [,
       '3x more engagement',;
       'Save 15 hours/week',;
@@ -854,13 +800,11 @@ export const services: Service[] = [
     contact: {
     phone: '+1 (302) 464-0950',
       email: 'kleber@ziontechgroup.com',
-      demo: 'https://ziontechgroup.com/demo/ai-social-media-manager'
-  },
+      demo: 'https://ziontechgroup.com/demo/ai-social-media-manager'},
     marketPrice: {
     min: 50,
       max: 150,
-      currency: 'USD'
-  }
+      currency: 'USD'}
     },
   {
     id: 'ai-email-marketing',
@@ -879,8 +823,7 @@ export const services: Service[] = [
     pricing: {
       starting: 99,
       currency: 'USD',
-      period: 'month'
-  },
+      period: 'month'},
     benefits: [,
       '40% higher open rates',;
       '60% increase in click-through rates',;
@@ -899,13 +842,11 @@ export const services: Service[] = [
     contact: {
     phone: '+1 (302) 464-0950',
       email: 'kleber@ziontechgroup.com',
-      demo: 'https://ziontechgroup.com/demo/ai-email-marketing'
-  },
+      demo: 'https://ziontechgroup.com/demo/ai-email-marketing'},
     marketPrice: {
     min: 60,
       max: 200,
-      currency: 'USD'
-  }
+      currency: 'USD'}
     },
   {
     id: 'ai-seo-optimizer',
@@ -924,8 +865,7 @@ export const services: Service[] = [
     pricing: {
       starting: 129,
       currency: 'USD',
-      period: 'month'
-  },
+      period: 'month'},
     benefits: [,
       '50% faster SEO results',;
       'Comprehensive keyword analysis',;
@@ -944,13 +884,11 @@ export const services: Service[] = [
     contact: {
     phone: '+1 (302) 464-0950',
       email: 'kleber@ziontechgroup.com',
-      demo: 'https://ziontechgroup.com/demo/ai-seo-optimizer'
-  },
+      demo: 'https://ziontechgroup.com/demo/ai-seo-optimizer'},
     marketPrice: {
     min: 80,
       max: 250,
-      currency: 'USD'
-  }
+      currency: 'USD'}
     },
   {
     id: 'ai-invoice-generator',
@@ -969,8 +907,7 @@ export const services: Service[] = [
     pricing: {
       starting: 49,
       currency: 'USD',
-      period: 'month'
-  },
+      period: 'month'},
     benefits: [,
       '90% time savings on invoicing',;
       'Reduced billing errors',;
@@ -989,13 +926,11 @@ export const services: Service[] = [
     contact: {
     phone: '+1 (302) 464-0950',
       email: 'kleber@ziontechgroup.com',
-      demo: 'https://ziontechgroup.com/demo/ai-invoice-generator'
-  },
+      demo: 'https://ziontechgroup.com/demo/ai-invoice-generator'},
     marketPrice: {
     min: 30,
       max: 100,
-      currency: 'USD'
-  }
+      currency: 'USD'}
     },
   {
     id: 'ai-time-tracker',
@@ -1014,8 +949,7 @@ export const services: Service[] = [
     pricing: {
       starting: 39,
       currency: 'USD',
-      period: 'month'
-  },
+      period: 'month'},
     benefits: [,
       'Accurate time tracking',;
       'Productivity optimization',;
@@ -1034,13 +968,11 @@ export const services: Service[] = [
     contact: {
     phone: '+1 (302) 464-0950',
       email: 'kleber@ziontechgroup.com',
-      demo: 'https://ziontechgroup.com/demo/ai-time-tracker'
-  },
+      demo: 'https://ziontechgroup.com/demo/ai-time-tracker'},
     marketPrice: {
     min: 20,
       max: 80,
-      currency: 'USD'
-  }
+      currency: 'USD'}
     },
   // IT Services;
   {
@@ -1060,8 +992,7 @@ export const services: Service[] = [
     pricing: {
       starting: 999,
       currency: 'USD',
-      period: 'month'
-  },
+      period: 'month'},
     benefits: [,
       '99.9% uptime guarantee',;
       '50% cost reduction vs on-premise',;
@@ -1080,13 +1011,11 @@ export const services: Service[] = [
     contact: {
     phone: '+1 (302) 464-0950',
       email: 'kleber@ziontechgroup.com',
-      demo: 'https://ziontechgroup.com/demo/cloud-infrastructure'
-  },
+      demo: 'https://ziontechgroup.com/demo/cloud-infrastructure'},
     marketPrice: {
     min: 500,
       max: 2000,
-      currency: 'USD'
-  }
+      currency: 'USD'}
     },
   {
     id: 'cybersecurity-suite',
@@ -1105,8 +1034,7 @@ export const services: Service[] = [
     pricing: {
       starting: 1299,
       currency: 'USD',
-      period: 'month'
-  },
+      period: 'month'},
     benefits: [,
       '360-degree security coverage',;
       'Compliance with industry standards',;
@@ -1125,13 +1053,11 @@ export const services: Service[] = [
     contact: {
     phone: '+1 (302) 464-0950',
       email: 'kleber@ziontechgroup.com',
-      demo: 'https://ziontechgroup.com/demo/cybersecurity-suite'
-  },
+      demo: 'https://ziontechgroup.com/demo/cybersecurity-suite'},
     marketPrice: {
     min: 800,
       max: 3000,
-      currency: 'USD'
-  }
+      currency: 'USD'}
     },
   {
     id: 'devops-automation',
@@ -1150,8 +1076,7 @@ export const services: Service[] = [
     pricing: {
       starting: 799,
       currency: 'USD',
-      period: 'month'
-  },
+      period: 'month'},
     benefits: [,
       '10x faster deployments',;
       'Reduced deployment errors',;
@@ -1170,13 +1095,11 @@ export const services: Service[] = [
     contact: {
     phone: '+1 (302) 464-0950',
       email: 'kleber@ziontechgroup.com',
-      demo: 'https://ziontechgroup.com/demo/devops-automation'
-  },
+      demo: 'https://ziontechgroup.com/demo/devops-automation'},
     marketPrice: {
     min: 500,
       max: 1500,
-      currency: 'USD'
-  }
+      currency: 'USD'}
     },
   {
     id: 'database-management',
@@ -1195,8 +1118,7 @@ export const services: Service[] = [
     pricing: {
       starting: 599,
       currency: 'USD',
-      period: 'month'
-  },
+      period: 'month'},
     benefits: [,
       'Improved database performance',;
       'Data security and compliance',;
@@ -1215,13 +1137,11 @@ export const services: Service[] = [
     contact: {
     phone: '+1 (302) 464-0950',
       email: 'kleber@ziontechgroup.com',
-      demo: 'https://ziontechgroup.com/demo/database-management'
-  },
+      demo: 'https://ziontechgroup.com/demo/database-management'},
     marketPrice: {
     min: 300,
       max: 1200,
-      currency: 'USD'
-  }
+      currency: 'USD'}
     },
   // Emerging Technologies;
   {
@@ -1263,13 +1183,11 @@ export const services: Service[] = [
     contact: {
     phone: '+1 (302) 464-0950',
       email: 'kleber@ziontechgroup.com',
-      demo: 'https://ziontechgroup.com/demo/quantum-computing'
-  },
+      demo: 'https://ziontechgroup.com/demo/quantum-computing'},
     marketPrice: {
     min: 3000,
       max: 10000,
-      currency: 'USD'
-  }
+      currency: 'USD'}
     },
   {
     id: 'blockchain-solutions',
@@ -1310,13 +1228,11 @@ export const services: Service[] = [
     contact: {
     phone: '+1 (302) 464-0950',
       email: 'kleber@ziontechgroup.com',
-      demo: 'https://ziontechgroup.com/demo/blockchain-solutions'
-  },
+      demo: 'https://ziontechgroup.com/demo/blockchain-solutions'},
     marketPrice: {
     min: 2000,
       max: 8000,
-      currency: 'USD'
-  }
+      currency: 'USD'}
     },
   {
     id: 'iot-edge-computing',
@@ -1335,8 +1251,7 @@ export const services: Service[] = [
     pricing: {
       starting: 1299,
       currency: 'USD',
-      period: 'month'
-  },
+      period: 'month'},
     benefits: [,
       'Real-time data processing',;
       'Reduced latency',;
@@ -1355,13 +1270,11 @@ export const services: Service[] = [
     contact: {
     phone: '+1 (302) 464-0950',
       email: 'kleber@ziontechgroup.com',
-      demo: 'https://ziontechgroup.com/demo/iot-edge-computing'
-  },
+      demo: 'https://ziontechgroup.com/demo/iot-edge-computing'},
     marketPrice: {
     min: 800,
       max: 2500,
-      currency: 'USD'
-  }
+      currency: 'USD'}
     }
   }
 ]
@@ -1372,32 +1285,28 @@ export const serviceCategories = [
     description: 'Advanced artificial intelligence solutions',
     icon: '🤖',
     color: 'text-purple-400',
-    bgColor: 'bg-purple-500/10'
-  },
+    bgColor: 'bg-purple-500/10'},
   {
     id: 'micro-saas',
     name: 'Micro SAAS Solutions',
     description: 'Affordable, powerful AI-driven tools',;
     icon: '⚡',
     color: 'text-cyan-400',
-    bgColor: 'bg-cyan-500/10'
-  },
+    bgColor: 'bg-cyan-500/10'},
   {
     id: 'it',
     name: 'IT Services',
     description: 'Enterprise-grade IT solutions',
     icon: '☁️',
     color: 'text-blue-400',
-    bgColor: 'bg-blue-500/10'
-  },
+    bgColor: 'bg-blue-500/10'},
   {
     id: 'emerging-tech',
     name: 'Emerging Technologies',
     description: 'Next-generation technology solutions',
     icon: '🚀',
     color: 'text-pink-400',
-    bgColor: 'bg-pink-500/10'
-  }
+    bgColor: 'bg-pink-500/10'}
   }
 ]
 export const contactInfo = {
@@ -1405,6 +1314,5 @@ export const contactInfo = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008, Middletown, DE 19709',;
   website: 'https://ziontechgroup.com',
-  hours: 'Mon-Fri: 9AM-6PM EST'
-  }
+  hours: 'Mon-Fri: 9AM-6PM EST'}
 }

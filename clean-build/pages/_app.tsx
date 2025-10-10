@@ -1,6 +1,6 @@
 import '../styles/globals.css';
 export default function App({ Component, pageProps }: AppProps) {
-  return(<React.Fragment>
+  return(<React.Fragment></React.Fragment>
       <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />

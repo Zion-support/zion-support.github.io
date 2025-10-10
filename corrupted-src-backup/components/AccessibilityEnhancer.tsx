@@ -136,26 +136,26 @@ const,
           const _main = document.querySelector('main') || document.querySelector('#main-content');
           if (main) {}
             (main as HTMLElement).focus();}
-            (main as HTMLElement).scrollIntoView({ behavior: 'smooth' });
+            (main as HTMLElement).scrollIntoView({ behavior: 'smooth'});
       {/* Skip to main content link */}
       <a></a>"
         href="#main-content""
         className="skip-link"
         onClick={/* TODO: Fix JSX expression */})
-  r: 'smooth' });
+  r: 'smooth'});
           }
         }}
       >
         Skip to main content;
       </a>
       {/* Accessibility controls */}
-      <div className="accessibility-controls" role="toolbar" aria-label="Accessibility controls">
+      <div className="accessibility-controls" role="toolbar" aria-label="Accessibility controls"></div>
         <button;
       <div className="accessibility-controls" role="toolbar" aria-label="Accessibility controls"></div>
         <button
           onClick={() => setIsHighContrast(!isHighContrast)}
           className="accessibility-toggle"
-      {/* Accessibility controls */}"
+      {/* Accessibility controls */}"</button>
       <div className="accessibility-controls" role="toolbar" aria-label="Accessibility controls"></div>
         <button></button>
           onClick={() => setIsHighContrast(!isHighContrast)}"
@@ -166,7 +166,7 @@ const,
         </button>
         <button;
           onClick={() => setIsReducedMotion(!isReducedMotion)}
-          className="accessibility-toggle"
+          className="accessibility-toggle"</button>
         <button></button>
           onClick={() => setIsReducedMotion(!isReducedMotion)}"
           className="accessibility-toggle"`

@@ -2,7 +2,7 @@
 import { Helmet } from 'react-helmet-async';
 export default function AICustomerServicePage() {/* TODO: Fix JSX expression */}
 }
-  return (<div><Helmet></Helmet>
+  return (<div></div><Helmet></Helmet>
         <title>AI Customer Service Solutions - Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI-powered customer service solutions with 24/7 support, multilingual capabilities, and 95% customer satisfaction rates. Starting at $299/month." /></meta>"
         <meta name="keywords" content="AI customer service, chatbot, virtual assistant, customer support automation, multilingual support" /></meta>"
@@ -88,7 +88,7 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression */}
   md:grid-cols-3 gap-8"></div>"
               <div className="cyber-card p-8 text-center"></div>"
                 <h3 className="text-2xl font-bold text-white mb-4">Starter</h3>"
-                <div className="text-4xl font-bold text-cyan-400 mb-6">$299<span className="text-lg">/month</span></div>"
+                <div className="text-4xl font-bold text-cyan-400 mb-6">$299</div><span className="text-lg">/month</span></div>"
                 <ul className="text-gray-300 space-y-3 mb-8"></ul>
                   <li>Up to 1,000 conversations/month</li>
                   <li>5 languages supported</li>
@@ -101,7 +101,7 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression */}
               "
               <div className="cyber-card p-8 text-center border-2 border-cyan-400"></div>"
                 <h3 className="text-2xl font-bold text-white mb-4">Professional</h3>"
-                <div className="text-4xl font-bold text-cyan-400 mb-6">$799<span className="text-lg">/month</span></div>"
+                <div className="text-4xl font-bold text-cyan-400 mb-6">$799</div><span className="text-lg">/month</span></div>"
                 <ul className="text-gray-300 space-y-3 mb-8"></ul>
                   <li>Up to 10,000 conversations/month</li>
                   <li>25 languages supported</li>
@@ -186,5 +186,4 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression */}
         <Footer /></Footer>
       </div>
     </div>
-  ),
-}"
+  )}"

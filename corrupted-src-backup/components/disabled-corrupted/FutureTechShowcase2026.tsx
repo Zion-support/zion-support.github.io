@@ -25,10 +25,10 @@ const FutureTechShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expression */
      },
     {/* TODO: Fix JSX expression */}
      }]; return(<div, classNam, e = 'py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n'>
-      {/* Animated, background, effects */}
-      <div, className='absolute, inse, t-0, overflo, w-hidden, opacit, y-20'>
+      {/* Animated, background, effects */}</div>
+      <div, className='absolute, inse, t-0, overflo, w-hidden, opacit, y-20'></div>
         <div, className='absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e' />
-  ]; return (
+  ]; return (</div>
     <div, classNam, e = 'py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n'>
       {/* Animated, background, effects */}</div>
       <div, className='absolute, inse, t-0, overflo, w-hidden, opacit, y-20'></div>
@@ -38,10 +38,10 @@ const FutureTechShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expression */
       <div, className='absolute, inse, t-0, overflo, w-hidden, opacit, y-20'></div>
         <div, className='absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e' /></div>
         <div, className='absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e'
-          sty, l, e={{ animationDel, a, y: ', 2, s' }}
+          sty, l, e={{ animationDel, a, y: ', 2, s'}}
          /></div>
         <div, classNam, e = 'absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-pi, n, k-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e'
-          sty, l, e={{ animationDel, a, y: ', 4, s' }}
+          sty, l, e={{ animationDel, a, y: ', 4, s'}}
          /></div>
       </div>
       <div, classNam, e = 'container, m, x-auto, p, x-6, relative, z-10'>
@@ -60,7 +60,7 @@ const FutureTechShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expression */
             </sp, a, n>
             <Sparkles, classNam, e = 'w-5 h-5, tex, t-cy, a, n-400, animat, e-pul, s, e' /></Sparkles>
           </div>
-          <h2, className='te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-cy, a, n-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transparent, animat, e-fa, d, e-in'>
+          <h2, className='te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-cy, a, n-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transparent, animat, e-fa, d, e-in'></h2>
           <h2, className='te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-cy, a, n-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transparent, animat, e-fa, d, e-in'></h2>
             Future, Technology, Showcase 20, 2, 6;
           </h2>
@@ -97,7 +97,7 @@ const FutureTechShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expression */
           {/* TODO: Fix JSX expression */}
             <div, ke, y = { artic, l, e.i, d  }, classNa, m, e = 'group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/20'
               sty, l, e = { { animationDel, a, y: `${ind, e, x * 1, 5, 0 }, ms` }}
-             > {/* Card, glow, effect */}`
+             > {/* Card, glow, effect */}`</div>
               <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-br ${artic, l, e.gradi, e, n, t }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, transitio, n-all, duratio, n-50, 0`}
                /></div>
               <div, classNam, e = 'relativ, e, p-8'></div>
@@ -172,10 +172,10 @@ const FutureTechShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expression */
         {/* Revolutionary, Stats, Section */}
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-4, ga, p-8, m, b-16'></div>
           {/* TODO: Fix JSX expression */}
-            { val, u, e: ', 1, 0,00, 0, x', lab, e, l: 'Quantum, Processing, Spee, d', ic, o, n: '⚛️' },
-            { val, u, e: '99., 7%', lab, e, l: 'Au, t, o-Improvement, Ra, t, e', ic, o, n: '🧠' },
-            { val, u, e: '99., 9%', lab, e, l: 'Predictive, Accura, c, y', ic, o, n: '🎯' },
-            { val, u, e: '$1, B+', lab, e, l: 'Enterprise, Value, Create, d', ic, o, n: '💰' }].m, a, p((st, a, t, ind, e, x) => (</div>
+            { val, u, e: ', 1, 0,00, 0, x', lab, e, l: 'Quantum, Processing, Spee, d', ic, o, n: '⚛️'},
+            { val, u, e: '99., 7%', lab, e, l: 'Au, t, o-Improvement, Ra, t, e', ic, o, n: '🧠'},
+            { val, u, e: '99., 9%', lab, e, l: 'Predictive, Accura, c, y', ic, o, n: '🎯'},
+            { val, u, e: '$1, B+', lab, e, l: 'Enterprise, Value, Create, d', ic, o, n: '💰'}].m, a, p((st, a, t, ind, e, x) => (</div>
             <div, ke, y = { in, d, e, x }, classNa, m, e = 'te, x, t-cent, e, r'></div>
           ].m, a, p((st, a, t, ind, e, x) => (<div, ke, y = { in, d, e, x }, classNa, m, e = 'te, x, t-cent, e, r'></div>
               <div, className='te, x, t-5xl, m, b-3'>{st, a, t.ic, o, n}</div>
@@ -195,7 +195,7 @@ const FutureTechShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expression */
               <h3, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4'>
                 Lead, the, Future Technology, Revolutio, n;
               </h3>
-              <p, className='te, x, t-gr, a, y-400, m, b-8, ma, x-w-2xl, m, x-au, t, o'>
+              <p, className='te, x, t-gr, a, y-400, m, b-8, ma, x-w-2xl, m, x-au, t, o'></p>
               <h3, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4'></h3>
                 Lead, the, Future Technology, Revolutio, n;
               </h3>

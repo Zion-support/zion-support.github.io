@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 export default function Post(): React.JSX.Element {/* TODO: Fix JSX expression */}
   const { slug } = useParams();
   return(<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-  return (
+  return (</div>
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100"></div>
       <Helmet>
         <title>Post - Zion Website</title>

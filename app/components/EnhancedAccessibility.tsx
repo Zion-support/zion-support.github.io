@@ -5,7 +5,7 @@ import { useAnalytics } from './EnhancedAnalytics';
 interface AccessibilitySettings {
     highContrast: boolean;
   reducedMotion: boolean
-  fontSize: 'small' | 'medium' | 'large'
+  fontSize: 'small', | 'medium' | 'large'
   screenReader: boolean,
   keyboardNavigation: boolean
   }

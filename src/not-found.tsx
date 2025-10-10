@@ -5,51 +5,44 @@ export default function NotFound() {
       title: 'Home',
       description: 'Return to our homepage',
       href: '/',
-      icon: '🏠'
-    },
+      icon: '🏠'},
     {
       title: 'AI Services',
       description: 'Explore our comprehensive AI and IT solutions',
       href: '/services',
-      icon: '🤖'
-    },
+      icon: '🤖'},
     {
       title: 'Blog & Insights',
       description: 'Read about latest AI trends and innovations',
       href: '/blog',
-      icon: '📚'
-    },
+      icon: '📚'},
     {
       title: 'About Us',
       description: 'Learn about Zion Tech Group and our mission',
       href: '/about',
-      icon: '🏢'
-    },
+      icon: '🏢'},
     {
       title: 'Case Studies',
       description: 'See our success stories and client results',
       href: '/case-studies',
-      icon: '📊'
-    },
+      icon: '📊'},
     {
       title: 'Contact Us',
       description: 'Get in touch with our AI experts',
       href: '/contact',
-      icon: '📞'
-    },
-  ];
+      icon: '📞'}];
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
+    <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4"></div>
       <div className="max-w-2xl w-full text-center">
-        {/* Error Code */}
-        <div className="mb-8">
+        {/* Error Code */}</div>
+        <div className="mb-8"></div>
           <h1 className="text-9xl font-bold text-white/20 mb-4">
             404;
   </
           <div className="text-6xl mb-4">🔍</div>
         </div>
         {/* Error Message */}
-        <div className="mb-12">
+        <div className="mb-12"></div>
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
             Page Not Found;
   </
@@ -60,7 +53,7 @@ export default function NotFound() {
         </div>
         {/* Popular Pages */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-          {popularPages.map((page, index) => (
+          {popularPages.map((page, index) => (</div>
             <Link
               key={index}
               to={page.href}
@@ -76,7 +69,7 @@ export default function NotFound() {
           ))}
         </div>
         {/* Action Buttons */}
-        <div className="flex flex-col sm: flex-row gap-4 justify-center">
+        <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
           <Link
             to="/"
             className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300">
@@ -92,8 +85,7 @@ export default function NotFound() {
         </div>
       </div>
     </div>
-  ),
-}
+  )}
   </Link>
   </Link>
   </h2>

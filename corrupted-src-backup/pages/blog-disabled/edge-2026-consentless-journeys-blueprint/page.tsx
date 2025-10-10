@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 export default function BlogPost(): React.JSX.Element {
-  return(<React.Fragment>
+  return(<React.Fragment></React.Fragment>
       <Header />
       <div className="min-h-screen bg-gradient-to-br from-blue-600 via-blue-700 to-purple-800 text-white"></div>
         <Helmet>
@@ -11,10 +11,10 @@ export default function BlogPost(): React.JSX.Element {
             content="Edge 2026 Consentless Journeys Blueprint - Latest insights from Zion Tech Group"
           /></meta>
         </Helmet>
-        <div className="max-w-4xl mx-auto px-4 py-20">
-          <div className="mb-12">
+        <div className="max-w-4xl mx-auto px-4 py-20"></div>
+          <div className="mb-12"></div>
             <h1 className="text-4xl md: text-5xl font-bold mb-6 leading-tight">
-              Edge 2026 Consentless Journeys Blueprint
+              Edge 2026 Consentless Journeys Blueprint</h1>
         <div className="max-w-4xl mx-auto px-4 py-20"></div>
           <div className="mb-12"></div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
@@ -48,12 +48,12 @@ export default function BlogPost(): React.JSX.Element {
               </p>
             </div>
           </div>
-          <div className="mt-16 pt-8 border-t border-white border-opacity-20">
-            <div className="flex flex-col sm: flex-row justify-between items-center gap-6">
-              <div>)
+          <div className="mt-16 pt-8 border-t border-white border-opacity-20"></div>
+            <div className="flex flex-col sm: flex-row justify-between items-center gap-6"></div>
+              <div>)</div>
                 <h3 className="text-xl font-bold mb-2">Share this article</h3>)
-                <div className="flex gap-4">)
-                  <a,),
+                <div className="flex gap-4">)</div>
+                  <a),
           <div className="mt-16 pt-8 border-t border-white border-opacity-20"></div>
             <div className="flex flex-col sm:flex-row justify-between items-center gap-6"></div>
               <div></div>

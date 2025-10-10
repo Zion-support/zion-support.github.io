@@ -57,14 +57,13 @@ useEffect(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', 'phone_click', {
         event_category: 'engagement',
-        event_label: 'main_phone_number'
-  }
+        event_label: 'main_phone_number'}
       })
     }
   }, []);
 
   return (
-    <>
+    <></>
       <SEOOptimizer>
       <PerformanceOptimizer>
       <AccessibilityEnhancer>
@@ -85,9 +84,9 @@ useEffect(() => {
       </Suspense>
       <main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main"></main>
         {/* Hero Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
@@ -140,9 +139,9 @@ useEffect(() => {
         </div>
         </section>
         {/* Services Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
@@ -991,9 +990,9 @@ useEffect(() => {
           </div>
         </section>
         {/* Micro SAAS Solutions Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
@@ -1257,9 +1256,9 @@ useEffect(() => {
           <ContentNewsletterSignup>
         </Suspense>
         {/* Contact Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
@@ -1280,7 +1279,7 @@ useEffect(() => {
                   <div className="flex items-center space-x-4"></div>
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center"></div>
                       <Phone />
-                    <div />
+                    <div /></div>
                       <p className="text-gray-300 text-sm">Phone</p>
                       <a>
                         +1 (302) 464-0950
@@ -1290,7 +1289,7 @@ useEffect(() => {
                   <div className="flex items-center space-x-4"></div>
                     <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center"></div>
                       <Mail />
-                    <div />
+                    <div /></div>
                       <p className="text-gray-300 text-sm">Email</p>
                       <a>
                         kleber@ziontechgroup.com
@@ -1300,10 +1299,10 @@ useEffect(() => {
                   <div className="flex items-center space-x-4"></div>
                     <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-600 rounded-lg flex items-center justify-center"></div>
                       <MapPin />
-                    <div />
+                    <div /></div>
                       <p className="text-gray-300 text-sm">Address</p>
                       <p>
-                        364 E Main St STE 1008<br>
+                        364 E Main St STE 1008</p><br>
                         Middletown, DE 19709
                       </p>
                     </div>
@@ -1311,10 +1310,10 @@ useEffect(() => {
                   <div className="flex items-center space-x-4"></div>
                     <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center"></div>
                       <Clock />
-                    <div />
+                    <div /></div>
                       <p className="text-gray-300 text-sm">Business Hours</p>
                       <p>
-                        Monday - Friday: 9:00 AM - 6:00 PM EST<br>
+                        Monday - Friday: 9:00 AM - 6:00 PM EST</p><br>
                         24/7 Emergency Support Available,
                       </p>
                     </div>
@@ -1325,22 +1324,22 @@ useEffect(() => {
               <div className="cyber-card hologram-card p-8"></div>
                 <h3 className="text-2xl font-bold text-white mb-6 neon-text">Get Free Consultation</h3>
                 <form>
-                  <div />
+                  <div /></div>
                     <label>
                       Full Name
                     </label>
                     <input />
-                  <div />
+                  <div /></div>
                     <label>
                       Email Address
                     </label>
                     <input />
-                  <div />
+                  <div /></div>
                     <label>
                       Phone Number
                     </label>
                     <input />
-                  <div />
+                  <div /></div>
                     <label>
                       Service Interest
                     </label>
@@ -1353,7 +1352,7 @@ useEffect(() => {
                       <option value="other">Other</option>
                     </select>
                   </div>
-                  <div />
+                  <div /></div>
                     <label>
                       Message
                     </label>

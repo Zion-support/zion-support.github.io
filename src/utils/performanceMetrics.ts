@@ -8,7 +8,7 @@ export interface PerformanceMetric {
   value: number;
   unit: string
   timestamp: Date
-  category: 'load' | 'runtime' | 'network' | 'memory' | 'custom',
+  category: 'load', | 'runtime' | 'network' | 'memory' | 'custom',
   metadata?: Record<string, unknown>
   }
 export interface WebVitalsMetrics {
@@ -28,8 +28,7 @@ export interface PerformanceReport {
     performanceScore: number,
     recommendations: string[]
   }
-  timestamp: Date,
-}
+  timestamp: Date}
 export class PerformanceMetrics {
   private static instance: PerformanceMetrics
   private metrics: PerformanceMetric[] = [],
@@ -56,12 +55,12 @@ export interface PerformanceMetric {// TODO: Add content
     value: number,,
     unit: string,,
     timestamp: Date,,
-    category: 'load' | 'runtime' | 'network' | 'memory' | 'custom'
+    category: 'load', | 'runtime' | 'network' | 'memory' | 'custom'
   metadata?: Record,
           <string>
 }
 export interface WebVitalsMetrics {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   FCP?: number; // First Contentful Paint;
   LCP?: number; // Largest Contentful Paint;
@@ -71,7 +70,7 @@ export interface WebVitalsMetrics {/* TODO: Fix JSX expression */}
   INP?: number; // Interaction to Next Paint;
 }
 export interface PerformanceReport {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   metric,
   s: PerformanceMetric[],,
@@ -79,7 +78,7 @@ export interface PerformanceReport {/* TODO: Fix JSX expression */}
   s: WebVitalsMetrics,,
     summar,
   y: {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 
   avgLoadTime: number,,
@@ -89,8 +88,7 @@ export interface PerformanceReport {/* TODO: Fix JSX expression */}
 
   }
   timestam,
-  p: Date,
-}
+  p: Date}
 
 export class PerformanceMetrics {
     // TODO: Add content
@@ -106,19 +104,19 @@ export class PerformanceMetrics {
   private,
   observers: PerformanceObserver[] = [],
   constructor() {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     if (typeof window !== 'undefined') {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       this.initializeObservers();
     }
   }
   static getInstance(): PerformanceMetrics {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     if (!PerformanceMetrics.instance) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       PerformanceMetrics.instance = new PerformanceMetrics();
     }
@@ -146,20 +144,20 @@ export class PerformanceMetrics {
 }
     // Observe navigation timing;
     if ('PerformanceObserver' in window) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       try {
     // Navigation timing
   }
           for (const entry of list.getEntries()) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
             if (entry.entryType === 'navigation') {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
               const navEntry = entry as PerformanceNavigationTiming;
               this.recordMetric({/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 
   name: 'pageLoadTime',
@@ -218,9 +216,7 @@ $4});
   }
 }
   domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.fetchStart,
-                  domInteractive: navEntry.domInteractive - navEntry.fetchStart,
-
-                }
+                  domInteractive: navEntry.domInteractive - navEntry.fetchStart}
               }
   )
             }
@@ -231,26 +227,24 @@ $4});
         this.observers.push(navObserver);
         // Paint timing;
 const paintObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 })
           for (const entry of list.getEntries()) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
             if (entry.name === 'first-contentful-paint') {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
               this.webVitals.FCP = entry.startTime;
               this.recordMetric({/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 
   name: 'FCP',
                 value: entry.startTime,
                 unit: 'ms',
                 timestamp: new Date(),
-                category: 'load'
-
-              }
+                category: 'load'}
   )
             }
           }
@@ -260,25 +254,23 @@ const paintObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expressi
         this.observers.push(paintObserver);
         // Largest Contentful Paint;
 const lcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 })
           const entries = list.getEntries();
           const lastEntry = entries[entries.length - 1];
           if (lastEntry) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
             this.webVitals.LCP = lastEntry.startTime;
             this.recordMetric({/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 
   name: 'LCP',
               value: lastEntry.startTime,
               unit: 'ms',
               timestamp: new Date(),
-              category: 'load'
-
-            }
+              category: 'load'}
   )
           }
         });
@@ -288,8 +280,7 @@ const lcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression
 // Layout Shift;
         const clsObserver = new PerformanceObserver(list => {for (const entry of list.getEntries()) {}
   // TOD,
-  O: Add content,
-}
+  O: Add content}
             if ((entry as LayoutShift).hadRecentInput) continue;
             clsValue += (entry as LayoutShift).value;
           }
@@ -306,22 +297,20 @@ $4});
         this.observers.push(clsObserver);
       } catch (error) {
           this.recordMetric({/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 
   name: 'CLS',
             value: clsValue,
             unit: 'score',
             timestamp: new Date(),
-            category: 'runtime'
-
-          });
+            category: 'runtime'});
         });
         clsObserver.observe({/* TODO: Fix JSX expression */})
   s: ['layout-shift'] });
         this.observers.push(clsObserver);
       } catch (error) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
         }
     }
@@ -343,7 +332,7 @@ $4});
     this.metrics.push(metric);
     // Keep only last 1000 metrics;
     if (this.metrics.length > 1000) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       this.metrics.shift();
     }
@@ -368,7 +357,7 @@ $4});
     const perfData = window.performance.timing;
     const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
     this.recordMetric({/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 
   name: 'pageLoad',
@@ -396,9 +385,7 @@ $4});
   dnsLookup: perfData.domainLookupEnd - perfData.domainLookupStart,
         tcpConnection: perfData.connectEnd - perfData.connectStart,
         serverResponse: perfData.responseEnd - perfData.requestStart,
-        domParsing: perfData.domComplete - perfData.domLoading,
-
-      }
+        domParsing: perfData.domComplete - perfData.domLoading}
     }
   )
   }
@@ -412,7 +399,7 @@ $4});
 
 }
     this.recordMetric({/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 
   name: 'networkRequest',
@@ -458,7 +445,7 @@ $4});
     if (!(performance as PerformanceWithMemory).memory) return;
     const memory = (performance as PerformanceWithMemory).memory;
     this.recordMetric({/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 
   name: 'memoryUsage',
@@ -526,9 +513,7 @@ $4});
 }
   total: memory.totalJSHeapSize,
         limit: memory.jsHeapSizeLimit,
-        percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100,
-
-      }
+        percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100}
     }
   )
   }
@@ -539,22 +524,20 @@ $4});
           <T>(nam,
   e: string, f)
   n: () => T): T {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     const startTime = performance.now();
     const result = fn();
     const endTime = performance.now();
     this.recordMetric({/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 
   name: `function:${name}`,
       value: endTime - startTime,
       unit: 'ms',
       timestamp: new Date(),
-      category: 'runtime'
-
-    }
+      category: 'runtime'}
   )
     return result;
   }
@@ -565,22 +548,20 @@ $4});
           <T>(nam,
   e: string, f)
   n: () => Promise<T>): Promise<T> {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     const startTime = performance.now();
     const result = await fn();
     const endTime = performance.now();
     this.recordMetric({/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 
   name: `async:${name}`,
       value: endTime - startTime,
       unit: 'ms',
       timestamp: new Date(),
-      category: 'runtime'
-
-    }
+      category: 'runtime'}
   )
     return result;
   }
@@ -682,28 +663,28 @@ $4});
     let score = 100;
     // FCP scoring;
     if (this.webVitals.FCP) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       if (this.webVitals.FCP > 3000) score -= 20;
       else if (this.webVitals.FCP > 1800) score -= 10;
     }
     // LCP scoring;
     if (this.webVitals.LCP) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       if (this.webVitals.LCP > 4000) score -= 25;
       else if (this.webVitals.LCP > 2500) score -= 12;
     }
     // CLS scoring;
     if (this.webVitals.CLS) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       if (this.webVitals.CLS > 0.25) score -= 20;
       else if (this.webVitals.CLS > 0.1) score -= 10;
     }
     // FID scoring;
     if (this.webVitals.FID) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       if (this.webVitals.FID > 300) score -= 15;
       else if (this.webVitals.FID > 100) score -= 8;
@@ -722,7 +703,7 @@ $4});
     const,
   recommendations: string[] = [],
     if (this.webVitals.FCP && this.webVitals.FCP > 1800) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 //       recommendations.push()
 //         'Optimize First Contentful Paint (FCP) - consider reducing render-blocking resources'
@@ -760,7 +741,7 @@ $4});
     const avgNetworkTime =
       networkMetrics.reduce((sum, m) => sum + m.value, 0) / networkMetrics.length;
     if (avgNetworkTime > 500) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 //       recommendations.push()
 //         'Optimize network requests - consider caching and reducing payload sizes'
@@ -806,7 +787,7 @@ $4});
     const loadMetrics = this.getMetricsByCategory('load');
     const avgLoadTime = loadMetrics.reduce((sum, m) => sum + m.value, 0) / loadMetrics.length || 0;
     return {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   metric,
   s: this.getMetrics(),
@@ -814,7 +795,7 @@ $4});
   s: this.getWebVitals(),
       summar,
   y: {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 //         avgLoadTime,
         totalMetric,
@@ -883,20 +864,19 @@ interface LayoutShift extends PerformanceEntry {
 export const performanceMetrics = PerformanceMetrics.getInstance();
 // Type for performance.memory;
 interface PerformanceWithMemory extends Performance {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   memor,
   y: {/* TODO: Fix JSX expression */}
-  e: number,}
+  e: number}
 // totalJSHeapSiz,
   e: number,
 // jsHeapSizeLimi,
-  t: number,
-  }
+  t: number}
 }
 // Type for LayoutShift;
 interface LayoutShift extends PerformanceEntry {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 
   value: number,,

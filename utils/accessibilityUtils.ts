@@ -136,7 +136,7 @@ export const colorContrast = {/* TODO: Fix JSX expression */}
   },
 
   // Check if contrast meets WCAG standards;
-  meetsWCAG: (contrastRatio: number, level: 'AA' | 'AAA' = 'AA'): boolean => {
+  meetsWCAG: (contrastRatio: number, level: 'AA', | 'AAA' = 'AA'): boolean => {
     ,
     return level === 'AA' ? contrastRatio >= 4.5 : contrastRatio >= 7
   }}
@@ -163,8 +163,7 @@ export const motionUtils = {
 export const formAccessibility = {
   // Associate label with input;
   associateLabel: (
-    input: HTMLInputElement,
-  ): HTMLLabelElement => {,
+    input: HTMLInputElement): HTMLLabelElement => {,
     const _label = document.createElement('label');
     label.textContent = labelText;
     label.setAttribute('for', input.id || formAccessibility.generateInputId());
@@ -173,7 +172,7 @@ export const formAccessibility = {
   // Check if contrast meets WCAG standards,
   meetsWCAG: (contrastRati,
   o: number, leve)
-  l: 'AA' | 'AAA' = 'AA'): boolean => {/* TODO: Fix JSX expression */}
+  l: 'AA', | 'AAA' = 'AA'): boolean => {/* TODO: Fix JSX expression */}
   }}
 // Motion and animation utilities;
 export const motionUtils = {/* TODO: Fix JSX expression */}
@@ -281,8 +280,7 @@ export const accessibilityTesting = {/* TODO: Fix JSX expression */}
     images: { missing: number, empty: number }
     forms: { unlabeled: number }
     headings: { issues: string[], structure: string[] }
-    score: number,
-  } => {
+    score: number} => {
     const _imageCheck = accessibilityTesting.checkImageAltText();
     const _formCheck = accessibilityTesting.checkFormLabels();
     const _headingCheck = accessibilityTesting.checkHeadingHierarchy();
@@ -309,8 +307,7 @@ export const accessibilityTesting = {/* TODO: Fix JSX expression */}
   s: {/* TODO: Fix JSX expression */}
   e: string[] }
     scor,
-  e: number,
-  } => {/* TODO: Fix JSX expression */}
+  e: number} => {/* TODO: Fix JSX expression */}
       },
       form,
   s: {/* TODO: Fix JSX expression */}

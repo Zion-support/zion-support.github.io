@@ -26,8 +26,7 @@ class Logger {
     message: string,
     context?: LogContext;
     metadata?: Record<string>
-    timestamp: number,
-  }
+    timestamp: number}
   }> = []
   setLogLevel(level: LogLevel): void {
     ,
@@ -50,7 +49,7 @@ warn(message: string, context?: LogContext, metadata?: Record<string, unknown>):
     </string></<<<string>this</string></string>.log(LogLevel.WARN, message, context, metadata)
   }
   }
-error(message: string,),;
+error(message: string),;
     errorOrContextOrMetadata?: Error | string | Record<string, unknown>);
     contextOrMetadata?: string | Record<string, unknown>);
     metadata?: Record<string>
@@ -131,7 +130,7 @@ fatal(message: string, context?: LogContext, metadata?: Record<string, unknown>)
     </string></<<<string>this</string></string>.log(LogLevel.FATAL, message, context, metadata)
   }
   }
-private log(level: LogLevel,),;
+private log(level: LogLevel),;
     message: string),
     context?: LogContext),;
     metadata?: Record<string>
@@ -141,8 +140,7 @@ private log(level: LogLevel,),;
       level,;
       message,;
       context,;
-      metadata,
-  }
+      metadata}
       timestamp: Date.now()}
 this.logs.push(logEntry);
     // Keep only last 1000 logs;
@@ -171,8 +169,7 @@ getLogs(level?: LogLevel): Array<{
     message: string,
     context?: LogContext;
     metadata?: Record<string>
-    timestamp: number,
-  }
+    timestamp: number}
   }> {
     if (level !== undefined) {
       return this.logs.filter(log => log.level === level);
@@ -257,8 +254,7 @@ getLogs(level?: LogLevel): Array<{
     // For example: Sentry, LogRocket, DataDog, etc.;
     // Example implementation:;
     // fetch('/api/logs', {);
-    //   method: 'POST'),
-  }
+    //   method: 'POST')}
     //   headers: {// 'Content-Type': 'application/json'})
     //   body: JSON.stringify(entry),
     // }).catch(err => {

@@ -645,7 +645,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
             <Search className="text-left" />
             <input;
               type="text"
-  const _pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];"
+  const _pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];" />
     <div className="text-left"></div>
       {/* Animated Background */}"
       <div className="text-left"></div>"
@@ -698,7 +698,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
               </div>
             </div>
           </div>
-          <div className="text-left">
+          <div className="text-left"></div>
             <select;
           <div className="text-left"></div>
             <select
@@ -724,7 +724,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
         {/* Services Grid */})
         <div className="text-left">)
           {filteredServices.map((service) => (
-              {pricingModels.map(pricing => (
+              {pricingModels.map(pricing => (</div>
                 <option key={pricing} value={pricing} className="text-left"></option>
                   {pricing === 'all' ? '💰 All Pricing Models' : `💳 ${pricing}`}
         {/* Services Grid */}
@@ -786,7 +786,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
               {/* Pricing */}
               <div className="text-left"></div>
                 <div className="text-left">
-              {/* Pricing */}"
+              {/* Pricing */}"</div>
               <div className="text-left"></div>"
                 <div className="text-left"></div>
                   {formatPrice(service.price} service.pricingModel)}
@@ -822,8 +822,8 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
                 </div>
               </div>
               {/* CTA */}
-              <div className="text-left">
-                <div className="text-left">
+              <div className="text-left"></div>
+                <div className="text-left"></div>
                   <span className="text-left">Ready to transform your business?<
                   <a;
               <div className="text-left"></div>
@@ -880,7 +880,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
                   <p className="text-left">364 E Main St STE 1008</p><br />Middletown DE 19709</p>
                 </div>
               </div>
-              <div className="text-left">
+              <div className="text-left"></div>
                 <a;
               <div className="text-left"></div>
                 <a
@@ -972,7 +972,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
                     <MapPin className="text-left" /></MapPin>
                   </div>"
                   <p className="text-left">Address</p>"
-                  <p className="text-left">364 E Main St STE 1008<br />Middletown DE 19709</p>
+                  <p className="text-left">364 E Main St STE 1008</p><br />Middletown DE 19709</p>
                 </div>
               </div>"
               <div className="text-left"></div>

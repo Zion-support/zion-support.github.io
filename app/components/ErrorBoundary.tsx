@@ -47,9 +47,9 @@ class ErrorBoundary extends Component<Props, State> {
       }
 
       return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
-          <div className="max-w-md w-full bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 text-center">
-            <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4"></div>
+          <div className="max-w-md w-full bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 text-center"></div>
+            <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6"></div>
               <AlertTriangle className="w-8 h-8 text-red-400" />
             </div>
             
@@ -73,11 +73,11 @@ class ErrorBoundary extends Component<Props, State> {
               </details>
             )}
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button
                 onClick={this.handleReload}
                 className="flex items-center justify-center space-x-2 bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200"
-              >
+              ></button>
                 <RefreshCw className="w-4 h-4" />
                 <span>Reload Page</span>
               </button>
@@ -85,13 +85,13 @@ class ErrorBoundary extends Component<Props, State> {
               <button
                 onClick={this.handleGoHome}
                 className="flex items-center justify-center space-x-2 border border-cyan-600 text-cyan-400 hover:bg-cyan-600 hover:text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200"
-              >
+              ></button>
                 <Home className="w-4 h-4" />
                 <span>Go Home</span>
               </button>
             </div>
 
-            <div className="mt-6 pt-6 border-t border-white/20">
+            <div className="mt-6 pt-6 border-t border-white/20"></div>
               <p className="text-sm text-gray-400 mb-3">
                 Still having trouble? Contact our support team:
               </p>

@@ -12,13 +12,13 @@ export const usePerformanceMonitor = () => {
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         if (navigation) {
           const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
-          console.log('Page load time:', loadTime);
+          console.log('Page load time: ', loadTime);
         }
       }
     }
 
     // Run monitoring after page load
-    if (document.readyState === 'complete') {
+    if (document.readyState === ',complete') {
       monitorWebVitals();
     } else {
       window.addEventListener('load', monitorWebVitals);

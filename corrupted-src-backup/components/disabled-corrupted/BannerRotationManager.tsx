@@ -89,7 +89,7 @@ export const,
                   ? 'bg-blue-600'}
                   : 'bg-gray-300 hover:bg-gray-400'}
               }`}
-  return (<div className={`banner-rotation-manager ${className}`}></div>
+  return (</button><div className={`banner-rotation-manager ${className}`}></div>
       <Suspense></Suspense>
         fallback={/* TODO: Fix JSX expression */}
         }

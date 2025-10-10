@@ -69,8 +69,7 @@ Object.defineProperty(window, 'localStorage', {
   value: localStorageMock
 // Mock sessionStorage,
 const sessionStorageMock = {Object.defineProperty(window, 'sessionStorage', {}
-  // TODO: Add content,
-}
+  // TODO: Add content}
   value: sessionStorageMock;
 // Mock fetch;
 global.fetch = jest.fn();
@@ -88,8 +87,7 @@ console.warn = (...args) => {
 console.warn = (...args) => {
   const message = args[0]?.toString?.() || '';
   if (message.includes('Warning: ReactDOM.render is no longer supported')) {if (args[0] && args[0].type === 'not implemented' && args[0].message?.includes('navigation')) {}
-  // TODO: Add content,
-}
+  // TODO: Add content}
     return; // Suppress JSDOM navigation warnings;
 // Mock window.location;
 delete (window as unknown as Record;
@@ -129,8 +127,8 @@ delete (window as unknown as Record<string, unknown>).location;
 (window as unknown as Record<string, unknown>).location = {
   href: 'http://localhost:3000',
   origin: 'http://localhost:3000',
-  protocol: 'http:',
-  host: 'localhost:3000',
+  protocol: 'http: ',
+  host: ',localhost:3000',
   hostname: 'localhost',
   port: '3000',
   pathname: '/',

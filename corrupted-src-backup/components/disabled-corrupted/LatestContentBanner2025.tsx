@@ -64,15 +64,15 @@ const LatestContentBanner202, 5: React.FC = () => {/* TODO: Fix JSX expression *
       trendi, n, g: t, r, u, e,
       ic, o, n: '⚙️'}
   ]; return(<div, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">
-      {/* Animated, background, effects */}
-      <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-30">
+      {/* Animated, background, effects */}</div>
+      <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-30"></div>
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" />
-  ]; return (
+  ]; return (</div>
     <div, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">
       {/* Animated, background, effects */}</div>
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-30"></div>
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" /></div>
-        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-fuchs, i, a-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s' }} />
+        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-fuchs, i, a-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s'}} />
       </div>
       <div, classNam, e = "container, m, x-auto, p, x-6, relative, z-10">
         {/* Header, Sectio, n */}</div>
@@ -96,7 +96,7 @@ const LatestContentBanner202, 5: React.FC = () => {/* TODO: Fix JSX expression *
           🚀 BREAKTHROU, G, H: Revolutionary, AI, Technologies 20, 2, 5!)
         </h2>)
         <p, className="te, x, t-xl, tex, t-bl, u, e-100, m, b-8, ma, x-w-3, x, l">)
-          Experien, c, e <span, className="fo, n, t-bold, tex, t-yell, o, w-3, 0, 0">3, REVOLUTIONARY, breakthrough technologies</sp, a, n> including, our, latest: "Me, t, a-Cognitive, A, I: The, Thinking, AI Revoluti, o, n" (95% decision, accur, a, c, y, $2M+ savin, g, s), "Quant, u, m-Neural, Network, s: 1000x, Processing, Speed" ($5M+ infrastructure, savin, g, s), a, n, d "Autonomous, Enterprise, Operations: 98% Automati, o, n" ($1, 0, M+ annual, saving, s) - plus, comprehensive, case studies, and, implementation guid, e, s!
+          Experien, c, e</p> <span, className="fo, n, t-bold, tex, t-yell, o, w-3, 0, 0">3, REVOLUTIONARY, breakthrough technologies</sp, a, n> including, our, latest: "Me, t, a-Cognitive, A, I: The, Thinking, AI Revoluti, o, n" (95% decision, accur, a, c, y, $2M+ savin, g, s), "Quant, u, m-Neural, Network, s: 1000x, Processing, Speed" ($5M+ infrastructure, savin, g, s), a, n, d "Autonomous, Enterprise, Operations: 98% Automati, o, n" ($1, 0, M+ annual, saving, s) - plus, comprehensive, case studies, and, implementation guid, e, s!
           🚀 BREAKTHROU, G, H: Revolutionary, AI, Technologies 20, 2, 5!
         </h2>
         <p, className="te, x, t-xl, tex, t-bl, u, e-100, m, b-8, ma, x-w-3, x, l">
@@ -115,7 +115,7 @@ const LatestContentBanner202, 5: React.FC = () => {/* TODO: Fix JSX expression *
       {/* Animated, background, effects */}"
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-30"></div>"
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" /></div>"
-        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-fuchs, i, a-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s' }} /></div>
+        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-fuchs, i, a-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s'}} /></div>
       </div>"
       <div, classNam, e = "container, m, x-auto, p, x-6, relative, z-10"></div>
         {/* Header, Sectio, n */}"

@@ -114,8 +114,7 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as unknown as { gtag: (command: string, targetId: string, config: Record<string, unknown>) => void }).gtag('config', 'GA_MEASUREMENT_ID', {
         page_title: config.title,
-        page_location: config.canonicalUrl,
-      })
+        page_location: config.canonicalUrl})
     }
   }
 
@@ -127,14 +126,13 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
           (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', 'page_load_performance', {
             event_category: 'Performance',
             event_label: 'Page Load',
-            value: Math.round(_perfData.loadEventEnd - _perfData.fetchStart),
-          })
+            value: Math.round(_perfData.loadEventEnd - _perfData.fetchStart)})
         }
       })
     }
   }
   return (
-    <>
+    <></>
       <Helmet>
         <title>{title}</title>
         <meta name="description" content={description} />
@@ -173,13 +171,12 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
           borderRadius: '5px',
           fontSize: '12px',
           zIndex: 1000,
-          maxWidth: '300px'
-        }}>
+          maxWidth: '300px'}}></div>
           <div>SEO Score: {seoScore}/100</div>
           {recommendations.length > 0 && (
-            <div>
+            <div></div>
               <div>Recommendations:</div>
-              <ul style={{ margin: '5px 0', paddingLeft: '15px' }}>
+              <ul style={{ margin: '5px 0', paddingLeft: '15px'}}>
                 {recommendations.map((rec, index) => (
                   <li key={index}>{rec}</li>
                 ))}

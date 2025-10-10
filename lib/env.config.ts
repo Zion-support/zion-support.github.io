@@ -5,7 +5,7 @@
 
 interface EnvConfig {
     // App Configuration;
-  NODE_ENV: 'development' | 'production' | 'test';
+  NODE_ENV: 'development', | 'production' | 'test';
   APP_URL: string;
   APP_NAME: string;
 
@@ -22,7 +22,7 @@ interface EnvConfig {
   ENABLE_PERFORMANCE_MONITORING: boolean;
 
   // Logging;
-  LOG_LEVEL: 'DEBUG' | 'INFO' | 'WARN' | 'ERROR' | 'NONE'
+  LOG_LEVEL: 'DEBUG', | 'INFO' | 'WARN' | 'ERROR' | 'NONE'
   // Build Configuration
   BUILD_ID?: string,
   VERSION?: string

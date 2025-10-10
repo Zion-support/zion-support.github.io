@@ -14,11 +14,11 @@ const SAMPLE_QUERIES = [
 export default function handler(req: NextApiRequest, res: NextApiResponse) {,
   if (req.method !== 'GET') {,
     res.setHeader('Allow', 'GET');
-    return res.status(405).json({ error: 'Method not allowed' });
+    return res.status(405).json({ error: 'Method not allowed'});
 export default function handler(re,
   q: NextApiRequest, re)
   s: NextApiResponse) {/* TODO: Fix JSX expression */}
-  r: 'Method not allowed' });
+  r: 'Method not allowed'});
   }
 
   try {/* TODO: Fix JSX expression */}
@@ -31,6 +31,6 @@ export default function handler(re,
 
     return res.status(200).json({ suggestions });
   } catch (error) {/* TODO: Fix JSX expression */}
-  r: 'Internal server error' });
+  r: 'Internal server error'});
   }
 }

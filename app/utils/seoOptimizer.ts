@@ -17,8 +17,7 @@ interface SEOConfig {
 }
 interface PageSEOData {
     title: string,
-  description: string,
-  }
+  description: string}
 interface SEOConfig {}
   siteName: string;
   siteUrl: string;
@@ -28,7 +27,7 @@ interface SEOConfig {}
   twitterHandle?: string;
   facebookAppId?: string
   googleAnalyticsId?: string
-  googleTagManagerId?: string,}
+  googleTagManagerId?: string}
 }
 interface PageSEOData {}
   title: string;
@@ -48,8 +47,7 @@ interface PageSEOData {}
 class SEOOptimizer {
     private config: SEOConfig,
   private currentPageData: PageSEOData | null = null,
-  constructor(config: SEOConfig) {,
-  }
+  constructor(config: SEOConfig) {}
 class SEOOptimizer {}
   private config: SEOConfig
   private currentPageData: PageSEOData | null = null,
@@ -77,8 +75,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
   setPageData(data: PageSEOData): void {
     ,
     this.currentPageData = data;
-    this.updateMetaTags(),
-  }
+    this.updateMetaTags()}
   setPageData(data: PageSEOData): void {}
     this.currentPageData = data;
     this.updateMetaTags();
@@ -242,8 +239,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
       description: this.generateDescription()
       url: this.currentPageData.url || window.location.href
       image: this.currentPageData.image || this.config.defaultImage,
-      publisher: {,
-  }
+      publisher: {}
   private updateStructuredData(): void {}
     if (!this.currentPageData) return;
     const structuredData = {}
@@ -264,7 +260,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
     Object.assign(structuredData, {
         author: {)
 // '@type': 'Person')
-// name: this.currentPageData.author || this.config.siteName,)
+// name: this.currentPageData.author || this.config.siteName)
   }
         })
         datePublished: this.currentPageData.publishedTime,
@@ -276,13 +272,11 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
       Object.assign(structuredData, {)}
         author: {}
 // '@type': 'Person',;
-// name: this.currentPageData.author || this.config.siteName,
-        },;
+// name: this.currentPageData.author || this.config.siteName},;
         datePublished: this.currentPageData.publishedTime,
         dateModified: this.currentPageData.modifiedTime,
         articleSection: this.currentPageData.section,
-        keywords: this.generateKeywords(),
-      })
+        keywords: this.generateKeywords()})
   private updateStructuredData(): void {/* TODO: Fix JSX expression */}
       }
     }
@@ -295,8 +289,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
         articleSectio,;
   n: this.currentPageData.section,
         keyword,;
-  s: this.generateKeywords(),
-      })
+  s: this.generateKeywords()})
     }
     this.addStructuredData(structuredData);
   }
@@ -383,8 +376,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
     ,
     if (typeof window !== 'undefined' && (window as any).gtag) {,;
       (window as any).gtag('event', 'seo_metric', {);
-        metric_name: metric),
-  }
+        metric_name: metric)}
   private trackSEOMetric(metric: string, value: number): void {}
     if (typeof window !== 'undefined' && (window as any).gtag) {}
       (window as any).gtag('event', 'seo_metric', {)}
@@ -424,8 +416,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
    * Generate robots.txt content;
    */;
   generateRobotsTxt(): string {
-    return `User-agent: *,
-  }
+    return `User-agent: *}
   generateRobotsTxt(): string {}
     return `User-agent: *,
 Allow: /}
@@ -447,8 +438,7 @@ Disallo,;
 Disallo,;
   w: /_next/,
 Disallo,`;
-  w: /static/`,
-  }
+  w: /static/`}
   /**;
    * Check for SEO issues;
    */;
@@ -522,7 +512,7 @@ Disallo,`;
 }
 // Default configuration;
 const defaultConfig: SEOConfig = {
-    siteName: 'Zion Tech Group'
+    siteName: 'Zion Tech Group',
   siteUrl: 'https://zion.app',
 // Default configuration
   }

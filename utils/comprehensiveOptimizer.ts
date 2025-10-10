@@ -14,10 +14,9 @@ export interface OptimizationConfig {/* TODO: Fix JSX expression */}
   o: {/* TODO: Fix JSX expression */}
   }
   accessibilityLeve,
-  l: 'AA' | 'AAA',
+  l: 'AA', | 'AAA',
   seoLeve,
-  l: 'basic' | 'advanced',
-}
+  l: 'basic', | 'advanced'}
 
 /**
  * Default optimization configuration;
@@ -151,7 +150,7 @@ export class ComprehensiveOptimizer {/* TODO: Fix JSX expression */}
     title: string;)
     description: string;)
     keywords: string[];)
-    url: string,),
+    url: string),
     image?: string;)}): void {
     if (!this.config.seo.enableMetaTags) return;
 

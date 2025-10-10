@@ -24,7 +24,7 @@ interface PerformanceMetric {
 export interface PerformanceMetric {
     name: string;
   value: number
-  rating: 'good' | 'needs-improvement' | 'poor'
+  rating: 'good', | 'needs-improvement' | 'poor'
   delta: number,
   id: string
   }
@@ -67,8 +67,7 @@ const THRESHOLDS = {
 function getRating(name: string, value: number): 'good' | 'needs-improvement' | 'poor' {
     ,
 function getRating(name: string),
-  value: number,
-): 'good' | 'needs-improvement' | 'poor' {,
+  value: number): 'good' | 'needs-improvement' | 'poor' {,
 function getRating(name: string, value: number): 'good' | 'needs-improvement' | 'poor' {,
 function getRating(name: string, value: number): 'good' | 'needs-improvement' | 'poor' {
   const _threshold = THRESHOLDS[name as keyof typeof THRESHOLDS];
@@ -108,8 +107,7 @@ function sendToAnalytics(metric: Metric): void {
   // Log in development;
 //     }
 
-    id: metric.id,
-  }
+    id: metric.id}
 
   // Log in development;
   if (process.env['NODE_ENV'] === 'development') {
@@ -141,11 +139,11 @@ function sendToAnalytics(metric: Metric): void {
 
   // Log in development
   if (process.env.NODE_ENV === 'development') {
-    console.log('Performance metric:', performanceMetric)
+    console.log('Performance metric: ', performanceMetric)
   }
 
   // Send to analytics;
-  if (typeof window !== 'undefined' && window.gtag) {
+  if (typeof window !== ',undefined' && window.gtag) {
     window.gtag('event', metric.name, {)
       event_category: 'Web Vitals')
       value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value;)
@@ -193,11 +191,9 @@ function sendToAnalytics(metric: Metric): void {
         userAgent: navigator.userAgent
   }),
       keepalive: true
-        userAgent: navigator.userAgent,
-      }),
+        userAgent: navigator.userAgent}),
       keepalive: true
-        userAgent: navigator.userAgent,
-      }),
+        userAgent: navigator.userAgent}),
       keepalive: true,
 //     }).catch(error => // );
   }
@@ -229,10 +225,8 @@ function sendToAnalytics(metric: Metric): void {
       non_interaction: true
   });
   }
-        userAgent: navigator.userAgent,
-      }),
-      keepalive: true,
-    }).catch(error => {)
+        userAgent: navigator.userAgent}),
+      keepalive: true}).catch(error => {)
       // eslint-disable-next-line no-console;)
 //       });
   }
@@ -570,7 +564,7 @@ export function getResourceTiming(): PerformanceResourceTiming[] {
 /**
  * Get slow resources;
  */
-export function getSlowResources(threshold: number = 1000,)): PerformanceResourceTiming[] {
+export function getSlowResources(threshold: number = 1000)): PerformanceResourceTiming[] {
     ,
   return getResourceTiming().filter(resource => resource.duration > threshold)
   }
@@ -805,12 +799,10 @@ const performanceUtils = {
   }
 }
 
-    userAgent: navigator.userAgent,
-  }
+    userAgent: navigator.userAgent}
 }
 
-    userAgent: navigator.userAgent,
-  }
+    userAgent: navigator.userAgent}
 }
 
 /**
@@ -1015,8 +1007,7 @@ export function isPerformanceMonitoringSupported(): boolean {
   return typeof window !== 'undefined' && 'performance' in window
   }
 }
-    id: metric.id,
-  }
+    id: metric.id}
 
   // Send to analytics service;
 //   // You can send this to your analytics service;

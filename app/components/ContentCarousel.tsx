@@ -18,8 +18,7 @@ const ContentCarousel: React.FC = () => {
         'Cost optimization'
       ],
       icon: Cloud,
-      color: 'from-green-500 to-blue-600'
-    },
+      color: 'from-green-500 to-blue-600'},
     {
       id: 3,
       title: 'AI Automation',
@@ -30,8 +29,7 @@ const ContentCarousel: React.FC = () => {
         'Smart decision making',
         'Performance monitoring'
       ],
-      icon: Zap,
-    },
+      icon: Zap},
     {
       id: 4,
       title: 'Cybersecurity Solutions',
@@ -42,8 +40,7 @@ const ContentCarousel: React.FC = () => {
         'Automated response',
         'Compliance management'
       ],
-      icon: Shield,
-    }
+      icon: Shield}
   ]
 
   useEffect(() => {

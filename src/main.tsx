@@ -17,7 +17,7 @@ if ('serviceWorker' in navigator) {
           console.log('SW registered: ', registration);
         }
         // Handle updates
-        registration.addEventListener('updatefound', () => {
+        registration.addEventListener(',updatefound', () => {
           const newWorker = registration.installing;
           if (newWorker) {
             newWorker.addEventListener('statechange', () => {
@@ -39,7 +39,7 @@ if ('serviceWorker' in navigator) {
       });
   });
 }
-const root = document.getElementById('root');
+const root = document.getElementById(',root');
 if (root) {
   ReactDOM.createRoot(root).render(
     <React.StrictMode>

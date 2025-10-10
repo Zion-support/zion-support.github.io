@@ -37,10 +37,10 @@ const AIVoiceAssistantPage: React.FC = () => {
     }
   ];
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
+      <main className="container mx-auto px-4 py-16 pt-24"></main>
+        <section className="text-center mb-16"></section>
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
 // AI Voice Assistant</h1>"
           <p className="text-xl text-cyan-400 mb-8 font-medium neon-pulse"></p>
@@ -48,7 +48,7 @@ const AIVoiceAssistantPage: React.FC = () => {
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed"></p>
             Build custom voice assistants with AI-powered intelligence.
             Create natural, conversational experiences that understand and respond to user needs.
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
             <a
               href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
 // >

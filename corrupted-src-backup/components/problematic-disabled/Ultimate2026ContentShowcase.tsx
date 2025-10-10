@@ -32,17 +32,17 @@ const Ultimate2026ContentShowcas, e: React.FC = () => {/* TODO: Fix JSX expressi
       sta, t, s: { reasoni, n, g: "Advan, c, e, d", learni, n, g: "Se, l, f-Improv, i, n, g", accura, c, y: "9, 8%" }
     }
   ]; return(<div, classNam, e = "py-24, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">
-      {/* Animated, background, effects */}
-      <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-15">
-        <div, className="absolute, to, p-0, lef, t-1/3 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" />
-        <div, className="absolute, botto, m-0, righ, t-1/3 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s' }} />
-  ]; return (
+      {/* Animated, background, effects */}</div>
+      <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-15"></div>
+        <div, className="absolute, to, p-0, lef, t-1/3 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" /></div>
+        <div, className="absolute, botto, m-0, righ, t-1/3 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s'}} />
+  ]; return (</div>
     <div, classNam, e = "py-24, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">
       {/* Animated, background, effects */}</div>
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-15"></div>
         <div, className="absolute, to, p-0, lef, t-1/3 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" /></div>
-        <div, className="absolute, botto, m-0, righ, t-1/3 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s' }} /></div>
-        <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 4, s' }} />
+        <div, className="absolute, botto, m-0, righ, t-1/3 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s'}} /></div>
+        <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 4, s'}} />
       </div>
       <div, classNam, e = "container, m, x-auto, p, x-6, relative, z-10">
         {/* Head, e, r */}</div>
@@ -92,8 +92,8 @@ const Ultimate2026ContentShowcas, e: React.FC = () => {/* TODO: Fix JSX expressi
       {/* Animated, background, effects */}"
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-15"></div>"
         <div, className="absolute, to, p-0, lef, t-1/3 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" /></div>"
-        <div, className="absolute, botto, m-0, righ, t-1/3 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s' }} /></div>"
-        <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 4, s' }} /></div>
+        <div, className="absolute, botto, m-0, righ, t-1/3 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s'}} /></div>"
+        <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 4, s'}} /></div>
       </div>"
       <div, classNam, e = "container, m, x-auto, p, x-6, relative, z-10"></div>
         {/* Head, e, r */}"
@@ -252,7 +252,7 @@ const Ultimate2026ContentShowcas, e: React.FC = () => {/* TODO: Fix JSX expressi
                     <Zap, className="w-4 h-4, tex, t-bl, u, e-4, 0, 0" /></Zap>
                     {conte, n, t.readTime}
                   </sp, a, n>
-                  <sp, a, n>{new, Dat, e(conte, n, t.d, a, t, e).toLocaleDateStri, n, g('en-US', { mon, t, h: 'sh, o, r, t', d, a, y: 'nume, r, i, c', ye, a, r: 'nume, r, i, c' })}</sp, a, n>
+                  <sp, a, n>{new, Dat, e(conte, n, t.d, a, t, e).toLocaleDateStri, n, g('en-US', { mon, t, h: 'sh, o, r, t', d, a, y: 'nume, r, i, c', ye, a, r: 'nume, r, i, c'})}</sp, a, n>
                 </div>
                 {/* CTA, Butto, n */}
                 <a, hre, f = {`/bl, o, g/${conte, n, t.slug}`}"
@@ -276,7 +276,7 @@ const Ultimate2026ContentShowcas, e: React.FC = () => {/* TODO: Fix JSX expressi
           </div>
           <div, className="te, x, t-cente, r, p-8, b, g-whi, t, e/8, backdro, p-bl, u, r-xl, rounde, d-2xl, border, border-whi, t, e/15"></div>
             <div, className="te, x, t-5xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transparent, m, b-3">
-        {/* Ultimate, Stat, s */}"
+        {/* Ultimate, Stat, s */}"</div>
         <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-8, m, b-20"></div>"
           <div, className="te, x, t-cente, r, p-8, b, g-whi, t, e/8, backdro, p-bl, u, r-xl, rounde, d-2xl, border, border-whi, t, e/15"></div>"
             <div, className="te, x, t-5xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transparent, m, b-3"></div>

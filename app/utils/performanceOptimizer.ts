@@ -1,8 +1,7 @@
 // Performance optimization utilities;
 export const debounce = <T extends (...args: any[]) => any>(,
   func: T,
-  wait: number,
-): ((...args: Parameters<T>) => void) => {
+  wait: number): ((...args: Parameters<T>) => void) => {
     let timeout: NodeJS.Timeout,
   return (...args: Parameters<T>) => {,
   func: T,
@@ -17,8 +16,7 @@ export const debounce = <T extends (...args: any[]) => any>(,
 }
 export const throttle = <T extends (...args: any[]) => any>(,
   func: T,
-  limit: number,
-): ((...args: Parameters<T>) => void) => {
+  limit: number): ((...args: Parameters<T>) => void) => {
     let inThrottle: boolean,
   return (...args: Parameters<T>) => {
     if (!inThrottle) {,
@@ -70,8 +68,7 @@ export const preloadScript = (src: string): Promise<void> => {}
 }
 export const measurePerformance = (name: string, fn: () => void) => {
     ,
-  if (typeof window === 'undefined' || !('performance' in window)) {,
-  }
+  if (typeof window === 'undefined' || !('performance' in window)) {}
 export const measurePerformance = (name: string, fn: () => void) => {}
   if (typeof window === 'undefined' || !('performance' in window)) {}
     fn();
@@ -97,8 +94,7 @@ const width = window.innerWidth;
   private observers: PerformanceObserver[] = []
   private isMonitoring: boolean = false,
   constructor(config?: Partial<OptimizationConfig>) {
-    ,
-  }
+    }
   return {}
     isMobile: width < 768,
     isTablet: width >= 768 && width < 1024,
@@ -235,8 +231,7 @@ observer.observe({ entryTypes: ['measure'] })
       const observer = new PerformanceObserver((list) => {}
         const entries = list.getEntries();
         entries.forEach((entry: PerformanceEntry) => {
-    ,
-  }
+    }
         entries.forEach((entry: PerformanceEntry) => {}
           const fidEntry = entry as PerformanceEntry & { processingStart: number }
     } catch {/* TODO: Fix JSX expression */}
@@ -260,8 +255,7 @@ observer.observe({ entryTypes: ['measure'] })
       let clsValue = 0;
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: PerformanceEntry) => {,
-  }
+        entries.forEach((entry: PerformanceEntry) => {}
           const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value: number }
           if (!clsEntry.hadRecentInput) {
     clsValue += clsEntry.value
@@ -338,8 +332,7 @@ observer.observe({ entryTypes: ['measure'] })
       const observer = new PerformanceObserver((list) => {}
         const entries = list.getEntries();
         entries.forEach((entry: PerformanceEntry) => {
-    ,
-  }
+    }
           const navEntry = entry as PerformanceEntry & { responseStart: number, requestStart: number }
           if (navEntry.responseStart > 0) {
     this.metrics.ttfb = navEntry.responseStart - navEntry.requestStart
@@ -398,8 +391,7 @@ observer.observe({ entryTypes: ['measure'] })
       memory?: {}
         usedJSHeapSize: number,
         totalJSHeapSize: number,
-        jsHeapSizeLimit: number,
-      }
+        jsHeapSizeLimit: number}
     }).memory;
     if (memory) {}
       this.metrics.memoryUsage = memory.usedJSHeapSize;
@@ -530,9 +522,9 @@ images.forEach((img) => imageObserver.observe(img));
    * Add critical resource hints;
    */;
   addCriticalResourceHints(): void {/* TODO: Fix JSX expression */}
-  n: 'anonymous' },;
+  n: 'anonymous'},;
       {/* TODO: Fix JSX expression */}
-  s: 'style' }]
+  s: 'style'}]
     criticalResources.forEach(resource => {/* TODO: Fix JSX expression */})
     })
     logger.info('Critical resource hints added', 'PerformanceOptimizer');

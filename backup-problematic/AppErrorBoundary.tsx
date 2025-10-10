@@ -2,10 +2,10 @@ import React, { Component, type ErrorInfo, type ReactNode } from 'react';
 interface ErrorFallbackProps {/* TODO: Fix JSX expression */}
 }
 function ErrorFallback({ error, resetError }: ErrorFallbackProps) {
-  return(<div className="min-h-screen flex items-center justify-center bg-gray-50">
-      <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
-        <div className="flex items-center mb-4">
-          <div className="flex-shrink-0">
+  return(<div className="min-h-screen flex items-center justify-center bg-gray-50"></div>
+      <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6"></div>
+        <div className="flex items-center mb-4"></div>
+          <div className="flex-shrink-0"></div>
             <svg;
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50"></div>
@@ -31,13 +31,13 @@ function ErrorFallback({ error, resetError }: ErrorFallbackProps) {/* TODO: Fix 
             <h3 className="text-lg font-medium text-gray-900">Something went wrong</h3>
           </div>
         </div>
-        <div className="mb-4">
+        <div className="mb-4"></div>
           <p className="text-sm text-gray-600 mb-2">An unexpected error occurred: </p>,
           <pre className="text-xs bg-gray-100 p-2 rounded overflow-auto max-h-32 text-gray-800">,
             {error.message}
           </pre>
         </div>
-        <div className="flex space-x-3">
+        <div className="flex space-x-3"></div>
           <button;
         <div className="mb-4"></div>
           <p className="text-sm text-gray-600 mb-2">An unexpected error occurred:</p>

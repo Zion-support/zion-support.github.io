@@ -102,7 +102,7 @@ export default function APIDocsPage() {
     )
   })).filter(category => category.endpoints.length > 0);
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <SEOOptimizer 
         title="API Documentation - Zion Tech Group"
         description="Complete API documentation for Zion Tech Group's AI and IT solutions. Explore endpoints, authentication, and integration guides."
@@ -110,8 +110,8 @@ export default function APIDocsPage() {
       />
       <Navigation />
       {/* Hero Section */}
-<section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto text-center">
+<section className="py-20 px-4"></section>
+        <div className="max-w-7xl mx-auto text-center"></div>
           <h1 className="text-5xl font-bold text-white mb-6">
             API Documentation
   </
@@ -119,11 +119,11 @@ export default function APIDocsPage() {
             Complete API documentation for Zion Tech Group's AI and IT solutions. 
             Explore endpoints, authentication, and integration guides.
           </p>
-            <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
+            <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"></button>
               <Code className="mr-2 h-5 w-5" />
               Get Started
   </
-            <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
+            <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center"></button>
               <Download className="mr-2 h-5 w-5" />
               Download SDK,
   </
@@ -131,12 +131,12 @@ export default function APIDocsPage() {
         </div>
       </section>
       {/* Quick Start */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-16 px-4"></section>
+        <div className="max-w-7xl mx-auto"></div>
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Quick Start</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8"></div>
+            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10"></div>
+              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4"></div>
                 <Key className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">1. Get API Key</h3>
@@ -145,8 +145,8 @@ export default function APIDocsPage() {
                 Get API Key →
               </button>
             </div>
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
+            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10"></div>
+              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4"></div>
                 <Code className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">2. Make Request</h3>
@@ -155,8 +155,8 @@ export default function APIDocsPage() {
                 View Examples →
               </button>
             </div>
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
+            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10"></div>
+              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4"></div>
                 <Zap className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">3. Integrate</h3>
@@ -169,26 +169,26 @@ export default function APIDocsPage() {
         </div>
       </section>
       {/* API Endpoints */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-16 px-4"></section>
+        <div className="max-w-7xl mx-auto"></div>
           <h2 className="text-3xl font-bold text-white mb-12 text-center">API Endpoints</h2>
           <div className="space-y-8">
-            {filteredEndpoints.map((category, categoryIndex) => (
-              <div key={categoryIndex} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-                <div className="flex items-center gap-4 mb-8">
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
+            {filteredEndpoints.map((category, categoryIndex) => (</div>
+              <div key={categoryIndex} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10"></div>
+                <div className="flex items-center gap-4 mb-8"></div>
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center"></div>
                     <category.icon className="w-6 h-6 text-white" />
                   </div>
-                  <div>
+                  <div></div>
                     <h3 className="text-2xl font-bold text-white mb-2">{category.title}</h3>
                     <p className="text-gray-300">{category.description}</p>
                   </div>
                 </div>
                 <div className="space-y-6">
-                  {category.endpoints.map((endpoint, endpointIndex) => (
-                    <div key={endpointIndex} className="bg-white/5 rounded-xl p-6 border border-white/10">
-                      <div className="flex items-center justify-between mb-4">
-                        <div className="flex items-center gap-4">
+                  {category.endpoints.map((endpoint, endpointIndex) => (</div>
+                    <div key={endpointIndex} className="bg-white/5 rounded-xl p-6 border border-white/10"></div>
+                      <div className="flex items-center justify-between mb-4"></div>
+                        <div className="flex items-center gap-4"></div>
                           <span className={`px-3 py-1 rounded-full text-sm font-medium ${
                             endpoint.method === 'POST' 
                               ? 'bg-green-500/20 text-green-400' 
@@ -201,13 +201,13 @@ export default function APIDocsPage() {
                         <button
                           onClick={() => copyToClipboard(endpoint.code, `${categoryIndex}-${endpointIndex}`)}
                           className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
-                          {copiedCode === `${categoryIndex}-${endpointIndex}` ? (
-                            <React.Fragment>
+                          {copiedCode === `${categoryIndex}-${endpointIndex}` ? (</button>
+                            <React.Fragment></React.Fragment>
                               <Check className="w-4 h-4" />
                               Copied!
                             </React.Fragment>
                           ) : (
-                            <React.Fragment>
+                            <React.Fragment></React.Fragment>
                               <Copy className="w-4 h-4" />
                               Copy
                             </React.Fragment>
@@ -215,8 +215,8 @@ export default function APIDocsPage() {
                         </button>
                       </div>
                       <p className="text-gray-300 mb-4">{endpoint.description}</p>
-                      <div className="bg-slate-900 rounded-lg p-4 overflow-x-auto">
-                        <pre className="text-gray-300 text-sm">
+                      <div className="bg-slate-900 rounded-lg p-4 overflow-x-auto"></div>
+                        <pre className="text-gray-300 text-sm"></p>
                           <code>{endpoint.code}</code>
                         </pre>
                       </div>
@@ -229,15 +229,15 @@ export default function APIDocsPage() {
         </div>
       </section>
       {/* CTA Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700"></section>
+        <div className="max-w-4xl mx-auto text-center"></div>
           <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
             Ready to Get Started?
           </h2>
           <p className="text-xl text-purple-100 mb-8">
             Start building with our APIs today and create amazing applications.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors">
               Get API Key
   </
@@ -249,8 +249,7 @@ export default function APIDocsPage() {
       </section>
       <Footer />
     </div>
-  ),
-}
+  )}
   </button>
   </button>
   </button>

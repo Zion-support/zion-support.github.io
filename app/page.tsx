@@ -7,7 +7,7 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
 
 // Loading skeleton component
 const ServiceCardSkeleton = () => (
-  <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
+  <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card"></div>
     <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
     <div className="h-4 bg-gray-200 rounded mb-2"></div>
     <div className="h-4 bg-gray-200 rounded w-5/6"></div>
@@ -16,7 +16,7 @@ const ServiceCardSkeleton = () => (
 
 // Content promotion banner component
 const ContentPromotionBanner = () => (
-  <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-4 text-center">
+  <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-4 text-center"></div>
     <p className="text-sm font-medium">
       🚀 New: AI-Powered Business Solutions - Transform Your Operations Today!
     </p>
@@ -65,32 +65,32 @@ const HomePage: React.FC = () => {
   }, []);
 
   const stats = [
-    { icon: <Users className="w-8 h-8 text-blue-500" />, value: '500+', label: 'Projects Delivered' },
-    { icon: <TrendingUp className="w-8 h-8 text-green-500" />, value: '99.9%', label: 'Uptime Guarantee' },
-    { icon: <Shield className="w-8 h-8 text-purple-500" />, value: '24/7', label: 'Support Available' },
-    { icon: <Zap className="w-8 h-8 text-orange-500" />, value: '5★', label: 'Client Rating' }
+    { icon: <Users className="w-8 h-8 text-blue-500" />, value: '500+', label: 'Projects Delivered'},
+    { icon: <TrendingUp className="w-8 h-8 text-green-500" />, value: '99.9%', label: 'Uptime Guarantee'},
+    { icon: <Shield className="w-8 h-8 text-purple-500" />, value: '24/7', label: 'Support Available'},
+    { icon: <Zap className="w-8 h-8 text-orange-500" />, value: '5★', label: 'Client Rating'}
   ];
 
   const aiServices = [
-    { name: 'AI Analytics Dashboard', href: '/ai-analytics-dashboard', icon: BarChart, description: 'Real-time BI & Analytics' },
-    { name: 'AI Chatbot Builder', href: '/ai-chatbot-builder', icon: Brain, description: 'No-code Chatbot Platform' },
-    { name: 'AI Email Marketing', href: '/ai-email-marketing', icon: Mail, description: 'Automated Email Campaigns' },
-    { name: 'AI Project Management', href: '/ai-project-management', icon: Settings, description: 'Smart Project Tracking' },
-    { name: 'AI SEO Optimizer', href: '/ai-seo-optimizer', icon: Target, description: 'Automated SEO Tools' },
-    { name: 'AI Design Studio', href: '/ai-design-studio', icon: Code, description: 'AI Design Tools' }
+    { name: 'AI Analytics Dashboard', href: '/ai-analytics-dashboard', icon: BarChart, description: 'Real-time BI & Analytics'},
+    { name: 'AI Chatbot Builder', href: '/ai-chatbot-builder', icon: Brain, description: 'No-code Chatbot Platform'},
+    { name: 'AI Email Marketing', href: '/ai-email-marketing', icon: Mail, description: 'Automated Email Campaigns'},
+    { name: 'AI Project Management', href: '/ai-project-management', icon: Settings, description: 'Smart Project Tracking'},
+    { name: 'AI SEO Optimizer', href: '/ai-seo-optimizer', icon: Target, description: 'Automated SEO Tools'},
+    { name: 'AI Design Studio', href: '/ai-design-studio', icon: Code, description: 'AI Design Tools'}
   ];
 
   const itServices = [
-    { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: Cloud, description: 'AWS, Azure, GCP' },
-    { name: 'DevOps & CI/CD', href: '/devops-cicd', icon: Settings, description: 'Automation pipelines' },
-    { name: 'Cybersecurity Solutions', href: '/cybersecurity-solutions', icon: Shield, description: 'Security solutions' },
-    { name: 'Web Development', href: '/web-development', icon: Code, description: 'Modern web apps' },
-    { name: 'Mobile Development', href: '/mobile-development', icon: Smartphone, description: 'iOS & Android' },
-    { name: 'API Development', href: '/api-development', icon: Database, description: 'API solutions' }
+    { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: Cloud, description: 'AWS, Azure, GCP'},
+    { name: 'DevOps & CI/CD', href: '/devops-cicd', icon: Settings, description: 'Automation pipelines'},
+    { name: 'Cybersecurity Solutions', href: '/cybersecurity-solutions', icon: Shield, description: 'Security solutions'},
+    { name: 'Web Development', href: '/web-development', icon: Code, description: 'Modern web apps'},
+    { name: 'Mobile Development', href: '/mobile-development', icon: Smartphone, description: 'iOS & Android'},
+    { name: 'API Development', href: '/api-development', icon: Database, description: 'API solutions'}
   ];
 
   return (
-    <>
+    <></>
       <Helmet>
         <title>Zion Tech Group - Advanced AI and IT Solutions</title>
         <meta name="description" content="Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology." />
@@ -104,12 +104,12 @@ const HomePage: React.FC = () => {
         enableFocusManagement={true}
       />
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         <Navigation />
         
         <main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main">
-          {/* Hero Section */}
-          <section className="text-center mb-16">
+          {/* Hero Section */}</main>
+          <section className="text-center mb-16"></section>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
               Zion Tech Group
             </h1>
@@ -121,7 +121,7 @@ const HomePage: React.FC = () => {
               Transform your business with our cutting-edge technology and achieve unprecedented growth.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <a 
                 href="/ai-services"
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
@@ -136,10 +136,10 @@ const HomePage: React.FC = () => {
           </section>
 
           {/* Stats Section */}
-          <section className="mb-16">
+          <section className="mb-16"></section>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center">
+              {stats.map((stat, index) => (</div>
+                <div key={index} className="text-center"></div>
                   <div className="flex justify-center mb-2">{stat.icon}</div>
                   <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
                   <div className="text-gray-400 text-sm">{stat.label}</div>
@@ -149,7 +149,7 @@ const HomePage: React.FC = () => {
           </section>
 
           {/* AI Services Section */}
-          <section className="mb-16">
+          <section className="mb-16"></section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 text-center">
               AI Services
             </h2>
@@ -157,8 +157,8 @@ const HomePage: React.FC = () => {
               Comprehensive AI solutions designed to transform your business operations
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {aiServices.map((service, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:scale-105 transition-all duration-300">
+              {aiServices.map((service, index) => (</div>
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:scale-105 transition-all duration-300"></div>
                   <service.icon className="w-12 h-12 text-blue-400 mb-4" />
                   <h3 className="text-xl font-semibold text-white mb-3">
                     {service.name}
@@ -172,7 +172,7 @@ const HomePage: React.FC = () => {
           </section>
 
           {/* IT Services Section */}
-          <section className="mb-16">
+          <section className="mb-16"></section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 text-center">
               IT Services
             </h2>
@@ -180,8 +180,8 @@ const HomePage: React.FC = () => {
               Complete IT solutions to modernize your infrastructure and drive business growth
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {itServices.map((service, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:scale-105 transition-all duration-300">
+              {itServices.map((service, index) => (</div>
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:scale-105 transition-all duration-300"></div>
                   <service.icon className="w-12 h-12 text-green-400 mb-4" />
                   <h3 className="text-xl font-semibold text-white mb-3">
                     {service.name}
@@ -195,14 +195,14 @@ const HomePage: React.FC = () => {
           </section>
 
           {/* CTA Section */}
-          <section className="text-center">
+          <section className="text-center"></section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
               Contact us today to learn how our AI and IT solutions can help you achieve your goals.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <a 
                 href="/contact"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">

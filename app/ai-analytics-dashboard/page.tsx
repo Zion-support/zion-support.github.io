@@ -42,7 +42,7 @@ const AiAnalyticsDashboardPage: React.FC = () => {
   ];
 
   return (
-    <>
+    <></>
       <Helmet>
         <title>AI Analytics Dashboard - Zion Tech Group</title>
         <meta name="description" content="Transform your data into actionable insights with our AI-powered analytics dashboard. Real-time monitoring, predictive analytics, and advanced visualizations." />
@@ -51,10 +51,10 @@ const AiAnalyticsDashboardPage: React.FC = () => {
       <Navigation />
       
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center">
+        {/* Hero Section */}</main>
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center"></div>
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 AI Analytics Dashboard
               </h1>
@@ -62,7 +62,7 @@ const AiAnalyticsDashboardPage: React.FC = () => {
                 Transform your data into actionable insights with our AI-powered analytics platform. 
                 Monitor performance, predict trends, and make data-driven decisions with confidence.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                 <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
                   Get Started
                 </button>
@@ -75,9 +75,9 @@ const AiAnalyticsDashboardPage: React.FC = () => {
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Powerful Features
               </h2>
@@ -87,8 +87,8 @@ const AiAnalyticsDashboardPage: React.FC = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              {features.map((feature, index) => (</div>
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"></div>
                   <feature.icon className="w-12 h-12 text-blue-400 mb-4" />
                   <h3 className="text-xl font-semibold text-white mb-3">
                     {feature.title}
@@ -111,9 +111,9 @@ const AiAnalyticsDashboardPage: React.FC = () => {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Why Choose AI Analytics?
               </h2>
@@ -123,9 +123,9 @@ const AiAnalyticsDashboardPage: React.FC = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-4">
-                  <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
+              {benefits.map((benefit, index) => (</div>
+                <div key={index} className="flex items-start space-x-4"></div>
+                  <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" /></CheckCircle>
                   <p className="text-gray-300 text-lg">{benefit}</p>
                 </div>
               ))}
@@ -134,15 +134,15 @@ const AiAnalyticsDashboardPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
+        <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+          <div className="max-w-4xl mx-auto text-center"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Data?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
               Start analyzing your data with AI-powered insights today.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
                 Get Started
               </button>

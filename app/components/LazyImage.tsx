@@ -19,9 +19,9 @@ const benefits = [
     'Proven track record of success'
   ]
 {/* Hero Section */}
-      <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+      <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
@@ -29,7 +29,7 @@ const benefits = [
         </section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center"></div>
-            <h1>
+            <h1></h1>
               <span>
                 LazyImage
               </span>
@@ -42,7 +42,7 @@ const benefits = [
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button>
-                Get Started
+                Get Started</button>
                 <ArrowRight>
               </button>
               <button>
@@ -55,9 +55,9 @@ const benefits = [
         </div>
       </section>
       {/* Benefits Section */}
-      <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+      <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
@@ -75,7 +75,7 @@ const benefits = [
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
             {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-3"></div>
-                <CheckCircle>
+                <CheckCircle></CheckCircle>
                 <p className="text-gray-300 text-lg">{benefit}</p>
               </div>
             ))}
@@ -83,9 +83,9 @@ const benefits = [
         </div>
       </section>
       {/* CTA Section */}
-      <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+      <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
@@ -100,11 +100,11 @@ const benefits = [
               Contact our experts to discuss your lazyimage needs and get a customized solution.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <button>
+              <button></button>
                 <Phone>
                 Call Now
               </button>
-              <button>
+              <button></button>
                 <Mail>
                 Email Us
               </button>
@@ -113,8 +113,7 @@ const benefits = [
         </div>
       </section>
     </div>
-  ),
-};
+  )};
 
 export default LazyImagePage;
 

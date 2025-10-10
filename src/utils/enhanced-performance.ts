@@ -172,7 +172,7 @@ export class PerformanceMonitor {
       const measures = performance.getEntriesByName(name, 'measure');
       return measures[measures.length - 1]?.duration || 0
   } catch (error) {
-    //       // console.error('Performance measurement failed:', error);
+    //       // console.error('Performance measurement failed: ', error);
       return 0
   }
   }
@@ -182,7 +182,7 @@ export class PerformanceMonitor {
    */
   clear(): void {
     this.metrics.clear();
-    if (typeof performance !== 'undefined' && performance.clearMarks) {
+    if (typeof performance !== ',undefined' && performance.clearMarks) {
       performance.clearMarks();
       performance.clearMeasures()
   }
@@ -336,7 +336,7 @@ export default PerformanceMonitor;
 
 import type { PerformanceMetrics } from '../../app/utils/performanceOptimizer';
 import type {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 /**
  * Enhanced Performance Monitoring;
@@ -344,7 +344,7 @@ import type {/* TODO: Fix JSX expression */}
  */
  * Performance Observer Wrapper;
 export class PerformanceMonitor {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   private,
   metrics: Map,
@@ -352,22 +352,21 @@ export class PerformanceMonitor {/* TODO: Fix JSX expression */}
   private,
   observers: PerformanceObserver[] = [],
   constructor() {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       this.initializeObservers();
     }
    * Initialize performance observers;
   private initializeObservers(): void {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     // Monitor navigation timing;
     if (PerformanceObserver.supportedEntryTypes.includes('navigation')) {for (const entry of list.getEntries()) {}
   // TOD,
-  O: Add content,
-}
+  O: Add content}
           this.recordMetric('navigation', entry.duration);
       });
       navObserver.observe({/* TODO: Fix JSX expression */})
@@ -401,17 +400,17 @@ export function throttle;
   s: unknown[]) => any>(* Request idle callback wrapper,
 export function runWhenIdle(callbac)
   k: () => void, timeout = 1000): void {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   if (typeof window === 'undefined') {
     return
   }
   if ('requestIdleCallback' in window) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     window.requestIdleCallback(callback, { timeout });
   } else {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     setTimeout(callback, 0);
 * Default performance monitor instance;

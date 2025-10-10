@@ -62,11 +62,11 @@ export default function ServicesSection() {
     }
   ];
   return (
-    <section id="services" className="py-20 relative">
+    <section id="services" className="py-20 relative"></section>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+        {/* Section Header */}</div>
+        <div className="text-center mb-16"></div>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>
             <span className="holographic-text">Our Services</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -76,11 +76,11 @@ export default function ServicesSection() {
         </div>
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
+          {services.map((service, index) => (</div>
             <div
               key={index}
               className="cyber-card-advanced p-8 group hover:scale-105 transition-all duration-300">
-              {/* Icon */}
+              {/* Icon */}</div>
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center mb-6 text-black group-hover:scale-110 transition-transform duration-300">
                 {service.icon}
               </div>
@@ -103,7 +103,7 @@ export default function ServicesSection() {
                 ))}
               </ul>
               {/* Learn More Button */}
-              <div className="mt-6">
+              <div className="mt-6"></div>
                 <a
                   href="#contact"
                   className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium transition-colors duration-300">
@@ -117,15 +117,15 @@ export default function ServicesSection() {
           ))}
         </div>
         {/* CTA Section */}
-        <div className="text-center mt-16">
-          <div className="cyber-card-advanced p-8 max-w-4xl mx-auto">
+        <div className="text-center mt-16"></div>
+          <div className="cyber-card-advanced p-8 max-w-4xl mx-auto"></div>
             <h3 className="text-2xl font-bold text-white mb-4">
               Ready to Transform Your Business?
             </h3>
             <p className="text-gray-300 mb-8 text-lg">
               Let's discuss how our AI and IT solutions can drive your success.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
               <a
                 href="#contact"
                 className="cyber-button px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105">
@@ -141,7 +141,6 @@ export default function ServicesSection() {
         </div>
       </div>
     </section>
-  ),
-}
+  )}
   </a>
   </a>

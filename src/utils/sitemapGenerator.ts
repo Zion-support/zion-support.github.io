@@ -2,17 +2,16 @@
 
 // Sitemap generator utility;
 export interface SitemapUrl {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   lo,
   c: string;
   lastmod?: string
   changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
-  priority?: number,
-}
+  priority?: number}
 export const _generateSitemap = (url)
   s: SitemapUrl[]): string => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   const baseUrl = 'http,
   s: //ziontechgroup.com'
@@ -63,125 +62,125 @@ export const getAllPages = (): SitemapUrl[] => {/* TODO: Fix JSX expression */}
   O: Add items]
     // Main pages,
     {/* TODO: Fix JSX expression */}
-  q: 'daily' },
+  q: 'daily'},
     {/* TODO: Fix JSX expression */}
-  q: 'monthly' },
+  q: 'monthly'},
     {/* TODO: Fix JSX expression */}
-  q: 'monthly' },
+  q: 'monthly'},
     {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
+  q: 'weekly'},
     {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
+  q: 'weekly'},
     {/* TODO: Fix JSX expression */}
-  q: 'monthly' },
+  q: 'monthly'},
     {/* TODO: Fix JSX expression */}
-  q: 'monthly' },
+  q: 'monthly'},
     {/* TODO: Fix JSX expression */}
-  q: 'monthly' },
+  q: 'monthly'},
     {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
+  q: 'weekly'},
     // AI Services;
     {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
+  q: 'weekly'},
     {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
+  q: 'weekly'},
     {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
+  q: 'weekly'},
     {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
+  q: 'weekly'},
     {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
+  q: 'weekly'},
     {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
+  q: 'weekly'},
     {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
+  q: 'weekly'},
     {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
+  q: 'weekly'},
     {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
+  q: 'weekly'},
     {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
+  q: 'weekly'},
     {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
+  q: 'weekly'},
     {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
+  q: 'weekly'},
     {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
+  q: 'weekly'},
     {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
+  q: 'weekly'},
     {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
+  q: 'weekly'},
     {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
+  q: 'weekly'},
     {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
+  q: 'weekly'},
     {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
+  q: 'weekly'},
     {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
+  q: 'weekly'},
     {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
+  q: 'weekly'},
     {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
+  q: 'weekly'},
     {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
+  q: 'weekly'},
     // IT Services;
     {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
+  q: 'weekly'},
     {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
+  q: 'weekly'},
     {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
+  q: 'weekly'},
     {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
+  q: 'weekly'},
     {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
+  q: 'weekly'},
     {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
+  q: 'weekly'},
     {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
+  q: 'weekly'},
     // Micro SAAS;
     {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
+  q: 'weekly'},
     {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
+  q: 'weekly'},
     {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
+  q: 'weekly'},
     {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
+  q: 'weekly'},
     {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
+  q: 'weekly'},
     {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
+  q: 'weekly'},
     {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
+  q: 'weekly'},
     {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
+  q: 'weekly'},
     {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
+  q: 'weekly'},
     // Specialized Solutions;
     {/* TODO: Fix JSX expression */}
-  q: 'monthly' },
+  q: 'monthly'},
     {/* TODO: Fix JSX expression */}
-  q: 'monthly' },
+  q: 'monthly'},
     {/* TODO: Fix JSX expression */}
-  q: 'monthly' },
+  q: 'monthly'},
     {/* TODO: Fix JSX expression */}
-  q: 'monthly' },
+  q: 'monthly'},
     {/* TODO: Fix JSX expression */}
-  q: 'monthly' },
+  q: 'monthly'},
     {/* TODO: Fix JSX expression */}
-  q: 'monthly' },
+  q: 'monthly'},
     // Legal pages;
     {/* TODO: Fix JSX expression */}
-  q: 'yearly' },
+  q: 'yearly'},
     {/* TODO: Fix JSX expression */}
-  q: 'yearly' },
+  q: 'yearly'},
     {/* TODO: Fix JSX expression */}
-  q: 'yearly' },
+  q: 'yearly'},
     {/* TODO: Fix JSX expression */}
-  q: 'yearly' },
+  q: 'yearly'},
     {/* TODO: Fix JSX expression */}
-  q: 'yearly' }]
+  q: 'yearly'}]
 }"`
 

@@ -11,7 +11,7 @@
   t: lines.length ? lines.join('\n') : 'No matches yet.' }); return; }' if (sub === 'track-project') {;' const name = rest.join(' ') || 'Kleber'}; const res = await fetch(`${apiBase}/projects/${encodeURIComponent(name)}/track`, {/* TODO: Fix JSX expression */}
   s: { 'x-user-id': userId } }); const data = (await res.json()) as any; if (!data.project) {/* TODO: Fix JSX expression */}
   e: 'ephemeral'} tex,
-  t: 'Project not found.' }); return; }' await respond({/* TODO: Fix JSX expression */}
+  t: 'Project not found.'}); return; }' await respond({/* TODO: Fix JSX expression */}
   e: 'ephemeral'} tex,`
   t: `*${data.project.name}* – statu,
   s: ${data.project.status}\\nMilestone)`
@@ -38,7 +38,7 @@
   t: lines.length ? lines.join('\n') : 'No matches yet.' }); return; }' if (sub === 'track-project') {;' const name = rest.join(' ') || 'Kleber'}; const res = await fetch(`${apiBase}/projects/${encodeURIComponent(name)}/track`, {/* TODO: Fix JSX expression */}
   s: { 'x-user-id': userId } }); const data = (await res.json()) as any; if (!data.project) {/* TODO: Fix JSX expression */}
   e: 'ephemeral'} tex,
-  t: 'Project not found.' }); return; }' await respond({/* TODO: Fix JSX expression */}
+  t: 'Project not found.'}); return; }' await respond({/* TODO: Fix JSX expression */}
   e: 'ephemeral'} tex,`
   t: `*${data.project.name}* – statu,
   s: ${data.project.status}\\nMilestone)`

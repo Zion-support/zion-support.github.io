@@ -87,7 +87,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
       style={{ width, height }}
     >
       {/* Placeholder */})
-      {!isLoaded && ()
+      {!isLoaded && ()</div>
         <img;)
       {/* Placeholder */}
       {!isLoaded && (</div>
@@ -95,7 +95,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
           src={generatePlaceholder()}
           alt=""
           className="absolute inset-0 w-full h-full object-cover animate-pulse"
-          style={{ filter: 'blur(1 px)' }}
+          style={{ filter: 'blur(1 px)'}}
         /></img>
       )}
       {/* Actual Image */}

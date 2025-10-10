@@ -61,7 +61,7 @@ $4})
         className={`bg-gray-200 flex items-center justify-center ${className}`}
         style={imageStyle}
         {...props}
-      >
+      ></div>
         <span className="text-gray-500 text-sm">Failed to load image</span>
       </div>
     );
@@ -88,8 +88,7 @@ import React, { useState, useCallback } from 'react';
 const,
   Image: React.FC = () => {interface ImageProps {}
   // TOD,
-  O: Add content,
-}
+  O: Add content}
   src: string,,
     alt: string
   width?: number
@@ -103,8 +102,7 @@ const,
   sizes?: string;
   style?: React.CSSProperties
   onLoad?: () => void
-  onError?: () => void,
-}
+  onError?: () => void}
 export const Image: React.FC,
           <ImageProps> = ({
     // TODO: Add content
@@ -132,35 +130,34 @@ quality = 75,
   const [, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
   const _handleLoad = useCallback(() => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     setIsLoaded(true);
     if (onLoad) onLoad();
   }, [onLoad]);
   const handleError = useCallback(() => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     setHasError(true);
     if (onError) onError();
   }, [onError]);
   const,
   imageStyle: React.CSSProperties = {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 //     ...style,
     ...(fill && {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   position: 'absolute',
       top: 0,
       left: 0,
       width: '100%',
       height: '100%',
-      objectFit: 'cover'
-    })
+      objectFit: 'cover'})
   }
   if (hasError) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     return (
           <div>Coming Soon</div>

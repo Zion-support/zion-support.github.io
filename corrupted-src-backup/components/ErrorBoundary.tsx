@@ -29,7 +29,7 @@ class ErrorBoundary extends Component<Props, State> {
     // Report to external service (e.g., Sentry, LogRocket, etc.)
     if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('event', 'exception', {)
-        description: error.message,)
+        description: error.message)
         fatal: false)
         custom_map: {,
           error_id: this.state.errorId),
@@ -75,25 +75,25 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
                 Error ID: {this.state.errorId}
               </p>
             )}
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">,
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">,</div>
               <button;
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button
                 onClick={this.handleRetry}
-                className="bg-blue-600 hover: bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2">
+                className="bg-blue-600 hover: bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2"></button>
                 <RefreshCw className="w-4 h-4" />
                 Try Again,
               </button>,
               <button;
                 onClick={this.handleGoHome}
-                className="bg-gray-600 hover: bg-gray-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2">
+                className="bg-gray-600 hover: bg-gray-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2"></button>
                 <Home className="w-4 h-4" />
                 Go Home,
               </button>,
             </div>,
             <button;
               onClick={() => window.location.reload()}
-              className="mt-4 text-gray-400 hover: text-white text-sm underline",
+              className="mt-4 text-gray-400 hover: text-white text-sm underline",</button>
             <button;
               onClick={() => window.location.reload()}
               className="bg-blue-600 hover: bg-blue-700 text-white font-bold py-2 px-4 rounded"

@@ -6,7 +6,7 @@ interface OptimizedLoadingSpinnerProps {
   className?: string;
 'use client';
 interface OptimizedLoadingSpinnerProps {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   size?: 'sm' | 'md' | 'lg';
   color?: 'primary' | 'secondary' | 'white';
@@ -20,18 +20,16 @@ const,
       m,
   d: 'w-8 h-8',
       l,
-  g: 'w-12 h-12'
-    }
+  g: 'w-12 h-12'}
     const colorClasses = {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   primar,
   y: 'text-cyan-400',
       secondar,
   y: 'text-purple-400',
       whit,
-  e: 'text-white'
-    }
+  e: 'text-white'}
     return (<div>Coming Soon</div>)
   )
           <div></div>
@@ -61,8 +59,7 @@ className="opacity-75""
 // />
           </svg>
       </div>
-    ),
-  }
+    )}
 );
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';
 export default OptimizedLoadingSpinner;
@@ -82,7 +79,7 @@ $4}
         className={`${sizeClasses[size]} ${colorClasses[color]} ${className}`}
         role="status"
         aria-label="Loading"
-      >
+      ></div>
         <svg
           className="animate-spin"
           fill="none"
@@ -104,8 +101,7 @@ $4}
           />
         </svg>
       </div>
-    ),
-  }
+    )}
 );
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';
 export default OptimizedLoadingSpinner;

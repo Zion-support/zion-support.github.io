@@ -61,15 +61,15 @@ const TeamPage: React.FC = () => {
     }
   ];
   const stats = [
-    { icon: Users, label: 'Team Members', value: '50+' },
-    { icon: Award, label: 'Awards Won', value: '25+' },
-    { icon: Brain, label: 'Years Experience', value: '15+' },
-    { icon: Shield, label: 'Client Satisfaction', value: '99%' }
+    { icon: Users, label: 'Team Members', value: '50+'},
+    { icon: Award, label: 'Awards Won', value: '25+'},
+    { icon: Brain, label: 'Years Experience', value: '15+'},
+    { icon: Shield, label: 'Client Satisfaction', value: '99%'}
   ];
   const values = [
     {
       title: 'Innovation',
-      description: 'We constantly push the boundaries of what\'s possible with AI and technology.',
+      description: 'We constantly push the boundaries of what\',s possible with AI and technology.',
       icon: Brain
     },
     {
@@ -84,18 +84,18 @@ const TeamPage: React.FC = () => {
     },
     {
       title: 'Security',
-      description: 'We prioritize the security and privacy of our clients\' data and systems.',
+      description: 'We prioritize the security and privacy of our clients\', data and systems.',
       icon: Shield
     }
   ];
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation />
       {/* Hero Section */}
-      <section className="relative py-20 px-4">
-        <div className="max-w-7xl mx-auto text-center">
+      <section className="relative py-20 px-4"></section>
+        <div className="max-w-7xl mx-auto text-center"></div>
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Meet Our <span className="text-cyan-400">Team</span>
+            Meet Our</h1> <span className="text-cyan-400">Team</span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             The brilliant minds behind our innovative AI and IT solutions. We're passionate about technology and dedicated to your success.
@@ -103,12 +103,12 @@ const TeamPage: React.FC = () => {
         </div>
       </section>
       {/* Stats Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 bg-white"></section>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            {stats.map((stat, index) => (</div>
+              <div key={index} className="text-center"></div>
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                   <stat.icon className="w-8 h-8 text-white" />
                 </div>
                 <div className="text-3xl font-bold text-gray-900 mb-2">{stat.value}</div>
@@ -119,9 +119,9 @@ const TeamPage: React.FC = () => {
         </div>
       </section>
       {/* Team Members */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
-          <div className="text-center mb-16">
+      <section className="py-20 bg-gray-50"></section>
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"></div>
+          <div className="text-center mb-16"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Our Leadership Team
   </
@@ -130,28 +130,28 @@ const TeamPage: React.FC = () => {
   </
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {teamMembers.map((member, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                <div className="h-64 bg-gradient-to-br from-cyan-100 to-blue-100 flex items-center justify-center">
-                  <div className="w-32 h-32 bg-gray-300 rounded-full flex items-center justify-center">
+            {teamMembers.map((member, index) => (</div>
+              <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"></div>
+                <div className="h-64 bg-gradient-to-br from-cyan-100 to-blue-100 flex items-center justify-center"></div>
+                  <div className="w-32 h-32 bg-gray-300 rounded-full flex items-center justify-center"></div>
                     <Users className="w-16 h-16 text-gray-600" />
                   </div>
                 </div>
-                <div className="p-6">
+                <div className="p-6"></div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{member.name}</h3>
                   <p className="text-cyan-600 font-semibold mb-3">{member.role}</p>
                   <p className="text-gray-600 mb-4">{member.bio}</p>
-                  <div className="mb-4">
+                  <div className="mb-4"></div>
                     <h4 className="text-sm font-semibold text-gray-900 mb-2">Expertise</h4>
                     <div className="flex flex-wrap gap-2">
-                      {member.expertise.map((skill, skillIndex) => (
+                      {member.expertise.map((skill, skillIndex) => (</div>
                         <span key={skillIndex} className="bg-cyan-100 text-cyan-800 text-xs px-2 py-1 rounded-full">
                           {skill}
                         </span>
                       ))}
                     </div>
                   </div>
-                  <div className="flex space-x-3">
+                  <div className="flex space-x-3"></div>
                     <a
                       href={member.linkedin}
                       target="_blank"
@@ -172,9 +172,9 @@ const TeamPage: React.FC = () => {
         </div>
       </section>
       {/* Values Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
-          <div className="text-center mb-16">
+      <section className="py-20 bg-white"></section>
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"></div>
+          <div className="text-center mb-16"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Our Values
   </
@@ -183,9 +183,9 @@ const TeamPage: React.FC = () => {
   </
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            {values.map((value, index) => (</div>
+              <div key={index} className="text-center"></div>
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                   <value.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{value.title}</h3>
@@ -196,15 +196,15 @@ const TeamPage: React.FC = () => {
         </div>
       </section>
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
+      <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600"></section>
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center"></div>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Join Our Team;
   </
           <p className="text-xl text-cyan-100 mb-8 max-w-3xl mx-auto">
             We're always looking for talented individuals who share our passion for innovation and excellence.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <Link
               to="/careers"
               className="bg-white text-cyan-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300">
@@ -220,8 +220,7 @@ const TeamPage: React.FC = () => {
       </section>
       <Footer />
     </div>
-  ),
-}
+  )}
 export default TeamPage;
   </Link>
   </Link>

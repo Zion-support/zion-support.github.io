@@ -27,8 +27,8 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
       readTime: '12 min read',
       author: 'Zion Tech Group Team'},
     {
-      slug: 'quantum-computing-business-applications-2026'
-      title: 'Quantum Computing Business Applications 2026'
+      slug: 'quantum-computing-business-applications-2026',
+      title: 'Quantum Computing Business Applications 2026',
       description: 'Revolutionary quantum solutions delivering 2000x speed improvements and breakthrough capabilities',
       category: 'Quantum Technology',
       date: '2026-01-08',
@@ -69,8 +69,8 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
       readTime: '7 min read',
       author: 'Zion Tech Group Team'},
     {
-      slug: 'quantum-neural-networks-breakthrough-2026'
-      title: 'Quantum Neural Networks Breakthrough 2026'
+      slug: 'quantum-neural-networks-breakthrough-2026',
+      title: 'Quantum Neural Networks Breakthrough 2026',
       description: 'Revolutionary quantum-enhanced AI delivering unprecedented computational power',
       category: 'AI Research',
       date: '2026-01-03',
@@ -87,7 +87,7 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
   );
   if (!currentPost) {
     return(<div className="min-h-screen bg-gray-50">
-    return (
+    return (</div>
       <div className="min-h-screen bg-gray-50"></div>
         <Header />
         <div className="container mx-auto px-4 py-16 text-center"></div>
@@ -98,14 +98,14 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
           <a;
             href="/blog"
             className="bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors">
-            Back to Blog,)
+            Back to Blog)
           </a>)
         </div>)
       </div>)
     )
   }
   return(<div className="min-h-screen bg-gray-50">
-  return (
+  return (</div>
     <div className="min-h-screen bg-gray-50"></div>
       <Header />
       {/* Article Header */}
@@ -150,7 +150,7 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
             <div className="prose prose-lg max-w-none"></div>
               <h2>Introduction</h2>
               <p>
-      {/* Article Content */}"
+      {/* Article Content */}"</p>
       <div className="container mx-auto px-4 py-12"></div>"
         <div className="max-w-4xl mx-auto"></div>"
           <div className="bg-white rounded-lg shadow-lg p-8"></div>"
@@ -169,21 +169,21 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
                 <li>Scalable and future-proof solutions</li>
               </ul>
               <h2>Implementation Strategy</h2>
-              <p>
+              <p></p>
               <p></p>
                 Implementing {currentPost.title} requires careful planning and execution. Our team;
                 of experts has developed proven methodologies that ensure successful deployment and;
                 maximum value extraction.
               </p>
               <h2>Real-World Applications</h2>
-              <p>
+              <p></p>
               <p></p>
                 Many leading organizations have already implemented {currentPost.title} with;
                 remarkable results. Case studies show consistent improvements in efficiency, cost;
                 reduction, and competitive advantage.
               </p>
               <h2>Conclusion</h2>
-              <p>
+              <p></p>
               <p></p>
                 {currentPost.title} represents a significant opportunity for organizations looking;
                 to stay ahead in today's competitive landscape. With proper implementation and;
@@ -194,16 +194,16 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
         </div>
       </div>
       {/* Related Posts */}
-      <div className="bg-white py-16">
-        <div className="container mx-auto px-4">)
-          <div className="max-w-6xl mx-auto">)
+      <div className="bg-white py-16"></div>
+        <div className="container mx-auto px-4">)</div>
+          <div className="max-w-6xl mx-auto">)</div>
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Related Articles</h2>)
             <div className="grid grid-cols-1 md: grid-cols-3 gap-8">),
-              {featuredPosts.slice(0, 3).map((post, index) => (
+              {featuredPosts.slice(0, 3).map((post, index) => (</div>
                 <div;
                   key={index}
                   className="bg-gray-50 rounded-lg p-6 hover: shadow-lg transition-shadow",
-                >,
+                >,</div>
       <div className="bg-white py-16"></div>
         <div className="container mx-auto px-4"></div>
           <div className="max-w-6xl mx-auto"></div>

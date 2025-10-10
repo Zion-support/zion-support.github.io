@@ -6,31 +6,26 @@ import { FileText, Scale, Shield, AlertTriangle, CheckCircle, ArrowRight, Globe,
     {
       title: 'Acceptance of Terms',
       icon: CheckCircle,
-      content: 'By accessing and using our website and services, you accept and agree to be bound by the terms and provision of this agreement.'
-    },
+      content: 'By accessing and using our website and services, you accept and agree to be bound by the terms and provision of this agreement.'},
     {
       title: 'Use License',
       icon: Key,
-      content: 'Permission is granted to temporarily download one copy of the materials on our website for personal, non-commercial transitory viewing only.'
-    },
+      content: 'Permission is granted to temporarily download one copy of the materials on our website for personal, non-commercial transitory viewing only.'},
     {
       title: 'Service Availability',
-      icon: Server,
-    },
+      icon: Server},
     {
       title: 'Governing Law',
       icon: Scale,
-      content: 'These terms shall be governed by and construed in accordance with the laws of the State of Delaware, United States.'
-    }
+      content: 'These terms shall be governed by and construed in accordance with the laws of the State of Delaware, United States.'}
   ]
 
   const contactInfo = {
     email: 'legal@ziontechgroup.com',
     phone: '+1 (302) 464-0950',
-    address: '364 E Main St STE 1008, Middletown, DE 19709'
-  }
+    address: '364 E Main St STE 1008, Middletown, DE 19709'}
 
   return (
-    <>
+    <></>
       <Helmet>
         <title>Terms of Service - Zion Tech Group</title>

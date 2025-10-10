@@ -73,10 +73,10 @@ const AIComputerVisionPage: React.FC = () => {
       popular: false,
 const PagePage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
+      <main className="container mx-auto px-4 py-16 pt-24"></main>
+        <section className="text-center mb-16"></section>
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
 // AI Computer Vision
           </h1>
@@ -85,8 +85,8 @@ const PagePage: React.FC = () => {
           </p>
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
 Transform your business with cutting-edge computer vision technology. From object detection to facial recognition,
-            our AI-powered visual intelligence solutions help you see and understand the world like never before.
-          <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
+            our AI-powered visual intelligence solutions help you see and understand the world like never before.</p>
+          <div className="flex flex-col sm: flex-row gap-4 justify-center items-center"></div>
             <a
               href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
 // >
@@ -168,8 +168,7 @@ Most Popular;
                       {feature}`
                   className={`block w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}
   // TOD,
-  O: Add content,
-}
+  O: Add content}
 //                     plan.popular;
 //                       ? 'cyber-button'
                       : 'border-2 border-cyan-400 text-cyan-400,
@@ -192,7 +191,6 @@ Ready to See the Future?"
       </main>
       <Footer /></Footer>
     </div>
-  ),
-}
+  )}
 export default PagePage;
   </p>

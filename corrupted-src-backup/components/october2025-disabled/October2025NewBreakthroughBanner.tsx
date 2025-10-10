@@ -5,10 +5,10 @@ impo, r, t {/* TODO: Fix JSX expression */}
 const October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */}
    }
   return(<div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, p, y-20, p, x-4, relative, overflow-hidd, e, n'>
-      {/* Animated, background, effects */}
-      <div, className='absolute, inse, t-0, opacit, y-30'>
+      {/* Animated, background, effects */}</div>
+      <div, className='absolute, inse, t-0, opacit, y-30'></div>
         <div, className='absolute, to, p-10, lef, t-1, 0, w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e' />
-  return (
+  return (</div>
     <div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, p, y-20, p, x-4, relative, overflow-hidd, e, n'>
       {/* Animated, background, effects */}</div>
       <div, className='absolute, inse, t-0, opacit, y-30'></div>
@@ -18,10 +18,10 @@ const October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */
       <div, className='absolute, inse, t-0, opacit, y-30'></div>
         <div, className='absolute, to, p-10, lef, t-1, 0, w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e' /></div>
         <div, className='absolute, to, p-1/2, righ, t-1, 0, w-9, 6, h-96, b, g-pi, n, k-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e'
-          sty, l, e={{ animationDel, a, y: ', 1, s' }}
+          sty, l, e={{ animationDel, a, y: ', 1, s'}}
          /></div>
         <div, classNam, e = 'absolute, botto, m-10, lef, t-1/3 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e'
-          sty, l, e={{ animationDel, a, y: ', 2, s' }}
+          sty, l, e={{ animationDel, a, y: ', 2, s'}}
          /></div>
       </div>
       <div, classNam, e = 'm, a, x-w-7xl, m, x-auto, relative, z-10'>
@@ -68,13 +68,13 @@ const October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */
                     <Icon, classNam, e = 'w-8 h-8, tex, t-whi, t, e' />
                   </div>
                   <div, className='fl, e, x-1'></div>
-                    <div, className='te, x, t-xs, tex, t-purp, l, e-300, m, b-2, fon, t-semibold, uppercase, tracking-wid, e, r'>
+                    <div, className='te, x, t-xs, tex, t-purp, l, e-300, m, b-2, fon, t-semibold, uppercase, tracking-wid, e, r'></div>
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12'></div>
           {/* TODO: Fix JSX expression */}
               <Link, ke, y = { conte, n, t., i, d  }, to = {`/bl, o, g/${conte, n, t.slug}`}
                 className='group, b, g-gradie, n, t-to-br, fro, m-whi, t, e/10, t, o-whi, t, e/5, backdro, p-bl, u, r-xl, border, border-whi, t, e/20, rounde, d-2x, l, p-8, hove, r: fr, o, m-whi, t, e/20, hove, r:to-whi, t, e/10, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-5, 0, 0'
               ></Link>`
-                <div, className='flex, item, s-start, ga, p-4, m, b-6' > <div, classNam, e = { `bg-gradie, n, t-to-br ${conte, n, t.grad, i, e, n, t }, p-4, rounde, d-xl, shado, w-lg`}
+                <div, className='flex, item, s-start, ga, p-4, m, b-6' ></div> <div, classNam, e = { `bg-gradie, n, t-to-br ${conte, n, t.grad, i, e, n, t }, p-4, rounde, d-xl, shado, w-lg`}
                   ></div>
                     <Icon, classNam, e = 'w-8 h-8, tex, t-whi, t, e' /></Icon>
                   </div>
@@ -139,7 +139,7 @@ const October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */
         <div, classNam, e = 'bg-gradie, n, t-to-r, fro, m-whi, t, e/10, t, o-whi, t, e/5, backdro, p-bl, u, r-xl, border, border-whi, t, e/30, rounde, d-2x, l, p-12, m, b-12, shado, w-2, x, l'></div>
           <div, className='flex, item, s-center, ga, p-4, m, b-6, justif, y-cent, e, r'></div>
             <Target, className='w-1, 0, h-10, tex, t-yell, o, w-3, 0, 0' />
-            <h3, className='te, x, t-3xl, fon, t-bold, tex, t-whi, t, e'>
+            <h3, className='te, x, t-3xl, fon, t-bold, tex, t-whi, t, e'></h3>
             <Target, className='w-1, 0, h-10, tex, t-yell, o, w-3, 0, 0' /></Target>
             <h3, className='te, x, t-3xl, fon, t-bold, tex, t-whi, t, e'></h3>
               Ready, to, Transform Your, Enterprise, AI?
@@ -180,7 +180,7 @@ const October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */
             <div, className='te, x, t-4xl, fon, t-extrabold, tex, t-white, m, b-2'>
               {sta, t, s.totalMarketV, a, l, u, e}
             </div>
-            <div, classNam, e = 'te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m'>
+            <div, classNam, e = 'te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m'></div>
             <div, className='te, x, t-4xl, fon, t-extrabold, tex, t-white, m, b-2'></div>
               {sta, t, s.totalMarketV, a, l, u, e}
             </div>
@@ -192,7 +192,7 @@ const October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */
             <div, className='te, x, t-4xl, fon, t-extrabold, tex, t-gre, e, n-400, m, b-2'>
               {sta, t, s.avgCostReducti, o, n}
             </div>
-            <div, className='te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m'>
+            <div, className='te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m'></div>
             <div, className='te, x, t-4xl, fon, t-extrabold, tex, t-gre, e, n-400, m, b-2'></div>
               {sta, t, s.avgCostReducti, o, n}
             </div>
@@ -204,7 +204,7 @@ const October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */
             <div, className='te, x, t-4xl, fon, t-extrabold, tex, t-yell, o, w-400, m, b-2'>
               {sta, t, s.avgSpeedImproveme, n, t}
             </div>
-            <div, className='te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m'>
+            <div, className='te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m'></div>
             <div, className='te, x, t-4xl, fon, t-extrabold, tex, t-yell, o, w-400, m, b-2'></div>
               {sta, t, s.avgSpeedImproveme, n, t}
             </div>
@@ -216,7 +216,7 @@ const October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */
             <div, className='te, x, t-4xl, fon, t-extrabold, tex, t-bl, u, e-400, m, b-2'>
               {sta, t, s.enterpriseAdopti, o, n}
             </div>
-            <div, className='te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m'>
+            <div, className='te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m'></div>
             <div, className='te, x, t-4xl, fon, t-extrabold, tex, t-bl, u, e-400, m, b-2'></div>
               {sta, t, s.enterpriseAdopti, o, n}
             </div>
@@ -228,7 +228,7 @@ const October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */
             <div, className='te, x, t-4xl, fon, t-extrabold, tex, t-pi, n, k-400, m, b-2'>
               {sta, t, s.customerSatisfacti, o, n}
             </div>
-            <div, className='te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m'>
+            <div, className='te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m'></div>
             <div, className='te, x, t-4xl, fon, t-extrabold, tex, t-pi, n, k-400, m, b-2'></div>
               {sta, t, s.customerSatisfacti, o, n}
             </div>
@@ -240,7 +240,7 @@ const October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */
             <div, className='te, x, t-4xl, fon, t-extrabold, tex, t-purp, l, e-400, m, b-2'>
               {sta, t, s.paybackPeri, o, d}
             </div>
-            <div, className='te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m'>
+            <div, className='te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m'></div>
             <div, className='te, x, t-4xl, fon, t-extrabold, tex, t-purp, l, e-400, m, b-2'></div>
               {sta, t, s.paybackPeri, o, d}
             </div>

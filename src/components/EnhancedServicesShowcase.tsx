@@ -38,12 +38,12 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
           : 'linear-gradient(135deg, rgba(0, 255, 255, 0.1), rgba(255, 0, 255, 0.1))'
       }}
     >
-      {/* Header */}
-      <div className="flex items-start justify-between mb-4">
-        <div className="flex items-center space-x-3">
+      {/* Header */}</div>
+      <div className="flex items-start justify-between mb-4"></div>
+        <div className="flex items-center space-x-3"></div>
           <div className="text-4xl">{service.icon}</div>
-          <div>
-            <div className="flex items-center space-x-2">
+          <div></div>
+            <div className="flex items-center space-x-2"></div>
               <CategoryIcon className="w-5 h-5 text-cyan-400" />
               <span className="text-xs text-cyan-400 font-medium uppercase tracking-wide">
                 {serviceCategories.find(cat => cat.id === service.category)?.name}
@@ -55,7 +55,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
           </div>
         </div>
         <div className="flex space-x-2">
-          {service.popular && (
+          {service.popular && (</div>
             <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs px-2 py-1 rounded-full font-bold flex items-center">
               <Star className="w-3 h-3 mr-1" />
               Popular;
@@ -74,7 +74,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
         {service.description}
       </p>
       {/* Key Features */}
-      <div className="mb-4">
+      <div className="mb-4"></div>
         <h4 className="text-sm font-semibold text-cyan-400 mb-2 flex items-center">
           <CheckCircle className="w-4 h-4 mr-2" />
           Key Features;
@@ -94,13 +94,13 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
         </ul>
       </div>
       {/* Benefits */}
-      <div className="mb-4">
+      <div className="mb-4"></div>
         <h4 className="text-sm font-semibold text-green-400 mb-2 flex items-center">
           <TrendingUp className="w-4 h-4 mr-2" />
           Key Benefits;
   </
         <div className="grid grid-cols-2 gap-2">
-          {service.benefits.slice(0, 2).map((benefit, idx) => (
+          {service.benefits.slice(0, 2).map((benefit, idx) => (</div>
             <div key={idx} className="text-xs text-gray-300 bg-slate-800/50 rounded px-2 py-1">
               {benefit}
             </div>
@@ -108,9 +108,9 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
         </div>
       </div>
       {/* Pricing */}
-      <div className="mb-4 p-3 bg-gradient-to-r from-slate-800/50 to-slate-700/50 rounded-lg">
-        <div className="flex items-center justify-between">
-          <div>
+      <div className="mb-4 p-3 bg-gradient-to-r from-slate-800/50 to-slate-700/50 rounded-lg"></div>
+        <div className="flex items-center justify-between"></div>
+          <div></div>
             <div className="text-lg font-bold text-white">
               {formatPrice(service.pricing)}
             </div>
@@ -120,21 +120,21 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
               </div>
             )}
           </div>
-          <div className="text-right">
+          <div className="text-right"></div>
             <div className="text-xs text-cyan-400 font-medium">Starting Price</div>
             <div className="text-xs text-gray-400">per {service.pricing.period}</div>
           </div>
         </div>
       </div>
       {/* Contact Actions */}
-      <div className="space-y-2">
+      <div className="space-y-2"></div>
         <a
           href={`tel:${contactInfo.phone}`}
           className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover: from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center group">
           <Phone className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
           Call Now,
   </
-        <div className="grid grid-cols-2 gap-2">
+        <div className="grid grid-cols-2 gap-2"></div>
           <a
             href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
             className="bg-slate-800 text-cyan-400 py-2 px-3 rounded-lg font-medium hover: bg-slate-700 transition-all duration-300 flex items-center justify-center text-sm group">
@@ -152,10 +152,10 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
         </div>
       </div>
       {/* Use Cases */}
-      <div className="mt-4 pt-4 border-t border-slate-700">
+      <div className="mt-4 pt-4 border-t border-slate-700"></div>
         <h4 className="text-xs font-semibold text-gray-400 mb-2">Perfect For:</h4>
         <div className="flex flex-wrap gap-1">
-          {service.useCases.slice(0, 2).map((useCase, idx) => (
+          {service.useCases.slice(0, 2).map((useCase, idx) => (</div>
             <span key={idx} className="text-xs bg-slate-700/50 text-gray-300 px-2 py-1 rounded">
               {useCase}
             </span>
@@ -178,10 +178,10 @@ const EnhancedServicesShowcase: React.FC = () => {
   const popularServices = services.filter(service => service.popular);
   const newServices = services.filter(service => service.new);
   return (
-    <section className="py-16 px-4">
+    <section className="py-16 px-4"></section>
       <div className="container mx-auto">
-        {/* Header */}
-        <div className="text-center mb-12">
+        {/* Header */}</div>
+        <div className="text-center mb-12"></div>
           <h2 className="text-4xl md: text-5xl font-bold text-white mb-4 neon-text">
             Our Services,
   </
@@ -189,25 +189,25 @@ const EnhancedServicesShowcase: React.FC = () => {
             Comprehensive AI, IT, and Micro SAAS solutions designed to transform your business operations;
   </
           {/* Contact Info Banner */}
-          <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-lg p-6 mb-8 cyber-card">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
-              <div className="flex items-center justify-center space-x-2">
+          <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-lg p-6 mb-8 cyber-card"></div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center"></div>
+              <div className="flex items-center justify-center space-x-2"></div>
                 <Phone className="w-5 h-5 text-cyan-400" />
-                <div>
+                <div></div>
                   <div className="text-white font-medium">{contactInfo.phone}</div>
                   <div className="text-gray-400 text-sm">Call us anytime</div>
                 </div>
               </div>
-              <div className="flex items-center justify-center space-x-2">
+              <div className="flex items-center justify-center space-x-2"></div>
                 <Mail className="w-5 h-5 text-cyan-400" />
-                <div>
+                <div></div>
                   <div className="text-white font-medium">{contactInfo.email}</div>
                   <div className="text-gray-400 text-sm">Email us</div>
                 </div>
               </div>
-              <div className="flex items-center justify-center space-x-2">
+              <div className="flex items-center justify-center space-x-2"></div>
                 <ExternalLink className="w-5 h-5 text-cyan-400" />
-                <div>
+                <div></div>
                   <div className="text-white font-medium">{contactInfo.website}</div>
                   <div className="text-gray-400 text-sm">Visit our site</div>
                 </div>
@@ -216,7 +216,7 @@ const EnhancedServicesShowcase: React.FC = () => {
           </div>
         </div>
         {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <div className="flex flex-wrap justify-center gap-4 mb-12"></div>
           <button
             onClick={() => setSelectedCategory('all')}
             className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
@@ -236,7 +236,7 @@ const EnhancedServicesShowcase: React.FC = () => {
                   ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
                   : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
               }`}
-            >
+            ></button>
               <span className="text-lg">{category.icon}</span>
               <span>{category.name}</span>
             </button>
@@ -244,23 +244,23 @@ const EnhancedServicesShowcase: React.FC = () => {
         </div>
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {filteredServices.map((service, index) => (
+          {filteredServices.map((service, index) => (</div>
             <ServiceCard key={service.id} service={service} index={index} />
           ))}
         </div>
         {/* Popular Services Section */}
         {selectedCategory === 'all' && (
-          <div className="mb-12">
+          <div className="mb-12"></div>
             <h3 className="text-2xl font-bold text-white mb-6 text-center neon-text">
               Most Popular Services;
   </
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {popularServices.map((service, index) => (
-                <div key={service.id} className="cyber-card p-4 hover:scale-105 transition-all duration-300">
+              {popularServices.map((service, index) => (</div>
+                <div key={service.id} className="cyber-card p-4 hover:scale-105 transition-all duration-300"></div>
                   <div className="text-3xl mb-3 text-center">{service.icon}</div>
                   <h4 className="text-lg font-semibold text-white mb-2 text-center">{service.name}</h4>
                   <p className="text-sm text-gray-300 mb-3 text-center">{service.description}</p>
-                  <div className="text-center">
+                  <div className="text-center"></div>
                     <div className="text-lg font-bold text-cyan-400 mb-2">
                       ${service.pricing.starting.toLocaleString()}/{service.pricing.period === 'month' ? 'mo' : 'yr'}
                     </div>
@@ -276,14 +276,14 @@ const EnhancedServicesShowcase: React.FC = () => {
           </div>
         )}
         {/* CTA Section */}
-        <div className="text-center bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-lg p-8 cyber-card">
+        <div className="text-center bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-lg p-8 cyber-card"></div>
           <h3 className="text-2xl font-bold text-white mb-4 neon-text">
             Ready to Transform Your Business?
           </h3>
           <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
             Get a free consultation and discover how our AI and IT solutions can drive your business forward.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <a
               href={`tel:${contactInfo.phone}`}
               className="cyber-button inline-flex items-center justify-center px-8 py-3">

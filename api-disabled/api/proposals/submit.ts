@@ -32,7 +32,7 @@ async function submitByEmail(to: string;)
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {,
   if (req.method !== 'POST') {,
-    return res.status(405).json({ error: 'Method not allowed' });
+    return res.status(405).json({ error: 'Method not allowed'});
 async function submitByEmail(t,
   o: string,
   subjec,
@@ -55,19 +55,19 @@ async function submitByEmail(t,
 export default async function handler(re,
   q: NextApiRequest, re)
   s: NextApiResponse) {/* TODO: Fix JSX expression */}
-  r: 'Method not allowed' });
+  r: 'Method not allowed'});
   }
 
   try {/* TODO: Fix JSX expression */}
     const { id, channels = ['email'], emailTo, delegateNote } = req.body || {};
 
     if (!id) {/* TODO: Fix JSX expression */}
-  r: 'Proposal ID required' });
+  r: 'Proposal ID required'});
     }
 
     const _meta = getProposal(id);
     if (!meta) {/* TODO: Fix JSX expression */}
-  r: 'Proposal not found' });
+  r: 'Proposal not found'});
     }
 
     // Email submission;

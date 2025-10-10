@@ -68,17 +68,17 @@ $4}
         'White-label options',
         'SLA guarantee'
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <div className="container mx-auto px-4 py-16">
-        {/* Hero Section */}
-        <section className="text-center mb-16">
+        {/* Hero Section */}</div>
+        <section className="text-center mb-16"></section>
           <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
             Smart Analytics;
   </
           <p className="text-xl md:text-2xl text-cyan-400 mb-8 max-w-4xl mx-auto">
             Transform your data into actionable insights with AI-powered analytics that drive real business results
   </
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <a
               href="tel:+13024640950"
               className="bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-cyan-700 transition-colors">
@@ -92,14 +92,14 @@ $4}
           </div>
         </section>
         {/* Features Section */}
-        <section className="mb-16">
+        <section className="mb-16"></section>
           <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center">
             Powerful Analytics Features,
   </
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
-                <div className="flex items-center mb-4">
+            {features.map((feature, index) => (</div>
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20"></div>
+                <div className="flex items-center mb-4"></div>
                   <feature.icon className="w-8 h-8 text-cyan-400 mr-3" />
                   <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
@@ -108,21 +108,21 @@ $4}
         {/* Pricing Section */}
             Simple, Transparent Pricing
           <div className="grid md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+            {pricingPlans.map((plan, index) => (</div>
               <div
                 key={index}
                 className={`bg-white/10 backdrop-blur-sm rounded-lg p-8 border ${
                   plan.popular ? 'border-cyan-500' : 'border-gray-600'
                 } relative`}
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
                     <span className="bg-cyan-500 text-white px-4 py-1 rounded-full text-sm font-medium">
                       Most Popular;
   </
                 )}
                 <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                 <p className="text-gray-300 mb-4">{plan.description}</p>
-                <div className="mb-6">
+                <div className="mb-6"></div>
                   <span className="text-4xl font-bold text-white">{plan.price}</span>
                   <span className="text-gray-400">{plan.period}</span>
                 <ul className="space-y-3 mb-8">
@@ -154,8 +154,7 @@ const SmartAnalyticsPage: React.FC = () => {
       descriptio,
   n: 'Monitor your business performance with live dashboards that update automatically and provide instant insights.',
       benefi,
-  t: 'Make decisions 10x faster'
-    },
+  t: 'Make decisions 10x faster'},
       icon: Brain,
       title: 'AI-Powered Insights',
       description: 'Get intelligent recommendations and predictions based on your data patterns and industry benchmarks.',
@@ -163,11 +162,11 @@ const SmartAnalyticsPage: React.FC = () => {
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const PagePage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return (</section>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
+      <main className="container mx-auto px-4 py-16 pt-24"></main>
+        <section className="text-center mb-16"></section>
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
             Page
   </
@@ -184,8 +183,7 @@ const PagePage: React.FC = () => {
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with data encryption, access controls, and compliance with industry standards.',
-      benefit: '100% data protection'
-    }
+      benefit: '100% data protection'}
   ];
   const pricingPlans = [
       nam,
@@ -214,8 +212,7 @@ const PagePage: React.FC = () => {
                 </ul>
                   className={`w-full block text-center py-3 rounded-lg font-semibold transition-colors ${}
   // TOD,
-  O: Add content,
-}
+  O: Add content}
 //                     plan.popular;
                       ? 'bg-cyan-600 text-white,
   hover:bg-cyan-700'
@@ -224,21 +221,21 @@ const PagePage: React.FC = () => {
                   }`}
                   Get Started;
         {/* CTA Section */}
-          <section className="text-center bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12">
+          <section className="text-center bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12"></section>
           <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Data?
+            Ready to Transform Your Data?</h2>
           <p className="text-xl text-cyan-100 mb-8 max-w-2xl mx-auto">
             Join thousands of businesses that have revolutionized their decision-making with our smart analytics platform.
               className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors"
               Get Free Demo
               className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors" Get Free Demo,
-        {/* Contact Info */}
-        <section className="mt-16 text-center">
-          <div className="bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-cyan-500/20">
+        {/* Contact Info */}</p>
+        <section className="mt-16 text-center"></section>
+          <div className="bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-cyan-500/20"></div>
             <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
-            <div className="grid md: grid-cols-3 gap-6 text-gray-300">
-              <div className="flex items-center justify-center">
+            <div className="grid md: grid-cols-3 gap-6 text-gray-300"></div>
+              <div className="flex items-center justify-center"></div>
                 <Phone className="w-5 h-5 mr-2 text-cyan-400" />
                 <a href="tel:+13024640950" className="hover:text-white transition-colors">
                   +1 (302) 464-0950

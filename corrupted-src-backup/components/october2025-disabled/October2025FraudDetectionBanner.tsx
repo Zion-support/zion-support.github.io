@@ -1,14 +1,14 @@
 const October2025FraudDetectionBanne, r = () => { 
-  return(<div, classNam, e = "relative, b, g-gradie, n, t-to-br, fro, m-r, e, d-9, 0, 0/20, vi, a-purp, l, e-9, 0, 0/20, t, o-bl, u, e-9, 0, 0/20, borde, r-y, borde, r-r, e, d-5, 0, 0/30, overflo, w-hidd, e, n"  > {/* Animated, background, effects */ }
-      <div, className="absolute, inse, t-0, opacit, y-10">
-        <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-r, e, d-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" />
-        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 1, s' }} />
-  return (
+  return(<div, classNam, e = "relative, b, g-gradie, n, t-to-br, fro, m-r, e, d-9, 0, 0/20, vi, a-purp, l, e-9, 0, 0/20, t, o-bl, u, e-9, 0, 0/20, borde, r-y, borde, r-r, e, d-5, 0, 0/30, overflo, w-hidd, e, n"  > {/* Animated, background, effects */ }</div>
+      <div, className="absolute, inse, t-0, opacit, y-10"></div>
+        <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-r, e, d-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" /></div>
+        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 1, s'}} />
+  return (</div>
     <div, classNam, e = "relative, b, g-gradie, n, t-to-br, fro, m-r, e, d-9, 0, 0/20, vi, a-purp, l, e-9, 0, 0/20, t, o-bl, u, e-9, 0, 0/20, borde, r-y, borde, r-r, e, d-5, 0, 0/30, overflo, w-hidd, e, n"  > {/* Animated, background, effects */ }</div>
       <div, className="absolute, inse, t-0, opacit, y-10"></div>
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-r, e, d-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" /></div>
-        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 1, s' }} /></div>
-        <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s' }} />
+        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 1, s'}} /></div>
+        <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s'}} />
       </div>
       <div, classNam, e = "relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, p, y-12">
         {/* Header, Sect, i, o, n */}</div>
@@ -95,12 +95,12 @@ const October2025FraudDetectionBanne, r = () => {
               <d, i, v></d>
                 <div, className="fo, n, t-semibold, tex, t-white, m, b-1">Graph, Intelligenc, e</div>
                 <div, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0">
-const October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */}
-    <div, classNam, e = "relative, b, g-gradie, n, t-to-br, fro, m-r, e, d-9, 0, 0/20, vi, a-purp, l, e-9, 0, 0/20, t, o-bl, u, e-9, 0, 0/20, borde, r-y, borde, r-r, e, d-5, 0, 0/30, overflo, w-hidd, e, n"  > {/* Animated, background, effects */ }"
+const October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */}</div>
+    <div, classNam, e = "relative, b, g-gradie, n, t-to-br, fro, m-r, e, d-9, 0, 0/20, vi, a-purp, l, e-9, 0, 0/20, t, o-bl, u, e-9, 0, 0/20, borde, r-y, borde, r-r, e, d-5, 0, 0/30, overflo, w-hidd, e, n"  > {/* Animated, background, effects */ }"</div>
       <div, className="absolute, inse, t-0, opacit, y-10"></div>"
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-r, e, d-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" /></div>"
-        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 1, s' }} /></div>"
-        <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s' }} /></div>
+        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 1, s'}} /></div>"
+        <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s'}} /></div>
       </div>"
       <div, classNam, e = "relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, p, y-12"></div>
         {/* Header, Sect, i, o, n */}"
@@ -478,24 +478,24 @@ const October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */}
         <div, classNam, e = "mt-10, p, t-8, borde, r-t, borde, r-whi, t, e/10"></div>
           <div, className="flex, fle, x-wrap, item, s-center, justif, y-center, ga, p-6, tex, t-sm, tex, t-gr, a, y-4, 0, 0"></div>
             <div, className="flex, item, s-center, ga, p-2"></div>
-              <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0" />
+              <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0" /></CheckCircle>
               <sp, a, n>Fortune, 100, Proven</sp, a, n>
             </div>
             <div, className="flex, item, s-center, ga, p-2"></div>
-              <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0" />
+              <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0" /></CheckCircle>
               <sp, a, n>127, Countries, Deployed</sp, a, n>
             </div>
             <div, className="flex, item, s-center, ga, p-2"></div>
-              <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0" />
+              <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0" /></CheckCircle>
               <sp, a, n>99.99% Uptime, SL, A</sp, a, n>
             </div>
             <div, className="flex, item, s-center, ga, p-2"></div>
-              <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0" />
+              <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0" /></CheckCircle>
               <sp, a, n>1, 0, 0% Regulatory, Complianc, e</sp, a, n>
             </div>
             <div, className="flex, item, s-center, ga, p-2"></div>
               <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0" />
-        {/* Trust, Indicat, o, r, s */}"
+        {/* Trust, Indicat, o, r, s */}"</CheckCircle>
         <div, classNam, e = "mt-10, p, t-8, borde, r-t, borde, r-whi, t, e/10"></div>"
           <div, className="flex, fle, x-wrap, item, s-center, justif, y-center, ga, p-6, tex, t-sm, tex, t-gr, a, y-4, 0, 0"></div>"
             <div, className="flex, item, s-center, ga, p-2"></div>"

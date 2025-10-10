@@ -47,8 +47,8 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ c
     document.documentElement.setAttribute('data-font-size', size)
   }
   return (
-    <div className="accessibility-enhanced">
-      <div className="accessibility-controls" style={{ position: 'fixed', top: '10px', right: '10px', zIndex: 1000 }}>
+    <div className="accessibility-enhanced"></div>
+      <div className="accessibility-controls" style={{ position: 'fixed', top: '10px', right: '10px', zIndex: 1000 }}></div>
         <button
           onClick={toggleHighContrast}
           className="accessibility-button"
@@ -56,7 +56,7 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ c
         >
           {isHighContrast ? 'Normal Contrast' : 'High Contrast'}
         </button>
-        <div className="font-size-controls">
+        <div className="font-size-controls"></div>
           <button
             onClick={() => changeFontSize('small')}
             className="accessibility-button"

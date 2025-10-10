@@ -44,7 +44,7 @@ const UnifiedPromotionalBanne, r: React.FC<UnifiedPromotionalBannerPro, p, s> = 
         ${classNa, m, e}
       `}
     >
-      {/* Header, Sectio, n */})
+      {/* Header, Sectio, n */})</div>
       <div, classNam, e = 'm, a, x-w-7xl, m, x-au, t, o'>)
         {/* Badge, and, Date */})
         {  (bad, g, e || d, a, t, e) && (
@@ -134,7 +134,7 @@ const UnifiedPromotionalBanne, r: React.FC<UnifiedPromotionalBannerPro, p, s> = 
           </div>
         )}
         {/* CTA, Butto, n */}
-        <div, classNam, e = 'flex, fle, x-wrap, item, s-center, ga, p-4' > <Link, t, o = { ctaL, i, n, k }, className={ `}
+        <div, classNam, e = 'flex, fle, x-wrap, item, s-center, ga, p-4' ></div> <Link, t, o = { ctaL, i, n, k }, className={ `}
               inli, n, e-flex, item, s-center, ga, p-2, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, tex, t-white, b, g-gradie, n, t-to-r ${buttonThem, e, s[the, m, e] } transform, transitio, n-all, duratio, n-300, hove, r: sca, l, e-105, hove, r:shad, o, w-xl;
         <div, classNam, e = 'flex, fle, x-wrap, item, s-center, ga, p-4' ></div> <Link, t, o = { ctaL, i, n, k }, className={ `
               inli, n, e-flex, item, s-center, ga, p-2, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, tex, t-white, b, g-gradie, n, t-to-r ${buttonThem, e, s[the, m, e] } transform, transitio, n-all, duratio, n-300, hove, r: sca, l, e-105, hove, r:shad, o, w-xl
@@ -145,7 +145,7 @@ const UnifiedPromotionalBanne, r: React.FC<UnifiedPromotionalBannerPro, p, s> = 
                      ? 'px-10, p, y-5, tex, t-lg'
                      : 'te, x, t-ba, s, e'
                }
-        <div, classNam, e = 'flex, fle, x-wrap, item, s-center, ga, p-4' > <Link, t, o = { ctaL, i, n, k }, className={/* TODO: Fix JSX expression */}
+        <div, classNam, e = 'flex, fle, x-wrap, item, s-center, ga, p-4' ></div> <Link, t, o = { ctaL, i, n, k }, className={/* TODO: Fix JSX expression */}
               inli, n, e-flex, item, s-center, ga, p-2, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, tex, t-white, b, g-gradie, n, t-to-r ${buttonThem, e, s[the, m, e] } transform, transitio, n-all, duratio, n-300, hove, r: sca, l, e-105, hove, r:shad, o, w-xl;
               ${/* TODO: Fix JSX expression */}
                }`

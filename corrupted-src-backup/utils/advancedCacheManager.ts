@@ -5,7 +5,7 @@
 interface CacheConfig {
   maxAge: number; // milliseconds
   maxSize: number; // maximum number of entries
-  strategy: 'LRU' | 'LFU' | 'FIFO',
+  strategy: 'LRU', | 'LFU' | 'FIFO',
 interface CacheConfig {/* TODO: Fix JSX expression */}
 }
 

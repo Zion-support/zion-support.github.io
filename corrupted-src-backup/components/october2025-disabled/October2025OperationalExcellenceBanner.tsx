@@ -2,11 +2,11 @@ impo, r, t {/* TODO: Fix JSX expression */}
 } fr, o, m 'luci, d, e-rea, c, t';
 const October2025OperationalExcellenceBanne, r = () => { 
   return(<div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-900, t, o-cy, a, n-900, p, y-20, p, x-6, rounde, d-3xl, m, b-12, shado, w-2, x, l' > {' ' }
-      {/* Animated, background, elements */}
-      <div, className='absolute, inse, t-0, overflo, w-hidd, e, n'>
-        <div, className='absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-emera, l, d-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e' />
+      {/* Animated, background, elements */}</div>
+      <div, className='absolute, inse, t-0, overflo, w-hidd, e, n'></div>
+        <div, className='absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-emera, l, d-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e' /></div>
         <div, className='absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-te, a, l-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0' />
-  return (
+  return (</div>
     <div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-900, t, o-cy, a, n-900, p, y-20, p, x-6, rounde, d-3xl, m, b-12, shado, w-2, x, l' > {' ' }
       {/* Animated, background, elements */}</div>
       <div, className='absolute, inse, t-0, overflo, w-hidd, e, n'></div>
@@ -22,7 +22,7 @@ const October2025OperationalExcellenceBanne, r = () => {
             <span, className='te, x, t-emera, l, d-200, fon, t-bold, tex, t-lg, uppercase, tracking-wid, e, r'>
 const October2025OperationalExcellenceBanne, r = () => {/* TODO: Fix JSX expression */}
     <div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-900, t, o-cy, a, n-900, p, y-20, p, x-6, rounde, d-3xl, m, b-12, shado, w-2, x, l' > {' ' }
-      {/* Animated, background, elements */}
+      {/* Animated, background, elements */}</div>
       <div, className='absolute, inse, t-0, overflo, w-hidd, e, n'></div>
         <div, className='absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-emera, l, d-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e' /></div>
         <div, className='absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-te, a, l-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0' /></div>
@@ -43,7 +43,7 @@ const October2025OperationalExcellenceBanne, r = () => {/* TODO: Fix JSX express
           </h2>
           <p, className='te, x, t-2xl, tex, t-te, a, l-200, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d'>
             Discover, breakthrough, AI innovations, delivering, unprecedented;)
-            efficien, c, y: <span, className='te, x, t-emera, l, d-300, fon, t-semi, b, o, l, d'>)
+            efficien, c, y:</p> <span, className='te, x, t-emera, l, d-300, fon, t-semi, b, o, l, d'>)
               {' '})
             Discover, breakthrough, AI innovations, delivering, unprecedented
             efficien, c, y:</p> <span, className='te, x, t-emera, l, d-300, fon, t-semi, b, o, l, d'>
@@ -75,7 +75,7 @@ const October2025OperationalExcellenceBanne, r = () => {/* TODO: Fix JSX express
             <div, className='te, x, t-5xl, fon, t-extrabold, tex, t-emera, l, d-300, m, b-2'>
               $24.4B;
             </div>
-            <div, className='te, x, t-emera, l, d-200, fon, t-semibold, tex, t-sm, uppercase, tracking-wi, d, e'>
+            <div, className='te, x, t-emera, l, d-200, fon, t-semibold, tex, t-sm, uppercase, tracking-wi, d, e'></div>
             <div, className='te, x, t-5xl, fon, t-extrabold, tex, t-emera, l, d-300, m, b-2'></div>
               $24.4B;
             </div>
@@ -87,7 +87,7 @@ const October2025OperationalExcellenceBanne, r = () => {/* TODO: Fix JSX express
             <div, className='te, x, t-5xl, fon, t-extrabold, tex, t-te, a, l-300, m, b-2'>
               99.2%
             </div>
-            <div, className='te, x, t-te, a, l-200, fon, t-semibold, tex, t-sm, uppercase, tracking-wi, d, e'>
+            <div, className='te, x, t-te, a, l-200, fon, t-semibold, tex, t-sm, uppercase, tracking-wi, d, e'></div>
             <div, className='te, x, t-5xl, fon, t-extrabold, tex, t-te, a, l-300, m, b-2'></div>
               99.2%
             </div>
@@ -99,7 +99,7 @@ const October2025OperationalExcellenceBanne, r = () => {/* TODO: Fix JSX express
             <div, className='te, x, t-5xl, fon, t-extrabold, tex, t-cy, a, n-300, m, b-2'>
               92%
             </div>
-            <div, className='te, x, t-cy, a, n-200, fon, t-semibold, tex, t-sm, uppercase, tracking-wi, d, e'>
+            <div, className='te, x, t-cy, a, n-200, fon, t-semibold, tex, t-sm, uppercase, tracking-wi, d, e'></div>
             <div, className='te, x, t-5xl, fon, t-extrabold, tex, t-cy, a, n-300, m, b-2'></div>
               92%
             </div>
@@ -111,7 +111,7 @@ const October2025OperationalExcellenceBanne, r = () => {/* TODO: Fix JSX express
             <div, className='te, x, t-5xl, fon, t-extrabold, tex, t-bl, u, e-300, m, b-2'>
               5, 6, 0%
             </div>
-            <div, className='te, x, t-bl, u, e-200, fon, t-semibold, tex, t-sm, uppercase, tracking-wi, d, e'>
+            <div, className='te, x, t-bl, u, e-200, fon, t-semibold, tex, t-sm, uppercase, tracking-wi, d, e'></div>
             <div, className='te, x, t-5xl, fon, t-extrabold, tex, t-bl, u, e-300, m, b-2'></div>
               5, 6, 0%
             </div>

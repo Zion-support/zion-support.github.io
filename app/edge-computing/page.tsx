@@ -47,23 +47,19 @@ const services = [
     {
     icon: '⚡',
       title: 'Edge Analytics',
-      description: 'Real-time data processing and analytics at the edge'
-  },
+      description: 'Real-time data processing and analytics at the edge'},
     {
     icon: '🌐',
       title: 'Edge Networking',
-      description: 'Optimized networking solutions for edge deployments'
-  },
+      description: 'Optimized networking solutions for edge deployments'},
     {
     icon: '🔒',
       title: 'Edge Security',
-      description: 'Comprehensive security solutions for edge environments'
-  },
+      description: 'Comprehensive security solutions for edge environments'},
     {
     icon: '📱',
       title: 'Mobile Edge',
-      description: 'Mobile edge computing for 5G and mobile applications'
-  }
+      description: 'Mobile edge computing for 5G and mobile applications'}
     }
   ]
 const benefits = [
@@ -82,33 +78,27 @@ const useCases = [
     {
     title: 'Autonomous Vehicles',
       description: 'Real-time decision making for self-driving cars',
-      icon: '🚗'
-  },
+      icon: '🚗'},
     {
     title: 'Smart Cities',
       description: 'IoT sensors and real-time city management',
-      icon: '🏙️'
-  },
+      icon: '🏙️'},
     {
     title: 'Industrial IoT',
       description: 'Manufacturing automation and monitoring',
-      icon: '🏭'
-  },
+      icon: '🏭'},
     {
     title: 'AR/VR Applications',
       description: 'Immersive experiences with low latency',
-      icon: '🥽'
-  },
+      icon: '🥽'},
     {
     title: 'Healthcare',
       description: 'Real-time patient monitoring and diagnostics',
-      icon: '🏥'
-  },
+      icon: '🏥'},
     {
     title: 'Gaming',
       description: 'Cloud gaming with minimal latency',
-      icon: '🎮'
-  }
+      icon: '🎮'}
     }
   ]
 return (
@@ -120,19 +110,19 @@ return (
       </Helmet>
       <Navigation>
       {/* Hero Section */}
-      <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+      <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
         </section>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" /></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s'}} /></div>
         <div className="relative max-w-7xl mx-auto text-center"></div>
           <h1>
-            Edge Computing;
+            Edge Computing;</h1>
             <span>
               Solutions
             </span>
@@ -143,7 +133,7 @@ return (
           </p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             <button>
-              Get Started Today
+              Get Started Today</button>
               <ArrowRight>
             </button>
             <button>
@@ -153,9 +143,9 @@ return (
         </div>
       </section>
       {/* Features Section */}
-      <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+      <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
@@ -193,9 +183,9 @@ return (
         </div>
       </section>
       {/* Services Section */}
-      <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+      <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
@@ -222,9 +212,9 @@ return (
         </div>
       </section>
       {/* Use Cases Section */}
-      <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+      <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
@@ -251,9 +241,9 @@ return (
         </div>
       </section>
       {/* Benefits Section */}
-      <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+      <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
@@ -270,7 +260,7 @@ return (
             {benefits.map((benefit, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center"></div>
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center"></div>
-                  <CheckCircle />
+                  <CheckCircle /></CheckCircle>
                 <h3 className="text-lg font-semibold text-white">{benefit}</h3>
               </div>
             ))}
@@ -278,9 +268,9 @@ return (
         </div>
       </section>
       {/* CTA Section */}
-      <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+      <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
@@ -302,8 +292,7 @@ return (
         </div>
       </section>
       <Footer />
-  ),
-};
+  )};
 
 export default EdgeComputingPage;
 

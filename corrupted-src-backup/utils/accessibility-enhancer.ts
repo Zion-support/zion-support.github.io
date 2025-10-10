@@ -270,7 +270,7 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
         img.alt = this.generateAltText(img);
         this.addIssue({)
           type: 'error')
-          element: img,)
+          element: img)
           message: 'Image missing alt text'),
           fix: 'Add descriptive alt text'),
           severity: 'high')});

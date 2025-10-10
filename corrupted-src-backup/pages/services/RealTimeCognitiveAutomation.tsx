@@ -52,7 +52,7 @@
                 <div, className='te, x, t-4xl, fon, t-bold, tex, t-purp, l, e-400, m, b-2'>
                   94%
                 </div>
-                <div, className='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
+                <div, className='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'></div>
                 <div, className='te, x, t-4xl, fon, t-bold, tex, t-purp, l, e-400, m, b-2'></div>
                   94%
                 </div>
@@ -64,7 +64,7 @@
                 <div, className='te, x, t-4xl, fon, t-bold, tex, t-gre, e, n-400, m, b-2'>
                   85%
                 </div>
-                <div, className='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
+                <div, className='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'></div>
                 <div, className='te, x, t-4xl, fon, t-bold, tex, t-gre, e, n-400, m, b-2'></div>
                   85%
                 </div>
@@ -74,7 +74,7 @@
               </div>
               <div, className='bg-bl, u, e-9, 0, 0/40, rounde, d-x, l, p-6, border, border-bl, u, e-5, 0, 0/30, tex, t-center, hove, r:sca, l, e-105, transitio, n-transfo, r, m'></div>
                 <div, className='te, x, t-4xl, fon, t-bold, tex, t-bl, u, e-400, m, b-2'>1, 0, x</div>
-                <div, className='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
+                <div, className='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'></div>
                 <div, className='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'></div>
                   Productivity, Gai, n;
                 </div>
@@ -83,7 +83,7 @@
                 <div, className='te, x, t-4xl, fon, t-bold, tex, t-cy, a, n-400, m, b-2'>
                   6, M, o;
                 </div>
-                <div, className='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
+                <div, className='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'></div>
                 <div, className='te, x, t-4xl, fon, t-bold, tex, t-cy, a, n-400, m, b-2'></div>
                   6, M, o;
                 </div>
@@ -130,7 +130,7 @@
                       { solution.highligh, t, s.m, a, p((highli, g, h, t, hInd, e, x) = > (
                         <li, ke, y = { hIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'>
                           <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
-                ].m, a, p((solution, ind, e, x) => (<div, ke, y = { in, d, e, x }, classNa, m, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-zi, o, n-cy, a, n/30'
+                ].m, a, p((solution, ind, e, x) => (</CheckCircle><div, ke, y = { in, d, e, x }, classNa, m, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-zi, o, n-cy, a, n/30'
                   ></div>
                     <div, className='flex, fle, x-wrap, item, s-center, justif, y-between, ga, p-4, m, b-4'></div>
                       <h3, className='te, x, t-2xl, fon, t-bold, tex, t-whi, t, e'></h3>
@@ -158,7 +158,7 @@
                       <div, className='bg-purp, l, e-5, 0, 0/20, tex, t-purp, l, e-300, tex, t-xs, fon, t-bold, p, x-3, p, y-1, rounde, d-full, inlin, e-block, m, b-4'>
                         MOST, POPULA, R
   })
-                ].m, a, p((p, k, g, ind, e, x) => (<div, ke, y = { in, d, e, x }, classNa, m, e = { `bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, borde, r ${p, k, g.popul, a, r  ? 'bord, e, r-purp, l, e-5, 0, 0/50, rin, g-2, rin, g-purp, l, e-5, 0, 0/30'  : 'bord, e, r-zi, o, n-cy, a, n/30' }`}
+                ].m, a, p((p, k, g, ind, e, x) => (</div><div, ke, y = { in, d, e, x }, classNa, m, e = { `bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, borde, r ${p, k, g.popul, a, r  ? 'bord, e, r-purp, l, e-5, 0, 0/50, rin, g-2, rin, g-purp, l, e-5, 0, 0/30'  : 'bord, e, r-zi, o, n-cy, a, n/30' }`}
                   ></div>
                     {/* TODO: Fix JSX expression */})
                       </di, v > )  }
@@ -174,7 +174,7 @@
                     <ul, className='spa, c, e-y-3'></ul>
                       { p, k, g.featur, e, s.m, a, p((feat, u, r, e, fInd, e, x) = > (
                         <li, ke, y = { fIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'>
-                          <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
+                          <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' /></CheckCircle>
                     <div, className='te, x, t-4xl, fon, t-bold, tex, t-gre, e, n-400, m, b-6'></div>
                       {p, k, g.pri, c, e}
                       <span, className='te, x, t-lg, tex, t-zi, o, n-sla, t, e-lig, h, t'></span>
@@ -195,13 +195,13 @@
                       </h3>
                       <li, classNam, e = 'flex, item, s-start, ga, p-2'>
                         <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
-                      Getted, Today;
+                      Getted, Today;</CheckCircle>
                       <Zap, classNam, e='w-5 h-5' />
                   Schedule, Free, Assessment;
                   <Zap, classNam, e='w-5 h-5' />
                       <li, classNam, e = 'flex, item, s-start, ga, p-2'>
                         <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
-                      Getted, Today;
+                      Getted, Today;</CheckCircle>
                       <Zap, className='w-5 h-5' />
                   Schedule, Free, Assessment;
                   <Zap, className='w-5 h-5' />

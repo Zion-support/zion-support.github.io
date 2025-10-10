@@ -16,8 +16,7 @@ export class AdvancedDataVisualization {
 
   public createChart(id: string)
     data: ChartData)
-    type: ChartType = this.config.defaultChartType,
-  ): StoredChart {,
+    type: ChartType = this.config.defaultChartType): StoredChart {,
     const chart: StoredChart = {,
       id;
       type,
@@ -38,7 +37,7 @@ export class AdvancedDataVisualization {/* TODO: Fix JSX expression */}
     dat,
   a: ChartData,
     typ,
-  e: ChartType = this.config.defaultChartType,)
+  e: ChartType = this.config.defaultChartType)
   ): StoredChart {/* TODO: Fix JSX expression */}
       },
       createdA,
@@ -73,11 +72,11 @@ export class AdvancedDataVisualization {/* TODO: Fix JSX expression */}
   public getAllCharts(): StoredChart[] {/* TODO: Fix JSX expression */}
   }
 
-  public exportChart(id: string, format: 'json' | 'csv' = 'json'): string {,
+  public exportChart(id: string, format: 'json', | 'csv' = 'json'): string {,
     const _chart = this.charts.get(id);
   public exportChart(i,
   d: string, forma)
-  t: 'json' | 'csv' = 'json'): string {/* TODO: Fix JSX expression */}
+  t: 'json', | 'csv' = 'json'): string {/* TODO: Fix JSX expression */}
     if (!chart) throw new Error(`Chart with id ${id} not found`);
 
     if (format === 'json') {/* TODO: Fix JSX expression */}
@@ -85,7 +84,7 @@ export class AdvancedDataVisualization {/* TODO: Fix JSX expression */}
     }
   }
 
-  public importChart(data: string, format: 'json' | 'csv' = 'json'): StoredChart {
+  public importChart(data: string, format: 'json', | 'csv' = 'json'): StoredChart {
     ,
     if (format === 'json') {,
       const _chart = JSON.parse(data) as StoredChart;
@@ -95,7 +94,7 @@ export class AdvancedDataVisualization {/* TODO: Fix JSX expression */}
       //       const chartData = this.parseCSV(data);
   public importChart(dat,
   a: string, forma)
-  t: 'json' | 'csv' = 'json'): StoredChart {/* TODO: Fix JSX expression */}
+  t: 'json', | 'csv' = 'json'): StoredChart {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}`
       const _chart = this.createChart(`imported-${Date.now()}`, chartData, 'line');
       return chart;
@@ -166,8 +165,7 @@ export class AdvancedDataVisualization {/* TODO: Fix JSX expression */}
     pointCount: number
     xRange: { min: number, max: number }
     yRange: { min: number, max: number }
-    averageY: number,
-  } | null {
+    averageY: number} | null {
     const _chart = this.charts.get(id);
     if (!chart) return null;
 
@@ -192,8 +190,7 @@ export class AdvancedDataVisualization {/* TODO: Fix JSX expression */}
   e: {/* TODO: Fix JSX expression */}
   x: number }
     average,
-  Y: number,
-  } | null {/* TODO: Fix JSX expression */}
+  Y: number} | null {/* TODO: Fix JSX expression */}
       },
       yRang,
   e: {/* TODO: Fix JSX expression */}

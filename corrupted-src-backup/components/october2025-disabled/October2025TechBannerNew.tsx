@@ -84,7 +84,7 @@ const October2025TechBannerNe, w = () => {/* TODO: Fix JSX expression */}
                   <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-purp, l, e-300, transitio, n-colo, r, s">
             ></moti>
               <Link, t, o={`/bl, o, g/${artic, l, e.slug}`}></Link>"
-                <div, className="relative, b, g-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6 h-full, border, border-whi, t, e/20, hove, r: bord, e, r-whi, t, e/40, transitio, n-all, duratio, n-3, 0, 0"> {/* Highlight, Ba, d, g, e */}`
+                <div, className="relative, b, g-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6 h-full, border, border-whi, t, e/20, hove, r: bord, e, r-whi, t, e/40, transitio, n-all, duratio, n-3, 0, 0"> {/* Highlight, Ba, d, g, e */}`</div>
                   <div, classNam, e = {`absolute, to, p-4, righ, t-4, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-bold, tex, t-white, b, g-gradie, n, t-to-r ${artic, l, e.col, o, r}`}></div>
                     {artic, l, e.highlig, h, t}
                   </d, i, v  > {/* Ic, o, n */}`
@@ -129,7 +129,7 @@ const October2025TechBannerNe, w = () => {/* TODO: Fix JSX expression */}
             </Li, n, k>
           </div>
           <p, className="mt-6, tex, t-purp, l, e-300, tex, t-sm">
-            💡 <stro, n, g>Jo, i, n , 1, 0,0, 0, 0+ tech, leader, s</stro, n, g> staying, ahead, with our, insight, s;
+            💡</p> <stro, n, g>Jo, i, n , 1, 0,0, 0, 0+ tech, leader, s</stro, n, g> staying, ahead, with our, insight, s;
             💡</p> <stro, n, g>Jo, i, n , 1, 0,0, 0, 0+ tech, leader, s</stro, n, g> staying, ahead, with our, insight, s;
   </
         </div>

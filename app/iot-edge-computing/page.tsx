@@ -6,23 +6,19 @@ const features = [
     {
     icon: Brain,
       title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-  },
+      description: 'Advanced AI technology to transform your business operations and improve efficiency'},
     {
     icon: Zap,
       title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-  },
+      description: 'Lightning-fast processing and real-time analytics for optimal results'},
     {
     icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-  },
+      description: 'Bank-level security with encryption and compliance standards'},
     {
     icon: Globe,
       title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
-  }
+      description: 'Worldwide deployment and support for international businesses'}
     }
   ]
 const benefits = [
@@ -47,9 +43,9 @@ return (
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
       {/* Hero Section */}
-      <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+      <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
@@ -69,9 +65,9 @@ return (
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+      <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
@@ -85,9 +81,9 @@ return (
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+      <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
@@ -97,7 +93,6 @@ return (
         </div>
       </section>
     </div>
-  ),
-};
+  )};
 
 export default PagePage;

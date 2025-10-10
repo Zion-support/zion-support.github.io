@@ -7,17 +7,17 @@ const Status: React.FC = () => {
     return (
     <div>Coming Soon</div>
   )
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation />
-      <main className="pt-20">
-        <section className="container mx-auto px-4 py-16 text-center">
+      <main className="pt-20"></main>
+        <section className="container mx-auto px-4 py-16 text-center"></section>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
 // Status;
   </
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
 // System status and service availability
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <Link
               to="/contact" className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg"
 // >

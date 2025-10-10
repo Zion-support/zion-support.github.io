@@ -94,8 +94,7 @@ export async function simulateAction<T = any>(connectio,
   if (Math.random() < 0.1) {/* TODO: Fix JSX expression */}`
     log.message = `Action ${action} faile,`
   d: Simulated error`
-    throw new Error(log.message),
-  }
+    throw new Error(log.message)}
 
   // Simulate occasional warnings;
   if (Math.random() < 0.2) {
@@ -162,7 +161,7 @@ export const ats = {/* TODO: Fix JSX expression */}
     return simulateAction(connection, 'ats.pushApplicant', { applicant });
   },
 
-export async function testConnection(connection: ProviderConnection,)): Promise<boolean> {
+export async function testConnection(connection: ProviderConnection)): Promise<boolean> {
     ,
   try {,
     await simulateAction(connection, 'test_connection');
@@ -172,7 +171,7 @@ export async function testConnection(connection: ProviderConnection,)): Promise<
   }
 }
 
-export async function syncData(connection: ProviderConnection,)
+export async function syncData(connection: ProviderConnection)
 ): Promise<SyncLogEntry[]> {,
   const logs: SyncLogEntry[] = [],
 ,
@@ -182,14 +181,14 @@ export async function syncData(connection: ProviderConnection,)
 export const crm = {
   async syncContact(connection: ProviderConnection, contact: Record<string, any>) {
 export async function testConnection(connectio,
-  n: ProviderConnection,)
+  n: ProviderConnection)
 ): Promise<boolean> {/* TODO: Fix JSX expression */}
   } catch {/* TODO: Fix JSX expression */}
   }
 }
 
 export async function syncData(connectio,
-  n: ProviderConnection,)
+  n: ProviderConnection)
 ): Promise<SyncLogEntry[]> {/* TODO: Fix JSX expression */}
     return simulateAction(connection, 'crm.syncContact', { contact });
   },
@@ -254,7 +253,7 @@ export async function syncData(connectio,
     logs.push({)
       id: Math.random().toString(36).substr(2, 9),
       connectionId: connection.id,
-      action: 'sync_data'
+      action: 'sync_data',
       status: 'error',
       message: error instanceof Error ? error.message : 'Unknown error',
       timestamp: new Date()});

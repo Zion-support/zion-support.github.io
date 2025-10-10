@@ -31,8 +31,7 @@ export type ZionEmergingTechService2029 =
     mobile: string;
     email: string
     address: string
-    website: string,
-  }
+    website: string}
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -44,8 +43,7 @@ export type ZionEmergingTechService2029 =
     professional: number;
     enterprise: number
     currency: string
-    period: string,
-  }
+    period: string}
 }
 export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [
   // 1. Space Technology & Satellite Management Platform,
@@ -182,7 +180,7 @@ export const,
       'Contribute to space exploration advancement'
     ],
     popular: true,
-    icon: ''
+    icon: '',
     color: 'from-purple-600 to-indigo-700',
     textColor: 'text-purple-200',
     link: 'https://ziontechgroup.com/services/space-technology-satellite-management',
@@ -198,17 +196,17 @@ export const,
     useCases: ['Satellite operations', 'Space mission planning', 'Earth observation', 'Space communications', 'Space tourism'],
     roi: 'Average customer achieves 300% ROI within 18 months through reduced operational costs and new revenue streams.',
     competitors: ['SpaceX Starlink', 'OneWeb', 'Planet Labs', 'Maxar Technologies', 'Lockheed Martin'],
-    marketSize: '$469.8B space economy'
-    growthRate: '8.5% annual growth'
-    variant: 'space-tech-futuristic'
+    marketSize: '$469.8B space economy',
+    growthRate: '8.5% annual growth',
+    variant: 'space-tech-futuristic',
     contactInfo: unknown,
-      mobile: '+1 302 464 0950'
+      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
     realImplementation: true;
-    implementationDetails: 'Production-ready space technology platform with real satellite integrations and AI-powered optimization.'
-    launchDate: '2024-01-01'
+    implementationDetails: 'Production-ready space technology platform with real satellite integrations and AI-powered optimization.',
+    launchDate: '2024-01-01',
     customers: 34;
     rating: 4.9;
     reviews: 23;
@@ -278,8 +276,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
-    },
+  s://ziontechgroup.com'},
     realImplementatio,
   n: true,
     implementationDetail,
@@ -303,8 +300,7 @@ export const,
       currenc,
   y: 'USD',
       perio,
-  d: 'month'
-    }
+  d: 'month'}
   },
   // 2. Biotechnology & Synthetic Biology Platform,
   id: 'biotechnology-synthetic-biology',
@@ -339,7 +335,7 @@ export const,
       'Create sustainable industrial processes'
     ],
     popular: true,
-    icon: ''
+    icon: '',
     color: 'from-green-600 to-teal-700',
     textColor: 'text-green-200',
     link: 'https://ziontechgroup.com/services/biotechnology-synthetic-biology',
@@ -355,17 +351,17 @@ export const,
     useCases: ['Drug discovery', 'Agricultural biotechnology', 'Industrial biotechnology', 'Medical diagnostics', 'Biofuels production'],
     roi: 'Average customer achieves 400% ROI within 24 months through accelerated development and reduced costs.',
     competitors: ['Ginkgo Bioworks', 'Twist Bioscience', 'Zymergen', 'Benchling', 'DNA Script'],
-    marketSize: '$83.9B synthetic biology market'
-    growthRate: '26.2% annual growth'
-    variant: 'biotech-synthetic-biology'
+    marketSize: '$83.9B synthetic biology market',
+    growthRate: '26.2% annual growth',
+    variant: 'biotech-synthetic-biology',
     contactInfo: unknown,
-      mobile: '+1 302 464 0950'
+      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
     realImplementation: true;
-    implementationDetails: 'Production-ready biotechnology platform with real laboratory integrations and AI-powered design.'
-    launchDate: '2024-02-01'
+    implementationDetails: 'Production-ready biotechnology platform with real laboratory integrations and AI-powered design.',
+    launchDate: '2024-02-01',
     customers: 67;
     rating: 4.8;
     reviews: 89;
@@ -435,8 +431,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
-    },
+  s://ziontechgroup.com'},
     realImplementatio,
   n: true,
     implementationDetail,
@@ -460,8 +455,7 @@ export const,
       currenc,
   y: 'USD',
       perio,
-  d: 'month'
-    }
+  d: 'month'}
   },
   // 3. Renewable Energy & Smart Grid Optimization,
   id: 'renewable-energy-smart-grid',
@@ -496,7 +490,7 @@ export const,
       'Accelerate clean energy transition'
     ],
     popular: true,
-    icon: ''
+    icon: '',
     color: 'from-yellow-500 to-orange-600',
     textColor: 'text-yellow-200',
     link: 'https://ziontechgroup.com/services/renewable-energy-smart-grid',
@@ -512,17 +506,17 @@ export const,
     useCases: ['Solar energy optimization', 'Wind farm management', 'Grid load balancing', 'Energy storage', 'Demand response'],
     roi: 'Average customer achieves 250% ROI within 18 months through improved energy efficiency and reduced costs.',
     competitors: ['GE Digital Energy', 'Siemens Grid Software', 'Schneider Electric', 'ABB', 'Honeywell'],
-    marketSize: '$1.3T renewable energy market'
-    growthRate: '8.4% annual growth'
-    variant: 'renewable-energy-ai'
+    marketSize: '$1.3T renewable energy market',
+    growthRate: '8.4% annual growth',
+    variant: 'renewable-energy-ai',
     contactInfo: unknown,
-      mobile: '+1 302 464 0950'
+      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
     realImplementation: true;
-    implementationDetails: 'Production-ready renewable energy platform with real grid integrations and AI-powered optimization.'
-    launchDate: '2024-01-15'
+    implementationDetails: 'Production-ready renewable energy platform with real grid integrations and AI-powered optimization.',
+    launchDate: '2024-01-15',
     customers: 123;
     rating: 4.8;
     reviews: 234;
@@ -592,8 +586,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
-    },
+  s://ziontechgroup.com'},
     realImplementatio,
   n: true,
     implementationDetail,
@@ -617,8 +610,7 @@ export const,
       currenc,
   y: 'USD',
       perio,
-  d: 'month'
-    }
+  d: 'month'}
   },
   // 4. Advanced Robotics & Automation Platform,
   id: 'advanced-robotics-automation',
@@ -653,7 +645,7 @@ export const,
       'Enable 24/7 autonomous operations'
     ],
     popular: true,
-    icon: ''
+    icon: '',
     color: 'from-gray-600 to-slate-700',
     textColor: 'text-gray-200',
     link: 'https://ziontechgroup.com/services/advanced-robotics-automation',
@@ -669,17 +661,17 @@ export const,
     useCases: ['Manufacturing automation', 'Warehouse automation', 'Healthcare robotics', 'Construction automation', 'Agricultural robotics'],
     roi: 'Average customer achieves 300% ROI within 18 months through improved efficiency and reduced costs.',
     competitors: ['ABB Robotics', 'KUKA', 'FANUC', 'Yaskawa', 'Universal Robots'],
-    marketSize: '$43.8B industrial robotics market'
-    growthRate: '12.5% annual growth'
-    variant: 'robotics-automation-ai'
+    marketSize: '$43.8B industrial robotics market',
+    growthRate: '12.5% annual growth',
+    variant: 'robotics-automation-ai',
     contactInfo: unknown,
-      mobile: '+1 302 464 0950'
+      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
     realImplementation: true;
-    implementationDetails: 'Production-ready robotics platform with real robot integrations and AI-powered automation.'
-    launchDate: '2024-02-15'
+    implementationDetails: 'Production-ready robotics platform with real robot integrations and AI-powered automation.',
+    launchDate: '2024-02-15',
     customers: 89;
     rating: 4.9;
     reviews: 156;
@@ -749,8 +741,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
-    },
+  s://ziontechgroup.com'},
     realImplementatio,
   n: true,
     implementationDetail,
@@ -774,8 +765,7 @@ export const,
       currenc,
   y: 'USD',
       perio,
-  d: 'month'
-    }
+  d: 'month'}
   },
   // 5. Quantum Internet & Secure Communications,
   id: 'quantum-internet-secure-communications',
@@ -810,7 +800,7 @@ export const,
       'Enable quantum internet applications'
     ],
     popular: true,
-    icon: ''
+    icon: '',
     color: 'from-blue-600 to-cyan-700',
     textColor: 'text-blue-200',
     link: 'https://ziontechgroup.com/services/quantum-internet-secure-communications',
@@ -826,17 +816,17 @@ export const,
     useCases: ['Secure government communications', 'Financial transactions', 'Healthcare data protection', 'Critical infrastructure security', 'Quantum research'],
     roi: 'Average customer achieves 400% ROI within 24 months through enhanced security and new quantum capabilities.',
     competitors: ['ID Quantique', 'Toshiba Quantum', 'Quantum Xchange', 'Qrypt', 'Quantum Machines'],
-    marketSize: '$3.9B quantum communications market'
-    growthRate: '35.2% annual growth'
-    variant: 'quantum-internet-futuristic'
+    marketSize: '$3.9B quantum communications market',
+    growthRate: '35.2% annual growth',
+    variant: 'quantum-internet-futuristic',
     contactInfo: unknown,
-      mobile: '+1 302 464 0950'
+      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
     realImplementation: true;
-    implementationDetails: 'Production-ready quantum internet platform with real quantum hardware and network integrations.'
-    launchDate: '2024-03-01'
+    implementationDetails: 'Production-ready quantum internet platform with real quantum hardware and network integrations.',
+    launchDate: '2024-03-01',
     customers: 23;
     rating: 4.9;
     reviews: 34;
@@ -906,8 +896,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
-    },
+  s://ziontechgroup.com'},
     realImplementatio,
   n: true,
     implementationDetail,
@@ -931,8 +920,7 @@ export const,
       currenc,
   y: 'USD',
       perio,
-  d: 'month'
-    }
+  d: 'month'}
   },
   // 6. Advanced Materials & Nanotechnology Platform,
   id: 'advanced-materials-nanotechnology',
@@ -967,7 +955,7 @@ export const,
       'Create sustainable material solutions'
     ],
     popular: true,
-    icon: ''
+    icon: '',
     color: 'from-purple-600 to-pink-700',
     textColor: 'text-purple-200',
     link: 'https://ziontechgroup.com/services/advanced-materials-nanotechnology',
@@ -983,17 +971,17 @@ export const,
     useCases: ['Aerospace materials', 'Electronics materials', 'Healthcare materials', 'Energy materials', 'Construction materials'],
     roi: 'Average customer achieves 350% ROI within 24 months through accelerated development and new material capabilities.',
     competitors: ['Ansys Materials', 'Dassault Materials', 'Autodesk Fusion 360', 'Materialise', '3D Systems'],
-    marketSize: '$67.8B advanced materials market'
-    growthRate: '15.3% annual growth'
-    variant: 'advanced-materials-ai'
+    marketSize: '$67.8B advanced materials market',
+    growthRate: '15.3% annual growth',
+    variant: 'advanced-materials-ai',
     contactInfo: unknown,
-      mobile: '+1 302 464 0950'
+      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
     realImplementation: true;
-    implementationDetails: 'Production-ready materials platform with real laboratory integrations and AI-powered design.'
-    launchDate: '2024-01-15'
+    implementationDetails: 'Production-ready materials platform with real laboratory integrations and AI-powered design.',
+    launchDate: '2024-01-15',
     customers: 78;
     rating: 4.8;
     reviews: 123;
@@ -1063,8 +1051,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
-    },
+  s://ziontechgroup.com'},
     realImplementatio,
   n: true,
     implementationDetail,
@@ -1088,8 +1075,7 @@ export const,
       currenc,
   y: 'USD',
       perio,
-  d: 'month'
-    }
+  d: 'month'}
   },
   // 7. Autonomous Transportation & Mobility Platform,
   id: 'autonomous-transportation-mobility',
@@ -1124,7 +1110,7 @@ export const,
       'Enable new mobility services'
     ],
     popular: true,
-    icon: ''
+    icon: '',
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-200',
     link: 'https://ziontechgroup.com/services/autonomous-transportation-mobility',
@@ -1140,17 +1126,17 @@ export const,
     useCases: ['Autonomous delivery', 'Public transportation', 'Traffic optimization', 'Parking management', 'Logistics optimization'],
     roi: 'Average customer achieves 300% ROI within 18 months through reduced costs and improved efficiency.',
     competitors: ['Waymo', 'Cruise', 'Tesla Autopilot', 'Aurora', 'Argo AI'],
-    marketSize: '$556.7B autonomous vehicle market'
-    growthRate: '39.7% annual growth'
-    variant: 'autonomous-transportation'
+    marketSize: '$556.7B autonomous vehicle market',
+    growthRate: '39.7% annual growth',
+    variant: 'autonomous-transportation',
     contactInfo: unknown,
-      mobile: '+1 302 464 0950'
+      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
     realImplementation: true;
-    implementationDetails: 'Production-ready autonomous transportation platform with real vehicle integrations and AI-powered optimization.'
-    launchDate: '2024-02-01'
+    implementationDetails: 'Production-ready autonomous transportation platform with real vehicle integrations and AI-powered optimization.',
+    launchDate: '2024-02-01',
     customers: 156;
     rating: 4.8;
     reviews: 234;
@@ -1220,8 +1206,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
-    },
+  s://ziontechgroup.com'},
     realImplementatio,
   n: true,
     implementationDetail,
@@ -1245,8 +1230,7 @@ export const,
       currenc,
   y: 'USD',
       perio,
-  d: 'month'
-    }
+  d: 'month'}
   },
   // 8. Digital Twin & Simulation Platform,
   id: 'digital-twin-simulation',
@@ -1281,7 +1265,7 @@ export const,
       'Optimize operational efficiency'
     ],
     popular: true,
-    icon: ''
+    icon: '',
     color: 'from-indigo-600 to-purple-700',
     textColor: 'text-indigo-200',
     link: 'https://ziontechgroup.com/services/digital-twin-simulation',
@@ -1297,17 +1281,17 @@ export const,
     useCases: ['Manufacturing optimization', 'Energy system management', 'Healthcare simulation', 'Smart city planning', 'Product development'],
     roi: 'Average customer achieves 250% ROI within 18 months through improved efficiency and reduced costs.',
     competitors: ['Siemens Digital Twin', 'GE Digital Twin', 'PTC ThingWorx', 'Dassault 3DEXPERIENCE', 'Autodesk Tandem'],
-    marketSize: '$86.1B digital twin market'
-    growthRate: '58.9% annual growth'
-    variant: 'digital-twin-ai'
+    marketSize: '$86.1B digital twin market',
+    growthRate: '58.9% annual growth',
+    variant: 'digital-twin-ai',
     contactInfo: unknown,
-      mobile: '+1 302 464 0950'
+      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
     realImplementation: true;
-    implementationDetails: 'Production-ready digital twin platform with real IoT integrations and AI-powered simulation.'
-    launchDate: '2024-01-01'
+    implementationDetails: 'Production-ready digital twin platform with real IoT integrations and AI-powered simulation.',
+    launchDate: '2024-01-01',
     customers: 189;
     rating: 4.9;
     reviews: 267;
@@ -1377,8 +1361,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
-    },
+  s://ziontechgroup.com'},
     realImplementatio,
   n: true,
     implementationDetail,
@@ -1402,8 +1385,7 @@ export const,
       currenc,
   y: 'USD',
       perio,
-  d: 'month'
-    }
+  d: 'month'}
   },
   // 9. Edge Computing & IoT Platform,
   id: 'edge-computing-iot-platform',
@@ -1438,7 +1420,7 @@ export const,
       'Enable real-time AI applications'
     ],
     popular: true,
-    icon: ''
+    icon: '',
     color: 'from-blue-600 to-cyan-700',
     textColor: 'text-blue-200',
     link: 'https://ziontechgroup.com/services/edge-computing-iot-platform',
@@ -1454,17 +1436,17 @@ export const,
     useCases: ['Industrial IoT', 'Smart cities', 'Healthcare monitoring', 'Autonomous vehicles', 'Retail analytics'],
     roi: 'Average customer achieves 200% ROI within 12 months through reduced latency and improved performance.',
     competitors: ['AWS Greengrass', 'Azure IoT Edge', 'Google Cloud IoT', 'Cisco Edge', 'HPE Edge'],
-    marketSize: '$43.4B edge computing market'
-    growthRate: '37.4% annual growth'
-    variant: 'edge-computing-iot'
+    marketSize: '$43.4B edge computing market',
+    growthRate: '37.4% annual growth',
+    variant: 'edge-computing-iot',
     contactInfo: unknown,
-      mobile: '+1 302 464 0950'
+      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
     realImplementation: true;
-    implementationDetails: 'Production-ready edge computing platform with real IoT integrations and AI-powered processing.'
-    launchDate: '2024-02-15'
+    implementationDetails: 'Production-ready edge computing platform with real IoT integrations and AI-powered processing.',
+    launchDate: '2024-02-15',
     customers: 234;
     rating: 4.8;
     reviews: 345;
@@ -1534,8 +1516,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
-    },
+  s://ziontechgroup.com'},
     realImplementatio,
   n: true,
     implementationDetail,
@@ -1559,8 +1540,7 @@ export const,
       currenc,
   y: 'USD',
       perio,
-  d: 'month'
-    }
+  d: 'month'}
   },
   // 10. Metaverse & Virtual Reality Platform,
   id: 'metaverse-virtual-reality',
@@ -1595,7 +1575,7 @@ export const,
       'Generate new revenue streams'
     ],
     popular: true,
-    icon: ''
+    icon: '',
     color: 'from-purple-600 to-pink-700',
     textColor: 'text-purple-200',
     link: 'https://ziontechgroup.com/services/metaverse-virtual-reality',
@@ -1611,17 +1591,17 @@ export const,
     useCases: ['Virtual events', 'Virtual training', 'Virtual real estate', 'Virtual commerce', 'Virtual entertainment'],
     roi: 'Average customer achieves 300% ROI within 18 months through new virtual experiences and reduced costs.',
     competitors: ['Meta Horizon Worlds', 'Roblox', 'Decentraland', 'VRChat', 'AltspaceVR'],
-    marketSize: '$74.2B metaverse market'
-    growthRate: '37.7% annual growth'
-    variant: 'metaverse-vr-futuristic'
+    marketSize: '$74.2B metaverse market',
+    growthRate: '37.7% annual growth',
+    variant: 'metaverse-vr-futuristic',
     contactInfo: unknown,
-      mobile: '+1 302 464 0950'
+      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
     realImplementation: true;
-    implementationDetails: 'Production-ready metaverse platform with real VR/AR integrations and AI-powered content generation.'
-    launchDate: '2024-03-01'
+    implementationDetails: 'Production-ready metaverse platform with real VR/AR integrations and AI-powered content generation.',
+    launchDate: '2024-03-01',
     customers: 123;
     rating: 4.8;
     reviews: 189;
@@ -1686,8 +1666,7 @@ export const getServicesByCategory = (category: string) =>
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
-    },
+  s://ziontechgroup.com'},
     realImplementatio,
   n: true,
     implementationDetail,
@@ -1711,19 +1690,17 @@ export const getServicesByCategory = (category: string) =>
       currenc,
   y: 'USD',
       perio,
-  d: 'month'
-    }
+  d: 'month'}
   }
 ];
 export const getServicesByCategory = (categor)
   y: string) =>
-  return zionEmergingTechServices2029.filter(service => service.category === category),
-}
+  return zionEmergingTechServices2029.filter(service => service.category === category)}
 export const getPopularServices = () =>
   return zionEmergingTechServices2029.filter(service => service.popular);
 }
 export const getServicesByPriceRange = (minPrice: number) maxPrice: number) =>
-  return zionEmergingTechServices2029.filter(service => //     const starterPrice = service.pricing.starter,)
+  return zionEmergingTechServices2029.filter(service => //     const starterPrice = service.pricing.starter)
     return starterPrice >= minPrice && starterPrice <= maxPrice)});
 }
 export const getServicesByTechnology = (technology: string) =>,
@@ -1733,7 +1710,7 @@ export const getServicesByPriceRange = (minPric)
   e: number) maxPric,
   e: number) =>
   return zionEmergingTechServices2029.filter(service =>
-//     const starterPrice = service.pricing.starter,)
+//     const starterPrice = service.pricing.starter)
     return starterPrice >= minPrice && starterPrice <= maxPrice)
   });
 }
@@ -1741,8 +1718,7 @@ export const getServicesByTechnology = (technolog)
   y: string) =>
   return zionEmergingTechServices2029.filter(service =>)
     service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase()))
-  ),
-}
+  )}
 export type ZionEmergingTechService2029 = i,
   d: string, nam,
   e: string, taglin,
@@ -1820,11 +1796,11 @@ export type ZionEmergingTechService2029 = i,
   e: '8.5% annual growth',' varian,
   t: 'space-tech-futuristic', contactInf,
   o: ' mobil,
-  e: '+1 302 464 0950',' emai,
+  e: ',+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup.com' }, realImplementatio,
+  s://ziontechgroup.com'}, realImplementatio,
   n: true,' implementationDetail,
   s: 'Production-ready space technology platform with real satellite integrations and AI-powered optimization.',' launchDat,
   e: '2024-01-01', customer,
@@ -1836,7 +1812,7 @@ export type ZionEmergingTechService2029 = i,
   l: 14999, enterpris,
   e: 39999,' currenc,
   y: 'USD',' perio,
-  d: 'month' } }, // 2. Biotechnology & Synthetic Biology Platform ' i,
+  d: 'month'} }, // 2. Biotechnology & Synthetic Biology Platform ' i,
   d: 'biotechnology-synthetic-biology',' nam,
   e: 'Biotechnology & Synthetic Biology Platform',' taglin,
   e: 'Design and engineer life with AI-powered synthetic biology',' pric,
@@ -1867,11 +1843,11 @@ export type ZionEmergingTechService2029 = i,
   e: '26.2% annual growth',' varian,
   t: 'biotech-synthetic-biology', contactInf,
   o: ' mobil,
-  e: '+1 302 464 0950',' emai,
+  e: ',+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup.com' }, realImplementatio,
+  s://ziontechgroup.com'}, realImplementatio,
   n: true,' implementationDetail,
   s: 'Production-ready biotechnology platform with real laboratory integrations and AI-powered design.',' launchDat,
   e: '2024-02-01', customer,
@@ -1883,7 +1859,7 @@ export type ZionEmergingTechService2029 = i,
   l: 9999, enterpris,
   e: 24999,' currenc,
   y: 'USD',' perio,
-  d: 'month' } }, // 3. Renewable Energy & Smart Grid Optimization ' i,
+  d: 'month'} }, // 3. Renewable Energy & Smart Grid Optimization ' i,
   d: 'renewable-energy-smart-grid',' nam,
   e: 'Renewable Energy & Smart Grid Optimization Platform',' taglin,
   e: 'AI-powered renewable energy optimization and smart grid management',' pric,
@@ -1914,11 +1890,11 @@ export type ZionEmergingTechService2029 = i,
   e: '8.4% annual growth',' varian,
   t: 'renewable-energy-ai', contactInf,
   o: ' mobil,
-  e: '+1 302 464 0950',' emai,
+  e: ',+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup.com' }, realImplementatio,
+  s://ziontechgroup.com'}, realImplementatio,
   n: true,' implementationDetail,
   s: 'Production-ready renewable energy platform with real grid integrations and AI-powered optimization.',' launchDat,
   e: '2024-01-15', customer,
@@ -1930,7 +1906,7 @@ export type ZionEmergingTechService2029 = i,
   l: 7499, enterpris,
   e: 18999,' currenc,
   y: 'USD',' perio,
-  d: 'month' } }, // 4. Advanced Robotics & Automation Platform ' i,
+  d: 'month'} }, // 4. Advanced Robotics & Automation Platform ' i,
   d: 'advanced-robotics-automation',' nam,
   e: 'Advanced Robotics & Automation Platform',' taglin,
   e: 'Next-generation robotics with AI-powered autonomy and learning',' pric,
@@ -1961,11 +1937,11 @@ export type ZionEmergingTechService2029 = i,
   e: '12.5% annual growth',' varian,
   t: 'robotics-automation-ai', contactInf,
   o: ' mobil,
-  e: '+1 302 464 0950',' emai,
+  e: ',+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup.com' }, realImplementatio,
+  s://ziontechgroup.com'}, realImplementatio,
   n: true,' implementationDetail,
   s: 'Production-ready robotics platform with real robot integrations and AI-powered automation.',' launchDat,
   e: '2024-02-15', customer,
@@ -1977,7 +1953,7 @@ export type ZionEmergingTechService2029 = i,
   l: 12999, enterpris,
   e: 29999,' currenc,
   y: 'USD',' perio,
-  d: 'month' } }, // 5. Quantum Internet & Secure Communications ' i,
+  d: 'month'} }, // 5. Quantum Internet & Secure Communications ' i,
   d: 'quantum-internet-secure-communications',' nam,
   e: 'Quantum Internet & Secure Communications Platform',' taglin,
   e: 'Unhackable quantum communications for the future internet',' pric,
@@ -2008,11 +1984,11 @@ export type ZionEmergingTechService2029 = i,
   e: '35.2% annual growth',' varian,
   t: 'quantum-internet-futuristic', contactInf,
   o: ' mobil,
-  e: '+1 302 464 0950',' emai,
+  e: ',+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup.com' }, realImplementatio,
+  s://ziontechgroup.com'}, realImplementatio,
   n: true,' implementationDetail,
   s: 'Production-ready quantum internet platform with real quantum hardware and network integrations.',' launchDat,
   e: '2024-03-01', customer,
@@ -2024,7 +2000,7 @@ export type ZionEmergingTechService2029 = i,
   l: 17999, enterpris,
   e: 44999,' currenc,
   y: 'USD',' perio,
-  d: 'month' } }, // 6. Advanced Materials & Nanotechnology Platform ' i,
+  d: 'month'} }, // 6. Advanced Materials & Nanotechnology Platform ' i,
   d: 'advanced-materials-nanotechnology',' nam,
   e: 'Advanced Materials & Nanotechnology Platform',' taglin,
   e: 'Design revolutionary materials with AI and nanotechnology',' pric,
@@ -2055,11 +2031,11 @@ export type ZionEmergingTechService2029 = i,
   e: '15.3% annual growth',' varian,
   t: 'advanced-materials-ai', contactInf,
   o: ' mobil,
-  e: '+1 302 464 0950',' emai,
+  e: ',+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup.com' }, realImplementatio,
+  s://ziontechgroup.com'}, realImplementatio,
   n: true,' implementationDetail,
   s: 'Production-ready materials platform with real laboratory integrations and AI-powered design.',' launchDat,
   e: '2024-01-15', customer,
@@ -2071,7 +2047,7 @@ export type ZionEmergingTechService2029 = i,
   l: 8999, enterpris,
   e: 21999,' currenc,
   y: 'USD',' perio,
-  d: 'month' } }, // 7. Autonomous Transportation & Mobility Platform ' i,
+  d: 'month'} }, // 7. Autonomous Transportation & Mobility Platform ' i,
   d: 'autonomous-transportation-mobility',' nam,
   e: 'Autonomous Transportation & Mobility Platform',' taglin,
   e: 'Revolutionary autonomous transportation and smart mobility solutions',' pric,
@@ -2102,11 +2078,11 @@ export type ZionEmergingTechService2029 = i,
   e: '39.7% annual growth',' varian,
   t: 'autonomous-transportation', contactInf,
   o: ' mobil,
-  e: '+1 302 464 0950',' emai,
+  e: ',+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup.com' }, realImplementatio,
+  s://ziontechgroup.com'}, realImplementatio,
   n: true,' implementationDetail,
   s: 'Production-ready autonomous transportation platform with real vehicle integrations and AI-powered optimization.',' launchDat,
   e: '2024-02-01', customer,
@@ -2118,7 +2094,7 @@ export type ZionEmergingTechService2029 = i,
   l: 11999, enterpris,
   e: 28999,' currenc,
   y: 'USD',' perio,
-  d: 'month' } }, // 8. Digital Twin & Simulation Platform ' i,
+  d: 'month'} }, // 8. Digital Twin & Simulation Platform ' i,
   d: 'digital-twin-simulation',' nam,
   e: 'Digital Twin & Simulation Platform',' taglin,
   e: 'Create virtual replicas of physical systems with AI-powered simulation',' pric,
@@ -2149,11 +2125,11 @@ export type ZionEmergingTechService2029 = i,
   e: '58.9% annual growth',' varian,
   t: 'digital-twin-ai', contactInf,
   o: ' mobil,
-  e: '+1 302 464 0950',' emai,
+  e: ',+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup.com' }, realImplementatio,
+  s://ziontechgroup.com'}, realImplementatio,
   n: true,' implementationDetail,
   s: 'Production-ready digital twin platform with real IoT integrations and AI-powered simulation.',' launchDat,
   e: '2024-01-01', customer,
@@ -2165,7 +2141,7 @@ export type ZionEmergingTechService2029 = i,
   l: 6999, enterpris,
   e: 17999,' currenc,
   y: 'USD',' perio,
-  d: 'month' } }, // 9. Edge Computing & IoT Platform ' i,
+  d: 'month'} }, // 9. Edge Computing & IoT Platform ' i,
   d: 'edge-computing-iot-platform',' nam,
   e: 'Edge Computing & IoT Platform',' taglin,
   e: 'Intelligent edge computing for real-time IoT processing and analytics',' pric,
@@ -2196,11 +2172,11 @@ export type ZionEmergingTechService2029 = i,
   e: '37.4% annual growth',' varian,
   t: 'edge-computing-iot', contactInf,
   o: ' mobil,
-  e: '+1 302 464 0950',' emai,
+  e: ',+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup.com' }, realImplementatio,
+  s://ziontechgroup.com'}, realImplementatio,
   n: true,' implementationDetail,
   s: 'Production-ready edge computing platform with real IoT integrations and AI-powered processing.',' launchDat,
   e: '2024-02-15', customer,
@@ -2212,7 +2188,7 @@ export type ZionEmergingTechService2029 = i,
   l: 4999, enterpris,
   e: 12999,' currenc,
   y: 'USD',' perio,
-  d: 'month' } }, // 10. Metaverse & Virtual Reality Platform ' i,
+  d: 'month'} }, // 10. Metaverse & Virtual Reality Platform ' i,
   d: 'metaverse-virtual-reality',' nam,
   e: 'Metaverse & Virtual Reality Platform',' taglin,
   e: 'Build immersive virtual worlds and metaverse experiences',' pric,
@@ -2243,11 +2219,11 @@ export type ZionEmergingTechService2029 = i,
   e: '37.7% annual growth',' varian,
   t: 'metaverse-vr-futuristic', contactInf,
   o: ' mobil,
-  e: '+1 302 464 0950',' emai,
+  e: ',+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup.com' }, realImplementatio,
+  s://ziontechgroup.com'}, realImplementatio,
   n: true,' implementationDetail,
   s: 'Production-ready metaverse platform with real VR/AR integrations and AI-powered content generation.',' launchDat,
   e: '2024-03-01', customer,
@@ -2259,8 +2235,8 @@ export type ZionEmergingTechService2029 = i,
   l: 8299, enterpris,
   e: 20999,' currenc,
   y: 'USD',' perio,
-  d: 'month' } } ]; export const getServicesByCategory = (categor)
-  y: string) => return zionEmergingTechServices2029.filter(service => service.category === category), } export const getPopularServices = () => return zionEmergingTechServices2029.filter(service => service.popular); } export const getServicesByPriceRange = (minPric)
+  d: 'month'} } ]; export const getServicesByCategory = (categor)
+  y: string) => return zionEmergingTechServices2029.filter(service => service.category === category)} export const getPopularServices = () => return zionEmergingTechServices2029.filter(service => service.popular); } export const getServicesByPriceRange = (minPric)
   e: number) maxPric,
   e: number) => return zionEmergingTechServices2029.filter(service => const starterPrice = service.pricing.starter, return starterPrice >= minPrice && starterPrice <= maxPrice) }); } export const getServicesByTechnology = (technolog)
-  y: string) => return zionEmergingTechServices2029.filter(service => service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase())) ), }'
+  y: string) => return zionEmergingTechServices2029.filter(service => service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase())) )}'

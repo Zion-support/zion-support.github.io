@@ -2,7 +2,7 @@
 import { Helmet } from 'react-helmet-async';
 export default function AIProjectManagementPage() {/* TODO: Fix JSX expression */}
 }
-  return (<div><Helmet></Helmet>
+  return (<div></div><Helmet></Helmet>
         <title>AI Project Management Solutions - Zion Tech Group</title>
         <meta name="description" content="Intelligent AI-powered project management with predictive analytics, resource optimization, and automated task allocation. Starting at $199/month." /></meta>"
         <meta name="keywords" content="AI project management, project automation, resource optimization, predictive analytics, task management" /></meta>"
@@ -88,7 +88,7 @@ export default function AIProjectManagementPage() {/* TODO: Fix JSX expression *
   md:grid-cols-3 gap-8"></div>"
               <div className="cyber-card p-8 text-center"></div>"
                 <h3 className="text-2xl font-bold text-white mb-4">Team</h3>"
-                <div className="text-4xl font-bold text-cyan-400 mb-6">$199<span className="text-lg">/month</span></div>"
+                <div className="text-4xl font-bold text-cyan-400 mb-6">$199</div><span className="text-lg">/month</span></div>"
                 <ul className="text-gray-300 space-y-3 mb-8"></ul>
                   <li>Up to 10 team members</li>
                   <li>5 active projects</li>
@@ -101,7 +101,7 @@ export default function AIProjectManagementPage() {/* TODO: Fix JSX expression *
               "
               <div className="cyber-card p-8 text-center border-2 border-cyan-400"></div>"
                 <h3 className="text-2xl font-bold text-white mb-4">Professional</h3>"
-                <div className="text-4xl font-bold text-cyan-400 mb-6">$499<span className="text-lg">/month</span></div>"
+                <div className="text-4xl font-bold text-cyan-400 mb-6">$499</div><span className="text-lg">/month</span></div>"
                 <ul className="text-gray-300 space-y-3 mb-8"></ul>
                   <li>Up to 50 team members</li>
                   <li>Unlimited projects</li>
@@ -183,5 +183,4 @@ export default function AIProjectManagementPage() {/* TODO: Fix JSX expression *
         <Footer /></Footer>
       </div>
     </div>
-  ),
-}"
+  )}"

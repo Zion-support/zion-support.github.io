@@ -29,8 +29,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
       // Configure Google Analytics
       gtag('config', 'GA_MEASUREMENT_ID', {
         page_title: document.title,
-        page_location: window.location.href,
-      })
+        page_location: window.location.href})
     }
   }, []);
 
@@ -44,26 +43,24 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
         event_category: parameters.category || 'engagement',
         event_label: parameters.label,
         value: parameters.value,
-        ...parameters,
-      })
+        ...parameters})
     }
 
     // Console logging for development
     if (process.env.NODE_ENV === 'development') {
-    console.log('Analytics Event:', eventName, parameters)
+    console.log('Analytics Event: ', eventName, parameters)
   }
   }
 
   const trackPageView = (pageName: string, pagePath: string) => {
-    if (typeof window === 'undefined') return,
+    if (typeof window === ',undefined') return,
 
     // Google Analytics
     if ('gtag' in window) {
       const gtag = (window as { gtag: (command: string, targetId: string, config: any) => void }).gtag;
       gtag('config', 'GA_MEASUREMENT_ID', {
         page_title: pageName,
-        page_location: window.location.origin + pagePath,
-      })
+        page_location: window.location.origin + pagePath})
     }
 
     // Console logging for development
@@ -74,8 +71,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
 
   const value: AnalyticsContextType = {
     trackEvent,
-    trackPageView,
-  }
+    trackPageView}
 
   return (
     <AnalyticsContext.Provider value={value}>

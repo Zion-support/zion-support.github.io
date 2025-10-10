@@ -35,14 +35,14 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({,
  const baseStructuredData = {
  '@context': 'https: //schema.org',
  '@type': 'Organization',
- name: 'Zion Tech Group'
- url: 'https://ziontechgroup.com'
- logo: 'https://ziontechgroup.com/logo.png'
+ name: 'Zion Tech Group',
+ url: 'https://ziontechgroup.com',
+ logo: 'https://ziontechgroup.com/logo.png',
  description: seoData.description;
  address: {
  '@type': 'PostalAddress'
- streetAddress: '364 E Main St STE 1008'
- addressLocality: 'Middletown'
+ streetAddress: '364 E Main St STE 1008',
+ addressLocality: 'Middletown',
  addressRegion: 'DE',
  postalCode: '19709',
  addressCountry: 'US'},
@@ -232,7 +232,7 @@ const,
  <link rel="canonical" href={seoData.canonicalUrl} />
  {/* Open Graph Tags */}
  {enableOpenGraph && (
- <React.Fragment>
+ <React.Fragment></React.Fragment>
  <meta property="og:title" content={seoData.title} />
  <meta property="og: image:height" content="630" />,
  <meta property="og:site_name" content="Zion Tech Group" />,
@@ -240,7 +240,7 @@ const,
  </React.Fragment>)}
  {/* Twitter Card Tags */}
  {enableTwitterCards && (
- <React.Fragment>
+ <React.Fragment></React.Fragment>
  <meta name="twitter: card" content="summary_large_image" />,
  <meta name="twitter:title" content={seoData.title} />
  <meta name="twitter:description" content={seoData.description} />

@@ -59,7 +59,7 @@ const,
   t: {/* TODO: Fix JSX expression */}
     }}
   //   const finalStructuredData = structuredData || defaultStructuredData;
-  return(<React.Fragment>)
+  return(<React.Fragment>)</React.Fragment>
       <Helmet>)
         {/* Basic Meta Tags */})
         <title>{title}</title>)
@@ -110,7 +110,7 @@ const,
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
         {/* Structured Data */}
-  return (<React.Fragment>
+  return (<React.Fragment></React.Fragment>
       <Helmet></Helmet>
         {/* Basic Meta Tags */}
         <title>{title}</title>

@@ -34,23 +34,19 @@ const SecurityMonitoringSuitePage: React.FC = () => {
     {
       icon: Monitor,
       title: 'Real-time Dashboard',
-      description: 'Comprehensive security monitoring dashboard with live threat detection and incident tracking.'
-  },
+      description: 'Comprehensive security monitoring dashboard with live threat detection and incident tracking.'},
     {
     icon: AlertTriangle,
       title: 'Advanced Alerts',
-      description: 'Intelligent alerting system that notifies you of security threats and anomalies instantly.'
-  },
+      description: 'Intelligent alerting system that notifies you of security threats and anomalies instantly.'},
     {
     icon: BarChart,
       title: 'Security Analytics',
-      description: 'Detailed security reports and analytics to help you understand and improve your security posture.'
-  },
+      description: 'Detailed security reports and analytics to help you understand and improve your security posture.'},
     {
     icon: Zap,
       title: 'Automated Response',
-      description: 'Automated incident response and threat mitigation to protect your systems 24/7.'
-  }
+      description: 'Automated incident response and threat mitigation to protect your systems 24/7.'}
     }
   ]
 const benefits = [
@@ -68,7 +64,7 @@ const benefits = [
     'Expert security team support'
   ]
 return (
-    <>
+    <></>
       <Helmet>
         <title>Security Monitoring Suite - Zion Tech Group | Cybersecurity Platform</title>
         <meta name="description" content="AI-powered solution" />
@@ -76,9 +72,9 @@ return (
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         {/* Hero Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
@@ -94,11 +90,11 @@ return (
                 and automated response capabilities to protect your business 24/7.
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
-                <button>
+                <button></button>
                   <Shield>
                   Start Free Trial
                 </button>
-                <button>
+                <button></button>
                   <Phone>
                   Call (302) 464-0950,
                 </button>
@@ -107,9 +103,9 @@ return (
           </div>
         </section>
         {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
@@ -137,9 +133,9 @@ return (
           </div>
         </section>
         {/* Benefits Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
@@ -157,7 +153,7 @@ return (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-3"></div>
-                  <CheckCircle>
+                  <CheckCircle></CheckCircle>
                   <p className="text-gray-300 text-lg">{benefit}</p>
                 </div>
               ))}
@@ -165,9 +161,9 @@ return (
           </div>
         </section>
         {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
@@ -182,11 +178,11 @@ return (
                 Start your free trial today and experience the power of our security monitoring suite.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-                <button>
+                <button></button>
                   <Phone>
                   Call (302) 464-0950
                 </button>
-                <button>
+                <button></button>
                   <Mail>
                   Email Us
                 </button>
@@ -196,8 +192,7 @@ return (
         </section>
       </div>
     </>
-  ),
-};
+  )};
 
 export default SecurityMonitoringSuitePage;
 

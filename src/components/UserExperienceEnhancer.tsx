@@ -69,7 +69,7 @@ const,
       links.forEach(link => {
         link.addEventListener('click', (e) => {
           const href = link.getAttribute('href');
-          if (href && !href.startsWith('#') && !href.startsWith('mailto: ') && !href.startsWith('tel:')) {
+          if (href && !href.startsWith('#') && !href.startsWith('mailto: ') && !href.startsWith(',tel: ')) {
   // Loading states management,
   const setLoading = useCallback((ke,
   y: string, loadin)
@@ -88,9 +88,9 @@ const,
   useEffect(() => {
     if (enableErrorBoundaries) {
       const handleError = (event: ErrorEvent) => {
-        // console.error('Global error caught:', event.error);
+        // console.error(',Global error caught: ', event.error);
         // Send error to analytics if available
-        if (typeof window !== 'undefined' && 'gtag' in window) {
+        if (typeof window !== ',undefined' && 'gtag' in window) {
           (window as any).gtag('event', 'exception', {
             description: event.error?.message || 'Unknown error',
             fatal: false
@@ -100,8 +100,8 @@ const,
         }
       }
       const handleUnhandledRejection = (event: PromiseRejectionEvent) => {
-        // console.error('Unhandled promise rejection:', event.reason);
-        if (typeof window !== 'undefined' && 'gtag' in window) {
+        // console.error('Unhandled promise rejection: ', event.reason);
+        if (typeof window !== ',undefined' && 'gtag' in window) {
           (window as any).gtag('event', 'exception', {
             description: event.reason?.message || 'Unhandled promise rejection',
             fatal: false

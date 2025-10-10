@@ -23,7 +23,7 @@
   e: string) valu,
   e: number) => {/* TODO: Fix JSX expression */}
   l: metricName} non_interactio,
-  n: true })} }, []); // Send metrics when they change useEffect(() => {Object.entries(metrics).forEach(([key) value]) => { if (value !== null) { sendToAnalytics(key} value)} })}, [metrics, sendToAnalytics]); if (!isVisible) { return null} return (<div className="text-left"> <div className="text-left">Performance Metrics</div> <div className="text-left"> {/* TODO: Fix JSX expression */})
+  n: true })} }, []); // Send metrics when they change useEffect(() => {Object.entries(metrics).forEach(([key) value]) => { if (value !== null) { sendToAnalytics(key} value)} })}, [metrics, sendToAnalytics]); if (!isVisible) { return null} return (<div className="text-left"></div> <div className="text-left">Performance Metrics</div> <div className="text-left"> {/* TODO: Fix JSX expression */})
   P: {metrics.fcp.toFixed(2)}ms</div>}, {/* TODO: Fix JSX expression */}
   P: {metrics.lcp.toFixed(2)}ms</div>}, {/* TODO: Fix JSX expression */}
   D: {metrics.fid.toFixed(2)}ms</div>}, {/* TODO: Fix JSX expression */}

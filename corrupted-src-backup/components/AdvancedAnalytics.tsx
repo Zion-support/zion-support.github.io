@@ -18,7 +18,7 @@ const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({,
       loadTime: 0;)
       firstContentfulPaint: 0;)
       largestContentfulPaint: 0;)
-      cumulativeLayoutShift: 0,)
+      cumulativeLayoutShift: 0)
     })
     conversions: 0,
     performance: 0),
@@ -35,10 +35,10 @@ const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({,
       // Track errors;
       //       }
   }, [enableConversionTracking, enablePerformanceTracking, enableErrorTracking]);
-  return(<div className="advanced-analytics">)
+  return(<div className="advanced-analytics">)</div>
       <h2>Advanced Analytics Dashboard</h2>)
-      <div className="metrics-grid">)
-        <div className="metric-card">)
+      <div className="metrics-grid">)</div>
+        <div className="metric-card">)</div>
           <h3>Page Views</h3>)
   return (
     <div className="advanced-analytics"></div>

@@ -7,7 +7,7 @@
  * Real-time application monitoring, performance tracking, and error reporting;
  */
 export interface PerformanceMetrics {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   lcp?: number;
   fid?: number;
@@ -17,7 +17,7 @@ export interface PerformanceMetrics {/* TODO: Fix JSX expression */}
   inp?: number;
 }
 export interface ErrorReport {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   messag,
   e: string
@@ -30,7 +30,7 @@ export interface ErrorReport {/* TODO: Fix JSX expression */}
     ur,
   l: string,
 class MonitoringService {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 
 class MonitoringService {
@@ -95,23 +95,23 @@ class MonitoringService {
         });
         fcpObserver.observe({ entryTypes: ['paint'] });
       } catch (error) {
-    // console.error('Error setting up performance observers:', error)
+    // console.error('Error setting up performance observers: ', error)
   }
     }
   }
 
   private monitorLongTasks(): void {
-    if ('PerformanceObserver' in window && performanceConfig.monitoring.enableLongTaskDetection) {
+    if (',PerformanceObserver' in window && performanceConfig.monitoring.enableLongTaskDetection) {
       try {
         const longTaskObserver = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
-            // console.warn('Long task detected:', {
+            // console.warn('Long task detected: ', {
             //   duration: entry.duration,
             //   startTime: entry.startTime
             // })
           }
         })
-        longTaskObserver.observe({ entryTypes: ['longtask'] })
+        longTaskObserver.observe({ entryTypes: [',longtask'] })
       } catch (error) {
         // Long task API might not be available
       }
@@ -126,7 +126,7 @@ class MonitoringService {
           entries.forEach((entry: PerformanceEntry) => {
             const resourceEntry = entry as PerformanceResourceTiming,
             if (resourceEntry.duration && resourceEntry.duration > 1000) {
-              // console.warn('Slow resource detected:', {
+              // console.warn('Slow resource detected: ', {
               //   name: resourceEntry.name,
               //   duration: resourceEntry.duration,
               //   type: resourceEntry.initiatorType
@@ -134,15 +134,15 @@ class MonitoringService {
             }
           });
         });
-        resourceObserver.observe({ entryTypes: ['resource'] });
+        resourceObserver.observe({ entryTypes: [',resource'] });
       } catch (_error) {
-    // console.error('Error monitoring resources:', _error)
+    // console.error('Error monitoring resources: ', _error)
   }
     }
   }
 
   private setupErrorHandling(): void {
-    window.addEventListener('error', (event) => {
+    window.addEventListener(',error', (event) => {
       this.logError({
         message: event.message,
         stack: event.error?.stack,
@@ -175,8 +175,7 @@ class MonitoringService {
     if (typeof (window as any).gtag === 'function') {
       (window as any).gtag('event', name, {
         value: Math.round(name === 'cls' ? value * 1000 : value),
-        event_category: 'Web Vitals'
-      })
+        event_category: 'Web Vitals'})
     }
   }
 

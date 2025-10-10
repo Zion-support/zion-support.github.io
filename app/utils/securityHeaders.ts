@@ -13,8 +13,7 @@ export interface SecurityHeadersConfig {
 }
 export const defaultSecurityHeaders: SecurityHeadersConfig = {
     // Content Security Policy,
-  contentSecurityPolicy: [,
-  }
+  contentSecurityPolicy: [}
 export interface SecurityHeadersConfig {}
   contentSecurityPolicy?: string;
   strictTransportSecurity?: string;
@@ -37,11 +36,11 @@ export const defaultSecurityHeaders: SecurityHeadersConfig = {}
     "form-action 'self'",;
     'upgrade-insecure-requests'].join('; '),;
   // HTTP Strict Transport Security (HSTS);
-  strictTransportSecurity: 'max-age=63072000; includeSubDomains; preload';
+  strictTransportSecurity: 'max-age=63072000; includeSubDomains; preload',;
   // Prevent clickjacking;
-  xFrameOptions: 'DENY';
+  xFrameOptions: 'DENY',;
   // Prevent MIME type sniffing;
-  xContentTypeOptions: 'nosniff'
+  xContentTypeOptions: 'nosniff',
   // Referrer Policy
   referrerPolicy: 'strict-origin-when-cross-origin',
   // Permissions Policy (formerly Feature Policy),;

@@ -8,13 +8,13 @@ const GlobalAITransformationHu, b = () => {/* TODO: Fix JSX expression */}
     {/* TODO: Fix JSX expression */}
      }
   ]; const successMetric, s = [
-    { metr, i, c: '2., 5, M+', lab, e, l: 'Global, Use, r, s' },
-    { metr, i, c: '$15, B+', lab, e, l: 'Value, Creat, e, d' },
-    { metr, i, c: '99.9, 9%', lab, e, l: 'Success, Ra, t, e' },
-    { metr, i, c: '5, 0, 0, K+', lab, e, l: 'Enterprise, Clien, t, s' }
-  ]; return(<div, classNam, e = "bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-9, 0, 0/20, t, o-sla, t, e-900, border, border-bl, u, e-4, 0, 0/30, rounde, d-2x, l, p-8, m, b-12, animat, e-fa, d, e-in, shado, w-2, x, l">
+    { metr, i, c: '2., 5, M+', lab, e, l: 'Global, Use, r, s'},
+    { metr, i, c: '$15, B+', lab, e, l: 'Value, Creat, e, d'},
+    { metr, i, c: '99.9, 9%', lab, e, l: 'Success, Ra, t, e'},
+    { metr, i, c: '5, 0, 0, K+', lab, e, l: 'Enterprise, Clien, t, s'}
+  ]; return(<div, classNam, e = "bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-9, 0, 0/20, t, o-sla, t, e-900, border, border-bl, u, e-4, 0, 0/30, rounde, d-2x, l, p-8, m, b-12, animat, e-fa, d, e-in, shado, w-2, x, l"></div>
       <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-6">
-  ]; return (
+  ]; return (</div>
     <div, classNam, e = "bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-9, 0, 0/20, t, o-sla, t, e-900, border, border-bl, u, e-4, 0, 0/30, rounde, d-2x, l, p-8, m, b-12, animat, e-fa, d, e-in, shado, w-2, x, l"></div>
       <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-6"></div>
         <Globe, className="w-8 h-8, tex, t-bl, u, e-400, animat, e-pul, s, e" />

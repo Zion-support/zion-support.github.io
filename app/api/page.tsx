@@ -149,29 +149,26 @@ const ApiPage: React.FC = () => {
       name: 'API Key',
       description: 'Simple API key authentication',
       example: 'Authorization: Bearer sk-1234567890abcdef',
-      security: 'High'
-    },
+      security: 'High'},
     {
       name: 'OAuth 2.0',
       description: 'Industry-standard OAuth 2.0 flow',
       example: 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...',
-      security: 'Very High'
-    },
+      security: 'Very High'},
     {
       name: 'JWT Token',
       description: 'JSON Web Token authentication',
       example: 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...',
-      security: 'High'
-    }
+      security: 'High'}
   ];
   const rateLimits = [
-    { tier: 'Free', requests: '1,000/month', burst: '10/minute' },
-    { tier: 'Pro', requests: '50,000/month', burst: '100/minute' },
-    { tier: 'Enterprise', requests: 'Unlimited', burst: '1,000/minute' }
+    { tier: 'Free', requests: '1,000/month', burst: '10/minute'},
+    { tier: 'Pro', requests: '50,000/month', burst: '100/minute'},
+    { tier: 'Enterprise', requests: 'Unlimited', burst: '1,000/minute'}
   ]
 
   return (
-    <>
+    <></>
       <Helmet>
         <title>API Reference - Zion Tech Group</title>
         <meta name="description" content="Complete API reference for Zion Tech Group's AI, IT, and Micro SaaS services. Get started with our comprehensive API documentation." />
@@ -179,10 +176,10 @@ const ApiPage: React.FC = () => {
         <link rel="canonical" href="https://ziontechgroup.com/api" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         <div className="container mx-auto px-4 py-16 pt-24">
-          {/* Header */}
-          <div className="text-center mb-16">
+          {/* Header */}</div>
+          <div className="text-center mb-16"></div>
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text-enhanced">
               API Reference
             </h1>
@@ -190,7 +187,7 @@ const ApiPage: React.FC = () => {
               Comprehensive API documentation for all Zion Tech Group services. 
               Build powerful applications with our AI, IT, and Micro SaaS APIs.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-wrap justify-center gap-4"></div>
               <a
                 href="#getting-started"
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
@@ -213,23 +210,23 @@ const ApiPage: React.FC = () => {
           </div>
 
           {/* Quick Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">
-            <div className="cyber-card-enhanced p-6 text-center">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16"></div>
+            <div className="cyber-card-enhanced p-6 text-center"></div>
               <Code className="w-8 h-8 text-cyan-400 mx-auto mb-4" />
               <div className="text-2xl font-bold text-white mb-2">50+</div>
               <div className="text-gray-300">API Endpoints</div>
             </div>
-            <div className="cyber-card-enhanced p-6 text-center">
+            <div className="cyber-card-enhanced p-6 text-center"></div>
               <Zap className="w-8 h-8 text-green-400 mx-auto mb-4" />
               <div className="text-2xl font-bold text-white mb-2">99.9%</div>
               <div className="text-gray-300">Uptime SLA</div>
             </div>
-            <div className="cyber-card-enhanced p-6 text-center">
+            <div className="cyber-card-enhanced p-6 text-center"></div>
               <Shield className="w-8 h-8 text-purple-400 mx-auto mb-4" />
               <div className="text-2xl font-bold text-white mb-2">256-bit</div>
               <div className="text-gray-300">SSL Encryption</div>
             </div>
-            <div className="cyber-card-enhanced p-6 text-center">
+            <div className="cyber-card-enhanced p-6 text-center"></div>
               <Globe className="w-8 h-8 text-orange-400 mx-auto mb-4" />
               <div className="text-2xl font-bold text-white mb-2">24/7</div>
               <div className="text-gray-300">Support</div>
@@ -237,16 +234,16 @@ const ApiPage: React.FC = () => {
           </div>
 
           {/* Getting Started */}
-          <section id="getting-started" className="mb-16">
+          <section id="getting-started" className="mb-16"></section>
             <h2 className="text-3xl font-bold text-white mb-8 text-center">Getting Started</h2>
-            <div className="cyber-card-enhanced p-8">
+            <div className="cyber-card-enhanced p-8"></div>
               <h3 className="text-xl font-semibold text-white mb-4">1. Get Your API Key</h3>
               <p className="text-gray-300 mb-6">
                 Sign up for a free account and get your API key from the dashboard.
               </p>
               
               <h3 className="text-xl font-semibold text-white mb-4">2. Make Your First Request</h3>
-              <div className="bg-slate-800 rounded-lg p-4 mb-6">
+              <div className="bg-slate-800 rounded-lg p-4 mb-6"></div>
                 <pre className="text-green-400 text-sm overflow-x-auto">
 {`curl -X POST https://api.ziontechgroup.com/v1/ai/chat \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
@@ -266,17 +263,17 @@ const ApiPage: React.FC = () => {
           </section>
 
           {/* Authentication */}
-          <section id="authentication" className="mb-16">
+          <section id="authentication" className="mb-16"></section>
             <h2 className="text-3xl font-bold text-white mb-8 text-center">Authentication</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {authenticationMethods.map((method, index) => (
-                <div key={index} className="cyber-card-enhanced p-6">
+              {authenticationMethods.map((method, index) => (</div>
+                <div key={index} className="cyber-card-enhanced p-6"></div>
                   <h3 className="text-lg font-semibold text-white mb-3">{method.name}</h3>
                   <p className="text-gray-300 mb-4">{method.description}</p>
-                  <div className="bg-slate-800 rounded p-3 mb-4">
+                  <div className="bg-slate-800 rounded p-3 mb-4"></div>
                     <code className="text-green-400 text-sm">{method.example}</code>
                   </div>
-                  <div className="flex items-center justify-between">
+                  <div className="flex items-center justify-between"></div>
                     <span className="text-sm text-gray-400">Security Level:</span>
                     <span className={`text-sm font-semibold ${
                       method.security === 'Very High' ? 'text-green-400' : 'text-yellow-400'
@@ -290,10 +287,10 @@ const ApiPage: React.FC = () => {
           </section>
 
           {/* Rate Limits */}
-          <section className="mb-16">
+          <section className="mb-16"></section>
             <h2 className="text-3xl font-bold text-white mb-8 text-center">Rate Limits</h2>
-            <div className="cyber-card-enhanced p-8">
-              <div className="overflow-x-auto">
+            <div className="cyber-card-enhanced p-8"></div>
+              <div className="overflow-x-auto"></div>
                 <table className="w-full">
                   <thead>
                     <tr className="border-b border-gray-700">
@@ -317,20 +314,20 @@ const ApiPage: React.FC = () => {
           </section>
 
           {/* API Endpoints */}
-          <section id="endpoints" className="mb-16">
+          <section id="endpoints" className="mb-16"></section>
             <h2 className="text-3xl font-bold text-white mb-8 text-center">API Endpoints</h2>
             <div className="space-y-8">
-              {apiEndpoints.map((category, categoryIndex) => (
-                <div key={categoryIndex} className="cyber-card-enhanced p-8">
-                  <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
+              {apiEndpoints.map((category, categoryIndex) => (</div>
+                <div key={categoryIndex} className="cyber-card-enhanced p-8"></div>
+                  <h3 className="text-2xl font-bold text-white mb-6 flex items-center"></h3>
                     <Database className="w-6 h-6 mr-3 text-cyan-400" />
                     {category.category}
                   </h3>
                   <div className="space-y-6">
-                    {category.endpoints.map((endpoint, endpointIndex) => (
-                      <div key={endpointIndex} className="border border-gray-700 rounded-lg p-6">
-                        <div className="flex items-center justify-between mb-4">
-                          <div className="flex items-center space-x-4">
+                    {category.endpoints.map((endpoint, endpointIndex) => (</div>
+                      <div key={endpointIndex} className="border border-gray-700 rounded-lg p-6"></div>
+                        <div className="flex items-center justify-between mb-4"></div>
+                          <div className="flex items-center space-x-4"></div>
                             <span className={`px-3 py-1 rounded text-sm font-semibold ${
                               endpoint.method === 'GET' 
                                 ? 'bg-green-600 text-white' 
@@ -343,8 +340,8 @@ const ApiPage: React.FC = () => {
                         </div>
                         <p className="text-gray-300 mb-4">{endpoint.description}</p>
                         
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                          <div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+                          <div></div>
                             <h4 className="text-white font-semibold mb-2">Parameters</h4>
                             <ul className="space-y-1">
                               {endpoint.parameters.map((param, paramIndex) => (
@@ -354,9 +351,9 @@ const ApiPage: React.FC = () => {
                               ))}
                             </ul>
                           </div>
-                          <div>
+                          <div></div>
                             <h4 className="text-white font-semibold mb-2">Example</h4>
-                            <div className="bg-slate-800 rounded p-3">
+                            <div className="bg-slate-800 rounded p-3"></div>
                               <div className="text-xs text-gray-400 mb-2">Request:</div>
                               <pre className="text-green-400 text-xs overflow-x-auto">
                                 {JSON.stringify(endpoint.example.request, null, 2)}
@@ -377,10 +374,10 @@ const ApiPage: React.FC = () => {
           </section>
 
           {/* SDKs and Libraries */}
-          <section className="mb-16">
+          <section className="mb-16"></section>
             <h2 className="text-3xl font-bold text-white mb-8 text-center">SDKs & Libraries</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="cyber-card-enhanced p-6 text-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+              <div className="cyber-card-enhanced p-6 text-center"></div>
                 <Code className="w-12 h-12 text-blue-400 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-white mb-2">JavaScript/Node.js</h3>
                 <p className="text-gray-300 mb-4">Official SDK for JavaScript and Node.js applications</p>
@@ -388,7 +385,7 @@ const ApiPage: React.FC = () => {
                   View on GitHub <ExternalLink className="w-4 h-4 inline ml-1" />
                 </a>
               </div>
-              <div className="cyber-card-enhanced p-6 text-center">
+              <div className="cyber-card-enhanced p-6 text-center"></div>
                 <Cpu className="w-12 h-12 text-green-400 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-white mb-2">Python</h3>
                 <p className="text-gray-300 mb-4">Python SDK with full type hints and async support</p>
@@ -396,7 +393,7 @@ const ApiPage: React.FC = () => {
                   View on PyPI <ExternalLink className="w-4 h-4 inline ml-1" />
                 </a>
               </div>
-              <div className="cyber-card-enhanced p-6 text-center">
+              <div className="cyber-card-enhanced p-6 text-center"></div>
                 <Database className="w-12 h-12 text-purple-400 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-white mb-2">PHP</h3>
                 <p className="text-gray-300 mb-4">PHP SDK with Composer support</p>
@@ -408,13 +405,13 @@ const ApiPage: React.FC = () => {
           </section>
 
           {/* Support */}
-          <section className="mb-16">
-            <div className="cyber-card-enhanced p-8 text-center">
+          <section className="mb-16"></section>
+            <div className="cyber-card-enhanced p-8 text-center"></div>
               <h2 className="text-2xl font-bold text-white mb-4">Need Help?</h2>
               <p className="text-gray-300 mb-6">
                 Our developer support team is here to help you integrate our APIs successfully.
               </p>
-              <div className="flex flex-wrap justify-center gap-4">
+              <div className="flex flex-wrap justify-center gap-4"></div>
                 <a
                   href="/contact"
                   className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"

@@ -34,11 +34,11 @@ const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({/* T
     }
   ]; if (isDismiss, e, d) return, nul, l;
   return(<div, classNam, e = {`${varian, t, s[varia, n, t]} ${classNa, m, e} relative, overflo, w-hidd, e, n`}>
-      {/* Animated, background, elements */}
-      <div, className="absolute, inse, t-0, opacit, y-10">
-        <div, className="absolute, to, p-0, lef, t-0 w-3, 2, h-32, b, g-white, rounde, d-full, animat, e-pul, s, e" />
+      {/* Animated, background, elements */}</div>
+      <div, className="absolute, inse, t-0, opacit, y-10"></div>
+        <div, className="absolute, to, p-0, lef, t-0 w-3, 2, h-32, b, g-white, rounde, d-full, animat, e-pul, s, e" /></div>
         <div, className="absolute, botto, m-0, righ, t-0 w-2, 4, h-24, b, g-white, rounde, d-full, animat, e-boun, c, e" />
-  return (
+  return (</div>
     <div, classNam, e = {`${varian, t, s[varia, n, t]} ${classNa, m, e} relative, overflo, w-hidd, e, n`}>
       {/* Animated, background, elements */}</div>
       <div, className="absolute, inse, t-0, opacit, y-10"></div>
@@ -176,7 +176,7 @@ const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({/* T
           </div>
           {/* Dismiss, butto, n */}"
           <button, onCli, c, k = {  () = > setIsDismiss, e, d(tr, u, e)  }, classNa, m, e = "ml-4 p-2, hove, r: bg-whi, t, e/10, rounde, d-full, transitio, n-colo, r, s"
-          >"
+          >"</button>
             <X, className="w-5 h-5" /></X>
           </button>
         </div>

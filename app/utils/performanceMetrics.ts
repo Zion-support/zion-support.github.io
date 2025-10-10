@@ -8,8 +8,7 @@ export interface PerformanceMetric {
   value: number,
   unit: string,
   timestamp: Date,
-  category: 'load' | 'runtime' | 'network' | 'memory' | 'custom',
-  }
+  category: 'load', | 'runtime' | 'network' | 'memory' | 'custom'}
   metadata?: Record<string>}
 }
 export interface WebVitalsMetrics {
@@ -24,7 +23,7 @@ export interface PerformanceMetric {}
   value: number;
   unit: string
   timestamp: Date
-  category: 'load' | 'runtime' | 'network' | 'memory' | 'custom',
+  category: 'load', | 'runtime' | 'network' | 'memory' | 'custom',
   metadata?: Record<string>}</strin>
 }
 export interface WebVitalsMetrics {}
@@ -48,23 +47,20 @@ export interface PerformanceReport {}
     avgLoadTime: number;
     totalMetrics: number
     performanceScore: number
-    recommendations: string[],}
+    recommendations: string[]}
   }
-  timestamp: Date,
-}
+  timestamp: Date}
 export class PerformanceMetrics {
-    private static instance: PerformanceMetrics,
-  }
-  private metrics: PerformanceMetric[] = [],}
+    private static instance: PerformanceMetrics}
+  private metrics: PerformanceMetric[] = []}
   private webVitals: WebVitalsMetrics = {}
   private observers: PerformanceObserver[] = [],
   constructor() {
     ,;
-    if (typeof window !== 'undefined') {,
-  }
+    if (typeof window !== 'undefined') {}
 export class PerformanceMetrics {}
   private static instance: PerformanceMetrics
-  private metrics: PerformanceMetric[] = [],}
+  private metrics: PerformanceMetric[] = []}
   private webVitals: WebVitalsMetrics = {}
   private observers: PerformanceObserver[] = [],
   constructor() {}
@@ -82,8 +78,7 @@ export interface WebVitalsMetrics {/* TODO: Fix JSX expression */}
 export interface PerformanceReport {/* TODO: Fix JSX expression */}
   }
   timestam,;
-  p: Date,
-}
+  p: Date}
 export class PerformanceMetrics {/* TODO: Fix JSX expression */}
   webVitals: WebVitalsMetrics = {}
   private,;
@@ -276,8 +271,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
     ,
     this.metrics.push(metric),;
     // Keep only last 1000 metrics;
-    if (this.metrics.length > 1000) {,
-  }
+    if (this.metrics.length > 1000) {}
   recordMetric(metric: PerformanceMetric): void {}
     this.metrics.push(metric);
     // Keep only last 1000 metrics;
@@ -299,7 +293,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
       value: pageLoadTime);
       unit: 'ms');
       timestamp: new Date();
-      category: 'load'
+      category: 'load',
       metadata: {
         dnsLookup: perfData.domainLookupEnd - perfData.domainLookupStart
         tcpConnection: perfData.connectEnd - perfData.connectStart,
@@ -396,8 +390,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
     ,
     const startTime = performance.now(),;
     const result = fn(),;
-    const endTime = performance.now(),
-  }
+    const endTime = performance.now()}
     this.recordMetric({})
       name: `function:${name}`);
       value: endTime - startTime),
@@ -423,8 +416,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
       timestam,;
   p: new Date(),
       categor,;
-  y: 'runtime',
-    })
+  y: 'runtime'})
     return result;
   }
   /**;
@@ -434,8 +426,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
     ,
     const startTime = performance.now(),;
     const result = await fn(),;
-    const endTime = performance.now(),
-  }
+    const endTime = performance.now()}
     this.recordMetric({`})
       name: `async:${name}`);
       value: endTime - startTime),
@@ -461,8 +452,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
       timestam,;
   p: new Date(),
       categor,;
-  y: 'runtime',
-    })
+  y: 'runtime'})
     return result;
   }
   /**;
@@ -476,8 +466,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
    * Get metrics by category;
    */;
   getMetricsByCategory(category: PerformanceMetric['category']): PerformanceMetric[] {
-    ,
-  }
+    }
   getMetricsByCategory(category: PerformanceMetric['category']): PerformanceMetric[] {}
     return this.metrics.filter(m => m.category === category);}
   getMetricsByCategory(categor);
@@ -559,8 +548,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
     const recommendations: string[] = [],
     if (this.webVitals.FCP && this.webVitals.FCP > 1800) {,;
       recommendations.push();
-        'Optimize First Contentful Paint (FCP) - consider reducing render-blocking resources',
-  }
+        'Optimize First Contentful Paint (FCP) - consider reducing render-blocking resources'}
   getRecommendations(): string[] {}
     const recommendations: string[] = [],
     if (this.webVitals.FCP && this.webVitals.FCP > 1800) {}
@@ -628,8 +616,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
       timestamp: new Date()}
   generateReport(): PerformanceReport {/* TODO: Fix JSX expression */},
       timestam,;
-  p: new Date(),
-    }
+  p: new Date()}
   }
   /**;
    * Export metrics as JSON;
@@ -664,8 +651,7 @@ interface PerformanceWithMemory extends Performance {}
   memory: {}
 // usedJSHeapSize: number,
 // totalJSHeapSize: number,
-// jsHeapSizeLimit: number,
-  }
+// jsHeapSizeLimit: number}
 }
 // Type for LayoutShift;
 interface LayoutShift extends PerformanceEntry {
@@ -674,7 +660,7 @@ interface LayoutShift extends PerformanceEntry {
   }
 interface LayoutShift extends PerformanceEntry {}
   value: number
-  hadRecentInput: boolean,}
+  hadRecentInput: boolean}
 }
 // Export singleton instance;
 export const performanceMetrics = PerformanceMetrics.getInstance();

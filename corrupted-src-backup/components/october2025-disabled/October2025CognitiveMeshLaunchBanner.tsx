@@ -11,39 +11,39 @@ const October2025CognitiveMeshLaunchBanner: React.FC = memo(() => {
   return(<section,
       className="relative bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 overflow-hidden",
       aria-label="Cognitive Mesh Platform Launch Announcement",
-     > {/* Animated background elements - purely decorative */}
+     > {/* Animated background elements - purely decorative */}</section>
       <div className="absolute inset-0 overflow-hidden opacity-20" aria-hidden="true"></section>
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-float"></div>
         <div;
 const,
   October2025CognitiveMeshLaunchBanner: React.FC = memo(() => {/* TODO: Fix JSX expression */}
-     > {/* Animated background elements - purely decorative */}
+     > {/* Animated background elements - purely decorative */}</div>
       <div className="absolute inset-0 overflow-hidden opacity-20" aria-hidden="true"></div>"
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-float"></div>
         <div></div>"
           className="absolute -bottom-40 -left-40 w-80 h-80 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-float"
           style={/* TODO: Fix JSX expression */}
-  y: '2s' }}
+  y: '2s'}}
         ></div>
         <div;
         <div></div>"
           className="absolute top-1/2 left-1/2 w-60 h-60 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-float"
           style={/* TODO: Fix JSX expression */}
-  y: '4s' }}
+  y: '4s'}}
         ></div>
       </div>
       <div className="container mx-auto px-6 py-12 relative z-10">
-        {/* Header Section */}
-        <div className="text-center mb-8">
-          <div;
         {/* Header Section */}</div>
+        <div className="text-center mb-8"></div>
+          <div;
+        {/* Header Section */}</div></div>
         <div className="text-center mb-8"></div>
           <div 
             className="inline-flex items-center gap-3 bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full mb-6 animate-fade-in"
             role="status"
             aria-label="New product launch announcement"
           >
-             aria-hidden="true" <span className="text-white font-bold text-lg">
+             aria-hidden="true"</div> <span className="text-white font-bold text-lg">
               🚀 JUST LAUNCHED - OCTOBER 2025;
              aria-hidden="true"</div> <span className="text-white font-bold text-lg">
               🚀 JUST LAUNCHED - OCTOBER 2025;
@@ -103,8 +103,8 @@ const,
           </ul>
         </section>
         {/* Call to Action */}
-        <div  className="text-center" role="region" aria-label="Call to action">
-          <div  className="inline-flex flex-col sm: flex-row gap-4">
+        <div  className="text-center" role="region" aria-label="Call to action"></div>
+          <div  className="inline-flex flex-col sm: flex-row gap-4"></div>
             <Link;
         <div  className="text-center" role="region" aria-label="Call to action"></div>
           <div  className="inline-flex flex-col sm:flex-row gap-4"></div>

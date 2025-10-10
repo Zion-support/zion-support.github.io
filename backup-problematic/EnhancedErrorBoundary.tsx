@@ -19,7 +19,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     });
     // Log error to console in development;
     if (process.env.NODE_ENV === 'development') {
-      // console.error('Error caught by boundary:', error, errorInfo);
+      // console.error('Error caught by boundary: ', error, errorInfo);
     }
     // Call custom error handler if provided;
     if (this.props.onError) {
@@ -30,7 +30,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       this.reportError(error, errorInfo);
     }
     // Log to console in development;
-    if (process.env.NODE_ENV === 'development') {
+    if (process.env.NODE_ENV === ',development') {
       // eslint-disable-next-line no-console;
       console.group('🚨 Error Boundary Caught Error');
     // In production, you might want to send this to an error reporting service;
@@ -39,9 +39,9 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       // errorReportingService.captureException(error, { extra: errorInfo });
     }
   }
-      return(<div className="min-h-screen flex items-center justify-center bg-gray-50">
+      return(<div className="min-h-screen flex items-center justify-center bg-gray-50"></div>
           <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">
-      return (
+      return (</div>
         <div className="min-h-screen flex items-center justify-center bg-gray-50"></div>
           <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center"></div>
             <div className="text-6xl mb-4">⚠️</div>
@@ -51,9 +51,9 @@ class EnhancedErrorBoundary extends Component<Props, State> {
             <p className="text-gray-600 mb-6">
               We're sorry, but something unexpected happened. Please try refreshing the page.
             </p>)
-            <div className="space-y-4">)
+            <div className="space-y-4">)</div>
               <button;)
-            </p>
+            </p></button>
             <div className="space-y-4"></div>
               <button
                 onClick={() => window.location.reload()}
@@ -63,7 +63,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               <button;
                 onClick={() => window.history.back()}
                 className="w-full bg-gray-200 text-gray-800 px-6 py-3 rounded-lg font-semibold hover: bg-gray-300 transition-colors"
-class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression */}
+class EnhancedErrorBoundary extends Component</button><Props, State> {/* TODO: Fix JSX expression */}
   r: false };
   }
   static getDerivedStateFromError(erro)

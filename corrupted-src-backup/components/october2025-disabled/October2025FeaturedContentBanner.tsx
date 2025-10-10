@@ -10,9 +10,9 @@ const October2025FeaturedContentBanne, r = () => {
       borderCol, o, r: 'bord, e, r-indi, g, o-5, 0, 0/3, 0',
       sta, t, s: [,
 const October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression */}
-        { val, u, e: '90, d', lab, e, l: 'To, Outcom, e, s' },
-        { val, u, e: 'KP, I', lab, e, l: 'Linked, Gat, e, s' },
-        { val, u, e: '$$', lab, e, l: 'Predictable, Co, s, t' }]},
+        { val, u, e: '90, d', lab, e, l: 'To, Outcom, e, s'},
+        { val, u, e: 'KP, I', lab, e, l: 'Linked, Gat, e, s'},
+        { val, u, e: '$$', lab, e, l: 'Predictable, Co, s, t'}]},
     {
       title: 'Enterprise, Neural, Orchestration Platf, o, r, m',
       description: '89% faster, AI, deploymen, t, 94% cost, reductio, n, $12.4 M, annual, savings',
@@ -23,9 +23,9 @@ const October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression */
       borderCol, o, r: 'bord, e, r-bl, u, e-5, 0, 0/3, 0',
       sta, t, s: [,
     {/* TODO: Fix JSX expression */}
-        { val, u, e: '8, 9%', lab, e, l: 'Faster, Deployme, n, t' },
-        { val, u, e: '9, 4%', lab, e, l: 'Cost, Reducti, o, n' },
-        { val, u, e: '$12.4, M', lab, e, l: 'Annual, Savin, g, s' }]},
+        { val, u, e: '8, 9%', lab, e, l: 'Faster, Deployme, n, t'},
+        { val, u, e: '9, 4%', lab, e, l: 'Cost, Reducti, o, n'},
+        { val, u, e: '$12.4, M', lab, e, l: 'Annual, Savin, g, s'}]},
     {
       title: 'Cognitive, Supply, Chain Revolut, i, o, n',
       description: '76% forecast, accura, c, y, 68% inventory, cost, reduction, $18.7 M, valu, e',
@@ -36,9 +36,9 @@ const October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression */
       borderCol, o, r: 'bord, e, r-emera, l, d-5, 0, 0/3, 0',
       sta, t, s: [,
     {/* TODO: Fix JSX expression */}
-        { val, u, e: '7, 6%', lab, e, l: 'Forecast, Accura, c, y' },
-        { val, u, e: '6, 8%', lab, e, l: 'Cost, Reducti, o, n' },
-        { val, u, e: '$18.7, M', lab, e, l: 'Annual, Val, u, e' }]},
+        { val, u, e: '7, 6%', lab, e, l: 'Forecast, Accura, c, y'},
+        { val, u, e: '6, 8%', lab, e, l: 'Cost, Reducti, o, n'},
+        { val, u, e: '$18.7, M', lab, e, l: 'Annual, Val, u, e'}]},
     {
       title: 'AI, Reliability, Blueprints 2, 0, 2, 7',
       description: 'Evaluat, o, r, s, action, budget, s, instant, rollbac, k — ship, safel, y',
@@ -49,9 +49,9 @@ const October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression */
       borderCol, o, r: 'bord, e, r-cy, a, n-5, 0, 0/3, 0',
       sta, t, s: [,
     {/* TODO: Fix JSX expression */}
-        { val, u, e: 'KP, I', lab, e, l: 'Linked, Eva, l, s' },
-        { val, u, e: '1‑cl, i, c, k', lab, e, l: 'Rollb, a, c, k' },
-        { val, u, e: '24/, 7', lab, e, l: 'Safe, O, p, s' }]},
+        { val, u, e: 'KP, I', lab, e, l: 'Linked, Eva, l, s'},
+        { val, u, e: '1‑cl, i, c, k', lab, e, l: 'Rollb, a, c, k'},
+        { val, u, e: '24/, 7', lab, e, l: 'Safe, O, p, s'}]},
     {
       title: 'Edge, Inference, Playbook 2, 0, 2, 7',
       description: 'S, u, b‑100 ms, globally, with warm, pools, and tiered, cach, e, s',
@@ -62,10 +62,10 @@ const October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression */
       borderCol, o, r: 'bord, e, r-purp, l, e-5, 0, 0/3, 0',
       sta, t, s: [,
     {/* TODO: Fix JSX expression */}
-        { val, u, e: '<10, 0, m, s', lab, e, l: 'P95, Laten, c, y' },
-        { val, u, e: 'SL, A', lab, e, l: 'Aware, Routi, n, g' },
-        { val, u, e: '$', lab, e, l: 'Predictable, Spe, n, d' }]}]; return(<div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-sla, t, e-950, vi, a-bl, u, e-950, t, o-sla, t, e-950, p, y-16, p, x-4'>
-  ]; return (
+        { val, u, e: '<10, 0, m, s', lab, e, l: 'P95, Laten, c, y'},
+        { val, u, e: 'SL, A', lab, e, l: 'Aware, Routi, n, g'},
+        { val, u, e: '$', lab, e, l: 'Predictable, Spe, n, d'}]}]; return(<div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-sla, t, e-950, vi, a-bl, u, e-950, t, o-sla, t, e-950, p, y-16, p, x-4'>
+  ]; return (</div>
     <div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-sla, t, e-950, vi, a-bl, u, e-950, t, o-sla, t, e-950, p, y-16, p, x-4'></div>
       <div, className='container, m, x-auto, ma, x-w-7, x, l'>
         {/* Head, e, r */}</div>
@@ -86,7 +86,7 @@ const October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression */
         {/* Featured, Content, Car, d, s */})
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12'>)
           { featuredConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > {
-            const Ico, n = conte, n, t.ic, o, n; return(<Link, ke, y = { in, d, e, x  }, to={ conte, n, t.li, n, k } className='group, relative, overflow-hidden, rounde, d-2xl, border, hover: bord, e, r-opaci, t, y-100, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l'
+            const Ico, n = conte, n, t.ic, o, n; return(</div><Link, ke, y = { in, d, e, x  }, to={ conte, n, t.li, n, k } className='group, relative, overflow-hidden, rounde, d-2xl, border, hover: bord, e, r-opaci, t, y-100, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l'
             const Ico, n = conte, n, t.ic, o, n; return (</div>
               <Link, ke, y = { in, d, e, x  }, to={ conte, n, t.li, n, k } className='group, relative, overflow-hidden, rounde, d-2xl, border, hover: bord, e, r-opaci, t, y-100, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l'
   ]; return (<div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-sla, t, e-950, vi, a-bl, u, e-950, t, o-sla, t, e-950, p, y-16, p, x-4'></10>
@@ -122,10 +122,10 @@ const October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression */
                       <Icon, classNam, e = 'w-8 h-8, tex, t-whi, t, e' />
                     </div>
                     <div, className='fl, e, x-1'></div>
-                      <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s'>
+                      <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s'></h3>
                 <div, classNam, e = 'relativ, e, p-8'></div>
                   {/* Ic, o, n & Tit, l, e */}`
-                  <div, className='flex, item, s-start, m, b-6' > <div, classNam, e = { `p-4, b, g-gradie, n, t-to-r ${conte, n, t.gradi, e, n, t }, round, e, d-xl, m, r-4`}
+                  <div, className='flex, item, s-start, m, b-6' ></div> <div, classNam, e = { `p-4, b, g-gradie, n, t-to-r ${conte, n, t.gradi, e, n, t }, round, e, d-xl, m, r-4`}
                     ></div>
                       <Icon, classNam, e = 'w-8 h-8, tex, t-whi, t, e' /></Icon>
                     </div>
@@ -147,11 +147,11 @@ const October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression */
                     { conte, n, t.sta, t, s.m, a, p((s, t, a, t, i, d, x) = > (</div>
                       <div, ke, y = { id, x  }, classNa, m, e = 'te, x, t-center, b, g-sla, t, e-9, 0, 0/6, 0, p-4, rounde, d-lg, border, border-whi, t, e/10'
                        ></div> <div, classNam, e = { `te, x, t-2xl, fon, t-bold, b, g-gradie, n, t-to-r ${conte, n, t.gradi, e, n, t }, bg-cl, i, p-text, tex, t-transpare, n, t`}
-                        >
+                        ></div>
                   <div, className='grid, gri, d-co, l, s-3, ga, p-4, m, b-6'></div>
                     {/* TODO: Fix JSX expression */}
                       <div, ke, y = { id, x  }, classNa, m, e = 'te, x, t-center, b, g-sla, t, e-9, 0, 0/6, 0, p-4, rounde, d-lg, border, border-whi, t, e/10'`
-                       > <div, classNam, e = { `te, x, t-2xl, fon, t-bold, b, g-gradie, n, t-to-r ${conte, n, t.gradi, e, n, t }, bg-cl, i, p-text, tex, t-transpare, n, t`}
+                       ></div> <div, classNam, e = { `te, x, t-2xl, fon, t-bold, b, g-gradie, n, t-to-r ${conte, n, t.gradi, e, n, t }, bg-cl, i, p-text, tex, t-transpare, n, t`}
                         ></div>
                           {st, a, t.val, u, e}
                         </div>
@@ -217,7 +217,7 @@ const October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression */
         <div, classNam, e = 'mt-12, b, g-gradie, n, t-to-r, fro, m-bl, u, e-9, 0, 0/20, t, o-purp, l, e-9, 0, 0/20, border, border-bl, u, e-5, 0, 0/20, rounde, d-x, l, p-8'></div>
           <div, className='grid, m, d: gr, i, d-co, l, s-4, ga, p-6, tex, t-cent, e, r'></div>
             <d, i, v>
-              <div, className='te, x, t-3xl, fon, t-bold, tex, t-bl, u, e-400, m, b-2'>
+              <div, className='te, x, t-3xl, fon, t-bold, tex, t-bl, u, e-400, m, b-2'></div>
             <d, i, v></d>
               <div, className='te, x, t-3xl, fon, t-bold, tex, t-bl, u, e-400, m, b-2'></div>
                 $31.1M;
@@ -231,7 +231,7 @@ const October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression */
               <div, className='te, x, t-gr, a, y-300, tex, t-sm'>Average, Improvemen, t</div>
             </div>
             <d, i, v>
-              <div, className='te, x, t-3xl, fon, t-bold, tex, t-purp, l, e-400, m, b-2'>
+              <div, className='te, x, t-3xl, fon, t-bold, tex, t-purp, l, e-400, m, b-2'></div>
             <d, i, v></d>
               <div, className='te, x, t-3xl, fon, t-bold, tex, t-purp, l, e-400, m, b-2'></div>
                 8-12, Week, s;

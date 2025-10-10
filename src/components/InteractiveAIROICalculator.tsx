@@ -11,14 +11,14 @@ const,
   const calculateROI = () => {
     return Math.max(0, roi)
   }return (
-    <section className='bg-white py-16 rounded-2xl shadow-lg'>
-      <div className='container mx-auto px-4'>
+    <section className='bg-white py-16 rounded-2xl shadow-lg'></section>
+      <div className='container mx-auto px-4'></div>
         <h2 className='text-4xl font-bold text-center text-gray-900 mb-8'>
           AI ROI Calculator</span>
-        <div className='max-w-4xl mx-auto'>
-          <div className='grid md:grid-cols-2 gap-8'>
-            <div className='space-y-6'>
-              <div>
+        <div className='max-w-4xl mx-auto'></div>
+          <div className='grid md:grid-cols-2 gap-8'></div>
+            <div className='space-y-6'></div>
+              <div></div>
                 <label className='block text-sm font-medium text-gray-700 mb-2'>
                   Current Annual Cost ($)
                 </label>

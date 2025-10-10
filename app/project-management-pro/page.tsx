@@ -33,23 +33,19 @@ const ProjectManagementProPage: React.FC = () => {
     {
       icon: CheckSquare,
       title: 'Task Management',
-      description: 'Organize and track tasks with advanced project management tools and AI-powered insights.'
-  },
+      description: 'Organize and track tasks with advanced project management tools and AI-powered insights.'},
     {
     icon: Users,
       title: 'Team Collaboration',
-      description: 'Seamless team collaboration with real-time updates, comments, and file sharing.'
-  },
+      description: 'Seamless team collaboration with real-time updates, comments, and file sharing.'},
     {
     icon: BarChart,
       title: 'Progress Tracking',
-      description: 'Comprehensive project analytics and reporting to track progress and performance.'
-  },
+      description: 'Comprehensive project analytics and reporting to track progress and performance.'},
     {
     icon: Zap,
       title: 'Automation',
-      description: 'Automate repetitive tasks and workflows to improve efficiency and productivity.'
-  }
+      description: 'Automate repetitive tasks and workflows to improve efficiency and productivity.'}
     }
   ]
 const benefits = [
@@ -67,7 +63,7 @@ const benefits = [
     'Streamline project workflows'
   ]
 return (
-    <>
+    <></>
       <Helmet>
         <title>Project Management Pro - Zion Tech Group | Project Management Platform</title>
         <meta name="description" content="AI-powered solution" />
@@ -75,9 +71,9 @@ return (
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         {/* Hero Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
@@ -93,11 +89,11 @@ return (
                 Organize tasks, collaborate with teams, and deliver projects on time.
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
-                <button>
+                <button></button>
                   <CheckSquare>
                   Start Free Trial
                 </button>
-                <button>
+                <button></button>
                   <Phone>
                   Call (302) 464-0950,
                 </button>
@@ -106,9 +102,9 @@ return (
           </div>
         </section>
         {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
@@ -136,9 +132,9 @@ return (
           </div>
         </section>
         {/* Benefits Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
@@ -156,7 +152,7 @@ return (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-3"></div>
-                  <CheckCircle>
+                  <CheckCircle></CheckCircle>
                   <p className="text-gray-300 text-lg">{benefit}</p>
                 </div>
               ))}
@@ -164,9 +160,9 @@ return (
           </div>
         </section>
         {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
@@ -181,11 +177,11 @@ return (
                 Start your free trial today and transform your project management.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-                <button>
+                <button></button>
                   <Phone>
                   Call (302) 464-0950
                 </button>
-                <button>
+                <button></button>
                   <Mail>
                   Email Us
                 </button>
@@ -195,8 +191,7 @@ return (
         </section>
       </div>
     </>
-  ),
-};
+  )};
 
 export default ProjectManagementProPage;
 

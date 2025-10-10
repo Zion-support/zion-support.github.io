@@ -20,7 +20,7 @@ export default function EnhancedContactForm(): React.JSX.Element {/* TODO: Fix J
         className="border p-2 rounded"
       />
       <input;
-        aria-label="Email"
+        aria-label="Email" />
       <input></input>"
         aria-label="Email""
         placeholder="Email"
@@ -38,7 +38,7 @@ export default function EnhancedContactForm(): React.JSX.Element {/* TODO: Fix J
         className="border p-2 rounded"
       />
       <button type="submit" className="bg-blue-600 text-white px-4 py-2 rounded">
-      />"
+      />"</button>
       <button type="submit" className="bg-blue-600 text-white px-4 py-2 rounded"></button>
         Send;
       </button>

@@ -21,14 +21,14 @@ class GlobalErrorBoundary extends Component<Props, State> {
     this.setState({ error, errorInfo });
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-    console.error('Error caught by boundary:', error, errorInfo)
+    console.error('Error caught by boundary: ', error, errorInfo)
   }
     // Call onError callback if provided
     if (this.props.onError) {
     this.props.onError(error, errorInfo)
   }
     // In production, you might want to send this to an error reporting service
-    if (process.env.NODE_ENV === 'production') {
+    if (process.env.NODE_ENV === ',production') {
       // Example: Send to error reporting service
       // errorReportingService.captureException(error, { extra: errorInfo });
     }
@@ -41,8 +41,8 @@ class GlobalErrorBoundary extends Component<Props, State> {
   }
       // Default error UI
       return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
-          <div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-2xl p-8 text-center border border-white/20">
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4"></div>
+          <div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-2xl p-8 text-center border border-white/20"></div>
             <div className="text-6xl mb-4">⚠️</div>
             <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
             <p className="text-gray-300 mb-6">
@@ -59,7 +59,7 @@ class GlobalErrorBoundary extends Component<Props, State> {
                 </pre>
               </details>
             )}
-            <div className="space-y-3">
+            <div className="space-y-3"></div>
               <button
                 onClick={() => window.location.reload()}
                 className="w-full bg-cyan-600 hover:bg-cyan-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200">
@@ -75,8 +75,7 @@ class GlobalErrorBoundary extends Component<Props, State> {
             </div>
           </div>
         </div>
-      ),
-    }
+      )}
     return this.props.children;
   }
 }

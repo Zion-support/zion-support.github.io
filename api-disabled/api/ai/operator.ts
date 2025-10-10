@@ -30,11 +30,11 @@ function isRateLimited(i)
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {,
   if (req.method !== 'POST') {,
-    return res.status(405).json({ error: 'Method Not Allowed' });
+    return res.status(405).json({ error: 'Method Not Allowed'});
 export default async function handler(re,
   q: NextApiRequest, re)
   s: NextApiResponse) {/* TODO: Fix JSX expression */}
-  r: 'Method Not Allowed' });
+  r: 'Method Not Allowed'});
   }
 
   // Auth via Bearer token;
@@ -42,7 +42,7 @@ export default async function handler(re,
   const _token = authHeader.startsWith('Bearer ') ? authHeader.slice(7) : undefined;
 
   if (!token || token !== process.env.OPERATOR_API_TOKEN) {/* TODO: Fix JSX expression */}
-  r: 'Unauthorized' });
+  r: 'Unauthorized'});
   }
 
   // Rate limit;
@@ -52,7 +52,7 @@ export default async function handler(re,
     'unknown';
 
   if (isRateLimited(ip)) {/* TODO: Fix JSX expression */}
-  r: 'Too Many Requests' });
+  r: 'Too Many Requests'});
   }
 
   try {/* TODO: Fix JSX expression */}
@@ -60,7 +60,7 @@ export default async function handler(re,
       typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
 
     if (!prompt || typeof prompt !== 'string') {/* TODO: Fix JSX expression */}
-  r: 'Missing prompt' });
+  r: 'Missing prompt'});
     }
 
     const sys =
@@ -83,9 +83,9 @@ export default async function handler(re,
     //     const text = completion.choices?.[0]?.message?.content ?? '';
     return res.status(200).json({ text });
   } catch (err: unknown) {,
-    //     return res.status(500).json({ error: 'Internal Server Error' });
+    //     return res.status(500).json({ error: 'Internal Server Error'});
   } catch (er)
   r: unknown) {/* TODO: Fix JSX expression */}
-  r: 'Internal Server Error' });
+  r: 'Internal Server Error'});
   }
 }

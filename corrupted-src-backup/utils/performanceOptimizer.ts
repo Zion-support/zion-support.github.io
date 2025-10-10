@@ -96,9 +96,9 @@ export class PerformanceOptimizer {/* TODO: Fix JSX expression */}
     if (typeof document === 'undefined') return;
 
     const hints = [
-      { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
-      { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
-      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+      { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com'},
+      { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com'},
+      { rel: 'preconnect', href: 'https://fonts.googleapis.com'},
       {
         rel: 'preconnect',
         href: 'https://fonts.gstatic.com',

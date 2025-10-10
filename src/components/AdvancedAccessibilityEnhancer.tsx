@@ -105,11 +105,11 @@ const,
   }, []);
   // Skip links;
   const addSkipLinks = useCallback(() => {/* TODO: Fix JSX expression */}
-  t: 'Skip to main content' },
+  t: 'Skip to main content'},
       {/* TODO: Fix JSX expression */}
-  t: 'Skip to navigation' },
+  t: 'Skip to navigation'},
       {/* TODO: Fix JSX expression */}
-  t: 'Skip to footer' }
+  t: 'Skip to footer'}
     ];
     const skipLinksContainer = document.createElement('div');
     skipLinksContainer.className = 'skip-links';

@@ -12,7 +12,7 @@ const CloudServicesPage: React.FC = () => {
   O: Add items
 ],
     {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   ico,
   n: Cloud,
@@ -24,7 +24,7 @@ const CloudServicesPage: React.FC = () => {
   s: ['AWS Migration', 'Azure Migration', 'Google Cloud Migration', 'Zero Downtime']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   ico,
   n: Shield,
@@ -36,7 +36,7 @@ const CloudServicesPage: React.FC = () => {
   s: ['Identity Management', 'Data Encryption', 'Compliance', 'Threat Detection']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   ico,
   n: Zap,
@@ -48,7 +48,7 @@ const CloudServicesPage: React.FC = () => {
   s: ['Load Balancing', 'Resource Optimization', 'Cost Management', 'Performance Monitoring']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   ico,
   n: BarChart,
@@ -73,17 +73,17 @@ const CloudServicesPage: React.FC = () => {
   ];
   return (<div>Coming Soon</div>)
   )
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
+      <main className="container mx-auto px-4 py-16 pt-24"></main>
+        <section className="text-center mb-16"></section>
           <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">
 // Cloud Services;
           </h1>
           <p className="text-xl text-cyan-400 mb-8 font-medium">
             Coming Soon
   </
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <a
               href="tel:+13024640950" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
 // >
@@ -143,7 +143,7 @@ const CloudServicesPage: React.FC = () => {
           <p className="text-gray-300 mb-8 max-w-2xl mx-auto"></p>
 // Let our cloud experts help you migrate, optimize, and secure your cloud infrastructure.
           </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             <a
               href="tel:+13024640950" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
 // >
@@ -159,6 +159,5 @@ const CloudServicesPage: React.FC = () => {
       </main>
       <Footer /></Footer>
     </div>
-  ),
-}
+  )}
 export default CloudServicesPage;

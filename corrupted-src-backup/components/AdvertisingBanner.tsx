@@ -14,7 +14,7 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({,
       style={{
         backgroundColor,
         color: textColor,
-        padding: '2rem'
+        padding: '2rem',
         borderRadius: '0.5rem')
         margin: '1rem 0')
         display: 'flex')
@@ -22,8 +22,8 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({,
         gap: '2rem'}
       }}
     >
-      {imageUrl && (
-        <div className="banner-image">
+      {imageUrl && (</div>
+        <div className="banner-image"></div>
           <img;
       {imageUrl && (</div>
         <div className="banner-image"></div>
@@ -35,7 +35,7 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({,
               height: 'auto')}
               borderRadius: '0.25rem')}
 const,
-  AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({/* TODO: Fix JSX expression */})
+  AdvertisingBanner: React.FC /><AdvertisingBannerProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
       }}
     >
@@ -48,7 +48,7 @@ const,
         </div>
       )}
       <div className="banner-content" style={{ flex: 1 }}></div>
-        <h2 style={{ margin: '0 0 1rem 0', fontSize: '1.5rem' }}>{title}</h2>
+        <h2 style={{ margin: '0 0 1rem 0', fontSize: '1.5rem'}}>{title}</h2>
         <p style={{ margin: '0 0 1.5rem 0', fontSize: '1rem', opacity: 0.9 }}>{description}</p>
         <a;
           href={ctaUrl}
@@ -70,7 +70,7 @@ const,
       <div className="banner-content" style={/* TODO: Fix JSX expression */}
   x: 1 }}></div>
         <h2 style={/* TODO: Fix JSX expression */}
-  e: '1.5rem' }}>{title}</h2>
+  e: '1.5rem'}}>{title}</h2>
         <p style={/* TODO: Fix JSX expression */}
   y: 0.9 }}>{description}</p>
         <a></a>

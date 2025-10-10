@@ -10,7 +10,7 @@ export class SecurityManager {
  */
   }
 export class SecurityManager {}
-  private static instance: SecurityManager,}
+  private static instance: SecurityManager}
   private constructor() {}
   static getInstance(): SecurityManager {}
     if (!SecurityManager.instance) {}
@@ -52,13 +52,12 @@ export class SecurityManager {/* TODO: Fix JSX expression */}
     ,
     try {,;
       const parsed = new URL(url),;
-      if (!['http:', 'https: '].includes(parsed.protocol)) {,
-  }
+      if (!['http: ', ',https: '].includes(parsed.protocol)) {}
   sanitizeUrl(url: string): string {}
     try {}
       const parsed = new URL(url);
-      if (!['http:', 'https:'].includes(parsed.protocol)) {}
-        throw new Error('Invalid protocol');}
+      if (![',http: ', ',https: '].includes(parsed.protocol)) {}
+        throw new Error(',Invalid protocol');}
       }
       return parsed.toString();
     } catch {}
@@ -76,8 +75,7 @@ export class SecurityManager {/* TODO: Fix JSX expression */}
   generateSecureToken(length: number = 32): string {
     ,
     const array = new Uint8Array(length),;
-    if (typeof window !== 'undefined' && window.crypto) {,
-  }
+    if (typeof window !== 'undefined' && window.crypto) {}
       window.crypto.getRandomValues(array);}
     } else {
     // Fallback for Node.js environment

@@ -99,12 +99,12 @@ const initializeErrorTracking = (;
         message: event.message,
         filename: event.filename,
         lineno: event.lineno,
-        colno: event.colno,) => {
+        colno: event.colno) => {
   return (
     $3
   )
   }
-        error: event.error?.stack,}
+        error: event.error?.stack}
       })
     })
 // Track unhandled promise rejections;
@@ -132,12 +132,12 @@ const initializeUserBehaviorTracking = (;
     // Track page views;
     trackEvent('page_view', 'page_view', {
     page_title: document.title,
-      page_location: window.location.href,) => {
+      page_location: window.location.href) => {
   return (
     $3
   )
   }
-      page_path: window.location.pathname,}
+      page_path: window.location.pathname}
     })
 // Track scroll depth;
 
@@ -195,12 +195,12 @@ const trackEvent = (;
     if (typeof window !== 'undefined' && 'gtag' in window) {
     (window as any).gtag('event', action, {
         event_category: category,
-        event_label: typeof value === 'object' ? JSON.stringify(value) : value,) => {
+        event_label: typeof value === 'object' ? JSON.stringify(value) : value) => {
   return (
     $3
   )
   }
-        value: typeof value === 'number' ? value : undefined,}
+        value: typeof value === 'number' ? value : undefined}
       })
     }
   }
@@ -220,7 +220,7 @@ export default Analytics;
 // Analytics Provider for context;
 export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     return (
-    <>
+    <></>
       <Analytics />
   }
       {children}

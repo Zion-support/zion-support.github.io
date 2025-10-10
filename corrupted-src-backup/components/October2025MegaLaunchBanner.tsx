@@ -48,10 +48,10 @@ const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
     {/* TODO: Fix JSX expression */}
     }
   ];
-  return(<div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-indi, g, o-600, tex, t-white, rounde, d-2x, l, p-8">
-      <div, className="te, x, t-center, m, b-8">
+  return(<div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-indi, g, o-600, tex, t-white, rounde, d-2x, l, p-8"></div>
+      <div, className="te, x, t-center, m, b-8"></div>
         <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-4">
-  return (
+  return (</div>
     <div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-indi, g, o-600, tex, t-white, rounde, d-2x, l, p-8"></div>
       <div, className="te, x, t-center, m, b-8"></div>
         <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-4"></div>
@@ -68,9 +68,9 @@ const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
           <Sparkles, className="w-8 h-8, tex, t-yell, o, w-400, animat, e-pul, s, e  /></Sparkles>"
           <h2, className="te, x, t-4xl, fon, t-bo, l, d">OCTOBER, 2025, MEGA LAUN, C, H</h2>"
           <Sparkles, className="w-8 h-8, tex, t-yell, o, w-400, animat, e-pul, s, e  /></Sparkles>"
-    <div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-indi, g, o-600, tex, t-white, rounde, d-2x, l, p-8">";"
-      <div, className="te, x, t-center, m, b-8">";"
-        <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-4">";"
+    <div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-indi, g, o-600, tex, t-white, rounde, d-2x, l, p-8">";"</div>
+      <div, className="te, x, t-center, m, b-8">";"</div>
+        <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-4">";"</div>
           <Sparkles, className="w-8 h-8, tex, t-yell, o, w-400, animat, e-pul, s, e" />";"
           <h2, className="te, x, t-4xl, fon, t-bo, l, d">OCTOBER, 2025, MEGA LAUN, C, H</h2>";"
           <Sparkles, className="w-8 h-8, tex, t-yell, o, w-400, animat, e-pul, s, e" />";
@@ -83,10 +83,10 @@ const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
         </p>
       </d, i, v>
       <div, className="grid, m, d: gr, i, d-co, l, s-2 l;
-  g:gr, i, d-co, l, s-3, ga, p-6, m, b-8">")
+  g:gr, i, d-co, l, s-3, ga, p-6, m, b-8">")</div>
       <div, className="grid, m, d: gr, i, d-co, l, s-2 l;)
   g:gr, i, d-co, l, s-3, ga, p-6, m, b-8">";)
-        {megaArticl, e, s.m, a, p((artic, l, e, ind, e, x) => (
+        {megaArticl, e, s.m, a, p((artic, l, e, ind, e, x) => (</div>
           <Li, n, k;
       <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-3, ga, p-6, m, b-8">"</div>
@@ -99,7 +99,7 @@ const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
             classNa, m, e="bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hov, e;
       </d, i, v>"
       <div, className="grid, m, d: gr, i, d-co, l, s-2 l,"
-  g:gr, i, d-co, l, s-3, ga, p-6, m, b-8">""
+  g:gr, i, d-co, l, s-3, ga, p-6, m, b-8">""</div>
       <div, className="grid, m, d: gr, i, d-co, l, s-2 l,"
   g:gr, i, d-co, l, s-3, ga, p-6, m, b-8">";
         {/* TODO: Fix JSX expression */}
@@ -114,14 +114,14 @@ const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
           </Li, n, k>)
         ))}
       </d, i, v>
-      <div, className="te, x, t-cent, e, r">";
+      <div, className="te, x, t-cent, e, r">";</div>
         <Li, n, k;
       <div, className="te, x, t-cent, e, r">";</div>
         <Li, n, k
   to="/bl, o, g"
           classNa, m, e="bg-white, tex, t-purp, l, e-600, hove, r: bg-purp, l, e-50, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, tex, t-lg, inlin, e-flex, item, s-center, ga, p-2, transitio, n-all, duratio, n-300, hov, e;
       </d, i, v>"
-      <div, className="te, x, t-cent, e, r">";
+      <div, className="te, x, t-cent, e, r">";</div>
         <Li, n, k;"
   to="/bl, o, g""
           classNa, m, e="bg-white, tex, t-purp, l, e-600, hove, r: bg-purp, l, e-50, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, tex, t-lg, inlin, e-flex, item, s-center, ga, p-2, transitio, n-all, duratio, n-300, hov, e,"

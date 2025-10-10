@@ -11,18 +11,17 @@ export interface AppConfig {
 }
   ap,
   p: {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   nam,
   e: string,,
     versio,
   n: string,,
     environmen,
-  t: 'development' | 'production' | 'test',
-  }
+  t: 'development', | 'production' | 'test'}
   ap,
   i: {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   baseUr,
   l: string,,
@@ -32,7 +31,7 @@ export interface AppConfig {
   s: number,,
     feature,
   s: {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 
   analytics: boolean,,
@@ -89,37 +88,37 @@ export function getConfig,
   let,
   value: unknown = config,
   for (const key of keys) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     if (value && typeof value === 'object' && key in value) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       value = (value as Record;)
           <string, unknown>)[key];
     } else {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       throw new Error(`Configuration key "${keyPath}" not found`);
   return value as T;
  * Check if a feature is enabled;
 export function isFeatureEnabled(featur)
   e: keyof AppConfig['features']): boolean {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   return config.features[feature];
  * Get current environment;
 export function getEnvironment(): string {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   return config.app.environment;
  * Check if running in production;
 export function isProduction(): boolean {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   return config.app.environment === 'production';
  * Check if running in development;
 export function isDevelopment(): boolean {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   return config.app.environment === 'development';
 export default config;

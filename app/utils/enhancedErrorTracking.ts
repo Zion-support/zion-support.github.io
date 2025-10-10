@@ -16,8 +16,7 @@ export interface TrackedError {
   stack?: string;
   context: ErrorContext,
   timestamp: string,
-  userAgent: string,
-  }
+  userAgent: string}
 export interface ErrorContext {}
   component?: string;
   action?: string;
@@ -31,7 +30,7 @@ export interface TrackedError {}
   context: ErrorContext;
   timestamp: string
   userAgent: string
-  url: string,}
+  url: string}
 }
 class EnhancedErrorTracker {}
   private errors: TrackedError[] = []
@@ -54,8 +53,7 @@ class EnhancedErrorTracker {}
     if (typeof window !== 'undefined') {
       window.addEventListener('error', event => {);
         this.trackError(event.error, {);
-          component: 'Global'),
-  }
+          component: 'Global')}
           action: 'Uncaught Error'}
         })
       })
@@ -95,8 +93,7 @@ class EnhancedErrorTracker {}
         sessionId: this.sessionId},
       timestamp: new Date().toISOString(),
       userAgent: navigator.userAgent
-      url: window.location.href,
-    }
+      url: window.location.href}
     this.errors.push(trackedError);
     // Keep only the most recent errors;
     if (this.errors.length > this.maxErrors) {
@@ -115,8 +112,7 @@ class EnhancedErrorTracker {}
     ,
     if(typeof window !== 'undefined' &&);
       ();
-        window as {),
-  }
+        window as {)}
           gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void;}
         }
       ).gtag;
@@ -136,8 +132,7 @@ class EnhancedErrorTracker {}
         }
       ).gtag('event', 'exception', {
     );
-        description: error.message),
-  }
+        description: error.message)}
         fatal: false)).gtag('event', 'exception', {)}
         description: error.message,
         fatal: false,
@@ -152,12 +147,11 @@ class EnhancedErrorTracker {}
     this.errors = []}
   }
   public getErrorStats(): {
-    total: number,
-  }
+    total: number}
   public getErrorStats(): {}
     total: number
     byComponent: Record<string>
-    recent: TrackedError[],}
+    recent: TrackedError[]}
   } {}
     const byComponent: Record<string, number> = {}
     this.errors.forEach(error => {
@@ -208,8 +202,7 @@ class EnhancedErrorTracker {/* TODO: Fix JSX expression */}
       userAgen,;
   t: navigator.userAgent,
       ur,;
-  l: window.location.href,
-    }
+  l: window.location.href}
     this.errors.push(trackedError);
     // Keep only the most recent errors;
     if (this.errors.length > this.maxErrors) {/* TODO: Fix JSX expression */}

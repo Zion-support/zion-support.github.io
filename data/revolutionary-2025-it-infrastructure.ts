@@ -1,4 +1,4 @@
-export const revolutionaryITInfrastructure2025Services = [{name: 'Revolutionary Cloud Infrastructure 2025'
+export const revolutionaryITInfrastructure2025Services = [{name: 'Revolutionary Cloud Infrastructure 2025',
     path: '/services/revolutionary-cloud-infrastructure-2025',
     description: 'Next-generation cloud infrastructure and management',
     icon: 'Cloud',
@@ -14,7 +14,7 @@ export const revolutionaryITInfrastructure2025Services = [{name: 'Revolutionary 
       professional: '$599/month'}
       enterprise: 'Custom'}
   },
-    name: 'Revolutionary DevOps Automation 2025'
+    name: 'Revolutionary DevOps Automation 2025',
     path: '/services/revolutionary-devops-automation-2025',
     description: 'Intelligent DevOps and CI/CD automation',
     icon: 'Code',
@@ -23,8 +23,7 @@ export const revolutionaryITInfrastructure2025Services = [{name: 'Revolutionary 
 export const revolutionaryITInfrastructure2025Services = [{/* TODO: Fix JSX expression */}
   l: '$599/month'}
       enterpris,
-  e: 'Custom'
-    }
+  e: 'Custom'}
   },
     nam,
   e: 'Revolutionary DevOps Automation 2025',
@@ -54,8 +53,7 @@ export const revolutionaryITInfrastructure2025Services = [{/* TODO: Fix JSX expr
       professiona,
   l: '$799/month',
       enterpris,
-  e: 'Custom'
-    }
+  e: 'Custom'}
   }
 ];
 export const revolutionaryITCategories2025 = [
@@ -86,9 +84,9 @@ export const revolutionaryITInfrastructure2025Services = [ nam,
   y: 'IT Infrastructure', feature,
   s: [' 'Multi-cloud management',' 'Automated scaling',' 'Advanced security',' 'Performance optimization' ], pricin,
   g: ' starte,
-  r: '$299/month',' professiona,
+  r: ',$299/month',' professiona,
   l: '$599/month',' enterpris,
-  e: 'Custom' } }, ' nam,
+  e: 'Custom'} }, ' nam,
   e: 'Revolutionary DevOps Automation 2025',' pat,
   h: '/services/revolutionary-devops-automation-2025',' descriptio,
   n: 'Intelligent DevOps and CI/CD automation',' ico,
@@ -96,9 +94,9 @@ export const revolutionaryITInfrastructure2025Services = [ nam,
   y: 'DevOps', feature,
   s: [' 'Automated deployment',' 'Intelligent testing',' 'Performance monitoring',' 'Security scanning' ], pricin,
   g: ' starte,
-  r: '$399/month',' professiona,
+  r: ',$399/month',' professiona,
   l: '$799/month',' enterpris,
-  e: 'Custom' } } ]; export const revolutionaryITCategories2025 = [' 'Cloud Infrastructure',' 'DevOps Automation',' 'Security & Compliance',' 'Performance Optimization' ]; export const revolutionaryITStats2025 = totalService,
+  e: 'Custom'} } ]; export const revolutionaryITCategories2025 = [' 'Cloud Infrastructure',' 'DevOps Automation',' 'Security & Compliance',' 'Performance Optimization' ]; export const revolutionaryITStats2025 = totalService,
   s: 2, categorie,
   s: 4, averageRatin,
   g: 4.8, activeUser,

@@ -149,10 +149,10 @@
   s: {"}; "Content-Type": "application/json"},bod,"
   y: JSON.stringify({) ur} l: "window.location.href")timestam,"
   p: Date.now()}metrics})}).catch(console.error)} ; return null export default PerformanceMonitor" fcpObserver.disconnect();} lcpObserver.disconnect();} fidObserver.disconnect();} clsObserver.disconnect();} fmpObserver.disconnect()"; window.removeEventListener("beforeunload")sendMetrics);} },[]);} " return null; "'"'"' import _React { useEffect } from "react" interface PerformanceMetrics {; fcp?: number; lcp?: number; fid?: number; cls?: number} ttfb?: number} fmp?: number} ; "; interface ApiResponse<T = unknown> {/* TODO: Fix JSX expression */}
-  a: 'T; statu} s: 'number}message?: string} ; interface User {/* TODO: Fix JSX expression */}"
-  l: 'string; nam; e: 'string} rol}"} e: "admin" | "user" | "guest"} ; interface Service {/* TODO: Fix JSX expression */}"
-  l: 'string; nam; e: 'string} rol}"} e: "admin" | "user" | "guest"} ; interface Service {/* TODO: Fix JSX expression */}
-  n: 'string; pric} e: 'number}} categor,y: 'string'} ; interface FormData {; } [ke,
+  a: 'T; statu} s: ',number}message?: string} ; interface User {/* TODO: Fix JSX expression */}"
+  l: 'string; nam; e: ',string} rol}"} e: "admin" | "user" | "guest"} ; interface Service {/* TODO: Fix JSX expression */}"
+  l: 'string; nam; e: ',string} rol}"} e: "admin" | "user" | "guest"} ; interface Service {/* TODO: Fix JSX expression */}
+  n: 'string; pric} e: ',number}} categor,y: 'string'} ; interface FormData {; } [ke,
   y: 'string]: string | number | boolean | File'} ; interface ComponentProps {; className?: string} children?: _React.ReactNode [ke,
   y: 'string]: unknown'} ; const,
   PerformanceMonitor: _React.F,
@@ -162,16 +162,16 @@
   s: = {} ; const fcpObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}"
   p: '= entry.startTime,"}}}"} })" fcpObserver.observe({/* TODO: Fix JSX expression */}")
   s: ["paint"]})" const lcpObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}"
-  p: '= lastEntry.startTime,";}}})" lcpObserver.observe({/* TODO: Fix JSX expression */}")
+  p: ',= lastEntry.startTime,";}}})" lcpObserver.observe({/* TODO: Fix JSX expression */}")
   s: ["largest-contentful-paint"]})" const fidObserver = new PerformanceObserver((list) => {; metrics.fid = (entry as) any).processingStart - entry.startTime,";}}}"})" fidObserver.observe({/* TODO: Fix JSX expression */}")
   s: ["first-input"]})" le,"
   t: 'clsValue = 0; const clsObserver = new PerformanceObserver((list) => {";interface PerformanceMetrics {; const fcpObserver = new PerformanceObserver((list) => {; for (const entry of list.getEntries()) {"; if (entry.name === "first-contentful-paint") {"} metrics.fc,"
-  p: '= entry.startTime,"}} }"} ;})" fcpObserver.observe({/* TODO: Fix JSX expression */}")
+  p: ',= entry.startTime,"}} }"} ;})" fcpObserver.observe({/* TODO: Fix JSX expression */}")
   s: ["paint"]})" const lcpObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}"
   p: '= lastEntry.startTime,"}}})" lcpObserver.observe({/* TODO: Fix JSX expression */}")
   s: ["largest-contentful-paint"]})" const fidObserver = new PerformanceObserver((list) => {; metrics.fid = (entry as) any).processingStart - entry.startTime,"}}}"})" fidObserver.observe({/* TODO: Fix JSX expression */}")
   s: ["first-input"]})" le,"
-  t: 'clsValue = 0; const clsObserver = new PerformanceObserver((list) => {";interface PerformanceMetrics {; fcp?: number; lcp?: number; fid?: number; cls?: number} ttfb?: number}} fmp?: number} ; const,"
+  t: ',clsValue = 0; const clsObserver = new PerformanceObserver((list) => {";interface PerformanceMetrics {; fcp?: number; lcp?: number; fid?: number; cls?: number} ttfb?: number}} fmp?: number} ; const,"
   PerformanceMonitor: _React.FC = () => {} if (typeof window === "undefined") return}; const,
   metrics: PerformanceMetrics = {} ; const metric,s: PerformanceMetrics = {} ; const,"
   metrics: PerformanceMetrics = {} ; for (const entry of list.getEntries()) {; if (entry.name = == "first-contentful-paint") {; metrics.fcp = entry.startTime}}} ;});} fcpObserver.observe({/* TODO: Fix JSX expression */}")
@@ -192,7 +192,7 @@
   5: "ttfb}"},valu,
   e: Math.round(metrics.fc)
   p: || 0),non_interactio,"
-  n: 'tru,e})}" i,"
+  n: ',tru,e})}" i,"
   f: (process.env['NODE_ENV'] = == "production") {/* TODO: Fix JSX expression */}"
   s: {"} "Content-Type": "application/json}"}," bod,
   y: JSON.stringify({} ur)
@@ -206,7 +206,7 @@
   4: "cls"}" metric_,"
   5: "ttfb"},valu,
   e: Math.round(metrics.fcp || 0),non_interactio,"
-  n: 'true'})} ; if (process.env['NODE_ENV'] = == "production") {; fetch()}}} const fmpObserver = new PerformanceObserver(list => {) metrics.fmp = entry.startTime)" "; fmpObserver.observe()}}} if (typeof window !== "undefined" && (window as) any).gtag) {/* TODO: Fix JSX expression */}"
+  n: ',true'})} ; if (process.env['NODE_ENV'] = == "production") {; fetch()}}} const fmpObserver = new PerformanceObserver(list => {) metrics.fmp = entry.startTime)" "; fmpObserver.observe()}}} if (typeof window !== "undefined" && (window as) any).gtag) {/* TODO: Fix JSX expression */}"
   4: "cls"}" metric_,"
   5: "ttfb"}); valu,
   e: Math.round(metrics.fcp || 0); non_interactio,
@@ -216,13 +216,13 @@
   4: "cls"}metric_,")
   5: "ttfb"})valu,
   e: Math.round(metrics.fcp || 0),non_interactio,"
-  n: 'true; ; if (process.env['NODE_ENV'] = == "production") {/* TODO: Fix JSX expression */}"
+  n: 'true; ; if (process.env[',NODE_ENV'] = == "production") {/* TODO: Fix JSX expression */}"
   p: Date.now()} metrics}; metrics})}).catch(_console.error)} ;} ; return () => {; fcpObserver.disconnect()}}} lcpObserver.disconnect();} fidObserver.disconnect();} clsObserver.disconnect();} fmpObserver.disconnect();} window.removeEventListener("beforeunload")sendMetrics)}"},[]);} retur,
   n: 'null,"
   export: default PerformanceMonitor," window.removeEventListener("beforeunload")sendMetrics)}},[]);} return null export default PerformanceMonitor;" return null; export default PerformanceMonitor;; metho,"
   d: "POST",header,"
   s: {"}; "Content-Type": "application/json"},bod,
-  y: JSON.stringify({) ur} l: 'window.location.href)timestam,"
+  y: JSON.stringify({) ur} l: ',window.location.href)timestam,"
   p: Date.now()}metrics})}).catch(_console.error)} ; return null export default PerformanceMonitor" fcpObserver.disconnect();} lcpObserver.disconnect();} fidObserver.disconnect();} clsObserver.disconnect();} fmpObserver.disconnect()"; window.removeEventListener("beforeunload")sendMetrics);} },[]);} " return null; "'"
   </T>
   </T>

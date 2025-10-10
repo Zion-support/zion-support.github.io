@@ -5,16 +5,16 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const QuantumComputingPage: React.FC = () => {
     return (
-    <React.Fragment>
+    <React.Fragment></React.Fragment>
       <Helmet>
         <title>Quantum Computing Solutions - Zion Tech Group</title>
         <meta name="description" content="Next-generation quantum computing capabilities for complex problem solving and optimization. Harness the power of quantum mechanics for your business." />
         <meta name="keywords" content="quantum computing, quantum algorithms, quantum optimization, quantum machine learning" />
       </Helmet>
       <Navigation />
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></main>
+        <div className="container mx-auto px-4 py-16"></div>
+          <div className="text-center mb-16"></div>
             <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 neon-text">
               Quantum Computing;
   </
@@ -22,8 +22,8 @@ const QuantumComputingPage: React.FC = () => {
               Next-generation computing power for complex problem solving;
   </
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-            <div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16"></div>
+            <div></div>
               <h2 className="text-3xl font-bold text-white mb-6">Unlock Quantum Potential</h2>
               <p className="text-gray-300 mb-6 text-lg">
                 Our quantum computing solutions leverage the principles of quantum mechanics to solve 
@@ -48,27 +48,27 @@ const QuantumComputingPage: React.FC = () => {
   </
               </ul>
             </div>
-            <div className="bg-gradient-to-r from-purple-500/20 to-cyan-500/20 p-8 rounded-lg">
+            <div className="bg-gradient-to-r from-purple-500/20 to-cyan-500/20 p-8 rounded-lg"></div>
               <h3 className="text-2xl font-bold text-white mb-4">Quantum Applications</h3>
-              <div className="space-y-4">
-                <div className="bg-white/10 p-4 rounded-lg">
+              <div className="space-y-4"></div>
+                <div className="bg-white/10 p-4 rounded-lg"></div>
                   <h4 className="text-lg font-semibold text-purple-400 mb-2">Portfolio Optimization</h4>
                   <p className="text-gray-300">Optimize investment portfolios with quantum algorithms</p>
                 </div>
-                <div className="bg-white/10 p-4 rounded-lg">
+                <div className="bg-white/10 p-4 rounded-lg"></div>
                   <h4 className="text-lg font-semibold text-purple-400 mb-2">Drug Discovery</h4>
                   <p className="text-gray-300">Accelerate pharmaceutical research with quantum simulation</p>
                 </div>
-                <div className="bg-white/10 p-4 rounded-lg">
+                <div className="bg-white/10 p-4 rounded-lg"></div>
                   <h4 className="text-lg font-semibold text-purple-400 mb-2">Supply Chain</h4>
                   <p className="text-gray-300">Optimize complex logistics and supply chain networks</p>
                 </div>
               </div>
             </div>
           </div>
-          <div className="text-center">
+          <div className="text-center"></div>
             <h2 className="text-3xl font-bold text-white mb-8">Ready for Quantum Computing?</h2>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <a
                 href="/contact"
                 className="bg-gradient-to-r from-purple-500 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-cyan-700 transition-all duration-300">

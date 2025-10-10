@@ -8,13 +8,13 @@ const, NewArticlesPromoBanne, r: Rea, c, t.FC<NewArticlesPromoBannerPro, p, s> =
   autoRota, t, e = fa, l, s, e,
   rotationInterv, a, l = 5, 0, 0, 0,
   if (varia, n, t = == 'comp, a, c, t') {
-    retu, r, n(<div, classNam, e = {`bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-cy, a, n-600, rounde, d-l, g, p-4 ${classNa, m, e}`}>
-        <div, classNam, e="flex, item, s-center, justif, y-betwe, e, n">
-          <div, classNam, e="flex, item, s-center, ga, p-3">)
+    retu, r, n(<div, classNam, e = {`bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-cy, a, n-600, rounde, d-l, g, p-4 ${classNa, m, e}`}></div>
+        <div, classNam, e="flex, item, s-center, justif, y-betwe, e, n"></div>
+          <div, classNam, e="flex, item, s-center, ga, p-3">)</div>
             <BookOpen, classNam, e="w-6 h-6, tex, t-whi, t, e" />)
           <div, classNam, e="grid, m, d: gr, i, d-co, l, s-3, ga, p-6">)
             { featuredArticl, e, s.m, a, p((arti, c, l, e) = > (
-    retu, r, n (
+    retu, r, n (</div>
       <div, classNam, e = {`bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-cy, a, n-600, rounde, d-l, g, p-4 ${classNa, m, e}`}></div>
         <div, classNam, e="flex, item, s-center, justif, y-betwe, e, n"></div>
           <div, classNam, e="flex, item, s-center, ga, p-3"></div>
@@ -30,16 +30,16 @@ const, NewArticlesPromoBanne, r: Rea, c, t.FC<NewArticlesPromoBannerPro, p, s> =
               View, All, Articles;
               <Link, classNam, e="w-5 h-5" />
   if (varia, n, t = == 'featu, r, e, d') {
-    retu, r, n(<div, classNam, e = {`bg-white, rounde, d-2xl, shado, w-2xl, overflo, w-hidd, e, n ${classNa, m, e}`}>
-        <div, classNam, e="bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-60, 0, p-6">
-          <div, classNam, e="flex, item, s-center, justif, y-betwe, e, n">
-            <div, classNam, e="flex, item, s-center, ga, p-3">
+    retu, r, n(<div, classNam, e = {`bg-white, rounde, d-2xl, shado, w-2xl, overflo, w-hidd, e, n ${classNa, m, e}`}></div>
+        <div, classNam, e="bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-60, 0, p-6"></div>
+          <div, classNam, e="flex, item, s-center, justif, y-betwe, e, n"></div>
+            <div, classNam, e="flex, item, s-center, ga, p-3"></div>
               <BookOpen, classNam, e="w-8 h-8, tex, t-whi, t, e" />
               <h2, classNam, e="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">Featured, Article, s</h2>)
-        <div, classNam, e="p-8">)
+        <div, classNam, e="p-8">)</div>
           <div, classNam, e="grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-6">)
             { featuredArticl, e, s.m, a, p((arti, c, l, e) = > (
-    retu, r, n (
+    retu, r, n (</div>
       <div, classNam, e = {`bg-white, rounde, d-2xl, shado, w-2xl, overflo, w-hidd, e, n ${classNa, m, e}`}></div>
         <div, classNam, e="bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-60, 0, p-6"></div>
           <div, classNam, e="flex, item, s-center, justif, y-betwe, e, n"></div>

@@ -24,8 +24,7 @@ const AIApiManagerPage: React.FC = () => {
       title: 'Security & Compliance',
       description: 'Enterprise-grade security with automated compliance monitoring and threat detection.',
       benefits: ['Threat detection', 'Compliance monitoring', 'Security scanning', 'Access control']
-    },
-  ];
+    }];
   const benefits = [
     'Centralized API management',
     'Real-time performance monitoring',
@@ -35,14 +34,14 @@ const AIApiManagerPage: React.FC = () => {
     '24/7 support'
   ];
   const stats = [
-    { icon: <Settings className="w-8 h-8 text-blue-500" />, value: '500+', label: 'APIs Managed' },
-    { icon: <Zap className="w-8 h-8 text-green-500" />, value: '99.9%', label: 'Uptime' },
-    { icon: <Shield className="w-8 h-8 text-purple-500" />, value: '100%', label: 'Security' },
-    { icon: <BarChart3 className="w-8 h-8 text-orange-500" />, value: '60%', label: 'Efficiency Gain' }
+    { icon: <Settings className="w-8 h-8 text-blue-500" />, value: '500+', label: 'APIs Managed'},
+    { icon: <Zap className="w-8 h-8 text-green-500" />, value: '99.9%', label: 'Uptime'},
+    { icon: <Shield className="w-8 h-8 text-purple-500" />, value: '100%', label: 'Security'},
+    { icon: <BarChart3 className="w-8 h-8 text-orange-500" />, value: '60%', label: 'Efficiency Gain'}
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900"></div>
       <Helmet>
         <title>AI API Manager | Zion Tech Group</title>
         <meta name="description" content="Comprehensive AI-powered API management platform by Zion Tech Group. Centralized control, analytics, and security for all your APIs." />
@@ -51,10 +50,10 @@ const AIApiManagerPage: React.FC = () => {
       </Helmet>
       <Navigation />
       {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-        <div className="relative max-w-7xl mx-auto text-center">
+      <section className="relative py-20 px-4 overflow-hidden"></section>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" /></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s'}} /></div>
+        <div className="relative max-w-7xl mx-auto text-center"></div>
 
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
             AI API Manager
@@ -63,7 +62,7 @@ const AIApiManagerPage: React.FC = () => {
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
             Comprehensive API management platform with AI-powered insights, security, and optimization
           </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
               Get Started
             </button>
@@ -75,11 +74,11 @@ const AIApiManagerPage: React.FC = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-6xl mx-auto">
+      <section className="py-16 px-4"></section>
+        <div className="max-w-6xl mx-auto"></div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
+            {stats.map((stat, index) => (</div>
+              <div key={index} className="text-center"></div>
                 <div className="flex justify-center mb-4">
                   {stat.icon}
                 </div>
@@ -92,9 +91,9 @@ const AIApiManagerPage: React.FC = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+      <section className="py-20 px-4"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Platform Features
             </h2>
@@ -106,14 +105,14 @@ const AIApiManagerPage: React.FC = () => {
           
           <div className="grid md:grid-cols-3 gap-8">
 
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8">
+            {features.map((feature, index) => (</div>
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8"></div>
                 <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
                 <p className="text-gray-300 mb-6">{feature.description}</p>
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, benefitIndex) => (
                     <li key={benefitIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" /></CheckCircle>
                       <span>{benefit}</span>
                     </li>
                   ))}
@@ -124,9 +123,9 @@ const AIApiManagerPage: React.FC = () => {
         </div>
       </section>
       {/* Benefits Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+      <section className="py-20 px-4"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
             <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Platform?</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
 
@@ -135,9 +134,9 @@ const AIApiManagerPage: React.FC = () => {
 
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+            {benefits.map((benefit, index) => (</div>
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center"></div>
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center"></div>
                   <CheckCircle className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-white">{benefit}</h3>
@@ -147,17 +146,17 @@ const AIApiManagerPage: React.FC = () => {
         </div>
       </section>
       {/* CTA Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="py-20 px-4"></section>
+        <div className="max-w-4xl mx-auto text-center"></div>
 
-          <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
+          <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12"></div>
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
               Ready to Manage Your APIs?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
               Start managing your APIs more effectively with our comprehensive platform.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
               </button>
@@ -171,8 +170,7 @@ const AIApiManagerPage: React.FC = () => {
 
       <Footer />
     </div>
-  ),
-};
+  )};
 
 export default AIApiManagerPage;
 

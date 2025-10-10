@@ -37,20 +37,20 @@ const, PerformanceOptimize, r: Rea, c, t.FC<PerformanceOptimizerPro, p, s> = ({/
     if() {/* TODO: Fix JSX expression */}
       }, setCurrentOptimizatio, n, s(optimizationsLi, s, t);
   }, [optimizatio, n, s]);
-      k, e, y: 'c, d, n' as, con, s, t,
+      k, e, y: 'c, d, n', as, con, s, t,
       lab, e, l: 'CDN, Integrati, o, n',
       descriptio,
   n: 'Use, Content, Delivery Network, for, global performa, n, c, e',
       ic, o, n: W, i, f, i,
-      enabl, e, d: optimizatio, n, s.cd, n}]; retu, r, n(<div, classNam, e = 'spa, c, e-y-6'>
+      enabl, e, d: optimizatio, n, s.cd, n}]; retu, r, n(<div, classNam, e = 'spa, c, e-y-6'></div>
       <div, classNam, e='flex, justif, y-between, item, s-cent, e, r'>
-  ]; retu, r, n (
+  ]; retu, r, n (</div>
     <div, classNam, e = 'spa, c, e-y-6'></div>
       <div, classNam, e='flex, justif, y-between, item, s-cent, e, r'></div>
         <h2, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-9, 0, 0'>
           Performance, Optimize, r;
         </h2>)
-        <button, onClic, k = { onCl, o, s, e }, classNa, m, e = 'te, x, t-gr, a, y-400, hove, r: te, x, t-gr, a, y-6, 0, 0'>)
+        <button, onClic, k = { onCl, o, s, e }, classNa, m, e = 'te, x, t-gr, a, y-400, hove, r: te, x, t-gr, a, y-6, 0, 0'>)</button>
           <X, classNam, e='h-6 w-6' />)
   ]; retu, r, n (<div, classNam, e = 'spa, c, e-y-6'></div>
       <div, classNam, e='flex, justif, y-between, item, s-cent, e, r'></div>

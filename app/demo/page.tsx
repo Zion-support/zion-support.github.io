@@ -28,7 +28,7 @@ const DemoPage: React.FC = () => {
   ]
 
   return (
-    <>
+    <></>
       <Helmet>
         <title>Demo - Zion Tech Group | See Our AI Solutions in Action</title>
         <meta name="description" content="Experience our AI and IT solutions through interactive demos. See how our technology can transform your business." />
@@ -37,13 +37,13 @@ const DemoPage: React.FC = () => {
       
       <Navigation />
       
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
-        <div className="container mx-auto px-4 py-16">
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16"></main>
+        <div className="container mx-auto px-4 py-16"></div>
           <div className="max-w-6xl mx-auto">
-            {/* Header */}
-            <div className="text-center mb-16">
+            {/* Header */}</div>
+            <div className="text-center mb-16"></div>
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                See Our <span className="text-cyan-400">Solutions</span> in Action
+                See Our</h1> <span className="text-cyan-400">Solutions</span> in Action
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Experience our AI and IT solutions through interactive demos. See how our technology can transform your business.
@@ -52,9 +52,9 @@ const DemoPage: React.FC = () => {
 
             {/* Demo Cards */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-              {demos.map((demo, index) => (
-                <div key={index} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300">
-                  <div className="flex items-center justify-between mb-4">
+              {demos.map((demo, index) => (</div>
+                <div key={index} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300"></div>
+                  <div className="flex items-center justify-between mb-4"></div>
                     <h3 className="text-xl font-bold text-white">{demo.title}</h3>
                     <span className="text-cyan-400 text-sm font-semibold">{demo.duration}</span>
                   </div>
@@ -62,12 +62,12 @@ const DemoPage: React.FC = () => {
                   <ul className="space-y-2 mb-6">
                     {demo.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center space-x-2">
-                        <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+                        <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" /></CheckCircle>
                         <span className="text-sm text-gray-300">{feature}</span>
                       </li>
                     ))}
                   </ul>
-                  <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-4 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center">
+                  <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-4 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center"></button>
                     <Play className="w-4 h-4 mr-2" />
                     Watch Demo
                   </button>
@@ -76,15 +76,15 @@ const DemoPage: React.FC = () => {
             </div>
 
             {/* CTA Section */}
-            <div className="text-center">
-              <div className="bg-slate-800/50 rounded-lg p-8">
+            <div className="text-center"></div>
+              <div className="bg-slate-800/50 rounded-lg p-8"></div>
                 <h2 className="text-2xl font-bold text-white mb-4">
                   Ready to See More?
                 </h2>
                 <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
                   Schedule a personalized demo with our experts to see how our solutions can work for your specific business needs.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                   <a
                     href="/contact"
                     className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"

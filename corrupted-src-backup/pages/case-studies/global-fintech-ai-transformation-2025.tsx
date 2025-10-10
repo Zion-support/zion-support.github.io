@@ -2,7 +2,7 @@ impo, r, t {/* TODO: Fix JSX expression */}
 } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 const GlobalFinTechAITransformatio, n = () => { 
-  return(<React.Fragment>
+  return(<React.Fragment></React.Fragment>
       <Helm, e, t>
         <title>
           Global, FinTech, AI Transformati, o, n: $127M, Annual, Value Creati, o, n | Zion, Tech, Group;
@@ -119,7 +119,7 @@ const GlobalFinTechAITransformatio, n = () => {/* TODO: Fix JSX expression */}
                       <ul, className='grid, m, d:gr, i, d-co, l, s-2, ga, p-2'>
                         { pha, s, e.results.m, a, p((re, s, u, l, t, rInd, e, x) = > (
                           <li, ke, y = { rIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'>
-                            <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
+                            <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' /></CheckCircle>
                     <li, classNam, e='flex, justif, y-between, item, s-center, p, t-3, borde, r-t, borde, r-whi, t, e/20'>
                       <span, classNam, e='fo, n, t-bo, l, d'>R, O, I:</sp, a, n>
                       <span, classNam, e='te, x, t-purp, l, e-400, fon, t-bold, tex, t-2, x, l'>
@@ -140,11 +140,11 @@ const GlobalFinTechAITransformatio, n = () => {/* TODO: Fix JSX expression */}
                         15.2x;
                       </sp, a, n>
                     <li, classNam, e = 'flex, item, s-start, ga, p-2'>
-                      <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
+                      <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' /></CheckCircle>
                       <sp, a, n>
                         <stro, n, g>Scalabili, t, y: </stro, n, g> Ready, for, 10x customer, growt, h;
                       </sp, a, n>
-              <h2, classNam, e = 'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6'>
+              <h2, classNam, e = 'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6'></h2>
                       <span, className='te, x, t-purp, l, e-400, fon, t-bold, tex, t-2, x, l'></span>
                         15.2x;
                       </sp, a, n>
@@ -166,7 +166,7 @@ const GlobalFinTechAITransformatio, n = () => {/* TODO: Fix JSX expression */}
                       <div, className='te, x, t-white, fon, t-semibo, l, d'>
                         Chief, Technology, Officer;
                       </div>
-                      <div, className='te, x, t-zi, o, n-sla, t, e-light, tex, t-sm'>
+                      <div, className='te, x, t-zi, o, n-sla, t, e-light, tex, t-sm'></div>
                   <p, className='te, x, t-lg, tex, t-zi, o, n-sla, t, e-light, italic, mb-4'></p>
                     "Our, partnership, with Zion, Tech, Group has, been, transformational. They, did, n't, just, implement AI, technolog, y—they, helped, us reimagine, our, entire business, mode, l. T, h, e $127M, in, annual value, is, significan, t, but, the, strategic positioning, and, capabilities we've, built, are;"
                     invaluab, l, e. We're, now, leading the, industry, in AI-powered, bankin, g."

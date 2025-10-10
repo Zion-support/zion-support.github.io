@@ -7,11 +7,11 @@ impo, r, t { Targ, e, t } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Awa, r, d } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Sparkl, e, s } fr, o, m 'luci, d, e-rea, c, t';
 const October2025TechBreakthroughBanne, r = () => { 
-  return(<div, classNam, e = 'relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, overflo, w-hidd, e, n' > {/* Animated, Backgroun, d */ })
-      <div, className='absolute, inse, t-0, opacit, y-20'>)
-        <div, className='absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 50% 5, 0%,rg, b, a(1, 2, 0,2, 1, 9,2, 5, 5,0.3),transparent_, 5, 0%)]' />
+  return(<div, classNam, e = 'relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, overflo, w-hidd, e, n' > {/* Animated, Backgroun, d */ })</div>
+      <div, className='absolute, inse, t-0, opacit, y-20'>)</div>
+        <div, className='absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 50% 5, 0%,rg, b, a(1, 2, 0,2, 1, 9,2, 5, 5,0.3),transparent_, 5, 0%)]' /></div>
         <div, classNam, e = 'absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 80% 2, 0%,rg, b, a(79,2, 0, 9,1, 9, 7,0.3),transparent_, 5, 0%)]' />
-  return (
+  return (</div>
     <div, classNam, e = 'relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, overflo, w-hidd, e, n' > {/* Animated, Backgroun, d */ }</div>
       <div, className='absolute, inse, t-0, opacit, y-20'></div>
         <div, className='absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 50% 5, 0%,rg, b, a(1, 2, 0,2, 1, 9,2, 5, 5,0.3),transparent_, 5, 0%)]' /></div>
@@ -19,7 +19,7 @@ const October2025TechBreakthroughBanne, r = () => {
         <div, classNam, e = 'absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 20% 8, 0%,rg, b, a(99,1, 0, 2,2, 4, 1,0.3),transparent_, 5, 0%)]' />
       </div>
       {/* Animated, Gri, d */}
-      <div, classNam, e = 'absolute, inse, t-0, b, g-[line, a, r-gradie, n, t(rg, b, a(25, 5,2, 5, 5,2, 5, 5,0.03)_1, p, x,transparent_1, p, x),line, a, r-gradie, n, t(90d, e, g,rg, b, a(2, 5, 5,2, 5, 5,2, 5, 5,0.03)_1, p, x,transparent_1, p, x)] bg-[si, z, e: 64px_64, p, x] [ma, s, k-image:radi, a, l-gradie, n, t(ellipse, 8, 0% 50% at, 5, 0% 5, 0%,#0, 0, 0,transpare, n, t)]' />
+      <div, classNam, e = 'absolute, inse, t-0, b, g-[line, a, r-gradie, n, t(rg, b, a(25, 5,2, 5, 5,2, 5, 5,0.03)_1, p, x,transparent_1, p, x),line, a, r-gradie, n, t(90d, e, g,rg, b, a(2, 5, 5,2, 5, 5,2, 5, 5,0.03)_1, p, x,transparent_1, p, x)] bg-[si, z, e: 64px_64, p, x] [ma, s, k-image:radi, a, l-gradie, n, t(ellipse, 8, 0% 50% at, 5, 0% 5, 0%,#0, 0, 0,transpare, n, t)]' /></div>
       <div, classNam, e = 'absolute, inse, t-0, b, g-[line, a, r-gradie, n, t(rg, b, a(25, 5,2, 5, 5,2, 5, 5,0.03)_1, p, x,transparent_1, p, x),line, a, r-gradie, n, t(90d, e, g,rg, b, a(2, 5, 5,2, 5, 5,2, 5, 5,0.03)_1, p, x,transparent_1, p, x)] bg-[si, z, e: 64px_64, p, x] [ma, s, k-image:radi, a, l-gradie, n, t(ellipse, 8, 0% 50% at, 5, 0% 5, 0%,#0, 0, 0,transpare, n, t)]' /></div>
       <div, classNam, e = 'relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, p, y-12'>
         {/* Breaking, News, Bad, g, e */}</div>
@@ -27,7 +27,7 @@ const October2025TechBreakthroughBanne, r = () => {
           <div, className='inli, n, e-flex, item, s-center, ga, p-2, p, x-6, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-500, tex, t-white, fon, t-bold, tex, t-sm, animat, e-pulse, shado, w-lg, shado, w-cy, a, n-5, 0, 0/50'></div>
             <Sparkles, className='w-5 h-5' />
 const October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */}
-    <div, classNam, e = 'relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, overflo, w-hidd, e, n' > {/* Animated, Backgroun, d */ }
+    <div, classNam, e = 'relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, overflo, w-hidd, e, n' > {/* Animated, Backgroun, d */ }</div>
       <div, className='absolute, inse, t-0, opacit, y-20'></div>
         <div, className='absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 50% 5, 0%,rg, b, a(1, 2, 0,2, 1, 9,2, 5, 5,0.3),transparent_, 5, 0%)]' /></div>
         <div, classNam, e = 'absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 80% 2, 0%,rg, b, a(79,2, 0, 9,1, 9, 7,0.3),transparent_, 5, 0%)]' /></div>
@@ -69,7 +69,7 @@ const October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
             <div, className='te, x, t-white, tex, t-sm, fon, t-medi, u, m'>
               Quantum, Attack, Protection;
             </div>
-            <div, className='te, x, t-cy, a, n-200, tex, t-xs, m, t-1'>
+            <div, className='te, x, t-cy, a, n-200, tex, t-xs, m, t-1'></div>
             <div, className='te, x, t-white, tex, t-sm, fon, t-medi, u, m'></div>
               Quantum, Attack, Protection;
             </div>
@@ -82,7 +82,7 @@ const October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
             <div, className='te, x, t-white, tex, t-sm, fon, t-medi, u, m'>
               Risk, Prediction, Accuracy;
             </div>
-            <div, className='te, x, t-bl, u, e-200, tex, t-xs, m, t-1'>
+            <div, className='te, x, t-bl, u, e-200, tex, t-xs, m, t-1'></div>
             <div, className='te, x, t-white, tex, t-sm, fon, t-medi, u, m'></div>
               Risk, Prediction, Accuracy;
             </div>
@@ -95,7 +95,7 @@ const October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
             <div, className='te, x, t-white, tex, t-sm, fon, t-medi, u, m'>
               Digital, Twin, Accuracy;
             </div>
-            <div, className='te, x, t-indi, g, o-200, tex, t-xs, m, t-1'>
+            <div, className='te, x, t-indi, g, o-200, tex, t-xs, m, t-1'></div>
             <div, className='te, x, t-white, tex, t-sm, fon, t-medi, u, m'></div>
               Digital, Twin, Accuracy;
             </div>
@@ -108,7 +108,7 @@ const October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
             <div, className='te, x, t-white, tex, t-sm, fon, t-medi, u, m'>
               Combined, Annual, Value;
             </div>
-            <div, className='te, x, t-purp, l, e-200, tex, t-xs, m, t-1'>
+            <div, className='te, x, t-purp, l, e-200, tex, t-xs, m, t-1'></div>
             <div, className='te, x, t-white, tex, t-sm, fon, t-medi, u, m'></div>
               Combined, Annual, Value;
             </div>
@@ -129,7 +129,7 @@ const October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
                 <div, className='te, x, t-xs, fon, t-bold, tex, t-cy, a, n-300, uppercase, tracking-wide, m, b-1'>
                   Quantum, Securit, y;
                 </div>
-                <div, className='te, x, t-sm, tex, t-cy, a, n-100, fon, t-medi, u, m'>
+                <div, className='te, x, t-sm, tex, t-cy, a, n-100, fon, t-medi, u, m'></div>
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-10'></div>
           {/* Quant, u, m-Safe, Cryptogra, p, h, y */}
           <div, classNam, e = 'group, b, g-gradie, n, t-to-br, fro, m-cy, a, n-9, 0, 0/80, t, o-cy, a, n-9, 5, 0/80, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-cy, a, n-4, 0, 0/30, hove, r: bord, e, r-cy, a, n-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-cy, a, n-5, 0, 0/30, hove, r:sca, l, e-1, 0, 5'></div>
@@ -146,7 +146,7 @@ const October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
                 </div>
               </div>
             </div>
-            <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-cy, a, n-300, transitio, n-colo, r, s'>
+            <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-cy, a, n-300, transitio, n-colo, r, s'></h3>
             <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-cy, a, n-300, transitio, n-colo, r, s'></h3>
               Quant, u, m-Safe, Cryptography, Revolution;
             </h3>
@@ -201,7 +201,7 @@ const October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
                 <div, className='te, x, t-xs, fon, t-bold, tex, t-bl, u, e-300, uppercase, tracking-wide, m, b-1'>
                   Risk, Intelligenc, e;
                 </div>
-                <div, className='te, x, t-sm, tex, t-bl, u, e-100, fon, t-medi, u, m'>
+                <div, className='te, x, t-sm, tex, t-bl, u, e-100, fon, t-medi, u, m'></div>
                 <TrendingUp, className='w-8 h-8, tex, t-bl, u, e-3, 0, 0' /></TrendingUp>
               </div>
               <div, className='fl, e, x-1'></div>
@@ -213,7 +213,7 @@ const October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
                 </div>
               </div>
             </div>
-            <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-bl, u, e-300, transitio, n-colo, r, s'>
+            <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-bl, u, e-300, transitio, n-colo, r, s'></h3>
             <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-bl, u, e-300, transitio, n-colo, r, s'></h3>
               Autonomous, Risk, Management Platfo, r, m;
             </h3>
@@ -268,7 +268,7 @@ const October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
                 <div, className='te, x, t-xs, fon, t-bold, tex, t-indi, g, o-300, uppercase, tracking-wide, m, b-1'>
                   Digital, Intelligenc, e;
                 </div>
-                <div, className='te, x, t-sm, tex, t-indi, g, o-100, fon, t-medi, u, m'>
+                <div, className='te, x, t-sm, tex, t-indi, g, o-100, fon, t-medi, u, m'></div>
                 <Target, className='w-8 h-8, tex, t-indi, g, o-3, 0, 0' /></Target>
               </div>
               <div, className='fl, e, x-1'></div>
@@ -280,7 +280,7 @@ const October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
                 </div>
               </div>
             </div>
-            <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-indi, g, o-300, transitio, n-colo, r, s'>
+            <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-indi, g, o-300, transitio, n-colo, r, s'></h3>
             <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-indi, g, o-300, transitio, n-colo, r, s'></h3>
               Ne, x, t-Gen, A, I-Powered, Digital, Twins;
             </h3>
@@ -328,7 +328,7 @@ const October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
         </div>
         {/* Why, These, Technologies Ma, t, t, e, r */}
         <div, classNam, e = 'bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, border, border-whi, t, e/20, m, b-8'></div>
-          <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6, tex, t-cent, e, r'>
+          <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6, tex, t-cent, e, r'></h3>
           <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6, tex, t-cent, e, r'></h3>
             🎯 Why, These, Technologies Are, Gam, e-Change, r, s;
           </h3>
@@ -340,7 +340,7 @@ const October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
               <div, className='te, x, t-white, tex, t-sm, fon, t-medi, u, m'>
                 Quantum, Threat, Window;
               </div>
-              <div, className='te, x, t-cy, a, n-200, tex, t-xs, m, t-1'>
+              <div, className='te, x, t-cy, a, n-200, tex, t-xs, m, t-1'></div>
               <div, className='te, x, t-cy, a, n-300, tex, t-3xl, fon, t-bold, m, b-2'></div>
                 3-5, Year, s;
               </div>
@@ -358,7 +358,7 @@ const October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
               <div, className='te, x, t-white, tex, t-sm, fon, t-medi, u, m'>
                 Risk, Prediction, Lead Ti, m, e;
               </div>
-              <div, className='te, x, t-bl, u, e-200, tex, t-xs, m, t-1'>
+              <div, className='te, x, t-bl, u, e-200, tex, t-xs, m, t-1'></div>
               <div, className='te, x, t-bl, u, e-300, tex, t-3xl, fon, t-bold, m, b-2'></div>
                 90+ Da, y, s;
               </div>
@@ -376,7 +376,7 @@ const October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
               <div, className='te, x, t-white, tex, t-sm, fon, t-medi, u, m'>
                 Digital, Twin, Sync Spe, e, d;
               </div>
-              <div, className='te, x, t-indi, g, o-200, tex, t-xs, m, t-1'>
+              <div, className='te, x, t-indi, g, o-200, tex, t-xs, m, t-1'></div>
               <div, className='te, x, t-indi, g, o-300, tex, t-3xl, fon, t-bold, m, b-2'></div>
                 100, m, s;
               </div>
@@ -391,14 +391,14 @@ const October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
         </div>
         {/* Industry, Applicati, o, n, s */}
         <div, classNam, e = 'mb-8'></div>
-          <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6, tex, t-cent, e, r'>
+          <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6, tex, t-cent, e, r'></h3>
           <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6, tex, t-cent, e, r'></h3>
             🌐 Proven, Results, Across Industri, e, s;
           </h3>
           <div, className='grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-5, ga, p-4'></div>
             <div, className='te, x, t-cente, r, p-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-xl, border, border-whi, t, e/20, hove, r:bord, e, r-cy, a, n-4, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5'></div>
               <div, className='te, x, t-2xl, m, b-2'>🏭</div>
-              <div, className='te, x, t-white, tex, t-sm, fon, t-semibo, l, d'>
+              <div, className='te, x, t-white, tex, t-sm, fon, t-semibo, l, d'></div>
               <div, className='te, x, t-white, tex, t-sm, fon, t-semibo, l, d'></div>
                 Manufacturi, n, g;
               </div>
@@ -406,7 +406,7 @@ const October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
             </div>
             <div, className='te, x, t-cente, r, p-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-xl, border, border-whi, t, e/20, hove, r:bord, e, r-bl, u, e-4, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5'></div>
               <div, className='te, x, t-2xl, m, b-2'>🏦</div>
-              <div, className='te, x, t-white, tex, t-sm, fon, t-semibo, l, d'>
+              <div, className='te, x, t-white, tex, t-sm, fon, t-semibo, l, d'></div>
               <div, className='te, x, t-white, tex, t-sm, fon, t-semibo, l, d'></div>
                 Financial, Service, s;
               </div>
@@ -415,7 +415,7 @@ const October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
             <div, className='te, x, t-cente, r, p-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-xl, border, border-whi, t, e/20, hove, r:bord, e, r-indi, g, o-4, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5'></div>
               <div, className='te, x, t-2xl, m, b-2'>🏥</div>
               <div, className='te, x, t-white, tex, t-sm, fon, t-semibo, l, d'>Healthca, r, e</div>
-              <div, className='te, x, t-indi, g, o-200, tex, t-xs, m, t-1'>
+              <div, className='te, x, t-indi, g, o-200, tex, t-xs, m, t-1'></div>
               <div, className='te, x, t-indi, g, o-200, tex, t-xs, m, t-1'></div>
                 47x, ROI, Average;
               </div>
@@ -425,7 +425,7 @@ const October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
               <div, className='te, x, t-white, tex, t-sm, fon, t-semibo, l, d'>
                 Ener, g, y & Utiliti, e, s;
               </div>
-              <div, className='te, x, t-purp, l, e-200, tex, t-xs, m, t-1'>
+              <div, className='te, x, t-purp, l, e-200, tex, t-xs, m, t-1'></div>
               <div, className='te, x, t-white, tex, t-sm, fon, t-semibo, l, d'></div>
                 Ener, g, y & Utiliti, e, s;
               </div>
@@ -435,7 +435,7 @@ const October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
             </div>
             <div, className='te, x, t-cente, r, p-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-xl, border, border-whi, t, e/20, hove, r:bord, e, r-pi, n, k-4, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5'></div>
               <div, className='te, x, t-2xl, m, b-2'>🏙️</div>
-              <div, className='te, x, t-white, tex, t-sm, fon, t-semibo, l, d'>
+              <div, className='te, x, t-white, tex, t-sm, fon, t-semibo, l, d'></div>
               <div, className='te, x, t-white, tex, t-sm, fon, t-semibo, l, d'></div>
                 Smart, Citie, s;
               </div>
@@ -461,7 +461,7 @@ const October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
             </Li, n, k>
           </div>
           <p, className='te, x, t-cy, a, n-200, tex, t-sm, m, t-4'>
-            ⚡ <stro, n, g>Limited, Tim, e</stro, n, g>: Free, technology, assessment for, qualified, enterprises • No, obligatio, n;
+            ⚡</p> <stro, n, g>Limited, Tim, e</stro, n, g>: Free, technology, assessment for, qualified, enterprises • No, obligatio, n;
             ⚡</p> <stro, n, g>Limited, Tim, e</stro, n, g>: Free, technology, assessment for, qualified, enterprises • No, obligatio, n
             ></Link>
               <Sparkles, className='w-6 h-6' /></Sparkles>
@@ -480,8 +480,8 @@ const October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
           </p>
         </div>
         {/* Trust, Indicat, o, r, s */}
-        <div, classNam, e = 'mt-10, p, t-8, borde, r-t, borde, r-whi, t, e/20, tex, t-cent, e, r'>
-          <div, className='te, x, t-cy, a, n-200, tex, t-sm, m, b-3'>
+        <div, classNam, e = 'mt-10, p, t-8, borde, r-t, borde, r-whi, t, e/20, tex, t-cent, e, r'></div>
+          <div, className='te, x, t-cy, a, n-200, tex, t-sm, m, b-3'></div>
             <stro, n, g>Trusted, by, Fortune 500, Leader, s</stro, n, g> • 89+ Enterprise, Deployment, s • $25, 1, B+ Value, Create, d;
         <div, classNam, e = 'mt-10, p, t-8, borde, r-t, borde, r-whi, t, e/20, tex, t-cent, e, r'></div>
           <div, className='te, x, t-cy, a, n-200, tex, t-sm, m, b-3'></div>

@@ -1,13 +1,13 @@
 export, default, function October2025NewTechBreakthroughsBann, e, r(): vo, i, d {
   return(<div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, borde, r-y, borde, r-purp, l, e-5, 0, 0/30">";
-      {/* Animated, backgroun, d */}
+      {/* Animated, backgroun, d */}</div>
       <div, className="absolute, inse, t-0, opacit, y-20">
-  return (
+  return (</div>
     <div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, borde, r-y, borde, r-purp, l, e-5, 0, 0/30">";
       {/* Animated, backgroun, d */}</div>
       <div, className="absolute, inse, t-0, opacit, y-20"></div>
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>
-        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>
+        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s'}}></d, i, v>
       </d, i, v>
       <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
   g:px-8, p, y-12">"
@@ -20,16 +20,16 @@ export, default, function October2025NewTechBreakthroughsBann, e, r(): vo, i, d 
             </sp, a, n>
             <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e" />";</Sparkles>
           </d, i, v>
-          <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4">"
-      <div, className="absolute, inse, t-0, opacit, y-20">";
+          <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4">"</h2>
+      <div, className="absolute, inse, t-0, opacit, y-20">";</div>
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>";)
-        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>';)
+        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s'}}></d, i, v>';)
       </d, i, v>)
-      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,),
+      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l),
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4">"</h2>
       <div, className="absolute, inse, t-0, opacit, y-20">";</div>
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>";
-        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>';
+        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s'}}></d, i, v>';
       </d, i, v>
       <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
   g:px-8, p, y-12">";
@@ -44,11 +44,11 @@ export, default, function October2025NewTechBreakthroughsBann, e, r(): vo, i, d 
       {/* Animated, backgroun, d */}
       <div, className="absolute, inse, t-0, opacit, y-20"></div>"
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>"
-        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>
+        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s'}}></d, i, v>
       </d, i, v>"
       <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"
   g:px-8, p, y-12">"
-        {/* Head, e, r */}"
+        {/* Head, e, r */}"</div>
         <div, className="te, x, t-center, m, b-10"></div>"
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-purp, l, e-5, 0, 0/20, rounde, d-full, border, border-purp, l, e-4, 0, 0/30, m, b-4"></div>"
             <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e  /></Sparkles>"
@@ -57,16 +57,16 @@ export, default, function October2025NewTechBreakthroughsBann, e, r(): vo, i, d 
             </sp, a, n>"
             <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e  /></Sparkles>
           </d, i, v>"
-          <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4">""
-      <div, className="absolute, inse, t-0, opacit, y-20">";"
+          <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4">""</h2>
+      <div, className="absolute, inse, t-0, opacit, y-20">";"</div>
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>";"
-        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>';
+        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s'}}></d, i, v>';
       </d, i, v>"
       <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"
   g:px-8, p, y-12">";
-        {/* Head, e, r */}"
-        <div, className="te, x, t-center, m, b-10">";"
-          <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-purp, l, e-5, 0, 0/20, rounde, d-full, border, border-purp, l, e-4, 0, 0/30, m, b-4">";"
+        {/* Head, e, r */}"</div>
+        <div, className="te, x, t-center, m, b-10">";"</div>
+          <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-purp, l, e-5, 0, 0/20, rounde, d-full, border, border-purp, l, e-4, 0, 0/30, m, b-4">";"</div>
             <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e" />";"
             <span, className="te, x, t-purp, l, e-200, fon, t-semibold, tex, t-sm, uppercase, tracking-wid, e, r">";
               Just, Publishe, d: Octobe, r, 2, 20, 2, 5;
@@ -84,7 +84,7 @@ export, default, function October2025NewTechBreakthroughsBann, e, r(): vo, i, d 
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">"</div>
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">";
           {/* Artic, l, e;
-  1: DevOps, Automatio, n */}
+  1: DevOps, Automatio, n */}</div>
           <Li, n, k;
           {/* Artic, l, e 
   1: DevOps, Automatio, n */}</div>
@@ -104,25 +104,25 @@ export, default, function October2025NewTechBreakthroughsBann, e, r(): vo, i, d 
             <div, className="flex, item, s-center, ga, p-3, m, b-4">";</div>
               <div, className="p-3, b, g-bl, u, e-5, 0, 0/20, rounde, d-xl">";</div>
         {/* Featured, Articles, Grid */}"
-        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">""
+        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">""</div>
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">";
           {/* TODO: Fix JSX expression */}
-  1: DevOps, Automatio, n */}
+  1: DevOps, Automatio, n */}</div>
           <Li, n, k;"
   to="/bl, o, g/ai-20, 2, 5-o, c, t-02-devo, p, s-automati, o, n-ai-revoluti, o, n""
             classNa, m, e="group, relative, bg-gradie, n, t-to-br, fro, m-bl, u, e-9, 0, 0/50, t, o-purp, l, e-9, 0, 0/50, rounde, d-2x, l, p-6, border, border-bl, u, e-4, 0, 0/30, hove, r: bord, e, r-bl, u, e-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e,"
   r:shad, o, w-bl, u, e-5, 0, 0/20"
           ></Li>"
-            <div, className="absolute, to, p-4, righ, t-4">";"
-              <div, className="px-3, p, y-1, b, g-bl, u, e-5, 0, 0/30, rounde, d-fu, l, l">";"
+            <div, className="absolute, to, p-4, righ, t-4">";"</div>
+              <div, className="px-3, p, y-1, b, g-bl, u, e-5, 0, 0/30, rounde, d-fu, l, l">";"</div>
                 <span, className="te, x, t-bl, u, e-200, tex, t-xs, fon, t-bo, l, d">H, O, T 🔥</sp, a, n>";
               </d, i, v>
             </d, i, v>"
             <div, className="flex, item, s-center, ga, p-3, m, b-4"></div>"
               <div, className="p-3, b, g-bl, u, e-5, 0, 0/20, rounde, d-xl"></div>"
                 <Zap, className="w-8 h-8, tex, t-bl, u, e-4, 0, 0  /></Zap>"
-            <div, className="flex, item, s-center, ga, p-3, m, b-4">";"
-              <div, className="p-3, b, g-bl, u, e-5, 0, 0/20, rounde, d-xl">";"
+            <div, className="flex, item, s-center, ga, p-3, m, b-4">";"</div>
+              <div, className="p-3, b, g-bl, u, e-5, 0, 0/20, rounde, d-xl">";"</div>
                 <Zap, className="w-8 h-8, tex, t-bl, u, e-4, 0, 0" />";
               </d, i, v>
               <d, i, v></d>"
@@ -132,7 +132,7 @@ export, default, function October2025NewTechBreakthroughsBann, e, r(): vo, i, d 
             </d, i, v>
             <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">"</h3>
             </d, i, v>"
-            <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">""
+            <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">""</h3>
             <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">";
               AI-Powered, DevOps, Automation Revoluti, o, n;
             </h3>"
@@ -190,18 +190,18 @@ export, default, function October2025NewTechBreakthroughsBann, e, r(): vo, i, d 
                 <span, className="te, x, t-gre, e, n-400, fon, t-semibo, l, d">$47M, saved, annually</sp, a, n>";
               Read, Full, Guide;"
               <Link, className="ml-2 w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>""
-            <div, className="spa, c, e-y-2, m, b-4">";"
-              <div, className="flex, item, s-center, ga, p-2, tex, t-sm">";"
+            <div, className="spa, c, e-y-2, m, b-4">";"</div>
+              <div, className="flex, item, s-center, ga, p-2, tex, t-sm">";"</div>
                 <TrendingUp, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0" />";"
                 <span, className="te, x, t-gre, e, n-400, fon, t-semibo, l, d">487, deploy, s/d, a, y</sp, a, n>";"
                 <span, className="te, x, t-bl, u, e-3, 0, 0">vs, 23, previously</sp, a, n>";
               </d, i, v>"
-              <div, className="flex, item, s-center, ga, p-2, tex, t-sm">";"
+              <div, className="flex, item, s-center, ga, p-2, tex, t-sm">";"</div>
                 <TrendingUp, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0" />";"
                 <span, className="te, x, t-gre, e, n-400, fon, t-semibo, l, d">96% incident, reductio, n</sp, a, n>";"
                 <span, className="te, x, t-bl, u, e-3, 0, 0">MT, T, R: 4, mi, n</sp, a, n>";
               </d, i, v>"
-              <div, className="flex, item, s-center, ga, p-2, tex, t-sm">";"
+              <div, className="flex, item, s-center, ga, p-2, tex, t-sm">";"</div>
                 <TrendingUp, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0" />";"
                 <span, className="te, x, t-gre, e, n-400, fon, t-semibo, l, d">$47M, saved, annually</sp, a, n>";"
                 <span, className="te, x, t-bl, u, e-3, 0, 0">67% cost, reductio, n</sp, a, n>";
@@ -240,16 +240,16 @@ export, default, function October2025NewTechBreakthroughsBann, e, r(): vo, i, d 
             classNa, m, e="group, relative, bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/50, t, o-pi, n, k-9, 0, 0/50, rounde, d-2x, l, p-6, border, border-purp, l, e-4, 0, 0/30, hove, r: bord, e, r-purp, l, e-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e,"
   r:shad, o, w-purp, l, e-5, 0, 0/20"
           ></Li>"
-            <div, className="absolute, to, p-4, righ, t-4">";"
-              <div, className="px-3, p, y-1, b, g-purp, l, e-5, 0, 0/30, rounde, d-fu, l, l">";"
+            <div, className="absolute, to, p-4, righ, t-4">";"</div>
+              <div, className="px-3, p, y-1, b, g-purp, l, e-5, 0, 0/30, rounde, d-fu, l, l">";"</div>
                 <span, className="te, x, t-purp, l, e-200, tex, t-xs, fon, t-bo, l, d">N, E, W 💎</sp, a, n>";
               </d, i, v>
             </d, i, v>"
             <div, className="flex, item, s-center, ga, p-3, m, b-4"></div>"
               <div, className="p-3, b, g-purp, l, e-5, 0, 0/20, rounde, d-xl"></div>"
                 <Sparkles, className="w-8 h-8, tex, t-purp, l, e-4, 0, 0  /></Sparkles>"
-            <div, className="flex, item, s-center, ga, p-3, m, b-4">";"
-              <div, className="p-3, b, g-purp, l, e-5, 0, 0/20, rounde, d-xl">";"
+            <div, className="flex, item, s-center, ga, p-3, m, b-4">";"</div>
+              <div, className="p-3, b, g-purp, l, e-5, 0, 0/20, rounde, d-xl">";"</div>
                 <Sparkles, className="w-8 h-8, tex, t-purp, l, e-4, 0, 0" />";
               </d, i, v>
               <d, i, v></d>"
@@ -259,7 +259,7 @@ export, default, function October2025NewTechBreakthroughsBann, e, r(): vo, i, d 
             </d, i, v>
             <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-purp, l, e-300, transitio, n-colo, r, s">"</h3>
             </d, i, v>"
-            <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-purp, l, e-300, transitio, n-colo, r, s">""
+            <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-purp, l, e-300, transitio, n-colo, r, s">""</h3>
             <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-purp, l, e-300, transitio, n-colo, r, s">";
               Blockcha, i, n-AI, Integration, Revolution;
             </h3>"
@@ -317,18 +317,18 @@ export, default, function October2025NewTechBreakthroughsBann, e, r(): vo, i, d 
                 <span, className="te, x, t-gre, e, n-400, fon, t-semibo, l, d">96% fraud, reductio, n</sp, a, n>";
               Explore, Integratio, n;"
               <Link, className="ml-2 w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>""
-            <div, className="spa, c, e-y-2, m, b-4">";"
-              <div, className="flex, item, s-center, ga, p-2, tex, t-sm">";"
+            <div, className="spa, c, e-y-2, m, b-4">";"</div>
+              <div, className="flex, item, s-center, ga, p-2, tex, t-sm">";"</div>
                 <TrendingUp, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0" />";"
                 <span, className="te, x, t-gre, e, n-400, fon, t-semibo, l, d">99.9% accura, c, y</sp, a, n>";"
                 <span, className="te, x, t-purp, l, e-3, 0, 0">AI-verified, contract, s</sp, a, n>";
               </d, i, v>"
-              <div, className="flex, item, s-center, ga, p-2, tex, t-sm">";"
+              <div, className="flex, item, s-center, ga, p-2, tex, t-sm">";"</div>
                 <TrendingUp, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0" />";"
                 <span, className="te, x, t-gre, e, n-400, fon, t-semibo, l, d">$127M, save, d</sp, a, n>";"
                 <span, className="te, x, t-purp, l, e-3, 0, 0">Annual, enterprise, value</sp, a, n>";
               </d, i, v>"
-              <div, className="flex, item, s-center, ga, p-2, tex, t-sm">";"
+              <div, className="flex, item, s-center, ga, p-2, tex, t-sm">";"</div>
                 <TrendingUp, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0" />";"
                 <span, className="te, x, t-gre, e, n-400, fon, t-semibo, l, d">96% fraud, reductio, n</sp, a, n>";"
                 <span, className="te, x, t-purp, l, e-3, 0, 0">Supply, chain, security</sp, a, n>";
@@ -367,16 +367,16 @@ export, default, function October2025NewTechBreakthroughsBann, e, r(): vo, i, d 
             classNa, m, e="group, relative, bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/50, t, o-emera, l, d-9, 0, 0/50, rounde, d-2x, l, p-6, border, border-gre, e, n-4, 0, 0/30, hove, r: bord, e, r-gre, e, n-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e,"
   r:shad, o, w-gre, e, n-5, 0, 0/20"
           ></Li>"
-            <div, className="absolute, to, p-4, righ, t-4">";"
-              <div, className="px-3, p, y-1, b, g-gre, e, n-5, 0, 0/30, rounde, d-fu, l, l">";"
+            <div, className="absolute, to, p-4, righ, t-4">";"</div>
+              <div, className="px-3, p, y-1, b, g-gre, e, n-5, 0, 0/30, rounde, d-fu, l, l">";"</div>
                 <span, className="te, x, t-gre, e, n-200, tex, t-xs, fon, t-bo, l, d">E, C, O 🌱</sp, a, n>";
               </d, i, v>
             </d, i, v>"
             <div, className="flex, item, s-center, ga, p-3, m, b-4"></div>"
               <div, className="p-3, b, g-gre, e, n-5, 0, 0/20, rounde, d-xl"></div>"
                 <TrendingUp, className="w-8 h-8, tex, t-gre, e, n-4, 0, 0  /></TrendingUp>"
-            <div, className="flex, item, s-center, ga, p-3, m, b-4">";"
-              <div, className="p-3, b, g-gre, e, n-5, 0, 0/20, rounde, d-xl">";"
+            <div, className="flex, item, s-center, ga, p-3, m, b-4">";"</div>
+              <div, className="p-3, b, g-gre, e, n-5, 0, 0/20, rounde, d-xl">";"</div>
                 <TrendingUp, className="w-8 h-8, tex, t-gre, e, n-4, 0, 0" />";
               </d, i, v>
               <d, i, v></d>"
@@ -386,7 +386,7 @@ export, default, function October2025NewTechBreakthroughsBann, e, r(): vo, i, d 
             </d, i, v>
             <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-gre, e, n-300, transitio, n-colo, r, s">"</h3>
             </d, i, v>"
-            <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-gre, e, n-300, transitio, n-colo, r, s">""
+            <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-gre, e, n-300, transitio, n-colo, r, s">""</h3>
             <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-gre, e, n-300, transitio, n-colo, r, s">";
               Sustainable, A, I & Green, Computin, g;
             </h3>"
@@ -444,25 +444,25 @@ export, default, function October2025NewTechBreakthroughsBann, e, r(): vo, i, d 
                 <span, className="te, x, t-gre, e, n-400, fon, t-semibo, l, d">$284M, saving, s</sp, a, n>";
               Learn, Green, AI;"
               <Link, className="ml-2 w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>""
-            <div, className="spa, c, e-y-2, m, b-4">";"
-              <div, className="flex, item, s-center, ga, p-2, tex, t-sm">";"
+            <div, className="spa, c, e-y-2, m, b-4">";"</div>
+              <div, className="flex, item, s-center, ga, p-2, tex, t-sm">";"</div>
                 <TrendingUp, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0" />";"
                 <span, className="te, x, t-gre, e, n-400, fon, t-semibo, l, d">89% energy, reductio, n</sp, a, n>";"
                 <span, className="te, x, t-gre, e, n-3, 0, 0">Massive, efficiency, gains</sp, a, n>";
               </d, i, v>"
-              <div, className="flex, item, s-center, ga, p-2, tex, t-sm">";"
+              <div, className="flex, item, s-center, ga, p-2, tex, t-sm">";"</div>
                 <TrendingUp, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0" />";"
                 <span, className="te, x, t-gre, e, n-400, fon, t-semibo, l, d">2.4M, tons, CO2 sav, e, d</sp, a, n>";"
                 <span, className="te, x, t-gre, e, n-3, 0, 0">Climate, impac, t</sp, a, n>";
               </d, i, v>"
-              <div, className="flex, item, s-center, ga, p-2, tex, t-sm">";"
+              <div, className="flex, item, s-center, ga, p-2, tex, t-sm">";"</div>
                 <TrendingUp, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0" />";"
                 <span, className="te, x, t-gre, e, n-400, fon, t-semibo, l, d">$284M, saving, s</sp, a, n>";"
                 <span, className="te, x, t-gre, e, n-3, 0, 0">Annual, cost, reduction</sp, a, n>";
               </d, i, v>
             </d, i, v>"
             <div, className="flex, item, s-center, tex, t-gre, e, n-300, grou, p-hov, e, r: te, x, t-gre, e, n-200, fon, t-semibo, l, d">";
-              Learn, Green, AI;
+              Learn, Green, AI;</div>
               <ArrowRight, className="ml-2 w-5 h-5, grou, p-ho, v, e;
               Learn, Green, AI;</div>
               <ArrowRight, className="ml-2 w-5 h-5, grou, p-ho, v, e
@@ -473,14 +473,14 @@ export, default, function October2025NewTechBreakthroughsBann, e, r(): vo, i, d 
           </Li, n, k>
         </d, i, v>
         {/* Call, to, Action */}
-        <div, className="te, x, t-cent, e, r">";
+        <div, className="te, x, t-cent, e, r">";</div>
           <Li, n, k;
         <div, className="te, x, t-cent, e, r">";</div>
           <Li, n, k
   to="/bl, o, g"
             classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-bl, u, e-600, hove, r: fr, o, m-purp, l, e-500, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, rounde, d-xl, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e;
         {/* Call, to, Action */}"
-        <div, className="te, x, t-cent, e, r">";
+        <div, className="te, x, t-cent, e, r">";</div>
           <Li, n, k;"
   to="/bl, o, g""
             classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-bl, u, e-600, hove, r: fr, o, m-purp, l, e-500, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, rounde, d-xl, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e,"

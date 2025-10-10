@@ -7,19 +7,19 @@ import Footer from '../components/Footer';
 const CompliancePage: React.FC = () => {
   const certifications = [],
   return (
-    { name: 'SOC 2 Type II', status: 'Certified' },
-    { name: 'ISO 27001', status: 'Certified' },
-    { name: 'GDPR Compliant', status: 'Certified' },
-    { name: 'HIPAA Compliant', status: 'Certified' },
-    { name: 'PCI DSS Level 1', status: 'Certified' },
-    { name: 'NIST Framework', status: 'Implemented' }
+    { name: 'SOC 2 Type II', status: 'Certified'},
+    { name: 'ISO 27001', status: 'Certified'},
+    { name: 'GDPR Compliant', status: 'Certified'},
+    { name: 'HIPAA Compliant', status: 'Certified'},
+    { name: 'PCI DSS Level 1', status: 'Certified'},
+    { name: 'NIST Framework', status: 'Implemented'}
   ];
   const complianceAreas = [
   // TOD,
   O: Add items
 ],
     {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   ico,
   n: Shield,
@@ -49,12 +49,12 @@ const CompliancePage: React.FC = () => {
     }
   return (<div>Coming Soon</div>)
   )
-          <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+          <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
         <Navigation />
         {/* Header */}
-        <section className="bg-white shadow-sm border-b">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-6">
-            <div className="flex items-center">
+        <section className="bg-white shadow-sm border-b"></section>
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-6"></div>
+            <div className="flex items-center"></div>
               <Link
                 to="/privacy" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200 mr-6"
 // >

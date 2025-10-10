@@ -17,8 +17,7 @@ export interface MiddlewareContext {
     method: string,,
     headers: Record
           <string>
-    body?: unknown,
-  }
+    body?: unknown}
   response?: {
     // TODO: Add content
   }
@@ -52,8 +51,7 @@ export class MiddlewareExecutor {
     let index = 0
   }
     const next = async () => {if (index >= this.middlewares.length) {}
-  // TODO: Add content,
-}
+  // TODO: Add content}
         return context.response?.data;
       const middleware = this.middlewares[index++];
       return await middleware(context, next);

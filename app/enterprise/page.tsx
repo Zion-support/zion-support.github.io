@@ -94,16 +94,16 @@ return (
       <SEOOptimizer>
       <Navigation>
       {/* Hero Section */}
-      <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+      <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
         </section>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s'}} /></div>
         <div className="relative max-w-7xl mx-auto text-center"></div>
           <h1>
             Enterprise</h1>
@@ -117,7 +117,7 @@ return (
           </p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             <button>
-              Get Enterprise Consultation
+              Get Enterprise Consultation</button>
               <ArrowRight>
             </button>
             <button>
@@ -128,9 +128,9 @@ return (
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+      <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
@@ -153,9 +153,9 @@ return (
         </div>
       </section>
       {/* Features Section */}
-      <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+      <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
@@ -210,9 +210,9 @@ return (
         </div>
       </section>
       {/* Benefits Section */}
-      <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+      <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
@@ -225,9 +225,9 @@ return (
         </div>
       </section>
       {/* CTA Section */}
-      <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+      <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
@@ -242,7 +242,7 @@ return (
           </p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             <button>
-              Contact Enterprise Sales
+              Contact Enterprise Sales</button>
               <ArrowRight>
             </button>
             <button>
@@ -252,8 +252,7 @@ return (
         </div>
       </section>
       <Footer />
-  ),
-};
+  )};
 
 export default EnterprisePage;
 

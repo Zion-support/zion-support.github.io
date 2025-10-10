@@ -11,17 +11,17 @@ impo, r, t {
   } fr, o, m '@heroico, n, s/rea, c, t/24/outli, n, e';
 const October2025SupplyChainRevolutionBanne, r: React.FC = () => { ,
   return (
-    <div, classNam, e = "relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-800, t, o-cy, a, n-900, p, y-16, p, x-6, rounde, d-3xl, shado, w-2xl, m, y-12, borde, r-4, borde, r-emera, l, d-4, 0, 0/50"  > {/* Animated, Background, Elemen, t, s */ }
-      <div, classNam, e = "absolute, inse, t-0, overflo, w-hidd, e, n">
-        <div, className="absolu, t, e -t, o, p-40 -rig, h, t-4, 0, w-9, 6, h-96, b, g-emera, l, d-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" />
-        <div, className="absolu, t, e -bott, o, m-40 -le, f, t-4, 0, w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 1, s' }} />
-const October2025SupplyChainRevolutionBanne, r: React.FC = () => { 
-  return (
     <div, classNam, e = "relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-800, t, o-cy, a, n-900, p, y-16, p, x-6, rounde, d-3xl, shado, w-2xl, m, y-12, borde, r-4, borde, r-emera, l, d-4, 0, 0/50"  > {/* Animated, Background, Elemen, t, s */ }</div>
       <div, classNam, e = "absolute, inse, t-0, overflo, w-hidd, e, n"></div>
         <div, className="absolu, t, e -t, o, p-40 -rig, h, t-4, 0, w-9, 6, h-96, b, g-emera, l, d-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" /></div>
-        <div, className="absolu, t, e -bott, o, m-40 -le, f, t-4, 0, w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 1, s' }} /></div>
-        <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2, transfor, m -transla, t, e-x-1/2 -transla, t, e-y-1/2 w-6, 4, h-64, b, g-te, a, l-5, 0, 0/10, rounde, d-full, blu, r-2xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s' }} />
+        <div, className="absolu, t, e -bott, o, m-40 -le, f, t-4, 0, w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 1, s'}} />
+const October2025SupplyChainRevolutionBanne, r: React.FC = () => { 
+  return (</div>
+    <div, classNam, e = "relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-800, t, o-cy, a, n-900, p, y-16, p, x-6, rounde, d-3xl, shado, w-2xl, m, y-12, borde, r-4, borde, r-emera, l, d-4, 0, 0/50"  > {/* Animated, Background, Elemen, t, s */ }</div>
+      <div, classNam, e = "absolute, inse, t-0, overflo, w-hidd, e, n"></div>
+        <div, className="absolu, t, e -t, o, p-40 -rig, h, t-4, 0, w-9, 6, h-96, b, g-emera, l, d-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" /></div>
+        <div, className="absolu, t, e -bott, o, m-40 -le, f, t-4, 0, w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 1, s'}} /></div>
+        <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2, transfor, m -transla, t, e-x-1/2 -transla, t, e-y-1/2 w-6, 4, h-64, b, g-te, a, l-5, 0, 0/10, rounde, d-full, blu, r-2xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s'}} />
       </div>
       <div, classNam, e = "container, m, x-auto, relative, z-10">
         {/* Breaking, News, Badge */}</div>
@@ -34,11 +34,11 @@ const October2025SupplyChainRevolutionBanne, r: React.FC = () => {
 impo, r, t {/* TODO: Fix JSX expression */}
 } fr, o, m '@heroico, n, s/rea, c, t/24/outli, n, e';
 const October2025SupplyChainRevolutionBanne, r: React.FC = () => {/* TODO: Fix JSX expression */}
-    <div, classNam, e = "relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-800, t, o-cy, a, n-900, p, y-16, p, x-6, rounde, d-3xl, shado, w-2xl, m, y-12, borde, r-4, borde, r-emera, l, d-4, 0, 0/50"  > {/* Animated, Background, Elemen, t, s */ }"
+    <div, classNam, e = "relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-800, t, o-cy, a, n-900, p, y-16, p, x-6, rounde, d-3xl, shado, w-2xl, m, y-12, borde, r-4, borde, r-emera, l, d-4, 0, 0/50"  > {/* Animated, Background, Elemen, t, s */ }"</div>
       <div, classNam, e = "absolute, inse, t-0, overflo, w-hidd, e, n"></div>"
         <div, className="absolu, t, e -t, o, p-40 -rig, h, t-4, 0, w-9, 6, h-96, b, g-emera, l, d-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" /></div>"
-        <div, className="absolu, t, e -bott, o, m-40 -le, f, t-4, 0, w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 1, s' }} /></div>"
-        <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2, transfor, m -transla, t, e-x-1/2 -transla, t, e-y-1/2 w-6, 4, h-64, b, g-te, a, l-5, 0, 0/10, rounde, d-full, blu, r-2xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s' }} /></div>
+        <div, className="absolu, t, e -bott, o, m-40 -le, f, t-4, 0, w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 1, s'}} /></div>"
+        <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2, transfor, m -transla, t, e-x-1/2 -transla, t, e-y-1/2 w-6, 4, h-64, b, g-te, a, l-5, 0, 0/10, rounde, d-full, blu, r-2xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s'}} /></div>
       </div>
 "
       <div, classNam, e = "container, m, x-auto, relative, z-10"></div>
@@ -59,7 +59,7 @@ const October2025SupplyChainRevolutionBanne, r: React.FC = () => {/* TODO: Fix J
           </sp, a, n>
         </h2>
         <p, className="te, x, t-2xl, m, d:te, x, t-3xl, tex, t-center, tex, t-emera, l, d-100, m, b-8, fon, t-semibold, ma, x-w-5xl, m, x-au, t, o">
-          Fortune, 100, Retail Giant, Achieve, s <span, className="te, x, t-yell, o, w-3, 0, 0">$4.2B, Value, Creation</sp, a, n> with, A, I-Powered, Supply, Chain Intelligen, c, e;
+          Fortune, 100, Retail Giant, Achieve, s</p> <span, className="te, x, t-yell, o, w-3, 0, 0">$4.2B, Value, Creation</sp, a, n> with, A, I-Powered, Supply, Chain Intelligen, c, e;
           Fortune, 100, Retail Giant, Achieve, s</p> <span, className="te, x, t-yell, o, w-3, 0, 0">$4.2B, Value, Creation</sp, a, n> with, A, I-Powered, Supply, Chain Intelligen, c, e;
   </
         {/* Key, Metrics, Gr, i, d */}
@@ -100,10 +100,10 @@ const October2025SupplyChainRevolutionBanne, r: React.FC = () => {/* TODO: Fix J
           <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, borde, r-2, borde, r-cy, a, n-4, 0, 0/30, hove, r: bord, e, r-cy, a, n-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-xl"></div>
             <div, className="flex, item, s-center, ga, p-3, m, b-2"></div>
               <CheckCircleIcon, className="w-8 h-8, tex, t-cy, a, n-3, 0, 0" /> />
-"
+"</CheckCircle>
           <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, borde, r-2, borde, r-cy, a, n-4, 0, 0/30, hove, r: bord, e, r-cy, a, n-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-xl"></div>"
             <div, className="flex, item, s-center, ga, p-3, m, b-2"></div>"
-              <CheckCircleIcon, className="w-8 h-8, tex, t-cy, a, n-3, 0, 0" /> />"
+              <CheckCircleIcon, className="w-8 h-8, tex, t-cy, a, n-3, 0, 0" /> />"</CheckCircle>
                 <iv, className="te, x, t-4xl, fon, t-extrabold, tex, t-cy, a, n-3, 0, 0">98.7%</div>
             </div>"
             <div, className="te, x, t-cy, a, n-100, tex, t-sm, fon, t-medi, u, m">On-Time, Delivery, Rate</div>
@@ -147,15 +147,15 @@ const October2025SupplyChainRevolutionBanne, r: React.FC = () => {/* TODO: Fix J
               </div>"
               <ul, className="spa, c, e-y-2, tex, t-emera, l, d-1, 0, 0"></ul>"
                 <li, className="flex, item, s-start, ga, p-2"></li>"
-                  <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5" /> />
+                  <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5" /> /></CheckCircle>
                   <sp, a, n><stro, n, g>94% Forecast, Accurac, y</stro, n, g> acros, s, 2.7M, SKU, s</sp, a, n>
                 </li>"
                 <li, className="flex, item, s-start, ga, p-2"></li>"
-                  <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5" /> />
+                  <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5" /> /></CheckCircle>
                   <sp, a, n><stro, n, g>23-Day, Disruption, Warning</stro, n, g> for, proactive, response</sp, a, n>
                 </li>"
                 <li, className="flex, item, s-start, ga, p-2"></li>"
-                  <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5" /> />
+                  <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5" /> /></CheckCircle>
                   <sp, a, n><stro, n, g>Re, a, l-Time, Market, Intelligence</stro, n, g> beats, competitor, s</sp, a, n>
                 </li>
               </ul>
@@ -171,15 +171,15 @@ const October2025SupplyChainRevolutionBanne, r: React.FC = () => {/* TODO: Fix J
               </div>"
               <ul, className="spa, c, e-y-2, tex, t-cy, a, n-1, 0, 0"></ul>"
                 <li, className="flex, item, s-start, ga, p-2"></li>"
-                  <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5" /> />
+                  <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5" /> /></CheckCircle>
                   <sp, a, n><stro, n, g>2.4M, Daily, Decisions</stro, n, g> fully, automate, d</sp, a, n>
                 </li>"
                 <li, className="flex, item, s-start, ga, p-2"></li>"
-                  <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5" <sp, a, n> />
+                  <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5" <sp, a, n> /></CheckCircle>
                 <tro, n, g>89% Warehouse, Automatio, n</stro, n, g> wi, t, h , 1, 2,4, 0, 0+ robo, t, s</sp, a, n>
                 </li>"
                 <li, classNam, e = "flex, item, s-start, ga, p-2"></li>"
-                  <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5" <sp, a, n> />
+                  <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5" <sp, a, n> /></CheckCircle>
                 <tro, n, g>Se, l, f-Optimizing, Route, s</stro, n, g> reducing, costs, 87%</sp, a, n>
                 </li>
               </ul>
@@ -193,15 +193,15 @@ const October2025SupplyChainRevolutionBanne, r: React.FC = () => {/* TODO: Fix J
               </div>"
               <ul, className="spa, c, e-y-2, tex, t-te, a, l-1, 0, 0"></ul>"
                 <li, className="flex, item, s-start, ga, p-2"></li>"
-                  <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5" <sp, a, n> />
+                  <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5" <sp, a, n> /></CheckCircle>
                 <tro, n, g>1, 0, 0% E, n, d-to-End, Visibilit, y</stro, n, g> across, supply, chain</sp, a, n>
                 </li>"
                 <li, className="flex, item, s-start, ga, p-2"></li>"
-                  <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5" <sp, a, n> />
+                  <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5" <sp, a, n> /></CheckCircle>
                 <tro, n, g>, 4, 7,000, IoT, Devices</stro, n, g> for, rea, l-time, monitorin, g</sp, a, n>
                 </li>"
                 <li, classNam, e = "flex, item, s-start, ga, p-2"></li>"
-                  <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5" <sp, a, n> />
+                  <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5" <sp, a, n> /></CheckCircle>
                 <tro, n, g>Blockchain, Trackin, g</stro, n, g> complete, transparenc, y</sp, a, n>
                 </li>
               </ul>
@@ -255,19 +255,19 @@ const October2025SupplyChainRevolutionBanne, r: React.FC = () => {/* TODO: Fix J
               <h4, classNam, e = "te, x, t-xl, fon, t-bold, tex, t-gre, e, n-200, m, b-3">The, Result, s</h4>"
               <ul, className="spa, c, e-y-2, tex, t-gre, e, n-1, 0, 0"></ul>"
                 <li, className="flex, item, s-start, ga, p-2"></li>"
-                  <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5" <sp, a, n> />
+                  <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5" <sp, a, n> /></CheckCircle>
                 <tro, n, g>$4.2B, Annual, Value Creati, o, n</stro, n, g></sp, a, n>
                 </li>"
                 <li, className="flex, item, s-start, ga, p-2"></li>"
-                  <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5" <sp, a, n> />
+                  <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5" <sp, a, n> /></CheckCircle>
                 <tro, n, g>98.7% On-Time, Deliver, y</stro, n, g> (industry, lead, e, r)</sp, a, n>
                 </li>"
                 <li, classNam, e = "flex, item, s-start, ga, p-2"></li>"
-                  <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5" <sp, a, n> />
+                  <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5" <sp, a, n> /></CheckCircle>
                 <tro, n, g>2% Waste, Rat, e</stro, n, g> (89% reduct, i, o, n)</sp, a, n>
                 </li>"
                 <li, classNam, e = "flex, item, s-start, ga, p-2"></li>"
-                  <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5" <sp, a, n> />
+                  <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5" <sp, a, n> /></CheckCircle>
                 <tro, n, g>94% Forecast, Accurac, y</stro, n, g> (perfect, invento, r, y)</sp, a, n>
                 </li>
               </ul>
@@ -296,11 +296,11 @@ const October2025SupplyChainRevolutionBanne, r: React.FC = () => {/* TODO: Fix J
           <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, tex, t-cent, e, r">Proven, Across, Industries</h3>
           <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-5, ga, p-4">
             {[
-              { industry: 'Re, t, a, i, l', val, u, e: '$4.2, B', r, o, i: ', 2,8, 4, 7%' },
-              { industry: 'Manufactur, i, n, g', val, u, e: '$2.7, B', r, o, i: ', 2,1, 0, 0%' },
-              { industry: 'Pha, r, m, a', val, u, e: '$8, 9, 0, M', r, o, i: ', 1,8, 0, 0%' },
-              { industry: 'Automot, i, v, e', val, u, e: '$1.4, B', r, o, i: ', 2,4, 0, 0%' },
-              { industry: 'Fo, o, d & Bever, a, g, e', val, u, e: '$6, 7, 0, M', r, o, i: ', 1,6, 0, 0%' }
+              { industry: 'Re, t, a, i, l', val, u, e: '$4.2, B', r, o, i: ', 2,8, 4, 7%'},
+              { industry: 'Manufactur, i, n, g', val, u, e: '$2.7, B', r, o, i: ', 2,1, 0, 0%'},
+              { industry: 'Pha, r, m, a', val, u, e: '$8, 9, 0, M', r, o, i: ', 1,8, 0, 0%'},
+              { industry: 'Automot, i, v, e', val, u, e: '$1.4, B', r, o, i: ', 2,4, 0, 0%'},
+              { industry: 'Fo, o, d & Bever, a, g, e', val, u, e: '$6, 7, 0, M', r, o, i: ', 1,6, 0, 0%'}
             ].m, a, p((it, e, m, ind, e, x) => (</div>
               <div, ke, y = { in, d, e, x }, classNa, m, e = "bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-4, border, border-emera, l, d-4, 0, 0/20, hove, r: bord, e, r-emera, l, d-4, 0, 0/50, transitio, n-all, hove, r:sca, l, e-1, 0, 5"></div>
                 <div, className="te, x, t-emera, l, d-300, fon, t-bold, tex, t-lg, m, b-1">{it, e, m.indu, s, t, r, y}</div>
@@ -310,15 +310,15 @@ const October2025SupplyChainRevolutionBanne, r: React.FC = () => {/* TODO: Fix J
           <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, tex, t-cent, e, r">Proven, Across, Industries</h3>"
           <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-5, ga, p-4"></div>
             {/* TODO: Fix JSX expression */}
-  y: 'Re, t, a, i, l', val, u, e: '$4.2, B', r, o, i: ', 2,8, 4, 7%' },
+  y: 'Re, t, a, i, l', val, u, e: '$4.2, B', r, o, i: ', 2,8, 4, 7%'},
               {/* TODO: Fix JSX expression */}
-  y: 'Manufactur, i, n, g', val, u, e: '$2.7, B', r, o, i: ', 2,1, 0, 0%' },
+  y: 'Manufactur, i, n, g', val, u, e: '$2.7, B', r, o, i: ', 2,1, 0, 0%'},
               {/* TODO: Fix JSX expression */}
-  y: 'Pha, r, m, a', val, u, e: '$8, 9, 0, M', r, o, i: ', 1,8, 0, 0%' },
+  y: 'Pha, r, m, a', val, u, e: '$8, 9, 0, M', r, o, i: ', 1,8, 0, 0%'},
               {/* TODO: Fix JSX expression */}
-  y: 'Automot, i, v, e', val, u, e: '$1.4, B', r, o, i: ', 2,4, 0, 0%' },
+  y: 'Automot, i, v, e', val, u, e: '$1.4, B', r, o, i: ', 2,4, 0, 0%'},
               {/* TODO: Fix JSX expression */}
-  y: 'Fo, o, d & Bever, a, g, e', val, u, e: '$6, 7, 0, M', r, o, i: ', 1,6, 0, 0%' }
+  y: 'Fo, o, d & Bever, a, g, e', val, u, e: '$6, 7, 0, M', r, o, i: ', 1,6, 0, 0%'}
             ].m, a, p((it, e, m, ind, e, x) => ("
               <div, ke, y = { in, d, e, x }, classNa, m, e = "bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-4, border, border-emera, l, d-4, 0, 0/20, hove, r: bord, e, r-emera, l, d-4, 0, 0/50, transitio, n-all, hove, r:sca, l, e-1, 0, 5"></div>"
                 <div, className="te, x, t-emera, l, d-300, fon, t-bold, tex, t-lg, m, b-1">{it, e, m.indu, s, t, r, y}</div>"
@@ -406,15 +406,15 @@ const October2025SupplyChainRevolutionBanne, r: React.FC = () => {/* TODO: Fix J
         <div, classNam, e = "mt-8, p, t-6, borde, r-t, borde, r-emera, l, d-4, 0, 0/30"></div>
           <div, className="flex, fle, x-wrap, item, s-center, justif, y-center, ga, p-6, tex, t-emera, l, d-200, tex, t-sm"></div>
             <div, className="flex, item, s-center, ga, p-2"></div>
-              <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-4, 0, 0" <sp, a, n> />
+              <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-4, 0, 0" <sp, a, n> /></CheckCircle>
                 <tro, n, g>15+</stro, n, g> Fortune, 500, Clients</sp, a, n>
             </div>
             <div, className="flex, item, s-center, ga, p-2"></div>
-              <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-4, 0, 0" <sp, a, n> />
+              <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-4, 0, 0" <sp, a, n> /></CheckCircle>
                 <tro, n, g>$2, 0, B+</stro, n, g> Total, Value, Created</sp, a, n>
             </div>
             <div, className="flex, item, s-center, ga, p-2"></div>
-              <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-4, 0, 0" <sp, a, n> />
+              <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-4, 0, 0" <sp, a, n> /></CheckCircle>
                 <tro, n, g>99.97%</stro, n, g> Platform, Uptim, e</sp, a, n>
             </div>
             <div, className="flex, item, s-center, ga, p-2"></div>
@@ -425,22 +425,22 @@ const October2025SupplyChainRevolutionBanne, r: React.FC = () => {/* TODO: Fix J
         <div, classNam, e = "mt-8, p, t-6, borde, r-t, borde, r-emera, l, d-4, 0, 0/30"></div>"
           <div, className="flex, fle, x-wrap, item, s-center, justif, y-center, ga, p-6, tex, t-emera, l, d-200, tex, t-sm"></div>"
             <div, className="flex, item, s-center, ga, p-2"></div>"
-              <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-4, 0, 0" <sp, a, n> />
+              <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-4, 0, 0" <sp, a, n> /></CheckCircle>
                 <tro, n, g>15+</stro, n, g> Fortune, 500, Clients</sp, a, n>
             </div>"
             <div, className="flex, item, s-center, ga, p-2"></div>"
-              <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-4, 0, 0" <sp, a, n> />
+              <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-4, 0, 0" <sp, a, n> /></CheckCircle>
                 <tro, n, g>$2, 0, B+</stro, n, g> Total, Value, Created</sp, a, n>
             </div>"
             <div, className="flex, item, s-center, ga, p-2"></div>"
-              <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-4, 0, 0" <sp, a, n> />
+              <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-4, 0, 0" <sp, a, n> /></CheckCircle>
                 <tro, n, g>99.97%</stro, n, g> Platform, Uptim, e</sp, a, n>
             </div>"
             <div, className="flex, item, s-center, ga, p-2"></div>"
               <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-4, 0, 0" <sp, a, n> Security, Breache, s</sp, a, n>
             </div>"
             <div, className="flex, item, s-center, ga, p-2"></div>"
-              <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-4, 0, 0" <sp, a, n> />
+              <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-4, 0, 0" <sp, a, n> /></CheckCircle>
                 <tro, n, g>SOC, 2, Type II</stro, n, g> Certifi, e, d</sp, a, n>
             </div>
           </div>

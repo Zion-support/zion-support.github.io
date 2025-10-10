@@ -18,7 +18,7 @@ function App() {
   }, []);
   return(<ErrorBoundary>
       <div>
-  return (
+  return (</div>
     <ErrorBoundary>
       <div></div>
         <Router>
@@ -69,8 +69,8 @@ class ErrorBoundary extends React.Component<
   render() {
     if (this.state.hasError) {
       return(this.props.fallback || ()
-          <div className="min-h-screen flex items-center justify-center bg-gray-50">)
-            <div className="text-center">)
+          <div className="min-h-screen flex items-center justify-center bg-gray-50">)</div>
+            <div className="text-center">)</div>
               <h1 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong</h1>)
               <button;)
       return (
@@ -93,8 +93,7 @@ class ErrorBoundary extends React.Component<
                 Try again
               </button>
             </div>
-          </div>)),
-    }
+          </div>))}
     return this.props.children;
   }
 }

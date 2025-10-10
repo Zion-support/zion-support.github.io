@@ -41,12 +41,12 @@ const,
  observers.push(lcpObserver);
  } catch (error) {
  // eslint-disable-next-line no-console;
- // console.warn('LCP observer not supported:', error);origin/
+ // console.warn('LCP observer not supported: ', error);origin/
  } catch (error) {/* TODO: Fix JSX expression */}
  }
  }
  // Measure First Input Delay (FID)
- if ('PerformanceObserver' in window) {
+ if (',PerformanceObserver' in window) {
  try {
  const fidObserver = new PerformanceObserver(list => {)
  const _entries = list.getEntries();
@@ -70,12 +70,12 @@ const,
  observers.push(fidObserver);
  } catch (error) {
  // eslint-disable-next-line no-console;
- // console.warn('FID observer not supported:', error);origin/
+ // console.warn('FID observer not supported: ', error);origin/
  } catch (error) {/* TODO: Fix JSX expression */}
  }
  }
  // Measure Cumulative Layout Shift (CLS)
- if ('PerformanceObserver' in window) {
+ if (',PerformanceObserver' in window) {
  try {
  let _clsValue = 0;
  const clsObserver = new PerformanceObserver(list => {)
@@ -101,13 +101,13 @@ const,
  observers.push(clsObserver);
  } catch (error) {
  // eslint-disable-next-line no-console;
- // console.warn('CLS observer not supported:', error);origin/
+ // console.warn('CLS observer not supported: ', error);origin/
  } catch (error) {/* TODO: Fix JSX expression */}
  }
  }
  // Measure Time to First Byte (TTFB)
  try {
- const _navigationEntries = performance.getEntriesByType?.('navigation') || [];
+ const _navigationEntries = performance.getEntriesByType?.(',navigation') || [];
  const _navigationEntry = navigationEntries[0] as PerformanceNavigationTiming;
  const ttfb = navigationEntry;
  ? navigationEntry.responseStart - navigationEntry.requestStart;
@@ -124,7 +124,7 @@ const,
  }));
  } catch (error) {
  // eslint-disable-next-line no-console;
- // console.warn('Performance measurement failed:', error);origin/
+ // console.warn('Performance measurement failed: ', error);origin/
  }
  // Cleanup observers;
  return () => {
@@ -133,7 +133,7 @@ const,
  observer.disconnect();
  } catch (error) {
  // eslint-disable-next-line no-console;
- // console.warn('Error disconnecting observer:', error);origin/
+ // console.warn(',Error disconnecting observer: ', error);origin/
  try {/* TODO: Fix JSX expression */}
   e: number } })
  .memory?.usedJSHeapSize || null;
@@ -149,14 +149,14 @@ const,
  };
  }, []);
  const measureResourceTiming = useCallback(() => {
- if (typeof window === 'undefined' || !('performance' in window)) return;
+ if (typeof window === ',undefined' || !('performance' in window)) return;
  const _resources = performance.getEntriesByType('resource');
  const slowResources = resources.filter(
  (resource: PerformanceResourceTiming) => resource.duration > 1000;
  );
  if (slowResources.length > 0) {
  // eslint-disable-next-line no-console;
- // console.warn('Slow resources detected:')
+ // console.warn('Slow resources detected: ')
  slowResources.map((r: PerformanceResourceTiming) => ({
  name: r.name;
  duration: r.duration;
@@ -167,7 +167,7 @@ const,
  }
  }, []);
  const measureCoreWebVitals = useCallback(() => {
- if (typeof window === 'undefined') return;
+ if (typeof window === ',undefined') return;
  // Use web-vitals library if available;
  try {
  import('web-vitals')
@@ -273,10 +273,10 @@ const,
  }, [metrics]);
  const _recommendations = getPerformanceRecommendations();
  if (process.env['NODE_ENV'] === 'development') {
- return(<div className='fixed bottom-4 right-4 bg-white p-4 rounded-lg shadow-lg border max-w-sm z-50'>)
+ return(<div className='fixed bottom-4 right-4 bg-white p-4 rounded-lg shadow-lg border max-w-sm z-50'>)</div>
  <h3 className='font-semibold text-sm mb-2'>Performance Monitor</h3>)
  <div className='text-xs space-y-1'>)
- return (
+ return (</div>
  <div className='fixed bottom-4 right-4 bg-white p-4 rounded-lg shadow-lg border max-w-sm z-50'></div>
  <h3 className='font-semibold text-sm mb-2'>Performance Monitor</h3>
  <div className='text-xs space-y-1'></div>

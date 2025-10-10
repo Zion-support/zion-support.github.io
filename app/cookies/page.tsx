@@ -80,7 +80,7 @@ const CookiesPage: React.FC = () => {
   ]
 
   return (
-    <>
+    <></>
       <Helmet>
         <title>Cookie Policy - Zion Tech Group</title>
                 </div>

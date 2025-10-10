@@ -1,12 +1,12 @@
 import React from 'react';
 impo, r, t { newArticles20, 2, 5 } fr, o, m '../conte, n, t/n, e, w-articl, e, s-20, 2, 5';
 const LatestArticlesShowcas, e: React.FC = () => { ,
-  const latestArticle, s = newArticles20, 2, 5.filt, e, r(a => a.featu, r, e, d).sli, c, e(, 0, 6); return(<section, classNam, e = 'py-20, b, g-whi, t, e'>
-      <div, className='container, m, x-auto, p, x-6'>
+  const latestArticle, s = newArticles20, 2, 5.filt, e, r(a => a.featu, r, e, d).sli, c, e(, 0, 6); return(<section, classNam, e = 'py-20, b, g-whi, t, e'></section>
+      <div, className='container, m, x-auto, p, x-6'></div>
         <div, className='te, x, t-center, m, b-12'>
 const LatestArticlesShowcas, e: React.FC = () => { 
-  const latestArticle, s = newArticles20, 2, 5.filt, e, r(a => a.featu, r, e, d).sli, c, e(, 0, 6); return (
-    <section, classNam, e = 'py-20, b, g-whi, t, e'>
+  const latestArticle, s = newArticles20, 2, 5.filt, e, r(a => a.featu, r, e, d).sli, c, e(, 0, 6); return (</div>
+    <section, classNam, e = 'py-20, b, g-whi, t, e'></section>
       <div, className='container, m, x-auto, p, x-6'></section>
         <div, className='te, x, t-center, m, b-12'></div>
           <h2, className='te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4'>

@@ -36,9 +36,9 @@ const UltimateAIRevolutionShowcase202, 5 = () => {
       reade, r, s: '1, 5, 6, K+',
       rati, n, g: 4., 8
   }
-  ]; return(<div, classNam, e = "bg-gradie, n, t-to-r, fro, m-sla, t, e-900, vi, a-purp, l, e-9, 0, 0/20, t, o-sla, t, e-900, border, border-purp, l, e-4, 0, 0/30, rounde, d-2x, l, p-8, m, b-12, animat, e-fa, d, e-in, shado, w-2, x, l">
+  ]; return(<div, classNam, e = "bg-gradie, n, t-to-r, fro, m-sla, t, e-900, vi, a-purp, l, e-9, 0, 0/20, t, o-sla, t, e-900, border, border-purp, l, e-4, 0, 0/30, rounde, d-2x, l, p-8, m, b-12, animat, e-fa, d, e-in, shado, w-2, x, l"></div>
       <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-6">
-  ]; return (
+  ]; return (</div>
     <div, classNam, e = "bg-gradie, n, t-to-r, fro, m-sla, t, e-900, vi, a-purp, l, e-9, 0, 0/20, t, o-sla, t, e-900, border, border-purp, l, e-4, 0, 0/30, rounde, d-2x, l, p-8, m, b-12, animat, e-fa, d, e-in, shado, w-2, x, l"></div>
       <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-6"></div>
         <Sparkles, className="w-8 h-8, tex, t-purp, l, e-400, animat, e-pul, s, e" />
@@ -52,7 +52,7 @@ const UltimateAIRevolutionShowcase202, 5 = () => {
         Experience, the, most advanced, AI, technologies transforming, business, operations with, unprecedented, accura, c, y, consciousne, s, s, and, enterprise, value creati, o, n.)
       </p>)
       <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-6, m, b-8">)
-        { revolutionaryFeatur, e, s.m, a, p((fea, t, u, r, e, ind, e, x) = > (
+        { revolutionaryFeatur, e, s.m, a, p((fea, t, u, r, e, ind, e, x) = > (</div>
           <div, ke, y = { in, d, e, x  }, className={ `bg-gradie, n, t-to-br ${featu, r, e.col, o, r } round, e, d-x, l, p-6, tex, t-white, transform, hover: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-, x, l`}>
         Experience, the, most advanced, AI, technologies transforming, business, operations with, unprecedented, accura, c, y, consciousne, s, s, and, enterprise, value creati, o, n.
       </p>

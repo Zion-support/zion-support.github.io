@@ -57,8 +57,7 @@ interface PageSEOData {
   section?: string;
   tags?: string[]
   noindex?: boolean
-  nofollow?: boolean,
-}
+  nofollow?: boolean}
 class SEOOptimizer {
     private config: SEOConfig
   private currentPageData: PageSEOData | null = null,
@@ -94,7 +93,7 @@ class SEOOptimizer {
   currentPageData: PageSEOData | null = null,
   constructor(confi)
   g: SEOConfig) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     this.config = config;
   }
@@ -236,7 +235,7 @@ class SEOOptimizer {
   g:site_name', this.config.siteName, 'property');
     // Twitter Card tags;
     if (this.config.twitterHandle) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       this.setMetaTag('twitte)
   r:card', 'summary_large_image');
@@ -263,9 +262,7 @@ class SEOOptimizer {
    */
 
   private setMetaTag(name: string, content: string, _attribute: string = 'name'): void {if (!meta) {}
-  // TODO: Add content,
-
-}
+  // TODO: Add content}
       meta = document.createElement('meta');
       meta.setAttribute(attribute, name);
       document.head.appendChild(meta);
@@ -303,16 +300,16 @@ class SEOOptimizer {
     if (!this.currentPageData) return 'index, follow';
     const directives = [];
     if (!this.currentPageData.noindex) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       directives.push('noindex');
     }
     if (!this.currentPageData.nofollow) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       directives.push('follow');
     } else {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       directives.push('nofollow');
     }
@@ -328,7 +325,7 @@ class SEOOptimizer {
 
 }
     const structuredData = {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 
       '@context': 'https://schema.org',
@@ -372,7 +369,7 @@ class SEOOptimizer {
 }
     if (!this.currentPageData) return;
     const structuredData = {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 
       '@context': 'https://schema.org',
@@ -487,8 +484,7 @@ Disallow: /admin/
 Disallow: /private/
 Disallow: /api/
 Disallow: /_next/
-Disallow: /static/`,
-  }
+Disallow: /static/`}
   /**
    * Check for SEO issues
    */
@@ -558,21 +554,18 @@ export default seoOptimizer;
         nam,
   e: this.config.siteName,
         ur,
-  l: this.config.siteUrl,
-      }
+  l: this.config.siteUrl}
     }
     // Add article-specific properties;
     if (this.currentPageData.type === 'article') {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       Object.assign(structuredData, {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 
   author: {// '@type': 'Person'}
-// name: this.currentPageData.author || this.config.siteName,
-
-        },
+// name: this.currentPageData.author || this.config.siteName},
         datePublishe,
   d: this.currentPageData.publishedTime,
         dateModifie,
@@ -623,11 +616,11 @@ private addStructuredData(data: unknown): void {
 }
     // Monitor Core Web Vitals for SEO impact;
     if (typeof window !== 'undefined' && 'performance' in window) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       // Monitor LCP (Largest Contentful Paint)
       new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
         const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1];
@@ -642,13 +635,13 @@ private addStructuredData(data: unknown): void {
       // Monitor CLS (Cumulative Layout Shift)
       let clsValue = 0;
       new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
         for (const entry of list.getEntries()) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
           if (!(entry as any).hadRecentInput) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
             clsValue += (entry as any).value;
           }
@@ -673,17 +666,15 @@ private addStructuredData(data: unknown): void {
 
 }
     if (typeof window !== 'undefined' && (window as any).gtag) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       (window as any).gtag('event', 'seo_metric', {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 
   metric_name: metric,
         metric_value: Math.round(value),
-        event_category: 'seo'
-
-      }
+        event_category: 'seo'}
   )
     }
   }
@@ -693,22 +684,20 @@ private addStructuredData(data: unknown): void {
   generateSitemapData(): Array;
           <{/* TODO: Fix JSX expression */}
   y: number }> {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     // This would typically come from your CMS or routing system;
     return [
   // TOD,
   O: Add items]
       {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 
   url: this.config.siteUrl,
         lastmod: new Date().toISOString(),
         changefreq: 'daily',
-        priority: '1.0'
-
-      }
+        priority: '1.0'}
     ]
   }
   /**
@@ -750,39 +739,39 @@ Sitemap: ${this.config.siteUrl}/sitemap.xml;
   issues: string[] = [];
     // Check title length
 const title = document.title
-    if (title.length,)
+    if (title.length)
           < 30) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       issues.push('Title is too short (less than 30 characters)');
     } else if (title.length > 60) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       issues.push('Title is too long (more than 60 characters)');
     }
     // Check description length;
 const description = document.querySelector('meta[name="description"]')?.getAttribute('content');
     if (!description) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       issues.push('Missing meta description');
     } else if (description.length;)
           < 120) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       issues.push('Description is too short (less than 120 characters)');
     } else if (description.length > 160) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       issues.push('Description is too long (more than 160 characters)');
     }
     // Check for images without alt text;
 const images = document.querySelectorAll('img');
     images.forEach((img, index) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       if (!img.alt) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }`
         issues.push(`Image ${index + 1} is missing alt text`);
       }
@@ -790,11 +779,11 @@ const images = document.querySelectorAll('img');
     // Check for heading structure;
 const h1s = document.querySelectorAll('h1');
     if (h1s.length === 0) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       issues.push('Page is missing H1 tag');
     } else if (h1s.length > 1) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       issues.push('Page has multiple H1 tags');
     }
@@ -828,7 +817,7 @@ const score = Math.max(0, 100 - (issues.length / maxIssues) * 100);
 // Default configuration;
 const,
   defaultConfig: SEOConfig = {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 
   siteName: 'Zion Tech Group',
@@ -838,8 +827,7 @@ const,
   defaultImage: 'https://zion.app/og-image.jpg',
   twitterHandle: 'ZionTechGroup',
   googleAnalyticsId: process.env.GOOGLE_ANALYTICS_ID,
-  googleTagManagerId: process.env.GOOGLE_TAG_MANAGER_ID,
-}
+  googleTagManagerId: process.env.GOOGLE_TAG_MANAGER_ID}
 export const seoOptimizer = new SEOOptimizer(defaultConfig);
 export default seoOptimizer;
 

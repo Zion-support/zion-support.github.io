@@ -33,23 +33,19 @@ const ProcessAutomationPage: React.FC = () => {
     {
       icon: Zap,
       title: 'Workflow Automation',
-      description: 'Streamline your business processes with intelligent automation that reduces manual work and errors.'
-  },
+      description: 'Streamline your business processes with intelligent automation that reduces manual work and errors.'},
     {
     icon: Bot,
       title: 'AI-Powered Automation',
-      description: 'Leverage artificial intelligence to create smart, adaptive automation solutions for complex processes.'
-  },
+      description: 'Leverage artificial intelligence to create smart, adaptive automation solutions for complex processes.'},
     {
     icon: Settings,
       title: 'Custom Integration',
-      description: 'Seamlessly integrate with your existing systems and tools for a unified automation experience.'
-  },
+      description: 'Seamlessly integrate with your existing systems and tools for a unified automation experience.'},
     {
     icon: BarChart,
       title: 'Performance Monitoring',
-      description: 'Track and optimize your automated processes with real-time analytics and reporting.'
-  }
+      description: 'Track and optimize your automated processes with real-time analytics and reporting.'}
     }
   ]
 const benefits = [
@@ -67,7 +63,7 @@ const benefits = [
     'Custom automation solutions'
   ]
 return (
-    <>
+    <></>
       <Helmet>
         <title>Process Automation Services - Zion Tech Group | Workflow Automation</title>
         <meta name="description" content="AI-powered solution" />
@@ -75,9 +71,9 @@ return (
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         {/* Hero Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
@@ -93,11 +89,11 @@ return (
                 Reduce costs, improve efficiency, and scale your business with AI-powered process automation.
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
-                <button>
+                <button></button>
                   <Zap>
                   Automate Now
                 </button>
-                <button>
+                <button></button>
                   <Phone>
                   Call (302) 464-0950,
                 </button>
@@ -106,9 +102,9 @@ return (
           </div>
         </section>
         {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
@@ -136,9 +132,9 @@ return (
           </div>
         </section>
         {/* Benefits Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
@@ -156,7 +152,7 @@ return (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-3"></div>
-                  <CheckCircle>
+                  <CheckCircle></CheckCircle>
                   <p className="text-gray-300 text-lg">{benefit}</p>
                 </div>
               ))}
@@ -164,9 +160,9 @@ return (
           </div>
         </section>
         {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
@@ -181,11 +177,11 @@ return (
                 Contact our automation experts to discuss your process optimization needs.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-                <button>
+                <button></button>
                   <Phone>
                   Call (302) 464-0950
                 </button>
-                <button>
+                <button></button>
                   <Mail>
                   Email Us
                 </button>
@@ -195,8 +191,7 @@ return (
         </section>
       </div>
     </>
-  ),
-};
+  )};
 
 export default ProcessAutomationPage;
 

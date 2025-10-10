@@ -26,11 +26,9 @@ export interface FuturisticInnovation2028 {/* TODO: Fix JSX expression */}
   s: string}
   }
 }
-    address: string,
-  }
+    address: string}
 export const futuristic2028Services: FuturisticInnovation2028[] = [
-    address: string,
-  }
+    address: string}
 export const futuristic2028Services: FuturisticInnovation2028[] = [
     id: '2028 - futuristic - innovation',
     name: '2028 Futuristic Innovation Platform',
@@ -63,8 +61,8 @@ export const,
       'Future capabilities',
       'Innovation platform',
       'Expert insights'],
-    link: '/services / 2028 - futuristic - innovation'
-    category: 'Futuristic Innovations 2028'
+    link: '/services / 2028 - futuristic - innovation',
+    category: 'Futuristic Innovations 2028',
     real_implementation: true
     contact_info: unknown,
       mobile: '+1 302 464 0950',
@@ -100,8 +98,7 @@ export const,
   realImplementation: boolean
   contactInfo: unknown,
     mobile: string, email: string
-    address: string,
-  }
+    address: string}
 }
 export const futuristic2028 Services: FuturisticInnovation2028[] = [,
     id: "2028-futuristic-innovation", name: "2028 Futuristic Innovation Platform",
@@ -332,7 +329,7 @@ export interface FuturisticInnovation2028 export interface FuturisticInnovation2
   y: 'Futuristic Innovations 2028', real_implementatio,
   n: true, contact_inf,
   o: ' mobil,
-  e: '+1 302 464 0950',' emai,
+  e: ',+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup && ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}}]; mobil,"
   e: "+1 302 464 0950",

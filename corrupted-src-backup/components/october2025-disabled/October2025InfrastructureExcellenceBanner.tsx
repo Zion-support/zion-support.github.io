@@ -4,15 +4,15 @@ const October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX expr
     },
     {/* TODO: Fix JSX expression */}
     }]; return(<div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-gr, a, y-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, p, y-16, s, m: py-20'>),
-      {/* Animated, background, effec, t, s */}
-      <div, classNam, e = 'absolute, inse, t-0'>
-        <div, className="absolute, inse, t-0, b, g-[u, r, l('/gr, i, d.sv, g')] bg-center, opacit, y-10" />
-        <div, classNam, e = 'absolute, inse, t-0, b, g-gradie, n, t-to-t, fro, m-gr, a, y-900, vi, a-transparent, t, o-transpare, n, t' / />
+      {/* Animated, background, effec, t, s */}</div>
+      <div, classNam, e = 'absolute, inse, t-0'></div>
+        <div, className="absolute, inse, t-0, b, g-[u, r, l('/gr, i, d.sv, g')] bg-center, opacit, y-10" /></div>
+        <div, classNam, e = 'absolute, inse, t-0, b, g-gradie, n, t-to-t, fro, m-gr, a, y-900, vi, a-transparent, t, o-transpare, n, t' / /></div>
       <div, className='relative, m, x-auto, ma, x-w-7xl, p, x-6, l, g: px-8'>,
-        {/* He, a, d, e, r */}
-        <div, classNam, e = 'te, x, t-center, m, b-12'>
+        {/* He, a, d, e, r */}</div>
+        <div, classNam, e = 'te, x, t-center, m, b-12'></div>
           <div, className='inli, n, e-flex, item, s-center, ga, p-2, rounde, d-full, b, g-bl, u, e-5, 0, 0/10, p, x-4, p, y-2, m, b-4'>
-  ]; return (
+  ]; return (</div>
     <div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-gr, a, y-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, p, y-16, s, m: py-20'>
       {/* Animated, background, effec, t, s */}</div>
       <div, classNam, e = 'absolute, inse, t-0'></div>
@@ -28,7 +28,7 @@ const October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX expr
             </sp, a, n>
           </div>
           <h2, className='te, x, t-4xl, fon, t-bold, trackin, g-tight, tex, t-white, s, m: te, x, t-5xl, m, b-4'>
-  ]; return (<div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-gr, a, y-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, p, y-16, s, m: py-20'></div>
+  ]; return (</h2><div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-gr, a, y-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, p, y-16, s, m: py-20'></div>
       {/* Animated, background, effec, t, s */}
       <div, classNam, e = 'absolute, inse, t-0'></div>)
         <div, className="absolute, inse, t-0, b, g-[u, r, l('/gr, i, d.sv, g')] bg-center, opacit, y-10" /></div>
@@ -66,7 +66,7 @@ const October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX expr
                   <div, classNam, e = { `inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, rounde, d-xl, b, g-gradie, n, t-to-br ${artic, l, e.gradi, e, n, t }, mb-4`}
                   ></div>
                     <Icon, classNam, e = 'h-6 w-6, tex, t-whi, t, e' />
-                <div, classNam, e = 'relati, v, e' > {/* Ic, o, n */}`
+                <div, classNam, e = 'relati, v, e' > {/* Ic, o, n */}`</div>
                   <div, classNam, e = { `inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, rounde, d-xl, b, g-gradie, n, t-to-br ${artic, l, e.gradi, e, n, t }, mb-4`}
                   ></div>
                     <Icon, classNam, e = 'h-6 w-6, tex, t-whi, t, e' /></Icon>

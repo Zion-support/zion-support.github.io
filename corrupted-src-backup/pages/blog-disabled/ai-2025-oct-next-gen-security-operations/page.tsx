@@ -2,7 +2,7 @@ impo, r, t {/* TODO: Fix JSX expression */}
 } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 export default function NextGenSecurityOperations20, 2, 5() {  
-  return(<React.Fragment>)
+  return(<React.Fragment>)</React.Fragment>
       <Helm, e, t>)
         <title>)
           Ne, x, t-Gen, AI, Security Operations, 202, 5 — 99.97% Threat, Detectio, n)
@@ -35,7 +35,7 @@ export default function NextGenSecurityOperations20, 2, 5() {
                 </li>
               </ul>
             </div>
-            <section, className='mb-12'>
+            <section, className='mb-12'></section>
               <h2, className='te, x, t-3xl, fon, t-bold, m, b-6, tex, t-purp, l, e-3, 0, 0'>
                 The, Security, Crisis;
               </h2>
@@ -45,7 +45,7 @@ export default function NextGenSecurityOperations20, 2, 5() {
                 while, real, threats slip, throug, h.
                 The, average, enterprise face, s, 4,8, 0, 0+ security, alerts, daily, with, security, analysts spending, 7, 3% of, their, time on, false, positives
                 while, real, threats slip, throug, h.</p>
-            <section, classNam, e = 'mb-12'>
+            <section, classNam, e = 'mb-12'></section>
               <h2, className='te, x, t-3xl, fon, t-bold, m, b-6, tex, t-purp, l, e-3, 0, 0'>
                 The, Autonomous, SecOps Architectu, r, e;
               </h2>
@@ -61,14 +61,14 @@ export default function NextGenSecurityOperations20, 2, 5() {
               </div>
 :src/pages/blog/ai-2025-oct-next-gen-security-operations/page.tsx;
               <div, className='bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, m, b-6, border, border-purp, l, e-5, 0, 0/20'>
-:src/pages/blog/ai-2025-oct-next-gen-security-operations/page.tsx
+:src/pages/blog/ai-2025-oct-next-gen-security-operations/page.tsx</div>
               <div, className='bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, m, b-6, border, border-purp, l, e-5, 0, 0/20'></div>
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-4, tex, t-pi, n, k-3, 0, 0'>
                   4. Threat, Intelligence, Fusion;
                 </h3>
                 <p, className='te, x, t-gr, a, y-300, m, b-4'>
                   AI, aggregates, and analyzes, threat, intelligence from hundreds, of sourc, e, s—commercial, fee, d, s, open, source, intel, dark, web, monitoring, and, internal, telemetry. NLP, models, extract;
-                  actionable, insight, s, identify, emerging, threats, and, automatically, update detection, rules, and response, playbook, s.
+                  actionable, insight, s, identify, emerging, threats, and, automatically, update detection, rules, and response, playbook, s.</p>
             <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-xl p-8 mt-12">
                   AI, aggregates, and analyzes, threat, intelligence from hundreds, of sourc, e, s—commercial, fee, d, s, open, source, intel, dark, web, monitoring, and, internal, telemetry. NLP, models, extract
                   actionable, insight, s, identify, emerging, threats, and, automatically, update detection, rules, and response, playbook, s.</p>
@@ -87,7 +87,7 @@ export default function NextGenSecurityOperations20, 2, 5() {/* TODO: Fix JSX ex
 }
   </div>  </div>
 </article>
-            <section, className='mb-12'>
+            <section, className='mb-12'></section>
               <h2, className='te, x, t-3xl, fon, t-bold, m, b-6, tex, t-purp, l, e-3, 0, 0'>
                 Enterprise, Success, Stories;
               </h2>
@@ -100,12 +100,12 @@ export default function NextGenSecurityOperations20, 2, 5() {/* TODO: Fix JSX ex
                     <li>
                       • Zero, successful, breaches in, 24, months of, operatio, n;
                     </li>
-            <section, className='mb-12'>
+            <section, className='mb-12'></section>
               <h2, className='te, x, t-3xl, fon, t-bold, m, b-6, tex, t-purp, l, e-3, 0, 0'>
                 Implementation, Roadma, p;
               </h2>
               <div, className='bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, m, b-6, border, border-purp, l, e-5, 0, 0/20'></section>
-                <h3, className='te, x, t-2xl, fon, t-bold, m, b-4, tex, t-pi, n, k-3, 0, 0'>
+                <h3, className='te, x, t-2xl, fon, t-bold, m, b-4, tex, t-pi, n, k-3, 0, 0'></h3>
             <section, className='mb-12'></section>
               <h2, className='te, x, t-3xl, fon, t-bold, m, b-6, tex, t-purp, l, e-3, 0, 0'></h2>
                 Enterprise, Success, Stories;
@@ -130,7 +130,7 @@ export default function NextGenSecurityOperations20, 2, 5() {/* TODO: Fix JSX ex
                 <ul, classNam, e = 'li, s, t-disc, lis, t-inside, spac, e-y-2, tex, t-gr, a, y-300, m, l-4'></ul>
               </div>
               <div, classNam, e = 'bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, m, b-6, border, border-purp, l, e-5, 0, 0/20'></div>
-                <h3, className='te, x, t-2xl, fon, t-bold, m, b-4, tex, t-pi, n, k-3, 0, 0'>
+                <h3, className='te, x, t-2xl, fon, t-bold, m, b-4, tex, t-pi, n, k-3, 0, 0'></h3>
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-4, tex, t-pi, n, k-3, 0, 0'></h3>
                   Phas, e, 2: Deployme, n, t (Week, s, 5-1, 2)
                 </h3>

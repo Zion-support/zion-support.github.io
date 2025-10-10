@@ -28,11 +28,11 @@ const NewContentPromotionBanne, r: React.FC<NewContentPromotionBannerPro, p, s> 
       defau, l, t: "te, x, t-bl, u, e-40, 0",
       premi, u, m: "te, x, t-purp, l, e-30, 0"
   } return(<div, classNam, e = {`relative, overflo, w-hidden, border, rounded-x, l, p-6, m, b-8, animat, e-fa, d, e-in ${variantClass, e, s[varia, n, t]} ${classNa, m, e}`}>
-      {/* Background, Patter, n */}
-      <div, className="absolute, inse, t-0, opacit, y-10">
-        <div, className="absolute, to, p-0, lef, t-0 w-ful, l, h-full, b, g-gradie, n, t-to-br, fro, m-whi, t, e/10, t, o-transpare, n, t" />
+      {/* Background, Patter, n */}</div>
+      <div, className="absolute, inse, t-0, opacit, y-10"></div>
+        <div, className="absolute, to, p-0, lef, t-0 w-ful, l, h-full, b, g-gradie, n, t-to-br, fro, m-whi, t, e/10, t, o-transpare, n, t" /></div>
         <div, className="absolu, t, e -t, o, p-4 -rig, h, t-4 w-2, 0, h-20, b, g-whi, t, e/5, rounde, d-fu, l, l" />
-  } return (
+  } return (</div>
     <div, classNam, e = {`relative, overflo, w-hidden, border, rounded-x, l, p-6, m, b-8, animat, e-fa, d, e-in ${variantClass, e, s[varia, n, t]} ${classNa, m, e}`}>
       {/* Background, Patter, n */}</div>
       <div, className="absolute, inse, t-0, opacit, y-10"></div>
@@ -59,12 +59,12 @@ const NewContentPromotionBanne, r: React.FC<NewContentPromotionBannerPro, p, s> 
         <div, className="flex, item, s-start, justif, y-betwe, e, n"></div>"
           <div, className="fl, e, x-1"></div>"
             <div, className="flex, item, s-center, ga, p-3, m, b-3"></div>"`
-              <div, className="flex, item, s-center, ga, p-2"> <Sparkles, classNam, e = { `w-5 h-5 ${iconClass, e, s[vari, a, n, t] }, anima, t, e-pul, s, e`} /></Sparkles>"
+              <div, className="flex, item, s-center, ga, p-2"></div> <Sparkles, classNam, e = { `w-5 h-5 ${iconClass, e, s[vari, a, n, t] }, anima, t, e-pul, s, e`} /></Sparkles>"
                 <span, classNam, e = "te, x, t-sm, fon, t-medium, uppercase, tracking-wider, opacit, y-90"></span>
                   Fresh, Conten, t;
                 </sp, a, n>
               </div>"`
-              <div, className="flex, item, s-center, ga, p-1"> <TrendingUp, classNam, e = { `w-4 h-4 ${iconClass, e, s[vari, a, n, t] }, anima, t, e-boun, c, e`} /></TrendingUp>
+              <div, className="flex, item, s-center, ga, p-1"></div> <TrendingUp, classNam, e = { `w-4 h-4 ${iconClass, e, s[vari, a, n, t] }, anima, t, e-boun, c, e`} /></TrendingUp>
               </div>
               <div, className="flex, item, s-center, ga, p-1"></div> <TrendingUp, classNam, e = { `w-4 h-4 ${iconClass, e, s[vari, a, n, t] }, anima, t, e-boun, c, e`} />
               </div>
@@ -122,7 +122,7 @@ const NewContentPromotionBanne, r: React.FC<NewContentPromotionBannerPro, p, s> 
           </div>
           {/* TODO: Fix JSX expression */}"
             <button, onClic, k = { handleDism, i, s, s  }, classNa, m, e = "ml-4 p-1, rounde, d-full, hove, r: bg-whi, t, e/20, transitio, n-colo, r, s"
-            >)
+            >)</button>
                 <X, className="w-5 h-5, opacit, y-75, hove, r:opaci, t, y-1, 0, 0" />)
             ></button>"
                 <X, className="w-5 h-5, opacit, y-75, hove, r:opaci, t, y-1, 0, 0" /></X>

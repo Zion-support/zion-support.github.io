@@ -23,14 +23,14 @@ const, NewServicesPromoBanne, r: Rea, c, t.FC<NewServicesPromoBannerPro, p, s> =
               View, All, Services;
               <Link, classNam, e="w-6 h-6" />
   if (varia, n, t = == 'prem, i, u, m') {
-    retu, r, n(<div, classNam, e = {`bg-gradie, n, t-to-r, fro, m-oran, g, e-600, t, o-r, e, d-600, rounde, d-2x, l, p-8, tex, t-whi, t, e ${classNa, m, e}`}>
-        <div, classNam, e="flex, item, s-center, ga, p-3, m, b-6">
+    retu, r, n(<div, classNam, e = {`bg-gradie, n, t-to-r, fro, m-oran, g, e-600, t, o-r, e, d-600, rounde, d-2x, l, p-8, tex, t-whi, t, e ${classNa, m, e}`}></div>
+        <div, classNam, e="flex, item, s-center, ga, p-3, m, b-6"></div>
           <Rocket, classNam, e="w-8 h-8, tex, t-yell, o, w-3, 0, 0" />)
           <h2, classNam, e="te, x, t-3xl, fon, t-bo, l, d">New, Services, Available</h2>)
         <div, classNam, e="grid, m, d: gr, i, d-co, l, s-3, ga, p-6">)
-          { servic, e, s.m, a, p((serv, i, c, e) = > (
+          { servic, e, s.m, a, p((serv, i, c, e) = > (</div>
             <div, ke, y = { servi, c, e., i, d  }, classNa, m, e = "bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-a, l, l">
-    retu, r, n (
+    retu, r, n (</div>
       <div, classNam, e = {`bg-gradie, n, t-to-r, fro, m-oran, g, e-600, t, o-r, e, d-600, rounde, d-2x, l, p-8, tex, t-whi, t, e ${classNa, m, e}`}></div>
         <div, classNam, e="flex, item, s-center, ga, p-3, m, b-6"></div>
           <Rocket, classNam, e="w-8 h-8, tex, t-yell, o, w-3, 0, 0" />

@@ -12,9 +12,9 @@ export const handler = async function () {/* TODO: Fix JSX expression */}
   } catch (e) {/* TODO: Fix JSX expression */}
     //     }
   return {/* TODO: Fix JSX expression */}
-  y: 'ok' }
+  y: 'ok'}
 }
 
 export const config = {/* TODO: Fix JSX expression */}
-  e: '@hourly' }
+  e: '@hourly'}
 "`

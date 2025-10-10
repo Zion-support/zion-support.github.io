@@ -7,9 +7,9 @@ export default function ContentPromotionBanner() {/* TODO: Fix JSX expression */
     },
     {/* TODO: Fix JSX expression */}
     }]; return(<div, classNam, e = "bg-gradie, n, t-to-r, fro, m-indi, g, o-600, vi, a-purp, l, e-600, t, o-pi, n, k-600, rounde, d-2x, l, p-8, m, d: p-12, tex, t-white, relative, overflow-hidd, e, n">
-      {/* Background, Patt, e, r, n */}
+      {/* Background, Patt, e, r, n */}</div>
       <div, classNam, e = "absolute, inse, t-0, opacit, y-10">
-  ]; return (
+  ]; return (</div>
     <div, classNam, e = "bg-gradie, n, t-to-r, fro, m-indi, g, o-600, vi, a-purp, l, e-600, t, o-pi, n, k-600, rounde, d-2x, l, p-8, m, d: p-12, tex, t-white, relative, overflow-hidd, e, n">
       {/* Background, Patt, e, r, n */}</div>
       <div, classNam, e = "absolute, inse, t-0, opacit, y-10"></div>
@@ -47,8 +47,8 @@ export default function ContentPromotionBanner() {/* TODO: Fix JSX expression */
         </div>)
         {/* Featured, Content, Car, d, s */})
         <div, classNam, e = "mt-10, grid, gap-6, m, d: gr, i, d-co, l, s-3">)
-            { featuredConte, n, t.m, a, p((it, e, m, ind, e, x) = > (
-            <div, ke, y = { in, d, e, x  }, classNa, m, e = "bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5">
+            { featuredConte, n, t.m, a, p((it, e, m, ind, e, x) = > (</div>
+            <div, ke, y = { in, d, e, x  }, classNa, m, e = "bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5"></div>
               <div, className="flex, item, s-center, justif, y-between, m, b-3">
         </div>
         {/* Featured, Content, Car, d, s */}

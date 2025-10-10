@@ -38,9 +38,9 @@ const benefits = [
         </div>
       </section>
       {/* CTA Section */}
-      <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+      <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
@@ -55,11 +55,11 @@ const benefits = [
               Contact our experts to discuss your page needs and get a customized solution.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <button>
+              <button></button>
                 <Phone>
                 Call Now
               </button>
-              <button>
+              <button></button>
                 <Mail>
                 Email Us
               </button>
@@ -68,8 +68,7 @@ const benefits = [
         </div>
       </section>
     </div>
-  ),
-};
+  )};
 
 export default PagePage;
 

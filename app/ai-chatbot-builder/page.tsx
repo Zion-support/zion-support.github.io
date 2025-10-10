@@ -57,7 +57,7 @@ const AiChatbotBuilderPage: React.FC = () => {
   ];
 
   return (
-    <>
+    <></>
       <Helmet>
         <title>AI Chatbot Builder - Zion Tech Group</title>
         <meta name="description" content="Build intelligent chatbots without coding. Create, deploy, and manage AI-powered chatbots for customer support, lead generation, and more." />
@@ -66,10 +66,10 @@ const AiChatbotBuilderPage: React.FC = () => {
       <Navigation />
       
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center">
+        {/* Hero Section */}</main>
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center"></div>
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 AI Chatbot Builder
               </h1>
@@ -77,7 +77,7 @@ const AiChatbotBuilderPage: React.FC = () => {
                 Create intelligent chatbots without coding. Build, deploy, and manage AI-powered 
                 conversational experiences that engage your customers and drive results.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                 <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
                   Start Building
                 </button>
@@ -90,9 +90,9 @@ const AiChatbotBuilderPage: React.FC = () => {
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Powerful Features
               </h2>
@@ -102,8 +102,8 @@ const AiChatbotBuilderPage: React.FC = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              {features.map((feature, index) => (</div>
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"></div>
                   <feature.icon className="w-12 h-12 text-blue-400 mb-4" />
                   <h3 className="text-xl font-semibold text-white mb-3">
                     {feature.title}
@@ -126,19 +126,19 @@ const AiChatbotBuilderPage: React.FC = () => {
         </section>
 
         {/* Use Cases Section */}
-        <section className="mb-16">
+        <section className="mb-16"></section>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text mb-12">
             Use Cases
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
-              <div key={index} className="hologram-card-enhanced p-8 hover:scale-105 transition-all duration-300">
-                <div className="flex items-start space-x-4">
-                  <div className="text-4xl text-green-400">
+            {useCases.map((useCase, index) => (</div>
+              <div key={index} className="hologram-card-enhanced p-8 hover:scale-105 transition-all duration-300"></div>
+                <div className="flex items-start space-x-4"></div>
+                  <div className="text-4xl text-green-400"></div>
                     <useCase.icon className="w-10 h-10" />
                   </div>
-                  <div className="flex-1">
+                  <div className="flex-1"></div>
                     <h3 className="text-2xl font-bold text-white mb-3">{useCase.title}</h3>
                     <p className="text-gray-300 mb-4 leading-relaxed">{useCase.description}</p>
                     <ul className="space-y-2">
@@ -169,8 +169,8 @@ const AiChatbotBuilderPage: React.FC = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {useCases.map((useCase, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              {useCases.map((useCase, index) => (</div>
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"></div>
                   <h3 className="text-xl font-semibold text-white mb-3">
                     {useCase.title}
                   </h3>
@@ -192,15 +192,15 @@ const AiChatbotBuilderPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
+        <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+          <div className="max-w-4xl mx-auto text-center"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Build Your Chatbot?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
               Start building your intelligent chatbot today and transform your customer experience.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
                 Start Building
               </button>

@@ -20,8 +20,7 @@ export interface ErrorReport {
   component?: string;
   timestamp: number,
   userAgent: string,
-  url: string,
-  }
+  url: string}
 }
 class MonitoringService {}
   private metrics: PerformanceMetrics = {}
@@ -143,8 +142,7 @@ class MonitoringService {}
         message: `Unhandled Promise Rejection: ${event.reason}`,;
         timestamp: Date.now(),
         userAgent: navigator.userAgent,
-        url: window.location.href,
-      })
+        url: window.location.href})
     })
   }
   private reportMetric(name: string, value: number): void {
@@ -161,8 +159,7 @@ class MonitoringService {}
     if (typeof (window as any).gtag === 'function') {
       (window as any).gtag('event', name, {
         value: Math.round(name === 'cls' ? value * 1000 : value),
-        event_category: 'Web Vitals'
-  }
+        event_category: 'Web Vitals'}
       })
     }
   }

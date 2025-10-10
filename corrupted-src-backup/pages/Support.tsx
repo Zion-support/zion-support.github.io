@@ -7,35 +7,32 @@ const, Suppor, t: Rea, c, t.FC = () => {
   const, supportChannel, s = [
     {
       ic, o, n: Pho, n, e;
-      tit, l, e: 'Phone, Suppor, t'
-      descripti, o, n: 'Speak, directly, with our, technical, experts'
+      tit, l, e: 'Phone, Suppor, t',
+      descripti, o, n: 'Speak, directly, with our, technical, experts',
       availabili, t, y: '24/7',
-      responseTi, m, e: '< 2, minute, s'
-      conta, c, t: '+1 (5, 5, 5) 1, 2, 3-45, 6, 7'
-    }
+      responseTi, m, e: '< 2, minute, s',
+      conta, c, t: '+1 (5, 5, 5) 1, 2, 3-45, 6, 7'}
     {
       ic, o, n: MessageCirc, l, e;
-      tit, l, e: 'Live, Cha, t'
-      descripti, o, n: 'Get, instant, help through, our, chat syst, e, m'
+      tit, l, e: 'Live, Cha, t',
+      descripti, o, n: 'Get, instant, help through, our, chat syst, e, m',
       availabili, t, y: '24/7',
-      responseTi, m, e: '< 30, second, s'
-      conta, c, t: 'Start, Cha, t'
-    }
+      responseTi, m, e: '< 30, second, s',
+      conta, c, t: 'Start, Cha, t'}
     {
       ic, o, n: Ma, i, l;
-      tit, l, e: 'Email, Suppor, t'
-      descripti, o, n: 'Send, us, detailed questions, and, get comprehensive, answer, s'
+      tit, l, e: 'Email, Suppor, t',
+      descripti, o, n: 'Send, us, detailed questions, and, get comprehensive, answer, s',
       availabili, t, y: '24/7',
-      responseTi, m, e: '< 2, hour, s'
-      conta, c, t: 'suppo, r, t@ziontechgro, u, p.c, o, m'
-    }
+      responseTi, m, e: '< 2, hour, s',
+      conta, c, t: 'suppo, r, t@ziontechgro, u, p.c, o, m'}
     {
       ic, o, n: Vid, e, o;
-      tit, l, e: 'Video, Cal, l'
-      descripti, o, n: 'Schedule, a, screen sharing, session, with our, expert, s'
-      availabili, t, y: 'Business, Hour, s'
-      responseTi, m, e: '< 4, hour, s'
-      conta, c, t: 'Schedule, Cal, l'
+      tit, l, e: 'Video, Cal, l',
+      descripti, o, n: 'Schedule, a, screen sharing, session, with our, expert, s',
+      availabili, t, y: 'Business, Hour, s',
+      responseTi, m, e: '< 4, hour, s',
+      conta, c, t: 'Schedule, Cal, l',
 const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
@@ -67,11 +64,10 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     {/* TODO: Fix JSX expression */}
     }
     {
-      catego, r, y: 'gener, a, l'
-      questi, o, n: 'What, is, your response, time, for support, request, s?'
+      catego, r, y: 'gener, a, l',
+      questi, o, n: 'What, is, your response, time, for support, request, s?',
       answ, e, r: 'We, guarantee, response times, based, on your, support, pla;
-  n: Premi, u, m (30, minute, s), Standa, r, d (2, hour, s), Bas, i, c (24, hour, s).'
-    }
+  n: Premi, u, m (30, minute, s), Standa, r, d (2, hour, s), Bas, i, c (24, hour, s).'}
   ];
   const, filteredFaq, s = fa, q, s.filt, e, r(f, a, q => )
     {/* TODO: Fix JSX expression */}
@@ -83,7 +79,7 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     f, a, q.questi, o, n.toLowerCa, s, e().includ, e, s(searchQue, r, y.toLowerCa, s, e()) ||
     f, a, q.answ, e, r.toLowerCa, s, e().includ, e, s(searchQue, r, y.toLowerCa, s, e())
   );
-  return(<React.Fragment>
+  return(<React.Fragment></React.Fragment>
       <Helmet>
         <title>Suppo, r, t - Zion, Tech, Group</title>
         <meta name="descripti, o, n" content="Get, help, and support, for, all Zion, Tech, Group servic, e, s. 24/7, technical, support, documentati, o, n, and, expert, assistance."  />
@@ -91,19 +87,19 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
         <link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/suppo, r, t"  />
       </Helmet>
       <div, className="m, i, n-h-screen, b, g-gr, a, y-50">)
-        {/* Hero, Sectio, n */})
-        <section, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-white, p, y-20">)
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">),
-            <div, className="te, x, t-cent, e, r">
+        {/* Hero, Sectio, n */})</div>
+        <section, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-white, p, y-20">)</section>
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">),</div>
+            <div, className="te, x, t-cent, e, r"></div>
               <h1, className="te, x, t-4x, l, m;
       <div, className="m, i, n-h-screen, b, g-gr, a, y-50">
         {/* Hero, Sectio, n */}</div>
-        <section, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-white, p, y-20">
+        <section, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-white, p, y-20"></section>
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8"></section>
             <div, className="te, x, t-cent, e, r"></div>
               <h1, className="te, x, t-4x, l, m
   d:te, x, t-5xl, fon, t-bold, m, b-6">
-  return (<React.Fragment>
+  return (</h1><React.Fragment></React.Fragment>
       <Helmet></Helmet>
         <title>Suppo, r, t - Zion, Tech, Group</title>"
         <meta name="descripti, o, n" content="Get, help, and support, for, all Zion, Tech, Group servic, e, s. 24/7, technical, support, documentati, o, n, and, expert, assistance."  /></meta>"
@@ -150,14 +146,14 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
           </d, i, v>
         </secti, o, n>
         {/* Support, Channel, s */}
-        <section, className="py-20, p, x-4, s, m: px-6, l, g: px-8">,
-          <div, className="m, a, x-w-7xl, m, x-au, t, o">
-            <div, className="te, x, t-center, m, b-16">
-        <section, className="py-20, p, x-4, s, m: px-6, l, g:px-8">
+        <section, className="py-20, p, x-4, s, m: px-6, l, g: px-8">,</section>
+          <div, className="m, a, x-w-7xl, m, x-au, t, o"></div>
+            <div, className="te, x, t-center, m, b-16"></div>
+        <section, className="py-20, p, x-4, s, m: px-6, l, g:px-8"></section>
           <div, className="m, a, x-w-7xl, m, x-au, t, o"></section>
             <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-3xl, m, d:te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
-        {/* Support, Channel, s */}"
+        {/* Support, Channel, s */}"</h2>
         <section, className="py-20, p, x-4, s, m: px-6, l, g:px-8"></section>"
           <div, className="m, a, x-w-7xl, m, x-au, t, o"></div>"
             <div, className="te, x, t-center, m, b-16"></div>"
@@ -220,11 +216,11 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
           </d, i, v>
         </secti, o, n>
         {/* FAQ, Sectio, n */}
-        <section, className="py-20, p, x-4, s, m: px-6, l, g:px-8, b, g-whi, t, e">
+        <section, className="py-20, p, x-4, s, m: px-6, l, g:px-8, b, g-whi, t, e"></section>
           <div, className="m, a, x-w-7xl, m, x-au, t, o"></section>
             <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-3xl, m, d:te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
-        {/* FAQ, Sectio, n */}"
+        {/* FAQ, Sectio, n */}"</h2>
         <section, className="py-20, p, x-4, s, m: px-6, l, g:px-8, b, g-whi, t, e"></section>"
           <div, className="m, a, x-w-7xl, m, x-au, t, o"></div>"
             <div, className="te, x, t-center, m, b-16"></div>"
@@ -236,33 +232,33 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
               </p>
             </d, i, v>
       quest, i, o;
-  n: 'Is, there, a community, where, I can, get, help from, other, users?'
+  n: 'Is, there, a community, where, I can, get, help from, other, users?',
       quest, i, o,
-  n: 'Is, there, a community, where, I can, get, help from, other, users?'"
+  n: 'Is, there, a community, where, I can, get, help from, other, users?',"
       answ, e, r: "Y, e, s! We, have, an active, community, forum where, users, can ask, question, s, share, best, practices, and, get, help from, both, our team, and, other experienced, user, s. It's, a, great place, to, learn and, networ, k."
     }
   ];
   const, quickAction, s = [
-    { tit, l, e: 'Report, a, Bug', descripti, o, n: 'Found, an, issue? Let, us, know', li, n, k: '/conta, c, t', ic, o, n: '🐛' }"
-    { tit, l, e: 'Request, a, Feature', descripti, o, n: "Have, an, idea? We'd, love, to hear, i, t", li, n, k: '/conta, c, t', ic, o, n: '💡' }
-    { tit, l, e: 'Schedule, Trainin, g', descripti, o, n: 'Book, a, training session, for, your te, a, m', li, n, k: '/traini, n, g', ic, o, n: '🎓' }
-    { tit, l, e: 'View, Status, Page', descripti, o, n: 'Check, system, status and, uptim, e', li, n, k: '/stat, u, s', ic, o, n: '📊' }
+    { tit, l, e: 'Report, a, Bug', descripti, o, n: 'Found, an, issue? Let, us, know', li, n, k: '/conta, c, t', ic, o, n: '🐛'}"
+    { tit, l, e: 'Request, a, Feature', descripti, o, n: "Have, an, idea? We'd, love, to hear, i, t", li, n, k: '/conta, c, t', ic, o, n: '💡'}
+    { tit, l, e: 'Schedule, Trainin, g', descripti, o, n: 'Book, a, training session, for, your te, a, m', li, n, k: '/traini, n, g', ic, o, n: '🎓'}
+    { tit, l, e: 'View, Status, Page', descripti, o, n: 'Check, system, status and, uptim, e', li, n, k: '/stat, u, s', ic, o, n: '📊'}
   ];
   return(<div, className="m, i, n-h-screen, b, g-gr, a, y-50">)
-      {/* Hero, Sectio, n */})
-      <section, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-600, vi, a-purp, l, e-600, t, o-te, a, l-600, tex, t-white, p, y-20">)
-        <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">),
-          <div, className="te, x, t-cent, e, r">
+      {/* Hero, Sectio, n */})</div>
+      <section, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-600, vi, a-purp, l, e-600, t, o-te, a, l-600, tex, t-white, p, y-20">)</section>
+        <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">),</div>
+          <div, className="te, x, t-cent, e, r"></div>
             <h1, className="te, x, t-4x, l, m;
   return (
     <div, className="m, i, n-h-screen, b, g-gr, a, y-50">
       {/* Hero, Sectio, n */}</div>
-      <section, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-600, vi, a-purp, l, e-600, t, o-te, a, l-600, tex, t-white, p, y-20">
+      <section, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-600, vi, a-purp, l, e-600, t, o-te, a, l-600, tex, t-white, p, y-20"></section>
         <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8"></section>
           <div, className="te, x, t-cent, e, r"></div>
             <h1, className="te, x, t-4x, l, m
   d:te, x, t-6xl, fon, t-bold, m, b-6">
-  return ("
+  return ("</h1>
     <div, className="m, i, n-h-screen, b, g-gr, a, y-50"></div>
       {/* Hero, Sectio, n */}"
       <section, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-600, vi, a-purp, l, e-600, t, o-te, a, l-600, tex, t-white, p, y-20"></section>"
@@ -304,7 +300,7 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
         </d, i, v>
       </secti, o, n>
             {/* Category, Filte, r */}
-            <div, className="flex, fle, x-wrap, justif, y-center, ga, p-4, m, b-12">
+            <div, className="flex, fle, x-wrap, justif, y-center, ga, p-4, m, b-12"></div>
               <butt, o, n;
             <div, className="flex, fle, x-wrap, justif, y-center, ga, p-4, m, b-12"></div>
               <butt, o, n
@@ -345,7 +341,7 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
               {filteredFa, q, s.m, a, p((f, a, q, ind, e, x) => (</div>
                 <div, ke, y={ind, e, x} classNa, m, e="bg-gr, a, y-50, rounde, d-l, g, p-6"></div>
                   <h3, className="te, x, t-lg, fon, t-semibold, tex, t-gr, a, y-900, m, b-3">
-            {/* FAQ, Item, s */}"
+            {/* FAQ, Item, s */}"</h3>
             <div, className="spa, c, e-y-6"></div>
               {/* TODO: Fix JSX expression */}"
                 <div, ke, y={ind, e, x} classNa, m, e="bg-gr, a, y-50, rounde, d-l, g, p-6"></div>"
@@ -368,7 +364,7 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
           </d, i, v>
         </secti, o, n>
         {/* Contact, CT, A */}
-        <section, className="py-20, p, x-4, s, m: px-6, l, g:px-8, b, g-bl, u, e-6, 0, 0">
+        <section, className="py-20, p, x-4, s, m: px-6, l, g:px-8, b, g-bl, u, e-6, 0, 0"></section>
           <div, className="m, a, x-w-7xl, m, x-auto, tex, t-cent, e, r"></section>
             <h2, className="te, x, t-3xl, m, d:te, x, t-4xl, fon, t-bold, tex, t-white, m, b-4">
             {/* TODO: Fix JSX expression */}
@@ -384,7 +380,7 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
             <p, className="te, x, t-xl, tex, t-bl, u, e-100, m, b-8, ma, x-w-3xl, m, x-au, t, o"></p>
               C, a, n't, find, what y, o, u're, looking, for? Our, support, team is, ready, to help, you, with any, questions, or issu, e, s.
             </p>
-            <div, className="flex, fle, x-col, s, m:fl, e, x-row, ga, p-4, justif, y-cent, e, r">
+            <div, className="flex, fle, x-col, s, m:fl, e, x-row, ga, p-4, justif, y-cent, e, r"></div>
               <Li, n, k;
             <div, className="flex, fle, x-col, s, m:fl, e, x-row, ga, p-4, justif, y-cent, e, r"></div>
               <Li, n, k

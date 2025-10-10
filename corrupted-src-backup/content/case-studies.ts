@@ -72,7 +72,7 @@ export const caseStudies: CaseStudy[] = [
     duration: '8 weeks',
     imageUrl: '/images/case-studies/healthcare-chatbot.jpg'},
   {
-    id: 'ecommerce-optimization'
+    id: 'ecommerce-optimization',
     title: 'E-commerce AI Optimization Suite',
     company: 'RetailMax Online',
     industry: 'E-commerce',
@@ -139,7 +139,7 @@ export const caseStudies: CaseStudy[] = [
     duration: '20 weeks',
     imageUrl: '/images/case-studies/cybersecurity.jpg'},
   {
-    id: 'telco-edge-observability'
+    id: 'telco-edge-observability',
     title: 'Telco Edge Observability Overhaul',
     company: 'GlobalTel Communications',
     industry: 'Telecommunications',
@@ -155,7 +155,7 @@ export const caseStudies: CaseStudy[] = [
     duration: '18 weeks',
     imageUrl: '/images/case-studies/telco-edge.jpg'},
   {
-    id: 'enterprise-rag-rollout'
+    id: 'enterprise-rag-rollout',
     title: 'Enterprise RAG Rollout at Fortune 500',
     company: 'Global Consumer Goods Co.',
     industry: 'Consumer Goods',

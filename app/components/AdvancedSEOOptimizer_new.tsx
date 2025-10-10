@@ -95,7 +95,7 @@ const AdvancedSEOOptimizerNew: React.FC<SEOOptimizerProps> = ({
     return structuredData || defaultStructuredData;
   }
   return (
-    <React.Fragment>
+    <React.Fragment></React.Fragment>
       <Helmet>
         <title>{title}</title>
         <meta name="description" content={description} />
@@ -129,13 +129,12 @@ const AdvancedSEOOptimizerNew: React.FC<SEOOptimizerProps> = ({
           borderRadius: '5px',
           fontSize: '12px',
           zIndex: 1000,
-          maxWidth: '300px'
-        }}>
+          maxWidth: '300px'}}></div>
           <div>SEO Score: {seoScore}/100</div>
           {recommendations.length > 0 && (
-            <div>
+            <div></div>
               <div>Recommendations:</div>
-              <ul style={{ margin: '5px 0', paddingLeft: '15px' }}>
+              <ul style={{ margin: '5px 0', paddingLeft: '15px'}}>
                 {recommendations.map((rec, index) => (
                   <li key={index}>{rec}</li>
                 ))}

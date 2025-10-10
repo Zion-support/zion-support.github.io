@@ -169,8 +169,7 @@ const,
           name: 'AI and IT Solutions',
           provider: {
             '@type': 'Organization',
-            name: 'Zion Tech Group'
-          },
+            name: 'Zion Tech Group'},
           description: mergedSEOData.description,
           serviceType: 'Technology Services',
           areaServed: 'United States',
@@ -183,24 +182,21 @@ const,
                 itemOffered: {
                   '@type': 'Service',
                   name: 'AI Solutions',
-                  description: 'Advanced artificial intelligence solutions'
-                }
+                  description: 'Advanced artificial intelligence solutions'}
               },
               {
                 '@type': 'Offer',
                 itemOffered: {
                   '@type': 'Service',
                   name: 'Cybersecurity',
-                  description: 'Comprehensive cybersecurity solutions'
-                }
+                  description: 'Comprehensive cybersecurity solutions'}
               },
               {
                 '@type': 'Offer',
                 itemOffered: {
                   '@type': 'Service',
                   name: 'Cloud Infrastructure',
-                  description: 'Scalable cloud infrastructure solutions'
-                }
+                  description: 'Scalable cloud infrastructure solutions'}
               }
             ]
           }

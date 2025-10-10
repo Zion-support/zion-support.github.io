@@ -5,10 +5,10 @@ import Footer from '../components/Footer';
 import { CheckCircle, Star } from 'lucide-react';
 const BusinessAppsPage: React.FC = () => {
   return (
-    <div>
+    <div></div>
       <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
+      <main className="container mx-auto px-4 py-16 pt-24"></main>
+        <section className="text-center mb-16"></section>
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
             Page
   </
@@ -20,7 +20,7 @@ const BusinessAppsPage: React.FC = () => {
           </p>
         </section>
         {/* Key Benefits */}
-        <section className="mb-16">
+        <section className="mb-16"></section>
           <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">
 // Why Choose Our Business Apps?
           </h2>"
@@ -44,7 +44,7 @@ const BusinessAppsPage: React.FC = () => {
     businessApps
   }
                 .filter(app => app.category === category)
-                .map((app, index) => ("
+                .map((app, index) => ("</div>
 <div className="text-4xl mb-4 text-center">{app.icon}</div>"
                     <h4 className="text-xl font-bold text-white mb-3 text-center">{app.title}</h4>"
                     <p className="text-gray-300 mb-4 text-sm text-center">{app.description}</p>"
@@ -86,8 +86,7 @@ className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 round
             >Call (302) 464-0950</a>
       </main>
       <Footer /></Footer>
-</div>),
-}
+</div>)}
 export default BusinessAppsPage;
   </section>
   </p>

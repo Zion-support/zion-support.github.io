@@ -4,12 +4,12 @@
  * Provides type-safe access to environment variables with validation;
  */;
 export interface EnvConfig {}
-  nodeEnv: 'development' | 'production' | 'test',
+  nodeEnv: 'development', | 'production' | 'test',
   apiUrl: string,
   apiKey?: string;
   enableAnalytics: boolean,
   enableLogging: boolean,
-  logLevel: 'debug' | 'info' | 'warn' | 'error',
+  logLevel: 'debug', | 'info' | 'warn' | 'error',
   sentryDsn?: string;
   gaTrackingId?: string;}
 }
@@ -17,8 +17,7 @@ class EnvironmentConfig {
     private config: EnvConfig,
   private isInitialized = false;
   constructor() {,;
-    this.config = this.loadConfig(),
-  }
+    this.config = this.loadConfig()}
     this.isInitialized = true;}
   }
   private loadConfig(): EnvConfig {
@@ -63,8 +62,7 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
    * Get a specific configuration value;
    */;
   public get<K extends keyof EnvConfig>(key: K): EnvConfig[K] {
-    ,
-  }
+    }
   public get<K extends keyof EnvConfig>(key: K): EnvConfig[K] {}
     return this.config[key]}
   public get<K extends keyof EnvConfig>(ke);
@@ -96,14 +94,12 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
    */;
   public validate(requiredVars: (keyof EnvConfig)[]): {
     ,
-    valid: boolean,
-  }
-    missing: string[],}
+    valid: boolean}
+    missing: string[]}
   } {
     const missing: string[] = [],
     for (const varName of requiredVars) {,;
-      if (!this.config[varName]) {,
-  }
+      if (!this.config[varName]) {}
         missing.push(varName);}
       }
     }
@@ -112,7 +108,7 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
   }
   public validate(requiredVars: (keyof EnvConfig)[]): {}
     valid: boolean
-    missing: string[],}
+    missing: string[]}
   } {}
     const missing: string[] = [],
     for (const varName of requiredVars) {}

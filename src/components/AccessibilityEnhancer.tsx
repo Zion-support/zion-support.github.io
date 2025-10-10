@@ -83,7 +83,7 @@ import React, { useEffect, useState } from 'react';
 interface AccessibilitySettings {
     highContrast: boolean
   reducedMotion: boolean
-  fontSize: 'small' | 'medium' | 'large',
+  fontSize: 'small', | 'medium' | 'large',
   focusVisible: boolean
   }
 const AccessibilityEnhancer: React.FC = () => {
@@ -177,9 +177,9 @@ const AccessibilityEnhancer: React.FC = () => {
     return null
   }
   return (
-    <div className="fixed top-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs z-50">
+    <div className="fixed top-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs z-50"></div>
       <div className="mb-2 font-bold">Accessibility Settings</div>
-      <div className="space-y-2">
+      <div className="space-y-2"></div>
         <label className="flex items-center space-x-2">
           <input
             type="checkbox"
@@ -198,7 +198,7 @@ const AccessibilityEnhancer: React.FC = () => {
           />
           <span>Reduced Motion</span>
         </label>
-        <div>
+        <div></div>
           <label className="block mb-1">Font Size:</label>
           <select
             value={settings.fontSize}

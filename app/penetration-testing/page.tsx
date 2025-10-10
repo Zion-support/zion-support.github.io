@@ -34,23 +34,19 @@ const PenetrationTestingPage: React.FC = () => {
     {
       icon: Search,
       title: 'Comprehensive Vulnerability Assessment',
-      description: 'Thorough testing of your systems to identify security weaknesses and potential attack vectors.'
-  },
+      description: 'Thorough testing of your systems to identify security weaknesses and potential attack vectors.'},
     {
     icon: Target,
       title: 'Simulated Attack Scenarios',
-      description: 'Real-world attack simulations to test your defenses and response capabilities.'
-  },
+      description: 'Real-world attack simulations to test your defenses and response capabilities.'},
     {
     icon: BarChart,
       title: 'Detailed Security Reports',
-      description: 'Comprehensive reports with prioritized recommendations and remediation guidance.'
-  },
+      description: 'Comprehensive reports with prioritized recommendations and remediation guidance.'},
     {
     icon: Zap,
       title: 'Expert Security Analysis',
-      description: 'Professional security experts conduct thorough testing using industry-standard methodologies.'
-  }
+      description: 'Professional security experts conduct thorough testing using industry-standard methodologies.'}
     }
   ]
 const benefits = [
@@ -68,7 +64,7 @@ const benefits = [
     'Ongoing security improvement guidance'
   ]
 return (
-    <>
+    <></>
       <Helmet>
         <title>Penetration Testing Services - Zion Tech Group | Security Assessment</title>
         <meta name="description" content="AI-powered solution" />
@@ -76,9 +72,9 @@ return (
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         {/* Hero Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
@@ -94,11 +90,11 @@ return (
                 Our expert penetration testing services help secure your systems and protect your business.
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
-                <button>
+                <button></button>
                   <Shield>
                   Schedule Assessment
                 </button>
-                <button>
+                <button></button>
                   <Phone>
                   Call (302) 464-0950,
                 </button>
@@ -107,9 +103,9 @@ return (
           </div>
         </section>
         {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
@@ -137,9 +133,9 @@ return (
           </div>
         </section>
         {/* Benefits Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
@@ -157,7 +153,7 @@ return (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-3"></div>
-                  <CheckCircle>
+                  <CheckCircle></CheckCircle>
                   <p className="text-gray-300 text-lg">{benefit}</p>
                 </div>
               ))}
@@ -165,9 +161,9 @@ return (
           </div>
         </section>
         {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
@@ -182,11 +178,11 @@ return (
                 Contact our security experts to schedule a comprehensive penetration test for your systems.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-                <button>
+                <button></button>
                   <Phone>
                   Call (302) 464-0950
                 </button>
-                <button>
+                <button></button>
                   <Mail>
                   Email Us
                 </button>
@@ -196,8 +192,7 @@ return (
         </section>
       </div>
     </>
-  ),
-};
+  )};
 
 export default PenetrationTestingPage;
 

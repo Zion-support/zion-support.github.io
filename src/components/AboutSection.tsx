@@ -1,10 +1,10 @@
 import React from 'react';
 export default function AboutSection() {
   const stats = [
-    { number: '500+', label: 'Projects Completed' },
-    { number: '50+', label: 'Happy Clients' },
-    { number: '5+', label: 'Years Experience' },
-    { number: '99%', label: 'Success Rate' }
+    { number: '500+', label: 'Projects Completed'},
+    { number: '50+', label: 'Happy Clients'},
+    { number: '5+', label: 'Years Experience'},
+    { number: '99%', label: 'Success Rate'}
   ];
   const values = [
     {
@@ -36,11 +36,11 @@ export default function AboutSection() {
     }
   ];
   return (
-    <section id="about" className="py-20 relative">
+    <section id="about" className="py-20 relative"></section>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+        {/* Section Header */}</div>
+        <div className="text-center mb-16"></div>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>
             <span className="holographic-text">About Zion Tech Group</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -50,9 +50,9 @@ export default function AboutSection() {
         </div>
         {/* Main Content */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
-          {/* Left Content */}
-          <div className="space-y-8">
-            <div className="cyber-card-advanced p-8">
+          {/* Left Content */}</div>
+          <div className="space-y-8"></div>
+            <div className="cyber-card-advanced p-8"></div>
               <h3 className="text-2xl font-bold text-white mb-6">
                 Our Mission</span>
               <p className="text-gray-300 text-lg leading-relaxed mb-6">
@@ -66,7 +66,7 @@ export default function AboutSection() {
                 needs but also scale with your future ambitions.
               </p>
             </div>
-            <div className="cyber-card-advanced p-8">
+            <div className="cyber-card-advanced p-8"></div>
               <h3 className="text-2xl font-bold text-white mb-6">
                 Why Choose Us?
               </h3>
@@ -99,10 +99,10 @@ export default function AboutSection() {
             </div>
           </div>
           {/* Right Content - Stats */}
-          <div className="space-y-8">
+          <div className="space-y-8"></div>
             <div className="grid grid-cols-2 gap-6">
-              {stats.map((stat, index) => (
-                <div key={index} className="cyber-card-advanced p-6 text-center">
+              {stats.map((stat, index) => (</div>
+                <div key={index} className="cyber-card-advanced p-6 text-center"></div>
                   <div className="text-3xl md:text-4xl font-bold text-cyan-400 neon-pulse mb-2">
                     {stat.number}
                   </div>
@@ -112,15 +112,15 @@ export default function AboutSection() {
                 </div>
               ))}
             </div>
-            <div className="cyber-card-advanced p-8">
+            <div className="cyber-card-advanced p-8"></div>
               <h3 className="text-xl font-bold text-white mb-4">
                 Our Expertise</span>
               <div className="space-y-3">
-                {['Artificial Intelligence', 'Machine Learning', 'Cloud Computing', 'Web Development', 'Mobile Apps', 'Data Analytics'].map((skill, index) => (
-                  <div key={index} className="flex items-center justify-between">
+                {['Artificial Intelligence', 'Machine Learning', 'Cloud Computing', 'Web Development', 'Mobile Apps', 'Data Analytics'].map((skill, index) => (</div>
+                  <div key={index} className="flex items-center justify-between"></div>
                     <span className="text-gray-300">{skill}</span>
-                    <div className="w-24 bg-gray-700 rounded-full h-2">
-                      <div className="bg-gradient-to-r from-cyan-400 to-purple-500 h-2 rounded-full" style={{ width: '95%' }}></div>
+                    <div className="w-24 bg-gray-700 rounded-full h-2"></div>
+                      <div className="bg-gradient-to-r from-cyan-400 to-purple-500 h-2 rounded-full" style={{ width: '95%'}}></div>
                     </div>
                   </div>
                 ))}
@@ -129,12 +129,12 @@ export default function AboutSection() {
           </div>
         </div>
         {/* Values Section */}
-        <div className="mb-16">
+        <div className="mb-16"></div>
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Our Core Values</span>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {values.map((value, index) => (
-              <div key={index} className="cyber-card-advanced p-8 text-center group hover:scale-105 transition-all duration-300">
+            {values.map((value, index) => (</div>
+              <div key={index} className="cyber-card-advanced p-8 text-center group hover:scale-105 transition-all duration-300"></div>
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center mx-auto mb-6 text-black group-hover:scale-110 transition-transform duration-300">
                   {value.icon}
                 </div>
@@ -149,7 +149,7 @@ export default function AboutSection() {
           </div>
         </div>
         {/* Team Section */}
-        <div className="cyber-card-advanced p-8">
+        <div className="cyber-card-advanced p-8"></div>
           <h3 className="text-2xl font-bold text-white text-center mb-8">
             Meet Our Team</span>
           <p className="text-gray-300 text-center text-lg max-w-3xl mx-auto mb-8">
@@ -157,23 +157,23 @@ export default function AboutSection() {
             machine learning, software development, and IT consulting. We're passionate 
             about technology and committed to delivering exceptional results.
           </p>
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-24 h-24 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8"></div>
+            <div className="text-center"></div>
+              <div className="w-24 h-24 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center"></div>
                 <span className="text-black font-bold text-2xl">AI</span>
               </div>
               <h4 className="text-lg font-semibold text-white mb-2">AI Specialists</h4>
               <p className="text-gray-400 text-sm">Machine Learning Engineers & Data Scientists</p>
             </div>
-            <div className="text-center">
-              <div className="w-24 h-24 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+            <div className="text-center"></div>
+              <div className="w-24 h-24 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full mx-auto mb-4 flex items-center justify-center"></div>
                 <span className="text-black font-bold text-2xl">DEV</span>
               </div>
               <h4 className="text-lg font-semibold text-white mb-2">Developers</h4>
               <p className="text-gray-400 text-sm">Full-Stack & Mobile App Developers</p>
             </div>
-            <div className="text-center">
-              <div className="w-24 h-24 bg-gradient-to-r from-green-400 to-cyan-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+            <div className="text-center"></div>
+              <div className="w-24 h-24 bg-gradient-to-r from-green-400 to-cyan-500 rounded-full mx-auto mb-4 flex items-center justify-center"></div>
                 <span className="text-black font-bold text-2xl">IT</span>
               </div>
               <h4 className="text-lg font-semibold text-white mb-2">IT Consultants</h4>
@@ -183,8 +183,7 @@ export default function AboutSection() {
         </div>
       </div>
     </section>
-  ),
-}
+  )}
   </h3>
   </h3>
   </h3>

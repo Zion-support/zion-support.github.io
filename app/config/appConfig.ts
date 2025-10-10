@@ -6,34 +6,30 @@ export interface AppConfig {
     app: {
     name: string,
     version: string,
-    environment: 'development' | 'production' | 'test'
+    environment: 'development', | 'production' | 'test'
   }
   }
   api: {
     baseUrl: string,
     timeout: number,
-    retryAttempts: number,
-  }
+    retryAttempts: number}
   }
   features: {
     analytics: boolean,
     monitoring: boolean,
     errorTracking: boolean,
-    performanceOptimization: boolean,
-  }
+    performanceOptimization: boolean}
   }
   performance: {
     enableLazyLoading: boolean,
     imageLazyLoadThreshold: number,
     componentLazyLoadThreshold: number,
-    cacheMaxAge: number,
-  }
+    cacheMaxAge: number}
   }
   security: {
     enableCSP: boolean,
     enableHSTS: boolean,
-    enableXSSProtection: boolean,
-  }
+    enableXSSProtection: boolean}
   }
 }
 const config: AppConfig = {
@@ -41,19 +37,16 @@ const config: AppConfig = {
     name: 'Zion Tech Group',
     version: '1.0.0',
     environment:;
-      (process.env['NODE_ENV'] as 'development' | 'production' | 'test') || 'development',
-  },
+      (process.env['NODE_ENV'] as 'development' | 'production' | 'test') || 'development'},
   api: {
     baseUrl: process.env.NEXT_PUBLIC_API_URL || 'https://api.zion.app',
     timeout: 30000,
-    retryAttempts: 3,
-  },
+    retryAttempts: 3},
   features: {
     analytics: process.env['NODE_ENV'] === 'production',
     monitoring: true,
     errorTracking: true,
-    performanceOptimization: true,
-  },
+    performanceOptimization: true},
   performance: {
     enableLazyLoading: true,
     imageLazyLoadThreshold: 0.5,
@@ -63,9 +56,7 @@ const config: AppConfig = {
   security: {
     enableCSP: true,
     enableHSTS: true,
-    enableXSSProtection: true,
-  },
-}
+    enableXSSProtection: true}}
 /**;
  * Get configuration value by key path;
  * @example getConfig('app.name') => 'Zion Tech Group';

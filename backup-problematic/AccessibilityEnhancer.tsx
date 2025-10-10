@@ -79,9 +79,9 @@ const,
  const _main = document.querySelector('main');
  if (main) {,
  (main as HTMLElement).focus();
- (main as HTMLElement).scrollIntoView({ behavior: 'smooth' });
+ (main as HTMLElement).scrollIntoView({ behavior: 'smooth'});
  useEffect(() => {/* TODO: Fix JSX expression */}
-  r: 'smooth' });
+  r: 'smooth'});
  }
  }
  // Skip to navigation with Alt + N;
@@ -90,9 +90,9 @@ const,
  const _nav = document.querySelector('nav');
  if (nav) {
  (nav as HTMLElement).focus();
- (nav as HTMLElement).scrollIntoView({ behavior: 'smooth' });
+ (nav as HTMLElement).scrollIntoView({ behavior: 'smooth'});
  if (e.altKey && e.key === 'n') {/* TODO: Fix JSX expression */}
-  r: 'smooth' });
+  r: 'smooth'});
  }
  }
  // Close modals/dropdowns with Escape;
@@ -234,7 +234,7 @@ const,
  };
  }, [announceToScreenReader]);
 `
- return (<div className={`accessibility-enhanced ${isHighContrast ? 'high-contrast' : ''} ${isReducedMotion ? 'reduced-motion' : ''}`}></div>
+ return (</div><div className={`accessibility-enhanced ${isHighContrast ? 'high-contrast' : ''} ${isReducedMotion ? 'reduced-motion' : ''}`}></div>
  {children}
  </div>)
  );

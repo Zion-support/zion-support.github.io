@@ -57,17 +57,17 @@ const PricingPage: React.FC = () => {
   ]
 
   return (
-    <>
+    <></>
       <Helmet>
         <title>Pricing - Zion Tech Group | Transparent AI & IT Pricing</title>
         <meta name="description" content="Transparent pricing for AI and IT solutions. Choose from Starter, Professional, or Enterprise plans. Custom solutions available. Get started today." />
         <meta name="keywords" content="AI pricing, IT services pricing, cloud solutions cost, enterprise AI pricing, custom development pricing" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+        <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Transparent Pricing
               </h1>
@@ -77,7 +77,7 @@ const PricingPage: React.FC = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {plans.map((plan, index) => (
+              {plans.map((plan, index) => (</div>
                 <div
                   key={index}
                   className={`bg-white/5 backdrop-blur-lg rounded-2xl p-8 border transition-all duration-300 ${
@@ -86,7 +86,7 @@ const PricingPage: React.FC = () => {
                       : 'border-white/10 hover:border-cyan-400/30'
                   }`}
                 >
-                  {plan.popular && (
+                  {plan.popular && (</div>
                     <div className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-sm font-semibold py-2 px-4 rounded-full text-center mb-6">
                       Most Popular
                     </div>
@@ -95,7 +95,7 @@ const PricingPage: React.FC = () => {
                   <h3 className="text-2xl font-bold text-white mb-4">{plan.name}</h3>
                   <p className="text-gray-300 mb-6">{plan.description}</p>
                   
-                  <div className="mb-6">
+                  <div className="mb-6"></div>
                     <span className="text-4xl font-bold text-white">${plan.price}</span>
                     <span className="text-gray-400 ml-2">/month</span>
                   </div>
@@ -120,7 +120,7 @@ const PricingPage: React.FC = () => {
               ))}
             </div>
 
-            <div className="text-center mt-16">
+            <div className="text-center mt-16"></div>
               <h2 className="text-3xl font-bold text-white mb-4">Need a Custom Solution?</h2>
               <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
                 We offer tailored AI and IT solutions for enterprise clients. Contact us for a personalized quote.

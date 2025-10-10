@@ -91,7 +91,7 @@ export, interface, UnifiedPromotionalBannerProps {/* TODO: Fix JSX expression */
 const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, s> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
   } const, buttonTheme, s = {/* TODO: Fix JSX expression */}
-  } const, visibleItem, s = featuredIte, m, s.sli, c, e(, 0, showCou, n, t); retu, r, n (<div, classNam, e = {/* TODO: Fix JSX expression */}
+  } const, visibleItem, s = featuredIte, m, s.sli, c, e(, 0, showCou, n, t); retu, r, n (</h2><div, classNam, e = {/* TODO: Fix JSX expression */}
         bg-gradie, n, t-to-r ${themeClass, e, s[th, e, m, e] }, border, rounde, d-xl;
         ${variantClass, e, s[varia, n, t]} 
         ${ animat, e, d  ? 'transiti, o, n-all, duratio, n-300, hove, r: shad, o, w-2xl, hove, r:sca, l, e-[1.0, 1]'  : '' }

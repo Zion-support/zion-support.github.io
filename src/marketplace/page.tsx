@@ -142,7 +142,7 @@ valuevalue: '100+',
 iconicon: Star,
       value: '4.8',
       label: 'Average Rating',
-      color: 'text-yellow-400'
+      color: 'text-yellow-400',
   const benefits = [
       icon: CheckCircle,
       title: 'Verified Vendors',
@@ -155,14 +155,14 @@ icon$5: Clock,
       description:       ,
 icon$5: Award,
       title: 'Quality Guarantee',
-      description: '100% satisfaction guarantee on all purchases'
+      description: '100% satisfaction guarantee on all purchases',
   return (
-    <React.Fragment>
+    <React.Fragment></React.Fragment>
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         <div className="container mx-auto px-4 py-16 pt-24">
-          {/* Header */}
-          <div className="text-center mb-16">
+          {/* Header */}</div>
+          <div className="text-center mb-16"></div>
             <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
               Zion Tech Marketplace,
   </
@@ -173,17 +173,17 @@ icon$5: Award,
           </div>
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className={`w-16 h-16 ${stat.color.replace('text-', 'bg-').replace('-400', '-500/10')} rounded-full flex items-center justify-center mx-auto mb-4`}>
+            {stats.map((stat, index) => (</div>
+              <div key={index} className="text-center"></div>
+                <div className={`w-16 h-16 ${stat.color.replace('text-', 'bg-').replace('-400', '-500/10')} rounded-full flex items-center justify-center mx-auto mb-4`}></div>
                   <stat.icon className={`w-8 h-8 ${stat.color}`} />
                 <div className={`text-3xl font-bold ${stat.color} mb-2`}>{stat.value}</div>
                 <div className="text-gray-300 text-sm">{stat.label}</div>
             ))}
           {/* Search and Filters */}
-          <div className="mb-12">
-            <div className="flex flex-col md:flex-row gap-4 mb-8">
-              <div className="flex-1 relative">
+          <div className="mb-12"></div>
+            <div className="flex flex-col md:flex-row gap-4 mb-8"></div>
+              <div className="flex-1 relative"></div>
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
                   type="text"
@@ -192,13 +192,13 @@ icon$5: Award,
                   onChange={(e) => setSearchTerm(e.target.value)}
                   className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                 />
-              <button className="px-6 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white hover:bg-slate-700 transition-colors flex items-center">
+              <button className="px-6 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white hover:bg-slate-700 transition-colors flex items-center"></button>
                 <Filter className="w-5 h-5 mr-2" />
                 Filters,
   </
             {/* Category Tabs */}
             <div className="flex flex-wrap justify-center gap-4">
-              {categories.map((category) => (
+              {categories.map((category) => (</div>
                 <button
                   key={category.id}
                   onClick={() => setActiveCategory(category.id)}
@@ -207,32 +207,32 @@ icon$5: Award,
                       ? `${category.bgColor} ${category.color} border-2 border-current`
                       : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border-2 border-transparent'
                   }`}
-                >
+                ></button>
                   <category.icon className="w-5 h-5 mr-2" />
                   <span className="font-medium">{category.name}</span>
           {/* Items Grid */}
-          <div className="mb-16">
+          <div className="mb-16"></div>
             <h2 className="text-2xl font-bold text-white mb-8">
               {categories.find(cat => cat.id === activeCategory)?.name} ({filteredItems.length})
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredItems.map((item) => (
-                <div key={item.id} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
-                  <div className="flex items-start mb-4">
+              {filteredItems.map((item) => (</div>
+                <div key={item.id} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300"></div>
+                  <div className="flex items-start mb-4"></div>
                     <div className="text-4xl mr-4">{item.image}</div>
-                    <div className="flex-1">
-                      <div className="flex items-center justify-between mb-2">
+                    <div className="flex-1"></div>
+                      <div className="flex items-center justify-between mb-2"></div>
                         <h3 className="text-lg font-semibold text-white">{item.name}</h3>
                         {item.verified && (
-                          <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center">
+                          <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center"></div>
                             <CheckCircle className="w-3 h-3 text-white" />
-                        )}
+                        )}</CheckCircle>
                       <p className="text-gray-300 text-sm mb-2">{item.description}</p>
-                      <div className="flex items-center text-sm text-gray-400 mb-2">
+                      <div className="flex items-center text-sm text-gray-400 mb-2"></div>
                         <span className="mr-2">{item.category}</span>
                         {item.vendor && <span>• {item.vendor}</span>}
                   {activeCategory === 'products' && (
-                      <div className="mb-4">
+                      <div className="mb-4"></div>
                         <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
                         <ul className="space-y-1">
                           {item.features.map((feature, index) => (
@@ -241,8 +241,8 @@ icon$5: Award,
                               {feature}
                             </li>
                         </ul>
-                      <div className="flex items-center justify-between mb-4">
-                        <div className="flex items-center">
+                      <div className="flex items-center justify-between mb-4"></div>
+                        <div className="flex items-center"></div>
                           <Star className="w-4 h-4 text-yellow-400 mr-1" />
                           <span className="text-sm text-white font-medium">{item.rating}</span>
                           <span className="text-sm text-gray-400 ml-1">({item.reviews} reviews)</span>
@@ -251,13 +251,13 @@ icon$5: Award,
                   {activeCategory === 'talent' && (
                         <h4 className="text-sm font-semibold text-cyan-400 mb-2">Expertise:</h4>
                         <div className="flex flex-wrap gap-1">
-                          {item.expertise.map((skill, index) => (
+                          {item.expertise.map((skill, index) => (</div>
                             <span key={index} className="px-2 py-1 bg-slate-700 text-xs text-gray-300 rounded">
                               {skill}
                             </span>
                           <span className="text-sm text-gray-400 ml-1">({item.projects} projects)</span>
                         <div className="text-lg font-bold text-cyan-400">{item.rate}</div>
-                      <div className="flex items-center justify-between text-sm">
+                      <div className="flex items-center justify-between text-sm"></div>
                         <span className="text-gray-400">{item.experience} experience</span>
                         <span className={`px-2 py-1 rounded text-xs ${
                           item.available ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'
@@ -269,25 +269,25 @@ icon$5: Award,
                           item.inStock ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'
                           {item.inStock ? 'In Stock' : 'Out of Stock'}
                   <button className="w-full mt-4 bg-cyan-500 text-white py-2 px-4 rounded-lg hover:bg-cyan-600 transition-colors flex items-center justify-center">
-                    {activeCategory === 'talent' ? 'Contact' : 'Add to Cart'}
+                    {activeCategory === 'talent' ? 'Contact' : 'Add to Cart'}</button>
                     <ArrowRight className="w-4 h-4 ml-2" />
           {/* Benefits */}
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-              Why Choose Our Marketplace?
+              Why Choose Our Marketplace?</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {benefits.map((benefit, index) => (
-                  <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
+              {benefits.map((benefit, index) => (</div>
+                  <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                     <benefit.icon className="w-8 h-8 text-cyan-400" />
                   <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
                   <p className="text-gray-300 text-sm">{benefit.description}</p>
           {/* CTA Section */}
-          <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
+          <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center"></div>
             <h2 className="text-2xl font-bold text-white mb-4">
-              Ready to Find Your Perfect Solution?
+              Ready to Find Your Perfect Solution?</h2>
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Browse our marketplace to discover the tools, talent, and equipment you need 
-              to transform your business with cutting-edge technology.
-            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
+              to transform your business with cutting-edge technology.</p>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center"></div>
               <a
                 href="/contact"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
@@ -305,13 +305,12 @@ icon$5: Award,
       <Footer />
   return (
     <div>Coming Soon</div>
-  ),
-}
+  )}
   const [activeCategory, setActiveCategory] = useState('products');
   const [searchTerm, setSearchTerm] = useState('');
 const categories = [
     {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   i,
   d: 'products',
@@ -324,8 +323,7 @@ const categories = [
       bgColo,
   r: 'bg-blue-500/10',
       descriptio,
-  n: 'AI-powered software products and solutions'
-    },
+  n: 'AI-powered software products and solutions'},
       i,
   d: 'talent',
       nam,

@@ -30,7 +30,7 @@ const BlockchainWeb3Page: React.FC = () => {
   }
     ]
 return (
-    <>
+    <></>
       <Helmet>
         <title>Blockchain & Web3 Solutions - Zion Tech Group</title>
         <meta>
@@ -39,7 +39,7 @@ return (
         <div className="container mx-auto px-4 py-16"></div>
           <div className="text-center mb-16"></div>
             <h1>
-              Blockchain & <span className="text-cyan-400">Web3</span>
+              Blockchain &</h1> <span className="text-cyan-400">Web3</span>
             </h1>
             <p>
               Advanced blockchain and Web3 solutions for modern businesses. Smart contracts, DeFi, NFTs, and more.
@@ -51,7 +51,7 @@ return (
                 <div className="flex items-start space-x-4 mb-6"></div>
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0"></div>
                     <feature />
-                  <div />
+                  <div /></div>
                     <h3 className="text-2xl font-bold text-white mb-2">{feature.title}</h3>
                     <p className="text-gray-300 mb-4">{feature.description}</p>
                   </div>

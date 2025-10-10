@@ -50,10 +50,10 @@ class ErrorHandler {/* TODO: Fix JSX expression */}
     // Global JavaScript error handler;
     window.addEventListener('error', event => {
       this.handleError({
-        type: 'javascript'
+        type: 'javascript',
         message: event.message;)
         filename: event.filename;)
-        lineno: event.lineno,)
+        lineno: event.lineno)
         colno: event.colno),
         error: event.error),
   private setupGlobalErrorHandlers(): void {/* TODO: Fix JSX expression */}
@@ -103,7 +103,7 @@ class ErrorHandler {/* TODO: Fix JSX expression */}
       } catch (error) {
         this.handleError({)
           type: 'network'),
-          message: error.message,),
+          message: error.message),
           url: args[0] as string),
           error),
   private setupNetworkErrorHandler(): void {/* TODO: Fix JSX expression */}`
@@ -135,7 +135,7 @@ class ErrorHandler {/* TODO: Fix JSX expression */}
     url?: string;)
     status?: number;)
     componentStack?: string;)
-    props?: unknown,),
+    props?: unknown),
     state?: unknown;)}): void {
     //     const errorId = this.generateErrorId(errorData);
     const _now = new Date().toISOString();
@@ -241,8 +241,7 @@ class ErrorHandler {/* TODO: Fix JSX expression */}
   }
 
     // Low: Everything else
-    return 'low',
-  }
+    return 'low'}
 
   private sendErrorReport(errorReport: ErrorReport): void {,
     // In a real application, this would send to an error reporting service;
@@ -252,7 +251,7 @@ class ErrorHandler {/* TODO: Fix JSX expression */}
     //   method: 'POST'),
     //   headers: { 'Content-Type': 'application/json' })
     //   body: JSON.stringify(errorReport),
-    // }).catch(err => // console.error('Failed to send error report:', err));
+    // }).catch(err => // console.error('Failed to send error report: ', err));
   }
 
   private cleanupOldErrors(): void {
@@ -268,7 +267,7 @@ class ErrorHandler {/* TODO: Fix JSX expression */}
     errorsToKeep.forEach(error => {)
       this.errors.set(error.id, error);
   private determineSeverity(errorDat)
-  a: unknown): ErrorReport['severity'] {/* TODO: Fix JSX expression */}
+  a: unknown): ErrorReport[',severity'] {/* TODO: Fix JSX expression */}
     }
 
     // Hig,
@@ -283,8 +282,7 @@ class ErrorHandler {/* TODO: Fix JSX expression */}
 
     // Lo,
   w: Everything else
-    return 'low',
-  }
+    return 'low'}
 
   private sendErrorReport(errorRepor)
   t: ErrorReport): void {/* TODO: Fix JSX expression */}
@@ -292,7 +290,7 @@ class ErrorHandler {/* TODO: Fix JSX expression */}
     //   bod,
   y: JSON.stringify(errorReport)
     // }).catch(err => // console.error('Failed to send error)
-  report:', err));
+  report: ', err));
   }
 
   private cleanupOldErrors(): void {/* TODO: Fix JSX expression */}
@@ -340,7 +338,7 @@ class ErrorHandler {/* TODO: Fix JSX expression */}
   generateErrorReport(): string {
     const _metrics = this.getErrorMetrics();
     const _errors = this.getErrors();
-    const _criticalErrors = errors.filter(e => e.severity === 'critical');
+    const _criticalErrors = errors.filter(e => e.severity === ',critical');
     const _unresolvedErrors = errors.filter(e => !e.resolved);
 
     return `

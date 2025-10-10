@@ -12,17 +12,14 @@ export const securityHeaders = {
         "'unsafe-inline'",;
         "'unsafe-eval'",;
         'https: //www.googletagmanager.com',
-        'https: //www.google-analytics.com',
-      ],;
+        'https: //www.google-analytics.com'],;
       styleSrc: ["'self'", "'unsafe-inline'", 'https: //fonts.googleapis.com'],
       fontSrc: ["'self'", 'https: //fonts.gstatic.com'],
-      imgSrc: ["'self'", 'data:', 'https:', 'blob: '],
-      connectSrc: ["'self'", 'https://www.google-analytics.com', 'https: //analytics.google.com'],
+      imgSrc: ["'self'", 'data: ', ',https: ', ',blob: '],
+      connectSrc: ["',self'", 'https://www.google-analytics.com', 'https: //analytics.google.com'],
       frameSrc: ["'self'"],
       objectSrc: ["'none'"],
-      upgradeInsecureRequests: true,
-  },
-  },;
+      upgradeInsecureRequests: true}},;
   // Security Headers;
   headers: {
     'X-DNS-Prefetch-Control': 'on',
@@ -31,17 +28,14 @@ export const securityHeaders = {
     'X-Frame-Options': 'SAMEORIGIN',;
     'X-Content-Type-Options': 'nosniff',;
     'Referrer-Policy': 'strict-origin-when-cross-origin',;
-    'Permissions-Policy': 'camera=(), microphone=(), geolocation=(), interest-cohort=()',
-  },
-}
+    'Permissions-Policy': 'camera=(), microphone=(), geolocation=(), interest-cohort=()'}}
 /**;
  * Rate limiting configuration;
  */;
 export const rateLimitConfig = {
     windowMs: 15 * 60 * 1000, // 15 minutes;
   max: 100, // Limit each IP to 100 requests per windowMs;
-  message: 'Too many requests from this IP, please try again later.',
-  }
+  message: 'Too many requests from this IP, please try again later.'}
 }
 /**;
  * CORS configuration;
@@ -65,25 +59,22 @@ export const sessionConfig = {
     secure: process.env['NODE_ENV'] === 'production',
     httpOnly: true,
     maxAge: 24 * 60 * 60 * 1000, // 24 hours;
-    sameSite: 'strict' as const,
-  },
-}
+    sameSite: 'strict', as const}}
 /**;
  * Input validation patterns;
  */;
 export const validationPatterns = {}
-  email: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,;
+  email: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2}$/,;
   phone: /^\+?[1-9]\d{1,14}$/,;
   url: /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)$/,;
   alphanumeric: /^[a-zA-Z0-9]+$/,
-  noSpecialChars: /^[a-zA-Z0-9\s]+$/,
-}
+  noSpecialChars: /^[a-zA-Z0-9\s]+$/}
 /**;
  * Sanitize user input;
  */;
 export function sanitizeInput(input: string): string {
     return input,
-    .replace(/[<>]/g, '') // Remove < and >;
+    .replace(/[<>]/g, '') // Remove</> < and >;
     .replace(/javascript:/gi, '') // Remove javascript: protocol,
     .replace(/on\w+\s*=/gi, '') // Remove event handlers;
     .trim()
@@ -128,6 +119,5 @@ export default {
   sanitizeInput,;
   validateEmail,;
   validateUrl,;
-  generateSecureToken,
-  }
+  generateSecureToken}
 }

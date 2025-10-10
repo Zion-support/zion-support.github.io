@@ -13,11 +13,9 @@ export interface VerifiedRealService2025Batch2 {id: string;
     email: string}
     address: string}
   }
-    address: string,
-  }
+    address: string}
 export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
-    address: string,
-  }
+    address: string}
 export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
     id: 'ai - quality - assurance',
     name: 'AI Quality Assurance Platform',
@@ -55,8 +53,8 @@ export const,
       'Performance monitoring',
       'Quality metrics',
       'Continuous integration'],
-    link: '/services / ai - quality - assurance'
-    category: 'Verified Services 2025'
+    link: '/services / ai - quality - assurance',
+    category: 'Verified Services 2025',
     real_implementation: true
     contact_info: unknown,
       mobile: '+1 302 464 0950',
@@ -92,8 +90,7 @@ export const,
   realImplementation: boolean
   contactInfo: unknown,
     mobile: string, email: string
-    address: string,
-  }
+    address: string}
 }
 export const verifiedRealServices2025 Batch2: VerifiedRealService2025 Batch2[] = [,
     id: "ai-quality-assurance", name: "AI Quality Assurance Platform",
@@ -332,7 +329,7 @@ export interface VerifiedRealService2025Batch2,
   y: 'Verified Services 2025', real_implementatio,
   n: true, contact_inf,
   o: ' mobil,
-  e: '+1 302 464 0950',' emai,
+  e: ',+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup && ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}}]; mobil,"
   e: "+1 302 464 0950",

@@ -32,10 +32,10 @@ const AIHRAssistantPage: React.FC = () => {
     }
   ];
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
+      <main className="container mx-auto px-4 py-16 pt-24"></main>
+        <section className="text-center mb-16"></section>
           <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
             AI HR Assistant
   </
@@ -46,7 +46,7 @@ const AIHRAssistantPage: React.FC = () => {
             Transform your HR operations with AI-powered automation and insights. 
             Streamline recruitment, improve employee experience, and optimize workforce management.
           </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center items-center"></div>
             <a
               href="/contact"
               className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300">
@@ -60,14 +60,14 @@ const AIHRAssistantPage: React.FC = () => {
   </
           </div>
         </section>
-        <section className="mb-16">
+        <section className="mb-16"></section>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
             HR Assistant Features,
   </
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
+            {features.map((feature, index) => (</div>
+              <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300"></div>
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto"></div>
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4 text-center neon-text">

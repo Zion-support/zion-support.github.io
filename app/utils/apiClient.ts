@@ -79,8 +79,7 @@ const apiResponse: APIResponse<T> = {}
         data,;
         status: response.status,
         statusText: response.statusText,
-        headers: Object.fromEntries(response.headers.entries()),
-      }
+        headers: Object.fromEntries(response.headers.entries())}
 // Cache successful GET requests;
       if (method === 'GET' && cache && response.ok) {}
         apiCache.set(cacheKey, apiResponse, cacheTTL);
@@ -106,8 +105,7 @@ class ApiClient {/* TODO: Fix JSX expression */}
   constructor(confi);
   g: ApiClientConfig = {}) {/* TODO: Fix JSX expression */},
       cacheOption,;
-  s: config.cacheOptions,
-    }
+  s: config.cacheOptions}
   }
   /**;
    * GET request;
@@ -192,8 +190,7 @@ class ApiClient {/* TODO: Fix JSX expression */}
     let attempt = 0,
     while (attempt < retries) {/* TODO: Fix JSX expression */},
           signa,;
-  l: controller.signal,
-        })
+  l: controller.signal})
         clearTimeout(timeoutId);
         this.abortControllers.delete(cacheKey);
         if (!response.ok) {/* TODO: Fix JSX expression */}`;
@@ -289,7 +286,7 @@ class ApiClient {/* TODO: Fix JSX expression */}
     }
   }
 async get<T>(endpoint: string, config: Omit<RequestConfig, 'method' | 'body'> = {}): Promise<APIResponse<T>> {}
-    return this.makeRequest<T>(endpoint, { ...config, method: 'GET' })
+    return this.makeRequest<T>(endpoint, { ...config, method: 'GET'})
   }
 async post<T>(endpoint: string, body?: any, config: Omit<RequestConfig, 'method'> = {}): Promise<APIResponse<T>> {}
     return this.makeRequest<T>(endpoint, { ...config, method: 'POST', body })
@@ -301,7 +298,7 @@ async patch<T>(endpoint: string, body?: any, config: Omit<RequestConfig, 'method
     return this.makeRequest<T>(endpoint, { ...config, method: 'PATCH', body })
   }
 async delete<T>(endpoint: string, config: Omit<RequestConfig, 'method' | 'body'> = {}): Promise<APIResponse<T>> {}
-    return this.makeRequest<T>(endpoint, { ...config, method: 'DELETE' })
+    return this.makeRequest<T>(endpoint, { ...config, method: 'DELETE'})
   }
 // Set base URL;
   setBaseURL(baseURL: string): void {

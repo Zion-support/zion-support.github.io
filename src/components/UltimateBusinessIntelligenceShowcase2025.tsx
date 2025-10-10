@@ -46,29 +46,29 @@ readingTimereadingTime: '45 min read',
     }
   ];
   const categories = [
-    { id: 'all', name: 'All Content' },
-    { id: 'blog', name: 'Blog Posts' },
-    { id: 'case-study', name: 'Case Studies' },
-    { id: 'resource', name: 'Resources' }
+    { id: 'all', name: 'All Content'},
+    { id: 'blog', name: 'Blog Posts'},
+    { id: 'case-study', name: 'Case Studies'},
+    { id: 'resource', name: 'Resources'}
   const filteredContent = selectedCategory === 'all' 
     ? content 
     : content.filter(item => item.category === selectedCategory);
     <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
-      {/* Animated Background Effects */}
-      <div>
+      {/* Animated Background Effects */}</section>
+      <div></div>
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
         <div
           className="absolute top-3/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse"
-          style={{ animationDelay: '2s' }}
+          style={{ animationDelay: '2s'}}
         ></div>
           className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse"
-          style={{ animationDelay: '1s' }}
+          style={{ animationDelay: '1s'}}
       </div>
         {/* Header */}
             <span className="text-2xl">🚀</span>
             <span className="text-yellow-400 font-bold text-lg">ULTIMATE BUSINESS INTELLIGENCE 2025</span>
             <span className="text-2xl">⚡</span>
-          <h1 className="text-4xl md: text-6xl font-extrabold text-white mb-6">Revolutionary Content<span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Showcase 2025</span>
+          <h1 className="text-4xl md: text-6xl font-extrabold text-white mb-6">Revolutionary Content</h1><span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Showcase 2025</span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">Explore our comprehensive collection of AI-powered business intelligence
             content that&apos,s transforming enterprises worldwide</p>
@@ -122,7 +122,7 @@ readingTimereadingTime: '45 min read',
               </Link>
         {/* Call to Action */}
             <h3 className="text-2xl font-bold text-white mb-4">
-              Ready to Transform Your Business?
+              Ready to Transform Your Business?</h3>
             <p className="text-cyan-100 mb-6">Join thousands of enterprises already using our AI-powered solutions</p>
                 to="/contact"
                 className="inline-flex items-center px-12 py-6 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold text-xl rounded-2xl hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105 shadow-2xl">Start Your Transformation<svg className="ml-3 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -141,7 +141,7 @@ export default UltimateBusinessIntelligenceShowcase2025
 import React, { useState } from 'react';
         return (import { Link } from 'react-router-dom';)
 const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   const [selectedCategory, setSelectedCategory] = useState('all');
   const content = [
@@ -149,7 +149,7 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expres
   O: Add items
 ],
     {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   i,
   d: 'ultimate-business-intelligence-revolution',
@@ -166,7 +166,7 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expres
   y: 'blog',
       metric,
   s: {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   ro,
   i: '30,000%',
@@ -175,8 +175,7 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expres
         accurac,
   y: '99.9%',
         timelin,
-  e: '12 months'
-      },
+  e: '12 months'},
       readingTim,
   e: '35 min read',
       feature,

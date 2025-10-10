@@ -34,23 +34,19 @@ const CloudInfrastructureManagerPage: React.FC = () => {
     {
       icon: Cloud,
       title: 'Multi-Cloud Management',
-      description: 'Manage and monitor your infrastructure across AWS, Azure, Google Cloud, and other platforms from a single dashboard.'
-  },
+      description: 'Manage and monitor your infrastructure across AWS, Azure, Google Cloud, and other platforms from a single dashboard.'},
     {
     icon: Settings,
       title: 'Automated Scaling',
-      description: 'Intelligent auto-scaling based on demand to optimize costs and performance automatically.'
-  },
+      description: 'Intelligent auto-scaling based on demand to optimize costs and performance automatically.'},
     {
     icon: BarChart,
       title: 'Cost Optimization',
-      description: 'Advanced analytics and recommendations to reduce cloud costs while maintaining performance.'
-  },
+      description: 'Advanced analytics and recommendations to reduce cloud costs while maintaining performance.'},
     {
     icon: Zap,
       title: 'DevOps Integration',
-      description: 'Seamless integration with CI/CD pipelines and DevOps tools for streamlined operations.'
-  }
+      description: 'Seamless integration with CI/CD pipelines and DevOps tools for streamlined operations.'}
     }
   ]
 const benefits = [
@@ -68,7 +64,7 @@ const benefits = [
     'Expert technical support'
   ]
 return (
-    <>
+    <></>
       <Helmet>
         <title>Cloud Infrastructure Manager - Zion Tech Group | Cloud Management Platform</title>
         <meta name="description" content="AI-powered solution" />
@@ -76,9 +72,9 @@ return (
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         {/* Hero Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
@@ -94,11 +90,11 @@ return (
                 Monitor, optimize, and scale your cloud resources across multiple providers.
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
-                <button>
+                <button></button>
                   <Cloud>
                   Start Free Trial
                 </button>
-                <button>
+                <button></button>
                   <Phone>
                   Call (302) 464-0950,
                 </button>
@@ -107,9 +103,9 @@ return (
           </div>
         </section>
         {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
@@ -137,9 +133,9 @@ return (
           </div>
         </section>
         {/* Benefits Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
@@ -157,7 +153,7 @@ return (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-3"></div>
-                  <CheckCircle>
+                  <CheckCircle></CheckCircle>
                   <p className="text-gray-300 text-lg">{benefit}</p>
                 </div>
               ))}
@@ -165,9 +161,9 @@ return (
           </div>
         </section>
         {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
@@ -182,11 +178,11 @@ return (
                 Start your free trial today and experience the power of our cloud infrastructure manager.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-                <button>
+                <button></button>
                   <Phone>
                   Call (302) 464-0950
                 </button>
-                <button>
+                <button></button>
                   <Mail>
                   Email Us
                 </button>
@@ -196,8 +192,7 @@ return (
         </section>
       </div>
     </>
-  ),
-};
+  )};
 
 export default CloudInfrastructureManagerPage;
 

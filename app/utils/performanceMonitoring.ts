@@ -6,9 +6,8 @@
 export interface PerformanceMetric {
     name: string,
   value: number,
-  rating: 'good' | 'needs-improvement' | 'poor',
-  }
-  timestamp: number,}
+  rating: 'good', | 'needs-improvement' | 'poor'}
+  timestamp: number}
 }
 export interface WebVitals {
     FCP?: PerformanceMetric; // First Contentful Paint;
@@ -22,13 +21,12 @@ export interface WebVitals {
 export interface CustomMetric {
     name: string,
   value: number,
-  unit: 'ms' | 'bytes' | 'count' | 'percentage',
-  }
+  unit: 'ms', | 'bytes' | 'count' | 'percentage'}
 export interface PerformanceMetric {}
   name: string;
   value: number
-  rating: 'good' | 'needs-improvement' | 'poor'
-  timestamp: number,}
+  rating: 'good', | 'needs-improvement' | 'poor'
+  timestamp: number}
 }
 export interface WebVitals {}
   FCP?: PerformanceMetric; // First Contentful Paint;
@@ -41,11 +39,11 @@ export interface WebVitals {}
 export interface CustomMetric {}
   name: string;
   value: number
-  unit: 'ms' | 'bytes' | 'count' | 'percentage'
-  timestamp: number,}
+  unit: 'ms', | 'bytes' | 'count' | 'percentage'
+  timestamp: number}
 }
 class PerformanceMonitoringService {}
-  private static instance: PerformanceMonitoringService,}
+  private static instance: PerformanceMonitoringService}
   private webVitals: WebVitals = {}
   private customMetrics: CustomMetric[] = [],
   private observers: PerformanceObserver[] = [],
@@ -331,8 +329,7 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
         await fetch('/api/analytics/performance', {)}
           method: 'POST'}
           headers: { 'Content-Type': 'application/json' },;
-          body: JSON.stringify(metric),
-        })
+          body: JSON.stringify(metric)})
       }
     } catch (error) {}
       logger.error('Failed to send metric to analytics', error as Error);}
@@ -340,8 +337,7 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
   c: PerformanceMetric): Promise<void> {/* TODO: Fix JSX expression */}
   s: { 'Content-Type': 'application/json' },;
           bod,;
-  y: JSON.stringify(metric),
-        })
+  y: JSON.stringify(metric)})
       }
     } catch (error) {/* TODO: Fix JSX expression */}
     }
@@ -380,7 +376,7 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
         case 'good': return 100;
         case 'needs-improvement': return 50;
         case 'poor': return 0;
-        default: return 0,}
+        default: return 0}
   getPerformanceScore(): number {/* TODO: Fix JSX expression */}
       }
     })
@@ -392,13 +388,12 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
   getSummary(): {
     score: number,
     webVitals: WebVitals,
-    customMetrics: CustomMetric[],
-  }
+    customMetrics: CustomMetric[]}
   getSummary(): {}
     score: number;
     webVitals: WebVitals
     customMetrics: CustomMetric[]
-    recommendations: string[],}
+    recommendations: string[]}
   } {}
     const score = this.getPerformanceScore();
     const recommendations: string[] = [],
@@ -436,8 +431,7 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
   measureFunction<T>(name: string, fn: () => T): T {
     ,
     const start = performance.now(),;
-    const result = fn(),
-  }
+    const result = fn()}
   measureFunction<T>(name: string, fn: () => T): T {}
     const start = performance.now();
     const result = fn();
@@ -451,8 +445,7 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
   async measureAsyncFunction<T>(name: string, fn: () => Promise<T>): Promise<T> {
     ,
     const start = performance.now(),;
-    const result = await fn(),
-  }
+    const result = await fn()}
   async measureAsyncFunction<T>(name: string, fn: () => Promise<T>): Promise<T> {}
     const start = performance.now();
     const result = await fn();
@@ -465,8 +458,7 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
    */;
   mark(name: string): void {
     ,
-    if (typeof performance !== 'undefined' && 'mark' in performance) {,
-  }
+    if (typeof performance !== 'undefined' && 'mark' in performance) {}
   mark(name: string): void {}
     if (typeof performance !== 'undefined' && 'mark' in performance) {}
       performance.mark(name);}
@@ -478,8 +470,7 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
   measure(name: string, startMark: string, endMark: string): number | null {
     ,
     if (typeof performance !== 'undefined' && 'measure' in performance) {,;
-      try {,
-  }
+      try {}
   measure(name: string, startMark: string, endMark: string): number | null {}
     if (typeof performance !== 'undefined' && 'measure' in performance) {}
       try {}
@@ -607,8 +598,7 @@ export const recordMetric = useCallback((...args) => {}
       count: 1;)
       average: value;)
       min: value;),
-      max: value),
-  }
+      max: value)}
       unit)} else {}
     simpleMetrics.set(name, {)}
       values: [value],
@@ -696,7 +686,7 @@ export const getPerformanceScore = (): number => {}
       case 'good': return 100;
       case 'needs-improvement': return 50;
       case 'poor': return 0;
-      default: return 0,}
+      default: return 0}
     }
   })
   const sum = scores.reduce((a: number, b: number) => a + b, 0);

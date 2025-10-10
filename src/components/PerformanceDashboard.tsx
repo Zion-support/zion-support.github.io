@@ -61,9 +61,9 @@ fps
     return 'text-red-400'
   }
   return (
-    <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-      <div className="flex items-center justify-between mb-6">
-        <h3 className="text-xl font-semibold text-white flex items-center gap-2">
+    <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10"></div>
+      <div className="flex items-center justify-between mb-6"></div>
+        <h3 className="text-xl font-semibold text-white flex items-center gap-2"></h3>
           <Activity className="w-5 h-5" />
           Performance Dashboard;
   </
@@ -79,8 +79,8 @@ fps
         </button>
       </div>
       {alerts.length > 0 && (
-        <div className="mb-6 p-4 bg-red-500/10 border border-red-500/20 rounded-lg">
-          <div className="flex items-center gap-2 mb-2">
+        <div className="mb-6 p-4 bg-red-500/10 border border-red-500/20 rounded-lg"></div>
+          <div className="flex items-center gap-2 mb-2"></div>
             <AlertTriangle className="w-5 h-5 text-red-400" />
             <h4 className="text-red-400 font-semibold">Performance Alerts</h4>
           </div>
@@ -91,9 +91,9 @@ fps
           </ul>
         </div>
       )}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div className="bg-white/5 rounded-lg p-4">
-          <div className="flex items-center gap-2 mb-2">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4"></div>
+        <div className="bg-white/5 rounded-lg p-4"></div>
+          <div className="flex items-center gap-2 mb-2"></div>
             <Zap className="w-4 h-4 text-blue-400" />
             <span className="text-gray-300 text-sm">Load Time</span>
           </div>
@@ -101,8 +101,8 @@ fps
             {metrics.loadTime.toFixed(0)}ms;
   </
         </div>
-        <div className="bg-white/5 rounded-lg p-4">
-          <div className="flex items-center gap-2 mb-2">
+        <div className="bg-white/5 rounded-lg p-4"></div>
+          <div className="flex items-center gap-2 mb-2"></div>
             <Cpu className="w-4 h-4 text-green-400" />
             <span className="text-gray-300 text-sm">Render Time</span>
           </div>
@@ -110,8 +110,8 @@ fps
             {metrics.renderTime.toFixed(2)}ms;
   </
         </div>
-        <div className="bg-white/5 rounded-lg p-4">
-          <div className="flex items-center gap-2 mb-2">
+        <div className="bg-white/5 rounded-lg p-4"></div>
+          <div className="flex items-center gap-2 mb-2"></div>
             <MemoryStick className="w-4 h-4 text-purple-400" />
             <span className="text-gray-300 text-sm">Memory Usage</span>
           </div>
@@ -119,8 +119,8 @@ fps
             {formatBytes(metrics.memoryUsage)}
           </div>
         </div>
-        <div className="bg-white/5 rounded-lg p-4">
-          <div className="flex items-center gap-2 mb-2">
+        <div className="bg-white/5 rounded-lg p-4"></div>
+          <div className="flex items-center gap-2 mb-2"></div>
             <TrendingUp className="w-4 h-4 text-orange-400" />
             <span className="text-gray-300 text-sm">FPS</span>
           </div>
@@ -129,7 +129,7 @@ fps
           </div>
         </div>
       </div>
-      <div className="mt-6 text-center">
+      <div className="mt-6 text-center"></div>
         <p className="text-gray-400 text-sm">
           {isMonitoring ? 'Monitoring performance metrics...' : 'Click "Start Monitoring" to begin tracking performance'}
         </p>

@@ -23,48 +23,42 @@ const services = [
       uptime: '99.9%',
       responseTime: '45ms',
       lastIncident: '2024-01-15',
-      description: 'Core API endpoints and authentication'
-  },
+      description: 'Core API endpoints and authentication'},
     {
     name: 'AI Services',
       status: 'operational',
       uptime: '99.8%',
       responseTime: '120ms',
       lastIncident: '2024-01-10',
-      description: 'Machine learning and AI processing'
-  },
+      description: 'Machine learning and AI processing'},
     {
     name: 'Cloud Infrastructure',
       status: 'operational',
       uptime: '99.95%',
       responseTime: '25ms',
       lastIncident: '2024-01-05',
-      description: 'Cloud hosting and storage services'
-  },
+      description: 'Cloud hosting and storage services'},
     {
     name: 'Database',
       status: 'operational',
       uptime: '99.9%',
       responseTime: '15ms',
       lastIncident: '2024-01-12',
-      description: 'Primary and backup databases'
-  },
+      description: 'Primary and backup databases'},
     {
     name: 'CDN',
       status: 'operational',
       uptime: '99.99%',
       responseTime: '8ms',
       lastIncident: '2024-01-08',
-      description: 'Content delivery network'
-  },
+      description: 'Content delivery network'},
     {
     name: 'Monitoring',
       status: 'operational',
       uptime: '100%',
       responseTime: '5ms',
       lastIncident: 'Never',
-      description: 'System monitoring and alerts'
-  }
+      description: 'System monitoring and alerts'}
     }
   ]
 const incidents = [
@@ -96,7 +90,7 @@ const getStatusIcon = (;
 
         return <CheckCircle>
       case 'degraded':;
-        return <AlertTriangle>
+        return</CheckCircle> <AlertTriangle>
       case 'outage':;
         return <XCircle>
 
@@ -162,7 +156,7 @@ return (
                  overallStatus === 'degraded' ? 'Degraded Performance' : 'Service Outage'}
               </span>
             </div>
-            <button>
+            <button></button>
               <RefreshCw>
               Refresh
             </button>
@@ -174,9 +168,9 @@ return (
       </section>
 
       {/* Services Status */}
-      <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+      <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
@@ -221,9 +215,9 @@ return (
       </section>
 
       {/* Recent Incidents */}
-      <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+      <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
@@ -237,7 +231,7 @@ return (
   }
               <div key={incident.id} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10"></div>
                 <div className="flex items-start justify-between mb-4"></div>
-                  <div />
+                  <div /></div>
                     <h3 className="text-xl font-semibold text-white mb-2">{incident.title}</h3>
                     <div className="flex items-center gap-4 text-sm text-gray-400"></div>
                       <span>Started: {new Date(incident.startTime).toLocaleString()}</span>
@@ -255,7 +249,7 @@ return (
                   </div>
                 </div>
                 <p className="text-gray-300 mb-4">{incident.description}</p>
-                <div />
+                <div /></div>
                   <span className="text-gray-400 text-sm">Affected Services: </span>
                   <span className="text-white text-sm">{incident.affectedServices.join(', ')}</span>
                 </div>
@@ -265,9 +259,9 @@ return (
         </div>
       </section>
       {/* Performance Metrics */}
-      <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+      <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
@@ -304,9 +298,9 @@ return (
         </div>
       </section>
       {/* CTA Section */}
-      <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+      <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>

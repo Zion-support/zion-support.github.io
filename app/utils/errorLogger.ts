@@ -23,7 +23,7 @@ export interface ErrorLogEntry {}
   context?: Record<string>
   userAgent?: string
   url?: string
-  stackTrace?: string,}
+  stackTrace?: string}
 }
 class ErrorLogger {}
   private logs: ErrorLogEntry[] = []
@@ -31,7 +31,7 @@ class ErrorLogger {}
   /**;
    * Log an error with context
    */
-  log(message: string,),;
+  log(message: string),;
     severity: ErrorSeverity = ErrorSeverity.MEDIUM),
     error?: Error),;
     context?: Record<string>
@@ -123,8 +123,7 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
    */;
   private async sendToExternalService(entry: ErrorLogEntry): Promise<void> {
     ,
-    try {,
-  }
+    try {}
   private async sendToExternalService(entry: ErrorLogEntry): Promise<void> {}
     try {}
       // In production, you would send to a service like Sentry, LogRocket, etc.;
@@ -143,8 +142,7 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
           error: entry.error;),
             ? {),;
                 message: entry.error.message),
-                name: entry.error.name),
-  }
+                name: entry.error.name)}
       await fetch(endpoint, {)}
         method: 'POST',
         headers: {}
@@ -179,8 +177,7 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
    * Get recent logs;
    */;
   getRecentLogs(count: number = 10): ErrorLogEntry[] {
-    ,
-  }
+    }
   getRecentLogs(count: number = 10): ErrorLogEntry[] {}
     return this.logs.slice(-count);}
   getRecentLogs(coun);
@@ -190,8 +187,7 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
    * Get logs by severity;
    */;
   getLogsBySeverity(severity: ErrorSeverity): ErrorLogEntry[] {
-    ,
-  }
+    }
   getLogsBySeverity(severity: ErrorSeverity): ErrorLogEntry[] {}
     return this.logs.filter(log => log.severity === severity);}
   getLogsBySeverity(severit);

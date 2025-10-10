@@ -42,7 +42,7 @@ const AiWorkflowAutomationPage: React.FC = () => {
   ];
 
   return (
-    <>
+    <></>
       <Helmet>
         <title>AI Workflow Automation - Zion Tech Group</title>
         <meta name="description" content="Transform your business with AI-powered workflow automation solutions. Increase efficiency, reduce costs, and scale operations with intelligent automation." />
@@ -51,10 +51,10 @@ const AiWorkflowAutomationPage: React.FC = () => {
       <Navigation />
       
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center">
+        {/* Hero Section */}</main>
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center"></div>
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 AI Workflow Automation
               </h1>
@@ -67,7 +67,7 @@ const AiWorkflowAutomationPage: React.FC = () => {
                 reduce errors by 75%, and save 90% of processing time with intelligent automation.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"></div>
                 <a
                   href="tel:+13024640950"
                   className="cyber-button flex items-center space-x-2"
@@ -87,8 +87,8 @@ const AiWorkflowAutomationPage: React.FC = () => {
 
               {/* Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-                {stats.map((stat, index) => (
-                  <div key={index} className="hologram-card-enhanced p-6 text-center">
+                {stats.map((stat, index) => (</div>
+                  <div key={index} className="hologram-card-enhanced p-6 text-center"></div>
                     <div className="text-3xl md:text-4xl font-bold text-yellow-400 mb-2 neon-text">
                       {stat.number}
                     </div>
@@ -100,16 +100,16 @@ const AiWorkflowAutomationPage: React.FC = () => {
           </section>
 
           {/* Features Section */}
-          <section className="py-16">
-            <div className="container mx-auto px-4">
+          <section className="py-16"></section>
+            <div className="container mx-auto px-4"></div>
               <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
                 Powerful Automation Features
               </h2>
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {features.map((feature, index) => (
-                  <div key={index} className="hologram-card-enhanced p-6 hover:scale-105 transition-all duration-300">
-                    <div className="text-4xl mb-4 text-yellow-400">
+                {features.map((feature, index) => (</div>
+                  <div key={index} className="hologram-card-enhanced p-6 hover:scale-105 transition-all duration-300"></div>
+                    <div className="text-4xl mb-4 text-yellow-400"></div>
                       <feature.icon className="w-10 h-10" />
                     </div>
                     <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>

@@ -10,7 +10,7 @@ export default function NotificationSyst, e, m({)
   if (!notificatio, n, s?.leng, t, h) return, nul, l;
   return(<div, ari, a-li, v, e = 'poli, t, e' ar, i, a-atom, i, c='tr, u, e'>)
       {notificatio, n, s.m, a, p(n = > ()
-  return (
+  return (</div>
     <div, ari, a-li, v, e = 'poli, t, e' ar, i, a-atom, i, c='tr, u, e'>
       {notificatio, n, s.m, a, p(n = > (</div>
 export default function NotificationSyst, e, m({/* TODO: Fix JSX expression */})

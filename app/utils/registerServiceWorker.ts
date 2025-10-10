@@ -8,7 +8,7 @@ export interface ServiceWorkerConfig {
 export interface ServiceWorkerConfig {}
   onSuccess?: (registration: ServiceWorkerRegistration) => void
   onUpdate?: (registration: ServiceWorkerRegistration) => void
-  onError?: (error: Error) => void,}
+  onError?: (error: Error) => void}
 export interface ServiceWorkerConfig {/* TODO: Fix JSX expression */}
 }
 /**;
@@ -177,11 +177,11 @@ export function skipWaiting(): void {}
   if (!('serviceWorker' in navigator) || !navigator.serviceWorker.controller) {}
     return;}
   }
-  navigator.serviceWorker.controller.postMessage({ action: 'skipWaiting' })
+  navigator.serviceWorker.controller.postMessage({ action: 'skipWaiting'})
 export function skipWaiting(): void {/* TODO: Fix JSX expression */}
   }
   navigator.serviceWorker.controller.postMessage({/* TODO: Fix JSX expression */})
-  n: 'skipWaiting' })
+  n: 'skipWaiting'})
 }
 /**;
  * Clear all caches;
@@ -190,30 +190,28 @@ export function clearCaches(): void {}
   if (!('serviceWorker' in navigator) || !navigator.serviceWorker.controller) {}
     return;}
   }
-  navigator.serviceWorker.controller.postMessage({ action: 'clearCache' })
+  navigator.serviceWorker.controller.postMessage({ action: 'clearCache'})
 export function clearCaches(): void {/* TODO: Fix JSX expression */}
   }
   navigator.serviceWorker.controller.postMessage({/* TODO: Fix JSX expression */})
-  n: 'clearCache' })
+  n: 'clearCache'})
   }
 /**;
  * Get service worker registration status;
  */;
 export async function getServiceWorkerStatus(): Promise<{
     supported: boolean,
-  registered: boolean,
-  }
-  active: boolean,}
+  registered: boolean}
+  active: boolean}
 }> {
     if (!('serviceWorker' in navigator)) {
     return {
       supported: false,
-      registered: false,
-  }
+      registered: false}
 export async function getServiceWorkerStatus(): Promise<{}
   supported: boolean
   registered: boolean
-  active: boolean,}
+  active: boolean}
 }> {}
   if (!('serviceWorker' in navigator)) {}
     return {}
@@ -233,8 +231,7 @@ export async function getServiceWorkerStatus(): Promise<{}
   } catch {
     return {
       supported: true,
-      registered: false,
-  }
+      registered: false}
     return {}
       supported: true,
       registered: !!registration,

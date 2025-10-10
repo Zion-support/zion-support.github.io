@@ -117,8 +117,7 @@ const itServices = [
       support: '24/7 technical support',
       certifications: ['Cisco', 'Microsoft', 'VMware', 'AWS', 'Azure'],
       link: 'https://ziontechgroup.com/it-infrastructure-design',
-      caseStudy: 'Manufacturing company reduced IT downtime by 95% with our infrastructure design'
-  },
+      caseStudy: 'Manufacturing company reduced IT downtime by 95% with our infrastructure design'},
     {
     id: 'cloud-migration-services',
       name: 'Cloud Migration & Optimization',
@@ -157,8 +156,7 @@ const itServices = [
       support: 'Migration specialist and ongoing support',
       certifications: ['AWS', 'Azure', 'Google Cloud', 'VMware'],
       link: 'https://ziontechgroup.com/cloud-migration-services',
-      caseStudy: 'Retail chain saved $2M annually by migrating to cloud infrastructure'
-  },
+      caseStudy: 'Retail chain saved $2M annually by migrating to cloud infrastructure'},
     {
     id: 'cybersecurity-services',
       name: 'Cybersecurity Solutions',
@@ -197,8 +195,7 @@ const itServices = [
       support: 'Security specialist and 24/7 monitoring',
       certifications: ['CISSP', 'CISM', 'CEH', 'CompTIA Security+'],
       link: 'https://ziontechgroup.com/cybersecurity-services',
-      caseStudy: 'Healthcare provider achieved 100% compliance with HIPAA regulations'
-  },
+      caseStudy: 'Healthcare provider achieved 100% compliance with HIPAA regulations'},
     {
     id: 'network-design-optimization',
       name: 'Network Design & Optimization',
@@ -237,8 +234,7 @@ const itServices = [
       support: 'Network specialist and ongoing optimization',
       certifications: ['CCNA', 'CCNP', 'JNCIA', 'CompTIA Network+'],
       link: 'https://ziontechgroup.com/network-design-optimization',
-      caseStudy: 'Law firm improved network speed by 300% and eliminated connectivity issues'
-  },
+      caseStudy: 'Law firm improved network speed by 300% and eliminated connectivity issues'},
     {
     id: 'database-management',
       name: 'Database Management & Optimization',
@@ -277,8 +273,7 @@ const itServices = [
       support: 'Database specialist and 24/7 monitoring',
       certifications: ['Oracle', 'Microsoft SQL Server', 'MySQL', 'PostgreSQL'],
       link: 'https://ziontechgroup.com/database-management',
-      caseStudy: 'E-commerce platform improved query performance by 400% and reduced costs by 60%'
-  },
+      caseStudy: 'E-commerce platform improved query performance by 400% and reduced costs by 60%'},
     {
     id: 'it-support-services',
       name: 'Managed IT Support Services',
@@ -317,8 +312,7 @@ const itServices = [
       support: 'Dedicated support team',
       certifications: ['Microsoft', 'CompTIA', 'Cisco', 'VMware'],
       link: 'https://ziontechgroup.com/it-support-services',
-      caseStudy: 'Marketing agency reduced IT issues by 90% and improved employee productivity'
-  },
+      caseStudy: 'Marketing agency reduced IT issues by 90% and improved employee productivity'},
     {
     id: 'software-development',
       name: 'Custom Software Development',
@@ -357,8 +351,7 @@ const itServices = [
       support: 'Development team and ongoing maintenance',
       technologies: ['React', 'Node.js', 'Python', 'Java', 'C#', 'PHP', 'Mobile'],
       link: 'https://ziontechgroup.com/software-development',
-      caseStudy: 'Logistics company automated 80% of manual processes with custom software'
-  },
+      caseStudy: 'Logistics company automated 80% of manual processes with custom software'},
     {
     id: 'it-consulting',
       name: 'Strategic IT Consulting',
@@ -397,8 +390,7 @@ const itServices = [
       support: 'Senior consultant and ongoing guidance',
       certifications: ['PMP', 'ITIL', 'COBIT', 'TOGAF'],
       link: 'https://ziontechgroup.com/it-consulting',
-      caseStudy: 'Manufacturing company achieved 40% cost reduction through strategic IT planning'
-  },
+      caseStudy: 'Manufacturing company achieved 40% cost reduction through strategic IT planning'},
     {
     id: 'disaster-recovery',
       name: 'Disaster Recovery & Business Continuity',
@@ -437,8 +429,7 @@ const itServices = [
       support: 'Recovery specialist and ongoing testing',
       certifications: ['CBCP', 'DRII', 'ITIL', 'ISO 22301'],
       link: 'https://ziontechgroup.com/disaster-recovery',
-      caseStudy: 'Financial services firm achieved 99.9% uptime with our disaster recovery solution'
-  },
+      caseStudy: 'Financial services firm achieved 99.9% uptime with our disaster recovery solution'},
     {
     id: 'compliance-auditing',
       name: 'IT Compliance & Auditing',
@@ -477,8 +468,7 @@ const itServices = [
       support: 'Compliance specialist and ongoing monitoring',
       standards: ['HIPAA', 'SOX', 'PCI-DSS', 'GDPR', 'ISO 27001', 'NIST'],
       link: 'https://ziontechgroup.com/compliance-auditing',
-      caseStudy: 'Healthcare provider achieved 100% HIPAA compliance and passed all audits'
-  }
+      caseStudy: 'Healthcare provider achieved 100% HIPAA compliance and passed all audits'}
     }
   ]
 const categories = [
@@ -504,9 +494,9 @@ const filteredServices = itServices.filter(service => {
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       {/* Hero Section */}</div>
-      <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+      <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
@@ -535,9 +525,9 @@ return (
       </section>
 
       {/* Search and Filter Section */}
-      <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+      <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
@@ -605,9 +595,9 @@ return (
         </div>
       </section>
       {/* Services Grid */}
-      <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+      <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
@@ -630,20 +620,20 @@ return (
                 <h3 className="text-xl font-bold text-white mb-3 neon-glow">{service.name}</h3>
                 <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
                 <div className="space-y-3 mb-6"></div>
-                  <div />
+                  <div /></div>
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
                     <ul>
                       {
     service.features.slice(0, 4).map((feature, idx) => (
   }
                         <li>
-                          <CheckCircle>
+                          <CheckCircle></CheckCircle>
                           <span>{feature}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
-                  <div />
+                  <div /></div>
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Benefits:</h4>
                     <ul>
                       {
@@ -693,9 +683,9 @@ return (
         </div>
       </section>
       {/* CTA Section */}
-      <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+      <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
@@ -722,8 +712,7 @@ return (
         </div>
       </section>
     </div>
-  ),
-};
+  )};
 
 export default ITConsultingPage;
 

@@ -13,7 +13,7 @@ export function generateId(prefix = 'a11y'): string {}
  */;
 export function announceToScreenReader(;
   message: string,
-  priority: 'polite' | 'assertive' = 'polite'
+  priority: 'polite', | 'assertive' = 'polite'
 ): void {
     const announcement = document.createElement('div'),
   announcement.setAttribute('aria-live', priority);
@@ -129,9 +129,8 @@ return (brightest + 0.05) / (darkest + 0.05);
 export function meetsContrastRequirements(;
   color1: string,
   color2: string,
-  level: 'AA' | 'AAA' = 'AA',
-  fontSize: 'normal' | 'large' = 'normal',
-): boolean {
+  level: 'AA', | 'AAA' = 'AA',
+  fontSize: 'normal', | 'large' = 'normal'): boolean {
     const ratio = getContrastRatio(color1, color2);
   return fontSize === 'large' ? ratio >= 3 : ratio >= 4.5
   }
@@ -191,7 +190,7 @@ export function getAriaInvalid(hasError: boolean): Record<string, string> {
 export function createAccessibleTooltip(;
   trigger: HTMLElement,
   content: string,
-  placement: 'top' | 'bottom' | 'left' | 'right' = 'top';
+  placement: 'top', | 'bottom' | 'left' | 'right' = 'top';
 ): () => void {
     const tooltip = document.createElement('div')
   tooltip.textContent = content

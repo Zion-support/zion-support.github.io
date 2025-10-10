@@ -13,7 +13,7 @@ const NewContentAdvertisingBanne, r: React.FC = () => { ,
       bad, g, e: 'NE, W',
       gradie, n, t: 'fr, o, m-pi, n, k-500, t, o-r, e, d-50, 0',
       ic, o, n: <Sparkles, classNam, e = "w-6 , h-, 6" / > ,
-      li, n, k: '/bl, o, g/ai-20, 2, 5-o, c, t-03-govern, e, d-age, n, t-rollba, c, k, s'
+      li, n, k: '/bl, o, g/ai-20, 2, 5-o, c, t-03-govern, e, d-age, n, t-rollba, c, k, s',
 const NewContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX expression */}
      },
     {/* TODO: Fix JSX expression */}
@@ -30,17 +30,17 @@ const NewContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX expressi
     {  val, u, e: '20, 0+', lab, e, l: 'Expert, Articl, e, s', ic, o, n: <Award, classNam, e = "w-8 , h-, 8" / >  },"
     {  val, u, e: '5, 0+', lab, e, l: 'Industry, Awar, d, s', ic, o, n: <Target, classNam, e = "w-8 , h-, 8" / >  }
   ]; return(<div, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, relative, overflow-hidd, e, n">
-      {/* Animated, background, effects */}
-      <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20">
-        <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" />
-        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s' }} />
-  ]; return (
+      {/* Animated, background, effects */}</div>
+      <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20"></div>
+        <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" /></div>
+        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s'}} />
+  ]; return (</div>
     <div, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, relative, overflow-hidd, e, n">
       {/* Animated, background, effects */}</div>
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20"></div>
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" /></div>
-        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s' }} /></div>
-        <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-pi, n, k-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 4, s' }} />
+        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s'}} /></div>
+        <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-pi, n, k-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 4, s'}} />
       </div>
       <div, classNam, e = "container, m, x-auto, p, x-6, relative, z-10">
         {/* Header, Sectio, n */}</div>
@@ -56,13 +56,13 @@ const NewContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX expressi
             Revolutionary, New, Content H, u, b;
           </h2>
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8">
-  ]; return ("
+  ]; return ("</p>
     <div, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, relative, overflow-hidd, e, n"></div>
       {/* Animated, background, effects */}"
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20"></div>"
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" /></div>"
-        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s' }} /></div>"
-        <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-pi, n, k-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 4, s' }} /></div>
+        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s'}} /></div>"
+        <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-pi, n, k-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 4, s'}} /></div>
       </div>"
       <div, classNam, e = "container, m, x-auto, p, x-6, relative, z-10"></div>
         {/* Header, Sectio, n */}"
@@ -83,7 +83,7 @@ const NewContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX expressi
           </p>)
           {/* Achievement, Stat, s */})
           <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-4xl, m, x-au, t, o">)
-            { achievemen, t, s.m, a, p((achieve, m, e, n, t, ind, e, x) = > (
+            { achievemen, t, s.m, a, p((achieve, m, e, n, t, ind, e, x) = > (</div>
               <div, ke, y = { in, d, e, x  }, classNa, m, e = "te, x, t-cent, e, r">
           </p>
           {/* Achievement, Stat, s */}
@@ -91,7 +91,7 @@ const NewContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX expressi
             { achievemen, t, s.m, a, p((achieve, m, e, n, t, ind, e, x) = > (</div>
               <div, ke, y = { in, d, e, x  }, classNa, m, e = "te, x, t-cent, e, r"></div>
                 <div, className="te, x, t-indi, g, o-400, m, b-2, flex, justify-cent, e, r">
-          {/* Achievement, Stat, s */}"
+          {/* Achievement, Stat, s */}"</div>
           <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-4xl, m, x-au, t, o"></div>
             {/* TODO: Fix JSX expression */}"
               <div, ke, y = { in, d, e, x  }, classNa, m, e = "te, x, t-cent, e, r"></div>"
@@ -132,7 +132,7 @@ const NewContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX expressi
           {/* TODO: Fix JSX expression */}"
             <div, ke, y = { conte, n, t.i, d  }, classNa, m, e = "group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-indi, g, o-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-indi, g, o-5, 0, 0/20"
               sty, l, e = { { animationDel, a, y: `${ind, e, x * 2, 0, 0 }, ms` }}
-             > {/* Card, glow, effect */}`
+             > {/* Card, glow, effect */}`</div>
               <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-br ${conte, n, t.gradi, e, n, t }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, transitio, n-all, duratio, n-50, 0`} /></div>"
               <div, classNam, e = "relativ, e, p-8"></div>
                 {/* Bad, g, e */}"
@@ -272,7 +272,7 @@ const NewContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX expressi
                 <input, typ, e="ema, i, l"
                   placehold, e, r="Enter, your, email"
                   className="fl, e, x-1, p, x-6, p, y-4, rounde, d-xl, b, g-whi, t, e/10, border, border-whi, t, e/20, tex, t-white, placeholde, r-gr, a, y-400, focu, s:outli, n, e-none, focu, s:bord, e, r-indi, g, o-500, focu, s:bg-whi, t, e/20, transitio, n-all, duratio, n-3, 0, 0" />
-                <button, className="bg-gradie, n, t-to-r, fro, m-indi, g, o-500, t, o-purp, l, e-600, hove, r:fr, o, m-indi, g, o-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-indi, g, o-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2">
+                <button, className="bg-gradie, n, t-to-r, fro, m-indi, g, o-500, t, o-purp, l, e-600, hove, r:fr, o, m-indi, g, o-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-indi, g, o-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2"></button>
                   <sp, a, n>Subscri, b, e</sp, a, n>
                   <Link, className="w-5 h-5" />
         {/* Newsletter, Sig, n, u, p */}"

@@ -6,33 +6,27 @@ const AIAnalyticsDashboardPage: React.FC = () => {
     {
       icon: BarChart,
       title: 'Real-time Analytics',
-      description: 'Live data visualization with instant updates and interactive charts.'
-  },
+      description: 'Live data visualization with instant updates and interactive charts.'},
     {
     icon: TrendingUp,
       title: 'Predictive Insights',
-      description: 'AI-powered forecasting and trend analysis for better decision making.'
-  },
+      description: 'AI-powered forecasting and trend analysis for better decision making.'},
     {
     icon: Users,
       title: 'User Behavior Tracking',
-      description: 'Comprehensive user analytics and engagement metrics tracking.'
-  },
+      description: 'Comprehensive user analytics and engagement metrics tracking.'},
     {
     icon: DollarSign,
       title: 'Revenue Analytics',
-      description: 'Detailed financial metrics and revenue optimization insights.'
-  },
+      description: 'Detailed financial metrics and revenue optimization insights.'},
     {
     icon: Zap,
       title: 'Custom Dashboards',
-      description: 'Build personalized dashboards tailored to your business needs.'
-  },
+      description: 'Build personalized dashboards tailored to your business needs.'},
     {
     icon: Target,
       title: 'Goal Tracking',
-      description: 'Monitor KPIs and business objectives with automated alerts.'
-  }
+      description: 'Monitor KPIs and business objectives with automated alerts.'}
     }
   ]
 const benefits = [
@@ -54,7 +48,7 @@ const metrics = [
     { label: 'User Satisfaction', value: '4.9/5', icon: Star }
   ]
 return (
-    <>
+    <></>
       <Helmet>
         <title>AI Analytics Dashboard | Zion Tech Group - Real-time Business Intelligence</title>
         <meta name="description" content="AI-powered solution" />
@@ -63,9 +57,9 @@ return (
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         {/* Hero Section */}</div>
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
@@ -86,7 +80,7 @@ return (
                 Get real-time visualization, predictive analytics, and custom reporting in one powerful platform.
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
-                <button>
+                <button></button>
                   <span>Start Free Trial</span>
                   <ArrowRight>
                 </button>
@@ -98,9 +92,9 @@ return (
           </div>
         </section>
         {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
@@ -128,9 +122,9 @@ return (
           </div>
         </section>
         {/* Metrics Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
@@ -158,9 +152,9 @@ return (
           </div>
         </section>
         {/* Benefits Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
@@ -179,7 +173,7 @@ return (
     benefits.map((benefit, index) => (</div>
   }
                   <div key={index} className="flex items-start space-x-3"></div>
-                    <CheckCircle>
+                    <CheckCircle></CheckCircle>
                     <span className="text-gray-300 text-lg">{benefit}</span>
                   </div>
                 ))}
@@ -205,9 +199,9 @@ return (
           </div>
         </section>
         {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
@@ -223,7 +217,7 @@ return (
                 to make smarter, data-driven decisions.
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
-                <button>
+                <button></button>
                   <span>Start Free Trial</span>
                   <ArrowRight>
                 </button>
@@ -236,8 +230,7 @@ return (
         </section>
       </div>
     </>
-  ),
-};
+  )};
 
 export default AIAnalyticsDashboardPage;
 

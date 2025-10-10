@@ -14,16 +14,14 @@ interface PerformanceMonitorProps {
   }
 const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   onMetricsUpdate,
-  enableRealTimeMonitoring = true,
-}) => {
+  enableRealTimeMonitoring = true}) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     fcp: null,
     lcp: null,
     fid: null,
     cls: null,
     ttfb: null,
-    memory: null,
-  })
+    memory: null})
   const measureWebVitals = useCallback(() => {
     if (typeof window === 'undefined' || !('performance' in window)) return;
     if (typeof PerformanceObserver === 'undefined') return;
@@ -59,8 +57,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
               const fidEntry = entry as PerformanceEventTiming;
               setMetrics(prev => ({
                 ...prev,
-                fid: fidEntry.processingStart - fidEntry.startTime,
-              }));
+                fid: fidEntry.processingStart - fidEntry.startTime}));
             }
           })
         })
@@ -111,8 +108,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         ...prev,
         fcp,
         ttfb,
-        memory,
-      }));
+        memory}));
     } catch (error) {
       // eslint-disable-next-line no-console
     }
@@ -136,17 +132,16 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     if (slowResources.length > 0) {
       // eslint-disable-next-line no-console
       console.log(
-        'Slow resources detected:',
+        'Slow resources detected: ',
         slowResources.map((r: PerformanceResourceTiming) => ({
           name: r.name,
           duration: r.duration,
-          size: r.transferSize,
-        }))
+          size: r.transferSize}))
       );
     }
   }, []);
   const measureCoreWebVitals = useCallback(() => {
-    if (typeof window === 'undefined') return;
+    if (typeof window === ',undefined') return;
     // Use web-vitals library if available
     try {
       import('web-vitals')
@@ -197,8 +192,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     enableRealTimeMonitoring,
     measureWebVitals,
     measureResourceTiming,
-    measureCoreWebVitals,
-  ]);
+    measureCoreWebVitals]);
   useEffect(() => {
     if (onMetricsUpdate) {
       onMetricsUpdate(metrics)
@@ -237,9 +231,9 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   const _recommendations = getPerformanceRecommendations();
   if (process.env.NODE_ENV === 'development') {
     return (
-      <div className='fixed bottom-4 right-4 bg-white p-4 rounded-lg shadow-lg border max-w-sm z-50'>
+      <div className='fixed bottom-4 right-4 bg-white p-4 rounded-lg shadow-lg border max-w-sm z-50'></div>
         <h3 className='font-semibold text-sm mb-2'>Performance Monitor</h3>
-        <div className='text-xs space-y-1'>
+        <div className='text-xs space-y-1'></div>
           <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : 'N/A'}</div>
           <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : 'N/A'}</div>
           <div>FID: {metrics.fid ? `${metrics.fid.toFixed(0)}ms` : 'N/A'}</div>
@@ -253,7 +247,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           </div>
         </div>
         {_recommendations.length > 0 && (
-          <div className='mt-2'>
+          <div className='mt-2'></div>
             <h4 className='font-semibold text-xs text-red-600'>
               Recommendations:
             </h4>

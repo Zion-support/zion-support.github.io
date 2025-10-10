@@ -40,11 +40,11 @@ const SuccessStoriesShowcas, e: React.FC = () => { ,
       ],",
       col, o, r: "fr, o, m-purp, l, e-500, t, o-pi, n, k-50, 0"
      }
-  ]; return(<section, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-gr, a, y-50, t, o-bl, u, e-50">
-      <div, className="container, m, x-auto, p, x-6">
+  ]; return(<section, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-gr, a, y-50, t, o-bl, u, e-50"></section>
+      <div, className="container, m, x-auto, p, x-6"></div>
         <div, className="te, x, t-center, m, b-16">
-  ]; return (
-    <section, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-gr, a, y-50, t, o-bl, u, e-50">
+  ]; return (</div>
+    <section, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-gr, a, y-50, t, o-bl, u, e-50"></section>
       <div, className="container, m, x-auto, p, x-6"></section>
         <div, className="te, x, t-center, m, b-16"></div>
           <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">

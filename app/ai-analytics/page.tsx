@@ -40,8 +40,7 @@ const AiAnalyticsPage: React.FC = () => {
       title: 'Data Security',
       description: 'Enterprise-grade security to protect your sensitive business data and analytics.',
       benefits: ['End-to-end encryption', 'Access controls', 'Audit trails', 'Compliance support']
-    },
-  ];
+    }];
   const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
@@ -53,53 +52,47 @@ const AiAnalyticsPage: React.FC = () => {
     {
       title: 'Business Intelligence',
       description: 'Transform raw data into actionable business insights',
-      icon: '📊'
-    },
+      icon: '📊'},
     {
       title: 'Marketing Analytics',
       description: 'Optimize marketing campaigns with AI-powered insights',
-      icon: '📈'
-    },
+      icon: '📈'},
     {
       title: 'Financial Analysis',
       description: 'Monitor financial performance and identify trends',
-      icon: '💰'
-    },
+      icon: '💰'},
     {
       title: 'Customer Analytics',
       description: 'Understand customer behavior and preferences',
-      icon: '👥'
-    },
+      icon: '👥'},
     {
       title: 'Operations Monitoring',
       description: 'Track operational metrics and optimize processes',
-      icon: '⚙️'
-    },
+      icon: '⚙️'},
     {
       title: 'Risk Management',
       description: 'Identify and mitigate business risks proactively',
-      icon: '🛡️'
-    }
+      icon: '🛡️'}
   ]
   return (
-    <React.Fragment>
+    <React.Fragment></React.Fragment>
       <Helmet>
         <title>AI Analytics - Zion Tech Group</title>
         <meta name="keywords" content="AI analytics, artificial intelligence, data analytics, AI solutions, intelligent automation" />
       </Helmet>
       <Navigation />
       <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 sm: px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center">
+        {/* Hero Section */}</main>
+        <section className="relative py-20 px-4 sm: px-6 lg:px-8"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center"></div>
               <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
                 AI Analytics
   </
               <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
                 Transform your business with intelligent analytics powered by cutting-edge AI technology.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                 <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
                   Get Started
   </
@@ -111,9 +104,9 @@ const AiAnalyticsPage: React.FC = () => {
           </div>
         </section>
         {/* Features Section */}
-        <section className="py-20 px-4 sm: px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        <section className="py-20 px-4 sm: px-6 lg:px-8"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Powerful AI Analytics Features,
   </
@@ -122,9 +115,9 @@ const AiAnalyticsPage: React.FC = () => {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                  <div className="flex items-center mb-4">
+              {features.map((feature, index) => (</div>
+                <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow"></div>
+                  <div className="flex items-center mb-4"></div>
                     <feature.icon className="h-8 w-8 text-blue-600 mr-3" />
                     <h3 className="text-xl font-semibold text-gray-900">{feature.title}</h3>
                   </div>
@@ -143,8 +136,8 @@ const AiAnalyticsPage: React.FC = () => {
           </div>
         </section>
         {/* CTA Section */}
-        <section className="py-20 px-4 sm: px-6 lg:px-8 bg-blue-600">
-          <div className="max-w-4xl mx-auto text-center">
+        <section className="py-20 px-4 sm: px-6 lg:px-8 bg-blue-600"></section>
+          <div className="max-w-4xl mx-auto text-center"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Analytics?
             </h2>
@@ -159,8 +152,7 @@ const AiAnalyticsPage: React.FC = () => {
       </main>
       <Footer />
     </React.Fragment>
-  ),
-};
+  )};
 
 export default AiAnalyticsPage
   </button>

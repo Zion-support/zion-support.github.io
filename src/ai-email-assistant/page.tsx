@@ -2,10 +2,10 @@ import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
+      <main className="container mx-auto px-4 py-16 pt-24"></main>
+        <section className="text-center mb-16"></section>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 holographic-text cyber-text">
 // AI Email Assistant</h1>"
           <p className="text-xl,"
@@ -14,7 +14,7 @@ import Footer from '../components/Footer';
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
             This page is under development. Please check back soon for updates.
           </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center items-center mb-12">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center items-center mb-12"></div>
             <a
               href="tel:+13024640950" className="cyber-button w-full sm:w-auto text-center"
 // >,
@@ -91,7 +91,7 @@ import Footer from '../components/Footer';
   md:grid-cols-3 gap-8 max-w-6xl mx-auto"></div>"
             <div className="cyber-card hologram-card p-8 text-center"></div>"
               <h3 className="text-2xl font-bold text-white mb-4">Starter</h3>"
-              <div className="text-4xl font-bold text-cyan-400 mb-6">$29<span className="text-lg text-gray-400">/month</span></div>"
+              <div className="text-4xl font-bold text-cyan-400 mb-6">$29</div><span className="text-lg text-gray-400">/month</span></div>"
               <ul className="text-gray-300 space-y-3 mb-8"></ul>
                 <li> Up to 1,000 emails/month</li>
                 <li> Basic AI responses</li>
@@ -105,7 +105,7 @@ import Footer from '../components/Footer';
             <div className="cyber-card hologram-card p-8 text-center border-2 border-cyan-400"></div>"
               <div className="text-sm font-bold text-cyan-400 mb-2">MOST POPULAR</div>"
               <h3 className="text-2xl font-bold text-white mb-4">Professional</h3>"
-              <div className="text-4xl font-bold text-cyan-400 mb-6">$79<span className="text-lg text-gray-400">/month</span></div>"
+              <div className="text-4xl font-bold text-cyan-400 mb-6">$79</div><span className="text-lg text-gray-400">/month</span></div>"
               <ul className="text-gray-300 space-y-3 mb-8"></ul>
                 <li> Up to 10,000 emails/month</li>
                 <li> Advanced AI responses</li>
@@ -119,7 +119,7 @@ import Footer from '../components/Footer';
             </div>"
             <div className="cyber-card hologram-card p-8 text-center"></div>"
               <h3 className="text-2xl font-bold text-white mb-4">Enterprise</h3>"
-              <div className="text-4xl font-bold text-cyan-400 mb-6">$199<span className="text-lg text-gray-400">/month</span></div>"
+              <div className="text-4xl font-bold text-cyan-400 mb-6">$199</div><span className="text-lg text-gray-400">/month</span></div>"
               <ul className="text-gray-300 space-y-3 mb-8"></ul>
                 <li> Unlimited emails</li>
                 <li> Custom AI training</li>
@@ -142,7 +142,7 @@ import Footer from '../components/Footer';
 // Contact us today to schedule a free demo and see how our AI Email Assistant;
 //             can revolutionize your business communication.
           </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center items-center"></div>
             <a
               href="tel:+13024640950" className="cyber-button w-full sm:w-auto text-center"
 // >,
@@ -157,6 +157,5 @@ import Footer from '../components/Footer';
       </main>
       <Footer /></Footer>
     </div>
-  ),
-}
+  )}
 export default PagePage;

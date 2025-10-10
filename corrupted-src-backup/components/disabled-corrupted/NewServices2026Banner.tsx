@@ -29,7 +29,7 @@ export default function NewServices2026Bann, e, r({/* TODO: Fix JSX expression *
              ? 'bg-gradie, n, t-to-r, fro, m-emera, l, d-50, t, o-te, a, l-50'
              : 'bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-6, 0, 0'
        } ${ varia, n, t === 'in, f, o'  ? 'te, x, t-gr, a, y-9, 0, 0'  : 'te, x, t-whi, t, e' } py-12 ${classNa, m, e}`}
-    >
+    ></section>
       <div, className='container, m, x-auto, p, x-6'></section>
         <div, className='te, x, t-center, m, b-8' ></div> <div, className={ `inli, n, e-flex, item, s-center, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-medium, m, b-4 ${
               varia, n, t === 'in, f, o'
@@ -41,11 +41,11 @@ export default function NewServices2026Bann, e, r({/* TODO: Fix JSX expression *
           </d, i, v > <h2, className={ `te, x, t-3xl, fon, t-bold, m, b-2 ${varia, n, t === 'in, f, o'  ? 'te, x, t-gr, a, y-9, 0, 0'  : 'te, x, t-whi, t, e' }`}
           >
             Latest, AI, Services;
-  ].sli, c, e(0, Ma, t, h.m, a, x(1, showCou, n, t)); return (<section, classNam, e = {/* TODO: Fix JSX expression */}
+  ].sli, c, e(0, Ma, t, h.m, a, x(1, showCou, n, t)); return (</h2><section, classNam, e = {/* TODO: Fix JSX expression */}
        } ${ varia, n, t === 'in, f, o'  ? 'te, x, t-gr, a, y-9, 0, 0'  : 'te, x, t-whi, t, e' } py-12 ${classNa, m, e}`}
     ></section>
       <div, className='container, m, x-auto, p, x-6'></div>
-        <div, className='te, x, t-center, m, b-8' > <div, className={/* TODO: Fix JSX expression */}`
+        <div, className='te, x, t-center, m, b-8' ></div> <div, className={/* TODO: Fix JSX expression */}`
              }`}
           ></div>
             NEW, 2026, SERVICES;`

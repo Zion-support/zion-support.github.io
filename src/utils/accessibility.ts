@@ -76,8 +76,7 @@ $4});
           type: 'empty-alt',
           element: img['src'] || 'unknown',
           message: 'Image has empty alt text',
-          suggestion: 'Provide descriptive alt text or use alt="" for decorative images'
-        });
+          suggestion: 'Provide descriptive alt text or use alt="" for decorative images'});
       }
     });
     // Check for missing form labels
@@ -206,7 +205,7 @@ $4});
     });
   }
   // Announce screen reader messages
-  public announce(message: string, priority: 'polite' | 'assertive' = 'polite'): void {
+  public announce(message: string, priority: 'polite', | 'assertive' = 'polite'): void {
     const announcer = document.getElementById('a11y-announcer') || this.createAnnouncer(),
     announcer.setAttribute('aria-live', priority);
     announcer.textContent = message;
@@ -258,7 +257,7 @@ class AccessibilityService {
   d: string,
     backgroun,
   d: string): {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   rati,
   o: number,,
@@ -272,13 +271,13 @@ class AccessibilityService {
     const l2 = this.getLuminance(rgb2);
     const ratio = l1 > l2 ? (l1 + 0.05) / (l2 + 0.05) : (l2 + 0.05) / (l1 + 0.05);
     return {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   rati,
   o: Math.round(ratio * 100) / 100,
       passe,
   s: {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 
   normal: ratio >= 4.5, // WCAG AA for normal text,
@@ -294,7 +293,7 @@ class AccessibilityService {
     const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
     return result;
       ? {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   r: parseInt(result[1], 16),
           g: parseInt(result[2], 16),
@@ -309,7 +308,7 @@ class AccessibilityService {
 
 }
     const [r, g, b] = [rgb.r, rgb.g, rgb.b].map(val => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       const v = val / 255;
       return v;)
@@ -319,7 +318,7 @@ class AccessibilityService {
   }
   // Audit page for accessibility issues;
   public auditPage(): A11yReport {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     const,
   errors: A11yError[] = [],
@@ -327,80 +326,73 @@ class AccessibilityService {
   warnings: A11yWarning[] = []
     // Check for missing alt text on images,
     document.querySelectorAll('img').forEach(img => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 })
       if (!img.hasAttribute('alt')) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
         errors.push({/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 
   type: 'missing-alt',
           element: img['src'] || 'unknown',
           message: 'Image missing alt attribute',
-          wcag: '1.1.1 (Level A)'
-
-        });
+          wcag: '1.1.1 (Level A)'});
       } else if (img.alt === '') {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
         warnings.push({/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 
   type: 'empty-alt',
           element: img['src'] || 'unknown',
           message: 'Image has empty alt text',
-          suggestion: 'Provide descriptive alt text or use alt="" for decorative images'
-        }
+          suggestion: 'Provide descriptive alt text or use alt="" for decorative images'}
 
   )
       }
     });
     // Check for missing form labels;
     document.querySelectorAll('input, select, textarea').forEach(input => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       const hasLabel =)
 //         input.hasAttribute('aria-label') ||
 //         input.hasAttribute('aria-labelledby') ||"
         document.querySelector(`label[for="${input.id}"]`);
       if (!hasLabel) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
         errors.push({/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 
   type: 'missing-label',
           element: input.tagName.toLowerCase(),
           message: 'Form element missing label',
-          wcag: '1.3.1 (Level A), 3.3.2 (Level A)'
-
-        }
+          wcag: '1.3.1 (Level A), 3.3.2 (Level A)'}
   )
       }
     });
     // Check for proper heading hierarchy;
     const headings = Array.from(document.querySelectorAll('h1, h2, h3, h4, h5, h6'));
     headings.forEach(heading => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 })
       const level = parseInt(heading.tagName[1]);
       if (level > prevLevel + 1) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
         warnings.push({/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 
   type: 'heading-hierarchy',
           element: heading.tagName.toLowerCase(),
           message: `Heading level skipped from h${prevLevel} to h${level}`,
-          suggestion: 'Maintain proper heading hierarchy'
-
-        }
+          suggestion: 'Maintain proper heading hierarchy'}
   )
       }
       prevLevel = level;
@@ -408,91 +400,83 @@ class AccessibilityService {
     // Check for skip navigation link;"
 const hasSkipLink = document.querySelector('a[to="#main"], a[to="#content"]');
     if (!hasSkipLink) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       warnings.push({/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 
   type: 'missing-skip-link',
         element: 'body',
         message: 'No skip navigation link found',
-        suggestion: 'Add a skip link to main content for keyboard users'
-      }
+        suggestion: 'Add a skip link to main content for keyboard users'}
 
   )
     }
     // Check for language attribute;
 const html = document.documentElement;
     if (!html.hasAttribute('lang')) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       errors.push({/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 
   type: 'missing-lang',
         element: 'html',
         message: 'Missing lang attribute on html element',
-        wcag: '3.1.1 (Level A)'
-
-      }
+        wcag: '3.1.1 (Level A)'}
   )
     }
     // Check for sufficient link text;
     document.querySelectorAll('a').forEach(link => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 })
       const text = link.textContent?.trim() || '';
       const ariaLabel = link.getAttribute('aria-label');
       if (!text && !ariaLabel) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
         errors.push({/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 
   type: 'empty-link',
           element: link.href || 'unknown',
           message: 'Link has no accessible text',
-          wcag: '2.4.4 (Level A)'
-
-        });
+          wcag: '2.4.4 (Level A)'});
       } else if (['click here', 'read more', 'more'].includes(text.toLowerCase())) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
         warnings.push({/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 
   type: 'generic-link-text',
           element: text,
           message: 'Link text is not descriptive',
-          suggestion: 'Use more descriptive link text that makes sense out of context'
-        }
+          suggestion: 'Use more descriptive link text that makes sense out of context'}
 
   )
       }
     });
     // Check for touch target size;
     document.querySelectorAll('button, a, input, select').forEach(element => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 })
       const rect = element.getBoundingClientRect();
       if (rect.width;)
           < 44 || rect.height < 44) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
         warnings.push({/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 
   type: 'small-touch-target',
           element: element.tagName.toLowerCase(),
           message: `Touch target too small: ${Math.round(rect.width)}x${Math.round(rect.height)}px`,
-          suggestion: 'Increase touch target size to at least 44x44px'
-
-        }
+          suggestion: 'Increase touch target size to at least 44x44px'}
   )
       }
     }
@@ -500,7 +484,7 @@ const html = document.documentElement;
     // Calculate score (100 - errors * 10 - warnings * 2)
     const score = Math.max(0, 100 - errors.length * 10 - warnings.length * 2);
     return {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 //       errors,
 //       warnings,
@@ -509,56 +493,56 @@ const html = document.documentElement;
   }
   // Add keyboard navigation helpers;
   public enhanceKeyboardNavigation(): void {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     // Add focus visible class for keyboard navigation;
     document.addEventListener('keydown', e => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 })
       if (e.key === 'Tab') {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
         document.body.classList.add('keyboard-nav');
       }
     });
     document.addEventListener('mousedown', () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       document.body.classList.remove('keyboard-nav');
     });
     // Add keyboard shortcuts;
     document.addEventListener('keydown', e => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
-      // Alt + H: Go to main heading,)
+      // Alt + H: Go to main heading)
       if (e.altKey && e.key === 'h') {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
         const mainHeading = document.querySelector('h1');
         if (mainHeading) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
           (mainHeading as HTMLElement).focus();
         }
       }
       // Alt + M: Go to main content,
       if (e.altKey && e.key === 'm') {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
         const mainContent = document.querySelector('main');
         if (mainContent) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
           (mainContent as HTMLElement).focus();
         }
       }
       // Alt + N: Go to navigation,
       if (e.altKey && e.key === 'n') {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
         const nav = document.querySelector('nav');
         if (nav) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
           (nav as HTMLElement).focus();
         }
@@ -569,21 +553,21 @@ const html = document.documentElement;
   // Announce screen reader messages;
   public announce(messag,
   e: string, priorit)
-  y: 'polite' | 'assertive' = 'polite'): void {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  y: 'polite', | 'assertive' = 'polite'): void {/* TODO: Fix JSX expression */}
+  O: Add content}
 }
     const announcer = document.getElementById('a11y-announcer') || this.createAnnouncer();
     announcer.setAttribute('aria-live', priority);
     announcer.textContent = message;
     // Clear after announcement;
     setTimeout(() => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       announcer.textContent = '';
     }, 1000);
   }
   private createAnnouncer(): HTMLElement {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     const announcer = document.createElement('div');
     announcer.id = 'a11y-announcer';
@@ -610,7 +594,7 @@ const html = document.documentElement;
   // Trap focus within a modal;
   public trapFocus(elemen)
   t: HTMLElement): () => void {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     const focusableElements = element.querySelectorAll()
       'a[href], butto,
@@ -622,18 +606,18 @@ const html = document.documentElement;
     const firstElement = focusableElements[0] as HTMLElement;
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
     const handleTabKey = (e: KeyboardEvent) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       if (e.key === 'Tab') {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
         if (e.shiftKey && document.activeElement === firstElement) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
           e.preventDefault();
           lastElement.focus();
         } else if (!e.shiftKey && document.activeElement === lastElement) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
           e.preventDefault();
           firstElement.focus();
@@ -641,7 +625,7 @@ const html = document.documentElement;
       }
       if (e.key === 'Escape') {
       if (e.key === 'Escape') {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
         element.dispatchEvent(new CustomEvent('close'));
       }
@@ -669,7 +653,7 @@ const a11y = new AccessibilityService();
 export default a11y;
     // Return cleanup function;
     return () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       element.removeEventListener('keydown', handleTabKey);
     }
@@ -677,7 +661,7 @@ export default a11y;
   // Check if element is visible to screen readers;
   public isAccessible(elemen)
   t: HTMLElement): boolean {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     const style = window.getComputedStyle(element);
     return !()

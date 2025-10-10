@@ -18,9 +18,9 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
     });
     // Log error to monitoring service;
     // console.error('ErrorBoundary caught an)
-  error:', error, errorInfo);
+  error: ', error, errorInfo);
     // You can also log to external services here;
-    if (typeof window !== 'undefined' && 'gtag' in window) {/* TODO: Fix JSX expression */}
+    if (typeof window !== ',undefined' && 'gtag' in window) {/* TODO: Fix JSX expression */}
       });
     }
   }
@@ -108,8 +108,7 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
             </div>
           </div>
         </div>
-      ),
-    }
+      )}
     return this.props.children;
   }
 }

@@ -318,10 +318,10 @@ $4});
   }
   private sendAnalytics(event: string, data: any): void {
     // In a real application, this would send data to your analytics service
-    console.log('Analytics:', event, data);
+    console.log('Analytics: ', event, data);
     
     // Example: Send to Google Analytics
-    if (typeof gtag !== 'undefined') {
+    if (typeof gtag !== ',undefined') {
       gtag('event', event, data)
   }
   }
@@ -366,14 +366,14 @@ $4});
   }
   private addPWAMetaTags(): void {
     const metaTags = [
-      { name: 'mobile-web-app-capable', content: 'yes' },
-      { name: 'apple-mobile-web-app-capable', content: 'yes' },
-      { name: 'apple-mobile-web-app-status-bar-style', content: 'default' },
-      { name: 'apple-mobile-web-app-title', content: 'Zion Tech Group' },
-      { name: 'application-name', content: 'Zion Tech Group' },
-      { name: 'msapplication-TileColor', content: '#4f46e5' },
-      { name: 'msapplication-config', content: '/browserconfig.xml' },
-      { name: 'theme-color', content: '#4f46e5' }
+      { name: 'mobile-web-app-capable', content: 'yes'},
+      { name: 'apple-mobile-web-app-capable', content: 'yes'},
+      { name: 'apple-mobile-web-app-status-bar-style', content: 'default'},
+      { name: 'apple-mobile-web-app-title', content: 'Zion Tech Group'},
+      { name: 'application-name', content: 'Zion Tech Group'},
+      { name: 'msapplication-TileColor', content: '#4f46e5'},
+      { name: 'msapplication-config', content: '/browserconfig.xml'},
+      { name: 'theme-color', content: '#4f46e5'}
     ];
     metaTags.forEach(tag => {
     const meta = document.createElement('meta');
@@ -390,7 +390,7 @@ $4});
             console.log('SW registered: ', registration)
   })
           .catch((registrationError) => {
-    console.log('SW registration failed: ', registrationError)
+    console.log(',SW registration failed: ', registrationError)
   });
       });
     }
@@ -398,7 +398,7 @@ $4});
   private setupInstallPrompt(): void {
     let deferredPrompt: any,
     
-    window.addEventListener('beforeinstallprompt', (e) => {
+    window.addEventListener(',beforeinstallprompt', (e) => {
       e.preventDefault();
       deferredPrompt = e;
       
@@ -467,18 +467,18 @@ $4});
   private subscribeToPush(registration: ServiceWorkerRegistration): void {
     registration.pushManager.subscribe({
       userVisibleOnly: true,
-      applicationServerKey: 'your-vapid-public-key' // Replace with actual VAPID key
+      applicationServerKey: 'your-vapid-public-key', // Replace with actual VAPID key
     }).then((subscription) => {
-      console.log('Push subscription:', subscription);
+      console.log('Push subscription: ', subscription);
       // Send subscription to server
     }).catch((error) => {
-    console.log('Push subscription failed:', error)
+    console.log(',Push subscription failed: ', error)
   });
   }
   private setupDarkMode(): void {
     if (!this.config.enableDarkMode) return;
     // Detect system preference
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)'),
+    const prefersDark = window.matchMedia(',(prefers-color-scheme: dark)'),
     
     if (prefersDark.matches) {
       document.documentElement.classList.add('dark')
@@ -637,8 +637,7 @@ interface UXConfig {
   enableOfflineSupport: boolean;
   enablePushNotifications: boolean
   enableDarkMode: boolean
-  enableAnimations: boolean,
-}
+  enableAnimations: boolean}
 
 interface UXMetrics {
     pageLoadTime: number
@@ -647,8 +646,7 @@ interface UXMetrics {
   bounceRate: number;
   userSatisfaction: number
   accessibilityScore: number
-  performanceScore: number,
-}
+  performanceScore: number}
 
 class UserExperienceEnhancer {
     private config: UXConfig

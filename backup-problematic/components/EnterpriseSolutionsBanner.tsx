@@ -1,9 +1,9 @@
 //
 export default function EnterpriseSolutionsBanner() {
-  return(<div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
-      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+  return(<div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16"></div>
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"></div>
         <div className="text-center">
-  return (
+  return (</div>
     <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
         <div className="text-center"></div>

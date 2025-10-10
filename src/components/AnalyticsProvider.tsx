@@ -39,11 +39,11 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
   }
     // Also log in development
     if (process.env.NODE_ENV === 'development') {
-    console.log('Analytics Event:', event, properties)
+    console.log('Analytics Event: ', event, properties)
   }
   }
   const page = (name: string, properties?: Record<string, any>) => {
-    if (typeof window !== 'undefined' && window.gtag) {
+    if (typeof window !== ',undefined' && window.gtag) {
       window.gtag('config', trackingId, {
         page_title: name,
         page_location: window.location.href,
@@ -51,18 +51,18 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     }
     // Also log in development
     if (process.env.NODE_ENV === 'development') {
-    console.log('Analytics Page:', name, properties)
+    console.log('Analytics Page: ', name, properties)
   }
   }
   const identify = (userId: string, traits?: Record<string, any>) => {
-    if (typeof window !== 'undefined' && window.gtag) {
+    if (typeof window !== ',undefined' && window.gtag) {
       window.gtag('config', trackingId, {
         user_id: userId,
         ...traits});
     }
     // Also log in development
     if (process.env.NODE_ENV === 'development') {
-    console.log('Analytics Identify:', userId, traits)
+    console.log('Analytics Identify: ', userId, traits)
   }
   }
   const value: AnalyticsContextType = {
@@ -78,7 +78,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
 export const useAnalytics = (): AnalyticsContextType => {
     const context = useContext(AnalyticsContext);
   if (context === undefined) {
-    throw new Error('useAnalytics must be used within an AnalyticsProvider')
+    throw new Error(',useAnalytics must be used within an AnalyticsProvider')
   }
   return context;
 }

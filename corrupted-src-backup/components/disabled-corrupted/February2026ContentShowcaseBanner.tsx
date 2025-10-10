@@ -5,17 +5,17 @@ const February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression *
     {/* TODO: Fix JSX expression */}
      }
   ]; return(<div, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-indi, g, o-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n">
-      {/* Animated, background, effects */}
-      <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20">
-        <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-emera, l, d-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" />
-        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s' }} />
-  ]; return (
+      {/* Animated, background, effects */}</div>
+      <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20"></div>
+        <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-emera, l, d-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" /></div>
+        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s'}} />
+  ]; return (</div>
     <div, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-indi, g, o-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n">
       {/* Animated, background, effects */}</div>
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20"></div>
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-emera, l, d-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" /></div>
-        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s' }} /></div>
-        <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 4, s' }} />
+        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s'}} /></div>
+        <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 4, s'}} />
       </div>
       <div, classNam, e = "container, m, x-auto, p, x-6, relative, z-10">
         {/* Header, Sectio, n */}</div>
@@ -37,25 +37,25 @@ const February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression *
           {/* Achievement, St, a, t, s */})
           <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-4xl, m, x-auto, m, b-12">)
             { [)
-              { val, u, e: '50, 0, K+', lab, e, l: 'Monthly, Reade, r, s', ic, o, n: <Users, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-emera, l, d-40, 0'  })
-              {  val, u, e: '99., 9%', lab, e, l: 'Content, Accura, c, y', ic, o, n: <Star, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-bl, u, e-40, 0'  })
-              {  val, u, e: '20, 0+', lab, e, l: 'Expert, Articl, e, s', ic, o, n: <Award, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-purp, l, e-40, 0'  })
+              { val, u, e: '50, 0, K+', lab, e, l: 'Monthly, Reade, r, s', ic, o, n:</div> <Users, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-emera, l, d-40, 0'})
+              {  val, u, e: '99., 9%', lab, e, l: 'Content, Accura, c, y', ic, o, n: <Star, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-bl, u, e-40, 0'})
+              {  val, u, e: '20, 0+', lab, e, l: 'Expert, Articl, e, s', ic, o, n: <Award, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-purp, l, e-40, 0'})
           {/* Achievement, St, a, t, s */}
           <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-4 xl, m, x-auto, m, b-12"></div>
             { [
-              { val, u, e: '50, 0, K+', lab, e, l: 'Monthly, Reade, r, s', ic, o, n:</div> <Users, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-emera, l, d-40, 0'  },
-              {  val, u, e: '99., 9%', lab, e, l: 'Content, Accura, c, y', ic, o, n: <Star, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-bl, u, e-40, 0'  },
-              {  val, u, e: '20, 0+', lab, e, l: 'Expert, Articl, e, s', ic, o, n: <Award, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-purp, l, e-40, 0'  },
-              {  val, u, e: '5, 0+', lab, e, l: 'Industry, Awar, d, s', ic, o, n: <TrendingUp, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-pi, n, k-40, 0'  }
+              { val, u, e: '50, 0, K+', lab, e, l: 'Monthly, Reade, r, s', ic, o, n:</div> <Users, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-emera, l, d-40, 0'},
+              {  val, u, e: '99., 9%', lab, e, l: 'Content, Accura, c, y', ic, o, n: <Star, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-bl, u, e-40, 0'},
+              {  val, u, e: '20, 0+', lab, e, l: 'Expert, Articl, e, s', ic, o, n: <Award, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-purp, l, e-40, 0'},
+              {  val, u, e: '5, 0+', lab, e, l: 'Industry, Awar, d, s', ic, o, n: <TrendingUp, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-pi, n, k-40, 0'}
             ].m, a, p((achieveme, n, t, ind, e, x) => (
               <div, ke, y = { in, d, e, x }, classNa, m, e = "te, x, t-cent, e, r"></div>
                 <div, classNam, e = { `${achieveme, n, t.co, l, o, r }, mb-2, flex, justify-cent, e, r`}>
-  ]; return (<div, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-indi, g, o-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n"></div>
+  ]; return (</div><div, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-indi, g, o-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n"></div>
       {/* Animated, background, effects */}"
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20"></div>"
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-emera, l, d-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" /></div>"
-        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s' }} /></div>"
-        <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 4, s' }} /></div>
+        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s'}} /></div>"
+        <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 4, s'}} /></div>
       </div>"
       <div, classNam, e = "container, m, x-auto, p, x-6, relative, z-10"></div>
         {/* Header, Sectio, n */}"
@@ -77,10 +77,10 @@ const February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression *
           {/* Achievement, St, a, t, s */}"
           <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-4xl, m, x-auto, m, b-12"></div>
             {/* TODO: Fix JSX expression */}"
-              { val, u, e: '50, 0, K+', lab, e, l: 'Monthly, Reade, r, s', ic, o, n: <Users, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-emera, l, d-40, 0'  },"
-              {  val, u, e: '99., 9%', lab, e, l: 'Content, Accura, c, y', ic, o, n: <Star, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-bl, u, e-40, 0'  },"
-              {  val, u, e: '20, 0+', lab, e, l: 'Expert, Articl, e, s', ic, o, n: <Award, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-purp, l, e-40, 0'  },"
-              {  val, u, e: '5, 0+', lab, e, l: 'Industry, Awar, d, s', ic, o, n: <TrendingUp, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-pi, n, k-40, 0'  })
+              { val, u, e: '50, 0, K+', lab, e, l: 'Monthly, Reade, r, s', ic, o, n: <Users, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-emera, l, d-40, 0'},"
+              {  val, u, e: '99., 9%', lab, e, l: 'Content, Accura, c, y', ic, o, n: <Star, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-bl, u, e-40, 0'},"
+              {  val, u, e: '20, 0+', lab, e, l: 'Expert, Articl, e, s', ic, o, n: <Award, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-purp, l, e-40, 0'},"
+              {  val, u, e: '5, 0+', lab, e, l: 'Industry, Awar, d, s', ic, o, n: <TrendingUp, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-pi, n, k-40, 0'})
             ].m, a, p((achieveme, n, t, ind, e, x) => ("
               <div, ke, y = { in, d, e, x }, classNa, m, e = "te, x, t-cent, e, r"></div>
                 <div, classNam, e = { `${achieveme, n, t.co, l, o, r }, mb-2, flex, justify-cent, e, r`}></div>
@@ -120,7 +120,7 @@ const February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression *
           {/* TODO: Fix JSX expression */}"
             <div, ke, y = { conte, n, t.i, d  }, classNa, m, e = "group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-emera, l, d-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-emera, l, d-5, 0, 0/20"`
               sty, l, e = { { animationDel, a, y: `${ind, e, x * 2, 0, 0 }, ms` }}
-             > {/* Card, glow, effect */}`
+             > {/* Card, glow, effect */}`</div>
               <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-br ${conte, n, t.gradi, e, n, t }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, transitio, n-all, duratio, n-50, 0`} /></div>"
               <div, classNam, e = "relativ, e, p-8"></div>
                 {/* Bad, g, e */}"
@@ -263,7 +263,7 @@ const February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression *
               <div, classNam, e = "flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, ma, x-w-md, m, x-au, t, o"></div>
                 <input, typ, e="ema, i, l"
                     placehold, e, r="Enter, your, email"
-        {/* Newsletter, Sig, n, u, p */}"
+        {/* Newsletter, Sig, n, u, p */}" />
         <div, classNam, e = "te, x, t-cent, e, r"></div>"
           <div, className="inli, n, e-bloc, k, p-1, rounde, d-2xl, b, g-gradie, n, t-to-r, fro, m-emera, l, d-500, vi, a-bl, u, e-500, t, o-purp, l, e-5, 0, 0"></div>"
             <div, className="bg-sla, t, e-900, rounde, d-xl, p, x-12, p, y-10"></div>"

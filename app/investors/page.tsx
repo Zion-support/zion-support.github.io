@@ -7,8 +7,7 @@ const PagePage: React.FC = () => {
     {
       icon: Zap,
       title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-  },
+      description: 'Lightning-fast processing and real-time analytics for optimal results'},
     {
     ]
 return (

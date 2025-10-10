@@ -22,7 +22,7 @@ export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix
         'Intelligent Routing',
         'Performance Monitoring']}];
   return(<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-  return (
+  return (</div>
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100"></div>
       <Helmet>
         <title>Enterprise AI Solutions - Zion Website</title>
@@ -41,11 +41,11 @@ export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix
         </div>)
 )
         <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">),
-          {solutions.map((solution, index) => (
+          {solutions.map((solution, index) => (</div>
             <div;
               key={index}
               className="bg-white rounded-lg shadow-lg p-6 hover: shadow-xl transition-shadow",
-            >,
+            >,</div>
               <div className="flex items-center mb-4">,
             Comprehensive AI solutions designed for enterprise-scale deployments and large
             organizations.

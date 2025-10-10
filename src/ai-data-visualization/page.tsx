@@ -5,7 +5,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression */}
 }
-  return (<div><Helmet></Helmet>
+  return (<div></div><Helmet></Helmet>
         <title>AI Data Visualization Solutions - Zion Tech Group</title>
         <meta name="description" content="Intelligent AI-powered data visualization with automated insights, interactive dashboards, and predictive analytics. Starting at $149/month." /></meta>"
         <meta name="keywords" content="AI data visualization, business intelligence, interactive dashboards, data analytics, predictive insights" /></meta>"
@@ -91,7 +91,7 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
   md:grid-cols-3 gap-8"></div>"
               <div className="cyber-card p-8 text-center"></div>"
                 <h3 className="text-2xl font-bold text-white mb-4">Starter</h3>"
-                <div className="text-4xl font-bold text-cyan-400 mb-6">$149<span className="text-lg">/month</span></div>"
+                <div className="text-4xl font-bold text-cyan-400 mb-6">$149</div><span className="text-lg">/month</span></div>"
                 <ul className="text-gray-300 space-y-3 mb-8"></ul>
                   <li>Up to 5 data sources</li>
                   <li>10 dashboards</li>
@@ -104,7 +104,7 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
               "
               <div className="cyber-card p-8 text-center border-2 border-cyan-400"></div>"
                 <h3 className="text-2xl font-bold text-white mb-4">Professional</h3>"
-                <div className="text-4xl font-bold text-cyan-400 mb-6">$399<span className="text-lg">/month</span></div>"
+                <div className="text-4xl font-bold text-cyan-400 mb-6">$399</div><span className="text-lg">/month</span></div>"
                 <ul className="text-gray-300 space-y-3 mb-8"></ul>
                   <li>Up to 25 data sources</li>
                   <li>Unlimited dashboards</li>
@@ -186,5 +186,4 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
         <Footer /></Footer>
       </div>
     </div>
-  ),
-}"
+  )}"

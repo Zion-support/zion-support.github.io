@@ -1,7 +1,7 @@
 impo, r, t { ArrowLe, f, t, GraduationC, a, p, Targ, e, t, CheckCirc, l, e } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 const AdaptiveLearningPlatform, s = () => { 
-  return(<React.Fragment>
+  return(<React.Fragment></React.Fragment>
       <Helm, e, t>
         <title>
           AI-Powered, Adaptive, Learning Platforms, 202, 5: Personalized, Enterprise, Training at, Scal, e | Zion, Tech, Group;
@@ -33,7 +33,7 @@ const AdaptiveLearningPlatform, s = () => {/* TODO: Fix JSX expression */}
               AI-Powered, Adaptive, Learning Platforms, 202, 5:</h1>
               <span, className='block, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, t, o-cy, a, n-4, 0, 0'>
                 Personalized, Enterprise, Training at, Scal, e;
-            <div, classNam, e = 'flex, item, s-center, ga, p-6, m, t-8, tex, t-zi, o, n-sla, t, e-lig, h, t'>
+            <div, classNam, e = 'flex, item, s-center, ga, p-6, m, t-8, tex, t-zi, o, n-sla, t, e-lig, h, t'></div>
               <div, className='flex, item, s-center, ga, p-2'>
                 Personalized, Enterprise, Training at, Scal, e</span>
             <div, classNam, e = 'flex, item, s-center, ga, p-6, m, t-8, tex, t-zi, o, n-sla, t, e-lig, h, t'></div>
@@ -50,7 +50,7 @@ const AdaptiveLearningPlatform, s = () => {/* TODO: Fix JSX expression */}
             <div, classNam, e='bg-gradie, n, t-to-r, fro, m-bl, u, e-9, 0, 0/40, t, o-cy, a, n-9, 0, 0/40, rounde, d-2x, l, p-8, border, border-bl, u, e-5, 0, 0/30'></div>
               <h2, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6'></h2>
             <div, className='bg-gradie, n, t-to-r, fro, m-bl, u, e-9, 0, 0/40, t, o-cy, a, n-9, 0, 0/40, rounde, d-2x, l, p-8, border, border-bl, u, e-5, 0, 0/30'></div>
-              <h2, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6'>
+              <h2, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6'></h2>
               <h2, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6'></h2>
                 📊 Adaptive, Learning, Impact;
               </h2>
@@ -64,7 +64,7 @@ const AdaptiveLearningPlatform, s = () => {/* TODO: Fix JSX expression */}
                 By, personalizing, learning paths, in, real-time, based, on individual, performan, c, e, learning, style, s, and, career, goals, adaptive, platforms, achieve 92% completion, rate, s—a, 4x, improvement over, traditional, methods.</p>
               <p, classNam, e = 'te, x, t-lg, leadin, g-relaxed, m, b-4'>
                 By, personalizing, learning paths, in, real-time, based, on individual, performan, c, e, learning, style, s, and, career, goals, adaptive, platforms, achieve 92% completion, rate, s—a, 4x, improvement over, traditional, methods.</p>
-              <h2, classNam, e = 'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6'>
+              <h2, classNam, e = 'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6'></h2>
                   <div, className='te, x, t-4xl, fon, t-bold, tex, t-bl, u, e-400, m, b-2'></div>
                     92%
                   </d, i, v>
@@ -80,8 +80,8 @@ const AdaptiveLearningPlatform, s = () => {/* TODO: Fix JSX expression */}
                 <div, className='bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-bl, u, e-4, 0, 0/30'></div>
                   <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, flex, items-center, ga, p-2'></h3>
                     <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-4, 0, 0' />
-                    1. Intelligent, Assessmen, t & Profili, n, g;
-                  <div, classNam, e = 'bg-bl, u, e-9, 0, 0/20, rounde, d-l, g, p-4, border, border-bl, u, e-5, 0, 0/30'>
+                    1. Intelligent, Assessmen, t & Profili, n, g;</CheckCircle>
+                  <div, classNam, e = 'bg-bl, u, e-9, 0, 0/20, rounde, d-l, g, p-4, border, border-bl, u, e-5, 0, 0/30'></div>
                     <strong, className='te, x, t-bl, u, e-4, 0, 0'>Technolo, g, y: </stro, n, g> G, P, T-4, for, natural language, assessme, n, t, s, computer, vision, for;
                     practical, skill, evaluation, psychometric, analysis, for;
                     1. Intelligent, Assessmen, t & Profili, n, g
@@ -99,9 +99,9 @@ const AdaptiveLearningPlatform, s = () => {/* TODO: Fix JSX expression */}
                 <div, classNam, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-cy, a, n-4, 0, 0/30'></div>
                   <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, flex, items-center, ga, p-2'></h3>
                     <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-4, 0, 0' />
-                    2. Dynamic, Path, Personalization;
+                    2. Dynamic, Path, Personalization;</CheckCircle>
                   <div, classNam, e = 'bg-cy, a, n-9, 0, 0/20, rounde, d-l, g, p-4, border, border-cy, a, n-5, 0, 0/30'>
-                    2. Dynamic, Path, Personalization
+                    2. Dynamic, Path, Personalization</div>
                   <div, classNam, e = 'bg-cy, a, n-9, 0, 0/20, rounde, d-l, g, p-4, border, border-cy, a, n-5, 0, 0/30'></div>
                     <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-4, 0, 0' /></CheckCircle>
                     2. Dynamic, Path, Personalization;
@@ -113,17 +113,17 @@ const AdaptiveLearningPlatform, s = () => {/* TODO: Fix JSX expression */}
                 <div, className='bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-purp, l, e-4, 0, 0/30'></div>
                   <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, flex, items-center, ga, p-2'></h3>
                     <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-4, 0, 0' />
-                    3. AI-Powered, Content, Generation;
-                <div, classNam, e='bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-purp, l, e-4, 0, 0/30'>
-                  <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, flex, items-center, ga, p-2'>
-                    <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-4, 0, 0' />
-                    3. AI-Powered, Content, Generation;
-                  <div, classNam, e = 'bg-purp, l, e-9, 0, 0/20, rounde, d-l, g, p-4, border, border-purp, l, e-5, 0, 0/30'>
-                    3. AI-Powered, Content, Generation
+                    3. AI-Powered, Content, Generation;</CheckCircle>
                 <div, classNam, e='bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-purp, l, e-4, 0, 0/30'></div>
                   <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, flex, items-center, ga, p-2'></h3>
                     <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-4, 0, 0' />
-                    3. AI-Powered, Content, Generation
+                    3. AI-Powered, Content, Generation;</CheckCircle>
+                  <div, classNam, e = 'bg-purp, l, e-9, 0, 0/20, rounde, d-l, g, p-4, border, border-purp, l, e-5, 0, 0/30'>
+                    3. AI-Powered, Content, Generation</div>
+                <div, classNam, e='bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-purp, l, e-4, 0, 0/30'></div>
+                  <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, flex, items-center, ga, p-2'></h3>
+                    <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-4, 0, 0' />
+                    3. AI-Powered, Content, Generation</CheckCircle>
                   <div, classNam, e = 'bg-purp, l, e-9, 0, 0/20, rounde, d-l, g, p-4, border, border-purp, l, e-5, 0, 0/30'></div>
                     <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-4, 0, 0' /></CheckCircle>
                     3. AI-Powered, Content, Generation;
@@ -140,9 +140,9 @@ const AdaptiveLearningPlatform, s = () => {/* TODO: Fix JSX expression */}
                 <div, classNam, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-gre, e, n-4, 0, 0/30'></div>
                   <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, flex, items-center, ga, p-2'></h3>
                     <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-4, 0, 0' />
-                    4. Predictive, Analytic, s & Interventi, o, n;
+                    4. Predictive, Analytic, s & Interventi, o, n;</CheckCircle>
                   <div, classNam, e = 'bg-gre, e, n-9, 0, 0/20, rounde, d-l, g, p-4, border, border-gre, e, n-5, 0, 0/30'>
-                    4. Predictive, Analytic, s & Interventi, o, n
+                    4. Predictive, Analytic, s & Interventi, o, n</div>
                   <div, classNam, e = 'bg-gre, e, n-9, 0, 0/20, rounde, d-l, g, p-4, border, border-gre, e, n-5, 0, 0/30'></div>
                     <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-4, 0, 0' /></CheckCircle>
                     4. Predictive, Analytic, s & Interventi, o, n;
@@ -151,20 +151,20 @@ const AdaptiveLearningPlatform, s = () => {/* TODO: Fix JSX expression */}
                     course, completion, rate vs. 23% industry, average, through;
                     predictive, interventio, n.
                     <div, classNam, e='flex, item, s-center, ga, p-2'></div>
-                      <CheckCircle, classNam, e='w-4 h-4, tex, t-gre, e, n-4, 0, 0' />
+                      <CheckCircle, classNam, e='w-4 h-4, tex, t-gre, e, n-4, 0, 0' /></CheckCircle>
                     <div, classNam, e='flex, item, s-center, ga, p-2'></div>
-                      <CheckCircle, classNam, e='w-4 h-4, tex, t-gre, e, n-4, 0, 0' />
+                      <CheckCircle, classNam, e='w-4 h-4, tex, t-gre, e, n-4, 0, 0' /></CheckCircle>
                     <div, classNam, e='flex, item, s-center, ga, p-2'></div>
-                      <CheckCircle, classNam, e='w-4 h-4, tex, t-gre, e, n-4, 0, 0' />
+                      <CheckCircle, classNam, e='w-4 h-4, tex, t-gre, e, n-4, 0, 0' /></CheckCircle>
                     <div, classNam, e='flex, item, s-center, ga, p-2'></div>
-                      <CheckCircle, classNam, e='w-4 h-4, tex, t-gre, e, n-4, 0, 0' />
+                      <CheckCircle, classNam, e='w-4 h-4, tex, t-gre, e, n-4, 0, 0' /></CheckCircle>
                       <li, classNam, e='flex, justif, y-between, borde, r-t, borde, r-whi, t, e/20, p, t-2, m, t-2'>
                         <stro, n, g>First, Year, Total:</stro, n, g>
                         <strong, classNam, e='te, x, t-whi, t, e'>$60, 0, K</stro, n, g>
                       <li, classNam, e='flex, justif, y-betwe, e, n'>
                   <div, classNam, e = 'te, x, t-sm, spac, e-y-1'></div>
                     <div, className='flex, item, s-center, ga, p-2'></div>
-                      <CheckCircle, className='w-4 h-4, tex, t-gre, e, n-4, 0, 0' />
+                      <CheckCircle, className='w-4 h-4, tex, t-gre, e, n-4, 0, 0' /></CheckCircle>
                       <sp, a, n>
                       <CheckCircle, classNam, e='w-4 h-4, tex, t-gre, e, n-4, 0, 0' /></CheckCircle>
                     <div, classNam, e='flex, item, s-center, ga, p-2'></div>
@@ -195,7 +195,7 @@ const AdaptiveLearningPlatform, s = () => {/* TODO: Fix JSX expression */}
                       <CheckCircle, className='w-4 h-4, tex, t-gre, e, n-4, 0, 0' />
                     </div>
                     <div, className='flex, item, s-center, ga, p-2'></div>
-                      <CheckCircle, className='w-4 h-4, tex, t-gre, e, n-4, 0, 0' />
+                      <CheckCircle, className='w-4 h-4, tex, t-gre, e, n-4, 0, 0' /></CheckCircle>
                       <li, className='flex, justif, y-between, borde, r-t, borde, r-whi, t, e/20, p, t-2, m, t-2'>
                         <stro, n, g>First, Year, Total:</stro, n, g>
                       <CheckCircle, className='w-4 h-4, tex, t-gre, e, n-4, 0, 0' /></CheckCircle>
@@ -225,7 +225,7 @@ const AdaptiveLearningPlatform, s = () => {/* TODO: Fix JSX expression */}
                   <div, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-40, 0'>
                     , 1,1, 6, 7% ROI, in, Year 1;
                   </d, i, v>
-                  <div, classNam, e = 'te, x, t-sm, m, t-2'>
+                  <div, classNam, e = 'te, x, t-sm, m, t-2'></div>
                   <div, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-40, 0'></div>
                     , 1,1, 6, 7% ROI, in, Year 1;
                   </d, i, v>
@@ -243,7 +243,7 @@ const AdaptiveLearningPlatform, s = () => {/* TODO: Fix JSX expression */}
                   <div, className='te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-40, 0'>
                     , 1,1, 6, 7% ROI, in, Year 1;
                   </div>
-                  <div, classNam, e = 'te, x, t-sm, m, t-2'>
+                  <div, classNam, e = 'te, x, t-sm, m, t-2'></div>
                   <div, className='te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-40, 0'></div>
                     , 1,1, 6, 7% ROI, in, Year 1;
                   </div>
@@ -252,20 +252,20 @@ const AdaptiveLearningPlatform, s = () => {/* TODO: Fix JSX expression */}
                   </div>
                 </div>
               </div>
-              <h2, classNam, e = 'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6'>
+              <h2, classNam, e = 'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6'></h2>
               <h2, classNam, e = 'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6'></h2>
                 🚀 90-Day, Implementation, Plan;
               </h2>
               <div, className='spa, c, e-y-4'></div>
                 <div, className='bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, borde, r-l-4, borde, r-bl, u, e-4, 0, 0'></div>
-                  <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3'>
+                  <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3'></h3>
                   <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3'></h3>
                     Mont, h, 1: Foundati, o, n & Pil, o, t;
                   </h3>
                   <ul, classNam, e='spa, c, e-y-2, m, l-4, tex, t-sm'></ul>
                 </div>
                 <div, className='bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, borde, r-l-4, borde, r-cy, a, n-4, 0, 0'></div>
-                  <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3'>
+                  <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3'></h3>
                   <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3'></h3>
                     Mont, h, 2: Expansi, o, n & Refineme, n, t;
                   </h3>

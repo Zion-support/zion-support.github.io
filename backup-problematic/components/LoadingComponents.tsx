@@ -16,7 +16,7 @@ export const,
   };
   const colorClasses = {/* TODO: Fix JSX expression */}
   };
-  return(<div className={`flex items-center justify-center ${className}`}>
+  return(<div className={`flex items-center justify-center ${className}`}></div>
       <div;)
         className={`animate-spin rounded-full border-2 ${colorClasses[color]} ${sizeClasses[size]}`})
       ></div>)

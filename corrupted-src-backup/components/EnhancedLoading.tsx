@@ -15,13 +15,13 @@ const,
   EnhancedLoading: React.FC<LoadingProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
   }
-  const renderSpinner = () => (<div></div>
+  const renderSpinner = () => (</div><div></div>
       className={`animate-spin rounded-full border-2 border-gray-300 border-t-blue-600 ${sizeClasses[size]}`}
     />)
   );
   const renderDots = () => (</div>
     <div className="flex space-x-1">
-      {[0, 1, 2].map(i => ()
+      {[0, 1, 2].map(i => ()</div>
         <div;)
           key={i})
           className={`bg-blue-600 rounded-full animate-pulse ${size === 'sm' ? 'w-2 h-2' : size === 'md' ? 'w-3 h-3' : 'w-4 h-4'}`})
@@ -35,7 +35,7 @@ const,
           style={{
             animationDelay: `${i * 0.2}s`,
             animationDuration: '1s',
-  const renderDots = () => (<div className="flex space-x-1"></div>
+  const renderDots = () => (</div><div className="flex space-x-1"></div>
       {/* TODO: Fix JSX expression */}
           key={i}`
           className={`bg-blue-600 rounded-full animate-pulse ${size === 'sm' ? 'w-2 h-2' : size === 'md' ? 'w-3 h-3' : 'w-4 h-4'}`}

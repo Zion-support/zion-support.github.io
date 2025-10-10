@@ -1,5 +1,5 @@
 const TestComponent = () => {
-  return(<div>)
+  return(<div>)</div>
       <h1>Test</h1>)
     </div>)
   return (

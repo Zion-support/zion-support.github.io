@@ -17,17 +17,17 @@ const January2026RevolutionaryContentBanne, r: React.FC = () => {/* TODO: Fix JS
     },
     {/* TODO: Fix JSX expression */}
     }]; return(<section, classNam, e = 'py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n'>
-      {/* Animated, Backgroun, d */}
+      {/* Animated, Backgroun, d */}</section>
       <div, className='absolute, inse, t-0, overflo, w-hidden, opacit, y-20'></section>
   ]; return (<section, classNam, e = 'py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n'></section>
       {/* Animated, Backgroun, d */}
       <div, className='absolute, inse, t-0, overflo, w-hidden, opacit, y-20'></div>
         <div, className='absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e' /></div>
         <div, className='absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e'
-          sty, l, e={{ animationDel, a, y: ', 2, s' }}
+          sty, l, e={{ animationDel, a, y: ', 2, s'}}
          /></div>
         <div, classNam, e = 'absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e'
-          sty, l, e={{ animationDel, a, y: ', 4, s' }}
+          sty, l, e={{ animationDel, a, y: ', 4, s'}}
          /></div>
       </div>
       <div, classNam, e = 'container, m, x-auto, p, x-6, relative, z-10'>
@@ -40,7 +40,7 @@ const January2026RevolutionaryContentBanne, r: React.FC = () => {/* TODO: Fix JS
             </sp, a, n>
           </div>
           <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-cy, a, n-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t'>
-            Revolutionary, AI, Breakthroughs: The, Future, is He, r, e;
+            Revolutionary, AI, Breakthroughs: The, Future, is He, r, e;</h2>
       <div, classNam, e = 'container, m, x-auto, p, x-6, relative, z-10'></div>
         {/* Head, e, r */}
         <div, className='te, x, t-center, m, b-16'></div>
@@ -150,7 +150,7 @@ const January2026RevolutionaryContentBanne, r: React.FC = () => {/* TODO: Fix JS
         {/* Call, to, Action */}
         <div, classNam, e = 'te, x, t-cent, e, r'></div>
           <div, className='bg-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/10, t, o-purp, l, e-5, 0, 0/10, border, border-bl, u, e-5, 0, 0/20, rounde, d-2x, l, p-8'></div>
-            <h3, className='te, x, t-2xl, fon, t-bold, m, b-4, tex, t-whi, t, e'>
+            <h3, className='te, x, t-2xl, fon, t-bold, m, b-4, tex, t-whi, t, e'></h3>
             <h3, className='te, x, t-2xl, fon, t-bold, m, b-4, tex, t-whi, t, e'></h3>
               Ready, to, Experience the, AI, Revolution?
             </h3>

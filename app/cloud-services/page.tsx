@@ -26,8 +26,7 @@ const CloudServicesPage: React.FC = () => {
     },
     {
       icon: Shield,
-      title: 'Cloud Security',
-    }
+      title: 'Cloud Security'}
   ];
   const benefits = [
   ];
@@ -78,7 +77,7 @@ const CloudServicesPage: React.FC = () => {
   ]
   return (
 
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet>
         <title>Cloud Services - Zion Tech Group | Cloud Solutions & Migration</title>
         <meta name="description" content="Expert cloud services including migration, infrastructure, security, and database solutions. Transform your business with our cloud expertise." />
@@ -92,10 +91,10 @@ const CloudServicesPage: React.FC = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center"></div>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                 Cloud Services
               </span>
@@ -106,9 +105,9 @@ const CloudServicesPage: React.FC = () => {
               Transform your business with our comprehensive cloud services. 
               From migration to management, we provide end-to-end cloud solutions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
-                Get Started
+                Get Started</button>
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
@@ -121,9 +120,9 @@ const CloudServicesPage: React.FC = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+      <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Our Cloud Services
             </h2>
@@ -133,10 +132,10 @@ const CloudServicesPage: React.FC = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {services.map((service, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center mb-4">
-                  <div className="bg-purple-500 p-3 rounded-lg">
+            {services.map((service, index) => (</div>
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300"></div>
+                <div className="flex items-center mb-4"></div>
+                  <div className="bg-purple-500 p-3 rounded-lg"></div>
                     <service.icon className="h-6 w-6 text-white" />
                   </div>
                 </div>
@@ -157,9 +156,9 @@ const CloudServicesPage: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our Cloud Services?
             </h2>
@@ -169,9 +168,9 @@ const CloudServicesPage: React.FC = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="text-center">
-                <div className="bg-gradient-to-r from-purple-500 to-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            {benefits.map((benefit, index) => (</div>
+              <div key={index} className="text-center"></div>
+                <div className="bg-gradient-to-r from-purple-500 to-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                   <CheckCircle className="h-8 w-8 text-white" />
                 </div>
                 <p className="text-white font-medium">{benefit}</p>
@@ -182,9 +181,9 @@ const CloudServicesPage: React.FC = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+      <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Flexible Pricing Plans
             </h2>
@@ -194,19 +193,19 @@ const CloudServicesPage: React.FC = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
+            {pricing.map((plan, index) => (</div>
               <div key={index} className={`bg-white/10 backdrop-blur-sm rounded-xl p-8 relative ${plan.popular ? 'ring-2 ring-purple-500' : ''}`}>
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                {plan.popular && (</div>
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
                     <span className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium">
                       Most Popular
                     </span>
                   </div>
                 )}
-                <div className="text-center mb-8">
+                <div className="text-center mb-8"></div>
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="text-4xl font-bold text-white mb-2">
-                    {plan.price}
+                    {plan.price}</div>
                     <span className="text-lg text-gray-300 font-normal">/{plan.period}</span>
                   </div>
                   <p className="text-gray-300">{plan.description}</p>
@@ -233,20 +232,20 @@ const CloudServicesPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm: px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="py-20 px-4 sm: px-6 lg:px-8"></section>
+        <div className="max-w-4xl mx-auto text-center"></div>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Business with Cloud?
           </h2>
           <p className="text-xl text-purple-100 mb-8">
             Contact our cloud experts to discuss your needs and get a customized solution.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center"></button>
               <Phone className="mr-2 h-5 w-5" />
               Call Now
             </button>
-            <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
+            <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center"></button>
               <Mail className="mr-2 h-5 w-5" />
               Email Us
             </button>
@@ -255,8 +254,7 @@ const CloudServicesPage: React.FC = () => {
       </section>
     </div>
 
-  ),
-};
+  )};
 
 export default CloudServicesPage
   </button>
