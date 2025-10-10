@@ -1,10 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import { metadata } from './metadata';
-=======
-// import { Metadata } from 'next'; // Removed for Vite
->>>>>>> cursor/analyze-improve-and-deploy-application-744e
 const TermsPage: React.FC = () => {
   return (
     <>

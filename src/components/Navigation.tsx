@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import SearchBar from './SearchBar';
 import { 
   ChevronDown, 
   Phone, 
@@ -445,6 +446,11 @@ const Navigation: React.FC = () => {
             <Link to="/careers" className="text-white hover:text-cyan-400 transition-colors font-medium">
               Careers
             </Link>
+            
+            {/* Search Bar */}
+            <div className="w-64">
+              <SearchBar />
+            </div>
             <div className="relative group">
               <button
                 onClick={toggleServices}
