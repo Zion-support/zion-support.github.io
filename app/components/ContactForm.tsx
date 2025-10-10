@@ -78,8 +78,13 @@ interface FormStatus {
     'Other'
   ];
 
-              </label>
-              <input
+  return (
+    <form onSubmit={handleSubmit} className="space-y-6">
+      <div>
+        <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
+          Full Name
+        </label>
+        <input
                 type="text"
                 id="name"
                 name="name"

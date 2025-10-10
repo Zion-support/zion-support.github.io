@@ -41,12 +41,12 @@ function resolveMergeConflicts(filePath) {
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
       
-      if (line.trim() === '<<<<<<< HEAD') {
+      if (line.trim() === '') {
         inConflict = true;
         inHead = true;
         inSeparator = false;
         continue;
-      } else if (line.trim() === '=======') {
+      } else if (line.trim() === '') {
         inHead = false;
         inSeparator = true;
         continue;
@@ -61,7 +61,7 @@ function resolveMergeConflicts(filePath) {
         if (inHead) {
           resolvedLines.push(line);
         }
-        // Skip lines in the other branch (after =======)
+        // Skip lines in the other branch (after )
       } else {
         resolvedLines.push(line);
       }
