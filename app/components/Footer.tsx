@@ -23,22 +23,27 @@ const Footer: React.FC = () => {
   const microSaasServices = {
     'Productivity': [
       { name: 'AI Project Manager Pro', url: '/ai-project-manager', description: 'Intelligent project planning' },
-      { name: 'AI Task Manager Pro', url: '/task-manager-pro', description: 'Smart task management' },
-      { name: 'AI Workflow Automation', url: '/ai-workflow-automation', description: 'Process automation' },
-      { name: 'AI Scheduler Pro', url: '/ai-scheduler', description: 'Intelligent scheduling' }
+      { name: 'AI Quantum Task Optimizer', url: '/ai-quantum-task-optimizer', description: 'Quantum-powered optimization' },
+      { name: 'AI Holographic Workspace', url: '/ai-holographic-workspace', description: '3D immersive workspace' },
+      { name: 'AI Neural Memory Assistant', url: '/ai-neural-memory-assistant', description: 'AI memory enhancement' },
+      { name: 'AI Telepathic Interface Pro', url: '/ai-telepathic-interface', description: 'Mind-controlled computing' },
+      { name: 'AI Predictive Analytics Engine', url: '/ai-predictive-analytics-engine', description: 'Advanced ML forecasting' },
+      { name: 'AI Quantum Neural Network', url: '/ai-quantum-neural-network', description: 'Quantum neural processing' },
+      { name: 'AI Autonomous Decision Engine', url: '/ai-autonomous-decision-engine', description: 'Self-learning AI decisions' }
     ],
     'Content & Marketing': [
       { name: 'AI Content Writer Pro', url: '/ai-content-writer', description: 'AI content generation' },
-      { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'Automated social media' },
-      { name: 'AI Email Marketing Suite', url: '/ai-email-marketing', description: 'Smart email campaigns' },
-      { name: 'AI SEO Optimizer', url: '/ai-seo-optimizer', description: 'SEO automation' },
-      { name: 'AI Lead Generation', url: '/ai-lead-generation', description: 'Automated lead generation' }
+      { name: 'AI Holographic Content Studio', url: '/ai-holographic-content-studio', description: '3D holographic content' },
+      { name: 'AI Quantum Content Optimizer', url: '/ai-quantum-content-optimizer', description: 'Quantum content optimization' },
+      { name: 'AI Neural Story Architect', url: '/ai-neural-story-architect', description: 'AI story creation' },
+      { name: 'AI Telepathic Marketing Pro', url: '/ai-telepathic-marketing', description: 'Mind-reading marketing' }
     ],
     'Business & Finance': [
       { name: 'AI CRM Intelligence', url: '/ai-crm', description: 'Smart CRM solutions' },
-      { name: 'AI Fintech Analyzer', url: '/ai-fintech', description: 'Financial analysis' },
-      { name: 'AI Financial Analyzer', url: '/ai-financial-analyzer', description: 'Advanced financial insights' },
-      { name: 'AI E-commerce Optimizer', url: '/ai-ecommerce-optimizer', description: 'E-commerce optimization' }
+      { name: 'AI Quantum Financial Oracle', url: '/ai-quantum-financial-oracle', description: 'Quantum financial prediction' },
+      { name: 'AI Holographic Boardroom', url: '/ai-holographic-boardroom', description: '3D boardroom experience' },
+      { name: 'AI Neural Business Strategist', url: '/ai-neural-business-strategist', description: 'AI business strategy' },
+      { name: 'AI Telepathic Sales Pro', url: '/ai-telepathic-sales', description: 'Mind-reading sales' }
     ],
     'Customer Service': [
       { name: 'AI Customer Support Bot', url: '/ai-customer-support-bot', description: '24/7 AI support' },
@@ -57,17 +62,62 @@ const Footer: React.FC = () => {
     ],
     'Creative': [
       { name: 'AI Video Generator Pro', url: '/ai-video-generation', description: 'AI-powered video creation' },
-      { name: 'AI Voice Cloning Studio', url: '/ai-voice-cloning', description: 'Realistic voice synthesis' },
-      { name: 'AI Music Composition Suite', url: '/ai-music-composition', description: 'AI-generated music' },
-      { name: 'AI Fashion Design Studio', url: '/ai-fashion-design', description: 'AI fashion design' },
-      { name: 'AI 3D Generation Studio', url: '/ai-3d-generation', description: 'AI 3D content creation' }
+      { name: 'AI Holographic Design Studio', url: '/ai-holographic-design-studio', description: '3D holographic design' },
+      { name: 'AI Quantum Art Generator', url: '/ai-quantum-art-generator', description: 'Quantum art creation' },
+      { name: 'AI Neural Music Composer', url: '/ai-neural-music-composer', description: 'Neural music composition' },
+      { name: 'AI Telepathic Creative Assistant', url: '/ai-telepathic-creative-assistant', description: 'Mind-controlled creativity' }
     ],
     'Health & Wellness': [
       { name: 'AI Healthcare Assistant', url: '/ai-healthcare', description: 'Medical AI support' },
-      { name: 'AI Fitness Coach Pro', url: '/ai-fitness-coach', description: 'Personalized fitness plans' }
+      { name: 'AI Quantum Health Optimizer', url: '/ai-quantum-health-optimizer', description: 'Quantum health optimization' },
+      { name: 'AI Holographic Medical Scanner', url: '/ai-holographic-medical-scanner', description: '3D medical scanning' },
+      { name: 'AI Neural Wellness Coach', url: '/ai-neural-wellness-coach', description: 'Neural wellness coaching' },
+      { name: 'AI Telepathic Therapy Pro', url: '/ai-telepathic-therapy', description: 'Mind-reading therapy' }
     ],
     'Sales': [
       { name: 'AI Sales Automation Hub', url: '/ai-sales-automation', description: 'Sales optimization' }
+    ],
+    'Real Estate': [
+      { name: 'AI Real Estate Analyzer Pro', url: '/ai-real-estate-analyzer', description: 'Property analysis & valuation' },
+      { name: 'AI Property Management Suite', url: '/ai-property-management', description: 'Complete property management' }
+    ],
+    'E-commerce': [
+      { name: 'AI E-commerce Optimizer Pro', url: '/ai-ecommerce-optimizer', description: 'E-commerce optimization' },
+      { name: 'AI Inventory Management Pro', url: '/ai-inventory-management', description: 'Smart inventory management' }
+    ],
+    'Legal & Compliance': [
+      { name: 'AI Legal Assistant Pro', url: '/ai-legal-assistant', description: 'Legal AI assistance' },
+      { name: 'AI Compliance Monitor Pro', url: '/ai-compliance-monitor', description: 'Automated compliance' }
+    ],
+    'Education & Training': [
+      { name: 'AI Learning Management System', url: '/ai-learning-management', description: 'Intelligent LMS' },
+      { name: 'AI Corporate Training Platform', url: '/ai-corporate-training', description: 'Corporate training AI' }
+    ],
+    'Manufacturing': [
+      { name: 'AI Manufacturing Intelligence', url: '/ai-manufacturing-intelligence', description: 'Smart manufacturing' },
+      { name: 'AI Quality Assurance Pro', url: '/ai-quality-assurance', description: 'Automated quality control' }
+    ],
+    'Transportation': [
+      { name: 'AI Fleet Management Pro', url: '/ai-fleet-management', description: 'Fleet optimization' },
+      { name: 'AI Logistics Optimizer', url: '/ai-logistics-optimizer', description: 'Logistics optimization' }
+    ],
+    'Energy & Sustainability': [
+      { name: 'AI Energy Management Pro', url: '/ai-energy-management', description: 'Smart energy management' },
+      { name: 'AI Sustainability Tracker', url: '/ai-sustainability-tracker', description: 'Sustainability tracking' }
+    ],
+    'Insurance & Risk': [
+      { name: 'AI Insurance Analytics Pro', url: '/ai-insurance-analytics', description: 'Insurance AI analytics' },
+      { name: 'AI Risk Assessment Engine', url: '/ai-risk-assessment', description: 'Risk assessment AI' }
+    ],
+    'Human Resources': [
+      { name: 'AI Talent Acquisition Pro', url: '/ai-talent-acquisition', description: 'Smart talent acquisition' },
+      { name: 'AI Employee Engagement Platform', url: '/ai-employee-engagement', description: 'Employee engagement AI' }
+    ],
+    'Advanced Technology': [
+      { name: 'AI Blockchain Integration Pro', url: '/ai-blockchain-integration', description: 'Blockchain AI integration' },
+      { name: 'AI IoT Management Platform', url: '/ai-iot-management', description: 'IoT AI management' },
+      { name: 'AI Edge Computing Solutions', url: '/ai-edge-computing', description: 'Edge computing AI' },
+      { name: 'AI Metaverse Development Suite', url: '/ai-metaverse-development', description: 'Metaverse AI development' }
     ]
   };
 
@@ -84,6 +134,24 @@ const Footer: React.FC = () => {
     { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems' },
     { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions' },
     { name: 'AI Robotics', href: '/ai-robotics' },
+    { name: 'AI Predictive Analytics', href: '/ai-predictive-analytics' },
+    { name: 'AI Conversational Intelligence', href: '/ai-conversational-intelligence' },
+    { name: 'AI Recommendation Engine', href: '/ai-recommendation-engine' },
+    { name: 'AI Anomaly Detection', href: '/ai-anomaly-detection' },
+    { name: 'AI Time Series Forecasting', href: '/ai-time-series-forecasting' },
+    { name: 'AI Document Intelligence', href: '/ai-document-intelligence' },
+    { name: 'AI Speech Recognition', href: '/ai-speech-recognition' },
+    { name: 'AI Image Generation', href: '/ai-image-generation' },
+    { name: 'AI Video Analytics', href: '/ai-video-analytics' },
+    { name: 'AI Emotional Intelligence', href: '/ai-emotional-intelligence' },
+    { name: 'AI Business Intelligence', href: '/ai-business-intelligence' },
+    { name: 'AI Supply Chain Optimization', href: '/ai-supply-chain' },
+    { name: 'AI Healthcare Solutions', href: '/ai-healthcare' },
+    { name: 'AI Financial Services', href: '/ai-financial-services' },
+    { name: 'AI Customer Service', href: '/ai-customer-service' },
+    { name: 'AI Predictive Maintenance', href: '/ai-predictive-maintenance' },
+    { name: 'AI Fraud Detection System', href: '/ai-fraud-detection' },
+    { name: 'AI Business Intelligence', href: '/ai-business-intelligence' }
   ];
 
   const itServices = [
@@ -99,6 +167,17 @@ const Footer: React.FC = () => {
     { name: 'Business Intelligence', href: '/business-intelligence' },
     { name: 'Enterprise Solutions', href: '/enterprise' },
     { name: 'Blockchain Solutions', href: '/blockchain' },
+    { name: 'Cloud Infrastructure Management', href: '/cloud-infrastructure-management' },
+    { name: 'Network Security Solutions', href: '/network-security-solutions' },
+    { name: 'Data Center Solutions', href: '/data-center-solutions' },
+    { name: 'IT Asset Management Pro', href: '/it-asset-management-pro' },
+    { name: 'IT Help Desk Solutions', href: '/it-help-desk-solutions' },
+    { name: 'IT Compliance & Governance', href: '/it-compliance-governance' },
+    { name: 'IT Performance Optimization', href: '/it-performance-optimization' },
+    { name: 'IT Disaster Recovery Services', href: '/it-disaster-recovery' },
+    { name: 'IT Training & Certification', href: '/it-training-certification' },
+    { name: 'IT Integration Services', href: '/it-integration-services' },
+    { name: 'IT Monitoring & Alerting', href: '/it-monitoring-alerting' },
     { name: 'Quantum Computing Infrastructure', href: '/quantum-computing-infrastructure' },
     { name: 'Autonomous Systems Development', href: '/autonomous-systems-development' },
     { name: 'Metaverse Development', href: '/metaverse-development' },
@@ -138,53 +217,35 @@ const Footer: React.FC = () => {
               <span className="text-xl font-bold text-white neon-text">Zion Tech Group</span>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
-              Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. 
-              Trusted by Fortune 500 companies worldwide with 99.9% uptime and 24/7 expert support.
+              Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.
             </p>
             
             {/* Contact Info */}
-            <div className="space-y-4">
+            <div className="space-y-3">
               <div className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-cyan-400" />
-                <div>
-                  <a 
-                    href="tel:+13024640950" 
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium text-lg"
-                  >
-                    +1 302 464 0950
-                  </a>
-                  <p className="text-sm text-gray-400">24/7 Support Available</p>
-                </div>
+                <Phone className="w-4 h-4 text-cyan-400" />
+                <a 
+                  href="tel:+13024640950" 
+                  className="text-gray-300 hover:text-cyan-400 transition-colors duration-300"
+                >
+                  +1 302 464 0950
+                </a>
               </div>
               <div className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-cyan-400" />
-                <div>
-                  <a 
-                    href="mailto:kleber@ziontechgroup.com" 
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
-                  >
-                    kleber@ziontechgroup.com
-                  </a>
-                  <p className="text-sm text-gray-400">Primary Contact</p>
-                </div>
+                <Mail className="w-4 h-4 text-cyan-400" />
+                <a 
+                  href="mailto:kleber@ziontechgroup.com" 
+                  className="text-gray-300 hover:text-cyan-400 transition-colors duration-300"
+                >
+                  kleber@ziontechgroup.com
+                </a>
               </div>
               <div className="flex items-start space-x-3">
-                <MapPin className="w-5 h-5 text-cyan-400 mt-1" />
-                <div>
-                  <address className="text-gray-300 not-italic font-medium">
-                    364 E Main St STE 1008<br />
-                    Middletown, DE 19709
-                  </address>
-                  <p className="text-sm text-gray-400">Headquarters</p>
-                </div>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Clock className="w-5 h-5 text-cyan-400" />
-                <div>
-                  <p className="text-gray-300 font-medium">Business Hours</p>
-                  <p className="text-sm text-gray-400">Mon-Fri: 9AM-6PM EST</p>
-                  <p className="text-sm text-gray-400">Emergency: 24/7</p>
-                </div>
+                <MapPin className="w-4 h-4 text-cyan-400 mt-1" />
+                <address className="text-gray-300 not-italic">
+                  364 E Main St STE 1008<br />
+                  Middletown, DE 19709
+                </address>
               </div>
             </div>
           </div>

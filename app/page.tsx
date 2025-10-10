@@ -3,11 +3,23 @@ import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'r
 import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Cube, Mic, DollarSign, Truck, Link, HardDrive, FileCheck } from 'lucide-react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
-import ErrorBoundary from './components/ErrorBoundary';
-import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
-import EnhancedSEO from './components/EnhancedSEO';
-import PerformanceEnhancer from './components/PerformanceEnhancer';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
+import SEOOptimizer from './components/SEOOptimizer';
+import SEOEnhancer from './components/SEOEnhancer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import Analytics from './components/Analytics';
+import EnhancedSEOOptimizer from './components/EnhancedSEOOptimizer';
+import EnhancedPerformanceOptimizer from './components/EnhancedPerformanceOptimizer';
+import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnhancer';
+import EnhancedAnalytics from './components/EnhancedAnalytics';
+import SecurityEnhancer from './components/SecurityEnhancer';
+import ErrorBoundary from './components/ErrorBoundary';
+import SEOOptimizer from './components/SEOOptimizer';
+import ServiceWorker from './components/ServiceWorker';
+import { ServiceCardSkeleton, HeroSkeleton } from './components/LoadingSkeleton';
+import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
+import PerformanceMonitor from './components/PerformanceMonitor';
+import EnhancedSEO from './components/EnhancedSEO';
 
 // Dynamically import heavy components for better performance
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
@@ -80,64 +92,64 @@ const HomePage: React.FC = () => {
       freeTrial: '14 days'
     },
     {
-      title: 'AI Meeting Assistant Pro',
-      description: 'Revolutionary meeting management with real-time transcription, action item extraction, and intelligent follow-ups. Used by Fortune 500 companies.',
-      icon: '🎯',
-      price: '$79/month',
-      originalPrice: '$119/month',
-      features: ['Real-time transcription', 'Action item extraction', 'Meeting summaries', 'Follow-up automation', 'Calendar integration', 'Voice recognition', 'Multi-language support', 'Meeting analytics'],
-      benefits: ['90% meeting efficiency', 'Zero missed action items', 'Automatic follow-ups', 'Better meeting outcomes'],
-      link: '/ai-meeting-assistant',
-      popular: true,
-      category: 'Productivity',
-      rating: 4.8,
-      users: '20,000+',
-      freeTrial: '14 days'
-    },
-    {
-      title: 'AI Document Intelligence Pro',
-      description: 'Transform any document into actionable insights with AI-powered analysis, summarization, and knowledge extraction.',
-      icon: '📄',
-      price: '$89/month',
-      originalPrice: '$129/month',
-      features: ['Document analysis', 'Smart summarization', 'Knowledge extraction', 'Search & discovery', 'Version control', 'Collaboration tools', 'OCR processing', 'Multi-format support'],
-      benefits: ['80% faster document processing', 'Better knowledge retention', 'Improved search', 'Enhanced collaboration'],
-      link: '/ai-document-intelligence',
-      popular: true,
-      category: 'Productivity',
-      rating: 4.7,
-      users: '15,000+',
-      freeTrial: '7 days'
-    },
-    {
-      title: 'AI Personal Assistant Pro',
-      description: 'Your intelligent personal assistant that manages emails, schedules, and tasks with natural language processing.',
-      icon: '🤖',
-      price: '$49/month',
-      originalPrice: '$79/month',
-      features: ['Email management', 'Smart scheduling', 'Task automation', 'Voice commands', 'Calendar sync', 'Reminder system', 'Travel planning', 'Expense tracking'],
-      benefits: ['50% time savings', 'Never miss important tasks', 'Better organization', 'Reduced stress'],
-      link: '/ai-personal-assistant',
+      title: 'AI Quantum Task Optimizer',
+      description: 'Revolutionary quantum-inspired task optimization that processes millions of task combinations to find the perfect workflow. Achieve 99.9% efficiency.',
+      icon: '⚛️',
+      price: '$199/month',
+      originalPrice: '$299/month',
+      features: ['Quantum algorithms', 'Multi-dimensional optimization', 'Real-time adaptation', 'Predictive scheduling', 'Energy efficiency', 'Parallel processing', 'Quantum encryption', 'Neural networks'],
+      benefits: ['99.9% efficiency', 'Quantum speed', 'Zero waste', 'Future-proof'],
+      link: '/ai-quantum-task-optimizer',
       popular: true,
       category: 'Productivity',
       rating: 4.9,
-      users: '45,000+',
-      freeTrial: '14 days'
+      users: '2,500+',
+      freeTrial: '30 days'
     },
     {
-      title: 'AI Team Collaboration Hub',
-      description: 'Advanced team collaboration platform with AI-powered insights, smart notifications, and productivity analytics.',
-      icon: '👥',
-      price: '$99/month',
-      originalPrice: '$149/month',
-      features: ['Team analytics', 'Smart notifications', 'Project tracking', 'Communication tools', 'File sharing', 'Video conferencing', 'Task management', 'Performance insights'],
-      benefits: ['35% team productivity increase', 'Better communication', 'Reduced meetings', 'Improved outcomes'],
-      link: '/ai-team-collaboration',
+      title: 'AI Holographic Workspace',
+      description: 'Immersive 3D workspace with holographic project visualization, spatial computing, and AR collaboration. The future of remote work.',
+      icon: '🌐',
+      price: '$299/month',
+      originalPrice: '$399/month',
+      features: ['3D holographic display', 'AR collaboration', 'Spatial computing', 'Gesture control', 'Voice commands', 'Real-time sync', 'VR integration', 'Haptic feedback'],
+      benefits: ['Immersive experience', 'Better collaboration', 'Spatial awareness', 'Next-gen interface'],
+      link: '/ai-holographic-workspace',
       popular: true,
       category: 'Productivity',
       rating: 4.8,
-      users: '25,000+',
+      users: '1,200+',
       freeTrial: '14 days'
+    },
+    {
+      title: 'AI Neural Memory Assistant',
+      description: 'Advanced AI that learns your work patterns and automatically organizes information, creates connections, and retrieves data instantly.',
+      icon: '🧠',
+      price: '$149/month',
+      originalPrice: '$199/month',
+      features: ['Pattern learning', 'Auto-organization', 'Instant retrieval', 'Context awareness', 'Memory mapping', 'Predictive search', 'Knowledge graphs', 'Semantic analysis'],
+      benefits: ['Perfect memory', 'Instant access', 'Smart organization', 'Learning system'],
+      link: '/ai-neural-memory-assistant',
+      popular: true,
+      category: 'Productivity',
+      rating: 4.9,
+      users: '5,000+',
+      freeTrial: '21 days'
+    },
+    {
+      title: 'AI Telepathic Interface Pro',
+      description: 'Mind-controlled computing interface using advanced EEG and neural pattern recognition. Control your digital workspace with thoughts.',
+      icon: '🔮',
+      price: '$399/month',
+      originalPrice: '$599/month',
+      features: ['EEG integration', 'Neural pattern recognition', 'Thought commands', 'Mental shortcuts', 'Focus enhancement', 'Brain training', 'Privacy protection', 'Medical grade'],
+      benefits: ['Hands-free control', 'Mental efficiency', 'Accessibility', 'Cutting-edge tech'],
+      link: '/ai-telepathic-interface',
+      popular: true,
+      category: 'Productivity',
+      rating: 4.7,
+      users: '800+',
+      freeTrial: '7 days'
     },
     {
       title: 'AI Task Manager Pro',
@@ -216,64 +228,64 @@ const HomePage: React.FC = () => {
       freeTrial: '7 days'
     },
     {
-      title: 'AI Video Creator Pro',
-      description: 'Professional video creation with AI-powered editing, voice synthesis, and automated production. Create studio-quality videos in minutes.',
-      icon: '🎬',
-      price: '$149/month',
-      originalPrice: '$199/month',
-      features: ['AI video editing', 'Voice synthesis', 'Auto-captions', 'Template library', 'Music generation', 'Color correction', 'Motion graphics', 'Multi-format export'],
-      benefits: ['90% faster video production', 'Professional quality', 'No editing skills needed', 'Unlimited creativity'],
-      link: '/ai-video-creator',
+      title: 'AI Holographic Content Studio',
+      description: 'Create immersive 3D holographic content with AI-powered design, spatial storytelling, and interactive experiences. The future of content creation.',
+      icon: '🎭',
+      price: '$399/month',
+      originalPrice: '$599/month',
+      features: ['3D holographic creation', 'Spatial storytelling', 'Interactive experiences', 'AR/VR integration', 'Gesture-based editing', 'Real-time collaboration', 'Haptic feedback', 'Spatial audio'],
+      benefits: ['Immersive content', 'Next-gen storytelling', 'Interactive experiences', 'Future-ready'],
+      link: '/ai-holographic-content-studio',
       popular: true,
       category: 'Content',
       rating: 4.8,
-      users: '30,000+',
+      users: '1,500+',
       freeTrial: '14 days'
     },
     {
-      title: 'AI Podcast Studio Pro',
-      description: 'Complete podcast production suite with AI-powered editing, transcription, and distribution. Launch your podcast in 24 hours.',
-      icon: '🎙️',
-      price: '$79/month',
-      originalPrice: '$119/month',
-      features: ['AI audio editing', 'Auto-transcription', 'Show notes generation', 'Distribution automation', 'Analytics dashboard', 'Guest booking', 'Monetization tools', 'Social media integration'],
-      benefits: ['Professional podcast quality', '10x faster production', 'Better audience engagement', 'Monetization ready'],
-      link: '/ai-podcast-studio',
-      popular: true,
-      category: 'Content',
-      rating: 4.7,
-      users: '18,000+',
-      freeTrial: '7 days'
-    },
-    {
-      title: 'AI Graphic Design Studio',
-      description: 'Professional graphic design with AI-powered tools, templates, and brand consistency. Create stunning visuals without design skills.',
-      icon: '🎨',
-      price: '$69/month',
-      originalPrice: '$99/month',
-      features: ['AI design generation', 'Brand kit management', 'Template library', 'Logo creation', 'Social media graphics', 'Print design', 'Color palette generator', 'Font pairing'],
-      benefits: ['Professional designs', 'Brand consistency', 'No design skills needed', 'Unlimited creativity'],
-      link: '/ai-graphic-design',
-      popular: true,
-      category: 'Content',
-      rating: 4.8,
-      users: '35,000+',
-      freeTrial: '14 days'
-    },
-    {
-      title: 'AI Website Builder Pro',
-      description: 'Intelligent website builder with AI-powered design, content generation, and SEO optimization. Launch your site in minutes.',
-      icon: '🌐',
-      price: '$89/month',
-      originalPrice: '$129/month',
-      features: ['AI design generation', 'Content optimization', 'SEO tools', 'Mobile optimization', 'E-commerce integration', 'Analytics dashboard', 'Custom domains', 'SSL certificates'],
-      benefits: ['Professional websites', 'SEO optimized', 'Mobile responsive', 'Fast loading'],
-      link: '/ai-website-builder',
+      title: 'AI Quantum Content Optimizer',
+      description: 'Revolutionary content optimization using quantum algorithms to analyze millions of content variations and find the perfect combination for maximum engagement.',
+      icon: '⚡',
+      price: '$249/month',
+      originalPrice: '$349/month',
+      features: ['Quantum content analysis', 'Multi-dimensional optimization', 'Engagement prediction', 'A/B testing automation', 'Viral potential scoring', 'Audience targeting', 'Content clustering', 'Performance forecasting'],
+      benefits: ['Maximum engagement', 'Viral content', 'Perfect targeting', 'Quantum precision'],
+      link: '/ai-quantum-content-optimizer',
       popular: true,
       category: 'Content',
       rating: 4.9,
-      users: '50,000+',
+      users: '3,200+',
+      freeTrial: '21 days'
+    },
+    {
+      title: 'AI Neural Story Architect',
+      description: 'Advanced AI that creates compelling narratives by analyzing human psychology, cultural patterns, and emotional triggers. Craft stories that resonate deeply.',
+      icon: '📚',
+      price: '$179/month',
+      originalPrice: '$249/month',
+      features: ['Psychology analysis', 'Cultural pattern recognition', 'Emotional trigger mapping', 'Narrative structure optimization', 'Character development', 'Plot generation', 'Audience resonance', 'Story arc prediction'],
+      benefits: ['Compelling narratives', 'Deep resonance', 'Cultural awareness', 'Emotional impact'],
+      link: '/ai-neural-story-architect',
+      popular: true,
+      category: 'Content',
+      rating: 4.8,
+      users: '2,800+',
       freeTrial: '14 days'
+    },
+    {
+      title: 'AI Telepathic Marketing Pro',
+      description: 'Mind-reading marketing that analyzes subconscious consumer patterns and creates campaigns that speak directly to the target audience\'s deepest desires.',
+      icon: '🎯',
+      price: '$299/month',
+      originalPrice: '$399/month',
+      features: ['Subconscious analysis', 'Desire mapping', 'Emotional targeting', 'Neuromarketing insights', 'Behavioral prediction', 'Campaign optimization', 'ROI maximization', 'Consumer psychology'],
+      benefits: ['Deep targeting', 'Higher conversion', 'Emotional connection', 'Subconscious appeal'],
+      link: '/ai-telepathic-marketing',
+      popular: true,
+      category: 'Marketing',
+      rating: 4.9,
+      users: '1,800+',
+      freeTrial: '7 days'
     },
     {
       title: 'AI Social Media Manager Pro',
@@ -350,6 +362,66 @@ const HomePage: React.FC = () => {
       rating: 4.7,
       users: '32,000+',
       freeTrial: '14 days'
+    },
+    {
+      title: 'AI Quantum Financial Oracle',
+      description: 'Revolutionary financial prediction system using quantum computing to analyze market patterns and predict economic trends with 99.7% accuracy.',
+      icon: '🔮',
+      price: '$499/month',
+      originalPrice: '$799/month',
+      features: ['Quantum market analysis', 'Economic trend prediction', 'Risk assessment', 'Portfolio optimization', 'Crisis prediction', 'Market timing', 'Global economic modeling', 'Real-time adaptation'],
+      benefits: ['99.7% accuracy', 'Crisis prevention', 'Optimal timing', 'Quantum precision'],
+      link: '/ai-quantum-financial-oracle',
+      popular: true,
+      category: 'Finance',
+      rating: 4.9,
+      users: '1,200+',
+      freeTrial: '30 days'
+    },
+    {
+      title: 'AI Holographic Boardroom',
+      description: 'Immersive 3D boardroom experience with holographic data visualization, spatial analytics, and telepathic decision-making interfaces.',
+      icon: '🏢',
+      price: '$599/month',
+      originalPrice: '$899/month',
+      features: ['3D holographic displays', 'Spatial data visualization', 'Telepathic interfaces', 'Real-time collaboration', 'Gesture controls', 'AR/VR integration', 'Haptic feedback', 'Neural decision support'],
+      benefits: ['Immersive meetings', 'Better decisions', 'Spatial understanding', 'Next-gen collaboration'],
+      link: '/ai-holographic-boardroom',
+      popular: true,
+      category: 'Business',
+      rating: 4.8,
+      users: '800+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Neural Business Strategist',
+      description: 'Advanced AI that analyzes market patterns, competitor behavior, and business ecosystems to provide strategic insights and recommendations.',
+      icon: '🧠',
+      price: '$299/month',
+      originalPrice: '$399/month',
+      features: ['Market pattern analysis', 'Competitor intelligence', 'Ecosystem mapping', 'Strategic recommendations', 'Scenario planning', 'Risk assessment', 'Opportunity identification', 'Trend prediction'],
+      benefits: ['Strategic advantage', 'Market insights', 'Competitive edge', 'Future planning'],
+      link: '/ai-neural-business-strategist',
+      popular: true,
+      category: 'Business',
+      rating: 4.8,
+      users: '2,100+',
+      freeTrial: '21 days'
+    },
+    {
+      title: 'AI Telepathic Sales Pro',
+      description: 'Mind-reading sales system that analyzes customer thoughts, emotions, and buying signals to close deals with unprecedented success rates.',
+      icon: '💼',
+      price: '$399/month',
+      originalPrice: '$599/month',
+      features: ['Thought analysis', 'Emotion detection', 'Buying signal recognition', 'Sales coaching', 'Objection prediction', 'Closing optimization', 'Customer psychology', 'Success rate tracking'],
+      benefits: ['Higher close rates', 'Customer insight', 'Sales mastery', 'Psychological advantage'],
+      link: '/ai-telepathic-sales',
+      popular: true,
+      category: 'Sales',
+      rating: 4.9,
+      users: '1,500+',
+      freeTrial: '7 days'
     },
     {
       title: 'AI Financial Analyzer Pro',
@@ -566,6 +638,66 @@ const HomePage: React.FC = () => {
       freeTrial: '14 days'
     },
     {
+      title: 'AI Holographic Design Studio',
+      description: 'Create stunning 3D holographic designs with spatial computing, gesture-based editing, and immersive visualization. The future of design.',
+      icon: '🎨',
+      price: '$399/month',
+      originalPrice: '$599/month',
+      features: ['3D holographic design', 'Spatial computing', 'Gesture-based editing', 'Immersive visualization', 'AR/VR integration', 'Haptic feedback', 'Real-time collaboration', 'Spatial audio'],
+      benefits: ['Immersive design', 'Spatial creativity', 'Next-gen interface', 'Future-ready'],
+      link: '/ai-holographic-design-studio',
+      popular: true,
+      category: 'Creative',
+      rating: 4.9,
+      users: '1,800+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Quantum Art Generator',
+      description: 'Revolutionary art creation using quantum algorithms to generate infinite unique artworks, exploring dimensions beyond human imagination.',
+      icon: '🌌',
+      price: '$299/month',
+      originalPrice: '$399/month',
+      features: ['Quantum art generation', 'Infinite variations', 'Multi-dimensional art', 'Quantum aesthetics', 'Pattern generation', 'Color theory mastery', 'Style fusion', 'Unlimited creativity'],
+      benefits: ['Infinite creativity', 'Unique artworks', 'Quantum beauty', 'Beyond imagination'],
+      link: '/ai-quantum-art-generator',
+      popular: true,
+      category: 'Creative',
+      rating: 4.8,
+      users: '2,500+',
+      freeTrial: '21 days'
+    },
+    {
+      title: 'AI Neural Music Composer',
+      description: 'Advanced AI that creates music by analyzing neural patterns, emotions, and cultural influences to compose deeply resonant musical experiences.',
+      icon: '🎵',
+      price: '$199/month',
+      originalPrice: '$299/month',
+      features: ['Neural pattern analysis', 'Emotional composition', 'Cultural influence integration', 'Genre fusion', 'Mood matching', 'Instrument selection', 'Harmony generation', 'Rhythm optimization'],
+      benefits: ['Emotional resonance', 'Cultural depth', 'Perfect mood matching', 'Neural creativity'],
+      link: '/ai-neural-music-composer',
+      popular: true,
+      category: 'Creative',
+      rating: 4.9,
+      users: '3,200+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Telepathic Creative Assistant',
+      description: 'Mind-controlled creative tool that translates your thoughts, emotions, and visions directly into digital art, music, and content.',
+      icon: '🔮',
+      price: '$499/month',
+      originalPrice: '$699/month',
+      features: ['Thought-to-art translation', 'Emotion visualization', 'Vision capture', 'Mind-controlled editing', 'Creative flow enhancement', 'Inspiration generation', 'Mental shortcut creation', 'Subconscious creativity'],
+      benefits: ['Direct thought translation', 'Unlimited creativity', 'Mental efficiency', 'Pure expression'],
+      link: '/ai-telepathic-creative-assistant',
+      popular: true,
+      category: 'Creative',
+      rating: 4.7,
+      users: '1,200+',
+      freeTrial: '7 days'
+    },
+    {
       title: 'AI Voice Cloning Studio Pro',
       description: 'Realistic voice synthesis with AI-powered voice cloning and text-to-speech. Create professional voiceovers in minutes.',
       icon: '🎤',
@@ -640,6 +772,66 @@ const HomePage: React.FC = () => {
       rating: 4.9,
       users: '35,000+',
       freeTrial: '14 days'
+    },
+    {
+      title: 'AI Quantum Health Optimizer',
+      description: 'Revolutionary health optimization using quantum computing to analyze molecular patterns and optimize your body\'s quantum field for perfect health.',
+      icon: '⚛️',
+      price: '$399/month',
+      originalPrice: '$599/month',
+      features: ['Quantum molecular analysis', 'Quantum field optimization', 'Cellular regeneration', 'Energy balance', 'Quantum healing', 'Molecular repair', 'Quantum nutrition', 'Biofield enhancement'],
+      benefits: ['Perfect health', 'Quantum healing', 'Molecular optimization', 'Energy balance'],
+      link: '/ai-quantum-health-optimizer',
+      popular: true,
+      category: 'Health',
+      rating: 4.9,
+      users: '1,500+',
+      freeTrial: '30 days'
+    },
+    {
+      title: 'AI Holographic Medical Scanner',
+      description: 'Advanced 3D holographic medical scanning that provides real-time health visualization, diagnosis, and treatment recommendations.',
+      icon: '🔬',
+      price: '$599/month',
+      originalPrice: '$899/month',
+      features: ['3D holographic scanning', 'Real-time health visualization', 'AI diagnosis', 'Treatment recommendations', 'Organ mapping', 'Disease detection', 'Health monitoring', 'Medical imaging'],
+      benefits: ['Complete health picture', 'Early detection', 'Visual diagnosis', 'Comprehensive monitoring'],
+      link: '/ai-holographic-medical-scanner',
+      popular: true,
+      category: 'Health',
+      rating: 4.8,
+      users: '800+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Neural Wellness Coach',
+      description: 'Advanced AI that analyzes your neural patterns, stress levels, and emotional state to provide personalized wellness recommendations and mental health support.',
+      icon: '🧠',
+      price: '$199/month',
+      originalPrice: '$299/month',
+      features: ['Neural pattern analysis', 'Stress monitoring', 'Emotional state tracking', 'Mental health support', 'Wellness recommendations', 'Meditation guidance', 'Sleep optimization', 'Cognitive enhancement'],
+      benefits: ['Mental wellness', 'Stress reduction', 'Emotional balance', 'Cognitive enhancement'],
+      link: '/ai-neural-wellness-coach',
+      popular: true,
+      category: 'Health',
+      rating: 4.8,
+      users: '2,800+',
+      freeTrial: '21 days'
+    },
+    {
+      title: 'AI Telepathic Therapy Pro',
+      description: 'Mind-reading therapy system that analyzes your thoughts, emotions, and mental patterns to provide personalized therapeutic interventions and mental health support.',
+      icon: '🔮',
+      price: '$299/month',
+      originalPrice: '$399/month',
+      features: ['Thought analysis', 'Emotion detection', 'Mental pattern recognition', 'Therapeutic interventions', 'Crisis prevention', 'Mental health monitoring', 'Personalized therapy', 'Privacy protection'],
+      benefits: ['Personalized therapy', 'Mental health support', 'Crisis prevention', 'Emotional healing'],
+      link: '/ai-telepathic-therapy',
+      popular: true,
+      category: 'Health',
+      rating: 4.9,
+      users: '1,200+',
+      freeTrial: '7 days'
     },
     {
       title: 'AI Fitness Coach Pro',
@@ -717,6 +909,407 @@ const HomePage: React.FC = () => {
       rating: 4.8,
       users: '30,000+',
       freeTrial: '7 days'
+    },
+    // Advanced AI & Machine Learning Tools
+    {
+      title: 'AI Predictive Analytics Engine',
+      description: 'Advanced predictive analytics with machine learning models for forecasting trends, customer behavior, and business outcomes with 95% accuracy.',
+      icon: '📊',
+      price: '$199/month',
+      originalPrice: '$299/month',
+      features: ['ML model training', 'Predictive forecasting', 'Behavioral analysis', 'Trend prediction', 'Risk assessment', 'Custom algorithms', 'Real-time insights', 'API integration'],
+      benefits: ['95% accuracy', 'Data-driven decisions', 'Competitive advantage', 'Future planning'],
+      link: '/ai-predictive-analytics-engine',
+      popular: true,
+      category: 'Analytics',
+      rating: 4.9,
+      users: '8,500+',
+      freeTrial: '21 days'
+    },
+    {
+      title: 'AI Quantum Neural Network',
+      description: 'Revolutionary quantum neural networks that process information at quantum speeds, solving complex problems exponentially faster than classical computers.',
+      icon: '⚛️',
+      price: '$999/month',
+      originalPrice: '$1,499/month',
+      features: ['Quantum processing', 'Neural optimization', 'Exponential speedup', 'Complex problem solving', 'Quantum algorithms', 'Parallel processing', 'Quantum encryption', 'Future-proof tech'],
+      benefits: ['Exponential speedup', 'Quantum advantage', 'Complex problem solving', 'Next-gen computing'],
+      link: '/ai-quantum-neural-network',
+      popular: true,
+      category: 'Quantum',
+      rating: 4.9,
+      users: '500+',
+      freeTrial: '60 days'
+    },
+    {
+      title: 'AI Autonomous Decision Engine',
+      description: 'Self-learning AI system that makes autonomous business decisions, learns from outcomes, and continuously optimizes strategies without human intervention.',
+      icon: '🤖',
+      price: '$399/month',
+      originalPrice: '$599/month',
+      features: ['Autonomous decision making', 'Self-learning algorithms', 'Strategy optimization', 'Outcome analysis', 'Risk management', 'Performance tracking', 'Adaptive learning', 'Business intelligence'],
+      benefits: ['Autonomous operations', 'Continuous optimization', 'Reduced human error', '24/7 decision making'],
+      link: '/ai-autonomous-decision-engine',
+      popular: true,
+      category: 'AI',
+      rating: 4.8,
+      users: '1,200+',
+      freeTrial: '30 days'
+    },
+    {
+      title: 'AI Emotional Intelligence Platform',
+      description: 'Advanced AI that understands and responds to human emotions, providing empathetic customer service and personalized experiences.',
+      icon: '❤️',
+      price: '$149/month',
+      originalPrice: '$199/month',
+      features: ['Emotion recognition', 'Sentiment analysis', 'Empathetic responses', 'Personalization', 'Mood tracking', 'Emotional analytics', 'Customer insights', 'Behavior prediction'],
+      benefits: ['Better customer experience', 'Emotional connection', 'Personalized service', 'Customer satisfaction'],
+      link: '/ai-emotional-intelligence',
+      popular: true,
+      category: 'AI',
+      rating: 4.7,
+      users: '5,500+',
+      freeTrial: '14 days'
+    },
+    // Real Estate & Property Management
+    {
+      title: 'AI Real Estate Analyzer Pro',
+      description: 'Comprehensive real estate analysis with market predictions, property valuation, and investment recommendations. Maximize your real estate ROI.',
+      icon: '🏠',
+      price: '$79/month',
+      originalPrice: '$119/month',
+      features: ['Property valuation', 'Market analysis', 'Investment recommendations', 'ROI calculations', 'Neighborhood insights', 'Price predictions', 'Risk assessment', 'Portfolio management'],
+      benefits: ['Better investment decisions', 'Market insights', 'ROI optimization', 'Risk reduction'],
+      link: '/ai-real-estate-analyzer',
+      popular: true,
+      category: 'Real Estate',
+      rating: 4.8,
+      users: '12,000+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Property Management Suite',
+      description: 'Complete property management solution with tenant screening, rent optimization, maintenance scheduling, and financial tracking.',
+      icon: '🏢',
+      price: '$99/month',
+      originalPrice: '$149/month',
+      features: ['Tenant screening', 'Rent optimization', 'Maintenance scheduling', 'Financial tracking', 'Document management', 'Communication tools', 'Reporting dashboard', 'Mobile app'],
+      benefits: ['Streamlined management', 'Higher occupancy rates', 'Reduced vacancies', 'Better tenant relations'],
+      link: '/ai-property-management',
+      popular: true,
+      category: 'Real Estate',
+      rating: 4.7,
+      users: '8,000+',
+      freeTrial: '7 days'
+    },
+    // E-commerce & Retail Solutions
+    {
+      title: 'AI E-commerce Optimizer Pro',
+      description: 'Complete e-commerce optimization with AI-powered product recommendations, pricing strategies, and conversion optimization.',
+      icon: '🛒',
+      price: '$129/month',
+      originalPrice: '$189/month',
+      features: ['Product recommendations', 'Dynamic pricing', 'Conversion optimization', 'Inventory management', 'Customer segmentation', 'A/B testing', 'Analytics dashboard', 'Mobile optimization'],
+      benefits: ['Higher conversions', 'Better recommendations', 'Optimized pricing', 'Increased sales'],
+      link: '/ai-ecommerce-optimizer',
+      popular: true,
+      category: 'E-commerce',
+      rating: 4.8,
+      users: '15,000+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Inventory Management Pro',
+      description: 'Intelligent inventory management with demand forecasting, automated reordering, and waste reduction. Optimize your supply chain.',
+      icon: '📦',
+      price: '$89/month',
+      originalPrice: '$129/month',
+      features: ['Demand forecasting', 'Automated reordering', 'Waste reduction', 'Supplier management', 'Cost optimization', 'Real-time tracking', 'Analytics dashboard', 'Integration APIs'],
+      benefits: ['Reduced waste', 'Better forecasting', 'Cost savings', 'Optimized inventory'],
+      link: '/ai-inventory-management',
+      popular: true,
+      category: 'E-commerce',
+      rating: 4.7,
+      users: '18,000+',
+      freeTrial: '7 days'
+    },
+    // Legal & Compliance Tools
+    {
+      title: 'AI Legal Assistant Pro',
+      description: 'Advanced legal AI with contract analysis, compliance monitoring, and legal research. Streamline your legal operations.',
+      icon: '⚖️',
+      price: '$199/month',
+      originalPrice: '$299/month',
+      features: ['Contract analysis', 'Compliance monitoring', 'Legal research', 'Document review', 'Risk assessment', 'Case law analysis', 'Legal writing', 'Deadline tracking'],
+      benefits: ['Faster legal processes', 'Better compliance', 'Cost reduction', 'Risk mitigation'],
+      link: '/ai-legal-assistant',
+      popular: true,
+      category: 'Legal',
+      rating: 4.8,
+      users: '3,500+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Compliance Monitor Pro',
+      description: 'Automated compliance monitoring with regulatory updates, policy management, and audit preparation. Stay compliant effortlessly.',
+      icon: '📋',
+      price: '$149/month',
+      originalPrice: '$199/month',
+      features: ['Regulatory monitoring', 'Policy management', 'Audit preparation', 'Compliance reporting', 'Risk assessment', 'Training modules', 'Documentation', 'Alert system'],
+      benefits: ['Automated compliance', 'Reduced risk', 'Audit ready', 'Time savings'],
+      link: '/ai-compliance-monitor',
+      popular: true,
+      category: 'Legal',
+      rating: 4.7,
+      users: '4,200+',
+      freeTrial: '7 days'
+    },
+    // Education & Training Solutions
+    {
+      title: 'AI Learning Management System',
+      description: 'Intelligent LMS with personalized learning paths, automated assessments, and progress tracking. Transform education delivery.',
+      icon: '🎓',
+      price: '$79/month',
+      originalPrice: '$119/month',
+      features: ['Personalized learning', 'Automated assessments', 'Progress tracking', 'Content creation', 'Video analysis', 'Skill mapping', 'Certification', 'Mobile learning'],
+      benefits: ['Better learning outcomes', 'Personalized experience', 'Automated grading', 'Scalable education'],
+      link: '/ai-learning-management',
+      popular: true,
+      category: 'Education',
+      rating: 4.8,
+      users: '25,000+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Corporate Training Platform',
+      description: 'Advanced corporate training with AI-powered content creation, skill assessment, and personalized development plans.',
+      icon: '👔',
+      price: '$99/month',
+      originalPrice: '$149/month',
+      features: ['Content creation', 'Skill assessment', 'Personalized plans', 'Progress tracking', 'Certification', 'Team analytics', 'Mobile access', 'Integration tools'],
+      benefits: ['Better training outcomes', 'Personalized development', 'Skill tracking', 'Team performance'],
+      link: '/ai-corporate-training',
+      popular: true,
+      category: 'Education',
+      rating: 4.7,
+      users: '12,000+',
+      freeTrial: '7 days'
+    },
+    // Manufacturing & Industrial Solutions
+    {
+      title: 'AI Manufacturing Intelligence',
+      description: 'Smart manufacturing with predictive maintenance, quality control, and production optimization. Revolutionize your factory operations.',
+      icon: '🏭',
+      price: '$299/month',
+      originalPrice: '$449/month',
+      features: ['Predictive maintenance', 'Quality control', 'Production optimization', 'Supply chain management', 'Energy optimization', 'Safety monitoring', 'IoT integration', 'Real-time analytics'],
+      benefits: ['Reduced downtime', 'Better quality', 'Cost optimization', 'Safety improvement'],
+      link: '/ai-manufacturing-intelligence',
+      popular: true,
+      category: 'Manufacturing',
+      rating: 4.8,
+      users: '2,800+',
+      freeTrial: '30 days'
+    },
+    {
+      title: 'AI Quality Assurance Pro',
+      description: 'Automated quality control with computer vision, defect detection, and quality analytics. Ensure perfect product quality.',
+      icon: '🔍',
+      price: '$199/month',
+      originalPrice: '$299/month',
+      features: ['Computer vision', 'Defect detection', 'Quality analytics', 'Automated inspection', 'Real-time monitoring', 'Statistical analysis', 'Reporting dashboard', 'Integration APIs'],
+      benefits: ['Perfect quality', 'Automated inspection', 'Cost reduction', 'Consistent results'],
+      link: '/ai-quality-assurance',
+      popular: true,
+      category: 'Manufacturing',
+      rating: 4.9,
+      users: '3,500+',
+      freeTrial: '14 days'
+    },
+    // Transportation & Logistics
+    {
+      title: 'AI Fleet Management Pro',
+      description: 'Intelligent fleet management with route optimization, fuel efficiency, and predictive maintenance. Optimize your transportation operations.',
+      icon: '🚛',
+      price: '$149/month',
+      originalPrice: '$199/month',
+      features: ['Route optimization', 'Fuel efficiency', 'Predictive maintenance', 'Driver monitoring', 'Cost tracking', 'Real-time tracking', 'Analytics dashboard', 'Mobile app'],
+      benefits: ['Cost reduction', 'Better efficiency', 'Predictive maintenance', 'Route optimization'],
+      link: '/ai-fleet-management',
+      popular: true,
+      category: 'Transportation',
+      rating: 4.7,
+      users: '6,500+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Logistics Optimizer',
+      description: 'Advanced logistics optimization with demand forecasting, warehouse management, and delivery optimization. Streamline your supply chain.',
+      icon: '📦',
+      price: '$179/month',
+      originalPrice: '$249/month',
+      features: ['Demand forecasting', 'Warehouse management', 'Delivery optimization', 'Inventory tracking', 'Cost optimization', 'Real-time visibility', 'Analytics dashboard', 'API integration'],
+      benefits: ['Optimized logistics', 'Cost reduction', 'Better forecasting', 'Improved efficiency'],
+      link: '/ai-logistics-optimizer',
+      popular: true,
+      category: 'Transportation',
+      rating: 4.8,
+      users: '4,200+',
+      freeTrial: '21 days'
+    },
+    // Energy & Sustainability
+    {
+      title: 'AI Energy Management Pro',
+      description: 'Smart energy management with consumption optimization, renewable energy integration, and carbon footprint tracking.',
+      icon: '⚡',
+      price: '$129/month',
+      originalPrice: '$179/month',
+      features: ['Consumption optimization', 'Renewable integration', 'Carbon tracking', 'Cost analysis', 'Predictive modeling', 'Real-time monitoring', 'Reporting dashboard', 'IoT integration'],
+      benefits: ['Energy savings', 'Carbon reduction', 'Cost optimization', 'Sustainability'],
+      link: '/ai-energy-management',
+      popular: true,
+      category: 'Energy',
+      rating: 4.7,
+      users: '5,800+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Sustainability Tracker',
+      description: 'Comprehensive sustainability tracking with ESG reporting, carbon footprint analysis, and environmental impact assessment.',
+      icon: '🌱',
+      price: '$99/month',
+      originalPrice: '$149/month',
+      features: ['ESG reporting', 'Carbon tracking', 'Impact assessment', 'Compliance monitoring', 'Goal setting', 'Progress tracking', 'Benchmarking', 'Stakeholder reporting'],
+      benefits: ['ESG compliance', 'Sustainability goals', 'Impact measurement', 'Stakeholder transparency'],
+      link: '/ai-sustainability-tracker',
+      popular: true,
+      category: 'Sustainability',
+      rating: 4.6,
+      users: '3,200+',
+      freeTrial: '7 days'
+    },
+    // Insurance & Risk Management
+    {
+      title: 'AI Insurance Analytics Pro',
+      description: 'Advanced insurance analytics with risk assessment, fraud detection, and claims processing automation. Optimize your insurance operations.',
+      icon: '🛡️',
+      price: '$199/month',
+      originalPrice: '$299/month',
+      features: ['Risk assessment', 'Fraud detection', 'Claims automation', 'Underwriting support', 'Customer analytics', 'Pricing optimization', 'Compliance monitoring', 'Reporting tools'],
+      benefits: ['Better risk management', 'Fraud prevention', 'Faster claims', 'Cost reduction'],
+      link: '/ai-insurance-analytics',
+      popular: true,
+      category: 'Insurance',
+      rating: 4.8,
+      users: '2,500+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Risk Assessment Engine',
+      description: 'Comprehensive risk assessment with predictive modeling, scenario analysis, and mitigation strategies. Protect your business.',
+      icon: '⚠️',
+      price: '$149/month',
+      originalPrice: '$199/month',
+      features: ['Predictive modeling', 'Scenario analysis', 'Mitigation strategies', 'Risk scoring', 'Monitoring alerts', 'Compliance tracking', 'Reporting dashboard', 'Integration APIs'],
+      benefits: ['Better risk management', 'Proactive protection', 'Cost reduction', 'Compliance assurance'],
+      link: '/ai-risk-assessment',
+      popular: true,
+      category: 'Risk Management',
+      rating: 4.7,
+      users: '4,100+',
+      freeTrial: '7 days'
+    },
+    // Human Resources & Talent Management
+    {
+      title: 'AI Talent Acquisition Pro',
+      description: 'Intelligent talent acquisition with resume screening, candidate matching, and interview scheduling. Find the best talent faster.',
+      icon: '👥',
+      price: '$89/month',
+      originalPrice: '$129/month',
+      features: ['Resume screening', 'Candidate matching', 'Interview scheduling', 'Skills assessment', 'Background checks', 'Onboarding automation', 'Analytics dashboard', 'Integration tools'],
+      benefits: ['Faster hiring', 'Better candidates', 'Reduced bias', 'Cost savings'],
+      link: '/ai-talent-acquisition',
+      popular: true,
+      category: 'HR',
+      rating: 4.8,
+      users: '7,500+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Employee Engagement Platform',
+      description: 'Comprehensive employee engagement with sentiment analysis, performance tracking, and retention prediction. Boost employee satisfaction.',
+      icon: '💼',
+      price: '$79/month',
+      originalPrice: '$119/month',
+      features: ['Sentiment analysis', 'Performance tracking', 'Retention prediction', 'Engagement surveys', 'Goal setting', 'Feedback tools', 'Analytics dashboard', 'Mobile app'],
+      benefits: ['Higher engagement', 'Better retention', 'Performance insights', 'Employee satisfaction'],
+      link: '/ai-employee-engagement',
+      popular: true,
+      category: 'HR',
+      rating: 4.7,
+      users: '9,200+',
+      freeTrial: '7 days'
+    },
+    // Advanced Technology Solutions
+    {
+      title: 'AI Blockchain Integration Pro',
+      description: 'Seamless blockchain integration with smart contracts, DeFi protocols, and cryptocurrency management. Embrace the decentralized future.',
+      icon: '⛓️',
+      price: '$299/month',
+      originalPrice: '$449/month',
+      features: ['Smart contracts', 'DeFi integration', 'Crypto management', 'NFT solutions', 'Security protocols', 'Compliance tools', 'API integration', 'Analytics dashboard'],
+      benefits: ['Blockchain adoption', 'DeFi integration', 'Enhanced security', 'Future-ready tech'],
+      link: '/ai-blockchain-integration',
+      popular: true,
+      category: 'Blockchain',
+      rating: 4.8,
+      users: '1,800+',
+      freeTrial: '30 days'
+    },
+    {
+      title: 'AI IoT Management Platform',
+      description: 'Comprehensive IoT management with device monitoring, data analytics, and automated control. Connect and optimize everything.',
+      icon: '🌐',
+      price: '$179/month',
+      originalPrice: '$249/month',
+      features: ['Device monitoring', 'Data analytics', 'Automated control', 'Predictive maintenance', 'Security management', 'Integration tools', 'Real-time alerts', 'Mobile app'],
+      benefits: ['Connected operations', 'Predictive insights', 'Automated control', 'Cost optimization'],
+      link: '/ai-iot-management',
+      popular: true,
+      category: 'IoT',
+      rating: 4.7,
+      users: '3,600+',
+      freeTrial: '21 days'
+    },
+    {
+      title: 'AI Edge Computing Solutions',
+      description: 'Advanced edge computing with real-time processing, low latency optimization, and distributed intelligence. Process data at the edge.',
+      icon: '⚡',
+      price: '$249/month',
+      originalPrice: '$349/month',
+      features: ['Real-time processing', 'Low latency', 'Distributed intelligence', 'Edge analytics', 'Security protocols', 'Resource optimization', 'Integration tools', 'Monitoring dashboard'],
+      benefits: ['Ultra-low latency', 'Real-time processing', 'Reduced bandwidth', 'Enhanced security'],
+      link: '/ai-edge-computing',
+      popular: true,
+      category: 'Edge Computing',
+      rating: 4.8,
+      users: '2,200+',
+      freeTrial: '30 days'
+    },
+    {
+      title: 'AI Metaverse Development Suite',
+      description: 'Complete metaverse development with 3D world creation, avatar systems, and virtual economy management. Build immersive experiences.',
+      icon: '🌌',
+      price: '$399/month',
+      originalPrice: '$599/month',
+      features: ['3D world creation', 'Avatar systems', 'Virtual economy', 'Social features', 'VR/AR integration', 'Blockchain integration', 'Analytics tools', 'Monetization options'],
+      benefits: ['Metaverse presence', 'Immersive experiences', 'Virtual economy', 'Future-ready platform'],
+      link: '/ai-metaverse-development',
+      popular: true,
+      category: 'Metaverse',
+      rating: 4.9,
+      users: '1,500+',
+      freeTrial: '30 days'
     }
   ];
 
@@ -734,111 +1327,6 @@ const HomePage: React.FC = () => {
       category: 'AI Development',
       rating: 4.9,
       users: '500+',
-      freeTrial: '30 days'
-    },
-    {
-      title: 'AI Cybersecurity Shield Pro',
-      description: 'Advanced AI-powered security solutions with real-time threat detection, behavioral analysis, and automated response.',
-      icon: Shield,
-      price: '$2,200/month',
-      originalPrice: '$3,000/month',
-      features: ['Threat Detection', 'Behavioral Analysis', 'Automated Response', 'Security Monitoring', 'Incident Response', 'Vulnerability Assessment', 'Compliance Reporting', '24/7 Monitoring'],
-      benefits: ['99.9% threat detection', 'Zero false positives', 'Automated response', 'Compliance ready'],
-      link: '/ai-cybersecurity',
-      popular: true,
-      category: 'Security',
-      rating: 4.8,
-      users: '300+',
-      freeTrial: '30 days'
-    },
-    {
-      title: 'AI Healthcare Assistant Pro',
-      description: 'Revolutionary healthcare AI with diagnostic assistance, patient monitoring, and treatment optimization.',
-      icon: Stethoscope,
-      price: '$3,500/month',
-      originalPrice: '$5,000/month',
-      features: ['Diagnostic Assistance', 'Patient Monitoring', 'Treatment Optimization', 'Medical Imaging', 'Drug Discovery', 'Clinical Trials', 'Patient Records', 'Telemedicine'],
-      benefits: ['30% faster diagnosis', 'Better patient outcomes', 'Reduced errors', 'Cost savings'],
-      link: '/ai-healthcare',
-      popular: true,
-      category: 'Healthcare',
-      rating: 4.9,
-      users: '200+',
-      freeTrial: '30 days'
-    },
-    {
-      title: 'AI Financial Advisor Pro',
-      description: 'Intelligent financial planning with portfolio optimization, risk assessment, and automated trading.',
-      icon: DollarSign,
-      price: '$1,800/month',
-      originalPrice: '$2,500/month',
-      features: ['Portfolio Optimization', 'Risk Assessment', 'Automated Trading', 'Market Analysis', 'Tax Optimization', 'Retirement Planning', 'Insurance Analysis', 'Real-time Alerts'],
-      benefits: ['25% better returns', 'Risk reduction', 'Automated management', 'Tax optimization'],
-      link: '/ai-financial-advisor',
-      popular: true,
-      category: 'Finance',
-      rating: 4.7,
-      users: '400+',
-      freeTrial: '30 days'
-    },
-    {
-      title: 'AI Supply Chain Optimizer',
-      description: 'Intelligent supply chain management with demand forecasting, inventory optimization, and logistics automation.',
-      icon: Truck,
-      price: '$2,500/month',
-      originalPrice: '$3,500/month',
-      features: ['Demand Forecasting', 'Inventory Optimization', 'Route Planning', 'Supplier Management', 'Quality Control', 'Cost Optimization', 'Risk Management', 'Sustainability Tracking'],
-      benefits: ['35% cost reduction', '99% on-time delivery', 'Better inventory management', 'Sustainability goals'],
-      link: '/ai-supply-chain',
-      popular: true,
-      category: 'Logistics',
-      rating: 4.8,
-      users: '250+',
-      freeTrial: '30 days'
-    },
-    {
-      title: 'AI Legal Assistant Pro',
-      description: 'Advanced legal AI with contract analysis, case research, and document automation.',
-      icon: FileText,
-      price: '$2,000/month',
-      originalPrice: '$2,800/month',
-      features: ['Contract Analysis', 'Case Research', 'Document Automation', 'Legal Research', 'Compliance Checking', 'Risk Assessment', 'Due Diligence', 'Litigation Support'],
-      benefits: ['80% faster research', 'Better accuracy', 'Cost reduction', 'Risk mitigation'],
-      link: '/ai-legal-assistant',
-      popular: true,
-      category: 'Legal',
-      rating: 4.6,
-      users: '150+',
-      freeTrial: '30 days'
-    },
-    {
-      title: 'AI Manufacturing Intelligence',
-      description: 'Smart manufacturing with predictive maintenance, quality control, and production optimization.',
-      icon: Factory,
-      price: '$3,000/month',
-      originalPrice: '$4,200/month',
-      features: ['Predictive Maintenance', 'Quality Control', 'Production Optimization', 'Supply Chain Integration', 'Energy Management', 'Safety Monitoring', 'Performance Analytics', 'IoT Integration'],
-      benefits: ['40% efficiency increase', 'Zero downtime', 'Better quality', 'Cost savings'],
-      link: '/ai-manufacturing',
-      popular: true,
-      category: 'Manufacturing',
-      rating: 4.9,
-      users: '180+',
-      freeTrial: '30 days'
-    },
-    {
-      title: 'AI Education Platform Pro',
-      description: 'Personalized learning with adaptive curriculum, student analytics, and automated assessment.',
-      icon: GraduationCap,
-      price: '$1,200/month',
-      originalPrice: '$1,800/month',
-      features: ['Adaptive Learning', 'Student Analytics', 'Automated Assessment', 'Content Generation', 'Progress Tracking', 'Parent Communication', 'Teacher Tools', 'Accessibility Features'],
-      benefits: ['50% better learning outcomes', 'Personalized education', 'Teacher efficiency', 'Student engagement'],
-      link: '/ai-education',
-      popular: true,
-      category: 'Education',
-      rating: 4.7,
-      users: '600+',
       freeTrial: '30 days'
     },
     {
@@ -975,6 +1463,141 @@ const HomePage: React.FC = () => {
       rating: 4.8,
       users: '1,000+',
       freeTrial: '14 days'
+    },
+    {
+      title: 'AI Predictive Analytics Platform',
+      description: 'Enterprise-grade predictive analytics with machine learning models for forecasting, trend analysis, and business intelligence.',
+      icon: BarChart,
+      price: '$1,800/month',
+      originalPrice: '$2,500/month',
+      features: ['Predictive Modeling', 'Time Series Analysis', 'Anomaly Detection', 'Forecasting', 'Risk Assessment', 'Custom Algorithms', 'Real-time Processing', 'API Integration'],
+      benefits: ['Data-driven decisions', 'Predictive insights', 'Risk mitigation', 'Competitive advantage'],
+      link: '/ai-predictive-analytics',
+      popular: true,
+      category: 'Analytics',
+      rating: 4.9,
+      users: '1,500+',
+      freeTrial: '30 days'
+    },
+    {
+      title: 'AI Conversational Intelligence',
+      description: 'Advanced conversational AI with natural language understanding, context awareness, and multi-modal interactions.',
+      icon: MessageSquare,
+      price: '$1,200/month',
+      originalPrice: '$1,800/month',
+      features: ['Natural Language Understanding', 'Context Awareness', 'Multi-modal Interaction', 'Sentiment Analysis', 'Intent Recognition', 'Conversation Management', 'Voice Integration', 'API Access'],
+      benefits: ['Better conversations', 'Context understanding', 'Multi-modal support', 'Enhanced user experience'],
+      link: '/ai-conversational-intelligence',
+      popular: true,
+      category: 'AI Development',
+      rating: 4.8,
+      users: '2,200+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Recommendation Engine Pro',
+      description: 'Sophisticated recommendation systems with collaborative filtering, content-based filtering, and hybrid approaches for personalized experiences.',
+      icon: Target,
+      price: '$1,100/month',
+      originalPrice: '$1,600/month',
+      features: ['Collaborative Filtering', 'Content-based Filtering', 'Hybrid Approaches', 'Real-time Recommendations', 'A/B Testing', 'Performance Analytics', 'Scalable Architecture', 'API Integration'],
+      benefits: ['Personalized experiences', 'Higher engagement', 'Increased conversions', 'Better user satisfaction'],
+      link: '/ai-recommendation-engine',
+      popular: true,
+      category: 'AI Development',
+      rating: 4.7,
+      users: '3,000+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Anomaly Detection System',
+      description: 'Advanced anomaly detection with unsupervised learning, real-time monitoring, and automated alerting for security and quality assurance.',
+      icon: Shield,
+      price: '$1,300/month',
+      originalPrice: '$1,900/month',
+      features: ['Unsupervised Learning', 'Real-time Monitoring', 'Automated Alerting', 'Pattern Recognition', 'Statistical Analysis', 'Custom Thresholds', 'Integration APIs', 'Dashboard Analytics'],
+      benefits: ['Early threat detection', 'Quality assurance', 'Automated monitoring', 'Risk reduction'],
+      link: '/ai-anomaly-detection',
+      popular: true,
+      category: 'Security',
+      rating: 4.8,
+      users: '1,800+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Time Series Forecasting',
+      description: 'Specialized time series analysis with seasonal decomposition, trend analysis, and forecasting for business and scientific applications.',
+      icon: TrendingUp,
+      price: '$1,000/month',
+      originalPrice: '$1,400/month',
+      features: ['Seasonal Decomposition', 'Trend Analysis', 'Forecasting Models', 'ARIMA/SARIMA', 'Exponential Smoothing', 'Prophet Integration', 'Custom Models', 'Real-time Updates'],
+      benefits: ['Accurate forecasting', 'Trend identification', 'Seasonal insights', 'Business planning'],
+      link: '/ai-time-series-forecasting',
+      popular: true,
+      category: 'Analytics',
+      rating: 4.7,
+      users: '2,500+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Document Intelligence',
+      description: 'Intelligent document processing with OCR, NLP, and knowledge extraction for automated document understanding and analysis.',
+      icon: FileText,
+      price: '$1,500/month',
+      originalPrice: '$2,200/month',
+      features: ['OCR Processing', 'NLP Analysis', 'Knowledge Extraction', 'Document Classification', 'Entity Recognition', 'Sentiment Analysis', 'Multi-format Support', 'API Integration'],
+      benefits: ['Automated processing', 'Knowledge extraction', 'Document understanding', 'Time savings'],
+      link: '/ai-document-intelligence',
+      popular: true,
+      category: 'AI Development',
+      rating: 4.8,
+      users: '1,200+',
+      freeTrial: '21 days'
+    },
+    {
+      title: 'AI Speech Recognition Pro',
+      description: 'Advanced speech recognition with multi-language support, noise cancellation, and real-time transcription for enterprise applications.',
+      icon: Mic,
+      price: '$1,100/month',
+      originalPrice: '$1,600/month',
+      features: ['Multi-language Support', 'Noise Cancellation', 'Real-time Transcription', 'Speaker Identification', 'Custom Vocabulary', 'API Access', 'Batch Processing', 'Integration Tools'],
+      benefits: ['Accurate transcription', 'Multi-language support', 'Real-time processing', 'Easy integration'],
+      link: '/ai-speech-recognition',
+      popular: true,
+      category: 'AI Development',
+      rating: 4.7,
+      users: '2,800+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Image Generation Studio',
+      description: 'Professional AI image generation with style transfer, image editing, and creative content creation for marketing and design.',
+      icon: Camera,
+      price: '$1,400/month',
+      originalPrice: '$2,000/month',
+      features: ['Style Transfer', 'Image Editing', 'Creative Generation', 'Custom Models', 'Batch Processing', 'High Resolution', 'API Access', 'Integration Tools'],
+      benefits: ['Creative content', 'Style consistency', 'Time savings', 'Professional quality'],
+      link: '/ai-image-generation',
+      popular: true,
+      category: 'Creative',
+      rating: 4.8,
+      users: '3,500+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Video Analytics Platform',
+      description: 'Comprehensive video analysis with object tracking, behavior analysis, and real-time monitoring for security and business intelligence.',
+      icon: Video,
+      price: '$1,600/month',
+      originalPrice: '$2,300/month',
+      features: ['Object Tracking', 'Behavior Analysis', 'Real-time Monitoring', 'Facial Recognition', 'Motion Detection', 'Event Detection', 'Analytics Dashboard', 'API Integration'],
+      benefits: ['Security enhancement', 'Behavior insights', 'Real-time monitoring', 'Automated analysis'],
+      link: '/ai-video-analytics',
+      popular: true,
+      category: 'Security',
+      rating: 4.9,
+      users: '1,100+',
+      freeTrial: '21 days'
     }
   ];
 
@@ -992,111 +1615,6 @@ const HomePage: React.FC = () => {
       category: 'Cloud Services',
       rating: 4.8,
       users: '600+',
-      freeTrial: '30 days'
-    },
-    {
-      title: 'Enterprise IT Infrastructure',
-      description: 'Complete enterprise IT infrastructure with high availability, scalability, and security. Built for Fortune 500 companies.',
-      icon: Building,
-      price: '$5,000/month',
-      originalPrice: '$7,500/month',
-      features: ['High Availability Setup', 'Load Balancing', 'Auto-scaling', 'Disaster Recovery', 'Security Hardening', 'Performance Monitoring', 'Backup Solutions', '24/7 Support'],
-      benefits: ['99.99% uptime', 'Unlimited scalability', 'Enterprise security', 'Cost optimization'],
-      link: '/enterprise-infrastructure',
-      popular: true,
-      category: 'Infrastructure',
-      rating: 4.9,
-      users: '100+',
-      freeTrial: '30 days'
-    },
-    {
-      title: 'DevOps & CI/CD Automation',
-      description: 'Complete DevOps transformation with automated CI/CD pipelines, infrastructure as code, and monitoring.',
-      icon: Settings,
-      price: '$2,500/month',
-      originalPrice: '$3,500/month',
-      features: ['CI/CD Pipelines', 'Infrastructure as Code', 'Container Orchestration', 'Monitoring & Alerting', 'Security Scanning', 'Automated Testing', 'Deployment Automation', 'Team Training'],
-      benefits: ['10x faster deployments', 'Zero downtime', 'Better quality', 'Team productivity'],
-      link: '/devops-automation',
-      popular: true,
-      category: 'DevOps',
-      rating: 4.8,
-      users: '400+',
-      freeTrial: '30 days'
-    },
-    {
-      title: 'Database Management & Optimization',
-      description: 'Advanced database services with performance tuning, backup strategies, and high availability setup.',
-      icon: Database,
-      price: '$1,800/month',
-      originalPrice: '$2,500/month',
-      features: ['Performance Tuning', 'Backup & Recovery', 'High Availability', 'Security Hardening', 'Monitoring', 'Query Optimization', 'Index Management', 'Capacity Planning'],
-      benefits: ['50% performance improvement', 'Zero data loss', 'Better security', 'Cost reduction'],
-      link: '/database-management',
-      popular: true,
-      category: 'Database',
-      rating: 4.7,
-      users: '350+',
-      freeTrial: '30 days'
-    },
-    {
-      title: 'Network Security & Firewall',
-      description: 'Advanced network security with next-generation firewalls, intrusion detection, and threat prevention.',
-      icon: Lock,
-      price: '$1,500/month',
-      originalPrice: '$2,200/month',
-      features: ['Next-Gen Firewalls', 'Intrusion Detection', 'Threat Prevention', 'VPN Solutions', 'Network Monitoring', 'Access Control', 'Compliance Reporting', '24/7 Monitoring'],
-      benefits: ['99.9% threat prevention', 'Zero breaches', 'Compliance ready', 'Better performance'],
-      link: '/network-security',
-      popular: true,
-      category: 'Security',
-      rating: 4.9,
-      users: '500+',
-      freeTrial: '30 days'
-    },
-    {
-      title: 'IT Consulting & Strategy',
-      description: 'Strategic IT consulting with digital transformation, technology roadmaps, and implementation planning.',
-      icon: Briefcase,
-      price: '$3,000/month',
-      originalPrice: '$4,500/month',
-      features: ['Digital Transformation', 'Technology Roadmaps', 'Implementation Planning', 'Vendor Management', 'Cost Optimization', 'Risk Assessment', 'Compliance Planning', 'Change Management'],
-      benefits: ['Better IT strategy', 'Cost optimization', 'Risk reduction', 'Competitive advantage'],
-      link: '/it-consulting',
-      popular: true,
-      category: 'Consulting',
-      rating: 4.8,
-      users: '200+',
-      freeTrial: '30 days'
-    },
-    {
-      title: 'Managed IT Services',
-      description: 'Complete managed IT services with 24/7 monitoring, maintenance, and support for all your IT needs.',
-      icon: Users,
-      price: '$1,200/month',
-      originalPrice: '$1,800/month',
-      features: ['24/7 Monitoring', 'Proactive Maintenance', 'Help Desk Support', 'Security Management', 'Backup & Recovery', 'Software Updates', 'Hardware Management', 'Performance Optimization'],
-      benefits: ['Reduced IT costs', 'Better uptime', 'Expert support', 'Peace of mind'],
-      link: '/managed-it-services',
-      popular: true,
-      category: 'Managed Services',
-      rating: 4.7,
-      users: '800+',
-      freeTrial: '30 days'
-    },
-    {
-      title: 'Mobile App Development',
-      description: 'Native and cross-platform mobile app development with modern technologies and best practices.',
-      icon: Smartphone,
-      price: '$2,800/month',
-      originalPrice: '$4,000/month',
-      features: ['Native iOS/Android', 'Cross-platform Development', 'UI/UX Design', 'API Integration', 'Push Notifications', 'Analytics Integration', 'App Store Optimization', 'Maintenance & Support'],
-      benefits: ['Professional apps', 'Cross-platform', 'Better user experience', 'Faster time to market'],
-      link: '/mobile-app-development',
-      popular: true,
-      category: 'Development',
-      rating: 4.8,
-      users: '300+',
       freeTrial: '30 days'
     },
     {
@@ -1158,6 +1676,186 @@ const HomePage: React.FC = () => {
       rating: 4.9,
       users: '200+',
       freeTrial: '30 days'
+    },
+    {
+      title: 'Cloud Infrastructure Management',
+      description: 'Comprehensive cloud infrastructure management with monitoring, optimization, and cost control for AWS, Azure, and GCP.',
+      icon: Cloud,
+      price: '$1,800/month',
+      originalPrice: '$2,500/month',
+      features: ['Multi-cloud Management', 'Cost Optimization', 'Performance Monitoring', 'Security Hardening', 'Auto-scaling', 'Backup & Recovery', 'Compliance', '24/7 Support'],
+      benefits: ['Cost optimization', 'Better performance', 'Enhanced security', 'Scalable infrastructure'],
+      link: '/cloud-infrastructure-management',
+      popular: true,
+      category: 'Cloud Services',
+      rating: 4.8,
+      users: '1,200+',
+      freeTrial: '30 days'
+    },
+    {
+      title: 'Network Security Solutions',
+      description: 'Advanced network security with firewall management, intrusion detection, and threat prevention. Protect your network infrastructure.',
+      icon: Shield,
+      price: '$1,500/month',
+      originalPrice: '$2,200/month',
+      features: ['Firewall Management', 'Intrusion Detection', 'Threat Prevention', 'VPN Solutions', 'Network Monitoring', 'Security Audits', 'Compliance', 'Incident Response'],
+      benefits: ['Enhanced security', 'Threat prevention', 'Compliance assurance', 'Network protection'],
+      link: '/network-security-solutions',
+      popular: true,
+      category: 'Security',
+      rating: 4.9,
+      users: '800+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'Data Center Solutions',
+      description: 'Complete data center services with colocation, cloud connectivity, and managed services. Reliable infrastructure for your business.',
+      icon: Database,
+      price: '$2,200/month',
+      originalPrice: '$3,200/month',
+      features: ['Colocation Services', 'Cloud Connectivity', 'Managed Services', 'Disaster Recovery', 'Backup Solutions', 'Monitoring', 'Security', '24/7 Support'],
+      benefits: ['Reliable infrastructure', 'Disaster recovery', 'Cost efficiency', 'Scalable solutions'],
+      link: '/data-center-solutions',
+      popular: true,
+      category: 'Infrastructure',
+      rating: 4.7,
+      users: '600+',
+      freeTrial: '30 days'
+    },
+    {
+      title: 'IT Asset Management Pro',
+      description: 'Comprehensive IT asset management with inventory tracking, lifecycle management, and cost optimization. Manage your IT assets efficiently.',
+      icon: BarChart,
+      price: '$800/month',
+      originalPrice: '$1,200/month',
+      features: ['Asset Inventory', 'Lifecycle Management', 'Cost Tracking', 'Depreciation Analysis', 'Compliance Reporting', 'Automated Discovery', 'Integration Tools', 'Analytics Dashboard'],
+      benefits: ['Better asset visibility', 'Cost optimization', 'Compliance tracking', 'Lifecycle management'],
+      link: '/it-asset-management-pro',
+      popular: true,
+      category: 'Management',
+      rating: 4.6,
+      users: '1,500+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'IT Help Desk Solutions',
+      description: 'Professional IT help desk services with ticketing, remote support, and knowledge management. Streamline your IT support operations.',
+      icon: Users,
+      price: '$1,000/month',
+      originalPrice: '$1,500/month',
+      features: ['Ticketing System', 'Remote Support', 'Knowledge Base', 'SLA Management', 'Multi-channel Support', 'Reporting', 'Integration', 'Mobile App'],
+      benefits: ['Faster resolution', 'Better tracking', 'Improved satisfaction', 'Cost efficiency'],
+      link: '/it-help-desk-solutions',
+      popular: true,
+      category: 'Support',
+      rating: 4.7,
+      users: '2,000+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'IT Compliance & Governance',
+      description: 'Comprehensive IT compliance and governance with policy management, audit preparation, and regulatory compliance. Stay compliant and secure.',
+      icon: FileText,
+      price: '$1,400/month',
+      originalPrice: '$2,000/month',
+      features: ['Policy Management', 'Audit Preparation', 'Regulatory Compliance', 'Risk Assessment', 'Documentation', 'Training', 'Monitoring', 'Reporting'],
+      benefits: ['Compliance assurance', 'Risk reduction', 'Audit readiness', 'Policy enforcement'],
+      link: '/it-compliance-governance',
+      popular: true,
+      category: 'Compliance',
+      rating: 4.8,
+      users: '900+',
+      freeTrial: '21 days'
+    },
+    {
+      title: 'IT Performance Optimization',
+      description: 'Advanced IT performance optimization with monitoring, analysis, and tuning. Maximize your IT infrastructure performance.',
+      icon: Zap,
+      price: '$1,200/month',
+      originalPrice: '$1,800/month',
+      features: ['Performance Monitoring', 'Bottleneck Analysis', 'Optimization Tuning', 'Capacity Planning', 'Load Testing', 'Real-time Alerts', 'Reporting', 'Integration'],
+      benefits: ['Better performance', 'Cost optimization', 'Proactive monitoring', 'Scalable solutions'],
+      link: '/it-performance-optimization',
+      popular: true,
+      category: 'Performance',
+      rating: 4.7,
+      users: '1,100+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'IT Disaster Recovery Services',
+      description: 'Comprehensive disaster recovery solutions with backup, replication, and recovery testing. Protect your business from disasters.',
+      icon: Database,
+      price: '$1,600/month',
+      originalPrice: '$2,400/month',
+      features: ['Backup Solutions', 'Data Replication', 'Recovery Testing', 'RTO/RPO Planning', 'Cloud Backup', 'On-site Recovery', 'Monitoring', '24/7 Support'],
+      benefits: ['Business continuity', 'Data protection', 'Fast recovery', 'Peace of mind'],
+      link: '/it-disaster-recovery',
+      popular: true,
+      category: 'Disaster Recovery',
+      rating: 4.9,
+      users: '700+',
+      freeTrial: '30 days'
+    },
+    {
+      title: 'IT Training & Certification',
+      description: 'Professional IT training and certification programs with hands-on labs, expert instructors, and industry-recognized certifications.',
+      icon: GraduationCap,
+      price: '$600/month',
+      originalPrice: '$900/month',
+      features: ['Hands-on Labs', 'Expert Instructors', 'Industry Certifications', 'Custom Training', 'Online Learning', 'Assessment Tools', 'Progress Tracking', 'Certification Support'],
+      benefits: ['Skill development', 'Industry recognition', 'Career advancement', 'Team productivity'],
+      link: '/it-training-certification',
+      popular: true,
+      category: 'Training',
+      rating: 4.8,
+      users: '3,500+',
+      freeTrial: '7 days'
+    },
+    {
+      title: 'IT Consulting Services',
+      description: 'Strategic IT consulting with technology assessment, roadmap planning, and digital transformation guidance. Transform your IT strategy.',
+      icon: Briefcase,
+      price: '$2,500/month',
+      originalPrice: '$3,500/month',
+      features: ['Technology Assessment', 'Roadmap Planning', 'Digital Transformation', 'Architecture Design', 'Vendor Selection', 'Implementation Planning', 'Change Management', 'Ongoing Support'],
+      benefits: ['Strategic guidance', 'Technology alignment', 'Digital transformation', 'Competitive advantage'],
+      link: '/it-consulting-services',
+      popular: true,
+      category: 'Consulting',
+      rating: 4.9,
+      users: '400+',
+      freeTrial: '30 days'
+    },
+    {
+      title: 'IT Integration Services',
+      description: 'Seamless IT integration with API development, system connectivity, and data synchronization. Connect your systems effectively.',
+      icon: Settings,
+      price: '$1,800/month',
+      originalPrice: '$2,600/month',
+      features: ['API Development', 'System Integration', 'Data Synchronization', 'Legacy Modernization', 'Cloud Integration', 'Real-time Processing', 'Monitoring', 'Support'],
+      benefits: ['Seamless integration', 'Data consistency', 'Improved efficiency', 'System connectivity'],
+      link: '/it-integration-services',
+      popular: true,
+      category: 'Integration',
+      rating: 4.7,
+      users: '1,000+',
+      freeTrial: '21 days'
+    },
+    {
+      title: 'IT Monitoring & Alerting',
+      description: 'Comprehensive IT monitoring with real-time alerts, performance tracking, and incident management. Monitor your IT infrastructure 24/7.',
+      icon: Activity,
+      price: '$900/month',
+      originalPrice: '$1,300/month',
+      features: ['Real-time Monitoring', 'Performance Tracking', 'Alert Management', 'Incident Response', 'Dashboard Analytics', 'Custom Metrics', 'Integration', 'Mobile Access'],
+      benefits: ['Proactive monitoring', 'Faster resolution', 'Better visibility', 'Reduced downtime'],
+      link: '/it-monitoring-alerting',
+      popular: true,
+      category: 'Monitoring',
+      rating: 4.8,
+      users: '1,800+',
+      freeTrial: '14 days'
     }
   ];
 
@@ -1221,12 +1919,192 @@ const HomePage: React.FC = () => {
       rating: 4.8,
       users: '400+',
       freeTrial: '30 days'
+    },
+    {
+      title: 'Advanced Robotics Systems',
+      description: 'Cutting-edge robotics solutions with AI integration, autonomous navigation, and human-robot collaboration for industrial and service applications.',
+      icon: Settings,
+      price: '$4,500/month',
+      originalPrice: '$6,500/month',
+      features: ['AI Integration', 'Autonomous Navigation', 'Human-Robot Collaboration', 'Computer Vision', 'Machine Learning', 'Safety Systems', 'Custom Development', 'Training'],
+      benefits: ['Automation efficiency', 'Safety improvement', 'Cost reduction', 'Innovation leadership'],
+      link: '/advanced-robotics-systems',
+      popular: true,
+      category: 'Robotics',
+      rating: 4.9,
+      users: '150+',
+      freeTrial: '45 days'
+    },
+    {
+      title: 'Space Technology Solutions',
+      description: 'Advanced space technology solutions with satellite systems, space data analytics, and aerospace engineering for commercial and research applications.',
+      icon: Globe,
+      price: '$5,000/month',
+      originalPrice: '$7,500/month',
+      features: ['Satellite Systems', 'Space Data Analytics', 'Aerospace Engineering', 'Orbital Mechanics', 'Ground Station Management', 'Mission Planning', 'Custom Development', 'Research Support'],
+      benefits: ['Space access', 'Data insights', 'Innovation opportunities', 'Future technology'],
+      link: '/space-technology-solutions',
+      popular: true,
+      category: 'Space Tech',
+      rating: 4.8,
+      users: '80+',
+      freeTrial: '60 days'
+    },
+    {
+      title: 'Climate Technology Solutions',
+      description: 'Comprehensive climate technology with carbon tracking, environmental monitoring, and sustainability solutions for climate change mitigation.',
+      icon: Globe,
+      price: '$2,800/month',
+      originalPrice: '$4,200/month',
+      features: ['Carbon Tracking', 'Environmental Monitoring', 'Sustainability Solutions', 'Climate Modeling', 'ESG Reporting', 'Renewable Energy', 'Green Technology', 'Compliance'],
+      benefits: ['Climate impact', 'Sustainability goals', 'ESG compliance', 'Environmental responsibility'],
+      link: '/climate-technology-solutions',
+      popular: true,
+      category: 'Climate Tech',
+      rating: 4.7,
+      users: '400+',
+      freeTrial: '30 days'
+    },
+    {
+      title: 'Biotechnology IT Solutions',
+      description: 'Advanced biotechnology IT with genomic analysis, drug discovery platforms, and bioinformatics solutions for life sciences and healthcare.',
+      icon: Stethoscope,
+      price: '$3,500/month',
+      originalPrice: '$5,200/month',
+      features: ['Genomic Analysis', 'Drug Discovery Platforms', 'Bioinformatics Solutions', 'Clinical Data Management', 'Regulatory Compliance', 'Research Tools', 'Custom Development', 'Support'],
+      benefits: ['Research acceleration', 'Drug discovery', 'Clinical efficiency', 'Life sciences innovation'],
+      link: '/biotechnology-it-solutions',
+      popular: true,
+      category: 'BioTech',
+      rating: 4.8,
+      users: '200+',
+      freeTrial: '45 days'
+    },
+    {
+      title: 'Smart City Solutions',
+      description: 'Comprehensive smart city solutions with IoT integration, urban analytics, and citizen services for sustainable and efficient cities.',
+      icon: Building,
+      price: '$4,200/month',
+      originalPrice: '$6,000/month',
+      features: ['IoT Integration', 'Urban Analytics', 'Citizen Services', 'Traffic Management', 'Energy Optimization', 'Public Safety', 'Environmental Monitoring', 'Data Analytics'],
+      benefits: ['Urban efficiency', 'Citizen satisfaction', 'Sustainability', 'Smart infrastructure'],
+      link: '/smart-city-solutions',
+      popular: true,
+      category: 'Smart City',
+      rating: 4.9,
+      users: '120+',
+      freeTrial: '60 days'
+    },
+    {
+      title: 'FinTech Solutions',
+      description: 'Advanced financial technology solutions with payment processing, blockchain integration, and digital banking platforms for modern finance.',
+      icon: CreditCard,
+      price: '$2,500/month',
+      originalPrice: '$3,800/month',
+      features: ['Payment Processing', 'Blockchain Integration', 'Digital Banking', 'Risk Management', 'Compliance Tools', 'API Development', 'Security Protocols', 'Analytics'],
+      benefits: ['Financial innovation', 'Secure transactions', 'Regulatory compliance', 'Digital transformation'],
+      link: '/fintech-solutions',
+      popular: true,
+      category: 'FinTech',
+      rating: 4.8,
+      users: '350+',
+      freeTrial: '30 days'
+    },
+    {
+      title: 'HealthTech Infrastructure',
+      description: 'Comprehensive health technology infrastructure with telemedicine platforms, health data analytics, and medical device integration.',
+      icon: Stethoscope,
+      price: '$3,000/month',
+      originalPrice: '$4,500/month',
+      features: ['Telemedicine Platforms', 'Health Data Analytics', 'Medical Device Integration', 'Patient Management', 'Clinical Workflows', 'HIPAA Compliance', 'Interoperability', 'Support'],
+      benefits: ['Healthcare efficiency', 'Patient care', 'Data security', 'Medical innovation'],
+      link: '/healthtech-infrastructure',
+      popular: true,
+      category: 'HealthTech',
+      rating: 4.9,
+      users: '280+',
+      freeTrial: '30 days'
+    },
+    {
+      title: 'EdTech Solutions',
+      description: 'Advanced educational technology with learning management systems, virtual classrooms, and AI-powered educational tools for modern learning.',
+      icon: GraduationCap,
+      price: '$1,800/month',
+      originalPrice: '$2,700/month',
+      features: ['Learning Management Systems', 'Virtual Classrooms', 'AI Educational Tools', 'Student Analytics', 'Content Management', 'Assessment Tools', 'Mobile Learning', 'Integration'],
+      benefits: ['Enhanced learning', 'Student engagement', 'Educational efficiency', 'Learning outcomes'],
+      link: '/edtech-solutions',
+      popular: true,
+      category: 'EdTech',
+      rating: 4.7,
+      users: '800+',
+      freeTrial: '21 days'
+    },
+    {
+      title: 'RetailTech Solutions',
+      description: 'Comprehensive retail technology with omnichannel platforms, inventory management, and customer analytics for modern retail operations.',
+      icon: ShoppingCart,
+      price: '$2,200/month',
+      originalPrice: '$3,300/month',
+      features: ['Omnichannel Platforms', 'Inventory Management', 'Customer Analytics', 'POS Systems', 'E-commerce Integration', 'Supply Chain', 'Mobile Commerce', 'Analytics'],
+      benefits: ['Retail efficiency', 'Customer experience', 'Inventory optimization', 'Sales growth'],
+      link: '/retailtech-solutions',
+      popular: true,
+      category: 'RetailTech',
+      rating: 4.8,
+      users: '450+',
+      freeTrial: '21 days'
+    },
+    {
+      title: 'Metaverse Development',
+      description: 'Complete metaverse development with virtual worlds, avatar systems, and immersive experiences for the next generation of digital interaction.',
+      icon: Globe,
+      price: '$4,000/month',
+      originalPrice: '$6,000/month',
+      features: ['Virtual Worlds', 'Avatar Systems', 'Immersive Experiences', 'VR/AR Integration', 'Blockchain Integration', 'Social Features', 'Monetization', 'Analytics'],
+      benefits: ['Digital presence', 'Immersive experiences', 'Future technology', 'Innovation leadership'],
+      link: '/metaverse-development',
+      popular: true,
+      category: 'Metaverse',
+      rating: 4.9,
+      users: '180+',
+      freeTrial: '45 days'
+    },
+    {
+      title: 'Edge Computing Solutions',
+      description: 'Advanced edge computing with distributed processing, low-latency applications, and real-time data processing for IoT and mobile applications.',
+      icon: Cpu,
+      price: '$2,800/month',
+      originalPrice: '$4,200/month',
+      features: ['Distributed Processing', 'Low-latency Applications', 'Real-time Processing', 'IoT Integration', 'Mobile Edge Computing', 'Security Protocols', 'Analytics', 'Monitoring'],
+      benefits: ['Ultra-low latency', 'Real-time processing', 'Reduced bandwidth', 'Enhanced security'],
+      link: '/edge-computing-solutions',
+      popular: true,
+      category: 'Edge Computing',
+      rating: 4.8,
+      users: '320+',
+      freeTrial: '30 days'
+    },
+    {
+      title: 'Advanced Cybersecurity Solutions',
+      description: 'Next-generation cybersecurity with AI-powered threat detection, zero-trust architecture, and advanced security analytics for enterprise protection.',
+      icon: Shield,
+      price: '$3,200/month',
+      originalPrice: '$4,800/month',
+      features: ['AI Threat Detection', 'Zero-trust Architecture', 'Advanced Analytics', 'Threat Intelligence', 'Incident Response', 'Compliance', 'Security Training', '24/7 Monitoring'],
+      benefits: ['Advanced protection', 'Threat prevention', 'Compliance assurance', 'Security expertise'],
+      link: '/advanced-cybersecurity-solutions',
+      popular: true,
+      category: 'Cybersecurity',
+      rating: 4.9,
+      users: '250+',
+      freeTrial: '30 days'
     }
   ];
 
   return (
-    <EnhancedErrorBoundary>
-      <EnhancedSEO
+    <ErrorBoundary>
+      <SEOOptimizer
         title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
         keywords={['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services', 'artificial intelligence', 'business intelligence', 'data analytics', 'cybersecurity', 'cloud migration', 'DevOps', 'IT consulting']}
@@ -1254,116 +2132,84 @@ const HomePage: React.FC = () => {
             "addressCountry": "US"
           }
         }}
-        preload={[
-          { href: '/fonts/inter.woff2', as: 'font', type: 'font/woff2' },
-          { href: '/images/hero-bg.jpg', as: 'image' }
-        ]}
-        prefetch={[
-          { href: '/services', as: 'document' },
-          { href: '/contact', as: 'document' },
-          { href: '/about', as: 'document' }
-        ]}
-        dnsPrefetch={[
-          'https://fonts.googleapis.com',
-          'https://fonts.gstatic.com',
-          'https://www.google-analytics.com'
-        ]}
-        preconnect={[
-          'https://fonts.googleapis.com',
-          'https://fonts.gstatic.com',
-          'https://www.google-analytics.com',
-          'https://www.googletagmanager.com'
-        ]}
       >
-        <PerformanceEnhancer
-          enableWebVitals={true}
-          enableResourceTiming={true}
-          enableMemoryMonitoring={true}
-          enableNetworkMonitoring={true}
-          enableUserTiming={true}
-          enableLongTaskMonitoring={true}
-          enableLayoutShiftMonitoring={true}
-          enableAnalytics={true}
-          enableErrorReporting={true}
-          performanceBudget={{
-            lcp: 2500,
-            fid: 100,
-            cls: 0.1,
-            fcp: 1800,
-            ttfb: 600
-          }}
-        />
-        <AccessibilityEnhancer
-          enableKeyboardNavigation={true}
-          enableScreenReaderSupport={true}
-          enableHighContrast={true}
-          enableFocusManagement={true}
-          enableAriaLabels={true}
-          enableSkipLinks={true}
-          enableColorContrast={true}
-          enableTextScaling={true}
-          enableMotionReduction={true}
-          enableVoiceNavigation={true}
-          enableAnalytics={true}
-          enableErrorReporting={true}
-        />
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
           <Navigation />
           
           {/* Hero Section */}
-          <section className="relative pt-20 pb-16 overflow-hidden">
+          <section className="relative pt-20 pb-16 overflow-hidden cyber-grid neural-network-bg particle-field">
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20"></div>
+            <div className="absolute inset-0 quantum-field"></div>
             <div className="container mx-auto px-4 relative z-10">
               <div className="text-center max-w-4xl mx-auto">
-                <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-                  Transform Your Business with
-                  <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                    AI-Powered Solutions
-                  </span>
-                </h1>
-                <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
+                <div className="cyber-scan-effect mb-8">
+                  <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight cyber-text-3d neon-text">
+                    Transform Your Business with
+                    <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent holographic">
+                      AI-Powered Solutions
+                    </span>
+                  </h1>
+                </div>
+                <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed neon-pulse">
                   Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. 
                   Achieve 300% ROI with our cutting-edge technology.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                   <a
                     href="/contact"
-                    className="cyber-button px-8 py-4 text-lg font-semibold"
+                    className="cyber-button px-8 py-4 text-lg font-semibold energy-pulse"
                     onClick={handlePhoneClick}
                   >
                     Get Started Today
                   </a>
                   <a
                     href="tel:+13024640950"
-                    className="flex items-center space-x-2 text-cyan-400 hover:text-white transition-colors text-lg font-medium"
+                    className="flex items-center space-x-2 text-cyan-400 hover:text-white transition-colors text-lg font-medium neon-glow"
                     onClick={handlePhoneClick}
                   >
                     <Phone className="w-5 h-5" />
                     <span>+1 302 464 0950</span>
                   </a>
                 </div>
+                <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                  <div className="quantum-card p-6 text-center">
+                    <div className="text-4xl mb-4">⚛️</div>
+                    <h3 className="text-xl font-bold text-white mb-2">Quantum Computing</h3>
+                    <p className="text-gray-300 text-sm">Revolutionary quantum algorithms for exponential performance</p>
+                  </div>
+                  <div className="quantum-card p-6 text-center">
+                    <div className="text-4xl mb-4">🧠</div>
+                    <h3 className="text-xl font-bold text-white mb-2">Neural Networks</h3>
+                    <p className="text-gray-300 text-sm">Advanced AI that learns and adapts to your needs</p>
+                  </div>
+                  <div className="quantum-card p-6 text-center">
+                    <div className="text-4xl mb-4">🌐</div>
+                    <h3 className="text-xl font-bold text-white mb-2">Holographic Tech</h3>
+                    <p className="text-gray-300 text-sm">Immersive 3D interfaces and spatial computing</p>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
 
           {/* Micro SAAS Services Section */}
-          <section className="py-20 bg-slate-800/50">
+          <section className="py-20 bg-slate-800/50 cyber-scan-effect">
             <div className="container mx-auto px-4">
               <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text-3d neon-text">
                   Micro SAAS Solutions
                 </h2>
-                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                <p className="text-xl text-gray-300 max-w-3xl mx-auto neon-pulse">
                   Powerful, affordable AI-powered tools designed for modern businesses. 
                   Choose from our comprehensive suite of micro SAAS solutions.
                 </p>
               </div>
               
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 md:gap-6">
-                {microSAASServices.map((service, index) => (
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 md:gap-6 mb-8">
+                {microSAASServices.slice(0, 20).map((service, index) => (
                   <div
                     key={index}
-                    className="bg-slate-900/80 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-4 md:p-6 hover:border-cyan-400/40 transition-all duration-300 group h-full flex flex-col"
+                    className="quantum-card cyber-card bg-slate-900/80 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-4 md:p-6 hover:border-cyan-400/40 transition-all duration-300 group h-full flex flex-col energy-pulse"
                   >
                     <div className="flex items-center justify-between mb-4">
                       <div className="text-3xl">{service.icon}</div>
@@ -1411,17 +2257,28 @@ const HomePage: React.FC = () => {
                   </div>
                 ))}
               </div>
+              
+              {/* View More Button */}
+              <div className="text-center mt-8">
+                <a
+                  href="/services"
+                  className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-3 rounded-lg hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 font-medium text-lg"
+                >
+                  <span>View All Micro SAAS Solutions</span>
+                  <ArrowRight className="w-5 h-5" />
+                </a>
+              </div>
             </div>
           </section>
 
           {/* AI Services Section */}
-          <section className="py-20 bg-slate-900/50">
+          <section className="py-20 bg-slate-900/50 neural-network-bg particle-field">
             <div className="container mx-auto px-4">
               <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text-3d neon-text">
                   AI Services & Solutions
                 </h2>
-                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                <p className="text-xl text-gray-300 max-w-3xl mx-auto neon-pulse">
                   Advanced AI solutions for enterprise clients. Transform your business with cutting-edge artificial intelligence.
                 </p>
               </div>
@@ -1430,7 +2287,7 @@ const HomePage: React.FC = () => {
                 {aiServices.map((service, index) => (
                   <div
                     key={index}
-                    className="bg-slate-800/80 backdrop-blur-sm border border-purple-400/20 rounded-xl p-4 md:p-6 lg:p-8 hover:border-purple-400/40 transition-all duration-300 group h-full flex flex-col"
+                    className="quantum-card cyber-card bg-slate-800/80 backdrop-blur-sm border border-purple-400/20 rounded-xl p-4 md:p-6 lg:p-8 hover:border-purple-400/40 transition-all duration-300 group h-full flex flex-col energy-pulse"
                   >
                     <div className="flex items-center justify-between mb-4 md:mb-6">
                       <service.icon className="w-8 h-8 md:w-12 md:h-12 text-purple-400" />
@@ -1478,17 +2335,28 @@ const HomePage: React.FC = () => {
                   </div>
                 ))}
               </div>
+              
+              {/* View More Button */}
+              <div className="text-center mt-8">
+                <a
+                  href="/ai-services"
+                  className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 font-medium text-lg"
+                >
+                  <span>View All AI Services</span>
+                  <ArrowRight className="w-5 h-5" />
+                </a>
+              </div>
             </div>
           </section>
 
           {/* IT Services Section */}
-          <section className="py-20 bg-slate-800/50">
+          <section className="py-20 bg-slate-800/50 cyber-grid quantum-field">
             <div className="container mx-auto px-4">
               <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text-3d neon-text">
                   IT Services & Solutions
                 </h2>
-                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                <p className="text-xl text-gray-300 max-w-3xl mx-auto neon-pulse">
                   Comprehensive IT services to modernize your infrastructure and accelerate your digital transformation.
                 </p>
               </div>
@@ -1497,7 +2365,7 @@ const HomePage: React.FC = () => {
                 {itServices.map((service, index) => (
                   <div
                     key={index}
-                    className="bg-slate-900/80 backdrop-blur-sm border border-green-400/20 rounded-xl p-4 md:p-6 lg:p-8 hover:border-green-400/40 transition-all duration-300 group h-full flex flex-col"
+                    className="quantum-card cyber-card bg-slate-900/80 backdrop-blur-sm border border-green-400/20 rounded-xl p-4 md:p-6 lg:p-8 hover:border-green-400/40 transition-all duration-300 group h-full flex flex-col energy-pulse"
                   >
                     <div className="flex items-center justify-between mb-4 md:mb-6">
                       <service.icon className="w-8 h-8 md:w-12 md:h-12 text-green-400" />
@@ -1545,17 +2413,28 @@ const HomePage: React.FC = () => {
                   </div>
                 ))}
               </div>
+              
+              {/* View More Button */}
+              <div className="text-center mt-8">
+                <a
+                  href="/it-services"
+                  className="inline-flex items-center space-x-2 bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-3 rounded-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-300 font-medium text-lg"
+                >
+                  <span>View All IT Services</span>
+                  <ArrowRight className="w-5 h-5" />
+                </a>
+              </div>
             </div>
           </section>
 
           {/* Specialized Services Section */}
-          <section className="py-20 bg-slate-900/50">
+          <section className="py-20 bg-slate-900/50 matrix-rain neural-network-bg">
             <div className="container mx-auto px-4">
               <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text-3d neon-text">
                   Specialized Solutions
                 </h2>
-                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                <p className="text-xl text-gray-300 max-w-3xl mx-auto neon-pulse">
                   Cutting-edge specialized solutions for the future. Quantum computing, autonomous systems, and more.
                 </p>
               </div>
@@ -1564,7 +2443,7 @@ const HomePage: React.FC = () => {
                 {specializedServices.map((service, index) => (
                   <div
                     key={index}
-                    className="bg-slate-800/80 backdrop-blur-sm border border-orange-400/20 rounded-xl p-4 md:p-6 lg:p-8 hover:border-orange-400/40 transition-all duration-300 group h-full flex flex-col"
+                    className="quantum-card cyber-card bg-slate-800/80 backdrop-blur-sm border border-orange-400/20 rounded-xl p-4 md:p-6 lg:p-8 hover:border-orange-400/40 transition-all duration-300 group h-full flex flex-col energy-pulse"
                   >
                     <div className="flex items-center justify-between mb-4 md:mb-6">
                       <service.icon className="w-8 h-8 md:w-12 md:h-12 text-orange-400" />
@@ -1612,38 +2491,113 @@ const HomePage: React.FC = () => {
                   </div>
                 ))}
               </div>
+              
+              {/* View More Button */}
+              <div className="text-center mt-8">
+                <a
+                  href="/specialized-services"
+                  className="inline-flex items-center space-x-2 bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-3 rounded-lg hover:from-orange-700 hover:to-red-700 transition-all duration-300 font-medium text-lg"
+                >
+                  <span>View All Specialized Solutions</span>
+                  <ArrowRight className="w-5 h-5" />
+                </a>
+              </div>
+            </div>
+          </section>
+
+          {/* Statistics Section */}
+          <section className="py-20 bg-slate-800/50 cyber-grid">
+            <div className="container mx-auto px-4">
+              <div className="text-center mb-16">
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text-3d neon-text">
+                  Trusted by Industry Leaders
+                </h2>
+                <p className="text-xl text-gray-300 max-w-3xl mx-auto neon-pulse">
+                  Our solutions have helped thousands of businesses achieve their digital transformation goals.
+                </p>
+              </div>
+              
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+                <div className="text-center">
+                  <div className="text-4xl md:text-5xl font-bold text-cyan-400 mb-2">500K+</div>
+                  <div className="text-gray-300 text-sm md:text-base">Active Users</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl md:text-5xl font-bold text-purple-400 mb-2">10K+</div>
+                  <div className="text-gray-300 text-sm md:text-base">Enterprise Clients</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl md:text-5xl font-bold text-green-400 mb-2">99.9%</div>
+                  <div className="text-gray-300 text-sm md:text-base">Uptime Guarantee</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl md:text-5xl font-bold text-orange-400 mb-2">24/7</div>
+                  <div className="text-gray-300 text-sm md:text-base">Support Available</div>
+                </div>
+              </div>
             </div>
           </section>
 
           {/* Contact Section */}
-          <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-600">
+          <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-600 cyber-grid neural-network-bg">
             <div className="container mx-auto px-4">
               <div className="text-center max-w-4xl mx-auto">
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text-3d neon-text">
                   Ready to Transform Your Business?
                 </h2>
-                <p className="text-xl text-cyan-100 mb-8">
+                <p className="text-xl text-cyan-100 mb-8 neon-pulse">
                   Contact us today to discuss your AI and IT needs. Our experts are ready to help you achieve your goals.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                   <a
                     href="/contact"
-                    className="bg-white text-cyan-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-50 transition-colors"
+                    className="cyber-button bg-white text-cyan-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-50 transition-colors energy-pulse"
                   >
                     Get Free Consultation
                   </a>
                   <a
                     href="tel:+13024640950"
-                    className="flex items-center space-x-2 text-white hover:text-cyan-100 transition-colors text-lg font-medium"
+                    className="flex items-center space-x-2 text-white hover:text-cyan-100 transition-colors text-lg font-medium neon-glow"
                     onClick={handlePhoneClick}
                   >
                     <Phone className="w-5 h-5" />
                     <span>+1 302 464 0950</span>
                   </a>
                 </div>
-                <div className="mt-8 text-cyan-100">
-                  <p>Email: kleber@ziontechgroup.com</p>
-                  <p>Address: 364 E Main St STE 1008, Middletown, DE 19709</p>
+                <div className="mt-8 text-cyan-100 neon-pulse">
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                    <div className="flex items-center justify-center space-x-3">
+                      <Mail className="w-5 h-5" />
+                      <a href="mailto:kleber@ziontechgroup.com" className="hover:text-white transition-colors">
+                        kleber@ziontechgroup.com
+                      </a>
+                    </div>
+                    <div className="flex items-center justify-center space-x-3">
+                      <MapPin className="w-5 h-5" />
+                      <span>364 E Main St STE 1008, Middletown, DE 19709</span>
+                    </div>
+                    <div className="flex items-center justify-center space-x-3">
+                      <Clock className="w-5 h-5" />
+                      <span>24/7 Support Available</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                  <div className="quantum-card p-6 text-center bg-white/10 backdrop-blur-sm">
+                    <div className="text-4xl mb-4">🚀</div>
+                    <h3 className="text-xl font-bold text-white mb-2">Fast Implementation</h3>
+                    <p className="text-cyan-100 text-sm">Get started in 24 hours with our rapid deployment</p>
+                  </div>
+                  <div className="quantum-card p-6 text-center bg-white/10 backdrop-blur-sm">
+                    <div className="text-4xl mb-4">🛡️</div>
+                    <h3 className="text-xl font-bold text-white mb-2">Enterprise Security</h3>
+                    <p className="text-cyan-100 text-sm">Bank-level security and compliance standards</p>
+                  </div>
+                  <div className="quantum-card p-6 text-center bg-white/10 backdrop-blur-sm">
+                    <div className="text-4xl mb-4">⚡</div>
+                    <h3 className="text-xl font-bold text-white mb-2">24/7 Support</h3>
+                    <p className="text-cyan-100 text-sm">Round-the-clock expert support and monitoring</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1651,8 +2605,8 @@ const HomePage: React.FC = () => {
 
           <Footer />
         </div>
-      </EnhancedSEO>
-    </EnhancedErrorBoundary>
+      </SEOOptimizer>
+    </ErrorBoundary>
   );
 };
 

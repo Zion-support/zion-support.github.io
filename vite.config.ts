@@ -19,44 +19,6 @@ export default defineConfig({
     target: 'esnext',
     minify: 'terser',
     sourcemap: false,
-    rollupOptions: {
-      output: {
-        manualChunks: (id) => {
-          // Vendor chunks
-          if (id.includes('node_modules')) {
-            if (id.includes('react') || id.includes('react-dom')) {
-              return 'vendor-react';
-            }
-            if (id.includes('framer-motion') || id.includes('lucide-react') || id.includes('@heroicons')) {
-              return 'vendor-ui';
-            }
-            if (id.includes('recharts')) {
-              return 'vendor-charts';
-            }
-            if (id.includes('react-router-dom')) {
-              return 'vendor-router';
-            }
-            return 'vendor';
-          }
-          // Page chunks - group similar pages
-          if (id.includes('/src/ai-') || id.includes('/src/machine-learning') || id.includes('/src/nlp') || id.includes('/src/computer-vision')) {
-            return 'pages-ai';
-          }
-          if (id.includes('/src/it-') || id.includes('/src/cloud-') || id.includes('/src/cybersecurity') || id.includes('/src/devops')) {
-            return 'pages-it';
-          }
-          if (id.includes('/src/blog/')) {
-            return 'pages-blog';
-          }
-          if (id.includes('/src/')) {
-            return 'pages-other';
-          }
-        },
-        chunkFileNames: 'assets/[name]-[hash].js',
-        entryFileNames: 'assets/[name]-[hash].js',
-        assetFileNames: 'assets/[name]-[hash].[ext]',
-      },
-    },
     terserOptions: {
       compress: {
         drop_console: true,
@@ -156,7 +118,51 @@ export default defineConfig({
     },
     reportCompressedSize: false,
     cssCodeSplit: true,
-    assetsInlineLimit: 4096,
+    assetsInlineLimit: 2048, // Reduced for better caching
+    rollupOptions: {
+      output: {
+        manualChunks: (id) => {
+          // Vendor chunks - more granular splitting
+          if (id.includes('node_modules')) {
+            if (id.includes('react') || id.includes('react-dom')) {
+              return 'vendor-react';
+            }
+            if (id.includes('framer-motion')) {
+              return 'vendor-framer';
+            }
+            if (id.includes('lucide-react') || id.includes('@heroicons')) {
+              return 'vendor-icons';
+            }
+            if (id.includes('recharts')) {
+              return 'vendor-charts';
+            }
+            if (id.includes('react-router-dom')) {
+              return 'vendor-router';
+            }
+            if (id.includes('tailwindcss') || id.includes('postcss')) {
+              return 'vendor-css';
+            }
+            return 'vendor-other';
+          }
+          // Page chunks - group similar pages
+          if (id.includes('/app/ai-') || id.includes('/app/machine-learning') || id.includes('/app/nlp') || id.includes('/app/computer-vision')) {
+            return 'pages-ai';
+          }
+          if (id.includes('/app/it-') || id.includes('/app/cloud-') || id.includes('/app/cybersecurity') || id.includes('/app/devops')) {
+            return 'pages-it';
+          }
+          if (id.includes('/app/blog/')) {
+            return 'pages-blog';
+          }
+          if (id.includes('/app/')) {
+            return 'pages-other';
+          }
+        },
+        chunkFileNames: 'assets/[name]-[hash].js',
+        entryFileNames: 'assets/[name]-[hash].js',
+        assetFileNames: 'assets/[name]-[hash].[ext]',
+      },
+    },
   },
   server: {
     port: 3000,
