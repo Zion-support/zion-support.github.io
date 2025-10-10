@@ -13,6 +13,7 @@ import SEOHead from './app/components/EnhancedSEOHead';
 import SkipLink from './app/components/SkipLink';
 import Breadcrumb from './app/components/Breadcrumb';
 import PerformanceOptimizer from './app/components/PerformanceOptimizer';
+import AdvancedPerformanceOptimizer from './app/components/AdvancedPerformanceOptimizer';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import EnhancedAccessibility from './app/components/EnhancedAccessibility';
 import { usePerformanceMonitor } from './app/hooks/usePerformanceMonitor';
@@ -55,9 +56,10 @@ const App: React.FC = () => {
           <AppWithPerformanceMonitoring>
             <AnalyticsProvider>
               <PerformanceOptimizer>
-                <EnhancedAccessibility>
-                  <AccessibilityEnhancer>
-                    <PerformanceMonitor />
+                <AdvancedPerformanceOptimizer>
+                  <EnhancedAccessibility>
+                    <AccessibilityEnhancer>
+                      <PerformanceMonitor />
                     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
                       <Navigation />
                       <Breadcrumb />
@@ -85,8 +87,9 @@ const App: React.FC = () => {
                       </main>
                       <Footer />
                     </div>
-                  </AccessibilityEnhancer>
-                </EnhancedAccessibility>
+                    </AccessibilityEnhancer>
+                  </EnhancedAccessibility>
+                </AdvancedPerformanceOptimizer>
               </PerformanceOptimizer>
             </AnalyticsProvider>
           </AppWithPerformanceMonitoring>
