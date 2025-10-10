@@ -209,7 +209,6 @@ const HomePage: React.FC = () => {
       freeTrial: '7 days'
     },
     {
->>>>>>> cursor/website-audit-and-update-with-deployment-74f7
       title: 'AI Task Manager Pro',
       description: 'Smart task management with AI prioritization, deadline prediction, and productivity insights. Boost your productivity by 60%.',
       icon: '✅',
@@ -1370,6 +1369,8 @@ const HomePage: React.FC = () => {
       freeTrial: '30 days'
     }
   ];
+
+  const additionalProducts = [
     {
       title: 'AI Meeting Assistant Pro',
       description: 'Revolutionary meeting management with real-time transcription, action item extraction, and intelligent follow-ups. Used by Fortune 500 companies.',
@@ -2900,6 +2901,8 @@ const HomePage: React.FC = () => {
       freeTrial: '21 days'
     }
   ];
+
+  const securityProducts = [
     {
       title: 'AI Cybersecurity Shield Pro',
       description: 'Advanced AI-powered security solutions with real-time threat detection, behavioral analysis, and automated response.',
@@ -3731,6 +3734,8 @@ const HomePage: React.FC = () => {
       freeTrial: '14 days'
     }
   ];
+
+  const enterpriseServices = [
     {
       title: 'Enterprise IT Infrastructure',
       description: 'Complete enterprise IT infrastructure with high availability, scalability, and security. Built for Fortune 500 companies.',
@@ -4443,8 +4448,6 @@ const HomePage: React.FC = () => {
     }
   ];
 
-=======
->>>>>>> origin/main
   return (
     <ErrorBoundary>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced neural-network-bg particle-system">
@@ -5300,11 +5303,6 @@ const HomePage: React.FC = () => {
 
         <Footer />
       </div>
-=======
-      {/* Footer */}
-      <Footer />
-    </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-c40d
     </>
   );
 };
