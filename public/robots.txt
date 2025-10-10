@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-# Sitemap
+# Sitemaps
 Sitemap: https://ziontechgroup.com/sitemap.xml
 
 # Crawl-delay
@@ -14,9 +14,8 @@ Disallow: /_next/
 Disallow: /static/
 
 # Allow important pages
-Allow: /
-Allow: /about
-Allow: /services
-Allow: /contact
-Allow: /blog
-Allow: /case-studies
+Allow: /ai-services/
+Allow: /it-services/
+Allow: /micro-saas/
+Allow: /case-studies/
+Allow: /blog/

@@ -1,5 +1,5 @@
 
-import React, { Suspense, memo } from 'react';
+import React, { Suspense, memo, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import './src/styles/futuristic.css';
@@ -84,7 +84,24 @@ const ServicesPage = React.lazy(() => import('./app/services/page'));
 
 // Performance monitoring hook
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  usePerformanceMonitor();
+  const { preloadCriticalResources } = usePerformanceMonitor();
+  
+  useEffect(() => {
+    // Register service worker
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then((registration) => {
+          console.log('Service Worker registered successfully:', registration);
+        })
+        .catch((error) => {
+          console.log('Service Worker registration failed:', error);
+        });
+    }
+    
+    // Preload critical resources
+    preloadCriticalResources();
+  }, [preloadCriticalResources]);
+  
   return <>{children}</>;
 };
 
