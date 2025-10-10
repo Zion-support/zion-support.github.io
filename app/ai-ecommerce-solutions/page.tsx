@@ -1,313 +1,127 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
-<<<<<<< HEAD
-const AiEcommerceSolutionsPage: React.FC = () => {
+import { Link } from 'react-router-dom';
+import { ArrowLeft, CheckCircle, Star, Users, Clock, Shield } from 'lucide-react';
+
+const AIEcommerceSolutionsPage: React.FC = () => {
   const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
+    { icon: CheckCircle, title: 'Advanced Technology', description: 'Cutting-edge solutions powered by the latest technology' },
+    { icon: Users, title: 'Expert Team', description: 'Experienced professionals dedicated to your success' },
+    { icon: Clock, title: '24/7 Support', description: 'Round-the-clock support and maintenance' },
+    { icon: Shield, title: 'Secure & Reliable', description: 'Enterprise-grade security and reliability' }
   ];
-  const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
-  ];
+
   return (
-    <React.Fragment>
-      <Helmet>
-        <title>Ai Ecommerce Solutions - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered ai ecommerce solutions solution for modern businesses." />
-        <meta name="keywords" content="AI ai ecommerce solutions, artificial intelligence, ai ecommerce solutions, AI solutions, intelligent automation" />
-      </Helmet>
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-pink-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        {/* Breadcrumb */}
+        <nav className="mb-8">
+          <Link to="/" className="text-cyan-400 hover:text-cyan-300 flex items-center">
+            <ArrowLeft className="w-4 h-4 mr-2" />
+            Back to Home
+          </Link>
+        </nav>
+
         {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Ai Ecommerce Solutions;
-  </
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Advanced AI-powered ai ecommerce solutions solution for modern businesses.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-pink-500 to-blue-600 hover:from-pink-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Get Started;
-  </
-              <button className="border border-pink-400 text-pink-400 hover:bg-pink-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                View Demo;
-  </
-            </div>
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            AI E-commerce Solutions
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            E-commerce AI solutions for online businesses
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+            >
+              Get Started Today
+            </Link>
+            <a
+              href="tel:+13024640950"
+              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300 flex items-center justify-center"
+            >
+              (302) 464-0950
+            </a>
           </div>
-        </section>
+        </div>
+
         {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Key Features;
-  </
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Advanced AI technology that drives results;
-  </
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          {features.map((feature, index) => (
+            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300">
+              <feature.icon className="w-8 h-8 text-cyan-400 mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+              <p className="text-gray-300">{feature.description}</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  {feature.benefits && (
-                    <ul className="space-y-2">
-                      {feature.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-=======
-;
-const AiEcommerceSolutionsPage: React.FC = () => {;
-  const features = [;
-    {;
-      icon: Brain,;
-      title: 'AI-Powered Intelligence',;
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',;
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis'];}
-    },;
-    {;
-      icon: BarChart,;
-      title: 'Advanced Analytics',;
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',;
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics'];}
-    },;
-    {;
-      icon: Target,;
-      title: 'Precision Targeting',;
-      description: 'Target specific goals and objectives with precision and accuracy.',;
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics'];}
-    },;
-    {;
-      icon: TrendingUp,;
-      title: 'Growth Optimization',;
-      description: 'Optimize your business growth with data-driven strategies.',;
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'];}
-    }
-  ];
-;
-  const benefits = [;
-    'Increase efficiency by up to 50%',;
-    'Reduce costs by 30% with automation',;
-    'Improve decision-making with AI insights',;
-    'Scale operations without proportional staff increases',;
-    'Gain competitive advantage with advanced technology';
-  ];
-;
-  return (;
-    <></>;
-      <Helmet>;
-        <title>Ai Ecommerce Solutions - Zion Tech Group</title>;
-        <meta name="description" content="Advanced AI-powered ai ecommerce solutions solution for modern businesses." />;
-        <meta name="keywords" content="AI ai ecommerce solutions, artificial intelligence, ai ecommerce solutions, AI solutions, intelligent automation" />;
-      </Helmet>;
-      <Navigation />;
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-pink-900 to-slate-900"></div>;
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden"></section>;
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>;
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>;
-          <div className="relative max-w-7xl mx-auto text-center"></div>;
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">;
-              Ai Ecommerce Solutions;
-            </h1>;
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">;
-              Advanced AI-powered ai ecommerce solutions solution for modern businesses.;
-            </p>;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>;
-              <button className="bg-gradient-to-r from-pink-500 to-blue-600 hover:from-pink-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">;
-                Get Started;
-              </button>;
-              <button className="border border-pink-400 text-pink-400 hover:bg-pink-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">;
-                View Demo;
-              </button>;
-            </div>;
-          </div>;
-        </section>;
-        {/* Features Section */}
-        <section className="py-20 px-4"></section>;
-          <div className="max-w-7xl mx-auto"></div>;
-            <div className="text-center mb-16"></div>;
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
-                Key Features;
-              </h2>;
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
-                Advanced AI technology that drives results;
-              </p>;
-            </div>;
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>;
-              {features.map((feature, index) => (;}
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group"></div>;
-                  <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"></div>;
-                    <feature.icon className="w-8 h-8 text-white" />;
-                  </div>;
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>;
-                  <p className="text-gray-300 mb-4">{feature.description}</p>;
-                  {feature.benefits && (;
-                    <ul className="space-y-2">;
-                      {feature.benefits.map((benefit, idx) => (;}
-                        <li key={idx} className="flex items-center text-sm text-gray-400">;
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-                          {benefit}
-                        </li>;
-                      ))}
-                    </ul>;
-                  )}
-                </div>;
-              ))}
-<<<<<<< HEAD
+          ))}
+        </div>
+
+        {/* Content Section */}
+        <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 mb-16">
+          <h2 className="text-3xl font-bold text-white mb-6">Why Choose Our AI E-commerce Solutions?</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-xl font-semibold text-white mb-4">Key Benefits</h3>
+              <ul className="space-y-3">
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-cyan-400 mr-3" />
+                  Increased efficiency and productivity
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-cyan-400 mr-3" />
+                  Cost-effective solutions
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-cyan-400 mr-3" />
+                  Scalable and flexible
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-cyan-400 mr-3" />
+                  Expert implementation and support
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-white mb-4">What We Offer</h3>
+              <ul className="space-y-3">
+                <li className="flex items-center text-gray-300">
+                  <Star className="w-5 h-5 text-cyan-400 mr-3" />
+                  Custom solutions tailored to your needs
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <Star className="w-5 h-5 text-cyan-400 mr-3" />
+                  Comprehensive training and support
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <Star className="w-5 h-5 text-cyan-400 mr-3" />
+                  Ongoing maintenance and updates
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <Star className="w-5 h-5 text-cyan-400 mr-3" />
+                  Proven track record of success
+                </li>
+              </ul>
             </div>
           </div>
-        </section>
-        {/* Benefits Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Why Choose Our Solution?
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Proven results that drive business growth and efficiency;
-  </
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <CheckCircle className="w-8 h-8 text-white" />
-                  </div>
-                  <p className="text-lg text-white font-medium">{benefit}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+        </div>
+
         {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Get Started?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Contact our experts to discuss your requirements and get started today.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-pink-500 to-blue-600 hover:from-pink-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Contact Us;
-  </
-                <button className="border border-pink-400 text-pink-400 hover:bg-pink-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Learn More;
-  </
-              </div>
-            </div>
-          </div>
-        </section>
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Contact us today to discuss how our AI E-commerce Solutions can benefit your business.
+          </p>
+          <Link
+            to="/contact"
+            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+          >
+            Contact Us Now
+          </Link>
+        </div>
       </div>
-      <Footer />
-    </React.Fragment>
+    </div>
   );
 };
-export default AiEcommerceSolutionsPage;
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>
-=======
-            </div>;
-          </div>;
-        </section>;
-        {/* Benefits Section */}
-        <section className="py-20 px-4"></section>;
-          <div className="max-w-7xl mx-auto"></div>;
-            <div className="text-center mb-16"></div>;
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
-                Why Choose Our Solution?;
-              </h2>;
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
-                Proven results that drive business growth and efficiency;
-              </p>;
-            </div>;
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>;
-              {benefits.map((benefit, index) => (;}
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group"></div>;
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"></div>;
-                    <CheckCircle className="w-8 h-8 text-white" />;
-                  </div>;
-                  <p className="text-lg text-white font-medium">{benefit}</p>;
-                </div>;
-              ))}
-            </div>;
-          </div>;
-        </section>;
-        {/* CTA Section */}
-        <section className="py-20 px-4"></section>;
-          <div className="max-w-4xl mx-auto text-center"></div>;
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12"></div>;
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
-                Ready to Get Started?;
-              </h2>;
-              <p className="text-xl text-gray-300 mb-8">;
-                Contact our experts to discuss your requirements and get started today.;
-              </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>;
-                <button className="bg-gradient-to-r from-pink-500 to-blue-600 hover:from-pink-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">;
-                  Contact Us;
-                </button>;
-                <button className="border border-pink-400 text-pink-400 hover:bg-pink-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">;
-                  Learn More;
-                </button>;
-              </div>;
-            </div>;
-          </div>;
-        </section>;
-      </div>;
-      <Footer />;
-    </>;
-  );
-};
-;
-export default AiEcommerceSolutionsPage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+
+export default AIEcommerceSolutionsPage;
