@@ -76,6 +76,7 @@ const HomePage: React.FC = React.memo((props) => {
             telephone: '+1-302-464-0950',
             contactType: 'Customer Service',
             areaServed: 'US',
+<<<<<<< HEAD
             availableLanguage: 'en'}
           },
           address: {
@@ -85,7 +86,19 @@ const HomePage: React.FC = React.memo((props) => {
             addressRegion: 'DE',
             postalCode: '19709',
             addressCountry: 'US'
+=======
+            availableLanguage: 'en'
+>>>>>>> cursor/analyze-improve-and-deploy-application-7c78
           }
+        },
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '364 E Main St STE 1008',
+          addressLocality: 'Middletown',
+          addressRegion: 'DE',
+          postalCode: '19709',
+          addressCountry: 'US'
+        }
         }}
       />
       <PerformanceOptimizer
@@ -1617,6 +1630,14 @@ const HomePage: React.FC = React.memo((props) => {
       {/* Footer */}
       <Footer />
     </div>
+<<<<<<< HEAD
   )
 }
 export default HomePage
+=======
+    </>
+  );
+};
+
+export default HomePage;
+>>>>>>> cursor/analyze-improve-and-deploy-application-7c78

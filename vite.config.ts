@@ -82,16 +82,39 @@ export default defineConfig({
     chunkSizeWarningLimit: 500,
     reportCompressedSize: false,
     cssCodeSplit: true,
-    assetsInlineLimit: 2048, // Reduced for better caching
+    assetsInlineLimit: 2048,
     rollupOptions: {
       output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-          router: ['react-router-dom'],
-          ui: ['framer-motion', 'lucide-react', '@heroicons/react'],
-          utils: ['clsx', 'tailwind-merge'],
-          charts: ['recharts'],
-          analytics: ['web-vitals'],
+        manualChunks: (id) => {
+          // Vendor chunks
+          if (id.includes('node_modules')) {
+            if (id.includes('react') || id.includes('react-dom')) {
+              return 'vendor-react';
+            }
+            if (id.includes('react-router')) {
+              return 'vendor-router';
+            }
+            if (id.includes('framer-motion') || id.includes('lucide-react') || id.includes('@heroicons')) {
+              return 'vendor-ui';
+            }
+            if (id.includes('recharts')) {
+              return 'vendor-charts';
+            }
+            if (id.includes('web-vitals')) {
+              return 'vendor-analytics';
+            }
+            return 'vendor';
+          }
+          
+          // Component chunks
+          if (id.includes('/src/components/')) {
+            return 'components';
+          }
+          
+          // Page chunks
+          if (id.includes('/app/')) {
+            return 'pages';
+          }
         },
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',
@@ -111,31 +134,6 @@ export default defineConfig({
         },
       },
     },
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
-        pure_funcs: ['console.log', 'console.info', 'console.warn'],
-        passes: 3,
-        unsafe: true,
-        unsafe_comps: true,
-        unsafe_math: true,
-        unsafe_proto: true,
-      },
-      mangle: {
-        safari10: true,
-        properties: {
-          regex: /^_/,
-        },
-      },
-      format: {
-        comments: false,
-      },
-    },
-    chunkSizeWarningLimit: 500,
-    reportCompressedSize: true,
-    cssCodeSplit: true,
-    assetsInlineLimit: 4096,
   },
   server: {
     port: 3000,
