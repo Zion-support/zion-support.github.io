@@ -1,30 +1,35 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [,
+  content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
     "./app/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}"],
+    "./components/**/*.{js,ts,jsx,tsx}"
+  ],
   theme: {
     extend: {
       colors: {
         neon: {
-          cyan: '#00ffff'
+          cyan: '#00ffff',
           purple: '#8b5cf6',
           pink: '#ec4899',
-          green: '#10 b981',
-          orange: '#f59 e0 b',
-          blue: '#3 b82 f6'},
-        dark: {,
+          green: '#10b981',
+          orange: '#f59e0b',
+          blue: '#3b82f6'
+        },
+        dark: {
           bg: '#0f0f23',
           surface: '#1a1a2e',
-          elevated: '#16213e'},
-        text: {,
+          elevated: '#16213e'
+        },
+        text: {
           primary: '#ffffff',
-          secondary: '#a1 a1 aa',
-          muted: '#71717 a'}},
-      fontFamily: {,
-        sans: [,
+          secondary: '#a1a1aa',
+          muted: '#71717a'
+        }
+      },
+      fontFamily: {
+        sans: [
           'Inter',
           '-apple-system',
           'BlinkMacSystemFont',
@@ -36,8 +41,10 @@ export default {
           'Fira Sans',
           'Droid Sans',
           'Helvetica Neue',
-          'sans-serif']},
-      animation: {,
+          'sans-serif'
+        ]
+      },
+      animation: {
         'neon-glow': 'neon-glow 2s ease-in-out infinite alternate',
         'neon-pulse': 'neon-pulse 2s ease-in-out infinite alternate',
         'matrix-rain': 'matrix-rain 3s linear infinite',
@@ -46,98 +53,139 @@ export default {
         'fade-in': 'fadeIn 0.6s ease-out forwards',
         'slide-in': 'slideIn 0.6s ease-out forwards',
         'scale-in': 'scaleIn 0.6s ease-out forwards',
-        'loading': 'loading 1.5s infinite'},
-      keyframes: {,
-        'neon-glow': {,
+        'loading': 'loading 1.5s infinite'
+      },
+      keyframes: {
+        'neon-glow': {
           '0%, 100%': {
-            textShadow: '0 0 5 px currentColor, 0 0 10 px currentColor, 0 0 15 px currentColor'},
+            textShadow: '0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor'
+          },
           '50%': {
-            textShadow: '0 0 10 px currentColor, 0 0 20 px currentColor, 0 0 30 px currentColor'}},
+            textShadow: '0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor'
+          }
+        },
         'neon-pulse': {
           '0%, 100%': {
-            boxShadow: '0 0 5 px currentColor, 0 0 10 px currentColor, 0 0 15 px currentColor'},
+            boxShadow: '0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor'
+          },
           '50%': {
-            boxShadow: '0 0 10 px currentColor, 0 0 20 px currentColor, 0 0 30 px currentColor'}},
+            boxShadow: '0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor'
+          }
+        },
         'matrix-rain': {
           '0%': {
-            transform: 'translateY(-100 vh)',
-            opacity: '0'},
+            transform: 'translateY(-100vh)',
+            opacity: '0'
+          },
           '10%': {
-            opacity: '1'},
+            opacity: '1'
+          },
           '90%': {
-            opacity: '1'},
+            opacity: '1'
+          },
           '100%': {
-            transform: 'translateY(100 vh)',
-            opacity: '0'}},
+            transform: 'translateY(100vh)',
+            opacity: '0'
+          }
+        },
         'hologram-flicker': {
           '0%, 100%': {
             opacity: '1',
-            transform: 'scale(1)'},
+            transform: 'scale(1)'
+          },
           '50%': {
             opacity: '0.8',
-            transform: 'scale(1.02)'}},
+            transform: 'scale(1.02)'
+          }
+        },
         'data-stream': {
           '0%': {
-            transform: 'translateX(-100%)'},
+            transform: 'translateX(-100%)'
+          },
           '100%': {
-            transform: 'translateX(100 vw)'}},
+            transform: 'translateX(100vw)'
+          }
+        },
         'fadeIn': {
-          from: {,
+          from: {
             opacity: '0',
-            transform: 'translateY(20 px)'},
-          to: {,
+            transform: 'translateY(20px)'
+          },
+          to: {
             opacity: '1',
-            transform: 'translateY(0)'}},
+            transform: 'translateY(0)'
+          }
+        },
         'slideIn': {
-          from: {,
+          from: {
             opacity: '0',
-            transform: 'translateX(-20 px)'},
-          to: {,
+            transform: 'translateX(-20px)'
+          },
+          to: {
             opacity: '1',
-            transform: 'translateX(0)'}},
+            transform: 'translateX(0)'
+          }
+        },
         'scaleIn': {
-          from: {,
+          from: {
             opacity: '0',
-            transform: 'scale(0.9)'},
-          to: {,
+            transform: 'scale(0.9)'
+          },
+          to: {
             opacity: '1',
-            transform: 'scale(1)'}},
+            transform: 'scale(1)'
+          }
+        },
         'loading': {
           '0%': {
-            backgroundPosition: '200% 0'},
+            backgroundPosition: '200% 0'
+          },
           '100%': {
-            backgroundPosition: '-200% 0'}}},
-      backgroundImage: {,
-        'cyber-grid': `,
+            backgroundPosition: '-200% 0'
+          }
+        }
+      },
+      backgroundImage: {
+        'cyber-grid': `
           linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
           linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px)
         `,
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic': 'conic-gradient(from 180 deg at 50% 50%, var(--tw-gradient-stops))'},
-      backgroundSize: {,
-        'grid': '20px 20px'},
-      backdropBlur: {,
-        xs: '2px'},
-      boxShadow: {,
+        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))'
+      },
+      backgroundSize: {
+        'grid': '20px 20px'
+      },
+      backdropBlur: {
+        xs: '2px'
+      },
+      boxShadow: {
         'neon': '0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor',
         'neon-lg': '0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor',
-        'cyber': '0 20px 40px rgba(0, 255, 255, 0.2)'},
-      textShadow: {,
+        'cyber': '0 20px 40px rgba(0, 255, 255, 0.2)'
+      },
+      textShadow: {
         'neon': '0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor',
-        'neon-lg': '0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor'},
-      screens: {,
+        'neon-lg': '0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor'
+      },
+      screens: {
         'xs': '475px',
-        '3xl': '1600px'},
-      spacing: {,
+        '3xl': '1600px'
+      },
+      spacing: {
         '18': '4.5rem',
         '88': '22rem',
-        '128': '32rem'},
-      zIndex: {,
+        '128': '32rem'
+      },
+      zIndex: {
         '60': '60',
         '70': '70',
         '80': '80',
         '90': '90',
-        '100': '100'}}},
+        '100': '100'
+      }
+    }
+  },
   plugins: [,
     function({ addUtilities }) {
       const newUtilities = {
