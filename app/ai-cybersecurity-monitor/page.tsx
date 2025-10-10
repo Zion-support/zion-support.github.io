@@ -287,6 +287,7 @@ const AICybersecurityMonitor: React.FC = memo(() => {
       </div>
     </div>
   );
+});
 
 AICybersecurityMonitor.displayName = 'AICybersecurityMonitor';
 

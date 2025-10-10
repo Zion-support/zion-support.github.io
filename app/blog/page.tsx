@@ -121,6 +121,7 @@ export default function BlogPage() {
                          post.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === 'all' || post.category === selectedCategory;
     return matchesSearch && matchesCategory;
+  });
 
   const getCategoryIcon = (category: string) => {
     const icons = {

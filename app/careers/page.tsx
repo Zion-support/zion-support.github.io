@@ -247,6 +247,7 @@ export default function CareersPage() {
     const locationMatch = selectedLocation === 'all' || position.location === selectedLocation;
     const typeMatch = selectedType === 'all' || position.type === selectedType;
     return departmentMatch && locationMatch && typeMatch;
+  });
 
   const benefits = [
     {

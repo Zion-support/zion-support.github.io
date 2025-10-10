@@ -287,6 +287,7 @@ const AIHealthcarePage: React.FC = memo(() => {
       </div>
     </div>
   );
+});
 
 AIHealthcarePage.displayName = 'AIHealthcarePage';
 

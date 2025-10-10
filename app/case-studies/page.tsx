@@ -279,6 +279,7 @@ export default function CaseStudiesPage() {
     const industryMatch = selectedIndustry === 'all' || study.industry === selectedIndustry;
     const serviceMatch = selectedService === 'all' || study.service === selectedService;
     return industryMatch && serviceMatch;
+  });
 
   const getIndustryIcon = (industry: string) => {
     const icons = {

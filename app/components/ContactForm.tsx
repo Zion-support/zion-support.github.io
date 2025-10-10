@@ -23,10 +23,12 @@ const ContactForm: React.FC = () => {
     phone: '',
     service: '',
     message: ''
+  });
 
   const [status, setStatus] = useState<FormStatus>({
     type: 'idle',
     message: ''
+  });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -47,6 +49,7 @@ const ContactForm: React.FC = () => {
       setStatus({
         type: 'success',
         message: 'Thank you! Your message has been sent successfully. We\'ll get back to you within 24 hours.'
+      });
 
       // Reset form
       setFormData({
@@ -56,6 +59,7 @@ const ContactForm: React.FC = () => {
         phone: '',
         service: '',
         message: ''
+      });
 
     } catch (error) {
       setStatus({
