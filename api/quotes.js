@@ -1,23 +1,29 @@
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
-    return}
+    res.statusCode = 405;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Method not allowed' }));
+    return;
+  }
 
-  try {;
-
-const { name, email, phone, details, country, service } = req.body || {};
+  try {
+    const { name, email, phone, details, country, service } = req.body || {};
 
     if (!name || !email || !phone || !details) {
-      return}
+      res.statusCode = 400;
+      res.setHeader('Content-Type', 'application/json');
+      res.end(JSON.stringify({ error: 'Missing required fields' }));
+      return;
+    }
 
     // Process quote submission logic here
     // In a real application, you would:
     // 1. Save to your database
     // 2. Send notification to your sales team
     // 3. Send confirmation email to the customer
-    // 4. Integrate with your CRM;
+    // 4. Integrate with your CRM
 
-const quoteData = {;;
-
+    const quoteData = {
       name,
       email,
       phone,
@@ -25,25 +31,22 @@ const quoteData = {;;
       country: country || 'Not specified',
       service: service || 'General inquiry',
       timestamp: new Date().toISOString(),
-      status: pending
+      status: 'pending'
     };
 
     // console.log removed for production
-res.statusCode = 200;
-
-    res.setHeader('Content-Type', 'application/json);
-
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
       success: true, 
       message: 'Quote request submitted successfully',
       quoteId: `quote_${Date.now()}`,
       data: quoteData
-    }))} catch (error) {
+    }));
+  } catch (error) {
     // console.error removed for production
-res.statusCode = 500;
-
-    res.setHeader('Content-Type', 'application/json);
-
-    res.end(JSON.stringify({ error: 'Internal server error' }))}
-
+    res.statusCode = 500;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Internal server error' }));
+  }
 }

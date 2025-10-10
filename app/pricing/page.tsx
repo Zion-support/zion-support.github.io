@@ -1,144 +1,127 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { Check, Star } from 'lucide-react';
 
-import { Helmet } from 'react-helmet-async;
+const PricingPage: React.FC = () => {
+  const plans = [
+    {
+      name: 'Starter',
+      price: '$99',
+      period: '/month',
+      description: 'Perfect for small businesses getting started',
+      features: [
+        'Basic AI Solutions',
+        'Email Support',
+        '5 Projects',
+        'Basic Analytics',
+        'Standard Security'
+      ],
+      popular: false
+    },
+    {
+      name: 'Professional',
+      price: '$299',
+      period: '/month',
+      description: 'Ideal for growing businesses',
+      features: [
+        'Advanced AI Solutions',
+        'Priority Support',
+        'Unlimited Projects',
+        'Advanced Analytics',
+        'Enhanced Security',
+        'Custom Integrations',
+        '24/7 Support'
+      ],
+      popular: true
+    },
+    {
+      name: 'Enterprise',
+      price: 'Custom',
+      period: '',
+      description: 'Tailored solutions for large organizations',
+      features: [
+        'Custom AI Solutions',
+        'Dedicated Support',
+        'Unlimited Everything',
+        'Enterprise Analytics',
+        'Maximum Security',
+        'Custom Development',
+        'On-site Support',
+        'SLA Guarantee'
+      ],
+      popular: false
+    }
+  ];
 
-import { Link } from 'react-router-dom;
-
-import { ArrowRight, CheckCircle, Phone, Mail, MapPin } from 'lucide-react;
-
-const PagePage: React.FC = () => {}
   return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Navigation />
+      
+      <section className="relative py-20 px-4 overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+        
+        <div className="relative max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            Pricing
+            <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
+              Plans
+            </span>
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            Choose the perfect plan for your business needs.
+          </p>
+        </div>
+      </section>
 
-    <>
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content=Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business. />
-        <meta name="keywords" content=page, AI solutions, IT services, Zion Tech Group />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900>
-        <div className="container mx-auto px-4 py-16>
-          <div className="text-center mb-16>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6>
-              Transparent <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400>Pricing</span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto>
-              Choose the perfect plan for your business needs. All plans include our core AI and IT solutions with transparent, no-hidden-fees pricing.
-            </p>
-          </div>
-
-<<<<<<< HEAD
-          <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto>
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {plans.map((plan, index) => (
-
-              <div
-                key={plan.name}
-
-                className={relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border ${
-=======
-          <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {plans.map((plan, index) => (}
-              <div
-                key={plan.name}
-                className={`relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border ${}
->>>>>>> cursor/fix-errors-and-merge-to-main-d054
-                  plan.popular
-                    ? 'border-purple-400 shadow-2xl shadow-purple-500/25 scale-105
-                    : 'border-white/20
-                }}
-
-              >
-<<<<<<< HEAD
+              <div key={index} className={`relative bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 ${plan.popular ? 'ring-2 ring-purple-500 scale-105' : ''}`}>
                 {plan.popular && (
-
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2>
-                    <div className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-2 rounded-full text-sm font-semibold flex items-center gap-2>
-                      <Star className="w-4 h-4 fill-current />
-=======
-                {plan.popular && (}
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <div className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-2 rounded-full text-sm font-semibold flex items-center gap-2">
-                      <Star className="w-4 h-4 fill-current" />
->>>>>>> cursor/fix-errors-and-merge-to-main-d054
+                    <div className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center">
+                      <Star className="w-4 h-4 mr-1" />
                       Most Popular
                     </div>
                   </div>
                 )}
-
-                <div className="text-center mb-8>
-                  <h3 className="text-2xl font-bold text-white mb-2>{plan.name}</h3>
-                  <p className="text-gray-300 mb-6>{plan.description}</p>
-                  <div className="flex items-baseline justify-center>
-                    <span className="text-4xl font-bold text-white>{plan.price}</span>
-                    <span className="text-gray-400 ml-1>{plan.period}</span>
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                  <div className="flex items-baseline justify-center">
+                    <span className="text-4xl font-bold text-white">{plan.price}</span>
+                    <span className="text-gray-400 ml-1">{plan.period}</span>
                   </div>
+                  <p className="text-gray-300 mt-2">{plan.description}</p>
                 </div>
-
-<<<<<<< HEAD
-                <ul className="space-y-4 mb-8>
-                  {plan.features.map((feature, featureIndex) => (
-
-                    <li key={featureIndex} className="flex items-center text-gray-300>
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0 />
-=======
                 <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (}
-                    <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
->>>>>>> cursor/fix-errors-and-merge-to-main-d054
+                  {plan.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center text-gray-300">
+                      <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       {feature}
-
                     </li>
                   ))}
-
                 </ul>
-
-                <Link
-<<<<<<< HEAD
-                  to="/contact
-                  className={w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 ${
-=======
-                  to="/contact"
-                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 ${}
->>>>>>> cursor/fix-errors-and-merge-to-main-d054
-                    plan.popular
-                      ? 'bg-gradient-to-r from-purple-500 to-blue-500 text-white hover:from-purple-600 hover:to-blue-600 transform hover:scale-105
-                      : 'bg-white/10 text-white border border-white/20 hover:bg-white/20
-                  }}
-
-                >
-                  Get Started
-                  <ArrowRight className="w-4 h-4 />
-                </Link>
+                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                  plan.popular
+                    ? 'bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white transform hover:scale-105'
+                    : 'bg-white/10 hover:bg-white/20 text-white border border-gray-600 hover:border-purple-500'
+                }`}>
+                  {plan.name === 'Enterprise' ? 'Contact Sales' : 'Get Started'}
+                </button>
               </div>
             ))}
-
-          </div>
-
-          <div className="text-center mt-16>
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 max-w-4xl mx-auto>
-              <h3 className="text-2xl font-bold text-white mb-4>
-                Need a Custom Solution?
-              </h3>
-              <p className="text-gray-300 mb-6>
-                We understand that every business is unique. Contact us for a personalized quote tailored to your specific requirements.
-              </p>
-              <Link
-                to="/contact
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105
-              >
-                <Zap className="w-5 h-5 />
-                Get Custom Quote
-              </Link>
-            </div>
           </div>
         </div>
-      </div>
-    </>
-  );
+      </section>
 
-  );  ));)
+      <Footer />
+    </div>
+  );
 };
 
-export default PagePage;
+export default PricingPage;

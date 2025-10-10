@@ -1,2 +1,27 @@
-    // Show performance panel after 3 seconds;
-const timer = setTimeout(() => setIsVisible(true), 3000);
+'use client';
+
+import React, { useEffect } from 'react';
+
+const PerformanceMonitor: React.FC = () => {
+  useEffect(() => {
+    // Performance monitoring logic
+    if (typeof window !== 'undefined') {
+      // Monitor Core Web Vitals
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          console.log('Performance entry:', entry);
+        }
+      });
+
+      observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] });
+
+      return () => {
+        observer.disconnect();
+      };
+    }
+  }, []);
+
+  return null;
+};
+
+export default PerformanceMonitor;

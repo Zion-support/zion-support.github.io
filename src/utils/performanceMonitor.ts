@@ -12,30 +12,29 @@ interface PerformanceMetrics {
   cls?: number; // Cumulative Layout Shift
   ttfb?: number; // Time to First Byte
   fmp?: number; // First Meaningful Paint
-  customMetrics: Record<string, number>}
+  customMetrics: Record<string, number>;
+}
 
 class PerformanceMonitor {
   private _metrics: PerformanceMetrics = {
     customMetrics: {}
-
   };
 
   private observers: PerformanceObserver[] = [];
-
   private isInitialized = false;
 
   init(): void {
-    if (this.isInitialized || typeof window === 'undefined) return;
+    if (this.isInitialized || typeof window === 'undefined') return;
 
     this.isInitialized = true;
 
     this.setupWebVitals();
-
-    this.setupCustomMetrics()}
+    this.setupCustomMetrics();
+  }
 
   private setupWebVitals(): void {
     // First Contentful Paint
-    this.observePaint('first-contentful-paint', 'fcp);
+    this.observePaint('first-contentful-paint', 'fcp');
 
     // Largest Contentful Paint
     this.observeLCP();
@@ -44,117 +43,105 @@ class PerformanceMonitor {
     this.observeFID();
 
     // Cumulative Layout Shift
-    this.observeCLS()}
+    this.observeCLS();
+  }
 
   private observePaint(name: string, metric: keyof PerformanceMetrics): void {
-    try {;
-
-const observer = new PerformanceObserver((list) => {;;
-
-const entries = list.getEntries();;
-
-        const entry = entries[entries.length - 1];;
-
+    try {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const entry = entries[entries.length - 1];
         if (entry) {
-          (this._metrics as any)[metric] = entry.startTime}
-
+          (this._metrics as any)[metric] = entry.startTime;
+        }
       });
 
-      observer.observe({ entryTypes: ['paint] });
-
-      this.observers.push(observer)} catch (error) {
+      observer.observe({ entryTypes: ['paint'] });
+      this.observers.push(observer);
+    } catch (error) {
       // console.warn removed for production
-}
-
+    }
   }
 
   private observeLCP(): void {
-    try {;
-
-const observer = new PerformanceObserver((list) => {;;
-
-const entries = list.getEntries();;
-
-        const lastEntry = entries[entries.length - 1];;
-
+    try {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const lastEntry = entries[entries.length - 1];
         if (lastEntry) {
-          this._metrics.lcp = lastEntry.startTime}
-
+          this._metrics.lcp = lastEntry.startTime;
+        }
       });
 
-      observer.observe({ entryTypes: ['largest-contentful-paint] });
-
-      this.observers.push(observer)} catch (error) {
+      observer.observe({ entryTypes: ['largest-contentful-paint'] });
+      this.observers.push(observer);
+    } catch (error) {
       // console.warn removed for production
-}
+    }
 
   }
 
   private observeFID(): void {
-    try {;
-
-const observer = new PerformanceObserver((list) => {;;
-
-const entries = list.getEntries();;
-
+    try {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
         entries.forEach((entry) => {
-          this._metrics.fid = entry.processingStart - entry.startTime})});
+          this._metrics.fid = entry.processingStart - entry.startTime;
+        });
+      });
 
-      observer.observe({ entryTypes: ['first-input] });
-
-      this.observers.push(observer)} catch (error) {
+      observer.observe({ entryTypes: ['first-input'] });
+      this.observers.push(observer);
+    } catch (error) {
       // console.warn removed for production
-}
-
+    }
   }
 
   private observeCLS(): void {
-    try {;
-
-let clsValue = 0;;
-
-      const observer = new PerformanceObserver((list) => {;;
-
-const entries = list.getEntries();;
-
+    try {
+      let clsValue = 0;
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
         entries.forEach((entry: any) => {
           if (!entry.hadRecentInput) {
-            clsValue += entry.value}
-
+            clsValue += entry.value;
+          }
         });
+        this._metrics.cls = clsValue;
+      });
 
-        this._metrics.cls = clsValue});
-
-      observer.observe({ entryTypes: ['layout-shift] });
-
-      this.observers.push(observer)} catch (error) {
+      observer.observe({ entryTypes: ['layout-shift'] });
+      this.observers.push(observer);
+    } catch (error) {
       // console.warn removed for production
-}
-
+    }
   }
 
   private setupCustomMetrics(): void {
     // Time to First Byte
     if (performance.timing) {
-      this._metrics.ttfb = performance.timing.responseStart - performance.timing.navigationStart}
+      this._metrics.ttfb = performance.timing.responseStart - performance.timing.navigationStart;
+    }
 
     // Navigation timing
     if (performance.navigation) {
-      this.addCustomMetric('navigation_type', performance.navigation.type)}
-
+      this.addCustomMetric('navigation_type', performance.navigation.type);
+    }
   }
 
   addCustomMetric(name: string, value: number): void {
-    this._metrics.customMetrics[name] = value}
+    this._metrics.customMetrics[name] = value;
+  }
 
   getMetrics(): PerformanceMetrics {
-    return { ...this._metrics }}
+    return { ...this._metrics };
+  }
 
   reportMetrics(): void {
-    if (typeof window === 'undefined) return;
+    if (typeof window === 'undefined') return;
 
     // console.log removed for production
-// Send to analytics service
+    // Send to analytics service
     if (typeof gtag !== 'undefined') {
       gtag('event', 'performance_metrics', {
         event_category: 'performance',
@@ -163,22 +150,19 @@ const entries = list.getEntries();;
         custom_parameter_1: this._metrics.fcp,
         custom_parameter_2: this._metrics.cls,
         custom_parameter_3: this._metrics.fid
-      })}
-
+      });
+    }
   }
 
   cleanup(): void {
     this.observers.forEach(observer => observer.disconnect());
-
     this.observers = [];
-
-    this.isInitialized = false}
-
+    this.isInitialized = false;
+  }
 }
 
-// Global instance;
-
-const performanceMonitor = new PerformanceMonitor();;
+// Global instance
+const performanceMonitor = new PerformanceMonitor();
 
 // Initialize on load
 if (typeof window !== 'undefined') {
@@ -187,18 +171,21 @@ if (typeof window !== 'undefined') {
 
     // Report metrics after a delay to ensure all metrics are collected
     setTimeout(() => {
-      performanceMonitor.reportMetrics()}, 5000)})}
+      performanceMonitor.reportMetrics();
+    }, 5000);
+  });
+}
 
-export const measureWebVitals = () => {;;
+export const measureWebVitals = () => {
+  performanceMonitor.init();
+};
 
-  performanceMonitor.init()};
+export const getPerformanceMetrics = () => {
+  return performanceMonitor.getMetrics();
+};
 
-export const getPerformanceMetrics = () => {;;
-
-  return performanceMonitor.getMetrics()};
-
-export const addCustomMetric = (name: string, value: number) => {;;
-
-  performanceMonitor.addCustomMetric(name, value)};
+export const addCustomMetric = (name: string, value: number) => {
+  performanceMonitor.addCustomMetric(name, value);
+};
 
 export default performanceMonitor;
