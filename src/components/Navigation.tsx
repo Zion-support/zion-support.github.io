@@ -169,16 +169,26 @@ const Navigation: React.FC = () => {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-slate-900/95 backdrop-blur-md border-b border-cyan-400/20' : 'bg-transparent'
+      isScrolled ? 'bg-slate-900/95 backdrop-blur-md border-b border-cyan-400/20 shadow-cyber' : 'bg-transparent'
     }`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2" onClick={closeAllMenus}>
-            <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">
-              <Brain className="w-5 h-5 text-white" />
+          <Link to="/" className="flex items-center space-x-3 group" onClick={closeAllMenus}>
+            <div className="relative">
+              <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-xl flex items-center justify-center quantum-pulse group-hover:scale-110 transition-transform duration-300">
+                <Brain className="w-6 h-6 text-white group-hover:rotate-12 transition-transform duration-300" />
+              </div>
+              <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-xl blur opacity-30 group-hover:opacity-60 transition-opacity duration-300"></div>
             </div>
-            <span className="text-xl font-bold text-white neon-text">Zion Tech Group</span>
+            <div className="flex flex-col">
+              <span className="text-xl font-bold text-white neon-text group-hover:text-cyan-400 transition-colors duration-300">
+                Zion Tech Group
+              </span>
+              <span className="text-xs text-cyan-400 font-medium -mt-1">
+                AI & IT Solutions
+              </span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
