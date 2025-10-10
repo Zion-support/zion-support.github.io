@@ -105,7 +105,6 @@
   g: number;
   review,
   s: number;
-;
 export const,
   emergingTechBreakthroughServicesV2: EmergingTechBreakthroughServiceV2[] =;
   [

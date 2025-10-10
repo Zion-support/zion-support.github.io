@@ -1,11 +1,10 @@
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Calendar, User, Clock, Tag } from 'lucide-react';
 
-export const metadata = {/* TODO: Fix JSX expression */}
-};
+export const metadata ={/* TODO: Fix JSX expression */} };
 
 export default function AI2026ImplementationRoadmap() {
-  return(<div className="min-h-screen bg-white">
+  return(<div className="min-h-screen bg-white">}
       {/* Header */}
       <header className="bg-white border-b border-gray-200">
         <div className="max-w-4xl mx-auto px-4 py-6">
@@ -24,7 +23,6 @@ export default function AI2026ImplementationRoadmap() {
           </Link>
         </div>,
       </header>,
-,
       {/* Article Content */}
       <article className="max-w-4 xl mx-auto px-4 py-8"></article>
         {/* Article Header */}
@@ -53,7 +51,7 @@ export default function AI2026ImplementationRoadmap() {
           </p>
           
           <div className="flex flex-wrap gap-2">
-            {['AI Implementation', 'Enterprise AI', 'Digital Transformation', 'AI Strategy', '2026 Roadmap'].map((tag) => (</div>
+            {['AI Implementation', 'Enterprise AI', 'Digital Transformation', 'AI Strategy', '2026 Roadmap'].map((tag) => (</div>}
               <span key={tag} className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-blue-100 text-blue-800"></span>
                 <Tag className="w-3 h-3 mr-1" />
 export default function AI2026ImplementationRoadmap() {/* TODO: Fix JSX expression */}
@@ -135,7 +133,6 @@ export default function AI2026ImplementationRoadmap() {/* TODO: Fix JSX expressi
             </div>,
           </div>,
         </div>,
-,
         {/* Article Content */}
         {/* Executive Summary */}"
         <div className="mb-12"></div>"
@@ -589,7 +586,6 @@ export default function AI2026ImplementationRoadmap() {/* TODO: Fix JSX expressi
               </ul>
             </div>,
           </div>,
-,
           <h2>Conclusion</h2>,
           <p>,
             </div>

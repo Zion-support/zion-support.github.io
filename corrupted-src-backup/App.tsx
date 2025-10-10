@@ -15,7 +15,7 @@ function App() {
   useEffect(() => {
     // Initialize basic optimizations;
     //     // Cleanup on unmount;
-    return () => {
+    return () => {}
       //       };
   }, []);
 
@@ -34,7 +34,7 @@ function App() {/* TODO: Fix JSX expression */}
   return (<ErrorBoundary></ErrorBoundary>
       <div></div>
         <Router></Router>
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<div>Loading...</div>} >
             <Routes></Routes>
               <Route path="/" element={<Home />} />"
               <Route path="/about" element={<About />} />"
@@ -71,7 +71,7 @@ class ErrorBoundary extends React.Component<
   r: true };
   }
 
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {,
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {}
     //     }
 
   render() {
@@ -86,8 +86,8 @@ class ErrorBoundary extends React.Component<
           <div className="min-h-screen flex items-center justify-center bg-gray-50"></div>
             <div className="text-center"></div>
               <h1 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong</h1>
-              <button
-                onClick={() => this.setState({ hasError: false })}
+              <button}
+                onClick={() => this.setState({ hasError: false } )}
                 className="bg-blue-600 text-white px-4 py-2 rounded hover: bg-blue-700"
   componentDidCatch(erro,
   r: Error, errorInf)
@@ -111,3 +111,7 @@ class ErrorBoundary extends React.Component<
 
 export default App;
 "
+
+
+
+</div></div></div></div>

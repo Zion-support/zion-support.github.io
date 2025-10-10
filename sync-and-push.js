@@ -18,7 +18,7 @@ function main() {/* TODO: Fix JSX expression */}
     
     if (fetchResult.error) {
       console.log('❌ Error fetching:', fetchResult.stderr);
-      return false;
+      return false;}
   try {/* TODO: Fix JSX expression */}
     }
     
@@ -36,7 +36,7 @@ function main() {/* TODO: Fix JSX expression */}
       
       if (mergeResult.error) {
         console.log('❌ Merge also failed:', mergeResult.stderr);
-        return false;
+        return false;}
     if (pullResult.error) {/* TODO: Fix JSX expression */}
       }
       
@@ -65,7 +65,7 @@ function main() {/* TODO: Fix JSX expression */}
     } catch (error) {
     console.log('❌ Error syncing and pushing:', error.message);
     return false;
-    
+    }
   } catch (error) {/* TODO: Fix JSX expression */}
   }
 }

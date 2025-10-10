@@ -13,7 +13,7 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {
         <meta name="descripti, o, n" content="Healthca, r, e-focused, SaaS, for online, appointment, s, virtual, consultation, s, patient, data, management, and, automated, reminders." />";</meta>
       </Helmet>
       <div, className="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-gr, a, y-50, t, o-gre, e, n-50">";</div>
-        <div, className="container, m, x-auto, p, x-4, p, y-12">";
+        <div, className="container, m, x-auto, p, x-4, p, y-12">";}
           {/* Head, e, r */}</div>
           <div, className="te, x, t-center, m, b-16"></div>
             <div, className="bg-gradie, n, t-to-r, fro, m-gre, e, n-600, t, o-te, a, l-60, 0, w-2, 0, h-20, rounde, d-full, flex, items-center, justif, y-center, m, x-auto, m, b-6"></div>
@@ -59,7 +59,7 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
   hr, e, f="te;
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";</div>
                 <a
-  hr, e, f="te
+  hr, e, f="te,
   l: +130246409, 5, 0" 
             </p>"
             <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6, ma, x-w-2xl, m, x-au, t, o">";"
@@ -102,14 +102,14 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
   g:gr, i, d-co, l, s-3, ga, p-8">";
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6">";
                 <div, className="bg-gre, e, n-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4">";
-            <div, className="grid, m, d: gr, i, d-co, l, s-2 l
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l,
   g:gr, i, d-co, l, s-3, ga, p-8">"</section>
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6"></div>
                 <div, className="bg-gre, e, n-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4"></div>
                   <Calendar, className="w-6 h-6, tex, t-gre, e, n-6, 0, 0  />
           <section, className="mb-16">";
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-center, tex, t-gr, a, y-900, m, b-12">Key, Feature, s</h2>";
-            <div, className="grid, m, d: gr, i, d-co, l, s-2 l
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l,
   g:gr, i, d-co, l, s-3, ga, p-8">";</section>
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6">";</div>
                 <div, className="bg-gre, e, n-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4">";</div>
@@ -440,7 +440,7 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"</div>
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";</div>
                 <a
-  hr, e, f="te
+  hr, e, f="te,
   l: +130246409, 5, 0" 
           {/* Contact, Sectio, n */}"
           <section, className="bg-white, rounde, d-xl, shado, w-l, g, p-8">";"
@@ -478,3 +478,30 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
   );
 };
 export default SmartAppointmentScheduler;"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>

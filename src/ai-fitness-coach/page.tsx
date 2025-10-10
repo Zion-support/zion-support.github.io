@@ -3,9 +3,8 @@ import { Heart, Play, Download, Share, Star, CheckCircle, Zap, Clock, Users, Awa
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-
-const AIFitnessCoachPage: React.FC = () => {
-  const features = [
+const AIFitnessCoachPage: React.FC = () => {;
+const features = [
     'Personalized Plans',
     'Progress Tracking',
     'Nutrition Analysis',
@@ -17,8 +16,7 @@ const AIFitnessCoachPage: React.FC = () => {
     'Meal Planning',
     'Wearable Integration'
   ];
-
-  const benefits = [
+const benefits = [
     'Better results',
     '24/7 guidance',
     'Personalized approach',
@@ -26,28 +24,27 @@ const AIFitnessCoachPage: React.FC = () => {
     'Motivation support',
     'Cost-effective'
   ];
-
-  const pricingPlans = [
+const pricingPlans = [
     {
       name: 'Basic',
       price: '$99',
       period: '/month',
       features: ['Basic plans', 'Progress tracking', 'Email support', 'Mobile app'],
-      popular: false
+      popular: false}
     },
     {
       name: 'Premium',
       price: '$149',
       period: '/month',
       features: ['Personalized plans', 'Nutrition analysis', 'Video workouts', 'Wearable sync', 'Priority support'],
-      popular: true
+      popular: true}
     },
     {
       name: 'Pro',
       price: '$249',
       period: '/month',
       features: ['Everything in Premium', '1-on-1 coaching', 'Custom programs', 'Advanced analytics', 'Dedicated support'],
-      popular: false
+      popular: false}
     }
   ];
 
@@ -56,8 +53,7 @@ const AIFitnessCoachPage: React.FC = () => {
       <SEOOptimizer
         title="AI Fitness Coach - Personalized Fitness & Nutrition Plans | Zion Tech Group"
         description="Get personalized fitness and nutrition plans powered by AI analysis. Track progress, get 24/7 guidance, and achieve your health goals starting at $99/month."
-        keywords={['AI fitness coach', 'personalized fitness', 'nutrition plans', 'health tracking', 'AI health', 'fitness automation']}
-        canonicalUrl="https://ziontechgroup.com/ai-fitness-coach"
+        keywords={['AI fitness coach', 'personalized fitness', 'nutrition plans', 'health tracking', 'AI health', 'fitness automation']} canonicalUrl="https://ziontechgroup.com/ai-fitness-coach"
       />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -102,7 +98,7 @@ const AIFitnessCoachPage: React.FC = () => {
               AI Fitness Features
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {features.map((feature, index) => (
+              {features.map((feature, index) => (}
                 <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
@@ -119,7 +115,7 @@ const AIFitnessCoachPage: React.FC = () => {
               Why Choose AI Fitness Coach?
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
+              {benefits.map((benefit, index) => (}
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Zap className="w-8 h-8 text-white" />
@@ -136,14 +132,14 @@ const AIFitnessCoachPage: React.FC = () => {
               Simple, Transparent Pricing
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {pricingPlans.map((plan, index) => (
-                <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
+              {pricingPlans.map((plan, index) => (}
+                <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''} `}>
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <div className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-semibold">
                         Most Popular
                       </div>
-                    </div>
+                    </div>}
                   )}
                   <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
@@ -153,7 +149,7 @@ const AIFitnessCoachPage: React.FC = () => {
                     </div>
                   </div>
                   <ul className="space-y-3 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
+                    {plan.features.map((feature, featureIndex) => (}
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                         {feature}
@@ -165,8 +161,7 @@ const AIFitnessCoachPage: React.FC = () => {
                     className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
                       plan.popular
                         ? 'cyber-button'
-                        : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
-                    }`}
+                        : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'} }`}
                   >
                     Get Started
                   </a>
@@ -209,3 +204,10 @@ const AIFitnessCoachPage: React.FC = () => {
 };
 
 export default AIFitnessCoachPage;
+
+
+
+
+
+
+</div></div></div></div></div></div></div>

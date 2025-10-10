@@ -28,7 +28,7 @@ export interface InnovativeITService2024 {id: string;
   variant: string;
   contactInfo: unknown;
     mobile: string;
-    email: string;
+    email: string;}
     address: string}
     website: string}
 };

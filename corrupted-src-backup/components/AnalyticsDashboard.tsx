@@ -8,11 +8,11 @@ interface AnalyticsData {
   conversionRate: number;
   topPages: Array<{,
     path: string;
-    views: number;
+    views: number;}
   }>;
   trafficSources: Array<{,
     source: string;
-    percentage: number;
+    percentage: number;}
 interface AnalyticsData {/* TODO: Fix JSX expression */}
   }>;
   trafficSource,

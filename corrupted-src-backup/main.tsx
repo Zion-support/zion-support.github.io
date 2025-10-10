@@ -22,7 +22,7 @@ async function reportWebVitals() {/* TODO: Fix JSX expression */}
 // const container = document.getElementById('root');
 if (!container) {/* TODO: Fix JSX expression */}
 }
-
+;
 const _root = createRoot(container);
 root.render(<React.StrictMode>)
     <App />)

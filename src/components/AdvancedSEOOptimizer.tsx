@@ -12,9 +12,8 @@ const,
   AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
     }
-
-    const baseStructuredData = {/* TODO: Fix JSX expression */}
-      },
+;
+const baseStructuredData ={/* TODO: Fix JSX expression */} },
       addres,
   s: {/* TODO: Fix JSX expression */}
       },
@@ -38,16 +37,14 @@ const,
 
     return baseStructuredData;
   }, [seoData, enableStructuredData]);
-
-  const generateBreadcrumbStructuredData = useCallback(() => {/* TODO: Fix JSX expression */}
+const generateBreadcrumbStructuredData = useCallback(() => {/* TODO: Fix JSX expression */}
     }
 
     return {/* TODO: Fix JSX expression */}
       }))
     };
   }, [seoData, enableStructuredData]);
-
-  const generateFAQStructuredData = useCallback(() => {/* TODO: Fix JSX expression */}
+const generateFAQStructuredData = useCallback(() => {/* TODO: Fix JSX expression */}
     }
 
     return {/* TODO: Fix JSX expression */}
@@ -91,16 +88,14 @@ const,
   t: '/browserconfig.xml' }];
     return metaTags;
   }, [seoData]);
-
-  const generateBreadcrumbStructuredData = useCallback(() => {/* TODO: Fix JSX expression */}
+const generateBreadcrumbStructuredData = useCallback(() => {/* TODO: Fix JSX expression */}
     }
 
     return {/* TODO: Fix JSX expression */}
       }))
     };
   }, [seoData.breadcrumbs]);
-
-  const generateFAQStructuredData = useCallback(() => {/* TODO: Fix JSX expression */}
+const generateFAQStructuredData = useCallback(() => {/* TODO: Fix JSX expression */}
     }
 
     return {/* TODO: Fix JSX expression */}
@@ -108,8 +103,7 @@ const,
       }))
     };
   }, [seoData.faqs]);
-
-  const structuredData = generateStructuredData();
+const structuredData = generateStructuredData();
   const openGraphData = generateOpenGraphData();
   const twitterCardData = generateTwitterCardData();
   const metaTags = generateMetaTags();
@@ -125,12 +119,11 @@ const,
       canonicalLink.setAttribute('href', seoData.canonicalUrl);
     }
   }, [seoData]);
-
-  const addStructuredData = (dat)
+const addStructuredData = (dat)
   a: Record<string, unknown>) => {/* TODO: Fix JSX expression */}
     }
-    
-    const script = document.createElement('script');
+    ;
+const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(data);
     document.head.appendChild(script);

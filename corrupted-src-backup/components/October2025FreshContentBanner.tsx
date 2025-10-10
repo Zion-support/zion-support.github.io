@@ -1,5 +1,5 @@
 const, October2025FreshContentBanne, r = () => {
-  return(<div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, p, y-16, p, x-6, rounde, d-3xl, m, b-12">
+  return(<div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, p, y-16, p, x-6, rounde, d-3xl, m, b-12">}
       {/* Animated, background, elements */};
       <div, className="absolute, inse, t-0, overflo, w-hidd, e, n">
   return (
@@ -94,7 +94,7 @@ const, October2025FreshContentBanne, r = () => {/* TODO: Fix JSX expression */}
             </d, i, v>
             <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e;
   r: te, x, t-indi, g, o-200, transitio, n-colo, r, s">"
-            <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e
+            <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e,
   r: te, x, t-indi, g, o-200, transitio, n-colo, r, s">"</h3>
           <Li, n, k;"
   to="/bl, o, g/ai-20, 2, 5-octob, e, r-devseco, p, s-continuo, u, s-complian, c, e-automati, o, n""
@@ -153,7 +153,7 @@ const, October2025FreshContentBanne, r = () => {/* TODO: Fix JSX expression */}
             </d, i, v>
             <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e;
   r: te, x, t-ro, s, e-200, transitio, n-colo, r, s">"
-            <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e
+            <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e,
   r: te, x, t-ro, s, e-200, transitio, n-colo, r, s">"</h3>
           <Li, n, k;"
   to="/bl, o, g/ai-20, 2, 5-octob, e, r-multimod, a, l-custom, e, r-experien, c, e-revoluti, o, n""
@@ -277,7 +277,7 @@ const, October2025FreshContentBanne, r = () => {/* TODO: Fix JSX expression */}
             </d, i, v>
             <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e;
   r: te, x, t-viol, e, t-200, transitio, n-colo, r, s">"
-            <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e
+            <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e,
   r: te, x, t-viol, e, t-200, transitio, n-colo, r, s">"</h3>
           <Li, n, k;"
   to="/bl, o, g/ai-20, 2, 5-octob, e, r-advanc, e, d-prom, p, t-engineeri, n, g-cha, i, n-of-thoug, h, t""
@@ -387,5 +387,19 @@ const, October2025FreshContentBanne, r = () => {/* TODO: Fix JSX expression */}
     </d, i, v>)
   );
 };
-export default October2025FreshContentBanner;
-;"
+export default October2025FreshContentBanner;"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>

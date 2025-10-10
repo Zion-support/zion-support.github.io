@@ -12,7 +12,7 @@ export interface FuturisticInnovation2028 {
   category: string;
   real_implementation: boolean;
   contact_info: unknown;
-    mobile: string;
+    mobile: string;}
     email: string}
     address: string}
 export interface FuturisticInnovation2028 {/* TODO: Fix JSX expression */}
@@ -239,7 +239,6 @@ export const,
     }
   }
 ];
-;
     id: "2028-futuristic-innovation"
     name: "2028 Futuristic Innovation Platform",
     tagline: "Futuristic innovations for 2028",

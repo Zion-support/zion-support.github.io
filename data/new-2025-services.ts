@@ -5905,8 +5905,6 @@ export const,
   t: 'holographic-matrix'}
 ];
 ;
-;
-;
       'Model and dataset registry'
       'Risk and policy mappings'
       'PII/PHI tagging and checks'
@@ -7821,7 +7819,6 @@ review,
     review,
   s: 6}
 ];
-;
 ];
 }; // Additional 2025 real micro-SaaS, AI and IT services export const,
   new2025Services: EnhancedRealMicroSaasService[] = [ 'Jailbreak and injection detection',' 'PII redaction and audit trail',' 'Hallucination and grounding score',' 'Dashboards and CI quality gates'], popula,
@@ -9876,7 +9873,7 @@ review,
   s: ['LakeraGuardrails AI', 'Azure AI Content Safety'],' marketSiz,
   e: '$3.5B+ AI safety & governance',' growthRat,
   e: '200% annual growth',' varian,
-  t: 'holographic-matrix'} ]; ;' 'Model and dataset registry'' 'Risk and policy mappings'' 'PII/PHI tagging and checks'' 'Change approvals and trails'' 'Reports and exports' ] popula,
+  t: 'holographic-matrix'} ];' 'Model and dataset registry'' 'Risk and policy mappings'' 'PII/PHI tagging and checks'' 'Change approvals and trails'' 'Reports and exports' ] popula,
   r: true' ico,
   n: '📚'' colo,
   r: 'from-slate-700 to-gray-700'' textColo,

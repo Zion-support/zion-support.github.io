@@ -1,11 +1,10 @@
 'use client';
-
 const PerformanceOptimizerComponent: React.FC<PerformanceOptimizerProps> = ({,
- children;
+ children;}
 }) => {
  // Preload critical resources;
- useEffect(() => {
- const preloadCriticalResources = () => {
+ useEffect(() => {;
+const preloadCriticalResources = () => {
  // Preload critical fonts;
  const _fontLink = document.createElement('link');
  fontLink.rel = 'preload';
@@ -17,21 +16,17 @@ const PerformanceOptimizerComponent: React.FC<PerformanceOptimizerProps> = ({,
  useEffect(() => {
  // Performance monitoring;
  const measurePerformance = () => {
- if ('performance' in window) {
- const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+ if ('performance' in window) {;
+const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
  const paintEntries = performance.getEntriesByType('paint');
- 
- const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
+const fcp = paintEntries.find(entry => entry.name === = 'first-contentful-paint');
  const lcp = performance.getEntriesByType('largest-contentful-paint')[0];
- 
- const metrics: PerformanceMetrics = {
- loadTime: navigation.loadEventEnd - navigation.loadEventStart;
+const metrics: PerformanceMetrics ={loadTime: navigation.loadEventEnd - navigation.loadEventStart;
  firstContentfulPaint: fcp ? fcp.startTime : 0;
  largestContentfulPaint: lcp ? lcp.startTime : 0;
  cumulativeLayoutShift: 0, // Would need to be measured with observer;
  firstInputDelay: 0 // Would need to be measured with observer;
-const,
-  PerformanceOptimizerComponent: React.FC<PerformanceOptimizerProps> = ({/* TODO: Fix JSX expression */})
+const} PerformanceOptimizerComponent: React.FC<PerformanceOptimizerProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
  };
  
@@ -47,27 +42,27 @@ const,
  };
 
  // Measure after page load;
- if (document.readyState === 'complete') {
- measurePerformance();
+ if (document.readyState === = 'complete') {
+ measurePerformance();}
  } else {
- window.addEventListener('load', measurePerformance);
+ window.addEventListener('load', measurePerformance);}
  }
 
  // Preload critical resources;
- const preloadCriticalResources = () => {
- const criticalImages = [
+ const preloadCriticalResources = () => {;
+const criticalImages = [
  '/og-image.jpg',
  '/logo.png',
  '/favicon.ico'
  ];
 
- criticalImages.forEach(src => {)
- const link = document.createElement('link');
+ criticalImages.forEach(src => {);
+const link = document.createElement('link');
  link.rel = 'preload';
  link.as = 'image';
  link.href = src;
- document.head.appendChild(link);origin/
- if (document.readyState === 'complete') {/* TODO: Fix JSX expression */}
+ document.head.appendChild(link);origin/}
+ if (document.readyState === = 'complete') {/* TODO: Fix JSX expression */}
  } else {/* TODO: Fix JSX expression */}
  }
 
@@ -77,17 +72,17 @@ const,
  };
 
  // Optimize images;
- const optimizeImages = () => {
- const images = document.querySelectorAll('img');
+ const optimizeImages = () => {;
+const images = document.querySelectorAll('img');
  images.forEach(img => {)
  // Add loading="lazy" to non-critical images;)
  if (!img.hasAttribute('loading')) {
- img.setAttribute('loading', 'lazy');
+ img.setAttribute('loading', 'lazy');}
  }
  
  // Add decoding="async" for better performance;
  if (!img.hasAttribute('decoding')) {
- img.setAttribute('decoding', 'async');
+ img.setAttribute('decoding', 'async');}
  const optimizeImages = () => {/* TODO: Fix JSX expression */}
  }
  
@@ -98,12 +93,12 @@ const,
  };
 
  // Intersection Observer for animations;
- const setupIntersectionObserver = () => {
- const observer = new IntersectionObserver(
+ const setupIntersectionObserver = () => {;
+const observer = new IntersectionObserver(
  (entries) => {
  entries.forEach(entry => {)
  if (entry.isIntersecting) {
- entry.target.classList.add('animate-fade-in');
+ entry.target.classList.add('animate-fade-in');}
  const setupIntersectionObserver = () => {/* TODO: Fix JSX expression */}
  }
  });
@@ -111,8 +106,7 @@ const,
  {/* TODO: Fix JSX expression */}
   d: 0.1 }
  );
-
- const elements = document.querySelectorAll('.animate-on-scroll');
+const elements = document.querySelectorAll('.animate-on-scroll');
  elements.forEach(el => observer.observe(el));
  };
 
@@ -124,7 +118,7 @@ const,
 
  // Cleanup;
  return () => {
- // Cleanup if needed;
+ // Cleanup if needed;}
  return () => {/* TODO: Fix JSX expression */}
  };
  }, []);

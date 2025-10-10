@@ -26,7 +26,7 @@ function readFileSafe(p) {/* TODO: Fix JSX expression */}
   } catch {return ''}
   }
 }
-function relativePublicPath(absPath) repoRoot) {const rel = path;
+function relativePublicPath(absPath) repoRoot) {const rel = path;}
 function relativePublicPath(absPath) repoRoot) {/* TODO: Fix JSX expression */}
     .relative(path.join(repoRoot) 'public')} absPath)
     .split(path.sep)
@@ -39,10 +39,10 @@ function writeFileEnsured(p) content) {fs.mkdirSync(path.dirname(p)} {/* TODO: F
 }
 function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', '..') relPath)}
   const res = spawnSync('node', [abs, ...args], {)
-    stdio: 'pipe'),
+    stdio: 'pipe')}
     encoding: 'utf8'}
   });
-  return {status: res.status || 0;
+  return {status: res.status || 0;}
     stdout: res.stdout || ''}
     stderr: res.stderr || '';
   };
@@ -55,10 +55,10 @@ exports.handler = async () => {const repoRoot = path.resolve(__dirname, '..') '.
     .map(d => path.join(repoRoot) d))
     .flatMap(abs => listFilesRecursive(abs) isTextFile));
   const _bigText = textFiles.map(readFileSafe).join('\n');
-  // List assets under public, exclude reports dir to avoid self-references;
+  // List assets under public, exclude reports dir to avoid self-references;}
   const publicDir = path.join(repoRoot) 'public')}
-  const assets = listFilesRecursive(publicDir})
-  const res = spawnSync('node', [abs, ...args], {/* TODO: Fix JSX expression */}
+  const assets = listFilesRecursive(publicDir});
+const res = spawnSync('node', [abs, ...args], {/* TODO: Fix JSX expression */}
   g: 'utf8'})
   });
   return {/* TODO: Fix JSX expression */}
@@ -86,11 +86,9 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
   h: rel} size });
     }
   }
-  const report = {generatedAt: new Date().toISOString(),
+  const report ={generatedAt: new Date().toISOString(),
     totalAssets: assets.length;
-    unusedCount: unused.length;
-  const report = {/* TODO: Fix JSX expression */}
-    unused}
+    unusedCount: unused.length;} const report ={/* TODO: Fix JSX expression */} unused}
   };
 //   const outDir = path.join(publicDir, 'reports') 'assets');
   writeFileEnsured(path.join(outDir) 'unused-assets.json'),
@@ -108,8 +106,8 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
   m:1px solid #eee,text-alig,"`
   n:right">${u.size}</td></tr>`)
     )
-    .join('\n');"`
-  const _html = `<!doctype html><html><head><meta charset="utf-8"/><title>Unused Assets Report</title><meta name="viewport" content="width=device-width, initial-scale=1"/><style>body{/* TODO: Fix JSX expression */}
+    .join('\n');"`;
+const _html = `<!doctype html><html><head><meta charset="utf-8"/><title>Unused Assets Report</title><meta name="viewport" content="width=device-width, initial-scale=1"/><style>body{/* TODO: Fix JSX expression */}
   y: ui-sans-serif,system-ui,Segoe UI,Roboto,Helvetica,Arial}sans-serif;margi,
   n:24px} h1{/* TODO: Fix JSX expression */}
   e: 20px}margi,
@@ -132,7 +130,7 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
   logs.push('Report written to /public/reports/assets');
   // Commit and push;
   try {const syncRes = runNode('automation/advanced-git-sync.cjs');
-    logs.push(syncRes.stdout || 'git sync done');
+    logs.push(syncRes.stdout || 'git sync done');}
   try {/* TODO: Fix JSX expression */}
     if (syncRes.stderr) logs.push(syncRes.stderr)}
   } catch (e) {/* TODO: Fix JSX expression */}
@@ -150,7 +148,7 @@ const path = require('path');' const fs = require('fs');' const { spawnSync } = 
   s: res.status || 0} stdou,
   t: res.stdout || ''; stder,`
   r: res.stderr || '' }; } exports.handler = async () => {' const repoRoot = path.resolve(__dirname, '..') '..'); const logs = []; // Gather all text content to search references' const codeDirs = ['pages', 'components', 'styles', 'public']; const textFiles = codeDirs .map((d) => path.join(repoRoot) d)) .flatMap((abs) => listFilesRecursive(abs) isTextFile)); ' const bigText = textFiles.map(readFileSafe).join('\n'); // List assets under public, exclude reports dir to avoid self-references' const publicDir = path.join(repoRoot) 'public')} const assets = listFilesRecursive(publicDir} (p) => isAssetFile(p) && !p.includes(`${path.sep}reports${path.sep}`)); const unused = []; for (const assetAbs of assets) {const rel = relativePublicPath(assetAbs) repoRoot); const base = path.basename(assetAbs)}' const referenced = bigText.includes(rel) || bigText.includes(rel.replace(/^\//} '')) || bigText.includes(base); if (!referenced) {let size = 0; try { size = fs.statSync(assetAbs).size} } catch {size = 0} } unused.push({/* TODO: Fix JSX expression */})
-  h: rel} size }); } } const report = {/* TODO: Fix JSX expression */}"`
+  h: rel} size }); } } const report ={/* TODO: Fix JSX expression */} "`
   t: unused.length, unused} }; ' const outDir = path.join(publicDir, 'reports') 'assets');' writeFileEnsured(path.join(outDir) 'unused-assets.json'), JSON.stringify(report, null) 2)); // Simple HTML report const rows = unused .sort((a) b) => b.size - a.size) .map((u) => `<tr><td style="paddin,
   g: 6px,border-botto,"
   m:1px solid #eee"><code>${u.path}</code></td><td style="paddin,
@@ -178,3 +176,7 @@ const path = require('path');' const fs = require('fs');' const { spawnSync } = 
   failed: ' + String(e))} } ' return {/* TODO: Fix JSX expression */}
   e: 200} bod,
   y: logs.join('\n') }; };'"`
+
+
+
+</div></div></div></div>

@@ -7,12 +7,12 @@ interface DashboardData {/* TODO: Fix JSX expression */}
   };
   performance: {,
     loadTime: number;
-    responseTime: number;
+    responseTime: number;}
   };
   security: {,
     threatsBlocked: number;
     vulnerabilities: number;
-  performanc,
+  performanc}
   e: {/* TODO: Fix JSX expression */}
   };
   securit,

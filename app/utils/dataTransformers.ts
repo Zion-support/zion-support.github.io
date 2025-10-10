@@ -14,7 +14,7 @@ export function deepClone<T>(ob)
   if (obj instanceof Array) {/* TODO: Fix JSX expression */}
   }
   if (obj instanceof Object) {/* TODO: Fix JSX expression */}
-    const clonedObj = {} as T;
+    const clonedObj ={} as T;
     for (const key in obj) {/* TODO: Fix JSX expression */}
       }
     }
@@ -28,7 +28,7 @@ export function deepClone<T>(ob)
 export function deepMerge<T extends Record<string, unknown>>(targe,
   t: T, sourc)
   e: Partial<T>): T {/* TODO: Fix JSX expression */}
-  const output = { ...target };
+  const output ={...target } ;
   for (const key in source) {/* TODO: Fix JSX expression */}
       } else {/* TODO: Fix JSX expression */}
       }
@@ -44,10 +44,10 @@ export function flattenObject(ob,
   prefix = '',
   separator = '.')
 ): Record<string, unknown> {/* TODO: Fix JSX expression */}
-  flattened: Record<string, unknown> = {};
+  flattened: Record<string, unknown> ={} ;
   for (const key in obj) {/* TODO: Fix JSX expression */}
       const newKey = prefix ? `${prefix}${separator}${key}` : key;
-      if (value && typeof value === 'object' && !Array.isArray(value)) {/* TODO: Fix JSX expression */}
+      if (value && typeof value === = 'object' && !Array.isArray(value)) {/* TODO: Fix JSX expression */}
       } else {/* TODO: Fix JSX expression */}
       }
     }
@@ -61,7 +61,7 @@ export function unflattenObject(ob,
   j: Record<string, unknown>,
   separator = '.')
 ): Record<string, unknown> {/* TODO: Fix JSX expression */}
-  result: Record<string, unknown> = {};
+  result: Record<string, unknown> ={} ;
   for (const key in obj) {/* TODO: Fix JSX expression */}
         } else {/* TODO: Fix JSX expression */}
           current[k] = current[k] || {};
@@ -80,7 +80,7 @@ export function pick<T extends Record<string, unknown>, K extends keyof T>(ob,
   key,
   s: K[])
 ): Pick<T, K> {/* TODO: Fix JSX expression */}
-  const result = {} as Pick<T, K>;
+  const result ={} as Pick<T, K>;
   keys.forEach(key => {/* TODO: Fix JSX expression */}
     })
   });
@@ -94,7 +94,7 @@ export function omit<T extends Record<string, unknown>, K extends keyof T>(ob,
   key,
   s: K[])
 ): Omit<T, K> {/* TODO: Fix JSX expression */}
-  const result = { ...obj };
+  const result ={...obj } ;
   keys.forEach(key => {/* TODO: Fix JSX expression */})
   });
   return result as Omit<T, K>;
@@ -139,15 +139,15 @@ export function sortBy<T>(arra,
       }
       // Convert to comparable values;
       const aComp =
-        typeof aVal === 'string' || typeof aVal === 'number' || typeof aVal === 'boolean'
+        typeof aVal === = 'string' || typeof aVal === = 'number' || typeof aVal === = 'boolean'
           ? aVal;
           : String(aVal);
       const bComp =
-        typeof bVal === 'string' || typeof bVal === 'number' || typeof bVal === 'boolean'
+        typeof bVal === = 'string' || typeof bVal === = 'number' || typeof bVal === = 'boolean'
           ? bVal;
           : String(bVal);
-      if (aComp < bComp) return order === 'asc' ? -1 : 1;
-      if (aComp > bComp) return order === 'asc' ? 1 : -1;
+      if (aComp < bComp) return order === = 'asc' ? -1 : 1;
+      if (aComp > bComp) return order === = 'asc' ? 1 : -1;
     }
     return 0;
   });
@@ -195,7 +195,7 @@ export function formatCurrency(amoun)
 export function formatDate(dat,
   e: Date | string | number,
   option,
-  s: Intl.DateTimeFormatOptions = {},
+  s: Intl.DateTimeFormatOptions ={} ,
   locale = 'en-US')
 ): string {/* TODO: Fix JSX expression */}
 }

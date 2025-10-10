@@ -28,7 +28,7 @@ export interface IntegrationProviderMeta {
 
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 ,
-export type SyncStatus = 'connected' | 'warning' | 'disconnected';
+export type SyncStatus = 'connected' | 'warning' | 'disconnected';}
 }
 
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
@@ -45,7 +45,7 @@ export interface IntegrationProviderMeta {
   id: string;
   name: string;
   category: 'crm' | 'ats' | 'hr';
-  description: string;
+  description: string;}
 }
 }
 
@@ -57,7 +57,7 @@ export interface ProviderConnection {
   accessToken: string;
   refreshToken?: string;
   expiresAt?: number;
-  config?: Record<string, any>;</string>
+  config?: Record<string, any>;</string>}
 }
   category: 'crm' | 'ats' | 'hr';
   description: string;
@@ -86,7 +86,7 @@ export interface ProviderConnection {
   expiresAt?: number;
   status: SyncStatus;
   lastSync?: number;
-  config?: Record<string, any>;</string>
+  config?: Record<string, any>;</string>}
 }
 
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
@@ -117,7 +117,7 @@ export interface SyncLogEntry {
   id: string;
   connectionId: string;
   action: string;
-  details?: Record<string, any>;
+  details?: Record<string, any>;}
 }
 
   details?: Record<string, any>;</string>
@@ -153,7 +153,7 @@ export interface SyncLogEntry {
 export interface ManualOverride {
   jobId: string;
   disableCrmSync?: boolean;
-  disableAtsSync?: boolean;
+  disableAtsSync?: boolean;}
 }
 
 export interface ZapierEvent {
@@ -164,7 +164,7 @@ export interface IntegrationProviderMeta {,
   timestamp: number;
   status: 'success' | 'error' | 'warning';
   message: string;
-
+}
 }
 
 export interface ManualOverride {/* TODO: Fix JSX expression */}
@@ -179,7 +179,7 @@ export interface IntegrationOverride {
   reason: string;
   createdAt: Date;
   updatedAt: Date;
-
+}
 }
 
 export interface IntegrationEvent {/* TODO: Fix JSX expression */}
@@ -190,14 +190,14 @@ export interface ZapierEvent {
   id: string;
   type: 'zion.job.posted' | 'zion.talent.matched';
   timestamp: number;
-  payload: Record<string, any>;
+  payload: Record<string, any>;}
 }
 
 export interface IntegrationsState {
   connections: ProviderConnection[];
   logs: SyncLogEntry[];
   overrides: ManualOverride[];
-  events: ZapierEvent[];
+  events: ZapierEvent[];}
   lastError?: string | null;}
 
 
@@ -205,7 +205,7 @@ export interface IntegrationsState {
   connections: ProviderConnection[];
   logs: SyncLogEntry[];
   overrides: ManualOverride[];
-  events: ZapierEvent[];
+  events: ZapierEvent[];}
 }
   payload: Record<string, any>;</string>
 }
@@ -218,14 +218,14 @@ export interface ProviderConnection {
   expiresAt?: number;
   status: SyncStatus;
   lastSync?: number;
-  createdAt: number;
+  createdAt: number;}
 }
 
 export interface IntegrationProviderMeta {
   id: IntegrationProviderId;
   name: string;
   category: 'crm' | 'ats' | 'hr';
-  description: string;
+  description: string;}
 }
   logoUrl?: string;
   websiteUrl?: string;
@@ -239,7 +239,7 @@ export interface IntegrationsState {
   connections: ProviderConnection[];
   logs: SyncLogEntry[];
   overrides: ManualOverride[];
-  events: ZapierEvent[];
+  events: ZapierEvent[];}
   lastError?: string | null;}
 }
 }

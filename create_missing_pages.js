@@ -4,16 +4,14 @@ import fs from 'fs';
 const missingPages = fs.readFileSync('missing_pages.txt', 'utf8').split('\n').filter(page => page.trim());
 
 // Page configurations;
-const pageConfigs = {
-  'ai-fintech': {
+const pageConfigs ={'ai-fintech': {
     title: 'AI Fintech Solutions',
     description: 'Advanced AI-powered financial technology solutions for banking, trading, risk management, and fraud detection.',
     icon: 'CreditCard',
     features: ['Algorithmic Trading', 'Risk Management', 'Fraud Detection', 'Credit Scoring', 'Regulatory Compliance', 'Real-time Analytics'],
     benefits: ['40% Better Returns', '99.9% Fraud Detection', '60% Cost Reduction'],
     price: '$2,200/month',
-    keywords: ['AI fintech', 'financial AI', 'banking AI', 'trading algorithms', 'risk management', 'fraud detection']
-  },
+    keywords: ['AI fintech', 'financial AI', 'banking AI', 'trading algorithms', 'risk management', 'fraud detection']} },
   'ai-mobile-app-development': {
     title: 'AI Mobile App Development',
     description: 'Create intelligent mobile applications with AI-powered features and seamless user experiences.',
@@ -21,7 +19,7 @@ const pageConfigs = {
     features: ['AI Integration', 'Cross-platform Development', 'Smart UI/UX', 'Real-time Analytics', 'Push Notifications', 'Offline Capabilities'],
     benefits: ['50% Faster Development', 'Better User Engagement', 'Reduced Maintenance', 'Scalable Architecture'],
     price: '$1,500/month',
-    keywords: ['AI mobile apps', 'mobile development', 'iOS Android', 'cross-platform', 'mobile AI']
+    keywords: ['AI mobile apps', 'mobile development', 'iOS Android', 'cross-platform', 'mobile AI']}
   },
   'ai-cybersecurity': {
     title: 'AI Cybersecurity Solutions',
@@ -30,7 +28,7 @@ const pageConfigs = {
     features: ['Threat Detection', 'Anomaly Detection', 'Incident Response', 'Security Monitoring', 'Vulnerability Assessment', 'Compliance Management'],
     benefits: ['99.9% Threat Detection', 'Real-time Protection', 'Reduced False Positives', 'Automated Response'],
     price: '$2,800/month',
-    keywords: ['AI cybersecurity', 'threat detection', 'security AI', 'cyber defense', 'incident response']
+    keywords: ['AI cybersecurity', 'threat detection', 'security AI', 'cyber defense', 'incident response']}
   },
   'ai-marketing': {
     title: 'AI Marketing Automation',
@@ -39,7 +37,7 @@ const pageConfigs = {
     features: ['Campaign Optimization', 'Customer Segmentation', 'Predictive Analytics', 'Content Generation', 'A/B Testing', 'ROI Tracking'],
     benefits: ['200% Better ROI', '50% More Leads', 'Personalized Campaigns', 'Automated Optimization'],
     price: '$1,800/month',
-    keywords: ['AI marketing', 'marketing automation', 'campaign optimization', 'customer insights', 'marketing AI']
+    keywords: ['AI marketing', 'marketing automation', 'campaign optimization', 'customer insights', 'marketing AI']}
   },
   'task-manager-pro': {
     title: 'AI Task Manager Pro',
@@ -48,7 +46,7 @@ const pageConfigs = {
     features: ['Smart Prioritization', 'Automated Scheduling', 'Progress Tracking', 'Team Collaboration', 'Deadline Management', 'Productivity Analytics'],
     benefits: ['40% More Productive', 'Better Task Organization', 'Reduced Overdue Tasks', 'Team Efficiency'],
     price: '$99/month',
-    keywords: ['task management', 'productivity', 'AI scheduling', 'project management', 'team collaboration']
+    keywords: ['task management', 'productivity', 'AI scheduling', 'project management', 'team collaboration']}
   },
   'expense-tracker': {
     title: 'AI Expense Tracker',
@@ -57,7 +55,7 @@ const pageConfigs = {
     features: ['Auto Categorization', 'Smart Budgeting', 'Receipt Scanning', 'Expense Analytics', 'Tax Preparation', 'Financial Reports'],
     benefits: ['90% Time Savings', 'Better Budget Control', 'Tax Optimization', 'Financial Insights'],
     price: '$79/month',
-    keywords: ['expense tracking', 'budgeting', 'financial management', 'receipt scanning', 'tax preparation']
+    keywords: ['expense tracking', 'budgeting', 'financial management', 'receipt scanning', 'tax preparation']}
   },
   'ai-chatbot-builder': {
     title: 'AI Chatbot Builder',
@@ -66,7 +64,7 @@ const pageConfigs = {
     features: ['Natural Language Processing', 'Multi-language Support', 'Integration APIs', 'Analytics Dashboard', 'Custom Training', 'Human Handoff'],
     benefits: ['24/7 Customer Support', '80% Query Resolution', 'Reduced Support Costs', 'Better Customer Experience'],
     price: '$149/month',
-    keywords: ['AI chatbot', 'customer support', 'NLP', 'conversational AI', 'chatbot builder']
+    keywords: ['AI chatbot', 'customer support', 'NLP', 'conversational AI', 'chatbot builder']}
   },
   'ai-data-analytics': {
     title: 'AI Data Analytics Pro',
@@ -75,7 +73,7 @@ const pageConfigs = {
     features: ['Predictive Analytics', 'Data Visualization', 'Real-time Insights', 'Custom Dashboards', 'Machine Learning', 'Automated Reports'],
     benefits: ['Faster Insights', 'Better Decisions', 'Data-driven Growth', 'Competitive Advantage'],
     price: '$1,200/month',
-    keywords: ['data analytics', 'business intelligence', 'predictive analytics', 'data visualization', 'AI insights']
+    keywords: ['data analytics', 'business intelligence', 'predictive analytics', 'data visualization', 'AI insights']}
   },
   'ai-content-generation': {
     title: 'AI Content Generation',
@@ -84,7 +82,7 @@ const pageConfigs = {
     features: ['Blog Writing', 'Social Media Content', 'Email Templates', 'SEO Optimization', 'Brand Voice', 'Content Strategy'],
     benefits: ['10 x Content Output', 'SEO Optimized', 'Consistent Quality', 'Time Savings'],
     price: '$129/month',
-    keywords: ['content generation', 'AI writing', 'content marketing', 'SEO content', 'automated writing']
+    keywords: ['content generation', 'AI writing', 'content marketing', 'SEO content', 'automated writing']}
   },
   'ai-lead-generation': {
     title: 'AI Lead Generation',
@@ -93,7 +91,7 @@ const pageConfigs = {
     features: ['Lead Scoring', 'Contact Discovery', 'Email Outreach', 'CRM Integration', 'Behavioral Tracking', 'Conversion Optimization'],
     benefits: ['300% More Leads', 'Better Lead Quality', 'Automated Follow-ups', 'Higher Conversion'],
     price: '$349/month',
-    keywords: ['lead generation', 'sales automation', 'lead scoring', 'CRM integration', 'conversion optimization']
+    keywords: ['lead generation', 'sales automation', 'lead scoring', 'CRM integration', 'conversion optimization']}
   },
   'ai-document-processing': {
     title: 'AI Document Processing',
@@ -102,7 +100,7 @@ const pageConfigs = {
     features: ['OCR Processing', 'Data Extraction', 'Document Classification', 'Form Recognition', 'Contract Analysis', 'Knowledge Management'],
     benefits: ['90% Time Savings', 'Accurate Extraction', 'Automated Processing', 'Better Organization'],
     price: '$1,200/month',
-    keywords: ['document processing', 'OCR', 'data extraction', 'document AI', 'automated processing']
+    keywords: ['document processing', 'OCR', 'data extraction', 'document AI', 'automated processing']}
   },
   'ai-seo-optimizer': {
     title: 'AI SEO Optimizer',
@@ -111,7 +109,7 @@ const pageConfigs = {
     features: ['Keyword Research', 'Content Optimization', 'Technical SEO', 'Competitor Analysis', 'Rank Tracking', 'Link Building'],
     benefits: ['Higher Rankings', 'More Organic Traffic', 'Better Visibility', 'Competitive Advantage'],
     price: '$129/month',
-    keywords: ['SEO optimization', 'search engine optimization', 'keyword research', 'content optimization', 'SEO AI']
+    keywords: ['SEO optimization', 'search engine optimization', 'keyword research', 'content optimization', 'SEO AI']}
   },
   'ai-ecommerce-solutions': {
     title: 'AI E-commerce Solutions',
@@ -120,7 +118,7 @@ const pageConfigs = {
     features: ['Product Recommendations', 'Price Optimization', 'Inventory Management', 'Customer Segmentation', 'A/B Testing', 'Analytics Dashboard'],
     benefits: ['Higher Conversions', 'Increased Revenue', 'Better Customer Experience', 'Data-driven Decisions'],
     price: '$179/month',
-    keywords: ['e-commerce AI', 'product recommendations', 'online store optimization', 'shopping AI', 'e-commerce analytics']
+    keywords: ['e-commerce AI', 'product recommendations', 'online store optimization', 'shopping AI', 'e-commerce analytics']}
   },
   'ai-financial-analyzer': {
     title: 'AI Financial Analyzer',
@@ -129,7 +127,7 @@ const pageConfigs = {
     features: ['Portfolio Analysis', 'Risk Assessment', 'Investment Recommendations', 'Market Analysis', 'Financial Forecasting', 'Performance Tracking'],
     benefits: ['Better Investment Decisions', 'Risk Mitigation', 'Higher Returns', 'Informed Choices'],
     price: '$1,800/month',
-    keywords: ['financial analysis', 'investment AI', 'portfolio management', 'financial forecasting', 'risk assessment']
+    keywords: ['financial analysis', 'investment AI', 'portfolio management', 'financial forecasting', 'risk assessment']}
   },
   'ai-business-intelligence': {
     title: 'AI Business Intelligence',
@@ -138,7 +136,7 @@ const pageConfigs = {
     features: ['Advanced Analytics', 'Predictive Modeling', 'Real-time Dashboards', 'Custom Reports', 'Data Integration', 'Machine Learning'],
     benefits: ['Data-driven Decisions', 'Competitive Advantage', 'Revenue Growth', 'Cost Reduction'],
     price: '$2,500/month',
-    keywords: ['business intelligence', 'data analytics', 'predictive analytics', 'BI solutions', 'data insights']
+    keywords: ['business intelligence', 'data analytics', 'predictive analytics', 'BI solutions', 'data insights']}
   },
   'ai-supply-chain': {
     title: 'AI Supply Chain Optimization',
@@ -147,7 +145,7 @@ const pageConfigs = {
     features: ['Demand Forecasting', 'Inventory Optimization', 'Route Planning', 'Supplier Management', 'Quality Control', 'Sustainability Tracking'],
     benefits: ['30% Cost Reduction', '99% On-time Delivery', 'Reduced Waste', 'Better Supplier Relationships'],
     price: '$1,600/month',
-    keywords: ['supply chain AI', 'logistics optimization', 'demand forecasting', 'inventory management', 'supply chain analytics']
+    keywords: ['supply chain AI', 'logistics optimization', 'demand forecasting', 'inventory management', 'supply chain analytics']}
   },
   'ai-quality-assurance': {
     title: 'AI Quality Assurance',
@@ -156,7 +154,7 @@ const pageConfigs = {
     features: ['Automated Testing', 'Test Generation', 'Defect Detection', 'Performance Testing', 'Regression Testing', 'Test Analytics'],
     benefits: ['Faster Testing', 'Better Coverage', 'Reduced Bugs', 'Lower Costs'],
     price: '$1,200/month',
-    keywords: ['quality assurance', 'automated testing', 'test automation', 'QA AI', 'defect detection']
+    keywords: ['quality assurance', 'automated testing', 'test automation', 'QA AI', 'defect detection']}
   },
   'ai-hr': {
     title: 'AI Human Resources',
@@ -165,7 +163,7 @@ const pageConfigs = {
     features: ['Resume Screening', 'Interview Scheduling', 'Employee Analytics', 'Performance Tracking', 'Skills Assessment', 'Retention Insights'],
     benefits: ['50% Faster Hiring', 'Better Candidate Matching', 'Reduced Bias', 'Improved Retention'],
     price: '$1,400/month',
-    keywords: ['HR AI', 'recruitment automation', 'employee analytics', 'HR management', 'talent acquisition']
+    keywords: ['HR AI', 'recruitment automation', 'employee analytics', 'HR management', 'talent acquisition']}
   },
   'ai-legal': {
     title: 'AI Legal Assistant',
@@ -174,7 +172,7 @@ const pageConfigs = {
     features: ['Contract Analysis', 'Legal Research', 'Document Generation', 'Compliance Checking', 'Risk Assessment', 'Case Law Research'],
     benefits: ['Faster Reviews', 'Risk Identification', 'Cost Savings', 'Compliance Assurance'],
     price: '$1,800/month',
-    keywords: ['legal AI', 'contract analysis', 'legal research', 'compliance monitoring', 'legal automation']
+    keywords: ['legal AI', 'contract analysis', 'legal research', 'compliance monitoring', 'legal automation']}
   },
   'ai-real-estate': {
     title: 'AI Real Estate Analytics',
@@ -183,7 +181,7 @@ const pageConfigs = {
     features: ['Property Valuation', 'Market Analysis', 'Investment Scoring', 'Neighborhood Insights', 'Rental Yield Prediction', 'Risk Assessment'],
     benefits: ['Better Investment Decisions', 'Accurate Valuations', 'Market Timing', 'Risk Mitigation'],
     price: '$1,500/month',
-    keywords: ['real estate AI', 'property analysis', 'market insights', 'real estate analytics', 'property valuation']
+    keywords: ['real estate AI', 'property analysis', 'market insights', 'real estate analytics', 'property valuation']}
   },
   'ai-manufacturing': {
     title: 'AI Manufacturing Intelligence',
@@ -192,7 +190,7 @@ const pageConfigs = {
     features: ['Quality Control', 'Predictive Maintenance', 'Process Optimization', 'Defect Detection', 'Production Planning', 'Equipment Monitoring'],
     benefits: ['Reduced Defects', 'Lower Maintenance Costs', 'Increased Efficiency', 'Better Quality'],
     price: '$1,700/month',
-    keywords: ['manufacturing AI', 'quality control', 'predictive maintenance', 'process optimization', 'manufacturing intelligence']
+    keywords: ['manufacturing AI', 'quality control', 'predictive maintenance', 'process optimization', 'manufacturing intelligence']}
   },
   'ai-transportation': {
     title: 'AI Transportation & Logistics',
@@ -201,7 +199,7 @@ const pageConfigs = {
     features: ['Route Optimization', 'Fleet Management', 'Fuel Efficiency', 'Driver Analytics', 'Maintenance Scheduling', 'Delivery Tracking'],
     benefits: ['Reduced Fuel Costs', 'Faster Deliveries', 'Better Fleet Utilization', 'Lower Maintenance'],
     price: '$1,400/month',
-    keywords: ['transportation AI', 'logistics optimization', 'fleet management', 'route planning', 'transportation analytics']
+    keywords: ['transportation AI', 'logistics optimization', 'fleet management', 'route planning', 'transportation analytics']}
   },
   'ai-education': {
     title: 'AI Education Platform',
@@ -210,7 +208,7 @@ const pageConfigs = {
     features: ['Personalized Learning Paths', 'Adaptive Assessments', 'Progress Tracking', 'Content Generation', 'Student Analytics', 'Teacher Insights'],
     benefits: ['Better Learning Outcomes', 'Personalized Education', 'Teacher Efficiency', 'Student Engagement'],
     price: '$1,300/month',
-    keywords: ['education AI', 'personalized learning', 'adaptive learning', 'educational technology', 'learning analytics']
+    keywords: ['education AI', 'personalized learning', 'adaptive learning', 'educational technology', 'learning analytics']}
   },
   'ai-energy': {
     title: 'AI Energy Management',
@@ -219,7 +217,7 @@ const pageConfigs = {
     features: ['Energy Optimization', 'Renewable Integration', 'Grid Management', 'Carbon Tracking', 'Predictive Maintenance', 'Smart Buildings'],
     benefits: ['25% Energy Savings', 'Reduced Carbon Footprint', 'Lower Costs', 'Sustainable Operations'],
     price: '$1,500/month',
-    keywords: ['energy management', 'smart energy', 'renewable energy', 'energy optimization', 'sustainability']
+    keywords: ['energy management', 'smart energy', 'renewable energy', 'energy optimization', 'sustainability']}
   },
   'ai-insurance': {
     title: 'AI Insurance Analytics',
@@ -228,7 +226,7 @@ const pageConfigs = {
     features: ['Risk Assessment', 'Fraud Detection', 'Claims Processing', 'Underwriting Support', 'Customer Analytics', 'Pricing Optimization'],
     benefits: ['Reduced Fraud', 'Better Risk Assessment', 'Faster Claims', 'Improved Pricing'],
     price: '$1,600/month',
-    keywords: ['insurance AI', 'risk assessment', 'fraud detection', 'insurance analytics', 'claims processing']
+    keywords: ['insurance AI', 'risk assessment', 'fraud detection', 'insurance analytics', 'claims processing']}
   },
   'quantum-ai': {
     title: 'Quantum AI Computing',
@@ -237,7 +235,7 @@ const pageConfigs = {
     features: ['Quantum Algorithms', 'Optimization Problems', 'Cryptography', 'Simulation', 'Research & Development', 'Custom Solutions'],
     benefits: ['Exponential Speedup', 'Complex Optimization', 'Future-proof Technology', 'Competitive Advantage'],
     price: '$5,000/month',
-    keywords: ['quantum computing', 'quantum AI', 'quantum algorithms', 'quantum optimization', 'quantum machine learning']
+    keywords: ['quantum computing', 'quantum AI', 'quantum algorithms', 'quantum optimization', 'quantum machine learning']}
   },
   'ai-email-assistant': {
     title: 'AI Email Assistant',
@@ -246,7 +244,7 @@ const pageConfigs = {
     features: ['Smart Organization', 'Auto Responses', 'Priority Sorting', 'Spam Detection', 'Email Analytics', 'Scheduling Integration'],
     benefits: ['50% Time Savings', 'Better Organization', 'Reduced Spam', 'Improved Productivity'],
     price: '$99/month',
-    keywords: ['email AI', 'email management', 'email automation', 'email productivity', 'smart email']
+    keywords: ['email AI', 'email management', 'email automation', 'email productivity', 'smart email']}
   },
   'ai-scheduler': {
     title: 'AI Scheduler Pro',
@@ -255,7 +253,7 @@ const pageConfigs = {
     features: ['Smart Scheduling', 'Conflict Resolution', 'Time Optimization', 'Meeting Analytics', 'Calendar Integration', 'Automated Reminders'],
     benefits: ['Better Time Management', 'Reduced Conflicts', 'Optimized Schedules', 'Improved Efficiency'],
     price: '$79/month',
-    keywords: ['scheduling AI', 'calendar optimization', 'time management', 'meeting scheduling', 'productivity tools']
+    keywords: ['scheduling AI', 'calendar optimization', 'time management', 'meeting scheduling', 'productivity tools']}
   },
   'cloud-services': {
     title: 'Cloud Services',
@@ -264,7 +262,7 @@ const pageConfigs = {
     features: ['Cloud Migration', 'Infrastructure Setup', 'Security Configuration', 'Cost Optimization', '24/7 Monitoring', 'Disaster Recovery'],
     benefits: ['50% Cost Reduction', '99.9% Uptime', 'Scalable Infrastructure', 'Enhanced Security'],
     price: '$1,500/month',
-    keywords: ['cloud services', 'AWS Azure GCP', 'cloud migration', 'cloud infrastructure', 'cloud solutions']
+    keywords: ['cloud services', 'AWS Azure GCP', 'cloud migration', 'cloud infrastructure', 'cloud solutions']}
   },
   'enterprise-security': {
     title: 'Enterprise Security Solutions',
@@ -273,7 +271,7 @@ const pageConfigs = {
     features: ['Threat Detection', 'Vulnerability Assessment', 'Security Monitoring', 'Incident Response', 'Compliance Management', 'Penetration Testing'],
     benefits: ['Enhanced Security', 'Compliance Ready', 'Risk Reduction', '24/7 Protection'],
     price: '$2,200/month',
-    keywords: ['enterprise security', 'cybersecurity', 'threat detection', 'security monitoring', 'compliance']
+    keywords: ['enterprise security', 'cybersecurity', 'threat detection', 'security monitoring', 'compliance']}
   },
   'it-infrastructure': {
     title: 'IT Infrastructure Management',
@@ -282,7 +280,7 @@ const pageConfigs = {
     features: ['Infrastructure Design', 'Server Management', 'Network Configuration', 'Storage Solutions', 'Backup Systems', 'Performance Monitoring'],
     benefits: ['Reliable Infrastructure', 'Reduced Downtime', 'Cost Optimization', 'Scalable Solutions'],
     price: '$1,800/month',
-    keywords: ['IT infrastructure', 'server management', 'network setup', 'infrastructure design', 'IT services']
+    keywords: ['IT infrastructure', 'server management', 'network setup', 'infrastructure design', 'IT services']}
   },
   'data-center': {
     title: 'Data Center Solutions',
@@ -291,7 +289,7 @@ const pageConfigs = {
     features: ['Data Center Design', 'Cooling Systems', 'Power Management', 'Security Systems', 'Monitoring Solutions', 'Disaster Recovery'],
     benefits: ['Energy Efficiency', 'Enhanced Security', 'Reliable Operations', 'Cost Optimization'],
     price: '$1,400/month',
-    keywords: ['data center', 'server infrastructure', 'data center design', 'energy efficiency', 'data center management']
+    keywords: ['data center', 'server infrastructure', 'data center design', 'energy efficiency', 'data center management']}
   },
   'network-security': {
     title: 'Network Security & Firewall',
@@ -300,7 +298,7 @@ const pageConfigs = {
     features: ['Firewall Configuration', 'Intrusion Detection', 'VPN Setup', 'Network Monitoring', 'Threat Prevention', 'Security Auditing'],
     benefits: ['Enhanced Network Security', 'Threat Prevention', 'Secure Connectivity', 'Compliance Ready'],
     price: '$1,300/month',
-    keywords: ['network security', 'firewall', 'network protection', 'VPN setup', 'intrusion detection']
+    keywords: ['network security', 'firewall', 'network protection', 'VPN setup', 'intrusion detection']}
   },
   'managed-it': {
     title: 'Managed IT Services',
@@ -309,7 +307,7 @@ const pageConfigs = {
     features: ['24/7 Support', 'Proactive Monitoring', 'System Maintenance', 'Software Updates', 'Help Desk Services', 'Performance Optimization'],
     benefits: ['Minimal Downtime', 'Proactive Maintenance', 'Expert Support', 'Cost Predictability'],
     price: '$800/month',
-    keywords: ['managed IT', 'IT support', '24/7 support', 'IT maintenance', 'managed services']
+    keywords: ['managed IT', 'IT support', '24/7 support', 'IT maintenance', 'managed services']}
   },
   'cloud-security': {
     title: 'Cloud Security & Compliance',
@@ -318,7 +316,7 @@ const pageConfigs = {
     features: ['Cloud Security', 'Compliance Management', 'Data Encryption', 'Access Control', 'Audit Logging', 'Threat Detection'],
     benefits: ['Enhanced Cloud Security', 'Compliance Assurance', 'Data Protection', 'Risk Mitigation'],
     price: '$1,500/month',
-    keywords: ['cloud security', 'compliance', 'data protection', 'cloud compliance', 'security monitoring']
+    keywords: ['cloud security', 'compliance', 'data protection', 'cloud compliance', 'security monitoring']}
   },
   'it-asset-management': {
     title: 'IT Asset Management',
@@ -327,7 +325,7 @@ const pageConfigs = {
     features: ['Asset Tracking', 'Lifecycle Management', 'Cost Optimization', 'License Management', 'Inventory Control', 'Depreciation Tracking'],
     benefits: ['Better Asset Utilization', 'Cost Optimization', 'Compliance Ready', 'Improved ROI'],
     price: '$900/month',
-    keywords: ['IT asset management', 'asset tracking', 'license management', 'inventory control', 'asset optimization']
+    keywords: ['IT asset management', 'asset tracking', 'license management', 'inventory control', 'asset optimization']}
   },
   'backup-recovery': {
     title: 'Backup & Disaster Recovery',
@@ -336,7 +334,7 @@ const pageConfigs = {
     features: ['Backup Solutions', 'Disaster Recovery', 'Business Continuity', 'Data Replication', 'Recovery Testing', 'Compliance Backup'],
     benefits: ['Data Protection', 'Business Continuity', 'Rapid Recovery', 'Compliance Ready'],
     price: '$1,100/month',
-    keywords: ['backup recovery', 'disaster recovery', 'business continuity', 'data protection', 'backup solutions']
+    keywords: ['backup recovery', 'disaster recovery', 'business continuity', 'data protection', 'backup solutions']}
   },
   'it-training': {
     title: 'IT Training & Support',
@@ -345,7 +343,7 @@ const pageConfigs = {
     features: ['Technical Training', 'Certification Programs', 'User Support', 'Documentation', 'Best Practices', 'Knowledge Transfer'],
     benefits: ['Improved Skills', 'Better Productivity', 'Reduced Support Needs', 'Team Efficiency'],
     price: '$700/month',
-    keywords: ['IT training', 'technical training', 'certification', 'user support', 'IT education']
+    keywords: ['IT training', 'technical training', 'certification', 'user support', 'IT education']}
   },
   'it-performance': {
     title: 'IT Performance Optimization',
@@ -354,7 +352,7 @@ const pageConfigs = {
     features: ['Performance Monitoring', 'System Tuning', 'Capacity Planning', 'Load Balancing', 'Optimization Analysis', 'Performance Reports'],
     benefits: ['Better Performance', 'Reduced Downtime', 'Cost Optimization', 'Improved Efficiency'],
     price: '$1,200/month',
-    keywords: ['IT performance', 'system optimization', 'performance monitoring', 'capacity planning', 'system tuning']
+    keywords: ['IT performance', 'system optimization', 'performance monitoring', 'capacity planning', 'system tuning']}
   },
   'cybersecurity': {
     title: 'Cybersecurity Solutions',
@@ -363,7 +361,7 @@ const pageConfigs = {
     features: ['Threat Detection', 'Vulnerability Assessment', 'Security Monitoring', 'Incident Response', 'Compliance Management', 'Penetration Testing'],
     benefits: ['Enhanced Security', 'Compliance Ready', 'Risk Reduction', '24/7 Protection'],
     price: '$1,599/month',
-    keywords: ['cybersecurity', 'threat detection', 'security monitoring', 'incident response', 'security solutions']
+    keywords: ['cybersecurity', 'threat detection', 'security monitoring', 'incident response', 'security solutions']}
   },
   'devops': {
     title: 'DevOps & CI/CD',
@@ -372,7 +370,7 @@ const pageConfigs = {
     features: ['CI/CD Pipelines', 'Automated Testing', 'Container Orchestration', 'Monitoring Setup', 'Infrastructure as Code', 'GitOps Implementation'],
     benefits: ['Faster Deployments', 'Reduced Errors', 'Better Collaboration', 'Automated Processes'],
     price: '$1,199/month',
-    keywords: ['DevOps', 'CI/CD', 'automated deployment', 'container orchestration', 'infrastructure as code']
+    keywords: ['DevOps', 'CI/CD', 'automated deployment', 'container orchestration', 'infrastructure as code']}
   },
   'database-services': {
     title: 'Database Services',
@@ -381,7 +379,7 @@ const pageConfigs = {
     features: ['Database Design', 'Performance Tuning', 'Backup & Recovery', 'Security Hardening', 'Data Migration', 'Real-time Analytics'],
     benefits: ['Optimized Performance', 'Data Security', 'Reliable Backups', 'Expert Support'],
     price: '$899/month',
-    keywords: ['database services', 'database optimization', 'database management', 'data migration', 'database security']
+    keywords: ['database services', 'database optimization', 'database management', 'data migration', 'database security']}
   },
   'network-infrastructure': {
     title: 'Network Infrastructure',
@@ -390,7 +388,7 @@ const pageConfigs = {
     features: ['Network Design', 'Security Implementation', 'Performance Optimization', '24/7 Monitoring', 'SD-WAN Solutions', 'Network Automation'],
     benefits: ['Reliable Connectivity', 'Enhanced Security', 'Better Performance', 'Reduced Downtime'],
     price: '$1,400/month',
-    keywords: ['network infrastructure', 'network design', 'network security', 'SD-WAN', 'network optimization']
+    keywords: ['network infrastructure', 'network design', 'network security', 'SD-WAN', 'network optimization']}
   },
   'it-support': {
     title: 'IT Support & Helpdesk',
@@ -399,7 +397,7 @@ const pageConfigs = {
     features: ['24/7 Support', 'System Maintenance', 'Software Updates', 'Hardware Management', 'Remote Monitoring', 'Help Desk Services'],
     benefits: ['Minimal Downtime', 'Proactive Maintenance', 'Expert Support', 'Cost Predictability'],
     price: '$800/month',
-    keywords: ['IT support', 'helpdesk', 'technical support', 'system maintenance', 'IT services']
+    keywords: ['IT support', 'helpdesk', 'technical support', 'system maintenance', 'IT services']}
   },
   'compliance': {
     title: 'Compliance & Governance',
@@ -408,7 +406,7 @@ const pageConfigs = {
     features: ['Compliance Management', 'Audit Preparation', 'Policy Development', 'Risk Assessment', 'Regulatory Reporting', 'Governance Framework'],
     benefits: ['Compliance Assurance', 'Risk Mitigation', 'Audit Ready', 'Regulatory Adherence'],
     price: '$1,300/month',
-    keywords: ['compliance', 'governance', 'regulatory compliance', 'audit preparation', 'risk management']
+    keywords: ['compliance', 'governance', 'regulatory compliance', 'audit preparation', 'risk management']}
   },
   'developer-tools': {
     title: 'Developer Tools',
@@ -417,7 +415,7 @@ const pageConfigs = {
     features: ['IDE Integration', 'Code Analysis', 'Debugging Tools', 'Version Control', 'Testing Frameworks', 'Deployment Tools'],
     benefits: ['Faster Development', 'Better Code Quality', 'Improved Productivity', 'Streamlined Workflows'],
     price: '$1,200/month',
-    keywords: ['developer tools', 'development platform', 'code analysis', 'debugging tools', 'development environment']
+    keywords: ['developer tools', 'development platform', 'code analysis', 'debugging tools', 'development environment']}
   },
   'marketing-tools': {
     title: 'Marketing Tools',
@@ -426,7 +424,7 @@ const pageConfigs = {
     features: ['Campaign Management', 'Analytics Dashboard', 'A/B Testing', 'Email Marketing', 'Social Media Tools', 'Lead Management'],
     benefits: ['Better Campaign Performance', 'Improved ROI', 'Streamlined Marketing', 'Data-driven Decisions'],
     price: '$1,100/month',
-    keywords: ['marketing tools', 'digital marketing', 'campaign management', 'marketing automation', 'marketing analytics']
+    keywords: ['marketing tools', 'digital marketing', 'campaign management', 'marketing automation', 'marketing analytics']}
   },
   'productivity': {
     title: 'Productivity Solutions',
@@ -435,7 +433,7 @@ const pageConfigs = {
     features: ['Task Management', 'Time Tracking', 'Collaboration Tools', 'Document Management', 'Workflow Automation', 'Performance Analytics'],
     benefits: ['Increased Productivity', 'Better Organization', 'Improved Collaboration', 'Workflow Efficiency'],
     price: '$1,000/month',
-    keywords: ['productivity tools', 'workplace efficiency', 'task management', 'collaboration tools', 'workflow automation']
+    keywords: ['productivity tools', 'workplace efficiency', 'task management', 'collaboration tools', 'workflow automation']}
   },
   'blockchain': {
     title: 'Blockchain & Web3 Solutions',
@@ -444,7 +442,7 @@ const pageConfigs = {
     features: ['Smart Contracts', 'DApp Development', 'NFT Platforms', 'DeFi Solutions', 'Token Development', 'Blockchain Integration'],
     benefits: ['Future-proof Technology', 'Decentralized Solutions', 'Enhanced Security', 'Transparency'],
     price: '$3,000/month',
-    keywords: ['blockchain', 'Web3', 'smart contracts', 'DApp development', 'DeFi solutions']
+    keywords: ['blockchain', 'Web3', 'smart contracts', 'DApp development', 'DeFi solutions']}
   },
   'iot-edge': {
     title: 'IoT & Edge Computing',
@@ -453,7 +451,7 @@ const pageConfigs = {
     features: ['IoT Device Development', 'Edge Computing', 'Data Processing', 'Real-time Analytics', 'Device Management', 'Security'],
     benefits: ['Real-time Insights', 'Reduced Latency', 'Cost Efficiency', 'Scalable Solutions'],
     price: '$2,200/month',
-    keywords: ['IoT', 'edge computing', 'connected devices', 'real-time processing', 'IoT analytics']
+    keywords: ['IoT', 'edge computing', 'connected devices', 'real-time processing', 'IoT analytics']}
   },
   'robotics': {
     title: 'Robotics Solutions',
@@ -462,7 +460,7 @@ const pageConfigs = {
     features: ['Robot Development', 'AI Integration', 'Automation Systems', 'Sensor Integration', 'Control Systems', 'Maintenance'],
     benefits: ['Increased Automation', 'Improved Efficiency', 'Reduced Labor Costs', 'Enhanced Precision'],
     price: '$2,500/month',
-    keywords: ['robotics', 'automation', 'robot development', 'AI robotics', 'intelligent systems']
+    keywords: ['robotics', 'automation', 'robot development', 'AI robotics', 'intelligent systems']}
   },
   'enterprise': {
     title: 'Enterprise Solutions',
@@ -471,7 +469,7 @@ const pageConfigs = {
     features: ['Enterprise Architecture', 'Scalable Solutions', 'Integration Services', 'Custom Development', 'Support & Maintenance', 'Training'],
     benefits: ['Scalable Solutions', 'Enterprise Integration', 'Custom Development', 'Comprehensive Support'],
     price: '$2,000/month',
-    keywords: ['enterprise solutions', 'enterprise software', 'large-scale solutions', 'enterprise integration', 'business solutions']
+    keywords: ['enterprise solutions', 'enterprise software', 'large-scale solutions', 'enterprise integration', 'business solutions']}
   },
   'analytics-tools': {
     title: 'Analytics Tools',
@@ -480,7 +478,7 @@ const pageConfigs = {
     features: ['Data Visualization', 'Predictive Analytics', 'Real-time Dashboards', 'Custom Reports', 'Data Integration', 'Machine Learning'],
     benefits: ['Better Insights', 'Data-driven Decisions', 'Competitive Advantage', 'Improved Performance'],
     price: '$1,500/month',
-    keywords: ['analytics tools', 'data visualization', 'business analytics', 'predictive analytics', 'data insights']
+    keywords: ['analytics tools', 'data visualization', 'business analytics', 'predictive analytics', 'data insights']}
   },
   'business-apps': {
     title: 'Business Apps',
@@ -489,7 +487,7 @@ const pageConfigs = {
     features: ['Custom Development', 'Mobile Apps', 'Web Applications', 'API Integration', 'Database Design', 'User Interface'],
     benefits: ['Tailored Solutions', 'Improved Efficiency', 'Better User Experience', 'Scalable Architecture'],
     price: '$1,800/month',
-    keywords: ['business apps', 'custom applications', 'mobile apps', 'web applications', 'business software']
+    keywords: ['business apps', 'custom applications', 'mobile apps', 'web applications', 'business software']}
   },
   'smart-analytics': {
     title: 'Smart Analytics',
@@ -498,31 +496,30 @@ const pageConfigs = {
     features: ['AI-powered Insights', 'Automated Reporting', 'Real-time Analytics', 'Predictive Modeling', 'Custom Dashboards', 'Data Integration'],
     benefits: ['Faster Insights', 'Automated Analysis', 'Better Predictions', 'Competitive Advantage'],
     price: '$1,400/month',
-    keywords: ['smart analytics', 'AI analytics', 'automated reporting', 'predictive analytics', 'intelligent insights']
+    keywords: ['smart analytics', 'AI analytics', 'automated reporting', 'predictive analytics', 'intelligent insights']}
   }
 };
 
 // Create missing pages;
-missingPages.forEach(pageName => {)
-  const config = pageConfigs[pageName];)
-  if (!config) {
+missingPages.forEach(pageName => {);
+const config = pageConfigs[pageName];)
+  if (!config) {}
     console.log(`No configuration found for ${pageName}`);
     return;
   }
-
-  const pageContent = `'use client';
+;
+const pageContent = `'use client';
 import React from 'react';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 import SEOOptimizer from '../../components/SEOOptimizer';
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, DollarSign, Award, Lock, Database, Cloud, Code, Smartphone, Settings, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Globe2, Map, Navigation as NavIcon, PieChart, TrendingDown, Activity } from 'lucide-react';
-
 const ${pageName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('')}Page: React.FC = () => {,
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)
-      <SEOOptimizer;),
+      <SEOOptimizer;)}
         title="${config.title} - Zion Tech Group"
         description="${config.description}"
-        keywords={${JSON.stringify(config.keywords)}}
+        keywords={${JSON.stringify(config.keywords)} }
         canonicalUrl="https://ziontechgroup.com/${pageName}"
       />
       <Navigation />
@@ -556,7 +553,6 @@ const ${pageName.split('-').map(word => word.charAt(0).toUpperCase() + word.slic
             </div>
           </div>,
         </section>,
-,
         {/* Features Section */}
         <section className="mb-16">
           <div className="text-center mb-12">
@@ -571,7 +567,7 @@ const ${pageName.split('-').map(word => word.charAt(0).toUpperCase() + word.slic
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             ${config.features.map(feature => `)
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300">),
-              <CheckCircle className="w-8 h-8 text-green-400 mb-4" />),
+              <CheckCircle className="w-8 h-8 text-green-400 mb-4" />)}
               <h3 className="text-xl font-semibold text-white mb-2">${feature}</h3>
               <p className="text-gray-300">Advanced ${feature.toLowerCase()} capabilities powered by AI</p>
             </div>`).join('')}
@@ -592,7 +588,7 @@ const ${pageName.split('-').map(word => word.charAt(0).toUpperCase() + word.slic
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">,
             ${config.benefits.map(benefit => `)
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300">)
-              <TrendingUp className="w-8 h-8 text-purple-400 mb-4" />),
+              <TrendingUp className="w-8 h-8 text-purple-400 mb-4" />)}
               <h3 className="text-xl font-semibold text-white mb-2">${benefit}</h3>
               <p className="text-gray-300">Measurable improvement in your business metrics</p>
             </div>`).join('')}
@@ -624,7 +620,6 @@ const ${pageName.split('-').map(word => word.charAt(0).toUpperCase() + word.slic
             </div>
           </div>,
         </section>,
-,
         {/* Contact Section */}
         <section className="mb-16">
           <div className="text-center mb-12">
@@ -676,7 +671,7 @@ export default ${pageName.split('-').map(word => word.charAt(0).toUpperCase() + 
 
   // Create directory if it doesn't exist;
   const dirPath = `app/${pageName}`;
-  if (!fs.existsSync(dirPath)) {
+  if (!fs.existsSync(dirPath)) {}
     fs.mkdirSync(dirPath, { recursive: true });
   }
 
@@ -686,3 +681,4 @@ export default ${pageName.split('-').map(word => word.charAt(0).toUpperCase() + 
 });
 
 console.log(`Created ${missingPages.length} missing pages`);
+</div>

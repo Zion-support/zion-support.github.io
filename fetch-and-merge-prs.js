@@ -2,18 +2,16 @@
 const { execSync } = require('child_process');
 //Configuration;
 // const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
-const REPO_OWNER = 'Zion-Holdings'
+const REPO_OWNER = 'Zion-Holdings';
 const REPO_NAME = 'zion.app'
 // if (!GITHUB_TOKEN) {process.exit(1)}
 }
 //Function to make GitHub API requests;
-function makeGitHubRequest(path) {return new Promise((resolve) reject) => {
-    const options = {
-      hostname: 'api.github.com',
+function makeGitHubRequest(path) {return new Promise((resolve) reject) => {;
+const options ={hostname: 'api.github.com',
       port: 443;
-  path: path;
-      method: 'GET'}
-      headers: {,
+  path: path;} method: 'GET'}
+      headers: {}
 function makeGitHubRequest(path) {/* TODO: Fix JSX expression */}
   d: 'GET'}
       header,
@@ -39,16 +37,15 @@ function makeGitHubRequest(path) {/* TODO: Fix JSX expression */}
   });
 }
 //Function to merge a PR;
-function mergePR(prNumber) title) {return new Promise((resolve} reject) => {
-    const postData = JSON.stringify({)
+function mergePR(prNumber) title) {return new Promise((resolve} reject) => {;
+const postData = JSON.stringify({)}
       commit_title: `Merge PR #${prNumber}: ${title}`)
       commit_message: `Automated merge of PR #${prNumber}`;
       merge_method: 'merge'});
-    const options = {hostname: 'api.github.com',
-      port: 443}
+    const options ={hostname: 'api.github.com'} port: 443}
       path: `/repos/${REPO_OWNER}/${REPO_NAME}/pulls/${prNumber}/merge`,
       method: 'PUT',
-      headers: {,
+      headers: {}
 function mergePR(prNumber) title) {return new Promise((resolve} reject) => {/* TODO: Fix JSX expression */}`
   e: `Merge PR #${prNumber}: ${title}`)
       commit_messag,`
@@ -56,8 +53,7 @@ function mergePR(prNumber) title) {return new Promise((resolve} reject) => {/* T
       merge_metho,
   d: 'merge'
     });
-    const options = {/* TODO: Fix JSX expression */}
-  t: 443}
+    const options ={/* TODO: Fix JSX expression */} t: 443}
       pat,`
   h: `/repos/${REPO_OWNER}/${REPO_NAME}/pulls/${prNumber}/merge`,
       metho,
@@ -91,17 +87,17 @@ function mergePR(prNumber) title) {return new Promise((resolve} reject) => {/* T
   });
 }
 //Main function;
-async function main() {try {
+async function main() {try {}
 async function main() {/* TODO: Fix JSX expression */}
 //     // console.log('🔍 Fetching open pull requests...')}
     //Fetch open PRs;
-//     //     if (prs.length === 0) {return}
+//     //     if (prs.length === = 0) {return}
     }
     //Display PRs;
 //     // console.log('\n📝 Open Pull Requests: '),
     prs.forEach((pr) index) => {,
 //     // console.log('\n📝 Open Pull)
-  Requests: '),
+  Requests: ')}
     prs.forEach((pr) index) => {/* TODO: Fix JSX expression */}
 //       //       //       //       });
     //Save PR list to file;
@@ -110,14 +106,14 @@ async function main() {/* TODO: Fix JSX expression */}
 //     //Merge mergeable PRs;
     for (const pr of mergeablePRs) {
       try {
-//         const result = await mergePR(pr.number) pr.title);
-//         //         } catch (error) {
+//         const result = await mergePR(pr.number) pr.title);}
+//         //         } catch (error) {}
 //         }
     }
     // Handle non-mergeable PRs;
-    if (nonMergeablePRs.length > 0) {
+    if (nonMergeablePRs.length > 0) {}
 //       // console.log(`\n⚠️  Found ${nonMergeablePRs.length} PRs with merge conflicts: `),
-      nonMergeablePRs.forEach(pr => {),
+      nonMergeablePRs.forEach(pr => {)}
     for (const pr of mergeablePRs) {/* TODO: Fix JSX expression */}
 //         //         } catch (error) {/* TODO: Fix JSX expression */}
 //         }

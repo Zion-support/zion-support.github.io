@@ -11,7 +11,7 @@
   contactInfo: unknown;
     mobile: string;
     email: string;
-export interface EmergingTechService2029 {;,
+export interface EmergingTechService2029 {;}
     address: string}
   i,
   d: string;
@@ -47,7 +47,7 @@ export interface EmergingTechService2029 {/* TODO: Fix JSX expression */}
   taglin,
   e: string;
   pric,
-  e: string,,
+  e: string,
   descriptio,
   n: string;
   feature,
@@ -170,7 +170,6 @@ export const,
     }
   }
 ];
-;
     id: "2029-emerging-tech-service"
     name: "2029 Emerging Tech Service Platform",
     tagline: "Emerging tech services for 2029",

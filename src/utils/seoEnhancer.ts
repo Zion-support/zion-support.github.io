@@ -29,7 +29,7 @@ class SEOEnhancer {/* TODO: Fix JSX expression */}
     this.updateMetaTags();
   }
 
-  private updateMetaTags(): void {if (typeof document !== 'undefined') {}
+  private updateMetaTags(): void {if (typeof document !== == 'undefined') {}
       // Update title;
       document.title = this.config.title;
       
@@ -45,8 +45,7 @@ class SEOEnhancer {/* TODO: Fix JSX expression */}
 
   public updateConfig(newConfi)
   g: Partial<SEOConfig>): void {/* TODO: Fix JSX expression */}
-    this.config = { ...this.config, ...newConfig }
-    this.updateMetaTags()
+    this.config ={...this.config, ...newConfig } this.updateMetaTags()
   }
 }
 

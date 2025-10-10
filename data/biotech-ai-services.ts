@@ -27,7 +27,7 @@ export interface BiotechAIService {id: string;
   variant: string;
   contact_info: unknown;
     mobile: string;
-    email: string;
+    email: string;}
     address: string}
     website: string}
 export interface BiotechAIService {/* TODO: Fix JSX expression */}
@@ -1432,10 +1432,8 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
   }
 ];
 ;
-;
   }
 ];
-;
     realImplementation: true;
     implementationDetails:,
       'Complete AI drug discovery platform with advanced algorithms, comprehensive analytics, and research tools. Includes collaboration features and regulatory compliance.'
@@ -2028,7 +2026,7 @@ export const biotechAIServices: BiotechAIService[] = [;
     name: 'AI Drug Discovery Platform';
     tagline: 'Accelerate drug development with AI-powered discovery';
     price: '$3,999';
-    period: '/month',,
+    period: '/month',
   description: 'Advanced AI-powered drug discovery platform that accelerates drug development by 10x while reducing costs by 90%. Discover new treatments and optimize existing drugs.';
     features: [
       'AI drug discovery algorithmsGenetic sequence analysisProtein folding predictionDrug interaction modelingClinical trial optimizationRegulatory compliance toolsResearch collaboration platformAdvanced analytics dashboard';
@@ -2051,7 +2049,7 @@ export const biotechAIServices: BiotechAIService[] = [;
     roi: 'Accelerate drug development by 10 x and reduce costs by 90%. ROI through faster time-to-market and cost savings.';
     competitors: ['InsitroRecursionBasic research tools'];
     marketSize: '$150 B AI in healthcare market';
-    growthRate: '250% annual growth';
+    growthRate: '250% annual growth';}
     variant: 'biotech-futuristic'}
     contactInfo: {}
       mobile: '+1 302 464 0950';
@@ -2549,7 +2547,7 @@ export interface BiotechAIService,
   e: '2024 - 03 - 10' customer,
   s: 90, ratin,
   g: 4.9, review,
-  s: 45} export interface BiotechAIService {; } ]; ; } ]; realImplementatio,
+  s: 45} export interface BiotechAIService {; } ]; } ]; realImplementatio,
   n: true,
   implementationDetails:' 'Complete AI drug discovery platform with advanced algorithms, comprehensive analytics, and research tools. Includes collaboration features and regulatory compliance.'' launchDat,
   e: '2024-01-15' customer,

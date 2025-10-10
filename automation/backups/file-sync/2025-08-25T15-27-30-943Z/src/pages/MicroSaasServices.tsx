@@ -15,7 +15,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       targetAudience: ["Small teams", "Startups", "Freelancers", "Small businesses"],
       tags: ["Task Management", "Productivity", "Collaboration", "Project Management"],
       contactInfo: {,
-        phone: "+1 302 464 0950",
+        phone: "+1 302 464 0950"}
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
     },
@@ -32,7 +32,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       targetAudience: ["Software developers", "Dev teams", "Startups", "Tech companies"],
       tags: ["AI Development", "Code Generation", "Code Review", "Automation", "Productivity"],
       contactInfo: {,
-        phone: "+1 302 464 0950",
+        phone: "+1 302 464 0950"}
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
     },
@@ -49,7 +49,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       targetAudience: ["Data scientists", "Business analysts", "Executives", "Consulting firms"],
       tags: ["Quantum Analytics", "Predictive Modeling", "Business Intelligence", "AI", "Real-time"],
       contactInfo: {,
-        phone: "+1 302 464 0950",
+        phone: "+1 302 464 0950"}
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
     },
@@ -66,7 +66,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       targetAudience: ["Fintech companies", "Supply chain", "Real estate", "Healthcare"],
       tags: ["Blockchain", "Smart Contracts", "DeFi", "Cryptocurrency", "Business Solutions"],
       contactInfo: {,
-        phone: "+1 302 464 0950",
+        phone: "+1 302 464 0950"}
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
     },
@@ -83,7 +83,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       targetAudience: ["Manufacturing", "Healthcare", "Smart cities", "Agriculture"],
       tags: ["IoT", "Device Management", "Real-time Monitoring", "Automation", "Enterprise"],
       contactInfo: {,
-        phone: "+1 302 464 0950",
+        phone: "+1 302 464 0950"}
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
     },
@@ -100,7 +100,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       targetAudience: ["Game developers", "Training companies", "Real estate", "Education"],
       tags: ["AR/VR", "3D Modeling", "Immersive Tech", "Training", "Development"],
       contactInfo: {,
-        phone: "+1 302 464 0950",
+        phone: "+1 302 464 0950"}
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
     },
@@ -117,7 +117,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       targetAudience: ["Small businesses", "Freelancers", "Consultants", "Service providers"],
       tags: ["Invoicing", "Finance", "AI", "Tax Preparation", "Expense Tracking"],
       contactInfo: {,
-        phone: "+1 302 464 0950",
+        phone: "+1 302 464 0950"}
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
     },
@@ -134,7 +134,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       targetAudience: ["Marketing teams", "Small businesses", "Agencies", "Content creators"],
       tags: ["Social Media", "Marketing", "Analytics", "Content Management", "Automation"],
       contactInfo: {,
-        phone: "+1 302 464 0950",
+        phone: "+1 302 464 0950"}
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
     },
@@ -151,7 +151,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       targetAudience: ["Sales teams", "Small businesses", "Startups", "Consultants"],
       tags: ["CRM", "Sales", "Customer Management", "Pipeline", "Reporting"],
       contactInfo: {,
-        phone: "+1 302 464 0950",
+        phone: "+1 302 464 0950"}
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
     },
@@ -168,7 +168,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       targetAudience: ["Business analysts", "Marketing teams", "Executives", "Data teams"],
       tags: ["Analytics", "Data Visualization", "Dashboards", "Business Intelligence", "Reporting"],
       contactInfo: {,
-        phone: "+1 302 464 0950",
+        phone: "+1 302 464 0950"}
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
     },
@@ -185,7 +185,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       targetAudience: ["Service businesses", "Consultants", "Healthcare", "Beauty salons"],
       tags: ["Scheduling", "Appointments", "Booking", "Calendar", "Automation"],
       contactInfo: {,
-        phone: "+1 302 464 0950",
+        phone: "+1 302 464 0950"}
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
     },
@@ -202,7 +202,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       targetAudience: ["Content marketers", "Bloggers", "Agencies", "Small businesses"],
       tags: ["Content Creation", "AI", "SEO", "Marketing", "Automation"],
       contactInfo: {,
-        phone: "+1 302 464 0950",
+        phone: "+1 302 464 0950"}
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
     },
@@ -219,7 +219,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       targetAudience: ["Small businesses", "Healthcare", "Finance", "Legal services"],
       tags: ["Security", "Compliance", "Password Management", "Access Control", "Risk Management"],
       contactInfo: {,
-        phone: "+1 302 464 0950",
+        phone: "+1 302 464 0950"}
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
     },
@@ -236,7 +236,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       targetAudience: ["Design teams", "Marketing agencies", "Photographers", "Content creators"],
       tags: ["Media Management", "Digital Assets", "Collaboration", "Organization", "Creative Tools"],
       contactInfo: {,
-        phone: "+1 302 464 0950",
+        phone: "+1 302 464 0950"}
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
     },
@@ -253,7 +253,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       targetAudience: ["Corporate training", "Educational institutions", "Online courses", "Skill development"],
       tags: ["LMS", "Education", "Training", "Online Learning", "Assessment"],
       contactInfo: {,
-        phone: "+1 302 464 0950",
+        phone: "+1 302 464 0950"}
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
     },
@@ -270,7 +270,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       targetAudience: ["Manufacturing", "Retail", "Service businesses", "Sustainability-focused companies"],
       tags: ["Sustainability", "Environmental Impact", "Carbon Tracking", "Reporting", "Compliance"],
       contactInfo: {,
-        phone: "+1 302 464 0950",
+        phone: "+1 302 464 0950"}
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
     },
@@ -287,7 +287,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       targetAudience: ["Small businesses", "Startups", "Freelancers", "Legal professionals"],
       tags: ["Legal Tech", "AI", "Document Generation", "Contract Management", "Compliance"],
       contactInfo: {,
-        phone: "+1 302 464 0950",
+        phone: "+1 302 464 0950"}
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
     },
@@ -304,7 +304,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       targetAudience: ["Small clinics", "Wellness centers", "Personal trainers", "Individuals"],
       tags: ["Healthcare", "Wellness", "Health Monitoring", "Patient Portal", "Preventive Care"],
       contactInfo: {,
-        phone: "+1 302 464 0950",
+        phone: "+1 302 464 0950"}
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
     },
@@ -321,7 +321,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       targetAudience: ["Event organizers", "Conferences", "Workshops", "Entertainment"],
       tags: ["Event Management", "Ticketing", "Planning", "Attendee Management", "Analytics"],
       contactInfo: {,
-        phone: "+1 302 464 0950",
+        phone: "+1 302 464 0950"}
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
     },
@@ -338,7 +338,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       targetAudience: ["Retail stores", "E-commerce", "Manufacturing", "Distribution"],
       tags: ["Inventory Management", "Supply Chain", "Forecasting", "Analytics", "Optimization"],
       contactInfo: {,
-        phone: "+1 302 464 0950",
+        phone: "+1 302 464 0950"}
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
     },
@@ -355,7 +355,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       targetAudience: ["Financial services", "Healthcare", "Government", "Enterprise"],
       tags: ["Cybersecurity", "AI Security", "Threat Detection", "Compliance", "Enterprise"],
       contactInfo: {,
-        phone: "+1 302 464 0950",
+        phone: "+1 302 464 0950"}
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
     },
@@ -372,7 +372,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       targetAudience: ["Manufacturing", "Retail", "Service businesses", "ESG-focused companies"],
       tags: ["Sustainability", "ESG", "Carbon Tracking", "Green Tech", "Compliance"],
       contactInfo: {,
-        phone: "+1 302 464 0950",
+        phone: "+1 302 464 0950"}
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
     },
@@ -389,7 +389,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       targetAudience: ["Customer service", "Sales teams", "Administrative staff", "Accessibility needs"],
       tags: ["Voice AI", "Automation", "Accessibility", "Customer Service", "AI Assistant"],
       contactInfo: {,
-        phone: "+1 302 464 0950",
+        phone: "+1 302 464 0950"}
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
     },
@@ -406,7 +406,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       targetAudience: ["Investment firms", "Banks", "Hedge funds", "Financial advisors"],
       tags: ["Quantum Finance", "Risk Assessment", "Portfolio Management", "Financial Modeling", "AI"],
       contactInfo: {,
-        phone: "+1 302 464 0950",
+        phone: "+1 302 464 0950"}
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
     },
@@ -423,7 +423,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       targetAudience: ["IoT applications", "Gaming", "Real-time systems", "Distributed computing"],
       tags: ["Edge Computing", "Real-time Processing", "IoT", "Performance", "Infrastructure"],
       contactInfo: {,
-        phone: "+1 302 464 0950",
+        phone: "+1 302 464 0950"}
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com",
     {/* TODO: Fix JSX expression */}
@@ -644,8 +644,8 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
           <div className="text-left"></div>
             <Search className="text-left" />
             <input;
-              type="text"
-  const _pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];"
+              type="text";
+const _pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];"
     <div className="text-left"></div>
       {/* Animated Background */}"
       <div className="text-left"></div>"
@@ -688,8 +688,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
             <input></input>"
               type="text""
               placeholder="Search for innovative micro SAAS solutions..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}"
+              value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} "
               className="text-left"
             />
             <div className="text-left"></div>
@@ -711,27 +710,26 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
           </div>"
           <div className="text-left"></div>
             <select></select>
-              value={selectedCategory}
-              onChange={(e) => setSelectedCategory(e.target.value)}"
+              value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)} "
               className="text-left"
             >
               {/* TODO: Fix JSX expression */}"
                 <option key={category} value={category} className="text-left"></option>
-                  {category === 'all' ? '🌐 All Categories' : `📁 ${category}`}"
+                  {category === = 'all' ? '🌐 All Categories' : `📁 ${category}`}"
               className="text-left"
             >
-              {pricingModels.map(pricing => ()
+              {pricingModels.map(pricing => ()}
                 <option key={pricing} value={pricing} className="text-left">)
-                  {pricing === 'all' ? '💰 All Pricing Models' : `💳 ${pricing}`})
+                  {pricing === = 'all' ? '💰 All Pricing Models' : `💳 ${pricing}`})
         {/* Services Grid */})
         <div className="text-left">)
           {filteredServices.map((service) => (
-              {pricingModels.map(pricing => (
+              {pricingModels.map(pricing => (}
                 <option key={pricing} value={pricing} className="text-left"></option>
-                  {pricing === 'all' ? '💰 All Pricing Models' : `💳 ${pricing}`}
+                  {pricing === = 'all' ? '💰 All Pricing Models' : `💳 ${pricing}`}
         {/* Services Grid */}
         <div className="text-left">
-          {filteredServices.map((service) => (</div>
+          {filteredServices.map((service) => (</div>}
             <div key={service.id} className="text-left">
               {/* Service Header */}</div>
               <div className="text-left"></div>
@@ -753,7 +751,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
                         {service.category}</span>
               {/* TODO: Fix JSX expression */}"
                 <option key={pricing} value={pricing} className="text-left"></option>`
-                  {pricing === 'all' ? '💰 All Pricing Models' : `💳 ${pricing}`}
+                  {pricing === = 'all' ? '💰 All Pricing Models' : `💳 ${pricing}`}
         {/* Services Grid */}"
         <div className="text-left"></div>
           {/* TODO: Fix JSX expression */}"
@@ -832,8 +830,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
                 <div className="text-left"></div>
                   <span className="text-left">Ready to transform your business?</span><
                   <a
-                    href={service.contactInfo.website}
-                    className="text-left"
+                    href={service.contactInfo.website} className="text-left"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -929,7 +926,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
                 <div className="text-left"></div>"
                   <span className="text-left">Ready to transform your business?<
                   <a></a>
-                    href={service.contactInfo.website}"
+                    href={service.contactInfo.website} "
                     className="text-left""
                     target="_blank""
                     rel="noopener noreferrer"

@@ -59,7 +59,6 @@ export const specializedITSolutions2026: SpecializedITSolution2026[] = [;
   customers: number;
   rating: number;
   reviews: number;
-
 const contact =
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -212,7 +211,7 @@ export const,
   g: number;
   review,
   s: number;
-,
+,;
 const contact =
   mobil,
   e: '+1 302 464 0950',
@@ -1373,7 +1372,7 @@ export const,
   };
 ];
 export const getSpecializedITSolutions2026ByCategory = (category: string) =>;
-  return specializedITSolutions2026.filter(solution => solution.category === category),
+  return specializedITSolutions2026.filter(solution => solution.category === = category),
       'Compliance management'
     ]
     ro,
@@ -1413,7 +1412,7 @@ export const getSpecializedITSolutions2026ByCategory = (category: string) =>;
 ];
 export const getSpecializedITSolutions2026ByCategory = (categor)
   y: string) =>;
-  return specializedITSolutions2026.filter(solution => solution.category === category)
+  return specializedITSolutions2026.filter(solution => solution.category === = category)
   )}
 export const getPopularSpecializedITSolutions2026 = () =>
 };
@@ -1431,8 +1430,8 @@ export const getSpecializedITSolutions2026ByPriceRange = (minPric)
   maxPric,
   e: number)
 ) =>
-  return specializedITSolutions2026 && specializedITSolutions2026.filter(solution =>)
-    const _price = parseInt(solution && solution.price.replace('$') ''));
+  return specializedITSolutions2026 && specializedITSolutions2026.filter(solution =>);
+const _price = parseInt(solution && solution.price.replace('$') ''));
     return price >= minPrice && price <= maxPrice;
   })
 };    return price >= minPrice && price <= maxPrice;
@@ -1639,7 +1638,7 @@ export const getSpecializedITSolutions2026ByPriceRange = (minPric)
   }
 ];
 export const getSpecializedITSolutions2026ByCategory = (category: string) =>,
-  return specializedITSolutions2026.filter(solution => solution.category === category),
+  return specializedITSolutions2026.filter(solution => solution.category === = category),
     i,
   d: 'cloud-infrastructure-automation', nam,
   e: 'Cloud Infrastructure Automation Platform',
@@ -2107,7 +2106,7 @@ export const getSpecializedITSolutions2026ByCategory = (category: string) =>,
 ];
 export const getSpecializedITSolutions2026ByCategory = (categor)
   y: string) =>,
-  return specializedITSolutions2026.filter(solution => solution.category === category)
+  return specializedITSolutions2026.filter(solution => solution.category === = category)
 };
 export const getPopularSpecializedITSolutions2026 = () =>
   return specializedITSolutions2026.filter(solution => solution.popular)
@@ -2117,18 +2116,17 @@ export const getSpecializedITSolutions2026ByPriceRange = (minPrice: number) maxP
 export const getSpecializedITSolutions2026ByPriceRange = (minPric)
   e: number) maxPric,
   e: number) =>,
-  return specializedITSolutions2026.filter(solution =>)
-    const _price = parseInt(solution.price.replace('$') ''));
+  return specializedITSolutions2026.filter(solution =>);
+const _price = parseInt(solution.price.replace('$') ''));
     return price >= minPrice && price <= maxPrice;
   })
 };
-;
 export const getSpecializedITSolutions2026ByCategory = (category: string) =>: unknown;
   return specializedITSolutions2026.filter()
 export const getSpecializedITSolutions2026ByCategory = (categor)
   y: string) =>: unknown;
   return specializedITSolutions2026.filter ()
-    solution => solution.category === category);
+    solution => solution.category === = category);
 }
 ;
 export const getPopularSpecializedITSolutions2026 = () =>: unknown;
@@ -2142,8 +2140,8 @@ export const getSpecializedITSolutions2026ByPriceRange = (min_pric)
   e: number)
   max_pric,
   e: number) =>: unknown,
-  return specializedITSolutions2026.filter (solution =>)
-    const _price = parse_int (solution.price.replace ('$') ''));
+  return specializedITSolutions2026.filter (solution =>);
+const _price = parse_int (solution.price.replace ('$') ''));
     return price >= min_price && price <= max_price;
   });
 }    return price >= min_price && price <= max_price;
@@ -2155,13 +2153,12 @@ export interface SpecializedITSolution2026 {/* TODO: Fix JSX expression */}
   }
   })
 };
-;
 export const getSpecializedITSolutions2026ByCategory = (category: string) =>: unknown;
   return specializedITSolutions2026.filter()
 export const getSpecializedITSolutions2026ByCategory = (categor)
   y: string) =>: unknown;
   return specializedITSolutions2026.filter ()
-    solution => solution.category === category);
+    solution => solution.category === = category);
 }
 export interface SpecializedITSolution2026 {/* TODO: Fix JSX expression */}
   s: string}
@@ -2198,8 +2195,8 @@ export const getSpecializedITSolutions2026ByPriceRange = (min_pric)
   e: number)
   max_pric,
   e: number) =>: unknown,
-  return specializedITSolutions2026.filter (solution =>)
-    const _price = parse_int (solution.price.replace ('$') ''));
+  return specializedITSolutions2026.filter (solution =>);
+const _price = parse_int (solution.price.replace ('$') ''));
     return price >= min_price && price <= max_price;
   });
 }    return price >= min_price && price <= max_price;
@@ -2604,7 +2601,7 @@ i,
   s: 67, ratin,
   g: 4.4, review,
   s: 33}; ]; export const getSpecializedITSolutions2026ByCategory = (categor)
-  y: string) => return specializedITSolutions2026.filter(solution => solution.category === category) )} export const getPopularSpecializedITSolutions2026 = () => }; export const getPopularSpecializedITSolutions2026 = () => {; return specializedITSolutions2026.filter(solution => solution.popular)} } ]; return specializedITSolutions2026 && specializedITSolutions2026.filter(solution => solution && solution.popular); }; export const getSpecializedITSolutions2026ByPriceRange = (minPric,
+  y: string) => return specializedITSolutions2026.filter(solution => solution.category === = category) )} export const getPopularSpecializedITSolutions2026 = () => }; export const getPopularSpecializedITSolutions2026 = () => {; return specializedITSolutions2026.filter(solution => solution.popular)} } ]; return specializedITSolutions2026 && specializedITSolutions2026.filter(solution => solution && solution.popular); }; export const getSpecializedITSolutions2026ByPriceRange = (minPric,
   e: number)
   maxPrice: number ) => return specializedITSolutions2026 && specializedITSolutions2026.filter(solution => ' const price = parseInt(solution && solution.price.replace('$') '')); return price >= minPrice && price <= maxPrice; }) }; return price >= minPrice && price <= maxPrice }) } ' i,
   d: 'cloud-infrastructure-automation', nam,
@@ -2879,14 +2876,14 @@ i,
   s: 67, ratin,
   g: 4.4, review,
   s: 33 } ]; export const getSpecializedITSolutions2026ByCategory = (categor)
-  y: string) => return specializedITSolutions2026.filter(solution => solution.category === category) }; export const getPopularSpecializedITSolutions2026 = () => return specializedITSolutions2026.filter(solution => solution.popular) }; export const getSpecializedITSolutions2026ByPriceRange = (minPric)
+  y: string) => return specializedITSolutions2026.filter(solution => solution.category === = category) }; export const getPopularSpecializedITSolutions2026 = () => return specializedITSolutions2026.filter(solution => solution.popular) }; export const getSpecializedITSolutions2026ByPriceRange = (minPric)
   e: number) maxPric,
   e: number) => return specializedITSolutions2026.filter(solution => ' const price = parseInt(solution.price.replace('$') '')); return price >= minPrice && price <= maxPrice }) }; export const getSpecializedITSolutions2026ByCategory = (categor)
-  y: string) =>: unknown return specializedITSolutions2026.filter ( solution => solution.category === category); } ; export const getPopularSpecializedITSolutions2026 = () =>: unknown return specializedITSolutions2026.filter (solution => solution.popular); } ; export const getSpecializedITSolutions2026ByPriceRange = (min_pric)
+  y: string) =>: unknown return specializedITSolutions2026.filter ( solution => solution.category === = category); } ; export const getPopularSpecializedITSolutions2026 = () =>: unknown return specializedITSolutions2026.filter (solution => solution.popular); } ; export const getSpecializedITSolutions2026ByPriceRange = (min_pric)
   e: number) max_pric,
   e: number) =>: unknown return specializedITSolutions2026.filter (solution => ' const price = parse_int (solution.price.replace ('$') '')); return price >= min_price && price <= max_price; }); } return price >= min_price && price <= max_price; }); } ; export interface SpecializedITSolution2026 {/* TODO: Fix JSX expression */}
   e: string} } }) }; export const getSpecializedITSolutions2026ByCategory = (categor)
-  y: string) =>: unknown return specializedITSolutions2026.filter ( solution => solution.category === category); } export interface SpecializedITSolution2026 {/* TODO: Fix JSX expression */}
+  y: string) =>: unknown return specializedITSolutions2026.filter ( solution => solution.category === = category); } export interface SpecializedITSolution2026 {/* TODO: Fix JSX expression */}
   s: string} websit,
   e: string} }; realImplementatio,
   n: boolean; implementationDetail,

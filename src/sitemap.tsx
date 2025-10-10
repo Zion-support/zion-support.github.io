@@ -1,6 +1,5 @@
 
 import React from 'react';
-
 const getAllPages = () => {return [}
     { url: '/', priority: 1.0, changefreq: 'daily' },
     { url: '/services', priority: 0.9, changefreq: 'weekly' },
@@ -59,6 +58,11 @@ export default SitemapPage;
 // For now, we'll create a static sitemap.xml file
 // eslint-disable-next-line react-refresh/only-export-components
 export const generateStaticSitemap = () => {
-  return generateSitemap(getAllPages());
+  return generateSitemap(getAllPages());}
 };
 
+
+
+
+
+</div></div></div></div>

@@ -8,7 +8,7 @@ const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {
   e: "🚀 Autonomous, DevOps, Platforms","
       descripti, o, n: "Se, l, f-healing, infrastructure, achieving 99.9% upti, m, e","
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-04-autonomo, u, s-devo, p, s-platfor, m, s","
-      catego, r, y: "DevO, p, s & Infrastructu, r, e"
+      catego, r, y: "DevO, p, s & Infrastructu, r, e"}
 const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
@@ -32,7 +32,7 @@ const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {
   e: "🚀 Autonomous, DevOps, Platforms",";
       descripti, o, n: "Se, l, f-healing, infrastructure, achieving 99.9% upti, m, e",";
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-04-autonomo, u, s-devo, p, s-platfor, m, s",";
-      catego, r, y: "DevO, p, s & Infrastructu, r, e"
+      catego, r, y: "DevO, p, s & Infrastructu, r, e"}
 const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
@@ -88,23 +88,20 @@ const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
   g:gr, i, d-co, l, s-3, ga, p-6, m, b-8">";)
         {megaArticl, e, s.m, a, p((artic, l, e, ind, e, x) => (
           <Li, n, k;
-      <div, className="grid, m, d: gr, i, d-co, l, s-2 l
+      <div, className="grid, m, d: gr, i, d-co, l, s-2 l,
   g:gr, i, d-co, l, s-3, ga, p-6, m, b-8">"</div>
-      <div, className="grid, m, d: gr, i, d-co, l, s-2 l
+      <div, className="grid, m, d: gr, i, d-co, l, s-2 l,
   g:gr, i, d-co, l, s-3, ga, p-6, m, b-8">";
         {megaArticl, e, s.m, a, p((artic, l, e, ind, e, x) => (</div>
-          <Li, n, k
-  k, e, y={ind, e, x}
-            to={artic, l, e.li, n, k}
-            classNa, m, e="bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hov, e;
+          <Li, n, k}
+  k, e, y={ind, e, x} to={artic, l, e.li, n, k} classNa, m, e="bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hov, e;
       </d, i, v>"
       <div, className="grid, m, d: gr, i, d-co, l, s-2 l,"
   g:gr, i, d-co, l, s-3, ga, p-6, m, b-8">""
       <div, className="grid, m, d: gr, i, d-co, l, s-2 l,"
   g:gr, i, d-co, l, s-3, ga, p-6, m, b-8">";
         {/* TODO: Fix JSX expression */}
-  k, e, y={ind, e, x}
-            to={artic, l, e.li, n, k}"
+  k, e, y={ind, e, x} to={artic, l, e.li, n, k} "
             classNa, m, e="bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hov, e,"
   r:sca, l, e-1, 0, 5"
           ></Li>"
@@ -137,3 +134,12 @@ const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
 };
 export default October2025MegaLaunchBanner;
 }}"
+
+
+
+
+
+
+
+
+</div></div></div></div></div></div></div></div></div>

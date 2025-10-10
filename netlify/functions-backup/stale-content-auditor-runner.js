@@ -1,11 +1,9 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('stale-content-auditor-runner function triggered')}
     // Stale content auditing simulation;
-    const result = {
-      statusCode: 200;
+    const result ={statusCode: 200;
       headers: {,
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'}
+        'Content-Type': 'application/json'} 'Access-Control-Allow-Origin': '*'}
       },
       body: JSON.stringify({message: Stale content auditor runner executed successfully)
         timestamp: new Date().toISOString()
@@ -14,26 +12,25 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
         audit: {,
           status: 'active',
           contentAudited: 0;
-          staleFound: 0;
+          staleFound: 0;}
           lastAudit: new Date().toISOString()}
-    const result = {/* TODO: Fix JSX expression */}
-        'Access-Control-Allow-Origin': '*'}
+    const result ={/* TODO: Fix JSX expression */} 'Access-Control-Allow-Origin': '*'}
       },
       bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */})
   t: new Date().toISOString()}
         }})};
     return result;
-//   } catch (error) {// console.error('Error in stale-content-auditor-runner: ') error;
+//   } catch (error) {// console.error('Error in stale-content-auditor-runner: ') error;}
       }
     return {
       statusCode: 500;
       headers: {,
-        'Content-Type': 'application/json',
+        'Content-Type': 'application/json'}
         'Access-Control-Allow-Origin': '*'}
       },
       body: JSON.stringify({error: 'Internal server error'),
-        message: error.message),
+        message: error.message)}
         function: 'stale-content-auditor-runner'}
 //   } catch (error) {/* TODO: Fix JSX expression */}
       }
@@ -47,8 +44,8 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     };
   }
 };
-        timestamp: new Date().toISOString(),' function: 'stale-content-auditor-runner',' source: event.source || 'unknown', audit: {' status: 'active', contentAudited: 0, staleFound: 0;
-        lastAudit: new Date().toISOString() } }) }; return result; } catch (error) {' // console.error('Error in stale-content-auditor-runner: ') error;
+        timestamp: new Date().toISOString(),' function: 'stale-content-auditor-runner',' source: event.source || 'unknown', audit: {' status: 'active', contentAudited: 0, staleFound: 0;}
+        lastAudit: new Date().toISOString() } }) }; return result; } catch (error) {' // console.error('Error in stale-content-auditor-runner: ') error;}
       } return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'stale-content-auditor-runner' }) }; } };'
         timestam,
   p: new Date().toISOString(),' functio,

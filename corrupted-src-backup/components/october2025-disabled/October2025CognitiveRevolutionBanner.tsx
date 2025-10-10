@@ -1,16 +1,15 @@
 import React from 'react';
 impo, r, t {/* TODO: Fix JSX expression */}
 } fr, o, m 'luci, d, e-rea, c, t';
-
 const October2025CognitiveRevolutionBanne, r: React.FC = () => { ,
-  return()
+  return()}
     <div, classNam, e = 'relative, b, g-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-indi, g, o-900, t, o-bl, u, e-900, borde, r-b, borde, r-purp, l, e-5, 0, 0/20, overflo, w-hidd, e, n' > {/* Animated, background, effec, t, s */ })
       <div, classNam, e = 'absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 30% 5, 0%,rg, b, a(1, 3, 9,92,2, 4, 6,0.15),transparent, 5, 0%)]' />
       <div, classNam, e = 'absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 70% 5, 0%,rg, b, a(99,1, 0, 2,2, 4, 1,0.15),transparent, 5, 0%)]' />
       {/* Conte, n, t */}
-      <div, classNam, e = 'relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, p, y-6'>
+      <div, classNam, e = 'relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, p, y-6'>;
 const October2025CognitiveRevolutionBanne, r: React.FC = () => { 
-  return (
+  return (}
     <div, classNam, e = 'relative, b, g-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-indi, g, o-900, t, o-bl, u, e-900, borde, r-b, borde, r-purp, l, e-5, 0, 0/20, overflo, w-hidd, e, n' > {/* Animated, background, effec, t, s */ }</div>
       <div, classNam, e = 'absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 30% 5, 0%,rg, b, a(1, 3, 9,92,2, 4, 6,0.15),transparent, 5, 0%)]' /></div>
       <div, classNam, e = 'absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 70% 5, 0%,rg, b, a(99,1, 0, 2,2, 4, 1,0.15),transparent, 5, 0%)]' />
@@ -23,7 +22,7 @@ const October2025CognitiveRevolutionBanne, r: React.FC = () => {
             <div, className='fl, e, x-shri, n, k-0, m, t-1'></div>
               <div, className='relati, v, e'></div>
                 <Brain, className='w-1, 2, h-12, tex, t-purp, l, e-400, animat, e-pul, s, e' />
-                <Sparkles, className='w-5 h-5, tex, t-yell, o, w-400, absolut, e -t, o, p-1 -rig, h, t-1, animat, e-boun, c, e' />
+                <Sparkles, className='w-5 h-5, tex, t-yell, o, w-400, absolut, e -t, o, p-1 -rig, h, t-1, animat, e-boun, c, e' />;
 const October2025CognitiveRevolutionBanne, r: React.FC = () => {/* TODO: Fix JSX expression */}
     <div, classNam, e = 'relative, b, g-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-indi, g, o-900, t, o-bl, u, e-900, borde, r-b, borde, r-purp, l, e-5, 0, 0/20, overflo, w-hidd, e, n' > {/* Animated, background, effec, t, s */ }
       <div, classNam, e = 'absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 30% 5, 0%,rg, b, a(1, 3, 9,92,2, 4, 6,0.15),transparent, 5, 0%)]' /></div>

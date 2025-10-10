@@ -11,7 +11,7 @@
   contactInfo: unknown;
     mobile: string;
     email: string;
-export interface NewOperationalService2025 {;,
+export interface NewOperationalService2025 {;}
     address: string}
   i,
   d: string;
@@ -47,7 +47,7 @@ export interface NewOperationalService2025 {/* TODO: Fix JSX expression */}
   taglin,
   e: string;
   pric,
-  e: string,,
+  e: string,
   descriptio,
   n: string;
   feature,
@@ -170,7 +170,6 @@ export const,
     }
   }
 ];
-;
     id: "smart-operations-center"
     name: "Smart Operations Center",
     tagline: "AI-powered operations management",

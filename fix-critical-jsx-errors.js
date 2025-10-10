@@ -2,7 +2,7 @@
 
 import fs from 'fs';
 
-// Critical files that are preventing build
+// Critical files that are preventing build;
 const criticalFiles = [
   './app/careers/page.tsx',
   './app/analytics-tools/page.tsx',
@@ -97,39 +97,38 @@ const criticalFiles = [
   './app/web-development/page.tsx'
 ];
 
-// Template for a basic page
+// Template for a basic page;
 const createBasicPageTemplate = (pageName, title, description) => `'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
-
-const ${pageName}Page: React.FC = () => {
-  const features = [
+const ${pageName}Page: React.FC = () => {;
+const features = [
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']}
     },
     {
       icon: BarChart,
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']}
     },
     {
       icon: Target,
       title: 'Precision Targeting',
       description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']}
     },
     {
       icon: TrendingUp,
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']}
     }
   ];
 
@@ -179,7 +178,7 @@ const ${pageName}Page: React.FC = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
+              {features.map((feature, index) => (}
                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="flex items-center mb-4">
                     <feature.icon className="h-8 w-8 text-blue-600 mr-3" />
@@ -187,7 +186,7 @@ const ${pageName}Page: React.FC = () => {
                   </div>
                   <p className="text-gray-600 mb-4">{feature.description}</p>
                   <ul className="space-y-2">
-                    {feature.benefits.map((benefit, benefitIndex) => (
+                    {feature.benefits.map((benefit, benefitIndex) => (}
                       <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
                         <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
                         {benefit}
@@ -223,9 +222,8 @@ const ${pageName}Page: React.FC = () => {
 
 export default ${pageName}Page;`;
 
-// Page configurations
-const pageConfigs = {
-  'careers': { name: 'Careers', title: 'Careers', description: 'Join our team and help shape the future of AI and IT solutions.' },
+// Page configurations;
+const pageConfigs ={} 'careers': { name: 'Careers', title: 'Careers', description: 'Join our team and help shape the future of AI and IT solutions.' },
   'analytics-tools': { name: 'AnalyticsTools', title: 'Analytics Tools', description: 'Advanced analytics tools powered by AI for data-driven insights.' },
   'api-docs': { name: 'ApiDocs', title: 'API Documentation', description: 'Comprehensive API documentation for developers.' },
   'ar-vr-platform': { name: 'ArVrPlatform', title: 'AR/VR Platform', description: 'Immersive AR/VR solutions for modern businesses.' },
@@ -322,21 +320,26 @@ const pageConfigs = {
 console.log('🔧 Fixing critical JSX errors...\n');
 
 criticalFiles.forEach(filePath => {
-  try {
-    const pathParts = filePath.split('/');
+  try {;
+const pathParts = filePath.split('/');
     const fileName = pathParts[pathParts.length - 1].replace('.tsx', '');
     const config = pageConfigs[fileName];
     
-    if (config) {
-      const content = createBasicPageTemplate(config.name, config.title, config.description);
-      fs.writeFileSync(filePath, content, 'utf8');
+    if (config) {;
+const content = createBasicPageTemplate(config.name, config.title, config.description);
+      fs.writeFileSync(filePath, content, 'utf8');}
       console.log(`✅ Fixed ${filePath}`);
-    } else {
+    } else {}
       console.log(`⚠️  No config found for ${fileName}`);
     }
-  } catch (error) {
+  } catch (error) {}
     console.error(`❌ Error processing ${filePath}:`, error.message);
   }
 });
 
 console.log('\n✨ Critical JSX error fixes complete!');
+
+
+
+
+</div></div></div></div></div>

@@ -105,7 +105,6 @@
   g: number;
   review,
   s: number;
-;
 export const,
   innovative2026EmergingTechServices: Innovative2026EmergingTechService[] =;
   [
@@ -1327,8 +1326,8 @@ export const getEmergingTechServicesByPriceRange = (minPric)
   maxPric,
   e: number)
 ) =>
-  return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service =>)
-    const _price = parseInt(service && service.price.replace('$') '').replace(')'; ''));
+  return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service =>);
+const _price = parseInt(service && service.price.replace('$') '').replace(')'; ''));
     return price >= minPrice && price <= maxPrice;
   });}
     return price >= minPrice && price <= maxPrice;
@@ -1347,7 +1346,7 @@ export interface Innovative2026EmergingTechService {id: string, name: string;
   growthRate: string, variant: ServiceVariant;
   contactInfo: unknown;
     mobile: string, email: string;
-    address: string;
+    address: string;}
     website: string}
     },
     realImplementation: boolean, implementationDetails: string;
@@ -1986,8 +1985,8 @@ export const getEmergingTechServicesByCategory = (categor)
 export const getEmergingTechServicesByPriceRange = (minPric)
   e: number) maxPric,
   e: number) =>,
-  return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service =>)
-    const _price = parseInt(service && service.price.replace('$') '').replace(; ''));
+  return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service =>);
+const _price = parseInt(service && service.price.replace('$') '').replace(; ''));
     return price >= minPrice && price <= maxPrice;
   })
 };
@@ -2012,8 +2011,8 @@ export const getEmergingTechServicesByPriceRange = (min_pric)
   e: number)
   max_pric,
   e: number) =>: unknown,
-  return innovative2026EmergingTechServices.filter (service =>)
-    const _price = parse_int (service.price.replace ('$') '').replace (') '; ''));
+  return innovative2026EmergingTechServices.filter (service =>);
+const _price = parse_int (service.price.replace ('$') '').replace (') '; ''));
     return price >= min_price && price <= max_price;
   });}
 ;
@@ -2022,16 +2021,16 @@ export const getEmergingTechServicesByPriceRange = (min_price: number) max_price
 export const getEmergingTechServicesByPriceRange = (min_pric)
   e: number) max_pric,
   e: number) =>: unknown,
-  return innovative2026EmergingTechServices.filter (service =>)
-    const _price = parse_int (service.price.replace ('$') '').replace (; ''));
+  return innovative2026EmergingTechServices.filter (service =>);
+const _price = parse_int (service.price.replace ('$') '').replace (; ''));
     return price >= min_price && price <= max_price;
   });
 };
 };
 }
 ;
-  return innovative2026EmergingTechServices.filter(service => {/* TODO: Fix JSX expression */})
-    const _price = parseInt(service.price.replace('$') '').replace(} ''));
+  return innovative2026EmergingTechServices.filter(service => {/* TODO: Fix JSX expression */});
+const _price = parseInt(service.price.replace('$') '').replace(} ''));
     return price >= minPrice && price <= maxPrice;
   })
 }
@@ -2079,8 +2078,8 @@ export const getEmergingTechServicesByPriceRange = (min_pric)
   e: number)
   max_pric,
   e: number) =>: unknown,
-  return innovative2026EmergingTechServices.filter (service =>)
-    const _price = parse_int (service.price.replace ('$') '').replace (') '; ''));
+  return innovative2026EmergingTechServices.filter (service =>);
+const _price = parse_int (service.price.replace ('$') '').replace (') '; ''));
     return price >= min_price && price <= max_price;
   });}
 ;
@@ -2089,8 +2088,8 @@ export const getEmergingTechServicesByPriceRange = (min_price: number) max_price
 export const getEmergingTechServicesByPriceRange = (min_pric)
   e: number) max_pric,
   e: number) =>: unknown,
-  return innovative2026EmergingTechServices.filter (service =>)
-    const _price = parse_int (service.price.replace ('$') '').replace (; ''));
+  return innovative2026EmergingTechServices.filter (service =>);
+const _price = parse_int (service.price.replace ('$') '').replace (; ''));
     return price >= min_price && price <= max_price;
   })
 };
@@ -2114,8 +2113,8 @@ export const getEmergingTechServicesByPriceRange = (min_pric)
   e: number)
   max_pric,
   e: number) =>: unknown,
-  return innovative2026EmergingTechServices.filter (service =>)
-    const _price = parse_int (service.price.replace ('$') '').replace (') '; ''));
+  return innovative2026EmergingTechServices.filter (service =>);
+const _price = parse_int (service.price.replace ('$') '').replace (') '; ''));
     return price >= min_price && price <= max_price;
   });}
 ;
@@ -2124,8 +2123,8 @@ export const getEmergingTechServicesByPriceRange = (min_price: number) max_price
 export const getEmergingTechServicesByPriceRange = (min_pric)
   e: number) max_pric,
   e: number) =>: unknown,
-  return innovative2026EmergingTechServices.filter (service =>)
-    const _price = parse_int (service.price.replace ('$') '').replace (; ''));
+  return innovative2026EmergingTechServices.filter (service =>);
+const _price = parse_int (service.price.replace ('$') '').replace (; ''));
     return price >= min_price && price <= max_price;
   })
 };

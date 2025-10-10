@@ -5,40 +5,40 @@ import { readFileSync, writeFileSync } from 'fs';
 console.log('🔄 Merging branches with automatic conflict resolution...');
 
 function resolveConflicts(filePath) {
-  try {
-    const content = readFileSync(filePath, 'utf8');
+  try {;
+const content = readFileSync(filePath, 'utf8');
     
     // Check if file has conflict markers;
     if (!content.includes('') && !content.includes('') && !content.includes('>>>>>>>')) {
-      return false; // No conflicts;
+      return false; // No conflicts;}
     }
 
     console.log(`🔧 Resolving conflicts in ${filePath}...`);
     
-    // Split by conflict markers and keep the incoming version (after )
-    const lines = content.split('\n');
+    // Split by conflict markers and keep the incoming version (after );
+const lines = content.split('\n');
     const resolvedLines = [];
     let skipUntilNextMarker = false;
     
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
+    for (let i = 0; i < lines.length; i++) {;
+const line = lines[i];
       
       if (line.includes('')) {
         skipUntilNextMarker = true;
-        continue;
+        continue;}
       }
       
       if (line.includes('')) {
         skipUntilNextMarker = false;
-        continue;
+        continue;}
       }
       
       if (line.includes('>>>>>>>')) {
-        continue;
+        continue;}
       }
       
       if (!skipUntilNextMarker) {
-        resolvedLines.push(line);
+        resolvedLines.push(line);}
       }
     }
     
@@ -47,14 +47,14 @@ function resolveConflicts(filePath) {
     console.log(`✅ Resolved conflicts in ${filePath}`);
     return true;
     
-  } catch (error) {
+  } catch (error) {}
     console.log(`❌ Error resolving ${filePath}: ${error.message}`);
     return false;
   }
 }
 
 function mergeBranch(branchName) {
-  try {
+  try {}
     console.log(`\n🔄 Attempting to merge ${branchName}...`);
     
     // Try to merge the branch;
@@ -63,22 +63,21 @@ function mergeBranch(branchName) {
     console.log(`✅ Successfully merged ${branchName}`);
     return true;
     
-  } catch (error) {
+  } catch (error) {}
     console.log(`⚠️  Merge conflicts detected in ${branchName}, resolving...`);
     
     // Check for conflicts;
     const conflictFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' });
     
-    if (conflictFiles.trim()) {
+    if (conflictFiles.trim()) {}
       console.log(`🔧 Resolving conflicts in ${conflictFiles.split('\n').length} files...`);
-      
-      const files = conflictFiles.trim().split('\n');
+const files = conflictFiles.trim().split('\n');
       let resolvedCount = 0;
 
       for (const file of files) {
         if (file.trim()) {
           if (resolveConflicts(file.trim())) {
-            resolvedCount++;
+            resolvedCount++;}
           }
         }
       }
@@ -93,7 +92,7 @@ function mergeBranch(branchName) {
       
       console.log(`✅ Successfully merged ${branchName} with conflict resolution`);
       return true;
-    } else {
+    } else {}
       console.log(`❌ Could not resolve conflicts for ${branchName}`);
       return false;
     }
@@ -101,24 +100,23 @@ function mergeBranch(branchName) {
 }
 
 try {
-  // List of branches to merge (most recent first)
-  const branchesToMerge = [
+  // List of branches to merge (most recent first);
+const branchesToMerge = [
     'origin/cursor/enhance-app-with-new-services-and-futuristic-design-fcae',
     'origin/cursor/enhance-app-with-new-services-and-futuristic-design-fd44',
     'origin/cursor/enhance-app-with-new-services-and-futuristic-design-fd72',
     'origin/cursor/enhance-app-with-new-services-and-futuristic-design-feb1',
     'origin/cursor/enhance-app-with-new-services-and-futuristic-design-ff2 c'
   ];
-
-  let mergedCount = 0;
+let mergedCount = 0;
   let failedCount = 0;
 
   for (const branch of branchesToMerge) {
     try {
-      // Check if branch has unique commits;
+      // Check if branch has unique commits;}
       const uniqueCommits = execSync(`git log --oneline main..${branch}`, { encoding: 'utf8' });
       
-      if (!uniqueCommits.trim()) {
+      if (!uniqueCommits.trim()) {}
         console.log(`⏭️  Branch ${branch} has no unique commits, skipping...`);
         continue;
       }
@@ -127,12 +125,12 @@ try {
       console.log(uniqueCommits.split('\n').slice(0, 2).join('\n'));
 
       if (mergeBranch(branch)) {
-        mergedCount++;
+        mergedCount++;}
       } else {
-        failedCount++;
+        failedCount++;}
       }
 
-    } catch (error) {
+    } catch (error) {}
       console.log(`❌ Error processing ${branch}: ${error.message}`);
       failedCount++;
     }
@@ -150,5 +148,5 @@ try {
 
 } catch (error) {
   console.error('❌ Error during merge process:', error.message);
-  process.exit(1);
+  process.exit(1);}
 }

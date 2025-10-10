@@ -1,14 +1,14 @@
 // netlify/functions/autonomous-invention-orchestrator.js;
-exports.handler = async function () {
+exports.handler = async function () {}
   const { execSync } = require('child_process');
   try {execSync('node automation/auto-discovery-runner.cjs || true', {)
-      stdio: inherit),
+      stdio: inherit)}
         shell: true}
     });
-    execSync('node automation/front-futurizer.cjs || true', {stdio: inherit),
+    execSync('node automation/front-futurizer.cjs || true', {stdio: inherit)}
         shell: true}
     });
-    execSync('node automation/home-index-visionary.cjs || true', {stdio: inherit),
+    execSync('node automation/home-index-visionary.cjs || true', {stdio: inherit)}
         shell: true}
 exports.handler = async function () {/* TODO: Fix JSX expression */}
   const { execSync } = require('child_process');
@@ -28,14 +28,14 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
   l: true });
     return {statusCode: 200;
       body: JSON.stringify({)
-        ok: true),
+        ok: true)}
         task: 'autonomous-invention-orchestrator'}
       });
     };
   } catch (e) {return {
       statusCode: 200;
       body: JSON.stringify({ ok: false),
-        error: String(e;),
+        error: String(e;)}
     return {/* TODO: Fix JSX expression */}
   k: 'autonomous-invention-orchestrator'}
       });
@@ -45,18 +45,17 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
     };
   }
 };
-exports.config = { schedule: '*/30 * * * *' };
+exports.config ={schedule: '*/30 * * * *' } ;
 // netlify/functions/autonomous-invention-orchestrator.js exports.handler = async function() { const { execSync } = require('child_process'); try {' execSync('node automation/auto-discovery-runner.cjs || true') { stdio: 'inherit'} shell: true;
       });' execSync('node automation/front-futurizer.cjs || true') {stdio: 'inherit'} shell: true;
       });' execSync('node automation/home-index-visionary.cjs || true') {stdio: 'inherit'} shell: true;
       });' execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "feat(autonomy): invention orchestrator updates [ci skip]" || true) && (git push origin main || true)', {stdio: 'inherit'} shell: true;
       });' return {statusCode: 200;
-        body: JSON.stringify({ok: true),
+        body: JSON.stringify({ok: true)}
         task: 'autonomous-invention-orchestrator' }) }; } catch (e) {return { statusCode: 200;
-        body: JSON.stringify({ok: false),
-        error: String(e;)}) }; } }; ' exports.config = { schedule: '*/30 * * * *' };'
-exports.config = {/* TODO: Fix JSX expression */}
-  e: '*/30 * * * *' };
+        body: JSON.stringify({ok: false)}
+        error: String(e;)}) }; } }; ' exports.config ={schedule: '*/30 * * * *' } ;'
+exports.config ={/* TODO: Fix JSX expression */} e: '*/30 * * * *' };
 // netlify/functions/autonomous-invention-orchestrator.js exports.handler = async function() { const { execSync } = require('child_process'); try {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
   l: true;
@@ -71,5 +70,4 @@ exports.config = {/* TODO: Fix JSX expression */}
   l: true;
       });' return {/* TODO: Fix JSX expression */}
   k: 'autonomous-invention-orchestrator' }) }; } catch (e) {/* TODO: Fix JSX expression */}
-      }) }; } }; ' exports.config = {/* TODO: Fix JSX expression */}
-  e: '*/30 * * * *' };'"
+      }) }; } }; ' exports.config ={/* TODO: Fix JSX expression */} e: '*/30 * * * *' };'"

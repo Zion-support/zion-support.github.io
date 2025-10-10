@@ -17,7 +17,7 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {
       descripti, o, n: "Deep, code, analysis using, static, analysis, dynamic, testin, g, and, formal, verification to, identify, vulnerabilities.","
       tit, l, e: "Comprehensive, Security, Analysis",";
       descripti, o, n: "Deep, code, analysis using, static, analysis, dynamic, testin, g, and, formal, verification to, identify, vulnerabilities.",";
-      benef, i, t: "99.8% vulnerability, detection, rate"
+      benef, i, t: "99.8% vulnerability, detection, rate"}
     }
     {
       ic, o, n: Sear, c, h;
@@ -25,7 +25,7 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {
       descripti, o, n: "AI-powered, scanning, tools that, detect, common smart, contract, vulnerabilities and, security, patterns.","
       tit, l, e: "Automated, Vulnerability, Scanning",";
       descripti, o, n: "AI-powered, scanning, tools that, detect, common smart, contract, vulnerabilities and, security, patterns.",";
-      benef, i, t: "1, 0, 0+ vulnerability, patterns, detected"
+      benef, i, t: "1, 0, 0+ vulnerability, patterns, detected"}
     }
     {
       ic, o, n: AlertTriang, l, e;
@@ -33,7 +33,7 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {
       descripti, o, n: "Detailed, risk, analysis with, prioritized, recommendations and, mitigation, strategies.","
       tit, l, e: "Risk, Assessmen, t & Mitigati, o, n",";
       descripti, o, n: "Detailed, risk, analysis with, prioritized, recommendations and, mitigation, strategies.",";
-      benef, i, t: "Zero, critical, vulnerabilities in, productio, n"
+      benef, i, t: "Zero, critical, vulnerabilities in, productio, n"}
     }
     {
       ic, o, n: CheckCirc, l, e;
@@ -41,7 +41,7 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {
       descripti, o, n: "Ensure, compliance, with industry, standard, s, regulatory, requirement, s, and, best, practices.","
       tit, l, e: "Compliance, Verificatio, n",";
       descripti, o, n: "Ensure, compliance, with industry, standard, s, regulatory, requirement, s, and, best, practices.",";
-      benef, i, t: "1, 0, 0% compliance, with, standards"
+      benef, i, t: "1, 0, 0% compliance, with, standards"}
     }
     {
       ic, o, n: Clo, c, k;
@@ -49,7 +49,7 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {
       descripti, o, n: "Rapid, audit, completion with, detailed, reports delivered, within, 5-10, business, days.","
       tit, l, e: "Fast, Turnaroun, d",";
       descripti, o, n: "Rapid, audit, completion with, detailed, reports delivered, within, 5-10, business, days.",";
-      benef, i, t: "5-10, day, delivery guarant, e, e"
+      benef, i, t: "5-10, day, delivery guarant, e, e"}
     }
     {
       ic, o, n: Use, r, s;
@@ -57,7 +57,7 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {
       descripti, o, n: "Certified, blockchain, security experts, with, extensive experience, in, smart contract, auditin, g.","
       tit, l, e: "Expert, Tea, m",";
       descripti, o, n: "Certified, blockchain, security experts, with, extensive experience, in, smart contract, auditin, g.",";
-      benef, i, t: "50+ successful, audits, completed"
+      benef, i, t: "50+ successful, audits, completed"}
     }
   ];
   const, pricin, g = [
@@ -76,7 +76,7 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {
         "Standard, compliance, check"
         "Up, to, 500 lines, of, code"
       ]
-      popul, a, r: fal, s, e;
+      popul, a, r: fal, s, e;}
     }
     {
       na, m, e: "Professional, Audi, t"
@@ -95,7 +95,7 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {
         "Gas, optimization, analysis"
         "Architecture, revie, w"
       ]
-      popul, a, r: tr, u, e;
+      popul, a, r: tr, u, e;}
     }
     {
       na, m, e: "Enterprise, Audi, t"
@@ -132,7 +132,7 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {
         "Standard, compliance, check",";
         "Up, to, 500 lines, of, code"
       ]
-      popul, a, r: fal, s, e;
+      popul, a, r: fal, s, e;}
     }
     {
       na, m, e: "Professional, Audi, t",";
@@ -151,7 +151,7 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {
         "Gas, optimization, analysis",";
         "Architecture, revie, w"
       ]
-      popul, a, r: tr, u, e;
+      popul, a, r: tr, u, e;}
     }
     {
       na, m, e: "Enterprise, Audi, t",";
@@ -172,7 +172,7 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {
         "Po, s, t-deployment, monitorin, g",";
         "Security, training, included"
       ]
-      popul, a, r: fal, s, e;
+      popul, a, r: fal, s, e;}
     }
   ];
   const, testimonial, s = [
@@ -184,7 +184,7 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {
       ro, l, e: "C, T, O, DeFi, Protoco, l",";
       conte, n, t: "The, smart, contract audit, identified, 3 critical, vulnerabilities, that could, have, resulted in $50M, in, losses. The, tea, m's, expertise, saved our, project, and gave, us, confidence for, mainnet, launch.",";
       rati, n, g: 5;
-      compa, n, y: "DeFi, Protoco, l"
+      compa, n, y: "DeFi, Protoco, l"}
     }
     {
       na, m, e: "Sarah, Rodrigue, z","
@@ -194,7 +194,7 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {
       ro, l, e: "Found, e, r, NFT, Marketplac, e",";
       conte, n, t: "Professional, audit, process with, clear, communication and, actionable, recommendations. The, compliance, verification helped, us, meet regulatory, requirements, for our, marketplace, launch.",";
       rati, n, g: 5;
-      compa, n, y: "NFT, Marketplac, e"
+      compa, n, y: "NFT, Marketplac, e"}
     }
     {
       na, m, e: "Dr. James, Wilso, n","
@@ -204,7 +204,7 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {
       ro, l, e: "Head, of, Blockchain, FinTe, c, h",";
       conte, n, t: "The, enterprise, audit package, provided, comprehensive security, coverage, for our, mult, i-contract, syste, m. The, formal, verification process, gave, us mathematical, proof, of our, contrac, t's, correctnes, s.",";
       rati, n, g: 5;
-      compa, n, y: "FinTe, c, h"
+      compa, n, y: "FinTe, c, h"}
     }
   ];
   const, auditType, s = [
@@ -212,19 +212,19 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {
       tit, l, e: "DeFi, Protocol, s","
       ic, o, n: Glo, b, e;
       descripti, o, n: "Comprehensive, auditing, for decentralized, finance, protocols including, lendin, g, borrowi, n, g, and, trading, platforms.","
-      vulnerabiliti, e, s: ["Reentrancy, attack, s", "Flash, loan, exploits", "Oracle, manipulatio, n", "Liquidity, pool, risks"]"
+      vulnerabiliti, e, s: ["Reentrancy, attack, s", "Flash, loan, exploits", "Oracle, manipulatio, n", "Liquidity, pool, risks"]"}
     }
     {
       tit, l, e: "NFT, Smart, Contracts","
       ic, o, n: Co, d, e;
       descripti, o, n: "Specialized, auditing, for NFT, marketplace, s, minting, contract, s, and, token, standards complian, c, e.","
-      vulnerabiliti, e, s: ["Metadata, manipulatio, n", "Royalty, bypas, s", "Minting, vulnerabilitie, s", "Transfer, restriction, s"]"
+      vulnerabiliti, e, s: ["Metadata, manipulatio, n", "Royalty, bypas, s", "Minting, vulnerabilitie, s", "Transfer, restriction, s"]"}
     }
     {
       tit, l, e: "Token, Contract, s","
       ic, o, n: Databa, s, e;
       descripti, o, n: "Security, analysis, for E, R, C-20, E, R, C-7, 2, 1, E, R, C-11, 5, 5, and, custom, token implementatio, n, s.","
-      vulnerabiliti, e, s: ["Supply, manipulatio, n", "Access, control, issues", "Transfer, bug, s", "Approval, vulnerabilitie, s"]"
+      vulnerabiliti, e, s: ["Supply, manipulatio, n", "Access, control, issues", "Transfer, bug, s", "Approval, vulnerabilitie, s"]"}
     }
     {
       tit, l, e: "DAO, Governanc, e","
@@ -234,25 +234,25 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {
       tit, l, e: "DeFi, Protocol, s",";
       ic, o, n: Glo, b, e;
       descripti, o, n: "Comprehensive, auditing, for decentralized, finance, protocols including, lendin, g, borrowi, n, g, and, trading, platforms.",";
-      vulnerabiliti, e, s: ["Reentrancy, attack, s", "Flash, loan, exploits", "Oracle, manipulatio, n", "Liquidity, pool, risks"]";
+      vulnerabiliti, e, s: ["Reentrancy, attack, s", "Flash, loan, exploits", "Oracle, manipulatio, n", "Liquidity, pool, risks"]";}
     }
     {
       tit, l, e: "NFT, Smart, Contracts",";
       ic, o, n: Co, d, e;
       descripti, o, n: "Specialized, auditing, for NFT, marketplace, s, minting, contract, s, and, token, standards complian, c, e.",";
-      vulnerabiliti, e, s: ["Metadata, manipulatio, n", "Royalty, bypas, s", "Minting, vulnerabilitie, s", "Transfer, restriction, s"]";
+      vulnerabiliti, e, s: ["Metadata, manipulatio, n", "Royalty, bypas, s", "Minting, vulnerabilitie, s", "Transfer, restriction, s"]";}
     }
     {
       tit, l, e: "Token, Contract, s",";
       ic, o, n: Databa, s, e;
       descripti, o, n: "Security, analysis, for E, R, C-20, E, R, C-7, 2, 1, E, R, C-11, 5, 5, and, custom, token implementatio, n, s.",";
-      vulnerabiliti, e, s: ["Supply, manipulatio, n", "Access, control, issues", "Transfer, bug, s", "Approval, vulnerabilitie, s"]";
+      vulnerabiliti, e, s: ["Supply, manipulatio, n", "Access, control, issues", "Transfer, bug, s", "Approval, vulnerabilitie, s"]";}
     }
     {
       tit, l, e: "DAO, Governanc, e",";
       ic, o, n: Use, r, s;
       descripti, o, n: "Auditing, governance, contracts, voting, mechanism, s, and, treasury, management syste, m, s.",";
-      vulnerabiliti, e, s: ["Vote, manipulatio, n", "Treasury, exploit, s", "Proposal, vulnerabilitie, s", "Execution, risk, s"]";
+      vulnerabiliti, e, s: ["Vote, manipulatio, n", "Treasury, exploit, s", "Proposal, vulnerabilitie, s", "Execution, risk, s"]";}
 const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
@@ -350,7 +350,7 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
   g:px-8">",
             <div, className="te, x, t-cent, e, r">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
   g:px-8">"</section>
             <div, className="te, x, t-cent, e, r"></div>
               <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">"
@@ -439,7 +439,7 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
         <section, className="py-16, b, g-gr, a, y-50">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">";
             <div, className="text-center mb-12">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
   g:px-8">"</section>
             <div, className="text-center mb-12"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
@@ -466,7 +466,7 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
   d: gr, i, d-co, l, s-4, ga, p-8">"
               <div, className="te, x, t-cent, e, r">
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-r, e, d-100, rounde, d-full, m, b-4">
-            <div, className="gri, d, m
+            <div, className="gri, d, m,
   d: gr, i, d-co, l, s-4, ga, p-8">"</div>
               <div, className="te, x, t-cent, e, r"></div>
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-r, e, d-100, rounde, d-full, m, b-4"></div>
@@ -548,7 +548,7 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
         <section, className="py-20">";)
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">";),
             <div, className="te, x, t-center, m, b-16">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
   g:px-8">"</section>
             <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
@@ -574,7 +574,7 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;
   g:gr, i, d-co, l, s-4, ga, p-8">"
               {auditTyp, e, s.m, a, p((aud, i, t, ind, e, x) => {
-                const, Ico, n = aud, i, t.ic, o, n;
+                const, Ico, n = aud, i, t.ic, o, n;}
                 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-r, e, d-100, rounde, d-full, m, b-6">
                       <Icon, className="w-8 h-8, tex, t-r, e, d-6, 0, 0  />
@@ -593,14 +593,14 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
                     <div, className="mb-4"></div>
                       <h4, className="fo, n, t-semibold, tex, t-gr, a, y-900, m, b-2">Common, Vulnerabilitie, s: </h4>"
                       <ul, className="spa, c, e-y-1">
-                        {aud, i, t.vulnerabiliti, e, s.m, a, p((vu, l, n, vulnInd, e, x) => (
+                        {aud, i, t.vulnerabiliti, e, s.m, a, p((vu, l, n, vulnInd, e, x) => (}
                           <li, ke, y={vulnInd, e, x} classNa, m, e="flex, item, s-center, tex, t-sm">
                             <AlertTriangle, className="w-4 h-4, tex, t-oran, g, e-500, m, r-2, fle, x-shri, n, k-0  />
                             <span, className="te, x, t-gr, a, y-7, 0, 0">{vu, l, n}</sp, a, n>
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;
   g:gr, i, d-co, l, s-4, ga, p-8">";
               {auditTyp, e, s.m, a, p((aud, i, t, ind, e, x) => {
-                const, Ico, n = aud, i, t.ic, o, n;
+                const, Ico, n = aud, i, t.ic, o, n;}
                 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-r, e, d-100, rounde, d-full, m, b-6">";
                       <Icon, className="w-8 h-8, tex, t-r, e, d-6, 0, 0" />";
@@ -670,7 +670,7 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
         <section, className="py-20, b, g-gr, a, y-50">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">";
             <div, className="te, x, t-center, m, b-16">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
   g:px-8">"</section>
             <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
@@ -696,11 +696,11 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;
   g:gr, i, d-co, l, s-3, ga, p-8">"
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;
-            <div, className="grid, m, d: gr, i, d-co, l, s-2 l
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l,
   g:gr, i, d-co, l, s-3, ga, p-8">"</div>
-            <div, className="grid, m, d: gr, i, d-co, l, s-2 l
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l,
   g:gr, i, d-co, l, s-3, ga, p-8">";
-              {proce, s, s.m, a, p((st, e, p, ind, e, x) => (</div>
+              {proce, s, s.m, a, p((st, e, p, ind, e, x) => (</div>}
                 <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">";</div>
                   <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-r, e, d-100, rounde, d-lg, m, b-4">";</div>
             </d, i, v>"
@@ -729,7 +729,7 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
         <section, className="py-20">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">";
             <div, className="te, x, t-center, m, b-16">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
   g:px-8">"</section>
             <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
@@ -755,7 +755,7 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;
   g:gr, i, d-co, l, s-3, ga, p-8">"
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
-                const, Ico, n = featu, r, e.ic, o, n;
+                const, Ico, n = featu, r, e.ic, o, n;}
                 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-r, e, d-100, rounde, d-lg, m, b-4">
                 return (</div>
@@ -770,16 +770,16 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;)
   g:gr, i, d-co, l, s-3, ga, p-8">";)
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
-                const, Ico, n = featu, r, e.ic, o, n;
+                const, Ico, n = featu, r, e.ic, o, n;}
                 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-r, e, d-100, rounde, d-lg, m, b-4">";
                     <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm"></div>
                       <CheckCircle, className="w-4 h-4, m, r-1  />
-            <div, className="grid, m, d: gr, i, d-co, l, s-2 l
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l,
   g:gr, i, d-co, l, s-3, ga, p-8"></div>";
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
                 const, Ico, n = featu, r, e.ic, o, n;
-                return (</div>
+                return (</div>}
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";</div>
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-r, e, d-100, rounde, d-lg, m, b-4">";</div>
                       <Icon, className="w-6 h-6, tex, t-r, e, d-6, 0, 0" />";
@@ -827,7 +827,7 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
         <section, i, d="prici, n, g" classNa, m, e="py-20, b, g-gr, a, y-50">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">";
             <div, className="te, x, t-center, m, b-16">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
   g:px-8">"</section>
             <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
@@ -852,17 +852,17 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
             </d, i, v>
             <div, className="gri, d, m;
   d: gr, i, d-co, l, s-3, ga, p-8">"
-            <div, className="gri, d, m
+            <div, className="gri, d, m,
   d: gr, i, d-co, l, s-3, ga, p-8">"</div>
             <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8">";
-              {prici, n, g.m, a, p((pl, a, n, ind, e, x) => (</div>
-                <div, ke, y={ind, e, x} classNa, m, e={`bg-white, rounde, d-2xl, shado, w-l, g, p-8 ${pl, a, n.popul, a, r ? 'ri, n, g-2, rin, g-r, e, d-500, relativ, e' : ''}`}>`;`
+              {prici, n, g.m, a, p((pl, a, n, ind, e, x) => (</div>}
+                <div, ke, y={ind, e, x} classNa, m, e={`bg-white, rounde, d-2xl, shado, w-l, g, p-8 ${pl, a, n.popul, a, r ? 'ri, n, g-2, rin, g-r, e, d-500, relativ, e' : ''} `}>`;`
                   {pl, a, n.popul, a, r && (</div>
                     <div, className="absolu, t, e -t, o, p-4, lef, t-1/2, transfor, m -transla, t, e-x-1/2">";</div>
                       <span, className="bg-r, e, d-500, tex, t-white, p, x-4, p, y-1, rounde, d-full, tex, t-sm, fon, t-semibo, l, d">";
                         Most, Popula, r;
                       </sp, a, n>
-                    </d, i, v>
+                    </d, i, v>}
                   )}
                   <div, className="te, x, t-center, m, b-8">";</div>
                     <h3, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">{pl, a, n.na, m, e}</h3>";
@@ -873,7 +873,7 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
   d: gr, i, d-co, l, s-3, ga, p-8">""
             <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8">";
               {/* TODO: Fix JSX expression */}
-                <div, ke, y={ind, e, x} classNa, m, e={`bg-white, rounde, d-2xl, shado, w-l, g, p-8 ${pl, a, n.popul, a, r ? 'ri, n, g-2, rin, g-r, e, d-500, relativ, e' : ''}`}>`;`
+                <div, ke, y={ind, e, x} classNa, m, e={`bg-white, rounde, d-2xl, shado, w-l, g, p-8 ${pl, a, n.popul, a, r ? 'ri, n, g-2, rin, g-r, e, d-500, relativ, e' : ''} `}>`;`
                   {/* TODO: Fix JSX expression */}
                   )}"
                   <div, className="te, x, t-center, m, b-8">";"
@@ -897,16 +897,14 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
                   </ul>
                   <a;
   hr, e, f="/conta, c, t"
-                    classNa, m, e={
-`w-full, block, text-center, p, y-3, p, x-6, rounde, d-lg, fon, t-semibold, transitio, n-colo, r, s ${`;`
+                    classNa, m, e={`w-full, block, text-center, p, y-3, p, x-6, rounde, d-lg, fon, t-semibold, transitio, n-colo, r, s ${`;`
 pl, a, n.popul, a, r;
 ? 'bg-r, e, d-600, tex, t-white, hove, r: bg-r, e, d-7, 0, 0'
-? 'bg-r, e, d-600, tex, t-white, hov, e;
-  r: bg-r, e, d-7, 0, 0',';}
+? 'bg-r, e, d-600, tex, t-white, hov, e;} r: bg-r, e, d-7, 0, 0',';}
 : 'bg-gr, a, y-100, tex, t-gr, a, y-900, hove, r:bg-gr, a, y-2, 0, 0'}
                   <a></a>"
   hr, e, f="/conta, c, t"
-                    classNa, m, e={/* TODO: Fix JSX expression */}`
+                    classNa, m, e={/* TODO: Fix JSX expression */} `
 }`}`;`
                   >
                     Request, Quot, e;
@@ -941,7 +939,7 @@ pl, a, n.popul, a, r;
         <section, className="py-20">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">";
             <div, className="te, x, t-center, m, b-16">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
   g:px-8">"</section>
             <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
@@ -966,13 +964,13 @@ pl, a, n.popul, a, r;
             </d, i, v>
             <div, className="gri, d, m;
   d: gr, i, d-co, l, s-3, ga, p-8">"
-            <div, className="gri, d, m
+            <div, className="gri, d, m,
   d: gr, i, d-co, l, s-3, ga, p-8">"</div>
             <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8">";
-              {testimonia, l, s.m, a, p((testimoni, a, l, ind, e, x) => (</div>
+              {testimonia, l, s.m, a, p((testimoni, a, l, ind, e, x) => (</div>}
                 <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">";</div>
                   <div, className="flex, item, s-center, m, b-4">";
-                    {[...Arr, a, y(testimoni, a, l.rati, n, g)].m, a, p((_, i) => (</div>
+                    {[...Arr, a, y(testimoni, a, l.rati, n, g)].m, a, p((_, i) => (</div>}
                       <Star, ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t  />
             </d, i, v>"
             <div, className="gri, d, m,"
@@ -1004,7 +1002,7 @@ pl, a, n.popul, a, r;
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
   g:px-8, tex, t-cent, e, r">"
             <h2, className="te, x, t-4xl, fon, t-bold, m, b-6">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
   g:px-8, tex, t-cent, e, r">"</section>
             <h2, className="te, x, t-4xl, fon, t-bold, m, b-6"></h2>
         <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-r, e, d-900, vi, a-oran, g, e-800, t, o-yell, o, w-900, tex, t-whi, t, e">";
@@ -1026,7 +1024,7 @@ pl, a, n.popul, a, r;
   m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
             <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
               <a;
-            <div, className="flex, fle, x-co, l, s
+            <div, className="flex, fle, x-co, l, s,
   m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"</div>
             <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";</div>
               <a
@@ -1067,3 +1065,111 @@ pl, a, n.popul, a, r;
 };
 export default SmartContractAudit;
 }}}}}"`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>
+</>

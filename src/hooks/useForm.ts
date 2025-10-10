@@ -55,7 +55,7 @@ export interface UseFormReturn<T extends Record<string, unknown>> {/* TODO: Fix 
 export function useForm<T extends Record<string, unknown>>({// TODO: Add content;}
 
 }
-  initialValues, validationSchema = {}, onSubmi,
+  initialValues, validationSchema ={} , onSubmi,
   t: _onSubmit, validateOnChange = true, validateOnBlur = true;
 }: UseFormConfig;)
           <T>): UseFormReturn<T> {/* TODO: Fix JSX expression */}
@@ -89,7 +89,7 @@ const validateSingleField = useCallback()
 const validateAllFields = useCallback((): boolean => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    if (Object.keys(validationSchema).length === 0) return true;
+    if (Object.keys(validationSchema).length === = 0) return true;
     const validationResults = validateForm(values, validationSchema as Record;)
           <keyof T, ValidationRule[]>);
     const formErrors = getFormErrors(validationResults);
@@ -107,7 +107,7 @@ const handleChange = useCallback()
       // Handle checkbox inputs;
 let,
   fieldValue: unknown = value;
-      if (type === 'checkbox' && 'checked' in e.target) {/* TODO: Fix JSX expression */}
+      if (type === = 'checkbox' && 'checked' in e.target) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
         fieldValue = (e.target as HTMLInputElement).checked;
@@ -119,9 +119,8 @@ let,
         setTimeout(() => validateSingleField(fieldName), 0);
     [validateOnChange, touched, validateSingleField]
   // Handle input blur;
-
-  const handleBlur = useCallback(
-      const fieldName = e.target.name as keyof T;
+const handleBlur = useCallback(;
+const fieldName = e.target.name as keyof T;
 
       setTouched(prev => ({[fieldName]: true;}
       // Validate on blur if enabled;)
@@ -131,8 +130,7 @@ let,
         validateSingleField(fieldName);
 [validateOnBlur, validateSingleField]
   // Handle form submission;
-
-  const handleSubmit = useCallback(
+const handleSubmit = useCallback(
     async (e: React.FormEvent;
           <HTMLFormElement>) => {// TODO: Add content;}
 
@@ -149,19 +147,19 @@ const allTouched = Object.keys(values).reduce((acc, key) => {/* TODO: Fix JSX ex
       setTouched(allTouched);
       const isValid = validateAllFields();
       if (!isValid) {
-        return;
+        return;}
       }
       setIsSubmitting(true);
       try {
-        await onSubmit(values);
+        await onSubmit(values);}
       } catch (error) {
-        console.error('Form submission error:', error);
+        console.error('Form submission error:', error);}
       } finally {
         setIsSubmitting(false);
 [values, validateAllFields]
   // Set field value programmatically;
   const setFieldValue = useCallback((fiel,
-  d: keyof T, valu)
+  d: keyof T, valu)}
   e: T[keyof T]) => {[field]: value;}
     if (validateOnChange && touched[field]) {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -184,8 +182,8 @@ const allTouched = Object.keys(values).reduce((acc, key) => {/* TODO: Fix JSX ex
     setTouched({} as Record<keyof T, boolean>);
   }, [initialValues]);
   // Check if form is valid;
-const isValid = Object.keys(errors).length === 0 ||
-    Object.values(errors).every(errorArray => errorArray.length === 0);
+const isValid = Object.keys(errors).length === = 0 ||
+    Object.values(errors).every(errorArray => errorArray.length === = 0);
   return {values}
     errors,
     touched,

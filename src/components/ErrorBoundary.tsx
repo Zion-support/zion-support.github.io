@@ -27,7 +27,7 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
   error:', error, errorInfo);
     
     // You can also log to external services here;
-    if (typeof window !== 'undefined' && 'gtag' in window) {/* TODO: Fix JSX expression */}
+    if (typeof window !== == 'undefined' && 'gtag' in window) {/* TODO: Fix JSX expression */}
       });
     }
   }
@@ -65,7 +65,7 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
 "
             <div className="space-y-3"></div>
               <button></button>
-                onClick={this.handleRetry}"
+                onClick={this.handleRetry} "
                 className="w-full bg-cyan-600 text-white px-6 py-3 rounded-lg font-semibold,"
   hover:bg-cyan-700 transition-colors flex items-center justify-center gap-2"
               >"
@@ -74,7 +74,7 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
               </button>
               
               <button></button>
-                onClick={this.handleReload}"
+                onClick={this.handleReload} "
                 className="w-full bg-gray-600 text-white px-6 py-3 rounded-lg font-semibold,"
   hover:bg-gray-700 transition-colors flex items-center justify-center gap-2"
               >"

@@ -11,7 +11,7 @@
   contactInfo: unknown;
     mobile: string;
     email: string;
-export interface EnterpriseIt2026Service {;,
+export interface EnterpriseIt2026Service {;}
     address: string}
   i,
   d: string;
@@ -47,7 +47,7 @@ export interface EnterpriseIt2026Service {/* TODO: Fix JSX expression */}
   taglin,
   e: string;
   pric,
-  e: string,,
+  e: string,
   descriptio,
   n: string;
   feature,
@@ -170,7 +170,6 @@ export const,
     }
   }
 ];
-;
     id: "2026-enterprise-it"
     name: "2026 Enterprise IT Solutions",
     tagline: "Future-ready enterprise IT",

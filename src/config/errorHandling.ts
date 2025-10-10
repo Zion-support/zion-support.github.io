@@ -10,7 +10,7 @@ export enum ErrorSeverity {
  * Error Handling Configuration;
  * Centralized error tracking and reporting settings;
  */
-
+}
 export enum ErrorSeverity {// TODO: Add content;}
 
 }
@@ -20,7 +20,7 @@ export enum ErrorSeverity {// TODO: Add content;}
   CRITICAL = 'critical'
 }
 export enum ErrorCategory {
-
+}
 export enum ErrorCategory {// TODO: Add content;}
 
 }
@@ -41,11 +41,9 @@ export interface ErrorConfig {
   sampleRate: number;
   maxStackTraceLength: number;
   ignoreErrors: RegExp[];
-  severityThreshold: ErrorSeverity;
+  severityThreshold: ErrorSeverity;}
 }
-export const _errorHandlingConfig: ErrorConfig = {
-
-export interface ErrorConfig {// TODO: Add content;}
+export const _errorHandlingConfig: ErrorConfig ={} export interface ErrorConfig {// TODO: Add content;}
 };
   enabled: boolean;
     logToConsole: boolean;,
@@ -55,11 +53,10 @@ export interface ErrorConfig {// TODO: Add content;}
     ignoreErrors: RegExp[];,
     severityThreshold: ErrorSeverity
 }
-export const _errorHandlingConfig: ErrorConfig = {// TODO: Add content;}
-};
+export const _errorHandlingConfig: ErrorConfig ={// TODO: Add content;} };
   enabled: true,
-  logToConsole: process.env['NODE_ENV'] !== 'production',
-  sendToServer: process.env['NODE_ENV'] === 'production',
+  logToConsole: process.env['NODE_ENV'] !== == 'production',
+  sendToServer: process.env['NODE_ENV'] === = 'production',
   sampleRate: 1.0,
   maxStackTraceLength: 1000,
   ignoreErrors: [
@@ -68,25 +65,23 @@ export const _errorHandlingConfig: ErrorConfig = {// TODO: Add content;}
     /Loading chunk \d+ failed/i],
   severityThreshold: ErrorSeverity.LOW
 };
-export const _errorMessages = {
-  network: {
+export const _errorMessages ={network: {
     offline: 'You are currently offline. Please check your internet connection.',
     timeout: 'Request timed out. Please try again.',
-    serverError:   ,
-$4},
+    serverError:   } $4},
   validation: {
     required: 'This field is required.',
     invalid: 'Please enter a valid value.',
-    format:   ,
+    format:   }
 $4},
   authentication: {
     failed: 'Authentication failed. Please try logging in again.',
     expired: 'Your session has expired. Please log in again.',
-    unauthorized:   ,
+    unauthorized:   }
 $4},
   generic: {
     unknown: 'An unexpected error occurred. Please try again.',
-    retry:   ,
+    retry:   }
 $4}
 };
 export class AppError extends Error {
@@ -103,7 +98,7 @@ export class AppError extends Error {
 //   ],
 
   severityThreshold: ErrorSeverity.LOW;
-
+}
 };
   offlin,
   e: 'You are currently offline. Please check your internet connection.',
@@ -176,7 +171,7 @@ export class AppError extends Error {// TODO: Add content;}
 }
 export class AppError extends Error {
     // TODO: Add content
-
+}
   }
 //   constructor()
   messag,

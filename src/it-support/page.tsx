@@ -3,32 +3,31 @@ import React from 'react';
 import { ArrowRight, CheckCircle, Headphones, Clock, Shield, Zap, Brain, Target, Users, BarChart, Globe, Phone } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
-const ITSupportPage: React.FC = () => {
-  const features = [
+const ITSupportPage: React.FC = () => {;
+const features = [
     {
       icon: Headphones,
       title: '24/7 Support',
       description: 'Round-the-clock technical support and assistance',
-      benefits: ['24/7 availability', 'Fast response times', 'Expert technicians']
+      benefits: ['24/7 availability', 'Fast response times', 'Expert technicians']}
     },
     {
       icon: Shield,
       title: 'Security Support',
       description: 'Comprehensive security monitoring and incident response',
-      benefits: ['Threat monitoring', 'Incident response', 'Security updates']
+      benefits: ['Threat monitoring', 'Incident response', 'Security updates']}
     },
     {
       icon: Zap,
       title: 'Rapid Resolution',
       description: 'Quick problem identification and resolution',
-      benefits: ['Remote diagnostics', 'Proactive monitoring', 'Automated fixes']
+      benefits: ['Remote diagnostics', 'Proactive monitoring', 'Automated fixes']}
     },
     {
       icon: Settings,
       title: 'System Maintenance',
       description: 'Regular maintenance and optimization services',
-      benefits: ['Preventive maintenance', 'Performance tuning', 'Updates']
+      benefits: ['Preventive maintenance', 'Performance tuning', 'Updates']}
     }
   ];
 
@@ -72,7 +71,7 @@ const ITSupportPage: React.FC = () => {
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
+            {features.map((feature, index) => (}
               <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
                   <feature.icon className="w-8 h-8 text-white" />
@@ -84,7 +83,7 @@ const ITSupportPage: React.FC = () => {
                   {feature.description}
                 </p>
                 <ul className="space-y-2">
-                  {feature.benefits.map((benefit, benefitIndex) => (
+                  {feature.benefits.map((benefit, benefitIndex) => (}
                     <li key={benefitIndex} className="flex items-center text-xs text-gray-300">
                       <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                       {benefit}
@@ -103,3 +102,8 @@ const ITSupportPage: React.FC = () => {
 };
 
 export default ITSupportPage;
+
+
+
+
+</div></div></div></div></div>

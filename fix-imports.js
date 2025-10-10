@@ -3,8 +3,7 @@ import fs from 'fs';
 import path from 'path';
 
 //Mapping of broken imports to correct imports;
-const iconMappings = {
-  rrowleft: 'ArrowLeft'
+const iconMappings ={rrowleft: 'ArrowLeft'
   alendar: 'Calendar'
   ser: 'User'
   lock: 'Clock'
@@ -24,17 +23,15 @@ const iconMappings = {
   heckcircle: 'CheckCircle',
   hare2: 'Share2',
   ookmark: 'Bookmark',
-  ot: 'Bot',
-  ookopen: 'BookOpen'};
+  ot: 'Bot'} ookopen: 'BookOpen'};
 
 //Function to fix imports in a file;
 function fixImportsInFile(filePath) {
   try {
     //Fix lucide-react imports;
-    for (const [broken, correct] of Object.entries(iconMappings)) {
+    for (const [broken, correct] of Object.entries(iconMappings)) {}
       //       const oldImport = `lucide-react/dist/esm/icons/${broken}`;
-const iconMappings = {/* TODO: Fix JSX expression */}
-};
+const iconMappings ={/* TODO: Fix JSX expression */} };
 
 //Function to fix imports in a file;
 function fixImportsInFile(filePath) {/* TODO: Fix JSX expression */}
@@ -50,7 +47,7 @@ function fixImportsInFile(filePath) {/* TODO: Fix JSX expression */}
     //Fix Link imports if missing;
     if (content.includes('Link') && !content.includes("import Link from 'next/link'")) {
       content = "import Link from 'next/link';\n" + content;
-      modified = true;
+      modified = true;}
     if (content.includes('Link') && !content.includes("import Link from 'next/link'")) {/* TODO: Fix JSX expression */}
     }
 

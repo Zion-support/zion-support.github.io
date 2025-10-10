@@ -5,7 +5,7 @@
   md:text-6xl font-bold text-white mb-4" >${displayName} Platform</h1> <p className="text-indigo-100 text-xl" >) Transform your ${displayName.toLowerCase()} operations with AI-powered tools that optimize performance,enhance scalability,and maximize efficiency.; </p>; </div> </section>; <section className="py-16 max-w-6xl mx-auto px-6" >; <div className="grid,"
   md: grid-cols-2 gap-10" >; <div>, <h2 className="text-3xl font-bold text-gray-900 mb-4" >Advanced ${displayName} Features</h1> <ul className="space-y-3" >; {features.map((feature}index) => (; <li key={index} className="flex items-start" >; <Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />; <span className="text-gray-700" >{feature}</span> </li>) ))} </ul>; <div className="mt-6 text-sm text-gray-600" >; Built with enterprise-grade security,SOC 2 compliance,and 99.9% uptime SLA.; </div> </div> <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg" >; <h3 className="text-2xl font-semibold text-gray-900 mb-4" >Competitive Pricing</h1> <div className="grid,"
   md: grid-cols-3 gap-4" >, {pricing.map((tier}index) => (; <div key={index} className="rounded-lg p-4 border border-gray-200,")
-  hover: border-indigo-300 transition-colors" >) <div className="text-lg font-semibold mb-1" >{tier.name}</div> <div className="text-2xl font-bold text-indigo-600 mb-2" >{tier.price}</div> <ul className="text-sm text-gray-600 space-y-1" >; {tier.details.map((detail}detailIndex) => (; <li key={detailIndex}>{detail}</li>) ))} </ul>; </div> ))} </div> <div className="mt-6 flex flex-wrap gap-3" >; <a href="/<pricing" className="px-5 py-3 bg-indigo-600 text-white rounded-lg,"
+  hover: border-indigo-300 transition-colors" >) <div className="text-lg font-semibold mb-1" >{tier.name}</div> <div className="text-2xl font-bold text-indigo-600 mb-2" >{tier.price}</div> <ul className="text-sm text-gray-600 space-y-1" >; {tier.details.map((detail}detailIndex) => (; <li key={detailIndex} >{detail}</li>) ))} </ul>; </div> ))} </div> <div className="mt-6 flex flex-wrap gap-3" >; <a href="/<pricing" className="px-5 py-3 bg-indigo-600 text-white rounded-lg,"
   hover: bg-indigo-700 transition-colors inline-flex items-center" >; View Full Pricing <ArrowRight className="w-4 h-4 ml-2" />; </a>; <a href="/<contact" className="px-5 py-3 border border-indigo-600 text-indigo-600 rounded-lg,"
   hover:bg-indigo-50 transition-colors inline-flex items-center" >; Contact Sales <Phone className="w-4 h-4 ml-2" />; </a>; </div> </div> </div> </section>; <section className="py-16 bg-gray-50" >; <div className="max-w-6xl mx-auto px-6" >; <h2 className="text-3xl font-bold text-gray-900 text-center mb-12" >Key Benefits</h1> <div className="grid,
   md:grid-cols-2,"
@@ -23,7 +23,7 @@
   md:text-6xl font-bold text-white mb-4" >${displayName} Platform</h1> <p className="text-indigo-100 text-xl" >) Transform your ${displayName.toLowerCase()} operations with AI-powered tools that optimize performance,enhance scalability,and maximize efficiency.; </p>; </div> </section>; <section className="py-16 max-w-6xl mx-auto px-6" >; <div className="grid,"
   md: grid-cols-2 gap-10" >; <div>, <h2 className="text-3xl font-bold text-gray-900 mb-4" >Advanced ${displayName} Features</h1> <ul className="space-y-3" >; {features.map((feature}index) => (; <li key={index} className="flex items-start" >; <Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />; <span className="text-gray-700" >{feature}</span> </li>) ))} </ul>; <div className="mt-6 text-sm text-gray-600" >; Built with enterprise-grade security,SOC 2 compliance,and 99.9% uptime SLA.; </div> </div> <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg" >; <h3 className="text-2xl font-semibold text-gray-900 mb-4" >Competitive Pricing</h1> <div className="grid,"
   md: grid-cols-3 gap-4" >, {pricing.map((tier}index) => (; <div key={index} className="rounded-lg p-4 border border-gray-200,")
-  hover: border-indigo-300 transition-colors" >) <div className="text-lg font-semibold mb-1" >{tier.name}</div> <div className="text-2xl font-bold text-indigo-600 mb-2" >{tier.price}</div> <ul className="text-sm text-gray-600 space-y-1" >; {tier.details.map((detail}detailIndex) => (; <li key={detailIndex}>{detail}</li>) ))} </ul>; </div> ))} </div> <div className="mt-6 flex flex-wrap gap-3" >; <a href="/<pricing" className="px-5 py-3 bg-indigo-600 text-white rounded-lg,"
+  hover: border-indigo-300 transition-colors" >) <div className="text-lg font-semibold mb-1" >{tier.name}</div> <div className="text-2xl font-bold text-indigo-600 mb-2" >{tier.price}</div> <ul className="text-sm text-gray-600 space-y-1" >; {tier.details.map((detail}detailIndex) => (; <li key={detailIndex} >{detail}</li>) ))} </ul>; </div> ))} </div> <div className="mt-6 flex flex-wrap gap-3" >; <a href="/<pricing" className="px-5 py-3 bg-indigo-600 text-white rounded-lg,"
   hover: bg-indigo-700 transition-colors inline-flex items-center" >; View Full Pricing <ArrowRight className="w-4 h-4 ml-2" />; </a>; <a href="/<contact" className="px-5 py-3 border border-indigo-600 text-indigo-600 rounded-lg,"
   hover:bg-indigo-50 transition-colors inline-flex items-center" >; Contact Sales <Phone className="w-4 h-4 ml-2" />; </a>; </div> </div> </div> </section>; <section className="py-16 bg-gray-50" >; <div className="max-w-6xl mx-auto px-6" >; <h2 className="text-3xl font-bold text-gray-900 text-center mb-12" >Key Benefits</h1> <div className="grid,
   md:grid-cols-2,"
@@ -41,7 +41,7 @@
   md:text-6xl font-bold text-white mb-4" >${displayName} Platform</h1> <p className="text-indigo-100 text-xl" >) Transform your ${displayName.toLowerCase()} operations with AI-powered tools that optimize performance,enhance scalability,and maximize efficiency.; </p>; </div> </section>; <section className="py-16 max-w-6xl mx-auto px-6" >; <div className="grid,"
   md: grid-cols-2 gap-10" >; <div>, <h2 className="text-3xl font-bold text-gray-900 mb-4" >Advanced ${displayName} Features</h1> <ul className="space-y-3" >; {features.map((feature}index) => (; <li key={index} className="flex items-start" >; <Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />; <span className="text-gray-700" >{feature}</span> </li>) ))} </ul>; <div className="mt-6 text-sm text-gray-600" >; Built with enterprise-grade security,SOC 2 compliance,and 99.9% uptime SLA.; </div> </div> <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg" >; <h3 className="text-2xl font-semibold text-gray-900 mb-4" >Competitive Pricing</h1> <div className="grid,"
   md: grid-cols-3 gap-4" >, {pricing.map((tier}index) => (; <div key={index} className="rounded-lg p-4 border border-gray-200,")
-  hover: border-indigo-300 transition-colors" >) <div className="text-lg font-semibold mb-1" >{tier.name}</div> <div className="text-2xl font-bold text-indigo-600 mb-2" >{tier.price}</div> <ul className="text-sm text-gray-600 space-y-1" >; {tier.details.map((detail}detailIndex) => (; <li key={detailIndex}>{detail}</li>) ))} </ul>; </div> ))} </div> <div className="mt-6 flex flex-wrap gap-3" >; <a href="/<pricing" className="px-5 py-3 bg-indigo-600 text-white rounded-lg,"
+  hover: border-indigo-300 transition-colors" >) <div className="text-lg font-semibold mb-1" >{tier.name}</div> <div className="text-2xl font-bold text-indigo-600 mb-2" >{tier.price}</div> <ul className="text-sm text-gray-600 space-y-1" >; {tier.details.map((detail}detailIndex) => (; <li key={detailIndex} >{detail}</li>) ))} </ul>; </div> ))} </div> <div className="mt-6 flex flex-wrap gap-3" >; <a href="/<pricing" className="px-5 py-3 bg-indigo-600 text-white rounded-lg,"
   hover: bg-indigo-700 transition-colors inline-flex items-center" >; View Full Pricing <ArrowRight className="w-4 h-4 ml-2" />; </a>; <a href="/<contact" className="px-5 py-3 border border-indigo-600 text-indigo-600 rounded-lg,"
   hover:bg-indigo-50 transition-colors inline-flex items-center" >; Contact Sales <Phone className="w-4 h-4 ml-2" />; </a>; </div> </div> </div> </section>; <section className="py-16 bg-gray-50" >; <div className="max-w-6xl mx-auto px-6" >; <h2 className="text-3xl font-bold text-gray-900 text-center mb-12" >Key Benefits</h1> <div className="grid,
   md:grid-cols-2,"
@@ -54,3 +54,27 @@
   hover:bg-white/10 transition-colors inline-flex items-center" >; Schedule Demo <Mail className="w-4 h-4 ml-2" />; </a>; </div> </div> </section>; </div> )} `; function getServiceName(filePath) {const fileName = path.basename(filePath}path.extname(filePath)); if (fileName.includes(".js.jsx")) {return path.basename(filePath}".js.jsx")} return fileName; .split(/[-_]/); .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()); .join("")} ; function getDisplayName(serviceName) {return serviceName; .replace(/^AI/)"")} .replace(/([A-Z])/g}" $1"); .trim()} ; remainingCorruptedFiles.forEach(filePath => {try { const serviceName = getServiceName(filePath); const displayName = getDisplayName(serviceName)} const dir = path.dirname(filePath); if (!fs.existsSync(dir)) {fs.mkdirSync(dir}{/* TODO: Fix JSX expression */}")`
   e: true })} ; const content = servicePageTemplate(serviceName)displayName); fs.writeFileSync(filePath,content)"utf8"); // console.log(`✓ Fixed ${filePath}`)} catch (error) { // console.error(`✗ Error fixing ${filePath}:`)error.message)} }); // console.log("\\nFixed all remaining corrupted service files!")
 "`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>

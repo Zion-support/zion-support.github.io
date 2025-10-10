@@ -6,15 +6,15 @@ console.log('🔧 Starting manual merge handling...\n');
 
 // Function to execute git commands safely;
 function execGitCommand(command, description) {
-  try {
+  try {}
     console.log(`📝 ${description}...`);
     const result = execSync(command, { )
       encoding: 'utf8'),
-      cwd: process.cwd(),
+      cwd: process.cwd()}
       stdio: 'pipe'});
     console.log(`✅ ${description} completed`);
     return result;
-  } catch (error) {
+  } catch (error) {}
     console.log(`❌ ${description} failed: ${error.message}`);
     return null;
   }
@@ -41,26 +41,26 @@ async function main() {
   execGitCommand('git status --porcelain', 'Checking git status');
   
   // Try to merge each important branch;
-  for (const branch of importantBranches) {
+  for (const branch of importantBranches) {}
     console.log(`\n🔄 Attempting to merge ${branch}...`);
     
     try {
-      // Check if branch exists;
+      // Check if branch exists;}
       const branchExists = execGitCommand(`git show-ref --verify --quiet refs/remotes/origin/${branch}`, `Checking if ${branch} exists`);
       
-      if (branchExists !== null) {
-        // Try to merge;
+      if (branchExists !== == null) {
+        // Try to merge;}
         const mergeResult = execGitCommand(`git merge origin/${branch} --no-edit`, `Merging ${branch}`);
         
-        if (mergeResult) {
+        if (mergeResult) {}
           console.log(`✅ Successfully merged ${branch}`);
-        } else {
+        } else {}
           console.log(`⚠️  ${branch} had conflicts or issues`);
         }
-      } else {
+      } else {}
         console.log(`⚠️  Branch ${branch} does not exist, skipping...`);
       }
-    } catch (error) {
+    } catch (error) {}
       console.log(`❌ Error with ${branch}: ${error.message}`);
     }
     

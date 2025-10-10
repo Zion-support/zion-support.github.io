@@ -9,17 +9,16 @@ import Footer from '../components/Footer';
 
 'use client';
 import React, { useState } from 'react';
-const SolutionsPage: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('ai');
-
-  const _solutionCategories = [
+const SolutionsPage: React.FC = () => {;
+const [activeTab, setActiveTab] = useState('ai');
+const _solutionCategories = [
     {
       id: 'ai',
       name: 'AI Solutions',
       icon: Brain,
       color: 'text-purple-400',
       bgColor: 'bg-purple-500/10',
-      description:     ,
+      description:     }
 $4},
     {
       id: 'it',
@@ -27,7 +26,7 @@ $4},
       icon: Cloud,
       color: 'text-blue-400',
       bgColor: 'bg-blue-500/10',
-      description:     ,
+      description:     }
 $4},
     {
       id: 'security',
@@ -35,7 +34,7 @@ $4},
       icon: Shield,
       color: 'text-red-400',
       bgColor: 'bg-red-500/10',
-      description:     ,
+      description:     }
 $4},
     {
       id: 'automation',
@@ -43,27 +42,24 @@ $4},
       icon: Zap,
       color: 'text-yellow-400',
       bgColor: 'bg-yellow-500/10',
-      description:     ,
+      description:     }
 $4}
   ];
-
-  const solutions = {
-    ai: [
+const solutions ={ai: [
       {
         title: 'AI-Powered Analytics',
         description: 'Transform raw data into actionable insights with advanced AI analytics',
         features: ['Predictive Analytics', 'Real-time Insights', 'Automated Reporting', 'Custom Dashboards'],
         pricing: 'Starting at $1,500/month',
         icon: BarChart,
-        color:       ,
-$4},
+        color:       } $4},
       {
         title: 'AI Marketing Automation',
         description: 'Revolutionize your marketing with AI-powered automation and personalization',
         features: ['Campaign Optimization', 'Customer Segmentation', 'Content Generation', 'Performance Tracking'],
         pricing: 'Starting at $199/month',
         icon: Target,
-        color:       ,
+        color:       }
 $4},
       {
         title: 'AI Customer Support',
@@ -71,7 +67,7 @@ $4},
         features: ['24/7 Chatbots', 'Sentiment Analysis', 'Automated Responses', 'Human Handoff'],
         pricing: 'Starting at $299/month',
         icon: Users,
-        color:       ,
+        color:       }
 $4},
       {
         title: 'AI Process Automation',
@@ -79,7 +75,7 @@ $4},
         features: ['Workflow Automation', 'Exception Handling', 'Process Optimization', 'Compliance Monitoring'],
         pricing: 'Starting at $399/month',
         icon: Zap,
-        color:       ,
+        color:       }
 $4}
     ],
     it: [
@@ -89,7 +85,7 @@ $4}
         features: ['AWS/Azure/GCP Migration', 'Data Migration', 'Application Modernization', '24/7 Support'],
         pricing: 'Starting at $1,299/month',
         icon: Cloud,
-        color:       ,
+        color:       }
 $4},
       {
         title: 'IT Infrastructure Management',
@@ -97,7 +93,7 @@ $4},
         features: ['Server Management', 'Network Monitoring', 'Performance Optimization', 'Disaster Recovery'],
         pricing: 'Starting at $799/month',
         icon: Globe,
-        color:       ,
+        color:       }
 $4},
       {
         title: 'DevOps & CI/CD',
@@ -105,7 +101,7 @@ $4},
         features: ['Automated Testing', 'Continuous Deployment', 'Infrastructure as Code', 'Monitoring & Alerting'],
         pricing: 'Starting at $599/month',
         icon: Zap,
-        color:       ,
+        color:       }
 $4},
       {
         title: 'Database Management',
@@ -113,7 +109,7 @@ $4},
         features: ['Database Optimization', 'Performance Monitoring', 'Backup & Recovery', 'Security Hardening'],
         pricing: 'Starting at $399/month',
         icon: BarChart,
-        color:       ,
+        color:       }
 $4}
     ],
     security: [
@@ -123,7 +119,7 @@ $4}
         features: ['Threat Detection', 'Vulnerability Assessment', 'Incident Response', 'Compliance Management'],
         pricing: 'Starting at $799/month',
         icon: Shield,
-        color:       ,
+        color:       }
 $4},
       {
         title: 'AI Security Monitoring',
@@ -131,7 +127,7 @@ $4},
         features: ['Real-time Monitoring', 'AI Threat Detection', 'Automated Response', 'Security Analytics'],
         pricing: 'Starting at $299/month',
         icon: Brain,
-        color:       ,
+        color:       }
 $4},
       {
         title: 'Compliance Management',
@@ -139,7 +135,7 @@ $4},
         features: ['GDPR Compliance', 'HIPAA Compliance', 'SOX Compliance', 'Audit Support'],
         pricing: 'Starting at $499/month',
         icon: CheckCircle,
-        color:       ,
+        color:       }
 $4},
       {
         title: 'Security Training',
@@ -147,7 +143,7 @@ $4},
         features: ['Phishing Simulation', 'Security Awareness', 'Incident Response Training', 'Compliance Training'],
         pricing: 'Starting at $199/month',
         icon: Users,
-        color:       ,
+        color:       }
 $4}
     ],
     automation: [
@@ -157,7 +153,7 @@ $4}
         features: ['Workflow Design', 'Process Optimization', 'Exception Handling', 'Performance Analytics'],
         pricing: 'Starting at $399/month',
         icon: Zap,
-        color:       ,
+        color:       }
 $4},
       {
         title: 'IT Automation',
@@ -165,7 +161,7 @@ $4},
         features: ['Server Automation', 'Network Automation', 'Backup Automation', 'Monitoring Automation'],
         pricing: 'Starting at $299/month',
         icon: Cloud,
-        color:       ,
+        color:       }
 $4},
       {
         title: 'Marketing Automation',
@@ -173,7 +169,7 @@ $4},
         features: ['Email Automation', 'Social Media Automation', 'Lead Nurturing', 'Campaign Management'],
         pricing: 'Starting at $199/month',
         icon: Target,
-        color:       ,
+        color:       }
 $4},
       {
         title: 'Data Automation',
@@ -181,31 +177,30 @@ $4},
         features: ['Data Collection', 'Data Processing', 'Report Generation', 'Data Quality Management'],
         pricing: 'Starting at $249/month',
         icon: BarChart,
-        color:       ,
+        color:       }
 $4}
     ]
   };
-
-  const benefits = [
+const benefits = [
     {
       icon: Star,
       title: 'Proven Results',
-      description:     ,
+      description:     }
 $4},
     {
       icon: Shield,
       title: 'Enterprise Security',
-      description:     ,
+      description:     }
 $4},
     {
       icon: Globe,
       title: 'Global Support',
-      description:     ,
+      description:     }
 $4},
     {
       icon: Users,
       title: 'Expert Team',
-      description:     ,
+      description:     }
 $4}
   ];
 
@@ -229,12 +224,9 @@ $4}
           <div className="mb-12">
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               {solutionCategories.map((category) => (
-                <button
-                  key={category.id}
-                  onClick={() => setActiveTab(category.id)}
-                  className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${
-                    activeTab === category.id
-                      ? `${category.bgColor} ${category.color} border-2 border-current`
+                <button}
+                  key={category.id} onClick={() => setActiveTab(category.id)} className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${
+                    activeTab === = category.id} ? `${category.bgColor} ${category.color} border-2 border-current`
                       : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border-2 border-transparent'
                   }`}
                 >
@@ -254,7 +246,7 @@ $4}
   const _solutionCategories = [
   // TOD,
   O: Add items;
-];;
+];
     {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
@@ -320,8 +312,7 @@ $4}
   n: 'Streamline operations with intelligent automation'
     }
   ];
-  const solutions = {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  const solutions ={/* TODO: Fix JSX expression */} O: Add content;}
 };
   a,
   i: [
@@ -603,7 +594,7 @@ $4}
   const benefits = [
   // TOD,
   O: Add items;
-];;
+];
     {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
@@ -677,13 +668,10 @@ $4}
             <div className="flex flex-wrap justify-center gap-4 mb-8"></div>
               {solutionCategories.map((category) => ()}
           <button></button>
-                  key={category.id}
-                  onClick={() => setActiveTab(category.id)}
-                  className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${}
-  // TOD,
+                  key={category.id} onClick={() => setActiveTab(category.id)} className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${} // TOD,
   O: Add content;
 }
-                    activeTab === category.id;`
+                    activeTab === = category.id;`
                       ? `${category.bgColor} ${category.color} border-2 border-current`
                       : 'bg-slate-800/50 text-gray-300,
   hover:bg-slate-700/50 border-2 border-transparent'`
@@ -705,7 +693,7 @@ $4}
             </div>"
             <div className="text-center"></div>"
               <p className="text-gray-300 max-w-2xl mx-auto"></p>
-                {solutionCategories.find(cat => cat.id === activeTab)?.description}
+                {solutionCategories.find(cat => cat.id === = activeTab)?.description}
               </p>
             </div>
           </div>
@@ -713,11 +701,11 @@ $4}
           {/* Solutions Grid */}
           <div className="mb-16">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {solutions[activeTab as keyof typeof solutions].map((solution, index) => (
+              {solutions[activeTab as keyof typeof solutions].map((solution, index) => (}
                 <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
                   <div className="flex items-start mb-4">
-                    <div className={`w-12 h-12 bg-slate-700/50 rounded-lg flex items-center justify-center mr-4`}>
-                      <solution.icon className={`w-6 h-6 ${solution.color}`} />
+                    <div className={`w-12 h-12 bg-slate-700/50 rounded-lg flex items-center justify-center mr-4`} >
+                      <solution.icon className={`w-6 h-6 ${solution.color} `} />
                     </div>
                     <div className="flex-1">
                       <h3 className="text-xl font-semibold text-white mb-2">{solution.title}</h3>
@@ -728,7 +716,7 @@ $4}
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
                     <ul className="space-y-1">
-                      {solution.features.map((feature, featureIndex) => (
+                      {solution.features.map((feature, featureIndex) => (}
                         <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
           {/* Solutions Grid */}"
@@ -739,8 +727,8 @@ $4}
           <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50,"
   hover:border-cyan-400/50 transition-all duration-300"></div>"
                   <div className="flex items-start mb-4"></div>`
-                    <div className={`w-12 h-12 bg-slate-700/50 rounded-lg flex items-center justify-center mr-4`}></div>`
-                      <solution.icon className={`w-6 h-6 ${solution.color}`} /></solution>
+                    <div className={`w-12 h-12 bg-slate-700/50 rounded-lg flex items-center justify-center mr-4`} ></div>`
+                      <solution.icon className={`w-6 h-6 ${solution.color} `} /></solution>
                     </div>"
                     <div className="flex-1"></div>"
                       <h3 className="text-xl font-semibold text-white mb-2">{solution.title}</h3>"
@@ -761,7 +749,7 @@ $4}
                   </div>
                   
                   <div className="flex items-center justify-between">
-                    <div className={`text-lg font-bold ${solution.color}`}>
+                    <div className={`text-lg font-bold ${solution.color} `}>
                       {solution.pricing}
                     </div>
                     <a
@@ -772,7 +760,7 @@ $4}
                       <ArrowRight className="w-4 h-4 ml-1" />
                   </div>"
                   <div className="flex items-center justify-between"></div>`
-                    <div className={`text-lg font-bold ${solution.color}`}></div>
+                    <div className={`text-lg font-bold ${solution.color} `}></div>
                       {solution.pricing}
                     </div>
 
@@ -795,7 +783,7 @@ $4}
               Why Choose Our Solutions?
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {benefits.map((benefit, index) => (
+              {benefits.map((benefit, index) => (}
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
                     <benefit.icon className="w-8 h-8 text-cyan-400" />
@@ -956,3 +944,5 @@ $4}
 export default SolutionsPage;
 
 
+
+</>

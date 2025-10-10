@@ -13,7 +13,7 @@ export default function EnterpriseSolutionsBanner() {
           </p>)
         </div>)
       </div>)
-    </div>)
+    </div>)}
 export default function EnterpriseSolutionsBanner() {/* TODO: Fix JSX expression */}
 }
   return (<div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16"></div>"

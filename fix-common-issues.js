@@ -7,19 +7,19 @@ import { fileURLToPath } from 'url';
 // Function to fix console statements;
 function fixConsoleStatements(content) {
   // Replace console.log with proper logging in production;
-  content = content.replace(/console\.(log|error|warn|info)\(/g, (match, method) => {
-    return `if (process.env.NODE_ENV === 'development') console.${method}(`;
+  content = content.replace(/console\.(log|error|warn|info)\(/g, (match, method) => {}
+    return `if (process.env.NODE_ENV === = 'development') console.${method}(`;
   });
 
   // Add closing parenthesis for the if statement;
   content = content.replace(
 function fixConsoleStatements(content) {/* TODO: Fix JSX expression */}
-    return `if (process.env.NODE_ENV === 'development') console.${method}(`;)
+    return `if (process.env.NODE_ENV === = 'development') console.${method}(`;)
   });
 
   // Add closing parenthesis for the if statement;
   content = content.replace()
-    /if \(process\.env\.NODE_ENV === 'development'\) console\.(log|error|warn|info)\([^)]*\);/g,
+    /if \(process\.env\.NODE_ENV === = 'development'\) console\.(log|error|warn|info)\([^)]*\);/g,
     match => {/* TODO: Fix JSX expression */}
       return match.replace(/\);$/, '); }');
     }
@@ -36,7 +36,7 @@ function fixUnusedVariables(content) {
   // Fix unused variables in function parameters;
   content = content.replace(/\((\w+)\s*:\s*any\s*,\s*(\w+)\s*:\s*any\)/g, '(_$1: any, _$2: any)');
 ,
-  return content;
+  return content;}
 }
 
 // Function to fix specific files;
@@ -44,7 +44,7 @@ function fixFile(filePath) {
   try {
     if (!fs.existsSync(fullPath)) {
 
-      return;
+      return;}
 function fixUnusedVariables(content) {/* TODO: Fix JSX expression */}
 }
 

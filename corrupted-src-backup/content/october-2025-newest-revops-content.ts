@@ -12,7 +12,7 @@ export interface RevOpsContent {
   valueProposition?: string;
   highlights: string[];
   metrics: {,
-    [key: string]: string;
+    [key: string]: string;}
 export interface RevOpsContent {/* TODO: Fix JSX expression */}
   };
   icon?: string;
@@ -46,10 +46,10 @@ export const octoberNewestRevOpsContent: RevOpsContent[] = [
       roi: '127%',
       forecastAccuracy: '89%',
       pipelineVelocity: '3.2 x',
-      revenue: '$127 M',
+      revenue: '$127 M'}
       efficiency: '85%'},
     cta: {,
-      text: 'Read the Complete RevOps Guide',
+      text: 'Read the Complete RevOps Guide'}
       link: '/blog/ai-2025-oct-01-autonomous-revenue-operations-revolution'}},
   {
     id: 'autonomous-revenue-operations-2025'
@@ -83,7 +83,7 @@ export const octoberNewestRevOpsContent: RevOpsContent[] = [
       velocity: '3.2 x',
       roi: '704%',
 export const,
-  octoberNewestRevOpsContent: RevOpsContent[] = [
+  octoberNewestRevOpsContent: RevOpsContent[] = [}
   {/* TODO: Fix JSX expression */}
     },
     ct,

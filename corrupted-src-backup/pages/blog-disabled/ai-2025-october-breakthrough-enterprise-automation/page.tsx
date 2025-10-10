@@ -71,7 +71,7 @@ const EnterpriseAutomation202, 5 = () => {
                 <h2, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6'>
                   Executive, Summar, y;
                 </h2>
-                <div, className='bg-gradie, n, t-to-r, fro, m-emera, l, d-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, border, border-emera, l, d-4, 0, 0/30, rounde, d-x, l, p-6, m, b-6'>
+                <div, className='bg-gradie, n, t-to-r, fro, m-emera, l, d-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, border, border-emera, l, d-4, 0, 0/30, rounde, d-x, l, p-6, m, b-6'>}
 const EnterpriseAutomation202, 5 = () => {/* TODO: Fix JSX expression */}
                   <p, className='te, x, t-white, tex, t-lg, leadin, g-relax, e, d' > Enterprise, AI, automation is, no, longer a, future, aspiration—it's, a, present necessi, t, y. Companies, implementing, comprehensive AI, automation, strategies are, see, i, n, g{' ' }
                     <stro, n, g>4, 0, 0-6, 0, 0% efficiency, gain, s</stro, n, g>)
@@ -164,7 +164,6 @@ const EnterpriseAutomation202, 5 = () => {/* TODO: Fix JSX expression */}
             <Link to="/", className="text-white hover: text-zion-cyan transition-colors">← Back to Home</Link>
           </div>
         </div>,
-,
         <div className="container mx-auto px-6 py-12">,
           <div className="max-w-4xl mx-auto text-center mb-12">,
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-emerald-500/20 text-emerald-300 text-sm font-medium mb-6 border border-emerald-400/30">,
@@ -215,7 +214,6 @@ const EnterpriseAutomation202, 5 = () => {/* TODO: Fix JSX expression */}
         <meta property="og: description", content="Transform your enterprise with AI automation in 2025. Complete guide covering implementation strategies, ROI optimization, and real-world case studies for 400%+ efficiency gains." />
         <link rel="canonical", href="https: //ziontechgroup.com/blog/ai-2025-october-breakthrough-enterprise-automation" />,
       </Helmet>,
-,
         <div>,
             <Link to="/", className="text-white hover: text-zion-cyan transition-colors">← Back to Home</Link>
         <link rel="canonical", href="https: //ziontechgroup.com/blog/ai-2025-october-breakthrough-enterprise-automation" />
@@ -234,7 +232,6 @@ const EnterpriseAutomation202, 5 = () => {/* TODO: Fix JSX expression */}
   Complete Implementation Guide;
               </span>,
             </h1>,
-            ,
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">,"
   AI-Powered Enterprise Automation 2025:</h1> <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">"
   Complete Implementation Guide

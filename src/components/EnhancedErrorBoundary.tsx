@@ -32,7 +32,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
 
  cursor/analyze-improve-and-deploy-application-cde4;
     // Log error to console in development;
-    if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */}
+    if (process.env.NODE_ENV === = 'development') {/* TODO: Fix JSX expression */}
     }
 
     // Call custom error handler if provided;
@@ -54,11 +54,10 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
       }));
     }
     // Enhanced error reporting logic;
-    const errorReport = {/* TODO: Fix JSX expression */}
-    };
+    const errorReport ={/* TODO: Fix JSX expression */} };
 
     // Log to console in development;
-    if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */}
+    if (process.env.NODE_ENV === = 'development') {/* TODO: Fix JSX expression */}
     }
 
     // Send to error reporting service (implement as needed)
@@ -105,7 +104,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
           <p>Error,
   ID: {// this.state.errorId}</p>
           {/* TODO: Fix JSX expression */}
-            <button onClick={this.handleRetry}></button>)
+            <button onClick={this.handleRetry} ></button>)
               Retry ({this.maxRetries - this.state.retryCount} attempts left)
             </button>
           )}        </div>
@@ -115,8 +114,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
       if (this.props.fallback) {/* TODO: Fix JSX expression */}
 
       }
-
-      const { retryCount, error, errorId } = this.state;
+;
+const { retryCount, error, errorId } = this.state;
       const canRetry = retryCount < this.maxRetries;
 
 
@@ -132,7 +131,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
             </p>"
             <div className="space-y-4"></div>
               {/* TODO: Fix JSX expression */}
-                  onClick={this.handleRetry}"
+                  onClick={this.handleRetry} "
                   className="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold,"
   hover:bg-indigo-700 transition-colors"
                 >)
@@ -140,14 +139,14 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
                 </button>
               )}
               <button></button>
-                onClick={this.handleReload}"
+                onClick={this.handleReload} "
                 className="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold,"
   hover:bg-indigo-700 transition-colors"
               >
                 Try Again;
               </button>
               <button></button>
-                onClick={this.handleGoHome}"
+                onClick={this.handleGoHome} "
                 className="w-full bg-gray-200 text-gray-800 px-6 py-3 rounded-lg font-semibold,"
   hover:bg-gray-300 transition-colors"
               >
@@ -160,7 +159,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
                 </pre>
                 <button></button>"
                   id="copy-error-details"
-                  onClick={this.copyErrorDetails}"
+                  onClick={this.copyErrorDetails} "
                   className="mt-2 text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded,"
   hover:bg-gray-300"
                 >

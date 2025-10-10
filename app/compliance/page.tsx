@@ -2,32 +2,30 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, FileCheck, Lock, Award } from 'lucide-react';
-
-const CompliancePage: React.FC = () => {
-  const features = [
+const CompliancePage: React.FC = () => {;
+const features = [
     {
       icon: FileCheck,
       title: 'Compliance Management',
-      description: 'Comprehensive compliance management solutions for various industry standards'
+      description: 'Comprehensive compliance management solutions for various industry standards'}
     },
     {
       icon: Lock,
       title: 'Security Compliance',
-      description: 'Ensure your systems meet the highest security and compliance standards'
+      description: 'Ensure your systems meet the highest security and compliance standards'}
     },
     {
       icon: Award,
       title: 'Certification Support',
-      description: 'Get support for achieving and maintaining industry certifications'
+      description: 'Get support for achieving and maintaining industry certifications'}
     },
     {
       icon: Shield,
       title: 'Audit Readiness',
-      description: 'Stay audit-ready with continuous compliance monitoring and reporting'
+      description: 'Stay audit-ready with continuous compliance monitoring and reporting'}
     }
   ];
-
-  const benefits = [
+const benefits = [
     'Advanced compliance technology integration',
     'Real-time compliance monitoring',
     'Enterprise-grade security and compliance',
@@ -61,7 +59,7 @@ const CompliancePage: React.FC = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {features.map((feature, index) => (
+          {features.map((feature, index) => (}
             <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
               <feature.icon className="h-12 w-12 text-purple-400 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -75,7 +73,7 @@ const CompliancePage: React.FC = () => {
             Why Choose Our Compliance Solutions?
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
+            {benefits.map((benefit, index) => (}
               <div key={index} className="flex items-center space-x-3">
                 <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
                 <span className="text-gray-300">{benefit}</span>
@@ -108,3 +106,9 @@ const CompliancePage: React.FC = () => {
 };
 
 export default CompliancePage;
+
+
+
+
+
+</div></div></div></div></div></div>

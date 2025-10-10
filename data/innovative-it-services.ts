@@ -27,7 +27,7 @@ export interface InnovativeITService {id: string;
   variant: string;
   contact_info: unknown;
     mobile: string;
-    email: string;
+    email: string;}
     address: string}
     website: string}
   }
@@ -1007,10 +1007,8 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
   }
 ];
 ;
-;
   }
 ];
-;
     realImplementation: true;
     implementationDetails:,
       'Enterprise-grade zero trust platform with advanced AI, real-time monitoring, and comprehensive security controls.'
@@ -1427,7 +1425,7 @@ export const innovativeITServices: InnovativeITService[] = [;
     name: 'Zero Trust Security Platform';
     tagline: 'Next-generation cybersecurity with zero trust architecture';
     price: '$599';
-    period: '/month',,
+    period: '/month',
   description: 'Comprehensive zero trust security platform that provides continuous verification, micro-segmentation, and advanced threat detection for modern enterprises.';
     features: [
       'Continuous identity verificationMicro-segmentationAdvanced threat detectionBehavioral analyticsAPI securityCloud workload protectionNetwork segmentationPrivileged access management';
@@ -1450,7 +1448,7 @@ export const innovativeITServices: InnovativeITService[] = [;
     roi: 'Average customer sees 400% ROI within 12 months through reduced security incidents and compliance costs.';
     competitors: ['Palo Alto NetworksCrowdStrikeZscalerOktaCyberArk'];
     marketSize: '$45 B cybersecurity market';
-    growthRate: '110% annual growth';
+    growthRate: '110% annual growth';}
     variant: 'cyberpunk'}
     contactInfo: {}
       mobile: '+1 302 464 0950';
@@ -1818,7 +1816,7 @@ export interface InnovativeITService,
   e: '2024 - 01 - 20' customer,
   s: 2500, ratin,
   g: 4.7, review,
-  s: 1250} export interface InnovativeITService {; } ]; ; } ]; realImplementatio,
+  s: 1250} export interface InnovativeITService {; } ]; } ]; realImplementatio,
   n: true,
   implementationDetails:' 'Enterprise-grade zero trust platform with advanced AI, real-time monitoring, and comprehensive security controls.'' launchDat,
   e: '2024-01-01' customer,

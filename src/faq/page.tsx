@@ -3,26 +3,22 @@ import {ChevronDown, ChevronUp, Search, Phone, Mail, MessageSquare} from 'lucide
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
-
-const FAQPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
+const FAQPage: React.FC = () => {;
+const [searchTerm, setSearchTerm] = useState('');
   const [openItems, setOpenItems] = useState<number[]>([]);
-
-  const toggleItem = (index: number) => {
+const toggleItem = (index: number) => {
     setOpenItems(prev => 
       prev.includes(index) 
-        ? prev.filter(i => i !== index)
+        ? prev.filter(i => i !== == index)
         : [...prev, index]
-    );
+    );}
   };
-
-  const faqData = [
+const faqData = [
     {
       category: 'General Questions',
       questions: [
           question: 'What is Zion Tech Group?',
-          answer:         ,
+          answer:         }
 $4},
           question: 'What services do you offer?',
           answer:           ,
@@ -78,13 +74,12 @@ questionquestion: 'Do you offer remote support?',
 questionquestion: 'How quickly do you respond to support requests?',
           answer:   ,
 $4];
-
-  const filteredData = faqData.map(category => ({
+const filteredData = faqData.map(category => ({
     ...category,
     questions: category.questions.filter(q => 
       q.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
       q.answer.toLowerCase().includes(searchTerm.toLowerCase())
-    )
+    )}
   })).filter(category => category.questions.length > 0);
 
   return (
@@ -107,38 +102,35 @@ $4];
               <input
                 type="text"
                 placeholder="Search FAQs..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+                value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
               />
             </div>
 
           {/* FAQ Content */}
           <div className="max-w-4xl mx-auto">
-            {filteredData.map((category, categoryIndex) => (
+            {filteredData.map((category, categoryIndex) => (}
               <div key={categoryIndex} className="mb-12">
                 <h2 className="text-2xl font-bold text-cyan-400 mb-6 neon-text">
                   {category.category}
                 </h2>
                 <div className="space-y-4">
-                  {category.questions.map((item, itemIndex) => {
-                    const globalIndex = categoryIndex * 100 + itemIndex;
+                  {category.questions.map((item, itemIndex) => {;
+const globalIndex = categoryIndex * 100 + itemIndex;
                     const isOpen = openItems.includes(globalIndex);
-                    
+                    }
                       <div key={itemIndex} className="bg-slate-800/50 rounded-lg border border-gray-700/50">
                         <button
-                          onClick={() => toggleItem(globalIndex)}
-                          className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-700/50 transition-colors"
+                          onClick={() => toggleItem(globalIndex)} className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-700/50 transition-colors"
                         >
                           <span className="text-white font-medium pr-4">{item.question}</span>
                           {isOpen ? (
                             <ChevronUp className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                           ) : (
-                            <ChevronDown className="w-5 h-5 text-cyan-400 flex-shrink-0" />
+                            <ChevronDown className="w-5 h-5 text-cyan-400 flex-shrink-0" />}
                           )}
                         </button>
                         {isOpen && (
-                          <div className="px-6 pb-4">
+                          <div className="px-6 pb-4">}
                             <p className="text-gray-300 leading-relaxed">{item.answer}</p>
                   })}
             ))}
@@ -178,21 +170,21 @@ const FAQPage: React.FC = () => {
   return (
     <div>Coming Soon</div>
 
-  );
+  );}
 };
   const [searchTerm, setSearchTerm] = useState('');
   const [openItems, setOpenItems] = useState<number[]>([]);
 const toggleItem = (inde)
   x: number) => {setOpenItems(prev =>})
       prev.includes(index)
-        ? prev.filter(i => i !== index)
+        ? prev.filter(i => i !== == index)
         : [...prev, index]
     );
   };
   const faqData = [
   // TOD,
   O: Add items;
-];;
+];
     {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
@@ -355,8 +347,7 @@ const toggleItem = (inde)
               <input
 type="text" placeholder="Search FAQs..."
 
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}"
+                value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} "
                 className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400,
   focus:outline-none,
   focus:border-cyan-400,
@@ -398,7 +389,7 @@ type="text" placeholder="Search FAQs..."
           "
           <div key={itemIndex} className="bg-slate-800/50 rounded-lg border border-gray-700/50"></div>
                         <button></button>
-                          onClick={() => toggleItem(globalIndex)}"
+                          onClick={() => toggleItem(globalIndex)} "
                           className="w-full px-6 py-4 text-left flex items-center justify-between,"
   hover:bg-slate-700/50 transition-colors"
 // >
@@ -454,3 +445,28 @@ export default FAQPage;
 export default FaqPage;
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>

@@ -2,13 +2,12 @@ import React from 'react';
 import {Share2, TrendingUp, Users, Calendar, BarChart, CheckCircle, ArrowRight, Star, MessageSquare} from 'lucide-react';
 
 import React from 'react';
-
-const AISocialMediaManagerPage: React.FC = () => {
-  const features = [
+const AISocialMediaManagerPage: React.FC = () => {;
+const features = [
     {
       icon: Share2,
       title: 'AI Content Creation',
-      description:     ,
+      description:     }
 $4},
       icon: TrendingUp,
       title: 'Trend Analysis',
@@ -27,23 +26,21 @@ icon$5: MessageSquare,
       description:     ,
 $4}
   ];
-
-  const benefits = [
+const benefits = [
     'Increase engagement by 300%',
     'Save 20+ hours per week',
     'Grow followers by 150%',
     'Boost brand awareness by 200%',
-    'Improve content performance by 250%'
-
-  const platforms = [
+    'Improve content performance by 250%';
+const platforms = [
     { name: 'Facebook', icon: '📘', color: 'text-blue-500' },
     { name: 'Instagram', icon: '📷', color: 'text-pink-500' },
     { name: 'Twitter', icon: '🐦', color: 'text-blue-400' },
     { name: 'LinkedIn', icon: '💼', color: 'text-blue-600' },
     { name: 'TikTok', icon: '🎵', color: 'text-black' },
     { name: 'YouTube', icon: '📺', color: 'text-red-500' }
-
-  const pricing = [
+;
+const pricing = [
       name: 'Starter',
       price: '$29',
       period: '/month',
@@ -55,8 +52,8 @@ $4}
         'Standard analytics',
         'Email support'
       ],
-      popular: false
-      name: 'Professional',
+      popular: false,
+  name: 'Professional',
       price: '$79',
       description: 'Ideal for growing brands',
         '10 social media accounts',
@@ -65,8 +62,8 @@ $4}
         'Detailed analytics',
         'Priority support',
         'Team collaboration'
-      popular: true
-      name: 'Enterprise',
+      popular: true,
+  name: 'Enterprise',
       price: '$199',
       description: 'For large organizations',
         'Unlimited accounts',
@@ -110,11 +107,11 @@ $4}
               Manage all your social media accounts from a single, intelligent dashboard
           
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-            {platforms.map((platform, index) => (
+            {platforms.map((platform, index) => (}
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-slate-800/50 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-3xl">{platform.icon}</span>
-                <h3 className={`font-semibold ${platform.color}`}>
+                <h3 className={`font-semibold ${platform.color} `}>
                   {platform.name}
                 </h3>
             ))}
@@ -125,7 +122,7 @@ $4}
               Leverage cutting-edge AI technology to streamline your social media management
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+            {features.map((feature, index) => (}
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-pink-400/20 hover:border-pink-400/40 transition-all duration-300">
                 <div className="w-12 h-12 bg-pink-500/10 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-pink-400" />
@@ -141,7 +138,7 @@ $4}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-16">
             {benefits.map((benefit, index) => (
                 <div className="w-16 h-16 bg-green-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <CheckCircle className="w-8 h-8 text-green-400" />
+                  <CheckCircle className="w-8 h-8 text-green-400" />}
                 <p className="text-white font-semibold">{benefit}</p>
 
           <div className="bg-gradient-to-r from-pink-500/10 to-purple-500/10 rounded-2xl p-8 text-center">
@@ -157,15 +154,14 @@ $4}
               Choose the plan that fits your social media needs
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
+            {pricing.map((plan, index) => (}
               <div key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border transition-all duration-300 ${
                 plan.popular 
                   ? 'border-pink-400/60 ring-2 ring-pink-400/20' 
-                  : 'border-slate-700/50'
-              }`}>
+                  : 'border-slate-700/50'} }`}>
                 {plan.popular && (
                   <div className="bg-pink-500 text-slate-900 text-sm font-semibold px-3 py-1 rounded-full text-center mb-4">
-                    Most Popular
+                    Most Popular}
                 )}
                 <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                 <p className="text-gray-300 mb-6">{plan.description}</p>
@@ -173,7 +169,7 @@ $4}
                   <span className="text-4xl font-bold text-white">{plan.price}</span>
                   <span className="text-gray-400">{plan.period}</span>
                 <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map((feature, featureIndex) => (}
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       {feature}
@@ -181,8 +177,7 @@ $4}
                 </ul>
                 <button className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 ${
                     ? 'bg-gradient-to-r from-pink-500 to-purple-600 text-white hover:from-pink-600 hover:to-purple-700'
-                    : 'border-2 border-slate-600 text-white hover:border-pink-400 hover:text-pink-400'
-                  {plan.popular ? 'Start Free Trial' : 'Get Started'}
+                    : 'border-2 border-slate-600 text-white hover:border-pink-400 hover:text-pink-400'} {plan.popular ? 'Start Free Trial' : 'Get Started'}
 
       {/* CTA Section */}
       <section className="py-16 px-4 bg-gradient-to-r from-pink-500/10 to-purple-500/10">
@@ -200,3 +195,39 @@ import React, { useState, useEffect } from 'react';
 import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
 
 export default AISocialMediaManagerPage;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>

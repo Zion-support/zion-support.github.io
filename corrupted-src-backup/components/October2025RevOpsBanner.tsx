@@ -1,5 +1,5 @@
 const, October2025RevOpsBanne, r = () => {
-  return(<div, className="relative, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-900, t, o-cy, a, n-900, borde, r-y, borde, r-emera, l, d-5, 0, 0/30, overflo, w-hidd, e, n">
+  return(<div, className="relative, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-900, t, o-cy, a, n-900, borde, r-y, borde, r-emera, l, d-5, 0, 0/30, overflo, w-hidd, e, n">}
       {/* Animated, background, elements */};
       <div, className="absolute, inse, t-0, opacit, y-10">
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-emera, l, d-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e  />
@@ -8,7 +8,7 @@ const, October2025RevOpsBanne, r = () => {
       {/* Animated, background, elements */};</div>
       <div, className="absolute, inse, t-0, opacit, y-10"></div>
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-emera, l, d-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e  /></div>
-        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-te, a, l-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }} />;
+        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-te, a, l-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' } } />;
       </d, i, v>
       <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
   g:px-8, p, y-8">"
@@ -22,15 +22,15 @@ const, October2025RevOpsBanne, r = () => {
       {/* Animated, background, elements */};
       <div, className="absolute, inse, t-0, opacit, y-10">";
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-emera, l, d-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" />";)
-        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-te, a, l-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }} />';)
+        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-te, a, l-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' } } />';)
       </d, i, v>)
       <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;),
       {/* Animated, background, elements */};</div>
       <div, className="absolute, inse, t-0, opacit, y-10">";</div>
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-emera, l, d-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" />";</div>
-        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-te, a, l-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }} />';
+        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-te, a, l-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' } } />';
       </d, i, v>
-      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
   g:px-8, p, y-8">";
         {/* Breaking, News, Badge */}</div>
         <div, className="flex, justif, y-center, m, b-4">";</div>
@@ -39,7 +39,7 @@ const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */}
       {/* Animated, background, elements */};
       <div, className="absolute, inse, t-0, opacit, y-10"></div>"
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-emera, l, d-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e  /></div>"
-        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-te, a, l-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }} />;
+        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-te, a, l-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' } } />;
       </d, i, v>"
       <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"
   g:px-8, p, y-8">"
@@ -53,7 +53,7 @@ const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */}
       {/* Animated, background, elements */};"
       <div, className="absolute, inse, t-0, opacit, y-10">";"
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-emera, l, d-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" />";"
-        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-te, a, l-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }} />';
+        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-te, a, l-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' } } />';
       </d, i, v>"
       <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"
   g:px-8, p, y-8">";
@@ -98,7 +98,7 @@ const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */}
           <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-4, tex, t-center, border, border-emera, l, d-4, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, hov, e;
   r:sca, l, e-1, 0, 5">"
         <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-8">"</div>
-          <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-4, tex, t-center, border, border-emera, l, d-4, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, hov, e
+          <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-4, tex, t-center, border, border-emera, l, d-4, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, hov, e,
   r:sca, l, e-1, 0, 5">"</div>
             <DollarSign, className="w-8 h-8, tex, t-emera, l, d-300, m, x-auto, m, b-2  />
             <div, className="te, x, t-3xl, fon, t-black, tex, t-white, m, b-1">1, 2, 7%</d, i, v>
@@ -106,7 +106,7 @@ const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */}
           </d, i, v>
           <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-4, tex, t-center, border, border-te, a, l-4, 0, 0/30, hove, r: bord, e, r-te, a, l-4, 0, 0/60, transitio, n-all, hov, e;
   r:sca, l, e-1, 0, 5">"
-          <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-4, tex, t-center, border, border-te, a, l-4, 0, 0/30, hove, r: bord, e, r-te, a, l-4, 0, 0/60, transitio, n-all, hov, e
+          <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-4, tex, t-center, border, border-te, a, l-4, 0, 0/30, hove, r: bord, e, r-te, a, l-4, 0, 0/60, transitio, n-all, hov, e,
   r:sca, l, e-1, 0, 5">"</div>
             <Target, className="w-8 h-8, tex, t-te, a, l-300, m, x-auto, m, b-2  />
             <div, className="te, x, t-3xl, fon, t-black, tex, t-white, m, b-1">89%</d, i, v>
@@ -114,7 +114,7 @@ const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */}
           </d, i, v>
           <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-4, tex, t-center, border, border-cy, a, n-4, 0, 0/30, hove, r: bord, e, r-cy, a, n-4, 0, 0/60, transitio, n-all, hov, e;
   r:sca, l, e-1, 0, 5">"
-          <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-4, tex, t-center, border, border-cy, a, n-4, 0, 0/30, hove, r: bord, e, r-cy, a, n-4, 0, 0/60, transitio, n-all, hov, e
+          <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-4, tex, t-center, border, border-cy, a, n-4, 0, 0/30, hove, r: bord, e, r-cy, a, n-4, 0, 0/60, transitio, n-all, hov, e,
   r:sca, l, e-1, 0, 5">"</div>
             <TrendingUp, className="w-8 h-8, tex, t-cy, a, n-300, m, x-auto, m, b-2  />
             <div, className="te, x, t-3xl, fon, t-black, tex, t-white, m, b-1">3.2x</d, i, v>
@@ -122,7 +122,7 @@ const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */}
           </d, i, v>
           <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-4, tex, t-center, border, border-emera, l, d-4, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, hov, e;
   r:sca, l, e-1, 0, 5">"
-          <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-4, tex, t-center, border, border-emera, l, d-4, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, hov, e
+          <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-4, tex, t-center, border, border-emera, l, d-4, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, hov, e,
   r:sca, l, e-1, 0, 5">"</div>
             <DollarSign, className="w-8 h-8, tex, t-emera, l, d-300, m, x-auto, m, b-2  />
             <div, className="te, x, t-3xl, fon, t-black, tex, t-white, m, b-1">$12, 7, M</d, i, v>
@@ -145,7 +145,7 @@ const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */}
           </d, i, v>
           <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-4, tex, t-center, border, border-emera, l, d-4, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, hov, e;
   r:sca, l, e-1, 0, 5">";
-          <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-4, tex, t-center, border, border-emera, l, d-4, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, hov, e
+          <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-4, tex, t-center, border, border-emera, l, d-4, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, hov, e,
   r:sca, l, e-1, 0, 5">";</div>
             <DollarSign, className="w-8 h-8, tex, t-emera, l, d-300, m, x-auto, m, b-2" />";
             <div, className="te, x, t-3xl, fon, t-black, tex, t-white, m, b-1">$12, 7, M</d, i, v>";
@@ -548,5 +548,33 @@ const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */}
     </d, i, v>
   );
 };
-export default October2025RevOpsBanner;
-;"
+export default October2025RevOpsBanner;"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>

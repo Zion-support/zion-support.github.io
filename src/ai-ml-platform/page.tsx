@@ -11,14 +11,13 @@ import { Link } from 'react-router-dom';
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
-const AIMLPlatformPage: React.FC = () => {
-  const features = [
+const AIMLPlatformPage: React.FC = () => {;
+const features = [
     {
       icon: Brain,
       title: 'Complete ML Platform',
       description: 'End-to-end machine learning platform with model development, training, and deployment',
-      benefits: ['Rapid model development', 'Automated training', 'Seamless deployment']
+      benefits: ['Rapid model development', 'Automated training', 'Seamless deployment']}
     },
       icon: TrendingUp,
       title: 'Advanced Analytics',
@@ -34,8 +33,7 @@ const AIMLPlatformPage: React.FC = () => {
       benefits: ['Shared workspaces', 'Version control', 'Knowledge sharing']
     }
   ];
-
-  const pricingPlans = [
+const pricingPlans = [
       name: 'Developer',
       price: '$999',
       period: '/month',
@@ -47,11 +45,11 @@ const AIMLPlatformPage: React.FC = () => {
         'Standard compute',
         'Basic analytics'
       ],
-      popular: false
-      name: 'Team',
+      popular: false,
+  name: 'Team',
       price: '$2,499',
-      description: 'Ideal for development teams',
-  const features = [];
+      description: 'Ideal for development teams',;
+const features = [];
   return (
     {// TODO: Add content;}
 
@@ -96,8 +94,8 @@ const AIMLPlatformPage: React.FC = () => {
         'High-performance compute',
         'Advanced analytics',
         'Team collaboration'
-      popular: true
-      name: 'Enterprise',
+      popular: true,
+  name: 'Enterprise',
       price: '$4,999',
       description: 'For large organizations',
         'Unlimited models',
@@ -116,13 +114,12 @@ const AIMLPlatformPage: React.FC = () => {
         'Custom compute',
         'Custom analytics',
         'White-label options',
-        'API access'
-
-  const stats = [
-  const stats = [
+        'API access';
+const stats = [;
+const stats = [
   // TOD,
   O: Add items;
-];;
+];
 
     { icon: Users, value: '500+', label: 'Data Scientists' },
     { icon: TrendingUp, value: '95%', label: 'Model Accuracy' },
@@ -183,3 +180,13 @@ export default $1;
 export default AiMlPlatformPage;
 
 
+
+
+
+
+
+
+
+
+
+</div></div></div></div></div></div></div></div></div>

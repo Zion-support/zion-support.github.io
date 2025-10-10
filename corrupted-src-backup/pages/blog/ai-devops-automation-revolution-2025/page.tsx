@@ -2,7 +2,7 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
   return(<div, className="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-950, vi, a-purp, l, e-950, t, o-sla, t, e-9, 5, 0">";
   return (
     <div, className="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-950, vi, a-purp, l, e-950, t, o-sla, t, e-9, 5, 0">";</div>
-      <article, className="container, m, x-auto, p, x-6, p, y-16, ma, x-w-4, x, l">";
+      <article, className="container, m, x-auto, p, x-6, p, y-16, ma, x-w-4, x, l">";}
         {/* Head, e, r */}
         <header, className="mb-12">";
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, rounde, d-full, b, g-purp, l, e-5, 0, 0/20, border, border-purp, l, e-5, 0, 0/30, m, b-6">";</div>
@@ -12,7 +12,7 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
           </d, i, v>
           <h1, className="te, x, t-4xl, m, d: te, x, t-5x, l, l;
   g:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-300, vi, a-pi, n, k-300, t, o-bl, u, e-300, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t">"
-          <h1, className="te, x, t-4xl, m, d: te, x, t-5x, l, l
+          <h1, className="te, x, t-4xl, m, d: te, x, t-5x, l, l,
   g:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-300, vi, a-pi, n, k-300, t, o-bl, u, e-300, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t">"</h1>
           <h1, className="te, x, t-4xl, m, d: te, x, t-5xl, l, g:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-300, vi, a-pi, n, k-300, t, o-bl, u, e-300, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t">";
             AI-Powered, DevOps, Automation Revolut, i, o;
@@ -65,7 +65,7 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
               Our, comprehensive, AI DevOps, platform, consists of, five, integrated intelligent, layer, s: </p>),
             <div, className="spa, c, e-y-6">";
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">";
-              Our, comprehensive, AI DevOps, platform, consists of, five, integrated intelligent, laye, r
+              Our, comprehensive, AI DevOps, platform, consists of, five, integrated intelligent, laye, r,
   s: </p>
             <div, className="spa, c, e-y-6"></section>
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10"></div>
@@ -219,7 +219,7 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
   m: </p>,
             <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-4, m, b-6">";
               <div, className="bg-whi, t, e/10, rounde, d-x, l, p-6">";
-              A, leading, financial services, company, with 5, 0, M+ users, transformed, their DevOps, operations, with our, AI, platfor
+              A, leading, financial services, company, with 5, 0, M+ users, transformed, their DevOps, operations, with our, AI, platfor,
   m: </p>
             <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-4, m, b-6">";</section>
               <div, className="bg-whi, t, e/10, rounde, d-x, l, p-6">";</div>
@@ -470,9 +470,9 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
             <div, className="flex, fle, x-co, l, s;
   m: fl, e, x-row, ga, p-4">"
               <a, titl, e="Internal, lin, k" hr, e, f="/conta, c, t" classNa, m, e="inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-pi, n, k-600, hove, r: fr, o, m-purp, l, e-700, hove, r:to-pi, n, k-700, tex, t-white, fon, t-semibold, rounde, d-xl, transitio, n-all, transform, hove;
-            <div, className="flex, fle, x-co, l, s
+            <div, className="flex, fle, x-co, l, s,
   m: fl, e, x-row, ga, p-4">"</section>
-              <a, titl, e="Internal, lin, k" hr, e, f="/conta, c, t" classNa, m, e="inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-pi, n, k-600, hove, r: fr, o, m-purp, l, e-700, hove, r:to-pi, n, k-700, tex, t-white, fon, t-semibold, rounde, d-xl, transitio, n-all, transform, hove
+              <a, titl, e="Internal, lin, k" hr, e, f="/conta, c, t" classNa, m, e="inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-pi, n, k-600, hove, r: fr, o, m-purp, l, e-700, hove, r:to-pi, n, k-700, tex, t-white, fon, t-semibold, rounde, d-xl, transitio, n-all, transform, hove,
   r:sca, l, e-105, shado, w-xl">"
                 Schedule, Consultatio, n;
               </a>
@@ -507,3 +507,11 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
   );
 }
 ;"
+
+
+
+
+
+
+
+</div></div></div></div></div></div></div></div>

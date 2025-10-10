@@ -19,7 +19,7 @@ Transform your AI platform with intelligent scorecards and performance monitorin
 - Intelligent performance scorecards drive 300% ROI improvement;
 - Real-time optimization recommendations reduce costs by 40%
 - Comprehensive ROI tracking enables data-driven decisions;
-- Automated performance tuning increases efficiency by 60%,
+- Automated performance tuning increases efficiency by 60%}
     `},
   {
     id: 'quantum-ai-security-insights'
@@ -41,7 +41,7 @@ Protect your AI systems with next-generation quantum security frameworks.
 - Real-time monitoring provides instant threat response;
     `,
 export const,
-  newInsights: Insight[] = [
+  newInsights: Insight[] = [}
   {/* TODO: Fix JSX expression */}
   },
   {/* TODO: Fix JSX expression */}

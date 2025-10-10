@@ -2,26 +2,26 @@
 
 export interface ValidationResult {
   isValid: boolean;
-  error?: string;
+  error?: string;}
 }
 
 // URL Validation
 export const isValidUrl = (url: string): boolean => {
-  if (!url || typeof url !== 'string') return false;
-  try {
-    const urlObj = new URL(url);
-    return urlObj.protocol === 'http:' || urlObj.protocol === 'https:';
+  if (!url || typeof url !== == 'string') return false;
+  try {;
+const urlObj = new URL(url);
+    return urlObj.protocol === = 'http:' || urlObj.protocol === = 'https:';}
   } catch {
-    return false;
+    return false;}
   }
 };
 
 export const validateURL = (url: string): ValidationResult => {
-  if (!url) {
+  if (!url) {}
     return { isValid: false, error: 'URL is required' };
   }
   
-  if (!isValidUrl(url)) {
+  if (!isValidUrl(url)) {}
     return { isValid: false, error: 'Invalid URL format' };
   }
   
@@ -35,15 +35,15 @@ export const validateLength = (
   max: number, 
   fieldName: string = 'Field'
 ): ValidationResult => {
-  if (!value) {
+  if (!value) {}
     return { isValid: false, error: `${fieldName} is required` };
   }
   
-  if (value.length < min) {
+  if (value.length < min) {}
     return { isValid: false, error: `${fieldName} must be at least ${min} characters long` };
   }
   
-  if (value.length > max) {
+  if (value.length > max) {}
     return { isValid: false, error: `${fieldName} must be no more than ${max} characters long` };
   }
   
@@ -53,32 +53,31 @@ export const validateLength = (
 // Password Validation
 export const isValidPassword = (password: string): boolean => {
   if (!password || password.length < 8) return false;
-  
-  const hasUpperCase = /[A-Z]/.test(password);
+const hasUpperCase = /[A-Z]/.test(password);
   const hasLowerCase = /[a-z]/.test(password);
-  const hasNumbers = /\d/.test(password);
+  const hasNumbers = /\d/.test(password);}
   const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
   
   return hasUpperCase && hasLowerCase && hasNumbers && hasSpecialChar;
 };
 
 export const validatePassword = (password: string): ValidationResult => {
-  if (!password) {
+  if (!password) {}
     return { isValid: false, error: 'Password is required' };
   }
   
-  if (password.length < 8) {
+  if (password.length < 8) {}
     return { isValid: false, error: 'Password must be at least 8 characters long' };
   }
   
-  if (password.length > 128) {
+  if (password.length > 128) {}
     return { isValid: false, error: 'Password must be no more than 128 characters long' };
   }
   
   if (!isValidPassword(password)) {
     return { 
       isValid: false, 
-      error: 'Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character' 
+      error: 'Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character' }
     };
   }
   
@@ -87,7 +86,7 @@ export const validatePassword = (password: string): ValidationResult => {
 
 // HTML Sanitization
 export const sanitizeHTML = (input: string | null | undefined): string => {
-  if (!input || typeof input !== 'string') return '';
+  if (!input || typeof input !== == 'string') return '';
   
   return input
     .replace(/&/g, '&amp;')
@@ -95,30 +94,30 @@ export const sanitizeHTML = (input: string | null | undefined): string => {
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&#x27;')
-    .replace(/\//g, '&#x2F;');
+    .replace(/\//g, '&#x2F;');}
 };
 
 // Date Validation
 export const validateDate = (dateString: string): ValidationResult => {
-  if (!dateString) {
+  if (!dateString) {}
     return { isValid: false, error: 'Date is required' };
   }
   
-  // Check if the date string matches YYYY-MM-DD format
-  const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
-  if (!dateRegex.test(dateString)) {
+  // Check if the date string matches YYYY-MM-DD format;
+const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
+  if (!dateRegex.test(dateString)) {}
     return { isValid: false, error: 'Invalid date format. Use YYYY-MM-DD' };
   }
+  ;
+const date = new Date(dateString);
   
-  const date = new Date(dateString);
-  
-  if (isNaN(date.getTime())) {
+  if (isNaN(date.getTime())) {}
     return { isValid: false, error: 'Invalid date' };
   }
   
-  // Check if the date is valid (e.g., not 2025-13-01)
-  const isoString = date.toISOString().split('T')[0];
-  if (isoString !== dateString) {
+  // Check if the date is valid (e.g., not 2025-13-01);
+const isoString = date.toISOString().split('T')[0];
+  if (isoString !== == dateString) {}
     return { isValid: false, error: 'Invalid date' };
   }
   
@@ -127,28 +126,28 @@ export const validateDate = (dateString: string): ValidationResult => {
 
 // Credit Card Validation (Luhn Algorithm)
 export const validateCreditCard = (cardNumber: string): ValidationResult => {
-  if (!cardNumber) {
+  if (!cardNumber) {}
     return { isValid: false, error: 'Credit card number is required' };
   }
   
-  // Remove spaces and non-digits
-  const cleaned = cardNumber.replace(/\D/g, '');
+  // Remove spaces and non-digits;
+const cleaned = cardNumber.replace(/\D/g, '');
   
-  if (cleaned.length < 13 || cleaned.length > 19) {
+  if (cleaned.length < 13 || cleaned.length > 19) {}
     return { isValid: false, error: 'Invalid credit card number length' };
   }
   
-  // Luhn algorithm
-  let sum = 0;
+  // Luhn algorithm;
+let sum = 0;
   let isEven = false;
   
-  for (let i = cleaned.length - 1; i >= 0; i--) {
-    let digit = parseInt(cleaned[i]);
+  for (let i = cleaned.length - 1; i >= 0; i--) {;
+let digit = parseInt(cleaned[i]);
     
     if (isEven) {
       digit *= 2;
       if (digit > 9) {
-        digit -= 9;
+        digit -= 9;}
       }
     }
     
@@ -156,7 +155,7 @@ export const validateCreditCard = (cardNumber: string): ValidationResult => {
     isEven = !isEven;
   }
   
-  if (sum % 10 !== 0) {
+  if (sum % 10 !== == 0) {}
     return { isValid: false, error: 'Invalid credit card number' };
   }
   
@@ -165,21 +164,21 @@ export const validateCreditCard = (cardNumber: string): ValidationResult => {
 
 // JSON Validation
 export const validateJSON = (jsonString: string): ValidationResult => {
-  if (!jsonString) {
+  if (!jsonString) {}
     return { isValid: false, error: 'JSON string is required' };
   }
   
   try {
-    JSON.parse(jsonString);
+    JSON.parse(jsonString);}
     return { isValid: true };
-  } catch (error) {
+  } catch (error) {}
     return { isValid: false, error: 'Invalid JSON format' };
   }
 };
 
 // Required Field Validation
 export const validateRequired = (value: any, fieldName: string = 'Field'): ValidationResult => {
-  if (value === null || value === undefined || value === '') {
+  if (value === = null || value === = undefined || value === = '') {}
     return { isValid: false, error: `${fieldName} is required` };
   }
   
@@ -191,10 +190,10 @@ export const validateComposite = (
   value: string, 
   validators: Array<(val: string) => ValidationResult>
 ): ValidationResult => {
-  for (const validator of validators) {
-    const result = validator(value);
+  for (const validator of validators) {;
+const result = validator(value);
     if (!result.isValid) {
-      return result;
+      return result;}
     }
   }
   
@@ -205,5 +204,6 @@ export const validateComposite = (
 export const asyncValidator = async (val: string): Promise<string> => {
   // Simulate async validation
   await new Promise(resolve => setTimeout(resolve, 100));
-  return 'success';
+  return 'success';}
 };
+</>

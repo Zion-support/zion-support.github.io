@@ -1,5 +1,7 @@
 'use client';
 
+import React from 'react';
+
 /**
  * Advanced Performance Monitoring Utility
  * Tracks Core Web Vitals and custom metrics
@@ -32,69 +34,39 @@ class PerformanceMonitor {
 
   private setupWebVitals(): void {
     // First Contentful Paint
-    this.observePaint('first-contentful-paint', 'fcp');
-    
-    // Largest Contentful Paint
-    this.observeLCP();
-    
-    // First Input Delay
-    this.observeFID();
-    
-    // Cumulative Layout Shift
-    this.observeCLS();
-  }
-
-  private observePaint(name: string, metric: keyof PerformanceMetrics): void {
-    try {
-      const observer = new PerformanceObserver((list) => {
+    if ('PerformanceObserver' in window) {
+      const fcpObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        const entry = entries[entries.length - 1];
-        if (entry) {
-          (this._metrics as any)[metric] = entry.startTime;
+        const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
+        if (fcpEntry) {
+          this._metrics.fcp = fcpEntry.startTime;
         }
       });
-      observer.observe({ entryTypes: ['paint'] });
-      this.observers.push(observer);
-    } catch (error) {
-      console.warn(`Failed to observe ${name}:`, error);
-    }
-  }
+      fcpObserver.observe({ entryTypes: ['paint'] });
+      this.observers.push(fcpObserver);
 
-  private observeLCP(): void {
-    try {
-      const observer = new PerformanceObserver((list) => {
+      // Largest Contentful Paint
+      const lcpObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1];
-        if (lastEntry) {
-          this._metrics.lcp = lastEntry.startTime;
-        }
+        this._metrics.lcp = lastEntry.startTime;
       });
-      observer.observe({ entryTypes: ['largest-contentful-paint'] });
-      this.observers.push(observer);
-    } catch (error) {
-      console.warn('Failed to observe LCP:', error);
-    }
-  }
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+      this.observers.push(lcpObserver);
 
-  private observeFID(): void {
-    try {
-      const observer = new PerformanceObserver((list) => {
+      // First Input Delay
+      const fidObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry) => {
+        entries.forEach((entry: any) => {
           this._metrics.fid = entry.processingStart - entry.startTime;
         });
       });
-      observer.observe({ entryTypes: ['first-input'] });
-      this.observers.push(observer);
-    } catch (error) {
-      console.warn('Failed to observe FID:', error);
-    }
-  }
+      fidObserver.observe({ entryTypes: ['first-input'] });
+      this.observers.push(fidObserver);
 
-  private observeCLS(): void {
-    try {
+      // Cumulative Layout Shift
       let clsValue = 0;
-      const observer = new PerformanceObserver((list) => {
+      const clsObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         entries.forEach((entry: any) => {
           if (!entry.hadRecentInput) {
@@ -103,83 +75,81 @@ class PerformanceMonitor {
         });
         this._metrics.cls = clsValue;
       });
-      observer.observe({ entryTypes: ['layout-shift'] });
-      this.observers.push(observer);
-    } catch (error) {
-      console.warn('Failed to observe CLS:', error);
+      clsObserver.observe({ entryTypes: ['layout-shift'] });
+      this.observers.push(clsObserver);
     }
   }
 
   private setupCustomMetrics(): void {
     // Time to First Byte
-    if (performance.timing) {
-      this._metrics.ttfb = performance.timing.responseStart - performance.timing.navigationStart;
+    if ('performance' in window) {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      if (navigation) {
+        this._metrics.ttfb = navigation.responseStart - navigation.requestStart;
+      }
     }
 
-    // Navigation timing
-    if (performance.navigation) {
-      this.addCustomMetric('navigation_type', performance.navigation.type);
+    // Resource timing
+    if ('PerformanceObserver' in window) {
+      const resourceObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
+          if (entry.entryType === 'resource') {
+            const resourceEntry = entry as PerformanceResourceTiming;
+            this._metrics.customMetrics[`resource_${resourceEntry.name}`] = resourceEntry.duration;
+          }
+        });
+      });
+      resourceObserver.observe({ entryTypes: ['resource'] });
+      this.observers.push(resourceObserver);
     }
-  }
-
-  addCustomMetric(name: string, value: number): void {
-    this._metrics.customMetrics[name] = value;
   }
 
   getMetrics(): PerformanceMetrics {
     return { ...this._metrics };
   }
 
+  addCustomMetric(name: string, value: number): void {
+    this._metrics.customMetrics[name] = value;
+  }
+
   reportMetrics(): void {
-    if (typeof window === 'undefined') return;
-    
-    console.log('Performance Metrics:', this._metrics);
-    
-    // Send to analytics service
-    if (typeof gtag !== 'undefined') {
-      gtag('event', 'performance_metrics', {
-        event_category: 'performance',
-        event_label: 'web_vitals',
-        value: Math.round(this._metrics.lcp || 0),
-        custom_parameter_1: this._metrics.fcp,
-        custom_parameter_2: this._metrics.cls,
-        custom_parameter_3: this._metrics.fid
-      });
+    if (typeof window !== 'undefined' && 'console' in window) {
+      console.log('Performance Metrics:', this._metrics);
     }
   }
 
-  cleanup(): void {
+  destroy(): void {
     this.observers.forEach(observer => observer.disconnect());
     this.observers = [];
     this.isInitialized = false;
   }
 }
 
-// Global instance
-const performanceMonitor = new PerformanceMonitor();
+// Export singleton instance
+export const performanceMonitor = new PerformanceMonitor();
 
-// Initialize on load
-if (typeof window !== 'undefined') {
-  window.addEventListener('load', () => {
+// Export hook for React components
+export const usePerformanceMonitor = (): void => {
+  React.useEffect(() => {
+    performanceMonitor.init();
+    return () => performanceMonitor.destroy();
+  }, []);
+};
+
+// Export function to measure Web Vitals
+export const measureWebVitals = (): void => {
+  if (typeof window !== 'undefined') {
     performanceMonitor.init();
     
-    // Report metrics after a delay to ensure all metrics are collected
-    setTimeout(() => {
-      performanceMonitor.reportMetrics();
-    }, 5000);
-  });
-}
-
-export const measureWebVitals = () => {
-  performanceMonitor.init();
+    // Report metrics after page load
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        performanceMonitor.reportMetrics();
+      }, 1000);
+    });
+  }
 };
 
-export const getPerformanceMetrics = () => {
-  return performanceMonitor.getMetrics();
-};
-
-export const addCustomMetric = (name: string, value: number) => {
-  performanceMonitor.addCustomMetric(name, value);
-};
-
+// Export default
 export default performanceMonitor;

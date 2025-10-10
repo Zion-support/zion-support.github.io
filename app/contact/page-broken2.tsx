@@ -10,11 +10,10 @@ import {
   MapPin,
   Clock,
   Send,
-  CheckCircle
+  CheckCircle}
 } from 'lucide-react';
-
-const ContactPage: React.FC = () => {
-  const [formData, setFormData] = useState({
+const ContactPage: React.FC = () => {;
+const [formData, setFormData] = useState({
     name: '',
     email: '',
     company: '',
@@ -22,21 +21,18 @@ phone: '',
     service: '',
     budget: '',
     timeline: '',
-    message: ''
+    message: ''}
   });
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
+const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-
-  const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {}
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: value
+      [name]: value}
     }));
   }, []);
-
-  const handleSubmit = async (e: React.FormEvent) => {
+const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus('idle');
@@ -53,16 +49,15 @@ phone: '',
         service: '',
         budget: '',
         timeline: '',
-        message: ''
+        message: ''}
       });
     } catch (error) {
-      setSubmitStatus('error');
+      setSubmitStatus('error');}
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false);}
     }
   };
-
-  const services = [
+const services = [
     'AI Solutions',
     'Cloud Computing',
     'Mobile App Development',
@@ -73,31 +68,30 @@ phone: '',
     'Consulting',
     'Other'
   ];
-
-  const contactInfo = [
+const contactInfo = [
     {
       icon: Phone,
       title: 'Phone',
       details: '+1 (302) 464-0950',
-      description: 'Mon-Fri 9AM-6PM EST'
+      description: 'Mon-Fri 9AM-6PM EST'}
     },
     {
       icon: Mail,
       title: 'Email',
       details: 'kleber@ziontechgroup.com',
-      description: 'We respond within 24 hours'
+      description: 'We respond within 24 hours'}
     },
     {
       icon: MapPin,
       title: 'Address',
       details: '123 Tech Street, Suite 100\nWilmington, DE 19801',
-      description: 'Visit our office'
+      description: 'Visit our office'}
     },
     {
       icon: Clock,
       title: 'Business Hours',
       details: 'Monday - Friday: 9:00 AM - 6:00 PM\nSaturday: 10:00 AM - 4:00 PM',
-      description: 'Eastern Time'
+      description: 'Eastern Time'}
     }
   ];
 
@@ -132,17 +126,17 @@ phone: '',
             <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl font-bold text-white mb-6">Send us a Message</h2>
               
-              {submitStatus === 'success' && (
+              {submitStatus === = 'success' && (
                 <div className="mb-6 p-4 bg-green-500/20 border border-green-500/50 rounded-lg flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-green-400" />
                   <span className="text-green-400">Message sent successfully! We'll get back to you soon.</span>
-                </div>
+                </div>}
               )}
 
-              {submitStatus === 'error' && (
+              {submitStatus === = 'error' && (
                 <div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-lg flex items-center gap-3">
                   <span className="text-red-400">Failed to send message. Please try again.</span>
-                </div>
+                </div>}
               )}
 
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -156,9 +150,7 @@ phone: '',
                       <input
                         type="text"
                         name="name"
-                        value={formData.name}
-                        onChange={handleInputChange}
-                        required
+                        value={formData.name} onChange={handleInputChange} required
                         className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
                         placeholder="Your full name"
                       />
@@ -174,9 +166,7 @@ phone: '',
                       <input
                         type="email"
                         name="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        required
+                        value={formData.email} onChange={handleInputChange} required
                         className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
                         placeholder="your@email.com"
                       />
@@ -194,9 +184,7 @@ phone: '',
                       <input
                         type="text"
                         name="company"
-                        value={formData.company}
-                        onChange={handleInputChange}
-                        className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
+                        value={formData.company} onChange={handleInputChange} className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
                         placeholder="Your company"
                       />
                     </div>
@@ -211,9 +199,7 @@ phone: '',
                       <input
                         type="tel"
                         name="phone"
-                        value={formData.phone}
-                        onChange={handleInputChange}
-                        className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
+                        value={formData.phone} onChange={handleInputChange} className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
                         placeholder="+1 (555) 123-4567"
                       />
                     </div>
@@ -228,13 +214,11 @@ phone: '',
                     <Globe className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
                     <select
                       name="service"
-                      value={formData.service}
-                      onChange={handleInputChange}
-                      className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white focus:outline-none focus:border-cyan-500"
+                      value={formData.service} onChange={handleInputChange} className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white focus:outline-none focus:border-cyan-500"
                     >
                       <option value="">Select a service</option>
-                      {services.map((service) => (
-                        <option key={service} value={service}>
+                      {services.map((service) => (}
+                        <option key={service} value={service} >
                           {service}
                         </option>
                       ))}
@@ -250,11 +234,8 @@ phone: '',
                     <MessageCircle className="absolute left-3 top-3 w-5 h-5 text-gray-400" />
                     <textarea
                       name="message"
-                      value={formData.message}
-                      onChange={handleInputChange}
-                      required
-                      rows={6}
-                      className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 resize-none"
+                      value={formData.message} onChange={handleInputChange} required
+                      rows={6} className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 resize-none"
                       placeholder="Tell us about your project, goals, or any questions you have..."
                     />
                   </div>
@@ -262,8 +243,7 @@ phone: '',
 
                 <button
                   type="submit"
-                  disabled={isSubmitting}
-                  className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
+                  disabled={isSubmitting} className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
                 >
                   {isSubmitting ? (
                     <>
@@ -274,7 +254,7 @@ phone: '',
                     <>
                       <Send className="w-5 h-5" />
                       <span>Send Message</span>
-                    </>
+                    </>}
                   )}
                 </button>
               </form>
@@ -360,3 +340,23 @@ phone: '',
 };
 
 export default ContactPage;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>
+</>

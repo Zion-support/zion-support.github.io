@@ -1266,7 +1266,6 @@ export interface ResearchDevelopmentService2029 {/* TODO: Fix JSX expression */}
   }
 ];
 ;
-;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',      address: '364 E Main St STE 1008 Middletown DE 19709',
       mobil,
@@ -1289,7 +1288,7 @@ export interface ResearchDevelopmentService2029 {/* TODO: Fix JSX expression */}
 export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] = [;
   {,
     id: 'advanced-research-automation';
-    name: 'Advanced Research Automation',,
+    name: 'Advanced Research Automation',
   description: 'Comprehensive research automation platform that streamlines research workflows, automates data collection, and accelerates discovery across all scientific disciplines.';
     category: ['ResearchAutomationAIData ScienceScientific Computing'];
     price: '$4,999/month';
@@ -1325,7 +1324,7 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
     affiliate: '25% commission for referrals';
     referral: '$15,000 bonus for partnerships';
     partnership: 'Research institution partnerships';
-    funding: 'Series A funding, $60 M valuation';
+    funding: 'Series A funding, $60 M valuation';}
     exit: 'Acquisition by major research platform'}
     contact: {}
       mobile: '+1 302 464 0950';
@@ -1335,7 +1334,7 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
   };
   {;
     id: 'quantum-research-platform';
-    name: 'Quantum Research Platform',,
+    name: 'Quantum Research Platform',
   description: 'Advanced quantum research platform that provides quantum computing resources, quantum algorithms, and research tools for quantum science and technology development.';
     category: ['Quantum ComputingResearchScientific ComputingTechnology Development'];
     price: '$8,999/month';
@@ -1371,7 +1370,7 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
     affiliate: '20% commission for referrals';
     referral: '$25,000 bonus for partnerships';
     partnership: 'Quantum research partnerships';
-    funding: 'Series B funding, $150 M valuation';
+    funding: 'Series B funding, $150 M valuation';}
     exit: 'IPO or quantum acquisition'}
     contact: {}
       mobile: '+1 302 464 0950';
@@ -1381,7 +1380,7 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
   };
   {;
     id: 'ai-research-assistant';
-    name: 'AI Research Assistant',,
+    name: 'AI Research Assistant',
   description: 'Intelligent AI research assistant that helps researchers with literature review, data analysis, hypothesis generation, and research planning across all scientific domains.';
     category: ['AIResearchData AnalysisScientific ComputingKnowledge Management'];
     price: '$2,999/month';
@@ -1417,7 +1416,7 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
     affiliate: '30% commission for referrals';
     referral: '$10,000 bonus for partnerships';
     partnership: 'AI research partnerships';
-    funding: 'Series A funding, $80 M valuation';
+    funding: 'Series A funding, $80 M valuation';}
     exit: 'Acquisition by major research platform'}
     contact: {}
       mobile: '+1 302 464 0950';
@@ -1427,7 +1426,7 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
   };
   {;
     id: 'biotech-research-suite';
-    name: 'Biotech Research Suite',,
+    name: 'Biotech Research Suite',
   description: 'Comprehensive biotech research platform that provides tools for genetic research, drug discovery, clinical trials, and biotechnology development with AI-powered insights.';
     category: ['BiotechnologyResearchHealthcareDrug DiscoveryClinical Trials'];
     price: '$6,999/month';
@@ -1463,7 +1462,7 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
     affiliate: '25% commission for referrals';
     referral: '$20,000 bonus for partnerships';
     partnership: 'Biotech research partnerships';
-    funding: 'Series B funding, $120 M valuation';
+    funding: 'Series B funding, $120 M valuation';}
     exit: 'IPO or biotech acquisition'}
     contact: {}
       mobile: '+1 302 464 0950';
@@ -1981,7 +1980,7 @@ i,
   l: 'kleber@ziontechgroup.com',' websit,
   e: 'http,
   s://ziontechgroup.com', addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709' } } export interface ResearchDevelopmentService2029 {; } } ]; ;' mobil,
+  s: '364 E Main St STE 1008 Middletown DE 19709' } } export interface ResearchDevelopmentService2029 {; } } ];' mobil,
   e: '+1 302 464 0950', emai,
   l: 'kleber@ziontechgroup.com'' websit,
   e: 'http,

@@ -101,7 +101,7 @@
                         <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' /></CheckCircle>
                       <li, className='flex, item, s-start, ga, p-2'></li>
                         <CheckCircle, className='w-5 h-5, tex, t-bl, u, e-400, fle, x-shri, n, k-0, m, t-1' /></CheckCircle>
-                  <div, ke, y = { in, d, e, x }, classNa, m, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-zi, o, n-cy, a, n/20, hove, r: bord, e, r-zi, o, n-cy, a, n/50, transitio, n-a, l, l'
+                  <div, ke, y ={in, d, e, x } , classNa, m, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-zi, o, n-cy, a, n/20, hove, r: bord, e, r-zi, o, n-cy, a, n/50, transitio, n-a, l, l'
                   ></div>
                     <div, className='te, x, t-4xl, m, b-4'>{capabili, t, y.ic, o, n}</div>
                     <h3, classNam, e = 'te, x, t-xl, fon, t-bold, tex, t-white, m, b-3'></h3>
@@ -119,7 +119,7 @@
                       'Order, processin, g: 99.8% automat, i, o, n',
                       'Customer, servic, e: 89% au, t, o-resolut, i, o, n',
                       'Retur, n, s: 95% automa, t, e, d']}].m, a, p((solution, ind, e, x) => (
-                  <div, ke, y = { in, d, e, x }, classNa, m, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-zi, o, n-cy, a, n/30'
+                  <div, ke, y ={in, d, e, x } , classNa, m, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-zi, o, n-cy, a, n/30'
                   ></div>
                     <div, className='flex, fle, x-wrap, item, s-center, justif, y-between, ga, p-4, m, b-4'></div>
                       <h3, className='te, x, t-2xl, fon, t-bold, tex, t-whi, t, e'>
@@ -130,10 +130,10 @@
                           {solution.savin, g, s} annual, saving, s;
                           {solution.savin, g, s} annual, saving, s</div>
                     <ul, classNam, e='spa, c, e-y-2'>
-                      { solution.highligh, t, s.m, a, p((highli, g, h, t, hInd, e, x) = > (
-                        <li, ke, y = { hIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'>
+                      { solution.highligh, t, s.m, a, p((highli, g, h, t, hInd, e, x) = > (}
+                        <li, ke, y ={hIn, d, e, x  } , classNa, m, e = 'flex, item, s-start, ga, p-2'>
                           <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
-                ].m, a, p((solution, ind, e, x) => (<div, ke, y = { in, d, e, x }, classNa, m, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-zi, o, n-cy, a, n/30'
+                ].m, a, p((solution, ind, e, x) => (<div, ke, y ={in, d, e, x } , classNa, m, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-zi, o, n-cy, a, n/30'
                   ></div>
                     <div, className='flex, fle, x-wrap, item, s-center, justif, y-between, ga, p-4, m, b-4'></div>
                       <h3, className='te, x, t-2xl, fon, t-bold, tex, t-whi, t, e'></h3>
@@ -144,7 +144,7 @@
                           {solution.savin, g, s} annual, saving, s;
                     <ul, classNam, e='spa, c, e-y-2'></ul>
                       {/* TODO: Fix JSX expression */}
-                        <li, ke, y = { hIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'></li>
+                        <li, ke, y ={hIn, d, e, x  } , classNa, m, e = 'flex, item, s-start, ga, p-2'></li>
                           <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' /></CheckCircle>
                     na, m, e: 'Enterpr, i, s, e',
                     pri, c, e: '$4, 9,9, 9, 9',
@@ -154,13 +154,13 @@
                       'Custom, AI, models',
                       'Dedicated, tea, m',
                       '99.97% S, L, A']}].m, a, p((p, k, g, ind, e, x) => (
-                  <div, ke, y = { in, d, e, x }, classNa, m, e = { `bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, borde, r ${p, k, g.popul, a, r  ? 'bord, e, r-purp, l, e-5, 0, 0/50, rin, g-2, rin, g-purp, l, e-5, 0, 0/30'  : 'bord, e, r-zi, o, n-cy, a, n/30' }`}
+                  <div, ke, y ={in, d, e, x } , classNa, m, e ={`bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, borde, r ${p, k, g.popul, a, r  ? 'bord, e, r-purp, l, e-5, 0, 0/50, rin, g-2, rin, g-purp, l, e-5, 0, 0/30'  : 'bord, e, r-zi, o, n-cy, a, n/30' } `}
                   >
                     {  p, k, g.popul, a, r  && (</div>
                       <div, className='bg-purp, l, e-5, 0, 0/20, tex, t-purp, l, e-300, tex, t-xs, fon, t-bold, p, x-3, p, y-1, rounde, d-full, inlin, e-block, m, b-4'>
-                        MOST, POPULA, R;
+                        MOST, POPULA, R;}
                   })
-                ].m, a, p((p, k, g, ind, e, x) => (<div, ke, y = { in, d, e, x }, classNa, m, e = { `bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, borde, r ${p, k, g.popul, a, r  ? 'bord, e, r-purp, l, e-5, 0, 0/50, rin, g-2, rin, g-purp, l, e-5, 0, 0/30'  : 'bord, e, r-zi, o, n-cy, a, n/30' }`}
+                ].m, a, p((p, k, g, ind, e, x) => (<div, ke, y ={in, d, e, x } , classNa, m, e ={`bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, borde, r ${p, k, g.popul, a, r  ? 'bord, e, r-purp, l, e-5, 0, 0/50, rin, g-2, rin, g-purp, l, e-5, 0, 0/30'  : 'bord, e, r-zi, o, n-cy, a, n/30' } `}
                   ></div>
                     {/* TODO: Fix JSX expression */})
                       </di, v > )  }
@@ -174,8 +174,8 @@
                       </sp, a, n>
                     </div>
                     <ul, className='spa, c, e-y-3'></ul>
-                      { p, k, g.featur, e, s.m, a, p((feat, u, r, e, fInd, e, x) = > (
-                        <li, ke, y = { fIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'>
+                      { p, k, g.featur, e, s.m, a, p((feat, u, r, e, fInd, e, x) = > (}
+                        <li, ke, y ={fIn, d, e, x  } , classNa, m, e = 'flex, item, s-start, ga, p-2'>
                           <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
                     <div, className='te, x, t-4xl, fon, t-bold, tex, t-gre, e, n-400, m, b-6'></div>
                       {p, k, g.pri, c, e}
@@ -185,7 +185,7 @@
                     </div>
                     <ul, className='spa, c, e-y-3'></ul>
                       {/* TODO: Fix JSX expression */}
-                        <li, ke, y = { fIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'></li>
+                        <li, ke, y ={fIn, d, e, x  } , classNa, m, e = 'flex, item, s-start, ga, p-2'></li>
                           <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' /></CheckCircle>
               <div, classNam, e = 'bg-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/40, vi, a-pi, n, k-9, 0, 0/40, t, o-cy, a, n-9, 0, 0/40, rounde, d-x, l, p-8, borde, r-2, borde, r-purp, l, e-5, 0, 0/50'></div>
                 <div, className='flex, item, s-center, justif, y-between, fle, x-wrap, ga, p-6'></div>
@@ -223,3 +223,5 @@
                       <Zap, className='w-5 h-5' /></Zap>
                   Schedule, Free, Assessment;
                   <Zap, className='w-5 h-5' /></Zap>`
+
+</div>

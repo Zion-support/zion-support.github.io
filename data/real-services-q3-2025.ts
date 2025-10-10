@@ -40,9 +40,9 @@ export interface Q3Service {id: string, name: string;
   competitors?: string[];
   market_size?: string;
   growth_rate?: string;,
-  variant?: ServiceVariant;
+  variant?: ServiceVariant;}
   customers?: number}
-  rating?: number,
+  rating?: number,;
 const contact =
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -70,10 +70,10 @@ export const realServicesQ32025: Q3Service[] = [,
   colo,
   r: string;
   lin,
-  k: string,
+  k: string}
 export interface Q3Service {/* TODO: Fix JSX expression */}
   customers?: number}
-  rating?: number,
+  rating?: number,;
 const contact =
   mobil,
   e: '+1 302 464 0950'
@@ -97,21 +97,19 @@ const contact =
   s: '364 E Main St STE 1008 Middletown DE 19709'
   websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s://ziontechgroup.com';
 const contact =
   mobile: '+1 302 464 0950'
   address: '364 E Main St STE 1008 Middletown DE 19709'
-// const contact = {;
+// const contact ={;
   mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup && ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709'}
+  email: 'kleber@ziontechgroup && ziontechgroup.com'} address: '364 E Main St STE 1008 Middletown DE 19709'}
   website: 'https://ziontechgroup && ziontechgroup.com',
   mobil,
   e: '+1 302 464 0950',
   addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',
-// const contact = {/* TODO: Fix JSX expression */}
-  s: '364 E Main St STE 1008 Middletown DE 19709'}
+// const contact ={/* TODO: Fix JSX expression */} s: '364 E Main St STE 1008 Middletown DE 19709'}
   websit,
   e: 'http,
   s://ziontechgroup && ziontechgroup.com'
@@ -124,7 +122,7 @@ export const realServicesQ32025: Q3Service[] = [,
     name: 'Subscription Analytics & Revenue Optimization'}
   address: '364 E Main St STE 1008 Middletown DE 19709',
 export const realServicesQ32025: Q3Service[] = [,
-  {  reviews?: number;
+  {  reviews?: number;}
 }
 const contact =
   mobile: '+1 302 464 0950'};
@@ -1172,7 +1170,6 @@ export const,
     // @ts-expect-error augment common shape for UI components that expect contactInfo;
   }
 ];
-;
 }
 };
 export const,
@@ -1697,8 +1694,7 @@ i,
   e: 'http,
   s://ziontechgroup.com' const contact = ' mobil,
   e: '+1 302 464 0950', ' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709', const contact = {/* TODO: Fix JSX expression */}
-  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709', const contact ={/* TODO: Fix JSX expression */} s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
   s://ziontechgroup && ziontechgroup.com' } }; export const,
   realServicesQ32025: Q3Service[] = [ } export const,

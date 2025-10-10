@@ -6,17 +6,15 @@ import { BarChart, Target, TrendingUp, Users, Clock, Star } from 'lucide-react';
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
-const AIProjectManagerPage: React.FC = () => {
-  const _features = [
-
-const AiProjectManagerPage: React.FC = () => {
-  const features = [
+const AIProjectManagerPage: React.FC = () => {;
+const _features = [;
+const AiProjectManagerPage: React.FC = () => {;
+const features = [
     {
       icon: BarChart,
       title: 'AI-Powered Planning',
       description: 'Intelligent project planning with predictive analytics and resource optimization',
-      benefits: ['40% faster planning', '85% accuracy in timelines', 'Smart resource allocation']
+      benefits: ['40% faster planning', '85% accuracy in timelines', 'Smart resource allocation']}
     },
       icon: Target,
       title: 'Smart Task Management',
@@ -32,8 +30,7 @@ const AiProjectManagerPage: React.FC = () => {
       benefits: ['Seamless communication', 'Real-time updates', 'Collaborative planning']
     }
   ];
-
-  const pricingPlans = [
+const pricingPlans = [
       name: 'Starter',
       price: '$99',
       period: '/month',
@@ -45,8 +42,8 @@ const AiProjectManagerPage: React.FC = () => {
         'Email support',
         'Basic analytics'
       ],
-      popular: false
-      name: 'Professional',
+      popular: false,
+  name: 'Professional',
       price: '$199',
       description: 'Ideal for growing businesses',
         'Up to 25 projects',
@@ -55,8 +52,8 @@ const AiProjectManagerPage: React.FC = () => {
         'Priority support',
         'Advanced analytics',
         'Custom integrations'
-      popular: true
-      name: 'Enterprise',
+      popular: true,
+  name: 'Enterprise',
       price: '$399',
       description: 'For large organizations',
         'Unlimited projects',
@@ -65,9 +62,8 @@ const AiProjectManagerPage: React.FC = () => {
         '24/7 support',
         'Custom analytics',
         'White-label options',
-        'API access'
-
-  const stats = [
+        'API access';
+const stats = [
     { icon: Users, value: '500+', label: 'Active Teams' },
     { icon: TrendingUp, value: '40%', label: 'Productivity Increase' },
     { icon: Clock, value: '70%', label: 'Time Saved' },
@@ -107,3 +103,11 @@ import React, { useState, useEffect } from 'react';
 import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
 
 export default AIProjectManagerPage;
+
+
+
+
+
+
+
+</div></div></div></div></div></div></div>

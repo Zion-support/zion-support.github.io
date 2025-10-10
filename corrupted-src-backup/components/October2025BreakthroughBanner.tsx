@@ -1,5 +1,5 @@
 const, October2025BreakthroughBanne, r = () => {
-  return(<section, className="relative, p, y-20, overflo, w-hidd, e, n">)
+  return(<section, className="relative, p, y-20, overflo, w-hidd, e, n">)}
       {/* Background, Effect, s */};)
       <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/20, vi, a-indi, g, o-9, 0, 0/20, t, o-emera, l, d-9, 0, 0/20  />)
       <div, className="absolute, inse, t-0, b, g-[u, r, l('/gr, i, d.s, v, g')] opaci, t, y-10  />
@@ -78,7 +78,7 @@ const, October2025BreakthroughBanne, r = () => {/* TODO: Fix JSX expression */}
   r:sca, l, e-105, grou, p">"
               <div, className="flex, item, s-center, ga, p-2, m, b-3">
             {/* Articl, e, 1: Sovereign, Agent, s */}</div>
-            <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/60, t, o-purp, l, e-8, 0, 0/6, 0, p-6, rounde, d-xl, border, border-purp, l, e-4, 0, 0/30, hove, r: bord, e, r-purp, l, e-4, 0, 0/60, transitio, n-all, hov, e
+            <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/60, t, o-purp, l, e-8, 0, 0/6, 0, p-6, rounde, d-xl, border, border-purp, l, e-4, 0, 0/30, hove, r: bord, e, r-purp, l, e-4, 0, 0/60, transitio, n-all, hov, e,
   r:sca, l, e-105, grou, p">"</div>
               <div, className="flex, item, s-center, ga, p-2, m, b-3"></div>
                 <Brain, className="w-6 h-6, tex, t-purp, l, e-4, 0, 0  />
@@ -86,11 +86,11 @@ const, October2025BreakthroughBanne, r = () => {/* TODO: Fix JSX expression */}
               </d, i, v>
               <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-purp, l, e-300, transitio, n-colo, r, s">"</h3>
           <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">";
-            {/* Artic, l, e;
+            {/* Artic, l, e;}
   1: Sovereign, Agent, s */}
             <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/60, t, o-purp, l, e-8, 0, 0/6, 0, p-6, rounde, d-xl, border, border-purp, l, e-4, 0, 0/30, hove, r: bord, e, r-purp, l, e-4, 0, 0/60, transitio, n-all, hove, r:sca, l, e-105, grou, p">";
               <div, className="flex, item, s-center, ga, p-2, m, b-3">";
-            {/* Artic, l, e 
+            {/* Artic, l, e }
   1: Sovereign, Agent, s */}</div>
             <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/60, t, o-purp, l, e-8, 0, 0/6, 0, p-6, rounde, d-xl, border, border-purp, l, e-4, 0, 0/30, hove, r: bord, e, r-purp, l, e-4, 0, 0/60, transitio, n-all, hove, r:sca, l, e-105, grou, p">";</div>
               <div, className="flex, item, s-center, ga, p-2, m, b-3">";</div>
@@ -133,7 +133,7 @@ const, October2025BreakthroughBanne, r = () => {/* TODO: Fix JSX expression */}
             <div, className="bg-gradie, n, t-to-br, fro, m-indi, g, o-9, 0, 0/60, t, o-indi, g, o-8, 0, 0/6, 0, p-6, rounde, d-xl, border, border-indi, g, o-4, 0, 0/30, hove, r: bord, e, r-indi, g, o-4, 0, 0/60, transitio, n-all, hov, e;
   r:sca, l, e-105, grou, p">"
               <div, className="flex, item, s-center, ga, p-2, m, b-3">
-            <div, className="bg-gradie, n, t-to-br, fro, m-indi, g, o-9, 0, 0/60, t, o-indi, g, o-8, 0, 0/6, 0, p-6, rounde, d-xl, border, border-indi, g, o-4, 0, 0/30, hove, r: bord, e, r-indi, g, o-4, 0, 0/60, transitio, n-all, hov, e
+            <div, className="bg-gradie, n, t-to-br, fro, m-indi, g, o-9, 0, 0/60, t, o-indi, g, o-8, 0, 0/6, 0, p-6, rounde, d-xl, border, border-indi, g, o-4, 0, 0/30, hove, r: bord, e, r-indi, g, o-4, 0, 0/60, transitio, n-all, hov, e,
   r:sca, l, e-105, grou, p">"</div>
               <div, className="flex, item, s-center, ga, p-2, m, b-3"></div>
                 <Zap, className="w-6 h-6, tex, t-indi, g, o-4, 0, 0  />
@@ -178,7 +178,7 @@ const, October2025BreakthroughBanne, r = () => {/* TODO: Fix JSX expression */}
             <div, className="bg-gradie, n, t-to-br, fro, m-emera, l, d-9, 0, 0/60, t, o-emera, l, d-8, 0, 0/6, 0, p-6, rounde, d-xl, border, border-emera, l, d-4, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, hov, e;
   r:sca, l, e-105, grou, p">"
               <div, className="flex, item, s-center, ga, p-2, m, b-3">
-            <div, className="bg-gradie, n, t-to-br, fro, m-emera, l, d-9, 0, 0/60, t, o-emera, l, d-8, 0, 0/6, 0, p-6, rounde, d-xl, border, border-emera, l, d-4, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, hov, e
+            <div, className="bg-gradie, n, t-to-br, fro, m-emera, l, d-9, 0, 0/60, t, o-emera, l, d-8, 0, 0/6, 0, p-6, rounde, d-xl, border, border-emera, l, d-4, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, hov, e,
   r:sca, l, e-105, grou, p">"</div>
               <div, className="flex, item, s-center, ga, p-2, m, b-3"></div>
                 <Sparkles, className="w-6 h-6, tex, t-emera, l, d-4, 0, 0  />
@@ -278,7 +278,7 @@ const, October2025BreakthroughBanne, r = () => {/* TODO: Fix JSX expression */}
           <div, className="bg-indi, g, o-9, 0, 0/30, backdro, p-bl, u, r-s, m, p-6, rounde, d-xl, border, border-indi, g, o-4, 0, 0/20, tex, t-cent, e, r">";
             <div, className="te, x, t-3x, l, m;
           <div, className="bg-indi, g, o-9, 0, 0/30, backdro, p-bl, u, r-s, m, p-6, rounde, d-xl, border, border-indi, g, o-4, 0, 0/20, tex, t-cent, e, r">";</div>
-            <div, className="te, x, t-3x, l, m
+            <div, className="te, x, t-3x, l, m,
   d: te, x, t-4xl, fon, t-extrabold, tex, t-indi, g, o-400, m, b-2">10,00, 0, x</d, i, v>";
             <div, className="te, x, t-whi, t, e/70, tex, t-sm">Maximum, Efficiency, Gain</d, i, v>";
           </d, i, v>
@@ -289,7 +289,7 @@ const, October2025BreakthroughBanne, r = () => {/* TODO: Fix JSX expression */}
           <div, className="bg-cy, a, n-9, 0, 0/30, backdro, p-bl, u, r-s, m, p-6, rounde, d-xl, border, border-cy, a, n-4, 0, 0/20, tex, t-cent, e, r">";
             <div, className="te, x, t-3x, l, m;
           <div, className="bg-cy, a, n-9, 0, 0/30, backdro, p-bl, u, r-s, m, p-6, rounde, d-xl, border, border-cy, a, n-4, 0, 0/20, tex, t-cent, e, r">";</div>
-            <div, className="te, x, t-3x, l, m
+            <div, className="te, x, t-3x, l, m,
   d: te, x, t-4xl, fon, t-extrabold, tex, t-cy, a, n-400, m, b-2">94%</d, i, v>";
         {/* Stats, Banne, r */}"
         <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4">""
@@ -332,5 +332,23 @@ const, October2025BreakthroughBanne, r = () => {/* TODO: Fix JSX expression */}
     </secti, o, n>
   );
 };
-export default October2025BreakthroughBanner;
-;"
+export default October2025BreakthroughBanner;"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>

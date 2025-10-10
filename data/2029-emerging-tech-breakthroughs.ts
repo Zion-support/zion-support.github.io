@@ -22,7 +22,7 @@ export interface EmergingTechBreakthrough2029 {;
   category: string;
   realImplementation: boolean;
   contactInfo: unknown;
-    mobile: string;
+    mobile: string;}
     email: string}
     address: string}
     lin,"
@@ -86,7 +86,7 @@ export const,
   category: string;
   realImplementation: boolean;
   contactInfo: {,
-    mobile: string;
+    mobile: string;}
     email: string}
     address: string}
   }
@@ -107,7 +107,7 @@ export interface EmergingTechBreakthrough2029 {;
     ],
     link: "/services/2029-emerging-tech-breakthrough",
     category: "Emerging Tech Breakthroughs 2029",
-    realImplementation: true;
+    realImplementation: true;}
     contactInfo: unknown}
       lin,
   k: '/services/2029-emerging-tech-breakthrough'
@@ -187,7 +187,6 @@ export interface EmergingTechBreakthrough2029 {/* TODO: Fix JSX expression */}
     }
   }
 ];
-;
     }
   }
 ];"
@@ -262,7 +261,7 @@ export const,
   taglin,
   e: string;
   pric,
-  e: string,,
+  e: string,
   descriptio,
   n: string;
   feature,
@@ -302,7 +301,7 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",      address: "364 E Main St STE 1008 Middletown DE 19709",
-      mobile: "+1 302 464 0950",
+      mobile: "+1 302 464 0950"}
       email: "kleber@ziontechgroup.com"}
       address: "364 E Main St STE 1008 Middletown DE 19709",
 export interface EmergingTechBreakthrough2029 {/* TODO: Fix JSX expression */}"

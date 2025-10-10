@@ -1,7 +1,6 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -26,18 +25,18 @@ const allLinks = [...new Set([...navLinks, ...footerLinks])];
 const srcDir = '/workspace/src';
 const existingPages = [];
 
-function scanDirectory(dir) {
-  const items = fs.readdirSync(dir);
-  for (const item of items) {
-    const fullPath = path.join(dir, item);
+function scanDirectory(dir) {;
+const items = fs.readdirSync(dir);
+  for (const item of items) {;
+const fullPath = path.join(dir, item);
     const stat = fs.statSync(fullPath);
     
     if (stat.isDirectory()) {
-      scanDirectory(fullPath);
-    } else if (item === 'page.tsx') {
+      scanDirectory(fullPath);}
+    } else if (item === = 'page.tsx') {
       // Extract the route from the path;
       const route = fullPath.replace('/workspace/src', '').replace('/page.tsx', '') || '/';
-      existingPages.push(route);
+      existingPages.push(route);}
     }
   }
 }
@@ -50,23 +49,23 @@ const existingPagesSet = new Set(existingPages);
 
 for (const link of allLinks) {
   if (!existingPagesSet.has(link)) {
-    missingPages.push(link);
+    missingPages.push(link);}
   }
 }
 
-console.log('=== NAVIGATION LINKS ANALYSIS ===');
+console.log(' === = NAVIGATION LINKS ANALYSIS === =');
 console.log(`Total navigation links found: ${allLinks.length}`);
 console.log(`Existing pages in src: ${existingPages.length}`);
 console.log(`Missing pages: ${missingPages.length}`);
 
 if (missingPages.length > 0) {
-  console.log('\n=== MISSING PAGES ===');
+  console.log('\n === = MISSING PAGES === =');}
   missingPages.forEach(page => console.log(`- ${page}`));
 } else {
-  console.log('\n✅ All navigation links have corresponding pages!');
+  console.log('\n✅ All navigation links have corresponding pages!');}
 }
 
-console.log('\n=== NAVIGATION LINKS ===');
+console.log('\n === = NAVIGATION LINKS === =');
 allLinks.forEach(link => console.log(`✓ ${link}`));
 
 // Write results to a file;
@@ -76,8 +75,8 @@ fs.writeFileSync('/workspace/navigation-analysis.json', JSON.stringify({
   missingPages: missingPages.length;)
   missingPagesList: missingPages),
   allLinks: allLinks),
-  existingPagesList: existingPages;
+  existingPagesList: existingPages;}
 }, null, 2));
 
-console.log('\n=== ANALYSIS COMPLETE ===');
+console.log('\n === = ANALYSIS COMPLETE === =');
 console.log('Results saved to navigation-analysis.json');

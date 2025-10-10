@@ -1,5 +1,5 @@
 const, October2025OperationalExcellenceBanne, r = () => {
-  return(<div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-900, t, o-cy, a, n-900, p, y-20, p, x-6, rounde, d-3xl, m, b-12, shado, w-2, x, l">
+  return(<div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-900, t, o-cy, a, n-900, p, y-20, p, x-6, rounde, d-3xl, m, b-12, shado, w-2, x, l">}
       {/* Animated, background, elements */};
       <div, className="absolute, inse, t-0, overflo, w-hidd, e, n">
   return (
@@ -104,7 +104,7 @@ const, October2025OperationalExcellenceBanne, r = () => {/* TODO: Fix JSX expres
           </d, i, v>
           <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-8, 0, 0/40, t, o-bl, u, e-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-bl, u, e-4, 0, 0/30, rounde, d-2x, l, p-6, tex, t-center, hov, e;
   r: sca, l, e-105, transitio, n-transform, shado, w-lg">";
-          <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-8, 0, 0/40, t, o-bl, u, e-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-bl, u, e-4, 0, 0/30, rounde, d-2x, l, p-6, tex, t-center, hov, e
+          <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-8, 0, 0/40, t, o-bl, u, e-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-bl, u, e-4, 0, 0/30, rounde, d-2x, l, p-6, tex, t-center, hov, e,
   r: sca, l, e-105, transitio, n-transform, shado, w-lg">";</div>
             <div, className="te, x, t-5xl, fon, t-extrabold, tex, t-bl, u, e-300, m, b-2">5, 6, 0%</d, i, v>";
             <div, className="te, x, t-bl, u, e-200, fon, t-semibold, tex, t-sm, uppercase, tracking-wi, d, e">Average, RO, I</d, i, v>";
@@ -657,5 +657,17 @@ const, October2025OperationalExcellenceBanne, r = () => {/* TODO: Fix JSX expres
     </d, i, v>
   );
 };
-export default October2025OperationalExcellenceBanner;
-;"
+export default October2025OperationalExcellenceBanner;"
+
+
+
+
+
+
+
+
+
+
+
+
+</div></div></div></div></div></div></div></div></div></div></div></div></div>

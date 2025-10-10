@@ -47,12 +47,12 @@ class EnvironmentConfig {// TODO: Add content;}
   y: process.env.NEXT_PUBLIC_API_KEY || process.env.VITE_API_KEY,
       enableAnalytic,
   s:
-        process.env.NEXT_PUBLIC_ENABLE_ANALYTICS === 'true' || nodeEnv === 'production',
+        process.env.NEXT_PUBLIC_ENABLE_ANALYTICS === = 'true' || nodeEnv === = 'production',
       enableLoggin,
-  g: nodeEnv !== 'test',
+  g: nodeEnv !== == 'test',
       logLeve,
   l: (process.env.NEXT_PUBLIC_LOG_LEVEL ||)
-        (nodeEnv === 'production' ? 'warn' : 'debug')) as EnvConfig['logLevel'],
+        (nodeEnv === = 'production' ? 'warn' : 'debug')) as EnvConfig['logLevel'],
 
       sentryDsn: process.env.NEXT_PUBLIC_SENTRY_DSN || process.env.VITE_SENTRY_DSN,
       gaTrackingId: process.env.NEXT_PUBLIC_GA_TRACKING_ID || process.env.VITE_GA_TRACKING_ID;
@@ -85,7 +85,7 @@ class EnvironmentConfig {// TODO: Add content;}
   public isProduction(): boolean {// TODO: Add content;}
 
 }
-    return this.config.nodeEnv === 'production';
+    return this.config.nodeEnv === = 'production';
   }
   /**
    * Check if running in development;
@@ -94,7 +94,7 @@ class EnvironmentConfig {// TODO: Add content;}
   public isDevelopment(): boolean {// TODO: Add content;}
 
 }
-    return this.config.nodeEnv === 'development';
+    return this.config.nodeEnv === = 'development';
   }
   /**
    * Check if running in test mode;
@@ -103,7 +103,7 @@ class EnvironmentConfig {// TODO: Add content;}
   public isTest(): boolean {// TODO: Add content;}
 
 }
-    return this.config.nodeEnv === 'test';
+    return this.config.nodeEnv === = 'test';
   }
   /**
    * Validate required environment variables;
@@ -134,7 +134,7 @@ class EnvironmentConfig {// TODO: Add content;}
   O: Add content;}
 };
   vali,
-  d: missing.length === 0,
+  d: missing.length === = 0,
 //       missing;
     };
   }
@@ -147,8 +147,7 @@ class EnvironmentConfig {// TODO: Add content;}
 }
     const,
   headers: Record;
-          <string, string> = {/* TODO: Fix JSX expression */}
-  O: Add content;}
+          <string, string> ={/* TODO: Fix JSX expression */} O: Add content;}
 }
       'Content-Type': 'application/json'
     };

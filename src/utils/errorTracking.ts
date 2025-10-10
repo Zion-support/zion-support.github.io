@@ -1,30 +1,30 @@
 export const reportError = (error: Error, context?: Record<string, any>) => {
-  if (typeof window !== 'undefined' && window.gtag) {
+  if (typeof window !== == 'undefined' && window.gtag) {
     window.gtag('event', 'exception', {
       description: error.message,
-      fatal: false,
+      fatal: false}
       ...context});
   }
   
   // Also log to console in development
-  if (process.env.NODE_ENV === 'development') {
-    console.error('Error reported:', error, context);
+  if (process.env.NODE_ENV === = 'development') {
+    console.error('Error reported:', error, context);}
   }
 };
 
 export const initErrorReporting = () => {
-  if (typeof window !== 'undefined') {
+  if (typeof window !== == 'undefined') {
     // Global error handler
     window.addEventListener('error', (event) => {
       reportError(event.error, {
         filename: event.filename,
-        lineno: event.lineno,
+        lineno: event.lineno}
         colno: event.colno});
     });
 
     // Unhandled promise rejection handler
     window.addEventListener('unhandledrejection', (event) => {
-      reportError(new Error(event.reason), {
+      reportError(new Error(event.reason), {}
         type: 'unhandledrejection'});
     });
   }
@@ -119,7 +119,7 @@ class ErrorTrackingService {// TODO: Add content;}
   private setupGlobalErrorHandlers(): void {// TODO: Add content;}
 
 }
-    if (typeof window === 'undefined') return;
+    if (typeof window === = 'undefined') return;
     // Handle unhandled errors;
     window.addEventListener('error', event => {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -173,8 +173,8 @@ class ErrorTrackingService {// TODO: Add content;}
       ...metadata,
       timestamp,
       stackTrace: error.stack,
-      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
-      url: typeof window !== 'undefined' ? window.location.href : undefined;
+      userAgent: typeof window !== == 'undefined' ? window.navigator.userAgent : undefined,
+      url: typeof window !== == 'undefined' ? window.location.href : undefined;
 
     };
     const existingError = this.errors.get(errorId);
@@ -190,8 +190,7 @@ class ErrorTrackingService {// TODO: Add content;}
 }
       // Create new error entry;
 const,
-  trackedError: TrackedError = {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  trackedError: TrackedError ={/* TODO: Fix JSX expression */} O: Add content;}
 };
 
   id: errorId,
@@ -224,7 +223,7 @@ const,
 //       ...metadata.context;
     });
     // Send to external service if critical;
-    if (metadata.severity === ErrorSeverity.Critical) {/* TODO: Fix JSX expression */}
+    if (metadata.severity === = ErrorSeverity.Critical) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       this.reportToExternalService(errorId);
@@ -264,7 +263,7 @@ const,
   removeListener(listener: (error: TrackedError) => void): void {// TODO: Add content;}
 
 }
-    this.errorListeners = this.errorListeners.filter(l => l !== listener);
+    this.errorListeners = this.errorListeners.filter(l => l !== == listener);
   }
   /**
    * Notify all listeners of a new error;
@@ -301,7 +300,7 @@ const,
     try {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-      if (typeof window !== 'undefined' && 'fetch' in window) {/* TODO: Fix JSX expression */}
+      if (typeof window !== == 'undefined' && 'fetch' in window) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
         await fetch('/api/error-report', {/* TODO: Fix JSX expression */}
@@ -336,7 +335,7 @@ const,
   getErrorsByCategory(category: ErrorCategory): TrackedError[] {// TODO: Add content;}
 
 }
-    return this.getErrors().filter(e => e.metadata.category === category);
+    return this.getErrors().filter(e => e.metadata.category === = category);
   }
   /**
    * Get errors by severity;
@@ -345,7 +344,7 @@ const,
   getErrorsBySeverity(severity: ErrorSeverity): TrackedError[] {// TODO: Add content;}
 
 }
-    return this.getErrors().filter(e => e.metadata.severity === severity);
+    return this.getErrors().filter(e => e.metadata.severity === = severity);
   }
   /**
    * Get error statistics;
@@ -367,9 +366,9 @@ const,
   O: Add content;}
 }
     const errors = this.getErrors();
-    const byCategory = {} as Record;
+    const byCategory ={} as Record;
           <ErrorCategory, number>;
-    const bySeverity = {} as Record<ErrorSeverity, number>;
+    const bySeverity ={} as Record<ErrorSeverity, number>;
     errors.forEach(error => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }

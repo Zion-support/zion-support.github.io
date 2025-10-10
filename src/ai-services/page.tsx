@@ -6,15 +6,14 @@ import { Helmet } from 'react-helmet-async';
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
-const AIServicesPage: React.FC = () => {
-  const services = [
+const AIServicesPage: React.FC = () => {;
+const services = [
     {
       title: 'AI Strategy & Consulting',
       description: 'Comprehensive AI strategy development and implementation consulting',
       icon: Brain,
       features: ['AI Readiness Assessment', 'Strategic Planning', 'Implementation Roadmap', 'ROI Analysis'],
-      price:     ,
+      price:     }
 $4},
       title: 'Machine Learning Solutions',
       description: 'Custom machine learning models and algorithms for your business needs',
@@ -33,8 +32,7 @@ titletitle: 'AI Analytics & Insights',
       price:     ,
 $4}
   ];
-
-  const benefits = [
+const benefits = [
     '300% Average ROI Increase',
     '95% Process Automation',
     '50% Cost Reduction',
@@ -75,18 +73,17 @@ import { Helmet } from 'react-helmet-async';
 import { 
   Brain, Zap, Shield, TrendingUp, CheckCircle, ArrowRight, Star, 
   Phone, Mail, MapPin, Clock, Users, Award, Target, BarChart,
-  Cpu, Database, Globe, Lock, Sparkles, Code, Eye, MessageSquare
+  Cpu, Database, Globe, Lock, Sparkles, Code, Eye, MessageSquare}
 } from 'lucide-react';
 
-export default function AIServicesPage() {
-  const [activeTab, setActiveTab] = useState('overview');
+export default function AIServicesPage() {;
+const [activeTab, setActiveTab] = useState('overview');
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    setIsVisible(true);
+    setIsVisible(true);}
   }, []);
-
-  const aiServices = [
+const aiServices = [
     {
       id: 'ai-automation',
       title: 'AI Process Automation',
@@ -99,7 +96,7 @@ export default function AIServicesPage() {
         'API integration capabilities',
         'Performance monitoring & analytics'
       ],
-      pricing: {
+      pricing: {}
         starter: { price: '$2,500', period: '/month', features: ['Up to 10 workflows', 'Basic analytics', 'Email support'] },
         professional: { price: '$7,500', period: '/month', features: ['Unlimited workflows', 'Advanced analytics', 'Priority support', 'Custom integrations'] },
         enterprise: { price: '$15,000', period: '/month', features: ['Everything in Pro', 'Dedicated support', 'Custom development', 'SLA guarantee'] }
@@ -120,7 +117,7 @@ export default function AIServicesPage() {
         'Data visualization tools',
         'Automated reporting'
       ],
-      pricing: {
+      pricing: {}
         starter: { price: '$3,000', period: '/month', features: ['Up to 5 data sources', 'Basic dashboards', 'Standard reports'] },
         professional: { price: '$8,500', period: '/month', features: ['Unlimited data sources', 'Advanced dashboards', 'Custom models', 'API access'] },
         enterprise: { price: '$18,000', period: '/month', features: ['Everything in Pro', 'Real-time processing', 'Dedicated analyst', 'Custom integrations'] }
@@ -141,7 +138,7 @@ export default function AIServicesPage() {
         'Human handoff capabilities',
         'Performance analytics'
       ],
-      pricing: {
+      pricing: {}
         starter: { price: '$1,500', period: '/month', features: ['Up to 1,000 conversations', 'Basic AI responses', 'Email support'] },
         professional: { price: '$4,500', period: '/month', features: ['Up to 10,000 conversations', 'Advanced AI', 'Multi-channel support', 'Analytics dashboard'] },
         enterprise: { price: '$12,000', period: '/month', features: ['Unlimited conversations', 'Custom AI training', 'Dedicated support', 'SLA guarantee'] }
@@ -162,7 +159,7 @@ export default function AIServicesPage() {
         'Brand voice consistency',
         'Content scheduling & publishing'
       ],
-      pricing: {
+      pricing: {}
         starter: { price: '$2,000', period: '/month', features: ['Up to 100 pieces/month', 'Basic AI writing', 'Stock images'] },
         professional: { price: '$6,000', period: '/month', features: ['Up to 1,000 pieces/month', 'Advanced AI', 'Custom images', 'Video generation'] },
         enterprise: { price: '$15,000', period: '/month', features: ['Unlimited content', 'Custom AI models', 'Dedicated team', 'White-label solution'] }
@@ -183,7 +180,7 @@ export default function AIServicesPage() {
         'Compliance monitoring',
         'Security analytics dashboard'
       ],
-      pricing: {
+      pricing: {}
         starter: { price: '$4,000', period: '/month', features: ['Basic threat detection', 'Email security', 'Standard monitoring'] },
         professional: { price: '$10,000', period: '/month', features: ['Advanced threat detection', 'Network security', 'Compliance tools', '24/7 monitoring'] },
         enterprise: { price: '$25,000', period: '/month', features: ['Complete security suite', 'Custom solutions', 'Dedicated team', 'SLA guarantee'] }
@@ -204,7 +201,7 @@ export default function AIServicesPage() {
         'A/B testing framework',
         'Performance monitoring'
       ],
-      pricing: {
+      pricing: {}
         starter: { price: '$3,500', period: '/month', features: ['Basic ML tools', 'Pre-trained models', 'Community support'] },
         professional: { price: '$9,000', period: '/month', features: ['Advanced ML tools', 'Custom training', 'Priority support', 'API access'] },
         enterprise: { price: '$20,000', period: '/month', features: ['Complete platform', 'Dedicated resources', 'Custom development', 'SLA guarantee'] }
@@ -214,8 +211,7 @@ export default function AIServicesPage() {
       popular: false
     }
   ];
-
-  const stats = [
+const stats = [
     { icon: Users, value: '500+', label: 'AI Models Deployed', color: 'text-cyan-400' },
     { icon: TrendingUp, value: '300%', label: 'Average ROI', color: 'text-green-400' },
     { icon: Clock, value: '24/7', label: 'AI Monitoring', color: 'text-blue-400' },
@@ -238,7 +234,7 @@ export default function AIServicesPage() {
         {/* Hero Section */}
         <section className="relative py-20 lg:py-32 overflow-hidden">
           <div className="container mx-auto px-4">
-            <div className={`text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            <div className={`text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'} `}>
               <h1 className="text-5xl lg:text-7xl font-bold mb-6">
                 <span className="holographic-text cyber-text">AI Services</span>
               </h1>
@@ -270,7 +266,7 @@ export default function AIServicesPage() {
         <section className="py-16 bg-gradient-to-r from-slate-800/50 to-slate-900/50">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
+              {stats.map((stat, index) => (}
                 <div key={index} className="text-center">
                   <div className={`w-16 h-16 mx-auto mb-4 ${stat.color} bg-gradient-to-br from-cyan-500/20 to-purple-600/20 rounded-lg flex items-center justify-center`}>
                     <stat.icon className="w-8 h-8" />
@@ -296,8 +292,8 @@ export default function AIServicesPage() {
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {aiServices.map((service, index) => (
-                <div key={service.id} className={`quantum-card p-8 ${service.popular ? 'energy-pulse' : ''}`}>
+              {aiServices.map((service, index) => (}
+                <div key={service.id} className={`quantum-card p-8 ${service.popular ? 'energy-pulse' : ''} `}>
                   <div className="flex items-start justify-between mb-6">
                     <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-lg flex items-center justify-center mb-4`}>
                       <service.icon className="w-8 h-8 text-white" />
@@ -305,7 +301,7 @@ export default function AIServicesPage() {
                     {service.popular && (
                       <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-sm font-bold">
                         Most Popular
-                      </div>
+                      </div>}
                     )}
                   </div>
 
@@ -315,7 +311,7 @@ export default function AIServicesPage() {
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-cyan-400 mb-3">Key Features:</h4>
                     <ul className="space-y-2">
-                      {service.features.map((feature, featureIndex) => (
+                      {service.features.map((feature, featureIndex) => (}
                         <li key={featureIndex} className="flex items-center text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                           {feature}
@@ -327,7 +323,7 @@ export default function AIServicesPage() {
                   <div className="border-t border-gray-700 pt-6">
                     <h4 className="text-lg font-semibold text-cyan-400 mb-4">Pricing:</h4>
                     <div className="space-y-3">
-                      {Object.entries(service.pricing).map(([tier, details]) => (
+                      {Object.entries(service.pricing).map(([tier, details]) => (}
                         <div key={tier} className="flex justify-between items-center p-3 bg-slate-800/50 rounded-lg">
                           <div>
                             <div className="text-white font-semibold capitalize">{tier}</div>
@@ -392,3 +388,23 @@ export default function AIServicesPage() {
     </>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>

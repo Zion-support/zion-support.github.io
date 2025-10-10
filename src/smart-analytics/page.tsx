@@ -3,14 +3,13 @@ import {BarChart, Target, Zap, Brain, Shield, CheckCircle, Star, Phone, Mail, Ma
 import { Link } from 'react-router-dom';
 
 import React from 'react';
-
-const SmartAnalyticsPage: React.FC = () => {
-  const features = [
+const SmartAnalyticsPage: React.FC = () => {;
+const features = [
     {
       icon: BarChart,
       title: 'Real-time Dashboards',
       description: 'Monitor your business performance with live dashboards that update automatically and provide instant insights.',
-      benefit:     ,
+      benefit:     }
 $4},
       icon: Brain,
       title: 'AI-Powered Insights',
@@ -34,8 +33,7 @@ iconicon: Shield,
       benefit:     ,
 $4}
   ];
-
-  const pricingPlans = [
+const pricingPlans = [
       name: 'Starter',
       price: '$299',
       period: '/month',
@@ -47,8 +45,8 @@ $4}
         'Standard reports',
         '1 user account'
       ],
-      popular: false
-      name: 'Professional',
+      popular: false,
+  name: 'Professional',
       price: '$799',
       description: 'Advanced analytics for growing businesses',
         'Unlimited data sources',
@@ -58,8 +56,8 @@ $4}
         'Up to 10 user accounts',
         'API access',
         'Advanced reporting'
-      popular: true
-      name: 'Enterprise',
+      popular: true,
+  name: 'Enterprise',
       price: 'Custom',
       period: '',
       description: 'Full-scale analytics solution for large organizations',
@@ -103,7 +101,7 @@ $4}
             Powerful Analytics Features
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+            {features.map((feature, index) => (}
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
                 <div className="flex items-center mb-4">
                   <feature.icon className="w-8 h-8 text-cyan-400 mr-3" />
@@ -116,16 +114,14 @@ $4}
             Simple, Transparent Pricing
           <div className="grid md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
-              <div
-                key={index}
-                className={`bg-white/10 backdrop-blur-sm rounded-lg p-8 border ${
-                  plan.popular ? 'border-cyan-500' : 'border-gray-600'
-                } relative`}
+              <div}
+                key={index} className={`bg-white/10 backdrop-blur-sm rounded-lg p-8 border ${
+                  plan.popular ? 'border-cyan-500' : 'border-gray-600'} } relative`}
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-cyan-500 text-white px-4 py-1 rounded-full text-sm font-medium">
                       Most Popular
-                    </span>
+                    </span>}
                 )}
                 <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                 <p className="text-gray-300 mb-4">{plan.description}</p>
@@ -133,7 +129,7 @@ $4}
                   <span className="text-4xl font-bold text-white">{plan.price}</span>
                   <span className="text-gray-400">{plan.period}</span>
                 <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map((feature, featureIndex) => (}
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       {feature}
@@ -142,8 +138,7 @@ $4}
                   className={`w-full block text-center py-3 rounded-lg font-semibold transition-colors ${
                     plan.popular
                       ? 'bg-cyan-600 text-white hover:bg-cyan-700'
-                      : 'bg-gray-600 text-white hover:bg-gray-700'
-                  }`}
+                      : 'bg-gray-600 text-white hover:bg-gray-700'} }`}
                   Get Started
 
         {/* CTA Section */}
@@ -152,9 +147,9 @@ $4}
 
 
 import { Link } from 'react-router-dom';
-const SmartAnalyticsPage: React.FC = () => {
-  const features = [];
-  return (
+const SmartAnalyticsPage: React.FC = () => {;
+const features = [];
+  return (}
     {// TODO: Add content;}
 
 };
@@ -176,8 +171,6 @@ const SmartAnalyticsPage: React.FC = () => {
 
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
-
 const PagePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -202,7 +195,7 @@ const PagePage: React.FC = () => {
       title: 'Enterprise Security',
       description: 'Bank-level security with data encryption, access controls, and compliance with industry standards.',
       benefit: '100% data protection'
-
+}
     }
   ];
   const pricingPlans = [
@@ -230,8 +223,7 @@ const PagePage: React.FC = () => {
                       {feature}
                     </li>
                 </ul>
-                  className={`w-full block text-center py-3 rounded-lg font-semibold transition-colors ${}
-  // TOD,
+                  className={`w-full block text-center py-3 rounded-lg font-semibold transition-colors ${} // TOD,
   O: Add content;
 }
 //                     plan.popular;
@@ -289,3 +281,30 @@ const PagePage: React.FC = () => {
 export default SmartAnalyticsPage;
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>

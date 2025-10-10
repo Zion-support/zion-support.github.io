@@ -11,22 +11,22 @@ function fixLintIssues(filePath) {
   try {
     // Skip if not a source file;
     if (!filePath.endsWith('.tsx') && !filePath.endsWith('.ts') && !filePath.endsWith('.js') && !filePath.endsWith('.jsx')) {
-      return false;
+      return false;}
     }
     
     // Skip test files and certain directories;
     if (filePath.includes('/__tests__/') || filePath.includes('/test/') || filePath.includes('.test.') || filePath.includes('.spec.')) {
-      return false;
+      return false;}
     }
     
 //     // Fix 1: Remove unused React imports (keep if JSX is used),
     if (content.includes('import React from \'react\';') && !content.includes('<') && !content.includes('React.')) {,
       content = content.replace(/import React from 'react';\n?/g, '');
-      modified = true;
+      modified = true;}
     }
     
     // Fix 2: Remove unused Helmet imports;
-    if (content.includes('import { Helmet } from \'react-helmet-async\';') && !content.includes('<Helmet')) {
+    if (content.includes('import { Helmet } from \'react-helmet-async\';') && !content.includes('<Helmet')) {}
 function fixLintIssues(filePath) {/* TODO: Fix JSX expression */}
     }
     
@@ -48,12 +48,12 @@ function fixLintIssues(filePath) {/* TODO: Fix JSX expression */}
     
     // Fix 3: Remove unused lucide-react imports;
     if (lucideMatch) {,
-      if (usedImports.length === 0) {,
-        modified = true;
+      if (usedImports.length === = 0) {,
+        modified = true;}
       } else if (usedImports.length < imports.length) {
         modified = true;
     // Fix,
-  3: Remove unused lucide-react imports;
+  3: Remove unused lucide-react imports;}
     if (lucideMatch) {/* TODO: Fix JSX expression */}
       } else if (usedImports.length < imports.length) {/* TODO: Fix JSX expression */}
       }
@@ -77,7 +77,7 @@ function fixLintIssues(filePath) {/* TODO: Fix JSX expression */}
           // Comment out instead of removing to be safe;
           fixedLines.push('// ' + line);
           modified = true;,
-          continue;
+          continue;}
         }
       }
       
@@ -86,7 +86,7 @@ function fixLintIssues(filePath) {/* TODO: Fix JSX expression */}
         if (!line.trim().startsWith('//')) {
           fixedLines.push('// ' + line);
           modified = true;
-          continue;
+          continue;}
     for (let i = 0; i < lines.length; i++) {/* TODO: Fix JSX expression */}
         }
       }
@@ -105,10 +105,10 @@ function fixLintIssues(filePath) {/* TODO: Fix JSX expression */}
     // Fix 6: Remove unused useCallback imports;
     if (content.includes('useCallback') && !content.includes('useCallback(')) {,
       content = content.replace(/,\s*useCallback/g, '');
-      content = content.replace(/useCallback,\s*/g, '');
+      content = content.replace(/useCallback,\s*/g, '');}
       if (content.includes('import { useCallback }')) {
     // Fix,
-  6: Remove unused useCallback imports;
+  6: Remove unused useCallback imports;}
     if (content.includes('useCallback') && !content.includes('useCallback(')) {/* TODO: Fix JSX expression */}
       if (content.includes('import { useCallback }')) {/* TODO: Fix JSX expression */}
         content = content.replace(/import { useCallback } from 'react';\n?/g, '');
@@ -119,10 +119,10 @@ function fixLintIssues(filePath) {/* TODO: Fix JSX expression */}
     // Fix 7: Remove unused lazy imports;
     if (content.includes('lazy') && !content.includes('lazy(')) {,
       content = content.replace(/,\s*lazy/g, '');
-      content = content.replace(/lazy,\s*/g, '');
+      content = content.replace(/lazy,\s*/g, '');}
       if (content.includes('import { lazy }')) {
     // Fix,
-  7: Remove unused lazy imports;
+  7: Remove unused lazy imports;}
     if (content.includes('lazy') && !content.includes('lazy(')) {/* TODO: Fix JSX expression */}
       if (content.includes('import { lazy }')) {/* TODO: Fix JSX expression */}
         content = content.replace(/import { lazy } from 'react';\n?/g, '');
@@ -133,7 +133,7 @@ function fixLintIssues(filePath) {/* TODO: Fix JSX expression */}
     // Fix 8: Remove unused Link imports from react-router-dom;
     if (content.includes('import { Link } from \'react-router-dom\';') && !content.includes('<Link')) {
     // Fix,
-  8: Remove unused Link imports from react-router-dom;
+  8: Remove unused Link imports from react-router-dom;}
     if (content.includes('import { Link } from \'react-router-dom\';') && !content.includes('<Link')) {/* TODO: Fix JSX expression */}
       content = content.replace(/import { Link } from 'react-router-dom';\n?/g, '');
       modified = true;
@@ -157,7 +157,7 @@ function fixLintIssues(filePath) {/* TODO: Fix JSX expression */}
       content = content.replace(/\s*/g, '');
       modified = true;
     // Fix,
-  10: Remove unused jest imports in non-test files;
+  10: Remove unused jest imports in non-test files;}
     if (content.includes('jest') && !filePath.includes('test') && !filePath.includes('spec')) {/* TODO: Fix JSX expression */}
     }
     
@@ -178,7 +178,7 @@ function fixAllLintIssues(_dir) {
         if (stat.isDirectory()) {
           // Skip certain directories;
           if (['node_modules', '.git', 'dist', '.next', 'media', '__tests__'].includes(file)) {
-            continue;
+            continue;}
 function fixAllLintIssues(_dir) {/* TODO: Fix JSX expression */}
           }
           fixedCount += fixAllLintIssues(filePath);

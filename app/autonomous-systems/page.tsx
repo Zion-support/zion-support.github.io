@@ -2,7 +2,6 @@
 
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 const AutonomousSystemsPage: React.FC = () => {
   return (
     <>
@@ -24,7 +23,7 @@ const AutonomousSystemsPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
+  );}
 };
 
 export default AutonomousSystemsPage;

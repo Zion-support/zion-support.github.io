@@ -21,7 +21,7 @@ const BusinessAppsPage: React.FC = () => {
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
             This page is under development. Please check back soon for updates.
           </p>
-        </section>
+        </section>}
         {/* Key Benefits */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">
@@ -54,7 +54,7 @@ const BusinessAppsPage: React.FC = () => {
           <section key={category} className="mb-16"></section>"
             <h3 className="text-2xl font-bold text-white mb-8 text-center neon-text">{category} Applications</h3>
             <div>{businessApps;}
-                .filter(app => app.category === category)
+                .filter(app => app.category === = category)
                 .map((app, index) => ("
 <div className="text-4xl mb-4 text-center">{app.icon}</div>"
                     <h4 className="text-xl font-bold text-white mb-3 text-center">{app.title}</h4>"

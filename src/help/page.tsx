@@ -7,19 +7,16 @@ import { Link } from 'react-router-dom';
 
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
-
-const HelpPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
+const HelpPage: React.FC = () => {;
+const [searchTerm, setSearchTerm] = useState('');
   const [activeCategory, setActiveCategory] = useState('getting-started');
-
-  const categories = [
+const categories = [
     {
       id: 'getting-started',
       name: 'Getting Started',
       icon: BookOpen,
       color: 'text-blue-400',
-      bgColor:     ,
+      bgColor:     }
 $4},
       id: 'troubleshooting',
       name: 'Troubleshooting',
@@ -38,9 +35,7 @@ idid: 'technical',
       bgColor:     ,
 $4}
   ];
-
-  const helpArticles = {
-    'getting-started': [
+const helpArticles ={'getting-started': [
         title: 'How to Get Started with AI Services',
         description: 'Complete guide to setting up your AI services and making the most of our platform',
         category: 'Getting Started',
@@ -94,10 +89,8 @@ titletitle: 'Security Best Practices',
         description: 'Build custom integrations with our platform using webhooks and APIs',
         readTime: '12 min read',
         title: 'Monitoring and Logging',
-        description: 'Set up monitoring and logging for your AI services and applications']
-  };
-
-  const resources = [
+        description: 'Set up monitoring and logging for your AI services and applications']} };
+const resources = [
       title: 'Video Tutorials',
       description: 'Step-by-step video guides for all our services',
       icon: Video,
@@ -111,9 +104,8 @@ titletitle: 'API Reference',
 titletitle: 'Download Center',
       description: 'SDKs, tools, and resources for developers',
       icon: Download,
-      count: '25+ downloads'
-
-  const supportChannels = [
+      count: '25+ downloads';
+const supportChannels = [
       title: 'Live Chat',
       description: 'Get instant help from our support team',
       color: 'text-cyan-400',
@@ -131,9 +123,8 @@ titletitle: 'Phone Support',
 titletitle: 'Community Forum',
       description: 'Connect with other users and share knowledge',
       icon: Users,
-      responseTime: 'Community driven'
-
-  const faqs = [
+      responseTime: 'Community driven';
+const faqs = [
       question: 'How quickly can I get started with your AI services?',
       answer: 'Most of our AI services can be set up within 24-48 hours. We provide comprehensive onboarding support to ensure you\'re up and running quickly.'
       question: 'Do you offer training for our team?',
@@ -143,12 +134,10 @@ questionquestion: 'What kind of support do you provide?',
 questionquestion: 'Can I integrate your services with my existing systems?',
       answer:       ,
 questionquestion: 'Is there a free trial available?',
-      answer: 'Yes, we offer a 14-day free trial for most of our services. This allows you to test our platform and see how it fits your business needs before committing to a paid plan.'
-
-  const getCurrentArticles = () => {
+      answer: 'Yes, we offer a 14-day free trial for most of our services. This allows you to test our platform and see how it fits your business needs before committing to a paid plan.';
+const getCurrentArticles = () => {
     return helpArticles[activeCategory as keyof typeof helpArticles] || [];
-
-  const filteredArticles = getCurrentArticles().filter(article =>
+const filteredArticles = getCurrentArticles().filter(article =>
     article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
     article.description.toLowerCase().includes(searchTerm.toLowerCase())
   );
@@ -157,7 +146,7 @@ questionquestion: 'Is there a free trial available?',
     <>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16 pt-24">
+        <div className="container mx-auto px-4 py-16 pt-24">}
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
@@ -176,21 +165,16 @@ questionquestion: 'Is there a free trial available?',
               <input
                 type="text"
                 placeholder="Search help articles..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-4 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 text-lg"
+                value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="w-full pl-10 pr-4 py-4 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 text-lg"
               />
 
           {/* Categories */}
           <div className="mb-12">
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               {categories.map((category) => (
-                <button
-                  key={category.id}
-                  onClick={() => setActiveCategory(category.id)}
-                  className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${
-                    activeCategory === category.id
-                      ? `${category.bgColor} ${category.color} border-2 border-current`
+                <button}
+                  key={category.id} onClick={() => setActiveCategory(category.id)} className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${
+                    activeCategory === = category.id} ? `${category.bgColor} ${category.color} border-2 border-current`
                       : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border-2 border-transparent'
                   }`}
                 >
@@ -202,14 +186,14 @@ questionquestion: 'Is there a free trial available?',
           {/* Articles */}
           <div className="mb-16">
             <h2 className="text-2xl font-bold text-white mb-8">
-              {categories.find(cat => cat.id === activeCategory)?.name} Articles
+              {categories.find(cat => cat.id === = activeCategory)?.name} Articles
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredArticles.map((article, index) => (
+              {filteredArticles.map((article, index) => (}
                 <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
                   <div className="flex items-start mb-4">
                     <div className={`w-10 h-10 ${article.color.replace('text-', 'bg-').replace('-400', '-500/10')} rounded-lg flex items-center justify-center mr-3`}>
-                      <article.icon className={`w-5 h-5 ${article.color}`} />
+                      <article.icon className={`w-5 h-5 ${article.color} `} />
                     <div className="flex-1">
                       <h3 className="text-lg font-semibold text-white mb-2">{article.title}</h3>
                       <p className="text-gray-300 text-sm mb-3">{article.description}</p>
@@ -217,10 +201,9 @@ questionquestion: 'Is there a free trial available?',
                   <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
                     <span>{article.readTime}</span>
                     <span className={`px-2 py-1 rounded text-xs ${
-                      article.difficulty === 'Beginner' ? 'bg-green-500/20 text-green-400' :
-                      article.difficulty === 'Intermediate' ? 'bg-yellow-500/20 text-yellow-400' :
-                      'bg-red-500/20 text-red-400'
-                    }`}>
+                      article.difficulty === = 'Beginner' ? 'bg-green-500/20 text-green-400' :
+                      article.difficulty === = 'Intermediate' ? 'bg-yellow-500/20 text-yellow-400' :
+                      'bg-red-500/20 text-red-400'} }`}>
                       {article.difficulty}
                     </span>
                   
@@ -232,19 +215,19 @@ questionquestion: 'Is there a free trial available?',
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
               Additional Resources
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {resources.map((resource, index) => (
+              {resources.map((resource, index) => (}
                 <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300 text-center">
                   <div className={`w-16 h-16 ${resource.color.replace('text-', 'bg-').replace('-400', '-500/10')} rounded-full flex items-center justify-center mx-auto mb-4`}>
-                    <resource.icon className={`w-8 h-8 ${resource.color}`} />
+                    <resource.icon className={`w-8 h-8 ${resource.color} `} />
                   <h3 className="text-lg font-semibold text-white mb-2">{resource.title}</h3>
                   <p className="text-gray-300 text-sm mb-3">{resource.description}</p>
                   <div className="text-cyan-400 text-sm font-medium">{resource.count}</div>
 
           {/* Support Channels */}
               Get Support
-              {supportChannels.map((channel, index) => (
+              {supportChannels.map((channel, index) => (}
                   <div className={`w-16 h-16 ${channel.color.replace('text-', 'bg-').replace('-400', '-500/10')} rounded-full flex items-center justify-center mx-auto mb-4`}>
-                    <channel.icon className={`w-8 h-8 ${channel.color}`} />
+                    <channel.icon className={`w-8 h-8 ${channel.color} `} />
                   <h3 className="text-lg font-semibold text-white mb-2">{channel.title}</h3>
                   <p className="text-gray-300 text-sm mb-3">{channel.description}</p>
                   <div className="text-sm text-gray-400 mb-2">
@@ -257,7 +240,7 @@ questionquestion: 'Is there a free trial available?',
               Frequently Asked Questions
             <div className="max-w-4xl mx-auto">
               <div className="space-y-6">
-                {faqs.map((faq, index) => (
+                {faqs.map((faq, index) => (}
                   <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50">
                     <h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3>
                     <p className="text-gray-300">{faq.answer}</p>
@@ -331,8 +314,7 @@ const categories = [
   r: 'bg-purple-500/10'
     }
   ];
-  const helpArticles = {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  const helpArticles ={/* TODO: Fix JSX expression */} O: Add content;}
 }
     'getting-started': [;
   titl,
@@ -414,3 +396,42 @@ export default HelpPage;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>

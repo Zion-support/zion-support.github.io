@@ -64,8 +64,8 @@ export default function BlogPost(): React.JSX.Element {
               <div></div>
                 <h3 className="text-xl font-bold mb-2">Share this article</h3>
                 <div className="flex gap-4"></div>
-                  <a
-                    href={`https://twitter.com/intent/tweet?text=${encodeURIComponent('Edge 2026 Signed Evals')}&url=${encodeURIComponent(window.location.href)}`}
+                  <a}
+                    href={`https://twitter.com/intent/tweet?text=${encodeURIComponent('Edge 2026 Signed Evals')} &url=${encodeURIComponent(window.location.href)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-white bg-opacity-20 hover: bg-opacity-30 px-4 py-2 rounded-lg transition-colors"
@@ -73,7 +73,7 @@ export default function BlogPost(): React.JSX.Element {
                     Twitter;
                   </a>,
                   <a;
-                    href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}`}
+                    href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)} `}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-white bg-opacity-20 hover: bg-opacity-30 px-4 py-2 rounded-lg transition-colors"
@@ -87,7 +87,7 @@ export default function BlogPost(): React.JSX.Element {/* TODO: Fix JSX expressi
                     Twitter;
                   </a>
                   <a></a>
-                    href={/* TODO: Fix JSX expression */}`
+                    href={/* TODO: Fix JSX expression */} `
   s://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}`}"
                     target="_blank""
                     rel="noopener noreferrer""

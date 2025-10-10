@@ -3,9 +3,8 @@ import { Link } from 'react-router-dom';
 import { Users, Award, Brain, Shield, Linkedin, Mail, Github, Twitter } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
-const TeamPage: React.FC = () => {
-  const teamMembers = [
+const TeamPage: React.FC = () => {;
+const teamMembers = [
     {
       name: 'Kleber Santos',
       role: 'CEO & Founder',
@@ -13,7 +12,7 @@ const TeamPage: React.FC = () => {
       image: '/api/placeholder/300/300',
       linkedin: 'https://linkedin.com/in/kleber-santos',
       email: 'kleber@ziontechgroup.com',
-      expertise: ['AI Strategy', 'Leadership', 'Innovation']
+      expertise: ['AI Strategy', 'Leadership', 'Innovation']}
     },
     {
       name: 'Dr. Sarah Chen',
@@ -22,7 +21,7 @@ const TeamPage: React.FC = () => {
       image: '/api/placeholder/300/300',
       linkedin: 'https://linkedin.com/in/sarah-chen-ai',
       email: 'sarah@ziontechgroup.com',
-      expertise: ['Machine Learning', 'Deep Learning', 'Research']
+      expertise: ['Machine Learning', 'Deep Learning', 'Research']}
     },
     {
       name: 'Dr. Emily Watson',
@@ -31,7 +30,7 @@ const TeamPage: React.FC = () => {
       image: '/api/placeholder/300/300',
       linkedin: 'https://linkedin.com/in/emily-watson-data',
       email: 'emily@ziontechgroup.com',
-      expertise: ['Data Science', 'Analytics', 'Statistics']
+      expertise: ['Data Science', 'Analytics', 'Statistics']}
     },
     {
       name: 'Lisa Thompson',
@@ -40,7 +39,7 @@ const TeamPage: React.FC = () => {
       image: '/api/placeholder/300/300',
       linkedin: 'https://linkedin.com/in/lisa-thompson-success',
       email: 'lisa@ziontechgroup.com',
-      expertise: ['Client Relations', 'Project Management', 'Customer Success']
+      expertise: ['Client Relations', 'Project Management', 'Customer Success']}
     },
     {
       name: 'Michael Rodriguez',
@@ -49,7 +48,7 @@ const TeamPage: React.FC = () => {
       image: '/api/placeholder/300/300',
       linkedin: 'https://linkedin.com/in/michael-rodriguez-dev',
       email: 'michael@ziontechgroup.com',
-      expertise: ['Software Engineering', 'Cloud Architecture', 'DevOps']
+      expertise: ['Software Engineering', 'Cloud Architecture', 'DevOps']}
     },
     {
       name: 'Dr. James Park',
@@ -58,37 +57,35 @@ const TeamPage: React.FC = () => {
       image: '/api/placeholder/300/300',
       linkedin: 'https://linkedin.com/in/james-park-security',
       email: 'james@ziontechgroup.com',
-      expertise: ['Cybersecurity', 'Risk Assessment', 'Compliance']
+      expertise: ['Cybersecurity', 'Risk Assessment', 'Compliance']}
     }
   ];
-
-  const stats = [
+const stats = [
     { icon: Users, label: 'Team Members', value: '50+' },
     { icon: Award, label: 'Awards Won', value: '25+' },
     { icon: Brain, label: 'Years Experience', value: '15+' },
     { icon: Shield, label: 'Client Satisfaction', value: '99%' }
   ];
-
-  const values = [
+const values = [
     {
       title: 'Innovation',
       description: 'We constantly push the boundaries of what\'s possible with AI and technology.',
-      icon: Brain
+      icon: Brain}
     },
     {
       title: 'Excellence',
       description: 'We strive for the highest quality in everything we do, from code to customer service.',
-      icon: Award
+      icon: Award}
     },
     {
       title: 'Collaboration',
       description: 'We believe in the power of teamwork and diverse perspectives to solve complex problems.',
-      icon: Users
+      icon: Users}
     },
     {
       title: 'Security',
       description: 'We prioritize the security and privacy of our clients\' data and systems.',
-      icon: Shield
+      icon: Shield}
     }
   ];
 
@@ -112,7 +109,7 @@ const TeamPage: React.FC = () => {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
+            {stats.map((stat, index) => (}
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="w-8 h-8 text-white" />
@@ -137,7 +134,7 @@ const TeamPage: React.FC = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {teamMembers.map((member, index) => (
+            {teamMembers.map((member, index) => (}
               <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
                 <div className="h-64 bg-gradient-to-br from-cyan-100 to-blue-100 flex items-center justify-center">
                   <div className="w-32 h-32 bg-gray-300 rounded-full flex items-center justify-center">
@@ -152,7 +149,7 @@ const TeamPage: React.FC = () => {
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-gray-900 mb-2">Expertise</h4>
                     <div className="flex flex-wrap gap-2">
-                      {member.expertise.map((skill, skillIndex) => (
+                      {member.expertise.map((skill, skillIndex) => (}
                         <span key={skillIndex} className="bg-cyan-100 text-cyan-800 text-xs px-2 py-1 rounded-full">
                           {skill}
                         </span>
@@ -162,15 +159,14 @@ const TeamPage: React.FC = () => {
                   
                   <div className="flex space-x-3">
                     <a
-                      href={member.linkedin}
-                      target="_blank"
+                      href={member.linkedin} target="_blank"
                       rel="noopener noreferrer"
                       className="text-gray-400 hover:text-cyan-600 transition-colors"
                     >
                       <Linkedin className="w-5 h-5" />
                     </a>
                     <a
-                      href={`mailto:${member.email}`}
+                      href={`mailto:${member.email} `}
                       className="text-gray-400 hover:text-cyan-600 transition-colors"
                     >
                       <Mail className="w-5 h-5" />
@@ -195,7 +191,7 @@ const TeamPage: React.FC = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index) => (
+            {values.map((value, index) => (}
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <value.icon className="w-8 h-8 text-white" />
@@ -240,3 +236,10 @@ const TeamPage: React.FC = () => {
 };
 
 export default TeamPage;
+
+
+
+
+
+
+</div></div></div></div></div></div></div>

@@ -22,7 +22,11 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
         <p, className='te, x, t-zi, o, n-sla, t, e-light, m, b-8'>
           Learn, about, autonomous operations, case, study 2026, and, how it, can, benefit your, enterpris, e.
         </p>
-        <div, classNam, e='prose, pros, e-invert, ma, x-w-3, x, l'>
+        <div, classNam, e='prose, pros, e-invert, ma, x-w-3, x, l'>}
 }</div>
 export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: Fix JSX expression */}
 }
+
+
+
+</div></div></div>

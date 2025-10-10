@@ -17,18 +17,17 @@ try {
     'origin/cursor/enhance-app-with-new-services-and-futuristic-design-fee1',
     'origin/cursor/enhance-app-with-new-services-and-futuristic-design-ff2 c'
   ];
-
-  let mergedCount = 0;
+let mergedCount = 0;
   let skippedCount = 0;
 
   for (const branch of branchesToCheck) {
-    try {
+    try {}
       console.log(`\n🔍 Checking branch: ${branch}`);
       
       // Check if branch has unique commits;
       const uniqueCommits = execSync(`git log --oneline main..${branch}`, { encoding: 'utf8' });
       
-      if (!uniqueCommits.trim()) {
+      if (!uniqueCommits.trim()) {}
         console.log(`⏭️  Branch ${branch} has no unique commits, skipping...`);
         skippedCount++;
         continue;
@@ -44,14 +43,14 @@ try {
       console.log(`✅ Successfully merged ${branch}`);
       mergedCount++;
 
-    } catch (error) {
+    } catch (error) {}
       console.log(`⚠️  Could not merge ${branch}: ${error.message}`);
       
       // Try to abort the merge if it failed;
-      try {
+      try {}
         execSync('git merge --abort', { stdio: 'pipe' });
       } catch (abortError) {
-        // Ignore abort errors;
+        // Ignore abort errors;}
       }
     }
   }
@@ -68,5 +67,5 @@ try {
 
 } catch (error) {
   console.error('❌ Error during merge process:', error.message);
-  process.exit(1);
+  process.exit(1);}
 }

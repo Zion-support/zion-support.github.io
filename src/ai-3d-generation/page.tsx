@@ -3,9 +3,8 @@ import { Camera, Play, Download, Share, Star, CheckCircle, Zap, Clock, Users, Aw
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-
-const AI3DGenerationPage: React.FC = () => {
-  const features = [
+const AI3DGenerationPage: React.FC = () => {;
+const features = [
     '3D Model Generation',
     'Animation Creation',
     'Texture Mapping',
@@ -17,8 +16,7 @@ const AI3DGenerationPage: React.FC = () => {
     'Material Library',
     'Scene Composition'
   ];
-
-  const benefits = [
+const benefits = [
     'Professional 3D content',
     'Time savings',
     'No 3D skills needed',
@@ -26,28 +24,27 @@ const AI3DGenerationPage: React.FC = () => {
     'Cost-effective',
     'Scalable production'
   ];
-
-  const pricingPlans = [
+const pricingPlans = [
     {
       name: 'Starter',
       price: '$299',
       period: '/month',
       features: ['5 models/month', 'Basic textures', 'Standard quality', 'Email support'],
-      popular: false
+      popular: false}
     },
     {
       name: 'Professional',
       price: '$499',
       period: '/month',
       features: ['Unlimited models', 'Premium textures', '4K rendering', 'API access', 'Priority support'],
-      popular: true
+      popular: true}
     },
     {
       name: 'Enterprise',
       price: '$999',
       period: '/month',
       features: ['Everything in Pro', 'Custom models', 'White-label', 'Dedicated support', 'Commercial license'],
-      popular: false
+      popular: false}
     }
   ];
 
@@ -56,8 +53,7 @@ const AI3DGenerationPage: React.FC = () => {
       <SEOOptimizer
         title="AI 3D Generation Studio - Create 3D Models & Animations with AI | Zion Tech Group"
         description="Create professional 3D models, animations, and virtual environments with AI 3D Generation Studio. No 3D skills needed, starting at $299/month."
-        keywords={['AI 3D generation', '3D models', '3D animation', 'VR AR content', '3D automation', 'AI 3D']}
-        canonicalUrl="https://ziontechgroup.com/ai-3d-generation"
+        keywords={['AI 3D generation', '3D models', '3D animation', 'VR AR content', '3D automation', 'AI 3D']} canonicalUrl="https://ziontechgroup.com/ai-3d-generation"
       />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -102,7 +98,7 @@ const AI3DGenerationPage: React.FC = () => {
               AI 3D Generation Features
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {features.map((feature, index) => (
+              {features.map((feature, index) => (}
                 <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
@@ -119,7 +115,7 @@ const AI3DGenerationPage: React.FC = () => {
               Why Choose AI 3D Generation Studio?
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
+              {benefits.map((benefit, index) => (}
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Zap className="w-8 h-8 text-white" />
@@ -136,14 +132,14 @@ const AI3DGenerationPage: React.FC = () => {
               Simple, Transparent Pricing
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {pricingPlans.map((plan, index) => (
-                <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
+              {pricingPlans.map((plan, index) => (}
+                <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''} `}>
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <div className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-semibold">
                         Most Popular
                       </div>
-                    </div>
+                    </div>}
                   )}
                   <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
@@ -153,7 +149,7 @@ const AI3DGenerationPage: React.FC = () => {
                     </div>
                   </div>
                   <ul className="space-y-3 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
+                    {plan.features.map((feature, featureIndex) => (}
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                         {feature}
@@ -165,8 +161,7 @@ const AI3DGenerationPage: React.FC = () => {
                     className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
                       plan.popular
                         ? 'cyber-button'
-                        : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
-                    }`}
+                        : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'} }`}
                   >
                     Get Started
                   </a>
@@ -209,3 +204,10 @@ const AI3DGenerationPage: React.FC = () => {
 };
 
 export default AI3DGenerationPage;
+
+
+
+
+
+
+</div></div></div></div></div></div></div>

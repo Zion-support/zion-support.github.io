@@ -25,7 +25,7 @@ function main() {/* TODO: Fix JSX expression */}
       
       if (fallbackResult.error) {
         console.log('❌ Fallback push also failed:', fallbackResult.stderr);
-        return false;
+        return false;}
   try {/* TODO: Fix JSX expression */}
       }
     }
@@ -44,7 +44,7 @@ function main() {/* TODO: Fix JSX expression */}
     } catch (error) {
     console.log('❌ Error pushing changes:', error.message);
     return false;
-    
+    }
   } catch (error) {/* TODO: Fix JSX expression */}
   }
 }

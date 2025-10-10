@@ -31,7 +31,7 @@ export interface Q4Service {id: string;
   variant?: string;
   contact_info?:,
     mobile: string;
-    email: string;
+    email: string;}
     address: string}
     website: string}
 export interface Q4Service {/* TODO: Fix JSX expression */}
@@ -801,7 +801,7 @@ export const real2025 Q4 Additions = [{id: 'ai - governed - rag - platform',
       'SDKs for Node / Python'],
     popular: true;
     icon: '',
-    color: 'from - cyan - 600 to - blue - 700',
+    color: 'from - cyan - 600 to - blue - 700'}
     text_color: 'text - cyan - 300'}
     link: `https://ziontechgroup.com / services/${to_slug ('ai - governed - rag - platform')}`,
     market_position: unknown;
@@ -1326,7 +1326,7 @@ export const real2025Q4Additions = [{id: 'ai-governed-rag-platform',
     ],
     popular: true;
     icon: '',
-    color: 'from-cyan-600 to-blue-700',
+    color: 'from-cyan-600 to-blue-700'}
     textColor: 'text-cyan-300'}
     link: `https://ziontechgroup.com/services/${toSlug('ai-governed-rag-platform')}`,
     targetAudience: 'Platform, data, and compliance teams',
@@ -3623,7 +3623,7 @@ export const real2025 Q4 Additions = [{id: 'ai-governed-rag-platform', name: 'AI
     tagline: 'Enterprise-grade RAG with guardrails, approvals, and evals',
     price: '$699', period: '/month',
     description: 'Production-ready retrieval augmented generation with content pipelines, PII redaction, policy guardrails, evals, and human approvals for high-stakes workflows.',
-    features: [;
+    features: [;}
       'Document sync and chunking pipelinesMetadata and policy guardrailsEvals and drift trackingHuman-in-the-loop approvalsObservability and cost capsSDKs for Node/Python']}
     icon: '',
     color: 'from-emerald-600 to-teal-700',
@@ -4301,7 +4301,7 @@ export const real2025 Q4 Additions = [{id: 'ai-governed-rag-platform',
     ],
     popular: true;
     icon: '',
-    color: 'from-cyan-600 to-blue-700',
+    color: 'from-cyan-600 to-blue-700'}
     textColor: 'text-cyan-300'}
     link: `https://ziontechgroup.com/services/${toSlug('ai-governed-rag-platform')}`,
     marketPosition: unknown;

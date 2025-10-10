@@ -9,14 +9,14 @@ interface SearchResult {
   category: string;
   type: 'page' | 'service' | 'blog' | 'documentation';
   popularity?: number;
-  lastModified?: string;
+  lastModified?: string;}
 }
 
 interface SearchModalProps {
   isOpen: boolean;
-  onClose: () => void;
+  onClose: () => void;}
 }
-
+;
 const mockSearchResults: SearchResult[] = [
   {
     id: '1',
@@ -26,7 +26,7 @@ const mockSearchResults: SearchResult[] = [
     category: 'Micro SAAS',
     type: 'service',
     popularity: 95,
-    lastModified: '2024-01-15'
+    lastModified: '2024-01-15'}
   },
   {
     id: '2',
@@ -36,7 +36,7 @@ const mockSearchResults: SearchResult[] = [
     category: 'AI Services',
     type: 'service',
     popularity: 88,
-    lastModified: '2024-01-10'
+    lastModified: '2024-01-10'}
   },
   {
     id: '3',
@@ -46,7 +46,7 @@ const mockSearchResults: SearchResult[] = [
     category: 'Company',
     type: 'page',
     popularity: 75,
-    lastModified: '2024-01-08'
+    lastModified: '2024-01-08'}
   },
   {
     id: '4',
@@ -56,7 +56,7 @@ const mockSearchResults: SearchResult[] = [
     category: 'AI Services',
     type: 'service',
     popularity: 90,
-    lastModified: '2024-01-14'
+    lastModified: '2024-01-14'}
   },
   {
     id: '5',
@@ -66,63 +66,58 @@ const mockSearchResults: SearchResult[] = [
     category: 'Documentation',
     type: 'documentation',
     popularity: 80,
-    lastModified: '2024-01-05'
+    lastModified: '2024-01-05'}
   }
 ];
-
 const recentSearches = [
   'AI Analytics',
   'Workflow Automation',
   'Healthcare AI'
 ];
-
 const popularSearches = [
   'AI Services',
   'Quantum Computing',
   'Cybersecurity',
   'Data Analytics'
 ];
-
 const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {</SearchModalProps>const</SearchModalProps> [query, setQuery] = useState('');
   const [results, setResults] = useState<SearchResult[]>([]);</SearchResult>const</SearchResult> [isSearching, setIsSearching] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(-1);
   const [showSuggestions, setShowSuggestions] = useState(false);
-  
-  const inputRef = useRef<HTMLInputElement>(null);</HTMLInputElement>const</HTMLInputElement> resultsRef = useRef<HTMLDivElement>(null);</HTMLDivElement>useEffect</HTMLDivElement>(() => {
+const inputRef = useRef<HTMLInputElement>(null);</HTMLInputElement>const</HTMLInputElement> resultsRef = useRef<HTMLDivElement>(null);</HTMLDivElement>useEffect</HTMLDivElement>(() => {
     if (isOpen && inputRef.current) {
-      inputRef.current.focus();
+      inputRef.current.focus();}
     }
   }, [isOpen]);
 
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
+  useEffect(() => {;
+const handleKeyDown = (e: KeyboardEvent) => {
       if (!isOpen) return;
 
-      if (e.key === 'Escape') {
-        onClose();
-      } else if (e.key === 'ArrowDown') {
+      if (e.key === = 'Escape') {
+        onClose();}
+      } else if (e.key === = 'ArrowDown') {
         e.preventDefault();
         setSelectedIndex(prev => 
           prev < results.length - 1 ? prev + 1 : prev
-        );
-      } else if (e.key === 'ArrowUp') {
+        );}
+      } else if (e.key === = 'ArrowUp') {
         e.preventDefault();
-        setSelectedIndex(prev => prev > 0 ? prev - 1 : -1);
-      } else if (e.key === 'Enter' && selectedIndex >= 0) {
+        setSelectedIndex(prev => prev > 0 ? prev - 1 : -1);}
+      } else if (e.key === = 'Enter' && selectedIndex >= 0) {
         e.preventDefault();
-        handleResultClick(results[selectedIndex]);
+        handleResultClick(results[selectedIndex]);}
       }
     };
 
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [isOpen, results, selectedIndex, onClose]);
-
-  const searchResults = async (searchQuery: string) => {
+const searchResults = async (searchQuery: string) => {
     if (!searchQuery.trim()) {
       setResults([]);
       setShowSuggestions(true);
-      return;
+      return;}
     }
 
     setIsSearching(true);
@@ -130,41 +125,36 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
 
     // Simulate API call delay
     await new Promise(resolve => setTimeout(resolve, 300));
-
-    const filteredResults = mockSearchResults.filter(result =>
+const filteredResults = mockSearchResults.filter(result =>
       result.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       result.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       result.category.toLowerCase().includes(searchQuery.toLowerCase())
     );
 
-    // Sort by popularity and relevance
-    const sortedResults = filteredResults.sort((a, b) => {
-      const aRelevance = a.title.toLowerCase().includes(searchQuery.toLowerCase()) ? 2 : 1;
+    // Sort by popularity and relevance;
+const sortedResults = filteredResults.sort((a, b) => {;
+const aRelevance = a.title.toLowerCase().includes(searchQuery.toLowerCase()) ? 2 : 1;
       const bRelevance = b.title.toLowerCase().includes(searchQuery.toLowerCase()) ? 2 : 1;
-      return (b.popularity || 0) * bRelevance - (a.popularity || 0) * aRelevance;
+      return (b.popularity || 0) * bRelevance - (a.popularity || 0) * aRelevance;}
     });
 
     setResults(sortedResults);
     setSelectedIndex(-1);
     setIsSearching(false);
   };
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {</HTMLInputElement>const</HTMLInputElement> value = e.target.value;
+const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {</HTMLInputElement>const</HTMLInputElement> value = e.target.value;
     setQuery(value);
-    searchResults(value);
+    searchResults(value);}
   };
-
-  const handleResultClick = (result: SearchResult) => {
+const handleResultClick = (result: SearchResult) => {
     window.location.href = result.url;
-    onClose();
+    onClose();}
   };
-
-  const handleSuggestionClick = (suggestion: string) => {
+const handleSuggestionClick = (suggestion: string) => {
     setQuery(suggestion);
-    searchResults(suggestion);
+    searchResults(suggestion);}
   };
-
-  const getCategoryIcon = (category: string) => {
+const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'AI Services':
         return '🧠';
@@ -177,11 +167,10 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
       case 'Documentation':
         return '📚';
       default:
-        return '🔍';
+        return '🔍';}
     }
   };
-
-  const getTypeColor = (type: string) => {
+const getTypeColor = (type: string) => {
     switch (type) {
       case 'service':
         return 'text-cyan-400';
@@ -192,7 +181,7 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
       case 'documentation':
         return 'text-green-400';
       default:
-        return 'text-gray-400';
+        return 'text-gray-400';}
     }
   };
 
@@ -203,8 +192,7 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
       {/* Backdrop */}
       <div
         className="fixed inset-0 bg-black/50 backdrop-blur-sm"
-        onClick={onClose}
-      />
+        onClick={onClose} />
       
       {/* Modal */}
       <div className="relative w-full max-w-2xl bg-slate-900/95 backdrop-blur-md rounded-xl shadow-2xl border border-cyan-400/20">
@@ -212,16 +200,12 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
         <div className="flex items-center p-4 border-b border-cyan-400/20">
           <Search className="w-5 h-5 text-cyan-400 mr-3" />
           <input
-            ref={inputRef}
-            type="text"
+            ref={inputRef} type="text"
             placeholder="Search services, pages, documentation..."
-            value={query}
-            onChange={handleInputChange}
-            className="flex-1 bg-transparent text-white placeholder-gray-400 outline-none text-lg"
+            value={query} onChange={handleInputChange} className="flex-1 bg-transparent text-white placeholder-gray-400 outline-none text-lg"
           />
           <button
-            onClick={onClose}
-            className="p-2 text-gray-400 hover:text-white transition-colors"
+            onClick={onClose} className="p-2 text-gray-400 hover:text-white transition-colors"
           >
             <X className="w-5 h-5" />
           </button>
@@ -230,7 +214,7 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
         {/* Content */}
         <div className="max-h-96 overflow-y-auto">
           {showSuggestions && !query && (
-            <div className="p-4 space-y-6">
+            <div className="p-4 space-y-6">}
               {/* Recent Searches */}
               <div>
                 <h3 className="text-sm font-semibold text-gray-400 mb-3 flex items-center">
@@ -239,10 +223,8 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   {recentSearches.map((search, index) => (
-                    <button
-                      key={index}
-                      onClick={() => handleSuggestionClick(search)}
-                      className="px-3 py-1 bg-slate-800/50 text-gray-300 rounded-full text-sm hover:bg-cyan-400/20 hover:text-cyan-400 transition-colors"
+                    <button}
+                      key={index} onClick={() => handleSuggestionClick(search)} className="px-3 py-1 bg-slate-800/50 text-gray-300 rounded-full text-sm hover:bg-cyan-400/20 hover:text-cyan-400 transition-colors"
                     >
                       {search}
                     </button>
@@ -258,10 +240,8 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   {popularSearches.map((search, index) => (
-                    <button
-                      key={index}
-                      onClick={() => handleSuggestionClick(search)}
-                      className="px-3 py-1 bg-slate-800/50 text-gray-300 rounded-full text-sm hover:bg-cyan-400/20 hover:text-cyan-400 transition-colors"
+                    <button}
+                      key={index} onClick={() => handleSuggestionClick(search)} className="px-3 py-1 bg-slate-800/50 text-gray-300 rounded-full text-sm hover:bg-cyan-400/20 hover:text-cyan-400 transition-colors"
                     >
                       {search}
                     </button>
@@ -281,14 +261,11 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
               ) : results.length > 0 ? (
                 <div className="space-y-2">
                   {results.map((result, index) => (
-                    <button
-                      key={result.id}
-                      onClick={() => handleResultClick(result)}
-                      className={`w-full text-left p-3 rounded-lg transition-colors ${
-                        index === selectedIndex
+                    <button}
+                      key={result.id} onClick={() => handleResultClick(result)} className={`w-full text-left p-3 rounded-lg transition-colors ${
+                        index === = selectedIndex
                           ? 'bg-cyan-400/20 text-cyan-400'
-                          : 'hover:bg-slate-800/50 text-gray-300'
-                      }`}
+                          : 'hover:bg-slate-800/50 text-gray-300'} }`}
                     >
                       <div className="flex items-start justify-between">
                         <div className="flex-1">
@@ -304,11 +281,11 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
                             <span>{result.category}</span>
                             {result.popularity && (
                               <div className="flex items-center space-x-1">
-                                <Star className="w-3 h-3" />
+                                <Star className="w-3 h-3" />}
                                 <span>{result.popularity}%</span>
                               </div>
                             )}
-                            {result.lastModified && (
+                            {result.lastModified && (}
                               <span>Updated {result.lastModified}</span>
                             )}
                           </div>
@@ -339,3 +316,8 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
 };
 
 export default EnhancedSearchModal;
+
+
+
+
+</div></div></div></div></div>

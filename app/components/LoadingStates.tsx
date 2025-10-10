@@ -25,7 +25,7 @@ export const ComponentLoader: React.FC = () => {
         <span>Loading component...</span>
       </div>
     </div>
-  );
+  );}
 };
 
 export const ServiceCardSkeleton: React.FC = () => {
@@ -37,7 +37,7 @@ export const ServiceCardSkeleton: React.FC = () => {
       <div className="h-4 bg-slate-700 rounded w-5/6 mb-4"></div>
       <div className="h-8 bg-slate-700 rounded w-1/2 mx-auto"></div>
     </div>
-  );
+  );}
 };
 
 export const ContentSkeleton: React.FC = () => {
@@ -48,5 +48,7 @@ export const ContentSkeleton: React.FC = () => {
       <div className="h-4 bg-slate-700 rounded mb-2"></div>
       <div className="h-4 bg-slate-700 rounded w-3/4"></div>
     </div>
-  );
+  );}
 };
+
+</div></div>

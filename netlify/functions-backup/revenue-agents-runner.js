@@ -2,10 +2,10 @@ const _path = require('path');
 const { spawnSync } = require('child_process');
 function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', '..') relPath)}
   const res = spawnSync('node', [abs, ...args], {)
-    stdio: 'pipe'),
+    stdio: 'pipe')}
     encoding: 'utf8'}
   });
-  return {status: res.status || 0;
+  return {status: res.status || 0;}
     stdout: res.stdout || ''}
     stderr: res.stderr || '';
   const res = spawnSync('node', [abs, ...args], {/* TODO: Fix JSX expression */}
@@ -22,14 +22,14 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
     steps.push({)
       name: script),
       exit: result.status),
-      stdout: result.stdout),
+      stdout: result.stdout)}
       stderr: result.stderr}
     });
   }
   const _sync = runNode('automation/advanced-git-sync.cjs');
   steps.push({name: 'automation/advanced-git-sync.cjs'),
     exit: sync.status),
-    stdout: sync.stdout),
+    stdout: sync.stdout)}
     stderr: sync.stderr}
   });
   return {statusCode: 200}

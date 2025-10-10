@@ -9,17 +9,16 @@ import Footer from '../components/Footer';
 
 'use client';
 import React, { useState } from 'react';
-const ResearchDevelopmentPage: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('ai');
-
-  const _researchAreas = [
+const ResearchDevelopmentPage: React.FC = () => {;
+const [activeTab, setActiveTab] = useState('ai');
+const _researchAreas = [
     {
       id: 'ai',
       name: 'Artificial Intelligence',
       icon: Brain,
       color: 'text-purple-400',
       bgColor: 'bg-purple-500/10',
-      description:     ,
+      description:     }
 $4},
     {
       id: 'quantum',
@@ -27,7 +26,7 @@ $4},
       icon: Atom,
       color: 'text-blue-400',
       bgColor: 'bg-blue-500/10',
-      description:     ,
+      description:     }
 $4},
     {
       id: 'autonomous',
@@ -35,7 +34,7 @@ $4},
       icon: Rocket,
       color: 'text-green-400',
       bgColor: 'bg-green-500/10',
-      description:     ,
+      description:     }
 $4},
     {
       id: 'emerging',
@@ -43,12 +42,10 @@ $4},
       icon: Lightbulb,
       color: 'text-yellow-400',
       bgColor: 'bg-yellow-500/10',
-      description:     ,
+      description:     }
 $4}
   ];
-
-  const researchProjects = {
-    ai: [
+const researchProjects ={ai: [
       {
         title: 'Consensus Intelligence Framework',
         description: 'Developing a novel AI framework that enables multiple AI systems to reach consensus on complex decisions',
@@ -62,8 +59,7 @@ $4}
           'Published 3 papers in top-tier conferences'
         ],
         icon: Brain,
-        color:       ,
-$4},
+        color:       } $4},
       {
         title: 'Autonomous Business Intelligence',
         description: 'Creating self-managing business intelligence systems that adapt and optimize without human intervention',
@@ -77,7 +73,7 @@ $4},
           'Patent filed for core algorithms'
         ],
         icon: Target,
-        color:       ,
+        color:       }
 $4},
       {
         title: 'Neural Architecture Search for Enterprise',
@@ -92,7 +88,7 @@ $4},
           'Open-source framework released'
         ],
         icon: Microscope,
-        color:       ,
+        color:       }
 $4}
     ],
     quantum: [
@@ -109,7 +105,7 @@ $4}
           'Partnership with leading quantum hardware companies'
         ],
         icon: Atom,
-        color:       ,
+        color:       }
 $4},
       {
         title: 'Quantum Error Correction for Business Applications',
@@ -124,7 +120,7 @@ $4},
           'Industry collaboration established'
         ],
         icon: Zap,
-        color:       ,
+        color:       }
 $4}
     ],
     autonomous: [
@@ -141,7 +137,7 @@ $4}
           'Real-world deployment in 5 enterprises'
         ],
         icon: Rocket,
-        color:       ,
+        color:       }
 $4},
       {
         title: 'Multi-Agent Coordination Systems',
@@ -156,7 +152,7 @@ $4},
           'Published in Nature Communications'
         ],
         icon: Users,
-        color:       ,
+        color:       }
 $4}
     ],
     emerging: [
@@ -173,7 +169,7 @@ $4}
           'Industry partnerships established'
         ],
         icon: Lightbulb,
-        color:       ,
+        color:       }
 $4},
       {
         title: 'Edge AI for IoT Systems',
@@ -188,19 +184,18 @@ $4},
           'Commercial product launched'
         ],
         icon: Globe,
-        color:       ,
+        color:       }
 $4}
     ]
   };
-
-  const publications = [
+const publications = [
     {
       title: 'Consensus Intelligence: A Framework for Multi-Agent Decision Making',
       authors: 'Dr. Sarah Chen, Dr. Michael Rodriguez, et al.',
       journal: 'Nature Machine Intelligence',
       year: '2025',
       impact: 'High',
-      link:     ,
+      link:     }
 $4},
     {
       title: 'Autonomous Business Process Optimization Using Reinforcement Learning',
@@ -208,7 +203,7 @@ $4},
       journal: 'Journal of Artificial Intelligence Research',
       year: '2025',
       impact: 'High',
-      link:     ,
+      link:     }
 $4},
     {
       title: 'Quantum Machine Learning for Financial Risk Assessment',
@@ -216,7 +211,7 @@ $4},
       journal: 'Quantum Information Processing',
       year: '2024',
       impact: 'Medium',
-      link:     ,
+      link:     }
 $4},
     {
       title: 'Multi-Agent Coordination in Distributed Systems',
@@ -224,30 +219,29 @@ $4},
       journal: 'Nature Communications',
       year: '2024',
       impact: 'High',
-      link:     ,
+      link:     }
 $4}
   ];
-
-  const achievements = [
+const achievements = [
     {
       icon: Award,
       title: '50+ Research Papers',
-      description:     ,
+      description:     }
 $4},
     {
       icon: Users,
       title: '100+ Researchers',
-      description:     ,
+      description:     }
 $4},
     {
       icon: Target,
       title: '15+ Patents',
-      description:     ,
+      description:     }
 $4},
     {
       icon: Globe,
       title: 'Global Collaborations',
-      description:     ,
+      description:     }
 $4}
   ];
 
@@ -271,12 +265,9 @@ $4}
           <div className="mb-12">
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               {researchAreas.map((area) => (
-                <button
-                  key={area.id}
-                  onClick={() => setActiveTab(area.id)}
-                  className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${
-                    activeTab === area.id
-                      ? `${area.bgColor} ${area.color} border-2 border-current`
+                <button}
+                  key={area.id} onClick={() => setActiveTab(area.id)} className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${
+                    activeTab === = area.id} ? `${area.bgColor} ${area.color} border-2 border-current`
                       : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border-2 border-transparent'
                   }`}
                 >
@@ -296,7 +287,7 @@ $4}
   const _researchAreas = [
   // TOD,
   O: Add items;
-];;
+];
     {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
@@ -362,8 +353,7 @@ $4}
   n: 'Researching next-generation technologies'
     }
   ];
-  const researchProjects = {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  const researchProjects ={/* TODO: Fix JSX expression */} O: Add content;}
 };
   a,
   i: [
@@ -641,7 +631,7 @@ $4}
   const publications = [
   // TOD,
   O: Add items;
-];;
+];
     {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
@@ -711,7 +701,7 @@ $4}
   const achievements = [
   // TOD,
   O: Add items;
-];;
+];
     {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
@@ -777,13 +767,10 @@ $4}
             <div className="flex flex-wrap justify-center gap-4 mb-8"></div>
               {researchAreas.map((area) => ()}
           <button></button>
-                  key={area.id}
-                  onClick={() => setActiveTab(area.id)}
-                  className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${}
-  // TOD,
+                  key={area.id} onClick={() => setActiveTab(area.id)} className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${} // TOD,
   O: Add content;
 }
-                    activeTab === area.id;`
+                    activeTab === = area.id;`
                       ? `${area.bgColor} ${area.color} border-2 border-current`
                       : 'bg-slate-800/50 text-gray-300,
   hover:bg-slate-700/50 border-2 border-transparent'`
@@ -805,7 +792,7 @@ $4}
             </div>"
             <div className="text-center"></div>"
               <p className="text-gray-300 max-w-2xl mx-auto"></p>
-                {researchAreas.find(area => area.id === activeTab)?.description}
+                {researchAreas.find(area => area.id === = activeTab)?.description}
               </p>
             </div>
           </div>
@@ -816,11 +803,11 @@ $4}
               Current Research Projects
             </h2>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {researchProjects[activeTab as keyof typeof researchProjects].map((project, index) => (
+              {researchProjects[activeTab as keyof typeof researchProjects].map((project, index) => (}
                 <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
                   <div className="flex items-start mb-4">
-                    <div className={`w-12 h-12 bg-slate-700/50 rounded-lg flex items-center justify-center mr-4`}>
-                      <project.icon className={`w-6 h-6 ${project.color}`} />
+                    <div className={`w-12 h-12 bg-slate-700/50 rounded-lg flex items-center justify-center mr-4`} >
+                      <project.icon className={`w-6 h-6 ${project.color} `} />
                     </div>
                     <div className="flex-1">
                       <h3 className="text-xl font-semibold text-white mb-2">{project.title}</h3>
@@ -832,9 +819,8 @@ $4}
                     <div>
                       <div className="text-sm text-gray-400 mb-1">Status</div>
                       <div className={`text-sm font-medium ${
-                        project.status === 'Completed' ? 'text-green-400' : 
-                        project.status === 'In Progress' ? 'text-blue-400' : 'text-yellow-400'
-                      }`}>
+                        project.status === = 'Completed' ? 'text-green-400' : 
+                        project.status === = 'In Progress' ? 'text-blue-400' : 'text-yellow-400'} }`}>
                         {project.status}
                       </div>
                     </div>
@@ -855,7 +841,7 @@ $4}
                   <div>
                     <div className="text-sm font-semibold text-cyan-400 mb-2">Key Outcomes:</div>
                     <ul className="space-y-1">
-                      {project.outcomes.map((outcome, outcomeIndex) => (
+                      {project.outcomes.map((outcome, outcomeIndex) => (}
                         <li key={outcomeIndex} className="text-sm text-gray-300 flex items-start">
           {/* Research Projects */}"
           <div className="mb-16"></div>"
@@ -868,8 +854,8 @@ $4}
           <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50,"
   hover:border-cyan-400/50 transition-all duration-300"></div>"
                   <div className="flex items-start mb-4"></div>`
-                    <div className={`w-12 h-12 bg-slate-700/50 rounded-lg flex items-center justify-center mr-4`}></div>`
-                      <project.icon className={`w-6 h-6 ${project.color}`} /></project>
+                    <div className={`w-12 h-12 bg-slate-700/50 rounded-lg flex items-center justify-center mr-4`} ></div>`
+                      <project.icon className={`w-6 h-6 ${project.color} `} /></project>
                     </div>"
                     <div className="flex-1"></div>"
                       <h3 className="text-xl font-semibold text-white mb-2">{project.title}</h3>"
@@ -879,12 +865,11 @@ $4}
                   <div className="grid grid-cols-2 gap-4 mb-4"></div>
                     <div></div>"
                       <div className="text-sm text-gray-400 mb-1">Status</div>`
-                      <div className={`text-sm font-medium ${}
-  // TOD,
+                      <div className={`text-sm font-medium ${} // TOD,
   O: Add content;
 }
-                        project.status === 'Completed' ? 'text-green-400' :
-                        project.status === 'In Progress' ? 'text-blue-400' : 'text-yellow-400'`
+                        project.status === = 'Completed' ? 'text-green-400' :
+                        project.status === = 'In Progress' ? 'text-blue-400' : 'text-yellow-400'`
                       }`}></div>
                         {project.status}
                       
@@ -935,7 +920,7 @@ $4}
             </h2>
             <div className="max-w-4xl mx-auto">
               <div className="space-y-6">
-                {publications.map((pub, index) => (
+                {publications.map((pub, index) => (}
                   <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
                     <h3 className="text-lg font-semibold text-white mb-2">{pub.title}</h3>
                     <div className="text-sm text-gray-300 mb-2">{pub.authors}</div>
@@ -945,14 +930,12 @@ $4}
                         <span>•</span>
                         <span>{pub.year}</span>
                         <span className={`px-2 py-1 rounded text-xs ${
-                          pub.impact === 'High' ? 'bg-green-500/20 text-green-400' : 'bg-blue-500/20 text-blue-400'
-                        }`}>
+                          pub.impact === = 'High' ? 'bg-green-500/20 text-green-400' : 'bg-blue-500/20 text-blue-400'} }`}>
                           {pub.impact} Impact
                         </span>
                       </div>
                       <a
-                        href={pub.link}
-                        className="text-cyan-400 hover:text-cyan-300 text-sm font-medium"
+                        href={pub.link} className="text-cyan-400 hover:text-cyan-300 text-sm font-medium"
                       >
                         Read Paper →
                       </a>
@@ -973,17 +956,16 @@ $4}
                         <span>{pub.journal}</span>
                         <span></span>
                         <span>{pub.year}</span>`
-                        <span className={`px-2 py-1 rounded text-xs ${}
-  // TOD,
+                        <span className={`px-2 py-1 rounded text-xs ${} // TOD,
   O: Add content;
 }
-                          pub.impact === 'High' ? 'bg-green-500/20 text-green-400' : 'bg-blue-500/20 text-blue-400'`
+                          pub.impact === = 'High' ? 'bg-green-500/20 text-green-400' : 'bg-blue-500/20 text-blue-400'`
                         }`}></span>
                           {pub.impact} Impact;
           </span>
                       </div>
                       <a></a>
-                        href={pub.link}"
+                        href={pub.link} "
                         className="text-cyan-400,"
   hover:text-cyan-300 text-sm font-medium"
 // >
@@ -1002,7 +984,7 @@ $4}
               Research Achievements
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {achievements.map((achievement, index) => (
+              {achievements.map((achievement, index) => (}
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
                     <achievement.icon className="w-8 h-8 text-cyan-400" />
@@ -1145,3 +1127,5 @@ $4}
 export default ResearchDevelopmentPage;
 
 
+
+</>

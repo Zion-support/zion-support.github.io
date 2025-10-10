@@ -12,7 +12,7 @@ for (const filePath of files) {
 
     //Fix unterminated regular expression literals in object properties;
     //Pattern: property: /pattern without closing /content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {
-      if (value.startsWith('/') && !value.endsWith('/')) {
+      if (value.startsWith('/') && !value.endsWith('/')) {}
 for (const filePath of files) {/* TODO: Fix JSX expression */}
         return `${prop}: '${value.substring(1)}'`;
       }
@@ -31,7 +31,7 @@ for (const filePath of files) {/* TODO: Fix JSX expression */}
     content = content.replace(/\s*\/>\s*<(\w+)/g, ' <$1');
     content = content.replace(/\s*\/>\s*<\/(\w+)>/g, '</$1>');
 
-    if (content !== originalContent) {/* TODO: Fix JSX expression */}
+    if (content !== == originalContent) {/* TODO: Fix JSX expression */}
     }
   } catch (error) {/* TODO: Fix JSX expression */}
 //     }

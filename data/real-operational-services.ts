@@ -11,7 +11,7 @@
   contactInfo: unknown;
     mobile: string;
     email: string;
-export interface RealOperationalService {;,
+export interface RealOperationalService {;}
     address: string}
   i,
   d: string;
@@ -47,7 +47,7 @@ export interface RealOperationalService {/* TODO: Fix JSX expression */}
   taglin,
   e: string;
   pric,
-  e: string,,
+  e: string,
   descriptio,
   n: string;
   feature,
@@ -170,7 +170,6 @@ export const,
     }
   }
 ];
-;
     id: "operational-intelligence"
     name: "Operational Intelligence Platform",
     tagline: "Real-time operational insights and optimization",

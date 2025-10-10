@@ -5,10 +5,10 @@ console.log('🚀 Starting PR merge process...');
 
 try {
   // Check current status;
-  console.log('📋 Checking current git status...');
+  console.log('📋 Checking current git status...');}
   const status = execSync('git status --porcelain', { encoding: 'utf8' });
   if (status.trim()) {
-    console.log('⚠️  Working directory not clean, committing changes...');
+    console.log('⚠️  Working directory not clean, committing changes...');}
     execSync('git add .', { stdio: 'inherit' });
     execSync('git commit -m "Auto-commit before merge"', { stdio: 'inherit' });
   }
@@ -25,7 +25,7 @@ try {
 for (const pr of prs) {
 //   try {
     //Check if branch exists;
-    try {
+    try {}
       execSync(`git show-ref --verify --quiet refs/remotes/origin/${pr.branch}`)
         { stdio: 'pipe' }
 #!/usr/bin/env node;
@@ -65,17 +65,17 @@ for (const pr of prs) {/* TODO: Fix JSX expression */}
     }
 
     //Try to merge the branch;
-    try {
+    try {}
       execSync(`git merge origin/${pr.branch} --no-ff -m "Merge PR #${pr.number}: ${pr.title}"`)
         { stdio: 'inherit' }
       );
 //       } catch (error) {
 //       //Try to resolve conflicts automatically;
-      try {
+      try {}
         execSync('git status --porcelain', { stdio: 'pipe' });
 //         //If there are conflicts, try to resolve them;
         if (status.includes('UU') || status.includes('AA')) {
-//           //Reset the merge;
+//           //Reset the merge;}
           execSync('git merge --abort', { stdio: 'inherit' });
     try {/* TODO: Fix JSX expression */}`
         `git merge origin/${pr.branch} --no-ff -m "Merge PR #${pr.number}: ${pr.title}"`,
@@ -94,7 +94,7 @@ for (const pr of prs) {/* TODO: Fix JSX expression */}
   } catch (error) {
     console.log('⚠️  Merge conflicts detected, resolving...');
     
-    // Check for conflicts;
+    // Check for conflicts;}
     const conflictFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' });
     if (conflictFiles.trim()) {
       console.log('🔧 Conflict files found:', conflictFiles);
@@ -102,12 +102,12 @@ for (const pr of prs) {/* TODO: Fix JSX expression */}
       // Auto-resolve conflicts by accepting our changes;
       const files = conflictFiles.trim().split('\n');
       for (const file of files) {
-        if (file.trim()) {
+        if (file.trim()) {}
           console.log(`🔧 Resolving conflicts in ${file}...`);
-          try {
+          try {}
             execSync(`git checkout --ours "${file}"`, { stdio: 'inherit' });
             execSync(`git add "${file}"`, { stdio: 'inherit' });
-          } catch (e) {
+          } catch (e) {}
             console.log(`⚠️  Could not auto-resolve ${file}, manual intervention needed`);
           }
         }
@@ -134,7 +134,7 @@ for (const pr of prs) {/* TODO: Fix JSX expression */}
 
 } catch (error) {
   console.error('❌ Error during merge process:', error.message);
-  process.exit(1);
+  process.exit(1);}
 }
   } catch (error) {/* TODO: Fix JSX expression */}
 //     }

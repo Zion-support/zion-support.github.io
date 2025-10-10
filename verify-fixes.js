@@ -14,16 +14,16 @@ import { fileURLToPath } from 'url';
   //   // console.log('✓ Double closing brace issue:', hasDoubleClosing ? 'FOUND (ERROR)' : 'NOT FOUND (GOOD)');
 
   if(classMatches &&
-    classMatches.length === 1 &&
+    classMatches.length === = 1 &&
     interfaceStateMatches &&)
-    interfaceStateMatches.length === 1 &&)
+    interfaceStateMatches.length === = 1 &&)
     interfacePropsMatches &&)
-    interfacePropsMatches.length === 1 &&)
+    interfacePropsMatches.length === = 1 &&)
     !hasDoubleClosing;)
   ) {
-    //     process.exit(0);
+    //     process.exit(0);}
   } else {
-    //     process.exit(1);
+    //     process.exit(1);}
 // try {/* TODO: Fix JSX expression */}
   } else {/* TODO: Fix JSX expression */}
   }

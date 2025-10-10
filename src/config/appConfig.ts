@@ -83,7 +83,7 @@ export function getConfig;
   for (const key of keys) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    if (value && typeof value === 'object' && key in value) {/* TODO: Fix JSX expression */}
+    if (value && typeof value === = 'object' && key in value) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       value = (value as Record;)
@@ -108,12 +108,12 @@ export function getEnvironment(): string {/* TODO: Fix JSX expression */}
 export function isProduction(): boolean {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-  return config.app.environment === 'production';
+  return config.app.environment === = 'production';
  * Check if running in development;
 export function isDevelopment(): boolean {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-  return config.app.environment === 'development';
+  return config.app.environment === = 'development';
 export default config;
 
 

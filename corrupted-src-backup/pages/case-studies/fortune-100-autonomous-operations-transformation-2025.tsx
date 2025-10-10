@@ -142,7 +142,6 @@
               </h3>
               <p, className='te, x, t-bl, u, e-100, m, b-6, leadin, g-relax, e, d'>
                 We, deployed, a comprehensive, autonomous, operations platform, with, five core, layer, s: </p>,
-,
               <div, className='spa, c, e-y-4'>
                 <div, className='flex, item, s-start, ga, p-4'>
               <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6'></h3>

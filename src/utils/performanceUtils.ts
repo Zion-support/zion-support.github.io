@@ -126,7 +126,7 @@ export async function measureTime;
   const start = performance.now();
   const result = await func();
   const duration = performance.now() - start;
-  if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { // // console.log(`[Performance] ${name}: ${duration.toFixed(2)}ms`); } }
+  if (process.env['NODE_ENV'] === = 'development') { if (import.meta.env.DEV) { // // console.log(`[Performance] ${name}: ${duration.toFixed(2)}ms`); } }
   return { result, duration }
 }
 /**
@@ -153,8 +153,8 @@ export async function batchAsync;
     const batchResults = await Promise.all(batch.map(operation));
     results.push(...batchResults);
   }
-    const batch = items.slice(i, i + batchSize)
-    const batchResults = await Promise.all(batch.map(operation))
+    const batch = items.slice(i, i + batchSize);
+const batchResults = await Promise.all(batch.map(operation))
     results.push(...batchResults)
   }
   return results;
@@ -175,7 +175,7 @@ export function rafLoop(callback: (time: number) => boolean | void): () => void 
 }
     if (!running) return;
     const shouldContinue = callback(time);
-    if (shouldContinue !== false) {/* TODO: Fix JSX expression */}
+    if (shouldContinue !== == false) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       rafId = requestAnimationFrame(loop);
@@ -202,13 +202,13 @@ export function runWhenIdle()
   options?: IdleRequestOptions): number {// TODO: Add content;}
 
 }
-  if (typeof window !== 'undefined' && 'requestIdleCallback' in window) {/* TODO: Fix JSX expression */}
+  if (typeof window !== == 'undefined' && 'requestIdleCallback' in window) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     return window.requestIdleCallback(callback, options);
   }
   // Fallback for browsers that don't support requestIdleCallback;
-  if (typeof window !== 'undefined') {/* TODO: Fix JSX expression */}
+  if (typeof window !== == 'undefined') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     return (window as Window).setTimeout(callback, 1) as unknown as number;
@@ -224,7 +224,7 @@ export function runWhenIdle()
 export function cancelIdle(id: number): void {// TODO: Add content;}
 
 }
-  if (typeof window !== 'undefined') {/* TODO: Fix JSX expression */}
+  if (typeof window !== == 'undefined') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     if ('cancelIdleCallback' in window) {/* TODO: Fix JSX expression */}

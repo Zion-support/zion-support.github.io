@@ -3,7 +3,7 @@ jest.mock('next/router', () => ({
   useRouter() {
     return {
       route: '/',
-      pathname: '/',
+      pathname: '/'}
       query: {},
       asPath: '/',
       push: jest.fn(),
@@ -14,7 +14,7 @@ jest.mock('next/router', () => ({
       beforePopState: jest.fn(),
       events: {
         on: jest.fn(),
-        off: jest.fn(),
+        off: jest.fn()}
         emit: jest.fn()}};
   }}));
 
@@ -23,23 +23,23 @@ jest.mock('./src/utils/logger.ts', () => ({
   logger: {
     debug: jest.fn(),
     info: jest.fn(),
-    warn: jest.fn(),
+    warn: jest.fn()}
     error: jest.fn()}}));
 
 // Mock analytics
 jest.mock('./src/utils/analytics.ts', () => ({
   trackEvent: jest.fn(),
-  trackPageView: jest.fn(),
+  trackPageView: jest.fn()}
   initAnalytics: jest.fn()}));
 
 // Mock error tracking
 jest.mock('./src/utils/errorTracking.ts', () => ({
-  reportError: jest.fn(),
+  reportError: jest.fn()}
   initErrorReporting: jest.fn()}));
 
 // Mock performance hook
 jest.mock('./src/hooks/usePerformance.ts', () => ({
-  usePerformance: jest.fn(() => ({
+  usePerformance: jest.fn(() => ({}
     metrics: {},
     optimize: jest.fn()}))}));
 
@@ -48,7 +48,7 @@ Object.defineProperty(import.meta, 'env', {
   value: {
     VITE_APP_TITLE: 'Test App',
     VITE_APP_VERSION: '1.0.0',
-    DEV: false,
+    DEV: false}
     PROD: true},
   writable: true});
 
@@ -62,21 +62,21 @@ Object.defineProperty(window, 'matchMedia', {
     addListener: jest.fn(),
     removeListener: jest.fn(),
     addEventListener: jest.fn(),
-    removeEventListener: jest.fn(),
+    removeEventListener: jest.fn()}
     dispatchEvent: jest.fn()}))});
 
 // Mock IntersectionObserver
 global.IntersectionObserver = jest.fn().mockImplementation(() => ({
   observe: jest.fn(),
-  unobserve: jest.fn(),
+  unobserve: jest.fn()}
   disconnect: jest.fn()}));
 
 // Mock ResizeObserver
 global.ResizeObserver = jest.fn().mockImplementation(() => ({
   observe: jest.fn(),
-  unobserve: jest.fn(),
+  unobserve: jest.fn()}
   disconnect: jest.fn()}));
-ursor/automate-test-fix-improve-and-merge-code-48f3; //Mock: Next.js router.mock('next/router') () => ({' useRouter() { ',
+ursor/automate-test-fix-improve-and-merge-code-48f3; //Mock: Next.js router.mock('next/router') () => ({' useRouter() { '}
 }}
 ursor/automate-test-fix-improve-and-merge-code-48f3; //Moc,
   k: Next.js router.mock('next/router') () => ({/* TODO: Fix JSX expression */}

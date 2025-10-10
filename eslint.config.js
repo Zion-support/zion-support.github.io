@@ -49,52 +49,52 @@ export default [
       '*.min.js',
       '*.min.css',
       'chunk-*.js'
-    ]
+    ]}
   },
   // Base JavaScript configuration
-  {
+  {}
     files: ['**/*.{js,jsx}'],
-    languageOptions: {
+    languageOptions: {}
       globals: { ...globals.browser, ...globals.node },
       parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
         ecmaFeatures: {
-          jsx: true
+          jsx: true}
         }
       }
     },
     rules: {
       ...js.configs.recommended.rules,
       'no-unused-vars': 'warn',
-      'no-console': 'off'
+      'no-console': 'off'}
     }
   },
   // TypeScript configuration
-  {
+  {}
     files: ['**/*.{ts,tsx}'],
-    languageOptions: {
+    languageOptions: {}
       globals: { ...globals.browser, ...globals.node },
       parser: tsParser,
       parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
         ecmaFeatures: {
-          jsx: true
+          jsx: true}
         }
       }
     },
     plugins: {
       '@typescript-eslint': tseslint,
       'react-hooks': reactHooks,
-      'react-refresh': reactRefresh
+      'react-refresh': reactRefresh}
     },
     rules: {
       ...tseslint.configs.recommended.rules,
 ...reactHooks.configs.recommended.rules,
 
       'react-refresh/only-export-components': [
-        'warn',
+        'warn'}
         { allowConstantExport: true }
       ],
       '@typescript-eslint/no-unused-vars': 'off',

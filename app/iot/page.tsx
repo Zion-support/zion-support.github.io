@@ -1,9 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Wifi, Shield, Zap, Target, BarChart, Cpu, Sparkles } from 'lucide-react';
-
-const IoTPage: React.FC = () => {
-  const iotServices = [
+const IoTPage: React.FC = () => {;
+const iotServices = [
     {
       title: 'IoT Device Management Platform',
       description: 'Comprehensive IoT device management and monitoring platform for connected devices.',
@@ -13,7 +12,7 @@ const IoTPage: React.FC = () => {
       benefits: ['Reduce device downtime by 60%', 'Improve operational efficiency', 'Lower maintenance costs'],
       marketPrice: '$4,000-15,000/month',
       category: 'Device Management',
-      technologies: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'MQTT', 'CoAP']
+      technologies: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'MQTT', 'CoAP']}
     },
     {
       title: 'Smart City Solutions',
@@ -24,7 +23,7 @@ const IoTPage: React.FC = () => {
       benefits: ['Improve city efficiency', 'Enhance citizen satisfaction', 'Reduce operational costs'],
       marketPrice: '$25,000-100,000/month',
       category: 'Smart Cities',
-      technologies: ['LoRaWAN', 'NB-IoT', '5G', 'Edge Computing', 'AI Analytics']
+      technologies: ['LoRaWAN', 'NB-IoT', '5G', 'Edge Computing', 'AI Analytics']}
     },
     {
       title: 'Industrial IoT (IIoT)',
@@ -35,7 +34,7 @@ const IoTPage: React.FC = () => {
       benefits: ['Reduce downtime by 40%', 'Improve product quality', 'Lower energy costs'],
       marketPrice: '$15,000-60,000/month',
       category: 'Industrial IoT',
-      technologies: ['OPC UA', 'Modbus', 'Ethernet/IP', 'Edge Computing', 'Machine Learning']
+      technologies: ['OPC UA', 'Modbus', 'Ethernet/IP', 'Edge Computing', 'Machine Learning']}
     },
     {
       title: 'Smart Agriculture Platform',
@@ -46,7 +45,7 @@ const IoTPage: React.FC = () => {
       benefits: ['Increase crop yields by 25%', 'Reduce water usage', 'Improve sustainability'],
       marketPrice: '$6,000-25,000/month',
       category: 'Smart Agriculture',
-      technologies: ['LoRaWAN', 'Sigfox', 'Satellite IoT', 'Drones', 'Computer Vision']
+      technologies: ['LoRaWAN', 'Sigfox', 'Satellite IoT', 'Drones', 'Computer Vision']}
     },
     {
       title: 'Smart Home Automation',
@@ -57,7 +56,7 @@ const IoTPage: React.FC = () => {
       benefits: ['Reduce energy costs by 30%', 'Improve home security', 'Enhance comfort'],
       marketPrice: '$2,500-10,000/month',
       category: 'Smart Homes',
-      technologies: ['Zigbee', 'Z-Wave', 'WiFi', 'Bluetooth', 'Matter']
+      technologies: ['Zigbee', 'Z-Wave', 'WiFi', 'Bluetooth', 'Matter']}
     },
     {
       title: 'Healthcare IoT Solutions',
@@ -68,7 +67,7 @@ const IoTPage: React.FC = () => {
       benefits: ['Improve patient care', 'Reduce hospital visits', 'Enable remote monitoring'],
       marketPrice: '$10,000-40,000/month',
       category: 'Healthcare IoT',
-      technologies: ['Bluetooth LE', 'WiFi', 'Cellular', 'Edge Computing', 'AI Analytics']
+      technologies: ['Bluetooth LE', 'WiFi', 'Cellular', 'Edge Computing', 'AI Analytics']}
     },
     {
       title: 'Fleet Management IoT',
@@ -79,7 +78,7 @@ const IoTPage: React.FC = () => {
       benefits: ['Reduce fuel costs by 20%', 'Improve driver safety', 'Optimize routes'],
       marketPrice: '$3,500-15,000/month',
       category: 'Fleet Management',
-      technologies: ['GPS', 'Cellular', 'Satellite', 'OBD-II', 'Telematics']
+      technologies: ['GPS', 'Cellular', 'Satellite', 'OBD-II', 'Telematics']}
     },
     {
       title: 'Environmental Monitoring',
@@ -90,7 +89,7 @@ const IoTPage: React.FC = () => {
       benefits: ['Improve environmental awareness', 'Enable data-driven decisions', 'Support sustainability goals'],
       marketPrice: '$5,000-20,000/month',
       category: 'Environmental',
-      technologies: ['LoRaWAN', 'NB-IoT', 'Satellite', 'Edge Computing', 'AI Analytics']
+      technologies: ['LoRaWAN', 'NB-IoT', 'Satellite', 'Edge Computing', 'AI Analytics']}
     },
     {
       title: 'Retail IoT Solutions',
@@ -101,7 +100,7 @@ const IoTPage: React.FC = () => {
       benefits: ['Reduce inventory costs', 'Improve customer experience', 'Increase sales'],
       marketPrice: '$7,000-30,000/month',
       category: 'Retail IoT',
-      technologies: ['RFID', 'Computer Vision', 'Beacons', 'Edge Computing', 'AI Analytics']
+      technologies: ['RFID', 'Computer Vision', 'Beacons', 'Edge Computing', 'AI Analytics']}
     },
     {
       title: 'Energy Management IoT',
@@ -112,7 +111,7 @@ const IoTPage: React.FC = () => {
       benefits: ['Reduce energy costs by 35%', 'Improve grid stability', 'Support renewable energy'],
       marketPrice: '$6,000-25,000/month',
       category: 'Energy Management',
-      technologies: ['Modbus', 'BACnet', 'LoRaWAN', 'Edge Computing', 'AI Optimization']
+      technologies: ['Modbus', 'BACnet', 'LoRaWAN', 'Edge Computing', 'AI Optimization']}
     },
     {
       title: 'IoT Security Solutions',
@@ -123,7 +122,7 @@ const IoTPage: React.FC = () => {
       benefits: ['Protect IoT devices', 'Ensure data privacy', 'Meet compliance requirements'],
       marketPrice: '$5,000-20,000/month',
       category: 'IoT Security',
-      technologies: ['PKI', 'TLS/SSL', 'Zero Trust', 'SIEM', 'Threat Intelligence']
+      technologies: ['PKI', 'TLS/SSL', 'Zero Trust', 'SIEM', 'Threat Intelligence']}
     },
     {
       title: 'IoT Data Analytics Platform',
@@ -134,11 +133,10 @@ const IoTPage: React.FC = () => {
       benefits: ['Gain actionable insights', 'Improve decision making', 'Optimize operations'],
       marketPrice: '$8,000-35,000/month',
       category: 'Analytics',
-      technologies: ['Apache Kafka', 'Apache Spark', 'InfluxDB', 'Grafana', 'Machine Learning']
+      technologies: ['Apache Kafka', 'Apache Spark', 'InfluxDB', 'Grafana', 'Machine Learning']}
     }
   ];
-
-  const categories = [...new Set(iotServices.map(service => service.category))];
+const categories = [...new Set(iotServices.map(service => service.category))];
 
   return (
     <>
@@ -218,7 +216,7 @@ const IoTPage: React.FC = () => {
         </section>
 
         {/* Services by Category */}
-        {categories.map(category => (
+        {categories.map(category => (}
           <section key={category} className="py-16 bg-gray-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
               <div className="text-center mb-12"></div>
@@ -231,8 +229,8 @@ const IoTPage: React.FC = () => {
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {iotServices
-                  .filter(service => service.category === category)
-                  .map((service, index) => (</div>
+                  .filter(service => service.category === = category)
+                  .map((service, index) => (</div>}
                     <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"></div>
                       <div className="text-4xl mb-4">{service.icon}</div>
                       <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
@@ -251,7 +249,7 @@ const IoTPage: React.FC = () => {
                       <div className="mb-4"></div>
                         <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
                         <ul className="space-y-1">
-                          {service.features.map((feature, featureIndex) => (
+                          {service.features.map((feature, featureIndex) => (}
                             <li key={featureIndex} className="flex items-center text-sm text-gray-600">
                               <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                               {feature}
@@ -263,7 +261,7 @@ const IoTPage: React.FC = () => {
                       <div className="mb-4"></div>
                         <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
                         <div className="flex flex-wrap gap-2">
-                          {service.technologies.map((tech, techIndex) => (</div>
+                          {service.technologies.map((tech, techIndex) => (</div>}
                             <span key={techIndex} className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">
                               {tech}
                             </span>
@@ -274,7 +272,7 @@ const IoTPage: React.FC = () => {
                       <div className="mb-6"></div>
                         <h4 className="font-semibold text-gray-900 mb-2">Business Benefits:</h4>
                         <ul className="space-y-1">
-                          {service.benefits.map((benefit, benefitIndex) => (
+                          {service.benefits.map((benefit, benefitIndex) => (}
                             <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
                               <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" />
                               {benefit}

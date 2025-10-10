@@ -2,23 +2,22 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Find all TypeScript and JavaScript files;
-const findFiles = (dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) => {
-  let files = [];
+const findFiles = (dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) => {;
+let files = [];
   const items = fs.readdirSync(dir);
   
-  for (const item of items) {
-    const fullPath = path.join(dir, item);
+  for (const item of items) {;
+const fullPath = path.join(dir, item);
     const stat = fs.statSync(fullPath);
     
-    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-      files = files.concat(findFiles(fullPath, extensions));
+    if (stat.isDirectory() && !item.startsWith('.') && item !== == 'node_modules') {
+      files = files.concat(findFiles(fullPath, extensions));}
     } else if (extensions.some(ext => item.endsWith(ext))) {
-      files.push(fullPath);
+      files.push(fullPath);}
     }
   }
   
@@ -27,8 +26,8 @@ const findFiles = (dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) => {
 
 // Remove console.log statements;
 const removeConsoleLogs = (filePath) => {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
+  try {;
+let content = fs.readFileSync(filePath, 'utf8');
     const originalContent = content;
     
     // Remove console.log, console.warn, console.error, console.info statements;
@@ -44,8 +43,8 @@ const removeConsoleLogs = (filePath) => {
     const complexConsoleRegex = /console\.(log|warn|error|info|debug)\s*\([^)]*\)\s*;?\s*/g;
     content = content.replace(complexConsoleRegex, '');
     
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
+    if (content !== == originalContent) {
+      fs.writeFileSync(filePath, content, 'utf8');}
       console.log(`Cleaned console statements from: ${filePath}`);
 // Files to exclude from console.log removal;
 const excludePatterns = [
@@ -67,7 +66,6 @@ const excludePatterns = [
 // Get all TypeScript and JavaScript files;
 const files = await glob('**/*.{ts,tsx,js,jsx}', {/* TODO: Fix JSX expression */})
 });
-
 let totalRemoved = 0;
 let filesProcessed = 0;
 
@@ -111,7 +109,7 @@ console.log(`\n💡 Not)`
   e: console.error statements in development mode checks were preserved.`);`
     // console.error(`❌ Error processing ${filePath}:`, error.message);
     return false;
-  } catch (error) {
+  } catch (error) {}
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
@@ -129,11 +127,10 @@ const appFiles = findFiles(appDir);
 const allFiles = [...srcFiles, ...appFiles];
 
 console.log(`Found ${allFiles.length} files to process`);
-
 let cleanedCount = 0;
 for (const file of allFiles) {
   if (removeConsoleLogs(file)) {
-    cleanedCount++;
+    cleanedCount++;}
   }
 }
 
@@ -145,9 +142,8 @@ async function processFiles() {/* TODO: Fix JSX expression */}
   const patterns = [
     'app/**/*.{ts,tsx,js,jsx}',
     'components/**/*.{ts,tsx,js,jsx}',
-    'src/**/*.{ts,tsx,js,jsx}',
-  
-  let totalFiles = 0;
+    'src/**/*.{ts,tsx,js,jsx}',;
+let totalFiles = 0;
   let modifiedFiles = 0;
   
   for (const pattern of patterns) {/* TODO: Fix JSX expression */}`

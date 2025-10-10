@@ -14,8 +14,8 @@ const, LatestArticlesShowcas, e: Rea, c, t.FC = () => {
           <h2, classNam, e='te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4'>
             Latest, Article, s & Resear, c, h</h2>
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-8'>
-          {latestArticl, e, s.m, a, p(artic, l, e = > (</div>
-            <Link, ke, y = { artic, l, e., i, d  }, to={ artic, l, e.li, n, k } classNa, m, e='group, b, g-white, rounde, d-xl, shado, w-md, hove, r: shad, o, w-2xl, transitio, n-all, duratio, n-300, overflo, w-hidden, border, border-gr, a, y-100, hove, r:bord, e, r-indi, g, o-3, 0, 0'
+          {latestArticl, e, s.m, a, p(artic, l, e = > (</div>}
+            <Link, ke, y ={artic, l, e., i, d  } , to={artic, l, e.li, n, k } classNa, m, e='group, b, g-white, rounde, d-xl, shado, w-md, hove, r: shad, o, w-2xl, transitio, n-all, duratio, n-300, overflo, w-hidden, border, border-gr, a, y-100, hove, r:bord, e, r-indi, g, o-3, 0, 0'
                 <h3, classNam, e = 'te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3, grou, p-hov, e, r: te, x, t-indi, g, o-600, transitio, n-colo, r, s'>
                   {artic, l, e.t, i, t, l, e}</h3>
                   <div, classNam, e='te, x, t-indi, g, o-600, fon, t-semibold, grou, p-hov, e, r: g, a, p-2, flex, items-center, transitio, n-a, l, l'>
@@ -26,7 +26,7 @@ const, LatestArticlesShowcas, e: Rea, c, t.FC = () => {
             <Link, classNam, e='w-6 h-6' />)
 }})
 const, LatestArticlesShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
-            <Link, ke, y = { artic, l, e., i, d  }, to={ artic, l, e.li, n, k } classNa, m, e='group, b, g-white, rounde, d-xl, shado, w-md, hove, r: shad, o, w-2xl, transitio, n-all, duratio, n-300, overflo, w-hidden, border, border-gr, a, y-100, hove, r:bord, e, r-indi, g, o-3, 0, 0'
+            <Link, ke, y ={artic, l, e., i, d  } , to={artic, l, e.li, n, k } classNa, m, e='group, b, g-white, rounde, d-xl, shado, w-md, hove, r: shad, o, w-2xl, transitio, n-all, duratio, n-300, overflo, w-hidden, border, border-gr, a, y-100, hove, r:bord, e, r-indi, g, o-3, 0, 0'
                 <h3, classNam, e = 'te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3, grou, p-hov, e, r: te, x, t-indi, g, o-600, transitio, n-colo, r, s'></Link>
                   {artic, l, e.t, i, t, l, e}
                   <div, classNam, e='te, x, t-indi, g, o-600, fon, t-semibold, grou, p-hov, e, r: g, a, p-2, flex, items-center, transitio, n-a, l, l'></div>
@@ -35,3 +35,11 @@ const, LatestArticlesShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX expressi
             View, All, Articles;
             <Link, classNam, e='w-6 h-6' /></Link>
 }}
+
+
+
+
+
+
+
+</div></div></div></div></div></div></div>

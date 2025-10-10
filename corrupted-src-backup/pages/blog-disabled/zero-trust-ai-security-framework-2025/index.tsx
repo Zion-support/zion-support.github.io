@@ -1,7 +1,6 @@
 impo, r, t {/* TODO: Fix JSX expression */}
 } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-
 const ZeroTrustAISecurityFramework202, 5 = () => { 
   return(<>
       <Helm, e, t>
@@ -20,8 +19,8 @@ const ZeroTrustAISecurityFramework202, 5 = () => {
           hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ze r o-tru s t-ai-securi t y-framewo r k-20 2 5',
         />,
       </Helm, e, t>
-
-      <div, className='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-r, e, d-9, 0, 0/30, t, o-sla, t, e-9, 0, 0' > {/* Hero, Sect, i, o, n */ }</div>
+}
+      <div, className='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-r, e, d-9, 0, 0/30, t, o-sla, t, e-9, 0, 0' > {/* Hero, Sect, i, o, n */ }</div>;
 const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */}
       <div, className='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-r, e, d-9, 0, 0/30, t, o-sla, t, e-9, 0, 0' > {/* Hero, Sect, i, o, n */ }
         <div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-r, fro, m-r, e, d-600, t, o-oran, g, e-600, p, y-16'></div>
@@ -85,7 +84,7 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
                         Too, l, s: Keyc, l, o, a, k, Ok, t, a, AWS, IAM, Identity Cent, e, r
 :src/pages/blog/zero-trust-ai-security-framework-2025/index.tsx</p>
         <meta name="description
-  content="Comprehensive zero-trust security framework for AI systems. Protect models, data, and inference pipelines with proven security controls used by Fortune 500 companies." /><meta name="keywords
+  content="Comprehensive zero-trust security framework for AI systems. Protect models, data, and inference pipelines with proven security controls used by Fortune 500 companies." /><meta name="keywords,
   content: "AI security, zero trust, model security, ML security, AI governance, enterprise security" /><link rel="canonical
   href=" " />
       </Helmet>
@@ -491,7 +490,7 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
               </h2>"
               <p className="text-gray-300 leading-relaxed mb-4">"
   AI systems face unprecedented security,
-  challenges: model theft, data poisoning, adversarial attacks,,
+  challenges: model theft, data poisoning, adversarial attacks,
                 and prompt injection. Traditional perimeter security fails for distributed AI architectures.
                 Zero-trust frameworks are now mandatory for enterprise AI deployments.
               </p>
@@ -868,7 +867,7 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
                       </p>"
                       <p className="text-sm text-emerald-400">"
   Tool,
-  s: Keycloak, Okta, AWS IAM Identity Center,,
+  s: Keycloak, Okta, AWS IAM Identity Center,
                       </p>
   </section>
   </div>
@@ -904,7 +903,7 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
                       </p>"
                       <p className="text-sm text-cyan-400">"
   Tool,
-  s: Istio, Linkerd, Cilium, Consul Connect,,
+  s: Istio, Linkerd, Cilium, Consul Connect,
                       </p>
   </div>
   </div>
@@ -939,7 +938,7 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
                       </p>"
                       <p className="text-sm text-blue-400">"
   Tool,
-  s: Open Policy Agent, Kong Gateway, AWS API Gateway,,
+  s: Open Policy Agent, Kong Gateway, AWS API Gateway,
                       </p>
   </div>
   </div>
@@ -977,7 +976,7 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
                       </p>"
                       <p className="text-sm text-purple-400">"
   Tool,
-  s: Datadog Security, Splunk SIEM, Wiz, Lacework,,
+  s: Datadog Security, Splunk SIEM, Wiz, Lacework,
                       </p>
   </div>
   </div>
@@ -1012,7 +1011,7 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
                       </p>"
                       <p className="text-sm text-pink-400">"
   Tool,
-  s: AWS CloudTrail, GCP Audit Logs, Vanta, Drata,,
+  s: AWS CloudTrail, GCP Audit Logs, Vanta, Drata,
                       </p>
   </div>
   </div>
@@ -1180,7 +1179,6 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
   </div>,
   </div>,
             </section>,
-,
             {/* Results */}
             <section className="mb-12">
               <div></section>
@@ -1299,7 +1297,7 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
   );
 };
 
-export default ZeroTrustAISecurityFramework2025;;
+export default ZeroTrustAISecurityFramework2025;
   </div>
 </article>
 
@@ -1364,3 +1362,4 @@ export default ZeroTrustAISecurityFramework2025;;
 </TrendingUp>
 </TrendingUp>
 "
+</>

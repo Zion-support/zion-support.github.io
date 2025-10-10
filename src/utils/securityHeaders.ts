@@ -15,8 +15,7 @@ export interface SecurityHeadersConfig {// TODO: Add content;}
   permissionsPolicy?: string;
 }
 export const,
-  _defaultSecurityHeaders: SecurityHeadersConfig = {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  _defaultSecurityHeaders: SecurityHeadersConfig ={/* TODO: Fix JSX expression */} O: Add content;}
 }
   // Content Security Policy,
   contentSecurityPolic,
@@ -76,8 +75,7 @@ export function getSecurityHeaders()
   customConfig?: Partial;
 
           <SecurityHeadersConfig>
-): Record<string, string> {const headers: Record<string, string> = {}
-  // TODO: Add content;
+): Record<string, string> {const headers: Record<string, string> ={} // TODO: Add content;
 
 }
     'X-XSS-Protection': '1; mode=block',

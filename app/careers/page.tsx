@@ -1,15 +1,10 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { Star, Users, Heart, Award, MapPin, Clock, Briefcase, ArrowRight } from 'lucide-react';
-=======
+
 import { Star, Users, Heart, Award, MapPin, Clock, Briefcase, CheckCircle, ArrowRight, Zap } from 'lucide-react';
-=======
 import { MapPin, Clock, CheckCircle, Star, Users, Heart, Award, ArrowRight, Briefcase, GraduationCap, Zap } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-581e
+
 
 interface JobPosition {
   id: string;
@@ -19,23 +14,15 @@ interface JobPosition {
   type: string;
   experience: string;
   description: string;
-<<<<<<< HEAD
-  requirements?: string[];
-  benefits?: string[];
-  posted: string;
-  featured: boolean;
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
-=======
+
   requirements: string[];
   benefits: string[];
   posted: string;
-  featured: boolean;
+  featured: boolean;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-581e
-
-const CareersPage: React.FC = () => {
-  const openPositions: JobPosition[] = [
+;
+const CareersPage: React.FC = () => {;
+const openPositions: JobPosition[] = [
     {
       id: '1',
       title: 'Senior AI Engineer',
@@ -43,15 +30,10 @@ const CareersPage: React.FC = () => {
       location: 'Remote',
       type: 'Full-time',
       experience: '5+ years',
-<<<<<<< HEAD
-<<<<<<< HEAD
-      description: 'Design and implement cutting-edge AI solutions for enterprise clients.',
-      requirements: ['Python, TensorFlow, PyTorch', '5+ years AI experience', 'Machine Learning expertise']
-=======
+
       description: 'Lead the development of cutting-edge AI solutions and machine learning models for enterprise clients.',
-=======
       description: 'Lead development of cutting-edge AI solutions and machine learning models for enterprise clients.',
->>>>>>> cursor/fix-errors-and-merge-to-main-581e
+
       requirements: [
         '5+ years experience in AI/ML development',
         'Expertise in Python, TensorFlow, PyTorch',
@@ -66,8 +48,7 @@ const CareersPage: React.FC = () => {
         'Professional development budget'
       ],
       posted: '2 days ago',
-      featured: true
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
+      featured: true}
     },
     {
       id: '2',
@@ -77,21 +58,8 @@ const CareersPage: React.FC = () => {
       type: 'Full-time',
       experience: '7+ years',
       description: 'Design and implement scalable cloud infrastructure solutions for enterprise clients.',
-<<<<<<< HEAD
-      requirements: ['AWS, Azure, GCP', '7+ years cloud experience', 'Architecture certifications']
-<<<<<<< HEAD
-    },
-    {
-      title: 'Data Scientist',
-      department: 'Data Analytics',
-      location: 'San Francisco, CA',
-      type: 'Full-time',
-      experience: '3+ years',
-      description: 'Extract insights from complex datasets to drive business decisions.',
-      requirements: ['Python, R, SQL', '3+ years data science experience', 'Statistical analysis skills']
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
-=======
+
+
       requirements: [
         '7+ years experience in cloud architecture',
         'Expertise in AWS, Azure, and GCP',
@@ -106,7 +74,7 @@ const CareersPage: React.FC = () => {
         'Flexible work arrangements'
       ],
       posted: '1 week ago',
-      featured: true
+      featured: true}
     },
     {
       id: '3',
@@ -130,7 +98,7 @@ const CareersPage: React.FC = () => {
         'Remote work options'
       ],
       posted: '3 days ago',
-      featured: false
+      featured: false}
     },
     {
       id: '4',
@@ -154,118 +122,75 @@ const CareersPage: React.FC = () => {
         'Stock options'
       ],
       posted: '5 days ago',
-      featured: false
+      featured: false}
     }
   ];
-
-  const companyValues = [
+const companyValues = [
     {
       icon: <Star className="w-8 h-8 text-yellow-500" />,
       title: 'Excellence',
-      description: 'We strive for excellence in everything we do, delivering exceptional results for our clients.'
+      description: 'We strive for excellence in everything we do, delivering exceptional results for our clients.'}
     },
     {
       icon: <Users className="w-8 h-8 text-blue-500" />,
       title: 'Collaboration',
-      description: 'We believe in the power of teamwork and collaboration to achieve great things together.'
+      description: 'We believe in the power of teamwork and collaboration to achieve great things together.'}
     },
     {
       icon: <Heart className="w-8 h-8 text-red-500" />,
       title: 'Passion',
-      description: 'We are passionate about technology and its potential to transform businesses and lives.'
+      description: 'We are passionate about technology and its potential to transform businesses and lives.'}
     },
     {
       icon: <Award className="w-8 h-8 text-green-500" />,
       title: 'Innovation',
-      description: 'We embrace innovation and continuously seek new ways to solve complex problems.'
->>>>>>> cursor/fix-errors-and-merge-to-main-581e
+      description: 'We embrace innovation and continuously seek new ways to solve complex problems.'}
     }
   ];
-
-  const benefits = [
+const benefits = [
     {
       icon: <Zap className="w-6 h-6 text-blue-500" />,
       title: 'Competitive Compensation',
-      description: 'Above-market salaries and performance bonuses'
+      description: 'Above-market salaries and performance bonuses'}
     },
     {
       icon: <Heart className="w-6 h-6 text-red-500" />,
       title: 'Health & Wellness',
-      description: 'Comprehensive health, dental, and vision coverage'
+      description: 'Comprehensive health, dental, and vision coverage'}
     },
     {
       icon: <GraduationCap className="w-6 h-6 text-green-500" />,
       title: 'Learning & Development',
-      description: 'Professional development budget and training opportunities'
+      description: 'Professional development budget and training opportunities'}
     },
     {
       icon: <Clock className="w-6 h-6 text-purple-500" />,
       title: 'Flexible Work',
-      description: 'Remote work options and flexible schedules'
+      description: 'Remote work options and flexible schedules'}
     },
     {
       icon: <Award className="w-6 h-6 text-yellow-500" />,
       title: 'Career Growth',
-      description: 'Clear career paths and advancement opportunities'
+      description: 'Clear career paths and advancement opportunities'}
     },
     {
       icon: <Users className="w-6 h-6 text-indigo-500" />,
       title: 'Great Culture',
-      description: 'Inclusive, diverse, and supportive work environment'
+      description: 'Inclusive, diverse, and supportive work environment'}
     }
   ];
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
+
     <div className="min-h-screen bg-gray-50">
->>>>>>> cursor/fix-errors-and-merge-to-main-581e
+
       <Helmet>
         <title>Careers - Zion Tech Group | Join Our Team</title>
         <meta name="description" content="Join Zion Tech Group and be part of a team that's shaping the future of technology. Explore career opportunities in AI, cloud computing, cybersecurity, and more." />
         <meta name="keywords" content="tech careers, AI jobs, cloud computing jobs, cybersecurity careers, software engineering jobs" />
       </Helmet>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-        <div className="relative max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Join Our Team
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Work on cutting-edge AI and IT solutions that transform businesses worldwide.
-          </p>
-        </div>
-      </section>
 
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center">Open Positions</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
-            {openPositions.map((position, index) => (
-              <div
-                key={index}
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300"
-              >
-                <h3 className="text-xl font-semibold text-white mb-2">{position.title}</h3>
-                <div className="flex flex-wrap gap-4 text-sm text-gray-300 mb-4">
-                  <div className="flex items-center space-x-1">
-                    <Briefcase className="w-4 h-4" />
-                    <span>{position.department}</span>
-                  </div>
-                  <div className="flex items-center space-x-1">
-                    <MapPin className="w-4 h-4" />
-                    <span>{position.location}</span>
-                  </div>
-                  <div className="flex items-center space-x-1">
-                    <Clock className="w-4 h-4" />
-                    <span>{position.type}</span>
-                  </div>
-=======
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="py-20 px-4">
@@ -278,7 +203,7 @@ const CareersPage: React.FC = () => {
             </p>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-              {culture.map((item, index) => (
+              {culture.map((item, index) => (}
                 <div key={index} className="text-center">
                   <div className="text-3xl font-bold text-white mb-2">{item.stat}</div>
                   <div className="text-gray-400 text-sm">{item.label}</div>
@@ -300,7 +225,7 @@ const CareersPage: React.FC = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {values.map((value, index) => (
+              {values.map((value, index) => (}
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center hover:border-purple-400 transition-all duration-300">
                   <div className={`w-16 h-16 ${value.color} bg-white/10 rounded-full mx-auto mb-6 flex items-center justify-center`}>
                     <value.icon className="w-8 h-8" />
@@ -325,7 +250,7 @@ const CareersPage: React.FC = () => {
 
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {benefits.map((benefit, index) => (
+                {benefits.map((benefit, index) => (}
                   <div key={index} className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                     <span className="text-gray-300">{benefit}</span>
@@ -348,17 +273,15 @@ const CareersPage: React.FC = () => {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {openPositions.map((position) => (
-                <div
-                  key={position.id}
-                  className={`bg-white/10 backdrop-blur-lg rounded-2xl p-8 border ${
-                    position.featured ? 'border-purple-400 shadow-2xl shadow-purple-500/25' : 'border-white/20'
-                  } hover:border-purple-400 transition-all duration-300 group`}
+                <div}
+                  key={position.id} className={`bg-white/10 backdrop-blur-lg rounded-2xl p-8 border ${
+                    position.featured ? 'border-purple-400 shadow-2xl shadow-purple-500/25' : 'border-white/20'} } hover:border-purple-400 transition-all duration-300 group`}
                 >
                   {position.featured && (
                     <div className="flex items-center gap-2 mb-4">
                       <Star className="w-5 h-5 text-yellow-400 fill-current" />
                       <span className="text-yellow-400 text-sm font-semibold">Featured Position</span>
-                    </div>
+                    </div>}
                   )}
 
                   <div className="flex items-start justify-between mb-4">
@@ -393,43 +316,20 @@ const CareersPage: React.FC = () => {
                   <button className="w-full bg-gradient-to-r from-purple-500 to-blue-500 text-white py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300">
                     Apply Now
                   </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
+
                 </div>
-<<<<<<< HEAD
-                <p className="text-gray-300 mb-4">{position.description}</p>
-                <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-white mb-2">Requirements:</h4>
-                  <ul className="text-sm text-gray-300 space-y-1">
-                    {position.requirements?.map((req, reqIndex) => (
-                      <li key={reqIndex} className="flex items-center space-x-2">
-                        <span className="w-1 h-1 bg-purple-400 rounded-full"></span>
-                        <span>{req}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
-                  Apply Now
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </button>
-              </div>
-            ))}
-=======
+
               ))}
             </div>
-<<<<<<< HEAD
->>>>>>> cursor/website-audit-and-update-with-deployment-758b
-=======
+
           </div>
         </section>
 
         {/* CTA Section */}
         <section className="py-16 px-4">
-=======
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
         <div className="container mx-auto px-4">
->>>>>>> cursor/fix-errors-and-merge-to-main-581e
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Join Our Team
@@ -460,7 +360,7 @@ const CareersPage: React.FC = () => {
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {companyValues.map((value, index) => (
+            {companyValues.map((value, index) => (}
               <div key={index} className="text-center">
                 <div className="flex justify-center mb-4">
                   {value.icon}
@@ -468,29 +368,14 @@ const CareersPage: React.FC = () => {
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{value.title}</h3>
                 <p className="text-gray-600">{value.description}</p>
               </div>
-<<<<<<< HEAD
-            </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
-=======
+
             ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-581e
+
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-      <section className="py-20 px-4 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center">Why Work With Us?</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            {values.map((value, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <value.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{value.title}</h3>
-                <p className="text-gray-300">{value.description}</p>
-=======
+
       {/* Benefits */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -501,7 +386,7 @@ const CareersPage: React.FC = () => {
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
+            {benefits.map((benefit, index) => (}
               <div key={index} className="bg-white p-6 rounded-lg shadow-md">
                 <div className="flex items-center gap-4">
                   {benefit.icon}
@@ -510,34 +395,14 @@ const CareersPage: React.FC = () => {
                     <p className="text-gray-600">{benefit.description}</p>
                   </div>
                 </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-581e
+
               </div>
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-white mb-8">Benefits & Perks</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center space-x-3">
-                <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                <span className="text-gray-300">{benefit}</span>
-              </div>
-            ))}
-          </div>
-          <div className="mt-8">
-            <Link
-              to="/contact"
-              className="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300"
-            >
-              Get in Touch
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-=======
+
       {/* Open Positions */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
@@ -548,7 +413,7 @@ const CareersPage: React.FC = () => {
             </p>
           </div>
           <div className="space-y-6">
-            {openPositions.map((position) => (
+            {openPositions.map((position) => (}
               <div key={position.id} className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow duration-300">
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
                   <div className="flex-1">
@@ -557,7 +422,7 @@ const CareersPage: React.FC = () => {
                       {position.featured && (
                         <span className="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded-full">
                           Featured
-                        </span>
+                        </span>}
                       )}
                     </div>
                     <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600 mb-3">
@@ -580,13 +445,13 @@ const CareersPage: React.FC = () => {
                     </div>
                     <p className="text-gray-700 mb-4">{position.description}</p>
                     <div className="flex flex-wrap gap-2 mb-4">
-                      {position.requirements.slice(0, 3).map((req, index) => (
+                      {position.requirements.slice(0, 3).map((req, index) => (}
                         <span key={index} className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">
                           {req}
                         </span>
                       ))}
                       {position.requirements.length > 3 && (
-                        <span className="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded-full">
+                        <span className="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded-full">}
                           +{position.requirements.length - 3} more
                         </span>
                       )}
@@ -617,7 +482,7 @@ const CareersPage: React.FC = () => {
             <button className="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200">
               Send Your Resume
             </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-581e
+
           </div>
         </div>
       </section>
@@ -626,3 +491,29 @@ const CareersPage: React.FC = () => {
 };
 
 export default CareersPage;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>

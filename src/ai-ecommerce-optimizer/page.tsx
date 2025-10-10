@@ -6,9 +6,9 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 import { ShoppingCart, Target, Zap, Settings, CheckCircle, Star,  ShoppingCart,  Target,  Settings } from 'lucide-react';
-const AIEcommerceOptimizerPage: React.FC = () => {
-  const features = [];
-  return (
+const AIEcommerceOptimizerPage: React.FC = () => {;
+const features = [];
+  return (}
     {// TODO: Add content;}
 
 };

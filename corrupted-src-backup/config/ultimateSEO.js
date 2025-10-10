@@ -1,5 +1,4 @@
-module.exports = {
-  metaTags: {,
+module.exports ={metaTags: {,
     viewport: 'width=device-width, initial-scale=1, viewport-fit=cover',
     robots: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview: -1'
     canonical: true;
@@ -10,16 +9,15 @@ module.exports = {
       site_name: 'Zion Tech Group'
       image: '/images/og-image.jpg',
       imageWidth: 1200;
-      imageHeight: 630;
-    },
+      imageHeight: 630;} },
     twitterCards: {,
       card: 'summary_large_image',
-      creator: '@ZionTechGroup',
+      creator: '@ZionTechGroup'}
       site: '@ZionTechGroup'},
     additional: {,
       'theme-color': '#000000',
       'msapplication-TileColor': '#000000',
-      'apple-mobile-web-app-capable': 'yes',
+      'apple-mobile-web-app-capable': 'yes'}
       'apple-mobile-web-app-status-bar-style': 'black-translucent'}},
   structuredData: {
     organization: {
@@ -30,7 +28,7 @@ module.exports = {
       description: 'Leading AI and technology solutions provider',
       contactPoint: {,
         '@type': 'ContactPoint',
-        telephone: '+1-800-ZION-TECH',
+        telephone: '+1-800-ZION-TECH'}
         contactType: 'customer service'},
       sameAs: [,
         'https://twitter.com/ZionTechGroup',
@@ -41,8 +39,8 @@ module.exports = {
       name: 'Zion Tech Group',
       url: 'https://zion.app',
       potentialAction: {,
-        '@type': 'SearchAction',
-        target: 'https://zion.app/search?q={search_term_string}',
+        '@type': 'SearchAction'}
+        target: 'https://zion.app/search?q={search_term_string} ',
         'query-input': 'required name=search_term_string'}},
     breadcrumbs: true;
     services: true;
@@ -57,9 +55,8 @@ module.exports = {
       services: 0.9;
       about: 0.8;
       contact: 0.7;
-      blog: 0.6;
-module.exports = {/* TODO: Fix JSX expression */}
-    },
+      blog: 0.6;}
+module.exports ={/* TODO: Fix JSX expression */} },
     twitterCard,
   s: {/* TODO: Fix JSX expression */}
     },
@@ -79,7 +76,7 @@ module.exports = {/* TODO: Fix JSX expression */}
   s://github.com/Zion-Holdings']},
     websit,
   e: {/* TODO: Fix JSX expression */}
-  s://zion.app/search?q={search_term_string}',
+  s://zion.app/search?q={search_term_string} ',
         'query-input': 'required name=search_term_string'}},
     breadcrumb,
   s: true,
@@ -103,10 +100,10 @@ module.exports = {/* TODO: Fix JSX expression */}
   },
   coreWebVitals: {,
     lcp: {,
-      target: 2.5;
+      target: 2.5;}
       optimization: 'image-optimization, critical-css, resource-hints'},
     fid: {,
-      target: 100;
+      target: 100;}
       optimization: 'code-splitting-loading, third-party-optimization'},
     cls: {,
       target: 0.1;
@@ -115,7 +112,7 @@ module.exports = {/* TODO: Fix JSX expression */}
   d: true,
     image,
   s: true,
-    video,
+    video}
   s: true},
   coreWebVital,
   s: {/* TODO: Fix JSX expression */}

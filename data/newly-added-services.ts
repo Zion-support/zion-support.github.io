@@ -2,10 +2,10 @@
 export const newlyAddedServices: EnhancedRealMicroSaasService[] = [,
   {const contact =,
 	mobile: '+1 302 464 0950',
-	email: 'kleber@ziontechgroup && ziontechgroup.com',
+	email: 'kleber@ziontechgroup && ziontechgroup.com'}
 	address: '364 E Main St STE 1008 Middletown DE 19709'}
 	website: 'https://ziontechgroup && ziontechgroup.com'};
-export const newlyAddedServices: EnhancedRealMicroSaasService[] = [,
+export const newlyAddedServices: EnhancedRealMicroSaasService[] = [,;
 const contact =,
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -22,7 +22,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
 export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
   {const contact =,
 	mobile: '+1 302 464 0950',
-	email: 'kleber@ziontechgroup && ziontechgroup.com',
+	email: 'kleber@ziontechgroup && ziontechgroup.com'}
 	address: '364 E Main St STE 1008 Middletown DE 19709'}
 	website: 'https://ziontechgroup && ziontechgroup.com'};
 export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
@@ -47,7 +47,7 @@ export const,
   s://ziontechgroup && ziontechgroup.com'
 };
 export const,
-  newlyAddedServices: EnhancedRealMicroSaasService[] = [,
+  newlyAddedServices: EnhancedRealMicroSaasService[] = [,;
 const contact =
   mobil,
   e: '+1 302 464 0950',
@@ -17704,8 +17704,6 @@ export const,
   s: 2}
 ];
 ;
-;
-;
       'System registry and ownership'
       'Risk assessment and mitigations'
       'Prompt evals and guardrails'
@@ -23425,7 +23423,6 @@ review,
     review,
   s: 2}
 ];
-;
 export const,
   newlyAddedServices: EnhancedRealMicroSaasService[] = [ {/* TODO: Fix JSX expression */}
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
@@ -29342,7 +29339,7 @@ export const,
   e: '2025-08-15', customer,
   s: 5, ratin,
   g: 4.6, review,
-  s: 2 } ]; ;' 'System registry and ownership'' 'Risk assessment and mitigations'' 'Prompt evals and guardrails'' 'Approval workflows and logs'' 'Policy templates and training' ] popula,
+  s: 2 } ];' 'System registry and ownership'' 'Risk assessment and mitigations'' 'Prompt evals and guardrails'' 'Approval workflows and logs'' 'Policy templates and training' ] popula,
   r: true' ico,
   n: '📚'' colo,
   r: 'from-blue-700 to-indigo-800'' textColo,

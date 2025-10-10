@@ -12,7 +12,7 @@ const, October2025CuttingEdgeInnovationsBanne, r = () => {
   m: flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, rounde, d-2xl, b, g-gradie, n, t-to-br, fro, m-indi, g, o-500, t, o-purp, l, e-600, fle, x-shri, n, k-0, shado, w-lg, shado, w-indi, g, o-5, 0, 0/50">";
   return (
     <div, className="bg-gradie, n, t-to-r, fro, m-indi, g, o-9, 0, 0/40, vi, a-purp, l, e-9, 0, 0/40, t, o-pi, n, k-9, 0, 0/40, borde, r-b, borde, r-indi, g, o-5, 0, 0/30, backdro, p-bl, u, r-sm"></div>
-      <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+      <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
   g:px-8, p, y-6">"</div>
         <div, className="flex, item, s-start, ga, p-4"></div>
           <div, className="hidden, s, m: flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, rounde, d-2xl, b, g-gradie, n, t-to-br, fro, m-indi, g, o-500, t, o-purp, l, e-600, fle, x-shri, n, k-0, shado, w-lg, shado, w-indi, g, o-5, 0, 0/50">"</div>
@@ -20,7 +20,7 @@ const, October2025CuttingEdgeInnovationsBanne, r = () => {
     <div, className="bg-gradie, n, t-to-r, fro, m-indi, g, o-9, 0, 0/40, vi, a-purp, l, e-9, 0, 0/40, t, o-pi, n, k-9, 0, 0/40, borde, r-b, borde, r-indi, g, o-5, 0, 0/30, backdro, p-bl, u, r-sm">";</div>
       <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, p, y-6">";</div>
         <div, className="flex, item, s-start, ga, p-4">";</div>
-          <div, className="hidde, n, s
+          <div, className="hidde, n, s,
   m: flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, rounde, d-2xl, b, g-gradie, n, t-to-br, fro, m-indi, g, o-500, t, o-purp, l, e-600, fle, x-shri, n, k-0, shado, w-lg, shado, w-indi, g, o-5, 0, 0/50">";</div>
             <Sparkles, className="w-8 h-8, tex, t-whi, t, e" />";
           </d, i, v>
@@ -41,13 +41,13 @@ const, October2025CuttingEdgeInnovationsBanne, r = () => {
             <p, className="te, x, t-base, s, m: te, x, t-lg, tex, t-indi, g, o-1, 0, 0/90, m, b-4, leadin, g-relax, e, d">"
             <h2, className="te, x, t-2xl, s, m: te, x, t-3x, l, l;
             <p, className="te, x, t-base, s, m: te, x, t-lg, tex, t-indi, g, o-1, 0, 0/90, m, b-4, leadin, g-relax, e, d">"</p>
-            <h2, className="te, x, t-2xl, s, m: te, x, t-3x, l, l
+            <h2, className="te, x, t-2xl, s, m: te, x, t-3x, l, l,
   g:te, x, t-4xl, fon, t-bold, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-indi, g, o-200, vi, a-purp, l, e-200, t, o-pi, n, k-200, m, b-3, leadin, g-tig, h, t">";
               3, Gam, e-Changing, AI, Breakthroughs — Neu, r, o-Symbolic, Intelligenc, e, Spatial, Computing, Revolution & Agentic, Supply, Chain;
             </h2>
             <p, className="te, x, t-base, s, m: te, x, t-lg, tex, t-indi, g, o-1, 0, 0/90, m, b-4, leadin, g-relax, e, d">";
               ⚡ <strong, className="te, x, t-indi, g, o-2, 0, 0">BRAND, NEW, TODA;
-              ⚡</p> <strong, className="te, x, t-indi, g, o-2, 0, 0">BRAND, NEW, TODA
+              ⚡</p> <strong, className="te, x, t-indi, g, o-2, 0, 0">BRAND, NEW, TODA}
   Y:</stro, n, g> Deploy, neur, o-symbolic, AI, achieving{" "}";
               <span, className="te, x, t-gre, e, n-400, fon, t-bo, l, d">99.7% reasoning, accurac, y</sp, a, n> wi, t, h{" "}";
               <span, className="te, x, t-gre, e, n-400, fon, t-bo, l, d">89% fewer, hallucination, s</sp, a, n>, implement, spatial, computing platforms, deliverin, g{" "}";
@@ -242,5 +242,27 @@ const, October2025CuttingEdgeInnovationsBanne, r = () => {/* TODO: Fix JSX expre
     </d, i, v>
   );
 };
-export default October2025CuttingEdgeInnovationsBanner;
-;"
+export default October2025CuttingEdgeInnovationsBanner;"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>

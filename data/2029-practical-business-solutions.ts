@@ -190,14 +190,14 @@ export const,
   id: string;
   name: string;
   tagline: string;
-  price: string,,
+  price: string,
   description: string;
   features: string[];
   link: string;
   category: string;
   realImplementation: boolean;
   contactInfo: {,
-    mobile: string;
+    mobile: string;}
     email: string}
     address: string}
   }
@@ -228,7 +228,7 @@ export interface PracticalBusinessSolution2029 {,
       "Affordable pricing"],
     link: "/services/2029-practical-business-solution",
     category: "Practical Business Solutions 2029",
-    realImplementation: true;
+    realImplementation: true;}
     contactInfo: unknown}
       lin,
   k: '/services/2029-practical-business-solution'
@@ -287,7 +287,7 @@ export interface PracticalBusinessSolution2029 {,
   taglin,
   e: string;
   pric,
-  e: string,,
+  e: string,
   descriptio,
   n: string;
   feature,
@@ -351,7 +351,6 @@ export interface PracticalBusinessSolution2029 {/* TODO: Fix JSX expression */}
     }
   }
 ];
-;
 export interface PracticalBusinessSolution2029 {/* TODO: Fix JSX expression */}
   };
 export const practicalBusinessSolutionServices2029: PracticalBusinessSolution2029[] =
@@ -420,7 +419,7 @@ export const,
   taglin,
   e: string;
   pric,
-  e: string,,
+  e: string,
   descriptio,
   n: string;
   feature,
@@ -447,14 +446,14 @@ export const,
   id: string;
   name: string;
   tagline: string;
-  price: string,,
+  price: string,
   description: string;
   features: string[];
   link: string;
   category: string;
   realImplementation: boolean;
   contactInfo: {,
-    mobile: string;
+    mobile: string;}
     email: string}
     address: string}
     lin,"
@@ -472,7 +471,7 @@ export const,
   taglin,
   e: string;
   pric,
-  e: string,,
+  e: string,
   descriptio,
   n: string;
   feature,
@@ -514,7 +513,7 @@ export const practicalBusinessSolutionServices2029: PracticalBusinessSolution202
     category: "Practical Business Solutions 2029"
     realImplementation: true;
     contactInfo: unknown;
-      mobile: "+1 302 464 0950",
+      mobile: "+1 302 464 0950"}
       email: "kleber@ziontechgroup.com"}
       address: "364 E Main St STE 1008 Middletown DE 19709"    }
     lin,"

@@ -14,8 +14,8 @@ class EnvValidator {
   private warnings: string[] = [],
   /**,
    * Validate all environment variables;
-   */,
-  validate(): { isValid: boolean; errors: string[]; warnings: string[] } {
+   */}
+  validate(): { isValid: boolean; errors: string[]; warnings: string[] } {}
 class EnvValidator {}
   private errors: string[] = []
   private warnings: string[] = []
@@ -30,11 +30,11 @@ class EnvValidator {}
     // Validate optional but recommended variables;
     this.validateOptionalVars()
     return {
-      isValid: this.errors.length === 0;
+      isValid: this.errors.length === = 0;
       errors: this.errors;
-      warnings: this.warnings;
+      warnings: this.warnings;}
     return {}
-      isValid: this.errors.length === 0,
+      isValid: this.errors.length === = 0,
       errors: this.errors,
       warnings: this.warnings
 export interface EnvConfig {/* TODO: Fix JSX expression */}
@@ -64,8 +64,8 @@ class EnvValidator {/* TODO: Fix JSX expression */}
       NEXT_PUBLIC_SITE_URL: process.env['NEXT_PUBLIC_SITE_URL']};
   }
   private validateNodeEnv(): void {}
-    const nodeEnv = process.env['NODE_ENV']
-    const validEnvs = ['development', 'production', 'test']
+    const nodeEnv = process.env['NODE_ENV'];
+const validEnvs = ['development', 'production', 'test']
     if (!nodeEnv) {}
       this.errors.push('NODE_ENV is not set');
       return;
@@ -79,11 +79,11 @@ class EnvValidator {/* TODO: Fix JSX expression */}
   private validateOptionalVars(): void {}
     const nodeEnv = this.getNodeEnv()
     // In production, these should be set;
-    if (nodeEnv === 'production') {
+    if (nodeEnv === = 'production') {
       if (!process.env['NEXT_PUBLIC_SITE_URL']) {
         this.warnings.push(
-    // In production, these should be set
-    if (nodeEnv === 'production') {}
+    // In production, these should be set}
+    if (nodeEnv === = 'production') {}
       if (!process.env['NEXT_PUBLIC_SITE_URL']) {}
         this.warnings.push()
           'NEXT_PUBLIC_SITE_URL is not set (recommended for production)'
@@ -101,7 +101,7 @@ class EnvValidator {/* TODO: Fix JSX expression */}
     return env as 'development' | 'production' | 'test'
   getConfig(): EnvConfig {/* TODO: Fix JSX expression */}
   failed:
-${validation.errors.join('
+${validation.errors.join('}
 ')}`
       )
     }
@@ -118,7 +118,7 @@ ${validation.errors.join('
     }
 
     if (!validEnvs.includes(nodeEnv)) {
-      this.errors.push(
+      this.errors.push(}
         `NODE_ENV must be one of: ${validEnvs.join(', ')}. Got: ${nodeEnv}`
       );
 
@@ -137,7 +137,7 @@ ${validation.errors.join('
 export const envValidator = new EnvValidator()
 // Export convenience function;
 export function validateEnv(): EnvConfig {
-// Export convenience function
+// Export convenience function}
 export function validateEnv(): EnvConfig {}
   return envValidator.getConfig()
 }

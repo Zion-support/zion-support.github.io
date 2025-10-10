@@ -1,12 +1,12 @@
 import fs from 'fs';
 
 function fixPageJSX() {
-  try {
-    let content = fs.readFileSync('app/page.tsx', 'utf8');
+  try {;
+let content = fs.readFileSync('app/page.tsx', 'utf8');
     
-    // Fix specific malformed patterns
-    const fixes = [
-      // Fix malformed closing tags
+    // Fix specific malformed patterns;
+const fixes = [
+      // Fix malformed closing tags}
       { pattern: /<\/Navigatio>/g, replacement: '</Navigation>' },
       { pattern: /<\/sectio>/g, replacement: '</section>' },
       { pattern: /<\/div>/g, replacement: '</div>' },
@@ -48,18 +48,17 @@ function fixPageJSX() {
       { pattern: /<(\w+)><\/\1>/g, replacement: '<$1></$1>' },
       
       // Fix broken closing tags
-      { pattern: /<\/\w+><\/\w+>/g, replacement: (match) => {
-        const firstTag = match.match(/<\/(\w+)>/)[1];
+      { pattern: /<\/\w+><\/\w+>/g, replacement: (match) => {;
+const firstTag = match.match(/<\/(\w+)>/)[1];}
         return `</${firstTag}>`;
       }}
     ];
-    
-    let modified = false;
-    for (const fix of fixes) {
-      const newContent = content.replace(fix.pattern, fix.replacement);
-      if (newContent !== content) {
+let modified = false;
+    for (const fix of fixes) {;
+const newContent = content.replace(fix.pattern, fix.replacement);
+      if (newContent !== == content) {
         content = newContent;
-        modified = true;
+        modified = true;}
       }
     }
     
@@ -69,14 +68,46 @@ function fixPageJSX() {
     if (modified) {
       fs.writeFileSync('app/page.tsx', content, 'utf8');
       console.log('Fixed app/page.tsx');
-      return true;
+      return true;}
     }
     
     return false;
   } catch (error) {
     console.error('Error fixing app/page.tsx:', error.message);
-    return false;
+    return false;}
   }
 }
 
 fixPageJSX();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>

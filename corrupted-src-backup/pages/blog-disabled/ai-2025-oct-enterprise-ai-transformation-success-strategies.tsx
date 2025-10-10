@@ -1,7 +1,6 @@
 impo, r, t {/* TODO: Fix JSX expression */}
 } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-
 const EnterpriseAITransformationSuccessStrategie, s = () => { 
   return(:src/pages/blog/ai-2025-oct-enterprise-ai-transformation-success-strategies.tsx;
     <>
@@ -58,7 +57,6 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400 mt-2 text-4xl">
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">,
         <Header />,
-,
       <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k'>
   Enterprise AI Transformation Success Strategies</h1>
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400 mt-2 text-4xl"></span>
@@ -95,7 +93,7 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {
                 <Users, className='w-6 h-6, tex, t-whi, t, e' />
               </div>
                 <div, classNam, e='bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-8, border, border-zi, o, n-cy, a, n/30'></div>
-                  <p, classNam, e='mb-4'>
+                  <p, classNam, e='mb-4'>}
                 { val, u, e: '$2., 9, T', lab, e, l: 'AI, Business, Value 2, 0, 2, 5' },
                 { val, u, e: '10, x', lab, e, l: 'Average, R, O, I' },
                 { val, u, e: '4, 0%', lab, e, l: 'Cost, Reducti, o, n' },
@@ -103,7 +101,7 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {
                 <div, className='bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-8, border, border-zi, o, n-cy, a, n/30'></div>
                   <p, className='mb-4'>
                     Enterprise, AI, transformation is, no, longer option, a, l—it's a{' '}</p>
-                    <strong, className='te, x, t-whi, t, e'>
+                    <strong, className='te, x, t-whi, t, e'>;
 const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX expression */}
                 { val, u, e: '$2., 9, T', lab, e, l: 'AI, Business, Value 2, 0, 2, 5' },
                 { val, u, e: '10, x', lab, e, l: 'Average, R, O, I' },
@@ -148,7 +146,7 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
                 <h2, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3'></h2>
                   <Target, className='w-8 h-8, tex, t-purp, l, e-4, 0, 0' /></Target>
                   The, 7, Pillars of, AI, Success;
-                    <div, ke, y = { in, d, e, x }, classNa, m, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-zi, o, n-cy, a, n/20, hove, r: bord, e, r-zi, o, n-cy, a, n/50, transitio, n-a, l, l'
+                    <div, ke, y ={in, d, e, x } , classNa, m, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-zi, o, n-cy, a, n/20, hove, r: bord, e, r-zi, o, n-cy, a, n/50, transitio, n-a, l, l'
                     ></div>
                       <div, className='flex, item, s-start, ga, p-4'></div>
                         <div, className='te, x, t-4, x, l'>{pill, a, r.ic, o, n}</div>
@@ -178,8 +176,8 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
                         <h4, className='te, x, t-white, fon, t-semibold, m, b-2'>
                           Key, Milestone, s: </h4>,
                         <ul, className='spa, c, e-y-2'>
-                          { pha, s, e.mileston, e, s.m, a, p((miles, t, o, n, e, mInd, e, x) = > (
-                            <li, ke, y = { mIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'>
+                          { pha, s, e.mileston, e, s.m, a, p((miles, t, o, n, e, mInd, e, x) = > (}
+                            <li, ke, y ={mIn, d, e, x  } , classNa, m, e = 'flex, item, s-start, ga, p-2'>
                               <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
                     },
                         '50+ models, in, productio, n',
@@ -190,7 +188,7 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
                           Key, Milestone, s: </h4>
                         <ul, className='spa, c, e-y-2'></ul>
                           {/* TODO: Fix JSX expression */}
-                            <li, ke, y = { mIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'></li>
+                            <li, ke, y ={mIn, d, e, x  } , classNa, m, e = 'flex, item, s-start, ga, p-2'></li>
                               <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' /></CheckCircle>
                         '40% reduction, in, inventory co, s, t, s',
                         '28% increase, in, customer lifetime, valu, e',
@@ -201,10 +199,10 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
                         '47% reduction, in, unplanned downt, i, m, e',
                         '34% improvement, in, first-pass, qualit, y',
                         '$180 M, in, inventory optimizati, o, n']}].m, a, p((sto, r, y, ind, e, x) => (
-                    <div, ke, y = { in, d, e, x }, classNa, m, e = 'bg-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/40, t, o-bl, u, e-9, 0, 0/40, rounde, d-x, l, p-8, border, border-purp, l, e-5, 0, 0/30'
+                    <div, ke, y ={in, d, e, x } , classNa, m, e = 'bg-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/40, t, o-bl, u, e-9, 0, 0/40, rounde, d-x, l, p-8, border, border-purp, l, e-5, 0, 0/30'
                     ></div>
                       <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-2'>
-                  ].m, a, p((sto, r, y, ind, e, x) => (<div, ke, y = { in, d, e, x }, classNa, m, e = 'bg-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/40, t, o-bl, u, e-9, 0, 0/40, rounde, d-x, l, p-8, border, border-purp, l, e-5, 0, 0/30'
+                  ].m, a, p((sto, r, y, ind, e, x) => (<div, ke, y ={in, d, e, x } , classNa, m, e = 'bg-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/40, t, o-bl, u, e-9, 0, 0/40, rounde, d-x, l, p-8, border, border-purp, l, e-5, 0, 0/30'
                     ></div>
                       <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-2'></h3>
                         {sto, r, y.company}
@@ -221,8 +219,8 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
                             Investme, n, t;
                           </d, i, v>
                       <ul, classNam, e='spa, c, e-y-2'></ul>
-                        { sto, r, y.highligh, t, s.m, a, p((highli, g, h, t, hInd, e, x) = > (
-                          <li, ke, y = { hIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'>
+                        { sto, r, y.highligh, t, s.m, a, p((highli, g, h, t, hInd, e, x) = > (}
+                          <li, ke, y ={hIn, d, e, x  } , classNa, m, e = 'flex, item, s-start, ga, p-2'>
                             <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
                           <div, className='te, x, t-lg, fon, t-bold, tex, t-cy, a, n-4, 0, 0'></div>
                             {sto, r, y.invest, m, e, n, t}
@@ -232,7 +230,7 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
                           </d, i, v>
                       <ul, classNam, e='spa, c, e-y-2'></ul>
                         {/* TODO: Fix JSX expression */}
-                          <li, ke, y = { hIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'></li>
+                          <li, ke, y ={hIn, d, e, x  } , classNa, m, e = 'flex, item, s-start, ga, p-2'></li>
                             <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' /></CheckCircle>
                 <div, classNam, e='grid, m, d: gr, i, d-co, l, s-2, ga, p-4'></div>
                 <div, className='grid, m, d: gr, i, d-co, l, s-2, ga, p-4'></div>
@@ -265,7 +263,7 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
             {/* Key Metrics */};
             <div>
               {[
-              {[
+              {[}
                 { value="$2.9 T", label="AI Business Value 2025" },"
                 { value="10 x", label="Average ROI" },"
                 { value="40%", label="Cost Reduction" },"
@@ -380,7 +378,7 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
                         <div></div>
                         <h4 className="text-white font-semibold mb-2">Key Milestones: </h4>
                         <ul className="space-y-2>
-                          {phase.milestones.map((milestone, mIndex) => ("
+                          {phase.milestones.map((milestone, mIndex) => ("}
                             <li key={mIndex} className="flex items-start gap-2">
                         <div></div>"
                 <h2 className="text-3xl font-bold text-white mb-6">📈 Implementation Roadmap</h2>"
@@ -403,13 +401,13 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
                       <div>
                         <h4 className="text-white font-semibold mb-2">Key Milestones: </h4>,
                         <ul className="space-y-2">,
-                          {phase.milestones.map((milestone, mIndex) => (
+                          {phase.milestones.map((milestone, mIndex) => (}
                             <li key={mIndex} className="flex items-start gap-2">
                               <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
                       <div>
                         <h4 className="text-white font-semibold mb-2">Key Milestones: </h4>,
                         <ul className="space-y-2">,
-                          {phase.milestones.map((milestone, mIndex) => (
+                          {phase.milestones.map((milestone, mIndex) => (}
                             <li key={mIndex} className="flex items-start gap-2">
                               <CheckCircle className=" />" />>
                       <div>
@@ -418,19 +416,19 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
                       <div></div>
                         <h4 className="text-white font-semibold mb-2">Key Milestones: </h4>
                         <ul className="space-y-2"></ul>
-                          {phase.milestones.map((milestone, mIndex) => (
+                          {phase.milestones.map((milestone, mIndex) => (}
                             <li key={mIndex} className="flex items-start gap-2">
                               <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
                       <div></div>
                         <h4 className="text-white font-semibold mb-2">Key Milestones: </h4>
                         <ul className="space-y-2"></ul>
-                          {phase.milestones.map((milestone, mIndex) => (
+                          {phase.milestones.map((milestone, mIndex) => (}
                             <li key={mIndex} className="flex items-start gap-2">
                               <CheckCircle className=" />" />>
                       <div></div>
                         <h4 className="text-white font-semibold mb-2">Key Milestones: </h4>
                         <ul className="space-y-2">
-                          {phase.milestones.map((milestone, mIndex) => (
+                          {phase.milestones.map((milestone, mIndex) => (}
                             <li key={mIndex} className="flex items-start gap-2">
                               <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
                       <div></div>"
@@ -478,18 +476,18 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
                       investment: "$45M;
                       value="$680M annual value",
                       roi: "15x ROI;
-                      highlights: [,,
+                      highlights: [,
                         "28% increase in customer lifetime value"
-                      company="Global Retail Chain",,"
-                      industry="Fortune 100 Retailer",,"
-                      investment="$45 M",,"
-                      value="$680 M annual value",,"
-                      roi="15 x ROI",,"
-                      highlights: [,,
+                      company="Global Retail Chain","
+                      industry="Fortune 100 Retailer","
+                      investment="$45 M","
+                      value="$680 M annual value","
+                      roi="15 x ROI","
+                      highlights: [,
                         "40% reduction in inventory costs;
                         "28% increase in customer lifetime value;
                         "18% revenue growth attributed to AI"
-                      ]
+                      ]}
                     },
                     {
                       company="Healthcare Provider;
@@ -501,18 +499,18 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
                       investment: "$28M;
                       value="$420M annual savings",
                       roi: "15x ROI;
-                      highlights: [,,
+                      highlights: [,
                         "19% improvement in patient outcomes"
-                      company="Healthcare Provider",,"
-                      industry="Multi-hospital system",,"
-                      investment="$28 M",,"
-                      value="$420 M annual savings",,"
-                      roi="15 x ROI",,"
-                      highlights: [,,
+                      company="Healthcare Provider","
+                      industry="Multi-hospital system","
+                      investment="$28 M","
+                      value="$420 M annual savings","
+                      roi="15 x ROI","
+                      highlights: [,
                         "23% reduction in readmissions;
                         "19% improvement in patient outcomes;
                         "$127M in operational efficiencies"
-                      ]
+                      ]}
                     },
                     {
                       company="Manufacturing Enterprise;
@@ -524,18 +522,18 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
                       investment: "$38M;
                       value="$580M annual value",
                       roi: "15.3x ROI;
-                      highlights: [,,
+                      highlights: [,
                         "34% improvement in first-pass quality"
-                      company="Manufacturing Enterprise",,"
-                      industry="Global manufacturer",,"
-                      investment="$38 M",,"
-                      value="$580 M annual value",,"
-                      roi="15.3 x ROI",,"
-                      highlights: [,,
+                      company="Manufacturing Enterprise","
+                      industry="Global manufacturer","
+                      investment="$38 M","
+                      value="$580 M annual value","
+                      roi="15.3 x ROI","
+                      highlights: [,
                         "47% reduction in unplanned downtime;
                         "34% improvement in first-pass quality;
                         "$180M in inventory optimization"
-                      ]
+                      ]}
                     }
                   ].map((story, index) => (
   </section>
@@ -695,7 +693,7 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
   );
 };
 
-export default EnterpriseAITransformationSuccessStrategies;;
+export default EnterpriseAITransformationSuccessStrategies;
   </div>
   </div>
   </div>
@@ -753,3 +751,4 @@ export default EnterpriseAITransformationSuccessStrategies;;
 </Check>
 </Check>
 "
+</>

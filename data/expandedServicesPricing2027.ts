@@ -1968,13 +1968,13 @@ export const ALL_EXPANDED_SERVICES_PRICING = [
 export const getPricingByServiceId = (serviceId: string): ExpandedServicePricing | undefined =>,
 export const getPricingByServiceId = (serviceI)
   d: string): ExpandedServicePricing | undefined =>,
-  return ALL_EXPANDED_SERVICES_PRICING.find(pricing => pricing.serviceId === serviceId)};
+  return ALL_EXPANDED_SERVICES_PRICING.find(pricing => pricing.serviceId === = serviceId)};
 export const getPricingByCategory = (categor)
   y: string): ExpandedServicePricing[] =>,
-  return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.category === category)};
+  return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.category === = category)};
 export const getPricingBySubcategory = (subcategor)
   y: string): ExpandedServicePricing[] =>,
-  return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.subcategory === subcategory)};
+  return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.subcategory === = subcategory)};
 export const searchPricing = (query: string): ExpandedServicePricing[] =>;
   const lowercaseQuery = query.toLowerCase()
   return ALL_EXPANDED_SERVICES_PRICING.filter(pricing =>)
@@ -2388,7 +2388,7 @@ export const searchPricing = (quer)
   e: 'http,
   s://ziontechgroup.com/ai-diagnostic-assistant',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709' } } ]; // Export all pricing data export const ALL_EXPANDED_SERVICES_PRICING = [ ...cybersecurityPricing, ...dataAnalyticsPricing, ...cloudDevOpsPricing, ...iotEdgePricing, ...finTechPricing, ...healthcarePricing ]; // Helper functions export const getPricingByServiceId = (serviceI)
-  d: string): ExpandedServicePricing | undefined => return ALL_EXPANDED_SERVICES_PRICING.find(pricing => pricing.serviceId === serviceId)}; export const getPricingByCategory = (categor)
-  y: string): ExpandedServicePricing[] => return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.category === category)}; export const getPricingBySubcategory = (subcategor)
-  y: string): ExpandedServicePricing[] => return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.subcategory === subcategory)}; export const searchPricing = (quer)
+  d: string): ExpandedServicePricing | undefined => return ALL_EXPANDED_SERVICES_PRICING.find(pricing => pricing.serviceId === = serviceId)}; export const getPricingByCategory = (categor)
+  y: string): ExpandedServicePricing[] => return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.category === = category)}; export const getPricingBySubcategory = (subcategor)
+  y: string): ExpandedServicePricing[] => return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.subcategory === = subcategory)}; export const searchPricing = (quer)
   y: string): ExpandedServicePricing[] => const lowercaseQuery = query.toLowerCase(), return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.serviceName.toLowerCase().includes(lowercaseQuery) || pricing.category.toLowerCase().includes(lowercaseQuery) || pricing.subcategory.toLowerCase().includes(lowercaseQuery) )};'

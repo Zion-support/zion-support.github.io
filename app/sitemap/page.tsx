@@ -1,7 +1,6 @@
 import React from 'react';
-
-const SitemapPage: React.FC = () => {
-  const pages = [
+const SitemapPage: React.FC = () => {;
+const pages = [}
     { path: '/', title: 'Home', description: 'Zion Tech Group - Advanced AI and IT Solutions' },
     { path: '/about', title: 'About Us', description: 'Learn about our mission and expertise' },
     { path: '/services', title: 'All Services', description: 'Comprehensive AI, IT, and micro SAAS solutions' },
@@ -26,8 +25,7 @@ const SitemapPage: React.FC = () => {
     { path: '/blog', title: 'Blog & Insights', description: 'Latest insights and trends in AI and technology' },
     { path: '/guides', title: 'Technical Guides', description: 'Comprehensive guides and documentation' },
     { path: '/privacy', title: 'Privacy Policy', description: 'Our privacy policy and data protection practices' },
-    { path: '/terms', title: 'Terms of Service', description: 'Terms and conditions for our services' },
-  ];
+    { path: '/terms', title: 'Terms of Service', description: 'Terms and conditions for our services' }];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8"></div>
@@ -43,12 +41,11 @@ const SitemapPage: React.FC = () => {
 
         <div className="bg-white rounded-lg shadow-lg p-8"></div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {pages.map((page, index) => (</div>
+            {pages.map((page, index) => (</div>}
               <div key={index} className="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow"></div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
                   <a 
-                    href={page.path} 
-                    className="text-blue-600 hover:text-blue-700 transition-colors"
+                    href={page.path} className="text-blue-600 hover:text-blue-700 transition-colors"
                   >
                     {page.title}
                   </a>

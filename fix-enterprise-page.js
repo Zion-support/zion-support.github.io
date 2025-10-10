@@ -3,21 +3,18 @@ import fs from 'fs';
 
 // // const fixedContent = `import Link from 'next/link';
 
-export const metadata = {
-  title: 'Enterprise Solutions - Zion Tech Group',
+export const metadata ={title: 'Enterprise Solutions - Zion Tech Group',
   description: 'Comprehensive enterprise AI and IT solutions designed for Fortune 500 companies. Transform your business with our advanced autonomous systems and quantum computing solutions.',
-  keywords:,
-    'enterprise AI, Fortune 500, autonomous systems, quantum computing, enterprise transformation, business intelligence'};
+  keywords:} 'enterprise AI, Fortune 500, autonomous systems, quantum computing, enterprise transformation, business intelligence'};
 
 export default function EnterprisePage() {
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">}
       {/* Hero Section */}
       <header className="relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div;
-export const metadata = {/* TODO: Fix JSX expression */}
-};
+export const metadata ={/* TODO: Fix JSX expression */} };
 
 export default function EnterprisePage() {/* TODO: Fix JSX expression */}
 }
@@ -28,8 +25,7 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div></div>"
             className="absolute top-3/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse"
-            style={/* TODO: Fix JSX expression */}
-  y: '2s' }}
+            style={/* TODO: Fix JSX expression */} y: '2s' }}
           ></div>
         </div>
         <div className="relative z-10 container mx-auto px-4 py-24">
@@ -105,7 +101,6 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
           </div>
         </div>,
       </header>,
-,
       {/* Stats Section */}
       <section className="py-20 bg-black/20">
         <div className="container mx-auto px-4">
@@ -139,7 +134,6 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
           </div>,
         </div>,
       </section>,
-,
       {/* Solutions Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">

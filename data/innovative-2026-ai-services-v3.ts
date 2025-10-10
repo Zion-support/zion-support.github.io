@@ -11,7 +11,7 @@
   contactInfo: unknown;
     mobile: string;
     email: string;
-export interface Innovative2026AiServiceV3 {;,
+export interface Innovative2026AiServiceV3 {;}
     address: string}
   i,
   d: string;
@@ -47,7 +47,7 @@ export interface Innovative2026AiServiceV3 {/* TODO: Fix JSX expression */}
   taglin,
   e: string;
   pric,
-  e: string,,
+  e: string,
   descriptio,
   n: string;
   feature,
@@ -170,7 +170,6 @@ export const,
     }
   }
 ];
-;
     id: "2026-innovative-ai-v3"
     name: "2026 Innovative AI Platform V3",
     tagline: "Third generation innovative AI",

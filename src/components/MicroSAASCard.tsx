@@ -31,11 +31,11 @@ interface MicroSAASCardProps {/* TODO: Fix JSX expression */}
     popular?: boolean;
   };
 }
-
+;
 const MicroSAASCard: React.FC;
           <MicroSAASCardProps> = ({ service }) => {// TODO: Add content;}
 }
-
+;
 const MicroSAASCard: React.FC<MicroSAASCardProps> = () => {
   return (
     
@@ -48,8 +48,8 @@ const MicroSAASCard: React.FC<MicroSAASCardProps> = () => {
           
           <div>Coming Soon</div>
   )
-    
-          <div className={`cyber-card p-6 hover:scale-105 transition-all duration-300 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}>
+    }
+          <div className={`cyber-card p-6 hover:scale-105 transition-all duration-300 ${service.popular ? 'ring-2 ring-cyan-400' : ''} `}>
 
       {service.popular && ()}
           <div className="absolute -top-3 left-1/2 transform -translate-x-1/2"></div>"
@@ -110,8 +110,7 @@ const MicroSAASCard: React.FC<MicroSAASCardProps> = () => {
         </div>"
         <div className="pt-4"></div>
           <a></a>
-            href={/* TODO: Fix JSX expression */}
-  o:kleber@ziontechgroup.com'}"
+            href={/* TODO: Fix JSX expression */} o:kleber@ziontechgroup.com'}"
             className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg,
   hover:from-cyan-600,"
   hover:to-blue-700 transition-all duration-300 flex items-center justify-center text-sm font-medium"

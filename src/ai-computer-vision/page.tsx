@@ -7,9 +7,9 @@ import Footer from '../components/Footer';
 import { Eye, Camera, Video, Target, Shield, CheckCircle, ArrowRight, Settings } from 'lucide-react';
 
 import { Target, Shield, Eye,  Camera,  Target,  Shield,  Settings } from 'lucide-react';
-const AIComputerVisionPage: React.FC = () => {
-  const features = [];
-  return (
+const AIComputerVisionPage: React.FC = () => {;
+const features = [];
+  return (}
     {// TODO: Add content;}
 
 };
@@ -56,8 +56,8 @@ const AIComputerVisionPage: React.FC = () => {
       ico,
   n: Settings,
       useCase,
-  s: ['Defect detection', 'Quality assurance', 'Process monitoring']
-  const pricing = [
+  s: ['Defect detection', 'Quality assurance', 'Process monitoring'];
+const pricing = [
       nam,
   e: 'Starter',
       pric,
@@ -74,8 +74,7 @@ const AIComputerVisionPage: React.FC = () => {
 //         'Standard API'
 //       ],
 
-      popular: false,
-
+      popular: false,;
 const PagePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -103,7 +102,7 @@ Transform your business with cutting-edge computer vision technology. From objec
               +1 302 464 0950;
           </div>
         </section>
-
+}
         {/* Features Section */}
         <section className="mb-16"></section>"
           <h2 className="text-3xl,"
@@ -157,8 +156,7 @@ Transform your business with cutting-edge computer vision technology. From objec
           <div className="grid grid-cols-1,"
   md:grid-cols-3 gap-8 max-w-6xl mx-auto"></div>
             {pricing.map((plan, index) => ()}
-          <div key={index} className={/* TODO: Fix JSX expression */}
-  hover:scale-105 transition-all duration-300 ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}></div>
+          <div key={index} className={/* TODO: Fix JSX expression */} hover:scale-105 transition-all duration-300 ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}></div>
                 {plan.popular && ()}"
           <div className="absolute -top-3 left-1/2 transform -translate-x-1/2"></div>"
                     <div className="bg-cyan-400 text-slate-900 px-3 py-1 rounded-full text-xs font-semibold"></div>
@@ -173,8 +171,7 @@ Most Popular;
           <li key={featureIndex} className="flex items-center text-sm text-gray-300"></li>"
                       <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" /></CheckCircle>
                       {feature}`
-                  className={`block w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}
-  // TOD,
+                  className={`block w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${} // TOD,
   O: Add content;
 }
 //                     plan.popular;

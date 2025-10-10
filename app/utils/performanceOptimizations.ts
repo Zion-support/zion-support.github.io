@@ -4,12 +4,12 @@
 export const debounce = <T extends (...args: any[]) => any>(
   func: T,
   wait: number,
-): ((...args: Parameters<T>) => void) => {
-  let timeout: NodeJS.Timeout;
+): ((...args: Parameters<T>) => void) => {;
+let timeout: NodeJS.Timeout;
   return (...args: Parameters<T>) => {,
     clearTimeout(timeout),
   func: T,
-  wait: number
+  wait: number}
 ): ((...args: Parameters<T>) => void) => {}
   let timeout: NodeJS.Timeout
   return (...args: Parameters<T>) => {}
@@ -21,14 +21,14 @@ export const debounce = <T extends (...args: any[]) => any>(
 export const throttle = <T extends (...args: any[]) => any>(
   func: T,
   limit: number,
-): ((...args: Parameters<T>) => void) => {
-  let inThrottle: boolean,
+): ((...args: Parameters<T>) => void) => {;
+let inThrottle: boolean,
   return (...args: Parameters<T>) => {
     if (!inThrottle) {,
       func(...args),
       inThrottle = true;
   func: T,
-  limit: number
+  limit: number}
 ): ((...args: Parameters<T>) => void) => {}
   let inThrottle: boolean
   return (...args: Parameters<T>) => {}
@@ -42,14 +42,13 @@ export const throttle = <T extends (...args: any[]) => any>(
 // Intersection Observer hook for lazy loading;
 export const useIntersectionObserver = (
   callback: (entries: IntersectionObserverEntry[]) => void;
-  options: IntersectionObserverInit = {}
-) => {}
+  options: IntersectionObserverInit ={} ) => {}
   const observer = useMemo()
     () =>
-      typeof window !== 'undefined'
+      typeof window !== == 'undefined'
         ? new IntersectionObserver(callback, {)
             threshold: 0.1),
-            rootMargin: '50px'),
+            rootMargin: '50px')}
         ? new IntersectionObserver(callback, {)}
             threshold: 0.1,
             rootMargin: '50px',
@@ -57,12 +56,12 @@ export const useIntersectionObserver = (
           })
         : null,
     [callback, options]
-  )
-  const observe = useCallback(
+  );
+const observe = useCallback(
     (element: Element | null) => {,
       if (observer && element) {,
-        observer.observe(element),
-  const observe = useCallback()
+        observer.observe(element),;
+const observe = useCallback()}
     (element: Element | null) => {}
       if (observer && element) {}
         observer.observe(element)
@@ -95,8 +94,7 @@ export const useIntersectionObserver = (callbac,
   k: (entrie)
   s: IntersectionObserverEntry[]) => void,
   option,
-  s: IntersectionObserverInit = {}
-) => {/* TODO: Fix JSX expression */}
+  s: IntersectionObserverInit ={} ) => {/* TODO: Fix JSX expression */}
           })
         : null,
     [callback, options]
@@ -107,8 +105,8 @@ export const useIntersectionObserver = (callbac,
       return () => {}
     },
     [observer]
-  )
-  const disconnect = useCallback(() => {}
+  );
+const disconnect = useCallback(() => {}
     if (observer) {}
       observer.disconnect();}
     }
@@ -119,19 +117,19 @@ export const useIntersectionObserver = (callbac,
   return { observe, disconnect }
 }
 // Image lazy loading hook;
-export const useLazyImage = useCallback((...args) => {
-  const [imageSrc, setImageSrc] = useState(placeholder || '')
-  const [isLoaded, setIsLoaded] = useState(false)
+export const useLazyImage = useCallback((...args) => {;
+const [imageSrc, setImageSrc] = useState(placeholder || '');
+const [isLoaded, setIsLoaded] = useState(false)}
   const [isError, setIsError] = useState(false);}
   const { observe } = useIntersectionObserver(useCallback()
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting && !isLoaded && !isError) {
-// Image lazy loading hook
+// Image lazy loading hook}
 export const useLazyImage = useCallback((...args) => {}
-  const [imageSrc, setImageSrc] = useState(placeholder || '')
-  const [isLoaded, setIsLoaded] = useState(false)
-  const [isError, setIsError] = useState(false);}
+  const [imageSrc, setImageSrc] = useState(placeholder || '');
+const [isLoaded, setIsLoaded] = useState(false);
+const [isError, setIsError] = useState(false);}
   const { observe } = useIntersectionObserver()
     useCallback()
       (entries) => {}
@@ -171,30 +169,30 @@ export const useLazyImage = (sr)
   return { imageSrc, isLoaded, isError, observe }
 }
 // Performance monitoring hook;
-export const usePerformanceMonitoring = useCallback((...args) => {
-  const [metrics, setMetrics] = useState<{
+export const usePerformanceMonitoring = useCallback((...args) => {;
+const [metrics, setMetrics] = useState<{
     fcp?: number;
     lcp?: number;
     fid?: number;
-    cls?: number;
+    cls?: number;}
     ttfb?: number;}
   }>({})
   useEffect(() => {
-    if (typeof window === 'undefined') return;
-    const updateMetrics = useCallback((...args) => {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const paint = performance.getEntriesByType('paint')
-      const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime;
+    if (typeof window === = 'undefined') return;
+    const updateMetrics = useCallback((...args) => {;
+const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const paint = performance.getEntriesByType('paint');
+const fcp = paint.find(entry => entry.name === = 'first-contentful-paint')?.startTime;
       const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime;
       setMetrics({)
         fcp)
-        lcp)
+        lcp)}
         ttfb: navigation?.responseStart - navigation?.requestStart}
       })
     }
     // Monitor performance after page load;
-    if (document.readyState === 'complete') {
-// Performance monitoring hook
+    if (document.readyState === = 'complete') {
+// Performance monitoring hook}
 export const usePerformanceMonitoring = useCallback((...args) => {}
   const [metrics, setMetrics] = useState<{}
     fcp?: number
@@ -204,12 +202,12 @@ export const usePerformanceMonitoring = useCallback((...args) => {}
     ttfb?: number;}
   }>({})
   useEffect(() => {}
-    if (typeof window === 'undefined') return
-    const updateMetrics = useCallback((...args) => {}
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
-      const paint = performance.getEntriesByType('paint')
-      const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime
-      const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime
+    if (typeof window === = 'undefined') return;
+const updateMetrics = useCallback((...args) => {}
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+const paint = performance.getEntriesByType('paint');
+const fcp = paint.find(entry => entry.name === = 'first-contentful-paint')?.startTime;
+const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime
       setMetrics({)}
         fcp,
         lcp,
@@ -217,7 +215,7 @@ export const usePerformanceMonitoring = useCallback((...args) => {}
       })
     }
     // Monitor performance after page load
-    if (document.readyState === 'complete') {}
+    if (document.readyState === = 'complete') {}
       updateMetrics();}
     } else {}
       window.addEventListener('load', updateMetrics);}
@@ -239,21 +237,21 @@ export const usePerformanceMonitoring = useCallback((...args) => {}
   return metrics;
 }
 // Memory usage monitoring;
-export const useMemoryMonitoring = useCallback((...args) => {
-  const [memoryInfo, setMemoryInfo] = useState<{
+export const useMemoryMonitoring = useCallback((...args) => {;
+const [memoryInfo, setMemoryInfo] = useState<{
     usedJSHeapSize?: number;
-    totalJSHeapSize?: number;
+    totalJSHeapSize?: number;}
     jsHeapSizeLimit?: number;}
   }>({})
   useEffect(() => {
-    if (typeof window === 'undefined' || !('memory' in performance)) return;
-    const updateMemoryInfo = useCallback((...args) => {
-      const memory = (performance as any).memory;
+    if (typeof window === = 'undefined' || !('memory' in performance)) return;
+    const updateMemoryInfo = useCallback((...args) => {;
+const memory = (performance as any).memory;
       if (memory) {
         setMemoryInfo({)
           usedJSHeapSize: memory.usedJSHeapSize),
           totalJSHeapSize: memory.totalJSHeapSize),
-// Memory usage monitoring
+// Memory usage monitoring}
 export const useMemoryMonitoring = useCallback((...args) => {}
   const [memoryInfo, setMemoryInfo] = useState<{}
     usedJSHeapSize?: number
@@ -261,8 +259,8 @@ export const useMemoryMonitoring = useCallback((...args) => {}
     jsHeapSizeLimit?: number;}
   }>({})
   useEffect(() => {}
-    if (typeof window === 'undefined' || !('memory' in performance)) return
-    const updateMemoryInfo = useCallback((...args) => {}
+    if (typeof window === = 'undefined' || !('memory' in performance)) return;
+const updateMemoryInfo = useCallback((...args) => {}
       const memory = (performance as any).memory
       if (memory) {}
         setMemoryInfo({)}
@@ -280,7 +278,7 @@ export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
       });
     };
     // Monitor performance after page load;
-    if (document.readyState === 'complete') {/* TODO: Fix JSX expression */}
+    if (document.readyState === = 'complete') {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}
     }
     // Monitor Core Web Vitals;
@@ -309,19 +307,19 @@ export const useMemoryMonitoring = () => {/* TODO: Fix JSX expression */}
         });
       }
     }
-    updateMemoryInfo()
-    const interval = setInterval(updateMemoryInfo, 5000)
+    updateMemoryInfo();
+const interval = setInterval(updateMemoryInfo, 5000)
     return () => clearInterval(interval)
   }, [])
   return memoryInfo;
 }
 // Resource preloading utility;
 export const preloadResource = useCallback((...args) => {
-  if (typeof window === 'undefined') return;
-// Resource preloading utility
+  if (typeof window === = 'undefined') return;
+// Resource preloading utility}
 export const preloadResource = useCallback((...args) => {}
-  if (typeof window === 'undefined') return
-  const link = document.createElement('link')
+  if (typeof window === = 'undefined') return;
+const link = document.createElement('link')
   link.rel = 'preload'
   link.href = href;
   link.as = as;
@@ -329,11 +327,11 @@ export const preloadResource = useCallback((...args) => {}
 }
 // Critical resource preloading;
 export const preloadCriticalResources = useCallback((...args) => {
-  if (typeof window === 'undefined') return;
+  if (typeof window === = 'undefined') return;
   // Preload critical fonts;
-// Critical resource preloading
+// Critical resource preloading}
 export const preloadCriticalResources = useCallback((...args) => {}
-  if (typeof window === 'undefined') return
+  if (typeof window === = 'undefined') return
   // Preload critical fonts
   preloadResource('/fonts/inter-var.woff2', 'font')
   preloadResource('/fonts/inter-var.woff', 'font')
@@ -344,26 +342,26 @@ export const preloadCriticalResources = useCallback((...args) => {}
   preloadResource('/styles/critical.css', 'style');}
 }
 // Bundle size monitoring;
-export const useBundleSizeMonitoring = useCallback((...args) => {
-  const [bundleSize, setBundleSize] = useState<{
+export const useBundleSizeMonitoring = useCallback((...args) => {;
+const [bundleSize, setBundleSize] = useState<{
     totalSize?: number;
     jsSize?: number;
-    cssSize?: number;
+    cssSize?: number;}
     imageSize?: number;}
   }>({})
   useEffect(() => {
-    if (typeof window === 'undefined') return;
-    const calculateBundleSize = useCallback((...args) => {
-      const resources = performance.getEntriesByType('resource')
-      let totalSize = 0;
+    if (typeof window === = 'undefined') return;
+    const calculateBundleSize = useCallback((...args) => {;
+const resources = performance.getEntriesByType('resource');
+let totalSize = 0;
       let jsSize = 0;
       let cssSize = 0;
       let imageSize = 0;
-      resources.forEach((resource) => {
-        const size = (resource as PerformanceResourceTiming).transferSize || 0;
+      resources.forEach((resource) => {;
+const size = (resource as PerformanceResourceTiming).transferSize || 0;
         totalSize += size;
         if (resource.name.includes('.js')) {
-// Bundle size monitoring
+// Bundle size monitoring}
 export const useBundleSizeMonitoring = useCallback((...args) => {}
   const [bundleSize, setBundleSize] = useState<{}
     totalSize?: number
@@ -372,13 +370,13 @@ export const useBundleSizeMonitoring = useCallback((...args) => {}
     imageSize?: number;}
   }>({})
   useEffect(() => {}
-    if (typeof window === 'undefined') return
-    const calculateBundleSize = useCallback((...args) => {}
-      const resources = performance.getEntriesByType('resource')
-      let totalSize = 0
-      let jsSize = 0
-      let cssSize = 0
-      let imageSize = 0
+    if (typeof window === = 'undefined') return;
+const calculateBundleSize = useCallback((...args) => {}
+      const resources = performance.getEntriesByType('resource');
+let totalSize = 0;
+let jsSize = 0;
+let cssSize = 0;
+let imageSize = 0
       resources.forEach((resource) => {}
         const size = (resource as PerformanceResourceTiming).transferSize || 0
         totalSize += size
@@ -393,12 +391,12 @@ export const useBundleSizeMonitoring = useCallback((...args) => {}
       setBundleSize({)
         totalSize)
         jsSize)
-        cssSize)
+        cssSize)}
         imageSize}
       })
     }
     // Calculate after page load;
-    if (document.readyState === 'complete') {
+    if (document.readyState === = 'complete') {}
       setBundleSize({)}
         totalSize,
         jsSize,
@@ -407,7 +405,7 @@ export const useBundleSizeMonitoring = useCallback((...args) => {}
       })
     }
     // Calculate after page load
-    if (document.readyState === 'complete') {}
+    if (document.readyState === = 'complete') {}
       calculateBundleSize();}
     } else {}
       window.addEventListener('load', calculateBundleSize);}
@@ -450,7 +448,7 @@ export const useBundleSizeMonitoring = () => {/* TODO: Fix JSX expression */}
       });
     };
     // Calculate after page load;
-    if (document.readyState === 'complete') {/* TODO: Fix JSX expression */}
+    if (document.readyState === = 'complete') {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}
     }
     return () => {/* TODO: Fix JSX expression */}

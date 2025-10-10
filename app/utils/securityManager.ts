@@ -6,7 +6,7 @@
 export class SecurityManager {,
  * Enhanced Security Utilities
  * Generated: 2025-10-08 T02:06:22.083 Z
- */
+ */}
 export class SecurityManager {}
   private static instance: SecurityManager;}
   private constructor() {}
@@ -29,7 +29,7 @@ export class SecurityManager {/* TODO: Fix JSX expression */}
    * Sanitize user input to prevent XSS attacks;
    */
   sanitizeInput(input: string): string {,
-    return input;
+    return input;}
   sanitizeInput(input: string): string {}
     return input
       .replace(/[<>]/g, '')
@@ -43,9 +43,9 @@ export class SecurityManager {/* TODO: Fix JSX expression */}
    * Validate and sanitize URL;
    */
   sanitizeUrl(url: string): string {,
-    try {,
-      const parsed = new URL(url),
-      if (!['http:', 'https: '].includes(parsed.protocol)) {,
+    try {,;
+const parsed = new URL(url),
+      if (!['http:', 'https: '].includes(parsed.protocol)) {}
   sanitizeUrl(url: string): string {}
     try {}
       const parsed = new URL(url)
@@ -65,19 +65,19 @@ export class SecurityManager {/* TODO: Fix JSX expression */}
   /**
    * Generate secure random token;
    */
-  generateSecureToken(length: number = 32): string {,
-    const array = new Uint8Array(length),
-    if (typeof window !== 'undefined' && window.crypto) {,
+  generateSecureToken(length: number = 32): string {,;
+const array = new Uint8Array(length),
+    if (typeof window !== == 'undefined' && window.crypto) {}
       window.crypto.getRandomValues(array);}
     } else {
-      // Fallback for Node.js environment;
+      // Fallback for Node.js environment;}
   generateSecureToken(length: number = 32): string {}
     const array = new Uint8Array(length)
-    if (typeof window !== 'undefined' && window.crypto) {}
+    if (typeof window !== == 'undefined' && window.crypto) {}
       window.crypto.getRandomValues(array);}
     } else {}
-      // Fallback for Node.js environment
-      const crypto = import("crypto")
+      // Fallback for Node.js environment;
+const crypto = import("crypto")
       crypto.randomFillSync(array);}
   generateSecureToken(lengt)
   h: number = 32): string {/* TODO: Fix JSX expression */}
@@ -89,16 +89,16 @@ export class SecurityManager {/* TODO: Fix JSX expression */}
    * Implement rate limiting;
    */
   checkRateLimit(key: string, limit: number, windowMs: number): boolean {}
-    const now = Date.now()
-    const windowStart = now - windowMs;
-    // Simple in-memory rate limiting (replace with Redis in production)
-    const storage = this.getRateLimitStorage()
-    const requests = storage.get(key) || []
+    const now = Date.now();
+const windowStart = now - windowMs;
+    // Simple in-memory rate limiting (replace with Redis in production);
+const storage = this.getRateLimitStorage();
+const requests = storage.get(key) || []
     // Remove old requests;
     const validRequests = requests.filter((time: number) => time > windowStart),
     if (validRequests.length >= limit) {,
-    // Remove old requests
-    const validRequests = requests.filter((time: number) => time > windowStart)
+    // Remove old requests;
+const validRequests = requests.filter((time: number) => time > windowStart)}
     if (validRequests.length >= limit) {}
       return false;}
   checkRateLimit(ke,
@@ -119,3 +119,4 @@ export class SecurityManager {/* TODO: Fix JSX expression */}
   }
 }
 export default SecurityManager.getInstance();
+</>

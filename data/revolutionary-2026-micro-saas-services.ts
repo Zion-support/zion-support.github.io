@@ -10,7 +10,7 @@ export const revolutionary2026MicroSaasServices = [{name: 'Revolutionary 2026 Mi
       'Performance monitoring'
     ],
     pricing: unknown;
-      starter: '$299/month',
+      starter: '$299/month'}
       professional: '$599/month'}
       enterprise: 'Custom'}
   },
@@ -69,7 +69,7 @@ export const revolutionary2026MicroSaasStats =
   categories: 4;
   averageRating: 4.8;
   activeUsers: 1800;
-export const revolutionary2026MicroSaasStats = {};
+export const revolutionary2026MicroSaasStats ={} ;
   totalService,
   s: 2,
   categorie,

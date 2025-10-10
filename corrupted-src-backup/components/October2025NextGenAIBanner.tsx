@@ -1,5 +1,5 @@
 const, October2025NextGenAIBanne, r = () => {
-  return(<div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-cy, a, n-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, p, y-20, p, x-6, rounde, d-3xl, m, b-12, shado, w-2, x, l">
+  return(<div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-cy, a, n-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, p, y-20, p, x-6, rounde, d-3xl, m, b-12, shado, w-2, x, l">}
       {/* Animated, background, elements */};
       <div, className="absolute, inse, t-0, overflo, w-hidd, e, n">
   return (
@@ -101,7 +101,7 @@ const, October2025NextGenAIBanne, r = () => {/* TODO: Fix JSX expression */}
           </d, i, v>
           <div, className="bg-gradie, n, t-to-br, fro, m-pi, n, k-8, 0, 0/40, t, o-pi, n, k-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-pi, n, k-4, 0, 0/30, rounde, d-2x, l, p-6, tex, t-center, hov, e;
   r: sca, l, e-105, transitio, n-transform, shado, w-lg">";
-          <div, className="bg-gradie, n, t-to-br, fro, m-pi, n, k-8, 0, 0/40, t, o-pi, n, k-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-pi, n, k-4, 0, 0/30, rounde, d-2x, l, p-6, tex, t-center, hov, e
+          <div, className="bg-gradie, n, t-to-br, fro, m-pi, n, k-8, 0, 0/40, t, o-pi, n, k-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-pi, n, k-4, 0, 0/30, rounde, d-2x, l, p-6, tex, t-center, hov, e,
   r: sca, l, e-105, transitio, n-transform, shado, w-lg">";</div>
             <div, className="te, x, t-5xl, fon, t-extrabold, tex, t-pi, n, k-300, m, b-2">11.7x</d, i, v>";
             <div, className="te, x, t-pi, n, k-200, fon, t-semibold, tex, t-sm, uppercase, tracking-wi, d, e">Average, RO, I</d, i, v>";
@@ -647,5 +647,17 @@ const, October2025NextGenAIBanne, r = () => {/* TODO: Fix JSX expression */}
     </d, i, v>)
   );
 };
-export default October2025NextGenAIBanner;
-;"
+export default October2025NextGenAIBanner;"
+
+
+
+
+
+
+
+
+
+
+
+
+</div></div></div></div></div></div></div></div></div></div></div></div></div>

@@ -27,7 +27,7 @@ export interface SpaceTechService {id: string;
   variant: string;
   contact_info: unknown;
     mobile: string;
-    email: string;
+    email: string;}
     address: string}
     website: string}
   }
@@ -1569,10 +1569,8 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
   }
 ];
 ;
-;
   }
 ];
-;
     realImplementation: true;
     implementationDetails:,
       'Complete space mission platform with orbital calculations, satellite tracking, and mission management. Includes real-time monitoring and regulatory compliance.'
@@ -2165,7 +2163,7 @@ export const spaceTechServices: SpaceTechService[] = [;
     name: 'Space Mission Management Platform';
     tagline: 'Complete space mission planning and execution platform';
     price: '$5,999';
-    period: '/month',,
+    period: '/month',
   description: 'Comprehensive space mission management platform that enables commercial space companies to plan, execute, and monitor space missions like NASA. Manage satellite operations, launch vehicles, and ground stations.';
     features: [
       'Satellite mission planningOrbital mechanics calculationsReal-time satellite trackingSpace weather monitoringLaunch vehicle integrationGround station managementSpace debris trackingMission analytics dashboard';
@@ -2188,7 +2186,7 @@ export const spaceTechServices: SpaceTechService[] = [;
     roi: 'Enable commercial space operations and reduce mission costs by 60%. ROI through operational efficiency and new revenue streams.';
     competitors: ['SpaceX StarlinkOneWebBasic satellite services'];
     marketSize: '$469 B space economy';
-    growthRate: '400% annual growth';
+    growthRate: '400% annual growth';}
     variant: 'space-futuristic'}
     contactInfo: {}
       mobile: '+1 302 464 0950';
@@ -2721,7 +2719,7 @@ export interface SpaceTechService,
   e: '2024 - 03 - 10' customer,
   s: 500, ratin,
   g: 4.9, review,
-  s: 250} export interface SpaceTechService {; } ]; ; } ]; realImplementatio,
+  s: 250} export interface SpaceTechService {; } ]; } ]; realImplementatio,
   n: true,
   implementationDetails:' 'Complete space mission platform with orbital calculations, satellite tracking, and mission management. Includes real-time monitoring and regulatory compliance.'' launchDat,
   e: '2024-01-15' customer,

@@ -8,14 +8,14 @@ export default defineConfig({
       // Enable React Fast Refresh
       fastRefresh: true,
       // Optimize JSX runtime
-      jsxRuntime: 'automatic',
+      jsxRuntime: 'automatic'
     }),
     visualizer({
       filename: 'dist/stats.html',
       open: true,
       gzipSize: true,
-      brotliSize: true,
-    }),
+      brotliSize: true
+    })
   ],
   root: '.',
   build: {
@@ -33,7 +33,7 @@ export default defineConfig({
     rollupOptions: {
       maxParallelFileOps: 2,
       treeshake: {
-        moduleSideEffects: false,
+        moduleSideEffects: false
       },
       output: {
         manualChunks: (id) => {
@@ -63,9 +63,9 @@ export default defineConfig({
         },
         assetFileNames: 'assets/[name]-[hash][extname]',
         chunkFileNames: 'assets/[name]-[hash].js',
-        entryFileNames: 'assets/[name]-[hash].js',
-      },
-    },
+        entryFileNames: 'assets/[name]-[hash].js'
+      }
+    }
   },
   server: {
     port: 3000,
@@ -73,12 +73,12 @@ export default defineConfig({
     open: true,
     // Enable HMR
     hmr: {
-      overlay: true,
-    },
+      overlay: true
+    }
   },
   preview: {
     port: 4173,
-    open: true,
+    open: true
   },
   optimizeDeps: {
     include: [
@@ -91,26 +91,26 @@ export default defineConfig({
       'web-vitals'
     ],
     // Exclude problematic dependencies
-    exclude: ['@vite/client', '@vite/env'],
+    exclude: ['@vite/client', '@vite/env']
   },
   css: {
-    devSourcemap: true,
+    devSourcemap: true
   },
   esbuild: {
     drop: ['console', 'debugger'],
-    target: 'es2015',
+    target: 'es2015'
   },
   // Define global constants
   define: {
     __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
-    __VERSION__: JSON.stringify(process.env.npm_package_version),
+    __VERSION__: JSON.stringify(process.env.npm_package_version)
   },
   // Resolve configuration
   resolve: {
     alias: {
       '@': '/src',
       '@app': '/app',
-      '@components': '/app/components',
-    },
-  },
+      '@components': '/app/components'
+    }
+  }
 });

@@ -1,6 +1,5 @@
 'use client';
 import React, { useState, useCallback } from 'react';
-
 const Image: React.FC = () => {
 interface ImageProps {
   src: string;
@@ -16,7 +15,7 @@ interface ImageProps {
   sizes?: string;
   style?: React.CSSProperties;
   onLoad?: () => void;
-  onError?: () => void;
+  onError?: () => void;}
 }
 export const Image: React.FC<ImageProps> = ({
   src,
@@ -33,35 +32,32 @@ export const Image: React.FC<ImageProps> = ({
   style,
   onLoad,
   onError,
-  ...props
-}) => {
-  const [, setIsLoaded] = useState(false);
+  ...props}
+}) => {;
+const [, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
   const _handleLoad = useCallback(() => {
     setIsLoaded(true);
-    if (onLoad) onLoad();
+    if (onLoad) onLoad();}
   }, [onLoad]);
   const handleError = useCallback(() => {
     setHasError(true);
-    if (onError) onError();
+    if (onError) onError();}
   }, [onError]);
-  const imageStyle: React.CSSProperties = {
-    ...style,
+  const imageStyle: React.CSSProperties ={...style,
     ...(fill && {
       position: 'absolute',
       top: 0,
       left: 0,
       width: '100%',
       height: '100%',
-      objectFit:     ,
-$4})
+      objectFit:     } $4})
   };
   if (hasError) {
     return (
-      <div
-        className={`bg-gray-200 flex items-center justify-center ${className}`}
-        style={imageStyle}
-        {...props}
+      <div}
+        className={`bg-gray-200 flex items-center justify-center ${className} `}
+        style={imageStyle} {...props}
       >
         <span className="text-gray-500 text-sm">Failed to load image</span>
       </div>
@@ -69,17 +65,7 @@ $4})
   }
   return (
     <img
-      src={src}
-      alt={alt}
-      width={width}
-      height={height}
-      className={className}
-      style={imageStyle}
-      sizes={sizes}
-      loading={priority ? 'eager' : 'lazy'}
-      onLoad={handleLoad}
-      onError={handleError}
-      {...props}
+      src={src} alt={alt} width={width} height={height} className={className} style={imageStyle} sizes={sizes} loading={priority ? 'eager' : 'lazy'} onLoad={handleLoad} onError={handleError} {...props}
     />
   );
 };
@@ -149,8 +135,7 @@ quality = 75,
     if (onError) onError();
   }, [onError]);
   const,
-  imageStyle: React.CSSProperties = {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  imageStyle: React.CSSProperties ={/* TODO: Fix JSX expression */} O: Add content;}
 }
 //     ...style,
     ...(fill && {/* TODO: Fix JSX expression */}
@@ -184,9 +169,8 @@ quality = 75,
   )
       
           <div></div>
-className={`bg-gray-200 flex items-center justify-center ${className}`}
-        style={imageStyle}
-        {...props}
+className={`bg-gray-200 flex items-center justify-center ${className} `}
+        style={imageStyle} {...props}
 // >
         
           
@@ -205,17 +189,7 @@ className={`bg-gray-200 flex items-center justify-center ${className}`}
   )
     
           <img></img>
-      src={src}
-      alt={alt}
-      width={width}
-      height={height}
-      className={className}
-      style={imageStyle}
-      sizes={sizes}
-      loading={priority ? 'eager' : 'lazy'}
-      onLoad={handleLoad}
-      onError={handleError}
-      {...props}
+      src={src} alt={alt} width={width} height={height} className={className} style={imageStyle} sizes={sizes} loading={priority ? 'eager' : 'lazy'} onLoad={handleLoad} onError={handleError} {...props}
 //     />
   )
 }
@@ -223,3 +197,6 @@ export default Image;"`
 
 
 
+
+
+</div></div>

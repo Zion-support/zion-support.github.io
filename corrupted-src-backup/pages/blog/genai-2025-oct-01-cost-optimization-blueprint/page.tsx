@@ -23,7 +23,11 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
           Learn, about, genai 2025, oct, 01 cost, optimization, blueprint and, how, it;
           can, benefit, your enterpri, s, e.
         </p>
-        <div, classNam, e='prose, pros, e-invert, ma, x-w-3, x, l'>
+        <div, classNam, e='prose, pros, e-invert, ma, x-w-3, x, l'>}
 }</div>
 export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: Fix JSX expression */}
 }
+
+
+
+</div></div></div>

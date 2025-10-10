@@ -7,13 +7,13 @@ interface ContentNewsletterSignupProps {
   subtitle?: string;
   placeholder?: string;
   buttonText?: string;
-  features?: Array<{
+  features?: Array<{}
     icon: React.ComponentType<{ className?: string }>;
     text: string;
   }>;
   onSubscribe?: (email: string) => void;
 }
-
+;
 const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
   title = "Stay Updated with Our Latest Insights",
   subtitle = "Get exclusive content, industry insights, and early access to new features delivered to your inbox.",
@@ -22,28 +22,27 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
   features = [
     {
       icon: CheckCircle,
-      text: "Weekly industry insights"
+      text: "Weekly industry insights"}
     },
     {
       icon: Star,
-      text: "Exclusive content and tips"
+      text: "Exclusive content and tips"}
     },
     {
       icon: Users,
-      text: "Join 10,000+ subscribers"
+      text: "Join 10,000+ subscribers"}
     },
     {
       icon: Globe,
-      text: "Global community access"
+      text: "Global community access"}
     }
   ],
   onSubscribe
-}) => {
-  const [email, setEmail] = useState('');
+}) => {;
+const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent) => {
+const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email) return;
 
@@ -51,18 +50,18 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
     
     try {
       if (onSubscribe) {
-        await onSubscribe(email);
+        await onSubscribe(email);}
       } else {
         // Simulate API call
-        await new Promise(resolve => setTimeout(resolve, 1000));
+        await new Promise(resolve => setTimeout(resolve, 1000));}
       }
       
       setIsSubscribed(true);
       setEmail('');
     } catch (error) {
-      console.error('Subscription failed:', error);
+      console.error('Subscription failed:', error);}
     } finally {
-      setIsLoading(false);
+      setIsLoading(false);}
     }
   };
 
@@ -79,9 +78,8 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
           <p className="text-xl text-blue-100 mb-8">
             Thank you for subscribing. You'll receive our latest insights and updates soon.
           </p>
-          <button
-            onClick={() => setIsSubscribed(false)}
-            className="text-white underline hover:text-blue-200 transition-colors"
+          <button}
+            onClick={() => setIsSubscribed(false)} className="text-white underline hover:text-blue-200 transition-colors"
           >
             Subscribe another email
           </button>
@@ -104,7 +102,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
             </p>
             
             <div className="space-y-4">
-              {features.map((feature, index) => (
+              {features.map((feature, index) => (}
                 <div key={index} className="flex items-center space-x-3">
                   <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center">
                     <feature.icon className="w-4 h-4 text-white" />
@@ -125,18 +123,14 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
                 <input
                   type="email"
                   id="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder={placeholder}
-                  required
+                  value={email} onChange={(e) => setEmail(e.target.value)} placeholder={placeholder} required
                   className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent"
                 />
               </div>
               
               <button
                 type="submit"
-                disabled={isLoading || !email}
-                className="w-full bg-white text-purple-600 font-bold py-3 px-6 rounded-lg hover:bg-blue-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 flex items-center justify-center"
+                disabled={isLoading || !email} className="w-full bg-white text-purple-600 font-bold py-3 px-6 rounded-lg hover:bg-blue-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 flex items-center justify-center"
               >
                 {isLoading ? (
                   <>
@@ -144,7 +138,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
                     Subscribing...
                   </>
                 ) : (
-                  <>
+                  <>}
                     {buttonText}
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </>
@@ -163,3 +157,8 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
 };
 
 export default ContentNewsletterSignup;
+
+
+
+
+</div></div></div></div>

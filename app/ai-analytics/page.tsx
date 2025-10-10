@@ -4,103 +4,82 @@ import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
-
-const AiAnalyticsPage: React.FC = () => {
-  const features = [
+const AiAnalyticsPage: React.FC = () => {;
+const features = [
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']}
     },
     {
       icon: BarChart,
-<<<<<<< HEAD
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-=======
       title: 'Real-Time Dashboards',
       description: 'Monitor your business metrics in real-time with customizable, interactive dashboards.',
-      benefits: ['Live data updates', 'Custom widgets', 'Interactive charts', 'Mobile responsive']
+      benefits: ['Live data updates', 'Custom widgets', 'Interactive charts', 'Mobile responsive']}
     },
     {
       icon: TrendingUp,
       title: 'Performance Optimization',
       description: 'Optimize your business performance with AI-driven recommendations and insights.',
-      benefits: ['Performance tracking', 'Optimization suggestions', 'ROI analysis', 'Growth strategies']
+      benefits: ['Performance tracking', 'Optimization suggestions', 'ROI analysis', 'Growth strategies']}
     },
     {
       icon: Zap,
       title: 'Fast Processing',
       description: 'Process large datasets in seconds with our optimized AI analytics engine.',
-      benefits: ['High-speed processing', 'Scalable infrastructure', 'Real-time analysis', 'Batch processing']
+      benefits: ['High-speed processing', 'Scalable infrastructure', 'Real-time analysis', 'Batch processing']}
     },
     {
       icon: Eye,
       title: 'Visual Analytics',
       description: 'Transform complex data into intuitive visualizations and interactive charts.',
-      benefits: ['Interactive charts', 'Custom visualizations', 'Data storytelling', 'Export capabilities']
+      benefits: ['Interactive charts', 'Custom visualizations', 'Data storytelling', 'Export capabilities']}
     },
     {
       icon: Shield,
       title: 'Data Security',
       description: 'Enterprise-grade security to protect your sensitive business data and analytics.',
-      benefits: ['End-to-end encryption', 'Access controls', 'Audit trails', 'Compliance support']
+      benefits: ['End-to-end encryption', 'Access controls', 'Audit trails', 'Compliance support']}
     }
   ];
-
-  const benefits = [
+const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
   ];
-
-  const useCases = [
+const useCases = [
     {
       title: 'Business Intelligence',
       description: 'Transform raw data into actionable business insights',
-      icon: '📊'
+      icon: '📊'}
     },
     {
       title: 'Marketing Analytics',
       description: 'Optimize marketing campaigns with AI-powered insights',
-      icon: '📈'
+      icon: '📈'}
     },
     {
       title: 'Financial Analysis',
       description: 'Monitor financial performance and identify trends',
-      icon: '💰'
+      icon: '💰'}
     },
     {
       title: 'Customer Analytics',
       description: 'Understand customer behavior and preferences',
-      icon: '👥'
+      icon: '👥'}
     },
     {
       title: 'Operations Monitoring',
       description: 'Track operational metrics and optimize processes',
-      icon: '⚙️'
+      icon: '⚙️'}
     },
     {
       title: 'Risk Management',
       description: 'Identify and mitigate business risks proactively',
-      icon: '🛡️'
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
+      icon: '🛡️'}
     }
   ];
 
@@ -108,12 +87,8 @@ const AiAnalyticsPage: React.FC = () => {
     <>
       <Helmet>
         <title>AI Analytics - Zion Tech Group</title>
-<<<<<<< HEAD
-        <meta name="description" content="Advanced AI-powered analytics solution for modern businesses." />
-        <meta name="keywords" content="AI analytics, artificial intelligence, data analytics, AI solutions, intelligent automation" />
-=======
         <meta name="description" content="Transform your data into actionable insights with our AI-powered analytics platform. Get real-time dashboards, predictive analytics, and automated reporting." />
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
+        <meta name="keywords" content="AI analytics, artificial intelligence, data analytics, AI solutions, intelligent automation" />
       </Helmet>
       
       <Navigation />
@@ -154,7 +129,7 @@ const AiAnalyticsPage: React.FC = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
+              {features.map((feature, index) => (}
                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="flex items-center mb-4">
                     <feature.icon className="h-8 w-8 text-blue-600 mr-3" />
@@ -162,7 +137,7 @@ const AiAnalyticsPage: React.FC = () => {
                   </div>
                   <p className="text-gray-600 mb-4">{feature.description}</p>
                   <ul className="space-y-2">
-                    {feature.benefits.map((benefit, benefitIndex) => (
+                    {feature.benefits.map((benefit, benefitIndex) => (}
                       <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
                         <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
                         {benefit}
@@ -197,3 +172,8 @@ const AiAnalyticsPage: React.FC = () => {
 };
 
 export default AiAnalyticsPage;
+
+
+
+
+</div></div></div></div></div>

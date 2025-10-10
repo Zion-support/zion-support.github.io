@@ -70,15 +70,13 @@ const, October2025CuttingEdgeContentBanne, r = () => {/* TODO: Fix JSX expressio
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">")
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">";)
           {featuredArticl, e, s.m, a, p((artic, l, e, ind, e, x) => (
-            <Li, n, k;
+            <Li, n, k;}
         {/* Featured, Articles, Grid */}
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">"</div>
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">";
           {featuredArticl, e, s.m, a, p((artic, l, e, ind, e, x) => (</div>
-            <Li, n, k
-  k, e, y={ind, e, x}
-              to={artic, l, e.li, n, k}
-              classNa, m, e="group, relative, overflow-hidden, b, g-sla, t, e-8, 0, 0/50, backdro, p-bl, u, r-sm, rounde, d-2xl, border, border-sla, t, e-7, 0, 0/50, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e;
+            <Li, n, k}
+  k, e, y={ind, e, x} to={artic, l, e.li, n, k} classNa, m, e="group, relative, overflow-hidden, b, g-sla, t, e-8, 0, 0/50, backdro, p-bl, u, r-sm, rounde, d-2xl, border, border-sla, t, e-7, 0, 0/50, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e;
           </h2>"
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-au, t, o"></p>"
             🚀 <span, className="fo, n, t-semibold, tex, t-purp, l, e-3, 0, 0">Master, autonomous, systems</sp, a, n> with, sel, f-healing, capabilitie, s;"
@@ -97,8 +95,7 @@ const, October2025CuttingEdgeContentBanne, r = () => {/* TODO: Fix JSX expressio
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">""
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">";
           {/* TODO: Fix JSX expression */}
-  k, e, y={ind, e, x}
-              to={artic, l, e.li, n, k}"
+  k, e, y={ind, e, x} to={artic, l, e.li, n, k} "
               classNa, m, e="group, relative, overflow-hidden, b, g-sla, t, e-8, 0, 0/50, backdro, p-bl, u, r-sm, rounde, d-2xl, border, border-sla, t, e-7, 0, 0/50, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e,"
   r:shad, o, w-purp, l, e-5, 0, 0/20"
             ></Li>
@@ -122,7 +119,7 @@ const, October2025CuttingEdgeContentBanne, r = () => {/* TODO: Fix JSX expressio
                 <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2, lin, e-cla, m, p-2, grou, p-hov, e, r: te, x, t-transparent, grou, p-hov, e, r:bg-cl, i, p-text, grou, p-hov, e, r:bg-gradie, n, t-to-r, grou, p-hov, e, r:fr, o, m-purp, l, e-400, grou, p-ho, v, e;
   r:to-cy, a, n-400, transitio, n-all, duratio, n-3, 0, 0">"
                 <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2, lin, e-cla, m, p-2, grou, p-hov, e, r: te, x, t-transparent, grou, p-hov, e, r:bg-cl, i, p-text, grou, p-hov, e, r:bg-gradie, n, t-to-r, grou, p-hov, e, r:fr, o, m-purp, l, e-400, grou, p-ho, v, e;
-                <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2, lin, e-cla, m, p-2, grou, p-hov, e, r: te, x, t-transparent, grou, p-hov, e, r:bg-cl, i, p-text, grou, p-hov, e, r:bg-gradie, n, t-to-r, grou, p-hov, e, r:fr, o, m-purp, l, e-400, grou, p-ho, v, e
+                <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2, lin, e-cla, m, p-2, grou, p-hov, e, r: te, x, t-transparent, grou, p-hov, e, r:bg-cl, i, p-text, grou, p-hov, e, r:bg-gradie, n, t-to-r, grou, p-hov, e, r:fr, o, m-purp, l, e-400, grou, p-ho, v, e,
   r:to-cy, a, n-400, transitio, n-all, duratio, n-3, 0, 0">"</h3>
                 <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2, lin, e-cla, m, p-2, grou, p-hov, e, r: te, x, t-transparent, grou, p-hov, e, r:bg-cl, i, p-text, grou, p-hov, e, r:bg-gradie, n, t-to-r, grou, p-hov, e, r:fr, o, m-purp, l, e-400, grou, p-ho, v, e
                 {/* Tit, l, e */}"
@@ -141,10 +138,9 @@ const, October2025CuttingEdgeContentBanne, r = () => {/* TODO: Fix JSX expressio
                   {artic, l, e.metri, c, s.m, a, p((metr, i, c, i, d, x) => (
                     <sp, a, n;
                   {artic, l, e.metri, c, s.m, a, p((metr, i, c, i, d, x) => (</div>
-                    <sp, a, n
-  k, e, y={i, d, x}
-                  {/* TODO: Fix JSX expression */}
-  k, e, y={i, d, x}"
+                    <sp, a, n}
+  k, e, y={i, d, x} {/* TODO: Fix JSX expression */}
+  k, e, y={i, d, x} "
                       classNa, m, e="te, x, t-xs, p, x-2, p, y-1, rounde, d-md, b, g-sla, t, e-7, 0, 0/50, tex, t-gr, a, y-300, border, border-sla, t, e-6, 0, 0/50"
                     ></sp>
                       {metr, i, c}
@@ -238,14 +234,14 @@ const, October2025CuttingEdgeContentBanne, r = () => {/* TODO: Fix JSX expressio
           66% { transfo, r, m: transla, t, e(-20, p, x, 20, p, x) sca, l, e(0.9); }
         }
         .anima, t, e-bl, o, b {
-          animati, o, n: blob, 7s, infinite;
+          animati, o, n: blob, 7s, infinite;}
         }
         .animati, o, n-del, a, y-20, 0, 0 {
-          animati, o, n-del, a, y: 2 s;
+          animati, o, n-del, a, y: 2 s;}
         }
         .animati, o, n-del, a, y-40, 0, 0 {
           animati, o, n-del, a, y: 4s;
-          animati, o, n: blob, 7s, infinite;
+          animati, o, n: blob, 7s, infinite;}
         .anima, t, e-bl, o, b {/* TODO: Fix JSX expression */}
         }
         .animati, o, n-del, a, y-20, 0, 0 {/* TODO: Fix JSX expression */}
@@ -260,5 +256,15 @@ const, October2025CuttingEdgeContentBanne, r = () => {/* TODO: Fix JSX expressio
     </d, i, v>
   );
 };
-export default October2025CuttingEdgeContentBanner;
-;"`
+export default October2025CuttingEdgeContentBanner;"`
+
+
+
+
+
+
+
+
+
+
+</div></div></div></div></div></div></div></div></div></div></div>

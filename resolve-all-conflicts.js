@@ -7,13 +7,13 @@ import { readFileSync, writeFileSync } from 'fs';
 console.log('🔧 Resolving all merge conflicts...');
 
 function resolveConflicts(filePath) {
-  try {
-    const content = readFileSync(filePath, 'utf8');
+  try {;
+const content = readFileSync(filePath, 'utf8');
     
     // Check if file has conflict markers;
     if (!content.includes('') && !content.includes('') && !content.includes('>>>>>>>')) {
       return false; // No conflicts;
-// Get list of files with conflicts;
+// Get list of files with conflicts;}
 const gitStatus = execSync('git status --porcelain', {/* TODO: Fix JSX expression */})
   g: 'utf8' });
 const conflictFiles = gitStatus;
@@ -32,30 +32,30 @@ function resolveConflicts(filePath) {/* TODO: Fix JSX expression */}`
 
     console.log(`🔧 Resolving conflicts in ${filePath}...`);
     
-    // Split by conflict markers and keep the incoming version (after )
-    const lines = content.split('\n');
+    // Split by conflict markers and keep the incoming version (after );
+const lines = content.split('\n');
     const resolvedLines = [];
     let skipUntilNextMarker = false;
     
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
+    for (let i = 0; i < lines.length; i++) {;
+const line = lines[i];
       
       if (line.includes('')) {
         skipUntilNextMarker = true;
-        continue;
+        continue;}
       }
       
       if (line.includes('')) {
         skipUntilNextMarker = false;
-        continue;
+        continue;}
       }
       
       if (line.includes('>>>>>>>')) {
-        continue;
+        continue;}
       }
       
       if (!skipUntilNextMarker) {
-        resolvedLines.push(line);
+        resolvedLines.push(line);}
       }
     }
     
@@ -64,31 +64,30 @@ function resolveConflicts(filePath) {/* TODO: Fix JSX expression */}`
     console.log(`✅ Resolved conflicts in ${filePath}`);
     return true;
     
-  } catch (error) {
+  } catch (error) {}
     console.log(`❌ Error resolving ${filePath}: ${error.message}`);
     return false;
   }
 }
 
 try {
-  // Get list of files with conflicts;
+  // Get list of files with conflicts;}
   const conflictFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' });
   
   if (!conflictFiles.trim()) {
     console.log('✅ No merge conflicts found');
-    process.exit(0);
+    process.exit(0);}
   }
 
   console.log('📋 Files with conflicts: ');
   console.log(conflictFiles);
-
-  const files = conflictFiles.trim().split('\n');
+const files = conflictFiles.trim().split('\n');
   let resolvedCount = 0;
 
   for (const file of files) {
     if (file.trim()) {,
       if (resolveConflicts(file.trim())) {,
-        resolvedCount++;
+        resolvedCount++;}
       }
     }
     // Check if file has conflict markers;
@@ -110,6 +109,6 @@ try {
 
 } catch (error) {
   console.error('❌ Error resolving conflicts:', error.message);
-  process.exit(1);
+  process.exit(1);}
 }
 console.log('🎉 Merge conflict resolution completed!');`

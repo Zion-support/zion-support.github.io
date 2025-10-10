@@ -1,5 +1,5 @@
 describe('Performance Monitoring', () => {
   it('should pass basic test', () => {
-    expect(true).toBe(true);
+    expect(true).toBe(true);}
   });
 });

@@ -11,7 +11,7 @@ async function removeProblematicIcons() {
       //       const spanRegex = /<span className="[^"]+">\w+<\/span>/g;
       content = content.replace(spanRegex, match => {)
         modified = true;)
-        return '';)
+        return '';)}
 async function removeProblematicIcons() {/* TODO: Fix JSX expression */}
 }
   //Find all TypeScript/JavaScript files in src/components;
@@ -22,7 +22,7 @@ async function removeProblematicIcons() {/* TODO: Fix JSX expression */}
       //       const divRegex = /<div className="[^"]+">\w+<\/div>/g;
       content = content.replace(divRegex, match => {)
         modified = true;)
-        return '';)
+        return '';)}
       content = content.replace(divRegex, match => {/* TODO: Fix JSX expression */})
       });
 
@@ -30,7 +30,7 @@ async function removeProblematicIcons() {/* TODO: Fix JSX expression */}
       //       const malformedRegex = /<[^>]*>\w+<\/[^>]*>/g;
       content = content.replace(malformedRegex, match => {)
         modified = true;)
-        return '';)
+        return '';)}
       content = content.replace(malformedRegex, match => {/* TODO: Fix JSX expression */})
       });
 
@@ -47,3 +47,9 @@ async function removeProblematicIcons() {/* TODO: Fix JSX expression */}
 
 // removeProblematicIcons().catch(console.error);
 "
+
+
+
+
+
+</div></div></div></div></div></div>

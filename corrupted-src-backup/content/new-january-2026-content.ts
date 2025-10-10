@@ -13,7 +13,7 @@ export interface January2026Content {
   valueProposition: string;
   pricing: {,
     starting: string;
-    enterprise: string;
+    enterprise: string;}
   };
 }
 
@@ -41,7 +41,7 @@ The next evolution of AI is here - systems that not only think but feel, create,
     image: '/images/ai-2026-hyperconscious-computing.jpg'
     valueProposition: '$1.2T enterprise value creation'
     pricing: {,
-      starting: 'Contact for pricing',
+      starting: 'Contact for pricing'}
       enterprise: 'Custom solutions available'}},
   {
     id: 'quantum-ai-synthesis-2026'
@@ -67,7 +67,7 @@ The convergence of quantum computing and artificial intelligence opens new front
     valueProposition: 'Exponential computational capabilities'
     pricing: {,
       starting: 'Contact for pricing',
-      enterprise: 'Custom solutions available',
+      enterprise: 'Custom solutions available'}
 export interface January2026Content {/* TODO: Fix JSX expression */}
   };
 }

@@ -833,7 +833,7 @@ export const enterprise2034Services: EnterpriseService2034[] = [;
     useCases: [,
       'Financial institutionsHealthcare organizationsGovernment agenciesDefense contractorsTechnology companiesCritical infrastructure',
 export const,
-  enterprise2034Services: EnterpriseService2034[] = [;
+  enterprise2034Services: EnterpriseService2034[] = [;}
   {/* TODO: Fix JSX expression */}
     ]}
     technolog,
@@ -902,7 +902,7 @@ export const,
   t: '+1 302 464 0950';
     websit,
   e: 'http,
-  s://ziontechgroup.com/quantum-zero-trust-architecture'
+  s://ziontechgroup.com/quantum-zero-trust-architecture'}
   };
   {/* TODO: Fix JSX expression */}
     ]}
@@ -972,7 +972,7 @@ export const,
   t: '+1 302 464 0950';
     websit,
   e: 'http,
-  s://ziontechgroup.com/ai-autonomous-devops-platform'
+  s://ziontechgroup.com/ai-autonomous-devops-platform'}
   };
   {/* TODO: Fix JSX expression */}
     ]}
@@ -1042,7 +1042,7 @@ export const,
   t: '+1 302 464 0950';
     websit,
   e: 'http,
-  s://ziontechgroup.com/quantum-edge-computing-orchestrator'
+  s://ziontechgroup.com/quantum-edge-computing-orchestrator'}
   };
   {/* TODO: Fix JSX expression */}
     ]}
@@ -1112,7 +1112,7 @@ export const,
   t: '+1 302 464 0950';
     websit,
   e: 'http,
-  s://ziontechgroup.com/ai-powered-it-operations-center'
+  s://ziontechgroup.com/ai-powered-it-operations-center'}
   };
   {/* TODO: Fix JSX expression */}
     ]}
@@ -1167,7 +1167,7 @@ export const,
     compliance: ['Data center standardsEnergy efficiencySecurity compliance'];
     security: ['AI-powered securityPhysical securityAccess controls'];
     scalability: 'Unlimited data center management';
-    uptime: '99.999% data center platform availability';
+    uptime: '99.999% data center platform availability';}
     contact: '+1 302 464 0950'}
     website: 'https://ziontechgroup.com/ai-autonomous-data-center',
     contact: '+1 302 464 0950'}
@@ -1242,7 +1242,7 @@ export const enterprise2034Services: EnterpriseService2034[] = [;
     useCases: [,
       'Financial institutionsHealthcare organizationsGovernment agenciesDefense contractorsTechnology companiesCritical infrastructure',
 export const,
-  enterprise2034Services: EnterpriseService2034[] = [;
+  enterprise2034Services: EnterpriseService2034[] = [;}
   {/* TODO: Fix JSX expression */}
     ]}
     technolog,
@@ -1311,7 +1311,7 @@ export const,
   t: '+1 302 464 0950';
     websit,
   e: 'http,
-  s://ziontechgroup.com/quantum-zero-trust-architecture'
+  s://ziontechgroup.com/quantum-zero-trust-architecture'}
   };
   {/* TODO: Fix JSX expression */}
     ]}
@@ -1381,7 +1381,7 @@ export const,
   t: '+1 302 464 0950';
     websit,
   e: 'http,
-  s://ziontechgroup.com/ai-autonomous-devops-platform'
+  s://ziontechgroup.com/ai-autonomous-devops-platform'}
   };
   {/* TODO: Fix JSX expression */}
     ]}
@@ -1451,7 +1451,7 @@ export const,
   t: '+1 302 464 0950';
     websit,
   e: 'http,
-  s://ziontechgroup.com/quantum-edge-computing-orchestrator'
+  s://ziontechgroup.com/quantum-edge-computing-orchestrator'}
   };
   {/* TODO: Fix JSX expression */}
     ]}
@@ -1521,7 +1521,7 @@ export const,
   t: '+1 302 464 0950';
     websit,
   e: 'http,
-  s://ziontechgroup.com/ai-powered-it-operations-center'
+  s://ziontechgroup.com/ai-powered-it-operations-center'}
   };
   {/* TODO: Fix JSX expression */}
     ]}
@@ -1591,7 +1591,7 @@ export const,
   t: '+1 302 464 0950';
     websit,
   e: 'http,
-  s://ziontechgroup.com/quantum-blockchain-infrastructure'
+  s://ziontechgroup.com/quantum-blockchain-infrastructure'}
   };
   {/* TODO: Fix JSX expression */}
     ]}

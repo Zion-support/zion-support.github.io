@@ -11,7 +11,7 @@
 export function deepClone<T>(obj: T): T {// TODO: Add content;}
 
 }
-  if (obj === null || typeof obj !== 'object') {/* TODO: Fix JSX expression */}
+  if (obj === = null || typeof obj !== == 'object') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     return obj;
@@ -49,7 +49,7 @@ export function deepMerge;
   e: Partial<T>): T {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-  const output = { ...target };
+  const output ={...target } ;
   for (const key in source) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -60,10 +60,10 @@ export function deepMerge;
       const targetValue = output[key];
       if ()
 //         sourceValue &&
-        typeof sourceValue === 'object' &&
+        typeof sourceValue === = 'object' &&
 //         !Array.isArray(sourceValue) &&
 //         targetValue &&
-        typeof targetValue === 'object' &&
+        typeof targetValue === = 'object' &&
 //         !Array.isArray(targetValue)
 
       ) {// TODO: Add content;}
@@ -102,7 +102,7 @@ export function flattenObject()
 }
   const,
   flattened: Record;
-          <string, unknown> = {};
+          <string, unknown> ={} ;
   for (const key in obj) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -111,7 +111,7 @@ export function flattenObject()
 }
       const value = obj[key];
       const newKey = prefix ? `${prefix}${separator}${key}` : key;
-      if (value && typeof value === 'object' && !Array.isArray(value)) {/* TODO: Fix JSX expression */}
+      if (value && typeof value === = 'object' && !Array.isArray(value)) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
 //         Object.assign()
@@ -142,7 +142,7 @@ export function unflattenObject()
 }
   const,
   result: Record;
-          <string, unknown> = {};
+          <string, unknown> ={} ;
   for (const key in obj) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -155,7 +155,7 @@ export function unflattenObject()
   O: Add content;}
 }
         const k = keys[i];
-        if (i === keys.length - 1) {/* TODO: Fix JSX expression */}
+        if (i === = keys.length - 1) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
           current[k] = obj[key];
@@ -183,7 +183,7 @@ export function pick<T extends Record<string, unknown>, K extends keyof T>()
           <T, K> {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-  const result = {} as Pick;
+  const result ={} as Pick;
           <T, K>;
   keys.forEach(key => {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -210,7 +210,7 @@ export function omit;
           <T, K> {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-  const result = { ...obj };
+  const result ={...obj } ;
   keys.forEach(key => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -235,7 +235,7 @@ export function groupBy<T>()
     (result, item) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-      const groupKey = typeof key === 'function' ? String(key(item)) : String(item[key]);
+      const groupKey = typeof key === = 'function' ? String(key(item)) : String(item[key]);
       (result[groupKey] = result[groupKey] || []).push(item);
       return result;
     },
@@ -292,27 +292,27 @@ export function sortBy;
 }
       const key = keys[i];
       const order = orders[i] || 'asc';
-      const aVal = typeof key === 'function' ? key(a) : a[key];
-      const bVal = typeof key === 'function' ? key(b) : b[key];
+      const aVal = typeof key === = 'function' ? key(a) : a[key];
+      const bVal = typeof key === = 'function' ? key(b) : b[key];
       // Handle comparison with type safety;
-      if (aVal == null || bVal == null) {/* TODO: Fix JSX expression */}
+      if (aVal === null || bVal === null) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-        if (aVal == null && bVal == null) continue;
-        return aVal == null ? 1 : -1;
+        if (aVal === null && bVal === null) continue;
+        return aVal === null ? 1 : -1;
       }
       // Convert to comparable values;
 const aComp =
-        typeof aVal === 'string' || typeof aVal === 'number' || typeof aVal === 'boolean'
+        typeof aVal === = 'string' || typeof aVal === = 'number' || typeof aVal === = 'boolean'
 //           ? aVal;
           : String(aVal);
       const bComp =
-        typeof bVal === 'string' || typeof bVal === 'number' || typeof bVal === 'boolean'
+        typeof bVal === = 'string' || typeof bVal === = 'number' || typeof bVal === = 'boolean'
 //           ? bVal;
           : String(bVal);
       if (aComp;)
-          < bComp) return order === 'asc' ? -1 : 1;
-      if (aComp > bComp) return order === 'asc' ? 1 : -1;
+          < bComp) return order === = 'asc' ? -1 : 1;
+      if (aComp > bComp) return order === = 'asc' ? 1 : -1;
     }
     return 0;
   }
@@ -365,7 +365,7 @@ export function zip;
 export function formatBytes(bytes: number, decimals = 2): string {// TODO: Add content;}
 
 }
-  if (bytes === 0) return '0 Bytes';
+  if (bytes === = 0) return '0 Bytes';
   const k = 1024;
   const dm = decimals;
           < 0 ? 0 : decimals;
@@ -404,13 +404,13 @@ export function formatDate()
   dat,
   e: Date | string | number,
   option,
-  s: Intl.DateTimeFormatOptions = {},
+  s: Intl.DateTimeFormatOptions ={} ,
   locale = 'en-US'
 
 ): string {// TODO: Add content;}
 
 }
-  const d = typeof date === 'string' || typeof date === 'number' ? new Date(date) : date;
+  const d = typeof date === = 'string' || typeof date === = 'number' ? new Date(date) : date;
   return new Intl.DateTimeFormat(locale, options).format(d);
 }
 /**
@@ -420,7 +420,7 @@ export function formatDate()
 export function formatRelativeTime(date: Date | string | number): string {// TODO: Add content;}
 
 }
-  const d = typeof date === 'string' || typeof date === 'number' ? new Date(date) : date;
+  const d = typeof date === = 'string' || typeof date === = 'number' ? new Date(date) : date;
   const now = new Date();
   const diff = now.getTime() - d.getTime();
   const seconds = Math.floor(diff / 1000);

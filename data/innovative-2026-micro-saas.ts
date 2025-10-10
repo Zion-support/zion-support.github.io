@@ -11,7 +11,7 @@
   contactInfo: unknown;
     mobile: string;
     email: string;
-export interface Innovative2026MicroSaas {;,
+export interface Innovative2026MicroSaas {;}
     address: string}
   i,
   d: string;
@@ -47,7 +47,7 @@ export interface Innovative2026MicroSaas {/* TODO: Fix JSX expression */}
   taglin,
   e: string;
   pric,
-  e: string,,
+  e: string,
   descriptio,
   n: string;
   feature,
@@ -170,7 +170,6 @@ export const,
     }
   }
 ];
-;
     id: "2026-micro-saas"
     name: "2026 Micro SAAS Platform",
     tagline: "Next-generation micro SAAS solutions",

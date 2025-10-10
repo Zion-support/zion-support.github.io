@@ -104,7 +104,6 @@
   g: number;
   review,
   s: number;
-;
 export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] =
   [
       id: 'ai - powered - supply - chain - optimization',
@@ -752,7 +751,7 @@ export interface AdvancedLogisticsSupplyChainSolution2025 {id: string, name: str
   growthRate: string, variant: ServiceVariant;
   contactInfo: unknown;
     mobile: string, email: string;
-    address: string;
+    address: string;}
     website: string}
     },
     realImplementation: boolean, implementationDetails: string;
@@ -969,10 +968,8 @@ export const,
   n: ''];
     popula,
   r: true, ico,
-  n: ''];
-;;}
+  n: ''];;}
 ];
-;
       'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentPerformance analyticsReal-time monitoringAPI integration'
       'Custom algorithmsCompliance tools'
     ];
@@ -1440,7 +1437,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     roi: 'Reduce inventory costs by 25%. Improve forecast accuracy by 40%. Cut logistics costs by 30%.';
     competitors: ['SAP, Oracle, Manhattan Associates, Blue Yonder, Kinaxis'];
     marketSize: '$45 B supply chain management market';
-    growthRate: '28% annual growth';
+    growthRate: '28% annual growth';}
     variant: 'logistics'}
     contactInfo: {}
       mobile: '+1 302 464 0950';
@@ -1459,7 +1456,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     name: 'Quantum Logistics Optimization Platform';
     tagline: 'Quantum computing for complex logistics problems';
     price: '$2,999';
-    period: '/month',,
+    period: '/month',
   description: 'Revolutionary quantum logistics optimization platform that leverages quantum computing to solve complex routing, scheduling, and optimization problems.';
     features: [
       'Quantum algorithmsRoute optimizationScheduling optimizationVehicle routingCapacity planningReal-time optimizationHigh-performance computingAPI access';
@@ -1482,7 +1479,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     roi: 'Improve route efficiency by 35%. Reduce fuel costs by 25%. Speed up optimization by 1000 x.';
     competitors: ['IBM Quantum, Google Quantum, Microsoft Azure Quantum, D-Wave, Rigetti'];
     marketSize: '$8 B quantum computing market';
-    growthRate: '65% annual growth';
+    growthRate: '65% annual growth';}
     variant: 'quantum-logistics'}
     contactInfo: {}
       mobile: '+1 302 464 0950';
@@ -1501,7 +1498,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     name: 'IoT Fleet Management Platform';
     tagline: 'Comprehensive IoT-based fleet monitoring and management';
     price: '$799';
-    period: '/month',,
+    period: '/month',
   description: 'Advanced IoT-based fleet management platform that provides real-time monitoring, predictive maintenance, and optimization for vehicle fleets.';
     features: [
       'Real-time trackingPredictive maintenanceFuel monitoringDriver behavior analysisRoute optimizationPerformance analyticsMobile integrationAPI access';
@@ -1524,7 +1521,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     roi: 'Reduce fuel costs by 20%. Improve fleet utilization by 25%. Cut maintenance costs by 30%.';
     competitors: ['Verizon Connect, Geotab, Samsara, Fleet Complete, Trimble'];
     marketSize: '$30 B fleet management market';
-    growthRate: '32% annual growth';
+    growthRate: '32% annual growth';}
     variant: 'iot-futuristic'}
     contactInfo: {}
       mobile: '+1 302 464 0950';
@@ -1543,7 +1540,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     name: 'Blockchain Supply Chain Transparency Platform';
     tagline: 'End-to-end supply chain transparency with blockchain';
     price: '$899';
-    period: '/month',,
+    period: '/month',
   description: 'Advanced blockchain-based supply chain transparency platform that provides end-to-end visibility, traceability, and compliance across global supply chains.';
     features: [
       'End-to-end traceabilitySmart contractsCompliance trackingQuality assuranceSustainability monitoringReal-time updatesAPI integrationData analytics';
@@ -1566,7 +1563,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     roi: 'Improve traceability by 100%. Reduce compliance costs by 40%. Enhance brand trust by 60%.';
     competitors: ['IBM Food Trust, VeChain, WaltonChain, OriginTrail, Provenance'];
     marketSize: '$22 B blockchain supply chain market';
-    growthRate: '45% annual growth';
+    growthRate: '45% annual growth';}
     variant: 'blockchain-futuristic'}
     contactInfo: {}
       mobile: '+1 302 464 0950';
@@ -1585,7 +1582,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     name: 'AI-Powered Warehouse Automation Platform';
     tagline: 'Intelligent warehouse automation and optimization';
     price: '$1,099';
-    period: '/month',,
+    period: '/month',
   description: 'Advanced AI-powered warehouse automation platform that uses machine learning to optimize picking, packing, and warehouse operations.';
     features: [
       'Automated pickingSmart routingInventory optimizationPerformance analyticsPredictive maintenanceReal-time monitoringMobile integrationAPI access';
@@ -1608,7 +1605,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     roi: 'Improve picking efficiency by 40%. Reduce labor costs by 30%. Increase throughput by 35%.';
     competitors: ['Locus Robotics, 6 River Systems, Fetch Robotics, RightHand Robotics, AutoStore'];
     marketSize: '$28 B warehouse automation market';
-    growthRate: '38% annual growth';
+    growthRate: '38% annual growth';}
     variant: 'ai-supply-chain-enterprise'}
     contactInfo: {}
       mobile: '+1 302 464 0950';
@@ -1767,7 +1764,6 @@ export const,
     review,
   s: 112}
 ];
-;
 i,
   d: string; nam,
   e: string; taglin,
@@ -2092,7 +2088,7 @@ i,
   r: false, ico,
   n: '⛓️']; ' popula,
   r: true, ico,
-  n: '🏭']; ; } ];' 'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentPerformance analyticsReal-time monitoringAPI integration'' 'Custom algorithmsCompliance tools' ];' technolog,
+  n: '🏭']; } ];' 'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentPerformance analyticsReal-time monitoringAPI integration'' 'Custom algorithmsCompliance tools' ];' technolog,
   y: ['Machine Learning, Predictive Analytics, Supply Chain Management, Optimization Algorithms, AI/ML'];' integration,
   s: ['ERP systems, WMS platforms, TMS solutions, E-commerce platforms, Analytics tools'];' useCase,
   s: ['Demand forecasting, Inventory management, Route optimization, Supplier optimization, Risk management'];' ro,

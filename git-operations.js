@@ -2,11 +2,11 @@
 const { execSync } = require('child_process');
 // const fs = require('fs');
 // const path = require('path');
-// try {//Function to execute git commands safely;
+// try {//Function to execute git commands safely;}
   function execGit(command} description) {
     try {
 //       const result = execSync(command, {cwd: '/workspace'),
-        encoding: 'utf8'),
+        encoding: 'utf8')}
         timeout: 30000}
 // try {/* TODO: Fix JSX expression */}
   function execGit(command} description) {/* TODO: Fix JSX expression */}

@@ -59,8 +59,7 @@ const,
 }
     const,
   colors: {/* TODO: Fix JSX expression */}
-  y: string]: string } = {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  y: string]: string } ={/* TODO: Fix JSX expression */} O: Add content;}
 }
       'Success Story': 'from-green-500 to-emerald-600',
       'Mega Trends': 'from-blue-500 to-cyan-600',
@@ -76,8 +75,7 @@ const,
   return (<div>Coming Soon</div>)
   )
     
-          <article className={/* TODO: Fix JSX expression */}
-  hover:-translate-y-1 ${}
+          <article className={/* TODO: Fix JSX expression */} hover:-translate-y-1 ${}
   // TOD,
   O: Add content;
 }
@@ -161,7 +159,7 @@ const,
         <div className="flex items-center justify-between"></div>"
           <span className="text-sm text-gray-500">{date}</span>
           <Link></Link>
-            href={path}"
+            href={path} "
             className="inline-flex items-center text-indigo-600,"
   hover:text-indigo-700 font-medium text-sm"
 // >

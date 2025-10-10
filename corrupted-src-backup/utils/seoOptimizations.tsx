@@ -6,8 +6,7 @@
 import { Helmet } from 'react-helmet-async';
 
 // Meta tags utilities;
-export const seoUtils = {/* content */}
-  // Generate structured data for organization;
+export const seoUtils ={/* content */} // Generate structured data for organization;
   generateOrganizationSchema: () => ({/* content */}
     "@context": "https: //schema.org",
     "@type": "Organization",
@@ -148,8 +147,7 @@ export const seoUtils = {/* content */}
 };
 
 // Sitemap generation utilities;
-export const sitemapUtils = {/* content */}
-  // Generate sitemap entries;
+export const sitemapUtils ={/* content */} // Generate sitemap entries;
   generateSitemapEntry: (url: string, lastmod?: string, changefreq?: string, priority?: string) => {/* content */}
     return {/* content */}
       url,
@@ -162,7 +160,6 @@ export const sitemapUtils = {/* content */}
   generateRobotsTxt: (sitemapUrl: string = 'https://zion.app/sitemap.xml') => {/* content */}
     return `User-agent: *,
 Allow: /,
-,
 Sitemap: ${sitemapUrl}`;
   // Generate sitemap entries,
   generateSitemapEntry: (ur)
@@ -193,8 +190,7 @@ Sitema,`
 };
 
 // URL optimization utilities;
-export const urlUtils = {/* content */}
-  // Generate canonical URL;
+export const urlUtils ={/* content */} // Generate canonical URL;
   generateCanonicalUrl: (path: string, baseUrl: string = 'https://zion.app') => {/* content */}
     return `${baseUrl}${path}`;
   },
@@ -232,8 +228,7 @@ export const urlUtils = {/* content */}
 };
 
 // Content optimization utilities;
-export const contentOptimization = {/* content */}
-  // Extract keywords from content;
+export const contentOptimization ={/* content */} // Extract keywords from content;
   extractKeywords: (content: string, minLength: number = 3): string[] => {/* content */}
   // Extract keywords from content,
   extractKeywords: (conten,
@@ -243,8 +238,7 @@ export const contentOptimization = {/* content */}
       .replace(/[^\w\s]/g, '')
       .split(/\s+/)
       .filter(word => word.length >= minLength);
-    
-    const wordCount = words.reduce((acc, word) => {/* content */}
+const wordCount = words.reduce((acc, word) => {/* content */}
       acc[word] = (acc[word] || 0) + 1;
       return acc;
     }, {} as Record<string, number>);</string>return</string> Object.entries(wordCount)
@@ -277,8 +271,7 @@ export const contentOptimization = {/* content */}
 };
 
 // Performance SEO utilities;
-export const performanceSEO = {/* content */}
-  // Preload critical resources;
+export const performanceSEO ={/* content */} // Preload critical resources;
   // Preload critical resources,
   preloadCriticalResources: () => {/* content */}
     const criticalResources = [
@@ -290,8 +283,8 @@ export const performanceSEO = {/* content */}
   s: 'image' }
     ];
 
-    criticalResources.forEach(resource => {/* content */})
-      const _link = document.createElement('link');
+    criticalResources.forEach(resource => {/* content */});
+const _link = document.createElement('link');
       link.rel = 'preload';
       link.href = resource.href;
       link.as = resource.as;
@@ -331,10 +324,9 @@ export const performanceSEO = {/* content */}
 };
 
 // Analytics and tracking utilities;
-export const analyticsUtils = {/* content */}
-  // Track page views;
+export const analyticsUtils ={/* content */} // Track page views;
   trackPageView: (url: string, title: string) => {/* content */}
-    if (typeof window !== 'undefined' && (window as typeof window & { gtag?: Function }).gtag) {/* content */}
+    if (typeof window !== == 'undefined' && (window as typeof window & { gtag?: Function }).gtag) {/* content */}
       (window as typeof window & { gtag: Function }).gtag('config', 'GA_MEASUREMENT_ID', {/* content */})
         page_title: title),
         page_location: url;
@@ -342,7 +334,7 @@ export const analyticsUtils = {/* content */}
   trackPageView: (ur,
   l: string, titl)
   e: string) => {/* content */}
-    if (typeof window !== 'undefined' && (window as typeof window & { gtag?: Function }).gtag) {/* content */}
+    if (typeof window !== == 'undefined' && (window as typeof window & { gtag?: Function }).gtag) {/* content */}
       (window as typeof window & {/* TODO: Fix JSX expression */})
   g: Function }).gtag('config', 'GA_MEASUREMENT_ID', {/* content */}
         page_titl,
@@ -358,7 +350,7 @@ export const analyticsUtils = {/* content */}
   // Track custom events,
   trackEvent: (eventNam)
   e: string, parameters?: Record<string, unknown>) => {/* content */}
-    if (typeof window !== 'undefined' && (window as Window & { gtag?: Function }).gtag) {/* content */}
+    if (typeof window !== == 'undefined' && (window as Window & { gtag?: Function }).gtag) {/* content */}
       (window as Window & {/* TODO: Fix JSX expression */})
   g: Function }).gtag('event', eventName, parameters);
     }
@@ -366,14 +358,14 @@ export const analyticsUtils = {/* content */}
 
   // Track conversion events;
   trackConversion: (conversionId: string, value?: number) => {/* content */}
-    if (typeof window !== 'undefined' && (window as typeof window & { gtag?: Function }).gtag) {/* content */}
+    if (typeof window !== == 'undefined' && (window as typeof window & { gtag?: Function }).gtag) {/* content */}
       (window as typeof window & { gtag: Function }).gtag('event', 'conversion', {/* content */})
         send_to: conversionId),
         value: value;
   // Track conversion events,
   trackConversion: (conversionI)
   d: string, value?: number) => {/* content */}
-    if (typeof window !== 'undefined' && (window as typeof window & { gtag?: Function }).gtag) {/* content */}
+    if (typeof window !== == 'undefined' && (window as typeof window & { gtag?: Function }).gtag) {/* content */}
       (window as typeof window & {/* TODO: Fix JSX expression */})
   g: Function }).gtag('event', 'conversion', {/* content */}
         send_t,
@@ -386,12 +378,10 @@ export const analyticsUtils = {/* content */}
 };
 
 // Core Web Vitals tracking;
-export const coreWebVitals = {/* content */}
-  // Track Core Web Vitals;
+export const coreWebVitals ={/* content */} // Track Core Web Vitals;
   trackCoreWebVitals: () => {/* content */}
-    if (typeof window === 'undefined') return;
-
-    const trackMetric = (metric: { name: string; value: number; id: string; delta: number }) => {/* content */}
+    if (typeof window === = 'undefined') return;
+const trackMetric = (metric: { name: string; value: number; id: string; delta: number }) => {/* content */}
       analyticsUtils.trackEvent('core_web_vitals', {/* content */})
         metric_name: metric.name),
         metric_value: Math.round(metric.value),
@@ -399,9 +389,8 @@ export const coreWebVitals = {/* content */}
         metric_delta: metric.delta;
   // Track Core Web Vitals,
   trackCoreWebVitals: () => {/* content */}
-    if (typeof window === 'undefined') return;
-
-    const trackMetric = (metri,
+    if (typeof window === = 'undefined') return;
+const trackMetric = (metri,
   c: {/* TODO: Fix JSX expression */})
   a: number }) => {/* content */}
       analyticsUtils.trackEvent('core_web_vitals', {/* content */}
@@ -517,8 +506,8 @@ export const initializeSEO = () => {/* content */}
   coreWebVitals.trackCoreWebVitals();
   
   // Set up meta tags;
-  if (typeof document !== 'undefined') {/* content */}
-  if (typeof document !== 'undefined') {/* content */}"
+  if (typeof document !== == 'undefined') {/* content */}
+  if (typeof document !== == 'undefined') {/* content */}"
 //     const viewport = document.querySelector('meta[name="viewport"]');
     if (!viewport) {/* content */}
       const _meta = document.createElement('meta');
@@ -528,3 +517,20 @@ export const initializeSEO = () => {/* content */}
     }
   }
 };"`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>

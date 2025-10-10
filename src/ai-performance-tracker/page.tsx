@@ -6,9 +6,9 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 import { BarChart, Target, Zap, Settings, CheckCircle, Star,  BarChart,  Target,  Settings } from 'lucide-react';
-const AIPerformanceTrackerPage: React.FC = () => {
-  const features = [];
-  return (
+const AIPerformanceTrackerPage: React.FC = () => {;
+const features = [];
+  return (}
     {// TODO: Add content;}
 
 };

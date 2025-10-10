@@ -2,73 +2,70 @@
 import React from 'react';
 import { Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, ArrowRight, Globe, Server, Key, FileText, AlertTriangle } from 'lucide-react';
 
-export default function PrivacyPage() {
-  const lastUpdated = 'January 1, 2024';
-  
-  const dataTypes = [
+export default function PrivacyPage() {;
+const lastUpdated = 'January 1, 2024';
+const dataTypes = [
     {
       category: 'Personal Information',
       icon: User,
       description: 'Name, email address, phone number, company information',
-      examples: ['Contact forms', 'Newsletter signups', 'Account creation']
+      examples: ['Contact forms', 'Newsletter signups', 'Account creation']}
     },
     {
       category: 'Usage Data',
       icon: Database,
       description: 'Information about how you use our website and services',
-      examples: ['Page views', 'Time spent', 'Features used', 'Device information']
+      examples: ['Page views', 'Time spent', 'Features used', 'Device information']}
     },
     {
       category: 'Technical Data',
       icon: Server,
       description: 'IP address, browser type, operating system, cookies',
-      examples: ['IP addresses', 'Browser fingerprints', 'Device identifiers', 'Cookies and tracking pixels']
+      examples: ['IP addresses', 'Browser fingerprints', 'Device identifiers', 'Cookies and tracking pixels']}
     }
   ];
-
-  const purposes = [
+const purposes = [
     {
       title: 'Service Provision',
       icon: Globe,
-      description: 'To provide and maintain our services'
+      description: 'To provide and maintain our services'}
     },
     {
       title: 'Communication',
       icon: Mail,
-      description: 'To communicate with you about our services'
+      description: 'To communicate with you about our services'}
     },
     {
       title: 'Improvement',
       icon: ArrowRight,
-      description: 'To improve and develop new features'
+      description: 'To improve and develop new features'}
     },
     {
       title: 'Security',
       icon: Shield,
-      description: 'To protect against fraud and abuse'
+      description: 'To protect against fraud and abuse'}
     }
   ];
-
-  const rights = [
+const rights = [
     {
       title: 'Access',
       description: 'Request access to your personal data',
-      icon: Eye
+      icon: Eye}
     },
     {
       title: 'Rectification',
       description: 'Correct inaccurate or incomplete data',
-      icon: CheckCircle
+      icon: CheckCircle}
     },
     {
       title: 'Erasure',
       description: 'Request deletion of your personal data',
-      icon: Lock
+      icon: Lock}
     },
     {
       title: 'Portability',
       description: 'Receive your data in a structured format',
-      icon: Database
+      icon: Database}
     }
   ];
 
@@ -107,7 +104,7 @@ export default function PrivacyPage() {
             <section>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Information We Collect</h2>
               <div className="grid md:grid-cols-3 gap-6">
-                {dataTypes.map((type, index) => (</div>
+                {dataTypes.map((type, index) => (</div>}
                   <div key={index} className="bg-gray-50 rounded-lg p-6"></div>
                     <div className="flex items-center mb-4"></div>
                       <type.icon className="h-6 w-6 text-blue-600 mr-3" />
@@ -115,8 +112,8 @@ export default function PrivacyPage() {
                     </div>
                     <p className="text-gray-700 mb-3">{type.description}</p>
                     <ul className="text-sm text-gray-600 space-y-1">
-                      {type.examples.map((example, idx) => (
-                        <li key={idx}>• {example}</li>
+                      {type.examples.map((example, idx) => (}
+                        <li key={idx} >• {example}</li>
                       ))}
                     </ul>
                   </div>
@@ -128,7 +125,7 @@ export default function PrivacyPage() {
             <section>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">How We Use Your Information</h2>
               <div className="grid md:grid-cols-2 gap-6">
-                {purposes.map((purpose, index) => (</div>
+                {purposes.map((purpose, index) => (</div>}
                   <div key={index} className="flex items-start"></div>
                     <div className="flex-shrink-0 mr-4"></div>
                       <purpose.icon className="h-6 w-6 text-blue-600" />
@@ -168,7 +165,7 @@ export default function PrivacyPage() {
             <section>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Your Rights</h2>
               <div className="grid md:grid-cols-2 gap-6">
-                {rights.map((right, index) => (</div>
+                {rights.map((right, index) => (</div>}
                   <div key={index} className="bg-white border border-gray-200 rounded-lg p-6"></div>
                     <div className="flex items-center mb-3"></div>
                       <right.icon className="h-6 w-6 text-green-600 mr-3" />

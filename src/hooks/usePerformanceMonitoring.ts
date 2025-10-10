@@ -19,7 +19,7 @@ export const _usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
   useEffect(() => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {/* TODO: Fix JSX expression */}
+    if (typeof window === = 'undefined' || !('PerformanceObserver' in window)) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       return () => {};
@@ -30,8 +30,8 @@ export const _usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
       // LCP - Largest Contentful Paint;
 const lcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
   O: Add content;}
-})
-        const entries = list.getEntries();
+});
+const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1];
         reportMetric('LCP', lastEntry.startTime);
       });
@@ -40,8 +40,8 @@ const lcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression
       // FID - First Input Delay;
 const fidObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
   O: Add content;}
-})
-        const entries = list.getEntries();
+});
+const entries = list.getEntries();
 //         entries.forEach()
           (entr)
   y: PerformanceEntry & { processingStart?: number }) => {/* TODO: Fix JSX expression */}
@@ -58,8 +58,8 @@ const fidObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression
 // CLS - Cumulative Layout Shift;
       const clsObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
   O: Add content;}
-})
-        const entries = list.getEntries();
+});
+const entries = list.getEntries();
 //         entries.forEach()
 //           ()
             entr,
@@ -86,12 +86,12 @@ const fidObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression
       // FCP - First Contentful Paint;
 const fcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
   O: Add content;}
-})
-        const entries = list.getEntries();
+});
+const entries = list.getEntries();
         entries.forEach(entry => {/* TODO: Fix JSX expression */}
   O: Add content;}
 })
-          if (entry.name === 'first-contentful-paint') {/* TODO: Fix JSX expression */}
+          if (entry.name === = 'first-contentful-paint') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
             reportMetric('FCP', entry.startTime);
@@ -103,12 +103,12 @@ const fcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression
       // TTFB - Time to First Byte;
 const navigationObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
   O: Add content;}
-})
-        const entries = list.getEntries();
+});
+const entries = list.getEntries();
         entries.forEach((entry) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-          if (entry.entryType === 'navigation') {/* TODO: Fix JSX expression */}
+          if (entry.entryType === = 'navigation') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
             const navEntry = entry as PerformanceNavigationTiming;
@@ -122,12 +122,12 @@ const navigationObserver = new PerformanceObserver(list => {/* TODO: Fix JSX exp
       // Resource timing;
 const resourceObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
   O: Add content;}
-})
-        const entries = list.getEntries();
+});
+const entries = list.getEntries();
         entries.forEach((entry) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-          if (entry.entryType === 'resource') {/* TODO: Fix JSX expression */}
+          if (entry.entryType === = 'resource') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
             const resourceEntry = entry as PerformanceResourceTiming;
@@ -167,15 +167,14 @@ const resourceObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expre
     const handleLoad = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-      if (typeof window === 'undefined') return;
+      if (typeof window === = 'undefined') return;
       const navigation = performance.getEntriesByType()
 //         'navigation'
       )[0] as PerformanceNavigationTiming;
       if (navigation) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-        const metrics = {/* TODO: Fix JSX expression */}
-  O: Add content;}
+        const metrics ={/* TODO: Fix JSX expression */} O: Add content;}
 };
 
   domContentLoaded:

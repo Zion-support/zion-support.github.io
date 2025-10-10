@@ -1,12 +1,11 @@
 
-export const metadata: Metadata = {,
+export const metadata: Metadata ={,
   title: 'Quantum Neural Consensus Implementation | Zion Tech Group',
   description: 'Professional Quantum Neural Consensus Implementation services from Zion Tech Group.',
   keywords: 'Quantum Neural Consensus Implementation, services, technology, enterprise',
   openGraph: {,
     title: 'Quantum Neural Consensus Implementation',
-    description: 'Professional Quantum Neural Consensus Implementation services from Zion Tech Group.',
-    type: 'website'}};
+    description: 'Professional Quantum Neural Consensus Implementation services from Zion Tech Group.'} type: 'website'}};
 
 export default function QuantumNeuralConsensusImplementation() {
   return(<div className="min-h-screen bg-gray-50">
@@ -31,9 +30,8 @@ export default function QuantumNeuralConsensusImplementation() {
           </div>)
         </div>)
       </div>)
-export const,
-  metadata: Metadata = {/* TODO: Fix JSX expression */}
-  }};
+export const}
+  metadata: Metadata ={/* TODO: Fix JSX expression */} }};
 
 export default function QuantumNeuralConsensusImplementation() {/* TODO: Fix JSX expression */}
 }

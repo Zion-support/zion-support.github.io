@@ -16,7 +16,7 @@ export const real2036AIServices = [{id: 'ai-emotion-intelligence-platform',
     popular: true;
     category: 'Emotional AI',
     icon: '',
-    marketPrice: '$5,000-8,000/month'
+    marketPrice: '$5,000-8,000/month'}
     benefits: [}
 export const real2036AIServices = [{/* TODO: Fix JSX expression */}
   s: [}
@@ -559,7 +559,7 @@ export const real2036AIServices = [{id: 'ai-emotion-intelligence-platform',
     popular: true;
     category: 'Emotional AI',
     icon: '',
-    marketPrice: '$5,000-8,000/month'
+    marketPrice: '$5,000-8,000/month'}
     benefits: [}
 export const real2036AIServices = [{/* TODO: Fix JSX expression */}
   s: [}
@@ -1072,7 +1072,7 @@ export const real2036AIServices = [{id: 'ai - emotion - intelligence - platform'
     use_cases: [,
       'Customer service',
       'Mental health support',
-      'Education technology',
+      'Education technology'}
       'Human resources']}
   },
     id: 'ai - creativity - orchestrator',
@@ -1558,7 +1558,7 @@ export const real2036AIServices = [
     icon: '';
     marketPrice: '$5,000-8,000/month';
     benefits: [,
-      'Enhanced customer experienceBetter emotional understandingImproved human-AI interactionEmotional intelligence development'];,
+      'Enhanced customer experienceBetter emotional understandingImproved human-AI interactionEmotional intelligence development'];}
     useCases: [}
       'Customer serviceMental health supportEducation technologyHuman resources'
     ]}
@@ -1578,7 +1578,7 @@ export const real2036AIServices = [
     icon: '';
     marketPrice: '$4,000-7,000/month';
     benefits: [,
-      'Enhanced creativityFaster innovation cyclesBetter collaborationCreative process optimization'];,
+      'Enhanced creativityFaster innovation cyclesBetter collaborationCreative process optimization'];}
     useCases: [}
       'Marketing campaignsProduct designContent creationResearch and development'
     ]}
@@ -1598,7 +1598,7 @@ export const real2036AIServices = [
     icon: '';
     marketPrice: '$3,000-5,000/month';
     benefits: [,
-      'Dream understandingPsychological insightsSelf-reflection toolsMental health awareness'];,
+      'Dream understandingPsychological insightsSelf-reflection toolsMental health awareness'];}
     useCases: [}
       'Mental health supportPsychological researchPersonal developmentTherapeutic applications'
     ]}
@@ -1618,7 +1618,7 @@ export const real2036AIServices = [
     icon: '';
     marketPrice: '$6,000-10,000/month';
     benefits: [,
-      '10x faster content creationConsistent brand voiceSEO-optimized contentScalable content production'];,
+      '10x faster content creationConsistent brand voiceSEO-optimized contentScalable content production'];}
     useCases: [}
       'Marketing contentBlog writingSocial media contentProduct descriptions'
     ]}
@@ -1638,7 +1638,7 @@ export const real2036AIServices = [
     icon: '';
     marketPrice: '$7,000-12,000/month';
     benefits: [,
-      'Deep customer insightsPredictive customer behaviorPersonalized experiencesImproved customer retention'];,
+      'Deep customer insightsPredictive customer behaviorPersonalized experiencesImproved customer retention'];}
     useCases: [}
       'E-commerce optimizationCustomer serviceMarketing campaignsProduct development'
     ]}
@@ -1658,7 +1658,7 @@ export const real2036AIServices = [
     icon: '';
     marketPrice: '$8,000-15,000/month';
     benefits: [,
-      'Autonomous marketing operationsMaximum ROI optimizationReal-time performance improvementScalable marketing automation'];,
+      'Autonomous marketing operationsMaximum ROI optimizationReal-time performance improvementScalable marketing automation'];}
     useCases: [}
       'Digital advertisingEmail marketingSocial media marketingContent marketing'
     ]}
@@ -1678,7 +1678,7 @@ export const real2036AIServices = [
     icon: '';
     marketPrice: '$4,500-7,000/month';
     benefits: [,
-      'Automated research processesFaster insight generationComprehensive data analysisScalable research operations'];,
+      'Automated research processesFaster insight generationComprehensive data analysisScalable research operations'];}
     useCases: [}
       'Market researchAcademic researchBusiness intelligenceCompetitive analysis'
     ]}
@@ -1698,7 +1698,7 @@ export const real2036AIServices = [
     icon: '';
     marketPrice: '$10,000-18,000/month';
     benefits: [,
-      'Automated decision makingRisk reductionFaster decision cyclesData-driven decisions'];,
+      'Automated decision makingRisk reductionFaster decision cyclesData-driven decisions'];}
     useCases: [}
       'Financial decisionsOperational decisionsStrategic planningRisk management'
     ]}
@@ -1718,7 +1718,7 @@ export const real2036AIServices = [
     icon: '';
     marketPrice: '$12,000-20,000/month';
     benefits: [,
-      'Ecosystem optimizationPartnership maximizationIntegration efficiencyScalable ecosystem management'];,
+      'Ecosystem optimizationPartnership maximizationIntegration efficiencyScalable ecosystem management'];}
     useCases: [}
       'Business partnershipsPlatform ecosystemsSupply chain managementDigital transformation'
     ]}
@@ -1738,7 +1738,7 @@ export const real2036AIServices = [
     icon: '';
     marketPrice: '$15,000-25,000/month';
     benefits: [,
-      'Enhanced vehicle safetyAutonomous operationTraffic optimizationPredictive maintenance'];,
+      'Enhanced vehicle safetyAutonomous operationTraffic optimizationPredictive maintenance'];}
     useCases: [}
   {/* TODO: Fix JSX expression */}
   s: [}
@@ -1791,7 +1791,6 @@ export const real2036AIServices = [
     ]}
   }
 ];
-;
   };
 ];      'Autonomous vehiclesFleet managementTraffic optimizationSafety systems'
     ]
@@ -1811,7 +1810,7 @@ export const real2036AIServices = [
     icon: '';
     marketPrice: '$5,000-8,000/month';
     benefits: [,
-      'Enhanced customer experienceBetter emotional understandingImproved human-AI interactionEmotional intelligence development'];,
+      'Enhanced customer experienceBetter emotional understandingImproved human-AI interactionEmotional intelligence development'];}
     useCases: [}
       'Customer serviceMental health supportEducation technologyHuman resources'
     ]}
@@ -1831,7 +1830,7 @@ export const real2036AIServices = [
     icon: '';
     marketPrice: '$4,000-7,000/month';
     benefits: [,
-      'Enhanced creativityFaster innovation cyclesBetter collaborationCreative process optimization'];,
+      'Enhanced creativityFaster innovation cyclesBetter collaborationCreative process optimization'];}
     useCases: [}
       'Marketing campaignsProduct designContent creationResearch and development'
     ]}
@@ -1851,7 +1850,7 @@ export const real2036AIServices = [
     icon: '';
     marketPrice: '$3,000-5,000/month';
     benefits: [,
-      'Dream understandingPsychological insightsSelf-reflection toolsMental health awareness'];,
+      'Dream understandingPsychological insightsSelf-reflection toolsMental health awareness'];}
     useCases: [}
       'Mental health supportPsychological researchPersonal developmentTherapeutic applications'
     ]}
@@ -1871,7 +1870,7 @@ export const real2036AIServices = [
     icon: '';
     marketPrice: '$6,000-10,000/month';
     benefits: [,
-      '10x faster content creationConsistent brand voiceSEO-optimized contentScalable content production'];,
+      '10x faster content creationConsistent brand voiceSEO-optimized contentScalable content production'];}
     useCases: [}
       'Marketing contentBlog writingSocial media contentProduct descriptions'
     ]}
@@ -1891,7 +1890,7 @@ export const real2036AIServices = [
     icon: '';
     marketPrice: '$7,000-12,000/month';
     benefits: [,
-      'Deep customer insightsPredictive customer behaviorPersonalized experiencesImproved customer retention'];,
+      'Deep customer insightsPredictive customer behaviorPersonalized experiencesImproved customer retention'];}
     useCases: [}
       'E-commerce optimizationCustomer serviceMarketing campaignsProduct development'
     ]}
@@ -1911,7 +1910,7 @@ export const real2036AIServices = [
     icon: '';
     marketPrice: '$8,000-15,000/month';
     benefits: [,
-      'Autonomous marketing operationsMaximum ROI optimizationReal-time performance improvementScalable marketing automation'];,
+      'Autonomous marketing operationsMaximum ROI optimizationReal-time performance improvementScalable marketing automation'];}
     useCases: [}
       'Digital advertisingEmail marketingSocial media marketingContent marketing'
     ]}
@@ -1931,7 +1930,7 @@ export const real2036AIServices = [
     icon: '';
     marketPrice: '$4,500-7,000/month';
     benefits: [,
-      'Automated research processesFaster insight generationComprehensive data analysisScalable research operations'];,
+      'Automated research processesFaster insight generationComprehensive data analysisScalable research operations'];}
     useCases: [}
       'Market researchAcademic researchBusiness intelligenceCompetitive analysis'
     ]}
@@ -1951,7 +1950,7 @@ export const real2036AIServices = [
     icon: '';
     marketPrice: '$10,000-18,000/month';
     benefits: [,
-      'Automated decision makingRisk reductionFaster decision cyclesData-driven decisions'];,
+      'Automated decision makingRisk reductionFaster decision cyclesData-driven decisions'];}
     useCases: [}
       'Financial decisionsOperational decisionsStrategic planningRisk management'
     ]}
@@ -1971,7 +1970,7 @@ export const real2036AIServices = [
     icon: '';
     marketPrice: '$12,000-20,000/month';
     benefits: [,
-      'Ecosystem optimizationPartnership maximizationIntegration efficiencyScalable ecosystem management'];,
+      'Ecosystem optimizationPartnership maximizationIntegration efficiencyScalable ecosystem management'];}
     useCases: [}
       'Business partnershipsPlatform ecosystemsSupply chain managementDigital transformation'
     ]}
@@ -1991,7 +1990,7 @@ export const real2036AIServices = [
     icon: '';
     marketPrice: '$15,000-25,000/month';
     benefits: [,
-      'Enhanced vehicle safetyAutonomous operationTraffic optimizationPredictive maintenance'];,
+      'Enhanced vehicle safetyAutonomous operationTraffic optimizationPredictive maintenance'];}
     useCases: [}
   {/* TODO: Fix JSX expression */}
   s: [}

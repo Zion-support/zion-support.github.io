@@ -5,26 +5,24 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 
-export default function StatusPage() {
-  const [lastUpdated, setLastUpdated] = useState(new Date());
+export default function StatusPage() {;
+const [lastUpdated, setLastUpdated] = useState(new Date());
   const [isRefreshing, setIsRefreshing] = useState(false);
-
-  const refreshStatus = async () => {
+const refreshStatus = async () => {
     setIsRefreshing(true);
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 1000));
     setLastUpdated(new Date());
-    setIsRefreshing(false);
+    setIsRefreshing(false);}
   };
-
-  const services = [
+const services = [
     {
       name: 'API Services',
       status: 'operational',
       uptime: '99.9%',
       responseTime: '45ms',
       lastIncident: '2024-01-15',
-      description: 'Core API endpoints and authentication'
+      description: 'Core API endpoints and authentication'}
     },
     {
       name: 'AI Services',
@@ -32,7 +30,7 @@ export default function StatusPage() {
       uptime: '99.8%',
       responseTime: '120ms',
       lastIncident: '2024-01-10',
-      description: 'Machine learning and AI processing'
+      description: 'Machine learning and AI processing'}
     },
     {
       name: 'Cloud Infrastructure',
@@ -40,7 +38,7 @@ export default function StatusPage() {
       uptime: '99.95%',
       responseTime: '25ms',
       lastIncident: '2024-01-05',
-      description: 'Cloud hosting and storage services'
+      description: 'Cloud hosting and storage services'}
     },
     {
       name: 'Database',
@@ -48,7 +46,7 @@ export default function StatusPage() {
       uptime: '99.9%',
       responseTime: '15ms',
       lastIncident: '2024-01-12',
-      description: 'Primary and backup databases'
+      description: 'Primary and backup databases'}
     },
     {
       name: 'CDN',
@@ -56,7 +54,7 @@ export default function StatusPage() {
       uptime: '99.99%',
       responseTime: '8ms',
       lastIncident: '2024-01-08',
-      description: 'Content delivery network'
+      description: 'Content delivery network'}
     },
     {
       name: 'Monitoring',
@@ -64,11 +62,10 @@ export default function StatusPage() {
       uptime: '100%',
       responseTime: '5ms',
       lastIncident: 'Never',
-      description: 'System monitoring and alerts'
+      description: 'System monitoring and alerts'}
     }
   ];
-
-  const incidents = [
+const incidents = [
     {
       id: 1,
       title: 'API Response Time Degradation',
@@ -77,7 +74,7 @@ export default function StatusPage() {
       startTime: '2024-01-15T10:30:00Z',
       endTime: '2024-01-15T11:45:00Z',
       description: 'Some API endpoints experienced increased response times due to high traffic load.',
-      affectedServices: ['API Services', 'AI Services']
+      affectedServices: ['API Services', 'AI Services']}
     },
     {
       id: 2,
@@ -87,11 +84,10 @@ export default function StatusPage() {
       startTime: '2024-01-12T14:20:00Z',
       endTime: '2024-01-12T16:30:00Z',
       description: 'Intermittent database connection issues affecting some user operations.',
-      affectedServices: ['Database', 'API Services']
+      affectedServices: ['Database', 'API Services']}
     }
   ];
-
-  const getStatusIcon = (status: string) => {
+const getStatusIcon = (status: string) => {
     switch (status) {
       case 'operational':
         return <CheckCircle className="w-5 h-5 text-green-400" />;
@@ -100,11 +96,10 @@ export default function StatusPage() {
       case 'outage':
         return <XCircle className="w-5 h-5 text-red-400" />;
       default:
-        return <Clock className="w-5 h-5 text-gray-400" />;
+        return <Clock className="w-5 h-5 text-gray-400" />;}
     }
   };
-
-  const getStatusColor = (status: string) => {
+const getStatusColor = (status: string) => {
     switch (status) {
       case 'operational':
         return 'text-green-400';
@@ -113,11 +108,10 @@ export default function StatusPage() {
       case 'outage':
         return 'text-red-400';
       default:
-        return 'text-gray-400';
+        return 'text-gray-400';}
     }
   };
-
-  const getSeverityColor = (severity: string) => {
+const getSeverityColor = (severity: string) => {
     switch (severity) {
       case 'critical':
         return 'bg-red-500/20 text-red-400 border-red-500/50';
@@ -126,13 +120,12 @@ export default function StatusPage() {
       case 'minor':
         return 'bg-yellow-500/20 text-yellow-400 border-yellow-500/50';
       default:
-        return 'bg-gray-500/20 text-gray-400 border-gray-500/50';
+        return 'bg-gray-500/20 text-gray-400 border-gray-500/50';}
     }
   };
-
-  const overallStatus = services.every(service => service.status === 'operational') 
+const overallStatus = services.every(service => service.status === = 'operational') 
     ? 'operational' 
-    : services.some(service => service.status === 'outage') 
+    : services.some(service => service.status === = 'outage') 
       ? 'outage' 
       : 'degraded';
 
@@ -146,17 +139,15 @@ export default function StatusPage() {
           <div className="flex items-center justify-center gap-4 mb-8">
             <div className="flex items-center gap-2">
               {getStatusIcon(overallStatus)}
-              <span className={`text-2xl font-bold ${getStatusColor(overallStatus)}`}>
-                {overallStatus === 'operational' ? 'All Systems Operational' : 
-                 overallStatus === 'degraded' ? 'Degraded Performance' : 'Service Outage'}
+              <span className={`text-2xl font-bold ${getStatusColor(overallStatus)} `}>
+                {overallStatus === = 'operational' ? 'All Systems Operational' : }
+                 overallStatus === = 'degraded' ? 'Degraded Performance' : 'Service Outage'}
               </span>
             </div>
             <button
-              onClick={refreshStatus}
-              disabled={isRefreshing}
-              className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors disabled:opacity-50"
+              onClick={refreshStatus} disabled={isRefreshing} className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors disabled:opacity-50"
             >
-              <RefreshCw className={`w-5 h-5 ${isRefreshing ? 'animate-spin' : ''}`} />
+              <RefreshCw className={`w-5 h-5 ${isRefreshing ? 'animate-spin' : ''} `} />
               Refresh
             </button>
           </div>
@@ -172,14 +163,14 @@ export default function StatusPage() {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Service Status</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((service, index) => (
+            {services.map((service, index) => (}
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300">
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center gap-3">
                     {getStatusIcon(service.status)}
                     <h3 className="text-lg font-semibold text-white">{service.name}</h3>
                   </div>
-                  <span className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(service.status)}`}>
+                  <span className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(service.status)} `}>
                     {service.status}
                   </span>
                 </div>
@@ -211,7 +202,7 @@ export default function StatusPage() {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Recent Incidents</h2>
           <div className="space-y-6">
-            {incidents.map((incident) => (
+            {incidents.map((incident) => (}
               <div key={incident.id} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
                 <div className="flex items-start justify-between mb-4">
                   <div>
@@ -222,14 +213,13 @@ export default function StatusPage() {
                     </div>
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className={`px-3 py-1 rounded-full text-sm font-medium border ${getSeverityColor(incident.severity)}`}>
+                    <span className={`px-3 py-1 rounded-full text-sm font-medium border ${getSeverityColor(incident.severity)} `}>
                       {incident.severity}
                     </span>
                     <span className={`px-3 py-1 rounded-full text-sm font-medium ${
-                      incident.status === 'resolved' 
+                      incident.status === = 'resolved' 
                         ? 'bg-green-500/20 text-green-400' 
-                        : 'bg-yellow-500/20 text-yellow-400'
-                    }`}>
+                        : 'bg-yellow-500/20 text-yellow-400'} }`}>
                       {incident.status}
                     </span>
                   </div>
@@ -311,3 +301,10 @@ export default function StatusPage() {
     </div>
   );
 }
+
+
+
+
+
+
+</div></div></div></div></div></div>

@@ -2024,10 +2024,9 @@ export const,
 }
 		rating: 4.4;
 		reviews: 16;
-// const contact = {;
+// const contact ={;
 	mobile: '+1 302 464 0950';
-	email: 'kleber@ziontechgroup.com';
-	address: '364 E Main St STE 1008 Middletown DE 19709'}
+	email: 'kleber@ziontechgroup.com';} address: '364 E Main St STE 1008 Middletown DE 19709'}
 	website: 'https://ziontechgroup.com',
 		popula,
   r: true;
@@ -3541,8 +3540,7 @@ export const,
   g: 4.4;
 		review,
   s: 16,
-// const contact = {/* TODO: Fix JSX expression */}
-  s: '364 E Main St STE 1008 Middletown DE 19709'}
+// const contact ={/* TODO: Fix JSX expression */} s: '364 E Main St STE 1008 Middletown DE 19709'}
 	websit,
   e: 'http,
   s://ziontechgroup.com'
@@ -3592,7 +3590,7 @@ export const,
 		realImplementation: true;
 		implementationDetails: 'Ticketing service with role-based portals and exportable analytics.';
 		launchDate: '2029-09-23';
-		customers: 48;
+		customers: 48;}
 		rating: 4.7}
 		reviews: 29}
 	};
@@ -3629,7 +3627,7 @@ export const,
 		realImplementation: true;
 		implementationDetails: 'Rotations engine and integrations with chat tools.';
 		launchDate: '2029-10-30';
-		customers: 32;
+		customers: 32;}
 		rating: 4.5}
 		reviews: 19}
 	};
@@ -3666,7 +3664,7 @@ export const,
 		realImplementation: true;
 		implementationDetails: 'SERP fetchers with caching and AI summarization.';
 		launchDate: '2029-09-10';
-		customers: 95;
+		customers: 95;}
 		rating: 4.6}
 		reviews: 54}
 	{/* TODO: Fix JSX expression */}
@@ -3722,7 +3720,7 @@ export const,
 		realImplementation: true;
 		implementationDetails: 'Data aggregation with caching and scoring heuristics.';
 		launchDate: '2029-11-18';
-		customers: 40;
+		customers: 40;}
 		rating: 4.4}
 		reviews: 17}
 	{/* TODO: Fix JSX expression */}
@@ -3778,16 +3776,14 @@ export const,
 		realImplementation: true;
 		implementationDetails: 'Metrics ingestion and templated reporting.';
 		launchDate: '2029-10-20';
-		customers: 36;
+		customers: 36;}
 		rating: 4.4}
 		reviews: 16}
 	}
 ];
-;
-// const contact = {;
+// const contact ={;
 	mobile: '+1 302 464 0950';
-	email: 'kleber@ziontechgroup.com';
-	address: '364 E Main St STE 1008 Middletown DE 19709'}
+	email: 'kleber@ziontechgroup.com';} address: '364 E Main St STE 1008 Middletown DE 19709'}
 	website: 'https://ziontechgroup.com',
 	{/* TODO: Fix JSX expression */}
   g: 4.4}
@@ -3795,9 +3791,7 @@ export const,
   s: 16}
 	}
 ];
-;
-// const contact = {/* TODO: Fix JSX expression */}
-  s: '364 E Main St STE 1008 Middletown DE 19709'}
+// const contact ={/* TODO: Fix JSX expression */} s: '364 E Main St STE 1008 Middletown DE 19709'}
 	websit,
   e: 'http,
   s://ziontechgroup.com'
@@ -3847,7 +3841,7 @@ export const,
 		realImplementation: true;
 		implementationDetails: 'Ticketing service with role-based portals and exportable analytics.';
 		launchDate: '2029-09-23';
-		customers: 48;
+		customers: 48;}
 		rating: 4.7}
 		reviews: 29}
 	};
@@ -3884,7 +3878,7 @@ export const,
 		realImplementation: true;
 		implementationDetails: 'Rotations engine and integrations with chat tools.';
 		launchDate: '2029-10-30';
-		customers: 32;
+		customers: 32;}
 		rating: 4.5}
 		reviews: 19}
 	};
@@ -3921,7 +3915,7 @@ export const,
 		realImplementation: true;
 		implementationDetails: 'SERP fetchers with caching and AI summarization.';
 		launchDate: '2029-09-10';
-		customers: 95;
+		customers: 95;}
 		rating: 4.6}
 		reviews: 54}
 	{/* TODO: Fix JSX expression */}
@@ -3977,7 +3971,7 @@ export const,
 		realImplementation: true;
 		implementationDetails: 'Data aggregation with caching and scoring heuristics.';
 		launchDate: '2029-11-18';
-		customers: 40;
+		customers: 40;}
 		rating: 4.4}
 		reviews: 17}
 	{/* TODO: Fix JSX expression */}
@@ -4033,7 +4027,7 @@ export const,
 		realImplementation: true;
 		implementationDetails: 'Metrics ingestion and templated reporting.';
 		launchDate: '2029-10-20';
-		customers: 36;
+		customers: 36;}
 		rating: 4.4}
 		reviews: 16}
 	{/* TODO: Fix JSX expression */}
@@ -5159,8 +5153,7 @@ export const,
   g: 4.4, review,
   s: 16} ratin,
   g: 4.4,
-  reviews: 16 ' import { RealMarketService } from './real-market-services'; const contact = {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com'}' addres,
+  reviews: 16 ' import { RealMarketService } from './real-market-services'; const contact ={/* TODO: Fix JSX expression */} l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
   s://ziontechgroup.com' }; export const,
@@ -5186,8 +5179,7 @@ export const,
   g: 4.3} review,
   s: 12} }; {/* TODO: Fix JSX expression */}
   g: 4.4} review,
-  s: 16} } ]; ' import { RealMarketService } from './real-market-services'; const contact = {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com'}' addres,
+  s: 16} } ]; ' import { RealMarketService } from './real-market-services'; const contact ={/* TODO: Fix JSX expression */} l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
   s://ziontechgroup.com' }; export const,

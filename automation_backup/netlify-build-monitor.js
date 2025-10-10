@@ -192,11 +192,11 @@
   m: update'}{/* TODO: Fix JSX expression */}
   t: 'true'})' const outdated = this.runCommand('npm outdated --json'){/* TODO: Fix JSX expression */}
   t: 'true'})' const outdatedDeps = JSON.parse(outdated); fo,`
-  r: (const [dep)info] of Object.entries(outdatedDeps)) { if (info.current !== info.latest) { this.log(`Updating ${dep} from ${info.current} to ${info.latest}`); this.runCommand(`np)`
+  r: (const [dep)info] of Object.entries(outdatedDeps)) { if (info.current !== == info.latest) { this.log(`Updating ${dep} from ${info.current} to ${info.latest}`); this.runCommand(`np)`
   m: install ${dep}@latest`){/* TODO: Fix JSX expression */}
   t: 'true'})} } async updateDependencies() {this.log(')'Updating dependencies...')} try { this.runCommand(' 'npm update'}{/* TODO: Fix JSX expression */})`
   t: 'true' }); const outdated = this.runCommand(`npm outdated --json`){/* TODO: Fix JSX expression */}`
-  t: 'true' }) const outdatedDeps = JSON.parse(outdated); for (const [dep)info] of Object.entries(outdatedDeps)) { if (info.current !== info.latest) {' this.log(`Updating ${dep} from ${info.current} to ${info.latest}`)` this.runCommand(`npm install ${dep}@latest`){/* TODO: Fix JSX expression */}
+  t: 'true' }) const outdatedDeps = JSON.parse(outdated); for (const [dep)info] of Object.entries(outdatedDeps)) { if (info.current !== == info.latest) {' this.log(`Updating ${dep} from ${info.current} to ${info.latest}`)` this.runCommand(`npm install ${dep}@latest`){/* TODO: Fix JSX expression */}
   t: 'true' })} } this.log('Dependencie)
   s: updated successfully')} catch (error) {/* TODO: Fix JSX expression */}
   d: to update dependencies'}error)}'} asyn,
@@ -235,8 +235,7 @@
   d: to update build scripts'}error)}'} asyn,
   c: fixCommonTypeScriptIssues() {/* TODO: Fix JSX expression */}
   t: config = JSON.parse(fs.readFileSync( 'tsconfig.json')utf8''}))' config.compilerOption,
-  s: = {/* TODO: Fix JSX expression */}
-  forceConsistentCasingInFileNames: 'tru'}e} ; fs.writeFileSync('tsconfig.json''),JSON.stringify(config,null)2))}' this.log('TypeScrip)
+  s: ={/* TODO: Fix JSX expression */} forceConsistentCasingInFileNames: 'tru'}e} ; fs.writeFileSync('tsconfig.json''),JSON.stringify(config,null)2))}' this.log('TypeScrip)
   t: configuration updated''))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to fix TypeScript issues'')}error)}'} asyn,
@@ -274,8 +273,7 @@
   t: this.checkCodeQualityIssues(); this.log(Weekl)
   y: optimization completed'))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
-  y: optimization failed'')}error)}'} async fixCommonTypeScriptIssues() {this.log(')'Fixing common TypeScript issues...'); try { if (fs.existsSync(' 'tsconfig.json')) { let config = JSON.parse(fs.readFileSync(','tsconfig.json')utf8'))} config.compilerOptions = {/* TODO: Fix JSX expression */}
-  k: 'true'}forceConsistentCasingInFileName,`
+  y: optimization failed'')}error)}'} async fixCommonTypeScriptIssues() {this.log(')'Fixing common TypeScript issues...'); try { if (fs.existsSync(' 'tsconfig.json')) { let config = JSON.parse(fs.readFileSync(','tsconfig.json')utf8'))} config.compilerOptions ={/* TODO: Fix JSX expression */} k: 'true'}forceConsistentCasingInFileName,`
   s: 'true'} fs.writeFileSync('tsconfig.json',JSON.stringify(config,null)2)); this.log('TypeScript configuration updated')} catch (error) {this.error('Failed to fix TypeScript issues'}error) } } async updateMemoryLimits() {' this.log('Updating memory limits...')} try {' const packageJson = JSON.parse(fs.readFileSync('package.json'}utf8')); if (packageJson.scripts && packageJson.scripts.build) { packageJson.scripts.build = `NODE_OPTIONS=`--max-old-space-size=4096` ${packageJson.scripts.build}`} fs.writeFileSync(`package.json`,JSON.stringify(packageJson,null)2)); this.log( 'Memory limits updated')} catch (error) {this.error( 'Failed to update memory limits'}error) } } async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('experimental')) {/* TODO: Fix JSX expression */}
   s: ['@svgr/webpack']}\n,
   as: '*.js'\n }\n }\n }\n } )} fs.writeFileSync('next.config.js')config)} this.log('Build process optimized')} catch (error) {this.error('Failed to optimize build process'}error) } } async performDailyMaintenance() {' this.log('Performing daily maintenance...')} try { this.runCommand('rm -rf .next out dist build'}{/* TODO: Fix JSX expression */})
@@ -284,7 +282,7 @@
   t: 'true'}); this.runCommand('npm install'){/* TODO: Fix JSX expression */}
   t: 'true' }); this.runCommand('npm update --save'){/* TODO: Fix JSX expression */}
   t: 'true' }); await this.optimizeBuildConfig(); await this.checkCodeQualityIssues(); this.log( Weekly optimization completed')} catch (error) {this.error('Weekly optimization failed'}error) } } runCommand(command)option,
-  s: = {}) {/* TODO: Fix JSX expression */}
+  s: ={} ) {/* TODO: Fix JSX expression */}
   cwd: process.cwd(})}) retur,`
   n: 'result'} catch (error) { if (!options.silent) { throw error } return error.stdout || error.stderr || error.message} } warn(message) {const timestamp = new Date().toISOString()} const warnMessage = `[${timestamp}] WARNIN,`
   G: ${messag}e}`; tr,
@@ -294,7 +292,7 @@
   c: stop() {this.isRunning = false} this.log('Netlif)
   y: Build Monitor stopped''})}' getStatus() {/* TODO: Fix JSX expression */}
   config: 'this.confi'}g} } } i,
-  f: (require.main === module) {const monitor = new NetlifyBuildMonitor()} process.on('SIGINT'')asyn,
+  f: (require.main === = module) {const monitor = new NetlifyBuildMonitor()} process.on('SIGINT'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
   t: monitor.stop()} process.exit(0)}) process.on('SIGTERM''))asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -495,11 +493,11 @@
   m: update'}{/* TODO: Fix JSX expression */}
   t: 'true'})' const outdated = this.runCommand('npm outdated --json'){/* TODO: Fix JSX expression */}
   t: 'true'})' const outdatedDeps = JSON.parse(outdated); fo,`
-  r: (const [dep)info] of Object.entries(outdatedDeps)) { if (info.current !== info.latest) { this.log(`Updating ${dep} from ${info.current} to ${info.latest}`); this.runCommand(`np)`
+  r: (const [dep)info] of Object.entries(outdatedDeps)) { if (info.current !== == info.latest) { this.log(`Updating ${dep} from ${info.current} to ${info.latest}`); this.runCommand(`np)`
   m: install ${dep}@latest`){/* TODO: Fix JSX expression */}
   t: 'true'})} } async updateDependencies() {this.log(')'Updating dependencies...')} try { this.runCommand(' 'npm update'}{/* TODO: Fix JSX expression */})`
   t: 'true' }); const outdated = this.runCommand(`npm outdated --json`){/* TODO: Fix JSX expression */}`
-  t: 'true' }) const outdatedDeps = JSON.parse(outdated); for (const [dep)info] of Object.entries(outdatedDeps)) { if (info.current !== info.latest) {' this.log(`Updating ${dep} from ${info.current} to ${info.latest}`)` this.runCommand(`npm install ${dep}@latest`){/* TODO: Fix JSX expression */}
+  t: 'true' }) const outdatedDeps = JSON.parse(outdated); for (const [dep)info] of Object.entries(outdatedDeps)) { if (info.current !== == info.latest) {' this.log(`Updating ${dep} from ${info.current} to ${info.latest}`)` this.runCommand(`npm install ${dep}@latest`){/* TODO: Fix JSX expression */}
   t: 'true' })} } this.log('Dependencie)
   s: updated successfully')} catch (error) {/* TODO: Fix JSX expression */}
   d: to update dependencies'}error)}'} asyn,
@@ -538,8 +536,7 @@
   d: to update build scripts'}error)}'} asyn,
   c: fixCommonTypeScriptIssues() {/* TODO: Fix JSX expression */}
   t: config = JSON.parse(fs.readFileSync( 'tsconfig.json')utf8''}))' config.compilerOption,
-  s: = {/* TODO: Fix JSX expression */}
-  forceConsistentCasingInFileNames: 'tru'}e} ; fs.writeFileSync('tsconfig.json''),JSON.stringify(config,null)2))}' this.log('TypeScrip)
+  s: ={/* TODO: Fix JSX expression */} forceConsistentCasingInFileNames: 'tru'}e} ; fs.writeFileSync('tsconfig.json''),JSON.stringify(config,null)2))}' this.log('TypeScrip)
   t: configuration updated''))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to fix TypeScript issues'')}error)}'} asyn,
@@ -577,8 +574,7 @@
   t: this.checkCodeQualityIssues(); this.log(Weekl)
   y: optimization completed'))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
-  y: optimization failed'')}error)}'} async fixCommonTypeScriptIssues() {this.log(')'Fixing common TypeScript issues...'); try { if (fs.existsSync(' 'tsconfig.json')) { let config = JSON.parse(fs.readFileSync(','tsconfig.json')utf8'))} config.compilerOptions = {/* TODO: Fix JSX expression */}
-  k: 'true'}forceConsistentCasingInFileName,`
+  y: optimization failed'')}error)}'} async fixCommonTypeScriptIssues() {this.log(')'Fixing common TypeScript issues...'); try { if (fs.existsSync(' 'tsconfig.json')) { let config = JSON.parse(fs.readFileSync(','tsconfig.json')utf8'))} config.compilerOptions ={/* TODO: Fix JSX expression */} k: 'true'}forceConsistentCasingInFileName,`
   s: 'true'} fs.writeFileSync('tsconfig.json',JSON.stringify(config,null)2)); this.log('TypeScript configuration updated')} catch (error) {this.error('Failed to fix TypeScript issues'}error) } } async updateMemoryLimits() {' this.log('Updating memory limits...')} try {' const packageJson = JSON.parse(fs.readFileSync('package.json'}utf8')); if (packageJson.scripts && packageJson.scripts.build) { packageJson.scripts.build = `NODE_OPTIONS=`--max-old-space-size=4096` ${packageJson.scripts.build}`} fs.writeFileSync(`package.json`,JSON.stringify(packageJson,null)2)); this.log( 'Memory limits updated')} catch (error) {this.error( 'Failed to update memory limits'}error) } } async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('experimental')) {/* TODO: Fix JSX expression */}
   s: ['@svgr/webpack']}\n,
   as: '*.js'\n }\n }\n }\n } )} fs.writeFileSync('next.config.js')config)} this.log('Build process optimized')} catch (error) {this.error('Failed to optimize build process'}error) } } async performDailyMaintenance() {' this.log('Performing daily maintenance...')} try { this.runCommand('rm -rf .next out dist build'}{/* TODO: Fix JSX expression */})
@@ -587,7 +583,7 @@
   t: 'true'}); this.runCommand('npm install'){/* TODO: Fix JSX expression */}
   t: 'true' }); this.runCommand('npm update --save'){/* TODO: Fix JSX expression */}
   t: 'true' }); await this.optimizeBuildConfig(); await this.checkCodeQualityIssues(); this.log( Weekly optimization completed')} catch (error) {this.error('Weekly optimization failed'}error) } } runCommand(command)option,
-  s: = {}) {/* TODO: Fix JSX expression */}
+  s: ={} ) {/* TODO: Fix JSX expression */}
   cwd: process.cwd(})}) retur,`
   n: 'result'} catch (error) { if (!options.silent) { throw error } return error.stdout || error.stderr || error.message} } warn(message) {const timestamp = new Date().toISOString()} const warnMessage = `[${timestamp}] WARNIN,`
   G: ${messag}e}`; tr,
@@ -597,7 +593,7 @@
   c: stop() {this.isRunning = false} this.log('Netlif)
   y: Build Monitor stopped''})}' getStatus() {/* TODO: Fix JSX expression */}
   config: 'this.confi'}g} } } i,
-  f: (require.main === module) {const monitor = new NetlifyBuildMonitor()} process.on('SIGINT'')asyn,
+  f: (require.main === = module) {const monitor = new NetlifyBuildMonitor()} process.on('SIGINT'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
   t: monitor.stop()} process.exit(0)}) process.on('SIGTERM''))asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -798,11 +794,11 @@
   m: update'}{/* TODO: Fix JSX expression */}
   t: 'true'})' const outdated = this.runCommand('npm outdated --json'){/* TODO: Fix JSX expression */}
   t: 'true'})' const outdatedDeps = JSON.parse(outdated); fo,`
-  r: (const [dep)info] of Object.entries(outdatedDeps)) { if (info.current !== info.latest) { this.log(`Updating ${dep} from ${info.current} to ${info.latest}`); this.runCommand(`np)`
+  r: (const [dep)info] of Object.entries(outdatedDeps)) { if (info.current !== == info.latest) { this.log(`Updating ${dep} from ${info.current} to ${info.latest}`); this.runCommand(`np)`
   m: install ${dep}@latest`){/* TODO: Fix JSX expression */}
   t: 'true'})} } async updateDependencies() {this.log(')'Updating dependencies...')} try { this.runCommand(' 'npm update'}{/* TODO: Fix JSX expression */})`
   t: 'true' }); const outdated = this.runCommand(`npm outdated --json`){/* TODO: Fix JSX expression */}`
-  t: 'true' }) const outdatedDeps = JSON.parse(outdated); for (const [dep)info] of Object.entries(outdatedDeps)) { if (info.current !== info.latest) {' this.log(`Updating ${dep} from ${info.current} to ${info.latest}`)` this.runCommand(`npm install ${dep}@latest`){/* TODO: Fix JSX expression */}
+  t: 'true' }) const outdatedDeps = JSON.parse(outdated); for (const [dep)info] of Object.entries(outdatedDeps)) { if (info.current !== == info.latest) {' this.log(`Updating ${dep} from ${info.current} to ${info.latest}`)` this.runCommand(`npm install ${dep}@latest`){/* TODO: Fix JSX expression */}
   t: 'true' })} } this.log('Dependencie)
   s: updated successfully')} catch (error) {/* TODO: Fix JSX expression */}
   d: to update dependencies'}error)}'} asyn,
@@ -841,8 +837,7 @@
   d: to update build scripts'}error)}'} asyn,
   c: fixCommonTypeScriptIssues() {/* TODO: Fix JSX expression */}
   t: config = JSON.parse(fs.readFileSync( 'tsconfig.json')utf8''}))' config.compilerOption,
-  s: = {/* TODO: Fix JSX expression */}
-  forceConsistentCasingInFileNames: 'tru'}e} ; fs.writeFileSync('tsconfig.json''),JSON.stringify(config,null)2))}' this.log('TypeScrip)
+  s: ={/* TODO: Fix JSX expression */} forceConsistentCasingInFileNames: 'tru'}e} ; fs.writeFileSync('tsconfig.json''),JSON.stringify(config,null)2))}' this.log('TypeScrip)
   t: configuration updated''))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to fix TypeScript issues'')}error)}'} asyn,
@@ -880,8 +875,7 @@
   t: this.checkCodeQualityIssues(); this.log(Weekl)
   y: optimization completed'))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
-  y: optimization failed'')}error)}'} async fixCommonTypeScriptIssues() {this.log(')'Fixing common TypeScript issues...'); try { if (fs.existsSync(' 'tsconfig.json')) { let config = JSON.parse(fs.readFileSync(','tsconfig.json')utf8'))} config.compilerOptions = {/* TODO: Fix JSX expression */}
-  k: 'true'}forceConsistentCasingInFileName,`
+  y: optimization failed'')}error)}'} async fixCommonTypeScriptIssues() {this.log(')'Fixing common TypeScript issues...'); try { if (fs.existsSync(' 'tsconfig.json')) { let config = JSON.parse(fs.readFileSync(','tsconfig.json')utf8'))} config.compilerOptions ={/* TODO: Fix JSX expression */} k: 'true'}forceConsistentCasingInFileName,`
   s: 'true'} fs.writeFileSync('tsconfig.json',JSON.stringify(config,null)2)); this.log('TypeScript configuration updated')} catch (error) {this.error('Failed to fix TypeScript issues'}error) } } async updateMemoryLimits() {' this.log('Updating memory limits...')} try {' const packageJson = JSON.parse(fs.readFileSync('package.json'}utf8')); if (packageJson.scripts && packageJson.scripts.build) { packageJson.scripts.build = `NODE_OPTIONS=`--max-old-space-size=4096` ${packageJson.scripts.build}`} fs.writeFileSync(`package.json`,JSON.stringify(packageJson,null)2)); this.log( 'Memory limits updated')} catch (error) {this.error( 'Failed to update memory limits'}error) } } async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('experimental')) {/* TODO: Fix JSX expression */}
   s: ['@svgr/webpack']}\n,
   as: '*.js'\n }\n }\n }\n } )} fs.writeFileSync('next.config.js')config)} this.log('Build process optimized')} catch (error) {this.error('Failed to optimize build process'}error) } } async performDailyMaintenance() {' this.log('Performing daily maintenance...')} try { this.runCommand('rm -rf .next out dist build'}{/* TODO: Fix JSX expression */})
@@ -890,7 +884,7 @@
   t: 'true'}); this.runCommand('npm install'){/* TODO: Fix JSX expression */}
   t: 'true' }); this.runCommand('npm update --save'){/* TODO: Fix JSX expression */}
   t: 'true' }); await this.optimizeBuildConfig(); await this.checkCodeQualityIssues(); this.log( Weekly optimization completed')} catch (error) {this.error('Weekly optimization failed'}error) } } runCommand(command)option,
-  s: = {}) {/* TODO: Fix JSX expression */}
+  s: ={} ) {/* TODO: Fix JSX expression */}
   cwd: process.cwd(})}) retur,`
   n: 'result'} catch (error) { if (!options.silent) { throw error } return error.stdout || error.stderr || error.message} } warn(message) {const timestamp = new Date().toISOString()} const warnMessage = `[${timestamp}] WARNIN,`
   G: ${messag}e}`; tr,
@@ -900,7 +894,7 @@
   c: stop() {this.isRunning = false} this.log('Netlif)
   y: Build Monitor stopped''})}' getStatus() {/* TODO: Fix JSX expression */}
   config: 'this.confi'}g} } } i,
-  f: (require.main === module) {const monitor = new NetlifyBuildMonitor()} process.on('SIGINT'')asyn,
+  f: (require.main === = module) {const monitor = new NetlifyBuildMonitor()} process.on('SIGINT'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
   t: monitor.stop()} process.exit(0)}) process.on('SIGTERM''))asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -1101,11 +1095,11 @@
   m: update'}{/* TODO: Fix JSX expression */}
   t: 'true'})' const outdated = this.runCommand('npm outdated --json'){/* TODO: Fix JSX expression */}
   t: 'true'})' const outdatedDeps = JSON.parse(outdated); fo,`
-  r: (const [dep)info] of Object.entries(outdatedDeps)) { if (info.current !== info.latest) { this.log(`Updating ${dep} from ${info.current} to ${info.latest}`); this.runCommand(`np)`
+  r: (const [dep)info] of Object.entries(outdatedDeps)) { if (info.current !== == info.latest) { this.log(`Updating ${dep} from ${info.current} to ${info.latest}`); this.runCommand(`np)`
   m: install ${dep}@latest`){/* TODO: Fix JSX expression */}
   t: 'true'})} } async updateDependencies() {this.log(')'Updating dependencies...')} try { this.runCommand(' 'npm update'}{/* TODO: Fix JSX expression */})`
   t: 'true' }); const outdated = this.runCommand(`npm outdated --json`){/* TODO: Fix JSX expression */}`
-  t: 'true' }) const outdatedDeps = JSON.parse(outdated); for (const [dep)info] of Object.entries(outdatedDeps)) { if (info.current !== info.latest) {' this.log(`Updating ${dep} from ${info.current} to ${info.latest}`)` this.runCommand(`npm install ${dep}@latest`){/* TODO: Fix JSX expression */}
+  t: 'true' }) const outdatedDeps = JSON.parse(outdated); for (const [dep)info] of Object.entries(outdatedDeps)) { if (info.current !== == info.latest) {' this.log(`Updating ${dep} from ${info.current} to ${info.latest}`)` this.runCommand(`npm install ${dep}@latest`){/* TODO: Fix JSX expression */}
   t: 'true' })} } this.log('Dependencie)
   s: updated successfully')} catch (error) {/* TODO: Fix JSX expression */}
   d: to update dependencies'}error)}'} asyn,
@@ -1144,8 +1138,7 @@
   d: to update build scripts'}error)}'} asyn,
   c: fixCommonTypeScriptIssues() {/* TODO: Fix JSX expression */}
   t: config = JSON.parse(fs.readFileSync( 'tsconfig.json')utf8''}))' config.compilerOption,
-  s: = {/* TODO: Fix JSX expression */}
-  forceConsistentCasingInFileNames: 'tru'}e} ; fs.writeFileSync('tsconfig.json''),JSON.stringify(config,null)2))}' this.log('TypeScrip)
+  s: ={/* TODO: Fix JSX expression */} forceConsistentCasingInFileNames: 'tru'}e} ; fs.writeFileSync('tsconfig.json''),JSON.stringify(config,null)2))}' this.log('TypeScrip)
   t: configuration updated''))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to fix TypeScript issues'')}error)}'} asyn,
@@ -1183,8 +1176,7 @@
   t: this.checkCodeQualityIssues(); this.log(Weekl)
   y: optimization completed'))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
-  y: optimization failed'')}error)}'} async fixCommonTypeScriptIssues() {this.log(')'Fixing common TypeScript issues...'); try { if (fs.existsSync(' 'tsconfig.json')) { let config = JSON.parse(fs.readFileSync(','tsconfig.json')utf8'))} config.compilerOptions = {/* TODO: Fix JSX expression */}
-  k: 'true'}forceConsistentCasingInFileName,`
+  y: optimization failed'')}error)}'} async fixCommonTypeScriptIssues() {this.log(')'Fixing common TypeScript issues...'); try { if (fs.existsSync(' 'tsconfig.json')) { let config = JSON.parse(fs.readFileSync(','tsconfig.json')utf8'))} config.compilerOptions ={/* TODO: Fix JSX expression */} k: 'true'}forceConsistentCasingInFileName,`
   s: 'true'} fs.writeFileSync('tsconfig.json',JSON.stringify(config,null)2)); this.log('TypeScript configuration updated')} catch (error) {this.error('Failed to fix TypeScript issues'}error) } } async updateMemoryLimits() {' this.log('Updating memory limits...')} try {' const packageJson = JSON.parse(fs.readFileSync('package.json'}utf8')); if (packageJson.scripts && packageJson.scripts.build) { packageJson.scripts.build = `NODE_OPTIONS=`--max-old-space-size=4096` ${packageJson.scripts.build}`} fs.writeFileSync(`package.json`,JSON.stringify(packageJson,null)2)); this.log( 'Memory limits updated')} catch (error) {this.error( 'Failed to update memory limits'}error) } } async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('experimental')) {/* TODO: Fix JSX expression */}
   s: ['@svgr/webpack']}\n,
   as: '*.js'\n }\n }\n }\n } )} fs.writeFileSync('next.config.js')config)} this.log('Build process optimized')} catch (error) {this.error('Failed to optimize build process'}error) } } async performDailyMaintenance() {' this.log('Performing daily maintenance...')} try { this.runCommand('rm -rf .next out dist build'}{/* TODO: Fix JSX expression */})
@@ -1193,7 +1185,7 @@
   t: 'true'}); this.runCommand('npm install'){/* TODO: Fix JSX expression */}
   t: 'true' }); this.runCommand('npm update --save'){/* TODO: Fix JSX expression */}
   t: 'true' }); await this.optimizeBuildConfig(); await this.checkCodeQualityIssues(); this.log( Weekly optimization completed')} catch (error) {this.error('Weekly optimization failed'}error) } } runCommand(command)option,
-  s: = {}) {/* TODO: Fix JSX expression */}
+  s: ={} ) {/* TODO: Fix JSX expression */}
   cwd: process.cwd(})}) retur,`
   n: 'result'} catch (error) { if (!options.silent) { throw error } return error.stdout || error.stderr || error.message} } warn(message) {const timestamp = new Date().toISOString()} const warnMessage = `[${timestamp}] WARNIN,`
   G: ${messag}e}`; tr,
@@ -1203,7 +1195,7 @@
   c: stop() {this.isRunning = false} this.log('Netlif)
   y: Build Monitor stopped''})}' getStatus() {/* TODO: Fix JSX expression */}
   config: 'this.confi'}g} } } i,
-  f: (require.main === module) {const monitor = new NetlifyBuildMonitor()} process.on('SIGINT'')asyn,
+  f: (require.main === = module) {const monitor = new NetlifyBuildMonitor()} process.on('SIGINT'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
   t: monitor.stop()} process.exit(0)}) process.on('SIGTERM''))asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -1404,11 +1396,11 @@
   m: update'}{/* TODO: Fix JSX expression */}
   t: 'true'})' const outdated = this.runCommand('npm outdated --json'){/* TODO: Fix JSX expression */}
   t: 'true'})' const outdatedDeps = JSON.parse(outdated); fo,`
-  r: (const [dep)info] of Object.entries(outdatedDeps)) { if (info.current !== info.latest) { this.log(`Updating ${dep} from ${info.current} to ${info.latest}`); this.runCommand(`np)`
+  r: (const [dep)info] of Object.entries(outdatedDeps)) { if (info.current !== == info.latest) { this.log(`Updating ${dep} from ${info.current} to ${info.latest}`); this.runCommand(`np)`
   m: install ${dep}@latest`){/* TODO: Fix JSX expression */}
   t: 'true'})} } async updateDependencies() {this.log(')'Updating dependencies...')} try { this.runCommand(' 'npm update'}{/* TODO: Fix JSX expression */})`
   t: 'true' }); const outdated = this.runCommand(`npm outdated --json`){/* TODO: Fix JSX expression */}`
-  t: 'true' }) const outdatedDeps = JSON.parse(outdated); for (const [dep)info] of Object.entries(outdatedDeps)) { if (info.current !== info.latest) {' this.log(`Updating ${dep} from ${info.current} to ${info.latest}`)` this.runCommand(`npm install ${dep}@latest`){/* TODO: Fix JSX expression */}
+  t: 'true' }) const outdatedDeps = JSON.parse(outdated); for (const [dep)info] of Object.entries(outdatedDeps)) { if (info.current !== == info.latest) {' this.log(`Updating ${dep} from ${info.current} to ${info.latest}`)` this.runCommand(`npm install ${dep}@latest`){/* TODO: Fix JSX expression */}
   t: 'true' })} } this.log('Dependencie)
   s: updated successfully')} catch (error) {/* TODO: Fix JSX expression */}
   d: to update dependencies'}error)}'} asyn,
@@ -1447,8 +1439,7 @@
   d: to update build scripts'}error)}'} asyn,
   c: fixCommonTypeScriptIssues() {/* TODO: Fix JSX expression */}
   t: config = JSON.parse(fs.readFileSync( 'tsconfig.json')utf8''}))' config.compilerOption,
-  s: = {/* TODO: Fix JSX expression */}
-  forceConsistentCasingInFileNames: 'tru'}e} ; fs.writeFileSync('tsconfig.json''),JSON.stringify(config,null)2))}' this.log('TypeScrip)
+  s: ={/* TODO: Fix JSX expression */} forceConsistentCasingInFileNames: 'tru'}e} ; fs.writeFileSync('tsconfig.json''),JSON.stringify(config,null)2))}' this.log('TypeScrip)
   t: configuration updated''))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to fix TypeScript issues'')}error)}'} asyn,
@@ -1486,8 +1477,7 @@
   t: this.checkCodeQualityIssues(); this.log(Weekl)
   y: optimization completed'))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
-  y: optimization failed'')}error)}'} async fixCommonTypeScriptIssues() {this.log(')'Fixing common TypeScript issues...'); try { if (fs.existsSync(' 'tsconfig.json')) { let config = JSON.parse(fs.readFileSync(','tsconfig.json')utf8'))} config.compilerOptions = {/* TODO: Fix JSX expression */}
-  k: 'true'}forceConsistentCasingInFileName,`
+  y: optimization failed'')}error)}'} async fixCommonTypeScriptIssues() {this.log(')'Fixing common TypeScript issues...'); try { if (fs.existsSync(' 'tsconfig.json')) { let config = JSON.parse(fs.readFileSync(','tsconfig.json')utf8'))} config.compilerOptions ={/* TODO: Fix JSX expression */} k: 'true'}forceConsistentCasingInFileName,`
   s: 'true'} fs.writeFileSync('tsconfig.json',JSON.stringify(config,null)2)); this.log('TypeScript configuration updated')} catch (error) {this.error('Failed to fix TypeScript issues'}error) } } async updateMemoryLimits() {' this.log('Updating memory limits...')} try {' const packageJson = JSON.parse(fs.readFileSync('package.json'}utf8')); if (packageJson.scripts && packageJson.scripts.build) { packageJson.scripts.build = `NODE_OPTIONS=`--max-old-space-size=4096` ${packageJson.scripts.build}`} fs.writeFileSync(`package.json`,JSON.stringify(packageJson,null)2)); this.log( 'Memory limits updated')} catch (error) {this.error( 'Failed to update memory limits'}error) } } async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('experimental')) {/* TODO: Fix JSX expression */}
   s: ['@svgr/webpack']}\n,
   as: '*.js'\n }\n }\n }\n } )} fs.writeFileSync('next.config.js')config)} this.log('Build process optimized')} catch (error) {this.error('Failed to optimize build process'}error) } } async performDailyMaintenance() {' this.log('Performing daily maintenance...')} try { this.runCommand('rm -rf .next out dist build'}{/* TODO: Fix JSX expression */})
@@ -1496,7 +1486,7 @@
   t: 'true'}); this.runCommand('npm install'){/* TODO: Fix JSX expression */}
   t: 'true' }); this.runCommand('npm update --save'){/* TODO: Fix JSX expression */}
   t: 'true' }); await this.optimizeBuildConfig(); await this.checkCodeQualityIssues(); this.log( Weekly optimization completed')} catch (error) {this.error('Weekly optimization failed'}error) } } runCommand(command)option,
-  s: = {}) {/* TODO: Fix JSX expression */}
+  s: ={} ) {/* TODO: Fix JSX expression */}
   cwd: process.cwd(})}) retur,`
   n: 'result'} catch (error) { if (!options.silent) { throw error } return error.stdout || error.stderr || error.message} } warn(message) {const timestamp = new Date().toISOString()} const warnMessage = `[${timestamp}] WARNIN,`
   G: ${messag}e}`; tr,
@@ -1506,7 +1496,7 @@
   c: stop() {this.isRunning = false} this.log('Netlif)
   y: Build Monitor stopped''})}' getStatus() {/* TODO: Fix JSX expression */}
   config: 'this.confi'}g} } } i,
-  f: (require.main === module) {const monitor = new NetlifyBuildMonitor()} process.on('SIGINT'')asyn,
+  f: (require.main === = module) {const monitor = new NetlifyBuildMonitor()} process.on('SIGINT'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
   t: monitor.stop()} process.exit(0)}) process.on('SIGTERM''))asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -1707,11 +1697,11 @@
   m: update'}{/* TODO: Fix JSX expression */}
   t: 'true'})' const outdated = this.runCommand('npm outdated --json'){/* TODO: Fix JSX expression */}
   t: 'true'})' const outdatedDeps = JSON.parse(outdated); fo,`
-  r: (const [dep)info] of Object.entries(outdatedDeps)) { if (info.current !== info.latest) { this.log(`Updating ${dep} from ${info.current} to ${info.latest}`); this.runCommand(`np)`
+  r: (const [dep)info] of Object.entries(outdatedDeps)) { if (info.current !== == info.latest) { this.log(`Updating ${dep} from ${info.current} to ${info.latest}`); this.runCommand(`np)`
   m: install ${dep}@latest`){/* TODO: Fix JSX expression */}
   t: 'true'})} } async updateDependencies() {this.log(')'Updating dependencies...')} try { this.runCommand(' 'npm update'}{/* TODO: Fix JSX expression */})`
   t: 'true' }); const outdated = this.runCommand(`npm outdated --json`){/* TODO: Fix JSX expression */}`
-  t: 'true' }) const outdatedDeps = JSON.parse(outdated); for (const [dep)info] of Object.entries(outdatedDeps)) { if (info.current !== info.latest) {' this.log(`Updating ${dep} from ${info.current} to ${info.latest}`)` this.runCommand(`npm install ${dep}@latest`){/* TODO: Fix JSX expression */}
+  t: 'true' }) const outdatedDeps = JSON.parse(outdated); for (const [dep)info] of Object.entries(outdatedDeps)) { if (info.current !== == info.latest) {' this.log(`Updating ${dep} from ${info.current} to ${info.latest}`)` this.runCommand(`npm install ${dep}@latest`){/* TODO: Fix JSX expression */}
   t: 'true' })} } this.log('Dependencie)
   s: updated successfully')} catch (error) {/* TODO: Fix JSX expression */}
   d: to update dependencies'}error)}'} asyn,
@@ -1750,8 +1740,7 @@
   d: to update build scripts'}error)}'} asyn,
   c: fixCommonTypeScriptIssues() {/* TODO: Fix JSX expression */}
   t: config = JSON.parse(fs.readFileSync( 'tsconfig.json')utf8''}))' config.compilerOption,
-  s: = {/* TODO: Fix JSX expression */}
-  forceConsistentCasingInFileNames: 'tru'}e} ; fs.writeFileSync('tsconfig.json''),JSON.stringify(config,null)2))}' this.log('TypeScrip)
+  s: ={/* TODO: Fix JSX expression */} forceConsistentCasingInFileNames: 'tru'}e} ; fs.writeFileSync('tsconfig.json''),JSON.stringify(config,null)2))}' this.log('TypeScrip)
   t: configuration updated''))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to fix TypeScript issues'')}error)}'} asyn,
@@ -1789,8 +1778,7 @@
   t: this.checkCodeQualityIssues(); this.log(Weekl)
   y: optimization completed'))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
-  y: optimization failed'')}error)}'} async fixCommonTypeScriptIssues() {this.log(')'Fixing common TypeScript issues...'); try { if (fs.existsSync(' 'tsconfig.json')) { let config = JSON.parse(fs.readFileSync(','tsconfig.json')utf8'))} config.compilerOptions = {/* TODO: Fix JSX expression */}
-  k: 'true'}forceConsistentCasingInFileName,`
+  y: optimization failed'')}error)}'} async fixCommonTypeScriptIssues() {this.log(')'Fixing common TypeScript issues...'); try { if (fs.existsSync(' 'tsconfig.json')) { let config = JSON.parse(fs.readFileSync(','tsconfig.json')utf8'))} config.compilerOptions ={/* TODO: Fix JSX expression */} k: 'true'}forceConsistentCasingInFileName,`
   s: 'true'} fs.writeFileSync('tsconfig.json',JSON.stringify(config,null)2)); this.log('TypeScript configuration updated')} catch (error) {this.error('Failed to fix TypeScript issues'}error) } } async updateMemoryLimits() {' this.log('Updating memory limits...')} try {' const packageJson = JSON.parse(fs.readFileSync('package.json'}utf8')); if (packageJson.scripts && packageJson.scripts.build) { packageJson.scripts.build = `NODE_OPTIONS=`--max-old-space-size=4096` ${packageJson.scripts.build}`} fs.writeFileSync(`package.json`,JSON.stringify(packageJson,null)2)); this.log( 'Memory limits updated')} catch (error) {this.error( 'Failed to update memory limits'}error) } } async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('experimental')) {/* TODO: Fix JSX expression */}
   s: ['@svgr/webpack']}\n,
   as: '*.js'\n }\n }\n }\n } )} fs.writeFileSync('next.config.js')config)} this.log('Build process optimized')} catch (error) {this.error('Failed to optimize build process'}error) } } async performDailyMaintenance() {' this.log('Performing daily maintenance...')} try { this.runCommand('rm -rf .next out dist build'}{/* TODO: Fix JSX expression */})
@@ -1799,7 +1787,7 @@
   t: 'true'}); this.runCommand('npm install'){/* TODO: Fix JSX expression */}
   t: 'true' }); this.runCommand('npm update --save'){/* TODO: Fix JSX expression */}
   t: 'true' }); await this.optimizeBuildConfig(); await this.checkCodeQualityIssues(); this.log( Weekly optimization completed')} catch (error) {this.error('Weekly optimization failed'}error) } } runCommand(command)option,
-  s: = {}) {/* TODO: Fix JSX expression */}
+  s: ={} ) {/* TODO: Fix JSX expression */}
   cwd: process.cwd(})}) retur,`
   n: 'result'} catch (error) { if (!options.silent) { throw error } return error.stdout || error.stderr || error.message} } warn(message) {const timestamp = new Date().toISOString()} const warnMessage = `[${timestamp}] WARNIN,`
   G: ${messag}e}`; tr,
@@ -1809,7 +1797,7 @@
   c: stop() {this.isRunning = false} this.log('Netlif)
   y: Build Monitor stopped''})}' getStatus() {/* TODO: Fix JSX expression */}
   config: 'this.confi'}g} } } i,
-  f: (require.main === module) {const monitor = new NetlifyBuildMonitor()} process.on('SIGINT'')asyn,
+  f: (require.main === = module) {const monitor = new NetlifyBuildMonitor()} process.on('SIGINT'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
   t: monitor.stop()} process.exit(0)}) process.on('SIGTERM''))asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -2010,11 +1998,11 @@
   m: update'}{/* TODO: Fix JSX expression */}
   t: 'true'})' const outdated = this.runCommand('npm outdated --json'){/* TODO: Fix JSX expression */}
   t: 'true'})' const outdatedDeps = JSON.parse(outdated); fo,`
-  r: (const [dep)info] of Object.entries(outdatedDeps)) { if (info.current !== info.latest) { this.log(`Updating ${dep} from ${info.current} to ${info.latest}`); this.runCommand(`np)`
+  r: (const [dep)info] of Object.entries(outdatedDeps)) { if (info.current !== == info.latest) { this.log(`Updating ${dep} from ${info.current} to ${info.latest}`); this.runCommand(`np)`
   m: install ${dep}@latest`){/* TODO: Fix JSX expression */}
   t: 'true'})} } async updateDependencies() {this.log(')'Updating dependencies...')} try { this.runCommand(' 'npm update'}{/* TODO: Fix JSX expression */})`
   t: 'true' }); const outdated = this.runCommand(`npm outdated --json`){/* TODO: Fix JSX expression */}`
-  t: 'true' }) const outdatedDeps = JSON.parse(outdated); for (const [dep)info] of Object.entries(outdatedDeps)) { if (info.current !== info.latest) {' this.log(`Updating ${dep} from ${info.current} to ${info.latest}`)` this.runCommand(`npm install ${dep}@latest`){/* TODO: Fix JSX expression */}
+  t: 'true' }) const outdatedDeps = JSON.parse(outdated); for (const [dep)info] of Object.entries(outdatedDeps)) { if (info.current !== == info.latest) {' this.log(`Updating ${dep} from ${info.current} to ${info.latest}`)` this.runCommand(`npm install ${dep}@latest`){/* TODO: Fix JSX expression */}
   t: 'true' })} } this.log('Dependencie)
   s: updated successfully')} catch (error) {/* TODO: Fix JSX expression */}
   d: to update dependencies'}error)}'} asyn,
@@ -2053,8 +2041,7 @@
   d: to update build scripts'}error)}'} asyn,
   c: fixCommonTypeScriptIssues() {/* TODO: Fix JSX expression */}
   t: config = JSON.parse(fs.readFileSync( 'tsconfig.json')utf8''}))' config.compilerOption,
-  s: = {/* TODO: Fix JSX expression */}
-  forceConsistentCasingInFileNames: 'tru'}e} ; fs.writeFileSync('tsconfig.json''),JSON.stringify(config,null)2))}' this.log('TypeScrip)
+  s: ={/* TODO: Fix JSX expression */} forceConsistentCasingInFileNames: 'tru'}e} ; fs.writeFileSync('tsconfig.json''),JSON.stringify(config,null)2))}' this.log('TypeScrip)
   t: configuration updated''))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to fix TypeScript issues'')}error)}'} asyn,
@@ -2092,8 +2079,7 @@
   t: this.checkCodeQualityIssues(); this.log(Weekl)
   y: optimization completed'))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
-  y: optimization failed'')}error)}'} async fixCommonTypeScriptIssues() {this.log(')'Fixing common TypeScript issues...'); try { if (fs.existsSync(' 'tsconfig.json')) { let config = JSON.parse(fs.readFileSync(','tsconfig.json')utf8'))} config.compilerOptions = {/* TODO: Fix JSX expression */}
-  k: 'true'}forceConsistentCasingInFileName,`
+  y: optimization failed'')}error)}'} async fixCommonTypeScriptIssues() {this.log(')'Fixing common TypeScript issues...'); try { if (fs.existsSync(' 'tsconfig.json')) { let config = JSON.parse(fs.readFileSync(','tsconfig.json')utf8'))} config.compilerOptions ={/* TODO: Fix JSX expression */} k: 'true'}forceConsistentCasingInFileName,`
   s: 'true'} fs.writeFileSync('tsconfig.json',JSON.stringify(config,null)2)); this.log('TypeScript configuration updated')} catch (error) {this.error('Failed to fix TypeScript issues'}error) } } async updateMemoryLimits() {' this.log('Updating memory limits...')} try {' const packageJson = JSON.parse(fs.readFileSync('package.json'}utf8')); if (packageJson.scripts && packageJson.scripts.build) { packageJson.scripts.build = `NODE_OPTIONS=`--max-old-space-size=4096` ${packageJson.scripts.build}`} fs.writeFileSync(`package.json`,JSON.stringify(packageJson,null)2)); this.log( 'Memory limits updated')} catch (error) {this.error( 'Failed to update memory limits'}error) } } async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('experimental')) {/* TODO: Fix JSX expression */}
   s: ['@svgr/webpack']}\n,
   as: '*.js'\n }\n }\n }\n } )} fs.writeFileSync('next.config.js')config)} this.log('Build process optimized')} catch (error) {this.error('Failed to optimize build process'}error) } } async performDailyMaintenance() {' this.log('Performing daily maintenance...')} try { this.runCommand('rm -rf .next out dist build'}{/* TODO: Fix JSX expression */})
@@ -2102,7 +2088,7 @@
   t: 'true'}); this.runCommand('npm install'){/* TODO: Fix JSX expression */}
   t: 'true' }); this.runCommand('npm update --save'){/* TODO: Fix JSX expression */}
   t: 'true' }); await this.optimizeBuildConfig(); await this.checkCodeQualityIssues(); this.log( Weekly optimization completed')} catch (error) {this.error('Weekly optimization failed'}error) } } runCommand(command)option,
-  s: = {}) {/* TODO: Fix JSX expression */}
+  s: ={} ) {/* TODO: Fix JSX expression */}
   cwd: process.cwd(})}) retur,`
   n: 'result'} catch (error) { if (!options.silent) { throw error } return error.stdout || error.stderr || error.message} } warn(message) {const timestamp = new Date().toISOString()} const warnMessage = `[${timestamp}] WARNIN,`
   G: ${messag}e}`; tr,
@@ -2112,7 +2098,7 @@
   c: stop() {this.isRunning = false} this.log('Netlif)
   y: Build Monitor stopped''})}' getStatus() {/* TODO: Fix JSX expression */}
   config: 'this.confi'}g} } } i,
-  f: (require.main === module) {const monitor = new NetlifyBuildMonitor()} process.on('SIGINT'')asyn,
+  f: (require.main === = module) {const monitor = new NetlifyBuildMonitor()} process.on('SIGINT'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
   t: monitor.stop()} process.exit(0)}) process.on('SIGTERM''))asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -2313,11 +2299,11 @@
   m: update'}{/* TODO: Fix JSX expression */}
   t: 'true'})' const outdated = this.runCommand('npm outdated --json'){/* TODO: Fix JSX expression */}
   t: 'true'})' const outdatedDeps = JSON.parse(outdated); fo,`
-  r: (const [dep)info] of Object.entries(outdatedDeps)) { if (info.current !== info.latest) { this.log(`Updating ${dep} from ${info.current} to ${info.latest}`); this.runCommand(`np)`
+  r: (const [dep)info] of Object.entries(outdatedDeps)) { if (info.current !== == info.latest) { this.log(`Updating ${dep} from ${info.current} to ${info.latest}`); this.runCommand(`np)`
   m: install ${dep}@latest`){/* TODO: Fix JSX expression */}
   t: 'true'})} } async updateDependencies() {this.log(')'Updating dependencies...')} try { this.runCommand(' 'npm update'}{/* TODO: Fix JSX expression */})`
   t: 'true' }); const outdated = this.runCommand(`npm outdated --json`){/* TODO: Fix JSX expression */}`
-  t: 'true' }) const outdatedDeps = JSON.parse(outdated); for (const [dep)info] of Object.entries(outdatedDeps)) { if (info.current !== info.latest) {' this.log(`Updating ${dep} from ${info.current} to ${info.latest}`)` this.runCommand(`npm install ${dep}@latest`){/* TODO: Fix JSX expression */}
+  t: 'true' }) const outdatedDeps = JSON.parse(outdated); for (const [dep)info] of Object.entries(outdatedDeps)) { if (info.current !== == info.latest) {' this.log(`Updating ${dep} from ${info.current} to ${info.latest}`)` this.runCommand(`npm install ${dep}@latest`){/* TODO: Fix JSX expression */}
   t: 'true' })} } this.log('Dependencie)
   s: updated successfully')} catch (error) {/* TODO: Fix JSX expression */}
   d: to update dependencies'}error)}'} asyn,
@@ -2356,8 +2342,7 @@
   d: to update build scripts'}error)}'} asyn,
   c: fixCommonTypeScriptIssues() {/* TODO: Fix JSX expression */}
   t: config = JSON.parse(fs.readFileSync( 'tsconfig.json')utf8''}))' config.compilerOption,
-  s: = {/* TODO: Fix JSX expression */}
-  forceConsistentCasingInFileNames: 'tru'}e} ; fs.writeFileSync('tsconfig.json''),JSON.stringify(config,null)2))}' this.log('TypeScrip)
+  s: ={/* TODO: Fix JSX expression */} forceConsistentCasingInFileNames: 'tru'}e} ; fs.writeFileSync('tsconfig.json''),JSON.stringify(config,null)2))}' this.log('TypeScrip)
   t: configuration updated''))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to fix TypeScript issues'')}error)}'} asyn,
@@ -2395,8 +2380,7 @@
   t: this.checkCodeQualityIssues(); this.log(Weekl)
   y: optimization completed'))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
-  y: optimization failed'')}error)}'} async fixCommonTypeScriptIssues() {this.log(')'Fixing common TypeScript issues...'); try { if (fs.existsSync(' 'tsconfig.json')) { let config = JSON.parse(fs.readFileSync(','tsconfig.json')utf8'))} config.compilerOptions = {/* TODO: Fix JSX expression */}
-  k: 'true'}forceConsistentCasingInFileName,`
+  y: optimization failed'')}error)}'} async fixCommonTypeScriptIssues() {this.log(')'Fixing common TypeScript issues...'); try { if (fs.existsSync(' 'tsconfig.json')) { let config = JSON.parse(fs.readFileSync(','tsconfig.json')utf8'))} config.compilerOptions ={/* TODO: Fix JSX expression */} k: 'true'}forceConsistentCasingInFileName,`
   s: 'true'} fs.writeFileSync('tsconfig.json',JSON.stringify(config,null)2)); this.log('TypeScript configuration updated')} catch (error) {this.error('Failed to fix TypeScript issues'}error) } } async updateMemoryLimits() {' this.log('Updating memory limits...')} try {' const packageJson = JSON.parse(fs.readFileSync('package.json'}utf8')); if (packageJson.scripts && packageJson.scripts.build) { packageJson.scripts.build = `NODE_OPTIONS=`--max-old-space-size=4096` ${packageJson.scripts.build}`} fs.writeFileSync(`package.json`,JSON.stringify(packageJson,null)2)); this.log( 'Memory limits updated')} catch (error) {this.error( 'Failed to update memory limits'}error) } } async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('experimental')) {/* TODO: Fix JSX expression */}
   s: ['@svgr/webpack']}\n,
   as: '*.js'\n }\n }\n }\n } )} fs.writeFileSync('next.config.js')config)} this.log('Build process optimized')} catch (error) {this.error('Failed to optimize build process'}error) } } async performDailyMaintenance() {' this.log('Performing daily maintenance...')} try { this.runCommand('rm -rf .next out dist build'}{/* TODO: Fix JSX expression */})
@@ -2405,7 +2389,7 @@
   t: 'true'}); this.runCommand('npm install'){/* TODO: Fix JSX expression */}
   t: 'true' }); this.runCommand('npm update --save'){/* TODO: Fix JSX expression */}
   t: 'true' }); await this.optimizeBuildConfig(); await this.checkCodeQualityIssues(); this.log( Weekly optimization completed')} catch (error) {this.error('Weekly optimization failed'}error) } } runCommand(command)option,
-  s: = {}) {/* TODO: Fix JSX expression */}
+  s: ={} ) {/* TODO: Fix JSX expression */}
   cwd: process.cwd(})}) retur,`
   n: 'result'} catch (error) { if (!options.silent) { throw error } return error.stdout || error.stderr || error.message} } warn(message) {const timestamp = new Date().toISOString()} const warnMessage = `[${timestamp}] WARNIN,`
   G: ${messag}e}`; tr,
@@ -2415,7 +2399,7 @@
   c: stop() {this.isRunning = false} this.log('Netlif)
   y: Build Monitor stopped''})}' getStatus() {/* TODO: Fix JSX expression */}
   config: 'this.confi'}g} } } i,
-  f: (require.main === module) {const monitor = new NetlifyBuildMonitor()} process.on('SIGINT'')asyn,
+  f: (require.main === = module) {const monitor = new NetlifyBuildMonitor()} process.on('SIGINT'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
   t: monitor.stop()} process.exit(0)}) process.on('SIGTERM''))asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -2616,11 +2600,11 @@
   m: update'}{/* TODO: Fix JSX expression */}
   t: 'true'})' const outdated = this.runCommand('npm outdated --json'){/* TODO: Fix JSX expression */}
   t: 'true'})' const outdatedDeps = JSON.parse(outdated); fo,`
-  r: (const [dep)info] of Object.entries(outdatedDeps)) { if (info.current !== info.latest) { this.log(`Updating ${dep} from ${info.current} to ${info.latest}`); this.runCommand(`np)`
+  r: (const [dep)info] of Object.entries(outdatedDeps)) { if (info.current !== == info.latest) { this.log(`Updating ${dep} from ${info.current} to ${info.latest}`); this.runCommand(`np)`
   m: install ${dep}@latest`){/* TODO: Fix JSX expression */}
   t: 'true'})} } async updateDependencies() {this.log(')'Updating dependencies...')} try { this.runCommand(' 'npm update'}{/* TODO: Fix JSX expression */})`
   t: 'true' }); const outdated = this.runCommand(`npm outdated --json`){/* TODO: Fix JSX expression */}`
-  t: 'true' }) const outdatedDeps = JSON.parse(outdated); for (const [dep)info] of Object.entries(outdatedDeps)) { if (info.current !== info.latest) {' this.log(`Updating ${dep} from ${info.current} to ${info.latest}`)` this.runCommand(`npm install ${dep}@latest`){/* TODO: Fix JSX expression */}
+  t: 'true' }) const outdatedDeps = JSON.parse(outdated); for (const [dep)info] of Object.entries(outdatedDeps)) { if (info.current !== == info.latest) {' this.log(`Updating ${dep} from ${info.current} to ${info.latest}`)` this.runCommand(`npm install ${dep}@latest`){/* TODO: Fix JSX expression */}
   t: 'true' })} } this.log('Dependencie)
   s: updated successfully')} catch (error) {/* TODO: Fix JSX expression */}
   d: to update dependencies'}error)}'} asyn,
@@ -2659,8 +2643,7 @@
   d: to update build scripts'}error)}'} asyn,
   c: fixCommonTypeScriptIssues() {/* TODO: Fix JSX expression */}
   t: config = JSON.parse(fs.readFileSync( 'tsconfig.json')utf8''}))' config.compilerOption,
-  s: = {/* TODO: Fix JSX expression */}
-  forceConsistentCasingInFileNames: 'tru'}e} ; fs.writeFileSync('tsconfig.json''),JSON.stringify(config,null)2))}' this.log('TypeScrip)
+  s: ={/* TODO: Fix JSX expression */} forceConsistentCasingInFileNames: 'tru'}e} ; fs.writeFileSync('tsconfig.json''),JSON.stringify(config,null)2))}' this.log('TypeScrip)
   t: configuration updated''))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to fix TypeScript issues'')}error)}'} asyn,
@@ -2698,8 +2681,7 @@
   t: this.checkCodeQualityIssues(); this.log(Weekl)
   y: optimization completed'))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
-  y: optimization failed'')}error)}'} async fixCommonTypeScriptIssues() {this.log(')'Fixing common TypeScript issues...'); try { if (fs.existsSync(' 'tsconfig.json')) { let config = JSON.parse(fs.readFileSync(','tsconfig.json')utf8'))} config.compilerOptions = {/* TODO: Fix JSX expression */}
-  k: 'true'}forceConsistentCasingInFileName,`
+  y: optimization failed'')}error)}'} async fixCommonTypeScriptIssues() {this.log(')'Fixing common TypeScript issues...'); try { if (fs.existsSync(' 'tsconfig.json')) { let config = JSON.parse(fs.readFileSync(','tsconfig.json')utf8'))} config.compilerOptions ={/* TODO: Fix JSX expression */} k: 'true'}forceConsistentCasingInFileName,`
   s: 'true'} fs.writeFileSync('tsconfig.json',JSON.stringify(config,null)2)); this.log('TypeScript configuration updated')} catch (error) {this.error('Failed to fix TypeScript issues'}error) } } async updateMemoryLimits() {' this.log('Updating memory limits...')} try {' const packageJson = JSON.parse(fs.readFileSync('package.json'}utf8')); if (packageJson.scripts && packageJson.scripts.build) { packageJson.scripts.build = `NODE_OPTIONS=`--max-old-space-size=4096` ${packageJson.scripts.build}`} fs.writeFileSync(`package.json`,JSON.stringify(packageJson,null)2)); this.log( 'Memory limits updated')} catch (error) {this.error( 'Failed to update memory limits'}error) } } async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('experimental')) {/* TODO: Fix JSX expression */}
   s: ['@svgr/webpack']}\n,
   as: '*.js'\n }\n }\n }\n } )} fs.writeFileSync('next.config.js')config)} this.log('Build process optimized')} catch (error) {this.error('Failed to optimize build process'}error) } } async performDailyMaintenance() {' this.log('Performing daily maintenance...')} try { this.runCommand('rm -rf .next out dist build'}{/* TODO: Fix JSX expression */})
@@ -2708,7 +2690,7 @@
   t: 'true'}); this.runCommand('npm install'){/* TODO: Fix JSX expression */}
   t: 'true' }); this.runCommand('npm update --save'){/* TODO: Fix JSX expression */}
   t: 'true' }); await this.optimizeBuildConfig(); await this.checkCodeQualityIssues(); this.log( Weekly optimization completed')} catch (error) {this.error('Weekly optimization failed'}error) } } runCommand(command)option,
-  s: = {}) {/* TODO: Fix JSX expression */}
+  s: ={} ) {/* TODO: Fix JSX expression */}
   cwd: process.cwd(})}) retur,`
   n: 'result'} catch (error) { if (!options.silent) { throw error } return error.stdout || error.stderr || error.message} } warn(message) {const timestamp = new Date().toISOString()} const warnMessage = `[${timestamp}] WARNIN,`
   G: ${messag}e}`; tr,
@@ -2718,7 +2700,7 @@
   c: stop() {this.isRunning = false} this.log('Netlif)
   y: Build Monitor stopped''})}' getStatus() {/* TODO: Fix JSX expression */}
   config: 'this.confi'}g} } } i,
-  f: (require.main === module) {const monitor = new NetlifyBuildMonitor()} process.on('SIGINT'')asyn,
+  f: (require.main === = module) {const monitor = new NetlifyBuildMonitor()} process.on('SIGINT'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
   t: monitor.stop()} process.exit(0)}) process.on('SIGTERM''))asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -2919,11 +2901,11 @@
   m: update'}{/* TODO: Fix JSX expression */}
   t: 'true'})' const outdated = this.runCommand('npm outdated --json'){/* TODO: Fix JSX expression */}
   t: 'true'})' const outdatedDeps = JSON.parse(outdated); fo,`
-  r: (const [dep)info] of Object.entries(outdatedDeps)) { if (info.current !== info.latest) { this.log(`Updating ${dep} from ${info.current} to ${info.latest}`); this.runCommand(`np)`
+  r: (const [dep)info] of Object.entries(outdatedDeps)) { if (info.current !== == info.latest) { this.log(`Updating ${dep} from ${info.current} to ${info.latest}`); this.runCommand(`np)`
   m: install ${dep}@latest`){/* TODO: Fix JSX expression */}
   t: 'true'})} } async updateDependencies() {this.log(')'Updating dependencies...')} try { this.runCommand(' 'npm update'}{/* TODO: Fix JSX expression */})`
   t: 'true' }); const outdated = this.runCommand(`npm outdated --json`){/* TODO: Fix JSX expression */}`
-  t: 'true' }) const outdatedDeps = JSON.parse(outdated); for (const [dep)info] of Object.entries(outdatedDeps)) { if (info.current !== info.latest) {' this.log(`Updating ${dep} from ${info.current} to ${info.latest}`)` this.runCommand(`npm install ${dep}@latest`){/* TODO: Fix JSX expression */}
+  t: 'true' }) const outdatedDeps = JSON.parse(outdated); for (const [dep)info] of Object.entries(outdatedDeps)) { if (info.current !== == info.latest) {' this.log(`Updating ${dep} from ${info.current} to ${info.latest}`)` this.runCommand(`npm install ${dep}@latest`){/* TODO: Fix JSX expression */}
   t: 'true' })} } this.log('Dependencie)
   s: updated successfully')} catch (error) {/* TODO: Fix JSX expression */}
   d: to update dependencies'}error)}'} asyn,
@@ -2962,8 +2944,7 @@
   d: to update build scripts'}error)}'} asyn,
   c: fixCommonTypeScriptIssues() {/* TODO: Fix JSX expression */}
   t: config = JSON.parse(fs.readFileSync( 'tsconfig.json')utf8''}))' config.compilerOption,
-  s: = {/* TODO: Fix JSX expression */}
-  forceConsistentCasingInFileNames: 'tru'}e} ; fs.writeFileSync('tsconfig.json''),JSON.stringify(config,null)2))}' this.log('TypeScrip)
+  s: ={/* TODO: Fix JSX expression */} forceConsistentCasingInFileNames: 'tru'}e} ; fs.writeFileSync('tsconfig.json''),JSON.stringify(config,null)2))}' this.log('TypeScrip)
   t: configuration updated''))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to fix TypeScript issues'')}error)}'} asyn,
@@ -3001,8 +2982,7 @@
   t: this.checkCodeQualityIssues(); this.log(Weekl)
   y: optimization completed'))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
-  y: optimization failed'')}error)}'} async fixCommonTypeScriptIssues() {this.log(')'Fixing common TypeScript issues...'); try { if (fs.existsSync(' 'tsconfig.json')) { let config = JSON.parse(fs.readFileSync(','tsconfig.json')utf8'))} config.compilerOptions = {/* TODO: Fix JSX expression */}
-  k: 'true'}forceConsistentCasingInFileName,`
+  y: optimization failed'')}error)}'} async fixCommonTypeScriptIssues() {this.log(')'Fixing common TypeScript issues...'); try { if (fs.existsSync(' 'tsconfig.json')) { let config = JSON.parse(fs.readFileSync(','tsconfig.json')utf8'))} config.compilerOptions ={/* TODO: Fix JSX expression */} k: 'true'}forceConsistentCasingInFileName,`
   s: 'true'} fs.writeFileSync('tsconfig.json',JSON.stringify(config,null)2)); this.log('TypeScript configuration updated')} catch (error) {this.error('Failed to fix TypeScript issues'}error) } } async updateMemoryLimits() {' this.log('Updating memory limits...')} try {' const packageJson = JSON.parse(fs.readFileSync('package.json'}utf8')); if (packageJson.scripts && packageJson.scripts.build) { packageJson.scripts.build = `NODE_OPTIONS=`--max-old-space-size=4096` ${packageJson.scripts.build}`} fs.writeFileSync(`package.json`,JSON.stringify(packageJson,null)2)); this.log( 'Memory limits updated')} catch (error) {this.error( 'Failed to update memory limits'}error) } } async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('experimental')) {/* TODO: Fix JSX expression */}
   s: ['@svgr/webpack']}\n,
   as: '*.js'\n }\n }\n }\n } )} fs.writeFileSync('next.config.js')config)} this.log('Build process optimized')} catch (error) {this.error('Failed to optimize build process'}error) } } async performDailyMaintenance() {' this.log('Performing daily maintenance...')} try { this.runCommand('rm -rf .next out dist build'}{/* TODO: Fix JSX expression */})
@@ -3011,7 +2991,7 @@
   t: 'true'}); this.runCommand('npm install'){/* TODO: Fix JSX expression */}
   t: 'true' }); this.runCommand('npm update --save'){/* TODO: Fix JSX expression */}
   t: 'true' }); await this.optimizeBuildConfig(); await this.checkCodeQualityIssues(); this.log( Weekly optimization completed')} catch (error) {this.error('Weekly optimization failed'}error) } } runCommand(command)option,
-  s: = {}) {/* TODO: Fix JSX expression */}
+  s: ={} ) {/* TODO: Fix JSX expression */}
   cwd: process.cwd(})}) retur,`
   n: 'result'} catch (error) { if (!options.silent) { throw error } return error.stdout || error.stderr || error.message} } warn(message) {const timestamp = new Date().toISOString()} const warnMessage = `[${timestamp}] WARNIN,`
   G: ${messag}e}`; tr,
@@ -3021,7 +3001,7 @@
   c: stop() {this.isRunning = false} this.log('Netlif)
   y: Build Monitor stopped''})}' getStatus() {/* TODO: Fix JSX expression */}
   config: 'this.confi'}g} } } i,
-  f: (require.main === module) {const monitor = new NetlifyBuildMonitor()} process.on('SIGINT'')asyn,
+  f: (require.main === = module) {const monitor = new NetlifyBuildMonitor()} process.on('SIGINT'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
   t: monitor.stop()} process.exit(0)}) process.on('SIGTERM''))asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -3222,11 +3202,11 @@
   m: update'}{/* TODO: Fix JSX expression */}
   t: 'true'})' const outdated = this.runCommand('npm outdated --json'){/* TODO: Fix JSX expression */}
   t: 'true'})' const outdatedDeps = JSON.parse(outdated); fo,`
-  r: (const [dep)info] of Object.entries(outdatedDeps)) { if (info.current !== info.latest) { this.log(`Updating ${dep} from ${info.current} to ${info.latest}`); this.runCommand(`np)`
+  r: (const [dep)info] of Object.entries(outdatedDeps)) { if (info.current !== == info.latest) { this.log(`Updating ${dep} from ${info.current} to ${info.latest}`); this.runCommand(`np)`
   m: install ${dep}@latest`){/* TODO: Fix JSX expression */}
   t: 'true'})} } async updateDependencies() {this.log(')'Updating dependencies...')} try { this.runCommand(' 'npm update'}{/* TODO: Fix JSX expression */})`
   t: 'true' }); const outdated = this.runCommand(`npm outdated --json`){/* TODO: Fix JSX expression */}`
-  t: 'true' }) const outdatedDeps = JSON.parse(outdated); for (const [dep)info] of Object.entries(outdatedDeps)) { if (info.current !== info.latest) {' this.log(`Updating ${dep} from ${info.current} to ${info.latest}`)` this.runCommand(`npm install ${dep}@latest`){/* TODO: Fix JSX expression */}
+  t: 'true' }) const outdatedDeps = JSON.parse(outdated); for (const [dep)info] of Object.entries(outdatedDeps)) { if (info.current !== == info.latest) {' this.log(`Updating ${dep} from ${info.current} to ${info.latest}`)` this.runCommand(`npm install ${dep}@latest`){/* TODO: Fix JSX expression */}
   t: 'true' })} } this.log('Dependencie)
   s: updated successfully')} catch (error) {/* TODO: Fix JSX expression */}
   d: to update dependencies'}error)}'} asyn,
@@ -3265,8 +3245,7 @@
   d: to update build scripts'}error)}'} asyn,
   c: fixCommonTypeScriptIssues() {/* TODO: Fix JSX expression */}
   t: config = JSON.parse(fs.readFileSync( 'tsconfig.json')utf8''}))' config.compilerOption,
-  s: = {/* TODO: Fix JSX expression */}
-  forceConsistentCasingInFileNames: 'tru'}e} ; fs.writeFileSync('tsconfig.json''),JSON.stringify(config,null)2))}' this.log('TypeScrip)
+  s: ={/* TODO: Fix JSX expression */} forceConsistentCasingInFileNames: 'tru'}e} ; fs.writeFileSync('tsconfig.json''),JSON.stringify(config,null)2))}' this.log('TypeScrip)
   t: configuration updated''))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to fix TypeScript issues'')}error)}'} asyn,
@@ -3304,8 +3283,7 @@
   t: this.checkCodeQualityIssues(); this.log(Weekl)
   y: optimization completed'))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
-  y: optimization failed'')}error)}'} async fixCommonTypeScriptIssues() {this.log(')'Fixing common TypeScript issues...'); try { if (fs.existsSync(' 'tsconfig.json')) { let config = JSON.parse(fs.readFileSync(','tsconfig.json')utf8'))} config.compilerOptions = {/* TODO: Fix JSX expression */}
-  k: 'true'}forceConsistentCasingInFileName,`
+  y: optimization failed'')}error)}'} async fixCommonTypeScriptIssues() {this.log(')'Fixing common TypeScript issues...'); try { if (fs.existsSync(' 'tsconfig.json')) { let config = JSON.parse(fs.readFileSync(','tsconfig.json')utf8'))} config.compilerOptions ={/* TODO: Fix JSX expression */} k: 'true'}forceConsistentCasingInFileName,`
   s: 'true'} fs.writeFileSync('tsconfig.json',JSON.stringify(config,null)2)); this.log('TypeScript configuration updated')} catch (error) {this.error('Failed to fix TypeScript issues'}error) } } async updateMemoryLimits() {' this.log('Updating memory limits...')} try {' const packageJson = JSON.parse(fs.readFileSync('package.json'}utf8')); if (packageJson.scripts && packageJson.scripts.build) { packageJson.scripts.build = `NODE_OPTIONS=`--max-old-space-size=4096` ${packageJson.scripts.build}`} fs.writeFileSync(`package.json`,JSON.stringify(packageJson,null)2)); this.log( 'Memory limits updated')} catch (error) {this.error( 'Failed to update memory limits'}error) } } async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('experimental')) {/* TODO: Fix JSX expression */}
   s: ['@svgr/webpack']}\n,
   as: '*.js'\n }\n }\n }\n } )} fs.writeFileSync('next.config.js')config)} this.log('Build process optimized')} catch (error) {this.error('Failed to optimize build process'}error) } } async performDailyMaintenance() {' this.log('Performing daily maintenance...')} try { this.runCommand('rm -rf .next out dist build'}{/* TODO: Fix JSX expression */})
@@ -3314,7 +3292,7 @@
   t: 'true'}); this.runCommand('npm install'){/* TODO: Fix JSX expression */}
   t: 'true' }); this.runCommand('npm update --save'){/* TODO: Fix JSX expression */}
   t: 'true' }); await this.optimizeBuildConfig(); await this.checkCodeQualityIssues(); this.log( Weekly optimization completed')} catch (error) {this.error('Weekly optimization failed'}error) } } runCommand(command)option,
-  s: = {}) {/* TODO: Fix JSX expression */}
+  s: ={} ) {/* TODO: Fix JSX expression */}
   cwd: process.cwd(})}) retur,`
   n: 'result'} catch (error) { if (!options.silent) { throw error } return error.stdout || error.stderr || error.message} } warn(message) {const timestamp = new Date().toISOString()} const warnMessage = `[${timestamp}] WARNIN,`
   G: ${messag}e}`; tr,
@@ -3324,7 +3302,7 @@
   c: stop() {this.isRunning = false} this.log('Netlif)
   y: Build Monitor stopped''})}' getStatus() {/* TODO: Fix JSX expression */}
   config: 'this.confi'}g} } } i,
-  f: (require.main === module) {const monitor = new NetlifyBuildMonitor()} process.on('SIGINT'')asyn,
+  f: (require.main === = module) {const monitor = new NetlifyBuildMonitor()} process.on('SIGINT'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
   t: monitor.stop()} process.exit(0)}) process.on('SIGTERM''))asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -3525,11 +3503,11 @@
   m: update'}{/* TODO: Fix JSX expression */}
   t: 'true'})' const outdated = this.runCommand('npm outdated --json'){/* TODO: Fix JSX expression */}
   t: 'true'})' const outdatedDeps = JSON.parse(outdated); fo,`
-  r: (const [dep)info] of Object.entries(outdatedDeps)) { if (info.current !== info.latest) { this.log(`Updating ${dep} from ${info.current} to ${info.latest}`); this.runCommand(`np)`
+  r: (const [dep)info] of Object.entries(outdatedDeps)) { if (info.current !== == info.latest) { this.log(`Updating ${dep} from ${info.current} to ${info.latest}`); this.runCommand(`np)`
   m: install ${dep}@latest`){/* TODO: Fix JSX expression */}
   t: 'true'})} } async updateDependencies() {this.log(')'Updating dependencies...')} try { this.runCommand(' 'npm update'}{/* TODO: Fix JSX expression */})`
   t: 'true' }); const outdated = this.runCommand(`npm outdated --json`){/* TODO: Fix JSX expression */}`
-  t: 'true' }) const outdatedDeps = JSON.parse(outdated); for (const [dep)info] of Object.entries(outdatedDeps)) { if (info.current !== info.latest) {' this.log(`Updating ${dep} from ${info.current} to ${info.latest}`)` this.runCommand(`npm install ${dep}@latest`){/* TODO: Fix JSX expression */}
+  t: 'true' }) const outdatedDeps = JSON.parse(outdated); for (const [dep)info] of Object.entries(outdatedDeps)) { if (info.current !== == info.latest) {' this.log(`Updating ${dep} from ${info.current} to ${info.latest}`)` this.runCommand(`npm install ${dep}@latest`){/* TODO: Fix JSX expression */}
   t: 'true' })} } this.log('Dependencie)
   s: updated successfully')} catch (error) {/* TODO: Fix JSX expression */}
   d: to update dependencies'}error)}'} asyn,
@@ -3568,8 +3546,7 @@
   d: to update build scripts'}error)}'} asyn,
   c: fixCommonTypeScriptIssues() {/* TODO: Fix JSX expression */}
   t: config = JSON.parse(fs.readFileSync( 'tsconfig.json')utf8''}))' config.compilerOption,
-  s: = {/* TODO: Fix JSX expression */}
-  forceConsistentCasingInFileNames: 'tru'}e} ; fs.writeFileSync('tsconfig.json''),JSON.stringify(config,null)2))}' this.log('TypeScrip)
+  s: ={/* TODO: Fix JSX expression */} forceConsistentCasingInFileNames: 'tru'}e} ; fs.writeFileSync('tsconfig.json''),JSON.stringify(config,null)2))}' this.log('TypeScrip)
   t: configuration updated''))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to fix TypeScript issues'')}error)}'} asyn,
@@ -3607,8 +3584,7 @@
   t: this.checkCodeQualityIssues(); this.log(Weekl)
   y: optimization completed'))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
-  y: optimization failed'')}error)}'} async fixCommonTypeScriptIssues() {this.log(')'Fixing common TypeScript issues...'); try { if (fs.existsSync(' 'tsconfig.json')) { let config = JSON.parse(fs.readFileSync(','tsconfig.json')utf8'))} config.compilerOptions = {/* TODO: Fix JSX expression */}
-  k: 'true'}forceConsistentCasingInFileName,`
+  y: optimization failed'')}error)}'} async fixCommonTypeScriptIssues() {this.log(')'Fixing common TypeScript issues...'); try { if (fs.existsSync(' 'tsconfig.json')) { let config = JSON.parse(fs.readFileSync(','tsconfig.json')utf8'))} config.compilerOptions ={/* TODO: Fix JSX expression */} k: 'true'}forceConsistentCasingInFileName,`
   s: 'true'} fs.writeFileSync('tsconfig.json',JSON.stringify(config,null)2)); this.log('TypeScript configuration updated')} catch (error) {this.error('Failed to fix TypeScript issues'}error) } } async updateMemoryLimits() {' this.log('Updating memory limits...')} try {' const packageJson = JSON.parse(fs.readFileSync('package.json'}utf8')); if (packageJson.scripts && packageJson.scripts.build) { packageJson.scripts.build = `NODE_OPTIONS=`--max-old-space-size=4096` ${packageJson.scripts.build}`} fs.writeFileSync(`package.json`,JSON.stringify(packageJson,null)2)); this.log( 'Memory limits updated')} catch (error) {this.error( 'Failed to update memory limits'}error) } } async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('experimental')) {/* TODO: Fix JSX expression */}
   s: ['@svgr/webpack']}\n,
   as: '*.js'\n }\n }\n }\n } )} fs.writeFileSync('next.config.js')config)} this.log('Build process optimized')} catch (error) {this.error('Failed to optimize build process'}error) } } async performDailyMaintenance() {' this.log('Performing daily maintenance...')} try { this.runCommand('rm -rf .next out dist build'}{/* TODO: Fix JSX expression */})
@@ -3617,7 +3593,7 @@
   t: 'true'}); this.runCommand('npm install'){/* TODO: Fix JSX expression */}
   t: 'true' }); this.runCommand('npm update --save'){/* TODO: Fix JSX expression */}
   t: 'true' }); await this.optimizeBuildConfig(); await this.checkCodeQualityIssues(); this.log( Weekly optimization completed')} catch (error) {this.error('Weekly optimization failed'}error) } } runCommand(command)option,
-  s: = {}) {/* TODO: Fix JSX expression */}
+  s: ={} ) {/* TODO: Fix JSX expression */}
   cwd: process.cwd(})}) retur,`
   n: 'result'} catch (error) { if (!options.silent) { throw error } return error.stdout || error.stderr || error.message} } warn(message) {const timestamp = new Date().toISOString()} const warnMessage = `[${timestamp}] WARNIN,`
   G: ${messag}e}`; tr,
@@ -3627,7 +3603,7 @@
   c: stop() {this.isRunning = false} this.log('Netlif)
   y: Build Monitor stopped''})}' getStatus() {/* TODO: Fix JSX expression */}
   config: 'this.confi'}g} } } i,
-  f: (require.main === module) {const monitor = new NetlifyBuildMonitor()} process.on('SIGINT'')asyn,
+  f: (require.main === = module) {const monitor = new NetlifyBuildMonitor()} process.on('SIGINT'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
   t: monitor.stop()} process.exit(0)}) process.on('SIGTERM''))asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -3834,11 +3810,11 @@
   m: update'}{/* TODO: Fix JSX expression */}
   t: 'true'})' const outdated = this.runCommand('npm outdated --json'){/* TODO: Fix JSX expression */}
   t: 'true'})' const outdatedDeps = JSON.parse(outdated); fo,`
-  r: (const [dep)info] of Object.entries(outdatedDeps)) { if (info.current !== info.latest) { this.log(`Updating ${dep} from ${info.current} to ${info.latest}`); this.runCommand(`np)`
+  r: (const [dep)info] of Object.entries(outdatedDeps)) { if (info.current !== == info.latest) { this.log(`Updating ${dep} from ${info.current} to ${info.latest}`); this.runCommand(`np)`
   m: install ${dep}@latest`){/* TODO: Fix JSX expression */}
   t: 'true'})} } async updateDependencies() {this.log(')'Updating dependencies...')} try { this.runCommand(' 'npm update'}{/* TODO: Fix JSX expression */})`
   t: 'true' }); const outdated = this.runCommand(`npm outdated --json`){/* TODO: Fix JSX expression */}`
-  t: 'true' }) const outdatedDeps = JSON.parse(outdated); for (const [dep)info] of Object.entries(outdatedDeps)) { if (info.current !== info.latest) {' this.log(`Updating ${dep} from ${info.current} to ${info.latest}`)` this.runCommand(`npm install ${dep}@latest`){/* TODO: Fix JSX expression */}
+  t: 'true' }) const outdatedDeps = JSON.parse(outdated); for (const [dep)info] of Object.entries(outdatedDeps)) { if (info.current !== == info.latest) {' this.log(`Updating ${dep} from ${info.current} to ${info.latest}`)` this.runCommand(`npm install ${dep}@latest`){/* TODO: Fix JSX expression */}
   t: 'true' })} } this.log('Dependencie)
   s: updated successfully')} catch (error) {/* TODO: Fix JSX expression */}
   d: to update dependencies'}error)}'} asyn,
@@ -3877,8 +3853,7 @@
   d: to update build scripts'}error)}'} asyn,
   c: fixCommonTypeScriptIssues() {/* TODO: Fix JSX expression */}
   t: config = JSON.parse(fs.readFileSync( 'tsconfig.json')utf8''}))' config.compilerOption,
-  s: = {/* TODO: Fix JSX expression */}
-  forceConsistentCasingInFileNames: 'tru'}e} ; fs.writeFileSync('tsconfig.json''),JSON.stringify(config,null)2))}' this.log('TypeScrip)
+  s: ={/* TODO: Fix JSX expression */} forceConsistentCasingInFileNames: 'tru'}e} ; fs.writeFileSync('tsconfig.json''),JSON.stringify(config,null)2))}' this.log('TypeScrip)
   t: configuration updated''))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to fix TypeScript issues'')}error)}'} asyn,
@@ -3916,8 +3891,7 @@
   t: this.checkCodeQualityIssues(); this.log(Weekl)
   y: optimization completed'))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
-  y: optimization failed'')}error)}'} async fixCommonTypeScriptIssues() {this.log(')'Fixing common TypeScript issues...'); try { if (fs.existsSync(' 'tsconfig.json')) { let config = JSON.parse(fs.readFileSync(','tsconfig.json')utf8'))} config.compilerOptions = {/* TODO: Fix JSX expression */}
-  k: 'true'}}' forceConsistentCasingInFileName,`
+  y: optimization failed'')}error)}'} async fixCommonTypeScriptIssues() {this.log(')'Fixing common TypeScript issues...'); try { if (fs.existsSync(' 'tsconfig.json')) { let config = JSON.parse(fs.readFileSync(','tsconfig.json')utf8'))} config.compilerOptions ={/* TODO: Fix JSX expression */} k: 'true'}}' forceConsistentCasingInFileName,`
   s: 'true'} fs.writeFileSync('tsconfig.json',JSON.stringify(config,null)2)); this.log('TypeScript configuration updated')} catch (error) {this.error('Failed to fix TypeScript issues'}error) } } async updateMemoryLimits() {' this.log('Updating memory limits...')} try {' const packageJson = JSON.parse(fs.readFileSync('package.json'}utf8')); if (packageJson.scripts && packageJson.scripts.build) { packageJson.scripts.build = `NODE_OPTIONS=`--max-old-space-size=4096` ${packageJson.scripts.build}`} fs.writeFileSync(`package.json`,JSON.stringify(packageJson,null)2)); this.log( 'Memory limits updated')} catch (error) {this.error( 'Failed to update memory limits'}error) } } async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('experimental')) {/* TODO: Fix JSX expression */}
   s: ['@svgr/webpack']}\n,
   as: '*.js'\n }\n }\n }\n } )} fs.writeFileSync('next.config.js')config)} this.log('Build process optimized')} catch (error) {this.error('Failed to optimize build process'}error) } } async performDailyMaintenance() {' this.log('Performing daily maintenance...')} try { this.runCommand('rm -rf .next out dist build'}{/* TODO: Fix JSX expression */})
@@ -3926,7 +3900,7 @@
   t: 'true'}); this.runCommand('npm install'){/* TODO: Fix JSX expression */}
   t: 'true' }); this.runCommand('npm update --save'){/* TODO: Fix JSX expression */}
   t: 'true' }); await this.optimizeBuildConfig(); await this.checkCodeQualityIssues(); this.log( Weekly optimization completed')} catch (error) {this.error('Weekly optimization failed'}error) } } runCommand(command)option,
-  s: = {}) {/* TODO: Fix JSX expression */}
+  s: ={} ) {/* TODO: Fix JSX expression */}
   cwd: process.cwd(})}) retur,`
   n: 'result'} catch (error) { if (!options.silent) { throw error } return error.stdout || error.stderr || error.message} } warn(message) {const timestamp = new Date().toISOString()} const warnMessage = `[${timestamp}] WARNIN,`
   G: ${messag}e}`; tr,
@@ -3936,7 +3910,7 @@
   c: stop() {this.isRunning = false} this.log('Netlif)
   y: Build Monitor stopped''})}' getStatus() {/* TODO: Fix JSX expression */}
   config: 'this.confi'}g} } } i,
-  f: (require.main === module) {const monitor = new NetlifyBuildMonitor()} process.on('SIGINT'')asyn,
+  f: (require.main === = module) {const monitor = new NetlifyBuildMonitor()} process.on('SIGINT'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
   t: monitor.stop()} process.exit(0)}) process.on('SIGTERM''))asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -4143,11 +4117,11 @@
   m: update'}{/* TODO: Fix JSX expression */}
   t: 'true'})' const outdated = this.runCommand('npm outdated --json'){/* TODO: Fix JSX expression */}
   t: 'true'})' const outdatedDeps = JSON.parse(outdated); fo,`
-  r: (const [dep)info] of Object.entries(outdatedDeps)) { if (info.current !== info.latest) { this.log(`Updating ${dep} from ${info.current} to ${info.latest}`); this.runCommand(`np)`
+  r: (const [dep)info] of Object.entries(outdatedDeps)) { if (info.current !== == info.latest) { this.log(`Updating ${dep} from ${info.current} to ${info.latest}`); this.runCommand(`np)`
   m: install ${dep}@latest`){/* TODO: Fix JSX expression */}
   t: 'true'})} } async updateDependencies() {this.log(')'Updating dependencies...')} try { this.runCommand(' 'npm update'}{/* TODO: Fix JSX expression */})`
   t: 'true' }); const outdated = this.runCommand(`npm outdated --json`){/* TODO: Fix JSX expression */}`
-  t: 'true' }) const outdatedDeps = JSON.parse(outdated); for (const [dep)info] of Object.entries(outdatedDeps)) { if (info.current !== info.latest) {' this.log(`Updating ${dep} from ${info.current} to ${info.latest}`)` this.runCommand(`npm install ${dep}@latest`){/* TODO: Fix JSX expression */}
+  t: 'true' }) const outdatedDeps = JSON.parse(outdated); for (const [dep)info] of Object.entries(outdatedDeps)) { if (info.current !== == info.latest) {' this.log(`Updating ${dep} from ${info.current} to ${info.latest}`)` this.runCommand(`npm install ${dep}@latest`){/* TODO: Fix JSX expression */}
   t: 'true' })} } this.log('Dependencie)
   s: updated successfully')} catch (error) {/* TODO: Fix JSX expression */}
   d: to update dependencies'}error)}'} asyn,
@@ -4186,8 +4160,7 @@
   d: to update build scripts'}error)}'} asyn,
   c: fixCommonTypeScriptIssues() {/* TODO: Fix JSX expression */}
   t: config = JSON.parse(fs.readFileSync( 'tsconfig.json')utf8''}))' config.compilerOption,
-  s: = {/* TODO: Fix JSX expression */}
-  forceConsistentCasingInFileNames: 'tru'}e} ; fs.writeFileSync('tsconfig.json''),JSON.stringify(config,null)2))}' this.log('TypeScrip)
+  s: ={/* TODO: Fix JSX expression */} forceConsistentCasingInFileNames: 'tru'}e} ; fs.writeFileSync('tsconfig.json''),JSON.stringify(config,null)2))}' this.log('TypeScrip)
   t: configuration updated''))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to fix TypeScript issues'')}error)}'} asyn,
@@ -4225,8 +4198,7 @@
   t: this.checkCodeQualityIssues(); this.log(Weekl)
   y: optimization completed'))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
-  y: optimization failed'')}error)}'} async fixCommonTypeScriptIssues() {this.log(')'Fixing common TypeScript issues...'); try { if (fs.existsSync(' 'tsconfig.json')) { let config = JSON.parse(fs.readFileSync(','tsconfig.json')utf8'))} config.compilerOptions = {/* TODO: Fix JSX expression */}
-  k: 'true'}}' forceConsistentCasingInFileName,`
+  y: optimization failed'')}error)}'} async fixCommonTypeScriptIssues() {this.log(')'Fixing common TypeScript issues...'); try { if (fs.existsSync(' 'tsconfig.json')) { let config = JSON.parse(fs.readFileSync(','tsconfig.json')utf8'))} config.compilerOptions ={/* TODO: Fix JSX expression */} k: 'true'}}' forceConsistentCasingInFileName,`
   s: 'true'} fs.writeFileSync('tsconfig.json',JSON.stringify(config,null)2)); this.log('TypeScript configuration updated')} catch (error) {this.error('Failed to fix TypeScript issues'}error) } } async updateMemoryLimits() {' this.log('Updating memory limits...')} try {' const packageJson = JSON.parse(fs.readFileSync('package.json'}utf8')); if (packageJson.scripts && packageJson.scripts.build) { packageJson.scripts.build = `NODE_OPTIONS=`--max-old-space-size=4096` ${packageJson.scripts.build}`} fs.writeFileSync(`package.json`,JSON.stringify(packageJson,null)2)); this.log( 'Memory limits updated')} catch (error) {this.error( 'Failed to update memory limits'}error) } } async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('experimental')) {/* TODO: Fix JSX expression */}
   s: ['@svgr/webpack']}\n,
   as: '*.js'\n }\n }\n }\n } )} fs.writeFileSync('next.config.js')config)} this.log('Build process optimized')} catch (error) {this.error('Failed to optimize build process'}error) } } async performDailyMaintenance() {' this.log('Performing daily maintenance...')} try { this.runCommand('rm -rf .next out dist build'}{/* TODO: Fix JSX expression */})
@@ -4235,7 +4207,7 @@
   t: 'true'}); this.runCommand('npm install'){/* TODO: Fix JSX expression */}
   t: 'true' }); this.runCommand('npm update --save'){/* TODO: Fix JSX expression */}
   t: 'true' }); await this.optimizeBuildConfig(); await this.checkCodeQualityIssues(); this.log( Weekly optimization completed')} catch (error) {this.error('Weekly optimization failed'}error) } } runCommand(command)option,
-  s: = {}) {/* TODO: Fix JSX expression */}
+  s: ={} ) {/* TODO: Fix JSX expression */}
   cwd: process.cwd(})}) retur,`
   n: 'result'} catch (error) { if (!options.silent) { throw error } return error.stdout || error.stderr || error.message} } warn(message) {const timestamp = new Date().toISOString()} const warnMessage = `[${timestamp}] WARNIN,`
   G: ${messag}e}`; tr,
@@ -4245,7 +4217,7 @@
   c: stop() {this.isRunning = false} this.log('Netlif)
   y: Build Monitor stopped''})}' getStatus() {/* TODO: Fix JSX expression */}
   config: 'this.confi'}g} } } i,
-  f: (require.main === module) {const monitor = new NetlifyBuildMonitor()} process.on('SIGINT'')asyn,
+  f: (require.main === = module) {const monitor = new NetlifyBuildMonitor()} process.on('SIGINT'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
   t: monitor.stop()} process.exit(0)}) process.on('SIGTERM''))asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -4308,7 +4280,7 @@
   t: true }) } async fixDiskSpaceIssues() {' this.log('' 'Fixing disk space issues...'); try { // Clean build artifacts}' this.runCommand('' 'rm -rf .next out dist build node_modules/.cache' {/* TODO: Fix JSX expression */})
   t: true}); // Clean npm cache;' this.runCommand('' 'npm cache clean --force' {/* TODO: Fix JSX expression */})
   t: true }); // Clean git objects} async updateDependencies() {' this.log('' 'Updating dependencies...'); try { // Update dependencies safely}' this.runCommand('' 'npm update' {/* TODO: Fix JSX expression */})`
-  t: true }); // Check for major updates; const outdatedDeps = JSON.parse(outdated); for (const [dep) info] of Object.entries(outdatedDeps)) {' if (info.current !== info.latest) {' this.log(`Updating ${dep} from ${info.current} to ${info.latest}`)` this.runCommand(`npm install ${dep}@latest` {/* TODO: Fix JSX expression */})
+  t: true }); // Check for major updates; const outdatedDeps = JSON.parse(outdated); for (const [dep) info] of Object.entries(outdatedDeps)) {' if (info.current !== == info.latest) {' this.log(`Updating ${dep} from ${info.current} to ${info.latest}`)` this.runCommand(`npm install ${dep}@latest` {/* TODO: Fix JSX expression */})
   t: true })} } } async fixSecurityVulnerabilities() {' this.log('' 'Fixing security vulnerabilities...'); try { // Run npm audit fix}' this.runCommand('' 'npm audit fix' {/* TODO: Fix JSX expression */})
   t: true }); // Check if vulnerabilities remain;' const audit = this.runCommand('' 'npm audit --json' {/* TODO: Fix JSX expression */})
   t: true }); const auditResult = JSON.parse(audit); if(auditResult.vulnerabilities &&) Object.keys(auditResult.vulnerabilities).length > 0) {' this.log('' 'Some vulnerabilities require manual review');' this.log('' 'Running npm audit fix --force for remaining issues...')}' this.runCommand('' 'npm audit fix --force' {/* TODO: Fix JSX expression */})
@@ -4317,8 +4289,7 @@
   experimental: {\\n optimizeCs, s: true}\\n,
   optimizePackageImports: true\\n }) )} fs.writeFileSync(, next.config.js)' ') config)}' this.log('Build configuration optimized; ' this.error('Failed to optimize build configuration)' ') error) } }' async updateBuildScripts() {/* TODO: Fix JSX expression */}
   d: optimized'] =}'' 'NODE_OPTIONS='--max-old-space-size=4096' np,
-  m: run build''} packageJson.scripts[} async fixCommonTypeScriptIssues() {' this.log('' 'Fixing common TypeScript issues...'); try { // Create or update tsconfig.json for better compatibility;' if (fs.existsSync('' 'tsconfig.json')) {' let config = JSON.parse(fs.readFileSync('' 'tsconfig.json')utf8;' ')); // Add strict mode and better error handling} config.compilerOptions = {/* TODO: Fix JSX expression */}
-  k: true} forceConsistentCasingInFileName,
+  m: run build''} packageJson.scripts[} async fixCommonTypeScriptIssues() {' this.log('' 'Fixing common TypeScript issues...'); try { // Create or update tsconfig.json for better compatibility;' if (fs.existsSync('' 'tsconfig.json')) {' let config = JSON.parse(fs.readFileSync('' 'tsconfig.json')utf8;' ')); // Add strict mode and better error handling} config.compilerOptions ={/* TODO: Fix JSX expression */} k: true} forceConsistentCasingInFileName,
   s: true}' fs.writeFileSync('tsconfig.json)' ', JSON.stringify(config, null) 2));' this.log('TypeScript configuration updated; ' this.error('Failed to fix TypeScript issues)' ') error) } }' async updateMemoryLimits() {'' this.log('Updating memory limits...)' ');' try {'' const packageJson = JSON.parse(fs.readFileSync('package.json}' '}utf8')); // Update build scripts with memory limits} async optimizeBuildProcess() {' this.log('' 'Optimizing build process...'); try { // Enable build caching;' if (fs.existsSync('' 'next.config.js')) {' let config = fs.readFileSync('' 'next.config.js')utf8;' ');' if (!config.includes('experimental}' ')) {/* TODO: Fix JSX expression */}
   turbo: {\\n rule,' s: {\n '*.svg': {\\n loader,' s: ['@svgr/webpack']}\n,
   as: '*.js'\\n }\\n }\\n }\\n }) )}' fs.writeFileSync('next.config.js)' ') config)}' this.log('Build process optimized; ' this.error('Failed to optimize build process)' ') error) } }' async performDailyMaintenance() {'' this.log('Performing daily maintenance...)' '); try { // Clean up old build artifacts;' this.runCommand('rm -rf .next out dist build}' ' {/* TODO: Fix JSX expression */})
@@ -4327,7 +4298,7 @@
   t: true});' this.runCommand('npm install)' ' {/* TODO: Fix JSX expression */}
   t: true }); // Update all dependencies to latest;' this.runCommand('npm update --save)' ' {/* TODO: Fix JSX expression */}
   t: true }); // Optimize build configuration; await this.optimizeBuildConfig(); // Run full code quality check; await this.checkCodeQualityIssues(); this.log(, Weekly optimization completed; ' this.error('Weekly optimization failed)' ') error) } } runCommand(command) option,
-  s: = {}) { try { if (!options.silent) { throw error } return error.stdout || error.stderr || error.message} } warn(message) {const timestamp = new Date().toISOString()} cons,`
+  s: ={} ) { try { if (!options.silent) { throw error } return error.stdout || error.stderr || error.message} } warn(message) {const timestamp = new Date().toISOString()} cons,`
   t: warnMessage = `[${timestamp}] WARNIN,`
   G: ${messag}e}`; tr,
   y: {fs.appendFileSync(this.config.logFile) warnMessage +} } asyn,
@@ -4335,6 +4306,6 @@
   y: Build Monitor stopped}'' ')}' getStatus() {/* TODO: Fix JSX expression */}
   g: this.confi}g} } } // Mai,
   n: execution; i,
-  f: (require.main === module) {const monitor = new NetlifyBuildMonitor()} process.exit(1)})} module.export,
+  f: (require.main === = module) {const monitor = new NetlifyBuildMonitor()} process.exit(1)})} module.export,
   s: = NetlifyBuildMonitor} } } } } } '
 "`

@@ -3,7 +3,6 @@
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 const AgentReleaseRunbooksV22026Page: React.FC = () => {
 
   return (
@@ -96,7 +95,7 @@ const AgentReleaseRunbooksV22026Page: React.FC = () => {
           </div>
         </div>
       </section>)
-    </main>)
+    </main>)}
 }
 
 

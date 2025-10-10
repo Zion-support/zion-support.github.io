@@ -4,32 +4,31 @@ import { Helmet } from 'react-helmet-async';
 import { Users, FileText, Calendar, TrendingUp, CheckCircle, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
-const AIHRAssistantPage: React.FC = () => {
-  const features = [
+const AIHRAssistantPage: React.FC = () => {;
+const features = [
     {
       icon: Users,
       title: 'HR Automation',
       description: 'AI-powered HR process automation',
-      benefits: ['Recruitment automation', 'Employee onboarding', 'Performance management']
+      benefits: ['Recruitment automation', 'Employee onboarding', 'Performance management']}
     },
     {
       icon: Target,
       title: 'Talent Management',
       description: 'Intelligent talent acquisition and management',
-      benefits: ['Candidate screening', 'Skill matching', 'Career development']
+      benefits: ['Candidate screening', 'Skill matching', 'Career development']}
     },
     {
       icon: Zap,
       title: 'Employee Engagement',
       description: 'Automated employee engagement and satisfaction',
-      benefits: ['Engagement surveys', 'Feedback analysis', 'Retention strategies']
+      benefits: ['Engagement surveys', 'Feedback analysis', 'Retention strategies']}
     },
     {
       icon: Settings,
       title: 'HR Analytics',
       description: 'Comprehensive HR analytics and insights',
-      benefits: ['Workforce analytics', 'Performance metrics', 'Predictive insights']
+      benefits: ['Workforce analytics', 'Performance metrics', 'Predictive insights']}
     }
   ];
 
@@ -73,7 +72,7 @@ const AIHRAssistantPage: React.FC = () => {
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
+            {features.map((feature, index) => (}
               <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
                   <feature.icon className="w-8 h-8 text-white" />
@@ -85,7 +84,7 @@ const AIHRAssistantPage: React.FC = () => {
                   {feature.description}
                 </p>
                 <ul className="space-y-2">
-                  {feature.benefits.map((benefit, benefitIndex) => (
+                  {feature.benefits.map((benefit, benefitIndex) => (}
                     <li key={benefitIndex} className="flex items-center text-xs text-gray-300">
                       <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                       {benefit}
@@ -104,3 +103,8 @@ const AIHRAssistantPage: React.FC = () => {
 };
 
 export default AIHRAssistantPage;
+
+
+
+
+</div></div></div></div></div>

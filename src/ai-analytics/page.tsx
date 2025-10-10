@@ -5,32 +5,31 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { BarChart, Target, Zap, Settings, CheckCircle } from 'lucide-react';
-
-const AIAnalyticsPage: React.FC = () => {
-  const features = [
+const AIAnalyticsPage: React.FC = () => {;
+const features = [
     {
       icon: BarChart,
       title: 'Real-time Analytics',
       description: 'Live data visualization and insights',
-      benefits: ['Live dashboards', 'Real-time metrics', 'Instant insights']
+      benefits: ['Live dashboards', 'Real-time metrics', 'Instant insights']}
     },
     {
       icon: Target,
       title: 'Predictive Analytics',
       description: 'AI-powered predictions and forecasting',
-      benefits: ['Trend prediction', 'Forecasting', 'Risk analysis']
+      benefits: ['Trend prediction', 'Forecasting', 'Risk analysis']}
     },
     {
       icon: Zap,
       title: 'Automated Reporting',
       description: 'Intelligent report generation and distribution',
-      benefits: ['Auto reports', 'Custom dashboards', 'Scheduled delivery']
+      benefits: ['Auto reports', 'Custom dashboards', 'Scheduled delivery']}
     },
     {
       icon: Settings,
       title: 'Custom Metrics',
       description: 'Customizable metrics and KPIs',
-      benefits: ['Custom KPIs', 'Flexible metrics', 'Personalized views']
+      benefits: ['Custom KPIs', 'Flexible metrics', 'Personalized views']}
     }
   ];
 
@@ -74,7 +73,7 @@ const AIAnalyticsPage: React.FC = () => {
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
+            {features.map((feature, index) => (}
               <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
                   <feature.icon className="w-8 h-8 text-white" />
@@ -86,7 +85,7 @@ const AIAnalyticsPage: React.FC = () => {
                   {feature.description}
                 </p>
                 <ul className="space-y-2">
-                  {feature.benefits.map((benefit, benefitIndex) => (
+                  {feature.benefits.map((benefit, benefitIndex) => (}
                     <li key={benefitIndex} className="flex items-center text-xs text-gray-300">
                       <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                       {benefit}
@@ -105,3 +104,8 @@ const AIAnalyticsPage: React.FC = () => {
 };
 
 export default AIAnalyticsPage;
+
+
+
+
+</div></div></div></div></div>

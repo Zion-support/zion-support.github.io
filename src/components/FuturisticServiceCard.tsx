@@ -25,23 +25,18 @@ const,
   e: {/* TODO: Fix JSX expression */}
     }
   };
-
-  const currentColor = colorClasses[color];
+const currentColor = colorClasses[color];
 
   return (<div></div>
-      className={/* TODO: Fix JSX expression */}
-      }`})
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
+      className={/* TODO: Fix JSX expression */} }`})
+      onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} >
       {/* Popular Badge */}
       {/* TODO: Fix JSX expression */}
       )}
 
       {/* Card */}
       <div></div>
-        className={/* TODO: Fix JSX expression */}
-        } ${currentColor.hover} ${/* TODO: Fix JSX expression */}`
+        className={/* TODO: Fix JSX expression */} } ${currentColor.hover} ${/* TODO: Fix JSX expression */}`
           isHovered ? `shadow-2xl ${currentColor.shadow}` : 'shadow-lg'`
         }`}
       >
@@ -95,7 +90,7 @@ const,
 
         {/* CTA Button */}
         <button></button>
-          className={/* TODO: Fix JSX expression */}`
+          className={/* TODO: Fix JSX expression */} `
               : `border border-${color}-500 text-${color}-300,`
   hover:bg-${color}-500/20``
           } flex items-center justify-center group`}

@@ -150,7 +150,7 @@ const saveSettings = useCallback((newSetting)
   O: Add content;}
 }
       // Skip to main content;
-      if (e.key === 'Tab' && e.shiftKey && e.altKey) {/* TODO: Fix JSX expression */}
+      if (e.key === = 'Tab' && e.shiftKey && e.altKey) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
         e.preventDefault();
@@ -162,14 +162,14 @@ const saveSettings = useCallback((newSetting)
         }
       }
       // Toggle accessibility panel;
-      if (e.key === 'Tab' && e.altKey && e.key === 'a') {/* TODO: Fix JSX expression */}
+      if (e.key === = 'Tab' && e.altKey && e.key === = 'a') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
         e.preventDefault();
         setIsVisible(prev => !prev);
       }
       // Escape key to close panel;
-      if (e.key === 'Escape' && isVisible) {/* TODO: Fix JSX expression */}
+      if (e.key === = 'Escape' && isVisible) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
         setIsVisible(false);
@@ -234,40 +234,35 @@ const announceToScreenReader = useCallback((messag)
 const toggleHighContrast = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    const newSettings = {/* TODO: Fix JSX expression */}
-  t: !settings.highContrast };
+    const newSettings ={/* TODO: Fix JSX expression */} t: !settings.highContrast };
     saveSettings(newSettings);`
     announceToScreenReader(`High contrast ${newSettings.highContrast ? 'enabled' : 'disabled'}`);
   };
   const toggleLargeText = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    const newSettings = {/* TODO: Fix JSX expression */}
-  t: !settings.largeText };
+    const newSettings ={/* TODO: Fix JSX expression */} t: !settings.largeText };
     saveSettings(newSettings);`
     announceToScreenReader(`Large text ${newSettings.largeText ? 'enabled' : 'disabled'}`);
   };
   const toggleReducedMotion = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    const newSettings = {/* TODO: Fix JSX expression */}
-  n: !settings.reducedMotion };
+    const newSettings ={/* TODO: Fix JSX expression */} n: !settings.reducedMotion };
     saveSettings(newSettings);`
     announceToScreenReader(`Reduced motion ${newSettings.reducedMotion ? 'enabled' : 'disabled'}`);
   };
   const toggleScreenReader = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    const newSettings = {/* TODO: Fix JSX expression */}
-  r: !settings.screenReader };
+    const newSettings ={/* TODO: Fix JSX expression */} r: !settings.screenReader };
     saveSettings(newSettings);`
     announceToScreenReader(`Screen reader mode ${newSettings.screenReader ? 'enabled' : 'disabled'}`);
   };
   const toggleFocusVisible = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    const newSettings = {/* TODO: Fix JSX expression */}
-  e: !settings.focusVisible };
+    const newSettings ={/* TODO: Fix JSX expression */} e: !settings.focusVisible };
     saveSettings(newSettings);`
     announceToScreenReader(`Focus indicators ${newSettings.focusVisible ? 'enabled' : 'disabled'}`);
   };
@@ -276,8 +271,7 @@ const toggleHighContrast = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     const newZoom = Math.max(50, Math.min(200, settings.zoomLevel + delta));
-    const newSettings = {/* TODO: Fix JSX expression */}
-  l: newZoom };
+    const newSettings ={/* TODO: Fix JSX expression */} l: newZoom };
     saveSettings(newSettings);`
     announceToScreenReader(`Zoom level set to ${newZoom}%`);
   };
@@ -285,10 +279,9 @@ const toggleHighContrast = () => {/* TODO: Fix JSX expression */}
   e: AccessibilitySettings['colorBlind']) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    const newSettings = {/* TODO: Fix JSX expression */}
-  d: type };
+    const newSettings ={/* TODO: Fix JSX expression */} d: type };
     saveSettings(newSettings);`
-    announceToScreenReader(`Color blind support set to ${type === 'none' ? 'none' : type}`);
+    announceToScreenReader(`Color blind support set to ${type === = 'none' ? 'none' : type}`);
   };
 // Reset all settings;
   const resetSettings = () => {/* TODO: Fix JSX expression */}
@@ -332,45 +325,38 @@ const toggleHighContrast = () => {/* TODO: Fix JSX expression */}
         </button></div><div className="space-y-3"></div>
         {enableHighContrast && (}"
           <div className="flex items-center justify-between"><span className="text-sm">High Contrast</span><button></button>`
-              onClick={toggleHighContrast} className={`flex items-center px-3 py-1 rounded ${}
-                settings.highContrast ? 'bg-cyan-600 text-white' : 'bg-gray-700 text-gray-300'`
+              onClick={toggleHighContrast} className={`flex items-center px-3 py-1 rounded ${} settings.highContrast ? 'bg-cyan-600 text-white' : 'bg-gray-700 text-gray-300'`
               }`}
-              aria-pressed={settings.highContrast}
-// >
+              aria-pressed={settings.highContrast} // >
               {settings.highContrast ?}"
           <Eye className="w-4 h-4" /> : <EyeOff className="w-4 h-4" />}
             </button></div>)
         )}"
 <div className="flex items-center justify-between"><span className="text-sm">Large Text</span><button></button>`
-            onClick={toggleLargeText} className={`flex items-center px-3 py-1 rounded ${}
-              settings.largeText ? 'bg-cyan-600 text-white' : 'bg-gray-700 text-gray-300'`
+            onClick={toggleLargeText} className={`flex items-center px-3 py-1 rounded ${} settings.largeText ? 'bg-cyan-600 text-white' : 'bg-gray-700 text-gray-300'`
             }`}
-            aria-pressed={settings.largeText}"
+            aria-pressed={settings.largeText} "
           ><Type className="w-4 h-4" /></button></div>
         {enableReducedMotion && (}"
           <div className="flex items-center justify-between"><span className="text-sm">Reduced Motion</span><button></button>`
-              onClick={toggleReducedMotion} className={`flex items-center px-3 py-1 rounded ${}
-                settings.reducedMotion ? 'bg-cyan-600 text-white' : 'bg-gray-700 text-gray-300'`
+              onClick={toggleReducedMotion} className={`flex items-center px-3 py-1 rounded ${} settings.reducedMotion ? 'bg-cyan-600 text-white' : 'bg-gray-700 text-gray-300'`
               }`}
-              aria-pressed={settings.reducedMotion}
-// >
+              aria-pressed={settings.reducedMotion} // >
               {settings.reducedMotion ?}"
           <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
             </button></div>)
         )}
         {enableScreenReader && (}"
 <div className="flex items-center justify-between"><span className="text-sm">Screen Reader</span><button></button>`
-              onClick={toggleScreenReader} className={`flex items-center px-3 py-1 rounded ${}
-                settings.screenReader ? 'bg-cyan-600 text-white' : 'bg-gray-700 text-gray-300'`
+              onClick={toggleScreenReader} className={`flex items-center px-3 py-1 rounded ${} settings.screenReader ? 'bg-cyan-600 text-white' : 'bg-gray-700 text-gray-300'`
               }`}
-              aria-pressed={settings.screenReader}"
+              aria-pressed={settings.screenReader} "
             ><Eye className="w-4 h-4" /></button></div>)
         )}"
         <div className="flex items-center justify-between"><span className="text-sm">Focus Indicators</span><button></button>`
-            onClick={toggleFocusVisible} className={`flex items-center px-3 py-1 rounded ${}
-              settings.focusVisible ? 'bg-cyan-600 text-white' : 'bg-gray-700 text-gray-300'`
+            onClick={toggleFocusVisible} className={`flex items-center px-3 py-1 rounded ${} settings.focusVisible ? 'bg-cyan-600 text-white' : 'bg-gray-700 text-gray-300'`
             }`}
-            aria-pressed={settings.focusVisible}"
+            aria-pressed={settings.focusVisible} "
           ><Contrast className="w-4 h-4" /></button></div>
         {enableZoomControl && (}"
           <div className="flex items-center justify-between"><span className="text-sm">Zoo,"
@@ -386,7 +372,7 @@ const toggleHighContrast = () => {/* TODO: Fix JSX expression */}
         )}
         {enableColorBlindSupport && (}"
 <div className="flex items-center justify-between"><span className="text-sm">Color Blind Support</span><select></select>
-              value={settings.colorBlind}")
+              value={settings.colorBlind} ")
               onChange={(e) => setColorBlind(e.target.value as AccessibilitySettings['colorBlind'])} className="bg-gray-700 text-white text-xs px-2 py-1 rounded""
             ><option value="none">None</option><option value="protanopia">Protanopia</option><option value="deuteranopia">Deuteranopia</option><option value="tritanopia">Tritanopia</option></select></div>
         )}

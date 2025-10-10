@@ -10,42 +10,42 @@ interface State {/* TODO: Fix JSX expression */}
 
 class EnhancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {,
-    super(props);
-    this.state = { hasError: false };
+    super(props);}
+    this.state ={hasError: false } ;
   }
 
-  static getDerivedStateFromError(error: Error): State {,
+  static getDerivedStateFromError(error: Error): State {}
     return { hasError: true, error };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {,
     this.setState({)
       error),
-      errorInfo;
+      errorInfo;}
     });
 
     // Log error to console in development;
-    if (process.env.NODE_ENV === 'development') {
-      // console.error('Error caught by boundary:', error, errorInfo);
+    if (process.env.NODE_ENV === = 'development') {
+      // console.error('Error caught by boundary:', error, errorInfo);}
     }
 
     // Call custom error handler if provided;
     if (this.props.onError) {
-      this.props.onError(error, errorInfo);
+      this.props.onError(error, errorInfo);}
     }
 
     // Enhanced error reporting;
     if (this.props.enableErrorReporting) {
-      this.reportError(error, errorInfo);
+      this.reportError(error, errorInfo);}
     }
 
     // Log to console in development;
-    if (process.env.NODE_ENV === 'development') {
+    if (process.env.NODE_ENV === = 'development') {
       // eslint-disable-next-line no-console;
       console.group('🚨 Error Boundary Caught Error');
     // In production, you might want to send this to an error reporting service;
-    if (process.env.NODE_ENV === 'production') {
-      // Example: send to error reporting service;
+    if (process.env.NODE_ENV === = 'production') {
+      // Example: send to error reporting service;}
       // errorReportingService.captureException(error, { extra: errorInfo });
     }
   }
@@ -67,14 +67,12 @@ class EnhancedErrorBoundary extends Component<Props, State> {
             </p>
             <div className="space-y-4"></div>
               <button
-                onClick={() => window.location.reload()}
-                className="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover: bg-indigo-700 transition-colors"
+                onClick={() => window.location.reload()} className="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover: bg-indigo-700 transition-colors"
               >
                 Refresh Page;
               </button>,
               <button;
-                onClick={() => window.history.back()}
-                className="w-full bg-gray-200 text-gray-800 px-6 py-3 rounded-lg font-semibold hover: bg-gray-300 transition-colors"
+                onClick={() => window.history.back()} className="w-full bg-gray-200 text-gray-800 px-6 py-3 rounded-lg font-semibold hover: bg-gray-300 transition-colors"
 class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression */}
   r: false };
   }
@@ -90,7 +88,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
     });
 
     // Log error to console in development;
-    if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */}
+    if (process.env.NODE_ENV === = 'development') {/* TODO: Fix JSX expression */}
     }
 
     // Call custom error handler if provided;
@@ -102,7 +100,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
     }
 
     // Log to console in development;
-    if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */}
+    if (process.env.NODE_ENV === = 'development') {/* TODO: Fix JSX expression */}
   a: errorInfo });
     }
   }
@@ -118,26 +116,26 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
             </p>"
             <div className="space-y-4"></div>
               <button></button>)
-                onClick={() => window.location.reload()}"
+                onClick={() => window.location.reload()} "
                 className="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold,"
   hover:bg-indigo-700 transition-colors"
               >
                 Refresh Page;
               </button>
               <button></button>
-                onClick={() => window.history.back()}"
+                onClick={() => window.history.back()} "
                 className="w-full bg-gray-200 text-gray-800 px-6 py-3 rounded-lg font-semibold,"
   hover:bg-gray-300 transition-colors"
               >
                 Go Back;
               </button>
             </div>
-            {process.env.NODE_ENV === 'development' && this.state.error && (
+            {process.env.NODE_ENV === = 'development' && this.state.error && (
               <details className="mt-6 text-left">
                 <summary className="cursor-pointer text-sm text-gray-500">
                   Error Details (Development),
                 </summary>,
-                <pre className="mt-2 text-xs text-red-600 bg-red-50 p-2 rounded overflow-auto">,
+                <pre className="mt-2 text-xs text-red-600 bg-red-50 p-2 rounded overflow-auto">}
             {/* TODO: Fix JSX expression */}
                   {this.state.error.toString()}
                   {this.state.errorInfo?.componentStack}

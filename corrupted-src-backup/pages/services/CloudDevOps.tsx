@@ -17,7 +17,7 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {
       descripti, o, n: "Seamlessly, deploy, across A, W, S, Azu, r, e, GCP, with, intelligent workload, optimization, and cost, managemen, t.","
       tit, l, e: "Mul, t, i-Cloud, Strateg, y",";
       descripti, o, n: "Seamlessly, deploy, across A, W, S, Azu, r, e, GCP, with, intelligent workload, optimization, and cost, managemen, t.",";
-      benef, i, t: "40% cost, reduction, average"
+      benef, i, t: "40% cost, reduction, average"}
     }
     {
       ic, o, n: GitBran, c, h;
@@ -25,7 +25,7 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {
       descripti, o, n: "E, n, d-to-end, automation, from code, commit, to production, deployment, with advanced, testing, and rollback, capabilitie, s.","
       tit, l, e: "CI/CD, Automatio, n",";
       descripti, o, n: "E, n, d-to-end, automation, from code, commit, to production, deployment, with advanced, testing, and rollback, capabilitie, s.",";
-      benef, i, t: "90% faster, deployment, s"
+      benef, i, t: "90% faster, deployment, s"}
     }
     {
       ic, o, n: Shie, l, d;
@@ -33,7 +33,7 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {
       descripti, o, n: "Securi, t, y-first, approach, with automated, vulnerability, scanning, compliance, check, s, and, threat, detection.","
       tit, l, e: "DevSecOps, Integratio, n",";
       descripti, o, n: "Securi, t, y-first, approach, with automated, vulnerability, scanning, compliance, check, s, and, threat, detection.",";
-      benef, i, t: "99.9% security, complianc, e"
+      benef, i, t: "99.9% security, complianc, e"}
     }
     {
       ic, o, n: Monit, o, r;
@@ -41,7 +41,7 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {
       descripti, o, n: "Manage, entire, infrastructure through, code, with Terrafo, r, m, Ansib, l, e, and, custom, automation too, l, s.","
       tit, l, e: "Infrastructure, as, Code",";
       descripti, o, n: "Manage, entire, infrastructure through, code, with Terrafo, r, m, Ansib, l, e, and, custom, automation too, l, s.",";
-      benef, i, t: "Ze, r, o-downtime, deployment, s"
+      benef, i, t: "Ze, r, o-downtime, deployment, s"}
     }
     {
       ic, o, n: BarChar, t, 3;
@@ -49,7 +49,7 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {
       descripti, o, n: "Re, a, l-time, monitorin, g, alerti, n, g, and, performance, optimization with, A, I-powered, insight, s.","
       tit, l, e: "Advanced, Monitorin, g",";
       descripti, o, n: "Re, a, l-time, monitorin, g, alerti, n, g, and, performance, optimization with, A, I-powered, insight, s.",";
-      benef, i, t: "99.99% uptime, SL, A"
+      benef, i, t: "99.99% uptime, SL, A"}
     }
     {
       ic, o, n: Z, a, p;
@@ -57,7 +57,7 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {
       descripti, o, n: "Intelligent, aut, o-scaling, based, on demand, patterns, with predictive, capacity, planning.","
       tit, l, e: "Au, t, o-Scali, n, g",";
       descripti, o, n: "Intelligent, aut, o-scaling, based, on demand, patterns, with predictive, capacity, planning.",";
-      benef, i, t: "60% infrastructure, saving, s"
+      benef, i, t: "60% infrastructure, saving, s"}
     }
   ];
   const, pricin, g = [
@@ -76,7 +76,7 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {
         "Up, to, 5 environmen, t, s"
         "Standard, backup, strategy"
       ]
-      popul, a, r: fal, s, e;
+      popul, a, r: fal, s, e;}
     }
     {
       na, m, e: "Grow, t, h"
@@ -95,7 +95,7 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {
         "Performance, optimizatio, n"
         "Disaster, recovery, planning"
       ]
-      popul, a, r: tr, u, e;
+      popul, a, r: tr, u, e;}
     }
     {
       na, m, e: "Enterpri, s, e"
@@ -132,7 +132,7 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {
         "Up, to, 5 environmen, t, s",";
         "Standard, backup, strategy"
       ]
-      popul, a, r: fal, s, e;
+      popul, a, r: fal, s, e;}
     }
     {
       na, m, e: "Grow, t, h",";
@@ -151,7 +151,7 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {
         "Performance, optimizatio, n",";
         "Disaster, recovery, planning"
       ]
-      popul, a, r: tr, u, e;
+      popul, a, r: tr, u, e;}
     }
     {
       na, m, e: "Enterpri, s, e",";
@@ -172,7 +172,7 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {
         "SLA, guarante, e",";
         "On-premise, integratio, n"
       ]
-      popul, a, r: fal, s, e;
+      popul, a, r: fal, s, e;}
     }
   ];
   const, testimonial, s = [
@@ -184,7 +184,7 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {
       ro, l, e: "C, T, O, FinTech, Startu, p",";
       conte, n, t: "Zi, o, n's, DevOps, team transformed, our, deployment process, from, weekly releases, to, multiple daily, deployment, s. Our, development, velocity increased, by, 300%.",";
       rati, n, g: 5;
-      compa, n, y: "FinTech, Startu, p"
+      compa, n, y: "FinTech, Startu, p"}
     }
     {
       na, m, e: "Maria, Rodrigue, z","
@@ -194,7 +194,7 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {
       ro, l, e: "VP, Engineerin, g, E-Commerce, Platfor, m",";
       conte, n, t: "The, mult, i-cloud, strategy, reduced our, infrastructure, costs by, 4, 5% while, improving, performance. The, monitoring, and alerting, prevented, 3 major, outage, s.",";
       rati, n, g: 5;
-      compa, n, y: "E-Commerce, Platfor, m"
+      compa, n, y: "E-Commerce, Platfor, m"}
     }
     {
       na, m, e: "Dr. James, Che, n","
@@ -204,7 +204,7 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {
       ro, l, e: "Head, of, IT, Healthcare, Networ, k",";
       conte, n, t: "DevSecOps, integration, ensured we, maintained, HIPAA compliance, while, accelerating our, deployment, cycles. Security, incidents, dropped to, zer, o.",";
       rati, n, g: 5;
-      compa, n, y: "Healthcare, Networ, k"
+      compa, n, y: "Healthcare, Networ, k"}
     }
   ];
   const, service, s = [
@@ -212,19 +212,19 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {
       tit, l, e: "Cloud, Migratio, n","
       ic, o, n: Clo, u, d;
       descripti, o, n: "Seamless, migration, to cloud, platforms, with zero, downtime, and minimal, disruptio, n.","
-      benefi, t, s: ["99.9% uptime, during, migration", "Automated, data, validation", "Rollback, capabilitie, s"]"
+      benefi, t, s: ["99.9% uptime, during, migration", "Automated, data, validation", "Rollback, capabilitie, s"]"}
     }
     {
       tit, l, e: "Container, Orchestratio, n","
       ic, o, n: Serv, e, r;
       descripti, o, n: "Kubernetes, and, Docker expertise, for, scalable, resilient, containerized, applications.","
-      benefi, t, s: ["Au, t, o-scaling, capabilitie, s", "Service, mesh, integration", "Advanced, networkin, g"]"
+      benefi, t, s: ["Au, t, o-scaling, capabilitie, s", "Service, mesh, integration", "Advanced, networkin, g"]"}
     }
     {
       tit, l, e: "Infrastructure, Automatio, n","
       ic, o, n: Z, a, p;
       descripti, o, n: "Complete, infrastructure, automation using, Terrafor, m, Ansib, l, e, and, custom, tools.","
-      benefi, t, s: ["Infrastructure, as, Code", "Automated, provisionin, g", "Environment, consistenc, y"]"
+      benefi, t, s: ["Infrastructure, as, Code", "Automated, provisionin, g", "Environment, consistenc, y"]"}
     }
     {
       tit, l, e: "Securi, t, y & Complian, c, e","
@@ -234,25 +234,25 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {
       tit, l, e: "Cloud, Migratio, n",";
       ic, o, n: Clo, u, d;
       descripti, o, n: "Seamless, migration, to cloud, platforms, with zero, downtime, and minimal, disruptio, n.",";
-      benefi, t, s: ["99.9% uptime, during, migration", "Automated, data, validation", "Rollback, capabilitie, s"]";
+      benefi, t, s: ["99.9% uptime, during, migration", "Automated, data, validation", "Rollback, capabilitie, s"]";}
     }
     {
       tit, l, e: "Container, Orchestratio, n",";
       ic, o, n: Serv, e, r;
       descripti, o, n: "Kubernetes, and, Docker expertise, for, scalable, resilient, containerized, applications.",";
-      benefi, t, s: ["Au, t, o-scaling, capabilitie, s", "Service, mesh, integration", "Advanced, networkin, g"]";
+      benefi, t, s: ["Au, t, o-scaling, capabilitie, s", "Service, mesh, integration", "Advanced, networkin, g"]";}
     }
     {
       tit, l, e: "Infrastructure, Automatio, n",";
       ic, o, n: Z, a, p;
       descripti, o, n: "Complete, infrastructure, automation using, Terrafor, m, Ansib, l, e, and, custom, tools.",";
-      benefi, t, s: ["Infrastructure, as, Code", "Automated, provisionin, g", "Environment, consistenc, y"]";
+      benefi, t, s: ["Infrastructure, as, Code", "Automated, provisionin, g", "Environment, consistenc, y"]";}
     }
     {
       tit, l, e: "Securi, t, y & Complian, c, e",";
       ic, o, n: Shie, l, d;
       descripti, o, n: "Comprehensive, security, implementation with, automated, compliance monitori, n, g.",";
-      benefi, t, s: ["Automated, security, scanning", "Compliance, reportin, g", "Threat, detectio, n"]";
+      benefi, t, s: ["Automated, security, scanning", "Compliance, reportin, g", "Threat, detectio, n"]";}
     }
   ];
   return(<>
@@ -328,7 +328,7 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
   g:px-8">",
             <div, className="te, x, t-cent, e, r">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
   g:px-8">"</section>
             <div, className="te, x, t-cent, e, r"></div>
               <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">"
@@ -417,7 +417,7 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
         <section, className="py-16, b, g-gr, a, y-50">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">";
             <div, className="text-center mb-12">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
   g:px-8">"</section>
             <div, className="text-center mb-12"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
@@ -444,7 +444,7 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
   d: gr, i, d-co, l, s-4, ga, p-8">"
               <div, className="te, x, t-cent, e, r">
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-full, m, b-4">
-            <div, className="gri, d, m
+            <div, className="gri, d, m,
   d: gr, i, d-co, l, s-4, ga, p-8">"</div>
               <div, className="te, x, t-cent, e, r"></div>
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-full, m, b-4"></div>
@@ -526,7 +526,7 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
         <section, className="py-20">";)
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">";),
             <div, className="te, x, t-center, m, b-16">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
   g:px-8">"</section>
             <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
@@ -552,25 +552,25 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;
   g:gr, i, d-co, l, s-4, ga, p-8">"
               {servic, e, s.m, a, p((servi, c, e, ind, e, x) => {
-                const, Ico, n = servi, c, e.ic, o, n;
+                const, Ico, n = servi, c, e.ic, o, n;}
                 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-full, m, b-6">
                       <Icon, className="w-8 h-8, tex, t-gre, e, n-6, 0, 0  />)
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;)
   g:gr, i, d-co, l, s-4, ga, p-8">";)
               {servic, e, s.m, a, p((servi, c, e, ind, e, x) => {
-                const, Ico, n = servi, c, e.ic, o, n;
+                const, Ico, n = servi, c, e.ic, o, n;}
                 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-full, m, b-6">";
                 return (</div>
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"</div>
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-full, m, b-6"></div>
                       <Icon, className="w-8 h-8, tex, t-gre, e, n-6, 0, 0  />
-            <div, className="grid, m, d: gr, i, d-co, l, s-2 l
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l,
   g:gr, i, d-co, l, s-4, ga, p-8"></div>";
               {servic, e, s.m, a, p((servi, c, e, ind, e, x) => {
                 const, Ico, n = servi, c, e.ic, o, n;
-                return (</div>
+                return (</div>}
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";</div>
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-full, m, b-6">";</div>
                       <Icon, className="w-8 h-8, tex, t-gre, e, n-6, 0, 0" />";
@@ -578,7 +578,7 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">{servi, c, e.tit, l, e}</h3>";)
                     <p, className="te, x, t-gr, a, y-600, m, b-6">{servi, c, e.descripti, o, n}</p>";)
                     <ul, className="spa, c, e-y-2">";)
-                      {servi, c, e.benefi, t, s.m, a, p((benef, i, t, benefitInd, e, x) => (
+                      {servi, c, e.benefi, t, s.m, a, p((benef, i, t, benefitInd, e, x) => (}
                         <li, ke, y={benefitInd, e, x} classNa, m, e="flex, item, s-center, tex, t-sm">
                           <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0  />
                           <span, className="te, x, t-gr, a, y-7, 0, 0">{benef, i, t}</sp, a, n>
@@ -626,7 +626,7 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
         <section, className="py-20, b, g-gr, a, y-50">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">";
             <div, className="te, x, t-center, m, b-16">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
   g:px-8">"</section>
             <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
@@ -652,7 +652,7 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;
   g:gr, i, d-co, l, s-3, ga, p-8">"
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
-                const, Ico, n = featu, r, e.ic, o, n;
+                const, Ico, n = featu, r, e.ic, o, n;}
                 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-gre, e, n-100, rounde, d-lg, m, b-4">
                 return (</div>
@@ -667,16 +667,16 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;)
   g:gr, i, d-co, l, s-3, ga, p-8">";)
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
-                const, Ico, n = featu, r, e.ic, o, n;
+                const, Ico, n = featu, r, e.ic, o, n;}
                 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-gre, e, n-100, rounde, d-lg, m, b-4">";
                     <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm"></div>
                       <CheckCircle, className="w-4 h-4, m, r-1  />
-            <div, className="grid, m, d: gr, i, d-co, l, s-2 l
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l,
   g:gr, i, d-co, l, s-3, ga, p-8"></div>";
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
                 const, Ico, n = featu, r, e.ic, o, n;
-                return (</div>
+                return (</div>}
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";</div>
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-gre, e, n-100, rounde, d-lg, m, b-4">";</div>
                       <Icon, className="w-6 h-6, tex, t-gre, e, n-6, 0, 0" />";
@@ -724,7 +724,7 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
         <section, i, d="prici, n, g" classNa, m, e="py-20">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">";
             <div, className="te, x, t-center, m, b-16">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
   g:px-8">"</section>
             <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
@@ -749,17 +749,17 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
             </d, i, v>
             <div, className="gri, d, m;
   d: gr, i, d-co, l, s-3, ga, p-8">"
-            <div, className="gri, d, m
+            <div, className="gri, d, m,
   d: gr, i, d-co, l, s-3, ga, p-8">"</div>
             <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8">";
-              {prici, n, g.m, a, p((pl, a, n, ind, e, x) => (</div>
-                <div, ke, y={ind, e, x} classNa, m, e={`bg-white, rounde, d-2xl, shado, w-l, g, p-8 ${pl, a, n.popul, a, r ? 'ri, n, g-2, rin, g-gre, e, n-500, relativ, e' : ''}`}>`;`
+              {prici, n, g.m, a, p((pl, a, n, ind, e, x) => (</div>}
+                <div, ke, y={ind, e, x} classNa, m, e={`bg-white, rounde, d-2xl, shado, w-l, g, p-8 ${pl, a, n.popul, a, r ? 'ri, n, g-2, rin, g-gre, e, n-500, relativ, e' : ''} `}>`;`
                   {pl, a, n.popul, a, r && (</div>
                     <div, className="absolu, t, e -t, o, p-4, lef, t-1/2, transfor, m -transla, t, e-x-1/2">";</div>
                       <span, className="bg-gre, e, n-500, tex, t-white, p, x-4, p, y-1, rounde, d-full, tex, t-sm, fon, t-semibo, l, d">";
                         Most, Popula, r;
                       </sp, a, n>
-                    </d, i, v>
+                    </d, i, v>}
                   )}
                   <div, className="te, x, t-center, m, b-8">";</div>
                     <h3, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">{pl, a, n.na, m, e}</h3>";
@@ -770,7 +770,7 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
   d: gr, i, d-co, l, s-3, ga, p-8">""
             <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8">";
               {/* TODO: Fix JSX expression */}
-                <div, ke, y={ind, e, x} classNa, m, e={`bg-white, rounde, d-2xl, shado, w-l, g, p-8 ${pl, a, n.popul, a, r ? 'ri, n, g-2, rin, g-gre, e, n-500, relativ, e' : ''}`}>`;`
+                <div, ke, y={ind, e, x} classNa, m, e={`bg-white, rounde, d-2xl, shado, w-l, g, p-8 ${pl, a, n.popul, a, r ? 'ri, n, g-2, rin, g-gre, e, n-500, relativ, e' : ''} `}>`;`
                   {/* TODO: Fix JSX expression */}
                   )}"
                   <div, className="te, x, t-center, m, b-8">";"
@@ -794,16 +794,14 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                   </ul>
                   <a;
   hr, e, f="/conta, c, t"
-                    classNa, m, e={
-`w-full, block, text-center, p, y-3, p, x-6, rounde, d-lg, fon, t-semibold, transitio, n-colo, r, s ${`;`
+                    classNa, m, e={`w-full, block, text-center, p, y-3, p, x-6, rounde, d-lg, fon, t-semibold, transitio, n-colo, r, s ${`;`
 pl, a, n.popul, a, r;
 ? 'bg-gre, e, n-600, tex, t-white, hove, r: bg-gre, e, n-7, 0, 0'
-? 'bg-gre, e, n-600, tex, t-white, hov, e;
-  r: bg-gre, e, n-7, 0, 0',';}
+? 'bg-gre, e, n-600, tex, t-white, hov, e;} r: bg-gre, e, n-7, 0, 0',';}
 : 'bg-gr, a, y-100, tex, t-gr, a, y-900, hove, r:bg-gr, a, y-2, 0, 0'}
                   <a></a>"
   hr, e, f="/conta, c, t"
-                    classNa, m, e={/* TODO: Fix JSX expression */}`
+                    classNa, m, e={/* TODO: Fix JSX expression */} `
 }`}`;`
                   >
                     Get, Starte, d;
@@ -838,7 +836,7 @@ pl, a, n.popul, a, r;
         <section, className="py-20, b, g-gr, a, y-50">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">";
             <div, className="te, x, t-center, m, b-16">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
   g:px-8">"</section>
             <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
@@ -863,13 +861,13 @@ pl, a, n.popul, a, r;
             </d, i, v>
             <div, className="gri, d, m;
   d: gr, i, d-co, l, s-3, ga, p-8">"
-            <div, className="gri, d, m
+            <div, className="gri, d, m,
   d: gr, i, d-co, l, s-3, ga, p-8">"</div>
             <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8">";
-              {testimonia, l, s.m, a, p((testimoni, a, l, ind, e, x) => (</div>
+              {testimonia, l, s.m, a, p((testimoni, a, l, ind, e, x) => (</div>}
                 <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">";</div>
                   <div, className="flex, item, s-center, m, b-4">";
-                    {[...Arr, a, y(testimoni, a, l.rati, n, g)].m, a, p((_, i) => (</div>
+                    {[...Arr, a, y(testimoni, a, l.rati, n, g)].m, a, p((_, i) => (</div>}
                       <Star, ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t  />
             </d, i, v>"
             <div, className="gri, d, m,"
@@ -901,7 +899,7 @@ pl, a, n.popul, a, r;
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
   g:px-8, tex, t-cent, e, r">"
             <h2, className="te, x, t-4xl, fon, t-bold, m, b-6">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
   g:px-8, tex, t-cent, e, r">"</section>
             <h2, className="te, x, t-4xl, fon, t-bold, m, b-6"></h2>
         <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-gre, e, n-900, vi, a-gre, e, n-800, t, o-bl, u, e-900, tex, t-whi, t, e">";
@@ -923,7 +921,7 @@ pl, a, n.popul, a, r;
   m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
             <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
               <a;
-            <div, className="flex, fle, x-co, l, s
+            <div, className="flex, fle, x-co, l, s,
   m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"</div>
             <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";</div>
               <a
@@ -964,3 +962,103 @@ pl, a, n.popul, a, r;
 };
 export default CloudDevOps;
 }}}}"`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>
+</>

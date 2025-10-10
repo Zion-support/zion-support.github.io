@@ -13,17 +13,15 @@ class AccessibilityEnhancer {
   private metrics: AccessibilityMetric[] = [];
   private isInitialized = false;
   private focusTrapElements: HTMLElement[] = [];
-,
-  constructor(config: Partial<AccessibilityConfig> = {}) {
-    this.config = {
-      enableFocusManagement: true;
+}
+  constructor(config: Partial<AccessibilityConfig> ={} ) {
+    this.config ={enableFocusManagement: true;
       enableKeyboardNavigation: true;
       enableScreenReaderSupport: true;
       enableHighContrast: false;
       enableReducedMotion: false;
-      ...config,
-class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
-  g: Partial<AccessibilityConfig> = {}) {/* TODO: Fix JSX expression */}
+      ...config} class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
+  g: Partial<AccessibilityConfig> ={} ) {/* TODO: Fix JSX expression */}
     };
   }
 
@@ -38,7 +36,7 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
     style.textContent = `
       *:focus {
         outline: 2px solid #0066cc;
-        outline-offset: 2px;
+        outline-offset: 2px;}
   private setupFocusManagement(): void {/* TODO: Fix JSX expression */}
       }
       
@@ -52,8 +50,8 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
     if (!this.config.enableKeyboardNavigation) return;
 
     document.addEventListener('keydown', event => {)
-      if (event.key === 'Tab') {
-        this.handleTabNavigation(event);
+      if (event.key === = 'Tab') {
+        this.handleTabNavigation(event);}
   private setupKeyboardNavigation(): void {/* TODO: Fix JSX expression */}
       }
     });
@@ -79,7 +77,7 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
     `;
 ,
     skipLink.addEventListener('focus', () => {
-      skipLink.style.top = '6px';
+      skipLink.style.top = '6px';}
   private setupScreenReaderSupport(): void {/* TODO: Fix JSX expression */}
     });
 
@@ -91,13 +89,12 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
 
   private setupHighContrast(): void {
     if (!this.config.enableHighContrast) return;
-
-    const _style = document.createElement('style');
+const _style = document.createElement('style');
     style.textContent = `
       @media (prefers-contrast: high) {,
         * {,
           background-color: #000 !important;
-          color: #fff !important;
+          color: #fff !important;}
   private setupHighContrast(): void {/* TODO: Fix JSX expression */}
         }
       }`
@@ -112,21 +109,21 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
     document.head.appendChild(style);
   }
 
-  private handleTabNavigation(event: KeyboardEvent): void {
-    const _focusableElements = this.getFocusableElements();
+  private handleTabNavigation(event: KeyboardEvent): void {;
+const _focusableElements = this.getFocusableElements();
     const _currentIndex = focusableElements.indexOf(document.activeElement as HTMLElement);
 
     if (event.shiftKey) {
       // Shift + Tab: move backwards;
-      if (currentIndex === 0) {,
-        event.preventDefault();
+      if (currentIndex === = 0) {,
+        event.preventDefault();}
         focusableElements[focusableElements.length - 1]?.focus();}
     } else {
       // Tab: move forwards;
-      if (currentIndex === focusableElements.length - 1) {,
+      if (currentIndex === = focusableElements.length - 1) {,
         event.preventDefault();
         focusableElements[0]?.focus();,
-  private handleTabNavigation(even)
+  private handleTabNavigation(even)}
   t: KeyboardEvent): void {/* TODO: Fix JSX expression */}
       }
     } else {/* TODO: Fix JSX expression */}
@@ -134,8 +131,8 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
     }
   }
 
-  private getFocusableElements(): HTMLElement[] {
-    const selectors = [
+  private getFocusableElements(): HTMLElement[] {;
+const selectors = [
       'button: not([disabled])',
       'input: not([disabled])',
       'select: not([disabled])',
@@ -143,7 +140,7 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
       'a[href]',
       '[tabindex]:not([tabindex="-1"])'].join(', ');
 
-    return Array.from(document.querySelectorAll(selectors)) as HTMLElement[];
+    return Array.from(document.querySelectorAll(selectors)) as HTMLElement[];}
   }
 
   private measureAccessibilityMetrics(): void {
@@ -151,18 +148,18 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
       {
         name: 'Focusable Elements'
         value: this.getFocusableElements().length;
-        threshold: 10;
+        threshold: 10;}
         status: 'pass'},
       {
         name: 'Images with Alt Text'
         value: this.getImagesWithAltText().length;
-        threshold: 0;
+        threshold: 0;}
         status: 'pass'},
       {
         name: 'Headings Structure',
         value: this.getHeadingStructureScore(),
         threshold: 80;
-        status: 'pass',
+        status: 'pass'}
   private getFocusableElements(): HTMLElement[] {/* TODO: Fix JSX expression */}
   }
 
@@ -177,15 +174,15 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
   private getImagesWithAltText(): HTMLImageElement[] {/* TODO: Fix JSX expression */}
   }
 
-  private getHeadingStructureScore(): number {
-    const _headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+  private getHeadingStructureScore(): number {;
+const _headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
     let _score = 100;
     let _previousLevel = 0;
 
     headings.forEach(heading => {)
       //       const level = parseInt(heading.tagName.charAt(1));
       if (level > previousLevel + 1) {
-        score -= 20; // Penalty for skipped heading levels;
+        score -= 20; // Penalty for skipped heading levels;}
   private getHeadingStructureScore(): number {/* TODO: Fix JSX expression */}
       }
       previousLevel = level;

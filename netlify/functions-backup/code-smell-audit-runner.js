@@ -1,11 +1,9 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('code-smell-audit-runner function triggered')}
     // Code smell audit simulation;
-    const result = {
-      statusCode: 200;
+    const result ={statusCode: 200;
       headers: {,
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'}
+        'Content-Type': 'application/json'} 'Access-Control-Allow-Origin': '*'}
       },
       body: JSON.stringify({message: Code smell audit runner executed successfully)
         timestamp: new Date().toISOString()
@@ -14,26 +12,25 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
         audit: {,
           status: 'active',
           filesScanned: 0;
-          smellsFound: 0;
+          smellsFound: 0;}
           lastAudit: new Date().toISOString()}
-    const result = {/* TODO: Fix JSX expression */}
-        'Access-Control-Allow-Origin': '*'}
+    const result ={/* TODO: Fix JSX expression */} 'Access-Control-Allow-Origin': '*'}
       },
       bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */})
   t: new Date().toISOString()}
         }})};
     return result;
-//   } catch (error) {// console.error('Error in code-smell-audit-runner: ') error;
+//   } catch (error) {// console.error('Error in code-smell-audit-runner: ') error;}
       }
     return {
       statusCode: 500;
       headers: {,
-        'Content-Type': 'application/json',
+        'Content-Type': 'application/json'}
         'Access-Control-Allow-Origin': '*'}
       },
       body: JSON.stringify({error: 'Internal server error'),
-        message: error.message),
+        message: error.message)}
         function: 'code-smell-audit-runner'}
 //   } catch (error) {/* TODO: Fix JSX expression */}
       }
@@ -47,8 +44,8 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     };
   }
 };
-        timestamp: new Date().toISOString(),' function: 'code-smell-audit-runner',' source: event.source || 'unknown', audit: {' status: 'active', filesScanned: 0, smellsFound: 0;
-        lastAudit: new Date().toISOString() } }) }; return result; } catch (error) {' // console.error('Error in code-smell-audit-runner: ') error;
+        timestamp: new Date().toISOString(),' function: 'code-smell-audit-runner',' source: event.source || 'unknown', audit: {' status: 'active', filesScanned: 0, smellsFound: 0;}
+        lastAudit: new Date().toISOString() } }) }; return result; } catch (error) {' // console.error('Error in code-smell-audit-runner: ') error;}
       } return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'code-smell-audit-runner' }) }; } };'
         timestam,
   p: new Date().toISOString(),' functio,

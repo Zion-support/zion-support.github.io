@@ -7,22 +7,21 @@ impo, r, t {
   SparklesIc, o, n, 
   ClockIc, o, n, 
   GlobeAltIc, o, n, 
-  ArrowRightIc, o, n;
+  ArrowRightIc, o, n;}
 } fr, o, m '@heroico, n, s/rea, c, t/24/outli, n, e';
-
 const October2025SupplyChainRevolutionBanne, r: React.FC = () => { ,
-  return(,
+  return(}
     <div, classNam, e = "relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-800, t, o-cy, a, n-900, p, y-16, p, x-6, rounde, d-3xl, shado, w-2xl, m, y-12, borde, r-4, borde, r-emera, l, d-4, 0, 0/50"  > {/* Animated, Background, Elemen, t, s */ }
       <div, classNam, e = "absolute, inse, t-0, overflo, w-hidd, e, n">
         <div, className="absolu, t, e -t, o, p-40 -rig, h, t-4, 0, w-9, 6, h-96, b, g-emera, l, d-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" />
-        <div, className="absolu, t, e -bott, o, m-40 -le, f, t-4, 0, w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 1, s' }} />
+        <div, className="absolu, t, e -bott, o, m-40 -le, f, t-4, 0, w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 1, s' } } />;
 const October2025SupplyChainRevolutionBanne, r: React.FC = () => { 
-  return (
+  return (}
     <div, classNam, e = "relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-800, t, o-cy, a, n-900, p, y-16, p, x-6, rounde, d-3xl, shado, w-2xl, m, y-12, borde, r-4, borde, r-emera, l, d-4, 0, 0/50"  > {/* Animated, Background, Elemen, t, s */ }</div>
       <div, classNam, e = "absolute, inse, t-0, overflo, w-hidd, e, n"></div>
         <div, className="absolu, t, e -t, o, p-40 -rig, h, t-4, 0, w-9, 6, h-96, b, g-emera, l, d-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" /></div>
-        <div, className="absolu, t, e -bott, o, m-40 -le, f, t-4, 0, w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 1, s' }} /></div>
-        <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2, transfor, m -transla, t, e-x-1/2 -transla, t, e-y-1/2 w-6, 4, h-64, b, g-te, a, l-5, 0, 0/10, rounde, d-full, blu, r-2xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s' }} />
+        <div, className="absolu, t, e -bott, o, m-40 -le, f, t-4, 0, w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 1, s' } } /></div>
+        <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2, transfor, m -transla, t, e-x-1/2 -transla, t, e-y-1/2 w-6, 4, h-64, b, g-te, a, l-5, 0, 0/10, rounde, d-full, blu, r-2xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s' } } />
       </div>
 
       <div, classNam, e = "container, m, x-auto, relative, z-10">
@@ -35,13 +34,12 @@ const October2025SupplyChainRevolutionBanne, r: React.FC = () => {
             </sp, a, n>
 impo, r, t {/* TODO: Fix JSX expression */}
 } fr, o, m '@heroico, n, s/rea, c, t/24/outli, n, e';
-
 const October2025SupplyChainRevolutionBanne, r: React.FC = () => {/* TODO: Fix JSX expression */}
     <div, classNam, e = "relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-800, t, o-cy, a, n-900, p, y-16, p, x-6, rounde, d-3xl, shado, w-2xl, m, y-12, borde, r-4, borde, r-emera, l, d-4, 0, 0/50"  > {/* Animated, Background, Elemen, t, s */ }"
       <div, classNam, e = "absolute, inse, t-0, overflo, w-hidd, e, n"></div>"
         <div, className="absolu, t, e -t, o, p-40 -rig, h, t-4, 0, w-9, 6, h-96, b, g-emera, l, d-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" /></div>"
-        <div, className="absolu, t, e -bott, o, m-40 -le, f, t-4, 0, w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 1, s' }} /></div>"
-        <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2, transfor, m -transla, t, e-x-1/2 -transla, t, e-y-1/2 w-6, 4, h-64, b, g-te, a, l-5, 0, 0/10, rounde, d-full, blu, r-2xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s' }} /></div>
+        <div, className="absolu, t, e -bott, o, m-40 -le, f, t-4, 0, w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 1, s' } } /></div>"
+        <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2, transfor, m -transla, t, e-x-1/2 -transla, t, e-y-1/2 w-6, 4, h-64, b, g-te, a, l-5, 0, 0/10, rounde, d-full, blu, r-2xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s' } } /></div>
       </div>
 "
       <div, classNam, e = "container, m, x-auto, relative, z-10"></div>
@@ -315,14 +313,14 @@ const October2025SupplyChainRevolutionBanne, r: React.FC = () => {/* TODO: Fix J
         <div, classNam, e = "mb-10"></div>
           <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, tex, t-cent, e, r">Proven, Across, Industries</h3>
           <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-5, ga, p-4">
-            {[
+            {[}
               { industry: 'Re, t, a, i, l', val, u, e: '$4.2, B', r, o, i: ', 2,8, 4, 7%' },
               { industry: 'Manufactur, i, n, g', val, u, e: '$2.7, B', r, o, i: ', 2,1, 0, 0%' },
               { industry: 'Pha, r, m, a', val, u, e: '$8, 9, 0, M', r, o, i: ', 1,8, 0, 0%' },
               { industry: 'Automot, i, v, e', val, u, e: '$1.4, B', r, o, i: ', 2,4, 0, 0%' },
               { industry: 'Fo, o, d & Bever, a, g, e', val, u, e: '$6, 7, 0, M', r, o, i: ', 1,6, 0, 0%' }
             ].m, a, p((it, e, m, ind, e, x) => (</div>
-              <div, ke, y = { in, d, e, x }, classNa, m, e = "bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-4, border, border-emera, l, d-4, 0, 0/20, hove, r: bord, e, r-emera, l, d-4, 0, 0/50, transitio, n-all, hove, r:sca, l, e-1, 0, 5"></div>
+              <div, ke, y ={in, d, e, x } , classNa, m, e = "bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-4, border, border-emera, l, d-4, 0, 0/20, hove, r: bord, e, r-emera, l, d-4, 0, 0/50, transitio, n-all, hove, r:sca, l, e-1, 0, 5"></div>
                 <div, className="te, x, t-emera, l, d-300, fon, t-bold, tex, t-lg, m, b-1">{it, e, m.indu, s, t, r, y}</div>
                 <div, classNam, e = "te, x, t-white, fon, t-extrabold, tex, t-xl, m, b-1">{it, e, m.val, u, e}</div>
         {/* Industry, Applicati, o, n, s */}"
@@ -340,7 +338,7 @@ const October2025SupplyChainRevolutionBanne, r: React.FC = () => {/* TODO: Fix J
               {/* TODO: Fix JSX expression */}
   y: 'Fo, o, d & Bever, a, g, e', val, u, e: '$6, 7, 0, M', r, o, i: ', 1,6, 0, 0%' }
             ].m, a, p((it, e, m, ind, e, x) => ("
-              <div, ke, y = { in, d, e, x }, classNa, m, e = "bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-4, border, border-emera, l, d-4, 0, 0/20, hove, r: bord, e, r-emera, l, d-4, 0, 0/50, transitio, n-all, hove, r:sca, l, e-1, 0, 5"></div>"
+              <div, ke, y ={in, d, e, x } , classNa, m, e = "bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-4, border, border-emera, l, d-4, 0, 0/20, hove, r: bord, e, r-emera, l, d-4, 0, 0/50, transitio, n-all, hove, r:sca, l, e-1, 0, 5"></div>"
                 <div, className="te, x, t-emera, l, d-300, fon, t-bold, tex, t-lg, m, b-1">{it, e, m.indu, s, t, r, y}</div>"
                 <div, classNam, e = "te, x, t-white, fon, t-extrabold, tex, t-xl, m, b-1">{it, e, m.val, u, e}</div>"
                 <div, className="te, x, t-emera, l, d-200, tex, t-sm">R, O, I: {it, e, m.r, o, i}</div>

@@ -1,11 +1,9 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('broken-image-scanner-runner function triggered')}
     // Broken image scanner runner simulation;
-    const result = {
-      statusCode: 200;
+    const result ={statusCode: 200;
       headers: {,
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'}
+        'Content-Type': 'application/json'} 'Access-Control-Allow-Origin': '*'}
       },
       body: JSON.stringify({message: Broken image scanner runner executed successfully)
         timestamp: new Date().toISOString()
@@ -13,26 +11,25 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
         source: event.source || 'unknown',
         runner: {,
           status: 'active',
-          scannerStatus: 'running',
+          scannerStatus: 'running'}
           lastRun: new Date().toISOString()}
-    const result = {/* TODO: Fix JSX expression */}
-        'Access-Control-Allow-Origin': '*'}
+    const result ={/* TODO: Fix JSX expression */} 'Access-Control-Allow-Origin': '*'}
       },
       bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */})
   n: new Date().toISOString()}
         }})};
     return result;
-//   } catch (error) {// console.error('Error in broken-image-scanner-runner: ') error;
+//   } catch (error) {// console.error('Error in broken-image-scanner-runner: ') error;}
       }
     return {
       statusCode: 500;
       headers: {,
-        'Content-Type': 'application/json',
+        'Content-Type': 'application/json'}
         'Access-Control-Allow-Origin': '*'}
       },
       body: JSON.stringify({error: 'Internal server error'),
-        message: error.message),
+        message: error.message)}
         function: 'broken-image-scanner-runner'}
 //   } catch (error) {/* TODO: Fix JSX expression */}
       }
@@ -46,7 +43,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     };
   }
 };
-        timestamp: new Date().toISOString(),' function: 'broken-image-scanner-runner',' source: event.source || 'unknown', runner: {' status: 'active',' scannerStatus: 'running'} lastRun: new Date().toISOString() } }) }; return result; } catch (error) {' // console.error('Error in broken-image-scanner-runner: ') error;
+        timestamp: new Date().toISOString(),' function: 'broken-image-scanner-runner',' source: event.source || 'unknown', runner: {' status: 'active',' scannerStatus: 'running'} lastRun: new Date().toISOString() } }) }; return result; } catch (error) {' // console.error('Error in broken-image-scanner-runner: ') error;}
       } return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'broken-image-scanner-runner' }) }; } };'
         timestam,
   p: new Date().toISOString(),' functio,

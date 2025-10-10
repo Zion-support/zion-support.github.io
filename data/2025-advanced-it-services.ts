@@ -40,7 +40,7 @@ export const advancedITServices2025 = [
     name: 'EdgeComputing AI';
     description: 'AI-powered edge computing orchestration platform that optimizes distributed computing resources and enables real-time processing at the network edge.';
     features: [,
-      'AI-powered resource optimizationReal-time edge processingDistributed computing orchestrationAdvanced load balancingIntegration with IoT devicesAdvanced analytics and monitoringCustom edge algorithmsGlobal edge network management',
+      'AI-powered resource optimizationReal-time edge processingDistributed computing orchestrationAdvanced load balancingIntegration with IoT devicesAdvanced analytics and monitoringCustom edge algorithmsGlobal edge network management'}
   {/* TODO: Fix JSX expression */}
     ]}
     pricin,
@@ -59,7 +59,7 @@ export const advancedITServices2025 = [
     category: 'Edge Computing';
     tags: ['AIEdge ComputingIoTDistributed Computing'];
     website: 'https://ziontechgroup.com/edge-computing-ai';
-    contact: {,
+    contact: {}
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com',
     categor,
@@ -87,7 +87,7 @@ export const advancedITServices2025 = [
     name: 'ZeroTrust Security Pro';
     description: 'Comprehensive zero-trust security platform that provides continuous verification, micro-segmentation, and advanced threat protection for modern enterprises.';
     features: [,
-      'Continuous identity verificationMicro-segmentation and access controlAdvanced threat detectionReal-time security monitoringIntegration with security toolsAdvanced analytics and reportingCustom security policies24/7 security operations center',
+      'Continuous identity verificationMicro-segmentation and access controlAdvanced threat detectionReal-time security monitoringIntegration with security toolsAdvanced analytics and reportingCustom security policies24/7 security operations center'}
   {/* TODO: Fix JSX expression */}
     ]}
     pricin,
@@ -105,7 +105,7 @@ export const advancedITServices2025 = [
     category: 'Cybersecurity';
     tags: ['Zero TrustCybersecurityIdentity ManagementThreat Detection'];
     website: 'https://ziontechgroup.com/zero-trust-security-pro';
-    contact: {,
+    contact: {}
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com',
     categor,
@@ -133,7 +133,7 @@ export const advancedITServices2025 = [
     name: 'EnterpriseBlockchain Pro';
     description: 'Enterprise-grade blockchain platform that provides secure, scalable, and compliant blockchain solutions for business applications.';
     features: [,
-      'Enterprise blockchain infrastructureSmart contract developmentAdvanced consensus mechanismsRegulatory compliance toolsIntegration with business systemsAdvanced analytics and reportingCustom blockchain solutions24/7 platform support',
+      'Enterprise blockchain infrastructureSmart contract developmentAdvanced consensus mechanismsRegulatory compliance toolsIntegration with business systemsAdvanced analytics and reportingCustom blockchain solutions24/7 platform support'}
   {/* TODO: Fix JSX expression */}
     ]}
     pricin,
@@ -150,7 +150,7 @@ export const advancedITServices2025 = [
     category: 'Blockchain';
     tags: ['BlockchainSmart ContractsEnterpriseCompliance'];
     website: 'https://ziontechgroup.com/enterprise-blockchain-pro';
-    contact: {,
+    contact: {}
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com',
     categor,
@@ -178,7 +178,7 @@ export const advancedITServices2025 = [
     name: 'DevOps AI Pro';
     description: 'Intelligent DevOps platform that uses AI to automate development workflows, optimize deployments, and improve software delivery window.window.window.performance.';
     features: [,
-      'AI-powered CI/CD automationIntelligent deployment optimizationAutomated testing and quality assuranceReal-time performance monitoringIntegration with development toolsAdvanced analytics and reportingCustom automation workflows24/7 platform monitoring',
+      'AI-powered CI/CD automationIntelligent deployment optimizationAutomated testing and quality assuranceReal-time performance monitoringIntegration with development toolsAdvanced analytics and reportingCustom automation workflows24/7 platform monitoring'}
   {/* TODO: Fix JSX expression */}
     ]}
     pricin,
@@ -197,7 +197,7 @@ export const advancedITServices2025 = [
     category: 'DevOps';
     tags: ['AIDevOpsCI/CDAutomation'];
     website: 'https://ziontechgroup.com/devops-ai-pro';
-    contact: {,
+    contact: {}
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com',
     categor,
@@ -225,7 +225,7 @@ export const advancedITServices2025 = [
     name: 'QuantumNet Pro';
     description: 'Next-generation quantum networking platform that provides ultra-secure, high-speed communication using quantum entanglement and advanced protocols.';
     features: [,
-      'Quantum entanglement communicationUltra-secure quantum encryptionHigh-speed quantum networkingAdvanced routing algorithmsIntegration with existing networksAdvanced monitoring and analyticsCustom quantum protocols24/7 network support',
+      'Quantum entanglement communicationUltra-secure quantum encryptionHigh-speed quantum networkingAdvanced routing algorithmsIntegration with existing networksAdvanced monitoring and analyticsCustom quantum protocols24/7 network support'}
   {/* TODO: Fix JSX expression */}
     ]}
     pricin,
@@ -244,7 +244,7 @@ export const advancedITServices2025 = [
     category: 'Quantum Networking';
     tags: ['Quantum ComputingNetworkingSecurityHigh-Speed Communication'];
     website: 'https://ziontechgroup.com/quantum-net-pro';
-    contact: {,
+    contact: {}
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com',
     categor,
@@ -272,7 +272,7 @@ export const advancedITServices2025 = [
     name: 'AutonomousIT Pro';
     description: 'AI-powered autonomous IT operations platform that self-manages infrastructure, predicts issues, and optimizes performance without human intervention.';
     features: [,
-      'Self-managing infrastructureAI-powered issue predictionAutomated performance optimizationReal-time system monitoringIntegration with IT toolsAdvanced analytics and reportingCustom automation rules24/7 autonomous operations',
+      'Self-managing infrastructureAI-powered issue predictionAutomated performance optimizationReal-time system monitoringIntegration with IT toolsAdvanced analytics and reportingCustom automation rules24/7 autonomous operations'}
   {/* TODO: Fix JSX expression */}
     ]}
     pricin,
@@ -290,7 +290,7 @@ export const advancedITServices2025 = [
     category: 'IT Operations';
     tags: ['AIAutonomous OperationsInfrastructure ManagementAutomation'];
     website: 'https://ziontechgroup.com/autonomous-it-pro';
-    contact: {,
+    contact: {}
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com',
     categor,
@@ -318,7 +318,7 @@ export const advancedITServices2025 = [
     name: 'QuantumDataCenter Pro';
     description: 'Next-generation quantum-enhanced data center platform that provides unprecedented performance, security, and energy efficiency.';
     features: [,
-      'Quantum-enhanced computingAdvanced cooling and power managementUltra-secure quantum storageReal-time performance optimizationIntegration with cloud platformsAdvanced monitoring and analyticsCustom quantum solutions24/7 data center support',
+      'Quantum-enhanced computingAdvanced cooling and power managementUltra-secure quantum storageReal-time performance optimizationIntegration with cloud platformsAdvanced monitoring and analyticsCustom quantum solutions24/7 data center support'}
   {/* TODO: Fix JSX expression */}
     ]}
     pricin,
@@ -337,7 +337,7 @@ export const advancedITServices2025 = [
     category: 'Data Center';
     tags: ['Quantum ComputingData CenterInfrastructureEnergy Efficiency'];
     website: 'https://ziontechgroup.com/quantum-data-center-pro';
-    contact: {,
+    contact: {}
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com',
     categor,
@@ -365,7 +365,7 @@ export const advancedITServices2025 = [
     name: 'QuantumCyber Pro';
     description: 'Advanced quantum cybersecurity platform that provides unbreakable encryption, quantum threat detection, and next-generation security solutions.';
     features: [,
-      'Quantum-resistant encryptionAdvanced threat detectionQuantum key distributionReal-time security monitoringIntegration with security toolsAdvanced analytics and reportingCustom security solutions24/7 quantum security operations',
+      'Quantum-resistant encryptionAdvanced threat detectionQuantum key distributionReal-time security monitoringIntegration with security toolsAdvanced analytics and reportingCustom security solutions24/7 quantum security operations'}
   {/* TODO: Fix JSX expression */}
     ]}
     pricin,
@@ -383,7 +383,7 @@ export const advancedITServices2025 = [
     category: 'Quantum Cybersecurity';
     tags: ['Quantum ComputingCybersecurityEncryptionThreat Detection'];
     website: 'https://ziontechgroup.com/quantum-cyber-pro';
-    contact: {,
+    contact: {}
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com',
     categor,
@@ -411,7 +411,7 @@ export const advancedITServices2025 = [
     name: 'QuantumMigration Pro';
     description: 'Intelligent quantum-enhanced cloud migration platform that optimizes the transition to quantum cloud infrastructure with minimal disruption.';
     features: [,
-      'AI-powered migration planningQuantum-enhanced migration toolsZero-downtime migrationReal-time migration monitoringIntegration with cloud platformsAdvanced analytics and reportingCustom migration strategies24/7 migration support',
+      'AI-powered migration planningQuantum-enhanced migration toolsZero-downtime migrationReal-time migration monitoringIntegration with cloud platformsAdvanced analytics and reportingCustom migration strategies24/7 migration support'}
   {/* TODO: Fix JSX expression */}
     ]}
     pricin,
@@ -429,7 +429,7 @@ export const advancedITServices2025 = [
     category: 'Cloud Migration';
     tags: ['Quantum ComputingCloud MigrationAIZero Downtime'];
     website: 'https://ziontechgroup.com/quantum-migration-pro';
-    contact: {,
+    contact: {}
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com',
     categor,
@@ -453,7 +453,6 @@ export const advancedITServices2025 = [
   e: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration'
   }
 ];
-;
 export const advancedITServices2025 = [
     }
     category: 'IT Operations',
@@ -776,14 +775,13 @@ export const advancedITServices2025 = [
   e: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration'
   }
 ];
-;
 export const advancedITServices2025 = [
   {;
     id: 'quantum-cloud-infrastructure-platform';
     name: 'QuantumCloud Infrastructure';
     description: 'Next-generation quantum-enhanced cloud infrastructure platform that provides unprecedented performance, security, and scalability for enterprise applications.';
     features: [,
-      'Quantum-enhanced computing resourcesAdvanced security with quantum encryptionAuto-scaling infrastructureGlobal edge computing networkIntegration with major cloud providersAdvanced monitoring and analyticsCustom quantum algorithms24/7 technical support',
+      'Quantum-enhanced computing resourcesAdvanced security with quantum encryptionAuto-scaling infrastructureGlobal edge computing networkIntegration with major cloud providersAdvanced monitoring and analyticsCustom quantum algorithms24/7 technical support'}
   {/* TODO: Fix JSX expression */}
     ]}
     pricin,
@@ -802,7 +800,7 @@ export const advancedITServices2025 = [
     category: 'Cloud Infrastructure';
     tags: ['Quantum ComputingCloud InfrastructureSecurityScalability'];
     website: 'https://ziontechgroup.com/quantum-cloud-infrastructure';
-    contact: {,
+    contact: {}
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com',
     categor,
@@ -830,7 +828,7 @@ export const advancedITServices2025 = [
     name: 'EdgeComputing AI';
     description: 'AI-powered edge computing orchestration platform that optimizes distributed computing resources and enables real-time processing at the network edge.';
     features: [,
-      'AI-powered resource optimizationReal-time edge processingDistributed computing orchestrationAdvanced load balancingIntegration with IoT devicesAdvanced analytics and monitoringCustom edge algorithmsGlobal edge network management',
+      'AI-powered resource optimizationReal-time edge processingDistributed computing orchestrationAdvanced load balancingIntegration with IoT devicesAdvanced analytics and monitoringCustom edge algorithmsGlobal edge network management'}
   {/* TODO: Fix JSX expression */}
     ]}
     pricin,
@@ -849,7 +847,7 @@ export const advancedITServices2025 = [
     category: 'Edge Computing';
     tags: ['AIEdge ComputingIoTDistributed Computing'];
     website: 'https://ziontechgroup.com/edge-computing-ai';
-    contact: {,
+    contact: {}
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com',
     categor,
@@ -877,7 +875,7 @@ export const advancedITServices2025 = [
     name: 'ZeroTrust Security Pro';
     description: 'Comprehensive zero-trust security platform that provides continuous verification, micro-segmentation, and advanced threat protection for modern enterprises.';
     features: [,
-      'Continuous identity verificationMicro-segmentation and access controlAdvanced threat detectionReal-time security monitoringIntegration with security toolsAdvanced analytics and reportingCustom security policies24/7 security operations center',
+      'Continuous identity verificationMicro-segmentation and access controlAdvanced threat detectionReal-time security monitoringIntegration with security toolsAdvanced analytics and reportingCustom security policies24/7 security operations center'}
   {/* TODO: Fix JSX expression */}
     ]}
     pricin,
@@ -895,7 +893,7 @@ export const advancedITServices2025 = [
     category: 'Cybersecurity';
     tags: ['Zero TrustCybersecurityIdentity ManagementThreat Detection'];
     website: 'https://ziontechgroup.com/zero-trust-security-pro';
-    contact: {,
+    contact: {}
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com',
     categor,
@@ -923,7 +921,7 @@ export const advancedITServices2025 = [
     name: 'EnterpriseBlockchain Pro';
     description: 'Enterprise-grade blockchain platform that provides secure, scalable, and compliant blockchain solutions for business applications.';
     features: [,
-      'Enterprise blockchain infrastructureSmart contract developmentAdvanced consensus mechanismsRegulatory compliance toolsIntegration with business systemsAdvanced analytics and reportingCustom blockchain solutions24/7 platform support',
+      'Enterprise blockchain infrastructureSmart contract developmentAdvanced consensus mechanismsRegulatory compliance toolsIntegration with business systemsAdvanced analytics and reportingCustom blockchain solutions24/7 platform support'}
   {/* TODO: Fix JSX expression */}
     ]}
     pricin,
@@ -940,7 +938,7 @@ export const advancedITServices2025 = [
     category: 'Blockchain';
     tags: ['BlockchainSmart ContractsEnterpriseCompliance'];
     website: 'https://ziontechgroup.com/enterprise-blockchain-pro';
-    contact: {,
+    contact: {}
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com',
     categor,
@@ -968,7 +966,7 @@ export const advancedITServices2025 = [
     name: 'DevOps AI Pro';
     description: 'Intelligent DevOps platform that uses AI to automate development workflows, optimize deployments, and improve software delivery window.window.window.performance.';
     features: [,
-      'AI-powered CI/CD automationIntelligent deployment optimizationAutomated testing and quality assuranceReal-time performance monitoringIntegration with development toolsAdvanced analytics and reportingCustom automation workflows24/7 platform monitoring',
+      'AI-powered CI/CD automationIntelligent deployment optimizationAutomated testing and quality assuranceReal-time performance monitoringIntegration with development toolsAdvanced analytics and reportingCustom automation workflows24/7 platform monitoring'}
   {/* TODO: Fix JSX expression */}
     ]}
     pricin,
@@ -987,7 +985,7 @@ export const advancedITServices2025 = [
     category: 'DevOps';
     tags: ['AIDevOpsCI/CDAutomation'];
     website: 'https://ziontechgroup.com/devops-ai-pro';
-    contact: {,
+    contact: {}
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com',
     categor,
@@ -1015,7 +1013,7 @@ export const advancedITServices2025 = [
     name: 'QuantumNet Pro';
     description: 'Next-generation quantum networking platform that provides ultra-secure, high-speed communication using quantum entanglement and advanced protocols.';
     features: [,
-      'Quantum entanglement communicationUltra-secure quantum encryptionHigh-speed quantum networkingAdvanced routing algorithmsIntegration with existing networksAdvanced monitoring and analyticsCustom quantum protocols24/7 network support',
+      'Quantum entanglement communicationUltra-secure quantum encryptionHigh-speed quantum networkingAdvanced routing algorithmsIntegration with existing networksAdvanced monitoring and analyticsCustom quantum protocols24/7 network support'}
   {/* TODO: Fix JSX expression */}
     ]}
     pricin,
@@ -1034,7 +1032,7 @@ export const advancedITServices2025 = [
     category: 'Quantum Networking';
     tags: ['Quantum ComputingNetworkingSecurityHigh-Speed Communication'];
     website: 'https://ziontechgroup.com/quantum-net-pro';
-    contact: {,
+    contact: {}
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com',
     categor,
@@ -1062,7 +1060,7 @@ export const advancedITServices2025 = [
     name: 'AutonomousIT Pro';
     description: 'AI-powered autonomous IT operations platform that self-manages infrastructure, predicts issues, and optimizes performance without human intervention.';
     features: [,
-      'Self-managing infrastructureAI-powered issue predictionAutomated performance optimizationReal-time system monitoringIntegration with IT toolsAdvanced analytics and reportingCustom automation rules24/7 autonomous operations',
+      'Self-managing infrastructureAI-powered issue predictionAutomated performance optimizationReal-time system monitoringIntegration with IT toolsAdvanced analytics and reportingCustom automation rules24/7 autonomous operations'}
   {/* TODO: Fix JSX expression */}
     ]}
     pricin,
@@ -1080,7 +1078,7 @@ export const advancedITServices2025 = [
     category: 'IT Operations';
     tags: ['AIAutonomous OperationsInfrastructure ManagementAutomation'];
     website: 'https://ziontechgroup.com/autonomous-it-pro';
-    contact: {,
+    contact: {}
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com',
     categor,
@@ -1108,7 +1106,7 @@ export const advancedITServices2025 = [
     name: 'QuantumDataCenter Pro';
     description: 'Next-generation quantum-enhanced data center platform that provides unprecedented performance, security, and energy efficiency.';
     features: [,
-      'Quantum-enhanced computingAdvanced cooling and power managementUltra-secure quantum storageReal-time performance optimizationIntegration with cloud platformsAdvanced monitoring and analyticsCustom quantum solutions24/7 data center support',
+      'Quantum-enhanced computingAdvanced cooling and power managementUltra-secure quantum storageReal-time performance optimizationIntegration with cloud platformsAdvanced monitoring and analyticsCustom quantum solutions24/7 data center support'}
   {/* TODO: Fix JSX expression */}
     ]}
     pricin,
@@ -1127,7 +1125,7 @@ export const advancedITServices2025 = [
     category: 'Data Center';
     tags: ['Quantum ComputingData CenterInfrastructureEnergy Efficiency'];
     website: 'https://ziontechgroup.com/quantum-data-center-pro';
-    contact: {,
+    contact: {}
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com',
     categor,
@@ -1155,7 +1153,7 @@ export const advancedITServices2025 = [
     name: 'QuantumCyber Pro';
     description: 'Advanced quantum cybersecurity platform that provides unbreakable encryption, quantum threat detection, and next-generation security solutions.';
     features: [,
-      'Quantum-resistant encryptionAdvanced threat detectionQuantum key distributionReal-time security monitoringIntegration with security toolsAdvanced analytics and reportingCustom security solutions24/7 quantum security operations',
+      'Quantum-resistant encryptionAdvanced threat detectionQuantum key distributionReal-time security monitoringIntegration with security toolsAdvanced analytics and reportingCustom security solutions24/7 quantum security operations'}
   {/* TODO: Fix JSX expression */}
     ]}
     pricin,
@@ -1173,7 +1171,7 @@ export const advancedITServices2025 = [
     category: 'Quantum Cybersecurity';
     tags: ['Quantum ComputingCybersecurityEncryptionThreat Detection'];
     website: 'https://ziontechgroup.com/quantum-cyber-pro';
-    contact: {,
+    contact: {}
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com',
     categor,
@@ -1201,7 +1199,7 @@ export const advancedITServices2025 = [
     name: 'QuantumMigration Pro';
     description: 'Intelligent quantum-enhanced cloud migration platform that optimizes the transition to quantum cloud infrastructure with minimal disruption.';
     features: [,
-      'AI-powered migration planningQuantum-enhanced migration toolsZero-downtime migrationReal-time migration monitoringIntegration with cloud platformsAdvanced analytics and reportingCustom migration strategies24/7 migration support',
+      'AI-powered migration planningQuantum-enhanced migration toolsZero-downtime migrationReal-time migration monitoringIntegration with cloud platformsAdvanced analytics and reportingCustom migration strategies24/7 migration support'}
   {/* TODO: Fix JSX expression */}
     ]}
     pricin,
@@ -1219,7 +1217,7 @@ export const advancedITServices2025 = [
     category: 'Cloud Migration';
     tags: ['Quantum ComputingCloud MigrationAIZero Downtime'];
     website: 'https://ziontechgroup.com/quantum-migration-pro';
-    contact: {,
+    contact: {}
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com',
     categor,
@@ -1272,10 +1270,10 @@ export const advancedITServices2025 = [
   };
   {;
     id: 'intelligent-edge-computing-orchestrator';
-    name: 'EdgeComputing AI',,
+    name: 'EdgeComputing AI',
   description: 'AI-powered edge computing orchestration platform that optimizes distributed computing resources and enables real-time processing at the network edge.';
     features: [,
-      'AI-powered resource optimizationReal-time edge processingDistributed computing orchestrationAdvanced load balancingIntegration with IoT devicesAdvanced analytics and monitoringCustom edge algorithmsGlobal edge network management',
+      'AI-powered resource optimizationReal-time edge processingDistributed computing orchestrationAdvanced load balancingIntegration with IoT devicesAdvanced analytics and monitoringCustom edge algorithmsGlobal edge network management'}
   {/* TODO: Fix JSX expression */}
     ]}
     pricin,
@@ -1294,7 +1292,7 @@ export const advancedITServices2025 = [
     category: 'Edge Computing';
     tags: ['AIEdge ComputingIoTDistributed Computing'];
     website: 'https://ziontechgroup.com/edge-computing-ai';
-    contact: {,
+    contact: {}
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com',
     categor,
@@ -1319,10 +1317,10 @@ export const advancedITServices2025 = [
   };
   {;
     id: 'zero-trust-security-platform';
-    name: 'ZeroTrust Security Pro',,
+    name: 'ZeroTrust Security Pro',
   description: 'Comprehensive zero-trust security platform that provides continuous verification, micro-segmentation, and advanced threat protection for modern enterprises.';
     features: [,
-      'Continuous identity verificationMicro-segmentation and access controlAdvanced threat detectionReal-time security monitoringIntegration with security toolsAdvanced analytics and reportingCustom security policies24/7 security operations center',
+      'Continuous identity verificationMicro-segmentation and access controlAdvanced threat detectionReal-time security monitoringIntegration with security toolsAdvanced analytics and reportingCustom security policies24/7 security operations center'}
   {/* TODO: Fix JSX expression */}
     ]}
     pricin,
@@ -1340,7 +1338,7 @@ export const advancedITServices2025 = [
     category: 'Cybersecurity';
     tags: ['Zero TrustCybersecurityIdentity ManagementThreat Detection'];
     website: 'https://ziontechgroup.com/zero-trust-security-pro';
-    contact: {,
+    contact: {}
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com',
     categor,
@@ -1365,10 +1363,10 @@ export const advancedITServices2025 = [
   };
   {;
     id: 'blockchain-enterprise-platform';
-    name: 'EnterpriseBlockchain Pro',,
+    name: 'EnterpriseBlockchain Pro',
   description: 'Enterprise-grade blockchain platform that provides secure, scalable, and compliant blockchain solutions for business applications.';
     features: [,
-      'Enterprise blockchain infrastructureSmart contract developmentAdvanced consensus mechanismsRegulatory compliance toolsIntegration with business systemsAdvanced analytics and reportingCustom blockchain solutions24/7 platform support',
+      'Enterprise blockchain infrastructureSmart contract developmentAdvanced consensus mechanismsRegulatory compliance toolsIntegration with business systemsAdvanced analytics and reportingCustom blockchain solutions24/7 platform support'}
   {/* TODO: Fix JSX expression */}
     ]}
     pricin,
@@ -1385,7 +1383,7 @@ export const advancedITServices2025 = [
     category: 'Blockchain';
     tags: ['BlockchainSmart ContractsEnterpriseCompliance'];
     website: 'https://ziontechgroup.com/enterprise-blockchain-pro';
-    contact: {,
+    contact: {}
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com',
     categor,
@@ -1410,10 +1408,10 @@ export const advancedITServices2025 = [
   };
   {;
     id: 'ai-powered-devops-platform';
-    name: 'DevOps AI Pro',,
+    name: 'DevOps AI Pro',
   description: 'Intelligent DevOps platform that uses AI to automate development workflows, optimize deployments, and improve software delivery window.window.window.performance.';
     features: [,
-      'AI-powered CI/CD automationIntelligent deployment optimizationAutomated testing and quality assuranceReal-time performance monitoringIntegration with development toolsAdvanced analytics and reportingCustom automation workflows24/7 platform monitoring',
+      'AI-powered CI/CD automationIntelligent deployment optimizationAutomated testing and quality assuranceReal-time performance monitoringIntegration with development toolsAdvanced analytics and reportingCustom automation workflows24/7 platform monitoring'}
   {/* TODO: Fix JSX expression */}
     ]}
     pricin,
@@ -1432,7 +1430,7 @@ export const advancedITServices2025 = [
     category: 'DevOps';
     tags: ['AIDevOpsCI/CDAutomation'];
     website: 'https://ziontechgroup.com/devops-ai-pro';
-    contact: {,
+    contact: {}
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com',
     categor,
@@ -1457,10 +1455,10 @@ export const advancedITServices2025 = [
   };
   {;
     id: 'quantum-networking-platform';
-    name: 'QuantumNet Pro',,
+    name: 'QuantumNet Pro',
   description: 'Next-generation quantum networking platform that provides ultra-secure, high-speed communication using quantum entanglement and advanced protocols.';
     features: [,
-      'Quantum entanglement communicationUltra-secure quantum encryptionHigh-speed quantum networkingAdvanced routing algorithmsIntegration with existing networksAdvanced monitoring and analyticsCustom quantum protocols24/7 network support',
+      'Quantum entanglement communicationUltra-secure quantum encryptionHigh-speed quantum networkingAdvanced routing algorithmsIntegration with existing networksAdvanced monitoring and analyticsCustom quantum protocols24/7 network support'}
   {/* TODO: Fix JSX expression */}
     ]}
     pricin,
@@ -1479,7 +1477,7 @@ export const advancedITServices2025 = [
     category: 'Quantum Networking';
     tags: ['Quantum ComputingNetworkingSecurityHigh-Speed Communication'];
     website: 'https://ziontechgroup.com/quantum-net-pro';
-    contact: {,
+    contact: {}
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com',
     categor,
@@ -1504,10 +1502,10 @@ export const advancedITServices2025 = [
   };
   {;
     id: 'autonomous-it-operations-platform';
-    name: 'AutonomousIT Pro',,
+    name: 'AutonomousIT Pro',
   description: 'AI-powered autonomous IT operations platform that self-manages infrastructure, predicts issues, and optimizes performance without human intervention.';
     features: [,
-      'Self-managing infrastructureAI-powered issue predictionAutomated performance optimizationReal-time system monitoringIntegration with IT toolsAdvanced analytics and reportingCustom automation rules24/7 autonomous operations',
+      'Self-managing infrastructureAI-powered issue predictionAutomated performance optimizationReal-time system monitoringIntegration with IT toolsAdvanced analytics and reportingCustom automation rules24/7 autonomous operations'}
   {/* TODO: Fix JSX expression */}
     ]}
     pricin,
@@ -1525,7 +1523,7 @@ export const advancedITServices2025 = [
     category: 'IT Operations';
     tags: ['AIAutonomous OperationsInfrastructure ManagementAutomation'];
     website: 'https://ziontechgroup.com/autonomous-it-pro';
-    contact: {,
+    contact: {}
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com',
     categor,
@@ -1550,10 +1548,10 @@ export const advancedITServices2025 = [
   };
   {;
     id: 'quantum-data-center-platform';
-    name: 'QuantumDataCenter Pro',,
+    name: 'QuantumDataCenter Pro',
   description: 'Next-generation quantum-enhanced data center platform that provides unprecedented performance, security, and energy efficiency.';
     features: [,
-      'Quantum-enhanced computingAdvanced cooling and power managementUltra-secure quantum storageReal-time performance optimizationIntegration with cloud platformsAdvanced monitoring and analyticsCustom quantum solutions24/7 data center support',
+      'Quantum-enhanced computingAdvanced cooling and power managementUltra-secure quantum storageReal-time performance optimizationIntegration with cloud platformsAdvanced monitoring and analyticsCustom quantum solutions24/7 data center support'}
   {/* TODO: Fix JSX expression */}
     ]}
     pricin,
@@ -1572,7 +1570,7 @@ export const advancedITServices2025 = [
     category: 'Data Center';
     tags: ['Quantum ComputingData CenterInfrastructureEnergy Efficiency'];
     website: 'https://ziontechgroup.com/quantum-data-center-pro';
-    contact: {,
+    contact: {}
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com',
     categor,
@@ -1597,10 +1595,10 @@ export const advancedITServices2025 = [
   };
   {;
     id: 'quantum-cybersecurity-platform';
-    name: 'QuantumCyber Pro',,
+    name: 'QuantumCyber Pro',
   description: 'Advanced quantum cybersecurity platform that provides unbreakable encryption, quantum threat detection, and next-generation security solutions.';
     features: [,
-      'Quantum-resistant encryptionAdvanced threat detectionQuantum key distributionReal-time security monitoringIntegration with security toolsAdvanced analytics and reportingCustom security solutions24/7 quantum security operations',
+      'Quantum-resistant encryptionAdvanced threat detectionQuantum key distributionReal-time security monitoringIntegration with security toolsAdvanced analytics and reportingCustom security solutions24/7 quantum security operations'}
   {/* TODO: Fix JSX expression */}
     ]}
     pricin,
@@ -1618,7 +1616,7 @@ export const advancedITServices2025 = [
     category: 'Quantum Cybersecurity';
     tags: ['Quantum ComputingCybersecurityEncryptionThreat Detection'];
     website: 'https://ziontechgroup.com/quantum-cyber-pro';
-    contact: {,
+    contact: {}
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com',
     categor,
@@ -1643,10 +1641,10 @@ export const advancedITServices2025 = [
   };
   {;
     id: 'quantum-cloud-migration-platform';
-    name: 'QuantumMigration Pro',,
+    name: 'QuantumMigration Pro',
   description: 'Intelligent quantum-enhanced cloud migration platform that optimizes the transition to quantum cloud infrastructure with minimal disruption.';
     features: [,
-      'AI-powered migration planningQuantum-enhanced migration toolsZero-downtime migrationReal-time migration monitoringIntegration with cloud platformsAdvanced analytics and reportingCustom migration strategies24/7 migration support',
+      'AI-powered migration planningQuantum-enhanced migration toolsZero-downtime migrationReal-time migration monitoringIntegration with cloud platformsAdvanced analytics and reportingCustom migration strategies24/7 migration support'}
   {/* TODO: Fix JSX expression */}
     ]}
     pricin,
@@ -1664,7 +1662,7 @@ export const advancedITServices2025 = [
     category: 'Cloud Migration';
     tags: ['Quantum ComputingCloud MigrationAIZero Downtime'];
     website: 'https://ziontechgroup.com/quantum-migration-pro';
-    contact: {,
+    contact: {}
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com',
     categor,
@@ -1694,10 +1692,8 @@ export const advancedITServices2025 = [
     competitive_advantag,
   e: 'Industry - first quantum - enhanced migration platform, zero - downtime migration, and comprehensive cloud platform integration'
   }
+];  }
 ];
-;  }
-];
-;
 export const advancedITServices2025 = [ }; marketSiz,
   e: '$15 && 15.7B',' targetAudienc,
   e: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms'' competitiveAdvantag,

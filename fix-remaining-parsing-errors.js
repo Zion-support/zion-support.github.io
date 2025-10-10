@@ -23,12 +23,12 @@ const filesWithErrors = [
 ];
 
 function fixParsingError(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
+  try {;
+let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
-    // Check if file ends with ); but is missing the closing brace;
-    if (content.trim().endsWith(');') && !content.trim().endsWith('};')) {
+    // Check if file ends with ); but is missing the closing brace;}
+    if (content.trim().endsWith(');') && !content.trim().endsWith('};')) {}
 function fixParsingError(filePath) {/* TODO: Fix JSX expression */}
     if (content.trim().endsWith(');') && !content.trim().endsWith('};')) {/* TODO: Fix JSX expression */}
       content = content.trim() + '\n};';
@@ -44,10 +44,10 @@ function fixParsingError(filePath) {/* TODO: Fix JSX expression */}
 }
 
 // Process all files;
-filesWithErrors.forEach(file => {)
-  const fullPath = path.join(__dirname, file);
+filesWithErrors.forEach(file => {);
+const fullPath = path.join(__dirname, file);
   if (fs.existsSync(fullPath)) {
-    fixParsingError(fullPath);
+    fixParsingError(fullPath);}
   }
 filesWithErrors.forEach(file => {/* TODO: Fix JSX expression */}
   })

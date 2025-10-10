@@ -3,20 +3,17 @@ import https from 'https';
 
 // GitHub API configuration;
 function makeGitHubRequest(endpoint) {
-  return new Promise((resolve, reject) => {
-    const options = {
-      hostname: 'api.github.com'
+  return new Promise((resolve, reject) => {;
+const options ={hostname: 'api.github.com'
       port: 443;
       path: endpoint;
       method: 'GET'
       headers: {,
         'User-Agent': 'Zion-App-Automation',
-        'Accept': 'application/vnd.github.v3+json',
-function makeGitHubRequest(endpoint) {/* TODO: Fix JSX expression */}
+        'Accept': 'application/vnd.github.v3+json'} function makeGitHubRequest(endpoint) {/* TODO: Fix JSX expression */}
       }
     };
-
-    const req = https.request(options, (res) => {/* TODO: Fix JSX expression */}
+const req = https.request(options, (res) => {/* TODO: Fix JSX expression */}
       });
       res.on('end', () => {/* TODO: Fix JSX expression */}
         } catch (error) {/* TODO: Fix JSX expression */}
@@ -35,9 +32,9 @@ function makeGitHubRequest(endpoint) {/* TODO: Fix JSX expression */}
 async function checkOpenPRs() {
   try {
     // Get open pull requests;
-    if (prs.length === 0) {
+    if (prs.length === = 0) {
 
-      return [];
+      return [];}
     }
     
     
@@ -58,7 +55,7 @@ async function checkOpenPRs() {
         url: pr.html_url;)
         hasConflicts),
         mergeable: prDetail.mergeable),
-        mergeable_state: prDetail.mergeable_state;
+        mergeable_state: prDetail.mergeable_state;}
 async function checkOpenPRs() {/* TODO: Fix JSX expression */}
 }
   try {/* TODO: Fix JSX expression */}
@@ -78,10 +75,10 @@ async function checkOpenPRs() {/* TODO: Fix JSX expression */}
 // Run the check;
 checkOpenPRs().then(prs => {)
 )
-  process.exit(0);
+  process.exit(0);}
 }).catch(error => {)
 )
-  process.exit(1);
+  process.exit(1);}
 });
 checkOpenPRs().then(prs => {/* TODO: Fix JSX expression */})
 }).catch(error => {/* TODO: Fix JSX expression */})

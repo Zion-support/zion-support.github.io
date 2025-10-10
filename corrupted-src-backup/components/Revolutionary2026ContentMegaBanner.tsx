@@ -16,7 +16,7 @@ const, Revolutionary2026ContentMegaBanne, r: Rea, c, t.FC = () => {
       trendi, n, g: tr, u, e;
       ic, o, n: "🧠",
       impa, c, t: "1000x, Spee, d"
-      featur, e, d: tr, u, e;
+      featur, e, d: tr, u, e;}
     }
     {
       id: 2;
@@ -31,7 +31,7 @@ const, Revolutionary2026ContentMegaBanne, r: Rea, c, t.FC = () => {
       impa, c, t: "98% Automati, o, n"
       impa, c, t: "98% Automati, o, n"
       featu, r, e;
-  d: tr, u, e;
+  d: tr, u, e;}
     }
     {
       id: 3;
@@ -44,7 +44,7 @@ const, Revolutionary2026ContentMegaBanne, r: Rea, c, t.FC = () => {
       trendi, n, g: tr, u, e;
       ic, o, n: "⚛️",
       impa, c, t: "Quantum, Breakthroug, h"
-      featur, e, d: tr, u, e;
+      featur, e, d: tr, u, e;}
     }
     {
       id: 4;
@@ -57,7 +57,7 @@ const, Revolutionary2026ContentMegaBanne, r: Rea, c, t.FC = () => {
       trendi, n, g: tr, u, e;
       ic, o, n: "🛡️",
       impa, c, t: "99.99% Securi, t, y"
-      featur, e, d: fal, s, e;
+      featur, e, d: fal, s, e;}
     }
 id: 3;
 tit, l, e: "Quant, u, m-Neural, Network, Architecture"
@@ -82,7 +82,7 @@ readTi, m, e: "41, mi, n"
 trendi, n, g: tr, u, e;
 ic, o, n: "🛡️",
 impa, c, t: "99.99% Securi, t, y"
-featur, e, d: fal, s, e;
+featur, e, d: fal, s, e;}
 }
     {
       id: 5;
@@ -95,7 +95,7 @@ featur, e, d: fal, s, e;
       trendi, n, g: tr, u, e;
       ic, o, n: "📡",
       impa, c, t: "10,0, 0, 0+ Nod, e, s"
-      featur, e, d: fal, s, e;
+      featur, e, d: fal, s, e;}
     }
     {
       id: 6;
@@ -108,7 +108,7 @@ featur, e, d: fal, s, e;
       trendi, n, g: tr, u, e;
       ic, o, n: "🎭",
       impa, c, t: "95% Accura, c, y"
-      featur, e, d: fal, s, e;
+      featur, e, d: fal, s, e;}
     }
 id: 6;
 tit, l, e: "Synthetic, Data, Generation Revoluti, o, n"
@@ -168,8 +168,8 @@ featur, e, d: fal, s, e;
       {/* Animated, background, effects */}</div>
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20"></div>
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>
-        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '3s' }}></d, i, v>
-        <div, className="absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1.5s' }}></d, i, v>
+        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '3s' } }></d, i, v>
+        <div, className="absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1.5s' } }></d, i, v>
       </d, i, v>
       <div, className="container, m, x-auto, p, x-6, relative, z-10">
         {/* Head, e, r */}</div>
@@ -186,8 +186,8 @@ featur, e, d: fal, s, e;
       {/* Animated, background, effects */}"
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20"></div>"
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>"
-        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '3s' }}></d, i, v>"
-        <div, className="absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1.5s' }}></d, i, v>
+        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '3s' } }></d, i, v>"
+        <div, className="absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1.5s' } }></d, i, v>
       </d, i, v>"
       <div, className="container, m, x-auto, p, x-6, relative, z-10"></div>
         {/* Head, e, r */}"
@@ -240,18 +240,17 @@ featur, e, d: fal, s, e;
         <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l;)
   g:gr, i, d-co, l, s-3, ga, p-8, m, b-16">)
           {revolutionaryConte, n, t.m, a, p((conte, n, t) => (
-            <d, i, v;
+            <d, i, v;}
         {/* Featured, Content, Grid */}
-        <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l
+        <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l,
   g:gr, i, d-co, l, s-3, ga, p-8, m, b-16">
           {revolutionaryConte, n, t.m, a, p((conte, n, t) => (</div>
-            <d, i, v
-  k, e, y={conte, n, t.id}
-        {/* Featured, Content, Grid */}"
+            <d, i, v}
+  k, e, y={conte, n, t.id} {/* Featured, Content, Grid */}"
         <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l,"
   g:gr, i, d-co, l, s-3, ga, p-8, m, b-16"></div>
           {/* TODO: Fix JSX expression */}
-  k, e, y={conte, n, t.id}"
+  k, e, y={conte, n, t.id} "
               classNa, m, e="group, relativ, e"
             ></d>
               {/* Featured, badg, e */}
@@ -261,7 +260,7 @@ featur, e, d: fal, s, e;
                     <span, className="w-3 h-3">⭐</sp, a, n>
                     <sp, a, n>FEATUR, E, D</sp, a, n>
                   </d, i, v>
-                </d, i, v>
+                </d, i, v>}
               )}
               {/* Card, glow, effect */}
               <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/0, vi, a-bl, u, e-5, 0, 0/0, t, o-cy, a, n-5, 0, 0/0, grou, p-hov, e, r: fr, o, m-purp, l, e-5, 0, 0/10, grou, p-hov, e, r:v, i, a-bl, u, e-5, 0, 0/10, grou, p-hov, e, r:to-cy, a, n-5, 0, 0/10, transitio, n-all, duratio, n-500, rounde, d-2, x, l"></d, i, v>
@@ -277,7 +276,7 @@ featur, e, d: fal, s, e;
                       <div, className="flex, item, s-center, ga, p-1, p, x-3, p, y-1.5, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-r, e, d-500, t, o-pi, n, k-500, tex, t-white, tex, t-xs, fon, t-bold, shado, w-lg"></div>
                         <TrendingUp, className="w-3 h-3"  />
                         <sp, a, n>TRENDI, N, G</sp, a, n>
-                      </d, i, v>
+                      </d, i, v>}
                     )}
                     <span, className="px-3, p, y-1.5, rounde, d-full, b, g-purp, l, e-5, 0, 0/20, tex, t-purp, l, e-400, tex, t-xs, fon, t-semibold, border, border-purp, l, e-5, 0, 0/30">
               {/* TODO: Fix JSX expression */})
@@ -342,14 +341,14 @@ featur, e, d: fal, s, e;
                 </d, i, v>
                 {/* CTA, Butto, n */}
                 <a;
-  hr, e, f={`/bl, o, g/${conte, n, t.sl, u, g}`}`
+  hr, e, f={`/bl, o, g/${conte, n, t.sl, u, g} `}`
                   classNa, m, e="gro, u, p/btn, flex, items-center, justif, y-center, ga, p-2 w-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-bl, u, e-600, hove, r: fr, o, m-purp, l, e-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transform, hover:-transla, t, e-y-1"
                 >
                   <Link, className="w-4 h-4"  />
                   <sp, a, n>Explore, Breakthroug, h</sp, a, n>
                   <span, className="w-4 h-4, grou, p-hov, e, r/bt;
                 <a></a>
-  hr, e, f={`/bl, o, g/${conte, n, t.sl, u, g}`}`"
+  hr, e, f={`/bl, o, g/${conte, n, t.sl, u, g} `}`"
                   classNa, m, e="gro, u, p/btn, flex, items-center, justif, y-center, ga, p-2 w-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-bl, u, e-600, hove, r: fr, o, m-purp, l, e-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transform, hove,"
   r:-transla, t, e-y-1"
                 >"

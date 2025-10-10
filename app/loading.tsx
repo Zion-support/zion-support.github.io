@@ -4,32 +4,31 @@ import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
-
-const LoadingPage: React.FC = () => {
-  const features = [
+const LoadingPage: React.FC = () => {;
+const features = [
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']}
     },
     {
       icon: BarChart,
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']}
     },
     {
       icon: Target,
       title: 'Precision Targeting',
       description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']}
     },
     {
       icon: TrendingUp,
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']}
     }
   ];
 
@@ -79,7 +78,7 @@ const LoadingPage: React.FC = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
+              {features.map((feature, index) => (}
                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="flex items-center mb-4">
                     <feature.icon className="h-8 w-8 text-blue-600 mr-3" />
@@ -87,7 +86,7 @@ const LoadingPage: React.FC = () => {
                   </div>
                   <p className="text-gray-600 mb-4">{feature.description}</p>
                   <ul className="space-y-2">
-                    {feature.benefits.map((benefit, benefitIndex) => (
+                    {feature.benefits.map((benefit, benefitIndex) => (}
                       <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
                         <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
                         {benefit}
@@ -122,3 +121,8 @@ const LoadingPage: React.FC = () => {
 };
 
 export default LoadingPage;
+
+
+
+
+</div></div></div></div></div>

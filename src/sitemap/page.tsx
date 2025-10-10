@@ -4,9 +4,8 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { ArrowRight, Globe, FileText, Users, Settings, Brain, Zap, Shield, Database, Cloud, Code, BarChart, MessageSquare, Eye, Cpu, Target, Lock, BarChart3, FileText as FileTextIcon, Search, Bot, Calculator, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calendar, Clock3, Compass, PieChart, TrendingDown, Activity } from 'lucide-react';
-
-const SitemapPage: React.FC = () => {
-  const mainPages = [
+const SitemapPage: React.FC = () => {;
+const mainPages = [}
     { name: 'Home', path: '/', description: 'Main homepage with company overview' },
     { name: 'About Us', path: '/about', description: 'Learn about our company and mission' },
     { name: 'Services', path: '/services', description: 'Comprehensive AI and IT services' },
@@ -21,8 +20,7 @@ const SitemapPage: React.FC = () => {
     { name: 'Privacy Policy', path: '/privacy', description: 'Data protection and privacy' },
     { name: 'Terms of Service', path: '/terms', description: 'Terms and conditions' }
   ];
-
-  const microSaasServices = [
+const microSaasServices = [
     { name: 'AI Project Manager', path: '/ai-project-manager', description: 'Intelligent project planning and management' },
     { name: 'AI Social Media Manager', path: '/ai-social-media-manager', description: 'Automated social media management' },
     { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard', description: 'AI-powered business intelligence' },
@@ -36,8 +34,7 @@ const SitemapPage: React.FC = () => {
     { name: 'AI E-commerce Assistant', path: '/ai-ecommerce-solutions', description: 'E-commerce optimization tools' },
     { name: 'AI Financial Analyzer', path: '/ai-financial-analyzer', description: 'Financial analysis and forecasting' }
   ];
-
-  const aiServices = [
+const aiServices = [
     { name: 'Machine Learning Solutions', path: '/machine-learning', description: 'Custom ML models and algorithms' },
     { name: 'Natural Language Processing', path: '/nlp', description: 'Text analysis and language understanding' },
     { name: 'Computer Vision', path: '/computer-vision', description: 'Image and video analysis' },
@@ -45,8 +42,7 @@ const SitemapPage: React.FC = () => {
     { name: 'Quantum AI Computing', path: '/quantum-ai', description: 'Next-generation quantum algorithms' },
     { name: 'AI Cybersecurity', path: '/ai-cybersecurity', description: 'AI-powered security solutions' }
   ];
-
-  const itServices = [
+const itServices = [
     { name: 'Cloud Services', path: '/cloud-services', description: 'Cloud migration and infrastructure' },
     { name: 'Cybersecurity', path: '/cybersecurity', description: 'Advanced security solutions' },
     { name: 'DevOps & CI/CD', path: '/devops', description: 'Development and deployment automation' },
@@ -54,8 +50,7 @@ const SitemapPage: React.FC = () => {
     { name: 'Network Infrastructure', path: '/network-infrastructure', description: 'Enterprise networking solutions' },
     { name: 'IT Support & Helpdesk', path: '/it-support', description: '24/7 technical support' }
   ];
-
-  const specializedServices = [
+const specializedServices = [
     { name: 'Quantum Computing', path: '/quantum-computing', description: 'Quantum algorithms and security' },
     { name: 'Autonomous Systems', path: '/autonomous-systems', description: 'Self-managing systems' },
     { name: 'Blockchain & Web3', path: '/blockchain', description: 'Decentralized solutions' },
@@ -63,8 +58,7 @@ const SitemapPage: React.FC = () => {
     { name: 'Business Intelligence', path: '/business-intelligence', description: 'Data-driven insights' },
     { name: 'Robotics Solutions', path: '/robotics', description: 'Intelligent automation' }
   ];
-
-  const blogCategories = [
+const blogCategories = [
     { name: 'AI Trends', path: '/blog?category=AI Trends', description: 'Latest AI trends and developments' },
     { name: 'Enterprise Transformation', path: '/blog?category=Transformation', description: 'Business transformation insights' },
     { name: 'Success Stories', path: '/blog?category=Success Story', description: 'Client success stories' },
@@ -77,8 +71,7 @@ const SitemapPage: React.FC = () => {
       <SEOOptimizer
         title="Sitemap - Zion Tech Group"
         description="Complete sitemap of all pages and services available on Zion Tech Group website. Find AI services, IT solutions, and resources easily."
-        keywords={['sitemap', 'AI services', 'IT solutions', 'website navigation', 'pages']}
-        canonicalUrl="https://ziontechgroup.com/sitemap"
+        keywords={['sitemap', 'AI services', 'IT solutions', 'website navigation', 'pages']} canonicalUrl="https://ziontechgroup.com/sitemap"
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
@@ -105,10 +98,8 @@ const SitemapPage: React.FC = () => {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {mainPages.map((page, index) => (
-                <Link
-                  key={index}
-                  to={page.path}
-                  className="cyber-card p-6 hover:scale-105 transition-all duration-300 group"
+                <Link}
+                  key={index} to={page.path} className="cyber-card p-6 hover:scale-105 transition-all duration-300 group"
                 >
                   <div className="flex items-center justify-between mb-4">
                     <h3 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">
@@ -129,10 +120,8 @@ const SitemapPage: React.FC = () => {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {microSaasServices.map((service, index) => (
-                <Link
-                  key={index}
-                  to={service.path}
-                  className="cyber-card p-6 hover:scale-105 transition-all duration-300 group"
+                <Link}
+                  key={index} to={service.path} className="cyber-card p-6 hover:scale-105 transition-all duration-300 group"
                 >
                   <div className="flex items-center justify-between mb-4">
                     <h3 className="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors">
@@ -153,10 +142,8 @@ const SitemapPage: React.FC = () => {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {aiServices.map((service, index) => (
-                <Link
-                  key={index}
-                  to={service.path}
-                  className="cyber-card p-6 hover:scale-105 transition-all duration-300 group"
+                <Link}
+                  key={index} to={service.path} className="cyber-card p-6 hover:scale-105 transition-all duration-300 group"
                 >
                   <div className="flex items-center justify-between mb-4">
                     <h3 className="text-lg font-bold text-white group-hover:text-purple-400 transition-colors">
@@ -177,10 +164,8 @@ const SitemapPage: React.FC = () => {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {itServices.map((service, index) => (
-                <Link
-                  key={index}
-                  to={service.path}
-                  className="cyber-card p-6 hover:scale-105 transition-all duration-300 group"
+                <Link}
+                  key={index} to={service.path} className="cyber-card p-6 hover:scale-105 transition-all duration-300 group"
                 >
                   <div className="flex items-center justify-between mb-4">
                     <h3 className="text-lg font-bold text-white group-hover:text-blue-400 transition-colors">
@@ -201,10 +186,8 @@ const SitemapPage: React.FC = () => {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {specializedServices.map((service, index) => (
-                <Link
-                  key={index}
-                  to={service.path}
-                  className="cyber-card p-6 hover:scale-105 transition-all duration-300 group"
+                <Link}
+                  key={index} to={service.path} className="cyber-card p-6 hover:scale-105 transition-all duration-300 group"
                 >
                   <div className="flex items-center justify-between mb-4">
                     <h3 className="text-lg font-bold text-white group-hover:text-green-400 transition-colors">
@@ -225,10 +208,8 @@ const SitemapPage: React.FC = () => {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {blogCategories.map((category, index) => (
-                <Link
-                  key={index}
-                  to={category.path}
-                  className="cyber-card p-6 hover:scale-105 transition-all duration-300 group"
+                <Link}
+                  key={index} to={category.path} className="cyber-card p-6 hover:scale-105 transition-all duration-300 group"
                 >
                   <div className="flex items-center justify-between mb-4">
                     <h3 className="text-lg font-bold text-white group-hover:text-pink-400 transition-colors">
@@ -276,3 +257,11 @@ const SitemapPage: React.FC = () => {
 };
 
 export default SitemapPage;
+
+
+
+
+
+
+
+</div></div></div></div></div></div></div></div>

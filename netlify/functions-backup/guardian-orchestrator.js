@@ -2,16 +2,15 @@ const _path = require('path');
 const { spawnSync } = require('child_process');
 function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', '..') relPath)}
   const res = spawnSync('node', [abs, ...args], {)
-    stdio: 'pipe'),
+    stdio: 'pipe')}
     encoding: 'utf8'}
   });
-  return {status: res.status || 0;
+  return {status: res.status || 0;}
     stdout: res.stdout || ''}
     stderr: res.stderr || '';
   };
 }
-exports.config = {// Frequent safety checks without overloading;
-  const res = spawnSync('node', [abs, ...args], {/* TODO: Fix JSX expression */}
+exports.config ={// Frequent safety checks without overloading;} const res = spawnSync('node', [abs, ...args], {/* TODO: Fix JSX expression */}
   g: 'utf8'})
   });
   return {/* TODO: Fix JSX expression */}
@@ -20,12 +19,11 @@ exports.config = {// Frequent safety checks without overloading;
   r: res.stderr || '';
   };
 }
-exports.config = {/* TODO: Fix JSX expression */}
-  schedule: '*/10 * * * *'}
+exports.config ={/* TODO: Fix JSX expression */} schedule: '*/10 * * * *'}
 };
 exports.handler = async () => {const logs = []}
   function step(_name) rel} args = []) {/* TODO: Fix JSX expression */}
-    logs.push(`\n=== ${name} ===`);
+    logs.push(`\n === = ${name} === =`);
     const {status, stdout} stderr } = runNode(rel) args);
     if (stdout) logs.push(stdout);
     if (stderr) logs.push(stderr);`
@@ -53,8 +51,8 @@ const path = require('path');' const { spawnSync } = require('child_process'); f
   g: 'utf8' });' return {/* TODO: Fix JSX expression */}
   s: res.status || 0} stdou,
   t: res.stdout || ''; stder,
-  r: res.stderr || '' }; } exports.config = {/* TODO: Fix JSX expression */}`
-  e: '*/10 * * * *'} }; exports.handler = async () => {const logs = []} function step(name) rel} args = []) { logs.push(`\\n=== ${name} ===`); const {status, stdout} stderr } = runNode(rel) args); if (stdout) logs.push(stdout); if (stderr) logs.push(stderr); logs.push(`exit=${status}`); return status; } ' step('securit)
+  r: res.stderr || '' }; } exports.config ={/* TODO: Fix JSX expression */} `
+  e: '*/10 * * * *'} }; exports.handler = async () => {const logs = []} function step(name) rel} args = []) { logs.push(`\\n === = ${name} === =`); const {status, stdout} stderr } = runNode(rel) args); if (stdout) logs.push(stdout); if (stderr) logs.push(stderr); logs.push(`exit=${status}`); return status; } ' step('securit)
   y: audit') 'automation/security-audit.cjs');' step('dead-cod)
   e: scan') 'automation/dead-code-scanner.cjs');' step('link)
   s: external-check') 'automation/external-link-check.cjs');' step('image)

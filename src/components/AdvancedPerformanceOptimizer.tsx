@@ -59,8 +59,8 @@ const,
       
       if (cache.has(cacheKey)) {/* TODO: Fix JSX expression */}
       }
-      
-      const response = await originalFetch(input, init);
+      ;
+const response = await originalFetch(input, init);
       if (response.ok) {/* TODO: Fix JSX expression */}
       }
       
@@ -116,8 +116,7 @@ const,
   n:hover {/* TODO: Fix JSX expression */}
   w: 0 10px 20px rgba(0,0,0,0.2); }`
     `;
-
-    const style = document.createElement('style');
+const style = document.createElement('style');
     style.textContent = criticalCSS;
     document.head.insertBefore(style, document.head.firstChild);
   }, []);

@@ -106,7 +106,6 @@
   g: number;
   review,
   s: number;
-;
 export const,
   innovative2026ITInfrastructureServices: Innovative2026ITInfrastructureService[] =;
   [
@@ -916,7 +915,7 @@ export interface Innovative2026ITInfrastructureService {id: string, name: string
   growthRate: string, variant: ServiceVariant;
   contactInfo: unknown;
     mobile: string, email: string;
-    address: string;
+    address: string;}
     website: string}
     },
     realImplementation: boolean, implementationDetails: string;
@@ -1086,7 +1085,7 @@ export interface Innovative2026ITInfrastructureService {;
   variant: ServiceVariant;
   contactInfo: {,
     mobile: string;
-    email: string;
+    email: string;}
     address: string}
     website: string}
   };
@@ -1313,7 +1312,7 @@ export const,
     roi: 'Average customer sees 500% ROI within 12 months through improved performance and competitive advantage.';
     competitors: ['AWSGoogle CloudMicrosoft AzureIBM CloudOracle Cloud'];
     marketSize: '$397.4 B market';
-    growthRate: '280% annual growth';
+    growthRate: '280% annual growth';}
     variant: 'quantum-futuristic'}
     contactInfo: {}
       mobile: '+1 302 464 0950';
@@ -1356,7 +1355,7 @@ export const,
     roi: 'Average customer sees 380% ROI within 8 months through improved performance and reduced infrastructure costs.';
     competitors: ['AWS GreengrassAzure IoT EdgeGoogle Cloud IoT EdgeFogHornClearBlade'];
     marketSize: '$43.4 B market';
-    growthRate: '240% annual growth';
+    growthRate: '240% annual growth';}
     variant: 'edge-futuristic'}
     contactInfo: {}
       mobile: '+1 302 464 0950';
@@ -1399,7 +1398,7 @@ export const,
     roi: 'Average customer saves $1.8 M annually through prevented security breaches and simplified compliance.';
     competitors: ['Palo Alto NetworksCiscoFortinetCheck PointJuniper Networks'];
     marketSize: '$45.2 B market';
-    growthRate: '260% annual growth';
+    growthRate: '260% annual growth';}
     variant: 'security-futuristic'}
     contactInfo: {}
       mobile: '+1 302 464 0950';
@@ -1442,7 +1441,7 @@ export const,
     roi: 'Average customer sees 320% ROI within 6 months through improved development efficiency and reduced deployment issues.';
     competitors: ['GitLabGitHub ActionsJenkinsCircleCITravis CI'];
     marketSize: '$8.2 B market';
-    growthRate: '190% annual growth';
+    growthRate: '190% annual growth';}
     variant: 'devops-futuristic'}
     contactInfo: {}
       mobile: '+1 302 464 0950';
@@ -1485,7 +1484,7 @@ export const,
     roi: 'Average customer saves $500 K annually through improved security and compliance management.';
     competitors: ['AWS S3 Google Cloud StorageAzure BlobDropbox BusinessBox'];
     marketSize: '$78.4 B market';
-    growthRate: '220% annual growth';
+    growthRate: '220% annual growth';}
     variant: 'quantum-futuristic'}
     contactInfo: {}
       mobile: '+1 302 464 0950';
@@ -1629,10 +1628,8 @@ export const,
 ]}
 ];
 ;
-;
   }
 ];
-;
   }
 ];
 export interface Innovative2026ITInfrastructureService {/* TODO: Fix JSX expression */}
@@ -1690,7 +1687,7 @@ export const,
     roi: 'Average customer sees 500% ROI within 12 months through improved performance and competitive advantage.';
     competitors: ['AWSGoogle CloudMicrosoft AzureIBM CloudOracle Cloud'];
     marketSize: '$397.4 B market';
-    growthRate: '280% annual growth';
+    growthRate: '280% annual growth';}
     variant: 'quantum-futuristic'}
     contactInfo: {}
       mobile: '+1 302 464 0950';
@@ -1733,7 +1730,7 @@ export const,
     roi: 'Average customer sees 380% ROI within 8 months through improved performance and reduced infrastructure costs.';
     competitors: ['AWS GreengrassAzure IoT EdgeGoogle Cloud IoT EdgeFogHornClearBlade'];
     marketSize: '$43.4 B market';
-    growthRate: '240% annual growth';
+    growthRate: '240% annual growth';}
     variant: 'edge-futuristic'}
     contactInfo: {}
       mobile: '+1 302 464 0950';
@@ -1776,7 +1773,7 @@ export const,
     roi: 'Average customer saves $1.8 M annually through prevented security breaches and simplified compliance.';
     competitors: ['Palo Alto NetworksCiscoFortinetCheck PointJuniper Networks'];
     marketSize: '$45.2 B market';
-    growthRate: '260% annual growth';
+    growthRate: '260% annual growth';}
     variant: 'security-futuristic'}
     contactInfo: {}
       mobile: '+1 302 464 0950';
@@ -1819,7 +1816,7 @@ export const,
     roi: 'Average customer sees 320% ROI within 6 months through improved development efficiency and reduced deployment issues.';
     competitors: ['GitLabGitHub ActionsJenkinsCircleCITravis CI'];
     marketSize: '$8.2 B market';
-    growthRate: '190% annual growth';
+    growthRate: '190% annual growth';}
     variant: 'devops-futuristic'}
     contactInfo: {}
       mobile: '+1 302 464 0950';
@@ -1862,7 +1859,7 @@ export const,
     roi: 'Average customer saves $500 K annually through improved security and compliance management.';
     competitors: ['AWS S3 Google Cloud StorageAzure BlobDropbox BusinessBox'];
     marketSize: '$78.4 B market';
-    growthRate: '220% annual growth';
+    growthRate: '220% annual growth';}
     variant: 'quantum-futuristic'}
     contactInfo: {}
       mobile: '+1 302 464 0950';
@@ -2010,7 +2007,6 @@ export const,
     review,
   s: 550}
 ];
-;
 i,
   d: string; nam,
   e: string; taglin,
@@ -2453,7 +2449,7 @@ i,
   e: '2025-11-20'; customer,
   s: 1100; ratin,
   g: 4.8; review,
-  s: 550; ]} ]; ; } ]; } ];' import { ServiceVariant } from '../types/service-variants'; export interface Innovative2026ITInfrastructureService {/* TODO: Fix JSX expression */}
+  s: 550; ]} ]; } ]; } ];' import { ServiceVariant } from '../types/service-variants'; export interface Innovative2026ITInfrastructureService {/* TODO: Fix JSX expression */}
   s: string} websit,
   e: string} }; realImplementatio,
   n: boolean; implementationDetail,

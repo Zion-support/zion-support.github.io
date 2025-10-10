@@ -8,9 +8,9 @@ import { Link } from 'react-router-dom';
 import { ArrowLeft, CheckCircle, Shield, FileText, Users, Lock,  Shield,  FileText,  Users } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-const CompliancePage: React.FC = () => {
-  const certifications = [];
-  return (
+const CompliancePage: React.FC = () => {;
+const certifications = [];
+  return (}
     { name: 'SOC 2 Type II', status: 'Certified' },
     { name: 'ISO 27001', status: 'Certified' },
     { name: 'GDPR Compliant', status: 'Certified' },
@@ -22,7 +22,7 @@ const CompliancePage: React.FC = () => {
   const complianceAreas = [
   // TOD,
   O: Add items;
-];;
+];
     {/* TODO: Fix JSX expression */}
   O: Add content;}
 };

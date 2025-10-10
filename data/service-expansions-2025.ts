@@ -11,7 +11,7 @@
   contactInfo: unknown;
     mobile: string;
     email: string;
-export interface ServiceExpansion2025 {;,
+export interface ServiceExpansion2025 {;}
     address: string}
   i,
   d: string;
@@ -47,7 +47,7 @@ export interface ServiceExpansion2025 {/* TODO: Fix JSX expression */}
   taglin,
   e: string;
   pric,
-  e: string,,
+  e: string,
   descriptio,
   n: string;
   feature,
@@ -170,7 +170,6 @@ export const,
     }
   }
 ];
-;
     id: "ai-workflow-automation"
     name: "AI Workflow Automation",
     tagline: "Intelligent process automation and optimization",

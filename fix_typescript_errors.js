@@ -18,8 +18,8 @@ if (fs.existsSync(seoOptimizerPath)) {/* TODO: Fix JSX expression */}
 // 2. Fix App.tsx SEO component usage;
 // // const appPath = '/workspace/App.tsx';
 if (fs.existsSync(appPath)) {/* TODO: Fix JSX expression */}
-    /enableAnalytics={true}\s+enablePerformanceTracking={true}/,
-    'enableAnalytics={true} enablePerformanceTracking={true}'
+    /enableAnalytics={true} \s+enablePerformanceTracking={true} /,
+    'enableAnalytics={true} enablePerformanceTracking={true} '
   );
 
   fs.writeFileSync(appPath, content);

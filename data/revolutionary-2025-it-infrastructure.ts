@@ -10,7 +10,7 @@ export const revolutionaryITInfrastructure2025Services = [{name: 'Revolutionary 
       'Performance optimization'
     ],
     pricing: unknown;
-      starter: '$299/month',
+      starter: '$299/month'}
       professional: '$599/month'}
       enterprise: 'Custom'}
   },
@@ -69,7 +69,7 @@ export const revolutionaryITStats2025 =
   categories: 4;
   averageRating: 4.8;
   activeUsers: 1800;
-export const revolutionaryITStats2025 = {};
+export const revolutionaryITStats2025 ={} ;
   totalService,
   s: 2,
   categorie,

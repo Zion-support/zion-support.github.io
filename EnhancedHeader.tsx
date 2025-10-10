@@ -1,12 +1,10 @@
 import { Menu, X } from 'lucide-react';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-
-const EnhancedHeader: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+const EnhancedHeader: React.FC = () => {;
+const [isMenuOpen, setIsMenuOpen] = useState(false);
+const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);}
   };
 
   return (
@@ -39,8 +37,7 @@ const EnhancedHeader: React.FC = () => {
 
           {/* Mobile Menu Button */}
           <button
-            onClick={toggleMenu}
-            className="md:hidden text-gray-300 hover:text-cyan-400 transition-colors"
+            onClick={toggleMenu} className="md:hidden text-gray-300 hover:text-cyan-400 transition-colors"
           >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -63,7 +60,7 @@ const EnhancedHeader: React.FC = () => {
                 Contact
               </Link>
             </nav>
-          </div>
+          </div>}
         )}
       </div>
     </header>
@@ -71,3 +68,5 @@ const EnhancedHeader: React.FC = () => {
 };
 
 export default EnhancedHeader;
+
+</div></div>

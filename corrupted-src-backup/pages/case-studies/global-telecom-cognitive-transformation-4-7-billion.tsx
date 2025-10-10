@@ -8,7 +8,6 @@ impo, r, t { CheckCirc, l, e } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { ArrowRig, h, t } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Bra, i, n } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Targ, e, t } fr, o, m 'luci, d, e-rea, c, t';
-
 const GlobalTelecomCognitiveTransformatio, n: React.FC = () => { ,
   return(<>,
       <Helm, e, t>
@@ -26,7 +25,7 @@ const GlobalTelecomCognitiveTransformatio, n: React.FC = () => { ,
         />),
       </Helm, e, t>
 
-      <div, className='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k'></div>
+      <div, className='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k'></div>}
         <Head, e, r / > {/* Hero, Sect, i, o, n */ }
         <div, classNam, e = 'relative, p, t-24, p, b-16, overflo, w-hidd, e, n'>
           <div, className='absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 30% 5, 0%,rg, b, a(1, 3, 9,92,2, 4, 6,0.2),transparent_, 5, 0%)]' />
@@ -40,7 +39,7 @@ const GlobalTelecomCognitiveTransformatio, n: React.FC = () => { ,
             <nav, classNam, e = 'flex, item, s-center, spac, e-x-2, tex, t-sm, m, b-8'>
               <Link, t, o='/'
                 className='te, x, t-purp, l, e-300, hove, r: te, x, t-white, transitio, n-colo, r, s'
-              >
+              >;
 const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {/* TODO: Fix JSX expression */}
         <Head, e, r / > {/* Hero, Sect, i, o, n */ }
         <div, classNam, e = 'relative, p, t-24, p, b-16, overflo, w-hidd, e, n'></div>
@@ -132,8 +131,8 @@ const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {/* TODO: Fix JSX
                         'Competitive, intelligence, analysis',
                         'Scenario, planning, and simulati, o, n'],
                       te, c, h: 'Natural, language, querie, s, Automated, insight, s, Causal, inferenc, e'}].m, a, p((solution, i, d, x) => (
-                    <div, ke, y = { id, x }, classNa, m, e = 'bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/30, t, o-bl, u, e-9, 0, 0/30, border, border-purp, l, e-5, 0, 0/30, rounde, d-x, l, p-6'
-                  ].m, a, p((solution, i, d, x) => (<div, ke, y = { id, x }, classNa, m, e = 'bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/30, t, o-bl, u, e-9, 0, 0/30, border, border-purp, l, e-5, 0, 0/30, rounde, d-x, l, p-6'
+                    <div, ke, y ={id, x } , classNa, m, e = 'bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/30, t, o-bl, u, e-9, 0, 0/30, border, border-purp, l, e-5, 0, 0/30, rounde, d-x, l, p-6'
+                  ].m, a, p((solution, i, d, x) => (<div, ke, y ={id, x } , classNa, m, e = 'bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/30, t, o-bl, u, e-9, 0, 0/30, border, border-purp, l, e-5, 0, 0/30, rounde, d-x, l, p-6'
                     ></div>
                       <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, flex, items-center, ga, p-3'></h3>
                         <span, className='te, x, t-3, x, l'>{solution.ic, o, n}</sp, a, n>
@@ -147,9 +146,9 @@ const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {/* TODO: Fix JSX
                           { solution.featur, e, s.m, a, p((fea, t, u, r, e, i) = > (
                         <p, className='te, x, t-sm, fon, t-semibold, tex, t-purp, l, e-300, m, b-2'></p>
                           Capabilities, Deploye, d: </p>
-                        <ul, className='spa, c, e-y-2'></ul>
+                        <ul, className='spa, c, e-y-2'></ul>}
                           {/* TODO: Fix JSX expression */}
-                            <li, ke, y = { , i  }, classNa, m, e = 'flex, item, s-start, ga, p-2, tex, t-purp, l, e-1, 0, 0'
+                            <li, ke, y ={, i  } , classNa, m, e = 'flex, item, s-start, ga, p-2, tex, t-purp, l, e-1, 0, 0'
                             ></li>
                               <CheckCircle, classNam, e='w-4 h-4, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0' /></CheckCircle>
                       </div>
@@ -326,3 +325,18 @@ const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {/* TODO: Fix JSX
                 Schedule, Consultatio, n;
                 <Link, className='ml-2 w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' /></Link>
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div></div></div></div></div></div></div></div></div></div></div></div></div>
+</>

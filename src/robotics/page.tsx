@@ -31,5 +31,6 @@ export default function RoboticsPage() {
         </div>
       </div>
     </div>
-  );
+  );}
 }
+</div>

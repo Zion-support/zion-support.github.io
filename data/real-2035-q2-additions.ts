@@ -6627,10 +6627,9 @@ export const,
 }
 		rating: 4.6;
 		reviews: 6;
-// const contact = {;
+// const contact ={;
 	mobile: '+1 302 464 0950';
-	email: 'kleber@ziontechgroup.com';
-	address: '364 E Main St STE 1008 Middletown DE 19709'}
+	email: 'kleber@ziontechgroup.com';} address: '364 E Main St STE 1008 Middletown DE 19709'}
 	website: 'https://ziontechgroup.com'};
 export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 	{,
@@ -6666,7 +6665,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		realImplementation: true;
 		implementationDetails: 'OAuth + mailbox sync + policy rules + reply generator + SLA dashboard';
 		launchDate: '2025-08-20';
-		customers: 48;
+		customers: 48;}
 		rating: 4.7}
 		reviews: 12}
 	};
@@ -6703,7 +6702,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		realImplementation: true;
 		implementationDetails: 'Survey builder + delivery channels + analytics + export';
 		launchDate: '2025-08-20';
-		customers: 22;
+		customers: 22;}
 		rating: 4.6}
 		reviews: 9}
 	};
@@ -6740,7 +6739,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		realImplementation: true;
 		implementationDetails: 'Templates + KPI widgets + export';
 		launchDate: '2025-08-20';
-		customers: 18;
+		customers: 18;}
 		rating: 4.5}
 		reviews: 7}
 	};
@@ -6777,7 +6776,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		realImplementation: true;
 		implementationDetails: 'Ticketing + agenda + comms + analytics';
 		launchDate: '2025-08-20';
-		customers: 31;
+		customers: 31;}
 		rating: 4.7}
 		reviews: 11}
 		popula,
@@ -10537,8 +10536,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   g: 4.6;
 		review,
   s: 6,
-// const contact = {/* TODO: Fix JSX expression */}
-  s: '364 E Main St STE 1008 Middletown DE 19709'}
+// const contact ={/* TODO: Fix JSX expression */} s: '364 E Main St STE 1008 Middletown DE 19709'}
 	websit,
   e: 'http,
   s://ziontechgroup.com'
@@ -10686,11 +10684,9 @@ export const,
   s: 6}
 	}
 ];
-;
-// const contact = {;
+// const contact ={;
 	mobile: '+1 302 464 0950';
-	email: 'kleber@ziontechgroup.com';
-	address: '364 E Main St STE 1008 Middletown DE 19709'}
+	email: 'kleber@ziontechgroup.com';} address: '364 E Main St STE 1008 Middletown DE 19709'}
 	website: 'https://ziontechgroup.com'};
 export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 	{,
@@ -10726,7 +10722,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		realImplementation: true;
 		implementationDetails: 'OAuth + mailbox sync + policy rules + reply generator + SLA dashboard';
 		launchDate: '2025-08-20';
-		customers: 48;
+		customers: 48;}
 		rating: 4.7}
 		reviews: 12}
 	};
@@ -10763,7 +10759,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		realImplementation: true;
 		implementationDetails: 'Survey builder + delivery channels + analytics + export';
 		launchDate: '2025-08-20';
-		customers: 22;
+		customers: 22;}
 		rating: 4.6}
 		reviews: 9}
 	};
@@ -10800,7 +10796,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		realImplementation: true;
 		implementationDetails: 'Templates + KPI widgets + export';
 		launchDate: '2025-08-20';
-		customers: 18;
+		customers: 18;}
 		rating: 4.5}
 		reviews: 7}
 	};
@@ -10837,11 +10833,10 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		realImplementation: true;
 		implementationDetails: 'Ticketing + agenda + comms + analytics';
 		launchDate: '2025-08-20';
-		customers: 31;
+		customers: 31;}
 		rating: 4.7}
 		reviews: 11}
-// const contact = {/* TODO: Fix JSX expression */}
-  s: '364 E Main St STE 1008 Middletown DE 19709'}
+// const contact ={/* TODO: Fix JSX expression */} s: '364 E Main St STE 1008 Middletown DE 19709'}
 	websit,
   e: 'http,
   s://ziontechgroup.com'
@@ -14393,8 +14388,7 @@ export const,
   g: 4.6, review,
   s: 6} ratin,
   g: 4.6,
-  reviews: 6 ' import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services'; const contact = {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com'}' addres,
+  reviews: 6 ' import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services'; const contact ={/* TODO: Fix JSX expression */} l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
   s://ziontechgroup.com' }; export const,
@@ -14454,8 +14448,7 @@ export const,
   g: 4.5} review,
   s: 4} }; {/* TODO: Fix JSX expression */}
   g: 4.6} review,
-  s: 6} } ]; ' import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services'; const contact = {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com'}' addres,
+  s: 6} } ]; ' import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services'; const contact ={/* TODO: Fix JSX expression */} l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
   s://ziontechgroup.com' }; export const,

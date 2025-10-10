@@ -2,7 +2,7 @@ import React, { Component, type ErrorInfo, type ReactNode } from 'react';
 
 interface ErrorFallbackProps {
   error: Error;
-  resetError: () => void;
+  resetError: () => void;}
 }
 
 function ErrorFallback({ error, resetError }: ErrorFallbackProps) {
@@ -19,9 +19,8 @@ function ErrorFallback({ error, resetError }: ErrorFallbackProps) {
             >
               <path
                 strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"
+                strokeLinejoin="round"}
+                strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"
               />
             </svg>
           </div>
@@ -37,14 +36,12 @@ function ErrorFallback({ error, resetError }: ErrorFallbackProps) {
         </div>
         <div className="flex space-x-3">
           <button
-            onClick={resetError}
-            className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            onClick={resetError} className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
             Try again
           </button>
           <button
-            onClick={() => window?.location.reload()}
-            className="bg-gray-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500"
+            onClick={() => window?.location.reload()} className="bg-gray-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500"
           >
             Reload page
           </button>
@@ -55,40 +52,44 @@ function ErrorFallback({ error, resetError }: ErrorFallbackProps) {
 }
 
 interface AppErrorBoundaryProps {
-  children: ReactNode;
+  children: ReactNode;}
 }
 
 interface AppErrorBoundaryState {
   hasError: boolean;
-  error: Error | undefined;
+  error: Error | undefined;}
 }
 
 export class AppErrorBoundary extends Component<AppErrorBoundaryProps, AppErrorBoundaryState> {
   constructor(props: AppErrorBoundaryProps) {
-    super(props);
-    this.state = { hasError: false, error: undefined };
+    super(props);}
+    this.state ={hasError: false, error: undefined } ;
   }
 
-  static getDerivedStateFromError(error: Error): AppErrorBoundaryState {
+  static getDerivedStateFromError(error: Error): AppErrorBoundaryState {}
     return { hasError: true, error };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    if (process.env['NODE_ENV'] === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
+    if (process.env['NODE_ENV'] === = 'development') {
+      console.error('Error caught by boundary:', error, errorInfo);}
     }
     // Here you could send error to monitoring service
   }
 
-  resetError = () => {
+  resetError = () => {}
     this.setState({ hasError: false, error: undefined });
   };
 
   render() {
-    if (this.state.hasError && this.state.error) {
+    if (this.state.hasError && this.state.error) {}
       return <ErrorFallback error={this.state.error} resetError={this.resetError} />;
     }
 
     return this.props.children;
   }
 }
+
+
+
+</div></div></div>

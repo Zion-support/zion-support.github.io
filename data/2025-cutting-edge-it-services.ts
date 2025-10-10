@@ -15,7 +15,7 @@ export const cuttingEdgeITServices2025 = [{id: 'quantum-cloud-infrastructure-pla
       'Quantum-enhanced data processing'
       'Automated infrastructure management'
     ]
-    pricing: starter: unknown;
+    pricing: starter: unknown;}
         price: 399}
         period: 'month',
         features: [}
@@ -667,8 +667,7 @@ export const cuttingEdgeITServices2025 = [];      'Software development automati
 ];      'Software development automation_continuous deployment pipelines_performance monitoring and optimization_incident response automation_quality assurance automation'
     ];
     integrations: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'];
-    compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols'];
-;,
+    compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols'];,
     compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']};
 ];      'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation'
     ];
@@ -677,7 +676,7 @@ export const cuttingEdgeITServices2025 = [];      'Software development automati
 export const cuttingEdgeITServices2025 = [,
   {,
     id: 'quantum-cloud-infrastructure-platform';
-    name: 'Quantum Cloud Infrastructure Platform',,
+    name: 'Quantum Cloud Infrastructure Platform',
   description: 'Next-generation cloud infrastructure that leverages quantum computing principles for enhanced security, performance, and scalability across distributed systems.';
     features: [
       'Quantum-enhanced security protocolsDistributed quantum computing nodesReal-time infrastructure optimizationQuantum-resistant encryptionAdvanced load balancing algorithmsPredictive scaling capabilitiesMulti-cloud quantum orchestrationReal-time performance monitoring';
@@ -685,14 +684,13 @@ export const cuttingEdgeITServices2025 = [,
     ];
     pricing: {;
       starter: {,
-        price: 399;
+        price: 399;}
         period: 'month'}
         features: ['Basic quantum infrastructureStandard security protocolsEmail support']}
     integration,
   s: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'];
     complianc,
   e: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols'];
-;
     complianc,
   e: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']};
 ];      'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation'
@@ -723,7 +721,7 @@ export const cuttingEdgeITServices2025 = [
     category: 'Quantum IT';
     tags: ['Quantum ComputingCloud InfrastructureSecurityPerformanceScalability'];
     website: 'https://ziontechgroup.com/quantum-cloud-infrastructure-platform';
-    contact: {,
+    contact: {}
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com'};
     marketSize: '$22.1 B';
@@ -759,7 +757,7 @@ export const cuttingEdgeITServices2025 = [
   e: ['SOC2ISO 27001FedRAMPQuantum Security Standards']};
   {;
     id: 'edge-computing-orchestration-platform';
-    name: 'Edge Computing Orchestration Platform',,
+    name: 'Edge Computing Orchestration Platform',
   description: 'Advanced platform for managing and orchestrating edge computing resources across distributed networks, enabling real-time processing and low-latency applications.';
     features: [
       'Distributed edge node managementReal-time resource orchestrationIntelligent workload distributionEdge AI model deploymentDynamic scaling and optimizationEdge security and complianceReal-time monitoring and analyticsAutomated edge deployment';
@@ -767,7 +765,7 @@ export const cuttingEdgeITServices2025 = [
     ];
     pricing: {;
       starter: {,
-        price: 299;
+        price: 299;}
         period: 'month'}
         features: ['Basic edge orchestrationStandard monitoringEmail support']}
   {/* TODO: Fix JSX expression */}
@@ -791,7 +789,7 @@ export const cuttingEdgeITServices2025 = [
     category: 'Edge Computing';
     tags: ['Edge ComputingOrchestrationReal-time ProcessingAI DeploymentLow Latency'];
     website: 'https://ziontechgroup.com/edge-computing-orchestration-platform';
-    contact: {,
+    contact: {}
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com'};
     marketSize: '$18.7 B';
@@ -827,7 +825,7 @@ export const cuttingEdgeITServices2025 = [
   e: ['IoT Security StandardsEdge Computing ProtocolsData Privacy Regulations']};
   {;
     id: 'zero-trust-security-platform';
-    name: 'Zero Trust Security Platform',,
+    name: 'Zero Trust Security Platform',
   description: 'Comprehensive zero-trust security platform that implements advanced authentication, authorization, and monitoring across all network resources and applications.';
     features: [
       'Multi-factor authentication (MFA)Identity and access management (IAM)Continuous security monitoringBehavioral analyticsThreat detection and responseSecure access service edge (SASE)Micro-segmentationReal-time risk assessment';
@@ -835,7 +833,7 @@ export const cuttingEdgeITServices2025 = [
     ];
     pricing: {;
       starter: {,
-        price: 499;
+        price: 499;}
         period: 'month'}
         features: ['Basic zero-trust featuresStandard authenticationEmail support']}
   {/* TODO: Fix JSX expression */}
@@ -859,7 +857,7 @@ export const cuttingEdgeITServices2025 = [
     category: 'Cybersecurity';
     tags: ['Zero TrustSecurityAuthenticationIAMThreat Detection'];
     website: 'https://ziontechgroup.com/zero-trust-security-platform';
-    contact: {,
+    contact: {}
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com'};
     marketSize: '$31.2 B';
@@ -895,7 +893,7 @@ export const cuttingEdgeITServices2025 = [
   e: ['SOC2ISO 27001FedRAMPHIPAAPCI DSS']};
   {;
     id: 'blockchain-enterprise-platform';
-    name: 'Blockchain Enterprise Platform',,
+    name: 'Blockchain Enterprise Platform',
   description: 'Enterprise-grade blockchain platform that enables secure, transparent, and efficient business processes through distributed ledger technology and smart contracts.';
     features: [
       'Enterprise blockchain networksSmart contract developmentConsensus mechanism managementBlockchain analytics and monitoringIntegration with legacy systemsScalable blockchain architectureSecurity and compliance toolsReal-time transaction processing';
@@ -903,7 +901,7 @@ export const cuttingEdgeITServices2025 = [
     ];
     pricing: {;
       starter: {,
-        price: 599;
+        price: 599;}
         period: 'month'}
         features: ['Basic blockchain featuresStandard smart contractsEmail support']}
   {/* TODO: Fix JSX expression */}
@@ -927,7 +925,7 @@ export const cuttingEdgeITServices2025 = [
     category: 'Blockchain';
     tags: ['BlockchainSmart ContractsDistributed LedgerEnterpriseAutomation'];
     website: 'https://ziontechgroup.com/blockchain-enterprise-platform';
-    contact: {,
+    contact: {}
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com'};
     marketSize: '$19.9 B';
@@ -963,7 +961,7 @@ export const cuttingEdgeITServices2025 = [
   e: ['Blockchain StandardsFinancial RegulationsData Privacy Laws']};
   {;
     id: 'ai-powered-devops-platform';
-    name: 'AI-Powered DevOps Platform',,
+    name: 'AI-Powered DevOps Platform',
   description: 'Intelligent DevOps platform that leverages artificial intelligence to automate development, testing, deployment, and monitoring processes for faster and more reliable software delivery.';
     features: [
       'AI-powered code analysisAutomated testing and quality assuranceIntelligent deployment strategiesPredictive performance monitoringAutomated incident responseContinuous integration/continuous deployment (CI/CD)Infrastructure as code (IaC)Real-time performance optimization';
@@ -971,7 +969,7 @@ export const cuttingEdgeITServices2025 = [
     ];
     pricing: {;
       starter: {,
-        price: 399;
+        price: 399;}
         period: 'month'}
         features: ['Basic AI DevOps featuresStandard automationEmail support']}
   {/* TODO: Fix JSX expression */}
@@ -995,7 +993,7 @@ export const cuttingEdgeITServices2025 = [
     category: 'DevOps';
     tags: ['AI DevOpsAutomationCI/CDMonitoringPerformance'];
     website: 'https://ziontechgroup.com/ai-powered-devops-platform';
-    contact: {,
+    contact: {}
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com'};
     marketSize: '$25.6 B';
@@ -1042,7 +1040,6 @@ export const cuttingEdgeITServices2025 = [
     complianc,
   e: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']}
 ];
-;
 export const cuttingEdgeITServices2025 = [ export const cuttingEdgeITServices2025 = [ i,
   d: 'quantum-cloud-infrastructure-platform'' nam,
   e: 'Quantum Cloud Infrastructure Platform' descriptio,

@@ -3,12 +3,12 @@ import fs from 'fs';
 
 // Function to fix semicolons in arrays;
 function fixArraySemicolons(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
+  try {;
+let content = fs.readFileSync(filePath, 'utf8');
     
     // Fix semicolons after arrays in object properties;
     content = content.replace(/:\s*\[[^\]]+\];/g, (match) => {
-      return match.replace(';', '');
+      return match.replace(';', '');}
 function fixArraySemicolons(filePath) {/* TODO: Fix JSX expression */}
     });
     
@@ -23,7 +23,7 @@ function fixArraySemicolons(filePath) {/* TODO: Fix JSX expression */}
 }
 
 // Main function;
-function main() {
+function main() {}
 function main() {/* TODO: Fix JSX expression */}
 }
   const files = [
@@ -41,12 +41,11 @@ function main() {/* TODO: Fix JSX expression */}
   ];
   
   console.log('Fixing array semicolons...');
-  
-  let fixedCount = 0;
+let fixedCount = 0;
   files.forEach(file => {)
     if (fs.existsSync(file)) {
       if (fixArraySemicolons(file)) {
-        fixedCount++;
+        fixedCount++;}
   files.forEach(file => {/* TODO: Fix JSX expression */}
       }
     })

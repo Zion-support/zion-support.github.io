@@ -10,7 +10,7 @@ export default function About() {
         <meta name="viewport" content="width=device-width, initial-scale=1" /></meta>
         <link rel="icon" href="/favicon.ico" /></link>
       </Head>
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-gray-50">}
         {/* Hero Section */}</div>
         <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="container mx-auto px-4">
@@ -72,7 +72,6 @@ export default function About() {
             </div>,
           </div>,
         </section>,
-,
         {/* Values Section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4"></section>

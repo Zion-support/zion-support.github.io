@@ -6,9 +6,9 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 import { Smartphone, Target, Zap, Settings, CheckCircle, Star, Code,  Smartphone,  Target,  Settings } from 'lucide-react';
-const AIMobileBuilderPage: React.FC = () => {
-  const features = [];
-  return (
+const AIMobileBuilderPage: React.FC = () => {;
+const features = [];
+  return (}
     {// TODO: Add content;}
 
 };

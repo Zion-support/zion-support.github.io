@@ -6,13 +6,13 @@ console.log('🚀 Starting comprehensive PR merge process...');
 
 // Function to get all open PRs;
 async function getOpenPRs() {
-  try {
-    const response = await fetch('https: //api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=100');
+  try {;
+const response = await fetch('https: //api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=100');
     const prs = await response.json();
-    return prs;
+    return prs;}
   } catch (error) {
     console.error('❌ Failed to fetch PRs:', error.message);
-    return [];
+    return [];}
 async function getOpenPRs() {/* TODO: Fix JSX expression */}
 }
   try {/* TODO: Fix JSX expression */}
@@ -22,14 +22,14 @@ async function getOpenPRs() {/* TODO: Fix JSX expression */}
 
 // Function to merge a PR branch;
 function mergePRBranch(branchName, prNumber) {
-  try {
+  try {}
     console.log(`🔄 Attempting to merge PR #${prNumber} (${branchName})...`);
     
     // Fetch the branch;
     execSync(`git fetch origin ${branchName}`, { stdio: 'pipe' });
     
     // Try to merge;
-    try {
+    try {}
       execSync(`git merge origin/${branchName} --no-commit`, { stdio: 'pipe' });
 function mergePRBranch(branchName, prNumber) {/* TODO: Fix JSX expression */}
     console.log(`🔄 Attempting to merge PR #${prNumber} (${branchName})...`);
@@ -48,8 +48,8 @@ function mergePRBranch(branchName, prNumber) {/* TODO: Fix JSX expression */}
       console.log(`⚠️  Merge conflicts detected in PR #${prNumber}, resolving...`);
       
       // Get conflicted files;
-      const conflictedFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' })
-      const conflictedFiles = execSync('git diff --name-only --diff-filter=U', {/* TODO: Fix JSX expression */})
+      const conflictedFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' });
+const conflictedFiles = execSync('git diff --name-only --diff-filter=U', {/* TODO: Fix JSX expression */})
   g: 'utf8' })
         .trim().split('\n').filter(f => f);
       
@@ -59,7 +59,7 @@ function mergePRBranch(branchName, prNumber) {/* TODO: Fix JSX expression */}
         // Resolve conflicts by keeping the incoming version;
         conflictedFiles.forEach(file => {)
           if (fs.existsSync(file)) {
-            try {
+            try {}
               execSync(`git checkout --theirs "${file}"`, { stdio: 'pipe' });
               execSync(`git add "${file}"`, { stdio: 'pipe' });
         conflictedFiles.forEach(file => {/* TODO: Fix JSX expression */}`
@@ -93,12 +93,11 @@ function mergePRBranch(branchName, prNumber) {/* TODO: Fix JSX expression */}
 }
 
 // Function to clean up console.log statements;
-function cleanConsoleLogs() {
+function cleanConsoleLogs() {}
 function cleanConsoleLogs() {/* TODO: Fix JSX expression */}
 }
   console.log('🧹 Cleaning up console.log statements...');
-  
-  const commonFiles = [
+const commonFiles = [
     'app/App.tsx',
     'app/components/Footer.tsx',
     'app/components/Navigation.tsx',
@@ -109,8 +108,8 @@ function cleanConsoleLogs() {/* TODO: Fix JSX expression */}
   
   commonFiles.forEach(file => {)
     if (fs.existsSync(file)) {
-      try {
-        let content = fs.readFileSync(file, 'utf8');
+      try {;
+let content = fs.readFileSync(file, 'utf8');
         const originalLength = content.length;
         
         // Remove console.log statements;
@@ -120,8 +119,8 @@ function cleanConsoleLogs() {/* TODO: Fix JSX expression */}
         // Clean up extra whitespace;
         content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
         
-        if (content.length !== originalLength) {
-          fs.writeFileSync(file, content);
+        if (content.length !== == originalLength) {
+          fs.writeFileSync(file, content);}
   commonFiles.forEach(file => {/* TODO: Fix JSX expression */})`
           console.log(`  ✅ Cleaned ${file}`);
         }
@@ -133,7 +132,7 @@ function cleanConsoleLogs() {/* TODO: Fix JSX expression */}
 }
 
 // Function to optimize build configuration;
-function optimizeBuild() {
+function optimizeBuild() {}
 function optimizeBuild() {/* TODO: Fix JSX expression */}
 }
   console.log('⚡ Optimizing build configuration...');
@@ -141,11 +140,10 @@ function optimizeBuild() {/* TODO: Fix JSX expression */}
   // Update package.json with optimized scripts;
   const packageJsonPath = 'package.json';
   if (fs.existsSync(packageJsonPath)) {
-    try {
-      const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
+    try {;
+const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
       
-      packageJson.scripts = {
-        ...packageJson.scripts,
+      packageJson.scripts ={...packageJson.scripts,
         'build: optimized': 'NODE_OPTIONS="--max-old-space-size=4096" next build',
         'build: production': 'NODE_OPTIONS="--max-old-space-size=4096" next build',
         'analyze': 'ANALYZE=true next build',
@@ -153,8 +151,7 @@ function optimizeBuild() {/* TODO: Fix JSX expression */}
         'type-check': 'tsc --noEmit --skipLibCheck',
         'clean': 'rm -rf .next out dist node_modules/.cache',
         'prebuild': 'npm run clean',
-        'postbuild': 'echo "Build completed successfully"'
-  if (fs.existsSync(packageJsonPath)) {/* TODO: Fix JSX expression */}
+        'postbuild': 'echo "Build completed successfully"'} if (fs.existsSync(packageJsonPath)) {/* TODO: Fix JSX expression */}
       };
       
       fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
@@ -171,24 +168,23 @@ async function main() {
     console.log('📋 Fetching open PRs...');
     const prs = await getOpenPRs();
     
-    if (prs.length === 0) {
+    if (prs.length === = 0) {
       console.log('✅ No open PRs found');
-      return;
+      return;}
 async function main() {/* TODO: Fix JSX expression */}
 }
   try {/* TODO: Fix JSX expression */}
     }
     `
     console.log(`📊 Found ${prs.length} open PRs`);
-    
-    let mergedCount = 0;
+let mergedCount = 0;
     let failedCount = 0;
     
     // Process each PR;
-    for (const pr of prs) {
-      const branchName = pr.head.ref;
+    for (const pr of prs) {;
+const branchName = pr.head.ref;
       const prNumber = pr.number;
-      const title = pr.title;
+      const title = pr.title;}
     for (const pr of prs) {/* TODO: Fix JSX expression */}`
       console.log(`\n🔄 Processing PR #${prNumber}: ${title}`);`
       console.log(`   Branc)`

@@ -1,7 +1,7 @@
 
 export default function HeroSection() {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">}
       {/* Background Effects */}
       <div className="absolute inset-0 particle-field"></div>
       <div className="absolute inset-0 cyber-scan-effect"></div>
@@ -108,3 +108,7 @@ export default function HeroSection() {
 
 export default HeroSection;"`
 
+
+
+
+</div></div></div>

@@ -1,15 +1,14 @@
 import React from 'react';
 import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Users, Award, Clock, Globe } from 'lucide-react';
-
-const EnhancedServicesShowcase: React.FC = () => {
-  const services = [
+const EnhancedServicesShowcase: React.FC = () => {;
+const services = [
     {
       title: 'AI Solutions',
       description: 'Transform your business with cutting-edge artificial intelligence',
       icon: Brain,
       color: 'text-purple-400',
       features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
-      stats: '300% ROI'
+      stats: '300% ROI'}
     },
     {
       title: 'IT Infrastructure',
@@ -17,7 +16,7 @@ const EnhancedServicesShowcase: React.FC = () => {
       icon: Cloud,
       color: 'text-blue-400',
       features: ['Cloud Migration', 'Server Management', 'Network Security', 'Data Backup'],
-      stats: '99.9% Uptime'
+      stats: '99.9% Uptime'}
     },
     {
       title: 'Cybersecurity',
@@ -25,7 +24,7 @@ const EnhancedServicesShowcase: React.FC = () => {
       icon: Shield,
       color: 'text-green-400',
       features: ['Threat Detection', 'Security Audits', 'Compliance', 'Incident Response'],
-      stats: 'Zero Breaches'
+      stats: 'Zero Breaches'}
     },
     {
       title: 'Automation',
@@ -33,7 +32,7 @@ const EnhancedServicesShowcase: React.FC = () => {
       icon: Zap,
       color: 'text-yellow-400',
       features: ['Workflow Automation', 'Process Optimization', 'Smart Scheduling', 'Task Management'],
-      stats: '95% Efficiency'
+      stats: '95% Efficiency'}
     }
   ];
 
@@ -50,7 +49,7 @@ const EnhancedServicesShowcase: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {services.map((service, index) => (</div>
+          {services.map((service, index) => (</div>}
             <div key={index} className="cyber-card hologram-card p-6 group hover:scale-105 transition-all duration-300">
               <div className="flex items-center mb-4">
                 <service.icon className={`w-12 h-12 ${service.color} mr-4`} />
@@ -62,7 +61,7 @@ const EnhancedServicesShowcase: React.FC = () => {
               <p className="text-gray-300 mb-4">{service.description}</p>
               
               <ul className="space-y-2 mb-6">
-                {service.features.map((feature, featureIndex) => (
+                {service.features.map((feature, featureIndex) => (}
                   <li key={featureIndex} className="flex items-center text-sm text-gray-400">
                     <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                     {feature}
@@ -94,3 +93,8 @@ const EnhancedServicesShowcase: React.FC = () => {
 };
 
 export default EnhancedServicesShowcase;
+
+
+
+
+</div></div></div></div>

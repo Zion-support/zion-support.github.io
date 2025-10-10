@@ -7,29 +7,29 @@ try {
   // Read the file;
   const content = readFileSync('/workspace/app/page.tsx', 'utf8');
   
-  // Split by conflict markers and keep our version (after )
-  const lines = content.split('\n');
+  // Split by conflict markers and keep our version (after );
+const lines = content.split('\n');
   const resolvedLines = [];
   let skipUntilNextMarker = false;
   
-  for (let i = 0; i < lines.length; i++) {
-    const line = lines[i];
+  for (let i = 0; i < lines.length; i++) {;
+const line = lines[i];
     
     if (line.includes('')) {
       skipUntilNextMarker = true;
-      continue;
+      continue;}
     }
     
     if (line.includes('')) {
       skipUntilNextMarker = false;
-      continue;
+      continue;}
     }
     
     if(line.includes('      continue;)
     })
     )
     if (!skipUntilNextMarker) {
-      resolvedLines.push(line);
+      resolvedLines.push(line);}
     }
   }
   
@@ -53,5 +53,5 @@ try {
   
 } catch (error) {
   console.error('❌ Error resolving conflicts:', error.message);
-  process.exit(1);
+  process.exit(1);}
 }

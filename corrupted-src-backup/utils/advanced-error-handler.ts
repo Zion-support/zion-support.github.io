@@ -1,10 +1,7 @@
-const errorHandler = {
-  setReportingEnabled: (enabled: boolean) => {,
-    //     },
+const errorHandler ={setReportingEnabled: (enabled: boolean) => {} //     },
 
-  handleError: (error: unknown) => {,
-const errorHandler = {/* TODO: Fix JSX expression */}
-    //     },
+  handleError: (error: unknown) => {}
+const errorHandler ={/* TODO: Fix JSX expression */} //     },
 
   handleErro,
   r: (erro)

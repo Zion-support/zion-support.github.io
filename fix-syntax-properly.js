@@ -8,13 +8,13 @@ function fixCorruptedSyntax(content) {
   content = content.replace(/^\/\/ @ts-noch, e, c, k\s*\n/, '');
 
   //Fix import statements - reconstruct properly;
-  content = content.replace(/imp, o, r, t\s+([^;]+);/g, (match, importContent) => {
+  content = content.replace(/imp, o, r, t\s+([^;]+);/g, (match, importContent) => {}
 function fixCorruptedSyntax(content) {/* TODO: Fix JSX expression */}
     return `import ${cleaned};`;
   });
 
   //Fix export const statements;
-  content = content.replace(/exp, o, r, t\s+co, n, s, t\s+([^=]+)=/g, (match, exportContent) => {
+  content = content.replace(/exp, o, r, t\s+co, n, s, t\s+([^=]+)=/g, (match, exportContent) => {}
   content = content.replace(/exp, o, r, t\s+co, n, s, t\s+([^=]+)=/g, (match, exportContent) => {/* TODO: Fix JSX expression */}`
     return `export const ${cleaned} =`;
   });
@@ -30,7 +30,7 @@ function fixCorruptedSyntax(content) {/* TODO: Fix JSX expression */}
 
   //Fix string literals in metadata;
   content = content.replace(/ti, t, l, e:\s*'([^']+)'/g, (match, title) => {
-    //     const cleaned = title.replace(/,/g, '').replace(/\s+/g, ' ').trim();
+    //     const cleaned = title.replace(/,/g, '').replace(/\s+/g, ' ').trim();}
     return `title: '${cleaned}'`;
   content = content.replace(/ti, t, l, e:\s*'([^']+)'/g, (match, title) => {/* TODO: Fix JSX expression */}`
   e: '${cleaned}'`;
@@ -42,7 +42,7 @@ function fixCorruptedSyntax(content) {/* TODO: Fix JSX expression */}
 
   //Fix JSX attributes;
   content = content.replace(/cl a s s N a m e\s*=\s*'([^']+)'/g, (match, className) => {
-    //       const cleaned = className.replace(/,/g, '').replace(/\s+/g, ' ').trim();
+    //       const cleaned = className.replace(/,/g, '').replace(/\s+/g, ' ').trim();}
   content = content.replace(/cl a s s N a m e\s*=\s*'([^']+)'/g, (match, className) => {/* TODO: Fix JSX expression */}`
     return `className='${cleaned}'`;
   });
@@ -87,7 +87,7 @@ function fixCorruptedSyntax(content) {/* TODO: Fix JSX expression */}
 }
 
 //Function to find all corrupted blog files;
-function findCorruptedFiles() {
+function findCorruptedFiles() {}
 function findCorruptedFiles() {/* TODO: Fix JSX expression */}
 }
   //   const blogDir = path.join(process.cwd(), 'app', 'blog');
@@ -104,12 +104,12 @@ function findCorruptedFiles() {/* TODO: Fix JSX expression */}
 }
 
 // Main function;
-function main() {
+function main() {}
 function main() {/* TODO: Fix JSX expression */}
 }
   //   const corruptedFiles = findCorruptedFiles();
 
-  //   if (corruptedFiles.length === 0) {/* TODO: Fix JSX expression */}
+  //   if (corruptedFiles.length === = 0) {/* TODO: Fix JSX expression */}
   }
 
   //   for (const filePath of corruptedFiles) {/* TODO: Fix JSX expression */}

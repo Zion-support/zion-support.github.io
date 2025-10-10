@@ -58,8 +58,7 @@ const,
 
     }
   ];
-
-  const migrationSteps = [
+const migrationSteps = [
 
       titl,
   e: 'Assessment & Planning',
@@ -108,9 +107,8 @@ const,
       ico,
   n: TrendingUp,
       duratio,
-  n: 'Ongoing'
-
-  const pricingPlans = [
+  n: 'Ongoing';
+const pricingPlans = [
       nam,
   e: 'Small Business',
       pric,
@@ -162,9 +160,8 @@ const,
         'Full monitoring suite',
         'Multi-cloud architecture',
         'Dedicated account manager',
-        'Custom integrations'
-
-  const benefits = [
+        'Custom integrations';
+const benefits = [
       titl,
   e: 'Cost Reduction',
       descriptio,
@@ -383,7 +380,7 @@ const,
             <p className="text-xl text-gray-300">Choose the migration package that fits your needs</p>
 
             {/* TODO: Fix JSX expression */}
-              <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-500' : ''}`}></div>
+              <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-500' : ''} `}></div>
                 {/* TODO: Fix JSX expression */}
                 )}"
                 <div className="text-center mb-6"></div>"

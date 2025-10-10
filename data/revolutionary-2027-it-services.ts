@@ -11,7 +11,7 @@
   contactInfo: unknown;
     mobile: string;
     email: string;
-export interface Revolutionary2027ItService {;,
+export interface Revolutionary2027ItService {;}
     address: string}
   i,
   d: string;
@@ -47,7 +47,7 @@ export interface Revolutionary2027ItService {/* TODO: Fix JSX expression */}
   taglin,
   e: string;
   pric,
-  e: string,,
+  e: string,
   descriptio,
   n: string;
   feature,
@@ -170,7 +170,6 @@ export const,
     }
   }
 ];
-;
     id: "2027-revolutionary-it"
     name: "2027 Revolutionary IT Platform",
     tagline: "Revolutionary IT for 2027",

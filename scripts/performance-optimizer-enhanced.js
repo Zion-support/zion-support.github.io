@@ -4,12 +4,10 @@ import path from 'path';
 import { glob } from 'glob';
 
 // Performance optimization patterns;
-const optimizations = {
-  // Remove unused CSS classes;
+const optimizations ={// Remove unused CSS classes;
   removeUnusedCSS: (content) => {,
     // This is a simplified version - in production, use tools like PurgeCSS;
-    return content;
-  },
+    return content;} },
 
   // Optimize images (placeholder - would need actual image processing)
   optimizeImages: (content) => {,
@@ -17,17 +15,17 @@ const optimizations = {
     return content;
       .replace(/\.jpg/g, '.webp')
       .replace(/\.png/g, '.webp')
-      .replace(/\.jpeg/g, '.webp');
+      .replace(/\.jpeg/g, '.webp');}
   },
 
   // Minify inline styles;
   minifyInlineStyles: (content) => {,
-    return content.replace(/style="([^"]*)"/g, (match, styles) => {
-      const minified = styles;
+    return content.replace(/style="([^"]*)"/g, (match, styles) => {;
+const minified = styles;
         .replace(/\s+/g, ' ')
         .replace(/;\s*/g, ';')
         .replace(/:\s*/g, ':')
-        .trim();
+        .trim();}
       return `style="${minified}"`;
     });
   },
@@ -36,7 +34,7 @@ const optimizations = {
   removeExtraWhitespace: (content) => {,
     return content;
       .replace(/\n\s*\n\s*\n/g, '\n\n')
-      .replace(/[ \t]+$/gm, '')
+      .replace(/[ \t]+$/gm, '')}
       .replace(/\n{3}/g, '\n\n');
   },
 
@@ -50,7 +48,7 @@ const optimizations = {
       );
       // Add closing parenthesis for React.memo;
       content = content.replace()
-        /(\w+)\.displayName = '\w+';/g;
+        /(\w+)\.displayName = '\w+';/g;}
         '$1.displayName = \'$1\';\n});'
       );
     }
@@ -60,11 +58,11 @@ const optimizations = {
   // Add performance hints;
   addPerformanceHints: (content) => {
     // Add preload hints for critical resources;
-    if (content.includes('<head>')) {
-      const preloadHints = `
+    if (content.includes('<head>')) {;
+const preloadHints = `
     <link rel="preload" href="/assets/vendor-ConSr3PY.js" as="script" crossorigin>,
     <link rel="preload" href="/assets/index-BRi0Fmgq.js" as="script" crossorigin>,
-    <link rel="preload" href="/assets/index-C1QbpZNs.css" as="style">`;
+    <link rel="preload" href="/assets/index-C1QbpZNs.css" as="style">`;}
       content = content.replace('<head>', `<head>${preloadHints}`);
     }
     return content;
@@ -98,34 +96,33 @@ const excludePatterns = [
   '**/corrupted*/**',
   '**/temp*/**'
 ];
-
 let totalFiles = 0;
 let processedFiles = 0;
 let optimizationsApplied = 0;
 
 function processFile(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
+  try {;
+const content = fs.readFileSync(filePath, 'utf8');
     let newContent = content;
     let fileOptimizations = 0;
 
     // Apply optimizations;
-    Object.entries(optimizations).forEach(([name, optimizer]) => {
-      const before = newContent;
+    Object.entries(optimizations).forEach(([name, optimizer]) => {;
+const before = newContent;
       newContent = optimizer(newContent);
-      if (newContent !== before) {
-        fileOptimizations++;
+      if (newContent !== == before) {
+        fileOptimizations++;}
       }
     });
 
     if (fileOptimizations > 0) {
-      fs.writeFileSync(filePath, newContent, 'utf8');
+      fs.writeFileSync(filePath, newContent, 'utf8');}
       console.log(`✅ ${filePath}: Applied ${fileOptimizations} optimizations`);
       optimizationsApplied += fileOptimizations;
     }
 
     processedFiles++;
-  } catch (error) {
+  } catch (error) {}
     console.error(`❌ Error processing ${filePath}:`, error.message);
   }
 }
@@ -135,9 +132,9 @@ async function main() {
 
   // Get all files to process;
   const allFiles = [];
-  for (const pattern of filePatterns) {
-    const files = await glob(pattern, {)
-      ignore: excludePatterns),
+  for (const pattern of filePatterns) {;
+const files = await glob(pattern, {)
+      ignore: excludePatterns)}
       cwd: process.cwd()});
     allFiles.push(...files);
   }
@@ -157,8 +154,8 @@ async function main() {
   console.log(`   - Optimizations applied: ${optimizationsApplied}`);
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
-  main();
+if (import.meta.url === = `file://${process.argv[1]}`) {
+  main();}
 }
 
 export { processFile, optimizations };

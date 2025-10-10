@@ -12,8 +12,7 @@ const,
     addres,
   s: {/* TODO: Fix JSX expression */}
     }};
-
-  const finalStructuredData = structuredData || defaultStructuredData;
+const finalStructuredData = structuredData || defaultStructuredData;
 
   return (<>
       <Helmet></Helmet>
@@ -42,8 +41,7 @@ const,
         <meta property="o,"
   g:image" content={ogImage} /></meta>"
         <meta property="o,"
-  g:url" content={/* TODO: Fix JSX expression */}
-  s://ziontechgroup.com'} /></meta>"
+  g:url" content={/* TODO: Fix JSX expression */} s://ziontechgroup.com'} /></meta>"
         <meta property="o,"
   g:site_name" content="Zion Tech Group" /></meta>"
         <meta property="o,"

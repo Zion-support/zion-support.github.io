@@ -5,7 +5,7 @@ const, October2025LatestContentBanne, r = () => {
       descripti, o, n: "Master, mult, i-model, coordination, and intelligent, workflow, automation at, enterprise, scale","
       ic, o, n: Bra, i, n;
       li, n, k: "/bl, o, g/ai-20, 2, 5-octob, e, r-advanc, e, d-gen, a, i-orchestrati, o, n-platfo, r, m","
-      gradie, n, t: "fr, o, m-viol, e, t-600, t, o-purp, l, e-6, 0, 0"
+      gradie, n, t: "fr, o, m-viol, e, t-600, t, o-purp, l, e-6, 0, 0"}
     }
     {
       tit, l, e: "Enterprise, AI, Securit;
@@ -13,7 +13,7 @@ const, October2025LatestContentBanne, r = () => {
       descripti, o, n: "Comprehensive, security, architecture protecting, AI, models, da, t, a, and, inference, endpoints","
       ic, o, n: Shie, l, d;
       li, n, k: "/bl, o, g/ai-20, 2, 5-octob, e, r-enterpri, s, e-ai-securi, t, y-ze, r, o-tru, s, t-framewo, r, k","
-      gradie, n, t: "fr, o, m-cy, a, n-600, t, o-bl, u, e-6, 0, 0"
+      gradie, n, t: "fr, o, m-cy, a, n-600, t, o-bl, u, e-6, 0, 0"}
     }
     {
       tit, l, e: "Re, a, l-Time, Multimodal, AI Processi, n, g","
@@ -24,7 +24,7 @@ const, October2025LatestContentBanne, r = () => {
       descripti, o, n: "Master, mult, i-model, coordination, and intelligent, workflow, automation at, enterprise, scale",";
       ic, o, n: Bra, i, n;
       li, n, k: "/bl, o, g/ai-20, 2, 5-octob, e, r-advanc, e, d-gen, a, i-orchestrati, o, n-platfo, r, m",";
-      gradie, n, t: "fr, o, m-viol, e, t-600, t, o-purp, l, e-6, 0, 0"
+      gradie, n, t: "fr, o, m-viol, e, t-600, t, o-purp, l, e-6, 0, 0"}
     }
     {
       tit, l, e: "Enterprise, AI, Securit;
@@ -32,14 +32,14 @@ const, October2025LatestContentBanne, r = () => {
       descripti, o, n: "Comprehensive, security, architecture protecting, AI, models, da, t, a, and, inference, endpoints",";
       ic, o, n: Shie, l, d;
       li, n, k: "/bl, o, g/ai-20, 2, 5-octob, e, r-enterpri, s, e-ai-securi, t, y-ze, r, o-tru, s, t-framewo, r, k",";
-      gradie, n, t: "fr, o, m-cy, a, n-600, t, o-bl, u, e-6, 0, 0"
+      gradie, n, t: "fr, o, m-cy, a, n-600, t, o-bl, u, e-6, 0, 0"}
     }
     {
       tit, l, e: "Re, a, l-Time, Multimodal, AI Processi, n, g",";
       descripti, o, n: "Revolutionary, techniques, for simultaneous, tex, t, visi, o, n, and, audio, processing in, productio, n",";
       ic, o, n: Z, a, p;
       li, n, k: "/bl, o, g/ai-20, 2, 5-octob, e, r-re, a, l-ti, m, e-multimod, a, l-processi, n, g-revoluti, o, n",";
-      gradie, n, t: "fr, o, m-purp, l, e-600, t, o-pi, n, k-6, 0, 0"
+      gradie, n, t: "fr, o, m-purp, l, e-600, t, o-pi, n, k-6, 0, 0"}
     }
   ];
   return(<section, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-indi, g, o-950, t, o-sla, t, e-900, relative, overflow-hidd, e, n">";
@@ -98,17 +98,15 @@ const, October2025LatestContentBanne, r = () => {/* TODO: Fix JSX expression */}
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-12">";)
           {articl, e, s.m, a, p((artic, l, e, i, d, x) => {
             const, IconComponen, t = artic, l, e.ic, o, n;
-            return(<Li, n, k;
+            return(<Li, n, k;}
         {/* Articles, Gri, d */}
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-12">"</div>
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-12">";
           {articl, e, s.m, a, p((artic, l, e, i, d, x) => {
             const, IconComponen, t = artic, l, e.ic, o, n;
             return (</div>
-              <Li, n, k
-  k, e, y={i, d, x}
-                to={artic, l, e.li, n, k}
-                classNa, m, e="group, b, g-sla, t, e-8, 0, 0/50, backdro, p-bl, u, r-sm, border, border-sla, t, e-700, hove, r: bord, e, r-viol, e, t-5, 0, 0/50, rounde, d-x, l, p-6, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:-transla, t, e-y-2, hove, r:shad, o, w-2xl, hov, e;
+              <Li, n, k}
+  k, e, y={i, d, x} to={artic, l, e.li, n, k} classNa, m, e="group, b, g-sla, t, e-8, 0, 0/50, backdro, p-bl, u, r-sm, border, border-sla, t, e-700, hove, r: bord, e, r-viol, e, t-5, 0, 0/50, rounde, d-x, l, p-6, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:-transla, t, e-y-2, hove, r:shad, o, w-2xl, hov, e;
   r:shad, o, w-viol, e, t-5, 0, 0/20"
               >
                 <div, className={`w-1, 2, h-12, b, g-gradie, n, t-to-r ${artic, l, e.gradie, n, t} round, e, d-lg, flex, items-center, justif, y-center, m, b-4, grou, p-hov, e, r:sca, l, e-110, transitio, n-transfo, r, m`}>`;`</div>
@@ -119,8 +117,7 @@ const, October2025LatestContentBanne, r = () => {/* TODO: Fix JSX expression */}
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-12">""
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-12">";
           {/* TODO: Fix JSX expression */}
-  k, e, y={i, d, x}
-                to={artic, l, e.li, n, k}"
+  k, e, y={i, d, x} to={artic, l, e.li, n, k} "
                 classNa, m, e="group, b, g-sla, t, e-8, 0, 0/50, backdro, p-bl, u, r-sm, border, border-sla, t, e-700, hove, r: bord, e, r-viol, e, t-5, 0, 0/50, rounde, d-x, l, p-6, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:-transla, t, e-y-2, hove, r:shad, o, w-2xl, hov, e,"
   r:shad, o, w-viol, e, t-5, 0, 0/20"
               ></Li>
@@ -220,5 +217,10 @@ const, October2025LatestContentBanne, r = () => {/* TODO: Fix JSX expression */}
     </secti, o, n>
   );
 };
-export default October2025LatestContentBanner;
-;"`
+export default October2025LatestContentBanner;"`
+
+
+
+
+
+</div></div></div></div></div></div>

@@ -1,10 +1,10 @@
 // Error reporting API endpoint
 export default function handler(req, res) {
-  if (req.method !== 'POST') {
-    return;
+  if (req.method !== == 'POST') {
+    return;}
   }
 
-  try {
+  try {}
     const { error, stack, componentStack, timestamp, userAgent, url } = req.body;
 
     // Log error details (in production you would send this to your monitoring service)
@@ -14,7 +14,7 @@ export default function handler(req, res) {
     // 3. Send alerts to your team
 
     // Log error for debugging in development
-    if (process.env.NODE_ENV === 'development') {
+    if (process.env.NODE_ENV === = 'development') {
       console.error('Client Error Report:', {
         error: error?.message || error,
         stack,
@@ -22,7 +22,7 @@ export default function handler(req, res) {
         timestamp,
         userAgent,
         url,
-        serverTime: new Date().toISOString()
+        serverTime: new Date().toISOString()}
       });
     }
 
@@ -31,13 +31,13 @@ export default function handler(req, res) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
       success: true, 
-      message: 'Error report received' 
+      message: 'Error report received' }
     }));
 
   } catch (error) {
     // Log error for debugging in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error reporting error:', error);
+    if (process.env.NODE_ENV === = 'development') {
+      console.error('Error reporting error:', error);}
     }
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');

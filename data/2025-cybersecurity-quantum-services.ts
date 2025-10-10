@@ -9,7 +9,7 @@ export interface CybersecurityQuantumService {;
   price: unknown;
     monthly: number;
     yearly: number;
-    currency: string;
+    currency: string;}
     trialDays: number}
     setupTime: string;
     id: 'quantum - resistant - encryption - platform'
@@ -961,7 +961,6 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
   }
 ];
 ;
-;
   }
 ];
 export interface CybersecurityQuantumService {;
@@ -974,7 +973,7 @@ export interface CybersecurityQuantumService {;
     monthly: number;
     yearly: number;
     currency: string;
-    trialDays: number;
+    trialDays: number;}
     setupTime: string}
     enterprise: string}
   };
@@ -1006,7 +1005,7 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     id: 'quantum-resistant-encryption-platform';
     name: 'Quantum-Resistant Encryption Platform';
     tagline: 'Future-proof security with post-quantum cryptography';
-    description: 'Revolutionary encryption platform that implements quantum-resistant algorithms, ensuring data security remains impenetrable even when quantum computers become mainstream.';
+    description: 'Revolutionary encryption platform that implements quantum-resistant algorithms, ensuring data security remains impenetrable even when quantum computers become mainstream.';}
     category: 'Quantum Security & Cryptography'}
     price: {}
       monthly: 499;
@@ -1048,7 +1047,7 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     id: 'ai-powered-threat-hunting-platform';
     name: 'AI-Powered Threat Hunting Platform';
     tagline: 'Proactive threat detection with autonomous security intelligence';
-    description: 'Advanced AI-powered cybersecurity platform that autonomously hunts for threats, analyzes attack patterns, and provides real-time security intelligence to prevent cyber attacks.';
+    description: 'Advanced AI-powered cybersecurity platform that autonomously hunts for threats, analyzes attack patterns, and provides real-time security intelligence to prevent cyber attacks.';}
     category: 'AI Cybersecurity & Threat Intelligence'}
     price: {}
       monthly: 399;
@@ -1090,7 +1089,7 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     id: 'zero-trust-network-access-platform';
     name: 'Zero-Trust Network Access Platform';
     tagline: 'Secure access with continuous verification and least privilege';
-    description: 'Comprehensive zero-trust platform that provides secure, context-aware access to applications and resources while continuously verifying user identity and device health.';
+    description: 'Comprehensive zero-trust platform that provides secure, context-aware access to applications and resources while continuously verifying user identity and device health.';}
     category: 'Zero-Trust Security & Access Control'}
     price: {}
       monthly: 299;
@@ -1132,7 +1131,7 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     id: 'quantum-key-distribution-network';
     name: 'Quantum Key Distribution Network';
     tagline: 'Unhackable communication with quantum entanglement';
-    description: 'Revolutionary quantum key distribution network that uses quantum entanglement to create unbreakable encryption keys, ensuring absolutely secure communications.';
+    description: 'Revolutionary quantum key distribution network that uses quantum entanglement to create unbreakable encryption keys, ensuring absolutely secure communications.';}
     category: 'Quantum Communications & Security'}
     price: {}
       monthly: 999;
@@ -1174,7 +1173,7 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     id: 'ai-powered-vulnerability-assessment';
     name: 'AI-Powered Vulnerability Assessment Platform';
     tagline: 'Intelligent security scanning with AI-driven risk analysis';
-    description: 'Advanced vulnerability assessment platform that uses AI to identify, prioritize, and remediate security vulnerabilities with unprecedented accuracy and speed.';
+    description: 'Advanced vulnerability assessment platform that uses AI to identify, prioritize, and remediate security vulnerabilities with unprecedented accuracy and speed.';}
     category: 'Vulnerability Management & Security Testing'}
     price: {}
       monthly: 199;
@@ -1893,7 +1892,7 @@ export interface CybersecurityQuantumService export interface CybersecurityQuant
   g: 4 && 4.8, review,
   s: 1900,
   rating: 4.8, review,
-  s: 1900} export interface CybersecurityQuantumService {; } ]; ; } ]; export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
+  s: 1900} export interface CybersecurityQuantumService {; } ]; } ]; export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
   e: string} enterpris,
   e: string} }; feature,
   s: string[]; benefit,

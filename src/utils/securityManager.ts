@@ -76,7 +76,7 @@ export class SecurityManager {// TODO: Add content;}
 
 }
     const array = new Uint8Array(length);
-    if (typeof window !== 'undefined' && window.crypto) {/* TODO: Fix JSX expression */}
+    if (typeof window !== == 'undefined' && window.crypto) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       window.crypto.getRandomValues(array);
@@ -98,8 +98,8 @@ const crypto = require('crypto');
 }
     const now = Date.now();
     const windowStart = now - windowMs;
-    // Simple in-memory rate limiting (replace with Redis in production)
-    const storage = this.getRateLimitStorage();
+    // Simple in-memory rate limiting (replace with Redis in production);
+const storage = this.getRateLimitStorage();
     const requests = storage.get(key) || [];
     // Remove old requests;
 const validRequests = requests.filter((tim)
@@ -129,3 +129,5 @@ export default SecurityManager.getInstance()
 
 
 
+
+</>

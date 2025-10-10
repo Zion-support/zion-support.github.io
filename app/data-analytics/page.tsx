@@ -21,34 +21,32 @@ import {
   Target,
   Eye,
   PieChart,
-  LineChart
+  LineChart}
 } from 'lucide-react';
-
-const DataAnalyticsPage: React.FC = () => {
-  const features = [
+const DataAnalyticsPage: React.FC = () => {;
+const features = [
     {
       icon: BarChart,
       title: 'Advanced Data Visualization',
-      description: 'Transform complex data into clear, actionable insights with interactive dashboards and reports.'
+      description: 'Transform complex data into clear, actionable insights with interactive dashboards and reports.'}
     },
     {
       icon: Brain,
       title: 'AI-Powered Analytics',
-      description: 'Leverage machine learning and artificial intelligence to uncover hidden patterns and trends.'
+      description: 'Leverage machine learning and artificial intelligence to uncover hidden patterns and trends.'}
     },
     {
       icon: Database,
       title: 'Data Integration',
-      description: 'Connect and analyze data from multiple sources to get a complete picture of your business.'
+      description: 'Connect and analyze data from multiple sources to get a complete picture of your business.'}
     },
     {
       icon: TrendingUp,
       title: 'Predictive Analytics',
-      description: 'Forecast future trends and make data-driven decisions with predictive modeling.'
+      description: 'Forecast future trends and make data-driven decisions with predictive modeling.'}
     }
   ];
-
-  const benefits = [
+const benefits = [
     'Make data-driven business decisions',
     'Identify new opportunities and trends',
     'Improve operational efficiency',
@@ -106,7 +104,7 @@ const DataAnalyticsPage: React.FC = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
+              {features.map((feature, index) => (}
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                   <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
                     <feature.icon className="h-6 w-6 text-white" />
@@ -132,7 +130,7 @@ const DataAnalyticsPage: React.FC = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {benefits.map((benefit, index) => (
+              {benefits.map((benefit, index) => (}
                 <div key={index} className="flex items-start space-x-3">
                   <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                   <p className="text-gray-300 text-lg">{benefit}</p>
@@ -171,3 +169,10 @@ const DataAnalyticsPage: React.FC = () => {
 };
 
 export default DataAnalyticsPage;
+
+
+
+
+
+
+</div></div></div></div></div></div></div>

@@ -9,7 +9,7 @@ interface Feature {
   description: string;
   stats?: {
     value: string;
-    label: string;
+    label: string;}
   }[];
 }
 
@@ -19,19 +19,18 @@ interface Testimonial {
   role: string;
   content: string;
   rating: number;
-  avatar?: string;
+  avatar?: string;}
 }
-
-const DynamicContentShowcase: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+;
+const DynamicContentShowcase: React.FC = () => {;
+const [currentIndex, setCurrentIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
-
-  const features: Feature[] = [
+const features: Feature[] = [
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that learn and adapt to your business needs in real-time',
-      stats: [
+      stats: [}
         { value: '95%', label: 'Accuracy' },
         { value: '10x', label: 'Faster' },
         { value: '24/7', label: 'Learning' }
@@ -41,7 +40,7 @@ const DynamicContentShowcase: React.FC = () => {
       icon: Zap,
       title: 'Lightning Fast Performance',
       description: 'Optimized for speed with sub-second response times and seamless user experience',
-      stats: [
+      stats: [}
         { value: '< 100ms', label: 'Response' },
         { value: '99.9%', label: 'Uptime' },
         { value: '10M+', label: 'Requests' }
@@ -51,7 +50,7 @@ const DynamicContentShowcase: React.FC = () => {
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with end-to-end encryption and compliance standards',
-      stats: [
+      stats: [}
         { value: '256-bit', label: 'Encryption' },
         { value: 'SOC 2', label: 'Compliance' },
         { value: 'Zero', label: 'Breaches' }
@@ -61,15 +60,14 @@ const DynamicContentShowcase: React.FC = () => {
       icon: Globe,
       title: 'Global Scalability',
       description: 'Scale effortlessly across multiple regions with automatic load balancing',
-      stats: [
+      stats: [}
         { value: '50+', label: 'Countries' },
         { value: '15+', label: 'Languages' },
         { value: '24/7', label: 'Support' }
       ]
     }
   ];
-
-  const benefits = [
+const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -79,89 +77,60 @@ const DynamicContentShowcase: React.FC = () => {
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
-
-  const testimonials: Testimonial[] = [
+const testimonials: Testimonial[] = [
     {
       name: 'Sarah Johnson',
       company: 'TechCorp Inc.',
       role: 'CTO',
       content: 'This solution transformed our operations completely. The AI insights are incredible and have helped us make data-driven decisions that increased our efficiency by 300%.',
-      rating: 5
+      rating: 5}
     },
     {
       name: 'Michael Chen',
       company: 'DataFlow Systems',
       role: 'CEO',
-<<<<<<< HEAD
-      content: 'The performance improvements we\'ve seen are remarkable. Highly recommended!',
-=======
+
       content: 'Outstanding performance and reliability. Our team productivity increased by 300% and we\'ve seen a 50% reduction in operational costs.',
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
-      rating: 5
+
+      rating: 5}
     },
     {
       name: 'Emily Rodriguez',
-<<<<<<< HEAD
-      company: 'CloudFirst Solutions',
-      role: 'VP Engineering',
-      content: 'Outstanding security features and seamless integration. Perfect for our needs.',
-=======
+
       company: 'InnovateLab',
       role: 'Product Manager',
       content: 'The best investment we made this year. ROI was evident within the first month, and the support team is absolutely fantastic.',
-      rating: 5
+      rating: 5}
     },
     {
       name: 'David Kim',
       company: 'CloudFirst Solutions',
       role: 'VP Engineering',
       content: 'Seamless integration with our existing systems. The scalability and performance exceeded our expectations.',
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
-      rating: 5
+
+      rating: 5}
     }
   ];
 
   useEffect(() => {
     if (!isPlaying) return;
-    
-    const timer = setInterval(() => {
-<<<<<<< HEAD
-      setCurrentIndex((prev) => (prev + 1) % features.length);
-    }, 3000);
+const timer = setInterval(() => {
 
-    return () => clearInterval(timer);
-  }, [features.length]);
-
-  return (
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Dynamic Content Showcase
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Experience our cutting-edge solutions through an interactive showcase of features and capabilities.
-          </p>
-=======
-      setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+      setCurrentIndex((prev) => (prev + 1) % testimonials.length);}
     }, 4000);
     
     return () => clearInterval(timer);
   }, [isPlaying, testimonials.length]);
-
-  const nextTestimonial = () => {
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+const nextTestimonial = () => {
+    setCurrentIndex((prev) => (prev + 1) % testimonials.length);}
   };
-
-  const prevTestimonial = () => {
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+const prevTestimonial = () => {
+    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);}
   };
-
-  const togglePlayPause = () => {
-    setIsPlaying(!isPlaying);
+const togglePlayPause = () => {
+    setIsPlaying(!isPlaying);}
   };
-
-  const currentTestimonial = testimonials[currentIndex];
+const currentTestimonial = testimonials[currentIndex];
 
   return (
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 min-h-screen">
@@ -185,65 +154,15 @@ const DynamicContentShowcase: React.FC = () => {
               Learn More
             </button>
           </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
+
         </div>
 
-<<<<<<< HEAD
-        {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {features.map((feature, index) => (
-            <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
-              <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mb-4">
-                <feature.icon className="h-6 w-6 text-white" />
-              </div>
-<<<<<<< HEAD
-              <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-              <p className="text-gray-300">{feature.description}</p>
-            </div>
-          ))}
-        </div>
 
-        {/* Benefits Section */}
-        <div className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10 mb-16">
-          <h3 className="text-2xl font-bold text-white mb-6 text-center">Why Choose Us?</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center">
-                <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
-                <span className="text-gray-300">{benefit}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Testimonials */}
-        <div className="text-center">
-          <h3 className="text-2xl font-bold text-white mb-8">What Our Clients Say</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">
-                <div className="flex justify-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
-                <div className="text-center">
-                  <p className="text-white font-semibold">{testimonial.name}</p>
-                  <p className="text-gray-400 text-sm">{testimonial.role}, {testimonial.company}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-=======
             ))}
           </div>
         </div>
       </section>
->>>>>>> cursor/website-audit-and-update-with-deployment-758b
-=======
+
       {/* Features Section */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -257,7 +176,7 @@ const DynamicContentShowcase: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
+            {features.map((feature, index) => (}
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-purple-400 transition-all duration-300 group">
                 <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mb-6">
                   <feature.icon className="w-8 h-8 text-white" />
@@ -269,7 +188,7 @@ const DynamicContentShowcase: React.FC = () => {
                 
                 {feature.stats && (
                   <div className="grid grid-cols-3 gap-4">
-                    {feature.stats.map((stat, statIndex) => (
+                    {feature.stats.map((stat, statIndex) => (}
                       <div key={statIndex} className="text-center">
                         <div className="text-lg font-bold text-white">{stat.value}</div>
                         <div className="text-gray-400 text-xs">{stat.label}</div>
@@ -297,7 +216,7 @@ const DynamicContentShowcase: React.FC = () => {
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-white/20">
               <div className="text-center">
                 <div className="flex justify-center mb-6">
-                  {[...Array(currentTestimonial.rating)].map((_, i) => (
+                  {[...Array(currentTestimonial.rating)].map((_, i) => (}
                     <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
                   ))}
                 </div>
@@ -321,22 +240,19 @@ const DynamicContentShowcase: React.FC = () => {
             {/* Navigation Controls */}
             <div className="flex items-center justify-center gap-4 mt-8">
               <button
-                onClick={prevTestimonial}
-                className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-colors duration-200"
+                onClick={prevTestimonial} className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-colors duration-200"
               >
                 <ChevronLeft className="w-6 h-6" />
               </button>
               
               <button
-                onClick={togglePlayPause}
-                className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-colors duration-200"
+                onClick={togglePlayPause} className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-colors duration-200"
               >
                 {isPlaying ? <Pause className="w-6 h-6" /> : <Play className="w-6 h-6" />}
               </button>
 
               <button
-                onClick={nextTestimonial}
-                className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-colors duration-200"
+                onClick={nextTestimonial} className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-colors duration-200"
               >
                 <ChevronRight className="w-6 h-6" />
               </button>
@@ -345,12 +261,9 @@ const DynamicContentShowcase: React.FC = () => {
             {/* Testimonial Indicators */}
             <div className="flex justify-center gap-2 mt-6">
               {testimonials.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentIndex(index)}
-                  className={`w-3 h-3 rounded-full transition-colors duration-200 ${
-                    index === currentIndex ? 'bg-white' : 'bg-white/30'
-                  }`}
+                <button}
+                  key={index} onClick={() => setCurrentIndex(index)} className={`w-3 h-3 rounded-full transition-colors duration-200 ${
+                    index === = currentIndex ? 'bg-white' : 'bg-white/30'} }`}
                 />
               ))}
             </div>
@@ -370,7 +283,7 @@ const DynamicContentShowcase: React.FC = () => {
 
           <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
             <div className="grid md:grid-cols-2 gap-6">
-              {benefits.map((benefit, index) => (
+              {benefits.map((benefit, index) => (}
                 <div key={index} className="flex items-start space-x-3">
                   <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                   <p className="text-gray-300">{benefit}</p>
@@ -403,9 +316,19 @@ const DynamicContentShowcase: React.FC = () => {
           </div>
         </div>
       </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
     </div>
   );
 };
 
 export default DynamicContentShowcase;
+
+
+
+
+
+
+
+
+
+
+</div></div></div></div></div></div></div></div></div></div></div>

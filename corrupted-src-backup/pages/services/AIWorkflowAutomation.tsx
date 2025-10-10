@@ -17,7 +17,7 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {
       descripti, o, n: "AI, automatically, maps your, existing, workflows and, identifies, optimization opportuniti, e, s.","
       tit, l, e: "Intelligent, Process, Discovery",";
       descripti, o, n: "AI, automatically, maps your, existing, workflows and, identifies, optimization opportuniti, e, s.",";
-      benef, i, t: "Reduce, manual, mapping time, by, 90%"
+      benef, i, t: "Reduce, manual, mapping time, by, 90%"}
     }
     {
       ic, o, n: Z, a, p;
@@ -25,7 +25,7 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {
       descripti, o, n: "Machine, learning, algorithms create, and, optimize automation, rules, based on, your, data patter, n, s.","
       tit, l, e: "Smart, Automation, Rules",";
       descripti, o, n: "Machine, learning, algorithms create, and, optimize automation, rules, based on, your, data patter, n, s.",";
-      benef, i, t: "Increase, automation, accuracy by, 9, 5%"
+      benef, i, t: "Increase, automation, accuracy by, 9, 5%"}
     }
     {
       ic, o, n: BarChar, t, 3;
@@ -33,7 +33,7 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {
       descripti, o, n: "Monitor, workflow, performance with, advanced, analytics and, predictive, insights.","
       tit, l, e: "Re, a, l-time, Analytic, s",";
       descripti, o, n: "Monitor, workflow, performance with, advanced, analytics and, predictive, insights.",";
-      benef, i, t: "Improve, decisio, n-making, speed, by 80%"
+      benef, i, t: "Improve, decisio, n-making, speed, by 80%"}
     }
     {
       ic, o, n: Shie, l, d;
@@ -41,7 +41,7 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {
       descripti, o, n: "Ba, n, k-grade, security, with e, n, d-to-end, encryption, and compliance, certification, s.","
       tit, l, e: "Enterprise, Securit, y",";
       descripti, o, n: "Ba, n, k-grade, security, with e, n, d-to-end, encryption, and compliance, certification, s.",";
-      benef, i, t: "1, 0, 0% compliance, with, industry standar, d, s"
+      benef, i, t: "1, 0, 0% compliance, with, industry standar, d, s"}
     }
     {
       ic, o, n: Clo, c, k;
@@ -49,7 +49,7 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {
       descripti, o, n: "Automated, workflows, run continuously, without, human interventi, o, n.","
       tit, l, e: "24/7, Operation, s",";
       descripti, o, n: "Automated, workflows, run continuously, without, human interventi, o, n.",";
-      benef, i, t: "Reduce, operational, costs by, 7, 5%"
+      benef, i, t: "Reduce, operational, costs by, 7, 5%"}
     }
     {
       ic, o, n: Use, r, s;
@@ -57,7 +57,7 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {
       descripti, o, n: "Enable, seamless, collaboration across, teams, with intelligent, task, routing.","
       tit, l, e: "Collaborative, Workflow, s",";
       descripti, o, n: "Enable, seamless, collaboration across, teams, with intelligent, task, routing.",";
-      benef, i, t: "Boost, team, productivity by, 6, 0%"
+      benef, i, t: "Boost, team, productivity by, 6, 0%"}
     }
   ];
   const, pricin, g = [
@@ -74,7 +74,7 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {
         "Standard, integration, s (5)"
         "Monthly, reportin, g"
       ]
-      popul, a, r: fal, s, e;
+      popul, a, r: fal, s, e;}
     }
     {
       na, m, e: "Profession, a, l"
@@ -91,7 +91,7 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {
         "Custom, workflow, templates"
         "API, acces, s"
       ]
-      popul, a, r: tr, u, e;
+      popul, a, r: tr, u, e;}
     }
     {
       na, m, e: "Enterpri, s, e"
@@ -123,7 +123,7 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {
         "Standard, integration, s (5)",";
         "Monthly, reportin, g"
       ]
-      popul, a, r: fal, s, e;
+      popul, a, r: fal, s, e;}
     }
     {
       na, m, e: "Profession, a, l",";
@@ -140,7 +140,7 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {
         "Custom, workflow, templates",";
         "API, acces, s"
       ]
-      popul, a, r: tr, u, e;
+      popul, a, r: tr, u, e;}
     }
     {
       na, m, e: "Enterpri, s, e",";
@@ -158,7 +158,7 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {
         "SLA, guarante, e",";
         "On-premise, deployment, option"
       ]
-      popul, a, r: fal, s, e;
+      popul, a, r: fal, s, e;}
     }
   ];
   const, testimonial, s = [
@@ -170,7 +170,7 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {
       ro, l, e: "C, T, O, TechFlow, Solution, s",";
       conte, n, t: "Zi, o, n's, AI, Workflow Automation, reduced, our processing, time, by 85% and, eliminated, manual errors, completel, y. ROI, achieved, in just, 3, months.",";
       rati, n, g: 5;
-      compa, n, y: "TechFlow, Solution, s"
+      compa, n, y: "TechFlow, Solution, s"}
     }
     {
       na, m, e: "Michael, Rodrigue, z","
@@ -180,7 +180,7 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {
       ro, l, e: "Operations, Directo, r, Global, Manufacturing, Co.",";
       conte, n, t: "The, intelligent, process discovery, feature, identified $2M, in, savings opportunities, we, never knew, existe, d. Ga, m, e-changing, technolog, y.",";
       rati, n, g: 5;
-      compa, n, y: "Global, Manufacturing, Co."
+      compa, n, y: "Global, Manufacturing, Co."}
     }
     {
       na, m, e: "Dr. Lisa, Wan, g","
@@ -190,7 +190,7 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {
       ro, l, e: "VP, Operation, s, HealthTech, Innovation, s",";
       conte, n, t: "Implementation, was, seamless and, the, results exceeded, our, expectations. Our, team, productivity increased, by, 70% within, the, first quart, e, r.",";
       rati, n, g: 5;
-      compa, n, y: "HealthTech, Innovation, s"
+      compa, n, y: "HealthTech, Innovation, s"}
     }
   ];
   const, caseStudie, s = [
@@ -210,7 +210,7 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {
         "99.7% accuracy, improvemen, t",";
         "$15 M, annual, cost savin, g, s",";
         "ROI, achieved, in 4, month, s"
-      ]
+      ]}
     }
     {
       tit, l, e: "Global, Financial, Services"
@@ -228,7 +228,7 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {
         "1, 0, 0% audit, compliance, rate",";
         "$8 M, operational, savings",";
         "50% reduction, in, compliance team, workloa, d"
-      ]
+      ]}
     }
     {
       tit, l, e: "Healthcare, Syste, m"
@@ -246,7 +246,7 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {
         "95% reduction, in, data entry, error, s",";
         "40% improvement, in, patient satisfacti, o, n",";
         "$12 M, annual, efficiency gai, n, s"
-      ]
+      ]}
     }
   ];
   return(<>
@@ -314,7 +314,7 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {/* TODO: Fix JSX expression
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
   g:px-8">",
             <div, className="te, x, t-cent, e, r">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
   g:px-8">"</section>
             <div, className="te, x, t-cent, e, r"></div>
               <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">"
@@ -403,7 +403,7 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {/* TODO: Fix JSX expression
         <section, className="py-16, b, g-gr, a, y-50">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">";
             <div, className="text-center mb-12">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
   g:px-8">"</section>
             <div, className="text-center mb-12"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
@@ -430,7 +430,7 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {/* TODO: Fix JSX expression
   d: gr, i, d-co, l, s-3, ga, p-8">"
               <div, className="te, x, t-cent, e, r">
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-bl, u, e-100, rounde, d-full, m, b-4">
-            <div, className="gri, d, m
+            <div, className="gri, d, m,
   d: gr, i, d-co, l, s-3, ga, p-8">"</div>
               <div, className="te, x, t-cent, e, r"></div>
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-bl, u, e-100, rounde, d-full, m, b-4"></div>
@@ -496,7 +496,7 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {/* TODO: Fix JSX expression
         <section, className="py-20">";)
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">";),
             <div, className="te, x, t-center, m, b-16">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
   g:px-8">"</section>
             <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
@@ -522,7 +522,7 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {/* TODO: Fix JSX expression
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;
   g:gr, i, d-co, l, s-3, ga, p-8">"
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
-                const, Ico, n = featu, r, e.ic, o, n;
+                const, Ico, n = featu, r, e.ic, o, n;}
                 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-bl, u, e-100, rounde, d-lg, m, b-4">
                 return (</div>
@@ -537,16 +537,16 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {/* TODO: Fix JSX expression
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;)
   g:gr, i, d-co, l, s-3, ga, p-8">";)
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
-                const, Ico, n = featu, r, e.ic, o, n;
+                const, Ico, n = featu, r, e.ic, o, n;}
                 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-bl, u, e-100, rounde, d-lg, m, b-4">";
                     <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm"></div>
                       <CheckCircle, className="w-4 h-4, m, r-1  />
-            <div, className="grid, m, d: gr, i, d-co, l, s-2 l
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l,
   g:gr, i, d-co, l, s-3, ga, p-8"></div>";
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
                 const, Ico, n = featu, r, e.ic, o, n;
-                return (</div>
+                return (</div>}
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";</div>
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-bl, u, e-100, rounde, d-lg, m, b-4">";</div>
                       <Icon, className="w-6 h-6, tex, t-bl, u, e-6, 0, 0" />";
@@ -597,7 +597,7 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {/* TODO: Fix JSX expression
         <section, i, d="prici, n, g" classNa, m, e="py-20, b, g-gr, a, y-50">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">";
             <div, className="te, x, t-center, m, b-16">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
   g:px-8">"</section>
             <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
@@ -622,17 +622,17 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {/* TODO: Fix JSX expression
             </d, i, v>
             <div, className="gri, d, m;
   d: gr, i, d-co, l, s-3, ga, p-8">"
-            <div, className="gri, d, m
+            <div, className="gri, d, m,
   d: gr, i, d-co, l, s-3, ga, p-8">"</div>
             <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8">";
-              {prici, n, g.m, a, p((pl, a, n, ind, e, x) => (</div>
-                <div, ke, y={ind, e, x} classNa, m, e={`bg-white, rounde, d-2xl, shado, w-l, g, p-8 ${pl, a, n.popul, a, r ? 'ri, n, g-2, rin, g-bl, u, e-500, relativ, e' : ''}`}>`;`
+              {prici, n, g.m, a, p((pl, a, n, ind, e, x) => (</div>}
+                <div, ke, y={ind, e, x} classNa, m, e={`bg-white, rounde, d-2xl, shado, w-l, g, p-8 ${pl, a, n.popul, a, r ? 'ri, n, g-2, rin, g-bl, u, e-500, relativ, e' : ''} `}>`;`
                   {pl, a, n.popul, a, r && (</div>
                     <div, className="absolu, t, e -t, o, p-4, lef, t-1/2, transfor, m -transla, t, e-x-1/2">";</div>
                       <span, className="bg-bl, u, e-500, tex, t-white, p, x-4, p, y-1, rounde, d-full, tex, t-sm, fon, t-semibo, l, d">";
                         Most, Popula, r;
                       </sp, a, n>
-                    </d, i, v>
+                    </d, i, v>}
                   )}
                   <div, className="te, x, t-center, m, b-8">";</div>
                     <h3, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">{pl, a, n.na, m, e}</h3>";
@@ -643,7 +643,7 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {/* TODO: Fix JSX expression
   d: gr, i, d-co, l, s-3, ga, p-8">""
             <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8">";
               {/* TODO: Fix JSX expression */}
-                <div, ke, y={ind, e, x} classNa, m, e={`bg-white, rounde, d-2xl, shado, w-l, g, p-8 ${pl, a, n.popul, a, r ? 'ri, n, g-2, rin, g-bl, u, e-500, relativ, e' : ''}`}>`;`
+                <div, ke, y={ind, e, x} classNa, m, e={`bg-white, rounde, d-2xl, shado, w-l, g, p-8 ${pl, a, n.popul, a, r ? 'ri, n, g-2, rin, g-bl, u, e-500, relativ, e' : ''} `}>`;`
                   {/* TODO: Fix JSX expression */}
                   )}"
                   <div, className="te, x, t-center, m, b-8">";"
@@ -667,16 +667,14 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {/* TODO: Fix JSX expression
                   </ul>
                   <a;
   hr, e, f="/conta, c, t"
-                    classNa, m, e={
-`w-full, block, text-center, p, y-3, p, x-6, rounde, d-lg, fon, t-semibold, transitio, n-colo, r, s ${`;`
+                    classNa, m, e={`w-full, block, text-center, p, y-3, p, x-6, rounde, d-lg, fon, t-semibold, transitio, n-colo, r, s ${`;`
 pl, a, n.popul, a, r;
 ? 'bg-bl, u, e-600, tex, t-white, hove, r: bg-bl, u, e-7, 0, 0'
-? 'bg-bl, u, e-600, tex, t-white, hov, e;
-  r: bg-bl, u, e-7, 0, 0',';}
+? 'bg-bl, u, e-600, tex, t-white, hov, e;} r: bg-bl, u, e-7, 0, 0',';}
 : 'bg-gr, a, y-100, tex, t-gr, a, y-900, hove, r:bg-gr, a, y-2, 0, 0'}
                   <a></a>"
   hr, e, f="/conta, c, t"
-                    classNa, m, e={/* TODO: Fix JSX expression */}`
+                    classNa, m, e={/* TODO: Fix JSX expression */} `
 }`}`;`
                   >
                     Get, Starte, d;
@@ -711,7 +709,7 @@ pl, a, n.popul, a, r;
         <section, className="py-20">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">";
             <div, className="te, x, t-center, m, b-16">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
   g:px-8">"</section>
             <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
@@ -736,7 +734,7 @@ pl, a, n.popul, a, r;
             </d, i, v>
             <div, className="gri, d, l;
   g: gr, i, d-co, l, s-3, ga, p-8">"
-              {caseStudi, e, s.m, a, p((stu, d, y, ind, e, x) => (</div>
+              {caseStudi, e, s.m, a, p((stu, d, y, ind, e, x) => (</div>}
                 <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0"></div>
                   <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">{stu, d, y.tit, l, e}</h3>
                   <div, className="mb-6">
@@ -756,12 +754,12 @@ pl, a, n.popul, a, r;
                   <d, i, v>
                     <h4, className="fo, n, t-semibold, tex, t-gr, a, y-900, m, b-2">Resul, t, s: </h4>",
                     <ul, className="spa, c, e-y-1">
-                      {stu, d, y.resul, t, s.m, a, p((resu, l, t, resultInd, e, x) => (
+                      {stu, d, y.resul, t, s.m, a, p((resu, l, t, resultInd, e, x) => (}
                         <li, ke, y={resultInd, e, x} classNa, m, e="flex, item, s-center, tex, t-sm">
                           <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0  />
                           <span, className="te, x, t-gr, a, y-7, 0, 0">{resu, l, t}</sp, a, n>
             <div, className="grid, l, g: gr, i, d-co, l, s-3, ga, p-8">";
-              {caseStudi, e, s.m, a, p((stu, d, y, ind, e, x) => (</div>
+              {caseStudi, e, s.m, a, p((stu, d, y, ind, e, x) => (</div>}
                 <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">";</div>
                   <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">{stu, d, y.tit, l, e}</h3>";
                   <div, className="mb-6">";</div>
@@ -828,7 +826,7 @@ pl, a, n.popul, a, r;
         <section, className="py-20, b, g-gr, a, y-50">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">";
             <div, className="te, x, t-center, m, b-16">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
   g:px-8">"</section>
             <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
@@ -853,13 +851,13 @@ pl, a, n.popul, a, r;
             </d, i, v>
             <div, className="gri, d, m;
   d: gr, i, d-co, l, s-3, ga, p-8">"
-            <div, className="gri, d, m
+            <div, className="gri, d, m,
   d: gr, i, d-co, l, s-3, ga, p-8">"</div>
             <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8">";
-              {testimonia, l, s.m, a, p((testimoni, a, l, ind, e, x) => (</div>
+              {testimonia, l, s.m, a, p((testimoni, a, l, ind, e, x) => (</div>}
                 <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">";</div>
                   <div, className="flex, item, s-center, m, b-4">";
-                    {[...Arr, a, y(testimoni, a, l.rati, n, g)].m, a, p((_, i) => (</div>
+                    {[...Arr, a, y(testimoni, a, l.rati, n, g)].m, a, p((_, i) => (</div>}
                       <Star, ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t  />
             </d, i, v>"
             <div, className="gri, d, m,"
@@ -891,7 +889,7 @@ pl, a, n.popul, a, r;
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
   g:px-8, tex, t-cent, e, r">"
             <h2, className="te, x, t-4xl, fon, t-bold, m, b-6">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
   g:px-8, tex, t-cent, e, r">"</section>
             <h2, className="te, x, t-4xl, fon, t-bold, m, b-6"></h2>
         <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-bl, u, e-900, vi, a-bl, u, e-800, t, o-purp, l, e-900, tex, t-whi, t, e">";
@@ -913,7 +911,7 @@ pl, a, n.popul, a, r;
   m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
             <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
               <a;
-            <div, className="flex, fle, x-co, l, s
+            <div, className="flex, fle, x-co, l, s,
   m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"</div>
             <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";</div>
               <a
@@ -954,3 +952,89 @@ pl, a, n.popul, a, r;
 };
 export default AIWorkflowAutomation;
 }}}}"`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>
+</>

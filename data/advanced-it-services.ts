@@ -267,7 +267,6 @@ export const,
   g: number;
   review,
   s: number;
-;
 export const advancedITServices: AdvancedITService[] = [
     id: 'quantum - cloud - platform',
     name: 'Quantum Cloud Platform',
@@ -1682,12 +1681,10 @@ export const,
     review,
   s: 45}
 ];
-;
 export interface AdvancedITService {/* TODO: Fix JSX expression */}
   }
 ];
 ];
-;
   }
 ];
 ];
@@ -1733,7 +1730,7 @@ export const advancedITServices: AdvancedITService[] = [;
     roi: '1000% ROI within 12 months through breakthrough discoveries and competitive advantage';
     competitors: ['IBM Quantum ($1000+/month)AWS Braket ($5000+/month)Google Quantum AI'];
     marketSize: '$500 M quantum computing market';
-    growthRate: '500% annual growth';
+    growthRate: '500% annual growth';}
     variant: 'quantum-cloud'}
     contactInfo: {}
       mobile: '+1 302 464 0950';
@@ -1775,7 +1772,7 @@ export const advancedITServices: AdvancedITService[] = [;
     roi: '300% ROI within 6 months through reduced latency and improved performance';
     competitors: ['AWS Greengrass ($1000+/month)Azure IoT Edge ($2000+/month)Google Cloud IoT'];
     marketSize: '$50 B edge computing market';
-    growthRate: '250% annual growth';
+    growthRate: '250% annual growth';}
     variant: 'edge-futuristic'}
     contactInfo: {}
       mobile: '+1 302 464 0950';
@@ -1817,7 +1814,7 @@ export const advancedITServices: AdvancedITService[] = [;
     roi: '400% ROI within 12 months through security improvements and compliance benefits';
     competitors: ['Palo Alto Networks ($10000+/month)CrowdStrike ($5000+/month)Zscaler'];
     marketSize: '$30 B zero trust market';
-    growthRate: '200% annual growth';
+    growthRate: '200% annual growth';}
     variant: 'zero-trust-futuristic'}
     contactInfo: {}
       mobile: '+1 302 464 0950';
@@ -1859,7 +1856,7 @@ export const advancedITServices: AdvancedITService[] = [;
     roi: '350% ROI within 6 months through automation and performance improvements';
     competitors: ['GitLab ($99+/month)GitHub Actions ($1000+/month)Jenkins'];
     marketSize: '$8 B DevOps market';
-    growthRate: '180% annual growth';
+    growthRate: '180% annual growth';}
     variant: 'ai-devops-futuristic'}
     contactInfo: {}
       mobile: '+1 302 464 0950';
@@ -1901,7 +1898,7 @@ export const advancedITServices: AdvancedITService[] = [;
     roi: '500% ROI within 18 months through efficiency improvements and new business models';
     competitors: ['IBM Blockchain ($10000+/month)ConsenSys ($5000+/month)R3 Corda'];
     marketSize: '$20 B enterprise blockchain market';
-    growthRate: '300% annual growth';
+    growthRate: '300% annual growth';}
     variant: 'blockchain-futuristic'}
     contactInfo: {}
       mobile: '+1 302 464 0950';
@@ -1943,7 +1940,7 @@ export const advancedITServices: AdvancedITService[] = [;
     roi: '800% ROI within 18 months through performance improvements and competitive advantage';
     competitors: ['AWS ($50000+/month)Azure ($40000+/month)Google Cloud ($45000+/month)'];
     marketSize: '$200 B data center market';
-    growthRate: '150% annual growth';
+    growthRate: '150% annual growth';}
     variant: 'quantum-infrastructure'}
     contactInfo: {}
       mobile: '+1 302 464 0950';
@@ -1985,7 +1982,7 @@ export const advancedITServices: AdvancedITService[] = [;
     roi: '400% ROI within 12 months through threat prevention and security improvements';
     competitors: ['Cisco ($8000+/month)Palo Alto Networks ($10000+/month)Fortinet ($5000+/month)'];
     marketSize: '$25 B network security market';
-    growthRate: '180% annual growth';
+    growthRate: '180% annual growth';}
     variant: 'ai-network-futuristic'}
     contactInfo: {}
       mobile: '+1 302 464 0950';
@@ -2027,7 +2024,7 @@ export const advancedITServices: AdvancedITService[] = [;
     roi: '450% ROI within 12 months through security improvements and operational efficiency';
     competitors: ['AWS IoT ($1000+/month)Azure IoT ($2000+/month)Google Cloud IoT ($1500+/month)'];
     marketSize: '$100 B IoT market';
-    growthRate: '250% annual growth';
+    growthRate: '250% annual growth';}
     variant: 'quantum-iot-futuristic'}
     contactInfo: {}
       mobile: '+1 302 464 0950';
@@ -2069,7 +2066,7 @@ export const advancedITServices: AdvancedITService[] = [;
     roi: '600% ROI within 12 months through cost savings and performance improvements';
     competitors: ['Accenture ($50000+/month)Deloitte ($40000+/month)AWS Migration Hub'];
     marketSize: '$15 B cloud migration market';
-    growthRate: '200% annual growth';
+    growthRate: '200% annual growth';}
     variant: 'ai-migration-futuristic'}
     contactInfo: {}
       mobile: '+1 302 464 0950';

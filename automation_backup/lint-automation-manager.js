@@ -358,12 +358,12 @@
   o: ')pipe}'})' this.log('✅ Lin)
   t: completed successfully')'retur,
   n: {/* TODO: Fix JSX expression */}
-  s: tru,,e}outpu,
+  s: tru,e}outpu,
   t: 'result'}} catc,
   h: (error) {/* TODO: Fix JSX expression */}`
   found: ${error.messag)}e}`)retur,
   n: {/* TODO: Fix JSX expression */}
-  s: fals,,e}outpu,
+  s: fals,e}outpu,
   t: 'error.stdou,
   t: || error.message'}} return {/* TODO: Fix JSX expression */}
   s: 'false'}}' outpu,
@@ -371,7 +371,7 @@
   o: ')pipe}'})' this.log('✅ Lin)
   t: errors fixed successfully')'retur,
   n: {/* TODO: Fix JSX expression */}
-  s: tru,,e}outpu,
+  s: tru,e}outpu,
   t: 'result'}} catc,
   h: (error) {/* TODO: Fix JSX expression */}`
   errors: ${error.messag)}e}`)retur,
@@ -426,12 +426,12 @@
   o: ')pipe}'})' this.log('✅ Lin)
   t: completed successfully')'retur,
   n: {/* TODO: Fix JSX expression */}
-  s: tru,,e}outpu,
+  s: tru,e}outpu,
   t: 'result'}} catc,
   h: (error) {/* TODO: Fix JSX expression */}`
   found: ${error.messag)}e}`)retur,
   n: {/* TODO: Fix JSX expression */}
-  s: fals,,e}outpu,
+  s: fals,e}outpu,
   t: 'error.stdou,
   t: || error.message'}} return {/* TODO: Fix JSX expression */}
   s: 'false'}}' outpu,
@@ -439,7 +439,7 @@
   o: ')pipe}'})' this.log('✅ Lin)
   t: errors fixed successfully')'retur,
   n: {/* TODO: Fix JSX expression */}
-  s: tru,,e}outpu,
+  s: tru,e}outpu,
   t: 'result'}} catc,
   h: (error) {/* TODO: Fix JSX expression */}`
   errors: ${error.messag)}e}`)retur,
@@ -494,12 +494,12 @@
   o: ')pipe}'})' this.log('✅ Lin)
   t: completed successfully')'retur,
   n: {/* TODO: Fix JSX expression */}
-  s: tru,,e}outpu,
+  s: tru,e}outpu,
   t: 'result'}} catc,
   h: (error) {/* TODO: Fix JSX expression */}`
   found: ${error.messag)}e}`)retur,
   n: {/* TODO: Fix JSX expression */}
-  s: fals,,e}outpu,
+  s: fals,e}outpu,
   t: 'error.stdou,
   t: || error.message'}} return {/* TODO: Fix JSX expression */}
   s: 'false'}}' outpu,
@@ -507,7 +507,7 @@
   o: ')pipe}'})' this.log('✅ Lin)
   t: errors fixed successfully')'retur,
   n: {/* TODO: Fix JSX expression */}
-  s: tru,,e}outpu,
+  s: tru,e}outpu,
   t: 'result'}} catc,
   h: (error) {/* TODO: Fix JSX expression */}`
   errors: ${error.messag)}e}`)retur,
@@ -562,12 +562,12 @@
   o: ')pipe}'})' this.log('✅ Lin)
   t: completed successfully')'retur,
   n: {/* TODO: Fix JSX expression */}
-  s: tru,,e}outpu,
+  s: tru,e}outpu,
   t: 'result'}} catc,
   h: (error) {/* TODO: Fix JSX expression */}`
   found: ${error.messag)}e}`)retur,
   n: {/* TODO: Fix JSX expression */}
-  s: fals,,e}outpu,
+  s: fals,e}outpu,
   t: 'error.stdou,
   t: || error.message'}} return {/* TODO: Fix JSX expression */}
   s: 'false'}}' outpu,
@@ -575,7 +575,7 @@
   o: ')pipe}'})' this.log('✅ Lin)
   t: errors fixed successfully')'retur,
   n: {/* TODO: Fix JSX expression */}
-  s: tru,,e}outpu,
+  s: tru,e}outpu,
   t: 'result'}} catc,
   h: (error) {/* TODO: Fix JSX expression */}`
   errors: ${error.messag)}e}`)retur,
@@ -630,12 +630,12 @@
   o: ')pipe}'})' this.log('✅ Lin)
   t: completed successfully')'retur,
   n: {/* TODO: Fix JSX expression */}
-  s: tru,,e}outpu,
+  s: tru,e}outpu,
   t: 'result'}} catc,
   h: (error) {/* TODO: Fix JSX expression */}`
   found: ${error.messag)}e}`)retur,
   n: {/* TODO: Fix JSX expression */}
-  s: fals,,e}outpu,
+  s: fals,e}outpu,
   t: 'error.stdou,
   t: || error.message'}} return {/* TODO: Fix JSX expression */}
   s: 'false'}}' outpu,
@@ -643,7 +643,7 @@
   o: ')pipe}'})' this.log('✅ Lin)
   t: errors fixed successfully')'retur,
   n: {/* TODO: Fix JSX expression */}
-  s: tru,,e}outpu,
+  s: tru,e}outpu,
   t: 'result'}} catc,
   h: (error) {/* TODO: Fix JSX expression */}`
   errors: ${error.messag)}e}`)retur,
@@ -698,12 +698,12 @@
   o: ')pipe}'})' this.log('✅ Lin)
   t: completed successfully')'retur,
   n: {/* TODO: Fix JSX expression */}
-  s: tru,,e}outpu,
+  s: tru,e}outpu,
   t: 'result'}} catc,
   h: (error) {/* TODO: Fix JSX expression */}`
   found: ${error.messag)}e}`)retur,
   n: {/* TODO: Fix JSX expression */}
-  s: fals,,e}outpu,
+  s: fals,e}outpu,
   t: 'error.stdou,
   t: || error.message'}} return {/* TODO: Fix JSX expression */}
   s: 'false'}}' outpu,
@@ -711,7 +711,7 @@
   o: ')pipe}'})' this.log('✅ Lin)
   t: errors fixed successfully')'retur,
   n: {/* TODO: Fix JSX expression */}
-  s: tru,,e}outpu,
+  s: tru,e}outpu,
   t: 'result'}} catc,
   h: (error) {/* TODO: Fix JSX expression */}`
   errors: ${error.messag)}e}`)retur,
@@ -766,12 +766,12 @@
   o: ')pipe}'})' this.log('✅ Lin)
   t: completed successfully')'retur,
   n: {/* TODO: Fix JSX expression */}
-  s: tru,,e}outpu,
+  s: tru,e}outpu,
   t: 'result'}} catc,
   h: (error) {/* TODO: Fix JSX expression */}`
   found: ${error.messag)}e}`)retur,
   n: {/* TODO: Fix JSX expression */}
-  s: fals,,e}outpu,
+  s: fals,e}outpu,
   t: 'error.stdou,
   t: || error.message'}} return {/* TODO: Fix JSX expression */}
   s: 'false'}}' outpu,
@@ -779,7 +779,7 @@
   o: ')pipe}'})' this.log('✅ Lin)
   t: errors fixed successfully')'retur,
   n: {/* TODO: Fix JSX expression */}
-  s: tru,,e}outpu,
+  s: tru,e}outpu,
   t: 'result'}} catc,
   h: (error) {/* TODO: Fix JSX expression */}`
   errors: ${error.messag)}e}`)retur,
@@ -835,24 +835,24 @@
   o: ')pipe}'})' this.log('✅ Lin)
   t: completed successfully')' retur,
   n: {/* TODO: Fix JSX expression */}
-  s: tru,,e}outpu,
+  s: tru,e}outpu,
   t: 'result'}} catc,
   h: (error) {/* TODO: Fix JSX expression */}`
   found: ${error.messag)}e}`); retur,
   n: {/* TODO: Fix JSX expression */}
-  s: fals,,e}outpu,
+  s: fals,e}outpu,
   t: 'error.stdou,
   t: || error.message'}} return {/* TODO: Fix JSX expression */}
   t: 'error.stdout || error.message' }}} } async fixLintErrors() {/* TODO: Fix JSX expression */}
   o: ')pipe}'})' this.log('✅ Lin)
   t: errors fixed successfully')' retur,
   n: {/* TODO: Fix JSX expression */}
-  s: tru,,e}outpu,
+  s: tru,e}outpu,
   t: 'result'}} catc,
   h: (error) {/* TODO: Fix JSX expression */}`
   errors: ${error.messag})e}`); retur,
   n: {/* TODO: Fix JSX expression */}
-  s: fals,,e}outpu,
+  s: fals,e}outpu,
   t: 'error.stdou,
   t: || error.message'}} } startFileWatcher() {this.log( '👀 Starting file watcher...')' const watcher = chokidar.watch(['}pages*.{js,jsx,ts}tsx}','components*.{js,jsx,ts}tsx}','utils*.{js,jsx,ts}tsx}','hooks*.{js,jsx,ts}tsx}) ]){/* TODO: Fix JSX expression */}
   t: 'tru'}e}) le,

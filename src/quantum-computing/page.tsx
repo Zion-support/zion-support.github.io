@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 const QuantumComputingPage: React.FC = () => {
   return (
     <>
@@ -93,7 +92,10 @@ const QuantumComputingPage: React.FC = () => {
       
       <Footer />
     </>
-  );
+  );}
 };
 
 export default QuantumComputingPage;
+
+
+</div></div></div>

@@ -118,7 +118,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/zero-trust-security',
     marketPosition: 'Advanced zero-trust security platform for modern enterprises',
-    targetAudience: 'Enterprise security teams, Government agencies, Financial institutions'
+    targetAudience: 'Enterprise security teams, Government agencies, Financial institutions'}
     trialDays: 30}
     setupTime: '2-3 weeks',
     category: 'Cybersecurity',
@@ -573,7 +573,7 @@ export interface ComprehensiveInnovativeService {;
   variant: ServiceVariant;
   contactInfo: {,
     mobile: string;
-    email: string;
+    email: string;}
     address: string}
     website: string}
   };
@@ -588,10 +588,9 @@ export interface ComprehensiveInnovativeService {;
   marketAdvantage: string;
 }
 ;
-// const contact = {;
+// const contact ={;
   mobile: '+1 302 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 1008 Middletown DE 19709'}
+  email: 'kleber@ziontechgroup.com';} address: '364 E Main St STE 1008 Middletown DE 19709'}
   website: 'https://ziontechgroup.com',
   i,
   d: string;
@@ -1545,8 +1544,7 @@ export interface ComprehensiveInnovativeService {/* TODO: Fix JSX expression */}
   marketAdvantag,
   e: string}
 ;
-// const contact = {/* TODO: Fix JSX expression */}
-  s: '364 E Main St STE 1008 Middletown DE 19709'}
+// const contact ={/* TODO: Fix JSX expression */} s: '364 E Main St STE 1008 Middletown DE 19709'}
   websit,
   e: 'http,
   s://ziontechgroup.com'
@@ -1591,7 +1589,7 @@ export const,
     customers: 342;
     rating: 4.8;
     reviews: 267;
-    benefits: [,
+    benefits: [}
       '80% faster content creation40% increase in engagementSEO optimization built-inMulti-language supportBrand voice consistency']}
     capabilities: [,
       'Renewable energy management_energy optimization_grid integration_sustainability reporting_predictive maintenance']}
@@ -1607,7 +1605,6 @@ export const,
   }
 ];
 export default comprehensiveInnovativeServices;
-;
 export interface ComprehensiveInnovativeService {/* TODO: Fix JSX expression */}
   s: string}
     websit,
@@ -1642,7 +1639,6 @@ export interface ComprehensiveInnovativeService {/* TODO: Fix JSX expression */}
   e: string}
 ;
 export default comprehensiveInnovativeServices;
-;
 i,
   d: string; nam,
   e: string; taglin,
@@ -2085,8 +2081,7 @@ i,
   s: number; benefit,
   s: string[]; capabilitie,
   s: string[]; marketAdvantag,
-  e: string} ; const contact = {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com'}' addres,
+  e: string} ; const contact ={/* TODO: Fix JSX expression */} l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
   s://ziontechgroup.com' }; export const,

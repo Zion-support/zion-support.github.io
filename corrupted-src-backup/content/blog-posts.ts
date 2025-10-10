@@ -8,7 +8,7 @@ export interface BlogPost {
   category: string;
   tags: string[];
   featured: boolean;
-  readTime: string;
+  readTime: string;}
   image?: string;}
 
 export const blogPosts: BlogPost[] = [,
@@ -33,7 +33,7 @@ export const blogPosts: BlogPost[] = [,
     category: 'AI Reliability',
     tags: ['Scorecards', 'SLIs', 'Canaries', 'Rollback'],
     featured: true;
-    readTime: '7 min read',
+    readTime: '7 min read'}
     image: '/images/operational-ai-scorecards-v2.jpg'},
   {
     slug: 'ai-2025-oct-04-enterprise-rag-quality-budgets',
@@ -54,7 +54,7 @@ export const blogPosts: BlogPost[] = [,
     category: 'RAG Engineering',
     tags: ['RAG', 'Quality', 'Budgets', 'Caching'],
     featured: true;
-    readTime: '8 min read',
+    readTime: '8 min read'}
     image: '/images/enterprise-rag-quality-budgets.jpg'},
   {
     slug: 'ai-2025-oct-04-enterprise-agents-in-production',
@@ -79,7 +79,7 @@ This guide shows how to ship agentic systems that operate within explicit budget
     category: 'AI Operations',
     tags: ['Agents', 'Governance', 'Guardrails', 'Rollback'],
     featured: true;
-    readTime: '8 min read',
+    readTime: '8 min read'}
     image: '/images/governed-agentic-automation.jpg'},
   {
     slug: 'genai-cost-optimization-v6-2025-10-03',
@@ -93,7 +93,7 @@ Control GenAI costs without UX regressions: quality-tier routers, request coales
     category: 'GenAI Engineering',
     tags: ['Cost', 'Caching', 'Distillation', 'Routing', 'SLO'],
     featured: true;
-    readTime: '9 min read',
+    readTime: '9 min read'}
     image: '/images/genai-cost-optimization-v6.jpg'},
   {
     slug: 'ai-2025-oct-01-enterprise-ai-governance-blueprint',
@@ -119,7 +119,7 @@ Modern enterprises need shipping speed without surprise risk. This field guide s
     tags: ['Governance', 'Scorecards', 'Guardrails', 'Rollouts'],
     featured: true;
     readTime: '10 min read',
-    image: '/images/enterprise-ai-governance-2025.jpg',
+    image: '/images/enterprise-ai-governance-2025.jpg'}
 export interface BlogPost {/* TODO: Fix JSX expression */}
 }
 

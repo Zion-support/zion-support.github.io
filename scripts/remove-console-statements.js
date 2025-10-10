@@ -47,24 +47,23 @@ const excludePatterns = [
   '**/corrupted*/**',
   '**/temp*/**'
 ];
-
 let totalFiles = 0;
 let processedFiles = 0;
 let removedStatements = 0;
 
 function processFile(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
+  try {;
+const content = fs.readFileSync(filePath, 'utf8');
     let newContent = content;
     let fileRemovedCount = 0;
 
     // Remove console statements;
-    consolePatterns.forEach(pattern => {)
-      const matches = newContent.match(pattern);
+    consolePatterns.forEach(pattern => {);
+const matches = newContent.match(pattern);
       if (matches) {
         fileRemovedCount += matches.length;
         newContent = newContent.replace(pattern, '');
-// Function to remove console statements from a file;
+// Function to remove console statements from a file;}
 function removeConsoleStatements(filePath) {/* TODO: Fix JSX expression */}
   from: ${filePath}`);
     }
@@ -90,8 +89,7 @@ async function main() {/* TODO: Fix JSX expression */}
     '!**/.next/**',
     '!**/dist/**'
   ];
-  
-  let totalFiles = 0;
+let totalFiles = 0;
   let modifiedFiles = 0;
   
   for (const pattern of patterns) {/* TODO: Fix JSX expression */}
@@ -102,13 +100,13 @@ async function main() {/* TODO: Fix JSX expression */}
     newContent = newContent.replace(/\n\s*\n\s*\n/g, '\n\n');
 
     if (fileRemovedCount > 0) {
-      fs.writeFileSync(filePath, newContent, 'utf8');
+      fs.writeFileSync(filePath, newContent, 'utf8');}
       console.log(`✅ ${filePath}: Removed ${fileRemovedCount} console statements`);
       removedStatements += fileRemovedCount;
     }
 
     processedFiles++;
-  } catch (error) {
+  } catch (error) {}
     console.error(`❌ Error processing ${filePath}:`, error.message);
   }
 }
@@ -118,9 +116,9 @@ async function main() {
 
   // Get all files to process;
   const allFiles = [];
-  for (const pattern of filePatterns) {
-    const files = await glob(pattern, {)
-      ignore: excludePatterns),
+  for (const pattern of filePatterns) {;
+const files = await glob(pattern, {)
+      ignore: excludePatterns)}
       cwd: process.cwd()});
     allFiles.push(...files);
   }
@@ -140,8 +138,8 @@ async function main() {
   console.log(`   - Console statements removed: ${removedStatements}`);
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
-  main();
+if (import.meta.url === = `file://${process.argv[1]}`) {
+  main();}
 }
 
 export { processFile, consolePatterns };

@@ -6,9 +6,9 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 import { Brain, Code, FlaskConical, Target, CheckCircle, Star,  Brain,  Code,  Target } from 'lucide-react';
-const AIResearchDevelopmentPage: React.FC = () => {
-  const features = [];
-  return (
+const AIResearchDevelopmentPage: React.FC = () => {;
+const features = [];
+  return (}
     {// TODO: Add content;}
 
 };

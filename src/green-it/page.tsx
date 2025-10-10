@@ -3,18 +3,15 @@ import {Leaf, Recycle, Zap, Globe, Target, CheckCircle, ArrowRight, Phone, Mail,
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
-
-const GreenITPage: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('solutions');
-
-  const tabs = [
+const GreenITPage: React.FC = () => {;
+const [activeTab, setActiveTab] = useState('solutions');
+const tabs = [
     {
       id: 'solutions',
       name: 'Green Solutions',
       icon: Leaf,
       color: 'text-green-400',
-      bgColor:     ,
+      bgColor:     }
 $4},
       id: 'benefits',
       name: 'Benefits',
@@ -28,8 +25,7 @@ idid: 'certifications',
       bgColor:     ,
 $4}
   ];
-
-  const greenSolutions = [
+const greenSolutions = [
       title: 'Energy-Efficient Data Centers',
       description: 'Design and implement energy-efficient data centers with renewable energy integration',
       icon: Zap,
@@ -88,9 +84,8 @@ titletitle: 'Environmental Monitoring',
         'Sustainability reporting',
         'Environmental compliance'
       impact: 'Achieve 100% environmental transparency',
-      pricing: 'Starting at $600/month'
-
-  const benefits = [
+      pricing: 'Starting at $600/month';
+const benefits = [
       icon: TrendingUp,
       title: 'Cost Savings',
       description: 'Reduce operational costs through energy efficiency and resource optimization',
@@ -117,9 +112,8 @@ titletitle: 'Environmental Monitoring',
         'Improved brand perception',
         'Customer loyalty increase',
         'Investor confidence boost',
-        'Talent attraction and retention'
-
-  const certifications = [
+        'Talent attraction and retention';
+const certifications = [
       name: 'ISO 14001:2015',
       description: 'Environmental Management Systems',
       status:       ,
@@ -128,9 +122,8 @@ namename: 'LEED Platinum',
       name: 'Carbon Trust Standard',
       description: 'Carbon Footprint Management',
       name: 'Green IT Certification',
-      description: 'Sustainable IT Practices',
-
-  const stats = [
+      description: 'Sustainable IT Practices',;
+const stats = [
       value: '60%',
       label: 'Carbon Footprint Reduction',
       color:       ,
@@ -142,9 +135,8 @@ valuevalue: '50%',
       color:       ,
 valuevalue: '100%',
       label: 'Renewable Energy Options',
-      color: 'text-purple-400'
-
-  const caseStudies = [
+      color: 'text-purple-400';
+const caseStudies = [
       company: 'TechCorp Manufacturing',
       industry: 'Manufacturing',
       challenge: 'High energy consumption in data centers',
@@ -193,10 +185,10 @@ valuevalue: '100%',
 
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-            {stats.map((stat, index) => (
+            {stats.map((stat, index) => (}
               <div key={index} className="text-center">
                 <div className={`w-16 h-16 ${stat.color.replace('text-', 'bg-').replace('-400', '-500/10')} rounded-full flex items-center justify-center mx-auto mb-4`}>
-                  <stat.icon className={`w-8 h-8 ${stat.color}`} />
+                  <stat.icon className={`w-8 h-8 ${stat.color} `} />
                 <div className={`text-3xl font-bold ${stat.color} mb-2`}>{stat.value}</div>
                 <div className="text-gray-300 text-sm">{stat.label}</div>
             ))}
@@ -205,12 +197,9 @@ valuevalue: '100%',
           <div className="mb-12">
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               {tabs.map((tab) => (
-                <button
-                  key={tab.id}
-                  onClick={() => setActiveTab(tab.id)}
-                  className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${
-                    activeTab === tab.id
-                      ? `${tab.bgColor} ${tab.color} border-2 border-current`
+                <button}
+                  key={tab.id} onClick={() => setActiveTab(tab.id)} className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${
+                    activeTab === = tab.id} ? `${tab.bgColor} ${tab.color} border-2 border-current`
                       : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border-2 border-transparent'
                   }`}
                 >
@@ -219,17 +208,17 @@ valuevalue: '100%',
                 </button>
 
           {/* Tab Content */}
-          {activeTab === 'solutions' && (
+          {activeTab === = 'solutions' && (
             <div className="mb-16">
               <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
                 Our Green IT Solutions
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {greenSolutions.map((solution, index) => (
+                {greenSolutions.map((solution, index) => (}
                   <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
                     <div className="flex items-start mb-4">
-                      <div className={`w-12 h-12 bg-slate-700/50 rounded-lg flex items-center justify-center mr-4`}>
-                        <solution.icon className={`w-6 h-6 ${solution.color}`} />
+                      <div className={`w-12 h-12 bg-slate-700/50 rounded-lg flex items-center justify-center mr-4`} >
+                        <solution.icon className={`w-6 h-6 ${solution.color} `} />
                       <div className="flex-1">
                         <h3 className="text-xl font-semibold text-white mb-2">{solution.title}</h3>
                         <p className="text-gray-300 text-sm mb-4">{solution.description}</p>
@@ -237,7 +226,7 @@ valuevalue: '100%',
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
                       <ul className="space-y-1">
-                        {solution.features.map((feature, featureIndex) => (
+                        {solution.features.map((feature, featureIndex) => (}
                           <li key={featureIndex} className="text-sm text-gray-300 flex items-start">
                             <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
                             {feature}
@@ -248,7 +237,7 @@ valuevalue: '100%',
                       <div className="text-sm text-gray-300">{solution.impact}</div>
                     
                     <div className="flex items-center justify-between">
-                      <div className={`text-lg font-bold ${solution.color}`}>
+                      <div className={`text-lg font-bold ${solution.color} `}>
                         {solution.pricing}
                       <a
                         href="/contact"
@@ -258,10 +247,10 @@ valuevalue: '100%',
                       </a>
           )}
 
-          {activeTab === 'benefits' && (
+          {activeTab === = 'benefits' && (
                 Benefits of Green IT
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {benefits.map((benefit, index) => (
+                {benefits.map((benefit, index) => (}
                   <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50">
                       <div className="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center mr-4">
                         <benefit.icon className="w-6 h-6 text-cyan-400" />
@@ -269,17 +258,17 @@ valuevalue: '100%',
                         <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
                         <p className="text-gray-300 mb-4">{benefit.description}</p>
                     <ul className="space-y-2">
-                      {benefit.details.map((detail, detailIndex) => (
+                      {benefit.details.map((detail, detailIndex) => (}
                         <li key={detailIndex} className="text-sm text-gray-300 flex items-start">
                           {detail}
 
-          {activeTab === 'certifications' && (
+          {activeTab === = 'certifications' && (
                 Our Certifications
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {certifications.map((cert, index) => (
+                {certifications.map((cert, index) => (}
                   <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 text-center">
                     <div className={`w-16 h-16 ${cert.color.replace('text-', 'bg-').replace('-400', '-500/10')} rounded-full flex items-center justify-center mx-auto mb-4`}>
-                      <cert.icon className={`w-8 h-8 ${cert.color}`} />
+                      <cert.icon className={`w-8 h-8 ${cert.color} `} />
                     <h3 className="text-lg font-semibold text-white mb-2">{cert.name}</h3>
                     <p className="text-gray-300 text-sm mb-3">{cert.description}</p>
                     <div className="text-green-400 text-sm font-medium">{cert.status}</div>
@@ -287,8 +276,8 @@ valuevalue: '100%',
           {/* Case Studies */}
               Success Stories
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {caseStudies.map((study, index) => (
-                      <study.icon className={`w-6 h-6 ${study.color}`} />
+              {caseStudies.map((study, index) => (}
+                      <study.icon className={`w-6 h-6 ${study.color} `} />
                       <h3 className="text-xl font-semibold text-white mb-1">{study.company}</h3>
                       <p className="text-gray-400 text-sm mb-3">{study.industry}</p>
                   
@@ -299,7 +288,7 @@ valuevalue: '100%',
                     <p className="text-gray-300 text-sm mb-3">{study.solution}</p>
                     
                     <h4 className="text-sm font-semibold text-green-400 mb-2">Results:</h4>
-                      {study.results.map((result, resultIndex) => (
+                      {study.results.map((result, resultIndex) => (}
                         <li key={resultIndex} className="text-sm text-gray-300 flex items-start">
                           {result}
 
@@ -333,12 +322,11 @@ import { Link } from 'react-router-dom';
 
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 const GreenITPage: React.FC = () => {
   return (
     <div>Coming Soon</div>
 
-  );
+  );}
 };
   const [activeTab, setActiveTab] = useState('solutions');
 const tabs = [
@@ -462,8 +450,8 @@ const tabs = [
       impac,
   t: 'Achieve 100% environmental transparency',
       pricin,
-  g: 'Starting at $600/month'
-  const benefits = [,
+  g: 'Starting at $600/month';
+const benefits = [,
 
       ico,
   n: TrendingUp,
@@ -501,8 +489,8 @@ const tabs = [
         'Improved brand perception',
         'Customer loyalty increase',
         'Investor confidence boost',
-        'Talent attraction and retention'
-  const certifications = [
+        'Talent attraction and retention';
+const certifications = [
       nam,
   e: 'ISO,
   14001:2015',
@@ -522,8 +510,8 @@ const tabs = [
       nam,
   e: 'Green IT Certification',
       descriptio,
-  n: 'Sustainable IT Practices',
-  const stats = [
+  n: 'Sustainable IT Practices',;
+const stats = [
       valu,
   e: '60%',
       labe,
@@ -550,8 +538,8 @@ const tabs = [
       labe,
   l: 'Renewable Energy Options',
       colo,
-  r: 'text-purple-400'
-  const caseStudies = [,
+  r: 'text-purple-400';
+const caseStudies = [,
 
       compan,
   y: 'TechCorp Manufacturing',
@@ -626,7 +614,7 @@ const tabs = [
             {stats.map((stat, index) => ()}"
           <div key={index} className="text-center"></div>
                 <div className={`w-16 h-16 ${stat.color.replace('text-', 'bg-').replace('-400', '-500/10')} rounded-full flex items-center justify-center mx-auto mb-4`}></div>`
-                  <stat.icon className={`w-8 h-8 ${stat.color}`} /></stat>`
+                  <stat.icon className={`w-8 h-8 ${stat.color} `} /></stat>`
                 <div className={`text-3xl font-bold ${stat.color} mb-2`}>{stat.value}</div>"
                 <div className="text-gray-300 text-sm">{stat.label}</div>
             ))}
@@ -635,13 +623,11 @@ const tabs = [
             <div className="flex flex-wrap justify-center gap-4 mb-8"></div>
               {tabs.map((tab) => ()}
           <button></button>
-                  key={tab.id}
-                  onClick={() => setActiveTab(tab.id)}`
-                  className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${}
-  // TOD,
+                  key={tab.id} onClick={() => setActiveTab(tab.id)} `
+                  className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${} // TOD,
   O: Add content;
 }
-                    activeTab === tab.id;`
+                    activeTab === = tab.id;`
                       ? `${tab.bgColor} ${tab.color} border-2 border-current`
                       : 'bg-slate-800/50 text-gray-300,
   hover:bg-slate-700/50 border-2 border-transparent'`
@@ -660,7 +646,7 @@ const tabs = [
                   <span className="font-medium">{tab.name}</span>
                 </button>
           {/* Tab Content */}
-          {activeTab === 'solutions' && ()}"
+          {activeTab === = 'solutions' && ()}"
           <div className="mb-16"></div>"
               <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text"></h2>
 // Our Green IT Solutions;
@@ -672,8 +658,8 @@ const tabs = [
           <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50,"
   hover:border-cyan-400/50 transition-all duration-300"></div>"
                     <div className="flex items-start mb-4"></div>`
-                      <div className={`w-12 h-12 bg-slate-700/50 rounded-lg flex items-center justify-center mr-4`}></div>`
-                        <solution.icon className={`w-6 h-6 ${solution.color}`} /></solution>"
+                      <div className={`w-12 h-12 bg-slate-700/50 rounded-lg flex items-center justify-center mr-4`} ></div>`
+                        <solution.icon className={`w-6 h-6 ${solution.color} `} /></solution>"
                       <div className="flex-1"></div>"
                         <h3 className="text-xl font-semibold text-white mb-2">{solution.title}</h3>"
                         <p className="text-gray-300 text-sm mb-4">{solution.description}</p>"
@@ -691,7 +677,7 @@ const tabs = [
   Impact:</div>"
                       <div className="text-sm text-gray-300">{solution.impact}</div>"
                     <div className="flex items-center justify-between"></div>`
-                      <div className={`text-lg font-bold ${solution.color}`}></div>
+                      <div className={`text-lg font-bold ${solution.color} `}></div>
                         {solution.pricing}
 
                       <a
@@ -701,7 +687,7 @@ Learn More;
 
                       </a>
           )}
-          {activeTab === 'benefits' && (}
+          {activeTab === = 'benefits' && (}
 Benefits of Green IT;"
               <div className="grid grid-cols-1,"
   md:grid-cols-2 gap-8"></div>)
@@ -716,7 +702,7 @@ Benefits of Green IT;"
                       {benefit.details.map((detail, detailIndex) => ()}"
           <li key={detailIndex} className="text-sm text-gray-300 flex items-start"></li>
                           {detail}
-{activeTab === 'certifications' && (}
+{activeTab === = 'certifications' && (}
                 Our Certifications;"
               <div className="grid grid-cols-1,
   md:grid-cols-2,"
@@ -724,7 +710,7 @@ Benefits of Green IT;"
                 {certifications.map((cert, index) => ()}"
           <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 text-center"></div>`
                     <div className={`w-16 h-16 ${cert.color.replace('text-', 'bg-').replace('-400', '-500/10')} rounded-full flex items-center justify-center mx-auto mb-4`}></div>`
-                      <cert.icon className={`w-8 h-8 ${cert.color}`} /></cert>"
+                      <cert.icon className={`w-8 h-8 ${cert.color} `} /></cert>"
                     <h3 className="text-lg font-semibold text-white mb-2">{cert.name}</h3>"
                     <p className="text-gray-300 text-sm mb-3">{cert.description}</p>"
                     <div className="text-green-400 text-sm font-medium">{cert.status}</div>
@@ -733,7 +719,7 @@ Benefits of Green IT;"
             <div className="grid grid-cols-1,"
   lg:grid-cols-2 gap-8"></div>
               {caseStudies.map((study, index) => (}`
-                      <study.icon className={`w-6 h-6 ${study.color}`} /></study>"
+                      <study.icon className={`w-6 h-6 ${study.color} `} /></study>"
                       <h3 className="text-xl font-semibold text-white mb-1">{study.company}</h3>"
                       <p className="text-gray-400 text-sm mb-3">{study.industry}</p>"
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Challeng,
@@ -782,3 +768,49 @@ Benefits of Green IT;"
 export default GreenItPage;
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>
+</>

@@ -1511,7 +1511,7 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
     monthly: number;
     yearly: number;
     currency: string;
-    trialDays: number;
+    trialDays: number;}
     setupTime: string}
     enterprise: number}
   };
@@ -1551,7 +1551,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
       monthly: 999;
       yearly: 9990;
       currency: 'USD';
-      trialDays: 7;
+      trialDays: 7;}
       setupTime: '24 hours'}
       enterprise: 4999}
     };
@@ -1595,7 +1595,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
       monthly: 599;
       yearly: 5990;
       currency: 'USD';
-      trialDays: 14;
+      trialDays: 14;}
       setupTime: '8 hours'}
       enterprise: 2499}
     };
@@ -1639,7 +1639,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
       monthly: 399;
       yearly: 3990;
       currency: 'USD';
-      trialDays: 21;
+      trialDays: 21;}
       setupTime: '6 hours'}
       enterprise: 1599}
     };
@@ -1683,7 +1683,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
       monthly: 499;
       yearly: 4990;
       currency: 'USD';
-      trialDays: 14;
+      trialDays: 14;}
       setupTime: '6 hours'}
       enterprise: 1999}
     };
@@ -1727,7 +1727,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
       monthly: 799;
       yearly: 7990;
       currency: 'USD';
-      trialDays: 14;
+      trialDays: 14;}
       setupTime: '12 hours'}
       enterprise: 2999}
     };
@@ -1771,7 +1771,7 @@ export interface EmergingTechService {;
     monthly: number;
     yearly: number;
     currency: string;
-    trialDays: number;
+    trialDays: number;}
     setupTime: string}
     enterprise: number}
   };
@@ -2244,7 +2244,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
       monthly: 999;
       yearly: 9990;
       currency: 'USD';
-      trialDays: 7;
+      trialDays: 7;}
       setupTime: '24 hours'}
       enterprise: 4999}
     };
@@ -2288,7 +2288,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
       monthly: 599;
       yearly: 5990;
       currency: 'USD';
-      trialDays: 14;
+      trialDays: 14;}
       setupTime: '8 hours'}
       enterprise: 2499}
     };
@@ -2332,7 +2332,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
       monthly: 399;
       yearly: 3990;
       currency: 'USD';
-      trialDays: 21;
+      trialDays: 21;}
       setupTime: '6 hours'}
       enterprise: 1599}
     };
@@ -2376,7 +2376,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
       monthly: 499;
       yearly: 4990;
       currency: 'USD';
-      trialDays: 14;
+      trialDays: 14;}
       setupTime: '6 hours'}
       enterprise: 1999}
     };
@@ -2420,7 +2420,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
       monthly: 799;
       yearly: 7990;
       currency: 'USD';
-      trialDays: 14;
+      trialDays: 14;}
       setupTime: '12 hours'}
       enterprise: 2999}
     };
@@ -2776,7 +2776,6 @@ export const,
 ];
   }
 ];
-;
 'Quantum computing, Biological algorithms, Bioinformatics, React, Node && Node.js, PostgreSQL, Redis, AWS'], realImplementatio,
   n: true, i,
   d: string; nam,

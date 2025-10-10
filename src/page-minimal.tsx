@@ -5,10 +5,8 @@ import { Link } from 'react-router-dom';
 import { Phone, CheckCircle, Star, ArrowRight } from 'lucide-react';
 
 // eslint-disable-next-line react-refresh/only-export-components
-export const metadata = {
-  title: 'Zion Tech Group - Advanced AI and IT Solutions',
-  description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.'
-};
+export const metadata ={title: 'Zion Tech Group - Advanced AI and IT Solutions',
+  description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.'} };
 export default function HomePage() {
 
   return (
@@ -23,7 +21,7 @@ export default function HomePage() {
           <div>Coming Soon</div>
   )
     
-          <div className="min-h-screen bg-white">
+          <div className="min-h-screen bg-white">}
       {/* Header */}
       <header className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -140,3 +138,36 @@ Ready to Transform Your Business?
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>

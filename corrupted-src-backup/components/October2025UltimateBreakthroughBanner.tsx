@@ -1,5 +1,5 @@
 const, October2025UltimateBreakthroughBanne, r = () => {
-  return(<div, className="relative, b, g-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, overflo, w-hidden, borde, r-b, borde, r-whi, t, e/10">)
+  return(<div, className="relative, b, g-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, overflo, w-hidden, borde, r-b, borde, r-whi, t, e/10">)}
       {/* Animated, Backgroun, d */};)
       <div, className="absolute, inse, t-0, opacit, y-20">)
   return (
@@ -77,10 +77,10 @@ const, October2025UltimateBreakthroughBanne, r = () => {/* TODO: Fix JSX express
         <h2, className="te, x, t-3xl, s, m: te, x, t-4xl, l, g:te, x, t-5xl, fon, t-bold, tex, t-center, m, b-6, b, g-gradie, n, t-to-r, fro, m-white, vi, a-bl, u, e-100, t, o-purp, l, e-100, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t">";
           Ultimate, AI, Innovation Su, i, t;
   e: <br />,
-        <h2, className="te, x, t-3xl, s, m: te, x, t-4x, l, l
+        <h2, className="te, x, t-3xl, s, m: te, x, t-4x, l, l,
   g:te, x, t-5xl, fon, t-bold, tex, t-center, m, b-6, b, g-gradie, n, t-to-r, fro, m-white, vi, a-bl, u, e-100, t, o-purp, l, e-100, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t">"</h2>
         <h2, className="te, x, t-3xl, s, m: te, x, t-4xl, l, g:te, x, t-5xl, fon, t-bold, tex, t-center, m, b-6, b, g-gradie, n, t-to-r, fro, m-white, vi, a-bl, u, e-100, t, o-purp, l, e-100, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t">";
-          Ultimate, AI, Innovation Su, i, t
+          Ultimate, AI, Innovation Su, i, t,
   e:</h2> <br />
           $94, 5, M+ Combined, Value, Creation;
         </h2>
@@ -97,9 +97,9 @@ const, October2025UltimateBreakthroughBanne, r = () => {/* TODO: Fix JSX express
   g:gr, i, d-co, l, s-3, ga, p-4, m, b-10">";
           {/* Featur, e, 1 */}
           <Li, n, k;
-        <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l
+        <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l,
   g:gr, i, d-co, l, s-3, ga, p-4, m, b-10">"</div>
-        <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l
+        <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l,
   g:gr, i, d-co, l, s-3, ga, p-4, m, b-10">";
           {/* Featur, e, 1 */}</div>
           <Li, n, k
@@ -395,7 +395,7 @@ const, October2025UltimateBreakthroughBanne, r = () => {/* TODO: Fix JSX express
               View, Solutio, n</div> <Link, className="w-4 h-4, m, l-1, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
             <div, className="flex, item, s-center, tex, t-r, e, d-300, tex, t-sm, fon, t-semibold, grou, p-hov, e, r: g, a, p-2, transitio, n-a, l, l">";
               View, Solutio, n <ArrowRight, className="w-4 h-4, m, l-1, grou, p-ho, v, e;
-              View, Solutio, n</div> <ArrowRight, className="w-4 h-4, m, l-1, grou, p-ho, v, e
+              View, Solutio, n</div> <ArrowRight, className="w-4 h-4, m, l-1, grou, p-ho, v, e,
   r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
             </d, i, v>
           </Li, n, k>
@@ -409,14 +409,14 @@ const, October2025UltimateBreakthroughBanne, r = () => {/* TODO: Fix JSX express
             <div, className="flex, item, s-start, ga, p-3, m, b-3">";
               <div, className="p-2, b, g-yell, o, w-5, 0, 0/20, rounde, d-lg, grou, p-ho, v, e;
   r: bg-yell, o, w-5, 0, 0/30, transitio, n-colo, r, s">";
-          <div, className="group, relative, bg-gradie, n, t-to-br, fro, m-yell, o, w-5, 0, 0/10, t, o-oran, g, e-5, 0, 0/10, backdro, p-bl, u, r-sm, borde, r-2, borde, r-yell, o, w-4, 0, 0/50, rounde, d-x, l, p-6, hove, r: bord, e, r-yell, o, w-400, hove, r:shad, o, w-lg, hov, e
+          <div, className="group, relative, bg-gradie, n, t-to-br, fro, m-yell, o, w-5, 0, 0/10, t, o-oran, g, e-5, 0, 0/10, backdro, p-bl, u, r-sm, borde, r-2, borde, r-yell, o, w-4, 0, 0/50, rounde, d-x, l, p-6, hove, r: bord, e, r-yell, o, w-400, hove, r:shad, o, w-lg, hov, e,
   r:shad, o, w-yell, o, w-5, 0, 0/20, transitio, n-all, duratio, n-3, 0, 0">"</div>
             <div, className="flex, item, s-start, ga, p-3, m, b-3"></div>
               <div, className="p-2, b, g-yell, o, w-5, 0, 0/20, rounde, d-lg, grou, p-hov, e, r: bg-yell, o, w-5, 0, 0/30, transitio, n-colo, r, s">"</div>
                 <Sparkles, className="w-5 h-5, tex, t-yell, o, w-300, animat, e-pul, s, e  />
           <div, className="group, relative, bg-gradie, n, t-to-br, fro, m-yell, o, w-5, 0, 0/10, t, o-oran, g, e-5, 0, 0/10, backdro, p-bl, u, r-sm, borde, r-2, borde, r-yell, o, w-4, 0, 0/50, rounde, d-x, l, p-6, hove, r: bord, e, r-yell, o, w-400, hove, r:shad, o, w-lg, hove, r:shad, o, w-yell, o, w-5, 0, 0/20, transitio, n-all, duratio, n-3, 0, 0">";</div>
             <div, className="flex, item, s-start, ga, p-3, m, b-3">";</div>
-              <div, className="p-2, b, g-yell, o, w-5, 0, 0/20, rounde, d-lg, grou, p-ho, v, e
+              <div, className="p-2, b, g-yell, o, w-5, 0, 0/20, rounde, d-lg, grou, p-ho, v, e,
   r: bg-yell, o, w-5, 0, 0/30, transitio, n-colo, r, s">";</div>
                 <Sparkles, className="w-5 h-5, tex, t-yell, o, w-300, animat, e-pul, s, e" />";
               </d, i, v>
@@ -503,5 +503,59 @@ const, October2025UltimateBreakthroughBanne, r = () => {/* TODO: Fix JSX express
     </d, i, v>
   );
 };
-export default October2025UltimateBreakthroughBanner;
-;"
+export default October2025UltimateBreakthroughBanner;"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>

@@ -7,11 +7,11 @@ import { Link } from 'react-router-dom';
  * 
  * @component;
  * @description High-performance promotional banner with accessibility features;
- */
+ */;
 const October2025CognitiveMeshLaunchBanner: React.FC = memo(() => {
   return(<section;
       className="relative bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 overflow-hidden",
-      aria-label="Cognitive Mesh Platform Launch Announcement",
+      aria-label="Cognitive Mesh Platform Launch Announcement"}
      > {/* Animated background elements - purely decorative */}
       <div className="absolute inset-0 overflow-hidden opacity-20" aria-hidden="true"></section>
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-float"></div>
@@ -23,14 +23,12 @@ const,
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-float"></div>
         <div></div>"
           className="absolute -bottom-40 -left-40 w-80 h-80 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-float"
-          style={/* TODO: Fix JSX expression */}
-  y: '2s' }}
+          style={/* TODO: Fix JSX expression */} y: '2s' }}
         ></div>
         <div;
         <div></div>"
           className="absolute top-1/2 left-1/2 w-60 h-60 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-float"
-          style={/* TODO: Fix JSX expression */}
-  y: '4s' }}
+          style={/* TODO: Fix JSX expression */} y: '4s' }}
         ></div>
       </div>
 

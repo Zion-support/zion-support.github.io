@@ -5,17 +5,15 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 
-export default function APIDocsPage() {
-  const [copiedCode, setCopiedCode] = useState<string | null>(null);
+export default function APIDocsPage() {;
+const [copiedCode, setCopiedCode] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
-
-  const copyToClipboard = (code: string, id: string) => {
+const copyToClipboard = (code: string, id: string) => {
     navigator.clipboard.writeText(code);
     setCopiedCode(id);
-    setTimeout(() => setCopiedCode(null), 2000);
+    setTimeout(() => setCopiedCode(null), 2000);}
   };
-
-  const apiEndpoints = [
+const apiEndpoints = [
     {
       title: 'AI Services',
       description: 'Artificial Intelligence and Machine Learning APIs',
@@ -31,7 +29,7 @@ export default function APIDocsPage() {
   -H "Content-Type: application/json" \\
   -d '{
     "text": "Your text to analyze",
-    "features": ["sentiment", "entities", "key_phrases"]
+    "features": ["sentiment", "entities", "key_phrases"]}
   }'`
         },
         {
@@ -44,7 +42,7 @@ export default function APIDocsPage() {
   -H "Content-Type: application/json" \\
   -d '{
     "image_url": "https://example.com/image.jpg",
-    "features": ["objects", "faces", "text"]
+    "features": ["objects", "faces", "text"]}
   }'`
         }
       ]
@@ -68,7 +66,7 @@ export default function APIDocsPage() {
     "config": {
       "cpu": "2",
       "memory": "4GB",
-      "instances": 3
+      "instances": 3}
     }
   }'`
         }
@@ -90,20 +88,19 @@ export default function APIDocsPage() {
   -d '{
     "dataset_id": "dataset_123",
     "operations": ["aggregate", "filter", "transform"],
-    "output_format": "json"
+    "output_format": "json"}
   }'`
         }
       ]
     }
   ];
-
-  const filteredEndpoints = apiEndpoints.map(category => ({
+const filteredEndpoints = apiEndpoints.map(category => ({
     ...category,
     endpoints: category.endpoints.filter(endpoint => 
       endpoint.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       endpoint.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       endpoint.path.toLowerCase().includes(searchQuery.toLowerCase())
-    )
+    )}
   })).filter(category => category.endpoints.length > 0);
 
   return (
@@ -116,34 +113,19 @@ export default function APIDocsPage() {
       <Navigation />
       
       {/* Hero Section */}
-<<<<<<< HEAD
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl font-bold text-white mb-6">
-=======
+
       <section className="relative py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
+
             API Documentation
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Complete API documentation for Zion Tech Group's AI and IT solutions. 
             Explore endpoints, authentication, and integration guides.
           </p>
-<<<<<<< HEAD
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
-              <Code className="mr-2 h-5 w-5" />
-              Get Started
-            </button>
-            <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-              <Download className="mr-2 h-5 w-5" />
-              Download SDK
-            </button>
-          </div>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
+
+
         </div>
       </section>
 
@@ -193,7 +175,7 @@ export default function APIDocsPage() {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">API Endpoints</h2>
           <div className="space-y-8">
-            {filteredEndpoints.map((category, categoryIndex) => (
+            {filteredEndpoints.map((category, categoryIndex) => (}
               <div key={categoryIndex} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
                 <div className="flex items-center gap-4 mb-8">
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
@@ -206,24 +188,23 @@ export default function APIDocsPage() {
                 </div>
                 
                 <div className="space-y-6">
-                  {category.endpoints.map((endpoint, endpointIndex) => (
+                  {category.endpoints.map((endpoint, endpointIndex) => (}
                     <div key={endpointIndex} className="bg-white/5 rounded-xl p-6 border border-white/10">
                       <div className="flex items-center justify-between mb-4">
                         <div className="flex items-center gap-4">
                           <span className={`px-3 py-1 rounded-full text-sm font-medium ${
-                            endpoint.method === 'POST' 
+                            endpoint.method === = 'POST' 
                               ? 'bg-green-500/20 text-green-400' 
-                              : 'bg-blue-500/20 text-blue-400'
-                          }`}>
+                              : 'bg-blue-500/20 text-blue-400'} }`}>
                             {endpoint.method}
                           </span>
                           <code className="text-purple-400 font-mono">{endpoint.path}</code>
                         </div>
                         <button
-                          onClick={() => copyToClipboard(endpoint.code, `${categoryIndex}-${endpointIndex}`)}
+                          onClick={() => copyToClipboard(endpoint.code, `${categoryIndex} -${endpointIndex}`)}
                           className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
                         >
-                          {copiedCode === `${categoryIndex}-${endpointIndex}` ? (
+                          {copiedCode === = `${categoryIndex}-${endpointIndex}` ? (
                             <>
                               <Check className="w-4 h-4" />
                               Copied!
@@ -277,3 +258,12 @@ export default function APIDocsPage() {
     </div>
   );
 }
+
+
+
+
+
+
+
+
+</div></div></div></div></div></div></div></div>

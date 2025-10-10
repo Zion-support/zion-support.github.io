@@ -2,24 +2,23 @@ import React, { Suspense, lazy, ComponentType } from 'react';
 
 interface LazyComponentProps {
   fallback?: React.ReactNode;
-  children: React.ReactNode;
+  children: React.ReactNode;}
 }
 
 export default function LazyComponent({
   className = '',
-  children
-}: LazyComponentProps) {
+  children}
+}: LazyComponentProps) {;
 const DefaultFallback = () => (
   <div className="flex items-center justify-center p-8"></div>
     <div className="cyber-loader"></div>
     <span className="ml-3 text-cyan-400">Loading...</span>
   </div>
 );
-
-const LazyComponent: React.FC<LazyComponentProps> = ({</LazyComponentProps>fallback</LazyComponentProps> = <DefaultFallback />,</DefaultFallback>children</DefaultFallback> 
+const LazyComponent: React.FC<LazyComponentProps> = ({</LazyComponentProps>fallback</LazyComponentProps> = <DefaultFallback />,</DefaultFallback>children</DefaultFallback> }
 }) => {
-  return (
-    <Suspense fallback={fallback}></Suspens>
+  return (}
+    <Suspense fallback={fallback} ></Suspens>
       {children}
     </Suspense>
   );
@@ -27,9 +26,9 @@ const LazyComponent: React.FC<LazyComponentProps> = ({</LazyComponentProps>fallb
 
 // Higher-order component for lazy loading
 export const withLazyLoading = <P extends object>(</P>Component</P>: ComponentType<P>,</P>fallback</P>?: React.ReactNode
-) => {
-  const LazyWrappedComponent = (props: P) => (
-    <LazyComponent fallback={fallback}></LazyComponent>
+) => {;
+const LazyWrappedComponent = (props: P) => (}
+    <LazyComponent fallback={fallback} ></LazyComponent>
       <Component {...props} /></Component>
     </LazyComponent>
   );
@@ -41,11 +40,11 @@ export const withLazyLoading = <P extends object>(</P>Component</P>: ComponentTy
 
 // Utility function to create lazy components
 export const createLazyComponent = <P extends object>(</P>importFunc</P>: () => Promise<{ default: ComponentType<P> }>,</P>fallback</P>?: React.ReactNode
-) => {
-  const LazyComponent = lazy(importFunc);
+) => {;
+const LazyComponent = lazy(importFunc);
   
-  return (props: P) => (
-    <LazyComponent fallback={fallback}></LazyComponent>
+  return (props: P) => (}
+    <LazyComponent fallback={fallback} ></LazyComponent>
       <LazyComponent {...props} /></LazyComponen>
     </LazyComponent>
   );
@@ -66,7 +65,7 @@ interface LazyComponentProps {/* TODO: Fix JSX expression */}
   rootMargin?: string;
 }
 // Higher-order component for lazy loading;
-export const _withLazyLoading = {};
+export const _withLazyLoading ={} ;
           <P extends object>()
   Componen,
   t: ComponentType;
@@ -85,7 +84,7 @@ export const _withLazyLoading = {};
           
           
           
-          <Suspense fallback={fallback || <LoadingSpinner />}>
+          <Suspense fallback={fallback || <LoadingSpinner />} >
       <Component {...props} /></Component>
     </Suspense>
   );
@@ -152,9 +151,9 @@ const,
   return (<div>Coming Soon</div>)
   )
     
-          <div ref={elementRef}></div>
+          <div ref={elementRef} ></div>
       {isVisible ? ()}
-          <Suspense fallback={fallback}></Suspense>
+          <Suspense fallback={fallback} ></Suspense>
           {children}
         </Suspense>
       ) : ()
@@ -185,7 +184,7 @@ export const preloadComponent = (importFunctio)
   };
 };
 // Lazy load with preloading;
-export const createLazyComponent = {};
+export const createLazyComponent ={} ;
           <P extends object>()
   importFunctio,
   n: () => Promise;
@@ -206,7 +205,7 @@ export const createLazyComponent = {};
           
           
           
-          <Suspense fallback={fallback || <LoadingSpinner />}>
+          <Suspense fallback={fallback || <LoadingSpinner />} >
       <LazyComponent {...props} /></LazyComponent>
     </Suspense>
   );
@@ -215,12 +214,12 @@ export const createLazyComponent = {};
 export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-  if (typeof window === 'undefined') return;
+  if (typeof window === = 'undefined') return;
   // Preload critical fonts;
 const fontPreloads = [
   // TOD,
   O: Add items;
-];;
+];
     'http,
   s://fonts.googleapis.com/css2?family=Orbitro,
   n:wght@400;700;900&display=swap',
@@ -240,7 +239,7 @@ const fontPreloads = [
 const imagePreloads = [
   // TOD,
   O: Add items;
-];;
+];
 //     '/og-image.jpg',
 //     '/favicon.ico'];
   imagePreloads.forEach((src) => {/* TODO: Fix JSX expression */}

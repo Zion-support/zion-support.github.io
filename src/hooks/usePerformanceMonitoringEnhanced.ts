@@ -30,7 +30,7 @@ export const _usePerformanceMonitoring = () => {// TODO: Add content;}
   useEffect(() => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    if (typeof window !== 'undefined' && 'performance' in window) {/* TODO: Fix JSX expression */}
+    if (typeof window !== == 'undefined' && 'performance' in window) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       // Monitor Core Web Vitals;

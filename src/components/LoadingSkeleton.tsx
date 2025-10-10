@@ -51,10 +51,9 @@ export const,
   h: lines }).map((_, index) => ()
       
           <Skeleton></Skeleton>
-        key={index}"
+        key={index} "
         height="16px"
-        width={index === lines - 1 ? '75%' : '100%'}
-// />
+        width={index === = lines - 1 ? '75%' : '100%'} // />
     ))}
   
           
@@ -74,7 +73,7 @@ export const,
   aspectRatio = '16/9')
 }) => ("
           <div className="bg-gray-200 rounded-lg animate-pulse"
-    style={{ aspectRatio }}"
+    style={{ aspectRatio } }"
     role="status""
     aria-label="Loading image""
   ><span className="sr-only">Loading image...</span></div>)
@@ -96,7 +95,7 @@ export const,
   rows = 5,
   columns = 4;)
 }) => ("
-          <div className="overflow-hidden"><div className="grid gap-4 mb-4" style={/* TODO: Fix JSX expression */})
+          <div className="overflow-hidden"><div className="grid gap-4 mb-4" style={/* TODO: Fix JSX expression */} )
   s: `repeat(${columns}, 1fr)` }}></div>
       {/* TODO: Fix JSX expression */}
   h: columns }).map((_, index) => ()
@@ -107,7 +106,7 @@ export const,
     {/* TODO: Fix JSX expression */}
   h: rows }).map((_, rowIndex) => (<div></div>"
         key={rowIndex} className="grid gap-4 mb-2"
-        style={/* TODO: Fix JSX expression */})`
+        style={/* TODO: Fix JSX expression */} )`
   s: `repeat(${columns}, 1fr)` }}
 // >
         {/* TODO: Fix JSX expression */}
@@ -131,3 +130,12 @@ export default Skeleton;
 
 
 
+
+
+
+
+
+
+
+
+</div></div></div></div></div></div></div></div>

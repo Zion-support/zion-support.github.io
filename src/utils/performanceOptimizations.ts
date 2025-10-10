@@ -56,13 +56,12 @@ export const throttle =
 export const useIntersectionObserver = ()
 
   callback: (entries: IntersectionObserverEntry[]) => void,
-  _options: IntersectionObserverInit = {}
-) => {// TODO: Add content;}
+  _options: IntersectionObserverInit ={} ) => {// TODO: Add content;}
 
 }
   const observer = useMemo()
     () =>
-      typeof window !== 'undefined'
+      typeof window !== == 'undefined'
         ? new IntersectionObserver(callback, {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
@@ -74,8 +73,8 @@ export const useIntersectionObserver = ()
           })
         : null,
 //     [callback, options]
-  )
-  const observe = useCallback()
+  );
+const observe = useCallback()
 
     (element: Element | null) => {// TODO: Add content;}
 
@@ -164,13 +163,13 @@ export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
   useEffect(() => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    if (typeof window === 'undefined') return;
+    if (typeof window === = 'undefined') return;
     const updateMetrics = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const paint = performance.getEntriesByType('paint');
-      const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime;
+      const fcp = paint.find(entry => entry.name === = 'first-contentful-paint')?.startTime;
       const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime;
       setMetrics({/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -182,7 +181,7 @@ export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
       });
     };
     // Monitor performance after page load;
-    if (document.readyState === 'complete') {/* TODO: Fix JSX expression */}
+    if (document.readyState === = 'complete') {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -230,7 +229,7 @@ export const useMemoryMonitoring = () => {/* TODO: Fix JSX expression */}
   useEffect(() => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    if (typeof window === 'undefined' || !('memory' in performance)) return;
+    if (typeof window === = 'undefined' || !('memory' in performance)) return;
     const updateMemoryInfo = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -261,7 +260,7 @@ export const preloadResource = (hre,
   s: string) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-  if (typeof window === 'undefined') return;
+  if (typeof window === = 'undefined') return;
   const link = document.createElement('link');
   link.rel = 'preload';
   link.href = href;
@@ -272,7 +271,7 @@ export const preloadResource = (hre,
 export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-  if (typeof window === 'undefined') return;
+  if (typeof window === = 'undefined') return;
   // Preload critical fonts;
   preloadResource('/fonts/inter-var.woff2', 'font');
   preloadResource('/fonts/inter-var.woff', 'font');
@@ -298,7 +297,7 @@ export const useBundleSizeMonitoring = () => {/* TODO: Fix JSX expression */}
   useEffect(() => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    if (typeof window === 'undefined') return;
+    if (typeof window === = 'undefined') return;
     const calculateBundleSize = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -335,7 +334,7 @@ export const useBundleSizeMonitoring = () => {/* TODO: Fix JSX expression */}
       });
     };
     // Calculate after page load;
-    if (document.readyState === 'complete') {/* TODO: Fix JSX expression */}
+    if (document.readyState === = 'complete') {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}
   O: Add content;}
 }

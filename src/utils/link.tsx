@@ -35,13 +35,7 @@ export const Link: React.FC;
   )
     
           <a></a>
-      href={href}
-      className={className}
-      target={target}
-      rel={rel}
-      onClick={handleClick}
-      aria-label={ariaLabel}
-      {...props}
+      href={href} className={className} target={target} rel={rel} onClick={handleClick} aria-label={ariaLabel} {...props}
 // >
       {children}
     

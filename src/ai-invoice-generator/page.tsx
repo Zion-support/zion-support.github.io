@@ -4,15 +4,13 @@ import React, { memo } from 'react';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 import SEOOptimizer from '../../components/SEOOptimizer';
-
-
-const AIInvoiceGeneratorPage: React.FC = memo(() => {
-  const features = [
+const AIInvoiceGeneratorPage: React.FC = memo(() => {;
+const features = [
     {
       icon: Brain,
       title: 'AI-Powered Invoice Generation',
       description: 'Automatically generate professional invoices using AI that understands your business context and client needs.',
-      benefits: ['Smart template selection', 'Automatic data population', 'Context-aware pricing', 'Brand consistency']
+      benefits: ['Smart template selection', 'Automatic data population', 'Context-aware pricing', 'Brand consistency']}
     },
       icon: Zap,
       title: 'Instant Processing',
@@ -36,8 +34,7 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
       benefits: ['Mobile-first design', 'Offline capability', 'Touch optimization', 'Push notifications']
     }
   ];
-
-  const pricingPlans = [
+const pricingPlans = [
       name: 'Starter',
       price: '$29',
       period: '/month',
@@ -76,9 +73,8 @@ namename: 'Enterprise',
         'Custom workflows',
         'SLA guarantee',
         'On-premise deployment'
-      color: 'green'
-
-  const testimonials = [
+      color: 'green';
+const testimonials = [
       name: 'Sarah Johnson',
       role: 'Freelance Designer',
       company: 'Creative Studio',
@@ -94,9 +90,8 @@ namename: 'Emily Rodriguez',
       role: 'Accountant',
       company: 'Finance Pro',
       content: 'Compliance features are outstanding. Never worry about tax calculations or regulatory requirements again.',
-      avatar: '👩‍💻'
-
-  const useCases = [
+      avatar: '👩‍💻';
+const useCases = [
       title: 'Freelancers & Consultants',
       description: 'Streamline invoicing for project-based work with AI that understands your service offerings.',
       icon: Briefcase,
@@ -119,8 +114,7 @@ namename: 'Emily Rodriguez',
       <SEOOptimizer
         title="AI Invoice Generator - Automated Invoice Creation | Zion Tech Group"
         description="Generate professional invoices instantly with AI-powered automation. Save time, reduce errors, and improve cash flow with our intelligent invoice generation platform."
-        keywords={['AI invoice generator', 'automated invoicing', 'invoice automation', 'AI billing', 'smart invoicing', 'invoice management', 'business automation']}
-        canonicalUrl="https://ziontechgroup.com/ai-invoice-generator"
+        keywords={['AI invoice generator', 'automated invoicing', 'invoice automation', 'AI billing', 'smart invoicing', 'invoice management', 'business automation']} canonicalUrl="https://ziontechgroup.com/ai-invoice-generator"
       />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -183,14 +177,14 @@ namename: 'Emily Rodriguez',
                   to revolutionize your billing process.
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {features.map((feature, index) => (
+                {features.map((feature, index) => (}
                   <div key={index} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300">
                     <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4">
                       <feature.icon className="w-6 h-6 text-purple-400" />
                     <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                     <p className="text-gray-300 mb-4">{feature.description}</p>
                     <ul className="space-y-2">
-                      {feature.benefits.map((benefit, benefitIndex) => (
+                      {feature.benefits.map((benefit, benefitIndex) => (}
                         <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                           {benefit}
@@ -205,7 +199,7 @@ namename: 'Emily Rodriguez',
                   adapts to your specific needs and industry requirements.
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                {useCases.map((useCase, index) => (
+                {useCases.map((useCase, index) => (}
                   <div key={index} className="text-center group">
                     <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                       <useCase.icon className="w-8 h-8 text-white" />
@@ -213,7 +207,7 @@ namename: 'Emily Rodriguez',
                     <p className="text-gray-300 mb-4">{useCase.description}</p>
                     <ul className="space-y-2 text-left">
                       {useCase.benefits.map((benefit, benefitIndex) => (
-
+}
           {/* Pricing Section */}
           <section id="pricing" className="py-16 bg-slate-800/30">
                   Simple, Transparent Pricing
@@ -221,16 +215,15 @@ namename: 'Emily Rodriguez',
                   with no hidden fees or setup costs.
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                {pricingPlans.map((plan, index) => (
+                {pricingPlans.map((plan, index) => (}
                   <div key={index} className={`relative rounded-lg p-8 ${
                     plan.popular 
                       ? 'bg-gradient-to-br from-purple-500/20 to-pink-500/20 border-2 border-purple-400' 
-                      : 'bg-slate-800/50 border border-slate-700'
-                  }`}>
+                      : 'bg-slate-800/50 border border-slate-700'} }`}>
                     {plan.popular && (
                       <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                         <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-1 rounded-full text-sm font-medium">
-                          Most Popular
+                          Most Popular}
                     )}
                     
                     <div className="text-center mb-6">
@@ -241,7 +234,7 @@ namename: 'Emily Rodriguez',
                         <span className="text-gray-400 ml-1">{plan.period}</span>
                     
                     <ul className="space-y-4 mb-8">
-                      {plan.features.map((feature, featureIndex) => (
+                      {plan.features.map((feature, featureIndex) => (}
                         <li key={featureIndex} className="flex items-center">
                           <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                           <span className="text-gray-300">{feature}</span>
@@ -251,13 +244,12 @@ namename: 'Emily Rodriguez',
                         : 'bg-slate-700 text-white hover:bg-slate-600'
                       Get Started
                     </button>
-
-          {/* Testimonials Section */}
+} {/* Testimonials Section */}
                   Loved by Businesses Worldwide
                   See how our AI invoice generator is transforming businesses across industries.
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {testimonials.map((testimonial, index) => (
+                {testimonials.map((testimonial, index) => (}
                   <div key={index} className="bg-slate-800/50 rounded-lg p-6">
                     <div className="flex items-center mb-4">
                       <div className="text-2xl mr-3">{testimonial.avatar}</div>
@@ -265,7 +257,7 @@ namename: 'Emily Rodriguez',
                         <div className="font-semibold text-white">{testimonial.name}</div>
                         <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
                     <div className="flex mb-4">
-                      {[...Array(testimonial.rating)].map((_, i) => (
+                      {[...Array(testimonial.rating)].map((_, i) => (}
                         <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     <p className="text-gray-300 italic">"{testimonial.content}"</p>
 
@@ -297,3 +289,51 @@ import { Helmet } from 'react-helmet-async';
 import { FileText, DollarSign, Clock, CheckCircle, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, Award, Lock, Database, Cloud, Code, Smartphone, Settings, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
 
 export default AIInvoiceGeneratorPage;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>

@@ -5,9 +5,9 @@ import fs from 'fs';
 // // Read the open PRs data;
 try {
 //   const prData = fs.readFileSync('open_prs_current.json', 'utf8');
-  openPRs = JSON.parse(prData);
+  openPRs = JSON.parse(prData);}
 //   } catch (error) {
-//   process.exit(1);
+//   process.exit(1);}
 }
 
 // Function to safely merge a PR branch;
@@ -18,7 +18,7 @@ function mergePR(pr) {
 
 //   //   try {
     // Check if branch exists;
-    try {
+    try {}
       execSync(`git show-ref --verify --quiet refs/remotes/origin/${branchName}`)
         { stdio: 'pipe' }
 try {/* TODO: Fix JSX expression */}
@@ -38,8 +38,8 @@ function mergePR(pr) {/* TODO: Fix JSX expression */}
 //     execSync(`git fetch origin ${branchName}`, { stdio: 'inherit' });
 
     // Check for merge conflicts;
-//     try {
-      execSync(`git merge --no-commit --no-ff origin/${branchName}`, {)
+//     try {}
+      execSync(`git merge --no-commit --no-ff origin/${branchName}`, {)}
         stdio: 'pipe')});
 //       // Complete the merge;
       execSync(`git merge --no-ff origin/${branchName} -m "Merge PR #${prNumber}: ${prTitle}"`)
@@ -47,17 +47,17 @@ function mergePR(pr) {/* TODO: Fix JSX expression */}
       );
 //       return true;
     } catch (mergeError) {
-//       // Reset the merge attempt;
+//       // Reset the merge attempt;}
       execSync('git merge --abort', { stdio: 'pipe' });
 
       // Try to resolve conflicts automatically;
-      try {
+      try {}
 //         execSync(`git merge origin/${branchName} -X theirs --no-ff -m "Auto-merge PR #${prNumber}: ${prTitle}"`)
           { stdio: 'inherit' }
         );
 //         return true;
       } catch (resolveError) {
-//         //         // Reset to clean state;
+//         //         // Reset to clean state;}
         execSync('git reset --hard HEAD', { stdio: 'pipe' });
     // Fetch the latest changes;`
 //     execSync(`git fetch origin ${branchName}`, {/* TODO: Fix JSX expression */})
@@ -99,7 +99,7 @@ for (const pr of openPRs) {
     prNumber: pr.number;)
     title: pr.title;),
     branch: pr.head.ref),
-    success: success),
+    success: success)}
 for (const pr of openPRs) {/* TODO: Fix JSX expression */}
   });
 
@@ -109,22 +109,19 @@ for (const pr of openPRs) {/* TODO: Fix JSX expression */}
 }
 
 // Create summary report;
-const summary = {
-  totalPRs: openPRs.length;
+const summary ={totalPRs: openPRs.length;
   successfulMerges: successCount;
   failedMerges: failCount;
   results: results;
-  timestamp: new Date().toISOString(),
-const summary = {/* TODO: Fix JSX expression */}
-};
+  timestamp: new Date().toISOString()} const summary ={/* TODO: Fix JSX expression */} };
 
 fs.writeFileSync('pr-merge-results.json', JSON.stringify(summary, null, 2));
 
 // // // // // Push changes to main if there were successful merges;
 if (successCount > 0) {
-  try {
+  try {}
 //     execSync('git push origin main', { stdio: 'inherit' });
-//     } catch (error) {
+//     } catch (error) {}
 if (successCount > 0) {/* TODO: Fix JSX expression */}
   o: 'inherit' });
 //     } catch (error) {/* TODO: Fix JSX expression */}

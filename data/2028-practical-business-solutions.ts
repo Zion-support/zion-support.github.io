@@ -11,7 +11,7 @@
   contactInfo: unknown;
     mobile: string;
     email: string;
-export interface PracticalBusinessSolution2028 {;,
+export interface PracticalBusinessSolution2028 {;}
     address: string}
   i,
   d: string;
@@ -47,7 +47,7 @@ export interface PracticalBusinessSolution2028 {/* TODO: Fix JSX expression */}
   taglin,
   e: string;
   pric,
-  e: string,,
+  e: string,
   descriptio,
   n: string;
   feature,
@@ -170,7 +170,6 @@ export const,
     }
   }
 ];
-;
     id: "2028-practical-business-solution"
     name: "2028 Practical Business Solution Platform",
     tagline: "Practical business solutions for 2028",

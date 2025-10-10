@@ -880,7 +880,6 @@ export const,
 export interface InnovativeMicroSaas {/* TODO: Fix JSX expression */}
   }
 ];
-;
       'AI-powered sentiment analysis',
       'Multi-channel feedback collection',
     id: 'ai - powered - customer - feedback - analyzer'
@@ -2275,7 +2274,7 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [;
     roi: 'Average customer sees 300% ROI within 3 months through reduced processing time and improved accuracy.';
     competitors: ['Bill.comExpensifyReceipt BankSage IntacctNetSuite'];
     marketSize: '$2.8 B invoice processing market';
-    growthRate: '140% annual growth';
+    growthRate: '140% annual growth';}
     variant: 'ai-futuristic'}
     contactInfo: {}
       mobile: '+1 302 464 0950';
@@ -2317,7 +2316,7 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [;
     roi: 'Average customer sees 400% ROI within 6 months through reduced costs and improved efficiency.';
     competitors: ['OpenLawClauseAgrelloLexonMonax'];
     marketSize: '$1.2 B smart contract market';
-    growthRate: '200% annual growth';
+    growthRate: '200% annual growth';}
     variant: 'quantum-blockchain'}
     contactInfo: {}
       mobile: '+1 302 464 0950';
@@ -2359,7 +2358,7 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [;
     roi: 'Average customer sees 250% ROI within 4 months through improved customer satisfaction and product decisions.';
     competitors: ['QualtricsSurveyMonkeyTypeformGetFeedbackSurveyGizmo'];
     marketSize: '$3.5 B feedback management market';
-    growthRate: '160% annual growth';
+    growthRate: '160% annual growth';}
     variant: 'ai-futuristic'}
     contactInfo: {}
       mobile: '+1 302 464 0950';
@@ -2401,7 +2400,7 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [;
     roi: 'Average customer sees 200% ROI within 3 months through improved engagement and time savings.';
     competitors: ['BufferHootsuiteLaterSprout SocialAgorapulse'];
     marketSize: '$4.2 B social media management market';
-    growthRate: '180% annual growth';
+    growthRate: '180% annual growth';}
     variant: 'ai-futuristic'}
     contactInfo: {}
       mobile: '+1 302 464 0950';
@@ -2443,7 +2442,7 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [;
     roi: 'Average customer sees 300% ROI within 4 months through improved project efficiency and team productivity.';
     competitors: ['AsanaMonday.comClickUpTrelloBasecamp'];
     marketSize: '$5.8 B project management market';
-    growthRate: '150% annual growth';
+    growthRate: '150% annual growth';}
     variant: 'ai-futuristic'}
     contactInfo: {}
       mobile: '+1 302 464 0950';

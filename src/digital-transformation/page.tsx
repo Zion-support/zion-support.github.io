@@ -6,9 +6,9 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 import { Target, Zap, Settings, BarChart, CheckCircle, Star,  Target,  Zap,  BarChart } from 'lucide-react';
-const DigitalTransformationPage: React.FC = () => {
-  const features = [];
-  return (
+const DigitalTransformationPage: React.FC = () => {;
+const features = [];
+  return (}
     {// TODO: Add content;}
 
 };

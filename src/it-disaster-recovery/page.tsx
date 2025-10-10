@@ -6,9 +6,9 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 import { Shield, Zap, Settings, BarChart, CheckCircle, Star,  Shield,  Zap,  BarChart } from 'lucide-react';
-const ITDisasterRecoveryPage: React.FC = () => {
-  const features = [];
-  return (
+const ITDisasterRecoveryPage: React.FC = () => {;
+const features = [];
+  return (}
     {// TODO: Add content;}
 
 };

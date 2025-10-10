@@ -6,7 +6,7 @@ exports.handler = async function (event) context) {// console.log('Test function
       timestamp: new Date().toISOString()
       event: event;
       context: {,
-        awsRequestId: context.awsRequestId;
+        awsRequestId: context.awsRequestId;}
         functionName: context.functionName}
   return {/* TODO: Fix JSX expression */}
   e: context.functionName}

@@ -102,11 +102,10 @@ export class APIInterceptor {// TODO: Add content;}
   private,
   pendingRequests: Map<string, Promise<APIResponse>> = new Map();
   constructor(confi)
-  g: Partial<APIConfig> = {}) {/* TODO: Fix JSX expression */}
+  g: Partial<APIConfig> ={} ) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    this.config = {/* TODO: Fix JSX expression */}
-  O: Add content;}
+    this.config ={/* TODO: Fix JSX expression */} O: Add content;}
 };
 
   baseURL: config.baseURL || '',
@@ -138,7 +137,7 @@ export class APIInterceptor {// TODO: Add content;}
           <T = unknown>(confi)
   g: RequestConfig): Promise<APIResponse<T>> {const cacheKey = this.getCacheKey(fullConfig);}
     // Check cache for GET requests;
-    if (fullConfig.method === 'GET' && fullConfig.cache !== false && this.config.enableCaching) {/* TODO: Fix JSX expression */}
+    if (fullConfig.method === = 'GET' && fullConfig.cache !== == false && this.config.enableCaching) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       const cachedResponse = this.getFromCache(cacheKey);
@@ -165,7 +164,7 @@ const requestPromise = this.executeRequest;
 }
       const response = await requestPromise;
       // Cache successful GET requests;
-      if (fullConfig.method === 'GET' && fullConfig.cache !== false && this.config.enableCaching) {/* TODO: Fix JSX expression */}
+      if (fullConfig.method === = 'GET' && fullConfig.cache !== == false && this.config.enableCaching) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
         this.setInCache(cacheKey, response);
@@ -263,9 +262,7 @@ const data = await this.parseResponse;
   l: string,
     confi,
   g: Partial;
-          <RequestConfig> = {}
-
-  ): Promise<APIResponse<T>> {// TODO: Add content;}
+          <RequestConfig> ={} ): Promise<APIResponse<T>> {// TODO: Add content;}
 }
     return this.request;
           <T>({ ...config, url, method: 'GET' });
@@ -280,9 +277,7 @@ const data = await this.parseResponse;
     body?: unknown,
     confi,
   g: Partial;
-          <RequestConfig> = {}
-
-  ): Promise<APIResponse<T>> {// TODO: Add content;}
+          <RequestConfig> ={} ): Promise<APIResponse<T>> {// TODO: Add content;}
 }
     return this.request;
           <T>({ ...config, url, method: 'POST', body });
@@ -297,9 +292,7 @@ const data = await this.parseResponse;
     body?: unknown,
     confi,
   g: Partial;
-          <RequestConfig> = {}
-
-  ): Promise<APIResponse<T>> {// TODO: Add content;}
+          <RequestConfig> ={} ): Promise<APIResponse<T>> {// TODO: Add content;}
 }
     return this.request;
           <T>({ ...config, url, method: 'PUT', body });
@@ -313,9 +306,7 @@ const data = await this.parseResponse;
   l: string,
     confi,
   g: Partial;
-          <RequestConfig> = {}
-
-  ): Promise<APIResponse<T>> {// TODO: Add content;}
+          <RequestConfig> ={} ): Promise<APIResponse<T>> {// TODO: Add content;}
 }
     return this.request;
           <T>({ ...config, url, method: 'DELETE' });
@@ -330,9 +321,7 @@ const data = await this.parseResponse;
     body?: unknown,
     confi,
   g: Partial;
-          <RequestConfig> = {}
-
-  ): Promise<APIResponse<T>> {// TODO: Add content;}
+          <RequestConfig> ={} ): Promise<APIResponse<T>> {// TODO: Add content;}
 }
     return this.request;
           <T>({ ...config, url, method: 'PATCH', body });
@@ -369,8 +358,8 @@ const data = await this.parseResponse;
 
   private buildURL(config: RequestConfig): string {// TODO: Add content;}
 }
-
-    let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${config.url}`;
+;
+let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${config.url}`;
     if (config.params) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -548,7 +537,7 @@ const data = await this.parseResponse;
           <APIConfig>): void {// TODO: Add content;}
 
 }
-    this.config = { ...this.config, ...config };
+    this.config ={...this.config, ...config } ;
   }
   /**
    * Get current configuration;

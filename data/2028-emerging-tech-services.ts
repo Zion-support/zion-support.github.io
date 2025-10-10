@@ -12,7 +12,7 @@ export interface EmergingTechService2028 {
   category: string;
   real_implementation: boolean;
   contact_info: unknown;
-    mobile: string;
+    mobile: string;}
     email: string}
     address: string}
 export interface EmergingTechService2028 {/* TODO: Fix JSX expression */}
@@ -239,7 +239,6 @@ export const,
     }
   }
 ];
-;
     id: "2028-emerging-tech-service"
     name: "2028 Emerging Tech Service Platform",
     tagline: "Emerging tech services for 2028",

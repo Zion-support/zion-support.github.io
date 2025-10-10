@@ -12,7 +12,7 @@ export interface InnovativeMicroSaas2029 {
   category: string;
   real_implementation: boolean;
   contact_info: unknown;
-    mobile: string;
+    mobile: string;}
     email: string}
     address: string}
 export interface InnovativeMicroSaas2029 {/* TODO: Fix JSX expression */}
@@ -239,7 +239,6 @@ export const,
     }
   }
 ];
-;
     id: "2029-innovative-micro-saas"
     name: "2029 Innovative Micro SAAS Platform",
     tagline: "Innovative micro SAAS for 2029",

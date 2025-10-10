@@ -51,11 +51,11 @@ const September30NewContentMegaBanner = () => {/* TODO: Fix JSX expression */}
         {/* Articles, G, r, i, d */})
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-6, m, b-10">)
           { newArticl, e, s.m, a, p((art, i, c, l, e, ind, e, x) = > (
-        </div>
+        </div>}
         {/* Articles, G, r, i, d */}
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-6, m, b-10">
-          { newArticl, e, s.m, a, p((art, i, c, l, e, ind, e, x) = > (</div>
-            <Link, ke, y = { in, d, e, x  }, to={ artic, l, e.li, n, k } className="group, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-whi, t, e/20, hove, r: bg-whi, t, e/20, hove, r:bord, e, r-cy, a, n-4, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l"
+          { newArticl, e, s.m, a, p((art, i, c, l, e, ind, e, x) = > (</div>}
+            <Link, ke, y ={in, d, e, x  } , to={artic, l, e.li, n, k } className="group, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-whi, t, e/20, hove, r: bg-whi, t, e/20, hove, r:bord, e, r-cy, a, n-4, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l"
             >
               <div, className="flex, item, s-start, ga, p-4"></div>
                 <div, className="bg-gradie, n, t-to-br, fro, m-cy, a, n-500, t, o-bl, u, e-60, 0, p-3, rounde, d-xl, grou, p-hov, e, r:sca, l, e-110, transitio, n-transfo, r, m"></div>
@@ -66,7 +66,7 @@ const September30NewContentMegaBanner = () => {/* TODO: Fix JSX expression */}
         {/* Articles, G, r, i, d */}"
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-6, m, b-10"></div>
           {/* TODO: Fix JSX expression */}"
-            <Link, ke, y = { in, d, e, x  }, to={ artic, l, e.li, n, k } className="group, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-whi, t, e/20, hove, r: bg-whi, t, e/20, hove, r:bord, e, r-cy, a, n-4, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l"
+            <Link, ke, y ={in, d, e, x  } , to={artic, l, e.li, n, k } className="group, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-whi, t, e/20, hove, r: bg-whi, t, e/20, hove, r:bord, e, r-cy, a, n-4, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l"
             ></Link>"
               <div, className="flex, item, s-start, ga, p-4"></div>"
                 <div, className="bg-gradie, n, t-to-br, fro, m-cy, a, n-500, t, o-bl, u, e-60, 0, p-3, rounde, d-xl, grou, p-hov, e, r:sca, l, e-110, transitio, n-transfo, r, m"></div>"

@@ -40,7 +40,6 @@
   benefits: string[];
   capabilities: string[];
   market_advantage: string;
-
 const contact =
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -71,7 +70,7 @@ export interface SpecializedEnterpriseService {id: string, name: string;
   growthRate: string, variant: ServiceVariant;
   contactInfo: unknown;
     mobile: string, email: string;
-    address: string;
+    address: string;}
     website: string}
     },
     realImplementation: boolean, implementationDetails: string;
@@ -159,7 +158,7 @@ export interface SpecializedEnterpriseService {id: string, name: string;
   s: string[];
   market_advantag,
   e: string;
-,
+,;
 const contact =
   mobil,
   e: '+1 302 464 0950',
@@ -1349,7 +1348,6 @@ export default specializedEnterpriseServices;    i,
     market_advantag,
   e: unknown,
       'Advanced predictive analytics platform with custom ML model development'}];
-;
 export default specializedEnterpriseServices;    id: 'quantum - machine - learning - platform',
     name: 'Quantum Machine Learning Platform',
     tagline: 'Quantum - enhanced machine learning and optimization',
@@ -2147,12 +2145,9 @@ export default specializedEnterpriseServices;    i,
   }
 ];
 export default specializedEnterpriseServices;
-;
 export default specializedEnterpriseServices;
 ;
-;
 export default specializedEnterpriseServices;
-;
 export interface SpecializedEnterpriseService {/* TODO: Fix JSX expression */}
   s: string}
     websit,
@@ -2169,10 +2164,9 @@ export interface SpecializedEnterpriseService {/* TODO: Fix JSX expression */}
   marketAdvantage: string;
 }
 ;
-// const contact = {;
+// const contact ={;
   mobile: '+1 302 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 1008 Middletown DE 19709'}
+  email: 'kleber@ziontechgroup.com';} address: '364 E Main St STE 1008 Middletown DE 19709'}
   website: 'https://ziontechgroup.com',
   realImplementatio,
   n: boolean;
@@ -2193,8 +2187,7 @@ export interface SpecializedEnterpriseService {/* TODO: Fix JSX expression */}
   marketAdvantag,
   e: string}
 ;
-// const contact = {/* TODO: Fix JSX expression */}
-  s: '364 E Main St STE 1008 Middletown DE 19709'}
+// const contact ={/* TODO: Fix JSX expression */} s: '364 E Main St STE 1008 Middletown DE 19709'}
   websit,
   e: 'http,
   s://ziontechgroup.com'
@@ -2240,7 +2233,7 @@ export const,
     rating: 5.0;
     reviews: 18;
     benefits: [,
-      'Breakthrough consciousness researchAGI development capabilitiesScientific collaborationPatent-pending algorithmsExclusive research access',
+      'Breakthrough consciousness researchAGI development capabilitiesScientific collaborationPatent-pending algorithmsExclusive research access'}
   {/* TODO: Fix JSX expression */}
     ]}
     capabilitie,
@@ -2289,7 +2282,7 @@ export const,
     benefits: [,
       '100x research accelerationQuantum advantage in optimizationHybrid computing capabilitiesMulti-quantum backend supportExpert quantum consulting',
     marketAdvantag,
-  e: 'Only comprehensive AI consciousness research platform available'
+  e: 'Only comprehensive AI consciousness research platform available'}
   };
   // Quantum Computing Services;
   {/* TODO: Fix JSX expression */}
@@ -2340,7 +2333,7 @@ export const,
     benefits: [,
       'Future-proof securityQuantum-resistant algorithmsCompliance readinessMigration supportExpert consultation',
     marketAdvantag,
-  e: 'Advanced quantum ML platform with hybrid computing capabilities'
+  e: 'Advanced quantum ML platform with hybrid computing capabilities'}
   };
   // Advanced Cybersecurity Services;
   {/* TODO: Fix JSX expression */}
@@ -2391,7 +2384,7 @@ export const,
     benefits: [,
       '400% operation optimization60% mission cost reductionAutonomous operationsAI mission planningExpert space consulting',
     marketAdvantag,
-  e: 'Comprehensive quantum-resistant cryptography platform with migration support'
+  e: 'Comprehensive quantum-resistant cryptography platform with migration support'}
   };
   // Space Technology Services;
   {/* TODO: Fix JSX expression */}
@@ -2442,7 +2435,7 @@ export const,
     benefits: [,
       'Revolutionary medical applicationsBreakthrough research capabilitiesCognitive enhancementMedical rehabilitationExpert neural consultation',
     marketAdvantag,
-  e: 'Advanced AI satellite orchestration with autonomous capabilities'
+  e: 'Advanced AI satellite orchestration with autonomous capabilities'}
   };
   // Neural Interface Services;
   {/* TODO: Fix JSX expression */}
@@ -2493,7 +2486,7 @@ export const,
     benefits: [,
       '70% management cost reduction50% operational efficiencyAutonomous managementSelf-healing networksAI optimization',
     marketAdvantag,
-  e: 'Advanced BCI platform with medical-grade capabilities and research tools'
+  e: 'Advanced BCI platform with medical-grade capabilities and research tools'}
   };
   // Advanced IoT Services;
   {/* TODO: Fix JSX expression */}
@@ -2544,7 +2537,7 @@ export const,
     benefits: [,
       '60% decision accuracy improvement35% operational cost reductionAdvanced ML algorithmsReal-time predictionsCustom model development',
     marketAdvantag,
-  e: 'Advanced autonomous IoT platform with AI-powered management capabilities'
+  e: 'Advanced autonomous IoT platform with AI-powered management capabilities'}
   };
   // Advanced Analytics Services;
   {/* TODO: Fix JSX expression */}
@@ -3193,7 +3186,7 @@ i,
   s: 145; benefit,
   s: [;' '60% decision accuracy improvement35% operational cost reduction_advanced ML algorithms_real - time predictions_custom model development' ]; capabilitie,
   s: [;' 'Predictive modeling_time series forecasting_trend analysis_anomaly detection_scenario modeling' ],' market_advantag,
-  e: 'Advanced predictive analytics platform with custom ML model development' } ]; export default specializedEnterpriseServices; export default specializedEnterpriseServices; ; export default specializedEnterpriseServices; ' import { ServiceVariant } from '../types/service-variants'; export interface SpecializedEnterpriseService {/* TODO: Fix JSX expression */}
+  e: 'Advanced predictive analytics platform with custom ML model development' } ]; export default specializedEnterpriseServices; export default specializedEnterpriseServices; export default specializedEnterpriseServices; ' import { ServiceVariant } from '../types/service-variants'; export interface SpecializedEnterpriseService {/* TODO: Fix JSX expression */}
   s: string} websit,
   e: string} }; realImplementatio,
   n: boolean; implementationDetail,
@@ -3204,8 +3197,7 @@ i,
   s: number; benefit,
   s: string[]; capabilitie,
   s: string[]; marketAdvantag,
-  e: string} ; const contact = {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com'}' addres,
+  e: string} ; const contact ={/* TODO: Fix JSX expression */} l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
   s://ziontechgroup.com' }; export const,

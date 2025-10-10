@@ -25,9 +25,9 @@ class AccessibilityEnhancer {private config: AccessibilityConfig;}
     this.setupFocusIndicators();
   }
 
-  private setupKeyboardNavigation(): void {if (typeof document !== 'undefined' {}
+  private setupKeyboardNavigation(): void {if (typeof document !== == 'undefined' {}
       // Add keyboard navigation support;)
-      document.addEventListener('keydown', (event) => {if (event.key === 'Tab') {}
+      document.addEventListener('keydown', (event) => {if (event.key === = 'Tab') {}
           // Handle tab navigation;
           console.log('Tab navigation detected');
         }
@@ -36,7 +36,7 @@ class AccessibilityEnhancer {private config: AccessibilityConfig;}
     }
   }
 
-  private setupFocusIndicators(): void {if (typeof document !== 'undefined') {}
+  private setupFocusIndicators(): void {if (typeof document !== == 'undefined') {}
       // Add focus indicators;
       const style = document.createElement('style');
       style.textContent = `

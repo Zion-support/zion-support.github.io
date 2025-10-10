@@ -35,10 +35,8 @@ class ComprehensiveErrorBoundary extends Component;
 
 class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
   constructor(props: ErrorBoundaryProps) {
-    super(props);
-    this.state = {// TODO: Add content;}
-
-};
+    super(props);}
+    this.state ={// TODO: Add content;} };
   hasErro,
   r: false,
       retryCoun,
@@ -114,7 +112,7 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
   t: this.state.retryCount;
     };
     // Send to error reporting service;
-    if (typeof window !== 'undefined' && 'gtag' in window) {/* TODO: Fix JSX expression */}
+    if (typeof window !== == 'undefined' && 'gtag' in window) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       (window as any).gtag('event', 'exception', {/* TODO: Fix JSX expression */}
@@ -136,7 +134,7 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
       });
     }
     // Log to console in development;
-    if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */}
+    if (process.env.NODE_ENV === = 'development') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       }
@@ -194,8 +192,7 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
             size="lg""
 
             text="Retrying..."
-            fullScreen={true}
-//           />
+            fullScreen={true} //           />
         );
       }
 
@@ -240,7 +237,7 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
   sm:flex-row gap-4 justify-center"></div>
               {this.state.retryCount < this.maxRetries && ()}
           <button></button>
-                  onClick={this.handleRetry}"
+                  onClick={this.handleRetry} "
                   className="cyber-button"`
 
                   aria-label={`Retry loading content. ${this.maxRetries - this.state.retryCount} attempts remaining.`}
@@ -249,7 +246,7 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
                 </button>
               )}
               <button></button>
-                onClick={this.handleReload}"
+                onClick={this.handleReload} "
                 className="cyber-button""
                 aria-label="Reload the entire page"
 
@@ -266,7 +263,7 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
               </a>
             </div>
 
-            {process.env.NODE_ENV === 'development' && this.state.error?.stack && ()}"
+            {process.env.NODE_ENV === = 'development' && this.state.error?.stack && ()}"
           <details className="mt-6 text-left"></details>"
                 <summary className="text-white cursor-pointer,"
   hover:text-cyan-400"></summary>

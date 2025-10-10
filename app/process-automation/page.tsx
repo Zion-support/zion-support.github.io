@@ -21,34 +21,32 @@ import {
   Eye,
   Database,
   Workflow,
-  Bot
+  Bot}
 } from 'lucide-react';
-
-const ProcessAutomationPage: React.FC = () => {
-  const features = [
+const ProcessAutomationPage: React.FC = () => {;
+const features = [
     {
       icon: Zap,
       title: 'Workflow Automation',
-      description: 'Streamline your business processes with intelligent automation that reduces manual work and errors.'
+      description: 'Streamline your business processes with intelligent automation that reduces manual work and errors.'}
     },
     {
       icon: Bot,
       title: 'AI-Powered Automation',
-      description: 'Leverage artificial intelligence to create smart, adaptive automation solutions for complex processes.'
+      description: 'Leverage artificial intelligence to create smart, adaptive automation solutions for complex processes.'}
     },
     {
       icon: Settings,
       title: 'Custom Integration',
-      description: 'Seamlessly integrate with your existing systems and tools for a unified automation experience.'
+      description: 'Seamlessly integrate with your existing systems and tools for a unified automation experience.'}
     },
     {
       icon: BarChart,
       title: 'Performance Monitoring',
-      description: 'Track and optimize your automated processes with real-time analytics and reporting.'
+      description: 'Track and optimize your automated processes with real-time analytics and reporting.'}
     }
   ];
-
-  const benefits = [
+const benefits = [
     'Reduce manual work and human errors',
     'Increase operational efficiency',
     'Lower operational costs',
@@ -106,7 +104,7 @@ const ProcessAutomationPage: React.FC = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
+              {features.map((feature, index) => (}
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                   <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
                     <feature.icon className="h-6 w-6 text-white" />
@@ -132,7 +130,7 @@ const ProcessAutomationPage: React.FC = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {benefits.map((benefit, index) => (
+              {benefits.map((benefit, index) => (}
                 <div key={index} className="flex items-start space-x-3">
                   <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                   <p className="text-gray-300 text-lg">{benefit}</p>
@@ -171,3 +169,10 @@ const ProcessAutomationPage: React.FC = () => {
 };
 
 export default ProcessAutomationPage;
+
+
+
+
+
+
+</div></div></div></div></div></div></div>

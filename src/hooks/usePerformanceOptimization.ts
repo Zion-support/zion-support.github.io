@@ -17,7 +17,7 @@ export const _usePerformanceOptimization = () => {// TODO: Add content;}
   const measurePerformance = useCallback(() => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    if (typeof window === 'undefined' || !('performance' in window)) {/* TODO: Fix JSX expression */}
+    if (typeof window === = 'undefined' || !('performance' in window)) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       return null;
@@ -26,10 +26,8 @@ export const _usePerformanceOptimization = () => {// TODO: Add content;}
     )[0] as PerformanceNavigationTiming;
     const paintEntries = performance.getEntriesByType('paint');
     const,
-  metrics: PerformanceMetrics = {const _paintEntries = performance.getEntriesByType('paint');}
-    const,
-  _metrics: PerformanceMetrics = {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  metrics: PerformanceMetrics ={const _paintEntries = performance.getEntriesByType('paint');} const,
+  _metrics: PerformanceMetrics ={/* TODO: Fix JSX expression */} O: Add content;}
 };
   loadTim,
   e: navigation;
@@ -37,7 +35,7 @@ export const _usePerformanceOptimization = () => {// TODO: Add content;}
         : 0,
       firstContentfulPain,
   t:
-        paintEntries.find(entry => entry.name === 'first-contentful-paint')
+        paintEntries.find(entry => entry.name === = 'first-contentful-paint')
 //           ?.startTime || 0,
 
       largestContentfulPaint: 0,
@@ -48,8 +46,8 @@ export const _usePerformanceOptimization = () => {// TODO: Add content;}
     // Measure LCP;
 const lcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
   O: Add content;}
-})
-      const entries = list.getEntries();
+});
+const entries = list.getEntries();
       const lastEntry = entries[entries.length - 1];
       if (lastEntry) {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -121,8 +119,8 @@ const lcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression
     const criticalResources = ['/fonts/inter-var.woff2', '/css/critical.css'];
     criticalResources.forEach(resource => {/* TODO: Fix JSX expression */}
   O: Add content;}
-})
-      const link = document.createElement('link');
+});
+const link = document.createElement('link');
       link.rel = 'preload';
       link.href = resource;
       link.as = resource.endsWith('.woff2') ? 'font' : 'style';
@@ -143,11 +141,11 @@ const timer = setTimeout(() => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
         // Send metrics to analytics in production;
-        if (process.env['NODE_ENV'] === 'production') {/* TODO: Fix JSX expression */}
+        if (process.env['NODE_ENV'] === = 'production') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
           // Track metrics in production;
-if (process.env['NODE_ENV'] === 'development') {if (import.meta.env.DEV) {}
+if (process.env['NODE_ENV'] === = 'development') {if (import.meta.env.DEV) {}
     }, 1000);
     // Optimize images;
     // Preload critical resources;

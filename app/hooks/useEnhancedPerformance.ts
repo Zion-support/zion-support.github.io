@@ -11,15 +11,15 @@ export interface UseEnhancedPerformanceOptions {
   component?: string;
   trackErrors?: boolean;
   trackPerformance?: boolean;
-  trackAnalytics?: boolean;
+  trackAnalytics?: boolean;}
 }
 
-export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions = {}) {
-  const {
+export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions ={} ) {;
+const {
     component = 'Unknown',
     trackErrors = true,
     trackPerformance = true,
-    trackAnalytics = true,
+    trackAnalytics = true}
   } = _options;const _renderCountRef = useRef<number>(0);
 
   useEffect(() => {
@@ -28,13 +28,13 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
 
     // Track component mount
     if (trackAnalytics) {
-      analytics.trackCustomEvent('Component', 'Mounted', component);
+      analytics.trackCustomEvent('Component', 'Mounted', component);}
     }
 
     return () => {
       // Track component unmount duration
-      if (trackPerformance) {
-        const _duration = performance.now() - mountTimeRef.current;
+      if (trackPerformance) {;
+const _duration = performance.now() - mountTimeRef.current;
         if (duration > 5000) {
           // Long-lived component
           analytics.trackCustomEvent(
@@ -42,13 +42,13 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
             'Long Component Lifetime',
             component,
             Math.round(duration)
-          );
+          );}
         }
       }
 
       // Track component unmount
       if (trackAnalytics) {
-        analytics.trackCustomEvent('Component', 'Unmounted', component);
+        analytics.trackCustomEvent('Component', 'Unmounted', component);}
       }
     };
   }, [component, trackAnalytics, trackPerformance]);
@@ -65,42 +65,39 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
         'High Render Count',
         component,
         renderCountRef.current
-      );
+      );}
     }
   });
-
-  const trackError = useCallback(
+const trackError = useCallback(
     (error: Error, context?: Record<string, unknown>) => {
       if (trackErrors) {
         errorTracker.trackError(error, {
           component,
-          ...context,
+          ...context}
         });
       }
     },
     [component, trackErrors]
   );
-
-  const trackUserAction = useCallback(
+const trackUserAction = useCallback(
     (action: string, metadata?: Record<string, unknown>) => {
       if (trackAnalytics) {
-        analytics.trackCustomEvent('User Action', action, component, undefined, metadata);
+        analytics.trackCustomEvent('User Action', action, component, undefined, metadata);}
       }
     },
     [component, trackAnalytics]
   );
-
-  const measureOperation = useCallback(
-    (operationName: string) => {
+const measureOperation = useCallback(
+    (operationName: string) => {}
       const _markName = `${component}-${operationName}`;
       const _startTime = performance.now();
 
       return {
-        end: () => {
-          const _duration = performance.now() - startTime;
+        end: () => {;
+const _duration = performance.now() - startTime;
           
           if (trackPerformance) {
-            analytics.trackPerformance(
+            analytics.trackPerformance(}
               `${component}-${operationName}`,
               duration,
               duration > 1000 ? 'slow' : 'fast'
@@ -108,8 +105,7 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
           }
           
           return duration;
-        },
-      };
+        }};
     },
     [component, trackPerformance]
   );
@@ -117,7 +113,7 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
   return {
     trackError,
     trackUserAction,
-    measureOperation,
+    measureOperation}
   };
 }
 

@@ -1360,7 +1360,6 @@ export interface EmergingTechService2029V2 {/* TODO: Fix JSX expression */}
     }
   }
 ];
-;
     }
   }
 ];
@@ -1374,7 +1373,7 @@ export interface EmergingTechService2029V2 {/* TODO: Fix JSX expression */}
 export const emergingTechServices2029V2: EmergingTechService2029V2[] = [;
   {,
     id: 'quantum-internet-security-gateway';
-    name: 'Quantum Internet Security Gateway',,
+    name: 'Quantum Internet Security Gateway',
   description: 'Next-generation quantum internet security platform that provides unbreakable encryption and quantum-safe communication protocols for the future quantum internet infrastructure.';
     category: ['CybersecurityQuantum ComputingInternet SecurityEncryptionNetwork Security'];
     price: '$15,999/month';
@@ -1410,7 +1409,7 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [;
     affiliate: '20% commission for referrals';
     referral: '$50,000 bonus for partnerships';
     partnership: 'Strategic security partnerships';
-    funding: 'Series C funding, $300 M valuation';
+    funding: 'Series C funding, $300 M valuation';}
     exit: 'IPO or security acquisition'}
     contact: {}
       mobile: '+1 302 464 0950';
@@ -1420,7 +1419,7 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [;
   };
   {;
     id: 'biotech-dna-computing-platform';
-    name: 'Biotech DNA Computing Platform',,
+    name: 'Biotech DNA Computing Platform',
   description: 'Revolutionary DNA-based computing platform that uses biological molecules for data storage and computation, offering unprecedented storage density and parallel processing capabilities.';
     category: ['BiotechnologyComputingData StorageResearchInnovation'];
     price: '$25,999/month';
@@ -1456,7 +1455,7 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [;
     affiliate: '25% commission for referrals';
     referral: '$75,000 bonus for partnerships';
     partnership: 'Research institution partnerships';
-    funding: 'Series B funding, $150 M valuation';
+    funding: 'Series B funding, $150 M valuation';}
     exit: 'IPO or biotech acquisition'}
     contact: {}
       mobile: '+1 302 464 0950';
@@ -1466,7 +1465,7 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [;
   };
   {;
     id: 'quantum-financial-trading-platform';
-    name: 'Quantum Financial Trading Platform',,
+    name: 'Quantum Financial Trading Platform',
   description: 'Advanced quantum-powered financial trading platform that uses quantum algorithms to analyze market data, predict trends, and execute trades with unprecedented speed and accuracy.';
     category: ['FintechQuantum ComputingTradingFinanceAnalytics'];
     price: '$35,999/month';
@@ -1502,7 +1501,7 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [;
     affiliate: '15% commission for referrals';
     referral: '$100,000 bonus for partnerships';
     partnership: 'Financial institution partnerships';
-    funding: 'Series C funding, $500 M valuation';
+    funding: 'Series C funding, $500 M valuation';}
     exit: 'IPO or financial acquisition'}
     contact: {}
       mobile: '+1 302 464 0950';
@@ -1512,7 +1511,7 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [;
   };
   {;
     id: 'quantum-creativity-studio';
-    name: 'Quantum Creativity Studio',,
+    name: 'Quantum Creativity Studio',
   description: 'Innovative quantum-enhanced creativity platform that uses quantum algorithms to generate unique artistic content, design solutions, and creative concepts that push the boundaries of human imagination.';
     category: ['CreativityQuantum ComputingAIDesignArt'];
     price: '$1,999/month';
@@ -1548,7 +1547,7 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [;
     affiliate: '30% commission for referrals';
     referral: '$10,000 bonus for partnerships';
     partnership: 'Creative agency partnerships';
-    funding: 'Series A funding, $80 M valuation';
+    funding: 'Series A funding, $80 M valuation';}
     exit: 'Acquisition by major creative platform'}
     contact: {}
       mobile: '+1 302 464 0950';
@@ -1739,7 +1738,6 @@ export const,
     }
   }
 ];
-;
 i,
   d: string, nam,
   e: string, descriptio,

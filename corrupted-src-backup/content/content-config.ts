@@ -11,7 +11,7 @@ export interface Service {
   category: string;
   pricing: {,
     starting: string;
-    popular?: boolean;
+    popular?: boolean;}
 export interface Service {/* TODO: Fix JSX expression */}
   };
   feature,
@@ -22,12 +22,12 @@ export interface Service {/* TODO: Fix JSX expression */}
   y: string;
 }
 
-export const getRecentContent = (limit: number = 3) => {
-  const allContent: (BlogPost | CaseStudy)[] = [
+export const getRecentContent = (limit: number = 3) => {;
+const allContent: (BlogPost | CaseStudy)[] = [
     // This would be populated with actual content arrays;
   ];,
   return allContent;
-    .sort((a, b) => {
+    .sort((a, b) => {}
       const _aTime = 'date' in a ? new Date((a as { date: string }).date).getTime() : 0;
       const _bTime = 'date' in b ? new Date((b as { date: string }).date).getTime() : 0;
 export const getRecentContent = (limi)

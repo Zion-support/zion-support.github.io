@@ -1,6 +1,6 @@
 import React from 'react';
-const LatestContentBanner202, 5: React.FC = () => {,
-  const latestArticle, s = [
+const LatestContentBanner202, 5: React.FC = () => {,;
+const latestArticle, s = [
     {
       title: "AI, 2026, Mega Breakthrough, Revolut, i, o, n",
       description: "Me, t, a-Cognitiv, e, A, I, Quant, u, m-Neural, Network, s, Autonomous, Operation, s - $5, 0, M+ Annual, Saving, s",
@@ -8,7 +8,7 @@ const LatestContentBanner202, 5: React.FC = () => {,
       category: "Revolutionar, y, A, I",
       emo, j, i: "🚀",
       highlig, h, t: "BREAKTHRO, U, G, H",
-      impa, c, t: "$5, 0, M+ Savi, n, g, s"
+      impa, c, t: "$5, 0, M+ Savi, n, g, s"}
 const LatestContentBanner202, 5: React.FC = () => {/* TODO: Fix JSX expression */}
     },
     {/* TODO: Fix JSX expression */}
@@ -41,7 +41,7 @@ const LatestContentBanner202, 5: React.FC = () => {/* TODO: Fix JSX expression *
       category: 'Enterprise, AI, Transformatio, n',
       date: '20, 2, 5-01-2, 8',
       readTime: '50, m, i, n',
-      trendi, n, g: t, r, u, e,
+      trendi, n, g: t, r, u, e}
       ic, o, n: '💰'},
     {
       id:  , 3,
@@ -51,7 +51,7 @@ const LatestContentBanner202, 5: React.FC = () => {/* TODO: Fix JSX expression *
       category: 'AI, Innovation, Lab, s',
       date: '20, 2, 5-01-2, 5',
       readTime: '40, m, i, n',
-      trendi, n, g: t, r, u, e,
+      trendi, n, g: t, r, u, e}
       ic, o, n: '🚀'},
     {
       id:  , 4,
@@ -61,7 +61,7 @@ const LatestContentBanner202, 5: React.FC = () => {/* TODO: Fix JSX expression *
       category: 'MLO, p, s & Automat, i, o, n',
       date: '20, 2, 5-01-2, 0',
       readTime: '45, m, i, n',
-      trendi, n, g: t, r, u, e,
+      trendi, n, g: t, r, u, e}
       ic, o, n: '⚙️'}
   ]; return(<div, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">
       {/* Animated, background, effects */}
@@ -72,7 +72,7 @@ const LatestContentBanner202, 5: React.FC = () => {/* TODO: Fix JSX expression *
       {/* Animated, background, effects */}</div>
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-30"></div>
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" /></div>
-        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-fuchs, i, a-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s' }} />
+        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-fuchs, i, a-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s' } } />
       </div>
       <div, classNam, e = "container, m, x-auto, p, x-6, relative, z-10">
         {/* Header, Sectio, n */}</div>
@@ -104,7 +104,7 @@ const LatestContentBanner202, 5: React.FC = () => {/* TODO: Fix JSX expression *
         </p>
         {/* Featured, highligh, t, s */}
         <div, classNam, e = "grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-4, m, b-8">
-          { latestArticl, e, s.m, a, p((art, i, c, l, e, ind, e, x) = > (</div>
+          { latestArticl, e, s.m, a, p((art, i, c, l, e, ind, e, x) = > (</div>}
     {/* TODO: Fix JSX expression */}
     },
     {/* TODO: Fix JSX expression */}
@@ -115,7 +115,7 @@ const LatestContentBanner202, 5: React.FC = () => {/* TODO: Fix JSX expression *
       {/* Animated, background, effects */}"
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-30"></div>"
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" /></div>"
-        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-fuchs, i, a-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s' }} /></div>
+        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-fuchs, i, a-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s' } } /></div>
       </div>"
       <div, classNam, e = "container, m, x-auto, p, x-6, relative, z-10"></div>
         {/* Header, Sectio, n */}"
@@ -146,10 +146,10 @@ const LatestContentBanner202, 5: React.FC = () => {/* TODO: Fix JSX expression *
         {/* Featured, highligh, t, s */}"
         <div, classNam, e = "grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-4, m, b-8"></div>
           {/* TODO: Fix JSX expression */}
-            <moti, o, n.div, ke, y = { artic, l, e.s, l, u, g  }, initi, a, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
-              anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
-              transiti, o, n = {{ del, a, y: ind, e, x * , 0., 1 }}
-              whileHov, e, r = {{ sca, l, e: 1., 0, 5 }}"
+            <moti, o, n.div, ke, y ={artic, l, e.s, l, u, g  } , initi, a, l ={{ opac, i, t, y:  , 0, y: 2, 0 } }
+              anima, t, e ={{ opac, i, t, y:  , 1, y:  , 0 } }
+              transiti, o, n ={{ del, a, y: ind, e, x * , 0., 1 } }
+              whileHov, e, r ={{ sca, l, e: 1., 0, 5 } }"
               classNa, m, e = "gro, u, p"
             >
               {/* Card, glow, effect */}
@@ -164,7 +164,7 @@ const LatestContentBanner202, 5: React.FC = () => {/* TODO: Fix JSX expression *
                     {  artic, l, e.trendi, n, g  && (</div>
                       <div, className="flex, item, s-center, ga, p-1, p, x-3, p, y-1.5, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-oran, g, e-500, t, o-r, e, d-500, tex, t-white, tex, t-xs, fon, t-bold, shado, w-lg"></div>
                         <TrendingUp, className="w-3 h-3" />
-                        <sp, a, n>TRENDI, N, G</sp, a, n>
+                        <sp, a, n>TRENDI, N, G</sp, a, n>}
                       </di, v > )  }
                     <span, classNam, e = "px-3, p, y-1.5, rounde, d-full, b, g-cy, a, n-5, 0, 0/20, tex, t-cy, a, n-400, tex, t-xs, fon, t-semibold, border, border-cy, a, n-5, 0, 0/30">
             ></moti>
@@ -214,7 +214,7 @@ const LatestContentBanner202, 5: React.FC = () => {/* TODO: Fix JSX expression *
                   <sp, a, n>{ artic, l, e.date  ? new, Dat, e(artic, l, e.d, a, t, e).toLocaleDateStri, n, g('en-US', { mon, t, h: 'sh, o, r, t', d, a, y: 'nume, r, i, c', ye, a, r : 'nume, r, i, c'  }) : 'Rece, n, t'}</sp, a, n>
                 </div>
                 {/* CTA, Butto, n */}
-                <a, hre, f = {`/bl, o, g/${artic, l, e.slug}`}"
+                <a, hre, f ={`/bl, o, g/${artic, l, e.slug} `}"
                   className="gro, u, p/btn, flex, items-center, justif, y-center, ga, p-2 w-full, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-600, hove, r: fr, o, m-cy, a, n-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-cy, a, n-5, 0, 0/50, transform, hove,"
   r:-transla, t, e-y-1"
                 ></a>

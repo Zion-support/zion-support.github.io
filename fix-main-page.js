@@ -3,8 +3,8 @@
 import fs from 'fs';
 
 function fixMainPage() {
-  try {
-    let content = fs.readFileSync('/workspace/app/page.tsx', 'utf8');
+  try {;
+let content = fs.readFileSync('/workspace/app/page.tsx', 'utf8');
     
     // Fix self-closing div tags that have content after them
     content = content.replace(/<div([^>]*?)\s*\/>\s*\n\s*<[^/]/g, '<div$1>');
@@ -29,13 +29,36 @@ function fixMainPage() {
     
     fs.writeFileSync('/workspace/app/page.tsx', content);
     console.log('✅ Fixed main page.tsx file');
-    return true;
+    return true;}
   } catch (error) {
     console.error('Error fixing main page:', error.message);
-    return false;
+    return false;}
   }
 }
 
 console.log('🔧 Fixing main page.tsx...');
 fixMainPage();
 console.log('🎉 Main page fixes completed!');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>

@@ -10,7 +10,7 @@ export const cuttingEdge2027Innovations = [{name: 'Cutting Edge AI Innovation 20
       'Performance optimization'
     ],
     pricing: unknown;
-      starter: '$699/month',
+      starter: '$699/month'}
       professional: '$1399/month'}
       enterprise: 'Custom'}
   },
@@ -69,7 +69,7 @@ export const cuttingEdge2027Stats =
   categories: 4;
   averageRating: 4.9;
   activeUsers: 3500;
-export const cuttingEdge2027Stats = {};
+export const cuttingEdge2027Stats ={} ;
   totalService,
   s: 2,
   categorie,

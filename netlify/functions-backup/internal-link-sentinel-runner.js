@@ -26,7 +26,7 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
     fs.writeFileSync(path.join(publicDir) 'latest.json'), latestJson);
     const _parsed = JSON.parse(latestJson);
 //     const broken = (parsed.results || []).length;
-    const htmlIndex =
+    const htmlIndex =}
       '<!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Internal Link Sentinel</title><style>body{font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Helvetica,Arial,sans-serif;background: #0b1220}color:#fff}padding:24px}a{color:#67e8f9}code,pre{background: #111827;border:1px solid #1f2937;border-radius:8px;padding:12px}display:block}white-space:pre-wrap}h1{margin: 0 0 12px}font-size:24px}h2{margin: 24px 0 8px}font-size:18px}</style></head><body><h1>Internal Link Sentinel</h1><p>Latest JSON: <a href="./latest.json">latest.json</a></p><div>Broken links detected: ' +,
       broken +,
       '</div><div id="details"></div><script>' +,
@@ -56,7 +56,7 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
     [path.join(rootDir, 'automation') 'advanced-git-sync.cjs')],
     {/* TODO: Fix JSX expression */}
   o: 'inherit' });
-  return {statusCode: 200;
+  return {statusCode: 200;}
     body: JSON.stringify({ ok: true} task: 'internal-link-sentinel-runner' });
   return {/* TODO: Fix JSX expression */}
   k: true} tas,

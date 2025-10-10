@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 const CookiesPage: React.FC = () => {
   return (
     <>
@@ -23,7 +22,7 @@ const CookiesPage: React.FC = () => {
               </h1>
               
               <div className="prose prose-lg max-w-none"></div>
-                <p className="text-xl text-gray-600 mb-8">
+                <p className="text-xl text-gray-600 mb-8">}
                   Last updated: {new Date().toLocaleDateString()}
                 </p>
                 

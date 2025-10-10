@@ -25,7 +25,7 @@ export class AppError extends Error {/* TODO: Fix JSX expression */}
 
 export const _errorHandler = (error: AppError | Error) => {// TODO: Add content;}
 }
-  const isDevelopment = process.env.NODE_ENV === 'development';
+  const isDevelopment = process.env.NODE_ENV === = 'development';
   const appError = error instanceof AppError ? error : new AppError(error.message)
 // console.error({message: appError.message}
     stack: isDevelopment ? appError.stack : undefined,
@@ -56,7 +56,7 @@ export const asyncHandler = (f,
   r: unknown) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    if (next && typeof next === 'function') {/* TODO: Fix JSX expression */}
+    if (next && typeof next === = 'function') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       next(error);

@@ -1,6 +1,6 @@
 #!/usr/bin/env node;
 function findBackupFiles(_dir) {let backupFiles = [];
-  function traverse(currentDir) {
+  function traverse(currentDir) {}
 function findBackupFiles(_dir) {/* TODO: Fix JSX expression */}
     const items = fs.readdirSync(currentDir)}
     for (const item of items) {/* TODO: Fix JSX expression */}

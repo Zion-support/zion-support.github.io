@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 
 interface BeforeInstallPromptEvent extends Event {
-  prompt(): Promise<void>;
+  prompt(): Promise<void>;}
   userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>;
 }
-
-const PWAInstaller: React.FC = () => {
-  const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
+;
+const PWAInstaller: React.FC = () => {;
+const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
   const [showInstallButton, setShowInstallButton] = useState(false);
   const [isInstalled, setIsInstalled] = useState(false);
 
@@ -14,21 +14,21 @@ const PWAInstaller: React.FC = () => {
     // Check if app is already installed
     if (window.matchMedia('(display-mode: standalone)').matches) {
       setIsInstalled(true);
-      return;
+      return;}
     }
 
-    // Listen for the beforeinstallprompt event
-    const handleBeforeInstallPrompt = (e: Event) => {
+    // Listen for the beforeinstallprompt event;
+const handleBeforeInstallPrompt = (e: Event) => {
       e.preventDefault();
       setDeferredPrompt(e as BeforeInstallPromptEvent);
-      setShowInstallButton(true);
+      setShowInstallButton(true);}
     };
 
-    // Listen for the appinstalled event
-    const handleAppInstalled = () => {
+    // Listen for the appinstalled event;
+const handleAppInstalled = () => {
       setIsInstalled(true);
       setShowInstallButton(false);
-      setDeferredPrompt(null);
+      setDeferredPrompt(null);}
     };
 
     window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
@@ -36,32 +36,31 @@ const PWAInstaller: React.FC = () => {
 
     return () => {
       window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
-      window.removeEventListener('appinstalled', handleAppInstalled);
+      window.removeEventListener('appinstalled', handleAppInstalled);}
     };
   }, []);
-
-  const handleInstallClick = async () => {
+const handleInstallClick = async () => {
     if (!deferredPrompt) return;
 
     try {
-      await deferredPrompt.prompt();
+      await deferredPrompt.prompt();}
       const { outcome } = await deferredPrompt.userChoice;
       
-      if (outcome === 'accepted') {
-        console.log('User accepted the install prompt');
+      if (outcome === = 'accepted') {
+        console.log('User accepted the install prompt');}
       } else {
-        console.log('User dismissed the install prompt');
+        console.log('User dismissed the install prompt');}
       }
       
       setDeferredPrompt(null);
       setShowInstallButton(false);
     } catch (error) {
-      console.error('Error installing PWA:', error);
+      console.error('Error installing PWA:', error);}
     }
   };
 
   if (isInstalled || !showInstallButton) {
-    return null;
+    return null;}
   }
 
   return (
@@ -81,15 +80,13 @@ const PWAInstaller: React.FC = () => {
           
           <div className="flex space-x-2">
             <button
-              onClick={handleInstallClick}
-              className="bg-white text-purple-600 text-xs font-medium px-3 py-1.5 rounded hover:bg-white/90 transition-colors duration-200"
+              onClick={handleInstallClick} className="bg-white text-purple-600 text-xs font-medium px-3 py-1.5 rounded hover:bg-white/90 transition-colors duration-200"
             >
               Install
             </button>
             
             <button
-              onClick={() => setShowInstallButton(false)}
-              className="text-white/70 text-xs px-3 py-1.5 hover:text-white transition-colors duration-200"
+              onClick={() => setShowInstallButton(false)} className="text-white/70 text-xs px-3 py-1.5 hover:text-white transition-colors duration-200"
             >
               Maybe later
             </button>
@@ -97,8 +94,7 @@ const PWAInstaller: React.FC = () => {
         </div>
         
         <button
-          onClick={() => setShowInstallButton(false)}
-          className="flex-shrink-0 text-white/70 hover:text-white transition-colors duration-200"
+          onClick={() => setShowInstallButton(false)} className="flex-shrink-0 text-white/70 hover:text-white transition-colors duration-200"
         >
           ×
         </button>
@@ -108,3 +104,6 @@ const PWAInstaller: React.FC = () => {
 };
 
 export default PWAInstaller;
+
+
+</div></div></div>

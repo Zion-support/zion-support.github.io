@@ -7,7 +7,7 @@ import SEOEnhancer from '../app/components/SEOEnhancer';
 describe('Component Tests', () => {
   test('LoadingSpinner renders correctly', () => {
     render(<LoadingSpinner />);
-    expect(screen.getByRole('status')).toBeInTheDocument();
+    expect(screen.getByRole('status')).toBeInTheDocument();}
   });
 
   test('SEOEnhancer renders without crashing', () => {
@@ -16,6 +16,6 @@ describe('Component Tests', () => {
         <SEOEnhancer />
       </HelmetProvider>
     );
-    expect(document.head).toBeInTheDocument();
+    expect(document.head).toBeInTheDocument();}
   });
 });

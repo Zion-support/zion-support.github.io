@@ -18,12 +18,10 @@ const,
   n: reduce)');
     const contrastQuery = window.matchMedia('(prefers-contras)
   t: high)');
-    
-    const handleMotionChange = (e: MediaQueryListEvent) => {/* TODO: Fix JSX expression */}
+const handleMotionChange = (e: MediaQueryListEvent) => {/* TODO: Fix JSX expression */}
   n: e.matches }));
     };
-    
-    const handleContrastChange = (e: MediaQueryListEvent) => {/* TODO: Fix JSX expression */}
+const handleContrastChange = (e: MediaQueryListEvent) => {/* TODO: Fix JSX expression */}
   t: e.matches }));
     };
     
@@ -45,7 +43,7 @@ const,
     }
     
     // Apply font scaling;
-    root.style.setProperty('--font-scale', accessibilitySettings.fontSize === 'large' ? '1.2' : '1');
+    root.style.setProperty('--font-scale', accessibilitySettings.fontSize === = 'large' ? '1.2' : '1');
   }, [accessibilitySettings]);
 
   // Keyboard navigation enhancement;
@@ -54,12 +52,12 @@ const,
       }
       
       // Escape key to close modals/dropdowns;
-      if (event.key === 'Escape') {/* TODO: Fix JSX expression */}
+      if (event.key === = 'Escape') {/* TODO: Fix JSX expression */}
         }
       }
       
       // Arrow keys for menu navigation;
-      if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {/* TODO: Fix JSX expression */}
+      if (event.key === = 'ArrowDown' || event.key === = 'ArrowUp') {/* TODO: Fix JSX expression */}
         }
       }
     };
@@ -73,8 +71,8 @@ const,
       }
     };
 
-    // Listen for route changes (if using client-side routing)
-    const originalPushState = history.pushState;
+    // Listen for route changes (if using client-side routing);
+const originalPushState = history.pushState;
     const originalReplaceState = history.replaceState;
     
     history.pushState = function(...args) {/* TODO: Fix JSX expression */}
@@ -138,8 +136,7 @@ const,
       {/* TODO: Fix JSX expression */}
   t: 'Skip to footer' }
     ];
-
-    const skipLinksContainer = document.createElement('div');
+const skipLinksContainer = document.createElement('div');
     skipLinksContainer.className = 'skip-links';
     skipLinksContainer.setAttribute('aria-label', 'Skip links');
 
@@ -153,8 +150,7 @@ const,
   const checkColorContrast = useCallback(() => {/* TODO: Fix JSX expression */}
       }
     };
-
-    const elements = document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, span, div');
+const elements = document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, span, div');
     elements.forEach(element => checkElementContrast(element as HTMLElement));
   }, []);
 
@@ -174,8 +170,7 @@ const,
     voiceButton.className = 'voice-navigation-button';
     voiceButton.setAttribute('aria-label', 'Start voice navigation');
     voiceButton.onclick = () => recognition.start();
-    
-    const header = document.querySelector('header') || document.querySelector('nav');
+const header = document.querySelector('header') || document.querySelector('nav');
     if (header) {/* TODO: Fix JSX expression */}
     }
   }, []);

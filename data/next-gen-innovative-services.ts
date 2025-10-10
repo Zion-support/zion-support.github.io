@@ -163,7 +163,7 @@ export interface NextGenInnovativeService {;
   icon: string;
   color: string;
     mobile: string;
-    email: string;
+    email: string;}
     address: string}
     website: string}
   }
@@ -172,7 +172,7 @@ export interface NextGenInnovativeService {;
 export interface NextGenInnovativeService {;
   reviews: number,    mobile: string;
     email: string;
-    address: string;
+    address: string;}
     website: string}
   },
   realImplementation: boolean;
@@ -273,7 +273,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   pric,
   e: string;
   perio,
-  d: string,,
+  d: string,
   descriptio,
   n: string;
   feature,
@@ -588,7 +588,7 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     contactInfo: unknown;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 1008 Middletown DE 19709'}
       website: 'https://ziontechgroup.com'}
       website: 'https://ziontechgroup.com'},
     realImplementation: true;
@@ -5829,7 +5829,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     launch_date: "2024 - 12 - 01",
     customers: 15;
     rating: 4 && 4.9;
-    reviews: 8,,
+    reviews: 8,
     market_siz,"
   e: "$1.5B BCI market",
     growth_rat,"
@@ -5858,7 +5858,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4 && 4.9,
     review,
-  s: 8,},
+  s: 8},
   // Space Technology Platform;
     i,"
   d: "space - technology - platform",
@@ -5937,7 +5937,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     launch_date: "2024 - 11 - 15",
     customers: 8;
     rating: 4 && 4.8;
-    reviews: 12,,
+    reviews: 12,
     market_siz,"
   e: "$469B space economy",
     growth_rat,"
@@ -5966,7 +5966,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4 && 4.8,
     review,
-  s: 12,},
+  s: 12},
   // Biotech AI Platform;
     i,"
   d: "biotech - ai - platform",
@@ -6045,7 +6045,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     launch_date: "2024 - 10 - 01",
     customers: 25;
     rating: 4 && 4.7;
-    reviews: 18,,
+    reviews: 18,
     market_siz,"
   e: "$150B AI in healthcare",
     growth_rat,"
@@ -6074,7 +6074,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4 && 4.7,
     review,
-  s: 18,},
+  s: 18},
   // Quantum Financial Trading Platform;
     i,"
   d: "quantum - financial - trading",
@@ -6153,7 +6153,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     launch_date: "2024 - 09 - 01",
     customers: 12;
     rating: 4 && 4.9;
-    reviews: 15,,
+    reviews: 15,
     market_siz,"
   e: "$15T algorithmic trading",
     growth_rat,"
@@ -6182,7 +6182,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4 && 4.9,
     review,
-  s: 15,},
+  s: 15},
   // Autonomous Vehicle AI Platform;
     i,"
   d: "autonomous - vehicle - ai - platform",
@@ -6261,7 +6261,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     launch_date: "2024 - 08 - 01",
     customers: 18;
     rating: 4 && 4.8;
-    reviews: 22,,
+    reviews: 22,
     market_siz,"
   e: "$2.5T autonomous vehicle market",
     growth_rat,"
@@ -6290,7 +6290,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4 && 4.8,
     review,
-  s: 22,},
+  s: 22},
   // Quantum Cybersecurity Platform;
     i,"
   d: "quantum - cybersecurity - platform",
@@ -6369,7 +6369,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     launch_date: "2024 - 07 - 01",
     customers: 35;
     rating: 4 && 4.9;
-    reviews: 28,,
+    reviews: 28,
     market_siz,"
   e: "$200B cybersecurity market",
     growth_rat,"
@@ -6398,7 +6398,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4 && 4.9,
     review,
-  s: 28,},
+  s: 28},
   // Metaverse AI Development Platform;
     i,"
   d: "metaverse - ai - development - platform",
@@ -6477,7 +6477,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     launch_date: "2024 - 06 - 01",
     customers: 45;
     rating: 4 && 4.7;
-    reviews: 32,,
+    reviews: 32,
     market_siz,"
   e: "$800B metaverse market",
     growth_rat,"
@@ -6506,7 +6506,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4 && 4.7,
     review,
-  s: 32,},
+  s: 32},
   // Quantum Internet Security Platform;
     i,"
   d: "quantum - internet - security - platform",
@@ -6585,7 +6585,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     launch_date: "2024 - 05 - 01",
     customers: 22;
     rating: 4 && 4.8;
-    reviews: 19,,
+    reviews: 19,
     market_siz,"
   e: "$150B internet security market",
     growth_rat,"
@@ -6614,7 +6614,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4 && 4.8,
     review,
-  s: 19,},
+  s: 19},
   // AI - Powered Legal Contract Analyzer;
     i,"
   d: "ai - legal - contract - analyzer",
@@ -6693,7 +6693,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     launch_date: "2024 - 04 - 01",
     customers: 65;
     rating: 4 && 4.6;
-    reviews: 45,,
+    reviews: 45,
     market_siz,"
   e: "$25B legal tech market",
     growth_rat,"
@@ -6722,7 +6722,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4 && 4.6,
     review,
-  s: 45,},
+  s: 45},
   // Quantum IoT Platform;
     i,"
   d: "quantum - iot - platform",
@@ -7174,7 +7174,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   g: 4.7,
     review,
   s: 26;
-;
 export const,
   nextGenInnovativeServices: NextGenInnovativeService[] = [;
   // Quantum AI & Advanced Computing;
@@ -7206,7 +7205,7 @@ export const,
     roi: '1000% ROI within 6 months through breakthrough discoveries and patents';
     competitors: ['Neuralink ($10)000+/month)Kernel ($50)000+/month)'];
     marketSize: '$1.5 B BCI market';
-    growthRate: '300% annual growth';
+    growthRate: '300% annual growth';}
     variant: 'quantum-ai-futuristic'}
     contactInfo: {}
       mobile: '+1 302 464 0950';
@@ -7249,7 +7248,7 @@ export const,
     roi: '500% ROI through operational efficiency and mission success rates';
     competitors: ['SpaceX Starlink ($99/month)OneWeb ($50/month)'];
     marketSize: '$469 B space economy';
-    growthRate: '400% annual growth';
+    growthRate: '400% annual growth';}
     variant: 'space-futuristic'}
     contactInfo: {}
       mobile: '+1 302 464 0950';
@@ -7292,7 +7291,7 @@ export const,
     roi: '1000% ROI through accelerated drug development and patent generation';
     competitors: ['Insitro ($100 M+ funding)Recursion ($2 B+ funding)'];
     marketSize: '$150 B AI in healthcare';
-    growthRate: '250% annual growth';
+    growthRate: '250% annual growth';}
     variant: 'biotech-futuristic'}
     contactInfo: {}
       mobile: '+1 302 464 0950';
@@ -7335,7 +7334,7 @@ export const,
     roi: '1000%+ ROI through superior trading performance and market timing';
     competitors: ['Renaissance Technologies ($100 B+ AUM)Two Sigma ($60 B+ AUM)'];
     marketSize: '$15 T algorithmic trading';
-    growthRate: '150% annual growth';
+    growthRate: '150% annual growth';}
     variant: 'quantum-finance-futuristic'}
     contactInfo: {}
       mobile: '+1 302 464 0950';
@@ -7378,7 +7377,7 @@ export const,
     roi: '800% ROI through operational efficiency and safety improvements';
     competitors: ['Waymo ($1 B+ investment)Tesla Autopilot ($12)000)'];
     marketSize: '$2.5 T autonomous vehicle market';
-    growthRate: '200% annual growth';
+    growthRate: '200% annual growth';}
     variant: 'autonomous-futuristic'}
     contactInfo: {}
       mobile: '+1 302 464 0950';
@@ -7421,7 +7420,7 @@ export const,
     roi: '600% ROI through security improvements and risk reduction';
     competitors: ['Palo Alto Networks ($1)000+/month)CrowdStrike ($500+/month)'];
     marketSize: '$200 B cybersecurity market';
-    growthRate: '180% annual growth';
+    growthRate: '180% annual growth';}
     variant: 'quantum-security-futuristic'}
     contactInfo: {}
       mobile: '+1 302 464 0950';
@@ -7464,7 +7463,7 @@ export const,
     roi: '700% ROI through user engagement and monetization';
     competitors: ['Meta Horizon ($30/month)Roblox ($25/month)'];
     marketSize: '$800 B metaverse market';
-    growthRate: '300% annual growth';
+    growthRate: '300% annual growth';}
     variant: 'metaverse-futuristic'}
     contactInfo: {}
       mobile: '+1 302 464 0950';
@@ -7507,7 +7506,7 @@ export const,
     roi: '800% ROI through security improvements and operational efficiency';
     competitors: ['Cloudflare ($20/month)Akamai ($100+/month)'];
     marketSize: '$150 B internet security market';
-    growthRate: '200% annual growth';
+    growthRate: '200% annual growth';}
     variant: 'quantum-internet-futuristic'}
     contactInfo: {}
       mobile: '+1 302 464 0950';
@@ -7550,7 +7549,7 @@ export const,
     roi: '500% ROI through time savings and improved accuracy';
     competitors: ['DocuSign ($25/month)ContractPodAi ($500+/month)'];
     marketSize: '$25 B legal tech market';
-    growthRate: '150% annual growth';
+    growthRate: '150% annual growth';}
     variant: 'ai-legal-futuristic'}
     contactInfo: {}
       mobile: '+1 302 464 0950';
@@ -7593,7 +7592,7 @@ export const,
     roi: '600% ROI through security improvements and operational efficiency';
     competitors: ['AWS IoT ($5/month)Microsoft Azure IoT ($25/month)'];
     marketSize: '$1.5 T IoT market';
-    growthRate: '250% annual growth';
+    growthRate: '250% annual growth';}
     variant: 'quantum-iot-futuristic'}
     contactInfo: {}
       mobile: '+1 302 464 0950';
@@ -7885,7 +7884,6 @@ export const,
   nextGenInnovativeServices: NextGenInnovativeService[] = [;
     review,
   s: 26;
-;
 export const,
   nextGenInnovativeServices: NextGenInnovativeService[] = [;
   // Quantum AI & Advanced Computing;
@@ -7928,7 +7926,7 @@ export const,
     contactInfo: {,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709",
+      address: "364 E Main St STE 1008 Middletown DE 19709"}
       website: "https://ziontechgroup.com"}
 },
     realImplementation: true;
@@ -7936,7 +7934,7 @@ export const,
     launchDate: "2024-12-01",
     customers: 15;
     rating: 4.9;
-    reviews: 8,},
+    reviews: 8},
   // Space Technology Platform;
   {;
     id: "space-technology-platform",
@@ -7977,7 +7975,7 @@ export const,
     contactInfo: {,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709",
+      address: "364 E Main St STE 1008 Middletown DE 19709"}
       website: "https://ziontechgroup.com"}
 },
     realImplementation: true;
@@ -7985,7 +7983,7 @@ export const,
     launchDate: "2024-11-15",
     customers: 8;
     rating: 4.8;
-    reviews: 12,},
+    reviews: 12},
   // Biotech AI Platform;
   {;
     id: "biotech-ai-platform",
@@ -8026,7 +8024,7 @@ export const,
     contactInfo: {,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709",
+      address: "364 E Main St STE 1008 Middletown DE 19709"}
       website: "https://ziontechgroup.com"}
 },
     realImplementation: true;
@@ -8034,7 +8032,7 @@ export const,
     launchDate: "2024-10-01",
     customers: 25;
     rating: 4.7;
-    reviews: 18,},
+    reviews: 18},
   // Quantum Financial Trading Platform;
   {;
     id: "quantum-financial-trading",
@@ -8075,7 +8073,7 @@ export const,
     contactInfo: {,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709",
+      address: "364 E Main St STE 1008 Middletown DE 19709"}
       website: "https://ziontechgroup.com"}
 },
     realImplementation: true;
@@ -8083,7 +8081,7 @@ export const,
     launchDate: "2024-09-01",
     customers: 12;
     rating: 4.9;
-    reviews: 15,},
+    reviews: 15},
   // Autonomous Vehicle AI Platform;
   {;
     id: "autonomous-vehicle-ai-platform",
@@ -8124,7 +8122,7 @@ export const,
     contactInfo: {,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709",
+      address: "364 E Main St STE 1008 Middletown DE 19709"}
       website: "https://ziontechgroup.com"}
 },
     realImplementation: true;
@@ -8132,7 +8130,7 @@ export const,
     launchDate: "2024-08-01",
     customers: 18;
     rating: 4.8;
-    reviews: 22,},
+    reviews: 22},
   // Quantum Cybersecurity Platform;
   {;
     id: "quantum-cybersecurity-platform",
@@ -8173,7 +8171,7 @@ export const,
     contactInfo: {,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709",
+      address: "364 E Main St STE 1008 Middletown DE 19709"}
       website: "https://ziontechgroup.com"}
 },
     realImplementation: true;
@@ -8181,7 +8179,7 @@ export const,
     launchDate: "2024-07-01",
     customers: 35;
     rating: 4.9;
-    reviews: 28,},
+    reviews: 28},
   // Metaverse AI Development Platform;
   {;
     id: "metaverse-ai-development-platform",
@@ -8222,7 +8220,7 @@ export const,
     contactInfo: {,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709",
+      address: "364 E Main St STE 1008 Middletown DE 19709"}
       website: "https://ziontechgroup.com"}
 },
     realImplementation: true;
@@ -8230,7 +8228,7 @@ export const,
     launchDate: "2024-06-01",
     customers: 45;
     rating: 4.7;
-    reviews: 32,},
+    reviews: 32},
   // Quantum Internet Security Platform;
   {;
     id: "quantum-internet-security-platform",
@@ -8271,7 +8269,7 @@ export const,
     contactInfo: {,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709",
+      address: "364 E Main St STE 1008 Middletown DE 19709"}
       website: "https://ziontechgroup.com"}
 },
     realImplementation: true;
@@ -8279,7 +8277,7 @@ export const,
     launchDate: "2024-05-01",
     customers: 22;
     rating: 4.8;
-    reviews: 19,},
+    reviews: 19},
   // AI-Powered Legal Contract Analyzer;
   {;
     id: "ai-legal-contract-analyzer",
@@ -8320,7 +8318,7 @@ export const,
     contactInfo: {,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709",
+      address: "364 E Main St STE 1008 Middletown DE 19709"}
       website: "https://ziontechgroup.com"}
 },
     realImplementation: true;
@@ -8328,7 +8326,7 @@ export const,
     launchDate: "2024-04-01",
     customers: 65;
     rating: 4.6;
-    reviews: 45,},
+    reviews: 45},
   // Quantum IoT Platform;
   {;
     id: "quantum-iot-platform",
@@ -8369,7 +8367,7 @@ export const,
     contactInfo: {,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709",
+      address: "364 E Main St STE 1008 Middletown DE 19709"}
       website: "https://ziontechgroup.com"}
 },
     realImplementation: true;
@@ -8400,7 +8398,7 @@ export const,
     ratin,
   g: 4.9,
     review,
-  s: 8,},
+  s: 8},
   // Space Technology Platform;
   {/* TODO: Fix JSX expression */}"
   s://ziontechgroup.com"}
@@ -8416,7 +8414,7 @@ export const,
     ratin,
   g: 4.8,
     review,
-  s: 12,},
+  s: 12},
   // Biotech AI Platform;
   {/* TODO: Fix JSX expression */}"
   s://ziontechgroup.com"}
@@ -8432,7 +8430,7 @@ export const,
     ratin,
   g: 4.7,
     review,
-  s: 18,},
+  s: 18},
   // Quantum Financial Trading Platform;
   {/* TODO: Fix JSX expression */}"
   s://ziontechgroup.com"}
@@ -8448,7 +8446,7 @@ export const,
     ratin,
   g: 4.9,
     review,
-  s: 15,},
+  s: 15},
   // Autonomous Vehicle AI Platform;
   {/* TODO: Fix JSX expression */}"
   s://ziontechgroup.com"}
@@ -8464,7 +8462,7 @@ export const,
     ratin,
   g: 4.8,
     review,
-  s: 22,},
+  s: 22},
   // Quantum Cybersecurity Platform;
   {/* TODO: Fix JSX expression */}"
   s://ziontechgroup.com"}
@@ -8480,7 +8478,7 @@ export const,
     ratin,
   g: 4.9,
     review,
-  s: 28,},
+  s: 28},
   // Metaverse AI Development Platform;
   {/* TODO: Fix JSX expression */}"
   s://ziontechgroup.com"}
@@ -8496,7 +8494,7 @@ export const,
     ratin,
   g: 4.7,
     review,
-  s: 32,},
+  s: 32},
   // Quantum Internet Security Platform;
   {/* TODO: Fix JSX expression */}"
   s://ziontechgroup.com"}
@@ -8512,7 +8510,7 @@ export const,
     ratin,
   g: 4.8,
     review,
-  s: 19,},
+  s: 19},
   // AI-Powered Legal Contract Analyzer;
   {/* TODO: Fix JSX expression */}"
   s://ziontechgroup.com"}
@@ -8528,7 +8526,7 @@ export const,
     ratin,
   g: 4.6,
     review,
-  s: 45,},
+  s: 45},
   // Quantum IoT Platform;
   {/* TODO: Fix JSX expression */}"
   s://ziontechgroup.com"}
@@ -10326,7 +10324,7 @@ export const,
   e: "2024 - 12 - 01", customer,
   s: 15, ratin,
   g: 4 && 4.9, review,
-  s: 8,}, // Space Technology Platform; i,"
+  s: 8}, // Space Technology Platform; i,"
   d: "space - technology - platform", nam,"
   e: "Space Technology Platform", taglin,"
   e: "Complete space mission management and satellite operations", pric,"
@@ -10360,7 +10358,7 @@ export const,
   e: "2024 - 11 - 15", customer,
   s: 8, ratin,
   g: 4 && 4.8, review,
-  s: 12,}, // Biotech AI Platform; i,"
+  s: 12}, // Biotech AI Platform; i,"
   d: "biotech - ai - platform", nam,"
   e: "Biotech AI Platform", taglin,"
   e: "AI - powered drug discovery and genetic engineering", pric,"
@@ -10394,7 +10392,7 @@ export const,
   e: "2024 - 10 - 01", customer,
   s: 25, ratin,
   g: 4 && 4.7, review,
-  s: 18,}, // Quantum Financial Trading Platform; i,"
+  s: 18}, // Quantum Financial Trading Platform; i,"
   d: "quantum - financial - trading", nam,"
   e: "Quantum Financial Trading Platform", taglin,"
   e: "Quantum AI - powered algorithmic trading with nanosecond precision", pric,"
@@ -10428,7 +10426,7 @@ export const,
   e: "2024 - 09 - 01", customer,
   s: 12, ratin,
   g: 4 && 4.9, review,
-  s: 15,}, // Autonomous Vehicle AI Platform; i,"
+  s: 15}, // Autonomous Vehicle AI Platform; i,"
   d: "autonomous - vehicle - ai - platform", nam,"
   e: "Autonomous Vehicle AI Platform", taglin,"
   e: "Complete AI platform for autonomous vehicles and robotics", pric,"
@@ -10462,7 +10460,7 @@ export const,
   e: "2024 - 08 - 01", customer,
   s: 18, ratin,
   g: 4 && 4.8, review,
-  s: 22,}, // Quantum Cybersecurity Platform; i,"
+  s: 22}, // Quantum Cybersecurity Platform; i,"
   d: "quantum - cybersecurity - platform", nam,"
   e: "Quantum Cybersecurity Platform", taglin,"
   e: "Quantum - resistant cybersecurity with AI threat detection", pric,"
@@ -10496,7 +10494,7 @@ export const,
   e: "2024 - 07 - 01", customer,
   s: 35, ratin,
   g: 4 && 4.9, review,
-  s: 28,}, // Metaverse AI Development Platform; i,"
+  s: 28}, // Metaverse AI Development Platform; i,"
   d: "metaverse - ai - development - platform", nam,"
   e: "Metaverse AI Development Platform", taglin,"
   e: "Complete AI platform for metaverse and virtual world creation", pric,"
@@ -10530,7 +10528,7 @@ export const,
   e: "2024 - 06 - 01", customer,
   s: 45, ratin,
   g: 4 && 4.7, review,
-  s: 32,}, // Quantum Internet Security Platform; i,"
+  s: 32}, // Quantum Internet Security Platform; i,"
   d: "quantum - internet - security - platform", nam,"
   e: "Quantum Internet Security Platform", taglin,"
   e: "Quantum - secured internet infrastructure with AI monitoring", pric,"
@@ -10564,7 +10562,7 @@ export const,
   e: "2024 - 05 - 01", customer,
   s: 22, ratin,
   g: 4 && 4.8, review,
-  s: 19,}, // AI - Powered Legal Contract Analyzer; i,"
+  s: 19}, // AI - Powered Legal Contract Analyzer; i,"
   d: "ai - legal - contract - analyzer", nam,"
   e: "AI Legal Contract Analyzer", taglin,"
   e: "AI - powered legal document analysis and risk assessment", pric,"
@@ -10598,7 +10596,7 @@ export const,
   e: "2024 - 04 - 01", customer,
   s: 65, ratin,
   g: 4 && 4.6, review,
-  s: 45,}, // Quantum IoT Platform; i,"
+  s: 45}, // Quantum IoT Platform; i,"
   d: "quantum - iot - platform", nam,"
   e: "Quantum IoT Platform", taglin,"
   e: "Quantum - secured IoT platform with AI edge computing", pric,"
@@ -10852,63 +10850,63 @@ export const,
   e: "2024-12-01", customer,
   s: 15, ratin,
   g: 4.9, review,
-  s: 8,}, // Space Technology Platform; {/* TODO: Fix JSX expression */}"
+  s: 8}, // Space Technology Platform; {/* TODO: Fix JSX expression */}"
   s://ziontechgroup.com"} }, realImplementatio,
   n: true, implementationDetail,"
   s: "Complete space operations platform with real-time tracking, mission planning tools, and regulatory compliance features.", launchDat,"
   e: "2024-11-15", customer,
   s: 8, ratin,
   g: 4.8, review,
-  s: 12,}, // Biotech AI Platform; {/* TODO: Fix JSX expression */}"
+  s: 12}, // Biotech AI Platform; {/* TODO: Fix JSX expression */}"
   s://ziontechgroup.com"} }, realImplementatio,
   n: true, implementationDetail,"
   s: "Complete biotech AI platform with drug discovery algorithms, genetic analysis tools, and research collaboration features.", launchDat,"
   e: "2024-10-01", customer,
   s: 25, ratin,
   g: 4.7, review,
-  s: 18,}, // Quantum Financial Trading Platform; {/* TODO: Fix JSX expression */}"
+  s: 18}, // Quantum Financial Trading Platform; {/* TODO: Fix JSX expression */}"
   s://ziontechgroup.com"} }, realImplementatio,
   n: true, implementationDetail,"
   s: "Complete quantum trading platform with real-time execution, advanced risk management, and comprehensive analytics.", launchDat,"
   e: "2024-09-01", customer,
   s: 12, ratin,
   g: 4.9, review,
-  s: 15,}, // Autonomous Vehicle AI Platform; {/* TODO: Fix JSX expression */}"
+  s: 15}, // Autonomous Vehicle AI Platform; {/* TODO: Fix JSX expression */}"
   s://ziontechgroup.com"} }, realImplementatio,
   n: true, implementationDetail,"
   s: "Complete autonomous AI platform with computer vision, decision-making algorithms, and safety systems.", launchDat,"
   e: "2024-08-01", customer,
   s: 18, ratin,
   g: 4.8, review,
-  s: 22,}, // Quantum Cybersecurity Platform; {/* TODO: Fix JSX expression */}"
+  s: 22}, // Quantum Cybersecurity Platform; {/* TODO: Fix JSX expression */}"
   s://ziontechgroup.com"} }, realImplementatio,
   n: true, implementationDetail,"
   s: "Complete quantum cybersecurity platform with encryption, threat detection, and compliance features.", launchDat,"
   e: "2024-07-01", customer,
   s: 35, ratin,
   g: 4.9, review,
-  s: 28,}, // Metaverse AI Development Platform; {/* TODO: Fix JSX expression */}"
+  s: 28}, // Metaverse AI Development Platform; {/* TODO: Fix JSX expression */}"
   s://ziontechgroup.com"} }, realImplementatio,
   n: true, implementationDetail,"
   s: "Complete metaverse AI platform with content generation, world building, and social interaction features.", launchDat,"
   e: "2024-06-01", customer,
   s: 45, ratin,
   g: 4.7, review,
-  s: 32,}, // Quantum Internet Security Platform; {/* TODO: Fix JSX expression */}"
+  s: 32}, // Quantum Internet Security Platform; {/* TODO: Fix JSX expression */}"
   s://ziontechgroup.com"} }, realImplementatio,
   n: true, implementationDetail,"
   s: "Complete quantum internet security platform with encryption, monitoring, and protection features.", launchDat,"
   e: "2024-05-01", customer,
   s: 22, ratin,
   g: 4.8, review,
-  s: 19,}, // AI-Powered Legal Contract Analyzer; {/* TODO: Fix JSX expression */}"
+  s: 19}, // AI-Powered Legal Contract Analyzer; {/* TODO: Fix JSX expression */}"
   s://ziontechgroup.com"} }, realImplementatio,
   n: true, implementationDetail,"
   s: "Complete AI legal platform with document analysis, risk assessment, and compliance features.", launchDat,"
   e: "2024-04-01", customer,
   s: 65, ratin,
   g: 4.6, review,
-  s: 45,}, // Quantum IoT Platform; {/* TODO: Fix JSX expression */}"
+  s: 45}, // Quantum IoT Platform; {/* TODO: Fix JSX expression */}"
   s://ziontechgroup.com"} }, realImplementatio,
   n: true, implementationDetail,"
   s: "Complete quantum IoT platform with security, edge computing, and device management features.",' launchDat,"

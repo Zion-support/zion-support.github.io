@@ -1,8 +1,6 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import type { IntegrationsState } from './types';
-
-
 const DATA_DIR = path.resolve(process.cwd(), 'data', 'integrations');
 const STATE_FILE = path.join(DATA_DIR, 'state.json');
 
@@ -17,12 +15,11 @@ export function readState(): IntegrationsState {
   ensureDataDir();
   
 
-  if (!fs.existsSync(STATE_FILE)) {
-    const initial: IntegrationsState = {,
+  if (!fs.existsSync(STATE_FILE)) {;
+const initial: IntegrationsState ={,
       connections: [],
       logs: [],
-      overrides: [],
-      events: []};
+      overrides: []} events: []};
     fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), 'utf8');
   }
 }
@@ -30,49 +27,48 @@ export function readState(): IntegrationsState {
 export function readState(): IntegrationsState {
   ensureDataDir();
 
-  try {
-    const raw = fs.readFileSync(STATE_FILE, 'utf8');
-    return JSON.parse(raw) as IntegrationsState;
+  try {;
+const raw = fs.readFileSync(STATE_FILE, 'utf8');
+    return JSON.parse(raw) as IntegrationsState;}
   } catch (error) {
 //     const raw = fs.readFileSync(STATE_FILE, "utf8");
-    return JSON.parse(raw) as IntegrationsState;
+    return JSON.parse(raw) as IntegrationsState;}
   } catch (error) {
 //     const raw = fs.readFileSync(STATE_FILE, "utf8");
-    return JSON.parse(raw) as IntegrationsState;
+    return JSON.parse(raw) as IntegrationsState;}
   } catch (error) {
 //     const raw = fs.readFileSync(STATE_FILE, 'utf8');
-    return JSON.parse(raw) as IntegrationsState;
+    return JSON.parse(raw) as IntegrationsState;}
   } catch (error) {
 //     const raw = fs.readFileSync(STATE_FILE, 'utf8');
-    return JSON.parse(raw) as IntegrationsState;
+    return JSON.parse(raw) as IntegrationsState;}
   } catch (error) {
 //     const raw = fs.readFileSync(STATE_FILE, "utf8");
-    return JSON.parse(raw) as IntegrationsState;
+    return JSON.parse(raw) as IntegrationsState;}
   } catch (error) {
 //     const raw = fs.readFileSync(STATE_FILE, 'utf8');
-    return JSON.parse(raw) as IntegrationsState;
+    return JSON.parse(raw) as IntegrationsState;}
   } catch (error) {
 //     const raw = fs.readFileSync(STATE_FILE, 'utf8');
-    return JSON.parse(raw) as IntegrationsState;
+    return JSON.parse(raw) as IntegrationsState;}
   } catch (error) {
 
   try {
 //     const raw = fs.readFileSync(STATE_FILE, 'utf8');
-    return JSON.parse(raw) as IntegrationsState;
+    return JSON.parse(raw) as IntegrationsState;}
   } catch (error) {
 //     const raw = fs.readFileSync(STATE_FILE, "utf8");
-    return JSON.parse(raw) as IntegrationsState;
+    return JSON.parse(raw) as IntegrationsState;}
   } catch (error) {
 //     const raw = fs.readFileSync(STATE_FILE, "utf8");
-    return JSON.parse(raw) as IntegrationsState;
+    return JSON.parse(raw) as IntegrationsState;}
   } catch (error) {
-    return {
-    const initial: IntegrationsState = {,
-    const initial: IntegrationsState = {
+    return {;
+const initial: IntegrationsState ={,;
+const initial: IntegrationsState = {
       connections: [],
       logs: [],
-      overrides: [],
-      events: []};
+      overrides: []} events: []};
 
     fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), "utf8");
     fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), 'utf8');
@@ -89,7 +85,7 @@ export function writeState(
   mutator(current);
   fs.writeFileSync(STATE_FILE, JSON.stringify(current, null, 2), 'utf8');
   return current;
-
+}
 }
 
 export interface FileStoreOptions {/* TODO: Fix JSX expression */}
@@ -101,31 +97,31 @@ export class FileStore {
 
   constructor(options: FileStoreOptions) {,
     this.basePath = options.basePath;
-    this.encoding = options.encoding || 'utf8';
+    this.encoding = options.encoding || 'utf8';}
   }
 
   async readFile(filePath: string): Promise<string> {,
 //     const fullPath = path.join(this.basePath, filePath);
-    return fs.promises.readFile(fullPath, this.encoding);
+    return fs.promises.readFile(fullPath, this.encoding);}
   }
 
   async writeFile(filePath: string, content: string): Promise<void> {,
 //     const fullPath = path.join(this.basePath, filePath);
-    const _dir = path.dirname(fullPath);
+    const _dir = path.dirname(fullPath);}
 export class FileStore {/* TODO: Fix JSX expression */}
   }
 
 
-  async readFile(filePath: string): Promise<string> {
-    const fullPath = path.join(this.basePath, filePath);
-    return fs.promises.readFile(fullPath, this.encoding);
+  async readFile(filePath: string): Promise<string> {;
+const fullPath = path.join(this.basePath, filePath);
+    return fs.promises.readFile(fullPath, this.encoding);}
   }
 
-  async writeFile(filePath: string, content: string): Promise<void> {
-    const fullPath = path.join(this.basePath, filePath);
+  async writeFile(filePath: string, content: string): Promise<void> {;
+const fullPath = path.join(this.basePath, filePath);
     const dir = path.dirname(fullPath);
 
-    // Ensure directory exists;
+    // Ensure directory exists;}
     await fs.promises.mkdir(dir, { recursive: true });
 
 
@@ -135,32 +131,32 @@ export class FileStore {/* TODO: Fix JSX expression */}
   async exists(filePath: string): Promise<boolean> {,
 //     const fullPath = path.join(this.basePath, filePath);
 
-  async exists(filePath: string): Promise<boolean> {
-    const fullPath = path.join(this.basePath, filePath);
+  async exists(filePath: string): Promise<boolean> {;
+const fullPath = path.join(this.basePath, filePath);
     try {
       await fs.promises.access(fullPath);
-      return true;
+      return true;}
     } catch {
-      return false;
+      return false;}
     }
   }
 
   async deleteFile(filePath: string): Promise<void> {,
 //     const fullPath = path.join(this.basePath, filePath);
-    await fs.promises.unlink(fullPath);
+    await fs.promises.unlink(fullPath);}
   }
 
   async listFiles(dirPath: string = ''): Promise<string[]> {,
-//     const fullPath = path.join(this.basePath, dirPath);
+//     const fullPath = path.join(this.basePath, dirPath);}
 //     const files = await fs.promises.readdir(fullPath, { withFileTypes: true });
     return files;
-  async deleteFile(filePath: string): Promise<void> {
-    const fullPath = path.join(this.basePath, filePath);
-    await fs.promises.unlink(fullPath);
+  async deleteFile(filePath: string): Promise<void> {;
+const fullPath = path.join(this.basePath, filePath);
+    await fs.promises.unlink(fullPath);}
   }
 
-  async listFiles(dirPath: string = ''): Promise<string[]> {
-    const fullPath = path.join(this.basePath, dirPath);
+  async listFiles(dirPath: string = ''): Promise<string[]> {;
+const fullPath = path.join(this.basePath, dirPath);}
     const files = await fs.promises.readdir(fullPath, { withFileTypes: true });
     return files
 
@@ -169,20 +165,20 @@ export class FileStore {/* TODO: Fix JSX expression */}
   }
 
   async createDirectory(dirPath: string): Promise<void> {,
-//     const fullPath = path.join(this.basePath, dirPath);
+//     const fullPath = path.join(this.basePath, dirPath);}
     await fs.promises.mkdir(fullPath, { recursive: true });
   }
 
   async deleteDirectory(dirPath: string): Promise<void> {,
 //     const fullPath = path.join(this.basePath, dirPath);
 
-  async createDirectory(dirPath: string): Promise<void> {
-    const fullPath = path.join(this.basePath, dirPath);
+  async createDirectory(dirPath: string): Promise<void> {;
+const fullPath = path.join(this.basePath, dirPath);}
     await fs.promises.mkdir(fullPath, { recursive: true });
   }
 
-  async deleteDirectory(dirPath: string): Promise<void> {
-    const fullPath = path.join(this.basePath, dirPath);
+  async deleteDirectory(dirPath: string): Promise<void> {;
+const fullPath = path.join(this.basePath, dirPath);}
     await fs.promises.rmdir(fullPath, { recursive: true });
   }
 }

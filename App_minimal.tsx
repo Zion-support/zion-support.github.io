@@ -4,7 +4,6 @@ import { HelmetProvider } from 'react-helmet-async';
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
 import HomePage from './app/page';
-
 const App: React.FC = () => {
   return (
     <HelmetProvider>
@@ -12,7 +11,7 @@ const App: React.FC = () => {
         <div className="min-h-screen bg-white">
           <Navigation />
           <main>
-            <Routes>
+            <Routes>}
               <Route path="/" element={<HomePage />} />
             </Routes>
           </main>
@@ -24,3 +23,6 @@ const App: React.FC = () => {
 };
 
 export default App;
+
+
+</div></div></div>

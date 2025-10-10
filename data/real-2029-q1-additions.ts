@@ -411,10 +411,9 @@
 }
 		rating: 4.5;
 		reviews: 9;
-// const contact = {;
+// const contact ={;
 	mobile: '+1 302 464 0950';
-	email: 'kleber@ziontechgroup.com';
-	address: '364 E Main St STE 1008 Middletown DE 19709'}
+	email: 'kleber@ziontechgroup.com';} address: '364 E Main St STE 1008 Middletown DE 19709'}
 	website: 'https://ziontechgroup.com'};
 export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
 	{
@@ -422,7 +421,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
 		name: 'AI RedTeam Evaluator';
 		tagline: 'Continuous LLM redteaming and safety scoring';
 		price: '$149';
-		period: '/month',,
+		period: '/month',
   description: 'Automated jailbreak detection, policy compliance checks, and regression gate for prompts and outputs.';
 		features: ['Policy suitesJailbreak corporaRegression gatesDashboard & alerts'];
 		popular: true;
@@ -448,7 +447,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
 		realImplementation: true;
 		implementationDetails: 'Runs eval suites nightly and on PRs with webhooks.';
 		launchDate: '2025-02-01';
-		customers: 40;
+		customers: 40;}
 		rating: 4.7}
 		reviews: 18}
     popula,
@@ -998,8 +997,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
   g: 4.5;
 		review,
   s: 9,
-// const contact = {/* TODO: Fix JSX expression */}
-  s: '364 E Main St STE 1008 Middletown DE 19709'}
+// const contact ={/* TODO: Fix JSX expression */} s: '364 E Main St STE 1008 Middletown DE 19709'}
 	websit,
   e: 'http,
   s://ziontechgroup.com'
@@ -1022,11 +1020,9 @@ export const,
   s: 9}
 	}
 ];
-;
-// const contact = {;
+// const contact ={;
 	mobile: '+1 302 464 0950';
-	email: 'kleber@ziontechgroup.com';
-	address: '364 E Main St STE 1008 Middletown DE 19709'}
+	email: 'kleber@ziontechgroup.com';} address: '364 E Main St STE 1008 Middletown DE 19709'}
 	website: 'https://ziontechgroup.com'};
 export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
 	{
@@ -1060,11 +1056,10 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
 		realImplementation: true;
 		implementationDetails: 'Runs eval suites nightly and on PRs with webhooks.';
 		launchDate: '2025-02-01';
-		customers: 40;
+		customers: 40;}
 		rating: 4.7}
 		reviews: 18}
-// const contact = {/* TODO: Fix JSX expression */}
-  s: '364 E Main St STE 1008 Middletown DE 19709'}
+// const contact ={/* TODO: Fix JSX expression */} s: '364 E Main St STE 1008 Middletown DE 19709'}
 	websit,
   e: 'http,
   s://ziontechgroup.com'
@@ -1404,8 +1399,7 @@ i,
   g: 4.5, review,
   s: 9} ratin,
   g: 4.5,
-  reviews: 9 ' import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services'; const contact = {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com'}' addres,
+  reviews: 9 ' import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services'; const contact ={/* TODO: Fix JSX expression */} l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
   s://ziontechgroup.com' }; export const,
@@ -1415,8 +1409,7 @@ i,
   g: 4.6} review,
   s: 12} }; {/* TODO: Fix JSX expression */}
   g: 4.5} review,
-  s: 9} } ]; ' import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services'; const contact = {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com'}' addres,
+  s: 9} } ]; ' import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services'; const contact ={/* TODO: Fix JSX expression */} l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
   s://ziontechgroup.com' }; export const,

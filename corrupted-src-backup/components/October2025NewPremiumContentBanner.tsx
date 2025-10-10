@@ -1,5 +1,5 @@
 const, October2025NewPremiumContentBanne, r: Rea, c, t.FC = () => {
-  return(<div, className="relative, b, g-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-cy, a, n-900, p, y-16, overflo, w-hidd, e, n">";
+  return(<div, className="relative, b, g-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-cy, a, n-900, p, y-16, overflo, w-hidd, e, n">";}
       {/* Animated, Background, Elements */}
       <div, className="absolute, inse, t-0, opacit, y-20">
   return (
@@ -7,17 +7,17 @@ const, October2025NewPremiumContentBanne, r: Rea, c, t.FC = () => {
       {/* Animated, Background, Elements */}</div>
       <div, className="absolute, inse, t-0, opacit, y-20"></div>
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>
-        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>;
+        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' } }></d, i, v>;
       <div, className="absolute, inse, t-0, opacit, y-20">";</div>
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";
 const, October2025NewPremiumContentBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
       {/* Animated, Background, Elements */}
       <div, className="absolute, inse, t-0, opacit, y-20"></div>"
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>"
-        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>;"
+        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' } }></d, i, v>;"
       <div, className="absolute, inse, t-0, opacit, y-20">";"
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";"
-        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>';
+        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' } }></d, i, v>';
       </d, i, v>"
       <div, className="relative, container, mx-auto, p, x-6">";
         {/* Header, Sectio, n */}</div>
@@ -60,19 +60,19 @@ const, October2025NewPremiumContentBanne, r: Rea, c, t.FC = () => {/* TODO: Fix 
               <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-cy, a, n-500, t, o-bl, u, e-600, rounde, d-xl, grou, p-hov, e, r: rota, t, e-12, transitio, n-transform, duratio, n-3, 0, 0">"
                 <Activity, className="w-8 h-8, tex, t-whi, t, e  />
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">";
-          {/* Ca, r, d;
+          {/* Ca, r, d;}
   1: Autonomous, DevOp, s */}
           <div, className="group, b, g-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, borde, r-2, borde, r-cy, a, n-5, 0, 0/30, hove, r: bord, e, r-cy, a, n-400, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-cy, a, n-5, 0, 0/50">";
             <div, className="flex, item, s-center, ga, p-3, m, b-6">";
               <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-cy, a, n-500, t, o-bl, u, e-600, rounde, d-xl, grou, p-hov, e, r: rota, t, e-12, transitio, n-transform, duratio, n-3, 0, 0">";
           {/* Car, d, 1: Autonomous, DevOp, s */}</div>
-          <div, className="group, b, g-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, borde, r-2, borde, r-cy, a, n-5, 0, 0/30, hove, r: bord, e, r-cy, a, n-400, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e
+          <div, className="group, b, g-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, borde, r-2, borde, r-cy, a, n-5, 0, 0/30, hove, r: bord, e, r-cy, a, n-400, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e,
   r:shad, o, w-cy, a, n-5, 0, 0/50">"</div>
             <div, className="flex, item, s-center, ga, p-3, m, b-6"></div>
               <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-cy, a, n-500, t, o-bl, u, e-600, rounde, d-xl, grou, p-hov, e, r: rota, t, e-12, transitio, n-transform, duratio, n-3, 0, 0">"</div>
                 <Activity, className="w-8 h-8, tex, t-whi, t, e  />
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">";
-          {/* Ca, r, d 
+          {/* Ca, r, d }
   1: Autonomous, DevOp, s */}</div>
           <div, className="group, b, g-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, borde, r-2, borde, r-cy, a, n-5, 0, 0/30, hove, r: bord, e, r-cy, a, n-400, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-cy, a, n-5, 0, 0/50">";</div>
             <div, className="flex, item, s-center, ga, p-3, m, b-6">";</div>
@@ -85,7 +85,7 @@ const, October2025NewPremiumContentBanne, r: Rea, c, t.FC = () => {/* TODO: Fix 
             </d, i, v>
             <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e;
   r: te, x, t-cy, a, n-300, transitio, n-colo, r, s">"
-            <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e
+            <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e,
   r: te, x, t-cy, a, n-300, transitio, n-colo, r, s">"</h3>
           {/* Car, d, 1: Autonomous, DevOp, s */}"
           <div, className="group, b, g-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, borde, r-2, borde, r-cy, a, n-5, 0, 0/30, hove, r: bord, e, r-cy, a, n-400, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e,"
@@ -199,7 +199,7 @@ const, October2025NewPremiumContentBanne, r: Rea, c, t.FC = () => {/* TODO: Fix 
   r:shad, o, w-purp, l, e-5, 0, 0/50">"
             <div, className="flex, item, s-center, ga, p-3, m, b-6">
               <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-purp, l, e-500, t, o-pi, n, k-600, rounde, d-xl, grou, p-hov, e, r: rota, t, e-12, transitio, n-transform, duratio, n-3, 0, 0">"
-          <div, className="group, b, g-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, borde, r-2, borde, r-purp, l, e-5, 0, 0/30, hove, r: bord, e, r-purp, l, e-400, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e
+          <div, className="group, b, g-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, borde, r-2, borde, r-purp, l, e-5, 0, 0/30, hove, r: bord, e, r-purp, l, e-400, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e,
   r:shad, o, w-purp, l, e-5, 0, 0/50">"</div>
             <div, className="flex, item, s-center, ga, p-3, m, b-6"></div>
               <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-purp, l, e-500, t, o-pi, n, k-600, rounde, d-xl, grou, p-hov, e, r: rota, t, e-12, transitio, n-transform, duratio, n-3, 0, 0">"</div>
@@ -215,7 +215,7 @@ const, October2025NewPremiumContentBanne, r: Rea, c, t.FC = () => {/* TODO: Fix 
             </d, i, v>
             <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e;
   r: te, x, t-purp, l, e-300, transitio, n-colo, r, s">"
-            <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e
+            <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e,
   r: te, x, t-purp, l, e-300, transitio, n-colo, r, s">"</h3>
           {/* Car, d, 2: Quant, u, m-Safe, Securit, y */}"
           <div, className="group, b, g-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, borde, r-2, borde, r-purp, l, e-5, 0, 0/30, hove, r: bord, e, r-purp, l, e-400, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e,"
@@ -326,7 +326,7 @@ const, October2025NewPremiumContentBanne, r: Rea, c, t.FC = () => {/* TODO: Fix 
   r:shad, o, w-gre, e, n-5, 0, 0/50">"
             <div, className="flex, item, s-center, ga, p-3, m, b-6">
               <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-gre, e, n-500, t, o-emera, l, d-600, rounde, d-xl, grou, p-hov, e, r: rota, t, e-12, transitio, n-transform, duratio, n-3, 0, 0">"
-          <div, className="group, b, g-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, borde, r-2, borde, r-gre, e, n-5, 0, 0/30, hove, r: bord, e, r-gre, e, n-400, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e
+          <div, className="group, b, g-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, borde, r-2, borde, r-gre, e, n-5, 0, 0/30, hove, r: bord, e, r-gre, e, n-400, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e,
   r:shad, o, w-gre, e, n-5, 0, 0/50">"</div>
             <div, className="flex, item, s-center, ga, p-3, m, b-6"></div>
               <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-gre, e, n-500, t, o-emera, l, d-600, rounde, d-xl, grou, p-hov, e, r: rota, t, e-12, transitio, n-transform, duratio, n-3, 0, 0">"</div>
@@ -342,7 +342,7 @@ const, October2025NewPremiumContentBanne, r: Rea, c, t.FC = () => {/* TODO: Fix 
             </d, i, v>
             <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e;
   r: te, x, t-gre, e, n-300, transitio, n-colo, r, s">"
-            <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e
+            <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e,
   r: te, x, t-gre, e, n-300, transitio, n-colo, r, s">"</h3>
           {/* Car, d, 3: Cognitive, Business, Intelligence */}"
           <div, className="group, b, g-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, borde, r-2, borde, r-gre, e, n-5, 0, 0/30, hove, r: bord, e, r-gre, e, n-400, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e,"
@@ -492,5 +492,13 @@ const, October2025NewPremiumContentBanne, r: Rea, c, t.FC = () => {/* TODO: Fix 
     </d, i, v>)
   );
 };
-export default October2025NewPremiumContentBanner;
-;"
+export default October2025NewPremiumContentBanner;"
+
+
+
+
+
+
+
+
+</div></div></div></div></div></div></div></div></div>

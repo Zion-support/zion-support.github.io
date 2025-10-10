@@ -10,7 +10,7 @@ export const metaverseDigitalRealityServices2026 = [{name: 'Metaverse Developmen
       'Multi-platform deployment'
     ],
     pricing: unknown;
-      starter: '$399/month',
+      starter: '$399/month'}
       professional: '$799/month'}
       enterprise: 'Custom'}
   },
@@ -69,7 +69,7 @@ export const metaverseDigitalStats2026 =
   categories: 4;
   averageRating: 4.7;
   activeUsers: 1200;
-export const metaverseDigitalStats2026 = {};
+export const metaverseDigitalStats2026 ={} ;
   totalService,
   s: 2,
   categorie,

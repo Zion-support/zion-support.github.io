@@ -3,10 +3,10 @@
 //Checks git status and provides merge conflict resolution guidance;
 const { execSync } = require('child_process');
 // const path = require('path');
-// function runCommand(command) timeout = 30000) {try {
-    const result = execSync(command, {)
+// function runCommand(command) timeout = 30000) {try {;
+const result = execSync(command, {)
       encoding: 'utf8'),
-      timeout),
+      timeout)}
       cwd: process.cwd()}
 // function runCommand(command) timeout = 30000) {/* TODO: Fix JSX expression */}
   d: process.cwd()}
@@ -30,7 +30,7 @@ const { execSync } = require('child_process');
   }
 }
 // function checkBuildStatus() {if (fs.existsSync('package.json')) {
-//     const packageJson = JSON.parse(fs.readFileSync('package.json') 'utf8'));
+//     const packageJson = JSON.parse(fs.readFileSync('package.json') 'utf8'));}
 //     // console.log('Project: ') packageJson.name)}
 // function checkBuildStatus() {/* TODO: Fix JSX expression */}
   t: ') packageJson.name)}
@@ -52,10 +52,10 @@ const { execSync } = require('child_process');
 // function checkBranchStatus() {const branches = runCommand('git branch -a');
   if (branches) {
 //     // console.log('Available branches: ') branchList.length);
-    //Check for cursor branches;
+    //Check for cursor branches;}
 //     // console.log('Cursor branches: ') cursorBranches.length)}
     if (cursorBranches.length > 0) {
-//       // console.log('Recent cursor branches: '),
+//       // console.log('Recent cursor branches: ')}
 // function checkBranchStatus() {/* TODO: Fix JSX expression */}
   branches: ') cursorBranches.length)}
     if (cursorBranches.length > 0) {/* TODO: Fix JSX expression */}
@@ -64,7 +64,7 @@ const { execSync } = require('child_process');
   }
 }
 // function generateResolutionPlan() {//   //   //   //   //   //   //   // console.log('\n🚀 Quick Fix Commands: '),
-//   // console.log('git add . && git commit -m "feat: Add services and resolve conflicts"'));
+//   // console.log('git add . && git commit -m "feat: Add services and resolve conflicts"'));}
 //   // console.log('git push origin HEAD: main')}
 //   // console.log('npm run build:production')}
 // function generateResolutionPlan() {/* TODO: Fix JSX expression */}

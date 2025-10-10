@@ -20,6 +20,7 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
           Edge, 2025, Sept 30, Consentless, Journeys V2;
         </h1>
         <p, className='te, x, t-zi, o, n-sla, t, e-light, m, b-8'></p>Learn</p>, about, edge 2025, sept, 30 consentless, journeys, v2 and, how, it can, benefit, your enterpri, s, e.
-    </d, i, v > );
+    </d, i, v > );}
 export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: Fix JSX expression */}
  }
+</div>

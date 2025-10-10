@@ -25,7 +25,7 @@ const,
 }
 //   children,
   className = '',
-  breakpoints = {},
+  breakpoints ={} ,
 //   fallback)
 }) => {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -78,7 +78,7 @@ const,
           
           
           
-          <div className={className}>{children}</div>;
+          <div className={className} >{children}</div>;
   }
   const getResponsiveClasses = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -96,7 +96,7 @@ const,
   );
 };
 // Hook for responsive values;
-export const useResponsiveValue = {};
+export const useResponsiveValue ={} ;
           <T,>(value,
   s: {// sm?: T;}
 // md?: T;
@@ -115,22 +115,22 @@ export const useResponsiveValue = {};
   h: 1024 });
   const isLargeDesktop = useMediaQuery({/* TODO: Fix JSX expression */})
   h: 1280 });
-  if (isLargeDesktop && values['2xl'] !== undefined) {/* TODO: Fix JSX expression */}
+  if (isLargeDesktop && values['2xl'] !== == undefined) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     return values['2xl'];
   }
-  if (isDesktop && values.xl !== undefined) {/* TODO: Fix JSX expression */}
+  if (isDesktop && values.xl !== == undefined) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     return values.xl;
   }
-  if (isTablet && values.md !== undefined) {/* TODO: Fix JSX expression */}
+  if (isTablet && values.md !== == undefined) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     return values.md;
   }
-  if (isMobile && values.sm !== undefined) {/* TODO: Fix JSX expression */}
+  if (isMobile && values.sm !== == undefined) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     return values.sm;
@@ -163,3 +163,7 @@ export const useBreakpoint = () => {/* TODO: Fix JSX expression */}
 export default ResponsiveContainer;
 
 
+
+
+
+</div></div></div>

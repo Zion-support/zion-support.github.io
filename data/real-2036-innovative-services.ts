@@ -1159,7 +1159,6 @@ export type Real2036InnovativeService =
     integration: ['ERP systemsWMS platformsTMS solutionsIoT devices_cloud services'],
     use_cases: ['Demand planning_inventory management_logistics optimization_risk management']}
 ];
-;
     rating: 4.7;
     marketSize: '$28.4B',
     targetAudience: 'Manufacturing companies, Retail businesses, Logistics providers'
@@ -1167,7 +1166,7 @@ export type Real2036InnovativeService =
     integration: ['ERP systemsWMS platformsTMS solutionsIoT devicesCloud services'];
     useCases: ['Demand planningInventory managementLogistics optimizationRisk management']}
 ];
-export type Real2036 InnovativeService = {;
+export type Real2036 InnovativeService ={;
     features: [,
       'Quantum key distribution (QKD)',
       'End - to - end quantum encryption',
@@ -1195,8 +1194,7 @@ export type Real2036 InnovativeService = {;
     use_cases: [,
       'Government communications',
       'Financial transactions',
-      'Healthcare data sharing',
-      'Military operations']}
+      'Healthcare data sharing'} 'Military operations']}
   },
   // Autonomous DevOps Platform;
     id: 'autonomous - devops - platform - enterprise',
@@ -1221,7 +1219,6 @@ export type Real2036 InnovativeService = {;
     use_case,
   s: ['Demand planning_inventory management_logistics optimization_risk management']}
 ];
-;
     ratin,
   g: 4.7,
     marketSiz,
@@ -1235,8 +1232,7 @@ export type Real2036 InnovativeService = {;
     useCase,
   s: ['Demand planningInventory managementLogistics optimizationRisk management']}
 ];
-export type Real2036InnovativeService = {/* TODO: Fix JSX expression */}
-    ]}
+export type Real2036InnovativeService ={/* TODO: Fix JSX expression */} ]}
   },
   // Autonomous DevOps Platform;
     i,
@@ -1301,7 +1297,7 @@ export type Real2036InnovativeService = {/* TODO: Fix JSX expression */}
     integration: ['ERP systemsWMS platformsTMS solutionsIoT devicesCloud services'];
     useCases: ['Demand planningInventory managementLogistics optimizationRisk management']}
 ];
-export type Real2036 InnovativeService = {;
+export type Real2036 InnovativeService ={;
   id: string;
   name: string;
   tagline: string;
@@ -1332,11 +1328,9 @@ export type Real2036 InnovativeService = {;
   e: 'AI optimization, Real-time insights, Comprehensive coverage'
     integratio,
   n: ['ERP systemsWMS platformsTMS solutionsIoT devicesCloud services'];
-    useCase,
-  s: ['Demand planningInventory managementLogistics optimizationRisk management']}
+    useCase} s: ['Demand planningInventory managementLogistics optimizationRisk management']}
 ];
-export type Real2036InnovativeService = {/* TODO: Fix JSX expression */}
-  useCases?: string[]}
+export type Real2036InnovativeService ={/* TODO: Fix JSX expression */} useCases?: string[]}
 };
 export const,
   real2036InnovativeServices: Real2036InnovativeService[] = [;
@@ -1357,7 +1351,7 @@ export const,
     rating: 4.8;
     marketSize: '$25.6 B';
     targetAudience: 'Enterprise businesses, Data analysts, C-suite executives';
-    competitiveAdvantage: 'Advanced AI algorithms, Real-time processing, Natural language interface';
+    competitiveAdvantage: 'Advanced AI algorithms, Real-time processing, Natural language interface';}
     integration: ['SalesforceHubSpotGoogle AnalyticsAWSAzureSlack']}
     useCases: ['Sales forecastingCustomer behavior analysisFinancial planningMarket trend analysis']}
   };
@@ -1378,7 +1372,7 @@ export const,
     rating: 4.9;
     marketSize: '$3.2 B';
     targetAudience: 'Government agencies, Financial institutions, Healthcare organizations';
-    competitiveAdvantage: 'True quantum security, Unbreakable encryption, Future-proof technology';
+    competitiveAdvantage: 'True quantum security, Unbreakable encryption, Future-proof technology';}
     integration: ['Microsoft TeamsSlackZoomCustom APIsVPN solutions']}
     useCases: ['Government communicationsFinancial transactionsHealthcare data sharingMilitary operations']}
   };
@@ -1399,7 +1393,7 @@ export const,
     rating: 4.7;
     marketSize: '$18.4 B';
     targetAudience: 'DevOps teams, IT operations, Cloud engineers';
-    competitiveAdvantage: 'Autonomous operations, AI-driven optimization, Zero human intervention';
+    competitiveAdvantage: 'Autonomous operations, AI-driven optimization, Zero human intervention';}
     integration: ['AWSAzureGCPKubernetesDockerJenkinsGitLab']}
     useCases: ['Continuous deploymentInfrastructure managementPerformance optimizationIncident response']}
   };
@@ -1420,7 +1414,7 @@ export const,
     rating: 4.6;
     marketSize: '$4.8 B';
     targetAudience: 'Space agencies, Satellite companies, Aerospace firms';
-    competitiveAdvantage: 'Space-specific algorithms, Real-time data processing, Advanced visualization';
+    competitiveAdvantage: 'Space-specific algorithms, Real-time data processing, Advanced visualization';}
     integration: ['NASA APIsESA systemsSatellite ground stationsWeather services']}
     useCases: ['Satellite operationsMission planningSpace weather analysisOrbital optimization']}
   };
@@ -1441,7 +1435,7 @@ export const,
     rating: 4.8;
     marketSize: '$45.2 B';
     targetAudience: 'Enterprise IT security, Financial institutions, Healthcare organizations';
-    competitiveAdvantage: 'AI-driven detection, Real-time response, Comprehensive coverage';
+    competitiveAdvantage: 'AI-driven detection, Real-time response, Comprehensive coverage';}
     integration: ['SIEM systemsFirewallsEDR solutionsIdentity providersCloud platforms']}
     useCases: ['Threat detectionIncident responseCompliance managementSecurity monitoring']}
   };
@@ -1462,7 +1456,7 @@ export const,
     rating: 4.9;
     marketSize: '$2.8 B';
     targetAudience: 'Research institutions, Pharmaceutical companies, Financial services';
-    competitiveAdvantage: 'Quantum advantage, Exponential speedup, Future-proof technology';
+    competitiveAdvantage: 'Quantum advantage, Exponential speedup, Future-proof technology';}
     integration: ['TensorFlowPyTorchScikit-learnQuantum simulatorsCloud quantum services']}
     useCases: ['Drug discoveryFinancial modelingOptimization problemsScientific research']}
   };
@@ -1483,7 +1477,7 @@ export const,
     rating: 4.7;
     marketSize: '$12.6 B';
     targetAudience: 'IoT companies, Telecommunications, Manufacturing';
-    competitiveAdvantage: 'Intelligent orchestration, Real-time optimization, Multi-edge coordination';
+    competitiveAdvantage: 'Intelligent orchestration, Real-time optimization, Multi-edge coordination';}
     integration: ['KubernetesDockerIoT platforms5 G networksCloud services']}
     useCases: ['IoT management5 G optimizationManufacturing automationSmart cities']}
   };
@@ -1504,7 +1498,7 @@ export const,
     rating: 4.8;
     marketSize: '$32.8 B';
     targetAudience: 'E-commerce companies, Retail businesses, Service providers';
-    competitiveAdvantage: 'AI personalization, Omnichannel integration, Predictive insights';
+    competitiveAdvantage: 'AI personalization, Omnichannel integration, Predictive insights';}
     integration: ['ShopifyWooCommerceSalesforceHubSpotZendeskIntercom']}
     useCases: ['E-commerce personalizationCustomer service automationMarketing optimizationCustomer retention']}
   };
@@ -1525,7 +1519,7 @@ export const,
     rating: 4.6;
     marketSize: '$8.9 B';
     targetAudience: 'Financial institutions, Supply chain companies, Healthcare organizations';
-    competitiveAdvantage: 'Multi-chain support, Enterprise features, Security focus';
+    competitiveAdvantage: 'Multi-chain support, Enterprise features, Security focus';}
     integration: ['EthereumPolygonSolanaHyperledgerCloud platforms']}
     useCases: ['DeFi applicationsSupply chain trackingDigital identitySmart contracts']}
   };
@@ -1546,7 +1540,7 @@ export const,
     rating: 4.7;
     marketSize: '$15.2 B';
     targetAudience: 'Manufacturing companies, Industrial automation, Factory operators';
-    competitiveAdvantage: 'AI automation, Predictive capabilities, Real-time optimization';
+    competitiveAdvantage: 'AI automation, Predictive capabilities, Real-time optimization';}
     integration: ['ERP systemsMES platformsIoT devicesRobotics systemsCloud services']}
     useCases: ['Quality controlProduction optimizationPredictive maintenanceSupply chain management']}
   };
@@ -1567,7 +1561,7 @@ export const,
     rating: 4.9;
     marketSize: '$5.6 B';
     targetAudience: 'Internet service providers, Data centers, Government agencies';
-    competitiveAdvantage: 'Quantum security, Future-proof protection, Advanced algorithms';
+    competitiveAdvantage: 'Quantum security, Future-proof protection, Advanced algorithms';}
     integration: ['FirewallsLoad balancersVPN solutionsCloud platformsCDN services']}
     useCases: ['Internet securityData protectionNetwork securityCompliance management']}
   };
@@ -1588,7 +1582,7 @@ export const,
     rating: 4.8;
     marketSize: '$18.7 B';
     targetAudience: 'Hospitals, Medical clinics, Healthcare providers';
-    competitiveAdvantage: 'Advanced AI algorithms, Medical expertise, Compliance focus';
+    competitiveAdvantage: 'Advanced AI algorithms, Medical expertise, Compliance focus';}
     integration: ['EHR systemsPACS systemsLab systemsTelemedicine platforms']}
     useCases: ['Medical imagingDiagnosis supportTreatment planningPatient monitoring']}
   };
@@ -1609,7 +1603,7 @@ export const,
     rating: 4.7;
     marketSize: '$2.4 B';
     targetAudience: 'Space mining companies, Government agencies, Research institutions';
-    competitiveAdvantage: 'Space expertise, Advanced robotics, AI optimization';
+    competitiveAdvantage: 'Space expertise, Advanced robotics, AI optimization';}
     integration: ['Satellite systemsRobotics platformsAI systemsGround stations']}
     useCases: ['Asteroid miningLunar explorationResource mappingMining operations']}
   };
@@ -1630,7 +1624,7 @@ export const,
     rating: 4.9;
     marketSize: '$7.8 B';
     targetAudience: 'Investment banks, Hedge funds, Trading firms';
-    competitiveAdvantage: 'Quantum advantage, High-frequency capabilities, Advanced algorithms';
+    competitiveAdvantage: 'Quantum advantage, High-frequency capabilities, Advanced algorithms';}
     integration: ['Trading platformsMarket data feedsRisk systemsCompliance platforms']}
     useCases: ['Algorithmic tradingRisk managementPortfolio optimizationMarket analysis']}
   };
@@ -1651,7 +1645,7 @@ export const,
     rating: 4.7;
     marketSize: '$28.4 B';
     targetAudience: 'Manufacturing companies, Retail businesses, Logistics providers';
-    competitiveAdvantage: 'AI optimization, Real-time insights, Comprehensive coverage';
+    competitiveAdvantage: 'AI optimization, Real-time insights, Comprehensive coverage';}
     integration: ['ERP systemsWMS platformsTMS solutionsIoT devicesCloud services']}
     useCases: ['Demand planningInventory managementLogistics optimizationRisk management']}
   {/* TODO: Fix JSX expression */}
@@ -2070,8 +2064,7 @@ export type Real2036InnovativeService = i,
   e: 'Manufacturing companies, Retail businesses, Logistics providers'' competitiveAdvantag,
   e: 'AI optimization, Real-time insights, Comprehensive coverage'' integratio,
   n: ['ERP systemsWMS platformsTMS solutionsIoT devicesCloud services']' useCase,
-  s: ['Demand planningInventory managementLogistics optimizationRisk management'] } ]; export type Real2036InnovativeService = {/* TODO: Fix JSX expression */}
-  s: [,' 'Government communications',' 'Financial transactions',' 'Healthcare data sharing',' 'Military operations']} }, // Autonomous DevOps Platform; ' i,
+  s: ['Demand planningInventory managementLogistics optimizationRisk management'] } ]; export type Real2036InnovativeService ={/* TODO: Fix JSX expression */} s: [,' 'Government communications',' 'Financial transactions',' 'Healthcare data sharing',' 'Military operations']} }, // Autonomous DevOps Platform; ' i,
   d: 'autonomous - devops - platform - enterprise',' nam,
   e: 'Autonomous DevOps Platform Enterprise',' taglin,
   e: 'Self - healing infrastructure with AI - powered automation', descriptio,
@@ -2097,8 +2090,7 @@ export type Real2036InnovativeService = i,
   e: 'Manufacturing companies, Retail businesses, Logistics providers'' competitiveAdvantag,
   e: 'AI optimization, Real-time insights, Comprehensive coverage'' integratio,
   n: ['ERP systemsWMS platformsTMS solutionsIoT devicesCloud services']' useCase,
-  s: ['Demand planningInventory managementLogistics optimizationRisk management'] } ]; export type Real2036InnovativeService = {/* TODO: Fix JSX expression */}
-  k: string; launchDate?: string; rating?: number; marketSize?: string; targetAudience?: string; competitiveAdvantage?: string} integration?: string[]}; useCases?: string[]; }; export const,
+  s: ['Demand planningInventory managementLogistics optimizationRisk management'] } ]; export type Real2036InnovativeService ={/* TODO: Fix JSX expression */} k: string; launchDate?: string; rating?: number; marketSize?: string; targetAudience?: string; competitiveAdvantage?: string} integration?: string[]}; useCases?: string[]; }; export const,
   real2036InnovativeServices: Real2036InnovativeService[] = [; // AI-Powered Business Intelligence; {/* TODO: Fix JSX expression */}
   n: ['SalesforceHubSpotGoogle AnalyticsAWSAzureSlack']}' useCase,
   s: ['Sales forecastingCustomer behavior analysisFinancial planningMarket trend analysis']} }; // Quantum-Secure Communication Platform; {/* TODO: Fix JSX expression */}

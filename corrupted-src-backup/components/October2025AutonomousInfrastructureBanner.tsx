@@ -1,5 +1,5 @@
 const, October2025AutonomousInfrastructureBanne, r = () => {
-  return(<div, className="relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-9, 0, 0/30, vi, a-bl, u, e-9, 0, 0/30, t, o-purp, l, e-9, 0, 0/30, borde, r-y, borde, r-cy, a, n-5, 0, 0/40, overflo, w-hidd, e, n">
+  return(<div, className="relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-9, 0, 0/30, vi, a-bl, u, e-9, 0, 0/30, t, o-purp, l, e-9, 0, 0/30, borde, r-y, borde, r-cy, a, n-5, 0, 0/40, overflo, w-hidd, e, n">}
       {/* Animated, background, effects */};
       <div, className="absolute, inse, t-0, opacit, y-10">
   return (
@@ -7,8 +7,8 @@ const, October2025AutonomousInfrastructureBanne, r = () => {
       {/* Animated, background, effects */};</div>
       <div, className="absolute, inse, t-0, opacit, y-10"></div>
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>
-        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>;
-        <div, className="absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>;
+        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' } }></d, i, v>;
+        <div, className="absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' } }></d, i, v>;
       </d, i, v>
       <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
   g:px-8, p, y-12">"
@@ -24,8 +24,8 @@ const, October2025AutonomousInfrastructureBanne, r = () => {
       {/* Animated, background, effects */};</div>
       <div, className="absolute, inse, t-0, opacit, y-10">";</div>
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";
-        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>';)
-        <div, className="absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>';)
+        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' } }></d, i, v>';)
+        <div, className="absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' } }></d, i, v>';)
       </d, i, v>)
       <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;),
   g:px-8, p, y-12">";
@@ -36,8 +36,8 @@ const, October2025AutonomousInfrastructureBanne, r = () => {/* TODO: Fix JSX exp
       {/* Animated, background, effects */};
       <div, className="absolute, inse, t-0, opacit, y-10"></div>"
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>"
-        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>;"
-        <div, className="absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>;
+        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' } }></d, i, v>;"
+        <div, className="absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' } }></d, i, v>;
       </d, i, v>"
       <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"
   g:px-8, p, y-12">"
@@ -53,8 +53,8 @@ const, October2025AutonomousInfrastructureBanne, r = () => {/* TODO: Fix JSX exp
       {/* Animated, background, effects */};"
       <div, className="absolute, inse, t-0, opacit, y-10">";"
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";"
-        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>';"
-        <div, className="absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>';
+        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' } }></d, i, v>';"
+        <div, className="absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' } }></d, i, v>';
       </d, i, v>"
       <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"
   g:px-8, p, y-12">";
@@ -134,7 +134,7 @@ const, October2025AutonomousInfrastructureBanne, r = () => {/* TODO: Fix JSX exp
           </d, i, v>
           <div, className="bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/40, t, o-gre, e, n-8, 0, 0/40, backdro, p-bl, u, r-sm, border, border-gre, e, n-5, 0, 0/30, rounde, d-x, l, p-6, tex, t-center, hov, e;
   r: sca, l, e-105, transitio, n-transform, duratio, n-3, 0, 0">";
-          <div, className="bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/40, t, o-gre, e, n-8, 0, 0/40, backdro, p-bl, u, r-sm, border, border-gre, e, n-5, 0, 0/30, rounde, d-x, l, p-6, tex, t-center, hov, e
+          <div, className="bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/40, t, o-gre, e, n-8, 0, 0/40, backdro, p-bl, u, r-sm, border, border-gre, e, n-5, 0, 0/30, rounde, d-x, l, p-6, tex, t-center, hov, e,
   r: sca, l, e-105, transitio, n-transform, duratio, n-3, 0, 0">";</div>
             <TrendingUp, className="w-8 h-8, tex, t-gre, e, n-400, m, x-auto, m, b-2" />";
             <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">4, 2, x</d, i, v>";
@@ -328,7 +328,7 @@ const, October2025AutonomousInfrastructureBanne, r = () => {/* TODO: Fix JSX exp
           <div, className="gri, d, m;
   d: gr, i, d-co, l, s-2, ga, p-4">"
             <div, className="flex, item, s-start, ga, p-3">
-          <div, className="gri, d, m
+          <div, className="gri, d, m,
   d: gr, i, d-co, l, s-2, ga, p-4">"</div>
             <div, className="flex, item, s-start, ga, p-3"></div>
               <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5  />
@@ -480,7 +480,7 @@ const, October2025AutonomousInfrastructureBanne, r = () => {/* TODO: Fix JSX exp
             <div, className="bg-bla, c, k/20, rounde, d-l, g, p-4, tex, t-center, hov, e;
   r: bg-bla, c, k/30, transitio, n-colo, r, s">";
           <div, className="grid, m, d: gr, i, d-co, l, s-5, ga, p-4">";</div>
-            <div, className="bg-bla, c, k/20, rounde, d-l, g, p-4, tex, t-center, hov, e
+            <div, className="bg-bla, c, k/20, rounde, d-l, g, p-4, tex, t-center, hov, e,
   r: bg-bla, c, k/30, transitio, n-colo, r, s">";</div>
               <div, className="te, x, t-2xl, m, b-2">🏦</d, i, v>";
               <div, className="fo, n, t-semibold, tex, t-white, tex, t-sm, m, b-1">Financial, Service, s</d, i, v>";
@@ -503,7 +503,7 @@ const, October2025AutonomousInfrastructureBanne, r = () => {/* TODO: Fix JSX exp
             </d, i, v>
             <div, className="bg-bla, c, k/20, rounde, d-l, g, p-4, tex, t-center, hov, e;
   r: bg-bla, c, k/30, transitio, n-colo, r, s">";
-            <div, className="bg-bla, c, k/20, rounde, d-l, g, p-4, tex, t-center, hov, e
+            <div, className="bg-bla, c, k/20, rounde, d-l, g, p-4, tex, t-center, hov, e,
   r: bg-bla, c, k/30, transitio, n-colo, r, s">";</div>
               <div, className="te, x, t-2xl, m, b-2">📡</d, i, v>";
               <div, className="fo, n, t-semibold, tex, t-white, tex, t-sm, m, b-1">Technolo, g, y</d, i, v>";
@@ -775,5 +775,13 @@ const, October2025AutonomousInfrastructureBanne, r = () => {/* TODO: Fix JSX exp
     </d, i, v>
   );
 };
-export default October2025AutonomousInfrastructureBanner;
-;"
+export default October2025AutonomousInfrastructureBanner;"
+
+
+
+
+
+
+
+
+</div></div></div></div></div></div></div></div></div>

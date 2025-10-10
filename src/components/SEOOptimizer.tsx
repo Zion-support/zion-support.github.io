@@ -18,8 +18,7 @@ const,
     // Add organization structured data;
     addOrganizationStructuredData();
   }, [title, description, keywords, canonicalUrl, ogImage, structuredData]);
-
-  const updateMetaTag = (nam,
+const updateMetaTag = (nam,
   e: string, conten,
   t: string, attribut)
   e: string = 'name') => {/* TODO: Fix JSX expression */}
@@ -28,20 +27,17 @@ const,
     }
     meta.setAttribute('content', content);
   };
-
-  const updateCanonicalUrl = (ur)
+const updateCanonicalUrl = (ur)
   l: string) => {/* TODO: Fix JSX expression */}
     }
     canonical.setAttribute('href', url);
   };
-
-  const addStructuredData = (dat)
+const addStructuredData = (dat)
   a: any) => {/* TODO: Fix JSX expression */}
     }
     document.head.appendChild(script);
   };
-
-  const addBreadcrumbStructuredData = () => {/* TODO: Fix JSX expression */}
+const addBreadcrumbStructuredData = () => {/* TODO: Fix JSX expression */}
         }
       ]
     };
@@ -55,8 +51,7 @@ const,
     }
     document.head.appendChild(script);
   };
-
-  const addFAQStructuredData = () => {/* TODO: Fix JSX expression */}
+const addFAQStructuredData = () => {/* TODO: Fix JSX expression */}
           }
         },
         {/* TODO: Fix JSX expression */}
@@ -77,8 +72,7 @@ const,
     }
     document.head.appendChild(script);
   };
-
-  const addOrganizationStructuredData = () => {/* TODO: Fix JSX expression */}
+const addOrganizationStructuredData = () => {/* TODO: Fix JSX expression */}
       },
       'address': {/* TODO: Fix JSX expression */}
       },
@@ -99,24 +93,23 @@ const,
 
     }
   };
-
-  const mergedSEOData = { ...defaultSEOData, ...seoData };
+const mergedSEOData ={...defaultSEOData, ...seoData } ;
 
   useEffect(() => {
     // Log SEO optimization
     logger.info('SEO optimization applied', { 
       page, 
       title: mergedSEOData.title,
-      description: mergedSEOData.description 
+      description: mergedSEOData.description }
     });
 
     // Track page view for analytics
-    if (typeof window !== 'undefined' && 'gtag' in window) {
+    if (typeof window !== == 'undefined' && 'gtag' in window) {
       (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
         page_title: mergedSEOData.title,
         page_location: mergedSEOData.canonical,
         custom_map: {
-          page_type: page
+          page_type: page}
         }
       });
     }
@@ -194,7 +187,7 @@ const,
           name: 'AI and IT Solutions',
           provider: {
             '@type': 'Organization',
-            name: 'Zion Tech Group'
+            name: 'Zion Tech Group'}
           },
           description: mergedSEOData.description,
           serviceType: 'Technology Services',
@@ -208,7 +201,7 @@ const,
                 itemOffered: {
                   '@type': 'Service',
                   name: 'AI Solutions',
-                  description: 'Advanced artificial intelligence solutions'
+                  description: 'Advanced artificial intelligence solutions'}
                 }
               },
               {
@@ -216,7 +209,7 @@ const,
                 itemOffered: {
                   '@type': 'Service',
                   name: 'Cybersecurity',
-                  description: 'Comprehensive cybersecurity solutions'
+                  description: 'Comprehensive cybersecurity solutions'}
                 }
               },
               {
@@ -224,7 +217,7 @@ const,
                 itemOffered: {
                   '@type': 'Service',
                   name: 'Cloud Infrastructure',
-                  description: 'Scalable cloud infrastructure solutions'
+                  description: 'Scalable cloud infrastructure solutions'}
                 }
               }
             ]

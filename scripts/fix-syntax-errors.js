@@ -25,21 +25,20 @@ const excludePatterns = [
   '**/corrupted*/**',
   '**/temp*/**'
 ];
-
 let totalFiles = 0;
 let processedFiles = 0;
 let fixedFiles = 0;
 
-function fixSyntaxErrors(content) {
-  let newContent = content;
+function fixSyntaxErrors(content) {;
+let newContent = content;
   let fixed = false;
 
   // Fix missing closing braces and parentheses;
-  // Pattern: Missing closing brace for setState;
+  // Pattern: Missing closing brace for setState;}
   const setStatePattern = /this\.setState\(\s*\{[^}]*\s*$/gm;
   if (setStatePattern.test(newContent)) {
-    newContent = newContent.replace(setStatePattern, (match) => {
-      if (!match.includes('});')) {
+    newContent = newContent.replace(setStatePattern, (match) => {}
+      if (!match.includes('});')) {}
         return match + '\n    });';
       }
       return match;
@@ -50,8 +49,8 @@ function fixSyntaxErrors(content) {
   // Fix missing closing braces for function calls;
   const functionCallPattern = /(\w+\(\s*\{[^}]*\s*)\s*$/gm;
   if (functionCallPattern.test(newContent)) {
-    newContent = newContent.replace(functionCallPattern, (match) => {
-      if (!match.includes('});') && !match.includes('});')) {
+    newContent = newContent.replace(functionCallPattern, (match) => {}
+      if (!match.includes('});') && !match.includes('});')) {}
         return match + '\n      });';
       }
       return match;
@@ -62,8 +61,8 @@ function fixSyntaxErrors(content) {
   // Fix missing closing braces for if statements;
   const ifStatementPattern = /if\s*\([^)]*\)\s*\{[^}]*\s*$/gm;
   if (ifStatementPattern.test(newContent)) {
-    newContent = newContent.replace(ifStatementPattern, (match) => {
-      if (!match.includes('}')) {
+    newContent = newContent.replace(ifStatementPattern, (match) => {}
+      if (!match.includes('}')) {}
         return match + '\n    }';
       }
       return match;
@@ -74,8 +73,8 @@ function fixSyntaxErrors(content) {
   // Fix missing closing braces for forEach;
   const forEachPattern = /\.forEach\([^)]*\)\s*\{[^}]*\s*$/gm;
   if (forEachPattern.test(newContent)) {
-    newContent = newContent.replace(forEachPattern, (match) => {
-      if (!match.includes('});')) {
+    newContent = newContent.replace(forEachPattern, (match) => {}
+      if (!match.includes('});')) {}
         return match + '\n    });';
       }
       return match;
@@ -86,8 +85,8 @@ function fixSyntaxErrors(content) {
   // Fix missing closing braces for object methods;
   const objectMethodPattern = /(\w+:\s*\([^)]*\)\s*=>\s*\{[^}]*)\s*$/gm;
   if (objectMethodPattern.test(newContent)) {
-    newContent = newContent.replace(objectMethodPattern, (match) => {
-      if (!match.includes('}')) {
+    newContent = newContent.replace(objectMethodPattern, (match) => {}
+      if (!match.includes('}')) {}
         return match + '\n  }';
       }
       return match;
@@ -102,18 +101,18 @@ function fixSyntaxErrors(content) {
 }
 
 function processFile(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
+  try {;
+const content = fs.readFileSync(filePath, 'utf8');
     const result = fixSyntaxErrors(content);
     
     if (result.fixed) {
-      fs.writeFileSync(filePath, result.content, 'utf8');
+      fs.writeFileSync(filePath, result.content, 'utf8');}
       console.log(`✅ ${filePath}: Fixed syntax errors`);
       fixedFiles++;
     }
 
     processedFiles++;
-  } catch (error) {
+  } catch (error) {}
     console.error(`❌ Error processing ${filePath}:`, error.message);
   }
 }
@@ -123,9 +122,9 @@ async function main() {
 
   // Get all files to process;
   const allFiles = [];
-  for (const pattern of filePatterns) {
-    const files = await glob(pattern, {)
-      ignore: excludePatterns),
+  for (const pattern of filePatterns) {;
+const files = await glob(pattern, {)
+      ignore: excludePatterns)}
       cwd: process.cwd()});
     allFiles.push(...files);
   }
@@ -145,8 +144,8 @@ async function main() {
   console.log(`   - Files fixed: ${fixedFiles}`);
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
-  main();
+if (import.meta.url === = `file://${process.argv[1]}`) {
+  main();}
 }
 
 export { processFile, fixSyntaxErrors };

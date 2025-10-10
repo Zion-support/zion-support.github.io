@@ -1,15 +1,15 @@
 impo, r, t {/* TODO: Fix JSX expression */}
 } fr, o, m 'luci, d, e-rea, c, t';
 interface October2025AIRevolutionBannerProp, s {
-  classNa, m, e ?  : string;
+  classNa, m, e ?  : string;}
  }
 export default function October2025AIRevolutionBann, e, r({)
-  classNa, m, e = '')
-}: October2025AIRevolutionBannerPro, p, s) {
-  return(<div, classNam, e = {`bg-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/40, vi, a-indi, g, o-9, 0, 0/40, t, o-cy, a, n-9, 0, 0/40, borde, r-y, borde, r-purp, l, e-5, 0, 0/30 ${classNa, m, e}`}
+  classNa, m, e = '')}
+}: October2025AIRevolutionBannerPro, p, s) {}
+  return(<div, classNam, e ={`bg-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/40, vi, a-indi, g, o-9, 0, 0/40, t, o-cy, a, n-9, 0, 0/40, borde, r-y, borde, r-purp, l, e-5, 0, 0/30 ${classNa, m, e} `}
     >
   return (
-    <div, classNam, e = {`bg-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/40, vi, a-indi, g, o-9, 0, 0/40, t, o-cy, a, n-9, 0, 0/40, borde, r-y, borde, r-purp, l, e-5, 0, 0/30 ${classNa, m, e}`}
+    <div, classNam, e ={`bg-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/40, vi, a-indi, g, o-9, 0, 0/40, t, o-cy, a, n-9, 0, 0/40, borde, r-y, borde, r-purp, l, e-5, 0, 0/30 ${classNa, m, e} `}
     ></div>
       <div, className='container, m, x-auto, p, x-6, p, y-12'>
         {/* Head, e, r */}</div>
@@ -21,7 +21,7 @@ interface October2025AIRevolutionBannerProp, s {/* TODO: Fix JSX expression */}
  }
 export default function October2025AIRevolutionBann, e, r({/* TODO: Fix JSX expression */})
 }: October2025AIRevolutionBannerPro, p, s) {/* TODO: Fix JSX expression */}
-    <div, classNam, e = {`bg-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/40, vi, a-indi, g, o-9, 0, 0/40, t, o-cy, a, n-9, 0, 0/40, borde, r-y, borde, r-purp, l, e-5, 0, 0/30 ${classNa, m, e}`}
+    <div, classNam, e ={`bg-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/40, vi, a-indi, g, o-9, 0, 0/40, t, o-cy, a, n-9, 0, 0/40, borde, r-y, borde, r-purp, l, e-5, 0, 0/30 ${classNa, m, e} `}
     ></div>
       <div, className='container, m, x-auto, p, x-6, p, y-12'></div>
         {/* Head, e, r */}

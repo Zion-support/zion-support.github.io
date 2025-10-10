@@ -12,9 +12,8 @@ const,
   AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
     }
-
-    const baseStructuredData = {/* TODO: Fix JSX expression */}
-      },
+;
+const baseStructuredData ={/* TODO: Fix JSX expression */} },
       addres,
   s: {/* TODO: Fix JSX expression */}
       },
@@ -50,9 +49,7 @@ const,
   // Generate Twitter Card data;
   const generateTwitterCardData = useCallback(() => {/* TODO: Fix JSX expression */}
     if (!enableTwitterCards) return {};
-
-    const faqData = {/* TODO: Fix JSX expression */}
-          }},
+const faqData ={/* TODO: Fix JSX expression */} }},
         {/* TODO: Fix JSX expression */}
           }},
         {/* TODO: Fix JSX expression */}
@@ -78,8 +75,7 @@ const,
   t: '/browserconfig.xml' }];
     return metaTags;
   }, [seoData]);
-
-  const structuredData = generateStructuredData();
+const structuredData = generateStructuredData();
   const openGraphData = generateOpenGraphData();
   const twitterCardData = generateTwitterCardData();
   const metaTags = generateMetaTags();
@@ -95,12 +91,11 @@ const,
       canonicalLink.setAttribute('href', seoData.canonicalUrl);
     }
   }, [seoData]);
-
-  const addStructuredData = (dat)
+const addStructuredData = (dat)
   a: Record<string, unknown>) => {/* TODO: Fix JSX expression */}
     }
-    
-    const script = document.createElement('script');
+    ;
+const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(structuredData);
     document.head.appendChild(script);

@@ -9,7 +9,7 @@ function processFile(filePath) {
     const replacements = [
       {
         pattern: /keywords:\s*'([^']+)',/g,
-        replacement: "keywords: ['$1'],",
+        replacement: "keywords: ['$1'],"}
 function processFile(filePath) {/* TODO: Fix JSX expression */}
       }];
 
@@ -29,10 +29,10 @@ function processDirectory(dirPath) {
   items.forEach(item => {)
 )
     if (stat.isDirectory()) {
-      totalFixed += processDirectory(fullPath);
+      totalFixed += processDirectory(fullPath);}
     } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
       if (processFile(fullPath)) {
-        totalFixed++;
+        totalFixed++;}
 function processDirectory(dirPath) {/* TODO: Fix JSX expression */}
     } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {/* TODO: Fix JSX expression */}
       }

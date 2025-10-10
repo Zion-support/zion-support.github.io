@@ -5,42 +5,42 @@ import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 
 interface Props {
   children: ReactNode;
-  fallback?: ReactNode;
+  fallback?: ReactNode;}
 }
 
 interface State {
   hasError: boolean;
   error?: Error;
-  errorInfo?: ErrorInfo;
+  errorInfo?: ErrorInfo;}
 }
 
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
-    super(props);
-    this.state = { hasError: false };
+    super(props);}
+    this.state ={hasError: false } ;
   }
 
-  static getDerivedStateFromError(error: Error): State {
+  static getDerivedStateFromError(error: Error): State {}
     return { hasError: true, error };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
+    console.error('ErrorBoundary caught an error:', error, errorInfo);}
     this.setState({ error, errorInfo });
   }
 
   handleReload = () => {
-    window.location.reload();
+    window.location.reload();}
   };
 
   handleGoHome = () => {
-    window.location.href = '/';
+    window.location.href = '/';}
   };
 
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
-        return this.props.fallback;
+        return this.props.fallback;}
       }
 
       return (
@@ -58,12 +58,12 @@ class ErrorBoundary extends Component<Props, State> {
               We're sorry, but something unexpected happened. Please try refreshing the page or go back to the home page.
             </p>
 
-            {process.env.NODE_ENV === 'development' && this.state.error && (
+            {process.env.NODE_ENV === = 'development' && this.state.error && (
               <details className="mb-6 text-left">
                 <summary className="text-sm text-gray-400 cursor-pointer mb-2">
                   Error Details (Development)
                 </summary>
-                <pre className="text-xs text-red-400 bg-slate-900/50 p-3 rounded overflow-auto">
+                <pre className="text-xs text-red-400 bg-slate-900/50 p-3 rounded overflow-auto">}
                   {this.state.error.toString()}
                   {this.state.errorInfo?.componentStack}
                 </pre>
@@ -72,16 +72,14 @@ class ErrorBoundary extends Component<Props, State> {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
-                onClick={this.handleReload}
-                className="flex items-center justify-center space-x-2 bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200"
+                onClick={this.handleReload} className="flex items-center justify-center space-x-2 bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200"
               >
                 <RefreshCw className="w-4 h-4" />
                 <span>Reload Page</span>
               </button>
               
               <button
-                onClick={this.handleGoHome}
-                className="flex items-center justify-center space-x-2 border border-cyan-600 text-cyan-400 hover:bg-cyan-600 hover:text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200"
+                onClick={this.handleGoHome} className="flex items-center justify-center space-x-2 border border-cyan-600 text-cyan-400 hover:bg-cyan-600 hover:text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200"
               >
                 <Home className="w-4 h-4" />
                 <span>Go Home</span>
@@ -97,3 +95,7 @@ class ErrorBoundary extends Component<Props, State> {
 }
 
 export default ErrorBoundary;
+
+
+
+</div></div></div></div>

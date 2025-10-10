@@ -9,7 +9,7 @@ export interface VerifiedRealService2025Batch2 {id: string;
   category: string;
   real_implementation: boolean;
   contact_info: unknown;
-    mobile: string;
+    mobile: string;}
     email: string}
     address: string}
   };
@@ -231,7 +231,6 @@ export const,
     }
   }
 ];
-;
     id: "ai-quality-assurance"
     name: "AI Quality Assurance Platform",
     tagline: "Automated testing and quality control",

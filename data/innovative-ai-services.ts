@@ -48,7 +48,7 @@ export interface InnovativeAIService {id: string;
   popular: boolean;
   icon: string;
   color: string;
-    mobile: string;
+    mobile: string;}
     email: string}
     address: string;
 export interface InnovativeAIService {/* TODO: Fix JSX expression */}
@@ -2729,7 +2729,6 @@ export const,
   s: 34}
 ];
 ];
-;
   }
 ];
 export interface InnovativeAIService,

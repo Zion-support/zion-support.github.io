@@ -11,7 +11,7 @@
   contactInfo: unknown;
     mobile: string;
     email: string;
-export interface EmergingTech2026ServiceV3 {;,
+export interface EmergingTech2026ServiceV3 {;}
     address: string}
   i,
   d: string;
@@ -47,7 +47,7 @@ export interface EmergingTech2026ServiceV3 {/* TODO: Fix JSX expression */}
   taglin,
   e: string;
   pric,
-  e: string,,
+  e: string,
   descriptio,
   n: string;
   feature,
@@ -170,7 +170,6 @@ export const,
     }
   }
 ];
-;
     id: "2026-emerging-tech-v3"
     name: "2026 Emerging Tech Platform V3",
     tagline: "Third generation emerging tech",

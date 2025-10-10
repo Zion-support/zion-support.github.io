@@ -4,7 +4,7 @@ export, default, function October2025EdgeAIQuantumCryptoBann, e, r(): vo, i, d {
   return (
     <section, className="bg-gradie, n, t-to-r, fro, m-cy, a, n-9, 0, 0/30, vi, a-purp, l, e-9, 0, 0/30, t, o-pi, n, k-9, 0, 0/30, borde, r-y, borde, r-cy, a, n-5, 0, 0/30, p, y-12">";
       <div, className="container, m, x-auto, p, x-6">";</section>
-        <div, className="m, a, x-w-7xl, m, x-au, t, o">";
+        <div, className="m, a, x-w-7xl, m, x-au, t, o">";}
           {/* Head, e, r */}</div>
           <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-6"></div>
             <Sparkles, className="w-6 h-6, tex, t-cy, a, n-400, animat, e-pul, s, e  />
@@ -82,14 +82,14 @@ export, default, function October2025EdgeAIQuantumCryptoBann, e, r(): vo, i, d {
               <div, className="flex, item, s-center, ga, p-4, m, b-4">";
                 <div, className="bg-cy, a, n-5, 0, 0/2, 0, p-3, rounde, d-lg">";
             {/* Edge, A, I + 5G, Car, d */}</div>
-            <div, className="bg-gradie, n, t-to-br, fro, m-cy, a, n-5, 0, 0/10, t, o-bl, u, e-5, 0, 0/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, border, border-cy, a, n-5, 0, 0/30, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hov, e
+            <div, className="bg-gradie, n, t-to-br, fro, m-cy, a, n-5, 0, 0/10, t, o-bl, u, e-5, 0, 0/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, border, border-cy, a, n-5, 0, 0/30, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hov, e,
   r:shad, o, w-2, x, l">"</div>
               <div, className="flex, item, s-center, ga, p-4, m, b-4"></div>
                 <div, className="bg-cy, a, n-5, 0, 0/2, 0, p-3, rounde, d-lg"></div>
                   <Zap, className="w-8 h-8, tex, t-cy, a, n-4, 0, 0  />
           <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-8">";
             {/* Edge, A, I + 5G, Car, d */}</div>
-            <div, className="bg-gradie, n, t-to-br, fro, m-cy, a, n-5, 0, 0/10, t, o-bl, u, e-5, 0, 0/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, border, border-cy, a, n-5, 0, 0/30, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hov, e
+            <div, className="bg-gradie, n, t-to-br, fro, m-cy, a, n-5, 0, 0/10, t, o-bl, u, e-5, 0, 0/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, border, border-cy, a, n-5, 0, 0/30, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hov, e,
   r:shad, o, w-2, x, l">";</div>
               <div, className="flex, item, s-center, ga, p-4, m, b-4">";</div>
                 <div, className="bg-cy, a, n-5, 0, 0/2, 0, p-3, rounde, d-lg">";</div>
@@ -159,7 +159,7 @@ export, default, function October2025EdgeAIQuantumCryptoBann, e, r(): vo, i, d {
   r:shad, o, w-2, x, l">"
               <div, className="flex, item, s-center, ga, p-4, m, b-4">
                 <div, className="bg-purp, l, e-5, 0, 0/2, 0, p-3, rounde, d-lg">
-            <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/10, t, o-pi, n, k-5, 0, 0/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, border, border-purp, l, e-5, 0, 0/30, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hov, e
+            <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/10, t, o-pi, n, k-5, 0, 0/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, border, border-purp, l, e-5, 0, 0/30, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hov, e,
   r:shad, o, w-2, x, l">"</div>
               <div, className="flex, item, s-center, ga, p-4, m, b-4"></div>
                 <div, className="bg-purp, l, e-5, 0, 0/2, 0, p-3, rounde, d-lg"></div>
@@ -304,3 +304,18 @@ export, default, function October2025EdgeAIQuantumCryptoBann, e, r(): vo, i, d {
   );
 }
 ;"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>

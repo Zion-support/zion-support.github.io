@@ -22,11 +22,11 @@ interface SEOProps {// TODO: Add content;}
   section?: string;
   tags?: string[];
 }
-
+;
 const EnhancedSEO: React.FC;
           <SEOProps> = ({// TODO: Add content;}
 }
-
+;
 const EnhancedSEO: React.FC<SEOProps> = ({
 
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
@@ -44,14 +44,13 @@ const EnhancedSEO: React.FC<SEOProps> = ({
   author = 'Zion Tech Group',
 //   publishedTime,
 //   modifiedTime,
-//   section,
+//   section}
   tags = []}) => {const fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : description;}
   const keywordsString = Array.isArray(keywords) ? keywords.join(', ') : keywords;
   return (
     
-    // Update meta description
-
-    let metaDescription = document.querySelector('meta[name="description"]');
+    // Update meta description;
+let metaDescription = document.querySelector('meta[name="description"]');
     if (!metaDescription) {/* TODO: Fix JSX expression */}
     }
     metaDescription.setAttribute('content', description);
@@ -59,7 +58,7 @@ const EnhancedSEO: React.FC<SEOProps> = ({
 
           <Helmet>
       {/* Basic Meta Tags */}
-      <title>{fullTitle}</title><meta name="description" content={fullDescription} /><meta name="keywords" content={keywordsString} /><meta name="author" content={author} /><meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} /><meta name="language" content={lang} /><link rel="canonical" href={canonicalUrl} />
+      <title>{fullTitle}</title><meta name="description" content={fullDescription} /><meta name="keywords" content={keywordsString} /><meta name="author" content={author} /><meta name="robots" content={`${noindex ? 'noindex' : 'index'} , ${nofollow ? 'nofollow' : 'follow'}`} /><meta name="language" content={lang} /><link rel="canonical" href={canonicalUrl} />
       {/* Open Graph Meta Tags */}
       <meta property="og:title" content={fullTitle} /><meta property="og:description" content={fullDescription} /><meta property="og:type" content={ogType} /><meta property="og:url" content={canonicalUrl} /><meta property="og:image" content={ogImage} /><meta property="og:image:width" content="1200" /><meta property="og:image:height" content="630" /><meta property="og:site_name" content="Zion Tech Group" /><meta property="og:locale" content="en_US" />
       {/* Twitter Card Meta Tags */}

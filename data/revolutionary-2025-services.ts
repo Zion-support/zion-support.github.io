@@ -11,7 +11,7 @@
   contactInfo: unknown;
     mobile: string;
     email: string;
-export interface Revolutionary2025Service {;,
+export interface Revolutionary2025Service {;}
     address: string}
   i,
   d: string;
@@ -47,7 +47,7 @@ export interface Revolutionary2025Service {/* TODO: Fix JSX expression */}
   taglin,
   e: string;
   pric,
-  e: string,,
+  e: string,
   descriptio,
   n: string;
   feature,
@@ -170,7 +170,6 @@ export const,
     }
   }
 ];
-;
     id: "revolutionary-ai-platform"
     name: "Revolutionary AI Platform",
     tagline: "Next-generation AI capabilities",

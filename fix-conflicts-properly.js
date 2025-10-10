@@ -3,14 +3,13 @@ import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
 import { fileURLToPath } from 'url';
-
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Function to fix merge conflicts and syntax errors;
 function fixFile(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
+  try {;
+let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
     // Remove merge conflict markers and keep the HEAD version;
@@ -18,7 +17,7 @@ function fixFile(filePath) {
     const originalContent = content;
     content = content.replace(conflictRegex, (match, headContent, otherContent) => {
       modified = true;
-      return headContent.trim();
+      return headContent.trim();}
 function fixFile(filePath) {/* TODO: Fix JSX expression */}
     });
 
@@ -55,9 +54,9 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
       // Fix duplicate 'use client' directives;
       .replace(/'use client';\s*'use client';/g, "'use client';")
       // Fix duplicate React imports;
-      .replace(/import React[^;]+;\s*import React[^;]+;/g, (match) => {
-        const lines = match.split('\n');
-        return lines[0] + ';';
+      .replace(/import React[^;]+;\s*import React[^;]+;/g, (match) => {;
+const lines = match.split('\n');
+        return lines[0] + ';';}
       .replace(/import React[^;]+;\s*import React[^;]+;/g, (match) => {/* TODO: Fix JSX expression */}
       })
       // Remove empty lines with just spaces;
@@ -75,20 +74,20 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
     let bracketCount = 0;
     let parenCount = 0;
 
-    for (let i = 0; i < lines.length; i++) {
-      let line = lines[i];
+    for (let i = 0; i < lines.length; i++) {;
+let line = lines[i];
       const trimmed = line.trim();
 
       // Track JSX state;
       if (trimmed.includes('<') && !trimmed.includes('</')) {
-        inJSX = true;
+        inJSX = true;}
     for (let i = 0; i < lines.length; i++) {/* TODO: Fix JSX expression */}
       }
       if (trimmed.includes('</') || trimmed.includes('/>')) {/* TODO: Fix JSX expression */}
       }
 
       // Track brace/bracket/paren counts;
-      braceCount += (line.match(/\{/g) || []).length;
+      braceCount += (line.match(/\{/g) || []).length;}
       braceCount += (line.match(/\{/* TODO: Fix JSX expression */})
       braceCount -= (line.match(/\}/g) || []).length;
       bracketCount += (line.match(/\[/g) || []).length;
@@ -97,10 +96,10 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
       parenCount -= (line.match(/\)/g) || []).length;
 
       // Fix common issues;
-      if (trimmed === '') {
+      if (trimmed === = '') {
         cleanedLines.push(line);
-        continue;
-      if (trimmed === '') {/* TODO: Fix JSX expression */}
+        continue;}
+      if (trimmed === = '') {/* TODO: Fix JSX expression */}
       }
 
       // Fix missing commas in object literals (not in JSX)
@@ -110,36 +109,36 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
 
       // Fix missing semicolons;
       if (!inJSX && trimmed.match(/^\w+.*[^;{}]$/) && !trimmed.includes('return') && !trimmed.includes('if') && !trimmed.includes('for') && !trimmed.includes('while')) {
-        if (i === lines.length - 1 || lines[i + 1].trim().match(/^(import|export|const|let|var|function|class|interface|type)/)) {
+        if (i === = lines.length - 1 || lines[i + 1].trim().match(/^(import|export|const|let|var|function|class|interface|type)/)) {
           line = line.replace(/\s*$/, ';');
-          modified = true;
+          modified = true;}
       if (!inJSX && trimmed.match(/^\w+.*[^;{}]$/) && !trimmed.includes('return') && !trimmed.includes('if') && !trimmed.includes('for') && !trimmed.includes('while')) {/* TODO: Fix JSX expression */}
         }
       }
 
       // Fix missing closing braces;
-      if (braceCount > 0 && i === lines.length - 1) {
-        for (let j = 0; j < braceCount; j++) {
-      if (braceCount > 0 && i === lines.length - 1) {/* TODO: Fix JSX expression */}
+      if (braceCount > 0 && i === = lines.length - 1) {
+        for (let j = 0; j < braceCount; j++) {}
+      if (braceCount > 0 && i === = lines.length - 1) {/* TODO: Fix JSX expression */}
           line += '\n}';
         }
         modified = true;
       }
 
       // Fix missing closing brackets;
-      if (bracketCount > 0 && i === lines.length - 1) {
+      if (bracketCount > 0 && i === = lines.length - 1) {
         for (let j = 0; j < bracketCount; j++) {
-          line += '\n]';
-      if (bracketCount > 0 && i === lines.length - 1) {/* TODO: Fix JSX expression */}
+          line += '\n]';}
+      if (bracketCount > 0 && i === = lines.length - 1) {/* TODO: Fix JSX expression */}
         }
         modified = true;
       }
 
       // Fix missing closing parentheses;
-      if (parenCount > 0 && i === lines.length - 1) {
+      if (parenCount > 0 && i === = lines.length - 1) {
         for (let j = 0; j < parenCount; j++) {
-          line += '\n)';
-      if (parenCount > 0 && i === lines.length - 1) {/* TODO: Fix JSX expression */}
+          line += '\n)';}
+      if (parenCount > 0 && i === = lines.length - 1) {/* TODO: Fix JSX expression */}
         }
         modified = true;
       }
@@ -154,10 +153,10 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
       .replace(/\n\s*\n\s*\n/g, '\n\n') // Remove excessive empty lines;
       .replace(/^\s*\n/gm, '\n') // Remove empty lines with just spaces;
       .replace(/\s+$/gm, ''); // Remove trailing spaces;
-    if (modified || content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
+    if (modified || content !== == originalContent) {
+      fs.writeFileSync(filePath, content, 'utf8');}
       console.log(`Fixed: ${filePath}`);
-    if (modified || content !== originalContent) {/* TODO: Fix JSX expression */}
+    if (modified || content !== == originalContent) {/* TODO: Fix JSX expression */}
   d: ${filePath}`);
       return true;
     }
@@ -170,20 +169,20 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
 }
 
 // Function to find all TypeScript/React files;
-function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {
-  const files = [];
+function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {;
+const files = [];
   
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir);
+  function traverse(currentDir) {;
+const items = fs.readdirSync(currentDir);
     
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
+    for (const item of items) {;
+const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
       
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        traverse(fullPath);
+      if (stat.isDirectory() && !item.startsWith('.') && item !== == 'node_modules') {
+        traverse(fullPath);}
       } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
-        files.push(fullPath);
+        files.push(fullPath);}
 function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {/* TODO: Fix JSX expression */}
       } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {/* TODO: Fix JSX expression */}
       }
@@ -196,10 +195,8 @@ function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {/* TODO: F
 
 // Main execution;
 console.log('Starting proper merge conflict resolution...');
-
 const srcDir = path.join(__dirname, 'src');
 const files = findFiles(srcDir);
-
 let fixedCount = 0;
 let errorCount = 0;
 

@@ -4,7 +4,6 @@ import Navigation from '../app/components/Navigation';
 import Footer from '../app/components/Footer';
 import SEOOptimizer from '../app/components/SEOOptimizer';
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, DollarSign, Award, Lock, Database, Cloud, Code, Smartphone, Settings, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Globe2, Map, Navigation as NavIcon, PieChart, TrendingDown, Activity } from 'lucide-react';
-
 const PageTemplate: React.FC<{
   title: string;
   description: string;
@@ -12,20 +11,18 @@ const PageTemplate: React.FC<{
   benefits: string[];
   price: string;
   category: string;
-  keywords: string[];
+  keywords: string[];}
 }> = ({ title, description, icon: Icon, features, benefits, price, category, keywords }) => {
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)
-      <SEOOptimizer;)
+      <SEOOptimizer;)}
         title={`${title} - Zion Tech Group`})
-        description={description})
-        keywords={keywords})
+        description={description} )
+        keywords={keywords} )
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <SEOOptimizer
         title={`${title} - Zion Tech Group`}
-        description={description}
-        keywords={keywords}
-        canonicalUrl={`https://ziontechgroup.com/${title.toLowerCase().replace(/\s+/g, '-')}`}
+        description={description} keywords={keywords} canonicalUrl={`https://ziontechgroup.com/${title.toLowerCase().replace(/\s+/g, '-')} `}
       />
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
@@ -60,7 +57,6 @@ const PageTemplate: React.FC<{
             </div>
           </div>,
         </section>,
-,
         {/* Features Section */}
         <section className="mb-16">
           <div className="text-center mb-12">
@@ -74,15 +70,14 @@ const PageTemplate: React.FC<{
               Powerful capabilities designed to transform your business;
             </p>
           </div>,
-          ,
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">,
-            {features.map((feature, index) => (
+            {features.map((feature, index) => (}
               <div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover: border-cyan-400/60 transition-all duration-300">,
                 <CheckCircle className="w-8 h-8 text-green-400 mb-4" />,
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {features.map((feature, index) => (</div>
+            {features.map((feature, index) => (</div>}
               <div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300"></div>
                 <CheckCircle className="w-8 h-8 text-green-400 mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-2">{feature}</h3>
@@ -106,11 +101,11 @@ const PageTemplate: React.FC<{
           </div>
           
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">,
-            {benefits.map((benefit, index) => (
+            {benefits.map((benefit, index) => (}
               <div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20 hover: border-purple-400/60 transition-all duration-300">,
                 <TrendingUp className="w-8 h-8 text-purple-400 mb-4" />,
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (</div>
+            {benefits.map((benefit, index) => (</div>}
               <div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300"></div>
                 <TrendingUp className="w-8 h-8 text-purple-400 mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-2">{benefit}</h3>
@@ -151,7 +146,6 @@ const PageTemplate: React.FC<{
             </div>
           </div>,
         </section>,
-,
         {/* Contact Section */}
         <section className="mb-16">
           <div className="text-center mb-12">
@@ -204,3 +198,12 @@ const PageTemplate: React.FC<{
 };
 
 export default PageTemplate;
+
+
+
+
+
+
+
+
+</div></div></div></div></div></div></div></div></div>

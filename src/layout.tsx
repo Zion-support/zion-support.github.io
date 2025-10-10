@@ -9,12 +9,11 @@ import Footer from '../components/Footer';
 
 import Analytics from './components/Analytics';
 
-export default function RootLayout({
+export default function RootLayout({}
   children}: {
-  children: React.ReactNode;
-}) {
-  const structuredData = {
-    '@context': 'https://schema.org',
+  children: React.ReactNode;}
+}) {;
+const structuredData ={'@context': 'https://schema.org',
     '@type': 'TechCompany',
     name: 'Zion Tech Group',
     url: 'https://ziontechgroup.com',
@@ -36,8 +35,7 @@ export default function RootLayout({
       '@type': 'ContactPoint',
       telephone: '+1-302-464-0950',
       contactType: 'Customer Service',
-      areaServed: 'US',
-      availableLanguage: 'en'},
+      areaServed: 'US'} availableLanguage: 'en'},
     sameAs: [
       'https://twitter.com/ziontechgroup',
       'https://linkedin.com/company/ziontechgroup',
@@ -49,18 +47,15 @@ export default function RootLayout({
       postalCode: '19709',
       addressCountry: 'US',
     offers: [
-      {
-
-  const address = {
-    '@type': 'PostalAddress',
+      {;
+const address ={'@type': 'PostalAddress',
     streetAddress: '364 E Main St STE 1008',
     addressLocality: 'Middletown',
     addressRegion: 'DE',
     postalCode: '19709',
     addressCountry: 'US',
     offers: [
-  // TODO: Add items]
-      {// TODO: Add content;}
+  // TODO: Add items]} {// TODO: Add content;}
 }
         '@type': 'Offer',
         category: 'AI Solutions',
@@ -69,7 +64,7 @@ export default function RootLayout({
         priceCurrency: 'USD',
         priceSpecification: {
           '@type': 'PriceSpecification',
-          billingIncrement:         ,
+          billingIncrement:         }
 $4}
         category: 'Digital Transformation',
         description: 'Process automation, legacy system modernization, and workflow optimization',
@@ -93,7 +88,7 @@ name$5: 'Digital Automation',
             description:             ,
 name$5: 'Cloud Infrastructure',
             description:       ,
-$4]
+$4]}
   };
   return (
     <html lang='en'>
@@ -163,7 +158,7 @@ $4]
         <meta name='twitter:creator' content='@ziontechgroup' />
         <script
           type='application/ld+json'
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) } }
         />
       </head>
       <body className='antialiased'>

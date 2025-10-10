@@ -11,7 +11,7 @@
   contactInfo: unknown;
     mobile: string;
     email: string;
-export interface ComprehensiveItSolution {;,
+export interface ComprehensiveItSolution {;}
     address: string}
   i,
   d: string;
@@ -47,7 +47,7 @@ export interface ComprehensiveItSolution {/* TODO: Fix JSX expression */}
   taglin,
   e: string;
   pric,
-  e: string,,
+  e: string,
   descriptio,
   n: string;
   feature,
@@ -170,7 +170,6 @@ export const,
     }
   }
 ];
-;
     id: "full-stack-development"
     name: "Full-Stack Development Services",
     tagline: "End-to-end web application development",

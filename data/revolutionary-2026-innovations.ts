@@ -11,7 +11,7 @@
   contactInfo: unknown;
     mobile: string;
     email: string;
-export interface Revolutionary2026Innovation {;,
+export interface Revolutionary2026Innovation {;}
     address: string}
   i,
   d: string;
@@ -47,7 +47,7 @@ export interface Revolutionary2026Innovation {/* TODO: Fix JSX expression */}
   taglin,
   e: string;
   pric,
-  e: string,,
+  e: string,
   descriptio,
   n: string;
   feature,
@@ -170,7 +170,6 @@ export const,
     }
   }
 ];
-;
     id: "2026-revolutionary-innovation"
     name: "2026 Revolutionary Innovation Platform",
     tagline: "Breakthrough innovations for 2026",

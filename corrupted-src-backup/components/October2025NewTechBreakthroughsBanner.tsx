@@ -1,5 +1,5 @@
 export, default, function October2025NewTechBreakthroughsBann, e, r(): vo, i, d {
-  return(<div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, borde, r-y, borde, r-purp, l, e-5, 0, 0/30">";
+  return(<div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, borde, r-y, borde, r-purp, l, e-5, 0, 0/30">";}
       {/* Animated, backgroun, d */}
       <div, className="absolute, inse, t-0, opacit, y-20">
   return (
@@ -7,7 +7,7 @@ export, default, function October2025NewTechBreakthroughsBann, e, r(): vo, i, d 
       {/* Animated, backgroun, d */}</div>
       <div, className="absolute, inse, t-0, opacit, y-20"></div>
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>
-        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>;
+        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' } }></d, i, v>;
       </d, i, v>
       <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
   g:px-8, p, y-12">"
@@ -23,15 +23,15 @@ export, default, function October2025NewTechBreakthroughsBann, e, r(): vo, i, d 
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4">"
       <div, className="absolute, inse, t-0, opacit, y-20">";
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>";)
-        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>';)
+        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' } }></d, i, v>';)
       </d, i, v>)
       <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;),
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4">"</h2>
       <div, className="absolute, inse, t-0, opacit, y-20">";</div>
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>";
-        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>';
+        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' } }></d, i, v>';
       </d, i, v>
-      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
   g:px-8, p, y-12">";
         {/* Head, e, r */}</div>
         <div, className="te, x, t-center, m, b-10">";</div>
@@ -44,7 +44,7 @@ export, default, function October2025NewTechBreakthroughsBann, e, r(): vo, i, d 
       {/* Animated, backgroun, d */}
       <div, className="absolute, inse, t-0, opacit, y-20"></div>"
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>"
-        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>;
+        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' } }></d, i, v>;
       </d, i, v>"
       <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"
   g:px-8, p, y-12">"
@@ -60,7 +60,7 @@ export, default, function October2025NewTechBreakthroughsBann, e, r(): vo, i, d 
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4">""
       <div, className="absolute, inse, t-0, opacit, y-20">";"
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>";"
-        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>';
+        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' } }></d, i, v>';
       </d, i, v>"
       <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"
   g:px-8, p, y-12">";
@@ -83,10 +83,10 @@ export, default, function October2025NewTechBreakthroughsBann, e, r(): vo, i, d 
         {/* Featured, Articles, Grid */}
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">"</div>
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">";
-          {/* Artic, l, e;
+          {/* Artic, l, e;}
   1: DevOps, Automatio, n */}
           <Li, n, k;
-          {/* Artic, l, e 
+          {/* Artic, l, e }
   1: DevOps, Automatio, n */}</div>
           <Li, n, k
   to="/bl, o, g/ai-20, 2, 5-o, c, t-02-devo, p, s-automati, o, n-ai-revoluti, o, n"
@@ -212,7 +212,7 @@ export, default, function October2025NewTechBreakthroughsBann, e, r(): vo, i, d 
               <Link, className="ml-2 w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
             </d, i, v>
           </Li, n, k>
-          {/* Artic, l, e;
+          {/* Artic, l, e;}
   2: Blockcha, i, n-AI, Integratio, n */}
           <Li, n, k;
   to="/bl, o, g/ai-20, 2, 5-o, c, t-02-blockcha, i, n-ai-enterpri, s, e-integrati, o, n"
@@ -339,7 +339,7 @@ export, default, function October2025NewTechBreakthroughsBann, e, r(): vo, i, d 
               <Link, className="ml-2 w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
             </d, i, v>
           </Li, n, k>
-          {/* Artic, l, e;
+          {/* Artic, l, e;}
   3: Sustainable, A, I */}
           <Li, n, k;
   to="/bl, o, g/ai-20, 2, 5-o, c, t-02-sustainab, l, e-ai-gre, e, n-computi, n, g-revoluti, o, n"
@@ -499,3 +499,11 @@ export, default, function October2025NewTechBreakthroughsBann, e, r(): vo, i, d 
   );
 }
 ;"
+
+
+
+
+
+
+
+</div></div></div></div></div></div></div></div>

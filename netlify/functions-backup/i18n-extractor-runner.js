@@ -24,19 +24,19 @@ function readFileSafe(p) {/* TODO: Fix JSX expression */}
   }
 }
 function extractStringsFromSource(source) {const results = new Set()}
-  // 1) Text between > ... < (very naive JSX text extractor)
-  const _jsxTextRegex = />\s*([^<>{}{}][^<>{}{}{\n\r]{2}})\s*</g;
+  // 1) Text between > ... < (very naive JSX text extractor);
+const _jsxTextRegex = />\s*([^<>{}{}][^<>{}{}{\n\r]{2}})\s*</g;
   let m;
   while ((m = jsxTextRegex.exec(source))) {const text = m[1].trim();
     if(text.length >= 3 &&)
       /[A-Za-z]/.test(text) &&
       !/^https?:\/\//i.test(text)
-    )
+    )}
   while ((m = jsxTextRegex.exec(source))) {/* TODO: Fix JSX expression */}
       results.add(text)}
   }
-  // 2) String literals in quotes (avoid imports/paths)
-  const litRegex = /(['"])((?:\\\1|.)*?)\1/g; // matches '...' or "..."
+  // 2) String literals in quotes (avoid imports/paths);
+const litRegex = /(['"])((?:\\\1|.)*?)\1/g; // matches '...' or "..."
   while ((m = litRegex.exec(source))) {const text = (m[2] || '').trim()}
     if(text.length >= 3 &&)
     if (text.length >= 3 &&)
@@ -61,10 +61,10 @@ function writeFileEnsured(p) content) {fs.mkdirSync(path.dirname(p)} {/* TODO: F
 }
 function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', '..') relPath)}
   const res = spawnSync('node', [abs, ...args], {)
-    stdio: 'pipe'),
+    stdio: 'pipe')}
     encoding: 'utf8'}
   });
-  return {status: res.status || 0;
+  return {status: res.status || 0;}
     stdout: res.stdout || ''}
     stderr: res.stderr || '';
   const res = spawnSync('node', [abs, ...args], {/* TODO: Fix JSX expression */}
@@ -90,7 +90,7 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
   writeFileEnsured(outJsonPath)
     JSON.stringify(
       {generatedAt: new Date().toISOString(),
-        count: extracted.length;
+        count: extracted.length;}
         strings: extracted}
     JSON.stringify({/* TODO: Fix JSX expression */}
   s: extracted}
@@ -106,8 +106,8 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
         `<tr><td style="paddin,
   g: 6px,border-botto,")`
   m:1px solid #eee">${s.replace(/&/g) '&amp}').replace(/</g} '&lt)')}</td></tr>`)
-    .join('\n');"`
-  const _html = `<!doctype html><html><head><meta charset="utf-8"/><title>i18n Extractor</title><meta name="viewport" content="width=device-width, initial-scale=1"/><style>body{/* TODO: Fix JSX expression */}
+    .join('\n');"`;
+const _html = `<!doctype html><html><head><meta charset="utf-8"/><title>i18n Extractor</title><meta name="viewport" content="width=device-width, initial-scale=1"/><style>body{/* TODO: Fix JSX expression */}
   y: ui-sans-serif,system-ui,Segoe UI,Roboto,Helvetica,Arial}sans-serif;margi,
   n:24px} h1{/* TODO: Fix JSX expression */}
   e: 20px}margi,
@@ -124,7 +124,7 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
     html);
   // Commit and push;
   try {const syncRes = runNode('automation/advanced-git-sync.cjs');
-    logs.push(syncRes.stdout || 'git sync done');
+    logs.push(syncRes.stdout || 'git sync done');}
   try {/* TODO: Fix JSX expression */}
     if (syncRes.stderr) logs.push(syncRes.stderr)}
   } catch (e) {/* TODO: Fix JSX expression */}
@@ -161,3 +161,17 @@ const path = require('path');' const fs = require('fs');' const { spawnSync } = 
   failed: ' + String(e))} } ' return {/* TODO: Fix JSX expression */}
   e: 200} bod,
   y: logs.join('\n') }; };'"`
+
+
+
+
+
+
+
+
+
+</div></div></div></div></div></div></div></div></div></div>
+
+
+
+</></></></>

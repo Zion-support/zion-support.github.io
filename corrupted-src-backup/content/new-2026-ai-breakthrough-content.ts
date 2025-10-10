@@ -10,7 +10,7 @@ export interface AIBreakthroughContent {
   featured: boolean;
   readTime: string;
   image?: string;,
-  valueProposition: string;
+  valueProposition: string;}
 }
 
 export const new2026AIBreakthroughContent: AIBreakthroughContent[] = [,
@@ -35,7 +35,7 @@ The next evolution of AI is here - systems that not only think but feel, create,
     tags: ['AI Consciousness', 'Hyperconscious Computing', '2026', 'Breakthrough'],
     featured: true;
     readTime: '25 min read',
-    image: '/images/ai-2026-hyperconscious-computing.jpg',
+    image: '/images/ai-2026-hyperconscious-computing.jpg'}
     valueProposition: '$1.2 T enterprise value creation'},
   {
     id: 'quantum-ai-synthesis-2026'
@@ -58,7 +58,7 @@ The convergence of quantum computing and artificial intelligence opens new front
     featured: true;
     readTime: '20 min read',
     image: '/images/quantum-ai-synthesis-2026.jpg',
-    valueProposition: 'Exponential computational capabilities',
+    valueProposition: 'Exponential computational capabilities'}
 export interface AIBreakthroughContent {/* TODO: Fix JSX expression */}
 }
 

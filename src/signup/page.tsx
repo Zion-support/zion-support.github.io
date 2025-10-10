@@ -7,10 +7,8 @@ import { Link } from 'react-router-dom';
 
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
-
-const SignupPage: React.FC = () => {
-  const [formData, setFormData] = useState({
+const SignupPage: React.FC = () => {;
+const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
     email: '',
@@ -19,26 +17,24 @@ const SignupPage: React.FC = () => {
     password: '',
     confirmPassword: '',
     agreeToTerms: false,
-    subscribeNewsletter: false
+    subscribeNewsletter: false}
   });
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {}
     const { name, value, type, checked } = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: type === 'checkbox' ? checked : value
+      [name]: type === = 'checkbox' ? checked : value}
     }));
   };
-
-  const handleSubmit = async (e: React.FormEvent) => {
+const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    if (formData.password !== formData.confirmPassword) {
+    if (formData.password !== == formData.confirmPassword) {
       alert('Passwords do not match');
-      return;
+      return;}
     }
     
     if (!formData.agreeToTerms) {
@@ -52,12 +48,11 @@ const SignupPage: React.FC = () => {
     setIsLoading(false);
     // Redirect to dashboard or home page
     window.location.href = '/';
-
-  const features = [
+const features = [
     {
       icon: Shield,
       title: 'Enterprise Security',
-      description:     ,
+      description:     }
 $4},
       icon: Award,
       title: 'Proven Results',
@@ -66,8 +61,7 @@ icon$5: Globe,
       title: 'Global Support',
       description:   ,
 $4];
-
-  const benefits = [
+const benefits = [
     'Free 14-day trial',
     'No setup fees',
     '24/7 expert support',
@@ -113,14 +107,14 @@ const handleInputChange = (e: React.ChangeEvent;)
   O: Add content;}
 }
 //       ...prev,
-      [name]: type === 'checkbox' ? checked : value;)
+      [name]: type === = 'checkbox' ? checked : value;)
     }));
   };
   const handleSubmit = async (e: React.FormEvent) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     e.preventDefault();
-    if (formData.password !== formData.confirmPassword) {/* TODO: Fix JSX expression */}
+    if (formData.password !== == formData.confirmPassword) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       alert('Passwords do not match');
@@ -139,7 +133,7 @@ const handleInputChange = (e: React.ChangeEvent;)
   const features = [
   // TOD,
   O: Add items;
-];;
+];
     {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
@@ -153,15 +147,14 @@ const handleInputChange = (e: React.ChangeEvent;)
 
 icon: Award,
       title: 'Proven Results',
-      description: '300% average ROI and 95% process automation for our clients',
-
+      description: '300% average ROI and 95% process automation for our clients',;
 const PagePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center py-12">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">}
             {/* Left Side - Signup Form */}
             <div className="bg-slate-800/50 rounded-2xl p-8 border border-gray-700/50">
               <div className="text-center mb-8">
@@ -184,59 +177,47 @@ const PagePage: React.FC = () => {
                       <input
                         type="text"
                         name="firstName"
-                        value={formData.firstName}
-                        onChange={handleInputChange}
-                        required
+                        value={formData.firstName} onChange={handleInputChange} required
                         className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                         placeholder="Enter your first name"
                       />
                       Last Name
                         name="lastName"
-                        value={formData.lastName}
-                        placeholder="Enter your last name"
+                        value={formData.lastName} placeholder="Enter your last name"
 
                     Email Address
                     <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                       type="email"
                       name="email"
-                      value={formData.email}
-                      placeholder="Enter your email"
+                      value={formData.email} placeholder="Enter your email"
 
                     Company Name
                     <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                       name="company"
-                      value={formData.company}
-                      placeholder="Enter your company name"
+                      value={formData.company} placeholder="Enter your company name"
 
                     Phone Number
                     <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                       type="tel"
                       name="phone"
-                      value={formData.phone}
-                      placeholder="Enter your phone number"
+                      value={formData.phone} placeholder="Enter your phone number"
 
                     Password
                     <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                      type={showPassword ? 'text' : 'password'}
-                      name="password"
-                      value={formData.password}
-                      className="w-full pl-10 pr-12 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+                      type={showPassword ? 'text' : 'password'} name="password"
+                      value={formData.password} className="w-full pl-10 pr-12 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                       placeholder="Create a password"
                     <button
                       type="button"
-                      onClick={() => setShowPassword(!showPassword)}
-                      className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
+                      onClick={() => setShowPassword(!showPassword)} className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
                     >
                       {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
                     </button>
 
                     Confirm Password
-                      type={showConfirmPassword ? 'text' : 'password'}
-                      name="confirmPassword"
-                      value={formData.confirmPassword}
-                      placeholder="Confirm your password"
-                      onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                      {showConfirmPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
+                      type={showConfirmPassword ? 'text' : 'password'} name="confirmPassword"
+                      value={formData.confirmPassword} placeholder="Confirm your password"
+                      onClick={() => setShowConfirmPassword(!showConfirmPassword)} {showConfirmPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
 
                 <div className="space-y-4">
                   <label className="flex items-start">
@@ -265,32 +246,23 @@ const PagePage: React.FC = () => {
                       <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                       <input
 type="text" name="firstName"
-                        value={formData.firstName}
-                        onChange={handleInputChange}
-// required
+                        value={formData.firstName} onChange={handleInputChange} // required
 className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your first name"
 />
                       Last Name;
-                        name="lastName" value={formData.lastName}
-                        placeholder="Enter your last name" Email Address;
+                        name="lastName" value={formData.lastName} placeholder="Enter your last name" Email Address;
           <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                       type="email" name="email"
-                      value={formData.email}
-                      placeholder="Enter your email" Company Name;
+                      value={formData.email} placeholder="Enter your email" Company Name;
                     <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                      name="company" value={formData.company}
-                      placeholder="Enter your company name" Phone Number;
+                      name="company" value={formData.company} placeholder="Enter your company name" Phone Number;
                     <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                       type="tel" name="phone"
-                      value={formData.phone}
-                      placeholder="Enter your phone number" Password;
+                      value={formData.phone} placeholder="Enter your phone number" Password;
                     <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                      type={showPassword ? 'text' : 'password'}
-                      name="password" value={formData.password}
-                      className="w-full pl-10 pr-12 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Create a password"
+                      type={showPassword ? 'text' : 'password'} name="password" value={formData.password} className="w-full pl-10 pr-12 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Create a password"
                     <button
-                      type="button" onClick={() => setShowPassword(!showPassword)}
-                      className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
+                      type="button" onClick={() => setShowPassword(!showPassword)} className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
 
 // >
                       {showPassword ?}"
@@ -298,15 +270,11 @@ className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg
                     </button>
 Confirm Password;
 
-                      type={showConfirmPassword ? 'text' : 'password'}
-                      name="confirmPassword" value={formData.confirmPassword}
-                      placeholder="Confirm your password" onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                      {showConfirmPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
+                      type={showConfirmPassword ? 'text' : 'password'} name="confirmPassword" value={formData.confirmPassword} placeholder="Confirm your password" onClick={() => setShowConfirmPassword(!showConfirmPassword)} {showConfirmPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
                 <div className="space-y-4">
                   <label className="flex items-start">
                       type="checkbox" name="agreeToTerms"
-                      checked={formData.agreeToTerms}
-                      className="w-4 h-4 text-cyan-400 bg-slate-700 border-gray-600 rounded focus:ring-cyan-400 focus:ring-2 mt-1"
+                      checked={formData.agreeToTerms} className="w-4 h-4 text-cyan-400 bg-slate-700 border-gray-600 rounded focus:ring-cyan-400 focus:ring-2 mt-1"
                     <span className="ml-2 text-sm text-gray-300">
                       I agree to the{' '}
                       <a href="/terms" className="text-cyan-400 hover:text-cyan-300">
@@ -319,18 +287,16 @@ Confirm Password;
                     </span>
                   
                       name="subscribeNewsletter"
-                      checked={formData.subscribeNewsletter}
-                      Subscribe to our newsletter for updates and tips
+                      checked={formData.subscribeNewsletter} Subscribe to our newsletter for updates and tips
 
                   type="submit"
-                  disabled={isLoading}
-                  className="w-full cyber-button py-3 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
+                  disabled={isLoading} className="w-full cyber-button py-3 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
                   {isLoading ? (
                     <div className="flex items-center justify-center">
                       <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
                       Creating Account...
                   ) : (
-                    'Create Account'
+                    'Create Account'}
                   )}
               </form>
 
@@ -351,7 +317,7 @@ Confirm Password;
                   to achieve unprecedented growth and efficiency.
 
               <div className="space-y-6">
-                {features.map((feature, index) => (
+                {features.map((feature, index) => (}
                   <div key={index} className="flex items-start">
                     <div className="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
                       <feature.icon className="w-6 h-6 text-cyan-400" />
@@ -364,7 +330,7 @@ Confirm Password;
                   What You Get:
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                  {benefits.map((benefit, index) => (
+                  {benefits.map((benefit, index) => (}
                     <div key={index} className="flex items-center text-sm text-gray-300">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                       {benefit}
@@ -388,10 +354,8 @@ Confirm Password;
           </a>
 
                     </span>
-name="subscribeNewsletter" checked={formData.subscribeNewsletter}
-                      Subscribe to our newsletter for updates and tips;
-                  type="submit" disabled={isLoading}
-                  className="w-full cyber-button py-3 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
+name="subscribeNewsletter" checked={formData.subscribeNewsletter} Subscribe to our newsletter for updates and tips;
+                  type="submit" disabled={isLoading} className="w-full cyber-button py-3 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
                   {isLoading ? ()}
           <div className="flex items-center justify-center">
 
@@ -461,3 +425,46 @@ Join thousands of businesses already using our AI and IT solutions;
 export default SignupPage;
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>

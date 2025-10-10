@@ -3,9 +3,8 @@ import { Link } from 'react-router-dom';
 import { MapPin, Clock, Users, Briefcase, ArrowRight, CheckCircle, Star, Heart, Zap, Shield } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
-const CareersPage: React.FC = () => {
-  const openPositions = [
+const CareersPage: React.FC = () => {;
+const openPositions = [
     {
       id: 'senior-ai-engineer',
       title: 'Senior AI Engineer',
@@ -21,7 +20,7 @@ const CareersPage: React.FC = () => {
         'Experience with cloud platforms (AWS, Azure, GCP)',
         'Strong problem-solving and communication skills'
       ],
-      benefits: ['Competitive salary', 'Stock options', 'Health insurance', 'Flexible work hours', 'Professional development budget']
+      benefits: ['Competitive salary', 'Stock options', 'Health insurance', 'Flexible work hours', 'Professional development budget']}
     },
     {
       id: 'full-stack-developer',
@@ -38,7 +37,7 @@ const CareersPage: React.FC = () => {
         'Knowledge of cloud services and DevOps practices',
         'Strong attention to detail and code quality'
       ],
-      benefits: ['Competitive salary', 'Health insurance', '401k matching', 'Remote work options', 'Learning budget']
+      benefits: ['Competitive salary', 'Health insurance', '401k matching', 'Remote work options', 'Learning budget']}
     },
     {
       id: 'data-scientist',
@@ -55,7 +54,7 @@ const CareersPage: React.FC = () => {
         'Experience with big data tools (Spark, Hadoop)',
         'Strong analytical and communication skills'
       ],
-      benefits: ['Competitive salary', 'Stock options', 'Health insurance', 'Flexible schedule', 'Research opportunities']
+      benefits: ['Competitive salary', 'Stock options', 'Health insurance', 'Flexible schedule', 'Research opportunities']}
     },
     {
       id: 'cybersecurity-specialist',
@@ -72,7 +71,7 @@ const CareersPage: React.FC = () => {
         'Experience with SIEM, EDR, and security frameworks',
         'Knowledge of compliance standards (SOC 2, ISO 27001)'
       ],
-      benefits: ['Competitive salary', 'Health insurance', 'Security training budget', 'Certification support', 'Flexible work']
+      benefits: ['Competitive salary', 'Health insurance', 'Security training budget', 'Certification support', 'Flexible work']}
     },
     {
       id: 'product-manager',
@@ -89,7 +88,7 @@ const CareersPage: React.FC = () => {
         'Strong analytical and strategic thinking skills',
         'Excellent communication and leadership abilities'
       ],
-      benefits: ['Competitive salary', 'Stock options', 'Health insurance', 'Product conference budget', 'Leadership development']
+      benefits: ['Competitive salary', 'Stock options', 'Health insurance', 'Product conference budget', 'Leadership development']}
     },
     {
       id: 'sales-engineer',
@@ -106,34 +105,32 @@ const CareersPage: React.FC = () => {
         'Excellent presentation and communication skills',
         'Ability to travel to client sites (25% travel)'
       ],
-      benefits: ['Competitive salary + commission', 'Health insurance', 'Travel budget', 'Sales training', 'Performance bonuses']
+      benefits: ['Competitive salary + commission', 'Health insurance', 'Travel budget', 'Sales training', 'Performance bonuses']}
     }
   ];
-
-  const benefits = [
+const benefits = [
     {
       icon: Heart,
       title: 'Health & Wellness',
-      description: 'Comprehensive health insurance, dental, vision, and mental health support'
+      description: 'Comprehensive health insurance, dental, vision, and mental health support'}
     },
     {
       icon: Zap,
       title: 'Learning & Growth',
-      description: 'Professional development budget, conference attendance, and skill development programs'
+      description: 'Professional development budget, conference attendance, and skill development programs'}
     },
     {
       icon: Shield,
       title: 'Work-Life Balance',
-      description: 'Flexible work hours, remote work options, and unlimited PTO'
+      description: 'Flexible work hours, remote work options, and unlimited PTO'}
     },
     {
       icon: Star,
       title: 'Recognition',
-      description: 'Performance bonuses, stock options, and recognition programs'
+      description: 'Performance bonuses, stock options, and recognition programs'}
     }
   ];
-
-  const culture = [
+const culture = [
     'Innovation-driven environment where creativity is encouraged',
     'Collaborative team culture with diverse perspectives',
     'Opportunities to work on cutting-edge AI and technology projects',
@@ -184,7 +181,7 @@ const CareersPage: React.FC = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
+            {benefits.map((benefit, index) => (}
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <benefit.icon className="w-8 h-8 text-white" />
@@ -211,7 +208,7 @@ const CareersPage: React.FC = () => {
                 and everyone has the opportunity to grow and succeed.
               </p>
               <ul className="space-y-4">
-                {culture.map((item, index) => (
+                {culture.map((item, index) => (}
                   <li key={index} className="flex items-start">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
                     <span className="text-gray-600">{item}</span>
@@ -256,7 +253,7 @@ const CareersPage: React.FC = () => {
             </p>
           </div>
           <div className="space-y-8">
-            {openPositions.map((position) => (
+            {openPositions.map((position) => (}
               <div key={position.id} className="bg-white border border-gray-200 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                 <div className="p-8">
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
@@ -295,7 +292,7 @@ const CareersPage: React.FC = () => {
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-3">Requirements</h4>
                       <ul className="space-y-2">
-                        {position.requirements.map((req, index) => (
+                        {position.requirements.map((req, index) => (}
                           <li key={index} className="flex items-start text-sm text-gray-600">
                             <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
                             {req}
@@ -306,7 +303,7 @@ const CareersPage: React.FC = () => {
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-3">Benefits</h4>
                       <ul className="space-y-2">
-                        {position.benefits.map((benefit, index) => (
+                        {position.benefits.map((benefit, index) => (}
                           <li key={index} className="flex items-start text-sm text-gray-600">
                             <CheckCircle className="w-4 h-4 text-blue-500 mr-2 mt-0.5 flex-shrink-0" />
                             {benefit}
@@ -354,3 +351,14 @@ const CareersPage: React.FC = () => {
 };
 
 export default CareersPage;
+
+
+
+
+
+
+
+
+
+
+</div></div></div></div></div></div></div></div></div></div></div>

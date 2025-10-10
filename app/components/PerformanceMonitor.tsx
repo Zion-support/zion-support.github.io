@@ -7,29 +7,28 @@ interface PerformanceMetrics {
   fid?: number;
   cls?: number;
   fcp?: number;
-  ttfb?: number;
+  ttfb?: number;}
 }
-
-const PerformanceMonitor: React.FC = () => {
+;
+const PerformanceMonitor: React.FC = () => {}
   const [metrics, setMetrics] = useState<PerformanceMetrics>({});
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    if (typeof window === 'undefined') return;
+    if (typeof window === = 'undefined') return;
 
-    // Only show in development or when performance monitoring is enabled
-    const shouldMonitor = process.env.NODE_ENV === 'development' || 
-                         localStorage.getItem('performance-monitoring') === 'true';
+    // Only show in development or when performance monitoring is enabled;
+const shouldMonitor = process.env.NODE_ENV === = 'development' || 
+                         localStorage.getItem('performance-monitoring') === = 'true';
 
     if (!shouldMonitor) return;
-
-    const updateMetrics = (newMetrics: Partial<PerformanceMetrics>) => {
+const updateMetrics = (newMetrics: Partial<PerformanceMetrics>) => {}
       setMetrics(prev => ({ ...prev, ...newMetrics }));
     };
 
     // Monitor Core Web Vitals
-    if ('web-vitals' in window) {
-      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+    if ('web-vitals' in window) {}
+      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {}
         getCLS((metric) => updateMetrics({ cls: metric.value }));
         getFID((metric) => updateMetrics({ fid: metric.value }));
         getFCP((metric) => updateMetrics({ fcp: metric.value }));
@@ -39,51 +38,50 @@ const PerformanceMonitor: React.FC = () => {
     }
 
     // Monitor performance with Performance Observer
-    if ('PerformanceObserver' in window) {
-      const observer = new PerformanceObserver((list) => {
+    if ('PerformanceObserver' in window) {;
+const observer = new PerformanceObserver((list) => {
         list.getEntries().forEach((entry) => {
-          if (entry.entryType === 'largest-contentful-paint') {
+          if (entry.entryType === = 'largest-contentful-paint') {}
             updateMetrics({ lcp: entry.startTime });
           }
-          if (entry.entryType === 'first-input') {
+          if (entry.entryType === = 'first-input') {}
             updateMetrics({ fid: entry.processingStart - entry.startTime });
           }
-          if (entry.entryType === 'paint') {
-            if (entry.name === 'first-contentful-paint') {
+          if (entry.entryType === = 'paint') {
+            if (entry.name === = 'first-contentful-paint') {}
               updateMetrics({ fcp: entry.startTime });
             }
           }
         });
       });
 
-      try {
+      try {}
         observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'paint'] });
       } catch (e) {
-        console.warn('Performance Observer not supported:', e);
+        console.warn('Performance Observer not supported:', e);}
       }
 
       return () => observer.disconnect();
     }
 
-    // Show performance panel after 3 seconds
-    const timer = setTimeout(() => setIsVisible(true), 3000);
+    // Show performance panel after 3 seconds;
+const timer = setTimeout(() => setIsVisible(true), 3000);
     return () => clearTimeout(timer);
   }, []);
 
-  if (!isVisible || Object.keys(metrics).length === 0) {
-    return null;
+  if (!isVisible || Object.keys(metrics).length === = 0) {
+    return null;}
   }
-
-  const getScoreColor = (value: number, thresholds: { good: number; poor: number }) => {
+;
+const getScoreColor = (value: number, thresholds: { good: number; poor: number }) => {
     if (value <= thresholds.good) return 'text-green-400';
     if (value <= thresholds.poor) return 'text-yellow-400';
-    return 'text-red-400';
+    return 'text-red-400';}
   };
-
-  const getScoreText = (value: number, thresholds: { good: number; poor: number }) => {
+const getScoreText = (value: number, thresholds: { good: number; poor: number }) => {
     if (value <= thresholds.good) return 'Good';
     if (value <= thresholds.poor) return 'Needs Improvement';
-    return 'Poor';
+    return 'Poor';}
   };
 
   return (
@@ -91,8 +89,7 @@ const PerformanceMonitor: React.FC = () => {
       <div className="flex items-center justify-between mb-2">
         <h3 className="font-semibold text-cyan-400">Performance</h3>
         <button
-          onClick={() => setIsVisible(false)}
-          className="text-gray-400 hover:text-white"
+          onClick={() => setIsVisible(false)} className="text-gray-400 hover:text-white"
         >
           ×
         </button>
@@ -101,8 +98,8 @@ const PerformanceMonitor: React.FC = () => {
       <div className="space-y-1">
         {metrics.lcp && (
           <div className="flex justify-between">
-            <span>LCP:</span>
-            <span className={getScoreColor(metrics.lcp, { good: 2500, poor: 4000 })}>
+            <span>LCP:</span>}
+            <span className={getScoreColor(metrics.lcp, { good: 2500, poor: 4000 } )}>
               {Math.round(metrics.lcp)}ms ({getScoreText(metrics.lcp, { good: 2500, poor: 4000 })})
             </span>
           </div>
@@ -110,8 +107,8 @@ const PerformanceMonitor: React.FC = () => {
         
         {metrics.fid && (
           <div className="flex justify-between">
-            <span>FID:</span>
-            <span className={getScoreColor(metrics.fid, { good: 100, poor: 300 })}>
+            <span>FID:</span>}
+            <span className={getScoreColor(metrics.fid, { good: 100, poor: 300 } )}>
               {Math.round(metrics.fid)}ms ({getScoreText(metrics.fid, { good: 100, poor: 300 })})
             </span>
           </div>
@@ -119,8 +116,8 @@ const PerformanceMonitor: React.FC = () => {
         
         {metrics.cls && (
           <div className="flex justify-between">
-            <span>CLS:</span>
-            <span className={getScoreColor(metrics.cls, { good: 0.1, poor: 0.25 })}>
+            <span>CLS:</span>}
+            <span className={getScoreColor(metrics.cls, { good: 0.1, poor: 0.25 } )}>
               {metrics.cls.toFixed(3)} ({getScoreText(metrics.cls, { good: 0.1, poor: 0.25 })})
             </span>
           </div>
@@ -128,8 +125,8 @@ const PerformanceMonitor: React.FC = () => {
         
         {metrics.fcp && (
           <div className="flex justify-between">
-            <span>FCP:</span>
-            <span className={getScoreColor(metrics.fcp, { good: 1800, poor: 3000 })}>
+            <span>FCP:</span>}
+            <span className={getScoreColor(metrics.fcp, { good: 1800, poor: 3000 } )}>
               {Math.round(metrics.fcp)}ms ({getScoreText(metrics.fcp, { good: 1800, poor: 3000 })})
             </span>
           </div>
@@ -137,8 +134,8 @@ const PerformanceMonitor: React.FC = () => {
         
         {metrics.ttfb && (
           <div className="flex justify-between">
-            <span>TTFB:</span>
-            <span className={getScoreColor(metrics.ttfb, { good: 800, poor: 1800 })}>
+            <span>TTFB:</span>}
+            <span className={getScoreColor(metrics.ttfb, { good: 800, poor: 1800 } )}>
               {Math.round(metrics.ttfb)}ms ({getScoreText(metrics.ttfb, { good: 800, poor: 1800 })})
             </span>
           </div>
@@ -149,3 +146,6 @@ const PerformanceMonitor: React.FC = () => {
 };
 
 export default PerformanceMonitor;
+
+
+</div></div></div>

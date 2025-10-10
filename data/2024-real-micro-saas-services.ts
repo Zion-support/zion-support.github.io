@@ -10,7 +10,7 @@ export const realMicroSaasServices2024 = [{name: 'Real Micro-SaaS Platform 2024'
       'Advanced analytics'
     ],
     pricing: unknown;
-      starter: '$199/month',
+      starter: '$199/month'}
       professional: '$399/month'}
       enterprise: 'Custom'}
   },
@@ -69,7 +69,7 @@ export const realMicroSaasStats2024 =
   categories: 4;
   averageRating: 4.7;
   activeUsers: 1200;
-export const realMicroSaasStats2024 = {};
+export const realMicroSaasStats2024 ={} ;
   totalService,
   s: 2,
   categorie,

@@ -6,9 +6,9 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 import { Settings, Target, BarChart, Shield, CheckCircle, Star,  Settings,  Target,  Shield } from 'lucide-react';
-const ITInfrastructureDesignPage: React.FC = () => {
-  const features = [];
-  return (
+const ITInfrastructureDesignPage: React.FC = () => {;
+const features = [];
+  return (}
     {// TODO: Add content;}
 
 };

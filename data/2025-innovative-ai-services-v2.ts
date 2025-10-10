@@ -1530,14 +1530,14 @@ export interface InnovativeAIService {/* TODO: Fix JSX expression */}
   }
   id: string;
   name: string;
-  tagline: string,,
+  tagline: string,
   description: string;
   category: string;
   price: {
     monthly: number;
     yearly: number;
     currency: string;
-    trialDays: number;
+    trialDays: number;}
     setupTime: string}
     enterprise: number}
   };
@@ -1577,7 +1577,7 @@ export const innovativeAIServicesV2: InnovativeAIService[] = [;
       monthly: 299;
       yearly: 2990;
       currency: 'USD';
-      trialDays: 14;
+      trialDays: 14;}
       setupTime: '2 hours'}
       enterprise: 1299}
     };
@@ -1621,7 +1621,7 @@ export const innovativeAIServicesV2: InnovativeAIService[] = [;
       monthly: 499;
       yearly: 4990;
       currency: 'USD';
-      trialDays: 7;
+      trialDays: 7;}
       setupTime: '4 hours'}
       enterprise: 1999}
     };
@@ -1665,7 +1665,7 @@ export const innovativeAIServicesV2: InnovativeAIService[] = [;
       monthly: 399;
       yearly: 3990;
       currency: 'USD';
-      trialDays: 14;
+      trialDays: 14;}
       setupTime: '6 hours'}
       enterprise: 1599}
     };
@@ -1709,7 +1709,7 @@ export const innovativeAIServicesV2: InnovativeAIService[] = [;
       monthly: 249;
       yearly: 2490;
       currency: 'USD';
-      trialDays: 21;
+      trialDays: 21;}
       setupTime: '3 hours'}
       enterprise: 999}
     };
@@ -1753,7 +1753,7 @@ export const innovativeAIServicesV2: InnovativeAIService[] = [;
       monthly: 179;
       yearly: 1790;
       currency: 'USD';
-      trialDays: 30;
+      trialDays: 30;}
       setupTime: '2 hours'}
       enterprise: 699}
     };
@@ -1790,14 +1790,14 @@ export const innovativeAIServicesV2: InnovativeAIService[] = [;
 export interface InnovativeAIService {;
   id: string;
   name: string;
-  tagline: string,,
+  tagline: string,
   description: string;
   category: string;
   price: {
     monthly: number;
     yearly: number;
     currency: string;
-    trialDays: number;
+    trialDays: number;}
     setupTime: string}
     enterprise: number}
   };
@@ -1829,7 +1829,7 @@ export interface InnovativeAIService {;
   nam,
   e: string;
   taglin,
-  e: string,,
+  e: string,
   descriptio,
   n: string;
   categor,
@@ -2270,7 +2270,7 @@ export const innovativeAIServicesV2: InnovativeAIService[] = [;
       monthly: 299;
       yearly: 2990;
       currency: 'USD';
-      trialDays: 14;
+      trialDays: 14;}
       setupTime: '2 hours'}
       enterprise: 1299}
     };
@@ -2314,7 +2314,7 @@ export const innovativeAIServicesV2: InnovativeAIService[] = [;
       monthly: 499;
       yearly: 4990;
       currency: 'USD';
-      trialDays: 7;
+      trialDays: 7;}
       setupTime: '4 hours'}
       enterprise: 1999}
     };
@@ -2358,7 +2358,7 @@ export const innovativeAIServicesV2: InnovativeAIService[] = [;
       monthly: 399;
       yearly: 3990;
       currency: 'USD';
-      trialDays: 14;
+      trialDays: 14;}
       setupTime: '6 hours'}
       enterprise: 1599}
     };
@@ -2402,7 +2402,7 @@ export const innovativeAIServicesV2: InnovativeAIService[] = [;
       monthly: 249;
       yearly: 2490;
       currency: 'USD';
-      trialDays: 21;
+      trialDays: 21;}
       setupTime: '3 hours'}
       enterprise: 999}
     };
@@ -2446,7 +2446,7 @@ export const innovativeAIServicesV2: InnovativeAIService[] = [;
       monthly: 179;
       yearly: 1790;
       currency: 'USD';
-      trialDays: 30;
+      trialDays: 30;}
       setupTime: '2 hours'}
       enterprise: 699}
     };
@@ -2802,7 +2802,6 @@ export const,
 ];
   }
 ];
-;
 'Quantum algorithms, AI/ML, Python, React, Node && Node.js, PostgreSQL, Redis, AWS, Quantum simulators'], realImplementatio,
   n: true, i,
   d: string; nam,

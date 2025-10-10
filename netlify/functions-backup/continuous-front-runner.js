@@ -1,11 +1,9 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('continuous-front-runner function triggered')}
     // Continuous front running simulation;
-    const result = {
-      statusCode: 200;
+    const result ={statusCode: 200;
       headers: {,
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'}
+        'Content-Type': 'application/json'} 'Access-Control-Allow-Origin': '*'}
       },
       body: JSON.stringify({message: Continuous front runner executed successfully)
         timestamp: new Date().toISOString()
@@ -13,26 +11,25 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
         source: event.source || 'unknown',
         running: {,
           status: 'continuous',
-          cycles: 0;
+          cycles: 0;}
           lastCycle: new Date().toISOString()}
-    const result = {/* TODO: Fix JSX expression */}
-        'Access-Control-Allow-Origin': '*'}
+    const result ={/* TODO: Fix JSX expression */} 'Access-Control-Allow-Origin': '*'}
       },
       bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */})
   e: new Date().toISOString()}
         }})};
     return result;
-//   } catch (error) {// console.error('Error in continuous-front-runner: ') error;
+//   } catch (error) {// console.error('Error in continuous-front-runner: ') error;}
       }
     return {
       statusCode: 500;
       headers: {,
-        'Content-Type': 'application/json',
+        'Content-Type': 'application/json'}
         'Access-Control-Allow-Origin': '*'}
       },
       body: JSON.stringify({error: 'Internal server error'),
-        message: error.message),
+        message: error.message)}
         function: 'continuous-front-runner'}
 //   } catch (error) {/* TODO: Fix JSX expression */}
       }
@@ -46,8 +43,8 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     };
   }
 };
-        timestamp: new Date().toISOString(),' function: 'continuous-front-runner',' source: event.source || 'unknown', running: {' status: 'continuous', cycles: 0;
-        lastCycle: new Date().toISOString() } }) }; return result; } catch (error) {' // console.error('Error in continuous-front-runner: ') error;
+        timestamp: new Date().toISOString(),' function: 'continuous-front-runner',' source: event.source || 'unknown', running: {' status: 'continuous', cycles: 0;}
+        lastCycle: new Date().toISOString() } }) }; return result; } catch (error) {' // console.error('Error in continuous-front-runner: ') error;}
       } return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'continuous-front-runner' }) }; } };'
         timestam,
   p: new Date().toISOString(),' functio,

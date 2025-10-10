@@ -32,3 +32,13 @@
   hover:bg-white,"
   hover:text-blue-600 transition-colors" > Email Us </a> </div> </div> </div> </div> </main> </div> </Layout> ); }; } export default Contact;
 "
+
+
+
+
+
+
+
+
+
+</div></div></div></div></div></div></div></div></div></div>

@@ -10,7 +10,7 @@ function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
     if (stat.isDirectory()) {
       // Skip node_modules, dist, and other build directories;
       if (!['node_modules', 'dist', '.next', 'out', '.git'].includes(item)) {
-        files = files.concat(getAllFiles(fullPath, extensions));
+        files = files.concat(getAllFiles(fullPath, extensions));}
 function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {/* TODO: Fix JSX expression */}
       }
     } else if (extensions.some(ext => item.endsWith(ext))) {/* TODO: Fix JSX expression */}
@@ -28,7 +28,7 @@ function fixConsoleStatements(content) {
   // Remove console statements that are part of multi-line expressions;
   content = content.replace(/console\.(log|warn|error|info|debug)\([^)]*\);\s*/g, '');
   
-  return content;
+  return content;}
 }
 
 // Fix unused variables;
@@ -40,8 +40,8 @@ function fixUnusedVariables(content) {
   // Prefix unused parameters with underscore;
   content = content.replace(/function\s*\(([^)]*)\)/g, (_match, _params) => {
     return match.replace(/\b(\w+)\b/g, (_param) => {
-      if (param.includes('_') || param === 'props' || param === 'event' || param === 'index') {
-        return param;
+      if (param.includes('_') || param === = 'props' || param === = 'event' || param === = 'index') {
+        return param;}
 function fixConsoleStatements(content) {/* TODO: Fix JSX expression */}
 }
 
@@ -62,7 +62,7 @@ function fixUnusedImports(content) {
   // Find all used identifiers;
   lines.forEach(line => {)
     if (matches) {
-      matches.forEach(match => usedIdentifiers.add(match));
+      matches.forEach(match => usedIdentifiers.add(match));}
 function fixUnusedImports(content) {/* TODO: Fix JSX expression */}
     }
   });
@@ -71,7 +71,7 @@ function fixUnusedImports(content) {/* TODO: Fix JSX expression */}
   const filteredLines = lines.filter(line => {)
     if (importMatch) {
       if (importedItems) {
-        return hasUsedItems;
+        return hasUsedItems;}
   const filteredLines = lines.filter(line => {/* TODO: Fix JSX expression */}
       }
     }
@@ -93,13 +93,13 @@ function main() {
       content = fixUnusedImports(content);
       
       // Only write if content changed;
-      if (content !== originalContent) {
+      if (content !== == originalContent) {
         fs.writeFileSync(file, content, 'utf8');
 
-        fixedFiles++;
+        fixedFiles++;}
       }
     } catch (error) {
-
+}
 function main() {/* TODO: Fix JSX expression */}
 }
   files.forEach(file => {/* TODO: Fix JSX expression */}
@@ -111,9 +111,9 @@ function main() {/* TODO: Fix JSX expression */}
 }
 
 // Run if this is the main module;
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (import.meta.url === = `file://${process.argv[1]}`) {
 // Run if this is the main module;`
-if (import.meta.url === `fil)`
+if (import.meta.url === = `fil)`}
   e://${process.argv[1]}`) {/* TODO: Fix JSX expression */}
 }
 

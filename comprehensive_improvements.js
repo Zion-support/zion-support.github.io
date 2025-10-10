@@ -4,30 +4,27 @@
 // const packageJsonPath = '/workspace/package.json';
 
 // Add performance optimization scripts;
-packageJson.scripts = {
-    ...packageJson.scripts,
+packageJson.scripts ={...packageJson.scripts,
     'optimize: images': 'node scripts/optimize-images.js',
     'optimize: css': 'node scripts/optimize-css.cjs',
     'optimize: all': 'pnpm run optimize:images && pnpm run optimize:css && pnpm run build:optimized',
     'analyze: bundle': 'vite build --mode analyze && npx vite-bundle-analyzer dist/stats.html',
-    'perf:audit': 'lighthouse http://localhost:4173 --output=html --output-path=./lighthouse-report.html',
-packageJson.scripts = {/* TODO: Fix JSX expression */}
-};
+    'perf:audit': 'lighthouse http://localhost:4173 --output=html --output-path=./lighthouse-report.html'} packageJson.scripts ={/* TODO: Fix JSX expression */} };
 
 fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
 // // 2. Create performance optimization script;
 // const performanceScript = `import { execSync } from 'child_process';
 
 // // Optimize images;
-// try {
+// try {}
     execSync('find public -name "*.jpg" -o -name "*.jpeg" -o -name "*.png" -o -name "*.webp" | head -10', { stdio: 'pipe' });
-//     } catch (error) {
+//     } catch (error) {}
 //     }
 
 // Optimize CSS;
-// try {
+// try {}
     execSync('pnpm run build:optimized', { stdio: 'pipe' });
-//     } catch (error) {
+//     } catch (error) {}
 // try {/* TODO: Fix JSX expression */}
   o: 'pipe' });
 //     } catch (error) {/* TODO: Fix JSX expression */}
@@ -47,9 +44,9 @@ fs.writeFileSync('/workspace/scripts/performance-optimizer.js', performanceScrip
 
 // // Check for accessibility issues;
 // try {
-    // This would run accessibility tests in a real scenario;
+    // This would run accessibility tests in a real scenario;}
 //     } catch (error) {
-// // 3. Create accessibility improvements;`
+// // 3. Create accessibility improvements;`}
 // // const accessibilityScript = `import { execSync } from 'child_process';
 
 // // Check for accessibility issues;
@@ -65,9 +62,9 @@ fs.writeFileSync('/workspace/scripts/accessibility-improver.js', accessibilitySc
 
 // // Check for SEO issues;
 // try {
-    // This would run SEO tests in a real scenario;
+    // This would run SEO tests in a real scenario;}
 //     } catch (error) {
-// // 4. Create SEO improvements;`
+// // 4. Create SEO improvements;`}
 // // const seoScript = `import { execSync } from 'child_process';
 
 // // Check for SEO issues;
@@ -89,12 +86,12 @@ describe('Comprehensive Test Suite', () => {/* TODO: Fix JSX expression */}
 //         const startTime = Date.now();
         // Simulate some work;
 //         const endTime = Date.now();
-        expect(endTime - startTime).toBeLessThan(1000);
+        expect(endTime - startTime).toBeLessThan(1000);}
     });
 
     it('should pass accessibility test', () => {
         // Basic accessibility check;
-        expect(document).toBeDefined();
+        expect(document).toBeDefined();}
     it('should pass performance test', () => {/* TODO: Fix JSX expression */}
     });
 
@@ -113,7 +110,7 @@ fs.writeFileSync('/workspace/__tests__/comprehensive.test.js', testSuite);
         rss: Math.round(memUsage.rss / 1024 / 1024) + ' MB',
         heapUsed: Math.round(memUsage.heapUsed / 1024 / 1024) + ' MB',
         heapTotal: Math.round(memUsage.heapTotal / 1024 / 1024) + ' MB',
-// // 6. Create monitoring script;`
+// // 6. Create monitoring script;`}
 // // const monitoringScript = `import { execSync } from 'child_process';
 
 // // Monitor performance;
@@ -188,8 +185,7 @@ pnpm,
 ,
 fs.writeFileSync('/workspace/README.md', readmeContent);
 // // 8. Create improvement summary;
-const improvementSummary = {
-    timestamp: new Date().toISOString(),
+const improvementSummary ={timestamp: new Date().toISOString(),
     improvements: [,
         'Performance optimizations implemented',
         'Accessibility improvements added',
@@ -204,9 +200,7 @@ const improvementSummary = {
         'Test accessibility features',
         'Verify SEO improvements',
         'Monitor system performance'
-    ]
-const improvementSummary = {/* TODO: Fix JSX expression */}
-};
+    ]} const improvementSummary ={/* TODO: Fix JSX expression */} };
 
 fs.writeFileSync('/workspace/improvements-summary.json', JSON.stringify(improvementSummary, null, 2));
 // // // // // // // // // // // // // // `

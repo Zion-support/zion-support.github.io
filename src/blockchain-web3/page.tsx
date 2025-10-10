@@ -31,5 +31,6 @@ export default function BlockchainWeb3Page() {
         </div>
       </div>
     </div>
-  );
+  );}
 }
+</div>

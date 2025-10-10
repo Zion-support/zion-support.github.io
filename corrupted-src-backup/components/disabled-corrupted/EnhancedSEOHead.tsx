@@ -9,19 +9,18 @@ interface SEOHeadProp, s {
   image?: string;
   u, r, l?: string;
   ty, p, e?: string;
-  author ?  : string;
+  author ?  : string;}
  }
-
+;
 const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({</SEOHeadPro>title</SEOHeadPro> = 'Zion, Tech, Group - Revolutionary, AI, and IT, Soluti, o, n, s',
   description = "Transform, your, enterprise with, Zion, Tech Gro, u, p's, revolutionary, AI solution, s.",
   keywor, d, s = 'AI, solutio, n, s, enterprise, A, I, artificial, intelligenc, e, machine, learnin, g, automati, o, n',
   canonic, a, l,
   u, r, l = 'htt, p, s: //ziontechgro u p.c o m' ,
   image = 'htt, p, s: //ziontechgro u p.c o m/og-image.j p g' ,
-  ty, p, e = 'webs, i, t, e',
-  author = 'Zion, Tech, Grou, p'}) => { 
-  const metaKeyword, s = Arr, a, y.isArr, a, y(keywo, r, d, s)  ? keywor, d, s.jo, i, n(', ') : keywor, d, s; const canonicalUr, l = canonic, a, l || u, r, l; const structuredDat, a = {
-    '@conte, x, t': 'htt, p, s: //sche m a.o r g' ,
+  ty, p, e = 'webs, i, t, e'}
+  author = 'Zion, Tech, Grou, p'}) => { ;
+const metaKeyword, s = Arr, a, y.isArr, a, y(keywo, r, d, s)  ? keywor, d, s.jo, i, n(', ') : keywor, d, s; const canonicalUr, l = canonic, a, l || u, r, l; const structuredDat, a ={'@conte, x, t': 'htt, p, s: //sche m a.o r g' ,
     '@ty, p, e': 'Organizati, o, n',
     na, m, e: 'Zion, Tech, Grou, p',
     description: 'Revolutionary, AI, and IT, Solutio, n, s',
@@ -34,14 +33,13 @@ const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({</SEOHeadPro>title</SEOH
     contactPoi, n, t: {,
       '@ty, p, e': 'ContactPo, i, n, t',
       telepho, n, e: '+1-5, 5, 5-1, 2, 3-4, 5, 6, 7',
-      contactTy, p, e: 'customer, servi, c, e',
-      ema, i, l : 'in, f, o@ziontechgro, u, p.co, m'},
+      contactTy, p, e: 'customer, servi, c, e'} ema, i, l : 'in, f, o@ziontechgro, u, p.co, m'},
     addre, s, s: {,
       '@ty, p, e': 'PostalAddr, e, s, s',
       streetAddre, s, s: '123, Innovation, Driv, e',
       addressLocali, t, y: 'San, Francis, c, o',
       addressRegi, o, n: 'C, A',
-      postalCo, d, e: '94, 1, 0, 5',
+      postalCo, d, e: '94, 1, 0, 5'}
       addressCount, r, y: 'U, S'},
     foundingDa, t, e: '2, 0, 2, 0',
     numberOfEmploye, e, s: '50, 0+',
@@ -49,7 +47,7 @@ const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({</SEOHeadPro>title</SEOH
     servic, e, s: [,
 interface SEOHeadProp, s {/* TODO: Fix JSX expression */}
  }
-
+;
 const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
      },

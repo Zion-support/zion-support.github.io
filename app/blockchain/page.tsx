@@ -2,32 +2,30 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, Shield, Brain, Globe, Zap } from 'lucide-react';
-
-const BlockchainPage: React.FC = () => {
-  const features = [
+const BlockchainPage: React.FC = () => {;
+const features = [
     {
       icon: Shield,
       title: 'Secure Blockchain Solutions',
-      description: 'Advanced blockchain technology with enterprise-grade security and compliance'
+      description: 'Advanced blockchain technology with enterprise-grade security and compliance'}
     },
     {
       icon: Zap,
       title: 'High Performance',
-      description: 'Lightning-fast blockchain transactions and smart contract execution'
+      description: 'Lightning-fast blockchain transactions and smart contract execution'}
     },
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
-      description: 'Intelligent blockchain solutions powered by advanced AI technology'
+      description: 'Intelligent blockchain solutions powered by advanced AI technology'}
     },
     {
       icon: Globe,
       title: 'Global Reach',
-      description: 'Worldwide blockchain deployment and support for international businesses'
+      description: 'Worldwide blockchain deployment and support for international businesses'}
     }
   ];
-
-  const benefits = [
+const benefits = [
     'Advanced blockchain technology integration',
     'Real-time transaction processing',
     'Enterprise-grade security and compliance',
@@ -46,28 +44,7 @@ const BlockchainPage: React.FC = () => {
         <meta name="keywords" content="blockchain solutions, blockchain technology, IT services, Zion Tech Group, smart contracts" />
       </Helmet>
 
-<<<<<<< HEAD
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Blockchain Solutions
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Transform your business with cutting-edge blockchain technology and decentralized solutions. 
-            Powered by advanced AI and industry expertise.
-          </p>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Our blockchain solutions deliver unmatched performance, security, and scalability.
-          </p>
-        </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {features.map((feature, index) => (
-            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
-              <feature.icon className="h-12 w-12 text-purple-400 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-              <p className="text-gray-300">{feature.description}</p>
-=======
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-800 text-white py-20">
@@ -89,7 +66,7 @@ const BlockchainPage: React.FC = () => {
                   Schedule Blockchain Consultation
                 </button>
               </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
+
             </div>
           ))}
         </div>
@@ -99,7 +76,7 @@ const BlockchainPage: React.FC = () => {
             Why Choose Our Blockchain Solutions?
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
+            {benefits.map((benefit, index) => (}
               <div key={index} className="flex items-center space-x-3">
                 <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
                 <span className="text-gray-300">{benefit}</span>
@@ -108,26 +85,7 @@ const BlockchainPage: React.FC = () => {
           </div>
         </div>
 
-<<<<<<< HEAD
-        <div className="text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Ready to Get Started?
-          </h2>
-          <p className="text-xl text-purple-100 mb-8">
-            Contact our experts to discuss your blockchain needs and get a customized solution.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-              <Phone className="mr-2 h-5 w-5" />
-              Call Now
-            </button>
-            <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-              <Mail className="mr-2 h-5 w-5" />
-              Email Us
-            </button>
-          </div>
-        </div>
-=======
+
         {/* Key Benefits */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -173,7 +131,7 @@ const BlockchainPage: React.FC = () => {
         </section>
 
         {/* Services by Category */}
-        {categories.map(category => (
+        {categories.map(category => (}
           <section key={category} className="py-16 bg-gray-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-12">
@@ -186,8 +144,8 @@ const BlockchainPage: React.FC = () => {
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {blockchainServices
-                  .filter(service => service.category === category)
-                  .map((service, index) => (
+                  .filter(service => service.category === = category)
+                  .map((service, index) => (}
                     <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
                       <div className="text-4xl mb-4">{service.icon}</div>
                       <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
@@ -206,7 +164,7 @@ const BlockchainPage: React.FC = () => {
                       <div className="mb-4">
                         <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
                         <ul className="space-y-1">
-                          {service.features.map((feature, featureIndex) => (
+                          {service.features.map((feature, featureIndex) => (}
                             <li key={featureIndex} className="flex items-center text-sm text-gray-600">
                               <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                               {feature}
@@ -218,7 +176,7 @@ const BlockchainPage: React.FC = () => {
                       <div className="mb-4">
                         <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
                         <div className="flex flex-wrap gap-2">
-                          {service.technologies.map((tech, techIndex) => (
+                          {service.technologies.map((tech, techIndex) => (}
                             <span key={techIndex} className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">
                               {tech}
                             </span>
@@ -229,7 +187,7 @@ const BlockchainPage: React.FC = () => {
                       <div className="mb-6">
                         <h4 className="font-semibold text-gray-900 mb-2">Business Benefits:</h4>
                         <ul className="space-y-1">
-                          {service.benefits.map((benefit, benefitIndex) => (
+                          {service.benefits.map((benefit, benefitIndex) => (}
                             <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
                               <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" />
                               {benefit}
@@ -322,10 +280,26 @@ const BlockchainPage: React.FC = () => {
             </div>
           </div>
         </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
+
       </div>
     </div>
   );
 };
 
 export default BlockchainPage;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>

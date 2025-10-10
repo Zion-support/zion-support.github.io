@@ -3606,7 +3606,7 @@ export const newInnovativeServices = [{id: 'quantum - ai - brain - computer - in
     contact_info: unknown;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 1008 Middletown DE 19709'}
       website: 'https://ziontechgroup && ziontechgroup.com'}
     },
     real_implementation: true;
@@ -3654,7 +3654,7 @@ export const,
     name: 'Quantum AI Brain-Computer Interface';
     tagline: 'Direct neural interface with quantum AI for unprecedented cognitive enhancement';
     price: '$2,999';
-    period: '/month',,
+    period: '/month'}
   description: 'Revolutionary brain-computer interface powered by quantum AI, enabling direct neural communication, cognitive enhancement, and unprecedented human-AI symbiosis.'}
     id: 'quantum - internet - security - platform',
     name: 'Quantum Internet Security Platform',
@@ -6428,7 +6428,7 @@ export const newInnovativeServices = [{
       'Neural Networks'
       'Brain-Computer Interface'
       'AI/ML',
-      'Quantum Encryption'],
+      'Quantum Encryption']}
     integrations: [}
       'Defense applications'
     ]
@@ -7518,7 +7518,6 @@ export interface InnovativeMicroSaasService {/* TODO: Fix JSX expression */}
     review,
   s: 6}
 ];
-;
 addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,

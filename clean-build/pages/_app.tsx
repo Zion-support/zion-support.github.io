@@ -9,7 +9,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
-      </Head>)
+      </Head>)}
       <Component {...pageProps} />)
     </>)
 export default function App({ Component, pageProps }: AppProps) {/* TODO: Fix JSX expression */}

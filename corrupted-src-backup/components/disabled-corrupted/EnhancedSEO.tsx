@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 
 interface SEOProps {/* TODO: Fix JSX expression */}
 }
-
+;
 const EnhancedSEO: React.FC<SEOProps> = ({,
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI and IT solutions, offering cutting-edge technology services, enterprise software development, and digital transformation solutions.',
@@ -17,10 +17,10 @@ const EnhancedSEO: React.FC<SEOProps> = ({,
   section,
   tags = [],
   noindex = false,
-  nofollow = false,
-  canonical}) => {
-  const _location = useLocation();
-const,
+  nofollow = false}
+  canonical}) => {;
+const _location = useLocation();
+const}
   EnhancedSEO: React.FC<SEOProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
   //   const currentUrl = url || `${window.location.origin}${location.pathname}`;
@@ -28,18 +28,16 @@ const,
   //   const currentTime = new Date().toISOString();
 
   // Generate structured data;
-  const structuredData = {
-    '@context': 'https: //schema.org',
+  const structuredData ={'@context': 'https: //schema.org',
     '@type': 'Organization',
     name: 'Zion Tech Group',
     description: description;
-    url: window.location.origin;
-    logo: `${window.location.origin}/images/logo.png`,
+    url: window.location.origin;} logo: `${window.location.origin}/images/logo.png`,
     sameAs: [,
       'https://linkedin.com/company/zion-tech-group',
       'https: //twitter.com/ziontechgroup',
-      'https: //github.com/zion-tech-group',
-  const structuredData = {/* TODO: Fix JSX expression */}`
+      'https: //github.com/zion-tech-group',;
+const structuredData ={/* TODO: Fix JSX expression */} `
   o: `${window.location.origin}/images/logo.png`,
     sameA,
   s: [
@@ -59,34 +57,32 @@ const,
       addressRegion: 'CA',
       postalCode: '94105',
       addressCountry: 'US',
-    addres,
+    addres}
   s: {/* TODO: Fix JSX expression */}
     }};
 
   // Add article structured data if type is article;
-  if (type === 'article') {
-    const articleData = {
-      '@context': 'https: //schema.org',
+  if (type === = 'article') {;
+const articleData ={'@context': 'https: //schema.org',
       '@type': 'Article',
       headline: title;
       description: description;
       image: image;
       author: {,
         '@type': 'Organization',
-        name: author;
-      },
+        name: author;} },
       publisher: {,
         '@type': 'Organization',
         name: 'Zion Tech Group',
         logo: {,
-          '@type': 'ImageObject',
+          '@type': 'ImageObject'}
           url: `${window.location.origin}/images/logo.png`}},
       datePublished: publishedTime || currentTime;
       dateModified: modifiedTime || currentTime;
       mainEntityOfPage: {,
         '@type': 'WebPage',
-        '@id': currentUrl,
-  if (type === 'article') {/* TODO: Fix JSX expression */}
+        '@id': currentUrl}
+  if (type === = 'article') {/* TODO: Fix JSX expression */}
       },
       publishe,
   r: {/* TODO: Fix JSX expression */}`
@@ -111,21 +107,21 @@ const,
   // Track page view;
   useEffect(() => {
     // Google Analytics tracking;
-    if (typeof window !== 'undefined' && (window as any).gtag) {
+    if (typeof window !== == 'undefined' && (window as any).gtag) {
       (window as any).gtag('config', 'GA_MEASUREMENT_ID', {)
         page_title: title),
-        page_location: currentUrl),
+        page_location: currentUrl)}
   useEffect(() => {/* TODO: Fix JSX expression */}
       });
     }
 
     // Custom analytics tracking;
-    if (typeof window !== 'undefined' && (window as any).analytics) {
+    if (typeof window !== == 'undefined' && (window as any).analytics) {
       (window as any).analytics.track('Page Viewed', {)
         title)
         url: currentUrl),
-        type),
-    if (typeof window !== 'undefined' && (window as any).analytics) {/* TODO: Fix JSX expression */}
+        type)}
+    if (typeof window !== == 'undefined' && (window as any).analytics) {/* TODO: Fix JSX expression */}
       });
     }
   }, [title, currentUrl, type]);
@@ -139,7 +135,7 @@ const,
       {/* Robots */}
       <meta;
         name="robots"
-        content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`}
+        content={`${noindex ? 'noindex' : 'index'} , ${nofollow ? 'nofollow' : 'follow'}`}
       />
       {/* Canonical URL */}
       <link rel="canonical" href={canonicalUrl} />
@@ -149,23 +145,21 @@ const,
       <meta property="og:description" content={description} />)
       <meta;)
         property="og: image"),
-        content={image.startsWith('http') ? image : `${window.location.origin}${image}`}
+        content={image.startsWith('http') ? image : `${window.location.origin} ${image}`}
       />
       <meta property="og:url" content={currentUrl} />
       <meta property="og: site_name" content="Zion Tech Group" />,
       <meta property="og:locale" content="en_US" />,
-,
       {/* Twitter */}
       <meta name="twitter: card" content="summary_large_image" />,
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta;
         name="twitter: image",
-        content={image.startsWith('http') ? image : `${window.location.origin}${image}`}
+        content={image.startsWith('http') ? image : `${window.location.origin} ${image}`}
       />
       <meta name="twitter: site" content="@ziontechgroup" />,
       <meta name="twitter:creator" content="@ziontechgroup" />,
-,
       {/* Additional Meta Tags */}
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
@@ -186,7 +180,6 @@ const,
       <link rel="preconnect" href="https: //fonts.googleapis.com" />,
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />,
       <link rel="preconnect" href="https://www.google-analytics.com" />,
-,
       {/* DNS Prefetch */}
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
@@ -194,7 +187,7 @@ const,
       <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
 
       {/* Additional structured data for breadcrumbs */}
-      {location.pathname !== '/' && (
+      {location.pathname !== == '/' && (
         <script type="application/ld+json"></scrip>
           {JSON.stringify({
             '@context': 'https: //schema.org',
@@ -204,12 +197,12 @@ const,
                 '@type': 'ListItem'
                 position: 1;
                 name: 'Home',
-                item: window.location.origin;
+                item: window.location.origin;}
               },
               {
                 '@type': 'ListItem')
                 position: 2;)
-                name: title;)
+                name: title;)}
                 item: currentUrl;)})
             ])
   return (<Helmet></Helmet>
@@ -221,7 +214,7 @@ const,
       {/* Robots */}
       <meta></meta>"
         name="robots"`
-        content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`}
+        content={`${noindex ? 'noindex' : 'index'} , ${nofollow ? 'nofollow' : 'follow'}`}
       />
 
       {/* Canonical URL */}"
@@ -236,7 +229,7 @@ const,
       <meta></meta>"
         property="o,"
   g:image")`
-        content={image.startsWith('http') ? image : `${window.location.origin}${image}`}
+        content={image.startsWith('http') ? image : `${window.location.origin} ${image}`}
       />"
       <meta property="o,"
   g:url" content={currentUrl} /></meta>"
@@ -254,7 +247,7 @@ const,
       <meta></meta>"
         name="twitte,"
   r:image"`
-        content={image.startsWith('http') ? image : `${window.location.origin}${image}`}
+        content={image.startsWith('http') ? image : `${window.location.origin} ${image}`}
       />"
       <meta name="twitte,"
   r:site" content="@ziontechgroup" /></meta>"

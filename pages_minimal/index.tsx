@@ -1,12 +1,11 @@
 
-export const metadata: Metadata = {,
+export const metadata: Metadata ={,
   title: 'Index | Zion Tech Group',
   description: 'Discover the latest AI breakthroughs and enterprise automation solutions from Zion Tech Group.',
   keywords: 'AI, automation, enterprise, breakthrough, technology',
   openGraph: {,
     title: 'Index',
-    description: 'Discover the latest AI breakthroughs and enterprise automation solutions.',
-    type: 'article'}};
+    description: 'Discover the latest AI breakthroughs and enterprise automation solutions.'} type: 'article'}};
 
 export default function index() {
   return(<div className="min-h-screen bg-gray-50">
@@ -40,9 +39,8 @@ export default function index() {
           </div>)
         </div>)
       </div>)
-export const,
-  metadata: Metadata = {/* TODO: Fix JSX expression */}
-  }};
+export const}
+  metadata: Metadata ={/* TODO: Fix JSX expression */} }};
 
 export default function index() {/* TODO: Fix JSX expression */}
 }

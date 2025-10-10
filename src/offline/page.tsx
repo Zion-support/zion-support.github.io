@@ -39,7 +39,7 @@ const,
         </p>"
         <div className="space-y-3"></div>
           <button></button>
-            onClick={handleRetry}"
+            onClick={handleRetry} "
             className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-cyan-500,"
   hover:bg-cyan-600 text-white rounded-lg transition-colors duration-200 font-medium"
 // >
@@ -55,7 +55,7 @@ const,
           <RefreshCw className="w-4 h-4" /></RefreshCw>
 // Try Again;
           </button>
-onClick={handleGoHome}"
+onClick={handleGoHome} "
             className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-white/10,"
   hover:bg-white/20 text-white rounded-lg transition-colors duration-200 font-medium border border-white/20""
             <Home className="w-4 h-4" /></Home>

@@ -28,7 +28,7 @@ Transform your AI platform with intelligent scorecards and performance monitorin
     metrics: {
       performance: '99.9% uptime'
       savings: '$2.8M annually',
-      accuracy: '95% optimization',
+      accuracy: '95% optimization'}
       roi: '300%'}},
   {
     id: 'quantum-ai-security-2025'
@@ -58,7 +58,7 @@ Protect your AI systems with next-generation quantum security frameworks.
       accuracy: 'Zero breaches',
       roi: '500%',
 export const,
-  newBreakthroughContent2025: BreakthroughContent[] = [
+  newBreakthroughContent2025: BreakthroughContent[] = [}
   {/* TODO: Fix JSX expression */}
     }},
   {/* TODO: Fix JSX expression */}

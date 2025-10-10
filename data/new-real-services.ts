@@ -4878,7 +4878,6 @@
     reviews: 22;
   }
 ];
-;
     id: 'ai-sales-email-copilot'
     name: 'AI Sales Email Copilot',
     tagline: 'Personalized multi-touch outbound with real-time enrichment',
@@ -5048,7 +5047,6 @@
     review,
   s: 22}
 ];
-;
     i,
   d: 'ai-sales-email-copilot'
     nam,
@@ -5272,13 +5270,11 @@
   s: [;
 ];
 ]
-// const contact = {;
+// const contact ={;
   mobile: '+1 302 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 1008 Middletown DE 19709'}
+  email: 'kleber@ziontechgroup.com';} address: '364 E Main St STE 1008 Middletown DE 19709'}
   website: 'https://ziontechgroup.com'],
-// const contact = {/* TODO: Fix JSX expression */}
-  s: '364 E Main St STE 1008 Middletown DE 19709'}
+// const contact ={/* TODO: Fix JSX expression */} s: '364 E Main St STE 1008 Middletown DE 19709'}
   websit,
   e: 'http,
   s://ziontechgroup.com'
@@ -5295,7 +5291,7 @@ export const,
     name: 'AI Sales Email Copilot';
     tagline: 'Personalized multi-touch outbound with real-time enrichment';
     price: '$129';
-    period: '/month',,
+    period: '/month',
   description: 'Automate prospect research, write context-aware messages, and schedule follow-ups across email and LinkedIn. Built-in A/B testing and domain warmup best practices.';
     features: [
       'Prospect enrichment via public sourcesPersonalized email generationSequence and follow-up schedulingA/B testing and analyticsSPF/DKIM/DMARC checksInbox rotation support'
@@ -5323,7 +5319,7 @@ export const,
     realImplementation: true;
     implementationDetails: 'Sequencer, enrichment adapters, and warm-up utilities.';
     launchDate: '2024-12-20';
-    customers: 120;
+    customers: 120;}
     rating: 4.7}
     reviews: 58}
   };
@@ -5332,7 +5328,7 @@ export const,
     name: 'Security Posture as Code';
     tagline: 'CIS/NIST/Kyverno policy packs with drift remediation';
     price: '$399';
-    period: '/month',,
+    period: '/month',
   description: 'Continuously enforce security baselines across Kubernetes, cloud, and SaaS. GitOps-friendly with automatic fix PRs and evidence collection for audits.';
     features: [
       'Policy packs for CIS/NISTKubernetes and cloud postureAuto-remediation PRsEvidence collection and reportsSOC2/ISO 27001 export'
@@ -5360,7 +5356,7 @@ export const,
     realImplementation: true;
     implementationDetails: 'Policy engine plus cloud/K8 s scanners and fix generators.';
     launchDate: '2025-01-05';
-    customers: 18;
+    customers: 18;}
     rating: 4.6}
     reviews: 14}
   };
@@ -5369,7 +5365,7 @@ export const,
     name: 'ETL Observability Starter';
     tagline: 'Data pipeline health with schema change and freshness alerts';
     price: '$99';
-    period: '/month',,
+    period: '/month',
   description: 'Monitor data pipelines end-to-end: freshness, volume, schema drift, and SLA adherence. Lightweight agent and connectors for common warehouses.';
     features: [
       'Freshness and volume checksSchema drift detectionSLA and SLO trackingIncident routing to Slack/Teams'
@@ -5397,7 +5393,7 @@ export const,
     realImplementation: true;
     implementationDetails: 'Light agents and metadata collectors with warehouse connectors.';
     launchDate: '2025-01-12';
-    customers: 25;
+    customers: 25;}
     rating: 4.5}
     reviews: 12}
   };
@@ -5406,7 +5402,7 @@ export const,
     name: 'API Performance Shield';
     tagline: 'Global edge caching, rate limiting, and anomaly detection';
     price: '$149';
-    period: '/month',,
+    period: '/month',
   description: 'Protect and accelerate APIs with global edge caching, dynamic rate limits, and anomaly detection. Ship zero-downtime via traffic shadowing.';
     features: [
       'Global CDN edge cachingDynamic rate limitingAnomaly and abuse detectionZero-downtime deploys with shadow traffic'
@@ -5434,7 +5430,7 @@ export const,
     realImplementation: true;
     implementationDetails: 'Managed edge configs and anomaly ML with safe rollout tools.';
     launchDate: '2025-01-15';
-    customers: 14;
+    customers: 14;}
     rating: 4.7}
     reviews: 9}
   };
@@ -5443,7 +5439,7 @@ export const,
     name: 'AI Product Analytics';
     tagline: 'Session insights, funnel auto-segmentation, and LLM-based insights';
     price: '$129';
-    period: '/month',,
+    period: '/month',
   description: 'Turn product usage into insights with automatic funnel detection, LLM-based querying, and anomaly alerts. Works alongside Amplitude/GA4.';
     features: [
       'Auto-segmentation and cohortsLLM query interfaceRetention and churn signalsAnomaly alerts to Slack/Teams'
@@ -5471,7 +5467,7 @@ export const,
     realImplementation: true;
     implementationDetails: 'Event capture SDKs and warehouse-first analytics.';
     launchDate: '2025-01-02';
-    customers: 41;
+    customers: 41;}
     rating: 4.6}
     reviews: 20}
   };
@@ -5480,7 +5476,7 @@ export const,
     name: 'AI Support Deflection';
     tagline: 'Self-serve answers with RAG, forms, and secure handoff';
     price: '$99';
-    period: '/month',,
+    period: '/month',
   description: 'Reduce support load with guided flows, knowledge base RAG, and ticket escalation. Multi-channel widgets with brand controls.';
     features: [
       'Multi-channel widgetsGrounded answers with citationsSecure human handoffAnalytics and CSAT tracking'
@@ -5508,7 +5504,7 @@ export const,
     realImplementation: true;
     implementationDetails: 'Embeddable widget and handoff connectors.';
     launchDate: '2024-12-15';
-    customers: 75;
+    customers: 75;}
     rating: 4.7}
     reviews: 48}
   };
@@ -5517,7 +5513,7 @@ export const,
     name: 'Cloud Cost Autopilot';
     tagline: 'Automated rightsizing, anomaly alerts, and commitment planning';
     price: '$249';
-    period: '/month',,
+    period: '/month',
   description: 'Proactive optimization for AWS/Azure/GCP: anomaly alerts, rightsizing PRs, and commitment purchase planning with explainability.';
     features: [
       'Rightsizing recommendationsAnomaly detectionSavings plan/RIs planningTag hygiene and showback'
@@ -5545,7 +5541,7 @@ export const,
     realImplementation: true;
     implementationDetails: 'Read-only billing analysis with PR-based changes.';
     launchDate: '2025-01-03';
-    customers: 19;
+    customers: 19;}
     rating: 4.5}
     reviews: 11}
   };
@@ -5554,7 +5550,7 @@ export const,
     name: 'Privacy Vault';
     tagline: 'Tokenize PII and control access with audit trails';
     price: '$179';
-    period: '/month',,
+    period: '/month',
   description: 'Centralize PII with field-level encryption, tokenization, and consent enforcement. Ship faster with privacy by design.';
     features: [
       'Field-level encryptionTokenization APIsConsent enforcementAudit trail and reporting'
@@ -5582,7 +5578,7 @@ export const,
     realImplementation: true;
     implementationDetails: 'Drop-in SDKs and proxy-based tokenization.';
     launchDate: '2025-01-07';
-    customers: 9;
+    customers: 9;}
     rating: 4.6}
     reviews: 7}
   };
@@ -5591,7 +5587,7 @@ export const,
     name: 'AI Fraud Detection Lite';
     tagline: 'Graph-based anomalies with explainability for SMBs';
     price: '$159';
-    period: '/month',,
+    period: '/month',
   description: 'Detect fraud across transactions with graph analytics and explainable decisions. Quick to integrate via event stream or batch.';
     features: [
       'Graph-based anomaly detectionExplainability reportsRisk scoring APIWorkflow actions and webhooks'
@@ -5619,7 +5615,7 @@ export const,
     realImplementation: true;
     implementationDetails: 'Streaming and batch detectors with human-in-the-loop review.';
     launchDate: '2025-01-09';
-    customers: 11;
+    customers: 11;}
     rating: 4.5}
     reviews: 8}
   };
@@ -5628,7 +5624,7 @@ export const,
     name: 'Managed Postgres HA Pro';
     tagline: 'Turnkey HA, backups, PITR, and query tuning';
     price: '$199';
-    period: '/month',,
+    period: '/month',
   description: 'Production-grade PostgreSQL with high availability, automated backups, point-in-time recovery, and performance tuning insights.';
     features: [
       'HA with automatic failoverContinuous backups and PITRSlow query insights and indexingEncryption and access controls'
@@ -5656,7 +5652,7 @@ export const,
     realImplementation: true;
     implementationDetails: 'Managed cluster with observability and runbooks.';
     launchDate: '2025-01-16';
-    customers: 8;
+    customers: 8;}
     rating: 4.6}
     reviews: 5}
   };
@@ -5665,7 +5661,7 @@ export const,
     name: 'Browser Performance Monitor Pro';
     tagline: 'RUM, Core Web Vitals, and session replay';
     price: '$79';
-    period: '/month',,
+    period: '/month',
   description: 'Real-user monitoring with Core Web Vitals tracking, JS error collection, and session replay for rapid issue resolution.';
     features: [
       'Core Web Vitals dashboardsSession replay and heatmapsError tracking and sourcemapsA/B test impact analysis'
@@ -5693,7 +5689,7 @@ export const,
     realImplementation: true;
     implementationDetails: 'Agent + dashboards + anomaly alerts.';
     launchDate: '2025-01-17';
-    customers: 12;
+    customers: 12;}
     rating: 4.5}
     reviews: 6}
   };
@@ -5702,7 +5698,7 @@ export const,
     name: 'SEO Automation Studio';
     tagline: 'Programmatic SEO, audits, and internal linking automation';
     price: '$99';
-    period: '/month',,
+    period: '/month',
   description: 'Automate technical audits, fix issues, generate topic clusters, and build programmatic landing pages safely.';
     features: [
       'Site audits and fixesSchema and sitemapsProgrammatic pagesInternal linking graph'
@@ -5730,7 +5726,7 @@ export const,
     realImplementation: true;
     implementationDetails: 'Crawlers, fixers, programmatic builder.';
     launchDate: '2025-01-18';
-    customers: 10;
+    customers: 10;}
     rating: 4.4}
     reviews: 4}
   };
@@ -5739,7 +5735,7 @@ export const,
     name: 'Webhook Relay & Replay Pro';
     tagline: 'Reliable webhooks with DLQ and replays';
     price: '$59';
-    period: '/month',,
+    period: '/month',
   description: 'Store, inspect, and replay webhooks with DLQ, retries, and signing verification to harden integrations.';
     features: [
       'DLQ and retry policiesInspector and redactionSignature verificationFan-out and transformations'
@@ -5767,7 +5763,7 @@ export const,
     realImplementation: true;
     implementationDetails: 'Broker + storage + replayer UI.';
     launchDate: '2025-01-19';
-    customers: 7;
+    customers: 7;}
     rating: 4.6}
     reviews: 3}
   };
@@ -5776,7 +5772,7 @@ export const,
     name: 'PDF Render API Pro';
     tagline: 'Fast HTML-to-PDF with brand-safe templates';
     price: '$49';
-    period: '/month',,
+    period: '/month',
   description: 'Serverless HTML-to-PDF rendering with page numbers, headers/footers, and safe fonts. Great for invoices and reports.';
     features: [
       'Serverless scaleTemplate galleryBrand-safe fontsWebhook on completion'
@@ -5804,7 +5800,7 @@ export const,
     realImplementation: true;
     implementationDetails: 'Isolated renderer pool, signed URLs.';
     launchDate: '2025-01-18';
-    customers: 22;
+    customers: 22;}
     rating: 4.6}
     reviews: 10}
   };
@@ -5813,7 +5809,7 @@ export const,
     name: 'API Observability Starter Pro';
     tagline: 'Traces, metrics, logs for APIs without the bloat';
     price: '$99';
-    period: '/month',,
+    period: '/month',
   description: 'Easy OpenTelemetry-based tracing, RED metrics, and error analytics with exporters to your stack.';
     features: [
       'Auto-instrumentationRED dashboardsError analyticsExporters to APMs'
@@ -5841,7 +5837,7 @@ export const,
     realImplementation: true;
     implementationDetails: 'SDKs, collectors, quick dashboards.';
     launchDate: '2025-01-17';
-    customers: 9;
+    customers: 9;}
     rating: 4.5}
     reviews: 4}
   };
@@ -5850,7 +5846,7 @@ export const,
     name: 'SSO in a Box Pro';
     tagline: 'SAML, OIDC, SCIM with turnkey onboarding';
     price: '$149';
-    period: '/month',,
+    period: '/month',
   description: 'Offer SSO and SCIM to your customers with a managed gateway, branding, and test harnesses.';
     features: [
       'SAML and OIDCSCIM and JIT provisioningBranding and mappingCustomer sandbox'
@@ -5878,7 +5874,7 @@ export const,
     realImplementation: true;
     implementationDetails: 'Hosted broker + mappings UI.';
     launchDate: '2025-01-17';
-    customers: 6;
+    customers: 6;}
     rating: 4.7}
     reviews: 3}
   };
@@ -5887,7 +5883,7 @@ export const,
     name: 'IT Asset Discovery Agent Pro';
     tagline: 'Agentless discovery with CMDB sync';
     price: '$129';
-    period: '/month',,
+    period: '/month',
   description: 'Discover hardware, software, and services across networks with agentless scans and sync to CMDB.';
     features: [
       'Network scans and SNMPSoftware inventoryChange trackingCMDB integrations'
@@ -5915,7 +5911,7 @@ export const,
     realImplementation: true;
     implementationDetails: 'Scanners, parsers, CMDB sync.';
     launchDate: '2025-01-16';
-    customers: 5;
+    customers: 5;}
     rating: 4.4}
     reviews: 2}
   };
@@ -5924,7 +5920,7 @@ export const,
     name: 'Vendor Risk Automation Lite';
     tagline: 'Questionnaires, evidence, and continuous monitoring';
     price: '$129';
-    period: '/month',,
+    period: '/month',
   description: 'Streamline vendor assessments with standardized questionnaires, evidence requests, and continuous security monitoring.';
     features: [
       'Questionnaire templatesEvidence collection portalContinuous monitoringRisk scoring'
@@ -5952,7 +5948,7 @@ export const,
     realImplementation: true;
     implementationDetails: 'Portal + integrations + reports.';
     launchDate: '2025-01-19';
-    customers: 6;
+    customers: 6;}
     rating: 4.5}
     reviews: 3}
   {/* TODO: Fix JSX expression */}
@@ -7750,8 +7746,7 @@ export const,
   e: '$59'' perio,
   d: '/month' descriptio,
   n:' 'Store, inspect, and replay webhooks with DLQ, retries, and signing verification to harden integrations.' feature,
-  s: []; ],' import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services'; const contact = {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com'}' addres,
+  s: []; ],' import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services'; const contact ={/* TODO: Fix JSX expression */} l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
   s://ziontechgroup.com' }; export const,

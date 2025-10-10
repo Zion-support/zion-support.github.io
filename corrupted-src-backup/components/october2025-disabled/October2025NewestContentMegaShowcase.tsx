@@ -65,16 +65,16 @@ export default function October2025NewestContentMegaShowca, s, e() {/* TODO: Fix
         </div>
         {/* Content, G, r, i, d */}
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">
-          { newConte, n, t.m, a, p((it, e, m, ind, e, x) = > (</div>
+          { newConte, n, t.m, a, p((it, e, m, ind, e, x) = > (</div>}
         {/* Content, G, r, i, d */}"
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12"></div>
           {/* TODO: Fix JSX expression */}"
-            <Link, ke, y = { in, d, e, x  }, to={ it, e, m.li, n, k } className="group, relative, bg-sla, t, e-8, 0, 0/50, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, border, border-sla, t, e-7, 0, 0/50, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/20"
+            <Link, ke, y ={in, d, e, x  } , to={it, e, m.li, n, k } className="group, relative, bg-sla, t, e-8, 0, 0/50, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, border, border-sla, t, e-7, 0, 0/50, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/20"
             ></Link>
               {/* Ic, o, n */}
-              <div, classNam, e = { `inli, n, e-fle, x, p-4, rounde, d-xl, b, g-gradie, n, t-to-br ${it, e, m.gradi, e, n, t }, mb-6, grou, p-hov, e, r: sca, l, e-110, transitio, n-transform, duratio, n-30, 0`}></div>
+              <div, classNam, e ={`inli, n, e-fle, x, p-4, rounde, d-xl, b, g-gradie, n, t-to-br ${it, e, m.gradi, e, n, t } , mb-6, grou, p-hov, e, r: sca, l, e-110, transitio, n-transform, duratio, n-30, 0`}></div>
                 <div, classNam, e = "te, x, t-whi, t, e">
-              <div, classNam, e = { `inli, n, e-fle, x, p-4, rounde, d-xl, b, g-gradie, n, t-to-br ${it, e, m.gradi, e, n, t }, mb-6, grou, p-hov, e, r: sca, l, e-110, transitio, n-transform, duratio, n-30, 0`}></div>"
+              <div, classNam, e ={`inli, n, e-fle, x, p-4, rounde, d-xl, b, g-gradie, n, t-to-br ${it, e, m.gradi, e, n, t } , mb-6, grou, p-hov, e, r: sca, l, e-110, transitio, n-transform, duratio, n-30, 0`}></div>"
                 <div, classNam, e = "te, x, t-whi, t, e"></div>
                   {it, e, m.ic, o, n}
                 </div>
@@ -119,7 +119,7 @@ export default function October2025NewestContentMegaShowca, s, e() {/* TODO: Fix
                 <Link, className="w-5 h-5, grou, p-hov, e, r:transla, t, e-x-2, transitio, n-transfo, r, m" /></Link>
               </div>
               </d, i, v  > {/* Hover, Glow, Effe, c, t */}`
-              <div, classNam, e = { `absolute, inse, t-0, rounde, d-2xl, b, g-gradie, n, t-to-br ${it, e, m.gradi, e, n, t }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, transitio, n-opacity, duratio, n-300, pointe, r-even, t, s-n, o, n, e`}</Li, n, k></div>
+              <div, classNam, e ={`absolute, inse, t-0, rounde, d-2xl, b, g-gradie, n, t-to-br ${it, e, m.gradi, e, n, t } , opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, transitio, n-opacity, duratio, n-300, pointe, r-even, t, s-n, o, n, e`}</Li, n, k></div>
           ))}
         </div>
         {/* Bottom, CT, A */}

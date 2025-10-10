@@ -22,13 +22,13 @@ const, QuantumConsciousnessAIConsultin, g: Rea, c, t.FC = () => {
           conte, n, t='Transform, your, enterprise with, AI, that truly, thinks, and fee, l, s.'
         /></meta>
       </Helm, e, t>
-
+}
       <div, className='m, i, n-h-screen, b, g-sla, t, e-9, 5, 0' > {/* Hero, Sect, i, o, n */ }</div>
         <section, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, p, y-20'>
           <div, className='absolute, inse, t-0, overflo, w-hidden, opacit, y-20'></section>
             <div, className='absolute, to, p-0, lef, t-1/3 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e' /></div>
             <div, className='absolute, botto, m-0, righ, t-1/3 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e'
-              sty, l, e={{ animationDel, a, y: ', 2, s' }}
+              sty, l, e={{ animationDel, a, y: ', 2, s' } }
              />
               <div, className='flex, fle, x-col, s, m:fl, e, x-row, ga, p-4, justif, y-center, m, b-12'>
              /></div>
@@ -40,7 +40,7 @@ const, QuantumConsciousnessAIConsultin, g: Rea, c, t.FC = () => {/* TODO: Fix JS
           <div, className='absolute, inse, t-0, overflo, w-hidden, opacit, y-20'></div>
             <div, className='absolute, to, p-0, lef, t-1/3 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e' /></div>
             <div, className='absolute, botto, m-0, righ, t-1/3 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e'
-              sty, l, e={{ animationDel, a, y: ', 2, s' }}
+              sty, l, e={{ animationDel, a, y: ', 2, s' } }
              /></div>
               <div, className='flex, fle, x-col, s, m:fl, e, x-row, ga, p-4, justif, y-center, m, b-12'></div>
                 <a, hre, f='#<consultati, o, n'

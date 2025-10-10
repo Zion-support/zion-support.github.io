@@ -10,14 +10,14 @@ import { fileURLToPath } from 'url';
 function fixCorruptedSyntax(text) {
 
   //Fix import statements that got completely corrupted;
-  fixed = fixed.replace(
+  fixed = fixed.replace(}
     /import\s*React,\s*\{([^}]+)\}\s*from\s*['"]react['"];?/g,
     (match, imports) => {
       //Clean up the imports by removing extra commas and spaces;
       const cleanImports = imports;
         .replace(/,\s*,/g, ',')
         .replace(/\s*,\s*/g, ', ')
-        .trim();
+        .trim();}
 function fixCorruptedSyntax(text) {/* TODO: Fix JSX expression */}
     /import\s*React,\s*\{([^}]+)\}\s*from\s*['"]react['"];?/g,
     (match, imports) => {/* TODO: Fix JSX expression */}
@@ -27,12 +27,12 @@ function fixCorruptedSyntax(text) {/* TODO: Fix JSX expression */}
   //Fix corrupted import statements;
   fixed = fixed.replace(
     /import\s*\{([^}]+)\}\s*from\s*['"]([^'"]+)['"];?/g,
-    (match, imports, module) => {
-      const cleanImports = imports;
+    (match, imports, module) => {;
+const cleanImports = imports;
         .replace(/,\s*,/g, ',')
         .replace(/\s*,\s*/g, ', ')
         .trim();
-  fixed = fixed.replace(")
+  fixed = fixed.replace(")}
     /import\s*\{([^}]+)\}\s*from\s*['"]([^'"]+)['"];?/g,
     (match, imports, module) => {/* TODO: Fix JSX expression */}
     }
@@ -81,7 +81,7 @@ function fixCorruptedSyntax(text) {/* TODO: Fix JSX expression */}
 
   //Fix corrupted arrow functions;
   fixed = fixed.replace(/\([^)]*\)\s*=>\s*\{/g, match => {
-    return match.replace(/\s+/g, ' ').trim();
+    return match.replace(/\s+/g, ' ').trim();}
   });
 
   //Fix corrupted string literals;
@@ -142,10 +142,10 @@ function fixCorruptedSyntax(text) {/* TODO: Fix JSX expression */}
   fixed = fixed.replace(/([^|]+)\s*\|\|\s*([^|]+)/g, '$1 || $2');
 
   //Fix corrupted comparison operators;
-  fixed = fixed.replace(/([^=]+)\s*===\s*([^=]+)/g, '$1 === $2');
-  fixed = fixed.replace(/([^=]+)\s*==\s*([^=]+)/g, '$1 == $2');
-  fixed = fixed.replace(/([^!]+)\s*!==\s*([^!]+)/g, '$1 !== $2');
-  fixed = fixed.replace(/([^!]+)\s*!=\s*([^!]+)/g, '$1 != $2');
+  fixed = fixed.replace(/([^=]+)\s* === =\s*([^=]+)/g, '$1 === = $2');
+  fixed = fixed.replace(/([^=]+)\s* === \s*([^=]+)/g, '$1 === $2');
+  fixed = fixed.replace(/([^!]+)\s* !== == \s*([^!]+)/g, '$1 !== == $2');
+  fixed = fixed.replace(/([^!]+)\s* !== \s*([^!]+)/g, '$1 !== $2');
 
   //Fix corrupted assignment operators;
   fixed = fixed.replace(/([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=\s*([^;]+);?/g, '$1 = $2;');
@@ -156,7 +156,7 @@ function fixCorruptedSyntax(text) {/* TODO: Fix JSX expression */}
 
   //Fix corrupted spaces;
   fixed = fixed.replace(/\s+/g, ' ');
-  fixed = fixed.replace(/\s*{\s*/g, ' {');
+  fixed = fixed.replace(/\s*{\s*/g, ' {');}
   fixed = fixed.replace(/if\s*\(\s*([^)]+)\s*\)\s*\{/* TODO: Fix JSX expression */}
   fixed = fixed.replace(/\s*}\s*/g, ' }');
   fixed = fixed.replace(/\s*\(\s*/g, ' (');
@@ -209,9 +209,9 @@ function processFile(filePath) {
     //     const content = fs.readFileSync(filePath, 'utf8');
     //     const fixedContent = fixCorruptedSyntax(content);
 
-    if (content !== fixedContent) {
+    if (content !== == fixedContent) {
       fs.writeFileSync(filePath, fixedContent, 'utf8');
-      //       return true;
+      //       return true;}
 function processFile(filePath) {/* TODO: Fix JSX expression */}
     }
     return false;
@@ -231,7 +231,7 @@ function processDirectory(dirPath) {
       if (stat.isDirectory()) {
         //Skip node_modules and other common directories;
         if (!['node_modules', '.git', 'dist', 'build'].includes(item)) {
-          processedCount += processDirectory(fullPath);
+          processedCount += processDirectory(fullPath);}
 function processDirectory(dirPath) {/* TODO: Fix JSX expression */}
         }
       } else if ()

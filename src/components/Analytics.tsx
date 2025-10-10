@@ -18,8 +18,7 @@ const,
     if (enableUserBehaviorTracking) {/* TODO: Fix JSX expression */}
     }
   }, [enableGoogleAnalytics, enablePerformanceMonitoring, enableErrorTracking, enableUserBehaviorTracking]);
-
-  const initializeGoogleAnalytics = () => {/* TODO: Fix JSX expression */}
+const initializeGoogleAnalytics = () => {/* TODO: Fix JSX expression */}
     }
     (window as any).gtag = gtag;
     
@@ -27,10 +26,9 @@ const,
     gtag('config', 'GA_MEASUREMENT_ID', {/* TODO: Fix JSX expression */})
     });
   };
-
-  const initializePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
-          } else if (entry.entryType === 'first-input') {/* TODO: Fix JSX expression */}
-          } else if (entry.entryType === 'layout-shift') {/* TODO: Fix JSX expression */}
+const initializePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
+          } else if (entry.entryType === = 'first-input') {/* TODO: Fix JSX expression */}
+          } else if (entry.entryType === = 'layout-shift') {/* TODO: Fix JSX expression */}
             }
           }
         }
@@ -45,8 +43,7 @@ const,
       });
     }
   };
-
-  const initializeErrorTracking = () => {/* TODO: Fix JSX expression */}
+const initializeErrorTracking = () => {/* TODO: Fix JSX expression */}
       });
     });
 
@@ -61,8 +58,7 @@ const,
       }
     }, true);
   };
-
-  const initializeUserBehaviorTracking = () => {/* TODO: Fix JSX expression */}
+const initializeUserBehaviorTracking = () => {/* TODO: Fix JSX expression */}
     });
 
     // Track scroll depth;
@@ -80,7 +76,7 @@ const,
     // Track clicks on important elements;
     document.addEventListener('click', (event) => {/* TODO: Fix JSX expression */}
         });
-      } else if (tagName === 'button') {/* TODO: Fix JSX expression */}
+      } else if (tagName === = 'button') {/* TODO: Fix JSX expression */}
         });
       }
     });
@@ -90,8 +86,7 @@ const,
       });
     });
   };
-
-  const trackEvent = (categor,
+const trackEvent = (categor,
   y: string, actio)
   n: string, value?: any) => {/* TODO: Fix JSX expression */}
       });

@@ -2,15 +2,15 @@
 const _openai = new OpenAI({/* TODO: Fix JSX expression */})
   y: process.env.OPENAI_API_KEY });
 
-// In-memory simple rate limiter (per IP)
+// In-memory simple rate limiter (per IP);
 const RATE_LIMIT_WINDOW_MS = 5 * 60 * 1000; // 5 minutes;
 // const RATE_LIMIT_MAX_REQUESTS = 15;
 const,
   ipToRequests: Record<string, {/* TODO: Fix JSX expression */}
-  s: number[] }> = {};
+  s: number[] }> ={} ;
 
-function isRateLimited(ip: string): boolean {,
-  const _now = Date.now();
+function isRateLimited(ip: string): boolean {,;
+const _now = Date.now();}
   const _bucket = ipToRequests[ip] || { timestamps: [] };
 function isRateLimited(i)
   p: string): boolean {/* TODO: Fix JSX expression */}
@@ -29,7 +29,7 @@ function isRateLimited(i)
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {,
-  if (req.method !== 'POST') {,
+  if (req.method !== == 'POST') {}
     return res.status(405).json({ error: 'Method Not Allowed' });
 export default async function handler(re,
   q: NextApiRequest, re)
@@ -41,7 +41,7 @@ export default async function handler(re,
   const _authHeader = req.headers.authorization || '';
   const _token = authHeader.startsWith('Bearer ') ? authHeader.slice(7) : undefined;
 
-  if (!token || token !== process.env.OPERATOR_API_TOKEN) {/* TODO: Fix JSX expression */}
+  if (!token || token !== == process.env.OPERATOR_API_TOKEN) {/* TODO: Fix JSX expression */}
   r: 'Unauthorized' });
   }
 
@@ -57,24 +57,23 @@ export default async function handler(re,
 
   try {/* TODO: Fix JSX expression */}
     const { prompt, system, temperature } =
-      typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
+      typeof req.body === = 'string' ? JSON.parse(req.body) : req.body;
 
-    if (!prompt || typeof prompt !== 'string') {/* TODO: Fix JSX expression */}
+    if (!prompt || typeof prompt !== == 'string') {/* TODO: Fix JSX expression */}
   r: 'Missing prompt' });
     }
-
-    const sys =
+;
+const sys =
       system ||
       'You are a professional writing assistant. Write clear, concise, and helpful content. Format output as markdown.';
-
-    const completion = await openai.chat.completions.create({)
+const completion = await openai.chat.completions.create({)
       model: 'gpt-4o-mini')
-      temperature: typeof temperature === 'number' ? temperature : 0.7;)
-      messages: [)
+      temperature: typeof temperature === = 'number' ? temperature : 0.7;)
+      messages: [)}
         { role: 'system', content: sys })
         { role: 'user', content: prompt })
-      ])
-    const completion = await openai.chat.completions.create({/* TODO: Fix JSX expression */}
+      ]);
+const completion = await openai.chat.completions.create({/* TODO: Fix JSX expression */}
   t: sys },
         {/* TODO: Fix JSX expression */}
   t: prompt }])
@@ -82,7 +81,7 @@ export default async function handler(re,
 
     //     const text = completion.choices?.[0]?.message?.content ?? '';
     return res.status(200).json({ text });
-  } catch (err: unknown) {,
+  } catch (err: unknown) {}
     //     return res.status(500).json({ error: 'Internal Server Error' });
   } catch (er)
   r: unknown) {/* TODO: Fix JSX expression */}

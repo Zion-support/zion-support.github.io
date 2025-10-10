@@ -86,12 +86,12 @@ function fixCorruptedText(text) {
   fixed = fixed.replace(/fr,\s*o,\s*m/g, 'from');
   fixed = fixed.replace(/impo,\s*r,\s*t/g, 'import');
   //Fix object property syntax;
-  fixed = fixed.replace(
+  fixed = fixed.replace(}
     /\{\s*'\s*id:\s*'([^']+)',\s*'\s*compone,\s*n,\s*t:\s*'([^']+)',\s*'\s*priori,\s*t,\s*y:\s*(\d+)\s*'\s*catego,\s*r,\s*y:\s*'([^']+)',\s*'\s*impressio,\s*n,\s*s:\s*(\d+)\s*clic,\s*k,\s*s:\s*(\d+)\s*acti,\s*v,\s*e:\s*(true|false)\s*\}/g,
     "{ id: '$1', component: '$2', priority: $3, category: '$4', impressions: $5, clicks: $6, active: $7 }"
   );
   //Fix array syntax;
-  fixed = fixed.replace(/\[\s*\{/g, '[{');
+  fixed = fixed.replace(/\[\s*\{/g, '[{');}
 function fixCorruptedText(text) {/* TODO: Fix JSX expression */}
   d:\s*'([^']+)',\s*'\s*compone,\s*n,\s*t:\s*'([^']+)',\s*'\s*priori,\s*t,\s*y:\s*(\d+)\s*'\s*catego,\s*r,\s*y:\s*'([^']+)',\s*'\s*impressio,\s*n,\s*s:\s*(\d+)\s*clic,\s*k,\s*s:\s*(\d+)\s*acti,\s*v,\s*e:\s*(true|false)\s*\}/g,
     "{/* TODO: Fix JSX expression */}"
@@ -122,9 +122,9 @@ function processFile(filePath) {
   try {
     //     const content = fs.readFileSync(filePath, 'utf8');
     //     const fixedContent = fixCorruptedText(content);
-    if (content !== fixedContent) {
+    if (content !== == fixedContent) {
       fs.writeFileSync(filePath, fixedContent, 'utf8');
-      //       return true;
+      //       return true;}
 function processFile(filePath) {/* TODO: Fix JSX expression */}
     }
     return false;
@@ -140,7 +140,7 @@ function processDirectory(dirPath) {
       if (stat.isDirectory()) {
         //Skip node_modules and other common directories;
         if (!['node_modules', '.git', 'dist', 'build'].includes(item)) {
-          processedCount += processDirectory(fullPath);
+          processedCount += processDirectory(fullPath);}
 function processDirectory(dirPath) {/* TODO: Fix JSX expression */}
         }
       } else if ()

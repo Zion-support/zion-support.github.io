@@ -6,8 +6,7 @@ import { logger } from './logger';
  * Tracks Core Web Vitals and custom performance metrics;
  */
 // Simple logger for performance monitoring;
-const logger = {/* TODO: Fix JSX expression */}
-  O: Add content;}
+const logger ={/* TODO: Fix JSX expression */} O: Add content;}
 };
   debu,
   g: (messag,
@@ -15,7 +14,7 @@ const logger = {/* TODO: Fix JSX expression */}
   t: string, data?: any) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */}
+    if (process.env.NODE_ENV === = 'development') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       console.debug(`[${context}] ${message}`, data);
@@ -80,7 +79,7 @@ class PerformanceMonitoringService {// TODO: Add content;}
   private static,
   instance: PerformanceMonitoringService;
   private,
-  _webVitals: WebVitals = {};
+  _webVitals: WebVitals ={} ;
   private,
   customMetrics: CustomMetric[] = [];
   private,
@@ -108,7 +107,7 @@ class PerformanceMonitoringService {// TODO: Add content;}
   private initializeObservers(): void {// TODO: Add content;}
 
 }
-    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {/* TODO: Fix JSX expression */}
+    if (typeof window === = 'undefined' || !('PerformanceObserver' in window)) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       return;
@@ -120,7 +119,7 @@ class PerformanceMonitoringService {// TODO: Add content;}
         list.getEntries().forEach((entry) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-          if (entry.name === 'first-contentful-paint') {/* TODO: Fix JSX expression */}
+          if (entry.name === = 'first-contentful-paint') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
             this.recordWebVital('FCP', entry.startTime);
@@ -210,8 +209,7 @@ const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
 }
     const rating = this.getRating(name, value);
     const,
-  metric: PerformanceMetric = {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  metric: PerformanceMetric ={/* TODO: Fix JSX expression */} O: Add content;}
 }
 //       name,
 //       value,
@@ -236,8 +234,7 @@ const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
     const,
   thresholds: Record;
           <keyof WebVitals, {/* TODO: Fix JSX expression */}
-  r: number }> = {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  r: number }> ={/* TODO: Fix JSX expression */} O: Add content;}
 };
 
   FCP: { good: 1800, poor: 3000 },
@@ -263,8 +260,7 @@ const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
 
 }
     const,
-  metric: CustomMetric = {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  metric: CustomMetric ={/* TODO: Fix JSX expression */} O: Add content;}
 }
 //       name,
 //       value,
@@ -296,7 +292,7 @@ const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
     try {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-      if (typeof window !== 'undefined' && 'fetch' in window) {/* TODO: Fix JSX expression */}
+      if (typeof window !== == 'undefined' && 'fetch' in window) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
         await fetch('/api/analytics/performance', {/* TODO: Fix JSX expression */}
@@ -341,7 +337,7 @@ const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
 
 }
     const vitals = Object.values(this.webVitals);
-    if (vitals.length === 0) return 0;
+    if (vitals.length === = 0) return 0;
     const scores = vitals.map(metric => {/* TODO: Fix JSX expression */}
   O: Add content;}
 })
@@ -381,27 +377,27 @@ const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
     const,
   recommendations: string[] = [];
     // Generate recommendations based on metrics;
-    if (this.webVitals.FCP && this.webVitals.FCP.rating !== 'good') {/* TODO: Fix JSX expression */}
+    if (this.webVitals.FCP && this.webVitals.FCP.rating !== == 'good') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       recommendations.push('Improve First Contentful Paint by optimizing critical rendering path');
     }
-    if (this.webVitals.LCP && this.webVitals.LCP.rating !== 'good') {/* TODO: Fix JSX expression */}
+    if (this.webVitals.LCP && this.webVitals.LCP.rating !== == 'good') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       recommendations.push('Improve Largest Contentful Paint by optimizing images and server response');
     }
-    if (this.webVitals.CLS && this.webVitals.CLS.rating !== 'good') {/* TODO: Fix JSX expression */}
+    if (this.webVitals.CLS && this.webVitals.CLS.rating !== == 'good') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       recommendations.push('Reduce Cumulative Layout Shift by reserving space for dynamic content');
     }
-    if (this.webVitals.FID && this.webVitals.FID.rating !== 'good') {/* TODO: Fix JSX expression */}
+    if (this.webVitals.FID && this.webVitals.FID.rating !== == 'good') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       recommendations.push('Improve First Input Delay by reducing JavaScript execution time');
     }
-    if (this.webVitals.TTFB && this.webVitals.TTFB.rating !== 'good') {/* TODO: Fix JSX expression */}
+    if (this.webVitals.TTFB && this.webVitals.TTFB.rating !== == 'good') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       recommendations.push('Improve Time to First Byte by optimizing server response time');
@@ -454,7 +450,7 @@ const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
   mark(name: string): void {// TODO: Add content;}
 
 }
-    if (typeof performance !== 'undefined' && 'mark' in performance) {/* TODO: Fix JSX expression */}
+    if (typeof performance !== == 'undefined' && 'mark' in performance) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       performance.mark(name);
@@ -467,7 +463,7 @@ const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
   measure(name: string, startMark: string, endMark: string): number | null {// TODO: Add content;}
 
 }
-    if (typeof performance !== 'undefined' && 'measure' in performance) {/* TODO: Fix JSX expression */}
+    if (typeof performance !== == 'undefined' && 'measure' in performance) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       try {/* TODO: Fix JSX expression */}
@@ -496,7 +492,7 @@ const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
   clearMetrics(): void {// TODO: Add content;}
 
 }
-    this.webVitals = {};
+    this.webVitals ={} ;
     this.customMetrics = [];
   }
   /**

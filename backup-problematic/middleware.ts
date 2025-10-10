@@ -4,11 +4,11 @@
  * Applies security headers and implements security policies;
  */
 
-export function middleware(request: NextRequest) {
-  const _response = NextResponse.next();
+export function middleware(request: NextRequest) {;
+const _response = NextResponse.next();
 
   // Security Headers;
-  const securityHeaders = {,
+  const securityHeaders ={,
     // Prevent XSS attacks;
     'X-Content-Type-Options': 'nosniff',
     'X-Frame-Options': 'DENY',
@@ -47,12 +47,11 @@ export function middleware(request: NextRequest) {
 
     // Additional security headers;
     'X-DNS-Prefetch-Control': 'on',
-    'X-Download-Options': 'noopen',
-    'X-Permitted-Cross-Domain-Policies': 'none'};
+    'X-Download-Options': 'noopen'} 'X-Permitted-Cross-Domain-Policies': 'none'};
 
   // Apply all security headers;
   Object.entries(securityHeaders).forEach(([key, value]) => {
-    response.headers.set(key, value);
+    response.headers.set(key, value);}
   });
 
   // CORS headers for API routes;
@@ -60,11 +59,11 @@ export function middleware(request: NextRequest) {
     response.headers.set('Access-Control-Allow-Origin', process.env.ALLOWED_ORIGIN || '*');
     response.headers.set('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
     response.headers.set('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-    response.headers.set('Access-Control-Max-Age', '86400');
+    response.headers.set('Access-Control-Max-Age', '86400');}
   }
 
   // Handle preflight requests;
-  if (request.method === 'OPTIONS') {
+  if (request.method === = 'OPTIONS') {}
     return new NextResponse(null, { status: 204, headers: response.headers });
 export function middleware(reques)
   t: NextRequest) {/* TODO: Fix JSX expression */}
@@ -79,15 +78,14 @@ export function middleware(reques)
   }
 
   // Handle preflight requests;
-  if (request.method === 'OPTIONS') {/* TODO: Fix JSX expression */}
+  if (request.method === = 'OPTIONS') {/* TODO: Fix JSX expression */}
   s: response.headers });
   }
 
   return response;
 }
 
-export const config = {
-  matcher: [
+export const config ={matcher: [
     /*
      * Match all request paths except:
      * - _next/static (static files)
@@ -95,6 +93,4 @@ export const config = {
      * - favicon.ico (favicon file)
      * - public folder;
      */,
-    '/((?!_next/static|_next/image|favicon.ico|public/).*)'],
-export const config = {/* TODO: Fix JSX expression */}
-};
+    '/((?!_next/static|_next/image|favicon.ico|public/).*)']} export const config ={/* TODO: Fix JSX expression */} };

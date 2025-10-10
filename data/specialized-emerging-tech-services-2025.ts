@@ -40,7 +40,6 @@
   benefits: string[];
   capabilities: string[];
   market_advantage: string;
-
 const contact =
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -132,7 +131,7 @@ const contact =
   s: string[];
   market_advantag,
   e: string;
-,
+,;
 const contact =
   mobil,
   e: '+1 302 464 0950',
@@ -179,10 +178,8 @@ const contact =
   r: true, ico,
   n: ''}
 ];
-;
   }
 ];
-;
     popular: true, icon: '',
     color: 'from - pink - 600 to - rose - 600', text_color: 'text - pink - 400',
     link: 'https://ziontechgroup.com / neuromorphic - computing - platform', market_position: 'Advanced neuromorphic platform competing with Intel Loihi ($1000 / month) and IBM TrueNorth ($800 / month)',
@@ -271,11 +268,10 @@ export interface SpecializedEmergingTechService {/* TODO: Fix JSX expression */}
     launchDate: '2024-02-15', customers: 45;
     rating: 4.8, reviews: 34;
     benefits: ['Energy efficiencyCognitive capabilitiesReal-time learningBrain-inspired processing'], capabilities: ['Neural architecturesCognitive computingHardware integrationCustom algorithms'];
-    marketAdvantage: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'
-const contact = {,
+    marketAdvantage: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities';
+const contact ={,
   mobile: '+1 302 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 1008 Middletown DE 19709'}
+  email: 'kleber@ziontechgroup.com';} address: '364 E Main St STE 1008 Middletown DE 19709'}
   website: 'https://ziontechgroup.com',
   realImplementatio,
   n: boolean;
@@ -315,9 +311,8 @@ const contact = {,
   s: ['Energy efficiencyCognitive capabilitiesReal-time learningBrain-inspired processing'], capabilitie,
   s: ['Neural architecturesCognitive computingHardware integrationCustom algorithms'];
     marketAdvantag,
-  e: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'
-const contact = {/* TODO: Fix JSX expression */}
-  s: '364 E Main St STE 1008 Middletown DE 19709'}
+  e: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities';
+const contact ={/* TODO: Fix JSX expression */} s: '364 E Main St STE 1008 Middletown DE 19709'}
   websit,
   e: 'http,
   s://ziontechgroup.com'
@@ -349,7 +344,7 @@ export const,
     realService: true;
     technology: ['Unity, Unreal Engine, WebXR, Three.js, React, Node.js'];
     integrations: ['Oculus, HTC Vive, Microsoft HoloLens, Mobile AR frameworks'];
-    useCases: ['Virtual training, E-commerce experiences, Educational content, Real estate tours'];
+    useCases: ['Virtual training, E-commerce experiences, Educational content, Real estate tours'];}
     roi: 'Average 400% ROI through increased engagement and conversion rates'}
     competitors: ['Unity, Unreal Engine, VRChat} AltspaceVR'];
     marketSize: '$28.8 B AR/VR market';
@@ -390,7 +385,7 @@ export const,
     realService: true;
     technology: ['AI/ML, 5 G/6 G protocols, Python, TensorFlow, Network protocols'];
     integrations: ['Ericsson, Nokia, Huawei, Cisco, Major telecom equipment'];
-    useCases: ['Network optimizationPerformance monitoringCapacity planningMaintenance automation'];
+    useCases: ['Network optimizationPerformance monitoringCapacity planningMaintenance automation'];}
     roi: 'Average 500% ROI through improved network performance and reduced operational costs'}
     competitors: ['Ericsson, Nokia, Huawei} Cisco'];
     marketSize: '$31.2 B 5 G network market';
@@ -431,7 +426,7 @@ export const,
     realService: true;
     technology: ['Deep Learning, Bioinformatics, Python, TensorFlow, PyTorch, R'];
     integrations: ['Lab equipment, Research databases, Clinical trial platforms, Patent databases'];
-    useCases: ['Drug discoveryGenetic researchClinical trialsBiomarker analysis'];
+    useCases: ['Drug discoveryGenetic researchClinical trialsBiomarker analysis'];}
     roi: 'Average 800% ROI through accelerated research and reduced development costs'}
     competitors: ['Insilico Medicine, Atomwise, BenevolentAI} Recursion Pharmaceuticals'];
     marketSize: '$22.4 B AI biotech market';
@@ -472,7 +467,7 @@ export const,
     realService: true;
     technology: ['AI/ML, IoT, Python, TensorFlow, Energy management systems'];
     integrations: ['Solar panels, Wind turbines, Energy storage, Smart meters, Grid systems'];
-    useCases: ['Energy optimizationGrid managementPredictive maintenanceCarbon reduction'];
+    useCases: ['Energy optimizationGrid managementPredictive maintenanceCarbon reduction'];}
     roi: 'Average 600% ROI through improved energy efficiency and reduced operational costs'}
     competitors: ['GE Digital, Siemens, Schneider Electric} ABB'];
     marketSize: '$19.8 B smart grid market';
@@ -513,7 +508,7 @@ export const,
     realService: true;
     technology: ['Edge Computing, AI/ML, Kubernetes, Docker, Python, TensorFlow Lite'];
     integrations: ['AWS, Azure, GCP, IoT platforms, Edge devices'];
-    useCases: ['Real-time processingIoT applicationsLow-latency servicesEdge AI deployment'];
+    useCases: ['Real-time processingIoT applicationsLow-latency servicesEdge AI deployment'];}
     roi: 'Average 350% ROI through reduced latency and improved performance'}
     competitors: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT Edge} EdgeX Foundry'];
     marketSize: '$12.4 B edge computing market';
@@ -554,7 +549,7 @@ export const,
     realService: true;
     technology: ['Quantum Computing, Quantum Cryptography, Python, Qiskit, Quantum protocols'];
     integrations: ['Classical networks, Quantum devices, Security systems, Communication platforms'];
-    useCases: ['Ultra-secure communicationQuantum networkingGovernment communicationsFinancial transactions'];
+    useCases: ['Ultra-secure communicationQuantum networkingGovernment communicationsFinancial transactions'];}
     roi: 'Average 1200% ROI through enhanced security and communication capabilities'}
     competitors: ['ID Quantique, Toshiba, Quantum Xchange} Qubitekk'];
     marketSize: '$3.8 B quantum internet market';
@@ -607,7 +602,7 @@ export const,
     launchDate: '2024-02-15';
     customers: 45;
     rating: 4.8;
-    reviews: 34;
+    reviews: 34;}
     benefits: ['Energy efficiencyCognitive capabilitiesReal-time learningBrain-inspired processing']}
     capabilities: ['Neural architecturesCognitive computingHardware integrationCustom algorithms']}
     marketAdvantage: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities',
@@ -922,8 +917,7 @@ i,
   s: 34' benefit,
   s: ['Energy efficiencyCognitive capabilitiesReal-time learningBrain-inspired processing'], capabilitie,
   s: ['Neural architecturesCognitive computingHardware integrationCustom algorithms']' marketAdvantag,
-  e: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities' const contact = {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com'}' addres,
+  e: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities' const contact ={/* TODO: Fix JSX expression */} l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
   s://ziontechgroup.com' }; export const,

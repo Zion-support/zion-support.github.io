@@ -1,17 +1,17 @@
 //Security improvements;
 // //Add security headers;
 const addSecurityHeaders = () => {
-  //   //Add security header logic here;
+  //   //Add security header logic here;}
 };
 
 //Implement CSP;
 const implementCSP = () => {
-  //   //Add CSP logic here;
+  //   //Add CSP logic here;}
 };
 
 //Add input validation;
 const addInputValidation = () => {
-  //   //Add input validation logic here;
+  //   //Add input validation logic here;}
 const addSecurityHeaders = () => {/* TODO: Fix JSX expression */}
 };
 

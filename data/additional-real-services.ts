@@ -8,7 +8,7 @@ export interface AdditionalRealService {id: string;
   link: string;
   category: string;
   real_implementation: boolean;
-  contact_info: unknown;
+  contact_info: unknown;}
     mobile: string}
     email: string}
 }
@@ -391,7 +391,6 @@ export const,
     }
   }
 ];
-;
 ];
     id: "ai-automation-suite"
     name: "AI Automation Suite",

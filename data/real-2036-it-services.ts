@@ -16,7 +16,7 @@ export const real2036ITServices = [{id: 'quantum-cloud-infrastructure-platform',
     popular: true;
     category: 'Quantum Cloud',
     icon: '',
-    marketPrice: '$8,000-15,000/month'
+    marketPrice: '$8,000-15,000/month'}
     benefits: [}
 export const real2036ITServices = [{/* TODO: Fix JSX expression */}
   s: [}
@@ -559,7 +559,7 @@ export const real2036ITServices = [{id: 'quantum-cloud-infrastructure-platform',
     popular: true;
     category: 'Quantum Cloud',
     icon: '',
-    marketPrice: '$8,000-15,000/month'
+    marketPrice: '$8,000-15,000/month'}
     benefits: [}
 export const real2036ITServices = [{/* TODO: Fix JSX expression */}
   s: [}
@@ -1072,7 +1072,7 @@ export const real2036ITServices = [{id: 'quantum - cloud - infrastructure - plat
     use_cases: [,
       'Scientific research computing',
       'Financial modeling',
-      'Drug discovery',
+      'Drug discovery'}
       'Climate simulation']}
   },
     id: 'ai - powered - devops - platform',
@@ -1558,7 +1558,7 @@ export const real2036ITServices = [
     icon: '';
     marketPrice: '$8,000-15,000/month';
     benefits: [,
-      'Access to quantum computing powerHybrid classical-quantum processingFuture-proof cloud infrastructureQuantum advantage in the cloud'];,
+      'Access to quantum computing powerHybrid classical-quantum processingFuture-proof cloud infrastructureQuantum advantage in the cloud'];}
     useCases: [}
       'Scientific research computingFinancial modelingDrug discoveryClimate simulation'
     ]}
@@ -1578,7 +1578,7 @@ export const real2036ITServices = [
     icon: '';
     marketPrice: '$4,000-7,000/month';
     benefits: [,
-      '90% faster deployment cyclesIntelligent infrastructure managementPredictive scalingAutomated incident resolution'];,
+      '90% faster deployment cyclesIntelligent infrastructure managementPredictive scalingAutomated incident resolution'];}
     useCases: [}
       'Continuous deploymentInfrastructure automationTesting automationMonitoring and alerting'
     ]}
@@ -1598,7 +1598,7 @@ export const real2036ITServices = [
     icon: '';
     marketPrice: '$7,000-12,000/month';
     benefits: [,
-      'Quantum-resistant securityFuture-proof protectionAdvanced threat detectionMilitary-grade security'];,
+      'Quantum-resistant securityFuture-proof protectionAdvanced threat detectionMilitary-grade security'];}
     useCases: [}
       'Government securityFinancial institutionsHealthcare data protectionCritical infrastructure'
     ]}
@@ -1618,7 +1618,7 @@ export const real2036ITServices = [
     icon: '';
     marketPrice: '$5,000-8,000/month';
     benefits: [,
-      'Ultra-low latency processingDistributed computing powerEdge AI capabilitiesScalable edge infrastructure'];,
+      'Ultra-low latency processingDistributed computing powerEdge AI capabilitiesScalable edge infrastructure'];}
     useCases: [}
       'IoT applicationsReal-time analyticsEdge AI processingDistributed computing'
     ]}
@@ -1638,7 +1638,7 @@ export const real2036ITServices = [
     icon: '';
     marketPrice: '$6,000-10,000/month';
     benefits: [,
-      '1000x faster database queriesQuantum data compressionAdvanced search capabilitiesFuture-proof data management'];,
+      '1000x faster database queriesQuantum data compressionAdvanced search capabilitiesFuture-proof data management'];}
     useCases: [}
       'Big data analyticsReal-time searchData warehousingBusiness intelligence'
     ]}
@@ -1658,7 +1658,7 @@ export const real2036ITServices = [
     icon: '';
     marketPrice: '$3,500-6,000/month';
     benefits: [,
-      'Proactive threat detectionAutomated security responseIntelligent network protectionReduced false positives'];,
+      'Proactive threat detectionAutomated security responseIntelligent network protectionReduced false positives'];}
     useCases: [}
       'Enterprise network securityCloud securityIoT securityRemote work security'
     ]}
@@ -1678,7 +1678,7 @@ export const real2036ITServices = [
     icon: '';
     marketPrice: '$10,000-20,000/month';
     benefits: [,
-      'Unbreakable quantum communicationQuantum network optimizationFuture internet protocolsQuantum internet infrastructure'];,
+      'Unbreakable quantum communicationQuantum network optimizationFuture internet protocolsQuantum internet infrastructure'];}
     useCases: [}
       'Government communicationsFinancial networksResearch networksQuantum internet backbone'
     ]}
@@ -1698,7 +1698,7 @@ export const real2036ITServices = [
     icon: '';
     marketPrice: '$3,000-5,000/month';
     benefits: [,
-      'Proactive issue detectionAutomated monitoringPerformance optimizationReduced downtime'];,
+      'Proactive issue detectionAutomated monitoringPerformance optimizationReduced downtime'];}
     useCases: [}
       'Server monitoringNetwork monitoringApplication monitoringCloud infrastructure'
     ]}
@@ -1718,7 +1718,7 @@ export const real2036ITServices = [
     icon: '';
     marketPrice: '$7,000-12,000/month';
     benefits: [,
-      '100x data compressionQuantum data encodingAdvanced storage optimizationFuture-proof storage technology'];,
+      '100x data compressionQuantum data encodingAdvanced storage optimizationFuture-proof storage technology'];}
     useCases: [}
       'Big data storageData archivingCloud storageData backup'
     ]}
@@ -1738,7 +1738,7 @@ export const real2036ITServices = [
     icon: '';
     marketPrice: '$4,500-7,000/month';
     benefits: [,
-      'Automated recovery proceduresIntelligent backup managementPredictive recovery planningReduced recovery time'];,
+      'Automated recovery proceduresIntelligent backup managementPredictive recovery planningReduced recovery time'];}
     useCases: [}
   {/* TODO: Fix JSX expression */}
   s: [}
@@ -1791,7 +1791,6 @@ export const real2036ITServices = [
     ]}
   }
 ];
-;
   };
 ];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity'
     ]
@@ -1811,7 +1810,7 @@ export const real2036ITServices = [
     icon: '';
     marketPrice: '$8,000-15,000/month';
     benefits: [,
-      'Access to quantum computing powerHybrid classical-quantum processingFuture-proof cloud infrastructureQuantum advantage in the cloud'];,
+      'Access to quantum computing powerHybrid classical-quantum processingFuture-proof cloud infrastructureQuantum advantage in the cloud'];}
     useCases: [}
       'Scientific research computingFinancial modelingDrug discoveryClimate simulation'
     ]}
@@ -1831,7 +1830,7 @@ export const real2036ITServices = [
     icon: '';
     marketPrice: '$4,000-7,000/month';
     benefits: [,
-      '90% faster deployment cyclesIntelligent infrastructure managementPredictive scalingAutomated incident resolution'];,
+      '90% faster deployment cyclesIntelligent infrastructure managementPredictive scalingAutomated incident resolution'];}
     useCases: [}
       'Continuous deploymentInfrastructure automationTesting automationMonitoring and alerting'
     ]}
@@ -1851,7 +1850,7 @@ export const real2036ITServices = [
     icon: '';
     marketPrice: '$7,000-12,000/month';
     benefits: [,
-      'Quantum-resistant securityFuture-proof protectionAdvanced threat detectionMilitary-grade security'];,
+      'Quantum-resistant securityFuture-proof protectionAdvanced threat detectionMilitary-grade security'];}
     useCases: [}
       'Government securityFinancial institutionsHealthcare data protectionCritical infrastructure'
     ]}
@@ -1871,7 +1870,7 @@ export const real2036ITServices = [
     icon: '';
     marketPrice: '$5,000-8,000/month';
     benefits: [,
-      'Ultra-low latency processingDistributed computing powerEdge AI capabilitiesScalable edge infrastructure'];,
+      'Ultra-low latency processingDistributed computing powerEdge AI capabilitiesScalable edge infrastructure'];}
     useCases: [}
       'IoT applicationsReal-time analyticsEdge AI processingDistributed computing'
     ]}
@@ -1891,7 +1890,7 @@ export const real2036ITServices = [
     icon: '';
     marketPrice: '$6,000-10,000/month';
     benefits: [,
-      '1000x faster database queriesQuantum data compressionAdvanced search capabilitiesFuture-proof data management'];,
+      '1000x faster database queriesQuantum data compressionAdvanced search capabilitiesFuture-proof data management'];}
     useCases: [}
       'Big data analyticsReal-time searchData warehousingBusiness intelligence'
     ]}
@@ -1911,7 +1910,7 @@ export const real2036ITServices = [
     icon: '';
     marketPrice: '$3,500-6,000/month';
     benefits: [,
-      'Proactive threat detectionAutomated security responseIntelligent network protectionReduced false positives'];,
+      'Proactive threat detectionAutomated security responseIntelligent network protectionReduced false positives'];}
     useCases: [}
       'Enterprise network securityCloud securityIoT securityRemote work security'
     ]}
@@ -1931,7 +1930,7 @@ export const real2036ITServices = [
     icon: '';
     marketPrice: '$10,000-20,000/month';
     benefits: [,
-      'Unbreakable quantum communicationQuantum network optimizationFuture internet protocolsQuantum internet infrastructure'];,
+      'Unbreakable quantum communicationQuantum network optimizationFuture internet protocolsQuantum internet infrastructure'];}
     useCases: [}
       'Government communicationsFinancial networksResearch networksQuantum internet backbone'
     ]}
@@ -1951,7 +1950,7 @@ export const real2036ITServices = [
     icon: '';
     marketPrice: '$3,000-5,000/month';
     benefits: [,
-      'Proactive issue detectionAutomated monitoringPerformance optimizationReduced downtime'];,
+      'Proactive issue detectionAutomated monitoringPerformance optimizationReduced downtime'];}
     useCases: [}
       'Server monitoringNetwork monitoringApplication monitoringCloud infrastructure'
     ]}
@@ -1971,7 +1970,7 @@ export const real2036ITServices = [
     icon: '';
     marketPrice: '$7,000-12,000/month';
     benefits: [,
-      '100x data compressionQuantum data encodingAdvanced storage optimizationFuture-proof storage technology'];,
+      '100x data compressionQuantum data encodingAdvanced storage optimizationFuture-proof storage technology'];}
     useCases: [}
       'Big data storageData archivingCloud storageData backup'
     ]}
@@ -1991,7 +1990,7 @@ export const real2036ITServices = [
     icon: '';
     marketPrice: '$4,500-7,000/month';
     benefits: [,
-      'Automated recovery proceduresIntelligent backup managementPredictive recovery planningReduced recovery time'];,
+      'Automated recovery proceduresIntelligent backup managementPredictive recovery planningReduced recovery time'];}
     useCases: [}
   {/* TODO: Fix JSX expression */}
   s: [}

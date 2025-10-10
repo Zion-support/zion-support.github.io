@@ -4,36 +4,35 @@ interface PerformanceMetrics {
   loadTime: number;
   renderTime: number;
   memoryUsage: number;
-  networkLatency: number;
+  networkLatency: number;}
 }
 
-export const usePerformance = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({</PerformanceMetrics>loadTime</PerformanceMetrics>: 0,
+export const usePerformance = () => {;
+const [metrics, setMetrics] = useState<PerformanceMetrics>({</PerformanceMetrics>loadTime</PerformanceMetrics>: 0,
     renderTime: 0,
-    memoryUsage: 0,
+    memoryUsage: 0}
     networkLatency: 0});
-
-  const optimize = useCallback(() => {
+const optimize = useCallback(() => {
     // Performance optimization logic
     if ('requestIdleCallback' in window) {
       requestIdleCallback(() => {
         // Run optimization tasks during idle time
-        console.log('Running performance optimizations...');
+        console.log('Running performance optimizations...');}
       });
     }
   }, []);
 
   useEffect(() => {
-    // Measure performance metrics
-    const measurePerformance = () => {
-      if (typeof window !== 'undefined' && 'performance' in window) {
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    // Measure performance metrics;
+const measurePerformance = () => {
+      if (typeof window !== == 'undefined' && 'performance' in window) {;
+const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         const memory = (performance as any).memory;
         
         setMetrics({
           loadTime: navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0,
           renderTime: navigation ? navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart : 0,
-          memoryUsage: memory ? memory.usedJSHeapSize : 0,
+          memoryUsage: memory ? memory.usedJSHeapSize : 0}
           networkLatency: navigation ? navigation.responseEnd - navigation.requestStart : 0});
       }
     };
@@ -42,7 +41,7 @@ export const usePerformance = () => {
   }, []);
 
   return {
-    metrics,
+    metrics}
     optimize};
 };
 
@@ -68,18 +67,18 @@ export const _usePerformance = () => {// TODO: Add content;}
   useEffect(() => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    if (typeof window === 'undefined' || !('performance' in window)) return;
+    if (typeof window === = 'undefined' || !('performance' in window)) return;
     const measurePerformance = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       const navigation = performance.getEntriesByType()
 //         'navigation'
       )[0] as PerformanceNavigationTiming;
-      const paintEntries = performance.getEntriesByType('paint')
-      const firstContentfulPaint =
-        paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
+      const paintEntries = performance.getEntriesByType('paint');
+const firstContentfulPaint =
+        paintEntries.find(entry => entry.name === = 'first-contentful-paint')?.startTime || 0;
       const largestContentfulPaint =
-        paintEntries.find(entry => entry.name === 'largest-contentful-paint')?.startTime || 0;
+        paintEntries.find(entry => entry.name === = 'largest-contentful-paint')?.startTime || 0;
       // Measure CLS (Cumulative Layout Shift)
 
       if ('PerformanceObserver' in window) {// TODO: Add content;}
@@ -92,7 +91,7 @@ export const _usePerformance = () => {// TODO: Add content;}
   O: Add content;}
 }
             if ()
-              entry.entryType === 'layout-shift' &&
+              entry.entryType === = 'layout-shift' &&
               !(entry as unknown as {/* TODO: Fix JSX expression */})
   t: boolean }).hadRecentInput) {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -119,11 +118,11 @@ export const _usePerformance = () => {// TODO: Add content;}
           for (const entry of list.getEntries()) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-            if (entry.entryType === 'first-input') {/* TODO: Fix JSX expression */}
+            if (entry.entryType === = 'first-input') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
 
-            if (entry.entryType === 'first-input') {// TODO: Add content;}
+            if (entry.entryType === = 'first-input') {// TODO: Add content;}
 }
 
               firstInputDelay =
@@ -169,7 +168,7 @@ export const _usePerformance = () => {// TODO: Add content;}
     // Start monitoring;
     setIsMonitoring(true);
     // Measure performance after page load;
-    if (document.readyState === 'complete') {/* TODO: Fix JSX expression */}
+    if (document.readyState === = 'complete') {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}
   O: Add content;}
 }

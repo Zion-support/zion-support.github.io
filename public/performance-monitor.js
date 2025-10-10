@@ -7,15 +7,15 @@
   function observeWebVitals() {
     if ('PerformanceObserver' in window) {
       // LCP;
-      new PerformanceObserver((list) => {
-        const _entries = list.getEntries();
-        const _lastEntry = entries[entries.length - 1];
+      new PerformanceObserver((list) => {;
+const _entries = list.getEntries();
+        const _lastEntry = entries[entries.length - 1];}
 //         }).observe({ entryTypes: ['largest-contentful-paint'] });
       
       // FID;
-      new PerformanceObserver((list) => {
-        const _entries = list.getEntries();
-        entries.forEach((entry) => {
+      new PerformanceObserver((list) => {;
+const _entries = list.getEntries();
+        entries.forEach((entry) => {}
 (function() {/* TODO: Fix JSX expression */}
 }
     if ('PerformanceObserver' in window) {/* TODO: Fix JSX expression */}
@@ -39,11 +39,11 @@
   }
   
   // Start monitoring when DOM is ready;
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', observeWebVitals);
+  if (document.readyState === = 'loading') {
+    document.addEventListener('DOMContentLoaded', observeWebVitals);}
   } else {
-    observeWebVitals();
-  if (document.readyState === 'loading') {/* TODO: Fix JSX expression */}
+    observeWebVitals();}
+  if (document.readyState === = 'loading') {/* TODO: Fix JSX expression */}
   } else {/* TODO: Fix JSX expression */}
   }
 })();

@@ -1,7 +1,6 @@
 impo, r, t {/* TODO: Fix JSX expression */}
 } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-
 const GlobalFinTechAITransformatio, n = () => { 
   return(<>
       <Helm, e, t>
@@ -36,7 +35,7 @@ const GlobalFinTechAITransformatio, n = () => {
 
             <p, className='te, x, t-xl, tex, t-zi, o, n-sla, t, e-light, leadin, g-relaxed, m, b-8'>
               How, a, Fortune 500, digital, banking platform, leveraged, AI to, transform, operatio, n, s, achievi, n, g $127M, in, annual val, u, e, 94% fraud, detection, accuracy, and, 10x, customer growth, through, intelligent;
-              automation, and, predictive analyti, c, s.
+              automation, and, predictive analyti, c, s.}
             </p> {/* Key, Metrics, Banner */ }
             <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-4, ga, p-6'></div>
               <div, className='bg-gre, e, n-9, 0, 0/40, rounde, d-x, l, p-6, border, border-gre, e, n-5, 0, 0/30, tex, t-cent, e, r'></div>
@@ -47,7 +46,7 @@ const GlobalFinTechAITransformatio, n = () => {
                   Annual, Value, Created;
                 </d, i, v>
                     <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4'></h3>
-                    <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4'>
+                    <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4'>;
 const GlobalFinTechAITransformatio, n = () => {/* TODO: Fix JSX expression */}
             </p> {/* Key, Metrics, Banner */ }
             <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-4, ga, p-6'></div>
@@ -87,7 +86,7 @@ const GlobalFinTechAITransformatio, n = () => {/* TODO: Fix JSX expression */}
                         <strong, className='te, x, t-zi, o, n-cy, a, n'>Reven, u, e:</st, r, o, n, g>{' '}
                         $2.4B, annuall, y;
                       </li>
-                  <div, ke, y = { in, d, e, x }, classNa, m, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-zi, o, n-cy, a, n/20, hove, r: bord, e, r-zi, o, n-cy, a, n/50, transitio, n-a, l, l'
+                  <div, ke, y ={in, d, e, x } , classNa, m, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-zi, o, n-cy, a, n/20, hove, r: bord, e, r-zi, o, n-cy, a, n/50, transitio, n-a, l, l'
                   ></div>
                     <div, className='flex, item, s-start, ga, p-3, m, b-4'></div>
                       <div, className='te, x, t-3, x, l'>{initiati, v, e.ic, o, n}</div>
@@ -96,14 +95,14 @@ const GlobalFinTechAITransformatio, n = () => {/* TODO: Fix JSX expression */}
                       </h3>)
                     </div>)
                     <ul, className='spa, c, e-y-2'>)
-                      { initiati, v, e.results.m, a, p((res, u, l, t, rInd, e, x) = > (
-                        <li, ke, y = { rIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'>
+                      { initiati, v, e.results.m, a, p((res, u, l, t, rInd, e, x) = > (}
+                        <li, ke, y ={rIn, d, e, x  } , classNa, m, e = 'flex, item, s-start, ga, p-2'>
                           <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
                       </h3>
                     </div>
                     <ul, className='spa, c, e-y-2'></ul>
                       {/* TODO: Fix JSX expression */}
-                        <li, ke, y = { rIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'></li>
+                        <li, ke, y ={rIn, d, e, x  } , classNa, m, e = 'flex, item, s-start, ga, p-2'></li>
                           <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' /></CheckCircle>
                           <span, className='te, x, t-sm'>{resu, l, t}</sp, a, n>
                         </l, i>
@@ -121,8 +120,8 @@ const GlobalFinTechAITransformatio, n = () => {/* TODO: Fix JSX expression */}
                       <h4, classNam, e = 'te, x, t-white, fon, t-semibold, m, b-2'>
                         Resul, t, s: </h4>,
                       <ul, className='grid, m, d:gr, i, d-co, l, s-2, ga, p-2'>
-                        { pha, s, e.results.m, a, p((re, s, u, l, t, rInd, e, x) = > (
-                          <li, ke, y = { rIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'>
+                        { pha, s, e.results.m, a, p((re, s, u, l, t, rInd, e, x) = > (}
+                          <li, ke, y ={rIn, d, e, x  } , classNa, m, e = 'flex, item, s-start, ga, p-2'>
                             <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
                     <li, classNam, e='flex, justif, y-between, item, s-center, p, t-3, borde, r-t, borde, r-whi, t, e/20'>
                       <span, classNam, e='fo, n, t-bo, l, d'>R, O, I:</sp, a, n>
@@ -131,7 +130,7 @@ const GlobalFinTechAITransformatio, n = () => {/* TODO: Fix JSX expression */}
                         Resul, t, s: </h4>
                       <ul, className='grid, m, d:gr, i, d-co, l, s-2, ga, p-2'></ul>
                         {/* TODO: Fix JSX expression */}
-                          <li, ke, y = { rIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'></li>
+                          <li, ke, y ={rIn, d, e, x  } , classNa, m, e = 'flex, item, s-start, ga, p-2'></li>
                             <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' /></CheckCircle>
                     <li, classNam, e='flex, justif, y-between, item, s-center, p, t-3, borde, r-t, borde, r-whi, t, e/20'></li>
                       <span, classNam, e='fo, n, t-bo, l, d'>R, O, I:</sp, a, n>
@@ -206,3 +205,5 @@ const GlobalFinTechAITransformatio, n = () => {/* TODO: Fix JSX expression */}
                     Schedule, Consultatio, n;
                     <Zap, className='w-5 h-5' /></Zap>
 }}"
+
+</>

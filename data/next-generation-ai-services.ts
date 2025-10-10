@@ -34,7 +34,7 @@ export interface NextGenerationAIService {;
   implementationDetails: string;
   launchDate: string;
   customers: number;
-  rating: number;
+  rating: number;}
 export interface NextGenerationAIService {}
   reviews: number,    mobile: string;
     email: string;

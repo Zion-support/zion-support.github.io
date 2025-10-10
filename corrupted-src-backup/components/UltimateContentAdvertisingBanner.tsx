@@ -5,7 +5,7 @@ const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {
   n: "🚀","
       tit, l, e: "Revolutionary, AI, Technologies","
       descripti, o, n: "Me, t, a-cognitive, A, I, quant, u, m-neural, network, s, and, autonomous, operations","
-      highlig, h, t: "1000x, Performanc, e"
+      highlig, h, t: "1000x, Performanc, e"}
 const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
@@ -23,7 +23,7 @@ const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {
   n: "🚀",";
       tit, l, e: "Revolutionary, AI, Technologies",";
       descripti, o, n: "Me, t, a-cognitive, A, I, quant, u, m-neural, network, s, and, autonomous, operations",";
-      highlig, h, t: "1000x, Performanc, e"
+      highlig, h, t: "1000x, Performanc, e"}
     {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
@@ -51,22 +51,22 @@ const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {
       {/* Animated, background, effects */}</div>
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20"></div>
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>
-        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>;
-        <div, className="absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '4s' }}></d, i, v>;
+        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' } }></d, i, v>;
+        <div, className="absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '4s' } }></d, i, v>;
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20">";</div>
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";
-        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>';
+        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' } }></d, i, v>';
   return ("
     <div, className="py-24, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">";
       {/* Animated, background, effects */}"
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20"></div>"
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>"
-        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>;"
-        <div, className="absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '4s' }}></d, i, v>;"
+        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' } }></d, i, v>;"
+        <div, className="absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '4s' } }></d, i, v>;"
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20">";"
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";"
-        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>';"
-        <div, className="absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '4s' }}></d, i, v>';
+        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' } }></d, i, v>';"
+        <div, className="absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '4s' } }></d, i, v>';
       </d, i, v>"
       <div, className="container, m, x-auto, p, x-6, relative, z-10">";
         {/* Head, e, r */}
@@ -77,8 +77,8 @@ const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {
         <div, className="te, x, t-center, m, b-20">";</div>
           <div, className="flex, item, s-center, justif, y-center, ga, p-4, m, b-8, fle, x-wr, a, p">";</div>
             <moti, o, n.d, i, v
-  anima, t, e={{ rota, t, e: [0, 3, 6, 0] }}
-              transiti, o, n={{ durati, o, n: 6, repe, a, t: Infini, t, y, ea, s, e: "line, a, r" }}";
+  anima, t, e={{ rota, t, e: [0, 3, 6, 0] } }
+              transiti, o, n={{ durati, o, n: 6, repe, a, t: Infini, t, y, ea, s, e: "line, a, r" } }";
             ></moti>
               <Sparkles, className="w-1, 0, h-10, tex, t-yell, o, w-4, 0, 0  /></Sparkles>
             </moti, o, n.d, i, v>
@@ -92,8 +92,8 @@ const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {
         <div, className="te, x, t-center, m, b-20">";"
           <div, className="flex, item, s-center, justif, y-center, ga, p-4, m, b-8, fle, x-wr, a, p">";
             <moti, o, n.d, i, v;
-  anima, t, e={{ rota, t, e: [0, 3, 6, 0] }}"
-              transiti, o, n={{ durati, o, n: 6, repe, a, t: Infini, t, y, ea, s, e: "line, a, r" }}";
+  anima, t, e={{ rota, t, e: [0, 3, 6, 0] } }"
+              transiti, o, n={{ durati, o, n: 6, repe, a, t: Infini, t, y, ea, s, e: "line, a, r" } }";
             ></moti>"
               <Sparkles, className="w-1, 0, h-10, tex, t-yell, o, w-4, 0, 0  /></Sparkles>
             </moti, o, n.d, i, v>"
@@ -171,23 +171,22 @@ const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {
   g:gr, i, d-co, l, s-4, ga, p-8, m, b-20">";)
           {advertisingFeatur, e, s.m, a, p((featu, r, e, ind, e, x) => (
             <moti, o, n.d, i, v;
-        <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l
+        <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l,
   g:gr, i, d-co, l, s-4, ga, p-8, m, b-20">"</div>
-        <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l
+        <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l,
   g:gr, i, d-co, l, s-4, ga, p-8, m, b-20">";
           {advertisingFeatur, e, s.m, a, p((featu, r, e, ind, e, x) => (</div>
-            <moti, o, n.d, i, v
+            <moti, o, n.d, i, v}
         {/* Features, Gri, d */}"
         <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l,"
   g:gr, i, d-co, l, s-4, ga, p-8, m, b-20">""
         <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l,"
   g:gr, i, d-co, l, s-4, ga, p-8, m, b-20">";
           {/* TODO: Fix JSX expression */}
-  k, e, y={ind, e, x}
-              initi, a, l={{ opaci, t, y: 0, y: 20 }}
-              anima, t, e={{ opaci, t, y: 1, y: 0 }}
-              transiti, o, n={{ del, a, y: ind, e, x * 0.1 }}
-              whileHov, e, r={{ sca, l, e: 1.05 }}"
+  k, e, y={ind, e, x} initi, a, l={{ opaci, t, y: 0, y: 20 } }
+              anima, t, e={{ opaci, t, y: 1, y: 0 } }
+              transiti, o, n={{ del, a, y: ind, e, x * 0.1 } }
+              whileHov, e, r={{ sca, l, e: 1.05 } }"
               classNa, m, e="group, relativ, e"
             >
               <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/0, vi, a-bl, u, e-5, 0, 0/0, t, o-cy, a, n-5, 0, 0/0, grou, p-hov, e, r: fr, o, m-purp, l, e-5, 0, 0/10, grou, p-hov, e, r:v, i, a-bl, u, e-5, 0, 0/10, grou, p-ho, v, e;
@@ -235,15 +234,14 @@ const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {
           {successSta, t, s.m, a, p((st, a, t, ind, e, x) => (
             <moti, o, n.d, i, v;
           {successSta, t, s.m, a, p((st, a, t, ind, e, x) => (</div>
-            <moti, o, n.d, i, v
+            <moti, o, n.d, i, v}
         {/* Success, Stat, s */}"
         <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-8, m, b-20">""
         <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-8, m, b-20">";
           {/* TODO: Fix JSX expression */}
-  k, e, y={ind, e, x}
-              initi, a, l={{ opaci, t, y: 0, sca, l, e: 0.8 }}
-              anima, t, e={{ opaci, t, y: 1, sca, l, e: 1 }}
-              transiti, o, n={{ del, a, y: ind, e, x * 0.1 }}"
+  k, e, y={ind, e, x} initi, a, l={{ opaci, t, y: 0, sca, l, e: 0.8 } }
+              anima, t, e={{ opaci, t, y: 1, sca, l, e: 1 } }
+              transiti, o, n={{ del, a, y: ind, e, x * 0.1 } }"
               classNa, m, e="te, x, t-cente, r, p-8, b, g-whi, t, e/8, backdro, p-bl, u, r-xl, rounde, d-2xl, border, border-whi, t, e/15"
             ></moti>"
               <div, className="te, x, t-5xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transparent, m, b-3">";
@@ -265,7 +263,7 @@ const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {
                 What, Our, Clients S, a, y;
               </h3>"
               <div, className="flex, item, s-center, justif, y-center, ga, p-2, m, b-6">";
-                {[...Arr, a, y(5)].m, a, p((_, i) => (</div>
+                {[...Arr, a, y(5)].m, a, p((_, i) => (</div>}
                   <Star, ke, y={i} classNa, m, e="w-6 h-6, tex, t-yell, o, w-400, fil, l-curre, n, t  />
                 {/* TODO: Fix JSX expression */}"
                   <Star, ke, y={i} classNa, m, e="w-6 h-6, tex, t-yell, o, w-400, fil, l-curre, n, t  /></Star>"
@@ -444,3 +442,15 @@ const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {
 };
 export default UltimateContentAdvertisingBanner;
 }}"
+
+
+
+
+
+
+
+
+
+
+
+</div></div></div></div></div></div></div></div></div></div></div></div>

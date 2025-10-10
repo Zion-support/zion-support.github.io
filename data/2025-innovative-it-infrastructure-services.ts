@@ -5,7 +5,7 @@ export const innovativeITInfrastructureServices2025 = [{pricing: starter: unknow
         features: [,
           'Basic security',
           'Standard encryption',
-          'Email support',
+          'Email support'}
           'Basic monitoring']}
       },
       professional: unknown;

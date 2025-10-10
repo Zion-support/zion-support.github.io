@@ -11,7 +11,7 @@
   contactInfo: unknown;
     mobile: string;
     email: string;
-export interface ProfessionalService {;,
+export interface ProfessionalService {;}
     address: string}
   i,
   d: string;
@@ -47,7 +47,7 @@ export interface ProfessionalService {/* TODO: Fix JSX expression */}
   taglin,
   e: string;
   pric,
-  e: string,,
+  e: string,
   descriptio,
   n: string;
   feature,
@@ -170,7 +170,6 @@ export const,
     }
   }
 ];
-;
     id: "it-consulting"
     name: "IT Consulting Services",
     tagline: "Expert IT consulting for business growth",

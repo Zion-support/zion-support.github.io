@@ -10,7 +10,7 @@
   g: 'utf8' }); const processes = JSON && JSON.parse(pm2List); this && this.log(`PM2)`
   processes: ${processes && processes.length}`); processes && processes.forEach(proc = > {; const status = proc && proc.pm2_env?.status; const name = proc && proc.name; const memory = proc && proc.monit?.memory || 0) const cpu = proc && proc.monit?.cpu || 0} this && this.log(` ${name}: ${status} (CP)
   U: ${cpu}%) Memor,`
-  y: ${(memory / 1024 / 1024).toFixed(2)}MB)`);' ; if (status ! = = 'online') {/* TODO: Fix JSX expression */}
+  y: ${(memory / 1024 / 1024).toFixed(2)}MB)`);' ; if (status !== == 'online') {/* TODO: Fix JSX expression */}
   T: Process ${name} is not online (statu)`
   s: ${status})`)}}); } catch (error) {/* TODO: Fix JSX expression */}`
   failed: ${error && error.message}`)}; } catch (error) {/* TODO: Fix JSX expression */}`
@@ -22,7 +22,7 @@
   http: //localhos,
   t: 3000 > /dev/null 2>&1'} {/* TODO: Fix JSX expression */})
   g: 'utf8' }); this && this.log('Application is responding on port 3000')} catch (error) {; this && this.log('Application is not responding on port 3000')}}; } catch (error) {/* TODO: Fix JSX expression */}`
-  error: ${error && error.message}`)}}; async generateHealthReport() {; try {; const report = {} timestam,
+  error: ${error && error.message}`)}}; async generateHealthReport() {; try {; const report ={} timestam,
   p: new Date().toISOString(), syste,
   m: {/* TODO: Fix JSX expression */}
   e: os && os.freemem()} use,
@@ -90,7 +90,7 @@
   g: 'utf8' }); const processes = JSON.parse(pm2List); this.log(`PM2)`
   processes: ${processes.length}`); processes.forEach(proc => {; const status = proc.pm2_env?.status; const name = proc.name; const memory = proc.monit?.memory || 0) const cpu = proc.monit?.cpu || 0} this.log(` ${name}: ${status} (CP)
   U: ${cpu}%) Memor,`
-  y: ${(memory / 1024 / 1024).toFixed(2)}MB)`);' if (status !== 'online') {/* TODO: Fix JSX expression */}
+  y: ${(memory / 1024 / 1024).toFixed(2)}MB)`);' if (status !== == 'online') {/* TODO: Fix JSX expression */}
   T: Process ${name} is not online (statu)`
   s: ${status})`); }; }); } catch (error) {/* TODO: Fix JSX expression */}`
   failed: ${error.message}`); }; } catch (error) {/* TODO: Fix JSX expression */}`
@@ -144,5 +144,5 @@
   y: proc.monit?.memory || 0} cp)
   u: proc.monit?.cpu || 0}))} catch (error) {/* TODO: Fix JSX expression */}`
   info: ${error.message}`)}' ; // Save report; const report_file = path.join (process.cwd (), 'logs / pm2 / health - report.json'); fs.writeFileSync (report_file, JSON.stringify (report, null) 2)); this.log (`Health report saved to ${report_file}`); } catch (error) {/* TODO: Fix JSX expression */}`
-  error: ${error.message}`)}}' ; async start () {this.log ('Health monitor service started'); // Run health checks immediately; await this.checkSystemHealth (); await this.checkApplicationHealth (); await this.generateHealthReport (); // Set up interval for periodic health checks; set_interval (async () = > { await this.checkSystemHealth ()} await this.checkApplicationHealth ()}, 60 * 1000), // Every minute; // Generate health report every hour; set_interval (async () = > { await this.generateHealthReport ()}, 60 * 60 * 1000), // Every hour}} ; // Start the service; const health_monitor = new HealthMonitor (); health_monitor.start ().catch (console.error); const healthMonitor = new HealthMonitor(); healthMonitor.start().catch(console.error); }; ; // Start the service; const healthMonitor = new HealthMonitor(); healthMonitor.start().catch(console.error); '
+  error: ${error.message}`)}}' ; async start () {this.log ('Health monitor service started'); // Run health checks immediately; await this.checkSystemHealth (); await this.checkApplicationHealth (); await this.generateHealthReport (); // Set up interval for periodic health checks; set_interval (async () = > { await this.checkSystemHealth ()} await this.checkApplicationHealth ()}, 60 * 1000), // Every minute; // Generate health report every hour; set_interval (async () = > { await this.generateHealthReport ()}, 60 * 60 * 1000), // Every hour}} ; // Start the service; const health_monitor = new HealthMonitor (); health_monitor.start ().catch (console.error); const healthMonitor = new HealthMonitor(); healthMonitor.start().catch(console.error); }; // Start the service; const healthMonitor = new HealthMonitor(); healthMonitor.start().catch(console.error); '
 `

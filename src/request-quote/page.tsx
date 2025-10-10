@@ -9,8 +9,8 @@ import Footer from '../components/Footer';
 
 'use client';
 import React, { useState } from 'react';
-const RequestQuotePage: React.FC = () => {
-  const [formData, setFormData] = useState({
+const RequestQuotePage: React.FC = () => {;
+const [formData, setFormData] = useState({
     name: '',
     email: '',
     company: '',
@@ -20,13 +20,11 @@ const RequestQuotePage: React.FC = () => {
     timeline: '',
     budget: '',
     description: '',
-    requirements:   ,
+    requirements:   }
 $4});
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
+const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const _serviceTypes = [
+const _serviceTypes = [
     'AI Services',
     'IT Infrastructure',
     'Cybersecurity',
@@ -37,15 +35,13 @@ $4});
     'Consulting Services',
     'Other'
   ];
-
-  const projectSizes = [
+const projectSizes = [
     'Small (1-10 employees)',
     'Medium (11-100 employees)',
     'Large (101-1000 employees)',
     'Enterprise (1000+ employees)'
   ];
-
-  const timelines = [
+const timelines = [
     'ASAP',
     '1-3 months',
     '3-6 months',
@@ -53,8 +49,7 @@ $4});
     '12+ months',
     'Flexible'
   ];
-
-  const budgetRanges = [
+const budgetRanges = [
     'Under $10,000',
     '$10,000 - $50,000',
     '$50,000 - $100,000',
@@ -62,16 +57,14 @@ $4});
     '$500,000+',
     'To be discussed'
   ];
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {}
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: value
+      [name]: value}
     }));
   };
-
-  const handleSubmit = async (e: React.FormEvent) => {
+const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
@@ -79,52 +72,50 @@ $4});
     await new Promise(resolve => setTimeout(resolve, 2000));
     
     setIsSubmitting(false);
-    setIsSubmitted(true);
+    setIsSubmitted(true);}
   };
-
-  const benefits = [
+const benefits = [
     {
       icon: Calculator,
       title: 'Free Quote',
-      description:     ,
+      description:     }
 $4},
     {
       icon: Clock,
       title: 'Quick Response',
-      description:     ,
+      description:     }
 $4},
     {
       icon: CheckCircle,
       title: 'Transparent Pricing',
-      description:     ,
+      description:     }
 $4},
     {
       icon: Star,
       title: 'Expert Consultation',
-      description:     ,
+      description:     }
 $4}
   ];
-
-  const whyChooseUs = [
+const whyChooseUs = [
     {
       icon: Users,
       title: '50+ Successful Projects',
-      description:     ,
+      description:     }
 $4},
     {
       icon: Award,
       title: '300% Average ROI',
-      description:     ,
+      description:     }
 $4},
     {
       icon: Clock,
       title: '24/7 Support',
-      description:     ,
+      description:     }
 $4},
     {
       icon: Star,
       title: '99.9% Uptime',
-      description:     ,
+      description:     }
 $4}
   ];
 
@@ -183,7 +174,7 @@ $4}
         </div>
         <Footer />
       </>
-    );
+    );}
   }
 
   return (
@@ -217,9 +208,7 @@ $4}
                       <input
                         type="text"
                         name="name"
-                        value={formData.name}
-                        onChange={handleInputChange}
-                        required
+                        value={formData.name} onChange={handleInputChange} required
                         className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                         placeholder="Enter your full name"
                       />
@@ -231,9 +220,7 @@ $4}
                       <input
                         type="email"
                         name="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        required
+                        value={formData.email} onChange={handleInputChange} required
                         className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                         placeholder="Enter your email"
                       />
@@ -248,9 +235,7 @@ $4}
                       <input
                         type="text"
                         name="company"
-                        value={formData.company}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+                        value={formData.company} onChange={handleInputChange} className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                         placeholder="Enter your company name"
                       />
                     </div>
@@ -261,9 +246,7 @@ $4}
                       <input
                         type="tel"
                         name="phone"
-                        value={formData.phone}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+                        value={formData.phone} onChange={handleInputChange} className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                         placeholder="Enter your phone number"
                       />
                     </div>
@@ -276,14 +259,12 @@ $4}
                     </label>
                     <select
                       name="serviceType"
-                      value={formData.serviceType}
-                      onChange={handleInputChange}
-                      required
+                      value={formData.serviceType} onChange={handleInputChange} required
                       className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                     >
                       <option value="">Select a service type</option>
-                      {serviceTypes.map((type, index) => (
-                        <option key={index} value={type}>{type}</option>
+                      {serviceTypes.map((type, index) => (}
+                        <option key={index} value={type} >{type}</option>
                       ))}
                     </select>
                   </div>
@@ -295,13 +276,11 @@ $4}
                       </label>
                       <select
                         name="projectSize"
-                        value={formData.projectSize}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+                        value={formData.projectSize} onChange={handleInputChange} className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                       >
                         <option value="">Select project size</option>
-                        {projectSizes.map((size, index) => (
-                          <option key={index} value={size}>{size}</option>
+                        {projectSizes.map((size, index) => (}
+                          <option key={index} value={size} >{size}</option>
                         ))}
                       </select>
                     </div>
@@ -311,13 +290,11 @@ $4}
                       </label>
                       <select
                         name="timeline"
-                        value={formData.timeline}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+                        value={formData.timeline} onChange={handleInputChange} className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                       >
                         <option value="">Select timeline</option>
-                        {timelines.map((timeline, index) => (
-                          <option key={index} value={timeline}>{timeline}</option>
+                        {timelines.map((timeline, index) => (}
+                          <option key={index} value={timeline} >{timeline}</option>
                         ))}
                       </select>
                     </div>
@@ -329,13 +306,11 @@ $4}
                     </label>
                     <select
                       name="budget"
-                      value={formData.budget}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+                      value={formData.budget} onChange={handleInputChange} className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                     >
                       <option value="">Select budget range</option>
-                      {budgetRanges.map((range, index) => (
-                        <option key={index} value={range}>{range}</option>
+                      {budgetRanges.map((range, index) => (}
+                        <option key={index} value={range} >{range}</option>
                       ))}
                     </select>
                   </div>
@@ -346,11 +321,8 @@ $4}
                     </label>
                     <textarea
                       name="description"
-                      value={formData.description}
-                      onChange={handleInputChange}
-                      required
-                      rows={4}
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+                      value={formData.description} onChange={handleInputChange} required
+                      rows={4} className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                       placeholder="Describe your project requirements and goals..."
                     />
                   </div>
@@ -361,18 +333,14 @@ $4}
                     </label>
                     <textarea
                       name="requirements"
-                      value={formData.requirements}
-                      onChange={handleInputChange}
-                      rows={3}
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+                      value={formData.requirements} onChange={handleInputChange} rows={3} className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                       placeholder="Any specific technical requirements, integrations, or constraints..."
                     />
                   </div>
 
                   <button
                     type="submit"
-                    disabled={isSubmitting}
-                    className="w-full cyber-button py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
+                    disabled={isSubmitting} className="w-full cyber-button py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {isSubmitting ? (
                       <div className="flex items-center justify-center">
@@ -380,7 +348,7 @@ $4}
                         Submitting...
                       </div>
                     ) : (
-                      'Request Quote'
+                      'Request Quote'}
                     )}
                   </button>
                 </form>
@@ -393,7 +361,7 @@ $4}
               <div className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50">
                 <h3 className="text-xl font-bold text-white mb-6">Why Request a Quote?</h3>
                 <div className="space-y-4">
-                  {benefits.map((benefit, index) => (
+                  {benefits.map((benefit, index) => (}
                     <div key={index} className="flex items-start">
                       <div className="w-8 h-8 bg-cyan-500/20 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
                         <benefit.icon className="w-4 h-4 text-cyan-400" />
@@ -411,7 +379,7 @@ $4}
               <div className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50">
                 <h3 className="text-xl font-bold text-white mb-6">Why Choose Us?</h3>
                 <div className="space-y-4">
-                  {whyChooseUs.map((item, index) => (
+                  {whyChooseUs.map((item, index) => (}
                     <div key={index} className="flex items-start">
                       <div className="w-8 h-8 bg-purple-500/20 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
                         <item.icon className="w-4 h-4 text-purple-400" />
@@ -487,7 +455,7 @@ $4}
   const _serviceTypes = [
   // TOD,
   O: Add items;
-];;
+];
 //     'AI Services',
 //     'IT Infrastructure',
 //     'Cybersecurity',
@@ -501,7 +469,7 @@ $4}
   const projectSizes = [
   // TOD,
   O: Add items;
-];;
+];
 //     'Small (1-10 employees)',
 //     'Medium (11-100 employees)',
 //     'Large (101-1000 employees)',
@@ -510,7 +478,7 @@ $4}
   const timelines = [
   // TOD,
   O: Add items;
-];;
+];
 //     'ASAP',
 //     '1-3 months',
 //     '3-6 months',
@@ -521,7 +489,7 @@ $4}
   const budgetRanges = [
   // TOD,
   O: Add items;
-];;
+];
 //     'Under $10,000',
 //     '$10,000 - $50,000',
 //     '$50,000 - $100,000',
@@ -554,7 +522,7 @@ $4}
   const benefits = [
   // TOD,
   O: Add items;
-];;
+];
     {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
@@ -599,7 +567,7 @@ $4}
   const whyChooseUs = [
   // TOD,
   O: Add items;
-];;
+];
     {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
@@ -786,9 +754,7 @@ $4}
 
                       <input
 type="text" name="name"
-                        value={formData.name}
-                        onChange={handleInputChange}
-// required
+                        value={formData.name} onChange={handleInputChange} // required
 className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your full name"
 
 //                       />
@@ -818,9 +784,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
 
                       <input
 type="email" name="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
-// required
+                        value={formData.email} onChange={handleInputChange} // required
 className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your email"
 
 //                       />
@@ -844,9 +808,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
 
                       <input
 type="text" name="company"
-                        value={formData.company}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your company name"
+                        value={formData.company} onChange={handleInputChange} className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your company name"
 
 // />
                     
@@ -866,9 +828,7 @@ type="text" name="company"
 
                       <input
 type="tel" name="phone"
-                        value={formData.phone}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your phone number"
+                        value={formData.phone} onChange={handleInputChange} className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your phone number"
 
 // />
                     
@@ -898,9 +858,7 @@ type="tel" name="phone"
           </label>
 
                     <select
-                      name="serviceType" value={formData.serviceType}
-                      onChange={handleInputChange}
-// required
+                      name="serviceType" value={formData.serviceType} onChange={handleInputChange} // required
 className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
 
 //                     >
@@ -915,7 +873,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
           "
           <option value="">Select a service type</option>
                       {serviceTypes.map((type, index) => ()}
-          <option key={index} value={type}>{type}</option>
+          <option key={index} value={type} >{type}</option>
                       ))}
                     </select>
                   </div>"
@@ -927,9 +885,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
           </label>
 
                       <select
-                        name="projectSize" value={formData.projectSize}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+                        name="projectSize" value={formData.projectSize} onChange={handleInputChange} className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
 
 // >
                         
@@ -943,7 +899,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
           "
           <option value="">Select project size</option>
                         {projectSizes.map((size, index) => ()}
-          <option key={index} value={size}>{size}</option>
+          <option key={index} value={size} >{size}</option>
                         ))}
                       </select>
                     </div>
@@ -953,9 +909,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
 // Timeline
           </label>
                       <select
-                        name="timeline" value={formData.timeline}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+                        name="timeline" value={formData.timeline} onChange={handleInputChange} className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
 
 // >
                         
@@ -969,7 +923,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
           "
           <option value="">Select timeline</option>
                         {timelines.map((timeline, index) => ()}
-          <option key={index} value={timeline}>{timeline}</option>
+          <option key={index} value={timeline} >{timeline}</option>
                         ))}
                       </select>
                     </div>
@@ -980,9 +934,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
           </label>
 
                     <select
-                      name="budget" value={formData.budget}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+                      name="budget" value={formData.budget} onChange={handleInputChange} className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
 
 // >
                       
@@ -996,7 +948,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
           "
           <option value="">Select budget range</option>
                       {budgetRanges.map((range, index) => ()}
-          <option key={index} value={range}>{range}</option>
+          <option key={index} value={range} >{range}</option>
                       ))}
                     </select>
                   </div>
@@ -1015,11 +967,8 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
           </label>
 
                     <textarea
-                      name="description" value={formData.description}
-                      onChange={handleInputChange}
-// required
-                      rows={4}
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Describe your project requirements and goals..."
+                      name="description" value={formData.description} onChange={handleInputChange} // required
+                      rows={4} className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Describe your project requirements and goals..."
 
 //                     />
                   
@@ -1038,10 +987,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
           </label>
 
                     <textarea
-                      name="requirements" value={formData.requirements}
-                      onChange={handleInputChange}
-                      rows={3}
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Any specific technical requirements, integrations, or constraints..."
+                      name="requirements" value={formData.requirements} onChange={handleInputChange} rows={3} className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Any specific technical requirements, integrations, or constraints..."
 
 // />
                   
@@ -1056,8 +1002,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
           </div>
 
                   <button
-type="submit" disabled={isSubmitting}
-                    className="w-full cyber-button py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
+type="submit" disabled={isSubmitting} className="w-full cyber-button py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
 
 // >
                     {isSubmitting ? ()}"
@@ -1154,3 +1099,5 @@ type="submit" disabled={isSubmitting}
 export default RequestQuotePage;
 
 
+
+</>

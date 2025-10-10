@@ -1,7 +1,6 @@
 // January 2026 - New Revolutionary Content;
 // Brand new cutting-edge AI breakthroughs and enterprise solutions;
-export const january2026NewContent = {
-  featuredArticles: [
+export const january2026NewContent ={featuredArticles: [
     {
       id: 'ai-2026-january-autonomous-enterprise-mesh'
       title: '🚀 Autonomous Enterprise Mesh 2026: Self-Organizing Business Intelligence'
@@ -12,8 +11,7 @@ export const january2026NewContent = {
       publishDate: '2026-01-15',
       category: 'Enterprise AI',
       tags: ['autonomous', 'mesh', 'enterprise', 'intelligence', '2026'],
-      readTime: '12 min',
-      excerpt: 'Discover how autonomous enterprise mesh networks are revolutionizing business operations with self-healing infrastructure and intelligent orchestration.'},
+      readTime: '12 min'} excerpt: 'Discover how autonomous enterprise mesh networks are revolutionizing business operations with self-healing infrastructure and intelligent orchestration.'},
     {
       id: 'ai-2026-january-quantum-edge-computing'
       title: '⚡ Quantum Edge Computing 2026: Sub-Millisecond Processing Revolution'
@@ -24,7 +22,7 @@ export const january2026NewContent = {
       publishDate: '2026-01-15',
       category: 'Quantum Computing',
       tags: ['quantum', 'edge', 'computing', 'latency', '2026'],
-      readTime: '15 min',
+      readTime: '15 min'}
       excerpt: "Explore the convergence of quantum computing and edge processing that's enabling unprecedented speed and efficiency in real-time applications."},
     {
       id: 'ai-2026-january-synthetic-consciousness',
@@ -38,7 +36,7 @@ export const january2026NewContent = {
       category: 'Artificial Consciousness',
       tags: ['consciousness', 'synthetic', 'awareness', 'emotion', '2026'],
       readTime: '18 min',
-      excerpt:,
+      excerpt:}
         'Witness the emergence of truly conscious AI systems that demonstrate self-awareness, emotional understanding, and creative problem-solving capabilities.'}],
   featuredServices: [
     {
@@ -53,7 +51,7 @@ export const january2026NewContent = {
       features: [,
         'Self-healing infrastructure',
         'Intelligent orchestration',
-        'Zero human intervention',
+        'Zero human intervention'}
         '99.7% efficiency']},
     {
       id: 'ai-2026-quantum-edge-platform'
@@ -67,7 +65,7 @@ export const january2026NewContent = {
       features: [,
         'Sub-millisecond latency',
         '200-250 x speed improvement',
-        'Quantum processing',
+        'Quantum processing'}
         'Edge optimization']}],
   caseStudies: [
     {
@@ -83,9 +81,8 @@ export const january2026NewContent = {
         '$2.8 B value creation',
         '99.7% efficiency',
         'Zero human error'],
-      duration: '6 months',
-export const january2026NewContent = {/* TODO: Fix JSX expression */}
-    },
+      duration: '6 months'}
+export const january2026NewContent ={/* TODO: Fix JSX expression */} },
     {/* TODO: Fix JSX expression */}
     },
     {/* TODO: Fix JSX expression */}

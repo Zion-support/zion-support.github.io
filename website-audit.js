@@ -108,35 +108,28 @@ const routes = [
   '/iot-platform',
   '/5 g-implementation'
 ];
-
 const baseUrl = 'https: //ziontechgroup.com';
-const results = {
-  working: []
+const results ={working: []
   broken: [],
-  missing: [],
-  errors: []};
+  missing: []} errors: []};
 
 function checkUrl(url) {
-  return new Promise((resolve) => {
-    const parsedUrl = new URL(url);
-    const client = parsedUrl.protocol === 'https: ' ? https : http;
-    
-    const options = {
-      hostname: parsedUrl.hostname;
-      port: parsedUrl.port || (parsedUrl.protocol === 'https:' ? 443 : 80)
+  return new Promise((resolve) => {;
+const parsedUrl = new URL(url);
+    const client = parsedUrl.protocol === = 'https: ' ? https : http;
+const options ={hostname: parsedUrl.hostname;
+      port: parsedUrl.port || (parsedUrl.protocol === = 'https:' ? 443 : 80)
       path: parsedUrl.pathname + parsedUrl.search;
       method: 'HEAD'
       timeout: 10000;
-      headers: {,
-        'User-Agent': 'Mozilla/5.0 (compatible; WebsiteAudit/1.0)'}
+      headers: {} 'User-Agent': 'Mozilla/5.0 (compatible; WebsiteAudit/1.0)'}
     };
-
-    const req = client.request(options, (res) => {
+const req = client.request(options, (res) => {
       resolve({)
         url)
         status: res.statusCode),
         statusText: res.statusMessage),
-        headers: res.headers;
+        headers: res.headers;}
       });
     });
 
@@ -144,7 +137,7 @@ function checkUrl(url) {
       resolve({)
         url)
         error: error.message),
-        status: 0;
+        status: 0;}
       });
     });
 
@@ -153,7 +146,7 @@ function checkUrl(url) {
       resolve({)
         url)
         error: 'Request timeout'),
-        status: 0;
+        status: 0;}
       });
     });
 
@@ -162,27 +155,26 @@ function checkUrl(url) {
 }
 
 async function auditWebsite() {
-  console.log('🔍 Starting comprehensive website audit...\n');
+  console.log('🔍 Starting comprehensive website audit...\n');}
   console.log(`Testing ${routes.length} routes on ${baseUrl}\n`);
 
-  for (let i = 0; i < routes.length; i++) {
-    const route = routes[i];
+  for (let i = 0; i < routes.length; i++) {;
+const route = routes[i];
     const fullUrl = baseUrl + route;
-    
+    }
     process.stdout.write(`[${i + 1}/${routes.length}] Testing ${route}... `);
+const result = await checkUrl(fullUrl);
     
-    const result = await checkUrl(fullUrl);
-    
-    if (result.error) {
+    if (result.error) {}
       results.errors.push({ url: fullUrl, error: result.error });
       console.log(`❌ ERROR: ${result.error}`);
-    } else if (result.status >= 200 && result.status < 300) {
+    } else if (result.status >= 200 && result.status < 300) {}
       results.working.push({ url: fullUrl, status: result.status });
       console.log(`✅ ${result.status}`);
-    } else if (result.status === 404) {
+    } else if (result.status === = 404) {}
       results.missing.push({ url: fullUrl, status: result.status });
       console.log(`❌ 404 - Missing`);
-    } else {
+    } else {}
       results.broken.push({ url: fullUrl, status: result.status, statusText: result.statusText });
       console.log(`❌ ${result.status} - ${result.statusText}`);
     }
@@ -196,22 +188,22 @@ async function auditWebsite() {
   console.log('='.repeat(60));
   
   console.log(`\n✅ Working URLs: ${results.working.length}`);
-  results.working.forEach(item => {)
+  results.working.forEach(item => {)}
     console.log(`   ${item.url} (${item.status})`);
   });
 
   console.log(`\n❌ Broken URLs: ${results.broken.length}`);
-  results.broken.forEach(item => {)
+  results.broken.forEach(item => {)}
     console.log(`   ${item.url} (${item.status} - ${item.statusText})`);
   });
 
   console.log(`\n🚫 Missing URLs (404): ${results.missing.length}`);
-  results.missing.forEach(item => {)
+  results.missing.forEach(item => {)}
     console.log(`   ${item.url}`);
   });
 
   console.log(`\n⚠️  Errors: ${results.errors.length}`);
-  results.errors.forEach(item => {)
+  results.errors.forEach(item => {)}
     console.log(`   ${item.url} - ${item.error}`);
   });
 
@@ -221,22 +213,22 @@ async function auditWebsite() {
   
   if (results.missing.length > 0) {
     console.log('\n🔧 Missing pages that need to be created: ');
-    results.missing.forEach(item => {),
-      const route = item.url.replace(baseUrl, '');
+    results.missing.forEach(item => {),;
+const route = item.url.replace(baseUrl, '');}
       console.log(`   - Create page component for: ${route}`);
     });
   }
 
   if (results.broken.length > 0) {
     console.log('\n🔧 Broken pages that need to be fixed: ');
-    results.broken.forEach(item => {),
+    results.broken.forEach(item => {)}
       console.log(`   - Fix: ${item.url} (${item.status})`);
     });
   }
 
   if (results.errors.length > 0) {
     console.log('\n🔧 Pages with connection errors: ');
-    results.errors.forEach(item => {),
+    results.errors.forEach(item => {)}
       console.log(`   - Check: ${item.url} - ${item.error}`);
     });
   }

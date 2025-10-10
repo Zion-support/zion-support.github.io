@@ -7,13 +7,11 @@ export interface SecurityHeadersConfig {
   strictTransportSecurity?: string;
   xFrameOptions?: string;
   xContentTypeOptions?: string;
-  referrerPolicy?: string;
+  referrerPolicy?: string;}
   permissionsPolicy?: string;}
 }
-export const defaultSecurityHeaders: SecurityHeadersConfig = {
-  // Content Security Policy;
-  contentSecurityPolicy: [,
-export interface SecurityHeadersConfig {}
+export const defaultSecurityHeaders: SecurityHeadersConfig ={// Content Security Policy;
+  contentSecurityPolicy: [} export interface SecurityHeadersConfig {}
   contentSecurityPolicy?: string
   strictTransportSecurity?: string
   xFrameOptions?: string
@@ -21,8 +19,7 @@ export interface SecurityHeadersConfig {}
   referrerPolicy?: string
   permissionsPolicy?: string;}
 }
-export const defaultSecurityHeaders: SecurityHeadersConfig = {}
-  // Content Security Policy
+export const defaultSecurityHeaders: SecurityHeadersConfig ={} // Content Security Policy,
   contentSecurityPolicy: [
     "default-src 'self'",
     "script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com https://www.google-analytics.com",
@@ -61,9 +58,7 @@ export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>
 export function getSecurityHeaders()
   customConfig?: Partial<SecurityHeadersConfig>
 ): Record<string, string> {}
-  const config = { ...defaultSecurityHeaders, ...customConfig }
-  const headers: Record<string, string> = {}
-    'X-XSS-Protection': '1; mode=block',
+  const config ={...defaultSecurityHeaders, ...customConfig } const headers: Record<string, string> ={} 'X-XSS-Protection': '1; mode=block',
     'X-DNS-Prefetch-Control': 'on'}
   }
   if (config.contentSecurityPolicy) {}
@@ -86,17 +81,15 @@ export function getSecurityHeaders()
 export interface SecurityHeadersConfig {/* TODO: Fix JSX expression */}
 }
 export const,
-  defaultSecurityHeaders: SecurityHeadersConfig = {/* TODO: Fix JSX expression */}
-};
+  defaultSecurityHeaders: SecurityHeadersConfig ={/* TODO: Fix JSX expression */} };
 /**
  * Get security headers as key-value pairs;
  */
 export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig></SecurityHeadersConfig>)
 ): Record<string, string> {/* TODO: Fix JSX expression */}
-  const config = { ...defaultSecurityHeaders, ...customConfig };
+  const config ={...defaultSecurityHeaders, ...customConfig } ;
   const,
-  headers: Record<string, string> = {/* TODO: Fix JSX expression */}
-  };
+  headers: Record<string, string> ={/* TODO: Fix JSX expression */} };
   if (config.contentSecurityPolicy) {/* TODO: Fix JSX expression */}
   }
   if (config.strictTransportSecurity) {/* TODO: Fix JSX expression */}
@@ -117,7 +110,7 @@ export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>
 export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>)
 ): Array<{ key: string; value: string }> {
 export function getNextSecurityHeaders()
-  customConfig?: Partial<SecurityHeadersConfig>
+  customConfig?: Partial<SecurityHeadersConfig>}
 ): Array<{ key: string; value: string }> {}
   const headers = getSecurityHeaders(customConfig)
   return Object.entries(headers).map(([key, value]) => ({}

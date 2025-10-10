@@ -105,7 +105,6 @@
   g: number;
   review,
   s: number;
-;
 export const,
   advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechService[] =;
   [

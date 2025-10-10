@@ -11,7 +11,7 @@
   contactInfo: unknown;
     mobile: string;
     email: string;
-export interface CuttingEdgeMicroSaas2028 {;,
+export interface CuttingEdgeMicroSaas2028 {;}
     address: string}
   i,
   d: string;
@@ -47,7 +47,7 @@ export interface CuttingEdgeMicroSaas2028 {/* TODO: Fix JSX expression */}
   taglin,
   e: string;
   pric,
-  e: string,,
+  e: string,
   descriptio,
   n: string;
   feature,
@@ -170,7 +170,6 @@ export const,
     }
   }
 ];
-;
     id: "2028-cutting-edge-micro-saas"
     name: "2028 Cutting-Edge Micro SAAS Platform",
     tagline: "Cutting-edge micro SAAS for 2028",

@@ -56,22 +56,21 @@ const pageFiles = [
 ];
 
 // Function to create a basic page component;
-function createPageComponent(pageName) {
-  const componentName = pageName.split('/')[0]
+function createPageComponent(pageName) {;
+const componentName = pageName.split('/')[0]
     .split('-')
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
     .join('') + 'Page';
-  
-  const displayName = pageName.split('/')[0]
+const displayName = pageName.split('/')[0]
     .split('-')
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
     .join(' ');
 
   return `import React from 'react';
-
+}
 const ${componentName}: React.FC = () => {
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">)
-      <div className="text-center">)
+      <div className="text-center">)}
         <h1 className="text-4xl font-bold text-white mb-4">${displayName}</h1>)
         <p className="text-gray-300 mb-8">Coming Soon - Advanced ${displayName.toLowerCase()} solutions</p>
         <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover: bg-cyan-600 transition-colors">
@@ -91,18 +90,18 @@ export default ${componentName};`;
 }
 
 // Function to restore a page file;
-function restorePageFile(pagePath) {
-  const fullPath = path.join(__dirname, 'src', pagePath);
+function restorePageFile(pagePath) {;
+const fullPath = path.join(__dirname, 'src', pagePath);
   const dir = path.dirname(fullPath);
   
   // Create directory if it doesn't exist;
-  if (!fs.existsSync(dir)) {
+  if (!fs.existsSync(dir)) {}
     fs.mkdirSync(dir, { recursive: true });
 function restorePageFile(pagePath) {/* TODO: Fix JSX expression */}
   e: true });
   }
-  
-  const pageName = pagePath.replace('.tsx', '');
+  ;
+const pageName = pagePath.replace('.tsx', '');
   const content = createPageComponent(pageName);
   
   fs.writeFileSync(fullPath, content, 'utf8');`
@@ -112,7 +111,6 @@ function restorePageFile(pagePath) {/* TODO: Fix JSX expression */}
 
 // Main execution;
 console.log('Starting page restoration...');
-
 let restoredCount = 0;
 for (const pageFile of pageFiles) {/* TODO: Fix JSX expression */}
   } catch (error) {/* TODO: Fix JSX expression */}`

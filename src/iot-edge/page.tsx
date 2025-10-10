@@ -229,7 +229,7 @@ Expert IoT engineers delivering scalable, secure, and intelligent connected solu
   md:grid-cols-2,"
   lg:grid-cols-3 gap-8"></div>
                 {iotServices;}
-                  .filter(service => service.category === category)
+                  .filter(service => service.category === = category)
                   .map((service, index) => ()
                     "
           <div key={index} className="bg-white rounded-lg shadow-lg p-6,"

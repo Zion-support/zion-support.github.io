@@ -1,203 +1,28 @@
 const fs = require('fs');
 const path = require('path');
-const glob = require('glob');
 
-// Common template for AI pages
-const createAIPageTemplate = (pageName, title, description, icon) => `'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
-
-const ${pageName}: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Analysis',
-      description: 'Advanced AI algorithms provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
-  ];
-
-  return (
-    <>
-      <Helmet>
-        <title>${title} - Zion Tech Group</title>
-        <meta name="description" content="${description}" />
-      </Helmet>
-
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              ${title}
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              ${description}
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Get Started
-              </button>
-              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                Learn More
-              </button>
-            </div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Key Features
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Powerful AI technology that drives results
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  {feature.benefits && (
-                    <ul className="space-y-2">
-                      {feature.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Get Started?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Contact our experts to discuss your requirements and get started today.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Contact Us
-                </button>
-                <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Learn More
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-      <Footer />
-    </>
-  );
-};
-
-export default ${pageName};`;
-
-// Function to fix a file
-function fixFile(filePath) {
+// Function to fix common syntax errors
+function fixSyntaxErrors(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
+    let content = fs.readFileSync(filePath, 'utf8');
+    let originalContent = content;
     
-    // Check if file is too broken to fix
-    if (content.length < 100 || content.includes('export default') && content.length < 200) {
-      const fileName = path.basename(filePath, '.tsx');
-      const pageName = fileName.split('-').map(word => 
-        word.charAt(0).toUpperCase() + word.slice(1)
-      ).join('') + 'Page';
-      
-      const title = fileName.split('-').map(word => 
-        word.charAt(0).toUpperCase() + word.slice(1)
-      ).join(' ');
-      
-      const description = `Advanced ${title.toLowerCase()} solutions powered by AI technology.`;
-      
-      const fixedContent = createAIPageTemplate(pageName, title, description, 'Brain');
-      fs.writeFileSync(filePath, fixedContent);
-      console.log(`Fixed: ${filePath}`);
-      return true;
-    }
+    // Fix missing closing tags and brackets
+    content = fixMissingClosingTags(content);
     
-    // Try to fix common syntax errors
-    let fixedContent = content;
+    // Fix JSX syntax issues
+    content = fixJSXIssues(content);
     
-    // Fix missing imports
-    if (!fixedContent.includes("import React from 'react'") && fixedContent.includes('React.FC')) {
-      fixedContent = "'use client';\nimport React from 'react';\n" + fixedContent;
-    }
+    // Fix TypeScript syntax issues
+    content = fixTypeScriptIssues(content);
     
-    // Fix missing Helmet import
-    if (fixedContent.includes('<Helmet>') && !fixedContent.includes("import { Helmet }")) {
-      fixedContent = fixedContent.replace(
-        /'use client';\nimport React from 'react';/,
-        "'use client';\nimport React from 'react';\nimport { Helmet } from 'react-helmet-async';"
-      );
-    }
+    // Clean up extra commas and semicolons
+    content = cleanUpPunctuation(content);
     
-    // Fix missing Navigation/Footer imports
-    if (fixedContent.includes('<Navigation') && !fixedContent.includes("import Navigation")) {
-      fixedContent = fixedContent.replace(
-        /import { Helmet } from 'react-helmet-async';/,
-        "import { Helmet } from 'react-helmet-async';\nimport Navigation from '../components/Navigation';\nimport Footer from '../components/Footer';"
-      );
-    }
-    
-    // Fix malformed JSX structure
-    if (fixedContent.includes('return (') && !fixedContent.includes('return (')) {
-      fixedContent = fixedContent.replace(/return \(/g, 'return (\n    <>');
-    }
-    
-    // Fix missing closing tags
-    if (fixedContent.includes('<div className="min-h-screen') && !fixedContent.includes('</div>')) {
-      fixedContent = fixedContent.replace(
-        /<div className="min-h-screen[^>]*>/,
-        '<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">'
-      );
-    }
-    
-    if (fixedContent !== content) {
-      fs.writeFileSync(filePath, fixedContent);
-      console.log(`Partially fixed: ${filePath}`);
+    // Only write if content changed
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed syntax errors in: ${filePath}`);
       return true;
     }
     
@@ -208,17 +33,128 @@ function fixFile(filePath) {
   }
 }
 
-// Get all problematic files
-const files = glob.sync('app/**/*.tsx', { cwd: __dirname });
+function fixMissingClosingTags(content) {
+  // Count opening and closing tags
+  const openTags = (content.match(/<[^/][^>]*>/g) || []).length;
+  const closeTags = (content.match(/<\/[^>]*>/g) || []).length;
+  const fragments = (content.match(/<>/g) || []).length;
+  const fragmentCloses = (content.match(/<\/>/g) || []).length;
+  
+  // Add missing closing tags for common patterns
+  if (openTags > closeTags) {
+    const missing = openTags - closeTags;
+    
+    // Try to add closing divs
+    if (content.includes('<div') && !content.endsWith('</div>')) {
+      content += '\n'.repeat(missing) + '</div>'.repeat(missing);
+    }
+    // Try to add closing sections
+    else if (content.includes('<section') && !content.endsWith('</section>')) {
+      content += '\n'.repeat(missing) + '</section>'.repeat(missing);
+    }
+    // Try to add closing main
+    else if (content.includes('<main') && !content.endsWith('</main>')) {
+      content += '\n'.repeat(missing) + '</main>'.repeat(missing);
+    }
+  }
+  
+  // Fix React fragments
+  if (fragments > fragmentCloses) {
+    const missing = fragments - fragmentCloses;
+    content += '\n'.repeat(missing) + '</>'.repeat(missing);
+  }
+  
+  return content;
+}
+
+function fixJSXIssues(content) {
+  // Fix common JSX syntax issues
+  content = content.replace(/\{\s*\}\s*>/g, '>');
+  content = content.replace(/\{\s*\}\s*</g, '<');
+  content = content.replace(/>\s*\{\s*\}\s*</g, '><');
+  
+  // Fix missing closing braces in JSX expressions
+  content = content.replace(/\{([^}]*)$/gm, '{$1}');
+  
+  // Fix malformed JSX attributes
+  content = content.replace(/=\s*\{\s*([^}]*)\s*\}\s*([^=])/g, '={$1} $2');
+  
+  return content;
+}
+
+function fixTypeScriptIssues(content) {
+  // Fix missing semicolons
+  content = content.replace(/([^;}])\n\s*const\s/g, '$1;\nconst ');
+  content = content.replace(/([^;}])\n\s*let\s/g, '$1;\nlet ');
+  content = content.replace(/([^;}])\n\s*var\s/g, '$1;\nvar ');
+  
+  // Fix missing commas in object literals
+  content = content.replace(/(\w+)\s*\n\s*(\w+):/g, '$1,\n  $2:');
+  
+  // Fix missing commas in arrays
+  content = content.replace(/(\w+)\s*\n\s*(\w+)\]/g, '$1,\n  $2]');
+  
+  return content;
+}
+
+function cleanUpPunctuation(content) {
+  // Remove extra commas
+  content = content.replace(/,\s*,/g, ',');
+  content = content.replace(/,\s*}/g, '}');
+  content = content.replace(/,\s*]/g, ']');
+  
+  // Remove extra semicolons
+  content = content.replace(/;\s*;/g, ';');
+  
+  // Fix spacing around operators
+  content = content.replace(/\s*=\s*=\s*/g, ' === ');
+  content = content.replace(/\s*!\s*=\s*/g, ' !== ');
+  
+  return content;
+}
+
+// Function to recursively find all TypeScript/JavaScript files
+function findSourceFiles(dir, extensions = ['.tsx', '.ts', '.js', '.jsx']) {
+  const files = [];
+  
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir);
+    
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory()) {
+        // Skip node_modules and other common directories
+        if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {
+          traverse(fullPath);
+        }
+      } else if (stat.isFile()) {
+        const ext = path.extname(item);
+        if (extensions.includes(ext)) {
+          files.push(fullPath);
+        }
+      }
+    }
+  }
+  
+  traverse(dir);
+  return files;
+}
+
+// Main execution
+console.log('Starting syntax error resolution...');
+
+const workspaceDir = '/workspace';
+const sourceFiles = findSourceFiles(workspaceDir);
+
+console.log(`Found ${sourceFiles.length} source files to check`);
 
 let fixedCount = 0;
-let totalCount = 0;
-
-files.forEach(file => {
-  totalCount++;
-  if (fixFile(file)) {
+for (const filePath of sourceFiles) {
+  if (fixSyntaxErrors(filePath)) {
     fixedCount++;
   }
-});
+}
 
-console.log(`\nFixed ${fixedCount} out of ${totalCount} files`);
+console.log(`Fixed syntax errors in ${fixedCount} files`);

@@ -5,7 +5,7 @@ import fs from 'fs';
 
 // Remove the second ErrorBoundary class and its interfaces;
 content = content.replace(
-  /interface ErrorBoundaryState \{\s*hasError: boolean;\s*error: Error \| null;\s*\}\s*interface ErrorBoundaryProps \{\s*children: React\.ReactNode;\s*\}\s*class ErrorBoundary extends React\.Component<ErrorBoundaryProps, ErrorBoundaryState> \{[\s\S]*?\}\s*const App: React\.FC = \(\) => \{/g;
+  /interface ErrorBoundaryState \{\s*hasError: boolean;\s*error: Error \| null;\s*\}\s*interface ErrorBoundaryProps \{\s*children: React\.ReactNode;\s*\}\s*class ErrorBoundary extends React\.Component<ErrorBoundaryProps, ErrorBoundaryState> \{[\s\S]*?\}\s*const App: React\.FC = \(\) => \{/g;}
 content = content.replace(/interface ErrorBoundaryState \{/* TODO: Fix JSX expression */}
   r: Error \| null;\s*\}\s*interface ErrorBoundaryProps \{/* TODO: Fix JSX expression */}
   n: React\.ReactNode;\s*\}\s*class ErrorBoundary extends React\.Component<ErrorBoundaryProps, ErrorBoundaryState> \{[\s\S]*?\}\s*const)

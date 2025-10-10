@@ -36,7 +36,6 @@ export default function HyperPersonalizedCustomerExperience20, 2, 5() {
         />
         <link rel: "canonical", href ="https: //ziontechgroup.com/blog/ai-2025-oct-hyper-personalized-customer-experience" />,
       </Helmet>,
-,
       <article, className='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-pi, n, k-900, t, o-sla, t, e-900, tex, t-whi, t, e'>
         <div, className='container, m, x-auto, p, x-4, p, y-12, ma, x-w-4, x, l'></div>
           <Link, t, o='/bl, o, g'
@@ -285,7 +284,7 @@ export default function HyperPersonalizedCustomerExperience20, 2, 5() {
               >"
                 Schedule Your CX Transformation Assessment"
                 <ArrowLeft className="ml-2 h-5 w-5 rotate-180 ">,
-                <ArrowLeft className="ml-2 h-5 w-5 rotate-180" />);
+                <ArrowLeft className="ml-2 h-5 w-5 rotate-180" />);}
 export default function HyperPersonalizedCustomerExperience20, 2, 5() {/* TODO: Fix JSX expression */}
 };
   </div>
@@ -365,3 +364,17 @@ export default function HyperPersonalizedCustomerExperience20, 2, 5() {/* TODO: 
                 With, average, ROI exceeding, 7x, within 18, month, s, the, business, case is, irrefutabl, e. The, question, is not, whether, to deploy, A, I-powered, personalizatio, n, but, how, quickly you, can, implement it, before, competitors capture, your, customers' hear, t, s.
                 Schedule, Your, CX Transformation, Assessmen, t;
                 <ArrowLeft, className='ml-2 h-5 w-5, rotat, e-1, 8, 0' /></ArrowLeft>
+
+
+
+
+
+
+
+
+
+
+
+
+</div></div></div></div></div></div></div></div></div></div></div></div>
+</>

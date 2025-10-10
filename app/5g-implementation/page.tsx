@@ -2,44 +2,43 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Wifi, Zap, Shield, Globe, CheckCircle, ArrowRight, Phone, Mail, MapPin, Clock, Users, BarChart } from 'lucide-react';
-
-const FiveGImplementationPage: React.FC = () => {
-  const features = [
+const FiveGImplementationPage: React.FC = () => {;
+const features = [
     {
       icon: Wifi,
       title: '5G Network Design',
       description: 'Complete 5G network design and implementation with optimal coverage and performance.',
-      benefits: ['Network planning', 'Coverage optimization', 'Performance tuning']
+      benefits: ['Network planning', 'Coverage optimization', 'Performance tuning']}
     },
     {
       icon: Zap,
       title: 'Ultra-Low Latency',
       description: 'Ultra-low latency 5G networks for real-time applications and mission-critical operations.',
-      benefits: ['< 1 ms latency', 'Real-time apps', 'Mission critical']
+      benefits: ['< 1 ms latency', 'Real-time apps', 'Mission critical']}
     },
     {
       icon: Clock,
       title: '24/7 Network Monitoring',
       description: 'Continuous monitoring of 5G network performance with real-time analytics and alerts.',
-      benefits: ['Network monitoring', 'Performance analytics', 'Proactive maintenance']
+      benefits: ['Network monitoring', 'Performance analytics', 'Proactive maintenance']}
     },
     {
       icon: Users,
       title: 'Scalable Infrastructure',
       description: 'Scalable 5G infrastructure that grows with your business needs and user demands.',
-      benefits: ['Auto-scaling', 'Capacity planning', 'Future-proof design']
+      benefits: ['Auto-scaling', 'Capacity planning', 'Future-proof design']}
     },
     {
       icon: Shield,
       title: 'Enhanced Security',
       description: 'Advanced encryption and security protocols for enterprise-grade protection',
-      benefits: ['End-to-end encryption', 'Security protocols', 'Threat detection']
+      benefits: ['End-to-end encryption', 'Security protocols', 'Threat detection']}
     },
     {
       icon: BarChart,
       title: 'Performance Analytics',
       description: 'Advanced analytics and reporting for 5G network performance and optimization.',
-      benefits: ['Performance insights', 'Usage analytics', 'Optimization recommendations']
+      benefits: ['Performance insights', 'Usage analytics', 'Optimization recommendations']}
     }
   ];
 
@@ -54,7 +53,7 @@ const FiveGImplementationPage: React.FC = () => {
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' } } />
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
               5G Network
@@ -90,7 +89,7 @@ const FiveGImplementationPage: React.FC = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
+              {features.map((feature, index) => (}
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                     <feature.icon className="w-8 h-8 text-white" />
@@ -99,7 +98,7 @@ const FiveGImplementationPage: React.FC = () => {
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   {feature.benefits && (
                     <ul className="space-y-2">
-                      {feature.benefits.map((benefit, idx) => (
+                      {feature.benefits.map((benefit, idx) => (}
                         <li key={idx} className="flex items-center text-sm text-gray-400">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                           {benefit}
@@ -140,3 +139,9 @@ const FiveGImplementationPage: React.FC = () => {
 };
 
 export default FiveGImplementationPage;
+
+
+
+
+
+</div></div></div></div></div></div>

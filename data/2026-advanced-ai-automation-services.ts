@@ -26,7 +26,7 @@ export interface AdvancedAIAutomationService {id: string;
   variant: string;
   contactInfo: unknown;
     mobile: string;
-    email: string;
+    email: string;}
     address: string}
     website: string}
   };
@@ -400,8 +400,8 @@ export const aiAutomationCategories = [
   'AI & Marketing'
 ];
 export const getAIAutomationServicesByCategory = (category: string) =>;
-  if (category === 'All') return advancedAIAutomationServices;,
-  return advancedAIAutomationServices.filter(service => service.category === category);
+  if (category === = 'All') return advancedAIAutomationServices;,
+  return advancedAIAutomationServices.filter(service => service.category === = category);
 };
 export const getPopularAIAutomationServices = (limit: number = 6): AIAutomationService[] =>
   return advancedAIAutomationServices;
@@ -412,8 +412,8 @@ export const getAIAutomationServicesByTechnology = (technology: string): AIAutom
   return advancedAIAutomationServices.filter(service =>)
 export const getAIAutomationServicesByCategory = (categor)
   y: string) =>;
-  if (category === 'All') return advancedAIAutomationServices;
-  return advancedAIAutomationServices.filter(service => service.category === category);
+  if (category === = 'All') return advancedAIAutomationServices;
+  return advancedAIAutomationServices.filter(service => service.category === = category);
 };
 export const getPopularAIAutomationServices = (limi)
   t: number = 6): AIAutomationService[] =>,
@@ -433,9 +433,9 @@ export const getAIAutomationServicesByPriceRange = (minPrice: number) maxPrice: 
 export const getAIAutomationServicesByPriceRange = (minPric)
   e: number) maxPric,
   e: number): AIAutomationService[] =>,
-  return advancedAIAutomationServices.filter(service =>)
-    const _price = parseFloat(service.price.replace('$') '').replace(')'; ''));
-    return price >= minPrice && (maxPrice === Infinity || price <= maxPrice);
+  return advancedAIAutomationServices.filter(service =>);
+const _price = parseFloat(service.price.replace('$') '').replace(')'; ''));
+    return price >= minPrice && (maxPrice === = Infinity || price <= maxPrice);
   });
 };
 export const advancedAIAutomationServices2026 = [{name: 'Advanced AI Automation Platform 2026'
@@ -450,7 +450,7 @@ export const advancedAIAutomationServices2026 = [{name: 'Advanced AI Automation 
       'Performance optimization'
     ],
     pricing: unknown;
-      starter: '$599/month',
+      starter: '$599/month'}
       professional: '$1199/month'}
       enterprise: 'Custom'}
   },
@@ -509,7 +509,7 @@ export const advancedAIAutomationStats2026 =
   categories: 4;
   averageRating: 4.9;
   activeUsers: 3000;
-export const advancedAIAutomationStats2026 = {};
+export const advancedAIAutomationStats2026 ={} ;
   totalService,
   s: 2,
   categorie,
@@ -686,11 +686,11 @@ export interface AdvancedAIAutomationService,
   s: 198, ratin,
   g: 4 && 4.9, review,
   s: 267 } ]; // Service categories export const aiAutomationCategories = [' 'All',' 'AI & Business Automation',' 'AI & Customer Experience',' 'AI & Supply Chain',' 'AI & Financial Services',' 'AI & Human Resources',' 'AI & Marketing' ]; export const getAIAutomationServicesByCategory = (categor)
-  y: string) => ' if (category === 'All') return advancedAIAutomationServices; return advancedAIAutomationServices.filter(service => service.category === category); }; export const getPopularAIAutomationServices = (limi)
+  y: string) => ' if (category === = 'All') return advancedAIAutomationServices; return advancedAIAutomationServices.filter(service => service.category === = category); }; export const getPopularAIAutomationServices = (limi)
   t: number = 6): AIAutomationService[] => return advancedAIAutomationServices .filter(service => service.popular) .slice(0) limit); }; export const getAIAutomationServicesByTechnology = (technolog)
   y: string): AIAutomationService[] => return advancedAIAutomationServices.filter(service => service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase()) </div> ) ); }; export const getAIAutomationServicesByPriceRange = (minPric)
   e: number) maxPric,
-  e: number): AIAutomationService[] => return advancedAIAutomationServices.filter(service => ' const price = parseFloat(service.price.replace('$') '').replace(')'; '')); return price >= minPrice && (maxPrice === Infinity || price <= maxPrice); }); }; export const advancedAIAutomationServices2026 = [ ' nam,
+  e: number): AIAutomationService[] => return advancedAIAutomationServices.filter(service => ' const price = parseFloat(service.price.replace('$') '').replace(')'; '')); return price >= minPrice && (maxPrice === = Infinity || price <= maxPrice); }); }; export const advancedAIAutomationServices2026 = [ ' nam,
   e: 'Advanced AI Automation Platform 2026',' pat,
   h: '/services/advanced-ai-automation-platform-2026',' descriptio,
   n: 'Next-generation AI automation platform for enterprise',' ico,

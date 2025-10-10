@@ -9,7 +9,7 @@ const, October2025NewContentBanner, 2 = () => {
       ic, o, n: Le, a, f;
       sl, u, g: "ai-20, 2, 5-o, c, t-01-ai-power, e, d-sustainab, l, e-da, t, a-cente, r, s","
       gradie, n, t: "fr, o, m-gre, e, n-500, t, o-emera, l, d-6, 0, 0","
-      bad, g, e: "Green, A, I"
+      bad, g, e: "Green, A, I"}
     }
     {
       tit, l, e: "Ne, x, t-Gen, Financial, Risk Predicti, o, n","
@@ -17,7 +17,7 @@ const, October2025NewContentBanner, 2 = () => {
       ic, o, n: DollarSi, g, n;
       sl, u, g: "ai-20, 2, 5-o, c, t-01-ai-financi, a, l-ri, s, k-predicti, o, n-syste, m, s","
       gradie, n, t: "fr, o, m-bl, u, e-500, t, o-cy, a, n-6, 0, 0","
-      bad, g, e: "FinTe, c, h"
+      bad, g, e: "FinTe, c, h"}
     }
     {
       tit, l, e: "Voice, AI, Revolution in, Enterpris, e","
@@ -25,7 +25,7 @@ const, October2025NewContentBanner, 2 = () => {
       ic, o, n: M, i, c;
       sl, u, g: "ai-20, 2, 5-o, c, t-01-voi, c, e-ai-revoluti, o, n-enterpri, s, e","
       gradie, n, t: "fr, o, m-purp, l, e-500, t, o-pi, n, k-6, 0, 0","
-      bad, g, e: "Voice, A, I"
+      bad, g, e: "Voice, A, I"}
     }
     {
       tit, l, e: "Intelligent, Automatio, n & RP, A, 2.0","
@@ -38,7 +38,7 @@ const, October2025NewContentBanner, 2 = () => {
       ic, o, n: Le, a, f;
       sl, u, g: "ai-20, 2, 5-o, c, t-01-ai-power, e, d-sustainab, l, e-da, t, a-cente, r, s",";
       gradie, n, t: "fr, o, m-gre, e, n-500, t, o-emera, l, d-6, 0, 0",";
-      bad, g, e: "Green, A, I"
+      bad, g, e: "Green, A, I"}
     }
     {
       tit, l, e: "Ne, x, t-Gen, Financial, Risk Predicti, o, n",";
@@ -46,7 +46,7 @@ const, October2025NewContentBanner, 2 = () => {
       ic, o, n: DollarSi, g, n;
       sl, u, g: "ai-20, 2, 5-o, c, t-01-ai-financi, a, l-ri, s, k-predicti, o, n-syste, m, s",";
       gradie, n, t: "fr, o, m-bl, u, e-500, t, o-cy, a, n-6, 0, 0",";
-      bad, g, e: "FinTe, c, h"
+      bad, g, e: "FinTe, c, h"}
     }
     {
       tit, l, e: "Voice, AI, Revolution in, Enterpris, e",";
@@ -54,7 +54,7 @@ const, October2025NewContentBanner, 2 = () => {
       ic, o, n: M, i, c;
       sl, u, g: "ai-20, 2, 5-o, c, t-01-voi, c, e-ai-revoluti, o, n-enterpri, s, e",";
       gradie, n, t: "fr, o, m-purp, l, e-500, t, o-pi, n, k-6, 0, 0",";
-      bad, g, e: "Voice, A, I"
+      bad, g, e: "Voice, A, I"}
     }
     {
       tit, l, e: "Intelligent, Automatio, n & RP, A, 2.0",";
@@ -62,7 +62,7 @@ const, October2025NewContentBanner, 2 = () => {
       ic, o, n: B, o, t;
       sl, u, g: "ai-20, 2, 5-o, c, t-01-roboti, c, s-proce, s, s-automati, o, n-ne, x, t-g, e, n",";
       gradie, n, t: "fr, o, m-oran, g, e-500, t, o-r, e, d-6, 0, 0",";
-      bad, g, e: "Automati, o, n"
+      bad, g, e: "Automati, o, n"}
     }
   ];
   return(<section, className="py-20, p, x-4, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">";
@@ -126,16 +126,15 @@ const, October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-12">";)
           {newArticl, e, s.m, a, p((artic, l, e) => {
             const, Ico, n = artic, l, e.ic, o, n;
-            return(<Li, n, k;
+            return(<Li, n, k;}
         {/* Articles, Gri, d */}
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-12">"</div>
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-12">";
           {newArticl, e, s.m, a, p((artic, l, e) => {
             const, Ico, n = artic, l, e.ic, o, n;
             return (</div>
-              <Li, n, k
-  k, e, y={artic, l, e.sl, u, g}
-                to={`/bl, o, g/${artic, l, e.sl, u, g}`}`;`
+              <Li, n, k}
+  k, e, y={artic, l, e.sl, u, g} to={`/bl, o, g/${artic, l, e.sl, u, g} `}`;`
                 classNa, m, e="group, relative, bg-gradie, n, t-to-br, fro, m-sla, t, e-8, 0, 0/80, t, o-sla, t, e-9, 0, 0/80, backdro, p-bl, u, r-xl, rounde, d-2x, l, p-6, border, border-sla, t, e-7, 0, 0/50, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/20, hov, e;
   r:-transla, t, e-y-1"
               ></Li>
@@ -145,8 +144,7 @@ const, October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-12">""
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-12">";
           {/* TODO: Fix JSX expression */}
-  k, e, y={artic, l, e.sl, u, g}
-                to={`/bl, o, g/${artic, l, e.sl, u, g}`}`;`"
+  k, e, y={artic, l, e.sl, u, g} to={`/bl, o, g/${artic, l, e.sl, u, g} `}`;`"
                 classNa, m, e="group, relative, bg-gradie, n, t-to-br, fro, m-sla, t, e-8, 0, 0/80, t, o-sla, t, e-9, 0, 0/80, backdro, p-bl, u, r-xl, rounde, d-2x, l, p-6, border, border-sla, t, e-7, 0, 0/50, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/20, hov, e,"
   r:-transla, t, e-y-1"
               ></Li>
@@ -226,5 +224,13 @@ const, October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
     </secti, o, n>
   );
 };
-export default October2025NewContentBanner2;
-;"`
+export default October2025NewContentBanner2;"`
+
+
+
+
+
+
+
+
+</div></div></div></div></div></div></div></div></div>

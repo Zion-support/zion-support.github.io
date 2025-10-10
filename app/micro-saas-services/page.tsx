@@ -29,13 +29,13 @@ export interface MicroSaasService {
     languages: string[];
     frameworks: string[];
     databases: string[];
-    cloudProviders: string[];
+    cloudProviders: string[];}
   };
   pricing: {
     monthly: number,
     yearly: number,
     enterprise: number,
-    features: string[];
+    features: string[];}
   };
 }
 
@@ -104,13 +104,13 @@ export const microSaasServices: MicroSaasService[] = [
       languages: ['Python', 'JavaScript', 'TypeScript', 'Go'],
       frameworks: ['React', 'Node.js', 'FastAPI', 'TensorFlow', 'PyTorch'],
       databases: ['PostgreSQL', 'MongoDB', 'Redis', 'Elasticsearch'],
-      cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'DigitalOcean']
+      cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'DigitalOcean']}
     },
     pricing: {
       monthly: 99,
       yearly: 990,
       enterprise: 299,
-      features: ['Unlimited projects', 'Advanced AI features', 'Priority support', 'Custom integrations']
+      features: ['Unlimited projects', 'Advanced AI features', 'Priority support', 'Custom integrations']}
     }
   },
 
@@ -176,13 +176,13 @@ export const microSaasServices: MicroSaasService[] = [
       languages: ['JavaScript', 'TypeScript', 'Python'],
       frameworks: ['React Native', 'Node.js', 'Express', 'TensorFlow Lite'],
       databases: ['SQLite', 'PostgreSQL', 'Redis'],
-      cloudProviders: ['AWS', 'Google Cloud', 'Firebase']
+      cloudProviders: ['AWS', 'Google Cloud', 'Firebase']}
     },
     pricing: {
       monthly: 49,
       yearly: 490,
       enterprise: 149,
-      features: ['Unlimited tasks', 'Team collaboration', 'Advanced analytics', 'API access']
+      features: ['Unlimited tasks', 'Team collaboration', 'Advanced analytics', 'API access']}
     }
   },
 
@@ -249,13 +249,13 @@ export const microSaasServices: MicroSaasService[] = [
       languages: ['Python', 'JavaScript', 'TypeScript'],
       frameworks: ['FastAPI', 'React', 'Next.js', 'OpenAI API', 'Hugging Face'],
       databases: ['PostgreSQL', 'MongoDB', 'Redis'],
-      cloudProviders: ['AWS', 'Google Cloud', 'Azure']
+      cloudProviders: ['AWS', 'Google Cloud', 'Azure']}
     },
     pricing: {
       monthly: 79,
       yearly: 790,
       enterprise: 199,
-      features: ['Unlimited content', 'Brand voice training', 'API access', 'Priority support']
+      features: ['Unlimited content', 'Brand voice training', 'API access', 'Priority support']}
     }
   },
 
@@ -322,13 +322,13 @@ export const microSaasServices: MicroSaasService[] = [
       languages: ['Python', 'JavaScript', 'TypeScript'],
       frameworks: ['Django', 'React', 'FastAPI', 'TensorFlow', 'OpenCV'],
       databases: ['PostgreSQL', 'MongoDB', 'Redis', 'Elasticsearch'],
-      cloudProviders: ['AWS', 'Google Cloud', 'Azure']
+      cloudProviders: ['AWS', 'Google Cloud', 'Azure']}
     },
     pricing: {
       monthly: 89,
       yearly: 890,
       enterprise: 249,
-      features: ['Unlimited posts', 'Advanced analytics', 'White-label options', 'API access']
+      features: ['Unlimited posts', 'Advanced analytics', 'White-label options', 'API access']}
     }
   },
 
@@ -396,13 +396,13 @@ export const microSaasServices: MicroSaasService[] = [
       languages: ['Python', 'JavaScript', 'TypeScript', 'Java'],
       frameworks: ['Django', 'React', 'FastAPI', 'Spring Boot', 'TensorFlow'],
       databases: ['PostgreSQL', 'MongoDB', 'Redis', 'Elasticsearch'],
-      cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'Salesforce']
+      cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'Salesforce']}
     },
     pricing: {
       monthly: 129,
       yearly: 1290,
       enterprise: 399,
-      features: ['Unlimited contacts', 'Advanced AI features', 'Custom integrations', 'Dedicated support']
+      features: ['Unlimited contacts', 'Advanced AI features', 'Custom integrations', 'Dedicated support']}
     }
   },
 
@@ -469,13 +469,13 @@ export const microSaasServices: MicroSaasService[] = [
       languages: ['Python', 'R', 'Julia', 'JavaScript'],
       frameworks: ['TensorFlow', 'PyTorch', 'Pandas', 'NumPy', 'Scikit-learn'],
       databases: ['PostgreSQL', 'InfluxDB', 'TimescaleDB', 'Redis'],
-      cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'Bloomberg Cloud']
+      cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'Bloomberg Cloud']}
     },
     pricing: {
       monthly: 199,
       yearly: 1990,
       enterprise: 599,
-      features: ['Unlimited analysis', 'Real-time data', 'Custom models', 'Dedicated support']
+      features: ['Unlimited analysis', 'Real-time data', 'Custom models', 'Dedicated support']}
     }
   },
 
@@ -543,13 +543,13 @@ export const microSaasServices: MicroSaasService[] = [
       languages: ['Python', 'JavaScript', 'TypeScript'],
       frameworks: ['FastAPI', 'React', 'OpenAI GPT', 'Hugging Face', 'Rasa'],
       databases: ['PostgreSQL', 'MongoDB', 'Redis', 'Elasticsearch'],
-      cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'Dialogflow']
+      cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'Dialogflow']}
     },
     pricing: {
       monthly: 59,
       yearly: 590,
       enterprise: 199,
-      features: ['Unlimited conversations', 'Advanced AI features', 'Custom training', 'API access']
+      features: ['Unlimited conversations', 'Advanced AI features', 'Custom training', 'API access']}
     }
   },
 
@@ -617,13 +617,13 @@ export const microSaasServices: MicroSaasService[] = [
       languages: ['Python', 'JavaScript', 'TypeScript', 'Java', 'C#', 'Go'],
       frameworks: ['TensorFlow', 'PyTorch', 'SonarQube', 'ESLint', 'Prettier'],
       databases: ['PostgreSQL', 'MongoDB', 'Redis'],
-      cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'GitHub Actions']
+      cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'GitHub Actions']}
     },
     pricing: {
       monthly: 79,
       yearly: 790,
       enterprise: 249,
-      features: ['Unlimited repositories', 'Advanced analysis', 'Custom rules', 'API access']
+      features: ['Unlimited repositories', 'Advanced analysis', 'Custom rules', 'API access']}
     }
   },
 
@@ -691,13 +691,13 @@ export const microSaasServices: MicroSaasService[] = [
       languages: ['Python', 'JavaScript', 'TypeScript', 'Java'],
       frameworks: ['FastAPI', 'React Native', 'TensorFlow', 'PyTorch', 'OpenCV'],
       databases: ['PostgreSQL', 'MongoDB', 'Redis', 'Encrypted storage'],
-      cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'HIPAA-compliant hosting']
+      cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'HIPAA-compliant hosting']}
     },
     pricing: {
       monthly: 149,
       yearly: 1490,
       enterprise: 499,
-      features: ['Unlimited patients', 'Advanced AI features', 'Custom integrations', 'Compliance support']
+      features: ['Unlimited patients', 'Advanced AI features', 'Custom integrations', 'Compliance support']}
     }
   },
 
@@ -765,13 +765,13 @@ export const microSaasServices: MicroSaasService[] = [
       languages: ['Python', 'JavaScript', 'TypeScript', 'Java'],
       frameworks: ['Django', 'React', 'FastAPI', 'TensorFlow', 'PyTorch'],
       databases: ['PostgreSQL', 'MongoDB', 'Redis', 'Elasticsearch'],
-      cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'Shopify Plus']
+      cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'Shopify Plus']}
     },
     pricing: {
       monthly: 119,
       yearly: 1190,
       enterprise: 399,
-      features: ['Unlimited products', 'Advanced AI features', 'Custom integrations', 'Priority support']
+      features: ['Unlimited products', 'Advanced AI features', 'Custom integrations', 'Priority support']}
     }
   },
 
@@ -839,13 +839,13 @@ export const microSaasServices: MicroSaasService[] = [
       languages: ['Python', 'JavaScript', 'TypeScript', 'Java'],
       frameworks: ['Django', 'React', 'FastAPI', 'TensorFlow', 'PyTorch'],
       databases: ['PostgreSQL', 'MongoDB', 'Redis', 'Elasticsearch'],
-      cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'Education-specific hosting']
+      cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'Education-specific hosting']}
     },
     pricing: {
       monthly: 89,
       yearly: 890,
       enterprise: 299,
-      features: ['Unlimited students', 'Advanced AI features', 'Custom curriculum', 'Analytics dashboard']
+      features: ['Unlimited students', 'Advanced AI features', 'Custom curriculum', 'Analytics dashboard']}
     }
   }
 ];
@@ -867,29 +867,25 @@ export const serviceCategories = [
 ];
 
 // Pricing tiers for comparison;
-export const pricingTiers = {
-  starter: {,
+export const pricingTiers ={starter: {,
     name: 'Starter',
     price: '$29-99/month',
-    features: ['Basic AI features', 'Standard support', 'Limited integrations', 'Basic analytics']
-  },
+    features: ['Basic AI features', 'Standard support', 'Limited integrations', 'Basic analytics']} },
   professional: {,
     name: 'Professional',
     price: '$99-299/month',
-    features: ['Advanced AI features', 'Priority support', 'Full integrations', 'Advanced analytics', 'API access']
+    features: ['Advanced AI features', 'Priority support', 'Full integrations', 'Advanced analytics', 'API access']}
   },
   enterprise: {,
     name: 'Enterprise',
     price: '$299-999/month',
-    features: ['Custom AI models', '24/7 support', 'White-label options', 'Custom integrations', 'Dedicated support', 'SLA guarantees']
+    features: ['Custom AI models', '24/7 support', 'White-label options', 'Custom integrations', 'Dedicated support', 'SLA guarantees']}
   }
 };
 
 // Contact information;
-export const contactInfo = {
-  phone: '+1 302 464 0950',
+export const contactInfo ={phone: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008, Middletown, DE 19709',
   website: 'https://ziontechgroup.com',
-  hours: '24/7 Support Available',
-  timezone: 'EST (Eastern Standard Time)'};
+  hours: '24/7 Support Available'} timezone: 'EST (Eastern Standard Time)'};

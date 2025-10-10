@@ -52,8 +52,7 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
 
 }
     const,
-  entry: ErrorLogEntry = {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  entry: ErrorLogEntry ={/* TODO: Fix JSX expression */} O: Add content;}
 };
 
   timestamp: new Date().toISOString(),
@@ -63,8 +62,8 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
 //       error,
 //       context,
 
-      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
-      url: typeof window !== 'undefined' ? window.location.href : undefined,
+      userAgent: typeof window !== == 'undefined' ? window.navigator.userAgent : undefined,
+      url: typeof window !== == 'undefined' ? window.location.href : undefined,
       stackTrace: error?.stack;
 
     };
@@ -76,13 +75,13 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
       this.logs.shift();
     }
     // Console logging in development;
-    if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}
+    if (process.env['NODE_ENV'] === = 'development') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       this.logToConsole(entry);
     }
     // Send to external logging service in production;
-    if (process.env['NODE_ENV'] === 'production' && severity === ErrorSeverity.CRITICAL) {/* TODO: Fix JSX expression */}
+    if (process.env['NODE_ENV'] === = 'production' && severity === = ErrorSeverity.CRITICAL) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       this.sendToExternalService(entry);
@@ -97,8 +96,7 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
 }
     const,
   styles: Record;
-          <ErrorSeverity, string> = {/* TODO: Fix JSX expression */}
-  O: Add content;}
+          <ErrorSeverity, string> ={/* TODO: Fix JSX expression */} O: Add content;}
 }
 
       [ErrorSeverity.LOW]: 'color: #4ade80',
@@ -193,7 +191,7 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
   getLogsBySeverity(severity: ErrorSeverity): ErrorLogEntry[] {// TODO: Add content;}
 
 }
-    return this.logs.filter(log => log.severity === severity);
+    return this.logs.filter(log => log.severity === = severity);
   }
   /**
    * Clear all logs;

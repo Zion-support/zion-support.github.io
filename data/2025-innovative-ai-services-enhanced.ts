@@ -132,7 +132,7 @@ export interface InnovativeAIService2025 {id: string, name: string;
   growthRate: string, variant: string;
   contactInfo: unknown;
     mobile: string, email: string;
-    address: string;
+    address: string;}
     website: string}
     },
     realImplementation: boolean, implementationDetails: string;
@@ -321,7 +321,7 @@ export interface InnovativeAIService2025 {;
   variant: string;
   contactInfo: {,
     mobile: string;
-    email: string;
+    email: string;}
     address: string}
     website: string}
   };
@@ -773,7 +773,7 @@ export const,
     roi: 'Research institutions report 500% ROI through breakthrough discoveries and accelerated AI development.';
     competitors: ['OpenAI, Anthropic, DeepMind, Google AI'];
     marketSize: '$2.5 B AI research market';
-    growthRate: '400% annual growth';
+    growthRate: '400% annual growth';}
     variant: 'ai-consciousness-advanced'}
     contactInfo: {}
       mobile: '+1 302 464 0950';
@@ -816,7 +816,7 @@ export const,
     roi: 'Development teams report 300% productivity increase and 80% reduction in maintenance overhead.';
     competitors: ['Google AutoML, Azure AutoML, DataRobot, H2 O.ai'];
     marketSize: '$8.5 B AutoML market';
-    growthRate: '250% annual growth';
+    growthRate: '250% annual growth';}
     variant: 'ai-autonomy-enterprise'}
     contactInfo: {}
       mobile: '+1 302 464 0950';
@@ -859,7 +859,7 @@ export const,
     roi: 'Organizations report 200% improvement in AI trustworthiness and 90% reduction in ethical risks.';
     competitors: ['Ethics consulting firms, Governance platforms, Compliance tools'];
     marketSize: '$3.5 B AI ethics market';
-    growthRate: '180% annual growth';
+    growthRate: '180% annual growth';}
     variant: 'ai-ethics-enterprise'}
     contactInfo: {}
       mobile: '+1 302 464 0950';
@@ -902,7 +902,7 @@ export const,
     roi: 'Creative professionals report 400% increase in productivity and 300% expansion of creative possibilities.';
     competitors: ['Midjourney, DALL-E, Stable Diffusion, Runway ML'];
     marketSize: '$15.5 B creative AI market';
-    growthRate: '320% annual growth';
+    growthRate: '320% annual growth';}
     variant: 'ai-creativity-pro'}
     contactInfo: {}
       mobile: '+1 302 464 0950';
@@ -945,7 +945,7 @@ export const,
     roi: 'Educational institutions report 40% improvement in learning outcomes and 50% reduction in training costs.';
     competitors: ['Coursera, Udemy, Khan Academy, Duolingo, Pluralsight'];
     marketSize: '$250 B global education market';
-    growthRate: '95% annual growth';
+    growthRate: '95% annual growth';}
     variant: 'ai-education-enterprise'}
     contactInfo: {}
       mobile: '+1 302 464 0950';
@@ -960,7 +960,6 @@ export const,
     reviews: 89;
   }
 ];
-;
     rating: 4.8;
 ];      mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
@@ -1000,7 +999,7 @@ export interface InnovativeAIService2025 {;
   variant: string;
   contactInfo: {,
     mobile: string;
-    email: string;
+    email: string;}
     address: string}
     website: string}
   };
@@ -1145,7 +1144,6 @@ export interface InnovativeAIService2025 {;
     review,
   s: 89}
 ];
-;
     ratin,
   g: 4.8];      mobil,
   e: '+1 302 464 0950'
@@ -1216,7 +1214,7 @@ export const,
     roi: 'Research institutions report 500% ROI through breakthrough discoveries and accelerated AI development.';
     competitors: ['OpenAI, Anthropic, DeepMind, Google AI'];
     marketSize: '$2.5 B AI research market';
-    growthRate: '400% annual growth';
+    growthRate: '400% annual growth';}
     variant: 'ai-consciousness-advanced'}
     contactInfo: {}
       mobile: '+1 302 464 0950';
@@ -1259,7 +1257,7 @@ export const,
     roi: 'Development teams report 300% productivity increase and 80% reduction in maintenance overhead.';
     competitors: ['Google AutoML, Azure AutoML, DataRobot, H2 O.ai'];
     marketSize: '$8.5 B AutoML market';
-    growthRate: '250% annual growth';
+    growthRate: '250% annual growth';}
     variant: 'ai-autonomy-enterprise'}
     contactInfo: {}
       mobile: '+1 302 464 0950';
@@ -1302,7 +1300,7 @@ export const,
     roi: 'Organizations report 200% improvement in AI trustworthiness and 90% reduction in ethical risks.';
     competitors: ['Ethics consulting firms, Governance platforms, Compliance tools'];
     marketSize: '$3.5 B AI ethics market';
-    growthRate: '180% annual growth';
+    growthRate: '180% annual growth';}
     variant: 'ai-ethics-enterprise'}
     contactInfo: {}
       mobile: '+1 302 464 0950';
@@ -1345,7 +1343,7 @@ export const,
     roi: 'Creative professionals report 400% increase in productivity and 300% expansion of creative possibilities.';
     competitors: ['Midjourney, DALL-E, Stable Diffusion, Runway ML'];
     marketSize: '$15.5 B creative AI market';
-    growthRate: '320% annual growth';
+    growthRate: '320% annual growth';}
     variant: 'ai-creativity-pro'}
     contactInfo: {}
       mobile: '+1 302 464 0950';
@@ -1388,7 +1386,7 @@ export const,
     roi: 'Educational institutions report 40% improvement in learning outcomes and 50% reduction in training costs.';
     competitors: ['Coursera, Udemy, Khan Academy, Duolingo, Pluralsight'];
     marketSize: '$250 B global education market';
-    growthRate: '95% annual growth';
+    growthRate: '95% annual growth';}
     variant: 'ai-education-enterprise'}
     contactInfo: {}
       mobile: '+1 302 464 0950';

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowLeft, TrendingUp, CheckCircle } from 'lucide-react';
-const CaseStudiesPage: React.FC = () => {
-  const caseStudies = [
+const CaseStudiesPage: React.FC = () => {;
+const caseStudies = [
     {
       id: 1,
       title: 'E-commerce Platform Transformation',
@@ -14,7 +14,7 @@ const CaseStudiesPage: React.FC = () => {
         roi: '340%',
         conversion: '+85%',
         costReduction: '-65%',
-        revenue: '+$2.3M'
+        revenue: '+$2.3M'}
       },
       image: '🛒',
       description: 'Transformed a struggling e-commerce platform using AI-driven personalization and dynamic pricing strategies.'
@@ -30,7 +30,7 @@ const CaseStudiesPage: React.FC = () => {
         roi: '280%',
         processingTime: '-80%',
         accuracy: '+95%',
-        costSavings: '$1.8M'
+        costSavings: '$1.8M'}
       },
       image: '🏦',
       description: 'Automated complex financial processes using advanced AI algorithms for document processing and risk assessment.'
@@ -46,7 +46,7 @@ const CaseStudiesPage: React.FC = () => {
         roi: '420%',
         patientOutcomes: '+70%',
         efficiency: '+90%',
-        costSavings: '$3.2M'
+        costSavings: '$3.2M'}
       },
       image: '🏥',
       description: 'Revolutionized healthcare data management with AI-driven analytics and predictive treatment models.'
@@ -62,7 +62,7 @@ const CaseStudiesPage: React.FC = () => {
         roi: '310%',
         efficiency: '+75%',
         defects: '-90%',
-        downtime: '-85%'
+        downtime: '-85%'}
       },
       image: '🏭',
       description: 'Optimized manufacturing processes using AI for predictive maintenance and automated quality control.'
@@ -105,7 +105,7 @@ const CaseStudiesPage: React.FC = () => {
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {caseStudies.map((study) => (
+              {caseStudies.map((study) => (}
                 <div key={study.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-200">
                   <div className="p-8">
                     <div className="flex items-center mb-4">
@@ -222,3 +222,6 @@ const CaseStudiesPage: React.FC = () => {
   );
 };
 export default CaseStudiesPage;
+
+
+</div></div></div>

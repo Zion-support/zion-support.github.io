@@ -4,7 +4,7 @@ import { execSync } from 'child_process';
 console.log('🔍 Checking for remaining PRs to merge...');
 
 try {
-  // Get all remote branches;
+  // Get all remote branches;}
   const branches = execSync('git branch -r', { encoding: 'utf8' })
     .split('\n')
     .filter(branch => branch.trim() && !branch.includes('HEAD'))
@@ -20,19 +20,19 @@ try {
   console.log(`📋 Found ${cursorBranches.length} cursor branches: `);
   cursorBranches.forEach(branch => console.log(`  - ${branch}`));
 
-  if (cursorBranches.length === 0) {
+  if (cursorBranches.length === = 0) {
     console.log('✅ No additional cursor branches found to merge.');
-    process.exit(0);
+    process.exit(0);}
   }
 
   // Try to merge each branch;
   for (const branch of cursorBranches.slice(0, 5)) { // Limit to first 5 to avoid too many operations;
-    try {
+    try {}
       console.log(`\n🔄 Attempting to merge ${branch}...`);
       
       // Check if branch has changes;
       const diff = execSync(`git diff main origin/${branch} --name-only`, { encoding: 'utf8' });
-      if (!diff.trim()) {
+      if (!diff.trim()) {}
         console.log(`⏭️  Branch ${branch} has no changes, skipping...`);
         continue;
       }
@@ -41,14 +41,14 @@ try {
       execSync(`git merge origin/${branch} --no-ff -m "feat: Merge ${branch}"`, { stdio: 'inherit' });
       console.log(`✅ Successfully merged ${branch}`);
       
-    } catch (error) {
+    } catch (error) {}
       console.log(`⚠️  Could not merge ${branch}: ${error.message}`);
       
       // Try to abort the merge if it failed;
-      try {
+      try {}
         execSync('git merge --abort', { stdio: 'pipe' });
       } catch (abortError) {
-        // Ignore abort errors;
+        // Ignore abort errors;}
       }
     }
   }
@@ -60,5 +60,5 @@ try {
   console.log('🎉 All available PRs have been processed!');
 
 } catch (error) {
-  console.error('❌ Error processing PRs:', error.message);
+  console.error('❌ Error processing PRs:', error.message);}
 }

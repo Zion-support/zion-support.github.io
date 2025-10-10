@@ -4,28 +4,24 @@ import { Helmet } from 'react-helmet-async';
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
-const ContactPage: React.FC = () => {
-  const [formData, setFormData] = useState({
+const ContactPage: React.FC = () => {;
+const [formData, setFormData] = useState({
     name: '',
     email: '',
     company: '',
     phone: '',
     service: '',
-    message: ''
+    message: ''}
   });
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
+const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-
-  const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData(prev => ({
       ...prev,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value}
     }));
   }, []);
-
-  const handleSubmit = useCallback(async (e: React.FormEvent) => {
+const handleSubmit = useCallback(async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
@@ -39,12 +35,12 @@ const ContactPage: React.FC = () => {
         company: '',
         phone: '',
         service: '',
-        message: ''
+        message: ''}
       });
     } catch (error) {
-      setSubmitStatus('error');
+      setSubmitStatus('error');}
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false);}
     }
   }, []);
 
@@ -61,7 +57,7 @@ const ContactPage: React.FC = () => {
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' } } />
         <div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             Get in
@@ -84,17 +80,17 @@ const ContactPage: React.FC = () => {
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
               <h2 className="text-3xl font-bold text-white mb-6">Send us a message</h2>
               
-              {submitStatus === 'success' && (
+              {submitStatus === = 'success' && (
                 <div className="mb-6 p-4 bg-green-500/20 border border-green-500/30 rounded-lg flex items-center">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
                   <span className="text-green-400">Message sent successfully!</span>
-                </div>
+                </div>}
               )}
 
-              {submitStatus === 'error' && (
+              {submitStatus === = 'error' && (
                 <div className="mb-6 p-4 bg-red-500/20 border border-red-500/30 rounded-lg">
                   <span className="text-red-400">Failed to send message. Please try again.</span>
-                </div>
+                </div>}
               )}
 
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -107,9 +103,7 @@ const ContactPage: React.FC = () => {
                       type="text"
                       id="name"
                       name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      required
+                      value={formData.name} onChange={handleChange} required
                       className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     />
                   </div>
@@ -121,9 +115,7 @@ const ContactPage: React.FC = () => {
                       type="email"
                       id="email"
                       name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
+                      value={formData.email} onChange={handleChange} required
                       className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     />
                   </div>
@@ -138,9 +130,7 @@ const ContactPage: React.FC = () => {
                       type="text"
                       id="company"
                       name="company"
-                      value={formData.company}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                      value={formData.company} onChange={handleChange} className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     />
                   </div>
                   <div>
@@ -151,9 +141,7 @@ const ContactPage: React.FC = () => {
                       type="tel"
                       id="phone"
                       name="phone"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                      value={formData.phone} onChange={handleChange} className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     />
                   </div>
                 </div>
@@ -165,9 +153,7 @@ const ContactPage: React.FC = () => {
                   <select
                     id="service"
                     name="service"
-                    value={formData.service}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    value={formData.service} onChange={handleChange} className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                   >
                     <option value="">Select a service</option>
                     <option value="ai-solutions">AI Solutions</option>
@@ -185,10 +171,7 @@ const ContactPage: React.FC = () => {
                   <textarea
                     id="message"
                     name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    rows={5}
-                    required
+                    value={formData.message} onChange={handleChange} rows={5} required
                     className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     placeholder="Tell us about your project..."
                   />
@@ -196,8 +179,7 @@ const ContactPage: React.FC = () => {
 
                 <button
                   type="submit"
-                  disabled={isSubmitting}
-                  className="w-full bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 flex items-center justify-center"
+                  disabled={isSubmitting} className="w-full bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 flex items-center justify-center"
                 >
                   {isSubmitting ? (
                     <>
@@ -208,7 +190,7 @@ const ContactPage: React.FC = () => {
                     <>
                       <Send className="w-5 h-5 mr-2" />
                       Send Message
-                    </>
+                    </>}
                   )}
                 </button>
               </form>
@@ -281,3 +263,21 @@ const ContactPage: React.FC = () => {
 };
 
 export default ContactPage;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>

@@ -10,20 +10,20 @@
   contactInfo: unknown;
     mobile: string;
     email: string;
-export interface Ultimate2026Service {;,
+export interface Ultimate2026Service {;}
     address: string}
 };
   id: string;
   name: string;
   tagline: string;
-  price: string,,
+  price: string,
   description: string;
   features: string[];
   link: string;
   category: string;
   realImplementation: boolean;
   contactInfo: {,
-    mobile: string;
+    mobile: string;}
     email: string}
     address: string}
       address: "364 E Main St STE 1008 Middletown DE 19709",
@@ -59,7 +59,7 @@ export interface Ultimate2026Service {/* TODO: Fix JSX expression */}
   taglin,
   e: string;
   pric,
-  e: string,,
+  e: string,
   descriptio,
   n: string;
   feature,
@@ -222,7 +222,6 @@ export const,
     }
   }
 ];
-;
     i,"
   d: "2026-ultimate-service",
     nam,"

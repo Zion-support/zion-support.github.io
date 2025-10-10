@@ -3,9 +3,8 @@ import { Music, Play, Download, Share, Star, CheckCircle, Zap, Clock, Users, Awa
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-
-const AIMusicCompositionPage: React.FC = () => {
-  const features = [
+const AIMusicCompositionPage: React.FC = () => {;
+const features = [
     'AI Composition',
     'Multiple Genres',
     'Custom Length',
@@ -17,8 +16,7 @@ const AIMusicCompositionPage: React.FC = () => {
     'Tempo Control',
     'Export Options'
   ];
-
-  const benefits = [
+const benefits = [
     'Unlimited music',
     'No copyright issues',
     'Custom compositions',
@@ -26,28 +24,27 @@ const AIMusicCompositionPage: React.FC = () => {
     'Fast generation',
     'Cost-effective'
   ];
-
-  const pricingPlans = [
+const pricingPlans = [
     {
       name: 'Starter',
       price: '$99',
       period: '/month',
       features: ['10 tracks/month', 'MP3 export', 'Basic genres', 'Email support'],
-      popular: false
+      popular: false}
     },
     {
       name: 'Professional',
       price: '$199',
       period: '/month',
       features: ['Unlimited tracks', 'WAV/MP3 export', 'All genres', 'API access', 'Priority support'],
-      popular: true
+      popular: true}
     },
     {
       name: 'Enterprise',
       price: '$399',
       period: '/month',
       features: ['Everything in Pro', 'Custom genres', 'White-label', 'Dedicated support', 'Commercial license'],
-      popular: false
+      popular: false}
     }
   ];
 
@@ -56,8 +53,7 @@ const AIMusicCompositionPage: React.FC = () => {
       <SEOOptimizer
         title="AI Music Composer - Generate Royalty-Free Music with AI | Zion Tech Group"
         description="Create professional, royalty-free music and soundtracks with AI Music Composer. Generate custom compositions in any genre starting at $99/month."
-        keywords={['AI music composition', 'royalty-free music', 'AI music generation', 'background music', 'music automation', 'AI composer']}
-        canonicalUrl="https://ziontechgroup.com/ai-music-composition"
+        keywords={['AI music composition', 'royalty-free music', 'AI music generation', 'background music', 'music automation', 'AI composer']} canonicalUrl="https://ziontechgroup.com/ai-music-composition"
       />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -102,7 +98,7 @@ const AIMusicCompositionPage: React.FC = () => {
               AI Music Generation Features
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {features.map((feature, index) => (
+              {features.map((feature, index) => (}
                 <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
@@ -119,7 +115,7 @@ const AIMusicCompositionPage: React.FC = () => {
               Why Choose AI Music Composer?
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
+              {benefits.map((benefit, index) => (}
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Zap className="w-8 h-8 text-white" />
@@ -136,14 +132,14 @@ const AIMusicCompositionPage: React.FC = () => {
               Simple, Transparent Pricing
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {pricingPlans.map((plan, index) => (
-                <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
+              {pricingPlans.map((plan, index) => (}
+                <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''} `}>
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <div className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-semibold">
                         Most Popular
                       </div>
-                    </div>
+                    </div>}
                   )}
                   <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
@@ -153,7 +149,7 @@ const AIMusicCompositionPage: React.FC = () => {
                     </div>
                   </div>
                   <ul className="space-y-3 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
+                    {plan.features.map((feature, featureIndex) => (}
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                         {feature}
@@ -165,8 +161,7 @@ const AIMusicCompositionPage: React.FC = () => {
                     className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
                       plan.popular
                         ? 'cyber-button'
-                        : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
-                    }`}
+                        : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'} }`}
                   >
                     Get Started
                   </a>
@@ -209,3 +204,10 @@ const AIMusicCompositionPage: React.FC = () => {
 };
 
 export default AIMusicCompositionPage;
+
+
+
+
+
+
+</div></div></div></div></div></div></div>

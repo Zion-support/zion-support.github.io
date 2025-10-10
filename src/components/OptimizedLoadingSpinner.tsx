@@ -6,7 +6,7 @@ interface OptimizedLoadingSpinnerProps {
   className?: string;
 
 
-'use client';
+'use client';}
 interface OptimizedLoadingSpinnerProps {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -24,8 +24,7 @@ const,
       l,
   g: 'w-12 h-12'
     };
-    const colorClasses = {/* TODO: Fix JSX expression */}
-  O: Add content;}
+    const colorClasses ={/* TODO: Fix JSX expression */} O: Add content;}
 };
   primar,
   y: 'text-cyan-400',
@@ -106,20 +105,15 @@ className="opacity-75""
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';
 
 export default OptimizedLoadingSpinner;
-
-
 const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
   ({ size = 'md', color = 'primary', className = '' }) => {
       sm: 'w-4 h-4',
       md: 'w-8 h-8',
-      lg:     ,
+      lg:     }
 $4};
-
-    const colorClasses = {
-      primary: 'text-cyan-400',
+const colorClasses ={primary: 'text-cyan-400',
       secondary: 'text-purple-400',
-      white:     ,
-$4};
+      white:     } $4};
 
     return (
       <div
@@ -154,3 +148,6 @@ $4};
 
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';
 export default OptimizedLoadingSpinner;
+
+
+</div></div>

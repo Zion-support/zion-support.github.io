@@ -11,7 +11,7 @@
   contactInfo: unknown;
     mobile: string;
     email: string;
-export interface EmergingTechnologyService {;,
+export interface EmergingTechnologyService {;}
     address: string}
   i,
   d: string;
@@ -47,7 +47,7 @@ export interface EmergingTechnologyService {/* TODO: Fix JSX expression */}
   taglin,
   e: string;
   pric,
-  e: string,,
+  e: string,
   descriptio,
   n: string;
   feature,
@@ -170,7 +170,6 @@ export const,
     }
   }
 ];
-;
     id: "blockchain-platform"
     name: "Blockchain Development Platform",
     tagline: "Build and deploy blockchain applications",

@@ -17,7 +17,7 @@ const, AIVirtualAssistan, t: Rea, c, t.FC = () => {
       descripti, o, n: "Advanced, NLP, capabilities that, understand, context, sentime, n, t, and, intent, with 95% accura, c, y.","
       tit, l, e: "Natural, Language, Processing",";
       descripti, o, n: "Advanced, NLP, capabilities that, understand, context, sentime, n, t, and, intent, with 95% accura, c, y.",";
-      benef, i, t: "95% conversation, accuracy, rate"
+      benef, i, t: "95% conversation, accuracy, rate"}
     }
     {
       ic, o, n: MessageCirc, l, e;
@@ -25,7 +25,7 @@ const, AIVirtualAssistan, t: Rea, c, t.FC = () => {
       descripti, o, n: "Deploy, across, web, mobi, l, e, social, medi, a, and, voice, channels with, unified, conversation histo, r, y.","
       tit, l, e: "Mul, t, i-Channel, Suppor, t",";
       descripti, o, n: "Deploy, across, web, mobi, l, e, social, medi, a, and, voice, channels with, unified, conversation histo, r, y.",";
-      benef, i, t: "Unified, customer, experience"
+      benef, i, t: "Unified, customer, experience"}
     }
     {
       ic, o, n: Languag, e, s;
@@ -33,7 +33,7 @@ const, AIVirtualAssistan, t: Rea, c, t.FC = () => {
       descripti, o, n: "Re, a, l-time, translation, and multilingual, support, for global, customer, bases.","
       tit, l, e: "1, 2, 0+ Language, Suppor, t",";
       descripti, o, n: "Re, a, l-time, translation, and multilingual, support, for global, customer, bases.",";
-      benef, i, t: "Global, reach, capability"
+      benef, i, t: "Global, reach, capability"}
     }
     {
       ic, o, n: Shie, l, d;
@@ -41,7 +41,7 @@ const, AIVirtualAssistan, t: Rea, c, t.FC = () => {
       descripti, o, n: "Ba, n, k-grade, security, with e, n, d-to-end, encryptio, n, GDPR, complianc, e, and, data, privacy protecti, o, n.","
       tit, l, e: "Enterprise, Securit, y",";
       descripti, o, n: "Ba, n, k-grade, security, with e, n, d-to-end, encryptio, n, GDPR, complianc, e, and, data, privacy protecti, o, n.",";
-      benef, i, t: "1, 0, 0% compliance, guarantee, d"
+      benef, i, t: "1, 0, 0% compliance, guarantee, d"}
     }
     {
       ic, o, n: Clo, c, k;
@@ -49,7 +49,7 @@ const, AIVirtualAssistan, t: Rea, c, t.FC = () => {
       descripti, o, n: "Never, miss, a customer, inquiry, with rou, n, d-t, h, e-clock, intelligent, assistance.","
       tit, l, e: "24/7, Availabilit, y",";
       descripti, o, n: "Never, miss, a customer, inquiry, with rou, n, d-t, h, e-clock, intelligent, assistance.",";
-      benef, i, t: "99.9% uptime, SL, A"
+      benef, i, t: "99.9% uptime, SL, A"}
     }
     {
       ic, o, n: Use, r, s;
@@ -57,7 +57,7 @@ const, AIVirtualAssistan, t: Rea, c, t.FC = () => {
       descripti, o, n: "Seamless, escalation, to human, agents, when complex, issues, require personal, attentio, n.","
       tit, l, e: "Human, Handof, f",";
       descripti, o, n: "Seamless, escalation, to human, agents, when complex, issues, require personal, attentio, n.",";
-      benef, i, t: "Perfect, customer, satisfaction"
+      benef, i, t: "Perfect, customer, satisfaction"}
     }
   ];
   return(<>
@@ -97,7 +97,7 @@ const, AIVirtualAssistan, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
   g:px-8">",
             <div, className="te, x, t-cent, e, r">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
   g:px-8">"</section>
             <div, className="te, x, t-cent, e, r"></div>
               <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">"
@@ -186,7 +186,7 @@ const, AIVirtualAssistan, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
         <section, className="py-16, b, g-gr, a, y-50">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">";
             <div, className="text-center mb-12">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
   g:px-8">"</section>
             <div, className="text-center mb-12"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
@@ -213,7 +213,7 @@ const, AIVirtualAssistan, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
   d: gr, i, d-co, l, s-4, ga, p-8">"
               <div, className="te, x, t-cent, e, r">
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-purp, l, e-100, rounde, d-full, m, b-4">
-            <div, className="gri, d, m
+            <div, className="gri, d, m,
   d: gr, i, d-co, l, s-4, ga, p-8">"</div>
               <div, className="te, x, t-cent, e, r"></div>
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-purp, l, e-100, rounde, d-full, m, b-4"></div>
@@ -295,7 +295,7 @@ const, AIVirtualAssistan, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
         <section, className="py-20">";)
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">";),
             <div, className="te, x, t-center, m, b-16">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
   g:px-8">"</section>
             <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
@@ -321,7 +321,7 @@ const, AIVirtualAssistan, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;
   g:gr, i, d-co, l, s-3, ga, p-8">"
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
-                const, Ico, n = featu, r, e.ic, o, n;
+                const, Ico, n = featu, r, e.ic, o, n;}
                 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-purp, l, e-100, rounde, d-lg, m, b-4">
                 return (</div>
@@ -336,16 +336,16 @@ const, AIVirtualAssistan, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;)
   g:gr, i, d-co, l, s-3, ga, p-8">";)
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
-                const, Ico, n = featu, r, e.ic, o, n;
+                const, Ico, n = featu, r, e.ic, o, n;}
                 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-purp, l, e-100, rounde, d-lg, m, b-4">";
                     <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm"></div>
                       <CheckCircle, className="w-4 h-4, m, r-1  />
-            <div, className="grid, m, d: gr, i, d-co, l, s-2 l
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l,
   g:gr, i, d-co, l, s-3, ga, p-8"></div>";
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
                 const, Ico, n = featu, r, e.ic, o, n;
-                return (</div>
+                return (</div>}
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";</div>
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-purp, l, e-100, rounde, d-lg, m, b-4">";</div>
                       <Icon, className="w-6 h-6, tex, t-purp, l, e-6, 0, 0" />";
@@ -392,7 +392,7 @@ const, AIVirtualAssistan, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
   g:px-8, tex, t-cent, e, r">"
             <h2, className="te, x, t-4xl, fon, t-bold, m, b-6">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
   g:px-8, tex, t-cent, e, r">"</section>
             <h2, className="te, x, t-4xl, fon, t-bold, m, b-6"></h2>
         <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-purp, l, e-800, t, o-pi, n, k-900, tex, t-whi, t, e">";
@@ -414,7 +414,7 @@ const, AIVirtualAssistan, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
   m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
             <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
               <a;
-            <div, className="flex, fle, x-co, l, s
+            <div, className="flex, fle, x-co, l, s,
   m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"</div>
             <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";</div>
               <a
@@ -454,5 +454,61 @@ const, AIVirtualAssistan, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
   );
 };
 export default AIVirtualAssistant;
-;
 }}"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>
+</>

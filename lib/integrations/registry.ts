@@ -4,7 +4,6 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
 ,
 export const PROVIDERS: IntegrationProviderMeta[] = [,
 export const PROVIDERS: IntegrationProviderMeta[] = [,
-,
 export const PROVIDERS: IntegrationProviderMeta[] = [,
   { id: 'salesforce', name: 'Salesforce', category: 'crm', description: 'Enterprise CRM' },
   { id: 'hubspot', name: 'HubSpot', category: 'crm', description: 'Marketing & Sales CRM' },
@@ -40,9 +39,7 @@ export const,
   PROVIDERS: IntegrationProviderMeta[] = [
 
 export const PROVIDERS: IntegrationProviderMeta[] = [,
-,
 export const PROVIDERS: IntegrationProviderMeta[] = [,
-,
 export const PROVIDERS: IntegrationProviderMeta[] = [,
   { id: 'bamboohr', name: 'BambooHR', category: 'ats', description: 'HRIS & ATS' },
 export const,
@@ -69,7 +66,7 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
     category: 'crm',
     description: 'Enterprise CRM',
 export const,
-  PROVIDERS: IntegrationProviderMeta[] = [
+  PROVIDERS: IntegrationProviderMeta[] = [}
   {/* TODO: Fix JSX expression */}
   },
   {/* TODO: Fix JSX expression */}
@@ -113,13 +110,13 @@ export const,
   n: 'HRIS & ATS' }
 ];
 
-export function getProviderById(id: string): IntegrationProviderMeta | undefined {,
+export function getProviderById(id: string): IntegrationProviderMeta | undefined {}
     description: 'HRIS & ATS'}];
 
 export function getProviderById(id: string;)): IntegrationProviderMeta | undefined {,
-  return PROVIDERS.find(p => p.id === id);
+  return PROVIDERS.find(p => p.id === = id);
 
-export function getProviderById(i)
+export function getProviderById(i)}
   d: string): IntegrationProviderMeta | undefined {/* TODO: Fix JSX expression */}
   }];
 

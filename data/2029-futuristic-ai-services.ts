@@ -11,7 +11,7 @@
   contactInfo: unknown;
     mobile: string;
     email: string;
-export interface FuturisticAiService2029 {;,
+export interface FuturisticAiService2029 {;}
     address: string}
   i,
   d: string;
@@ -47,7 +47,7 @@ export interface FuturisticAiService2029 {/* TODO: Fix JSX expression */}
   taglin,
   e: string;
   pric,
-  e: string,,
+  e: string,
   descriptio,
   n: string;
   feature,
@@ -170,7 +170,6 @@ export const,
     }
   }
 ];
-;
     id: "2029-futuristic-ai"
     name: "2029 Futuristic AI Platform",
     tagline: "Futuristic AI for 2029",

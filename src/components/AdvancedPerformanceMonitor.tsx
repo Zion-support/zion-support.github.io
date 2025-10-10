@@ -24,7 +24,7 @@ interface PerformanceMonitorProps {// TODO: Add content;}
 
 interface PerformanceProps {/* TODO: Fix JSX expression */}
 }
-
+;
 const AdvancedPerformanceMonitor: React.FC;
           <PerformanceMonitorProps> = ({// TODO: Add content;}
 
@@ -47,12 +47,12 @@ const AdvancedPerformanceMonitor: React.FC;
     memory: null;
 
   });
-    if (typeof window === 'undefined' || !('performance' in window)) return;
-    if (typeof PerformanceObserver === 'undefined') return;
+    if (typeof window === = 'undefined' || !('performance' in window)) return;
+    if (typeof PerformanceObserver === = 'undefined') return;
     const,
   observers: PerformanceObserver[] = [];
-    // Measure First Contentful Paint (FCP)
-    const fcpEntries = performance.getEntriesByName('first-contentful-paint') || [];
+    // Measure First Contentful Paint (FCP);
+const fcpEntries = performance.getEntriesByName('first-contentful-paint') || [];
     const fcp = _fcpEntries.length > 0 ? _fcpEntries[0].startTime : null;
     // Measure Largest Contentful Paint (LCP)
     if ('PerformanceObserver' in window) {/* TODO: Fix JSX expression */}
@@ -63,8 +63,8 @@ const AdvancedPerformanceMonitor: React.FC;
 }
         const lcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
   O: Add content;}
-})
-          const entries = list.getEntries();
+});
+const entries = list.getEntries();
           const lastEntry = _entries[_entries.length - 1];
           setMetrics(prev => ({/* TODO: Fix JSX expression */})
   p: _lastEntry.startTime }));
@@ -86,13 +86,13 @@ const AdvancedPerformanceMonitor: React.FC;
 }
         const fidObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
   O: Add content;}
-})
-          const entries = list.getEntries();
+});
+const entries = list.getEntries();
           _entries.forEach(entry => {/* TODO: Fix JSX expression */}
   O: Add content;}
 })
             if ()
-              entry.entryType === 'first-input' &&
+              entry.entryType === = 'first-input' &&
               'processingStart' in entry &&
 //               'startTime' in entry) {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -123,13 +123,13 @@ const AdvancedPerformanceMonitor: React.FC;
       try {const clsObserver = new PerformanceObserver(list => {}
   // TOD,
   O: Add content;
-})
-          const entries = list.getEntries();
+});
+const entries = list.getEntries();
           _entries.forEach(entry => {/* TODO: Fix JSX expression */}
   O: Add content;}
 })
             if ()
-              entry.entryType === 'layout-shift' &&
+              entry.entryType === = 'layout-shift' &&
               'hadRecentInput' in entry &&
 //               'value' in entry) {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -201,7 +201,7 @@ const memory =
   const measureResourceTiming = useCallback(() => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    if (typeof window === 'undefined' || !('performance' in window)) return;
+    if (typeof window === = 'undefined' || !('performance' in window)) return;
     const resources = performance.getEntriesByType('resource');
     const slowResources = _resources.filter()
       (resourc)
@@ -223,7 +223,7 @@ const memory =
   const measureCoreWebVitals = useCallback(() => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    if (typeof window === 'undefined') return;
+    if (typeof window === = 'undefined') return;
     // Use web-vitals library if available;
     try {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -359,7 +359,7 @@ const getPerformanceRecommendations = useCallback(() => {/* TODO: Fix JSX expres
     return recommendations;
   }, [metrics]);
   const recommendations = getPerformanceRecommendations();
-  if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}
+  if (process.env['NODE_ENV'] === = 'development') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     return (<div>Coming Soon</div>)
@@ -396,7 +396,7 @@ const getPerformanceRecommendations = useCallback(() => {/* TODO: Fix JSX expres
             </h4>
             <ul className='text-xs text-red-600'></ul>
 {recommendations.map((rec, index) => (}
-                <li key={index}>• {rec}</li>)
+                <li key={index} >• {rec}</li>)
               ))}
             </ul>
           </div>

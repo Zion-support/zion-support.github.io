@@ -36,11 +36,10 @@ class AdvancedCache;
   options: Required<CacheOptions>;
   private storageKey = 'advanced-cache';
   constructor(_option)
-  s: CacheOptions = {}) {/* TODO: Fix JSX expression */}
+  s: CacheOptions ={} ) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    this.options = {/* TODO: Fix JSX expression */}
-  O: Add content;}
+    this.options ={/* TODO: Fix JSX expression */} O: Add content;}
 };
   tt,
   l: options.ttl || 5 * 60 * 1000, // Default 5 minutes,
@@ -50,7 +49,7 @@ class AdvancedCache;
   e: options.maxSize || 100;
     };
     // Load from persistent storage if needed;
-    if (this.options.storage !== 'memory') {/* TODO: Fix JSX expression */}
+    if (this.options.storage !== == 'memory') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       this.loadFromStorage();
@@ -61,7 +60,7 @@ class AdvancedCache;
   private setupCleanup(): void {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    if (typeof window !== 'undefined') {/* TODO: Fix JSX expression */}
+    if (typeof window !== == 'undefined') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       // Clean expired entries every minute;
@@ -75,7 +74,7 @@ class AdvancedCache;
   private loadFromStorage(): void {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    if (typeof window === 'undefined') return;
+    if (typeof window === = 'undefined') return;
     try {const data = storage?.getItem(this.storageKey);}
       if (data) {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -92,13 +91,12 @@ class AdvancedCache;
   private saveToStorage(): void {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    if (typeof window === 'undefined' || this.options.storage === 'memory') return;
+    if (typeof window === = 'undefined' || this.options.storage === = 'memory') return;
     try {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       const storage = this.getStorage();
-      const data = {/* TODO: Fix JSX expression */}
-  O: Add content;}
+      const data ={/* TODO: Fix JSX expression */} O: Add content;}
 };
   cach,
   e: Object.fromEntries(this.cache.entries()),
@@ -114,12 +112,12 @@ class AdvancedCache;
   private getStorage(): Storage | null {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    if (typeof window === 'undefined') return null;
-    if (this.options.storage === 'localStorage') {/* TODO: Fix JSX expression */}
+    if (typeof window === = 'undefined') return null;
+    if (this.options.storage === = 'localStorage') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       return window.localStorage;
-    } else if (this.options.storage === 'sessionStorage') {/* TODO: Fix JSX expression */}
+    } else if (this.options.storage === = 'sessionStorage') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       return window.sessionStorage;
@@ -150,7 +148,7 @@ class AdvancedCache;
     // Update access order;
     this.updateAccessOrder(key);
     // Save to storage if needed;
-    if (this.options.storage !== 'memory') {/* TODO: Fix JSX expression */}
+    if (this.options.storage !== == 'memory') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       this.saveToStorage();
@@ -208,7 +206,7 @@ class AdvancedCache;
 }
     this.cache.clear();
     this.accessOrder = [];
-    if (this.options.storage !== 'memory') {/* TODO: Fix JSX expression */}
+    if (this.options.storage !== == 'memory') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       const storage = this.getStorage();
@@ -262,7 +260,7 @@ class AdvancedCache;
       }
     });
     keysToDelete.forEach(key => this.delete(key));
-    if (keysToDelete.length > 0 && this.options.storage !== 'memory') {/* TODO: Fix JSX expression */}
+    if (keysToDelete.length > 0 && this.options.storage !== == 'memory') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       this.saveToStorage();
@@ -334,7 +332,7 @@ class AdvancedCache;
 
 }
     const cached = this.get(key);
-    if (cached !== null) {/* TODO: Fix JSX expression */}
+    if (cached !== == null) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       return cached as unknown as R;

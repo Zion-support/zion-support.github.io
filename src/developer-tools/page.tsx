@@ -8,15 +8,15 @@ import Footer from '../components/Footer';
 
 
 import { Code, Zap, BarChart, Target, Users, TrendingUp } from 'lucide-react';
-const DeveloperToolsPage: React.FC = () => {
-  const _devTools = [
+const DeveloperToolsPage: React.FC = () => {;
+const _devTools = [
     {
       title: 'AI Code Generator',
       description: 'Generate high-quality code using advanced AI models',
       icon: Code,
       features: ['Multi-language Support', 'Code Completion', 'Bug Detection', 'Documentation Generation'],
       benefits: ['Increase Productivity by 60%', 'Reduce Coding Time by 50%', 'Improve Code Quality', 'Learn Best Practices'],
-      price:     ,
+      price:     }
 $4},
     {
       title: 'API Testing Suite',
@@ -24,7 +24,7 @@ $4},
       icon: Zap,
       features: ['Automated Testing', 'Performance Monitoring', 'Load Testing', 'API Documentation'],
       benefits: ['Ensure API Reliability', 'Reduce Testing Time by 70%', 'Improve Performance', 'Prevent Downtime'],
-      price:     ,
+      price:     }
 $4},
     {
       title: 'Database Management Tool',
@@ -32,7 +32,7 @@ $4},
       icon: BarChart,
       features: ['Query Optimization', 'Performance Monitoring', 'Backup Management', 'Schema Design'],
       benefits: ['Improve Database Performance', 'Reduce Query Time by 80%', 'Automate Backups', 'Prevent Data Loss'],
-      price:     ,
+      price:     }
 $4},
     {
       title: 'DevOps Automation',
@@ -40,7 +40,7 @@ $4},
       icon: Target,
       features: ['CI/CD Pipelines', 'Container Management', 'Monitoring', 'Deployment Automation'],
       benefits: ['Faster Deployments', 'Reduce Errors by 90%', 'Improve Collaboration', 'Scale Efficiently'],
-      price:     ,
+      price:     }
 $4},
     {
       title: 'Code Review Assistant',
@@ -48,7 +48,7 @@ $4},
       icon: Users,
       features: ['Automated Reviews', 'Security Scanning', 'Code Standards', 'Team Collaboration'],
       benefits: ['Improve Code Quality', 'Catch Bugs Early', 'Enforce Standards', 'Reduce Review Time'],
-      price:     ,
+      price:     }
 $4},
     {
       title: 'Performance Profiler',
@@ -56,7 +56,7 @@ $4},
       icon: TrendingUp,
       features: ['Real-time Monitoring', 'Performance Analysis', 'Bottleneck Detection', 'Optimization Suggestions'],
       benefits: ['Improve App Performance', 'Reduce Load Times', 'Optimize Resources', 'Enhance User Experience'],
-      price:     ,
+      price:     }
 $4}
   ];
 
@@ -120,7 +120,7 @@ $4}
   const _devTools = [
   // TOD,
   O: Add items;
-];;
+];
     {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
@@ -290,7 +290,7 @@ $4}
               Our Developer Tools
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {devTools.map((tool, index) => (
+              {devTools.map((tool, index) => (}
                 <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 hover:scale-105">
                   <div className="text-center mb-6">
                     <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
@@ -307,7 +307,7 @@ $4}
                   <div className="mb-6">
                     <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
                     <ul className="space-y-2">
-                      {tool.features.map((feature, featureIndex) => (
+                      {tool.features.map((feature, featureIndex) => (}
                         <li key={featureIndex} className="flex items-center text-sm text-gray-600">
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
         {/* Tools Grid */}"
@@ -349,7 +349,7 @@ $4}
                   <div className="mb-6">
                     <h4 className="font-semibold text-gray-900 mb-3">Benefits:</h4>
                     <ul className="space-y-1">
-                      {tool.benefits.map((benefit, benefitIndex) => (
+                      {tool.benefits.map((benefit, benefitIndex) => (}
                         <li key={benefitIndex} className="text-sm text-gray-600 flex items-center">
                           <TrendingUp className="w-3 h-3 text-blue-500 mr-2 flex-shrink-0" />
                   </div>"
@@ -368,7 +368,7 @@ $4}
 
                   <div className="text-center">
                     <a
-                      href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${tool.title}`}
+                      href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${tool.title} `}
                       className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all inline-block"
                     >
                       Get Started Now
@@ -376,8 +376,7 @@ $4}
                   </div>"
                   <div className="text-center"></div>
                     <a></a>
-                      href={/* TODO: Fix JSX expression */}
-  o:kleber@ziontechgroup.com?subject=Interest in ${tool.title}`}"
+                      href={/* TODO: Fix JSX expression */} o:kleber@ziontechgroup.com?subject=Interest in ${tool.title}`}"
                       className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium,
   hover:from-purple-700,"
   hover:to-blue-700 transition-all inline-block"
@@ -474,3 +473,5 @@ $4}
 export default DeveloperToolsPage;
 
 
+
+</>

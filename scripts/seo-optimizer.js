@@ -6,18 +6,17 @@ import { glob } from 'glob';
 class SEOOptimizer {
   constructor() {
     this.optimizations = [];
-    this.issues = [];
+    this.issues = [];}
   }
 
   // Check meta tags;
   async checkMetaTags() {
     console.log('🏷️  Checking meta tags...');
-    
-    const htmlFiles = await glob('dist/**/*.html');
+const htmlFiles = await glob('dist/**/*.html');
     
     for (const file of htmlFiles) {
-      try {
-        const content = fs.readFileSync(file, 'utf8');
+      try {;
+const content = fs.readFileSync(file, 'utf8');
         
         // Check for essential meta tags;
         const hasTitle = content.includes('<title>');
@@ -28,7 +27,7 @@ class SEOOptimizer {
         const hasOgDescription = content.includes('property="og:description"');
         const hasOgImage = content.includes('property="og:image"');
         const hasTwitterCard = content.includes('name="twitter: card"');
-        ,
+        }
         if (!hasTitle) this.issues.push(`${file}: Missing title tag`);
         if (!hasDescription) this.issues.push(`${file}: Missing meta description`);
         if (!hasViewport) this.issues.push(`${file}: Missing viewport meta tag`);
@@ -38,7 +37,7 @@ class SEOOptimizer {
         if (!hasOgImage) this.issues.push(`${file}: Missing Open Graph image`);
         if (!hasTwitterCard) this.issues.push(`${file}: Missing Twitter card meta`);
         
-      } catch (error) {
+      } catch (error) {}
         console.error(`   ❌ Error processing ${file}:`, error.message);
       }
     }
@@ -50,37 +49,35 @@ class SEOOptimizer {
   // Check heading structure;
   async checkHeadingStructure() {
     console.log('📝 Checking heading structure...');
-    
-    const tsxFiles = await glob('src/**/*.tsx', {)
-      ignore: ['**/node_modules/**', '**/dist/**'])
+const tsxFiles = await glob('src/**/*.tsx', {)
+      ignore: ['**/node_modules/**', '**/dist/**'])}
     });
-
-    let headingIssues = 0;
+let headingIssues = 0;
     for (const file of tsxFiles) {
-      try {
-        const content = fs.readFileSync(file, 'utf8');
+      try {;
+const content = fs.readFileSync(file, 'utf8');
         
         // Check for h1 tags;
         const h1Count = (content.match(/<h1/g) || []).length;
         const h2Count = (content.match(/<h2/g) || []).length;
         const h3Count = (content.match(/<h3/g) || []).length;
         
-        if (h1 Count === 0) {
+        if (h1 Count === = 0) {}
           this.issues.push(`${file}: No h1 tag found`);
           headingIssues++;
         }
-        if (h1 Count ></h3></h2></h1> 1) {
+        if (h1 Count ></h3></h2></h1> 1) {}
           this.issues.push(`${file}: Multiple h1 tags found (${h1 Count})`);
           headingIssues++;
         }
         
-      } catch (error) {
+      } catch (error) {}
         console.error(`   ❌ Error processing ${file}:`, error.message);
       }
     }
     
     console.log(`   ✅ Checked ${tsxFiles.length} TSX files`);
-    if (headingIssues > 0) {
+    if (headingIssues > 0) {}
       console.log(`   ⚠️  Found ${headingIssues} heading structure issues`);
     }
     this.optimizations.push('Heading structure validation');
@@ -89,32 +86,30 @@ class SEOOptimizer {
   // Check alt attributes;
   async checkAltAttributes() {
     console.log('🖼️  Checking alt attributes...');
-    
-    const tsxFiles = await glob('src/**/*.tsx', {)
-      ignore: ['**/node_modules/**', '**/dist/**'])
+const tsxFiles = await glob('src/**/*.tsx', {)
+      ignore: ['**/node_modules/**', '**/dist/**'])}
     });
-
-    let altIssues = 0;
+let altIssues = 0;
     for (const file of tsxFiles) {
-      try {
-        const content = fs.readFileSync(file, 'utf8');
+      try {;
+const content = fs.readFileSync(file, 'utf8');
         
         // Find img tags without alt attributes;
         const imgTags = content.match(/<img[^>]*>/g) || [];
         for (const imgTag of imgTags) {
-          if (!imgTag.includes('alt=')) {
+          if (!imgTag.includes('alt=')) {}
             this.issues.push(`${file}: Image without alt attribute`);
             altIssues++;
           }
         }
         
-      } catch (error) {
+      } catch (error) {}
         console.error(`   ❌ Error processing ${file}:`, error.message);
       }
     }
     
     console.log(`   ✅ Checked ${tsxFiles.length} TSX files`);
-    if (altIssues > 0) {
+    if (altIssues > 0) {}
       console.log(`   ⚠️  Found ${altIssues} missing alt attributes`);
     }
     this.optimizations.push('Alt attributes validation');
@@ -123,21 +118,19 @@ class SEOOptimizer {
   // Check internal links;
   async checkInternalLinks() {
     console.log('🔗 Checking internal links...');
-    
-    const tsxFiles = await glob('src/**/*.tsx', {)
-      ignore: ['**/node_modules/**', '**/dist/**'])
+const tsxFiles = await glob('src/**/*.tsx', {)
+      ignore: ['**/node_modules/**', '**/dist/**'])}
     });
-
-    let linkCount = 0;
+let linkCount = 0;
     for (const file of tsxFiles) {
-      try {
-        const content = fs.readFileSync(file, 'utf8');
+      try {;
+const content = fs.readFileSync(file, 'utf8');
         
         // Count internal links;
         const internalLinks = content.match(/href=["']\/(?!\/)[^"']*["']/g) || [];
         linkCount += internalLinks.length;
-        
-      } catch (error) {
+        }
+      } catch (error) {}
         console.error(`   ❌ Error processing ${file}:`, error.message);
       }
     }
@@ -149,22 +142,22 @@ class SEOOptimizer {
   // Generate SEO report;
   generateReport() {
     console.log('\n📊 SEO Optimization Report');
-    console.log('');
+    console.log('');}
     console.log(`✅ Optimizations applied: ${this.optimizations.length}`);
-    this.optimizations.forEach((opt, index) => {
+    this.optimizations.forEach((opt, index) => {}
       console.log(`   ${index + 1}. ${opt}`);
     });
     
-    if (this.issues.length > 0) {
+    if (this.issues.length > 0) {}
       console.log(`\n⚠️  Issues found: ${this.issues.length}`);
-      this.issues.slice(0, 10).forEach((issue, index) => {
+      this.issues.slice(0, 10).forEach((issue, index) => {}
         console.log(`   ${index + 1}. ${issue}`);
       });
-      if (this.issues.length > 10) {
+      if (this.issues.length > 10) {}
         console.log(`   ... and ${this.issues.length - 10} more issues`);
       }
     } else {
-      console.log('\n✅ No SEO issues found!');
+      console.log('\n✅ No SEO issues found!');}
     }
     
     console.log('\n🚀 SEO Recommendations: ');
@@ -191,17 +184,17 @@ class SEOOptimizer {
       await this.checkInternalLinks();
       this.generateReport();
       
-      console.log('\n✅ SEO optimization completed!');
+      console.log('\n✅ SEO optimization completed!');}
     } catch (error) {
-      console.error('❌ SEO optimization failed:', error.message);
+      console.error('❌ SEO optimization failed:', error.message);}
     }
   }
 }
 
 // Run the optimizer;
-if (import.meta.url === `file://${process.argv[1]}`) {
-  const optimizer = new SEOOptimizer();
-  optimizer.run();
+if (import.meta.url === = `file://${process.argv[1]}`) {;
+const optimizer = new SEOOptimizer();
+  optimizer.run();}
 }
 
 export default SEOOptimizer;
@@ -286,15 +279,14 @@ function generateSitemap() {/* TODO: Fix JSX expression */}
     '/task-manager-pro',
     '/team'
   ];
-  
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>"
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>"
 <urlset xmlns="htt,"
   p://www.sitemaps.org/schemas/sitemap/0.9"></urlset>
 ${/* TODO: Fix JSX expression */}
   s://ziontechgroup.com${page}</loc>
     <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>${page === '/' ? '1.0' : '0.8'}</priority>`
+    <priority>${page === = '/' ? '1.0' : '0.8'}</priority>`
   </url>`).join('\n')}`
 </urlset>`;
   
@@ -305,8 +297,7 @@ ${/* TODO: Fix JSX expression */}
 
 function optimizeMetaTags() {/* TODO: Fix JSX expression */}
 }
-  const metaOptimizations = {/* TODO: Fix JSX expression */}
-  };
+  const metaOptimizations ={/* TODO: Fix JSX expression */} };
   
   fs.writeFileSync()
     path.join(__dirname, '../seo-optimizations.json'),
@@ -318,8 +309,8 @@ function optimizeMetaTags() {/* TODO: Fix JSX expression */}
 }
 
 function generateRobotsTxt() {/* TODO: Fix JSX expression */}
-}`
-  const robotsTxt = `User-agen,
+}`;
+const robotsTxt = `User-agen,
   t: *
 Allo,
   w: /
@@ -352,8 +343,7 @@ Allo,
 
 function generateStructuredData() {/* TODO: Fix JSX expression */}
 }
-  const structuredData = {/* TODO: Fix JSX expression */}
-    },"
+  const structuredData ={/* TODO: Fix JSX expression */} },"
     "address": {/* TODO: Fix JSX expression */}
     },"
     "sameAs": ["

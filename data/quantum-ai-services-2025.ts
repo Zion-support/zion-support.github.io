@@ -11,7 +11,7 @@
   contactInfo: unknown;
     mobile: string;
     email: string;
-export interface QuantumAiService2025 {;,
+export interface QuantumAiService2025 {;}
     address: string}
   i,
   d: string;
@@ -47,7 +47,7 @@ export interface QuantumAiService2025 {/* TODO: Fix JSX expression */}
   taglin,
   e: string;
   pric,
-  e: string,,
+  e: string,
   descriptio,
   n: string;
   feature,
@@ -170,7 +170,6 @@ export const,
     }
   }
 ];
-;
     id: "quantum-ai-hybrid"
     name: "Quantum AI Hybrid Platform",
     tagline: "Combining quantum computing with artificial intelligence",

@@ -2,60 +2,58 @@
  * Performance Configuration
  * Centralized performance monitoring and optimization settings
  */
-export const _performanceConfig = {
-  // Core Web Vitals thresholds
+export const _performanceConfig ={// Core Web Vitals thresholds,
   metrics: {
 // lcp: {
 // good: 2500,
-// needsImprovement: 4000
-    },
+// needsImprovement: 4000} },
     fid: {
       good: 100,
-      needsImprovement: 300
+      needsImprovement: 300}
     },
     cls: {
       good: 0.1,
-      needsImprovement: 0.25
+      needsImprovement: 0.25}
     },
     fcp: {
       good: 1800,
-      needsImprovement: 3000
+      needsImprovement: 3000}
     },
     ttfb: {
       good: 800,
-      needsImprovement: 1800
+      needsImprovement: 1800}
     }
   },
-  // Cache strategies
+  // Cache strategies,
   cache: {
 // static: {
 // maxAge: 31536000, // 1 year
-// staleWhileRevalidate: 86400, // 1 day
+// staleWhileRevalidate: 86400, // 1 day}
     },
     dynamic: {
-      maxAge: 3600, // 1 hour
-      staleWhileRevalidate: 60, // 1 minute
+      maxAge: 3600, // 1 hour,
+  staleWhileRevalidate: 60, // 1 minute}
     },
     api: {
 // maxAge: 300, // 5 minutes
-// staleWhileRevalidate: 30, // 30 seconds
+// staleWhileRevalidate: 30, // 30 seconds}
     }
   },
-  // Resource hints
+  // Resource hints,
   preload: [
     { href: '/fonts/inter-var.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' }],
   prefetch: [
     '/api/health',
     '/api/config'],
-  // Image optimization
+  // Image optimization,
   images: {
 // deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
 // imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
 // formats: ['image/avif', 'image/webp'],
 // minimumCacheTTL: 60,
-// dangerouslyAllowSVG: false
+// dangerouslyAllowSVG: false}
   },
-  // Bundle optimization
+  // Bundle optimization,
   bundle: {
 // minChunkSize: 20000,
 // maxChunkSize: 244000,
@@ -64,23 +62,23 @@ export const _performanceConfig = {
 // vendor: {
 // test: /[\\/]node_modules[\\/]/,
 // priority: -10,
-// reuseExistingChunk: true
+// reuseExistingChunk: true}
         },
         default: {
           minChunks: 2,
           priority: -20,
-          reuseExistingChunk: true
+          reuseExistingChunk: true}
         }
       }
     }
   },
-  // Performance monitoring
+  // Performance monitoring,
   monitoring: {
 // enabled: true,
 // sampleRate: 1.0, // 100% in production
 // reportInterval: 30000, // 30 seconds
 // sendToAnalytics: true,
-// logThreshold:   ,
+// logThreshold:   }
 $4}
 };
 export type PerformanceConfig = typeof performanceConfig;
@@ -91,9 +89,7 @@ export default performanceConfig;
  * Centralized performance monitoring and optimization settings;
  */
 
-export const _performanceConfig = {// TODO: Add content;}
-
-}
+export const _performanceConfig ={// TODO: Add content;} }
   // Core Web Vitals thresholds,
   metric,
   s: {/* TODO: Fix JSX expression */}

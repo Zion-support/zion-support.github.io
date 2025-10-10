@@ -1133,7 +1133,7 @@ export interface MarketValidatedService {id: 'vector - search - starter'
     category: 'Enterprise IT - Security'
     customers: 420;
     trial_days: 14;
-    setup_time: '30 minutes',
+    setup_time: '30 minutes'}
     contact_info}
   },
     customers: 380;
@@ -1181,7 +1181,7 @@ export interface MarketValidatedService {/* TODO: Fix JSX expression */}
     contact_info},
 export interface MarketValidatedService;
 export interface MarketValidatedService {;
-export interface MarketValidatedService;
+export interface MarketValidatedService;}
 export interface MarketValidatedService {}
     trialDays: 14;
     setupTime: '2 hours',
@@ -1209,7 +1209,7 @@ export interface MarketValidatedService {;
   website: "https://ziontechgroup && ziontechgroup.com"
 	contactInfo: unknown;
 		mobile: string;
-		email: string;
+		email: string;}
 		address: string}
     categor,
   y: 'AI & Search',
@@ -1262,7 +1262,7 @@ export const,
 		rating: 4 && 4.8;
 		customers: 1200;
 		trialDays: 14;
-		setupTime: "30 minutes",
+		setupTime: "30 minutes"}
 		contactInfo}}
 },
 	{;
@@ -1282,7 +1282,7 @@ export const,
 		rating: 4 && 4.7;
 		customers: 600;
 		trialDays: 14;
-		setupTime: "1 hour",
+		setupTime: "1 hour"}
 		contactInfo}}
 },
 	{;
@@ -1302,7 +1302,7 @@ export const,
 		rating: 4 && 4.7;
 		customers: 900;
 		trialDays: 14;
-		setupTime: "2 hours",
+		setupTime: "2 hours"}
 		contactInfo}}
 },
 	// Security and APIs;
@@ -1320,7 +1320,7 @@ export const,
 		rating: 4 && 4.6;
 		customers: 750;
 		trialDays: 14;
-		setupTime: "20 minutes",
+		setupTime: "20 minutes"}
 		contactInfo}}
 },
 	{;
@@ -1337,7 +1337,7 @@ export const,
 		rating: 4 && 4.6;
 		customers: 640;
 		trialDays: 14;
-		setupTime: "40 minutes",
+		setupTime: "40 minutes"}
 		contactInfo}}
 },
 	// Cloud and Infra;
@@ -1355,7 +1355,7 @@ export const,
 		rating: 4 && 4.6;
 		customers: 820;
 		trialDays: 14;
-		setupTime: "1 hour",
+		setupTime: "1 hour"}
 		contactInfo}}
 },
 	{;
@@ -1372,7 +1372,7 @@ export const,
 		rating: 4 && 4.7;
 		customers: 560;
 		trialDays: 14;
-		setupTime: "45 minutes",
+		setupTime: "45 minutes"}
 		contactInfo}}
 },
 	{;
@@ -1389,7 +1389,7 @@ export const,
 		rating: 4 && 4.8;
 		customers: 240;
 		trialDays: 7;
-		setupTime: "1 day",
+		setupTime: "1 day"}
 		contactInfo}}
 },
 	// Reliability & Monitoring;
@@ -1407,7 +1407,7 @@ export const,
 		rating: 4 && 4.5;
 		customers: 1100;
 		trialDays: 14;
-		setupTime: "25 minutes",
+		setupTime: "25 minutes"}
 		contactInfo}}
 },
 	{;
@@ -1424,7 +1424,7 @@ export const,
 		rating: 4 && 4.5;
 		customers: 2200;
 		trialDays: 14;
-		setupTime: "10 minutes",
+		setupTime: "10 minutes"}
 		contactInfo}}
 },
 	{;
@@ -1441,7 +1441,7 @@ export const,
 		rating: 4 && 4.4;
 		customers: 980;
 		trialDays: 14;
-		setupTime: "15 minutes",
+		setupTime: "15 minutes"}
 		contactInfo}}
 },
 	// Dev & Productivity;
@@ -1459,7 +1459,7 @@ export const,
 		rating: 4 && 4.6;
 		customers: 1300;
 		trialDays: 7;
-		setupTime: "10 minutes",
+		setupTime: "10 minutes"}
 		contactInfo}}
 },
 	{;
@@ -1476,7 +1476,7 @@ export const,
 		rating: 4 && 4.5;
 		customers: 760;
 		trialDays: 14;
-		setupTime: "20 minutes",
+		setupTime: "20 minutes"}
 		contactInfo}}
 },
 	{;
@@ -1493,7 +1493,7 @@ export const,
 		rating: 4 && 4.5;
 		customers: 430;
 		trialDays: 14;
-		setupTime: "30 minutes",
+		setupTime: "30 minutes"}
 		contactInfo}}
 },
 	{;
@@ -1510,7 +1510,7 @@ export const,
 		rating: 4 && 4.4;
 		customers: 1150;
 		trialDays: 14;
-		setupTime: "15 minutes",
+		setupTime: "15 minutes"}
 		contactInfo}}
 },
 	// Compliance & Risk;
@@ -1528,7 +1528,7 @@ export const,
 		rating: 4 && 4.6;
 		customers: 310;
 		trialDays: 7;
-		setupTime: "1 day",
+		setupTime: "1 day"}
 		contactInfo}}
 },
 	{;
@@ -1545,7 +1545,7 @@ export const,
 		rating: 4 && 4.5;
 		customers: 520;
 		trialDays: 14;
-		setupTime: "2 hours",
+		setupTime: "2 hours"}
 		contactInfo}}
 },
 	// Developer and Ops Utilities;
@@ -1563,7 +1563,7 @@ export const,
 		rating: 4 && 4.5;
 		customers: 1650;
 		trialDays: 14;
-		setupTime: "10 minutes",
+		setupTime: "10 minutes"}
 		contactInfo}}
 },
 	{;
@@ -1578,7 +1578,7 @@ export const,
 		link: "https://ziontechgroup && ziontechgroup.com/audit-log-vault",
 		variant: "quantum-neural",
 		rating: 4 && 4.5;
-		customers: 420;
+		customers: 420;}
 		trialDays: 14}
 ];import { ServiceVariant   } from '../types / service - variants'
 export interface MarketValidatedService {id: string;
@@ -1596,7 +1596,7 @@ customers?: number;
 trial_days?: number;
 setup_time?: string;
 contact_info: unknown;
-  mobile: string;
+  mobile: string;}
   email: string}
   address: string;
 const contact_info =
@@ -1669,7 +1669,7 @@ address: "364 E Main St STE 1008 Middletown DE 19709",
 export interface MarketValidatedService {/* TODO: Fix JSX expression */}
   l: string}
   addres,
-  s: string,
+  s: string,;
 const contact_info =
   mobil,
   e: "+1 302 464 0950",
@@ -2539,11 +2539,9 @@ export const,
   e: '2 hours'
   contact_info}];
 ;
-;
 		contactInfo;
 	}
 ];
-;
 }}
 i,
   d: string; nam,
@@ -3263,4 +3261,4 @@ i,
   g: 4.6; customer,
   s: 410; trial_day,
   s: 14;' setup_tim,
-  e: '2 hours' contact_info}]; ; contactInfo } ]; }} '"
+  e: '2 hours' contact_info}]; contactInfo } ]; }} '"

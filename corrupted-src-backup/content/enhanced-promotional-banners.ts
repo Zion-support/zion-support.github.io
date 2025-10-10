@@ -13,7 +13,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [,
     priority: 1;
     startDate: '2025-10-01',
     endDate: '2025-12-31',
-    category: 'AI Platform',
+    category: 'AI Platform'}
     tags: ['AI', 'Automation', 'Business Operations', 'Cost Reduction']},
   {
     id: 'oct-01-ai-governance-framework-2025',
@@ -29,7 +29,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [,
     category: 'AI Governance',
     tags: ['AI Governance', 'Enterprise', 'Safety', 'Compliance'],
 export const,
-  enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
+  enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [}
   {/* TODO: Fix JSX expression */}
   },
   {/* TODO: Fix JSX expression */}

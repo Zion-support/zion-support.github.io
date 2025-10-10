@@ -3,32 +3,31 @@ import React from 'react';
 import { Palette, Brain, FileText, ArrowRight, CheckCircle, Star, Users, Shield, Clock, Zap } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
-const AIContentStudioPage: React.FC = () => {
-  const features = [
+const AIContentStudioPage: React.FC = () => {;
+const features = [
     {
       icon: FileText,
       title: 'Content Creation',
       description: 'AI-powered content generation and optimization',
-      benefits: ['Auto content', 'SEO optimization', 'Multi-format support']
+      benefits: ['Auto content', 'SEO optimization', 'Multi-format support']}
     },
     {
       icon: Target,
       title: 'Content Strategy',
       description: 'Intelligent content planning and strategy',
-      benefits: ['Content planning', 'Audience targeting', 'Performance tracking']
+      benefits: ['Content planning', 'Audience targeting', 'Performance tracking']}
     },
     {
       icon: Zap,
       title: 'Automated Publishing',
       description: 'Automated content publishing and distribution',
-      benefits: ['Multi-platform publishing', 'Scheduling', 'Distribution']
+      benefits: ['Multi-platform publishing', 'Scheduling', 'Distribution']}
     },
     {
       icon: Settings,
       title: 'Content Analytics',
       description: 'Comprehensive content performance analytics',
-      benefits: ['Performance metrics', 'Engagement tracking', 'ROI analysis']
+      benefits: ['Performance metrics', 'Engagement tracking', 'ROI analysis']}
     }
   ];
 
@@ -72,7 +71,7 @@ const AIContentStudioPage: React.FC = () => {
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
+            {features.map((feature, index) => (}
               <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
                   <feature.icon className="w-8 h-8 text-white" />
@@ -84,7 +83,7 @@ const AIContentStudioPage: React.FC = () => {
                   {feature.description}
                 </p>
                 <ul className="space-y-2">
-                  {feature.benefits.map((benefit, benefitIndex) => (
+                  {feature.benefits.map((benefit, benefitIndex) => (}
                     <li key={benefitIndex} className="flex items-center text-xs text-gray-300">
                       <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                       {benefit}
@@ -103,3 +102,8 @@ const AIContentStudioPage: React.FC = () => {
 };
 
 export default AIContentStudioPage;
+
+
+
+
+</div></div></div></div></div>

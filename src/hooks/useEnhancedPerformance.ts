@@ -14,7 +14,7 @@ export interface UseEnhancedPerformanceOptions {// TODO: Add content;}
   trackAnalytics?: boolean;
 }
 export function useEnhancedPerformance(__option)
-  s: UseEnhancedPerformanceOptions = {}) {/* TODO: Fix JSX expression */}
+  s: UseEnhancedPerformanceOptions ={} ) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
   const {/* TODO: Fix JSX expression */}
@@ -82,13 +82,13 @@ export function useEnhancedPerformance(__option)
 }
         errorTracker.trackError(error, {...context;}
     },
-    [component, trackErrors])
-  const trackUserAction = useCallback()
+    [component, trackErrors]);
+const trackUserAction = useCallback()
     (actio,
   n: string, metadata?: Record;)
           <string, unknown>) => {analytics.trackCustomEvent('User Action', action, component, undefined, metadata);}
-    [component, trackAnalytics]
-  const measureOperation = useCallback()
+    [component, trackAnalytics];
+const measureOperation = useCallback()
     (operationNam)
   e: string) => {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -102,8 +102,8 @@ export function useEnhancedPerformance(__option)
   d: () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-
-          const duration = performance.now() - startTime;
+;
+const duration = performance.now() - startTime;
 analytics.trackPerformance(
               `${component}-${operationName}`,
 

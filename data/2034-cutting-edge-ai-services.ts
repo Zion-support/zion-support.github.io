@@ -480,13 +480,11 @@ export const,
   s://ziontechgroup.com / services / ai - creative - studio',
   real_servic,
   e: true}
-export type CuttingEdgeAIService = {/* TODO: Fix JSX expression */}
-	}
+export type CuttingEdgeAIService ={/* TODO: Fix JSX expression */} }
 ];
-;
-export type CuttingEdgeAIService = {;
+export type CuttingEdgeAIService ={;
 	id: string;
-	name: string,,
+	name: string,
   description: string;
 	category: unknown;
 		| 'AI Consciousness'
@@ -495,9 +493,7 @@ export type CuttingEdgeAIService = {;
 		| 'AI Psychology'
 		| 'AI Business Management',
 		| 'AI Healthcare',
-		| 'AI Neural Interfaces',
-export type CuttingEdgeAIService = {/* TODO: Fix JSX expression */}
-		| 'AI Quantum Computing'}
+		| 'AI Neural Interfaces'} export type CuttingEdgeAIService ={/* TODO: Fix JSX expression */} | 'AI Quantum Computing'}
 	pricin,
   g: {/* TODO: Fix JSX expression */}
   r: string, professional?: string} enterprise?: string };
@@ -512,7 +508,7 @@ export type CuttingEdgeAIService = {/* TODO: Fix JSX expression */}
 	realService?: boolean;
 };
 export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [;
-	{,
+	{}
 		id: 'ai-emotional-support-agent'}
 		name: 'AI Emotional Support Agent'}
   description: 'On-demand AI agent trained on CBT and mindfulness protocols with escalation pathways.';
@@ -524,9 +520,9 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [;
 		link: 'https://ziontechgroup.com/services/ai-emotional-support-agent';
 		realService: true;
 	};
-	{;
+	{;}
 		id: 'ai-product-spec-writer'}
-		name: 'AI Product Spec Writer',,
+		name: 'AI Product Spec Writer',
   description: 'Generate PRDs, user stories} and acceptance criteria aligned with business goals and analytics.';
 		category: 'AI Business Management';
 		pricing: { starter: '$79/mo' };
@@ -536,7 +532,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [;
 		link: 'https://ziontechgroup.com/services/ai-product-spec-writer';
 		realService: true;
 	};
-	{;
+	{;}
 		id: 'ai-creative-studio'}
 		name: 'AI Creative Studio'}
   description: 'Generate brand-consistent images and short-form videos with approvals and rights management.';
@@ -549,10 +545,9 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [;
 		realService: true;
 	}
 ];
-;
-export type CuttingEdgeAIService = {;
+export type CuttingEdgeAIService ={;
 	id: string;
-	name: string,,
+	name: string,
   description: string;
 	category: unknown;
 		| 'AI Consciousness'
@@ -563,8 +558,7 @@ export type CuttingEdgeAIService = {;
 		| 'AI Healthcare',
 		| 'AI Neural Interfaces',
 export const,
-  cuttingEdgeAIServices: CuttingEdgeAIService[] = [;
-	{/* TODO: Fix JSX expression */}
+  cuttingEdgeAIServices: CuttingEdgeAIService[] = [;} {/* TODO: Fix JSX expression */}
   d: 'ai-emotional-support-agent'}
 		nam,
   e: 'AI Emotional Support Agent'}
@@ -589,7 +583,7 @@ export const,
 	{/* TODO: Fix JSX expression */}
   d: 'ai-product-spec-writer'}
 		nam,
-  e: 'AI Product Spec Writer',,
+  e: 'AI Product Spec Writer',
   descriptio,
   n: 'Generate PRDs, user stories} and acceptance criteria aligned with business goals and analytics.';
 		categor,
@@ -631,9 +625,7 @@ export const,
 		realServic,
   e: true}
 ];
-;
-export type CuttingEdgeAIService = {/* TODO: Fix JSX expression */}
-		| 'AI Quantum Computing'}
+export type CuttingEdgeAIService ={/* TODO: Fix JSX expression */} | 'AI Quantum Computing'}
 	pricin,
   g: {/* TODO: Fix JSX expression */}
   r: string, professional?: string} enterprise?: string };
@@ -648,7 +640,7 @@ export type CuttingEdgeAIService = {/* TODO: Fix JSX expression */}
 	realService?: boolean;
 };
 export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [;
-	{,
+	{}
 		id: 'ai-emotional-support-agent'}
 		name: 'AI Emotional Support Agent'}
   description: 'On-demand AI agent trained on CBT and mindfulness protocols with escalation pathways.';
@@ -660,9 +652,9 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [;
 		link: 'https://ziontechgroup.com/services/ai-emotional-support-agent';
 		realService: true;
 	};
-	{;
+	{;}
 		id: 'ai-product-spec-writer'}
-		name: 'AI Product Spec Writer',,
+		name: 'AI Product Spec Writer',
   description: 'Generate PRDs, user stories} and acceptance criteria aligned with business goals and analytics.';
 		category: 'AI Business Management';
 		pricing: { starter: '$79/mo' };
@@ -672,7 +664,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [;
 		link: 'https://ziontechgroup.com/services/ai-product-spec-writer';
 		realService: true;
 	};
-	{;
+	{;}
 		id: 'ai-creative-studio'}
 		name: 'AI Creative Studio'}
   description: 'Generate brand-consistent images and short-form videos with approvals and rights management.';
@@ -717,7 +709,7 @@ export const,
 	{/* TODO: Fix JSX expression */}
   d: 'ai-product-spec-writer'}
 		nam,
-  e: 'AI Product Spec Writer',,
+  e: 'AI Product Spec Writer',
   descriptio,
   n: 'Generate PRDs, user stories} and acceptance criteria aligned with business goals and analytics.';
 		categor,
@@ -1044,7 +1036,6 @@ export const,
   real_servic,
   e: true}
 ];
-;
 i,
   d: string, nam,
   e: string, descriptio,
@@ -1201,8 +1192,7 @@ i,
   s: ['Marketing velocity_cost savings'],' lin,
   k: 'http,
   s://ziontechgroup.com / services / ai - creative - studio', real_servic,
-  e: true} export type CuttingEdgeAIService = {; } ]; export type CuttingEdgeAIService = {/* TODO: Fix JSX expression */}
-  y:  ,' | 'AI Consciousness'' | 'AI Emotional Intelligence'' | 'AI Creativity'' | 'AI Psychology'' | 'AI Business Management'' | 'AI Healthcare'' | 'AI Neural Interfaces'' | 'AI Quantum Computing'} pricin,
+  e: true} export type CuttingEdgeAIService ={; } ]; export type CuttingEdgeAIService ={/* TODO: Fix JSX expression */} y:  ,' | 'AI Consciousness'' | 'AI Emotional Intelligence'' | 'AI Creativity'' | 'AI Psychology'' | 'AI Business Management'' | 'AI Healthcare'' | 'AI Neural Interfaces'' | 'AI Quantum Computing'} pricin,
   g: {/* TODO: Fix JSX expression */}
   r: string, professional?: string} enterprise?: string }; feature,
   s: string[]; integrations?: string[]; useCases?: string[]; lin,
@@ -1237,8 +1227,7 @@ i,
   s: ['Marketing velocityCost savings'];' lin,
   k: 'http,
   s://ziontechgroup.com/services/ai-creative-studio'; realServic,
-  e: true} ]; export type CuttingEdgeAIService = {/* TODO: Fix JSX expression */}
-  y:  ,' | 'AI Consciousness'' | 'AI Emotional Intelligence'' | 'AI Creativity'' | 'AI Psychology'' | 'AI Business Management'' | 'AI Healthcare'' | 'AI Neural Interfaces'' | 'AI Quantum Computing'} pricin,
+  e: true} ]; export type CuttingEdgeAIService ={/* TODO: Fix JSX expression */} y:  ,' | 'AI Consciousness'' | 'AI Emotional Intelligence'' | 'AI Creativity'' | 'AI Psychology'' | 'AI Business Management'' | 'AI Healthcare'' | 'AI Neural Interfaces'' | 'AI Quantum Computing'} pricin,
   g: {/* TODO: Fix JSX expression */}
   r: string, professional?: string} enterprise?: string }; feature,
   s: string[]; integrations?: string[]; useCases?: string[]; lin,

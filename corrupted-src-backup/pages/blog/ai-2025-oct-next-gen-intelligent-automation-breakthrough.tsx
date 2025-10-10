@@ -1,7 +1,6 @@
 impo, r, t {/* TODO: Fix JSX expression */}
 } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-
 const NextGenIntelligentAutomationBreakthroug, h = () => { 
   return(<>
       <Helm, e, t>
@@ -49,7 +48,7 @@ const NextGenIntelligentAutomationBreakthroug, h = () => {
                           <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
                 <h2, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3'></h2>
                   <Brain, classNam, e='w-8 h-8, tex, t-purp, l, e-4, 0, 0' />
-                  Ne, x, t-Gen, Automation, Capabilities;
+                  Ne, x, t-Gen, Automation, Capabilities;}
 const NextGenIntelligentAutomationBreakthroug, h = () => {/* TODO: Fix JSX expression */}
                 { val, u, e: '$3., 2, T', lab, e, l: 'Automation, Market, 202, 5' },
                 { val, u, e: '8, 5%', lab, e, l: 'Cost, Reducti, o, n' },
@@ -66,7 +65,7 @@ const NextGenIntelligentAutomationBreakthroug, h = () => {/* TODO: Fix JSX expre
                 <h2, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3'></h2>
                   <Brain, className='w-8 h-8, tex, t-purp, l, e-4, 0, 0' /></Brain>
                   Ne, x, t-Gen, Automation, Capabilities;
-                    <div, ke, y = { in, d, e, x }, classNa, m, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-zi, o, n-cy, a, n/20, hove, r: bord, e, r-zi, o, n-cy, a, n/50, transitio, n-a, l, l'
+                    <div, ke, y ={in, d, e, x } , classNa, m, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-zi, o, n-cy, a, n/20, hove, r: bord, e, r-zi, o, n-cy, a, n/50, transitio, n-a, l, l'
                     ></div>
                       <div, className='flex, item, s-start, ga, p-4'></div>
                         <div, className='te, x, t-4, x, l'>{capabili, t, y.ic, o, n}</div>
@@ -91,15 +90,15 @@ const NextGenIntelligentAutomationBreakthroug, h = () => {/* TODO: Fix JSX expre
                       ])
                     })
                       <ul, classNam, e='spa, c, e-y-2'>
-                        { a, p, p.results.m, a, p((res, u, l, t, rInd, e, x) = > (
-                          <li, ke, y = { rIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'></li>
+                        { a, p, p.results.m, a, p((res, u, l, t, rInd, e, x) = > (}
+                          <li, ke, y ={rIn, d, e, x  } , classNa, m, e = 'flex, item, s-start, ga, p-2'></li>
                             <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' /></CheckCircle>
                 <div, classNam, e='grid, m, d: gr, i, d-co, l, s-2, ga, p-4'></di>
                         </div>
                       </div>
                       <ul, className='spa, c, e-y-2'></ul>
-                        { a, p, p.results.m, a, p((res, u, l, t, rInd, e, x) = > (
-                          <li, ke, y = { rIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'>
+                        { a, p, p.results.m, a, p((res, u, l, t, rInd, e, x) = > (}
+                          <li, ke, y ={rIn, d, e, x  } , classNa, m, e = 'flex, item, s-start, ga, p-2'>
                             <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
                 <div, className='grid, m, d: gr, i, d-co, l, s-2, ga, p-4'></div>
                   <Link, t, o='/conta, c, t'
@@ -119,14 +118,14 @@ const NextGenIntelligentAutomationBreakthroug, h = () => {/* TODO: Fix JSX expre
                         'Reven, u, e: 28% incre, a, s, e']},
                       <ul, classNam, e='spa, c, e-y-2'></ul>
                         {/* TODO: Fix JSX expression */}
-                          <li, ke, y = { rIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'></li>
+                          <li, ke, y ={rIn, d, e, x  } , classNa, m, e = 'flex, item, s-start, ga, p-2'></li>
                             <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' /></CheckCircle>
                 <div, classNam, e='grid, m, d: gr, i, d-co, l, s-2, ga, p-4'></div>
                         </div>
                       </div>
                       <ul, className='spa, c, e-y-2'></ul>
                         {/* TODO: Fix JSX expression */}
-                          <li, ke, y = { rIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'></li>
+                          <li, ke, y ={rIn, d, e, x  } , classNa, m, e = 'flex, item, s-start, ga, p-2'></li>
                             <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' /></CheckCircle>
                 <div, className='grid, m, d: gr, i, d-co, l, s-2, ga, p-4'></div>
                   <Link, t, o='/conta, c, t'
@@ -135,3 +134,17 @@ const NextGenIntelligentAutomationBreakthroug, h = () => {/* TODO: Fix JSX expre
                     Book, Free, Assessment;
                     <Rocket, classNam, e='w-5 h-5' /></Rocket>
 }}
+
+
+
+
+
+
+
+
+
+
+
+
+</div></div></div></div></div></div></div></div></div></div></div></div></div>
+</>

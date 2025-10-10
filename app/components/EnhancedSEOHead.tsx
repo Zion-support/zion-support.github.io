@@ -2,10 +2,9 @@
 
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 const EnhancedSEOHead: React.FC = () => {
   return (
-    <Helmet>
+    <Helmet>}
       {/* Basic Meta Tags */}
       <title>Zion Tech Group - Advanced AI and IT Solutions</title>
       <meta name="description" content="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology." />
@@ -78,7 +77,7 @@ const EnhancedSEOHead: React.FC = () => {
             "telephone": "+1-302-464-0950",
             "contactType": "Customer Service",
             "areaServed": "US",
-            "availableLanguage": "en"
+            "availableLanguage": "en"}
           },
           "address": {
             "@type": "PostalAddress",
@@ -86,7 +85,7 @@ const EnhancedSEOHead: React.FC = () => {
             "addressLocality": "Middletown",
             "addressRegion": "DE",
             "postalCode": "19709",
-            "addressCountry": "US"
+            "addressCountry": "US"}
           },
           "sameAs": [
             "https://twitter.com/ziontechgroup",

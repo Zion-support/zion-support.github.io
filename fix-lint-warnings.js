@@ -2,19 +2,18 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Function to fix lint warnings in a file;
 function fixLintWarnings(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
+  try {;
+let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     
     // Fix unused variables by prefixing with underscore;
     content = content.replace(/const (\w+) = /g, (match, varName) => {
-      if (varName.startsWith('_')) return match;
+      if (varName.startsWith('_')) return match;}
 function fixLintWarnings(filePath) {/* TODO: Fix JSX expression */}
       return `const _${varName} = `;
     });
@@ -29,7 +28,7 @@ function fixLintWarnings(filePath) {/* TODO: Fix JSX expression */}
     
     // Fix console statements in test files;
     if (filePath.includes('setupTests') || filePath.includes('test')) {
-      content = content.replace(/console\.(log|warn|error|info)\([^)]*\);?/g, '');
+      content = content.replace(/console\.(log|warn|error|info)\([^)]*\);?/g, '');}
     if (filePath.includes('setupTests') || filePath.includes('test')) {/* TODO: Fix JSX expression */}
     }
     
@@ -43,7 +42,7 @@ function fixLintWarnings(filePath) {/* TODO: Fix JSX expression */}
     // Fix specific patterns;
     if (filePath.includes('main.tsx')) {
       content = content.replace(/const registration = /g, 'const _registration = ');
-      content = content.replace(/const registrationError = /g, 'const _registrationError = ');
+      content = content.replace(/const registrationError = /g, 'const _registrationError = ');}
     if (filePath.includes('main.tsx')) {/* TODO: Fix JSX expression */}
     }
     
@@ -76,20 +75,20 @@ function fixLintWarnings(filePath) {/* TODO: Fix JSX expression */}
 }
 
 // Function to find all files that need lint fixing;
-function findFilesToFix(dir) {
-  const files = [];
+function findFilesToFix(dir) {;
+const files = [];
   
-  function walkDir(currentPath) {
-    const items = fs.readdirSync(currentPath);
+  function walkDir(currentPath) {;
+const items = fs.readdirSync(currentPath);
     
-    for (const item of items) {
-      const fullPath = path.join(currentPath, item);
+    for (const item of items) {;
+const fullPath = path.join(currentPath, item);
       const stat = fs.statSync(fullPath);
       
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        walkDir(fullPath);
+      if (stat.isDirectory() && !item.startsWith('.') && item !== == 'node_modules') {
+        walkDir(fullPath);}
       } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
-        files.push(fullPath);
+        files.push(fullPath);}
 function findFilesToFix(dir) {/* TODO: Fix JSX expression */}
       } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {/* TODO: Fix JSX expression */}
       }
@@ -103,10 +102,8 @@ function findFilesToFix(dir) {/* TODO: Fix JSX expression */}
 // Main execution;
 const srcDir = path.join(__dirname, 'src');
 console.log('Fixing lint warnings...');
-
 const filesToFix = findFilesToFix(srcDir);`
 console.log(`Processing ${filesToFix.length} files`);
-
 let fixedCount = 0;
 for (const file of filesToFix) {/* TODO: Fix JSX expression */}
   }

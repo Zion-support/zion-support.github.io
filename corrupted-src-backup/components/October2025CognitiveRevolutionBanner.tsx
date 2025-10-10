@@ -1,5 +1,5 @@
 const, October2025CognitiveRevolutionBanne, r: Rea, c, t.FC = () => {
-  return(<div, className="relative, b, g-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-indi, g, o-900, t, o-bl, u, e-900, borde, r-b, borde, r-purp, l, e-5, 0, 0/20, overflo, w-hidd, e, n">";)
+  return(<div, className="relative, b, g-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-indi, g, o-900, t, o-bl, u, e-900, borde, r-b, borde, r-purp, l, e-5, 0, 0/20, overflo, w-hidd, e, n">";)}
       {/* Animated, background, effects */})
       <div, className="absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle_at_, 3, 0%_, 5, 0%,rg, b, a(1, 3, 9,92,2, 4, 6,0.15),transparent_, 5, 0%)]  />
       <div, className="absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle_at_, 7, 0%_, 5, 0%,rg, b, a(99,1, 0, 2,2, 4, 1,0.15),transparent_, 5, 0%)]  />
@@ -12,7 +12,7 @@ const, October2025CognitiveRevolutionBanne, r: Rea, c, t.FC = () => {
       <div, className="absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle_at_, 3, 0%_, 5, 0%,rg, b, a(1, 3, 9,92,2, 4, 6,0.15),transparent_, 5, 0%)]  /></div>
       <div, className="absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle_at_, 7, 0%_, 5, 0%,rg, b, a(99,1, 0, 2,2, 4, 1,0.15),transparent_, 5, 0%)]  />
       {/* Conte, n, t */}</div>
-      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
   g:px-8, p, y-6">"</div>
         <div, className="flex, item, s-center, justif, y-between, fle, x-wrap, ga, p-4">
           {/* Left, sid, e - Badge, and, Title */}</div>
@@ -27,7 +27,7 @@ const, October2025CognitiveRevolutionBanne, r: Rea, c, t.FC = () => {
       <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
   g:px-8, p, y-6">";
       {/* Conte, n, t */}</div>
-      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
   g:px-8, p, y-6">";</div>
         <div, className="flex, item, s-center, justif, y-between, fle, x-wrap, ga, p-4">";
           {/* Left, sid, e - Badge, and, Title */}</div>
@@ -108,7 +108,7 @@ const, October2025CognitiveRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: Fi
               <p, className="te, x, t-purp, l, e-100, tex, t-sm, s, m: te, x, t-base, leadin, g-relaxed, m, b-3">
                 <span, className="fo, n, t-bold, tex, t-yell, o, w-3, 0, 0">JUST, PUBLISHED, TODA;
               <p, className="te, x, t-purp, l, e-100, tex, t-sm, s, m: te, x, t-base, leadin, g-relaxed, m, b-3"></p>
-                <span, className="fo, n, t-bold, tex, t-yell, o, w-3, 0, 0">JUST, PUBLISHED, TODA
+                <span, className="fo, n, t-bold, tex, t-yell, o, w-3, 0, 0">JUST, PUBLISHED, TODA,
   Y:</sp, a, n> Discover, how, Fortune 500, companies, are deploying, cognitive, AI systems, that, understand, reas, o, n, and, learn, like huma, n, s — achievi, n, g{' '}
                 <span, className="fo, n, t-bold, tex, t-gre, e, n-3, 0, 0">98.7% decision, accurac, y</sp, a, n>,{' '}
                 <span, className="fo, n, t-bold, tex, t-gre, e, n-3, 0, 0">$4.7B+ in, value, creation</sp, a, n>, a, n, d{' '}
@@ -129,7 +129,7 @@ const, October2025CognitiveRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: Fi
               <p, className="te, x, t-purp, l, e-100, tex, t-sm, s, m: te, x, t-base, leadin, g-relaxed, m, b-3">";
                 <span, className="fo, n, t-bold, tex, t-yell, o, w-3, 0, 0">JUST, PUBLISHED, TODA;
               <p, className="te, x, t-purp, l, e-100, tex, t-sm, s, m: te, x, t-base, leadin, g-relaxed, m, b-3">";</p>
-                <span, className="fo, n, t-bold, tex, t-yell, o, w-3, 0, 0">JUST, PUBLISHED, TODA
+                <span, className="fo, n, t-bold, tex, t-yell, o, w-3, 0, 0">JUST, PUBLISHED, TODA,
   Y:</sp, a, n> Discover, how, Fortune 500, companies, are deploying, cognitive, AI systems, that, understand, reas, o, n, and, learn, like huma, n, s — achievi, n, g{' '}';
                 <span, className="fo, n, t-bold, tex, t-gre, e, n-3, 0, 0">98.7% decision, accurac, y</sp, a, n>,{' '}';
                 <span, className="fo, n, t-bold, tex, t-gre, e, n-3, 0, 0">$4.7B+ in, value, creation</sp, a, n>, a, n, d{' '}';
@@ -257,5 +257,27 @@ const, October2025CognitiveRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: Fi
     </d, i, v>
   );
 };
-export default October2025CognitiveRevolutionBanner;
-;"
+export default October2025CognitiveRevolutionBanner;"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>

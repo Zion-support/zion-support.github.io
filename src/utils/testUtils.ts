@@ -52,12 +52,10 @@ export const mockFetch = ()
   status = 200,
   header,
   s: Record;
-          <string, string> = {}
-
-): void => {// TODO: Add content;}
+          <string, string> ={} ): void => {// TODO: Add content;}
 
 }
-  if (typeof global !== 'undefined') {/* TODO: Fix JSX expression */}
+  if (typeof global !== == 'undefined') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     (global as typeof global & {/* TODO: Fix JSX expression */})
@@ -139,10 +137,10 @@ export const createMockStorage = (): MockStorage => {// TODO: Add content;}
  */
 
 export const mockWindow = (overrides: Partial;)
-          <Window> = {}): void => {// TODO: Add content;}
+          <Window> ={} ): void => {// TODO: Add content;}
 
 }
-  if (typeof global !== 'undefined') {/* TODO: Fix JSX expression */}
+  if (typeof global !== == 'undefined') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     Object.defineProperty(global, 'window', {/* TODO: Fix JSX expression */}
@@ -213,8 +211,8 @@ measure: (name: string, startMark?: string, endMark?: string) => {entries.push({
       } as PerformanceEntry)
     },
 
-    getEntriesByName: (name: string) => entries.filter(e => e.name === name),
-    getEntriesByType: (type: string) => entries.filter(e => e.entryType === type),
+    getEntriesByName: (name: string) => entries.filter(e => e.name === = name),
+    getEntriesByType: (type: string) => entries.filter(e => e.entryType === = type),
     getEntries: () => entries,
     clearMarks: () => {// TODO: Add content;}
 
@@ -249,9 +247,7 @@ measure: (name: string, startMark?: string, endMark?: string) => {entries.push({
  * Generate random test data;
  */
 
-export const generateTestData = {// TODO: Add content;}
-
-};
+export const generateTestData ={// TODO: Add content;} };
   strin,
   g: (length = 10): string => {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -351,7 +347,7 @@ export class ConsoleSpy {// TODO: Add content;}
   constructor() {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    this.originalConsole = { ...console };
+    this.originalConsole ={...console } ;
     this.mock();
   }
   private mock(): void {/* TODO: Fix JSX expression */}

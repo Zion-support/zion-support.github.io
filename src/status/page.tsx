@@ -7,7 +7,6 @@ import { Star, Phone } from 'lucide-react';
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 const Status: React.FC = () => {
   return (
     <div>Coming Soon</div>
@@ -54,10 +53,12 @@ const Status: React.FC = () => {
       <Footer /></Footer>
 
     </div>
-  );
+  );}
 };
 
 
 export default StatusPage;
 
 
+
+</div>

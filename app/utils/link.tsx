@@ -1,9 +1,9 @@
 
 interface LinkProps {
   href: string,
-    children: React.ReactNode
+    children: React.ReactNode}
 interface LinkProps {}
-  href: string
+  href: string,
   children: React.ReactNode
   className?: string
   target?: string
@@ -11,7 +11,7 @@ interface LinkProps {}
   onClick?: () => void
   'aria-label'?: string;}
 }
-export const Link: React.FC<LinkProps>= ({
+export const Link: React.FC<LinkProps>= ({}
 export const Link: React.FC<LinkProps> = ({}
   href,
   href: string,
@@ -29,7 +29,7 @@ export const Link: React.FC<LinkProps> = ({,
   target,
   rel,
   onClick,
-  'aria-label': ariaLabel,
+  'aria-label': ariaLabel}
   ...props}
 }) => {}
   const handleClick = useCallback((...args) => {}
@@ -38,7 +38,7 @@ export const Link: React.FC<LinkProps> = ({,
     }
     // Handle internal navigation;
     if (href.startsWith('/') && !href.startsWith('//')) {
-    // Handle internal navigation
+    // Handle internal navigation}
     if (href.startsWith('/') && !href.startsWith('//')) {}
       e.preventDefault()
       window.location.href = href;}
@@ -59,16 +59,10 @@ export const,
     }
   };
   return (<a></a>
-      href={href}
-      className={className}
-      target={target}
-      rel={rel}
-      onClick={handleClick}
-      aria-label={ariaLabel}
-      {...props}
+      href={href} className={className} target={target} rel={rel} onClick={handleClick} aria-label={ariaLabel} {...props}
     >{children}</a>
     </a>
-      aria-label={ariaLabel})
+      aria-label={ariaLabel} )
       {...props})
     >)
       {children})

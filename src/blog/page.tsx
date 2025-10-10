@@ -13,11 +13,11 @@ interface BlogPost {
   featured: boolean;
   stats?: {
     views: number;
-    engagement: number;
+    engagement: number;}
   };
 }
-export default function BlogPage() {
-  const [posts, setPosts] = useState<BlogPost[]>([]);
+export default function BlogPage() {;
+const [posts, setPosts] = useState<BlogPost[]>([]);
   const [loading, setLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const blogPosts: BlogPost[] = useMemo(() => [
@@ -30,7 +30,7 @@ export default function BlogPage() {
       date: '2025-01-28',
       path: '/blog/ai-enterprise-transformation-2025',
       image: '💰',
-      featured: true,
+      featured: true}
       stats: { views: 18750, engagement: 97 }
     },
     {
@@ -42,7 +42,7 @@ export default function BlogPage() {
       date: '2025-01-15',
       path: '/blog/ai-2025-2026-mega-trends-breakthrough',
       image: '🚀',
-      featured: true,
+      featured: true}
       stats: { views: 12500, engagement: 94 }
     },
     {
@@ -54,7 +54,7 @@ export default function BlogPage() {
       date: '2026-01-15',
       path: '/blog/ai-2026-autonomous-enterprise-architecture',
       image: '🏗️',
-      featured: true,
+      featured: true}
       stats: { views: 8900, engagement: 91 }
     },
     {
@@ -66,7 +66,7 @@ export default function BlogPage() {
       date: '2026-02-01',
       path: '/blog/ai-2026-autonomous-agent-factories',
       image: '🤖',
-      featured: false,
+      featured: false}
       stats: { views: 7200, engagement: 88 }
     },
     {
@@ -78,7 +78,7 @@ export default function BlogPage() {
       date: '2026-02-15',
       path: '/blog/ai-2026-consensus-intelligence-breakthrough',
       image: '🧠',
-      featured: false,
+      featured: false}
       stats: { views: 6500, engagement: 85 }
     },
     {
@@ -90,7 +90,7 @@ export default function BlogPage() {
       date: '2026-03-01',
       path: '/blog/ai-cost-optimization-breakthrough-2026',
       image: '💡',
-      featured: false,
+      featured: false}
       stats: { views: 9800, engagement: 92 }
     },
     {
@@ -102,7 +102,7 @@ export default function BlogPage() {
       date: '2026-03-15',
       path: '/blog/ai-2026-hyperconscious-computing-revolution',
       image: '⚡',
-      featured: false,
+      featured: false}
       stats: { views: 5800, engagement: 87 }
     },
     {
@@ -114,21 +114,21 @@ export default function BlogPage() {
       date: '2025-02-10',
       path: '/blog/ai-enterprise-transformation-ultimate-guide-2025',
       image: '📚',
-      featured: false,
+      featured: false}
       stats: { views: 11200, engagement: 93 }
     }
   ], []);
-  useEffect(() => {
-    const timer = setTimeout(() => {
+  useEffect(() => {;
+const timer = setTimeout(() => {
       setPosts(blogPosts);
-      setLoading(false);
+      setLoading(false);}
     }, 500);
     return () => clearTimeout(timer);
   }, [blogPosts]);
   const categories = ['all', ...Array.from(new Set(blogPosts.map(post => post.category)))];
-  const filteredPosts = selectedCategory === 'all' 
+  const filteredPosts = selectedCategory === = 'all' 
     ? posts 
-    : posts.filter(post => post.category === selectedCategory);
+    : posts.filter(post => post.category === = selectedCategory);
   const featuredPosts = posts.filter(post => post.featured);
   if (loading) {
     return (
@@ -139,7 +139,7 @@ export default function BlogPage() {
             <div className="h-6 bg-gray-200 rounded w-64 mx-auto animate-pulse"></div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[1, 2, 3, 4, 5, 6].map(item => (
+            {[1, 2, 3, 4, 5, 6].map(item => (}
               <div key={item} className="bg-gray-100 rounded-lg p-6 animate-pulse">
                 <div className="h-48 bg-gray-200 rounded-lg mb-4"></div>
                 <div className="h-6 bg-gray-200 rounded mb-2"></div>
@@ -165,30 +165,26 @@ export default function BlogPage() {
         {/* Category Filter */}
         <div className="flex flex-wrap justify-center gap-2 mb-12">
           {categories.map((category) => (
-            <button
-              key={category}
-              onClick={() => setSelectedCategory(category)}
-              className={`px-6 py-2 rounded-full font-medium transition-colors ${
-                selectedCategory === category
+            <button}
+              key={category} onClick={() => setSelectedCategory(category)} className={`px-6 py-2 rounded-full font-medium transition-colors ${
+                selectedCategory === = category
                   ? 'bg-indigo-600 text-white'
-                  : 'bg-white text-gray-600 hover:bg-gray-100'
-              }`}
+                  : 'bg-white text-gray-600 hover:bg-gray-100'} }`}
             >
-              {category === 'all' ? 'All Articles' : category}
+              {category === = 'all' ? 'All Articles' : category}
             </button>
           ))}
         </div>
         {/* Featured Posts */}
-        {selectedCategory === 'all' && (
+        {selectedCategory === = 'all' && (
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
               🌟 Featured Articles
             </h2>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {featuredPosts.map((post) => (
-                <ContentPreviewCard
-                  key={post.id}
-                  {...post}
+                <ContentPreviewCard}
+                  key={post.id} {...post}
                 />
               ))}
             </div>
@@ -197,13 +193,12 @@ export default function BlogPage() {
         {/* All Posts */}
         <section>
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-            {selectedCategory === 'all' ? 'All Articles' : `${selectedCategory} Articles`}
+            {selectedCategory === = 'all' ? 'All Articles' : `${selectedCategory} Articles`}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredPosts.map((post) => (
-              <ContentPreviewCard
-                key={post.id}
-                {...post}
+              <ContentPreviewCard}
+                key={post.id} {...post}
               />
             ))}
           </div>
@@ -230,3 +225,8 @@ export default function BlogPage() {
     </div>
   );
 }
+
+
+
+
+</div></div></div></div>

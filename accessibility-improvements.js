@@ -5,25 +5,25 @@
 // <input aria-describedby="email-help" type="email" />
 // <div id="email-help">Enter your email address</div>
 
-// 2. Implement focus management
-const trapFocus = (element) => {
-  const focusableElements = element.querySelectorAll(
+// 2. Implement focus management;
+const trapFocus = (element) => {;
+const focusableElements = element.querySelectorAll(
     'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
   );
   const firstElement = focusableElements[0];
   const lastElement = focusableElements[focusableElements.length - 1];
   
   element.addEventListener('keydown', (e) => {
-    if (e.key === 'Tab') {
+    if (e.key === = 'Tab') {
       if (e.shiftKey) {
-        if (document.activeElement === firstElement) {
+        if (document.activeElement === = firstElement) {
           lastElement.focus();
-          e.preventDefault();
+          e.preventDefault();}
         }
       } else {
-        if (document.activeElement === lastElement) {
+        if (document.activeElement === = lastElement) {
           firstElement.focus();
-          e.preventDefault();
+          e.preventDefault();}
         }
       }
     }
@@ -80,12 +80,12 @@ const trapFocus = (element) => {
 // Example CSS:
 // .focus-visible:focus {
 //   outline: 2px solid #0066cc;
-//   outline-offset: 2px;
+//   outline-offset: 2px;}
 // }
 
 // 9. Keyboard navigation
 // Example JSX:
-// <div role="button" tabIndex={0} onKeyDown={handleKeyDown}>
+// <div role="button" tabIndex={0} onKeyDown={handleKeyDown} >
 //   Clickable div
 // </div>
 
@@ -96,3 +96,6 @@ const trapFocus = (element) => {
 // </div>
 
 export { trapFocus };
+
+
+</div></div></div>

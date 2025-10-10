@@ -9,7 +9,6 @@ export const cuttingEdgeMicroSaasServices2025 = [
     ];
     integration,
   s: ['Bloomberg TerminalReuters EikonTrading PlatformsRisk Management SystemsFinancial Data Providers'];
-;
     compliance: ['Basel IIISolvency IIDodd-FrankFinancial RegulationsRisk Management Standards']
 export const cuttingEdgeMicroSaasServices2025 = [{id: 'customer-success-ai-pro',
     name: 'Customer Success AI Pro',
@@ -26,7 +25,7 @@ export const cuttingEdgeMicroSaasServices2025 = [{id: 'customer-success-ai-pro',
       'Performance metrics and reporting'
       'Custom AI model training'
     ]
-    pricing: starter: unknown;
+    pricing: starter: unknown;}
         price: 199}
         period: 'month',
         features: [,
@@ -691,12 +690,11 @@ export const cuttingEdgeMicroSaasServices2025 = [{/* TODO: Fix JSX expression */
     ];
     integration,
   s: ['Bloomberg TerminalReuters EikonTrading PlatformsRisk Management SystemsFinancial Data Providers'];
-;
     compliance: ['Basel IIISolvency IIDodd-FrankFinancial RegulationsRisk Management Standards'];
 export const cuttingEdgeMicroSaasServices2025 = [,
   {,
     id: 'customer-success-ai-pro';
-    name: 'Customer Success AI Pro',,
+    name: 'Customer Success AI Pro',
   description: 'Intelligent customer success platform that uses AI to predict customer churn, optimize engagement strategies, and maximize customer lifetime value through predictive analytics.';
     features: [
       'AI-powered churn prediction with 92% accuracyPersonalized engagement recommendationsCustomer health scoring and monitoringAutomated success playbook creationReal-time customer sentiment analysisPredictive analytics dashboardIntegration with CRM and support toolsAutomated customer onboarding workflows';
@@ -704,7 +702,7 @@ export const cuttingEdgeMicroSaasServices2025 = [,
     ];
     pricing: {;
       starter: {,
-        price: 199;
+        price: 199;}
         period: 'month'}
         features: ['Up to 1}000 customersBasic AI featuresEmail support'];
     complianc,
@@ -731,7 +729,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
     category: 'Customer Success';
     tags: ['Customer SuccessAIChurn PredictionEngagementAnalytics'];
     website: 'https://ziontechgroup.com/customer-success-ai-pro';
-    contact: {,
+    contact: {}
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com'};
     marketSize: '$11.8 B';
@@ -767,7 +765,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
   e: ['GDPRCCPASOC2Data Privacy Standards']};
   {;
     id: 'quantum-supply-chain-optimizer';
-    name: 'Quantum Supply Chain Optimizer',,
+    name: 'Quantum Supply Chain Optimizer',
   description: 'Advanced supply chain optimization platform that leverages quantum computing principles to solve complex logistics problems, reduce costs, and improve efficiency across global supply networks.';
     features: [
       'Quantum-enhanced route optimizationReal-time supply chain monitoringPredictive demand forecastingInventory optimization algorithmsSupplier performance analyticsRisk assessment and mitigationCost optimization modelingSustainability impact analysis';
@@ -775,7 +773,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
     ];
     pricing: {;
       starter: {,
-        price: 299;
+        price: 299;}
         period: 'month'}
         features: ['Basic optimization featuresStandard analyticsEmail support']}
   {/* TODO: Fix JSX expression */}
@@ -799,7 +797,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
     category: 'Supply Chain';
     tags: ['Supply ChainQuantum ComputingLogisticsOptimizationAnalytics'];
     website: 'https://ziontechgroup.com/quantum-supply-chain-optimizer';
-    contact: {,
+    contact: {}
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com'};
     marketSize: '$15.4 B';
@@ -835,7 +833,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
   e: ['Supply Chain StandardsLogistics RegulationsData Privacy Laws']};
   {;
     id: 'blockid-verify-pro';
-    name: 'BlockID Verify Pro',,
+    name: 'BlockID Verify Pro',
   description: 'Revolutionary identity verification platform that combines blockchain technology with advanced biometric authentication to provide secure, tamper-proof digital identity verification.';
     features: [
       'Blockchain-based identity verificationMulti-factor biometric authenticationReal-time identity validationFraud detection and preventionCompliance with global regulationsAPI integration capabilitiesCustom verification workflowsAudit trail and reporting';
@@ -843,7 +841,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
     ];
     pricing: {;
       starter: {,
-        price: 149;
+        price: 149;}
         period: 'month'}
         features: ['Up to 1}000 verificationsBasic verification featuresEmail support'];
   {/* TODO: Fix JSX expression */}
@@ -867,7 +865,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
     category: 'Identity Verification';
     tags: ['Identity VerificationBlockchainBiometricsSecurityCompliance'];
     website: 'https://ziontechgroup.com/blockid-verify-pro';
-    contact: {,
+    contact: {}
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com'};
     marketSize: '$13.7 B';
@@ -903,7 +901,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
   e: ['KYC/AMLGDPRCCPASOC2Global Identity Standards']};
   {;
     id: 'hr-analytics-ai-suite';
-    name: 'HR Analytics AI Suite',,
+    name: 'HR Analytics AI Suite',
   description: 'Comprehensive HR analytics platform that uses artificial intelligence to provide insights into employee performance, engagement, retention, and organizational effectiveness.';
     features: [
       'AI-powered performance analyticsEmployee engagement monitoringPredictive turnover analysisRecruitment optimization algorithmsWorkforce planning and forecastingDiversity and inclusion analyticsReal-time performance dashboardsCustom reporting and analytics';
@@ -911,7 +909,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
     ];
     pricing: {;
       starter: {,
-        price: 249;
+        price: 249;}
         period: 'month'}
         features: ['Up to 500 employeesBasic analytics featuresEmail support']}
   {/* TODO: Fix JSX expression */}
@@ -935,7 +933,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
     category: 'HR Analytics';
     tags: ['HR AnalyticsAIPerformance ManagementEmployee EngagementPredictive Analytics'];
     website: 'https://ziontechgroup.com/hr-analytics-ai-suite';
-    contact: {,
+    contact: {}
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com'};
     marketSize: '$9.8 B';
@@ -971,7 +969,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
   e: ['HR Data PrivacyEmployment LawsData Protection Regulations']};
   {;
     id: 'quantum-risk-financial-manager';
-    name: 'Quantum Risk Financial Manager',,
+    name: 'Quantum Risk Financial Manager',
   description: 'Advanced financial risk management platform that leverages quantum computing to provide real-time risk assessment, portfolio optimization, and financial modeling for complex investment strategies.';
     features: [
       'Quantum-enhanced risk modelingReal-time portfolio optimizationAdvanced financial analyticsRisk assessment and monitoringPortfolio stress testingRegulatory compliance reportingCustom risk modelsReal-time market data integration';
@@ -979,7 +977,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
     ];
     pricing: {;
       starter: {,
-        price: 399;
+        price: 399;}
         period: 'month'}
         features: ['Basic risk managementStandard analyticsEmail support']}
   {/* TODO: Fix JSX expression */}
@@ -1003,7 +1001,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
     category: 'Financial Risk Management';
     tags: ['Risk ManagementQuantum ComputingFinancial AnalyticsPortfolio OptimizationCompliance'];
     website: 'https://ziontechgroup.com/quantum-risk-financial-manager';
-    contact: {,
+    contact: {}
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com'};
     marketSize: '$28.9 B';
@@ -1050,7 +1048,6 @@ export const cuttingEdgeMicroSaasServices2025 = [
     complianc,
   e: ['Basel IIISolvency IIDodd - FrankFinancial RegulationsRisk Management Standards']}
 ];
-;
 export const cuttingEdgeMicroSaasServices2025 = [ 'Basel III',' 'Solvency II',' 'Dodd - Frank',' 'Financial Regulations',' 'Risk Management Standards']}; ' ]; 'Portfolio risk assessmentInvestment strategy optimizationRegulatory compliance reportingRisk model developmentPerformance analysis and attribution' ];' integration,
   s: ['Bloomberg TerminalReuters EikonTrading PlatformsRisk Management SystemsFinancial Data Providers'],' complianc,
   e: ['Basel IIISolvency IIDodd-FrankFinancial RegulationsRisk Management Standards'] export const cuttingEdgeMicroSaasServices2025 = [ ' i,

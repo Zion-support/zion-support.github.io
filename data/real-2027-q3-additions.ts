@@ -13,7 +13,7 @@ export const real2027Q3Additions = [{id: 'it - asset - discovery - agent'
       'Change detection and drift alerts'],
     category: 'Enterprise IT',
     link: '/it - asset - discovery - agent',
-    real_service: true;
+    real_service: true;}
     roi: 'Reduce manual inventory work by 80% and avoid surprise shadow IT risks.'}
   },
     id: 'managed - postgres - ha',
@@ -648,7 +648,6 @@ export const real2027Q3Additions = [{/* TODO: Fix JSX expression */}
   i: 'Prevent high-severity API incidents and cut MTTR.'
   }
 ];
-;
 export const real2027Q3Additions = [
   {/* TODO: Fix JSX expression */}
   n: 'Continuously discover devices, services, and SaaS apps across your environment with CMDB export and change tracking.'}

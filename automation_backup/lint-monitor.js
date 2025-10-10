@@ -467,7 +467,7 @@
   k: = new Date(); this.log('✅ Lin)
   t: check passed - no errors found')' retur,
   n: {/* TODO: Fix JSX expression */}
-  s: tru,,e}error,
+  s: tru,e}error,
   s: '0'} } catc,
   h: (error) {/* TODO: Fix JSX expression */}
   stdio:'pipe'}); this.errorCount = 0; this.lastCheck = new Date(); this.log(')'✅ Lint check passed - no errors found'); return {/* TODO: Fix JSX expression */}

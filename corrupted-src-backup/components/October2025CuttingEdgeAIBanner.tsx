@@ -1,5 +1,5 @@
 const, October2025CuttingEdgeAIBanne, r = () => {
-  return(<div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, p, y-16, p, x-6, rounde, d-3xl, m, b-12">
+  return(<div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, p, y-16, p, x-6, rounde, d-3xl, m, b-12">}
       {/* Animated, background, elements */};
       <div, className="absolute, inse, t-0, overflo, w-hidd, e, n">
   return (
@@ -65,9 +65,9 @@ const, October2025CuttingEdgeAIBanne, r = () => {/* TODO: Fix JSX expression */}
   g:gr, i, d-co, l, s-4, ga, p-6, m, b-10">";
           {/* Articl, e, 1 - Agentic, Governanc, e */}
           <Li, n, k;
-        <div, className="grid, m, d: gr, i, d-co, l, s-2 l
+        <div, className="grid, m, d: gr, i, d-co, l, s-2 l,
   g:gr, i, d-co, l, s-4, ga, p-6, m, b-10">"</div>
-        <div, className="grid, m, d: gr, i, d-co, l, s-2 l
+        <div, className="grid, m, d: gr, i, d-co, l, s-2 l,
   g:gr, i, d-co, l, s-4, ga, p-6, m, b-10">";
           {/* Articl, e, 1 - Agentic, Governanc, e */}</div>
           <Li, n, k
@@ -88,7 +88,7 @@ const, October2025CuttingEdgeAIBanne, r = () => {/* TODO: Fix JSX expression */}
             </d, i, v>
             <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e;
   r: te, x, t-emera, l, d-200, transitio, n-colo, r, s">"
-            <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e
+            <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e,
   r: te, x, t-emera, l, d-200, transitio, n-colo, r, s">"</h3>
           </h2>"
           <p, className="te, x, t-xl, tex, t-purp, l, e-200, ma, x-w-3xl, m, x-au, t, o"></p>
@@ -165,7 +165,7 @@ const, October2025CuttingEdgeAIBanne, r = () => {/* TODO: Fix JSX expression */}
             </d, i, v>
             <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e;
   r: te, x, t-viol, e, t-200, transitio, n-colo, r, s">"
-            <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e
+            <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e,
   r: te, x, t-viol, e, t-200, transitio, n-colo, r, s">"</h3>
           <Li, n, k;"
   to="/bl, o, g/ai-20, 2, 5-octob, e, r-neur, a, l-symbol, i, c-fusi, o, n""
@@ -226,7 +226,7 @@ const, October2025CuttingEdgeAIBanne, r = () => {/* TODO: Fix JSX expression */}
             </d, i, v>
             <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e;
   r: te, x, t-cy, a, n-200, transitio, n-colo, r, s">"
-            <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e
+            <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e,
   r: te, x, t-cy, a, n-200, transitio, n-colo, r, s">"</h3>
           <Li, n, k;"
   to="/bl, o, g/ai-20, 2, 5-octob, e, r-continuo, u, s-learni, n, g-syste, m, s""
@@ -412,5 +412,23 @@ const, October2025CuttingEdgeAIBanne, r = () => {/* TODO: Fix JSX expression */}
     </d, i, v>)
   );
 };
-export default October2025CuttingEdgeAIBanner;
-;"
+export default October2025CuttingEdgeAIBanner;"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>

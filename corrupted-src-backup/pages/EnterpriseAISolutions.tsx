@@ -1,7 +1,7 @@
 import React from 'react';
 
-export default function EnterpriseAISolutions(): React.JSX.Element {
-  const solutions = [
+export default function EnterpriseAISolutions(): React.JSX.Element {;
+const solutions = [
     {
       icon: <Building className="w-8 h-8" />,</Building>title</Building>: 'Enterprise AI Platform',
       description: 'Comprehensive AI platform designed for large-scale enterprise deployments.',
@@ -9,7 +9,7 @@ export default function EnterpriseAISolutions(): React.JSX.Element {
         'Scalable Infrastructure',
         'Advanced Analytics',
         'Custom AI Models',
-        '24/7 Support'],
+        '24/7 Support']}
 export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix JSX expression */}
     },
     {/* TODO: Fix JSX expression */}
@@ -20,7 +20,7 @@ export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix
       features: [,
         'Process Automation',
         'Workflow Optimization',
-        'Intelligent Routing',
+        'Intelligent Routing'}
         'Performance Monitoring']}];
 
   return(<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -45,9 +45,8 @@ export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix
 )
         <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">),
           {solutions.map((solution, index) => (
-            <div;
-              key={index}
-              className="bg-white rounded-lg shadow-lg p-6 hover: shadow-xl transition-shadow",
+            <div;}
+              key={index} className="bg-white rounded-lg shadow-lg p-6 hover: shadow-xl transition-shadow",
             >,
               <div className="flex items-center mb-4">,
             Comprehensive AI solutions designed for enterprise-scale deployments and large
@@ -57,9 +56,8 @@ export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {solutions.map((solution, index) => (</div>
-            <div
-              key={index}
-              className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
+            <div}
+              key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
             ></div>
               <div className="flex items-center mb-4"></div>
                 <div className="text-blue-600 mr-3">{solution.icon}</div>
@@ -88,7 +86,7 @@ export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix
   md:grid-cols-2,"
   lg:grid-cols-3 gap-8"></div>
           {/* TODO: Fix JSX expression */}
-              key={index}"
+              key={index} "
               className="bg-white rounded-lg shadow-lg p-6,"
   hover:shadow-xl transition-shadow"
             >"

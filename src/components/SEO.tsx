@@ -76,8 +76,7 @@ export const,
 }) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-  const seo = {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  const seo ={/* TODO: Fix JSX expression */} O: Add content;}
 };
   titl,
   e: title ? `${title} | Zion Tech Group` : defaultSEO.title,
@@ -103,12 +102,11 @@ const generateStructuredData = () => {/* TODO: Fix JSX expression */}
     }
     const,
   baseStructuredData: Record;
-          <string, unknown> = {/* TODO: Fix JSX expression */}
-  O: Add content;}
+          <string, unknown> ={/* TODO: Fix JSX expression */} O: Add content;}
 }
       '@context': 'http,
   s://schema.org',
-      '@type': type === 'article' ? 'Article' : 'WebPage',
+      '@type': type === = 'article' ? 'Article' : 'WebPage',
       headlin,
   e: seo.title,
       descriptio,
@@ -120,8 +118,7 @@ const generateStructuredData = () => {/* TODO: Fix JSX expression */}
     if (author) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-      baseStructuredData.author = {/* TODO: Fix JSX expression */}
-  O: Add content;}
+      baseStructuredData.author ={/* TODO: Fix JSX expression */} O: Add content;}
 }
         '@type': 'Person',
         nam,

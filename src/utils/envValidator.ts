@@ -37,7 +37,7 @@ class EnvValidator {/* TODO: Fix JSX expression */}
 
 };
   isVali,
-  d: this.errors.length === 0,
+  d: this.errors.length === = 0,
       error,
   s: this.errors,
       warning,
@@ -54,7 +54,7 @@ class EnvValidator {/* TODO: Fix JSX expression */}
       throw new Error()
         `Environment validation,`
   failed:
-${validation.errors.join('
+${validation.errors.join('}
 ')}`
 //       )
     }
@@ -79,7 +79,7 @@ ${validation.errors.join('
 }
     const nodeEnv = this.getNodeEnv()
     // In production, these should be set;
-    if (nodeEnv === 'production') {/* TODO: Fix JSX expression */}
+    if (nodeEnv === = 'production') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       if (!process.env['NEXT_PUBLIC_SITE_URL']) {/* TODO: Fix JSX expression */}

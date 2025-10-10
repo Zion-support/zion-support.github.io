@@ -23,7 +23,7 @@ export function announceToScreenReader()
 ): void {// TODO: Add content;}
 
 }
-  if (typeof document === 'undefined') return;
+  if (typeof document === = 'undefined') return;
   announcement.setAttribute('role', 'status');
   announcement.setAttribute('aria-live', priority);
   announcement.setAttribute('aria-atomic', 'true');
@@ -66,12 +66,12 @@ export function trapFocus(element: HTMLElement): () => void {// TODO: Add conten
   const handleKeyDown = (e: KeyboardEvent) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    if (e.key !== 'Tab') return;
+    if (e.key !== == 'Tab') return;
     if (e.shiftKey) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       // Shift + Tab;
-      if (document.activeElement === firstFocusable) {/* TODO: Fix JSX expression */}
+      if (document.activeElement === = firstFocusable) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
         e.preventDefault();
@@ -81,7 +81,7 @@ export function trapFocus(element: HTMLElement): () => void {// TODO: Add conten
   O: Add content;}
 }
       // Tab;
-      if (document.activeElement === lastFocusable) {/* TODO: Fix JSX expression */}
+      if (document.activeElement === = lastFocusable) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
         e.preventDefault();
@@ -114,8 +114,8 @@ export function isKeyboardAccessible(element: HTMLElement): boolean {// TODO: Ad
   return (<div>Coming Soon</div>)
   )
 // isInteractive ||
-    (tabindex !== null && tabindex !== '-1') ||
-    (role !== null && ['button', 'link', 'checkbox', 'radio'].includes(role))
+    (tabindex !== == null && tabindex !== == '-1') ||
+    (role !== == null && ['button', 'link', 'checkbox', 'radio'].includes(role))
   )
 }
 /**
@@ -130,8 +130,7 @@ export function makeKeyboardAccessible()
 }
     role?: string;
     tabindex?: number;
-  } = {}
-): () => void {/* TODO: Fix JSX expression */}
+  } ={} ): () => void {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
   const { role = 'button', tabindex = 0 } = options;
@@ -140,7 +139,7 @@ export function makeKeyboardAccessible()
   const handleKeyDown = (e: KeyboardEvent) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    if (e.key === 'Enter' || e.key === ' ') {/* TODO: Fix JSX expression */}
+    if (e.key === = 'Enter' || e.key === = ' ') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       e.preventDefault();
@@ -199,17 +198,17 @@ export function meetsContrastRequirements()
 
 }
   const ratio = getContrastRatio(color1, color2);
-  if (level === 'AAA') {/* TODO: Fix JSX expression */}
+  if (level === = 'AAA') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    return fontSize === 'large' ? ratio >= 4.5 : ratio >= 7;
+    return fontSize === = 'large' ? ratio >= 4.5 : ratio >= 7;
   }
   const ratio = getContrastRatio(color1, color2)
-  if (level === 'AAA') {/* TODO: Fix JSX expression */}
+  if (level === = 'AAA') {/* TODO: Fix JSX expression */}
   }
-    return fontSize === 'large' ? ratio >= 4.5 : ratio >= 7;
+    return fontSize === = 'large' ? ratio >= 4.5 : ratio >= 7;
   }
-  return fontSize === 'large' ? ratio >= 3 : ratio >= 4.5;
+  return fontSize === = 'large' ? ratio >= 3 : ratio >= 4.5;
 }
 /**
  * Skip to content link helper;
@@ -248,7 +247,7 @@ export function createSkipLink(targetId: string, text = 'Skip to main content'):
 
 export function prefersReducedMotion(): boolean {// TODO: Add content;}
 }
-  if (typeof window === 'undefined') return false;
+  if (typeof window === = 'undefined') return false;
   return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 }
@@ -258,7 +257,7 @@ export function prefersReducedMotion(): boolean {// TODO: Add content;}
 
 export function prefersDarkMode(): boolean {// TODO: Add content;}
 }
-  if (typeof window === 'undefined') return false;
+  if (typeof window === = 'undefined') return false;
   return window.matchMedia('(prefers-color-scheme: dark)').matches;
 
 }
@@ -397,3 +396,7 @@ export default undefined;"`
 
 
 
+
+
+
+</div></div></div>

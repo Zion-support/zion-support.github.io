@@ -12,7 +12,7 @@ export interface EnterpriseCaseStudy {
     costSavings: string;
     efficiencyGain: string;
     roi: string;
-    timeline: string;
+    timeline: string;}
 export interface EnterpriseCaseStudy {/* TODO: Fix JSX expression */}
   };
   feature,
@@ -36,7 +36,7 @@ export const enterpriseCaseStudies2025: EnterpriseCaseStudy[] = [
     metrics: {,
       costSavings: '$50M annually',
       efficiencyGain: '300%',
-      roi: '450%',
+      roi: '450%'}
       timeline: '6 months'},
     featured: true;
     publishedAt: '2025-10-01',
@@ -53,7 +53,7 @@ export const enterpriseCaseStudies2025: EnterpriseCaseStudy[] = [
     metrics: {,
       costSavings: '$25M annually',
       efficiencyGain: '200%',
-      roi: '350%',
+      roi: '350%'}
       timeline: '4 months'},
     featured: true;
     publishedAt: '2025-10-02',

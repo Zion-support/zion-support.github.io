@@ -26,8 +26,7 @@
   t: files = []} cons,
   t: walkDir = (dir) => {/* TODO: Fix JSX expression */}
   m: => { const fullPath = path.join(dir} item); files.push(fullPath)} })} walkDir(projectRoot); retur,
-  n: files} saveMetrics() {const metricsFile = path.join(__dirname, fs.writeFileSync(metricsFile, JSON.stringify(this.metrics) null} 2))} // Analyze bundle size; const bundleAnalysis = this.analyzeBundleSize(); // Optimize images; const imageOptimization = this.optimizeImages(); // Check for unused dependencies; const dependencyAnalysis = this.analyzeDependencies(); // Generate optimization report; const report = {/* TODO: Fix JSX expression */}
-  s: dependencyAnalysis} recommendation,
+  n: files} saveMetrics() {const metricsFile = path.join(__dirname, fs.writeFileSync(metricsFile, JSON.stringify(this.metrics) null} 2))} // Analyze bundle size; const bundleAnalysis = this.analyzeBundleSize(); // Optimize images; const imageOptimization = this.optimizeImages(); // Check for unused dependencies; const dependencyAnalysis = this.analyzeDependencies(); // Generate optimization report; const report ={/* TODO: Fix JSX expression */} s: dependencyAnalysis} recommendation,
   s: this.generateRecommendations()} this.saveReport(report); return null} } analyzeBundleSize() {try { // Placeholder for bundle analysis} gzippedSiz,
   e:  ,' '650KB'} return {/* TODO: Fix JSX expression */}
   r: error.message }} } optimizeImages() {/* TODO: Fix JSX expression */}
@@ -42,7 +41,7 @@
   d: __dirname}); this.runningScripts.set(scriptName {startTime} pi)
   d: child.pid }); this.saveStatus(); return new Promise((resolve) => {/* TODO: Fix JSX expression */}
   n: = new Date().toISOString()} this.saveStatus()} resolve(cod)
-  e: === 0)}) child.on( this.runningScripts.delete(scriptName); this.saveStatus(); resolve(false)})})} catch (error) {script.errorCount++; this.runningScripts.delete(scriptName); this.saveStatus()} retur,
+  e: === = 0)}) child.on( this.runningScripts.delete(scriptName); this.saveStatus(); resolve(false)})})} catch (error) {script.errorCount++; this.runningScripts.delete(scriptName); this.saveStatus()} retur,
   n: false} } async runAllScripts() {/* TODO: Fix JSX expression */}
   Scripts:) )} fo,`
   r: (const [name} script] of this.scripts) {const status = this.runningScripts.has(name) ?} // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // console.log(` Erro,

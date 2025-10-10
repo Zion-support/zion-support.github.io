@@ -2,7 +2,6 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -25,15 +24,15 @@ const allLinks = [...new Set([...footerLinks, ...navLinks])];
 const appDir = '/workspace/app';
 const existingPages = [];
 
-function scanDirectory(dir) {
-  const items = fs.readdirSync(dir);
-  for (const item of items) {
-    const fullPath = path.join(dir, item);
+function scanDirectory(dir) {;
+const items = fs.readdirSync(dir);
+  for (const item of items) {;
+const fullPath = path.join(dir, item);
     const stat = fs.statSync(fullPath);
     
     if (stat.isDirectory()) {
-      scanDirectory(fullPath);
-    } else if (item === 'page.tsx') {
+      scanDirectory(fullPath);}
+    } else if (item === = 'page.tsx') {
       // Extract the route from the path;
       const route = fullPath.replace('/workspace/app', '').replace('/page.tsx', '') || '/';
       existingPages.push(route);
@@ -41,13 +40,13 @@ function scanDirectory(dir) {
 const appTsxContent = fs.readFileSync('src/App.tsx', 'utf8');
 
 // Extract route paths using regex;
-const routeMatches = appTsxContent.match(/path="([^"]+)"/g);"
+const routeMatches = appTsxContent.match(/path="([^"]+)"/g);";
 const routes = routeMatches ? routeMatches.map(match => match.replace('path="', '').replace('"', '')) : [];
 
 // Get existing pages;
-const existingPages = [];
+const existingPages = [];}
 function findPages(dir) {/* TODO: Fix JSX expression */}
-    } else if (file === 'page.tsx') {/* TODO: Fix JSX expression */}
+    } else if (file === = 'page.tsx') {/* TODO: Fix JSX expression */}
     }
   }
 }
@@ -60,18 +59,18 @@ const existingPagesSet = new Set(existingPages);
 
 for (const link of allLinks) {
   if (!existingPagesSet.has(link)) {
-    missingPages.push(link);
+    missingPages.push(link);}
   }
 }
 
-console.log('=== MISSING PAGES ANALYSIS ===');
+console.log(' === = MISSING PAGES ANALYSIS === =');
 console.log(`Total links found: ${allLinks.length}`);
 console.log(`Existing pages: ${existingPages.length}`);
 console.log(`Missing pages: ${missingPages.length}`);
-console.log('\n=== MISSING PAGES ===');
+console.log('\n === = MISSING PAGES === =');
 missingPages.forEach(page => console.log(`- ${page}`));
 
-console.log('\n=== EXISTING PAGES ===');
+console.log('\n === = EXISTING PAGES === =');
 existingPages.sort().forEach(page => console.log(`✓ ${page}`));
 
 // Write missing pages to a file;
@@ -81,10 +80,10 @@ fs.writeFileSync('/workspace/missing-pages.json', JSON.stringify({
   missingPages: missingPages.length;)
   missingPagesList: missingPages),
   allLinks: allLinks),
-  existingPagesList: existingPages;
+  existingPagesList: existingPages;}
 }, null, 2));
 
-console.log('\n=== ANALYSIS COMPLETE ===');
+console.log('\n === = ANALYSIS COMPLETE === =');
 console.log('Results saved to missing-pages.json');
 // Find missing pages;
 const missingPages = routes.filter(route => {/* TODO: Fix JSX expression */})

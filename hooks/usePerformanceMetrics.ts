@@ -13,10 +13,10 @@ export function usePerformanceMetrics() {/* TODO: Fix JSX expression */}
     setIsSupported(true);
 
     // First Contentful Paint;
-    new PerformanceObserver(list => {)
-      const _entries = list.getEntries();
-      const _fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
-      if (fcpEntry) {
+    new PerformanceObserver(list => {);
+const _entries = list.getEntries();
+      const _fcpEntry = entries.find(entry => entry.name === = 'first-contentful-paint');
+      if (fcpEntry) {}
         setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
     new PerformanceObserver(list => {/* TODO: Fix JSX expression */})
   p: fcpEntry.startTime }));
@@ -25,20 +25,20 @@ export function usePerformanceMetrics() {/* TODO: Fix JSX expression */}
   s: ['paint'] });
 
     // Largest Contentful Paint;
-    new PerformanceObserver(list => {)
-      const _entries = list.getEntries();
-      const _lastEntry = entries[entries.length - 1];
+    new PerformanceObserver(list => {);
+const _entries = list.getEntries();
+      const _lastEntry = entries[entries.length - 1];}
       setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
     }).observe({ entryTypes: ['largest-contentful-paint'] });
 
     // First Input Delay;
-    new PerformanceObserver(list => {)
-      const _entries = list.getEntries();
-      entries.forEach(entry => {)
-        const _inputEntry = entry as PerformanceEventTiming;)
+    new PerformanceObserver(list => {);
+const _entries = list.getEntries();
+      entries.forEach(entry => {);
+const _inputEntry = entry as PerformanceEventTiming;)
         setMetrics(prev => ({)
           ...prev)
-          fid: inputEntry.processingStart - inputEntry.startTime),
+          fid: inputEntry.processingStart - inputEntry.startTime)}
     new PerformanceObserver(list => {/* TODO: Fix JSX expression */})
   p: lastEntry.startTime }));
     }).observe({/* TODO: Fix JSX expression */})
@@ -53,15 +53,15 @@ export function usePerformanceMetrics() {/* TODO: Fix JSX expression */}
 
     // Cumulative Layout Shift;
     let _clsValue = 0;
-    new PerformanceObserver(list => {)
-      const _entries = list.getEntries();
-      entries.forEach(entry => {)
-        const layoutEntry = entry as PerformanceEntry & {)
+    new PerformanceObserver(list => {);
+const _entries = list.getEntries();
+      entries.forEach(entry => {);
+const layoutEntry = entry as PerformanceEntry & {)
           hadRecentInput?: boolean;)
-          value?: number;)
+          value?: number;)}
         };)
         if (!layoutEntry.hadRecentInput) {
-          clsValue += layoutEntry.value || 0;
+          clsValue += layoutEntry.value || 0;}
     new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
         };)
         if (!layoutEntry.hadRecentInput) {/* TODO: Fix JSX expression */}
@@ -73,15 +73,15 @@ export function usePerformanceMetrics() {/* TODO: Fix JSX expression */}
   s: ['layout-shift'] });
 
     // Time to First Byte;
-    new PerformanceObserver(list => {)
-      const _entries = list.getEntries();
+    new PerformanceObserver(list => {);
+const _entries = list.getEntries();
       const ttfbEntry = entries.find(entry =>)
         entry.name.includes('document')
       ) as PerformanceNavigationTiming;
       if (ttfbEntry) {
         setMetrics(prev => ({)
           ...prev)
-          ttfb: ttfbEntry.responseStart - ttfbEntry.requestStart),
+          ttfb: ttfbEntry.responseStart - ttfbEntry.requestStart)}
     new PerformanceObserver(list => {/* TODO: Fix JSX expression */})
         }));
       }

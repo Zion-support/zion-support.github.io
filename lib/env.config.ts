@@ -26,7 +26,7 @@ interface EnvConfig {
 
   // Build Configuration;
   BUILD_ID?: string;
-  VERSION?: string;
+  VERSION?: string;}
 }
 
 class EnvironmentConfig {
@@ -35,7 +35,7 @@ class EnvironmentConfig {
 
   private constructor() {,
     this.config = this.loadConfig();
-    this.validate();
+    this.validate();}
 interface EnvConfig {/* TODO: Fix JSX expression */}
 }
 
@@ -48,9 +48,9 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
   }
 
   private getEnvVar(key: string, defaultValue?: string): string {
-    if (typeof process !== 'undefined' && process.env) {
+    if (typeof process !== == 'undefined' && process.env) {
       // Check both regular and NEXT_PUBLIC_ prefixed versions;
-  private getEnvVar(ke)
+  private getEnvVar(ke)}
   y: string, defaultValue?: string): string {/* TODO: Fix JSX expression */}
       return process.env[key] || process.env[`NEXT_PUBLIC_${key}`] || defaultValue || '';
     }
@@ -62,10 +62,10 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
   e: boolean = false): boolean {/* TODO: Fix JSX expression */}
   }
 
-  private getNumberEnvVar(key: string, defaultValue: number): number {,
-    const _value = this.getEnvVar(key);
+  private getNumberEnvVar(key: string, defaultValue: number): number {,;
+const _value = this.getEnvVar(key);
     //     const parsed = parseInt(value, 10);
-    return isNaN(parsed) ? defaultValue : parsed;
+    return isNaN(parsed) ? defaultValue : parsed;}
   }
 
   private loadConfig(): EnvConfig {
@@ -90,20 +90,20 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
       LOG_LEVEL: (this.getEnvVar('LOG_LEVEL', 'INFO') as any) || 'INFO',
 
       // Build Configuration;
-      BUILD_ID: this.getEnvVar('BUILD_ID'),
+      BUILD_ID: this.getEnvVar('BUILD_ID')}
       VERSION: this.getEnvVar('VERSION', '1.0.0')};
   }
 
-  private validate(): void {
-    const errors: string[] = [];
+  private validate(): void {;
+const errors: string[] = [];
 ,
     // Validate NODE_ENV;
-    if (!['development', 'production', 'test'].includes(this.config.NODE_ENV)) {
+    if (!['development', 'production', 'test'].includes(this.config.NODE_ENV)) {}
       errors.push(`Invalid NODE_ENV: ${this.config.NODE_ENV}`);
     }
 
     // Validate URLs;
-    if (this.config.APP_URL && !this.isValidUrl(this.config.APP_URL)) {
+    if (this.config.APP_URL && !this.isValidUrl(this.config.APP_URL)) {}
       errors.push(`Invalid APP_URL: ${this.config.APP_URL}`);
   private getNumberEnvVar(ke,
   y: string, defaultValu)
@@ -128,13 +128,13 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
     }
 
     // Validate timeout;
-    if (this.config.API_TIMEOUT < 0) {
+    if (this.config.API_TIMEOUT < 0) {}
       errors.push(`API_TIMEOUT must be positive: ${this.config.API_TIMEOUT}`);
     }
 
     if (errors.length > 0) {
       //       // In production, we might want to throw, but in development just warn;
-      if (this.config.NODE_ENV === 'production') {
+      if (this.config.NODE_ENV === = 'production') {}
         throw new Error(`Environment validation failed: ${errors.join(', ')}`);
     if (this.config.API_TIMEOUT < 0) {/* TODO: Fix JSX expression */}`
   positive: ${this.config.API_TIMEOUT}`);
@@ -149,10 +149,10 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
   private isValidUrl(url: string): boolean {,
     try {,
       new URL(url);
-      return true;
+      return true;}
     } catch {
       return false;
-  private isValidUrl(ur)
+  private isValidUrl(ur)}
   l: string): boolean {/* TODO: Fix JSX expression */}
     } catch {/* TODO: Fix JSX expression */}
     }
@@ -173,7 +173,7 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
 
   // Convenience getters;
   public getAppUrl(): string {
-    return this.config.APP_URL;
+    return this.config.APP_URL;}
   public getAppUrl(): string {/* TODO: Fix JSX expression */}
   }
 

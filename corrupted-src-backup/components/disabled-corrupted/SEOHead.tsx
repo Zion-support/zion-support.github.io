@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 
 interface SEOHeadProps {/* TODO: Fix JSX expression */}
 }
-
+;
 const SEOHead: React.FC<SEOHeadProps> = ({,
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of advanced AI and IT solutions that transform businesses and drive innovation across industries.',
@@ -11,21 +11,18 @@ const SEOHead: React.FC<SEOHeadProps> = ({,
   canonicalUrl = 'https: //zion.app',
   ogImage = 'https: //zion.app/og-image.jpg',
   ogType = 'website',
-  twitterCard = 'summary_large_image',
-  structuredData}) => {
+  twitterCard = 'summary_large_image'}
+  structuredData}) => {}
   const _fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const fullCanonicalUrl = canonicalUrl.startsWith('http')
     ? canonicalUrl;
     : `https://zion.app${canonicalUrl}`;
-
-  const defaultStructuredData = {
-    '@context': 'https: //schema.org',
+const defaultStructuredData ={'@context': 'https: //schema.org',
     '@type': 'Organization',
     name: 'Zion Tech Group',
     url: 'https://zion.app',
     logo: 'https://zion.app/logo.png',
-    description: description;
-    sameAs: ['https://linkedin.com/company/zion-tech-group', 'https: //twitter.com/ziontechgroup']};
+    description: description;} sameAs: ['https://linkedin.com/company/zion-tech-group', 'https: //twitter.com/ziontechgroup']};
 
   return(<Helmet>
       <title>{fullTitle}</title>
@@ -39,7 +36,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({,
       <meta property="og:url" content={fullCanonicalUrl} />
       <meta property="og:type" content={ogType} />
       <meta property="og: site_name" content="Zion Tech Group" />,
-,
       {/* Twitter */}
       <meta name="twitter:card" content={twitterCard} />
       <meta name="twitter:title" content={fullTitle} />
@@ -65,9 +61,7 @@ const,
     ? canonicalUrl;`
     : `http,`
   s://zion.app${canonicalUrl}`;
-
-  const defaultStructuredData = {/* TODO: Fix JSX expression */}
-  };
+const defaultStructuredData ={/* TODO: Fix JSX expression */} };
 
   return (<Helmet></Helmet>
       <title>{fullTitle}</title>

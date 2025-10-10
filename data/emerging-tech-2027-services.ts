@@ -11,7 +11,7 @@
   contactInfo: unknown;
     mobile: string;
     email: string;
-export interface EmergingTech2027Service {;,
+export interface EmergingTech2027Service {;}
     address: string}
   i,
   d: string;
@@ -47,7 +47,7 @@ export interface EmergingTech2027Service {/* TODO: Fix JSX expression */}
   taglin,
   e: string;
   pric,
-  e: string,,
+  e: string,
   descriptio,
   n: string;
   feature,
@@ -170,7 +170,6 @@ export const,
     }
   }
 ];
-;
     id: "2027-emerging-tech"
     name: "2027 Emerging Tech Platform",
     tagline: "Emerging tech for 2027",

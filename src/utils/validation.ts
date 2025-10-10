@@ -15,7 +15,7 @@ export function validateEmail(emai)
   l: string): ValidationResult {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-  if (!email || typeof email !== 'string') {/* TODO: Fix JSX expression */}
+  if (!email || typeof email !== == 'string') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     return {/* TODO: Fix JSX expression */}
@@ -46,7 +46,7 @@ export function validateURL(ur)
   l: string): ValidationResult {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-  if (!url || typeof url !== 'string') {/* TODO: Fix JSX expression */}
+  if (!url || typeof url !== == 'string') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     return {/* TODO: Fix JSX expression */}
@@ -76,7 +76,7 @@ export function validateLength()
 ): ValidationResult {// TODO: Add content;}
 
 }
-  if (!value || typeof value !== 'string') {/* TODO: Fix JSX expression */}
+  if (!value || typeof value !== == 'string') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     return {/* TODO: Fix JSX expression */}
@@ -107,7 +107,7 @@ export function validatePassword(passwor)
   d: string): ValidationResult {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-  if (!password || typeof password !== 'string') {/* TODO: Fix JSX expression */}
+  if (!password || typeof password !== == 'string') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     return {/* TODO: Fix JSX expression */}
@@ -130,10 +130,10 @@ export function validatePassword(passwor)
     return {/* TODO: Fix JSX expression */}
   r: 'Password must be no more than 128 characters long' }
   }
-  const hasUpperCase = /[A-Z]/.test(password)
-  const hasLowerCase = /[a-z]/.test(password)
-  const hasNumbers = /\d/.test(password)
-  const hasSpecialChar = /[!@#$%^&*(),.?":{}|
+  const hasUpperCase = /[A-Z]/.test(password);
+const hasLowerCase = /[a-z]/.test(password);
+const hasNumbers = /\d/.test(password);
+const hasSpecialChar = /[!@#$%^&*(),.?":{}|
           
           
           
@@ -179,7 +179,7 @@ export function sanitizeHTML(inpu)
   t: any): string {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-  if (!input || typeof input !== 'string') {/* TODO: Fix JSX expression */}
+  if (!input || typeof input !== == 'string') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     return '';
@@ -206,7 +206,7 @@ export function validateDate(dateStrin)
   g: string): ValidationResult {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-  if (!dateString || typeof dateString !== 'string') {/* TODO: Fix JSX expression */}
+  if (!dateString || typeof dateString !== == 'string') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     return {/* TODO: Fix JSX expression */}
@@ -239,7 +239,7 @@ const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
 export function validateCreditCard(cardNumber: string): ValidationResult {// TODO: Add content;}
 
 }
-  if (!cardNumber || typeof cardNumber !== 'string') {/* TODO: Fix JSX expression */}
+  if (!cardNumber || typeof cardNumber !== == 'string') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     return {/* TODO: Fix JSX expression */}
@@ -275,7 +275,7 @@ let sum = 0;
     isEven = !isEven;
   }
 
-  if (sum % 10 !== 0) {// TODO: Add content;}
+  if (sum % 10 !== == 0) {// TODO: Add content;}
 }
     return { isValid: false, error: 'Invalid credit card number' };
 
@@ -291,7 +291,7 @@ export function validateJSON(jsonStrin)
   g: string): ValidationResult {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-  if (!jsonString || typeof jsonString !== 'string') {/* TODO: Fix JSX expression */}
+  if (!jsonString || typeof jsonString !== == 'string') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     return {/* TODO: Fix JSX expression */}
@@ -363,7 +363,7 @@ export const isValidPhone = (phon)
 export const isValidUrl = (ur)
   l: string) => validateURL(url).isValid;
 export const isRequired = (valu)
-  e: any) => value !== null && value !== undefined && value !== ''
+  e: any) => value !== == null && value !== == undefined && value !== == ''
 export const isValidPassword = (passwor)
   d: string) => validatePassword(password).isValid;
 export const isValidLength = (valu,
@@ -381,3 +381,5 @@ export const isValidJSON = (jso)
 
 
 
+
+</>

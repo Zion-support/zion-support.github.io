@@ -1,21 +1,20 @@
 const { execSync } = require('child_process');
-exports.config = {schedule: '*/1 * * * *'} // every minute;
+exports.config ={schedule: '*/1 * * * *'} // every minute;
 };
 exports.handler = async function () {try {
-    execSync('node automation/advanced-git-sync.cjs || node automation/git-sync.cjs || true')
+    execSync('node automation/advanced-git-sync.cjs || node automation/git-sync.cjs || true')}
       { stdio: 'inherit'} shell: true;
       })
     );
     return {statusCode: 200;
-      body: JSON.stringify({ ok: true),
+      body: JSON.stringify({ ok: true)}
         task: 'ultrafast-git-sync' });
     };
   } catch (e) {return {
       statusCode: 200;
       body: JSON.stringify({ ok: false),
-        error: String(e;),
-exports.config = {/* TODO: Fix JSX expression */}
-  e: '*/1 * * * *'} // every minute;
+        error: String(e;)}
+exports.config ={/* TODO: Fix JSX expression */} e: '*/1 * * * *'} // every minute;
 };
 exports.handler = async function () {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
@@ -30,14 +29,13 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
     };
   }
 };
-const { execSync } = require('child_process'); exports.config = {' schedule: '*/1 * * * *' // every minute }; exports.handler = async function() {try {' execSync('node automation/advanced-git-sync.cjs || node automation/git-sync.cjs || true') { stdio: 'inherit'} shell: true;
+const { execSync } = require('child_process'); exports.config ={' schedule: '*/1 * * * *' // every minute } ; exports.handler = async function() {try {' execSync('node automation/advanced-git-sync.cjs || node automation/git-sync.cjs || true') { stdio: 'inherit'} shell: true;
       });' return {statusCode: 200;
-        body: JSON.stringify({ok: true),
+        body: JSON.stringify({ok: true)}
         task: 'ultrafast-git-sync' }) }; } catch (e) {return { statusCode: 200;
         body: JSON.stringify({ok: false),
-        error: String(e;),
-const { execSync } = require('child_process'); exports.config = {/* TODO: Fix JSX expression */}
-  e: '*/1 * * * *' // every minute }; exports.handler = async function() {/* TODO: Fix JSX expression */}
+        error: String(e;)}
+const { execSync } = require('child_process'); exports.config ={/* TODO: Fix JSX expression */} e: '*/1 * * * *' // every minute }; exports.handler = async function() {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
   l: true;
       });' return {/* TODO: Fix JSX expression */}

@@ -24,9 +24,7 @@ export interface FieldValidation {// TODO: Add content;}
  * Common validation rules;
  */
 
-export const _validationRules = {// TODO: Add content;}
-
-}
+export const _validationRules ={// TODO: Add content;} }
   /**
    * Validate required field;
    */
@@ -34,7 +32,7 @@ export const _validationRules = {// TODO: Add content;}
   required: (message = 'This field is required'): ValidationRule;
           <string> => ({// TODO: Add content;}
 };
-  validate: (value: string) => value !== null && value !== undefined && value.trim().length > 0,
+  validate: (value: string) => value !== == null && value !== == undefined && value.trim().length > 0,
 
 //     message;
   }),
@@ -193,8 +191,8 @@ export const _validationRules = {// TODO: Add content;}
           
           
           
-          <>]/.test(value)
-      const hasMinLength = value.length >= 8;
+          <>]/.test(value);
+const hasMinLength = value.length >= 8;
       return hasUpperCase && hasLowerCase && hasNumber && hasSpecialChar && hasMinLength;
     },
 // message;
@@ -206,7 +204,7 @@ export const _validationRules = {// TODO: Add content;}
   matches: (otherFieldValue: string, fieldName: string): ValidationRule;
           <string> => ({// TODO: Add content;}
 };
-  validate: (value: string) => value === otherFieldValue,
+  validate: (value: string) => value === = otherFieldValue,
     message: `Must match ${fieldName}`
 
   }),
@@ -266,7 +264,7 @@ export function validateField;
   O: Add content;}
 };
   vali,
-  d: errors.length === 0,
+  d: errors.length === = 0,
 //     errors;
   };
 }
@@ -282,7 +280,7 @@ export function validateForm;
 ): Record<keyof T, ValidationResult> {// TODO: Add content;}
 
 }
-  const results = {} as Record;
+  const results ={} as Record;
           <keyof T, ValidationResult>;
   for (const fieldName in validationSchema) {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -291,8 +289,8 @@ export function validateForm;
     const rules = validationSchema[fieldName];
     results[fieldName] = validateField(value, rules);
   }
-    const value = formData[fieldName]
-    const rules = validationSchema[fieldName]
+    const value = formData[fieldName];
+const rules = validationSchema[fieldName]
     results[fieldName] = validateField(value, rules)
   }
   return results;
@@ -321,7 +319,7 @@ export function getFormErrors;
 ): Record<keyof T, string[]> {// TODO: Add content;}
 
 }
-  const errors = {} as Record;
+  const errors ={} as Record;
           <keyof T, string[]>;
   for (const fieldName in validationResults) {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -395,3 +393,6 @@ export function debounce;
 
 
 
+
+
+</></>

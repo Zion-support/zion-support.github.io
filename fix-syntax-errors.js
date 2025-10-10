@@ -2,7 +2,7 @@
 
 import fs from 'fs';
 
-// Files that need syntax fixes
+// Files that need syntax fixes;
 const filesToFix = [
   './app/ai-analytics/page.tsx',
   './app/ai-api-management/page.tsx',
@@ -23,10 +23,10 @@ const filesToFix = [
 ];
 
 function fixFile(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
+  try {;
+let content = fs.readFileSync(filePath, 'utf8');
     
-    // Fix common syntax issues
+    // Fix common syntax issues}
     content = content.replace(/\s+return\s*\(\s*<>/g, '\n    }\n  ];\n\n  return (\n    <>');
     
     // Fix missing closing brackets for features array
@@ -40,14 +40,14 @@ function fixFile(filePath) {
       '<Helmet>\n        <title>AI Analytics - Zion Tech Group</title>\n        <meta name="description" content="Advanced AI-powered analytics solution for modern businesses." />\n        <meta name="keywords" content="AI analytics, artificial intelligence, data analytics, AI solutions, intelligent automation" />\n      </Helmet>');
     
     // Ensure proper JSX structure
-    if (!content.includes('export default')) {
+    if (!content.includes('export default')) {}
       content = content.replace(/(const\s+\w+Page:\s*React\.FC\s*=\s*\(\)\s*=>\s*{[\s\S]*?)(\s*};?\s*)$/m, '$1\n};\n\nexport default $1Page;');
     }
     
     fs.writeFileSync(filePath, content, 'utf8');
     console.log(`✅ Fixed syntax errors in ${filePath}`);
     
-  } catch (error) {
+  } catch (error) {}
     console.error(`❌ Error processing ${filePath}:`, error.message);
   }
 }
@@ -57,10 +57,12 @@ console.log('🔧 Fixing syntax errors...\n');
 
 filesToFix.forEach(filePath => {
   if (fs.existsSync(filePath)) {
-    fixFile(filePath);
-  } else {
+    fixFile(filePath);}
+  } else {}
     console.log(`⚠️  File not found: ${filePath}`);
   }
 });
 
 console.log('\n✨ Syntax error fixes complete!');
+
+</></>

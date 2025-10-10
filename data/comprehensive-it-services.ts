@@ -26,7 +26,7 @@ export interface ComprehensiveITService {id: string;
   growth_rate: string;
   variant: string;
   contact_info: unknown;
-    mobile: string;
+    mobile: string;}
     email: string}
     address: string;
     id: 'quantum - cloud - infrastructure',
@@ -2204,7 +2204,7 @@ export const,
   name: string;
   tagline: string;
   price: string;
-  period: string,,
+  period: string,
   description: string;
   features: string[];
   popular: boolean;
@@ -2228,7 +2228,7 @@ export const,
   variant: string;
   contactInfo: {,
     mobile: string;
-    email: string;
+    email: string;}
     address: string}
     website: string}
   };
@@ -2266,7 +2266,7 @@ export const,
   pric,
   e: string;
   perio,
-  d: string,,
+  d: string,
   descriptio,
   n: string;
   feature,
@@ -2336,7 +2336,7 @@ export const,
     name: 'Enterprise IT Infrastructure Management';
     tagline: 'Complete enterprise IT infrastructure with 99.99% uptime guarantee';
     price: '$25,999';
-    period: '/month',,
+    period: '/month',
   description: 'Comprehensive enterprise IT infrastructure management service providing complete network, server, storage, and security management. Achieves 99.99% uptime with 24/7 monitoring and support.';
     features: [
       'Network infrastructure managementServer and storage managementSecurity monitoring and management24/7 infrastructure monitoringPerformance optimizationDisaster recovery planningCompliance managementIT asset management';
@@ -2359,7 +2359,7 @@ export const,
     roi: 'Enterprises achieve 400% ROI through reduced IT costs, improved performance, and enhanced security';
     competitors: ['IBM Global ServicesAccentureDeloittePwCEY'];
     marketSize: '$1.2 T IT services market, 8% annual growth';
-    growthRate: '8% annual growth';
+    growthRate: '8% annual growth';}
     variant: 'enterprise-futuristic'}
     contactInfo: {}
       mobile: '+1 302 464 0950';
@@ -2402,10 +2402,8 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
   }
 ];
 ;
-;
   }
 ];
-;
     realImplementation: true;
     implementationDetails:,
       'Fully functional cloud migration service with comprehensive planning, execution, and optimization capabilities. Includes migration operations center and post-migration support.'
@@ -3759,7 +3757,7 @@ export const,
     roi: 'Enterprises achieve 400% ROI through reduced IT costs, improved performance, and enhanced security';
     competitors: ['IBM Global ServicesAccentureDeloittePwCEY'];
     marketSize: '$1.2 T IT services market, 8% annual growth';
-    growthRate: '8% annual growth';
+    growthRate: '8% annual growth';}
     variant: 'enterprise-futuristic'}
     contactInfo: {}
       mobile: '+1 302 464 0950';
@@ -3802,7 +3800,7 @@ export const,
     roi: 'Enterprises achieve 600% ROI through cloud cost reduction and performance improvements';
     competitors: ['AWS Professional ServicesMicrosoft ConsultingGoogle CloudAccentureDeloitte'];
     marketSize: '$400 B cloud services market, 20% annual growth';
-    growthRate: '20% annual growth';
+    growthRate: '20% annual growth';}
     variant: 'cloud-futuristic'}
     contactInfo: {}
       mobile: '+1 302 464 0950';
@@ -3845,7 +3843,7 @@ export const,
     roi: 'Enterprises achieve 500% ROI through cyber attack prevention and security cost reduction';
     competitors: ['CrowdStrike Falcon CompletePalo Alto Networks CortexSentinelOne VigilanceCarbon BlackCylance'];
     marketSize: '$200 B cybersecurity market, 15% annual growth';
-    growthRate: '15% annual growth';
+    growthRate: '15% annual growth';}
     variant: 'cybersecurity-futuristic'}
     contactInfo: {}
       mobile: '+1 302 464 0950';
@@ -3888,7 +3886,7 @@ export const,
     roi: 'Enterprises achieve 450% ROI through improved uptime, energy efficiency, and operational optimization';
     competitors: ['EquinixDigital RealtyCyrusOneCoreSiteQTS Realty'];
     marketSize: '$200 B data center market, 12% annual growth';
-    growthRate: '12% annual growth';
+    growthRate: '12% annual growth';}
     variant: 'datacenter-futuristic'}
     contactInfo: {}
       mobile: '+1 302 464 0950';
@@ -3931,7 +3929,7 @@ export const,
     roi: 'Enterprises achieve 350% ROI through improved network performance and security';
     competitors: ['Cisco SD-WANVMware SD-WANFortinetPalo Alto NetworksJuniper Networks'];
     marketSize: '$8 B SD-WAN market, 35% annual growth';
-    growthRate: '35% annual growth';
+    growthRate: '35% annual growth';}
     variant: 'network-futuristic'}
     contactInfo: {}
       mobile: '+1 302 464 0950';
@@ -3974,7 +3972,7 @@ export const,
     roi: 'Enterprises achieve 300% ROI through successful project delivery and strategic guidance';
     competitors: ['McKinseyBCGBainAccentureDeloitte'];
     marketSize: '$50 B IT consulting market, 10% annual growth';
-    growthRate: '10% annual growth';
+    growthRate: '10% annual growth';}
     variant: 'consulting-futuristic'}
     contactInfo: {}
       mobile: '+1 302 464 0950';
@@ -4017,7 +4015,7 @@ export const,
     roi: 'Individuals achieve 200% ROI through career advancement and increased earning potential';
     competitors: ['CompTIACiscoMicrosoftAWS TrainingGoogle Cloud Training'];
     marketSize: '$15 B IT training market, 12% annual growth';
-    growthRate: '12% annual growth';
+    growthRate: '12% annual growth';}
     variant: 'training-futuristic'}
     contactInfo: {}
       mobile: '+1 302 464 0950';
@@ -4059,7 +4057,7 @@ export const,
     roi: 'Enterprises report 300% ROI through improved performance and quantum-grade security.';
     competitors: ['AWSAzureGoogle CloudTraditional cloud providers'];
     marketSize: '$400 B cloud market, quantum segment growing 400% annually';
-    growthRate: '400% annual growth';
+    growthRate: '400% annual growth';}
     variant: 'quantum-advanced'}
     contactInfo: {}
       mobile: '+1 302 464 0950';
@@ -4101,7 +4099,7 @@ export const,
     roi: 'DevOps teams report 500% ROI through faster deployments and reduced operational overhead.';
     competitors: ['GitLab CI/CDJenkinsCircleCIGitHub Actions'];
     marketSize: '$8 B DevOps market, AI segment growing 350% annually';
-    growthRate: '350% annual growth';
+    growthRate: '350% annual growth';}
     variant: 'ai-futuristic'}
     contactInfo: {}
       mobile: '+1 302 464 0950';
@@ -4143,7 +4141,7 @@ export const,
     roi: 'Enterprises report 400% ROI through enhanced security and reduced breach risk.';
     competitors: ['Palo Alto NetworksCrowdStrikeSymantecTraditional security tools'];
     marketSize: '$150 B cybersecurity market, quantum segment growing 400% annually';
-    growthRate: '400% annual growth';
+    growthRate: '400% annual growth';}
     variant: 'quantum-cyberpunk'}
     contactInfo: {}
       mobile: '+1 302 464 0950';
@@ -6691,7 +6689,7 @@ export interface ComprehensiveITService,
   e: '2024 - 09 - 15' customer,
   s: 180, ratin,
   g: 4.9, review,
-  s: 156} export interface ComprehensiveITService {; } ]; ; } ]; realImplementatio,
+  s: 156} export interface ComprehensiveITService {; } ]; } ]; realImplementatio,
   n: true,
   implementationDetails:' 'Fully functional cloud migration service with comprehensive planning, execution, and optimization capabilities. Includes migration operations center and post-migration support.'' launchDat,
   e: '2024-02-01' customer,

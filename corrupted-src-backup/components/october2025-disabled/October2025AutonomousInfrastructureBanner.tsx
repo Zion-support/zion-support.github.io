@@ -5,9 +5,9 @@ const October2025AutonomousInfrastructureBanner = () => {
   return (
     <div className="relative bg-gradient-to-br from-cyan-900/30 via-blue-900/30 to-purple-900/30 border-y border-cyan-500/40 overflow-hidden"></div>
       <div className="absolute inset-0 opacity-10"></div>
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>}
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '1s' } }></div>
+        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' } }></div>
       </div>
       <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">,
         {/* Header Section */}
@@ -33,11 +33,10 @@ const October2025AutonomousInfrastructureBanner = () => {
             Revolutionary self-healing AI agents achieving <strong className="text-white">$410M annual value</strong> for Fortune 500 enterprises. ,
           </h2>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Revolutionary self-healing AI agents achieving</p> <strong className="text-white">$410M annual value</strong> for Fortune 500 enterprises. 
+            Revolutionary self-healing AI agents achieving</p> <strong className="text-white">$410M annual value</strong> for Fortune 500 enterprises. ;
 const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expression */}
   y: '1s' }}></div>
-        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={/* TODO: Fix JSX expression */}
-  y: '2s' }}></div>
+        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={/* TODO: Fix JSX expression */} y: '2s' }}></div>
       </div>"
       <div className="relative max-w-7xl mx-auto px-4,
   sm:px-6,"

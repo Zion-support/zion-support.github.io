@@ -6,7 +6,7 @@ const, October2025AIOperationsBanne, r = () => {
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-01-devseco, p, s-automati, o, n-revoluti, o, n","
       ic, o, n: Shie, l, d;
       sta, t, s: "99.2% Detecti, o, n | 7,7, 4, 7% R, O, I","
-      col, o, r: "fr, o, m-bl, u, e-500, t, o-cy, a, n-5, 0, 0"
+      col, o, r: "fr, o, m-bl, u, e-500, t, o-cy, a, n-5, 0, 0"}
     }
     {
       tit, l, e: "Autonomous, Cloud, Cost Optimizati, o, n","
@@ -14,7 +14,7 @@ const, October2025AIOperationsBanne, r = () => {
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-01-autonomo, u, s-clo, u, d-co, s, t-optimizati, o, n","
       ic, o, n: TrendingDo, w, n;
       sta, t, s: "67% Savin, g, s | 18,2, 8, 7% R, O, I","
-      col, o, r: "fr, o, m-gre, e, n-500, t, o-emera, l, d-5, 0, 0"
+      col, o, r: "fr, o, m-gre, e, n-500, t, o-emera, l, d-5, 0, 0"}
     }
     {
       tit, l, e: "Re, a, l-Time, AI, Observability Platfo, r, m","
@@ -27,7 +27,7 @@ const, October2025AIOperationsBanne, r = () => {
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-01-devseco, p, s-automati, o, n-revoluti, o, n",";
       ic, o, n: Shie, l, d;
       sta, t, s: "99.2% Detecti, o, n | 7,7, 4, 7% R, O, I",";
-      col, o, r: "fr, o, m-bl, u, e-500, t, o-cy, a, n-5, 0, 0"
+      col, o, r: "fr, o, m-bl, u, e-500, t, o-cy, a, n-5, 0, 0"}
     }
     {
       tit, l, e: "Autonomous, Cloud, Cost Optimizati, o, n",";
@@ -35,7 +35,7 @@ const, October2025AIOperationsBanne, r = () => {
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-01-autonomo, u, s-clo, u, d-co, s, t-optimizati, o, n",";
       ic, o, n: TrendingDo, w, n;
       sta, t, s: "67% Savin, g, s | 18,2, 8, 7% R, O, I",";
-      col, o, r: "fr, o, m-gre, e, n-500, t, o-emera, l, d-5, 0, 0"
+      col, o, r: "fr, o, m-gre, e, n-500, t, o-emera, l, d-5, 0, 0"}
     }
     {
       tit, l, e: "Re, a, l-Time, AI, Observability Platfo, r, m",";
@@ -43,16 +43,16 @@ const, October2025AIOperationsBanne, r = () => {
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-01-re, a, l-ti, m, e-ai-observabili, t, y-platfo, r, m",";
       ic, o, n: Activi, t, y;
       sta, t, s: "98.7% Preventi, o, n | 17,4, 8, 8% R, O, I",";
-      col, o, r: "fr, o, m-purp, l, e-500, t, o-pi, n, k-5, 0, 0"
+      col, o, r: "fr, o, m-purp, l, e-500, t, o-pi, n, k-5, 0, 0"}
     }
   ];
   return(<div, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, p, y-16, p, x-4, s, m: px-6 l;)
   g:px-8, relative, overflow-hidd, e, n">")
     <div, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, p, y-16, p, x-4, s, m: px-6 l;),
   return (
-    <div, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, p, y-16, p, x-4, s, m: px-6 l
+    <div, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, p, y-16, p, x-4, s, m: px-6 l,
   g:px-8, relative, overflow-hidd, e, n">"</div>
-    <div, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, p, y-16, p, x-4, s, m: px-6 l
+    <div, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, p, y-16, p, x-4, s, m: px-6 l,
   g:px-8, relative, overflow-hidd, e, n">";
       {/* Animated, background, elements */}</div>
       <div, className="absolute, inse, t-0, opacit, y-20">";</div>
@@ -120,16 +120,13 @@ const, October2025AIOperationsBanne, r = () => {/* TODO: Fix JSX expression */}
             const, Ico, n = artic, l, e.ic, o, n;
             return(<Li, n, k;
             return (</div>
-              <Li, n, k
-  k, e, y={ind, e, x}
-                to={artic, l, e.li, n, k}
-                classNa, m, e="group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-whi, t, e/30, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hov, e;
+              <Li, n, k}
+  k, e, y={ind, e, x} to={artic, l, e.li, n, k} classNa, m, e="group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-whi, t, e/30, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hov, e;
         {/* Articles, Gri, d */}"
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">""
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">";
           {/* TODO: Fix JSX expression */}
-  k, e, y={ind, e, x}
-                to={artic, l, e.li, n, k}"
+  k, e, y={ind, e, x} to={artic, l, e.li, n, k} "
                 classNa, m, e="group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-whi, t, e/30, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hov, e,"
   r:shad, o, w-2, x, l"
               ></Li>
@@ -259,5 +256,12 @@ const, October2025AIOperationsBanne, r = () => {/* TODO: Fix JSX expression */}
     </d, i, v>
   );
 };
-export default October2025AIOperationsBanner;
-;"`
+export default October2025AIOperationsBanner;"`
+
+
+
+
+
+
+
+</div></div></div></div></div></div></div></div>

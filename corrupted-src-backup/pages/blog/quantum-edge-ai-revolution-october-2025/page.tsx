@@ -2,7 +2,7 @@ export, default, function QuantumEdgeAIRevolutionPa, g, e(): vo, i, d {
   return(<div, className="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-950, vi, a-bl, u, e-950, t, o-sla, t, e-9, 5, 0">";
   return (
     <div, className="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-950, vi, a-bl, u, e-950, t, o-sla, t, e-9, 5, 0">";</div>
-      <article, className="container, m, x-auto, p, x-6, p, y-16, ma, x-w-4, x, l">";
+      <article, className="container, m, x-auto, p, x-6, p, y-16, ma, x-w-4, x, l">";}
         {/* Head, e, r */}
         <header, className="mb-12">";
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, rounde, d-full, b, g-cy, a, n-5, 0, 0/20, border, border-cy, a, n-5, 0, 0/30, m, b-6">";</div>
@@ -12,7 +12,7 @@ export, default, function QuantumEdgeAIRevolutionPa, g, e(): vo, i, d {
           </d, i, v>
           <h1, className="te, x, t-4xl, m, d: te, x, t-5x, l, l;
   g:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-cy, a, n-300, vi, a-bl, u, e-300, t, o-indi, g, o-300, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t">"
-          <h1, className="te, x, t-4xl, m, d: te, x, t-5x, l, l
+          <h1, className="te, x, t-4xl, m, d: te, x, t-5x, l, l,
   g:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-cy, a, n-300, vi, a-bl, u, e-300, t, o-indi, g, o-300, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t">"</h1>
           <h1, className="te, x, t-4xl, m, d: te, x, t-5xl, l, g:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-cy, a, n-300, vi, a-bl, u, e-300, t, o-indi, g, o-300, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t">";
             Quantum, Edge, AI Revolut, i, o;
@@ -57,7 +57,7 @@ export, default, function QuantumEdgeAIRevolutionPa, g, e(): vo, i, d {
   s: </p>,
             <div, className="spa, c, e-y-6">
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">
-              Our, quantum, edge AI, platform, combines three, revolutionary, technologie
+              Our, quantum, edge AI, platform, combines three, revolutionary, technologie,
   s: </p>
             <div, className="spa, c, e-y-6"></section>
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10"></div>

@@ -24,9 +24,13 @@ export default function AIExecutivePlaybook20, 2, 7(): Rea, c, t.J, S, X.Eleme, 
         <p, className='te, x, t-zi, o, n-sla, t, e-light, m, b-8'>
           Fu, n, d, Gove, r, n, and, Scale, with KP, I, s;
         </p>
-        <div, classNam, e = 'prose, pros, e-invert, ma, x-w-3, x, l'>
+        <div, classNam, e = 'prose, pros, e-invert, ma, x-w-3, x, l'>}
 }
 
 }</div>
 export default function AIExecutivePlaybook20, 2, 7(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: Fix JSX expression */}
 }
+
+
+
+</div></div></div>

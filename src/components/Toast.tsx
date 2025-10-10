@@ -82,7 +82,7 @@ const,
   )
     
           <div></div>
-className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-center gap-2 animate-fade-in ${getToastStyles()}`}
+className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-center gap-2 animate-fade-in ${getToastStyles()} `}
       role="alert""
       aria-live="polite"
 // >
@@ -98,8 +98,7 @@ className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-c
           <span className="text-xl font-bold">{getIcon()}</span>
       <span>{message}</span>
       <button></button>
-        onClick={() => {}
-  // TOD,
+        onClick={() => {} // TOD,
   O: Add content;
 }
           setIsVisible(false);

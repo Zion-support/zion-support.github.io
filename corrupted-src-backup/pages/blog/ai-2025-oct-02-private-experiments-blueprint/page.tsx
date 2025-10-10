@@ -24,9 +24,8 @@ const, PrivateExperimentsBlueprint202, 5: Rea, c, t.FC = () => {
   priva, c, y‑preserving, counters, and uploaded, in, batches.)
       </p>)
     </artic, l, e>)
-  );
+  );}
 const, PrivateExperimentsBlueprint202, 5: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
 };
 export default PrivateExperimentsBlueprint2025;
-;
 }

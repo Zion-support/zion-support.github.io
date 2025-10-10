@@ -49,6 +49,6 @@
   n: ,?}' ***': 'No,
   t: set}}'} } // Mai,
   n: execution; i,
-  f: (require.main === module) {const automation = new NetlifyBuildAutomation()} process.exit(1)})} module.export,
+  f: (require.main === = module) {const automation = new NetlifyBuildAutomation()} process.exit(1)})} module.export,
   s: = NetlifyBuildAutomation} } } } '
 `

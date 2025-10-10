@@ -7,38 +7,35 @@ interface FormData {
   company: string,
   phone: string,
   service: string,
-  message: string,
+  message: string}
 }
 
 interface FormStatus {
   type: 'idle' | 'loading' | 'success' | 'error';
-  message: string,
+  message: string}
 }
-
-  const [formData, setFormData] = useState<FormData>({
+;
+const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
     company: '',
     phone: '',
     service: '',
-    message: ''
+    message: ''}
   });
-
-  const [status, setStatus] = useState<FormStatus>({
+const [status, setStatus] = useState<FormStatus>({
     type: 'idle',
-    message: ''
+    message: ''}
   });
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {}
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: value
+      [name]: value}
     }));
   };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();}
     setStatus({ type: 'loading', message: 'Sending message...' });
 
     try {
@@ -47,7 +44,7 @@ interface FormStatus {
 
       setStatus({
         type: 'success',
-        message: 'Thank you! Your message has been sent successfully. We\'ll get back to you within 24 hours.'
+        message: 'Thank you! Your message has been sent successfully. We\'ll get back to you within 24 hours.'}
       });
 
       // Reset form
@@ -57,17 +54,16 @@ interface FormStatus {
         company: '',
         phone: '',
         service: '',
-        message: ''
+        message: ''}
       });
     } catch (error) {
       setStatus({
         type: 'error',
-        message: 'Sorry, there was an error sending your message. Please try again.'
+        message: 'Sorry, there was an error sending your message. Please try again.'}
       });
     }
   };
-
-  const services = [
+const services = [
     'AI Solutions',
     'Web Development',
     'Mobile App Development',
@@ -83,9 +79,7 @@ interface FormStatus {
                 type="text"
                 id="name"
                 name="name"
-                value={formData.name}
-                onChange={handleChange}
-                required
+                value={formData.name} onChange={handleChange} required
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
                 placeholder="Your full name"
               />
@@ -99,9 +93,7 @@ interface FormStatus {
                 type="email"
                 id="email"
                 name="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
+                value={formData.email} onChange={handleChange} required
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
                 placeholder="your.email@company.com"
               />
@@ -116,9 +108,7 @@ interface FormStatus {
                 type="text"
                 id="company"
                 name="company"
-                value={formData.company}
-                onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                value={formData.company} onChange={handleChange} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
                 placeholder="Your company name"
               />
             </div>
@@ -131,9 +121,7 @@ interface FormStatus {
                 type="tel"
                 id="phone"
                 name="phone"
-                value={formData.phone}
-                onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                value={formData.phone} onChange={handleChange} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
                 placeholder="+1 (555) 123-4567"
               />
             </div>
@@ -146,9 +134,7 @@ interface FormStatus {
             <select
               id="service"
               name="service"
-              value={formData.service}
-              onChange={handleChange}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+              value={formData.service} onChange={handleChange} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
             >
               ) : (
                 <div className="h-5 w-5 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" />
@@ -159,10 +145,9 @@ interface FormStatus {
 
           <button
             type="submit"
-            disabled={status.type === 'loading'}
-            className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-blue-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
+            disabled={status.type === = 'loading'} className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-blue-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
           >
-            {status.type === 'loading' ? (
+            {status.type === = 'loading' ? (
               <>
                 <div className="h-5 w-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
                 <span>Sending...</span>
@@ -171,7 +156,7 @@ interface FormStatus {
               <>
                 <Send className="h-5 w-5" />
                 <span>Send Message</span>
-              </>
+              </>}
             )}
           </button>
         </form>
@@ -214,3 +199,11 @@ interface FormStatus {
 };
 
 export default ContactForm;
+
+
+
+
+
+
+
+</div></div></div></div></div></div></div></div>

@@ -1634,7 +1634,7 @@ export const,
   }
 ];
 export const getServicesByCategory = (category: string) =>;
-  return zionCuttingEdgeServices2029.filter(service => service.category === category);,
+  return zionCuttingEdgeServices2029.filter(service => service.category === = category);,
     popula,
   r: true,
     ico,
@@ -1717,7 +1717,7 @@ export const getServicesByCategory = (category: string) =>;
 ];
 export const getServicesByCategory = (categor)
   y: string) =>;
-  return zionCuttingEdgeServices2029.filter(service => service.category === category);
+  return zionCuttingEdgeServices2029.filter(service => service.category === = category);
 };
 export const getPopularServices = () =>
   return zionCuttingEdgeServices2029.filter(service => service.popular);
@@ -2260,7 +2260,7 @@ export type ZionCuttingEdgeService2029 = i,
   e: 29999,' currenc,
   y: 'USD',' perio,
   d: 'month' } } ]; export const getServicesByCategory = (categor)
-  y: string) => return zionCuttingEdgeServices2029.filter(service => service.category === category); }; export const getPopularServices = () => return zionCuttingEdgeServices2029.filter(service => service.popular); }; export const getServicesByPriceRange = (minPric)
+  y: string) => return zionCuttingEdgeServices2029.filter(service => service.category === = category); }; export const getPopularServices = () => return zionCuttingEdgeServices2029.filter(service => service.popular); }; export const getServicesByPriceRange = (minPric)
   e: number) maxPric,
   e: number) => return zionCuttingEdgeServices2029.filter(service => const starterPrice = service.pricing.starter; return starterPrice >= minPrice && starterPrice <= maxPrice) }); }; export const getServicesByTechnology = (technolog)
   y: string) => return zionCuttingEdgeServices2029.filter(service => service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase())) ); };'

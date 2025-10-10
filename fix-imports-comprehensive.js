@@ -3,8 +3,7 @@ import fs from 'fs';
 import path from 'path';
 
 //Correct icon mappings - using actual lucide-react exports;
-const iconMappings = {
-  rrowleft: 'ArrowLeft'
+const iconMappings ={rrowleft: 'ArrowLeft'
   alendar: 'Calendar'
   ser: 'User'
   lock: 'Clock'
@@ -30,12 +29,10 @@ const iconMappings = {
   hieldcheck: 'ShieldCheck',
   ctivity: 'Activity',
   tom: 'Atom',
-  atellite: 'Satellite',
-  ward: 'Award'};
+  atellite: 'Satellite'} ward: 'Award'};
 
 //Icons that don't exist in lucide-react - replace with similar ones;
-const iconReplacements = {
-  Tag: 'Hash'
+const iconReplacements ={Tag: 'Hash'
   Globe: 'Globe2'
   Rocket: 'Rocket': 'Cpu'
   Share2: 'Share'
@@ -45,8 +42,7 @@ const iconReplacements = {
   ShieldCheck: 'ShieldCheck',
   Activity: 'Activity',
   Atom: 'Atom',
-  Satellite: 'Satellite',
-  Award: 'Award'};
+  Satellite: 'Satellite'} Award: 'Award'};
 
 //Function to fix imports in a file;
 function fixImportsInFile(filePath) {
@@ -58,15 +54,15 @@ function fixImportsInFile(filePath) {
       content = content.replace(linkImportRegex)
         "import Link from 'next/link';"
       );
-      modified = true;
+      modified = true;}
     }
 
     //Fix lucide-react imports - replace individual imports with single import;
     for (let i = 0; i < importLines.length; i++) {
 
       //Skip lucide-react individual imports;
-      if (line.includes('lucide-react/dist/esm/icons/')) {
-        const match = line.match(
+      if (line.includes('lucide-react/dist/esm/icons/')) {;
+const match = line.match(
           /import\s+(\w+)\s+from\s+'lucide-react\/dist\/esm\/icons\/(\w+)';/
         );
         if (match) {
@@ -74,13 +70,11 @@ function fixImportsInFile(filePath) {
 //           const brokenName = match[2];
 //           const correctName = iconMappings[brokenName] || iconName;
 //           const finalName = iconReplacements[correctName] || correctName;
-          lucideImports.push(finalName);
-const iconMappings = {/* TODO: Fix JSX expression */}
-};
+          lucideImports.push(finalName);}
+const iconMappings ={/* TODO: Fix JSX expression */} };
 
 //Icons that don't exist in lucide-react - replace with similar ones;
-const iconReplacements = {/* TODO: Fix JSX expression */}
-};
+const iconReplacements ={/* TODO: Fix JSX expression */} };
 
 //Function to fix imports in a file;
 function fixImportsInFile(filePath) {/* TODO: Fix JSX expression */}
@@ -94,9 +88,9 @@ function fixImportsInFile(filePath) {/* TODO: Fix JSX expression */}
         line.includes("} from 'lucide-react'")
       ) {
         //Skip existing lucide-react imports;
-        continue;
+        continue;}
       } else {
-        newImportLines.push(line);
+        newImportLines.push(line);}
       ) {/* TODO: Fix JSX expression */}
       } else {/* TODO: Fix JSX expression */}
       }
@@ -108,11 +102,11 @@ function fixImportsInFile(filePath) {/* TODO: Fix JSX expression */}
       //Find the best place to insert the import;
       for (let i = 0; i < newImportLines.length; i++) {
         if (newImportLines[i].startsWith('import ')) {
-          insertIndex = i + 1;
-        } else if (newImportLines[i].trim() === '') {
-          break;
+          insertIndex = i + 1;}
+        } else if (newImportLines[i].trim() === = '') {
+          break;}
     if (lucideImports.length > 0) {/* TODO: Fix JSX expression */}
-        } else if (newImportLines[i].trim() === '') {/* TODO: Fix JSX expression */}
+        } else if (newImportLines[i].trim() === = '') {/* TODO: Fix JSX expression */}
         }
       }
 
@@ -132,8 +126,8 @@ function fixImportsInFile(filePath) {/* TODO: Fix JSX expression */}
 
 //Get all files that need fixing;
 directories.forEach(dir => {)
-  if (fs.existsSync(dir)) {
-    const dirFiles = fs;
+  if (fs.existsSync(dir)) {;
+const dirFiles = fs;}
       .readdirSync(dir, { recursive: true })
 directories.forEach(dir => {/* TODO: Fix JSX expression */})
   e: true })

@@ -6,9 +6,9 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 import { Palette, Target, Zap, Settings, CheckCircle, Star,  Palette,  Target,  Settings } from 'lucide-react';
-const AIDesignAssistantPage: React.FC = () => {
-  const features = [];
-  return (
+const AIDesignAssistantPage: React.FC = () => {;
+const features = [];
+  return (}
     {// TODO: Add content;}
 
 };

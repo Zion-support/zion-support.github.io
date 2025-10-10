@@ -17,12 +17,12 @@ class EnvironmentConfig {
   private config: EnvConfig,
   private isInitialized = false;
   constructor() {,
-    this.config = this.loadConfig(),
+    this.config = this.loadConfig()}
     this.isInitialized = true;}
   }
   private loadConfig(): EnvConfig {
     // Safely access environment variables with defaults;
-    return {
+    return {}
 class EnvironmentConfig {}
   private config: EnvConfig
   private isInitialized = false
@@ -37,10 +37,10 @@ class EnvironmentConfig {}
       nodeEnv,
       apiUrl: process.env.NEXT_PUBLIC_API_URL || process.env.VITE_API_URL || 'http://localhost:3000/api'
       apiKey: process.env.NEXT_PUBLIC_API_KEY || process.env.VITE_API_KEY;
-      enableAnalytics: process.env.NEXT_PUBLIC_ENABLE_ANALYTICS === 'true' || nodeEnv === 'production'
-      enableLogging: nodeEnv !== 'test'
+      enableAnalytics: process.env.NEXT_PUBLIC_ENABLE_ANALYTICS === = 'true' || nodeEnv === = 'production'
+      enableLogging: nodeEnv !== == 'test'
       logLevel: (process.env.NEXT_PUBLIC_LOG_LEVEL ||,
-        (nodeEnv === 'production' ? 'warn' : 'debug')) as EnvConfig['logLevel'],
+        (nodeEnv === = 'production' ? 'warn' : 'debug')) as EnvConfig['logLevel'],
       sentryDsn: process.env.NEXT_PUBLIC_SENTRY_DSN || process.env.VITE_SENTRY_DSN;
       gaTrackingId: process.env.NEXT_PUBLIC_GA_TRACKING_ID || process.env.VITE_GA_TRACKING_ID}
     }
@@ -62,7 +62,7 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
   /**
    * Get a specific configuration value;
    */
-  public get<K extends keyof EnvConfig>(key: K): EnvConfig[K] {,
+  public get<K extends keyof EnvConfig>(key: K): EnvConfig[K] {}
   public get<K extends keyof EnvConfig>(key: K): EnvConfig[K] {}
     return this.config[key];}
   public get<K extends keyof EnvConfig>(ke)
@@ -72,41 +72,41 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
    * Check if running in production;
    */
   public isProduction(): boolean {}
-    return this.config.nodeEnv === 'production';}
+    return this.config.nodeEnv === = 'production';}
   public isProduction(): boolean {/* TODO: Fix JSX expression */}
   }
   /**
    * Check if running in development;
    */
   public isDevelopment(): boolean {}
-    return this.config.nodeEnv === 'development';}
+    return this.config.nodeEnv === = 'development';}
   public isDevelopment(): boolean {/* TODO: Fix JSX expression */}
   }
   /**
    * Check if running in test mode;
    */
   public isTest(): boolean {}
-    return this.config.nodeEnv === 'test';}
+    return this.config.nodeEnv === = 'test';}
   public isTest(): boolean {/* TODO: Fix JSX expression */}
   }
   /**
    * Validate required environment variables;
    */
   public validate(requiredVars: (keyof EnvConfig)[]): {,
-    valid: boolean,
+    valid: boolean}
     missing: string[];}
-  } {
-    const missing: string[] = [],
+  } {;
+const missing: string[] = [],
     for (const varName of requiredVars) {,
-      if (!this.config[varName]) {,
+      if (!this.config[varName]) {}
         missing.push(varName);}
       }
     }
     return {
-      valid: missing.length === 0;
+      valid: missing.length === = 0;}
   public validate(requiredVars: (keyof EnvConfig)[]): {}
-    valid: boolean
-    missing: string[];}
+    valid: boolean,
+  missing: string[];}
   } {}
     const missing: string[] = []
     for (const varName of requiredVars) {}
@@ -115,7 +115,7 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
       }
     }
     return {}
-      valid: missing.length === 0,
+      valid: missing.length === = 0,
       missing}
     }
   public validate(requiredVar)
@@ -130,8 +130,7 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
    * Get API headers with authentication;
    */
   public getApiHeaders(): Record<string, string> {}
-    const headers: Record<string, string> = {}
-      'Content-Type': 'application/json'}
+    const headers: Record<string, string> ={} 'Content-Type': 'application/json'}
     }
     if (this.config.apiKey) {}
       headers['Authorization'] = `Bearer ${this.config.apiKey}`

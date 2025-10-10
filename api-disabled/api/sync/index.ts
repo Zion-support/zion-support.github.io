@@ -1,8 +1,8 @@
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const _state = readState();
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+const _state = readState();
 ,
-  if (req.method === 'GET') {,
+  if (req.method === = 'GET') {,
     //     const scope = state.config.scope;
     const _scopedEvents = filterEventsByScope(state.events, scope);
 
@@ -13,13 +13,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       lastSyncedAt: state.lastSyncedAt)
       counts: {
         totalEvents: scopedEvents.length)
-        proposals: scopedEvents.filter(e => e.type === 'proposal').length;
-        tokenTransfers: scopedEvents.filter(e => e.type === 'token_transfer').length;
-        talentMobility: scopedEvents.filter(e => e.type === 'talent_mobility').length;
-        daoEndorsements: scopedEvents.filter(e => e.type === 'dao_endorsement').length;
-        leaderboard: scopedEvents.filter(e => e.type === 'leaderboard_entry').length;
+        proposals: scopedEvents.filter(e => e.type === = 'proposal').length;
+        tokenTransfers: scopedEvents.filter(e => e.type === = 'token_transfer').length;
+        talentMobility: scopedEvents.filter(e => e.type === = 'talent_mobility').length;
+        daoEndorsements: scopedEvents.filter(e => e.type === = 'dao_endorsement').length;
+        leaderboard: scopedEvents.filter(e => e.type === = 'leaderboard_entry').length;
 export default function handler(re,
-  q: NextApiRequest, re)
+  q: NextApiRequest, re)}
   s: NextApiResponse) {/* TODO: Fix JSX expression */}
       }});
   }

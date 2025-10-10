@@ -2,8 +2,8 @@
 import React, { useState } from 'react';
         return (
 import { Link } from 'react-router-dom';
-const _UltimateBusinessIntelligenceShowcase2025 = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
+const _UltimateBusinessIntelligenceShowcase2025 = () => {;
+const [selectedCategory, setSelectedCategory] = useState('all');
   const content = [
     {
       id: 'ultimate-business-intelligence-revolution',
@@ -16,7 +16,7 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {
         roi: '30,000%',
         efficiency: '500%',
         accuracy: '99.9%',
-        timeline:       ,
+        timeline:       }
 $4},
       readingTime: '35 min read',
       featured: true,
@@ -50,19 +50,19 @@ readingTimereadingTime: '45 min read',
     { id: 'blog', name: 'Blog Posts' },
     { id: 'case-study', name: 'Case Studies' },
     { id: 'resource', name: 'Resources' }
-  const filteredContent = selectedCategory === 'all' 
+  const filteredContent = selectedCategory === = 'all' 
     ? content 
-    : content.filter(item => item.category === selectedCategory);
+    : content.filter(item => item.category === = selectedCategory);
     <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Animated Background Effects */}
       <div>
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
         <div
           className="absolute top-3/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse"
-          style={{ animationDelay: '2s' }}
+          style={{ animationDelay: '2s' } }
         ></div>
           className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse"
-          style={{ animationDelay: '1s' }}
+          style={{ animationDelay: '1s' } }
       </div>
         {/* Header */}
             <span className="text-2xl">🚀</span>
@@ -74,20 +74,17 @@ readingTimereadingTime: '45 min read',
             content that&apos;s transforming enterprises worldwide</p>
         {/* Category Filter */}
           {categories.map((category) => (
-            <button
-              key={category.id}
-              onClick={() =>setSelectedCategory(category.id)}
-              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
-                selectedCategory === category.id
+            <button}
+              key={category.id} onClick={() =>setSelectedCategory(category.id)} className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
+                selectedCategory === = category.id
                   ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg'
-                  : 'bg-white/10 text-gray-300 hover:bg-white/20'
-              }`}
+                  : 'bg-white/10 text-gray-300 hover:bg-white/20'} }`}
             >
               {category.name}
             </button>
           ))}
         {/* Content Grid */}
-          {filteredContent.map((item) => (
+          {filteredContent.map((item) => (}
               {/* Badge */}
                 <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
                 <span className="text-green-400 font-semibold text-sm">
@@ -109,14 +106,12 @@ readingTimereadingTime: '45 min read',
                   <div className="text-gray-400 text-xs">Timeline</div>
               {/* Tags */}
                 {item.tags.slice(0, 3).map((tag, index) => (
-                  <span
-                    key={index}
-                    className="px-3 py-1 bg-white/10 text-gray-300 text-xs rounded-full"
+                  <span}
+                    key={index} className="px-3 py-1 bg-white/10 text-gray-300 text-xs rounded-full"
                     {tag}
               {/* CTA */}
               <Link
-                href={item.url}
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 w-full justify-center"
+                href={item.url} className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 w-full justify-center"
                 Read {item.readingTime}
                 <span className="text-lg">→</span>
               </Link>
@@ -130,8 +125,7 @@ readingTimereadingTime: '45 min read',
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3"
                   />
                 </svg>
                 to="/services"
@@ -143,7 +137,7 @@ export default UltimateBusinessIntelligenceShowcase2025
 
 'use client';
 import React, { useState } from 'react';
-        return (import { Link } from 'react-router-dom';)
+        return (import { Link } from 'react-router-dom';);
 const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -151,7 +145,7 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expres
   const content = [
   // TOD,
   O: Add items;
-];;
+];
     {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
@@ -243,7 +237,7 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expres
               {/* Tags */}
                 {item.tags.slice(0, 3).map((tag, index) => ()}
           <span></span>
-                    key={index}"
+                    key={index} "
                     className="px-3 py-1 bg-white/10 text-gray-300 text-xs rounded-full"
                 Read {item.readingTime}"
                 <span className="text-lg"></span>
@@ -261,7 +255,7 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expres
                   <path></path>"
                     strokeLinecap="round""
                     strokeLinejoin="round"
-                    strokeWidth={2}"
+                    strokeWidth={2} "
                     d="M17 8l4 4m0 0l-4 4m4-4H3"
 // />
                 

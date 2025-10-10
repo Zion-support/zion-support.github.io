@@ -7,7 +7,7 @@
   r: (const i = 0 i < lines.length i++) { const line = lines[i]} i,
   f: (line.trim().startsWith( 'import ')) {/* TODO: Fix JSX expression */}
   k: = true} imports.push(line)} els,
-  e: if (inImportBlock && line.trim() === '';') {'} imports.push(line)} els,
+  e: if (inImportBlock && line.trim() === = '';') {'} imports.push(line)} els,
   e: {inImportBlock = false} otherLines.push(line)} } const usedImports = imports.filter(importLine => {if (!importLine.trim().startsWith('import''})) retur,
   n: true' const match = importLine.match(/import\s+{([^}]+)}\s+from/); i,
   f: (match) {const importNames = match[1].split(')''}).map(nam)
@@ -16,7 +16,7 @@
   d: unused imports)`
   in: ${filePat}h}`); retur,`
   n: 'true'} catch (error) { this.log(`❌ Error fixing unused imports in ${filePath}: ${error.message}`); retur,`
-  n: 'false'} } async fixTypeScriptErrors(filePath) {try { const result = execSync(`npx tsc --noEmit --project .`){ '\n'); const imports = []; const otherLines = []; let inImportBlock = false; for (const i = 0 i < lines.length i++) { const line = lines[i]} if (line.trim().startsWith('}'import ')) {inImportBlock = true} imports.push(line)} else if (inImportBlock && line.trim() === ) { imports.push(line)} else {inImportBlock = false} otherLines.push(line)} } const usedImports = imports.filter(importLine => {' if (!importLine.trim().startsWith('import')) return true} const match = importLine.match(/import\s+{([^}]+)}\s+from/); if (match) {' const importNames = match[1].split('}').map(name => name.trim()); const fileContent = otherLines.join('\n'); return importNames.some(name => fileContent.includes(name)); return true}) const newContent = [...usedImports;...otherLines].join(`\n) `); fs.writeFileSync(filePath)newContent); this.log(`✅ Fixed unused imports)`
+  n: 'false'} } async fixTypeScriptErrors(filePath) {try { const result = execSync(`npx tsc --noEmit --project .`){ '\n'); const imports = []; const otherLines = []; let inImportBlock = false; for (const i = 0 i < lines.length i++) { const line = lines[i]} if (line.trim().startsWith('}'import ')) {inImportBlock = true} imports.push(line)} else if (inImportBlock && line.trim() === = ) { imports.push(line)} else {inImportBlock = false} otherLines.push(line)} } const usedImports = imports.filter(importLine => {' if (!importLine.trim().startsWith('import')) return true} const match = importLine.match(/import\s+{([^}]+)}\s+from/); if (match) {' const importNames = match[1].split('}').map(name => name.trim()); const fileContent = otherLines.join('\n'); return importNames.some(name => fileContent.includes(name)); return true}) const newContent = [...usedImports;...otherLines].join(`\n) `); fs.writeFileSync(filePath)newContent); this.log(`✅ Fixed unused imports)`
   in: ${filePath}`); return true} catch (error) { this.log(`❌ Error fixing unused imports in ${filePath }: ${error.message}`); return false} } async fixTypeScriptErrors(filePath) {/* TODO: Fix JSX expression */}`
   o: 'pip}e})' this.log(`✅ TypeScrip,
   t: check passed)`
@@ -24,10 +24,10 @@
   n: 'true'} catch (error) { this.log(`❌ TypeScript errors in ${filePath}: ${/* TODO: Fix JSX expression */})`
   t: '|| error.message'}`); tr,
   y: {/* TODO: Fix JSX expression */}`
-  f: (fixedContent !== content) { fs.writeFileSync(filePath)fixedContent)} this.log(`✅ Fixe,
+  f: (fixedContent !== == content) { fs.writeFileSync(filePath)fixedContent)} this.log(`✅ Fixe,
   d: TypeScript issues)`
   in: ${filePat}h}`); retur,`
-  n: 'true'} } catch (fixError) {let fixedContent = content; fixedContent = fixedContent.replace(/const\s+(\w+)\s*:\s*any\s*=/g,'const $1 ='); fixedContent = fixedContent.replace(/function\s+(\w+)\s*\(\s*\)\s*:\s*any/g,'function $1()'); fixedContent = fixedContent.replace(/:\s*any\s*[)]/g`$1; `)} if (fixedContent !== content) { fs.writeFileSync(filePath}fixedContent); this.log(`✅ Fixed TypeScript issues)`
+  n: 'true'} } catch (fixError) {let fixedContent = content; fixedContent = fixedContent.replace(/const\s+(\w+)\s*:\s*any\s*=/g,'const $1 ='); fixedContent = fixedContent.replace(/function\s+(\w+)\s*\(\s*\)\s*:\s*any/g,'function $1()'); fixedContent = fixedContent.replace(/:\s*any\s*[)]/g`$1; `)} if (fixedContent !== == content) { fs.writeFileSync(filePath}fixedContent); this.log(`✅ Fixed TypeScript issues)`
   in: ${filePath}`); return true} } catch (fixError) {` this.log(`❌ Failed to fix TypeScript issues in ${filePath}: ${fixError.message}`)} retur,`
   n: 'false'} } async fixESLintErrors(filePath) { try {` const result = execSync(`npx eslint ${filePath} ' --fix`,{/* TODO: Fix JSX expression */})`
   o: 'pipe' }'})' this.log(`✅ Fixe,
@@ -70,7 +70,7 @@
   r: (const i = 0 i < lines.length i++) { const line = lines[i]} i,
   f: (line.trim().startsWith( 'import ')) {/* TODO: Fix JSX expression */}
   k: = true} imports.push(line)} els,
-  e: if (inImportBlock && line.trim() === '';') {'} imports.push(line)} els,
+  e: if (inImportBlock && line.trim() === = '';') {'} imports.push(line)} els,
   e: {inImportBlock = false} otherLines.push(line)} } const usedImports = imports.filter(importLine => {if (!importLine.trim().startsWith('import''})) retur,
   n: true' const match = importLine.match(/import\s+{([^}]+)}\s+from/); i,
   f: (match) {const importNames = match[1].split(')''}).map(nam)
@@ -79,7 +79,7 @@
   d: unused imports)`
   in: ${filePat}h}`); retur,`
   n: 'true'} catch (error) { this.log(`❌ Error fixing unused imports in ${filePath}: ${error.message}`); retur,`
-  n: 'false'} } async fixTypeScriptErrors(filePath) {try { const result = execSync(`npx tsc --noEmit --project .`){ '\n'); const imports = []; const otherLines = []; let inImportBlock = false; for (const i = 0 i < lines.length i++) { const line = lines[i]} if (line.trim().startsWith('}'import ')) {inImportBlock = true} imports.push(line)} else if (inImportBlock && line.trim() === ) { imports.push(line)} else {inImportBlock = false} otherLines.push(line)} } const usedImports = imports.filter(importLine => {' if (!importLine.trim().startsWith('import')) return true} const match = importLine.match(/import\s+{([^}]+)}\s+from/); if (match) {' const importNames = match[1].split('}').map(name => name.trim()); const fileContent = otherLines.join('\n'); return importNames.some(name => fileContent.includes(name)); return true}) const newContent = [...usedImports;...otherLines].join(`\n) `); fs.writeFileSync(filePath)newContent); this.log(`✅ Fixed unused imports)`
+  n: 'false'} } async fixTypeScriptErrors(filePath) {try { const result = execSync(`npx tsc --noEmit --project .`){ '\n'); const imports = []; const otherLines = []; let inImportBlock = false; for (const i = 0 i < lines.length i++) { const line = lines[i]} if (line.trim().startsWith('}'import ')) {inImportBlock = true} imports.push(line)} else if (inImportBlock && line.trim() === = ) { imports.push(line)} else {inImportBlock = false} otherLines.push(line)} } const usedImports = imports.filter(importLine => {' if (!importLine.trim().startsWith('import')) return true} const match = importLine.match(/import\s+{([^}]+)}\s+from/); if (match) {' const importNames = match[1].split('}').map(name => name.trim()); const fileContent = otherLines.join('\n'); return importNames.some(name => fileContent.includes(name)); return true}) const newContent = [...usedImports;...otherLines].join(`\n) `); fs.writeFileSync(filePath)newContent); this.log(`✅ Fixed unused imports)`
   in: ${filePath}`); return true} catch (error) { this.log(`❌ Error fixing unused imports in ${filePath }: ${error.message}`); return false} } async fixTypeScriptErrors(filePath) {/* TODO: Fix JSX expression */}`
   o: 'pip}e})' this.log(`✅ TypeScrip,
   t: check passed)`
@@ -87,10 +87,10 @@
   n: 'true'} catch (error) { this.log(`❌ TypeScript errors in ${filePath}: ${/* TODO: Fix JSX expression */})`
   t: '|| error.message'}`); tr,
   y: {/* TODO: Fix JSX expression */}`
-  f: (fixedContent !== content) { fs.writeFileSync(filePath)fixedContent)} this.log(`✅ Fixe,
+  f: (fixedContent !== == content) { fs.writeFileSync(filePath)fixedContent)} this.log(`✅ Fixe,
   d: TypeScript issues)`
   in: ${filePat}h}`); retur,`
-  n: 'true'} } catch (fixError) {let fixedContent = content; fixedContent = fixedContent.replace(/const\s+(\w+)\s*:\s*any\s*=/g,'const $1 ='); fixedContent = fixedContent.replace(/function\s+(\w+)\s*\(\s*\)\s*:\s*any/g,'function $1()'); fixedContent = fixedContent.replace(/:\s*any\s*[)]/g`$1; `)} if (fixedContent !== content) { fs.writeFileSync(filePath}fixedContent); this.log(`✅ Fixed TypeScript issues)`
+  n: 'true'} } catch (fixError) {let fixedContent = content; fixedContent = fixedContent.replace(/const\s+(\w+)\s*:\s*any\s*=/g,'const $1 ='); fixedContent = fixedContent.replace(/function\s+(\w+)\s*\(\s*\)\s*:\s*any/g,'function $1()'); fixedContent = fixedContent.replace(/:\s*any\s*[)]/g`$1; `)} if (fixedContent !== == content) { fs.writeFileSync(filePath}fixedContent); this.log(`✅ Fixed TypeScript issues)`
   in: ${filePath}`); return true} } catch (fixError) {` this.log(`❌ Failed to fix TypeScript issues in ${filePath}: ${fixError.message}`)} retur,`
   n: 'false'} } async fixESLintErrors(filePath) { try {` const result = execSync(`npx eslint ${filePath} ' --fix`,{/* TODO: Fix JSX expression */})`
   o: 'pipe' }'})' this.log(`✅ Fixe,
@@ -133,7 +133,7 @@
   r: (const i = 0 i < lines.length i++) { const line = lines[i]} i,
   f: (line.trim().startsWith( 'import ')) {/* TODO: Fix JSX expression */}
   k: = true} imports.push(line)} els,
-  e: if (inImportBlock && line.trim() === '';') {'} imports.push(line)} els,
+  e: if (inImportBlock && line.trim() === = '';') {'} imports.push(line)} els,
   e: {inImportBlock = false} otherLines.push(line)} } const usedImports = imports.filter(importLine => {if (!importLine.trim().startsWith('import''})) retur,
   n: true' const match = importLine.match(/import\s+{([^}]+)}\s+from/); i,
   f: (match) {const importNames = match[1].split(')''}).map(nam)
@@ -142,7 +142,7 @@
   d: unused imports)`
   in: ${filePat}h}`); retur,`
   n: 'true'} catch (error) { this.log(`❌ Error fixing unused imports in ${filePath}: ${error.message}`); retur,`
-  n: 'false'} } async fixTypeScriptErrors(filePath) {try { const result = execSync(`npx tsc --noEmit --project .`){ '\n'); const imports = []; const otherLines = []; let inImportBlock = false; for (const i = 0 i < lines.length i++) { const line = lines[i]} if (line.trim().startsWith('}'import ')) {inImportBlock = true} imports.push(line)} else if (inImportBlock && line.trim() === ) { imports.push(line)} else {inImportBlock = false} otherLines.push(line)} } const usedImports = imports.filter(importLine => {' if (!importLine.trim().startsWith('import')) return true} const match = importLine.match(/import\s+{([^}]+)}\s+from/); if (match) {' const importNames = match[1].split('}').map(name => name.trim()); const fileContent = otherLines.join('\n'); return importNames.some(name => fileContent.includes(name)); return true}) const newContent = [...usedImports;...otherLines].join(`\n) `); fs.writeFileSync(filePath)newContent); this.log(`✅ Fixed unused imports)`
+  n: 'false'} } async fixTypeScriptErrors(filePath) {try { const result = execSync(`npx tsc --noEmit --project .`){ '\n'); const imports = []; const otherLines = []; let inImportBlock = false; for (const i = 0 i < lines.length i++) { const line = lines[i]} if (line.trim().startsWith('}'import ')) {inImportBlock = true} imports.push(line)} else if (inImportBlock && line.trim() === = ) { imports.push(line)} else {inImportBlock = false} otherLines.push(line)} } const usedImports = imports.filter(importLine => {' if (!importLine.trim().startsWith('import')) return true} const match = importLine.match(/import\s+{([^}]+)}\s+from/); if (match) {' const importNames = match[1].split('}').map(name => name.trim()); const fileContent = otherLines.join('\n'); return importNames.some(name => fileContent.includes(name)); return true}) const newContent = [...usedImports;...otherLines].join(`\n) `); fs.writeFileSync(filePath)newContent); this.log(`✅ Fixed unused imports)`
   in: ${filePath}`); return true} catch (error) { this.log(`❌ Error fixing unused imports in ${filePath }: ${error.message}`); return false} } async fixTypeScriptErrors(filePath) {/* TODO: Fix JSX expression */}`
   o: 'pip}e})' this.log(`✅ TypeScrip,
   t: check passed)`
@@ -150,10 +150,10 @@
   n: 'true'} catch (error) { this.log(`❌ TypeScript errors in ${filePath}: ${/* TODO: Fix JSX expression */})`
   t: '|| error.message'}`); tr,
   y: {/* TODO: Fix JSX expression */}`
-  f: (fixedContent !== content) { fs.writeFileSync(filePath)fixedContent)} this.log(`✅ Fixe,
+  f: (fixedContent !== == content) { fs.writeFileSync(filePath)fixedContent)} this.log(`✅ Fixe,
   d: TypeScript issues)`
   in: ${filePat}h}`); retur,`
-  n: 'true'} } catch (fixError) {let fixedContent = content; fixedContent = fixedContent.replace(/const\s+(\w+)\s*:\s*any\s*=/g,'const $1 ='); fixedContent = fixedContent.replace(/function\s+(\w+)\s*\(\s*\)\s*:\s*any/g,'function $1()'); fixedContent = fixedContent.replace(/:\s*any\s*[)]/g`$1; `)} if (fixedContent !== content) { fs.writeFileSync(filePath}fixedContent); this.log(`✅ Fixed TypeScript issues)`
+  n: 'true'} } catch (fixError) {let fixedContent = content; fixedContent = fixedContent.replace(/const\s+(\w+)\s*:\s*any\s*=/g,'const $1 ='); fixedContent = fixedContent.replace(/function\s+(\w+)\s*\(\s*\)\s*:\s*any/g,'function $1()'); fixedContent = fixedContent.replace(/:\s*any\s*[)]/g`$1; `)} if (fixedContent !== == content) { fs.writeFileSync(filePath}fixedContent); this.log(`✅ Fixed TypeScript issues)`
   in: ${filePath}`); return true} } catch (fixError) {` this.log(`❌ Failed to fix TypeScript issues in ${filePath}: ${fixError.message}`)} retur,`
   n: 'false'} } async fixESLintErrors(filePath) { try {` const result = execSync(`npx eslint ${filePath} ' --fix`,{/* TODO: Fix JSX expression */})`
   o: 'pipe' }'})' this.log(`✅ Fixe,
@@ -196,7 +196,7 @@
   r: (const i = 0 i < lines.length i++) { const line = lines[i]} i,
   f: (line.trim().startsWith( 'import ')) {/* TODO: Fix JSX expression */}
   k: = true} imports.push(line)} els,
-  e: if (inImportBlock && line.trim() === '';') {'} imports.push(line)} els,
+  e: if (inImportBlock && line.trim() === = '';') {'} imports.push(line)} els,
   e: {inImportBlock = false} otherLines.push(line)} } const usedImports = imports.filter(importLine => {if (!importLine.trim().startsWith('import''})) retur,
   n: true' const match = importLine.match(/import\s+{([^}]+)}\s+from/); i,
   f: (match) {const importNames = match[1].split(')''}).map(nam)
@@ -205,7 +205,7 @@
   d: unused imports)`
   in: ${filePat}h}`); retur,`
   n: 'true'} catch (error) { this.log(`❌ Error fixing unused imports in ${filePath}: ${error.message}`); retur,`
-  n: 'false'} } async fixTypeScriptErrors(filePath) {try { const result = execSync(`npx tsc --noEmit --project .`){ '\n'); const imports = []; const otherLines = []; let inImportBlock = false; for (const i = 0 i < lines.length i++) { const line = lines[i]} if (line.trim().startsWith('}'import ')) {inImportBlock = true} imports.push(line)} else if (inImportBlock && line.trim() === ) { imports.push(line)} else {inImportBlock = false} otherLines.push(line)} } const usedImports = imports.filter(importLine => {' if (!importLine.trim().startsWith('import')) return true} const match = importLine.match(/import\s+{([^}]+)}\s+from/); if (match) {' const importNames = match[1].split('}').map(name => name.trim()); const fileContent = otherLines.join('\n'); return importNames.some(name => fileContent.includes(name)); return true}) const newContent = [...usedImports;...otherLines].join(`\n) `); fs.writeFileSync(filePath)newContent); this.log(`✅ Fixed unused imports)`
+  n: 'false'} } async fixTypeScriptErrors(filePath) {try { const result = execSync(`npx tsc --noEmit --project .`){ '\n'); const imports = []; const otherLines = []; let inImportBlock = false; for (const i = 0 i < lines.length i++) { const line = lines[i]} if (line.trim().startsWith('}'import ')) {inImportBlock = true} imports.push(line)} else if (inImportBlock && line.trim() === = ) { imports.push(line)} else {inImportBlock = false} otherLines.push(line)} } const usedImports = imports.filter(importLine => {' if (!importLine.trim().startsWith('import')) return true} const match = importLine.match(/import\s+{([^}]+)}\s+from/); if (match) {' const importNames = match[1].split('}').map(name => name.trim()); const fileContent = otherLines.join('\n'); return importNames.some(name => fileContent.includes(name)); return true}) const newContent = [...usedImports;...otherLines].join(`\n) `); fs.writeFileSync(filePath)newContent); this.log(`✅ Fixed unused imports)`
   in: ${filePath}`); return true} catch (error) { this.log(`❌ Error fixing unused imports in ${filePath }: ${error.message}`); return false} } async fixTypeScriptErrors(filePath) {/* TODO: Fix JSX expression */}`
   o: 'pip}e})' this.log(`✅ TypeScrip,
   t: check passed)`
@@ -213,10 +213,10 @@
   n: 'true'} catch (error) { this.log(`❌ TypeScript errors in ${filePath}: ${/* TODO: Fix JSX expression */})`
   t: '|| error.message'}`); tr,
   y: {/* TODO: Fix JSX expression */}`
-  f: (fixedContent !== content) { fs.writeFileSync(filePath)fixedContent)} this.log(`✅ Fixe,
+  f: (fixedContent !== == content) { fs.writeFileSync(filePath)fixedContent)} this.log(`✅ Fixe,
   d: TypeScript issues)`
   in: ${filePat}h}`); retur,`
-  n: 'true'} } catch (fixError) {let fixedContent = content; fixedContent = fixedContent.replace(/const\s+(\w+)\s*:\s*any\s*=/g,'const $1 ='); fixedContent = fixedContent.replace(/function\s+(\w+)\s*\(\s*\)\s*:\s*any/g,'function $1()'); fixedContent = fixedContent.replace(/:\s*any\s*[)]/g`$1; `)} if (fixedContent !== content) { fs.writeFileSync(filePath}fixedContent); this.log(`✅ Fixed TypeScript issues)`
+  n: 'true'} } catch (fixError) {let fixedContent = content; fixedContent = fixedContent.replace(/const\s+(\w+)\s*:\s*any\s*=/g,'const $1 ='); fixedContent = fixedContent.replace(/function\s+(\w+)\s*\(\s*\)\s*:\s*any/g,'function $1()'); fixedContent = fixedContent.replace(/:\s*any\s*[)]/g`$1; `)} if (fixedContent !== == content) { fs.writeFileSync(filePath}fixedContent); this.log(`✅ Fixed TypeScript issues)`
   in: ${filePath}`); return true} } catch (fixError) {` this.log(`❌ Failed to fix TypeScript issues in ${filePath}: ${fixError.message}`)} retur,`
   n: 'false'} } async fixESLintErrors(filePath) { try {` const result = execSync(`npx eslint ${filePath} ' --fix`,{/* TODO: Fix JSX expression */})`
   o: 'pipe' }'})' this.log(`✅ Fixe,
@@ -259,7 +259,7 @@
   r: (const i = 0 i < lines.length i++) { const line = lines[i]} i,
   f: (line.trim().startsWith( 'import ')) {/* TODO: Fix JSX expression */}
   k: = true} imports.push(line)} els,
-  e: if (inImportBlock && line.trim() === '';') {'} imports.push(line)} els,
+  e: if (inImportBlock && line.trim() === = '';') {'} imports.push(line)} els,
   e: {inImportBlock = false} otherLines.push(line)} } const usedImports = imports.filter(importLine => {if (!importLine.trim().startsWith('import''})) retur,
   n: true' const match = importLine.match(/import\s+{([^}]+)}\s+from/); i,
   f: (match) {const importNames = match[1].split(')''}).map(nam)
@@ -268,7 +268,7 @@
   d: unused imports)`
   in: ${filePat}h}`); retur,`
   n: 'true'} catch (error) { this.log(`❌ Error fixing unused imports in ${filePath}: ${error.message}`); retur,`
-  n: 'false'} } async fixTypeScriptErrors(filePath) {try { const result = execSync(`npx tsc --noEmit --project .`){ '\n'); const imports = []; const otherLines = []; let inImportBlock = false; for (const i = 0 i < lines.length i++) { const line = lines[i]} if (line.trim().startsWith('}'import ')) {inImportBlock = true} imports.push(line)} else if (inImportBlock && line.trim() === ) { imports.push(line)} else {inImportBlock = false} otherLines.push(line)} } const usedImports = imports.filter(importLine => {' if (!importLine.trim().startsWith('import')) return true} const match = importLine.match(/import\s+{([^}]+)}\s+from/); if (match) {' const importNames = match[1].split('}').map(name => name.trim()); const fileContent = otherLines.join('\n'); return importNames.some(name => fileContent.includes(name)); return true}) const newContent = [...usedImports;...otherLines].join(`\n) `); fs.writeFileSync(filePath)newContent); this.log(`✅ Fixed unused imports)`
+  n: 'false'} } async fixTypeScriptErrors(filePath) {try { const result = execSync(`npx tsc --noEmit --project .`){ '\n'); const imports = []; const otherLines = []; let inImportBlock = false; for (const i = 0 i < lines.length i++) { const line = lines[i]} if (line.trim().startsWith('}'import ')) {inImportBlock = true} imports.push(line)} else if (inImportBlock && line.trim() === = ) { imports.push(line)} else {inImportBlock = false} otherLines.push(line)} } const usedImports = imports.filter(importLine => {' if (!importLine.trim().startsWith('import')) return true} const match = importLine.match(/import\s+{([^}]+)}\s+from/); if (match) {' const importNames = match[1].split('}').map(name => name.trim()); const fileContent = otherLines.join('\n'); return importNames.some(name => fileContent.includes(name)); return true}) const newContent = [...usedImports;...otherLines].join(`\n) `); fs.writeFileSync(filePath)newContent); this.log(`✅ Fixed unused imports)`
   in: ${filePath}`); return true} catch (error) { this.log(`❌ Error fixing unused imports in ${filePath }: ${error.message}`); return false} } async fixTypeScriptErrors(filePath) {/* TODO: Fix JSX expression */}`
   o: 'pip}e})' this.log(`✅ TypeScrip,
   t: check passed)`
@@ -276,10 +276,10 @@
   n: 'true'} catch (error) { this.log(`❌ TypeScript errors in ${filePath}: ${/* TODO: Fix JSX expression */})`
   t: '|| error.message'}`); tr,
   y: {/* TODO: Fix JSX expression */}`
-  f: (fixedContent !== content) { fs.writeFileSync(filePath)fixedContent)} this.log(`✅ Fixe,
+  f: (fixedContent !== == content) { fs.writeFileSync(filePath)fixedContent)} this.log(`✅ Fixe,
   d: TypeScript issues)`
   in: ${filePat}h}`); retur,`
-  n: 'true'} } catch (fixError) {let fixedContent = content; fixedContent = fixedContent.replace(/const\s+(\w+)\s*:\s*any\s*=/g,'const $1 ='); fixedContent = fixedContent.replace(/function\s+(\w+)\s*\(\s*\)\s*:\s*any/g,'function $1()'); fixedContent = fixedContent.replace(/:\s*any\s*[)]/g`$1; `)} if (fixedContent !== content) { fs.writeFileSync(filePath}fixedContent); this.log(`✅ Fixed TypeScript issues)`
+  n: 'true'} } catch (fixError) {let fixedContent = content; fixedContent = fixedContent.replace(/const\s+(\w+)\s*:\s*any\s*=/g,'const $1 ='); fixedContent = fixedContent.replace(/function\s+(\w+)\s*\(\s*\)\s*:\s*any/g,'function $1()'); fixedContent = fixedContent.replace(/:\s*any\s*[)]/g`$1; `)} if (fixedContent !== == content) { fs.writeFileSync(filePath}fixedContent); this.log(`✅ Fixed TypeScript issues)`
   in: ${filePath}`); return true} } catch (fixError) {` this.log(`❌ Failed to fix TypeScript issues in ${filePath}: ${fixError.message}`)} retur,`
   n: 'false'} } async fixESLintErrors(filePath) { try {` const result = execSync(`npx eslint ${filePath} ' --fix`,{/* TODO: Fix JSX expression */})`
   o: 'pipe' }'})' this.log(`✅ Fixe,
@@ -319,9 +319,9 @@
   e: true })} } log(message) {/* TODO: Fix JSX expression */}
   t: timestamp = new Date().toISOString()} cons,`
   t: logMessage = `[${timestamp}] ${message}\\n`; fs.appendFileSync(this.logFile) logMessage)} asyn,`
-  c: fixUnusedImports(filePath) {try { ' '\n'); const imports = []; const otherLines = []; let inImportBlock = false; for (const i = 0 i < lines.length i++) { const line = lines[i]}' if (line.trim().startsWith('' 'import ')) { inImportBlock = true} imports.push(line)} else if (inImportBlock && line.trim() === ) { imports.push(line)} else {inImportBlock = false} otherLines.push(line)} } // Filter out unused imports (basic check);' const usedImports = imports.filter(importLine => {'' if (!importLine.trim().startsWith('import)' ')) return true; // Extract import names} const match = importLine.match(/import\\s+{([^}]+)}\\s+from/); ' const fileContent = otherLines.join('\\n)' '); return importNames.some(name => fileContent.includes(name)); return true}) const newContent = [...usedImports; ...otherLines].join(`\\n) `); fs.writeFileSync(filePath) newContent); this.log(`✅ Fixed unused imports)`
+  c: fixUnusedImports(filePath) {try { ' '\n'); const imports = []; const otherLines = []; let inImportBlock = false; for (const i = 0 i < lines.length i++) { const line = lines[i]}' if (line.trim().startsWith('' 'import ')) { inImportBlock = true} imports.push(line)} else if (inImportBlock && line.trim() === = ) { imports.push(line)} else {inImportBlock = false} otherLines.push(line)} } // Filter out unused imports (basic check);' const usedImports = imports.filter(importLine => {'' if (!importLine.trim().startsWith('import)' ')) return true; // Extract import names} const match = importLine.match(/import\\s+{([^}]+)}\\s+from/); ' const fileContent = otherLines.join('\\n)' '); return importNames.some(name => fileContent.includes(name)); return true}) const newContent = [...usedImports; ...otherLines].join(`\\n) `); fs.writeFileSync(filePath) newContent); this.log(`✅ Fixed unused imports)`
   in: ${filePath}`); return false} } async fixTypeScriptErrors(filePath) {/* TODO: Fix JSX expression */}`
-  g:; let fixedContent = content; // Fix common TypeScript issues)' fixedContent = fixedContent.replace(/const\s+(\w+)\s*:\s*any\s*=/g, 'const $1 =;' ');' fixedContent = fixedContent.replace(/function\s+(\w+)\s*\(\s*\)\s*:\s*any/g, 'function $1();' '); fixedContent = fixedContent.replace(/:\\s*any\\s*[)]/g, `$1; `)} if (fixedContent !== content) { fs.writeFileSync(filePath} fixedContent); this.log(`✅ Fixed TypeScript issues)`
+  g:; let fixedContent = content; // Fix common TypeScript issues)' fixedContent = fixedContent.replace(/const\s+(\w+)\s*:\s*any\s*=/g, 'const $1 =;' ');' fixedContent = fixedContent.replace(/function\s+(\w+)\s*\(\s*\)\s*:\s*any/g, 'function $1();' '); fixedContent = fixedContent.replace(/:\\s*any\\s*[)]/g, `$1; `)} if (fixedContent !== == content) { fs.writeFileSync(filePath} fixedContent); this.log(`✅ Fixed TypeScript issues)`
   in: ${filePath}`); return true} } catch (fixError) {` this.log(`❌ Failed to fix TypeScript issues in ${filePath}: ${fixError.message}`)} retur,`
   n: false} } async fixESLintErrors(filePath) {try {` const result = execSync(`npx eslint} return false} } async fixFile(filePath) {/* TODO: Fix JSX expression */}`
   in: ${filePath}`); const fixes = [ this.fixUnusedImports(filePath), this.fixTypeScriptErrors(filePath), this.fixESLintErrors(filePath)]; async fixAllFiles() {/* TODO: Fix JSX expression */}
