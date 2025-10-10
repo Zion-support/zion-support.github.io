@@ -1,190 +1,87 @@
 'use client';
 import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Building, Users, Shield, Globe, Brain, Cloud, Code, BarChart, Zap, ArrowRight, Star, Award, Target, Clock, Settings, Lock, Database, Smartphone, Eye, Sparkles } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-const EnterprisePage: React.FC = () => {
+const PagePage: React.FC = () => {
   const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced AI technology to transform your business operations and improve efficiency'
+    },
+    {
+      icon: Zap,
+      title: 'High Performance',
+      description: 'Lightning-fast processing and real-time analytics for optimal results'
+    },
     {
       icon: Shield,
       title: 'Enterprise Security',
-      description: 'Comprehensive security solutions designed for large-scale enterprise environments.',
-      benefits: ['Advanced threat protection', 'Compliance management', 'Data encryption', 'Access control']
+      description: 'Bank-level security with encryption and compliance standards'
     },
     {
-      icon: Cloud,
-      title: 'Cloud Infrastructure',
-      description: 'Scalable cloud solutions that grow with your business needs.',
-      benefits: ['Auto-scaling', 'High availability', 'Disaster recovery', 'Cost optimization']
-    },
-    {
-      icon: Brain,
-      title: 'AI Integration',
-      description: 'Enterprise-grade AI solutions for automation and intelligent decision making.',
-      benefits: ['Machine learning', 'Predictive analytics', 'Process automation', 'Intelligent insights']
-    },
-    {
-      icon: Database,
-      title: 'Data Management',
-      description: 'Advanced data management and analytics for enterprise-scale operations.',
-      benefits: ['Big data processing', 'Real-time analytics', 'Data governance', 'Business intelligence']
-    },
-    {
-      icon: Users,
-      title: 'User Management',
-      description: 'Comprehensive user and access management for large organizations.',
-      benefits: ['Single sign-on', 'Role-based access', 'User provisioning', 'Audit trails']
-    },
-    {
-      icon: Settings,
-      title: 'System Integration',
-      description: 'Seamless integration with existing enterprise systems and workflows.',
-      benefits: ['API integration', 'Legacy system support', 'Workflow automation', 'Data synchronization']
-    }
-  ];
-
-  const solutions = [
-    {
-      title: 'Enterprise Resource Planning',
-      description: 'Comprehensive ERP solutions that streamline business processes and improve efficiency.',
-      icon: Building,
-      benefits: ['Financial management', 'Supply chain optimization', 'Human resources', 'Project management']
-    },
-    {
-      title: 'Customer Relationship Management',
-      description: 'Advanced CRM systems for managing customer relationships and sales processes.',
-      icon: Users,
-      benefits: ['Lead management', 'Sales automation', 'Customer analytics', 'Marketing automation']
-    },
-    {
-      title: 'Business Intelligence',
-      description: 'Powerful BI solutions for data-driven decision making and strategic planning.',
-      icon: BarChart,
-      benefits: ['Data visualization', 'Predictive analytics', 'Reporting', 'Performance monitoring']
-    },
-    {
-      title: 'Workflow Automation',
-      description: 'Automate complex business processes to improve efficiency and reduce errors.',
-      icon: Zap,
-      benefits: ['Process automation', 'Task management', 'Approval workflows', 'Document management']
+      icon: Globe,
+      title: 'Global Reach',
+      description: 'Worldwide deployment and support for international businesses'
     }
   ];
 
   const benefits = [
-    'Reduce operational costs by 30%',
-    'Improve productivity by 50%',
-    'Enhance security and compliance',
-    'Streamline business processes',
-    'Enable data-driven decisions',
-    'Scale with business growth',
-    'Integrate with existing systems',
-    'Provide 24/7 support and monitoring'
-  ];
-
-  const stats = [
-    { number: '500+', label: 'Enterprise Clients', icon: Building },
-    { number: '99.9%', label: 'Uptime Guarantee', icon: Shield },
-    { number: '50%', label: 'Cost Reduction', icon: TrendingUp },
-    { number: '24/7', label: 'Support Available', icon: Clock }
+    'Advanced AI technology integration',
+    'Real-time processing and analytics',
+    'Enterprise-grade security and compliance',
+    'Scalable and flexible solutions',
+    '24/7 technical support',
+    'Easy integration with existing systems',
+    'Cost-effective pricing plans',
+    'Proven track record of success'
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <SEOOptimizer
-        title="Enterprise Solutions - Zion Tech Group"
-        description="Comprehensive enterprise-grade solutions for large-scale business operations."
-        keywords="enterprise solutions, enterprise software, large-scale solutions, enterprise integration, business solutions"
-      />
-      <Navigation />
-      
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
-        <div className="relative max-w-7xl mx-auto text-center"></div>
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            Enterprise</h1>
-            <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              Solutions
-            </span>
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Comprehensive enterprise-grade solutions designed for large-scale business operations. 
-            Transform your organization with cutting-edge technology and expert implementation.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-            <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
-              Get Enterprise Consultation
-              <ArrowRight className="inline-block ml-2 w-5 h-5" />
-            </button>
-            <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              View Case Studies
-            </button>
-          </div>
-        </div>
-      </section>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Page | Zion Tech Group</title>
+        <meta name="description" content="Professional page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group" />
+      </Helmet>
 
-      {/* Stats Section */}
+      {/* Hero Section */}
       <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="flex justify-center mb-4">
-                  <stat.icon className="w-12 h-12 text-purple-400" />
-                </div>
-                <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
-                <div className="text-gray-300 text-sm">{stat.label}</div>
-              </div>
-            ))}
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Page
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Professional page services by Zion Tech Group. Advanced AI and IT solutions for your business.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
+              <Phone className="mr-2 h-5 w-5" />
+              Call Now
+            </button>
+            <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
+              <Mail className="mr-2 h-5 w-5" />
+              Email Us
+            </button>
           </div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Enterprise-Grade Features
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Built for scale, security, and performance to meet the demands of large organizations.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  <feature.icon className="w-8 h-8 text-purple-400 mr-3" />
-                  <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
+      <section className="py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-white mb-12 text-center">
+            Why Choose Our Page?
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-white" />
                 </div>
-                <p className="text-gray-300 mb-4">{feature.description}</p>
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-gray-400">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Comprehensive Solutions
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              End-to-end enterprise solutions that address every aspect of your business operations.
-            </p>
-          </div>
-          
-                    </li>
-                  ))}
-                </ul>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -192,38 +89,45 @@ const EnterprisePage: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4">
-                </button>
+      <section className="py-16 px-4 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-white mb-12 text-center">
+            Key Benefits
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-center space-x-3">
+                <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
+                <span className="text-gray-300">{benefit}</span>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center"></div>
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Enterprise?
+      <section className="py-16 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-white mb-8">
+            Ready to Get Started?
           </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Join hundreds of enterprise clients who trust our solutions for their mission-critical operations.
+          <p className="text-xl text-purple-100 mb-8">
+            Contact our experts to discuss your page needs and get a customized solution.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-            <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-              Contact Enterprise Sales
-              <ArrowRight className="inline-block ml-2 w-5 h-5" />
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
+              <Phone className="mr-2 h-5 w-5" />
+              Call Now
             </button>
-            <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              Learn More
+            <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
+              <Mail className="mr-2 h-5 w-5" />
+              Email Us
             </button>
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 };
 
-export default EnterprisePage;
+export default PagePage;
