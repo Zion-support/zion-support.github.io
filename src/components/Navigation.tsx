@@ -73,7 +73,8 @@ import {
   Mail as MailIcon,
   MapPin as Location,
   Truck,
-  Smartphone
+  Smartphone,
+  Box
 } from 'lucide-react';
 
 const Navigation: React.FC = () => {
@@ -151,6 +152,10 @@ const Navigation: React.FC = () => {
     { name: 'AI Meeting Assistant Pro', href: '/ai-meeting-assistant', icon: MessageSquare, category: 'Productivity', price: '$59/mo', description: 'AI-powered meeting transcription, action items extraction, and follow-up automation' },
     { name: 'AI Note-Taking Assistant', href: '/ai-note-taking', icon: FileText, category: 'Productivity', price: '$29/mo', description: 'Intelligent note organization, summarization, and knowledge management' },
     { name: 'AI Focus Booster', href: '/ai-focus-booster', icon: Target, category: 'Productivity', price: '$19/mo', description: 'AI-driven focus sessions with distraction blocking and productivity optimization' },
+    { name: 'AI Quantum Task Optimizer', href: '/ai-quantum-task-optimizer', icon: Cpu, category: 'Productivity', price: '$299/mo', description: 'Revolutionary quantum-powered task optimization with advanced algorithms' },
+    { name: 'AI Holographic Workspace', href: '/ai-holographic-workspace', icon: Box, category: 'Productivity', price: '$199/mo', description: 'Immersive 3D holographic workspace for enhanced productivity' },
+    { name: 'AI Neural Memory Assistant', href: '/ai-neural-memory-assistant', icon: Brain, category: 'Productivity', price: '$49/mo', description: 'Enhance cognitive capabilities with AI neural memory system' },
+    { name: 'AI Telepathic Interface', href: '/ai-telepathic-interface', icon: Brain, category: 'Productivity', price: '$299/mo', description: 'Control your digital world with the power of thought' },
     
     // Content & Marketing Tools
     { name: 'AI Content Writer Pro', href: '/ai-content-writer', icon: FileText, category: 'Content', price: '$89/mo', description: 'Advanced AI content generation for blogs, articles, and marketing copy' },
@@ -175,6 +180,7 @@ const Navigation: React.FC = () => {
     { name: 'AI Investment Analyzer', href: '/ai-investment-analyzer', icon: TrendingUp, category: 'Finance', price: '$149/mo', description: 'Advanced investment analysis with AI-driven market predictions' },
     { name: 'AI Business Plan Generator', href: '/ai-business-plan-generator', icon: FileText, category: 'Business', price: '$199/mo', description: 'Create comprehensive business plans with AI-powered market analysis' },
     { name: 'AI Contract Analyzer', href: '/ai-contract-analyzer', icon: FileText, category: 'Business', price: '$129/mo', description: 'AI-powered contract review and risk assessment' },
+    { name: 'AI Quantum Financial Oracle', href: '/ai-quantum-financial-oracle', icon: DollarSign, category: 'Finance', price: '$499/mo', description: 'Predict financial markets with quantum computing and AI algorithms' },
     
     // Customer Service & Support Tools
     { name: 'AI Customer Support Bot Pro', href: '/ai-customer-support-bot', icon: Bot, category: 'Support', price: '$99/mo', description: 'Advanced AI chatbot with natural language processing and human handoff' },
