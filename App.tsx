@@ -22,7 +22,7 @@ const structuredData = {
   "name": "Zion Tech Group",
   "url": "https://ziontechgroup.com",
   "logo": "https://ziontechgroup.com/logo.png",
-  "description": "Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services. Transform your business with our advanced AI capabilities.",
+  "description": "Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with our advanced AI capabilities, micro SAAS tools, and comprehensive IT solutions. Contact us at +1 302 464 0950 or kleber@ziontechgroup.com",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "364 E Main St STE 1008",
@@ -53,7 +53,19 @@ const structuredData = {
     "IT Services",
     "Cybersecurity",
     "Cloud Computing",
-    "Automation"
+    "Automation",
+    "Micro SAAS Solutions",
+    "Autonomous Systems",
+    "Blockchain Technology",
+    "IoT Solutions",
+    "Edge Computing",
+    "5G Implementation",
+    "AR/VR Development",
+    "Smart City Solutions",
+    "Digital Twin Development",
+    "Enterprise Integration",
+    "Business Intelligence",
+    "Robotic Process Automation"
   ]
 };
 
