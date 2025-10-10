@@ -4,10 +4,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
 import HomePage from './app/page';
-;
 const App: React.FC = () => {
-return (
-
   return (
     <HelmetProvider>
       <Router>
@@ -15,9 +12,7 @@ return (
           <Navigation />
           <main>
             <Routes>
-              <Route path="/" element={<HomePage />
-);
-}} />
+              <Route path="/" element={<HomePage />} />
             </Routes>
           </main>
           <Footer />

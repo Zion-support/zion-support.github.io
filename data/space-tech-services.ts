@@ -150,20 +150,11 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
       'Performance optimization'],
     roi: 'Enable commercial space operations and reduce mission costs by 60%. ROI through operational efficiency and new revenue streams.',
     competitors: ['SpaceX Starlink', 'OneWeb', 'Basic satellite services'],
-<<<<<<< HEAD
-    market_size: '$469B space economy'
-    growth_rate: '400% annual growth';
-variant: 'space - futuristic'
-    contact_info: unknown;
-      mobile: '+1 302 464 0950'
-=======
     market_size: '$469B space economy',
     growth_rate: '400% annual growth',
     variant: 'space - futuristic',
-    contact_info:
-        contact_info: unknown;
+    contact_info: {
       mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},

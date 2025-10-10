@@ -13,7 +13,9 @@ const { error, stack, componentStack, timestamp, userAgent, url } = req.body;
     // 3. Send alerts to your team
 
     // console.error removed for production
-.toISOString()
+    console.error('Error reported:', {
+      error: errorData,
+      timestamp: new Date().toISOString()
     });
 
     // For now, just acknowledge receipt

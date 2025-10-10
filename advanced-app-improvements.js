@@ -32,20 +32,15 @@ module.exports = {
 // Main function;
 function main() {
   // console.log removed for production
-;
-const monitoring = createAdvancedMonitoring();
+  const monitoring = createAdvancedMonitoring();
   const caching = createAdvancedCaching();
-  
-  // console.log removed for production
-);
-  // console.log removed for production
-);
   
   // console.log removed for production
 }
 
 if (require.main === module) {
-  main()}
+  main();
+}
 
 module.exports = {
   createAdvancedMonitoring,

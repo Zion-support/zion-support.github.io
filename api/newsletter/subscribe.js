@@ -30,7 +30,10 @@ const { email } = req.body || {};
     // 3. Send confirmation email
 
     // console.log removed for production
-.toISOString() });
+    console.log('Newsletter subscription:', {
+      email: email,
+      timestamp: new Date().toISOString()
+    });
 
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
