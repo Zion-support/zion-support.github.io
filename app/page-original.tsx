@@ -2,17 +2,17 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const -originalPage: React.FC = () => {
+const PageOriginal: React.FC = () => {
   return (
     <React.Fragment>
       <Helmet>
-        <title>-original - Zion Tech Group</title>
-        <meta name="description" content="Professional -original services by Zion Tech Group" />
+        <title>Page Original - Zion Tech Group</title>
+        <meta name="description" content="Original page services by Zion Tech Group" />
       </Helmet>
       
       <div className="min-h-screen bg-gray-900 text-white">
         <div className="container mx-auto px-4 py-8">
-          <h1 className="text-4xl font-bold mb-6">-original</h1>
+          <h1 className="text-4xl font-bold mb-6">Page Original</h1>
           <p className="text-lg text-gray-300">
             This page is currently under development. Please check back soon for more information.
           </p>
@@ -22,4 +22,4 @@ const -originalPage: React.FC = () => {
   );
 };
 
-export default -originalPage;
+export default PageOriginal;

@@ -1,25 +1,19 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+/**
+ * Global type definitions
+ */
 
-const Global.d.tsPage: React.FC = () => {
-  return (
-    <React.Fragment>
-      <Helmet>
-        <title>Global.d.ts - Zion Tech Group</title>
-        <meta name="description" content="Professional global.d.ts services by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gray-900 text-white">
-        <div className="container mx-auto px-4 py-8">
-          <h1 className="text-4xl font-bold mb-6">Global.d.ts</h1>
-          <p className="text-lg text-gray-300">
-            This page is currently under development. Please check back soon for more information.
-          </p>
-        </div>
-      </div>
-    </React.Fragment>
-  );
-};
+declare global {
+  interface Window {
+    gtag?: (...args: any[]) => void;
+    dataLayer?: any[];
+  }
 
-export default Global.d.tsPage;
+  namespace NodeJS {
+    interface ProcessEnv {
+      NEXT_PUBLIC_GA_TRACKING_ID?: string;
+      NODE_ENV: 'development' | 'production' | 'test';
+    }
+  }
+}
+
+export {};
