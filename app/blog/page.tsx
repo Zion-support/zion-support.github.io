@@ -63,6 +63,7 @@ const BlogPage: React.FC = () => {
       excerpt: 'Essential security measures every organization should implement when migrating to or operating in cloud environments.',
       content: 'Full article content...',
       author: 'Michael Rodriguez',
+<<<<<<< HEAD
       date: '2024-01-12',
       readTime: '6 min read',
       category: 'Cybersecurity',
@@ -83,10 +84,31 @@ const BlogPage: React.FC = () => {
       image: '/images/blog/scalable-apps.jpg',
 <<<<<<< HEAD
 =======
+=======
+      date: '2024-01-10',
+      readTime: '7 min read',
+      category: 'Cloud Computing',
+      tags: ['Cloud', 'Migration', 'Best Practices'],
+      image: '/images/blog/cloud-migration.jpg',
+      featured: true
+    },
+    {
+      id: '3',
+      title: 'Cybersecurity Trends 2024',
+      excerpt: 'The latest cybersecurity threats and how to protect your organization.',
+      content: 'Full article content...',
+      author: 'Alex Thompson',
+      date: '2024-01-05',
+      readTime: '6 min read',
+      category: 'Cybersecurity',
+      tags: ['Security', 'Threats', 'Protection'],
+      image: '/images/blog/cybersecurity.jpg',
+>>>>>>> cursor/fix-errors-and-merge-to-main-550e
       featured: false
     },
     {
       id: '4',
+<<<<<<< HEAD
       title: 'Data Analytics: Turning Information into Business Intelligence',
       excerpt: 'Discover how to transform raw data into actionable insights that drive business growth and decision-making.',
       content: 'Full article content...',
@@ -110,15 +132,30 @@ const BlogPage: React.FC = () => {
       tags: ['Quantum Computing', 'Future Technology', 'Innovation'],
       image: '/images/blog/quantum-computing.jpg',
 >>>>>>> cursor/fix-errors-and-merge-to-main-8a15
+=======
+      title: 'Blockchain in Supply Chain',
+      excerpt: 'How blockchain technology is revolutionizing supply chain management.',
+      content: 'Full article content...',
+      author: 'Maria Garcia',
+      date: '2024-01-01',
+      readTime: '8 min read',
+      category: 'Blockchain',
+      tags: ['Blockchain', 'Supply Chain', 'Innovation'],
+      image: '/images/blog/blockchain-supply.jpg',
+>>>>>>> cursor/fix-errors-and-merge-to-main-550e
       featured: false
     }
   ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   const categories = ['all', 'AI & Machine Learning', 'Cloud Computing', 'Cybersecurity', 'Development'];
 =======
   const categories = ['all', 'AI & Machine Learning', 'Cloud Computing', 'Cybersecurity', 'Development', 'Data Analytics', 'Emerging Technology'];
 >>>>>>> cursor/fix-errors-and-merge-to-main-8a15
+=======
+  const categories = ['all', ...Array.from(new Set(blogPosts.map(post => post.category)))];
+>>>>>>> cursor/fix-errors-and-merge-to-main-550e
 
   useEffect(() => {
     let filtered = blogPosts;
@@ -127,7 +164,7 @@ const BlogPage: React.FC = () => {
       filtered = filtered.filter(post =>
         post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        post.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
+        post.category.toLowerCase().includes(searchTerm.toLowerCase())
       );
     }
 
@@ -137,6 +174,7 @@ const BlogPage: React.FC = () => {
 
     setFilteredPosts(filtered);
   }, [searchTerm, selectedCategory]);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import React, { useState } from 'react';
@@ -290,10 +328,13 @@ const BlogPage: React.FC = () => {
 >>>>>>> cursor/analyze-improve-and-deploy-application-a851
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-8a15
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-550e
 
   return (
     <>
       <Helmet>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         <title>Blog - Zion Tech Group</title>
@@ -308,31 +349,53 @@ const BlogPage: React.FC = () => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/blog" />
 >>>>>>> cursor/analyze-improve-and-deploy-application-a851
+=======
+        <title>Blog - Zion Tech Group | AI & IT Insights</title>
+        <meta name="description" content="Stay updated with the latest insights on AI, cloud computing, cybersecurity, and IT solutions from our expert team." />
+        <meta name="keywords" content="AI blog, IT insights, technology trends, cloud computing, cybersecurity, software development" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-550e
       </Helmet>
-
+      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
         <section className="relative py-20 px-4">
+=======
+        <section className="py-20 px-4">
+>>>>>>> cursor/fix-errors-and-merge-to-main-550e
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Tech Insights & News
+              Tech <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Insights</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Stay updated with the latest trends in AI, blockchain, cloud computing, and IT solutions.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Stay ahead with expert insights on AI, cloud computing, cybersecurity, and the latest technology trends.
             </p>
             
-            {/* Search Bar */}
-            <div className="max-w-2xl mx-auto mb-8">
-              <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
-                  type="text"
-                  placeholder="Search articles..."
-                  value={searchQuery}
-                  onChange={(e) => handleSearch(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
-                />
+            {/* Search and Filter */}
+            <div className="max-w-4xl mx-auto mb-8">
+              <div className="flex flex-col md:flex-row gap-4">
+                <div className="flex-1 relative">
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                  <input
+                    type="text"
+                    placeholder="Search articles..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                  />
+                </div>
+                <select
+                  value={selectedCategory}
+                  onChange={(e) => setSelectedCategory(e.target.value)}
+                  className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                >
+                  {categories.map(category => (
+                    <option key={category} value={category} className="bg-slate-800">
+                      {category === 'all' ? 'All Categories' : category}
+                    </option>
+                  ))}
+                </select>
               </div>
 =======
         <section className="py-20 px-4">
@@ -379,6 +442,7 @@ const BlogPage: React.FC = () => {
           </div>
         </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* Blog Posts */}
 =======
@@ -448,28 +512,53 @@ const BlogPage: React.FC = () => {
                       <div className="flex items-center space-x-1">
                         <User className="w-4 h-4" />
                         <span>{post.author}</span>
+=======
+        {/* Featured Articles */}
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-3xl font-bold text-white mb-8 text-center">Featured Articles</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {blogPosts.filter(post => post.featured).map((post) => (
+                <article key={post.id} className="bg-white/10 backdrop-blur-lg rounded-2xl overflow-hidden border border-white/20 hover:border-purple-400 transition-all duration-300 group">
+                  <div className="aspect-video bg-gradient-to-br from-purple-500 to-blue-500"></div>
+                  <div className="p-8">
+                    <div className="flex items-center gap-2 mb-4">
+                      <Tag className="w-4 h-4 text-purple-400" />
+                      <span className="text-purple-400 text-sm font-semibold">{post.category}</span>
+                    </div>
+                    <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors">
+                      {post.title}
+                    </h3>
+                    <p className="text-gray-300 mb-6">{post.excerpt}</p>
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center space-x-4 text-sm text-gray-400">
+                        <div className="flex items-center space-x-1">
+                          <User className="w-4 h-4" />
+                          <span>{post.author}</span>
+                        </div>
+                        <div className="flex items-center space-x-1">
+                          <Clock className="w-4 h-4" />
+                          <span>{post.readTime}</span>
+                        </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-550e
                       </div>
-                      <button className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors font-medium">
-                        <span>Read More</span>
-                        <ArrowRight className="w-4 h-4" />
+                      <button className="flex items-center text-purple-400 hover:text-purple-300 transition-colors">
+                        Read More <ArrowRight className="w-4 h-4 ml-1" />
                       </button>
                     </div>
                   </div>
-                  <div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-lg h-64 flex items-center justify-center">
-                    <div className="text-6xl">📊</div>
-                  </div>
-                </div>
-              </div>
-            ))}
+                </article>
+              ))}
+            </div>
           </div>
         </section>
 
-        {/* Blog Posts Grid */}
+        {/* All Articles */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center">Latest Articles</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {blogPosts.filter(post => !post.featured).map((post) => (
+            <h2 className="text-3xl font-bold text-white mb-8 text-center">All Articles</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredPosts.map((post) => (
                 <article key={post.id} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 group">
                   <div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-lg h-48 flex items-center justify-center mb-6">
                     <div className="text-4xl">📝</div>
@@ -506,6 +595,12 @@ const BlogPage: React.FC = () => {
                 </article>
               ))}
             </div>
+            
+            {filteredPosts.length === 0 && (
+              <div className="text-center py-12">
+                <p className="text-gray-400 text-lg">No articles found matching your search criteria.</p>
+              </div>
+            )}
           </div>
         </section>
 
@@ -528,6 +623,7 @@ const BlogPage: React.FC = () => {
                 Subscribe
               </button>
             </div>
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-8a15
@@ -775,6 +871,8 @@ const BlogPage: React.FC = () => {
                 <p className="text-gray-500">Try adjusting your search or filter criteria</p>
               </div>
             )}
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-550e
           </div>
         </section>
       </div>
@@ -783,8 +881,12 @@ const BlogPage: React.FC = () => {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default BlogPage;
 
 =======
 export default BlogPage;
 >>>>>>> cursor/analyze-improve-and-deploy-application-a851
+=======
+export default BlogPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-550e

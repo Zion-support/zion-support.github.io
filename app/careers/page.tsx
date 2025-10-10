@@ -377,6 +377,7 @@ const CareersPage: React.FC = () => {
                       <span>Posted {position.posted}</span>
                     </div>
                   </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -411,6 +412,11 @@ const CareersPage: React.FC = () => {
               ))}
             </div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-8a15
+=======
+                </div>
+              ))}
+            </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-550e
           </div>
         </section>
 
@@ -436,6 +442,7 @@ const CareersPage: React.FC = () => {
                   Contact Us
                 </Link>
               </div>
+<<<<<<< HEAD
 =======
                   {position.requirements && (
                     <div className="mb-6">
@@ -498,6 +505,8 @@ const CareersPage: React.FC = () => {
                   <p className="text-gray-300">{value.description}</p>
                 </div>
               ))}
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-550e
             </div>
           </div>
         </section>
