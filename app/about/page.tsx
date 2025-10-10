@@ -1,144 +1,127 @@
-'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import {
-  Users,
-  Award,
-  Target,
-  Globe,
-  Shield,
-  Zap,
-  Brain,
-  BarChart,
-  CheckCircle,
-  Star,
-  Quote,
-  User,
-  Building,
-  GraduationCap,
-  Heart,
-  ThumbsUp,
-  MessageCircle,
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin
-} from 'lucide-react';
+import { CheckCircle, ArrowRight, Users, Target, Award, Globe } from 'lucide-react';
+
 const AboutPage: React.FC = () => {
+  const values = [
+    {
+      icon: Target,
+      title: 'Innovation',
+      description: 'We constantly push the boundaries of what\'s possible with AI and technology.'
+    },
+    {
+      icon: Users,
+      title: 'Collaboration',
+      description: 'We work closely with our clients to understand their unique needs and challenges.'
+    },
+    {
+      icon: Award,
+      title: 'Excellence',
+      description: 'We deliver high-quality solutions that exceed expectations and drive results.'
+    },
+    {
+      icon: Globe,
+      title: 'Impact',
+      description: 'We create solutions that make a real difference in the world and society.'
+    }
+  ];
+
+  const stats = [
+    { number: '500+', label: 'Projects Completed' },
+    { number: '300%', label: 'Average ROI' },
+    { number: '50+', label: 'Team Members' },
+    { number: '5★', label: 'Client Rating' }
+  ];
+
   return (
-    <React.Fragment>
-      <Helmet>
-        <title>About Us - Zion Tech Group | Advanced AI and IT Solutions</title>
-        <meta name="description" content="Learn about Zion Tech Group's mission to revolutionize business through advanced AI and IT solutions. Discover our team, values, and commitment to innovation." />
-        <meta name="keywords" content="about us, Zion Tech Group, AI solutions, IT services, team, mission, values, innovation" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="container mx-auto px-4 py-16 pt-24">
         {/* Hero Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              About Zion Tech Group
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              We are a team of passionate technologists dedicated to transforming businesses 
-              through innovative AI and IT solutions.
-            </p>
-          </div>
+        <section className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            About Zion Tech Group
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            We are pioneers in AI and IT solutions, dedicated to transforming businesses through innovative technology and exceptional service.
+          </p>
         </section>
 
         {/* Stats Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <section className="py-16 mb-16">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                About Zion Tech Group;
-  </
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                We are pioneers in AI and IT solutions, dedicated to transforming businesses through innovative technology and cutting-edge artificial intelligence.
-              </p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              {stats.map((stat, index) => (
+                <div key={index} className="text-center">
+                  <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">{stat.number}</div>
+                  <div className="text-sm text-gray-300">{stat.label}</div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
+
         {/* Mission Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-16 mb-16">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                  Our Mission
-                </h2>
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Our Mission</h2>
                 <p className="text-lg text-gray-300 mb-6">
-                  To empower businesses with cutting-edge AI and IT solutions that drive growth, 
-                  efficiency, and innovation. We believe technology should be accessible, 
-                  reliable, and transformative.
+                  To empower businesses with cutting-edge AI and IT solutions that drive innovation, 
+                  efficiency, and growth. We believe technology should be accessible, powerful, and transformative.
                 </p>
                 <p className="text-lg text-gray-300 mb-8">
-                  Our team of experts combines deep technical knowledge with business acumen 
-                  to deliver solutions that not only meet your current needs but also prepare 
-                  you for future challenges.
+                  Our team of experts combines deep technical knowledge with business acumen to deliver 
+                  solutions that not only meet today's needs but anticipate tomorrow's challenges.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <a
-                    href="/contact"
-                    className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2">
-                    <MessageCircle className="w-5 h-5" />
-                    <span>Get in Touch</span>
-                  </a>
-                  <a
-                    href="/services"
-                    className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center space-x-2">
-                    <Settings className="w-5 h-5" />
-                    <span>Our Services</span>
-                  </a>
-                </div>
+                <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300">
+                  Learn More
+                  <ArrowRight className="inline-block ml-2 w-5 h-5" />
+                </button>
               </div>
-              <div className="relative">
-                <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl p-8 backdrop-blur-lg border border-white/10">
-                  <div className="space-y-6">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                      <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                      <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                    </div>
-                    <div className="space-y-4">
-                      <div className="h-4 bg-gradient-to-r from-cyan-500 to-purple-500 rounded"></div>
-                      <div className="h-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded w-3/4"></div>
-                      <div className="h-4 bg-gradient-to-r from-pink-500 to-red-500 rounded w-1/2"></div>
-                    </div>
-                    <div className="text-center text-white">
-                      <div className="text-2xl font-bold">AI Dashboard</div>
-                      <div className="text-sm text-gray-300">Real-time Analytics</div>
-                    </div>
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4">Our Vision</h3>
-                  <p className="text-gray-300">
-                    To be the leading provider of AI and IT solutions, helping businesses 
-                    worldwide achieve their digital transformation goals.
-                  </p>
-                </div>
+              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
+                <h3 className="text-2xl font-bold text-white mb-6">Why Choose Us?</h3>
+                <ul className="space-y-4">
+                  <li className="flex items-start">
+                    <CheckCircle className="w-6 h-6 text-cyan-400 mr-3 flex-shrink-0 mt-1" />
+                    <span className="text-gray-300">Proven track record of successful projects</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-6 h-6 text-cyan-400 mr-3 flex-shrink-0 mt-1" />
+                    <span className="text-gray-300">Expert team with deep industry knowledge</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-6 h-6 text-cyan-400 mr-3 flex-shrink-0 mt-1" />
+                    <span className="text-gray-300">Cutting-edge technology and methodologies</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-6 h-6 text-cyan-400 mr-3 flex-shrink-0 mt-1" />
+                    <span className="text-gray-300">24/7 support and maintenance</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-6 h-6 text-cyan-400 mr-3 flex-shrink-0 mt-1" />
+                    <span className="text-gray-300">Competitive pricing and flexible solutions</span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
-</section>
+        </section>
+
         {/* Values Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <section className="py-16 mb-16">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Our Values
-              </h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Our Values</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                The principles that guide everything we do
+                These core values guide everything we do and shape our approach to client relationships and project delivery.
               </p>
             </div>
-
+            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {values.map((value, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/20 text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <value.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-3">{value.title}</h3>
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 text-center hover:bg-white/10 transition-all duration-300">
+                  <value.icon className="w-16 h-16 text-cyan-400 mx-auto mb-6" />
+                  <h3 className="text-xl font-semibold text-white mb-4">{value.title}</h3>
                   <p className="text-gray-300">{value.description}</p>
                 </div>
               ))}
@@ -147,53 +130,45 @@ const AboutPage: React.FC = () => {
         </section>
 
         {/* Team Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-16">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Meet Our Team
-              </h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Our Team</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                The experts behind our success
+                We're a diverse team of experts, innovators, and problem-solvers who are passionate about technology and its potential to transform businesses.
               </p>
             </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {team.map((member, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/20 text-center">
-                  <div className="w-24 h-24 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <User className="w-12 h-12 text-white" />
+            
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="text-center">
+                  <div className="w-24 h-24 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                    <Users className="w-12 h-12 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-2">{member.name}</h3>
-                  <p className="text-blue-400 mb-3">{member.role}</p>
-                  <p className="text-gray-300 text-sm">{member.bio}</p>
+                  <h3 className="text-xl font-semibold text-white mb-2">AI Engineers</h3>
+                  <p className="text-gray-300">Machine learning experts and data scientists</p>
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-white mb-4">Ready to Work With Us?</h2>
-            <p className="text-xl text-gray-100 mb-8">
-              Let's discuss how we can help transform your business with AI and technology.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-cyan-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                Get Started;
-  </
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors">
-                Contact Us;
-  </
+                <div className="text-center">
+                  <div className="w-24 h-24 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                    <Award className="w-12 h-12 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">IT Specialists</h3>
+                  <p className="text-gray-300">Infrastructure and cybersecurity professionals</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-24 h-24 bg-gradient-to-r from-green-400 to-teal-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                    <Globe className="w-12 h-12 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">Business Analysts</h3>
+                  <p className="text-gray-300">Strategy and process optimization experts</p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
       </div>
-    </React.Fragment>
-);
+    </div>
+  );
 };
+
 export default AboutPage;
-  </button>
-  </button>
-  </h1>
