@@ -5,201 +5,123 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-console.log('🚀 Starting performance optimization...');
-
-// Optimize images
-function optimizeImages() {
-  console.log('📸 Optimizing images...');
+// Performance optimization script
+function optimizePerformance() {
+  console.log('🚀 Starting performance optimization...');
   
-  const publicDir = path.join(__dirname, '../public');
-  const imagesDir = path.join(publicDir, 'images');
-  
-  if (fs.existsSync(imagesDir)) {
-    const files = fs.readdirSync(imagesDir);
-    console.log(`Found ${files.length} image files to optimize`);
-    
-    // In a real implementation, you would use sharp or imagemin here
-    // For now, we'll just log the files
-    files.forEach(file => {
-      if (file.match(/\.(jpg|jpeg|png|gif|webp)$/i)) {
-        console.log(`  - ${file}`);
-      }
-    });
+  // Check if dist directory exists
+  const distPath = path.join(__dirname, '..', 'dist');
+  if (!fs.existsSync(distPath)) {
+    console.log('❌ Dist directory not found. Please run build first.');
+    return;
   }
-}
 
-// Optimize CSS
-function optimizeCSS() {
-  console.log('🎨 Optimizing CSS...');
+  // Optimize HTML files
+  const htmlFiles = fs.readdirSync(distPath).filter(file => file.endsWith('.html'));
   
-  const distDir = path.join(__dirname, '../dist');
-  const cssFiles = fs.readdirSync(distDir).filter(file => file.endsWith('.css'));
-  
-  cssFiles.forEach(file => {
-    const filePath = path.join(distDir, file);
+  htmlFiles.forEach(file => {
+    const filePath = path.join(distPath, file);
     let content = fs.readFileSync(filePath, 'utf8');
     
-    // Remove unused CSS (basic implementation)
-    content = content.replace(/\s+/g, ' ');
-    content = content.replace(/;\s*}/g, '}');
-    content = content.replace(/{\s*/g, '{');
-    content = content.replace(/;\s*;/g, ';');
+    // Add preload hints for critical resources
+    const preloadHints = `
+    <link rel="preload" href="/assets/index.css" as="style">
+    <link rel="preload" href="/assets/index.js" as="script">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style">
+    `;
+    
+    // Insert preload hints before closing head tag
+    content = content.replace('</head>', `${preloadHints}</head>`);
+    
+    // Add resource hints
+    const resourceHints = `
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+    `;
+    
+    content = content.replace('</head>', `${resourceHints}</head>`);
+    
+    // Add performance monitoring script
+    const perfScript = `
+    <script>
+      // Performance monitoring
+      window.addEventListener('load', function() {
+        if ('performance' in window) {
+          const perfData = performance.getEntriesByType('navigation')[0];
+          const loadTime = perfData.loadEventEnd - perfData.loadEventStart;
+          console.log('Page load time:', loadTime + 'ms');
+          
+          // Send to analytics if available
+          if (typeof gtag !== 'undefined') {
+            gtag('event', 'timing_complete', {
+              name: 'load',
+              value: Math.round(loadTime)
+            });
+          }
+        }
+      });
+    </script>
+    `;
+    
+    content = content.replace('</body>', `${perfScript}</body>`);
     
     fs.writeFileSync(filePath, content);
-    console.log(`  - Optimized ${file}`);
+    console.log(`✅ Optimized ${file}`);
   });
-}
 
-// Optimize JavaScript
-function optimizeJS() {
-  console.log('⚡ Optimizing JavaScript...');
-  
-  const distDir = path.join(__dirname, '../dist');
-  const jsFiles = fs.readdirSync(distDir).filter(file => file.endsWith('.js'));
-  
-  jsFiles.forEach(file => {
-    const filePath = path.join(distDir, file);
-    let content = fs.readFileSync(filePath, 'utf8');
-    
-    // Basic JS optimization
-    content = content.replace(/\s+/g, ' ');
-    content = content.replace(/;\s*}/g, '}');
-    content = content.replace(/{\s*/g, '{');
-    
-    fs.writeFileSync(filePath, content);
-    console.log(`  - Optimized ${file}`);
-  });
-}
-
-// Generate sitemap
-function generateSitemap() {
-  console.log('🗺️ Generating sitemap...');
-  
-  const pages = [
-    '/',
-    '/about',
-    '/services',
-    '/ai-services',
-    '/it-services',
-    '/micro-saas',
-    '/pricing',
-    '/contact',
-    '/blog',
-    '/case-studies',
-    '/team',
-    '/careers',
-    '/privacy',
-    '/terms',
-    '/cookies',
-    '/docs',
-    '/api-docs',
-    '/support',
-    '/status',
-    '/demo',
-    '/consultation'
-  ];
-  
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${pages.map(page => `  <url>
-    <loc>https://ziontechgroup.com${page}</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>${page === '/' ? '1.0' : '0.8'}</priority>
-  </url>`).join('\n')}
-</urlset>`;
-  
-  fs.writeFileSync(path.join(__dirname, '../dist/sitemap.xml'), sitemap);
-  console.log('  - Generated sitemap.xml');
-}
-
-// Generate robots.txt
-function generateRobots() {
-  console.log('🤖 Generating robots.txt...');
-  
-  const robots = `User-agent: *
+  // Create robots.txt
+  const robotsContent = `User-agent: *
 Allow: /
 
 Sitemap: https://ziontechgroup.com/sitemap.xml
+`;
+  fs.writeFileSync(path.join(distPath, 'robots.txt'), robotsContent);
+  console.log('✅ Created robots.txt');
 
-# Crawl-delay for respectful crawling
-Crawl-delay: 1
+  // Create .htaccess for better caching
+  const htaccessContent = `# Enable compression
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript
+</IfModule>
 
-# Disallow admin areas
-Disallow: /admin/
-Disallow: /api/
-Disallow: /_next/
-Disallow: /static/`;
-  
-  fs.writeFileSync(path.join(__dirname, '../dist/robots.txt'), robots);
-  console.log('  - Generated robots.txt');
-}
+# Set cache headers
+<IfModule mod_expires.c>
+    ExpiresActive on
+    ExpiresByType text/css "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType font/woff "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>
 
-// Generate manifest.json
-function generateManifest() {
-  console.log('📱 Generating manifest.json...');
-  
-  const manifest = {
-    "name": "Zion Tech Group",
-    "short_name": "Zion Tech",
-    "description": "AI-Powered Enterprise Solutions",
-    "start_url": "/",
-    "display": "standalone",
-    "background_color": "#0f0f23",
-    "theme_color": "#00ffff",
-    "orientation": "portrait-primary",
-    "icons": [
-      {
-        "src": "/favicon-16x16.png",
-        "sizes": "16x16",
-        "type": "image/png"
-      },
-      {
-        "src": "/favicon-32x32.png",
-        "sizes": "32x32",
-        "type": "image/png"
-      },
-      {
-        "src": "/apple-touch-icon.png",
-        "sizes": "180x180",
-        "type": "image/png"
-      },
-      {
-        "src": "/android-chrome-192x192.png",
-        "sizes": "192x192",
-        "type": "image/png"
-      },
-      {
-        "src": "/android-chrome-512x512.png",
-        "sizes": "512x512",
-        "type": "image/png"
-      }
-    ],
-    "categories": ["business", "productivity", "technology"],
-    "lang": "en-US",
-    "dir": "ltr"
-  };
-  
-  fs.writeFileSync(path.join(__dirname, '../dist/manifest.json'), JSON.stringify(manifest, null, 2));
-  console.log('  - Generated manifest.json');
-}
+# Security headers
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options nosniff
+    Header always set X-Frame-Options DENY
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+</IfModule>
+`;
+  fs.writeFileSync(path.join(distPath, '.htaccess'), htaccessContent);
+  console.log('✅ Created .htaccess');
 
-// Main optimization function
-function optimize() {
-  try {
-    optimizeImages();
-    optimizeCSS();
-    optimizeJS();
-    generateSitemap();
-    generateRobots();
-    generateManifest();
-    
-    console.log('✅ Performance optimization completed successfully!');
-  } catch (error) {
-    console.error('❌ Error during optimization:', error);
-    process.exit(1);
-  }
+  console.log('🎉 Performance optimization completed!');
 }
 
 // Run optimization
-optimize();
+optimizePerformance();

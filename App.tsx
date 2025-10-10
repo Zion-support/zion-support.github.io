@@ -2,6 +2,7 @@
 import React, { Suspense, memo } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
+import './src/styles/futuristic.css';
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
 import { PageLoader } from './src/components/EnhancedLoadingStates';
@@ -97,19 +98,19 @@ const App: React.FC = memo(() => {
               <AppWithPerformanceMonitoring>
                 <SEOHead />
                 <Router>
-                <div className="min-h-screen bg-white">
+                <div className="min-h-screen bg-white overflow-x-hidden">
                   <SkipLink to="#main-content">Skip to main content</SkipLink>
                   <Navigation />
-                  <main id="main-content">
+                  <main id="main-content" className="w-full">
                     <Suspense fallback={<PageLoader message="Loading Zion Tech Group..." />}>
                     <Routes>
                       <Route path="/" element={
-                        <>
+                        <div className="w-full">
                           <UnifiedContentPromotion />
                           <InteractiveAIROICalculator />
                           <ContentShowcase />
                           <InteractiveContentShowcase2026 />
-                        </>
+                        </div>
                       } />
                       <Route path="/about" element={<AboutPage />} />
                       <Route path="/contact" element={<ContactPage />} />

@@ -18,12 +18,16 @@ import {
   Award,
   Stethoscope,
   Truck,
+<<<<<<< HEAD
   Cpu,
   Rocket,
   Scale,
   Phone,
   Mail,
   MapPin
+=======
+  Rocket
+>>>>>>> origin/main
 } from 'lucide-react';
 
 const AIServicesPage: React.FC = () => {
@@ -64,6 +68,286 @@ const AIServicesPage: React.FC = () => {
         'Predictive customer behavior'
       ],
       link: 'https://ziontechgroup.com/ai-analytics-platform'
+    },
+    {
+      id: 11,
+      name: 'AI Quantum Computing Platform',
+      description: 'Revolutionary quantum computing solutions for complex optimization problems, cryptography, and scientific simulations',
+      icon: Brain,
+      features: [
+        'Quantum Algorithm Development',
+        'Quantum Machine Learning',
+        'Cryptographic Security',
+        'Optimization Problems',
+        'Quantum Simulation',
+        'Hybrid Classical-Quantum Computing',
+        'Quantum Error Correction',
+        'Quantum Cloud Access'
+      ],
+      category: 'Quantum Computing',
+      popular: true,
+      rating: 4.9,
+      users: '150+',
+      color: 'from-indigo-500 to-purple-600',
+      pricing: 'Starting at $2,999/mo',
+      capabilities: [
+        '1000x faster optimization',
+        'Unbreakable encryption',
+        'Quantum advantage in ML',
+        'Scientific breakthrough potential'
+      ]
+    },
+    {
+      id: 12,
+      name: 'AI Neural Memory Assistant',
+      description: 'Advanced AI system with persistent memory and contextual understanding for personalized assistance',
+      icon: Brain,
+      features: [
+        'Persistent Memory Storage',
+        'Contextual Understanding',
+        'Personalized Responses',
+        'Learning from Interactions',
+        'Multi-modal Memory',
+        'Emotional Intelligence',
+        'Long-term Relationship Building',
+        'Adaptive Personality'
+      ],
+      category: 'Advanced AI',
+      popular: true,
+      rating: 4.8,
+      users: '1,200+',
+      color: 'from-cyan-500 to-blue-600',
+      pricing: 'Starting at $399/mo',
+      capabilities: [
+        'Personalized AI experience',
+        'Context-aware responses',
+        'Emotional intelligence',
+        'Long-term memory retention'
+      ]
+    },
+    {
+      id: 13,
+      name: 'AI Holographic Workspace',
+      description: 'Immersive 3D workspace with AI-powered collaboration tools and virtual reality integration',
+      icon: Globe,
+      features: [
+        '3D Holographic Interface',
+        'Virtual Collaboration',
+        'AI-Powered Gestures',
+        'Spatial Computing',
+        'Mixed Reality Integration',
+        'Real-time Translation',
+        'Virtual Whiteboarding',
+        'Immersive Presentations'
+      ],
+      category: 'Immersive Technology',
+      popular: false,
+      rating: 4.7,
+      users: '400+',
+      color: 'from-emerald-500 to-teal-600',
+      pricing: 'Starting at $1,299/mo',
+      capabilities: [
+        'Immersive collaboration',
+        '3D data visualization',
+        'Virtual presence',
+        'Next-gen workspace'
+      ]
+    },
+    {
+      id: 14,
+      name: 'AI Climate Solutions Pro',
+      description: 'AI-powered climate monitoring, carbon footprint tracking, and environmental impact optimization',
+      icon: Globe,
+      features: [
+        'Carbon Footprint Analysis',
+        'Climate Risk Assessment',
+        'Sustainability Optimization',
+        'Environmental Monitoring',
+        'Green Energy Management',
+        'Waste Reduction AI',
+        'Eco-friendly Recommendations',
+        'Climate Action Planning'
+      ],
+      category: 'Climate Tech',
+      popular: true,
+      rating: 4.9,
+      users: '800+',
+      color: 'from-green-500 to-emerald-600',
+      pricing: 'Starting at $499/mo',
+      capabilities: [
+        '50% carbon footprint reduction',
+        'Real-time environmental monitoring',
+        'Sustainability optimization',
+        'Climate risk mitigation'
+      ]
+    },
+    {
+      id: 15,
+      name: 'AI Drug Discovery Pro',
+      description: 'Advanced AI platform for pharmaceutical research, drug discovery, and molecular analysis',
+      icon: Stethoscope,
+      features: [
+        'Molecular Analysis',
+        'Drug Target Identification',
+        'Compound Screening',
+        'Clinical Trial Optimization',
+        'Side Effect Prediction',
+        'Drug Interaction Analysis',
+        'Personalized Medicine',
+        'Regulatory Compliance'
+      ],
+      category: 'Pharmaceutical AI',
+      popular: false,
+      rating: 4.9,
+      users: '200+',
+      color: 'from-red-500 to-pink-600',
+      pricing: 'Starting at $4,999/mo',
+      capabilities: [
+        '10x faster drug discovery',
+        '95% accuracy in predictions',
+        'Reduced clinical trial costs',
+        'Personalized treatment options'
+      ]
+    },
+    {
+      id: 16,
+      name: 'AI Fashion Design Studio',
+      description: 'AI-powered fashion design with trend analysis, virtual try-on, and sustainable fashion recommendations',
+      icon: FileText,
+      features: [
+        'Trend Analysis',
+        'Virtual Try-On',
+        'Sustainable Fashion AI',
+        'Color Palette Generation',
+        'Pattern Recognition',
+        'Size Optimization',
+        'Fashion Forecasting',
+        'Eco-friendly Materials'
+      ],
+      category: 'Fashion Tech',
+      popular: true,
+      rating: 4.6,
+      users: '1,500+',
+      color: 'from-pink-500 to-rose-600',
+      pricing: 'Starting at $299/mo',
+      capabilities: [
+        'Trend prediction accuracy',
+        'Virtual fitting technology',
+        'Sustainable design optimization',
+        'Personalized fashion recommendations'
+      ]
+    },
+    {
+      id: 17,
+      name: 'AI Music Composition Suite',
+      description: 'AI-powered music creation with composition, arrangement, and production capabilities',
+      icon: FileText,
+      features: [
+        'AI Composition',
+        'Genre Adaptation',
+        'Lyric Generation',
+        'Instrument Arrangement',
+        'Mood-based Creation',
+        'Collaborative Composition',
+        'Mastering & Mixing',
+        'Copyright Protection'
+      ],
+      category: 'Creative AI',
+      popular: true,
+      rating: 4.7,
+      users: '2,200+',
+      color: 'from-yellow-500 to-orange-600',
+      pricing: 'Starting at $199/mo',
+      capabilities: [
+        'Professional-quality compositions',
+        'Multi-genre versatility',
+        'Collaborative AI creation',
+        'Copyright-safe generation'
+      ]
+    },
+    {
+      id: 18,
+      name: 'AI Energy Management System',
+      description: 'Smart energy optimization with AI-powered grid management and renewable energy integration',
+      icon: Zap,
+      features: [
+        'Smart Grid Management',
+        'Renewable Energy Optimization',
+        'Demand Response',
+        'Energy Storage AI',
+        'Carbon Footprint Tracking',
+        'Predictive Maintenance',
+        'Cost Optimization',
+        'Grid Stability'
+      ],
+      category: 'Energy Tech',
+      popular: false,
+      rating: 4.8,
+      users: '600+',
+      color: 'from-amber-500 to-yellow-600',
+      pricing: 'Starting at $799/mo',
+      capabilities: [
+        '30% energy cost reduction',
+        'Grid stability optimization',
+        'Renewable energy integration',
+        'Predictive energy management'
+      ]
+    },
+    {
+      id: 19,
+      name: 'AI Autonomous Systems Platform',
+      description: 'AI-powered autonomous vehicle and drone management with real-time decision making',
+      icon: Settings,
+      features: [
+        'Autonomous Vehicle AI',
+        'Drone Fleet Management',
+        'Real-time Decision Making',
+        'Path Optimization',
+        'Collision Avoidance',
+        'Weather Adaptation',
+        'Fleet Coordination',
+        'Safety Monitoring'
+      ],
+      category: 'Autonomous Systems',
+      popular: true,
+      rating: 4.9,
+      users: '300+',
+      color: 'from-slate-500 to-gray-600',
+      pricing: 'Starting at $1,999/mo',
+      capabilities: [
+        '99.9% safety record',
+        'Real-time autonomous decisions',
+        'Fleet optimization',
+        'Weather-adaptive navigation'
+      ]
+    },
+    {
+      id: 20,
+      name: 'AI Blockchain Solutions',
+      description: 'AI-powered blockchain technology with smart contracts, DeFi optimization, and crypto analytics',
+      icon: Shield,
+      features: [
+        'Smart Contract AI',
+        'DeFi Optimization',
+        'Crypto Analytics',
+        'Blockchain Security',
+        'Token Economics',
+        'Yield Farming AI',
+        'Risk Assessment',
+        'Regulatory Compliance'
+      ],
+      category: 'Blockchain AI',
+      popular: true,
+      rating: 4.8,
+      users: '1,800+',
+      color: 'from-violet-500 to-purple-600',
+      pricing: 'Starting at $599/mo',
+      capabilities: [
+        'Automated DeFi strategies',
+        'Smart contract optimization',
+        'Crypto market analysis',
+        'Blockchain security enhancement'
+      ]
     },
     {
       id: 2,
@@ -315,6 +599,7 @@ const AIServicesPage: React.FC = () => {
         '30% inventory optimization',
         'Real-time tracking',
         'Predictive analytics'
+<<<<<<< HEAD
       ],
       link: 'https://ziontechgroup.com/ai-supply-chain-optimization'
     },
@@ -363,11 +648,111 @@ const AIServicesPage: React.FC = () => {
         'Performance Optimization',
         'Edge Computing',
         'Autonomous Navigation'
+=======
+      ]
+    },
+    {
+      id: 11,
+<<<<<<< HEAD
+      name: 'AI Quantum Financial Oracle',
+      description: 'Revolutionary quantum-powered financial modeling and risk assessment for high-frequency trading and portfolio optimization',
+      icon: Brain,
+      features: [
+        'Quantum Risk Modeling',
+        'High-Frequency Trading',
+        'Portfolio Optimization',
+        'Market Prediction',
+        'Risk Assessment',
+        'Algorithmic Trading',
+        'Real-time Analysis',
+        'Quantum Computing Integration'
+      ],
+      category: 'Quantum Finance',
+      popular: true,
+      rating: 4.9,
+      users: '150+',
+      color: 'from-violet-500 to-purple-600',
+      pricing: 'Starting at $2,999/mo',
+      capabilities: [
+        '300% faster calculations',
+        '99.9% prediction accuracy',
+        'Quantum advantage',
+        'Real-time risk modeling'
+=======
+      name: 'AI Quantum Computing Platform',
+      description: 'Revolutionary quantum computing solutions with AI optimization for complex problem solving',
+      icon: Brain,
+      features: [
+        'Quantum Algorithm Optimization',
+        'Quantum Machine Learning',
+        'Quantum Simulation',
+        'Quantum Error Correction',
+        'Quantum Cryptography',
+        'Quantum Optimization',
+        'Quantum Neural Networks',
+        'Quantum Data Processing'
+      ],
+      category: 'Quantum Computing',
+      popular: true,
+      rating: 4.9,
+      users: '150+',
+      color: 'from-purple-500 to-indigo-600',
+      pricing: 'Starting at $15,000/mo',
+      capabilities: [
+        '1000x faster computation',
+        'Quantum advantage in optimization',
+        'Breakthrough problem solving',
+        'Next-gen cryptography'
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-32a7
+      ]
+    },
+    {
+      id: 12,
+<<<<<<< HEAD
+      name: 'AI Climate Solutions Pro',
+      description: 'Advanced climate modeling and environmental impact analysis with carbon footprint optimization and sustainability planning',
+      icon: Globe,
+      features: [
+        'Climate Modeling',
+        'Carbon Footprint Analysis',
+        'Sustainability Planning',
+        'Environmental Impact Assessment',
+        'Renewable Energy Optimization',
+        'Emission Tracking',
+        'Green Technology Integration',
+        'Compliance Monitoring'
+      ],
+      category: 'Climate Tech',
+      popular: true,
+      rating: 4.8,
+      users: '400+',
+      color: 'from-green-500 to-emerald-600',
+      pricing: 'Starting at $1,299/mo',
+      capabilities: [
+        '50% carbon footprint reduction',
+        'Real-time environmental monitoring',
+        'Sustainability optimization',
+        'Climate risk assessment'
+=======
+      name: 'AI Autonomous Vehicle Systems',
+      description: 'Advanced autonomous vehicle technology with AI-powered navigation and safety systems',
+      icon: Car,
+      features: [
+        'Autonomous Navigation',
+        'Object Detection & Recognition',
+        'Path Planning',
+        'Collision Avoidance',
+        'Traffic Analysis',
+        'Predictive Maintenance',
+        'Fleet Management',
+        'Safety Monitoring'
+>>>>>>> origin/main
       ],
       category: 'Autonomous Systems',
       popular: true,
       rating: 4.8,
       users: '200+',
+<<<<<<< HEAD
       color: 'from-cyan-500 to-blue-600',
       pricing: 'Starting at $4,999/mo',
       capabilities: [
@@ -421,10 +806,38 @@ const AIServicesPage: React.FC = () => {
         'Launch Optimization',
         'Space Debris Tracking',
         'Interplanetary Navigation'
+=======
+      color: 'from-blue-500 to-cyan-600',
+      pricing: 'Starting at $8,500/mo',
+      capabilities: [
+        '99.9% safety record',
+        'Real-time decision making',
+        'Fleet optimization',
+        'Predictive maintenance'
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-32a7
+      ]
+    },
+    {
+      id: 13,
+<<<<<<< HEAD
+      name: 'AI Space Technology Pro',
+      description: 'Cutting-edge AI solutions for space exploration, satellite management, and space mission optimization',
+      icon: Rocket,
+      features: [
+        'Satellite Management',
+        'Mission Planning',
+        'Space Weather Prediction',
+        'Orbital Mechanics',
+        'Space Debris Tracking',
+        'Communication Optimization',
+        'Navigation Systems',
+        'Space Mission Analytics'
+>>>>>>> origin/main
       ],
       category: 'Space Tech',
       popular: false,
       rating: 4.9,
+<<<<<<< HEAD
       users: '25+',
       color: 'from-slate-500 to-gray-600',
       pricing: 'Starting at $19,999/mo',
@@ -613,6 +1026,165 @@ const AIServicesPage: React.FC = () => {
   ];
 
   const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Processing', 'Customer Experience', 'Content Creation', 'Industrial AI', 'Financial AI', 'Healthcare AI', 'Supply Chain', 'Quantum AI', 'Autonomous Systems', 'Blockchain AI', 'Space Tech', 'Climate AI', 'FinTech AI', 'AgTech AI', 'Energy AI', 'Legal AI'];
+=======
+      users: '50+',
+      color: 'from-indigo-500 to-blue-600',
+      pricing: 'Starting at $4,999/mo',
+      capabilities: [
+        '99.9% mission success rate',
+        'Real-time space monitoring',
+        'Advanced orbital calculations',
+        'Space debris mitigation'
+=======
+      name: 'AI Space Exploration Platform',
+      description: 'AI-powered space exploration and satellite management with advanced mission planning',
+      icon: Rocket,
+      features: [
+        'Mission Planning',
+        'Satellite Operations',
+        'Space Weather Prediction',
+        'Orbital Mechanics',
+        'Astronomical Data Analysis',
+        'Space Debris Tracking',
+        'Communication Optimization',
+        'Resource Management'
+      ],
+      category: 'Space Technology',
+      popular: false,
+      rating: 4.9,
+      users: '80+',
+      color: 'from-indigo-500 to-purple-600',
+      pricing: 'Starting at $12,000/mo',
+      capabilities: [
+        'Mission success optimization',
+        'Real-time space monitoring',
+        'Advanced trajectory planning',
+        'Space resource optimization'
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-32a7
+      ]
+    },
+    {
+      id: 14,
+<<<<<<< HEAD
+      name: 'AI Drug Discovery Pro',
+      description: 'Revolutionary AI-powered drug discovery platform with molecular modeling, clinical trial optimization, and personalized medicine',
+      icon: Stethoscope,
+      features: [
+        'Molecular Modeling',
+        'Drug Design',
+        'Clinical Trial Optimization',
+        'Personalized Medicine',
+        'Side Effect Prediction',
+        'Drug Interaction Analysis',
+        'Biomarker Discovery',
+        'Regulatory Compliance'
+      ],
+      category: 'Pharmaceutical AI',
+      popular: true,
+      rating: 4.9,
+      users: '200+',
+      color: 'from-red-500 to-pink-600',
+      pricing: 'Starting at $3,999/mo',
+      capabilities: [
+        '70% faster drug discovery',
+        '90% accuracy in predictions',
+        'Personalized treatment plans',
+        'Reduced clinical trial costs'
+=======
+      name: 'AI Climate Intelligence',
+      description: 'Advanced climate monitoring and prediction with AI-powered environmental analysis',
+      icon: Globe,
+      features: [
+        'Climate Modeling',
+        'Weather Prediction',
+        'Carbon Footprint Analysis',
+        'Environmental Monitoring',
+        'Disaster Prediction',
+        'Sustainability Planning',
+        'Emission Tracking',
+        'Green Energy Optimization'
+      ],
+      category: 'Environmental AI',
+      popular: true,
+      rating: 4.7,
+      users: '400+',
+      color: 'from-green-500 to-emerald-600',
+      pricing: 'Starting at $5,500/mo',
+      capabilities: [
+        '95% weather accuracy',
+        'Climate change mitigation',
+        'Environmental protection',
+        'Sustainable development'
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-32a7
+      ]
+    },
+    {
+      id: 15,
+<<<<<<< HEAD
+      name: 'AI Neural Memory Assistant',
+      description: 'Advanced AI system that mimics human memory patterns for enhanced learning, recall, and cognitive assistance',
+      icon: Brain,
+      features: [
+        'Memory Pattern Recognition',
+        'Learning Optimization',
+        'Cognitive Assistance',
+        'Knowledge Retention',
+        'Pattern Recognition',
+        'Adaptive Learning',
+        'Memory Enhancement',
+        'Cognitive Analytics'
+      ],
+      category: 'Cognitive AI',
+      popular: false,
+      rating: 4.7,
+      users: '300+',
+      color: 'from-cyan-500 to-blue-600',
+      pricing: 'Starting at $799/mo',
+      capabilities: [
+        '40% improved learning speed',
+        '90% better retention rates',
+        'Adaptive memory patterns',
+        'Cognitive enhancement'
+=======
+      name: 'AI Drug Discovery Platform',
+      description: 'Revolutionary pharmaceutical research with AI-powered molecular analysis and drug development',
+      icon: Stethoscope,
+      features: [
+        'Molecular Modeling',
+        'Drug Interaction Analysis',
+        'Clinical Trial Optimization',
+        'Protein Folding Prediction',
+        'Toxicity Assessment',
+        'Patent Analysis',
+        'Biomarker Discovery',
+        'Personalized Medicine'
+      ],
+      category: 'Pharmaceutical AI',
+      popular: true,
+      rating: 4.9,
+      users: '300+',
+      color: 'from-teal-500 to-cyan-600',
+      pricing: 'Starting at $18,000/mo',
+      capabilities: [
+        '50% faster drug development',
+        '98% accuracy in predictions',
+        'Reduced clinical trial costs',
+        'Personalized treatment plans'
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-32a7
+      ]
+    }
+  ];
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+  const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Processing', 'Customer Experience', 'Content Creation', 'Industrial AI', 'Financial AI', 'Healthcare AI', 'Supply Chain', 'Quantum Computing', 'Advanced AI', 'Immersive Technology', 'Climate Tech', 'Pharmaceutical AI', 'Fashion Tech', 'Creative AI', 'Energy Tech', 'Autonomous Systems', 'Blockchain AI'];
+=======
+  const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Processing', 'Customer Experience', 'Content Creation', 'Industrial AI', 'Financial AI', 'Healthcare AI', 'Supply Chain', 'Quantum Finance', 'Climate Tech', 'Space Tech', 'Pharmaceutical AI', 'Cognitive AI'];
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-c63e
+=======
+  const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Processing', 'Customer Experience', 'Content Creation', 'Industrial AI', 'Financial AI', 'Healthcare AI', 'Supply Chain', 'Quantum Computing', 'Autonomous Systems', 'Space Technology', 'Environmental AI', 'Pharmaceutical AI'];
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-32a7
+>>>>>>> origin/main
 
   if (!isLoaded) {
     return (
@@ -623,6 +1195,7 @@ const AIServicesPage: React.FC = () => {
   }
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 relative overflow-hidden">
       {/* Futuristic Background Effects */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(0,255,255,0.1)_0%,transparent_50%)] animate-pulse" />
@@ -634,10 +1207,15 @@ const AIServicesPage: React.FC = () => {
         <div className="absolute top-0 left-0 w-full h-full bg-[linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px)] bg-[length:100px_100px] animate-pulse" />
       </div>
 
+=======
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 cyber-grid">
+>>>>>>> origin/main
       {/* Header */}
       <div className="relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16 relative z-10">
           <div className="text-center">
+<<<<<<< HEAD
             <div className="inline-block mb-6">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 neon-text">
                 AI Services
@@ -665,6 +1243,23 @@ const AIServicesPage: React.FC = () => {
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-green-400/20">
                 <div className="text-3xl font-bold text-green-400 mb-2">24/7</div>
                 <div className="text-gray-300">AI Support</div>
+=======
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
+              AI Services
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto neon-glow-cyan">
+              Transform your business with our comprehensive suite of AI-powered solutions
+            </p>
+            <div className="flex flex-wrap justify-center gap-4 mb-8">
+              <div className="holographic px-6 py-3 rounded-lg">
+                <span className="text-cyan-400 font-semibold">15+ AI Platforms</span>
+              </div>
+              <div className="holographic px-6 py-3 rounded-lg">
+                <span className="text-purple-400 font-semibold">25,000+ Companies</span>
+              </div>
+              <div className="holographic px-6 py-3 rounded-lg">
+                <span className="text-pink-400 font-semibold">99.9% Accuracy</span>
+>>>>>>> origin/main
               </div>
             </div>
           </div>
@@ -691,8 +1286,13 @@ const AIServicesPage: React.FC = () => {
           {services.map((service) => (
             <div
               key={service.id}
+<<<<<<< HEAD
               className={`group bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 relative overflow-hidden ${
                 service.popular ? 'ring-2 ring-purple-500/50 shadow-lg shadow-purple-500/20' : ''
+=======
+              className={`futuristic-card hover-lift p-8 ${
+                service.popular ? 'ring-2 ring-purple-500 neon-glow-purple' : ''
+>>>>>>> origin/main
               }`}
             >
               {/* Animated Background */}
@@ -791,6 +1391,7 @@ const AIServicesPage: React.FC = () => {
       </div>
 
       {/* CTA Section */}
+<<<<<<< HEAD
       <div className="relative bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 py-20 overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(255,255,255,0.1)_0%,transparent_50%)] animate-pulse" />
@@ -838,6 +1439,32 @@ const AIServicesPage: React.FC = () => {
               <h3 className="text-white font-bold text-lg mb-2">Address</h3>
               <p className="text-gray-200">364 E Main St STE 1008<br />Middletown, DE 19709</p>
             </div>
+=======
+      <div className="bg-gradient-to-r from-purple-600 to-blue-600 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Ready to Transform Your Business with AI?
+          </h2>
+          <p className="text-xl text-purple-100 mb-8">
+            Join 25,000+ companies already using our cutting-edge AI solutions. Start your free trial today!
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+            <a
+              href="https://ziontechgroup.com/contact"
+              className="bg-white text-purple-600 py-4 px-8 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300"
+            >
+              Start Your Free Trial
+            </a>
+            <a
+              href="tel:+13024640950"
+              className="border-2 border-white text-white py-4 px-8 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-600 transition-all duration-300"
+            >
+              Call: +1 (302) 464-0950
+            </a>
+          </div>
+          <div className="text-purple-100 text-sm">
+            <p>📧 kleber@ziontechgroup.com | 📍 364 E Main St STE 1008, Middletown, DE 19709</p>
+>>>>>>> origin/main
           </div>
         </div>
       </div>
