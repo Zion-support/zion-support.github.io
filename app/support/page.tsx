@@ -1,5 +1,4 @@
 'use client';
-
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Search, MessageCircle, Phone, Mail, Clock, CheckCircle, ArrowRight, FileText, Book, Users } from 'lucide-react';
@@ -29,7 +28,7 @@ const SupportPage: React.FC = () => {
 
   const supportChannels = [
     {
-      icon: Phone,
+icon: Phone,
       title: 'Phone Support',
       description: 'Speak directly with our technical experts',
       contact: '+1-302-464-0950',
@@ -39,7 +38,7 @@ const SupportPage: React.FC = () => {
     {
       icon: Mail,
       title: 'Email Support',
-      description: 'Get detailed responses to your questions',
+description: 'Get detailed responses to your questions',
       contact: 'support@ziontechgroup.com',
       availability: '24/7'
     },
@@ -55,51 +54,46 @@ const SupportPage: React.FC = () => {
 
   const resources = [
     {
-      icon: FileText,
+icon: FileText,
+
       title: 'Documentation',
       description: 'Comprehensive guides and API references',
+      icon: BookOpen,
       link: '/docs'
     },
     {
-      icon: Book,
+icon: Book,
       title: 'Knowledge Base',
       description: 'Searchable articles and troubleshooting guides',
       link: '/knowledge-base'
 
     },
     {
-      icon: Users,
       title: 'Community Forum',
-      description: 'Connect with other users and experts',
+description: 'Connect with other users and experts',
+
       link: '/community'
+    },
+    {
+      title: 'Status Page',
+      description: 'Check system status and uptime',
+      icon: Globe,
+      link: '/status'
     }
   ];
 
-  return (
-    <>
-      <Helmet>
-        <title>Support - Zion Tech Group | Help & Support Center</title>
-        <meta name="description" content="Get help and support for your AI and IT solutions. 24/7 support, documentation, and resources to help you succeed." />
-        <meta name="keywords" content="support, help, technical support, documentation, FAQ, customer service, troubleshooting" />
-      </Helmet>
+  const filteredFaqs = selectedCategory === 'all' 
+    ? faqs 
+    : faqs.filter(faq => faq.category === selectedCategory);
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
-        <div className="container mx-auto px-4">
-          {/* Header */}
-          <div className="text-center mb-16">
-            <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6">
-              Support
-              <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-                {' '}Center
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We're here to help you succeed. Get the support you need with our 
-              comprehensive help resources and expert assistance.
-            </p>
-          </div>
+  const searchedFaqs = searchQuery 
+    ? filteredFaqs.filter(faq => 
+        faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        faq.answer.toLowerCase().includes(searchQuery.toLowerCase())
+      )
+    : filteredFaqs;
 
-          {/* Search */}
+{/* Search */}
           <div className="max-w-2xl mx-auto mb-16">
             <div className="relative">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
@@ -204,6 +198,4 @@ const SupportPage: React.FC = () => {
     </>
 
   );
-};
-
-export default SupportPage;
+}

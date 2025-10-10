@@ -1,5 +1,4 @@
 'use client';
-
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Play, ArrowRight, CheckCircle, Star, Users, Zap, Shield, BarChart } from 'lucide-react';
@@ -39,7 +38,7 @@ const DemoPage: React.FC = () => {
     },
     {
       name: 'Michael Chen',
-      company: 'DataFlow Inc',
+company: 'DataFlow Inc',
       role: 'CTO',
       content: 'The quantum computing demo was mind-blowing. We could see immediate applications for our optimization problems.',
 
@@ -47,7 +46,7 @@ const DemoPage: React.FC = () => {
     }
   ];
 
-  return (
+return (
     <>
       <Helmet>
         <title>Demo - Zion Tech Group | See Our Solutions in Action</title>
@@ -193,6 +192,4 @@ const DemoPage: React.FC = () => {
     </>
 
   );
-};
-
-export default DemoPage;
+}

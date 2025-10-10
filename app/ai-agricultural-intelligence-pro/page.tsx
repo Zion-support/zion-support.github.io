@@ -9,87 +9,92 @@ const AIAgriculturalIntelligenceProPage: React.FC = () => {
   const features = [
     {
       icon: Leaf,
-      title: 'Crop Monitoring',
+title: 'Crop Monitoring',
       description: 'Advanced AI-powered crop monitoring and health assessment using satellite imagery and IoT sensors.',
       benefits: ['Real-time crop health', 'Disease detection', 'Yield prediction']
+
     },
     {
       icon: Zap,
-      title: 'Precision Agriculture',
-      description: 'Optimize farming operations with precision agriculture techniques and AI-driven insights.',
-      benefits: ['Resource optimization', 'Smart irrigation', 'Fertilizer management']
-    },
-    {
-      icon: Clock,
-      title: 'Weather Prediction',
-      description: 'Accurate weather forecasting and climate analysis for better farming decisions.',
-      benefits: ['Weather alerts', 'Climate analysis', 'Seasonal planning']
+      title: 'Automated Irrigation',
+      description: 'Smart irrigation systems that optimize water usage based on soil and weather data.',
+      benefits: ['Water conservation', 'Cost reduction', 'Improved yields', 'Environmental sustainability']
     },
     {
       icon: Shield,
       title: 'Pest Management',
-      description: 'Intelligent pest detection and management using computer vision and machine learning.',
-      benefits: ['Early pest detection', 'Automated treatment', 'Reduced pesticide use']
+      description: 'AI-driven pest detection and management solutions for sustainable farming.',
+      benefits: ['Pest identification', 'Treatment recommendations', 'Chemical reduction', 'Organic alternatives']
+    },
+    {
+      icon: Clock,
+      title: 'Real-time Monitoring',
+      description: '24/7 monitoring of farm conditions with instant alerts and recommendations.',
+      benefits: ['Continuous monitoring', 'Instant alerts', 'Mobile access', 'Historical data']
     },
     {
       icon: Users,
-      title: 'Farm Management',
-      description: 'Comprehensive farm management system with AI-powered recommendations and analytics.',
-      benefits: ['Farm planning', 'Resource tracking', 'Performance analytics']
-    },
-    {
-      icon: BarChart,
-      title: 'Yield Optimization',
-      description: 'Maximize crop yields through AI-driven optimization and predictive analytics.',
-      benefits: ['Yield prediction', 'Optimization algorithms', 'ROI analysis']
+      title: 'Expert Support',
+      description: 'Access to agricultural experts and AI specialists for guidance and support.',
+      benefits: ['Expert consultation', 'Training programs', 'Technical support', 'Best practices']
     }
   ];
 
   const benefits = [
-    'Increase crop yields by 30%',
+    'Increase crop yields by up to 30%',
     'Reduce water usage by 40%',
     'Minimize pesticide use by 50%',
-    'Improve farm efficiency',
-    'Enable data-driven decisions',
-    'Support sustainable farming'
+    'Lower operational costs by 25%',
+    'Improve soil health and sustainability',
+    'Enable data-driven decision making',
+    'Scale operations efficiently',
+    'Reduce environmental impact'
   ];
 
   const useCases = [
     {
-      title: 'Crop Monitoring',
-      description: 'Monitor crop health and growth with AI-powered analysis',
+      title: 'Precision Agriculture',
+      description: 'Optimize farming practices with data-driven insights',
       icon: '🌱'
     },
     {
-      title: 'Precision Irrigation',
-      description: 'Optimize water usage with smart irrigation systems',
+      title: 'Crop Health Monitoring',
+      description: 'Monitor crop health and detect issues early',
+      icon: '🔍'
+    },
+    {
+      title: 'Weather Prediction',
+      description: 'Predict weather patterns for better planning',
+      icon: '🌤️'
+    },
+    {
+      title: 'Yield Optimization',
+      description: 'Maximize crop yields through AI recommendations',
+      icon: '📈'
+    },
+    {
+      title: 'Resource Management',
+      description: 'Optimize water, fertilizer, and pesticide usage',
       icon: '💧'
     },
     {
-      title: 'Pest Control',
-      description: 'Detect and manage pests with intelligent systems',
-      icon: '🐛'
-    },
-    {
-      title: 'Yield Prediction',
-      description: 'Predict crop yields with advanced analytics',
+      title: 'Market Analysis',
+      description: 'Analyze market trends and pricing for better decisions',
       icon: '📊'
-
-    }
+}
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
       <Helmet>
-        <title>AI Agricultural Intelligence Pro - Zion Tech Group | Smart Farming</title>
+<title>AI Agricultural Intelligence Pro - Zion Tech Group | Smart Farming</title>
         <meta name="description" content="Transform agriculture with AI-powered intelligence solutions. Crop monitoring, precision farming, and smart agriculture technology for modern farmers." />
         <meta name="keywords" content="AI agriculture, smart farming, precision agriculture, crop monitoring, agricultural intelligence, farming technology" />
 
       </Helmet>
-      
+
       <Navigation />
-      
-      {/* Hero Section */}
+{/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
@@ -224,7 +229,7 @@ const AIAgriculturalIntelligenceProPage: React.FC = () => {
       </section>
 
       <Footer />
-    </div>
+    </>
   );
 };
 

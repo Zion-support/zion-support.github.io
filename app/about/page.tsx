@@ -192,7 +192,7 @@ const AboutPage: React.FC = () => {
               </div>
             </div>
           </div>
-        </section>
+</section>
 
         {/* Values Section */}
         <section className="py-20">

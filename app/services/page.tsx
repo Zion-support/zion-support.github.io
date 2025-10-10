@@ -1,16 +1,15 @@
 'use client';
-
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+
 import { Brain, Cpu, Shield, Globe, Users, Award, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Phone, Mail, MapPin, Clock, Star, Zap, Database, Cloud, Code, Smartphone, Settings, Lock, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 
-const ServicesPage: React.FC = () => {
+export default function ServicesPage() {
   const [isLoaded, setIsLoaded] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState('all');
 
   useEffect(() => {
     setIsLoaded(true);
@@ -18,32 +17,41 @@ const ServicesPage: React.FC = () => {
 
   const services = [
     {
-      id: 'ai-development',
-      category: 'ai',
       icon: Brain,
       title: 'AI Solutions',
-      description: 'Transform your business with cutting-edge artificial intelligence and machine learning technologies.',
+      description: 'Cutting-edge artificial intelligence solutions to transform your business',
       features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
-      price: 'Custom Pricing'
+      pricing: 'Starting at $5,000/month',
+      path: '/ai-solutions'
     },
     {
       icon: Cloud,
-      title: 'Cloud Infrastructure',
-      description: 'Scalable and secure cloud solutions that grow with your business needs.',
-      features: ['AWS/Azure/GCP', 'Container Orchestration', 'Auto-scaling', 'Disaster Recovery'],
-      price: 'From $2,000/month'
+      title: 'Cloud Computing',
+      description: 'Scalable cloud infrastructure and migration services',
+      features: ['AWS/Azure/GCP', 'Migration Services', 'DevOps', 'Auto-scaling'],
+      pricing: 'Starting at $3,000/month',
+      path: '/cloud-computing'
     },
     {
       icon: Shield,
       title: 'Cybersecurity',
-      description: 'Protect your digital assets with enterprise-grade security solutions.',
-      features: ['Threat Detection', 'Vulnerability Assessment', 'Compliance', '24/7 Monitoring'],
-      price: 'From $1,500/month'
+      description: 'Comprehensive security solutions to protect your digital assets',
+      features: ['Security Audits', 'Penetration Testing', 'Compliance', '24/7 Monitoring'],
+      pricing: 'Starting at $2,500/month',
+      path: '/cybersecurity'
+    },
+    {
+      icon: Code,
+      title: 'Custom Development',
+      description: 'Tailored software solutions built to your exact specifications',
+      features: ['Web Applications', 'Mobile Apps', 'API Development', 'Database Design'],
+      pricing: 'Starting at $8,000/project',
+      path: '/custom-development'
     },
     {
       icon: Database,
       title: 'Data Analytics',
-      description: 'Turn your data into actionable insights with advanced analytics platforms.',
+description: 'Turn your data into actionable insights with advanced analytics platforms.',
       features: ['Real-time Dashboards', 'Data Visualization', 'Business Intelligence', 'Custom Reports'],
       price: 'From $3,000/month'
     }
@@ -150,6 +158,4 @@ const ServicesPage: React.FC = () => {
     </>
 
   );
-};
-
-export default ServicesPage;
+}
