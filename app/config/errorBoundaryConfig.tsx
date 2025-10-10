@@ -35,7 +35,6 @@ import React from 'react'export interface ErrorBoundaryConfig {
    * Fallback UI components
    */
   fallbackComponents: {
-<<<<<<< HEAD
     default: React.ComponentType<{ error: Error; resetError: () => void }>;
     network: React.ComponentType<{ error: Error; resetError: () => void }>;
     notFound: React.ComponentType<{ error: Error; resetError: () => void }>;
@@ -179,5 +178,3 @@ export default getErrorBoundaryConfig
   </button>
   </h2>
   </path>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b853

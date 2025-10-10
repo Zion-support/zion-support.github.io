@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 'use client'import React from 'react'
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp } from 'lucide-react'const ContentPromotionBanner: React.FC  = () => {
   const features = [
@@ -52,63 +50,6 @@ import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, Trendi
       value: '4.9/5',
       label: 'Rating',
       description: 'Highly rated by clients'
-=======
-'use client';
-import React, { useState, useEffect } from 'react';
-import { X, ChevronLeft, ChevronRight, Star, CheckCircle } from 'lucide-react';
-
-interface PromotionBannerProps {
-  title: string;
-  description: string;
-  ctaText: string;
-  ctaLink: string;
-  features?: string[];
-  rating?: number;
-  reviewCount?: number;
-  image?: string;
-  backgroundColor?: string;
-  textColor?: string;
-  showCloseButton?: boolean;
-  autoHide?: boolean;
-  hideDelay?: number;
-}
-
-const ContentPromotionBanner: React.FC<PromotionBannerProps> = ({
-  title,
-  description,
-  ctaText,
-  ctaLink,
-  features = [],
-  rating = 4.9,
-  reviewCount = 1000,
-  image,
-  backgroundColor = 'bg-gradient-to-r from-cyan-500 to-purple-500',
-  textColor = 'text-white',
-  showCloseButton = true,
-  autoHide = false,
-  hideDelay = 10000
-}) => {
-  const [isVisible, setIsVisible] = useState(true);
-  const [currentFeatureIndex, setCurrentFeatureIndex] = useState(0);
-
-  useEffect(() => {
-    if (autoHide) {
-      const timer = setTimeout(() => {
-        setIsVisible(false);
-      }, hideDelay);
-
-      return () => clearTimeout(timer);
-    }
-  }, [autoHide, hideDelay]);
-
-  useEffect(() => {
-    if (features.length > 1) {
-      const interval = setInterval(() => {
-        setCurrentFeatureIndex((prevIndex) => (prevIndex + 1) % features.length);
-      }, 3000);
-
-      return () => clearInterval(interval);
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
     }
   }, [features.length]);
 
@@ -121,7 +62,6 @@ const ContentPromotionBanner: React.FC<PromotionBannerProps> = ({
   }
 
   return (
-<<<<<<< HEAD
 <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Hero Section */}
@@ -158,13 +98,6 @@ const ContentPromotionBanner: React.FC<PromotionBannerProps> = ({
         </div>
 <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-=======
-    <div className={`${backgroundColor} ${textColor} py-20 px-4`}>
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Content */}
-          <div className="space-y-8">
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
             <div>
               <h2 className="text-4xl md:text-5xl font-bold mb-6">{title}</h2>
               <p className="text-xl mb-8">{description}</p>
@@ -206,7 +139,6 @@ const ContentPromotionBanner: React.FC<PromotionBannerProps> = ({
                     }`}
                   />
                 ))}
-<<<<<<< HEAD
               </ul>
             </div>
             <div>
@@ -234,13 +166,10 @@ const ContentPromotionBanner: React.FC<PromotionBannerProps> = ({
             <div key={index} className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl flex items-center justify-center mx-auto mb-4">
                 <feature.icon className="w-8 h-8 text-white" />
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
               </div>
               <span className="text-lg font-semibold">{rating}</span>
               <span className="text-lg">({reviewCount} reviews)</span>
             </div>
-<<<<<<< HEAD
           ))}
         </div>
         {/* Benefits Section */}
@@ -270,9 +199,6 @@ const ContentPromotionBanner: React.FC<PromotionBannerProps> = ({
         <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-8">Why Choose Our Solutions?</h2>
           <div className="grid md:grid-cols-2 gap-4">
-=======
-<div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
->>>>>>> cursor/fix-errors-and-merge-to-main-b853
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-center gap-3">
                 <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
@@ -298,22 +224,7 @@ const ContentPromotionBanner: React.FC<PromotionBannerProps> = ({
               <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200">
                 Schedule Demo
   </
-=======
-
-            {/* CTA */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a
-                href={ctaLink}
-                className="bg-white text-cyan-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-lg transition-colors text-center"
-              >
-                {ctaText}
-              </a>
-              <button className="border-2 border-white text-white hover:bg-white hover:text-cyan-600 font-bold py-4 px-8 rounded-lg transition-colors">
-                Learn More
-              </button>
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
             </div>
-<<<<<<< HEAD
           </div>
 
           {/* Image */}
@@ -328,14 +239,11 @@ const ContentPromotionBanner: React.FC<PromotionBannerProps> = ({
             </div>
           )}
         </div>
-<<<<<<< HEAD
       <div className="text-center">
         <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 inline-flex items-center">
           Get Started Now
           <ArrowRight className="w-5 h-5 ml-2" />
         </button>
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
       </div>
 
       {/* Close Button */}
@@ -348,18 +256,9 @@ const ContentPromotionBanner: React.FC<PromotionBannerProps> = ({
         </button>
       )}
     </div>
-<<<<<<< HEAD
   )}
 export default ContentPromotionBanner
   </button>
   </button>
   </button>
   </button>
-=======
-  );
-};
-
-export default ContentPromotionBanner;
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b853

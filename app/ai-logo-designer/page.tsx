@@ -1,12 +1,9 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b853
 const AiLogoDesignerPage: React.FC = () => {
 const features = [
     {
@@ -97,7 +94,6 @@ return (
                       {feature.benefits.map((benefit, idx) => (</ul>
                         <li key={idx} className="flex items-center text-sm text-gray-400"></li>
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-<<<<<<< HEAD
                           {benefit}
                         </CheckCircle>;
                       ))}
@@ -121,5 +117,3 @@ export default AiLogoDesignerPage
   </button>
   </h1></React.Fragment>
 }
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b853

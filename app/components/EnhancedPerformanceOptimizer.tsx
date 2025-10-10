@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 const EnhancedPerformanceOptimizerPage: React.FC = () => {
@@ -298,63 +296,6 @@ return () => {
   ]);
 
   return null;
-=======
-
-interface PerformanceOptimizerProps {
-  enableImageOptimization?: boolean;
-  enableLazyLoading?: boolean;
-  enablePreloading?: boolean;
-  enableCodeSplitting?: boolean;
-}
-
-const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
-  enableImageOptimization = true,
-  enableLazyLoading = true,
-  enablePreloading = true,
-  enableCodeSplitting = true
-}) => {
-  React.useEffect(() => {
-    // Performance optimization logic
-    if (enableImageOptimization) {
-      // Add image optimization logic here
-      console.log('Image optimization enabled');
-    }
-    
-    if (enableLazyLoading) {
-      // Add lazy loading logic here
-      console.log('Lazy loading enabled');
-    }
-    
-    if (enablePreloading) {
-      // Add preloading logic here
-      console.log('Preloading enabled');
-    }
-    
-    if (enableCodeSplitting) {
-      // Add code splitting logic here
-      console.log('Code splitting enabled');
-    }
-  }, [enableImageOptimization, enableLazyLoading, enablePreloading, enableCodeSplitting]);
-
-  return null; // This component doesn't render anything visible
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
 };
 
 export default EnhancedPerformanceOptimizer;
-=======
-import React from 'react';
-
-interface PerformanceOptimizerProps {
-  children: React.ReactNode;
-}
-
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
-  return (
-    <div className="performance-optimizer">
-      {children}
-    </div>
-  );
-};
-
-export default PerformanceOptimizer;
->>>>>>> cursor/fix-errors-and-merge-to-main-b853

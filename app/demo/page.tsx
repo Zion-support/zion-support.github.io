@@ -1,28 +1,5 @@
-<<<<<<< HEAD
 'use client'import React from 'react'
 import { Helmet  } from 'react-helmet-async'import { Play, ArrowRight, CheckCircle  } from 'lucide-react'const DemoPage: React.FC  = () => {
-=======
-'use client';
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { 
-  Play, 
-  Pause, 
-  RotateCcw, 
-  Settings, 
-  Download, 
-  Share2, 
-  Maximize2,
-  ChevronRight,
-  CheckCircle,
-  Star,
-  Users,
-  Zap
-} from 'lucide-react';
-=======
-import { Play, ArrowRight, CheckCircle, Zap, Brain, Shield } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b853
 
 const DemoPage: React.FC = () => {
   const [selectedDemo, setSelectedDemo] = useState('ai-chatbot');
@@ -31,7 +8,6 @@ const DemoPage: React.FC = () => {
 >>>>>>> cursor/analyze-improve-and-deploy-application-e765
   const demos = [
     {
-<<<<<<< HEAD
       id: 'ai-chatbot',
       title: 'AI Chatbot Demo',
       description: 'Experience our intelligent chatbot that can handle customer inquiries 24/7',
@@ -87,99 +63,20 @@ const DemoPage: React.FC = () => {
       ],
       thumbnail: '/demos/security.jpg'
     }
-<<<<<<< HEAD
-  ]return (
-    <React.Fragment>
-=======
-  ];
-
-  const testimonials = [
-    {
-      name: 'Sarah Johnson',
-      company: 'TechCorp Solutions',
-      role: 'CTO',
-      content: 'The AI chatbot demo was incredible. It handled complex queries with ease and the integration was seamless.',
-      rating: 5
-    },
-    {
-      name: 'Michael Chen',
-      company: 'DataFlow Inc.',
-      role: 'Data Director',
-      content: 'The analytics dashboard provided insights we never had before. The real-time capabilities are game-changing.',
-      rating: 5
-    },
-    {
-      name: 'Lisa Wang',
-      company: 'SecureNet Corp',
-      role: 'Security Manager',
-      content: 'The cybersecurity demo showed us exactly how our threats would be detected and handled. Very impressive.',
-      rating: 5
-    }
-  ];
-
-  const selectedDemoData = demos.find(demo => demo.id === selectedDemo);
-=======
-      title: 'AI-Powered Analytics Dashboard',
-      description: 'See how our AI analytics can transform your data into actionable insights.',
-      duration: '5 min',
-      category: 'AI Analytics',
-      icon: Brain
-    },
-    {
-      title: 'Automated Security Monitoring',
-      description: 'Experience real-time threat detection and automated security responses.',
-      duration: '3 min',
-      category: 'Cybersecurity',
-      icon: Shield
-    },
-    {
-      title: 'Cloud Infrastructure Management',
-      description: 'Watch how we optimize and manage your cloud resources automatically.',
-      duration: '4 min',
-      category: 'Cloud Computing',
-      icon: Zap
-    }
-  ];
-
-  const features = [
-    'Interactive demos with real data',
-    'Live Q&A with our experts',
-    'Customized scenarios for your industry',
-    'Immediate access to try our solutions',
-    'No commitment required',
-    'Expert guidance throughout'
-  ];
->>>>>>> cursor/fix-errors-and-merge-to-main-b853
+  ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
       <Helmet>
-<<<<<<< HEAD
         <title>Interactive Demos | Zion Tech Group</title>
         <meta name="description" content="Experience our AI and IT solutions through interactive demos. See how our technology can transform your business operations." />
         <meta name="keywords" content="demos, AI demos, interactive demos, technology showcase, solution demonstrations" />
       </Helmet>
-<<<<<<< HEAD
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               See Our <span className="text-cyan-400">Solutions</span> in Action
-  </
-=======
-        <title>Demo - Zion Tech Group | See Our Solutions in Action</title>
-        <meta name="description" content="Experience our AI and IT solutions through interactive demos. See how our technology can transform your business." />
-        <meta name="keywords" content="demo, interactive demo, AI solutions, IT solutions, technology showcase, Zion Tech Group" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        {/* Hero Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              See Our <span className="text-cyan-400">Solutions</span> in Action
             </h1>
->>>>>>> cursor/fix-errors-and-merge-to-main-b853
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Experience our AI and IT solutions through interactive demos. See how our technology can transform your business.
             </p>
@@ -209,43 +106,9 @@ const DemoPage: React.FC = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {demos.map((demo, index) => (
-<<<<<<< HEAD
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300">
                   <div className="flex items-center justify-center w-16 h-16 bg-cyan-500/20 rounded-lg mb-4">
                     <Play className="w-8 h-8 text-cyan-400" />
-=======
-
-      {/* Hero Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            See Our <span className="text-cyan-400">Solutions</span> in Action
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Experience our AI and IT solutions through interactive demos. See how our technology can transform your business operations.
-          </p>
-        </div>
-      </section>
-
-      {/* Demo Selection */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Choose a Demo</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {demos.map((demo) => (
-              <div
-                key={demo.id}
-                onClick={() => setSelectedDemo(demo.id)}
-                className={`bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border cursor-pointer transition-all duration-300 ${
-                  selectedDemo === demo.id
-                    ? 'border-cyan-500 shadow-2xl shadow-cyan-500/20'
-                    : 'border-slate-700 hover:border-slate-600'
-                }`}
-              >
-                <div className="text-center mb-4">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <Play className="w-8 h-8 text-slate-900" />
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
                   </div>
                   <h3 className="text-xl font-bold text-white mb-2">{demo.title}</h3>
                   <span className="bg-slate-700 text-cyan-400 text-sm font-medium px-3 py-1 rounded-full">
@@ -333,33 +196,10 @@ const DemoPage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-<<<<<<< HEAD
                   <button className="w-full bg-cyan-500 hover:bg-cyan-600 text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center">
                     <Play className="w-4 h-4 mr-2" />
                     Watch Demo
   </
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
-=======
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <demo.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <div className="mb-4">
-                    <span className="inline-block bg-cyan-500/20 text-cyan-300 px-3 py-1 rounded-full text-sm font-medium">
-                      {demo.category}
-                    </span>
-                    <span className="ml-2 text-gray-400 text-sm">{demo.duration}</span>
-                  </div>
-                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
-                    {demo.title}
-                  </h3>
-                  <p className="text-gray-300 mb-6">{demo.description}</p>
-                  <button className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors group">
-                    Try Demo
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-b853
                 </div>
                 <div>
                   <h4 className="text-lg font-bold text-white mb-4">Demo Controls</h4>
@@ -440,7 +280,6 @@ const DemoPage: React.FC = () => {
               </button>
             </div>
           </div>
-<<<<<<< HEAD
         </section>
 
         {/* Features Section */}
@@ -491,15 +330,5 @@ const DemoPage: React.FC = () => {
 export default DemoPage
   </button>
   </h1>
-=======
-        </div>
-      </section>
-    </div>
-  );
-};
-
-export default DemoPage;
-<<<<<<< HEAD
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-b853

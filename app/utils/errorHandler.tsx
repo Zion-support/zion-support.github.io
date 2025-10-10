@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client'
 /**
  * Advanced Error Handler
@@ -385,8 +384,6 @@ return appError
       await fetch(this.config.reportEndpoint, {)}
         method: 'POST',
         headers: {}
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b853
           'Content-Type': 'application/json'
         })
     body: JSON.stringify(error)
@@ -396,7 +393,6 @@ return appError
         headers: {,
           'Content-Type': 'application/json'})
         body: JSON.stringify(error),
-<<<<<<< HEAD
 } catch (err) {}
   }
   // Report error
@@ -912,5 +908,3 @@ export default ErrorHandler;
   </ErrorHandlerConfig>
   </ErrorHandlerConfig>
   </strin>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b853

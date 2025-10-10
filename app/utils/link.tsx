@@ -14,7 +14,6 @@ export const Link: React.FC<LinkProps>= ({
 export const Link: React.FC<LinkProps> = ({}
   href,
   href: string,
-<<<<<<< HEAD
   children: React.ReactNode;
   className?: string;
   target?: string;
@@ -55,5 +54,3 @@ export default Link;
   </LinkProps>
   </LinkProps>
   </LinkProps>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b853

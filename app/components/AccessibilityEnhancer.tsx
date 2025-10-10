@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 'use client'import React, { useEffect } from 'react'
 interface AccessibilityEnhancerProps {
   children: React.ReactNode
@@ -10,20 +8,6 @@ interface AccessibilityEnhancerProps {
 }
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   children,
-=======
-'use client';
-import React, { useEffect } from 'react';
-
-interface AccessibilityEnhancerProps {
-  enableKeyboardNavigation?: boolean;
-  enableScreenReaderSupport?: boolean;
-  enableHighContrast?: boolean;
-  enableFocusManagement?: boolean;
-  children?: React.ReactNode;
-}
-
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ 
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
   enableKeyboardNavigation = true,
   enableScreenReaderSupport = true,
   enableHighContrast = true,
@@ -34,7 +18,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     // Keyboard navigation enhancements
     if (enableKeyboardNavigation) {
       const handleKeyDown = (event: KeyboardEvent) => {
-<<<<<<< HEAD
         // Skip to main content
         if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
           const skipLink = document.querySelector('a[href="#main-content"]') as HTMLAnchorElement
@@ -121,61 +104,3 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   }, [enableKeyboardNavigation, enableScreenReaderSupport, enableHighContrast, enableFocusManagement])
   return <React.Fragment>{children}</React.Fragment>}
 export default AccessibilityEnhancer
-=======
-        // Add keyboard navigation logic here
-        if (event.key === 'Tab') {
-          // Handle tab navigation
-        }
-      };
-      
-      document.addEventListener('keydown', handleKeyDown);
-      return () => document.removeEventListener('keydown', handleKeyDown);
-    }
-  }, [enableKeyboardNavigation]);
-
-  useEffect(() => {
-    // Screen reader support
-    if (enableScreenReaderSupport) {
-      // Add screen reader enhancements here
-      console.log('Screen reader support enabled');
-    }
-  }, [enableScreenReaderSupport]);
-
-  useEffect(() => {
-    // High contrast mode
-    if (enableHighContrast) {
-      // Add high contrast mode logic here
-      console.log('High contrast mode enabled');
-    }
-  }, [enableHighContrast]);
-
-  useEffect(() => {
-    // Focus management
-    if (enableFocusManagement) {
-      // Add focus management logic here
-      console.log('Focus management enabled');
-    }
-  }, [enableFocusManagement]);
-
-  return <>{children}</>;
-};
-
-export default AccessibilityEnhancer;
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
-=======
-import React from 'react';
-
-interface AccessibilityEnhancerProps {
-  children: React.ReactNode;
-}
-
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
-  return (
-    <div className="accessibility-enhancer">
-      {children}
-    </div>
-  );
-};
-
-export default AccessibilityEnhancer;
->>>>>>> cursor/fix-errors-and-merge-to-main-b853

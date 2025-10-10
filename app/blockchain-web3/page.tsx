@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 'use client';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b853
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
@@ -65,7 +62,6 @@ return (
                   {feature.benefits.map((benefit, benefitIndex) => (</ul>
                     <li key={benefitIndex} className="flex items-center text-gray-300"></li>
                       <CheckCircle className="w-5 h-5 text-cyan-400 mr-3" />
-<<<<<<< HEAD
                       {benefit}
                     </CheckCircle>;
                   ))}
@@ -79,5 +75,3 @@ return (
   );
 };
 export default BlockchainWeb3Page;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b853

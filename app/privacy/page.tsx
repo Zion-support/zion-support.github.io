@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, ArrowRight, Globe, Server, Key, FileText, AlertTriangle } from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b853
 export default function PrivacyPage() {
   const lastUpdated = 'January 1, 2024';
   const dataTypes = [
@@ -101,7 +98,6 @@ return (
                 By using our services, you agree to the collection and use of information in accordance with this policy.
               </p>
             </section>
-<<<<<<< HEAD
             {/* Information We Collect */}
             <section></section>;
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Information We Collect</h2>;
@@ -233,5 +229,3 @@ return (
   );
 }
 ;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b853

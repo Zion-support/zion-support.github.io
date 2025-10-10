@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react'
 'use client';
@@ -1487,6 +1486,3 @@ export default HomePage;
   </AccessibilityEnhancer>
   </PerformanceOptimizer>
   </SEOOptimizer>
-=======
-  useEffect(() => {
->>>>>>> cursor/fix-errors-and-merge-to-main-b853

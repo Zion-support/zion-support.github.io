@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Code, Smartphone, Globe, Database, Shield, BarChart, Users, CheckCircle, ArrowRight, Cloud, Phone } from 'lucide-react';
@@ -8,8 +7,6 @@ import SEOOptimizer from '../components/SEOOptimizer';
 import PerformanceOptimizer from '../components/PerformanceOptimizer';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 import SecurityEnhancer from '../components/SecurityEnhancer';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b853
 const $1: React.FC = () => {;
   const webServices = [,;
     {,;
@@ -86,7 +83,6 @@ const process = [
       icon: Shield,
     }
   ];
-<<<<<<< HEAD
   return(<React.Fragment></React>
       <SEOOptimizer;
         title="Web Development Services - Zion Tech Group";
@@ -428,6 +424,3 @@ export default WebDevelopmentPage
 export default WebDevelopmentPage;
 }
 }
-=======
-  return(<React.Fragment>
->>>>>>> cursor/fix-errors-and-merge-to-main-b853

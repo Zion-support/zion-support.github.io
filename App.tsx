@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client'
 import React, { Suspense } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
@@ -20,31 +19,6 @@ import { AnalyticsProvider } from './app/components/EnhancedAnalytics'
 import PerformanceMonitor from './app/components/PerformanceMonitor'
 import ServiceWorker from './app/components/ServiceWorker'
 import EnhancedErrorBoundary from './app/components/EnhancedErrorBoundary'
-=======
-'use client';
-import React, { Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
-import './app/styles/futuristic.css';
-import Navigation from './app/components/Navigation';
-import Footer from './app/components/Footer';
-import HomePage from './app/page';
-import { PageLoader } from './app/components/LoadingStates';
-import ErrorBoundary from './app/components/ErrorBoundary';
-import SEOHead from './app/components/EnhancedSEOHead';
-import SkipLink from './app/components/EnhancedSkipLink';
-import Breadcrumb from './app/components/Breadcrumb';
-import PerformanceOptimizer from './app/components/EnhancedPerformanceOptimizer';
-import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
-import EnhancedAccessibility from './app/components/EnhancedAccessibility';
-import { usePerformanceMonitor } from './app/hooks/usePerformanceMonitor';
-import { AnalyticsProvider } from './app/components/EnhancedAnalytics';
-import PerformanceMonitor from './app/components/PerformanceMonitor';
-import ServiceWorker from './app/components/ServiceWorker';
-import EnhancedErrorBoundary from './app/components/EnhancedErrorBoundary';
-<<<<<<< HEAD
-// Structured data for SEO - moved to SEOHead component
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import('./app/about/page'))
 const ContactPage = React.lazy(() => import('./app/contact/page'))
@@ -61,25 +35,6 @@ const ConsultationPage = React.lazy(() => import('./app/consultation/page'))
 const MicroSaasPage = React.lazy(() => import('./app/micro-saas/page'))
 const AiServicesPage = React.lazy(() => import('./app/ai-services/page'))
 const ItServicesPage = React.lazy(() => import('./app/it-services/page'))
-=======
-
-// Lazy load pages for better performance
-const AboutPage = React.lazy(() => import('./app/about/page'));
-const ContactPage = React.lazy(() => import('./app/contact/page'));
-const ServicesPage = React.lazy(() => import('./app/services/page'));
-const PricingPage = React.lazy(() => import('./app/pricing/page'));
-const BlogPage = React.lazy(() => import('./app/blog/page'));
-const CaseStudiesPage = React.lazy(() => import('./app/case-studies/page'));
-const CareersPage = React.lazy(() => import('./app/careers/page'));
-const PartnersPage = React.lazy(() => import('./app/partners/page'));
-const SupportPage = React.lazy(() => import('./app/support/page'));
-const FAQPage = React.lazy(() => import('./app/faq/page'));
-const DemoPage = React.lazy(() => import('./app/demo/page'));
-const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
-const MicroSaasPage = React.lazy(() => import('./app/micro-saas/page'));
-const AiServicesPage = React.lazy(() => import('./app/ai-services/page'));
-const ItServicesPage = React.lazy(() => import('./app/it-services/page'));
->>>>>>> cursor/fix-errors-and-merge-to-main-b853
 // Performance monitoring hook
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 usePerformanceMonitor()

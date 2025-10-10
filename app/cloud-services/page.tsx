@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b853
 import { Cloud, Server, Database, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
 const CloudServicesPage: React.FC = () => {
 const features = [
@@ -26,7 +23,6 @@ const features = [
       icon: Globe,
       title: 'Global Deployment',
       description: 'Worldwide cloud services deployment and support'
-<<<<<<< HEAD
     }
   ];
   const benefits = [
@@ -163,5 +159,3 @@ export default CloudServicesPage;
   </h1>
   </div>
 }
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b853

@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b853
 const TeamPage: React.FC = () => {
 return (
     <React.Fragment></React>
@@ -37,8 +34,5 @@ return (
     </React.Fragment>
   );
 };
-<<<<<<< HEAD
 export default TeamPage;
 ;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b853

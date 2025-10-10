@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Mail, ArrowRight } from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b853
 const EmailMarketingSuitePage: React.FC = () => {
 return (
     <React.Fragment></React>

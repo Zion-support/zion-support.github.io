@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 ;
 ;
@@ -122,5 +121,3 @@ return () => clearTimeout(timer)
 };
 
 export default PerformanceOptimizer;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b853

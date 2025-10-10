@@ -1,10 +1,8 @@
-<<<<<<< HEAD
 'use client';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Star, Users, Heart, Award, MapPin, Clock, Briefcase, CheckCircle, ArrowRight, Zap } from 'lucide-react';
-<<<<<<< HEAD
 interface JobPosition {
   id: string;
   title: string;
@@ -18,9 +16,6 @@ interface JobPosition {
   posted: string;
   featured: boolean;
 }
-=======
-
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
 const CareersPage: React.FC = () => {
   const [selectedDepartment, setSelectedDepartment] = useState('all');
 
@@ -28,7 +23,6 @@ const CareersPage: React.FC = () => {
     {
       id: 1,
       title: 'Senior AI Engineer',
-<<<<<<< HEAD
       department: 'AI Solutions',
       location: 'Remote',
       type: 'Full-time',
@@ -79,171 +73,6 @@ description: 'Lead the development of cutting-edge AI solutions and machine lear
       title: 'Innovation',
       description: 'We push the boundaries of what\'s possible with technology',
       color: 'text-yellow-400'
-=======
-      department: 'Engineering',
-      location: 'Remote',
-      type: 'Full-time',
-      experience: '5+ years',
-      description: 'Lead the development of cutting-edge AI solutions and machine learning models.',
-      requirements: [
-        'Master\'s degree in Computer Science or related field',
-        '5+ years of experience in AI/ML',
-        'Proficiency in Python, TensorFlow, PyTorch',
-        'Experience with cloud platforms (AWS, Azure, GCP)',
-        'Strong problem-solving and communication skills'
-      ],
-      benefits: [
-        'Competitive salary and equity',
-        'Health, dental, and vision insurance',
-        'Flexible work arrangements',
-        'Professional development budget',
-        'Unlimited PTO'
-      ],
-      posted: '2024-01-15',
-      featured: true
-    },
-    {
-      id: 2,
-      title: 'Cloud Solutions Architect',
-      department: 'Engineering',
-      location: 'San Francisco, CA',
-      type: 'Full-time',
-      experience: '7+ years',
-      description: 'Design and implement scalable cloud infrastructure solutions for enterprise clients.',
-      requirements: [
-        'Bachelor\'s degree in Computer Science or related field',
-        '7+ years of cloud architecture experience',
-        'Expertise in AWS, Azure, and GCP',
-        'Experience with containerization (Docker, Kubernetes)',
-        'Strong understanding of microservices architecture'
-      ],
-      benefits: [
-        'Competitive salary and equity',
-        'Health, dental, and vision insurance',
-        'Flexible work arrangements',
-        'Professional development budget',
-        'Unlimited PTO'
-      ],
-      posted: '2024-01-10',
-      featured: false
-    },
-    {
-      id: 3,
-      title: 'Cybersecurity Specialist',
-      department: 'Security',
-      location: 'Remote',
-      type: 'Full-time',
-      experience: '4+ years',
-      description: 'Protect our clients\' digital assets with advanced security solutions and threat detection.',
-      requirements: [
-        'Bachelor\'s degree in Cybersecurity or related field',
-        '4+ years of cybersecurity experience',
-        'Certifications: CISSP, CISM, or equivalent',
-        'Experience with SIEM tools and incident response',
-        'Knowledge of compliance frameworks (SOC 2, GDPR)'
-      ],
-      benefits: [
-        'Competitive salary and equity',
-        'Health, dental, and vision insurance',
-        'Flexible work arrangements',
-        'Professional development budget',
-        'Unlimited PTO'
-      ],
-      posted: '2024-01-08',
-      featured: false
-    },
-    {
-      id: 4,
-      title: 'Data Scientist',
-      department: 'Analytics',
-      location: 'New York, NY',
-      type: 'Full-time',
-      experience: '3+ years',
-      description: 'Extract insights from complex datasets to drive business decisions and AI model development.',
-      requirements: [
-        'Master\'s degree in Data Science, Statistics, or related field',
-        '3+ years of data science experience',
-        'Proficiency in Python, R, SQL',
-        'Experience with machine learning libraries',
-        'Strong statistical and analytical skills'
-      ],
-      benefits: [
-        'Competitive salary and equity',
-        'Health, dental, and vision insurance',
-        'Flexible work arrangements',
-        'Professional development budget',
-        'Unlimited PTO'
-      ],
-      posted: '2024-01-05',
-      featured: false
-    },
-    {
-      id: 5,
-      title: 'Product Manager',
-      department: 'Product',
-      location: 'Remote',
-      type: 'Full-time',
-      experience: '5+ years',
-      description: 'Lead product strategy and roadmap for our AI and IT solutions portfolio.',
-      requirements: [
-        'Bachelor\'s degree in Business, Engineering, or related field',
-        '5+ years of product management experience',
-        'Experience with AI/ML products',
-        'Strong analytical and communication skills',
-        'Experience with agile development methodologies'
-      ],
-      benefits: [
-        'Competitive salary and equity',
-        'Health, dental, and vision insurance',
-        'Flexible work arrangements',
-        'Professional development budget',
-        'Unlimited PTO'
-      ],
-      posted: '2024-01-03',
-      featured: false
-    },
-    {
-      id: 6,
-      title: 'Sales Engineer',
-      department: 'Sales',
-      location: 'Remote',
-      type: 'Full-time',
-      experience: '3+ years',
-      description: 'Help clients understand and implement our AI and IT solutions through technical sales support.',
-      requirements: [
-        'Bachelor\'s degree in Engineering or related field',
-        '3+ years of sales engineering experience',
-        'Technical background in AI/ML or cloud computing',
-        'Excellent presentation and communication skills',
-        'Experience with enterprise sales processes'
-      ],
-      benefits: [
-        'Competitive salary and equity',
-        'Health, dental, and vision insurance',
-        'Flexible work arrangements',
-        'Professional development budget',
-        'Unlimited PTO'
-      ],
-      posted: '2024-01-01',
-      featured: false
-    }
-  ];
-
-  const departments = [
-    { id: 'all', name: 'All Departments' },
-    { id: 'Engineering', name: 'Engineering' },
-    { id: 'Security', name: 'Security' },
-    { id: 'Analytics', name: 'Analytics' },
-    { id: 'Product', name: 'Product' },
-    { id: 'Sales', name: 'Sales' }
-  ];
-
-  const companyValues = [
-    {
-      icon: Star,
-      title: 'Excellence',
-      description: 'We strive for excellence in everything we do, delivering the highest quality solutions to our clients.'
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
     },
     {
       icon: Users,
@@ -260,7 +89,6 @@ description: 'Lead the development of cutting-edge AI solutions and machine lear
       title: 'Innovation',
       description: 'We constantly push the boundaries of what\'s possible with cutting-edge technology and creative thinking.'
     }
-<<<<<<< HEAD
   ]
   const culture = [
     {
@@ -283,21 +111,6 @@ description: 'Lead the development of cutting-edge AI solutions and machine lear
       label: 'Glassdoor Rating',
       description: 'Highly rated workplace'
     }
-=======
-  ];
-
-  const benefits = [
-    'Competitive salary and equity package',
-    'Comprehensive health, dental, and vision insurance',
-    'Flexible work arrangements and remote options',
-    'Professional development and learning budget',
-    'Unlimited paid time off',
-    '401(k) with company matching',
-    'Stock options for all employees',
-    'Wellness programs and gym memberships',
-    'Team building events and company retreats',
-    'Cutting-edge technology and tools'
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
   ];
 
   const filteredJobs = selectedDepartment === 'all' 
@@ -314,7 +127,6 @@ description: 'Lead the development of cutting-edge AI solutions and machine lear
         <meta name="description" content="Join our team of AI and technology experts. Explore career opportunities at Zion Tech Group and help us build the future of technology." />
         <meta name="keywords" content="careers, jobs, AI engineer, cloud architect, data scientist, technology careers" />
       </Helmet>
-<<<<<<< HEAD
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
@@ -512,24 +324,6 @@ description: 'Lead the development of cutting-edge AI solutions and machine lear
         </div>
       </section>
       <section className="py-20 px-4 bg-white/5">
-=======
-
-      {/* Hero Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Join Our <span className="text-cyan-400">Team</span>
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Be part of a team that's shaping the future of AI and technology. 
-            Join us in building innovative solutions that transform businesses worldwide.
-          </p>
-        </div>
-      </section>
-
-      {/* Company Values */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Our Values</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -667,7 +461,6 @@ description: 'Lead the development of cutting-edge AI solutions and machine lear
               </div>
             ))}
           </div>
-<<<<<<< HEAD
           <div className="mt-8">
             <Link
               to="/contact"
@@ -675,8 +468,6 @@ description: 'Lead the development of cutting-edge AI solutions and machine lear
               Get in Touch
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
         </div>
       </section>
 
@@ -703,7 +494,6 @@ description: 'Lead the development of cutting-edge AI solutions and machine lear
         </div>
       </section>
     </div>
-<<<<<<< HEAD
   )}
 export default CareersPage
   </Link>
@@ -715,12 +505,3 @@ export default CareersPage
   </section>
   </h1>
   </div>
-=======
-  );
-};
-
-export default CareersPage;
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
-=======
-import { Star, Users, Heart, Award, MapPin, Clock, Briefcase, CheckCircle, ArrowRight, Zap } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b853

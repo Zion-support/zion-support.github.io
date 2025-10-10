@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Share2, ArrowRight } from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b853
 const SocialMediaManagerPage: React.FC = () => {
 return (
     <React.Fragment></React>

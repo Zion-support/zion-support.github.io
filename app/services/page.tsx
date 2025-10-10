@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 'use client'import React, { useState } from 'react'
 import { Helmet } from 'react-helmet-async'import {
   Brain,
@@ -15,13 +13,6 @@ import { Helmet } from 'react-helmet-async'import {
   Search,
   Filter
 } from 'lucide-react';
-=======
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Brain, Zap, Shield, Globe, CheckCircle, ArrowRight } from 'lucide-react';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-b853
 const ServicesPage: React.FC = () => {
   const aiServices = [
     {
@@ -38,7 +29,6 @@ const ServicesPage: React.FC = () => {
     },
     {
       icon: Shield,
-<<<<<<< HEAD
       title: 'Managed IT Services',
       description: 'Comprehensive IT management with 24/7 support and proactive monitoring.',
       features: ['24/7 Support', 'Proactive Monitoring', 'Help Desk', 'Security Management', 'Backup Solutions'],
@@ -174,36 +164,6 @@ const ServicesPage: React.FC = () => {
       category: 'IT Services'
     },
     // Micro SAAS Services
-=======
-'use client';
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Code, 
-  BarChart, 
-  Users, 
-  Zap, 
-  Target, 
-  Globe, 
-  Database, 
-  Smartphone, 
-  Lock, 
-  TrendingUp, 
-  Settings, 
-  Calendar, 
-  CheckSquare, 
-  FileText,
-  Filter
-} from 'lucide-react';
-
-const ServicesPage: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-
-  const services = [
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
     {
       id: 1,
       title: 'AI Solutions',
@@ -259,10 +219,6 @@ const ServicesPage: React.FC = () => {
       features: ['Technology Strategy', 'Digital Transformation', 'Process Optimization', 'Training']
     }
   ];
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
   const categories = [
     { id: 'all', name: 'All Services' },
     { id: 'ai', name: 'AI Solutions' },
@@ -272,7 +228,6 @@ const ServicesPage: React.FC = () => {
     { id: 'analytics', name: 'Analytics' },
     { id: 'consulting', name: 'Consulting' }
   ];
-<<<<<<< HEAD
   const [selectedCategory, setSelectedCategory] = React.useState('All');
   const [searchTerm, setSearchTerm] = React.useState('');
   const [currentPage, setCurrentPage] = React.useState(1);
@@ -293,77 +248,23 @@ const ServicesPage: React.FC = () => {
   }, [selectedCategory, searchTerm]);
   return (
     <React.Fragment>
-=======
-
-  const filteredServices = selectedCategory === 'all' 
-    ? services 
-    : services.filter(service => service.category === selectedCategory);
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
       <Helmet>
         <title>Our Services | Zion Tech Group</title>
         <meta name="description" content="Explore our comprehensive range of AI and IT services. From AI solutions to cloud infrastructure, we provide cutting-edge technology services for your business." />
         <meta name="keywords" content="AI services, IT services, cloud solutions, cybersecurity, custom development, data analytics, IT consulting" />
       </Helmet>
-<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
-      title: 'AI Security & Compliance',
-      description: 'Ensure your AI systems are secure, compliant, and protected against emerging threats.',
-      features: ['Security auditing', 'Compliance frameworks', 'Risk assessment', 'Threat monitoring']
-    }
-  ];
-
-  const itServices = [
-    {
-      icon: Globe,
-      title: 'Cloud Infrastructure',
-      description: 'Scalable and secure cloud solutions for modern businesses.',
-      features: ['AWS, Azure, GCP', 'Migration services', 'Cost optimization', '24/7 monitoring']
-    },
-    {
-      icon: Shield,
-      title: 'Cybersecurity',
-      description: 'Comprehensive security solutions to protect your digital assets.',
-      features: ['Security assessment', 'Threat detection', 'Incident response', 'Security training']
-    },
-    {
-      icon: Zap,
-      title: 'DevOps & CI/CD',
-      description: 'Streamline your development and deployment processes.',
-      features: ['Automated pipelines', 'Infrastructure as code', 'Monitoring & logging', 'Performance optimization']
-    }
-  ];
-
-  return (
-    <React.Fragment>
-      <Helmet>
-        <title>Services - Zion Tech Group | AI and IT Solutions</title>
-        <meta name="description" content="Comprehensive AI and IT services including machine learning, cloud infrastructure, cybersecurity, and more." />
-        <meta name="keywords" content="AI services, IT services, machine learning, cloud computing, cybersecurity, Zion Tech Group" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
->>>>>>> cursor/fix-errors-and-merge-to-main-b853
         {/* Hero Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
-<<<<<<< HEAD
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Our Services
   </
-=======
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Our Services
-            </h1>
->>>>>>> cursor/fix-errors-and-merge-to-main-b853
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Comprehensive AI and IT solutions designed to transform your business and drive growth.
             </p>
           </div>
         </section>
-<<<<<<< HEAD
         {/* Search and Filter Section */}
         <section className="py-8 px-4">
           <div className="max-w-6xl mx-auto">
@@ -444,25 +345,6 @@ const ServicesPage: React.FC = () => {
                         {service.category}
                       </span>
                     </div>
-=======
-
-        {/* AI Services Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                AI Services
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Harness the power of artificial intelligence to transform your business operations.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {aiServices.map((service, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <service.icon className="w-8 h-8 text-white" />
->>>>>>> cursor/fix-errors-and-merge-to-main-b853
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors">
                     {service.title}
@@ -470,7 +352,6 @@ const ServicesPage: React.FC = () => {
                   <p className="text-gray-300 mb-6 leading-relaxed">
                     {service.description}
                   </p>
-<<<<<<< HEAD
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-white mb-3">Key Features:</h4>
                     <ul className="space-y-2">
@@ -535,19 +416,6 @@ const ServicesPage: React.FC = () => {
   </
               </div>
             )}
-=======
-                  <ul className="space-y-2">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-400">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-b853
           </div>
         </section>
 
@@ -589,86 +457,9 @@ const ServicesPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-=======
-
-      {/* Hero Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Our <span className="text-cyan-400">Services</span>
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Comprehensive AI and IT solutions designed to transform your business operations 
-            and drive unprecedented growth.
-          </p>
-        </div>
-      </section>
-
-      {/* Filter Section */}
-      <section className="py-8 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-wrap justify-center gap-4">
-            {categories.map((category) => (
-              <button
-                key={category.id}
-                onClick={() => setSelectedCategory(category.id)}
-                className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
-                  selectedCategory === category.id
-                    ? 'bg-cyan-500 text-white'
-                    : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
-                }`}
-              >
-                {category.name}
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Services Grid */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service) => (
-              <div key={service.id} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700 hover:border-cyan-500 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-2xl flex items-center justify-center mb-6">
-                  <service.icon className="w-8 h-8 text-slate-900" />
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
-                <p className="text-gray-300 mb-6">{service.description}</p>
-                <div className="mb-6">
-                  <h4 className="text-lg font-semibold text-cyan-400 mb-3">Key Features:</h4>
-                  <ul className="space-y-2">
-                    {service.features.map((feature, index) => (
-                      <li key={index} className="flex items-center text-gray-300">
-                        <CheckSquare className="w-4 h-4 text-cyan-400 mr-2" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-cyan-400 mb-4">{service.price}</div>
-                  <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300">
-                    Learn More
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-slate-800/50 backdrop-blur-sm rounded-3xl p-12 border border-slate-700">
-            <h2 className="text-4xl font-bold text-white mb-6">
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
               Ready to Get Started?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
@@ -681,33 +472,14 @@ const ServicesPage: React.FC = () => {
               </button>
               <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                 View Our Work
-=======
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Contact our experts to discuss how our services can help transform your business.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
-                Get Consultation
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </button>
-              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                View Pricing
->>>>>>> cursor/fix-errors-and-merge-to-main-b853
               </button>
             </div>
           </div>
-<<<<<<< HEAD
         </section>
       </div>
     </React.Fragment>
   );
 };
-<<<<<<< HEAD
 export default ServicesPage;
   </button>
   </button>
@@ -718,16 +490,3 @@ export default ServicesPage;
   </span>
   </h1>
   </div>
-=======
-        </div>
-      </section>
-    </div>
-  );
-};
-
-export default ServicesPage;
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
-=======
-
-export default ServicesPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-b853

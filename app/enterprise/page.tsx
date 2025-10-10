@@ -1,12 +1,9 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Building, Users, Shield, Globe, Brain, Cloud, Code, BarChart, Zap, ArrowRight, Star, Award, Target, Clock, Settings, Lock, Database, Smartphone, Eye, Sparkles } from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b853
 const EnterprisePage: React.FC = () => {
 const features = [
     {
@@ -124,7 +121,6 @@ return (
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Stats Section */}
       <section className="py-20 px-4"></section>;
         <div className="max-w-7xl mx-auto"></div>;
@@ -194,5 +190,3 @@ export default EnterprisePage
   </h2>
   </span>
   </SEOOptimizer>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b853

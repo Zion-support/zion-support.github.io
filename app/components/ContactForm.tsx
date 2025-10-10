@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b853
 interface FormData {
   name: string
   email: string
@@ -12,7 +9,6 @@ interface FormData {
   message: string
 }
 interface FormStatus {
-<<<<<<< HEAD
   type: 'idle' | 'loading' | 'success' | 'error';
   message: string,;}
 }
@@ -245,5 +241,3 @@ export default ContactForm
   </HTMLInputElement>
   </FormStatus>
   </FormData>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b853

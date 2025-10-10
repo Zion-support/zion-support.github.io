@@ -1,17 +1,13 @@
-<<<<<<< HEAD
 'use client';
 import React, { useState, useEffect } from 'react';
 import { CheckCircle, XCircle, AlertTriangle, Clock, RefreshCw, Globe, Server, Database, Cloud, Shield, Zap, Activity, TrendingUp, Users, Eye, BarChart } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b853
 export default function StatusPage() {
   const [lastUpdated, setLastUpdated] = useState(new Date());
   const [isRefreshing, setIsRefreshing] = useState(false);
   const refreshStatus = async () => {
-<<<<<<< HEAD
     setIsRefreshing(true);
     // Simulate API call;
     await new Promise(resolve => setTimeout(resolve, 1000));
@@ -320,5 +316,3 @@ return 'bg-red-500/20 text-red-400 border-red-500/50'
   </button>
   </button>
   </button>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b853

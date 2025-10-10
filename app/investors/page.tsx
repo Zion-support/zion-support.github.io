@@ -1,10 +1,7 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b853
 const PagePage: React.FC = () => {
 const features = [
     {
@@ -20,7 +17,6 @@ return (
         <title>Page | Zion Tech Group</title>
         <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." /></meta>
         <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
-<<<<<<< HEAD
       </meta>
       {/* Hero Section */}
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">;
@@ -60,6 +56,3 @@ return (
 };
 export default PagePage;
   </h2>
-=======
-      </Helmet>
->>>>>>> cursor/fix-errors-and-merge-to-main-b853

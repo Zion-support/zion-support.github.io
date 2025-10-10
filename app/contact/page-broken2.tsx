@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 'use client';
@@ -297,5 +296,3 @@ export default ContactPage
   </label>
   </span>
   </HTMLInputElement>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b853

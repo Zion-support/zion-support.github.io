@@ -1,10 +1,7 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b853
 const PagePage: React.FC = () => {
 const features = [
     {
@@ -66,7 +63,6 @@ return (
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8"></section>;
         <div className="max-w-7xl mx-auto"></div>;
@@ -95,5 +91,3 @@ export default PagePage
   </h2>
   </button>
   </span>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b853

@@ -1,5 +1,4 @@
 'use client';
-<<<<<<< HEAD
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
@@ -26,10 +25,9 @@ const preloadComponents = () => {
     }, 100)
   }
 };
-<<<<<<< HEAD
 // Loading skeleton component
 const ServiceCardSkeleton: React.FC = memo(() => (
-  <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card"></div>
+  <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
     <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
     <div className="h-4 bg-gray-200 rounded mb-2"></div>
     <div className="h-4 bg-gray-200 rounded w-5/6"></div>
@@ -62,7 +60,7 @@ const gtag = (window as { gtag: (command: string, action: string, parameters: Re
   }, []);
 
   return (
-    <React.Fragment></React>
+    <React.Fragment>
       <SEOOptimizer
         title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
@@ -102,19 +100,19 @@ const gtag = (window as { gtag: (command: string, action: string, parameters: Re
             addressCountry: 'US'
           }
         }}
-      /></SEOOptimizer>
+      />
       <PerformanceOptimizer
         enableImageOptimization={true}
         enableLazyLoading={true}
         enablePreloading={true}
         enableCodeSplitting={true}
-      /></PerformanceOptimizer>
+      />
       <AccessibilityEnhancer
         enableKeyboardNavigation={true}
         enableScreenReaderSupport={true}
         enableHighContrast={true}
         enableFocusManagement={true}
-      /></AccessibilityEnhancer>
+      />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain">
         {/* Navigation */}
         <Navigation />
@@ -237,7 +235,7 @@ const gtag = (window as { gtag: (command: string, action: string, parameters: Re
                     <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent neon-text">
                       Advanced AI & IT Solutions
                     </span>
-                    <br /></br>
+                    <br />
                     <span className="text-3xl md:text-5xl lg:text-6xl">
                       for the Future
                     </span>
@@ -364,27 +362,10 @@ const gtag = (window as { gtag: (command: string, action: string, parameters: Re
                 className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
                 aria-label="Get started with our AI and IT solutions"
               >
-=======
-const HomePage: React.FC = memo(() => {
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  useEffect(() => {
-    preloadComponents();
-    setIsLoaded(true);
-  }, []);
-
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Brain, Zap, Shield, Globe, CheckCircle, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
-
-const HomePage: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-b853
   const features = [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
-<<<<<<< HEAD
       description: 'Cutting-edge artificial intelligence solutions that transform your business operations.',
       benefits: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
     },
@@ -438,79 +419,24 @@ const HomePage: React.FC = () => {
       <main>
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
-=======
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
-    }
-  ];
-
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
-
-  return (
-    <React.Fragment>
-      <Helmet>
-        <title>Zion Tech Group - Advanced AI and IT Solutions</title>
-        <meta name="description" content="Transform your business with our advanced AI and IT solutions. Enterprise-grade security, real-time analytics, and cutting-edge technology." />
-        <meta name="keywords" content="AI solutions, IT services, business automation, enterprise software, Zion Tech Group" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
->>>>>>> cursor/fix-errors-and-merge-to-main-b853
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-<<<<<<< HEAD
               Transform Your Business with
               <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> AI & IT Solutions</span>
-=======
-              Zion Tech Group
-              <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                AI & IT Solutions
-              </span>
->>>>>>> cursor/fix-errors-and-merge-to-main-b853
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Transform your business with our advanced AI and IT solutions. 
               Powered by cutting-edge technology and industry expertise.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
               <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
-=======
-              <button className="bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
->>>>>>> cursor/fix-errors-and-merge-to-main-b853
                 Get Started
               </button>
               <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                 Learn More
               </button>
-<<<<<<< HEAD
             </div>
           </div>
         </section>
@@ -524,31 +450,20 @@ const HomePage: React.FC = () => {
                   <div className="text-gray-300">{stat.label}</div>
                 </div>
               ))}
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b853
             </div>
           </div>
         </section>
         {/* Features Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4 sm:px-6 lg:px-8" aria-labelledby="services-heading"></section>
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2 id="services-heading" className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Our Services
-=======
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Why Choose Zion Tech Group?
->>>>>>> cursor/fix-errors-and-merge-to-main-b853
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our solutions deliver unmatched performance, security, and scalability.
               </p>
             </div>
-<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" role="list">
               {features.map((feature, index) => (
                 <article key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group" role="listitem"></article>
@@ -566,22 +481,10 @@ const HomePage: React.FC = () => {
                     ))}
                   </ul>
                 </article>
-=======
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
-                </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-b853
               ))}
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8" aria-labelledby="cta-heading"></section>
           <div className="max-w-4xl mx-auto text-center"></div>
@@ -605,7 +508,6 @@ const HomePage: React.FC = () => {
                 >
                   Learn More
                 </button>
-<<<<<<< HEAD
                 <a href="tel:+13024640950" className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 text-center">
                   Call +1 302 464 0950
                 </a>
@@ -657,8 +559,6 @@ const HomePage: React.FC = () => {
                     </div>
                   ))}
                 </div>
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
               </div>
             </section>
             {/* Features Section */}
@@ -812,68 +712,8 @@ const HomePage: React.FC = () => {
       </main>
       <Footer />
     </div>
-<<<<<<< HEAD
     </React.Fragment>
   );
 };
-=======
-  );
-});
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
-=======
-
-        {/* Benefits Section */}
-        <section className="py-20 px-4 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Key Benefits
-              </h2>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="space-y-4">
-                {benefits.slice(0, 4).map((benefit, index) => (
-                  <div key={index} className="flex items-center">
-                    <CheckCircle className="w-6 h-6 text-green-400 mr-4 flex-shrink-0" />
-                    <span className="text-gray-300">{benefit}</span>
-                  </div>
-                ))}
-              </div>
-              <div className="space-y-4">
-                {benefits.slice(4).map((benefit, index) => (
-                  <div key={index + 4} className="flex items-center">
-                    <CheckCircle className="w-6 h-6 text-green-400 mr-4 flex-shrink-0" />
-                    <span className="text-gray-300">{benefit}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Contact our experts to discuss how our AI and IT solutions can help your business grow.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Contact Us
-              </button>
-              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                View Services
-              </button>
-            </div>
-          </div>
-        </section>
-      </div>
-    </React.Fragment>
-  );
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-b853
 
 export default HomePage;

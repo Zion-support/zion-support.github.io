@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import React, { memo, useMemo } from 'react';
@@ -136,6 +135,3 @@ return `${baseClasses} ${fullScreenClasses} ${className}`;
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';
 export default OptimizedLoadingSpinner;
   </OptimizedLoadingSpinnerProps>
-=======
-interface OptimizedLoadingSpinnerProps {
->>>>>>> cursor/fix-errors-and-merge-to-main-b853

@@ -1,9 +1,4 @@
 import { Cloud, Shield, Settings, Database, Smartphone, Globe, Zap, ArrowRight } from 'lucide-react';
-<<<<<<< HEAD
-=======
-import { Cloud, Shield, Settings, Database, Smartphone, Globe, Zap, ArrowRight, CheckCircle, Star, Users, Clock } from 'lucide-react';
-
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
 const ItServicesPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
@@ -107,7 +102,6 @@ const ItServicesPage: React.FC = () => {
         'Project management',
         'Training and support'
       ],
-<<<<<<< HEAD
       price: 'Starting at $200/hour',
       marketPrice: '$300-500/hour',
       benefits: ['Strategic guidance', 'Technology expertise', 'Cost optimization', 'Digital transformation']
@@ -267,20 +261,6 @@ const ItServicesPage: React.FC = () => {
     { icon: <Shield className="w-8 h-8 text-green-500" />, value: '99.9%', label: 'Security Uptime' },
     { icon: <Users className="w-8 h-8 text-purple-500" />, value: '200+', label: 'Clients Served' },
     { icon: <Zap className="w-8 h-8 text-orange-500" />, value: '50%', label: 'Cost Reduction' }
-=======
-      price: '$299/hour',
-      popular: false
-    }
-  ];
-
-  const categories = [
-    { id: 'all', name: 'All Services' },
-    { id: 'Cloud', name: 'Cloud' },
-    { id: 'Security', name: 'Security' },
-    { id: 'Database', name: 'Database' },
-    { id: 'Development', name: 'Development' },
-    { id: 'Consulting', name: 'Consulting' }
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
   ];
 
   const benefits = [
@@ -297,17 +277,12 @@ const ItServicesPage: React.FC = () => {
     : itServices.filter(service => service.category === selectedCategory);
 
   return (
-<<<<<<< HEAD
     <React.Fragment>
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
       <Helmet>
         <title>IT Services | Zion Tech Group</title>
         <meta name="description" content="Comprehensive IT services including cloud infrastructure, cybersecurity, database management, and custom development solutions." />
         <meta name="keywords" content="IT services, cloud computing, cybersecurity, database management, web development, mobile development" />
       </Helmet>
-<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
@@ -317,127 +292,6 @@ const ItServicesPage: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Complete IT solutions to modernize your infrastructure, enhance security, and drive business growth. 
               From cloud migration to cybersecurity, we deliver enterprise-grade technology services.
-=======
-
-      {/* Hero Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            IT <span className="text-cyan-400">Services</span>
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Comprehensive IT solutions designed to modernize your infrastructure, 
-            enhance security, and drive business growth.
-          </p>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Why Choose Our IT Services?</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="space-y-4">
-              {benefits.slice(0, 3).map((benefit, index) => (
-                <div key={index} className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                  <span className="text-gray-300">{benefit}</span>
-                </div>
-              ))}
-            </div>
-            <div className="space-y-4">
-              {benefits.slice(3).map((benefit, index) => (
-                <div key={index} className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                  <span className="text-gray-300">{benefit}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Our IT Services</h2>
-          
-          {/* Category Filter */}
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
-            {categories.map((category) => (
-              <button
-                key={category.id}
-                onClick={() => setSelectedCategory(category.id)}
-                className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
-                  selectedCategory === category.id
-                    ? 'bg-cyan-500 text-white'
-                    : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
-                }`}
-              >
-                {category.name}
-              </button>
-            ))}
-          </div>
-
-          {/* Services Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service) => (
-              <div key={service.id} className={`bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border transition-all duration-300 hover:scale-105 ${
-                service.popular
-                  ? 'border-cyan-500 shadow-2xl shadow-cyan-500/20'
-                  : 'border-slate-700 hover:border-slate-600'
-              }`}>
-                {service.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <div className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-sm font-bold px-4 py-2 rounded-full flex items-center">
-                      <Star className="w-4 h-4 mr-1" />
-                      Most Popular
-                    </div>
-                  </div>
-                )}
-
-                <div className="text-center mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <service.icon className="w-8 h-8 text-slate-900" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-white mb-2">{service.title}</h3>
-                  <p className="text-gray-300 mb-4">{service.description}</p>
-                  <div className="text-2xl font-bold text-cyan-400 mb-6">{service.price}</div>
-                </div>
-
-                <ul className="space-y-3 mb-8">
-                  {service.features.map((feature, index) => (
-                    <li key={index} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-
-                <button className={`w-full py-4 px-6 rounded-lg font-bold text-lg transition-all duration-300 ${
-                  service.popular
-                    ? 'bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white'
-                    : 'bg-slate-700 hover:bg-slate-600 text-white border border-slate-600'
-                }`}>
-                  Learn More
-                </button>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-slate-800/50 backdrop-blur-sm rounded-3xl p-12 border border-slate-700">
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Transform Your IT Infrastructure?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Let our expert team help you modernize your IT infrastructure and 
-              secure your business for the future.
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
@@ -448,7 +302,6 @@ const ItServicesPage: React.FC = () => {
               </button>
             </div>
           </div>
-<<<<<<< HEAD
         </section>
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -520,11 +373,6 @@ const ItServicesPage: React.FC = () => {
         </section>
       </div>
     </React.Fragment>
-=======
-        </div>
-      </section>
-    </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
   );
 };
 
