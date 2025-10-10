@@ -1,30 +1,19 @@
 import React from 'react';
 
-interface PageLoaderProps {
-  message?: string;
-}
-
-export const PageLoader: React.FC<PageLoaderProps> = ({ message = 'Loading...' }) => {
-  return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50">
-      <div className="text-center">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
-        <p className="text-gray-600">{message}</p>
-      </div>
+export const PageLoader: React.FC = () => (
+  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+    <div className="text-center">
+      <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-400 mx-auto mb-4"></div>
+      <p className="text-cyan-400 text-lg">Loading...</p>
     </div>
-  );
-};
+  </div>
+);
 
-export const ComponentLoader: React.FC = () => {
-  return (
-    <div className="flex items-center justify-center p-4">
-      <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-    </div>
-  );
-};
-
-export const SkeletonLoader: React.FC<{ className?: string }> = ({ className = '' }) => {
-  return (
-    <div className={`animate-pulse bg-gray-200 rounded ${className}`}></div>
-  );
-};
+export const ServiceCardSkeleton: React.FC = () => (
+  <div className="bg-gray-800 rounded-xl p-8 animate-pulse">
+    <div className="h-8 bg-gray-700 rounded mb-4"></div>
+    <div className="h-4 bg-gray-700 rounded mb-2"></div>
+    <div className="h-4 bg-gray-700 rounded mb-2"></div>
+    <div className="h-4 bg-gray-700 rounded w-3/4"></div>
+  </div>
+);

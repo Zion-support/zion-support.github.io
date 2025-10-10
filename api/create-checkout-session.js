@@ -1,8 +1,6 @@
-import { withErrorLogging } from './withErrorLogging.cjs';
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
-const PROD_DOMAIN = 'https://ziontechgroup.com';
-
-async function handler(req, res) {
+export default async function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
@@ -10,43 +8,37 @@ async function handler(req, res) {
     return;
   }
 
-  const { productId, userId } = req.body || {};
-
-  if (!productId) {
-    res.statusCode = 400;
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Product ID is required' }));
-    return;
-  }
-
   try {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    // Basic checkout session creation logic;
-=======
-    // Basic checkout session creation logic
->>>>>>> cursor/fix-errors-and-merge-to-main-14e4
-    const sessionData = {
-      productId,
-      userId,
-      domain: PROD_DOMAIN,
-      timestamp: new Date().toISOString(),
-=======
-    const sessionData = {
-      productId,
-      userId,
-      domain: PROD_DOMAIN
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-    };
+    const { priceId, quantity = 1 } = req.body;
+
+    if (!priceId) {
+      res.statusCode = 400;
+      res.setHeader('Content-Type', 'application/json');
+      res.end(JSON.stringify({ error: 'Price ID is required' }));
+      return;
+    }
+
+    const session = await stripe.checkout.sessions.create({
+      payment_method_types: ['card'],
+      line_items: [
+        {
+          price: priceId,
+          quantity: quantity,
+        },
+      ],
+      mode: 'payment',
+      success_url: `${req.headers.origin}/success?session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `${req.headers.origin}/cancel`,
+    });
 
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ session: sessionData }));
-  } catch {
+    res.end(JSON.stringify({ sessionId: session.id }));
+
+  } catch (error) {
+    console.error('Stripe checkout error:', error);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Internal server error' }));
   }
 }
-
-export default withErrorLogging(handler);
