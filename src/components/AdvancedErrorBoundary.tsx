@@ -3,8 +3,7 @@ import React, { Component, ErrorInfo, ReactNode } from 'react';
 // Simple logger for error reporting
 const logger = {
   error: (message: string, data?: any) => {
-    console.error(message, data);
-  }
+    }
 };
 interface ErrorBoundaryState {
   hasError: boolean;
@@ -61,12 +60,7 @@ class AdvancedErrorBoundary extends Component<
     });
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error Boundary caught an error', { 
-        context: 'ErrorBoundary', 
-        error: error.message,
-        errorInfo 
-      });
-    }
+      }
     // Call custom error handler
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
@@ -128,11 +122,7 @@ class AdvancedErrorBoundary extends Component<
         body: JSON.stringify(errorReport)
       });
     } catch (reportError) {
-      console.error('Failed to send error report', { 
-        context: 'ErrorReporting',
-        error: reportError 
-      });
-    }
+      }
   };
   private handleRetry = () => {
     if (this.retryCount < this.maxRetries) {

@@ -134,13 +134,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       (resource: PerformanceResourceTiming) => resource.duration > 1000
     );
     if (slowResources.length > 0) {
-      // eslint-disable-next-line no-console
-      console.log('Slow resources:', slowResources.map(r => ({
-          name: r.name,
-          duration: r.duration,
-          size: r.transferSize
-        }))
-      );
+      // Slow resources detected
     }
   }, []);
   const measureCoreWebVitals = useCallback(() => {

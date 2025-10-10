@@ -80,7 +80,6 @@ const DemoPage: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission
-    console.log('Demo request submitted:', formData);
     alert('Thank you! We\'ll contact you soon to schedule your demo.');
   };
 

@@ -1,112 +1,75 @@
-#!/usr/bin/env node
-
-/**
- * Script to remove console.log statements in production builds
- */
-
 import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
-import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-const CONSOLE_PATTERNS = [
-  /console\.(log|debug|info)\([^)]*\);?/g,
-  /console\.(log|debug|info)\([^)]*\)\s*;?/g,
-  /console\.(log|debug|info)\([^)]*\)\s*\/\/.*$/gm,
-];
-
-const PRESERVE_PATTERNS = [
-  /console\.(warn|error)/g,
-  /console\.(log|debug|info).*\/\*.*preserve.*\*\//g,
-  /console\.(log|debug|info).*\/\/.*preserve/g,
-];
-
-function shouldPreserveConsoleStatement(match, content, index) {
-  const beforeMatch = content.substring(Math.max(0, index - 50), index);
-  const afterMatch = content.substring(index + match.length, index + match.length + 50);
-  const fullContext = beforeMatch + match + afterMatch;
-  
-  return PRESERVE_PATTERNS.some(pattern => pattern.test(fullContext));
-}
-
-function removeConsoleLogs(content) {
-  let modifiedContent = content;
-  let totalRemoved = 0;
-  
-  CONSOLE_PATTERNS.forEach(pattern => {
-    const matches = [...content.matchAll(pattern)];
-    
-    // Process matches in reverse order to maintain indices
-    matches.reverse().forEach(match => {
-      if (!shouldPreserveConsoleStatement(match[0], content, match.index)) {
-        modifiedContent = modifiedContent.substring(0, match.index) + 
-                         modifiedContent.substring(match.index + match[0].length);
-        totalRemoved++;
-      }
-    });
-  });
-  
-  return { content: modifiedContent, removed: totalRemoved };
-}
-
-function processFile(filePath) {
+// Function to remove console logs from a file
+function removeConsoleLogs(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const result = removeConsoleLogs(content);
+    let content = fs.readFileSync(filePath, 'utf8');
     
-    if (result.removed > 0) {
-      fs.writeFileSync(filePath, result.content);
-      console.log(`✅ Removed ${result.removed} console statements from ${filePath}`);
+    // Remove console.log, console.warn, console.error statements
+    const consoleRegex = /console\.(log|warn|error|info|debug)\([^)]*\);?\s*/g;
+    const originalContent = content;
+    content = content.replace(consoleRegex, '');
+    
+    // Remove console statements that span multiple lines
+    const multiLineConsoleRegex = /console\.(log|warn|error|info|debug)\(\s*[^)]*\s*\);?\s*/gs;
+    content = content.replace(multiLineConsoleRegex, '');
+    
+    // Only write if content changed
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`✅ Removed console logs from: ${filePath}`);
+      return true;
     }
     
-    return result.removed;
+    return false;
   } catch (error) {
     console.error(`❌ Error processing ${filePath}:`, error.message);
-    return 0;
+    return false;
   }
 }
 
-function main() {
-  const isProduction = process.env.NODE_ENV === 'production';
+// Function to process all TypeScript and JavaScript files
+async function processFiles() {
+  const patterns = [
+    'src/**/*.ts',
+    'src/**/*.tsx',
+    'app/**/*.ts',
+    'app/**/*.tsx'
+  ];
   
-  if (!isProduction) {
-    console.log('ℹ️  Skipping console log removal (not in production mode)');
-    return;
+  let totalFiles = 0;
+  let modifiedFiles = 0;
+  
+  for (const pattern of patterns) {
+    const files = await glob(pattern, { 
+      ignore: [
+        '**/node_modules/**',
+        '**/dist/**',
+        '**/build/**',
+        '**/*.d.ts'
+      ]
+    });
+    
+    for (const file of files) {
+      totalFiles++;
+      if (removeConsoleLogs(file)) {
+        modifiedFiles++;
+      }
+    }
   }
-  
-  console.log('🧹 Removing console.log statements for production...');
-  
-  const srcDir = path.join(__dirname, '..', 'src');
-  const files = glob.sync('**/*.{ts,tsx,js,jsx}', { cwd: srcDir });
-  
-  let totalRemoved = 0;
-  let processedFiles = 0;
-  
-  files.forEach(file => {
-    const filePath = path.join(srcDir, file);
-    const removed = processFile(filePath);
-    totalRemoved += removed;
-    if (removed > 0) processedFiles++;
-  });
   
   console.log(`\n📊 Summary:`);
-  console.log(`   Files processed: ${files.length}`);
-  console.log(`   Files modified: ${processedFiles}`);
-  console.log(`   Console statements removed: ${totalRemoved}`);
-  
-  if (totalRemoved > 0) {
-    console.log('\n✨ Console log removal completed successfully!');
-  } else {
-    console.log('\n✨ No console statements found to remove.');
-  }
+  console.log(`   Total files processed: ${totalFiles}`);
+  console.log(`   Files modified: ${modifiedFiles}`);
+  console.log(`   Console logs removed: ${modifiedFiles > 0 ? 'Yes' : 'No'}`);
 }
 
-// Run main function if this is the main module
+// Run the script
 if (import.meta.url === `file://${process.argv[1]}`) {
-  main();
+  console.log('🧹 Removing console logs from production build...\n');
+  processFiles();
 }
 
-export { removeConsoleLogs, processFile };
+export { removeConsoleLogs, processFiles };

@@ -37,15 +37,13 @@ class GlobalErrorBoundary extends Component<Props, State> {
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Global Error Boundary caught an error:', error, errorInfo);
-    }
+      }
 
     // Log error to external service in production
     if (process.env.NODE_ENV === 'production') {
       // Here you would typically send the error to a logging service
       // like Sentry, LogRocket, or similar
-      console.error('Production error:', error, errorInfo);
-    }
+      }
   }
 
   handleRetry = () => {

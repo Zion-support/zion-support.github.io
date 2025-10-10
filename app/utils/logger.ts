@@ -113,19 +113,14 @@ class Logger {
 
     switch (level) {
       case LogLevel.DEBUG:
-        console.debug(logMessage)
         break
       case LogLevel.INFO:
-        console.info(logMessage)
         break
       case LogLevel.WARN:
-        console.warn(logMessage)
         break
       case LogLevel.ERROR:
-        console.error(logMessage)
         break
       case LogLevel.FATAL:
-        console.error(`FATAL: ${logMessage}`)
         break
     }
   }
