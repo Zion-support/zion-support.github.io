@@ -1501,11 +1501,7 @@ description: 'Custom API development, third-party integrations, and microservice
         enableHighContrast={true}
         enableFocusManagement={true}
       />
-<<<<<<< HEAD
-                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced neural-network-bg-enhanced matrix-rain-enhanced futuristic-bg-enhanced">
-=======
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced neural-network-bg matrix-bg quantum-particles neural-connections">
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a8d8
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced neural-network-bg-enhanced matrix-rain-enhanced futuristic-bg-enhanced">
         {/* Navigation */}
         <Navigation />
         {/* Skip to main content for accessibility */}
@@ -1530,7 +1526,6 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
             }`}
             aria-labelledby="hero-heading"
           >
-<<<<<<< HEAD
             <div className="max-w-6xl mx-auto">
               <h1 
                 id="hero-heading" 
@@ -1829,16 +1824,10 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
                   Get Free Consultation
                 </a>
               </div>
-=======
-            Zion Tech Group
-          </h1>
-          <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow neon-text" role="doc-subtitle">
-            Advanced AI and IT Solutions
-          </p>
-          <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
-            Transform your business with our cutting-edge technology and achieve unprecedented growth.
-          </p>
+            </div>
+            <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+              Transform your business with our cutting-edge technology and achieve unprecedented growth.
+            </p>
           
           {/* Key Benefits */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-6xl mx-auto mb-12">
@@ -2344,9 +2333,9 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
                   </a>
                 </div>
               </article>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a8d8
             </div>
-          </section>
+          </div>
+        </section>
         </main>
         
         <Footer />

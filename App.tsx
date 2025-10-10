@@ -46,6 +46,15 @@ const CommunityPage = React.lazy(() => import('./app/community/page'));
 const ApiPage = React.lazy(() => import('./app/api/page'));
 const TutorialsPage = React.lazy(() => import('./app/tutorials/page'));
 const SitemapPage = React.lazy(() => import('./app/sitemap/page'));
+const TeamPage = React.lazy(() => import('./app/team/page'));
+const StatusPage = React.lazy(() => import('./app/status/page'));
+const ApiDocsPage = React.lazy(() => import('./app/api-docs/page'));
+const CompliancePage = React.lazy(() => import('./app/compliance/page'));
+const AccessibilityPage = React.lazy(() => import('./app/accessibility/page'));
+const EnterprisePage = React.lazy(() => import('./app/enterprise/page'));
+const DigitalTransformationPage = React.lazy(() => import('./app/digital-transformation/page'));
+const BusinessIntelligencePage = React.lazy(() => import('./app/business-intelligence/page'));
+const EdgeComputingPage = React.lazy(() => import('./app/edge-computing/page'));
 // Performance monitoring hook
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   usePerformanceMonitor();
@@ -98,6 +107,15 @@ const App: React.FC = () => {
                             <Route path="/api" element={<ApiPage />} />
                             <Route path="/tutorials" element={<TutorialsPage />} />
                             <Route path="/sitemap" element={<SitemapPage />} />
+                            <Route path="/team" element={<TeamPage />} />
+                            <Route path="/status" element={<StatusPage />} />
+                            <Route path="/api-docs" element={<ApiDocsPage />} />
+                            <Route path="/compliance" element={<CompliancePage />} />
+                            <Route path="/accessibility" element={<AccessibilityPage />} />
+                            <Route path="/enterprise" element={<EnterprisePage />} />
+                            <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
+                            <Route path="/business-intelligence" element={<BusinessIntelligencePage />} />
+                            <Route path="/edge-computing" element={<EdgeComputingPage />} />
                           </Routes>
                         </Suspense>
                       </main>
