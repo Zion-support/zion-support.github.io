@@ -1,291 +1,353 @@
 'use client';
-
 import React from 'react';
+import { Shield, Lock, Eye, Database, UserCheck, FileText, AlertTriangle } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { Shield, Download, Eye, Trash2, Edit, Lock, Users, FileText, CheckCircle } from 'lucide-react';
 
 const GDPRPage: React.FC = () => {
+  const lastUpdated = 'January 1, 2024';
+
   const rights = [
     {
+      title: 'Right of Access',
       icon: Eye,
-      title: 'Right to Access',
-      description: 'You have the right to request access to your personal data and receive a copy of the data we hold about you.'
+      description: 'You have the right to obtain confirmation as to whether or not personal data concerning you is being processed.',
+      details: [
+        'Request a copy of your personal data',
+        'Know the purposes of processing',
+        'Understand data retention periods',
+        'Identify data sources and recipients'
+      ]
     },
     {
-      icon: Edit,
       title: 'Right to Rectification',
-      description: 'You have the right to request correction of inaccurate or incomplete personal data.'
+      icon: FileText,
+      description: 'You have the right to have inaccurate personal data corrected and incomplete data completed.',
+      details: [
+        'Correct factual errors in your data',
+        'Update outdated information',
+        'Complete missing data fields',
+        'Request verification of corrections'
+      ]
     },
     {
-      icon: Trash2,
       title: 'Right to Erasure',
-      description: 'You have the right to request deletion of your personal data under certain circumstances.'
+      icon: AlertTriangle,
+      description: 'You have the right to request the deletion of your personal data under certain circumstances.',
+      details: [
+        'Data no longer necessary for original purposes',
+        'Withdrawal of consent for processing',
+        'Unlawful processing of personal data',
+        'Objection to processing for legitimate interests'
+      ]
     },
     {
-      icon: Lock,
       title: 'Right to Restrict Processing',
-      description: 'You have the right to request restriction of processing of your personal data.'
+      icon: Lock,
+      description: 'You have the right to limit how we process your personal data in certain situations.',
+      details: [
+        'Contest accuracy of personal data',
+        'Unlawful processing but prefer restriction to erasure',
+        'We no longer need data but you require it for legal claims',
+        'Objection to processing pending verification'
+      ]
     },
     {
-      icon: Download,
       title: 'Right to Data Portability',
-      description: 'You have the right to receive your personal data in a structured, machine-readable format.'
+      icon: Database,
+      description: 'You have the right to receive your personal data in a structured, commonly used format.',
+      details: [
+        'Receive data in machine-readable format',
+        'Transfer data to another controller',
+        'Direct transmission where technically feasible',
+        'Data processed by automated means based on consent'
+      ]
     },
     {
-      icon: Users,
       title: 'Right to Object',
-      description: 'You have the right to object to processing of your personal data for direct marketing purposes.'
+      icon: UserCheck,
+      description: 'You have the right to object to processing of your personal data for specific purposes.',
+      details: [
+        'Object to processing for direct marketing',
+        'Object to processing for legitimate interests',
+        'Object to processing for research purposes',
+        'Object to automated decision-making'
+      ]
     }
   ];
 
-  const dataProcessingPurposes = [
+  const legalBases = [
     {
-      purpose: 'Service Provision',
-      legalBasis: 'Contract Performance',
-      description: 'To provide our AI and IT services as agreed in our contract with you.'
+      title: 'Consent',
+      description: 'You have given clear consent for us to process your personal data for specific purposes.',
+      examples: ['Newsletter subscriptions', 'Marketing communications', 'Cookie preferences', 'Optional data collection']
     },
     {
-      purpose: 'Communication',
-      legalBasis: 'Legitimate Interest',
-      description: 'To communicate with you about our services, updates, and support.'
+      title: 'Contract Performance',
+      description: 'Processing is necessary for the performance of a contract with you.',
+      examples: ['Service delivery', 'Account management', 'Billing and payments', 'Customer support']
     },
     {
-      purpose: 'Marketing',
-      legalBasis: 'Consent',
-      description: 'To send you marketing communications about our products and services (with your consent).'
+      title: 'Legal Obligation',
+      description: 'Processing is necessary for compliance with a legal obligation.',
+      examples: ['Tax reporting', 'Regulatory compliance', 'Audit requirements', 'Legal proceedings']
     },
     {
-      purpose: 'Legal Compliance',
-      legalBasis: 'Legal Obligation',
-      description: 'To comply with applicable laws and regulations.'
-    },
-    {
-      purpose: 'Security',
-      legalBasis: 'Legitimate Interest',
-      description: 'To protect our systems and prevent fraud or security breaches.'
-    }
-  ];
-
-  const dataRetentionPeriods = [
-    {
-      dataType: 'Account Information',
-      retentionPeriod: '3 years after account closure',
-      reason: 'Legal and business requirements'
-    },
-    {
-      dataType: 'Communication Records',
-      retentionPeriod: '7 years',
-      reason: 'Legal compliance and dispute resolution'
-    },
-    {
-      dataType: 'Marketing Data',
-      retentionPeriod: 'Until consent withdrawn',
-      reason: 'Marketing purposes with consent'
-    },
-    {
-      dataType: 'Technical Logs',
-      retentionPeriod: '1 year',
-      reason: 'Security and system monitoring'
+      title: 'Legitimate Interests',
+      description: 'Processing is necessary for our legitimate interests or those of a third party.',
+      examples: ['Website analytics', 'Security monitoring', 'Business operations', 'Service improvement']
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced neural-network-bg particle-system">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       
-      <main className="relative z-10 pt-20">
-        {/* Hero Section */}
-        <section className="py-20 px-4 text-center">
-          <div className="max-w-6xl mx-auto">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text cyber-text-enhanced floating">
-              GDPR Compliance
-            </h1>
-            <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow">
-              Your Data Protection Rights
+      <main className="container mx-auto px-4 py-16 pt-24">
+        {/* Header */}
+        <section className="text-center mb-16">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">
+            GDPR Compliance
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            We are committed to protecting your privacy and ensuring compliance with the General Data Protection Regulation (GDPR).
+          </p>
+          <div className="text-sm text-gray-400">
+            Last updated: {lastUpdated}
+          </div>
+        </section>
+
+        {/* Introduction */}
+        <section className="mb-16">
+          <div className="cyber-card p-8">
+            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Our GDPR Commitment</h2>
+            <p className="text-gray-300 mb-4 leading-relaxed">
+              Zion Tech Group is fully committed to compliance with the General Data Protection Regulation (GDPR) and other applicable data protection laws. We have implemented comprehensive measures to ensure the protection of your personal data and respect for your privacy rights.
             </p>
-            <p className="text-base sm:text-lg text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">
-              We are committed to protecting your personal data in accordance with the General Data Protection Regulation (GDPR). 
-              This page explains your rights and how we handle your personal information.
+            <p className="text-gray-300 leading-relaxed">
+              This page outlines our GDPR compliance measures, your rights under GDPR, and how you can exercise those rights.
             </p>
           </div>
         </section>
 
         {/* Your Rights */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
-              Your Data Protection Rights
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {rights.map((right, index) => (
-                <div key={index} className="cyber-card-enhanced p-6 data-stream">
-                  <div className="flex items-center mb-4">
-                    <right.icon className="w-8 h-8 text-cyan-400 mr-3" />
-                    <h3 className="text-xl font-bold text-white">{right.title}</h3>
-                  </div>
-                  <p className="text-gray-300 leading-relaxed">{right.description}</p>
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Your Rights Under GDPR</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {rights.map((right, index) => (
+              <div key={index} className="cyber-card p-6">
+                <div className="flex items-center mb-4">
+                  <right.icon className="w-8 h-8 text-cyan-400 mr-3" />
+                  <h3 className="text-xl font-bold text-white">{right.title}</h3>
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Data Processing */}
-        <section className="py-16 px-4 bg-slate-800/30">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
-              How We Process Your Data
-            </h2>
-            <div className="space-y-6">
-              {dataProcessingPurposes.map((item, index) => (
-                <div key={index} className="cyber-card hologram-card p-6">
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <div>
-                      <h3 className="text-lg font-bold text-white mb-2">{item.purpose}</h3>
-                      <p className="text-sm text-cyan-400 font-semibold">{item.legalBasis}</p>
-                    </div>
-                    <div className="md:col-span-2">
-                      <p className="text-gray-300">{item.description}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Data Retention */}
-        <section className="py-16 px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
-              Data Retention Periods
-            </h2>
-            <div className="cyber-card-enhanced p-8">
-              <div className="overflow-x-auto">
-                <table className="w-full">
-                  <thead>
-                    <tr className="border-b border-gray-600">
-                      <th className="text-left text-white font-semibold py-3">Data Type</th>
-                      <th className="text-left text-white font-semibold py-3">Retention Period</th>
-                      <th className="text-left text-white font-semibold py-3">Reason</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {dataRetentionPeriods.map((item, index) => (
-                      <tr key={index} className="border-b border-gray-700">
-                        <td className="text-gray-300 py-3">{item.dataType}</td>
-                        <td className="text-cyan-400 py-3">{item.retentionPeriod}</td>
-                        <td className="text-gray-300 py-3">{item.reason}</td>
-                      </tr>
+                <p className="text-gray-300 mb-4">{right.description}</p>
+                <div>
+                  <h4 className="text-sm font-semibold text-cyan-400 mb-2">What this means:</h4>
+                  <ul className="space-y-1">
+                    {right.details.map((detail, detailIndex) => (
+                      <li key={detailIndex} className="flex items-start text-sm text-gray-300">
+                        <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                        {detail}
+                      </li>
                     ))}
-                  </tbody>
-                </table>
+                  </ul>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Legal Bases */}
+        <section className="mb-16">
+          <div className="cyber-card p-8">
+            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Legal Bases for Processing</h2>
+            <p className="text-gray-300 mb-6">
+              We process your personal data based on one or more of the following legal bases under GDPR:
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {legalBases.map((basis, index) => (
+                <div key={index} className="bg-slate-800/50 rounded-lg p-6">
+                  <h3 className="text-lg font-semibold text-cyan-400 mb-3">{basis.title}</h3>
+                  <p className="text-gray-300 mb-4 text-sm">{basis.description}</p>
+                  <div>
+                    <h4 className="text-sm font-semibold text-cyan-400 mb-2">Examples:</h4>
+                    <ul className="space-y-1">
+                      {basis.examples.map((example, exampleIndex) => (
+                        <li key={exampleIndex} className="flex items-start text-sm text-gray-300">
+                          <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                          {example}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Data Protection Measures */}
+        <section className="mb-16">
+          <div className="cyber-card p-8">
+            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Data Protection Measures</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div>
+                <h3 className="text-xl font-semibold text-cyan-400 mb-4">Technical Safeguards</h3>
+                <ul className="space-y-2 text-gray-300">
+                  <li className="flex items-start">
+                    <Shield className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>End-to-end encryption for all data transmission</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Shield className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Secure data centers with physical and digital security</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Shield className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Regular security audits and penetration testing</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Shield className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Automated backup and disaster recovery systems</span>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-cyan-400 mb-4">Organizational Safeguards</h3>
+                <ul className="space-y-2 text-gray-300">
+                  <li className="flex items-start">
+                    <UserCheck className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Data Protection Officer (DPO) appointed</span>
+                  </li>
+                  <li className="flex items-start">
+                    <UserCheck className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Staff training on data protection principles</span>
+                  </li>
+                  <li className="flex items-start">
+                    <UserCheck className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Data processing impact assessments</span>
+                  </li>
+                  <li className="flex items-start">
+                    <UserCheck className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Regular compliance monitoring and reviews</span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Data Security */}
-        <section className="py-16 px-4 bg-slate-800/30">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
-              Data Security Measures
-            </h2>
+        {/* How to Exercise Your Rights */}
+        <section className="mb-16">
+          <div className="cyber-card p-8">
+            <h2 className="text-2xl font-bold text-white mb-6 neon-text">How to Exercise Your Rights</h2>
+            <p className="text-gray-300 mb-6">
+              To exercise any of your GDPR rights, please contact us using the information below. We will respond to your request within 30 days.
+            </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="cyber-card-enhanced p-6">
-                <h3 className="text-xl font-bold text-white mb-4 flex items-center">
-                  <Shield className="w-6 h-6 text-cyan-400 mr-2" />
-                  Technical Safeguards
-                </h3>
+              <div>
+                <h3 className="text-lg font-semibold text-cyan-400 mb-4">Making a Request</h3>
                 <ul className="space-y-2 text-gray-300">
-                  <li>• End-to-end encryption for all data transmission</li>
-                  <li>• AES-256 encryption for data at rest</li>
-                  <li>• Multi-factor authentication for all access points</li>
-                  <li>• Regular security audits and penetration testing</li>
-                  <li>• Zero-trust network architecture</li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Email us at privacy@ziontechgroup.com</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Include your full name and email address</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Specify which right you want to exercise</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Provide any additional information we may need</span>
+                  </li>
                 </ul>
               </div>
-              <div className="cyber-card-enhanced p-6">
-                <h3 className="text-xl font-bold text-white mb-4 flex items-center">
-                  <Lock className="w-6 h-6 text-cyan-400 mr-2" />
-                  Organizational Measures
-                </h3>
+              <div>
+                <h3 className="text-lg font-semibold text-cyan-400 mb-4">Identity Verification</h3>
+                <p className="text-gray-300 mb-4">
+                  To protect your privacy, we may need to verify your identity before processing your request.
+                </p>
                 <ul className="space-y-2 text-gray-300">
-                  <li>• Data protection training for all staff</li>
-                  <li>• Regular privacy impact assessments</li>
-                  <li>• Incident response procedures</li>
-                  <li>• Data minimization principles</li>
-                  <li>• Regular compliance audits</li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Government-issued photo ID</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Proof of address (utility bill, bank statement)</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Account verification questions</span>
+                  </li>
                 </ul>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Data Breach Notification */}
+        <section className="mb-16">
+          <div className="cyber-card p-8">
+            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Data Breach Notification</h2>
+            <p className="text-gray-300 mb-4">
+              In the unlikely event of a data breach that poses a risk to your rights and freedoms, we will:
+            </p>
+            <ul className="space-y-2 text-gray-300">
+              <li className="flex items-start">
+                <AlertTriangle className="w-5 h-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0" />
+                <span>Notify the relevant supervisory authority within 72 hours</span>
+              </li>
+              <li className="flex items-start">
+                <AlertTriangle className="w-5 h-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0" />
+                <span>Inform affected individuals without undue delay</span>
+              </li>
+              <li className="flex items-start">
+                <AlertTriangle className="w-5 h-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0" />
+                <span>Provide clear information about the breach and its consequences</span>
+              </li>
+              <li className="flex items-start">
+                <AlertTriangle className="w-5 h-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0" />
+                <span>Recommend measures to mitigate potential adverse effects</span>
+              </li>
+            </ul>
           </div>
         </section>
 
         {/* Contact Information */}
-        <section className="py-16 px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
-              Contact Our Data Protection Team
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="cyber-card-enhanced p-6">
-                <h3 className="text-xl font-bold text-white mb-4">Data Protection Officer</h3>
-                <p className="text-gray-300 mb-4">
-                  For any questions about your personal data or to exercise your rights, 
-                  please contact our Data Protection Officer.
-                </p>
-                <div className="space-y-2 text-gray-300">
-                  <p><strong>Email:</strong> kleber@ziontechgroup.com</p>
-                  <p><strong>Phone:</strong> +1 (302) 464-0950</p>
-                  <p><strong>Address:</strong> 364 E Main St STE 1008, Middletown, DE 19709</p>
-                </div>
-              </div>
-              <div className="cyber-card-enhanced p-6">
-                <h3 className="text-xl font-bold text-white mb-4">Exercise Your Rights</h3>
-                <p className="text-gray-300 mb-4">
-                  You can exercise any of your data protection rights by contacting us. 
-                  We will respond to your request within 30 days.
-                </p>
-                <div className="space-y-2 text-gray-300">
-                  <p>• <strong>Access:</strong> Request a copy of your data</p>
-                  <p>• <strong>Rectification:</strong> Correct inaccurate data</p>
-                  <p>• <strong>Erasure:</strong> Delete your data</p>
-                  <p>• <strong>Portability:</strong> Export your data</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4 bg-slate-800/30">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
-              Questions About Your Data?
-            </h2>
-            <p className="text-lg text-gray-300 mb-8">
-              We're here to help you understand your data protection rights and how we handle your information.
+        <section className="mb-16">
+          <div className="cyber-card p-8">
+            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Contact Our Data Protection Officer</h2>
+            <p className="text-gray-300 mb-6">
+              For any questions about our GDPR compliance or to exercise your rights, please contact our Data Protection Officer:
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="mailto:kleber@ziontechgroup.com"
-                className="cyber-button px-8 py-4"
-              >
-                Contact DPO
-              </a>
-              <a
-                href="/privacy"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-              >
-                Privacy Policy
-              </a>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <h3 className="text-lg font-semibold text-cyan-400 mb-3">Zion Tech Group</h3>
+                <div className="space-y-2 text-gray-300">
+                  <p>Data Protection Officer</p>
+                  <p>364 E Main St STE 1008</p>
+                  <p>Middletown, DE 19709</p>
+                  <p>United States</p>
+                </div>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-cyan-400 mb-3">Contact Information</h3>
+                <div className="space-y-2 text-gray-300">
+                  <p>Email: <a href="mailto:dpo@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">dpo@ziontechgroup.com</a></p>
+                  <p>Phone: <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300">+1 302 464 0950</a></p>
+                  <p>Response Time: Within 30 days</p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
       </main>
-      
+
       <Footer />
     </div>
   );
