@@ -712,6 +712,7 @@ const Navigation: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4ed2
   const toggleServices = () => {
@@ -719,6 +720,12 @@ const Navigation: React.FC = () => {
   };
 =======
 >>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-453e
+=======
+  const toggleServices = () => {
+    setServicesOpen(!servicesOpen);
+  };
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f294
   return (
 <<<<<<< HEAD
 <<<<<<< HEAD
