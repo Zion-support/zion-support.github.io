@@ -51,7 +51,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
       page_title: document.title,
       page_location: window.location.href,
       send_page_view: true
-
+    });
   };
 
   const initializePerformanceMonitoring = () => {
@@ -79,7 +79,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
         if (navigation) {
           trackEvent('performance', 'page_load_time', Math.round(navigation.loadEventEnd - navigation.fetchStart));
         }
-
+      });
     }
   };
 
@@ -92,14 +92,16 @@ const Analytics: React.FC<AnalyticsProps> = ({
         lineno: event.lineno,
         colno: event.colno,
         error: event.error?.stack
-
+      });
+    });
 
     // Track unhandled promise rejections
     window.addEventListener('unhandledrejection', (event) => {
       trackEvent('error', 'unhandled_promise_rejection', {
         reason: event.reason,
         promise: event.promise
-
+      });
+    });
 
     // Track resource loading errors
     window.addEventListener('error', (event) => {
@@ -108,7 +110,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
           type: (event.target as any).tagName,
           src: (event.target as any).src || (event.target as any).href,
           error: event.type
-
+        });
       }
     }, true);
   };
@@ -162,8 +164,8 @@ const Analytics: React.FC<AnalyticsProps> = ({
         form_id: form.id,
         form_class: form.className,
         form_action: form.action
-
-
+      });
+    });
   };
 
   const trackEvent = (category: string, action: string, value?: any) => {
@@ -172,7 +174,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
         event_category: category,
         event_label: typeof value === 'object' ? JSON.stringify(value) : value,
         value: typeof value === 'number' ? value : undefined
-
+      });
     }
   };
 
