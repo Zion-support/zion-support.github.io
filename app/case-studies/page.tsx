@@ -1,5 +1,4 @@
 'use client';
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -57,75 +56,41 @@ const CaseStudiesPage: React.FC = () => {
     {
       id: '3',
       title: 'Cybersecurity Enhancement for Healthcare',
-      client: 'MediCare Plus',
+      client: 'HealthTech Systems',
       industry: 'Healthcare',
-      challenge: 'Increasing cyber threats and need for HIPAA compliance in patient data protection.',
-      solution: 'Comprehensive security audit and implementation of zero-trust architecture with advanced threat detection.',
+      challenge: 'Increasing cyber threats and need for HIPAA compliance in patient data management.',
+      solution: 'Comprehensive security framework with advanced threat detection and data encryption.',
       results: [
-        '100% HIPAA compliance achieved',
-        'Zero security breaches in 12 months',
-        'Real-time threat detection and response',
-        'Automated compliance reporting'
+        'Zero security breaches',
+        '100% HIPAA compliance',
+        'Real-time threat monitoring',
+        'Automated incident response'
       ],
-      image: '/images/case-studies/cybersecurity-healthcare.jpg',
+      image: '/images/case-studies/cybersecurity.jpg',
       duration: '4 months',
       team: '10 specialists'
     },
     {
       id: '4',
-      title: 'Machine Learning for Predictive Analytics',
+      title: 'Data Analytics Platform for E-commerce',
       client: 'RetailMax',
-      industry: 'Retail',
-      challenge: 'Inventory management inefficiencies leading to stockouts and overstock situations.',
-      solution: 'ML-powered demand forecasting system with real-time inventory optimization.',
+      industry: 'E-commerce',
+      challenge: 'Lack of actionable insights from customer data affecting sales and marketing decisions.',
+      solution: 'Advanced analytics platform with machine learning for customer behavior prediction.',
       results: [
-        '40% reduction in stockouts',
-        '25% decrease in excess inventory',
-        '15% increase in revenue',
-        'Real-time demand prediction accuracy of 92%'
+        '40% increase in conversion rate',
+        '25% improvement in customer retention',
+        'Real-time analytics dashboard',
+        'Predictive inventory management'
       ],
-      image: '/images/case-studies/ml-predictive-analytics.jpg',
+      image: '/images/case-studies/data-analytics.jpg',
       duration: '5 months',
-      team: '6 specialists'
-    },
-    {
-      id: '5',
-      title: 'Digital Transformation for Manufacturing',
-      client: 'ManufacturingPro',
-      industry: 'Manufacturing',
-      challenge: 'Manual processes and lack of real-time visibility into production efficiency.',
-      solution: 'IoT integration with AI-powered analytics dashboard and automated quality control.',
-      results: [
-        '30% increase in production efficiency',
-        '50% reduction in quality defects',
-        'Real-time production monitoring',
-        'Predictive maintenance implementation'
-      ],
-      image: '/images/case-studies/digital-transformation.jpg',
-      duration: '8 months',
       team: '15 specialists'
-    },
-    {
-      id: '6',
-      title: 'Blockchain Integration for Supply Chain',
-      client: 'GlobalLogistics',
-      industry: 'Logistics',
-      challenge: 'Lack of transparency and traceability in complex supply chain operations.',
-      solution: 'Blockchain-based supply chain tracking system with smart contracts and real-time verification.',
-      results: [
-        'Complete supply chain transparency',
-        '60% reduction in disputes',
-        'Real-time shipment tracking',
-        'Automated compliance verification'
-      ],
-      image: '/images/case-studies/blockchain-supply-chain.jpg',
-      duration: '7 months',
-      team: '11 specialists'
     }
   ];
 
   const stats = [
-    { label: 'Projects Completed', value: '150+', icon: CheckCircle },
+    { label: 'Projects Completed', value: '500+', icon: CheckCircle },
     { label: 'Client Satisfaction', value: '98%', icon: TrendingUp },
     { label: 'Team Members', value: '50+', icon: Users },
     { label: 'Industry Awards', value: '25+', icon: Award }
@@ -148,25 +113,17 @@ const CaseStudiesPage: React.FC = () => {
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
               Discover how we've helped businesses across industries transform their operations with cutting-edge AI and IT solutions.
-=======
-        <section className="relative py-20 px-4">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Case Studies
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Explore our successful projects and see how we've helped businesses transform with AI and IT solutions.
             </p>
 
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mb-4">
-                    <stat.icon className="w-8 h-8 text-white" />
+                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full mx-auto mb-4">
+                    <stat.icon className="h-8 w-8 text-white" />
                   </div>
                   <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-                  <div className="text-gray-400">{stat.label}</div>
+                  <div className="text-gray-300">{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -176,6 +133,7 @@ const CaseStudiesPage: React.FC = () => {
         {/* Case Studies Grid */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
+            <h2 className="text-3xl font-bold text-white mb-12 text-center">Featured Case Studies</h2>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {caseStudies.map((study) => (
                 <div key={study.id} className="bg-white/10 backdrop-blur-lg rounded-2xl overflow-hidden border border-white/20 hover:border-purple-400 transition-all duration-300 group">
@@ -235,20 +193,6 @@ const CaseStudiesPage: React.FC = () => {
                       </button>
                     </div>
                   </div>
-=======
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {caseStudies.map((study, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
-                  <div className="aspect-video bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-lg mb-4 flex items-center justify-center">
-                    <span className="text-white/60 text-sm">Case Study Image</span>
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{study.title}</h3>
-                  <p className="text-gray-400 mb-2">{study.client}</p>
-                  <p className="text-purple-400 text-sm mb-4">{study.industry}</p>
-                  <button className="flex items-center text-purple-400 hover:text-purple-300 font-semibold group">
-                    Read More
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </button>
                 </div>
               ))}
             </div>
@@ -268,7 +212,7 @@ const CaseStudiesPage: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
+                  className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300"
                 >
                   Start Your Project
                   <ArrowRight className="w-5 h-5" />
