@@ -31,91 +31,74 @@ const ContentPromotionBanner: React.FC = () => {
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
-    'Scalable cloud infrastructure',
-    '24/7 expert support',
-    'Custom solutions for your business',
-    'Proven ROI and results',
-    'Future-proof technology stack'
+    'Scalable and flexible solutions',
+    '24/7 technical support',
+    'Easy integration with existing systems',
+    'Cost-effective pricing plans',
+    'Proven track record of success'
   ];
 
   const stats = [
-    { number: '500+', label: 'Happy Clients' },
-    { number: '99.9%', label: 'Uptime' },
-    { number: '24/7', label: 'Support' },
-    { number: '50+', label: 'Countries' }
+    {
+      icon: Users,
+      value: '10,000+',
+      label: 'Happy Customers',
+      description: 'Businesses trust our solutions'
+    },
+    {
+      icon: TrendingUp,
+      value: '99.9%',
+      label: 'Uptime',
+      description: 'Reliable service guarantee'
+    },
+    {
+      icon: Star,
+      value: '4.9/5',
+      label: 'Rating',
+      description: 'Highly rated by clients'
+    }
   ];
 
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
+    <div className="py-16 px-4">
       <div className="max-w-7xl mx-auto">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Transform Your Business with <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">AI Solutions</span>
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Join thousands of businesses that have revolutionized their operations with our cutting-edge AI and IT solutions.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900 px-8 py-4 rounded-lg font-semibold hover:from-cyan-300 hover:to-purple-300 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
-              Start Your Journey
-              <ArrowRight className="w-5 h-5" />
-            </button>
-            <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
-              Learn More
-            </button>
+        <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-8 md:p-12">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Transform Your Business with AI
+            </h2>
+            <p className="text-xl text-white/90 max-w-3xl mx-auto">
+              Join thousands of businesses that have already transformed their operations with our cutting-edge AI and IT solutions.
+            </p>
           </div>
-        </div>
 
-        {/* Stats Section */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-          {stats.map((stat, index) => (
-            <div key={index} className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">{stat.number}</div>
-              <div className="text-gray-300">{stat.label}</div>
-            </div>
-          ))}
-        </div>
-
-        {/* Features Section */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Why Choose Our Solutions?</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             {features.map((feature, index) => (
               <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <feature.icon className="w-8 h-8 text-slate-900" />
+                <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <feature.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
-                <p className="text-gray-300 text-sm">{feature.description}</p>
+                <p className="text-white/80 text-sm">{feature.description}</p>
               </div>
             ))}
           </div>
-        </div>
 
-        {/* Benefits Section */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">What You Get</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
             {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center text-gray-300">
-                <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                {benefit}
+              <div key={index} className="flex items-center gap-3">
+                <CheckCircle className="w-5 h-5 text-white flex-shrink-0" />
+                <span className="text-white/90">{benefit}</span>
               </div>
             ))}
           </div>
-        </div>
 
-        {/* CTA Section */}
-        <div className="text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
-          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-            Join the AI revolution and take your business to the next level with our proven solutions.
-          </p>
-          <button className="bg-white text-cyan-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center gap-2 mx-auto">
-            Get Started Today
-            <ArrowRight className="w-5 h-5" />
-          </button>
+          <div className="text-center">
+            <button className="bg-white text-cyan-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center gap-2 mx-auto">
+              Get Started Today
+              <ArrowRight className="w-5 h-5" />
+            </button>
+          </div>
         </div>
       </div>
     </div>
