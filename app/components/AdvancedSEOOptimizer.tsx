@@ -6,21 +6,11 @@ interface SEOData {
   description: string;
   keywords: string[];
   canonicalUrl: string;
-  ogTitle?: string;
-  ogDescription?: string;
   ogImage?: string;
   ogType?: string;
-  twitterCard?: string;
-  twitterTitle?: string;
-  twitterDescription?: string;
-  twitterImage?: string;
   structuredData?: Record<string, unknown>;
-  robots?: string;
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
+  breadcrumbData?: Record<string, unknown>;
+  faqData?: Record<string, unknown>;
 }
 
 interface AdvancedSEOOptimizerProps {
@@ -38,7 +28,8 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   enableTwitterCards = true,
   enableSchemaMarkup = true,
 }) => {
-  const _structuredDataRef = useRef<HTMLScriptElement | null>(null);
+  const structuredDataRef = useRef<HTMLScriptElement | null>(null);
+  
   const generateStructuredData = useCallback(() => {
     if (!enableStructuredData || !seoData.structuredData) return null;
 
@@ -48,34 +39,35 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       name: 'Zion Tech Group',
       url: 'https://ziontechgroup.com',
       logo: 'https://ziontechgroup.com/logo.png',
-      description: seoData.description,
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: '364 E Main St STE 1008',
-        addressLocality: 'Middletown',
-        addressRegion: 'DE',
-        postalCode: '19709',
-        addressCountry: 'US',
-      },
-      contactPoint: {
-        '@type': 'ContactPoint',
-        telephone: '+1-302-464-0950',
-        contactType: 'customer service',
-        email: 'kleber@ziontechgroup.com',
-      },
       sameAs: [
         'https://linkedin.com/company/zion-tech-group',
         'https://twitter.com/ziontechgroup',
-        'https://github.com/Zion-Holdings',
+        'https://github.com/zion-tech-group',
       ],
-      ...seoData.structuredData,
+      contactPoint: {
+        '@type': 'ContactPoint',
+        telephone: '+1-555-ZION-TECH',
+        contactType: 'customer service',
+        availableLanguage: 'English',
+      },
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '123 Tech Innovation Drive',
+        addressLocality: 'San Francisco',
+        addressRegion: 'CA',
+        postalCode: '94105',
+        addressCountry: 'US',
+      },
     };
 
-    return baseStructuredData;
+    return {
+      ...baseStructuredData,
+      ...seoData.structuredData,
+    };
   }, [seoData, enableStructuredData]);
 
   const generateBreadcrumbStructuredData = useCallback(() => {
-    if (!enableSchemaMarkup) return null;
+    if (!enableSchemaMarkup || !seoData.breadcrumbData) return null;
 
     return {
       '@context': 'https://schema.org',
@@ -98,9 +90,9 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   }, [seoData, enableSchemaMarkup]);
 
   const generateFAQStructuredData = useCallback(() => {
-    if (!enableSchemaMarkup) return null;
+    if (!enableSchemaMarkup || !seoData.faqData) return null;
 
-    const faqData = {
+    return {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
@@ -109,7 +101,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
           name: 'What services does Zion Tech Group offer?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Zion Tech Group offers comprehensive AI-powered enterprise solutions, digital transformation services, automation, cloud services, AI consulting, business intelligence, and machine learning solutions.',
+            text: 'Zion Tech Group offers advanced AI solutions, quantum computing, and autonomous systems for enterprise clients.',
           },
         },
         {
@@ -117,26 +109,16 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
           name: 'How can I contact Zion Tech Group?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'You can contact us at kleber@ziontechgroup.com or call +1 302 464 0950. Our office is located at 364 E Main St STE 1008, Middletown DE 19709.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'What makes Zion Tech Group different?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'We specialize in cutting-edge AI micro SaaS services, cloud automation, and provide comprehensive digital transformation solutions with a focus on enterprise-grade security and performance.',
+            text: 'You can contact us through our website, email, or phone for consultation and support.',
           },
         },
       ],
     };
-
-    return faqData;
   }, [enableSchemaMarkup]);
 
-  const _structuredData = generateStructuredData();
-  const _breadcrumbData = generateBreadcrumbStructuredData();
-  const _faqData = generateFAQStructuredData();
+  const structuredData = generateStructuredData();
+  const breadcrumbData = generateBreadcrumbStructuredData();
+  const faqData = generateFAQStructuredData();
 
   useEffect(() => {
     // Update page title and meta description for better SEO
@@ -162,68 +144,27 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     }
   }, [seoData]);
 
-  // const _addMetaTag = (name: string, content: string, attribute: string = 'name') => {
-  //   const metaTag = document.createElement('meta');
-  //   metaTag.setAttribute(attribute, name);
-  //   metaTag.content = content;
-  //   document.head.appendChild(metaTag);
-  // };
-
-  // const _updateCanonicalUrl = (url: string) => {
-  //   let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
-  //   
-  //   if (canonicalLink) {
-  //     canonicalLink.href = url;
-  //   } else {
-  //     canonicalLink = document.createElement('link');
-  //     canonicalLink.rel = 'canonical';
-  //     canonicalLink.href = url;
-  //     document.head.appendChild(canonicalLink);
-  //   }
-  // };
-
-  // const _addStructuredData = (data: Record<string, unknown>) => {
-  //   // Remove existing structured data
-  //   // if (structuredDataRef.current) {
-  //   //   structuredDataRef.current.remove();
-  //   // }
-  //   
-  //   const script = document.createElement('script');
-  //   script.type = 'application/ld+json';
-  //   script.textContent = JSON.stringify(data);
-  //   document.head.appendChild(script);
-  // };
-
-    // Add new structured data
-    const _script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(data);
-    script.id = 'structured-data';
-    document.head.appendChild(script);
-    structuredDataRef.current = script;
-  };
-
-  const _trackPageView = (config: SEOData) => {
+  const trackPageView = (config: SEOData) => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as unknown as { gtag: (command: string, targetId: string, config: Record<string, unknown>) => void }).gtag('config', 'GA_MEASUREMENT_ID', {
+      (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
         page_title: config.title,
         page_location: config.canonicalUrl,
       });
     }
   };
 
-  const _trackPerformanceMetrics = () => {
+  const trackPerformanceMetrics = () => {
     if (typeof window !== 'undefined' && 'performance' in window) {
-      window.addEventListener('load', () => {
-        const _perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        if (perfData && typeof window !== 'undefined' && 'gtag' in window) {
-          (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', 'page_load_performance', {
-            event_category: 'Performance',
-            event_label: 'Page Load',
-            value: Math.round(perfData.loadEventEnd - perfData.fetchStart),
-          });
-        }
-      });
+      const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      if (perfData && typeof window !== 'undefined' && 'gtag' in window) {
+        (window as any).gtag('event', 'timing_complete', {
+          name: 'load',
+          value: Math.round(perfData.loadEventEnd - perfData.fetchStart),
+          event_category: 'Performance',
+          event_label: 'Page Load',
+          value: Math.round(perfData.loadEventEnd - perfData.fetchStart),
+        });
+      }
     }
   };
 
@@ -239,6 +180,10 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       {enableOpenGraph && (
         <>
           <meta property="og:title" content={seoData.title} />
+          <meta property="og:description" content={seoData.description} />
+          <meta property="og:image" content={seoData.ogImage || 'https://ziontechgroup.com/og-image.jpg'} />
+          <meta property="og:url" content={seoData.canonicalUrl} />
+          <meta property="og:type" content={seoData.ogType || 'website'} />
           <meta property="og:image:height" content="630" />
           <meta property="og:site_name" content="Zion Tech Group" />
           <meta property="og:locale" content="en_US" />
@@ -258,17 +203,14 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       )}
 
       {/* Additional SEO Meta Tags */}
-      <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-      <meta name="googlebot" content="index, follow" />
-      <meta name="bingbot" content="index, follow" />
       <meta name="author" content="Zion Tech Group" />
-      <meta name="publisher" content="Zion Tech Group" />
-      <meta name="copyright" content="Zion Tech Group" />
-      <meta name="language" content="en" />
+      <meta name="robots" content="index,follow" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="language" content="English" />
       <meta name="revisit-after" content="7 days" />
       <meta name="distribution" content="global" />
       <meta name="rating" content="general" />
-      <meta name="theme-color" content="#4F46E5" />
 
       {/* Structured Data */}
       {enableSchemaMarkup && structuredData && (
@@ -276,13 +218,11 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
           {JSON.stringify(structuredData)}
         </script>
       )}
-
       {enableSchemaMarkup && breadcrumbData && (
         <script type="application/ld+json">
           {JSON.stringify(breadcrumbData)}
         </script>
       )}
-
       {enableSchemaMarkup && faqData && (
         <script type="application/ld+json">
           {JSON.stringify(faqData)}
