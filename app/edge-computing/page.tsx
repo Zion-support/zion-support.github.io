@@ -8,16 +8,10 @@ import { CheckCircle, Zap, Cpu, Globe, Shield, ArrowRight, Cloud, Database, Wifi
 const EdgeComputingPage: React.FC = () => {
   const features = [
     {
-<<<<<<< HEAD
-      title: 'Low-Latency Processing',
-      description: 'Process data at the edge for ultra-low latency applications and real-time decision making.',
-      benefits: ['< 1 ms latency', 'Real-time processing', 'Instant responses']
-=======
       icon: Cpu,
       title: 'Edge Processing',
       description: 'Process data locally at the edge for ultra-low latency and real-time responsiveness.',
       benefits: ['Sub-millisecond latency', 'Real-time processing', 'Local data processing', 'Reduced bandwidth usage']
->>>>>>> cursor/fix-errors-and-merge-to-main-d2d0
     },
     {
       icon: Globe,
@@ -32,9 +26,6 @@ const EdgeComputingPage: React.FC = () => {
       benefits: ['Zero-trust architecture', 'Encrypted communications', 'Secure boot', 'Threat detection']
     },
     {
-<<<<<<< HEAD
-      icon: Users,
-=======
       icon: Database,
       title: 'Edge Storage',
       description: 'Distributed storage solutions optimized for edge computing workloads.',
@@ -74,7 +65,6 @@ const EdgeComputingPage: React.FC = () => {
       title: 'Healthcare',
       description: 'Real-time patient monitoring and medical diagnostics',
       icon: '🏥'
->>>>>>> cursor/fix-errors-and-merge-to-main-d2d0
     }
   ];
 
@@ -88,8 +78,6 @@ const EdgeComputingPage: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
         <title>Edge Computing Solutions | Zion Tech Group</title>
@@ -108,35 +96,20 @@ const EdgeComputingPage: React.FC = () => {
             Edge Computing
             <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
               Solutions
->>>>>>> cursor/fix-errors-and-merge-to-main-d2d0
             </span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
             Bring computing power closer to your data and users with our advanced edge computing solutions. 
             Achieve ultra-low latency, real-time processing, and seamless IoT integration.
           </p>
-<<<<<<< HEAD
-=======
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25">
               Get Started
               <ArrowRight className="inline-block ml-2 w-5 h-5" />
->>>>>>> cursor/fix-errors-and-merge-to-main-d2d0
             </button>
             <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
               View Demo
             </button>
-<<<<<<< HEAD
-            <h2 className="text-4xl font-bold text-white mb-4">Advanced Edge Computing Features<p className="text-xl text-gray-300 max-w-3xl mx-auto">Comprehensive edge computing solution designed for modern applications and IoT deployments<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300 group"></div>
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300"></div>
-        <div className="max-w-7xl mx-auto"></section>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-4xl font-bold text-white mb-4">Advanced Edge Computing Features</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">Comprehensive edge computing solution designed for modern applications and IoT deployments</p><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300 group"></div>
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300"></div>
-                  <feature.icon className="w-6 h-6 text-white" />
-=======
           </div>
         </div>
       </section>
@@ -145,21 +118,11 @@ const EdgeComputingPage: React.FC = () => {
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
->>>>>>> cursor/fix-errors-and-merge-to-main-d2d0
             <h2 className="text-4xl font-bold text-white mb-4">Advanced Edge Computing Features</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive edge computing solution designed for modern applications and IoT deployments
             </p>
           </div>
-<<<<<<< HEAD
-
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
-            {features.map((feature, index) => (</div>
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover: border-blue-400/50 transition-all duration-300 group">,</div>
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">,</div>
-                  <feature.icon className="w-6 h-6 text-white" />,
-                </div>,
-=======
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
@@ -167,7 +130,6 @@ const EdgeComputingPage: React.FC = () => {
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-d2d0
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
                 <ul className="space-y-2">
@@ -230,27 +192,13 @@ const EdgeComputingPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
-<section className="py-20 px-4">
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Deploy Edge Computing?<p className="text-xl text-gray-300 mb-8">Join leading enterprises using edge computing to optimize their applications and reduce latency</p>
-        <div className="max-w-4xl mx-auto text-center"></section>
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Deploy Edge Computing?</h2><p className="text-xl text-gray-300 mb-8">Join leading enterprises using edge computing to optimize their applications and reduce latency</p>
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-            <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">Start Free Trial<button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">Contact Sales</button>
-=======
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
->>>>>>> cursor/fix-errors-and-merge-to-main-d2d0
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Deploy Edge Computing?</h2>
           <p className="text-xl text-gray-300 mb-8">
             Transform your applications with ultra-low latency edge computing solutions
           </p>
-<<<<<<< HEAD
-          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
-=======
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
->>>>>>> cursor/fix-errors-and-merge-to-main-d2d0
             <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
               Start Free Trial
             </button>
