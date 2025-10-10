@@ -16,7 +16,7 @@ interface JobPosition {
   requirements: string[];
   benefits: string[];
   posted: string;
-  featured: boolean});
+  featured: boolean;
 }
 
 const CareersPage: React.FC = () => {
@@ -24,17 +24,16 @@ const CareersPage: React.FC = () => {
     {
       id: '1',
       title: 'Senior AI Engineer',
-      department: 'AI Solutions',
-      location: 'Remote',
+      department: 'AI & Machine Learning',
+      location: 'San Francisco, CA',
       type: 'Full-time',
       experience: '5+ years',
-      description: 'Lead the development of cutting-edge AI solutions and machine learning models for enterprise clients.',
+      description: 'Lead the development of cutting-edge AI solutions and machine learning models.',
       requirements: [
-        '5+ years experience in AI/ML development',
-        'Expertise in Python, TensorFlow, PyTorch',
-        'Experience with cloud platforms (AWS, Azure, GCP)',
-        'Strong understanding of deep learning algorithms',
-        'Previous experience in production AI systems'
+        'Master\'s degree in Computer Science or related field',
+        '5+ years experience in AI/ML',
+        'Proficiency in Python, TensorFlow, PyTorch',
+        'Experience with cloud platforms (AWS, GCP, Azure)'
       ],
       benefits: [
         'Competitive salary: $120,000 - $180,000',
@@ -43,8 +42,8 @@ const CareersPage: React.FC = () => {
         'Professional development budget'
       ],
       posted: '2 days ago',
-      featured: true});
-},
+      featured: true
+    },
     {
       id: '2',
       title: 'Cloud Architect',
@@ -53,381 +52,230 @@ const CareersPage: React.FC = () => {
       type: 'Full-time',
       experience: '7+ years',
       description: 'Design and implement scalable cloud infrastructure solutions for enterprise clients.',
-      requirements: ['AWS, Azure, GCP', '7+ years cloud experience', 'Architecture certifications']});;)
-}
-  ];
-
-  const benefits = [
-    'Competitive salary and equity',
-    'Comprehensive health insurance',
-    'Flexible work arrangements',
-    'Professional development budget',
-    'Top-tier equipment and tools',
-    'Team building events',
-    'Career growth opportunities',
-    '401k matching program',
-    'Unlimited PTO',
-    'Mental health support'
-  ];
-
-  const values = [
+      requirements: [
+        'AWS, Azure, GCP certifications',
+        '7+ years cloud experience',
+        'Architecture design expertise',
+        'Strong communication skills'
+      ],
+      benefits: [
+        'Competitive salary: $140,000 - $200,000',
+        'Health insurance',
+        '401k matching',
+        'Flexible PTO'
+      ],
+      posted: '1 week ago',
+      featured: false
+    },
     {
-      icon: Lightbulb,
-      title: 'Innovation',
-      description: 'We push the boundaries of what\'s possible with technology',
-      color: 'text-yellow-400'});;)
-},
-    {
-      icon: Users,
-      title: 'Collaboration',
-      description: 'We work together to achieve extraordinary results',
-      color: 'text-blue-400'});;)
-},
-    {
-      icon: Target,
-      title: 'Excellence',
-      description: 'We strive for the highest quality in everything we do',
-      color: 'text-green-400'});;)
-},
-    {
-      icon: Heart,
-      title: 'Integrity',
-      description: 'We build trust through transparency and honesty',
-      color: 'text-red-400'});;)
-}
-  ];
-
-  const culture = [
-    {
-      stat: '98%',
-      label: 'Employee Satisfaction',
-      description: 'Our team loves working here'});;)
-},
-    {
-      stat: '50+',
-      label: 'Team Members',
-      description: 'Growing team of experts'});;)
-},
-    {
-      stat: '15+',
-      label: 'Countries',
-      description: 'Global remote team'});;)
-},
-    {
-      stat: '4.9/5',
-      label: 'Glassdoor Rating',
-      description: 'Highly rated workplace'});;)
-}
+      id: '3',
+      title: 'Cybersecurity Specialist',
+      department: 'Security',
+      location: 'Remote',
+      type: 'Full-time',
+      experience: '4+ years',
+      description: 'Protect our clients\' digital assets and ensure compliance with security standards.',
+      requirements: [
+        'CISSP or similar certification',
+        '4+ years security experience',
+        'Knowledge of security frameworks',
+        'Incident response experience'
+      ],
+      benefits: [
+        'Competitive salary: $100,000 - $150,000',
+        'Remote work flexibility',
+        'Security training budget',
+        'Health and dental insurance'
+      ],
+      posted: '3 days ago',
+      featured: false
+    }
   ];
 
   return (
     <>
-      <Helmet></Helmet>
-        <titl></titl>Careers - Zion Tech Group | Join Our Team</title>
-        <meta name="description" content="Join our team of AI and IT experts. Explore career opportunities at Zion Tech Group and be part of the future of technology." />
-        <meta name="keywords" content="careers, jobs, AI engineer, cloud architect, cybersecurity, remote work, technology careers" />
+      <Helmet>
+        <title>Careers - Zion Tech Group | Join Our Team</title>
+        <meta name="description" content="Join Zion Tech Group and help shape the future of AI and IT solutions. Explore open positions and discover opportunities to grow your career with us." />
+        <meta name="keywords" content="careers, jobs, AI engineer, cloud architect, cybersecurity, remote work, tech jobs" />
       </Helmet>
 
-      <div></div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section></section>
-          <div></div>
-            <h1></h1>
-              Join Our <spa></spa>Team</span>
-            </h1>
-            <p></p>
-              Be part of the future of technology. Join our team of innovators, creators, and problem-solvers who are building the next generation of AI and IT solutions.
-            </p>
-
-            <div></div>
-              {culture.map((item, index) => (
-                <div></div>
-                  <di></di>{item.stat}</div>
-                  <di></di>{item.label}</div>
-                  <di></di>{item.description}</div>
-                </div>
-              ));
+        <section className="pt-20 pb-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+                Join Our <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+                  Team
+                </span>
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Help us build the future of AI and IT solutions. We're looking for passionate 
+                individuals who want to make a difference in the tech industry.
+              </p>
             </div>
           </div>
         </section>
 
-        {/* Company Values */}
-        <section></section>
-          <div></div>
-            <div></div>
-              <h></h>Our Values</h2>
-              <p></p>
-                These core values guide everything we do and shape our company culture.
+        {/* Why Work With Us */}
+        <section className="py-20 bg-slate-800/50">
+          <div className="max-w-7xl mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-6">Why Work With Us?</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                We offer more than just a job - we provide opportunities to grow, learn, 
+                and make a real impact in the world of technology.
               </p>
             </div>
-
-            <div></div>
-              {values.map((value, index) => (
-                <div></div>
-                  <div></div>
-                    <value.icon className="w-8 h-8" />
-                  </div>
-                  <h></h>{value.title}</h3>
-                  <p className="text-gray-300">{value.description}</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg mx-auto mb-6 flex items-center justify-center">
+                  <Heart className="w-8 h-8 text-white" />
                 </div>
-              ));
-            </div>
-          </div>
-        </section>
-
-        {/* Benefits */}
-        <section></section>
-          <div></div>
-            <div></div>
-              <h></h>Benefits & Perks</h2>
-              <p></p>
-                We offer comprehensive benefits and perks to support our team members' well-being and growth.
-              </p>
-            </div>
-
-            <div></div>
-              <div></div>
-                {benefits.map((benefit, index) => (
-                  <div></div>
-                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                    <spa></spa>{benefit}</span>
-                  </div>
-                ));
+                <h3 className="text-xl font-bold text-white mb-4">Great Culture</h3>
+                <p className="text-gray-300">
+                  Work in a supportive, inclusive environment where your ideas matter 
+                  and your contributions are valued.
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg mx-auto mb-6 flex items-center justify-center">
+                  <Award className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">Growth Opportunities</h3>
+                <p className="text-gray-300">
+                  Continuous learning and development opportunities to advance your 
+                  career and expand your skills.
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-600 rounded-lg mx-auto mb-6 flex items-center justify-center">
+                  <Users className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">Flexible Work</h3>
+                <p className="text-gray-300">
+                  Remote work options, flexible hours, and work-life balance to help 
+                  you thrive both personally and professionally.
+                </p>
               </div>
             </div>
           </div>
         </section>
 
         {/* Open Positions */}
-        <section></section>
-          <div></div>
-            <div></div>
-              <h></h>Open Positions</h2>
-              <p></p>
-                Explore our current job openings and find the perfect role for you.
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-6">Open Positions</h2>
+              <p className="text-xl text-gray-300">
+                Explore our current openings and find the perfect role for you.
               </p>
             </div>
-
-            <div></div>
+            <div className="space-y-8">
               {openPositions.map((position) => (
-                <div></div>
+                <div
+                  key={position.id}
+                  className={`bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 hover:bg-slate-700/50 transition-all duration-300 ${
+                    position.featured ? 'ring-2 ring-cyan-400' : ''
+                  }`}
+                >
                   {position.featured && (
-                    <div></div>
-                      <Star className="w-5 h-5 text-yellow-400 fill-current" />
-                      <spa></spa>Featured Position</span>
+                    <div className="flex items-center mb-4">
+                      <span className="bg-cyan-400 text-slate-900 px-3 py-1 rounded-full text-sm font-semibold flex items-center">
+                        <Star className="w-4 h-4 mr-1" />
+                        Featured
+                      </span>
                     </div>
-                  );
+                  )}
+                  
+                  <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <div className="lg:col-span-2">
+                      <h3 className="text-2xl font-bold text-white mb-2">{position.title}</h3>
+                      <p className="text-gray-300 mb-4">{position.description}</p>
+                      
+                      <div className="flex flex-wrap gap-4 mb-6 text-sm text-gray-400">
+                        <div className="flex items-center">
+                          <Briefcase className="w-4 h-4 mr-2" />
+                          {position.department}
+                        </div>
+                        <div className="flex items-center">
+                          <MapPin className="w-4 h-4 mr-2" />
+                          {position.location}
+                        </div>
+                        <div className="flex items-center">
+                          <Clock className="w-4 h-4 mr-2" />
+                          {position.type}
+                        </div>
+                        <div className="flex items-center">
+                          <Award className="w-4 h-4 mr-2" />
+                          {position.experience}
+                        </div>
+                      </div>
 
-                  <div></div>
-                    <div></div>
-                      <h3></h3>
-                        {position.title}
-                      </h3>
-                      <p className="text-cyan-400 font-medium">{position.department}</p>
+                      <div className="mb-6">
+                        <h4 className="text-lg font-semibold text-white mb-3">Requirements</h4>
+                        <ul className="space-y-2">
+                          {position.requirements.map((req, index) => (
+                            <li key={index} className="flex items-start">
+                              <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 mt-0.5 flex-shrink-0" />
+                              <span className="text-gray-300">{req}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
                     </div>
-                    <span></span>
-                      {position.type}
-                    </span>
-                  </div>
 
-                  <p className="text-gray-300 mb-6">{position.description}</p>
-
-                  <div></div>
-                    <div></div>
-                      <MapPin className="w-4 h-4" />
-                      <spa></spa>{position.location}</span>
-                    </div>
-                    <div></div>
-                      <Clock className="w-4 h-4" />
-                      <spa></spa>{position.experience}</span>
-                    </div>
-                    <div></div>
-                      <Users className="w-4 h-4" />
-                      <spa></spa>Posted {position.posted}</span>
-                    </div>
-                  </div>
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-white mb-2">Key Requirements:</h4>
-                    <ul className="space-y-1">
-                      {position.requirements.slice(0, 3).map((req, index) => (
-                        <li key={index} className="text-sm text-gray-300 flex items-center">
-                          <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-                          {req}
-                        </li>
-                      ))}
-                      {position.requirements.length > 3 && (
-                        <li className="text-sm text-gray-400">
-                          +{position.requirements.length - 3} more requirements
-                        </li>
-                      )}
-                    </ul>
-                  </div>
-
-                  <div className="flex items-center justify-between">
-                    <div className="text-sm text-gray-400">
-                      {position.benefits.length} benefits included
-                    </div>
-                    <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
-                      Apply Now
-                      <ArrowRight className="w-4 h-4" />
-                    </button>
-                  </div>
-                </div>
-              ))}
-            </div>
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
-=======
-                </div>
-              ))}
-            </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-550e
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-bba0
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-9948
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section></section>
-          <div></div>
-            <div></div>
-              <h2></h2>
-                Don't See Your Dream Job?
-              </h2>
-              <p></p>
-                We're always looking for talented individuals. Send us your resume and let us know how you can contribute to our mission.
-              </p>
-              <div></div>
-                <button></button>
-                  <Zap className="w-5 h-5" />
-                  Send Resume
-                </button>
-                <Link></Link>
-                  Contact Us
-                </Link>
-              </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                  {position.requirements && (
-                    <div className="mb-6">
-                      <h4 className="text-white font-semibold mb-2">Key Requirements:</h4>
-                      <ul className="space-y-1">
-                        {position.requirements.map((req, reqIndex) => (
-                          <li key={reqIndex} className="text-gray-300 text-sm flex items-center">
-                            <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
-                            {req}
+                    <div>
+                      <h4 className="text-lg font-semibold text-white mb-3">Benefits</h4>
+                      <ul className="space-y-2 mb-6">
+                        {position.benefits.map((benefit, index) => (
+                          <li key={index} className="flex items-start">
+                            <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
+                            <span className="text-gray-300 text-sm">{benefit}</span>
                           </li>
                         ))}
                       </ul>
+                      
+                      <div className="text-sm text-gray-400 mb-4">
+                        Posted {position.posted}
+                      </div>
+                      
+                      <Link
+                        to={`/careers/${position.id}`}
+                        className="w-full bg-cyan-600 text-white py-3 px-6 rounded-lg hover:bg-cyan-700 transition-colors font-semibold flex items-center justify-center"
+                      >
+                        Apply Now
+                        <ArrowRight className="w-4 h-4 ml-2" />
+                      </Link>
                     </div>
-                  )}
-
-                  <Link
-                    to="/contact"
-                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group"
-                  >
-                    Apply Now
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </Link>
-=======
-                  <div className="mb-6">
-                    <h4 className="text-white font-semibold mb-2 text-sm">Key Requirements:</h4>
-                    <ul className="space-y-1">
-                      {position.requirements.map((req, reqIndex) => (
-                        <li key={reqIndex} className="text-gray-300 text-xs flex items-start">
-                          <CheckCircle className="w-3 h-3 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
-                          {req}
-                        </li>
-                      ))}
-                    </ul>
                   </div>
-
-                  <button className="w-full bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900 font-semibold py-2 px-4 rounded-lg hover:from-cyan-300 hover:to-purple-300 transition-all duration-200 flex items-center justify-center gap-2">
-                    Apply Now
-                    <ArrowRight className="w-4 h-4" />
-                  </button>
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-bba0
                 </div>
-              ));
-            </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-          </div>
-        </section>
-
-        {/* Benefits Section */}
-        <section></section>
-          <div></div>
-            <h></h>Why Work With Us?</h2>
-            <div></div>
-              {values.map((value, index) => (
-                <div></div>
-                  <div></div>
-                    <value.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h></h>{value.title}</h3>
-                  <p className="text-gray-300">{value.description}</p>
-                </div>
-<<<<<<< HEAD
               ))}
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-550e
-=======
-              ));
->>>>>>> cursor/fix-errors-and-merge-to-main-bba0
-            </div>
-          </div>
-        </section>
-
-        {/* Benefits List */}
-        <section></section>
-          <div></div>
-            <h></h>Benefits & Perks</h2>
-            <div></div>
-              {benefits.map((benefit, index) => (
-                <div></div>
-                  <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
-                  <spa></spa>{benefit}</span>
-                </div>
-              ));
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section></section>
-          <div></div>
-            <h2></h2>
-              Ready to Join Us?
-            </h2>
-            <p></p>
-              Don't see a position that fits? We're always looking for talented individuals. 
-              Send us your resume and let's start a conversation.
+        <section className="py-20 bg-slate-800/50">
+          <div className="max-w-4xl mx-auto px-4 text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">Don't See Your Role?</h2>
+            <p className="text-xl text-gray-300 mb-8">
+              We're always looking for talented individuals. Send us your resume and 
+              let us know how you can contribute to our team.
             </p>
-            <Link></Link>
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-8 py-4 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition-colors text-lg"
+            >
+              <Heart className="w-5 h-5 mr-2" />
               Get in Touch
-              <ArrowRight className="w-4 h-4" />
             </Link>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-9948
           </div>
         </section>
       </div>
     </>
-  ));)
+  );
 };
 
 export default CareersPage;
