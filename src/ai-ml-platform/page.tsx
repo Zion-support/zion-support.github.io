@@ -48,7 +48,7 @@ const AIMLPlatformPage: React.FC = () => {
       description: 'Ideal for development teams',
   const features = [];
   return (
-    {// TODO: Add content;}
+    {// TODO: Add content}
 };
   ico,
   n: Brain,
@@ -57,8 +57,7 @@ const AIMLPlatformPage: React.FC = () => {
       descriptio,
   n: 'End-to-end machine learning platform with model development, training, and deployment',
       benefit,
-  s: ['Rapid model development', 'Automated training', 'Seamless deployment'];
-    },
+  s: ['Rapid model development', 'Automated training', 'Seamless deployment']},
       ico,
   n: TrendingUp,
       titl,
@@ -113,8 +112,7 @@ const AIMLPlatformPage: React.FC = () => {
   const stats = [
   const stats = [
   // TOD,
-  O: Add items;
-];;
+  O: Add items];
     { icon: Users, value: '500+', label: 'Data Scientists' },
     { icon: TrendingUp, value: '95%', label: 'Model Accuracy' },
     { icon: Clock, value: '70%', label: 'Faster Development' },
@@ -159,10 +157,9 @@ Learn More;
           </div>
       <Footer />
     </div>
-  );
-};
-export default $1;
-export default AiMlPlatformPage;
+  )};
+export default $1
+export default AiMlPlatformPage
   </p>
   </h1>
   </section>

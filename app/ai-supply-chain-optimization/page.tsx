@@ -4,7 +4,6 @@ import { Helmet } from 'react-helmet-async';
 import { Truck, BarChart3, Target, Zap, ArrowRight, Star, CheckSquare, Shield, Smartphone, Users, Globe, Settings } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 const AISupplyChainOptimizationPage: React.FC = () => {
   const features = [
     {
@@ -32,7 +31,6 @@ const AISupplyChainOptimizationPage: React.FC = () => {
       benefits: ['Risk prediction', 'Supplier monitoring', 'Disruption alerts', 'Contingency planning']
     }
   ];
-
   const industries = [
     {
       title: 'Manufacturing',
@@ -59,7 +57,6 @@ const AISupplyChainOptimizationPage: React.FC = () => {
       benefits: ['Reduce food waste by 45%', 'Optimize freshness', 'Improve distribution efficiency', 'Enhance quality control']
     }
   ];
-
   const pricingPlans = [
     {
       name: 'Starter',
@@ -73,8 +70,7 @@ const AISupplyChainOptimizationPage: React.FC = () => {
         'Email support',
         'Mobile app access'
       ],
-      popular: false
-    },
+      popular: false},
     {
       name: 'Professional',
       price: '$1,999',
@@ -88,8 +84,7 @@ const AISupplyChainOptimizationPage: React.FC = () => {
         'API access',
         'Custom integrations'
       ],
-      popular: true
-    },
+      popular: true},
     {
       name: 'Enterprise',
       price: '$4,999',
@@ -103,34 +98,28 @@ const AISupplyChainOptimizationPage: React.FC = () => {
         'On-premise deployment',
         'Advanced reporting'
       ],
-      popular: false
-    }
+      popular: false}
   ];
-
   const testimonials = [
     {
       name: 'David Chen',
       role: 'Supply Chain Director',
       company: 'Global Manufacturing Corp',
       content: 'We reduced inventory costs by 30% and improved on-time delivery to 98%. The AI insights are incredibly accurate.',
-      rating: 5
-    },
+      rating: 5},
     {
       name: 'Sarah Johnson',
       role: 'Operations Manager',
       company: 'RetailMax',
       content: 'Our stockout rate dropped by 70% and customer satisfaction increased by 25%. The optimization is game-changing.',
-      rating: 5
-    },
+      rating: 5},
     {
       name: 'Michael Rodriguez',
       role: 'Logistics Director',
       company: 'PharmaSupply',
       content: 'We eliminated supply disruptions and reduced waste by 50%. The predictive capabilities are outstanding.',
-      rating: 5
-    }
+      rating: 5}
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -138,9 +127,7 @@ const AISupplyChainOptimizationPage: React.FC = () => {
         <meta name="description" content="Optimize supply chain operations with AI-driven demand forecasting, inventory management, and logistics planning. Reduce costs by 30%." />
         <meta name="keywords" content="AI supply chain, supply chain optimization, demand forecasting, inventory management, logistics AI" />
       </Helmet>
-      
       <Navigation />
-      
       <main className="pt-20">
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -156,7 +143,7 @@ const AISupplyChainOptimizationPage: React.FC = () => {
               Optimize your supply chain operations with AI-driven demand forecasting, inventory management, and logistics planning. 
               Reduce costs by 30% and improve efficiency by 40%.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center mb-12">
               <button className="bg-gradient-to-r from-green-500 to-teal-500 hover:from-green-600 hover:to-teal-600 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 inline" />
@@ -170,7 +157,6 @@ const AISupplyChainOptimizationPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -184,7 +170,7 @@ const AISupplyChainOptimizationPage: React.FC = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group">
                   <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
@@ -203,7 +189,6 @@ const AISupplyChainOptimizationPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Industries Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -217,7 +202,7 @@ const AISupplyChainOptimizationPage: React.FC = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {industries.map((industry, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group">
                   <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                     <industry.icon className="w-8 h-8 text-white" />
                   </div>
@@ -236,7 +221,6 @@ const AISupplyChainOptimizationPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -274,7 +258,7 @@ const AISupplyChainOptimizationPage: React.FC = () => {
                   </ul>
                   <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular 
-                      ? 'bg-gradient-to-r from-green-500 to-teal-500 hover:from-green-600 hover:to-teal-600 text-white transform hover:scale-105' 
+                      ? 'bg-gradient-to-r from-green-500 to-teal-500 hover: from-green-600 hover:to-teal-600 text-white transform hover:scale-105' 
                       : 'border border-green-400 text-green-400 hover:bg-green-400 hover:text-white'
                   }`}>
                     {plan.name === 'Enterprise' ? 'Contact Sales' : 'Start Free Trial'}
@@ -284,7 +268,6 @@ const AISupplyChainOptimizationPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Testimonials Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -314,9 +297,8 @@ const AISupplyChainOptimizationPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm: px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-gradient-to-r from-green-500/10 to-teal-500/10 backdrop-blur-sm rounded-3xl p-12 border border-green-500/20">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -341,10 +323,7 @@ const AISupplyChainOptimizationPage: React.FC = () => {
           </div>
         </section>
       </main>
-      
       <Footer />
     </div>
-  );
-};
-
-export default AISupplyChainOptimizationPage;
+  )};
+export default AISupplyChainOptimizationPage

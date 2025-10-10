@@ -1,10 +1,10 @@
-// module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; export {}; interface WebVitalsData {/* TODO: Fix JSX expression */}
+// module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; export {} interface WebVitalsData {/* TODO: Fix JSX expression */}
   p: number} ur,
   l: string} userAgen,
   t: string} export default async function handler(re)
   q: NextApiRequest) re,
   s: NextApiResponse ) {/* TODO: Fix JSX expression */}
-  r: 'Method not allowed' })} module.exports = {}; module.exports = {}; ursor/add-new-services-and-deploy-updates-0462 module.exports = {}; ursor/add-new-services-and-deploy-updates-0462 module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; // Validate required fields' if (!data.name || typeof data.value !== 'number') {/* TODO: Fix JSX expression */}
+  r: 'Method not allowed' })} module.exports = {} module.exports = {}; ursor/add-new-services-and-deploy-updates-0462 module.exports = {}; ursor/add-new-services-and-deploy-updates-0462 module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; // Validate required fields' if (!data.name || typeof data.value !== 'number') {/* TODO: Fix JSX expression */}
   r: 'Invalid data format' })} ' // Log the web vitals data (in production) you'd send this to your analytics service)' // console.log('Web,
   Vitals: ' {/* TODO: Fix JSX expression */}
   e: data.value} ur,

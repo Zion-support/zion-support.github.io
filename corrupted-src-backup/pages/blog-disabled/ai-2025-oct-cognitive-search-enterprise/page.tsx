@@ -1,7 +1,7 @@
 impo, r, t { ArrowLe, f, t, Bra, i, n, Sear, c, h, Trending, U, p, Z, a, p } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 export default function CognitiveSearchEnterprise20, 2, 5() { 
-  return(:src/pages/blog/ai-2025-oct-cognitive-search-enterprise/page.tsx;
+  return(:src/pages/blog/ai-2025-oct-cognitive-search-enterprise/page.tsx
     <React.Fragment>
       <Helm, e, t>
         <title>
@@ -301,10 +301,10 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
                   <ul className="space-y-3 text-gray-300">
                   <h3 className="text-2xl font-bold mb-4 text-purple-300">Healthcare System</h3>
                   <ul className="space-y-3 text-gray-300">
-                    <li >• 94% accuracy in clinical knowledge retrieval</li>
-                    <li >• 82% faster care protocol discovery</li>
-                    <li >• $67 M saved from improved efficiency</li>
-                    <li >• HIPAA-compliant with full audit trails</li>
+                    <li>• 94% accuracy in clinical knowledge retrieval</li>
+                    <li>• 82% faster care protocol discovery</li>
+                    <li>• $67 M saved from improved efficiency</li>
+                    <li>• HIPAA-compliant with full audit trails</li>
                   </ul>
   </div>
   </div>
@@ -393,7 +393,7 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
                 <Brain className="ml-2 h-5 w-5 ">,
                 <Brain className="ml-2 h-5 w-5" />);
 export default function CognitiveSearchEnterprise20, 2, 5() {/* TODO: Fix JSX expression */}
-};
+}
   </div>
   </div>
   </div>

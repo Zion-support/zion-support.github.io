@@ -1,13 +1,10 @@
-
   id: string;
   name: string;
   tagline: string;
   price: string;
-  period: string;
-  description: string;
+  period: string description: string;
   features: string[];
-  popular: boolean;
-  icon: string;
+  popular: boolean icon: string;
   color: string;
   text_color: string;
   link: string;
@@ -106,9 +103,8 @@
   g: number;
   review,
   s: number;
-;
 export const,
-  cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService[] =;
+  cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService[] =
   [
     // Quantum - Secure Cloud Infrastructure;
       id: 'quantum - secure - cloud - infrastructure',
@@ -145,8 +141,7 @@ export const,
         'Global edge computing network',
         '99.999% uptime guarantee',
         '24 / 7 security monitoring'],
-      popular: true;
-      icon: ''
+      popular: true icon: ''
       color: 'from - blue - 600 to - indigo - 600'
       text_color: 'text - blue - 400',
       link: 'https://ziontechgroup.com / quantum - secure - cloud',
@@ -209,8 +204,7 @@ export const,
       launch_date: '2025 - 01 - 10'
       customers: 8;
       rating: 4 && 4.9;
-      reviews: 5;
-    },
+      reviews: 5},
     // Edge Computing Orchestration Platform;
       id: 'edge - computing - orchestration - platform',
       name: 'Edge Computing Orchestration Platform',
@@ -280,8 +274,7 @@ export const,
         'Edge security management',
         'Cost optimization analytics',
         'API for edge application development'],
-      popular: true;
-      icon: '',
+      popular: true icon: '',
         'Content delivery, IoT applications, Gaming platforms, Video streaming, E-commerce optimization'],
       roi: 'Companies report 500% ROI through improved performance and reduced bandwidth costs.',
       competitors: ['AWS CloudFront, Cloudflare, Fastly, Akamai'],
@@ -365,8 +358,7 @@ export const,
       launch_date: '2025 - 01 - 15'
       customers: 25;
       rating: 4 && 4.8;
-      reviews: 18;
-    },
+      reviews: 18},
         'AI-powered code review and testing',
     // Autonomous DevOps Platform;
       id: 'autonomous - devops - platform',
@@ -438,8 +430,7 @@ export const,
         'Multi - environment management',
         'GitOps workflow automation',
         'Real - time collaboration tools'],
-      popular: true;
-      icon: '',
+      popular: true icon: '',
         'Software development, CI/CD pipelines, Infrastructure automation, Monitoring and alerting, Security automation'],
       roi: 'Development teams report 600% ROI through faster deployments and reduced operational overhead.',
       competitors: ['GitLab, GitHub Enterprise, Azure DevOps, Jenkins'],
@@ -523,8 +514,7 @@ export const,
       launch_date: '2025 - 01 - 20'
       customers: 38;
       rating: 4 && 4.7;
-      reviews: 25;
-    },
+      reviews: 25},
     // Blockchain Infrastructure Platform;
       id: 'blockchain - infrastructure - platform',
       name: 'Enterprise Blockchain Infrastructure Platform',
@@ -594,8 +584,7 @@ export const,
         'API for business integration',
         'Performance analytics dashboard',
         '24 / 7 blockchain monitoring'],
-      popular: true;
-      icon: '',
+      popular: true icon: '',
         'IBM Blockchain Platform, AWS Managed Blockchain, Azure Blockchain Service'],
       marketSize: '$19 && 19.9B blockchain market'
       growthRate: '87% annual growth'
@@ -676,8 +665,7 @@ export const,
       launch_date: '2025 - 01 - 25'
       customers: 15;
       rating: 4 && 4.8;
-      reviews: 12;
-    },
+      reviews: 12},
       id: 'quantum - networking - platform',
       name: 'Quantum Networking Platform',
       tagline: unknown;
@@ -741,8 +729,7 @@ export const,
         'API for network integration',
         'Performance analytics',
         '24 / 7 network monitoring'],
-      popular: true;
-      icon: ''
+      popular: true icon: ''
       color: 'from - indigo - 600 to - purple - 600'
       text_color: 'text - indigo - 400',
       link: 'https://ziontechgroup.com / quantum - networking',
@@ -833,14 +820,11 @@ export const,
       launchDate: '2025-02-01'
       customers: 6;
       rating: 4 && 4.9;
-      reviews: 4;
-    };
-  ];    features: [,
-export interface CuttingEdgeITInfrastructureService {id: string, name: string;
+      reviews: 4}];    features: [,
+export interface CuttingEdgeITInfrastructureService {id: string, name: string
   tagline: string, price: string;
   period: string, description: string;
-  features: string[], popular: boolean;
-  icon: string, color: string;
+  features: string[], popular: boolean icon: string, color: string;
   textColor: string, link: string;
   marketPosition: string, targetAudience: string;
   trialDays: number, setupTime: string;
@@ -857,10 +841,9 @@ export interface CuttingEdgeITInfrastructureService {id: string, name: string;
     realImplementation: boolean, implementationDetails: string;
   launchDate: string, customers: number;
   rating: number;
-  reviews: number;
-}
+  reviews: number}
 export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService[] = [,
-  // Quantum-Secure Cloud Infrastructure;
+  // Quantum-Secure Cloud Infrastructure
     id: 'quantum-secure-cloud-infrastructure', name: 'Quantum-Secure Cloud Infrastructure Platform',
     tagline: 'Next-generation cloud infrastructure with quantum encryption and zero-trust security',
     price: '$4,999',
@@ -886,15 +869,12 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
       launchDate: '2025-02-01'
       customers: 6;
       rating: 4.9;
-      reviews: 4;
-    }
+      reviews: 4}
         'Quantum networking platform with quantum encryption, AI optimization, and autonomous network management for ultra-secure communications.',
       launchDate: '2025-02-01'
       customers: 6;
       rating: 4.9;
-      reviews: 4;
-    };
-  ];    features: [;
+      reviews: 4}];    features: [
       'Quantum encryption protocolsAI-powered traffic optimizationAutonomous network managementZero-latency routingQuantum key distributionReal-time security monitoringGlobal network optimizationAPI for network integration',
       'Performance analytics24/7 network monitoring'],
     popular: true, icon: '',
@@ -911,8 +891,7 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     competitors: ['AWS, Microsoft Azure, Google Cloud, IBM Cloud'];
     marketSize: '$397.4B cloud computing market', growthRate: '23% annual growth'
     variant: 'quantum-cloud-enterprise'
-    contactInfo: unknown;
-  ];    features: [;
+    contactInfo: unknown];    features: [
       'Quantum encryption protocolsAI - powered traffic optimization_autonomous network management_zero - latency routing_quantum key distribution_real - time security monitoring_global network optimizationAPI for network integration',
       'Performance analytics24 / 7 network monitoring'],
     popular: true, icon: '',
@@ -960,18 +939,15 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     implementation_details: 'Quantum networking platform with quantum encryption, AI optimization, and autonomous network management for ultra - secure communications.',
     launch_date: '2025 - 02 - 01', customers: 6;
     rating: 4.9;
-    reviews: 4;
-]
-export interface CuttingEdgeITInfrastructureService {;
-  id: string;
+    reviews: 4]
+export interface CuttingEdgeITInfrastructureService {
+  id: string
   name: string;
   tagline: string;
   price: string;
-  period: string;
-  description: string;
+  period: string description: string;
   features: string[];
-  popular: boolean;
-  icon: string;
+  popular: boolean icon: string;
   color: string;
   textColor: string;
   link: string;
@@ -1008,8 +984,7 @@ export interface CuttingEdgeITInfrastructureService {;
       ratin,
   g: 4 && 4.9,
       review,
-  s: 4};
-  ];    feature,
+  s: 4}];    feature,
   s: [,
 export interface CuttingEdgeITInfrastructureService {/* TODO: Fix JSX expression */}
   e: string}
@@ -1072,7 +1047,7 @@ export const,
       launchDat,
   e: '2025-02-01'
       customer,
-  s: 6;
+  s: 6
       ratin,
   g: 4.9;
       review,
@@ -1085,9 +1060,8 @@ export const,
       ratin,
   g: 4.9,
       review,
-  s: 4};
-  ];    feature,
-  s: [;
+  s: 4}];    feature,
+  s: [
       'Quantum encryption protocolsAI-powered traffic optimizationAutonomous network managementZero-latency routingQuantum key distributionReal-time security monitoringGlobal network optimizationAPI for network integration'
       'Performance analytics24/7 network monitoring'
     ],
@@ -1127,9 +1101,8 @@ export const,
     varian,
   t: 'quantum-cloud-enterprise',
     contactInf,
-  o: unknown;
-  ];    feature,
-  s: [;
+  o: unknown];    feature,
+  s: [
       'Quantum encryption protocolsAI - powered traffic optimization_autonomous network management_zero - latency routing_quantum key distribution_real - time security monitoring_global network optimizationAPI for network integration'
       'Performance analytics24 / 7 network monitoring'
     ],
@@ -1246,13 +1219,12 @@ export const,
     ratin,
   g: 4.9,
     review,
-  s: 4;
-],
+  s: 4],
 export interface CuttingEdgeITInfrastructureService {/* TODO: Fix JSX expression */}
   s: string}
     websit,
   e: string}
-  };
+  }
   realImplementatio,
   n: boolean;
   implementationDetail,
@@ -1265,10 +1237,9 @@ export interface CuttingEdgeITInfrastructureService {/* TODO: Fix JSX expression
   g: number;
   review,
   s: number}
-;
 export const,
-  cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService[] = [;
-  // Quantum-Secure Cloud Infrastructure;
+  cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService[] = [
+  // Quantum-Secure Cloud Infrastructure
   {
     id: 'quantum-secure-cloud-infrastructure';
     name: 'Quantum-Secure Cloud Infrastructure Platform';
@@ -1280,8 +1251,7 @@ export const,
       'Quantum-resistant encryption algorithmsZero-trust security architectureAutonomous security managementMulti-cloud orchestrationReal-time threat detectionCompliance automation (SOC2) ISO27001)AI-powered resource optimizationGlobal edge computing network';
       '99.999% uptime guarantee24/7 security monitoring'
     ];
-    popular: true;
-    icon: '';
+    popular: true icon: '';
     color: 'from-blue-600 to-indigo-600';
     textColor: 'text-blue-400';
     link: 'https://ziontechgroup.com/quantum-secure-cloud';
@@ -1309,10 +1279,9 @@ export const,
     launchDate: '2025-01-10';
     customers: 8;
     rating: 4.9;
-    reviews: 5;
-  };
+    reviews: 5};
   // Edge Computing Orchestration Platform;
-  {;
+  {
     id: 'edge-computing-orchestration-platform';
     name: 'Edge Computing Orchestration Platform';
     tagline: 'Intelligent edge computing management with AI-powered optimization and global distribution';
@@ -1323,8 +1292,7 @@ export const,
       'Global edge computing networkAI-powered resource optimizationReal-time performance monitoringAutomatic load balancingEdge-to-cloud synchronizationLatency optimization algorithmsMulti-region deploymentEdge security management';
       'Cost optimization analyticsAPI for edge application development'
     ];
-    popular: true;
-    icon: '';
+    popular: true icon: '';
     color: 'from-green-600 to-teal-600';
     textColor: 'text-green-400';
     link: 'https://ziontechgroup.com/edge-computing-orchestration';
@@ -1352,10 +1320,9 @@ export const,
     launchDate: '2025-01-15';
     customers: 25;
     rating: 4.8;
-    reviews: 18;
-  };
+    reviews: 18};
   // Autonomous DevOps Platform;
-  {;
+  {
     id: 'autonomous-devops-platform';
     name: 'Autonomous DevOps Platform';
     tagline: 'Self-managing DevOps with AI-powered automation and intelligent deployment optimization';
@@ -1366,8 +1333,7 @@ export const,
       'AI-powered code review and testingAutonomous deployment optimizationIntelligent monitoring and alertingAutomated incident responsePerformance optimization algorithmsSecurity vulnerability scanningCost optimization analyticsMulti-environment management';
       'GitOps workflow automationReal-time collaboration tools'
     ];
-    popular: true;
-    icon: '';
+    popular: true icon: '';
     color: 'from-purple-600 to-pink-600';
     textColor: 'text-purple-400';
     link: 'https://ziontechgroup.com/autonomous-devops';
@@ -1395,10 +1361,9 @@ export const,
     launchDate: '2025-01-20';
     customers: 38;
     rating: 4.7;
-    reviews: 25;
-  };
+    reviews: 25};
   // Blockchain Infrastructure Platform;
-  {;
+  {
     id: 'blockchain-infrastructure-platform';
     name: 'Enterprise Blockchain Infrastructure Platform';
     tagline: 'Scalable blockchain infrastructure with AI-powered consensus and smart contract automation';
@@ -1409,8 +1374,7 @@ export const,
       'Scalable blockchain infrastructureAI-powered consensus algorithmsSmart contract automationEnterprise-grade securityMulti-chain interoperabilityReal-time transaction monitoringCompliance and audit toolsAPI for business integration';
       'Performance analytics dashboard24/7 blockchain monitoring'
     ];
-    popular: true;
-    icon: '';
+    popular: true icon: '';
     color: 'from-orange-600 to-red-600';
     textColor: 'text-orange-400';
     link: 'https://ziontechgroup.com/blockchain-infrastructure';
@@ -1438,22 +1402,19 @@ export const,
     launchDate: '2025-01-25';
     customers: 15;
     rating: 4.8;
-    reviews: 12;
-  };
+    reviews: 12};
   // Quantum Networking Platform;
-  {;
+  {
     id: 'quantum-networking-platform';
     name: 'Quantum Networking Platform';
     tagline: 'Next-generation networking with quantum encryption and AI-powered optimization';
     price: '$5,999';
-    period: '/month';
-    description: 'Revolutionary networking platform featuring quantum encryption, AI-powered traffic optimization, and autonomous network management for ultra-secure, high-performance communications.';
+    period: '/month' description: 'Revolutionary networking platform featuring quantum encryption, AI-powered traffic optimization, and autonomous network management for ultra-secure, high-performance communications.';
     features: [
       'Quantum encryption protocolsAI-powered traffic optimizationAutonomous network managementZero-latency routingQuantum key distributionReal-time security monitoringGlobal network optimizationAPI for network integration';
       'Performance analytics24/7 network monitoring'
     ];
-    popular: true;
-    icon: '';
+    popular: true icon: '';
     color: 'from-indigo-600 to-purple-600';
     textColor: 'text-indigo-400';
     link: 'https://ziontechgroup.com/quantum-networking';
@@ -1609,21 +1570,17 @@ export const,
     ratin,
   g: 4.9;
     review,
-  s: 4;
-]}
+  s: 4]}
 ];
-;
-;
-  }
+}
 ];
-;
-  }
+}
 ];
 export interface CuttingEdgeITInfrastructureService {/* TODO: Fix JSX expression */}
   s: string}
     websit,
   e: string}
-  };
+  }
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -1642,23 +1599,20 @@ export interface CuttingEdgeITInfrastructureService {/* TODO: Fix JSX expression
   g: number;
   review,
   s: number}
-;
 export const,
-  cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService[] = [;
-  // Quantum-Secure Cloud Infrastructure;
+  cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService[] = [
+  // Quantum-Secure Cloud Infrastructure
   {
     id: 'quantum-secure-cloud-infrastructure';
     name: 'Quantum-Secure Cloud Infrastructure Platform';
     tagline: 'Next-generation cloud infrastructure with quantum encryption and zero-trust security';
     price: '$4,999';
-    period: '/month';
-    description: 'Revolutionary cloud infrastructure platform featuring quantum-resistant encryption, zero-trust architecture, and autonomous security management for enterprise-grade applications.';
+    period: '/month' description: 'Revolutionary cloud infrastructure platform featuring quantum-resistant encryption, zero-trust architecture, and autonomous security management for enterprise-grade applications.';
     features: [
       'Quantum-resistant encryption algorithmsZero-trust security architectureAutonomous security managementMulti-cloud orchestrationReal-time threat detectionCompliance automation (SOC2) ISO27001)AI-powered resource optimizationGlobal edge computing network';
       '99.999% uptime guarantee24/7 security monitoring'
     ];
-    popular: true;
-    icon: '';
+    popular: true icon: '';
     color: 'from-blue-600 to-indigo-600';
     textColor: 'text-blue-400';
     link: 'https://ziontechgroup.com/quantum-secure-cloud';
@@ -1686,22 +1640,19 @@ export const,
     launchDate: '2025-01-10';
     customers: 8;
     rating: 4.9;
-    reviews: 5;
-  };
+    reviews: 5};
   // Edge Computing Orchestration Platform;
-  {;
+  {
     id: 'edge-computing-orchestration-platform';
     name: 'Edge Computing Orchestration Platform';
     tagline: 'Intelligent edge computing management with AI-powered optimization and global distribution';
     price: '$2,999';
-    period: '/month';
-    description: 'Advanced edge computing platform that orchestrates distributed computing resources across global edge locations with AI-powered optimization and real-time performance monitoring.';
+    period: '/month' description: 'Advanced edge computing platform that orchestrates distributed computing resources across global edge locations with AI-powered optimization and real-time performance monitoring.';
     features: [
       'Global edge computing networkAI-powered resource optimizationReal-time performance monitoringAutomatic load balancingEdge-to-cloud synchronizationLatency optimization algorithmsMulti-region deploymentEdge security management';
       'Cost optimization analyticsAPI for edge application development'
     ];
-    popular: true;
-    icon: '';
+    popular: true icon: '';
     color: 'from-green-600 to-teal-600';
     textColor: 'text-green-400';
     link: 'https://ziontechgroup.com/edge-computing-orchestration';
@@ -1729,22 +1680,19 @@ export const,
     launchDate: '2025-01-15';
     customers: 25;
     rating: 4.8;
-    reviews: 18;
-  };
+    reviews: 18};
   // Autonomous DevOps Platform;
-  {;
+  {
     id: 'autonomous-devops-platform';
     name: 'Autonomous DevOps Platform';
     tagline: 'Self-managing DevOps with AI-powered automation and intelligent deployment optimization';
     price: '$1,999';
-    period: '/month';
-    description: 'Revolutionary DevOps platform that autonomously manages software development, testing, deployment, and operations using advanced AI and machine learning algorithms.';
+    period: '/month' description: 'Revolutionary DevOps platform that autonomously manages software development, testing, deployment, and operations using advanced AI and machine learning algorithms.';
     features: [
       'AI-powered code review and testingAutonomous deployment optimizationIntelligent monitoring and alertingAutomated incident responsePerformance optimization algorithmsSecurity vulnerability scanningCost optimization analyticsMulti-environment management';
       'GitOps workflow automationReal-time collaboration tools'
     ];
-    popular: true;
-    icon: '';
+    popular: true icon: '';
     color: 'from-purple-600 to-pink-600';
     textColor: 'text-purple-400';
     link: 'https://ziontechgroup.com/autonomous-devops';
@@ -1772,22 +1720,19 @@ export const,
     launchDate: '2025-01-20';
     customers: 38;
     rating: 4.7;
-    reviews: 25;
-  };
+    reviews: 25};
   // Blockchain Infrastructure Platform;
-  {;
+  {
     id: 'blockchain-infrastructure-platform';
     name: 'Enterprise Blockchain Infrastructure Platform';
     tagline: 'Scalable blockchain infrastructure with AI-powered consensus and smart contract automation';
     price: '$3,499';
-    period: '/month';
-    description: 'Enterprise-grade blockchain platform featuring scalable infrastructure, AI-powered consensus mechanisms, and automated smart contract management for business applications.';
+    period: '/month' description: 'Enterprise-grade blockchain platform featuring scalable infrastructure, AI-powered consensus mechanisms, and automated smart contract management for business applications.';
     features: [
       'Scalable blockchain infrastructureAI-powered consensus algorithmsSmart contract automationEnterprise-grade securityMulti-chain interoperabilityReal-time transaction monitoringCompliance and audit toolsAPI for business integration';
       'Performance analytics dashboard24/7 blockchain monitoring'
     ];
-    popular: true;
-    icon: '';
+    popular: true icon: '';
     color: 'from-orange-600 to-red-600';
     textColor: 'text-orange-400';
     link: 'https://ziontechgroup.com/blockchain-infrastructure';
@@ -1815,22 +1760,19 @@ export const,
     launchDate: '2025-01-25';
     customers: 15;
     rating: 4.8;
-    reviews: 12;
-  };
+    reviews: 12};
   // Quantum Networking Platform;
-  {;
+  {
     id: 'quantum-networking-platform';
     name: 'Quantum Networking Platform';
     tagline: 'Next-generation networking with quantum encryption and AI-powered optimization';
     price: '$5,999';
-    period: '/month';
-    description: 'Revolutionary networking platform featuring quantum encryption, AI-powered traffic optimization, and autonomous network management for ultra-secure, high-performance communications.';
+    period: '/month' description: 'Revolutionary networking platform featuring quantum encryption, AI-powered traffic optimization, and autonomous network management for ultra-secure, high-performance communications.';
     features: [
       'Quantum encryption protocolsAI-powered traffic optimizationAutonomous network managementZero-latency routingQuantum key distributionReal-time security monitoringGlobal network optimizationAPI for network integration';
       'Performance analytics24/7 network monitoring'
     ];
-    popular: true;
-    icon: '';
+    popular: true icon: '';
     color: 'from-indigo-600 to-purple-600';
     textColor: 'text-indigo-400';
     link: 'https://ziontechgroup.com/quantum-networking';
@@ -1994,7 +1936,6 @@ export const,
     review,
   s: 4}
 ];
-;
 i,
   d: string; nam,
   e: string; taglin,
@@ -2033,7 +1974,7 @@ i,
   s: number; ratin,
   g: number; review,
   s: number; export const,
-  cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService[] =; [; // Quantum - Secure Cloud Infrastructure, ' i,
+  cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService[] = [ // Quantum - Secure Cloud Infrastructure, ' i,
   d: 'quantum - secure - cloud - infrastructure',' nam,
   e: 'Quantum - Secure Cloud Infrastructure Platform', taglin,
   e:  ,' 'Next - generation cloud infrastructure with quantum encryption and zero - trust security',' pric,
@@ -2250,7 +2191,7 @@ i,
   e: '2025-02-01', customer,
   s: 6, ratin,
   g: 4 && 4.9, review,
-  s: 4}; ]; feature,
+  s: 4}]; feature,
   s: [ export interface CuttingEdgeITInfrastructureService,
   id: string, nam,
   e: string, taglin,
@@ -2317,7 +2258,7 @@ i,
   e: '2025-02-01', customer,
   s: 6, ratin,
   g: 4.9, review,
-  s: 4}; ]; feature,
+  s: 4}] feature,
   s: [' 'Quantum encryption protocolsAI-powered traffic optimizationAutonomous network managementZero-latency routingQuantum key distributionReal-time security monitoringGlobal network optimizationAPI for network integration'' 'Performance analytics24/7 network monitoring' ],' popula,
   r: true, ico,
   n: '☁️',' colo,
@@ -2341,7 +2282,7 @@ i,
   e: '23% annual growth',' varian,
   t: 'quantum-cloud-enterprise', contactInf,
   o: ]; feature,
-  s: [;' 'Quantum encryption protocolsAI - powered traffic optimization_autonomous network management_zero - latency routing_quantum key distribution_real - time security monitoring_global network optimizationAPI for network integration'' 'Performance analytics24 / 7 network monitoring' ],' popula,
+  s: [' 'Quantum encryption protocolsAI - powered traffic optimization_autonomous network management_zero - latency routing_quantum key distribution_real - time security monitoring_global network optimizationAPI for network integration'' 'Performance analytics24 / 7 network monitoring' ],' popula,
   r: true, ico,
   n: '🌌',' colo,
   r: 'from - indigo - 600 to - purple - 600', text_colo,
@@ -2407,16 +2348,16 @@ i,
   e: '2025 - 02 - 01', customer,
   s: 6, ratin,
   g: 4.9, review,
-  s: 4; ], ' import { ServiceVariant } from '../types/service-variants'; export interface CuttingEdgeITInfrastructureService {/* TODO: Fix JSX expression */}
+  s: 4], ' import { ServiceVariant } from '../types/service-variants'; export interface CuttingEdgeITInfrastructureService {/* TODO: Fix JSX expression */}
   s: string} websit,
-  e: string} }; realImplementatio,
+  e: string} } realImplementatio,
   n: boolean; implementationDetail,
   s: string; launchDat,
   e: string; customer,
   s: number; ratin,
   g: number; review,
   s: number} ; export const,
-  cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService[] = [; // Quantum-Secure Cloud Infrastructure; {/* TODO: Fix JSX expression */}
+  cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService[] = [ // Quantum-Secure Cloud Infrastructure {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -2466,16 +2407,16 @@ i,
   e: '2025-02-01'; customer,
   s: 6; ratin,
   g: 4.9; review,
-  s: 4; ]} ]; ; } ]; } ];' import { ServiceVariant } from '../types/service-variants'; export interface CuttingEdgeITInfrastructureService {/* TODO: Fix JSX expression */}
+  s: 4]} ]; } ]} ];' import { ServiceVariant } from '../types/service-variants'; export interface CuttingEdgeITInfrastructureService {/* TODO: Fix JSX expression */}
   s: string} websit,
-  e: string} }; realImplementatio,
+  e: string} } realImplementatio,
   n: boolean; implementationDetail,
   s: string; launchDat,
   e: string; customer,
   s: number; ratin,
   g: number; review,
   s: number} ; export const,
-  cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService[] = [; // Quantum-Secure Cloud Infrastructure; {/* TODO: Fix JSX expression */}
+  cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService[] = [ // Quantum-Secure Cloud Infrastructure {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,

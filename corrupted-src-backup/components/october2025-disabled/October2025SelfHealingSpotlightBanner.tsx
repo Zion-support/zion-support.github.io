@@ -9,7 +9,7 @@ export default function October2025SelfHealingSpotlightBann, e, r() {
         <div, className='flex, fle, x-col, m, d: fl, e, x-row, item, s-center, ga, p-8'></div>
           <div, className='fl, e, x-1'></div>
             <div, className='inli, n, e-block, b, g-r, e, d-500, tex, t-white, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-bold, m, b-3, animat, e-boun, c, e'>
-              🔥 H, O, T - JUST, PUBLISHED, TODAY;
+              🔥 H, O, T - JUST, PUBLISHED, TODAY
             </div>
             <h3, className='te, x, t-4xl, fon, t-bold, m, b-4'>
               Agentic, Sel, f-Healing, Infrastructur, e;

@@ -6,7 +6,7 @@ import { Palette, Target, Zap, Settings, CheckCircle, Star,  Palette,  Target,  
 const AIDesignAssistantPage: React.FC = () => {
   const features = [];
   return (
-    {// TODO: Add content;}
+    {// TODO: Add content}
 };
   ico,
   n: Palette,
@@ -15,8 +15,7 @@ const AIDesignAssistantPage: React.FC = () => {
       descriptio,
   n: 'AI-powered design creation and optimization',
       benefit,
-  s: ['Auto design', 'Style optimization', 'Brand consistency'];
-    },
+  s: ['Auto design', 'Style optimization', 'Brand consistency']},
       ico,
   n: Target,
       titl,
@@ -89,6 +88,5 @@ const AIDesignAssistantPage: React.FC = () => {
       </main>
       <Footer /></Footer>
     </div>
-  );
-};
-export default PagePage;
+  )};
+export default PagePage

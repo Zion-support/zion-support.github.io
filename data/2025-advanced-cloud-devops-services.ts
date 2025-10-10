@@ -2,9 +2,8 @@ export interface CloudDevOpsService {/* TODO: Fix JSX expression */}
   s: number}
     setupTim,
   e: string}
-  };
-  keyFeatures: string[];
-  benefits: string[];
+  }
+  keyFeatures: string[] benefits: string[];
   targetAudience: string[];
   marketPosition: string;
   competitors: string[];
@@ -16,22 +15,20 @@ export interface CloudDevOpsService {/* TODO: Fix JSX expression */}
   integrations: string[];
   support: string;
   compliance: string[];
-  link: string;
-  icon: string;
+  link: string icon: string;
   color: string;
   popular: boolean;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
-}
+  reviews: number}
 export const advancedCloudDevOpsServices2025: CloudDevOpsService[] = [,
     id: 'multi-cloud-orchestration-platform',
     name: 'Multi-Cloud Orchestration Platform',
     tagline: 'Unified management and orchestration across multiple cloud providers',
     description: 'Advanced multi-cloud platform that provides unified management, cost optimization, and seamless orchestration across AWS, Azure, Google Cloud, and other cloud providers.',
     category: 'Cloud Management'
-    pricing: unknown;
+    pricing: unknown
       starter: '$399/month',
       professional: '$999/month',
       enterprise: '$2,999/month',
@@ -140,7 +137,7 @@ export const,
     marketPosition: 'Competitive with HashiCorp Terraform Cloud ($20/user/month), CloudHealth ($500/month), and RightScale ($1)000/month). Our advantage: Unified multi-cloud orchestration with cost optimization.',
     competitors: ['HashiCorp Terraform Cloud, CloudHealth, RightScale, Flexera, CloudCheckr'],
     techStack: ['Python, Go, React, Node.js, PostgreSQL, Redis, Kubernetes, Docker, Terraform'],
-    realImplementation: true;
+    realImplementation: true
     implementationDetails: 'Multi-cloud orchestration platform with unified management, cost optimization, and automated operations. Includes training and customization.',
     roi: 'Organizations typically see 200-350% ROI within 6-12 months through cost optimization and operational efficiency.',
     useCases: [,
@@ -176,8 +173,7 @@ export const,
     launchDate: '2024-12-01'
     customers: 110;
     rating: 4.8;
-    reviews: 167;
-  },
+    reviews: 167},
     id: 'intelligent-devops-automation-suite',
     name: 'Intelligent DevOps Automation Suite',
     tagline: 'AI-powered DevOps automation with intelligent CI/CD and infrastructure management',
@@ -307,8 +303,7 @@ export const,
     launchDate: '2024-12-01'
     customers: 95;
     rating: 4.7;
-    reviews: 145;
-  },
+    reviews: 145},
     id: 'enterprise-kubernetes-management-platform',
     name: 'Enterprise Kubernetes Management Platform',
     tagline: 'Enterprise-grade Kubernetes management with advanced monitoring and automation',
@@ -438,8 +433,7 @@ export const,
     launchDate: '2024-11-15'
     customers: 75;
     rating: 4.8;
-    reviews: 112;
-  },
+    reviews: 112},
     id: 'intelligent-infrastructure-monitoring',
     name: 'Intelligent Infrastructure Monitoring',
     tagline: 'AI-powered infrastructure monitoring with predictive analytics and automated alerting',
@@ -569,8 +563,7 @@ export const,
     launchDate: '2024-12-01'
     customers: 160;
     rating: 4.8;
-    reviews: 234;
-  },
+    reviews: 234},
     id: 'cloud-security-posture-management',
     name: 'Cloud Security Posture Management',
     tagline: 'Comprehensive cloud security management with automated compliance and threat detection',
@@ -726,7 +719,7 @@ export const,
   s: 123}
 ];
 export interface CloudDevOpsService,
-  id: string; nam,
+  id: string nam,
   e: string; taglin,
   e: string; descriptio,
   n: string; categor,
@@ -934,4 +927,4 @@ export interface CloudDevOpsService,
   e: '2024-11-01', customer,
   s: 85, ratin,
   g: 4.9, review,
-  s: 123 } ];'
+  s: 123 } ]'

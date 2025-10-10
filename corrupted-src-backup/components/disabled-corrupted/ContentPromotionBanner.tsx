@@ -6,7 +6,7 @@ export default function ContentPromotionBanner() {/* TODO: Fix JSX expression */
     {/* TODO: Fix JSX expression */}
     },
     {/* TODO: Fix JSX expression */}
-    }]; return(<div, classNam, e = "bg-gradie, n, t-to-r, fro, m-indi, g, o-600, vi, a-purp, l, e-600, t, o-pi, n, k-600, rounde, d-2x, l, p-8, m, d: p-12, tex, t-white, relative, overflow-hidd, e, n">
+    }] return(<div, classNam, e = "bg-gradie, n, t-to-r, fro, m-indi, g, o-600, vi, a-purp, l, e-600, t, o-pi, n, k-600, rounde, d-2x, l, p-8, m, d: p-12, tex, t-white, relative, overflow-hidd, e, n">
       {/* Background, Patt, e, r, n */}
       <div, classNam, e = "absolute, inse, t-0, opacit, y-10">
   ]; return (
@@ -61,8 +61,7 @@ export default function ContentPromotionBanner() {/* TODO: Fix JSX expression */
                 </sp, a, n>
                 {  it, e, m.isN, e, w  && (
                   <span, classNam, e = "bg-r, e, d-500, tex, t-white, tex, t-xs, p, x-2, p, y-1, rounde, d-full, fon, t-medi, u, m">
-                    N, E, W;
-  ]; return (<div, classNam, e = "bg-gradie, n, t-to-r, fro, m-indi, g, o-600, vi, a-purp, l, e-600, t, o-pi, n, k-600, rounde, d-2x, l, p-8, m, d: p-12, tex, t-white, relative, overflow-hidd, e, n"></div>
+                    N, E, W]; return (<div, classNam, e = "bg-gradie, n, t-to-r, fro, m-indi, g, o-600, vi, a-purp, l, e-600, t, o-pi, n, k-600, rounde, d-2x, l, p-8, m, d: p-12, tex, t-white, relative, overflow-hidd, e, n"></div>
       {/* Background, Patt, e, r, n */}"
       <div, classNam, e = "absolute, inse, t-0, opacit, y-10"></div>"
         <div, className="absolute, to, p-0, lef, t-0 w-ful, l, h-full, b, g-gradie, n, t-to-br, fro, m-whi, t, e/20, t, o-transpare, n, t" /></div>
@@ -158,5 +157,4 @@ export default function ContentPromotionBanner() {/* TODO: Fix JSX expression */
         </div>
       </div>
     </div>
-  );
-}"
+  )}"

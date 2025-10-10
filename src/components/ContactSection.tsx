@@ -6,18 +6,16 @@ export default function ContactSection() {
     company: '',
     service: '',
     message: ''
-  });
+  })
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
-    });
-  };
+    })};
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission here
-    console.log('Form submitted:', formData);
-  };
+    console.log('Form submitted:', formData)};
   const contactInfo = [
     {
       icon: (
@@ -229,8 +227,7 @@ export default function ContactSection() {
         </div>
       </div>
     </section>
-  );
-}
+  )}
   </button>
   </textarea>
   </label>

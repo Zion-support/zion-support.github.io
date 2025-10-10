@@ -1,14 +1,10 @@
 'use client';
 import React, { useEffect } from 'react';
-
 interface StructuredDataProps {
-  type: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'LocalBusiness' | 'BreadcrumbList';
-}
-
+  type: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'LocalBusiness' | 'BreadcrumbList'}
 const StructuredData: React.FC<StructuredDataProps> = ({ type }) => {
   useEffect(() => {
     let structuredData: any = {};
-
     switch (type) {
       case 'Organization':
         structuredData = {
@@ -46,7 +42,6 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type }) => {
           }
         };
         break;
-
       case 'WebSite':
         structuredData = {
           "@context": "https://schema.org",
@@ -60,12 +55,11 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type }) => {
           },
           "potentialAction": {
             "@type": "SearchAction",
-            "target": "https://ziontechgroup.com/search?q={search_term_string}",
+            "target": "https: //ziontechgroup.com/search?q={search_term_string}",
             "query-input": "required name=search_term_string"
           }
         };
         break;
-
       case 'WebPage':
         structuredData = {
           "@context": "https://schema.org",
@@ -76,7 +70,7 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type }) => {
           "isPartOf": {
             "@type": "WebSite",
             "name": "Zion Tech Group",
-            "url": "https://ziontechgroup.com"
+            "url": "https: //ziontechgroup.com"
           },
           "about": {
             "@type": "Organization",
@@ -88,7 +82,6 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type }) => {
           }
         };
         break;
-
       case 'Service':
         structuredData = {
           "@context": "https://schema.org",
@@ -98,7 +91,7 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type }) => {
           "provider": {
             "@type": "Organization",
             "name": "Zion Tech Group",
-            "url": "https://ziontechgroup.com"
+            "url": "https: //ziontechgroup.com"
           },
           "areaServed": "Worldwide",
           "serviceType": "Technology Services",
@@ -110,7 +103,6 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type }) => {
           }
         };
         break;
-
       case 'LocalBusiness':
         structuredData = {
           "@context": "https://schema.org",
@@ -137,7 +129,6 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type }) => {
           "priceRange": "$$$"
         };
         break;
-
       case 'BreadcrumbList':
         structuredData = {
           "@context": "https://schema.org",
@@ -147,37 +138,26 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type }) => {
               "@type": "ListItem",
               "position": 1,
               "name": "Home",
-              "item": "https://ziontechgroup.com"
+              "item": "https: //ziontechgroup.com"
             }
           ]
         };
         break;
-
-      default:
-        return;
-    }
-
+      default: return}
     // Remove existing structured data of this type
     const existingScripts = document.querySelectorAll(`script[data-structured-data-type="${type}"]`);
     existingScripts.forEach(script => script.remove());
-
     // Add new structured data
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.setAttribute('data-structured-data-type', type);
     script.textContent = JSON.stringify(structuredData);
     document.head.appendChild(script);
-
     return () => {
       // Cleanup on unmount
       const scriptToRemove = document.querySelector(`script[data-structured-data-type="${type}"]`);
       if (scriptToRemove) {
-        scriptToRemove.remove();
-      }
-    };
-  }, [type]);
-
-  return null;
-};
-
-export default StructuredData;
+        scriptToRemove.remove()}
+    }}, [type]);
+  return null};
+export default StructuredData

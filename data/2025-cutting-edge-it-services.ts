@@ -1,4 +1,3 @@
-
 export const cuttingEdgeITServices2025 = [
 export const cuttingEdgeITServices2025 = [{id: 'quantum-cloud-infrastructure-platform',
     name: 'Quantum Cloud Infrastructure Platform',
@@ -15,7 +14,7 @@ export const cuttingEdgeITServices2025 = [{id: 'quantum-cloud-infrastructure-pla
       'Quantum-enhanced data processing'
       'Automated infrastructure management'
     ]
-    pricing: starter: unknown;
+    pricing: starter: unknown
         price: 399}
         period: 'month',
         features: [}
@@ -30,7 +29,7 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
           'Email support'
         ]
       }
-      professional: price: 999;
+      professional: price: 999
         period: 'month'
         features: [
       professiona,
@@ -94,7 +93,7 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
     competitiveAdvantag,
   e: 'First quantum-enhanced cloud infrastructure, quantum-resistant security, real-time optimization'
     useCase,
-  s: [;
+  s: [
       'High-security cloud deployments'
       'Financial services infrastructure'
       'Government cloud systems'
@@ -129,7 +128,7 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
   n:
       'Advanced platform for managing and orchestrating edge computing resources across distributed networks, enabling real-time processing and low-latency applications.'
     feature,
-  s: [;
+  s: [
       'Distributed edge node management'
       'Real-time resource orchestration'
       'Intelligent workload distribution'
@@ -221,7 +220,7 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
     competitiveAdvantag,
   e: 'Advanced edge orchestration, AI model deployment, real-time optimization'
     useCase,
-  s: [;
+  s: [
       'IoT device management'
       'Smart city infrastructure'
       'Manufacturing automation'
@@ -229,7 +228,7 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
       'Real-time analytics platforms'
     ]
     integration,
-  s: [;
+  s: [
       'Kubernetes'
       'Docker'
       'IoT Platforms'
@@ -253,7 +252,7 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
   n:
       'Comprehensive zero-trust security platform that implements advanced authentication, authorization, and monitoring across all network resources and applications.'
     feature,
-  s: [;
+  s: [
       'Multi-factor authentication (MFA)'
       'Identity and access management (IAM)'
       'Continuous security monitoring'
@@ -345,7 +344,7 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
     competitiveAdvantag,
   e: 'Comprehensive zero-trust platform, behavioral analytics, automated threat response'
     useCase,
-  s: [;
+  s: [
       'Enterprise security implementation'
       'Government security compliance'
       'Financial services security'
@@ -380,7 +379,7 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
   n:
       'Enterprise-grade blockchain platform that enables secure, transparent, and efficient business processes through distributed ledger technology and smart contracts.'
     feature,
-  s: [;
+  s: [
       'Enterprise blockchain networks'
       'Smart contract development'
       'Consensus mechanism management'
@@ -472,7 +471,7 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
     competitiveAdvantag,
   e: 'Enterprise-grade blockchain platform, smart contract automation, legacy system integration'
     useCase,
-  s: [;
+  s: [
       'Supply chain transparency'
       'Financial transaction processing'
       'Healthcare data management'
@@ -480,7 +479,7 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
       'Manufacturing process tracking'
     ]
     integration,
-  s: [;
+  s: [
       'ERP Systems'
       'CRM Platforms'
       'Financial Systems'
@@ -504,7 +503,7 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
   n:
       'Intelligent DevOps platform that leverages artificial intelligence to automate development, testing, deployment, and monitoring processes for faster and more reliable software delivery.'
     feature,
-  s: [;
+  s: [
       'AI-powered code analysis'
       'Automated testing and quality assurance'
       'Intelligent deployment strategies'
@@ -589,7 +588,7 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
     competitiveAdvantag,
   e: 'AI-powered DevOps automation, predictive monitoring, intelligent incident response'
     useCase,
-  s: [;
+  s: [
       'Software development automation'
       'Continuous deployment pipelines'
       'Performance monitoring and optimization'
@@ -597,7 +596,7 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
       'Quality assurance automation'
     ]
     integration,
-  s: [;
+  s: [
       'GitHub'
       'GitLab'
       'Jenkins'
@@ -613,7 +612,7 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
       'DevOps Best Practices'
       'Security Standards',
       'Quality Assurance Protocols']}
-export const cuttingEdgeITServices2025 = [];      'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation'
+export const cuttingEdgeITServices2025 = []      'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation'
     id: 'quantum-cloud-infrastructure-platform', name: 'Quantum Cloud Infrastructure Platform',
     description: 'Next-generation cloud infrastructure that leverages quantum computing principles for enhanced security, performance, and scalability across distributed systems.',
     features: [,
@@ -661,29 +660,27 @@ export const cuttingEdgeITServices2025 = [];      'Software development automati
   e: [,
       'DevOps Best Practices',
       'Security Standards',
-      'Quality Assurance Protocols']};
-];      'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation'
+      'Quality Assurance Protocols']}];      'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation'
 ];      'Software development automation_continuous deployment pipelines_performance monitoring and optimization_incident response automation_quality assurance automation'
 ];      'Software development automation_continuous deployment pipelines_performance monitoring and optimization_incident response automation_quality assurance automation'
     ];
     integrations: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'];
     compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols'];
 ;,
-    compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']};
-];      'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation'
+    compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']}];      'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation'
     ];
     integrations: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'];
     compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols'];
 export const cuttingEdgeITServices2025 = [,
   {,
-    id: 'quantum-cloud-infrastructure-platform';
+    id: 'quantum-cloud-infrastructure-platform'
     name: 'Quantum Cloud Infrastructure Platform',,
   description: 'Next-generation cloud infrastructure that leverages quantum computing principles for enhanced security, performance, and scalability across distributed systems.';
     features: [
       'Quantum-enhanced security protocolsDistributed quantum computing nodesReal-time infrastructure optimizationQuantum-resistant encryptionAdvanced load balancing algorithmsPredictive scaling capabilitiesMulti-cloud quantum orchestrationReal-time performance monitoring';
       'Quantum-enhanced data processingAutomated infrastructure management'
     ];
-    pricing: {;
+    pricing: {
       starter: {,
         price: 399;
         period: 'month'}
@@ -692,10 +689,8 @@ export const cuttingEdgeITServices2025 = [,
   s: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'];
     complianc,
   e: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols'];
-;
     complianc,
-  e: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']};
-];      'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation'
+  e: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']}];      'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation'
     ];
     integration,
   s: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'];
@@ -706,7 +701,7 @@ export const cuttingEdgeITServices2025 = [
   d: 'month'}
         feature,
   s: ['Basic quantum infrastructureStandard security protocolsEmail support']}
-      };
+      }
       professiona,
   l: {/* TODO: Fix JSX expression */}
   d: 'month'}
@@ -757,7 +752,7 @@ export const cuttingEdgeITServices2025 = [
   s: ['AWSAzureGoogle CloudKubernetesDockerTerraform'];
     complianc,
   e: ['SOC2ISO 27001FedRAMPQuantum Security Standards']};
-  {;
+  {
     id: 'edge-computing-orchestration-platform';
     name: 'Edge Computing Orchestration Platform',,
   description: 'Advanced platform for managing and orchestrating edge computing resources across distributed networks, enabling real-time processing and low-latency applications.';
@@ -765,7 +760,7 @@ export const cuttingEdgeITServices2025 = [
       'Distributed edge node managementReal-time resource orchestrationIntelligent workload distributionEdge AI model deploymentDynamic scaling and optimizationEdge security and complianceReal-time monitoring and analyticsAutomated edge deployment';
       'Edge-to-cloud synchronizationPerformance optimization algorithms'
     ];
-    pricing: {;
+    pricing: {
       starter: {,
         price: 299;
         period: 'month'}
@@ -825,7 +820,7 @@ export const cuttingEdgeITServices2025 = [
   s: ['KubernetesDockerIoT PlatformsAI FrameworksCloud Platforms'];
     complianc,
   e: ['IoT Security StandardsEdge Computing ProtocolsData Privacy Regulations']};
-  {;
+  {
     id: 'zero-trust-security-platform';
     name: 'Zero Trust Security Platform',,
   description: 'Comprehensive zero-trust security platform that implements advanced authentication, authorization, and monitoring across all network resources and applications.';
@@ -833,7 +828,7 @@ export const cuttingEdgeITServices2025 = [
       'Multi-factor authentication (MFA)Identity and access management (IAM)Continuous security monitoringBehavioral analyticsThreat detection and responseSecure access service edge (SASE)Micro-segmentationReal-time risk assessment';
       'Automated security responsesComprehensive audit logging'
     ];
-    pricing: {;
+    pricing: {
       starter: {,
         price: 499;
         period: 'month'}
@@ -893,7 +888,7 @@ export const cuttingEdgeITServices2025 = [
   s: ['Active DirectoryLDAPSAMLOAuthSIEM SystemsSecurity Tools'];
     complianc,
   e: ['SOC2ISO 27001FedRAMPHIPAAPCI DSS']};
-  {;
+  {
     id: 'blockchain-enterprise-platform';
     name: 'Blockchain Enterprise Platform',,
   description: 'Enterprise-grade blockchain platform that enables secure, transparent, and efficient business processes through distributed ledger technology and smart contracts.';
@@ -901,7 +896,7 @@ export const cuttingEdgeITServices2025 = [
       'Enterprise blockchain networksSmart contract developmentConsensus mechanism managementBlockchain analytics and monitoringIntegration with legacy systemsScalable blockchain architectureSecurity and compliance toolsReal-time transaction processing';
       'Multi-party workflow automationComprehensive reporting and analytics'
     ];
-    pricing: {;
+    pricing: {
       starter: {,
         price: 599;
         period: 'month'}
@@ -961,7 +956,7 @@ export const cuttingEdgeITServices2025 = [
   s: ['ERP SystemsCRM PlatformsFinancial SystemsSupply Chain ToolsLegacy Systems'];
     complianc,
   e: ['Blockchain StandardsFinancial RegulationsData Privacy Laws']};
-  {;
+  {
     id: 'ai-powered-devops-platform';
     name: 'AI-Powered DevOps Platform',,
   description: 'Intelligent DevOps platform that leverages artificial intelligence to automate development, testing, deployment, and monitoring processes for faster and more reliable software delivery.';
@@ -969,7 +964,7 @@ export const cuttingEdgeITServices2025 = [
       'AI-powered code analysisAutomated testing and quality assuranceIntelligent deployment strategiesPredictive performance monitoringAutomated incident responseContinuous integration/continuous deployment (CI/CD)Infrastructure as code (IaC)Real-time performance optimization';
       'Automated security scanningComprehensive analytics and reporting'
     ];
-    pricing: {;
+    pricing: {
       starter: {,
         price: 399;
         period: 'month'}
@@ -1029,20 +1024,15 @@ export const cuttingEdgeITServices2025 = [
   s: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'];
     complianc,
   e: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']}
-];
-  }
-];
-  }
-];
-  }
-];
-  }];
+]}
+]}
+]}
+]}];
     integration,
   s: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'];
     complianc,
   e: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']}
 ];
-;
 export const cuttingEdgeITServices2025 = [ export const cuttingEdgeITServices2025 = [ i,
   d: 'quantum-cloud-infrastructure-platform'' nam,
   e: 'Quantum Cloud Infrastructure Platform' descriptio,
@@ -1192,7 +1182,7 @@ export const cuttingEdgeITServices2025 = [ export const cuttingEdgeITServices202
   e: ' 'AI-powered DevOps automation, predictive monitoring, intelligent incident response' useCase,
   s: [' 'Software development automation'' 'Continuous deployment pipelines'' 'Performance monitoring and optimization'' 'Incident response automation'' 'Quality assurance automation' ] integration,
   s: [' 'GitHub'' 'GitLab'' 'Jenkins'' 'Docker'' 'Kubernetes'' 'AWS'' 'Azure'' 'Google Cloud' ] complianc,
-  e: [' 'DevOps Best Practices'' 'Security Standards'' 'Quality Assurance Protocols' ] } export const cuttingEdgeITServices2025 = [ ' ]; 'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation'' i,
+  e: [' 'DevOps Best Practices'' 'Security Standards'' 'Quality Assurance Protocols' ] } export const cuttingEdgeITServices2025 = [ ' ] 'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation'' i,
   d: 'quantum-cloud-infrastructure-platform', nam,
   e: 'Quantum Cloud Infrastructure Platform',' descriptio,
   n: 'Next-generation cloud infrastructure that leverages quantum computing principles for enhanced security, performance, and scalability across distributed systems.', feature,
@@ -1207,9 +1197,9 @@ export const cuttingEdgeITServices2025 = [ export const cuttingEdgeITServices202
   e: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols'] ,' complianc,
   e: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols'] };' ]; 'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation' ];' integration,
   s: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'];' complianc,
-  e: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols'] export const cuttingEdgeITServices2025 = [; {/* TODO: Fix JSX expression */}
+  e: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols'] export const cuttingEdgeITServices2025 = [ {/* TODO: Fix JSX expression */}
   d: 'month'}' feature,
-  s: ['Basic quantum infrastructureStandard security protocolsEmail support']} }; professiona,
+  s: ['Basic quantum infrastructureStandard security protocolsEmail support']} } professiona,
   l: {/* TODO: Fix JSX expression */}
   d: 'month'}' feature,
   s: ['Advanced quantum featuresEnhanced security protocolsPriority supportPerformance optimization']} }; enterpris,
@@ -1312,6 +1302,6 @@ export const cuttingEdgeITServices2025 = [ export const cuttingEdgeITServices202
   e: 'AI-powered DevOps automation, predictive monitoring, intelligent incident response'; useCase,
   s: [,' 'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation' ];' integration,
   s: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'];' complianc,
-  e: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']} ]; } ]; } ]; } ]; }];' integration,
+  e: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']} ]} ]} ]} ]}];' integration,
   s: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'];' complianc,
   e: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']} ]; '

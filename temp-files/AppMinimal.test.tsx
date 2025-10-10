@@ -9,6 +9,4 @@ describe('App Minimal', () => {
     expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument();
     render(<App />);
     // Just check that the component renders without throwing an error
-    expect(true).toBe(true);
-  });
-});
+    expect(true).toBe(true)})});

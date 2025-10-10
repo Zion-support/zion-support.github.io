@@ -1,15 +1,12 @@
-
 export const cuttingEdgeMicroSaasServices2025 = [
       'Basel III',
       'Solvency II',
       'Dodd - Frank',
       'Financial Regulations',
-      'Risk Management Standards']};
-];      'Portfolio risk assessmentInvestment strategy optimizationRegulatory compliance reportingRisk model developmentPerformance analysis and attribution'
+      'Risk Management Standards']}]      'Portfolio risk assessmentInvestment strategy optimizationRegulatory compliance reportingRisk model developmentPerformance analysis and attribution'
     ];
     integration,
   s: ['Bloomberg TerminalReuters EikonTrading PlatformsRisk Management SystemsFinancial Data Providers'];
-;
     compliance: ['Basel IIISolvency IIDodd-FrankFinancial RegulationsRisk Management Standards']
 export const cuttingEdgeMicroSaasServices2025 = [{id: 'customer-success-ai-pro',
     name: 'Customer Success AI Pro',
@@ -26,7 +23,7 @@ export const cuttingEdgeMicroSaasServices2025 = [{id: 'customer-success-ai-pro',
       'Performance metrics and reporting'
       'Custom AI model training'
     ]
-    pricing: starter: unknown;
+    pricing: starter: unknown
         price: 199}
         period: 'month',
         features: [,
@@ -43,7 +40,7 @@ export const cuttingEdgeMicroSaasServices2025 = [{/* TODO: Fix JSX expression */
           'Email support'
         ]
       }
-      professional: price: 499;
+      professional: price: 499
         period: 'month',
         features: [,
       professiona,
@@ -109,7 +106,7 @@ export const cuttingEdgeMicroSaasServices2025 = [{/* TODO: Fix JSX expression */
     competitiveAdvantag,
   e: 'AI-powered churn prediction, personalized engagement, predictive analytics'
     useCase,
-  s: [;
+  s: [
       'Customer churn prevention'
       'Engagement strategy optimization'
       'Customer health monitoring'
@@ -144,7 +141,7 @@ export const cuttingEdgeMicroSaasServices2025 = [{/* TODO: Fix JSX expression */
   n:
       'Advanced supply chain optimization platform that leverages quantum computing principles to solve complex logistics problems, reduce costs, and improve efficiency across global supply networks.'
     feature,
-  s: [;
+  s: [
       'Quantum-enhanced route optimization'
       'Real-time supply chain monitoring'
       'Predictive demand forecasting'
@@ -236,7 +233,7 @@ export const cuttingEdgeMicroSaasServices2025 = [{/* TODO: Fix JSX expression */
     competitiveAdvantag,
   e: 'Quantum-enhanced optimization, real-time monitoring, predictive analytics'
     useCase,
-  s: [;
+  s: [
       'Route optimization and planning'
       'Inventory management optimization'
       'Supplier selection and management'
@@ -244,7 +241,7 @@ export const cuttingEdgeMicroSaasServices2025 = [{/* TODO: Fix JSX expression */
       'Risk management and mitigation'
     ]
     integration,
-  s: [;
+  s: [
       'ERP Systems'
       'WMS Platforms'
       'TMS Solutions'
@@ -268,7 +265,7 @@ export const cuttingEdgeMicroSaasServices2025 = [{/* TODO: Fix JSX expression */
   n:
       'Revolutionary identity verification platform that combines blockchain technology with advanced biometric authentication to provide secure, tamper-proof digital identity verification.'
     feature,
-  s: [;
+  s: [
       'Blockchain-based identity verification'
       'Multi-factor biometric authentication'
       'Real-time identity validation'
@@ -364,7 +361,7 @@ export const cuttingEdgeMicroSaasServices2025 = [{/* TODO: Fix JSX expression */
     competitiveAdvantag,
   e: 'Blockchain-based verification, biometric authentication, global compliance'
     useCase,
-  s: [;
+  s: [
       'Customer onboarding and verification'
       'Employee identity verification'
       'Government ID verification'
@@ -372,7 +369,7 @@ export const cuttingEdgeMicroSaasServices2025 = [{/* TODO: Fix JSX expression */
       'Financial services compliance'
     ]
     integration,
-  s: [;
+  s: [
       'CRM Systems'
       'Banking Platforms'
       'Healthcare Systems'
@@ -398,7 +395,7 @@ export const cuttingEdgeMicroSaasServices2025 = [{/* TODO: Fix JSX expression */
   n:
       'Comprehensive HR analytics platform that uses artificial intelligence to provide insights into employee performance, engagement, retention, and organizational effectiveness.'
     feature,
-  s: [;
+  s: [
       'AI-powered performance analytics'
       'Employee engagement monitoring'
       'Predictive turnover analysis'
@@ -492,7 +489,7 @@ export const cuttingEdgeMicroSaasServices2025 = [{/* TODO: Fix JSX expression */
     competitiveAdvantag,
   e: 'AI-powered HR analytics, predictive modeling, comprehensive insights'
     useCase,
-  s: [;
+  s: [
       'Employee performance analysis'
       'Talent retention optimization'
       'Recruitment process improvement'
@@ -500,7 +497,7 @@ export const cuttingEdgeMicroSaasServices2025 = [{/* TODO: Fix JSX expression */
       'Organizational effectiveness analysis'
     ]
     integration,
-  s: [;
+  s: [
       'Workday'
       'BambooHR'
       'ADP'
@@ -525,7 +522,7 @@ export const cuttingEdgeMicroSaasServices2025 = [{/* TODO: Fix JSX expression */
   n:
       'Advanced financial risk management platform that leverages quantum computing to provide real-time risk assessment, portfolio optimization, and financial modeling for complex investment strategies.'
     feature,
-  s: [;
+  s: [
       'Quantum-enhanced risk modeling'
       'Real-time portfolio optimization'
       'Advanced financial analytics'
@@ -617,7 +614,7 @@ export const cuttingEdgeMicroSaasServices2025 = [{/* TODO: Fix JSX expression */
     competitiveAdvantag,
   e: 'Quantum-enhanced risk modeling, real-time optimization, advanced analytics'
     useCase,
-  s: [;
+  s: [
       'Portfolio risk assessment'
       'Investment strategy optimization'
       'Regulatory compliance reporting'
@@ -625,7 +622,7 @@ export const cuttingEdgeMicroSaasServices2025 = [{/* TODO: Fix JSX expression */
       'Performance analysis and attribution'
     ]
     integration,
-  s: [;
+  s: [
       'Bloomberg Terminal'
       'Reuters Eikon'
       'Trading Platforms'
@@ -639,7 +636,7 @@ export const cuttingEdgeMicroSaasServices2025 = [{/* TODO: Fix JSX expression */
       'Solvency II'
       'Dodd-Frank'
       'Financial Regulations',
-      'Risk Management Standards']}export const cuttingEdgeMicroSaasServices2025 = [];      'Portfolio risk assessmentInvestment strategy optimizationRegulatory compliance reportingRisk model developmentPerformance analysis and attribution'
+      'Risk Management Standards']}export const cuttingEdgeMicroSaasServices2025 = []      'Portfolio risk assessmentInvestment strategy optimizationRegulatory compliance reportingRisk model developmentPerformance analysis and attribution'
     id: 'customer-success-ai-pro', name: 'Customer Success AI Pro',
     description: 'Intelligent customer success platform that uses AI to predict customer churn, optimize engagement strategies, and maximize customer lifetime value through predictive analytics.',
     features: [,
@@ -691,18 +688,17 @@ export const cuttingEdgeMicroSaasServices2025 = [{/* TODO: Fix JSX expression */
     ];
     integration,
   s: ['Bloomberg TerminalReuters EikonTrading PlatformsRisk Management SystemsFinancial Data Providers'];
-;
     compliance: ['Basel IIISolvency IIDodd-FrankFinancial RegulationsRisk Management Standards'];
 export const cuttingEdgeMicroSaasServices2025 = [,
   {,
-    id: 'customer-success-ai-pro';
+    id: 'customer-success-ai-pro'
     name: 'Customer Success AI Pro',,
   description: 'Intelligent customer success platform that uses AI to predict customer churn, optimize engagement strategies, and maximize customer lifetime value through predictive analytics.';
     features: [
       'AI-powered churn prediction with 92% accuracyPersonalized engagement recommendationsCustomer health scoring and monitoringAutomated success playbook creationReal-time customer sentiment analysisPredictive analytics dashboardIntegration with CRM and support toolsAutomated customer onboarding workflows';
       'Performance metrics and reportingCustom AI model training'
     ];
-    pricing: {;
+    pricing: {
       starter: {,
         price: 199;
         period: 'month'}
@@ -713,14 +709,12 @@ export const cuttingEdgeMicroSaasServices2025 = [
   {/* TODO: Fix JSX expression */}
   d: 'month'}
         feature,
-  s: ['Up to 1}000 customersBasic AI featuresEmail support'];
-      };
+  s: ['Up to 1}000 customersBasic AI featuresEmail support']}
       professiona,
   l: {/* TODO: Fix JSX expression */}
   d: 'month'}
         feature,
-  s: ['Up to 10}000 customersAdvanced AI featuresPriority supportCustom workflows'];
-      };
+  s: ['Up to 10}000 customersAdvanced AI featuresPriority supportCustom workflows']};
       enterpris,
   e: {/* TODO: Fix JSX expression */}
   d: 'month'}
@@ -765,7 +759,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
   s: ['SalesforceHubSpotIntercomZendeskSlackMicrosoft Teams'];
     complianc,
   e: ['GDPRCCPASOC2Data Privacy Standards']};
-  {;
+  {
     id: 'quantum-supply-chain-optimizer';
     name: 'Quantum Supply Chain Optimizer',,
   description: 'Advanced supply chain optimization platform that leverages quantum computing principles to solve complex logistics problems, reduce costs, and improve efficiency across global supply networks.';
@@ -773,7 +767,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
       'Quantum-enhanced route optimizationReal-time supply chain monitoringPredictive demand forecastingInventory optimization algorithmsSupplier performance analyticsRisk assessment and mitigationCost optimization modelingSustainability impact analysis';
       'Multi-modal transportation planningReal-time collaboration tools'
     ];
-    pricing: {;
+    pricing: {
       starter: {,
         price: 299;
         period: 'month'}
@@ -833,7 +827,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
   s: ['ERP SystemsWMS PlatformsTMS SolutionsE-commerce PlatformsAnalytics Tools'];
     complianc,
   e: ['Supply Chain StandardsLogistics RegulationsData Privacy Laws']};
-  {;
+  {
     id: 'blockid-verify-pro';
     name: 'BlockID Verify Pro',,
   description: 'Revolutionary identity verification platform that combines blockchain technology with advanced biometric authentication to provide secure, tamper-proof digital identity verification.';
@@ -841,7 +835,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
       'Blockchain-based identity verificationMulti-factor biometric authenticationReal-time identity validationFraud detection and preventionCompliance with global regulationsAPI integration capabilitiesCustom verification workflowsAudit trail and reporting';
       'Mobile and web applicationsWhite-label solutions'
     ];
-    pricing: {;
+    pricing: {
       starter: {,
         price: 149;
         period: 'month'}
@@ -849,14 +843,12 @@ export const cuttingEdgeMicroSaasServices2025 = [
   {/* TODO: Fix JSX expression */}
   d: 'month'}
         feature,
-  s: ['Up to 1}000 verificationsBasic verification featuresEmail support'];
-      };
+  s: ['Up to 1}000 verificationsBasic verification featuresEmail support']};
       professiona,
   l: {/* TODO: Fix JSX expression */}
   d: 'month'}
         feature,
-  s: ['Up to 10}000 verificationsAdvanced verification featuresPriority supportCustom workflows'];
-      };
+  s: ['Up to 10}000 verificationsAdvanced verification featuresPriority supportCustom workflows']};
       enterpris,
   e: {/* TODO: Fix JSX expression */}
   d: 'month'}
@@ -901,7 +893,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
   s: ['CRM SystemsBanking PlatformsHealthcare SystemsE-commerce PlatformsGovernment APIs'];
     complianc,
   e: ['KYC/AMLGDPRCCPASOC2Global Identity Standards']};
-  {;
+  {
     id: 'hr-analytics-ai-suite';
     name: 'HR Analytics AI Suite',,
   description: 'Comprehensive HR analytics platform that uses artificial intelligence to provide insights into employee performance, engagement, retention, and organizational effectiveness.';
@@ -909,7 +901,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
       'AI-powered performance analyticsEmployee engagement monitoringPredictive turnover analysisRecruitment optimization algorithmsWorkforce planning and forecastingDiversity and inclusion analyticsReal-time performance dashboardsCustom reporting and analytics';
       'Integration with HR systemsPredictive modeling capabilities'
     ];
-    pricing: {;
+    pricing: {
       starter: {,
         price: 249;
         period: 'month'}
@@ -923,8 +915,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
   l: {/* TODO: Fix JSX expression */}
   d: 'month'}
         feature,
-  s: ['Up to 5}000 employeesAdvanced analytics featuresPriority supportCustom reporting'];
-      };
+  s: ['Up to 5}000 employeesAdvanced analytics featuresPriority supportCustom reporting']};
       enterpris,
   e: {/* TODO: Fix JSX expression */}
   d: 'month'}
@@ -969,7 +960,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
   s: ['WorkdayBambooHRADPSuccessFactorsSlackMicrosoft Teams'];
     complianc,
   e: ['HR Data PrivacyEmployment LawsData Protection Regulations']};
-  {;
+  {
     id: 'quantum-risk-financial-manager';
     name: 'Quantum Risk Financial Manager',,
   description: 'Advanced financial risk management platform that leverages quantum computing to provide real-time risk assessment, portfolio optimization, and financial modeling for complex investment strategies.';
@@ -977,7 +968,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
       'Quantum-enhanced risk modelingReal-time portfolio optimizationAdvanced financial analyticsRisk assessment and monitoringPortfolio stress testingRegulatory compliance reportingCustom risk modelsReal-time market data integration';
       'Performance attribution analysisComprehensive risk reporting'
     ];
-    pricing: {;
+    pricing: {
       starter: {,
         price: 399;
         period: 'month'}
@@ -1037,21 +1028,16 @@ export const cuttingEdgeMicroSaasServices2025 = [
   s: ['Bloomberg TerminalReuters EikonTrading PlatformsRisk Management SystemsFinancial Data Providers'];
     complianc,
   e: ['Basel IIISolvency IIDodd-FrankFinancial RegulationsRisk Management Standards']}
-];
-  }
-];
-  }
-];
-  }
-];
-  }];
+]}
+]}
+]}
+]}];
     integration,
   s: ['Bloomberg TerminalReuters EikonTrading PlatformsRisk Management SystemsFinancial Data Providers'];
     complianc,
   e: ['Basel IIISolvency IIDodd - FrankFinancial RegulationsRisk Management Standards']}
 ];
-;
-export const cuttingEdgeMicroSaasServices2025 = [ 'Basel III',' 'Solvency II',' 'Dodd - Frank',' 'Financial Regulations',' 'Risk Management Standards']}; ' ]; 'Portfolio risk assessmentInvestment strategy optimizationRegulatory compliance reportingRisk model developmentPerformance analysis and attribution' ];' integration,
+export const cuttingEdgeMicroSaasServices2025 = [ 'Basel III',' 'Solvency II',' 'Dodd - Frank',' 'Financial Regulations',' 'Risk Management Standards']} ' ]; 'Portfolio risk assessmentInvestment strategy optimizationRegulatory compliance reportingRisk model developmentPerformance analysis and attribution' ];' integration,
   s: ['Bloomberg TerminalReuters EikonTrading PlatformsRisk Management SystemsFinancial Data Providers'],' complianc,
   e: ['Basel IIISolvency IIDodd-FrankFinancial RegulationsRisk Management Standards'] export const cuttingEdgeMicroSaasServices2025 = [ ' i,
   d: 'customer-success-ai-pro'' nam,
@@ -1202,7 +1188,7 @@ export const cuttingEdgeMicroSaasServices2025 = [ 'Basel III',' 'Solvency II',' 
   e: ' 'Quantum-enhanced risk modeling, real-time optimization, advanced analytics' useCase,
   s: [' 'Portfolio risk assessment'' 'Investment strategy optimization'' 'Regulatory compliance reporting'' 'Risk model development'' 'Performance analysis and attribution' ] integration,
   s: [' 'Bloomberg Terminal'' 'Reuters Eikon'' 'Trading Platforms'' 'Risk Management Systems'' 'Financial Data Providers' ] complianc,
-  e: [' 'Basel III'' 'Solvency II'' 'Dodd-Frank'' 'Financial Regulations'' 'Risk Management Standards' ] }export const cuttingEdgeMicroSaasServices2025 = [ ' ]; 'Portfolio risk assessmentInvestment strategy optimizationRegulatory compliance reportingRisk model developmentPerformance analysis and attribution'' i,
+  e: [' 'Basel III'' 'Solvency II'' 'Dodd-Frank'' 'Financial Regulations'' 'Risk Management Standards' ] }export const cuttingEdgeMicroSaasServices2025 = [ ' ] 'Portfolio risk assessmentInvestment strategy optimizationRegulatory compliance reportingRisk model developmentPerformance analysis and attribution'' i,
   d: 'customer-success-ai-pro', nam,
   e: 'Customer Success AI Pro',' descriptio,
   n: 'Intelligent customer success platform that uses AI to predict customer churn, optimize engagement strategies, and maximize customer lifetime value through predictive analytics.', feature,
@@ -1214,12 +1200,12 @@ export const cuttingEdgeMicroSaasServices2025 = [ 'Basel III',' 'Solvency II',' 
   s: [,' 'Bloomberg Terminal',' 'Reuters Eikon',' 'Trading Platforms',' 'Risk Management Systems',' 'Financial Data Providers'], complianc,
   e: [,' 'Basel III',' 'Solvency II',' 'Dodd - Frank',' 'Financial Regulations',' 'Risk Management Standards'],' ]; 'Portfolio risk assessmentInvestment strategy optimizationRegulatory compliance reportingRisk model developmentPerformance analysis and attribution'' ]; 'Portfolio risk assessment_investment strategy optimization_regulatory compliance reporting_risk model development_performance analysis and attribution' ];' integration,
   s: ['Bloomberg TerminalReuters EikonTrading PlatformsRisk Management SystemsFinancial Data Providers'];' complianc,
-  e: ['Basel IIISolvency IIDodd-FrankFinancial RegulationsRisk Management Standards'] export const cuttingEdgeMicroSaasServices2025 = [; {/* TODO: Fix JSX expression */}
+  e: ['Basel IIISolvency IIDodd-FrankFinancial RegulationsRisk Management Standards'] export const cuttingEdgeMicroSaasServices2025 = [ {/* TODO: Fix JSX expression */}
   d: 'month'}' feature,
-  s: ['Up to 1}000 customersBasic AI featuresEmail support']; }; professiona,
+  s: ['Up to 1}000 customersBasic AI featuresEmail support']} professiona,
   l: {/* TODO: Fix JSX expression */}
   d: 'month'}' feature,
-  s: ['Up to 10}000 customersAdvanced AI featuresPriority supportCustom workflows']; }; enterpris,
+  s: ['Up to 10}000 customersAdvanced AI featuresPriority supportCustom workflows']}; enterpris,
   e: {/* TODO: Fix JSX expression */}
   d: 'month'}' feature,
   s: ['Unlimited customersFull AI platformDedicated specialists24/7 support']} } };' categor,
@@ -1258,10 +1244,10 @@ export const cuttingEdgeMicroSaasServices2025 = [ 'Basel III',' 'Solvency II',' 
   s: ['ERP SystemsWMS PlatformsTMS SolutionsE-commerce PlatformsAnalytics Tools'];' complianc,
   e: ['Supply Chain StandardsLogistics RegulationsData Privacy Laws']}; {/* TODO: Fix JSX expression */}
   d: 'month'}' feature,
-  s: ['Up to 1}000 verificationsBasic verification featuresEmail support']; }; professiona,
+  s: ['Up to 1}000 verificationsBasic verification featuresEmail support']}; professiona,
   l: {/* TODO: Fix JSX expression */}
   d: 'month'}' feature,
-  s: ['Up to 10}000 verificationsAdvanced verification featuresPriority supportCustom workflows']; }; enterpris,
+  s: ['Up to 10}000 verificationsAdvanced verification featuresPriority supportCustom workflows']}; enterpris,
   e: {/* TODO: Fix JSX expression */}
   d: 'month'}' feature,
   s: ['Unlimited verificationsFull verification platformDedicated specialists24/7 support']} } };' categor,
@@ -1282,7 +1268,7 @@ export const cuttingEdgeMicroSaasServices2025 = [ 'Basel III',' 'Solvency II',' 
   s: ['Up to 500 employeesBasic analytics featuresEmail support']} }; professiona,
   l: {/* TODO: Fix JSX expression */}
   d: 'month'}' feature,
-  s: ['Up to 5}000 employeesAdvanced analytics featuresPriority supportCustom reporting']; }; enterpris,
+  s: ['Up to 5}000 employeesAdvanced analytics featuresPriority supportCustom reporting']}; enterpris,
   e: {/* TODO: Fix JSX expression */}
   d: 'month'}' feature,
   s: ['Unlimited employeesFull analytics platformDedicated specialists24/7 support']} } };' categor,
@@ -1319,6 +1305,6 @@ export const cuttingEdgeMicroSaasServices2025 = [ 'Basel III',' 'Solvency II',' 
   e: 'Quantum-enhanced risk modeling, real-time optimization, advanced analytics'; useCase,
   s: [,' 'Portfolio risk assessmentInvestment strategy optimizationRegulatory compliance reportingRisk model developmentPerformance analysis and attribution' ];' integration,
   s: ['Bloomberg TerminalReuters EikonTrading PlatformsRisk Management SystemsFinancial Data Providers'];' complianc,
-  e: ['Basel IIISolvency IIDodd-FrankFinancial RegulationsRisk Management Standards']} ]; } ]; } ]; } ]; }];' integration,
+  e: ['Basel IIISolvency IIDodd-FrankFinancial RegulationsRisk Management Standards']} ]} ]} ]} ]}];' integration,
   s: ['Bloomberg TerminalReuters EikonTrading PlatformsRisk Management SystemsFinancial Data Providers'];' complianc,
   e: ['Basel IIISolvency IIDodd - FrankFinancial RegulationsRisk Management Standards']} ]; '

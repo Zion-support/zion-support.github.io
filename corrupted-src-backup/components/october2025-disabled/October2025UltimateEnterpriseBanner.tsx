@@ -377,7 +377,6 @@ const October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expression
         </div>
       </div>
     </div>
-  );
-};
-export default October2025UltimateEnterpriseBanner;
+  )};
+export default October2025UltimateEnterpriseBanner
 "

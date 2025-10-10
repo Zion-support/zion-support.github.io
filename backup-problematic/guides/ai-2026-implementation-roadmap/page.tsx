@@ -1,13 +1,13 @@
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Calendar, User, Clock, Tag } from 'lucide-react';
 export const metadata = {/* TODO: Fix JSX expression */}
-};
+}
 export default function AI2026ImplementationRoadmap() {
   return(<div className="min-h-screen bg-white">
       {/* Header */}
       <header className="bg-white border-b border-gray-200">
         <div className="max-w-4xl mx-auto px-4 py-6">
-          <Link;
+          <Link
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}</div>
@@ -41,7 +41,7 @@ export default function AI2026ImplementationRoadmap() {
             </div>
           </div>
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            AI 2026 Implementation Roadmap: Your Complete Guide to Enterprise AI Transformation;)
+            AI 2026 Implementation Roadmap: Your Complete Guide to Enterprise AI Transformation)
           </h1>)
           )
           <p className="text-xl text-gray-600 mb-6">),
@@ -63,7 +63,7 @@ export default function AI2026ImplementationRoadmap() {/* TODO: Fix JSX expressi
   hover:text-blue-800 transition-colors"
           >"
             <ArrowLeft className="w-4 h-4 mr-2" /></ArrowLeft>
-            Back to Home;
+            Back to Home
           </Link>
         </div>
       </header>
@@ -607,9 +607,8 @@ export default function AI2026ImplementationRoadmap() {/* TODO: Fix JSX expressi
           </div>
         </div>
       </article>,
-    </div>);
-};
-export default AI2026ImplementationRoadmap;
+    </div>)};
+export default AI2026ImplementationRoadmap
 "
   </li>
   </li>

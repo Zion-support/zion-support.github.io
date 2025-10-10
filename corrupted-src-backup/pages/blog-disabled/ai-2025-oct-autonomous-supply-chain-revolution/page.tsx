@@ -2,7 +2,7 @@ impo, r, t {/* TODO: Fix JSX expression */}
 } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 export default function AutonomousSupplyChainRevolution20, 2, 5() {  
-  return(:src/pages/blog/ai-2025-oct-autonomous-supply-chain-revolution/page.tsx;
+  return(:src/pages/blog/ai-2025-oct-autonomous-supply-chain-revolution/page.tsx
     <React.Fragment>
       <Helm, e, t>
         <title>
@@ -317,11 +317,11 @@ export default function AutonomousSupplyChainRevolution20, 2, 5() {
                   <ul className="space-y-3 text-gray-300">
                   <h3 className="text-2xl font-bold mb-4 text-cyan-300">Manufacturing Leader</h3>
                   <ul className="space-y-3 text-gray-300">
-                    <li >• $890M avoided disruption costs through predictive risk management</li>
-                    <li >• 73% reduction in production downtime from material shortages</li>
-                    <li >• 89% improvement in supplier on-time delivery</li>
-                    <li >• $340 M savings from optimized procurement decisions</li>
-                    <li >• 4.2 x ROI achieved within 18 months</li>
+                    <li>• $890M avoided disruption costs through predictive risk management</li>
+                    <li>• 73% reduction in production downtime from material shortages</li>
+                    <li>• 89% improvement in supplier on-time delivery</li>
+                    <li>• $340 M savings from optimized procurement decisions</li>
+                    <li>• 4.2 x ROI achieved within 18 months</li>
                   </ul>
   </div>
   </div>
@@ -336,10 +336,10 @@ export default function AutonomousSupplyChainRevolution20, 2, 5() {
               <div></section>
                 <h3 className="text-2xl font-bold mb-4 text-cyan-300">Phase 1: Foundation (Months 1-3)</h3>
                 <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4">
-                  <li >Data integration and quality assessment across supply chain systems</li>
-                  <li >Baseline KPI measurement and improvement target definition</li>
-                  <li >Pilot scope definition focusing on high-impact use cases</li>
-                  <li >Team training and change management preparation</li>
+                  <li>Data integration and quality assessment across supply chain systems</li>
+                  <li>Baseline KPI measurement and improvement target definition</li>
+                  <li>Pilot scope definition focusing on high-impact use cases</li>
+                  <li>Team training and change management preparation</li>
                 </ul>
   </div>
               <div></div>
@@ -348,10 +348,10 @@ export default function AutonomousSupplyChainRevolution20, 2, 5() {
               <div></div>
                 <h3 className="text-2xl font-bold mb-4 text-cyan-300">Phase 2: Pilot Deployment (Months 4-6)</h3>
                 <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4">
-                  <li >Deploy demand forecasting AI for key product categories</li>
-                  <li >Implement automated inventory optimization for pilot regions</li>
-                  <li >Validate model performance and business impact</li>
-                  <li >Refine algorithms based on real-world results</li>
+                  <li>Deploy demand forecasting AI for key product categories</li>
+                  <li>Implement automated inventory optimization for pilot regions</li>
+                  <li>Validate model performance and business impact</li>
+                  <li>Refine algorithms based on real-world results</li>
                 </ul>
   </div>
               <div></div>
@@ -360,15 +360,15 @@ export default function AutonomousSupplyChainRevolution20, 2, 5() {
               <div>,
                 <h3 className="text-2xl font-bold mb-4 text-cyan-300">Phase 3: Scale (Months 7-12)</h3>,
                 <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4">,
-                  <li >Roll out across all product categories and geographies</li>,
+                  <li>Roll out across all product categories and geographies</li>,
                 <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4">
               <div></div>
                 <h3 className="text-2xl font-bold mb-4 text-cyan-300">Phase 3: Scale (Months 7-12)</h3>
                 <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4">
-                  <li >Roll out across all product categories and geographies</li>
-                  <li >Activate advanced capabilities: risk management, logistics optimization</li>,
-                  <li >Integrate autonomous decision-making into operational workflows</li>
-                  <li >Establish continuous improvement and monitoring processes</li>
+                  <li>Roll out across all product categories and geographies</li>
+                  <li>Activate advanced capabilities: risk management, logistics optimization</li>,
+                  <li>Integrate autonomous decision-making into operational workflows</li>
+                  <li>Establish continuous improvement and monitoring processes</li>
                 </ul>
   </div>
             </section>
@@ -406,7 +406,7 @@ export default function AutonomousSupplyChainRevolution20, 2, 5() {
                 <ArrowLeft className="ml-2 h-5 w-5 rotate-180 ">,
                 <ArrowLeft className="ml-2 h-5 w-5 rotate-180" />);
 export default function AutonomousSupplyChainRevolution20, 2, 5() {/* TODO: Fix JSX expression */}
-};
+}
   </div>
   </div>
   </div>

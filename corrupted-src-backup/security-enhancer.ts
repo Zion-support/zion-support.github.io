@@ -8,14 +8,11 @@ class SecurityEnhancer {
       location.protocol !== 'https: ' &&)
       location.hostname !== 'localhost')
     ) {,
-      location.replace('https: ' + window.location.href.substring(window.location.protocol.length));
-    }
+      location.replace('https: ' + window.location.href.substring(window.location.protocol.length))}
   }
-
   private setupXSSProtection(): void {
     // XSS protection setup;
     //     }
-
   private setupSecurityHeaders(): void {
     // Additional security headers setup;
 class SecurityEnhancer {/* TODO: Fix JSX expression */}
@@ -23,20 +20,14 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
   private setupHTTPSRedirect(): void {/* TODO: Fix JSX expression */}
     }
   }
-
   private setupXSSProtection(): void {/* TODO: Fix JSX expression */}
     //     }
-
   private setupSecurityHeaders(): void {/* TODO: Fix JSX expression */}
     //     }
-
   public static getInstance(): SecurityEnhancer {/* TODO: Fix JSX expression */}
     }
-    return SecurityEnhancer.instance;
-  }
-
+    return SecurityEnhancer.instance}
   public initialize(): void {/* TODO: Fix JSX expression */}
   }
 }
-
-export default SecurityEnhancer;
+export default SecurityEnhancer

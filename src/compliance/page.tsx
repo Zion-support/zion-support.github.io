@@ -16,10 +16,9 @@ const CompliancePage: React.FC = () => {
   ];
   const complianceAreas = [
   // TOD,
-  O: Add items;
-];;
+  O: Add items];
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   ico,
   n: Shield,
@@ -125,8 +124,7 @@ Compliance Areas;"
               <p>Compliance team available Monday-Friday, 9 AM - 5 PM EST</p>
         </main>
         <Footer />
-  );
-};
-export default CompliancePage;
+  )};
+export default CompliancePage
   </div>
   </div>

@@ -6,7 +6,7 @@ import { Settings, Shield, BarChart, Zap, CheckCircle, Star,  Settings,  Shield,
 const SystemAdministrationPage: React.FC = () => {
   const features = [];
   return (
-    {// TODO: Add content;}
+    {// TODO: Add content}
 };
   ico,
   n: Settings,
@@ -15,8 +15,7 @@ const SystemAdministrationPage: React.FC = () => {
       descriptio,
   n: 'Comprehensive system administration and maintenance',
       benefit,
-  s: ['Server management', 'User administration', 'System monitoring'];
-    },
+  s: ['Server management', 'User administration', 'System monitoring']},
       ico,
   n: Shield,
       titl,
@@ -89,6 +88,5 @@ const SystemAdministrationPage: React.FC = () => {
       </main>
       <Footer /></Footer>
     </div>
-  );
-};
-export default SystemAdministrationPage;
+  )};
+export default SystemAdministrationPage

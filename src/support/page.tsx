@@ -280,9 +280,8 @@ const SupportPage: React.FC = () => {
         <Footer />
       </div>
     </React.Fragment>
-  );
-};
-export default SupportPage;
+  )};
+export default SupportPage
   </a>
   </a>
   </p>

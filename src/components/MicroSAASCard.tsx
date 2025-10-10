@@ -1,11 +1,11 @@
 import React from 'react';
 'use client';
 interface MicroSAASCardProps {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
   servic,
   e: {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   titl,
   e: string;
@@ -27,11 +27,9 @@ interface MicroSAASCardProps {/* TODO: Fix JSX expression */}
     contactInf,
   o: string;
     link?: string;
-    popular?: boolean;
-  };
-}
+    popular?: boolean}}
 const MicroSAASCard: React.FC;
-          <MicroSAASCardProps> = ({ service }) => {// TODO: Add content;}
+          <MicroSAASCardProps> = ({ service }) => {// TODO: Add content}
 }
 const MicroSAASCard: React.FC<MicroSAASCardProps> = () => {
   return (
@@ -109,8 +107,7 @@ const MicroSAASCard: React.FC<MicroSAASCardProps> = () => {
         </div>
       </div>
     </div>
-  );
-};
-export default MicroSAASCard;"`
+  )};
+export default MicroSAASCard"`
   </MicroSAASCardProps>
   </MicroSAASCardProps>

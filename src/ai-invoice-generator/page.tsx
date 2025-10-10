@@ -256,8 +256,7 @@ namename: 'Emily Rodriguez',
                   (302) 464-0950</span>
         <Footer />
     </React.Fragment>
-  );
-});
+  )});
 AIInvoiceGeneratorPage.displayName = 'AIInvoiceGeneratorPage';
 'use client';
 import React from 'react';

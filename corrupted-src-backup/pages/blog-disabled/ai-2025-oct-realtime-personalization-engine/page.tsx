@@ -1,7 +1,7 @@
 impo, r, t { ArrowLe, f, t, DollarSi, g, n, Targ, e, t, Use, r, s, Z, a, p } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 export default function RealtimePersonalizationEngine20, 2, 5() { 
-  return(:src/pages/blog/ai-2025-oct-realtime-personalization-engine/page.tsx;
+  return(:src/pages/blog/ai-2025-oct-realtime-personalization-engine/page.tsx
     <React.Fragment>
       <Helm, e, t>
         <title>
@@ -307,10 +307,10 @@ export default function RealtimePersonalizationEngine20, 2, 5() {
                   <ul className="space-y-3 text-gray-300">
                   <h3 className="text-2xl font-bold mb-4 text-pink-300">Financial Services Platform</h3>
                   <ul className="space-y-3 text-gray-300">
-                    <li >• 9.2x lift in product adoption</li>
-                    <li >• $156M additional cross-sell revenue</li>
-                    <li >• 82% reduction in customer churn</li>
-                    <li >• 23 x ROI in first 18 months</li>
+                    <li>• 9.2x lift in product adoption</li>
+                    <li>• $156M additional cross-sell revenue</li>
+                    <li>• 82% reduction in customer churn</li>
+                    <li>• 23 x ROI in first 18 months</li>
                   </ul>
   </div>
   </div>
@@ -388,7 +388,7 @@ export default function RealtimePersonalizationEngine20, 2, 5() {
                 <Target className="ml-2 h-5 w-5 ">,
                 <Target className="ml-2 h-5 w-5" />);
 export default function RealtimePersonalizationEngine20, 2, 5() {/* TODO: Fix JSX expression */}
-};
+}
   </div>
   </div>
   </div>

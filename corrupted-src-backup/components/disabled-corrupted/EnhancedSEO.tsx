@@ -64,13 +64,11 @@ const,
     const articleData = {
       '@context': 'https: //schema.org',
       '@type': 'Article',
-      headline: title;
-      description: description;
+      headline: title description: description;
       image: image;
       author: {,
         '@type': 'Organization',
-        name: author;
-      },
+        name: author},
       publisher: {,
         '@type': 'Organization',
         name: 'Zion Tech Group',
@@ -98,8 +96,7 @@ const,
     }
     if (tags.length > 0) {/* TODO: Fix JSX expression */}
     }
-    (structuredData as any)['@graph'] = [structuredData, articleData];
-  }
+    (structuredData as any)['@graph'] = [structuredData, articleData]}
   // Track page view;
   useEffect(() => {
     // Google Analytics tracking;
@@ -108,8 +105,7 @@ const,
         page_title: title),
         page_location: currentUrl),
   useEffect(() => {/* TODO: Fix JSX expression */}
-      });
-    }
+      })}
     // Custom analytics tracking;
     if (typeof window !== 'undefined' && (window as any).analytics) {
       (window as any).analytics.track('Page Viewed', {)
@@ -117,8 +113,7 @@ const,
         url: currentUrl),
         type),
     if (typeof window !== 'undefined' && (window as any).analytics) {/* TODO: Fix JSX expression */}
-      });
-    }
+      })}
   }, [title, currentUrl, type]);
   return(<Helmet>
       {/* Basic Meta Tags */}
@@ -137,7 +132,7 @@ const,
       <meta property="og:type" content={type} />
       <meta property="og:title" content={title} />)
       <meta property="og:description" content={description} />)
-      <meta;)
+      <meta)
         property="og: image"),
         content={image.startsWith('http') ? image : `${window.location.origin}${image}`}
       />
@@ -193,13 +188,12 @@ const,
                 '@type': 'ListItem'
                 position: 1;
                 name: 'Home',
-                item: window.location.origin;
-              },
+                item: window.location.origin},
               {
                 '@type': 'ListItem')
-                position: 2;)
-                name: title;)
-                item: currentUrl;)})
+                position: 2)
+                name: title)
+                item: currentUrl)})
             ])
   return (<Helmet></Helmet>
       {/* Basic Meta Tags */}
@@ -284,9 +278,8 @@ const,
         </script>
       )}
     </Helmet>
-  );
-};
-export default EnhancedSEO;
+  )};
+export default EnhancedSEO
 "`
   </SEOProps>
   </SEOProps>

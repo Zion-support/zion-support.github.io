@@ -14,7 +14,6 @@ const SEOEnhancer = React.memo(function SEOEnhancer({ className = '' }: SEOEnhan
       <h3 className="text-lg font-semibold text-blue-800">SEOEnhancer</h3>"
       <p className="text-blue-600">This component is under development.</p>
     </div>
-  );
-});
-export default SEOEnhancer;
+  )});
+export default SEOEnhancer
 "`

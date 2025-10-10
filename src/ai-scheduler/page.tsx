@@ -209,11 +209,10 @@ $4}
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
             Join thousands of professionals using AI Scheduler to eliminate scheduling headaches 
             and maximize productivity.
-  );
-};
-export default AISchedulerPage;
+  )};
+export default AISchedulerPage
 import { ArrowRight, CheckCircle, Calendar, Clock, Users, Zap, Brain, Target, Shield, Globe, Phone, Mail } from 'lucide-react';
-export default AISchedulerPage;
+export default AISchedulerPage
   </p>
   </h2>
   </section>

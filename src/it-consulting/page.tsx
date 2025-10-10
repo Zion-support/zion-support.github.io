@@ -118,9 +118,8 @@ const ITConsultingPage: React.FC = () => {
         <Footer />
       </div>
     </React.Fragment>
-  );
-};
-export default ITConsultingPage;
+  )};
+export default ITConsultingPage
   </button>
   </button>
   </button>

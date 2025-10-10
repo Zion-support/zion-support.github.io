@@ -2,11 +2,9 @@
   name: string;
   tagline: string;
   price: string;
-  period: string;
-  description: string;
+  period: string description: string;
   features: string[];
-  popular: boolean;
-  icon: string;
+  popular: boolean icon: string;
   color: string;
   textColor: string;
   link: string;
@@ -45,13 +43,10 @@
   contact_info: unknown;
     mobile: string;
     email: string;
-    address: string;
-};
-export const emergingTechServices2026: EmergingTechService2026[] = [;
-  // Quantum Computing Services;
-];,
-  return emergingTechServices2026 && emergingTechServices2026.filter(service => service && service.popular);
-};
+    address: string};
+export const emergingTechServices2026: EmergingTechService2026[] = [
+  // Quantum Computing Services],
+  return emergingTechServices2026 && emergingTechServices2026.filter(service => service && service.popular)};
     id: 'ai-digital-twin-platform'
     name: 'AI Digital Twin Platform',
     tagline: 'Intelligent digital twin creation and simulation with AI-powered insights',
@@ -155,11 +150,9 @@ export const emergingTechServices2026: EmergingTechService2026[] = [;
     addres,
   s: string};
 export const,
-  emergingTechServices2026: EmergingTechService2026[] = [;
-  // Quantum Computing Services;
-];
-  return emergingTechServices2026 && emergingTechServices2026.filter(service => service && service.popular);
-};
+  emergingTechServices2026: EmergingTechService2026[] = [
+  // Quantum Computing Services]
+  return emergingTechServices2026 && emergingTechServices2026.filter(service => service && service.popular)};
     i,
   d: 'ai-digital-twin-platform'
     nam,
@@ -174,7 +167,7 @@ export const,
   n:
       'Advanced digital twin platform that uses AI to create virtual replicas of physical systems, simulate scenarios, and provide intelligent insights for optimization and decision-making.'
     feature,
-  s: [;
+  s: [
       'AI-powered digital twin creation'
       'Real-time simulation and modeling'
       'Predictive analytics and forecasting'
@@ -208,7 +201,7 @@ export const,
     realServic,
   e: true;
     technolog,
-  y: [;
+  y: [
       'Python'
       'TensorFlow'
       'Unity'
@@ -217,7 +210,7 @@ export const,
       'Redis'
     ]
     integration,
-  s: [;
+  s: [
       'Siemens'
       'PTC'
       'GE Digital'
@@ -225,7 +218,7 @@ export const,
       'IoT platforms'
     ]
     useCase,
-  s: [;
+  s: [
       'Manufacturing optimization'
       'Infrastructure monitoring'
       'Energy management'
@@ -235,7 +228,7 @@ export const,
     ro,
   i: 'Organizations report 300% ROI through improved operational efficiency and reduced maintenance costs.'
     competitor,
-  s: [;
+  s: [
       'Siemens Digital Twin'
       'PTC ThingWorx'
       'GE Digital Twin'
@@ -250,10 +243,9 @@ export const,
     launchDate: '2024-06-25'
     customers: 56;
     rating: 4.4;
-    reviews: 29;
-  }
+    reviews: 29}
 ];
-export const getEmergingTechServices2026ByCategory = (category: string) =>;
+export const getEmergingTechServices2026ByCategory = (category: string) =>
   return emergingTechServices2026.filter(service => service.category === category)),
       'AI-powered digital twin platform with intelligent creation, real-time simulation, and comprehensive analytics capabilities.',
     launchDate: '2024-06-25'
@@ -281,7 +273,7 @@ export const getEmergingTechServices2026ByCategory = (category: string) =>;
   s: 29}
 ];
 export const getEmergingTechServices2026ByCategory = (categor)
-  y: string) =>;
+  y: string) =>
   return emergingTechServices2026.filter(service => service.category === category)
   ),
       'AI-powered digital twin platform with intelligent creation, real-time simulation, and comprehensive analytics capabilities.',
@@ -292,16 +284,14 @@ export const getEmergingTechServices2026ByCategory = (categor)
     ratin,
   g: 4.4,
     review,
-  s: 29};
-];
+  s: 29}];
 export const getEmergingTechServices2026ByCategory = (categor)
-  y: string) =>;
+  y: string) =>
   return emergingTechServices2026.filter(service => service.category === category)
-  );
-],
+  )],
   return emergingTechServices2026 && emergingTechServices2026.filter(service => service && service.popular)};
 export const emergingTechServices2026: EmergingTechService2026[] = [
-  // Quantum Computing Services;
+  // Quantum Computing Services
     tagline: 'Access quantum computing power through the cloud with AI-optimized algorithms'
     price: '$999',
     period: '/month',
@@ -326,14 +316,13 @@ export const,
       'Custom quantum algorithm development',
       'Quantum performance analytics and benchmarking',
       'API for quantum application development'],
-    popular: true;
-    icon: '',
+    popular: true icon: '',
     targetAudience: 'Research institutions, Pharmaceutical companies, Financial institutions, AI research labs, Universities'
-    trialDays: 30;
+    trialDays: 30
     setupTime: '1-2 weeks'
     category: 'Quantum Computing & AI'
     realService: true;
-    technology: [;
+    technology: [
     popula,
   r: true,
     ico,
@@ -349,7 +338,7 @@ export const,
     realServic,
   e: true;
     technolog,
-  y: [;
+  y: [
       'Qiskit'
       'Cirq'
       'PennyLane'
@@ -358,7 +347,7 @@ export const,
       'PostgreSQL'
     ]
     integration,
-  s: [;
+  s: [
       'IBM Quantum'
       'Google Quantum AI'
       'Amazon Braket'
@@ -367,7 +356,7 @@ export const,
       'Jupyter'
     ]
     useCase,
-  s: [;
+  s: [
       'Drug discovery'
       'Financial modeling'
       'Optimization problems'
@@ -386,8 +375,7 @@ export const,
       'Rigetti'],
     customers: 23;
     rating: 4 && 4.9;
-    reviews: 18;
-  },
+    reviews: 18},
   // Blockchain & Web3 Solutions;
     id: 'ai-blockchain-intelligence-platform'
     name: 'AI Blockchain Intelligence Platform',
@@ -425,8 +413,7 @@ export const,
       'Custom blockchain analytics dashboards',
       'Real - time alerts and notifications',
       'API for blockchain applications'],
-    popular: true;
-    icon: '',
+    popular: true icon: '',
     marketPosition: 'Competes with Chainalysis ($1000+/month), Elliptic ($500/month), CipherTrace ($300/month). Our advantage: AI automation provides deeper insights and reduces analysis time by 80%.',
     targetAudience:,
       'Cryptocurrency traders, DeFi protocols, Blockchain companies, Financial institutions'
@@ -462,7 +449,7 @@ export const,
       'PostgreSQL',
       'Redis'],
     integration,
-  s: [;
+  s: [
       'Ethereum'
       'Bitcoin'
       'Polygon'
@@ -483,8 +470,7 @@ export const,
     competitors: ['Chainalysis', 'Elliptic', 'CipherTrace', 'Glassnode'],
     customers: 156;
     rating: 4 && 4.7;
-    reviews: 89;
-  },
+    reviews: 89},
   // Internet of Things (IoT) Platform;
     id: 'ai-iot-intelligence-platform'
     name: 'AI IoT Intelligence Platform',
@@ -525,8 +511,7 @@ export const,
       'Security and privacy management',
       'Scalable device connectivity',
       'Advanced analytics and reporting'],
-    popular: false;
-    icon: '',
+    popular: false icon: '',
     targetAudience: 'Smart home companies, Industrial IoT providers, City planners, Manufacturing companies'
     trialDays: 14;
     setupTime: '3-4 hours'
@@ -556,7 +541,7 @@ export const,
       'PostgreSQL',
       'Redis'],
     integration,
-  s: [;
+  s: [
       'AWS IoT'
       'Azure IoT'
       'Google Cloud IoT'
@@ -577,8 +562,7 @@ export const,
     competitors: ['AWS IoT', 'Azure IoT Hub', 'Google Cloud IoT', 'ThingWorx'],
     customers: 89;
     rating: 4 && 4.6;
-    reviews: 45;
-  },
+    reviews: 45},
   // Edge Computing & 5G Services;
     id: 'edge-computing-optimization-platform'
     name: 'Edge Computing Optimization Platform',
@@ -620,8 +604,7 @@ export const,
       'Advanced analytics and reporting',
       'Mobile edge computing support',
       'API for edge applications'],
-    popular: false;
-    icon: '',
+    popular: false icon: '',
     marketPosition: 'Competes with AWS Outposts ($1000+/month), Azure Stack Edge ($1000+/month), Google Anthos ($1000+/month). Our advantage: AI optimization improves edge performance by 40% and reduces latency by 60%.',
     targetAudience:,
     popula,
@@ -643,7 +626,7 @@ export const,
     realServic,
   e: true;
     technolog,
-  y: [;
+  y: [
       'Python'
       'TensorFlow'
       'Kubernetes'
@@ -652,7 +635,7 @@ export const,
       'Redis'
     ]
     integration,
-  s: [;
+  s: [
       'AWS Outposts'
       'Azure Stack Edge'
       'Google Anthos'
@@ -661,7 +644,7 @@ export const,
       'Docker'
     ]
     useCase,
-  s: [;
+  s: [
       'Edge computing optimization'
       '5 G network management'
       'Edge application deployment'
@@ -680,8 +663,7 @@ export const,
       'VMware Edge'],
     customers: 45;
     rating: 4 && 4.5;
-    reviews: 23;
-  },
+    reviews: 23},
   // Augmented Reality (AR) & Virtual Reality (VR)
     id: 'ai-ar-vr-development-platform'
     name: 'AI AR/VR Development Platform',
@@ -720,8 +702,7 @@ export const,
       'Real - time content analytics',
       'Multi - platform deployment support',
       'API for AR / VR applications'],
-    popular: false;
-    icon: '',
+    popular: false icon: '',
     marketPosition: 'Competes with Unity Pro ($180/month), Unreal Engine (5% royalty), Vuforia ($500/month). Our advantage: AI automation reduces AR/VR development time by 70% and improves content quality.',
     targetAudience:,
     popula,
@@ -743,7 +724,7 @@ export const,
     realServic,
   e: true;
     technolog,
-  y: [;
+  y: [
       'Unity'
       'Unreal Engine'
       'Python'
@@ -752,7 +733,7 @@ export const,
       'PostgreSQL'
     ]
     integration,
-  s: [;
+  s: [
       'Oculus'
       'HTC Vive'
       'Microsoft HoloLens'
@@ -772,8 +753,7 @@ export const,
     competitors: ['Unity', 'Unreal Engine', 'Vuforia', 'ARKit'],
     customers: 67;
     rating: 4 && 4.4;
-    reviews: 34;
-  },
+    reviews: 34},
   // Robotics & Automation Services;
     id: 'ai-robotics-automation-platform'
     name: 'AI Robotics & Automation Platform',
@@ -815,8 +795,7 @@ export const,
       'Advanced analytics and reporting',
       'Mobile app for robot control',
       'API for robotics applications'],
-    popular: false;
-    icon: '',
+    popular: false icon: '',
     marketPosition: 'Competes with ABB RobotStudio ($2000/month), FANUC ROBOGUIDE ($1500/month), KUKA Sim ($1000/month). Our advantage: AI automation improves robotic efficiency by 50% and reduces programming time by 80%.',
     targetAudience:,
       'Manufacturing companies, Logistics providers, Service robotics companies, Research institutions'
@@ -825,7 +804,7 @@ export const,
     category: 'Robotics & Automation',
     realService: true;
     technology: ['Python', 'TensorFlow', 'ROS', 'React', 'PostgreSQL', 'Redis']
-    integrations: [;
+    integrations: [
     popula,
   r: false,
     ico,
@@ -847,7 +826,7 @@ export const,
     technolog,
   y: ['Python', 'TensorFlow', 'ROS', 'React', 'PostgreSQL', 'Redis']
     integration,
-  s: [;
+  s: [
       'ABB'
       'FANUC'
       'KUKA'
@@ -856,7 +835,7 @@ export const,
       'iRobot'
     ]
     useCase,
-  s: [;
+  s: [
       'Manufacturing automation'
       'Logistics optimization'
       'Service robotics'
@@ -875,8 +854,7 @@ export const,
       'Universal Robots'],
     customers: 34;
     rating: 4 && 4.3;
-    reviews: 18;
-  },
+    reviews: 18},
   // Digital Twin & Simulation;
     id: 'ai-digital-twin-platform'
     name: 'AI Digital Twin Platform',
@@ -913,8 +891,7 @@ export const,
       'Advanced analytics and reporting',
       'API for custom integrations',
       'Mobile app for monitoring'],
-    popular: false;
-    icon: '',
+    popular: false icon: '',
     marketPosition: 'Competes with Siemens Digital Twin ($5000/month), PTC ThingWorx ($3000/month), GE Digital Twin ($2000/month). Our advantage: AI automation reduces digital twin creation time by 60% and improves simulation accuracy.',
     targetAudience:,
     popula,
@@ -936,7 +913,7 @@ export const,
     realServic,
   e: true;
     technolog,
-  y: [;
+  y: [
       'Python'
       'TensorFlow'
       'Unity'
@@ -945,7 +922,7 @@ export const,
       'Redis'
     ]
     integration,
-  s: [;
+  s: [
       'Siemens'
       'PTC'
       'GE Digital'
@@ -954,7 +931,7 @@ export const,
       'IoT platforms'
     ]
     useCase,
-  s: [;
+  s: [
       'Manufacturing optimization'
       'Infrastructure monitoring'
       'Energy management'
@@ -964,7 +941,7 @@ export const,
     ro,
   i: 'Organizations report 300% ROI through improved operational efficiency and reduced maintenance costs.'
     competitor,
-  s: [;
+  s: [
       'Siemens Digital Twin'
       'PTC ThingWorx'
       'GE Digital Twin'
@@ -979,16 +956,13 @@ export const,
     launchDate: '2024-06-25'
     customers: 56;
     rating: 4.4;
-    reviews: 29;
-  }
+    reviews: 29}
       'AI-powered digital twin platform with intelligent creation, real-time simulation, and comprehensive analytics capabilities.',
     launchDate: '2024-06-25'
     customers: 56;
     rating: 4 && 4.4;
-    reviews: 29;
-  };
-];
-export const getEmergingTechServices2026ByCategory = (category: string) =>;
+    reviews: 29}];
+export const getEmergingTechServices2026ByCategory = (category: string) =>
   return emergingTechServices2026.filter(service => service.category === category),
     marketSiz,
   e: '$86.1B digital twin market'
@@ -1017,18 +991,17 @@ export const getEmergingTechServices2026ByCategory = (category: string) =>;
     ratin,
   g: 4 && 4.4,
     review,
-  s: 29};
-];
+  s: 29}];
 export const getEmergingTechServices2026ByCategory = (categor)
-  y: string) =>;
+  y: string) =>
   return emergingTechServices2026.filter(service => service.category === category)
   )}
 export const getPopularEmergingTechServices2026 = () =>
-};
+}
 export const getPopularEmergingTechServices2026 = () => {/* TODO: Fix JSX expression */}
   return emergingTechServices2026.filter(service => service.popular)}
 }
-  }];
+  }]
 export const getEmergingTechServices2026ByPriceRange = (minPrice: number)
   maxPrice: number)) =>,
   return emergingTechServices2026 && emergingTechServices2026.filter(service =>)
@@ -1038,11 +1011,9 @@ export const getEmergingTechServices2026ByPriceRange = (minPric)
   e: number)
 ) =>
   return emergingTechServices2026 && emergingTechServices2026.filter(service =>)
-    const _price = parseInt(service && service.price.replace('$') ''));
-    return price >= minPrice && price <= maxPrice;
-  })
-};    return price >= minPrice && price <= maxPrice;
-  })
+    const _price = parseInt(service && service.price.replace('$') ''))
+    return price >= minPrice && price <= maxPrice})
+};    return price >= minPrice && price <= maxPrice})
 }
     id: 'quantum-computing-as-a-service', name: 'Quantum Computing as a Service (QCaaS)',
     tagline: 'Access quantum computing power through the cloud with AI-optimized algorithms', price: '$999',
@@ -1066,14 +1037,13 @@ export const getEmergingTechServices2026ByPriceRange = (minPric)
     implementationDetails: 'Cloud-native quantum computing platform with AI-optimized algorithms, multi-provider access, and comprehensive quantum development tools.',
     launchDate: '2024-12-15', customers: 23;
     rating: 4.9;
-    reviews: 18;
-  };
+    reviews: 18};
   // Blockchain & Web3 Solutions;
     id: 'ai-blockchain-intelligence-platform', name: 'AI Blockchain Intelligence Platform',
     tagline: 'Intelligent blockchain analytics and DeFi optimization with AI-powered insights', price: '$299',
     period: '/month',
     description: 'Advanced blockchain analytics platform that uses AI to analyze blockchain data, optimize DeFi strategies, and provide intelligent insights for cryptocurrency and blockchain applications.',
-    features: [;
+    features: [
       'AI-powered blockchain data analysisDeFi strategy optimization and automationSmart contract security auditingCryptocurrency portfolio managementBlockchain transaction monitoringNFT market analysis and insightsIntegration with major blockchainsCustom blockchain analytics dashboards',
       'Real-time alerts and notificationsAPI for blockchain applications'],
     popular: true, icon: '',
@@ -1091,14 +1061,13 @@ export const getEmergingTechServices2026ByPriceRange = (minPric)
     implementationDetails: 'AI-powered blockchain analytics platform with intelligent data analysis, DeFi optimization, and comprehensive blockchain intelligence.',
     launchDate: '2024-11-20', customers: 156;
     rating: 4.7;
-    reviews: 89;
-  };
+    reviews: 89};
   // Internet of Things (IoT) Platform;
     id: 'ai-iot-intelligence-platform', name: 'AI IoT Intelligence Platform',
     tagline: 'Intelligent IoT device management and data analytics with AI-powered automation', price: '$199',
     period: '/month',
     description: 'Comprehensive IoT platform that uses AI to manage connected devices, analyze sensor data, and provide intelligent automation for smart homes, cities, and industrial applications.',
-    features: [;
+    features: [
       'AI-powered IoT device managementReal-time sensor data analyticsPredictive maintenance and monitoringSmart automation and controlEdge computing optimizationIntegration with major IoT platformsCustom IoT application developmentSecurity and privacy management',
       'Scalable device connectivityAdvanced analytics and reporting'],
     popular: false, icon: '',
@@ -1116,14 +1085,13 @@ export const getEmergingTechServices2026ByPriceRange = (minPric)
     implementationDetails: 'AI-powered IoT platform with intelligent device management, real-time analytics, and comprehensive automation capabilities.',
     launchDate: '2024-10-25', customers: 89;
     rating: 4.6;
-    reviews: 45;
-  };
+    reviews: 45};
   // Edge Computing & 5G Services;
     id: 'edge-computing-optimization-platform', name: 'Edge Computing Optimization Platform',
     tagline: 'Optimize edge computing performance and 5 G network efficiency with AI', price: '$399',
     period: '/month',
     description: 'Advanced edge computing platform that uses AI to optimize edge node performance, manage 5 G network resources, and provide intelligent edge application deployment.',
-    features: [;
+    features: [
       'AI-powered edge node optimization5G network resource managementEdge application deployment automationReal-time performance monitoringEdge security and complianceIntegration with major cloud providersCustom edge computing workflowsAdvanced analytics and reporting',
       'Mobile edge computing supportAPI for edge applications'],
     popular: false, icon: '',
@@ -1141,14 +1109,13 @@ export const getEmergingTechServices2026ByPriceRange = (minPric)
     implementationDetails: 'AI-powered edge computing platform with intelligent optimization, 5G network management, and comprehensive edge application support.',
     launchDate: '2024-09-30', customers: 45;
     rating: 4.5;
-    reviews: 23;
-  };
+    reviews: 23};
   // Augmented Reality (AR) & Virtual Reality (VR)
     id: 'ai-ar-vr-development-platform', name: 'AI AR/VR Development Platform',
     tagline: 'Intelligent AR/VR application development with AI-powered content creation', price: '$249',
     period: '/month',
     description: 'Advanced AR/VR development platform that uses AI to create immersive content, optimize user experiences, and provide intelligent development tools for augmented and virtual reality applications.',
-    features: [;
+    features: [
       'AI-powered 3D content generationIntelligent user experience optimizationAR/VR application development toolsContent personalization and adaptationPerformance optimization and testingIntegration with major AR/VR platformsCustom AR/VR workflowsReal-time content analytics',
       'Multi-platform deployment supportAPI for AR/VR applications'],
     popular: false, icon: '',
@@ -1166,14 +1133,13 @@ export const getEmergingTechServices2026ByPriceRange = (minPric)
     implementationDetails: 'AI-powered AR/VR development platform with intelligent content creation, user experience optimization, and comprehensive development tools.',
     launchDate: '2024-08-15', customers: 67;
     rating: 4.4;
-    reviews: 34;
-  };
+    reviews: 34};
   // Robotics & Automation Services;
     id: 'ai-robotics-automation-platform', name: 'AI Robotics & Automation Platform',
     tagline: 'Intelligent robotics control and automation with AI-powered optimization', price: '$599',
     period: '/month',
     description: 'Advanced robotics platform that uses AI to control robotic systems, optimize automation workflows, and provide intelligent robotics solutions for manufacturing, logistics, and service industries.',
-    features: [;
+    features: [
       'AI-powered robotic control systemsAutomated workflow optimizationPredictive maintenance for robotsIntegration with major robotics platformsCustom automation workflowsReal-time performance monitoringSafety and compliance managementAdvanced analytics and reporting',
       'Mobile app for robot controlAPI for robotics applications'],
     popular: false, icon: '',
@@ -1191,14 +1157,13 @@ export const getEmergingTechServices2026ByPriceRange = (minPric)
     implementationDetails: 'AI-powered robotics platform with intelligent control systems, automation optimization, and comprehensive robotics management.',
     launchDate: '2024-07-20', customers: 34;
     rating: 4.3;
-    reviews: 18;
-  };
+    reviews: 18};
   // Digital Twin & Simulation;
     id: 'ai-digital-twin-platform', name: 'AI Digital Twin Platform',
     tagline: 'Intelligent digital twin creation and simulation with AI-powered insights', price: '$349',
     period: '/month',
     description: 'Advanced digital twin platform that uses AI to create virtual replicas of physical systems, simulate scenarios, and provide intelligent insights for optimization and decision-making.',
-    features: [;
+    features: [
       'AI-powered digital twin creationReal-time simulation and modelingPredictive analytics and forecastingIntegration with IoT and sensor dataCustom simulation scenariosPerformance optimization insights3D visualization and modelingAdvanced analytics and reporting',
       'API for custom integrationsMobile app for monitoring'],
     popular: false, icon: '',
@@ -1216,8 +1181,7 @@ export const getEmergingTechServices2026ByPriceRange = (minPric)
     implementationDetails: 'AI-powered digital twin platform with intelligent creation, real-time simulation, and comprehensive analytics capabilities.',
     launchDate: '2024-06-25', customers: 56;
     rating: 4.4;
-    reviews: 29;
-  }
+    reviews: 29}
 ];
 export const getEmergingTechServices2026ByCategory = (category: string) =>,
   return emergingTechServices2026.filter(service => service.category === category),
@@ -1233,7 +1197,7 @@ export const getEmergingTechServices2026ByCategory = (category: string) =>,
   n: 'Cloud-based quantum computing platform that provides access to quantum processors, quantum algorithms, and quantum machine learning capabilities. Features include quantum circuit optimization, quantum error correction, and hybrid quantum-classical computing.',
     feature,
   s: [,
-      'Access to multiple quantum processors (IBM) Google; Rigetti)AI-optimized quantum algorithm libraryQuantum error correction and noise mitigationHybrid quantum-classical computing workflowsQuantum machine learning algorithmsReal-time quantum circuit visualizationIntegration with classical computing frameworksCustom quantum algorithm development'
+      'Access to multiple quantum processors (IBM) Google Rigetti)AI-optimized quantum algorithm libraryQuantum error correction and noise mitigationHybrid quantum-classical computing workflowsQuantum machine learning algorithmsReal-time quantum circuit visualizationIntegration with classical computing frameworksCustom quantum algorithm development'
       'Quantum performance analytics and benchmarkingAPI for quantum application development'
     ];
     popula,
@@ -1290,7 +1254,7 @@ export const getEmergingTechServices2026ByCategory = (category: string) =>,
     descriptio,
   n: 'Advanced blockchain analytics platform that uses AI to analyze blockchain data, optimize DeFi strategies, and provide intelligent insights for cryptocurrency and blockchain applications.',
     feature,
-  s: [;
+  s: [
       'AI-powered blockchain data analysisDeFi strategy optimization and automationSmart contract security auditingCryptocurrency portfolio managementBlockchain transaction monitoringNFT market analysis and insightsIntegration with major blockchainsCustom blockchain analytics dashboards'
       'Real-time alerts and notificationsAPI for blockchain applications'
     ],
@@ -1348,7 +1312,7 @@ export const getEmergingTechServices2026ByCategory = (category: string) =>,
     descriptio,
   n: 'Comprehensive IoT platform that uses AI to manage connected devices, analyze sensor data, and provide intelligent automation for smart homes, cities, and industrial applications.',
     feature,
-  s: [;
+  s: [
       'AI-powered IoT device managementReal-time sensor data analyticsPredictive maintenance and monitoringSmart automation and controlEdge computing optimizationIntegration with major IoT platformsCustom IoT application developmentSecurity and privacy management'
       'Scalable device connectivityAdvanced analytics and reporting'
     ],
@@ -1406,7 +1370,7 @@ export const getEmergingTechServices2026ByCategory = (category: string) =>,
     descriptio,
   n: 'Advanced edge computing platform that uses AI to optimize edge node performance, manage 5G network resources, and provide intelligent edge application deployment.',
     feature,
-  s: [;
+  s: [
       'AI-powered edge node optimization5G network resource managementEdge application deployment automationReal-time performance monitoringEdge security and complianceIntegration with major cloud providersCustom edge computing workflowsAdvanced analytics and reporting'
       'Mobile edge computing supportAPI for edge applications'
     ],
@@ -1465,7 +1429,7 @@ export const getEmergingTechServices2026ByCategory = (category: string) =>,
     descriptio,
   n: 'Advanced AR/VR development platform that uses AI to create immersive content, optimize user experiences, and provide intelligent development tools for augmented and virtual reality applications.',
     feature,
-  s: [;
+  s: [
       'AI-powered 3D content generationIntelligent user experience optimizationAR/VR application development toolsContent personalization and adaptationPerformance optimization and testingIntegration with major AR/VR platformsCustom AR/VR workflowsReal-time content analytics'
       'Multi-platform deployment supportAPI for AR/VR applications'
     ],
@@ -1523,7 +1487,7 @@ export const getEmergingTechServices2026ByCategory = (category: string) =>,
     descriptio,
   n: 'Advanced robotics platform that uses AI to control robotic systems, optimize automation workflows, and provide intelligent robotics solutions for manufacturing, logistics, and service industries.',
     feature,
-  s: [;
+  s: [
       'AI-powered robotic control systemsAutomated workflow optimizationPredictive maintenance for robotsIntegration with major robotics platformsCustom automation workflowsReal-time performance monitoringSafety and compliance managementAdvanced analytics and reporting'
       'Mobile app for robot controlAPI for robotics applications'
     ],
@@ -1581,7 +1545,7 @@ export const getEmergingTechServices2026ByCategory = (category: string) =>,
     descriptio,
   n: 'Advanced digital twin platform that uses AI to create virtual replicas of physical systems, simulate scenarios, and provide intelligent insights for optimization and decision-making.',
     feature,
-  s: [;
+  s: [
       'AI-powered digital twin creationReal-time simulation and modelingPredictive analytics and forecastingIntegration with IoT and sensor dataCustom simulation scenariosPerformance optimization insights3D visualization and modelingAdvanced analytics and reporting'
       'API for custom integrationsMobile app for monitoring'
     ],
@@ -1632,64 +1596,51 @@ export const getEmergingTechServices2026ByCategory = (category: string) =>,
 export const getEmergingTechServices2026ByCategory = (categor)
   y: string) =>,
   return emergingTechServices2026.filter(service => service.category === category)
-};
+}
 export const getPopularEmergingTechServices2026 = () =>
   return emergingTechServices2026.filter(service => service.popular)
-};
+}
 export const getEmergingTechServices2026ByPriceRange = (minPrice: number) maxPrice: number) =>,
   return emergingTechServices2026.filter(service =>)
 export const getEmergingTechServices2026ByPriceRange = (minPric)
   e: number) maxPric,
   e: number) =>,
   return emergingTechServices2026.filter(service =>)
-    const _price = parseInt(service.price.replace('$') ''));
-    return price >= minPrice && price <= maxPrice;
-  })
+    const _price = parseInt(service.price.replace('$') ''))
+    return price >= minPrice && price <= maxPrice})
 };
-;
-export const getEmergingTechServices2026ByCategory = (category: string) =>: unknown;
+export const getEmergingTechServices2026ByCategory = (category: string) =>: unknown
   return emergingTechServices2026.filter()
 export const getEmergingTechServices2026ByCategory = (categor)
-  y: string) =>: unknown;
+  y: string) =>: unknown
   return emergingTechServices2026.filter ()
-    service => service.category === category);
-}
-;
-export const getPopularEmergingTechServices2026 = () =>: unknown;
-  return emergingTechServices2026.filter (service => service.popular);
-}
-;
+    service => service.category === category)}
+export const getPopularEmergingTechServices2026 = () =>: unknown
+  return emergingTechServices2026.filter (service => service.popular)}
 export const getEmergingTechServices2026ByPriceRange = (min_price: number)
-  max_price: number) =>: unknown;
+  max_price: number) =>: unknown
   return emergingTechServices2026.filter(service =>),
 export const getEmergingTechServices2026ByPriceRange = (min_pric)
   e: number)
   max_pric,
   e: number) =>: unknown,
   return emergingTechServices2026.filter (service =>)
-    const _price = parse_int (service.price.replace ('$') ''));
-    return price >= min_price && price <= max_price;
-  });
-}    return price >= min_price && price <= max_price;
-  });
-}
-;
+    const _price = parse_int (service.price.replace ('$') ''))
+    return price >= min_price && price <= max_price})}    return price >= min_price && price <= max_price})}
 export interface EmergingTechService2026 {/* TODO: Fix JSX expression */}
   })
-};
-;
-export const getEmergingTechServices2026ByCategory = (category: string) =>: unknown;
+}
+export const getEmergingTechServices2026ByCategory = (category: string) =>: unknown
   return emergingTechServices2026.filter()
 export const getEmergingTechServices2026ByCategory = (categor)
-  y: string) =>: unknown;
+  y: string) =>: unknown
   return emergingTechServices2026.filter ()
-    service => service.category === category);
-}
+    service => service.category === category)}
 export interface EmergingTechService2026 {/* TODO: Fix JSX expression */}
   s: string}
     websit,
   e: string}
-  };
+  }
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -1708,28 +1659,19 @@ export interface EmergingTechService2026 {/* TODO: Fix JSX expression */}
   g: number;
   review,
   s: number}
-;
-export const getPopularEmergingTechServices2026 = () =>: unknown;
-  return emergingTechServices2026.filter (service => service.popular);
-}
-;
+export const getPopularEmergingTechServices2026 = () =>: unknown
+  return emergingTechServices2026.filter (service => service.popular)}
 export const getEmergingTechServices2026ByPriceRange = (min_price: number)
-  max_price: number) =>: unknown;
+  max_price: number) =>: unknown
   return emergingTechServices2026.filter(service =>),
 export const getEmergingTechServices2026ByPriceRange = (min_pric)
   e: number)
   max_pric,
   e: number) =>: unknown,
   return emergingTechServices2026.filter (service =>)
-    const _price = parse_int (service.price.replace ('$') ''));
-    return price >= min_price && price <= max_price;
-  });
-}    return price >= min_price && price <= max_price;
-  });
-}
-;
-export interface EmergingTechService2026;
-};
+    const _price = parse_int (service.price.replace ('$') ''))
+    return price >= min_price && price <= max_price})}    return price >= min_price && price <= max_price})}
+export interface EmergingTechService2026}
 i,
   d: string; nam,
   e: string; taglin,
@@ -1779,7 +1721,7 @@ i,
   e: string; emai,
   l: string; addres,
   s: string}; export const,
-  emergingTechServices2026: EmergingTechService2026[] = [ // Quantum Computing Services ]; return emergingTechServices2026 && emergingTechServices2026.filter(service => service && service.popular); }; i,
+  emergingTechServices2026: EmergingTechService2026[] = [ // Quantum Computing Services ] return emergingTechServices2026 && emergingTechServices2026.filter(service => service && service.popular)}; i,
   d: 'ai-digital-twin-platform'' nam,
   e: 'AI Digital Twin Platform' taglin,
   e:' 'Intelligent digital twin creation and simulation with AI-powered insights'' pric,
@@ -1813,8 +1755,8 @@ i,
   e: '2024-06-25', customer,
   s: 56, ratin,
   g: 4.4, review,
-  s: 29}; ]; export const getEmergingTechServices2026ByCategory = (categor)
-  y: string) => return emergingTechServices2026.filter(service => service.category === category) ); ], return emergingTechServices2026 && emergingTechServices2026.filter(service => service && service.popular) }; export const,
+  s: 29}] export const getEmergingTechServices2026ByCategory = (categor)
+  y: string) => return emergingTechServices2026.filter(service => service.category === category) )], return emergingTechServices2026 && emergingTechServices2026.filter(service => service && service.popular) } export const,
   emergingTechServices2026: EmergingTechService2026[] = [ // Quantum Computing Services,
   tagline:' 'Access quantum computing power through the cloud with AI-optimized algorithms'' pric,
   e: '$999'' perio,
@@ -1986,10 +1928,10 @@ i,
   e: '2024-06-25', customer,
   s: 56, ratin,
   g: 4 && 4.4, review,
-  s: 29}; ]; export const getEmergingTechServices2026ByCategory = (categor)
-  y: string) => return emergingTechServices2026.filter(service => service.category === category) )} export const getPopularEmergingTechServices2026 = () => }; export const getPopularEmergingTechServices2026 = () => {; return emergingTechServices2026.filter(service => service.popular)} } }]; export const getEmergingTechServices2026ByPriceRange = (minPric,
+  s: 29}] export const getEmergingTechServices2026ByCategory = (categor)
+  y: string) => return emergingTechServices2026.filter(service => service.category === category) )} export const getPopularEmergingTechServices2026 = () => } export const getPopularEmergingTechServices2026 = () => { return emergingTechServices2026.filter(service => service.popular)} } }] export const getEmergingTechServices2026ByPriceRange = (minPric,
   e: number)
-  maxPrice: number ) => return emergingTechServices2026 && emergingTechServices2026.filter(service => ' const price = parseInt(service && service.price.replace('$') '')); return price >= minPrice && price <= maxPrice; }) }; return price >= minPrice && price <= maxPrice }) } ' i,
+  maxPrice: number ) => return emergingTechServices2026 && emergingTechServices2026.filter(service => ' const price = parseInt(service && service.price.replace('$') '')) return price >= minPrice && price <= maxPrice}) }; return price >= minPrice && price <= maxPrice }) } ' i,
   d: 'quantum-computing-as-a-service', nam,
   e: 'Quantum Computing as a Service (QCaaS)',' taglin,
   e: 'Access quantum computing power through the cloud with AI-optimized algorithms', pric,
@@ -2228,20 +2170,20 @@ i,
   s: 56, ratin,
   g: 4.4, review,
   s: 29 } ]; export const getEmergingTechServices2026ByCategory = (categor)
-  y: string) => return emergingTechServices2026.filter(service => service.category === category) }; export const getPopularEmergingTechServices2026 = () => return emergingTechServices2026.filter(service => service.popular) }; export const getEmergingTechServices2026ByPriceRange = (minPric)
+  y: string) => return emergingTechServices2026.filter(service => service.category === category) } export const getPopularEmergingTechServices2026 = () => return emergingTechServices2026.filter(service => service.popular) } export const getEmergingTechServices2026ByPriceRange = (minPric)
   e: number) maxPric,
-  e: number) => return emergingTechServices2026.filter(service => ' const price = parseInt(service.price.replace('$') '')); return price >= minPrice && price <= maxPrice }) }; export const getEmergingTechServices2026ByCategory = (categor)
-  y: string) =>: unknown return emergingTechServices2026.filter ( service => service.category === category); } ; export const getPopularEmergingTechServices2026 = () =>: unknown return emergingTechServices2026.filter (service => service.popular); } ; export const getEmergingTechServices2026ByPriceRange = (min_pric)
+  e: number) => return emergingTechServices2026.filter(service => ' const price = parseInt(service.price.replace('$') '')) return price >= minPrice && price <= maxPrice }) }; export const getEmergingTechServices2026ByCategory = (categor)
+  y: string) =>: unknown return emergingTechServices2026.filter ( service => service.category === category)}  export const getPopularEmergingTechServices2026 = () =>: unknown return emergingTechServices2026.filter (service => service.popular)}  export const getEmergingTechServices2026ByPriceRange = (min_pric)
   e: number) max_pric,
-  e: number) =>: unknown return emergingTechServices2026.filter (service => ' const price = parse_int (service.price.replace ('$') '')); return price >= min_price && price <= max_price; }); } return price >= min_price && price <= max_price; }); } ; export interface EmergingTechService2026 {; }) }; export const getEmergingTechServices2026ByCategory = (categor)
-  y: string) =>: unknown return emergingTechServices2026.filter ( service => service.category === category); } export interface EmergingTechService2026 {/* TODO: Fix JSX expression */}
+  e: number) =>: unknown return emergingTechServices2026.filter (service => ' const price = parse_int (service.price.replace ('$') '')) return price >= min_price && price <= max_price})} return price >= min_price && price <= max_price})} ; export interface EmergingTechService2026 { }) } export const getEmergingTechServices2026ByCategory = (categor)
+  y: string) =>: unknown return emergingTechServices2026.filter ( service => service.category === category)} export interface EmergingTechService2026 {/* TODO: Fix JSX expression */}
   s: string} websit,
-  e: string} }; realImplementatio,
+  e: string} } realImplementatio,
   n: boolean; implementationDetail,
   s: string; launchDat,
   e: string; customer,
   s: number; ratin,
   g: number; review,
-  s: number} ; export const getPopularEmergingTechServices2026 = () =>: unknown return emergingTechServices2026.filter (service => service.popular); } ; export const getEmergingTechServices2026ByPriceRange = (min_pric)
+  s: number} ; export const getPopularEmergingTechServices2026 = () =>: unknown return emergingTechServices2026.filter (service => service.popular)}  export const getEmergingTechServices2026ByPriceRange = (min_pric)
   e: number) max_pric,
-  e: number) =>: unknown return emergingTechServices2026.filter (service => ' const price = parse_int (service.price.replace ('$') '')); return price >= min_price && price <= max_price; }); } return price >= min_price && price <= max_price; }); } ; export interface EmergingTechService2026 }; '
+  e: number) =>: unknown return emergingTechServices2026.filter (service => ' const price = parse_int (service.price.replace ('$') '')) return price >= min_price && price <= max_price})} return price >= min_price && price <= max_price})} ; export interface EmergingTechService2026 } '

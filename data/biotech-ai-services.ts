@@ -1,13 +1,10 @@
-
-export interface BiotechAIService {id: string;
+export interface BiotechAIService {id: string
   name: string;
   tagline: string;
   price: string;
-  period: string;
-  description: string;
+  period: string description: string;
   features: string[];
-  popular: boolean;
-  icon: string;
+  popular: boolean icon: string;
   color: string;
   text_color: string;
   link: string;
@@ -50,12 +47,11 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
       websit,
   e: 'http,
   s://ziontechgroup && ziontechgroup.com'},
-    real_implementation: true;
+    real_implementation: true
     implementation_details: unknown;
     customers: 120;
     rating: 5 && 5.0;
-    reviews: 60;
-  },
+    reviews: 60},
     id: 'ai - genetic - engineering - suite',
     name: 'AI Genetic Engineering Suite',
     tagline: 'Revolutionary genetic engineering with AI precision',
@@ -97,8 +93,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
       'Research collaboration',
       'Mobile app',
       'API for lab integration'],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from - blue - 600 to - indigo - 700'
     text_color: 'text - blue - 400'
     link: 'https://ziontechgroup.com / ai - genetic - engineering'
@@ -177,8 +172,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 02 - 01'
     customers: 80;
     rating: 5 && 5.0;
-    reviews: 40;
-  },
+    reviews: 40},
     id: 'ai - protein - design - platform',
     name: 'AI Protein Design Platform',
     tagline: 'Design novel proteins with AI - powered algorithms',
@@ -244,8 +238,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
       'Analytics dashboard',
       'Mobile app',
       'API for integration'],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from - purple - 600 to - pink - 700'
     text_color: 'text - purple - 400'
     link: 'https://ziontechgroup.com / ai - protein - design'
@@ -324,8 +317,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 02 - 10'
     customers: 150;
     rating: 4 && 4.9;
-    reviews: 75;
-  },
+    reviews: 75},
     id: 'ai - clinical - trial - optimization',
     name: 'AI Clinical Trial Optimization Platform',
     tagline: 'Optimize clinical trials with AI - powered insights',
@@ -391,8 +383,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
       'API for integration',
       'Regulatory tools',
       'Collaboration platform'],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from - green - 600 to - emerald - 700'
     text_color: 'text - green - 400'
     link: 'https://ziontechgroup.com / ai - clinical - trials'
@@ -471,8 +462,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 02 - 15'
     customers: 200;
     rating: 4 && 4.9;
-    reviews: 100;
-  },
+    reviews: 100},
     id: 'ai - biomarker - discovery',
     name: 'AI Biomarker Discovery Platform',
     tagline: 'Discover biomarkers with AI - powered analysis',
@@ -538,8 +528,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
       'API for integration',
       'Research database',
       'Analytics dashboard'],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from - cyan - 600 to - blue - 700'
     text_color: 'text - cyan - 400'
     link: 'https://ziontechgroup.com / ai - biomarker - discovery'
@@ -618,8 +607,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 02 - 20'
     customers: 180;
     rating: 4 && 4.8;
-    reviews: 90;
-  },
+    reviews: 90},
     id: 'ai - personalized - medicine',
     name: 'AI Personalized Medicine Platform',
     tagline: 'Enable personalized medicine with AI - powered genomics',
@@ -685,8 +673,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
       'API for integration',
       'Healthcare integration',
       'Analytics dashboard'],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from - indigo - 600 to - purple - 700'
     text_color: 'text - indigo - 400'
     link: 'https://ziontechgroup.com / ai - personalized - medicine'
@@ -765,8 +752,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 02 - 25'
     customers: 120;
     rating: 5 && 5.0;
-    reviews: 60;
-  },
+    reviews: 60},
     id: 'ai - drug - repurposing',
     name: 'AI Drug Repurposing Platform',
     tagline: 'Discover new uses for existing drugs with AI',
@@ -832,8 +818,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
       'Mobile app',
       'API for integration',
       'Analytics dashboard'],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from - orange - 600 to - red - 700'
     text_color: 'text - orange - 400'
     link: 'https://ziontechgroup.com / ai - drug - repurposing'
@@ -912,8 +897,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 03 - 01'
     customers: 160;
     rating: 4 && 4.9;
-    reviews: 80;
-  },
+    reviews: 80},
       'Multi-omics analysis',
     id: 'ai - bioinformatics - platform',
     name: 'AI Bioinformatics Platform',
@@ -981,8 +965,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
       'Cloud computing',
       'Real - time analysis',
       'Advanced algorithms'],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from - teal - 600 to - cyan - 700'
     text_color: 'text - teal - 400'
     link: 'https://ziontechgroup.com / ai - bioinformatics'
@@ -1061,8 +1044,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 03 - 05'
     customers: 300;
     rating: 4 && 4.8;
-    reviews: 150;
-  },
+    reviews: 150},
     id: 'ai - biomanufacturing - optimization',
     name: 'AI Biomanufacturing Optimization Platform',
     tagline: 'Optimize biomanufacturing with AI - powered insights',
@@ -1128,8 +1110,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
       'API for integration',
       'Analytics dashboard',
       'Automation tools'],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from - gray - 600 to - slate - 700'
     text_color: 'text - gray - 400'
     link: 'https://ziontechgroup.com / ai - biomanufacturing'
@@ -1208,14 +1189,12 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 03 - 10'
     customers: 90;
     rating: 4 && 4.9;
-    reviews: 45;
-  }];      mobile: '+1 302 464 0950',
+    reviews: 45}];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
   id: string, name: string;
   tagline: string, price: string;
   period: string, description: string;
-  features: string[], popular: boolean;
-  icon: string, color: string;
+  features: string[], popular: boolean icon: string, color: string;
   textColor: string, link: string;
   marketPosition: string, targetAudience: string;
   trialDays: number, setupTime: string;
@@ -1227,19 +1206,17 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
   contactInfo: unknown;
     mobile: string, email: string;
     address: string;
-    website: string;
-    },
+    website: string},
     realImplementation: boolean, implementationDetails: string;
   launchDate: string, customers: number;
   rating: number;
-  reviews: number;
-}
+  reviews: number}
 export const biotechAIServices: BiotechAIService[] = [,
     id: 'ai-drug-discovery-platform', name: 'AI Drug Discovery Platform',
     tagline: 'Accelerate drug development with AI-powered discovery',
     price: '$3,999',
     period: '/month', description: 'Advanced AI-powered drug discovery platform that accelerates drug development by 10x while reducing costs by 90%. Discover new treatments and optimize existing drugs.'
-    features: [;
+    features: [
       'AI drug discovery algorithmsGenetic sequence analysisProtein folding predictionDrug interaction modelingClinical trial optimizationRegulatory compliance toolsResearch collaboration platformAdvanced analytics dashboard',
       'API for research integrationMulti-omics data analysis'],
     popular: true, icon: '',
@@ -1247,7 +1224,7 @@ export const biotechAIServices: BiotechAIService[] = [,
     link: 'https://ziontechgroup.com/biotech-ai', marketPosition: 'Revolutionary technology with no direct competitors. Insitro ($100 M+ funding) and Recursion ($2 B+ funding) offer basic AI drug discovery. Our advantage: Comprehensive platform and accessible pricing.',
     targetAudience: 'Pharmaceutical companies, Biotech startups, Research institutions, Drug discovery labs, Healthcare organizations, Academic researchers',
     trialDays: 30, setupTime: '2 weeks',
-    category: 'Biotech AI', realService: true;
+    category: 'Biotech AI', realService: true
     technology: ['AI Drug DiscoveryMachine LearningBioinformaticsReactNode.jsPostgreSQLCloud Computing'], integrations: ['Research databasesLaboratory systemsClinical trial platformsRegulatory databasesScientific literature'],
     useCases: ['Drug discoveryTarget identificationLead optimizationClinical trial designRegulatory complianceResearch collaboration'], roi: 'Accelerate drug development by 10 x and reduce costs by 90%. ROI through faster time-to-market and cost savings.',
     competitors: ['InsitroRecursionBasic research tools'], marketSize: '$150 B AI in healthcare market',
@@ -1370,7 +1347,7 @@ export const,
   d: '/month', descriptio,
   n: 'Advanced AI-powered drug discovery platform that accelerates drug development by 10x while reducing costs by 90%. Discover new treatments and optimize existing drugs.',
     feature,
-  s: [;
+  s: [
       'AI drug discovery algorithmsGenetic sequence analysisProtein folding predictionDrug interaction modelingClinical trial optimizationRegulatory compliance toolsResearch collaboration platformAdvanced analytics dashboard'
       'API for research integrationMulti-omics data analysis'
     ],
@@ -1430,20 +1407,16 @@ export const,
   s: 45}
 export interface BiotechAIService {/* TODO: Fix JSX expression */}
   }
+]
+}
 ];
-;
-;
-  }
-];
-;
     realImplementation: true;
     implementationDetails:,
       'Complete AI drug discovery platform with advanced algorithms, comprehensive analytics, and research tools. Includes collaboration features and regulatory compliance.'
     launchDate: '2024-01-15'
     customers: 120;
     rating: 5.0;
-    reviews: 60;
-  }
+    reviews: 60}
     id: 'ai-genetic-engineering-suite',
     name: 'AI Genetic Engineering Suite',
     tagline: 'Revolutionary genetic engineering with AI precision',
@@ -1477,7 +1450,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
   n:
       'Advanced AI-powered genetic engineering platform that enables precise gene editing, synthetic biology, and genetic optimization. Create new organisms and optimize existing ones.'
     feature,
-  s: [;
+  s: [
       'AI gene editing algorithms'
       'Synthetic biology design'
       'CRISPR optimization'
@@ -1489,8 +1462,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
       'Mobile app'
       'API for lab integration'
     ]
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-blue-600 to-indigo-700'
     textColor: 'text-blue-400'
     link: 'https://ziontechgroup.com/ai-genetic-engineering',
@@ -1522,9 +1494,9 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     realServic,
   e: true;
     technolog,
-  y: [;
+  y: [
     integration,
-  s: [;
+  s: [
       'Laboratory systems'
       'DNA sequencing'
       'Gene synthesis'
@@ -1577,9 +1549,9 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     realServic,
   e: true;
     technolog,
-  y: [;
+  y: [
     integration,
-  s: [;
+  s: [
       'Laboratory systems'
       'Protein databases'
       'Expression systems'
@@ -1632,9 +1604,9 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     realServic,
   e: true;
     technolog,
-  y: [;
+  y: [
     integration,
-  s: [;
+  s: [
       'Clinical trial systems'
       'Patient databases'
       'Regulatory platforms'
@@ -1687,9 +1659,9 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     realServic,
   e: true;
     technolog,
-  y: [;
+  y: [
     integration,
-  s: [;
+  s: [
       'Laboratory systems'
       'Clinical databases'
       'Research platforms'
@@ -1742,9 +1714,9 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     realServic,
   e: true;
     technolog,
-  y: [;
+  y: [
     integration,
-  s: [;
+  s: [
       'Healthcare systems'
       'Genomic databases'
       'Electronic health records'
@@ -1797,9 +1769,9 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     realServic,
   e: true;
     technolog,
-  y: [;
+  y: [
     integration,
-  s: [;
+  s: [
       'Drug databases'
       'Clinical databases'
       'Research platforms'
@@ -1852,9 +1824,9 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     realServic,
   e: true;
     technolog,
-  y: [;
+  y: [
     integration,
-  s: [;
+  s: [
       'Laboratory systems'
       'Research databases'
       'Analytical tools'
@@ -1907,9 +1879,9 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     realServic,
   e: true;
     technolog,
-  y: [;
+  y: [
     integration,
-  s: [;
+  s: [
       'Manufacturing systems'
       'Laboratory systems'
       'Quality control'
@@ -1940,8 +1912,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     launchDate: '2024-03-10'
     customers: 90;
     rating: 4.9;
-    reviews: 45;
-  }];      mobile: '+1 302 464 0950',
+    reviews: 45}];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
@@ -2013,18 +1984,16 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
   s: string}
     websit,
   e: string}
-  };
+  }
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
-}
-;
-export const biotechAIServices: BiotechAIService[] = [;
+  reviews: number}
+export const biotechAIServices: BiotechAIService[] = [
   {
-    id: 'ai-drug-discovery-platform';
+    id: 'ai-drug-discovery-platform'
     name: 'AI Drug Discovery Platform';
     tagline: 'Accelerate drug development with AI-powered discovery';
     price: '$3,999';
@@ -2034,8 +2003,7 @@ export const biotechAIServices: BiotechAIService[] = [;
       'AI drug discovery algorithmsGenetic sequence analysisProtein folding predictionDrug interaction modelingClinical trial optimizationRegulatory compliance toolsResearch collaboration platformAdvanced analytics dashboard';
       'API for research integrationMulti-omics data analysis'
     ];
-    popular: true;
-    icon: '';
+    popular: true icon: '';
     color: 'from-emerald-600 to-teal-700';
     textColor: 'text-emerald-400';
     link: 'https://ziontechgroup.com/biotech-ai';
@@ -2076,15 +2044,14 @@ export const biotechAIServices: BiotechAIService[] = [;
   g: number;
   review,
   s: number}
-;
 export const,
-  biotechAIServices: BiotechAIService[] = [;
+  biotechAIServices: BiotechAIService[] = [
   {/* TODO: Fix JSX expression */}
   t: 'biotech-futuristic'}
     contactInf,
   o: {}
       mobil,
-  e: '+1 302 464 0950';
+  e: '+1 302 464 0950'
       emai,
   l: 'kleber@ziontechgroup.com';
       addres,
@@ -2105,11 +2072,9 @@ export const,
   g: 4.9,
     review,
   s: 45}
-];
-  }
-;
+]}
 export interface BiotechAIService,
-  id: string; nam,
+  id: string nam,
   e: string; taglin,
   e: string; pric,
   e: string, perio,
@@ -2549,7 +2514,7 @@ export interface BiotechAIService,
   e: '2024 - 03 - 10' customer,
   s: 90, ratin,
   g: 4.9, review,
-  s: 45} export interface BiotechAIService {; } ]; ; } ]; realImplementatio,
+  s: 45} export interface BiotechAIService { } ] } ]; realImplementatio,
   n: true,
   implementationDetails:' 'Complete AI drug discovery platform with advanced algorithms, comprehensive analytics, and research tools. Includes collaboration features and regulatory compliance.'' launchDat,
   e: '2024-01-15' customer,
@@ -2720,16 +2685,16 @@ export interface BiotechAIService,
   g: 4.9,
   reviews: 45 } ]; export interface BiotechAIService {/* TODO: Fix JSX expression */}
   s: string} websit,
-  e: string} }; realImplementatio,
+  e: string} } realImplementatio,
   n: boolean; implementationDetail,
   s: string; launchDat,
   e: string; customer,
   s: number; ratin,
   g: number; review,
   s: number} ; export const,
-  biotechAIServices: BiotechAIService[] = [; {/* TODO: Fix JSX expression */}
+  biotechAIServices: BiotechAIService[] = [ {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
   s://ziontechgroup.com' } real_implementatio,
   n: true,' implementation_detail,
@@ -2737,4 +2702,4 @@ export interface BiotechAIService,
   e: '2024 - 03 - 10' customer,
   s: 90, ratin,
   g: 4.9, review,
-  s: 45} ]; } ; '
+  s: 45} ]} ; '

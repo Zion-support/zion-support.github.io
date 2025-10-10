@@ -84,8 +84,8 @@ const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
       </d, i, v>
       <div, className="grid, m, d: gr, i, d-co, l, s-2 l;
   g:gr, i, d-co, l, s-3, ga, p-6, m, b-8">")
-      <div, className="grid, m, d: gr, i, d-co, l, s-2 l;)
-  g:gr, i, d-co, l, s-3, ga, p-6, m, b-8">";)
+      <div, className="grid, m, d: gr, i, d-co, l, s-2 l)
+  g:gr, i, d-co, l, s-3, ga, p-6, m, b-8">")
         {megaArticl, e, s.m, a, p((artic, l, e, ind, e, x) => (
           <Li, n, k;
       <div, className="grid, m, d: gr, i, d-co, l, s-2 l
@@ -133,7 +133,5 @@ const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
         </Li, n, k>
       </d, i, v>
     </d, i, v>
-  );
-};
-export default October2025MegaLaunchBanner;
-}}"
+  )};
+export default October2025MegaLaunchBanner}}"

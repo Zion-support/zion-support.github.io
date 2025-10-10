@@ -1,23 +1,16 @@
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {,
   if (req.method !== 'POST') {,
-    return res.status(405).json({ error: 'Method not allowed' });
+    return res.status(405).json({ error: 'Method not allowed' })
 export default async function handler(re,
   q: NextApiRequest, re)
   s: NextApiResponse) {/* TODO: Fix JSX expression */}
-  r: 'Method not allowed' });
-  }
-
+  r: 'Method not allowed' })}
   try {/* TODO: Fix JSX expression */}
-    const { markdown, targetLanguage = 'en' } = req.body || {};
-
+    const { markdown, targetLanguage = 'en' } = req.body || {}
     if (!markdown) {/* TODO: Fix JSX expression */}
-  r: 'Markdown content required' });
-    }
-
+  r: 'Markdown content required' })}
     const _openai = new OpenAI({/* TODO: Fix JSX expression */})
   y: process.env.OPENAI_API_KEY });
-
     const completion = await openai.chat.completions.create({
       model: process.env.OPENAI_MODEL || 'gpt-4o-mini',
       messages: [,
@@ -37,15 +30,10 @@ export default async function handler(re,
       temperatur,
   e: 0.2)
     });
-
     //     const translated = completion.choices?.[0]?.message?.content?.trim() || '';
-
-    return res.status(200).json({ translated });
-  } catch (error: unknown) {,
-    //     return res.status(500).json({ error: 'Translation failed' });
-  } catch (erro)
+    return res.status(200).json({ translated })} catch (error: unknown) {,
+    //     return res.status(500).json({ error: 'Translation failed' })} catch (erro)
   r: unknown) {/* TODO: Fix JSX expression */}
-  r: 'Translation failed' });
-  }
+  r: 'Translation failed' })}
 }
 `

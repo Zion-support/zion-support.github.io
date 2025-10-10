@@ -17,9 +17,8 @@ const,
       <meta name="description" content={description} /></meta>"
       <meta name="keywords" content={keywords.join(', ')} /></meta>
       {children}
-  );
-};
-export default SEO;
+  )};
+export default SEO
 "
   </SEOProps>
   </SEOProps>

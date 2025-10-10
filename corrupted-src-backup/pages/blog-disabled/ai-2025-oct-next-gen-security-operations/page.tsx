@@ -6,7 +6,7 @@ export default function NextGenSecurityOperations20, 2, 5() {
       <Helm, e, t>)
         <title>)
           Ne, x, t-Gen, AI, Security Operations, 202, 5 — 99.97% Threat, Detectio, n)
-          S, u, b-Second, Respons, e, $2.3B+ Protecti, o, n | Zion, Tech, Group;
+          S, u, b-Second, Respons, e, $2.3B+ Protecti, o, n | Zion, Tech, Group
         </title>
         <meta, nam, e = 'description'
           conte, n, t='Deploy, autonomous, AI security, operations, that detect, threats, in milliseco, n, d, s, respond, automaticall, y, and, prevent, breaches before, they, happen. Achieve, 9, 9.97% detection, accurac, y, reduce, incident, response time, by, 95%, and, protec, t $2.3 B+ in, enterprise, assets.'
@@ -89,7 +89,7 @@ export default function NextGenSecurityOperations20, 2, 5() {/* TODO: Fix JSX ex
 </article>
             <section, className='mb-12'>
               <h2, className='te, x, t-3xl, fon, t-bold, m, b-6, tex, t-purp, l, e-3, 0, 0'>
-                Enterprise, Success, Stories;
+                Enterprise, Success, Stories
               </h2>
               <div, className='grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-8'></section>
                 <div, className='bg-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/20, t, o-pi, n, k-5, 0, 0/20, rounde, d-x, l, p-6, border, border-purp, l, e-5, 0, 0/30'></div>

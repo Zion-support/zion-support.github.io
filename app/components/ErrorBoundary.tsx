@@ -1,29 +1,18 @@
 'use client';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-
 interface Props {
-  children: ReactNode;
-}
-
+  children: ReactNode}
 interface State {
   hasError: boolean;
-  error?: Error;
-}
-
+  error?: Error}
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
-    this.state = { hasError: false };
-  }
-
+    this.state = { hasError: false}}
   static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
-  }
-
+    return { hasError: true, error }}
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-
+    console.error('Error caught by boundary:', error, errorInfo)}
   render() {
     if (this.state.hasError) {
       return (
@@ -37,17 +26,13 @@ class ErrorBoundary extends Component<Props, State> {
             </p>
             <button
               onClick={() => window.location.reload()}
-              className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300"
+              className="bg-gradient-to-r from-blue-500 to-purple-600 hover: from-blue-600 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300"
             >
               Refresh Page
             </button>
           </div>
         </div>
-      );
-    }
-
-    return this.props.children;
-  }
+      )}
+    return this.props.children}
 }
-
-export default ErrorBoundary;
+export default ErrorBoundary

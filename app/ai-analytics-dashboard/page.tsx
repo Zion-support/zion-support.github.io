@@ -1,37 +1,36 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
-<<<<<<< HEAD
+import { BarChart, Brain, Target, TrendingUp, CheckCircle, ArrowRight, Star, Zap, Shield } from 'lucide-react';
+
 const AiAnalyticsDashboardPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations for your business.',
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
     {
       icon: BarChart,
       title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      description: 'Comprehensive analytics dashboard with real-time data visualization and reporting.',
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
     },
     {
       icon: Target,
       title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
+      description: 'Target specific business goals and objectives with precision and accuracy.',
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
     },
     {
       icon: TrendingUp,
       title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
+      description: 'Optimize your business growth with data-driven strategies and insights.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
   ];
+
   const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
@@ -39,275 +38,114 @@ const AiAnalyticsDashboardPage: React.FC = () => {
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
   ];
+
   return (
-    <React.Fragment>
+    <>
       <Helmet>
-        <title>Ai Analytics Dashboard - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered ai analytics dashboard solution for modern businesses." />
-        <meta name="keywords" content="AI ai analytics dashboard, artificial intelligence, ai analytics dashboard, AI solutions, intelligent automation" />
+        <title>AI Analytics Dashboard - Zion Tech Group | Advanced Analytics Solutions</title>
+        <meta name="description" content="Advanced AI-powered analytics dashboard solution for modern businesses with real-time insights and data visualization." />
+        <meta name="keywords" content="AI analytics dashboard, artificial intelligence, business analytics, data visualization, AI solutions" />
+        <meta property="og:title" content="AI Analytics Dashboard - Zion Tech Group" />
+        <meta property="og:description" content="Advanced AI-powered analytics dashboard solution for modern businesses with real-time insights and data visualization." />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="AI Analytics Dashboard - Zion Tech Group" />
+        <meta name="twitter:description" content="Advanced AI-powered analytics dashboard solution for modern businesses with real-time insights and data visualization." />
       </Helmet>
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+
+      <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Ai Analytics Dashboard;
-  </
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Advanced AI-powered ai analytics dashboard solution for modern businesses.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Get Started;
-  </
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                View Demo;
-  </
-            </div>
-          </div>
-        </section>
-        {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Key Features;
-  </
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Advanced AI technology that drives results;
-  </
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  {feature.benefits && (
-                    <ul className="space-y-2">
-                      {feature.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-=======
-;
-const AiAnalyticsDashboardPage: React.FC = () => {;
-  const features = [;
-    {;
-      icon: Brain,;
-      title: 'AI-Powered Intelligence',;
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',;
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis'];}
-    },;
-    {;
-      icon: BarChart,;
-      title: 'Advanced Analytics',;
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',;
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics'];}
-    },;
-    {;
-      icon: Target,;
-      title: 'Precision Targeting',;
-      description: 'Target specific goals and objectives with precision and accuracy.',;
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics'];}
-    },;
-    {;
-      icon: TrendingUp,;
-      title: 'Growth Optimization',;
-      description: 'Optimize your business growth with data-driven strategies.',;
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'];}
-    }
-  ];
-;
-  const benefits = [;
-    'Increase efficiency by up to 50%',;
-    'Reduce costs by 30% with automation',;
-    'Improve decision-making with AI insights',;
-    'Scale operations without proportional staff increases',;
-    'Gain competitive advantage with advanced technology';
-  ];
-;
-  return (;
-    <></>;
-      <Helmet>;
-        <title>Ai Analytics Dashboard - Zion Tech Group</title>;
-        <meta name="description" content="Advanced AI-powered ai analytics dashboard solution for modern businesses." />;
-        <meta name="keywords" content="AI ai analytics dashboard, artificial intelligence, ai analytics dashboard, AI solutions, intelligent automation" />;
-      </Helmet>;
-      <Navigation />;
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div>;
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden"></section>;
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>;
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>;
-          <div className="relative max-w-7xl mx-auto text-center"></div>;
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">;
-              Ai Analytics Dashboard;
-            </h1>;
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">;
-              Advanced AI-powered ai analytics dashboard solution for modern businesses.;
-            </p>;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>;
-              <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">;
-                Get Started;
-              </button>;
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">;
-                View Demo;
-              </button>;
-            </div>;
-          </div>;
-        </section>;
-        {/* Features Section */}
-        <section className="py-20 px-4"></section>;
-          <div className="max-w-7xl mx-auto"></div>;
-            <div className="text-center mb-16"></div>;
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
-                Key Features;
-              </h2>;
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
-                Advanced AI technology that drives results;
-              </p>;
-            </div>;
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>;
-              {features.map((feature, index) => (;}
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group"></div>;
-                  <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"></div>;
-                    <feature.icon className="w-8 h-8 text-white" />;
-                  </div>;
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>;
-                  <p className="text-gray-300 mb-4">{feature.description}</p>;
-                  {feature.benefits && (;
-                    <ul className="space-y-2">;
-                      {feature.benefits.map((benefit, idx) => (;}
-                        <li key={idx} className="flex items-center text-sm text-gray-400">;
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-                          {benefit}
-                        </li>;
-                      ))}
-                    </ul>;
-                  )}
-                </div>;
-              ))}
-<<<<<<< HEAD
-            </div>
-          </div>
-        </section>
-        {/* Benefits Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Why Choose Our Solution?
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Proven results that drive business growth and efficiency;
-  </
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <CheckCircle className="w-8 h-8 text-white" />
-                  </div>
-                  <p className="text-lg text-white font-medium">{benefit}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Get Started?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Contact our experts to discuss your requirements and get started today.
+        <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white">
+          <div className="container mx-auto px-4 py-16">
+            <div className="max-w-4xl mx-auto text-center">
+              <h1 className="text-5xl font-bold mb-6">
+                AI Analytics Dashboard
+              </h1>
+              <p className="text-xl mb-8">
+                Transform your business data into actionable insights with our advanced AI-powered analytics dashboard
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Contact Us;
-  </
-                <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Learn More;
-  </
+                <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                  Get Started
+                </button>
+                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                  Learn More
+                </button>
               </div>
             </div>
           </div>
-        </section>
-      </div>
-      <Footer />
-    </React.Fragment>
-  );
-};
-export default AiAnalyticsDashboardPage;
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>
-=======
-            </div>;
-          </div>;
-        </section>;
+        </div>
+
+        {/* Features Section */}
+        <div className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+                Our AI Analytics Dashboard Features
+              </h2>
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                {features.map((feature, index) => (
+                  <div key={index} className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+                    <div className="flex items-center mb-4">
+                      <feature.icon className="h-8 w-8 text-blue-600 mr-3" />
+                      <h3 className="text-xl font-semibold text-gray-900">
+                        {feature.title}
+                      </h3>
+                    </div>
+                    <p className="text-gray-600 mb-4">
+                      {feature.description}
+                    </p>
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, benefitIndex) => (
+                        <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
+                          <CheckCircle className="h-4 w-4 text-blue-500 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Benefits Section */}
-        <section className="py-20 px-4"></section>;
-          <div className="max-w-7xl mx-auto"></div>;
-            <div className="text-center mb-16"></div>;
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
-                Why Choose Our Solution?;
-              </h2>;
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
-                Proven results that drive business growth and efficiency;
-              </p>;
-            </div>;
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>;
-              {benefits.map((benefit, index) => (;}
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group"></div>;
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"></div>;
-                    <CheckCircle className="w-8 h-8 text-white" />;
-                  </div>;
-                  <p className="text-lg text-white font-medium">{benefit}</p>;
-                </div>;
-              ))}
-            </div>;
-          </div>;
-        </section>;
+        <div className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+                Key Benefits
+              </h2>
+              <div className="grid md:grid-cols-2 gap-8">
+                {benefits.map((benefit, index) => (
+                  <div key={index} className="flex items-center">
+                    <CheckCircle className="h-6 w-6 text-blue-500 mr-3" />
+                    <span className="text-lg text-gray-700">{benefit}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* CTA Section */}
-        <section className="py-20 px-4"></section>;
-          <div className="max-w-4xl mx-auto text-center"></div>;
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12"></div>;
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
-                Ready to Get Started?;
-              </h2>;
-              <p className="text-xl text-gray-300 mb-8">;
-                Contact our experts to discuss your requirements and get started today.;
-              </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>;
-                <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">;
-                  Contact Us;
-                </button>;
-                <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">;
-                  Learn More;
-                </button>;
-              </div>;
-            </div>;
-          </div>;
-        </section>;
-      </div>;
-      <Footer />;
-    </>;
+        <div className="bg-blue-600 text-white py-16">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-3xl font-bold mb-4">
+              Ready to Transform Your Analytics?
+            </h2>
+            <p className="text-xl mb-8">
+              Contact our AI analytics experts to discuss your dashboard needs
+            </p>
+            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+              Contact Us Today
+            </button>
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
-;
+
 export default AiAnalyticsDashboardPage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

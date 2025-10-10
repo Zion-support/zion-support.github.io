@@ -1,5 +1,5 @@
 export const revolutionary2049UltimateServices = [
-  // Universal Consciousness Network Platform 2049;
+  // Universal Consciousness Network Platform 2049
     id: 'universal-consciousness-network-2049',
     name: 'Universal Consciousness Network Platform 2049',
     tagline: 'Revolutionary universal consciousness network and collective intelligence platform',
@@ -968,4 +968,4 @@ export const revolutionary2049UltimateServices = [ // Universal Consciousness Ne
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
   s://ziontechgroup.com',' slu,
-  g: '/universal-information-engineering-2049' } ];'
+  g: '/universal-information-engineering-2049' } ]'

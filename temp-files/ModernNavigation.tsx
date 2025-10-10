@@ -63,7 +63,7 @@ const,
         {isOpen && (
           <div className="md: hidden py-4 border-t">,
             {navigationItems.map(item => (,
-              <Link;)
+              <Link)
                 key={item.name})
                 href={item.href})
                 className="block text-gray-700 hover: text-blue-600 py-2"),
@@ -87,9 +87,8 @@ const,
         )}
       </div>
     </nav>
-  );
-};
-export default ModernNavigation;
+  )};
+export default ModernNavigation
 "`
   </button>
   </nav>

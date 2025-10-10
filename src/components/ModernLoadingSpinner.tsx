@@ -4,8 +4,7 @@ interface ModernLoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';
   color?: 'primary' | 'secondary' | 'accent';
   text?: string;
-  fullScreen?: boolean;
-}
+  fullScreen?: boolean}
 const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({
   size = 'md',
   color = 'primary',
@@ -47,22 +46,21 @@ $4};
       </div>
 'use client';
 interface ModernLoadingSpinnerProps {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
   size?: 'sm' | 'md' | 'lg' | 'xl';
   color?: 'primary' | 'secondary' | 'accent';
   text?: string;
-  fullScreen?: boolean;
-}
+  fullScreen?: boolean}
 const,
   ModernLoadingSpinner: React.FC;
           <ModernLoadingSpinnerProps> = ({/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
   size = 'md',
   color = 'primary',
   text = 'Loading...',
-  fullScreen = false;)
+  fullScreen = false)
 }) => {/* TODO: Fix JSX expression */}
   m: 'w-4 h-4'}
     m,
@@ -73,7 +71,7 @@ const,
   l: 'w-16 h-16'
   };
   const colorClasses = {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   primar,
   y: 'text-cyan-400',
@@ -108,9 +106,8 @@ const,
       </div>"
       <span className="sr-only">Loading content, please wait...</span>
     </div>
-  );
-};
-export default ModernLoadingSpinner;
-export default ModernLoadingSpinner;"`
+  )};
+export default ModernLoadingSpinner
+export default ModernLoadingSpinner"`
   </ModernLoadingSpinnerProps>
   </ModernLoadingSpinnerProps>

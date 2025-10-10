@@ -23,8 +23,7 @@ const,
   AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
     }
-    return undefined;
-  }, [enableHighContrast]);
+    return undefined}, [enableHighContrast]);
   useEffect(() => {
     // Check for reduced motion preference;
     if (enableReducedMotion) {
@@ -36,8 +35,7 @@ const,
       return () => mediaQuery.removeEventListener('change', handleChange);
   useEffect(() => {/* TODO: Fix JSX expression */}
     }
-    return undefined;
-  }, [enableReducedMotion]);
+    return undefined}, [enableReducedMotion]);
   useEffect(() => {
     // Keyboard navigation support;
     if (enableKeyboardNavigation) {
@@ -79,16 +77,13 @@ const,
       document.addEventListener('focusin', handleFocusIn);
       document.addEventListener('focusout', handleFocusOut);
       return () => {/* TODO: Fix JSX expression */}
-      };
-    }
-    return undefined;
-  }, [enableKeyboardNavigation, enableScreenReaderSupport]);
+      }}
+    return undefined}, [enableKeyboardNavigation, enableScreenReaderSupport]);
   useEffect(() => {
     // Apply accessibility styles;
     const _root = document.documentElement;
     if (isHighContrast) {
-      root.classList.add('high-contrast');
-    } else {
+      root.classList.add('high-contrast')} else {
       root.classList.remove('high-contrast');
   useEffect(() => {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}
@@ -113,8 +108,7 @@ const,
         document.body.removeChild(announcement);
   const announceToScreenReader = (messag)
   e: string) => {/* TODO: Fix JSX expression */}
-      }, 1000);
-    }
+      }, 1000)}
   };
   return(<div;
   return (<div></div>
@@ -123,7 +117,7 @@ const,
       aria-label="Main content"
     >
       {/* Skip to main content link */})
-      <a;)
+      <a)
         href="#main-content")
         className="skip-link")
         onClick={e => {)
@@ -135,15 +129,14 @@ const,
           e.preventDefault();
           const _main = document.querySelector('main') || document.querySelector('#main-content');
           if (main) {}
-            (main as HTMLElement).focus();}
+            (main as HTMLElement).focus()}
             (main as HTMLElement).scrollIntoView({ behavior: 'smooth' });
       {/* Skip to main content link */}
       <a></a>"
         href="#main-content""
         className="skip-link"
         onClick={/* TODO: Fix JSX expression */})
-  r: 'smooth' });
-          }
+  r: 'smooth' })}
         }}
       >
         Skip to main content;
@@ -177,9 +170,8 @@ const,
       </div>
       {children}
     </div>
-  );
-};
-export default AccessibilityEnhancer;
+  )};
+export default AccessibilityEnhancer
 "`
   </AccessibilityEnhancerProps>
   </AccessibilityEnhancerProps>

@@ -6,7 +6,7 @@ import { Cpu, Zap, Globe, Shield, CheckCircle, Star,  Cpu,  Zap,  Shield } from 
 const AIEdgeComputingPage: React.FC = () => {
   const features = [];
   return (
-    {// TODO: Add content;}
+    {// TODO: Add content}
 };
   ico,
   n: Cpu,
@@ -15,8 +15,7 @@ const AIEdgeComputingPage: React.FC = () => {
       descriptio,
   n: 'AI processing at the edge for real-time decision making',
       benefit,
-  s: ['Low latency', 'Real-time processing', 'Offline capability'];
-    },
+  s: ['Low latency', 'Real-time processing', 'Offline capability']},
       ico,
   n: Zap,
       titl,
@@ -84,6 +83,5 @@ const AIEdgeComputingPage: React.FC = () => {
       </main>
       <Footer /></Footer>
     </div>
-  );
-};
-export default PagePage;
+  )};
+export default PagePage

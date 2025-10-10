@@ -1,15 +1,12 @@
 import React from 'react';
 impo, r, t { Sparkl, e, s, Z, a, p, Rock, e, t, St, a, r, ArrowRig, h, t } fr, o, m 'luci, d, e-rea, c, t';
 export interface FeaturedItem {
-  title: string;
+  title: string
   category: string;
   li, n, k: string;
-  metri, c, s ?  : str, i, n, g;
- }
+  metri, c, s ?  : str, i, n, g}
 export interface UnifiedPromotionalBannerProps {
-  varia, n, t?: 'defau, l, t' | 'premi, u, m' | 'he, r, o' | 'compa, c, t' | 'me, g, a';
-  title: string;
-  description: string;
+  varia, n, t?: 'defau, l, t' | 'premi, u, m' | 'he, r, o' | 'compa, c, t' | 'me, g, a' title: string description: string
   ctaTe, x, t: string;
   ctaLi, n, k: string;
   the, m, e?: 'bl, u, e' | 'purp, l, e' | 'gre, e, n' | 'oran, g, e' | 'r, e, d' | 'gradie, n, t' | 'cy, a, n';
@@ -26,7 +23,7 @@ export interface UnifiedPromotionalBannerProps {/* TODO: Fix JSX expression */}
  }
 const UnifiedPromotionalBanne, r: React.FC<UnifiedPromotionalBannerPro, p, s> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
-  }; const buttonTheme, s = {/* TODO: Fix JSX expression */}
+  } const buttonTheme, s = {/* TODO: Fix JSX expression */}
   };
   // Icon selection const IconCompone n t = {/* TODO: Fix JSX expression */}
   }[ic, o, n];
@@ -86,7 +83,7 @@ const UnifiedPromotionalBanne, r: React.FC<UnifiedPromotionalBannerPro, p, s> = 
         `}
         ></h2>
           {title}
-        </h2 > {/* Descripti, o, n */}
+        </h2> {/* Descripti, o, n */}
         <p, classNam, e = {/* TODO: Fix JSX expression */}
            }`
         `}
@@ -165,7 +162,6 @@ const UnifiedPromotionalBanne, r: React.FC<UnifiedPromotionalBannerPro, p, s> = 
         </div>
       </div>
     </div>
-  );
-};
-export default UnifiedPromotionalBanner;
+  )};
+export default UnifiedPromotionalBanner
 `

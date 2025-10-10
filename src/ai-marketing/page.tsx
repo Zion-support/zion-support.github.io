@@ -9,7 +9,7 @@ export default function AIMarketingPage() {
       <div className="container mx-auto px-4 py-20">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
-            AI Marketing;
+            AI Marketing
   </
           <p className="text-xl text-gray-300 mb-8">
             Revolutionary AI-powered marketing automation, ad optimization, and content generation.
@@ -29,7 +29,6 @@ export default function AIMarketingPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}
   </a>
   </h1>

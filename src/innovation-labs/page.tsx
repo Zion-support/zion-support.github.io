@@ -6,7 +6,7 @@ import { FlaskConical, Target, Zap, Settings, CheckCircle, Star,  FlaskConical, 
 const InnovationLabsPage: React.FC = () => {
   const features = [];
   return (
-    {// TODO: Add content;}
+    {// TODO: Add content}
 };
   ico,
   n: FlaskConical,
@@ -15,8 +15,7 @@ const InnovationLabsPage: React.FC = () => {
       descriptio,
   n: 'Cutting-edge research and development projects',
       benefit,
-  s: ['Technology research', 'Prototype development', 'Innovation projects'];
-    },
+  s: ['Technology research', 'Prototype development', 'Innovation projects']},
       ico,
   n: Target,
       titl,
@@ -89,6 +88,5 @@ const InnovationLabsPage: React.FC = () => {
       </main>
       <Footer /></Footer>
     </div>
-  );
-};
-export default InnovationLabsPage;
+  )};
+export default InnovationLabsPage

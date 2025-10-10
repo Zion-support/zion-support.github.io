@@ -6,7 +6,7 @@ import { Eye, Target, Zap, Settings, CheckCircle, Star,  Eye,  Target,  Settings
 const AICustomerInsightsPage: React.FC = () => {
   const features = [];
   return (
-    {// TODO: Add content;}
+    {// TODO: Add content}
 };
   ico,
   n: Eye,
@@ -15,8 +15,7 @@ const AICustomerInsightsPage: React.FC = () => {
       descriptio,
   n: 'AI-powered customer behavior analysis',
       benefit,
-  s: ['Behavior tracking', 'Pattern recognition', 'Insight generation'];
-    },
+  s: ['Behavior tracking', 'Pattern recognition', 'Insight generation']},
       ico,
   n: Target,
       titl,
@@ -89,6 +88,5 @@ const AICustomerInsightsPage: React.FC = () => {
       </main>
       <Footer /></Footer>
     </div>
-  );
-};
-export default PagePage;
+  )};
+export default PagePage

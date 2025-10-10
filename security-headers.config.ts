@@ -2,7 +2,6 @@
  * Security Headers Configuration;
  * Implements comprehensive security headers for production deployment;
  */
-
 export const securityHeaders = [
   {/* TODO: Fix JSX expression */}
   },
@@ -27,8 +26,7 @@ export const securityHeaders = [
       "img-src 'self' data: https:",
       "font-src 'self' data: ",
       "connect-src 'self' *.google-analytics.com",
-      "frame-ancestors 'self'"].join('; '),
+      "frame-ancestors 'self'"].join(' '),
   {/* TODO: Fix JSX expression */}
   }];
-
-export default securityHeaders;
+export default securityHeaders

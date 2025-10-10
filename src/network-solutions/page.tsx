@@ -6,7 +6,7 @@ import { Globe, Shield, Zap, Settings, CheckCircle, Star,  Globe,  Shield,  Sett
 const NetworkSolutionsPage: React.FC = () => {
   const features = [];
   return (
-    {// TODO: Add content;}
+    {// TODO: Add content}
 };
   ico,
   n: Globe,
@@ -15,8 +15,7 @@ const NetworkSolutionsPage: React.FC = () => {
       descriptio,
   n: 'Custom network architecture design and implementation',
       benefit,
-  s: ['Scalable design', 'High availability', 'Performance optimization'];
-    },
+  s: ['Scalable design', 'High availability', 'Performance optimization']},
       ico,
   n: Shield,
       titl,
@@ -89,6 +88,5 @@ const NetworkSolutionsPage: React.FC = () => {
       </main>
       <Footer /></Footer>
     </div>
-  );
-};
-export default NetworkSolutionsPage;
+  )};
+export default NetworkSolutionsPage

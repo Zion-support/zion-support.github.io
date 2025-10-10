@@ -333,9 +333,8 @@ const CareersPage: React.FC = () => {
       </section>
       <Footer />
     </div>
-  );
-};
-export default CareersPage;
+  )};
+export default CareersPage
   </Link>
   </Link>
   </p>

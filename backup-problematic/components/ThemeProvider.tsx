@@ -6,6 +6,5 @@ const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) =>
 const,
   ThemeProvider: React.FC<{/* TODO: Fix JSX expression */}
   n: React.ReactNode }> = ({ children }) => {/* TODO: Fix JSX expression */}
-  return <React.Fragment>{children}</React.Fragment>;
-};
-export default ThemeProvider;
+  return <React.Fragment>{children}</React.Fragment>};
+export default ThemeProvider

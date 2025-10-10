@@ -142,6 +142,5 @@ const SuccessStoriesShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */
         </div>
       </div>
     </sec, t, i, o, n>
-  );
-};
-export default SuccessStoriesShowcase;"`
+  )};
+export default SuccessStoriesShowcase"`

@@ -1,5 +1,5 @@
 import React from 'react';
-interface SEOProps {// TODO: Add content;}
+interface SEOProps {// TODO: Add content}
 }
   title?: string;
   description?: string;
@@ -17,10 +17,9 @@ interface SEOProps {// TODO: Add content;}
   publishedTime?: string;
   modifiedTime?: string;
   section?: string;
-  tags?: string[];
-}
+  tags?: string[]}
 const EnhancedSEO: React.FC;
-          <SEOProps> = ({// TODO: Add content;}
+          <SEOProps> = ({// TODO: Add content}
 }
 const EnhancedSEO: React.FC<SEOProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
@@ -39,7 +38,7 @@ const EnhancedSEO: React.FC<SEOProps> = ({
 //   publishedTime,
 //   modifiedTime,
 //   section,
-  tags = []}) => {const fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : description;}
+  tags = []}) => {const fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : description}
   const keywordsString = Array.isArray(keywords) ? keywords.join(', ') : keywords;
   return (
     // Update meta description
@@ -88,8 +87,7 @@ const EnhancedSEO: React.FC<SEOProps> = ({
           <link rel="dns-prefetch" href="// www.google-analytics.com" /></link>"
           <link rel="dns-prefetch" href="// www.googletagmanager.com" /></link>
           </Helmet>
-  );
-};
-export default EnhancedSEO;"`
+  )};
+export default EnhancedSEO"`
   </SEOProps>
   </SEOProps>

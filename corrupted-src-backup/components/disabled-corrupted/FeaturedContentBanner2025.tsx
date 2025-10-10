@@ -4,7 +4,7 @@ export default function FeaturedContentBanner20, 2, 5() {/* TODO: Fix JSX expres
     },
     {/* TODO: Fix JSX expression */}
     }
-  ]; return(<section, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-9, 0, 0/80, t, o-bl, u, e-9, 0, 0/80, backdro, p-bl, u, r-lg">
+  ] return(<section, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-9, 0, 0/80, t, o-bl, u, e-9, 0, 0/80, backdro, p-bl, u, r-lg">
       <div, className="container, m, x-auto, p, x-6">
         <div, className="te, x, t-center, m, b-16">
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-6, p, y-3, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, border, border-bl, u, e-5, 0, 0/30, m, b-6">
@@ -195,5 +195,4 @@ export default function FeaturedContentBanner20, 2, 5() {/* TODO: Fix JSX expres
         </div>
       </div>
     </sec, t, i, o, n>
-  );
-}"
+  )}"

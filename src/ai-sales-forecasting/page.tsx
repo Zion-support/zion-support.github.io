@@ -6,7 +6,7 @@ import { TrendingUp, Target, Zap, Settings, CheckCircle, Star,  TrendingUp,  Tar
 const AISalesForecastingPage: React.FC = () => {
   const features = [];
   return (
-    {// TODO: Add content;}
+    {// TODO: Add content}
 };
   ico,
   n: TrendingUp,
@@ -15,8 +15,7 @@ const AISalesForecastingPage: React.FC = () => {
       descriptio,
   n: 'AI-powered sales forecasting and prediction',
       benefit,
-  s: ['Revenue prediction', 'Trend analysis', 'Seasonal forecasting'];
-    },
+  s: ['Revenue prediction', 'Trend analysis', 'Seasonal forecasting']},
       ico,
   n: Target,
       titl,
@@ -89,6 +88,5 @@ const AISalesForecastingPage: React.FC = () => {
       </main>
       <Footer /></Footer>
     </div>
-  );
-};
-export default AiSalesForecastingPage;
+  )};
+export default AiSalesForecastingPage

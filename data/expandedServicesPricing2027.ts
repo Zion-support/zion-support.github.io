@@ -1,7 +1,7 @@
 // Expanded Services Pricing Guide 2027 - Zion Tech Group;
 // Comprehensive pricing information for all expanded innovative services;
 export type ExpandedServicePricing =
-  serviceId: string;
+  serviceId: string
   serviceName: string;
   category: string;
   subcategory: string;
@@ -69,7 +69,7 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
     serviceName: 'Quantum Threat Hunter'
     category: 'Cybersecurity'
     subcategory: 'Threat Intelligence'
-    pricingTiers: starter: unknown;
+    pricingTiers: starter: unknown
         price: 2500;
         currency: 'USD',
         billingCycle: 'monthly',
@@ -239,7 +239,7 @@ export const,
           'Healthcare organizations',
           'Government agencies'
         ],
-        setupFee: 5000;
+        setupFee: 5000
         contractTerm: '12 months'},
       professional: unknown;
         price: 5000;
@@ -706,7 +706,7 @@ export const dataAnalyticsPricing: ExpandedServicePricing[] = [
     serviceName: 'Predictive Insights Engine'
     category: 'Data Analytics'
     subcategory: 'Predictive Analytics'
-    pricingTiers: starter: unknown;
+    pricingTiers: starter: unknown
         price: 1800;
         currency: 'USD',
         billingCycle: 'monthly',
@@ -748,7 +748,7 @@ export const,
           'Startups',
           'Basic analytics needs'
         ],
-        setupFee: 3000;
+        setupFee: 3000
         contractTerm: '12 months'},
       professional: unknown;
         price: 3500;
@@ -957,7 +957,7 @@ export const cloudDevOpsPricing: ExpandedServicePricing[] = [
     serviceName: 'Multi-Cloud Orchestrator'
     category: 'Cloud & DevOps'
     subcategory: 'Multi-Cloud Management'
-    pricingTiers: starter: unknown;
+    pricingTiers: starter: unknown
         price: 2000;
         currency: 'USD',
         billingCycle: 'monthly',
@@ -999,7 +999,7 @@ export const,
           'Multi-cloud beginners',
           'Basic cloud management needs'
         ],
-        setupFee: 4000;
+        setupFee: 4000
         contractTerm: '12 months'},
       professional: unknown;
         price: 4000;
@@ -1208,7 +1208,7 @@ export const iotEdgePricing: ExpandedServicePricing[] = [
     serviceName: 'Industrial IoT Intelligence Platform'
     category: 'IoT & Edge Computing'
     subcategory: 'Industrial IoT'
-    pricingTiers: starter: unknown;
+    pricingTiers: starter: unknown
         price: 2800;
         currency: 'USD',
         billingCycle: 'monthly',
@@ -1250,7 +1250,7 @@ export const,
           'Basic monitoring needs',
           'Equipment tracking'
         ],
-        setupFee: 5000;
+        setupFee: 5000
         contractTerm: '12 months'},
       professional: unknown;
         price: 5500;
@@ -1459,7 +1459,7 @@ export const finTechPricing: ExpandedServicePricing[] = [
     serviceName: 'Quantum Financial Modeling Platform'
     category: 'Financial Technology'
     subcategory: 'Quantum Finance'
-    pricingTiers: starter: unknown;
+    pricingTiers: starter: unknown
         price: 8000;
         currency: 'USD',
         billingCycle: 'monthly',
@@ -1501,7 +1501,7 @@ export const,
           'Startup fintech companies',
           'Basic quantum finance needs'
         ],
-        setupFee: 15000;
+        setupFee: 15000
         contractTerm: '12 months'},
       professional: unknown;
         price: 15000;
@@ -1710,7 +1710,7 @@ export const healthcarePricing: ExpandedServicePricing[] = [
     serviceName: 'AI Diagnostic Assistant'
     category: 'Healthcare Technology'
     subcategory: 'AI Diagnostics'
-    pricingTiers: starter: unknown;
+    pricingTiers: starter: unknown
         price: 3500;
         currency: 'USD',
         billingCycle: 'monthly',
@@ -1752,7 +1752,7 @@ export const,
           'Private practices',
           'Basic diagnostic needs'
         ],
-        setupFee: 7000;
+        setupFee: 7000
         contractTerm: '12 months'},
       professional: unknown;
         price: 7000;
@@ -1962,27 +1962,26 @@ export const ALL_EXPANDED_SERVICES_PRICING = [
   ...cloudDevOpsPricing,
   ...iotEdgePricing,
   ...finTechPricing,
-  ...healthcarePricing;
-];
+  ...healthcarePricing]
 // Helper functions;
 export const getPricingByServiceId = (serviceId: string): ExpandedServicePricing | undefined =>,
 export const getPricingByServiceId = (serviceI)
   d: string): ExpandedServicePricing | undefined =>,
-  return ALL_EXPANDED_SERVICES_PRICING.find(pricing => pricing.serviceId === serviceId)};
+  return ALL_EXPANDED_SERVICES_PRICING.find(pricing => pricing.serviceId === serviceId)}
 export const getPricingByCategory = (categor)
   y: string): ExpandedServicePricing[] =>,
-  return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.category === category)};
+  return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.category === category)}
 export const getPricingBySubcategory = (subcategor)
   y: string): ExpandedServicePricing[] =>,
-  return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.subcategory === subcategory)};
-export const searchPricing = (query: string): ExpandedServicePricing[] =>;
+  return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.subcategory === subcategory)}
+export const searchPricing = (query: string): ExpandedServicePricing[] =>
   const lowercaseQuery = query.toLowerCase()
   return ALL_EXPANDED_SERVICES_PRICING.filter(pricing =>)
     pricing.serviceName.toLowerCase().includes(lowercaseQuery) ||,
     pricing.category.toLowerCase().includes(lowercaseQuery) ||,
     pricing.subcategory.toLowerCase().includes(lowercaseQuery),
 export const searchPricing = (quer)
-  y: string): ExpandedServicePricing[] =>;
+  y: string): ExpandedServicePricing[] =>
   const lowercaseQuery = query.toLowerCase(),
   return ALL_EXPANDED_SERVICES_PRICING.filter(pricing =>)
     pricing.serviceName.toLowerCase().includes(lowercaseQuery) ||
@@ -1990,7 +1989,7 @@ export const searchPricing = (quer)
     pricing.subcategory.toLowerCase().includes(lowercaseQuery)
   )};
 // Expanded Services Pricing Guide 2027 - Zion Tech Group // Comprehensive pricing information for all expanded innovative services export type ExpandedServicePricing = serviceI,
-  d: string; serviceNam,
+  d: string serviceNam,
   e: string; categor,
   y: string; subcategor,
   y: string; pricingTier,
@@ -2147,7 +2146,7 @@ export const searchPricing = (quer)
   l: 'kleber@ziontechgroup.com',' websit,
   e: 'http,
   s://ziontechgroup.com/ai-compliance-automator',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709' } } ]; // 2. DATA ANALYTICS SERVICES PRICING export const,
+  s: '364 E Main St STE 1008 Middletown DE 19709' } } ] // 2. DATA ANALYTICS SERVICES PRICING export const,
   dataAnalyticsPricing: ExpandedServicePricing[] = [ ' serviceI,
   d: 'predictive-insights-engine',' serviceNam,
   e: 'Predictive Insights Engine',' categor,
@@ -2195,7 +2194,7 @@ export const searchPricing = (quer)
   l: 'kleber@ziontechgroup.com',' websit,
   e: 'http,
   s://ziontechgroup.com/predictive-insights-engine',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709' } } ]; // 3. CLOUD & DEVOPS SERVICES PRICING export const,
+  s: '364 E Main St STE 1008 Middletown DE 19709' } } ] // 3. CLOUD & DEVOPS SERVICES PRICING export const,
   cloudDevOpsPricing: ExpandedServicePricing[] = [ ' serviceI,
   d: 'multi-cloud-orchestrator',' serviceNam,
   e: 'Multi-Cloud Orchestrator',' categor,
@@ -2243,7 +2242,7 @@ export const searchPricing = (quer)
   l: 'kleber@ziontechgroup.com',' websit,
   e: 'http,
   s://ziontechgroup.com/multi-cloud-orchestrator',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709' } } ]; // 4. IOT & EDGE COMPUTING SERVICES PRICING export const,
+  s: '364 E Main St STE 1008 Middletown DE 19709' } } ] // 4. IOT & EDGE COMPUTING SERVICES PRICING export const,
   iotEdgePricing: ExpandedServicePricing[] = [ ' serviceI,
   d: 'industrial-iot-intelligence',' serviceNam,
   e: 'Industrial IoT Intelligence Platform',' categor,
@@ -2291,7 +2290,7 @@ export const searchPricing = (quer)
   l: 'kleber@ziontechgroup.com',' websit,
   e: 'http,
   s://ziontechgroup.com/industrial-iot-intelligence',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709' } } ]; // 5. FINANCIAL TECHNOLOGY SERVICES PRICING export const,
+  s: '364 E Main St STE 1008 Middletown DE 19709' } } ] // 5. FINANCIAL TECHNOLOGY SERVICES PRICING export const,
   finTechPricing: ExpandedServicePricing[] = [ ' serviceI,
   d: 'quantum-financial-modeling',' serviceNam,
   e: 'Quantum Financial Modeling Platform',' categor,
@@ -2339,7 +2338,7 @@ export const searchPricing = (quer)
   l: 'kleber@ziontechgroup.com',' websit,
   e: 'http,
   s://ziontechgroup.com/quantum-financial-modeling',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709' } } ]; // 6. HEALTHCARE TECHNOLOGY SERVICES PRICING export const,
+  s: '364 E Main St STE 1008 Middletown DE 19709' } } ] // 6. HEALTHCARE TECHNOLOGY SERVICES PRICING export const,
   healthcarePricing: ExpandedServicePricing[] = [ ' serviceI,
   d: 'ai-diagnostic-assistant',' serviceNam,
   e: 'AI Diagnostic Assistant',' categor,
@@ -2387,8 +2386,8 @@ export const searchPricing = (quer)
   l: 'kleber@ziontechgroup.com',' websit,
   e: 'http,
   s://ziontechgroup.com/ai-diagnostic-assistant',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709' } } ]; // Export all pricing data export const ALL_EXPANDED_SERVICES_PRICING = [ ...cybersecurityPricing, ...dataAnalyticsPricing, ...cloudDevOpsPricing, ...iotEdgePricing, ...finTechPricing, ...healthcarePricing ]; // Helper functions export const getPricingByServiceId = (serviceI)
-  d: string): ExpandedServicePricing | undefined => return ALL_EXPANDED_SERVICES_PRICING.find(pricing => pricing.serviceId === serviceId)}; export const getPricingByCategory = (categor)
-  y: string): ExpandedServicePricing[] => return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.category === category)}; export const getPricingBySubcategory = (subcategor)
-  y: string): ExpandedServicePricing[] => return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.subcategory === subcategory)}; export const searchPricing = (quer)
-  y: string): ExpandedServicePricing[] => const lowercaseQuery = query.toLowerCase(), return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.serviceName.toLowerCase().includes(lowercaseQuery) || pricing.category.toLowerCase().includes(lowercaseQuery) || pricing.subcategory.toLowerCase().includes(lowercaseQuery) )};'
+  s: '364 E Main St STE 1008 Middletown DE 19709' } } ] // Export all pricing data export const ALL_EXPANDED_SERVICES_PRICING = [ ...cybersecurityPricing, ...dataAnalyticsPricing, ...cloudDevOpsPricing, ...iotEdgePricing, ...finTechPricing, ...healthcarePricing ] // Helper functions export const getPricingByServiceId = (serviceI)
+  d: string): ExpandedServicePricing | undefined => return ALL_EXPANDED_SERVICES_PRICING.find(pricing => pricing.serviceId === serviceId)} export const getPricingByCategory = (categor)
+  y: string): ExpandedServicePricing[] => return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.category === category)} export const getPricingBySubcategory = (subcategor)
+  y: string): ExpandedServicePricing[] => return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.subcategory === subcategory)} export const searchPricing = (quer)
+  y: string): ExpandedServicePricing[] => const lowercaseQuery = query.toLowerCase(), return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.serviceName.toLowerCase().includes(lowercaseQuery) || pricing.category.toLowerCase().includes(lowercaseQuery) || pricing.subcategory.toLowerCase().includes(lowercaseQuery) )}'

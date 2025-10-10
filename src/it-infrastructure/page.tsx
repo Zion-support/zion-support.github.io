@@ -9,7 +9,7 @@ export default function ITInfrastructurePage() {
       <div className="container mx-auto px-4 py-20">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
-            IT Infrastructure;
+            IT Infrastructure
   </
           <p className="text-xl text-gray-300 mb-8">
             Enterprise-grade IT infrastructure with 99.9% uptime guarantee and 24/7 expert support.
@@ -29,7 +29,6 @@ export default function ITInfrastructurePage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}
   </a>
   </h1>

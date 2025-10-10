@@ -6,7 +6,7 @@ import { Globe, Headphones, Shield, Zap, CheckCircle, Star,  Globe,  Headphones,
 const GlobalITSupportPage: React.FC = () => {
   const features = [];
   return (
-    {// TODO: Add content;}
+    {// TODO: Add content}
 };
   ico,
   n: Globe,
@@ -15,8 +15,7 @@ const GlobalITSupportPage: React.FC = () => {
       descriptio,
   n: '24/7 IT support across multiple time zones',
       benefit,
-  s: ['Worldwide coverage', 'Local expertise', 'Multi-language support'];
-    },
+  s: ['Worldwide coverage', 'Local expertise', 'Multi-language support']},
       ico,
   n: Headphones,
       titl,
@@ -86,6 +85,5 @@ const GlobalITSupportPage: React.FC = () => {
       </main>
       <Footer /></Footer>
     </div>
-  );
-};
-export default GlobalItSupportPage;
+  )};
+export default GlobalItSupportPage

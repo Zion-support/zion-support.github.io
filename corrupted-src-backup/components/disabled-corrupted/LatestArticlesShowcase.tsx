@@ -27,7 +27,7 @@ const LatestArticlesShowcas, e: React.FC = () => {
                   </sp, a, n>
                   {  artic, l, e.featured  && ()
                     <span, classNam, e = 'bg-yell, o, w-100, tex, t-yell, o, w-800, tex, t-xs, p, x-2, p, y-1, rounde, d-full, fon, t-medi, u, m'>)
-                      Featur, e, d;)
+                      Featur, e, d)
 const LatestArticlesShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */}
             <Link, ke, y = { artic, l, e., i, d  }, to={ artic, l, e.li, n, k } className='group, b, g-white, rounde, d-xl, shado, w-md, hove, r: shad, o, w-2xl, transitio, n-all, duratio, n-300, overflo, w-hidden, border, border-gr, a, y-100, hove, r:bord, e, r-indi, g, o-3, 0, 0'
             ></Link>
@@ -95,6 +95,5 @@ const LatestArticlesShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */
         </div>
       </div>
     </sec, t, i, o, n>
-  );
-};
-export default LatestArticlesShowcase;
+  )};
+export default LatestArticlesShowcase

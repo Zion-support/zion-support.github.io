@@ -1,13 +1,10 @@
-
   id: string;
   name: string;
   tagline: string;
   price: string;
-  period: string;
-  description: string;
+  period: string description: string;
   features: string[];
-  popular: boolean;
-  icon: string;
+  popular: boolean icon: string;
   color: string;
   text_color: string;
   link: string;
@@ -104,7 +101,6 @@
   g: number;
   review,
   s: number;
-;
 export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] =
   [
       id: 'ai - powered - supply - chain - optimization',
@@ -112,7 +108,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       tagline: 'Intelligent supply chain planning and optimization',
       price: '$1, 299',
       period: '/month',
-      description: unknown;
+      description: unknown
 export const,
   advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] =,
   [
@@ -141,12 +137,11 @@ export const,
         'API integration',
         'Custom algorithms',
         'Compliance tools'],
-      popular: true;
-      icon: ''
+      popular: true icon: ''
       color: 'from - blue - 600 via - indigo - 600 to - purple - 600'
       text_color: 'text - blue - 400',
       link: 'https://ziontechgroup.com / ai - powered - supply - chain - optimization',
-      market_position: unknown;
+      market_position: unknown
         'Leading AI supply chain optimization platform with advanced analytics',
       target_audience: unknown;
         'Manufacturing companies, Retail chains, E - commerce platforms, Logistics providers, Distribution centers',
@@ -205,8 +200,7 @@ export const,
       launch_date: '2025 - 01 - 26'
       customers: 156;
       rating: 4 && 4.8;
-      reviews: 98;
-    },
+      reviews: 98},
       id: 'quantum - logistics - optimization - platform',
       name: 'Quantum Logistics Optimization Platform',
       tagline: 'Quantum computing for complex logistics problems',
@@ -272,8 +266,7 @@ export const,
         'API access',
         'Custom models',
         'Performance analytics'],
-      popular: false;
-      icon: ''
+      popular: false icon: ''
       color: 'from - purple - 600 via - violet - 600 to - indigo - 600'
       text_color: 'text - purple - 400',
       link: 'https://ziontechgroup.com / quantum - logistics - optimization - platform',
@@ -339,8 +332,7 @@ export const,
       launch_date: '2025 - 02 - 02'
       customers: 34;
       rating: 4 && 4.9;
-      reviews: 23;
-    },
+      reviews: 23},
         'Real-time tracking',
       id: 'iot - fleet - management - platform'
       name: 'IoT Fleet Management Platform',
@@ -404,8 +396,7 @@ export const,
         'API access',
         'Custom dashboards',
         'Compliance tools'],
-      popular: true;
-      icon: ''
+      popular: true icon: ''
       color: 'from - green - 600 via - emerald - 600 to - teal - 600'
       text_color: 'text - green - 400',
       link: 'https://ziontechgroup.com / iot - fleet - management - platform',
@@ -471,8 +462,7 @@ export const,
       launch_date: '2025 - 02 - 07'
       customers: 234;
       rating: 4 && 4.7;
-      reviews: 145;
-    },
+      reviews: 145},
         'End-to-end traceability',
       id: 'blockchain - supply - chain - transparency'
       name: 'Blockchain Supply Chain Transparency Platform',
@@ -536,8 +526,7 @@ export const,
         'Data analytics',
         'Audit trails',
         'Performance monitoring'],
-      popular: false;
-      icon: ''
+      popular: false icon: ''
       color: 'from - indigo - 600 via - purple - 600 to - pink - 600'
       text_color: 'text - indigo - 400',
       link: 'https://ziontechgroup.com / blockchain - supply - chain - transparency',
@@ -644,8 +633,7 @@ export const,
         'API access',
         'Custom workflows',
         'Compliance tools'],
-      popular: true;
-      icon: ''
+      popular: true icon: ''
       color: 'from - orange - 600 via - amber - 600 to - yellow - 600'
       text_color: 'text - orange - 400',
       link: 'https://ziontechgroup.com / ai - powered - warehouse - automation',
@@ -734,14 +722,11 @@ export const,
         'Production-ready AI warehouse platform with comprehensive automation and optimization capabilities.',
       launchDate: '2025-02-18',      customers: 178;
       rating: 4 && 4.8;
-      reviews: 112;
-    };
-  ];    features: [,
-export interface AdvancedLogisticsSupplyChainSolution2025 {id: string, name: string;
+      reviews: 112}];    features: [,
+export interface AdvancedLogisticsSupplyChainSolution2025 {id: string, name: string
   tagline: string, price: string;
   period: string, description: string;
-  features: string[], popular: boolean;
-  icon: string, color: string;
+  features: string[], popular: boolean icon: string, color: string;
   textColor: string, link: string;
   marketPosition: string, targetAudience: string;
   trialDays: number, setupTime: string;
@@ -758,8 +743,7 @@ export interface AdvancedLogisticsSupplyChainSolution2025 {id: string, name: str
     realImplementation: boolean, implementationDetails: string;
   launchDate: string, customers: number;
   rating: number;
-  reviews: number;
-}
+  reviews: number}
 export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] = [,
     id: 'ai-powered-supply-chain-optimization', name: 'AI-Powered Supply Chain Optimization',
     tagline: 'Intelligent supply chain planning and optimization',
@@ -779,8 +763,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       ratin,
   g: 4 && 4.8,
       review,
-  s: 112};
-  ];    feature,
+  s: 112}]    feature,
   s: [,
 export interface AdvancedLogisticsSupplyChainSolution2025 {/* TODO: Fix JSX expression */}
   e: string}
@@ -824,7 +807,7 @@ export const,
   n:
         'Advanced AI-powered warehouse automation platform that uses machine learning to optimize picking, packing, and warehouse operations.'
       feature,
-  s: [;
+  s: [
         'Automated picking'
         'Smart routing'
         'Inventory optimization'
@@ -836,15 +819,14 @@ export const,
         'Custom workflows'
         'Compliance tools'
       ]
-      popular: true;
-      icon: ''
+      popular: true icon: ''
       color: 'from-orange-600 via-amber-600 to-yellow-600'
       textColor: 'text-orange-400'
       link: 'https://ziontechgroup.com/ai-powered-warehouse-automation',
       marketPosition: 'Leading AI warehouse automation platform with intelligent optimization',
       targetAudience:,
         'E-commerce companies, Distribution centers, Manufacturing companies, Retail chains, Logistics providers'
-      trialDays: 21;
+      trialDays: 21
       setupTime: '10-15 days'
       category: 'Logistics & Supply Chain',
       realService: true;
@@ -937,12 +919,11 @@ export const,
       ratin,
   g: 4.8,
       review,
-  s: 112};
-  ];    feature,
-  s: [;
+  s: 112}];    feature,
+  s: [
       'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentPerformance analyticsReal-time monitoringAPI integration'
       'Custom algorithmsCompliance tools'
-  ];    features: [;
+  ];    features: [
       'Demand forecasting_inventory optimization_route optimization_supplier management_risk assessment_performance analytics_real - time monitoringAPI integration',
       'Custom algorithms_compliance tools'],
     popular: true, icon: ''];,
@@ -951,7 +932,7 @@ export const,
     popular: false, icon: ''];,
     popular: true, icon: ''
   ];    feature,
-  s: [;
+  s: [
       'Demand forecasting_inventory optimization_route optimization_supplier management_risk assessment_performance analytics_real - time monitoringAPI integration'
       'Custom algorithms_compliance tools'
     ],
@@ -970,9 +951,8 @@ export const,
     popula,
   r: true, ico,
   n: ''];
-;;}
+;}
 ];
-;
       'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentPerformance analyticsReal-time monitoringAPI integration'
       'Custom algorithmsCompliance tools'
     ];
@@ -1068,8 +1048,7 @@ export const,
       'Custom dashboards',
       'Compliance tools'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-green-600 via-emerald-600 to-teal-600'
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/iot-fleet-management-platform',
@@ -1186,8 +1165,7 @@ export const,
       'Audit trails',
       'Performance monitoring'
     ],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from-indigo-600 via-purple-600 to-pink-600'
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/blockchain-supply-chain-transparency',
@@ -1304,8 +1282,7 @@ export const,
       'Custom workflows',
       'Compliance tools'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-orange-600 via-amber-600 to-yellow-600'
     textColor: 'text-orange-400',
     link: 'https://ziontechgroup.com/ai-powered-warehouse-automation',
@@ -1402,29 +1379,25 @@ export interface AdvancedLogisticsSupplyChainSolution2025 {/* TODO: Fix JSX expr
   s: string}
     websit,
   e: string}
-  };
+  }
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
-}
-;
-export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] = [;
+  reviews: number}
+export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] = [
   {
-    id: 'ai-powered-supply-chain-optimization';
+    id: 'ai-powered-supply-chain-optimization'
     name: 'AI-Powered Supply Chain Optimization';
     tagline: 'Intelligent supply chain planning and optimization';
     price: '$1,299';
-    period: '/month';
-    description: 'Advanced AI-powered supply chain optimization platform that uses machine learning to optimize inventory, demand forecasting, and logistics operations.';
+    period: '/month' description: 'Advanced AI-powered supply chain optimization platform that uses machine learning to optimize inventory, demand forecasting, and logistics operations.';
     features: [
       'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentPerformance analyticsReal-time monitoringAPI integration';
       'Custom algorithmsCompliance tools'
     ];
-    popular: true;
-    icon: '';
+    popular: true icon: '';
     color: 'from-blue-600 via-indigo-600 to-purple-600';
     textColor: 'text-blue-400';
     link: 'https://ziontechgroup.com/ai-powered-supply-chain-optimization';
@@ -1452,9 +1425,8 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     launchDate: '2025-01-26';
     customers: 156;
     rating: 4.8;
-    reviews: 98;
-  };
-  {;
+    reviews: 98};
+  {
     id: 'quantum-logistics-optimization-platform';
     name: 'Quantum Logistics Optimization Platform';
     tagline: 'Quantum computing for complex logistics problems';
@@ -1465,8 +1437,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       'Quantum algorithmsRoute optimizationScheduling optimizationVehicle routingCapacity planningReal-time optimizationHigh-performance computingAPI access';
       'Custom modelsPerformance analytics'
     ];
-    popular: false;
-    icon: '';
+    popular: false icon: '';
     color: 'from-purple-600 via-violet-600 to-indigo-600';
     textColor: 'text-purple-400';
     link: 'https://ziontechgroup.com/quantum-logistics-optimization-platform';
@@ -1494,9 +1465,8 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     launchDate: '2025-02-02';
     customers: 34;
     rating: 4.9;
-    reviews: 23;
-  };
-  {;
+    reviews: 23};
+  {
     id: 'iot-fleet-management-platform';
     name: 'IoT Fleet Management Platform';
     tagline: 'Comprehensive IoT-based fleet monitoring and management';
@@ -1507,8 +1477,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       'Real-time trackingPredictive maintenanceFuel monitoringDriver behavior analysisRoute optimizationPerformance analyticsMobile integrationAPI access';
       'Custom dashboardsCompliance tools'
     ];
-    popular: true;
-    icon: '';
+    popular: true icon: '';
     color: 'from-green-600 via-emerald-600 to-teal-600';
     textColor: 'text-green-400';
     link: 'https://ziontechgroup.com/iot-fleet-management-platform';
@@ -1536,9 +1505,8 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     launchDate: '2025-02-07';
     customers: 234;
     rating: 4.7;
-    reviews: 145;
-  };
-  {;
+    reviews: 145};
+  {
     id: 'blockchain-supply-chain-transparency';
     name: 'Blockchain Supply Chain Transparency Platform';
     tagline: 'End-to-end supply chain transparency with blockchain';
@@ -1549,8 +1517,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       'End-to-end traceabilitySmart contractsCompliance trackingQuality assuranceSustainability monitoringReal-time updatesAPI integrationData analytics';
       'Audit trailsPerformance monitoring'
     ];
-    popular: false;
-    icon: '';
+    popular: false icon: '';
     color: 'from-indigo-600 via-purple-600 to-pink-600';
     textColor: 'text-indigo-400';
     link: 'https://ziontechgroup.com/blockchain-supply-chain-transparency';
@@ -1578,9 +1545,8 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     launchDate: '2025-02-12';
     customers: 89;
     rating: 4.6;
-    reviews: 56;
-  };
-  {;
+    reviews: 56};
+  {
     id: 'ai-powered-warehouse-automation';
     name: 'AI-Powered Warehouse Automation Platform';
     tagline: 'Intelligent warehouse automation and optimization';
@@ -1591,8 +1557,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       'Automated pickingSmart routingInventory optimizationPerformance analyticsPredictive maintenanceReal-time monitoringMobile integrationAPI access';
       'Custom workflowsCompliance tools'
     ];
-    popular: true;
-    icon: '';
+    popular: true icon: '';
     color: 'from-orange-600 via-amber-600 to-yellow-600';
     textColor: 'text-orange-400';
     link: 'https://ziontechgroup.com/ai-powered-warehouse-automation';
@@ -1633,15 +1598,14 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
   g: number;
   review,
   s: number}
-;
 export const,
-  advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] = [;
+  advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] = [
   {/* TODO: Fix JSX expression */}
   t: 'logistics'}
     contactInf,
   o: {}
       mobil,
-  e: '+1 302 464 0950';
+  e: '+1 302 464 0950'
       emai,
   l: 'kleber@ziontechgroup.com';
       addres,
@@ -1767,7 +1731,6 @@ export const,
     review,
   s: 112}
 ];
-;
 i,
   d: string; nam,
   e: string; taglin,
@@ -1806,7 +1769,7 @@ i,
   s: number; ratin,
   g: number; review,
   s: number; export const,
-  advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] =; [, i,
+  advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] = [, i,
   d: 'ai - powered - supply - chain - optimization',' nam,
   e: 'AI - Powered Supply Chain Optimization',' taglin,
   e: 'Intelligent supply chain planning and optimization',' pric,
@@ -1995,7 +1958,7 @@ i,
   e: '2025-02-18', customer,
   s: 178, ratin,
   g: 4 && 4.8, review,
-  s: 112}; ]; feature,
+  s: 112}]; feature,
   s: [ export interface AdvancedLogisticsSupplyChainSolution2025,
   id: string, nam,
   e: string, taglin,
@@ -2080,9 +2043,9 @@ i,
   e: '2025-02-18', customer,
   s: 178, ratin,
   g: 4.8, review,
-  s: 112}; ]; feature,
+  s: 112}] feature,
   s: [' 'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentPerformance analyticsReal-time monitoringAPI integration'' 'Custom algorithmsCompliance tools' ]; feature,
-  s: [;' 'Demand forecasting_inventory optimization_route optimization_supplier management_risk assessment_performance analytics_real - time monitoringAPI integration'' 'Custom algorithms_compliance tools' ], ' popula,
+  s: [' 'Demand forecasting_inventory optimization_route optimization_supplier management_risk assessment_performance analytics_real - time monitoringAPI integration'' 'Custom algorithms_compliance tools' ], ' popula,
   r: true, ico,
   n: '📦']; ' popula,
   r: false, ico,
@@ -2092,7 +2055,7 @@ i,
   r: false, ico,
   n: '⛓️']; ' popula,
   r: true, ico,
-  n: '🏭']; ; } ];' 'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentPerformance analyticsReal-time monitoringAPI integration'' 'Custom algorithmsCompliance tools' ];' technolog,
+  n: '🏭']; } ];' 'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentPerformance analyticsReal-time monitoringAPI integration'' 'Custom algorithmsCompliance tools' ];' technolog,
   y: ['Machine Learning, Predictive Analytics, Supply Chain Management, Optimization Algorithms, AI/ML'];' integration,
   s: ['ERP systems, WMS platforms, TMS solutions, E-commerce platforms, Analytics tools'];' useCase,
   s: ['Demand forecasting, Inventory management, Route optimization, Supplier optimization, Risk management'];' ro,
@@ -2235,16 +2198,16 @@ i,
   g: 4.8, review,
   s: 112 } ];' import { ServiceVariant } from '../types/service-variants'; export interface AdvancedLogisticsSupplyChainSolution2025 {/* TODO: Fix JSX expression */}
   s: string} websit,
-  e: string} }; realImplementatio,
+  e: string} } realImplementatio,
   n: boolean; implementationDetail,
   s: string; launchDat,
   e: string; customer,
   s: number; ratin,
   g: number; review,
   s: number} ; export const,
-  advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] = [; {/* TODO: Fix JSX expression */}
+  advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] = [ {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
   s://ziontechgroup.com' }; realImplementatio,
   n: true;' implementationDetail,

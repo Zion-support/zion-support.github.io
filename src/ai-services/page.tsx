@@ -58,9 +58,8 @@ $4}
               Learn More;
   </
       <Footer />
-  );
-};
-export default $1;
+  )};
+export default $1
 'use client';
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -70,11 +69,10 @@ import {
   Cpu, Database, Globe, Lock, Sparkles, Code, Eye, MessageSquare
 } from 'lucide-react';
 export default function AIServicesPage() {
-  const [activeTab, setActiveTab] = useState('overview');
+  const [activeTab, setActiveTab] = useState('overview')
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
-    setIsVisible(true);
-  }, []);
+    setIsVisible(true)}, []);
   const aiServices = [
     {
       id: 'ai-automation',
@@ -362,8 +360,7 @@ export default function AIServicesPage() {
         </section>
       </div>
     </React.Fragment>
-  );
-}
+  )}
   </a>
   </a>
   </a>

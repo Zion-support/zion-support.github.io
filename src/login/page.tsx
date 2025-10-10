@@ -18,8 +18,7 @@ const LoginPage: React.FC = () => {
     setFormData(prev => ({
       ...prev,
       [name]: type === 'checkbox' ? checked : value
-    }));
-  };
+    }))};
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
@@ -27,8 +26,7 @@ const LoginPage: React.FC = () => {
     await new Promise(resolve => setTimeout(resolve, 2000));
     setIsLoading(false);
     // Redirect to dashboard or home page
-    window.location.href = '/';
-  };
+    window.location.href = '/'};
   const features = [
     {
       icon: Shield,
@@ -80,34 +78,32 @@ $4}
                     />
                   </div>
     <div>Coming Soon</div>
-  );
-};
+  )};
   const [formData, setFormData] = useState({/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   emai,
   l: '',
     passwor,
   d: '',
     rememberM,
-  e: false;)
+  e: false)
   });
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const _handleInputChange = (e: React.ChangeEvent;)
+  const _handleInputChange = (e: React.ChangeEvent)
           <HTMLInputElement>) => {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
     const { name, value, type, checked } = e.target;
     setFormData(prev => ({/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
 //       ...prev,
-      [name]: type === 'checkbox' ? checked : value;)
-    }));
-  };
+      [name]: type === 'checkbox' ? checked : value)
+    }))};
   const handleSubmit = async (e: React.FormEvent) => {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
     e.preventDefault();
     setIsLoading(true);
@@ -115,14 +111,12 @@ $4}
     await new Promise(resolve => setTimeout(resolve, 2000));
     setIsLoading(false);
     // Redirect to dashboard or home page;
-    window.location.href = '/';
-  };
+    window.location.href = '/'};
   const features = [
   // TOD,
-  O: Add items;
-];;
+  O: Add items];
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   ico,
   n: Shield,
@@ -132,7 +126,7 @@ $4}
   n: 'Bank-level security with multi-factor authentication'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   ico,
   n: CheckCircle,
@@ -142,7 +136,7 @@ $4}
   n: 'Round-the-clock support for all your needs'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   ico,
   n: Phone,
@@ -439,9 +433,8 @@ type="submit" disabled={isLoading}
       <Footer />
     </React.Fragment>
     </div>
-  );
-};
-export default LoginPage;
+  )};
+export default LoginPage
   </a>
   </button>
   </button>

@@ -1,13 +1,10 @@
-
   id: string;
   name: string;
   tagline: string;
   price: string;
-  period: string;
-  description: string;
+  period: string description: string;
   features: string[];
-  popular: boolean;
-  icon: string;
+  popular: boolean icon: string;
   color: string;
   text_color: string;
   link: string;
@@ -106,8 +103,7 @@
     launch_date: '2024 - 03 - 25'
     customers: 156;
     rating: 4 && 4.8;
-    reviews: 89;
-  }];      mobile: '+1 302 464 0950',
+    reviews: 89}];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
@@ -117,11 +113,10 @@
     customers: 156;
     rating: 4 && 4.8;
     reviews: 89;
-export interface InnovativeAIService2025 {id: string, name: string;
+export interface InnovativeAIService2025 {id: string, name: string
   tagline: string, price: string;
   period: string, description: string;
-  features: string[], popular: boolean;
-  icon: string, color: string;
+  features: string[], popular: boolean icon: string, color: string;
   textColor: string, link: string;
   marketPosition: string, targetAudience: string[],
   trialDays: number, setupTime: string;
@@ -138,16 +133,15 @@ export interface InnovativeAIService2025 {id: string, name: string;
     realImplementation: boolean, implementationDetails: string;
   launchDate: string, customers: number;
   rating: number;
-  reviews: number;
-}
+  reviews: number}
 export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [,
-  // AI Consciousness & Emotional Intelligence;
+  // AI Consciousness & Emotional Intelligence
     id: 'ai-consciousness-evolution', name: 'AI Consciousness Evolution Platform',
     tagline: 'Develop self-aware AI systems with emotional intelligence',
     price: '$2,999',
     period: '/month',
     description: 'Revolutionary platform for developing AI systems with consciousness, emotional intelligence, and self-awareness. Enables creation of truly intelligent AI that understands context, emotions, and human behavior.',
-    features: [;
+    features: [
       'Consciousness development frameworkEmotional intelligence trainingSelf-awareness algorithmsContext understanding engineEthical decision makingHuman-AI interaction protocolsConsciousness monitoring toolsEvolutionary learning systems',
       'Safety and alignment controlsResearch collaboration tools'],
     popular: true, icon: '',
@@ -171,15 +165,14 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [,
     implementationDetails: 'Advanced AI consciousness development platform with research tools, monitoring systems, and evolutionary learning capabilities.',
     launchDate: '2024-12-01', customers: 12;
     rating: 4.9;
-    reviews: 8;
-  };
+    reviews: 8};
   // AI Autonomous Ecosystem Platform;
     id: 'ai-autonomous-ecosystem', name: 'AI Autonomous Ecosystem Platform',
     tagline: 'Create self-managing AI systems that evolve independently',
     price: '$1,999',
     period: '/month',
     description: 'Advanced platform for building autonomous AI ecosystems that can self-manage, evolve, and adapt without human intervention. Perfect for creating intelligent systems that grow and improve over time.',
-    features: [;
+    features: [
       'Autonomous system architectureSelf-evolution algorithmsAdaptive learning systemsResource optimizationSelf-healing capabilitiesPerformance monitoringScalability managementIntegration frameworks',
       'Security protocolsAnalytics dashboard'],
     color: 'from-blue-600 to-cyan-700', textColor: 'text-blue-400',
@@ -202,14 +195,13 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [,
     implementationDetails: 'Autonomous AI ecosystem platform with self-management capabilities, evolutionary algorithms, and comprehensive monitoring tools.',
     launchDate: '2024-11-15', customers: 28;
     rating: 4.8;
-    reviews: 19;
-  };
+    reviews: 19};
   // AI Ethics & Governance Platform;
     id: 'ai-ethics-governance', name: 'AI Ethics & Governance Platform',
     tagline: 'Ensure responsible AI development with comprehensive ethics framework', price: '$899',
     period: '/month',
     description: 'Comprehensive platform for implementing AI ethics, governance, and responsible development practices. Helps organizations build trustworthy AI systems that align with human values and ethical principles.',
-    features: [;
+    features: [
       'Ethics framework implementationBias detection and mitigationTransparency toolsAccountability systemsCompliance monitoringEthical decision makingStakeholder engagementImpact assessment',
       'Policy managementReporting and analytics'],
     color: 'from-emerald-600 to-green-700', textColor: 'text-emerald-400',
@@ -232,14 +224,13 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [,
     implementationDetails: 'Comprehensive AI ethics and governance platform with automated monitoring, bias detection, and compliance management tools.',
     launchDate: '2024-10-20', customers: 45;
     rating: 4.7;
-    reviews: 31;
-  };
+    reviews: 31};
   // AI Creativity Studio Platform;
     id: 'ai-creativity-studio', name: 'AI Creativity Studio Platform',
     tagline: 'Unleash unlimited creativity with AI-powered artistic tools', price: '$399',
     period: '/month',
     description: 'Revolutionary AI-powered creativity platform that generates art, music, literature, and multimedia content. Enables artists, designers, and creators to explore new dimensions of human-AI collaboration.',
-    features: [;
+    features: [
       'AI art generationMusic composition toolsCreative writing assistanceDesign automationStyle transfer capabilitiesCollaborative creationContent optimizationRoyalty-free assets',
       'Export in multiple formatsCommunity sharing'],
     color: 'from-pink-600 to-rose-700', textColor: 'text-pink-400',
@@ -262,14 +253,13 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [,
     implementationDetails: 'AI-powered creativity platform with advanced generation models, collaborative tools, and comprehensive creative workflow management.',
     launchDate: '2024-09-15', customers: 156;
     rating: 4.8;
-    reviews: 89;
-  };
+    reviews: 89};
   // AI Education Platform;
     id: 'ai-education-platform', name: 'AI Education Platform',
     tagline: 'Personalized learning experiences powered by artificial intelligence', price: '$299',
     period: '/month',
     description: 'Revolutionary AI-powered education platform that creates personalized learning experiences for students of all ages. Adapts content, pace, and teaching style to individual learning preferences and needs.',
-    features: [;
+    features: [
       'Personalized learning pathsAI-powered content adaptationReal-time progress trackingAdaptive assessmentsInteractive simulationsMulti-language supportParent/teacher dashboardsPerformance analytics',
       'Content creation toolsIntegration with LMS'],
     color: 'from-indigo-600 to-purple-700', textColor: 'text-indigo-400',
@@ -292,16 +282,14 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [,
     launchDate: '2024-03-25', customers: 156;
     rating: 4.8;
     reviews: 89;
-export interface InnovativeAIService2025 {;
-  id: string;
+export interface InnovativeAIService2025 {
+  id: string
   name: string;
   tagline: string;
   price: string;
-  period: string;
-  description: string;
+  period: string description: string;
   features: string[];
-  popular: boolean;
-  icon: string;
+  popular: boolean icon: string;
   color: string;
   textColor: string;
   link: string;
@@ -392,7 +380,7 @@ export const,
     descriptio,
   n: 'Revolutionary platform for developing AI systems with consciousness, emotional intelligence, and self-awareness. Enables creation of truly intelligent AI that understands context, emotions, and human behavior.',
     feature,
-  s: [;
+  s: [
       'Consciousness development frameworkEmotional intelligence trainingSelf-awareness algorithmsContext understanding engineEthical decision makingHuman-AI interaction protocolsConsciousness monitoring toolsEvolutionary learning systems'
       'Safety and alignment controlsResearch collaboration tools'
     ],
@@ -416,7 +404,7 @@ export const,
   y: 'AI Consciousness & Research', realServic,
   e: true,
     technolog,
-  y: ['Python, TensorFlow, PyTorch, React, Node.js, PostgreSQL, Redis'];
+  y: ['Python, TensorFlow, PyTorch, React, Node.js, PostgreSQL, Redis']
     integration,
   s: ['OpenAI API, Anthropic Claude, Research databases, Academic platforms, Cloud computing'];
     useCase,
@@ -464,7 +452,7 @@ export const,
     descriptio,
   n: 'Advanced platform for building autonomous AI ecosystems that can self-manage, evolve, and adapt without human intervention. Perfect for creating intelligent systems that grow and improve over time.',
     feature,
-  s: [;
+  s: [
       'Autonomous system architectureSelf-evolution algorithmsAdaptive learning systemsResource optimizationSelf-healing capabilitiesPerformance monitoringScalability managementIntegration frameworks'
       'Security protocolsAnalytics dashboard'
     ],
@@ -532,7 +520,7 @@ export const,
     descriptio,
   n: 'Comprehensive platform for implementing AI ethics, governance, and responsible development practices. Helps organizations build trustworthy AI systems that align with human values and ethical principles.',
     feature,
-  s: [;
+  s: [
       'Ethics framework implementationBias detection and mitigationTransparency toolsAccountability systemsCompliance monitoringEthical decision makingStakeholder engagementImpact assessment'
       'Policy managementReporting and analytics'
     ],
@@ -600,7 +588,7 @@ export const,
     descriptio,
   n: 'Revolutionary AI-powered creativity platform that generates art, music, literature, and multimedia content. Enables artists, designers, and creators to explore new dimensions of human-AI collaboration.',
     feature,
-  s: [;
+  s: [
       'AI art generationMusic composition toolsCreative writing assistanceDesign automationStyle transfer capabilitiesCollaborative creationContent optimizationRoyalty-free assets'
       'Export in multiple formatsCommunity sharing'
     ],
@@ -668,7 +656,7 @@ export const,
     descriptio,
   n: 'Revolutionary AI-powered education platform that creates personalized learning experiences for students of all ages. Adapts content, pace, and teaching style to individual learning preferences and needs.',
     feature,
-  s: [;
+  s: [
       'Personalized learning pathsAI-powered content adaptationReal-time progress trackingAdaptive assessmentsInteractive simulationsMulti-language supportParent/teacher dashboardsPerformance analytics'
       'Content creation toolsIntegration with LMS'
     ],
@@ -728,7 +716,7 @@ export interface InnovativeAIService2025 {/* TODO: Fix JSX expression */}
   s: string}
     websit,
   e: string}
-  };
+  }
   realImplementatio,
   n: boolean;
   implementationDetail,
@@ -741,23 +729,20 @@ export interface InnovativeAIService2025 {/* TODO: Fix JSX expression */}
   g: number;
   review,
   s: number}
-;
 export const,
-  innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [;
-  // AI Consciousness & Emotional Intelligence;
+  innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [
+  // AI Consciousness & Emotional Intelligence
   {
     id: 'ai-consciousness-evolution';
     name: 'AI Consciousness Evolution Platform';
     tagline: 'Develop self-aware AI systems with emotional intelligence';
     price: '$2,999';
-    period: '/month';
-    description: 'Revolutionary platform for developing AI systems with consciousness, emotional intelligence, and self-awareness. Enables creation of truly intelligent AI that understands context, emotions, and human behavior.';
+    period: '/month' description: 'Revolutionary platform for developing AI systems with consciousness, emotional intelligence, and self-awareness. Enables creation of truly intelligent AI that understands context, emotions, and human behavior.';
     features: [
       'Consciousness development frameworkEmotional intelligence trainingSelf-awareness algorithmsContext understanding engineEthical decision makingHuman-AI interaction protocolsConsciousness monitoring toolsEvolutionary learning systems';
       'Safety and alignment controlsResearch collaboration tools'
     ];
-    popular: true;
-    icon: '';
+    popular: true icon: '';
     color: 'from-violet-600 to-purple-700';
     textColor: 'text-violet-400';
     link: 'https://ziontechgroup.com/ai-consciousness-evolution';
@@ -785,22 +770,19 @@ export const,
     launchDate: '2024-12-01';
     customers: 12;
     rating: 4.9;
-    reviews: 8;
-  };
+    reviews: 8};
   // AI Autonomous Ecosystem Platform;
-  {;
+  {
     id: 'ai-autonomous-ecosystem';
     name: 'AI Autonomous Ecosystem Platform';
     tagline: 'Create self-managing AI systems that evolve independently';
     price: '$1,999';
-    period: '/month';
-    description: 'Advanced platform for building autonomous AI ecosystems that can self-manage, evolve, and adapt without human intervention. Perfect for creating intelligent systems that grow and improve over time.';
+    period: '/month' description: 'Advanced platform for building autonomous AI ecosystems that can self-manage, evolve, and adapt without human intervention. Perfect for creating intelligent systems that grow and improve over time.';
     features: [
       'Autonomous system architectureSelf-evolution algorithmsAdaptive learning systemsResource optimizationSelf-healing capabilitiesPerformance monitoringScalability managementIntegration frameworks';
       'Security protocolsAnalytics dashboard'
     ];
-    popular: true;
-    icon: '';
+    popular: true icon: '';
     color: 'from-blue-600 to-cyan-700';
     textColor: 'text-blue-400';
     link: 'https://ziontechgroup.com/ai-autonomous-ecosystem';
@@ -828,22 +810,19 @@ export const,
     launchDate: '2024-11-15';
     customers: 28;
     rating: 4.8;
-    reviews: 19;
-  };
+    reviews: 19};
   // AI Ethics & Governance Platform;
-  {;
+  {
     id: 'ai-ethics-governance';
     name: 'AI Ethics & Governance Platform';
     tagline: 'Ensure responsible AI development with comprehensive ethics framework';
     price: '$899';
-    period: '/month';
-    description: 'Comprehensive platform for implementing AI ethics, governance, and responsible development practices. Helps organizations build trustworthy AI systems that align with human values and ethical principles.';
+    period: '/month' description: 'Comprehensive platform for implementing AI ethics, governance, and responsible development practices. Helps organizations build trustworthy AI systems that align with human values and ethical principles.';
     features: [
       'Ethics framework implementationBias detection and mitigationTransparency toolsAccountability systemsCompliance monitoringEthical decision makingStakeholder engagementImpact assessment';
       'Policy managementReporting and analytics'
     ];
-    popular: true;
-    icon: '';
+    popular: true icon: '';
     color: 'from-emerald-600 to-green-700';
     textColor: 'text-emerald-400';
     link: 'https://ziontechgroup.com/ai-ethics-governance';
@@ -871,22 +850,19 @@ export const,
     launchDate: '2024-10-20';
     customers: 45;
     rating: 4.7;
-    reviews: 31;
-  };
+    reviews: 31};
   // AI Creativity Studio Platform;
-  {;
+  {
     id: 'ai-creativity-studio';
     name: 'AI Creativity Studio Platform';
     tagline: 'Unleash unlimited creativity with AI-powered artistic tools';
     price: '$399';
-    period: '/month';
-    description: 'Revolutionary AI-powered creativity platform that generates art, music, literature, and multimedia content. Enables artists, designers, and creators to explore new dimensions of human-AI collaboration.';
+    period: '/month' description: 'Revolutionary AI-powered creativity platform that generates art, music, literature, and multimedia content. Enables artists, designers, and creators to explore new dimensions of human-AI collaboration.';
     features: [
       'AI art generationMusic composition toolsCreative writing assistanceDesign automationStyle transfer capabilitiesCollaborative creationContent optimizationRoyalty-free assets';
       'Export in multiple formatsCommunity sharing'
     ];
-    popular: true;
-    icon: '';
+    popular: true icon: '';
     color: 'from-pink-600 to-rose-700';
     textColor: 'text-pink-400';
     link: 'https://ziontechgroup.com/ai-creativity-studio';
@@ -914,22 +890,19 @@ export const,
     launchDate: '2024-09-15';
     customers: 156;
     rating: 4.8;
-    reviews: 89;
-  };
+    reviews: 89};
   // AI Education Platform;
-  {;
+  {
     id: 'ai-education-platform';
     name: 'AI Education Platform';
     tagline: 'Personalized learning experiences powered by artificial intelligence';
     price: '$299';
-    period: '/month';
-    description: 'Revolutionary AI-powered education platform that creates personalized learning experiences for students of all ages. Adapts content, pace, and teaching style to individual learning preferences and needs.';
+    period: '/month' description: 'Revolutionary AI-powered education platform that creates personalized learning experiences for students of all ages. Adapts content, pace, and teaching style to individual learning preferences and needs.';
     features: [
       'Personalized learning pathsAI-powered content adaptationReal-time progress trackingAdaptive assessmentsInteractive simulationsMulti-language supportParent/teacher dashboardsPerformance analytics';
       'Content creation toolsIntegration with LMS'
     ];
-    popular: true;
-    icon: '';
+    popular: true icon: '';
     color: 'from-indigo-600 to-purple-700';
     textColor: 'text-indigo-400';
     link: 'https://ziontechgroup.com/ai-education-platform';
@@ -957,12 +930,9 @@ export const,
     launchDate: '2024-03-25';
     customers: 156;
     rating: 4.8;
-    reviews: 89;
-  }
+    reviews: 89}
 ];
-;
-    rating: 4.8;
-];      mobile: '+1 302 464 0950'
+    rating: 4.8];      mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
@@ -971,16 +941,14 @@ export const,
     implementationDetails: 'AI-powered education platform with personalized learning algorithms and adaptive curriculum generation.'
     launchDate: '2024-03-25'
     customers: 156;
-export interface InnovativeAIService2025 {;
-  id: string;
+export interface InnovativeAIService2025 {
+  id: string
   name: string;
   tagline: string;
   price: string;
-  period: string;
-  description: string;
+  period: string description: string;
   features: string[];
-  popular: boolean;
-  icon: string;
+  popular: boolean icon: string;
   color: string;
   textColor: string;
   link: string;
@@ -1145,7 +1113,6 @@ export interface InnovativeAIService2025 {;
     review,
   s: 89}
 ];
-;
     ratin,
   g: 4.8];      mobil,
   e: '+1 302 464 0950'
@@ -1171,7 +1138,7 @@ export interface InnovativeAIService2025 {/* TODO: Fix JSX expression */}
   s: string}
     websit,
   e: string}
-  };
+  }
   realImplementatio,
   n: boolean;
   implementationDetail,
@@ -1184,23 +1151,20 @@ export interface InnovativeAIService2025 {/* TODO: Fix JSX expression */}
   g: number;
   review,
   s: number}
-;
 export const,
-  innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [;
-  // AI Consciousness & Emotional Intelligence;
+  innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [
+  // AI Consciousness & Emotional Intelligence
   {
     id: 'ai-consciousness-evolution';
     name: 'AI Consciousness Evolution Platform';
     tagline: 'Develop self-aware AI systems with emotional intelligence';
     price: '$2,999';
-    period: '/month';
-    description: 'Revolutionary platform for developing AI systems with consciousness, emotional intelligence, and self-awareness. Enables creation of truly intelligent AI that understands context, emotions, and human behavior.';
+    period: '/month' description: 'Revolutionary platform for developing AI systems with consciousness, emotional intelligence, and self-awareness. Enables creation of truly intelligent AI that understands context, emotions, and human behavior.';
     features: [
       'Consciousness development frameworkEmotional intelligence trainingSelf-awareness algorithmsContext understanding engineEthical decision makingHuman-AI interaction protocolsConsciousness monitoring toolsEvolutionary learning systems';
       'Safety and alignment controlsResearch collaboration tools'
     ];
-    popular: true;
-    icon: '';
+    popular: true icon: '';
     color: 'from-violet-600 to-purple-700';
     textColor: 'text-violet-400';
     link: 'https://ziontechgroup.com/ai-consciousness-evolution';
@@ -1228,22 +1192,19 @@ export const,
     launchDate: '2024-12-01';
     customers: 12;
     rating: 4.9;
-    reviews: 8;
-  };
+    reviews: 8};
   // AI Autonomous Ecosystem Platform;
-  {;
+  {
     id: 'ai-autonomous-ecosystem';
     name: 'AI Autonomous Ecosystem Platform';
     tagline: 'Create self-managing AI systems that evolve independently';
     price: '$1,999';
-    period: '/month';
-    description: 'Advanced platform for building autonomous AI ecosystems that can self-manage, evolve, and adapt without human intervention. Perfect for creating intelligent systems that grow and improve over time.';
+    period: '/month' description: 'Advanced platform for building autonomous AI ecosystems that can self-manage, evolve, and adapt without human intervention. Perfect for creating intelligent systems that grow and improve over time.';
     features: [
       'Autonomous system architectureSelf-evolution algorithmsAdaptive learning systemsResource optimizationSelf-healing capabilitiesPerformance monitoringScalability managementIntegration frameworks';
       'Security protocolsAnalytics dashboard'
     ];
-    popular: true;
-    icon: '';
+    popular: true icon: '';
     color: 'from-blue-600 to-cyan-700';
     textColor: 'text-blue-400';
     link: 'https://ziontechgroup.com/ai-autonomous-ecosystem';
@@ -1271,22 +1232,19 @@ export const,
     launchDate: '2024-11-15';
     customers: 28;
     rating: 4.8;
-    reviews: 19;
-  };
+    reviews: 19};
   // AI Ethics & Governance Platform;
-  {;
+  {
     id: 'ai-ethics-governance';
     name: 'AI Ethics & Governance Platform';
     tagline: 'Ensure responsible AI development with comprehensive ethics framework';
     price: '$899';
-    period: '/month';
-    description: 'Comprehensive platform for implementing AI ethics, governance, and responsible development practices. Helps organizations build trustworthy AI systems that align with human values and ethical principles.';
+    period: '/month' description: 'Comprehensive platform for implementing AI ethics, governance, and responsible development practices. Helps organizations build trustworthy AI systems that align with human values and ethical principles.';
     features: [
       'Ethics framework implementationBias detection and mitigationTransparency toolsAccountability systemsCompliance monitoringEthical decision makingStakeholder engagementImpact assessment';
       'Policy managementReporting and analytics'
     ];
-    popular: true;
-    icon: '';
+    popular: true icon: '';
     color: 'from-emerald-600 to-green-700';
     textColor: 'text-emerald-400';
     link: 'https://ziontechgroup.com/ai-ethics-governance';
@@ -1314,22 +1272,19 @@ export const,
     launchDate: '2024-10-20';
     customers: 45;
     rating: 4.7;
-    reviews: 31;
-  };
+    reviews: 31};
   // AI Creativity Studio Platform;
-  {;
+  {
     id: 'ai-creativity-studio';
     name: 'AI Creativity Studio Platform';
     tagline: 'Unleash unlimited creativity with AI-powered artistic tools';
     price: '$399';
-    period: '/month';
-    description: 'Revolutionary AI-powered creativity platform that generates art, music, literature, and multimedia content. Enables artists, designers, and creators to explore new dimensions of human-AI collaboration.';
+    period: '/month' description: 'Revolutionary AI-powered creativity platform that generates art, music, literature, and multimedia content. Enables artists, designers, and creators to explore new dimensions of human-AI collaboration.';
     features: [
       'AI art generationMusic composition toolsCreative writing assistanceDesign automationStyle transfer capabilitiesCollaborative creationContent optimizationRoyalty-free assets';
       'Export in multiple formatsCommunity sharing'
     ];
-    popular: true;
-    icon: '';
+    popular: true icon: '';
     color: 'from-pink-600 to-rose-700';
     textColor: 'text-pink-400';
     link: 'https://ziontechgroup.com/ai-creativity-studio';
@@ -1357,22 +1312,19 @@ export const,
     launchDate: '2024-09-15';
     customers: 156;
     rating: 4.8;
-    reviews: 89;
-  };
+    reviews: 89};
   // AI Education Platform;
-  {;
+  {
     id: 'ai-education-platform';
     name: 'AI Education Platform';
     tagline: 'Personalized learning experiences powered by artificial intelligence';
     price: '$299';
-    period: '/month';
-    description: 'Revolutionary AI-powered education platform that creates personalized learning experiences for students of all ages. Adapts content, pace, and teaching style to individual learning preferences and needs.';
+    period: '/month' description: 'Revolutionary AI-powered education platform that creates personalized learning experiences for students of all ages. Adapts content, pace, and teaching style to individual learning preferences and needs.';
     features: [
       'Personalized learning pathsAI-powered content adaptationReal-time progress trackingAdaptive assessmentsInteractive simulationsMulti-language supportParent/teacher dashboardsPerformance analytics';
       'Content creation toolsIntegration with LMS'
     ];
-    popular: true;
-    icon: '';
+    popular: true icon: '';
     color: 'from-indigo-600 to-purple-700';
     textColor: 'text-indigo-400';
     link: 'https://ziontechgroup.com/ai-education-platform';
@@ -1647,7 +1599,7 @@ i,
   e: '2-4 weeks',' categor,
   y: 'AI Consciousness & Research', realServic,
   e: true,' technolog,
-  y: ['Python, TensorFlow, PyTorch, React, Node.js, PostgreSQL, Redis'];' integration,
+  y: ['Python, TensorFlow, PyTorch, React, Node.js, PostgreSQL, Redis']' integration,
   s: ['OpenAI API, Anthropic Claude, Research databases, Academic platforms, Cloud computing'];' useCase,
   s: ['AI research and development, Consciousness studies, Emotional AI development, Human-AI collaboration, Ethical AI training'];' ro,
   i: 'Research institutions report 500% ROI through breakthrough discoveries and accelerated AI development.',' competitor,
@@ -1820,14 +1772,14 @@ i,
   g: 4.8, review,
   s: 89, ' import { ServiceVariant } from '../types/service-variants'; export interface InnovativeAIService2025 {/* TODO: Fix JSX expression */}
   s: string} websit,
-  e: string} }; realImplementatio,
+  e: string} } realImplementatio,
   n: boolean; implementationDetail,
   s: string; launchDat,
   e: string; customer,
   s: number; ratin,
   g: number; review,
   s: number} ; export const,
-  innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [; // AI Consciousness & Emotional Intelligence; {/* TODO: Fix JSX expression */}
+  innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [ // AI Consciousness & Emotional Intelligence {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -1890,14 +1842,14 @@ i,
   e: '2024-03-25' customer,
   s: 156, ' import { ServiceVariant } from '../types/service-variants'; export interface InnovativeAIService2025 {/* TODO: Fix JSX expression */}
   s: string} websit,
-  e: string} }; realImplementatio,
+  e: string} } realImplementatio,
   n: boolean; implementationDetail,
   s: string; launchDat,
   e: string; customer,
   s: number; ratin,
   g: number; review,
   s: number} ; export const,
-  innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [; // AI Consciousness & Emotional Intelligence; {/* TODO: Fix JSX expression */}
+  innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [ // AI Consciousness & Emotional Intelligence {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,

@@ -6,7 +6,7 @@ import { BarChart, Target, Zap, Settings, CheckCircle, Star,  BarChart,  Target,
 const AIPerformanceTrackerPage: React.FC = () => {
   const features = [];
   return (
-    {// TODO: Add content;}
+    {// TODO: Add content}
 };
   ico,
   n: BarChart,
@@ -15,8 +15,7 @@ const AIPerformanceTrackerPage: React.FC = () => {
       descriptio,
   n: 'Comprehensive performance tracking and analysis',
       benefit,
-  s: ['Real-time metrics', 'Performance alerts', 'Trend analysis'];
-    },
+  s: ['Real-time metrics', 'Performance alerts', 'Trend analysis']},
       ico,
   n: Target,
       titl,
@@ -89,6 +88,5 @@ const AIPerformanceTrackerPage: React.FC = () => {
       </main>
       <Footer /></Footer>
     </div>
-  );
-};
-export default AiPerformanceTrackerPage;
+  )};
+export default AiPerformanceTrackerPage

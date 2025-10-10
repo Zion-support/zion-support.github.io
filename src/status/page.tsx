@@ -35,7 +35,6 @@ const Status: React.FC = () => {
       </main>
       <Footer /></Footer>
     </div>
-  );
-};
-export default StatusPage;
+  )};
+export default StatusPage
   </h1>

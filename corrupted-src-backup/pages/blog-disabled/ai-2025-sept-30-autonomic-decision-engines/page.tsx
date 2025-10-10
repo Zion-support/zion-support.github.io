@@ -6,7 +6,7 @@ export default function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t {
     <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'></div>
       <Helm, e, t>
         <title>
-          Autonomic, Decision, Engines — S, u, b‑10, 0, m, s, K, P, I‑Linked, Action, s;
+          Autonomic, Decision, Engines — S, u, b‑10, 0, m, s, K, P, I‑Linked, Action, s
         </title>
         <meta, nam, e = 'description'
           conte, n, t='Autonomic, Decision, Engines - S, u, b-10, 0, m, s, K, P, I-Linked, Actions, for AI, system, s'

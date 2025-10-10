@@ -14,7 +14,7 @@ export default function ContactPage() {
     phone: '',
     service: '',
     message:   ,
-$4});
+$4})
   const [isSubmitted, setIsSubmitted] = useState(false);
   const _handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     message: '',
@@ -28,8 +28,7 @@ $4});
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }));
-  };
+    }))};
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Here you would typically send the form data to your backend
@@ -45,8 +44,7 @@ $4});
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 2000));
     setIsSubmitted(true);
-    setIsSubmitting(false);
-  };
+    setIsSubmitting(false)};
   const contactInfo = {
     phone: '+1 (302) 464-0950',
     email: 'kleber@ziontechgroup.com',
@@ -79,7 +77,7 @@ $4});
           Contact Us</span>
       </div>
   );
-export default ContactPage;
+export default ContactPage
     'Quantum Computing',
     'Cybersecurity',
     'Cloud Migration',
@@ -187,8 +185,7 @@ export default ContactPage;
           </div>
         </div>
       </div>
-    );
-  }
+    )}
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
@@ -489,8 +486,7 @@ export default ContactPage;
         </div>
       </section>
     </div>
-  );
-}
+  )}
   </p>
   </h2>
   </p>

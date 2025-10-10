@@ -6,7 +6,7 @@ import { Mic, Target, Zap, Settings, CheckCircle, Star,  Mic,  Target,  Settings
 const AIVoiceAssistantPage: React.FC = () => {
   const features = [];
   return (
-    {// TODO: Add content;}
+    {// TODO: Add content}
 };
   ico,
   n: Mic,
@@ -15,8 +15,7 @@ const AIVoiceAssistantPage: React.FC = () => {
       descriptio,
   n: 'Advanced voice recognition and processing',
       benefit,
-  s: ['Speech-to-text', 'Voice commands', 'Multi-language support'];
-    },
+  s: ['Speech-to-text', 'Voice commands', 'Multi-language support']},
       ico,
   n: Target,
       titl,
@@ -84,6 +83,5 @@ const AIVoiceAssistantPage: React.FC = () => {
       </main>
       <Footer /></Footer>
     </div>
-  );
-};
-export default AiVoiceAssistantPage;
+  )};
+export default AiVoiceAssistantPage

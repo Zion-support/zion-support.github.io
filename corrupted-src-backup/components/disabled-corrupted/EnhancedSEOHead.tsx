@@ -8,8 +8,7 @@ interface SEOHeadProp, s {
   image?: string;
   u, r, l?: string;
   ty, p, e?: string;
-  author ?  : string;
- }
+  author ?  : string}
 const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({</SEOHeadPro>title</SEOHeadPro> = 'Zion, Tech, Group - Revolutionary, AI, and IT, Soluti, o, n, s',
   description = "Transform, your, enterprise with, Zion, Tech Gro, u, p's, revolutionary, AI solution, s.",
   keywor, d, s = 'AI, solutio, n, s, enterprise, A, I, artificial, intelligenc, e, machine, learnin, g, automati, o, n',
@@ -144,6 +143,5 @@ const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({/* TODO: Fix JSX express
         {JS, O, N.stringi, f, y(structuredD, a, t, a)}
       </scri, p, t>
     </Helm, e, t>
-  );
-};
-export default EnhancedSEOHead;
+  )};
+export default EnhancedSEOHead

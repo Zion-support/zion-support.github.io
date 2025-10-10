@@ -6,7 +6,7 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
     <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-b, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'></div>
       <Helm, e, t>
         <title>
-          Agent, Reliability, Runbooks v5 — Budg, e, t, s, Canari, e, s, Rollba, c, k;
+          Agent, Reliability, Runbooks v5 — Budg, e, t, s, Canari, e, s, Rollba, c, k
         </title>
         <meta, nam, e = 'description'
           conte, n, t='Execute, sa, f, e, budg, e, t-aware, agent, operations using, KP, I-linked, playbook, s, canary, scorecard, s, and, instant, rollback.'

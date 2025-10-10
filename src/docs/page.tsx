@@ -162,8 +162,7 @@ const DocsPage: React.FC = () => {
       case 'Beginner': return 'text-green-400 bg-green-500/20';
       case 'Intermediate': return 'text-yellow-400 bg-yellow-500/20';
       case 'Advanced': return 'text-red-400 bg-red-500/20';
-      default: return 'text-gray-400 bg-gray-500/20';
-    }
+      default: return 'text-gray-400 bg-gray-500/20'}
   };
   return (
     <React.Fragment>
@@ -319,9 +318,8 @@ const DocsPage: React.FC = () => {
         <Footer />
       </div>
     </React.Fragment>
-  );
-};
-export default DocsPage;
+  )};
+export default DocsPage
   </Link>
   </Link>
   </p>

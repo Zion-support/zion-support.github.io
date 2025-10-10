@@ -237,7 +237,7 @@ export default function MicroSaasPage() {
       link: '/ai-time-tracker',
       benefits: ['Increase productivity by 25%', 'Better time management', 'Detailed insights']
     }
-  ];
+  ]
   const categories = [
     { name: 'All', count: microSaasServices.length },
     { name: 'Analytics', count: microSaasServices.filter(s => s.category === 'Analytics').length },
@@ -559,8 +559,7 @@ export default function MicroSaasPage() {
       </section>
       <Footer />
     </div>
-  );
-}
+  )}
   </Link>
   </a>
   </Link>

@@ -4,7 +4,6 @@ import { Helmet } from 'react-helmet-async';
 import { Mail, BarChart3, Users, Zap, Target, ArrowRight, Star, CheckSquare, Globe, Smartphone, Heart, TrendingUp } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 const AIEmailMarketingAutomationPage: React.FC = () => {
   const features = [
     {
@@ -32,7 +31,6 @@ const AIEmailMarketingAutomationPage: React.FC = () => {
       benefits: ['Trigger-based campaigns', 'Drip sequences', 'Abandoned cart recovery', 'Welcome series']
     }
   ];
-
   const automationWorkflows = [
     {
       name: 'Welcome Series',
@@ -63,7 +61,6 @@ const AIEmailMarketingAutomationPage: React.FC = () => {
       clickRate: '32%'
     }
   ];
-
   const pricingPlans = [
     {
       name: 'Starter',
@@ -77,8 +74,7 @@ const AIEmailMarketingAutomationPage: React.FC = () => {
         'Email templates',
         'Email support'
       ],
-      popular: false
-    },
+      popular: false},
     {
       name: 'Professional',
       price: '$179',
@@ -92,8 +88,7 @@ const AIEmailMarketingAutomationPage: React.FC = () => {
         'Priority support',
         'API access'
       ],
-      popular: true
-    },
+      popular: true},
     {
       name: 'Enterprise',
       price: '$499',
@@ -107,34 +102,28 @@ const AIEmailMarketingAutomationPage: React.FC = () => {
         'Advanced reporting',
         'Custom integrations'
       ],
-      popular: false
-    }
+      popular: false}
   ];
-
   const testimonials = [
     {
       name: 'Sarah Thompson',
       role: 'Marketing Manager',
       company: 'E-commerce Plus',
       content: 'Our email open rates increased by 85% since implementing AI Email Marketing Automation. The AI content generation is incredible.',
-      rating: 5
-    },
+      rating: 5},
     {
       name: 'Michael Rodriguez',
       role: 'CEO',
       company: 'TechStartup',
       content: 'The automation workflows have saved us 20+ hours per week. Our revenue from email marketing increased by 300%.',
-      rating: 5
-    },
+      rating: 5},
     {
       name: 'Emily Chen',
       role: 'Digital Marketing Director',
       company: 'Global Brands',
       content: 'The AI segmentation and personalization features are game-changers. Our customers love the personalized experience.',
-      rating: 5
-    }
+      rating: 5}
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -142,9 +131,7 @@ const AIEmailMarketingAutomationPage: React.FC = () => {
         <meta name="description" content="Revolutionary AI-powered email marketing automation with content generation, smart segmentation, and advanced analytics. Boost ROI by 300%." />
         <meta name="keywords" content="AI email marketing, email automation, email marketing software, email campaigns, marketing automation" />
       </Helmet>
-      
       <Navigation />
-      
       <main className="pt-20">
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -160,7 +147,7 @@ const AIEmailMarketingAutomationPage: React.FC = () => {
               Transform your email marketing with AI-powered content generation, smart segmentation, and advanced automation. 
               Boost open rates by 85% and increase revenue by 300%.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center mb-12">
               <button className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 inline" />
@@ -174,7 +161,6 @@ const AIEmailMarketingAutomationPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -188,7 +174,7 @@ const AIEmailMarketingAutomationPage: React.FC = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group">
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
@@ -207,7 +193,6 @@ const AIEmailMarketingAutomationPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Automation Workflows Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -221,7 +206,7 @@ const AIEmailMarketingAutomationPage: React.FC = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {automationWorkflows.map((workflow, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group">
                   <div className="flex items-center justify-between mb-4">
                     <h3 className="text-xl font-bold text-white">{workflow.name}</h3>
                     <div className="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-sm font-medium">
@@ -244,7 +229,6 @@ const AIEmailMarketingAutomationPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -282,7 +266,7 @@ const AIEmailMarketingAutomationPage: React.FC = () => {
                   </ul>
                   <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular 
-                      ? 'bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white transform hover:scale-105' 
+                      ? 'bg-gradient-to-r from-purple-500 to-pink-500 hover: from-purple-600 hover:to-pink-600 text-white transform hover:scale-105' 
                       : 'border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white'
                   }`}>
                     {plan.name === 'Enterprise' ? 'Contact Sales' : 'Start Free Trial'}
@@ -292,7 +276,6 @@ const AIEmailMarketingAutomationPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Testimonials Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -322,9 +305,8 @@ const AIEmailMarketingAutomationPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm: px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 backdrop-blur-sm rounded-3xl p-12 border border-purple-500/20">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -349,10 +331,7 @@ const AIEmailMarketingAutomationPage: React.FC = () => {
           </div>
         </section>
       </main>
-      
       <Footer />
     </div>
-  );
-};
-
-export default AIEmailMarketingAutomationPage;
+  )};
+export default AIEmailMarketingAutomationPage

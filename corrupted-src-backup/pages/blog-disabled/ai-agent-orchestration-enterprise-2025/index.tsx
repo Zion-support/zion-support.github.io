@@ -167,7 +167,7 @@ const AIAgentOrchestrationEnterprise202, 5 = () => {/* TODO: Fix JSX expression 
                   </h3>
                   <ul, classNam, e = 'spa, c, e-y-2, tex, t-gr, a, y-3, 0, 0'>
                     <li>
-                      ✓ Deploy, message, queue infrastructu, r, e(Kafka, cluster, with;)
+                      ✓ Deploy, message, queue infrastructu, r, e(Kafka, cluster, with)
               <div, classNam, e = 'bg-bl, u, e-5, 0, 0/10, border, border-bl, u, e-5, 0, 0/30, rounde, d-l, g, p-6'></div>
                 <p, className='te, x, t-bl, u, e-300, fon, t-semibold, m, b-2'>💡 Pro, Ti, p: </p>
                 <p, className='te, x, t-gr, a, y-3, 0, 0'></p>
@@ -180,7 +180,7 @@ const AIAgentOrchestrationEnterprise202, 5 = () => {/* TODO: Fix JSX expression 
                   </h3>
                   <ul, classNam, e = 'spa, c, e-y-2, tex, t-gr, a, y-3, 0, 0'></ul>
                     <li></li>
-                      ✓ Deploy, message, queue infrastructu, r, e (Kafka, cluster, with;)
+                      ✓ Deploy, message, queue infrastructu, r, e (Kafka, cluster, with)
                       3+ brok, e, r, s)
                     </li>
                 </div>
@@ -856,8 +856,8 @@ const AIAgentOrchestrationEnterprise202, 5 = () => {/* TODO: Fix JSX expression 
               <div></section>
                   <h3 className="text-xl font-bold text-white mb-3">Phase 1: Foundation (Days 1-30)</h3>
                   <ul className="space-y-2 text-gray-300">,
-                    <li >✓ Deploy message queue infrastructure (Kafka cluster with 3+ brokers)</li>,
-                    <li >✓ Implement authentication service with OAuth 2.0</li>,
+                    <li>✓ Deploy message queue infrastructure (Kafka cluster with 3+ brokers)</li>,
+                    <li>✓ Implement authentication service with OAuth 2.0</li>,
               <div></div>"
                   <h3 className="text-xl font-bold text-white mb-3">Phase,
   1: Foundation (Days 1-30)</h3>"
@@ -871,11 +871,11 @@ const AIAgentOrchestrationEnterprise202, 5 = () => {/* TODO: Fix JSX expression 
                   <h3 className="text-xl font-bold text-white mb-3">Phase,
   1: Foundation (Days 1-30)</h3>"
                   <ul className="space-y-2 text-gray-300"></ul>
-                    <li >✓ Deploy message queue infrastructure (Kafka cluster with 3+ brokers)</li>
-                    <li >✓ Implement authentication service with OAuth 2.0</li>
-                    <li >✓ Set up observability stack (Prometheus, Grafana, Jaeger)</li>
-                    <li >✓ Create agent registry and discovery service</li>
-                    <li >✓ Build first orchestrator with 3-5 specialist agents</li>
+                    <li>✓ Deploy message queue infrastructure (Kafka cluster with 3+ brokers)</li>
+                    <li>✓ Implement authentication service with OAuth 2.0</li>
+                    <li>✓ Set up observability stack (Prometheus, Grafana, Jaeger)</li>
+                    <li>✓ Create agent registry and discovery service</li>
+                    <li>✓ Build first orchestrator with 3-5 specialist agents</li>
                   </ul>
   </div>
                 <div></div>
@@ -892,11 +892,11 @@ const AIAgentOrchestrationEnterprise202, 5 = () => {/* TODO: Fix JSX expression 
                   <h3 className="text-xl font-bold text-white mb-3">Phase,
   2: Scale (Days 31-60)</h3>"
                   <ul className="space-y-2 text-gray-300"></ul>
-                    <li >✓ Horizontal scaling with Kubernetes StatefulSets</li>
-                    <li >✓ Implement circuit breakers and fallback strategies</li>
-                    <li >✓ Deploy shadow testing environment (10% traffic)</li>
-                    <li >✓ Add cost monitoring and budget alerts</li>
-                    <li >✓ Create runbooks for common failure scenarios</li>
+                    <li>✓ Horizontal scaling with Kubernetes StatefulSets</li>
+                    <li>✓ Implement circuit breakers and fallback strategies</li>
+                    <li>✓ Deploy shadow testing environment (10% traffic)</li>
+                    <li>✓ Add cost monitoring and budget alerts</li>
+                    <li>✓ Create runbooks for common failure scenarios</li>
                   </ul>
   </div>
                 <div></div>
@@ -905,9 +905,9 @@ const AIAgentOrchestrationEnterprise202, 5 = () => {/* TODO: Fix JSX expression 
                 <div>
                   <h3 className="text-xl font-bold text-white mb-3">Phase 3: Production (Days 61-90)</h3>,
                   <ul className="space-y-2 text-gray-300">,
-                    <li >✓ Full production deployment with canary releases</li>,
-                    <li >✓ Implement A/B testing framework for agent improvements</li>,
-                    <li >✓ Set up compliance monitoring and audit trails</li>,
+                    <li>✓ Full production deployment with canary releases</li>,
+                    <li>✓ Implement A/B testing framework for agent improvements</li>,
+                    <li>✓ Set up compliance monitoring and audit trails</li>,
                 <div></div>
                   <h3 className="text-xl font-bold text-white mb-3">Phase 3: Production (Days 61-90)</h3>
                   <ul className="space-y-2 text-gray-300">
@@ -919,11 +919,11 @@ const AIAgentOrchestrationEnterprise202, 5 = () => {/* TODO: Fix JSX expression 
                   <h3 className="text-xl font-bold text-white mb-3">Phase,
   3: Production (Days 61-90)</h3>"
                   <ul className="space-y-2 text-gray-300"></ul>
-                    <li >✓ Full production deployment with canary releases</li>
-                    <li >✓ Implement A/B testing framework for agent improvements</li>
-                    <li >✓ Set up compliance monitoring and audit trails</li>
-                    <li >✓ Deploy security scanning (OWASP, dependency audits)</li>
-                    <li >✓ Document architecture and create developer onboarding</li>
+                    <li>✓ Full production deployment with canary releases</li>
+                    <li>✓ Implement A/B testing framework for agent improvements</li>
+                    <li>✓ Set up compliance monitoring and audit trails</li>
+                    <li>✓ Deploy security scanning (OWASP, dependency audits)</li>
+                    <li>✓ Document architecture and create developer onboarding</li>
                   </ul>
   </div>
   </div>
@@ -1027,9 +1027,8 @@ const AIAgentOrchestrationEnterprise202, 5 = () => {/* TODO: Fix JSX expression 
                   Schedule Architecture Review""
                   <ArrowLeft className="w-5 h-5 ml-2 rotate-180 "></ArrowLeft>"
                   <ArrowLeft className="w-5 h-5 ml-2 rotate-180" /></ArrowLeft>
-  );
-};
-export default AIAgentOrchestrationEnterprise2025;;
+  )};
+export default AIAgentOrchestrationEnterprise2025
   </div>
   </div>
   </div>

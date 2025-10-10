@@ -4,7 +4,6 @@ import { Helmet } from 'react-helmet-async';
 import { Share2, BarChart3, Calendar, Users, Zap, Target, ArrowRight, Star, CheckSquare, Globe, Smartphone, Heart } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 const AISocialMediaManagerPage: React.FC = () => {
   const features = [
     {
@@ -32,7 +31,6 @@ const AISocialMediaManagerPage: React.FC = () => {
       benefits: ['Auto-responses', 'Sentiment monitoring', 'Crisis detection', 'Engagement optimization']
     }
   ];
-
   const platforms = [
     { name: 'Facebook', icon: '📘', users: '2.9B', engagement: '+45%' },
     { name: 'Instagram', icon: '📷', users: '2B', engagement: '+67%' },
@@ -41,7 +39,6 @@ const AISocialMediaManagerPage: React.FC = () => {
     { name: 'TikTok', icon: '🎵', users: '1B', engagement: '+156%' },
     { name: 'YouTube', icon: '📺', users: '2.7B', engagement: '+34%' }
   ];
-
   const pricingPlans = [
     {
       name: 'Starter',
@@ -55,8 +52,7 @@ const AISocialMediaManagerPage: React.FC = () => {
         'Content calendar',
         'Email support'
       ],
-      popular: false
-    },
+      popular: false},
     {
       name: 'Professional',
       price: '$99',
@@ -70,8 +66,7 @@ const AISocialMediaManagerPage: React.FC = () => {
         'Priority support',
         'Team collaboration'
       ],
-      popular: true
-    },
+      popular: true},
     {
       name: 'Enterprise',
       price: '$299',
@@ -85,34 +80,28 @@ const AISocialMediaManagerPage: React.FC = () => {
         'API access',
         'Advanced reporting'
       ],
-      popular: false
-    }
+      popular: false}
   ];
-
   const testimonials = [
     {
       name: 'Jessica Martinez',
       role: 'Marketing Director',
       company: 'Fashion Forward',
       content: 'Our social media engagement increased by 200% since using AI Social Media Manager. The AI content creation saves us hours every week.',
-      rating: 5
-    },
+      rating: 5},
     {
       name: 'David Kim',
       role: 'CEO',
       company: 'TechStartup',
       content: 'The analytics and insights are incredible. We can now predict which content will perform best before we even post it.',
-      rating: 5
-    },
+      rating: 5},
     {
       name: 'Amanda Wilson',
       role: 'Social Media Manager',
       company: 'Creative Agency',
       content: 'Managing multiple client accounts is now effortless. The AI handles content creation while we focus on strategy.',
-      rating: 5
-    }
+      rating: 5}
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -120,9 +109,7 @@ const AISocialMediaManagerPage: React.FC = () => {
         <meta name="description" content="Revolutionary AI-powered social media management with content creation, scheduling, analytics, and community management. Boost engagement by 200%." />
         <meta name="keywords" content="AI social media management, social media automation, content creation, social media analytics, community management" />
       </Helmet>
-      
       <Navigation />
-      
       <main className="pt-20">
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -138,7 +125,7 @@ const AISocialMediaManagerPage: React.FC = () => {
               Transform your social media presence with AI-powered content creation, smart scheduling, and advanced analytics. 
               Boost engagement by 200% and save 10+ hours per week.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center mb-12">
               <button className="bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 inline" />
@@ -152,7 +139,6 @@ const AISocialMediaManagerPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -166,7 +152,7 @@ const AISocialMediaManagerPage: React.FC = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group">
                   <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-purple-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
@@ -185,7 +171,6 @@ const AISocialMediaManagerPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Platforms Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -199,7 +184,7 @@ const AISocialMediaManagerPage: React.FC = () => {
             </div>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
               {platforms.map((platform, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 text-center hover:bg-white/10 transition-all duration-300 group">
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 text-center hover: bg-white/10 transition-all duration-300 group">
                   <div className="text-4xl mb-4">{platform.icon}</div>
                   <h3 className="text-lg font-semibold text-white mb-2">{platform.name}</h3>
                   <p className="text-sm text-gray-400 mb-2">{platform.users} users</p>
@@ -212,7 +197,6 @@ const AISocialMediaManagerPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -250,7 +234,7 @@ const AISocialMediaManagerPage: React.FC = () => {
                   </ul>
                   <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular 
-                      ? 'bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white transform hover:scale-105' 
+                      ? 'bg-gradient-to-r from-pink-500 to-purple-500 hover: from-pink-600 hover:to-purple-600 text-white transform hover:scale-105' 
                       : 'border border-pink-400 text-pink-400 hover:bg-pink-400 hover:text-white'
                   }`}>
                     {plan.name === 'Enterprise' ? 'Contact Sales' : 'Start Free Trial'}
@@ -260,7 +244,6 @@ const AISocialMediaManagerPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Testimonials Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -290,9 +273,8 @@ const AISocialMediaManagerPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm: px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-gradient-to-r from-pink-500/10 to-purple-500/10 backdrop-blur-sm rounded-3xl p-12 border border-pink-500/20">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -317,10 +299,7 @@ const AISocialMediaManagerPage: React.FC = () => {
           </div>
         </section>
       </main>
-      
       <Footer />
     </div>
-  );
-};
-
-export default AISocialMediaManagerPage;
+  )};
+export default AISocialMediaManagerPage

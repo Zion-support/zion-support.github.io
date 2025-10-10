@@ -91,7 +91,7 @@ export default function AIAutomationPage() {
       <div className="container mx-auto px-4 py-20">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
-            AI Automation;
+            AI Automation
   </
           <p className="text-xl text-gray-300 mb-8">
             Intelligent process automation with AI-powered decision making and exception handling.
@@ -111,7 +111,6 @@ export default function AIAutomationPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}
   </a>
   </h1>

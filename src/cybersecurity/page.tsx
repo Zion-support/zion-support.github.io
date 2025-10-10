@@ -27,7 +27,6 @@ export default function CybersecurityPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}
   </a>
   </h1>

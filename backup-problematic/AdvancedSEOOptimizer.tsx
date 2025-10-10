@@ -2,8 +2,7 @@
 import React, { useEffect, useCallback, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 interface SEOData {
- title: string;
- description: string;
+ title: string description: string;
  keywords: string[];
  canonicalUrl: string;
  ogTitle?: string;
@@ -71,8 +70,7 @@ const,
  'http,
   s://github.com/Zion-Holdings'],
  ...seoData.structuredData};
- return baseStructuredData;
- }, [seoData, enableStructuredData]);
+ return baseStructuredData}, [seoData, enableStructuredData]);
  const generateBreadcrumbStructuredData = useCallback(() => {
  if (!enableSchemaMarkup) return null;
  return {
@@ -92,8 +90,7 @@ const,
  const generateBreadcrumbStructuredData = useCallback(() => {/* TODO: Fix JSX expression */}
  },
  {/* TODO: Fix JSX expression */}
- }]};
- }, [seoData, enableSchemaMarkup]);
+ }]}}, [seoData, enableSchemaMarkup]);
  const generateFAQStructuredData = useCallback(() => {
  if (!enableSchemaMarkup) return null;
  const faqData = {
@@ -124,8 +121,7 @@ const,
  }},
  {/* TODO: Fix JSX expression */}
  }}]};
- return faqData;
- }, [enableSchemaMarkup]);
+ return faqData}, [enableSchemaMarkup]);
  const _structuredData = generateStructuredData();
  const _breadcrumbData = generateBreadcrumbStructuredData();
  const _faqData = generateFAQStructuredData();
@@ -145,8 +141,7 @@ const,
  let _canonicalLink = document.querySelector('link[rel="canonical"]');
  if (!canonicalLink) {/* TODO: Fix JSX expression */}
  }
- canonicalLink.setAttribute('href', seoData.canonicalUrl);
- }
+ canonicalLink.setAttribute('href', seoData.canonicalUrl)}
  }, [seoData]);
  // const _addMetaTag = (name: string, content: string, attribute: string = 'name') => {,
  // const metaTag = document.createElement('meta');
@@ -195,8 +190,7 @@ const,
  script.textContent = JSON.stringify(data);
  script.id = 'structured-data';
  document.head.appendChild(script);
- structuredDataRef.current = script;
- };
+ structuredDataRef.current = script};
  const _trackPageView = (config: SEOData) => {,
  if (typeof window !== 'undefined' && 'gtag' in window) {,
  (window as unknown as { gtag: (command: string, targetId: string, config: Record<string, unknown>) => void }).gtag('config', 'GA_MEASUREMENT_ID', {)
@@ -205,8 +199,7 @@ const,
  const _trackPageView = (confi)
   g: SEOData) => {/* TODO: Fix JSX expression */}
   g: Record<string, unknown>) => void }).gtag('config', 'GA_MEASUREMENT_ID', {/* TODO: Fix JSX expression */})
- });
- }
+ })}
  };
  const _trackPerformanceMetrics = () => {
  if (typeof window !== 'undefined' && 'performance' in window) {
@@ -219,10 +212,8 @@ const,
  value: Math.round(perfData.loadEventEnd - perfData.fetchStart),
  const _trackPerformanceMetrics = () => {/* TODO: Fix JSX expression */}
   s: Record<string, unknown>) => void }).gtag('event', 'page_load_performance', {/* TODO: Fix JSX expression */})
- });
- }
- });
- }
+ })}
+ })}
  };origin/
  return(<Helmet>)
  {/* Basic Meta Tags */})
@@ -343,8 +334,7 @@ const,
  <link rel="dns-prefetch" href="//www.google-analytics.com" /></link>"
  <link rel="dns-prefetch" href="//www.googletagmanager.com" /></link>
  </Helmet>
- );
-};
-export default AdvancedSEOOptimizer;"
+ )};
+export default AdvancedSEOOptimizer"
   </AdvancedSEOOptimizerProps>
   </AdvancedSEOOptimizerProps>

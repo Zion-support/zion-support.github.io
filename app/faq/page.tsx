@@ -9,8 +9,7 @@ const FAQPage: React.FC = () => {
       prev.includes(index) 
         ? prev.filter(item => item !== index)
         : [...prev, index]
-    );
-  };
+    )};
   const faqs = [
     {
       question: "What AI services do you offer?",
@@ -70,7 +69,7 @@ const FAQPage: React.FC = () => {
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg border border-cyan-500/20">
                   <button
                     onClick={() => toggleItem(index)}
-                    className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-700/30 transition-colors">
+                    className="w-full px-6 py-4 text-left flex items-center justify-between hover: bg-slate-700/30 transition-colors">
                     <h3 className="text-lg font-semibold text-white pr-4">{faq.question}</h3>
                     {openItems.includes(index) ? (
                       <ChevronUp className="w-5 h-5 text-cyan-400 flex-shrink-0" />
@@ -90,6 +89,5 @@ const FAQPage: React.FC = () => {
         </section>
       </div>
     </React.Fragment>
-  );
-};
-export default FAQPage;
+  )};
+export default FAQPage

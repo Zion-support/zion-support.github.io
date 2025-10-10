@@ -1,9 +1,7 @@
-
   id: string;
   name: string;
   tagline: string;
-  price: string;
-  description: string;
+  price: string description: string;
   features: string[];
   link: string;
   category: string;
@@ -11,10 +9,10 @@
   contactInfo: unknown;
     mobile: string;
     email: string;
-export interface NewOperationalService2025 {;,
+export interface NewOperationalService2025 {,
     address: string}
   i,
-  d: string;
+  d: string
   nam,
   e: string;
   taglin,
@@ -39,7 +37,7 @@ export interface NewOperationalService2025 {;,
   l: string;
 export interface NewOperationalService2025 {/* TODO: Fix JSX expression */}
   s: string}
-};
+}
   i,
   d: string;
   nam,
@@ -69,27 +67,25 @@ export interface NewOperationalService2025 {/* TODO: Fix JSX expression */}
   }
 ];
   id: string, name: string;
-  tagline: string, price: string;
-  description: string, features: string[],
+  tagline: string, price: string description: string, features: string[],
   link: string, category: string;
   realImplementation: boolean;
   contactInfo: unknown;
     mobile: string, email: string;
-    address: string;
-  }
+    address: string}
 }
 export const newOperationalServices2025: NewOperationalService2025[] = [,
     id: "smart-operations-center", name: "Smart Operations Center",
     tagline: "AI-powered operations management", price: "$119/month"
     description: "Intelligent operations center that uses AI to optimize business processes and workflows."
-    features: [;
+    features: [
       "AI process optimization"
       "Real-time monitoring"
       "Predictive analytics"
       "Automated workflows",
       "Performance insights"],
     link: "/services/smart-operations-center", category: "New Operational Services 2025",
-    realImplementation: true;
+    realImplementation: true
     contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
 ];
@@ -137,7 +133,7 @@ export const,
     descriptio,"
   n: "Intelligent operations center that uses AI to optimize business processes and workflows.",
     feature,
-  s: [;"
+  s: ["
       "AI process optimization""
       "Real-time monitoring""
       "Predictive analytics""
@@ -154,7 +150,7 @@ export const,
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-];
+]
       mobil,"
   e: "+1 302 464 0950", emai,"
   l: "kleber@ziontechgroup.com",
@@ -170,7 +166,6 @@ export const,
     }
   }
 ];
-;
     id: "smart-operations-center"
     name: "Smart Operations Center",
     tagline: "AI-powered operations management",
@@ -191,8 +186,7 @@ export const,
       email: "kleber@ziontechgroup.com"
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'}};
-];      mobile: "+1 302 464 0950",
+      address: '364 E Main St STE 1008 Middletown DE 19709'}}];      mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -232,8 +226,7 @@ export const,
       emai,
   l: 'kleber@ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}};
-];      mobil,"
+  s: '364 E Main St STE 1008 Middletown DE 19709'}}];      mobil,"
   e: "+1 302 464 0950",
   emai,"
   l: "kleber@ziontechgroup.com"
@@ -259,7 +252,7 @@ i,
   o: mobil,
   e: string; emai,
   l: string; export interface NewOperationalService2025 {/* TODO: Fix JSX expression */}
-  s: string }; i,
+  s: string } i,
   d: string; nam,
   e: string; taglin,
   e: string; pric,
@@ -297,7 +290,7 @@ i,
   y: "New Operational Services 2025", realImplementatio,
   n: true, contactInf,
   o: addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; mobil,"
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ] mobil,"
   e: "+1 302 464 0950", emai,"
   l: "kleber@ziontechgroup.com", addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; emai,"
@@ -318,7 +311,7 @@ i,
   l: "kleber@ziontechgroup.com", mobil,
   e: '+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup.com',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}}; ]; mobil,"
+  s: '364 E Main St STE 1008 Middletown DE 19709'}}]; mobil,"
   e: "+1 302 464 0950",
   emai,"
   l: "kleber@ziontechgroup.com" mobil,"

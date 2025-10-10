@@ -6,7 +6,7 @@ import { Smartphone, Target, Zap, Settings, CheckCircle, Star, Code,  Smartphone
 const AIMobileBuilderPage: React.FC = () => {
   const features = [];
   return (
-    {// TODO: Add content;}
+    {// TODO: Add content}
 };
   ico,
   n: Smartphone,
@@ -15,8 +15,7 @@ const AIMobileBuilderPage: React.FC = () => {
       descriptio,
   n: 'Intelligent mobile app development with AI assistance',
       benefit,
-  s: ['Code generation', 'UI/UX optimization', 'Performance tuning'];
-    },
+  s: ['Code generation', 'UI/UX optimization', 'Performance tuning']},
       ico,
   n: Target,
       titl,
@@ -89,6 +88,5 @@ const AIMobileBuilderPage: React.FC = () => {
       </main>
       <Footer /></Footer>
     </div>
-  );
-};
-export default AiMobileBuilderPage;
+  )};
+export default AiMobileBuilderPage

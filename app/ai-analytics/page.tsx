@@ -92,7 +92,7 @@ title: 'Real-Time Dashboards',
       <Navigation />
       <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm: px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
@@ -125,7 +125,7 @@ title: 'Real-Time Dashboards',
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover: shadow-xl transition-shadow">
                   <div className="flex items-center mb-4">
                     <feature.icon className="h-8 w-8 text-blue-600 mr-3" />
                     <h3 className="text-xl font-semibold text-gray-900">{feature.title}</h3>
@@ -145,7 +145,7 @@ title: 'Real-Time Dashboards',
           </div>
         </section>
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-600">
+        <section className="py-20 px-4 sm: px-6 lg:px-8 bg-blue-600">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Analytics?
@@ -161,9 +161,8 @@ title: 'Real-Time Dashboards',
       </main>
       <Footer />
     </React.Fragment>
-  );
-};
-export default AiAnalyticsPage;
+  )};
+export default AiAnalyticsPage
   </button>
   </h2>
   </button>

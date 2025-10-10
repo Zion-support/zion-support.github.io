@@ -6,7 +6,7 @@ export default function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t {
     <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'></div>
       <Helm, e, t>
         <title>
-          Cognitive, Assistants, Blueprint — 92% C, S, A, T, Governed, Velocit, y;
+          Cognitive, Assistants, Blueprint — 92% C, S, A, T, Governed, Velocit, y
         </title>
         <meta, nam, e = 'description'
           conte, n, t='Cognitive, Assistants, Blueprint - 92% C, S, A, T, Governed, Velocity, for AI, system, s'

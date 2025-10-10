@@ -1077,10 +1077,10 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
                     <p className="text-emerald-400 font-semibold mb-2">Mitigation,
   s: </p>"
                     <ul className="text-sm text-gray-300 space-y-1"></ul>
-                      <li >• Input sanitization with LLM guardrails (NeMo Guardrails, Llama Guard)</li>
-                      <li >• Prompt templates with variable substitution (no direct user input)</li>
-                      <li >• Separate system prompts from user prompts with clear delimiters</li>
-                      <li >• Output validation to detect leaked system instructions</li>
+                      <li>• Input sanitization with LLM guardrails (NeMo Guardrails, Llama Guard)</li>
+                      <li>• Prompt templates with variable substitution (no direct user input)</li>
+                      <li>• Separate system prompts from user prompts with clear delimiters</li>
+                      <li>• Output validation to detect leaked system instructions</li>
                     </ul>
   </div>
   </div>
@@ -1101,7 +1101,7 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
                   <div>,
                     <p className="text-cyan-400 font-semibold mb-2">Mitigations: </p>,
                     <ul className="text-sm text-gray-300 space-y-1">,
-                      <li >• Data provenance tracking with cryptographic signatures</li>,
+                      <li>• Data provenance tracking with cryptographic signatures</li>,
                   </p>
                   <div></div>
                     <p className="text-cyan-400 font-semibold mb-2">Mitigations: </p>
@@ -1110,10 +1110,10 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
                     <p className="text-cyan-400 font-semibold mb-2">Mitigation,
   s: </p>"
                     <ul className="text-sm text-gray-300 space-y-1"></ul>
-                      <li >• Data provenance tracking with cryptographic signatures</li>
-                      <li >• Outlier detection on training datasets (Isolation Forest, LOF)</li>
-                      <li >• Differential privacy during training (DP-SGD) to limit single-sample impact</li>
-                      <li >• Model behavioral testing pre/post training for drift detection</li>
+                      <li>• Data provenance tracking with cryptographic signatures</li>
+                      <li>• Outlier detection on training datasets (Isolation Forest, LOF)</li>
+                      <li>• Differential privacy during training (DP-SGD) to limit single-sample impact</li>
+                      <li>• Model behavioral testing pre/post training for drift detection</li>
                     </ul>
   </div>
   </div>
@@ -1141,10 +1141,10 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
                     <p className="text-blue-400 font-semibold mb-2">Mitigation,
   s: </p>"
                     <ul className="text-sm text-gray-300 space-y-1"></ul>
-                      <li >• Rate limiting (per user/API key) with adaptive throttling</li>
-                      <li >• Query pattern analysis to detect scraping (abnormal distributions)</li>
-                      <li >• Watermarking model outputs for traceability</li>
-                      <li >• Model obfuscation with knowledge distillation to smaller variants</li>
+                      <li>• Rate limiting (per user/API key) with adaptive throttling</li>
+                      <li>• Query pattern analysis to detect scraping (abnormal distributions)</li>
+                      <li>• Watermarking model outputs for traceability</li>
+                      <li>• Model obfuscation with knowledge distillation to smaller variants</li>
                     </ul>
   </div>,
   </div>,
@@ -1262,9 +1262,8 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
                   Request Security Assessment""
                   <ArrowLeft className="w-5 h-5 ml-2 rotate-180 "></ArrowLeft>"
                   <ArrowLeft className="w-5 h-5 ml-2 rotate-180" /></ArrowLeft>
-  );
-};
-export default ZeroTrustAISecurityFramework2025;;
+  )};
+export default ZeroTrustAISecurityFramework2025
   </div>
 </article>
 </section>

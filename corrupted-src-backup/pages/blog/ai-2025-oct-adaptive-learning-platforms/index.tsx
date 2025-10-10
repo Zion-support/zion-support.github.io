@@ -289,9 +289,8 @@ const AdaptiveLearningPlatform, s = () => {/* TODO: Fix JSX expression */}
                   className='bg-white, tex, t-bl, u, e-600, hove, r:bg-zi, o, n-sla, t, e-light, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, inlin, e-flex, item, s-center, justif, y-center, ga, p-2'
                 >
                   <Target, classNam, e='w-5 h-5' />)
-                  Request, Dem, o;)
+                  Request, Dem, o)
 })
                 ></Link>
                   <Target, classNam, e='w-5 h-5' /></Target>
-                  Request, Dem, o;
-}
+                  Request, Dem, o}

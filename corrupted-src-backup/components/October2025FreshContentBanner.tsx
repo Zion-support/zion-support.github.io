@@ -385,7 +385,6 @@ const, October2025FreshContentBanne, r = () => {/* TODO: Fix JSX expression */}
         </d, i, v>)
       </d, i, v>)
     </d, i, v>)
-  );
-};
-export default October2025FreshContentBanner;
+  )};
+export default October2025FreshContentBanner
 ;"

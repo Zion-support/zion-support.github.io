@@ -6,7 +6,7 @@ import { GraduationCap, BookOpen, Users, Award, CheckCircle, Star,  GraduationCa
 const ITTrainingPage: React.FC = () => {
   const features = [];
   return (
-    {// TODO: Add content;}
+    {// TODO: Add content}
 };
   ico,
   n: GraduationCap,
@@ -15,8 +15,7 @@ const ITTrainingPage: React.FC = () => {
       descriptio,
   n: 'Industry-recognized IT certification training programs',
       benefit,
-  s: ['Microsoft certifications', 'AWS certifications', 'Cisco certifications'];
-    },
+  s: ['Microsoft certifications', 'AWS certifications', 'Cisco certifications']},
       ico,
   n: BookOpen,
       titl,
@@ -84,6 +83,5 @@ const ITTrainingPage: React.FC = () => {
       </main>
       <Footer /></Footer>
     </div>
-  );
-};
-export default ItTrainingPage;
+  )};
+export default ItTrainingPage

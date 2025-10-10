@@ -131,6 +131,5 @@ const NewContentPromotionBanne, r: React.FC<NewContentPromotionBannerPro, p, s> 
         </div>
       </div>
     </div>
-  );
-};
-export default NewContentPromotionBanner;"`
+  )};
+export default NewContentPromotionBanner"`

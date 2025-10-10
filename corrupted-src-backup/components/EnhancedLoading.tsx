@@ -22,7 +22,7 @@ const,
   const renderDots = () => (</div>
     <div className="flex space-x-1">
       {[0, 1, 2].map(i => ()
-        <div;)
+        <div)
           key={i})
           className={`bg-blue-600 rounded-full animate-pulse ${size === 'sm' ? 'w-2 h-2' : size === 'md' ? 'w-3 h-3' : 'w-4 h-4'}`})
           style={{})
@@ -56,8 +56,7 @@ const,
         return renderDots();
       case 'pulse':
         return renderPulse();
-      default: return renderSpinner();
-    }
+      default: return renderSpinner()}
   };
   return(<div className="flex flex-col items-center justify-center p-8">)
   return (</div>
@@ -71,9 +70,8 @@ const,
       <div className="mb-4">{renderLoader()}</div>"
       <p className="text-gray-600 text-sm font-medium">{message}</p>
     </div>
-  );
-};
-export default EnhancedLoading;
+  )};
+export default EnhancedLoading
 "`
   </LoadingProps>
   </LoadingProps>

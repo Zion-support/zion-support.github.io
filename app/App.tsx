@@ -6,7 +6,6 @@ import ErrorBoundary from './components/ErrorBoundary';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import LoadingSpinner from './components/LoadingSpinner';
-
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
 const AboutPage = lazy(() => import('./about/page'));
@@ -20,7 +19,6 @@ const CareersPage = lazy(() => import('./careers/page'));
 const PrivacyPage = lazy(() => import('./privacy/page'));
 const TermsPage = lazy(() => import('./terms/page'));
 const CookiesPage = lazy(() => import('./cookies/page'));
-
 // AI Services
 const AiServicesPage = lazy(() => import('./ai-services/page'));
 const AiMarketingPage = lazy(() => import('./ai-marketing/page'));
@@ -34,7 +32,6 @@ const AiWorkflowAutomationPage = lazy(() => import('./ai-workflow-automation/pag
 const AiCustomerSupportPage = lazy(() => import('./ai-customer-support/page'));
 const AiSalesAutomationPage = lazy(() => import('./ai-sales-automation/page'));
 const AiDataVisualizationPage = lazy(() => import('./ai-data-visualization/page'));
-
 // IT Services
 const ItServicesPage = lazy(() => import('./it-services/page'));
 const CloudServicesPage = lazy(() => import('./cloud-services/page'));
@@ -47,14 +44,12 @@ const MachineLearningPage = lazy(() => import('./machine-learning/page'));
 const MicroSaasPage = lazy(() => import('./micro-saas/page'));
 const QuantumComputingPage = lazy(() => import('./quantum-computing/page'));
 const RoboticsAutomationPage = lazy(() => import('./robotics-automation/page'));
-
 // Additional Pages
 const DemoPage = lazy(() => import('./demo/page'));
 const ConsultationPage = lazy(() => import('./consultation/page'));
 const PartnersPage = lazy(() => import('./partners/page'));
 const SupportPage = lazy(() => import('./support/page'));
 const FAQPage = lazy(() => import('./faq/page'));
-
 const App: React.FC = () => {
   return (
     <ErrorBoundary>
@@ -77,7 +72,6 @@ const App: React.FC = () => {
                   <Route path="/privacy" element={<PrivacyPage />} />
                   <Route path="/terms" element={<TermsPage />} />
                   <Route path="/cookies" element={<CookiesPage />} />
-                  
                   {/* AI Services Routes */}
                   <Route path="/ai-services" element={<AiServicesPage />} />
                   <Route path="/ai-marketing" element={<AiMarketingPage />} />
@@ -91,7 +85,6 @@ const App: React.FC = () => {
                   <Route path="/ai-customer-support" element={<AiCustomerSupportPage />} />
                   <Route path="/ai-sales-automation" element={<AiSalesAutomationPage />} />
                   <Route path="/ai-data-visualization" element={<AiDataVisualizationPage />} />
-                  
                   {/* IT Services Routes */}
                   <Route path="/it-services" element={<ItServicesPage />} />
                   <Route path="/cloud-services" element={<CloudServicesPage />} />
@@ -104,7 +97,6 @@ const App: React.FC = () => {
                   <Route path="/micro-saas" element={<MicroSaasPage />} />
                   <Route path="/quantum-computing" element={<QuantumComputingPage />} />
                   <Route path="/robotics-automation" element={<RoboticsAutomationPage />} />
-                  
                   {/* Additional Routes */}
                   <Route path="/demo" element={<DemoPage />} />
                   <Route path="/consultation" element={<ConsultationPage />} />
@@ -118,7 +110,5 @@ const App: React.FC = () => {
         </BrowserRouter>
       </HelmetProvider>
     </ErrorBoundary>
-  );
-};
-
-export default App;
+  )};
+export default App

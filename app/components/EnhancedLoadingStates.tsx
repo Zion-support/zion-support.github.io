@@ -1,6 +1,5 @@
 'use client';
 import React, { memo } from 'react';
-
 // Service Card Skeleton
 export const ServiceCardSkeleton: React.FC = memo(() => (
   <div 
@@ -12,8 +11,7 @@ export const ServiceCardSkeleton: React.FC = memo(() => (
     <div className="h-3 bg-gray-200 rounded w-1/2 mb-2"></div>
     <div className="h-3 bg-gray-200 rounded w-2/3"></div>
   </div>
-));
-
+))
 // Stats Skeleton
 export const StatsSkeleton: React.FC = memo(() => (
   <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
@@ -25,8 +23,7 @@ export const StatsSkeleton: React.FC = memo(() => (
       </div>
     ))}
   </div>
-));
-
+))
 // Page Loader
 export const PageLoader: React.FC = memo(() => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
@@ -35,8 +32,7 @@ export const PageLoader: React.FC = memo(() => (
       <p className="text-cyan-400 text-lg font-medium">Loading...</p>
     </div>
   </div>
-));
-
+))
 // Content Skeleton
 export const ContentSkeleton: React.FC<{ lines?: number }> = memo(({ lines = 3 }) => (
   <div className="animate-pulse">
@@ -49,8 +45,7 @@ export const ContentSkeleton: React.FC<{ lines?: number }> = memo(({ lines = 3 }
       ></div>
     ))}
   </div>
-));
-
+))
 // Card Grid Skeleton
 export const CardGridSkeleton: React.FC<{ count?: number }> = memo(({ count = 6 }) => (
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -66,8 +61,7 @@ export const CardGridSkeleton: React.FC<{ count?: number }> = memo(({ count = 6 
       </div>
     ))}
   </div>
-));
-
+))
 // Table Skeleton
 export const TableSkeleton: React.FC<{ rows?: number; columns?: number }> = memo(({ 
   rows = 5, 
@@ -94,7 +88,6 @@ export const TableSkeleton: React.FC<{ rows?: number; columns?: number }> = memo
     </div>
   </div>
 ));
-
 // Set display names for better debugging
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
 StatsSkeleton.displayName = 'StatsSkeleton';

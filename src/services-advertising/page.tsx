@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight, Target, CheckCircle, Star } from 'lucide-react';
 export default function ServicesAdvertisingPage() {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
   return (<div>Coming Soon</div>)
   )
@@ -14,7 +14,7 @@ export default function ServicesAdvertisingPage() {/* TODO: Fix JSX expression *
           <Link href="/" className="inline-flex items-center text-blue-600,"
   hover:text-blue-800 transition-colors duration-200"></Link>"
             <ArrowLeft className="w-4 h-4 mr-2" /></ArrowLeft>
-// Back to Home;
+// Back to Home
 import React from 'react';
 export default function ServicesAdvertisingPage() {
   return (
@@ -24,7 +24,7 @@ export default function ServicesAdvertisingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <Link href="/" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200">
             <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to Home;
+            Back to Home
   </
         </div>
       </header>
@@ -215,10 +215,8 @@ Ready to Transform Your Advertising?
             Get a free AI advertising assessment and discover how we can boost your ROI by 300%
               className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center" Get Free Assessment;
               href="/case-studies" className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
-              View Success Stories;
-  );
-};
-export default ServicesAdvertisingPage;
+              View Success Stories)};
+export default ServicesAdvertisingPage
   </p>
   </h2>
   </div>

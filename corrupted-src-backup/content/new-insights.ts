@@ -1,6 +1,5 @@
 export interface Insight {/* TODO: Fix JSX expression */}
 }
-
 export const newInsights: Insight[] = [
   {
     id: 'ai-platform-optimization-insights'
@@ -8,13 +7,12 @@ export const newInsights: Insight[] = [
     summary: 'Revolutionary AI platform optimization delivering unprecedented ROI through intelligent scorecards and performance monitoring.',
     category: 'AI Strategy',
     date: '2025-10-03',
-    readMinutes: 7;
+    readMinutes: 7
     featured: true;
     tags: ['Platform', 'ROI', 'Scorecards'],
     content: `
 # AI Platform Optimization Insights;
 Transform your AI platform with intelligent scorecards and performance monitoring that deliver measurable ROI.
-
 ## Key Insights;
 - Intelligent performance scorecards drive 300% ROI improvement;
 - Real-time optimization recommendations reduce costs by 40%
@@ -33,7 +31,6 @@ Transform your AI platform with intelligent scorecards and performance monitorin
     content: `
 # Quantum AI Security Insights;
 Protect your AI systems with next-generation quantum security frameworks.
-
 ## Security Insights;
 - Quantum-resistant encryption prevents 99.99% of threats;
 - Advanced threat detection identifies zero-day attacks;
@@ -45,4 +42,4 @@ export const,
   {/* TODO: Fix JSX expression */}
   },
   {/* TODO: Fix JSX expression */}
-  }];
+  }]

@@ -2,11 +2,9 @@
   name: string;
   tagline: string;
   price: string;
-  period: string;
-  description: string;
+  period: string description: string;
   features: string[];
-  popular: boolean;
-  icon: string;
+  popular: boolean icon: string;
   color: string;
   textColor: string;
   link: string;
@@ -27,9 +25,7 @@
   contactInfo: unknown;
     mobile: string;
     email: string;
-    address: string;
-  }
-;
+    address: string}
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -38,7 +34,7 @@
   reviews: number;
 export const innovative2025AIAutomationServices: InnovativeAIAutomationService[] =
   [
-    // AI-Powered Autonomous Business Process Orchestrator;
+    // AI-Powered Autonomous Business Process Orchestrator
       id: 'ai-autonomous-business-orchestrator',
       name: 'AI Autonomous Business Process Orchestrator',
       tagline: 'Fully autonomous business process management with zero human intervention',
@@ -105,7 +101,6 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
   l: string;
     addres,
   s: string}
-;
   realImplementatio,
   n: boolean;
   implementationDetail,
@@ -135,7 +130,7 @@ export const,
   n:
         'Revolutionary AI platform that autonomously manages, optimizes, and executes complex business processes without human oversight. Uses advanced machine learning to continuously improve operations.'
       feature,
-  s: [;
+  s: [
         'Fully autonomous process execution'
         'Self-learning workflow optimization'
         'Predictive process failure prevention'
@@ -147,15 +142,14 @@ export const,
         'Advanced analytics & reporting'
         'Enterprise-grade security & audit trails'
       ]
-      popular: true;
-      icon: ''
+      popular: true icon: ''
       color: 'from-purple-600 to-indigo-700'
       textColor: 'text-purple-400'
       link: 'https://ziontechgroup.com/ai-autonomous-business-orchestrator',
       marketPosition: 'First-to-market autonomous business process orchestration. Competes with traditional BPM tools but offers complete autonomy and self-optimization.',
       targetAudience:,
         'Enterprise companies, Digital transformation leaders, Process automation specialists, Operations managers, Consulting firms'
-      trialDays: 45;
+      trialDays: 45
       setupTime: '3-6 weeks'
       category: 'AI Automation & Orchestration',
       realService: true;
@@ -213,8 +207,7 @@ export const,
       launchDate: '2025-01-15'
       customers: 75;
       rating: 4.9;
-      reviews: 45;
-    }
+      reviews: 45}
     // AI-Powered Predictive Customer Intelligence Platform;
       id: 'ai-predictive-customer-intelligence',
       name: 'AI Predictive Customer Intelligence Platform',
@@ -272,7 +265,7 @@ export const,
   n:
         'Advanced AI platform that predicts customer behavior, churn risk, and lifetime value with unprecedented accuracy. Uses behavioral analysis, predictive modeling, and real-time data processing.'
       feature,
-  s: [;
+  s: [
         '95% accurate customer behavior prediction'
         'Real-time churn risk assessment'
         'Predictive lifetime value calculation'
@@ -284,8 +277,7 @@ export const,
         'Advanced analytics dashboard'
         'API for custom integrations'
       ]
-      popular: true;
-      icon: ''
+      popular: true icon: ''
       color: 'from-blue-600 to-cyan-700'
       textColor: 'text-blue-400'
       link: 'https://ziontechgroup.com/ai-predictive-customer-intelligence',
@@ -348,8 +340,7 @@ export const,
       launchDate: '2025-02-01'
       customers: 120;
       rating: 4.8;
-      reviews: 78;
-    }
+      reviews: 78}
     // AI-Powered Autonomous Code Generation & Deployment;
       id: 'ai-autonomous-code-generation',
       name: 'AI Autonomous Code Generation & Deployment',
@@ -424,8 +415,7 @@ export const,
         'Performance optimization'
         'Comprehensive documentation generation'
       ]
-      popular: true;
-      icon: ''
+      popular: true icon: ''
       color: 'from-green-600 to-emerald-700'
       textColor: 'text-green-400'
       link: 'https://ziontechgroup.com/ai-autonomous-code-generation',
@@ -488,8 +478,7 @@ export const,
       launchDate: '2025-01-20'
       customers: 95;
       rating: 4.9;
-      reviews: 62;
-    }
+      reviews: 62}
     // AI-Powered Autonomous Financial Trading Platform;
       id: 'ai-autonomous-financial-trading',
       name: 'AI Autonomous Financial Trading Platform',
@@ -545,7 +534,7 @@ export const,
   n:
         'Advanced AI-powered trading platform that autonomously executes trades based on sophisticated algorithms, market analysis, and risk management protocols. Includes real-time monitoring and compliance tools.'
       feature,
-  s: [;
+  s: [
         'Fully autonomous trading execution'
         'Advanced risk management algorithms'
         'Real-time market analysis'
@@ -557,8 +546,7 @@ export const,
         'Real-time alerts & notifications'
         'API for custom integrations'
       ]
-      popular: true;
-      icon: ''
+      popular: true icon: ''
       color: 'from-yellow-600 to-orange-700'
       textColor: 'text-yellow-400'
       link: 'https://ziontechgroup.com/ai-autonomous-financial-trading',
@@ -621,8 +609,7 @@ export const,
       launchDate: '2025-02-15'
       customers: 45;
       rating: 4.9;
-      reviews: 38;
-    }
+      reviews: 38}
     // AI-Powered Autonomous Healthcare Diagnosis Platform;
       id: 'ai-autonomous-healthcare-diagnosis',
       name: 'AI Autonomous Healthcare Diagnosis Platform',
@@ -695,8 +682,7 @@ export const,
         'Comprehensive medical reports'
         'HIPAA-compliant security'
       ]
-      popular: true;
-      icon: ''
+      popular: true icon: ''
       color: 'from-red-600 to-pink-700'
       textColor: 'text-red-400'
       link: 'https://ziontechgroup.com/ai-autonomous-healthcare-diagnosis',
@@ -801,8 +787,7 @@ export const,
   contact_info: unknown;
     mobile: string;
     email: string;
-    address: string;
-  }
+    address: string}
   }
   realImplementation: boolean;
   implementationDetails: string;
@@ -812,7 +797,7 @@ export const,
   reviews: number;
 export const innovative2025AIAutomationServices: InnovativeAIAutomationService[] =
   [
-    // AI-Powered Autonomous Business Process Orchestrator;
+    // AI-Powered Autonomous Business Process Orchestrator
       id: 'ai-autonomous-business-orchestrator',
       name: 'AI Autonomous Business Process Orchestrator',
       tagline: 'Fully autonomous business process management with zero human intervention',
@@ -976,7 +961,7 @@ export const,
   n:
         'Revolutionary AI platform that autonomously manages, optimizes, and executes complex business processes without human oversight. Uses advanced machine learning to continuously improve operations.'
       feature,
-  s: [;
+  s: [
         'Fully autonomous process execution'
         'Self-learning workflow optimization'
         'Predictive process failure prevention'
@@ -988,15 +973,14 @@ export const,
         'Advanced analytics & reporting'
         'Enterprise-grade security & audit trails'
       ]
-      popular: true;
-      icon: ''
+      popular: true icon: ''
       color: 'from-purple-600 to-indigo-700'
       textColor: 'text-purple-400'
       link: 'https://ziontechgroup.com/ai-autonomous-business-orchestrator',
       marketPosition: 'First-to-market autonomous business process orchestration. Competes with traditional BPM tools but offers complete autonomy and self-optimization.',
       targetAudience:,
         'Enterprise companies, Digital transformation leaders, Process automation specialists, Operations managers, Consulting firms'
-      trialDays: 45;
+      trialDays: 45
       setupTime: '3-6 weeks'
       category: 'AI Automation & Orchestration',
       realService: true;
@@ -1054,8 +1038,7 @@ export const,
       launchDate: '2025-01-15'
       customers: 75;
       rating: 4.9;
-      reviews: 45;
-    }
+      reviews: 45}
     // AI-Powered Predictive Customer Intelligence Platform;
       id: 'ai-predictive-customer-intelligence',
       name: 'AI Predictive Customer Intelligence Platform',
@@ -1113,7 +1096,7 @@ export const,
   n:
         'Advanced AI platform that predicts customer behavior, churn risk, and lifetime value with unprecedented accuracy. Uses behavioral analysis, predictive modeling, and real-time data processing.'
       feature,
-  s: [;
+  s: [
         '95% accurate customer behavior prediction'
         'Real-time churn risk assessment'
         'Predictive lifetime value calculation'
@@ -1125,8 +1108,7 @@ export const,
         'Advanced analytics dashboard'
         'API for custom integrations'
       ]
-      popular: true;
-      icon: ''
+      popular: true icon: ''
       color: 'from-blue-600 to-cyan-700'
       textColor: 'text-blue-400'
       link: 'https://ziontechgroup.com/ai-predictive-customer-intelligence',
@@ -1189,8 +1171,7 @@ export const,
       launchDate: '2025-02-01'
       customers: 120;
       rating: 4.8;
-      reviews: 78;
-    }
+      reviews: 78}
     // AI-Powered Autonomous Code Generation & Deployment;
       id: 'ai-autonomous-code-generation',
       name: 'AI Autonomous Code Generation & Deployment',
@@ -1265,8 +1246,7 @@ export const,
         'Performance optimization'
         'Comprehensive documentation generation'
       ]
-      popular: true;
-      icon: ''
+      popular: true icon: ''
       color: 'from-green-600 to-emerald-700'
       textColor: 'text-green-400'
       link: 'https://ziontechgroup.com/ai-autonomous-code-generation',
@@ -1329,8 +1309,7 @@ export const,
       launchDate: '2025-01-20'
       customers: 95;
       rating: 4.9;
-      reviews: 62;
-    }
+      reviews: 62}
     // AI-Powered Autonomous Financial Trading Platform;
       id: 'ai-autonomous-financial-trading',
       name: 'AI Autonomous Financial Trading Platform',
@@ -1386,7 +1365,7 @@ export const,
   n:
         'Advanced AI-powered trading platform that autonomously executes trades based on sophisticated algorithms, market analysis, and risk management protocols. Includes real-time monitoring and compliance tools.'
       feature,
-  s: [;
+  s: [
         'Fully autonomous trading execution'
         'Advanced risk management algorithms'
         'Real-time market analysis'
@@ -1398,8 +1377,7 @@ export const,
         'Real-time alerts & notifications'
         'API for custom integrations'
       ]
-      popular: true;
-      icon: ''
+      popular: true icon: ''
       color: 'from-yellow-600 to-orange-700'
       textColor: 'text-yellow-400'
       link: 'https://ziontechgroup.com/ai-autonomous-financial-trading',
@@ -1462,8 +1440,7 @@ export const,
       launchDate: '2025-02-15'
       customers: 45;
       rating: 4.9;
-      reviews: 38;
-    }
+      reviews: 38}
     // AI-Powered Autonomous Healthcare Diagnosis Platform;
       id: 'ai-autonomous-healthcare-diagnosis',
       name: 'AI Autonomous Healthcare Diagnosis Platform',
@@ -1536,8 +1513,7 @@ export const,
         'Comprehensive medical reports'
         'HIPAA-compliant security'
       ]
-      popular: true;
-      icon: ''
+      popular: true icon: ''
       color: 'from-red-600 to-pink-700'
       textColor: 'text-red-400'
       link: 'https://ziontechgroup.com/ai-autonomous-healthcare-diagnosis',
@@ -1602,8 +1578,7 @@ export const,
       launchDate: '2025-03-01'
       customers: 35;
       rating: 4.9;
-      reviews: 28;
-    }
+      reviews: 28}
         'Full medical AI platform with advanced diagnostic models, patient monitoring, treatment recommendations, and HIPAA compliance.',
       launchDate: '2025-03-01'
       customers: 35;
@@ -1653,8 +1628,7 @@ export const,
       ratin,
   g: 4.9,
       review,
-  s: 28};
-  ];    feature,
+  s: 28}];    feature,
   s: [,
       '98% accurate medical diagnosisAutonomous patient monitoringTreatment recommendation engineMedical image analysis (X-ray, MRI) CT)Symptom analysis & triageDrug interaction checkingPatient history analysisReal-time health alerts'
       'Comprehensive medical reportsHIPAA-compliant security'
@@ -1735,12 +1709,11 @@ export const,
     ratin,
   g: 4.9;
     review,
-  s: 28};
-  }
+  s: 28}}
 ];
 export interface InnovativeAIAutomationService {/* TODO: Fix JSX expression */}
   l: string} addres,
-  s: string} } ; realImplementatio,
+  s: string} }  realImplementatio,
   n: boolean; implementationDetail,
   s: string; launchDat,
   e: string; customer,
@@ -1939,7 +1912,7 @@ export interface InnovativeAIAutomationService {/* TODO: Fix JSX expression */}
   s://ziontechgroup.com' } realImplementatio,
   n: true,
   implementationDetails: ], feature,
-  s: [' '98% accurate medical diagnosisAutonomous patient monitoringTreatment recommendation engineMedical image analysis (X-ray, MRI) CT)Symptom analysis & triageDrug interaction checkingPatient history analysisReal-time health alerts'' 'Comprehensive medical reportsHIPAA-compliant security' ];' popula,
+  s: [' '98% accurate medical diagnosisAutonomous patient monitoringTreatment recommendation engineMedical image analysis (X-ray, MRI) CT)Symptom analysis & triageDrug interaction checkingPatient history analysisReal-time health alerts'' 'Comprehensive medical reportsHIPAA-compliant security' ]' popula,
   r: true, ico,
   n: '🏥'' colo,
   r: 'from-red-600 to-pink-700', textColo,
@@ -2197,7 +2170,7 @@ export interface InnovativeAIAutomationService {/* TODO: Fix JSX expression */}
   e: '2025-03-01', customer,
   s: 35, ratin,
   g: 4.9, review,
-  s: 28}; ]; feature,
+  s: 28}] feature,
   s: [' '98% accurate medical diagnosisAutonomous patient monitoringTreatment recommendation engineMedical image analysis (X-ray, MRI) CT)Symptom analysis & triageDrug interaction checkingPatient history analysisReal-time health alerts'' 'Comprehensive medical reportsHIPAA-compliant security' ];' popula,
   r: true, ico,
   n: '🏥'' colo,
@@ -2230,4 +2203,4 @@ export interface InnovativeAIAutomationService {/* TODO: Fix JSX expression */}
   e: '2025-03-01', customer,
   s: 35,
   rating: 4.9,
-  reviews: 28 }; } ]; export interface InnovativeAIAutomationService {/* TODO: Fix JSX expression */}
+  reviews: 28 }} ]; export interface InnovativeAIAutomationService {/* TODO: Fix JSX expression */}

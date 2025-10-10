@@ -4,7 +4,6 @@ import { Helmet } from 'react-helmet-async';
 import { Cloud, Shield, Zap, BarChart3, ArrowRight, Star, CheckSquare, Smartphone, Users, Target, Globe, Settings } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 const AICloudInfrastructurePage: React.FC = () => {
   const features = [
     {
@@ -32,7 +31,6 @@ const AICloudInfrastructurePage: React.FC = () => {
       benefits: ['Cost analysis', 'Resource optimization', 'Budget alerts', 'Usage forecasting']
     }
   ];
-
   const cloudProviders = [
     {
       name: 'Amazon Web Services',
@@ -59,7 +57,6 @@ const AICloudInfrastructurePage: React.FC = () => {
       pricing: 'Starting at $800/month'
     }
   ];
-
   const pricingPlans = [
     {
       name: 'Starter',
@@ -73,8 +70,7 @@ const AICloudInfrastructurePage: React.FC = () => {
         'Standard security',
         '99.9% uptime SLA'
       ],
-      popular: false
-    },
+      popular: false},
     {
       name: 'Professional',
       price: '$2,999',
@@ -88,8 +84,7 @@ const AICloudInfrastructurePage: React.FC = () => {
         '99.99% uptime SLA',
         'API access'
       ],
-      popular: true
-    },
+      popular: true},
     {
       name: 'Enterprise',
       price: '$7,999',
@@ -103,34 +98,28 @@ const AICloudInfrastructurePage: React.FC = () => {
         '99.999% uptime SLA',
         'White-label solution'
       ],
-      popular: false
-    }
+      popular: false}
   ];
-
   const testimonials = [
     {
       name: 'Jennifer Martinez',
       role: 'CTO',
       company: 'TechStartup Inc',
       content: 'Our cloud costs reduced by 40% while performance improved by 60%. The AI optimization is incredible.',
-      rating: 5
-    },
+      rating: 5},
     {
       name: 'David Kim',
       role: 'IT Director',
       company: 'Global Enterprises',
       content: 'We achieved 99.99% uptime and reduced security incidents by 90%. Outstanding service.',
-      rating: 5
-    },
+      rating: 5},
     {
       name: 'Sarah Wilson',
       role: 'Cloud Architect',
       company: 'Digital Solutions',
       content: 'The auto-scaling and cost optimization features saved us $50K monthly. Highly recommended.',
-      rating: 5
-    }
+      rating: 5}
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -138,9 +127,7 @@ const AICloudInfrastructurePage: React.FC = () => {
         <meta name="description" content="Intelligent cloud infrastructure with AI-powered auto-scaling, security, and optimization. Reduce costs by 40% and improve performance by 60%." />
         <meta name="keywords" content="AI cloud infrastructure, cloud optimization, auto-scaling, cloud security, cloud management" />
       </Helmet>
-      
       <Navigation />
-      
       <main className="pt-20">
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -156,7 +143,7 @@ const AICloudInfrastructurePage: React.FC = () => {
               Intelligent cloud infrastructure with AI-powered auto-scaling, security, and optimization. 
               Reduce costs by 40% and improve performance by 60% with our advanced cloud management platform.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center mb-12">
               <button className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 inline" />
@@ -170,7 +157,6 @@ const AICloudInfrastructurePage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -184,7 +170,7 @@ const AICloudInfrastructurePage: React.FC = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group">
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
@@ -203,7 +189,6 @@ const AICloudInfrastructurePage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Cloud Providers Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -217,7 +202,7 @@ const AICloudInfrastructurePage: React.FC = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {cloudProviders.map((provider, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group">
                   <div className="text-center mb-6">
                     <div className="text-4xl mb-4">{provider.icon}</div>
                     <h3 className="text-xl font-bold text-white mb-2">{provider.name}</h3>
@@ -236,7 +221,6 @@ const AICloudInfrastructurePage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -274,7 +258,7 @@ const AICloudInfrastructurePage: React.FC = () => {
                   </ul>
                   <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular 
-                      ? 'bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white transform hover:scale-105' 
+                      ? 'bg-gradient-to-r from-blue-500 to-purple-500 hover: from-blue-600 hover:to-purple-600 text-white transform hover:scale-105' 
                       : 'border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white'
                   }`}>
                     {plan.name === 'Enterprise' ? 'Contact Sales' : 'Start Free Trial'}
@@ -284,7 +268,6 @@ const AICloudInfrastructurePage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Testimonials Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -314,9 +297,8 @@ const AICloudInfrastructurePage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm: px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 backdrop-blur-sm rounded-3xl p-12 border border-blue-500/20">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -341,10 +323,7 @@ const AICloudInfrastructurePage: React.FC = () => {
           </div>
         </section>
       </main>
-      
       <Footer />
     </div>
-  );
-};
-
-export default AICloudInfrastructurePage;
+  )};
+export default AICloudInfrastructurePage

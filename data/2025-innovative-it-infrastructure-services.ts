@@ -1,5 +1,4 @@
-
-export const innovativeITInfrastructureServices2025 = [{pricing: starter: unknown;
+export const innovativeITInfrastructureServices2025 = [{pricing: starter: unknown
         price: 299;
         period: 'month',
         features: [,
@@ -27,7 +26,7 @@ export const innovativeITInfrastructureServices2025 = [{/* TODO: Fix JSX express
           'Advanced AI detection',
           'Priority support',
           'Full monitoring']},
-      enterprise: unknown;
+      enterprise: unknown
         price: 1999;
         period: 'month',
         features: [,
@@ -62,7 +61,7 @@ export const innovativeITInfrastructureServices2025 = [
       'Zero-latency communication protocols'
       'Scalable edge infrastructure'
       'Energy-efficient quantum processing'
-    pricing: starter: unknown;
+    pricing: starter: unknown
     pricin,
   g: starte,
   r: unknown,
@@ -126,7 +125,7 @@ export const innovativeITInfrastructureServices2025 = [
   n:
       'Intelligent DevOps platform that autonomously manages software development, deployment, and operations using AI, machine learning, and advanced automation.'
     feature,
-  s: [;
+  s: [
       'Autonomous code review and quality assurance'
       'AI-powered testing and bug detection'
       'Intelligent deployment orchestration'
@@ -244,7 +243,7 @@ export const innovativeITInfrastructureServices2025 = [
     descriptio,
   n: 'Revolutionary cloud computing platform that integrates quantum computing capabilities with traditional cloud infrastructure for unprecedented performance and scalability.'
     feature,
-  s: [;
+  s: [
       'Quantum-enhanced cloud processing'
       'Hybrid quantum-classical computing'
       'Intelligent resource allocation'
@@ -369,7 +368,7 @@ export const innovativeITInfrastructureServices2025 = [
   n:
       'Intelligent data center management platform that uses AI and machine learning to autonomously optimize operations, reduce costs, and improve efficiency.'
     feature,
-  s: [;
+  s: [
       'Autonomous data center operations'
       'AI-powered energy optimization'
       'Predictive maintenance and failure prevention'
@@ -457,7 +456,7 @@ export const innovativeITInfrastructureServices2025 = [
     competitiveAdvantag,
   e: 'AI-powered autonomous operations, comprehensive energy optimization, and predictive maintenance capabilities'
     useCase,
-  s: [;
+  s: [
       'Data center operations automation'
       'Energy efficiency optimization'
       'Predictive maintenance'
@@ -465,7 +464,7 @@ export const innovativeITInfrastructureServices2025 = [
       'Cost reduction and management'
     ]
     integration,
-  s: [;
+  s: [
       'Data center infrastructure'
       'Monitoring systems'
       'Energy management'
@@ -480,15 +479,14 @@ export const innovativeITInfrastructureServices2025 = [
       'ISO 27001',
       'Uptime Institute',
       'Energy Star',
-      'Industry-specific regulations'];
-  }];
+      'Industry-specific regulations']}];
     i,
   d: 'quantum-edge-computing-orchestrator', nam,
   e: 'Quantum Edge Computing Orchestrator',
     descriptio,
   n: 'Revolutionary edge computing platform that leverages quantum computing principles to provide ultra-fast, secure, and intelligent edge processing for IoT, autonomous systems, and real-time applications.',
     feature,
-  s: [;
+  s: [
       'Quantum-enhanced edge processing with 1000x speed improvementIntelligent workload distribution and optimizationReal-time data processing and analyticsAdvanced security with quantum encryptionAutonomous edge node managementMulti-cloud edge orchestrationAI-powered predictive maintenanceZero-latency communication protocols'
       'Scalable edge infrastructureEnergy-efficient quantum processing'
     ];
@@ -556,7 +554,7 @@ export const innovativeITInfrastructureServices2025 = [
     competitiveAdvantag,
   e: 'Quantum computing integration for unprecedented processing speed, intelligent edge orchestration, and industry-leading security',
     useCase,
-  s: [;
+  s: [
       'Autonomous vehicle processingSmart city infrastructureIndustrial IoT automationReal-time gaming and entertainmentEmergency response systems'
     ],
     integration,
@@ -569,7 +567,7 @@ export const innovativeITInfrastructureServices2025 = [
     descriptio,
   n: 'Next-generation cybersecurity platform that implements zero-trust architecture with quantum-resistant encryption, AI-powered threat detection, and autonomous security response.',
     feature,
-  s: [;
+  s: [
       'Quantum-resistant encryption algorithmsAI-powered threat detection with 99.9% accuracyZero-trust network architectureAutonomous security response and remediationReal-time threat intelligenceAdvanced behavioral analyticsMulti-factor quantum authenticationSecure quantum key distribution'
       'Compliance automation and reporting24/7 autonomous security monitoring'
     ];
@@ -637,7 +635,7 @@ export const innovativeITInfrastructureServices2025 = [
     competitiveAdvantag,
   e: 'Quantum-resistant security, AI-powered threat detection, and comprehensive zero-trust architecture implementation',
     useCase,
-  s: [;
+  s: [
       'Enterprise network securityGovernment infrastructure protectionFinancial system securityHealthcare data protectionCritical infrastructure security'
     ],
     integration,
@@ -650,7 +648,7 @@ export const innovativeITInfrastructureServices2025 = [
     descriptio,
   n: 'Intelligent DevOps platform that autonomously manages software development, deployment, and operations using AI, machine learning, and advanced automation.',
     feature,
-  s: [;
+  s: [
       'Autonomous code review and quality assuranceAI-powered testing and bug detectionIntelligent deployment orchestrationReal-time performance monitoring and optimizationAutomated incident response and resolutionPredictive maintenance and scalingMulti-environment managementAdvanced CI/CD pipeline optimization'
       'Security vulnerability scanningCompliance automation and reporting'
     ];
@@ -718,7 +716,7 @@ export const innovativeITInfrastructureServices2025 = [
     competitiveAdvantag,
   e: 'Autonomous DevOps operations, AI-powered automation, and comprehensive development lifecycle management',
     useCase,
-  s: [;
+  s: [
       'Software development automationContinuous deployment optimizationPerformance monitoring and optimizationIncident response automationDevelopment workflow optimization'
     ],
     integration,
@@ -727,7 +725,7 @@ export const innovativeITInfrastructureServices2025 = [
   e: ['SOC2ISO 27001GDPRIndustry-specific regulations']};
     id: 'quantum-cloud-infrastructure-platform', name: 'Quantum Cloud Infrastructure Platform'
     description: 'Revolutionary cloud computing platform that integrates quantum computing capabilities with traditional cloud infrastructure for unprecedented performance and scalability.'
-    features: [;
+    features: [
       'Quantum-enhanced cloud processingHybrid quantum-classical computingIntelligent resource allocationQuantum-secure data transmissionAdvanced load balancing and scalingMulti-cloud quantum orchestrationAI-powered infrastructure optimizationReal-time performance analytics'
       'Quantum-resistant encryptionAutonomous infrastructure management'
     ];
@@ -755,7 +753,7 @@ export const innovativeITInfrastructureServices2025 = [
     descriptio,
   n: 'Revolutionary cloud computing platform that integrates quantum computing capabilities with traditional cloud infrastructure for unprecedented performance and scalability.',
     feature,
-  s: [;
+  s: [
       'Quantum-enhanced cloud processingHybrid quantum-classical computingIntelligent resource allocationQuantum-secure data transmissionAdvanced load balancing and scalingMulti-cloud quantum orchestrationAI-powered infrastructure optimizationReal-time performance analytics'
       'Quantum-resistant encryptionAutonomous infrastructure management'
     ];
@@ -805,7 +803,7 @@ export const innovativeITInfrastructureServices2025 = [
     competitiveAdvantag,
   e: 'Quantum computing integration, hybrid quantum-classical architecture, and industry-leading performance',
     useCase,
-  s: [;
+  s: [
       'High-performance computingScientific research and simulationFinancial modeling and analysisAI and machine learning trainingBig data processing and analytics'
     ],
     integration,
@@ -818,7 +816,7 @@ export const innovativeITInfrastructureServices2025 = [
     descriptio,
   n: 'Intelligent data center management platform that uses AI and machine learning to autonomously optimize operations, reduce costs, and improve efficiency.',
     feature,
-  s: [;
+  s: [
       'Autonomous data center operationsAI-powered energy optimizationPredictive maintenance and failure preventionIntelligent workload distributionReal-time performance monitoringAutomated capacity planningAdvanced cooling and power managementSecurity automation and threat response'
       'Compliance monitoring and reportingCost optimization and resource management'
     ];
@@ -1035,7 +1033,7 @@ export const innovativeITInfrastructureServices2025 = [ pricin,
   e: ' 'AI-powered autonomous operations, comprehensive energy optimization, and predictive maintenance capabilities' useCase,
   s: [' 'Data center operations automation'' 'Energy efficiency optimization'' 'Predictive maintenance'' 'Capacity planning and optimization'' 'Cost reduction and management' ] integration,
   s: [' 'Data center infrastructure'' 'Monitoring systems'' 'Energy management'' 'Security platforms'' 'Compliance tools' ] complianc,
-  e: [ ' 'SOC2',' 'ISO 27001',' 'Uptime Institute',' 'Energy Star',' 'Industry-specific regulations']; }];' i,
+  e: [ ' 'SOC2',' 'ISO 27001',' 'Uptime Institute',' 'Energy Star',' 'Industry-specific regulations']}]' i,
   d: 'quantum-edge-computing-orchestrator', nam,
   e: 'Quantum Edge Computing Orchestrator',' descriptio,
   n: 'Revolutionary edge computing platform that leverages quantum computing principles to provide ultra-fast, secure, and intelligent edge processing for IoT, autonomous systems, and real-time applications.', feature,

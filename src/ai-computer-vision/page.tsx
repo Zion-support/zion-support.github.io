@@ -7,7 +7,7 @@ import { Target, Shield, Eye,  Camera,  Target,  Shield,  Settings } from 'lucid
 const AIComputerVisionPage: React.FC = () => {
   const features = [];
   return (
-    {// TODO: Add content;}
+    {// TODO: Add content}
 };
   ico,
   n: Eye,
@@ -16,8 +16,7 @@ const AIComputerVisionPage: React.FC = () => {
       descriptio,
   n: 'Advanced object detection and recognition with high accuracy',
       benefit,
-  s: ['Real-time detection', 'Multi-class recognition', 'Custom model training'];
-    },
+  s: ['Real-time detection', 'Multi-class recognition', 'Custom model training']},
       ico,
   n: Camera,
       titl,
@@ -154,8 +153,7 @@ Transform your business with cutting-edge computer vision technology. From objec
                 {plan.popular && ()}"
           <div className="absolute -top-3 left-1/2 transform -translate-x-1/2"></div>"
                     <div className="bg-cyan-400 text-slate-900 px-3 py-1 rounded-full text-xs font-semibold"></div>
-Most Popular;
-                )}"
+Most Popular)}"
                 <div className="text-center mb-6"></div>"
                   <h3 className="text-2xl font-bold text-white mb-2 neon-text">{plan.name}</h3>"
                   <div className="text-3xl font-bold text-cyan-400 mb-2">{plan.price}</div>"
@@ -167,8 +165,7 @@ Most Popular;
                       {feature}`
                   className={`block w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}
   // TOD,
-  O: Add content;
-}
+  O: Add content}
 //                     plan.popular;
 //                       ? 'cyber-button'
                       : 'border-2 border-cyan-400 text-cyan-400,
@@ -191,7 +188,6 @@ Ready to See the Future?"
       </main>
       <Footer /></Footer>
     </div>
-  );
-};
-export default PagePage;
+  )};
+export default PagePage
   </p>

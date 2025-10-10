@@ -6,7 +6,7 @@ import { Shield, Target, Zap, Settings, CheckCircle, Star,  Shield,  Target,  Se
 const AISecurityMonitorPage: React.FC = () => {
   const features = [];
   return (
-    {// TODO: Add content;}
+    {// TODO: Add content}
 };
   ico,
   n: Shield,
@@ -15,8 +15,7 @@ const AISecurityMonitorPage: React.FC = () => {
       descriptio,
   n: 'AI-powered threat detection and monitoring',
       benefit,
-  s: ['Real-time monitoring', 'Threat analysis', 'Incident response'];
-    },
+  s: ['Real-time monitoring', 'Threat analysis', 'Incident response']},
       ico,
   n: Target,
       titl,
@@ -84,6 +83,5 @@ const AISecurityMonitorPage: React.FC = () => {
       </main>
       <Footer /></Footer>
     </div>
-  );
-};
-export default AiSecurityMonitorPage;
+  )};
+export default AiSecurityMonitorPage

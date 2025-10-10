@@ -1,5 +1,5 @@
 export const revolutionary2048FuturisticServices = [
-  // Quantum Consciousness Transfer Platform 2048;
+  // Quantum Consciousness Transfer Platform 2048
     id: 'quantum-consciousness-transfer-2048',
     name: 'Quantum Consciousness Transfer Platform 2048',
     tagline: 'Revolutionary quantum consciousness transfer and digital immortality platform',
@@ -968,4 +968,4 @@ export const revolutionary2048FuturisticServices = [ // Quantum Consciousness Tr
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
   s://ziontechgroup.com',' slu,
-  g: '/quantum-information-manipulation-2048' } ];'
+  g: '/quantum-information-manipulation-2048' } ]'

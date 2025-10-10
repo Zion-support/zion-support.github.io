@@ -9,7 +9,7 @@ export default function AIFintechPage() {
       <div className="container mx-auto px-4 py-20">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
-            AI Fintech;
+            AI Fintech
   </
           <p className="text-xl text-gray-300 mb-8">
             Revolutionary AI-powered financial services including trading, fraud detection, and risk management.
@@ -29,7 +29,6 @@ export default function AIFintechPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}
   </a>
   </h1>

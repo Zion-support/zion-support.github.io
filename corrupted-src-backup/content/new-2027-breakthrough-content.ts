@@ -13,7 +13,7 @@ export const breakthroughContent2027 = [
     date: '2027-01-15',
     category: 'AI Breakthrough',
     tags: ['consciousness', 'AI 2027', 'quantum-neural', 'enterprise', 'breakthrough'],
-    featured: true;
+    featured: true
     readTime: '12 min read'},
   {
     id: 'ai-2027-quantum-consciousness-singularity',
@@ -55,7 +55,7 @@ export const caseStudies2027 = [
     date: '2027-01-15',
     category: 'Case Study',
     tags: ['consciousness', 'AI 2027', 'ROI', 'transformation', 'success'],
-    featured: true;
+    featured: true
     readTime: '18 min read'},
   {
     id: 'ai-2027-quantum-consciousness-singularity-1-trillion-success'
@@ -80,4 +80,4 @@ export const caseStudies2027 = [
   {/* TODO: Fix JSX expression */}
   },
   {/* TODO: Fix JSX expression */}
-  }];
+  }]

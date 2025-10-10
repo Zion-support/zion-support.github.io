@@ -15,10 +15,10 @@ const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({,
     trafficSources: []
     deviceBreakdown: []
     performanceMetrics: {
-      loadTime: 0;)
-      firstContentfulPaint: 0;)
-      largestContentfulPaint: 0;)
-      cumulativeLayoutShift: 0;)
+      loadTime: 0)
+      firstContentfulPaint: 0)
+      largestContentfulPaint: 0)
+      cumulativeLayoutShift: 0)
     })
     conversions: 0;
     performance: 0),
@@ -96,9 +96,8 @@ const,
         </div>
       </div>
     </div>
-  );
-};
-export default AdvancedAnalytics;
+  )};
+export default AdvancedAnalytics
 "
   </AdvancedAnalyticsProps>
   </AdvancedAnalyticsProps>

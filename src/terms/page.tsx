@@ -2,7 +2,7 @@
 import React from 'react';
 import { FileText, Scale, Shield, AlertTriangle, CheckCircle, ArrowRight, Globe, User, Mail, Phone, Calendar, Lock, Database, Server, Key } from 'lucide-react';
 export default function TermsPage() {
-  const lastUpdated = 'January 1, 2024';
+  const lastUpdated = 'January 1, 2024'
   const sections = [
     {
       title: 'Acceptance of Terms',
@@ -303,7 +303,6 @@ export default function TermsPage() {
         </div>
       </section>
     </div>
-  );
-}
+  )}
   </a>
   </h1>

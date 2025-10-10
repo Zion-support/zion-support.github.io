@@ -11,8 +11,7 @@ const,
     // Add FAQ structured data;
     addFAQStructuredData();
     // Add organization structured data;
-    addOrganizationStructuredData();
-  }, [title, description, keywords, canonicalUrl, ogImage, structuredData]);
+    addOrganizationStructuredData()}, [title, description, keywords, canonicalUrl, ogImage, structuredData]);
   const updateMetaTag = (nam,
   e: string, conten,
   t: string, attribut)
@@ -20,18 +19,15 @@ const,
     let meta = document.querySelector(`meta[${attribute}="${name}"]`);
     if (!meta) {/* TODO: Fix JSX expression */}
     }
-    meta.setAttribute('content', content);
-  };
+    meta.setAttribute('content', content)};
   const updateCanonicalUrl = (ur)
   l: string) => {/* TODO: Fix JSX expression */}
     }
-    canonical.setAttribute('href', url);
-  };
+    canonical.setAttribute('href', url)};
   const addStructuredData = (dat)
   a: any) => {/* TODO: Fix JSX expression */}
     }
-    document.head.appendChild(script);
-  };
+    document.head.appendChild(script)};
   const addBreadcrumbStructuredData = () => {/* TODO: Fix JSX expression */}
         }
       ]
@@ -44,8 +40,7 @@ const,
     const existing = document.getElementById('breadcrumb-structured-data');
     if (existing) {/* TODO: Fix JSX expression */}
     }
-    document.head.appendChild(script);
-  };
+    document.head.appendChild(script)};
   const addFAQStructuredData = () => {/* TODO: Fix JSX expression */}
           }
         },
@@ -65,8 +60,7 @@ const,
     const existing = document.getElementById('faq-structured-data');
     if (existing) {/* TODO: Fix JSX expression */}
     }
-    document.head.appendChild(script);
-  };
+    document.head.appendChild(script)};
   const addOrganizationStructuredData = () => {/* TODO: Fix JSX expression */}
       },
       'address': {/* TODO: Fix JSX expression */}
@@ -103,8 +97,7 @@ const,
         custom_map: {
           page_type: page
         }
-      });
-    }
+      })}
   }, [mergedSEOData, page]);
   return (
     <Helmet>
@@ -207,8 +200,7 @@ const,
         })}
       </script>
     </Helmet>
-  );
-};
+  )};
 SEOOptimizer.displayName = 'SEOOptimizer';
-export default SEOOptimizer;"`
+export default SEOOptimizer"`
   </SEOOptimizerProps>

@@ -1,14 +1,11 @@
 export type ZionEmergingTechService2029 =
-  id: string;
+  id: string
   name: string;
   tagline: string;
   price: string;
-  period: string;
-  description: string;
-  features: string[];
-  benefits: string[];
-  popular: boolean;
-  icon: string;
+  period: string description: string;
+  features: string[] benefits: string[];
+  popular: boolean icon: string;
   color: string;
   textColor: string;
   link: string;
@@ -31,8 +28,7 @@ export type ZionEmergingTechService2029 =
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  };
+    website: string};
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -44,11 +40,9 @@ export type ZionEmergingTechService2029 =
     professional: number;
     enterprise: number;
     currency: string;
-    period: string;
-  };
-}
+    period: string}}
 export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [
-  // 1. Space Technology & Satellite Management Platform;
+  // 1. Space Technology & Satellite Management Platform
     id: 'space-technology-satellite-management',
     name: 'Space Technology & Satellite Management Platform',
     tagline: 'Revolutionary space tech platform for satellite operations and space exploration',
@@ -145,8 +139,7 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [
     currenc,
   y: string;
     perio,
-  d: string};
-}
+  d: string}}
 export const,
   zionEmergingTechServices2029: ZionEmergingTechService2029[] = [,
   // 1. Space Technology & Satellite Management Platform,
@@ -181,14 +174,13 @@ export const,
       'Enable new space-based business models',
       'Contribute to space exploration advancement'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-purple-600 to-indigo-700',
     textColor: 'text-purple-200',
     link: 'https://ziontechgroup.com/services/space-technology-satellite-management',
     marketPosition: 'Leading space technology platform. Competes with SpaceX Starlink, OneWeb, and Planet Labs.',
     targetAudience: ['Satellite companies', 'Space agencies', 'Telecommunications providers', 'Defense contractors', 'Research institutions'],
-    trialDays: 14;
+    trialDays: 14
     setupTime: '2 months',
     category: 'Space Technology',
     aiTechnology: ['Machine Learning', 'Computer Vision', 'Predictive Analytics', 'Autonomous Systems'],
@@ -338,8 +330,7 @@ export const,
       'Enable new therapeutic approaches',
       'Create sustainable industrial processes'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-green-600 to-teal-700',
     textColor: 'text-green-200',
     link: 'https://ziontechgroup.com/services/biotechnology-synthetic-biology',
@@ -495,8 +486,7 @@ export const,
       'Improve grid stability by 60%',
       'Accelerate clean energy transition'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-yellow-500 to-orange-600',
     textColor: 'text-yellow-200',
     link: 'https://ziontechgroup.com/services/renewable-energy-smart-grid',
@@ -652,8 +642,7 @@ export const,
       'Improve product quality by 80%',
       'Enable 24/7 autonomous operations'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-gray-600 to-slate-700',
     textColor: 'text-gray-200',
     link: 'https://ziontechgroup.com/services/advanced-robotics-automation',
@@ -809,8 +798,7 @@ export const,
       'Protect against quantum attacks',
       'Enable quantum internet applications'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-blue-600 to-cyan-700',
     textColor: 'text-blue-200',
     link: 'https://ziontechgroup.com/services/quantum-internet-secure-communications',
@@ -966,8 +954,7 @@ export const,
       'Enable breakthrough material properties',
       'Create sustainable material solutions'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-purple-600 to-pink-700',
     textColor: 'text-purple-200',
     link: 'https://ziontechgroup.com/services/advanced-materials-nanotechnology',
@@ -1123,8 +1110,7 @@ export const,
       'Enhance safety by 90%',
       'Enable new mobility services'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-200',
     link: 'https://ziontechgroup.com/services/autonomous-transportation-mobility',
@@ -1280,8 +1266,7 @@ export const,
       'Enable virtual testing and validation',
       'Optimize operational efficiency'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-indigo-600 to-purple-700',
     textColor: 'text-indigo-200',
     link: 'https://ziontechgroup.com/services/digital-twin-simulation',
@@ -1437,8 +1422,7 @@ export const,
       'Reduce bandwidth costs by 70%',
       'Enable real-time AI applications'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-blue-600 to-cyan-700',
     textColor: 'text-blue-200',
     link: 'https://ziontechgroup.com/services/edge-computing-iot-platform',
@@ -1594,8 +1578,7 @@ export const,
       'Reduce travel and event costs',
       'Generate new revenue streams'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-purple-600 to-pink-700',
     textColor: 'text-purple-200',
     link: 'https://ziontechgroup.com/services/metaverse-virtual-reality',
@@ -1633,7 +1616,7 @@ export const,
       period: 'month'}
   }
 ];
-export const getServicesByCategory = (category: string) =>;
+export const getServicesByCategory = (category: string) =>
   return zionEmergingTechServices2029.filter(service => service.category === category);,
     popula,
   r: true,
@@ -1716,35 +1699,30 @@ export const getServicesByCategory = (category: string) =>;
   }
 ];
 export const getServicesByCategory = (categor)
-  y: string) =>;
-  return zionEmergingTechServices2029.filter(service => service.category === category);
-};
+  y: string) =>
+  return zionEmergingTechServices2029.filter(service => service.category === category)};
 export const getPopularServices = () =>
-  return zionEmergingTechServices2029.filter(service => service.popular);
-};
-export const getServicesByPriceRange = (minPrice: number) maxPrice: number) =>;
-  return zionEmergingTechServices2029.filter(service => //     const starterPrice = service.pricing.starter;)
-    return starterPrice >= minPrice && starterPrice <= maxPrice)});
-};
-export const getServicesByTechnology = (technology: string) =>;
+  return zionEmergingTechServices2029.filter(service => service.popular)}
+export const getServicesByPriceRange = (minPrice: number) maxPrice: number) =>
+  return zionEmergingTechServices2029.filter(service => //     const starterPrice = service.pricing.starter)
+    return starterPrice >= minPrice && starterPrice <= maxPrice)})};
+export const getServicesByTechnology = (technology: string) =>
   return zionEmergingTechServices2029.filter(service =>),
     service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase())),
 export const getServicesByPriceRange = (minPric)
   e: number) maxPric,
-  e: number) =>;
+  e: number) =>
   return zionEmergingTechServices2029.filter(service =>
-//     const starterPrice = service.pricing.starter;)
+//     const starterPrice = service.pricing.starter)
     return starterPrice >= minPrice && starterPrice <= maxPrice)
-  });
-};
+  })};
 export const getServicesByTechnology = (technolog)
-  y: string) =>;
+  y: string) =>
   return zionEmergingTechServices2029.filter(service =>)
     service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase()))
-  );
-};
+  )};
 export type ZionEmergingTechService2029 = i,
-  d: string; nam,
+  d: string nam,
   e: string; taglin,
   e: string; pric,
   e: string; perio,
@@ -1788,7 +1766,7 @@ export type ZionEmergingTechService2029 = i,
   l: number; enterpris,
   e: number; currenc,
   y: string; perio,
-  d: string}; } export const,
+  d: string}} export const,
   zionEmergingTechServices2029: ZionEmergingTechService2029[] = [ // 1. Space Technology & Satellite Management Platform,
   id: 'space-technology-satellite-management',' nam,
   e: 'Space Technology & Satellite Management Platform',' taglin,
@@ -2259,8 +2237,8 @@ export type ZionEmergingTechService2029 = i,
   l: 8299, enterpris,
   e: 20999,' currenc,
   y: 'USD',' perio,
-  d: 'month' } } ]; export const getServicesByCategory = (categor)
-  y: string) => return zionEmergingTechServices2029.filter(service => service.category === category); }; export const getPopularServices = () => return zionEmergingTechServices2029.filter(service => service.popular); }; export const getServicesByPriceRange = (minPric)
+  d: 'month' } } ] export const getServicesByCategory = (categor)
+  y: string) => return zionEmergingTechServices2029.filter(service => service.category === category)} export const getPopularServices = () => return zionEmergingTechServices2029.filter(service => service.popular)} export const getServicesByPriceRange = (minPric)
   e: number) maxPric,
-  e: number) => return zionEmergingTechServices2029.filter(service => const starterPrice = service.pricing.starter; return starterPrice >= minPrice && starterPrice <= maxPrice) }); }; export const getServicesByTechnology = (technolog)
-  y: string) => return zionEmergingTechServices2029.filter(service => service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase())) ); };'
+  e: number) => return zionEmergingTechServices2029.filter(service => const starterPrice = service.pricing.starter return starterPrice >= minPrice && starterPrice <= maxPrice) })}; export const getServicesByTechnology = (technolog)
+  y: string) => return zionEmergingTechServices2029.filter(service => service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase())) )}'

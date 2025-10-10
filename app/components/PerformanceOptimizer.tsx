@@ -1,13 +1,10 @@
 'use client';
 import React, { useEffect, useCallback, memo } from 'react';
-
 interface PerformanceOptimizerProps {
   children: React.ReactNode;
   enableLazyLoading?: boolean;
   enablePreloading?: boolean;
-  enableCodeSplitting?: boolean;
-}
-
+  enableCodeSplitting?: boolean}
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = memo(({ 
   children, 
   enableLazyLoading = true,
@@ -25,39 +22,29 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = memo(({
       fontPreload.type = 'font/woff2';
       fontPreload.crossOrigin = 'anonymous';
       document.head.appendChild(fontPreload);
-
       // Preload critical images
       const imagePreload = document.createElement('link');
       imagePreload.rel = 'preload';
       imagePreload.href = '/images/hero-bg.webp';
       imagePreload.as = 'image';
-      document.head.appendChild(imagePreload);
-    }
+      document.head.appendChild(imagePreload)}
   }, [enablePreloading]);
-
   // Optimize scroll performance
   const handleScroll = useCallback(() => {
     // Throttle scroll events for better performance
     let ticking = false;
-    
     const updateScroll = () => {
       // Add scroll-based optimizations here
-      ticking = false;
-    };
-
+      ticking = false};
     if (!ticking) {
       requestAnimationFrame(updateScroll);
-      ticking = true;
-    }
+      ticking = true}
   }, []);
-
   useEffect(() => {
     if (enableLazyLoading) {
-      window.addEventListener('scroll', handleScroll, { passive: true });
-      return () => window.removeEventListener('scroll', handleScroll);
-    }
+      window.addEventListener('scroll', handleScroll, { passive: true});
+      return () => window.removeEventListener('scroll', handleScroll)}
   }, [handleScroll, enableLazyLoading]);
-
   // Resource hints for better performance
   useEffect(() => {
     if (enablePreloading) {
@@ -66,19 +53,13 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = memo(({
       dnsPrefetch.rel = 'dns-prefetch';
       dnsPrefetch.href = '//fonts.googleapis.com';
       document.head.appendChild(dnsPrefetch);
-
       // Add preconnect for critical external resources
       const preconnect = document.createElement('link');
       preconnect.rel = 'preconnect';
-      preconnect.href = 'https://fonts.gstatic.com';
+      preconnect.href = 'https: //fonts.gstatic.com';
       preconnect.crossOrigin = 'anonymous';
-      document.head.appendChild(preconnect);
-    }
+      document.head.appendChild(preconnect)}
   }, [enablePreloading]);
-
-  return <>{children}</>;
-});
-
+  return <>{children}</>});
 PerformanceOptimizer.displayName = 'PerformanceOptimizer';
-
-export default PerformanceOptimizer;
+export default PerformanceOptimizer

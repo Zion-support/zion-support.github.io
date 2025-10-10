@@ -25,7 +25,7 @@ import Footer from '../components/Footer';
 const AIAnalyticsPage: React.FC = () => {
   const features = [];
   return (
-    {// TODO: Add content;}
+    {// TODO: Add content}
 };
   ico,
   n: Brain,
@@ -302,9 +302,8 @@ icon$5: Award,
                 Email Us
       <Footer />
     </React.Fragment>
-  );
-};
-export default AIAnalyticsPage;
+  )};
+export default AIAnalyticsPage
 {/* Use Cases */}
               Use Cases;"
             <div className="grid grid-cols-1,
@@ -341,8 +340,7 @@ export default AIAnalyticsPage;
                         {feature}
                   <a
                     href="/contact" className={`w-full block text-center py-3 px-4 rounded-lg font-medium transition-all duration-300 ${}
-  // TODO: Add content;
-}
+  // TODO: Add content}
 //                       tier.popular;
                         ? 'bg-cyan-400 text-slate-900,
   hover:bg-cyan-300'
@@ -377,9 +375,8 @@ export default AIAnalyticsPage;
                 Email Us;
       <Footer />
     </div>
-  );
-};
-export default AiAnalyticsPage;
+  )};
+export default AiAnalyticsPage
   </div>
   </p>
   </h2>

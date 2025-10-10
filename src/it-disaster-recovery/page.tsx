@@ -6,7 +6,7 @@ import { Shield, Zap, Settings, BarChart, CheckCircle, Star,  Shield,  Zap,  Bar
 const ITDisasterRecoveryPage: React.FC = () => {
   const features = [];
   return (
-    {// TODO: Add content;}
+    {// TODO: Add content}
 };
   ico,
   n: Shield,
@@ -15,8 +15,7 @@ const ITDisasterRecoveryPage: React.FC = () => {
       descriptio,
   n: 'Comprehensive backup and recovery solutions',
       benefit,
-  s: ['Automated backups', 'Data protection', 'Recovery testing'];
-    },
+  s: ['Automated backups', 'Data protection', 'Recovery testing']},
       ico,
   n: Zap,
       titl,
@@ -89,6 +88,5 @@ const ITDisasterRecoveryPage: React.FC = () => {
       </main>
       <Footer /></Footer>
     </div>
-  );
-};
-export default ItDisasterRecoveryPage;
+  )};
+export default ItDisasterRecoveryPage

@@ -6,7 +6,7 @@ import { Target, BarChart, Zap, Settings, CheckCircle, Star,  Target,  BarChart,
 const AILeadScoringPage: React.FC = () => {
   const features = [];
   return (
-    {// TODO: Add content;}
+    {// TODO: Add content}
 };
   ico,
   n: Target,
@@ -15,8 +15,7 @@ const AILeadScoringPage: React.FC = () => {
       descriptio,
   n: 'AI-powered lead scoring and qualification',
       benefit,
-  s: ['Behavioral analysis', 'Demographic scoring', 'Engagement tracking'];
-    },
+  s: ['Behavioral analysis', 'Demographic scoring', 'Engagement tracking']},
       ico,
   n: BarChart,
       titl,
@@ -89,6 +88,5 @@ const AILeadScoringPage: React.FC = () => {
       </main>
       <Footer /></Footer>
     </div>
-  );
-};
-export default PagePage;
+  )};
+export default PagePage

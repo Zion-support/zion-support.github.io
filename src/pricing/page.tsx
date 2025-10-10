@@ -159,8 +159,7 @@ const PricingPage: React.FC = () => {
           border: 'border-gray-500',
           light: 'bg-gray-50',
           textLight: 'text-gray-600'
-        };
-    }
+        }}
   };
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -242,8 +241,7 @@ const PricingPage: React.FC = () => {
                     </Link>
                   </div>
                 </div>
-              );
-            })}
+              )})}
           </div>
         </div>
       </section>
@@ -318,9 +316,8 @@ const PricingPage: React.FC = () => {
       </section>
       <Footer />
     </div>
-  );
-};
-export default PricingPage;
+  )};
+export default PricingPage
   </Link>
   </Link>
   </p>

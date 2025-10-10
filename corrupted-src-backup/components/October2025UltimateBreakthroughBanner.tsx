@@ -1,6 +1,6 @@
 const, October2025UltimateBreakthroughBanne, r = () => {
   return(<div, className="relative, b, g-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, overflo, w-hidden, borde, r-b, borde, r-whi, t, e/10">)
-      {/* Animated, Backgroun, d */};)
+      {/* Animated, Backgroun, d */})
       <div, className="absolute, inse, t-0, opacit, y-20">)
   return (
     <div, className="relative, b, g-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, overflo, w-hidden, borde, r-b, borde, r-whi, t, e/10">
@@ -501,7 +501,6 @@ const, October2025UltimateBreakthroughBanne, r = () => {/* TODO: Fix JSX express
         </d, i, v>
       </d, i, v>
     </d, i, v>
-  );
-};
-export default October2025UltimateBreakthroughBanner;
+  )};
+export default October2025UltimateBreakthroughBanner
 ;"

@@ -216,9 +216,8 @@ const CaseStudiesPage: React.FC = () => {
         </section>
       </div>
     </React.Fragment>
-  );
-};
-export default CaseStudiesPage;
+  )};
+export default CaseStudiesPage
   </Link>
   </p>
   </p>

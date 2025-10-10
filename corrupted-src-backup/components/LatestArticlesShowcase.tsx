@@ -22,7 +22,7 @@ const, LatestArticlesShowcas, e: Rea, c, t.FC = () => {
                     Read, Mor, e;
                     Read, Mor, e</div>
                     <Link, classNam, e='w-4 h-4, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
-            View, All, Articles;)
+            View, All, Articles)
             <Link, classNam, e='w-6 h-6' />)
 }})
 const, LatestArticlesShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}

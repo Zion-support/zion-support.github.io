@@ -1,5 +1,5 @@
 import React from 'react';
-interface ContentPreviewCardProps {// TODO: Add content;}
+interface ContentPreviewCardProps {// TODO: Add content}
 };
   i,
   d: string;
@@ -19,19 +19,17 @@ interface ContentPreviewCardProps {// TODO: Add content;}
   e: string;
   featured?: boolean;
   stats?: {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   view,
   s: number;,
     engagemen,
-  t: number;
-  };
-  excerpt?: string;
-}
+  t: number};
+  excerpt?: string}
 const,
   ContentPreviewCard: React.FC;
           <ContentPreviewCardProps> = ({/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
   // id,
 //   title,
@@ -43,23 +41,20 @@ const,
 //   image,
   featured = false,
 //   stats,
-//   excerpt;)
+//   excerpt)
 }) => {if (num >= 1000) {}
   // TOD,
-  O: Add content;
-}
-      return (num / 1000).toFixed(1) + 'k';
-    }
-    return num.toString();
-  };
+  O: Add content}
+      return (num / 1000).toFixed(1) + 'k'}
+    return num.toString()};
   const getCategoryColor = (categor)
   y: string): string => {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
     const,
   colors: {/* TODO: Fix JSX expression */}
   y: string]: string } = {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
       'Success Story': 'from-green-500 to-emerald-600',
       'Mega Trends': 'from-blue-500 to-cyan-600',
@@ -70,15 +65,13 @@ const,
       'Transformation': 'from-teal-500 to-blue-600',
       'default': 'from-gray-500 to-gray-600'
     };
-    return colors[category] || colors.default;
-  };
+    return colors[category] || colors.default};
   return (<div>Coming Soon</div>)
   )
           <article className={/* TODO: Fix JSX expression */}
   hover:-translate-y-1 ${}
   // TOD,
-  O: Add content;
-}
+  O: Add content}
       featured ? 'ring-2 ring-indigo-200' : ''
     }`}></article>
       {/* Image/Visual Header */}
@@ -163,7 +156,6 @@ const,
         </div>
       </div>
     </article>
-  );
-};
-export default ContentPreviewCard;"`
+  )};
+export default ContentPreviewCard"`
   </ContentPreviewCardProps>

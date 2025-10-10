@@ -291,4 +291,4 @@ const CognitiveComputingTransformatio, n: React.FC = () => {/* TODO: Fix JSX exp
                 </div>
                 <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r:te, x, t-purp, l, e-300, transitio, n-colo, r, s'></h3>
                   Fortune, 20, Teleco,
-  m: $4.7B, Cognitive, Transformation;)
+  m: $4.7B, Cognitive, Transformation)

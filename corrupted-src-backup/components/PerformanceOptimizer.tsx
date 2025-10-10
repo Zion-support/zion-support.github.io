@@ -8,19 +8,17 @@ f, c, p: numb, e, r | nu, l, l;
 l, c, p: numb, e, r | nu, l, l;
 tt, f, b: numb, e, r | nu, l, l;
 sc, o, r;
-  e: numb, e, r;
-}
+  e: numb, e, r}
 const, PerformanceOptimize, r: Rea, c, t.FC<PerformanceOptimizerPro, p, s> = ({
   isVisib, l, e;
-  onClo, s, e;
-}) => {
+  onClo, s, e}) => {
   con, s, t [optimizatio, n, s, setOptimizatio, n, s] = useSta, t, e({
     imageOptimizati, o, n: tr, u, e;
     codeSplitti, n, g: tr, u, e;
     lazyLoadi, n, g: tr, u, e;
-    cachi, n, g: tr, u, e;)
-    compressi, o, n: tr, u, e;)
-    c, d, n: fal, s, e;)
+    cachi, n, g: tr, u, e)
+    compressi, o, n: tr, u, e)
+    c, d, n: fal, s, e)
 interface, PerformanceMetric, s {/* TODO: Fix JSX expression */}
 }
 const, PerformanceOptimize, r: Rea, c, t.FC<PerformanceOptimizerPro, p, s> = ({/* TODO: Fix JSX expression */})
@@ -35,8 +33,7 @@ const, PerformanceOptimize, r: Rea, c, t.FC<PerformanceOptimizerPro, p, s> = ({/
       }, if (optimizatio, n, s.cachi, n, g) {/* TODO: Fix JSX expression */}
      }
     if() {/* TODO: Fix JSX expression */}
-      }, setCurrentOptimizatio, n, s(optimizationsLi, s, t);
-  }, [optimizatio, n, s]);
+      }, setCurrentOptimizatio, n, s(optimizationsLi, s, t)}, [optimizatio, n, s]);
       k, e, y: 'c, d, n' as, con, s, t,
       lab, e, l: 'CDN, Integrati, o, n',
       descriptio,

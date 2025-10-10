@@ -1,16 +1,13 @@
 export type Zion2026AIMarketplaceService =
-  id: string;
-  name: string;
-  description: string;
+  id: string
+  name: string description: string;
   category: 'AI Marketplace' | 'AI Integration' | 'AI Automation' | 'AI Analytics' | 'AI Development'
   price: unknown;
     monthly: number;
     yearly: number;
     enterprise: number;
-    currency: string;
-  };
-  features: string[];
-  benefits: string[];
+    currency: string};
+  features: string[] benefits: string[];
   roi: string;
   marketSize: string;
   targetAudience: string[];
@@ -21,15 +18,13 @@ export type Zion2026AIMarketplaceService =
     phone: string;
     email: string;
     website: string;
-    address: string;
-  };
-}
+    address: string}}
 export const zion2026 AIMarketplaceServices: Zion2026 AIMarketplaceService[] = [,
     id: 'ai-marketplace-001',
     name: 'Zion AI Service Marketplace Platform',
     description: 'A comprehensive AI service marketplace that connects businesses with AI service providers, featuring automated matching, quality assurance, and seamless integration.',
     category: 'AI Marketplace'
-    price: unknown;
+    price: unknown
       monthly: 299;
       yearly: 2999;
       enterprise: 9999;
@@ -77,8 +72,7 @@ export const zion2026 AIMarketplaceServices: Zion2026 AIMarketplaceService[] = [
     websit,
   e: string;
     addres,
-  s: string};
-}
+  s: string}}
 export const,
   zion2026AIMarketplaceServices: Zion2026AIMarketplaceService[] = [,
     i,
@@ -157,7 +151,7 @@ export const,
       'Custom development',
       'Ongoing maintenance'
     ],
-    contactInfo: unknown;
+    contactInfo: unknown
       phone: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
@@ -593,7 +587,7 @@ export const,
   }
 ];
 export type Zion2026AIMarketplaceService = i,
-  d: string; nam,
+  d: string nam,
   e: string; descriptio,
   n: string; categor,
   y: 'AI Marketplace' | 'AI Integration' | 'AI Automation' | 'AI Analytics' | 'AI Development' pric,
@@ -614,7 +608,7 @@ export type Zion2026AIMarketplaceService = i,
   e: string; emai,
   l: string; websit,
   e: string; addres,
-  s: string}; } export const,
+  s: string}} export const,
   zion2026AIMarketplaceServices: Zion2026AIMarketplaceService[] = [ ' i,
   d: 'ai-marketplace-001',' nam,
   e: 'Zion AI Service Marketplace Platform',' descriptio,
@@ -730,4 +724,4 @@ export type Zion2026AIMarketplaceService = i,
   l: 'kleber@ziontechgroup.com',' websit,
   e: 'http,
   s://ziontechgroup.com',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709' } } ];'
+  s: '364 E Main St STE 1008 Middletown DE 19709' } } ]'

@@ -16,8 +16,7 @@ const,
       },
       ...seoData.structuredData};
     if (seoData.author) {/* TODO: Fix JSX expression */}
-      };
-    }
+      }}
     if (seoData.publishedTime) {/* TODO: Fix JSX expression */}
     }
     if (seoData.modifiedTime) {/* TODO: Fix JSX expression */}
@@ -26,14 +25,12 @@ const,
     }
     if (seoData.tags && seoData.tags.length > 0) {/* TODO: Fix JSX expression */}
     }
-    return baseStructuredData;
-  }, [seoData, enableStructuredData]);
+    return baseStructuredData}, [seoData, enableStructuredData]);
   // Generate Open Graph data;
   const generateOpenGraphData = useCallback(() => {/* TODO: Fix JSX expression */}
     if (!enableOpenGraph) return {};
     return {/* TODO: Fix JSX expression */}
-    };
-  }, [seoData, enableOpenGraph]);
+    }}, [seoData, enableOpenGraph]);
   // Generate Twitter Card data;
   const generateTwitterCardData = useCallback(() => {/* TODO: Fix JSX expression */}
     if (!enableTwitterCards) return {};
@@ -42,8 +39,7 @@ const,
         {/* TODO: Fix JSX expression */}
           }},
         {/* TODO: Fix JSX expression */}
-          }}]};
-  }, [seoData, enableTwitterCards]);
+          }}]}}, [seoData, enableTwitterCards]);
   // Generate meta tags;
   const generateMetaTags = useCallback(() => {/* TODO: Fix JSX expression */}
   t: seoData.description },
@@ -61,8 +57,7 @@ const,
   t: '#3B82F6' },
       {/* TODO: Fix JSX expression */}
   t: '/browserconfig.xml' }];
-    return metaTags;
-  }, [seoData]);
+    return metaTags}, [seoData]);
   const structuredData = generateStructuredData();
   const openGraphData = generateOpenGraphData();
   const twitterCardData = generateTwitterCardData();
@@ -74,8 +69,7 @@ const,
       let canonicalLink = document.querySelector('link[rel="canonical"]');
       if (!canonicalLink) {/* TODO: Fix JSX expression */}
       }
-      canonicalLink.setAttribute('href', seoData.canonicalUrl);
-    }
+      canonicalLink.setAttribute('href', seoData.canonicalUrl)}
   }, [seoData]);
   const addStructuredData = (dat)
   a: Record<string, unknown>) => {/* TODO: Fix JSX expression */}
@@ -84,14 +78,12 @@ const,
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(structuredData);
     document.head.appendChild(script);
-    structuredDataRef.current = script;
-  };
+    structuredDataRef.current = script};
   useEffect(() => {/* TODO: Fix JSX expression */}
     }
   }, [structuredData]);
   useEffect(() => {/* TODO: Fix JSX expression */}
-          });
-        }
+          })}
       }
     }
   }, []);
@@ -139,8 +131,7 @@ const,
       <link rel="dns-prefetch" href="//www.google-analytics.com" /></link>"
       <link rel="dns-prefetch" href="//www.googletagmanager.com" /></link>
     </Helmet>
-  );
-};
-export default AdvancedSEOOptimizer;
+  )};
+export default AdvancedSEOOptimizer
 "
   </AdvancedSEOOptimizerProps>

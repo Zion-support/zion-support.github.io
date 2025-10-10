@@ -6,7 +6,7 @@ import { Rocket, Target, Zap, Settings, CheckCircle, Star,  Rocket,  Target,  Se
 const FutureTechnologiesPage: React.FC = () => {
   const features = [];
   return (
-    {// TODO: Add content;}
+    {// TODO: Add content}
 };
   ico,
   n: Rocket,
@@ -15,8 +15,7 @@ const FutureTechnologiesPage: React.FC = () => {
       descriptio,
   n: 'Cutting-edge technologies and future innovations',
       benefit,
-  s: ['AI advancement', 'Quantum computing', 'Blockchain'];
-    },
+  s: ['AI advancement', 'Quantum computing', 'Blockchain']},
       ico,
   n: Target,
       titl,
@@ -89,6 +88,5 @@ const FutureTechnologiesPage: React.FC = () => {
       </main>
       <Footer /></Footer>
     </div>
-  );
-};
-export default FutureTechnologiesPage;
+  )};
+export default FutureTechnologiesPage

@@ -1,7 +1,5 @@
 export type EmergingTechService2027 =
-  id: string;
-  title: string;
-  description: string;
+  id: string title: string description: string
   category: string;
   subcategory: string;
   pricing: unknown;
@@ -10,16 +8,14 @@ export type EmergingTechService2027 =
     custom: string;
     currency: string;
     pricingModel: string};
-  features: string[];
-  benefits: string[];
+  features: string[] benefits: string[];
   useCases: string[];
   targetAudience: string[];
   technologies: string[];
   integrations: string[];
   support: string[];
   link: string;
-  badge: string;
-  icon: string;
+  badge: string icon: string;
   image: string;
   innovationLevel: string;
   marketSize: string;
@@ -37,7 +33,7 @@ export type EmergingTechService2027 =
     website: string;
     address: string}}
 export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
-  // Quantum Internet Infrastructure;
+  // Quantum Internet Infrastructure
     id: "quantum-internet-infrastructure",
     title: "Quantum Internet Infrastructure",
     description: "Next-generation quantum internet infrastructure enabling ultra-secure communications, quantum entanglement distribution, and quantum network protocols for government, financial, and research institutions.",
@@ -203,7 +199,7 @@ export const,
     innovationLevel: "Breakthrough",
     marketSize: "$2.1 B by 2027",
     competitors["IBM Quantum", "Google Quantum", "Microsoft Quantum"],
-    technicalSpecs: unknown;
+    technicalSpecs: unknown
       performance: "Quantum speed advantage",
       scalability: "Global quantum network",
       security: "Quantum-secured",
@@ -844,7 +840,7 @@ export const,
   }
 ];
 export type EmergingTechService2027 = i,
-  d: string; titl,
+  d: string titl,
   e: string; descriptio,
   n: string; categor,
   y: string; subcategor,
@@ -1036,4 +1032,4 @@ export type EmergingTechService2027 = i,
   l: "kleber@ziontechgroup.com", websit,"
   e: "http,"
   s://ziontechgroup.com", addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ];'"
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]'"

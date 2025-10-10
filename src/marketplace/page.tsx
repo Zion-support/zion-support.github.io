@@ -123,8 +123,7 @@ $4}
       case 'equipment':
         return equipment;
       default:
-        return [];
-  };
+        return []};
   const filteredItems = getCurrentItems().filter(item =>
     item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
     item.description.toLowerCase().includes(searchTerm.toLowerCase())
@@ -305,13 +304,12 @@ icon$5: Award,
       <Footer />
   return (
     <div>Coming Soon</div>
-  );
-};
+  )};
   const [activeCategory, setActiveCategory] = useState('products');
   const [searchTerm, setSearchTerm] = useState('');
 const categories = [
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   i,
   d: 'products',
@@ -418,7 +416,7 @@ const categories = [
                 <Mail className="w-4 h-4 mr-2" />
                 Email Us;
       <Footer /></Footer>
-export default MarketplacePage;
+export default MarketplacePage
   </div>
   </p>
   </h2>

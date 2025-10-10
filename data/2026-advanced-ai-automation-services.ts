@@ -1,12 +1,10 @@
-export interface AdvancedAIAutomationService {id: string;
+export interface AdvancedAIAutomationService {id: string
   name: string;
   tagline: string;
   price: string;
-  period: string;
-  description: string;
+  period: string description: string;
   features: string[];
-  popular: boolean;
-  icon: string;
+  popular: boolean icon: string;
   color: string;
   text_color: string;
   link: string;
@@ -34,7 +32,7 @@ export interface AdvancedAIAutomationService {id: string;
     tagline: 'Predict business outcomes with 99.7% accuracy using advanced AI algorithms', price: '$899',
     period: '/month',
     description: 'Enterprise-grade predictive analytics platform that forecasts business outcomes, market trends, and operational risks with unprecedented accuracy using advanced machine learning.',
-    features: [;
+    features: [
       '99.7% prediction accuracyReal-time data processingMulti-dimensional forecastingRisk assessment algorithmsMarket trend analysisCustom model trainingAPI integration capabilitiesAutomated reporting',
       'Scenario planning toolsExecutive dashboard'],
     popular: true, icon: '',
@@ -54,13 +52,12 @@ export interface AdvancedAIAutomationService {id: string;
     implementationDetails: 'Enterprise SaaS with advanced ML models, real-time processing, and predictive algorithms.',
     launchDate: '2026-02-01', customers: 234;
     rating: 4.9;
-    reviews: 312;
-  };
+    reviews: 312};
     id: 'ai-autonomous-customer-success', name: 'AI Autonomous Customer Success',
     tagline: 'Automatically increase customer retention and satisfaction with AI-driven insights', price: '$699',
     period: '/month',
     description: 'AI-powered customer success platform that automatically identifies at-risk customers, predicts churn, and implements retention strategies without human intervention.',
-    features: [;
+    features: [
       'Automatic churn predictionPersonalized retention strategiesCustomer health scoringProactive issue resolutionSuccess metric trackingAutomated outreach campaignsCustomer journey optimizationSentiment analysis',
       'ROI measurementIntegration with CRM systems'],
     popular: true, icon: '',
@@ -80,14 +77,13 @@ export interface AdvancedAIAutomationService {id: string;
     implementationDetails: 'Multi-tenant SaaS with AI customer intelligence, automated workflows, and retention engine.',
     launchDate: '2026-01-20', customers: 167;
     rating: 4.7;
-    reviews: 203;
-  };
+    reviews: 203};
     id: 'ai-autonomous-marketing-orchestrator', name: 'AI Autonomous Marketing Orchestrator',
     tagline: 'Coordinate all marketing channels autonomously for maximum ROI and engagement',
     price: '$1,199',
     period: '/month',
     description: 'End-to-end marketing automation platform that autonomously manages campaigns across all channels, optimizes budgets, and maximizes ROI using advanced AI algorithms.',
-    features: [;
+    features: [
       'Cross-channel campaign coordinationAutonomous budget optimizationReal-time performance trackingA/B testing automationAudience segmentation AIContent personalizationROI maximization algorithmsPredictive analytics',
       'Multi-platform integrationAutomated reporting'],
     popular: true, icon: '',
@@ -112,7 +108,7 @@ export interface AdvancedAIAutomationService {/* TODO: Fix JSX expression */}
   s: string}
     websit,
   e: string}
-  };
+  }
     i,
   d: 'ai-predictive-enterprise-analytics', nam,
   e: 'AI Predictive Enterprise Analytics',
@@ -124,7 +120,7 @@ export interface AdvancedAIAutomationService {/* TODO: Fix JSX expression */}
     descriptio,
   n: 'Enterprise-grade predictive analytics platform that forecasts business outcomes, market trends, and operational risks with unprecedented accuracy using advanced machine learning.',
     feature,
-  s: [;
+  s: [
       '99.7% prediction accuracyReal-time data processingMulti-dimensional forecastingRisk assessment algorithmsMarket trend analysisCustom model trainingAPI integration capabilitiesAutomated reporting'
       'Scenario planning toolsExecutive dashboard'
     ],
@@ -184,7 +180,7 @@ export interface AdvancedAIAutomationService {/* TODO: Fix JSX expression */}
     descriptio,
   n: 'AI-powered customer success platform that automatically identifies at-risk customers, predicts churn, and implements retention strategies without human intervention.',
     feature,
-  s: [;
+  s: [
       'Automatic churn predictionPersonalized retention strategiesCustomer health scoringProactive issue resolutionSuccess metric trackingAutomated outreach campaignsCustomer journey optimizationSentiment analysis'
       'ROI measurementIntegration with CRM systems'
     ],
@@ -245,7 +241,7 @@ export interface AdvancedAIAutomationService {/* TODO: Fix JSX expression */}
     descriptio,
   n: 'End-to-end marketing automation platform that autonomously manages campaigns across all channels, optimizes budgets, and maximizes ROI using advanced AI algorithms.',
     feature,
-  s: [;
+  s: [
       'Cross-channel campaign coordinationAutonomous budget optimizationReal-time performance trackingA/B testing automationAudience segmentation AIContent personalizationROI maximization algorithmsPredictive analytics'
       'Multi-platform integrationAutomated reporting'
     ],
@@ -305,12 +301,11 @@ export interface AdvancedAIAutomationService {/* TODO: Fix JSX expression */}
     descriptio,
   n: 'Intelligent sales platform that autonomously identifies high-value prospects, qualifies leads, and nurtures them through the sales funnel using advanced AI and behavioral analysis.',
     feature,
-  s: [;
+  s: [
       'Automatic lead scoringBehavioral analysisPredictive lead qualificationPersonalized nurturing sequencesSales forecasting AIPipeline optimizationCompetitor intelligenceMarket opportunity detection'
       'ROI trackingCRM integration'
     ];
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-yellow-600 to-orange-700',
     textColor: 'text-yellow-400',
     link: 'https://ziontechgroup && ziontechgroup.com/ai-autonomous-sales-intelligence',
@@ -398,46 +393,39 @@ export const aiAutomationCategories = [
   'AI & Financial Services',
   'AI & Human Resources',
   'AI & Marketing'
-];
-export const getAIAutomationServicesByCategory = (category: string) =>;
+]
+export const getAIAutomationServicesByCategory = (category: string) =>
   if (category === 'All') return advancedAIAutomationServices;,
-  return advancedAIAutomationServices.filter(service => service.category === category);
-};
+  return advancedAIAutomationServices.filter(service => service.category === category)};
 export const getPopularAIAutomationServices = (limit: number = 6): AIAutomationService[] =>
-  return advancedAIAutomationServices;
+  return advancedAIAutomationServices
     .filter(service => service.popular),
-    .slice(0) limit);
-};
-export const getAIAutomationServicesByTechnology = (technology: string): AIAutomationService[] =>;
+    .slice(0) limit)};
+export const getAIAutomationServicesByTechnology = (technology: string): AIAutomationService[] =>
   return advancedAIAutomationServices.filter(service =>)
 export const getAIAutomationServicesByCategory = (categor)
-  y: string) =>;
+  y: string) =>
   if (category === 'All') return advancedAIAutomationServices;
-  return advancedAIAutomationServices.filter(service => service.category === category);
-};
+  return advancedAIAutomationServices.filter(service => service.category === category)};
 export const getPopularAIAutomationServices = (limi)
   t: number = 6): AIAutomationService[] =>,
-  return advancedAIAutomationServices;
+  return advancedAIAutomationServices
     .filter(service => service.popular)
-    .slice(0) limit);
-};
+    .slice(0) limit)};
 export const getAIAutomationServicesByTechnology = (technolog)
-  y: string): AIAutomationService[] =>;
+  y: string): AIAutomationService[] =>
   return advancedAIAutomationServices.filter(service =>
     service.technology.some(tech =>)
       tech.toLowerCase().includes(technology.toLowerCase())
-  </div>));
-};
+  </div>))};
 export const getAIAutomationServicesByPriceRange = (minPrice: number) maxPrice: number): AIAutomationService[] =>,
   return advancedAIAutomationServices.filter(service =>)
 export const getAIAutomationServicesByPriceRange = (minPric)
   e: number) maxPric,
   e: number): AIAutomationService[] =>,
   return advancedAIAutomationServices.filter(service =>)
-    const _price = parseFloat(service.price.replace('$') '').replace(')'; ''));
-    return price >= minPrice && (maxPrice === Infinity || price <= maxPrice);
-  });
-};
+    const _price = parseFloat(service.price.replace('$') '').replace(')' ''));
+    return price >= minPrice && (maxPrice === Infinity || price <= maxPrice)})};
 export const advancedAIAutomationServices2026 = [{name: 'Advanced AI Automation Platform 2026'
     path: '/services/advanced-ai-automation-platform-2026',
     description: 'Next-generation AI automation platform for enterprise',
@@ -449,7 +437,7 @@ export const advancedAIAutomationServices2026 = [{name: 'Advanced AI Automation 
       'Intelligent decision making',
       'Performance optimization'
     ],
-    pricing: unknown;
+    pricing: unknown
       starter: '$599/month',
       professional: '$1199/month'}
       enterprise: 'Custom'}
@@ -483,7 +471,7 @@ export const advancedAIAutomationServices2026 = [{/* TODO: Fix JSX expression */
       'Real-time monitoring',
       'Advanced analytics'
     ],
-    pricing: unknown;
+    pricing: unknown
       starter: '$399/month',
       professional: '$799/month',
       enterprise: 'Custom',
@@ -503,13 +491,13 @@ export const advancedAIAutomationCategories2026 = [
   'Workflow Management',
   'Decision Intelligence',
   'Performance Optimization'
-];
+]
 export const advancedAIAutomationStats2026 =
-  totalServices: 2;
+  totalServices: 2
   categories: 4;
   averageRating: 4.9;
   activeUsers: 3000;
-export const advancedAIAutomationStats2026 = {};
+export const advancedAIAutomationStats2026 = {}
   totalService,
   s: 2,
   categorie,
@@ -519,7 +507,7 @@ export const advancedAIAutomationStats2026 = {};
   activeUser,
   s: 3000};
 export interface AdvancedAIAutomationService,
-  id: string; nam,
+  id: string nam,
   e: string; taglin,
   e: string; pric,
   e: string, perio,
@@ -685,12 +673,12 @@ export interface AdvancedAIAutomationService,
   e: '2026-01-25' customer,
   s: 198, ratin,
   g: 4 && 4.9, review,
-  s: 267 } ]; // Service categories export const aiAutomationCategories = [' 'All',' 'AI & Business Automation',' 'AI & Customer Experience',' 'AI & Supply Chain',' 'AI & Financial Services',' 'AI & Human Resources',' 'AI & Marketing' ]; export const getAIAutomationServicesByCategory = (categor)
-  y: string) => ' if (category === 'All') return advancedAIAutomationServices; return advancedAIAutomationServices.filter(service => service.category === category); }; export const getPopularAIAutomationServices = (limi)
-  t: number = 6): AIAutomationService[] => return advancedAIAutomationServices .filter(service => service.popular) .slice(0) limit); }; export const getAIAutomationServicesByTechnology = (technolog)
-  y: string): AIAutomationService[] => return advancedAIAutomationServices.filter(service => service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase()) </div> ) ); }; export const getAIAutomationServicesByPriceRange = (minPric)
+  s: 267 } ]; // Service categories export const aiAutomationCategories = [' 'All',' 'AI & Business Automation',' 'AI & Customer Experience',' 'AI & Supply Chain',' 'AI & Financial Services',' 'AI & Human Resources',' 'AI & Marketing' ] export const getAIAutomationServicesByCategory = (categor)
+  y: string) => ' if (category === 'All') return advancedAIAutomationServices return advancedAIAutomationServices.filter(service => service.category === category)}; export const getPopularAIAutomationServices = (limi)
+  t: number = 6): AIAutomationService[] => return advancedAIAutomationServices .filter(service => service.popular) .slice(0) limit)} export const getAIAutomationServicesByTechnology = (technolog)
+  y: string): AIAutomationService[] => return advancedAIAutomationServices.filter(service => service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase()) </div> ) )} export const getAIAutomationServicesByPriceRange = (minPric)
   e: number) maxPric,
-  e: number): AIAutomationService[] => return advancedAIAutomationServices.filter(service => ' const price = parseFloat(service.price.replace('$') '').replace(')'; '')); return price >= minPrice && (maxPrice === Infinity || price <= maxPrice); }); }; export const advancedAIAutomationServices2026 = [ ' nam,
+  e: number): AIAutomationService[] => return advancedAIAutomationServices.filter(service => ' const price = parseFloat(service.price.replace('$') '').replace(')' '')); return price >= minPrice && (maxPrice === Infinity || price <= maxPrice)})}; export const advancedAIAutomationServices2026 = [ ' nam,
   e: 'Advanced AI Automation Platform 2026',' pat,
   h: '/services/advanced-ai-automation-platform-2026',' descriptio,
   n: 'Next-generation AI automation platform for enterprise',' ico,
@@ -710,8 +698,8 @@ export interface AdvancedAIAutomationService,
   g: ' starte,
   r: '$399/month',' professiona,
   l: '$799/month',' enterpris,
-  e: 'Custom' } } ]; export const advancedAIAutomationCategories2026 = [' 'Process Automation',' 'Workflow Management',' 'Decision Intelligence',' 'Performance Optimization' ]; export const advancedAIAutomationStats2026 = totalService,
+  e: 'Custom' } } ] export const advancedAIAutomationCategories2026 = [' 'Process Automation',' 'Workflow Management',' 'Decision Intelligence',' 'Performance Optimization' ] export const advancedAIAutomationStats2026 = totalService,
   s: 2, categorie,
   s: 4, averageRatin,
   g: 4.9, activeUser,
-  s: 3000 };'
+  s: 3000 }'

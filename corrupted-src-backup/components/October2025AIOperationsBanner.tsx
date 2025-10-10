@@ -46,9 +46,9 @@ const, October2025AIOperationsBanne, r = () => {
       col, o, r: "fr, o, m-purp, l, e-500, t, o-pi, n, k-5, 0, 0"
     }
   ];
-  return(<div, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, p, y-16, p, x-4, s, m: px-6 l;)
+  return(<div, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, p, y-16, p, x-4, s, m: px-6 l)
   g:px-8, relative, overflow-hidd, e, n">")
-    <div, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, p, y-16, p, x-4, s, m: px-6 l;),
+    <div, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, p, y-16, p, x-4, s, m: px-6 l),
   return (
     <div, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, p, y-16, p, x-4, s, m: px-6 l
   g:px-8, relative, overflow-hidd, e, n">"</div>
@@ -134,17 +134,17 @@ const, October2025AIOperationsBanne, r = () => {/* TODO: Fix JSX expression */}
   r:shad, o, w-2, x, l"
               ></Li>
                 {/* Gradient, overla, y */}
-                <div, className={`absolute, inse, t-0, b, g-gradie, n, t-to-br ${artic, l, e.col, o, r} opaci, t, y-0, grou, p-hov, e, r:opaci, t, y-10, rounde, d-2xl, transitio, n-opacity, duratio, n-3, 0, 0`}></d, i, v>`;`
+                <div, className={`absolute, inse, t-0, b, g-gradie, n, t-to-br ${artic, l, e.col, o, r} opaci, t, y-0, grou, p-hov, e, r:opaci, t, y-10, rounde, d-2xl, transitio, n-opacity, duratio, n-3, 0, 0`}></d, i, v>``
                 {/* Conte, n, t */}"
                 <div, className="relativ, e, z-10">";
                   {/* Ic, o, n */}</div>
-                  <div, className={`w-1, 2, h-12, rounde, d-xl, b, g-gradie, n, t-to-br ${artic, l, e.col, o, r} flex, item, s-center, justif, y-center, m, b-4, grou, p-hov, e, r:sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0`}>`;`</div>
+                  <div, className={`w-1, 2, h-12, rounde, d-xl, b, g-gradie, n, t-to-br ${artic, l, e.col, o, r} flex, item, s-center, justif, y-center, m, b-4, grou, p-hov, e, r:sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0`}>``</div>
                     <Icon, className="w-6 h-6, tex, t-whi, t, e  />
                   </d, i, v>
                   {/* Tit, l, e */}
                   <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">"</h3>
                   {/* Ic, o, n */}`
-                  <div, className={`w-1, 2, h-12, rounde, d-xl, b, g-gradie, n, t-to-br ${artic, l, e.col, o, r} flex, item, s-center, justif, y-center, m, b-4, grou, p-hov, e, r:sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0`}>`;`"
+                  <div, className={`w-1, 2, h-12, rounde, d-xl, b, g-gradie, n, t-to-br ${artic, l, e.col, o, r} flex, item, s-center, justif, y-center, m, b-4, grou, p-hov, e, r:sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0`}>``"
                     <Icon, className="w-6 h-6, tex, t-whi, t, e  /></Icon>
                   </d, i, v>
                   {/* Tit, l, e */}"
@@ -188,8 +188,7 @@ const, October2025AIOperationsBanne, r = () => {/* TODO: Fix JSX expression */}
                   </d, i, v>
                 </d, i, v>
               </Li, n, k>)
-            );
-          })}
+            )})}
         </d, i, v>
         {/* Bottom, CT, A */}
         <div, className="te, x, t-cent, e, r">
@@ -257,7 +256,6 @@ const, October2025AIOperationsBanne, r = () => {/* TODO: Fix JSX expression */}
         </d, i, v>
       </d, i, v>
     </d, i, v>
-  );
-};
-export default October2025AIOperationsBanner;
+  )};
+export default October2025AIOperationsBanner
 ;"`

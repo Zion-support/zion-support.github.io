@@ -20,7 +20,7 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
           <section className="text-center mb-16"></section>"
             <h1 className="text-4xl,"
   md:text-6xl font-bold text-white mb-6 neon-text cyber-text"></h1>
-              AI Data Visualization;
+              AI Data Visualization
             </h1>"
             <p className="text-xl text-cyan-400 mb-8 font-medium"></p>
               Transform data into actionable insights with AI;
@@ -186,5 +186,4 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
         <Footer /></Footer>
       </div>
     </div>
-  );
-}"
+  )}"

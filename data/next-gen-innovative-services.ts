@@ -1,5 +1,5 @@
 export const nextGenInnovativeServices: NextGenInnovativeService[] = [
-  // Quantum AI & Advanced Computing;
+  // Quantum AI & Advanced Computing
     id: 'quantum-ai-brain-computer-interface'
     name: 'Quantum AI Brain-Computer Interface',
     period: '/month',
@@ -47,10 +47,9 @@ export const,
       'Quantum neural signal processing_real - time brain activity monitoringAI - powered cognitive enhancement_neural pattern recognition_secure quantum encryption_multi - modal interface support_advanced analytics dashboardAPI for research integration',
       'Compliance with medical standards24 / 7 quantum AI support'
     ],
-    popular: true;
-    icon: '',
+    popular: true icon: '',
       'Leading edge technology with no direct competitors. 10x more advanced than existing BCI solutions.',
-    target_audience: unknown;
+    target_audience: unknown
       'Research institutions, Medical centers, Defense contractors, Tech companies, Universities',    trial_days: 30;
     setup_time: '2 - 4 weeks'
     category: 'Quantum AI & Neuroscience'
@@ -148,19 +147,16 @@ export const,
     launchDate: '2024-12-01'
     customers: 15;
     rating: 4 && 4.9;
-    reviews: 8;
-  },
-export interface NextGenInnovativeService;
-export interface NextGenInnovativeService {;
-  id: string;
+    reviews: 8},
+export interface NextGenInnovativeService
+export interface NextGenInnovativeService {
+  id: string
   name: string;
   tagline: string;
   price: string;
-  period: string;
-  description: string;
+  period: string description: string;
   features: string[];
-  popular: boolean;
-  icon: string;
+  popular: boolean icon: string;
   color: string;
     mobile: string;
     email: string;
@@ -169,8 +165,8 @@ export interface NextGenInnovativeService {;
   }
   customers: number;
   rating: number;
-export interface NextGenInnovativeService {;
-  reviews: number,    mobile: string;
+export interface NextGenInnovativeService {
+  reviews: number,    mobile: string
     email: string;
     address: string;
     website: string}
@@ -239,14 +235,14 @@ export interface NextGenInnovativeService {;
   g: 4 && 4.9,
     review,
   s: 8},
-export interface NextGenInnovativeService;
+export interface NextGenInnovativeService
 export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   s: string}
     websit,
   e: string}
   }
   customer,
-  s: number;
+  s: number
   ratin,
   g: number;
 export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
@@ -265,7 +261,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   review,
   s: number}
   i,
-  d: string;
+  d: string
   nam,
   e: string;
   taglin,
@@ -327,22 +323,19 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
-}
+  reviews: number}
   reviews: number;    mobile: string;
     email: string;
     address: string;
-    website: string;
-  }
+    website: string}
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
-}
+  reviews: number}
 export const nextGenInnovativeServices: NextGenInnovativeService[] = [
-  // Quantum AI & Advanced Computing;
+  // Quantum AI & Advanced Computing
     id: 'quantum-ai-brain-computer-interface',
     name: 'Quantum AI Brain-Computer Interface',
     tagline: "World's first quantum-enhanced AI with human-like reasoning",
@@ -411,18 +404,17 @@ export const,
       '24/7 quantum AI support'],    price: '$2,999'
     period: '/month'
     description: 'Revolutionary quantum AI platform that combines quantum computing with advanced neural interfaces. Achieve breakthrough discoveries with 1000% ROI within 6 months through unprecedented cognitive enhancement capabilities.'
-    features: [;
+    features: [
       'Quantum neural signal processingReal-time brain activity monitoringAI-powered cognitive enhancementNeural pattern recognitionSecure quantum encryptionMulti-modal interface supportAdvanced analytics dashboardAPI for research integration'
       'Compliance with medical standards24/7 quantum AI support'
     ]
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-purple-600 to-indigo-700'
     textColor: 'text-purple-400'
     link: 'https://ziontechgroup.com/quantum-ai-brain-computer-interface',
     marketPosition: 'Leading edge technology with no direct competitors. 10x more advanced than existing BCI solutions.',
     targetAudience:,
-      'Research institutions, Medical centers, Defense contractors, Tech companies, Universities',    trialDays: 30;
+      'Research institutions, Medical centers, Defense contractors, Tech companies, Universities',    trialDays: 30
     setupTime: '2-4 weeks',
     category: 'Quantum AI & Neuroscience',
     realService: true,    marketPosition: 'Leading edge technology with no direct competitors. 10x more advanced than existing BCI solutions.',
@@ -431,7 +423,7 @@ export const,
     setupTime: '2-4 weeks'
     category: 'Quantum AI & Neuroscience'
     realService: true;
-    technology: [;
+    technology: [
       'Secure quantum encryption'
       'Multi-modal interface support'
       'Advanced analytics dashboard'
@@ -444,7 +436,7 @@ export const,
     descriptio,
   n: 'Revolutionary quantum AI platform that combines quantum computing with advanced neural interfaces. Achieve breakthrough discoveries with 1000% ROI within 6 months through unprecedented cognitive enhancement capabilities.'
     feature,
-  s: [;
+  s: [
       'Quantum neural signal processingReal-time brain activity monitoringAI-powered cognitive enhancementNeural pattern recognitionSecure quantum encryptionMulti-modal interface supportAdvanced analytics dashboardAPI for research integration'
       'Compliance with medical standards24/7 quantum AI support'
     ]
@@ -483,7 +475,7 @@ export const,
     realServic,
   e: true;
     technolog,
-  y: [;
+  y: [
       'Quantum Computing'
       'Neural Networks'
       'Brain-Computer Interface'
@@ -491,7 +483,7 @@ export const,
       'Quantum Encryption'
     ]
     integration,
-  s: [;
+  s: [
       'Research APIs'
       'Medical devices'
       'Cloud platforms'
@@ -529,9 +521,9 @@ export const,
     launchDate: '2024-12-01'
     customers: 15;
     rating: 4.9;
-export interface NextGenInnovativeService {;
+export interface NextGenInnovativeService {
 export const nextGenInnovativeServices: NextGenInnovativeService[] = [
-  // Quantum AI & Advanced Computing;
+  // Quantum AI & Advanced Computing
     id: 'quantum-ai-brain-computer-interface'
     name: 'Quantum AI Brain-Computer Interface',
     tagline: "World's first quantum-enhanced AI with human-like reasoning",
@@ -543,8 +535,7 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
       'Quantum neural signal processingReal-time brain activity monitoringAI-powered cognitive enhancementNeural pattern recognitionSecure quantum encryptionMulti-modal interface supportAdvanced analytics dashboardAPI for research integration',
       'Compliance with medical standards24/7 quantum AI support'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-purple-600 to-indigo-700'
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/quantum-ai-brain-computer-interface',
@@ -596,20 +587,16 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     launchDate: '2024-12-01'
     customers: 15;
     rating: 4.9;
-    reviews: 8;
-  },
-    reviews: 8;
-  },
+    reviews: 8},
+    reviews: 8},
     reviews: 8}},
     realImplementation: true;
     implementationDetails: 'Fully functional quantum AI platform with neural interface capabilities, real-time processing, and advanced security features.',
     launchDate: '2024-12-01'
     customers: 15;
     rating: 4.9;
-    reviews: 8;
-  },
-    reviews: 8;
-  }
+    reviews: 8},
+    reviews: 8}
   // Space Technology Platform;
     id: 'space-technology-platform',
     real_implementation: true;
@@ -722,7 +709,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   g: 4.9,
     review,
   s: 8},
-  // Space Technology Platform;
+  // Space Technology Platform
     i,
   d: 'space - technology - platform',
     nam,
@@ -752,8 +739,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Satellite mission planningOrbital mechanics calculationsReal-time satellite trackingSpace weather monitoringLaunch vehicle integrationGround station managementSpace debris trackingMission analytics dashboard',
       'Regulatory compliance toolsMulti-satellite operations'
     ],
-    popular: true;
-    icon: '',
+    popular: true icon: '',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-400',
       'First comprehensive commercial space platform. 5x more features than existing solutions.',
@@ -852,8 +838,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     launchDate: '2024-11-15'
     customers: 8;
     rating: 4 && 4.8;
-    reviews: 12;
-  },
+    reviews: 12},
     id: 'space-technology-platform',
     name: 'Space Technology Platform',
     tagline: 'Complete space mission management and satellite operations',
@@ -943,11 +928,10 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Mission analytics dashboard',
       'Regulatory compliance tools',
       'Multi-satellite operations'],    description: 'Comprehensive space mission management platform enabling commercial space companies to operate like NASA. Includes satellite operations, mission planning, and space infrastructure management.'
-    features: [;
+    features: [
       'Satellite mission planningOrbital mechanics calculationsReal-time satellite trackingSpace weather monitoringLaunch vehicle integrationGround station managementSpace debris trackingMission analytics dashboard'
       'Regulatory compliance toolsMulti-satellite operations'
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-cyan-600 to-blue-700'
     textColor: 'text-cyan-400'
     link: 'https://ziontechgroup.com/space-technology',
@@ -962,7 +946,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     setupTime: '4-6 weeks'
     category: 'Space Technology'
     realService: true;
-    technology: [;
+    technology: [
       'Launch vehicle integration'
       'Ground station management'
       'Space debris tracking'
@@ -971,7 +955,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Multi-satellite operations'],    descriptio,
   n: 'Comprehensive space mission management platform enabling commercial space companies to operate like NASA. Includes satellite operations, mission planning, and space infrastructure management.'
     feature,
-  s: [;
+  s: [
       'Satellite mission planningOrbital mechanics calculationsReal-time satellite trackingSpace weather monitoringLaunch vehicle integrationGround station managementSpace debris trackingMission analytics dashboard'
       'Regulatory compliance toolsMulti-satellite operations'
     popula,
@@ -1009,7 +993,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     realServic,
   e: true;
     technolog,
-  y: [;
+  y: [
       'Satellite Technology'
       'Orbital Mechanics'
       'Space Weather'
@@ -1017,7 +1001,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Cloud Computing'
     ]
     integration,
-  s: [;
+  s: [
       'SpaceX APIs'
       'NASA data'
       'Weather services'
@@ -1149,8 +1133,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Satellite mission planningOrbital mechanics calculationsReal-time satellite trackingSpace weather monitoringLaunch vehicle integrationGround station managementSpace debris trackingMission analytics dashboard',
       'Regulatory compliance toolsMulti-satellite operations'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-cyan-600 to-blue-700'
     textColor: 'text-cyan-400',
     link: 'https://ziontechgroup.com/space-technology',
@@ -1242,20 +1225,16 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     launchDate: '2024-11-15'
     customers: 8;
     rating: 4.8;
-    reviews: 12;
-  },
-    reviews: 12;
-  },
+    reviews: 12},
+    reviews: 12},
     reviews: 12}},
     realImplementation: true;
     implementationDetails: 'Complete space operations platform with real-time tracking, mission planning tools, and regulatory compliance features.',
     launchDate: '2024-11-15'
     customers: 8;
     rating: 4.8;
-    reviews: 12;
-  },
-    reviews: 12;
-  }
+    reviews: 12},
+    reviews: 12}
   // Biotech AI Platform;
     id: 'biotech-ai-platform',
     real_implementation: true;
@@ -1373,8 +1352,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'AI drug discovery algorithmsGenetic sequence analysisProtein folding predictionDrug interaction modelingClinical trial optimizationRegulatory compliance toolsResearch collaboration platformAdvanced analytics dashboard',
       'API for research integrationMulti-omics data analysis'
     ],
-    popular: true;
-    icon: '',
+    popular: true icon: '',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-400',
       'Leading AI drug discovery platform. 5x faster than traditional methods.',
@@ -1471,8 +1449,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     launchDate: '2024-10-01'
     customers: 25;
     rating: 4 && 4.7;
-    reviews: 18;
-  },
+    reviews: 18},
     id: 'biotech-ai-platform',
     name: 'Biotech AI Platform',
     tagline: 'AI-powered drug discovery and genetic engineering',
@@ -1560,11 +1537,10 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Advanced analytics dashboard',
       'API for research integration',
       'Multi-omics data analysis'],    description: 'Revolutionary AI platform for drug discovery and genetic engineering. Accelerate drug development by 10x while reducing costs by 90% through advanced AI algorithms and quantum computing.'
-    features: [;
+    features: [
       'AI drug discovery algorithmsGenetic sequence analysisProtein folding predictionDrug interaction modelingClinical trial optimizationRegulatory compliance toolsResearch collaboration platformAdvanced analytics dashboard'
       'API for research integrationMulti-omics data analysis'
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-emerald-600 to-teal-700'
     textColor: 'text-emerald-400'
     link: 'https://ziontechgroup.com/biotech-ai',
@@ -1579,7 +1555,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     setupTime: '2-3 weeks'
     category: 'Biotech & Healthcare AI'
     realService: true;
-    technology: [;
+    technology: [
       'Clinical trial optimization'
       'Regulatory compliance tools'
       'Research collaboration platform'
@@ -1588,7 +1564,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Multi-omics data analysis'],    descriptio,
   n: 'Revolutionary AI platform for drug discovery and genetic engineering. Accelerate drug development by 10x while reducing costs by 90% through advanced AI algorithms and quantum computing.'
     feature,
-  s: [;
+  s: [
       'AI drug discovery algorithmsGenetic sequence analysisProtein folding predictionDrug interaction modelingClinical trial optimizationRegulatory compliance toolsResearch collaboration platformAdvanced analytics dashboard'
       'API for research integrationMulti-omics data analysis'
     popula,
@@ -1626,7 +1602,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     realServic,
   e: true;
     technolog,
-  y: [;
+  y: [
       'AI/ML'
       'Quantum Computing'
       'Bioinformatics'
@@ -1634,7 +1610,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Drug Discovery'
     ]
     integration,
-  s: [;
+  s: [
       'Research databases'
       'Lab equipment'
       'Clinical trial systems'
@@ -1765,8 +1741,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'AI drug discovery algorithmsGenetic sequence analysisProtein folding predictionDrug interaction modelingClinical trial optimizationRegulatory compliance toolsResearch collaboration platformAdvanced analytics dashboard',
       'API for research integrationMulti-omics data analysis'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-emerald-600 to-teal-700'
     textColor: 'text-emerald-400',
     link: 'https://ziontechgroup.com/biotech-ai',
@@ -1857,20 +1832,16 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     launchDate: '2024-10-01'
     customers: 25;
     rating: 4.7;
-    reviews: 18;
-  },
-    reviews: 18;
-  },
+    reviews: 18},
+    reviews: 18},
     reviews: 18}},
     realImplementation: true;
     implementationDetails: 'Complete biotech AI platform with drug discovery algorithms, genetic analysis tools, and research collaboration features.',
     launchDate: '2024-10-01'
     customers: 25;
     rating: 4.7;
-    reviews: 18;
-  },
-    reviews: 18;
-  }
+    reviews: 18},
+    reviews: 18}
   // Quantum Financial Trading Platform;
     id: 'quantum-financial-trading',
     real_implementation: true;
@@ -1985,8 +1956,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Quantum AI trading algorithmsNanosecond execution speedReal-time market analysisRisk management toolsPortfolio optimizationMulti-asset tradingAdvanced backtestingRegulatory compliance',
       'Performance analyticsAPI for integration'
     ],
-    popular: true;
-    icon: '',
+    popular: true icon: '',
     color: 'from-yellow-600 to-orange-700',
     textColor: 'text-yellow-400',
       'First quantum AI trading platform. 100x faster than traditional systems.',
@@ -2072,8 +2042,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     competitors: ['Renaissance Technologies ($100 B+ AUM)Two Sigma ($60 B+ AUM)'],
     growthRate: '150% annual growth',
     variant: 'quantum-finance-futuristic',
-    contactInfo: unknown;
-    ],    market_size: '$15T algorithmic trading',    technology: ['Quantum ComputingAI / MLAlgorithmic TradingHigh - Frequency TradingBlockchain']
+    contactInfo: unknown],    market_size: '$15T algorithmic trading',    technology: ['Quantum ComputingAI / MLAlgorithmic TradingHigh - Frequency TradingBlockchain']
     integrations: ['Trading platforms_market data feeds_risk management systems_portfolio systems']
     use_cases: ['Algorithmic trading_portfolio optimization_risk management_market analysis_high - frequency trading']
     roi: '1000%+ ROI through superior trading performance and market timing'
@@ -2089,8 +2058,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     launchDate: '2024-09-01'
     customers: 12;
     rating: 4 && 4.9;
-    reviews: 15;
-  },
+    reviews: 15},
     id: 'quantum-financial-trading',
     name: 'Quantum Financial Trading Platform',
     tagline: 'Quantum AI-powered algorithmic trading with nanosecond precision',
@@ -2174,11 +2142,10 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Regulatory compliance',
       'Performance analytics',
       'API for integration'],    description: 'Revolutionary quantum AI trading platform that processes market data at quantum speeds for unprecedented accuracy. Achieve 1000%+ ROI through advanced quantum algorithms and real-time market analysis.'
-    features: [;
+    features: [
       'Quantum AI trading algorithmsNanosecond execution speedReal-time market analysisRisk management toolsPortfolio optimizationMulti-asset tradingAdvanced backtestingRegulatory compliance'
       'Performance analyticsAPI for integration'
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-yellow-600 to-orange-700'
     textColor: 'text-yellow-400'
     link: 'https://ziontechgroup.com/quantum-financial-trading',
@@ -2193,7 +2160,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     setupTime: '3-4 weeks'
     category: 'Quantum Finance & Trading'
     realService: true;
-    technology: [;
+    technology: [
       'Portfolio optimization'
       'Multi-asset trading'
       'Advanced backtesting'
@@ -2202,7 +2169,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'API for integration'],    descriptio,
   n: 'Revolutionary quantum AI trading platform that processes market data at quantum speeds for unprecedented accuracy. Achieve 1000%+ ROI through advanced quantum algorithms and real-time market analysis.'
     feature,
-  s: [;
+  s: [
       'Quantum AI trading algorithmsNanosecond execution speedReal-time market analysisRisk management toolsPortfolio optimizationMulti-asset tradingAdvanced backtestingRegulatory compliance'
       'Performance analyticsAPI for integration'
     popula,
@@ -2240,7 +2207,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     realServic,
   e: true;
     technolog,
-  y: [;
+  y: [
       'Quantum Computing'
       'AI/ML'
       'Algorithmic Trading'
@@ -2248,14 +2215,14 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Blockchain'
     ]
     integration,
-  s: [;
+  s: [
       'Trading platforms'
       'Market data feeds'
       'Risk management systems'
       'Portfolio systems'
     ]
     useCase,
-  s: [;
+  s: [
       'Algorithmic trading'
       'Portfolio optimization'
       'Risk management'
@@ -2382,8 +2349,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Quantum AI trading algorithmsNanosecond execution speedReal-time market analysisRisk management toolsPortfolio optimizationMulti-asset tradingAdvanced backtestingRegulatory compliance',
       'Performance analyticsAPI for integration'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-yellow-600 to-orange-700'
     textColor: 'text-yellow-400',
     link: 'https://ziontechgroup.com/quantum-financial-trading',
@@ -2478,20 +2444,16 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     launchDate: '2024-09-01'
     customers: 12;
     rating: 4.9;
-    reviews: 15;
-  },
-    reviews: 15;
-  },
+    reviews: 15},
+    reviews: 15},
     reviews: 15}},
     realImplementation: true;
     implementationDetails: 'Complete quantum trading platform with real-time execution, advanced risk management, and comprehensive analytics.',
     launchDate: '2024-09-01'
     customers: 12;
     rating: 4.9;
-    reviews: 15;
-  },
-    reviews: 15;
-  }
+    reviews: 15},
+    reviews: 15}
   // Autonomous Vehicle AI Platform;
     id: 'autonomous-vehicle-ai-platform',
     real_implementation: true;
@@ -2499,8 +2461,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 09 - 01'
     customers: 12;
     rating: 4.9;
-    reviews: 15;
-    ],    marketSiz,
+    reviews: 15],    marketSiz,
   e: '$15T algorithmic trading',    technolog,
   y: ['Quantum ComputingAI/MLAlgorithmic TradingHigh-Frequency TradingBlockchain'],
     technolog,
@@ -2603,8 +2564,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Advanced computer visionReal-time decision makingSensor fusion algorithmsPath planning & navigationObstacle detection & avoidanceTraffic predictionSafety systemsFleet management',
       'Performance analyticsAPI for integration'
     ],
-    popular: true;
-    icon: '',
+    popular: true icon: '',
     color: 'from-blue-600 to-indigo-700',
     textColor: 'text-blue-400',
       'Leading autonomous vehicle AI platform. 10x more accurate than existing solutions.',
@@ -2702,8 +2662,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     launchDate: '2024-08-01'
     customers: 18;
     rating: 4 && 4.8;
-    reviews: 22;
-  },
+    reviews: 22},
     id: 'autonomous-vehicle-ai-platform',
     name: 'Autonomous Vehicle AI Platform',
     tagline: 'Complete AI platform for autonomous vehicles and robotics',
@@ -2793,11 +2752,10 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Fleet management',
       'Performance analytics',
       'API for integration'],    description: 'Comprehensive AI platform for autonomous vehicles, drones, and robotics. Includes perception, decision-making, and control systems with 99.99% accuracy and real-time learning capabilities.'
-    features: [;
+    features: [
       'Advanced computer visionReal-time decision makingSensor fusion algorithmsPath planning & navigationObstacle detection & avoidanceTraffic predictionSafety systemsFleet management'
       'Performance analyticsAPI for integration'
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-blue-600 to-indigo-700'
     textColor: 'text-blue-400'
     link: 'https://ziontechgroup.com/autonomous-vehicle-ai',
@@ -2812,7 +2770,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     setupTime: '4-6 weeks'
     category: 'Autonomous Vehicles & Robotics'
     realService: true;
-    technology: [;
+    technology: [
       'Obstacle detection & avoidance'
       'Traffic prediction'
       'Safety systems'
@@ -2821,7 +2779,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'API for integration'],    descriptio,
   n: 'Comprehensive AI platform for autonomous vehicles, drones, and robotics. Includes perception, decision-making, and control systems with 99.99% accuracy and real-time learning capabilities.'
     feature,
-  s: [;
+  s: [
       'Advanced computer visionReal-time decision makingSensor fusion algorithmsPath planning & navigationObstacle detection & avoidanceTraffic predictionSafety systemsFleet management'
       'Performance analyticsAPI for integration'
     popula,
@@ -2859,7 +2817,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     realServic,
   e: true;
     technolog,
-  y: [;
+  y: [
       'Computer Vision'
       'AI/ML'
       'Robotics'
@@ -2867,7 +2825,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Edge Computing'
     ]
     integration,
-  s: [;
+  s: [
       'Vehicle systems'
       'Drone platforms'
       'Robotics hardware'
@@ -2998,8 +2956,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Advanced computer visionReal-time decision makingSensor fusion algorithmsPath planning & navigationObstacle detection & avoidanceTraffic predictionSafety systemsFleet management',
       'Performance analyticsAPI for integration'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-blue-600 to-indigo-700'
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/autonomous-vehicle-ai',
@@ -3090,20 +3047,16 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     launchDate: '2024-08-01'
     customers: 18;
     rating: 4.8;
-    reviews: 22;
-  },
-    reviews: 22;
-  },
+    reviews: 22},
+    reviews: 22},
     reviews: 22}},
     realImplementation: true;
     implementationDetails: 'Complete autonomous AI platform with computer vision, decision-making algorithms, and safety systems.',
     launchDate: '2024-08-01'
     customers: 18;
     rating: 4.8;
-    reviews: 22;
-  },
-    reviews: 22;
-  }
+    reviews: 22},
+    reviews: 22}
   // Quantum Cybersecurity Platform;
     id: 'quantum-cybersecurity-platform',
     real_implementation: true;
@@ -3217,8 +3170,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Quantum-resistant encryptionAI threat detectionReal-time monitoringAdvanced analyticsIncident responseCompliance toolsThreat intelligenceVulnerability assessment',
       'Security automationAPI for integration'
     ],
-    popular: true;
-    icon: '',
+    popular: true icon: '',
     color: 'from-red-600 to-pink-700',
     textColor: 'text-red-400',
     targetAudience: 'Financial institutions, Healthcare organizations, Government agencies, Tech companies, Critical infrastructure',
@@ -3276,8 +3228,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     competitors: ['Palo Alto Networks ($1)000+/month)CrowdStrike ($500+/month)'],
     growthRate: '180% annual growth',
     variant: 'quantum-security-futuristic',
-    contactInfo: unknown;
-    ],    market_size: '$200B cybersecurity market',    technology: ['Quantum ComputingAI / MLCryptographyThreat DetectionBlockchain']
+    contactInfo: unknown],    market_size: '$200B cybersecurity market',    technology: ['Quantum ComputingAI / MLCryptographyThreat DetectionBlockchain']
     integrations: ['SIEM systemsFirewallsIdentity providers_compliance platforms']
     use_cases: ['Data protection_threat detection_incident responseComplianceRisk management']
     roi: '600% ROI through security improvements and risk reduction'
@@ -3293,8 +3244,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     launchDate: '2024-07-01'
     customers: 35;
     rating: 4 && 4.9;
-    reviews: 28;
-  },
+    reviews: 28},
     id: 'quantum-cybersecurity-platform',
     name: 'Quantum Cybersecurity Platform',
     tagline: 'Quantum-resistant cybersecurity with AI threat detection',
@@ -3378,11 +3328,10 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Vulnerability assessment',
       'Security automation',
       'API for integration'],    description: 'Next-generation cybersecurity platform that combines quantum-resistant encryption with AI-powered threat detection. Protect against quantum attacks and advanced persistent threats with 99.99% accuracy.'
-    features: [;
+    features: [
       'Quantum-resistant encryptionAI threat detectionReal-time monitoringAdvanced analyticsIncident responseCompliance toolsThreat intelligenceVulnerability assessment'
       'Security automationAPI for integration'
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-red-600 to-pink-700'
     textColor: 'text-red-400'
     link: 'https://ziontechgroup.com/quantum-cybersecurity',
@@ -3397,7 +3346,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     setupTime: '2-3 weeks'
     category: 'Quantum Cybersecurity'
     realService: true;
-    technology: [;
+    technology: [
       'Incident response'
       'Compliance tools'
       'Threat intelligence'
@@ -3406,7 +3355,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'API for integration'],    descriptio,
   n: 'Next-generation cybersecurity platform that combines quantum-resistant encryption with AI-powered threat detection. Protect against quantum attacks and advanced persistent threats with 99.99% accuracy.'
     feature,
-  s: [;
+  s: [
       'Quantum-resistant encryptionAI threat detectionReal-time monitoringAdvanced analyticsIncident responseCompliance toolsThreat intelligenceVulnerability assessment'
       'Security automationAPI for integration'
     popula,
@@ -3444,7 +3393,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     realServic,
   e: true;
     technolog,
-  y: [;
+  y: [
       'Quantum Computing'
       'AI/ML'
       'Cryptography'
@@ -3452,14 +3401,14 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Blockchain'
     ]
     integration,
-  s: [;
+  s: [
       'SIEM systems'
       'Firewalls'
       'Identity providers'
       'Compliance platforms'
     ]
     useCase,
-  s: [;
+  s: [
       'Data protection'
       'Threat detection'
       'Incident response'
@@ -3586,8 +3535,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Quantum-resistant encryptionAI threat detectionReal-time monitoringAdvanced analyticsIncident responseCompliance toolsThreat intelligenceVulnerability assessment',
       'Security automationAPI for integration'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-red-600 to-pink-700'
     textColor: 'text-red-400',
     link: 'https://ziontechgroup.com/quantum-cybersecurity',
@@ -3682,20 +3630,16 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     launchDate: '2024-07-01'
     customers: 35;
     rating: 4.9;
-    reviews: 28;
-  },
-    reviews: 28;
-  },
+    reviews: 28},
+    reviews: 28},
     reviews: 28}},
     realImplementation: true;
     implementationDetails: 'Complete quantum cybersecurity platform with encryption, threat detection, and compliance features.',
     launchDate: '2024-07-01'
     customers: 35;
     rating: 4.9;
-    reviews: 28;
-  },
-    reviews: 28;
-  }
+    reviews: 28},
+    reviews: 28}
   // Metaverse AI Development Platform;
     id: 'metaverse-ai-development-platform',
     real_implementation: true;
@@ -3703,8 +3647,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 07 - 01'
     customers: 35;
     rating: 4.9;
-    reviews: 28;
-    ],    marketSiz,
+    reviews: 28],    marketSiz,
   e: '$200B cybersecurity market',    technolog,
   y: ['Quantum ComputingAI/MLCryptographyThreat DetectionBlockchain'],
     technolog,
@@ -3807,8 +3750,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'AI content generationVirtual world buildingReal-time interactionsAvatar customizationSocial featuresMonetization toolsAnalytics dashboardMulti-platform support',
       'API for integrationDeveloper tools'
     ],
-    popular: true;
-    icon: '',
+    popular: true icon: '',
     color: 'from-purple-600 to-pink-700',
     textColor: 'text-purple-400',
       'Leading metaverse AI platform. 5x more features than existing solutions.',
@@ -3904,8 +3846,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     launchDate: '2024-06-01'
     customers: 45;
     rating: 4 && 4.7;
-    reviews: 32;
-  },
+    reviews: 32},
     id: 'metaverse-ai-development-platform',
     name: 'Metaverse AI Development Platform',
     tagline: 'Complete AI platform for metaverse and virtual world creation',
@@ -3995,11 +3936,10 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Multi-platform support',
       'API for integration',
       'Developer tools'],    description: 'Revolutionary AI platform for creating immersive metaverse experiences. Includes AI-powered content generation, virtual world building, and real-time interaction systems.'
-    features: [;
+    features: [
       'AI content generationVirtual world buildingReal-time interactionsAvatar customizationSocial featuresMonetization toolsAnalytics dashboardMulti-platform support'
       'API for integrationDeveloper tools'
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-purple-600 to-pink-700'
     textColor: 'text-purple-400'
     link: 'https://ziontechgroup.com/metaverse-ai-development',
@@ -4014,7 +3954,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     setupTime: '2-3 weeks'
     category: 'Metaverse & Virtual Reality'
     realService: true;
-    technology: [;
+    technology: [
       'Social features'
       'Monetization tools'
       'Analytics dashboard'
@@ -4023,7 +3963,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Developer tools'],    descriptio,
   n: 'Revolutionary AI platform for creating immersive metaverse experiences. Includes AI-powered content generation, virtual world building, and real-time interaction systems.'
     feature,
-  s: [;
+  s: [
       'AI content generationVirtual world buildingReal-time interactionsAvatar customizationSocial featuresMonetization toolsAnalytics dashboardMulti-platform support'
       'API for integrationDeveloper tools'
     popula,
@@ -4061,7 +4001,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     realServic,
   e: true;
     technolog,
-  y: [;
+  y: [
       'AI/ML'
       'VR/AR'
       '3 D Graphics'
@@ -4069,7 +4009,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Blockchain'
     ]
     integration,
-  s: [;
+  s: [
       'VR headsets'
       'Gaming platforms'
       'Social media'
@@ -4200,8 +4140,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'AI content generationVirtual world buildingReal-time interactionsAvatar customizationSocial featuresMonetization toolsAnalytics dashboardMulti-platform support',
       'API for integrationDeveloper tools'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-purple-600 to-pink-700'
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/metaverse-ai-development',
@@ -4292,20 +4231,16 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     launchDate: '2024-06-01'
     customers: 45;
     rating: 4.7;
-    reviews: 32;
-  },
-    reviews: 32;
-  },
+    reviews: 32},
+    reviews: 32},
     reviews: 32}},
     realImplementation: true;
     implementationDetails: 'Complete metaverse AI platform with content generation, world building, and social interaction features.',
     launchDate: '2024-06-01'
     customers: 45;
     rating: 4.7;
-    reviews: 32;
-  },
-    reviews: 32;
-  }
+    reviews: 32},
+    reviews: 32}
   // Quantum Internet Security Platform;
     id: 'quantum-internet-security-platform',
     real_implementation: true;
@@ -4420,8 +4355,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Quantum key distributionAI threat monitoringReal-time protectionNetwork securityData encryptionThreat intelligenceCompliance toolsPerformance analytics',
       'API for integration24/7 monitoring'
     ],
-    popular: true;
-    icon: '',
+    popular: true icon: '',
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-400',
       'First quantum internet security platform. 100x more secure than traditional solutions.',
@@ -4519,8 +4453,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     launchDate: '2024-05-01'
     customers: 22;
     rating: 4 && 4.8;
-    reviews: 19;
-  },
+    reviews: 19},
     id: 'quantum-internet-security-platform',
     name: 'Quantum Internet Security Platform',
     tagline: 'Quantum-secured internet infrastructure with AI monitoring',
@@ -4608,11 +4541,10 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Performance analytics',
       'API for integration',
       '24/7 monitoring'],    description: 'Next-generation internet security platform that uses quantum encryption and AI monitoring to protect against cyber threats. Includes quantum key distribution and real-time threat detection.'
-    features: [;
+    features: [
       'Quantum key distributionAI threat monitoringReal-time protectionNetwork securityData encryptionThreat intelligenceCompliance toolsPerformance analytics'
       'API for integration24/7 monitoring'
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-green-600 to-emerald-700'
     textColor: 'text-green-400'
     link: 'https://ziontechgroup.com/quantum-internet-security',
@@ -4627,7 +4559,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     setupTime: '3-4 weeks'
     category: 'Quantum Internet & Security'
     realService: true;
-    technology: [;
+    technology: [
       'Data encryption'
       'Threat intelligence'
       'Compliance tools'
@@ -4636,7 +4568,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       '24/7 monitoring'],    descriptio,
   n: 'Next-generation internet security platform that uses quantum encryption and AI monitoring to protect against cyber threats. Includes quantum key distribution and real-time threat detection.'
     feature,
-  s: [;
+  s: [
       'Quantum key distributionAI threat monitoringReal-time protectionNetwork securityData encryptionThreat intelligenceCompliance toolsPerformance analytics'
       'API for integration24/7 monitoring'
     popula,
@@ -4674,7 +4606,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     realServic,
   e: true;
     technolog,
-  y: [;
+  y: [
       'Quantum Computing'
       'AI/ML'
       'Network Security'
@@ -4682,7 +4614,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Internet Protocols'
     ]
     integration,
-  s: [;
+  s: [
       'Network equipment'
       'Cloud platforms'
       'Security tools'
@@ -4813,8 +4745,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Quantum key distributionAI threat monitoringReal-time protectionNetwork securityData encryptionThreat intelligenceCompliance toolsPerformance analytics',
       'API for integration24/7 monitoring'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-green-600 to-emerald-700'
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/quantum-internet-security',
@@ -4905,20 +4836,16 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     launchDate: '2024-05-01'
     customers: 22;
     rating: 4.8;
-    reviews: 19;
-  },
-    reviews: 19;
-  },
+    reviews: 19},
+    reviews: 19},
     reviews: 19}},
     realImplementation: true;
     implementationDetails: 'Complete quantum internet security platform with encryption, monitoring, and protection features.',
     launchDate: '2024-05-01'
     customers: 22;
     rating: 4.8;
-    reviews: 19;
-  },
-    reviews: 19;
-  }
+    reviews: 19},
+    reviews: 19}
   // AI-Powered Legal Contract Analyzer;
     id: 'ai-legal-contract-analyzer',
     real_implementation: true;
@@ -5038,8 +4965,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'AI contract analysisRisk assessmentCompliance checkingLegal researchDocument comparisonClause extractionLegal analyticsTeam collaboration',
       'API for integrationMobile app support'
     ],
-    popular: true;
-    icon: '',
+    popular: true icon: '',
     color: 'from-indigo-600 to-purple-700',
     textColor: 'text-indigo-400',
       'Leading AI legal platform. 10x faster than traditional legal review.',
@@ -5136,8 +5062,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     launchDate: '2024-04-01'
     customers: 65;
     rating: 4 && 4.6;
-    reviews: 45;
-  },
+    reviews: 45},
     id: 'ai-legal-contract-analyzer',
     name: 'AI Legal Contract Analyzer',
     tagline: 'AI-powered legal document analysis and risk assessment',
@@ -5227,11 +5152,10 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Team collaboration',
       'API for integration',
       'Mobile app support'],    description: 'Advanced AI platform for legal document analysis, contract review, and risk assessment. Reduce legal review time by 90% while improving accuracy and compliance.'
-    features: [;
+    features: [
       'AI contract analysisRisk assessmentCompliance checkingLegal researchDocument comparisonClause extractionLegal analyticsTeam collaboration'
       'API for integrationMobile app support'
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-indigo-600 to-purple-700'
     textColor: 'text-indigo-400'
     link: 'https://ziontechgroup.com/ai-legal-contract-analyzer',
@@ -5246,7 +5170,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     setupTime: '1-2 weeks'
     category: 'AI Legal Services'
     realService: true;
-    technology: [;
+    technology: [
       'Document comparison'
       'Clause extraction'
       'Legal analytics'
@@ -5255,7 +5179,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Mobile app support'],    descriptio,
   n: 'Advanced AI platform for legal document analysis, contract review, and risk assessment. Reduce legal review time by 90% while improving accuracy and compliance.'
     feature,
-  s: [;
+  s: [
       'AI contract analysisRisk assessmentCompliance checkingLegal researchDocument comparisonClause extractionLegal analyticsTeam collaboration'
       'API for integrationMobile app support'
     popula,
@@ -5293,7 +5217,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     realServic,
   e: true;
     technolog,
-  y: [;
+  y: [
       'AI/ML'
       'Natural Language Processing'
       'Legal Tech'
@@ -5301,7 +5225,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Cloud Computing'
     ]
     integration,
-  s: [;
+  s: [
       'Document management systems'
       'Legal databases'
       'E-signature platforms'
@@ -5432,8 +5356,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'AI contract analysisRisk assessmentCompliance checkingLegal researchDocument comparisonClause extractionLegal analyticsTeam collaboration',
       'API for integrationMobile app support'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-indigo-600 to-purple-700'
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/ai-legal-contract-analyzer',
@@ -5524,27 +5447,22 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     launchDate: '2024-04-01'
     customers: 65;
     rating: 4.6;
-    reviews: 45;
-  },
-    reviews: 45;
-  },
+    reviews: 45},
+    reviews: 45},
     reviews: 45}},
     realImplementation: true;
     implementationDetails: 'Complete AI legal platform with document analysis, risk assessment, and compliance features.',
     launchDate: '2024-04-01'
     customers: 65;
     rating: 4.6;
-    reviews: 45;
-  },
-    reviews: 45;
-  }
+    reviews: 45},
+    reviews: 45}
   // Quantum IoT Platform;
     name: 'Quantum IoT Platform',
     tagline: 'Quantum - secured IoT platform with AI edge computing',
     price: '$2, 999',
     period: '/month'
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-blue-600 to-cyan-700',
     textColor: 'text-blue-400',
     description: unknown;
@@ -5675,8 +5593,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       email: 'kleber@ziontechgroup && ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
     rating: 4.7;
-    reviews: 26;
-  }
+    reviews: 26}
 ],
     growthRate: '250% annual growth'
     variant: 'quantum-iot-futuristic'
@@ -5882,8 +5799,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       "Mission analytics dashboard","
       "Regulatory compliance tools","
       "Multi - satellite operations" ],
-    popular: true;
-    icon: ""
+    popular: true icon: ""
     color: "from - cyan - 600 to - blue - 700"
     text_color: "text - cyan - 400",
     link: "https://ziontechgroup.com / space - technology",
@@ -5990,8 +5906,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       "Advanced analytics dashboard","
       "API for research integration","
       "Multi - omics data analysis" ],
-    popular: true;
-    icon: ""
+    popular: true icon: ""
     color: "from - emerald - 600 to - teal - 700"
     text_color: "text - emerald - 400",
     link: "https://ziontechgroup.com / biotech - ai",
@@ -6098,8 +6013,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       "Regulatory compliance","
       "Performance analytics","
       "API for integration" ],
-    popular: true;
-    icon: ""
+    popular: true icon: ""
     color: "from - yellow - 600 to - orange - 700"
     text_color: "text - yellow - 400",
     link: "https://ziontechgroup.com / quantum - financial - trading",
@@ -6206,8 +6120,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       "Fleet management","
       "Performance analytics","
       "API for integration" ],
-    popular: true;
-    icon: ""
+    popular: true icon: ""
     color: "from - blue - 600 to - indigo - 700"
     text_color: "text - blue - 400",
     link: "https://ziontechgroup.com / autonomous - vehicle - ai",
@@ -6314,8 +6227,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       "Vulnerability assessment","
       "Security automation","
       "API for integration" ],
-    popular: true;
-    icon: ""
+    popular: true icon: ""
     color: "from - red - 600 to - pink - 700"
     text_color: "text - red - 400",
     link: "https://ziontechgroup.com / quantum - cybersecurity",
@@ -6422,8 +6334,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       "Multi - platform support","
       "API for integration","
       "Developer tools" ],
-    popular: true;
-    icon: ""
+    popular: true icon: ""
     color: "from - purple - 600 to - pink - 700"
     text_color: "text - purple - 400",
     link: "https://ziontechgroup.com / metaverse - ai - development",
@@ -6530,8 +6441,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       "Performance analytics","
       "API for integration","
       "24 / 7 monitoring" ],
-    popular: true;
-    icon: ""
+    popular: true icon: ""
     color: "from - green - 600 to - emerald - 700"
     text_color: "text - green - 400",
     link: "https://ziontechgroup.com / quantum - internet - security",
@@ -6638,8 +6548,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       "Team collaboration","
       "API for integration","
       "Mobile app support" ],
-    popular: true;
-    icon: ""
+    popular: true icon: ""
     color: "from - indigo - 600 to - purple - 700"
     text_color: "text - indigo - 400",
     link: "https://ziontechgroup.com / ai - legal - contract - analyzer",
@@ -6746,8 +6655,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       "API for integration","
       "Mobile app support","
       "Cloud dashboard" ],
-    popular: true;
-    icon: ""
+    popular: true icon: ""
     color: "from - blue - 600 to - cyan - 700"
     text_color: "text - blue - 400",
     link: "https://ziontechgroup.com / quantum - iot - platform",
@@ -6801,14 +6709,12 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     launch_date: "2024 - 03 - 01'
     customers: 38;
     rating: 4 && 4.7;
-    reviews: 26;
-]}}
+    reviews: 26]}}
       website: 'https://ziontechgroup.com'},
     real_implementation: true;
     implementation_details: 'Complete quantum IoT platform with security, edge computing, and device management features.',
     launch_date: '2024 - 03 - 01',
-    customers: 38;
-]],
+    customers: 38]],
     rating: 4.7;
     reviews: 26;
     market_siz,"
@@ -6892,8 +6798,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Quantum device securityAI edge computingReal-time processingDevice managementData analyticsSecurity monitoringScalability toolsAPI for integration',
       'Mobile app supportCloud dashboard'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-blue-600 to-cyan-700'
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/quantum-iot-platform',
@@ -6922,7 +6827,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     setupTime: '2-3 weeks'
     category: 'Quantum IoT & Edge Computing'
     realService: true;
-    technology: [;
+    technology: [
     popula,
   r: true,
     ico,
@@ -6986,7 +6891,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     realServic,
   e: true;
     technolog,
-  y: [;
+  y: [
       'Quantum Computing'
       'AI/ML'
       'IoT'
@@ -6994,7 +6899,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Blockchain'
     ]
     integration,
-  s: [;
+  s: [
       'IoT devices'
       'Cloud platforms'
       'Security tools'
@@ -7174,23 +7079,20 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   g: 4.7,
     review,
   s: 26;
-;
 export const,
-  nextGenInnovativeServices: NextGenInnovativeService[] = [;
-  // Quantum AI & Advanced Computing;
+  nextGenInnovativeServices: NextGenInnovativeService[] = [
+  // Quantum AI & Advanced Computing
   {
     id: 'quantum-ai-brain-computer-interface';
     name: 'Quantum AI Brain-Computer Interface';
     tagline: 'World\'s first quantum-enhanced AI with human-like reasoning';
     price: '$2,999';
-    period: '/month';
-    description: 'Revolutionary quantum AI platform that combines quantum computing with advanced neural interfaces. Achieve breakthrough discoveries with 1000% ROI within 6 months through unprecedented cognitive enhancement capabilities.';
+    period: '/month' description: 'Revolutionary quantum AI platform that combines quantum computing with advanced neural interfaces. Achieve breakthrough discoveries with 1000% ROI within 6 months through unprecedented cognitive enhancement capabilities.';
     features: [
       'Quantum neural signal processingReal-time brain activity monitoringAI-powered cognitive enhancementNeural pattern recognitionSecure quantum encryptionMulti-modal interface supportAdvanced analytics dashboardAPI for research integration';
       'Compliance with medical standards24/7 quantum AI support'
     ];
-    popular: true;
-    icon: '';
+    popular: true icon: '';
     color: 'from-purple-600 to-indigo-700';
     textColor: 'text-purple-400';
     link: 'https://ziontechgroup.com/quantum-ai-brain-computer-interface';
@@ -7218,22 +7120,19 @@ export const,
     launchDate: '2024-12-01';
     customers: 15;
     rating: 4.9;
-    reviews: 8;
-  };
+    reviews: 8};
   // Space Technology Platform;
-  {;
+  {
     id: 'space-technology-platform';
     name: 'Space Technology Platform';
     tagline: 'Complete space mission management and satellite operations';
     price: '$5,999';
-    period: '/month';
-    description: 'Comprehensive space mission management platform enabling commercial space companies to operate like NASA. Includes satellite operations, mission planning, and space infrastructure management.';
+    period: '/month' description: 'Comprehensive space mission management platform enabling commercial space companies to operate like NASA. Includes satellite operations, mission planning, and space infrastructure management.';
     features: [
       'Satellite mission planningOrbital mechanics calculationsReal-time satellite trackingSpace weather monitoringLaunch vehicle integrationGround station managementSpace debris trackingMission analytics dashboard';
       'Regulatory compliance toolsMulti-satellite operations'
     ];
-    popular: true;
-    icon: '';
+    popular: true icon: '';
     color: 'from-cyan-600 to-blue-700';
     textColor: 'text-cyan-400';
     link: 'https://ziontechgroup.com/space-technology';
@@ -7261,22 +7160,19 @@ export const,
     launchDate: '2024-11-15';
     customers: 8;
     rating: 4.8;
-    reviews: 12;
-  };
+    reviews: 12};
   // Biotech AI Platform;
-  {;
+  {
     id: 'biotech-ai-platform';
     name: 'Biotech AI Platform';
     tagline: 'AI-powered drug discovery and genetic engineering';
     price: '$3,999';
-    period: '/month';
-    description: 'Revolutionary AI platform for drug discovery and genetic engineering. Accelerate drug development by 10x while reducing costs by 90% through advanced AI algorithms and quantum computing.';
+    period: '/month' description: 'Revolutionary AI platform for drug discovery and genetic engineering. Accelerate drug development by 10x while reducing costs by 90% through advanced AI algorithms and quantum computing.';
     features: [
       'AI drug discovery algorithmsGenetic sequence analysisProtein folding predictionDrug interaction modelingClinical trial optimizationRegulatory compliance toolsResearch collaboration platformAdvanced analytics dashboard';
       'API for research integrationMulti-omics data analysis'
     ];
-    popular: true;
-    icon: '';
+    popular: true icon: '';
     color: 'from-emerald-600 to-teal-700';
     textColor: 'text-emerald-400';
     link: 'https://ziontechgroup.com/biotech-ai';
@@ -7304,22 +7200,19 @@ export const,
     launchDate: '2024-10-01';
     customers: 25;
     rating: 4.7;
-    reviews: 18;
-  };
+    reviews: 18};
   // Quantum Financial Trading Platform;
-  {;
+  {
     id: 'quantum-financial-trading';
     name: 'Quantum Financial Trading Platform';
     tagline: 'Quantum AI-powered algorithmic trading with nanosecond precision';
     price: '$7,999';
-    period: '/month';
-    description: 'Revolutionary quantum AI trading platform that processes market data at quantum speeds for unprecedented accuracy. Achieve 1000%+ ROI through advanced quantum algorithms and real-time market analysis.';
+    period: '/month' description: 'Revolutionary quantum AI trading platform that processes market data at quantum speeds for unprecedented accuracy. Achieve 1000%+ ROI through advanced quantum algorithms and real-time market analysis.';
     features: [
       'Quantum AI trading algorithmsNanosecond execution speedReal-time market analysisRisk management toolsPortfolio optimizationMulti-asset tradingAdvanced backtestingRegulatory compliance';
       'Performance analyticsAPI for integration'
     ];
-    popular: true;
-    icon: '';
+    popular: true icon: '';
     color: 'from-yellow-600 to-orange-700';
     textColor: 'text-yellow-400';
     link: 'https://ziontechgroup.com/quantum-financial-trading';
@@ -7347,22 +7240,19 @@ export const,
     launchDate: '2024-09-01';
     customers: 12;
     rating: 4.9;
-    reviews: 15;
-  };
+    reviews: 15};
   // Autonomous Vehicle AI Platform;
-  {;
+  {
     id: 'autonomous-vehicle-ai-platform';
     name: 'Autonomous Vehicle AI Platform';
     tagline: 'Complete AI platform for autonomous vehicles and robotics';
     price: '$4,999';
-    period: '/month';
-    description: 'Comprehensive AI platform for autonomous vehicles, drones, and robotics. Includes perception, decision-making, and control systems with 99.99% accuracy and real-time learning capabilities.';
+    period: '/month' description: 'Comprehensive AI platform for autonomous vehicles, drones, and robotics. Includes perception, decision-making, and control systems with 99.99% accuracy and real-time learning capabilities.';
     features: [
       'Advanced computer visionReal-time decision makingSensor fusion algorithmsPath planning & navigationObstacle detection & avoidanceTraffic predictionSafety systemsFleet management';
       'Performance analyticsAPI for integration'
     ];
-    popular: true;
-    icon: '';
+    popular: true icon: '';
     color: 'from-blue-600 to-indigo-700';
     textColor: 'text-blue-400';
     link: 'https://ziontechgroup.com/autonomous-vehicle-ai';
@@ -7390,22 +7280,19 @@ export const,
     launchDate: '2024-08-01';
     customers: 18;
     rating: 4.8;
-    reviews: 22;
-  };
+    reviews: 22};
   // Quantum Cybersecurity Platform;
-  {;
+  {
     id: 'quantum-cybersecurity-platform';
     name: 'Quantum Cybersecurity Platform';
     tagline: 'Quantum-resistant cybersecurity with AI threat detection';
     price: '$3,999';
-    period: '/month';
-    description: 'Next-generation cybersecurity platform that combines quantum-resistant encryption with AI-powered threat detection. Protect against quantum attacks and advanced persistent threats with 99.99% accuracy.';
+    period: '/month' description: 'Next-generation cybersecurity platform that combines quantum-resistant encryption with AI-powered threat detection. Protect against quantum attacks and advanced persistent threats with 99.99% accuracy.';
     features: [
       'Quantum-resistant encryptionAI threat detectionReal-time monitoringAdvanced analyticsIncident responseCompliance toolsThreat intelligenceVulnerability assessment';
       'Security automationAPI for integration'
     ];
-    popular: true;
-    icon: '';
+    popular: true icon: '';
     color: 'from-red-600 to-pink-700';
     textColor: 'text-red-400';
     link: 'https://ziontechgroup.com/quantum-cybersecurity';
@@ -7433,22 +7320,19 @@ export const,
     launchDate: '2024-07-01';
     customers: 35;
     rating: 4.9;
-    reviews: 28;
-  };
+    reviews: 28};
   // Metaverse AI Development Platform;
-  {;
+  {
     id: 'metaverse-ai-development-platform';
     name: 'Metaverse AI Development Platform';
     tagline: 'Complete AI platform for metaverse and virtual world creation';
     price: '$2,999';
-    period: '/month';
-    description: 'Revolutionary AI platform for creating immersive metaverse experiences. Includes AI-powered content generation, virtual world building, and real-time interaction systems.';
+    period: '/month' description: 'Revolutionary AI platform for creating immersive metaverse experiences. Includes AI-powered content generation, virtual world building, and real-time interaction systems.';
     features: [
       'AI content generationVirtual world buildingReal-time interactionsAvatar customizationSocial featuresMonetization toolsAnalytics dashboardMulti-platform support';
       'API for integrationDeveloper tools'
     ];
-    popular: true;
-    icon: '';
+    popular: true icon: '';
     color: 'from-purple-600 to-pink-700';
     textColor: 'text-purple-400';
     link: 'https://ziontechgroup.com/metaverse-ai-development';
@@ -7476,22 +7360,19 @@ export const,
     launchDate: '2024-06-01';
     customers: 45;
     rating: 4.7;
-    reviews: 32;
-  };
+    reviews: 32};
   // Quantum Internet Security Platform;
-  {;
+  {
     id: 'quantum-internet-security-platform';
     name: 'Quantum Internet Security Platform';
     tagline: 'Quantum-secured internet infrastructure with AI monitoring';
     price: '$4,999';
-    period: '/month';
-    description: 'Next-generation internet security platform that uses quantum encryption and AI monitoring to protect against cyber threats. Includes quantum key distribution and real-time threat detection.';
+    period: '/month' description: 'Next-generation internet security platform that uses quantum encryption and AI monitoring to protect against cyber threats. Includes quantum key distribution and real-time threat detection.';
     features: [
       'Quantum key distributionAI threat monitoringReal-time protectionNetwork securityData encryptionThreat intelligenceCompliance toolsPerformance analytics';
       'API for integration24/7 monitoring'
     ];
-    popular: true;
-    icon: '';
+    popular: true icon: '';
     color: 'from-green-600 to-emerald-700';
     textColor: 'text-green-400';
     link: 'https://ziontechgroup.com/quantum-internet-security';
@@ -7519,22 +7400,19 @@ export const,
     launchDate: '2024-05-01';
     customers: 22;
     rating: 4.8;
-    reviews: 19;
-  };
+    reviews: 19};
   // AI-Powered Legal Contract Analyzer;
-  {;
+  {
     id: 'ai-legal-contract-analyzer';
     name: 'AI Legal Contract Analyzer';
     tagline: 'AI-powered legal document analysis and risk assessment';
     price: '$1,999';
-    period: '/month';
-    description: 'Advanced AI platform for legal document analysis, contract review, and risk assessment. Reduce legal review time by 90% while improving accuracy and compliance.';
+    period: '/month' description: 'Advanced AI platform for legal document analysis, contract review, and risk assessment. Reduce legal review time by 90% while improving accuracy and compliance.';
     features: [
       'AI contract analysisRisk assessmentCompliance checkingLegal researchDocument comparisonClause extractionLegal analyticsTeam collaboration';
       'API for integrationMobile app support'
     ];
-    popular: true;
-    icon: '';
+    popular: true icon: '';
     color: 'from-indigo-600 to-purple-700';
     textColor: 'text-indigo-400';
     link: 'https://ziontechgroup.com/ai-legal-contract-analyzer';
@@ -7562,22 +7440,19 @@ export const,
     launchDate: '2024-04-01';
     customers: 65;
     rating: 4.6;
-    reviews: 45;
-  };
+    reviews: 45};
   // Quantum IoT Platform;
-  {;
+  {
     id: 'quantum-iot-platform';
     name: 'Quantum IoT Platform';
     tagline: 'Quantum-secured IoT platform with AI edge computing';
     price: '$2,999';
-    period: '/month';
-    description: 'Revolutionary IoT platform that combines quantum security with AI edge computing. Secure billions of devices with real-time AI processing and quantum encryption.';
+    period: '/month' description: 'Revolutionary IoT platform that combines quantum security with AI edge computing. Secure billions of devices with real-time AI processing and quantum encryption.';
     features: [
       'Quantum device securityAI edge computingReal-time processingDevice managementData analyticsSecurity monitoringScalability toolsAPI for integration';
       'Mobile app supportCloud dashboard'
     ];
-    popular: true;
-    icon: '';
+    popular: true icon: '';
     color: 'from-blue-600 to-cyan-700';
     textColor: 'text-blue-400';
     link: 'https://ziontechgroup.com/quantum-iot-platform';
@@ -7605,8 +7480,7 @@ export const,
     launchDate: '2024-03-01';
     customers: 38;
     rating: 4.7;
-    reviews: 26;
-  }
+    reviews: 26}
 ];
     reviews: 26;
   {/* TODO: Fix JSX expression */}
@@ -7880,15 +7754,13 @@ export const,
   s: 26}
 ];
     review,
-  s: 26};
-];export const,
-  nextGenInnovativeServices: NextGenInnovativeService[] = [;
+  s: 26}];export const,
+  nextGenInnovativeServices: NextGenInnovativeService[] = [
     review,
-  s: 26;
-;
+  s: 26
 export const,
-  nextGenInnovativeServices: NextGenInnovativeService[] = [;
-  // Quantum AI & Advanced Computing;
+  nextGenInnovativeServices: NextGenInnovativeService[] = [
+  // Quantum AI & Advanced Computing
   {
     id: "quantum-ai-brain-computer-interface",
     name: "Quantum AI Brain-Computer Interface",
@@ -7906,8 +7778,7 @@ export const,
       "API for research integration",
       "Compliance with medical standards",
       "24/7 quantum AI support" ],
-    popular: true;
-    icon: ""
+    popular: true icon: ""
     color: "from-purple-600 to-indigo-700"
     textColor: "text-purple-400",
     link: "https://ziontechgroup.com/quantum-ai-brain-computer-interface",
@@ -7938,7 +7809,7 @@ export const,
     rating: 4.9;
     reviews: 8,},
   // Space Technology Platform;
-  {;
+  {
     id: "space-technology-platform",
     name: "Space Technology Platform",
     tagline: "Complete space mission management and satellite operations",
@@ -7955,8 +7826,7 @@ export const,
       "Mission analytics dashboard",
       "Regulatory compliance tools",
       "Multi-satellite operations" ],
-    popular: true;
-    icon: ""
+    popular: true icon: ""
     color: "from-cyan-600 to-blue-700"
     textColor: "text-cyan-400",
     link: "https://ziontechgroup.com/space-technology",
@@ -7987,7 +7857,7 @@ export const,
     rating: 4.8;
     reviews: 12,},
   // Biotech AI Platform;
-  {;
+  {
     id: "biotech-ai-platform",
     name: "Biotech AI Platform",
     tagline: "AI-powered drug discovery and genetic engineering",
@@ -8004,8 +7874,7 @@ export const,
       "Advanced analytics dashboard",
       "API for research integration",
       "Multi-omics data analysis" ],
-    popular: true;
-    icon: ""
+    popular: true icon: ""
     color: "from-emerald-600 to-teal-700"
     textColor: "text-emerald-400",
     link: "https://ziontechgroup.com/biotech-ai",
@@ -8036,7 +7905,7 @@ export const,
     rating: 4.7;
     reviews: 18,},
   // Quantum Financial Trading Platform;
-  {;
+  {
     id: "quantum-financial-trading",
     name: "Quantum Financial Trading Platform",
     tagline: "Quantum AI-powered algorithmic trading with nanosecond precision",
@@ -8053,8 +7922,7 @@ export const,
       "Regulatory compliance",
       "Performance analytics",
       "API for integration" ],
-    popular: true;
-    icon: ""
+    popular: true icon: ""
     color: "from-yellow-600 to-orange-700"
     textColor: "text-yellow-400",
     link: "https://ziontechgroup.com/quantum-financial-trading",
@@ -8085,7 +7953,7 @@ export const,
     rating: 4.9;
     reviews: 15,},
   // Autonomous Vehicle AI Platform;
-  {;
+  {
     id: "autonomous-vehicle-ai-platform",
     name: "Autonomous Vehicle AI Platform",
     tagline: "Complete AI platform for autonomous vehicles and robotics",
@@ -8102,8 +7970,7 @@ export const,
       "Fleet management",
       "Performance analytics",
       "API for integration" ],
-    popular: true;
-    icon: ""
+    popular: true icon: ""
     color: "from-blue-600 to-indigo-700"
     textColor: "text-blue-400",
     link: "https://ziontechgroup.com/autonomous-vehicle-ai",
@@ -8134,7 +8001,7 @@ export const,
     rating: 4.8;
     reviews: 22,},
   // Quantum Cybersecurity Platform;
-  {;
+  {
     id: "quantum-cybersecurity-platform",
     name: "Quantum Cybersecurity Platform",
     tagline: "Quantum-resistant cybersecurity with AI threat detection",
@@ -8151,8 +8018,7 @@ export const,
       "Vulnerability assessment",
       "Security automation",
       "API for integration" ],
-    popular: true;
-    icon: ""
+    popular: true icon: ""
     color: "from-red-600 to-pink-700"
     textColor: "text-red-400",
     link: "https://ziontechgroup.com/quantum-cybersecurity",
@@ -8183,7 +8049,7 @@ export const,
     rating: 4.9;
     reviews: 28,},
   // Metaverse AI Development Platform;
-  {;
+  {
     id: "metaverse-ai-development-platform",
     name: "Metaverse AI Development Platform",
     tagline: "Complete AI platform for metaverse and virtual world creation",
@@ -8200,8 +8066,7 @@ export const,
       "Multi-platform support",
       "API for integration",
       "Developer tools" ],
-    popular: true;
-    icon: ""
+    popular: true icon: ""
     color: "from-purple-600 to-pink-700"
     textColor: "text-purple-400",
     link: "https://ziontechgroup.com/metaverse-ai-development",
@@ -8232,7 +8097,7 @@ export const,
     rating: 4.7;
     reviews: 32,},
   // Quantum Internet Security Platform;
-  {;
+  {
     id: "quantum-internet-security-platform",
     name: "Quantum Internet Security Platform",
     tagline: "Quantum-secured internet infrastructure with AI monitoring",
@@ -8249,8 +8114,7 @@ export const,
       "Performance analytics",
       "API for integration",
       "24/7 monitoring" ],
-    popular: true;
-    icon: ""
+    popular: true icon: ""
     color: "from-green-600 to-emerald-700"
     textColor: "text-green-400",
     link: "https://ziontechgroup.com/quantum-internet-security",
@@ -8281,7 +8145,7 @@ export const,
     rating: 4.8;
     reviews: 19,},
   // AI-Powered Legal Contract Analyzer;
-  {;
+  {
     id: "ai-legal-contract-analyzer",
     name: "AI Legal Contract Analyzer",
     tagline: "AI-powered legal document analysis and risk assessment",
@@ -8298,8 +8162,7 @@ export const,
       "Team collaboration",
       "API for integration",
       "Mobile app support" ],
-    popular: true;
-    icon: ""
+    popular: true icon: ""
     color: "from-indigo-600 to-purple-700"
     textColor: "text-indigo-400",
     link: "https://ziontechgroup.com/ai-legal-contract-analyzer",
@@ -8330,7 +8193,7 @@ export const,
     rating: 4.6;
     reviews: 45,},
   // Quantum IoT Platform;
-  {;
+  {
     id: "quantum-iot-platform",
     name: "Quantum IoT Platform",
     tagline: "Quantum-secured IoT platform with AI edge computing",
@@ -8347,8 +8210,7 @@ export const,
       "API for integration",
       "Mobile app support",
       "Cloud dashboard" ],
-    popular: true;
-    icon: ""
+    popular: true icon: ""
     color: "from-blue-600 to-cyan-700"
     textColor: "text-blue-400",
     link: "https://ziontechgroup.com/quantum-iot-platform",
@@ -8377,8 +8239,7 @@ export const,
     launchDate: "2024-03-01'
     customers: 38;
     rating: 4.7;
-    reviews: 26;
-]}}
+    reviews: 26]}}
     },
     realImplementation: true;
     implementationDetails: 'Complete quantum IoT platform with security, edge computing, and device management features.',
@@ -8630,7 +8491,7 @@ export const,
   s: 8 }, export interface NextGenInnovativeService export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   s: string} websit,
   e: string} } customer,
-  s: number; ratin,
+  s: number ratin,
   g: number; export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   s: string} websit,
   e: string }, realImplementatio,
@@ -8640,7 +8501,7 @@ export const,
   s: number, ratin,
   g: number, review,
   s: number } i,
-  d: string; nam,
+  d: string nam,
   e: string; taglin,
   e: string; pric,
   e: string; perio,
@@ -8770,7 +8631,7 @@ export const,
   e: '2024 - 12 - 01', customer,
   s: 15, ratin,
   g: 4.9, review,
-  s: 8}, // Space Technology Platform; ' i,
+  s: 8}, // Space Technology Platform ' i,
   d: 'space - technology - platform', ' nam,
   e: 'Space Technology Platform',' taglin,
   e: 'Complete space mission management and satellite operations',' pric,
@@ -10741,7 +10602,7 @@ export const,
   s: 38, ratin,
   g: 4.7, review,
   s: 26 ; export const,
-  nextGenInnovativeServices: NextGenInnovativeService[] = [; // Quantum AI & Advanced Computing; {/* TODO: Fix JSX expression */}
+  nextGenInnovativeServices: NextGenInnovativeService[] = [ // Quantum AI & Advanced Computing {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -10842,10 +10703,10 @@ export const,
   s: 38; ratin,
   g: 4.7; review,
   s: 26} ]; review,
-  s: 26}; ];export const,
-  nextGenInnovativeServices: NextGenInnovativeService[] = [; review,
-  s: 26 ; export const,
-  nextGenInnovativeServices: NextGenInnovativeService[] = [; // Quantum AI & Advanced Computing; {/* TODO: Fix JSX expression */}"
+  s: 26}];export const,
+  nextGenInnovativeServices: NextGenInnovativeService[] = [ review,
+  s: 26  export const,
+  nextGenInnovativeServices: NextGenInnovativeService[] = [ // Quantum AI & Advanced Computing {/* TODO: Fix JSX expression */}"
   s://ziontechgroup.com"} }, realImplementatio,
   n: true, implementationDetail,"
   s: "Fully functional quantum AI platform with neural interface capabilities, real-time processing, and advanced security features.", launchDat,"

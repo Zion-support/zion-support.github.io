@@ -504,6 +504,5 @@ const October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
         </div>
       </div>
     </di, v>
-  );
-};
-export default October2025 TechBreakthroughBanner;
+  )};
+export default October2025 TechBreakthroughBanner

@@ -1,4 +1,3 @@
-
     id: 'finops - scheduler - optimizer'
     name: 'FinOps Scheduler Optimizer',
     tagline: 'Rightsizing & schedules with IaC exports',
@@ -24,8 +23,7 @@
       'Schedule generator',
       'IaC export',
       'Alerting'],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from - emerald - 600 to - teal - 700'
     text_color: 'text - emerald - 300',
     link: 'https://ziontechgroup.com / services / finops - scheduler - optimizer',
@@ -50,8 +48,7 @@
     launch_date: '2025 - 02 - 10'
     customers: 25;
     rating: 4 && 4.6;
-    reviews: 12;
-  },
+    reviews: 12},
     id: 'db - index - advisor'
     name: 'DB Index Advisor',
     tagline: 'AI index recommendations for Postgres / MySQL',
@@ -131,8 +128,7 @@
       'Index suggestions',
       'Impact simulation',
       'Capacity forecast'],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from - indigo - 600 to - violet - 700'
     text_color: 'text - indigo - 300',
     link: 'https://ziontechgroup.com / services / db - index - advisor',
@@ -157,8 +153,7 @@
     launch_date: '2025 - 02 - 12'
     customers: 18;
     rating: 4 && 4.5;
-    reviews: 9;
-  };
+    reviews: 9};
       'Modern alternative to legacy APM addons with focused insights.'
     targetAudience: 'DBA, Backend, Platform'
     trialDays: 14;
@@ -179,8 +174,7 @@
     launchDate: '2025-02-12'
     customers: 18;
     rating: 4.5;
-    reviews: 9;
-  }
+    reviews: 9}
       'Modern alternative to legacy APM addons with focused insights.',
     targetAudience: 'DBA, Backend, Platform',
     trialDays: 14;
@@ -201,20 +195,16 @@
     launchDate: '2025-02-12'
     customers: 18;
     rating: 4.5;
-    reviews: 9;
-  };
-];
+    reviews: 9}];
 		period: '/month',
 		description: 'Automated jailbreak detection, policy compliance checks, and regression gate for prompts and outputs.'
 		features: ['Policy suitesJailbreak corporaRegression gatesDashboard & alerts'];
-		popular: true;
-		icon: ''
+		popular: true icon: ''
 		color: 'from-rose-600 to-red-700',
 		textColor: 'text-rose-300',
 		period: '/month',
 		description: 'Automated jailbreak detection, policy compliance checks, and regression gate for prompts and outputs.',
-    features: ['Policy suitesJailbreak corporaRegression gatesDashboard & alerts'], popular: true;
-		icon: '', color: 'from-rose-600 to-red-700',
+    features: ['Policy suitesJailbreak corporaRegression gatesDashboard & alerts'], popular: true icon: '', color: 'from-rose-600 to-red-700',
 		textColor: 'text-rose-300', link: 'https://ziontechgroup.com/services/ai-redteam-evaluator',
 		marketPosition: 'Simpler and more affordable compared to bespoke security audits.',
 		targetAudience: 'AI platform, Security, Compliance'
@@ -236,8 +226,7 @@
 		launchDate: '2025-02-01'
 		customers: 40;
 		rating: 4 && 4.7;
-		reviews: 18;
-	}
+		reviews: 18}
 		id: 'finops-scheduler-optimizer'
 		name: 'FinOps Scheduler Optimizer'
 		tagline: 'Rightsizing & schedules with IaC exports'
@@ -245,8 +234,7 @@
 		period: '/month'
 		description: 'Smart schedules and rightsizing recommendations for EC2/GKE/AKS/EKS with Terraform exports.'
 		features: ['Idle detectionSchedule generatorIaC exportAlerting'];
-		popular: true;
-		icon: ''
+		popular: true icon: ''
 		color: 'from-emerald-600 to-teal-700',
 		textColor: 'text-emerald-300',
 		link: 'https://ziontechgroup && ziontechgroup.com/services/finops-scheduler-optimizer',
@@ -270,8 +258,7 @@
 		launchDate: '2025-02-10'
 		customers: 25;
 		rating: 4 && 4.6;
-		reviews: 12;
-	}
+		reviews: 12}
 		id: 'db-index-advisor'
 		name: 'DB Index Advisor'
 		tagline: 'AI index recommendations for Postgres/MySQL'
@@ -279,8 +266,7 @@
 		period: '/month'
 		description: 'Collects slow queries and proposes safe index changes with before/after impact analysis.'
 		features: ['Slow query captureIndex suggestionsImpact simulationCapacity forecast'];
-		popular: false;
-		icon: ''
+		popular: false icon: ''
 		color: 'from-indigo-600 to-violet-700'
 		textColor: 'text-indigo-300',
 		link: 'https://ziontechgroup && ziontechgroup.com/services/db-index-advisor',
@@ -304,8 +290,7 @@
 		launchDate: '2025-02-12'
 		customers: 18;
 		rating: 4 && 4.5;
-		reviews: 9;
-	}
+		reviews: 9}
 ];
   id: 'ai - redteam - evaluator',
   name: 'AI RedTeam Evaluator',
@@ -314,8 +299,7 @@
   period: '/month',
   description: 'Automated jailbreak detection, policy compliance checks, and regression gate for prompts and outputs.'
   features: ['Policy suites_jailbreak corpora_regression gates_dashboard & alerts'];
-  popular: true;
-  icon: ''
+  popular: true icon: ''
   color: 'from - rose - 600 to - red - 700'
   text_color: 'text - rose - 300',
   link: 'https://ziontechgroup.com / services / ai - redteam - evaluator',
@@ -339,8 +323,7 @@
   launch_date: '2025 - 02 - 01'
   customers: 40;
   rating: 4.7;
-  reviews: 18;
-}
+  reviews: 18}
   id: 'finops - scheduler - optimizer'
   name: 'FinOps Scheduler Optimizer'
   tagline: 'Rightsizing & schedules with IaC exports'
@@ -348,8 +331,7 @@
   period: '/month'
   description: 'Smart schedules and rightsizing recommendations for EC2 / GKE / AKS / EKS with Terraform exports.'
   features: ['Idle detection_schedule generatorIaC export_alerting'];
-  popular: true;
-  icon: ''
+  popular: true icon: ''
   color: 'from - emerald - 600 to - teal - 700',
   text_color: 'text - emerald - 300',
   link: 'https://ziontechgroup.com / services / finops - scheduler - optimizer',
@@ -373,8 +355,7 @@
   launch_date: '2025 - 02 - 10'
   customers: 25;
   rating: 4.6;
-  reviews: 12;
-}
+  reviews: 12}
   id: 'db - index - advisor'
   name: 'DB Index Advisor'
   tagline: 'AI index recommendations for Postgres / MySQL'
@@ -382,8 +363,7 @@
   period: '/month'
   description: 'Collects slow queries and proposes safe index changes with before / after impact analysis.'
   features: ['Slow query capture_index suggestions_impact simulation_capacity forecast'];
-  popular: false;
-  icon: ''
+  popular: false icon: ''
   color: 'from - indigo - 600 to - violet - 700'
   text_color: 'text - indigo - 300',
   link: 'https://ziontechgroup.com / services / db - index - advisor',
@@ -407,26 +387,24 @@
   launch_date: '2025 - 02 - 12'
   customers: 18;
   rating: 4.5;
-  reviews: 9;
-}
+  reviews: 9}
 		rating: 4.5;
 		reviews: 9;
-// const contact = {;
+// const contact = {
 	mobile: '+1 302 464 0950';
 	email: 'kleber@ziontechgroup.com';
 	address: '364 E Main St STE 1008 Middletown DE 19709'}
 	website: 'https://ziontechgroup.com'};
-export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
+export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [
 	{
-		id: 'ai-redteam-evaluator';
+		id: 'ai-redteam-evaluator'
 		name: 'AI RedTeam Evaluator';
 		tagline: 'Continuous LLM redteaming and safety scoring';
 		price: '$149';
 		period: '/month',,
   description: 'Automated jailbreak detection, policy compliance checks, and regression gate for prompts and outputs.';
 		features: ['Policy suitesJailbreak corporaRegression gatesDashboard & alerts'];
-		popular: true;
-		icon: '';
+		popular: true icon: '';
 		color: 'from-rose-600 to-red-700';
 		textColor: 'text-rose-300';
 		link: 'https://ziontechgroup.com/services/ai-redteam-evaluator';
@@ -586,8 +564,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
     ratin,
   g: 4.5,
     review,
-  s: 9};
-];
+  s: 9}];
 		perio,
   d: '/month'
 		descriptio,
@@ -1005,12 +982,12 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
   s://ziontechgroup.com'
 };
 export const,
-  real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
+  real2029Q1Additions: EnhancedRealMicroSaasService[] = [
 	{/* TODO: Fix JSX expression */}
   g: 4.7}
 		review,
   s: 18}
-	};
+	}
 	{/* TODO: Fix JSX expression */}
   g: 4.6}
 		review,
@@ -1022,23 +999,20 @@ export const,
   s: 9}
 	}
 ];
-;
-// const contact = {;
+// const contact = {
 	mobile: '+1 302 464 0950';
 	email: 'kleber@ziontechgroup.com';
 	address: '364 E Main St STE 1008 Middletown DE 19709'}
 	website: 'https://ziontechgroup.com'};
-export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
+export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [
 	{
-		id: 'ai-redteam-evaluator';
+		id: 'ai-redteam-evaluator'
 		name: 'AI RedTeam Evaluator';
 		tagline: 'Continuous LLM redteaming and safety scoring';
 		price: '$149';
-		period: '/month';
-		description: 'Automated jailbreak detection, policy compliance checks, and regression gate for prompts and outputs.';
+		period: '/month' description: 'Automated jailbreak detection, policy compliance checks, and regression gate for prompts and outputs.';
 		features: ['Policy suitesJailbreak corporaRegression gatesDashboard & alerts'];
-		popular: true;
-		icon: '';
+		popular: true icon: '';
 		color: 'from-rose-600 to-red-700';
 		textColor: 'text-rose-300';
 		link: 'https://ziontechgroup.com/services/ai-redteam-evaluator';
@@ -1070,12 +1044,12 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
   s://ziontechgroup.com'
 };
 export const,
-  real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
+  real2029Q1Additions: EnhancedRealMicroSaasService[] = [
 	{/* TODO: Fix JSX expression */}
   g: 4.7}
 		review,
   s: 18}
-	};
+	}
 	{/* TODO: Fix JSX expression */}
   g: 4.6}
 		review,
@@ -1195,7 +1169,7 @@ i,
   e: '2025-02-12', customer,
   s: 18, ratin,
   g: 4.5, review,
-  s: 9}; ]; ' perio,
+  s: 9}]; ' perio,
   d: '/month'' descriptio,
   n: 'Automated jailbreak detection, policy compliance checks, and regression gate for prompts and outputs.'' feature,
   s: ['Policy suitesJailbreak corporaRegression gatesDashboard & alerts']; popula,
@@ -1409,9 +1383,9 @@ i,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
   s://ziontechgroup.com' }; export const,
-  real2029Q1Additions: EnhancedRealMicroSaasService[] = [; {/* TODO: Fix JSX expression */}
+  real2029Q1Additions: EnhancedRealMicroSaasService[] = [ {/* TODO: Fix JSX expression */}
   g: 4.7} review,
-  s: 18} }; {/* TODO: Fix JSX expression */}
+  s: 18} } {/* TODO: Fix JSX expression */}
   g: 4.6} review,
   s: 12} }; {/* TODO: Fix JSX expression */}
   g: 4.5} review,
@@ -1420,9 +1394,9 @@ i,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
   s://ziontechgroup.com' }; export const,
-  real2029Q1Additions: EnhancedRealMicroSaasService[] = [; {/* TODO: Fix JSX expression */}
+  real2029Q1Additions: EnhancedRealMicroSaasService[] = [ {/* TODO: Fix JSX expression */}
   g: 4.7} review,
-  s: 18} }; {/* TODO: Fix JSX expression */}
+  s: 18} } {/* TODO: Fix JSX expression */}
   g: 4.6} review,
   s: 12} }; {/* TODO: Fix JSX expression */}
   g: 4.5} review,

@@ -88,6 +88,5 @@ const testPagetsx: React.FC = () => {
       </main>
       <Footer />
     </div>
-  );
-};
-export default testPagetsx;
+  )};
+export default testPagetsx

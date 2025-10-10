@@ -6,7 +6,7 @@ import { Settings, Zap, Shield, BarChart, CheckCircle, Star,  Settings,  Zap,  B
 const ITAutomationPage: React.FC = () => {
   const features = [];
   return (
-    {// TODO: Add content;}
+    {// TODO: Add content}
 };
   ico,
   n: Settings,
@@ -15,8 +15,7 @@ const ITAutomationPage: React.FC = () => {
       descriptio,
   n: 'Automate repetitive IT processes and workflows',
       benefit,
-  s: ['Workflow automation', 'Task scheduling', 'Process optimization'];
-    },
+  s: ['Workflow automation', 'Task scheduling', 'Process optimization']},
       ico,
   n: Zap,
       titl,
@@ -89,6 +88,5 @@ const ITAutomationPage: React.FC = () => {
       </main>
       <Footer /></Footer>
     </div>
-  );
-};
-export default ItAutomationPage;
+  )};
+export default ItAutomationPage

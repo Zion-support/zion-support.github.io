@@ -84,7 +84,7 @@ export default function AboutPage() {
       bio: 'Leading researcher in natural language processing and computer vision',
       expertise: ['NLP', 'Computer Vision', 'Deep Learning']
     }
-  ];
+  ]
   const values = [
     {
       icon: Brain,
@@ -578,8 +578,7 @@ export default function AboutPage() {
         </div>
       </section>
     </div>
-  );
-}
+  )}
   </a>
   </a>
   </p>

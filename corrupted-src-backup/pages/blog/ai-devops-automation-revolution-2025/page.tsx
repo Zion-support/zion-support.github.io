@@ -59,9 +59,9 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-purp, l, e-300, m, b-3">🤖 Autonomous, C, I/CD, Agent, s</h3>
                 <p, className="te, x, t-gr, a, y-300, leadin, g-relax, e, d">
-          <section, className="mb-12">";)
-            <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">The, AI, DevOps Architectu, r, e</h2>";)
-            <p, className="te, x, t-gr, a, y-300, leadin, g-relaxed, m, b-6">";)
+          <section, className="mb-12">")
+            <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">The, AI, DevOps Architectu, r, e</h2>")
+            <p, className="te, x, t-gr, a, y-300, leadin, g-relaxed, m, b-6">")
               Our, comprehensive, AI DevOps, platform, consists of, five, integrated intelligent, layer, s: </p>),
             <div, className="spa, c, e-y-6">";
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">";
@@ -504,6 +504,5 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
         </d, i, v>
       </artic, l, e>
     </d, i, v>
-  );
-}
+  )}
 ;"

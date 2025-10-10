@@ -124,9 +124,7 @@ const preloadComponents = () => {
   if (typeof window !== 'undefined') {
     setTimeout(() => {
       import('./components/ContentPromotionBanner');
-      import('./components/ContentCarousel');
-    }, 100);
-  }
+      import('./components/ContentCarousel')}, 100)}
 };
 // Loading skeleton component
 const ServiceCardSkeleton: React.FC = memo(() => (
@@ -146,16 +144,14 @@ const HomePage: React.FC = () => {
     preloadComponents();
     // Initialize performance optimizations
     initializePerformanceOptimizations();
-    return () => clearTimeout(timer);
-  }, []);
+    return () => clearTimeout(timer)}, []);
   // Analytics tracking for phone clicks - optimized
   const handlePhoneClick = useCallback(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', 'phone_click', {
         event_category: 'engagement',
         event_label: 'main_phone_number'
-      });
-    }
+      })}
   }, []);
   // Enhanced Micro SAAS Services with real functionality and pricing
   const microSAASServices = [
@@ -1052,9 +1048,8 @@ const HomePage: React.FC = () => {
       {/* Footer */}
       <Footer />
     </div>
-  );
-};
-export default HomePage;
+  )};
+export default HomePage
   </p>
   </a>
   </a>

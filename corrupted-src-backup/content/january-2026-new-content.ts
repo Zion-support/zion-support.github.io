@@ -8,7 +8,7 @@ export const january2026NewContent = {
       description: 'Revolutionary self-organizing AI mesh networks achieving 99.7% operational efficiency with zero human intervention'
       link: '/blog/ai-2026-january-autonomous-enterprise-mesh'
       type: 'article'
-      featured: true;
+      featured: true
       publishDate: '2026-01-15',
       category: 'Enterprise AI',
       tags: ['autonomous', 'mesh', 'enterprise', 'intelligence', '2026'],
@@ -99,6 +99,5 @@ export const january2026NewContent = {/* TODO: Fix JSX expression */}
   caseStudie,
   s: [
     {/* TODO: Fix JSX expression */}
-    }]};
-
-export default january2026 NewContent;
+    }]}
+export default january2026 NewContent

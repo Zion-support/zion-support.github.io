@@ -91,9 +91,8 @@ const AIHRAssistantPage: React.FC = () => {
       </main>
       <Footer />
     </div>
-  );
-};
-export default AIHRAssistantPage;
+  )};
+export default AIHRAssistantPage
   </h2>
   </a>
   </a>

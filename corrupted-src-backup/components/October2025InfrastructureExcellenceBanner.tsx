@@ -80,8 +80,7 @@ const, October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX exp
       ic, o, n: Activi, t, y;
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-distribut, e, d-traci, n, g-microservic, e, s",";
       gradie, n, t: "fr, o, m-bl, u, e-500, t, o-cy, a, n-5, 0, 0",";
-      metri, c, s: ["1, 0, M+ even, t, s/s, e, c", "S, u, b-ms, overhea, d", "OpenTelemet, r, y"],";
-    }
+      metri, c, s: ["1, 0, M+ even, t, s/s, e, c", "S, u, b-ms, overhea, d", "OpenTelemet, r, y"],"}
     {
       id: 2;
       tit, l, e: "Kubernetes, Security, Best Practic, e, s",";
@@ -89,8 +88,7 @@ const, October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX exp
       ic, o, n: Shie, l, d;
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-kubernet, e, s-securi, t, y-be, s, t-practic, e, s",";
       gradie, n, t: "fr, o, m-purp, l, e-500, t, o-pi, n, k-5, 0, 0",";
-      metri, c, s: ["89% fewer, incident, s", "Defen, s, e-in-dep, t, h", "mT, L, S"],";
-    }
+      metri, c, s: ["89% fewer, incident, s", "Defen, s, e-in-dep, t, h", "mT, L, S"],"}
     {
       id: 3;
       tit, l, e: "Re, a, l-Time, Data, Streaming",";
@@ -98,10 +96,9 @@ const, October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX exp
       ic, o, n: Z, a, p;
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-re, a, l-ti, m, e-da, t, a-streami, n, g-architectur, e, s",";
       gradie, n, t: "fr, o, m-oran, g, e-500, t, o-r, e, d-5, 0, 0",";
-      metri, c, s: ["Kaf, k, a + Fli, n, k", "Exact, l, y-on, c, e", "42% cost, cu, t"],";
-    }
+      metri, c, s: ["Kaf, k, a + Fli, n, k", "Exact, l, y-on, c, e", "42% cost, cu, t"],"}
   ];
-  return(<div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-gr, a, y-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, p, y-16, s, m: py-20">";),
+  return(<div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-gr, a, y-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, p, y-16, s, m: py-20">"),
       {/* Animated, background, effects */}
       <div, className="absolute, inse, t-0">";
         <div, className="absolute, inse, t-0, b, g-[u, r, l('/gr, i, d.s, v, g')] bg-center, opacit, y-10" />";
@@ -117,8 +114,7 @@ const, October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX exp
       ic, o, n: Activi, t, y;"
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-distribut, e, d-traci, n, g-microservic, e, s",";"
       gradie, n, t: "fr, o, m-bl, u, e-500, t, o-cy, a, n-5, 0, 0",";"
-      metri, c, s: ["1, 0, M+ even, t, s/s, e, c", "S, u, b-ms, overhea, d", "OpenTelemet, r, y"],";
-    }
+      metri, c, s: ["1, 0, M+ even, t, s/s, e, c", "S, u, b-ms, overhea, d", "OpenTelemet, r, y"],"}
     {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
@@ -173,18 +169,18 @@ const, October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX exp
   r:shad, o, w-2, x, l"
               ></Li>
                 {/* Gradient, accen, t */}
-                <div, className={`absolute, inse, t-0, b, g-gradie, n, t-to-br ${artic, l, e.gradie, n, t} opaci, t, y-0, grou, p-hov, e, r:opaci, t, y-10, transitio, n-opacity, duratio, n-3, 0, 0`} />`;`</div>
+                <div, className={`absolute, inse, t-0, b, g-gradie, n, t-to-br ${artic, l, e.gradie, n, t} opaci, t, y-0, grou, p-hov, e, r:opaci, t, y-10, transitio, n-opacity, duratio, n-3, 0, 0`} />``</div>
                 <div, className="relati, v, e">";
                   {/* Ic, o, n */}</div>
-                  <div, className={`inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, rounde, d-xl, b, g-gradie, n, t-to-br ${artic, l, e.gradie, n, t} mb-4`}>`;`</div>
+                  <div, className={`inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, rounde, d-xl, b, g-gradie, n, t-to-br ${artic, l, e.gradie, n, t} mb-4`}>``</div>
                     <Icon, className="h-6 w-6, tex, t-whi, t, e  />
                   </d, i, v>
                   {/* Tit, l, e */}
                   <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">"</h3>
-                <div, className={`absolute, inse, t-0, b, g-gradie, n, t-to-br ${artic, l, e.gradie, n, t} opaci, t, y-0, grou, p-hov, e, r:opaci, t, y-10, transitio, n-opacity, duratio, n-3, 0, 0`} />`;`"
+                <div, className={`absolute, inse, t-0, b, g-gradie, n, t-to-br ${artic, l, e.gradie, n, t} opaci, t, y-0, grou, p-hov, e, r:opaci, t, y-10, transitio, n-opacity, duratio, n-3, 0, 0`} />``"
                 <div, className="relati, v, e">";
                   {/* Ic, o, n */}`
-                  <div, className={`inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, rounde, d-xl, b, g-gradie, n, t-to-br ${artic, l, e.gradie, n, t} mb-4`}>`;`"
+                  <div, className={`inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, rounde, d-xl, b, g-gradie, n, t-to-br ${artic, l, e.gradie, n, t} mb-4`}>``"
                     <Icon, className="h-6 w-6, tex, t-whi, t, e  /></Icon>
                   </d, i, v>
                   {/* Tit, l, e */}"
@@ -200,7 +196,7 @@ const, October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX exp
                     {artic, l, e.descripti, o, n}
                   </p>)
                   {/* Metri, c, s */})
-                  <div, className="flex, fle, x-wrap, ga, p-2, m, b-4">";)
+                  <div, className="flex, fle, x-wrap, ga, p-2, m, b-4">")
                     {artic, l, e.metri, c, s.m, a, p((metr, i, c, i, d, x) => (
                       <sp, a, n;
                   </p>
@@ -233,8 +229,7 @@ const, October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX exp
                   </d, i, v>
                 </d, i, v>
               </Li, n, k>
-            );
-          })}
+            )})}
         </d, i, v>
         {/* CTA, Sectio, n */}
         <div, className="te, x, t-cent, e, r">
@@ -318,7 +313,6 @@ const, October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX exp
         </d, i, v>
       </d, i, v>
     </d, i, v>
-  );
-};
-export default October2025InfrastructureExcellenceBanner;
+  )};
+export default October2025InfrastructureExcellenceBanner
 ;"`

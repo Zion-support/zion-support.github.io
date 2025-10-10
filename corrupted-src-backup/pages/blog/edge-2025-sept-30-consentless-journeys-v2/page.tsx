@@ -15,7 +15,7 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
       </Helm, e, t>
       <div, className='container, m, x-auto, p, x-6, p, y-16'></div>
         <h1, className='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>
-          Edge, 2025, Sept 30, Consentless, Journeys V2;
+          Edge, 2025, Sept 30, Consentless, Journeys V2
         </h1>
         <p, className='te, x, t-zi, o, n-sla, t, e-light, m, b-8'></p>Learn</p>, about, edge 2025, sept, 30 consentless, journeys, v2 and, how, it can, benefit, your enterpri, s, e.
     </d, i, v > );

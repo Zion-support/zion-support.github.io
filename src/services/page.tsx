@@ -446,9 +446,8 @@ const ServicesPage: React.FC = () => {
       </section>
       <Footer />
     </div>
-  );
-};
-export default ServicesPage;
+  )};
+export default ServicesPage
   </Link>
   </a>
   </p>

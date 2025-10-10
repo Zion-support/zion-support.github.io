@@ -1,4 +1,3 @@
-
     id: 'customer - feedback - intelligence'
     name: 'Customer Feedback Intelligence',
     tagline: 'Summarize NPS / CSAT and reviews into prioritized insights',
@@ -24,8 +23,7 @@
       'LLM clustering and themes',
       'Impact scoring',
       'Roadmap export'],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from - cyan - 600 to - blue - 700'
     text_color: 'text - cyan - 300'
     link: 'https://ziontechgroup.com / services / customer - feedback - intelligence'
@@ -49,8 +47,7 @@
     launch_date: '2026 - 01 - 12'
     customers: 9;
     rating: 4 && 4.7;
-    reviews: 5;
-  },
+    reviews: 5},
     id: 'api - security - posture - monitor'
     name: 'API Security Posture Monitor',
     tagline: 'Detect OWASP API risks and auth gaps with CI annotations',
@@ -129,8 +126,7 @@
       'Auth / rate limit tests',
       'OWASP API checks',
       'PR annotations and diffs'],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from - rose - 600 to - pink - 700'
     text_color: 'text - rose - 300'
     link: 'https://ziontechgroup.com / services / api - security - posture - monitor'
@@ -154,8 +150,7 @@
     launch_date: '2026 - 01 - 14'
     customers: 11;
     rating: 4 && 4.5;
-    reviews: 6;
-  },
+    reviews: 6},
       'Flexible cron/rate',
     id: 'edge - cron - orchestrator',
     name: 'Edge Cron Orchestrator',
@@ -236,8 +231,7 @@
       'Idempotency and retries',
       'Run history',
       'Alerting and webhooks'],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from - amber - 500 to - orange - 600'
     text_color: 'text - amber - 300'
     link: 'https://ziontechgroup.com / services / edge - cron - orchestrator'
@@ -261,8 +255,7 @@
     launch_date: '2026 - 01 - 18'
     customers: 7;
     rating: 4 && 4.5;
-    reviews: 4;
-  },
+    reviews: 4},
     id: 'email - parsing - routing - api'
     name: 'Email Parsing & Routing API',
     tagline: 'Inbound email to structured events with attachments',
@@ -341,8 +334,7 @@
       'Attachment handling',
       'Webhook retries / DLQ',
       'Inspector UI'],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from - indigo - 600 to - blue - 700'
     text_color: 'text - indigo - 300'
     link: 'https://ziontechgroup.com / services / email - parsing - routing - api'
@@ -366,8 +358,7 @@
     launch_date: '2026 - 01 - 20'
     customers: 8;
     rating: 4 && 4.6;
-    reviews: 5;
-  },
+    reviews: 5},
       'Brand/tone controls',
     id: 'ai - marketing - content - studio',
     name: 'AI Marketing Content Studio',
@@ -448,8 +439,7 @@
       'Templates and briefs',
       'Compliance checks',
       'Multi - channel export'],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from - fuchsia - 600 to - pink - 700'
     text_color: 'text - fuchsia - 300'
     link: 'https://ziontechgroup.com / services / ai - marketing - content - studio'
@@ -473,8 +463,7 @@
     launch_date: '2026 - 01 - 22'
     customers: 15;
     rating: 4 && 4.6;
-    reviews: 9;
-  },
+    reviews: 9},
       'CSP/HSTS checks',
     id: 'security - headers - scanner'
     name: 'Security Headers Scanner',
@@ -555,8 +544,7 @@
       'Cookie flags',
       'PR annotations',
       'Weekly reports'],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from - sky - 600 to - blue - 700'
     text_color: 'text - sky - 300'
     link: 'https://ziontechgroup.com / services / security - headers - scanner'
@@ -580,8 +568,7 @@
     launch_date: '2026 - 01 - 25'
     customers: 20;
     rating: 4 && 4.5;
-    reviews: 10;
-  },
+    reviews: 10},
     id: 'ml - feature - store - starter',
     name: 'ML Feature Store Starter',
     tagline: 'Versioned features, validation and online serving',
@@ -660,8 +647,7 @@
       'Validation rules',
       'Lineage tracking',
       'Online serving API'],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from - emerald - 600 to - teal - 700'
     text_color: 'text - emerald - 300'
     link: 'https://ziontechgroup.com / services / ml - feature - store - starter'
@@ -685,8 +671,7 @@
     launch_date: '2026 - 01 - 28'
     customers: 6;
     rating: 4 && 4.5;
-    reviews: 3;
-  },
+    reviews: 3},
     id: 'slo - burn - rate - coach'
     name: 'SLO Burn Rate Coach',
     tagline: 'Compute SLOs and coach on burn - rate risks',
@@ -765,8 +750,7 @@
       'Burn - rate alerts',
       'Runbook hints',
       'Integrations and webhooks'],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from - lime - 500 to - emerald - 600'
     text_color: 'text - lime - 300'
     link: 'https://ziontechgroup.com / services / slo - burn - rate - coach'
@@ -790,8 +774,7 @@
     launch_date: '2026 - 02 - 01'
     customers: 10;
     rating: 4 && 4.5;
-    reviews: 6;
-  },
+    reviews: 6},
     id: 'browser - performance - optimizer'
     name: 'Browser Performance Optimizer',
     tagline: 'Budget - driven CWV with hints and PR annotations',
@@ -870,8 +853,7 @@
       'Budgets and alerts',
       'Bundle diff and PR notes',
       'Edge hints'],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from - cyan - 600 to - purple - 700'
     text_color: 'text - cyan - 300'
     link: 'https://ziontechgroup.com / services / browser - performance - optimizer'
@@ -895,8 +877,7 @@
     launch_date: '2026 - 02 - 05'
     customers: 5;
     rating: 4 && 4.5;
-    reviews: 3;
-  },
+    reviews: 3},
     id: 'cloud - cost - governance - suite',
     name: 'Cloud Cost Governance Suite',
     tagline: 'Budgets, owners, and policy guardrails across clouds',
@@ -975,8 +956,7 @@
       'Anomaly detection',
       'Policy guardrails',
       'IaC recommendation exports'],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from - amber - 600 to - orange - 700'
     text_color: 'text - amber - 300'
     link: 'https://ziontechgroup.com / services / cloud - cost - governance - suite'
@@ -1000,8 +980,7 @@
     launch_date: '2026 - 02 - 08'
     customers: 6;
     rating: 4 && 4.6;
-    reviews: 4;
-  },
+    reviews: 4},
     id: 'api - changelog - sdk - publisher',
     name: 'API Changelog & SDK Publisher',
     tagline: 'Generate docs, changelogs and SDKs from schemas',
@@ -1080,8 +1059,7 @@
       'SDK generation',
       'Changelogs',
       'Searchable portal'],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from - cyan - 600 to - blue - 700'
     text_color: 'text - cyan - 300'
     link: 'https://ziontechgroup.com / services / api - changelog - sdk - publisher'
@@ -1105,8 +1083,7 @@
     launch_date: '2026 - 02 - 12'
     customers: 9;
     rating: 4 && 4.7;
-    reviews: 6;
-  }];
+    reviews: 6}];
 		integrations: ['StripePayPalGoogle Analytics'];
 		useCases: ['Partner growthAutomated payouts'];
 		roi: 'Grow partner revenue by 1025%'
@@ -1119,8 +1096,7 @@
 		launchDate: '2026-01-10'
 		customers: 12;
 		rating: 4 && 4.6;
-		reviews: 7;
-	}
+		reviews: 7}
 		id: 'customer-feedback-intelligence',
 		name: 'Customer Feedback Intelligence',
 		tagline: 'Summarize NPS/CSAT and reviews into prioritized insights',
@@ -1128,8 +1104,7 @@
 		period: '/month',
 		description: 'Aggregate surveys, tickets and reviews, cluster themes with LLMs, and generate prioritized roadmaps with impact scores.'
 		features: ['Multichannel ingestionLLM clustering and themesImpact scoringRoadmap export'];
-		popular: true;
-		icon: '';
+		popular: true icon: '';
 		color: 'from-cyan-600 to-blue-700'
 		textColor: 'text-cyan-300'
 		link: 'https://ziontechgroup && ziontechgroup.com/services/customer-feedback-intelligence'
@@ -1153,8 +1128,7 @@
 		launchDate: '2026-01-12'
 		customers: 9;
 		rating: 4 && 4.7;
-		reviews: 5;
-	}
+		reviews: 5}
 		id: 'api-security-posture-monitor',
 		name: 'API Security Posture Monitor',
 		tagline: 'Detect OWASP API risks and auth gaps with CI annotations',
@@ -1162,8 +1136,7 @@
 		period: '/month',
 		description: 'Continuously scan OpenAPI specs and staging endpoints for auth gaps, rate-limits, and common vulnerabilities with pull request annotations.'
 		features: ['OpenAPI scanningAuth/rate limit testsOWASP API checksPR annotations and diffs'];
-		popular: true;
-		icon: '';
+		popular: true icon: '';
 		color: 'from-rose-600 to-pink-700'
 		textColor: 'text-rose-300'
 		link: 'https://ziontechgroup && ziontechgroup.com/services/api-security-posture-monitor'
@@ -1187,8 +1160,7 @@
 		launchDate: '2026-01-14'
 		customers: 11;
 		rating: 4 && 4.5;
-		reviews: 6;
-	}
+		reviews: 6}
 		id: 'edge-cron-orchestrator',
 		name: 'Edge Cron Orchestrator',
 		tagline: 'Reliable schedules with retries, jitter and DLQs'
@@ -1196,8 +1168,7 @@
 		period: '/month',
 		description: 'Define schedules across providers with idempotency, exponential backoff, and run history with alerting.'
 		features: ['Flexible cron/rateIdempotency and retriesRun historyAlerting and webhooks'];
-		popular: false;
-		icon: '';
+		popular: false icon: '';
 		color: 'from-amber-500 to-orange-600'
 		textColor: 'text-amber-300'
 		link: 'https://ziontechgroup && ziontechgroup.com/services/edge-cron-orchestrator'
@@ -1221,8 +1192,7 @@
 		launchDate: '2026-01-18'
 		customers: 7;
 		rating: 4 && 4.5;
-		reviews: 4;
-	}
+		reviews: 4}
 		id: 'email-parsing-routing-api',
 		name: 'Email Parsing & Routing API',
 		tagline: 'Inbound email to structured events with attachments',
@@ -1230,8 +1200,7 @@
 		period: '/month',
 		description: 'Parse inbound email, normalize signatures, extract attachments, and deliver to your webhooks with retries and dead-letter queues.'
 		features: ['Signature strippingAttachment handlingWebhook retries/DLQInspector UI'];
-		popular: false;
-		icon: '';
+		popular: false icon: '';
 		color: 'from-indigo-600 to-blue-700'
 		textColor: 'text-indigo-300'
 		link: 'https://ziontechgroup && ziontechgroup.com/services/email-parsing-routing-api'
@@ -1255,8 +1224,7 @@
 		launchDate: '2026-01-20'
 		customers: 8;
 		rating: 4 && 4.6;
-		reviews: 5;
-	}
+		reviews: 5}
 		id: 'ai-marketing-content-studio',
 		name: 'AI Marketing Content Studio',
 		tagline: 'Campaign-ready blogs, emails and ads with brand guardrails'
@@ -1264,8 +1232,7 @@
 		period: '/month',
 		description: 'Generate on-brand content with templates, tone control, compliance checks, and multi-channel export.'
 		features: ['Brand/tone controlsTemplates and briefsCompliance checksMulti-channel export'];
-		popular: true;
-		icon: '';
+		popular: true icon: '';
 		color: 'from-fuchsia-600 to-pink-700'
 		textColor: 'text-fuchsia-300'
 		link: 'https://ziontechgroup && ziontechgroup.com/services/ai-marketing-content-studio'
@@ -1289,8 +1256,7 @@
 		launchDate: '2026-01-22'
 		customers: 15;
 		rating: 4 && 4.6;
-		reviews: 9;
-	}
+		reviews: 9}
 		id: 'security-headers-scanner',
 		name: 'Security Headers Scanner',
 		tagline: 'Continuous CSP/HSTS/cookie flag auditing with diffs',
@@ -1298,8 +1264,7 @@
 		period: '/month',
 		description: 'Audit security headers across environments and get pull request annotations, weekly reports and diffs.'
 		features: ['CSP/HSTS checksCookie flagsPR annotationsWeekly reports'];
-		popular: false;
-		icon: '';
+		popular: false icon: '';
 		color: 'from-sky-600 to-blue-700'
 		textColor: 'text-sky-300'
 		link: 'https://ziontechgroup && ziontechgroup.com/services/security-headers-scanner'
@@ -1323,8 +1288,7 @@
 		launchDate: '2026-01-25'
 		customers: 20;
 		rating: 4 && 4.5;
-		reviews: 10;
-	}
+		reviews: 10}
 		id: 'ml-feature-store-starter',
 		name: 'ML Feature Store Starter',
 		tagline: 'Versioned features, validation and online serving'
@@ -1332,8 +1296,7 @@
 		period: '/month',
 		description: 'Ship ML features faster with versioning, validation rules, lineage, and low-latency serving APIs.'
 		features: ['Feature versioningValidation rulesLineage trackingOnline serving API'];
-		popular: false;
-		icon: '';
+		popular: false icon: '';
 		color: 'from-emerald-600 to-teal-700'
 		textColor: 'text-emerald-300'
 		link: 'https://ziontechgroup && ziontechgroup.com/services/ml-feature-store-starter'
@@ -1357,8 +1320,7 @@
 		launchDate: '2026-01-28'
 		customers: 6;
 		rating: 4 && 4.5;
-		reviews: 3;
-	}
+		reviews: 3}
 		id: 'slo-burn-rate-coach',
 		name: 'SLO Burn Rate Coach',
 		tagline: 'Compute SLOs and coach on burn-rate risks',
@@ -1366,8 +1328,7 @@
 		period: '/month',
 		description: 'Define SLOs, compute error budgets and get proactive coaching with burn-rate alerts tied to runbooks.'
 		features: ['SLO editorBurn-rate alertsRunbook hintsIntegrations and webhooks'];
-		popular: false;
-		icon: '';
+		popular: false icon: '';
 		color: 'from-lime-500 to-emerald-600'
 		textColor: 'text-lime-300'
 		link: 'https://ziontechgroup && ziontechgroup.com/services/slo-burn-rate-coach'
@@ -1391,8 +1352,7 @@
 		launchDate: '2026-02-01'
 		customers: 10;
 		rating: 4 && 4.5;
-		reviews: 6;
-	}
+		reviews: 6}
 		id: 'browser-performance-optimizer',
 		name: 'Browser Performance Optimizer',
 		tagline: 'Budget-driven CWV with hints and PR annotations',
@@ -1400,8 +1360,7 @@
 		period: '/month',
 		description: 'Improve Core Web Vitals with RUM/synthetic insights, performance budgets, and PR annotations for bundle changes.'
 		features: ['RUM + syntheticBudgets and alertsBundle diff and PR notesEdge hints'];
-		popular: false;
-		icon: '';
+		popular: false icon: '';
 		color: 'from-cyan-600 to-purple-700'
 		textColor: 'text-cyan-300'
 		link: 'https://ziontechgroup && ziontechgroup.com/services/browser-performance-optimizer'
@@ -1425,8 +1384,7 @@
 		launchDate: '2026-02-05'
 		customers: 5;
 		rating: 4 && 4.5;
-		reviews: 3;
-	}
+		reviews: 3}
 		id: 'cloud-cost-governance-suite',
 		name: 'Cloud Cost Governance Suite',
 		tagline: 'Budgets, owners, and policy guardrails across clouds'
@@ -1434,8 +1392,7 @@
 		period: '/month',
 		description: 'Enforce budgets with owners, detect anomalies and apply policy guardrails with IaC exports for approvals.'
 		features: ['Budgets and ownersAnomaly detectionPolicy guardrailsIaC recommendation exports'];
-		popular: true;
-		icon: '';
+		popular: true icon: '';
 		color: 'from-amber-600 to-orange-700'
 		textColor: 'text-amber-300'
 		link: 'https://ziontechgroup && ziontechgroup.com/services/cloud-cost-governance-suite'
@@ -1459,8 +1416,7 @@
 		launchDate: '2026-02-08'
 		customers: 6;
 		rating: 4 && 4.6;
-		reviews: 4;
-	}
+		reviews: 4}
 		id: 'api-changelog-sdk-publisher',
 		name: 'API Changelog & SDK Publisher',
 		tagline: 'Generate docs, changelogs and SDKs from schemas'
@@ -1468,8 +1424,7 @@
 		period: '/month',
 		description: 'Turn OpenAPI/GraphQL schemas into versioned docs, changelogs and typed SDKs with a searchable portal.'
 		features: ['Docs from schemasSDK generationChangelogsSearchable portal'];
-		popular: false;
-		icon: '';
+		popular: false icon: '';
 		color: 'from-cyan-600 to-blue-700'
 		textColor: 'text-cyan-300'
 		link: 'https://ziontechgroup && ziontechgroup.com/services/api-changelog-sdk-publisher'
@@ -1493,8 +1448,7 @@
 		launchDate: '2026-02-12'
 		customers: 9;
 		rating: 4 && 4.7;
-		reviews: 6;
-	}
+		reviews: 6}
 ];
 const contact =
 	mobile: '+1 302 464 0950',
@@ -2349,13 +2303,12 @@ export const,
       'Fraud heuristics',
       'Stripe/PayPal payouts',
       'Partner portal and reporting'],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from-emerald-600 to-teal-700'
     textColor: 'text-emerald-300'
     link: 'https://ziontechgroup.com/services/affiliate-analytics-starter'
     category: 'Developer Tools'
-    realService: true;
+    realService: true
     marketPosition: 'Focused alternative to heavy affiliate platforms'
     targetAudience: 'SaaS and eCommerce',
     trialDays: 14;
@@ -2446,8 +2399,7 @@ export const,
       'LLM clustering and themes',
       'Impact scoring',
       'Roadmap export'],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-cyan-600 to-blue-700'
     textColor: 'text-cyan-300'
     link: 'https://ziontechgroup.com/services/customer-feedback-intelligence'
@@ -2543,8 +2495,7 @@ export const,
       'Auth/rate limit tests',
       'OWASP API checks',
       'PR annotations and diffs'],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-rose-600 to-pink-700'
     textColor: 'text-rose-300'
     link: 'https://ziontechgroup.com/services/api-security-posture-monitor'
@@ -2640,8 +2591,7 @@ export const,
       'Idempotency and retries',
       'Run history',
       'Alerting and webhooks'],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from-amber-500 to-orange-600'
     textColor: 'text-amber-300'
     link: 'https://ziontechgroup.com/services/edge-cron-orchestrator'
@@ -2737,8 +2687,7 @@ export const,
       'Attachment handling',
       'Webhook retries/DLQ',
       'Inspector UI'],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from-indigo-600 to-blue-700'
     textColor: 'text-indigo-300'
     link: 'https://ziontechgroup.com/services/email-parsing-routing-api'
@@ -2834,8 +2783,7 @@ export const,
       'Templates and briefs',
       'Compliance checks',
       'Multi-channel export'],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-fuchsia-600 to-pink-700'
     textColor: 'text-fuchsia-300'
     link: 'https://ziontechgroup.com/services/ai-marketing-content-studio'
@@ -2931,8 +2879,7 @@ export const,
       'Cookie flags',
       'PR annotations',
       'Weekly reports'],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from-sky-600 to-blue-700'
     textColor: 'text-sky-300'
     link: 'https://ziontechgroup.com/services/security-headers-scanner'
@@ -3028,8 +2975,7 @@ export const,
       'Validation rules',
       'Lineage tracking',
       'Online serving API'],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from-emerald-600 to-teal-700'
     textColor: 'text-emerald-300'
     link: 'https://ziontechgroup.com/services/ml-feature-store-starter'
@@ -3125,8 +3071,7 @@ export const,
       'Burn-rate alerts',
       'Runbook hints',
       'Integrations and webhooks'],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from-lime-500 to-emerald-600'
     textColor: 'text-lime-300'
     link: 'https://ziontechgroup.com/services/slo-burn-rate-coach'
@@ -3222,8 +3167,7 @@ export const,
       'Budgets and alerts',
       'Bundle diff and PR notes',
       'Edge hints'],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from-cyan-600 to-purple-700'
     textColor: 'text-cyan-300'
     link: 'https://ziontechgroup.com/services/browser-performance-optimizer'
@@ -3319,8 +3263,7 @@ export const,
       'Anomaly detection',
       'Policy guardrails',
       'IaC recommendation exports'],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-amber-600 to-orange-700'
     textColor: 'text-amber-300'
     link: 'https://ziontechgroup.com/services/cloud-cost-governance-suite'
@@ -3416,8 +3359,7 @@ export const,
       'SDK generation',
       'Changelogs',
       'Searchable portal'],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from-cyan-600 to-blue-700'
     textColor: 'text-cyan-300'
     link: 'https://ziontechgroup.com/services/api-changelog-sdk-publisher'
@@ -3441,9 +3383,7 @@ export const,
     launchDate: '2026-02-12'
     customers: 9;
     rating: 4.7;
-    reviews: 6;
-  };
-];
+    reviews: 6}];
 		id: 'affiliate-analytics-starter',
 		id: 'affiliate-analytics-starter',
 		name: 'Affiliate Analytics Starter',
@@ -3452,8 +3392,7 @@ export const,
 		period: '/month',
 		description: 'Lightweight affiliate tracking with UTM/coupon support, heuristic fraud signals, and one-click Stripe/PayPal payouts.',
 		features: ['UTM and coupon attributionFraud heuristics', 'Stripe/PayPal payoutsPartner portal and reporting'],
-		popular: false;
-		icon: ''
+		popular: false icon: ''
 		color: 'from-emerald-600 to-teal-700'
 		textColor: 'text-emerald-300'
 		link: 'https://ziontechgroup.com/services/affiliate-analytics-starter'
@@ -3477,8 +3416,7 @@ export const,
 		launchDate: '2026-01-10'
 		customers: 12;
 		rating: 4.6;
-		reviews: 7;
-	},
+		reviews: 7},
 		id: 'customer-feedback-intelligence',
 		name: 'Customer Feedback Intelligence',
 		tagline: 'Summarize NPS/CSAT and reviews into prioritized insights',
@@ -3486,8 +3424,7 @@ export const,
 		period: '/month',
 		description: 'Aggregate surveys, tickets and reviews, cluster themes with LLMs, and generate prioritized roadmaps with impact scores.',
 		features: ['Multichannel ingestionLLM clustering and themes', 'Impact scoringRoadmap export'],
-		popular: true;
-		icon: ''
+		popular: true icon: ''
 		color: 'from-cyan-600 to-blue-700'
 		textColor: 'text-cyan-300'
 		link: 'https://ziontechgroup.com/services/customer-feedback-intelligence'
@@ -3511,8 +3448,7 @@ export const,
 		launchDate: '2026-01-12'
 		customers: 9;
 		rating: 4.7;
-		reviews: 5;
-	},
+		reviews: 5},
 		id: 'api-security-posture-monitor',
 		name: 'API Security Posture Monitor',
 		tagline: 'Detect OWASP API risks and auth gaps with CI annotations',
@@ -3520,8 +3456,7 @@ export const,
 		period: '/month',
 		description: 'Continuously scan OpenAPI specs and staging endpoints for auth gaps, rate-limits, and common vulnerabilities with pull request annotations.',
 		features: ['OpenAPI scanningAuth/rate limit tests', 'OWASP API checksPR annotations and diffs'],
-		popular: true;
-		icon: ''
+		popular: true icon: ''
 		color: 'from-rose-600 to-pink-700'
 		textColor: 'text-rose-300'
 		link: 'https://ziontechgroup.com/services/api-security-posture-monitor'
@@ -3545,8 +3480,7 @@ export const,
 		launchDate: '2026-01-14'
 		customers: 11;
 		rating: 4.5;
-		reviews: 6;
-	},
+		reviews: 6},
 		id: 'edge-cron-orchestrator',
 		name: 'Edge Cron Orchestrator',
 		tagline: 'Reliable schedules with retries, jitter and DLQs',
@@ -3554,8 +3488,7 @@ export const,
 		period: '/month',
 		description: 'Define schedules across providers with idempotency, exponential backoff, and run history with alerting.',
 		features: ['Flexible cron/rateIdempotency and retries', 'Run historyAlerting and webhooks'],
-		popular: false;
-		icon: ''
+		popular: false icon: ''
 		color: 'from-amber-500 to-orange-600'
 		textColor: 'text-amber-300'
 		link: 'https://ziontechgroup.com/services/edge-cron-orchestrator'
@@ -3579,8 +3512,7 @@ export const,
 		launchDate: '2026-01-18'
 		customers: 7;
 		rating: 4.5;
-		reviews: 4;
-	},
+		reviews: 4},
 		id: 'email-parsing-routing-api',
 		name: 'Email Parsing & Routing API',
 		tagline: 'Inbound email to structured events with attachments',
@@ -3588,8 +3520,7 @@ export const,
 		period: '/month',
 		description: 'Parse inbound email, normalize signatures, extract attachments, and deliver to your webhooks with retries and dead-letter queues.',
 		features: ['Signature strippingAttachment handling', 'Webhook retries/DLQInspector UI'],
-		popular: false;
-		icon: ''
+		popular: false icon: ''
 		color: 'from-indigo-600 to-blue-700'
 		textColor: 'text-indigo-300'
 		link: 'https://ziontechgroup.com/services/email-parsing-routing-api'
@@ -3613,8 +3544,7 @@ export const,
 		launchDate: '2026-01-20'
 		customers: 8;
 		rating: 4.6;
-		reviews: 5;
-	},
+		reviews: 5},
 		id: 'ai-marketing-content-studio',
 		name: 'AI Marketing Content Studio',
 		tagline: 'Campaign-ready blogs, emails and ads with brand guardrails',
@@ -3622,8 +3552,7 @@ export const,
 		period: '/month',
 		description: 'Generate on-brand content with templates, tone control, compliance checks, and multi-channel export.',
 		features: ['Brand/tone controlsTemplates and briefs', 'Compliance checksMulti-channel export'],
-		popular: true;
-		icon: ''
+		popular: true icon: ''
 		color: 'from-fuchsia-600 to-pink-700'
 		textColor: 'text-fuchsia-300'
 		link: 'https://ziontechgroup.com/services/ai-marketing-content-studio'
@@ -3647,8 +3576,7 @@ export const,
 		launchDate: '2026-01-22'
 		customers: 15;
 		rating: 4.6;
-		reviews: 9;
-	},
+		reviews: 9},
 		id: 'security-headers-scanner',
 		name: 'Security Headers Scanner',
 		tagline: 'Continuous CSP/HSTS/cookie flag auditing with diffs',
@@ -3656,8 +3584,7 @@ export const,
 		period: '/month',
 		description: 'Audit security headers across environments and get pull request annotations, weekly reports and diffs.',
 		features: ['CSP/HSTS checksCookie flags', 'PR annotationsWeekly reports'],
-		popular: false;
-		icon: ''
+		popular: false icon: ''
 		color: 'from-sky-600 to-blue-700'
 		textColor: 'text-sky-300'
 		link: 'https://ziontechgroup.com/services/security-headers-scanner'
@@ -3681,8 +3608,7 @@ export const,
 		launchDate: '2026-01-25'
 		customers: 20;
 		rating: 4.5;
-		reviews: 10;
-	},
+		reviews: 10},
 		id: 'ml-feature-store-starter',
 		name: 'ML Feature Store Starter',
 		tagline: 'Versioned features, validation and online serving',
@@ -3690,8 +3616,7 @@ export const,
 		period: '/month',
 		description: 'Ship ML features faster with versioning, validation rules, lineage, and low-latency serving APIs.',
 		features: ['Feature versioningValidation rules', 'Lineage trackingOnline serving API'],
-		popular: false;
-		icon: ''
+		popular: false icon: ''
 		color: 'from-emerald-600 to-teal-700'
 		textColor: 'text-emerald-300'
 		link: 'https://ziontechgroup.com/services/ml-feature-store-starter'
@@ -3715,8 +3640,7 @@ export const,
 		launchDate: '2026-01-28'
 		customers: 6;
 		rating: 4.5;
-		reviews: 3;
-	},
+		reviews: 3},
 		id: 'slo-burn-rate-coach',
 		name: 'SLO Burn Rate Coach',
 		tagline: 'Compute SLOs and coach on burn-rate risks',
@@ -3724,8 +3648,7 @@ export const,
 		period: '/month',
 		description: 'Define SLOs, compute error budgets and get proactive coaching with burn-rate alerts tied to runbooks.',
 		features: ['SLO editorBurn-rate alerts', 'Runbook hintsIntegrations and webhooks'],
-		popular: false;
-		icon: ''
+		popular: false icon: ''
 		color: 'from-lime-500 to-emerald-600'
 		textColor: 'text-lime-300'
 		link: 'https://ziontechgroup.com/services/slo-burn-rate-coach'
@@ -3749,8 +3672,7 @@ export const,
 		launchDate: '2026-02-01'
 		customers: 10;
 		rating: 4.5;
-		reviews: 6;
-	},
+		reviews: 6},
 		id: 'browser-performance-optimizer',
 		name: 'Browser Performance Optimizer',
 		tagline: 'Budget-driven CWV with hints and PR annotations',
@@ -3758,8 +3680,7 @@ export const,
 		period: '/month',
 		description: 'Improve Core Web Vitals with RUM/synthetic insights, performance budgets, and PR annotations for bundle changes.',
 		features: ['RUM + syntheticBudgets and alerts', 'Bundle diff and PR notesEdge hints'],
-		popular: false;
-		icon: ''
+		popular: false icon: ''
 		color: 'from-cyan-600 to-purple-700'
 		textColor: 'text-cyan-300'
 		link: 'https://ziontechgroup.com/services/browser-performance-optimizer'
@@ -3783,8 +3704,7 @@ export const,
 		launchDate: '2026-02-05'
 		customers: 5;
 		rating: 4.5;
-		reviews: 3;
-	},
+		reviews: 3},
 		id: 'cloud-cost-governance-suite',
 		name: 'Cloud Cost Governance Suite',
 		tagline: 'Budgets, owners, and policy guardrails across clouds',
@@ -3792,8 +3712,7 @@ export const,
 		period: '/month',
 		description: 'Enforce budgets with owners, detect anomalies and apply policy guardrails with IaC exports for approvals.',
 		features: ['Budgets and ownersAnomaly detection', 'Policy guardrailsIaC recommendation exports'],
-		popular: true;
-		icon: ''
+		popular: true icon: ''
 		color: 'from-amber-600 to-orange-700'
 		textColor: 'text-amber-300'
 		link: 'https://ziontechgroup.com/services/cloud-cost-governance-suite'
@@ -3817,8 +3736,7 @@ export const,
 		launchDate: '2026-02-08'
 		customers: 6;
 		rating: 4.6;
-		reviews: 4;
-	},
+		reviews: 4},
 		id: 'api-changelog-sdk-publisher',
 		name: 'API Changelog & SDK Publisher',
 		tagline: 'Generate docs, changelogs and SDKs from schemas',
@@ -3826,8 +3744,7 @@ export const,
 		period: '/month',
 		description: 'Turn OpenAPI/GraphQL schemas into versioned docs, changelogs and typed SDKs with a searchable portal.',
 		features: ['Docs from schemasSDK generation', 'ChangelogsSearchable portal'],
-		popular: false;
-		icon: ''
+		popular: false icon: ''
 		color: 'from-cyan-600 to-blue-700'
 		textColor: 'text-cyan-300'
 		link: 'https://ziontechgroup.com/services/api-changelog-sdk-publisher'
@@ -3851,8 +3768,7 @@ export const,
 		launchDate: '2026-02-12'
 		customers: 9;
 		rating: 4.7;
-		reviews: 6;
-	}
+		reviews: 6}
 ];
 		reviews: 6;
     popula,
@@ -3907,8 +3823,7 @@ export const,
     ratin,
   g: 4.7,
     review,
-  s: 6};
-];
+  s: 6}];
 		i,
   d: 'affiliate-analytics-starter'
 		i,
@@ -5894,7 +5809,7 @@ i,
   e: '2026-02-12', customer,
   s: 9, ratin,
   g: 4.7, review,
-  s: 6}; ]; ' i,
+  s: 6}] ' i,
   d: 'affiliate-analytics-starter' ' i,
   d: 'affiliate-analytics-starter',' nam,
   e: 'Affiliate Analytics Starter',' taglin,

@@ -6,7 +6,7 @@ import { BarChart, Zap, Shield, Settings, CheckCircle, Star,  BarChart,  Zap,  S
 const ITPerformanceMonitoringPage: React.FC = () => {
   const features = [];
   return (
-    {// TODO: Add content;}
+    {// TODO: Add content}
 };
   ico,
   n: BarChart,
@@ -15,8 +15,7 @@ const ITPerformanceMonitoringPage: React.FC = () => {
       descriptio,
   n: 'Comprehensive real-time system performance monitoring',
       benefit,
-  s: ['Live dashboards', 'Performance metrics', 'Alerting'];
-    },
+  s: ['Live dashboards', 'Performance metrics', 'Alerting']},
       ico,
   n: Zap,
       titl,
@@ -89,6 +88,5 @@ const ITPerformanceMonitoringPage: React.FC = () => {
       </main>
       <Footer /></Footer>
     </div>
-  );
-};
-export default ItPerformanceMonitoringPage;
+  )};
+export default ItPerformanceMonitoringPage

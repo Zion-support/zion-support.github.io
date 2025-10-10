@@ -58,16 +58,14 @@ $4});
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }));
-  };
+    }))};
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 2000));
     setIsSubmitting(false);
-    setIsSubmitted(true);
-  };
+    setIsSubmitted(true)};
   const benefits = [
     {
       icon: Calculator,
@@ -165,8 +163,7 @@ $4}
         </div>
         <Footer />
       </React.Fragment>
-    );
-  }
+    )}
   return (
     <React.Fragment>
       <Navigation />
@@ -417,10 +414,9 @@ $4}
                   </a>
                 </div>
     <div>Coming Soon</div>
-  );
-};
+  )};
   const [formData, setFormData] = useState({/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   nam,
   e: '',
@@ -447,8 +443,7 @@ $4}
   const [isSubmitted, setIsSubmitted] = useState(false);
   const _serviceTypes = [
   // TOD,
-  O: Add items;
-];;
+  O: Add items];
 //     'AI Services',
 //     'IT Infrastructure',
 //     'Cybersecurity',
@@ -461,8 +456,7 @@ $4}
   ];
   const projectSizes = [
   // TOD,
-  O: Add items;
-];;
+  O: Add items];
 //     'Small (1-10 employees)',
 //     'Medium (11-100 employees)',
 //     'Large (101-1000 employees)',
@@ -470,8 +464,7 @@ $4}
   ];
   const timelines = [
   // TOD,
-  O: Add items;
-];;
+  O: Add items];
 //     'ASAP',
 //     '1-3 months',
 //     '3-6 months',
@@ -481,8 +474,7 @@ $4}
   ];
   const budgetRanges = [
   // TOD,
-  O: Add items;
-];;
+  O: Add items];
 //     'Under $10,000',
 //     '$10,000 - $50,000',
 //     '$50,000 - $100,000',
@@ -490,34 +482,31 @@ $4}
 //     '$500,000+',
 //     'To be discussed'
   ];
-  const handleInputChange = (e: React.ChangeEvent;)
+  const handleInputChange = (e: React.ChangeEvent)
           <HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
     const { name, value } = e.target;
     setFormData(prev => ({/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
 //       ...prev,
-      [name]: value;)
-    }));
-  };
+      [name]: value)
+    }))};
   const handleSubmit = async (e: React.FormEvent) => {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
     e.preventDefault();
     setIsSubmitting(true);
     // Simulate form submission;
     await new Promise(resolve => setTimeout(resolve, 2000));
     setIsSubmitting(false);
-    setIsSubmitted(true);
-  };
+    setIsSubmitted(true)};
   const benefits = [
   // TOD,
-  O: Add items;
-];;
+  O: Add items];
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   ico,
   n: Calculator,
@@ -527,7 +516,7 @@ $4}
   n: 'Get a detailed, no-obligation quote within 24 hours'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   ico,
   n: Clock,
@@ -537,7 +526,7 @@ $4}
   n: 'We respond to all quote requests within 4 hours'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   ico,
   n: CheckCircle,
@@ -547,7 +536,7 @@ $4}
   n: 'Clear, detailed pricing with no hidden fees'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   ico,
   n: Star,
@@ -559,10 +548,9 @@ $4}
   ];
   const whyChooseUs = [
   // TOD,
-  O: Add items;
-];;
+  O: Add items];
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   ico,
   n: Users,
@@ -572,7 +560,7 @@ $4}
   n: 'Proven track record of delivering results'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   ico,
   n: Award,
@@ -582,7 +570,7 @@ $4}
   n: 'Our clients see significant returns on investment'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   ico,
   n: Clock,
@@ -592,7 +580,7 @@ $4}
   n: 'Round-the-clock support for all our clients'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   ico,
   n: Star,
@@ -603,7 +591,7 @@ $4}
     }
   ];
   if (isSubmitted) {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
     return (<div>Coming Soon</div>)
   )
@@ -663,8 +651,7 @@ $4}
     </React.Fragment>
         <Footer /></Footer>
       </React.Fragment>
-    );
-  }
+    )}
   return (<div>Coming Soon</div>)
   )
           <React.Fragment>
@@ -893,9 +880,8 @@ type="submit" disabled={isSubmitting}
       </main>
       <Footer /></Footer>
     </div>
-  );
-};
-export default RequestQuotePage;
+  )};
+export default RequestQuotePage
   </textarea>
   </textarea>
   </HTMLInputElement>

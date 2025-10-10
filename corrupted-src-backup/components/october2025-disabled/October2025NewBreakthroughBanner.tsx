@@ -132,8 +132,7 @@ const October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */
                   <Link, className='w-5 h-5' /></Link>
                 </div>
               </Li, n, k>
-            );
-          })}
+            )})}
         </div>
         {/* CTA, Sectio, n */}
         <div, classNam, e = 'bg-gradie, n, t-to-r, fro, m-whi, t, e/10, t, o-whi, t, e/5, backdro, p-bl, u, r-xl, border, border-whi, t, e/30, rounde, d-2x, l, p-12, m, b-12, shado, w-2, x, l'></div>
@@ -277,7 +276,6 @@ const October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */
         </div>
       </div>
     </div>
-  );
-};
-export default October2025NewBreakthroughBanner;
+  )};
+export default October2025NewBreakthroughBanner
 `

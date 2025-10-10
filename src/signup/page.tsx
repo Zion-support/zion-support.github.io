@@ -24,14 +24,12 @@ const SignupPage: React.FC = () => {
     setFormData(prev => ({
       ...prev,
       [name]: type === 'checkbox' ? checked : value
-    }));
-  };
+    }))};
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (formData.password !== formData.confirmPassword) {
       alert('Passwords do not match');
-      return;
-    }
+      return}
     if (!formData.agreeToTerms) {
       alert('Please agree to the terms and conditions');
     setIsLoading(true);
@@ -63,10 +61,9 @@ $4];
   return (
     <React.Fragment>
     <div>Coming Soon</div>
-  );
-};
+  )};
   const [formData, setFormData] = useState({/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   firstNam,
   e: '',
@@ -85,33 +82,31 @@ $4];
     agreeToTerm,
   s: false,
     subscribeNewslette,
-  r: false;)
+  r: false)
   });
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-const handleInputChange = (e: React.ChangeEvent;)
+const handleInputChange = (e: React.ChangeEvent)
           <HTMLInputElement>) => {/* TODO: Fix JSX expression */}
     const { name, value, type, checked } = e.target;
     setFormData(prev => ({/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
 //       ...prev,
-      [name]: type === 'checkbox' ? checked : value;)
-    }));
-  };
+      [name]: type === 'checkbox' ? checked : value)
+    }))};
   const handleSubmit = async (e: React.FormEvent) => {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
     e.preventDefault();
     if (formData.password !== formData.confirmPassword) {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
       alert('Passwords do not match');
-      return;
-    }
+      return}
     if (!formData.agreeToTerms) {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
       alert('Please agree to the terms and conditions');
     setIsLoading(true);
@@ -122,10 +117,9 @@ const handleInputChange = (e: React.ChangeEvent;)
     window.location.href = '/';
   const features = [
   // TOD,
-  O: Add items;
-];;
+  O: Add items];
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   ico,
   n: Shield,
@@ -403,7 +397,7 @@ Join thousands of businesses already using our AI and IT solutions;
       <Footer />
     </div>
   );
-export default SignupPage;
+export default SignupPage
   </a>
   </div>
   </p>

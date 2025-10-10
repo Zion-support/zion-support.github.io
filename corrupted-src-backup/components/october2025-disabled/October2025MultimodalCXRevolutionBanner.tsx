@@ -113,7 +113,7 @@ const October2025MultimodalCXRevolutionBanne, r = () => {/* TODO: Fix JSX expres
               </div>
               <d, i, v>
                 <div, className='fo, n, t-semibold, tex, t-white, m, b-1'>
-                  Vision, AI, Intelligence;)
+                  Vision, AI, Intelligence)
                 </div>)
                 <div, className='te, x, t-sm, tex, t-gr, a, y-3, 0, 0'>)
                   Product, recognition, across 8.7M, S, K, U, s, visual, issue, diagnosis)
@@ -451,6 +451,5 @@ const October2025MultimodalCXRevolutionBanne, r = () => {/* TODO: Fix JSX expres
         </div>
       </div>
     </di, v>
-  );
-};
-export default October2025 MultimodalCXRevolutionBanner;
+  )};
+export default October2025 MultimodalCXRevolutionBanner

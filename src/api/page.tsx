@@ -88,5 +88,5 @@ const Pagetsx: React.FC = () => {
       <Footer /></div>
   )
 }
-export default Pagetsx;"
-export default ApiPage;
+export default Pagetsx"
+export default ApiPage

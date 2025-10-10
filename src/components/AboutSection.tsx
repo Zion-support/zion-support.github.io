@@ -5,7 +5,7 @@ export default function AboutSection() {
     { number: '50+', label: 'Happy Clients' },
     { number: '5+', label: 'Years Experience' },
     { number: '99%', label: 'Success Rate' }
-  ];
+  ]
   const values = [
     {
       title: 'Innovation First',
@@ -183,8 +183,7 @@ export default function AboutSection() {
         </div>
       </div>
     </section>
-  );
-}
+  )}
   </h3>
   </h3>
   </h3>

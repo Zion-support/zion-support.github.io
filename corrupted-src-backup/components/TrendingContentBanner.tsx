@@ -197,8 +197,7 @@ const, TrendingContentBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expressio
   ];
   useEffe, c, t(() => {/* TODO: Fix JSX expression */}
     }, 40, 0, 0);
-    return () => clearInterv, a, l(interv, a, l);
-  }, [trendingIte, m, s.leng, t, h]);
+    return () => clearInterv, a, l(interv, a, l)}, [trendingIte, m, s.leng, t, h]);
   const, currentIte, m = trendingIte, m, s[currentInd, e, x];
   const, getBadgeColo, r = (bad, g, e: stri, n, g) => {
 swit, c, h (bad, g, e) {
@@ -212,9 +211,7 @@ ca, s, e 'N, E, W': retu, r, n 'bg-gre, e, n-500, tex, t-whi, t, e';';
 ca, s, e 'TRENDI, N, G': retu, r, n 'bg-bl, u, e-500, tex, t-whi, t, e';';
 ca, s, e 'POPUL, A, R': retu, r, n 'bg-purp, l, e-500, tex, t-whi, t, e';';
 defa, u, l;
-  t: retu, r, n 'bg-gr, a, y-500, tex, t-whi, t, e';';
-};
-  };
+  t: retu, r, n 'bg-gr, a, y-500, tex, t-whi, t, e';'}};
   const, Ico, n = currentIt, e, m.ic, o, n;
   return(<div, className="bg-gradie, n, t-to-r, fro, m-zi, o, n-bl, u, e/20, t, o-zi, o, n-purp, l, e/20, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/1, 0, p-6, hove, r: shad, o, w-2xl, transitio, n-all, duratio, n-500, grou, p">"
       <div, className="flex, item, s-center, justif, y-betwe, e, n">
@@ -228,8 +225,8 @@ defa, u, l;
         <div, className="fl, e, x-1">";
           <div, className="flex, item, s-center, ga, p-3, m, b-3">";
             <div, className="flex, item, s-center, ga, p-2">";
-              <TrendingUp, className="w-5 h-5, tex, t-zi, o, n-cyan, animat, e-pul, s, e" />";)
-              <span, className="te, x, t-sm, fon, t-semibold, tex, t-zi, o, n-cy, a, n">TRENDING, NO, W</sp, a, n>";)
+              <TrendingUp, className="w-5 h-5, tex, t-zi, o, n-cyan, animat, e-pul, s, e" />")
+              <span, className="te, x, t-sm, fon, t-semibold, tex, t-zi, o, n-cy, a, n">TRENDING, NO, W</sp, a, n>")
             </d, i, v>)
   return (
     <div, className="bg-gradie, n, t-to-r, fro, m-zi, o, n-bl, u, e/20, t, o-zi, o, n-purp, l, e/20, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/1, 0, p-6, hove, r: shad, o, w-2xl, transitio, n-all, duratio, n-500, grou, p">"</div>
@@ -247,7 +244,7 @@ defa, u, l;
               <TrendingUp, className="w-5 h-5, tex, t-zi, o, n-cyan, animat, e-pul, s, e" />";
               <span, className="te, x, t-sm, fon, t-semibold, tex, t-zi, o, n-cy, a, n">TRENDING, NO, W</sp, a, n>";
             </d, i, v>
-            <div, className={`px-2, p, y-1, rounde, d-full, tex, t-xs, fon, t-bo, l, d ${getBadgeCol, o, r(currentIt, e, m.bad, g, e)} anima, t, e-boun, c, e`}>`;`
+            <div, className={`px-2, p, y-1, rounde, d-full, tex, t-xs, fon, t-bo, l, d ${getBadgeCol, o, r(currentIt, e, m.bad, g, e)} anima, t, e-boun, c, e`}>``
               {currentIt, e, m.bad, g, e}
             </d, i, v>
           </d, i, v>
@@ -270,8 +267,7 @@ defa, u, l;
               </d, i, v>
               <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-zi, o, n-cyan, transitio, n-colo, r, s">"</h3>
   const, getBadgeColo, r = (bad, g, e: stri, n, g) => {/* TODO: Fix JSX expression */}
-};
-  };
+}};
   const, Ico, n = currentIt, e, m.ic, o, n;
   return ("
     <div, className="bg-gradie, n, t-to-r, fro, m-zi, o, n-bl, u, e/20, t, o-zi, o, n-purp, l, e/20, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/1, 0, p-6, hove, r: shad, o, w-2xl, transitio, n-all, duratio, n-500, grou, p">""
@@ -289,7 +285,7 @@ defa, u, l;
               <TrendingUp, className="w-5 h-5, tex, t-zi, o, n-cyan, animat, e-pul, s, e" />";"
               <span, className="te, x, t-sm, fon, t-semibold, tex, t-zi, o, n-cy, a, n">TRENDING, NO, W</sp, a, n>";
             </d, i, v>)
-            <div, className={`px-2, p, y-1, rounde, d-full, tex, t-xs, fon, t-bo, l, d ${getBadgeCol, o, r(currentIt, e, m.bad, g, e)} anima, t, e-boun, c, e`}>`;`
+            <div, className={`px-2, p, y-1, rounde, d-full, tex, t-xs, fon, t-bo, l, d ${getBadgeCol, o, r(currentIt, e, m.bad, g, e)} anima, t, e-boun, c, e`}>``
               {currentIt, e, m.bad, g, e}
             </d, i, v>
           </d, i, v>"
@@ -392,16 +388,16 @@ defa, u, l;
               <butt, o, n
   k, e, y={ind, e, x}
                 onCli, c, k={() => setCurrentInd, e, x(ind, e, x)}
-                classNa, m, e={`w-2 h-2, rounde, d-full, transitio, n-all, duratio, n-3, 0, 0 ${`;`
-                  ind, e, x === currentInd, e, x;}
+                classNa, m, e={`w-2 h-2, rounde, d-full, transitio, n-all, duratio, n-3, 0, 0 ${``
+                  ind, e, x === currentInd, e, x}
                     ? 'bg-zi, o, n-cyan, scal, e-1, 2, 5' }
             {/* TODO: Fix JSX expression */}
   k, e, y={ind, e, x}
                 onCli, c, k={() => setCurrentInd, e, x(ind, e, x)}
                 classNa, m, e={/* TODO: Fix JSX expression */}`
-                    : 'bg-whi, t, e/30, hove, r: bg-whi, t, e/50}`}`;`
+                    : 'bg-whi, t, e/30, hove, r: bg-whi, t, e/50}`}``
                     : 'bg-whi, t, e/30, hove, r: bg-whi, t, e/50'`
-                }`}`;`
+                }`}``
                />
             ))}
           </d, i, v>
@@ -413,14 +409,13 @@ defa, u, l;
       <div, className="mt-4 w-full, b, g-whi, t, e/10, rounde, d-ful, l, h-1">";</div>
         <d, i, v 
   classNa, m, e="bg-gradie, n, t-to-r, fro, m-zi, o, n-cyan, t, o-zi, o, n-bl, u, e-ligh, t, h-1, rounde, d-full, transitio, n-all, duratio, n-100, eas, e-line, a, r"
-          sty, l, e={{ wid, t, h: `${((currentInd, e, x + 1) / trendingIte, m, s.leng, t, h) * 1, 0, 0}%` }}`;`  />
+          sty, l, e={{ wid, t, h: `${((currentInd, e, x + 1) / trendingIte, m, s.leng, t, h) * 1, 0, 0}%` }}``  />
       {/* Progress, ba, r */}"
       <div, className="mt-4 w-full, b, g-whi, t, e/10, rounde, d-ful, l, h-1">";
         <d, i, v;"
   classNa, m, e="bg-gradie, n, t-to-r, fro, m-zi, o, n-cyan, t, o-zi, o, n-bl, u, e-ligh, t, h-1, rounde, d-full, transitio, n-all, duratio, n-100, eas, e-line, a, r"`
-          sty, l, e={{ wid, t, h: `${((currentInd, e, x + 1) / trendingIte, m, s.leng, t, h) * 1, 0, 0}%` }}`;`  /></d>
+          sty, l, e={{ wid, t, h: `${((currentInd, e, x + 1) / trendingIte, m, s.leng, t, h) * 1, 0, 0}%` }}``  /></d>
       </d, i, v>
     </d, i, v>
-  );
-};
-export default TrendingContentBanner;"`
+  )};
+export default TrendingContentBanner"`

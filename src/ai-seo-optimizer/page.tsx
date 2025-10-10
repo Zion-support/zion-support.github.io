@@ -91,9 +91,8 @@ const AISEOOptimizerPage: React.FC = () => {
       </main>
       <Footer />
     </div>
-  );
-};
-export default AISEOOptimizerPage;
+  )};
+export default AISEOOptimizerPage
   </h2>
   </a>
   </a>

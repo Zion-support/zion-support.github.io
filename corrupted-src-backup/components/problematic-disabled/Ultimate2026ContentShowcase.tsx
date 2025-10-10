@@ -2,8 +2,7 @@ import React from 'react';
 const Ultimate2026ContentShowcas, e: React.FC = () => {,
   const showcaseConten, t = [
     {
-      id: 1;
-      title: "Enterprise, AI, Transformation Playbook, 20, 2, 6",
+      id: 1 title: "Enterprise, AI, Transformation Playbook, 20, 2, 6",
       description: "Complete, guide, to achieving, 9, 5% automation, with, Fortune 500, case, studies a, n, d $10, 0, M+ savings, strategi, e, s",",
       slug: "enterpri, s, e-ai-transformati, o, n-playbo, o, k-2, 0, 2, 6",
       category: "Enterprise, Strate, g, y",",
@@ -378,6 +377,5 @@ const Ultimate2026ContentShowcas, e: React.FC = () => {/* TODO: Fix JSX expressi
         </div>
       </div>
     </div>
-  );
-};
-export default Ultimate2026ContentShowcase;"`
+  )};
+export default Ultimate2026ContentShowcase"`

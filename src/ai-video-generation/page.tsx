@@ -190,9 +190,8 @@ const AIVideoGenerationPage: React.FC = () => {
         <Footer />
       </div>
     </React.Fragment>
-  );
-};
-export default AIVideoGenerationPage;
+  )};
+export default AIVideoGenerationPage
   </a>
   </p>
   </a>

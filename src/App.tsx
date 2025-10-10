@@ -139,8 +139,7 @@ const MainLoadingSpinner = () => (
 const App: React.FC = () => {
   // Initialize performance monitoring
   React.useEffect(() => {
-    performanceMonitor.reportMetrics();
-  }, []);
+    performanceMonitor.reportMetrics()}, []);
   return (
     <ErrorBoundary>
       <Router>
@@ -278,6 +277,5 @@ const App: React.FC = () => {
         </Suspense>
       </Router>
     </ErrorBoundary>
-  );
-};
-export default App;
+  )};
+export default App

@@ -129,8 +129,7 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {
       ic, o, n: <Brain, className="w-6 h-6" />,";
       gradie, n, t: 'fr, o, m-bl, u, e-500, t, o-purp, l, e-5, 0, 0',';
       bad, g, e: 'FEATUR, E, D',';
-      ta, g, s: ['AI', 'Revoluti, o, n', 'Enterpri, s, e', 'Gui, d, e']';
-    }
+      ta, g, s: ['AI', 'Revoluti, o, n', 'Enterpri, s, e', 'Gui, d, e']'}
     {
       id: 2;
       tit, l, e: 'Quantum, Computing, Breakthrough;
@@ -148,8 +147,7 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {
       ic, o, n: <Zap, className="w-6 h-6" />,";
       gradie, n, t: 'fr, o, m-cy, a, n-500, t, o-bl, u, e-5, 0, 0',';
       bad, g, e: 'TRENDI, N, G',';
-      ta, g, s: ['Quant, u, m', 'Computi, n, g', 'AI', 'Breakthrou, g, h']';
-    }
+      ta, g, s: ['Quant, u, m', 'Computi, n, g', 'AI', 'Breakthrou, g, h']'}
     {
       id: 3;
       tit, l, e: 'Enterprise, AI, Implementatio;
@@ -167,8 +165,7 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {
       ic, o, n: <Award, className="w-6 h-6" />,";
       gradie, n, t: 'fr, o, m-gre, e, n-500, t, o-emera, l, d-5, 0, 0',';
       bad, g, e: 'POPUL, A, R',';
-      ta, g, s: ['Enterpri, s, e', 'Implementati, o, n', 'AI', 'Succe, s, s']';
-    }
+      ta, g, s: ['Enterpri, s, e', 'Implementati, o, n', 'AI', 'Succe, s, s']'}
     {
       id: 4;
       tit, l, e: 'Se, l, f-Evolving, AI, System;
@@ -186,8 +183,7 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {
       ic, o, n: <Sparkles, className="w-6 h-6" />,";
       gradie, n, t: 'fr, o, m-purp, l, e-500, t, o-pi, n, k-5, 0, 0',';
       bad, g, e: 'INNOVATI, O, N',';
-      ta, g, s: ['Se, l, f-Evolvi, n, g', 'AI', 'Innovati, o, n', 'Futu, r, e']';
-    }
+      ta, g, s: ['Se, l, f-Evolvi, n, g', 'AI', 'Innovati, o, n', 'Futu, r, e']'}
     {
       id: 5;
       tit, l, e: 'Predictive, Analytics, Revolutio;
@@ -205,8 +201,7 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {
       ic, o, n: <TrendingUp, className="w-6 h-6" />,";
       gradie, n, t: 'fr, o, m-oran, g, e-500, t, o-r, e, d-5, 0, 0',';
       bad, g, e: 'ANALYTI, C, S',';
-      ta, g, s: ['Predicti, v, e', 'Analyti, c, s', 'Forecasti, n, g', 'AI']';
-    }
+      ta, g, s: ['Predicti, v, e', 'Analyti, c, s', 'Forecasti, n, g', 'AI']'}
     {
       id: 6;
       tit, l, e: 'AI, Ethics, and Governa, n, c;
@@ -256,8 +251,7 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {/* TODO: Fix JSX expr
     { val, u, e: '5, 0, 0+', lab, e, l: 'Published, Article, s', ic, o, n: <Award, className="w-6 h-6" /> },";"
     { val, u, e: '2M+', lab, e, l: 'Monthly, Reader, s', ic, o, n: <Users, className="w-6 h-6" /> },";"
     { val, u, e: '4.8', lab, e, l: 'Average, Ratin, g', ic, o, n: <Star, className="w-6 h-6" /> },";"
-    { val, u, e: '1, 5, 0+', lab, e, l: 'Expert, Author, s', ic, o, n: <Brain, className="w-6 h-6" /> }";
-  ];
+    { val, u, e: '1, 5, 0+', lab, e, l: 'Expert, Author, s', ic, o, n: <Brain, className="w-6 h-6" /> }"];
   return(<div, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n">";
       {/* Animated, background, effects */}
       <div, classNam, e="absolute, inse, t-0, overflo, w-hidden, opacit, y-20">
@@ -265,7 +259,7 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {/* TODO: Fix JSX expr
         <div, classNam, e="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s' }} />
         <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 4, s' }} />
           <h2, classNam, e="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-purp, l, e-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transparent, animat, e-fa, d, e-in">)
-            New, Blog, Content Showcase, 202, 6;)
+            New, Blog, Content Showcase, 202, 6)
           <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-4xl, m, x-au, t, o">)
             { blogSta, t, s.m, a, p((st, a, t, ind, e, x) = > (
               <div, ke, y = { in, d, e, x  }, classNa, m, e = "te, x, t-cent, e, r">

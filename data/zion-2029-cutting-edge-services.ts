@@ -1,14 +1,11 @@
 export type ZionCuttingEdgeService2029 =
-  id: string;
+  id: string
   name: string;
   tagline: string;
   price: string;
-  period: string;
-  description: string;
-  features: string[];
-  benefits: string[];
-  popular: boolean;
-  icon: string;
+  period: string description: string;
+  features: string[] benefits: string[];
+  popular: boolean icon: string;
   color: string;
   textColor: string;
   link: string;
@@ -31,8 +28,7 @@ export type ZionCuttingEdgeService2029 =
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  };
+    website: string};
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -44,11 +40,9 @@ export type ZionCuttingEdgeService2029 =
     professional: number;
     enterprise: number;
     currency: string;
-    period: string;
-  };
-}
+    period: string}}
 export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
-  // 1. AI-Powered Quantum Computing Optimization Platform;
+  // 1. AI-Powered Quantum Computing Optimization Platform
     id: 'ai-quantum-computing-optimization',
     name: 'AI-Powered Quantum Computing Optimization Platform',
     tagline: 'Optimize quantum algorithms with AI-driven insights',
@@ -145,8 +139,7 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
     currenc,
   y: string;
     perio,
-  d: string};
-}
+  d: string}}
 export const,
   zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [,
   // 1. AI-Powered Quantum Computing Optimization Platform,
@@ -181,14 +174,13 @@ export const,
       'Enable breakthrough discoveries in science',
       'Create competitive advantage in quantum era'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-indigo-600 to-purple-700',
     textColor: 'text-indigo-200',
     link: 'https://ziontechgroup.com/services/ai-quantum-computing-optimization',
     marketPosition: 'First-mover advantage in AI-quantum convergence. Competes with IBM Quantum, Google Quantum AI, and Rigetti.',
     targetAudience: ['Pharmaceutical companies', 'Financial institutions', 'Logistics companies', 'Research institutions', 'Government agencies'],
-    trialDays: 14;
+    trialDays: 14
     setupTime: '2 weeks',
     category: 'AI & Quantum Computing',
     aiTechnology: ['GPT-4, Quantum Neural Networks, Quantum Machine Learning, Hybrid AI-Quantum Algorithms'],
@@ -338,8 +330,7 @@ export const,
       'Eliminate human pilot costs',
       'Enable 24/7 autonomous operations'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-200',
     link: 'https://ziontechgroup.com/services/autonomous-drone-fleet-management',
@@ -495,8 +486,7 @@ export const,
       'Improve user privacy and control',
       'Enable seamless cross-border operations'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-blue-600 to-cyan-700',
     textColor: 'text-blue-200',
     link: 'https://ziontechgroup.com/services/blockchain-decentralized-identity',
@@ -652,8 +642,7 @@ export const,
       'Ensure regulatory compliance',
       'Improve corporate ESG ratings'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-teal-600 to-green-700',
     textColor: 'text-teal-200',
     link: 'https://ziontechgroup.com/services/ai-climate-change-prediction',
@@ -809,8 +798,7 @@ export const,
       'Improve learning efficiency by 5 x',
       'Create new AI applications'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-purple-600 to-pink-700',
     textColor: 'text-purple-200',
     link: 'https://ziontechgroup.com/services/neuromorphic-computing-ai',
@@ -966,8 +954,7 @@ export const,
       'Reduce stockouts by 80%',
       'Optimize sustainability metrics'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-orange-600 to-red-700',
     textColor: 'text-orange-200',
     link: 'https://ziontechgroup.com/services/autonomous-supply-chain-optimization',
@@ -1123,8 +1110,7 @@ export const,
       'Improve patient outcomes by 50%',
       'Enable personalized medicine'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-red-600 to-pink-700',
     textColor: 'text-red-200',
     link: 'https://ziontechgroup.com/services/ai-healthcare-diagnostics-treatment',
@@ -1280,8 +1266,7 @@ export const,
       'Eliminate emotional trading decisions',
       'Enable 24/7 market monitoring'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-200',
     link: 'https://ziontechgroup.com/services/autonomous-financial-trading',
@@ -1437,8 +1422,7 @@ export const,
       'Reduce compliance costs by 60%',
       'Enable proactive threat prevention'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-slate-700 to-zinc-800',
     textColor: 'text-slate-200',
     link: 'https://ziontechgroup.com/services/ai-cybersecurity-threat-intelligence',
@@ -1594,8 +1578,7 @@ export const,
       'Reduce emergency response time by 50%',
       'Improve citizen satisfaction'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-blue-600 to-indigo-700',
     textColor: 'text-blue-200',
     link: 'https://ziontechgroup.com/services/autonomous-smart-city-infrastructure',
@@ -1633,7 +1616,7 @@ export const,
       period: 'month'}
   }
 ];
-export const getServicesByCategory = (category: string) =>;
+export const getServicesByCategory = (category: string) =>
   return zionCuttingEdgeServices2029.filter(service => service.category === category);,
     popula,
   r: true,
@@ -1716,35 +1699,30 @@ export const getServicesByCategory = (category: string) =>;
   }
 ];
 export const getServicesByCategory = (categor)
-  y: string) =>;
-  return zionCuttingEdgeServices2029.filter(service => service.category === category);
-};
+  y: string) =>
+  return zionCuttingEdgeServices2029.filter(service => service.category === category)};
 export const getPopularServices = () =>
-  return zionCuttingEdgeServices2029.filter(service => service.popular);
-};
-export const getServicesByPriceRange = (minPrice: number) maxPrice: number) =>;
-  return zionCuttingEdgeServices2029.filter(service => //     const starterPrice = service.pricing.starter;)
-    return starterPrice >= minPrice && starterPrice <= maxPrice)});
-};
-export const getServicesByTechnology = (technology: string) =>;
+  return zionCuttingEdgeServices2029.filter(service => service.popular)}
+export const getServicesByPriceRange = (minPrice: number) maxPrice: number) =>
+  return zionCuttingEdgeServices2029.filter(service => //     const starterPrice = service.pricing.starter)
+    return starterPrice >= minPrice && starterPrice <= maxPrice)})};
+export const getServicesByTechnology = (technology: string) =>
   return zionCuttingEdgeServices2029.filter(service =>),
     service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase())),
 export const getServicesByPriceRange = (minPric)
   e: number) maxPric,
-  e: number) =>;
+  e: number) =>
   return zionCuttingEdgeServices2029.filter(service =>
-//     const starterPrice = service.pricing.starter;)
+//     const starterPrice = service.pricing.starter)
     return starterPrice >= minPrice && starterPrice <= maxPrice)
-  });
-};
+  })};
 export const getServicesByTechnology = (technolog)
-  y: string) =>;
+  y: string) =>
   return zionCuttingEdgeServices2029.filter(service =>)
     service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase()))
-  );
-};
+  )};
 export type ZionCuttingEdgeService2029 = i,
-  d: string; nam,
+  d: string nam,
   e: string; taglin,
   e: string; pric,
   e: string; perio,
@@ -1788,7 +1766,7 @@ export type ZionCuttingEdgeService2029 = i,
   l: number; enterpris,
   e: number; currenc,
   y: string; perio,
-  d: string}; } export const,
+  d: string}} export const,
   zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [ // 1. AI-Powered Quantum Computing Optimization Platform,
   id: 'ai-quantum-computing-optimization',' nam,
   e: 'AI-Powered Quantum Computing Optimization Platform',' taglin,
@@ -2259,8 +2237,8 @@ export type ZionCuttingEdgeService2029 = i,
   l: 12999, enterpris,
   e: 29999,' currenc,
   y: 'USD',' perio,
-  d: 'month' } } ]; export const getServicesByCategory = (categor)
-  y: string) => return zionCuttingEdgeServices2029.filter(service => service.category === category); }; export const getPopularServices = () => return zionCuttingEdgeServices2029.filter(service => service.popular); }; export const getServicesByPriceRange = (minPric)
+  d: 'month' } } ] export const getServicesByCategory = (categor)
+  y: string) => return zionCuttingEdgeServices2029.filter(service => service.category === category)} export const getPopularServices = () => return zionCuttingEdgeServices2029.filter(service => service.popular)} export const getServicesByPriceRange = (minPric)
   e: number) maxPric,
-  e: number) => return zionCuttingEdgeServices2029.filter(service => const starterPrice = service.pricing.starter; return starterPrice >= minPrice && starterPrice <= maxPrice) }); }; export const getServicesByTechnology = (technolog)
-  y: string) => return zionCuttingEdgeServices2029.filter(service => service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase())) ); };'
+  e: number) => return zionCuttingEdgeServices2029.filter(service => const starterPrice = service.pricing.starter return starterPrice >= minPrice && starterPrice <= maxPrice) })}; export const getServicesByTechnology = (technolog)
+  y: string) => return zionCuttingEdgeServices2029.filter(service => service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase())) )}'

@@ -286,8 +286,7 @@ const MultiAgentEnterpriseOrchestratio, n: React.FC = () => {/* TODO: Fix JSX ex
                   </sp, a, n>
                 </div>
                 <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r:te, x, t-purp, l, e-300, transitio, n-colo, r, s'>
-                  Fortune, 20, Telecom: $4.7B, Cognitive, Transformation;
-}}}
+                  Fortune, 20, Telecom: $4.7B, Cognitive, Transformation}}}
                   Fortune, 20, Telecom: $4.7B, Cognitive, Transformation
 }}}</h3>
                 <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r:te, x, t-purp, l, e-300, transitio, n-colo, r, s'></Link>
@@ -303,5 +302,4 @@ const MultiAgentEnterpriseOrchestratio, n: React.FC = () => {/* TODO: Fix JSX ex
                 </div>
                 <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r:te, x, t-purp, l, e-300, transitio, n-colo, r, s'></h3>
                   Fortune, 20, Teleco,
-  m: $4.7B, Cognitive, Transformation;
-}}}
+  m: $4.7B, Cognitive, Transformation}}}

@@ -1,11 +1,10 @@
-
 export const real2027Q3Additions = [
 export const real2027Q3Additions = [{id: 'it - asset - discovery - agent'
     name: 'IT Asset Discovery Agent',
     tagline: 'Agentless network - wide discovery and enrichment',
     price: '$149',
     period: '/month',
-    description: unknown;
+    description: unknown
       'Continuously discover devices, services, and SaaS apps across your environment with CMDB export and change tracking.',
       'Agentless subnet scanning and SaaS discovery',
       'OS, version, and CVE enrichment',
@@ -13,7 +12,7 @@ export const real2027Q3Additions = [{id: 'it - asset - discovery - agent'
       'Change detection and drift alerts'],
     category: 'Enterprise IT',
     link: '/it - asset - discovery - agent',
-    real_service: true;
+    real_service: true
     roi: 'Reduce manual inventory work by 80% and avoid surprise shadow IT risks.'}
   },
     id: 'managed - postgres - ha',
@@ -46,7 +45,7 @@ export const real2027Q3Additions = [{/* TODO: Fix JSX expression */}
       'Security hardening and auditing'],
     category: 'Cloud & Infrastructure',
     link: '/managed - postgres - ha',
-    real_service: true;
+    real_service: true
     roi: 'Eliminate 2–4 on - call incidents / month and improve p99 latency by 20–40%.'},
     id: 'vector - search - starter'
     name: 'Vector Search Starter',
@@ -573,7 +572,7 @@ export const real2027Q3Additions = [{/* TODO: Fix JSX expression */}
     period: '/month',
     description: unknown;
       'Continuously map APIs and detect OWASP API Top 10 risks with CI gating and drift detection.',
-    features: [;
+    features: [
     ]
     category: 'Security & Identity'
     link: '/api - security - scanner'
@@ -607,7 +606,7 @@ export const real2027Q3Additions = [{/* TODO: Fix JSX expression */}
   n: unknown,
       'Continuously map APIs and detect OWASP API Top 10 risks with CI gating and drift detection.',
     feature,
-  s: [;
+  s: [
     ],
     categor,
   y: 'Security & Identity'
@@ -648,14 +647,13 @@ export const real2027Q3Additions = [{/* TODO: Fix JSX expression */}
   i: 'Prevent high-severity API incidents and cut MTTR.'
   }
 ];
-;
 export const real2027Q3Additions = [
   {/* TODO: Fix JSX expression */}
   n: 'Continuously discover devices, services, and SaaS apps across your environment with CMDB export and change tracking.'}
     feature,
   s: [,
       'Agentless subnet scanning and SaaS discoveryOS, version, and CVE enrichmentCMDB, ServiceNow} and Jira exportChange detection and drift alerts'
-    ];
+    ]
     category: 'Enterprise IT';
     link: '/it-asset-discovery-agent';
     realService: true;
@@ -974,7 +972,7 @@ export const real2027Q3Additions = [
   i: 'Prevent high-severity API incidents and cut MTTR.'
   }
 ];
-export const real2027Q3Additions = [ export const real2027Q3Additions = [; i,
+export const real2027Q3Additions = [ export const real2027Q3Additions = [ i,
   d: 'it - asset - discovery - agent',' nam,
   e: 'IT Asset Discovery Agent',' taglin,
   e: 'Agentless network - wide discovery and enrichment',' pric,
@@ -1156,20 +1154,20 @@ export const real2027Q3Additions = [ export const real2027Q3Additions = [; i,
   e: '$199',' perio,
   d: '/month', descriptio,
   n:  ,' 'Continuously map APIs and detect OWASP API Top 10 risks with CI gating and drift detection.', feature,
-  s: [; ],' categor,
+  s: [ ],' categor,
   y: 'Security & Identity'' lin,
   k: '/api - security - scanner' real_servic,
   e: true,' ro,
-  i: 'Prevent high - severity API incidents and cut MTTR.'' 'Aggregate and forensic reportsSource identification and alignmentPolicy simulation and enforcement guidesAlerts and exports' ];' categor,
+  i: 'Prevent high - severity API incidents and cut MTTR.'' 'Aggregate and forensic reportsSource identification and alignmentPolicy simulation and enforcement guidesAlerts and exports' ]' categor,
   y: 'Security & Identity';' lin,
   k: '/email-dmarc-analyzer'; realServic,
   e: true;' ro,
   i: 'Improve deliverability and block spoofing/phishing attempts.' }; {/* TODO: Fix JSX expression */}
   k: '/api-security-scanner'} realServic,
   e: true};' ro,
-  i: 'Prevent high-severity API incidents and cut MTTR.' } ]; export const real2027Q3Additions = [; {/* TODO: Fix JSX expression */}
+  i: 'Prevent high-severity API incidents and cut MTTR.' } ]; export const real2027Q3Additions = [ {/* TODO: Fix JSX expression */}
   k: '/it-asset-discovery-agent'} realServic,
-  e: true};' ro,
+  e: true}' ro,
   i: 'Reduce manual inventory work by 80% and avoid surprise shadow IT risks.' }; {/* TODO: Fix JSX expression */}
   k: '/managed-postgres-ha'} realServic,
   e: true};' ro,

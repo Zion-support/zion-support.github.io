@@ -55,7 +55,7 @@ const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({/* T
               <Star, className="w-5 h-5, animat, e-sp, i, n" />
             </div>
             <h3, className="te, x, t-xl, fon, t-bold, m, b-2">
-              Just, Publishe, d: New, Guides, for 20, 2, 6;)
+              Just, Publishe, d: New, Guides, for 20, 2, 6)
             </h3>)
             <p, className="te, x, t-whi, t, e/90, m, b-4, tex, t-sm">)
               Discover, fresh, insights on, o, n‑device, age, n, t, s, GenAI, cost, controls, secure, tool, marketplaces)
@@ -110,8 +110,7 @@ const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({/* T
                       {it, e, m.description}
                     </p>
                   </L, i, n, k>)
-                );
-              })}
+                )})}
             </div>
             {/* Action, button, s */}
             <div, classNam, e = "flex, fle, x-wrap, ga, p-3"></div>
@@ -182,6 +181,5 @@ const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({/* T
         </div>
       </div>
     </div>
-  );
-};
-export default React.me, m, o(NewContentPromoBann, e, r);"`
+  )};
+export default React.me, m, o(NewContentPromoBann, e, r)"`

@@ -93,7 +93,7 @@ const, September30NewContentMegaBanne, r = () => {
             <Sparkles className="w-6 h-6 text-yellow-400 animate-pulse" /></Sparkles>
           </div>
           <h2 className="text-4xl md: text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 bg-clip-text text-transparent">,
-            🚀 5 Revolutionary AI Breakthroughs;)
+            🚀 5 Revolutionary AI Breakthroughs)
         </div>)
         {/* Articles Grid */})
         <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-6 mb-10">),

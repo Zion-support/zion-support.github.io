@@ -15,7 +15,7 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
       </Helm, e, t>
       <div, className='container, m, x-auto, p, x-6, p, y-16'></div>
         <h1, className='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>
-          Real, Time, Decision Engines, 202, 6;
+          Real, Time, Decision Engines, 202, 6
             This, comprehensive, guide covers, real, time decision, engines, 2026 and, provides, practical insights, for, enterprise implementati, o, n.
             This, comprehensive, guide covers, real, time decision, engines, 2026 and, provides, practical insights, for, enterprise implementati, o, n.
 }</h1>

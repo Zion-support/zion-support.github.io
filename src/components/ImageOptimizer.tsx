@@ -8,8 +8,7 @@ interface ImageOptimizerProps {
   priority?: boolean;
   placeholder?: string;
   onLoad?: () => void;
-  onError?: () => void;
-}
+  onError?: () => void}
 const ImageOptimizer: React.FC<ImageOptimizerProps> = ({,
   src;
   alt,
@@ -19,8 +18,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({,
   priority = false,
   placeholder,
   onLoad,
-  onError;
-}) => {
+  onError}) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
@@ -30,27 +28,21 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({,
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsInView(true);
-          observer.disconnect();
-        }
+          observer.disconnect()}
       },
       {
         rootMargin: '50px 0px',
-        threshold: 0.01;
-      }
+        threshold: 0.01}
     );
     if (imgRef.current) {
-      observer.observe(imgRef.current);
-    }
-    return () => observer.disconnect();
-  }, [priority]);
+      observer.observe(imgRef.current)}
+    return () => observer.disconnect()}, [priority]);
   const handleLoad = () => {
     setIsLoaded(true);
-    onLoad?.();
-  };
+    onLoad?.()};
   const handleError = () => {
     setHasError(true);
-    onError?.();
-  };
+    onError?.()};
   const generatePlaceholder = () => {
     if (placeholder) return placeholder;
     const svg = `
@@ -66,8 +58,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({,
       </svg>,
     `;
     ,
-    return `data:image/svg+xml;base64,${btoa(svg)}`;
-  };
+    return `data:image/svg+xml;base64,${btoa(svg)}`};
   if (hasError) {
     return(<div;
         className={`bg-slate-800 flex items-center justify-center ${className}`}
@@ -78,8 +69,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({,
           <div className="text-sm">Image failed to load</div>)
         </div>)
       </div>)
-    );
-  }
+    )}
   return(<div;
       ref={imgRef}
       className={`relative overflow-hidden ${className}`}
@@ -87,7 +77,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({,
     >
       {/* Placeholder */})
       {!isLoaded && ()
-        <img;)
+        <img)
       {/* Placeholder */}
       {!isLoaded && (</div>
         <img
@@ -113,7 +103,6 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({,
         /></img>
       )}
     </div>
-  );
-};
-export default ImageOptimizer;
+  )};
+export default ImageOptimizer
   </ImageOptimizerProps>

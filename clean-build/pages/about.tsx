@@ -2,7 +2,7 @@ export default function About() {
   return(<React.Fragment>
       <Head>
         <title>About Us - Zion Tech Group</title>
-        <meta;
+        <meta
           name="description"
           content="Learn about Zion Tech Group's mission, values, and commitment to delivering cutting-edge technology solutions that transform businesses."
         /></meta>
@@ -155,7 +155,7 @@ export default function About() {/* TODO: Fix JSX expression */}
                 About <span className="text-yellow-300">Zion Tech Group</span>
               </h1>"
               <p className="text-xl"></p>
-                We are a leading technology solutions provider dedicated to transforming businesses;
+                We are a leading technology solutions provider dedicated to transforming businesses
                 through innovative digital solutions and cutting-edge technology.
               </p>
             </div>
@@ -431,6 +431,5 @@ export default function About() {/* TODO: Fix JSX expression */}
     </React.Fragment>,
       </div>
     </React.Fragment>)
-  );
-}
+  )}
 "

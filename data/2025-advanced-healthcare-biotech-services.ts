@@ -1,13 +1,10 @@
-
   id: string;
   name: string;
   tagline: string;
   price: string;
-  period: string;
-  description: string;
+  period: string description: string;
   features: string[];
-  popular: boolean;
-  icon: string;
+  popular: boolean icon: string;
   color: string;
   text_color: string;
   link: string;
@@ -105,9 +102,8 @@
   g: number;
   review,
   s: number;
-;
 export const,
-  advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechService[] =;
+  advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechService[] =
   [
     // AI - Powered Drug Discovery Platform;
       id: 'ai - drug - discovery - platform',
@@ -142,8 +138,7 @@ export const,
         'Advanced analytics and reporting',
         'Mobile research app',
         'API for research institutions'],
-      popular: true;
-      icon: '',
+      popular: true icon: '',
       popula,
   r: true,
       ico,
@@ -239,8 +234,7 @@ export const,
       launch_date: '2024 - 08 - 15'
       customers: 23;
       rating: 4 && 4.9;
-      reviews: 12;
-    },
+      reviews: 12},
     // Precision Medicine & Genomics Platform;
       id: 'precision - medicine - genomics',
       name: 'Precision Medicine & Genomics Platform',
@@ -304,8 +298,7 @@ export const,
         'Research collaboration tools',
         'Mobile patient app',
         'API for healthcare providers'],
-      popular: true;
-      icon: '',
+      popular: true icon: '',
       popula,
   r: true,
       ico,
@@ -466,8 +459,7 @@ export const,
         'API for healthcare systems',
         'Advanced analytics and insights',
         'Compliance and audit tools'],
-      popular: true;
-      icon: '',
+      popular: true icon: '',
       popula,
   r: true,
       ico,
@@ -539,8 +531,7 @@ export const,
       launch_date: '2024 - 10 - 10'
       customers: 67;
       rating: 4 && 4.7;
-      reviews: 34;
-    },
+      reviews: 34},
         'High-quality video consultations',
     // Digital Health & Telemedicine Platform;
       id: 'digital - health - telemedicine'
@@ -610,8 +601,7 @@ export const,
         'Secure messaging and file sharing',
         'Billing and insurance integration',
         'API for healthcare applications'],
-      popular: true;
-      icon: '',
+      popular: true icon: '',
       popula,
   r: true,
       ico,
@@ -701,8 +691,7 @@ export const,
       launch_date: '2024 - 07 - 15'
       customers: 156;
       rating: 4 && 4.6;
-      reviews: 78;
-    },
+      reviews: 78},
         'AI-powered trial design optimization',
     // Clinical Trial Management & Optimization;
       id: 'clinical - trial - management - optimization',
@@ -772,8 +761,7 @@ export const,
         'Integration with EDC systems',
         'Mobile data collection app',
         'API for research platforms'],
-      popular: true;
-      icon: '',
+      popular: true icon: '',
       popula,
   r: true,
       ico,
@@ -924,7 +912,7 @@ i,
   s: number; ratin,
   g: number; review,
   s: number; export const,
-  advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechService[] =; [; // AI - Powered Drug Discovery Platform, ' i,
+  advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechService[] = [ // AI - Powered Drug Discovery Platform, ' i,
   d: 'ai - drug - discovery - platform',' nam,
   e: 'AI - Powered Drug Discovery Platform',' taglin,
   e: 'Accelerate drug discovery with AI and machine learning',' pric,

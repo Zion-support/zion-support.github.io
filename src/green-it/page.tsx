@@ -301,21 +301,19 @@ valuevalue: '100%',
                 Email Us
       <Footer />
     </React.Fragment>
-  );
-};
-export default GreenITPage;
+  )};
+export default GreenITPage
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const GreenITPage: React.FC = () => {
   return (
     <div>Coming Soon</div>
-  );
-};
+  )};
   const [activeTab, setActiveTab] = useState('solutions');
 const tabs = [
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   i,
   d: 'solutions',
@@ -593,8 +591,7 @@ const tabs = [
                   onClick={() => setActiveTab(tab.id)}`
                   className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${}
   // TOD,
-  O: Add content;
-}
+  O: Add content}
                     activeTab === tab.id;`
                       ? `${tab.bgColor} ${tab.color} border-2 border-current`
                       : 'bg-slate-800/50 text-gray-300,
@@ -708,9 +705,8 @@ Benefits of Green IT;"
                 Email Us;
       <Footer />
     </div>
-  );
-};
-export default GreenItPage;
+  )};
+export default GreenItPage
   </div>
   </div>
   </div>

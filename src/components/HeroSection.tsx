@@ -10,7 +10,7 @@ export default function HeroSection() {
           {/* Main Heading */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
             <span className="block holographic-text cyber-text-3d">
-              Zion Tech Group;
+              Zion Tech Group
   </
             <span className="block text-white mt-4">
               Advanced AI & IT Solutions;
@@ -92,9 +92,8 @@ export default function HeroSection() {
         </div>
       </div>
     </section>
-  );
-};
-export default HeroSection;"`
+  )};
+export default HeroSection"`
   </a>
   </a>
   </span>

@@ -32,8 +32,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({,
 const,
   SEOEnhancer: React.FC<SEOEnhancerProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
-      };
-    }
+      }}
   }, [structuredData]);
   // Default structured data for organization;
   const defaultStructuredData = {
@@ -176,9 +175,8 @@ const,
         <script type="application/ld+json">{JSON.stringify(finalStructuredData)}</script>
       </Helmet>
       {children}
-  );
-};
-export default SEOEnhancer;
+  )};
+export default SEOEnhancer
 "`
   </SEOEnhancerProps>
   </SEOEnhancerProps>

@@ -1,7 +1,6 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp } from 'lucide-react';
-
 interface Slide {
   id: number;
   title: string;
@@ -10,10 +9,8 @@ interface Slide {
   features: string[];
   stats: { value: string; label: string }[];
 }
-
 const ContentCarousel: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-
   const slides: Slide[] = [
     {
       id: 1,
@@ -92,25 +89,15 @@ const ContentCarousel: React.FC = () => {
       ]
     }
   ];
-
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000);
-
-    return () => clearInterval(timer);
-  }, [slides.length]);
-
+      setCurrentSlide((prev) => (prev + 1) % slides.length)}, 5000);
+    return () => clearInterval(timer)}, [slides.length]);
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
-  };
-
+    setCurrentSlide((prev) => (prev + 1) % slides.length)};
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-  };
-
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)};
   const currentSlideData = slides[currentSlide];
-
   return (
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
       <div className="max-w-7xl mx-auto">
@@ -121,10 +108,9 @@ const ContentCarousel: React.FC = () => {
             Explore our comprehensive suite of AI and IT solutions designed to transform your business.
           </p>
         </div>
-
         {/* Carousel */}
         <div className="relative">
-          <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 md:p-12 overflow-hidden">
+          <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 md: p-12 overflow-hidden">
             <div className="flex items-center justify-between mb-8">
               <div className="flex items-center space-x-6">
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-xl flex items-center justify-center">
@@ -140,7 +126,6 @@ const ContentCarousel: React.FC = () => {
                 </div>
               </div>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {currentSlideData.features.map((feature, index) => (
                 <div key={index} className="flex items-center space-x-3">
@@ -149,7 +134,6 @@ const ContentCarousel: React.FC = () => {
                 </div>
               ))}
             </div>
-
             {/* Stats */}
             <div className="grid grid-cols-3 gap-8 mt-12 pt-8 border-t border-slate-700">
               {currentSlideData.stats.map((stat, index) => (
@@ -160,22 +144,20 @@ const ContentCarousel: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* Navigation Buttons */}
           <button
             onClick={prevSlide}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20"
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover: bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20"
           >
             <ChevronLeft className="w-6 h-6" />
           </button>
           <button
             onClick={nextSlide}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20"
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover: bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20"
           >
             <ChevronRight className="w-6 h-6" />
           </button>
         </div>
-
         {/* Slide Indicators */}
         <div className="flex justify-center mt-8 space-x-2">
           {slides.map((_, index) => (
@@ -188,7 +170,6 @@ const ContentCarousel: React.FC = () => {
             />
           ))}
         </div>
-
         {/* CTA Section */}
         <div className="text-center mt-16">
           <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/20">
@@ -196,7 +177,7 @@ const ContentCarousel: React.FC = () => {
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Join thousands of businesses already using our solutions to drive growth and innovation.
             </p>
-            <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 font-semibold flex items-center mx-auto">
+            <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lg hover: from-cyan-600 hover:to-purple-600 transition-all duration-300 font-semibold flex items-center mx-auto">
               Get Started Today
               <ArrowRight className="w-5 h-5 ml-2" />
             </button>
@@ -204,7 +185,5 @@ const ContentCarousel: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
-
-export default ContentCarousel;
+  )};
+export default ContentCarousel

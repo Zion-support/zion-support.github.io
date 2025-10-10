@@ -105,7 +105,7 @@ icon: Shield,
 {/* CTA Section */}
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
             Ready to Get Started?
           </h2>
           <p className="text-xl text-purple-100 mb-8">
@@ -124,9 +124,8 @@ icon: Shield,
         </div>
       </div>
     </div>
-  );
-};
-export default CloudInfrastructurePage;
+  )};
+export default CloudInfrastructurePage
   </button>
   </button>
   </section>

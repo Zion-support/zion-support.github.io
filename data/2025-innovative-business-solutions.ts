@@ -1,13 +1,10 @@
-
   id: string;
   name: string;
   tagline: string;
   price: string;
-  period: string;
-  description: string;
+  period: string description: string;
   features: string[];
-  popular: boolean;
-  icon: string;
+  popular: boolean icon: string;
   color: string;
   text_color: string;
   link: string;
@@ -29,13 +26,11 @@
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  }
-export interface InnovativeBusinessSolution {id: string, name: string;
+    website: string}
+export interface InnovativeBusinessSolution {id: string, name: string
   tagline: string, price: string;
   period: string, description: string;
-  features: string[], popular: boolean;
-  icon: string, color: string;
+  features: string[], popular: boolean icon: string, color: string;
   textColor: string, link: string;
   marketPosition: string, targetAudience: string[],
   trialDays: number, setupTime: string;
@@ -52,16 +47,15 @@ export interface InnovativeBusinessSolution {id: string, name: string;
     realImplementation: boolean, implementationDetails: string;
   launchDate: string, customers: number;
   rating: number;
-  reviews: number;
-}
+  reviews: number}
 export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [,
-  // AI Business Intelligence Suite;
+  // AI Business Intelligence Suite
     id: 'ai-business-intelligence-suite', name: 'AI Business Intelligence Suite',
     tagline: 'Intelligent business insights and analytics',
     price: '$3,200',
     period: '/month',
     description: 'Advanced AI-powered business intelligence platform that provides intelligent analytics, predictive insights, and automated reporting to help organizations make data-driven decisions and optimize business performance.',
-    features: [;
+    features: [
       'AI-powered data analysis and insightsPredictive analytics and forecastingAutomated report generationReal-time business monitoringCustom dashboard creationData visualization and explorationBusiness performance optimizationIntegration with business systems',
       'Advanced analytics and reportingCustom business intelligence workflows'],
     popular: true, icon: '',
@@ -84,8 +78,7 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [,
     launch_date: '2025 - 05 - 01'
     customers: 38;
     rating: 4.7;
-    reviews: 26;
-];
+    reviews: 26];
 ,
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com',
@@ -178,7 +171,7 @@ export const,
     descriptio,
   n: 'Advanced AI-powered business intelligence platform that provides intelligent analytics, predictive insights, and automated reporting to help organizations make data-driven decisions and optimize business performance.',
     feature,
-  s: [;
+  s: [
       'AI-powered data analysis and insightsPredictive analytics and forecastingAutomated report generationReal-time business monitoringCustom dashboard creationData visualization and explorationBusiness performance optimizationIntegration with business systems'
       'Advanced analytics and reportingCustom business intelligence workflows'
     ],
@@ -235,8 +228,7 @@ export const,
     ratin,
   g: 4.7,
     review,
-  s: 26;
-];
+  s: 26]
 ,
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',
@@ -245,18 +237,15 @@ export const,
   s://ziontechgroup.com'
     }
 ];
-;
-  }
+}
 ];
-;
     realImplementation: true;
     implementationDetails:,
       'Comprehensive AI-powered marketing automation platform with intelligent optimization, customer engagement, and seamless marketing tool integration.'
     launchDate: '2025-02-15'
     customers: 89;
     rating: 4.7;
-    reviews: 62;
-  }
+    reviews: 62}
   // AI Sales Intelligence Platform;
     id: 'ai-sales-intelligence-platform-v2',
     name: 'AI Sales Intelligence Platform',
@@ -291,7 +280,7 @@ export const,
   n:
       'Advanced AI-powered sales platform that provides intelligent lead scoring, sales forecasting, and performance optimization to help sales teams increase conversion rates and accelerate revenue growth.'
     feature,
-  s: [;
+  s: [
       'AI-powered lead scoring and qualification'
       'Sales forecasting and prediction'
       'Performance optimization and coaching'
@@ -303,8 +292,7 @@ export const,
       'Advanced sales reporting'
       'Real-time sales monitoring'
     ]
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-orange-500 to-red-600'
     textColor: 'text-orange-400',
     link: 'https://ziontechgroup.com/ai-sales-intelligence-platform',
@@ -324,7 +312,7 @@ export const,
   n:
       'Leading AI-powered sales intelligence platform with intelligent optimization, forecasting, and comprehensive sales analytics.'
     targetAudienc,
-  e: [;
+  e: [
       'Sales teams'
       'Sales managers'
       'Revenue operations'
@@ -340,7 +328,7 @@ export const,
     realServic,
   e: true;
     technolog,
-  y: [;
+  y: [
       'Artificial Intelligence'
       'Machine Learning'
       'Sales Analytics'
@@ -350,7 +338,7 @@ export const,
       'React'
     ]
     integration,
-  s: [;
+  s: [
       'CRM systems'
       'Sales tools'
       'Email platforms'
@@ -380,8 +368,7 @@ export const,
     launchDate: '2025-03-01'
     customers: 67;
     rating: 4.9;
-    reviews: 45;
-  }
+    reviews: 45}
   // AI Customer Service Platform;
     id: 'ai-customer-service-platform',
     name: 'AI Customer Service Platform',
@@ -439,7 +426,7 @@ export const,
   n:
       'Advanced AI-powered customer service platform that automates customer support, provides intelligent responses, and optimizes customer experience to improve satisfaction and reduce support costs.'
     feature,
-  s: [;
+  s: [
       'AI-powered customer support automation'
       'Intelligent chatbot and virtual assistants'
       'Automated ticket routing and resolution'
@@ -451,8 +438,7 @@ export const,
       'Integration with support tools'
       'Advanced customer service analytics'
     ]
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from-purple-500 to-pink-600'
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/ai-customer-service-platform',
@@ -472,7 +458,7 @@ export const,
   n:
       'Advanced AI-powered customer service platform with intelligent automation, support optimization, and comprehensive customer experience management.'
     targetAudienc,
-  e: [;
+  e: [
       'Customer service teams'
       'Support managers'
       'E-commerce companies'
@@ -488,7 +474,7 @@ export const,
     realServic,
   e: true;
     technolog,
-  y: [;
+  y: [
       'Artificial Intelligence'
       'Machine Learning'
       'Natural Language Processing'
@@ -498,7 +484,7 @@ export const,
       'React'
     ]
     integration,
-  s: [;
+  s: [
       'Help desk systems'
       'CRM platforms'
       'Live chat tools'
@@ -528,8 +514,7 @@ export const,
     launchDate: '2025-03-15'
     customers: 54;
     rating: 4.7;
-    reviews: 38;
-  }
+    reviews: 38}
   // AI HR Management Platform;
     id: 'ai-hr-management-platform',
     name: 'AI HR Management Platform',
@@ -587,7 +572,7 @@ export const,
   n:
       'Advanced AI-powered HR platform that automates recruitment, optimizes workforce management, and provides intelligent insights to improve employee engagement and organizational performance.'
     feature,
-  s: [;
+  s: [
       'AI-powered recruitment and candidate screening'
       'Workforce planning and optimization'
       'Employee performance analytics'
@@ -599,8 +584,7 @@ export const,
       'Advanced HR reporting'
       'Comprehensive workforce analytics'
     ]
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from-teal-500 to-cyan-600'
     textColor: 'text-teal-400',
     link: 'https://ziontechgroup.com/ai-hr-management-platform',
@@ -620,7 +604,7 @@ export const,
   n:
       'Advanced AI-powered HR management platform with intelligent automation, workforce optimization, and comprehensive HR analytics.'
     targetAudienc,
-  e: [;
+  e: [
       'HR teams'
       'HR managers'
       'Recruitment teams'
@@ -636,7 +620,7 @@ export const,
     realServic,
   e: true;
     technolog,
-  y: [;
+  y: [
       'Artificial Intelligence'
       'Machine Learning'
       'HR Analytics'
@@ -646,7 +630,7 @@ export const,
       'React'
     ]
     integration,
-  s: [;
+  s: [
       'HRIS systems'
       'ATS platforms'
       'Payroll systems'
@@ -676,8 +660,7 @@ export const,
     launchDate: '2025-04-01'
     customers: 42;
     rating: 4.8;
-    reviews: 29;
-  }
+    reviews: 29}
   // AI Financial Analytics Platform;
     id: 'ai-financial-analytics-platform',
     name: 'AI Financial Analytics Platform',
@@ -735,7 +718,7 @@ export const,
   n:
       'Advanced AI-powered financial platform that provides intelligent financial analysis, risk assessment, and optimization to help organizations make better financial decisions and improve profitability.'
     feature,
-  s: [;
+  s: [
       'AI-powered financial analysis'
       'Risk assessment and management'
       'Financial forecasting and modeling'
@@ -747,8 +730,7 @@ export const,
       'Advanced financial reporting'
       'Comprehensive financial insights'
     ]
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-emerald-500 to-green-600'
     textColor: 'text-emerald-400',
     link: 'https://ziontechgroup.com/ai-financial-analytics-platform',
@@ -768,7 +750,7 @@ export const,
   n:
       'Leading AI-powered financial analytics platform with intelligent analysis, risk management, and comprehensive financial optimization.'
     targetAudienc,
-  e: [;
+  e: [
       'Finance teams'
       'CFOs'
       'Financial analysts'
@@ -784,7 +766,7 @@ export const,
     realServic,
   e: true;
     technolog,
-  y: [;
+  y: [
       'Artificial Intelligence'
       'Machine Learning'
       'Financial Analytics'
@@ -794,7 +776,7 @@ export const,
       'React'
     ]
     integration,
-  s: [;
+  s: [
       'ERP systems'
       'Accounting software'
       'Financial databases'
@@ -824,8 +806,7 @@ export const,
     launchDate: '2025-04-15'
     customers: 28;
     rating: 4.9;
-    reviews: 19;
-  }
+    reviews: 19}
   // AI Project Management Platform;
     id: 'ai-project-management-platform',
     name: 'AI Project Management Platform',
@@ -883,7 +864,7 @@ export const,
   n:
       'Advanced AI-powered project management platform that provides intelligent planning, resource optimization, and performance monitoring to help teams deliver projects on time and within budget.'
     feature,
-  s: [;
+  s: [
       'AI-powered project planning and scheduling'
       'Resource optimization and allocation'
       'Risk assessment and management'
@@ -895,8 +876,7 @@ export const,
       'Advanced project reporting'
       'Comprehensive project insights'
     ]
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from-indigo-500 to-purple-600'
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/ai-project-management-platform',
@@ -916,7 +896,7 @@ export const,
   n:
       'Advanced AI-powered project management platform with intelligent planning, optimization, and comprehensive project analytics.'
     targetAudienc,
-  e: [;
+  e: [
       'Project managers'
       'Project teams'
       'Program managers'
@@ -932,7 +912,7 @@ export const,
     realServic,
   e: true;
     technolog,
-  y: [;
+  y: [
       'Artificial Intelligence'
       'Machine Learning'
       'Project Management'
@@ -942,7 +922,7 @@ export const,
       'React'
     ]
     integration,
-  s: [;
+  s: [
       'Project management tools'
       'Collaboration platforms'
       'Time tracking tools'
@@ -972,8 +952,7 @@ export const,
     launchDate: '2025-05-01'
     customers: 38;
     rating: 4.7;
-    reviews: 26;
-  }];      mobile: '+1 302 464 0950',
+    reviews: 26}];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
@@ -1045,23 +1024,20 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
   s: string}
     websit,
   e: string}
-  };
+  }
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
-}
-;
+  reviews: number}
     realImplementation: true;
     implementationDetails:,
       'Comprehensive AI-powered marketing automation platform with intelligent optimization, customer engagement, and seamless marketing tool integration.'
     launchDate: '2025-02-15'
     customers: 89;
     rating: 4.7;
-    reviews: 62;
-  }
+    reviews: 62}
   // AI Sales Intelligence Platform;
     id: 'ai-sales-intelligence-platform-v2',
     name: 'AI Sales Intelligence Platform',
@@ -1084,7 +1060,6 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
   g: number;
   review,
   s: number}
-;
     realImplementatio,
   n: true,
     implementationDetail,
@@ -1117,7 +1092,7 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
   n:
       'Leading AI-powered sales intelligence platform with intelligent optimization, forecasting, and comprehensive sales analytics.'
     targetAudienc,
-  e: [;
+  e: [
       'Sales teams'
       'Sales managers'
       'Revenue operations'
@@ -1133,7 +1108,7 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
     realServic,
   e: true;
     technolog,
-  y: [;
+  y: [
       'Artificial Intelligence'
       'Machine Learning'
       'Sales Analytics'
@@ -1143,7 +1118,7 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
       'React'
     ]
     integration,
-  s: [;
+  s: [
       'CRM systems'
       'Sales tools'
       'Email platforms'
@@ -1182,7 +1157,7 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
   n:
       'Advanced AI-powered customer service platform with intelligent automation, support optimization, and comprehensive customer experience management.'
     targetAudienc,
-  e: [;
+  e: [
       'Customer service teams'
       'Support managers'
       'E-commerce companies'
@@ -1198,7 +1173,7 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
     realServic,
   e: true;
     technolog,
-  y: [;
+  y: [
       'Artificial Intelligence'
       'Machine Learning'
       'Natural Language Processing'
@@ -1208,7 +1183,7 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
       'React'
     ]
     integration,
-  s: [;
+  s: [
       'Help desk systems'
       'CRM platforms'
       'Live chat tools'
@@ -1247,7 +1222,7 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
   n:
       'Advanced AI-powered HR management platform with intelligent automation, workforce optimization, and comprehensive HR analytics.'
     targetAudienc,
-  e: [;
+  e: [
       'HR teams'
       'HR managers'
       'Recruitment teams'
@@ -1263,7 +1238,7 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
     realServic,
   e: true;
     technolog,
-  y: [;
+  y: [
       'Artificial Intelligence'
       'Machine Learning'
       'HR Analytics'
@@ -1273,7 +1248,7 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
       'React'
     ]
     integration,
-  s: [;
+  s: [
       'HRIS systems'
       'ATS platforms'
       'Payroll systems'
@@ -1312,7 +1287,7 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
   n:
       'Leading AI-powered financial analytics platform with intelligent analysis, risk management, and comprehensive financial optimization.'
     targetAudienc,
-  e: [;
+  e: [
       'Finance teams'
       'CFOs'
       'Financial analysts'
@@ -1328,7 +1303,7 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
     realServic,
   e: true;
     technolog,
-  y: [;
+  y: [
       'Artificial Intelligence'
       'Machine Learning'
       'Financial Analytics'
@@ -1338,7 +1313,7 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
       'React'
     ]
     integration,
-  s: [;
+  s: [
       'ERP systems'
       'Accounting software'
       'Financial databases'
@@ -1377,7 +1352,7 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
   n:
       'Advanced AI-powered project management platform with intelligent planning, optimization, and comprehensive project analytics.'
     targetAudienc,
-  e: [;
+  e: [
       'Project managers'
       'Project teams'
       'Program managers'
@@ -1393,7 +1368,7 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
     realServic,
   e: true;
     technolog,
-  y: [;
+  y: [
       'Artificial Intelligence'
       'Machine Learning'
       'Project Management'
@@ -1403,7 +1378,7 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
       'React'
     ]
     integration,
-  s: [;
+  s: [
       'Project management tools'
       'Collaboration platforms'
       'Time tracking tools'
@@ -1414,10 +1389,9 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
     ]
     useCase,
   s: [}
-;
 export const,
-  innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [;
-  // AI Business Intelligence Suite;
+  innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
+  // AI Business Intelligence Suite
   {
     id: 'ai-business-intelligence-suite';
     name: 'AI Business Intelligence Suite';
@@ -1429,8 +1403,7 @@ export const,
       'AI-powered data analysis and insightsPredictive analytics and forecastingAutomated report generationReal-time business monitoringCustom dashboard creationData visualization and explorationBusiness performance optimizationIntegration with business systems';
       'Advanced analytics and reportingCustom business intelligence workflows'
     ];
-    popular: true;
-    icon: '';
+    popular: true icon: '';
     color: 'from-blue-500 to-indigo-600';
     textColor: 'text-blue-400';
     link: 'https://ziontechgroup.com/ai-business-intelligence-suite';
@@ -1453,7 +1426,7 @@ export const,
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'}
 export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [,
-  // AI Business Intelligence Suite;
+  // AI Business Intelligence Suite
       address: '364 E Main St STE 1008 Middletown DE 19709',
     reviews: 26}
       website: 'https://ziontechgroup.com'}
@@ -1487,8 +1460,7 @@ export const,
   g: 4.7,
     review,
   s: 26}
-];
-;
+]
 i,
   d: string; nam,
   e: string; taglin,
@@ -1597,10 +1569,10 @@ i,
   e: '2025 - 05 - 01' customer,
   s: 38, ratin,
   g: 4.7, review,
-  s: 26; ],' addres,
+  s: 26],' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup.com' } ]; } ]; realImplementatio,
+  s://ziontechgroup.com' } ]} ] realImplementatio,
   n: true,
   implementationDetails:' 'Comprehensive AI-powered marketing automation platform with intelligent optimization, customer engagement, and seamless marketing tool integration.'' launchDat,
   e: '2025-02-15' customer,
@@ -1814,7 +1786,7 @@ i,
   g: 4.7,
   reviews: 26 } ];' import { ServiceVariant } from '../types/service-variants'; export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
   s: string} websit,
-  e: string} }; realImplementatio,
+  e: string} } realImplementatio,
   n: boolean; implementationDetail,
   s: string; launchDat,
   e: string; customer,
@@ -1907,7 +1879,7 @@ i,
   technology: [' 'Artificial Intelligence'' 'Machine Learning'' 'Project Management'' 'Resource Optimization'' 'Python'' 'TensorFlow'' 'React' ] integration,
   s: [' 'Project management tools'' 'Collaboration platforms'' 'Time tracking tools'' 'Resource management systems'' 'Communication tools' ] useCase,
   s: [ } ; export const,
-  innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [; // AI Business Intelligence Suite; {/* TODO: Fix JSX expression */}
+  innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [ // AI Business Intelligence Suite {/* TODO: Fix JSX expression */}
   s: '364 E Main St STE 1008 Middletown DE 19709'} export const,
   innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [ // AI Business Intelligence Suite ' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'} review,
@@ -1919,4 +1891,4 @@ i,
   e: '2025 - 05 - 01' customer,
   s: 38, ratin,
   g: 4.7, review,
-  s: 26} ]; '
+  s: 26} ] '

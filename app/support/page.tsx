@@ -2,18 +2,14 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Phone, Mail, MessageCircle, Clock, CheckCircle, Search, HelpCircle, BookOpen, Users, Zap } from 'lucide-react';
-
 interface FAQ {
   question: string;
   answer: string;
-  category: string;
-}
-
+  category: string}
 const SupportPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
-
   const faqs: FAQ[] = [
     {
       question: 'How do I get started with your AI solutions?',
@@ -56,7 +52,6 @@ const SupportPage: React.FC = () => {
       category: 'Scaling'
     }
   ];
-
   const supportChannels = [
     {
       name: 'Phone Support',
@@ -83,20 +78,14 @@ const SupportPage: React.FC = () => {
       color: 'text-purple-400'
     }
   ];
-
   const categories = ['all', 'Getting Started', 'Support', 'Security', 'Integration', 'Training', 'Service Level', 'Data Management', 'Scaling'];
-
   const filteredFAQs = faqs.filter(faq => {
     const matchesSearch = faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          faq.answer.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === 'all' || faq.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
-
+    return matchesSearch && matchesCategory});
   const toggleFAQ = (index: number) => {
-    setExpandedFAQ(expandedFAQ === index ? null : index);
-  };
-
+    setExpandedFAQ(expandedFAQ === index ? null : index)};
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -104,9 +93,8 @@ const SupportPage: React.FC = () => {
         <meta name="description" content="Get help and support for our AI and IT solutions. Find answers to common questions and contact our support team." />
         <meta name="keywords" content="support, help, FAQ, contact, technical assistance" />
       </Helmet>
-
       {/* Hero Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
             Support
@@ -117,7 +105,6 @@ const SupportPage: React.FC = () => {
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Get help and support for our AI and IT solutions. We're here to help you succeed.
           </p>
-          
           {/* Search Bar */}
           <div className="max-w-2xl mx-auto relative mb-8">
             <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -126,10 +113,9 @@ const SupportPage: React.FC = () => {
               placeholder="Search for help..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
+              className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
             />
           </div>
-
           {/* Category Filter */}
           <div className="flex flex-wrap justify-center gap-2 mb-8">
             {categories.map((category) => (
@@ -139,7 +125,7 @@ const SupportPage: React.FC = () => {
                 className={`px-4 py-2 rounded-full border transition-all duration-300 ${
                   selectedCategory === category
                     ? 'border-cyan-400 bg-cyan-400/10 text-cyan-400'
-                    : 'border-cyan-400/30 text-cyan-400 hover:bg-cyan-400/10'
+                    : 'border-cyan-400/30 text-cyan-400 hover: bg-cyan-400/10'
                 }`}
               >
                 {category}
@@ -148,7 +134,6 @@ const SupportPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Support Channels */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -158,10 +143,9 @@ const SupportPage: React.FC = () => {
               Choose the support channel that works best for you. We're here to help 24/7.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {supportChannels.map((channel, index) => (
-              <div key={index} className="bg-slate-800/50 rounded-2xl p-8 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 text-center">
+              <div key={index} className="bg-slate-800/50 rounded-2xl p-8 border border-cyan-500/20 hover: border-cyan-500/40 transition-all duration-300 text-center">
                 <div className="flex justify-center mb-6">
                   <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center">
                     <channel.icon className="w-8 h-8 text-cyan-400" />
@@ -176,7 +160,6 @@ const SupportPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* FAQ Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-4xl mx-auto">
@@ -186,13 +169,12 @@ const SupportPage: React.FC = () => {
               Find answers to common questions about our services and solutions.
             </p>
           </div>
-          
           <div className="space-y-4">
             {filteredFAQs.map((faq, index) => (
               <div key={index} className="bg-slate-800/50 rounded-lg border border-cyan-500/20">
                 <button
                   onClick={() => toggleFAQ(index)}
-                  className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-700/50 transition-colors"
+                  className="w-full px-6 py-4 text-left flex items-center justify-between hover: bg-slate-700/50 transition-colors"
                 >
                   <span className="text-lg font-semibold text-white">{faq.question}</span>
                   <div className="flex items-center space-x-2">
@@ -216,7 +198,6 @@ const SupportPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Resources Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -226,8 +207,7 @@ const SupportPage: React.FC = () => {
               Explore our documentation, guides, and other helpful resources.
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
             <div className="bg-slate-800/50 rounded-2xl p-8 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 text-center">
               <div className="flex justify-center mb-6">
                 <BookOpen className="w-12 h-12 text-cyan-400" />
@@ -236,7 +216,6 @@ const SupportPage: React.FC = () => {
               <p className="text-gray-300 mb-6">Comprehensive guides and API documentation for all our solutions.</p>
               <button className="text-cyan-400 hover:text-cyan-300 font-medium">View Documentation</button>
             </div>
-            
             <div className="bg-slate-800/50 rounded-2xl p-8 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 text-center">
               <div className="flex justify-center mb-6">
                 <Users className="w-12 h-12 text-cyan-400" />
@@ -245,7 +224,6 @@ const SupportPage: React.FC = () => {
               <p className="text-gray-300 mb-6">Connect with other users and get help from the community.</p>
               <button className="text-cyan-400 hover:text-cyan-300 font-medium">Join Community</button>
             </div>
-            
             <div className="bg-slate-800/50 rounded-2xl p-8 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 text-center">
               <div className="flex justify-center mb-6">
                 <Zap className="w-12 h-12 text-cyan-400" />
@@ -258,7 +236,5 @@ const SupportPage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
-
-export default SupportPage;
+  )};
+export default SupportPage

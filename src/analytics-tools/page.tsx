@@ -242,8 +242,7 @@ Why Choose Our Analytics Tools?"
               href="mailto:kleber@ziontechgroup.com"
               className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
               Email Us
-  );
-};
+  )};
 Ready to Unlock Your Data?
           <p className="text-xl text-purple-100 mb-8">
             Get started with our AI analytics tools today and transform your data into actionable insights.
@@ -251,10 +250,8 @@ Ready to Unlock Your Data?
               href="tel:+13024640950" className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
 Call (302) 464-0950;
               href="mailto:kleber@ziontechgroup.com" className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
-              Email Us;
-  );
-};
-export default AnalyticsToolsPage;
+              Email Us)};
+export default AnalyticsToolsPage
   </div>
   </p>
   </div>

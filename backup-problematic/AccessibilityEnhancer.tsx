@@ -41,13 +41,11 @@ const,
  if (titleElement) {
  observer.observe(titleElement.parentNode as Node, {)
  childList: true),
- subtree: true)});
- }
+ subtree: true)})}
  const handleContrastChange = (e: MediaQueryListEvent) => {,
  setIsHighContrast(e.matches);
  if (titleElement) {/* TODO: Fix JSX expression */}
- });
- }
+ })}
  const handleContrastChange = (e: MediaQueryListEvent) => {/* TODO: Fix JSX expression */}
  };
  highContrastQuery.addEventListener('change', handleContrastChange);
@@ -66,8 +64,7 @@ const,
  const rootFontSize = parseFloat(computedStyle.fontSize);
  setFontSize(rootFontSize);
  return () => {/* TODO: Fix JSX expression */}
- };
- }, []);
+ }}, []);
  // Apply accessibility styles;
  useEffect(() => {
  if (typeof window === 'undefined') return;
@@ -81,8 +78,7 @@ const,
  (main as HTMLElement).focus();
  (main as HTMLElement).scrollIntoView({ behavior: 'smooth' });
  useEffect(() => {/* TODO: Fix JSX expression */}
-  r: 'smooth' });
- }
+  r: 'smooth' })}
  }
  // Skip to navigation with Alt + N;
  if (e.altKey && e.key === 'n') {
@@ -92,8 +88,7 @@ const,
  (nav as HTMLElement).focus();
  (nav as HTMLElement).scrollIntoView({ behavior: 'smooth' });
  if (e.altKey && e.key === 'n') {/* TODO: Fix JSX expression */}
-  r: 'smooth' });
- }
+  r: 'smooth' })}
  }
  // Close modals/dropdowns with Escape;
  if (e.key === 'Escape') {
@@ -104,8 +99,7 @@ const,
  (closeButton as HTMLElement).click();
  if (e.key === 'Escape') {/* TODO: Fix JSX expression */}
  }
- });
- }
+ })}
  // Navigate through interactive elements with Tab (visual indicator)
  if (e.key === 'Tab') {/* TODO: Fix JSX expression */}
  }
@@ -116,21 +110,18 @@ const,
  const handleMouseDown = () => {/* TODO: Fix JSX expression */}
  };
  document.addEventListener('keydown', handleKeyDown);
- return () => document.removeEventListener('keydown', handleKeyDown);
- }, []);
+ return () => document.removeEventListener('keydown', handleKeyDown)}, []);
  // Focus management;
  const handleFocusIn = useCallback((event: FocusEvent) => {
  const target = event.target as HTMLElement;
  ,
  // Add focus ring for keyboard navigation;
  if (target.matches('button, a, input, textarea, select, [tabindex]')) {
- target.classList.add('keyboard-focus');
- }
+ target.classList.add('keyboard-focus')}
  }, []);
  const handleFocusOut = useCallback((event: FocusEvent) => {,
  const target = event.target as HTMLElement;
- target.classList.remove('keyboard-focus');
- }, []);
+ target.classList.remove('keyboard-focus')}, []);
  useEffect(() => {
  if (!enableFocusIndicators) return;
  // Add custom focus styles;
@@ -167,8 +158,7 @@ const,
  .skip-link {/* TODO: Fix JSX expression */}
  }
  .skip-link: focus {,
- top: 0;
- }
+ top: 0}
  /* High contrast mode support */
  @media (prefers-contrast: high) {,
  * {,
@@ -205,8 +195,7 @@ const,
  `;
  document.head.appendChild(style);origin/
  return () => {/* TODO: Fix JSX expression */}
- };
- }, [handleFocusIn, handleFocusOut]);
+ }}, [handleFocusIn, handleFocusOut]);
  // Screen reader announcements;
  const announceToScreenReader = useCallback((message: string) => {,
  const announcement = document.createElement('div');
@@ -219,27 +208,21 @@ const,
  document.body.removeChild(announcement);
  const announceToScreenReader = useCallback((messag)
   e: string) => {/* TODO: Fix JSX expression */}
- }, 1000);
- }, []);
+ }, 1000)}, []);
  // Expose announcement function globally for use in other components;
  useEffect(() => {
  (window as any).announceToScreenReader = announceToScreenReader;
  return () => {
- delete (window as any).announceToScreenReader;
- };
- }, [announceToScreenReader]);
+ delete (window as any).announceToScreenReader}}, [announceToScreenReader]);
  return(<div className={`accessibility-enhanced ${isHighContrast ? 'high-contrast' : ''} ${isReducedMotion ? 'reduced-motion' : ''}`}>)
  {children})
  useEffect(() => {/* TODO: Fix JSX expression */}
- };
- }, [announceToScreenReader]);
+ }}, [announceToScreenReader]);
 `
  return (<div className={`accessibility-enhanced ${isHighContrast ? 'high-contrast' : ''} ${isReducedMotion ? 'reduced-motion' : ''}`}></div>
  {children}
  </div>)
- );
-};
-export default AccessibilityEnhancer;
-}}`
+ )};
+export default AccessibilityEnhancer}}`
   </AccessibilityEnhancerProps>
   </AccessibilityEnhancerProps>

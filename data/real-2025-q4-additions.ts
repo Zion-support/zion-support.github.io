@@ -1,10 +1,8 @@
-
-export interface Q4Service {id: string;
+export interface Q4Service {id: string
   name: string;
   tagline: string;
   price: string;
-  period: string;
-  description: string;
+  period: string description: string;
   features: string[];
   popular?: boolean;
   icon?: string;
@@ -40,7 +38,7 @@ export interface Q4Service {/* TODO: Fix JSX expression */}
   e: string}
   }
   real_implementatio,
-  n: boolean;
+  n: boolean
   implementation_details?: string;
   launch_date?: string;
   customers?: number;
@@ -92,8 +90,7 @@ const contact =
     launch_date: '2025 - 10 - 01'
     customers: 120;
     rating: 4 && 4.7;
-    reviews: 48;
-  },
+    reviews: 48},
       'Multi-speaker diarization',
     id: 'podcast - transcription - studio',
     name: 'Podcast Transcription Studio',
@@ -186,8 +183,7 @@ const contact =
       'Embeddings and semantic search',
       'Export to SRT, VTT, DOCX',
       'Podcast platform integrations'],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from - cyan - 600 to - blue - 700'
     text_color: 'text - cyan - 400',
     link: 'https://ziontechgroup.com / services / podcast - transcription - studio',
@@ -213,8 +209,7 @@ const contact =
     launch_date: '2025 - 09 - 15'
     customers: 60;
     rating: 4 && 4.6;
-    reviews: 22;
-  },
+    reviews: 22},
     id: 'micro - crm - local - business',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-400',
@@ -366,12 +361,11 @@ const contact =
       'Import/export CSV and simple API',
       'Mobile-friendly PWA',
       'Basic reporting'],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-emerald-600 to-teal-700'
     textColor: 'text-emerald-400',
     link: 'https://ziontechgroup.com/services/micro-crm-local-business',
-    marketPosition: unknown;
+    marketPosition: unknown
       'Simpler than HubSpot/Zoho, fast and focused for local SMBs.',
     targetAudience: 'Local businesses, consultants, freelancers',
     trialDays: 14;
@@ -403,8 +397,7 @@ const contact =
     launch_date: '2025 - 10 - 20'
     customers: 210;
     rating: 4 && 4.5;
-    reviews: 77;
-  },
+    reviews: 77},
     id: 'returns - automation - saas'
     name: 'Ecommerce Returns Automation',
     tagline: 'Self - serve returns portal and automated labels',
@@ -568,8 +561,7 @@ const contact =
       'Inventory and refund sync',
       'Email/SMS notifications',
       'Analytics on reasons and cost'],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from-amber-600 to-orange-700',
     textColor: 'text-amber-400',
     link: 'https://ziontechgroup.com/services/returns-automation-saas',
@@ -603,8 +595,7 @@ const contact =
     launch_date: '2025 - 10 - 05'
     customers: 95;
     rating: 4 && 4.6;
-    reviews: 35;
-  },
+    reviews: 35},
     id: 'it - helpdesk - for - msps',
     technology: ['Next.js', 'Node.js', 'Stripe', 'Shippo'],
     integrations: ['Shopify', 'WooCommerce', 'Shippo', 'Stripe'],
@@ -746,12 +737,11 @@ const contact =
       'Client portal with reports',
       'RMM and network tool integrations',
       'Billing export and time tracking'],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-blue-600 to-indigo-700'
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/services/it-helpdesk-for-msps',
-    marketPosition: unknown;
+    marketPosition: unknown
       'Simpler than Zendesk/Freshdesk, MSP-first workflows and pricing.',
     targetAudience: 'Managed service providers, internal IT teams',
     trialDays: 14;
@@ -783,14 +773,13 @@ const contact =
     launch_date: '2025 - 09 - 28'
     customers: 70;
     rating: 4 && 4.5;
-    reviews: 28;
-  }];
+    reviews: 28}];
 export const real2025 Q4 Additions = [{id: 'ai - governed - rag - platform',
     name: 'AI - Governed RAG Platform',
     tagline: 'Enterprise - grade RAG with guardrails, approvals, and evals',
     price: '$699',
     period: '/month',
-    description: unknown;
+    description: unknown
       'Production - ready retrieval augmented generation with content pipelines, PII redaction, policy guardrails, evals, and human approvals for high - stakes workflows.',
     features: [,
       'Document sync and chunking pipelines',
@@ -799,8 +788,7 @@ export const real2025 Q4 Additions = [{id: 'ai - governed - rag - platform',
       'Human - in - the - loop approvals',
       'Observability and cost caps',
       'SDKs for Node / Python'],
-    popular: true;
-    icon: '',
+    popular: true icon: '',
     color: 'from - cyan - 600 to - blue - 700',
     text_color: 'text - cyan - 300'}
     link: `https://ziontechgroup.com / services/${to_slug ('ai - governed - rag - platform')}`,
@@ -826,8 +814,7 @@ export const real2025 Q4 Additions = [{id: 'ai - governed - rag - platform',
     launch_date: '2025 - 03 - 01'
     customers: 18;
     rating: 4 && 4.8;
-    reviews: 11;
-  },
+    reviews: 11},
     id: 'edge - personalization - engine'
     name: 'Edge Personalization Engine',
     tagline: 'Real - time content and pricing personalization at the edge',
@@ -915,7 +902,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   k: `http,`
   s://ziontechgroup.com / services/${to_slug ('ai - governed - rag - platform')}`,
     market_positio,
-  n: unknown;
+  n: unknown
       'Safer alternative to DIY RAG, comparable to Guardrails / Evals + vector DB stacks.',
     target_audienc,
   e: 'Platform, data, and compliance teams',
@@ -978,8 +965,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
       'A / B and holdout tests',
       'Privacy - first scoring',
       'Dashboards and exports'],
-    popular: true;
-    icon: '',
+    popular: true icon: '',
     technology: ['Next.js', 'Node.js', 'PostgreSQL'],
     integrations: ['Zendesk', 'Freshdesk', 'Datadog', 'Grafana'],
     useCases: ['IT support', 'SLA management', 'Client reporting'],
@@ -994,9 +980,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     launchDate: '2025-09-28'
     customers: 70;
     rating: 4.5;
-    reviews: 28;
-  }];
-}
+    reviews: 28}]}
     customers: 120;
     rating: 4.7;
     reviews: 48;
@@ -1033,8 +1017,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     ratin,
   g: 4.5,
     review,
-  s: 28}];
-}
+  s: 28}]}
     customer,
   s: 120,
     ratin,
@@ -1127,8 +1110,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
       'Import/export CSV and simple API',
       'Mobile-friendly PWA',
       'Basic reporting'],
-    popular: true;
-    icon: '',
+    popular: true icon: '',
     integrations: ['Gmail', 'Outlook', 'Stripe'],
     use_cases: ['Leads', 'Follow - ups', 'Deal tracking'],
     roi: 'Increase follow - through and close rates 1020% via reminders.',
@@ -1136,7 +1118,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     market_size: '$5B SMB CRM'
     growth_rate: '12% YoY'
     variant: 'ai - futuristic'
-    contact_info: contact;
+    contact_info: contact
     real_implementation: true;
     implementation_details: unknown;
       'PWA with offline storage, task reminders, and webhook - based integrations.',
@@ -1236,7 +1218,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
       'Client portal with reports',
       'RMM and network tool integrations',
       'Billing export and time tracking'],
-    popular: true;
+    popular: true
     integrations: ['Zendesk', 'Freshdesk', 'Datadog', 'Grafana'],
     use_cases: ['IT support', 'SLA management', 'Client reporting'],
     roi: 'Faster resolution, less toil; better client satisfaction.',
@@ -1290,7 +1272,7 @@ export const real2025 Q4 Additions = [
       'Human - in - the - loop approvals',
       'Observability and cost caps',
       'SDKs for Node / Python'],
-    popular: true;
+    popular: true
       'Pipelines, policies, eval harness, cost and latency budgets.',
     launch_date: '2025 - 03 - 01'
     customers: 18;
@@ -1324,13 +1306,12 @@ export const real2025Q4Additions = [{id: 'ai-governed-rag-platform',
       'Evals and drift trackingHuman-in-the-loop approvals',
       'Observability and cost capsSDKs for Node/Python'
     ],
-    popular: true;
-    icon: '',
+    popular: true icon: '',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300'}
     link: `https://ziontechgroup.com/services/${toSlug('ai-governed-rag-platform')}`,
     targetAudience: 'Platform, data, and compliance teams',
-    trialDays: 14;
+    trialDays: 14
     setupTime: '12 days',
     category: 'AI & Data',
     realService: true;
@@ -1414,14 +1395,13 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
       'A/B and holdout testsPrivacy-first scoring',
       'Dashboards and exports'
     ],
-    popular: true;
-    icon: '',
+    popular: true icon: '',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-300',
     link: `https://ziontechgroup.com/services/${toSlug('edge-personalization-engine')}`,
     marketPosition: 'Simpler alternative to enterprise CDPs for SMBs, edge-native.',
     targetAudience: 'Growth and eCommerce teams'
-    trialDays: 7;
+    trialDays: 7
     setupTime: 'Same day'
     category: 'Micro SaaS'
     realService: true;
@@ -1450,8 +1430,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     launch_date: '2025 - 03 - 10'
     customers: 42;
     rating: 4 && 4.6;
-    reviews: 23;
-  },
+    reviews: 23},
       'One-PR one-env automation',
     id: 'devx - preview - environments'
     name: 'DevX Preview Environments',
@@ -1585,8 +1564,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     launch_date: '2025 - 03 - 05'
     customers: 27;
     rating: 4 && 4.7;
-    reviews: 16;
-  },
+    reviews: 16},
     id: 'real - time - log - anomaly - guard'
     name: 'Real - time Log Anomaly Guard',
     tagline: 'Detect anomalies and regressions with LLM - assisted alerts',
@@ -1684,8 +1662,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     launch_date: '2025 - 03 - 08'
     customers: 33;
     rating: 4 && 4.5;
-    reviews: 19;
-  },
+    reviews: 19},
     id: 'governed - feature - flags',
     name: 'Governed Feature Flags',
     tagline: 'Audit - ready flags with policies, approvals, and rollbacks',
@@ -2037,8 +2014,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     launch_date: '2025 - 03 - 02'
     customers: 21;
     rating: 4 && 4.6;
-    reviews: 12;
-  },
+    reviews: 12},
     id: 'email - sequence - copilot',
     name: 'Email Sequence Copilot',
     tagline: 'On - brand outbound with warm - up, scoring, and safety',
@@ -2155,8 +2131,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     launch_date: '2025 - 03 - 12'
     customers: 38;
     rating: 4 && 4.5;
-    reviews: 20;
-  },
+    reviews: 20},
     id: 'data - contracts - guardrails',
     name: 'Data Contracts Guardrails',
     tagline: 'Schema governance, lineage, and backward - compat checks',
@@ -2431,8 +2406,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     launch_date: '2025 - 03 - 03'
     customers: 12;
     rating: 4 && 4.6;
-    reviews: 9;
-  },
+    reviews: 9},
       'Okta/Entra app configs',
       'SAML/OIDC + SCIM',
     id: 'managed - sso - fast - track',
@@ -2630,8 +2604,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     launch_date: '2025 - 03 - 06'
     customers: 9;
     rating: 4 && 4.7;
-    reviews: 7;
-  },
+    reviews: 7},
     id: 'ai - sales - pipeline - insights',
     name: 'AI Sales Pipeline Insights',
     tagline: 'Forecast hygiene, stage risks, and next - best actions',
@@ -2839,8 +2812,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     launch_date: '2025 - 03 - 04'
     customers: 14;
     rating: 4 && 4.5;
-    reviews: 10;
-  },
+    reviews: 10},
     id: 'secure - webhook - relay'
     customers: 14;
     rating: 4.5;
@@ -3019,8 +2991,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     launch_date: '2025 - 03 - 09'
     customers: 31;
     rating: 4 && 4.6;
-    reviews: 18;
-  },
+    reviews: 18},
     id: 'managed - postgres - ha - lite',
     category: 'Developer Tools',
     realService: true;
@@ -3197,8 +3168,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     launch_date: '2025 - 03 - 11'
     customers: 17;
     rating: 4 && 4.6;
-    reviews: 9;
-  },
+    reviews: 9},
     mobile: string, email: string;
     address: string;
     website: string;
@@ -3265,8 +3235,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   launchDate?: string;
   customers?: number;
   rating?: number;
-  reviews?: number;
-}
+  reviews?: number}
 const contact =
   mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -3295,7 +3264,7 @@ export const,
     feature,
   s: [,
 			'Multi-channel attribution and cookie-less trackingFraud rules, device fingerprinting, IP reputation checksCustomizable commission structures and tiersAutomated payouts and tax form collectionShareable links, coupons, and influencer codesPartner portal and real-time analytics'
-		];
+		]
 		popular: true, icon: '',
 		color: 'from-violet-600 to-fuchsia-700', textColor: 'text-fuchsia-400',
 		link: 'https://ziontechgroup.com/services/affiliate-marketing-hub',
@@ -3382,13 +3351,12 @@ export const,
 		implementationDetails: 'Batch transcription queue with GPU support, diarization and summarization pipeline.',
     launchDate: '2025-09-15', customers: 60;
 		rating: 4.6;
-		reviews: 22;
-	};
+		reviews: 22};
 		id: 'micro-crm-local-business', name: 'Micro CRM for Local Business',
 		tagline: 'Simple contacts, pipelines, and reminders that just work',
     price: '$19', period: '/month',
 		description: 'Lightweight, mobile-first CRM with contacts, tasks, deals, and SMS/email reminders. Built for solo and small teams.',
-    features: [;
+    features: [
 			'Contact management and segmentationPipelines and kanban viewsCalendar with SMS/email remindersImport/export CSV and simple APIMobile-friendly PWABasic reporting'],
 		popular: true, icon: '',
 		color: 'from-emerald-600 to-teal-700', textColor: 'text-emerald-400',
@@ -3396,7 +3364,7 @@ export const,
 		marketPosition: 'Simpler than HubSpot/Zoho, fast and focused for local SMBs.',
     targetAudience: 'Local businesses, consultants, freelancers',
     trialDays: 14, setupTime: '15 minutes',
-		category: 'Developer Tools', realService: true;
+		category: 'Developer Tools', realService: true
 		technology: ['Next.jsSQLite/PostgresTwilio'], integrations: ['GmailOutlookStripe'],
 		useCases: ['LeadsFollow-upsDeal tracking'], roi: 'Increase follow-through and close rates 1020% via reminders.',
 		competitors: ['HubSpot StarterZoho CRMPipedrive'], marketSize: '$5 B SMB CRM',
@@ -3405,13 +3373,12 @@ export const,
 		implementationDetails: 'PWA with offline storage, task reminders, and webhook-based integrations.',
     launchDate: '2025-10-20', customers: 210;
 		rating: 4.5;
-		reviews: 77;
-	};
+		reviews: 77};
 		id: 'returns-automation-saas', name: 'Ecommerce Returns Automation',
 		tagline: 'Self-serve returns portal and automated labels', price: '$49',
 		period: '/month',
 		description: 'Plug-and-play returns workflows with label generation, RMA approvals, and status tracking for Shopify/WooCommerce.',
-    features: [;
+    features: [
 			'Customer returns portalPrepaid label generationRMA approval rulesInventory and refund syncEmail/SMS notificationsAnalytics on reasons and cost'],
 		popular: false, icon: '',
 		color: 'from-amber-600 to-orange-700', textColor: 'text-amber-400',
@@ -3483,7 +3450,7 @@ export const,
 		descriptio,
   n: 'Lightweight, mobile-first CRM with contacts, tasks, deals, and SMS/email reminders. Built for solo and small teams.',
     feature,
-  s: [;
+  s: [
 			'Contact management and segmentationPipelines and kanban viewsCalendar with SMS/email remindersImport/export CSV and simple APIMobile-friendly PWABasic reporting'
 		],
 		popula,
@@ -3528,7 +3495,7 @@ export const,
 		ratin,
   g: 4.5,
 		review,
-  s: 77};
+  s: 77}
 		i,
   d: 'returns-automation-saas', nam,
   e: 'Ecommerce Returns Automation',
@@ -3540,7 +3507,7 @@ export const,
 		descriptio,
   n: 'Plug-and-play returns workflows with label generation, RMA approvals, and status tracking for Shopify/WooCommerce.',
     feature,
-  s: [;
+  s: [
 			'Customer returns portalPrepaid label generationRMA approval rulesInventory and refund syncEmail/SMS notificationsAnalytics on reasons and cost'
 		],
 		popula,
@@ -3599,7 +3566,7 @@ export const,
     feature,
   s: [,
 			'Inbox and portal ticket intakeAuto-routing, SLAs, and escalationsPublic/private knowledge baseClient portal with reportsRMM and network tool integrationsBilling export and time tracking'
-		];
+		]
 		popular: true, icon: '',
 		color: 'from-blue-600 to-indigo-700', textColor: 'text-indigo-400',
 		link: 'https://ziontechgroup.com/services/it-helpdesk-for-msps',
@@ -3616,24 +3583,21 @@ export const,
 		implementationDetails: 'Email ingestion, rules engine, and portal with RBAC.',
     launchDate: '2025-09-28', customers: 70;
 		rating: 4.5;
-		reviews: 28;
-	}
+		reviews: 28}
 ];
 export const real2025 Q4 Additions = [{id: 'ai-governed-rag-platform', name: 'AI-Governed RAG Platform',
     tagline: 'Enterprise-grade RAG with guardrails, approvals, and evals',
     price: '$699', period: '/month',
     description: 'Production-ready retrieval augmented generation with content pipelines, PII redaction, policy guardrails, evals, and human approvals for high-stakes workflows.',
-    features: [;
+    features: [
       'Document sync and chunking pipelinesMetadata and policy guardrailsEvals and drift trackingHuman-in-the-loop approvalsObservability and cost capsSDKs for Node/Python']}
     icon: '',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-300'}
-    link: `https://ziontechgroup && ziontechgroup.com/services/${toSlug('managed-postgres-ha-lite')}`;
-    ];
-    icon: '',
+    link: `https://ziontechgroup && ziontechgroup.com/services/${toSlug('managed-postgres-ha-lite')}`] icon: '',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-300',
-    link: `https://ziontechgroup && ziontechgroup.com/services/${toSlug('managed-postgres-ha-lite')}`;
+    link: `https://ziontechgroup && ziontechgroup.com/services/${toSlug('managed-postgres-ha-lite')}`
     color: 'from-emerald-600 to-teal-700'
     marketPosition: 'Practical alternative to DBAs for small teams.'
     targetAudience: 'SMBs and startups'
@@ -3671,8 +3635,7 @@ export const real2025 Q4 Additions = [{id: 'ai-governed-rag-platform', name: 'AI
     launchDate: '2025-03-11'
     customers: 17;
     rating: 4.6;
-    reviews: 9;
-  }
+    reviews: 9}
 ];
     rating: 4 && 4.6;
     reviews: 9;
@@ -3731,8 +3694,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   r: 'text-emerald-300'}
     lin,`
   k: `http,`
-  s://ziontechgroup && ziontechgroup.com/services/${toSlug('managed-postgres-ha-lite')}`;
-    ];
+  s://ziontechgroup && ziontechgroup.com/services/${toSlug('managed-postgres-ha-lite')}`]
     ico,
   n: '',
     colo,
@@ -3856,12 +3818,11 @@ export const,
       'Automated payouts and tax form collection',
       'Shareable links, coupons, and influencer codes',
       'Partner portal and real-time analytics'],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-violet-600 to-fuchsia-700'
     textColor: 'text-fuchsia-400',
     link: 'https://ziontechgroup.com/services/affiliate-marketing-hub',
-    marketPosition: unknown;
+    marketPosition: unknown
       'Comparable to Refersion and LeadDyno, stronger fraud prevention and flexible payouts.',
     targetAudience: 'E-commerce stores, marketplaces, media sites',
     trialDays: 14;
@@ -3960,8 +3921,7 @@ export const,
       'Embeddings and semantic search',
       'Export to SRT, VTT, DOCX',
       'Podcast platform integrations'],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-400',
     link: 'https://ziontechgroup.com/services/podcast-transcription-studio',
@@ -4059,12 +4019,11 @@ export const,
       'Import/export CSV and simple API',
       'Mobile-friendly PWA',
       'Basic reporting'],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-emerald-600 to-teal-700'
     textColor: 'text-emerald-400',
     link: 'https://ziontechgroup.com/services/micro-crm-local-business',
-    marketPosition: unknown;
+    marketPosition: unknown
       'Simpler than HubSpot/Zoho, fast and focused for local SMBs.',
     targetAudience: 'Local businesses, consultants, freelancers',
     trialDays: 14;
@@ -4160,8 +4119,7 @@ export const,
       'Inventory and refund sync',
       'Email/SMS notifications',
       'Analytics on reasons and cost'],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from-amber-600 to-orange-700',
     textColor: 'text-amber-400',
     link: 'https://ziontechgroup.com/services/returns-automation-saas',
@@ -4259,12 +4217,11 @@ export const,
       'Client portal with reports',
       'RMM and network tool integrations',
       'Billing export and time tracking'],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-blue-600 to-indigo-700'
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/services/it-helpdesk-for-msps',
-    marketPosition: unknown;
+    marketPosition: unknown
       'Simpler than Zendesk/Freshdesk, MSP-first workflows and pricing.',
     targetAudience: 'Managed service providers, internal IT teams',
     trialDays: 14;
@@ -4285,9 +4242,7 @@ export const,
     launchDate: '2025-09-28'
     customers: 70;
     rating: 4.5;
-    reviews: 28;
-  }];
-}
+    reviews: 28}]}
 export const real2025 Q4 Additions = [{id: 'ai-governed-rag-platform',
     name: 'AI-Governed RAG Platform',
     tagline: 'Enterprise-grade RAG with guardrails, approvals, and evals',
@@ -4299,12 +4254,11 @@ export const real2025 Q4 Additions = [{id: 'ai-governed-rag-platform',
       'Evals and drift trackingHuman-in-the-loop approvals',
       'Observability and cost capsSDKs for Node/Python'
     ],
-    popular: true;
-    icon: '',
+    popular: true icon: '',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300'}
     link: `https://ziontechgroup.com/services/${toSlug('ai-governed-rag-platform')}`,
-    marketPosition: unknown;
+    marketPosition: unknown
       'Safer alternative to DIY RAG, comparable to Guardrails/Evals + vector DB stacks.',    targetAudience: 'Platform, data, and compliance teams',
     trialDays: 14;
     setupTime: '12 days',
@@ -4378,15 +4332,14 @@ export const real2025 Q4 Additions = [{id: 'ai-governed-rag-platform',
     ratin,
   g: 4.5,
     review,
-  s: 28}];
-}
+  s: 28}]}
 export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   r: 'text-cyan-300'}
     lin,`
   k: `http,`
   s://ziontechgroup.com/services/${toSlug('ai-governed-rag-platform')}`,
     marketPositio,
-  n: unknown;
+  n: unknown
       'Safer alternative to DIY RAG, comparable to Guardrails/Evals + vector DB stacks.',    targetAudienc,
   e: 'Platform, data, and compliance teams',
     trialDay,
@@ -4445,8 +4398,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
       'A/B and holdout testsPrivacy-first scoring',
       'Dashboards and exports'
     ],
-    popular: true;
-    icon: '',
+    popular: true icon: '',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-300',
     link: `https://ziontechgroup.com/services/${toSlug('edge-personalization-engine')}`,
@@ -5316,8 +5268,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     launchDate: '2025-03-11'
     customers: 17;
     rating: 4.6;
-    reviews: 9;
-  }
+    reviews: 9}
 ];
     reviews: 9;
     ico,
@@ -5376,7 +5327,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   s: 9}
 ];
 export interface Q4Service,
-  id: string; nam,
+  id: string nam,
   e: string; taglin,
   e: string; pric,
   e: string, perio,
@@ -5501,7 +5452,7 @@ export interface Q4Service,
   r: 'text-emerald-400',' lin,
   k: 'http,
   s://ziontechgroup.com/services/micro-crm-local-business', marketPositio,
-  n: ; ' 'Simpler than HubSpot/Zoho, fast and focused for local SMBs.',' targetAudienc,
+  n:  ' 'Simpler than HubSpot/Zoho, fast and focused for local SMBs.',' targetAudienc,
   e: 'Local businesses, consultants, freelancers', trialDay,
   s: 14,' setupTim,
   e: '15 minutes',' categor,
@@ -5627,7 +5578,7 @@ export interface Q4Service,
   r: 'text-indigo-400',' lin,
   k: 'http,
   s://ziontechgroup.com/services/it-helpdesk-for-msps', marketPositio,
-  n: ; ' 'Simpler than Zendesk/Freshdesk, MSP-first workflows and pricing.',' targetAudienc,
+  n:  ' 'Simpler than Zendesk/Freshdesk, MSP-first workflows and pricing.',' targetAudienc,
   e: 'Managed service providers, internal IT teams', trialDay,
   s: 14,' setupTim,
   e: '1 day',' categor,
@@ -5657,7 +5608,7 @@ export interface Q4Service,
   e: '2025 - 09 - 28', customer,
   s: 70, ratin,
   g: 4 && 4.5, review,
-  s: 28}]; export const real2025Q4Additions = [; ' i,
+  s: 28}]; export const real2025Q4Additions = [ ' i,
   d: 'ai - governed - rag - platform',' nam,
   e: 'AI - Governed RAG Platform',' taglin,
   e: 'Enterprise - grade RAG with guardrails, approvals, and evals',' pric,
@@ -5671,7 +5622,7 @@ export interface Q4Service,
   r: 'text - cyan - 300',' lin,`
   k: `http,`
   s://ziontechgroup.com / services/${to_slug ('ai - governed - rag - platform')}`, market_positio,
-  n: ;' 'Safer alternative to DIY RAG, comparable to Guardrails / Evals + vector DB stacks.',' target_audienc,
+  n: ' 'Safer alternative to DIY RAG, comparable to Guardrails / Evals + vector DB stacks.',' target_audienc,
   e: 'Platform, data, and compliance teams', trial_day,
   s: 14,' setup_tim,
   e: '1–2 days',' categor,
@@ -5715,7 +5666,7 @@ export interface Q4Service,
   e: '2025-09-28', customer,
   s: 70, ratin,
   g: 4.5, review,
-  s: 28}]; } customer,
+  s: 28}]} customer,
   s: 120, ratin,
   g: 4.7, review,
   s: 48}, ' i,
@@ -5771,7 +5722,7 @@ export interface Q4Service,
   t: 'ai - futuristic', contact_inf,
   o: contact, real_implementatio,
   n: true, implementation_detail,
-  s: ;' 'Webhook - driven order sync, label / provider adapters.',' launch_dat,
+  s: ' 'Webhook - driven order sync, label / provider adapters.',' launch_dat,
   e: '2025 - 10 - 05', customer,
   s: 95, ratin,
   g: 4 && 4.6, review,
@@ -5779,7 +5730,7 @@ export interface Q4Service,
   r: true,' integration,
   s: ['Zendesk', 'Freshdesk', 'Datadog', 'Grafana'],' use_case,
   s: ['IT support', 'SLA management', 'Client reporting'],' ro,
-  i: 'Faster resolution, less toil; better client satisfaction.',' competitor,
+  i: 'Faster resolution, less toil better client satisfaction.',' competitor,
   s: ['Zendesk', 'Freshdesk', 'HaloPSA'],' market_siz,
   e: '$10B helpdesk software',' growth_rat,
   e: '10% YoY',' varian,
@@ -5790,7 +5741,7 @@ export interface Q4Service,
   e: '2025 - 09 - 28', customer,
   s: 70, ratin,
   g: 4 && 4.5, review,
-  s: 28}]; export const real2025Q4Additions = [; ' 'Document sync and chunking pipelines',' 'Metadata and policy guardrails',' 'Evals and drift tracking',' 'Human - in - the - loop approvals',' 'Observability and cost caps',' 'SDKs for Node / Python'], popula,
+  s: 28}]; export const real2025Q4Additions = [ ' 'Document sync and chunking pipelines',' 'Metadata and policy guardrails',' 'Evals and drift tracking',' 'Human - in - the - loop approvals',' 'Observability and cost caps',' 'SDKs for Node / Python'], popula,
   r: true,' 'Pipelines, policies, eval harness, cost and latency budgets.',' launch_dat,
   e: '2025 - 03 - 01', customer,
   s: 18, ratin,
@@ -5853,7 +5804,7 @@ export interface Q4Service,
   r: 'text - emerald - 300',' lin,`
   k: `http,`
   s://ziontechgroup.com / services/${to_slug ('edge - personalization - engine')}`, market_positio,
-  n: ;' 'Simpler alternative to enterprise CDPs for SMBs, edge - native.',' target_audienc,
+  n: ' 'Simpler alternative to enterprise CDPs for SMBs, edge - native.',' target_audienc,
   e: 'Growth and e_commerce teams', trial_day,
   s: 7,' setup_tim,
   e: 'Same day',' categor,
@@ -6472,7 +6423,7 @@ export interface Q4Service,
   e: '$99', perio,
   d: '/month',' descriptio,
   n: 'Full-stack affiliate tracking with multi-touch attribution, fraud detection, and automated commissions. Built for SMB e-commerce and content sites.', feature,
-  s: [' 'Multi-channel attribution and cookie-less trackingFraud rules, device fingerprinting, IP reputation checksCustomizable commission structures and tiersAutomated payouts and tax form collectionShareable links, coupons, and influencer codesPartner portal and real-time analytics' ];' popula,
+  s: [' 'Multi-channel attribution and cookie-less trackingFraud rules, device fingerprinting, IP reputation checksCustomizable commission structures and tiersAutomated payouts and tax form collectionShareable links, coupons, and influencer codesPartner portal and real-time analytics' ]' popula,
   r: true, ico,
   n: '🔗',' colo,
   r: 'from-violet-600 to-fuchsia-700', textColo,
@@ -6567,7 +6518,7 @@ export interface Q4Service,
   e: '2025-10-20', customer,
   s: 210, ratin,
   g: 4.5, review,
-  s: 77 }; ' i,
+  s: 77 } ' i,
   d: 'returns-automation-saas', nam,
   e: 'E‑commerce Returns Automation',' taglin,
   e: 'Self-serve returns portal and automated labels', pric,
@@ -6608,7 +6559,7 @@ export interface Q4Service,
   e: '$149', perio,
   d: '/month',' descriptio,
   n: 'Email/portal/API ticketing, SLA rules, KBs, and RMM/network integrations with client-facing reporting.', feature,
-  s: [' 'Inbox and portal ticket intakeAuto-routing, SLAs, and escalationsPublic/private knowledge baseClient portal with reportsRMM and network tool integrationsBilling export and time tracking' ];' popula,
+  s: [' 'Inbox and portal ticket intakeAuto-routing, SLAs, and escalationsPublic/private knowledge baseClient portal with reportsRMM and network tool integrationsBilling export and time tracking' ]' popula,
   r: true, ico,
   n: '🛠️',' colo,
   r: 'from-blue-600 to-indigo-700', textColo,
@@ -6647,7 +6598,7 @@ export interface Q4Service,
   r: 'from-emerald-600 to-teal-700' ' textColo,
   r: 'text-emerald-300',' lin,`
   k: `http,`
-  s://ziontechgroup && ziontechgroup.com/services/${toSlug('managed-postgres-ha-lite')}`; ];' ico,
+  s://ziontechgroup && ziontechgroup.com/services/${toSlug('managed-postgres-ha-lite')}`]' ico,
   n: '🗄️'' colo,
   r: 'from-emerald-600 to-teal-700'' textColo,
   r: 'text-emerald-300',' lin,`
@@ -6712,7 +6663,7 @@ export interface Q4Service,
   r: 'text-fuchsia-400',' lin,
   k: 'http,
   s://ziontechgroup.com/services/affiliate-marketing-hub', marketPositio,
-  n: ;' 'Comparable to Refersion and LeadDyno, stronger fraud prevention and flexible payouts.',' targetAudienc,
+  n: ' 'Comparable to Refersion and LeadDyno, stronger fraud prevention and flexible payouts.',' targetAudienc,
   e: 'E-commerce stores, marketplaces, media sites', trialDay,
   s: 14,' setupTim,
   e: '1 day',' categor,
@@ -6780,7 +6731,7 @@ export interface Q4Service,
   r: 'text-emerald-400',' lin,
   k: 'http,
   s://ziontechgroup.com/services/micro-crm-local-business', marketPositio,
-  n: ;' 'Simpler than HubSpot/Zoho, fast and focused for local SMBs.',' targetAudienc,
+  n: ' 'Simpler than HubSpot/Zoho, fast and focused for local SMBs.',' targetAudienc,
   e: 'Local businesses, consultants, freelancers', trialDay,
   s: 14,' setupTim,
   e: '15 minutes',' categor,
@@ -6848,7 +6799,7 @@ export interface Q4Service,
   r: 'text-indigo-400',' lin,
   k: 'http,
   s://ziontechgroup.com/services/it-helpdesk-for-msps', marketPositio,
-  n: ;' 'Simpler than Zendesk/Freshdesk, MSP-first workflows and pricing.',' targetAudienc,
+  n: ' 'Simpler than Zendesk/Freshdesk, MSP-first workflows and pricing.',' targetAudienc,
   e: 'Managed service providers, internal IT teams', trialDay,
   s: 14,' setupTim,
   e: '1 day',' categor,
@@ -6868,7 +6819,7 @@ export interface Q4Service,
   e: '2025-09-28', customer,
   s: 70, ratin,
   g: 4.5, review,
-  s: 28}]; } export const real2025Q4Additions = [ ' i,
+  s: 28}]} export const real2025Q4Additions = [ ' i,
   d: 'ai-governed-rag-platform',' nam,
   e: 'AI-Governed RAG Platform',' taglin,
   e: 'Enterprise-grade RAG with guardrails, approvals, and evals',' pric,
@@ -6882,7 +6833,7 @@ export interface Q4Service,
   r: 'text-cyan-300',' lin,`
   k: `http,`
   s://ziontechgroup.com/services/${toSlug('ai-governed-rag-platform')}`, marketPositio,
-  n: ;' 'Safer alternative to DIY RAG, comparable to Guardrails/Evals + vector DB stacks.', targetAudienc,
+  n: ' 'Safer alternative to DIY RAG, comparable to Guardrails/Evals + vector DB stacks.', targetAudienc,
   e: 'Platform, data, and compliance teams', trialDay,
   s: 14,' setupTim,
   e: '1–2 days',' categor,

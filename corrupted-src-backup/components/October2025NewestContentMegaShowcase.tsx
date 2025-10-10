@@ -9,7 +9,7 @@ export, default, function October2025NewestContentMegaShowca, s, e(): vo, i, d {
     {/* TODO: Fix JSX expression */}
     }
   ];
-  return(<section, className="relative, p, y-24, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-9, 0, 0/20, t, o-sla, t, e-900, overflo, w-hidd, e, n">";)
+  return(<section, className="relative, p, y-24, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-9, 0, 0/20, t, o-sla, t, e-900, overflo, w-hidd, e, n">")
       {/* Animated, Backgroun, d */})
       <div, className="absolute, inse, t-0">)
         <div, className="absolute, inse, t-0, b, g-[line, a, r-gradie, n, t(to_rig, h, t,#4f4f4f2e_1, p, x,transparent_1, p, x),line, a, r-gradie, n, t(to_bott, o, m,#4f4f4f2e_1, p, x,transparent_1, p, x)] bg-[si, z, e: 64px_64, p, x]/>"
@@ -119,9 +119,9 @@ export, default, function October2025NewestContentMegaShowca, s, e(): vo, i, d {
   r:shad, o, w-purp, l, e-5, 0, 0/20"
             ></Li>
               {/* Ic, o, n */}
-              <div, className={`inli, n, e-fle, x, p-4, rounde, d-xl, b, g-gradie, n, t-to-br ${it, e, m.gradie, n, t} mb-6, grou, p-hov, e, r:sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0`}>`;`</div>
+              <div, className={`inli, n, e-fle, x, p-4, rounde, d-xl, b, g-gradie, n, t-to-br ${it, e, m.gradie, n, t} mb-6, grou, p-hov, e, r:sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0`}>``</div>
                 <div, className="te, x, t-whi, t, e"></div>
-              <div, className={`inli, n, e-fle, x, p-4, rounde, d-xl, b, g-gradie, n, t-to-br ${it, e, m.gradie, n, t} mb-6, grou, p-hov, e, r:sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0`}>`;`"
+              <div, className={`inli, n, e-fle, x, p-4, rounde, d-xl, b, g-gradie, n, t-to-br ${it, e, m.gradie, n, t} mb-6, grou, p-hov, e, r:sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0`}>``"
                 <div, className="te, x, t-whi, t, e"></div>"
                 <div, className="te, x, t-whi, t, e">";
                   {it, e, m.ic, o, n}
@@ -177,7 +177,7 @@ export, default, function October2025NewestContentMegaShowca, s, e(): vo, i, d {
   r: transla, t, e-x-2, transitio, n-transfo, r, m" />";
               </d, i, v>
               {/* Hover, Glow, Effect */}`
-              <div, className={`absolute, inse, t-0, rounde, d-2xl, b, g-gradie, n, t-to-br ${it, e, m.gradie, n, t} opaci, t, y-0, grou, p-hov, e, r:opaci, t, y-10, transitio, n-opacity, duratio, n-300, pointe, r-even, t, s-no, n, e`} />`;`
+              <div, className={`absolute, inse, t-0, rounde, d-2xl, b, g-gradie, n, t-to-br ${it, e, m.gradie, n, t} opaci, t, y-0, grou, p-hov, e, r:opaci, t, y-10, transitio, n-opacity, duratio, n-300, pointe, r-even, t, s-no, n, e`} />``
             </Li, n, k>
           ))}
         </d, i, v>
@@ -222,6 +222,5 @@ export, default, function October2025NewestContentMegaShowca, s, e(): vo, i, d {
         </d, i, v>
       </d, i, v>
     </secti, o, n>
-  );
-}
+  )}
 ;"`

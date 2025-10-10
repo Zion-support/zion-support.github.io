@@ -12,6 +12,5 @@ const Loading: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
-export default Loading;
+  )};
+export default Loading

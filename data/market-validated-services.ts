@@ -1,4 +1,3 @@
-
   i,
   d: string;
   nam,
@@ -36,7 +35,6 @@
     addres,
   s: string;
     website?: string}
-;
 const contact_info =
   mobil,
   e: '+1 302 464 0950',
@@ -47,9 +45,8 @@ const contact_info =
   websit,
   e: 'http,
   s://ziontechgroup.com'}
-;
-export const marketValidatedServices: MarketValidatedService[] = [;
-  // AI and Assistants;
+export const marketValidatedServices: MarketValidatedService[] = [
+  // AI and Assistants
     id: 'ai - assistant - pro',
     name: 'AI Assistant Pro',
     tagline: 'Branded copilot with RAG, guardrails, and analytics',
@@ -57,7 +54,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
     period: '/month',
     description: unknown;
 export const,
-  marketValidatedServices: MarketValidatedService[] = [;
+  marketValidatedServices: MarketValidatedService[] = [
   // AI and Assistants,
     i,
   d: 'ai - assistant - pro',
@@ -82,7 +79,7 @@ export const,
     category: 'AI & Assistants'
     link: 'https://ziontechgroup.com / ai - assistant'
     variant: 'ai - futuristic'
-    rating: 4.8;
+    rating: 4.8
     customers: 1200;
     trial_days: 14;
     setup_time: '30 minutes',
@@ -983,7 +980,7 @@ export const,
     category: 'Enterprise IT - Security'
     link: 'https://ziontechgroup.com / audit - log - vault'
     variant: 'quantum - neural'
-    rating: 4.5;
+    rating: 4.5
     customers: 420;
     trial_days: 14;
     setup_time: '30 minutes',
@@ -1102,7 +1099,7 @@ export const,
   n:
       'Spin up a managed vector index with ingestion pipelines, filters, and access controls to power semantic search.'
     feature,
-  s: [;
+  s: [
       'Managed vector DB'
       'Ingestion pipelines'
       'Metadata filters'
@@ -1115,15 +1112,14 @@ export const,
     customers: 410;
     trialDays: 14;
     setupTime: '2 hours',
-    contactInfo;
-  }
+    contactInfo}
 ];import { ServiceVariant  } from "../types/service-variants"
 export interface MarketValidatedService {id: 'vector - search - starter'
     name: 'Vector Search Starter',
     tagline: 'Deploy a production - grade vector database and APIs',
     price: '$89',
     period: '/month',
-    description: unknown;
+    description: unknown
       'Spin up a managed vector index with ingestion pipelines, filters, and access controls to power semantic search.',
     features: [,
       'WORM retention',
@@ -1154,8 +1150,7 @@ export interface MarketValidatedService {id: 'vector - search - starter'
   s: 14,
     setupTim,
   e: '2 hours'
-    contactInfo;
-  }
+    contactInfo}
 ];import { ServiceVariant } from '../types/service-variants';
 export interface MarketValidatedService {/* TODO: Fix JSX expression */}
     contact_info}
@@ -1174,27 +1169,25 @@ export interface MarketValidatedService {/* TODO: Fix JSX expression */}
     category: 'AI & Search'
     link: 'https://ziontechgroup.com / vector - search - starter'
     variant: 'quantum'
-    rating: 4 && 4.6;
+    rating: 4 && 4.6
     customers: 410;
     trial_days: 14;
     setup_time: '2 hours',
     contact_info},
-export interface MarketValidatedService;
-export interface MarketValidatedService {;
-export interface MarketValidatedService;
+export interface MarketValidatedService
+export interface MarketValidatedService {
+export interface MarketValidatedService
 export interface MarketValidatedService {}
-    trialDays: 14;
+    trialDays: 14
     setupTime: '2 hours',
     contactInfo}
-  };
-];import { ServiceVariant  } from "../types/service-variants"
-export interface MarketValidatedService {;
-	id: string;
+  }];import { ServiceVariant  } from "../types/service-variants"
+export interface MarketValidatedService {
+	id: string
 	name: string;
 	tagline: string;
 	price: string;
-	period: string;
-  description: string;
+	period: string description: string;
 	features: string[];
 	category: string;
 	link: string;
@@ -1227,7 +1220,7 @@ export interface MarketValidatedService {;
     setup_tim,
   e: '2 hours',
     contact_info},
-export interface MarketValidatedService;
+export interface MarketValidatedService
 export interface MarketValidatedService {/* TODO: Fix JSX expression */}
 export interface MarketValidatedService {}
     trialDay,
@@ -1235,16 +1228,14 @@ export interface MarketValidatedService {}
     setupTim,
   e: '2 hours',
     contactInfo}
-  };
-];import { ServiceVariant } from '../types/service-variants';
+  }]import { ServiceVariant } from '../types/service-variants';
 export interface MarketValidatedService {/* TODO: Fix JSX expression */}
   s: string}
 		website?: string}
-	};
-}
+	}}
 export const,
-  marketValidatedServices: MarketValidatedService[] = [;
-	// AI and Assistants;
+  marketValidatedServices: MarketValidatedService[] = [
+	// AI and Assistants
 	{,
 		id: "ai-assistant-pro",
 		name: "AI Assistant Pro",
@@ -1265,7 +1256,7 @@ export const,
 		setupTime: "30 minutes",
 		contactInfo}}
 },
-	{;
+	{
 		id: "ai-evals-observability",
 		name: "AI Evals & Observability",
 		tagline: "Regression testing, safety checks, and live metrics for LLM features",
@@ -1285,7 +1276,7 @@ export const,
 		setupTime: "1 hour",
 		contactInfo}}
 },
-	{;
+	{
 		id: "agentic-rag-platform",
 		name: "Agentic RAG Platform",
 		tagline: "Production RAG with hybrid search, chunking, tools, and evals",
@@ -1306,7 +1297,7 @@ export const,
 		contactInfo}}
 },
 	// Security and APIs;
-	{;
+	{
 		id: "api-security-scanner",
 		name: "API Security Scanner",
 		tagline: "OpenAPI/GraphQL scanning, auth/Z checks, dependency audit",
@@ -1323,7 +1314,7 @@ export const,
 		setupTime: "20 minutes",
 		contactInfo}}
 },
-	{;
+	{
 		id: "api-observability",
 		name: "API Observability & SLA Guard",
 		tagline: "OTel tracing, SLOs, and error budgets for services",
@@ -1341,7 +1332,7 @@ export const,
 		contactInfo}}
 },
 	// Cloud and Infra;
-	{;
+	{
 		id: "cloud-cost-optimizer-pro",
 		name: "Cloud Cost Optimizer Pro",
 		tagline: "Rightsizing, lifecycle, anomaly detection, and k8 s bin-packing",
@@ -1358,7 +1349,7 @@ export const,
 		setupTime: "1 hour",
 		contactInfo}}
 },
-	{;
+	{
 		id: "database-performance-monitor",
 		name: "Database Performance Monitor",
 		tagline: "Slow query capture, AI index suggestions, capacity forecasting",
@@ -1375,7 +1366,7 @@ export const,
 		setupTime: "45 minutes",
 		contactInfo}}
 },
-	{;
+	{
 		id: "managed-postgres-ha",
 		name: "Managed Postgres HA",
 		tagline: "Highly-available Postgres with backups, failover, and guardrails",
@@ -1393,7 +1384,7 @@ export const,
 		contactInfo}}
 },
 	// Reliability & Monitoring;
-	{;
+	{
 		id: "uptime-slo-monitor",
 		name: "Uptime & SLO Monitor",
 		tagline: "Synthetic checks, error budgets, and incident automation",
@@ -1410,7 +1401,7 @@ export const,
 		setupTime: "25 minutes",
 		contactInfo}}
 },
-	{;
+	{
 		id: "tls-certificate-monitor",
 		name: "TLS Certificate Monitor",
 		tagline: "Auto-renewal checks and expiry alerts across your fleet",
@@ -1427,7 +1418,7 @@ export const,
 		setupTime: "10 minutes",
 		contactInfo}}
 },
-	{;
+	{
 		id: "domain-dns-monitor",
 		name: "Domain & DNS Monitor",
 		tagline: "Track DNS changes, TTLs, and misconfigurations",
@@ -1445,7 +1436,7 @@ export const,
 		contactInfo}}
 },
 	// Dev & Productivity;
-	{;
+	{
 		id: "pdf-render-api",
 		name: "PDF Render API",
 		tagline: "High-fidelity serverless PDF rendering and watermarking",
@@ -1462,7 +1453,7 @@ export const,
 		setupTime: "10 minutes",
 		contactInfo}}
 },
-	{;
+	{
 		id: "browser-performance-monitor",
 		name: "Browser Performance Monitor",
 		tagline: "RUM metrics, Core Web Vitals, and UX waterfall analysis",
@@ -1479,7 +1470,7 @@ export const,
 		setupTime: "20 minutes",
 		contactInfo}}
 },
-	{;
+	{
 		id: "feature-flags-edge",
 		name: "Feature Flags at the Edge",
 		tagline: "Targeting, rollouts, and experiments at CDN edge",
@@ -1496,7 +1487,7 @@ export const,
 		setupTime: "30 minutes",
 		contactInfo}}
 },
-	{;
+	{
 		id: "serverless-cron-manager",
 		name: "Serverless Cron Manager",
 		tagline: "Reliable scheduled jobs with retries and observability",
@@ -1514,7 +1505,7 @@ export const,
 		contactInfo}}
 },
 	// Compliance & Risk;
-	{;
+	{
 		id: "soc2-evidence-automation",
 		name: "SOC 2 Evidence Automation",
 		tagline: "Collect and map controls with change tracking",
@@ -1531,7 +1522,7 @@ export const,
 		setupTime: "1 day",
 		contactInfo}}
 },
-	{;
+	{
 		id: "vendor-risk-automation",
 		name: "Vendor Risk Automation",
 		tagline: "Automate VRM workflows, DDQs, and risk scoring",
@@ -1549,7 +1540,7 @@ export const,
 		contactInfo}}
 },
 	// Developer and Ops Utilities;
-	{;
+	{
 		id: "webhook-relay-replay",
 		name: "Webhook Relay & Replay",
 		tagline: "Capture, inspect, and replay webhooks reliably",
@@ -1566,7 +1557,7 @@ export const,
 		setupTime: "10 minutes",
 		contactInfo}}
 },
-	{;
+	{
 		id: "audit-log-vault",
 		name: "Audit Log Vault",
 		tagline: "Tamper-evident logs with retention and export",
@@ -1577,16 +1568,15 @@ export const,
 		category: "Enterprise IT - Security",
 		link: "https://ziontechgroup && ziontechgroup.com/audit-log-vault",
 		variant: "quantum-neural",
-		rating: 4 && 4.5;
+		rating: 4 && 4.5
 		customers: 420;
 		trialDays: 14}
 ];import { ServiceVariant   } from '../types / service - variants'
-export interface MarketValidatedService {id: string;
+export interface MarketValidatedService {id: string
 name: string;
 tagline: string;
 price: string;
-period: string;
-description: string;
+period: string description: string;
 features: string[];
 category: string;
 link: string;
@@ -1682,8 +1672,8 @@ addres,"
   e: "http,"
   s://ziontechgroup.com"}
 }
-export const marketValidatedServices: MarketValidatedService[] = [;
-// AI and Assistants;
+export const marketValidatedServices: MarketValidatedService[] = [
+// AI and Assistants
   id: "ai - assistant - pro",
   name: "AI Assistant Pro",
   tagline: "Branded copilot with RAG, guardrails, and analytics",
@@ -1703,7 +1693,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
   setup_time: "30 minutes",
   contact_info;
 export const,
-  marketValidatedServices: MarketValidatedService[] = [;
+  marketValidatedServices: MarketValidatedService[] = [
 // AI and Assistants,
   i,"
   d: "ai - assistant - pro",
@@ -1737,7 +1727,7 @@ export const,
   s: 14,
   setup_tim,"
   e: "30 minutes",
-  contact_info;},
+  contact_info},
   i,"
   d: "ai - evals - observability",
   nam,"
@@ -1757,7 +1747,7 @@ export const,
   category: "AI & MLOps"
   link: "https://ziontechgroup.com / ai - evals"
   variant: "quantum - holographic"
-  rating: 4.7;
+  rating: 4.7
   customers: 600;
   trial_days: 14;
   setup_time: "1 hour",
@@ -1777,7 +1767,7 @@ export const,
   s: 14,
   setup_tim,"
   e: "1 hour",
-  contact_info;},
+  contact_info},
   i,"
   d: "agentic - rag - platform",
   nam,"
@@ -1817,7 +1807,7 @@ export const,
   s: 14,
   setup_tim,"
   e: "2 hours",
-  contact_info;},
+  contact_info},
 // Security and APIs;
   i,"
   d: "api - security - scanner",
@@ -1855,7 +1845,7 @@ export const,
   s: 14,
   setup_tim,"
   e: "20 minutes",
-  contact_info;},
+  contact_info},
   i,"
   d: "api - observability",
   nam,"
@@ -1892,7 +1882,7 @@ export const,
   s: 14,
   setup_tim,"
   e: "40 minutes",
-  contact_info;},
+  contact_info},
 // Cloud and Infra;
   i,"
   d: "cloud - cost - optimizer - pro",
@@ -1930,7 +1920,7 @@ export const,
   s: 14,
   setup_tim,"
   e: "1 hour",
-  contact_info;},
+  contact_info},
   i,"
   d: "database - performance - monitor",
   nam,"
@@ -1967,7 +1957,7 @@ export const,
   s: 14,
   setup_tim,"
   e: "45 minutes",
-  contact_info;},
+  contact_info},
   i,"
   d: "managed - postgres - ha",
   nam,"
@@ -2004,7 +1994,7 @@ export const,
   s: 7,
   setup_tim,"
   e: "1 day",
-  contact_info;},
+  contact_info},
 // Reliability & Monitoring;
   i,"
   d: "uptime - slo - monitor",
@@ -2042,7 +2032,7 @@ export const,
   s: 14,
   setup_tim,"
   e: "25 minutes",
-  contact_info;},
+  contact_info},
   i,"
   d: "tls - certificate - monitor",
   nam,"
@@ -2079,7 +2069,7 @@ export const,
   s: 14,
   setup_tim,"
   e: "10 minutes",
-  contact_info;},
+  contact_info},
   i,"
   d: "domain - dns - monitor",
   nam,"
@@ -2116,7 +2106,7 @@ export const,
   s: 14,
   setup_tim,"
   e: "15 minutes",
-  contact_info;},
+  contact_info},
 // Dev & Productivity;
   i,"
   d: "pdf - render - api",
@@ -2154,7 +2144,7 @@ export const,
   s: 7,
   setup_tim,"
   e: "10 minutes",
-  contact_info;},
+  contact_info},
   i,"
   d: "browser - performance - monitor",
   nam,"
@@ -2191,7 +2181,7 @@ export const,
   s: 14,
   setup_tim,"
   e: "20 minutes",
-  contact_info;},
+  contact_info},
   i,"
   d: "feature - flags - edge",
   nam,"
@@ -2228,7 +2218,7 @@ export const,
   s: 14,
   setup_tim,"
   e: "30 minutes",
-  contact_info;},
+  contact_info},
   i,"
   d: "serverless - cron - manager",
   nam,"
@@ -2265,7 +2255,7 @@ export const,
   s: 14,
   setup_tim,"
   e: "15 minutes",
-  contact_info;},
+  contact_info},
 // Compliance & Risk;
   i,"
   d: "soc2 - evidence - automation",
@@ -2303,7 +2293,7 @@ export const,
   s: 7,
   setup_tim,"
   e: "1 day",
-  contact_info;},
+  contact_info},
   i,"
   d: "vendor - risk - automation",
   nam,"
@@ -2340,7 +2330,7 @@ export const,
   s: 14,
   setup_tim,"
   e: "2 hours",
-  contact_info;},
+  contact_info},
 // Developer and Ops Utilities;
   i,"
   d: "webhook - relay - replay",
@@ -2378,7 +2368,7 @@ export const,
   s: 14,
   setup_tim,"
   e: "10 minutes",
-  contact_info;},
+  contact_info},
   i,"
   d: "audit - log - vault",
   nam,"
@@ -2395,7 +2385,7 @@ export const,
   category: "Enterprise IT - Security"
   link: "https://ziontechgroup.com / audit - log - vault"
   variant: "quantum - neural"
-  rating: 4.5;
+  rating: 4.5
   customers: 420;
   trial_days: 14;
   setup_time: "30 minutes",
@@ -2415,7 +2405,7 @@ export const,
   s: 14,
   setup_tim,"
   e: "30 minutes",
-  contact_info;},
+  contact_info},
 // AI Channels;
   i,"
   d: "ai - phone - agent",
@@ -2453,7 +2443,7 @@ export const,
   s: 7,
   setup_tim,"
   e: "1 hour",
-  contact_info;},
+  contact_info},
 // Search and Knowledge;
   i,"
   d: "vector - search - starter",
@@ -2491,7 +2481,7 @@ export const,
   s: 14,
   setup_tim,"
   e: "2 hours",
-  contact_info;}];}}
+  contact_info}]}}
   // Search and Knowledge;
   id: 'vector - search - starter',
   name: 'Vector Search Starter',
@@ -2538,12 +2528,8 @@ export const,
   setup_tim,
   e: '2 hours'
   contact_info}];
-;
-;
-		contactInfo;
-	}
+		contactInfo}
 ];
-;
 }}
 i,
   d: string; nam,
@@ -2564,7 +2550,7 @@ i,
   s: '364 E Main St STE 1008 Middletown DE 19709', ' websit,
   e: 'http,
   s://ziontechgroup.com'} ; export const,
-  marketValidatedServices: MarketValidatedService[] = [; // AI and Assistants, ' i,
+  marketValidatedServices: MarketValidatedService[] = [ // AI and Assistants, ' i,
   d: 'ai - assistant - pro',' nam,
   e: 'AI Assistant Pro',' taglin,
   e: 'Branded copilot with RAG, guardrails, and analytics',' pric,
@@ -2610,7 +2596,7 @@ i,
   g: 4.7, customer,
   s: 900, trial_day,
   s: 14,' setup_tim,
-  e: '2 hours', contact_info}, ' 'Auth/Z misconfig checks', // Security and APIs; ' i,
+  e: '2 hours', contact_info}, ' 'Auth/Z misconfig checks', // Security and APIs ' i,
   d: 'api - security - scanner',' nam,
   e: 'API Security Scanner',' taglin,
   e: 'OpenAPI / GraphQL scanning, auth / Z checks, dependency audit',' pric,
@@ -2850,7 +2836,7 @@ i,
   g: 4.5, customer,
   s: 420, trial_day,
   s: 14,' setup_tim,
-  e: '30 minutes', contact_info}, // AI Channels; ' i,
+  e: '30 minutes', contact_info}, // AI Channels ' i,
   d: 'ai - phone - agent',' nam,
   e: 'AI Phone Agent',' taglin,
   e: 'Voice IVR and call handling with CRM handoff',' pric,
@@ -2910,11 +2896,11 @@ i,
   g: 4 && 4.6, customer,
   s: 410, trial_day,
   s: 14,' setup_tim,
-  e: '2 hours', contact_info}, export interface MarketValidatedService export interface MarketValidatedService {; export interface MarketValidatedService export interface MarketValidatedService {} trialDay,
+  e: '2 hours', contact_info}, export interface MarketValidatedService export interface MarketValidatedService { export interface MarketValidatedService export interface MarketValidatedService {} trialDay,
   s: 14,' setupTim,"
-  e: '2 hours', contactInfo} }; ];import { ServiceVariant } from "../types/service-variants" export interface MarketValidatedService {/* TODO: Fix JSX expression */}
-  s: string} website?: string} }; } export const,
-  marketValidatedServices: MarketValidatedService[] = [; // AI and Assistants; {/* TODO: Fix JSX expression */}"
+  e: '2 hours', contactInfo} }]import { ServiceVariant } from "../types/service-variants" export interface MarketValidatedService {/* TODO: Fix JSX expression */}
+  s: string} website?: string} }} export const,
+  marketValidatedServices: MarketValidatedService[] = [ // AI and Assistants {/* TODO: Fix JSX expression */}"
   e: "30 minutes", contactInfo}} }, {/* TODO: Fix JSX expression */}"
   e: "1 hour", contactInfo}} }, {/* TODO: Fix JSX expression */}"
   e: "2 hours", contactInfo}} }, // Security and APIs; {/* TODO: Fix JSX expression */}"
@@ -2934,7 +2920,7 @@ i,
   e: "2 hours", contactInfo}} }, // Developer and Ops Utilities; {/* TODO: Fix JSX expression */}"
   e: "10 minutes", contactInfo}} }, {/* TODO: Fix JSX expression */}
   s: 14} ' ];import { ServiceVariant } from '../types / service - variants' export interface MarketValidatedService,
-  id: string; nam,
+  id: string nam,
   e: string; taglin,
   e: string; pric,
   e: string; perio,
@@ -2953,7 +2939,7 @@ i,
   websit,"
   e: "http,"
   s://ziontechgroup.com"} export const,
-  marketValidatedServices: MarketValidatedService[] = [; // AI and Assistants, i,"
+  marketValidatedServices: MarketValidatedService[] = [ // AI and Assistants, i,"
   d: "ai - assistant - pro", nam,"
   e: "AI Assistant Pro", taglin,"
   e: "Branded copilot with RAG, guardrails, and analytics", pric,"
@@ -2968,7 +2954,7 @@ i,
   g: 4.8, customer,
   s: 1200, trial_day,
   s: 14, setup_tim,"
-  e: "30 minutes", contact_info;}, i,"
+  e: "30 minutes", contact_info}, i,"
   d: "ai - evals - observability", nam,"
   e: "AI Evals & Observability", taglin,"
   e: "Regression testing, safety checks, and live metrics for LLM features", pric,"
@@ -2982,7 +2968,7 @@ i,
   g: 4.7, customer,
   s: 600, trial_day,
   s: 14, setup_tim,"
-  e: "1 hour", contact_info;}, i,"
+  e: "1 hour", contact_info}, i,"
   d: "agentic - rag - platform", nam,"
   e: "Agentic RAG Platform", taglin,"
   e: "Production RAG with hybrid search, chunking, tools, and evals", pric,"
@@ -2996,7 +2982,7 @@ i,
   g: 4.7, customer,
   s: 900, trial_day,
   s: 14, setup_tim,"
-  e: "2 hours", contact_info;}, // Security and APIs; i,"
+  e: "2 hours", contact_info}, // Security and APIs i,"
   d: "api - security - scanner", nam,"
   e: "API Security Scanner", taglin,"
   e: "OpenAPI / GraphQL scanning, auth / Z checks, dependency audit", pric,"
@@ -3010,7 +2996,7 @@ i,
   g: 4.6, customer,
   s: 750, trial_day,
   s: 14, setup_tim,"
-  e: "20 minutes", contact_info;}, i,"
+  e: "20 minutes", contact_info}, i,"
   d: "api - observability", nam,"
   e: "API Observability & SLA Guard", taglin,"
   e: "OTel tracing, SLOs, and error budgets for services", pric,"
@@ -3024,7 +3010,7 @@ i,
   g: 4.6, customer,
   s: 640, trial_day,
   s: 14, setup_tim,"
-  e: "40 minutes", contact_info;}, // Cloud and Infra; i,"
+  e: "40 minutes", contact_info}, // Cloud and Infra; i,"
   d: "cloud - cost - optimizer - pro", nam,"
   e: "Cloud Cost Optimizer Pro", taglin,"
   e: "Rightsizing, lifecycle, anomaly detection, and k8s bin - packing", pric,"
@@ -3038,7 +3024,7 @@ i,
   g: 4.6, customer,
   s: 820, trial_day,
   s: 14, setup_tim,"
-  e: "1 hour", contact_info;}, i,"
+  e: "1 hour", contact_info}, i,"
   d: "database - performance - monitor", nam,"
   e: "Database Performance Monitor", taglin,"
   e: "Slow query capture, AI index suggestions, capacity forecasting", pric,"
@@ -3052,7 +3038,7 @@ i,
   g: 4.7, customer,
   s: 560, trial_day,
   s: 14, setup_tim,"
-  e: "45 minutes", contact_info;}, i,"
+  e: "45 minutes", contact_info}, i,"
   d: "managed - postgres - ha", nam,"
   e: "Managed Postgres HA", taglin,"
   e: "Highly - available Postgres with backups, failover, and guardrails", pric,"
@@ -3066,7 +3052,7 @@ i,
   g: 4.8, customer,
   s: 240, trial_day,
   s: 7, setup_tim,"
-  e: "1 day", contact_info;}, // Reliability & Monitoring; i,"
+  e: "1 day", contact_info}, // Reliability & Monitoring; i,"
   d: "uptime - slo - monitor", nam,"
   e: "Uptime & SLO Monitor", taglin,"
   e: "Synthetic checks, error budgets, and incident automation", pric,"
@@ -3080,7 +3066,7 @@ i,
   g: 4.5, customer,
   s: 1100, trial_day,
   s: 14, setup_tim,"
-  e: "25 minutes", contact_info;}, i,"
+  e: "25 minutes", contact_info}, i,"
   d: "tls - certificate - monitor", nam,"
   e: "TLS Certificate Monitor", taglin,"
   e: "Auto - renewal checks and expiry alerts across your fleet", pric,"
@@ -3094,7 +3080,7 @@ i,
   g: 4.5, customer,
   s: 2200, trial_day,
   s: 14, setup_tim,"
-  e: "10 minutes", contact_info;}, i,"
+  e: "10 minutes", contact_info}, i,"
   d: "domain - dns - monitor", nam,"
   e: "Domain & DNS Monitor", taglin,"
   e: "Track DNS changes, TTLs, and misconfigurations", pric,"
@@ -3108,7 +3094,7 @@ i,
   g: 4.4, customer,
   s: 980, trial_day,
   s: 14, setup_tim,"
-  e: "15 minutes", contact_info;}, // Dev & Productivity; i,"
+  e: "15 minutes", contact_info}, // Dev & Productivity; i,"
   d: "pdf - render - api", nam,"
   e: "PDF Render API", taglin,"
   e: "High - fidelity serverless PDF rendering and watermarking", pric,"
@@ -3122,7 +3108,7 @@ i,
   g: 4.6, customer,
   s: 1300, trial_day,
   s: 7, setup_tim,"
-  e: "10 minutes", contact_info;}, i,"
+  e: "10 minutes", contact_info}, i,"
   d: "browser - performance - monitor", nam,"
   e: "Browser Performance Monitor", taglin,"
   e: "RUM metrics, Core Web Vitals, and UX waterfall analysis", pric,"
@@ -3136,7 +3122,7 @@ i,
   g: 4.5, customer,
   s: 760, trial_day,
   s: 14, setup_tim,"
-  e: "20 minutes", contact_info;}, i,"
+  e: "20 minutes", contact_info}, i,"
   d: "feature - flags - edge", nam,"
   e: "Feature Flags at the Edge", taglin,"
   e: "Targeting, rollouts, and experiments at CDN edge", pric,"
@@ -3150,7 +3136,7 @@ i,
   g: 4.5, customer,
   s: 430, trial_day,
   s: 14, setup_tim,"
-  e: "30 minutes", contact_info;}, i,"
+  e: "30 minutes", contact_info}, i,"
   d: "serverless - cron - manager", nam,"
   e: "Serverless Cron Manager", taglin,"
   e: "Reliable scheduled jobs with retries and observability", pric,"
@@ -3164,7 +3150,7 @@ i,
   g: 4.4, customer,
   s: 1150, trial_day,
   s: 14, setup_tim,"
-  e: "15 minutes", contact_info;}, // Compliance & Risk; i,"
+  e: "15 minutes", contact_info}, // Compliance & Risk; i,"
   d: "soc2 - evidence - automation", nam,"
   e: "SOC 2 Evidence Automation", taglin,"
   e: "Collect and map controls with change tracking", pric,"
@@ -3178,7 +3164,7 @@ i,
   g: 4.6, customer,
   s: 310, trial_day,
   s: 7, setup_tim,"
-  e: "1 day", contact_info;}, i,"
+  e: "1 day", contact_info}, i,"
   d: "vendor - risk - automation", nam,"
   e: "Vendor Risk Automation", taglin,"
   e: "Automate VRM workflows, DDQs, and risk scoring", pric,"
@@ -3192,7 +3178,7 @@ i,
   g: 4.5, customer,
   s: 520, trial_day,
   s: 14, setup_tim,"
-  e: "2 hours", contact_info;}, // Developer and Ops Utilities; i,"
+  e: "2 hours", contact_info}, // Developer and Ops Utilities; i,"
   d: "webhook - relay - replay", nam,"
   e: "Webhook Relay & Replay", taglin,"
   e: "Capture, inspect, and replay webhooks reliably", pric,"
@@ -3206,7 +3192,7 @@ i,
   g: 4.5, customer,
   s: 1650, trial_day,
   s: 14, setup_tim,"
-  e: "10 minutes", contact_info;}, i,"
+  e: "10 minutes", contact_info}, i,"
   d: "audit - log - vault", nam,"
   e: "Audit Log Vault", taglin,"
   e: "Tamper - evident logs with retention and export", pric,"
@@ -3220,7 +3206,7 @@ i,
   g: 4.5, customer,
   s: 420, trial_day,
   s: 14, setup_tim,"
-  e: "30 minutes", contact_info;}, // AI Channels; i,"
+  e: "30 minutes", contact_info}, // AI Channels i,"
   d: "ai - phone - agent", nam,"
   e: "AI Phone Agent", taglin,"
   e: "Voice IVR and call handling with CRM handoff", pric,"
@@ -3234,7 +3220,7 @@ i,
   g: 4.6, customer,
   s: 380, trial_day,
   s: 7, setup_tim,"
-  e: "1 hour", contact_info;}, // Search and Knowledge; i,"
+  e: "1 hour", contact_info}, // Search and Knowledge; i,"
   d: "vector - search - starter", nam,"
   e: "Vector Search Starter", taglin,"
   e: "Deploy a production - grade vector database and APIs", pric,"
@@ -3248,7 +3234,7 @@ i,
   g: 4.6, customer,
   s: 410, trial_day,
   s: 14, setup_tim,"
-  e: "2 hours", contact_info;}];}} // Search and Knowledge; ' i,
+  e: "2 hours", contact_info}]}} // Search and Knowledge; ' i,
   d: 'vector - search - starter'' nam,
   e: 'Vector Search Starter'' taglin,
   e: 'Deploy a production - grade vector database and APIs'' pric,
@@ -3263,4 +3249,4 @@ i,
   g: 4.6; customer,
   s: 410; trial_day,
   s: 14;' setup_tim,
-  e: '2 hours' contact_info}]; ; contactInfo } ]; }} '"
+  e: '2 hours' contact_info}]; ; contactInfo } ]}} '"

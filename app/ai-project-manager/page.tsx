@@ -4,7 +4,6 @@ import { Helmet } from 'react-helmet-async';
 import { Calendar, Users, CheckSquare, BarChart3, Clock, Target, Zap, ArrowRight, Star, Shield, Globe, Smartphone } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 const AIProjectManagerPage: React.FC = () => {
   const features = [
     {
@@ -32,7 +31,6 @@ const AIProjectManagerPage: React.FC = () => {
       benefits: ['Task automation', 'Report generation', 'Status updates', 'Integration management']
     }
   ];
-
   const pricingPlans = [
     {
       name: 'Starter',
@@ -46,8 +44,7 @@ const AIProjectManagerPage: React.FC = () => {
         'Email support',
         'Mobile app access'
       ],
-      popular: false
-    },
+      popular: false},
     {
       name: 'Professional',
       price: '$79',
@@ -61,8 +58,7 @@ const AIProjectManagerPage: React.FC = () => {
         'API access',
         'Custom integrations'
       ],
-      popular: true
-    },
+      popular: true},
     {
       name: 'Enterprise',
       price: '$199',
@@ -76,34 +72,28 @@ const AIProjectManagerPage: React.FC = () => {
         'Advanced security',
         'Custom training'
       ],
-      popular: false
-    }
+      popular: false}
   ];
-
   const testimonials = [
     {
       name: 'Sarah Johnson',
       role: 'Project Manager',
       company: 'TechCorp Inc.',
       content: 'AI Project Manager has revolutionized how we handle complex projects. The AI insights help us stay on track and deliver 40% faster.',
-      rating: 5
-    },
+      rating: 5},
     {
       name: 'Michael Chen',
       role: 'CTO',
       company: 'StartupXYZ',
       content: 'The predictive analytics feature is a game-changer. We can now anticipate issues before they become problems.',
-      rating: 5
-    },
+      rating: 5},
     {
       name: 'Emily Rodriguez',
       role: 'Operations Director',
       company: 'Global Solutions',
       content: 'Our team productivity increased by 60% since implementing AI Project Manager. The automation features save us hours every week.',
-      rating: 5
-    }
+      rating: 5}
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -111,9 +101,7 @@ const AIProjectManagerPage: React.FC = () => {
         <meta name="description" content="Revolutionary AI-powered project management tool with smart scheduling, team collaboration, and predictive analytics. Start your free trial today." />
         <meta name="keywords" content="AI project management, project management software, team collaboration, project analytics, task automation" />
       </Helmet>
-      
       <Navigation />
-      
       <main className="pt-20">
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -129,7 +117,7 @@ const AIProjectManagerPage: React.FC = () => {
               Transform your project management with AI-powered insights, smart scheduling, and predictive analytics. 
               Deliver projects 40% faster with intelligent automation and team collaboration tools.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center mb-12">
               <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 inline" />
@@ -143,7 +131,6 @@ const AIProjectManagerPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -157,7 +144,7 @@ const AIProjectManagerPage: React.FC = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
@@ -176,7 +163,6 @@ const AIProjectManagerPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -214,7 +200,7 @@ const AIProjectManagerPage: React.FC = () => {
                   </ul>
                   <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular 
-                      ? 'bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white transform hover:scale-105' 
+                      ? 'bg-gradient-to-r from-cyan-500 to-blue-500 hover: from-cyan-600 hover:to-blue-600 text-white transform hover:scale-105' 
                       : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'
                   }`}>
                     {plan.name === 'Enterprise' ? 'Contact Sales' : 'Start Free Trial'}
@@ -224,7 +210,6 @@ const AIProjectManagerPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Testimonials Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -254,9 +239,8 @@ const AIProjectManagerPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm: px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 backdrop-blur-sm rounded-3xl p-12 border border-cyan-500/20">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -281,10 +265,7 @@ const AIProjectManagerPage: React.FC = () => {
           </div>
         </section>
       </main>
-      
       <Footer />
     </div>
-  );
-};
-
-export default AIProjectManagerPage;
+  )};
+export default AIProjectManagerPage

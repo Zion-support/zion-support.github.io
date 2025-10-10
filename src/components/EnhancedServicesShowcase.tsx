@@ -4,24 +4,20 @@ import { Phone, Mail, ExternalLink, Star, CheckCircle, ArrowRight, Zap, Brain, C
 import { services, serviceCategories, contactInfo } from '../data/services';
 interface ServiceCardProps {
   service: typeof services[0];
-  index: number;
-}
+  index: number}
 const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
   const [isHovered, setIsHovered] = useState(false);
   const formatPrice = (pricing: typeof service.pricing) => {
     if (pricing.custom) {
-      return 'Custom Pricing';
-    }
-    return `$${pricing.starting.toLocaleString()}/${pricing.period === 'month' ? 'mo' : pricing.period === 'year' ? 'yr' : 'one-time'}`;
-  };
+      return 'Custom Pricing'}
+    return `$${pricing.starting.toLocaleString()}/${pricing.period === 'month' ? 'mo' : pricing.period === 'year' ? 'yr' : 'one-time'}`};
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'ai': return Brain;
       case 'micro-saas': return Zap;
       case 'it': return Cloud;
       case 'emerging-tech': return Rocket;
-      default: return Target;
-    }
+      default: return Target}
   };
   const CategoryIcon = getCategoryIcon(service.category);
   return (
@@ -163,17 +159,14 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
         </div>
       </div>
     </div>
-  );
-};
+  )};
 const EnhancedServicesShowcase: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [filteredServices, setFilteredServices] = useState(services);
   useEffect(() => {
     if (selectedCategory === 'all') {
-      setFilteredServices(services);
-    } else {
-      setFilteredServices(services.filter(service => service.category === selectedCategory));
-    }
+      setFilteredServices(services)} else {
+      setFilteredServices(services.filter(service => service.category === selectedCategory))}
   }, [selectedCategory]);
   const popularServices = services.filter(service => service.popular);
   const newServices = services.filter(service => service.new);
@@ -302,9 +295,8 @@ const EnhancedServicesShowcase: React.FC = () => {
         </div>
       </div>
     </section>
-  );
-};
-export default EnhancedServicesShowcase;
+  )};
+export default EnhancedServicesShowcase
   </a>
   </h3>
   </button>

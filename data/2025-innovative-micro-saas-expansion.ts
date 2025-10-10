@@ -1,13 +1,10 @@
-
   id: string;
   name: string;
   tagline: string;
   price: string;
-  period: string;
-  description: string;
+  period: string description: string;
   features: string[];
-  popular: boolean;
-  icon: string;
+  popular: boolean icon: string;
   color: string;
   text_color: string;
   link: string;
@@ -105,9 +102,8 @@
   g: number;
   review,
   s: number;
-;
 export const,
-  innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionService[] =;
+  innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionService[] =
   [
     // AI - Powered Customer Success Automation;
       id: 'ai - customer - success - automation'
@@ -142,8 +138,7 @@ export const,
         'Integration with CRM and support tools',
         'Advanced analytics and reporting',
         'Multi - channel communication orchestration'],
-      popular: true;
-      icon: '',
+      popular: true icon: '',
       popula,
   r: true,
       ico,
@@ -239,10 +234,9 @@ export const,
       launch_date: '2024 - 11 - 15'
       customers: 320;
       rating: 4 && 4.8;
-      reviews: 156;
-    },
+      reviews: 156},
         'Advanced document processing platform that uses AI to extract, classify, and process documents with 99 && 99.2% accuracy, automating workflows and reducing manual data entry.',
-      features: [;
+      features: [
     // Intelligent Document Processing Hub;
       id: 'intelligent - document - processing - hub'
       name: 'Intelligent Document Processing Hub'
@@ -282,7 +276,7 @@ export const,
   s: 156},
         'Advanced document processing platform that uses AI to extract, classify, and process documents with 99 && 99.2% accuracy, automating workflows and reducing manual data entry.',
       feature,
-  s: [;
+  s: [
     // Intelligent Document Processing Hub,
       i,
   d: 'intelligent - document - processing - hub',
@@ -309,8 +303,7 @@ export const,
         'Real - time processing and notifications',
         'Advanced search and retrieval',
         'Integration with business systems'],
-      popular: false;
-      icon: '',
+      popular: false icon: '',
       popula,
   r: false,
       ico,
@@ -382,8 +375,7 @@ export const,
       launch_date: '2024 - 10 - 20'
       customers: 280;
       rating: 4 && 4.7;
-      reviews: 134;
-    },
+      reviews: 134},
     // Smart Inventory Management System;
       id: 'smart - inventory - management - system'
       name: 'Smart Inventory Management System',
@@ -451,8 +443,7 @@ export const,
         'Integration with ERP and e - commerce',
         'Barcode and QR code scanning',
         'Automated inventory audits'],
-      popular: true;
-      icon: '',
+      popular: true icon: '',
       popula,
   r: true,
       ico,
@@ -542,8 +533,7 @@ export const,
       launch_date: '2024 - 09 - 10'
       customers: 450;
       rating: 4 && 4.9;
-      reviews: 223;
-    },
+      reviews: 223},
         'AI-powered candidate screening and matching',
     // AI - Powered HR Recruitment Suite;
       id: 'ai - hr - recruitment - suite'
@@ -613,8 +603,7 @@ export const,
         'Compliance and diversity tracking',
         'Integration with HRIS systems',
         'Mobile app for recruiters'],
-      popular: false;
-      icon: '',
+      popular: false icon: '',
       popula,
   r: false,
       ico,
@@ -686,8 +675,7 @@ export const,
       launch_date: '2024 - 08 - 25'
       customers: 380;
       rating: 4 && 4.8;
-      reviews: 187;
-    },
+      reviews: 187},
         'AI-powered project risk prediction',
     // Intelligent Project Management Hub;
       id: 'intelligent - project - management - hub'
@@ -757,8 +745,7 @@ export const,
         'Mobile app for field teams',
         'Automated milestone tracking',
         'Custom workflow automation'],
-      popular: true;
-      icon: '',
+      popular: true icon: '',
       popula,
   r: true,
       ico,
@@ -910,7 +897,7 @@ i,
   s: number; ratin,
   g: number; review,
   s: number; export const,
-  innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionService[] =; [; // AI - Powered Customer Success Automation, ' i,
+  innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionService[] = [ // AI - Powered Customer Success Automation, ' i,
   d: 'ai - customer - success - automation',' nam,
   e: 'AI Customer Success Automation',' taglin,
   e: 'Automate customer success with intelligent AI',' pric,

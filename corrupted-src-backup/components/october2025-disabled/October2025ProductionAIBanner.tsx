@@ -18,7 +18,7 @@ export default function October2025ProductionAIBann, e, r() {/* TODO: Fix JSX ex
             <sp, a, n>N, E, W: October, 2025, Production AI, Insight, s</sp, a, n>
           </div>
           <h2, className='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>
-            Production, AI, Excellence: Latest, Enterprise, Strategies;
+            Production, AI, Excellence: Latest, Enterprise, Strategies
           </h2>
           <p, className='te, x, t-xl, m, d:te, x, t-2xl, tex, t-whi, t, e/90, ma, x-w-3xl, m, x-au, t, o'>
             Master, production, AI deploy, m, e, n, t, re, a, l-time, monitorin, g, and, multimodal, RAG systems, with, our comprehensive, October, 2025 guid, e, s;
@@ -225,5 +225,4 @@ export default function October2025ProductionAIBann, e, r() {/* TODO: Fix JSX ex
         </div>)
       </div>)
     </secti, o, n>)
-  );
-}
+  )}

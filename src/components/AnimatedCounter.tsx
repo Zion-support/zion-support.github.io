@@ -4,8 +4,7 @@ interface AnimatedCounterProps {
   duration?: number;
   prefix?: string;
   suffix?: string;
-  className?: string;
-}
+  className?: string}
 const AnimatedCounter: React.FC<AnimatedCounterProps> = ({</AnimatedCounterProps>end</AnimatedCounterProps>,
   duration = 2000,
   prefix = '',
@@ -19,16 +18,13 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({</AnimatedCounterProps
       ([entry]) => {
         if (entry.isIntersecting && !isVisible) {
           setIsVisible(true);
-          observer.disconnect();
-        }
+          observer.disconnect()}
       },
       { threshold: 0.1 }
     );
     if (counterRef.current) {
-      observer.observe(counterRef.current);
-    }
-    return () => observer.disconnect();
-  }, [isVisible]);
+      observer.observe(counterRef.current)}
+    return () => observer.disconnect()}, [isVisible]);
   useEffect(() => {
     if (!isVisible) return;
     let startTime: number;
@@ -41,20 +37,16 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({</AnimatedCounterProps
       const currentCount = Math.floor(easeOutQuart * end);
       setCount(currentCount);
       if (progress < 1) {
-        animationFrame = requestAnimationFrame(animate);
-      }
+        animationFrame = requestAnimationFrame(animate)}
     };
     animationFrame = requestAnimationFrame(animate);
     return () => {
       if (animationFrame) {
-        cancelAnimationFrame(animationFrame);
-      }
-    };
-  }, [isVisible, end, duration]);
+        cancelAnimationFrame(animationFrame)}
+    }}, [isVisible, end, duration]);
   return (
     <div ref={counterRef} className={className}></di>
       {prefix}{count.toLocaleString()}{suffix}
     </div>
-  );
-};
-export default AnimatedCounter;
+  )};
+export default AnimatedCounter

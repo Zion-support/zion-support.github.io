@@ -15,11 +15,9 @@ import {
   TrendingUp,
   CheckCircle
 } from 'lucide-react';
-
 const ItServicesPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
-
   const itServices = [
     {
       id: 1,
@@ -94,23 +92,18 @@ const ItServicesPage: React.FC = () => {
       features: ['Custom web applications', 'E-commerce solutions', 'API development', 'Responsive design', 'Performance optimization', 'SEO optimization']
     }
   ];
-
   const categories = ['all', 'Cloud', 'DevOps', 'Database', 'Security', 'Managed', 'Consulting', 'Development'];
-
   const filteredServices = itServices.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
-
+    return matchesSearch && matchesCategory});
   const stats = [
     { icon: <Users className="w-8 h-8 text-blue-500" />, value: '500+', label: 'Projects Completed' },
     { icon: <TrendingUp className="w-8 h-8 text-green-500" />, value: '99.9%', label: 'Uptime' },
     { icon: <Shield className="w-8 h-8 text-purple-500" />, value: '100%', label: 'Secure' },
     { icon: <Zap className="w-8 h-8 text-orange-500" />, value: '50%', label: 'Cost Reduction' }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -118,7 +111,6 @@ const ItServicesPage: React.FC = () => {
         <meta name="description" content="Complete IT services including cloud solutions, cybersecurity, infrastructure management, DevOps, and more. Expert IT support and consulting for modern businesses." />
         <meta name="keywords" content="IT services, cloud solutions, cybersecurity, IT infrastructure, managed IT, IT consulting, DevOps, database management, web development" />
       </Helmet>
-
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -133,7 +125,6 @@ const ItServicesPage: React.FC = () => {
           </p>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -150,9 +141,8 @@ const ItServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Search and Filter Section */}
-      <section className="py-10 px-4 sm:px-6 lg:px-8">
+      <section className="py-10 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row gap-4 mb-8">
             <div className="flex-1">
@@ -162,7 +152,7 @@ const ItServicesPage: React.FC = () => {
                   placeholder="Search IT services..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
+                  className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
                 />
                 <div className="absolute left-3 top-1/2 transform -translate-y-1/2">
                   <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -175,7 +165,7 @@ const ItServicesPage: React.FC = () => {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-3 bg-slate-800/50 border border-cyan-500/30 rounded-lg text-white focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
+                className="px-4 py-3 bg-slate-800/50 border border-cyan-500/30 rounded-lg text-white focus: outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
               >
                 {categories.map((category) => (
                   <option key={category} value={category} className="capitalize">
@@ -187,22 +177,19 @@ const ItServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredServices.map((service) => (
-              <div key={service.id} className="bg-slate-800/50 rounded-2xl p-8 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 group">
+              <div key={service.id} className="bg-slate-800/50 rounded-2xl p-8 border border-cyan-500/20 hover: border-cyan-500/40 transition-all duration-300 group">
                 <div className="flex items-center mb-6">
                   <div className="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center mr-4">
                     <service.icon className="w-6 h-6 text-cyan-400" />
                   </div>
                   <h3 className="text-xl font-semibold text-white">{service.title}</h3>
                 </div>
-                
                 <p className="text-gray-300 mb-6">{service.description}</p>
-                
                 <div className="mb-6">
                   <h4 className="text-sm font-medium text-gray-400 mb-3">Key Features:</h4>
                   <ul className="space-y-2">
@@ -217,15 +204,13 @@ const ItServicesPage: React.FC = () => {
                     )}
                   </ul>
                 </div>
-                
                 <div className="mb-6">
                   <div className="text-lg font-semibold text-cyan-400">{service.price}</div>
                 </div>
-                
                 <div className="flex space-x-3">
                   <Link
                     to="/contact"
-                    className="flex-1 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold py-3 px-6 rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 text-center"
+                    className="flex-1 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold py-3 px-6 rounded-lg hover: from-cyan-600 hover:to-purple-600 transition-all duration-300 text-center"
                   >
                     Get Quote
                   </Link>
@@ -239,7 +224,6 @@ const ItServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -250,7 +234,7 @@ const ItServicesPage: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8">
               Let our expert team help you build a robust, scalable, and secure IT environment that supports your business goals.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold py-3 px-8 rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center space-x-2"
@@ -270,7 +254,5 @@ const ItServicesPage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
-
-export default ItServicesPage;
+  )};
+export default ItServicesPage

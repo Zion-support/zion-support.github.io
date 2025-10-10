@@ -6,7 +6,7 @@ import { Leaf, Target, Zap, Settings, CheckCircle, Star,  Leaf,  Target,  Settin
 const SustainabilityTechPage: React.FC = () => {
   const features = [];
   return (
-    {// TODO: Add content;}
+    {// TODO: Add content}
 };
   ico,
   n: Leaf,
@@ -15,8 +15,7 @@ const SustainabilityTechPage: React.FC = () => {
       descriptio,
   n: 'Sustainable technology solutions for environmental impact',
       benefit,
-  s: ['Carbon reduction', 'Energy efficiency', 'Waste reduction'];
-    },
+  s: ['Carbon reduction', 'Energy efficiency', 'Waste reduction']},
       ico,
   n: Target,
       titl,
@@ -89,6 +88,5 @@ const SustainabilityTechPage: React.FC = () => {
       </main>
       <Footer /></Footer>
     </div>
-  );
-};
-export default SustainabilityTechPage;
+  )};
+export default SustainabilityTechPage

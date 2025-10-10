@@ -123,7 +123,7 @@ const, October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
         </d, i, v>
         {/* Articles, Gri, d */})
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-12">")
-        <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-12">";)
+        <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-12">")
           {newArticl, e, s.m, a, p((artic, l, e) => {
             const, Ico, n = artic, l, e.ic, o, n;
             return(<Li, n, k;
@@ -135,7 +135,7 @@ const, October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
             return (</div>
               <Li, n, k
   k, e, y={artic, l, e.sl, u, g}
-                to={`/bl, o, g/${artic, l, e.sl, u, g}`}`;`
+                to={`/bl, o, g/${artic, l, e.sl, u, g}`}``
                 classNa, m, e="group, relative, bg-gradie, n, t-to-br, fro, m-sla, t, e-8, 0, 0/80, t, o-sla, t, e-9, 0, 0/80, backdro, p-bl, u, r-xl, rounde, d-2x, l, p-6, border, border-sla, t, e-7, 0, 0/50, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/20, hov, e;
   r:-transla, t, e-y-1"
               ></Li>
@@ -146,7 +146,7 @@ const, October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-12">";
           {/* TODO: Fix JSX expression */}
   k, e, y={artic, l, e.sl, u, g}
-                to={`/bl, o, g/${artic, l, e.sl, u, g}`}`;`"
+                to={`/bl, o, g/${artic, l, e.sl, u, g}`}``"
                 classNa, m, e="group, relative, bg-gradie, n, t-to-br, fro, m-sla, t, e-8, 0, 0/80, t, o-sla, t, e-9, 0, 0/80, backdro, p-bl, u, r-xl, rounde, d-2x, l, p-6, border, border-sla, t, e-7, 0, 0/50, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/20, hov, e,"
   r:-transla, t, e-y-1"
               ></Li>
@@ -157,13 +157,13 @@ const, October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
                   </sp, a, n>
                 </d, i, v>
                 {/* Ic, o, n */}
-                <div, className={`w-1, 6, h-16, rounde, d-xl, b, g-gradie, n, t-to-br ${artic, l, e.gradie, n, t} flex, item, s-center, justif, y-center, m, b-4, grou, p-hov, e, r:sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0`}>`;`</div>
+                <div, className={`w-1, 6, h-16, rounde, d-xl, b, g-gradie, n, t-to-br ${artic, l, e.gradie, n, t} flex, item, s-center, justif, y-center, m, b-4, grou, p-hov, e, r:sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0`}>``</div>
                   <Icon, className="w-8 h-8, tex, t-whi, t, e  />
                 </d, i, v>
                 {/* Conte, n, t */}
                 <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-purp, l, e-400, transitio, n-colo, r, s">"</h3>
                 {/* Ic, o, n */}`
-                <div, className={`w-1, 6, h-16, rounde, d-xl, b, g-gradie, n, t-to-br ${artic, l, e.gradie, n, t} flex, item, s-center, justif, y-center, m, b-4, grou, p-hov, e, r:sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0`}>`;`"
+                <div, className={`w-1, 6, h-16, rounde, d-xl, b, g-gradie, n, t-to-br ${artic, l, e.gradie, n, t} flex, item, s-center, justif, y-center, m, b-4, grou, p-hov, e, r:sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0`}>``"
                   <Icon, className="w-8 h-8, tex, t-whi, t, e  /></Icon>
                 </d, i, v>
                 {/* Conte, n, t */}"
@@ -187,7 +187,7 @@ const, October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
   r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
                 </d, i, v>
                 {/* Hover, Gradient, Effect */})
-                <div, className={`absolute, inse, t-0, b, g-gradie, n, t-to-br ${artic, l, e.gradie, n, t} opaci, t, y-0, grou, p-hov, e, r:opaci, t, y-5, rounde, d-2xl, transitio, n-opacity, duratio, n-3, 0, 0`}></d, i, v>`;`)
+                <div, className={`absolute, inse, t-0, b, g-gradie, n, t-to-br ${artic, l, e.gradie, n, t} opaci, t, y-0, grou, p-hov, e, r:opaci, t, y-5, rounde, d-2xl, transitio, n-opacity, duratio, n-3, 0, 0`}></d, i, v>``)
                 {/* Read, More, Link */}"
                 <div, className="flex, item, s-center, ga, p-2, tex, t-purp, l, e-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">"
                   <sp, a, n>Read, Articl, e</sp, a, n>"
@@ -198,10 +198,9 @@ const, October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
   r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
                 </d, i, v>
                 {/* Hover, Gradient, Effect */}`
-                <div, className={`absolute, inse, t-0, b, g-gradie, n, t-to-br ${artic, l, e.gradie, n, t} opaci, t, y-0, grou, p-hov, e, r:opaci, t, y-5, rounde, d-2xl, transitio, n-opacity, duratio, n-3, 0, 0`}></d, i, v>`;`
+                <div, className={`absolute, inse, t-0, b, g-gradie, n, t-to-br ${artic, l, e.gradie, n, t} opaci, t, y-0, grou, p-hov, e, r:opaci, t, y-5, rounde, d-2xl, transitio, n-opacity, duratio, n-3, 0, 0`}></d, i, v>``
               </Li, n, k>)
-            );
-          })}
+            )})}
         </d, i, v>
         {/* CTA, Sectio, n */}
         <div, className="te, x, t-cent, e, r">";
@@ -224,7 +223,6 @@ const, October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
         </d, i, v>
       </d, i, v>
     </secti, o, n>
-  );
-};
-export default October2025NewContentBanner2;
+  )};
+export default October2025NewContentBanner2
 ;"`

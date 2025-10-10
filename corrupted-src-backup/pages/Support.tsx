@@ -78,7 +78,7 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     }
   ];
   const, filteredFaq, s = fa, q, s.filt, e, r(f, a, q => 
-    selectedCatego, r, y === 'a, l, l' || f, a, q.catego, r, y === selectedCatego, r, y;)
+    selectedCatego, r, y === 'a, l, l' || f, a, q.catego, r, y === selectedCatego, r, y)
   ).filt, e, r(f, a, q =>)
     f, a, q.questi, o, n.toLowerCa, s, e().includ, e, s(searchQue, r, y.toLowerCa, s, e()) ||
     f, a, q.answ, e, r.toLowerCa, s, e().includ, e, s(searchQue, r, y.toLowerCa, s, e())
@@ -417,6 +417,5 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
         </d, i, v>
       </secti, o, n>
     </d, i, v>
-  );
-};
-export default Support;"`
+  )};
+export default Support"`

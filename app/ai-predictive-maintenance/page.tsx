@@ -4,7 +4,6 @@ import { Helmet } from 'react-helmet-async';
 import { Wrench, BarChart3, AlertTriangle, Zap, ArrowRight, Star, CheckSquare, Shield, Smartphone, Users, Target, Settings } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 const AIPredictiveMaintenancePage: React.FC = () => {
   const features = [
     {
@@ -32,7 +31,6 @@ const AIPredictiveMaintenancePage: React.FC = () => {
       benefits: ['Resource optimization', 'Downtime minimization', 'Workforce planning', 'Inventory management']
     }
   ];
-
   const industries = [
     {
       title: 'Manufacturing',
@@ -59,7 +57,6 @@ const AIPredictiveMaintenancePage: React.FC = () => {
       benefits: ['Prevent equipment failures', 'Ensure patient safety', 'Reduce maintenance costs', 'Improve efficiency']
     }
   ];
-
   const pricingPlans = [
     {
       name: 'Starter',
@@ -73,8 +70,7 @@ const AIPredictiveMaintenancePage: React.FC = () => {
         'Standard support',
         'Mobile app access'
       ],
-      popular: false
-    },
+      popular: false},
     {
       name: 'Professional',
       price: '$1,299',
@@ -88,8 +84,7 @@ const AIPredictiveMaintenancePage: React.FC = () => {
         'API access',
         'Custom dashboards'
       ],
-      popular: true
-    },
+      popular: true},
     {
       name: 'Enterprise',
       price: '$2,999',
@@ -103,34 +98,28 @@ const AIPredictiveMaintenancePage: React.FC = () => {
         'On-premise deployment',
         'Advanced integrations'
       ],
-      popular: false
-    }
+      popular: false}
   ];
-
   const testimonials = [
     {
       name: 'James Mitchell',
       role: 'Plant Manager',
       company: 'Industrial Manufacturing Co.',
       content: 'We reduced unplanned downtime by 45% and saved $2M annually. The AI predictions are incredibly accurate.',
-      rating: 5
-    },
+      rating: 5},
     {
       name: 'Dr. Sarah Chen',
       role: 'CTO',
       company: 'PowerGrid Solutions',
       content: 'Our power plant efficiency increased by 20% while reducing maintenance costs by 35%. Game-changing technology.',
-      rating: 5
-    },
+      rating: 5},
     {
       name: 'Michael Rodriguez',
       role: 'Fleet Manager',
       company: 'Global Logistics',
       content: 'Vehicle breakdowns decreased by 60% and our maintenance costs dropped by 40%. The ROI was immediate.',
-      rating: 5
-    }
+      rating: 5}
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -138,9 +127,7 @@ const AIPredictiveMaintenancePage: React.FC = () => {
         <meta name="description" content="Prevent equipment failures with AI-powered predictive maintenance. 95% accuracy, reduce downtime by 40%, and save millions in maintenance costs." />
         <meta name="keywords" content="AI predictive maintenance, equipment monitoring, failure prediction, maintenance optimization, IoT analytics" />
       </Helmet>
-      
       <Navigation />
-      
       <main className="pt-20">
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -156,7 +143,7 @@ const AIPredictiveMaintenancePage: React.FC = () => {
               Prevent equipment failures before they happen with AI-powered predictive maintenance. 
               Achieve 95% accuracy, reduce downtime by 40%, and save millions in maintenance costs.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center mb-12">
               <button className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 inline" />
@@ -170,7 +157,6 @@ const AIPredictiveMaintenancePage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -184,7 +170,7 @@ const AIPredictiveMaintenancePage: React.FC = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group">
                   <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
@@ -203,7 +189,6 @@ const AIPredictiveMaintenancePage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Industries Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -217,7 +202,7 @@ const AIPredictiveMaintenancePage: React.FC = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {industries.map((industry, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group">
                   <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                     <industry.icon className="w-8 h-8 text-white" />
                   </div>
@@ -236,7 +221,6 @@ const AIPredictiveMaintenancePage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -274,7 +258,7 @@ const AIPredictiveMaintenancePage: React.FC = () => {
                   </ul>
                   <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular 
-                      ? 'bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white transform hover:scale-105' 
+                      ? 'bg-gradient-to-r from-orange-500 to-red-500 hover: from-orange-600 hover:to-red-600 text-white transform hover:scale-105' 
                       : 'border border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-white'
                   }`}>
                     {plan.name === 'Enterprise' ? 'Contact Sales' : 'Start Free Trial'}
@@ -284,7 +268,6 @@ const AIPredictiveMaintenancePage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Testimonials Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -314,9 +297,8 @@ const AIPredictiveMaintenancePage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm: px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-gradient-to-r from-orange-500/10 to-red-500/10 backdrop-blur-sm rounded-3xl p-12 border border-orange-500/20">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -341,10 +323,7 @@ const AIPredictiveMaintenancePage: React.FC = () => {
           </div>
         </section>
       </main>
-      
       <Footer />
     </div>
-  );
-};
-
-export default AIPredictiveMaintenancePage;
+  )};
+export default AIPredictiveMaintenancePage

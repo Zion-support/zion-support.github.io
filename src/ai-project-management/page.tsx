@@ -17,7 +17,7 @@ export default function AIProjectManagementPage() {/* TODO: Fix JSX expression *
           <section className="text-center mb-16"></section>"
             <h1 className="text-4xl,"
   md:text-6xl font-bold text-white mb-6 neon-text cyber-text"></h1>
-              AI Project Management;
+              AI Project Management
             </h1>"
             <p className="text-xl text-cyan-400 mb-8 font-medium"></p>
               Intelligent project management powered by AI;
@@ -183,5 +183,4 @@ export default function AIProjectManagementPage() {/* TODO: Fix JSX expression *
         <Footer /></Footer>
       </div>
     </div>
-  );
-}"
+  )}"

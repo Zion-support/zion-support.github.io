@@ -228,8 +228,7 @@ const, QuantumConsciousnessAIConsultin, g: Rea, c, t.FC = () => {/* TODO: Fix JS
               Limited, Availabilit, y: Only, 25, enterprise implementations, available, for 20, 2, 7;
             </div>
             <p, className='te, x, t-gr, a, y-300, tex, t-lg'>
-              Limited, Availabilit, y: Only, 25, enterprise implementations, available, for 20, 2, 7;
-}
+              Limited, Availabilit, y: Only, 25, enterprise implementations, available, for 20, 2, 7}
               Limited, Availabilit, y: Only, 25, enterprise implementations, available, for 20, 2, 7
 }</p>
                       ></button>
@@ -238,5 +237,4 @@ const, QuantumConsciousnessAIConsultin, g: Rea, c, t.FC = () => {/* TODO: Fix JS
               Limited, Availabilit, y: Only, 25, enterprise implementations, available, for 20, 2, 7;
             </div>
             <p, className='te, x, t-gr, a, y-300, tex, t-lg'></p>
-              Limited, Availabilit, y: Only, 25, enterprise implementations, available, for 20, 2, 7;
-}
+              Limited, Availabilit, y: Only, 25, enterprise implementations, available, for 20, 2, 7}

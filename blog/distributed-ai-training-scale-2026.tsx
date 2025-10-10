@@ -58,7 +58,7 @@ const DistributedAITrainingScale2026 = () =>
               <
             </div>
             <h1 className="text-left">)
-              Distributed AI Training at Scale 2026: Training LLMs on 1000+ GPU Clusters;)
+              Distributed AI Training at Scale 2026: Training LLMs on 1000+ GPU Clusters)
             </h1>)
             <p className="text-left"></p>),
               <"
@@ -164,7 +164,7 @@ const DistributedAITrainingScale2026 = () =>
                     Data Parallelism with AllReduce;
                   </h3>"
                   <p className="text-left"></p>
-                    Distribute training data across GPUs, each computing gradients on different batches. Synchronize gradients using optimized;)
+                    Distribute training data across GPUs, each computing gradients on different batches. Synchronize gradients using optimized)
                     AllReduce algorithms (Ring-AllReduce) Hierarchical AllReduce) achieving near-linear scaling for models that fit on single GPUs.
                   </p>"
                   <div className="text-left"></div>"
@@ -554,9 +554,8 @@ const DistributedAITrainingScale2026 = () =>
           </div>
         </article>
       </div>
-  );
-};
-export default DistributedAITrainingScale2026;
+  )};
+export default DistributedAITrainingScale2026
 "
   </span>
   </span>

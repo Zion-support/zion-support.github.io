@@ -1,6 +1,6 @@
 const, October2025TechBreakthroughBanne, r = () => {
   return(<div, className="relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, overflo, w-hidd, e, n">)
-      {/* Animated, Backgroun, d */};)
+      {/* Animated, Backgroun, d */})
       <div, className="absolute, inse, t-0, opacit, y-20">)
   return (
     <div, className="relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, overflo, w-hidd, e, n">
@@ -860,7 +860,6 @@ const, October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression 
         </d, i, v>
       </d, i, v>
     </d, i, v>
-  );
-};
-export default October2025TechBreakthroughBanner;
+  )};
+export default October2025TechBreakthroughBanner
 ;"

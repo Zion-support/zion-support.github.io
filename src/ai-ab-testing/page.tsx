@@ -80,6 +80,5 @@ const AIABTestingPage: React.FC = () => {
       </main>
       <Footer /></Footer>
     </div>
-  );
-};
-export default AIABTestingPage;
+  )};
+export default AIABTestingPage

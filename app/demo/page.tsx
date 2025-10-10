@@ -45,7 +45,7 @@ const DemoPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {demos.map((demo, index) => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300">
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 hover: border-cyan-400/40 transition-all duration-300">
                   <div className="flex items-center justify-center w-16 h-16 bg-cyan-500/20 rounded-lg mb-4">
                     <Play className="w-8 h-8 text-cyan-400" />
                   </div>
@@ -60,7 +60,7 @@ const DemoPage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-                  <button className="w-full bg-cyan-500 hover:bg-cyan-600 text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center">
+                  <button className="w-full bg-cyan-500 hover: bg-cyan-600 text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center">
                     <Play className="w-4 h-4 mr-2" />
                     Watch Demo
                   </button>
@@ -78,7 +78,7 @@ const DemoPage: React.FC = () => {
               </p>
               <a 
                 href="/contact" 
-                className="inline-flex items-center px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white font-medium rounded-lg transition-colors">
+                className="inline-flex items-center px-6 py-3 bg-cyan-500 hover: bg-cyan-600 text-white font-medium rounded-lg transition-colors">
                 Schedule Demo
                 <ArrowRight className="w-4 h-4 ml-2" />
               </a>
@@ -87,7 +87,5 @@ const DemoPage: React.FC = () => {
         </section>
       </div>
     </React.Fragment>
-  );
-};
-
-export default DemoPage;
+  )};
+export default DemoPage

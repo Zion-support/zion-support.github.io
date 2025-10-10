@@ -1,6 +1,5 @@
 export interface EnhancedPromotionalBanner {/* TODO: Fix JSX expression */}
 }
-
 export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [,
   {,
     id: 'oct-01-autonomous-business-ops-2025',
@@ -9,7 +8,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [,
     description: 'Revolutionary AI platform delivering unprecedented business transformation with measurable results.'
     ctaText: 'Get Started Now'
     ctaUrl: '/services/autonomous-business-operations'
-    featured: true;
+    featured: true
     priority: 1;
     startDate: '2025-10-01',
     endDate: '2025-12-31',
@@ -33,4 +32,4 @@ export const,
   {/* TODO: Fix JSX expression */}
   },
   {/* TODO: Fix JSX expression */}
-  }];
+  }]

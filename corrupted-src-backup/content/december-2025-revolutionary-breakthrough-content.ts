@@ -1,9 +1,7 @@
 // December 2025 Revolutionary Breakthrough Content - Latest AI consciousness and superintelligence breakthroughs;
 export interface RevolutionaryBreakthroughContent {
-  id: string;
-  slug?: string;
-  title: string;
-  description: string;
+  id: string
+  slug?: string title: string description: string;
   excerpt: string;
   author: string;
   date: string;
@@ -21,12 +19,10 @@ export interface RevolutionaryBreakthroughContent {
     accuracy: string;
     roi: string;
 export interface RevolutionaryBreakthroughContent {/* TODO: Fix JSX expression */}
-  };
+  }
   consciousnessLevel?: string;
   transcendenceLevel?: string;
-  superintelligenceLevel?: string;
-}
-
+  superintelligenceLevel?: string}
 export const december2025RevolutionaryBreakthroughContent: RevolutionaryBreakthroughContent[] = [
   {
     id: 'quantum-ai-transcendence-revolution-2025',
@@ -39,7 +35,7 @@ export const december2025RevolutionaryBreakthroughContent: RevolutionaryBreakthr
     date: '2025-12-01',
     category: 'AI Consciousness',
     tags: ['Quantum AI', 'Consciousness', 'Transcendence', '2025', 'Revolutionary'],
-    featured: true;
+    featured: true
     readTime: '20 min read'
     image: '/images/quantum-ai-transcendence-revolution-2025.jpg'
     newBadge: true;
@@ -70,7 +66,7 @@ export const,
     date: '2025-12-01',
     category: 'Superintelligence',
     tags: ['Superintelligence', 'Consciousness', 'Breakthrough', '2025', 'AI Evolution'],
-    featured: true;
+    featured: true
     readTime: '25 min read'
     image: '/images/artificial-superintelligence-breakthrough-2025.jpg'
     newBadge: true;

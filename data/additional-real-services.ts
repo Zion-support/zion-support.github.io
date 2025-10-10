@@ -1,9 +1,7 @@
-
-export interface AdditionalRealService {id: string;
+export interface AdditionalRealService {id: string
   name: string;
   tagline: string;
-  price: string;
-  description: string;
+  price: string description: string;
   features: string[];
   link: string;
   category: string;
@@ -12,18 +10,15 @@ export interface AdditionalRealService {id: string;
     mobile: string}
     email: string}
 }
-    address: string;
-  }
-export const additionalEnhancedServices: AdditionalRealService[] = [;
-    address: string;
-  }
-;
+    address: string}
+export const additionalEnhancedServices: AdditionalRealService[] = [
+    address: string}
 export const additionalEnhancedServices: AdditionalRealService[] = [
     id: 'ai - automation - suite',
     name: 'AI Automation Suite',
     tagline: 'Intelligent automation for modern businesses',
     price: '$79 / month',
-    description: unknown;
+    description: unknown
 export interface AdditionalRealService {/* TODO: Fix JSX expression */}
   e: string}
     emai,
@@ -32,10 +27,9 @@ export interface AdditionalRealService {/* TODO: Fix JSX expression */}
     addres,
   s: string}
 export const,
-  additionalEnhancedServices: AdditionalRealService[] = [;
+  additionalEnhancedServices: AdditionalRealService[] = [
     addres,
   s: string}
-;
 export const,
   additionalEnhancedServices: AdditionalRealService[] = [,
     i,
@@ -58,14 +52,13 @@ export const,
       'Analytics dashboard'],
     link: '/services / ai - automation - suite'
     category: 'AI & Automation'
-    real_implementation: true;
+    real_implementation: true
     contact_info: unknown;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'}},
   id: string, name: string;
-  tagline: string, price: string;
-  description: string, features: string[],
+  tagline: string, price: string description: string, features: string[],
   link: string, category: string;
   realImplementation: boolean;
   contactInfo: unknown;
@@ -74,8 +67,7 @@ export const,
   id: string;
   name: string;
   tagline: string;
-  price: string;
-  description: string;
+  price: string description: string;
   features: string[];
   link: string;
   category: string;
@@ -83,9 +75,7 @@ export const,
   contactInfo: unknown;
     mobile: string;
     email: string;
-    address: string;
-  };
-}
+    address: string}}
 }
     address: string;
     lin,
@@ -148,13 +138,12 @@ export const,
     emai,
   l: string;
     addres,
-  s: string};
-}
+  s: string}}
 }
     addres,
   s: string}
 export const,
-  additionalEnhancedServices: AdditionalRealService[] = [;
+  additionalEnhancedServices: AdditionalRealService[] = [
     i,
   d: 'ai-automation-suite'
     nam,
@@ -166,7 +155,7 @@ export const,
     descriptio,
   n: 'Comprehensive AI-powered automation platform that streamlines business processes and increases efficiency.'
     feature,
-  s: [;
+  s: [
       'Workflow automation'
       'AI decision making'
       'Integration APIs'
@@ -175,7 +164,7 @@ export const,
     ]
     link: '/services/ai-automation-suite'
     category: 'AI & Automation'
-    realImplementation: true;
+    realImplementation: true
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -205,7 +194,7 @@ export const,
     descriptio,
   n: 'Scalable data warehouse solution with advanced analytics and business intelligence capabilities.'
     feature,
-  s: [;
+  s: [
       'Data integration'
       'Real-time processing'
       'Advanced analytics'
@@ -390,9 +379,7 @@ export const,
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-];
-;
-];
+]];
     id: "ai-automation-suite"
     name: "AI Automation Suite",
     tagline: "Intelligent automation for modern businesses",
@@ -465,8 +452,7 @@ export const,
       'Embeddable widgets',
       'Export CSV/Sheets'
     ],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from-emerald-600 to-teal-700'
     textColor: 'text-emerald-300',
     link: 'https://ziontechgroup.com/services/mobile-first-survey',
@@ -563,8 +549,7 @@ export const,
       'Speaker and agenda planner',
       'Post-event feedback analytics'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-cyan-600 to-blue-700'
     textColor: 'text-cyan-300',
     link: 'https://ziontechgroup.com/services/event-management-dashboard',
@@ -588,8 +573,7 @@ export const,
     launchDate: '2025-04-10'
     customers: 35;
     rating: 4.6;
-    reviews: 24;
-  },
+    reviews: 24},
     id: 'churn-risk-alerts'
     name: 'Churn Risk Alerts for Slack'
     tagline: 'Behavior + sentiment = proactive retention pings',
@@ -669,8 +653,7 @@ export const,
       'Playbooks and tasks',
       'Owner assignment'
     ],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from-amber-600 to-orange-700'
     textColor: 'text-amber-300',
     link: 'https://ziontechgroup.com/services/churn-risk-alerts',
@@ -767,8 +750,7 @@ export const,
       'CSV/Stripe imports',
       'Board-ready reports'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-fuchsia-600 to-pink-700',
     textColor: 'text-fuchsia-300',
     link: 'https://ziontechgroup.com/services/subscription-revenue-analytics',
@@ -865,8 +847,7 @@ export const,
       'Exceptions and approvals',
       'Audit-ready exports'
     ],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from-indigo-600 to-blue-700'
     textColor: 'text-indigo-300',
     link: 'https://ziontechgroup.com/services/iso-27001-evidence-kit',
@@ -963,8 +944,7 @@ export const,
       'Deprecation timelines',
       'Email/Slack/webhook alerts'
     ],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from-cyan-600 to-blue-700'
     textColor: 'text-cyan-300'
     link: 'https://ziontechgroup.com/services/api-changelog-notifier'
@@ -1061,8 +1041,7 @@ export const,
       'Step validation checklists',
       'On-call links and owners'
     ],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from-sky-600 to-blue-700',
     textColor: 'text-sky-300',
     link: 'https://ziontechgroup.com/services/runbook-generator',
@@ -1159,8 +1138,7 @@ export const,
       'Customer comms templates',
       'Postmortem export'
     ],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from-rose-600 to-pink-700'
     textColor: 'text-rose-300',
     link: 'https://ziontechgroup.com/services/incident-timeline-composer',
@@ -1257,8 +1235,7 @@ export const,
       'Headlines and copy suggestions',
       'Performance tips and tags'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-violet-600 to-purple-700'
     textColor: 'text-violet-300',
     link: 'https://ziontechgroup.com/services/ad-creative-generator',
@@ -1358,7 +1335,7 @@ export const,
     ],
     link: "/services/data-warehouse-solution"
     category: "Data & Analytics"
-    realImplementation: true;
+    realImplementation: true
     implementationDetails: 'SaaS analyzer with exporters for Terraform/Helm and alerting.'
     launchDate: '2025-01-15'
     customers: 90;
@@ -1399,8 +1376,7 @@ export const,
       'Connection pool tuning',
       'Capacity forecasting'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-purple-600 to-indigo-700'
     textColor: 'text-purple-300',
     link: 'https://ziontechgroup.com/database-performance-monitor',
@@ -1497,8 +1473,7 @@ export const,
       'Changelogs and versions',
       'Full-text search and themes'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-cyan-600 to-blue-700'
     textColor: 'text-cyan-300',
     link: 'https://ziontechgroup.com/api-documentation-generator',
@@ -1595,8 +1570,7 @@ export const,
       'Blocklist monitoring',
       'Domain reputation score'
     ],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from-indigo-600 to-blue-700',
     textColor: 'text-indigo-300',
     link: 'https://ziontechgroup.com/email-deliverability-monitor',
@@ -1693,8 +1667,7 @@ export const,
       'Data discovery connectors',
       'Audit logs and exports'
     ],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from-rose-600 to-fuchsia-700'
     textColor: 'text-rose-300',
     link: 'https://ziontechgroup.com/gdpr-dsar-automation',
@@ -1791,8 +1764,7 @@ export const,
       'OWASP API Top 10 checks',
       'CI pipeline integration'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-red-600 to-pink-700'
     textColor: 'text-red-300',
     link: 'https://ziontechgroup.com/api-security-scanner',
@@ -1891,8 +1863,7 @@ export const,
       'Exporters for popular backends',
       'Auto-ingest OpenAPI metadata'
     ],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from-indigo-600 to-blue-700'
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/api-observability-starter',
@@ -1916,8 +1887,7 @@ export const,
     launchDate: '2025-02-01'
     customers: 33;
     rating: 4.5;
-    reviews: 11;
-  },
+    reviews: 11},
     id: 'status-pages-slo'
     name: 'Status Pages & SLO'
     tagline: 'Beautiful status pages and SLO dashboards for your services',
@@ -1997,8 +1967,7 @@ export const,
       'Incident posts & timelines',
       'Subscriber notifications'
     ],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from-teal-600 to-emerald-700'
     textColor: 'text-teal-300',
     link: 'https://ziontechgroup.com/status-pages-slo',
@@ -2095,8 +2064,7 @@ export const,
       'Error budget policy',
       'Burn rate alerts'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-blue-600 to-indigo-700'
     textColor: 'text-blue-300',
     link: 'https://ziontechgroup.com/uptime-slo-monitor',
@@ -2193,8 +2161,7 @@ export const,
       'Replay & DLQ',
       'Traffic mirroring'
     ],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from-sky-600 to-cyan-700'
     textColor: 'text-sky-300',
     link: 'https://ziontechgroup.com/webhook-relay-replay',
@@ -2291,8 +2258,7 @@ export const,
       'SDKs and audit logs',
       'Kill switches'
     ],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from-fuchsia-600 to-pink-700'
     textColor: 'text-fuchsia-300',
     link: 'https://ziontechgroup.com/feature-flags-edge',
@@ -2389,8 +2355,7 @@ export const,
       'Branding & JIT',
       'User/role sync'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-emerald-600 to-green-700'
     textColor: 'text-emerald-300',
     link: 'https://ziontechgroup.com/sso-in-a-box',
@@ -2487,8 +2452,7 @@ export const,
       'SDKs and relevance tuning',
       'Observability and quotas'
     ],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
     link: 'https://ziontechgroup.com/vector-search-starter',
@@ -2585,8 +2549,7 @@ export const,
       'Anomaly alerts',
       'Dashboard and lineage hints'
     ],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from-amber-600 to-orange-700'
     textColor: 'text-amber-300',
     link: 'https://ziontechgroup.com/data-quality-monitor',
@@ -2683,8 +2646,7 @@ export const,
       'Predictive failure alerts',
       'Dashboards & reports'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-blue-700 to-indigo-700'
     textColor: 'text-blue-300',
     link: 'https://ziontechgroup.com/data-pipeline-observability',
@@ -2781,8 +2743,7 @@ export const,
       'Eval and red team runs',
       'Audit and exceptions'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-rose-600 to-red-700'
     textColor: 'text-rose-300',
     link: 'https://ziontechgroup.com/ai-guardrails',
@@ -2879,8 +2840,7 @@ export const,
       'Meeting prep copilot',
       'Pipeline analytics'
     ],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from-cyan-600 to-blue-700'
     textColor: 'text-cyan-300',
     link: 'https://ziontechgroup.com/ai-sales-automation',
@@ -2977,8 +2937,7 @@ export const,
       'Utility and drift reports',
       'REST API & SDKs (Python/JS)'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-indigo-600 to-purple-700',
     textColor: 'text-indigo-300',
     link: 'https://ziontechgroup.com/services/synthetic-data-generator',
@@ -3075,8 +3034,7 @@ export const,
       'Webhook delivery with retries & DLQ',
       'Inspector and secure replays'
     ],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from-cyan-600 to-blue-700'
     textColor: 'text-cyan-300',
     link: 'https://ziontechgroup.com/services/email-parsing-routing-api',
@@ -3173,8 +3131,7 @@ export const,
       'Binpacking recommendations',
       'Chargeback/showback reports'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-emerald-600 to-teal-700'
     textColor: 'text-emerald-300',
     link: 'https://ziontechgroup.com/services/kubernetes-cost-analyzer',
@@ -3271,8 +3228,7 @@ export const,
       'Audit logging & SIEM hooks',
       'Budgets & anomaly alerts'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-sky-600 to-blue-700'
     textColor: 'text-sky-300',
     link: 'https://ziontechgroup.com/cloud-landing-zone',
@@ -3369,8 +3325,7 @@ export const,
       'PR annotations & diffs',
       'Alerting & weekly reports'
     ],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from-rose-600 to-fuchsia-700'
     textColor: 'text-rose-300',
     link: 'https://ziontechgroup.com/services/security-headers-scanner',
@@ -3467,8 +3422,7 @@ export const,
       'Actionable suggestions',
       'Dashboards & trends'
     ],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from-amber-600 to-orange-700'
     textColor: 'text-amber-300'
     link: 'https://ziontechgroup.com/services/frontend-bundle-analyzer-ci'
@@ -3565,8 +3519,7 @@ export const,
       'Backfills & reprocess',
       'Lineage & monitoring'
     ],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from-blue-700 to-indigo-700'
     textColor: 'text-blue-300'
     link: 'https://ziontechgroup.com/services/s3-to-snowflake-ingestion'
@@ -3663,8 +3616,7 @@ export const,
       'Baselines & environments',
       'Alerting & history'
     ],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from-violet-600 to-purple-700'
     textColor: 'text-violet-300',
     link: 'https://ziontechgroup.com/services/visual-regression-monitor',
@@ -3688,8 +3640,7 @@ export const,
     launchDate: '2025-02-03'
     customers: 15;
     rating: 4.5;
-    reviews: 7;
-  },
+    reviews: 7},
     id: 'data-masking-proxy'
     name: 'Data Masking Proxy'
     tagline: 'PII/PHI tokenization for lower environments and analytics',
@@ -3769,8 +3720,7 @@ export const,
       'Schema-aware transforms',
       'Audit logs & approvals'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-green-600 to-emerald-700'
     textColor: 'text-green-300',
     link: 'https://ziontechgroup.com/services/data-masking-proxy',
@@ -3867,8 +3817,7 @@ export const,
       'Summaries & highlights',
       'CRM/PM sync'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-cyan-600 to-blue-700'
     textColor: 'text-cyan-300',
     link: 'https://ziontechgroup.com/services/ai-meeting-notes-agent',
@@ -3892,8 +3841,7 @@ export const,
     launchDate: '2025-02-04'
     customers: 28;
     rating: 4.6;
-    reviews: 13;
-  },
+    reviews: 13},
     id: 'compliance-policy-as-code'
     name: 'Compliance Policy as Code'
     tagline: 'OPA/Rego and cloud policies with CI gates and reports',
@@ -3973,8 +3921,7 @@ export const,
       'Evidence reports',
       'Drift detection'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-purple-600 to-indigo-700'
     textColor: 'text-purple-300',
     link: 'https://ziontechgroup.com/services/compliance-policy-as-code',
@@ -4073,8 +4020,7 @@ export const,
       'Storage destinations (S3/GCS/Azure)',
       'Usage analytics and quotas'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-purple-600 to-pink-700',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/services/pdf-render-api',
@@ -4173,14 +4119,13 @@ export const,
       'CSV/JSON export and webhooks',
       'Native integrations (Xero/QuickBooks)'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-cyan-600 to-blue-700'
     textColor: 'text-cyan-400',
     link: 'https://ziontechgroup.com/services/invoice-ocr-extraction-api',
     marketPosition: 'Accurate extraction without expensive enterprise contracts.',
     targetAudience: 'Accounting, fintech, back-office automation, marketplaces',
-    trialDays: 14;
+    trialDays: 14
     setupTime: '20 minutes',
     category: 'AI & Data',
     realService: true;
@@ -4273,8 +4218,7 @@ export const,
       'Alerting and dashboards',
       'PII redaction and tokenization'
     ],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from-emerald-600 to-teal-700'
     textColor: 'text-emerald-400',
     link: 'https://ziontechgroup.com/services/log-archive-search',
@@ -4372,14 +4316,13 @@ export const,
       'Retention rules with defensible deletion',
       'Evidence export for auditors'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-purple-600 to-fuchsia-700'
     textColor: 'text-fuchsia-400',
     link: 'https://ziontechgroup.com/gdpr-privacyops',
     marketPosition: 'Practical privacy orchestration that complements security tooling with verifiable evidence.',
     targetAudience: 'Legal, Security, Data Governance',
-    trialDays: 14;
+    trialDays: 14
     setupTime: '1 day',
     category: 'Compliance & Security',
     realService: true;
@@ -4471,8 +4414,7 @@ export const,
       'PR comments and SARIF outputs',
       'Risk heatmaps and trends'
     ],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from-cyan-600 to-blue-700'
     textColor: 'text-cyan-400',
     link: 'https://ziontechgroup.com/ai-code-review-copilot',
@@ -4569,8 +4511,7 @@ export const,
       'Auto-remediation playbooks',
       'Executive reporting'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-emerald-600 to-teal-700'
     textColor: 'text-emerald-400',
     link: 'https://ziontechgroup.com/m365-security-hardening',
@@ -4667,8 +4608,7 @@ export const,
       'RAG source attribution validation',
       'Compliance and brand guardrails'
     ],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from-indigo-600 to-violet-700',
     textColor: 'text-indigo-300',
     link: 'https://ziontechgroup.com/ai-customer-qa-benchmark',
@@ -4692,8 +4632,7 @@ export const,
     launchDate: '2025-01-30'
     customers: 22;
     rating: 4.3;
-    reviews: 13;
-  },
+    reviews: 13},
     id: 'quantum-ai-fusion-platform'
     name: 'Quantum AI Fusion Platform'
     tagline: 'Quantum computing meets AI for breakthrough insights',
@@ -4774,8 +4713,7 @@ export const,
       'Real-time analytics',
       'API integration'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-indigo-600 to-purple-700'
     textColor: 'text-indigo-300',
     link: 'https://ziontechgroup.com/services/quantum-ai-fusion-platform',
@@ -4873,8 +4811,7 @@ export const,
       'Threat intelligence',
       'Compliance reporting'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-red-600 to-orange-700'
     textColor: 'text-red-300',
     link: 'https://ziontechgroup.com/services/ai-cybersecurity-sentinel',
@@ -4972,8 +4909,7 @@ export const,
       'Cost management',
       'Multi-cloud orchestration'
     ],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from-green-600 to-teal-700'
     textColor: 'text-green-300',
     link: 'https://ziontechgroup.com/services/autonomous-devops-orchestrator',
@@ -5071,8 +5007,7 @@ export const,
       'Scalability solutions',
       'Integration APIs'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-blue-600 to-indigo-700'
     textColor: 'text-blue-300',
     link: 'https://ziontechgroup.com/services/blockchain-enterprise-platform',
@@ -5170,8 +5105,7 @@ export const,
       'Multi-language support',
       'Brand voice consistency'
     ],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from-purple-600 to-pink-700'
     textColor: 'text-purple-300',
     link: 'https://ziontechgroup.com/services/ai-content-intelligence-suite',
@@ -5269,8 +5203,7 @@ export const,
       'Automation workflows',
       'Security & compliance'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-teal-600 to-green-700'
     textColor: 'text-teal-300',
     link: 'https://ziontechgroup.com/services/iot-enterprise-platform',
@@ -5368,8 +5301,7 @@ export const,
       'Success playbooks',
       'Analytics dashboard'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-emerald-600 to-teal-700'
     textColor: 'text-emerald-300',
     link: 'https://ziontechgroup.com/services/ai-customer-success-platform',
@@ -5393,8 +5325,7 @@ export const,
     launchDate: '2025-02-20'
     customers: 52;
     rating: 4.7;
-    reviews: 38;
-  },
+    reviews: 38},
     id: 'quantum-cryptography-suite'
     name: 'Quantum Cryptography Suite'
     tagline: 'Future-proof cryptography for quantum era',
@@ -5475,8 +5406,7 @@ export const,
       'Performance optimization',
       'Compliance standards'
     ],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from-indigo-600 to-blue-700'
     textColor: 'text-indigo-300',
     link: 'https://ziontechgroup.com/services/quantum-cryptography-suite',
@@ -5574,8 +5504,7 @@ export const,
       'Risk assessment',
       'Real-time analytics'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-orange-600 to-red-700'
     textColor: 'text-orange-300',
     link: 'https://ziontechgroup.com/services/ai-supply-chain-optimizer',
@@ -5673,8 +5602,7 @@ export const,
       'Goal-based planning',
       'Real-time monitoring'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-green-600 to-emerald-700'
     textColor: 'text-green-300',
     link: 'https://ziontechgroup.com/services/autonomous-financial-advisor',
@@ -5772,8 +5700,7 @@ export const,
       'Self-awareness algorithms',
       'Ethical decision making'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-violet-600 to-purple-700'
     textColor: 'text-violet-300',
     link: 'https://ziontechgroup.com/services/ai-consciousness-evolution-platform',
@@ -5871,8 +5798,7 @@ export const,
       'Quantum communications',
       'Mission planning'
     ],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from-indigo-600 to-blue-700'
     textColor: 'text-indigo-300',
     link: 'https://ziontechgroup.com/services/quantum-space-technology-suite',
@@ -5970,8 +5896,7 @@ export const,
       'Supply chain automation',
       'Real-time analytics'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-orange-600 to-red-700'
     textColor: 'text-orange-300',
     link: 'https://ziontechgroup.com/services/autonomous-manufacturing-ai',
@@ -6069,8 +5994,7 @@ export const,
       'Clinical trial optimization',
       'Personalized medicine'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-green-600 to-emerald-700'
     textColor: 'text-green-300',
     link: 'https://ziontechgroup.com/services/biotech-ai-research-platform',
@@ -6168,8 +6092,7 @@ export const,
       'Virtual meetings',
       'Integration APIs'
     ],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from-purple-600 to-pink-700'
     textColor: 'text-purple-300',
     link: 'https://ziontechgroup.com/services/metaverse-enterprise-platform',
@@ -6267,8 +6190,7 @@ export const,
       'Market prediction',
       'High-frequency trading'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-emerald-600 to-green-700'
     textColor: 'text-emerald-300',
     link: 'https://ziontechgroup.com/services/quantum-financial-trading-platform',
@@ -6366,8 +6288,7 @@ export const,
       'Predictive maintenance',
       'Real-time tracking'
     ],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from-blue-600 to-cyan-700'
     textColor: 'text-blue-300',
     link: 'https://ziontechgroup.com/services/ai-autonomous-vehicle-platform',
@@ -6391,8 +6312,7 @@ export const,
     launchDate: '2025-07-30'
     customers: 22;
     rating: 4.6;
-    reviews: 16;
-  },
+    reviews: 16},
     id: 'quantum-cybersecurity-suite'
     name: 'Quantum Cybersecurity Suite'
     tagline: 'Quantum-resistant cybersecurity for the post-quantum era',
@@ -6473,8 +6393,7 @@ export const,
       'Compliance frameworks',
       'Migration tools'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-red-600 to-pink-700'
     textColor: 'text-red-300',
     link: 'https://ziontechgroup.com/services/quantum-cybersecurity-suite',
@@ -6572,8 +6491,7 @@ export const,
       'Privacy controls',
       'Audit reporting'
     ],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from-blue-600 to-indigo-700'
     textColor: 'text-blue-300',
     link: 'https://ziontechgroup.com/services/enterprise-data-governance-platform',
@@ -6671,8 +6589,7 @@ export const,
       'Diversity metrics',
       'Recruitment optimization'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-purple-600 to-pink-700'
     textColor: 'text-purple-300',
     link: 'https://ziontechgroup.com/services/ai-powered-hr-analytics-suite',
@@ -6770,8 +6687,7 @@ export const,
       'Security compliance',
       'Multi-cloud support'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-cyan-600 to-blue-700'
     textColor: 'text-cyan-300',
     link: 'https://ziontechgroup.com/services/cloud-migration-automation-platform',
@@ -6869,8 +6785,7 @@ export const,
       'Process optimization',
       'Implementation support'
     ],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from-orange-600 to-red-700'
     textColor: 'text-orange-300',
     link: 'https://ziontechgroup.com/services/digital-transformation-consulting',
@@ -6968,8 +6883,7 @@ export const,
       'Transparency tools',
       'Audit frameworks'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-green-600 to-emerald-700'
     textColor: 'text-green-300',
     link: 'https://ziontechgroup.com/services/ai-ethics-compliance-framework',
@@ -7067,8 +6981,7 @@ export const,
       'Resource allocation',
       'Performance monitoring'
     ],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from-teal-600 to-green-700'
     textColor: 'text-teal-300',
     link: 'https://ziontechgroup.com/services/edge-computing-optimization-platform',
@@ -7166,8 +7079,7 @@ export const,
       'Threat detection',
       'Compliance reporting'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-red-600 to-orange-700'
     textColor: 'text-red-300',
     link: 'https://ziontechgroup.com/services/zero-trust-security-implementation',
@@ -7265,8 +7177,7 @@ export const,
       'Omnichannel support',
       'Experience optimization'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-pink-600 to-purple-700'
     textColor: 'text-pink-300',
     link: 'https://ziontechgroup.com/services/ai-powered-customer-experience-platform',
@@ -7363,8 +7274,7 @@ export const,
       'Calendar booking and routing',
       'Compliance and opt-out handling'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-indigo-600 to-blue-700'
     textColor: 'text-indigo-300',
     link: 'https://ziontechgroup.com/services/ai-sales-agent-suite',
@@ -7387,8 +7297,7 @@ export const,
       email: "kleber@ziontechgroup.com"
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'}};
-];      mobile: "+1 302 464 0950",
+      address: '364 E Main St STE 1008 Middletown DE 19709'}}];      mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -7443,8 +7352,7 @@ export const,
       emai,
   l: 'kleber@ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}};
-];      mobil,"
+  s: '364 E Main St STE 1008 Middletown DE 19709'}}];      mobil,"
   e: "+1 302 464 0950",
   emai,"
   l: "kleber@ziontechgroup.com"
@@ -7458,7 +7366,7 @@ export const,
   }
 ];
 export interface AdditionalRealService,
-  id: string; nam,
+  id: string nam,
   e: string; taglin,
   e: string, pric,
   e: string, descriptio,
@@ -7472,7 +7380,7 @@ export interface AdditionalRealService,
   l: string} addres,
   s: string} export const,
   additionalEnhancedServices: AdditionalRealService[] = [ addres,
-  s: string} ; export const,
+  s: string}  export const,
   additionalEnhancedServices: AdditionalRealService[] = [, i,
   d: 'ai - automation - suite',' nam,
   e: 'AI Automation Suite',' taglin,
@@ -7500,7 +7408,7 @@ export interface AdditionalRealService,
   e: string, emai,
   l: string, addres,
   s: string,
-  id: string; nam,
+  id: string nam,
   e: string; taglin,
   e: string, pric,
   e: string, descriptio,
@@ -7512,7 +7420,7 @@ export interface AdditionalRealService,
   o: mobil,
   e: string; emai,
   l: string; addres,
-  s: string}; } } addres,
+  s: string}} } addres,
   s: string} export const,
   additionalEnhancedServices: AdditionalRealService[] = [ ' i,
   d: 'ai-automation-suite'' nam,
@@ -7540,7 +7448,7 @@ export interface AdditionalRealService,
   contactInfo: ' mobil,
   e: '+1 302 464 0950'' emai,
   l: 'kleber@ziontechgroup.com'' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709' } } ]; mobil,"
+  s: '364 E Main St STE 1008 Middletown DE 19709' } } ] mobil,"
   e: "+1 302 464 0950",
   emai,"
   l: "kleber@ziontechgroup.com"' i,
@@ -7585,7 +7493,7 @@ export interface AdditionalRealService,
   s: "364 E Main St STE 1008 Middletown DE 19709",
   emai,"
   l: "kleber@ziontechgroup.com" addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; ]; i,"
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]]; i,"
   d: "ai-automation-suite", nam,"
   e: "AI Automation Suite", taglin,"
   e: "Intelligent automation for modern businesses", pric,"
@@ -9992,7 +9900,7 @@ export interface AdditionalRealService,
   l: "kleber@ziontechgroup.com",' mobil,
   e: '+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup.com',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}}; ]; mobil,"
+  s: '364 E Main St STE 1008 Middletown DE 19709'}}] mobil,"
   e: "+1 302 464 0950",
   emai,"
   l: "kleber@ziontechgroup.com" mobil,"

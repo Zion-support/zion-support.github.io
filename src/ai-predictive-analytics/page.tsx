@@ -91,9 +91,8 @@ const AIPredictiveAnalyticsPage: React.FC = () => {
       </main>
       <Footer />
     </div>
-  );
-};
-export default AIPredictiveAnalyticsPage;
+  )};
+export default AIPredictiveAnalyticsPage
   </h2>
   </a>
   </a>

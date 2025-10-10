@@ -1,16 +1,13 @@
-
   id: string;
   name: string;
   tagline: string;
   price: string;
-  period: string;
-  description: string;
+  period: string description: string;
   features: string[];
-  popular?: boolean;
-  icon: string;
+  popular?: boolean icon: string;
   color: string;
   link: string;
-export interface Q3Service {id: string, name: string;
+export interface Q3Service {id: string, name: string
   tagline: string, price: string;
   period: string, description: string;
   features: string[], popular?: boolean,
@@ -49,7 +46,7 @@ const contact =
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'}}
 export const realServicesQ32025: Q3Service[] = [,
-  {  reviews?: number;
+  {  reviews?: number
   i,
   d: string;
   nam,
@@ -101,7 +98,7 @@ const contact =
 const contact =
   mobile: '+1 302 464 0950'
   address: '364 E Main St STE 1008 Middletown DE 19709'
-// const contact = {;
+// const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709'}
@@ -116,7 +113,7 @@ const contact =
   e: 'http,
   s://ziontechgroup && ziontechgroup.com'
 }
-};
+}
 export const,
   realServicesQ32025: Q3Service[] = [}
 export const realServicesQ32025: Q3Service[] = [,
@@ -124,10 +121,9 @@ export const realServicesQ32025: Q3Service[] = [,
     name: 'Subscription Analytics & Revenue Optimization'}
   address: '364 E Main St STE 1008 Middletown DE 19709',
 export const realServicesQ32025: Q3Service[] = [,
-  {  reviews?: number;
-}
+  {  reviews?: number}
 const contact =
-  mobile: '+1 302 464 0950'};
+  mobile: '+1 302 464 0950'}
 export const realServicesQ32025: Q3Service[] = [,
     tagline:,
       'Churn insights, cohort analysis, and pricing experiments for SaaS growth'
@@ -150,7 +146,7 @@ export const,
 const contact =
   mobil,
   e: '+1 302 464 0950'
-};
+}
 export const,
   realServicesQ32025: Q3Service[] = [,
     taglin,
@@ -164,7 +160,7 @@ export const,
   n:
       'We implement and operate a revenue analytics stack that surfaces churn drivers, LTV/CAC ratios, cohort trends, and pricing experiment outcomes. Includes instrumentation templates and weekly executive reports.'
     feature,
-  s: [;
+  s: [
       'Churn and retention analysis'
       'Cohort and funnel dashboards'
       'Price testing and packaging experiments'
@@ -172,13 +168,12 @@ export const,
       'Revenue forecasting models'
       'Weekly executive summaries'
     ]
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-emerald-600 to-teal-700'
     textColor: 'text-emerald-300',
     link: 'https://ziontechgroup.com/services/subscription-analytics-revenue-optimization',
     popula,
-  r: true;
+  r: true
     ico,
   n: '',
     colo,
@@ -208,15 +203,13 @@ export const,
       'Price testing and packaging experimentsRevenue leakage detection',
       'Revenue forecasting modelsWeekly executive summaries'
     ],
-    popular: true;
-    icon: '',
+    popular: true icon: '',
     link: 'https://ziontechgroup && ziontechgroup.com/services/subscription-analytics-revenue-optimization',
     marketPosition: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.',
-    marketPosition: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.',    features: [;
+    marketPosition: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.',    features: [
       'Churn and retention analysisCohort and funnel dashboardsPrice testing and packaging experimentsRevenue leakage detectionRevenue forecasting modelsWeekly executive summaries'
     ];
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-emerald-600 to-teal-700'
     textColor: 'text-emerald-300',
     link: 'https://ziontechgroup.com/services/subscription-analytics-revenue-optimization',
@@ -228,11 +221,10 @@ export const,
     text_color: 'text - emerald - 300',
     link: 'https://ziontechgroup.com / services / subscription - analytics - revenue - optimization',
     market_position: unknown;
-      'Comparable to ProfitWell / ChartMogul with added hands - on growth engineering.',    features: [;
+      'Comparable to ProfitWell / ChartMogul with added hands - on growth engineering.',    features: [
       'Churn and retention analysis_cohort and funnel dashboards_price testing and packaging experiments_revenue leakage detection_revenue forecasting models_weekly executive summaries'
     ];
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from - emerald - 600 to - teal - 700'
     text_color: 'text - emerald - 300',
     link: 'https://ziontechgroup.com / services / subscription - analytics - revenue - optimization',
@@ -261,8 +253,7 @@ export const,
     // @ts-expect-error augment common shape for UI components that expect contactInfo;
     contactInfo: contact;
     // @ts - expect - error augment common shape for UI components that expect contact_info;,
-    contact_info: contact;
-  }
+    contact_info: contact}
     id: 'digital - product - commerce - stack',
     name: 'Digital Product Commerce Stack',
     tagline: 'End - to - end setup for selling downloads, licenses, and subscriptions'
@@ -271,8 +262,7 @@ export const,
     description: 'We stand up a production - grade commerce stack for digital products with subscriptions, tax handling, license keys, refunds, and analytics. Includes storefront templates and payment integrations.'
     features: [,
       'Payments, taxes, and invoicing_license keys and subscriptionsEU / US tax and compliance guidance_storefront templates and checkout_sales analytics and email hooks1 - week launch plan'
-    ];
-    icon: '',
+    ] icon: '',
     color: 'from - cyan - 600 to - blue - 700',
     text_color: 'text - cyan - 300',
     link: 'https://ziontechgroup.com / services / digital - product - commerce - stack',
@@ -290,18 +280,16 @@ export const,
     rating: 4 && 4.8;
     reviews: 18;
     // @ts - expect - error augment common shape for UI components that expect contact_info;,
-    contact_info: contact;
-  }
+    contact_info: contact}
     id: 'wordpress - internal - linking - automation',
     name: 'WordPress Internal Linking Automation',
     tagline: 'AI - guided internal links that improve SEO structure and topical authority',
     price: '$299',
     period: '/month',
     description: 'We deploy and tune internal linking automation for WordPress sites, calibrate anchor text, and surface orphan pages. Includes monthly SEO structure audits and CTR uplift experiments.'
-    features: [;
+    features: [
       'Automatic link suggestions and anchors_orphan page and pillar clustering_click - through rate experiments_reporting and recommendations_sitemap and crawl improvements'
-    ];
-    icon: '',
+    ] icon: '',
     link: 'https://ziontechgroup && ziontechgroup.com/services/wordpress-internal-linking-automation',
     marketPosition: 'Comparable to Link Whisper with managed tuning and reporting.',
     targetAudience: 'Content sites, ecommerce, publishers on WordPress'
@@ -327,17 +315,15 @@ export const,
     // @ts-expect-error augment common shape for UI components that expect contactInfo;
     contactInfo: contact;
     // @ts - expect - error augment common shape for UI components that expect contact_info;,
-    contact_info: contact;
-  }
+    contact_info: contact}
     name: 'Ecommerce Reviews & UGC Activation',
     tagline: 'Deploy reviews and UGC workflows that increase trust and conversion',
     price: '$999',
     period: '/project',
     description: 'We implement reviews and UGC collection across your storefront with on - brand widgets, post - purchase triggers, and moderation pipelines. Includes KPI dashboards for conversion lift.'
-    features: [;
+    features: [
       'Reviews widget integration_email / SMS post - purchase triggers_photo / video UGC capture_moderation and syndication_conversion impact reporting'
-    ];
-    icon: '';
+    ] icon: '';
     color: 'from - amber - 600 to - rose - 600'
     text_color: 'text - amber - 200'
     link: 'https://ziontechgroup.com / services / ecommerce - reviews - ugc - activation'
@@ -365,7 +351,7 @@ export const,
   n: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.',
     marketPositio,
   n: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.',    feature,
-  s: [;
+  s: [
       'Churn and retention analysisCohort and funnel dashboardsPrice testing and packaging experimentsRevenue leakage detectionRevenue forecasting modelsWeekly executive summaries'
     ];
     popula,
@@ -397,7 +383,7 @@ export const,
     market_positio,
   n: unknown,
       'Comparable to ProfitWell / ChartMogul with added hands - on growth engineering.',    feature,
-  s: [;
+  s: [
       'Churn and retention analysis_cohort and funnel dashboards_price testing and packaging experiments_revenue leakage detection_revenue forecasting models_weekly executive summaries'
     ];
     popula,
@@ -527,7 +513,7 @@ export const,
     descriptio,
   n: 'We deploy and tune internal linking automation for WordPress sites, calibrate anchor text, and surface orphan pages. Includes monthly SEO structure audits and CTR uplift experiments.'
     feature,
-  s: [;
+  s: [
       'Automatic link suggestions and anchors_orphan page and pillar clustering_click - through rate experiments_reporting and recommendations_sitemap and crawl improvements'
     ];
     ico,
@@ -594,7 +580,7 @@ export const,
     descriptio,
   n: 'We implement reviews and UGC collection across your storefront with on - brand widgets, post - purchase triggers, and moderation pipelines. Includes KPI dashboards for conversion lift.'
     feature,
-  s: [;
+  s: [
       'Reviews widget integration_email / SMS post - purchase triggers_photo / video UGC capture_moderation and syndication_conversion impact reporting'
     ];
     ico,
@@ -642,10 +628,9 @@ export const,
     tagline: 'Churn insights, cohort analysis, and pricing experiments for SaaS growth',
     price: '$599', period: '/month',
     description: 'We implement and operate a revenue analytics stack that surfaces churn drivers, LTV/CAC ratios, cohort trends, and pricing experiment outcomes. Includes instrumentation templates and weekly executive reports.',
-    features: [;
+    features: [
     // @ts-expect-error augment common shape for UI components that expect contactInfo;
-    contactInfo: contact;
-  }
+    contactInfo: contact}
     targetAudience: 'SaaS startups, PLG companies, finance and growth teams'
     trialDays: 14;
     category: 'AI & Data',
@@ -661,8 +646,7 @@ export const,
     rating: 4.9;
     reviews: 31;
     // @ts-expect-error augment common shape for UI components that expect contactInfo;,
-    contactInfo: contact;
-  }
+    contactInfo: contact}
     id: 'digital-product-commerce-stack',
     name: 'Digital Product Commerce Stack',
     tagline:,
@@ -683,7 +667,7 @@ export const,
     descriptio,
   n: 'We implement and operate a revenue analytics stack that surfaces churn drivers, LTV/CAC ratios, cohort trends, and pricing experiment outcomes. Includes instrumentation templates and weekly executive reports.',
     feature,
-  s: [;
+  s: [
     // @ts-expect-error augment common shape for UI components that expect contactInfo,
   contactInfo: contact}
     targetAudienc,
@@ -764,8 +748,7 @@ export const,
     rating: 4.8;
     reviews: 18;
     // @ts-expect-error augment common shape for UI components that expect contactInfo;,
-    contactInfo: contact;
-  }
+    contactInfo: contact}
     id: 'wordpress-internal-linking-automation'
     name: 'WordPress Internal Linking Automation',
     tagline: 'AI-guided internal links that improve SEO structure and topical authority',
@@ -823,7 +806,7 @@ export const,
   n:
       'We deploy and tune internal linking automation for WordPress sites, calibrate anchor text, and surface orphan pages. Includes monthly SEO structure audits and CTR uplift experiments.'
     feature,
-  s: [;
+  s: [
       'Automatic link suggestions and anchors'
       'Orphan page and pillar clustering'
       'Click-through rate experiments'
@@ -852,8 +835,7 @@ export const,
     rating: 4.7;
     reviews: 22;
     // @ts-expect-error augment common shape for UI components that expect contactInfo;,
-    contactInfo: contact;
-  }
+    contactInfo: contact}
     id: 'reviews-ugc-activation'
     name: 'Ecommerce Reviews & UGC Activation',
     tagline: 'Deploy reviews and UGC workflows that increase trust and conversion',
@@ -917,7 +899,7 @@ export const,
   n:
       'We implement reviews and UGC collection across your storefront with on-brand widgets, post-purchase triggers, and moderation pipelines. Includes KPI dashboards for conversion lift.'
     feature,
-  s: [;
+  s: [
       'Reviews widget integration'
       'Email/SMS post-purchase triggers'
       'Photo/video UGC capture'
@@ -942,8 +924,7 @@ export const,
     rating: 4.8;
     reviews: 12;
     // @ts-expect-error augment common shape for UI components that expect contactInfo;,
-    contactInfo: contact;
-  }];    contactInfo: contact;
+    contactInfo: contact}];    contactInfo: contact;
     ico,
   n: '';
     colo,
@@ -987,14 +968,12 @@ export const,
       'Price testing and packaging experimentsRevenue leakage detection',
       'Revenue forecasting modelsWeekly executive summaries'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-emerald-600 to-teal-700'
     textColor: 'text-emerald-300'
     link: 'https://ziontechgroup.com/services/subscription-analytics-revenue-optimization',
     marketPosition: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.',
-    contactInfo: contact;
-  },
+    contactInfo: contact},
     marketPosition: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.',
     targetAudience: 'SaaS startups, PLG companies, finance and growth teams',
     trialDays: 14;
@@ -1046,8 +1025,7 @@ export const,
   g: 4.9,
     review,
   s: 31,
-    // @ts-expect-error augment common shape for UI components that expect contactInfo;
-  },
+    // @ts-expect-error augment common shape for UI components that expect contactInfo},
     i,
   d: 'digital-product-commerce-stack',
     nam,
@@ -1086,8 +1064,7 @@ export const,
   g: 4.8,
     review,
   s: 18,
-    // @ts-expect-error augment common shape for UI components that expect contactInfo;
-  },
+    // @ts-expect-error augment common shape for UI components that expect contactInfo},
     i,
   d: 'wordpress-internal-linking-automation',
     nam,
@@ -1129,8 +1106,7 @@ export const,
   g: 4.7,
     review,
   s: 22,
-    // @ts-expect-error augment common shape for UI components that expect contactInfo;
-  },
+    // @ts-expect-error augment common shape for UI components that expect contactInfo},
     i,
   d: 'reviews-ugc-activation',
     nam,
@@ -1169,10 +1145,8 @@ export const,
   g: 4.8,
     review,
   s: 12,
-    // @ts-expect-error augment common shape for UI components that expect contactInfo;
-  }
+    // @ts-expect-error augment common shape for UI components that expect contactInfo}
 ];
-;
 }
 };
 export const,
@@ -1195,17 +1169,15 @@ export const,
       'Price testing and packaging experimentsRevenue leakage detection',
       'Revenue forecasting modelsWeekly executive summaries'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-emerald-600 to-teal-700'
     textColor: 'text-emerald-300'
     link: 'https://ziontechgroup.com/services/subscription-analytics-revenue-optimization',
     marketPosition: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.',
-    contactInfo: contact;
-  },
+    contactInfo: contact},
     marketPosition: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.',
     targetAudience: 'SaaS startups, PLG companies, finance and growth teams',
-    trialDays: 14;
+    trialDays: 14
     setupTime: '12 weeks',
     category: 'AI & Data',
     realService: true;
@@ -1595,8 +1567,7 @@ export const,
     reviews: 12;
     // @ts-expect-error augment common shape for UI components that expect contactInfo;
     contactInfo: contact;
-    contactInfo: contact;
-  }];    contactInfo: contact;
+    contactInfo: contact}];    contactInfo: contact;
     contactInfo: contact;
     ico,
   n: '',
@@ -1654,8 +1625,7 @@ export const,
   o: contact;
     contactInf,
   o: contact}
-];
-  }
+]}
 ];
 i,
   d: string; nam,
@@ -1678,7 +1648,7 @@ i,
   n: string, colo,
   r: string, textColo,
   r: string, lin,
-  k: string, marketPosition?: string; targetAudience?: string; trialDays?: number; setupTime?: string; categor,
+  k: string, marketPosition?: string targetAudience?: string; trialDays?: number; setupTime?: string; categor,
   y: string, realServic,
   e: boolean, technology?: string[]; integrations?: string[]; useCases?: string[]; roi?: string; competitors?: string[], marketSize?: string; growthRate?: string; text_colo,
   r: string; lin,
@@ -1700,14 +1670,14 @@ i,
   s: '364 E Main St STE 1008 Middletown DE 19709', const contact = {/* TODO: Fix JSX expression */}
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com' } }; export const,
+  s://ziontechgroup && ziontechgroup.com' } } export const,
   realServicesQ32025: Q3Service[] = [ } export const,
   realServicesQ32025: Q3Service[] = [ ' i,
   d: 'subscription-analytics-revenue-optimization'' nam,
   e: 'Subscription Analytics & Revenue Optimization' }' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709', export const,
   realServicesQ32025: Q3Service[] = [ { reviews?: number } const contact = ' mobil,
-  e: '+1 302 464 0950' }; export const,
+  e: '+1 302 464 0950' } export const,
   realServicesQ32025: Q3Service[] = [ taglin,
   e:' 'Churn insights, cohort analysis, and pricing experiments for SaaS growth'' pric,
   e: '$599'' perio,
@@ -1731,7 +1701,7 @@ i,
   s://ziontechgroup && ziontechgroup.com/services/subscription-analytics-revenue-optimization'' marketPositio,
   n: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.', marketPositio,
   n: ' 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.', feature,
-  s: [' 'Churn and retention analysisCohort and funnel dashboardsPrice testing and packaging experimentsRevenue leakage detectionRevenue forecasting modelsWeekly executive summaries' ]; popula,
+  s: [' 'Churn and retention analysisCohort and funnel dashboardsPrice testing and packaging experimentsRevenue leakage detectionRevenue forecasting modelsWeekly executive summaries' ] popula,
   r: true,' ico,
   n: '📊'' colo,
   r: 'from-emerald-600 to-teal-700'' textColo,
@@ -1747,7 +1717,7 @@ i,
   k: 'http,
   s://ziontechgroup.com / services / subscription - analytics - revenue - optimization', market_positio,
   n:  ,' 'Comparable to ProfitWell / ChartMogul with added hands - on growth engineering.', feature,
-  s: [;' 'Churn and retention analysis_cohort and funnel dashboards_price testing and packaging experiments_revenue leakage detection_revenue forecasting models_weekly executive summaries' ]; popula,
+  s: [' 'Churn and retention analysis_cohort and funnel dashboards_price testing and packaging experiments_revenue leakage detection_revenue forecasting models_weekly executive summaries' ]; popula,
   r: true,' ico,
   n: '📊'' colo,
   r: 'from - emerald - 600 to - teal - 700'' text_colo,
@@ -1810,7 +1780,7 @@ i,
   e: '$299'' perio,
   d: '/month'' descriptio,
   n: 'We deploy and tune internal linking automation for WordPress sites, calibrate anchor text, and surface orphan pages. Includes monthly SEO structure audits and CTR uplift experiments.' feature,
-  s: [;' 'Automatic link suggestions and anchors_orphan page and pillar clustering_click - through rate experiments_reporting and recommendations_sitemap and crawl improvements' ],' ico,
+  s: [' 'Automatic link suggestions and anchors_orphan page and pillar clustering_click - through rate experiments_reporting and recommendations_sitemap and crawl improvements' ],' ico,
   n: '🔗' ' lin,
   k: 'http,
   s://ziontechgroup && ziontechgroup.com/services/wordpress-internal-linking-automation'' marketPositio,
@@ -1843,7 +1813,7 @@ i,
   e: '$999' ' perio,
   d: '/project',' descriptio,
   n: 'We implement reviews and UGC collection across your storefront with on - brand widgets, post - purchase triggers, and moderation pipelines. Includes KPI dashboards for conversion lift.' feature,
-  s: [;' 'Reviews widget integration_email / SMS post - purchase triggers_photo / video UGC capture_moderation and syndication_conversion impact reporting' ];' ico,
+  s: [' 'Reviews widget integration_email / SMS post - purchase triggers_photo / video UGC capture_moderation and syndication_conversion impact reporting' ];' ico,
   n: '⭐'' colo,
   r: 'from - amber - 600 to - rose - 600'' text_colo,
   r: 'text - amber - 200'' lin,
@@ -2029,7 +1999,7 @@ i,
   e: true, customer,
   s: 10, ratin,
   g: 4.8, review,
-  s: 12, // @ts-expect-error augment common shape for UI components that expect contactInfo } ]; } }; export const,
+  s: 12, // @ts-expect-error augment common shape for UI components that expect contactInfo } ]} }; export const,
   realServicesQ32025: Q3Service[] = [ ' i,
   d: 'subscription-analytics-revenue-optimization',' nam,
   e: 'Subscription Analytics & Revenue Optimization',' taglin,
@@ -2190,6 +2160,6 @@ i,
   g: 4.8, review,
   s: 12, // @ts-expect-error augment common shape for UI components that expect contactInfo,
   contactInfo: contact,
-  contactInfo: contact}]; contactInf,
+  contactInfo: contact}] contactInf,
   o: contact,
-  contactInfo: contact } ]; } ]; '
+  contactInfo: contact } ]} ]; '

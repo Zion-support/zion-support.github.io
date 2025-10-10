@@ -47,9 +47,7 @@ const AICloudInfrastructurePage = React.lazy(() => import('./app/ai-cloud-infras
 // Performance monitoring hook
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   usePerformanceMonitor();
-  return <React.Fragment>{children}</React.Fragment>;
-};
-
+  return <React.Fragment>{children}</React.Fragment>};
 // Main App Component
 const App: React.FC = () => {
   return (
@@ -108,8 +106,6 @@ const App: React.FC = () => {
         </Router>
       </HelmetProvider>
     </EnhancedErrorBoundary>
-  );
-};
-
+  )};
 App.displayName = 'App';
-export default App;
+export default App

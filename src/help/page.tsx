@@ -266,13 +266,12 @@ questionquestion: 'Is there a free trial available?',
     </React.Fragment>
   return (
     <div>Coming Soon</div>
-  );
-};
+  )};
   const [searchTerm, setSearchTerm] = useState('');
   const [activeCategory, setActiveCategory] = useState('getting-started');
 const categories = [
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   i,
   d: 'getting-started',
@@ -308,9 +307,9 @@ const categories = [
     }
   ];
   const helpArticles = {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
-    'getting-started': [;
+    'getting-started': [
   titl,
   e: 'Setting Up Your First Dashboard',
         descriptio,
@@ -372,7 +371,7 @@ const categories = [
                 Email Us;
       <Footer /></Footer>
     </React.Fragment>
-export default HelpPage;
+export default HelpPage
   </div>
   </p>
   </h2>

@@ -15,7 +15,7 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
       </Helm, e, t>
       <div, className='container, m, x-auto, p, x-6, p, y-16'></div>
         <h1, className='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>
-          Ai, 2025, Oct 01, Operational, Trust V4;
+          Ai, 2025, Oct 01, Operational, Trust V4
         </h1>
         <p, className='te, x, t-zi, o, n-sla, t, e-light, m, b-8'>
           Learn, about, ai 2025, oct, 01 operational, trust, v4 and, how, it can, benefit, your enterpri, s, e.

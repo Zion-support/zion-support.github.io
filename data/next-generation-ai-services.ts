@@ -1,14 +1,12 @@
-export interface NextGenerationAIService;
-export interface NextGenerationAIService {;
-  id: string;
+export interface NextGenerationAIService
+export interface NextGenerationAIService {
+  id: string
   name: string;
   tagline: string;
   price: string;
-  period: string;
-  description: string;
+  period: string description: string;
   features: string[];
-  popular: boolean;
-  icon: string;
+  popular: boolean icon: string;
   color: string;
   textColor: string;
   link: string;
@@ -36,7 +34,7 @@ export interface NextGenerationAIService {;
   customers: number;
   rating: number;
 export interface NextGenerationAIService {}
-  reviews: number,    mobile: string;
+  reviews: number,    mobile: string
     email: string;
     address: string;
     website: string}
@@ -72,7 +70,7 @@ export interface NextGenerationAIService {}
   review,
   s: number}
   i,
-  d: string;
+  d: string
   nam,
   e: string;
   taglin,
@@ -134,22 +132,19 @@ export interface NextGenerationAIService {}
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
-}
+  reviews: number}
   reviews: number;    mobile: string;
     email: string;
     address: string;
-    website: string;
-  }
+    website: string}
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
-}
+  reviews: number}
 export const nextGenerationAIServices: NextGenerationAIService[] = [
-  // Advanced AI Agents & Autonomous Systems;
+  // Advanced AI Agents & Autonomous Systems
     id: 'ai-autonomous-business-agent',
     name: 'AI Autonomous Business Agent',
     tagline: 'Fully autonomous AI agent that runs your business operations',
@@ -217,14 +212,13 @@ export const,
       'Risk assessment and mitigation',
       'Performance optimization'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-blue-600 to-purple-700'
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-autonomous-business-agent',
     marketPosition: 'First-to-market autonomous business AI agent. No direct competitors in fully autonomous business operations.',
     targetAudience: 'Enterprise businessestups, E-commerce companies, Service providers, Manufacturing companies',
-    trialDays: 30;
+    trialDays: 30
     setupTime: '2 weeks',
     category: 'AI & Autonomous Systems',
     realService: true;
@@ -246,8 +240,7 @@ export const,
     launchDate: '2024-12-01'
     customers: 150;
     rating: 4.9;
-    reviews: 89;
-  },
+    reviews: 89},
   // Quantum AI Computing Platform;
     id: 'quantum-ai-computing-platform',
     name: 'Quantum AI Computing Platform',
@@ -345,8 +338,7 @@ export const,
       'Quantum chemistry simulations',
       'Quantum financial modeling'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-purple-600 to-indigo-700',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/quantum-ai-computing-platform',
@@ -374,8 +366,7 @@ export const,
     launchDate: '2024-11-15'
     customers: 75;
     rating: 4.8;
-    reviews: 45;
-  },
+    reviews: 45},
   // Neural Interface Development Platform;
     id: 'neural-interface-development-platform',
     name: 'Neural Interface Development Platform',
@@ -472,8 +463,7 @@ export const,
       'Compliance with medical standards',
       '24/7 neural interface support'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/neural-interface-development-platform',
@@ -501,8 +491,7 @@ export const,
     launchDate: '2024-10-01'
     customers: 120;
     rating: 4.7;
-    reviews: 67;
-  },
+    reviews: 67},
   // AI-Powered Space Exploration Platform;
     id: 'ai-space-exploration-platform',
     name: 'AI-Powered Space Exploration Platform',
@@ -599,8 +588,7 @@ export const,
       'Earth observation analytics',
       'Space weather monitoring'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-indigo-600 to-blue-700',
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/ai-space-exploration-platform',
@@ -628,8 +616,7 @@ export const,
     launchDate: '2024-09-15'
     customers: 45;
     rating: 4.9;
-    reviews: 28;
-  },
+    reviews: 28},
   // Biotech AI Drug Discovery Platform;
     id: 'biotech-ai-drug-discovery',
     name: 'Biotech AI Drug Discovery Platform',
@@ -726,8 +713,7 @@ export const,
       'Drug interaction prediction',
       'Regulatory compliance tools'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-400',
     link: 'https://ziontechgroup.com/biotech-ai-drug-discovery',
@@ -755,8 +741,7 @@ export const,
     launchDate: '2024-08-01'
     customers: 85;
     rating: 4.8;
-    reviews: 52;
-  },
+    reviews: 52},
   // Quantum Financial Trading Platform;
     id: 'quantum-financial-trading-platform',
     name: 'Quantum Financial Trading Platform',
@@ -853,8 +838,7 @@ export const,
       'API for broker integration',
       '24/7 trading operations'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-yellow-600 to-orange-700'
     textColor: 'text-yellow-400',
     link: 'https://ziontechgroup.com/quantum-financial-trading-platform',
@@ -882,8 +866,7 @@ export const,
     launchDate: '2024-07-15'
     customers: 95;
     rating: 4.7;
-    reviews: 58;
-  },
+    reviews: 58},
   // AI-Powered Metaverse Development Platform;
     id: 'ai-metaverse-development-platform',
     name: 'AI-Powered Metaverse Development Platform',
@@ -980,8 +963,7 @@ export const,
       'Performance optimization',
       'Analytics and insights'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-pink-600 to-rose-700',
     textColor: 'text-pink-400',
     link: 'https://ziontechgroup.com/ai-metaverse-development-platform',
@@ -1009,8 +991,7 @@ export const,
     launchDate: '2024-06-01'
     customers: 180;
     rating: 4.6;
-    reviews: 95;
-  },
+    reviews: 95},
   // Autonomous Vehicle AI Platform;
     id: 'autonomous-vehicle-ai-platform',
     name: 'Autonomous Vehicle AI Platform',
@@ -1107,8 +1088,7 @@ export const,
       'Regulatory compliance',
       'Performance analytics'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-gray-600 to-slate-700',
     textColor: 'text-gray-400',
     link: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform',
@@ -1136,8 +1116,7 @@ export const,
     launchDate: '2024-05-15'
     customers: 65;
     rating: 4.8;
-    reviews: 42;
-  },
+    reviews: 42},
   // Quantum Internet Security Platform;
     id: 'quantum-internet-security-platform',
     name: 'Quantum Internet Security Platform',
@@ -1234,8 +1213,7 @@ export const,
       '24/7 quantum security operations',
       'Unhackable communication channels'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-red-600 to-pink-700'
     textColor: 'text-red-400',
     link: 'https://ziontechgroup.com/quantum-internet-security-platform',
@@ -1263,8 +1241,7 @@ export const,
     launchDate: '2024-04-01'
     customers: 55;
     rating: 4.9;
-    reviews: 33;
-  },
+    reviews: 33},
   // AI-Powered Manufacturing Platform;
     id: 'ai-manufacturing-platform',
     name: 'AI-Powered Manufacturing Platform',
@@ -1361,8 +1338,7 @@ export const,
       'Automation workflows',
       'Compliance management'
     ],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-orange-600 to-amber-700',
     textColor: 'text-orange-400',
     link: 'https://ziontechgroup.com/ai-manufacturing-platform',
@@ -1460,7 +1436,7 @@ export const,
   s: 125}
 ];
 export interface NextGenerationAIService export interface NextGenerationAIService {/* TODO: Fix JSX expression */}
-  g: number; export interface NextGenerationAIService {} review,
+  g: number export interface NextGenerationAIService {} review,
   s: number, mobil,
   e: string, emai,
   l: string, addres,
@@ -1472,7 +1448,7 @@ export interface NextGenerationAIService export interface NextGenerationAIServic
   s: number, ratin,
   g: number, review,
   s: number } i,
-  d: string; nam,
+  d: string nam,
   e: string; taglin,
   e: string; pric,
   e: string; perio,
@@ -1911,4 +1887,4 @@ export interface NextGenerationAIService export interface NextGenerationAIServic
   e: '2024-03-15', customer,
   s: 220, ratin,
   g: 4.7, review,
-  s: 125 } ];'
+  s: 125 } ]'

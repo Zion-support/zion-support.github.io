@@ -467,7 +467,6 @@ const, October2025NewTechBannerMeg, a = () => {/* TODO: Fix JSX expression */}
         </d, i, v>)
       </d, i, v>)
     </d, i, v>)
-  );
-};
-export default October2025NewTechBannerMega;
+  )};
+export default October2025NewTechBannerMega
 ;"

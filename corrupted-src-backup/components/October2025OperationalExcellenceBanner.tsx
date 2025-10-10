@@ -655,7 +655,6 @@ const, October2025OperationalExcellenceBanne, r = () => {/* TODO: Fix JSX expres
         </d, i, v>
       </d, i, v>
     </d, i, v>
-  );
-};
-export default October2025OperationalExcellenceBanner;
+  )};
+export default October2025OperationalExcellenceBanner
 ;"

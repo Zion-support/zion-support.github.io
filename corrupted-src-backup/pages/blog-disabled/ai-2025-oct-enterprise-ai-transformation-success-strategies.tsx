@@ -285,7 +285,7 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
 :src/pages/blog/ai-2025-oct-enterprise-ai-transformation-success-strategies.tsx
             <div></div>
             <div className="prose prose-invert prose-lg max-w-none space-y-8 text-zion-slate-light"></div>
-              <section >
+              <section>
                 <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3"></h2>
                   <TrendingUp className="w-8 h-8 text-green-400 ,>
   Executive Summary;
@@ -321,7 +321,7 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
 :src/pages/blog/ai-2025-oct-enterprise-ai-transformation-success-strategies.tsx;
             <div></div>"
             <div className="prose prose-invert prose-lg max-w-none space-y-8 text-zion-slate-light"></div>
-              <section ></section>"
+              <section></section>"
                 <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3"></h2>"
                   <TrendingUp className="w-8 h-8 text-green-400 ,></TrendingUp>
   Executive Summary;"
@@ -457,7 +457,7 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
                   ))}
   </div>
               </section>
-              <section ></section>"
+              <section></section>"
                 <h2 className="text-3xl font-bold text-white mb-6">💡 Real-World Success Stories</h2>
                 <div>
                   {[
@@ -682,9 +682,8 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
                   </Link>"
                   <Link to="/services"></Link>"
   className= " />
-  );
-};
-export default EnterpriseAITransformationSuccessStrategies;;
+  )};
+export default EnterpriseAITransformationSuccessStrategies
   </div>
   </div>
   </div>

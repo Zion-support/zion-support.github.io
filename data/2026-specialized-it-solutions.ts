@@ -2,11 +2,9 @@
   name: string;
   tagline: string;
   price: string;
-  period: string;
-  description: string;
+  period: string description: string;
   features: string[];
-  popular: boolean;
-  icon: string;
+  popular: boolean icon: string;
   color: string;
   textColor: string;
   link: string;
@@ -45,21 +43,18 @@
   contact_info: unknown;
     mobile: string;
     email: string;
-    address: string;
-};
-export const specializedITSolutions2026: SpecializedITSolution2026[] = [;
-  // Cloud Infrastructure & DevOps;
-export const specializedITSolutions2026: SpecializedITSolution2026[] = [;
-  // Cloud Infrastructure & DevOps;,
-    website: string;
-  }
+    address: string};
+export const specializedITSolutions2026: SpecializedITSolution2026[] = [
+  // Cloud Infrastructure & DevOps
+export const specializedITSolutions2026: SpecializedITSolution2026[] = [
+  // Cloud Infrastructure & DevOps,
+    website: string}
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
   reviews: number;
-
 const contact =
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -78,8 +73,7 @@ const contact =
   id: string, name: string;
   tagline: string, price: string;
   period: string, description: string;
-  features: string[], popular: boolean;
-  icon: string, color: string;
+  features: string[], popular: boolean icon: string, color: string;
   textColor: string, link: string;
   marketPosition: string, targetAudience: string;
   trialDays: number, setupTime: string;
@@ -91,8 +85,7 @@ const contact =
   contactInfo: unknown;
     mobile: string, email: string;
     address: string;
-    website: string;
-    },
+    website: string},
     realImplementation: boolean, implementationDetails: string;
   launchDate: string, customers: number;
   rating: number;
@@ -194,14 +187,14 @@ const contact =
     addres,
   s: string};
 export const,
-  specializedITSolutions2026: SpecializedITSolution2026[] = [;
-  // Cloud Infrastructure & DevOps;
+  specializedITSolutions2026: SpecializedITSolution2026[] = [
+  // Cloud Infrastructure & DevOps
 export const,
-  specializedITSolutions2026: SpecializedITSolution2026[] = [;
+  specializedITSolutions2026: SpecializedITSolution2026[] = [
   // Cloud Infrastructure & DevOps,
   website: string}
   realImplementatio,
-  n: boolean;
+  n: boolean
   implementationDetail,
   s: string;
   launchDat,
@@ -314,9 +307,8 @@ const contact =
   s: '364 E Main St STE 1008 Middletown DE 19709',
       'Advanced cloud infrastructure automation platform that uses AI to optimize resource allocation, automate deployments, and manage multi-cloud environments. Features include infrastructure as code, automated scaling, and cost optimization.',
   website: 'https://ziontechgroup.com'}
-;
-export const specializedITSolutions2026: SpecializedITSolution2026[] = [;
-  // Cloud Infrastructure & DevOps;
+export const specializedITSolutions2026: SpecializedITSolution2026[] = [
+  // Cloud Infrastructure & DevOps
     id: 'cloud - infrastructure - automation',
     name: 'Cloud Infrastructure Automation Platform',
     tagline: unknown;
@@ -328,9 +320,8 @@ export const specializedITSolutions2026: SpecializedITSolution2026[] = [;
   e: 'http,
   s://ziontechgroup.com'
 }
-;
 export const,
-  specializedITSolutions2026: SpecializedITSolution2026[] = [;
+  specializedITSolutions2026: SpecializedITSolution2026[] = [
   // Cloud Infrastructure & DevOps,
     i,
   d: 'cloud - infrastructure - automation',
@@ -356,12 +347,11 @@ export const,
       'Integration with major cloud providers',
       'Custom automation workflows',
       'Advanced analytics and reporting'],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from - blue - 600 to - indigo - 600'
     text_color: 'text - blue - 400',
     link: 'https://ziontechgroup.com / cloud - infrastructure - automation',
-    market_position: unknown;
+    market_position: unknown
       'Competes with Terraform Cloud ($20 / user / month), AWS CloudFormation (pay - per - use). Our advantage: AI automation reduces infrastructure management time by 70% and optimizes costs by 30%.',
     target_audience: unknown;
       'DevOps teams, Cloud architects, IT operationstups, Enterprises',
@@ -490,8 +480,7 @@ export const,
       'Custom security policies and rules',
       'Advanced threat hunting capabilities',
       'Comprehensive security reporting'],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from - red - 600 to - pink - 600'
     text_color: 'text - red - 400',
     link: 'https://ziontechgroup.com / ai - cybersecurity - threat - intelligence',
@@ -563,8 +552,7 @@ export const,
     launch_date: '2024 - 11 - 15'
     customers: 156;
     rating: 4 && 4.7;
-    reviews: 78;
-  },
+    reviews: 78},
       'AI-powered ETL pipeline automation',
   // Data Engineering & Analytics;
     id: 'ai - data - engineering - platform',
@@ -625,8 +613,7 @@ export const,
       'Performance optimization and scaling',
       'Advanced analytics and visualization',
       'API for custom integrations'],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from - green - 600 to - emerald - 600'
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / ai - data - engineering - platform',
@@ -699,8 +686,7 @@ export const,
     launch_date: '2024 - 10 - 20'
     customers: 67;
     rating: 4 && 4.6;
-    reviews: 34;
-  },
+    reviews: 34},
       'AI-powered API design and documentation',
   // API Management & Integration;
     id: 'ai - api - management - platform',
@@ -761,8 +747,7 @@ export const,
       'Custom API policies and rules',
       'Real - time monitoring and alerting',
       'Advanced reporting and analytics'],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from - purple - 600 to - indigo - 600'
     text_color: 'text - purple - 400',
     link: 'https://ziontechgroup.com / ai - api - management - platform',
@@ -830,8 +815,7 @@ export const,
     launch_date: '2024 - 09 - 25'
     customers: 43;
     rating: 4 && 4.5;
-    reviews: 22;
-  },
+    reviews: 22},
       'AI-powered network performance monitoring',
   // Network Monitoring & Management;
     id: 'ai - network - monitoring - suite',
@@ -892,8 +876,7 @@ export const,
       'Real - time reporting and analytics',
       'Mobile app for network administrators',
       'API for custom integrations'],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from - cyan - 600 to - blue - 600'
     text_color: 'text - cyan - 400',
     link: 'https://ziontechgroup.com / ai - network - monitoring - suite',
@@ -954,8 +937,7 @@ export const,
     launch_date: '2024 - 08 - 30'
     customers: 78;
     rating: 4 && 4.4;
-    reviews: 39;
-  },
+    reviews: 39},
       'AI-powered query optimization',
   // Database Management & Optimization;
     id: 'ai - database - optimization - platform',
@@ -1016,8 +998,7 @@ export const,
       'Real - time performance analytics',
       'Automated maintenance scheduling',
       'Advanced reporting and insights'],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from - orange - 600 to - red - 600'
     text_color: 'text - orange - 400',
     link: 'https://ziontechgroup.com / ai - database - optimization - platform',
@@ -1096,8 +1077,7 @@ export const,
     launch_date: '2024 - 07 - 15'
     customers: 54;
     rating: 4 && 4.3;
-    reviews: 28;
-  },
+    reviews: 28},
       'AI-powered ticket routing and prioritization',
   // IT Service Management;
     id: 'ai - itsm - platform'
@@ -1152,8 +1132,7 @@ export const,
       'Real - time reporting and analytics',
       'Mobile app for users and agents',
       'API for custom integrations'],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from - teal - 600 to - cyan - 600'
     text_color: 'text - teal - 400',
     link: 'https://ziontechgroup.com / ai - itsm - platform',
@@ -1230,8 +1209,7 @@ export const,
     launch_date: '2024 - 06 - 20'
     customers: 89;
     rating: 4 && 4.5;
-    reviews: 45;
-  },
+    reviews: 45},
       'AI-powered backup optimization',
   // Backup & Disaster Recovery;
     id: 'ai-backup-disaster-recovery'
@@ -1275,7 +1253,7 @@ export const,
   n:
       'Advanced backup and disaster recovery platform that uses AI to optimize backup strategies, automate recovery processes, and ensure business continuity. Features include intelligent backup scheduling, automated testing, and recovery orchestration.'
     feature,
-  s: [;
+  s: [
       'AI-powered backup optimization'
       'Automated disaster recovery testing'
       'Intelligent backup scheduling'
@@ -1287,8 +1265,7 @@ export const,
       'Comprehensive recovery analytics'
       'API for custom integrations'
     ]
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from-gray-600 to-slate-600'
     textColor: 'text-gray-400',
     link: 'https://ziontechgroup.com/ai-backup-disaster-recovery',
@@ -1299,7 +1276,7 @@ export const,
     setupTime: '3-4 hours'
     category: 'Backup & Disaster Recovery'
     realService: true;
-    technology: [;
+    technology: [
     popula,
   r: false;
     ico,
@@ -1326,7 +1303,7 @@ export const,
     realServic,
   e: true;
     technolog,
-  y: [;
+  y: [
       'Python'
       'React'
       'Node.js'
@@ -1335,7 +1312,7 @@ export const,
       'Machine Learning'
     ]
     integration,
-  s: [;
+  s: [
       'AWS S3'
       'Azure Blob'
       'Google Cloud Storage'
@@ -1358,21 +1335,18 @@ export const,
     contactInfo: contact;
     realImplementation: true;
     implementationDetails: export const specializedITSolutions2026: SpecializedITSolution2026[] = [,
-  // Cloud Infrastructure & DevOps;
+  // Cloud Infrastructure & DevOps
       'AI-powered backup and disaster recovery platform with intelligent optimization, automated testing, and comprehensive recovery orchestration.'
     launchDate: '2024-05-25'
     customers: 67;
     rating: 4.4;
-    reviews: 33;
-  }
+    reviews: 33}
       'AI-powered backup and disaster recovery platform with intelligent optimization, automated testing, and comprehensive recovery orchestration.',
     launchDate: '2024-05-25'
     customers: 67;
     rating: 4.4;
-    reviews: 33;
-  };
-];
-export const getSpecializedITSolutions2026ByCategory = (category: string) =>;
+    reviews: 33}];
+export const getSpecializedITSolutions2026ByCategory = (category: string) =>
   return specializedITSolutions2026.filter(solution => solution.category === category),
       'Compliance management'
     ]
@@ -1391,7 +1365,7 @@ export const getSpecializedITSolutions2026ByCategory = (category: string) =>;
     implementationDetail,
   s: export const,
   specializedITSolutions2026: SpecializedITSolution2026[] = [,
-  // Cloud Infrastructure & DevOps;
+  // Cloud Infrastructure & DevOps
       'AI-powered backup and disaster recovery platform with intelligent optimization, automated testing, and comprehensive recovery orchestration.'
     launchDat,
   e: '2024-05-25'
@@ -1409,20 +1383,18 @@ export const getSpecializedITSolutions2026ByCategory = (category: string) =>;
     ratin,
   g: 4.4,
     review,
-  s: 33};
-];
+  s: 33}];
 export const getSpecializedITSolutions2026ByCategory = (categor)
-  y: string) =>;
+  y: string) =>
   return specializedITSolutions2026.filter(solution => solution.category === category)
   )}
 export const getPopularSpecializedITSolutions2026 = () =>
-};
+}
 export const getPopularSpecializedITSolutions2026 = () => {/* TODO: Fix JSX expression */}
   return specializedITSolutions2026.filter(solution => solution.popular)}
 }
-];
-  return specializedITSolutions2026 && specializedITSolutions2026.filter(solution => solution && solution.popular);
-};
+]
+  return specializedITSolutions2026 && specializedITSolutions2026.filter(solution => solution && solution.popular)};
 export const getSpecializedITSolutions2026ByPriceRange = (minPrice: number)
   maxPrice: number)) =>,
   return specializedITSolutions2026 && specializedITSolutions2026.filter(solution =>)
@@ -1432,17 +1404,15 @@ export const getSpecializedITSolutions2026ByPriceRange = (minPric)
   e: number)
 ) =>
   return specializedITSolutions2026 && specializedITSolutions2026.filter(solution =>)
-    const _price = parseInt(solution && solution.price.replace('$') ''));
-    return price >= minPrice && price <= maxPrice;
-  })
-};    return price >= minPrice && price <= maxPrice;
-  })
+    const _price = parseInt(solution && solution.price.replace('$') ''))
+    return price >= minPrice && price <= maxPrice})
+};    return price >= minPrice && price <= maxPrice})
 }
     id: 'cloud-infrastructure-automation', name: 'Cloud Infrastructure Automation Platform',
     tagline: 'Automate cloud infrastructure deployment and management with intelligent orchestration', price: '$399',
     period: '/month',
     description: 'Advanced cloud infrastructure automation platform that uses AI to optimize resource allocation, automate deployments, and manage multi-cloud environments. Features include infrastructure as code, automated scaling, and cost optimization.';
-    features: [;
+    features: [
       'Infrastructure as Code (IaC) automationMulti-cloud management and orchestrationAutomated resource scaling and optimizationCost monitoring and optimizationSecurity compliance automationDisaster recovery orchestrationPerformance monitoring and alertingIntegration with major cloud providers',
       'Custom automation workflowsAdvanced analytics and reporting'],
     popular: true, icon: '',
@@ -1460,14 +1430,13 @@ export const getSpecializedITSolutions2026ByPriceRange = (minPric)
     implementationDetails: 'Cloud-native infrastructure automation platform with AI-powered optimization, multi-cloud orchestration, and comprehensive DevOps tools.',
     launchDate: '2024-12-01', customers: 89;
     rating: 4.8;
-    reviews: 45;
-  };
+    reviews: 45};
   // Cybersecurity & Threat Intelligence;
     id: 'ai-cybersecurity-threat-intelligence', name: 'AI Cybersecurity Threat Intelligence Platform',
     tagline: 'Advanced threat detection and response with AI-powered security intelligence', price: '$299',
     period: '/month',
     description: 'Intelligent cybersecurity platform that uses AI to detect, analyze, and respond to security threats in real-time. Features include threat hunting, incident response automation, and security analytics.',
-    features: [;
+    features: [
       'AI-powered threat detection and analysisReal-time security monitoring and alertingAutomated incident response and remediationThreat intelligence and sharingVulnerability assessment and managementSecurity compliance monitoringIntegration with SIEM and security toolsCustom security policies and rules',
       'Advanced threat hunting capabilitiesComprehensive security reporting'],
     popular: true, icon: '',
@@ -1485,14 +1454,13 @@ export const getSpecializedITSolutions2026ByPriceRange = (minPric)
     implementationDetails: 'AI-powered cybersecurity platform with machine learning algorithms for threat detection, automated response, and comprehensive security analytics.',
     launchDate: '2024-11-15', customers: 156;
     rating: 4.7;
-    reviews: 78;
-  };
+    reviews: 78};
   // Data Engineering & Analytics;
     id: 'ai-data-engineering-platform', name: 'AI Data Engineering Platform',
     tagline: 'Streamline data pipelines and analytics with intelligent automation', price: '$249',
     period: '/month',
     description: 'Comprehensive data engineering platform that uses AI to automate data pipeline creation, optimize data processing, and provide intelligent analytics. Features include ETL automation, data quality monitoring, and real-time analytics.',
-    features: [;
+    features: [
       'AI-powered ETL pipeline automationData quality monitoring and validationReal-time data processing and streamingAutomated data transformation and cleaningData lineage and governanceIntegration with major data sourcesCustom data pipeline workflowsPerformance optimization and scaling',
       'Advanced analytics and visualizationAPI for custom integrations'],
     popular: false, icon: '',
@@ -1510,14 +1478,13 @@ export const getSpecializedITSolutions2026ByPriceRange = (minPric)
     implementationDetails: 'AI-powered data engineering platform with automated pipeline creation, data quality monitoring, and comprehensive analytics capabilities.',
     launchDate: '2024-10-20', customers: 67;
     rating: 4.6;
-    reviews: 34;
-  };
+    reviews: 34};
   // API Management & Integration;
     id: 'ai-api-management-platform', name: 'AI API Management Platform',
     tagline: 'Intelligent API lifecycle management with AI-powered optimization', price: '$199',
     period: '/month',
     description: 'Advanced API management platform that uses AI to optimize API performance, monitor usage patterns, and provide intelligent insights. Features include API design automation, performance optimization, and developer experience enhancement.',
-    features: [;
+    features: [
       'AI-powered API design and documentationAutomated performance optimizationIntelligent rate limiting and throttlingAPI usage analytics and insightsDeveloper portal and documentationSecurity and authentication managementIntegration with popular frameworksCustom API policies and rules',
       'Real-time monitoring and alertingAdvanced reporting and analytics'],
     popular: false, icon: '',
@@ -1535,14 +1502,13 @@ export const getSpecializedITSolutions2026ByPriceRange = (minPric)
     implementationDetails: 'AI-powered API management platform with intelligent optimization, comprehensive monitoring, and developer experience enhancement.',
     launchDate: '2024-09-25', customers: 43;
     rating: 4.5;
-    reviews: 22;
-  };
+    reviews: 22};
   // Network Monitoring & Management;
     id: 'ai-network-monitoring-suite', name: 'AI Network Monitoring Suite',
     tagline: 'Intelligent network monitoring and management with AI-powered insights', price: '$179',
     period: '/month',
     description: 'Advanced network monitoring platform that uses AI to detect network issues, optimize performance, and provide predictive maintenance. Features include real-time monitoring, automated troubleshooting, and network analytics.',
-    features: [;
+    features: [
       'AI-powered network performance monitoringAutomated issue detection and resolutionPredictive maintenance and alertingNetwork traffic analysis and optimizationSecurity threat detectionIntegration with network devicesCustom monitoring dashboardsReal-time reporting and analytics',
       'Mobile app for network administratorsAPI for custom integrations'],
     popular: false, icon: '',
@@ -1560,14 +1526,13 @@ export const getSpecializedITSolutions2026ByPriceRange = (minPric)
     implementationDetails: 'AI-powered network monitoring platform with intelligent issue detection, automated resolution, and comprehensive analytics.',
     launchDate: '2024-08-30', customers: 78;
     rating: 4.4;
-    reviews: 39;
-  };
+    reviews: 39};
   // Database Management & Optimization;
     id: 'ai-database-optimization-platform', name: 'AI Database Optimization Platform',
     tagline: 'Intelligent database performance optimization with AI-powered insights', price: '$159',
     period: '/month',
     description: 'Advanced database optimization platform that uses AI to improve database performance, automate tuning, and provide intelligent recommendations. Features include query optimization, performance monitoring, and automated maintenance.',
-    features: [;
+    features: [
       'AI-powered query optimizationAutomated database tuningPerformance monitoring and alertingIntelligent indexing recommendationsDatabase health monitoringIntegration with major databasesCustom optimization rulesReal-time performance analytics',
       'Automated maintenance schedulingAdvanced reporting and insights'],
     popular: false, icon: '',
@@ -1585,14 +1550,13 @@ export const getSpecializedITSolutions2026ByPriceRange = (minPric)
     implementationDetails: 'AI-powered database optimization platform with intelligent tuning, performance monitoring, and automated maintenance capabilities.',
     launchDate: '2024-07-15', customers: 54;
     rating: 4.3;
-    reviews: 28;
-  };
+    reviews: 28};
   // IT Service Management;
     id: 'ai-itsm-platform', name: 'AI IT Service Management Platform',
     tagline: 'Intelligent IT service management with AI-powered automation', price: '$129',
     period: '/month',
     description: 'Comprehensive IT service management platform that uses AI to automate service requests, optimize workflows, and improve user experience. Features include ticket automation, knowledge management, and service analytics.',
-    features: [;
+    features: [
       'AI-powered ticket routing and prioritizationAutomated service request processingIntelligent knowledge base managementWorkflow automation and optimizationService level agreement monitoringIntegration with IT tools and systemsCustom service catalogsReal-time reporting and analytics',
       'Mobile app for users and agentsAPI for custom integrations'],
     popular: false, icon: '',
@@ -1610,14 +1574,13 @@ export const getSpecializedITSolutions2026ByPriceRange = (minPric)
     implementationDetails: 'AI-powered IT service management platform with intelligent automation, workflow optimization, and comprehensive service analytics.',
     launchDate: '2024-06-20', customers: 89;
     rating: 4.5;
-    reviews: 45;
-  };
+    reviews: 45};
   // Backup & Disaster Recovery;
     id: 'ai-backup-disaster-recovery', name: 'AI Backup & Disaster Recovery Platform',
     tagline: 'Intelligent backup and recovery with AI-powered automation', price: '$199',
     period: '/month',
     description: 'Advanced backup and disaster recovery platform that uses AI to optimize backup strategies, automate recovery processes, and ensure business continuity. Features include intelligent backup scheduling, automated testing, and recovery orchestration.',
-    features: [;
+    features: [
       'AI-powered backup optimizationAutomated disaster recovery testingIntelligent backup schedulingRecovery time objective optimizationData deduplication and compressionIntegration with cloud storageCustom backup policiesReal-time monitoring and alerting',
       'Comprehensive recovery analyticsAPI for custom integrations'],
     popular: false, icon: '',
@@ -1635,8 +1598,7 @@ export const getSpecializedITSolutions2026ByPriceRange = (minPric)
     implementationDetails: 'AI-powered backup and disaster recovery platform with intelligent optimization, automated testing, and comprehensive recovery orchestration.',
     launchDate: '2024-05-25', customers: 67;
     rating: 4.4;
-    reviews: 33;
-  }
+    reviews: 33}
 ];
 export const getSpecializedITSolutions2026ByCategory = (category: string) =>,
   return specializedITSolutions2026.filter(solution => solution.category === category),
@@ -1649,9 +1611,9 @@ export const getSpecializedITSolutions2026ByCategory = (category: string) =>,
     perio,
   d: '/month',
     descriptio,
-  n: 'Advanced cloud infrastructure automation platform that uses AI to optimize resource allocation, automate deployments, and manage multi-cloud environments. Features include infrastructure as code, automated scaling, and cost optimization.';
+  n: 'Advanced cloud infrastructure automation platform that uses AI to optimize resource allocation, automate deployments, and manage multi-cloud environments. Features include infrastructure as code, automated scaling, and cost optimization.'
     feature,
-  s: [;
+  s: [
       'Infrastructure as Code (IaC) automationMulti-cloud management and orchestrationAutomated resource scaling and optimizationCost monitoring and optimizationSecurity compliance automationDisaster recovery orchestrationPerformance monitoring and alertingIntegration with major cloud providers'
       'Custom automation workflowsAdvanced analytics and reporting'
     ],
@@ -1709,7 +1671,7 @@ export const getSpecializedITSolutions2026ByCategory = (category: string) =>,
     descriptio,
   n: 'Intelligent cybersecurity platform that uses AI to detect, analyze, and respond to security threats in real-time. Features include threat hunting, incident response automation, and security analytics.',
     feature,
-  s: [;
+  s: [
       'AI-powered threat detection and analysisReal-time security monitoring and alertingAutomated incident response and remediationThreat intelligence and sharingVulnerability assessment and managementSecurity compliance monitoringIntegration with SIEM and security toolsCustom security policies and rules'
       'Advanced threat hunting capabilitiesComprehensive security reporting'
     ],
@@ -1767,7 +1729,7 @@ export const getSpecializedITSolutions2026ByCategory = (category: string) =>,
     descriptio,
   n: 'Comprehensive data engineering platform that uses AI to automate data pipeline creation, optimize data processing, and provide intelligent analytics. Features include ETL automation, data quality monitoring, and real-time analytics.',
     feature,
-  s: [;
+  s: [
       'AI-powered ETL pipeline automationData quality monitoring and validationReal-time data processing and streamingAutomated data transformation and cleaningData lineage and governanceIntegration with major data sourcesCustom data pipeline workflowsPerformance optimization and scaling'
       'Advanced analytics and visualizationAPI for custom integrations'
     ],
@@ -1825,7 +1787,7 @@ export const getSpecializedITSolutions2026ByCategory = (category: string) =>,
     descriptio,
   n: 'Advanced API management platform that uses AI to optimize API performance, monitor usage patterns, and provide intelligent insights. Features include API design automation, performance optimization, and developer experience enhancement.',
     feature,
-  s: [;
+  s: [
       'AI-powered API design and documentationAutomated performance optimizationIntelligent rate limiting and throttlingAPI usage analytics and insightsDeveloper portal and documentationSecurity and authentication managementIntegration with popular frameworksCustom API policies and rules'
       'Real-time monitoring and alertingAdvanced reporting and analytics'
     ],
@@ -1883,7 +1845,7 @@ export const getSpecializedITSolutions2026ByCategory = (category: string) =>,
     descriptio,
   n: 'Advanced network monitoring platform that uses AI to detect network issues, optimize performance, and provide predictive maintenance. Features include real-time monitoring, automated troubleshooting, and network analytics.',
     feature,
-  s: [;
+  s: [
       'AI-powered network performance monitoringAutomated issue detection and resolutionPredictive maintenance and alertingNetwork traffic analysis and optimizationSecurity threat detectionIntegration with network devicesCustom monitoring dashboardsReal-time reporting and analytics'
       'Mobile app for network administratorsAPI for custom integrations'
     ],
@@ -1941,7 +1903,7 @@ export const getSpecializedITSolutions2026ByCategory = (category: string) =>,
     descriptio,
   n: 'Advanced database optimization platform that uses AI to improve database performance, automate tuning, and provide intelligent recommendations. Features include query optimization, performance monitoring, and automated maintenance.',
     feature,
-  s: [;
+  s: [
       'AI-powered query optimizationAutomated database tuningPerformance monitoring and alertingIntelligent indexing recommendationsDatabase health monitoringIntegration with major databasesCustom optimization rulesReal-time performance analytics'
       'Automated maintenance schedulingAdvanced reporting and insights'
     ],
@@ -1999,7 +1961,7 @@ export const getSpecializedITSolutions2026ByCategory = (category: string) =>,
     descriptio,
   n: 'Comprehensive IT service management platform that uses AI to automate service requests, optimize workflows, and improve user experience. Features include ticket automation, knowledge management, and service analytics.',
     feature,
-  s: [;
+  s: [
       'AI-powered ticket routing and prioritizationAutomated service request processingIntelligent knowledge base managementWorkflow automation and optimizationService level agreement monitoringIntegration with IT tools and systemsCustom service catalogsReal-time reporting and analytics'
       'Mobile app for users and agentsAPI for custom integrations'
     ],
@@ -2057,7 +2019,7 @@ export const getSpecializedITSolutions2026ByCategory = (category: string) =>,
     descriptio,
   n: 'Advanced backup and disaster recovery platform that uses AI to optimize backup strategies, automate recovery processes, and ensure business continuity. Features include intelligent backup scheduling, automated testing, and recovery orchestration.',
     feature,
-  s: [;
+  s: [
       'AI-powered backup optimizationAutomated disaster recovery testingIntelligent backup schedulingRecovery time objective optimizationData deduplication and compressionIntegration with cloud storageCustom backup policiesReal-time monitoring and alerting'
       'Comprehensive recovery analyticsAPI for custom integrations'
     ],
@@ -2108,66 +2070,53 @@ export const getSpecializedITSolutions2026ByCategory = (category: string) =>,
 export const getSpecializedITSolutions2026ByCategory = (categor)
   y: string) =>,
   return specializedITSolutions2026.filter(solution => solution.category === category)
-};
+}
 export const getPopularSpecializedITSolutions2026 = () =>
   return specializedITSolutions2026.filter(solution => solution.popular)
-};
+}
 export const getSpecializedITSolutions2026ByPriceRange = (minPrice: number) maxPrice: number) =>,
   return specializedITSolutions2026.filter(solution =>)
 export const getSpecializedITSolutions2026ByPriceRange = (minPric)
   e: number) maxPric,
   e: number) =>,
   return specializedITSolutions2026.filter(solution =>)
-    const _price = parseInt(solution.price.replace('$') ''));
-    return price >= minPrice && price <= maxPrice;
-  })
+    const _price = parseInt(solution.price.replace('$') ''))
+    return price >= minPrice && price <= maxPrice})
 };
-;
-export const getSpecializedITSolutions2026ByCategory = (category: string) =>: unknown;
+export const getSpecializedITSolutions2026ByCategory = (category: string) =>: unknown
   return specializedITSolutions2026.filter()
 export const getSpecializedITSolutions2026ByCategory = (categor)
-  y: string) =>: unknown;
+  y: string) =>: unknown
   return specializedITSolutions2026.filter ()
-    solution => solution.category === category);
-}
-;
-export const getPopularSpecializedITSolutions2026 = () =>: unknown;
-  return specializedITSolutions2026.filter (solution => solution.popular);
-}
-;
+    solution => solution.category === category)}
+export const getPopularSpecializedITSolutions2026 = () =>: unknown
+  return specializedITSolutions2026.filter (solution => solution.popular)}
 export const getSpecializedITSolutions2026ByPriceRange = (min_price: number)
-  max_price: number) =>: unknown;
+  max_price: number) =>: unknown
   return specializedITSolutions2026.filter(solution =>),
 export const getSpecializedITSolutions2026ByPriceRange = (min_pric)
   e: number)
   max_pric,
   e: number) =>: unknown,
   return specializedITSolutions2026.filter (solution =>)
-    const _price = parse_int (solution.price.replace ('$') ''));
-    return price >= min_price && price <= max_price;
-  });
-}    return price >= min_price && price <= max_price;
-  });
-}
-;
+    const _price = parse_int (solution.price.replace ('$') ''))
+    return price >= min_price && price <= max_price})}    return price >= min_price && price <= max_price})}
 export interface SpecializedITSolution2026 {/* TODO: Fix JSX expression */}
   e: string}
   }
   })
-};
-;
-export const getSpecializedITSolutions2026ByCategory = (category: string) =>: unknown;
+}
+export const getSpecializedITSolutions2026ByCategory = (category: string) =>: unknown
   return specializedITSolutions2026.filter()
 export const getSpecializedITSolutions2026ByCategory = (categor)
-  y: string) =>: unknown;
+  y: string) =>: unknown
   return specializedITSolutions2026.filter ()
-    solution => solution.category === category);
-}
+    solution => solution.category === category)}
 export interface SpecializedITSolution2026 {/* TODO: Fix JSX expression */}
   s: string}
     websit,
   e: string}
-  };
+  }
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -2186,28 +2135,19 @@ export interface SpecializedITSolution2026 {/* TODO: Fix JSX expression */}
   g: number;
   review,
   s: number}
-;
-export const getPopularSpecializedITSolutions2026 = () =>: unknown;
-  return specializedITSolutions2026.filter (solution => solution.popular);
-}
-;
+export const getPopularSpecializedITSolutions2026 = () =>: unknown
+  return specializedITSolutions2026.filter (solution => solution.popular)}
 export const getSpecializedITSolutions2026ByPriceRange = (min_price: number)
-  max_price: number) =>: unknown;
+  max_price: number) =>: unknown
   return specializedITSolutions2026.filter(solution =>),
 export const getSpecializedITSolutions2026ByPriceRange = (min_pric)
   e: number)
   max_pric,
   e: number) =>: unknown,
   return specializedITSolutions2026.filter (solution =>)
-    const _price = parse_int (solution.price.replace ('$') ''));
-    return price >= min_price && price <= max_price;
-  });
-}    return price >= min_price && price <= max_price;
-  });
-}
-;
-export interface SpecializedITSolution2026;
-};
+    const _price = parse_int (solution.price.replace ('$') ''))
+    return price >= min_price && price <= max_price})}    return price >= min_price && price <= max_price})}
+export interface SpecializedITSolution2026}
 i,
   d: string; nam,
   e: string; taglin,
@@ -2260,7 +2200,7 @@ i,
   specializedITSolutions2026: SpecializedITSolution2026[] = [ // Cloud Infrastructure & DevOps export const,
   specializedITSolutions2026: SpecializedITSolution2026[] = [ // Cloud Infrastructure & DevOps,
   website: string} realImplementatio,
-  n: boolean; implementationDetail,
+  n: boolean implementationDetail,
   s: string; launchDat,
   e: string; customer,
   s: number; ratin,
@@ -2327,7 +2267,7 @@ i,
   s: '364 E Main St STE 1008 Middletown DE 19709',' 'Advanced cloud infrastructure automation platform that uses AI to optimize resource allocation, automate deployments, and manage multi-cloud environments. Features include infrastructure as code, automated scaling, and cost optimization.',' websit,
   e: 'http,
   s://ziontechgroup.com' } ; export const,
-  specializedITSolutions2026: SpecializedITSolution2026[] = [; // Cloud Infrastructure & DevOps, ' i,
+  specializedITSolutions2026: SpecializedITSolution2026[] = [ // Cloud Infrastructure & DevOps, ' i,
   d: 'cloud - infrastructure - automation',' nam,
   e: 'Cloud Infrastructure Automation Platform', taglin,
   e:  ,' 'Automate cloud infrastructure deployment and management with intelligent orchestration',' pric,
@@ -2360,7 +2300,7 @@ i,
   e: '2024 - 12 - 01', customer,
   s: 89, ratin,
   g: 4 && 4.8, review,
-  s: 45},' 'AI-powered threat detection and analysis',' 'Real-time security monitoring and alerting', // Cybersecurity & Threat Intelligence; ' i,
+  s: 45},' 'AI-powered threat detection and analysis',' 'Real-time security monitoring and alerting', // Cybersecurity & Threat Intelligence ' i,
   d: 'ai - cybersecurity - threat - intelligence',' nam,
   e: 'AI Cybersecurity Threat Intelligence Platform', taglin,
   e:  ,' 'Advanced threat detection and response with AI - powered security intelligence',' pric,
@@ -2603,10 +2543,10 @@ i,
   e: '2024-05-25', customer,
   s: 67, ratin,
   g: 4.4, review,
-  s: 33}; ]; export const getSpecializedITSolutions2026ByCategory = (categor)
-  y: string) => return specializedITSolutions2026.filter(solution => solution.category === category) )} export const getPopularSpecializedITSolutions2026 = () => }; export const getPopularSpecializedITSolutions2026 = () => {; return specializedITSolutions2026.filter(solution => solution.popular)} } ]; return specializedITSolutions2026 && specializedITSolutions2026.filter(solution => solution && solution.popular); }; export const getSpecializedITSolutions2026ByPriceRange = (minPric,
+  s: 33}] export const getSpecializedITSolutions2026ByCategory = (categor)
+  y: string) => return specializedITSolutions2026.filter(solution => solution.category === category) )} export const getPopularSpecializedITSolutions2026 = () => } export const getPopularSpecializedITSolutions2026 = () => { return specializedITSolutions2026.filter(solution => solution.popular)} } ] return specializedITSolutions2026 && specializedITSolutions2026.filter(solution => solution && solution.popular)}; export const getSpecializedITSolutions2026ByPriceRange = (minPric,
   e: number)
-  maxPrice: number ) => return specializedITSolutions2026 && specializedITSolutions2026.filter(solution => ' const price = parseInt(solution && solution.price.replace('$') '')); return price >= minPrice && price <= maxPrice; }) }; return price >= minPrice && price <= maxPrice }) } ' i,
+  maxPrice: number ) => return specializedITSolutions2026 && specializedITSolutions2026.filter(solution => ' const price = parseInt(solution && solution.price.replace('$') '')) return price >= minPrice && price <= maxPrice}) }; return price >= minPrice && price <= maxPrice }) } ' i,
   d: 'cloud-infrastructure-automation', nam,
   e: 'Cloud Infrastructure Automation Platform',' taglin,
   e: 'Automate cloud infrastructure deployment and management with intelligent orchestration', pric,
@@ -2879,21 +2819,21 @@ i,
   s: 67, ratin,
   g: 4.4, review,
   s: 33 } ]; export const getSpecializedITSolutions2026ByCategory = (categor)
-  y: string) => return specializedITSolutions2026.filter(solution => solution.category === category) }; export const getPopularSpecializedITSolutions2026 = () => return specializedITSolutions2026.filter(solution => solution.popular) }; export const getSpecializedITSolutions2026ByPriceRange = (minPric)
+  y: string) => return specializedITSolutions2026.filter(solution => solution.category === category) } export const getPopularSpecializedITSolutions2026 = () => return specializedITSolutions2026.filter(solution => solution.popular) } export const getSpecializedITSolutions2026ByPriceRange = (minPric)
   e: number) maxPric,
-  e: number) => return specializedITSolutions2026.filter(solution => ' const price = parseInt(solution.price.replace('$') '')); return price >= minPrice && price <= maxPrice }) }; export const getSpecializedITSolutions2026ByCategory = (categor)
-  y: string) =>: unknown return specializedITSolutions2026.filter ( solution => solution.category === category); } ; export const getPopularSpecializedITSolutions2026 = () =>: unknown return specializedITSolutions2026.filter (solution => solution.popular); } ; export const getSpecializedITSolutions2026ByPriceRange = (min_pric)
+  e: number) => return specializedITSolutions2026.filter(solution => ' const price = parseInt(solution.price.replace('$') '')) return price >= minPrice && price <= maxPrice }) }; export const getSpecializedITSolutions2026ByCategory = (categor)
+  y: string) =>: unknown return specializedITSolutions2026.filter ( solution => solution.category === category)}  export const getPopularSpecializedITSolutions2026 = () =>: unknown return specializedITSolutions2026.filter (solution => solution.popular)}  export const getSpecializedITSolutions2026ByPriceRange = (min_pric)
   e: number) max_pric,
-  e: number) =>: unknown return specializedITSolutions2026.filter (solution => ' const price = parse_int (solution.price.replace ('$') '')); return price >= min_price && price <= max_price; }); } return price >= min_price && price <= max_price; }); } ; export interface SpecializedITSolution2026 {/* TODO: Fix JSX expression */}
-  e: string} } }) }; export const getSpecializedITSolutions2026ByCategory = (categor)
-  y: string) =>: unknown return specializedITSolutions2026.filter ( solution => solution.category === category); } export interface SpecializedITSolution2026 {/* TODO: Fix JSX expression */}
+  e: number) =>: unknown return specializedITSolutions2026.filter (solution => ' const price = parse_int (solution.price.replace ('$') '')) return price >= min_price && price <= max_price})} return price >= min_price && price <= max_price})} ; export interface SpecializedITSolution2026 {/* TODO: Fix JSX expression */}
+  e: string} } }) } export const getSpecializedITSolutions2026ByCategory = (categor)
+  y: string) =>: unknown return specializedITSolutions2026.filter ( solution => solution.category === category)} export interface SpecializedITSolution2026 {/* TODO: Fix JSX expression */}
   s: string} websit,
-  e: string} }; realImplementatio,
+  e: string} } realImplementatio,
   n: boolean; implementationDetail,
   s: string; launchDat,
   e: string; customer,
   s: number; ratin,
   g: number; review,
-  s: number} ; export const getPopularSpecializedITSolutions2026 = () =>: unknown return specializedITSolutions2026.filter (solution => solution.popular); } ; export const getSpecializedITSolutions2026ByPriceRange = (min_pric)
+  s: number} ; export const getPopularSpecializedITSolutions2026 = () =>: unknown return specializedITSolutions2026.filter (solution => solution.popular)}  export const getSpecializedITSolutions2026ByPriceRange = (min_pric)
   e: number) max_pric,
-  e: number) =>: unknown return specializedITSolutions2026.filter (solution => ' const price = parse_int (solution.price.replace ('$') '')); return price >= min_price && price <= max_price; }); } return price >= min_price && price <= max_price; }); } ; export interface SpecializedITSolution2026 }; '
+  e: number) =>: unknown return specializedITSolutions2026.filter (solution => ' const price = parse_int (solution.price.replace ('$') '')) return price >= min_price && price <= max_price})} return price >= min_price && price <= max_price})} ; export interface SpecializedITSolution2026 } '

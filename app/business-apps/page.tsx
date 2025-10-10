@@ -60,7 +60,7 @@ title: 'AI-Powered Business Apps',
       {/* Hero Section */}
       <section className="relative py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">
             Business Apps;
   </
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -114,7 +114,7 @@ title: 'AI-Powered Business Apps',
       {/* CTA Section */}
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
             Ready to Get Started?
           </h2>
           <p className="text-xl text-purple-100 mb-8">
@@ -151,9 +151,8 @@ title: 'AI-Powered Business Apps',
         </div>
       </div>
     </div>
-  );
-};
-export default BusinessAppsPage;
+  )};
+export default BusinessAppsPage
   </button>
   </button>
   </button>

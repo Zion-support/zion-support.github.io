@@ -137,19 +137,18 @@ readingTimereadingTime: '45 min read',
                 className="inline-flex items-center px-12 py-6 border-2 border-blue-400 text-blue-300 font-bold text-xl rounded-2xl hover:bg-blue-400/10 transition-all duration-300">Learn More</Link>
     </section>);
 export default UltimateBusinessIntelligenceShowcase2025
-'use client';
+'use client'
 import React, { useState } from 'react';
-        return (import { Link } from 'react-router-dom';)
+        return (import { Link } from 'react-router-dom')
 const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
   const [selectedCategory, setSelectedCategory] = useState('all');
   const content = [
   // TOD,
-  O: Add items;
-];;
+  O: Add items];
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   i,
   d: 'ultimate-business-intelligence-revolution',
@@ -166,7 +165,7 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expres
   y: 'blog',
       metric,
   s: {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   ro,
   i: '30,000%',
@@ -257,5 +256,5 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expres
   hover:bg-blue-400/10 transition-all duration-300"
 >Learn More</Link>
     </section>);
-export default UltimateBusinessIntelligenceShowcase2025;
+export default UltimateBusinessIntelligenceShowcase2025
   </path>

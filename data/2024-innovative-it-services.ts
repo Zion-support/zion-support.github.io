@@ -1,14 +1,12 @@
-export interface InnovativeITService2024 {id: string;
+export interface InnovativeITService2024 {id: string
   name: string;
   tagline: string;
   price: string;
-  period: string;
-  description: string;
+  period: string description: string;
   features: string[];
   rating: number;
   customers: number;
-  popular: boolean;
-  icon: string;
+  popular: boolean icon: string;
   color: string;
   textColor: string;
   link: string;
@@ -35,8 +33,7 @@ export interface InnovativeITService2024 {id: string;
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
-  reviews: number;
-}
+  reviews: number}
 export const innovativeITServices2024: InnovativeITService2024[] = [
     id: "autonomous-devops-platform",
     name: "Autonomous DevOps Platform",
@@ -56,14 +53,13 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
       "Integration with popular DevOps tools",
       "White-label solution for MSPs"
     ],
-    popular: true;
-    icon: ""
+    popular: true icon: ""
     color: "from-blue-500 to-cyan-600",
     textColor: "text-blue-400",
     link: "https://ziontechgroup.com/autonomous-devops",
     marketPosition: "Competitive with GitLab ($99/user/month), Jenkins (free), and CircleCI ($15/month). Our advantage: AI-powered automation, self-healing capabilities, and comprehensive infrastructure management.",
     targetAudience: "DevOps teams, Software companies, IT departments, Cloud service providers, Managed service providerstups",
-    trialDays: 14;
+    trialDays: 14
     setupTime: "2 hours",
     category: "DevOps & Infrastructure",
     realService: true;
@@ -90,7 +86,7 @@ export interface InnovativeITService2024 {/* TODO: Fix JSX expression */}
   s: string}
     websit,
   e: string}
-};
+}
   realImplementatio,
   n: boolean;
   implementationDetail,
@@ -190,9 +186,9 @@ export const,
   g: 4.8,
     review,
   s: 520}
-];
+]
 export interface InnovativeITService2024,
-  id: string; nam,
+  id: string nam,
   e: string; taglin,
   e: string; pric,
   e: string, perio,
@@ -269,4 +265,4 @@ export interface InnovativeITService2024,
   e: "2024-01-15", customer,
   s: 950, ratin,
   g: 4.8, review,
-  s: 520 } ];"
+  s: 520 } ]"

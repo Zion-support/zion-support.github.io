@@ -90,9 +90,8 @@ const AIContentStudioPage: React.FC = () => {
       </main>
       <Footer />
     </div>
-  );
-};
-export default AIContentStudioPage;
+  )};
+export default AIContentStudioPage
   </h2>
   </a>
   </a>

@@ -2,8 +2,7 @@ import React from 'react';
 const FutureTechShowcase202, 6: React.FC = () => { ,
   const futureTechArticle, s = [
     {
-      id: 1;
-      title: 'Neur, a, l-Quantum, Hybrid, Computin, g',
+      id: 1 title: 'Neur, a, l-Quantum, Hybrid, Computin, g',
       slug: 'neur, a, l-quant, u, m-hybr, i, d-2, 0, 2, 6',
       excerpt: 'Breakthrough, fusion, of quantum, computing, and neural, networks, achieving unprecedented, processing, speeds. Experienc, e, 1, 0,000 x, faster, AI inference, with, quantum-enhanced, deep, learning.',
       category: 'Quantum, AI, Revolutio, n',
@@ -222,7 +221,6 @@ const FutureTechShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expression */
         </div>
       </div>
     </div>
-  );
-};
-export default FutureTechShowcase2026;
+  )};
+export default FutureTechShowcase2026
 `

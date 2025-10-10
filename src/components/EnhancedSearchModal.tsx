@@ -1,19 +1,15 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Search, X, ArrowRight, Clock, TrendingUp, Star } from 'lucide-react';
 interface SearchResult {
-  id: string;
-  title: string;
-  description: string;
+  id: string title: string description: string;
   url: string;
   category: string;
   type: 'page' | 'service' | 'blog' | 'documentation';
   popularity?: number;
-  lastModified?: string;
-}
+  lastModified?: string}
 interface SearchModalProps {
   isOpen: boolean;
-  onClose: () => void;
-}
+  onClose: () => void}
 const mockSearchResults: SearchResult[] = [
   {
     id: '1',
@@ -83,36 +79,29 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
   const [showSuggestions, setShowSuggestions] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null)</HTMLInputElement>const</HTMLInputElement> resultsRef = useRef<HTMLDivElement>(null)</HTMLDivElement>useEffect</HTMLDivElement>(() => {
     if (isOpen && inputRef.current) {
-      inputRef.current.focus();
-    }
+      inputRef.current.focus()}
   }, [isOpen]);
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (!isOpen) return;
       if (e.key === 'Escape') {
-        onClose();
-      } else if (e.key === 'ArrowDown') {
+        onClose()} else if (e.key === 'ArrowDown') {
         e.preventDefault();
         setSelectedIndex(prev => 
           prev < results.length - 1 ? prev + 1 : prev
-        );
-      } else if (e.key === 'ArrowUp') {
+        )} else if (e.key === 'ArrowUp') {
         e.preventDefault();
-        setSelectedIndex(prev => prev > 0 ? prev - 1 : -1);
-      } else if (e.key === 'Enter' && selectedIndex >= 0) {
+        setSelectedIndex(prev => prev > 0 ? prev - 1 : -1)} else if (e.key === 'Enter' && selectedIndex >= 0) {
         e.preventDefault();
-        handleResultClick(results[selectedIndex]);
-      }
+        handleResultClick(results[selectedIndex])}
     };
     document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [isOpen, results, selectedIndex, onClose]);
+    return () => document.removeEventListener('keydown', handleKeyDown)}, [isOpen, results, selectedIndex, onClose]);
   const searchResults = async (searchQuery: string) => {
     if (!searchQuery.trim()) {
       setResults([]);
       setShowSuggestions(true);
-      return;
-    }
+      return}
     setIsSearching(true);
     setShowSuggestions(false);
     // Simulate API call delay
@@ -126,24 +115,19 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
     const sortedResults = filteredResults.sort((a, b) => {
       const aRelevance = a.title.toLowerCase().includes(searchQuery.toLowerCase()) ? 2 : 1;
       const bRelevance = b.title.toLowerCase().includes(searchQuery.toLowerCase()) ? 2 : 1;
-      return (b.popularity || 0) * bRelevance - (a.popularity || 0) * aRelevance;
-    });
+      return (b.popularity || 0) * bRelevance - (a.popularity || 0) * aRelevance});
     setResults(sortedResults);
     setSelectedIndex(-1);
-    setIsSearching(false);
-  };
+    setIsSearching(false)};
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {</HTMLInputElement>const</HTMLInputElement> value = e.target.value;
     setQuery(value);
-    searchResults(value);
-  };
+    searchResults(value)};
   const handleResultClick = (result: SearchResult) => {
     window.location.href = result.url;
-    onClose();
-  };
+    onClose()};
   const handleSuggestionClick = (suggestion: string) => {
     setQuery(suggestion);
-    searchResults(suggestion);
-  };
+    searchResults(suggestion)};
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'AI Services':
@@ -157,8 +141,7 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
       case 'Documentation':
         return '📚';
       default:
-        return '🔍';
-    }
+        return '🔍'}
   };
   const getTypeColor = (type: string) => {
     switch (type) {
@@ -171,8 +154,7 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
       case 'documentation':
         return 'text-green-400';
       default:
-        return 'text-gray-400';
-    }
+        return 'text-gray-400'}
   };
   if (!isOpen) return null;
   return (
@@ -301,8 +283,7 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
         </div>
       </div>
     </div>
-  );
-};
+  )};
 export default EnhancedSearchModal</p>
   </h3>
   </h3>

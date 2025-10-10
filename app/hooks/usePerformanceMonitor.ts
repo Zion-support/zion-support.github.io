@@ -1,14 +1,11 @@
 'use client';
 import { useEffect, useCallback } from 'react';
-
 interface PerformanceMetrics {
   lcp?: number;
   fid?: number;
   cls?: number;
   fcp?: number;
-  ttfb?: number;
-}
-
+  ttfb?: number}
 export const usePerformanceMonitor = () => {
   const reportMetric = useCallback((name: string, value: number) => {
     // Report to analytics
@@ -17,15 +14,11 @@ export const usePerformanceMonitor = () => {
         metric_name: name,
         metric_value: value,
         event_category: 'Performance'
-      });
-    }
-
+      })}
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.log(`Performance Metric - ${name}: ${value}ms`);
-    }
-  }, []);
-
+      console.log(`Performance Metric - ${name}: ${value}ms`)}
+  }, [])
   useEffect(() => {
     // Monitor Core Web Vitals
     if (typeof window !== 'undefined' && 'web-vitals' in window) {
@@ -34,20 +27,13 @@ export const usePerformanceMonitor = () => {
         getFID((metric) => reportMetric('FID', metric.value));
         getFCP((metric) => reportMetric('FCP', metric.value));
         getLCP((metric) => reportMetric('LCP', metric.value));
-        getTTFB((metric) => reportMetric('TTFB', metric.value));
-      });
-    }
-
+        getTTFB((metric) => reportMetric('TTFB', metric.value))})}
     // Monitor page load time
     const handleLoad = () => {
       const loadTime = performance.now();
-      reportMetric('PageLoad', loadTime);
-    };
-
+      reportMetric('PageLoad', loadTime)};
     window.addEventListener('load', handleLoad);
-    return () => window.removeEventListener('load', handleLoad);
-  }, [reportMetric]);
-
+    return () => window.removeEventListener('load', handleLoad)}, [reportMetric]);
   // Monitor resource loading performance
   useEffect(() => {
     const observer = new PerformanceObserver((list) => {
@@ -55,24 +41,18 @@ export const usePerformanceMonitor = () => {
         if (entry.entryType === 'resource') {
           const resourceEntry = entry as PerformanceResourceTiming;
           const loadTime = resourceEntry.responseEnd - resourceEntry.requestStart;
-          
           // Only report slow resources (>1s)
           if (loadTime > 1000) {
-            reportMetric(`ResourceLoad_${resourceEntry.name.split('/').pop()}`, loadTime);
-          }
+            reportMetric(`ResourceLoad_${resourceEntry.name.split('/').pop()}`, loadTime)}
         }
       }
     });
-
     observer.observe({ entryTypes: ['resource'] });
-    return () => observer.disconnect();
-  }, [reportMetric]);
-
+    return () => observer.disconnect()}, [reportMetric]);
   // Monitor navigation timing
   useEffect(() => {
     if (typeof window !== 'undefined' && 'performance' in window) {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      
       if (navigation) {
         const metrics = {
           DNS: navigation.domainLookupEnd - navigation.domainLookupStart,
@@ -82,11 +62,7 @@ export const usePerformanceMonitor = () => {
           DOM: navigation.domContentLoadedEventEnd - navigation.responseEnd,
           Load: navigation.loadEventEnd - navigation.loadEventStart
         };
-
         Object.entries(metrics).forEach(([key, value]) => {
-          reportMetric(`Navigation_${key}`, value);
-        });
-      }
+          reportMetric(`Navigation_${key}`, value)})}
     }
-  }, [reportMetric]);
-};
+  }, [reportMetric])};

@@ -6,7 +6,7 @@ import { Settings, Target, BarChart, Shield, CheckCircle, Star,  Settings,  Targ
 const ITInfrastructureDesignPage: React.FC = () => {
   const features = [];
   return (
-    {// TODO: Add content;}
+    {// TODO: Add content}
 };
   ico,
   n: Settings,
@@ -15,8 +15,7 @@ const ITInfrastructureDesignPage: React.FC = () => {
       descriptio,
   n: 'Custom IT infrastructure design and architecture',
       benefit,
-  s: ['Scalable design', 'High availability', 'Performance optimization'];
-    },
+  s: ['Scalable design', 'High availability', 'Performance optimization']},
       ico,
   n: Target,
       titl,
@@ -89,6 +88,5 @@ const ITInfrastructureDesignPage: React.FC = () => {
       </main>
       <Footer /></Footer>
     </div>
-  );
-};
-export default ItInfrastructureDesignPage;
+  )};
+export default ItInfrastructureDesignPage

@@ -7,28 +7,22 @@ interface State {/* TODO: Fix JSX expression */}
 class EnhancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {,
     super(props);
-    this.state = { hasError: false };
-  }
+    this.state = { hasError: false }}
   static getDerivedStateFromError(error: Error): State {,
-    return { hasError: true, error };
-  }
+    return { hasError: true, error }}
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {,
     this.setState({)
       error),
-      errorInfo;
-    });
+      errorInfo});
     // Log error to console in development;
     if (process.env.NODE_ENV === 'development') {
-      // console.error('Error caught by boundary:', error, errorInfo);
-    }
+      // console.error('Error caught by boundary:', error, errorInfo)}
     // Call custom error handler if provided;
     if (this.props.onError) {
-      this.props.onError(error, errorInfo);
-    }
+      this.props.onError(error, errorInfo)}
     // Enhanced error reporting;
     if (this.props.enableErrorReporting) {
-      this.reportError(error, errorInfo);
-    }
+      this.reportError(error, errorInfo)}
     // Log to console in development;
     if (process.env.NODE_ENV === 'development') {
       // eslint-disable-next-line no-console;
@@ -36,8 +30,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     // In production, you might want to send this to an error reporting service;
     if (process.env.NODE_ENV === 'production') {
       // Example: send to error reporting service;
-      // errorReportingService.captureException(error, { extra: errorInfo });
-    }
+      // errorReportingService.captureException(error, { extra: errorInfo })}
   }
       return(<div className="min-h-screen flex items-center justify-center bg-gray-50">
           <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">
@@ -52,7 +45,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               We're sorry, but something unexpected happened. Please try refreshing the page.
             </p>)
             <div className="space-y-4">)
-              <button;)
+              <button)
             </p>
             <div className="space-y-4"></div>
               <button
@@ -64,12 +57,10 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                 onClick={() => window.history.back()}
                 className="w-full bg-gray-200 text-gray-800 px-6 py-3 rounded-lg font-semibold hover: bg-gray-300 transition-colors"
 class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression */}
-  r: false };
-  }
+  r: false }}
   static getDerivedStateFromError(erro)
   r: Error): State {/* TODO: Fix JSX expression */}
-  r: true, error };
-  }
+  r: true, error }}
   componentDidCatch(erro,
   r: Error, errorInf)
   o: ErrorInfo) {/* TODO: Fix JSX expression */}
@@ -85,8 +76,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
     }
     // Log to console in development;
     if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */}
-  a: errorInfo });
-    }
+  a: errorInfo })}
   }
       return (<div className="min-h-screen flex items-center justify-center bg-gray-50"></div>"
           <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center"></div>"
@@ -127,9 +117,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
             )}
           </div>
         </div>
-      );
-    }
-    return this.props.children;
-  }
+      )}
+    return this.props.children}
 }
-export default EnhancedErrorBoundary;"
+export default EnhancedErrorBoundary"

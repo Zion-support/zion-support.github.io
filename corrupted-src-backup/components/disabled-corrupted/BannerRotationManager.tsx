@@ -35,13 +35,12 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({,
   maxBanners = 3,
   rotationInterval = 10000,
   className = ''}) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0)
   const [visibleBanners, setVisibleBanners] = useState<BannerKey[]>([]);</BannerKey>
   // Select banners to display (limit to maxBanners)
   useEffect(() => {
 //     const selected = banners.slice(0, maxBanners);
-    setVisibleBanners(selected);
-  }, [banners, maxBanners]);
+    setVisibleBanners(selected)}, [banners, maxBanners]);
   // Rotate banners at specified interval;
   useEffect(() => {
     if (visibleBanners.length <= 1) return;
@@ -57,12 +56,11 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({,
 export const,
   BannerRotationManager: React.FC<BannerRotationManagerProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
-  }, [banners, maxBanners]);
+  }, [banners, maxBanners])
   // Rotate banners at specified interval;
   useEffect(() => {/* TODO: Fix JSX expression */}
     }, rotationInterval);
-    return () => clearInterval(interval);
-  }, [visibleBanners.length, rotationInterval]);
+    return () => clearInterval(interval)}, [visibleBanners.length, rotationInterval]);
   if (visibleBanners.length === 0) {/* TODO: Fix JSX expression */}
   }
 //   const currentBanner = visibleBanners[currentIndex];
@@ -109,9 +107,8 @@ export const,
         </button></div>
       )}
     </div>
-  );
-};
-export default BannerRotationManager;
+  )};
+export default BannerRotationManager
 `
   </BannerRotationManagerProps>
   </BannerRotationManagerProps>

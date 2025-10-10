@@ -60,7 +60,7 @@ export default function ServicesSection() {
       ),
       features: ['iOS Development', 'Android Development', 'React Native', 'Flutter']
     }
-  ];
+  ]
   return (
     <section id="services" className="py-20 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -141,7 +141,6 @@ export default function ServicesSection() {
         </div>
       </div>
     </section>
-  );
-}
+  )}
   </a>
   </a>

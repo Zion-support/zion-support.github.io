@@ -206,9 +206,9 @@ const, October2025NewAIBreakthroughContentBanne, r: Rea, c, t.FC = () => {
       <div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-8, 0, 0/30, t, o-emera, l, d-8, 0, 0/30, border, border-purp, l, e-5, 0, 0/40, rounde, d-x, l, p-6">";
         <div, className="flex, fle, x-col, m, d: fl, e, x-row, item, s-center, justif, y-between, ga, p-6">";
           <div, className="fl, e, x-1">";
-            <h3, className="te, x, t-2xl, fon, t-bold, tex, t-transparent, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-emera, l, d-400, b, g-cl, i, p-text, m, b-3">";)
-              💎 Combined, Enterprise, Impac;)
-  t: $13.3B;)
+            <h3, className="te, x, t-2xl, fon, t-bold, tex, t-transparent, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-emera, l, d-400, b, g-cl, i, p-text, m, b-3">")
+              💎 Combined, Enterprise, Impac)
+  t: $13.3B)
             </h3>),
       <div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-8, 0, 0/30, t, o-emera, l, d-8, 0, 0/30, border, border-purp, l, e-5, 0, 0/40, rounde, d-x, l, p-6">";</div>
         <div, className="flex, fle, x-col, m, d: fl, e, x-row, item, s-center, justif, y-between, ga, p-6">";</div>
@@ -255,5 +255,4 @@ const, October2025NewAIBreakthroughContentBanne, r: Rea, c, t.FC = () => {
   );
 const, October2025NewAIBreakthroughContentBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
 };
-export default October2025 NewAIBreakthroughContentBanner;
-;
+export default October2025 NewAIBreakthroughContentBanner

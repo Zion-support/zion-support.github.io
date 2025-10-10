@@ -387,9 +387,9 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: 
           <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-6">";</div>
             <d, i, v>
               <h4, className="te, x, t-xl, fon, t-bold, tex, t-yell, o, w-200, m, b-3">The, Challeng, e</h4>";
-              <ul, className="spa, c, e-y-2, tex, t-yell, o, w-1, 0, 0">";)
-                <li, className="flex, item, s-start, ga, p-2">";)
-                  <span, className="te, x, t-r, e, d-400, fon, t-bo, l, d">❌</sp, a, n>";)
+              <ul, className="spa, c, e-y-2, tex, t-yell, o, w-1, 0, 0">")
+                <li, className="flex, item, s-start, ga, p-2">")
+                  <span, className="te, x, t-r, e, d-400, fon, t-bo, l, d">❌</sp, a, n>")
           </d, i, v>"
           <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-6">""
           <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-6">";
@@ -504,8 +504,7 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: 
           <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, tex, t-cent, e, r">Proven, Across, Industries</h3>";
           <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-5, ga, p-4">";
             {[
-              { indus, t, r;
-            ].m, a, p((it, e, m, ind, e, x) => ("
+              { indus, t, r].m, a, p((it, e, m, ind, e, x) => ("
               <div, ke, y={ind, e, x} classNa, m, e="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-4, border, border-emera, l, d-4, 0, 0/20, hove, r: bord, e, r-emera, l, d-4, 0, 0/50, transitio, n-all, hov, e,"
   r:sca, l, e-1, 0, 5">""
                 <div, className="te, x, t-emera, l, d-300, fon, t-bold, tex, t-lg, m, b-1">{it, e, m.indust, r, y}</d, i, v>"
@@ -519,16 +518,14 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: 
               { indust, r, y: 'Manufacturi, n, g', val, u, e: '$2.7B', r, o, i: '2,1, 0, 0%' },';
               { indust, r, y: 'Phar, m, a', val, u, e: '$89, 0, M', r, o, i: '1,8, 0, 0%' },';
               { indust, r, y: 'Automoti, v, e', val, u, e: '$1.4B', r, o, i: '2,4, 0, 0%' },';
-              { indust, r, y: 'Fo, o, d & Bevera, g, e', val, u, e: '$67, 0, M', r, o, i: '1,6, 0, 0%' }';
-            ].m, a, p((it, e, m, ind, e, x) => (
+              { indust, r, y: 'Fo, o, d & Bevera, g, e', val, u, e: '$67, 0, M', r, o, i: '1,6, 0, 0%' }'].m, a, p((it, e, m, ind, e, x) => (
               <div, ke, y={ind, e, x} classNa, m, e="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-4, border, border-emera, l, d-4, 0, 0/20, hove, r: bord, e, r-emera, l, d-4, 0, 0/50, transitio, n-all, hov, e;
-  r:sca, l, e-1, 0, 5">";
-            ].m, a, p((it, e, m, ind, e, x) => (</div>
+  r:sca, l, e-1, 0, 5">"].m, a, p((it, e, m, ind, e, x) => (</div>
               <div, ke, y={ind, e, x} classNa, m, e="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-4, border, border-emera, l, d-4, 0, 0/20, hove, r: bord, e, r-emera, l, d-4, 0, 0/50, transitio, n-all, hov, e
   r:sca, l, e-1, 0, 5">";</div>
                 <div, className="te, x, t-emera, l, d-300, fon, t-bold, tex, t-lg, m, b-1">{it, e, m.indust, r, y}</d, i, v>";
                 <div, className="te, x, t-white, fon, t-extrabold, tex, t-xl, m, b-1">{it, e, m.val, u, e}</d, i, v>";
-              { indust, r, y: 'Fo, o, d & Bevera, g, e', val, u, e: '$67, 0, M', r, o, i: '1,6, 0, 0%' }';)
+              { indust, r, y: 'Fo, o, d & Bevera, g, e', val, u, e: '$67, 0, M', r, o, i: '1,6, 0, 0%' }')
             ].m, a, p((it, e, m, ind, e, x) => ("
               <div, ke, y={ind, e, x} classNa, m, e="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-4, border, border-emera, l, d-4, 0, 0/20, hove, r: bord, e, r-emera, l, d-4, 0, 0/50, transitio, n-all, hov, e,"
   r:sca, l, e-1, 0, 5">";"
@@ -736,8 +733,6 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: 
         </d, i, v>
       </d, i, v>
     </d, i, v>
-  );
-};
-export default October2025 SupplyChainRevolutionBanner;
-;
+  )};
+export default October2025 SupplyChainRevolutionBanner
 }"

@@ -2,7 +2,7 @@ impo, r, t {/* TODO: Fix JSX expression */}
 } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 export default function HyperPersonalizedCustomerExperience20, 2, 5() {  
-  return(:src/pages/blog/ai-2025-oct-hyper-personalized-customer-experience/page.tsx;
+  return(:src/pages/blog/ai-2025-oct-hyper-personalized-customer-experience/page.tsx
     <React.Fragment>
       <Helm, e, t>
         <title>
@@ -230,11 +230,11 @@ export default function HyperPersonalizedCustomerExperience20, 2, 5() {
               <div></section>
                   <h3 className="text-2xl font-bold mb-4 text-pink-300">Leading E-Commerce Platform</h3>
                   <ul className="space-y-3 text-gray-300">
-                    <li >• $4.7B annual revenue increase from personalization</li>
-                    <li >• 18.3x improvement in customer engagement metrics</li>
-                    <li >• 94% reduction in customer acquisition costs</li>
-                    <li >• 98.2% customer satisfaction score maintained</li>
-                    <li >• 91% decrease in churn across all customer segments</li>
+                    <li>• $4.7B annual revenue increase from personalization</li>
+                    <li>• 18.3x improvement in customer engagement metrics</li>
+                    <li>• 94% reduction in customer acquisition costs</li>
+                    <li>• 98.2% customer satisfaction score maintained</li>
+                    <li>• 91% decrease in churn across all customer segments</li>
                   </ul>
   </div>
                 <div></div>
@@ -278,7 +278,7 @@ export default function HyperPersonalizedCustomerExperience20, 2, 5() {
                 <ArrowLeft className="ml-2 h-5 w-5 rotate-180 ">,
                 <ArrowLeft className="ml-2 h-5 w-5 rotate-180" />);
 export default function HyperPersonalizedCustomerExperience20, 2, 5() {/* TODO: Fix JSX expression */}
-};
+}
   </div>
   </div>
   </div>

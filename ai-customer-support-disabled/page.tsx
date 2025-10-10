@@ -7,26 +7,22 @@ import { MessageCircle, Headphones, Bot, Zap, Shield, BarChart, Clock, Users, Ch
 const AICustomerSupportPage: React.FC = () => {
   const features = [
     {
-      icon: MessageCircle;
-      title: '24/7 AI Chat Support',
+      icon: MessageCircle title: '24/7 AI Chat Support',
       description: 'Intelligent chatbots that provide instant responses to customer queries with natural language understanding.',
       benefits: ['Instant Response', 'Multi-language Support', 'Context Awareness', 'Escalation to Humans']
     },
     {
-      icon: Users;
-      title: 'Smart Ticket Routing',
+      icon: Users title: 'Smart Ticket Routing',
       description: 'AI-powered ticket classification and routing to the most appropriate support agent based on expertise and workload.',
       benefits: ['Intelligent Routing', 'Priority Classification', 'Load Balancing', 'Expert Matching']
     },
     {
-      icon: Clock;
-      title: 'Predictive Analytics',
+      icon: Clock title: 'Predictive Analytics',
       description: 'Predict customer issues before they occur and proactively reach out with solutions.',
       benefits: ['Issue Prediction', 'Proactive Support', 'Trend Analysis', 'Prevention Strategies']
     },
     {
-      icon: Shield;
-      title: 'Knowledge Base Integration',
+      icon: Shield title: 'Knowledge Base Integration',
       description: 'Seamlessly integrated knowledge base that provides accurate, up-to-date information to both AI and human agents.',
       benefits: ['Real-time Updates', 'Version Control', 'Search Optimization', 'Content Management']
 const,
@@ -79,7 +75,7 @@ const,
                 AI Customer Support Solutions;
               </h1>
               <p className="text-xl md:text-2xl text-cyan-400 mb-8">)
-                Transform your customer service with intelligent AI that never sleeps;)
+                Transform your customer service with intelligent AI that never sleeps)
               </p>)
               <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">),
                 Our AI-powered customer support platform combines advanced chatbots, omnichannel communication)
@@ -169,8 +165,7 @@ const,
       </div>
     </div>
     </React.Fragment>
-  );
-};
+  )};
 const AICustomerSupportPage2: React.FC = () => {
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">)
       <Navigation />)
@@ -327,9 +322,8 @@ const AICustomerSupportPage2: React.FC = () => {
         </div>
       </main>
     </div>
-  );
-};
-export default AICustomerSupportPage;
+  )};
+export default AICustomerSupportPage
   </h1>
   </h2>
   </h3>

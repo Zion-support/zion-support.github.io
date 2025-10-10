@@ -6,7 +6,7 @@ import { Building, Target, Zap, Settings, CheckCircle, Star,  Building,  Target,
 const SmartCitiesPage: React.FC = () => {
   const features = [];
   return (
-    {// TODO: Add content;}
+    {// TODO: Add content}
 };
   ico,
   n: Building,
@@ -15,8 +15,7 @@ const SmartCitiesPage: React.FC = () => {
       descriptio,
   n: 'Intelligent city infrastructure and management systems',
       benefit,
-  s: ['Traffic management', 'Energy optimization', 'Waste management'];
-    },
+  s: ['Traffic management', 'Energy optimization', 'Waste management']},
       ico,
   n: Target,
       titl,
@@ -89,6 +88,5 @@ const SmartCitiesPage: React.FC = () => {
       </main>
       <Footer /></Footer>
     </div>
-  );
-};
-export default SmartCitiesPage;
+  )};
+export default SmartCitiesPage

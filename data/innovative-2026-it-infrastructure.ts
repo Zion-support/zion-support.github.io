@@ -1,13 +1,10 @@
-
   id: string;
   name: string;
   tagline: string;
   price: string;
-  period: string;
-  description: string;
+  period: string description: string;
   features: string[];
-  popular: boolean;
-  icon: string;
+  popular: boolean icon: string;
   color: string;
   text_color: string;
   link: string;
@@ -106,9 +103,8 @@
   g: number;
   review,
   s: number;
-;
 export const,
-  innovative2026ITInfrastructureServices: Innovative2026ITInfrastructureService[] =;
+  innovative2026ITInfrastructureServices: Innovative2026ITInfrastructureService[] =
   [
     // Quantum - Enhanced Cloud Infrastructure;
       id: 'quantum - enhanced - cloud - platform',
@@ -145,8 +141,7 @@ export const,
         'Real - time performance monitoring',
         'Global edge computing network',
         'Quantum - safe data storage'],
-      popular: true;
-      icon: ''
+      popular: true icon: ''
       color: 'from - indigo - 600 to - purple - 700'
       text_color: 'text - indigo - 400',
       link: 'https://ziontechgroup.com / quantum - enhanced - cloud',
@@ -237,8 +232,7 @@ export const,
       launch_date: '2025 - 08 - 15'
       customers: 800;
       rating: 4 && 4.9;
-      reviews: 400;
-    },
+      reviews: 400},
         'AI-powered edge orchestration',
     // Edge Computing Orchestration Platform;
       id: 'edge - computing - orchestration',
@@ -306,8 +300,7 @@ export const,
         'Performance analytics',
         'Automated scaling',
         'Multi - cloud edge integration'],
-      popular: true;
-      icon: ''
+      popular: true icon: ''
       color: 'from - teal - 500 to - cyan - 600'
       text_color: 'text - teal - 400',
       link: 'https://ziontechgroup.com / edge - computing - orchestration',
@@ -398,8 +391,7 @@ export const,
       launch_date: '2025 - 07 - 20'
       customers: 1200;
       rating: 4 && 4.8;
-      reviews: 600;
-    },
+      reviews: 600},
     // Zero - Trust Network Architecture;
       id: 'zero - trust - network - architecture',
       name: 'Zero - Trust Network Architecture',
@@ -465,8 +457,7 @@ export const,
         'Compliance reporting',
         'Real - time monitoring',
         'Automated response'],
-      popular: true;
-      icon: ''
+      popular: true icon: ''
       color: 'from - emerald - 600 to - green - 700'
       text_color: 'text - emerald - 400',
       link: 'https://ziontechgroup.com / zero - trust - network',
@@ -557,8 +548,7 @@ export const,
       launch_date: '2025 - 09 - 10'
       customers: 900;
       rating: 4 && 4.9;
-      reviews: 450;
-    },
+      reviews: 450},
         'AI-powered CI/CD automation',
     // AI - Powered DevOps Platform;
       id: 'ai - powered - devops - platform'
@@ -624,8 +614,7 @@ export const,
         'Security scanning',
         'Cost optimization',
         'Team collaboration tools'],
-      popular: true;
-      icon: ''
+      popular: true icon: ''
       color: 'from - orange - 500 to - red - 600'
       text_color: 'text - orange - 400',
       link: 'https://ziontechgroup.com / ai - powered - devops',
@@ -782,8 +771,7 @@ export const,
         'Data deduplication',
         'API access',
         'Mobile applications'],
-      popular: true;
-      icon: '',
+      popular: true icon: '',
         'Post-Quantum Cryptography',
       color: 'from - violet - 600 to - purple - 700',
       text_color: 'text - violet - 400',
@@ -898,14 +886,11 @@ export const,
       launchDate: '2025-11-20'
       customers: 1100;
       rating: 4 && 4.8;
-      reviews: 550;
-    };
-  ];    features: [,
-export interface Innovative2026ITInfrastructureService {id: string, name: string;
+      reviews: 550}];    features: [,
+export interface Innovative2026ITInfrastructureService {id: string, name: string
   tagline: string, price: string;
   period: string, description: string;
-  features: string[], popular: boolean;
-  icon: string, color: string;
+  features: string[], popular: boolean icon: string, color: string;
   textColor: string, link: string;
   marketPosition: string, targetAudience: string;
   trialDays: number, setupTime: string;
@@ -922,15 +907,14 @@ export interface Innovative2026ITInfrastructureService {id: string, name: string
     realImplementation: boolean, implementationDetails: string;
   launchDate: string, customers: number;
   rating: number;
-  reviews: number;
-}
+  reviews: number}
 export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastructureService[] = [,
-  // Quantum-Enhanced Cloud Infrastructure;
+  // Quantum-Enhanced Cloud Infrastructure
     id: 'quantum-enhanced-cloud-platform', name: 'Quantum-Enhanced Cloud Platform',
     tagline: 'Next-generation cloud infrastructure with quantum computing capabilities', price: '$599',
     period: '/month',
     description: 'Revolutionary cloud platform that combines traditional cloud computing with quantum computing capabilities, enabling unprecedented processing power and security for enterprise applications.',
-    features: [;
+    features: [
       launchDat,
   e: '2025-11-20',
       customer,
@@ -938,8 +922,7 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
       ratin,
   g: 4 && 4.8,
       review,
-  s: 550};
-  ];    feature,
+  s: 550}];    feature,
   s: [,
 export interface Innovative2026ITInfrastructureService {/* TODO: Fix JSX expression */}
   e: string}
@@ -967,11 +950,11 @@ export const,
     descriptio,
   n: 'Revolutionary cloud platform that combines traditional cloud computing with quantum computing capabilities, enabling unprecedented processing power and security for enterprise applications.',
     feature,
-  s: [;
+  s: [
       'Hybrid quantum-classical computingQuantum-resistant encryptionQuantum machine learning accelerationMulti-cloud orchestrationAuto-scaling infrastructureQuantum key distributionAdvanced security protocolsReal-time performance monitoring'
       'Global edge computing networkQuantum-safe data storage'
       integration,
-  s: [;
+  s: [
         'AWS S3'
         'Azure Blob'
         'Google Cloud Storage'
@@ -981,7 +964,7 @@ export const,
         'API Access'
       ]
       useCase,
-  s: [;
+  s: [
         'Secure document storage'
         'Compliance data management'
         'Backup and recovery'
@@ -993,11 +976,9 @@ export const,
       competitors: [,
         'Enterprise-grade quantum-safe storage platform with advanced encryption, comprehensive security features, and seamless integrations. Includes compliance certifications and 24/7 support.',
       launchDate: '2025-11-20'
-      customers: 1100;
+      customers: 1100
       rating: 4.8;
-      reviews: 550;
-    };
-  ];    features: [;
+      reviews: 550}];    features: [
       'Quantum-resistant encryptionMulti-layer securityAutomated backup and recoveryGlobal data distributionCompliance certificationsReal-time monitoringDisaster recoveryData deduplication',
       'API accessMobile applications'],
     popular: true, icon: '',
@@ -1012,8 +993,7 @@ export const,
     roi: 'Average customer sees 500% ROI within 12 months through improved performance and competitive advantage.', competitors: ['AWSGoogle CloudMicrosoft AzureIBM CloudOracle Cloud'],
     marketSize: '$397.4B market', growthRate: '280% annual growth'
     variant: 'quantum-futuristic'
-    contactInfo: unknown;
-  ];    features: [;
+    contactInfo: unknown];    features: [
       'Quantum - resistant encryption_multi - layer security_automated backup and recovery_global data distribution_compliance certifications_real - time monitoring_disaster recovery_data deduplication',
       'API access_mobile applications'],
     popular: true, icon: '',
@@ -1055,18 +1035,15 @@ export const,
     implementation_details: 'Enterprise - grade quantum - safe storage platform with advanced encryption, comprehensive security features, and seamless integrations. Includes compliance certifications and 24 / 7 support.',
     launch_date: '2025 - 11 - 20', customers: 1100;
     rating: 4.8;
-    reviews: 550;
-]
-export interface Innovative2026ITInfrastructureService {;
-  id: string;
+    reviews: 550]
+export interface Innovative2026ITInfrastructureService {
+  id: string
   name: string;
   tagline: string;
   price: string;
-  period: string;
-  description: string;
+  period: string description: string;
   features: string[];
-  popular: boolean;
-  icon: string;
+  popular: boolean icon: string;
   color: string;
   textColor: string;
   link: string;
@@ -1095,8 +1072,7 @@ export interface Innovative2026ITInfrastructureService {;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
-      ]
+  reviews: number]
       ro,
   i: 'Average customer saves $500K annually through improved security and compliance management.'
       competitor,
@@ -1109,9 +1085,8 @@ export interface Innovative2026ITInfrastructureService {;
       ratin,
   g: 4.8,
       review,
-  s: 550};
-  ];    feature,
-  s: [;
+  s: 550}];    feature,
+  s: [
       'Quantum-resistant encryptionMulti-layer securityAutomated backup and recoveryGlobal data distributionCompliance certificationsReal-time monitoringDisaster recoveryData deduplication'
       'API accessMobile applications'
     ],
@@ -1149,9 +1124,8 @@ export interface Innovative2026ITInfrastructureService {;
     varian,
   t: 'quantum-futuristic',
     contactInf,
-  o: unknown;
-  ];    feature,
-  s: [;
+  o: unknown];    feature,
+  s: [
       'Quantum - resistant encryption_multi - layer security_automated backup and recovery_global data distribution_compliance certifications_real - time monitoring_disaster recovery_data deduplication'
       'API access_mobile applications'
     ],
@@ -1262,13 +1236,12 @@ export interface Innovative2026ITInfrastructureService {;
     ratin,
   g: 4.8,
     review,
-  s: 550;
-],
+  s: 550],
 export interface Innovative2026ITInfrastructureService {/* TODO: Fix JSX expression */}
   s: string}
     websit,
   e: string}
-  };
+  }
   realImplementatio,
   n: boolean;
   implementationDetail,
@@ -1281,23 +1254,20 @@ export interface Innovative2026ITInfrastructureService {/* TODO: Fix JSX express
   g: number;
   review,
   s: number}
-;
 export const,
-  innovative2026ITInfrastructureServices: Innovative2026ITInfrastructureService[] = [;
-  // Quantum-Enhanced Cloud Infrastructure;
+  innovative2026ITInfrastructureServices: Innovative2026ITInfrastructureService[] = [
+  // Quantum-Enhanced Cloud Infrastructure
   {
     id: 'quantum-enhanced-cloud-platform';
     name: 'Quantum-Enhanced Cloud Platform';
     tagline: 'Next-generation cloud infrastructure with quantum computing capabilities';
     price: '$599';
-    period: '/month';
-    description: 'Revolutionary cloud platform that combines traditional cloud computing with quantum computing capabilities, enabling unprecedented processing power and security for enterprise applications.';
+    period: '/month' description: 'Revolutionary cloud platform that combines traditional cloud computing with quantum computing capabilities, enabling unprecedented processing power and security for enterprise applications.';
     features: [
       'Hybrid quantum-classical computingQuantum-resistant encryptionQuantum machine learning accelerationMulti-cloud orchestrationAuto-scaling infrastructureQuantum key distributionAdvanced security protocolsReal-time performance monitoring';
       'Global edge computing networkQuantum-safe data storage'
     ];
-    popular: true;
-    icon: '';
+    popular: true icon: '';
     color: 'from-indigo-600 to-purple-700';
     textColor: 'text-indigo-400';
     link: 'https://ziontechgroup.com/quantum-enhanced-cloud';
@@ -1325,22 +1295,19 @@ export const,
     launchDate: '2025-08-15';
     customers: 800;
     rating: 4.9;
-    reviews: 400;
-  };
+    reviews: 400};
   // Edge Computing Orchestration Platform;
-  {;
+  {
     id: 'edge-computing-orchestration';
     name: 'Edge Computing Orchestration Platform';
     tagline: 'Manage distributed computing at the edge with AI-powered orchestration';
     price: '$299';
-    period: '/month';
-    description: 'Advanced edge computing platform that intelligently orchestrates distributed computing resources, optimizing performance and reducing latency for IoT and real-time applications.';
+    period: '/month' description: 'Advanced edge computing platform that intelligently orchestrates distributed computing resources, optimizing performance and reducing latency for IoT and real-time applications.';
     features: [
       'AI-powered edge orchestrationGlobal edge network managementReal-time load balancingEdge AI model deploymentIoT device management5G network optimizationEdge security and compliancePerformance analytics';
       'Automated scalingMulti-cloud edge integration'
     ];
-    popular: true;
-    icon: '';
+    popular: true icon: '';
     color: 'from-teal-500 to-cyan-600';
     textColor: 'text-teal-400';
     link: 'https://ziontechgroup.com/edge-computing-orchestration';
@@ -1368,22 +1335,19 @@ export const,
     launchDate: '2025-07-20';
     customers: 1200;
     rating: 4.8;
-    reviews: 600;
-  };
+    reviews: 600};
   // Zero-Trust Network Architecture;
-  {;
+  {
     id: 'zero-trust-network-architecture';
     name: 'Zero-Trust Network Architecture';
     tagline: 'Secure your network with zero-trust principles and AI-powered monitoring';
     price: '$449';
-    period: '/month';
-    description: 'Comprehensive zero-trust network security platform that continuously verifies every user, device, and connection, providing enterprise-grade security for modern distributed networks.';
+    period: '/month' description: 'Comprehensive zero-trust network security platform that continuously verifies every user, device, and connection, providing enterprise-grade security for modern distributed networks.';
     features: [
       'Continuous identity verificationMicro-segmentationAI-powered threat detectionJust-in-time accessMulti-factor authenticationDevice trust scoringNetwork traffic analysisCompliance reporting';
       'Real-time monitoringAutomated response'
     ];
-    popular: true;
-    icon: '';
+    popular: true icon: '';
     color: 'from-emerald-600 to-green-700';
     textColor: 'text-emerald-400';
     link: 'https://ziontechgroup.com/zero-trust-network';
@@ -1411,22 +1375,19 @@ export const,
     launchDate: '2025-09-10';
     customers: 900;
     rating: 4.9;
-    reviews: 450;
-  };
+    reviews: 450};
   // AI-Powered DevOps Platform;
-  {;
+  {
     id: 'ai-powered-devops-platform';
     name: 'AI-Powered DevOps Platform';
     tagline: 'Automate and optimize your development pipeline with AI';
     price: '$199';
-    period: '/month';
-    description: 'Intelligent DevOps platform that uses AI to automate deployment, optimize performance, and predict potential issues before they impact your applications.';
+    period: '/month' description: 'Intelligent DevOps platform that uses AI to automate deployment, optimize performance, and predict potential issues before they impact your applications.';
     features: [
       'AI-powered CI/CD automationIntelligent testing and QAPerformance optimizationPredictive issue detectionAutomated rollbackInfrastructure as codeMonitoring and alertingSecurity scanning';
       'Cost optimizationTeam collaboration tools'
     ];
-    popular: true;
-    icon: '';
+    popular: true icon: '';
     color: 'from-orange-500 to-red-600';
     textColor: 'text-orange-400';
     link: 'https://ziontechgroup.com/ai-powered-devops';
@@ -1454,22 +1415,19 @@ export const,
     launchDate: '2025-10-15';
     customers: 2500;
     rating: 4.7;
-    reviews: 1250;
-  };
+    reviews: 1250};
   // Quantum-Safe Data Storage;
-  {;
+  {
     id: 'quantum-safe-data-storage';
     name: 'Quantum-Safe Data Storage';
     tagline: 'Future-proof your data with quantum-resistant encryption';
     price: '$349';
-    period: '/month';
-    description: 'Advanced data storage platform that uses quantum-resistant encryption algorithms to protect your data against future quantum computing threats.';
+    period: '/month' description: 'Advanced data storage platform that uses quantum-resistant encryption algorithms to protect your data against future quantum computing threats.';
     features: [
       'Quantum-resistant encryptionMulti-layer securityAutomated backup and recoveryGlobal data distributionCompliance certificationsReal-time monitoringDisaster recoveryData deduplication';
       'API accessMobile applications'
     ];
-    popular: true;
-    icon: '';
+    popular: true icon: '';
     color: 'from-violet-600 to-purple-700';
     textColor: 'text-violet-400';
     link: 'https://ziontechgroup.com/quantum-safe-storage';
@@ -1625,21 +1583,17 @@ export const,
     ratin,
   g: 4.8;
     review,
-  s: 550;
-]}
+  s: 550]}
 ];
-;
-;
-  }
+}
 ];
-;
-  }
+}
 ];
 export interface Innovative2026ITInfrastructureService {/* TODO: Fix JSX expression */}
   s: string}
     websit,
   e: string}
-  };
+  }
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -1658,23 +1612,20 @@ export interface Innovative2026ITInfrastructureService {/* TODO: Fix JSX express
   g: number;
   review,
   s: number}
-;
 export const,
-  innovative2026ITInfrastructureServices: Innovative2026ITInfrastructureService[] = [;
-  // Quantum-Enhanced Cloud Infrastructure;
+  innovative2026ITInfrastructureServices: Innovative2026ITInfrastructureService[] = [
+  // Quantum-Enhanced Cloud Infrastructure
   {
     id: 'quantum-enhanced-cloud-platform';
     name: 'Quantum-Enhanced Cloud Platform';
     tagline: 'Next-generation cloud infrastructure with quantum computing capabilities';
     price: '$599';
-    period: '/month';
-    description: 'Revolutionary cloud platform that combines traditional cloud computing with quantum computing capabilities, enabling unprecedented processing power and security for enterprise applications.';
+    period: '/month' description: 'Revolutionary cloud platform that combines traditional cloud computing with quantum computing capabilities, enabling unprecedented processing power and security for enterprise applications.';
     features: [
       'Hybrid quantum-classical computingQuantum-resistant encryptionQuantum machine learning accelerationMulti-cloud orchestrationAuto-scaling infrastructureQuantum key distributionAdvanced security protocolsReal-time performance monitoring';
       'Global edge computing networkQuantum-safe data storage'
     ];
-    popular: true;
-    icon: '';
+    popular: true icon: '';
     color: 'from-indigo-600 to-purple-700';
     textColor: 'text-indigo-400';
     link: 'https://ziontechgroup.com/quantum-enhanced-cloud';
@@ -1702,22 +1653,19 @@ export const,
     launchDate: '2025-08-15';
     customers: 800;
     rating: 4.9;
-    reviews: 400;
-  };
+    reviews: 400};
   // Edge Computing Orchestration Platform;
-  {;
+  {
     id: 'edge-computing-orchestration';
     name: 'Edge Computing Orchestration Platform';
     tagline: 'Manage distributed computing at the edge with AI-powered orchestration';
     price: '$299';
-    period: '/month';
-    description: 'Advanced edge computing platform that intelligently orchestrates distributed computing resources, optimizing performance and reducing latency for IoT and real-time applications.';
+    period: '/month' description: 'Advanced edge computing platform that intelligently orchestrates distributed computing resources, optimizing performance and reducing latency for IoT and real-time applications.';
     features: [
       'AI-powered edge orchestrationGlobal edge network managementReal-time load balancingEdge AI model deploymentIoT device management5G network optimizationEdge security and compliancePerformance analytics';
       'Automated scalingMulti-cloud edge integration'
     ];
-    popular: true;
-    icon: '';
+    popular: true icon: '';
     color: 'from-teal-500 to-cyan-600';
     textColor: 'text-teal-400';
     link: 'https://ziontechgroup.com/edge-computing-orchestration';
@@ -1745,22 +1693,19 @@ export const,
     launchDate: '2025-07-20';
     customers: 1200;
     rating: 4.8;
-    reviews: 600;
-  };
+    reviews: 600};
   // Zero-Trust Network Architecture;
-  {;
+  {
     id: 'zero-trust-network-architecture';
     name: 'Zero-Trust Network Architecture';
     tagline: 'Secure your network with zero-trust principles and AI-powered monitoring';
     price: '$449';
-    period: '/month';
-    description: 'Comprehensive zero-trust network security platform that continuously verifies every user, device, and connection, providing enterprise-grade security for modern distributed networks.';
+    period: '/month' description: 'Comprehensive zero-trust network security platform that continuously verifies every user, device, and connection, providing enterprise-grade security for modern distributed networks.';
     features: [
       'Continuous identity verificationMicro-segmentationAI-powered threat detectionJust-in-time accessMulti-factor authenticationDevice trust scoringNetwork traffic analysisCompliance reporting';
       'Real-time monitoringAutomated response'
     ];
-    popular: true;
-    icon: '';
+    popular: true icon: '';
     color: 'from-emerald-600 to-green-700';
     textColor: 'text-emerald-400';
     link: 'https://ziontechgroup.com/zero-trust-network';
@@ -1788,22 +1733,19 @@ export const,
     launchDate: '2025-09-10';
     customers: 900;
     rating: 4.9;
-    reviews: 450;
-  };
+    reviews: 450};
   // AI-Powered DevOps Platform;
-  {;
+  {
     id: 'ai-powered-devops-platform';
     name: 'AI-Powered DevOps Platform';
     tagline: 'Automate and optimize your development pipeline with AI';
     price: '$199';
-    period: '/month';
-    description: 'Intelligent DevOps platform that uses AI to automate deployment, optimize performance, and predict potential issues before they impact your applications.';
+    period: '/month' description: 'Intelligent DevOps platform that uses AI to automate deployment, optimize performance, and predict potential issues before they impact your applications.';
     features: [
       'AI-powered CI/CD automationIntelligent testing and QAPerformance optimizationPredictive issue detectionAutomated rollbackInfrastructure as codeMonitoring and alertingSecurity scanning';
       'Cost optimizationTeam collaboration tools'
     ];
-    popular: true;
-    icon: '';
+    popular: true icon: '';
     color: 'from-orange-500 to-red-600';
     textColor: 'text-orange-400';
     link: 'https://ziontechgroup.com/ai-powered-devops';
@@ -1831,22 +1773,19 @@ export const,
     launchDate: '2025-10-15';
     customers: 2500;
     rating: 4.7;
-    reviews: 1250;
-  };
+    reviews: 1250};
   // Quantum-Safe Data Storage;
-  {;
+  {
     id: 'quantum-safe-data-storage';
     name: 'Quantum-Safe Data Storage';
     tagline: 'Future-proof your data with quantum-resistant encryption';
     price: '$349';
-    period: '/month';
-    description: 'Advanced data storage platform that uses quantum-resistant encryption algorithms to protect your data against future quantum computing threats.';
+    period: '/month' description: 'Advanced data storage platform that uses quantum-resistant encryption algorithms to protect your data against future quantum computing threats.';
     features: [
       'Quantum-resistant encryptionMulti-layer securityAutomated backup and recoveryGlobal data distributionCompliance certificationsReal-time monitoringDisaster recoveryData deduplication';
       'API accessMobile applications'
     ];
-    popular: true;
-    icon: '';
+    popular: true icon: '';
     color: 'from-violet-600 to-purple-700';
     textColor: 'text-violet-400';
     link: 'https://ziontechgroup.com/quantum-safe-storage';
@@ -2010,7 +1949,6 @@ export const,
     review,
   s: 550}
 ];
-;
 i,
   d: string; nam,
   e: string; taglin,
@@ -2049,7 +1987,7 @@ i,
   s: number; ratin,
   g: number; review,
   s: number; export const,
-  innovative2026ITInfrastructureServices: Innovative2026ITInfrastructureService[] =; [; // Quantum - Enhanced Cloud Infrastructure, ' i,
+  innovative2026ITInfrastructureServices: Innovative2026ITInfrastructureService[] = [ // Quantum - Enhanced Cloud Infrastructure, ' i,
   d: 'quantum - enhanced - cloud - platform',' nam,
   e: 'Quantum - Enhanced Cloud Platform', taglin,
   e:  ,' 'Next - generation cloud infrastructure with quantum computing capabilities',' pric,
@@ -2250,7 +2188,7 @@ i,
   e: '2025-11-20', customer,
   s: 1100, ratin,
   g: 4 && 4.8, review,
-  s: 550}; ]; feature,
+  s: 550}]; feature,
   s: [ export interface Innovative2026ITInfrastructureService,
   id: string, nam,
   e: string, taglin,
@@ -2304,7 +2242,7 @@ i,
   e: '2025-11-20', customer,
   s: 1100, ratin,
   g: 4.8, review,
-  s: 550}; ]; feature,
+  s: 550}] feature,
   s: [' 'Quantum-resistant encryptionMulti-layer securityAutomated backup and recoveryGlobal data distributionCompliance certificationsReal-time monitoringDisaster recoveryData deduplication'' 'API accessMobile applications' ],' popula,
   r: true, ico,
   n: '⚛️',' colo,
@@ -2328,7 +2266,7 @@ i,
   e: '280% annual growth',' varian,
   t: 'quantum-futuristic', contactInf,
   o: ]; feature,
-  s: [;' 'Quantum - resistant encryption_multi - layer security_automated backup and recovery_global data distribution_compliance certifications_real - time monitoring_disaster recovery_data deduplication'' 'API access_mobile applications' ],' popula,
+  s: [' 'Quantum - resistant encryption_multi - layer security_automated backup and recovery_global data distribution_compliance certifications_real - time monitoring_disaster recovery_data deduplication'' 'API access_mobile applications' ],' popula,
   r: true, ico,
   n: '💾',' colo,
   r: 'from - violet - 600 to - purple - 700', text_colo,
@@ -2394,16 +2332,16 @@ i,
   e: '2025 - 11 - 20', customer,
   s: 1100, ratin,
   g: 4.8, review,
-  s: 550; ], ' import { ServiceVariant } from '../types/service-variants'; export interface Innovative2026ITInfrastructureService {/* TODO: Fix JSX expression */}
+  s: 550], ' import { ServiceVariant } from '../types/service-variants'; export interface Innovative2026ITInfrastructureService {/* TODO: Fix JSX expression */}
   s: string} websit,
-  e: string} }; realImplementatio,
+  e: string} } realImplementatio,
   n: boolean; implementationDetail,
   s: string; launchDat,
   e: string; customer,
   s: number; ratin,
   g: number; review,
   s: number} ; export const,
-  innovative2026ITInfrastructureServices: Innovative2026ITInfrastructureService[] = [; // Quantum-Enhanced Cloud Infrastructure; {/* TODO: Fix JSX expression */}
+  innovative2026ITInfrastructureServices: Innovative2026ITInfrastructureService[] = [ // Quantum-Enhanced Cloud Infrastructure {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -2453,16 +2391,16 @@ i,
   e: '2025-11-20'; customer,
   s: 1100; ratin,
   g: 4.8; review,
-  s: 550; ]} ]; ; } ]; } ];' import { ServiceVariant } from '../types/service-variants'; export interface Innovative2026ITInfrastructureService {/* TODO: Fix JSX expression */}
+  s: 550]} ]; } ]} ];' import { ServiceVariant } from '../types/service-variants'; export interface Innovative2026ITInfrastructureService {/* TODO: Fix JSX expression */}
   s: string} websit,
-  e: string} }; realImplementatio,
+  e: string} } realImplementatio,
   n: boolean; implementationDetail,
   s: string; launchDat,
   e: string; customer,
   s: number; ratin,
   g: number; review,
   s: number} ; export const,
-  innovative2026ITInfrastructureServices: Innovative2026ITInfrastructureService[] = [; // Quantum-Enhanced Cloud Infrastructure; {/* TODO: Fix JSX expression */}
+  innovative2026ITInfrastructureServices: Innovative2026ITInfrastructureService[] = [ // Quantum-Enhanced Cloud Infrastructure {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,

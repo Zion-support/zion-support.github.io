@@ -68,7 +68,7 @@ const, October2025CuttingEdgeContentBanne, r = () => {/* TODO: Fix JSX expressio
         </d, i, v>
         {/* Featured, Articles, Grid */})
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">")
-        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">";)
+        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">")
           {featuredArticl, e, s.m, a, p((artic, l, e, ind, e, x) => (
             <Li, n, k;
         {/* Featured, Articles, Grid */}
@@ -103,7 +103,7 @@ const, October2025CuttingEdgeContentBanne, r = () => {/* TODO: Fix JSX expressio
   r:shad, o, w-purp, l, e-5, 0, 0/20"
             ></Li>
               {/* Card, gradient, overlay */}
-              <div, className={`absolute, inse, t-0, b, g-gradie, n, t-to-br ${artic, l, e.gradie, n, t} opaci, t, y-0, grou, p-hov, e, r:opaci, t, y-10, transitio, n-opacity, duratio, n-3, 0, 0`}></d, i, v>`;`"
+              <div, className={`absolute, inse, t-0, b, g-gradie, n, t-to-br ${artic, l, e.gradie, n, t} opaci, t, y-0, grou, p-hov, e, r:opaci, t, y-10, transitio, n-opacity, duratio, n-3, 0, 0`}></d, i, v>``"
               <div, className="relativ, e, p-6">";
                 {/* Icon, and, Category */}</div>
                 <div, className="flex, item, s-center, justif, y-between, m, b-4"></div>
@@ -111,7 +111,7 @@ const, October2025CuttingEdgeContentBanne, r = () => {/* TODO: Fix JSX expressio
                 {/* Icon, and, Category */}"
                 <div, className="flex, item, s-center, justif, y-between, m, b-4"></div>"
                 <div, className="flex, item, s-center, justif, y-between, m, b-4">";`
-                  <div, className={`p-3, rounde, d-xl, b, g-gradie, n, t-to-br ${artic, l, e.gradie, n, t} te, x, t-white, shado, w-lg`}>`;`
+                  <div, className={`p-3, rounde, d-xl, b, g-gradie, n, t-to-br ${artic, l, e.gradie, n, t} te, x, t-white, shado, w-lg`}>``
                     {artic, l, e.ic, o, n}
                   </d, i, v>"
                   <span, className="te, x, t-xs, fon, t-semibold, p, x-3, p, y-1, rounde, d-full, b, g-purp, l, e-5, 0, 0/20, tex, t-purp, l, e-300, border, border-purp, l, e-5, 0, 0/30">";
@@ -233,16 +233,14 @@ const, October2025CuttingEdgeContentBanne, r = () => {/* TODO: Fix JSX expressio
         </d, i, v>
       </d, i, v>
       <sty, l, e>{/* TODO: Fix JSX expression */}
-          0%, 1, 0, 0% { transfo, r, m: transla, t, e(0, 0) sca, l, e(1); }
-          33% { transfo, r, m: transla, t, e(30, p, x, -50, p, x) sca, l, e(1.1); }
-          66% { transfo, r, m: transla, t, e(-20, p, x, 20, p, x) sca, l, e(0.9); }
+          0%, 1, 0, 0% { transfo, r, m: transla, t, e(0, 0) sca, l, e(1)}
+          33% { transfo, r, m: transla, t, e(30, p, x, -50, p, x) sca, l, e(1.1)}
+          66% { transfo, r, m: transla, t, e(-20, p, x, 20, p, x) sca, l, e(0.9)}
         }
         .anima, t, e-bl, o, b {
-          animati, o, n: blob, 7s, infinite;
-        }
+          animati, o, n: blob, 7s, infinite}
         .animati, o, n-del, a, y-20, 0, 0 {
-          animati, o, n-del, a, y: 2 s;
-        }
+          animati, o, n-del, a, y: 2 s}
         .animati, o, n-del, a, y-40, 0, 0 {
           animati, o, n-del, a, y: 4s;
           animati, o, n: blob, 7s, infinite;
@@ -256,9 +254,8 @@ const, October2025CuttingEdgeContentBanne, r = () => {/* TODO: Fix JSX expressio
         }
         .animati, o, n-del, a, y-40, 0, 0 {/* TODO: Fix JSX expression */}
         }`
-      `}</sty, l, e>`;`
+      `}</sty, l, e>``
     </d, i, v>
-  );
-};
-export default October2025CuttingEdgeContentBanner;
+  )};
+export default October2025CuttingEdgeContentBanner
 ;"`

@@ -29,7 +29,7 @@ export default function October2025NewAdvancedAIContentBann, e, r() {/* TODO: Fi
         >
           <div, className='inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-yell, o, w-400, t, o-oran, g, e-500, tex, t-gr, a, y-900, p, x-6, p, y-2, rounde, d-full, fon, t-bold, tex, t-sm, m, b-4'></div>
             <Sparkles, className='w-5 h-5, animat, e-pul, s, e' />
-            OCTOBER, 2025, BREAKTHROUGH;
+            OCTOBER, 2025, BREAKTHROUGH
             <Sparkles, className='w-5 h-5, animat, e-pul, s, e' />
           </div>
           <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, tex, t-white, m, b-4'>
@@ -291,5 +291,4 @@ export default function October2025NewAdvancedAIContentBann, e, r() {/* TODO: Fi
         </moti, o, n.d, i, v>
       </div>
     </div>
-  );
-}
+  )}

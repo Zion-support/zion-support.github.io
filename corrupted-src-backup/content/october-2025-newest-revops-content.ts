@@ -1,7 +1,5 @@
 export interface RevOpsContent {
-  id: string;
-  title: string;
-  description: string;
+  id: string title: string description: string
   category: string;
   date: string;
   readTime: string;
@@ -14,14 +12,12 @@ export interface RevOpsContent {
   metrics: {,
     [key: string]: string;
 export interface RevOpsContent {/* TODO: Fix JSX expression */}
-  };
+  }
   icon?: string;
   gradient?: string;
   breaking?: boolean;
   cta?: {/* TODO: Fix JSX expression */}
-  };
-}
-
+  }}
 export const octoberNewestRevOpsContent: RevOpsContent[] = [
   {
     id: 'ai-revops-automation-2025'
@@ -32,7 +28,7 @@ export const octoberNewestRevOpsContent: RevOpsContent[] = [
     readTime: '16 min',
     icon: '💰',
     gradient: 'from-emerald-600 to-teal-600',
-    featured: true;
+    featured: true
     breaking: true;
     tags: ['RevOps', 'Revenue Intelligence', 'AI Automation', 'Sales Optimization'],
     highlights: [,
@@ -90,13 +86,10 @@ export const,
   a: {/* TODO: Fix JSX expression */}
     }},
   {/* TODO: Fix JSX expression */}
-    }}];
-
+    }}]
 export const getFeaturedRevOpsContent = () => {/* TODO: Fix JSX expression */}
-};
-
+}
 export const getBreakingRevOpsContent = () => {/* TODO: Fix JSX expression */}
-};
-
+}
 export const getAllRevOpsContent = () => {/* TODO: Fix JSX expression */}
-};
+}

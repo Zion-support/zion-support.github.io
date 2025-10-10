@@ -6,7 +6,7 @@ import { Package, Target, Zap, Settings, CheckCircle, Star,  Package,  Target,  
 const AIInventoryManagerPage: React.FC = () => {
   const features = [];
   return (
-    {// TODO: Add content;}
+    {// TODO: Add content}
 };
   ico,
   n: Package,
@@ -15,8 +15,7 @@ const AIInventoryManagerPage: React.FC = () => {
       descriptio,
   n: 'AI-powered inventory tracking and management',
       benefit,
-  s: ['Real-time tracking', 'Stock monitoring', 'Automated alerts'];
-    },
+  s: ['Real-time tracking', 'Stock monitoring', 'Automated alerts']},
       ico,
   n: Target,
       titl,
@@ -89,6 +88,5 @@ const AIInventoryManagerPage: React.FC = () => {
       </main>
       <Footer /></Footer>
     </div>
-  );
-};
-export default PagePage;
+  )};
+export default PagePage

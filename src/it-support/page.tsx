@@ -90,9 +90,8 @@ const ITSupportPage: React.FC = () => {
       </main>
       <Footer />
     </div>
-  );
-};
-export default ITSupportPage;
+  )};
+export default ITSupportPage
   </h2>
   </a>
   </a>

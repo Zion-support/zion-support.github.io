@@ -6,7 +6,7 @@ import { Settings, Zap, Shield, BarChart, CheckCircle, Star, Code,  Settings,  Z
 const DevOpsCICDPage: React.FC = () => {
   const features = [];
   return (
-    {// TODO: Add content;}
+    {// TODO: Add content}
 };
   ico,
   n: Settings,
@@ -15,8 +15,7 @@ const DevOpsCICDPage: React.FC = () => {
       descriptio,
   n: 'Automated build, test, and deployment pipelines',
       benefit,
-  s: ['Automated testing', 'Continuous deployment', 'Quality gates'];
-    },
+  s: ['Automated testing', 'Continuous deployment', 'Quality gates']},
       ico,
   n: Zap,
       titl,
@@ -89,6 +88,5 @@ const DevOpsCICDPage: React.FC = () => {
       </main>
       <Footer /></Footer>
     </div>
-  );
-};
-export default DevopsCicdPage;
+  )};
+export default DevopsCicdPage

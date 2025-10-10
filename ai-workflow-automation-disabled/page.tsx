@@ -7,26 +7,22 @@ import { Workflow, Zap, Brain, BarChart, Clock, Shield, Users, CheckCircle, Phon
 const AIWorkflowAutomationPage: React.FC = () => {
   const features = [
     {
-      icon: Zap;
-      title: 'Intelligent Process Automation',
+      icon: Zap title: 'Intelligent Process Automation',
       description: 'AI-powered automation that learns from your workflows and optimizes them continuously.',
       benefits: ['Process Learning', 'Automatic Optimization', 'Exception Handling', 'Performance Monitoring']
     },
     {
-      icon: Settings;
-      title: 'Workflow Designer',
+      icon: Settings title: 'Workflow Designer',
       description: 'Visual workflow designer that allows you to create complex automation workflows without coding.',
       benefits: ['Drag & Drop Interface', 'Visual Logic Builder', 'Template Library', 'Testing Tools']
     },
     {
-      icon: Clock;
-      title: 'Real-time Monitoring',
+      icon: Clock title: 'Real-time Monitoring',
       description: 'Monitor your automated workflows in real-time with detailed analytics and performance metrics.',
       benefits: ['Live Monitoring', 'Performance Metrics', 'Error Tracking', 'Alert System']
     },
     {
-      icon: Users;
-      title: 'Team Collaboration',
+      icon: Users title: 'Team Collaboration',
       description: 'Collaborate with your team on workflow design and management with role-based access control.',
       benefits: ['Role-based Access', 'Team Collaboration', 'Version Control', 'Approval Workflows']
 const,
@@ -61,23 +57,19 @@ const,
     {
       title: 'Customer Onboarding',
       description: 'Automate the entire customer onboarding process from signup to first value delivery with personalized workflows.',
-      icon: Users;
-    },
+      icon: Users},
     {
       title: 'Invoice Processing',
       description: 'Automatically process invoices, validate data, route for approval, and update accounting systems.',
-      icon: Database;
-    },
+      icon: Database},
     {
       title: 'Lead Management',
       description: 'Automate lead scoring, assignment, follow-up sequences, and CRM updates based on lead behavior.',
-      icon: Globe;
-    },
+      icon: Globe},
     {
       title: 'Employee Onboarding',
       description: 'Streamline new hire processes with automated document collection, system access, and training assignments.',
-      icon: Settings;
-    }
+      icon: Settings}
   ];
   return(<React.Fragment>
       <SEOOptimizer;
@@ -201,8 +193,7 @@ const,
       </div>
     </div>
     </React.Fragment>
-  );
-};
+  )};
 const AIWorkflowAutomationPage = () => {
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
   return (
@@ -213,7 +204,7 @@ const AIWorkflowAutomationPage = () => {
           {/* Hero Section */}</div>
           <section className="text-center mb-16">
             <h1 className="text-4xl sm: text-5xl md:text-6xl font-bold text-white mb-6 neon-text">)
-              AI Workflow Automation;)
+              AI Workflow Automation)
             </h1>)
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">)
               Automate complex business workflows with AI-powered intelligence that learns),
@@ -341,8 +332,7 @@ const AIWorkflowAutomationPage = () => {
         </main>
         <Footer />
       </div>,
-    </div>);
-}</h3>
+    </div>)}</h3>
   </h2>
   </h2>
   </div>

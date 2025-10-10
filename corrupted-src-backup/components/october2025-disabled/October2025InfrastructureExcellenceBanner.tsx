@@ -101,8 +101,7 @@ const October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX expr
                   </div>
                 </div>
               </Li, n, k>
-            );
-          })}
+            )})}
         </div>
         {/* CTA, Sectio, n */}
         <div, classNam, e = 'te, x, t-cent, e, r'></div>
@@ -141,7 +140,6 @@ const October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX expr
         </div>
       </div>
     </div>
-  );
-};
-export default October2025InfrastructureExcellenceBanner;
+  )};
+export default October2025InfrastructureExcellenceBanner
 "`

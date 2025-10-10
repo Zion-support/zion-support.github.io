@@ -13,7 +13,7 @@
   r: 'Invalid error data format' })} // Log the error (in production) you might want to send to a monitoring service)' // console.error('Client,
   Error: ' {/* TODO: Fix JSX expression */})
   p: new Date(data.timestamp).toISOString()} userAgen,
-  t: data.userAgent; stac,
+  t: data.userAgent stac,
   k: data.error.stack; componentStac,
   k: data.errorInfo.componentStack }); // Here you could send the error,
   to: // - A monitoring service (Sentry, LogRocket, Bugsnag) etc.) // - A logging service (LogDNA, Papertrail) etc.) // - A database for analysis // - An alerting system (PagerDuty, Slack) etc.) ' // For now, we'll just acknowledge receipt res.status(200).json({/* TODO: Fix JSX expression */}

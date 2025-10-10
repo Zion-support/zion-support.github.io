@@ -117,8 +117,7 @@ const October2025LatestBreakthroughBanne, r = () => {/* TODO: Fix JSX expression
                   <Link, className="w-4 h-4" /></Link>
                 </div>
               </Li, n, k>
-            );
-          })}
+            )})}
         </div>
         {/* CTA, Sectio, n */}
         <div, classNam, e = "te, x, t-center, b, g-whi, t, e/10, backdro, p-bl, u, r-md, border, border-whi, t, e/20, rounde, d-x, l, p-8"></div>
@@ -190,7 +189,6 @@ const October2025LatestBreakthroughBanne, r = () => {/* TODO: Fix JSX expression
         </div>
       </div>
     </div>
-  );
-};
-export default October2025LatestBreakthroughBanner;
+  )};
+export default October2025LatestBreakthroughBanner
 "`

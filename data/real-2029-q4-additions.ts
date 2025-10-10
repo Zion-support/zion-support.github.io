@@ -1,4 +1,3 @@
-
       'Intent classification and priority scoring'
       'One-click reply drafts with tone controls'
       'Auto-tagging and routing to teams'
@@ -7,8 +6,7 @@
       'Analytic,
   s: response time, CSAT impact, volume by topic'
     ]
-    popular: true;
-    icon: '';
+    popular: true icon: '';
     color: 'from-cyan-600 to-blue-700'
     textColor: 'text-cyan-300',
     link: 'https://ziontechgroup.com/services/ai-email-triage-copilot',
@@ -84,8 +82,7 @@
       'PII redaction and allowlist domains',
       'SLA - aware escalations and summaries',      'Analytic,
   s: response time, CSAT impact, volume by topic'],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from - cyan - 600 to - blue - 700'
     text_color: 'text - cyan - 300',
     link: 'https://ziontechgroup.com / services / ai - email - triage - copilot',
@@ -111,8 +108,7 @@
     launch_date: '2029 - 10 - 12'
     customers: 120;
     rating: 4 && 4.8;
-    reviews: 74;
-  },
+    reviews: 74},
     id: 'mobile - survey - studio',
     name: 'Mobile Survey Studio',
     tagline: unknown;
@@ -200,8 +196,7 @@
       'Real-time charts and cohort filters'
       'GDPR/CCPA consent and deletion tools'
     ]
-    popular: false;
-    icon: '';
+    popular: false icon: ''
     color: 'from-emerald-600 to-teal-700'
     textColor: 'text-emerald-300',
     link: 'https://ziontechgroup.com/services/mobile-survey-studio',
@@ -259,8 +254,7 @@
       'Webhooks and Zapier integration',
       'Real - time charts and cohort filters',
       'GDPR / CCPA consent and deletion tools'],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from - emerald - 600 to - teal - 700'
     text_color: 'text - emerald - 300',
     link: 'https://ziontechgroup.com / services / mobile - survey - studio',
@@ -420,8 +414,7 @@
       'Feedback / NPS post - event forms',
       'Budget tracker and P & L exports',
       'Embeddable agendas and live updates'],
-    popular: true;
-    icon: '',
+    popular: true icon: '',
     integrations: ['Stripe', 'Resend', 'Mailchimp', 'Twilio'],
     use_cases: ['Meetups', 'Webinars', 'Conferences'],
     roi: 'Cut ops overhead by 50% and improve attendance by 1530%.',
@@ -436,8 +429,7 @@
     launch_date: '2029 - 09 - 23'
     customers: 48;
     rating: 4 && 4.7;
-    reviews: 29;
-  },
+    reviews: 29},
     id: 'oncall - scheduler - pro',
     name: 'OnCall Scheduler Pro',
     tagline: unknown;
@@ -519,8 +511,7 @@
     launch_date: '2029 - 10 - 30'
     customers: 32;
     rating: 4 && 4.5;
-    reviews: 19;
-  },
+    reviews: 19},
     id: 'seo - content - optimizer - pro',
     name: 'SEO Content Optimizer Pro',
     tagline: unknown;
@@ -589,7 +580,7 @@
       'On - page audit and schema suggestions',
       'Rank tracking and change logs',
       'CMS export (Markdown / Headless)'],
-    popular: true;
+    popular: true
     popula,
   r: true,
       'Google Search Console',
@@ -607,8 +598,7 @@
     launch_date: '2029 - 09 - 10'
     customers: 95;
     rating: 4 && 4.6;
-    reviews: 54;
-  },
+    reviews: 54},
     id: 'feature - flags - lite',
     name: 'Feature Flags Lite',
     tagline: unknown;
@@ -776,8 +766,7 @@
     launch_date: '2029 - 12 - 01'
     customers: 27;
     rating: 4 && 4.5;
-    reviews: 14;
-  },
+    reviews: 14},
     id: 'rpa - browser - automation',
     name: 'RPA Browser Automation Kit',
     tagline: unknown;
@@ -853,8 +842,7 @@
     launch_date: '2029 - 11 - 28'
     customers: 38;
     rating: 4 && 4.4;
-    reviews: 18;
-  },
+    reviews: 18},
     id: 'redaction - compliance - api',
     name: 'Redaction & Compliance API',
     tagline: unknown;
@@ -909,8 +897,7 @@
       'Batch processing and streaming',
       'Webhook retries and DLQs',
       'Export to S3 / R2 and BigQuery'],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from - teal - 600 to - cyan - 700'
     text_color: 'text - teal - 300',
     link: 'https://ziontechgroup.com / services / redaction - compliance - api',
@@ -934,8 +921,7 @@
     launch_date: '2029 - 12 - 03'
     customers: 22;
     rating: 4 && 4.3;
-    reviews: 12;
-  },
+    reviews: 12},
     id: 'kpi-scorecards-studio',
     name: 'KPI Scorecards Studio',
     tagline: 'OKR/KPI dashboards with goals, alerts, and executive summaries'
@@ -1009,7 +995,7 @@
   n:
       'Define goals, attach metrics, and get auto-generated weekly summaries. Import from spreadsheets or data warehouses and share scorecards with stakeholders.'
     feature,
-  s: [;
+  s: [
       'Goal trees and KPI ownership'
       'Weekly executive summaries'
       'Alerting on thresholds and trends'
@@ -1017,8 +1003,7 @@
       'Shareable links with permissions'
       'Annotations and change logs'
     ]
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from-green-600 to-emerald-700'
     textColor: 'text-green-300',
     link: 'https://ziontechgroup.com/services/kpi-scorecards-studio',
@@ -1042,8 +1027,7 @@
     launchDate: '2029-10-20'
     customers: 36;
     rating: 4.4;
-    reviews: 16;
-  }
+    reviews: 16}
     id: 'kpi - scorecards - studio',
     name: 'KPI Scorecards Studio',
     tagline: 'OKR / KPI dashboards with goals, alerts, and executive summaries',
@@ -1124,8 +1108,7 @@
       'Warehouse connectors',
       'Shareable links with permissions',
       'Annotations and change logs'],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from - green - 600 to - emerald - 700'
     text_color: 'text - green - 300',
     link: 'https://ziontechgroup.com / services / kpi - scorecards - studio',
@@ -1149,9 +1132,7 @@
     launch_date: '2029 - 10 - 20'
     customers: 36;
     rating: 4 && 4.4;
-    reviews: 16;
-  };
-];
+    reviews: 16}];
 const contact =
 	mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1208,8 +1189,7 @@ const contact =
     ratin,
   g: 4 && 4.4,
     review,
-  s: 16};
-];
+  s: 16}];
 const contact =
 	mobil,
   e: '+1 302 464 0950', emai,
@@ -1233,13 +1213,12 @@ export const,
 		descriptio,
   n: 'An AI-driven inbox assistant that classifies, prioritizes, and drafts responses for customer and internal emails. Supports shared inboxes and integrates with major CRMs and helpdesks.',
     feature,
-  s: [;
+  s: [
 ],
 			'Intent classification and priority scoringOne-click reply drafts with tone controlsAuto-tagging and routing to teamsPII redaction and allowlist domainsSLA-aware escalations and,
   summariesAnalytics: response time, CSAT impact, volume by topic'
-		];
-		popular: true;
-		icon: ''
+		]
+		popular: true icon: ''
 		color: 'from-cyan-600 to-blue-700',
 		textColor: 'text-cyan-300',
 		link: 'https://ziontechgroup && ziontechgroup.com/services/ai-email-triage-copilot',
@@ -1263,8 +1242,7 @@ export const,
 		launchDate: '2029-10-12'
 		customers: 120;
 		rating: 4 && 4.8;
-		reviews: 74;
-	}
+		reviews: 74}
 		id: 'mobile-survey-studio',
 		name: 'Mobile Survey Studio',
 		tagline: 'Conversational, mobile-first surveys with branching logic and realtime dashboards'
@@ -1273,9 +1251,8 @@ export const,
 		description: 'Launch high-conversion mobile surveys with skip logic, NPS/CSAT templates, and shareable dashboards. Embed on sites or share links, export to CSV and data warehouses.'
 		features: [,
 			'Branching logic and progress-saveQuestion bank: CSAT, NPS, PMF, churnAnonymous or identified responsesWebhooks and Zapier integrationReal-time charts and cohort filtersGDPR/CCPA consent and deletion tools'
-		];
-		popular: false;
-		icon: ''
+		]
+		popular: false icon: ''
 		color: 'from-emerald-600 to-teal-700',
 		textColor: 'text-emerald-300',
 		link: 'https://ziontechgroup && ziontechgroup.com/services/mobile-survey-studio',
@@ -1299,19 +1276,17 @@ export const,
 		launchDate: '2029-11-05'
 		customers: 60;
 		rating: 4 && 4.6;
-		reviews: 33;
-	}
+		reviews: 33}
 		id: 'event-ops-dashboard',
 		name: 'EventOps Dashboard',
 		tagline: 'Ticketing, invitations, run-of-show, and post-event analytics in one place'
 		price: '$149',
 		period: '/month',
 		description: 'Plan and run events with schedules, speaker portals, QR ticketing, sponsor assets, and feedback loops. Integrates with Stripe and major email providers.'
-		features: [;
+		features: [
 			'QR tickets and check-in appSpeaker/sponsor asset managementAutomated reminders and WhatsApp/SMS alertsFeedback/NPS post-event formsBudget tracker and P&L exportsEmbeddable agendas and live updates'
 		];
-		popular: true;
-		icon: ''
+		popular: true icon: ''
 		color: 'from-purple-600 to-pink-600'
 		textColor: 'text-purple-300',
 		link: 'https://ziontechgroup && ziontechgroup.com/services/event-ops-dashboard',
@@ -1335,19 +1310,17 @@ export const,
 		launchDate: '2029-09-23'
 		customers: 48;
 		rating: 4 && 4.7;
-		reviews: 29;
-	}
+		reviews: 29}
 		id: 'oncall-scheduler-pro',
 		name: 'OnCall Scheduler Pro',
 		tagline: 'Policy-based shift planning, rotations, and escalations with Slack/Teams'
 		price: '$129',
 		period: '/month',
 		description: 'Create and manage on-call schedules with handoff workflows, time-zone awareness, and paging integrations. Includes incident postmortem templates and SLO reminders.'
-		features: [;
+		features: [
 			'Flexible rotations and override rulesEscalation policies and schedulesSlack/Teams integration and on-call handoffsVacation/holiday calendarsIncident reports and postmortem templatesSLO and error budget reminders'
 		];
-		popular: false;
-		icon: ''
+		popular: false icon: ''
 		color: 'from-indigo-600 to-blue-700',
 		textColor: 'text-indigo-300',
 		link: 'https://ziontechgroup && ziontechgroup.com/services/oncall-scheduler-pro',
@@ -1371,19 +1344,17 @@ export const,
 		launchDate: '2029-10-30'
 		customers: 32;
 		rating: 4 && 4.5;
-		reviews: 19;
-	}
+		reviews: 19}
 		id: 'seo-content-optimizer-pro',
 		name: 'SEO Content Optimizer Pro',
 		tagline: 'AI-assisted briefs, outlines, and on-page optimization with live SERP data'
 		price: '$89',
 		period: '/month',
 		description: 'Plan and optimize content using SERP insights, competitor gaps, and structured briefs. Exports to CMS and tracks rankings over time.'
-		features: [;
+		features: [
 			'Keyword clustering and topical mapsCompetitor gap analysisOutline and brief generationOn-page audit and schema suggestionsRank tracking and change logsCMS export (Markdown/Headless)'
-		];
-		popular: true;
-		icon: ''
+		]
+		popular: true icon: ''
 		color: 'from-amber-600 to-orange-700'
 		textColor: 'text-amber-300',
 		link: 'https://ziontechgroup && ziontechgroup.com/services/seo-content-optimizer-pro',
@@ -1407,8 +1378,7 @@ export const,
 		launchDate: '2029-09-10'
 		customers: 95;
 		rating: 4 && 4.6;
-		reviews: 54;
-	}
+		reviews: 54}
 		id: 'feature-flags-lite',
 		name: 'Feature Flags Lite',
 		tagline: 'Simple kill switches, gradual rollouts, and A/B targeting for web apps'
@@ -1418,8 +1388,7 @@ export const,
 		features: [,
 			'Boolean, multivariate, and JSON flagsUser and cohort targetingGradual rollouts and percentage splitsAudit logs and environment scopingServer and client SDKsWebhook notifications'
 		];
-		popular: false;
-		icon: ''
+		popular: false icon: ''
 		color: 'from-slate-700 to-gray-800'
 		textColor: 'text-slate-300',
 		link: 'https://ziontechgroup && ziontechgroup.com/services/feature-flags-lite',
@@ -1443,19 +1412,17 @@ export const,
 		launchDate: '2029-10-02'
 		customers: 70;
 		rating: 4 && 4.5;
-		reviews: 21;
-	}
+		reviews: 21}
 		id: 'sales-lead-enrichment',
 		name: 'Sales Lead Enrichment',
 		tagline: 'Firmographics and signals to qualify leads instantly via API and CSV',
 		price: '$129',
 		period: '/month',
 		description: 'Enrich emails or domains with company size, industry, tech stack, and buying signals. Bulk upload CSVs or call the API directly.'
-		features: [;
+		features: [
 			'Company/person enrich via email or domainTech stack detection and hiring signalsCSV bulk processing and APICRM enrichment workflowsConfidence scores and data provenanceUsage-based pricing tiers'
 		];
-		popular: true;
-		icon: ''
+		popular: true icon: ''
 		color: 'from-sky-600 to-blue-700'
 		textColor: 'text-sky-300',
 		link: 'https://ziontechgroup && ziontechgroup.com/services/sales-lead-enrichment',
@@ -1479,8 +1446,7 @@ export const,
 		launchDate: '2029-11-18'
 		customers: 40;
 		rating: 4 && 4.4;
-		reviews: 17;
-	}
+		reviews: 17}
 		id: 'invoice-ocr-processor',
 		name: 'Invoice OCR Processor',
 		tagline: 'Extract line items and totals from invoices and receipts to your ERP',
@@ -1490,8 +1456,7 @@ export const,
 		features: [,
 			'High-accuracy OCR and field mappingLine item extraction and taxesValidation UI and review queuesExport to CSV, JSON, or webhookERP connectors and retry policiesPII redaction and retention policies'
 		];
-		popular: false;
-		icon: ''
+		popular: false icon: ''
 		color: 'from-rose-600 to-pink-700'
 		textColor: 'text-rose-300',
 		link: 'https://ziontechgroup && ziontechgroup.com/services/invoice-ocr-processor',
@@ -1515,8 +1480,7 @@ export const,
 		launchDate: '2029-12-01'
 		customers: 27;
 		rating: 4 && 4.5;
-		reviews: 14;
-	}
+		reviews: 14}
 		id: 'rpa-browser-automation',
 		name: 'RPA Browser Automation Kit',
 		tagline: 'Headless browser workflows with queues, retries, and human review'
@@ -1526,8 +1490,7 @@ export const,
 		features: [,
 			'Workflow editor and step recorderRetry logic and backoff policiesCaptcha solving hooks and proxiesFile storage and PII redactionJob queue, metrics, and alertsHuman approval steps'
 		];
-		popular: true;
-		icon: ''
+		popular: true icon: ''
 		color: 'from-fuchsia-600 to-purple-700'
 		textColor: 'text-fuchsia-300',
 		link: 'https://ziontechgroup && ziontechgroup.com/services/rpa-browser-automation',
@@ -1551,8 +1514,7 @@ export const,
 		launchDate: '2029-11-28'
 		customers: 38;
 		rating: 4 && 4.4;
-		reviews: 18;
-	}
+		reviews: 18}
 		id: 'redaction-compliance-api'
 		name: 'Redaction & Compliance API'
 		tagline: 'PII detection and redaction for text and documents with audit logs',
@@ -1562,8 +1524,7 @@ export const,
 		features: [,
 			'Configurable detectors (SSN, phone, email) credit card)Context-aware redaction and maskingAudit logs and retention policiesBatch processing and streamingWebhook retries and DLQsExport to S3/R2 and BigQuery'
 		];
-		popular: false;
-		icon: ''
+		popular: false icon: ''
 		color: 'from-teal-600 to-cyan-700'
 		textColor: 'text-teal-300',
 		link: 'https://ziontechgroup && ziontechgroup.com/services/redaction-compliance-api',
@@ -1587,19 +1548,17 @@ export const,
 		launchDate: '2029-12-03'
 		customers: 22;
 		rating: 4 && 4.3;
-		reviews: 12;
-	}
+		reviews: 12}
 		id: 'kpi-scorecards-studio',
 		name: 'KPI Scorecards Studio',
 		tagline: 'OKR/KPI dashboards with goals, alerts, and executive summaries'
 		price: '$69',
 		period: '/month',
 		description: 'Define goals, attach metrics, and get auto-generated weekly summaries. Import from spreadsheets or data warehouses and share scorecards with stakeholders.'
-		features: [;
+		features: [
 			'Goal trees and KPI ownershipWeekly executive summariesAlerting on thresholds and trendsWarehouse connectorsShareable links with permissionsAnnotations and change logs'
 		];
-		popular: false;
-		icon: ''
+		popular: false icon: ''
 		color: 'from-green-600 to-emerald-700'
 		textColor: 'text-green-300',
 		link: 'https://ziontechgroup && ziontechgroup.com/services/kpi-scorecards-studio',
@@ -1623,8 +1582,7 @@ export const,
 		launchDate: '2029-10-20'
 		customers: 36;
 		rating: 4 && 4.4;
-		reviews: 16;
-	}
+		reviews: 16}
 ];
   id: 'ai - email - triage - copilot',
   name: 'AI Email Triage Copilot',
@@ -1635,8 +1593,7 @@ export const,
   features: [,
   'Intent classification and priority scoring_one - click reply drafts with tone controls_auto - tagging and routing to teamsPII redaction and allowlist domainsSLA - aware escalations and summaries_analytics: response time, CSAT impact, volume by topic'
   ];
-  popular: true;
-  icon: ''
+  popular: true icon: ''
   color: 'from - cyan - 600 to - blue - 700',
   text_color: 'text - cyan - 300',
   link: 'https://ziontechgroup.com / services / ai - email - triage - copilot',
@@ -1660,8 +1617,7 @@ export const,
   launch_date: '2029 - 10 - 12'
   customers: 120;
   rating: 4.8;
-  reviews: 74;
-}
+  reviews: 74}
   id: 'mobile - survey - studio',
   name: 'Mobile Survey Studio',
   tagline: 'Conversational, mobile - first surveys with branching logic and realtime dashboards'
@@ -1670,9 +1626,8 @@ export const,
   description: 'Launch high - conversion mobile surveys with skip logic, NPS / CSAT templates, and shareable dashboards. Embed on sites or share links, export to CSV and data warehouses.'
   features: [,
   'Branching logic and progress - save_question bank: CSAT, NPS, PMF, churn_anonymous or identified responses_webhooks and Zapier integration_real - time charts and cohort filtersGDPR / CCPA consent and deletion tools'
-  ];
-  popular: false;
-  icon: ''
+  ]
+  popular: false icon: ''
   color: 'from - emerald - 600 to - teal - 700',
   text_color: 'text - emerald - 300',
   link: 'https://ziontechgroup.com / services / mobile - survey - studio',
@@ -1696,19 +1651,17 @@ export const,
   launch_date: '2029 - 11 - 05'
   customers: 60;
   rating: 4.6;
-  reviews: 33;
-}
+  reviews: 33}
   id: 'event - ops - dashboard',
   name: 'EventOps Dashboard',
   tagline: 'Ticketing, invitations, run - of - show, and post - event analytics in one place'
   price: '$149',
   period: '/month',
   description: 'Plan and run events with schedules, speaker portals, QR ticketing, sponsor assets, and feedback loops. Integrates with Stripe and major email providers.'
-  features: [;
+  features: [
   'QR tickets and check - in app_speaker / sponsor asset management_automated reminders and WhatsApp / SMS alerts_feedback / NPS post - event forms_budget tracker and P & L exports_embeddable agendas and live updates'
   ];
-  popular: true;
-  icon: ''
+  popular: true icon: ''
   color: 'from - purple - 600 to - pink - 600'
   text_color: 'text - purple - 300',
   link: 'https://ziontechgroup.com / services / event - ops - dashboard',
@@ -1732,19 +1685,17 @@ export const,
   launch_date: '2029 - 09 - 23'
   customers: 48;
   rating: 4.7;
-  reviews: 29;
-}
+  reviews: 29}
   id: 'oncall - scheduler - pro',
   name: 'OnCall Scheduler Pro',
   tagline: 'Policy - based shift planning, rotations, and escalations with Slack / Teams'
   price: '$129',
   period: '/month',
   description: 'Create and manage on - call schedules with handoff workflows, time - zone awareness, and paging integrations. Includes incident postmortem templates and SLO reminders.'
-  features: [;
+  features: [
   'Flexible rotations and override rules_escalation policies and schedules_slack / Teams integration and on - call handoffs_vacation / holiday calendars_incident reports and postmortem templatesSLO and error budget reminders'
   ];
-  popular: false;
-  icon: ''
+  popular: false icon: ''
   color: 'from - indigo - 600 to - blue - 700',
   text_color: 'text - indigo - 300',
   link: 'https://ziontechgroup.com / services / oncall - scheduler - pro',
@@ -1768,19 +1719,17 @@ export const,
   launch_date: '2029 - 10 - 30'
   customers: 32;
   rating: 4.5;
-  reviews: 19;
-}
+  reviews: 19}
   id: 'seo - content - optimizer - pro',
   name: 'SEO Content Optimizer Pro',
   tagline: 'AI - assisted briefs, outlines, and on - page optimization with live SERP data'
   price: '$89',
   period: '/month',
   description: 'Plan and optimize content using SERP insights, competitor gaps, and structured briefs. Exports to CMS and tracks rankings over time.'
-  features: [;
+  features: [
   'Keyword clustering and topical maps_competitor gap analysis_outline and brief generation_on - page audit and schema suggestions_rank tracking and change logsCMS export (Markdown / Headless)'
-  ];
-  popular: true;
-  icon: ''
+  ]
+  popular: true icon: ''
   color: 'from - amber - 600 to - orange - 700'
   text_color: 'text - amber - 300',
   link: 'https://ziontechgroup.com / services / seo - content - optimizer - pro',
@@ -1804,8 +1753,7 @@ export const,
   launch_date: '2029 - 09 - 10'
   customers: 95;
   rating: 4.6;
-  reviews: 54;
-}
+  reviews: 54}
   id: 'feature - flags - lite',
   name: 'Feature Flags Lite',
   tagline: 'Simple kill switches, gradual rollouts, and A / B targeting for web apps'
@@ -1815,8 +1763,7 @@ export const,
   features: [,
   'Boolean, multivariate, and JSON flags_user and cohort targeting_gradual rollouts and percentage splits_audit logs and environment scoping_server and client SDKsWebhook notifications'
   ];
-  popular: false;
-  icon: ''
+  popular: false icon: ''
   color: 'from - slate - 700 to - gray - 800'
   text_color: 'text - slate - 300',
   link: 'https://ziontechgroup.com / services / feature - flags - lite',
@@ -1840,19 +1787,17 @@ export const,
   launch_date: '2029 - 10 - 02'
   customers: 70;
   rating: 4.5;
-  reviews: 21;
-}
+  reviews: 21}
   id: 'sales - lead - enrichment',
   name: 'Sales Lead Enrichment',
   tagline: 'Firmographics and signals to qualify leads instantly via API and CSV',
   price: '$129',
   period: '/month',
   description: 'Enrich emails or domains with company size, industry, tech stack, and buying signals. Bulk upload CSVs or call the API directly.'
-  features: [;
+  features: [
   'Company / person enrich via email or domain_tech stack detection and hiring signalsCSV bulk processing and APICRM enrichment workflows_confidence scores and data provenance_usage - based pricing tiers'
   ];
-  popular: true;
-  icon: ''
+  popular: true icon: ''
   color: 'from - sky - 600 to - blue - 700'
   text_color: 'text - sky - 300',
   link: 'https://ziontechgroup.com / services / sales - lead - enrichment',
@@ -1876,8 +1821,7 @@ export const,
   launch_date: '2029 - 11 - 18'
   customers: 40;
   rating: 4.4;
-  reviews: 17;
-}
+  reviews: 17}
   id: 'invoice - ocr - processor',
   name: 'Invoice OCR Processor',
   tagline: 'Extract line items and totals from invoices and receipts to your ERP',
@@ -1886,9 +1830,8 @@ export const,
   description: 'Upload PDFs / images and get structured outputs (vendor, dates, taxes) line items). Human - in - the - loop validation and retraining for edge cases.'
   features: [,
   'High - accuracy OCR and field mapping_line item extraction and taxes_validation UI and review queues_export to CSV, JSON, or webhookERP connectors and retry policiesPII redaction and retention policies'
-  ];
-  popular: false;
-  icon: ''
+  ]
+  popular: false icon: ''
   color: 'from - rose - 600 to - pink - 700'
   text_color: 'text - rose - 300',
   link: 'https://ziontechgroup.com / services / invoice - ocr - processor',
@@ -1912,8 +1855,7 @@ export const,
   launch_date: '2029 - 12 - 01'
   customers: 27;
   rating: 4.5;
-  reviews: 14;
-}
+  reviews: 14}
   id: 'rpa - browser - automation',
   name: 'RPA Browser Automation Kit',
   tagline: 'Headless browser workflows with queues, retries, and human review'
@@ -1923,8 +1865,7 @@ export const,
   features: [,
   'Workflow editor and step recorder_retry logic and backoff policies_captcha solving hooks and proxies_file storage and PII redaction_job queue, metrics, and alerts_human approval steps'
   ];
-  popular: true;
-  icon: ''
+  popular: true icon: ''
   color: 'from - fuchsia - 600 to - purple - 700'
   text_color: 'text - fuchsia - 300',
   link: 'https://ziontechgroup.com / services / rpa - browser - automation',
@@ -1948,8 +1889,7 @@ export const,
   launch_date: '2029 - 11 - 28'
   customers: 38;
   rating: 4.4;
-  reviews: 18;
-}
+  reviews: 18}
   id: 'redaction - compliance - api'
   name: 'Redaction & Compliance API'
   tagline: 'PII detection and redaction for text and documents with audit logs',
@@ -1959,8 +1899,7 @@ export const,
   features: [,
   'Configurable detectors (SSN, phone, email) credit card)Context - aware redaction and masking_audit logs and retention policies_batch processing and streaming_webhook retries and DLQsExport to S3 / R2 and BigQuery'
   ];
-  popular: false;
-  icon: ''
+  popular: false icon: ''
   color: 'from - teal - 600 to - cyan - 700'
   text_color: 'text - teal - 300',
   link: 'https://ziontechgroup.com / services / redaction - compliance - api',
@@ -1984,19 +1923,17 @@ export const,
   launch_date: '2029 - 12 - 03'
   customers: 22;
   rating: 4.3;
-  reviews: 12;
-}
+  reviews: 12}
   id: 'kpi - scorecards - studio',
   name: 'KPI Scorecards Studio',
   tagline: 'OKR / KPI dashboards with goals, alerts, and executive summaries'
   price: '$69',
   period: '/month',
   description: 'Define goals, attach metrics, and get auto - generated weekly summaries. Import from spreadsheets or data warehouses and share scorecards with stakeholders.'
-  features: [;
+  features: [
   'Goal trees and KPI ownership_weekly executive summaries_alerting on thresholds and trends_warehouse connectors_shareable links with permissions_annotations and change logs'
   ];
-  popular: false;
-  icon: ''
+  popular: false icon: ''
   color: 'from - green - 600 to - emerald - 700'
   text_color: 'text - green - 300',
   link: 'https://ziontechgroup.com / services / kpi - scorecards - studio',
@@ -2020,11 +1957,10 @@ export const,
   launch_date: '2029 - 10 - 20'
   customers: 36;
   rating: 4.4;
-  reviews: 16;
-}
+  reviews: 16}
 		rating: 4.4;
 		reviews: 16;
-// const contact = {;
+// const contact = {
 	mobile: '+1 302 464 0950';
 	email: 'kleber@ziontechgroup.com';
 	address: '364 E Main St STE 1008 Middletown DE 19709'}
@@ -2098,7 +2034,7 @@ export const,
   s: [,
 			'Branching logic and progress-saveQuestion,
   bank: CSAT, NPS, PMF, churnAnonymous or identified responsesWebhooks and Zapier integrationReal-time charts and cohort filtersGDPR/CCPA consent and deletion tools'
-		];
+		]
 		popula,
   r: false;
 		ico,
@@ -2165,7 +2101,7 @@ export const,
 		descriptio,
   n: 'Plan and run events with schedules, speaker portals, QR ticketing, sponsor assets, and feedback loops. Integrates with Stripe and major email providers.'
 		feature,
-  s: [;
+  s: [
 			'QR tickets and check-in appSpeaker/sponsor asset managementAutomated reminders and WhatsApp/SMS alertsFeedback/NPS post-event formsBudget tracker and P&L exportsEmbeddable agendas and live updates'
 		];
 		popula,
@@ -2234,7 +2170,7 @@ export const,
 		descriptio,
   n: 'Create and manage on-call schedules with handoff workflows, time-zone awareness, and paging integrations. Includes incident postmortem templates and SLO reminders.'
 		feature,
-  s: [;
+  s: [
 			'Flexible rotations and override rulesEscalation policies and schedulesSlack/Teams integration and on-call handoffsVacation/holiday calendarsIncident reports and postmortem templatesSLO and error budget reminders'
 		];
 		popula,
@@ -2303,9 +2239,9 @@ export const,
 		descriptio,
   n: 'Plan and optimize content using SERP insights, competitor gaps, and structured briefs. Exports to CMS and tracks rankings over time.'
 		feature,
-  s: [;
+  s: [
 			'Keyword clustering and topical mapsCompetitor gap analysisOutline and brief generationOn-page audit and schema suggestionsRank tracking and change logsCMS export (Markdown/Headless)'
-		];
+		]
 		popula,
   r: true;
 		ico,
@@ -2441,7 +2377,7 @@ export const,
 		descriptio,
   n: 'Enrich emails or domains with company size, industry, tech stack, and buying signals. Bulk upload CSVs or call the API directly.'
 		feature,
-  s: [;
+  s: [
 			'Company/person enrich via email or domainTech stack detection and hiring signalsCSV bulk processing and APICRM enrichment workflowsConfidence scores and data provenanceUsage-based pricing tiers'
 		];
 		popula,
@@ -2718,7 +2654,7 @@ export const,
 		descriptio,
   n: 'Define goals, attach metrics, and get auto-generated weekly summaries. Import from spreadsheets or data warehouses and share scorecards with stakeholders.'
 		feature,
-  s: [;
+  s: [
 			'Goal trees and KPI ownershipWeekly executive summariesAlerting on thresholds and trendsWarehouse connectorsShareable links with permissionsAnnotations and change logs'
 		];
 		popula,
@@ -2861,7 +2797,7 @@ export const,
   s: [,
   'Branching logic and progress - save_question,
   bank: CSAT, NPS, PMF, churn_anonymous or identified responses_webhooks and Zapier integration_real - time charts and cohort filtersGDPR / CCPA consent and deletion tools'
-  ];
+  ]
   popula,
   r: false;
   ico,
@@ -2928,7 +2864,7 @@ export const,
   descriptio,
   n: 'Plan and run events with schedules, speaker portals, QR ticketing, sponsor assets, and feedback loops. Integrates with Stripe and major email providers.'
   feature,
-  s: [;
+  s: [
   'QR tickets and check - in app_speaker / sponsor asset management_automated reminders and WhatsApp / SMS alerts_feedback / NPS post - event forms_budget tracker and P & L exports_embeddable agendas and live updates'
   ];
   popula,
@@ -2997,7 +2933,7 @@ export const,
   descriptio,
   n: 'Create and manage on - call schedules with handoff workflows, time - zone awareness, and paging integrations. Includes incident postmortem templates and SLO reminders.'
   feature,
-  s: [;
+  s: [
   'Flexible rotations and override rules_escalation policies and schedules_slack / Teams integration and on - call handoffs_vacation / holiday calendars_incident reports and postmortem templatesSLO and error budget reminders'
   ];
   popula,
@@ -3066,9 +3002,9 @@ export const,
   descriptio,
   n: 'Plan and optimize content using SERP insights, competitor gaps, and structured briefs. Exports to CMS and tracks rankings over time.'
   feature,
-  s: [;
+  s: [
   'Keyword clustering and topical maps_competitor gap analysis_outline and brief generation_on - page audit and schema suggestions_rank tracking and change logsCMS export (Markdown / Headless)'
-  ];
+  ]
   popula,
   r: true;
   ico,
@@ -3204,7 +3140,7 @@ export const,
   descriptio,
   n: 'Enrich emails or domains with company size, industry, tech stack, and buying signals. Bulk upload CSVs or call the API directly.'
   feature,
-  s: [;
+  s: [
   'Company / person enrich via email or domain_tech stack detection and hiring signalsCSV bulk processing and APICRM enrichment workflows_confidence scores and data provenance_usage - based pricing tiers'
   ];
   popula,
@@ -3275,7 +3211,7 @@ export const,
   feature,
   s: [,
   'High - accuracy OCR and field mapping_line item extraction and taxes_validation UI and review queues_export to CSV, JSON, or webhookERP connectors and retry policiesPII redaction and retention policies'
-  ];
+  ]
   popula,
   r: false;
   ico,
@@ -3481,7 +3417,7 @@ export const,
   descriptio,
   n: 'Define goals, attach metrics, and get auto - generated weekly summaries. Import from spreadsheets or data warehouses and share scorecards with stakeholders.'
   feature,
-  s: [;
+  s: [
   'Goal trees and KPI ownership_weekly executive summaries_alerting on thresholds and trends_warehouse connectors_shareable links with permissions_annotations and change logs'
   ];
   popula,
@@ -3548,29 +3484,27 @@ export const,
   s://ziontechgroup.com'
 };
 export const,
-  real2029Q4Additions: RealMarketService[] = [;
+  real2029Q4Additions: RealMarketService[] = [
 	{/* TODO: Fix JSX expression */}
   g: 4.8}
 		review,
   s: 74}
-	};
+	}
 	{/* TODO: Fix JSX expression */}
   g: 4.6}
 		review,
   s: 33}
 	};
-	{;
+	{
 		id: 'event-ops-dashboard';
 		name: 'EventOps Dashboard';
 		tagline: 'Ticketing, invitations, run-of-show, and post-event analytics in one place';
 		price: '$149';
-		period: '/month';
-		description: 'Plan and run events with schedules, speaker portals, QR ticketing, sponsor assets, and feedback loops. Integrates with Stripe and major email providers.';
+		period: '/month' description: 'Plan and run events with schedules, speaker portals, QR ticketing, sponsor assets, and feedback loops. Integrates with Stripe and major email providers.';
 		features: [
 			'QR tickets and check-in appSpeaker/sponsor asset managementAutomated reminders and WhatsApp/SMS alertsFeedback/NPS post-event formsBudget tracker and P&L exportsEmbeddable agendas and live updates'
 		];
-		popular: true;
-		icon: '';
+		popular: true icon: '';
 		color: 'from-purple-600 to-pink-600';
 		textColor: 'text-purple-300';
 		link: 'https://ziontechgroup.com/services/event-ops-dashboard';
@@ -3596,18 +3530,16 @@ export const,
 		rating: 4.7}
 		reviews: 29}
 	};
-	{;
+	{
 		id: 'oncall-scheduler-pro';
 		name: 'OnCall Scheduler Pro';
 		tagline: 'Policy-based shift planning, rotations, and escalations with Slack/Teams';
 		price: '$129';
-		period: '/month';
-		description: 'Create and manage on-call schedules with handoff workflows, time-zone awareness, and paging integrations. Includes incident postmortem templates and SLO reminders.';
+		period: '/month' description: 'Create and manage on-call schedules with handoff workflows, time-zone awareness, and paging integrations. Includes incident postmortem templates and SLO reminders.';
 		features: [
 			'Flexible rotations and override rulesEscalation policies and schedulesSlack/Teams integration and on-call handoffsVacation/holiday calendarsIncident reports and postmortem templatesSLO and error budget reminders'
 		];
-		popular: false;
-		icon: '';
+		popular: false icon: '';
 		color: 'from-indigo-600 to-blue-700';
 		textColor: 'text-indigo-300';
 		link: 'https://ziontechgroup.com/services/oncall-scheduler-pro';
@@ -3633,18 +3565,16 @@ export const,
 		rating: 4.5}
 		reviews: 19}
 	};
-	{;
+	{
 		id: 'seo-content-optimizer-pro';
 		name: 'SEO Content Optimizer Pro';
 		tagline: 'AI-assisted briefs, outlines, and on-page optimization with live SERP data';
 		price: '$89';
-		period: '/month';
-		description: 'Plan and optimize content using SERP insights, competitor gaps, and structured briefs. Exports to CMS and tracks rankings over time.';
+		period: '/month' description: 'Plan and optimize content using SERP insights, competitor gaps, and structured briefs. Exports to CMS and tracks rankings over time.';
 		features: [
 			'Keyword clustering and topical mapsCompetitor gap analysisOutline and brief generationOn-page audit and schema suggestionsRank tracking and change logsCMS export (Markdown/Headless)'
-		];
-		popular: true;
-		icon: '';
+		]
+		popular: true icon: '';
 		color: 'from-amber-600 to-orange-700';
 		textColor: 'text-amber-300';
 		link: 'https://ziontechgroup.com/services/seo-content-optimizer-pro';
@@ -3689,18 +3619,16 @@ export const,
 		review,
   s: 21}
 	};
-	{;
+	{
 		id: 'sales-lead-enrichment';
 		name: 'Sales Lead Enrichment';
 		tagline: 'Firmographics and signals to qualify leads instantly via API and CSV';
 		price: '$129';
-		period: '/month';
-		description: 'Enrich emails or domains with company size, industry, tech stack, and buying signals. Bulk upload CSVs or call the API directly.';
+		period: '/month' description: 'Enrich emails or domains with company size, industry, tech stack, and buying signals. Bulk upload CSVs or call the API directly.';
 		features: [
 			'Company/person enrich via email or domainTech stack detection and hiring signalsCSV bulk processing and APICRM enrichment workflowsConfidence scores and data provenanceUsage-based pricing tiers'
 		];
-		popular: true;
-		icon: '';
+		popular: true icon: '';
 		color: 'from-sky-600 to-blue-700';
 		textColor: 'text-sky-300';
 		link: 'https://ziontechgroup.com/services/sales-lead-enrichment';
@@ -3745,18 +3673,16 @@ export const,
 		review,
   s: 12}
 	};
-	{;
+	{
 		id: 'kpi-scorecards-studio';
 		name: 'KPI Scorecards Studio';
 		tagline: 'OKR/KPI dashboards with goals, alerts, and executive summaries';
 		price: '$69';
-		period: '/month';
-		description: 'Define goals, attach metrics, and get auto-generated weekly summaries. Import from spreadsheets or data warehouses and share scorecards with stakeholders.';
+		period: '/month' description: 'Define goals, attach metrics, and get auto-generated weekly summaries. Import from spreadsheets or data warehouses and share scorecards with stakeholders.';
 		features: [
 			'Goal trees and KPI ownershipWeekly executive summariesAlerting on thresholds and trendsWarehouse connectorsShareable links with permissionsAnnotations and change logs'
 		];
-		popular: false;
-		icon: '';
+		popular: false icon: '';
 		color: 'from-green-600 to-emerald-700';
 		textColor: 'text-green-300';
 		link: 'https://ziontechgroup.com/services/kpi-scorecards-studio';
@@ -3783,8 +3709,7 @@ export const,
 		reviews: 16}
 	}
 ];
-;
-// const contact = {;
+// const contact = {
 	mobile: '+1 302 464 0950';
 	email: 'kleber@ziontechgroup.com';
 	address: '364 E Main St STE 1008 Middletown DE 19709'}
@@ -3795,7 +3720,6 @@ export const,
   s: 16}
 	}
 ];
-;
 // const contact = {/* TODO: Fix JSX expression */}
   s: '364 E Main St STE 1008 Middletown DE 19709'}
 	websit,
@@ -3803,29 +3727,27 @@ export const,
   s://ziontechgroup.com'
 };
 export const,
-  real2029Q4Additions: RealMarketService[] = [;
+  real2029Q4Additions: RealMarketService[] = [
 	{/* TODO: Fix JSX expression */}
   g: 4.8}
 		review,
   s: 74}
-	};
+	}
 	{/* TODO: Fix JSX expression */}
   g: 4.6}
 		review,
   s: 33}
 	};
-	{;
+	{
 		id: 'event-ops-dashboard';
 		name: 'EventOps Dashboard';
 		tagline: 'Ticketing, invitations, run-of-show, and post-event analytics in one place';
 		price: '$149';
-		period: '/month';
-		description: 'Plan and run events with schedules, speaker portals, QR ticketing, sponsor assets, and feedback loops. Integrates with Stripe and major email providers.';
+		period: '/month' description: 'Plan and run events with schedules, speaker portals, QR ticketing, sponsor assets, and feedback loops. Integrates with Stripe and major email providers.';
 		features: [
 			'QR tickets and check-in appSpeaker/sponsor asset managementAutomated reminders and WhatsApp/SMS alertsFeedback/NPS post-event formsBudget tracker and P&L exportsEmbeddable agendas and live updates'
 		];
-		popular: true;
-		icon: '';
+		popular: true icon: '';
 		color: 'from-purple-600 to-pink-600';
 		textColor: 'text-purple-300';
 		link: 'https://ziontechgroup.com/services/event-ops-dashboard';
@@ -3851,18 +3773,16 @@ export const,
 		rating: 4.7}
 		reviews: 29}
 	};
-	{;
+	{
 		id: 'oncall-scheduler-pro';
 		name: 'OnCall Scheduler Pro';
 		tagline: 'Policy-based shift planning, rotations, and escalations with Slack/Teams';
 		price: '$129';
-		period: '/month';
-		description: 'Create and manage on-call schedules with handoff workflows, time-zone awareness, and paging integrations. Includes incident postmortem templates and SLO reminders.';
+		period: '/month' description: 'Create and manage on-call schedules with handoff workflows, time-zone awareness, and paging integrations. Includes incident postmortem templates and SLO reminders.';
 		features: [
 			'Flexible rotations and override rulesEscalation policies and schedulesSlack/Teams integration and on-call handoffsVacation/holiday calendarsIncident reports and postmortem templatesSLO and error budget reminders'
 		];
-		popular: false;
-		icon: '';
+		popular: false icon: '';
 		color: 'from-indigo-600 to-blue-700';
 		textColor: 'text-indigo-300';
 		link: 'https://ziontechgroup.com/services/oncall-scheduler-pro';
@@ -3888,18 +3808,16 @@ export const,
 		rating: 4.5}
 		reviews: 19}
 	};
-	{;
+	{
 		id: 'seo-content-optimizer-pro';
 		name: 'SEO Content Optimizer Pro';
 		tagline: 'AI-assisted briefs, outlines, and on-page optimization with live SERP data';
 		price: '$89';
-		period: '/month';
-		description: 'Plan and optimize content using SERP insights, competitor gaps, and structured briefs. Exports to CMS and tracks rankings over time.';
+		period: '/month' description: 'Plan and optimize content using SERP insights, competitor gaps, and structured briefs. Exports to CMS and tracks rankings over time.';
 		features: [
 			'Keyword clustering and topical mapsCompetitor gap analysisOutline and brief generationOn-page audit and schema suggestionsRank tracking and change logsCMS export (Markdown/Headless)'
-		];
-		popular: true;
-		icon: '';
+		]
+		popular: true icon: '';
 		color: 'from-amber-600 to-orange-700';
 		textColor: 'text-amber-300';
 		link: 'https://ziontechgroup.com/services/seo-content-optimizer-pro';
@@ -3944,18 +3862,16 @@ export const,
 		review,
   s: 21}
 	};
-	{;
+	{
 		id: 'sales-lead-enrichment';
 		name: 'Sales Lead Enrichment';
 		tagline: 'Firmographics and signals to qualify leads instantly via API and CSV';
 		price: '$129';
-		period: '/month';
-		description: 'Enrich emails or domains with company size, industry, tech stack, and buying signals. Bulk upload CSVs or call the API directly.';
+		period: '/month' description: 'Enrich emails or domains with company size, industry, tech stack, and buying signals. Bulk upload CSVs or call the API directly.';
 		features: [
 			'Company/person enrich via email or domainTech stack detection and hiring signalsCSV bulk processing and APICRM enrichment workflowsConfidence scores and data provenanceUsage-based pricing tiers'
 		];
-		popular: true;
-		icon: '';
+		popular: true icon: '';
 		color: 'from-sky-600 to-blue-700';
 		textColor: 'text-sky-300';
 		link: 'https://ziontechgroup.com/services/sales-lead-enrichment';
@@ -4000,18 +3916,16 @@ export const,
 		review,
   s: 12}
 	};
-	{;
+	{
 		id: 'kpi-scorecards-studio';
 		name: 'KPI Scorecards Studio';
 		tagline: 'OKR/KPI dashboards with goals, alerts, and executive summaries';
 		price: '$69';
-		period: '/month';
-		description: 'Define goals, attach metrics, and get auto-generated weekly summaries. Import from spreadsheets or data warehouses and share scorecards with stakeholders.';
+		period: '/month' description: 'Define goals, attach metrics, and get auto-generated weekly summaries. Import from spreadsheets or data warehouses and share scorecards with stakeholders.';
 		features: [
 			'Goal trees and KPI ownershipWeekly executive summariesAlerting on thresholds and trendsWarehouse connectorsShareable links with permissionsAnnotations and change logs'
 		];
-		popular: false;
-		icon: '';
+		popular: false icon: '';
 		color: 'from-green-600 to-emerald-700';
 		textColor: 'text-green-300';
 		link: 'https://ziontechgroup.com/services/kpi-scorecards-studio';
@@ -4125,7 +4039,7 @@ export const,
   r: 'text - emerald - 300',' lin,
   k: 'http,
   s://ziontechgroup.com / services / mobile - survey - studio', market_positio,
-  n: ; ' 'Lightweight alternative to enterprise survey suites, optimized for mobile.',' targetAudienc,
+  n:  ' 'Lightweight alternative to enterprise survey suites, optimized for mobile.',' targetAudienc,
   e: 'Growth teams, product managers, agencies', trialDay,
   s: 7,' setupTim,
   e: 'Same day',' categor,
@@ -4397,7 +4311,7 @@ export const,
   e: '2029 - 10 - 20', customer,
   s: 36, ratin,
   g: 4 && 4.4, review,
-  s: 16}; ]; const contact = ' mobil,
+  s: 16}] const contact = ' mobil,
   e: '+1 302 464 0950', emai,
   l: 'kleber@ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
@@ -4411,7 +4325,7 @@ export const,
   d: '/month',' descriptio,
   n: 'An AI-driven inbox assistant that classifies, prioritizes, and drafts responses for customer and internal emails. Supports shared inboxes and integrates with major CRMs and helpdesks.', feature,
   s: [], ' 'Intent classification and priority scoringOne-click reply drafts with tone controlsAuto-tagging and routing to teamsPII redaction and allowlist domainsSLA-aware escalations and,
-  summariesAnalytics: response time, CSAT impact, volume by topic' ]; popula,
+  summariesAnalytics: response time, CSAT impact, volume by topic' ] popula,
   r: true,' ico,
   n: '✉️'' colo,
   r: 'from-cyan-600 to-blue-700'' textColo,
@@ -4446,7 +4360,7 @@ export const,
   d: '/month'' descriptio,
   n: 'Launch high-conversion mobile surveys with skip logic, NPS/CSAT templates, and shareable dashboards. Embed on sites or share links, export to CSV and data warehouses.' feature,
   s: [' 'Branching logic and progress-saveQuestion,
-  bank: CSAT, NPS, PMF, churnAnonymous or identified responsesWebhooks and Zapier integrationReal-time charts and cohort filtersGDPR/CCPA consent and deletion tools' ]; popula,
+  bank: CSAT, NPS, PMF, churnAnonymous or identified responsesWebhooks and Zapier integrationReal-time charts and cohort filtersGDPR/CCPA consent and deletion tools' ] popula,
   r: false,' ico,
   n: '📱'' colo,
   r: 'from-emerald-600 to-teal-700'' textColo,
@@ -4548,7 +4462,7 @@ export const,
   e: '$89'' perio,
   d: '/month'' descriptio,
   n: 'Plan and optimize content using SERP insights, competitor gaps, and structured briefs. Exports to CMS and tracks rankings over time.' feature,
-  s: [' 'Keyword clustering and topical mapsCompetitor gap analysisOutline and brief generationOn-page audit and schema suggestionsRank tracking and change logsCMS export (Markdown/Headless)' ]; popula,
+  s: [' 'Keyword clustering and topical mapsCompetitor gap analysisOutline and brief generationOn-page audit and schema suggestionsRank tracking and change logsCMS export (Markdown/Headless)' ] popula,
   r: true,' ico,
   n: '🔎'' colo,
   r: 'from-amber-600 to-orange-700'' textColo,
@@ -4823,7 +4737,7 @@ export const,
   d: '/month',' descriptio,
   n: 'Launch high - conversion mobile surveys with skip logic, NPS / CSAT templates, and shareable dashboards. Embed on sites or share links, export to CSV and data warehouses.' feature,
   s: [,' 'Branching logic and progress - save_question,
-  bank: CSAT, NPS, PMF, churn_anonymous or identified responses_webhooks and Zapier integration_real - time charts and cohort filtersGDPR / CCPA consent and deletion tools' ]; popula,
+  bank: CSAT, NPS, PMF, churn_anonymous or identified responses_webhooks and Zapier integration_real - time charts and cohort filtersGDPR / CCPA consent and deletion tools' ] popula,
   r: false,' ico,
   n: '📱'' colo,
   r: 'from - emerald - 600 to - teal - 700'' text_colo,
@@ -4857,7 +4771,7 @@ export const,
   e: '$149'' perio,
   d: '/month',' descriptio,
   n: 'Plan and run events with schedules, speaker portals, QR ticketing, sponsor assets, and feedback loops. Integrates with Stripe and major email providers.' feature,
-  s: [;' 'QR tickets and check - in app_speaker / sponsor asset management_automated reminders and WhatsApp / SMS alerts_feedback / NPS post - event forms_budget tracker and P & L exports_embeddable agendas and live updates' ]; popula,
+  s: [' 'QR tickets and check - in app_speaker / sponsor asset management_automated reminders and WhatsApp / SMS alerts_feedback / NPS post - event forms_budget tracker and P & L exports_embeddable agendas and live updates' ]; popula,
   r: true,' ico,
   n: '🎟️'' colo,
   r: 'from - purple - 600 to - pink - 600'' text_colo,
@@ -4891,7 +4805,7 @@ export const,
   e: '$129'' perio,
   d: '/month',' descriptio,
   n: 'Create and manage on - call schedules with handoff workflows, time - zone awareness, and paging integrations. Includes incident postmortem templates and SLO reminders.' feature,
-  s: [;' 'Flexible rotations and override rules_escalation policies and schedules_slack / Teams integration and on - call handoffs_vacation / holiday calendars_incident reports and postmortem templatesSLO and error budget reminders' ]; popula,
+  s: [' 'Flexible rotations and override rules_escalation policies and schedules_slack / Teams integration and on - call handoffs_vacation / holiday calendars_incident reports and postmortem templatesSLO and error budget reminders' ]; popula,
   r: false,' ico,
   n: '📆'' colo,
   r: 'from - indigo - 600 to - blue - 700'' text_colo,
@@ -4925,7 +4839,7 @@ export const,
   e: '$89'' perio,
   d: '/month',' descriptio,
   n: 'Plan and optimize content using SERP insights, competitor gaps, and structured briefs. Exports to CMS and tracks rankings over time.' feature,
-  s: [;' 'Keyword clustering and topical maps_competitor gap analysis_outline and brief generation_on - page audit and schema suggestions_rank tracking and change logsCMS export (Markdown / Headless)' ]; popula,
+  s: [' 'Keyword clustering and topical maps_competitor gap analysis_outline and brief generation_on - page audit and schema suggestions_rank tracking and change logsCMS export (Markdown / Headless)' ] popula,
   r: true,' ico,
   n: '🔎'' colo,
   r: 'from - amber - 600 to - orange - 700'' text_colo,
@@ -4993,7 +4907,7 @@ export const,
   e: '$129'' perio,
   d: '/month',' descriptio,
   n: 'Enrich emails or domains with company size, industry, tech stack, and buying signals. Bulk upload CSVs or call the API directly.' feature,
-  s: [;' 'Company / person enrich via email or domain_tech stack detection and hiring signalsCSV bulk processing and APICRM enrichment workflows_confidence scores and data provenance_usage - based pricing tiers' ]; popula,
+  s: [' 'Company / person enrich via email or domain_tech stack detection and hiring signalsCSV bulk processing and APICRM enrichment workflows_confidence scores and data provenance_usage - based pricing tiers' ]; popula,
   r: true,' ico,
   n: '🧭'' colo,
   r: 'from - sky - 600 to - blue - 700'' text_colo,
@@ -5027,7 +4941,7 @@ export const,
   e: '$79'' perio,
   d: '/month',' descriptio,
   n: 'Upload PDFs / images and get structured outputs (vendor, dates, taxes) line items). Human - in - the - loop validation and retraining for edge cases.' feature,
-  s: [,' 'High - accuracy OCR and field mapping_line item extraction and taxes_validation UI and review queues_export to CSV, JSON, or webhookERP connectors and retry policiesPII redaction and retention policies' ]; popula,
+  s: [,' 'High - accuracy OCR and field mapping_line item extraction and taxes_validation UI and review queues_export to CSV, JSON, or webhookERP connectors and retry policiesPII redaction and retention policies' ] popula,
   r: false,' ico,
   n: '🧾'' colo,
   r: 'from - rose - 600 to - pink - 700'' text_colo,
@@ -5130,7 +5044,7 @@ export const,
   e: '$69'' perio,
   d: '/month',' descriptio,
   n: 'Define goals, attach metrics, and get auto - generated weekly summaries. Import from spreadsheets or data warehouses and share scorecards with stakeholders.' feature,
-  s: [;' 'Goal trees and KPI ownership_weekly executive summaries_alerting on thresholds and trends_warehouse connectors_shareable links with permissions_annotations and change logs' ]; popula,
+  s: [' 'Goal trees and KPI ownership_weekly executive summaries_alerting on thresholds and trends_warehouse connectors_shareable links with permissions_annotations and change logs' ]; popula,
   r: false,' ico,
   n: '📊'' colo,
   r: 'from - green - 600 to - emerald - 700'' text_colo,
@@ -5164,9 +5078,9 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
   s://ziontechgroup.com' }; export const,
-  real2029Q4Additions: RealMarketService[] = [; {/* TODO: Fix JSX expression */}
+  real2029Q4Additions: RealMarketService[] = [ {/* TODO: Fix JSX expression */}
   g: 4.8} review,
-  s: 74} }; {/* TODO: Fix JSX expression */}
+  s: 74} } {/* TODO: Fix JSX expression */}
   g: 4.6} review,
   s: 33} }; {/* TODO: Fix JSX expression */}
   g: 4.7} review,
@@ -5191,9 +5105,9 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
   s://ziontechgroup.com' }; export const,
-  real2029Q4Additions: RealMarketService[] = [; {/* TODO: Fix JSX expression */}
+  real2029Q4Additions: RealMarketService[] = [ {/* TODO: Fix JSX expression */}
   g: 4.8} review,
-  s: 74} }; {/* TODO: Fix JSX expression */}
+  s: 74} } {/* TODO: Fix JSX expression */}
   g: 4.6} review,
   s: 33} }; {/* TODO: Fix JSX expression */}
   g: 4.7} review,

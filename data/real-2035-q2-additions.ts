@@ -1,12 +1,10 @@
-
       'Intent classification + prioritization'
       'On-brand response drafting'
       'Automatic polite follow-ups'
       'Lead/contact enrichment'
       'Analytics and response SLAs'
     ]
-    popular: true;
-    icon: '';
+    popular: true icon: '';
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
     link: 'https://ziontechgroup.com/services/ai-email-responder',
@@ -77,8 +75,7 @@
       'On - brand response drafting',
       'Automatic polite follow - ups',
       'Lead / contact enrichment',      'Analytics and response SLAs'],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from - cyan - 600 to - blue - 700',
     text_color: 'text - cyan - 300',
     link: 'https://ziontechgroup.com / services / ai - email - responder',
@@ -96,8 +93,7 @@
     launchDate: '2025-08-20'
     customers: 48;
     rating: 4.7;
-    reviews: 12;
-  }
+    reviews: 12}
     competitors: ['Superhuman AI', 'Front AI', 'Gmail add - ons'],
     market_size: '$10B+ email productivity'
     growth_rate: '15% CAGR'
@@ -109,8 +105,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 48;
     rating: 4 && 4.7;
-    reviews: 12;
-  },
+    reviews: 12},
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
     link: 'https://ziontechgroup.com/services/ai-email-responder';
@@ -280,8 +275,7 @@
       'Real - time analytics',
       'CSV / Sheets export',
       'Webhooks + API'],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from - emerald - 600 to - teal - 700',
     text_color: 'text - emerald - 300',
     link: 'https://ziontechgroup.com / services / mobile - survey - studio',
@@ -306,8 +300,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 22;
     rating: 4 && 4.6;
-    reviews: 9;
-  },
+    reviews: 9},
     id: 'niche - productivity - planner',
     name: 'Niche Productivity Planner',
     tagline: unknown;
@@ -390,8 +383,7 @@
       'Benchmark KPIs',
       'Export to PDF',
       'Role - based views'],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from - purple - 600 to - indigo - 700'
     text_color: 'text - purple - 300'
     link: 'https://ziontechgroup.com / services / niche - productivity - planner'
@@ -415,8 +407,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 18;
     rating: 4 && 4.5;
-    reviews: 7;
-  },
+    reviews: 7},
       'QR tickets + check-in',
       'Email/SMS reminders',
     id: 'event - management - dashboard',
@@ -500,8 +491,7 @@
       'Agenda builder',
       'Feedback forms',
       'Post - event reports'],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from - pink - 600 to - rose - 700'
     text_color: 'text - pink - 300',
     link: 'https://ziontechgroup.com / services / event - management - dashboard',
@@ -525,8 +515,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 31;
     rating: 4 && 4.7;
-    reviews: 11;
-  },
+    reviews: 11},
     id: 'affiliate - tracking - suite',
     name: 'Affiliate Tracking Suite',
     tagline: 'Links, attribution, commission rules, and payouts',
@@ -606,8 +595,7 @@
       'Rule - based commissions',
       'Payout exports',
       'Fraud checks'],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from - amber - 600 to - orange - 700'
     text_color: 'text - amber - 300',
     link: 'https://ziontechgroup.com / services / affiliate - tracking - suite',
@@ -631,8 +619,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 12;
     rating: 4 && 4.5;
-    reviews: 5;
-  },
+    reviews: 5},
     id: 'smb - analytics - lite',
     name: 'SMB Analytics Lite',
     tagline: 'Traffic, funnels, and conversions without complexity',
@@ -712,8 +699,7 @@
       'Weekly email summaries',
       'CSV export',
       'No cookies mode'],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from - sky - 600 to - indigo - 700',
     text_color: 'text - sky - 300',
     link: 'https://ziontechgroup.com / services / smb - analytics - lite',
@@ -737,8 +723,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 40;
     rating: 4 && 4.6;
-    reviews: 8;
-  },
+    reviews: 8},
       'Email-to-ticket',
     id: 'it - helpdesk - portal',
     name: 'IT Helpdesk Portal',
@@ -820,8 +805,7 @@
       'SLAs + escalations',
       'Client portal',
       'Reports'],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from - blue - 600 to - indigo - 700'
     text_color: 'text - blue - 300',
     link: 'https://ziontechgroup.com / services / it - helpdesk - portal',
@@ -845,8 +829,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 16;
     rating: 4 && 4.7;
-    reviews: 6;
-  },
+    reviews: 6},
       'Self-serve returns portal',
     id: 'ecommerce - returns - manager'
     name: 'Ecommerce Returns Manager',
@@ -928,8 +911,7 @@
       'Return reasons analytics',
       'Inventory sync',
       'Notifications'],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from - violet - 600 to - fuchsia - 700'
     text_color: 'text - violet - 300',
     link: 'https://ziontechgroup.com / services / ecommerce - returns - manager',
@@ -953,8 +935,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 14;
     rating: 4 && 4.6;
-    reviews: 5;
-  },
+    reviews: 5},
     id: 'automated - email - followups'
     name: 'Automated Email Followups',
     tagline: 'No - lead - left - behind sequences across inboxes',
@@ -1034,8 +1015,7 @@
       'Smart stop on reply',
       'Templates',
       'Analytics'],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from - cyan - 600 to - teal - 700'
     text_color: 'text - cyan - 300',
     link: 'https://ziontechgroup.com / services / automated - email - followups',
@@ -1133,8 +1113,7 @@
       'Summaries + highlights',
       'Blog export',
       'Glossary'],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from - indigo - 600 to - blue - 700'
     text_color: 'text - indigo - 300',
     link: 'https://ziontechgroup.com / services / podcast - transcription - service',
@@ -1158,8 +1137,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 20;
     rating: 4 && 4.6;
-    reviews: 6;
-  },
+    reviews: 6},
       'On-page audits',
     id: 'ai - seo - content - optimizer'
     name: 'AI SEO Content Optimizer',
@@ -1241,8 +1219,7 @@
       'SERP intent match',
       'Internal link hints',
       'Rewrite suggestions'],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from - emerald - 600 to - green - 700'
     text_color: 'text - emerald - 300',
     link: 'https://ziontechgroup.com / services / ai - seo - content - optimizer',
@@ -1266,8 +1243,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 33;
     rating: 4 && 4.7;
-    reviews: 10;
-  },
+    reviews: 10},
     id: 'social - scheduler - ai',
     name: 'Social Scheduler AI',
     tagline: 'Auto - generate, schedule, and repurpose posts cross - platform',
@@ -1347,8 +1323,7 @@
       'Hashtag + emoji assistant',
       'Link tracking',
       'Client approvals'],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from - fuchsia - 600 to - pink - 700'
     text_color: 'text - fuchsia - 300',
     link: 'https://ziontechgroup.com / services / social - scheduler - ai',
@@ -1372,8 +1347,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 26;
     rating: 4 && 4.5;
-    reviews: 7;
-  },
+    reviews: 7},
     id: 'lead - enrichment - api',
     name: 'Lead Enrichment API',
     tagline: 'Company, role, and social signals from an email / domain',
@@ -1453,8 +1427,7 @@
       'Validated email signals',
       'Confidence scoring',
       'Usage dashboards'],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from - blue - 600 to - sky - 700'
     text_color: 'text - blue - 300',
     link: 'https://ziontechgroup.com / services / lead - enrichment - api',
@@ -1478,8 +1451,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 9;
     rating: 4 && 4.4;
-    reviews: 4;
-  },
+    reviews: 4},
     id: 'consent - management - cmp',
     name: 'Consent Management CMP',
     tagline: 'GDPR / CCPA consent banners, preferences, and audit logs',
@@ -1559,8 +1531,7 @@
       'Preference center',
       'Audit logs',
       'Multi - brand themes'],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from - emerald - 600 to - teal - 700',
     text_color: 'text - emerald - 300',
     link: 'https://ziontechgroup.com / services / consent - management - cmp',
@@ -1584,8 +1555,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 37;
     rating: 4 && 4.7;
-    reviews: 10;
-  },
+    reviews: 10},
     id: 'cookie - scanner - pro'
     name: 'Cookie Scanner Pro',
     tagline: 'Auto - detects cookies + trackers and updates your policy',
@@ -1665,8 +1635,7 @@
       'Policy generator',
       'Diffs + history',
       'CI hook'],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from - amber - 600 to - yellow - 700'
     text_color: 'text - amber - 300',
     link: 'https://ziontechgroup.com / services / cookie - scanner - pro',
@@ -1690,8 +1659,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 19;
     rating: 4 && 4.5;
-    reviews: 5;
-  },
+    reviews: 5},
     id: 'statuspage - sla - tracker'
     name: 'StatusPage SLA Tracker',
     tagline: 'Track uptime / incidents and publish SLA reports',
@@ -1771,8 +1739,7 @@
       'SLA calculator',
       'RSS + webhooks',
       'Exports'],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from - sky - 600 to - cyan - 700'
     text_color: 'text - sky - 300'
     link: 'https://ziontechgroup.com / services / statuspage - sla - tracker'
@@ -1796,8 +1763,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 11;
     rating: 4 && 4.4;
-    reviews: 3;
-  },
+    reviews: 3},
     id: 'agentic - lead - qualifier'
     name: 'Agentic Lead Qualifier',
     tagline: 'Website chat agent that pre - qualifies and routes leads',
@@ -1893,8 +1859,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 23;
     rating: 4 && 4.6;
-    reviews: 7;
-  },
+    reviews: 7},
     id: 'gdpr - dsar - portal - lite',
     name: 'GDPR DSAR Portal Lite',
     tagline: 'Accept, verify, export, and fulfill data subject requests',
@@ -1955,7 +1920,7 @@
       'Triage + workflow',
       'Exports',
       'Audit logs'],
-    popular: true;
+    popular: true
     integrations: ['Zendesk', 'Google Drive'],
     use_cases: ['DSAR fulfillment'],
     roi: 'Avoid compliance toil and risk',
@@ -1969,8 +1934,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 10;
     rating: 4 && 4.5;
-    reviews: 4;
-  },
+    reviews: 4},
     period: '/month',
     description: unknown;
     popula,
@@ -2015,8 +1979,7 @@
       'CRM routing',
       'Visitor insights',
       'Hand - off to human'],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from - teal - 600 to - emerald - 700'
     text_color: 'text - teal - 300',
     link: 'https://ziontechgroup.com / services / agentic - lead - qualifier',
@@ -2040,8 +2003,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 23;
     rating: 4 && 4.6;
-    reviews: 7;
-  },
+    reviews: 7},
     id: 'gdpr - dsar - portal - lite',
     name: 'GDPR DSAR Portal Lite',
     tagline: 'Accept, verify, export, and fulfill data subject requests',
@@ -2121,14 +2083,13 @@
       'Triage + workflow',
       'Exports',
       'Audit logs'],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from - red - 600 to - rose - 700'
     text_color: 'text - red - 300'
     link: 'https://ziontechgroup.com / services / gdpr - dsar - portal - lite'
     market_position: 'SMB - friendly DSAR processing'
     target_audience: 'SaaS + ecommerce'
-    trial_days: 7;
+    trial_days: 7
     setup_time: '1 day',
     category: 'Quality & Monitoring',
     real_service: true;
@@ -2146,8 +2107,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 10;
     rating: 4 && 4.5;
-    reviews: 4;
-  },
+    reviews: 4},
     id: 'feature-flag-auditor'
     name: 'Feature Flag Auditor',
     tagline: 'Flag hygiene checks and end-of-life automation',
@@ -2221,15 +2181,14 @@
   n:
       'Scan repositories and environments for stale flags, dangerous defaults, and missing cleanups. Auto-open PRs.'
     feature,
-  s: [;
+  s: [
       'Repo scanner'
       'Flag inventory'
       'Risk detection'
       'PR suggestions'
       'CI integration'
     ]
-    popular: false;
-    icon: '';
+    popular: false icon: '';
     color: 'from-rose-600 to-pink-700'
     textColor: 'text-rose-300'
     link: 'https://ziontechgroup.com/services/feature-flag-auditor'
@@ -2312,8 +2271,7 @@
       'Risk detection',
       'PR suggestions',
       'CI integration'],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from - rose - 600 to - pink - 700'
     text_color: 'text - rose - 300'
     link: 'https://ziontechgroup.com / services / feature - flag - auditor'
@@ -2337,8 +2295,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 8;
     rating: 4 && 4.4;
-    reviews: 3;
-  },
+    reviews: 3},
     id: 'postgres - index - advisor - pro'
     name: 'Postgres Index Advisor Pro',
     tagline: 'Index recommendations and controlled PR rollouts',
@@ -2553,8 +2510,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 13;
     rating: 4 && 4.6;
-    reviews: 5;
-  },
+    reviews: 5},
     id: 'api-breaking-change-watcher'
     name: 'API Breaking Change Watcher',
     tagline: 'Schema diffs with CI gates and notifications',
@@ -2580,8 +2536,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 12;
     rating: 4 && 4.5;
-    reviews: 3;
-  },
+    reviews: 3},
     id: 'postgres-index-advisor-pro'
     name: 'Postgres Index Advisor Pro',
     tagline: 'Index recommendations and controlled PR rollouts',
@@ -2689,15 +2644,14 @@
   n:
       'Capture slow queries, recommend indexes, and open controlled rollout PRs with safety checks.'
     feature,
-  s: [;
+  s: [
       'Slow query capture'
       'Index suggestions'
       'Risk scoring'
       'PR generation'
       'Rollback assist'
     ]
-    popular: true;
-    icon: '';
+    popular: true icon: '';
     color: 'from-blue-700 to-indigo-800'
     textColor: 'text-blue-300'
     link: 'https://ziontechgroup.com/services/postgres-index-advisor-pro'
@@ -2788,15 +2742,14 @@
     descriptio,
   n: 'Analyze S3 usage and generate lifecycle rules to lower storage bills without risking access latency.'
     feature,
-  s: [;
+  s: [
       'Usage analysis'
       'Rule suggestions'
       'Cost simulator'
       'Change sets'
       'Alerting'
     ]
-    popular: false;
-    icon: '';
+    popular: false icon: '';
     color: 'from-emerald-700 to-teal-800'
     textColor: 'text-emerald-300'
     link: 'https://ziontechgroup.com/services/s3-lifecycle-optimizer'
@@ -2820,8 +2773,7 @@
     launchDate: '2025-08-20'
     customers: 17;
     rating: 4.5;
-    reviews: 4;
-  }
+    reviews: 4}
     id: 'pii-discovery-scanner'
     name: 'PII Discovery Scanner',
     tagline: 'Scan buckets and DBs for PII/PHI with evidence exports',
@@ -2895,21 +2847,20 @@
   n:
       'Find PII in cloud storage and databases, redact samples, and export auditor-friendly evidence.'
     feature,
-  s: [;
+  s: [
       'Connectors'
       'Sensitive entity detection'
       'Sampling with redaction'
       'Findings export'
       'Alerting'
     ]
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from-red-700 to-rose-800'
     textColor: 'text-red-300',
     link: 'https://ziontechgroup.com/services/pii-discovery-scanner',
     marketPosition: 'Compliance-first discovery',
     targetAudience: 'Security, compliance'
-    trialDays: 7;
+    trialDays: 7
     setupTime: '12 days',
     category: 'Quality & Monitoring',
     realService: true;
@@ -2986,8 +2937,7 @@
       'Risk detection',
       'PR suggestions',
       'CI integration'],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from-rose-600 to-pink-700'
     textColor: 'text-rose-300'
     link: 'https://ziontechgroup.com/services/feature-flag-auditor'
@@ -3011,8 +2961,7 @@
     launchDate: '2025-08-20'
     customers: 8;
     rating: 4.4;
-    reviews: 3;
-  },
+    reviews: 3},
     id: 'postgres - index - advisor - pro'
     name: 'Postgres Index Advisor Pro',
     tagline: 'Index recommendations and controlled PR rollouts',
@@ -3092,8 +3041,7 @@
       'Risk scoring',
       'PR generation',
       'Rollback assist'],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from - blue - 700 to - indigo - 800'
     text_color: 'text - blue - 300'
     link: 'https://ziontechgroup.com / services / postgres - index - advisor - pro'
@@ -3117,8 +3065,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 15;
     rating: 4 && 4.6;
-    reviews: 5;
-  },
+    reviews: 5},
     id: 's3 - lifecycle - optimizer'
     name: 'S3 Lifecycle Optimizer',
     tagline: 'Move objects between storage classes to cut costs',
@@ -3198,8 +3145,7 @@
       'Cost simulator',
       'Change sets',
       'Alerting'],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from - emerald - 700 to - teal - 800'
     text_color: 'text - emerald - 300'
     link: 'https://ziontechgroup.com / services / s3 - lifecycle - optimizer'
@@ -3223,8 +3169,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 17;
     rating: 4 && 4.5;
-    reviews: 4;
-  },
+    reviews: 4},
     id: 'pii - discovery - scanner'
     name: 'PII Discovery Scanner',
     tagline: 'Scan buckets and DBs for PII / PHI with evidence exports',
@@ -3304,14 +3249,13 @@
       'Sampling with redaction',
       'Findings export',
       'Alerting'],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from - red - 700 to - rose - 800'
     text_color: 'text - red - 300',
     link: 'https://ziontechgroup.com / services / pii - discovery - scanner',
     market_position: 'Compliance - first discovery',
     target_audience: 'Security, compliance',
-    trial_days: 7;
+    trial_days: 7
     setup_time: '12 days',
     category: 'Quality & Monitoring',
     real_service: true;
@@ -3329,8 +3273,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 13;
     rating: 4 && 4.6;
-    reviews: 5;
-  },
+    reviews: 5},
     id: 'api-breaking-change-watcher'
     name: 'API Breaking Change Watcher',
     tagline: 'Schema diffs with CI gates and notifications',
@@ -3430,8 +3373,7 @@
       'Owner mapping',
       'CI checks',
       'Changelog hints'],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from - indigo - 700 to - violet - 800'
     text_color: 'text - indigo - 300'
     link: 'https://ziontechgroup.com / services / api - breaking - change - watcher'
@@ -3511,15 +3453,14 @@
   s: 3},
       'Monitor OpenAPI/GraphQL schemas for breaking changes; gate CI and alert owners with upgrade notes.',
     feature,
-  s: [;
+  s: [
       'Schema registry'
       'Diff rules'
       'Owner mapping'
       'CI checks'
       'Changelog hints'
     ]
-    popular: false;
-    icon: '';
+    popular: false icon: '';
     color: 'from-indigo-700 to-violet-800'
     textColor: 'text-indigo-300'
     link: 'https://ziontechgroup.com/services/api-breaking-change-watcher'
@@ -3543,8 +3484,7 @@
     launchDate: '2025-08-20'
     customers: 12;
     rating: 4.5;
-    reviews: 3;
-  }
+    reviews: 3}
     id: 'feature - flag - auditor'
     name: 'Feature Flag Auditor',
     tagline: 'Flag hygiene checks and end - of - life automation',
@@ -3624,8 +3564,7 @@
       'Risk detection',
       'PR suggestions',
       'CI integration'],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from - rose - 600 to - pink - 700'
     text_color: 'text - rose - 300'
     link: 'https://ziontechgroup.com / services / feature - flag - auditor'
@@ -3649,8 +3588,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 8;
     rating: 4 && 4.4;
-    reviews: 3;
-  },
+    reviews: 3},
     id: 'postgres - index - advisor - pro'
     name: 'Postgres Index Advisor Pro',
     tagline: 'Index recommendations and controlled PR rollouts',
@@ -3730,8 +3668,7 @@
       'Risk scoring',
       'PR generation',
       'Rollback assist'],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from - blue - 700 to - indigo - 800'
     text_color: 'text - blue - 300'
     link: 'https://ziontechgroup.com / services / postgres - index - advisor - pro'
@@ -3755,8 +3692,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 15;
     rating: 4 && 4.6;
-    reviews: 5;
-  },
+    reviews: 5},
     id: 's3 - lifecycle - optimizer'
     name: 'S3 Lifecycle Optimizer',
     tagline: 'Move objects between storage classes to cut costs',
@@ -3836,8 +3772,7 @@
       'Cost simulator',
       'Change sets',
       'Alerting'],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from - emerald - 700 to - teal - 800'
     text_color: 'text - emerald - 300'
     link: 'https://ziontechgroup.com / services / s3 - lifecycle - optimizer'
@@ -3861,8 +3796,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 17;
     rating: 4 && 4.5;
-    reviews: 4;
-  },
+    reviews: 4},
     id: 'pii - discovery - scanner'
     name: 'PII Discovery Scanner',
     tagline: 'Scan buckets and DBs for PII / PHI with evidence exports',
@@ -3942,14 +3876,13 @@
       'Sampling with redaction',
       'Findings export',
       'Alerting'],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from - red - 700 to - rose - 800'
     text_color: 'text - red - 300',
     link: 'https://ziontechgroup.com / services / pii - discovery - scanner',
     market_position: 'Compliance - first discovery',
     target_audience: 'Security, compliance',
-    trial_days: 7;
+    trial_days: 7
     setup_time: '12 days',
     category: 'Quality & Monitoring',
     real_service: true;
@@ -3967,8 +3900,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 13;
     rating: 4 && 4.6;
-    reviews: 5;
-  },
+    reviews: 5},
     id: 'api-breaking-change-watcher'
     name: 'API Breaking Change Watcher',
     tagline: 'Schema diffs with CI gates and notifications',
@@ -4071,8 +4003,7 @@
       'Owner mapping',
       'CI checks',
       'Changelog hints'],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from - indigo - 700 to - violet - 800'
     text_color: 'text - indigo - 300'
     link: 'https://ziontechgroup.com / services / api - breaking - change - watcher'
@@ -4096,8 +4027,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 12;
     rating: 4 && 4.5;
-    reviews: 3;
-  },
+    reviews: 3},
     id: 'synthetic - journey - monitor'
     name: 'Synthetic Journey Monitor',
     tagline: 'Record and replay user flows with SLO alerts',
@@ -4177,8 +4107,7 @@
       'Schedules',
       'SLO alerts',
       'Reports'],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from - cyan - 700 to - blue - 800'
     text_color: 'text - cyan - 300',
     link: 'https://ziontechgroup.com / services / synthetic - journey - monitor',
@@ -4202,8 +4131,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 21;
     rating: 4 && 4.5;
-    reviews: 6;
-  },
+    reviews: 6},
     id: 'iam - permission - analyzer',
     name: 'IAM Permission Analyzer',
     tagline: unknown;
@@ -4285,8 +4213,7 @@
       'Recommendations',
       'PR generation',
       'Alerting'],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from - blue - 700 to - slate - 800'
     text_color: 'text - blue - 300'
     link: 'https://ziontechgroup.com / services / iam - permission - analyzer'
@@ -4310,8 +4237,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 9;
     rating: 4 && 4.6;
-    reviews: 3;
-  },
+    reviews: 3},
     id: 'warehouse - cost - optimizer'
     name: 'Data Warehouse Cost Optimizer',
     tagline: 'Right - size warehouses and schedule off - peak workloads',
@@ -4391,8 +4317,7 @@
       'Cost simulator',
       'PR templates',
       'Alerts'],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from - indigo - 700 to - violet - 800'
     text_color: 'text - indigo - 300'
     link: 'https://ziontechgroup.com / services / warehouse - cost - optimizer'
@@ -4416,8 +4341,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 7;
     rating: 4 && 4.5;
-    reviews: 3;
-  },
+    reviews: 3},
     id: 'email - warmup - monitor'
     name: 'Email Warmup & Reputation Monitor',
     tagline: 'Track sender reputation and run inbox placement tests',
@@ -4497,8 +4421,7 @@
       'Domain / auth checks',
       'Alerts',
       'Reports'],
-    popular: false;
-    icon: ''
+    popular: false icon: ''
     color: 'from - orange - 600 to - rose - 700'
     text_color: 'text - orange - 300'
     link: 'https://ziontechgroup.com / services / email - warmup - monitor'
@@ -4522,8 +4445,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 16;
     rating: 4 && 4.5;
-    reviews: 4;
-  },
+    reviews: 4},
     id: 'ai - meeting - to - ticket'
     name: 'AI MeetingtoTicket Copilot',
     tagline: 'Turn meeting action items into Jira / GitHub tickets',
@@ -4603,8 +4525,7 @@
       'Ticket creation',
       'Owner mapping',
       'Summaries'],
-    popular: true;
-    icon: ''
+    popular: true icon: ''
     color: 'from - cyan - 700 to - blue - 800'
     text_color: 'text - cyan - 300',
     link: 'https://ziontechgroup.com / services / ai - meeting - to - ticket',
@@ -4628,8 +4549,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 24;
     rating: 4 && 4.6;
-    reviews: 6;
-  }];
+    reviews: 6}];
 const contact =
 	mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -4710,11 +4630,10 @@ export const,
 		descriptio,
   n: 'Reads inbound emails, classifies intent, drafts high-quality replies, and schedules polite follow-ups. Escalates edge cases to humans with context summaries.',
     feature,
-  s: [;
+  s: [
 			'Intent classification + prioritizationOn-brand response draftingAutomatic polite follow-upsLead/contact enrichmentAnalytics and response SLAs'
-		];
-		popular: true;
-		icon: ''
+		]
+		popular: true icon: ''
 		color: 'from-cyan-600 to-blue-700',
 		textColor: 'text-cyan-300',
 		link: 'https://ziontechgroup && ziontechgroup.com/services/ai-email-responder',
@@ -4738,19 +4657,17 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 48;
 		rating: 4 && 4.7;
-		reviews: 12;
-	}
+		reviews: 12}
 		id: 'mobile-survey-studio',
 		name: 'Mobile Survey Studio',
 		tagline: 'Adaptive, mobile-first surveys with branching logic and analytics'
 		price: '$19'
 		period: '/month'
   description: 'Build conversational surveys that adapt in real time. Increase completion with SMS/WhatsApp delivery and one-tap choices.'
-		features: [;
+		features: [
 			'Branching logic + A/B promptsSMS/WhatsApp/web deliveryReal-time analyticsCSV/Sheets exportWebhooks + API'
 		];
-		popular: false;
-		icon: ''
+		popular: false icon: ''
 		color: 'from-emerald-600 to-teal-700',
 		textColor: 'text-emerald-300',
 		link: 'https://ziontechgroup && ziontechgroup.com/services/mobile-survey-studio',
@@ -4774,19 +4691,17 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 22;
 		rating: 4 && 4.6;
-		reviews: 9;
-	}
+		reviews: 9}
 		id: 'niche-productivity-planner',
 		name: 'Niche Productivity Planner',
 		tagline: 'Industry-specific planners with templates, rituals, and benchmarks'
 		price: '$12',
 		period: '/month',
 		description: 'Prebuilt workflows for agencies, clinics, and shops. Weekly rituals, KPI widgets, and printable schedules.'
-		features: [;
+		features: [
 			'Industry templatesCalendar + task syncBenchmark KPIsExport to PDFRole-based views'
 		];
-		popular: false;
-		icon: '';
+		popular: false icon: '';
 		color: 'from-purple-600 to-indigo-700'
 		textColor: 'text-purple-300'
 		link: 'https://ziontechgroup && ziontechgroup.com/services/niche-productivity-planner'
@@ -4810,19 +4725,17 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 18;
 		rating: 4 && 4.5;
-		reviews: 7;
-	}
+		reviews: 7}
 		id: 'event-management-dashboard',
 		name: 'Event Management Dashboard',
 		tagline: 'Tickets, scheduling, comms, and post-event analytics'
 		price: '$49',
 		period: '/month',
 		description: 'Run webinars or in-person events with landing pages, reminders, QR tickets, and feedback analytics.'
-		features: [;
+		features: [
 			'QR tickets + check-inEmail/SMS remindersAgenda builderFeedback formsPost-event reports'
 		];
-		popular: true;
-		icon: ''
+		popular: true icon: ''
 		color: 'from-pink-600 to-rose-700'
 		textColor: 'text-pink-300',
 		link: 'https://ziontechgroup && ziontechgroup.com/services/event-management-dashboard',
@@ -4846,8 +4759,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 31;
 		rating: 4 && 4.7;
-		reviews: 11;
-	}
+		reviews: 11}
 		id: 'affiliate-tracking-suite',
 		name: 'Affiliate Tracking Suite',
 		tagline: 'Links, attribution, commission rules, and payouts'
@@ -4855,8 +4767,7 @@ export const,
 		period: '/month',
 		description: 'Create affiliate programs with branded links, flexible commission rules, and payout exports.'
 		features: ['Custom referral linksUTM attributionRule-based commissionsPayout exportsFraud checks'];
-		popular: false;
-		icon: ''
+		popular: false icon: ''
 		color: 'from-amber-600 to-orange-700'
 		textColor: 'text-amber-300',
 		link: 'https://ziontechgroup && ziontechgroup.com/services/affiliate-tracking-suite',
@@ -4880,8 +4791,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 12;
 		rating: 4 && 4.5;
-		reviews: 5;
-	}
+		reviews: 5}
 		id: 'smb-analytics-lite',
 		name: 'SMB Analytics Lite',
 		tagline: 'Traffic, funnels, and conversions without complexity'
@@ -4889,8 +4799,7 @@ export const,
 		period: '/month'
   description: 'Privacy-friendly analytics for small businesses with funnel insights and weekly summaries.'
 		features: ['Page + event analyticsFunnels + cohortsWeekly email summariesCSV exportNo cookies mode'];
-		popular: false;
-		icon: ''
+		popular: false icon: ''
 		color: 'from-sky-600 to-indigo-700',
 		textColor: 'text-sky-300',
 		link: 'https://ziontechgroup && ziontechgroup.com/services/smb-analytics-lite',
@@ -4914,8 +4823,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 40;
 		rating: 4 && 4.6;
-		reviews: 8;
-	}
+		reviews: 8}
 		id: 'it-helpdesk-portal',
 		name: 'IT Helpdesk Portal',
 		tagline: 'Tickets, knowledge base, SLAs, and client portal'
@@ -4923,8 +4831,7 @@ export const,
 		period: '/month',
 		description: 'Managed ticketing for MSPs and internal IT with automation rules, approval flows, and client-visible status.'
 		features: ['Email-to-ticketKB + article templatesSLAs + escalationsClient portalReports'];
-		popular: true;
-		icon: ''
+		popular: true icon: ''
 		color: 'from-blue-600 to-indigo-700'
 		textColor: 'text-blue-300',
 		link: 'https://ziontechgroup && ziontechgroup.com/services/it-helpdesk-portal',
@@ -4948,8 +4855,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 16;
 		rating: 4 && 4.7;
-		reviews: 6;
-	}
+		reviews: 6}
 		id: 'ecommerce-returns-manager',
 		name: 'Ecommerce Returns Manager',
 		tagline: 'Customer-friendly returns with labels and status tracking',
@@ -4957,8 +4863,7 @@ export const,
 		period: '/month',
 		description: 'Automate RMAs, label generation, and status notifications. Analytics to reduce avoidable returns.'
 		features: ['Self-serve returns portalLabel generationReturn reasons analyticsInventory syncNotifications'];
-		popular: true;
-		icon: ''
+		popular: true icon: ''
 		color: 'from-violet-600 to-fuchsia-700'
 		textColor: 'text-violet-300',
 		link: 'https://ziontechgroup && ziontechgroup.com/services/ecommerce-returns-manager',
@@ -4982,8 +4887,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 14;
 		rating: 4 && 4.6;
-		reviews: 5;
-	}
+		reviews: 5}
 		id: 'automated-email-followups'
 		name: 'Automated Email Followups'
 		tagline: 'No-lead-left-behind sequences across inboxes'
@@ -4991,8 +4895,7 @@ export const,
 		period: '/month'
   description: 'Simple sequencer to follow up on stale leads and open tickets with natural language and auto-scheduling.'
 		features: ['Sequences + delaysInbox integrationSmart stop on replyTemplatesAnalytics'];
-		popular: false;
-		icon: ''
+		popular: false icon: ''
 		color: 'from-cyan-600 to-teal-700'
 		textColor: 'text-cyan-300',
 		link: 'https://ziontechgroup && ziontechgroup.com/services/automated-email-followups',
@@ -5016,8 +4919,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 28;
 		rating: 4 && 4.5;
-		reviews: 8;
-	}
+		reviews: 8}
 		id: 'podcast-transcription-service',
 		name: 'Podcast Transcription Service',
 		tagline: 'Accurate transcripts, chapters, and SEO blog exports'
@@ -5025,8 +4927,7 @@ export const,
 		period: '/month',
 		description: 'Upload or link to podcast episodes, get transcripts, summaries, chapters, and Wordpress-ready blog exports.'
 		features: ['Fast transcriptsTimestamps + chaptersSummaries + highlightsBlog exportGlossary'];
-		popular: false;
-		icon: ''
+		popular: false icon: ''
 		color: 'from-indigo-600 to-blue-700'
 		textColor: 'text-indigo-300',
 		link: 'https://ziontechgroup && ziontechgroup.com/services/podcast-transcription-service',
@@ -5050,8 +4951,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 20;
 		rating: 4 && 4.6;
-		reviews: 6;
-	}
+		reviews: 6}
 		id: 'ai-seo-content-optimizer',
 		name: 'AI SEO Content Optimizer',
 		tagline: 'Live on-page audits and SEO-aware rewrites',
@@ -5059,8 +4959,7 @@ export const,
 		period: '/month',
 		description: 'In-editor SEO suggestions, competitive gap analysis, and AI rewrites targeting featured snippets.'
 		features: ['On-page auditsTopic clusteringSERP intent matchInternal link hintsRewrite suggestions'];
-		popular: true;
-		icon: ''
+		popular: true icon: ''
 		color: 'from-emerald-600 to-green-700'
 		textColor: 'text-emerald-300',
 		link: 'https://ziontechgroup && ziontechgroup.com/services/ai-seo-content-optimizer',
@@ -5084,8 +4983,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 33;
 		rating: 4 && 4.7;
-		reviews: 10;
-	}
+		reviews: 10}
 		id: 'social-scheduler-ai',
 		name: 'Social Scheduler AI',
 		tagline: 'Auto-generate, schedule, and repurpose posts cross-platform'
@@ -5093,8 +4991,7 @@ export const,
 		period: '/month',
 		description: 'Turn links, videos, or blog posts into tailored social snippets and schedule them with best-time predictions.'
 		features: ['Content repurposingCalendar + auto-timesHashtag + emoji assistantLink trackingClient approvals'];
-		popular: false;
-		icon: ''
+		popular: false icon: ''
 		color: 'from-fuchsia-600 to-pink-700'
 		textColor: 'text-fuchsia-300',
 		link: 'https://ziontechgroup && ziontechgroup.com/services/social-scheduler-ai',
@@ -5118,8 +5015,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 26;
 		rating: 4 && 4.5;
-		reviews: 7;
-	}
+		reviews: 7}
 		id: 'lead-enrichment-api',
 		name: 'Lead Enrichment API',
 		tagline: 'Company, role, and social signals from an email/domain'
@@ -5127,8 +5023,7 @@ export const,
 		period: '/month'
   description: 'REST API to enrich leads with verified firmographics and social signals for scoring and routing.'
 		features: ['FirmographicsRole detectionValidated email signalsConfidence scoringUsage dashboards'];
-		popular: false;
-		icon: ''
+		popular: false icon: ''
 		color: 'from-blue-600 to-sky-700'
 		textColor: 'text-blue-300',
 		link: 'https://ziontechgroup && ziontechgroup.com/services/lead-enrichment-api',
@@ -5152,8 +5047,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 9;
 		rating: 4 && 4.4;
-		reviews: 4;
-	}
+		reviews: 4}
 		id: 'consent-management-cmp',
 		name: 'Consent Management CMP',
 		tagline: 'GDPR/CCPA consent banners, preferences, and audit logs'
@@ -5161,8 +5055,7 @@ export const,
 		period: '/month',
 		description: 'Deploy branded consent banners, a preferences center, and downloadable audit logs. Geo-aware rules.'
 		features: ['Geo rulesIAB TCFPreference centerAudit logsMulti-brand themes'];
-		popular: true;
-		icon: ''
+		popular: true icon: ''
 		color: 'from-emerald-600 to-teal-700',
 		textColor: 'text-emerald-300',
 		link: 'https://ziontechgroup && ziontechgroup.com/services/consent-management-cmp',
@@ -5186,8 +5079,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 37;
 		rating: 4 && 4.7;
-		reviews: 10;
-	}
+		reviews: 10}
 		id: 'cookie-scanner-pro',
 		name: 'Cookie Scanner Pro',
 		tagline: 'Auto-detects cookies + trackers and updates your policy',
@@ -5195,8 +5087,7 @@ export const,
 		period: '/month',
 		description: 'Scan your site for cookies/trackers, classify them, and generate policy updates with change diffs.'
 		features: ['Site scanTracker classificationPolicy generatorDiffs + historyCI hook'];
-		popular: false;
-		icon: ''
+		popular: false icon: ''
 		color: 'from-amber-600 to-yellow-700'
 		textColor: 'text-amber-300',
 		link: 'https://ziontechgroup && ziontechgroup.com/services/cookie-scanner-pro',
@@ -5220,8 +5111,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 19;
 		rating: 4 && 4.5;
-		reviews: 5;
-	}
+		reviews: 5}
 		id: 'statuspage-sla-tracker',
 		name: 'StatusPage SLA Tracker',
 		tagline: 'Track uptime/incidents and publish SLA reports',
@@ -5229,8 +5119,7 @@ export const,
 		period: '/month',
 		description: 'Connect monitors, log incidents, and share public SLA/uptime reports with customers.'
 		features: ['Incident logPublic status pageSLA calculatorRSS + webhooksExports'];
-		popular: false;
-		icon: '';
+		popular: false icon: '';
 		color: 'from-sky-600 to-cyan-700'
 		textColor: 'text-sky-300'
 		link: 'https://ziontechgroup && ziontechgroup.com/services/statuspage-sla-tracker'
@@ -5254,8 +5143,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 11;
 		rating: 4 && 4.4;
-		reviews: 3;
-	}
+		reviews: 3}
 		id: 'agentic-lead-qualifier',
 		name: 'Agentic Lead Qualifier',
 		tagline: 'Website chat agent that pre-qualifies and routes leads',
@@ -5263,8 +5151,7 @@ export const,
 		period: '/month',
 		description: 'Embedded chat agent asks smart questions, books meetings, and routes leads to the right team.'
 		features: ['Qualifying flowsCalendar bookingCRM routingVisitor insightsHand-off to human'];
-		popular: true;
-		icon: ''
+		popular: true icon: ''
 		color: 'from-teal-600 to-emerald-700'
 		textColor: 'text-teal-300',
 		link: 'https://ziontechgroup && ziontechgroup.com/services/agentic-lead-qualifier',
@@ -5288,17 +5175,15 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 23;
 		rating: 4 && 4.6;
-		reviews: 7;
-	}
+		reviews: 7}
 		id: 'gdpr-dsar-portal-lite',
 		name: 'GDPR DSAR Portal Lite',
 		tagline: 'Accept, verify, export, and fulfill data subject requests'
 		price: '$49',
 		period: '/month',
 		description: 'Hosted portal for DSARs with identity verification, workflow, and export helpers.'
-		features: ['Request intakeIdentity checkTriage + workflowExportsAudit logs'];
-		popular: true;
-		icon: '';
+		features: ['Request intakeIdentity checkTriage + workflowExportsAudit logs']
+		popular: true icon: '';
 		color: 'from-red-600 to-rose-700'
 		textColor: 'text-red-300'
 		link: 'https://ziontechgroup && ziontechgroup.com/services/gdpr-dsar-portal-lite'
@@ -5322,8 +5207,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 10;
 		rating: 4 && 4.5;
-		reviews: 4;
-	}
+		reviews: 4}
 		id: 'feature-flag-auditor',
 		name: 'Feature Flag Auditor',
 		tagline: 'Flag hygiene checks and end-of-life automation',
@@ -5331,8 +5215,7 @@ export const,
 		period: '/month',
 		description: 'Scan repositories and environments for stale flags, dangerous defaults, and missing cleanups. Auto-open PRs.'
 		features: ['Repo scannerFlag inventoryRisk detectionPR suggestionsCI integration'];
-		popular: false;
-		icon: '';
+		popular: false icon: '';
 		color: 'from-rose-600 to-pink-700'
 		textColor: 'text-rose-300'
 		link: 'https://ziontechgroup && ziontechgroup.com/services/feature-flag-auditor'
@@ -5356,8 +5239,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 8;
 		rating: 4 && 4.4;
-		reviews: 3;
-	}
+		reviews: 3}
 		id: 'postgres-index-advisor-pro',
 		name: 'Postgres Index Advisor Pro',
 		tagline: 'Index recommendations and controlled PR rollouts',
@@ -5365,8 +5247,7 @@ export const,
 		period: '/month',
 		description: 'Capture slow queries, recommend indexes, and open controlled rollout PRs with safety checks.'
 		features: ['Slow query captureIndex suggestionsRisk scoringPR generationRollback assist'];
-		popular: true;
-		icon: '';
+		popular: true icon: '';
 		color: 'from-blue-700 to-indigo-800'
 		textColor: 'text-blue-300'
 		link: 'https://ziontechgroup && ziontechgroup.com/services/postgres-index-advisor-pro'
@@ -5390,8 +5271,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 15;
 		rating: 4 && 4.6;
-		reviews: 5;
-	}
+		reviews: 5}
 		id: 's3-lifecycle-optimizer'
 		name: 'S3 Lifecycle Optimizer'
 		tagline: 'Move objects between storage classes to cut costs'
@@ -5399,8 +5279,7 @@ export const,
 		period: '/month'
   description: 'Analyze S3 usage and generate lifecycle rules to lower storage bills without risking access latency.'
 		features: ['Usage analysisRule suggestionsCost simulatorChange setsAlerting'];
-		popular: false;
-		icon: '';
+		popular: false icon: '';
 		color: 'from-emerald-700 to-teal-800'
 		textColor: 'text-emerald-300'
 		link: 'https://ziontechgroup && ziontechgroup.com/services/s3-lifecycle-optimizer'
@@ -5424,17 +5303,15 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 17;
 		rating: 4 && 4.5;
-		reviews: 4;
-	}
+		reviews: 4}
 		id: 'pii-discovery-scanner',
 		name: 'PII Discovery Scanner',
 		tagline: 'Scan buckets and DBs for PII/PHI with evidence exports',
 		price: '$89',
 		period: '/month',
 		description: 'Find PII in cloud storage and databases, redact samples, and export auditor-friendly evidence.'
-		features: ['ConnectorsSensitive entity detectionSampling with redactionFindings exportAlerting'];
-		popular: true;
-		icon: ''
+		features: ['ConnectorsSensitive entity detectionSampling with redactionFindings exportAlerting']
+		popular: true icon: ''
 		color: 'from-red-700 to-rose-800'
 		textColor: 'text-red-300',
 		link: 'https://ziontechgroup && ziontechgroup.com/services/pii-discovery-scanner',
@@ -5458,8 +5335,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 13;
 		rating: 4 && 4.6;
-		reviews: 5;
-	}
+		reviews: 5}
 		id: 'api-breaking-change-watcher',
 		name: 'API Breaking Change Watcher',
 		tagline: 'Schema diffs with CI gates and notifications',
@@ -5467,8 +5343,7 @@ export const,
 		period: '/month',
 		description: 'Monitor OpenAPI/GraphQL schemas for breaking changes, gate CI and alert owners with upgrade notes.'
 		features: ['Schema registryDiff rulesOwner mappingCI checksChangelog hints'];
-		popular: false;
-		icon: '';
+		popular: false icon: '';
 		color: 'from-indigo-700 to-violet-800'
 		textColor: 'text-indigo-300'
 		link: 'https://ziontechgroup && ziontechgroup.com/services/api-breaking-change-watcher'
@@ -5492,8 +5367,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 12;
 		rating: 4 && 4.5;
-		reviews: 3;
-	}
+		reviews: 3}
 		id: 'synthetic-journey-monitor',
 		name: 'Synthetic Journey Monitor',
 		tagline: 'Record and replay user flows with SLO alerts',
@@ -5501,8 +5375,7 @@ export const,
 		period: '/month',
 		description: 'Browser-based recorder creates resilient journeys, run on a schedule and alert on SLO errors or latency.'
 		features: ['RecorderSelector healingSchedulesSLO alertsReports'];
-		popular: false;
-		icon: ''
+		popular: false icon: ''
 		color: 'from-cyan-700 to-blue-800'
 		textColor: 'text-cyan-300',
 		link: 'https://ziontechgroup && ziontechgroup.com/services/synthetic-journey-monitor',
@@ -5526,8 +5399,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 21;
 		rating: 4 && 4.5;
-		reviews: 6;
-	}
+		reviews: 6}
 		id: 'iam-permission-analyzer'
 		name: 'IAM Permission Analyzer'
 		tagline: 'Detect over-privileged access and propose least-privilege policies'
@@ -5535,8 +5407,7 @@ export const,
 		period: '/month'
   description: 'Continuously analyze IAM policies/usage to propose safe permission reductions and open PRs.'
 		features: ['Policy inventoryUsage analysisRecommendationsPR generationAlerting'];
-		popular: true;
-		icon: '';
+		popular: true icon: '';
 		color: 'from-blue-700 to-slate-800'
 		textColor: 'text-blue-300'
 		link: 'https://ziontechgroup && ziontechgroup.com/services/iam-permission-analyzer'
@@ -5560,8 +5431,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 9;
 		rating: 4 && 4.6;
-		reviews: 3;
-	}
+		reviews: 3}
 		id: 'warehouse-cost-optimizer'
 		name: 'Data Warehouse Cost Optimizer'
 		tagline: 'Right-size warehouses and schedule off-peak workloads'
@@ -5569,8 +5439,7 @@ export const,
 		period: '/month'
   description: 'Analyze query patterns and propose sizing + scheduling changes to slash Snowflake/BigQuery costs.'
 		features: ['Query profilingSize/schedule proposalsCost simulatorPR templatesAlerts'];
-		popular: true;
-		icon: '';
+		popular: true icon: '';
 		color: 'from-indigo-700 to-violet-800'
 		textColor: 'text-indigo-300'
 		link: 'https://ziontechgroup && ziontechgroup.com/services/warehouse-cost-optimizer'
@@ -5594,8 +5463,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 7;
 		rating: 4 && 4.5;
-		reviews: 3;
-	}
+		reviews: 3}
 		id: 'email-warmup-monitor'
 		name: 'Email Warmup & Reputation Monitor'
 		tagline: 'Track sender reputation and run inbox placement tests'
@@ -5603,8 +5471,7 @@ export const,
 		period: '/month'
   description: 'Run warmup campaigns and monitor deliverability metrics to stay out of spam.'
 		features: ['Warmup campaignsSeed inbox testsDomain/auth checksAlertsReports'];
-		popular: false;
-		icon: '';
+		popular: false icon: '';
 		color: 'from-orange-600 to-rose-700'
 		textColor: 'text-orange-300'
 		link: 'https://ziontechgroup && ziontechgroup.com/services/email-warmup-monitor'
@@ -5628,8 +5495,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 16;
 		rating: 4 && 4.5;
-		reviews: 4;
-	}
+		reviews: 4}
 		id: 'ai-meeting-to-ticket',
 		name: 'AI MeetingtoTicket Copilot',
 		tagline: 'Turn meeting action items into Jira/GitHub tickets',
@@ -5637,8 +5503,7 @@ export const,
 		period: '/user/mo',
 		description: 'Transcribe meetings, extract action items, and open tickets with owners and due dates.'
 		features: ['TranscriptionAction extractionTicket creationOwner mappingSummaries'];
-		popular: true;
-		icon: ''
+		popular: true icon: ''
 		color: 'from-cyan-700 to-blue-800'
 		textColor: 'text-cyan-300',
 		link: 'https://ziontechgroup && ziontechgroup.com/services/ai-meeting-to-ticket',
@@ -5662,8 +5527,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 24;
 		rating: 4 && 4.6;
-		reviews: 6;
-	}
+		reviews: 6}
 ];
   id: 'ai - email - responder',
   name: 'AI Email Responder',
@@ -5671,11 +5535,10 @@ export const,
   price: '$39',
   period: '/month',
   description: 'Reads inbound emails, classifies intent, drafts high - quality replies, and schedules polite follow - ups. Escalates edge cases to humans with context summaries.'
-  features: [;
+  features: [
   'Intent classification + prioritization_on - brand response drafting_automatic polite follow - ups_lead / contact enrichment_analytics and response SLAs'
   ];
-  popular: true;
-  icon: ''
+  popular: true icon: ''
   color: 'from - cyan - 600 to - blue - 700',
   text_color: 'text - cyan - 300',
   link: 'https://ziontechgroup.com / services / ai - email - responder',
@@ -5699,19 +5562,17 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 48;
   rating: 4.7;
-  reviews: 12;
-}
+  reviews: 12}
   id: 'mobile - survey - studio',
   name: 'Mobile Survey Studio',
   tagline: 'Adaptive, mobile - first surveys with branching logic and analytics'
   price: '$19'
   period: '/month'
   description: 'Build conversational surveys that adapt in real time. Increase completion with SMS / WhatsApp delivery and one - tap choices.'
-  features: [;
+  features: [
   'Branching logic + A / B promptsSMS / WhatsApp / web delivery_real - time analyticsCSV / Sheets export_webhooks + API'
   ];
-  popular: false;
-  icon: ''
+  popular: false icon: ''
   color: 'from - emerald - 600 to - teal - 700',
   text_color: 'text - emerald - 300',
   link: 'https://ziontechgroup.com / services / mobile - survey - studio',
@@ -5735,19 +5596,17 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 22;
   rating: 4.6;
-  reviews: 9;
-}
+  reviews: 9}
   id: 'niche - productivity - planner',
   name: 'Niche Productivity Planner',
   tagline: 'Industry - specific planners with templates, rituals, and benchmarks'
   price: '$12',
   period: '/month',
   description: 'Prebuilt workflows for agencies, clinics, and shops. Weekly rituals, KPI widgets, and printable schedules.'
-  features: [;
+  features: [
   'Industry templates_calendar + task sync_benchmark KPIsExport to PDFRole - based views'
   ];
-  popular: false;
-  icon: '';
+  popular: false icon: '';
   color: 'from - purple - 600 to - indigo - 700'
   text_color: 'text - purple - 300'
   link: 'https://ziontechgroup.com / services / niche - productivity - planner'
@@ -5771,19 +5630,17 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 18;
   rating: 4.5;
-  reviews: 7;
-}
+  reviews: 7}
   id: 'event - management - dashboard',
   name: 'Event Management Dashboard',
   tagline: 'Tickets, scheduling, comms, and post - event analytics'
   price: '$49',
   period: '/month',
   description: 'Run webinars or in - person events with landing pages, reminders, QR tickets, and feedback analytics.'
-  features: [;
+  features: [
   'QR tickets + check - in_email / SMS reminders_agenda builder_feedback forms_post - event reports'
   ];
-  popular: true;
-  icon: ''
+  popular: true icon: ''
   color: 'from - pink - 600 to - rose - 700'
   text_color: 'text - pink - 300',
   link: 'https://ziontechgroup.com / services / event - management - dashboard',
@@ -5807,8 +5664,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 31;
   rating: 4.7;
-  reviews: 11;
-}
+  reviews: 11}
   id: 'affiliate - tracking - suite',
   name: 'Affiliate Tracking Suite',
   tagline: 'Links, attribution, commission rules, and payouts'
@@ -5816,8 +5672,7 @@ export const,
   period: '/month',
   description: 'Create affiliate programs with branded links, flexible commission rules, and payout exports.'
   features: ['Custom referral linksUTM attribution_rule - based commissions_payout exports_fraud checks'];
-  popular: false;
-  icon: ''
+  popular: false icon: ''
   color: 'from - amber - 600 to - orange - 700'
   text_color: 'text - amber - 300',
   link: 'https://ziontechgroup.com / services / affiliate - tracking - suite',
@@ -5841,8 +5696,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 12;
   rating: 4.5;
-  reviews: 5;
-}
+  reviews: 5}
   id: 'smb - analytics - lite',
   name: 'SMB Analytics Lite',
   tagline: 'Traffic, funnels, and conversions without complexity'
@@ -5850,8 +5704,7 @@ export const,
   period: '/month'
   description: 'Privacy - friendly analytics for small businesses with funnel insights and weekly summaries.'
   features: ['Page + event analytics_funnels + cohorts_weekly email summariesCSV export_no cookies mode'];
-  popular: false;
-  icon: ''
+  popular: false icon: ''
   color: 'from - sky - 600 to - indigo - 700',
   text_color: 'text - sky - 300',
   link: 'https://ziontechgroup.com / services / smb - analytics - lite',
@@ -5875,8 +5728,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 40;
   rating: 4.6;
-  reviews: 8;
-}
+  reviews: 8}
   id: 'it - helpdesk - portal',
   name: 'IT Helpdesk Portal',
   tagline: 'Tickets, knowledge base, SLAs, and client portal'
@@ -5884,8 +5736,7 @@ export const,
   period: '/month',
   description: 'Managed ticketing for MSPs and internal IT with automation rules, approval flows, and client - visible status.'
   features: ['Email - to - ticketKB + article templatesSLAs + escalations_client portal_reports'];
-  popular: true;
-  icon: ''
+  popular: true icon: ''
   color: 'from - blue - 600 to - indigo - 700'
   text_color: 'text - blue - 300',
   link: 'https://ziontechgroup.com / services / it - helpdesk - portal',
@@ -5909,8 +5760,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 16;
   rating: 4.7;
-  reviews: 6;
-}
+  reviews: 6}
   id: 'ecommerce - returns - manager',
   name: 'Ecommerce Returns Manager',
   tagline: 'Customer - friendly returns with labels and status tracking',
@@ -5918,8 +5768,7 @@ export const,
   period: '/month',
   description: 'Automate RMAs, label generation, and status notifications. Analytics to reduce avoidable returns.'
   features: ['Self - serve returns portal_label generation_return reasons analytics_inventory sync_notifications'];
-  popular: true;
-  icon: ''
+  popular: true icon: ''
   color: 'from - violet - 600 to - fuchsia - 700'
   text_color: 'text - violet - 300',
   link: 'https://ziontechgroup.com / services / ecommerce - returns - manager',
@@ -5943,8 +5792,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 14;
   rating: 4.6;
-  reviews: 5;
-}
+  reviews: 5}
   id: 'automated - email - followups'
   name: 'Automated Email Followups'
   tagline: 'No - lead - left - behind sequences across inboxes'
@@ -5952,8 +5800,7 @@ export const,
   period: '/month'
   description: 'Simple sequencer to follow up on stale leads and open tickets with natural language and auto - scheduling.'
   features: ['Sequences + delays_inbox integration_smart stop on replyTemplatesAnalytics'];
-  popular: false;
-  icon: ''
+  popular: false icon: ''
   color: 'from - cyan - 600 to - teal - 700'
   text_color: 'text - cyan - 300',
   link: 'https://ziontechgroup.com / services / automated - email - followups',
@@ -5977,8 +5824,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 28;
   rating: 4.5;
-  reviews: 8;
-}
+  reviews: 8}
   id: 'podcast - transcription - service',
   name: 'Podcast Transcription Service',
   tagline: 'Accurate transcripts, chapters, and SEO blog exports'
@@ -5986,8 +5832,7 @@ export const,
   period: '/month',
   description: 'Upload or link to podcast episodes, get transcripts, summaries, chapters, and Wordpress - ready blog exports.'
   features: ['Fast transcripts_timestamps + chapters_summaries + highlights_blog export_glossary'];
-  popular: false;
-  icon: ''
+  popular: false icon: ''
   color: 'from - indigo - 600 to - blue - 700'
   text_color: 'text - indigo - 300',
   link: 'https://ziontechgroup.com / services / podcast - transcription - service',
@@ -6011,8 +5856,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 20;
   rating: 4.6;
-  reviews: 6;
-}
+  reviews: 6}
   id: 'ai - seo - content - optimizer',
   name: 'AI SEO Content Optimizer',
   tagline: 'Live on - page audits and SEO - aware rewrites',
@@ -6020,8 +5864,7 @@ export const,
   period: '/month',
   description: 'In - editor SEO suggestions, competitive gap analysis, and AI rewrites targeting featured snippets.'
   features: ['On - page audits_topic clusteringSERP intent match_internal link hints_rewrite suggestions'];
-  popular: true;
-  icon: ''
+  popular: true icon: ''
   color: 'from - emerald - 600 to - green - 700'
   text_color: 'text - emerald - 300',
   link: 'https://ziontechgroup.com / services / ai - seo - content - optimizer',
@@ -6045,8 +5888,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 33;
   rating: 4.7;
-  reviews: 10;
-}
+  reviews: 10}
   id: 'social - scheduler - ai',
   name: 'Social Scheduler AI',
   tagline: 'Auto - generate, schedule, and repurpose posts cross - platform'
@@ -6054,8 +5896,7 @@ export const,
   period: '/month',
   description: 'Turn links, videos, or blog posts into tailored social snippets and schedule them with best - time predictions.'
   features: ['Content repurposing_calendar + auto - times_hashtag + emoji assistant_link tracking_client approvals'];
-  popular: false;
-  icon: ''
+  popular: false icon: ''
   color: 'from - fuchsia - 600 to - pink - 700'
   text_color: 'text - fuchsia - 300',
   link: 'https://ziontechgroup.com / services / social - scheduler - ai',
@@ -6079,8 +5920,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 26;
   rating: 4.5;
-  reviews: 7;
-}
+  reviews: 7}
   id: 'lead - enrichment - api',
   name: 'Lead Enrichment API',
   tagline: 'Company, role, and social signals from an email / domain'
@@ -6088,8 +5928,7 @@ export const,
   period: '/month'
   description: 'REST API to enrich leads with verified firmographics and social signals for scoring and routing.'
   features: ['FirmographicsRole detection_validated email signals_confidence scoring_usage dashboards'];
-  popular: false;
-  icon: ''
+  popular: false icon: ''
   color: 'from - blue - 600 to - sky - 700'
   text_color: 'text - blue - 300',
   link: 'https://ziontechgroup.com / services / lead - enrichment - api',
@@ -6113,8 +5952,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 9;
   rating: 4.4;
-  reviews: 4;
-}
+  reviews: 4}
   id: 'consent - management - cmp',
   name: 'Consent Management CMP',
   tagline: 'GDPR / CCPA consent banners, preferences, and audit logs'
@@ -6122,8 +5960,7 @@ export const,
   period: '/month',
   description: 'Deploy branded consent banners, a preferences center, and downloadable audit logs. Geo - aware rules.'
   features: ['Geo rulesIAB TCFPreference center_audit logs_multi - brand themes'];
-  popular: true;
-  icon: ''
+  popular: true icon: ''
   color: 'from - emerald - 600 to - teal - 700',
   text_color: 'text - emerald - 300',
   link: 'https://ziontechgroup.com / services / consent - management - cmp',
@@ -6147,8 +5984,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 37;
   rating: 4.7;
-  reviews: 10;
-}
+  reviews: 10}
   id: 'cookie - scanner - pro',
   name: 'Cookie Scanner Pro',
   tagline: 'Auto - detects cookies + trackers and updates your policy',
@@ -6156,8 +5992,7 @@ export const,
   period: '/month',
   description: 'Scan your site for cookies / trackers, classify them, and generate policy updates with change diffs.'
   features: ['Site scan_tracker classification_policy generator_diffs + historyCI hook'];
-  popular: false;
-  icon: ''
+  popular: false icon: ''
   color: 'from - amber - 600 to - yellow - 700'
   text_color: 'text - amber - 300',
   link: 'https://ziontechgroup.com / services / cookie - scanner - pro',
@@ -6181,8 +6016,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 19;
   rating: 4.5;
-  reviews: 5;
-}
+  reviews: 5}
   id: 'statuspage - sla - tracker',
   name: 'StatusPage SLA Tracker',
   tagline: 'Track uptime / incidents and publish SLA reports',
@@ -6190,8 +6024,7 @@ export const,
   period: '/month',
   description: 'Connect monitors, log incidents, and share public SLA / uptime reports with customers.'
   features: ['Incident log_public status pageSLA calculatorRSS + webhooks_exports'];
-  popular: false;
-  icon: '';
+  popular: false icon: '';
   color: 'from - sky - 600 to - cyan - 700'
   text_color: 'text - sky - 300'
   link: 'https://ziontechgroup.com / services / statuspage - sla - tracker'
@@ -6215,8 +6048,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 11;
   rating: 4.4;
-  reviews: 3;
-}
+  reviews: 3}
   id: 'agentic - lead - qualifier',
   name: 'Agentic Lead Qualifier',
   tagline: 'Website chat agent that pre - qualifies and routes leads',
@@ -6224,8 +6056,7 @@ export const,
   period: '/month',
   description: 'Embedded chat agent asks smart questions, books meetings, and routes leads to the right team.'
   features: ['Qualifying flows_calendar bookingCRM routing_visitor insights_hand - off to human'];
-  popular: true;
-  icon: ''
+  popular: true icon: ''
   color: 'from - teal - 600 to - emerald - 700'
   text_color: 'text - teal - 300',
   link: 'https://ziontechgroup.com / services / agentic - lead - qualifier',
@@ -6249,17 +6080,15 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 23;
   rating: 4.6;
-  reviews: 7;
-}
+  reviews: 7}
   id: 'gdpr - dsar - portal - lite',
   name: 'GDPR DSAR Portal Lite',
   tagline: 'Accept, verify, export, and fulfill data subject requests'
   price: '$49',
   period: '/month',
   description: 'Hosted portal for DSARs with identity verification, workflow, and export helpers.'
-  features: ['Request intake_identity check_triage + workflowExportsAudit logs'];
-  popular: true;
-  icon: '';
+  features: ['Request intake_identity check_triage + workflowExportsAudit logs']
+  popular: true icon: '';
   color: 'from - red - 600 to - rose - 700'
   text_color: 'text - red - 300'
   link: 'https://ziontechgroup.com / services / gdpr - dsar - portal - lite'
@@ -6283,8 +6112,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 10;
   rating: 4.5;
-  reviews: 4;
-}
+  reviews: 4}
   id: 'feature - flag - auditor',
   name: 'Feature Flag Auditor',
   tagline: 'Flag hygiene checks and end - of - life automation',
@@ -6292,8 +6120,7 @@ export const,
   period: '/month',
   description: 'Scan repositories and environments for stale flags, dangerous defaults, and missing cleanups. Auto - open PRs.'
   features: ['Repo scanner_flag inventory_risk detectionPR suggestionsCI integration'];
-  popular: false;
-  icon: '';
+  popular: false icon: '';
   color: 'from - rose - 600 to - pink - 700'
   text_color: 'text - rose - 300'
   link: 'https://ziontechgroup.com / services / feature - flag - auditor'
@@ -6317,8 +6144,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 8;
   rating: 4.4;
-  reviews: 3;
-}
+  reviews: 3}
   id: 'postgres - index - advisor - pro',
   name: 'Postgres Index Advisor Pro',
   tagline: 'Index recommendations and controlled PR rollouts',
@@ -6326,8 +6152,7 @@ export const,
   period: '/month',
   description: 'Capture slow queries, recommend indexes, and open controlled rollout PRs with safety checks.'
   features: ['Slow query capture_index suggestions_risk scoringPR generation_rollback assist'];
-  popular: true;
-  icon: '';
+  popular: true icon: '';
   color: 'from - blue - 700 to - indigo - 800'
   text_color: 'text - blue - 300'
   link: 'https://ziontechgroup.com / services / postgres - index - advisor - pro'
@@ -6351,8 +6176,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 15;
   rating: 4.6;
-  reviews: 5;
-}
+  reviews: 5}
   id: 's3 - lifecycle - optimizer'
   name: 'S3 Lifecycle Optimizer'
   tagline: 'Move objects between storage classes to cut costs'
@@ -6360,8 +6184,7 @@ export const,
   period: '/month'
   description: 'Analyze S3 usage and generate lifecycle rules to lower storage bills without risking access latency.'
   features: ['Usage analysis_rule suggestions_cost simulator_change sets_alerting'];
-  popular: false;
-  icon: '';
+  popular: false icon: '';
   color: 'from - emerald - 700 to - teal - 800'
   text_color: 'text - emerald - 300'
   link: 'https://ziontechgroup.com / services / s3 - lifecycle - optimizer'
@@ -6385,17 +6208,15 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 17;
   rating: 4.5;
-  reviews: 4;
-}
+  reviews: 4}
   id: 'pii - discovery - scanner',
   name: 'PII Discovery Scanner',
   tagline: 'Scan buckets and DBs for PII / PHI with evidence exports',
   price: '$89',
   period: '/month',
   description: 'Find PII in cloud storage and databases, redact samples, and export auditor - friendly evidence.'
-  features: ['ConnectorsSensitive entity detection_sampling with redaction_findings export_alerting'];
-  popular: true;
-  icon: ''
+  features: ['ConnectorsSensitive entity detection_sampling with redaction_findings export_alerting']
+  popular: true icon: ''
   color: 'from - red - 700 to - rose - 800'
   text_color: 'text - red - 300',
   link: 'https://ziontechgroup.com / services / pii - discovery - scanner',
@@ -6419,8 +6240,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 13;
   rating: 4.6;
-  reviews: 5;
-}
+  reviews: 5}
   id: 'api - breaking - change - watcher',
   name: 'API Breaking Change Watcher',
   tagline: 'Schema diffs with CI gates and notifications',
@@ -6428,8 +6248,7 @@ export const,
   period: '/month',
   description: 'Monitor OpenAPI / GraphQL schemas for breaking changes, gate CI and alert owners with upgrade notes.'
   features: ['Schema registry_diff rules_owner mappingCI checks_changelog hints'];
-  popular: false;
-  icon: '';
+  popular: false icon: '';
   color: 'from - indigo - 700 to - violet - 800'
   text_color: 'text - indigo - 300'
   link: 'https://ziontechgroup.com / services / api - breaking - change - watcher'
@@ -6453,8 +6272,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 12;
   rating: 4.5;
-  reviews: 3;
-}
+  reviews: 3}
   id: 'synthetic - journey - monitor',
   name: 'Synthetic Journey Monitor',
   tagline: 'Record and replay user flows with SLO alerts',
@@ -6462,8 +6280,7 @@ export const,
   period: '/month',
   description: 'Browser - based recorder creates resilient journeys, run on a schedule and alert on SLO errors or latency.'
   features: ['RecorderSelector healingSchedulesSLO alerts_reports'];
-  popular: false;
-  icon: ''
+  popular: false icon: ''
   color: 'from - cyan - 700 to - blue - 800'
   text_color: 'text - cyan - 300',
   link: 'https://ziontechgroup.com / services / synthetic - journey - monitor',
@@ -6487,8 +6304,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 21;
   rating: 4.5;
-  reviews: 6;
-}
+  reviews: 6}
   id: 'iam - permission - analyzer'
   name: 'IAM Permission Analyzer'
   tagline: 'Detect over - privileged access and propose least - privilege policies'
@@ -6496,8 +6312,7 @@ export const,
   period: '/month'
   description: 'Continuously analyze IAM policies / usage to propose safe permission reductions and open PRs.'
   features: ['Policy inventory_usage analysisRecommendationsPR generation_alerting'];
-  popular: true;
-  icon: '';
+  popular: true icon: '';
   color: 'from - blue - 700 to - slate - 800'
   text_color: 'text - blue - 300'
   link: 'https://ziontechgroup.com / services / iam - permission - analyzer'
@@ -6521,8 +6336,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 9;
   rating: 4.6;
-  reviews: 3;
-}
+  reviews: 3}
   id: 'warehouse - cost - optimizer'
   name: 'Data Warehouse Cost Optimizer'
   tagline: 'Right - size warehouses and schedule off - peak workloads'
@@ -6530,8 +6344,7 @@ export const,
   period: '/month'
   description: 'Analyze query patterns and propose sizing + scheduling changes to slash Snowflake / BigQuery costs.'
   features: ['Query profiling_size / schedule proposals_cost simulatorPR templates_alerts'];
-  popular: true;
-  icon: '';
+  popular: true icon: '';
   color: 'from - indigo - 700 to - violet - 800'
   text_color: 'text - indigo - 300'
   link: 'https://ziontechgroup.com / services / warehouse - cost - optimizer'
@@ -6555,8 +6368,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 7;
   rating: 4.5;
-  reviews: 3;
-}
+  reviews: 3}
   id: 'email - warmup - monitor'
   name: 'Email Warmup & Reputation Monitor'
   tagline: 'Track sender reputation and run inbox placement tests'
@@ -6564,8 +6376,7 @@ export const,
   period: '/month'
   description: 'Run warmup campaigns and monitor deliverability metrics to stay out of spam.'
   features: ['Warmup campaigns_seed inbox tests_domain / auth checksAlertsReports'];
-  popular: false;
-  icon: '';
+  popular: false icon: '';
   color: 'from - orange - 600 to - rose - 700'
   text_color: 'text - orange - 300'
   link: 'https://ziontechgroup.com / services / email - warmup - monitor'
@@ -6589,8 +6400,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 16;
   rating: 4.5;
-  reviews: 4;
-}
+  reviews: 4}
   id: 'ai - meeting - to - ticket',
   name: 'AI MeetingtoTicket Copilot',
   tagline: 'Turn meeting action items into Jira / GitHub tickets',
@@ -6598,8 +6408,7 @@ export const,
   period: '/user / mo',
   description: 'Transcribe meetings, extract action items, and open tickets with owners and due dates.'
   features: ['TranscriptionAction extraction_ticket creation_owner mapping_summaries'];
-  popular: true;
-  icon: ''
+  popular: true icon: ''
   color: 'from - cyan - 700 to - blue - 800'
   text_color: 'text - cyan - 300',
   link: 'https://ziontechgroup.com / services / ai - meeting - to - ticket',
@@ -6623,28 +6432,25 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 24;
   rating: 4.6;
-  reviews: 6;
-}
+  reviews: 6}
 		rating: 4.6;
 		reviews: 6;
-// const contact = {;
+// const contact = {
 	mobile: '+1 302 464 0950';
 	email: 'kleber@ziontechgroup.com';
 	address: '364 E Main St STE 1008 Middletown DE 19709'}
 	website: 'https://ziontechgroup.com'};
-export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
+export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [
 	{,
-		id: 'ai-email-responder';
+		id: 'ai-email-responder'
 		name: 'AI Email Responder';
 		tagline: 'Autonomous email triage, drafting, and follow-ups for sales and support';
 		price: '$39';
-		period: '/month';
-		description: 'Reads inbound emails, classifies intent, drafts high-quality replies, and schedules polite follow-ups. Escalates edge cases to humans with context summaries.';
+		period: '/month' description: 'Reads inbound emails, classifies intent, drafts high-quality replies, and schedules polite follow-ups. Escalates edge cases to humans with context summaries.';
 		features: [
 			'Intent classification + prioritizationOn-brand response draftingAutomatic polite follow-upsLead/contact enrichmentAnalytics and response SLAs'
 		];
-		popular: true;
-		icon: '';
+		popular: true icon: '';
 		color: 'from-cyan-600 to-blue-700';
 		textColor: 'text-cyan-300';
 		link: 'https://ziontechgroup.com/services/ai-email-responder';
@@ -6670,18 +6476,16 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		rating: 4.7}
 		reviews: 12}
 	};
-	{;
+	{
 		id: 'mobile-survey-studio';
 		name: 'Mobile Survey Studio';
 		tagline: 'Adaptive, mobile-first surveys with branching logic and analytics';
 		price: '$19';
-		period: '/month';
-		description: 'Build conversational surveys that adapt in real time. Increase completion with SMS/WhatsApp delivery and one-tap choices.';
+		period: '/month' description: 'Build conversational surveys that adapt in real time. Increase completion with SMS/WhatsApp delivery and one-tap choices.';
 		features: [
 			'Branching logic + A/B promptsSMS/WhatsApp/web deliveryReal-time analyticsCSV/Sheets exportWebhooks + API'
 		];
-		popular: false;
-		icon: '';
+		popular: false icon: '';
 		color: 'from-emerald-600 to-teal-700';
 		textColor: 'text-emerald-300';
 		link: 'https://ziontechgroup.com/services/mobile-survey-studio';
@@ -6707,18 +6511,16 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		rating: 4.6}
 		reviews: 9}
 	};
-	{;
+	{
 		id: 'niche-productivity-planner';
 		name: 'Niche Productivity Planner';
 		tagline: 'Industry-specific planners with templates, rituals, and benchmarks';
 		price: '$12';
-		period: '/month';
-		description: 'Prebuilt workflows for agencies, clinics, and shops. Weekly rituals, KPI widgets, and printable schedules.';
+		period: '/month' description: 'Prebuilt workflows for agencies, clinics, and shops. Weekly rituals, KPI widgets, and printable schedules.';
 		features: [
 			'Industry templatesCalendar + task syncBenchmark KPIsExport to PDFRole-based views'
 		];
-		popular: false;
-		icon: '';
+		popular: false icon: '';
 		color: 'from-purple-600 to-indigo-700';
 		textColor: 'text-purple-300';
 		link: 'https://ziontechgroup.com/services/niche-productivity-planner';
@@ -6744,18 +6546,16 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		rating: 4.5}
 		reviews: 7}
 	};
-	{;
+	{
 		id: 'event-management-dashboard';
 		name: 'Event Management Dashboard';
 		tagline: 'Tickets, scheduling, comms, and post-event analytics';
 		price: '$49';
-		period: '/month';
-		description: 'Run webinars or in-person events with landing pages, reminders, QR tickets, and feedback analytics.';
+		period: '/month' description: 'Run webinars or in-person events with landing pages, reminders, QR tickets, and feedback analytics.';
 		features: [
 			'QR tickets + check-inEmail/SMS remindersAgenda builderFeedback formsPost-event reports'
 		];
-		popular: true;
-		icon: '';
+		popular: true icon: '';
 		color: 'from-pink-600 to-rose-700';
 		textColor: 'text-pink-300';
 		link: 'https://ziontechgroup.com/services/event-management-dashboard';
@@ -6846,7 +6646,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   descriptio,
   n: 'Build conversational surveys that adapt in real time. Increase completion with SMS/WhatsApp delivery and one-tap choices.'
 		feature,
-  s: [;
+  s: [
 			'Branching logic + A/B promptsSMS/WhatsApp/web deliveryReal-time analyticsCSV/Sheets exportWebhooks + API'
 		];
 		popula,
@@ -6915,7 +6715,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		descriptio,
   n: 'Prebuilt workflows for agencies, clinics, and shops. Weekly rituals, KPI widgets, and printable schedules.'
 		feature,
-  s: [;
+  s: [
 			'Industry templatesCalendar + task syncBenchmark KPIsExport to PDFRole-based views'
 		];
 		popula,
@@ -6984,7 +6784,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		descriptio,
   n: 'Run webinars or in-person events with landing pages, reminders, QR tickets, and feedback analytics.'
 		feature,
-  s: [;
+  s: [
 			'QR tickets + check-inEmail/SMS remindersAgenda builderFeedback formsPost-event reports'
 		];
 		popula,
@@ -7924,7 +7724,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		descriptio,
   n: 'Hosted portal for DSARs with identity verification, workflow, and export helpers.'
 		feature,
-  s: ['Request intakeIdentity checkTriage + workflowExportsAudit logs'];
+  s: ['Request intakeIdentity checkTriage + workflowExportsAudit logs']
 		popula,
   r: true;
 		ico,
@@ -8192,7 +7992,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		descriptio,
   n: 'Find PII in cloud storage and databases, redact samples, and export auditor-friendly evidence.'
 		feature,
-  s: ['ConnectorsSensitive entity detectionSampling with redactionFindings exportAlerting'];
+  s: ['ConnectorsSensitive entity detectionSampling with redactionFindings exportAlerting']
 		popula,
   r: true;
 		ico,
@@ -8662,7 +8462,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   descriptio,
   n: 'Reads inbound emails, classifies intent, drafts high - quality replies, and schedules polite follow - ups. Escalates edge cases to humans with context summaries.'
   feature,
-  s: [;
+  s: [
   'Intent classification + prioritization_on - brand response drafting_automatic polite follow - ups_lead / contact enrichment_analytics and response SLAs'
   ];
   popula,
@@ -8731,7 +8531,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   descriptio,
   n: 'Build conversational surveys that adapt in real time. Increase completion with SMS / WhatsApp delivery and one - tap choices.'
   feature,
-  s: [;
+  s: [
   'Branching logic + A / B promptsSMS / WhatsApp / web delivery_real - time analyticsCSV / Sheets export_webhooks + API'
   ];
   popula,
@@ -8800,7 +8600,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   descriptio,
   n: 'Prebuilt workflows for agencies, clinics, and shops. Weekly rituals, KPI widgets, and printable schedules.'
   feature,
-  s: [;
+  s: [
   'Industry templates_calendar + task sync_benchmark KPIsExport to PDFRole - based views'
   ];
   popula,
@@ -8869,7 +8669,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   descriptio,
   n: 'Run webinars or in - person events with landing pages, reminders, QR tickets, and feedback analytics.'
   feature,
-  s: [;
+  s: [
   'QR tickets + check - in_email / SMS reminders_agenda builder_feedback forms_post - event reports'
   ];
   popula,
@@ -9809,7 +9609,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   descriptio,
   n: 'Hosted portal for DSARs with identity verification, workflow, and export helpers.'
   feature,
-  s: ['Request intake_identity check_triage + workflowExportsAudit logs'];
+  s: ['Request intake_identity check_triage + workflowExportsAudit logs']
   popula,
   r: true;
   ico,
@@ -10077,7 +9877,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   descriptio,
   n: 'Find PII in cloud storage and databases, redact samples, and export auditor - friendly evidence.'
   feature,
-  s: ['ConnectorsSensitive entity detection_sampling with redaction_findings export_alerting'];
+  s: ['ConnectorsSensitive entity detection_sampling with redaction_findings export_alerting']
   popula,
   r: true;
   ico,
@@ -10544,12 +10344,12 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   s://ziontechgroup.com'
 };
 export const,
-  real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
+  real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 	{/* TODO: Fix JSX expression */}
   g: 4.7}
 		review,
   s: 12}
-	};
+	}
 	{/* TODO: Fix JSX expression */}
   g: 4.6}
 		review,
@@ -10686,25 +10486,22 @@ export const,
   s: 6}
 	}
 ];
-;
-// const contact = {;
+// const contact = {
 	mobile: '+1 302 464 0950';
 	email: 'kleber@ziontechgroup.com';
 	address: '364 E Main St STE 1008 Middletown DE 19709'}
 	website: 'https://ziontechgroup.com'};
-export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
+export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [
 	{,
-		id: 'ai-email-responder';
+		id: 'ai-email-responder'
 		name: 'AI Email Responder';
 		tagline: 'Autonomous email triage, drafting, and follow-ups for sales and support';
 		price: '$39';
-		period: '/month';
-		description: 'Reads inbound emails, classifies intent, drafts high-quality replies, and schedules polite follow-ups. Escalates edge cases to humans with context summaries.';
+		period: '/month' description: 'Reads inbound emails, classifies intent, drafts high-quality replies, and schedules polite follow-ups. Escalates edge cases to humans with context summaries.';
 		features: [
 			'Intent classification + prioritizationOn-brand response draftingAutomatic polite follow-upsLead/contact enrichmentAnalytics and response SLAs'
 		];
-		popular: true;
-		icon: '';
+		popular: true icon: '';
 		color: 'from-cyan-600 to-blue-700';
 		textColor: 'text-cyan-300';
 		link: 'https://ziontechgroup.com/services/ai-email-responder';
@@ -10730,18 +10527,16 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		rating: 4.7}
 		reviews: 12}
 	};
-	{;
+	{
 		id: 'mobile-survey-studio';
 		name: 'Mobile Survey Studio';
 		tagline: 'Adaptive, mobile-first surveys with branching logic and analytics';
 		price: '$19';
-		period: '/month';
-		description: 'Build conversational surveys that adapt in real time. Increase completion with SMS/WhatsApp delivery and one-tap choices.';
+		period: '/month' description: 'Build conversational surveys that adapt in real time. Increase completion with SMS/WhatsApp delivery and one-tap choices.';
 		features: [
 			'Branching logic + A/B promptsSMS/WhatsApp/web deliveryReal-time analyticsCSV/Sheets exportWebhooks + API'
 		];
-		popular: false;
-		icon: '';
+		popular: false icon: '';
 		color: 'from-emerald-600 to-teal-700';
 		textColor: 'text-emerald-300';
 		link: 'https://ziontechgroup.com/services/mobile-survey-studio';
@@ -10767,18 +10562,16 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		rating: 4.6}
 		reviews: 9}
 	};
-	{;
+	{
 		id: 'niche-productivity-planner';
 		name: 'Niche Productivity Planner';
 		tagline: 'Industry-specific planners with templates, rituals, and benchmarks';
 		price: '$12';
-		period: '/month';
-		description: 'Prebuilt workflows for agencies, clinics, and shops. Weekly rituals, KPI widgets, and printable schedules.';
+		period: '/month' description: 'Prebuilt workflows for agencies, clinics, and shops. Weekly rituals, KPI widgets, and printable schedules.';
 		features: [
 			'Industry templatesCalendar + task syncBenchmark KPIsExport to PDFRole-based views'
 		];
-		popular: false;
-		icon: '';
+		popular: false icon: '';
 		color: 'from-purple-600 to-indigo-700';
 		textColor: 'text-purple-300';
 		link: 'https://ziontechgroup.com/services/niche-productivity-planner';
@@ -10804,18 +10597,16 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		rating: 4.5}
 		reviews: 7}
 	};
-	{;
+	{
 		id: 'event-management-dashboard';
 		name: 'Event Management Dashboard';
 		tagline: 'Tickets, scheduling, comms, and post-event analytics';
 		price: '$49';
-		period: '/month';
-		description: 'Run webinars or in-person events with landing pages, reminders, QR tickets, and feedback analytics.';
+		period: '/month' description: 'Run webinars or in-person events with landing pages, reminders, QR tickets, and feedback analytics.';
 		features: [
 			'QR tickets + check-inEmail/SMS remindersAgenda builderFeedback formsPost-event reports'
 		];
-		popular: true;
-		icon: '';
+		popular: true icon: '';
 		color: 'from-pink-600 to-rose-700';
 		textColor: 'text-pink-300';
 		link: 'https://ziontechgroup.com/services/event-management-dashboard';
@@ -10847,12 +10638,12 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   s://ziontechgroup.com'
 };
 export const,
-  real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
+  real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 	{/* TODO: Fix JSX expression */}
   g: 4.7}
 		review,
   s: 12}
-	};
+	}
 	{/* TODO: Fix JSX expression */}
   g: 4.6}
 		review,
@@ -11816,7 +11607,7 @@ export const,
   e: 'Schema diffs with CI gates and notifications',' pric,
   e: '$49',' perio,
   d: '/month', descriptio,
-  n: ;' 'Monitor OpenAPI/GraphQL schemas for breaking changes, gate CI and alert owners with upgrade notes.', feature,
+  n: ' 'Monitor OpenAPI/GraphQL schemas for breaking changes, gate CI and alert owners with upgrade notes.', feature,
   s: [ ' i,
   d: 'api - breaking - change - watcher',' categor,
   y: 'Developer Tools', real_servic,
@@ -11952,7 +11743,7 @@ export const,
   e: true,' technolog,
   y: ['Git APIs', 'Static analysis'],' integration,
   s: ['GitHub', 'GitLab', 'Flagsmith'],' useCase,
-  s: ['Cleanup debt', 'Reduce risk'];' ro,
+  s: ['Cleanup debt', 'Reduce risk']' ro,
   i: 'Avoid outages, reduce toil',' competitor,
   s: ['LaunchDarkly add-ons'],' marketSiz,
   e: '$1B flags',' growthRat,
@@ -12078,7 +11869,7 @@ export const,
   e: 'Schema diffs with CI gates and notifications',' pric,
   e: '$49',' perio,
   d: '/month', descriptio,
-  n: ;' 'Monitor OpenAPI / GraphQL schemas for breaking changes, gate CI and alert owners with upgrade notes.', feature,
+  n: ' 'Monitor OpenAPI / GraphQL schemas for breaking changes, gate CI and alert owners with upgrade notes.', feature,
   s: [, ' 'Schema registry',' 'Diff rules',' 'Owner mapping',' 'CI checks',' 'Changelog hints'], popula,
   r: false,' ico,
   n: '🧭', ' colo,
@@ -12276,7 +12067,7 @@ export const,
   e: 'Schema diffs with CI gates and notifications',' pric,
   e: '$49',' perio,
   d: '/month', descriptio,
-  n: ;' 'Monitor OpenAPI/GraphQL schemas for breaking changes, gate CI and alert owners with upgrade notes.', feature,
+  n: ' 'Monitor OpenAPI/GraphQL schemas for breaking changes, gate CI and alert owners with upgrade notes.', feature,
   s: [ ' i,
   d: 'api - breaking - change - watcher',' nam,
   e: 'API Breaking Change Watcher',' taglin,
@@ -12494,7 +12285,7 @@ export const,
   e: '$39', perio,
   d: '/month',' descriptio,
   n: 'Reads inbound emails, classifies intent, drafts high-quality replies, and schedules polite follow-ups. Escalates edge cases to humans with context summaries.', feature,
-  s: [ ' 'Intent classification + prioritizationOn-brand response draftingAutomatic polite follow-upsLead/contact enrichmentAnalytics and response SLAs' ]; popula,
+  s: [ ' 'Intent classification + prioritizationOn-brand response draftingAutomatic polite follow-upsLead/contact enrichmentAnalytics and response SLAs' ] popula,
   r: true,' ico,
   n: '📧'' colo,
   r: 'from-cyan-600 to-blue-700'' textColo,
@@ -13072,7 +12863,7 @@ export const,
   e: '$49'' perio,
   d: '/month'' descriptio,
   n: 'Hosted portal for DSARs with identity verification, workflow, and export helpers.'' feature,
-  s: ['Request intakeIdentity checkTriage + workflowExportsAudit logs']; popula,
+  s: ['Request intakeIdentity checkTriage + workflowExportsAudit logs'] popula,
   r: true;' ico,
   n: '🛡️'' colo,
   r: 'from-red-600 to-rose-700'' textColo,
@@ -13208,7 +12999,7 @@ export const,
   e: '$89'' perio,
   d: '/month'' descriptio,
   n: 'Find PII in cloud storage and databases, redact samples, and export auditor-friendly evidence.'' feature,
-  s: ['ConnectorsSensitive entity detectionSampling with redactionFindings exportAlerting']; popula,
+  s: ['ConnectorsSensitive entity detectionSampling with redactionFindings exportAlerting'] popula,
   r: true,' ico,
   n: '🕵️'' colo,
   r: 'from-red-700 to-rose-800'' textColo,
@@ -13446,7 +13237,7 @@ export const,
   e: '$39'' perio,
   d: '/month',' descriptio,
   n: 'Reads inbound emails, classifies intent, drafts high - quality replies, and schedules polite follow - ups. Escalates edge cases to humans with context summaries.' feature,
-  s: [;' 'Intent classification + prioritization_on - brand response drafting_automatic polite follow - ups_lead / contact enrichment_analytics and response SLAs' ]; popula,
+  s: [' 'Intent classification + prioritization_on - brand response drafting_automatic polite follow - ups_lead / contact enrichment_analytics and response SLAs' ]; popula,
   r: true,' ico,
   n: '📧'' colo,
   r: 'from - cyan - 600 to - blue - 700'' text_colo,
@@ -13480,7 +13271,7 @@ export const,
   e: '$19'' perio,
   d: '/month',' descriptio,
   n: 'Build conversational surveys that adapt in real time. Increase completion with SMS / WhatsApp delivery and one - tap choices.' feature,
-  s: [;' 'Branching logic + A / B promptsSMS / WhatsApp / web delivery_real - time analyticsCSV / Sheets export_webhooks + API' ]; popula,
+  s: [' 'Branching logic + A / B promptsSMS / WhatsApp / web delivery_real - time analyticsCSV / Sheets export_webhooks + API' ]; popula,
   r: false,' ico,
   n: '📱'' colo,
   r: 'from - emerald - 600 to - teal - 700'' text_colo,
@@ -13514,7 +13305,7 @@ export const,
   e: '$12'' perio,
   d: '/month',' descriptio,
   n: 'Prebuilt workflows for agencies, clinics, and shops. Weekly rituals, KPI widgets, and printable schedules.' feature,
-  s: [;' 'Industry templates_calendar + task sync_benchmark KPIsExport to PDFRole - based views' ]; popula,
+  s: [' 'Industry templates_calendar + task sync_benchmark KPIsExport to PDFRole - based views' ]; popula,
   r: false;' ico,
   n: '🗂️'' colo,
   r: 'from - purple - 600 to - indigo - 700'' text_colo,
@@ -13548,7 +13339,7 @@ export const,
   e: '$49'' perio,
   d: '/month',' descriptio,
   n: 'Run webinars or in - person events with landing pages, reminders, QR tickets, and feedback analytics.' feature,
-  s: [;' 'QR tickets + check - in_email / SMS reminders_agenda builder_feedback forms_post - event reports' ]; popula,
+  s: [' 'QR tickets + check - in_email / SMS reminders_agenda builder_feedback forms_post - event reports' ]; popula,
   r: true,' ico,
   n: '🎟️'' colo,
   r: 'from - pink - 600 to - rose - 700'' text_colo,
@@ -14024,7 +13815,7 @@ export const,
   e: '$49'' perio,
   d: '/month',' descriptio,
   n: 'Hosted portal for DSARs with identity verification, workflow, and export helpers.'' feature,
-  s: ['Request intake_identity check_triage + workflowExportsAudit logs']; popula,
+  s: ['Request intake_identity check_triage + workflowExportsAudit logs'] popula,
   r: true;' ico,
   n: '🛡️'' colo,
   r: 'from - red - 600 to - rose - 700'' text_colo,
@@ -14160,7 +13951,7 @@ export const,
   e: '$89'' perio,
   d: '/month',' descriptio,
   n: 'Find PII in cloud storage and databases, redact samples, and export auditor - friendly evidence.'' feature,
-  s: ['ConnectorsSensitive entity detection_sampling with redaction_findings export_alerting']; popula,
+  s: ['ConnectorsSensitive entity detection_sampling with redaction_findings export_alerting'] popula,
   r: true,' ico,
   n: '🕵️'' colo,
   r: 'from - red - 700 to - rose - 800'' text_colo,
@@ -14398,9 +14189,9 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
   s://ziontechgroup.com' }; export const,
-  real2035Q2Additions: EnhancedRealMicroSaasService[] = [; {/* TODO: Fix JSX expression */}
+  real2035Q2Additions: EnhancedRealMicroSaasService[] = [ {/* TODO: Fix JSX expression */}
   g: 4.7} review,
-  s: 12} }; {/* TODO: Fix JSX expression */}
+  s: 12} } {/* TODO: Fix JSX expression */}
   g: 4.6} review,
   s: 9} }; {/* TODO: Fix JSX expression */}
   g: 4.5} review,
@@ -14459,9 +14250,9 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
   s://ziontechgroup.com' }; export const,
-  real2035Q2Additions: EnhancedRealMicroSaasService[] = [; {/* TODO: Fix JSX expression */}
+  real2035Q2Additions: EnhancedRealMicroSaasService[] = [ {/* TODO: Fix JSX expression */}
   g: 4.7} review,
-  s: 12} }; {/* TODO: Fix JSX expression */}
+  s: 12} } {/* TODO: Fix JSX expression */}
   g: 4.6} review,
   s: 9} }; {/* TODO: Fix JSX expression */}
   g: 4.5} review,

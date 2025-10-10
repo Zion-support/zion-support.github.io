@@ -392,8 +392,6 @@ const,
         <p className="text-gray-300 mb-8">Coming Soon - Seamless cloud migration services</p>"
         <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg,"
   hover:bg-cyan-600 transition-colors"></a>
-          Contact Us;
-  );
-};
-export default CloudMigrationPage;
+          Contact Us)};
+export default CloudMigrationPage
 "`

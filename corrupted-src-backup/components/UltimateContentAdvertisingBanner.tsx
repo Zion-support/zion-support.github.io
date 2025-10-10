@@ -41,8 +41,7 @@ const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {
     { val, u, e: "5, 0, 0+", lab, e, l: "Enterprise, Client, s", ic, o, n: Use, r, s },";"
     { val, u, e: "$50, 0, M+", lab, e, l: "Cost, Saving, s", ic, o, n: DollarSi, g, n },";"
     { val, u, e: "98%", lab, e, l: "Automation, Rat, e", ic, o, n: Targ, e, t },";"
-    { val, u, e: "99.99%", lab, e, l: "Security, Accurac, y", ic, o, n: Shie, l, d }";
-  ];
+    { val, u, e: "99.99%", lab, e, l: "Security, Accurac, y", ic, o, n: Shie, l, d }"];
   return(<div, className="py-24, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">";
       {/* Animated, background, effects */}
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20">
@@ -167,8 +166,8 @@ const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {
         {/* Features, Gri, d */}
         <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l;
   g:gr, i, d-co, l, s-4, ga, p-8, m, b-20">")
-        <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l;)
-  g:gr, i, d-co, l, s-4, ga, p-8, m, b-20">";)
+        <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l)
+  g:gr, i, d-co, l, s-4, ga, p-8, m, b-20">")
           {advertisingFeatur, e, s.m, a, p((featu, r, e, ind, e, x) => (
             <moti, o, n.d, i, v;
         <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l
@@ -269,8 +268,7 @@ const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {
                   <Star, ke, y={i} classNa, m, e="w-6 h-6, tex, t-yell, o, w-400, fil, l-curre, n, t  />
                 {/* TODO: Fix JSX expression */}"
                   <Star, ke, y={i} classNa, m, e="w-6 h-6, tex, t-yell, o, w-400, fil, l-curre, n, t  /></Star>"
-                  <Star, ke, y={i} classNa, m, e="w-6 h-6, tex, t-yell, o, w-400, fil, l-curre, n, t" />";
-                ))}"
+                  <Star, ke, y={i} classNa, m, e="w-6 h-6, tex, t-yell, o, w-400, fil, l-curre, n, t" />"))}"
                 <span, className="te, x, t-gr, a, y-300, tex, t-lg, m, l-2">5.0/5.0, Ratin, g</sp, a, n>";
               </d, i, v>
             </d, i, v>
@@ -440,7 +438,5 @@ const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {
         </d, i, v>
       </d, i, v>
     </d, i, v>
-  );
-};
-export default UltimateContentAdvertisingBanner;
-}}"
+  )};
+export default UltimateContentAdvertisingBanner}}"

@@ -7,7 +7,7 @@ const, October2025UltimateEnterpriseBanne, r = () => {
         <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>)
         <div, className="absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pulse, dela, y-10, 0, 0"></d, i, v>)
         <div, className="absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, filter, blur-3xl, animat, e-pulse, dela, y-20, 0, 0"></d, i, v>)
-    <div, className="relative, p, y-16, p, x-4, s, m: px-6 l;),
+    <div, className="relative, p, y-16, p, x-4, s, m: px-6 l),
       {/* Animated, Backgroun, d */};</div>
       <div, className="absolute, inse, t-0, opacit, y-20"></div>
         <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>
@@ -554,7 +554,6 @@ const, October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expressio
         </d, i, v>
       </d, i, v>
     </d, i, v>
-  );
-};
-export default October2025UltimateEnterpriseBanner;
+  )};
+export default October2025UltimateEnterpriseBanner
 ;"

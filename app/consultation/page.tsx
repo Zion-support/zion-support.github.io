@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Calendar, Clock, Users, CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Target, Award } from 'lucide-react';
-
 interface ConsultationType {
   id: string;
   name: string;
@@ -11,9 +10,7 @@ interface ConsultationType {
   duration: string;
   price: string;
   features: string[];
-  popular: boolean;
-}
-
+  popular: boolean}
 const ConsultationPage: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -24,7 +21,6 @@ const ConsultationPage: React.FC = () => {
     consultationType: '',
     urgency: 'medium'
   });
-
   const consultationTypes: ConsultationType[] = [
     {
       id: 'strategy',
@@ -39,8 +35,7 @@ const ConsultationPage: React.FC = () => {
         'Implementation timeline',
         'Resource planning'
       ],
-      popular: true
-    },
+      popular: true},
     {
       id: 'technical',
       name: 'Technical Deep Dive',
@@ -54,8 +49,7 @@ const ConsultationPage: React.FC = () => {
         'Performance optimization',
         'Scalability planning'
       ],
-      popular: false
-    },
+      popular: false},
     {
       id: 'security',
       name: 'Security & Compliance',
@@ -69,10 +63,8 @@ const ConsultationPage: React.FC = () => {
         'Incident response planning',
         'Training recommendations'
       ],
-      popular: false
-    }
+      popular: false}
   ];
-
   const services = [
     {
       icon: Zap,
@@ -90,21 +82,16 @@ const ConsultationPage: React.FC = () => {
       description: 'Protect your business with comprehensive security solutions and compliance'
     }
   ];
-
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }));
-  };
-
+    }))};
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // In a real app, this would submit the form data
-    alert('Thank you for your interest! We will contact you within 24 hours.');
-  };
-
+    alert('Thank you for your interest! We will contact you within 24 hours.')};
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -112,9 +99,8 @@ const ConsultationPage: React.FC = () => {
         <meta name="description" content="Get a free consultation with our technology experts. Discuss your AI, cloud, and digital transformation needs with Zion Tech Group." />
         <meta name="keywords" content="free consultation, technology consulting, AI consultation, cloud consulting, digital transformation" />
       </Helmet>
-
       {/* Hero Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
             Free
@@ -143,7 +129,6 @@ const ConsultationPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Services Overview */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -153,10 +138,9 @@ const ConsultationPage: React.FC = () => {
               Our experts provide strategic guidance across all areas of technology and digital transformation.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <div key={index} className="bg-slate-800/50 rounded-2xl p-8 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 text-center">
+              <div key={index} className="bg-slate-800/50 rounded-2xl p-8 border border-cyan-500/20 hover: border-cyan-500/40 transition-all duration-300 text-center">
                 <div className="flex justify-center mb-6">
                   <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center">
                     <service.icon className="w-8 h-8 text-cyan-400" />
@@ -169,9 +153,8 @@ const ConsultationPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Consultation Types */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-white mb-6">Consultation Types</h2>
@@ -179,11 +162,10 @@ const ConsultationPage: React.FC = () => {
               Choose the consultation type that best fits your needs and schedule.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {consultationTypes.map((type) => (
               <div key={type.id} className={`relative bg-slate-800/50 rounded-2xl p-8 border transition-all duration-300 ${
-                type.popular ? 'border-cyan-500' : 'border-cyan-500/20 hover:border-cyan-500/40'
+                type.popular ? 'border-cyan-500' : 'border-cyan-500/20 hover: border-cyan-500/40'
               }`}>
                 {type.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -192,7 +174,6 @@ const ConsultationPage: React.FC = () => {
                     </div>
                   </div>
                 )}
-                
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-white mb-2">{type.name}</h3>
                   <p className="text-gray-300 mb-4">{type.description}</p>
@@ -204,7 +185,6 @@ const ConsultationPage: React.FC = () => {
                   </div>
                   <div className="text-3xl font-bold text-cyan-400 mt-4">{type.price}</div>
                 </div>
-                
                 <ul className="space-y-3 mb-8">
                   {type.features.map((feature, index) => (
                     <li key={index} className="flex items-start">
@@ -213,8 +193,7 @@ const ConsultationPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-                
-                <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold py-3 px-6 rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
+                <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold py-3 px-6 rounded-lg hover: from-cyan-600 hover:to-purple-600 transition-all duration-300">
                   Book Consultation
                 </button>
               </div>
@@ -222,9 +201,8 @@ const ConsultationPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Contact Form */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+      <section className="py-16 px-4 sm: px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-6">Request a Consultation</h2>
@@ -232,10 +210,9 @@ const ConsultationPage: React.FC = () => {
               Fill out the form below and we'll get back to you within 24 hours to schedule your consultation.
             </p>
           </div>
-          
           <div className="bg-slate-800/50 rounded-2xl p-8 border border-cyan-500/20">
             <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md: grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                     Full Name *
@@ -247,7 +224,7 @@ const ConsultationPage: React.FC = () => {
                     value={formData.name}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
                     placeholder="Your full name"
                   />
                 </div>
@@ -262,12 +239,11 @@ const ConsultationPage: React.FC = () => {
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
                     placeholder="your@email.com"
                   />
                 </div>
               </div>
-              
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
@@ -279,7 +255,7 @@ const ConsultationPage: React.FC = () => {
                     name="company"
                     value={formData.company}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
                     placeholder="Your company name"
                   />
                 </div>
@@ -293,12 +269,11 @@ const ConsultationPage: React.FC = () => {
                     name="phone"
                     value={formData.phone}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
                     placeholder="+1 (555) 123-4567"
                   />
                 </div>
               </div>
-              
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="consultationType" className="block text-sm font-medium text-gray-300 mb-2">
@@ -309,7 +284,7 @@ const ConsultationPage: React.FC = () => {
                     name="consultationType"
                     value={formData.consultationType}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-gray-600 rounded-lg text-white focus: outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
                   >
                     <option value="">Select consultation type</option>
                     <option value="strategy">AI Strategy Consultation</option>
@@ -326,7 +301,7 @@ const ConsultationPage: React.FC = () => {
                     name="urgency"
                     value={formData.urgency}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-gray-600 rounded-lg text-white focus: outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
                   >
                     <option value="low">Low - Within 2 weeks</option>
                     <option value="medium">Medium - Within 1 week</option>
@@ -334,7 +309,6 @@ const ConsultationPage: React.FC = () => {
                   </select>
                 </div>
               </div>
-              
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
                   Message
@@ -345,11 +319,10 @@ const ConsultationPage: React.FC = () => {
                   value={formData.message}
                   onChange={handleInputChange}
                   rows={5}
-                  className="w-full px-4 py-3 bg-slate-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
+                  className="w-full px-4 py-3 bg-slate-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
                   placeholder="Tell us about your project and what you'd like to discuss..."
                 />
               </div>
-              
               <button
                 type="submit"
                 className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold py-4 px-8 rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center space-x-2"
@@ -361,9 +334,8 @@ const ConsultationPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm: px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
             <h2 className="text-3xl font-bold text-white mb-6">
@@ -392,7 +364,5 @@ const ConsultationPage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
-
-export default ConsultationPage;
+  )};
+export default ConsultationPage

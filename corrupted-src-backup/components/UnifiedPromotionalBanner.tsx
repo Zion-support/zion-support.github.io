@@ -3,8 +3,7 @@ tit, l, e: stri, n, g;
 catego, r, y: stri, n, g;
 l, i, n;
   k: stri, n, g;
-metri, c, s?: stri, n, g;
-}
+metri, c, s?: stri, n, g}
 export, interface, UnifiedPromotionalBannerProps {
 varia, n, t?: 'defau, l, t' | 'premi, u, m' | 'he, r, o' | 'compa, c, t' | 'me, g, a';
 tit, l, e: stri, n, g;
@@ -19,8 +18,7 @@ classNa, m, e?: stri, n, g;
 ic, o, n?: 'sparkl, e, s' | 'z, a, p' | 'rock, e, t' | 'st, a, r' | 'no, n, e';
 animat, e, d?: boole, a, n;
 bad, g, e?: stri, n, g;
-da, t, e?: stri, n, g;
-}
+da, t, e?: stri, n, g}
 const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, s> = ({
   varia, n, t = 'defau, l, t'
   tit, l, e;
@@ -46,8 +44,7 @@ const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, 
   ic, o, n = 'sparkl, e, s',';
   animat, e, d = tr, u, e;
   bad, g, e;
-  da, t, e;
-}) => {
+  da, t, e}) => {
   // Theme configurations const themeClass e s = {
     bl, u, e: 'fr, o, m-bl, u, e-5, 0, 0/10, t, o-bl, u, e-6, 0, 0/10, borde, r-bl, u, e-5, 0, 0/, 3, 0',
     purp, l, e: 'fr, o, m-purp, l, e-5, 0, 0/10, t, o-purp, l, e-6, 0, 0/10, borde, r-purp, l, e-5, 0, 0/3, 0',
@@ -102,7 +99,7 @@ const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, 
         `}
         ></h2>
           {title}
-        </h2 > {/* Descripti, o, n */}
+        </h2> {/* Descripti, o, n */}
         <p, classNam, e = {/* TODO: Fix JSX expression */}
            }`
         `}

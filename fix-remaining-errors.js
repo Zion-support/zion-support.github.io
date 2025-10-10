@@ -1,85 +1,119 @@
+#!/usr/bin/env node
+
 import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import { execSync } from 'child_process';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// Get all TypeScript/TSX files in the app directory
+const files = execSync('find ./app -name "*.tsx" -o -name "*.ts"', { encoding: 'utf8' })
+  .trim()
+  .split('\n')
+  .filter(file => file && !file.includes('node_modules') && !file.includes('.git'));
 
-// Get all files with errors;
-const getAllFilesWithErrors = () => {
-  const srcDir = path.join(__dirname, 'src');
-  const files = [];
-  
-  const scanDirectory = (dir) => {
-    const items = fs.readdirSync(dir);
-    for (const item of items) {
-      const fullPath = path.join(dir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory()) {
-        scanDirectory(fullPath);
-      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
-        files.push(fullPath);
-      }
+console.log(`Found ${files.length} TypeScript files to check`);
+
+let fixedCount = 0;
+let errorCount = 0;
+
+files.forEach(filePath => {
+  try {
+    console.log(`Processing: ${filePath}`);
+    
+    let content = fs.readFileSync(filePath, 'utf8');
+    const originalContent = content;
+    
+    // Fix the specific pattern: }},; -> },
+    content = content.replace(/}\s*}\s*,\s*;/g, '},');
+    
+    // Fix the specific pattern: },; -> },
+    content = content.replace(/}\s*,\s*;/g, '},');
+    
+    // Fix the specific pattern: {icon: Icon, title: 'Title', description: 'Desc', benefits: [...]} -> proper object
+    content = content.replace(/(\w+):\s*(\w+),\s*title:\s*'([^']*)',\s*description:\s*'([^']*)',\s*benefits:\s*\[([^\]]*)\]\s*}\s*,\s*;/g, 
+      '$1: $2,\n      title: \'$3\',\n      description: \'$4\',\n      benefits: [$5]\n    },');
+    
+    // Fix malformed object properties with semicolons
+    content = content.replace(/(\w+):\s*([^,}]+),\s*;/g, '$1: $2,');
+    content = content.replace(/(\w+):\s*([^,}]+)\s*}/g, '$1: $2}');
+    
+    // Fix JSX with semicolons
+    content = content.replace(/<\s*(\w+)\s*>/g, '<$1>');
+    content = content.replace(/<\s*\/\s*(\w+)\s*>/g, '</$1>');
+    content = content.replace(/<\s*(\w+)\s*\/\s*>/g, '<$1 />');
+    
+    // Fix JSX attributes with semicolons
+    content = content.replace(/=\s*{\s*;\s*(\w+)/g, '={$1');
+    content = content.replace(/=\s*"([^"]*);\s*"/g, '="$1"');
+    content = content.replace(/=\s*'([^']*);\s*'/g, "='$1'");
+    
+    // Fix array elements with semicolons
+    content = content.replace(/\[\s*;\s*\{/g, '[{');
+    content = content.replace(/\}\s*;\s*\]/g, '}]');
+    
+    // Fix function calls with semicolons
+    content = content.replace(/\(\s*;\s*\)/g, '()');
+    content = content.replace(/\(\s*;\s*([^)]+)/g, '($1');
+    content = content.replace(/([^,]+);\s*\)/g, '$1)');
+    
+    // Fix template literals with semicolons
+    content = content.replace(/`\s*;\s*`/g, '``');
+    content = content.replace(/`\s*;\s*([^`]+)/g, '`$1');
+    content = content.replace(/([^`]+);\s*`/g, '$1`');
+    
+    // Fix string literals with semicolons
+    content = content.replace(/"\s*;\s*"/g, '""');
+    content = content.replace(/"\s*;\s*([^"]+)/g, '"$1');
+    content = content.replace(/([^"]+);\s*"/g, '$1"');
+    
+    // Fix object property assignments
+    content = content.replace(/(\w+):\s*(\w+),\s*;/g, '$1: $2,');
+    content = content.replace(/(\w+):\s*(\w+)\s*}/g, '$1: $2}');
+    
+    // Fix array declarations
+    content = content.replace(/const\s+(\w+)\s*=\s*\[\s*;/g, 'const $1 = [');
+    
+    // Fix object declarations
+    content = content.replace(/const\s+(\w+)\s*=\s*{\s*;/g, 'const $1 = {');
+    
+    // Fix return statements
+    content = content.replace(/return\s*\(\s*;/g, 'return (');
+    
+    // Fix JSX fragments
+    content = content.replace(/<\s*>\s*;\s*<\s*\/\s*>/g, '<></>');
+    
+    // Remove standalone semicolons on their own lines
+    content = content.replace(/^\s*;\s*$/gm, '');
+    
+    // Fix malformed object properties in arrays
+    content = content.replace(/\{\s*;\s*(\w+):/g, '{$1:');
+    content = content.replace(/(\w+):\s*([^,}]+),\s*;/g, '$1: $2,');
+    
+    // Fix JSX self-closing tags
+    content = content.replace(/<\s*(\w+)\s*\/\s*>\s*;/g, '<$1 />');
+    
+    // Fix JSX opening tags
+    content = content.replace(/<\s*(\w+)\s*>\s*;/g, '<$1>');
+    
+    // Fix JSX closing tags
+    content = content.replace(/<\s*\/\s*(\w+)\s*>\s*;/g, '</$1>');
+    
+    // Clean up extra whitespace
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+    content = content.replace(/^\s*\n/gm, '');
+    
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      fixedCount++;
+      console.log(`✓ Fixed: ${filePath}`);
+    } else {
+      console.log(`- No changes needed: ${filePath}`);
     }
-  };
-  
-  scanDirectory(srcDir);
-  return files;
-};
-
-// Fix all remaining syntax errors;
-const fixRemainingErrors = () => {
-  const files = getAllFilesWithErrors();
-  let fixedCount = 0;
-  
-  for (const filePath of files) {
-    try {
-      let content = fs.readFileSync(filePath, 'utf8');
-      let modified = false;
-      
-      // Fix component names with spaces or special characters;
-      const componentNameMatch = content.match(/const\s+([A-Za-z0-9\s\-]+)Page: \s*React\.FC/);
-      if (componentNameMatch) {,
-        const oldName = componentNameMatch[1];,
-        const newName = oldName;
-          .replace(/\s+/g, '')
-          .replace(/\-/g, '')
-          .replace(/^([a-z])/, (match, letter) => letter.toUpperCase());
-        
-        if (oldName !== newName) {
-          content = content.replace(new RegExp(`const\\s+${oldName.replace(/[\s\-]/g, '\\s+')}Page:\\s*React\\.FC`, 'g'), `const ${newName}Page: React.FC`);
-          content = content.replace(new RegExp(`export\\s+default\\s+${oldName.replace(/[\s\-]/g, '\\s+')}Page`, 'g'), `export default ${newName}Page`);
-          modified = true;
-        }
-      }
-      
-      // Fix any remaining TODO comments that might cause issues;
-      content = content.replace(/\/\/\s*TODO:.*$/gm, '');
-      content = content.replace(/{\s*\/\/\s*TODO:.*?}/g, '{}');
-      content = content.replace(/\[\s*\/\/\s*TODO:.*?]/g, '[]');
-      content = content.replace(/\(\s*\/\/\s*TODO:.*?\)/g, '()');
-      
-      // Fix any malformed JSX;
-      content = content.replace(/\/\/\s*[^/]/g, '');
-      content = content.replace(/<[^>]*\/\/[^>]*>/g, (match) => match.replace(/\/\/.*/, ''));
-      
-      // Fix any incomplete function calls or objects;
-      content = content.replace(/{\s*}\s*$/gm, '{}');
-      content = content.replace(/\[\s*\]\s*$/gm, '[]');
-      content = content.replace(/\(\s*\)\s*$/gm, '()');
-      
-      if (modified) {
-        fs.writeFileSync(filePath, content);
-        console.log(`Fixed: ${path.relative(__dirname, filePath)}`);
-        fixedCount++;
-      }
-    } catch (error) {
-      console.error(`Error fixing ${filePath}:`, error.message);
-    }
+  } catch (error) {
+    console.error(`✗ Error processing ${filePath}:`, error.message);
+    errorCount++;
   }
-  
-  console.log(`Fixed ${fixedCount} files!`);
-};
+});
 
-fixRemainingErrors();
+console.log(`\nSummary:`);
+console.log(`- Files processed: ${files.length}`);
+console.log(`- Files fixed: ${fixedCount}`);
+console.log(`- Errors: ${errorCount}`);

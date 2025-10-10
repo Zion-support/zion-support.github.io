@@ -93,7 +93,7 @@ namename: 'Channel Partners',
       bgColor: 'bg-orange-500/10'
   const partnerTypes = [];
   return (
-    {// TODO: Add content;}
+    {// TODO: Add content}
 };
   titl,
   e: 'Technology Partners',
@@ -341,9 +341,8 @@ const PagePage: React.FC = () => {
                 Email Us;
       <Footer />
     </div>
-  );
-};
-export default PartnersPage;
+  )};
+export default PartnersPage
   </a>
   </div>
   </div>

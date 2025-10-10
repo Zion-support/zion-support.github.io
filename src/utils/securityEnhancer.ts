@@ -1,15 +1,11 @@
 // SecurityEnhancer utility
 // This file contains utility functions and configurations
-
-
-interface SecurityConfig {enableCSP: boolean;}
+interface SecurityConfig {enableCSP: boolean}
   enableHTTPS: boolean;
   enableXSSProtection: boolean;
   enableCSRFProtection: boolean;
-  enableContentSecurityPolicy: boolean;
-}
-
-class SecurityEnhancer {private config: SecurityConfig;}
+  enableContentSecurityPolicy: boolean}
+class SecurityEnhancer {private config: SecurityConfig}
   constructor(config?: SecurityConfig) {this.config = config || {}
       enableCSP: true,
       enableHTTPS: true,
@@ -17,12 +13,8 @@ class SecurityEnhancer {private config: SecurityConfig;}
       enableCSRFProtection: true,
       enableContentSecurityPolicy: true}
     this.init()
-
-
-
-  private init(): void {// Initialize security enhancements;}
-    this.setupSecurityHeaders();
-  }
+  private init(): void {// Initialize security enhancements}
+    this.setupSecurityHeaders()}
   private initializeSecurity(): void {
     if (typeof window === 'undefined') return
     this.setupContentSecurityPolicy()
@@ -93,8 +85,7 @@ class SecurityEnhancer {private config: SecurityConfig;}
       info: console.info.bind(console)
     };
     // Override console methods to detect debugging
-    Object.assign(console, originalConsole);
-  }
+    Object.assign(console, originalConsole)}
   private monitorDOMManipulation(): void {
     const observer = new MutationObserver((mutations) => {
       mutations.forEach((mutation) => {
@@ -128,12 +119,7 @@ class SecurityEnhancer {private config: SecurityConfig;}
       return originalFetch(input, init)
     }
   }
-
-  public cleanup(): void {// Cleanup security enhancements;}
+  public cleanup(): void {// Cleanup security enhancements}
   }
 }
-
-export default SecurityEnhancer;"
-
-
-
+export default SecurityEnhancer"

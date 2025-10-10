@@ -6,7 +6,7 @@ import { Brain, Code, FlaskConical, Target, CheckCircle, Star,  Brain,  Code,  T
 const AIResearchDevelopmentPage: React.FC = () => {
   const features = [];
   return (
-    {// TODO: Add content;}
+    {// TODO: Add content}
 };
   ico,
   n: Brain,
@@ -15,8 +15,7 @@ const AIResearchDevelopmentPage: React.FC = () => {
       descriptio,
   n: 'Tailored AI research solutions for your specific needs',
       benefit,
-  s: ['Custom algorithms', 'Research partnerships', 'Innovation labs'];
-    },
+  s: ['Custom algorithms', 'Research partnerships', 'Innovation labs']},
       ico,
   n: Code,
       titl,
@@ -89,6 +88,5 @@ const AIResearchDevelopmentPage: React.FC = () => {
       </main>
       <Footer /></Footer>
     </div>
-  );
-};
-export default AiResearchDevelopmentPage;
+  )};
+export default AiResearchDevelopmentPage

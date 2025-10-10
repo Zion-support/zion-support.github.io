@@ -1,4 +1,3 @@
-
 'use client'
 /**
  * Comprehensive Monitoring Utility;
@@ -7,18 +6,17 @@
  * Real-time application monitoring, performance tracking, and error reporting;
  */
 export interface PerformanceMetrics {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
-  lcp?: number;
+  lcp?: number
   fid?: number;
   cls?: number;
   fcp?: number;
   ttfb?: number;
-  inp?: number;
-}
+  inp?: number}
 export interface ErrorReport {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   messag,
   e: string;
   stack?: string;
@@ -30,27 +28,23 @@ export interface ErrorReport {/* TODO: Fix JSX expression */}
     ur,
   l: string;
 class MonitoringService {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
-
 class MonitoringService {
   private metrics: PerformanceMetrics = {}
   private errors: ErrorReport[] = []
   private observer: PerformanceObserver | null = null
-
   constructor() {
     if (typeof window !== 'undefined') {
       this.initializeMonitoring()
     }
   }
-
   private initializeMonitoring(): void {
     this.monitorWebVitals()
     this.monitorLongTasks()
     this.monitorResourceTiming()
     this.setupErrorHandling()
   }
-
   private monitorWebVitals(): void {
     if ('PerformanceObserver' in window) {
       try {
@@ -61,17 +55,13 @@ class MonitoringService {
           this.reportMetric('lcp', this.metrics.lcp)
         })
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
-
         // First Input Delay
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
             this.metrics.fid = (entry as any).processingStart - entry.startTime;
-            this.reportMetric('fid', this.metrics.fid);
-          });
-        });
+            this.reportMetric('fid', this.metrics.fid)})});
         fidObserver.observe({ entryTypes: ['first-input'] });
-
         let clsValue = 0;
         const clsObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
@@ -79,27 +69,20 @@ class MonitoringService {
             if (!(entry as any).hadRecentInput) {
               clsValue += (entry as any).value || 0;
               this.metrics.cls = clsValue;
-              this.reportMetric('cls', clsValue);
-            }
+              this.reportMetric('cls', clsValue)}
           })
         })
         clsObserver.observe({ entryTypes: ['layout-shift'] })
-
         // First Contentful Paint
         const fcpObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
           entries.forEach(entry => {
             this.metrics.fcp = entry.startTime;
-            this.reportMetric('fcp', entry.startTime);
-          });
-        });
-        fcpObserver.observe({ entryTypes: ['paint'] });
-      } catch (error) {
-        // console.error('Error setting up performance observers:', error);
-      }
+            this.reportMetric('fcp', entry.startTime)})});
+        fcpObserver.observe({ entryTypes: ['paint'] })} catch (error) {
+        // console.error('Error setting up performance observers:', error)}
     }
   }
-
   private monitorLongTasks(): void {
     if ('PerformanceObserver' in window && performanceConfig.monitoring.enableLongTaskDetection) {
       try {
@@ -117,7 +100,6 @@ class MonitoringService {
       }
     }
   }
-
   private monitorResourceTiming(): void {
     if ('PerformanceObserver' in window) {
       try {
@@ -132,15 +114,11 @@ class MonitoringService {
               //   type: resourceEntry.initiatorType
               // })
             }
-          });
-        });
-        resourceObserver.observe({ entryTypes: ['resource'] });
-      } catch (_error) {
-        // console.error('Error monitoring resources:', _error);
-      }
+          })});
+        resourceObserver.observe({ entryTypes: ['resource'] })} catch (_error) {
+        // console.error('Error monitoring resources:', _error)}
     }
   }
-
   private setupErrorHandling(): void {
     window.addEventListener('error', (event) => {
       this.logError({
@@ -151,7 +129,6 @@ class MonitoringService {
         url: window.location.href
       })
     })
-
     // Unhandled promise rejection handler
     window.addEventListener('unhandledrejection', (event) => {
       this.logError({
@@ -162,7 +139,6 @@ class MonitoringService {
       })
     })
   }
-
   private reportMetric(name: string, value: number): void {
     if (Math.random() > performanceConfig.monitoring.sampleRate) {
       return
@@ -179,26 +155,21 @@ class MonitoringService {
       })
     }
   }
-
   public logError(error: ErrorReport): void {
     this.errors.push(error)
     if (this.errors.length > 50) {
       this.errors = this.errors.slice(-50)
     }
   }
-
   public getMetrics(): PerformanceMetrics {
     return { ...this.metrics }
   }
-
   public getErrors(): ErrorReport[] {
     return [...this.errors]
   }
-
   public clearErrors(): void {
     this.errors = []
   }
-
   public measureMemory(): void {
     if ('memory' in performance && performanceConfig.monitoring.enableMemoryMonitoring) {
       const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory
@@ -211,7 +182,6 @@ class MonitoringService {
       }
     }
   }
-
   public measureNavigationTiming(): void {
     if ('performance' in window && 'getEntriesByType' in performance) {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
@@ -229,8 +199,5 @@ class MonitoringService {
     }
   }
 }
-
 const monitoring = new MonitoringService()
-export default monitoring;`
-
-
+export default monitoring`

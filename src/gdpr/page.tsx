@@ -83,5 +83,5 @@ const Pagetsx: React.FC = () => {
       <Footer /></div>
   )
 }
-export default Pagetsx;"
-export default GdprPage;
+export default Pagetsx"
+export default GdprPage

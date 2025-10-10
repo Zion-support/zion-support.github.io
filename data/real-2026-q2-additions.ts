@@ -1,4 +1,3 @@
-
 export const real2026 Q2 Additions = [
       'Jira',
       'ServiceNow',
@@ -10,7 +9,7 @@ export const real2026 Q2 Additions = [
     competitors: ['Monitaur', 'CalypsoAI', 'Credo AI'],
     price: '$2, 500',
     period: '/month'
-    trial_days: 14;
+    trial_days: 14
     setup_time: 'Fast'
     market_position: 'Strong enterprise traction with compliance - led buyers',
     roi: 'Reduce audit prep by 60% and non - compliance risk by 40%',
@@ -113,10 +112,10 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     descriptio,
   n: 'Produce privacy-preserving synthetic tabular and time-series datasets with distribution control, class rebalancing, bias mitigation, and privacy guarantees. Built-in quality metrics and drift checks.'
     feature,
-  s: [;
+  s: [
       'Differential privacy and k-anonymity options'
       'Data schema import and auto-profiling'
-      'Class balancing; minority class boosters'
+      'Class balancing minority class boosters'
       'Bias and fairness testing with reports'
       'Evaluation dashboard with KS/JS metrics'
       'SDKs for Python/JS and API access'
@@ -248,7 +247,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     descriptio,
   n: 'Drop-in SDK and UI to capture prompts, tokens, latencies, costs, moderation flags, and hallucination risk; with playbooks for mitigation and auto-rollbacks.'
     feature,
-  s: [;
+  s: [
       'Token and cost telemetry with budgets'
       'Hallucination detectors and blocklists'
       'Content safety checks and policy labels'
@@ -257,7 +256,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
       'Quality scorecards and SLA alerts'
     ]
     useCase,
-  s: [;
+  s: [
       'GenAI product analytics'
       'Model regression monitoring'
       'Cost governance'
@@ -316,7 +315,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     descriptio,
   n: 'Continuous spend anomaly detection with unsupervised and seasonal baselines, unit economics, and playbooks to stop runaway costs before the bill.'
     feature,
-  s: [;
+  s: [
       'Real-time anomaly detection'
       'Slack/Teams alerts and triage workflows'
       'Automated remediation playbooks'
@@ -379,7 +378,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
   n:
       'A developer-first e-signature API with templates, bulk sends, webhooks, and long-term validation. SOC2-ready with EU data residency.'
     feature,
-  s: [;
+  s: [
       'Signer authentication and KYC add-ons'
       'Templates and merge fields'
       'Bulk send and reminders'
@@ -441,7 +440,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     descriptio,
   n: 'Publish incidents, SLOs, error budgets, and historical uptime with integrations to cloud and observability. Add subscribers and SLA exports.'
     feature,
-  s: [;
+  s: [
       'Multiple environments and components'
       'SLOs and error budget burn tracking'
       'Incident templates and RCAs'
@@ -670,7 +669,7 @@ export const real2026Q2Additions = [
     competitors: ['Monitaur', 'CalypsoAI', 'Credo AI'],
     price: '$2, 500',
     period: '/month'
-    trial_days: 14;
+    trial_days: 14
     setup_time: 'Fast'
     market_position: 'Strong enterprise traction with compliance - led buyers',
     roi: 'Reduce audit prep by 60% and non - compliance risk by 40%',
@@ -733,8 +732,7 @@ export const real2026Q2Additions = [
   i: 'Reduce mean-time-to-repair by 35% and manual toil by 50%';
     lin,
   k: 'http,
-  s://ziontechgroup.com/services/msp-remote-device-ops';
-  };
+  s://ziontechgroup.com/services/msp-remote-device-ops'};
       'Training data augmentation',
       'Privacy - preserving analytics',
       'Test data generation'],
@@ -808,7 +806,7 @@ export const real2026Q2Additions = [
 export const real2026 Q2 Additions = [{id: 'ai - synthetic - data - factory',
     name: 'AI Synthetic Data Factory',
     category: 'AI & Data',
-    tagline: unknown;
+    tagline: unknown
       'Generate high - quality, private, and balanced datasets for ML training.',
     description: unknown;
       'Produce privacy - preserving synthetic tabular and time - series datasets with distribution control, class rebalancing, bias mitigation, and privacy guarantees. Built - in quality metrics and drift checks.',
@@ -849,7 +847,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     competitors: ['Mostly AI', 'Gretel', 'YData'],
     price: '$1, 200',
     period: '/month'
-    trial_days: 14;
+    trial_days: 14
     setup_time: 'Fast',
     market_position: 'Growing demand driven by privacy regulations',
     roi: 'Cut data collection costs by 50% and improve model accuracy by 8%',
@@ -1347,7 +1345,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     descriptio,
   n: 'Centralize AI model governance with policy mapping, automated risk assessments, lineage, PII scanning, red-teaming evidence, and auditor-ready reports. Integrates with Jira, ServiceNow, Slack, GitHub, and leading MLOps platforms.';
     feature,
-  s: [;
+  s: [
       'Differential privacy and k-anonymity options'
       'Data schema import and auto-profiling'
       'Class balancing; minority class boosters'
@@ -1482,7 +1480,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     descriptio,
   n: 'Drop-in SDK and UI to capture prompts, tokens, latencies, costs, moderation flags, and hallucination risk; with playbooks for mitigation and auto-rollbacks.'
     feature,
-  s: [;
+  s: [
       'Token and cost telemetry with budgets'
       'Hallucination detectors and blocklists'
       'Content safety checks and policy labels'
@@ -1491,7 +1489,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
       'Quality scorecards and SLA alerts'
     ]
     useCase,
-  s: [;
+  s: [
       'GenAI product analytics'
       'Model regression monitoring'
       'Cost governance'
@@ -1550,7 +1548,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     descriptio,
   n: 'Continuous spend anomaly detection with unsupervised and seasonal baselines, unit economics, and playbooks to stop runaway costs before the bill.'
     feature,
-  s: [;
+  s: [
       'Real-time anomaly detection'
       'Slack/Teams alerts and triage workflows'
       'Automated remediation playbooks'
@@ -1613,7 +1611,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
   n:
       'A developer-first e-signature API with templates, bulk sends, webhooks, and long-term validation. SOC2-ready with EU data residency.'
     feature,
-  s: [;
+  s: [
       'Signer authentication and KYC add-ons'
       'Templates and merge fields'
       'Bulk send and reminders'
@@ -1675,7 +1673,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     descriptio,
   n: 'Publish incidents, SLOs, error budgets, and historical uptime with integrations to cloud and observability. Add subscribers and SLA exports.'
     feature,
-  s: [;
+  s: [
       'Multiple environments and components'
       'SLOs and error budget burn tracking'
       'Incident templates and RCAs'
@@ -1941,9 +1939,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
   i: 'Reduce mean-time-to-repair by 35% and manual toil by 50%';
     lin,
   k: 'http,
-  s://ziontechgroup.com/services/msp-remote-device-ops';
-  };
-];      'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering, and alertsTicketing and customer portals'
+  s://ziontechgroup.com/services/msp-remote-device-ops'}];      'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering, and alertsTicketing and customer portals'
     i,
   d: 'ai-governance-compliance-hub', nam,
   e: 'AI Governance & Compliance Hub',
@@ -1967,9 +1963,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     setupTime: 'Fast'
     marketPosition: 'Cost-effective RMM for partners and IT teams',
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%';
-    link: 'https://ziontechgroup.com/services/msp-remote-device-ops';
-  };
-];      'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering, and alertsTicketing and customer portals'
+    link: 'https://ziontechgroup.com/services/msp-remote-device-ops'}];      'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering, and alertsTicketing and customer portals'
     ];
     use_cases: ['MSPs and IT providers_internal IT for SMBsBYOD governance'];
     integrations: ['Azure ADOktaSlackServiceNow'];
@@ -1986,11 +1980,10 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     link: 'https://ziontechgroup.com / services / msp - remote - device - ops'
 export const real2026Q2Additions = [
   {
-    id: 'ai-governance-compliance-hub';
+    id: 'ai-governance-compliance-hub'
     name: 'AI Governance & Compliance Hub';
     category: 'AI & Data';
-    tagline: 'Policy, risk, and model governance with automated evidence and audit trails.';
-    description: 'Centralize AI model governance with policy mapping, automated risk assessments, lineage, PII scanning, red-teaming evidence, and auditor-ready reports. Integrates with Jira, ServiceNow, Slack, GitHub, and leading MLOps platforms.';
+    tagline: 'Policy, risk, and model governance with automated evidence and audit trails.' description: 'Centralize AI model governance with policy mapping, automated risk assessments, lineage, PII scanning, red-teaming evidence, and auditor-ready reports. Integrates with Jira, ServiceNow, Slack, GitHub, and leading MLOps platforms.';
     features: [,
       'Policy mapping to ISO/IEC 23894, NIST AI RMF, EU AI ActAutomated risk and impact assessments with mitigationsDataset lineage, consent tracking, and PII classificationPrompt and output red-teaming with evidence loggingHuman-in-the-loop approvals and audit workflowsRealtime controls dashboard and drift alertsExport auditor-ready reports (SOC2, ISO) HIPAA add-ons)'
     ];
@@ -2005,13 +1998,12 @@ export const real2026Q2Additions = [
     marketPosition: 'Strong enterprise traction with compliance-led buyers';
     roi: 'Reduce audit prep by 60% and non-compliance risk by 40%';
     link: 'https://ziontechgroup.com/services/ai-governance-compliance-hub'};
-  {;
+  {
     id: 'ai-synthetic-data-factory';
     name: 'AI Synthetic Data Factory';
     category: 'AI & Data';
-    tagline: 'Generate high-quality, private, and balanced datasets for ML training.';
-    description: 'Produce privacy-preserving synthetic tabular and time-series datasets with distribution control, class rebalancing, bias mitigation, and privacy guarantees. Built-in quality metrics and drift checks.';
-    features: [;
+    tagline: 'Generate high-quality, private, and balanced datasets for ML training.' description: 'Produce privacy-preserving synthetic tabular and time-series datasets with distribution control, class rebalancing, bias mitigation, and privacy guarantees. Built-in quality metrics and drift checks.';
+    features: [
       'Differential privacy and k-anonymity optionsData schema import and auto-profilingClass balancing, minority class boostersBias and fairness testing with reportsEvaluation dashboard with KS/JS metricsSDKs for Python/JS and API access'
     ];
     useCases: ['Training data augmentationPrivacy-preserving analyticsTest data generation'];
@@ -2049,9 +2041,7 @@ export const real2026Q2Additions = [
   i: 'Reduce mean-time-to-repair by 35% and manual toil by 50%';
     lin,
   k: 'http,
-  s://ziontechgroup.com/services/msp-remote-device-ops';
-  };
-];      'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering, and alertsTicketing and customer portals'
+  s://ziontechgroup.com/services/msp-remote-device-ops'}];      'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering, and alertsTicketing and customer portals'
     ];
     use_case,
   s: ['MSPs and IT providers_internal IT for SMBsBYOD governance'];
@@ -2085,7 +2075,7 @@ export const real2026Q2Additions = [
   {/* TODO: Fix JSX expression */}
   s: ['MonitaurCalypsoAICredo AI']}
     pric,
-  e: '$2}500';
+  e: '$2}500'
     perio,
   d: '/month';
     trialDay,
@@ -2403,7 +2393,6 @@ export const real2026Q2Additions = [
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops'}
 ];
-;
     period: '/device/month'
     trialDays: 14;
     setupTime: 'Fast'
@@ -2412,8 +2401,8 @@ export const real2026Q2Additions = [
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops'}
 ];
 export const real2026 Q2 Additions = [
-  {;
-    id: 'ai-governance-compliance-hub';
+  {
+    id: 'ai-governance-compliance-hub'
     name: 'AI Governance & Compliance Hub';
     category: 'AI & Data';
     tagline: 'Policy, risk, and model governance with automated evidence and audit trails.',,
@@ -2432,13 +2421,13 @@ export const real2026 Q2 Additions = [
     marketPosition: 'Strong enterprise traction with compliance-led buyers';
     roi: 'Reduce audit prep by 60% and non-compliance risk by 40%';
     link: 'https://ziontechgroup.com/services/ai-governance-compliance-hub'};
-  {;
+  {
     id: 'ai-synthetic-data-factory';
     name: 'AI Synthetic Data Factory';
     category: 'AI & Data';
     tagline: 'Generate high-quality, private, and balanced datasets for ML training.',,
   description: 'Produce privacy-preserving synthetic tabular and time-series datasets with distribution control, class rebalancing, bias mitigation, and privacy guarantees. Built-in quality metrics and drift checks.';
-    features: [;
+    features: [
       'Differential privacy and k-anonymity optionsData schema import and auto-profilingClass balancing, minority class boostersBias and fairness testing with reportsEvaluation dashboard with KS/JS metricsSDKs for Python/JS and API access'
     ];
     useCases: ['Training data augmentationPrivacy-preserving analyticsTest data generation'];
@@ -2474,7 +2463,6 @@ export const real2026 Q2 Additions = [
   s://ziontechgroup.com/services/msp-remote-device-ops'
   }
 ];
-;
     perio,
   d: '/device/month'
     trialDay,
@@ -2494,7 +2482,7 @@ export const real2026Q2Additions = [
   {/* TODO: Fix JSX expression */}
   s: ['MonitaurCalypsoAICredo AI']}
     pric,
-  e: '$2}500';
+  e: '$2}500'
     perio,
   d: '/month';
     trialDay,
@@ -2813,8 +2801,8 @@ export const real2026Q2Additions = [
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops'}
 ];
 ;export const real2026 Q2 Additions = [
-  {;
-    id: 'ai-governance-compliance-hub';
+  {
+    id: 'ai-governance-compliance-hub'
     name: 'AI Governance & Compliance Hub';
     category: 'AI & Data';
     tagline: 'Policy, risk, and model governance with automated evidence and audit trails.',,
@@ -2833,13 +2821,13 @@ export const real2026Q2Additions = [
     marketPosition: 'Strong enterprise traction with compliance-led buyers';
     roi: 'Reduce audit prep by 60% and non-compliance risk by 40%';
     link: 'https://ziontechgroup.com/services/ai-governance-compliance-hub'};
-  {;
+  {
     id: 'ai-synthetic-data-factory';
     name: 'AI Synthetic Data Factory';
     category: 'AI & Data';
     tagline: 'Generate high-quality, private, and balanced datasets for ML training.',,
   description: 'Produce privacy-preserving synthetic tabular and time-series datasets with distribution control, class rebalancing, bias mitigation, and privacy guarantees. Built-in quality metrics and drift checks.';
-    features: [;
+    features: [
       'Differential privacy and k-anonymity optionsData schema import and auto-profilingClass balancing, minority class boostersBias and fairness testing with reportsEvaluation dashboard with KS/JS metricsSDKs for Python/JS and API access'
     ];
     useCases: ['Training data augmentationPrivacy-preserving analyticsTest data generation'];
@@ -2879,7 +2867,7 @@ export const real2026Q2Additions = [
   {/* TODO: Fix JSX expression */}
   s: ['MonitaurCalypsoAICredo AI']}
     pric,
-  e: '$2}500';
+  e: '$2}500'
     perio,
   d: '/month';
     trialDay,
@@ -3218,8 +3206,7 @@ export const real2026Q2Additions = [
   k: 'http,
   s://ziontechgroup.com/services/msp-remote-device-ops'
   }
-];
-  }
+]}
 ];
     period: '/device/month'
     trialDays: 14;
@@ -3235,7 +3222,7 @@ export const real2026Q2Additions = [
     link: 'https://ziontechgroup.com / services / msp - remote - device - ops'
 export const real2026Q2Additions = [
   {
-    id: 'ai-governance-compliance-hub';
+    id: 'ai-governance-compliance-hub'
     name: 'AI Governance & Compliance Hub';
     category: 'AI & Data';
     tagline: 'Policy, risk, and model governance with automated evidence and audit trails.',,
@@ -3254,13 +3241,13 @@ export const real2026Q2Additions = [
     marketPosition: 'Strong enterprise traction with compliance-led buyers';
     roi: 'Reduce audit prep by 60% and non-compliance risk by 40%';
     link: 'https://ziontechgroup.com/services/ai-governance-compliance-hub'};
-  {;
+  {
     id: 'ai-synthetic-data-factory';
     name: 'AI Synthetic Data Factory';
     category: 'AI & Data';
     tagline: 'Generate high-quality, private, and balanced datasets for ML training.',,
   description: 'Produce privacy-preserving synthetic tabular and time-series datasets with distribution control, class rebalancing, bias mitigation, and privacy guarantees. Built-in quality metrics and drift checks.';
-    features: [;
+    features: [
       'Differential privacy and k-anonymity optionsData schema import and auto-profilingClass balancing, minority class boostersBias and fairness testing with reportsEvaluation dashboard with KS/JS metricsSDKs for Python/JS and API access'
     ];
     useCases: ['Training data augmentationPrivacy-preserving analyticsTest data generation'];
@@ -3303,7 +3290,7 @@ export const real2026Q2Additions = [
   {/* TODO: Fix JSX expression */}
   s: ['MonitaurCalypsoAICredo AI']}
     pric,
-  e: '$2}500';
+  e: '$2}500'
     perio,
   d: '/month';
     trialDay,
@@ -3829,14 +3816,14 @@ export const real2026Q2Additions = [ 'Jira',' 'ServiceNow',' 'Slack',' 'GitHub',
   y: 'AI & Data' taglin,
   e:,' 'Generate high - quality, private, and balanced datasets for ML training.', descriptio,
   n:  ,' 'Produce privacy - preserving synthetic tabular and time - series datasets with distribution control, class rebalancing, bias mitigation, and privacy guarantees. Built - in quality metrics and drift checks.', feature,
-  s: [,' 'Differential privacy and k - anonymity options',' 'Data schema import and auto - profiling',' 'Class balancing, minority class boosters',' 'Bias and fairness testing with reports',' 'Evaluation dashboard with KS / JS metrics',' 'SDKs for Python / JS and API access'; ]; use_case,
+  s: [,' 'Differential privacy and k - anonymity options',' 'Data schema import and auto - profiling',' 'Class balancing, minority class boosters',' 'Bias and fairness testing with reports',' 'Evaluation dashboard with KS / JS metrics',' 'SDKs for Python / JS and API access'] use_case,
   s: [,' 'MSPs and IT providers',' 'Internal IT for SMBs',' 'BYOD governance'],' integration,
   s: ['Azure AD', 'Okta', 'Slack', 'ServiceNow'],' competitor,
   s: ['Atera', 'NinjaOne'],' pric,
   e: '$4', ' ro,
   i: 'Reduce mean-time-to-repair by 35% and manual toil by 50%';' lin,
   k: 'http,
-  s://ziontechgroup.com/services/msp-remote-device-ops'; }; ' 'Training data augmentation',' 'Privacy - preserving analytics',' 'Test data generation'],' integration,
+  s://ziontechgroup.com/services/msp-remote-device-ops'}; ' 'Training data augmentation',' 'Privacy - preserving analytics',' 'Test data generation'],' integration,
   s: ['S3', 'BigQuery', 'Snowflake', 'Databricks'],' competitor,
   s: ['Mostly AI', 'Gretel', 'YData'],' pric,
   e: '$1, 200',' perio,
@@ -3870,7 +3857,7 @@ export const real2026Q2Additions = [ 'Jira',' 'ServiceNow',' 'Slack',' 'GitHub',
   y: 'AI & Data', taglin,
   e:  ,' 'Generate high - quality, private, and balanced datasets for ML training.', descriptio,
   n:  ,' 'Produce privacy - preserving synthetic tabular and time - series datasets with distribution control, class rebalancing, bias mitigation, and privacy guarantees. Built - in quality metrics and drift checks.', feature,
-  s: [,' 'Differential privacy and k - anonymity options',' 'Data schema import and auto - profiling',' 'Class balancing, minority class boosters',' 'Bias and fairness testing with reports',' 'Evaluation dashboard with KS / JS metrics',' 'SDKs for Python / JS and API access'; ]; use_case,
+  s: [,' 'Differential privacy and k - anonymity options',' 'Data schema import and auto - profiling',' 'Class balancing, minority class boosters',' 'Bias and fairness testing with reports',' 'Evaluation dashboard with KS / JS metrics',' 'SDKs for Python / JS and API access'] use_case,
   s: [,' 'Training data augmentation',' 'Privacy - preserving analytics',' 'Test data generation'],' integration,
   s: ['S3', 'BigQuery', 'Snowflake', 'Databricks'],' competitor,
   s: ['Mostly AI', 'Gretel', 'YData'],' pric,
@@ -4183,7 +4170,7 @@ export const real2026Q2Additions = [ 'Jira',' 'ServiceNow',' 'Slack',' 'GitHub',
   e: '$4', ' ro,
   i: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',' lin,
   k: 'http,
-  s://ziontechgroup.com/services/msp-remote-device-ops';; }; ' ]; 'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering, and alertsTicketing and customer portals' ' i,
+  s://ziontechgroup.com/services/msp-remote-device-ops';}; ' ]; 'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering, and alertsTicketing and customer portals' ' i,
   d: 'ai-governance-compliance-hub', nam,
   e: 'AI Governance & Compliance Hub',' categor,
   y: 'AI & Data',' taglin,
@@ -4203,7 +4190,7 @@ export const real2026Q2Additions = [ 'Jira',' 'ServiceNow',' 'Slack',' 'GitHub',
   n: 'Cost-effective RMM for partners and IT teams',' ro,
   i: 'Reduce mean-time-to-repair by 35% and manual toil by 50%';' lin,
   k: 'http,
-  s://ziontechgroup.com/services/msp-remote-device-ops'; };' ]; 'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering, and alertsTicketing and customer portals' ];' use_case,
+  s://ziontechgroup.com/services/msp-remote-device-ops'};' ]; 'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering, and alertsTicketing and customer portals' ];' use_case,
   s: ['MSPs and IT providers_internal IT for SMBsBYOD governance'];' integration,
   s: ['Azure ADOktaSlackServiceNow'];' competitor,
   s: ['AteraNinjaOne'],' pric,
@@ -4217,9 +4204,9 @@ export const real2026Q2Additions = [ 'Jira',' 'ServiceNow',' 'Slack',' 'GitHub',
   n: 'Cost - effective RMM for partners and IT teams'' ro,
   i: 'Reduce mean - time - to - repair by 35% and manual toil by 50%',' lin,
   k: 'http,
-  s://ziontechgroup.com / services / msp - remote - device - ops' export const real2026Q2Additions = [; {/* TODO: Fix JSX expression */}
+  s://ziontechgroup.com / services / msp - remote - device - ops' export const real2026Q2Additions = [ {/* TODO: Fix JSX expression */}
   n: 'Strong enterprise traction with compliance-led buyers'}' ro,
-  i: 'Reduce audit prep by 60% and non-compliance risk by 40%'};' lin,
+  i: 'Reduce audit prep by 60% and non-compliance risk by 40%'}' lin,
   k: 'http,
   s://ziontechgroup.com/services/ai-governance-compliance-hub' }; {/* TODO: Fix JSX expression */}
   n: 'Growing demand driven by privacy regulations'}' ro,
@@ -4265,9 +4252,9 @@ export const real2026Q2Additions = [ 'Jira',' 'ServiceNow',' 'Slack',' 'GitHub',
   n: 'Cost-effective RMM for partners and IT teams'' ro,
   i: 'Reduce mean-time-to-repair by 35% and manual toil by 50%'' lin,
   k: 'http,
-  s://ziontechgroup.com/services/msp-remote-device-ops' } ]; export const real2026Q2Additions = [; {/* TODO: Fix JSX expression */}
+  s://ziontechgroup.com/services/msp-remote-device-ops' } ]; export const real2026Q2Additions = [ {/* TODO: Fix JSX expression */}
   n: 'Strong enterprise traction with compliance-led buyers'}' ro,
-  i: 'Reduce audit prep by 60% and non-compliance risk by 40%'};' lin,
+  i: 'Reduce audit prep by 60% and non-compliance risk by 40%'}' lin,
   k: 'http,
   s://ziontechgroup.com/services/ai-governance-compliance-hub' }; {/* TODO: Fix JSX expression */}
   n: 'Growing demand driven by privacy regulations'}' ro,
@@ -4306,9 +4293,9 @@ export const real2026Q2Additions = [ 'Jira',' 'ServiceNow',' 'Slack',' 'GitHub',
   n: 'Cost-effective RMM for partners and IT teams'};' ro,
   i: 'Reduce mean-time-to-repair by 35% and manual toil by 50%'' lin,
   k: 'http,
-  s://ziontechgroup.com/services/msp-remote-device-ops' } ];export const real2026Q2Additions = [; {/* TODO: Fix JSX expression */}
+  s://ziontechgroup.com/services/msp-remote-device-ops' } ];export const real2026Q2Additions = [ {/* TODO: Fix JSX expression */}
   n: 'Strong enterprise traction with compliance-led buyers'}' ro,
-  i: 'Reduce audit prep by 60% and non-compliance risk by 40%'};' lin,
+  i: 'Reduce audit prep by 60% and non-compliance risk by 40%'}' lin,
   k: 'http,
   s://ziontechgroup.com/services/ai-governance-compliance-hub' }; {/* TODO: Fix JSX expression */}
   n: 'Growing demand driven by privacy regulations'}' ro,
@@ -4347,7 +4334,7 @@ export const real2026Q2Additions = [ 'Jira',' 'ServiceNow',' 'Slack',' 'GitHub',
   n: 'Cost-effective RMM for partners and IT teams'};' ro,
   i: 'Reduce mean-time-to-repair by 35% and manual toil by 50%'' lin,
   k: 'http,
-  s://ziontechgroup.com/services/msp-remote-device-ops' } ]; } ]; ' perio,
+  s://ziontechgroup.com/services/msp-remote-device-ops' } ]} ]; ' perio,
   d: '/device/month' trialDay,
   s: 14;' setupTim,
   e: 'Fast'' marketPositio,
@@ -4361,9 +4348,9 @@ export const real2026Q2Additions = [ 'Jira',' 'ServiceNow',' 'Slack',' 'GitHub',
   n: 'Cost - effective RMM for partners and IT teams'' ro,
   i: 'Reduce mean - time - to - repair by 35% and manual toil by 50%',' lin,
   k: 'http,
-  s://ziontechgroup.com / services / msp - remote - device - ops' export const real2026Q2Additions = [; {/* TODO: Fix JSX expression */}
+  s://ziontechgroup.com / services / msp - remote - device - ops' export const real2026Q2Additions = [ {/* TODO: Fix JSX expression */}
   n: 'Strong enterprise traction with compliance-led buyers'}' ro,
-  i: 'Reduce audit prep by 60% and non-compliance risk by 40%'};' lin,
+  i: 'Reduce audit prep by 60% and non-compliance risk by 40%'}' lin,
   k: 'http,
   s://ziontechgroup.com/services/ai-governance-compliance-hub' }; {/* TODO: Fix JSX expression */}
   n: 'Growing demand driven by privacy regulations'}' ro,

@@ -4,7 +4,6 @@ import { Helmet } from 'react-helmet-async';
 import { Mic, Brain, Globe, Zap, ArrowRight, Star, CheckSquare, Shield, Smartphone, Users, Target, MessageCircle } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 const AIVoiceAssistantPlatformPage: React.FC = () => {
   const features = [
     {
@@ -32,7 +31,6 @@ const AIVoiceAssistantPlatformPage: React.FC = () => {
       benefits: ['Brand voice training', 'Custom wake words', 'Domain-specific training', 'Continuous learning']
     }
   ];
-
   const useCases = [
     {
       title: 'Customer Service',
@@ -59,7 +57,6 @@ const AIVoiceAssistantPlatformPage: React.FC = () => {
       benefits: ['Device control', 'Routine automation', 'Energy management', 'Security monitoring']
     }
   ];
-
   const pricingPlans = [
     {
       name: 'Starter',
@@ -73,8 +70,7 @@ const AIVoiceAssistantPlatformPage: React.FC = () => {
         'Email support',
         'Web integration'
       ],
-      popular: false
-    },
+      popular: false},
     {
       name: 'Professional',
       price: '$299',
@@ -88,8 +84,7 @@ const AIVoiceAssistantPlatformPage: React.FC = () => {
         'Mobile SDKs',
         'Custom training'
       ],
-      popular: true
-    },
+      popular: true},
     {
       name: 'Enterprise',
       price: '$999',
@@ -103,34 +98,28 @@ const AIVoiceAssistantPlatformPage: React.FC = () => {
         'On-premise deployment',
         'White-label solution'
       ],
-      popular: false
-    }
+      popular: false}
   ];
-
   const testimonials = [
     {
       name: 'Dr. Jennifer Walsh',
       role: 'CEO',
       company: 'MediCare Solutions',
       content: 'Our AI voice assistant handles 80% of patient inquiries automatically. Patient satisfaction increased by 45%.',
-      rating: 5
-    },
+      rating: 5},
     {
       name: 'Robert Kim',
       role: 'CTO',
       company: 'SmartRetail',
       content: 'Voice shopping has increased our conversion rate by 35%. Customers love the natural conversation experience.',
-      rating: 5
-    },
+      rating: 5},
     {
       name: 'Maria Garcia',
       role: 'Customer Success Director',
       company: 'TechCorp',
       content: 'We reduced support costs by 60% while improving response times. The AI understands context perfectly.',
-      rating: 5
-    }
+      rating: 5}
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -138,9 +127,7 @@ const AIVoiceAssistantPlatformPage: React.FC = () => {
         <meta name="description" content="Build custom voice assistants with natural language understanding, multi-language support, and enterprise integration. 99.9% accuracy." />
         <meta name="keywords" content="AI voice assistant, voice recognition, speech-to-text, conversational AI, voice platform" />
       </Helmet>
-      
       <Navigation />
-      
       <main className="pt-20">
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -156,7 +143,7 @@ const AIVoiceAssistantPlatformPage: React.FC = () => {
               Build intelligent voice assistants with natural language understanding, multi-language support, and enterprise integration. 
               Achieve 99.9% accuracy and deploy across all platforms.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center mb-12">
               <button className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 inline" />
@@ -170,7 +157,6 @@ const AIVoiceAssistantPlatformPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -184,7 +170,7 @@ const AIVoiceAssistantPlatformPage: React.FC = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group">
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
@@ -203,7 +189,6 @@ const AIVoiceAssistantPlatformPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Use Cases Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -217,7 +202,7 @@ const AIVoiceAssistantPlatformPage: React.FC = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {useCases.map((useCase, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group">
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                     <useCase.icon className="w-8 h-8 text-white" />
                   </div>
@@ -236,7 +221,6 @@ const AIVoiceAssistantPlatformPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -274,7 +258,7 @@ const AIVoiceAssistantPlatformPage: React.FC = () => {
                   </ul>
                   <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular 
-                      ? 'bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white transform hover:scale-105' 
+                      ? 'bg-gradient-to-r from-blue-500 to-purple-500 hover: from-blue-600 hover:to-purple-600 text-white transform hover:scale-105' 
                       : 'border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white'
                   }`}>
                     {plan.name === 'Enterprise' ? 'Contact Sales' : 'Start Free Trial'}
@@ -284,7 +268,6 @@ const AIVoiceAssistantPlatformPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Testimonials Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -314,9 +297,8 @@ const AIVoiceAssistantPlatformPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm: px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 backdrop-blur-sm rounded-3xl p-12 border border-blue-500/20">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -341,10 +323,7 @@ const AIVoiceAssistantPlatformPage: React.FC = () => {
           </div>
         </section>
       </main>
-      
       <Footer />
     </div>
-  );
-};
-
-export default AIVoiceAssistantPlatformPage;
+  )};
+export default AIVoiceAssistantPlatformPage

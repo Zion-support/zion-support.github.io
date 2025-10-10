@@ -79,8 +79,7 @@ const,
       </Helmet>
       {children}
     </React.Fragment>
-  );
-};
-export default SEOEnhancer;
+  )};
+export default SEOEnhancer
 "
   </SEOEnhancerProps>

@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Share2, Mic, Wrench, Truck } from 'lucide-react';
-
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
@@ -10,41 +9,29 @@ const Navigation: React.FC = () => {
   const [itServicesOpen, setItServicesOpen] = useState(false);
   const [microSaasOpen, setMicroSaasOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
-        setIsOpen(false);
-      }
+        setIsOpen(false)}
     };
-
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-
+      setIsScrolled(window.scrollY > 50)};
     window.addEventListener('resize', handleResize);
     window.addEventListener('scroll', handleScroll);
-
     return () => {
       window.removeEventListener('resize', handleResize);
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
+      window.removeEventListener('scroll', handleScroll)}}, []);
   const toggleMenu = () => setIsOpen(!isOpen);
   const toggleServices = () => setServicesOpen(!servicesOpen);
   const toggleAiServices = () => setAiServicesOpen(!aiServicesOpen);
   const toggleItServices = () => setItServicesOpen(!itServicesOpen);
   const toggleMicroSaas = () => setMicroSaasOpen(!microSaasOpen);
-
   const closeAllMenus = () => {
     setServicesOpen(false);
     setAiServicesOpen(false);
     setItServicesOpen(false);
     setMicroSaasOpen(false);
-    setIsOpen(false);
-  };
-
+    setIsOpen(false)};
   // Service data
   const aiServices = [
     { name: 'AI Analytics', href: '/ai-analytics', icon: BarChart, description: 'Advanced data insights' },
@@ -63,7 +50,6 @@ const Navigation: React.FC = () => {
     { name: 'AI Supply Chain', href: '/ai-supply-chain-optimization', icon: Truck, description: 'Supply chain optimization' },
     { name: 'AI Cloud Infrastructure', href: '/ai-cloud-infrastructure', icon: Cloud, description: 'Intelligent cloud management' }
   ];
-
   const itServices = [
     { name: 'Cloud Infrastructure', href: '/ai-cloud-infrastructure', icon: Cloud, description: 'Scalable cloud solutions' },
     { name: 'API Management', href: '/ai-api-management', icon: Code, description: 'API development & management' },
@@ -76,7 +62,6 @@ const Navigation: React.FC = () => {
     { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions', icon: LinkIcon, description: 'Decentralized AI' },
     { name: 'AI Edge Computing', href: '/ai-edge-computing', icon: Server, description: 'Distributed processing' }
   ];
-
   const microSaasServices = [
     { name: 'Project Management', href: '/micro-saas-project-management', icon: CheckSquare, description: 'Streamlined project tracking' },
     { name: 'Customer Support', href: '/micro-saas-customer-support', icon: MessageCircle, description: 'Efficient support systems' },
@@ -87,12 +72,11 @@ const Navigation: React.FC = () => {
     { name: 'Inventory Management', href: '/micro-saas-inventory', icon: Box, description: 'Stock and asset tracking' },
     { name: 'Performance Monitoring', href: '/micro-saas-monitoring', icon: Monitor, description: 'System performance tracking' }
   ];
-
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-slate-900/95 backdrop-blur-md border-b border-cyan-500/20' : 'bg-transparent'
     }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
@@ -103,23 +87,20 @@ const Navigation: React.FC = () => {
               <span className="text-xl font-bold text-white">Zion Tech Group</span>
             </Link>
           </div>
-
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
+          <div className="hidden lg: flex items-center space-x-8">
             <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               Home
             </Link>
-            
             {/* Services Dropdown */}
             <div className="relative">
               <button
                 onClick={toggleServices}
-                className="flex items-center text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
+                className="flex items-center text-gray-300 hover: text-cyan-400 transition-colors duration-300 font-medium"
               >
                 Services
                 <ChevronDown className="w-4 h-4 ml-1" />
               </button>
-              
               {servicesOpen && (
                 <div className="absolute left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-md rounded-xl shadow-xl py-2 z-50 border border-white/10">
                   <Link to="/ai-services" className="block px-4 py-3 text-sm text-gray-300 hover:text-white hover:bg-slate-700/50 transition-colors">
@@ -152,17 +133,15 @@ const Navigation: React.FC = () => {
                 </div>
               )}
             </div>
-
             {/* AI Services Dropdown */}
             <div className="relative">
               <button
                 onClick={toggleAiServices}
-                className="flex items-center text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
+                className="flex items-center text-gray-300 hover: text-cyan-400 transition-colors duration-300 font-medium"
               >
                 AI Services
                 <ChevronDown className="w-4 h-4 ml-1" />
               </button>
-              
               {aiServicesOpen && (
                 <div className="absolute left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-md rounded-xl shadow-xl py-2 z-50 border border-white/10">
                   <div className="grid grid-cols-1 gap-1">
@@ -170,7 +149,7 @@ const Navigation: React.FC = () => {
                       <Link
                         key={service.name}
                         to={service.href}
-                        className="block px-4 py-3 text-sm text-gray-300 hover:text-white hover:bg-slate-700/50 transition-colors group"
+                        className="block px-4 py-3 text-sm text-gray-300 hover: text-white hover:bg-slate-700/50 transition-colors group"
                       >
                         <div className="flex items-center">
                           <service.icon className="w-4 h-4 mr-3 text-cyan-400 group-hover:text-cyan-300" />
@@ -178,7 +157,7 @@ const Navigation: React.FC = () => {
                             <div className="font-medium">{service.name}</div>
                             <div className="text-xs text-gray-400">{service.description}</div>
                           </div>
-                          <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 ml-auto" />
+                          <ArrowRight className="w-4 h-4 text-gray-400 group-hover: text-cyan-400 ml-auto" />
                         </div>
                       </Link>
                     ))}
@@ -186,17 +165,15 @@ const Navigation: React.FC = () => {
                 </div>
               )}
             </div>
-
             {/* IT Services Dropdown */}
             <div className="relative">
               <button
                 onClick={toggleItServices}
-                className="flex items-center text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
+                className="flex items-center text-gray-300 hover: text-cyan-400 transition-colors duration-300 font-medium"
               >
                 IT Services
                 <ChevronDown className="w-4 h-4 ml-1" />
               </button>
-              
               {itServicesOpen && (
                 <div className="absolute left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-md rounded-xl shadow-xl py-2 z-50 border border-white/10">
                   <div className="grid grid-cols-1 gap-1">
@@ -204,7 +181,7 @@ const Navigation: React.FC = () => {
                       <Link
                         key={service.name}
                         to={service.href}
-                        className="block px-4 py-3 text-sm text-gray-300 hover:text-white hover:bg-slate-700/50 transition-colors group"
+                        className="block px-4 py-3 text-sm text-gray-300 hover: text-white hover:bg-slate-700/50 transition-colors group"
                       >
                         <div className="flex items-center">
                           <service.icon className="w-4 h-4 mr-3 text-blue-400 group-hover:text-blue-300" />
@@ -212,7 +189,7 @@ const Navigation: React.FC = () => {
                             <div className="font-medium">{service.name}</div>
                             <div className="text-xs text-gray-400">{service.description}</div>
                           </div>
-                          <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-blue-400 ml-auto" />
+                          <ArrowRight className="w-4 h-4 text-gray-400 group-hover: text-blue-400 ml-auto" />
                         </div>
                       </Link>
                     ))}
@@ -220,17 +197,15 @@ const Navigation: React.FC = () => {
                 </div>
               )}
             </div>
-
             {/* Micro SaaS Dropdown */}
             <div className="relative">
               <button
                 onClick={toggleMicroSaas}
-                className="flex items-center text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
+                className="flex items-center text-gray-300 hover: text-cyan-400 transition-colors duration-300 font-medium"
               >
                 Micro SaaS
                 <ChevronDown className="w-4 h-4 ml-1" />
               </button>
-              
               {microSaasOpen && (
                 <div className="absolute left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-md rounded-xl shadow-xl py-2 z-50 border border-white/10">
                   <div className="grid grid-cols-1 gap-1">
@@ -238,7 +213,7 @@ const Navigation: React.FC = () => {
                       <Link
                         key={service.name}
                         to={service.href}
-                        className="block px-4 py-3 text-sm text-gray-300 hover:text-white hover:bg-slate-700/50 transition-colors group"
+                        className="block px-4 py-3 text-sm text-gray-300 hover: text-white hover:bg-slate-700/50 transition-colors group"
                       >
                         <div className="flex items-center">
                           <service.icon className="w-4 h-4 mr-3 text-green-400 group-hover:text-green-300" />
@@ -246,7 +221,7 @@ const Navigation: React.FC = () => {
                             <div className="font-medium">{service.name}</div>
                             <div className="text-xs text-gray-400">{service.description}</div>
                           </div>
-                          <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-green-400 ml-auto" />
+                          <ArrowRight className="w-4 h-4 text-gray-400 group-hover: text-green-400 ml-auto" />
                         </div>
                       </Link>
                     ))}
@@ -254,8 +229,7 @@ const Navigation: React.FC = () => {
                 </div>
               )}
             </div>
-
-            <Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+            <Link to="/about" className="text-gray-300 hover: text-cyan-400 transition-colors duration-300 font-medium">
               About
             </Link>
             <Link to="/case-studies" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
@@ -268,64 +242,58 @@ const Navigation: React.FC = () => {
               Contact
             </Link>
           </div>
-
           {/* Mobile menu button */}
-          <div className="lg:hidden">
+          <div className="lg: hidden">
             <button
               onClick={toggleMenu}
-              className="text-gray-300 hover:text-cyan-400 transition-colors duration-300"
+              className="text-gray-300 hover: text-cyan-400 transition-colors duration-300"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
         </div>
-
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden mt-4 pb-4 border-t border-cyan-500/20">
+          <div className="lg: hidden mt-4 pb-4 border-t border-cyan-500/20">
             <div className="pt-4 space-y-4">
               <Link to="/" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
                 Home
               </Link>
-              
               {/* Mobile Services */}
               <div>
                 <button
                   onClick={toggleServices}
-                  className="flex items-center text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
+                  className="flex items-center text-gray-300 hover: text-cyan-400 transition-colors duration-300 font-medium"
                 >
                   Services
                   <ChevronDown className="w-4 h-4 ml-1" />
                 </button>
-                
                 {servicesOpen && (
                   <div className="ml-4 mt-2 space-y-2">
                     <Link to="/ai-services" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300" onClick={closeAllMenus}>
                       AI Services
                     </Link>
-                    <Link to="/it-services" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300" onClick={closeAllMenus}>
+                    <Link to="/it-services" className="block text-gray-300 hover: text-cyan-400 transition-colors duration-300" onClick={closeAllMenus}>
                       IT Services
                     </Link>
-                    <Link to="/micro-saas" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300" onClick={closeAllMenus}>
+                    <Link to="/micro-saas" className="block text-gray-300 hover: text-cyan-400 transition-colors duration-300" onClick={closeAllMenus}>
                       Micro SaaS
                     </Link>
                   </div>
                 )}
               </div>
-
-              <Link to="/about" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
+              <Link to="/about" className="block text-gray-300 hover: text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
                 About
               </Link>
-              <Link to="/case-studies" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
+              <Link to="/case-studies" className="block text-gray-300 hover: text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
                 Case Studies
               </Link>
-              <Link to="/blog" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
+              <Link to="/blog" className="block text-gray-300 hover: text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
                 Blog
               </Link>
-              <Link to="/contact" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
+              <Link to="/contact" className="block text-gray-300 hover: text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
                 Contact
               </Link>
-
               {/* Contact Info */}
               <div className="pt-4 border-t border-gray-600">
                 <div className="flex items-center space-x-2 text-gray-400 mb-2">
@@ -346,7 +314,5 @@ const Navigation: React.FC = () => {
         )}
       </div>
     </nav>
-  );
-};
-
-export default Navigation;
+  )};
+export default Navigation

@@ -225,7 +225,7 @@ const, January2026ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JS
         </d, i, v>
         {/* Featured, Articles, Grid */})
         <div, className="grid, l, g: gr, i, d-co, l, s-3, ga, p-8, m, b-16">")
-        <div, className="grid, l, g: gr, i, d-co, l, s-3, ga, p-8, m, b-16">";)
+        <div, className="grid, l, g: gr, i, d-co, l, s-3, ga, p-8, m, b-16">")
           {latestArticl, e, s.m, a, p((artic, l, e, ind, e, x) => (
             <d, i, v;
         {/* Featured, Articles, Grid */}
@@ -236,7 +236,7 @@ const, January2026ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JS
   k, e, y={artic, l, e.id}
               classNa, m, e="group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e;
   r:shad, o, w-purp, l, e-5, 0, 0/20"
-              sty, l, e={{ animationDel, a, y: `${ind, e, x * 2, 0, 0}ms` }}`;`
+              sty, l, e={{ animationDel, a, y: `${ind, e, x * 2, 0, 0}ms` }}``
             ></d>
               {/* Card, glow, effect */}
               <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/0, vi, a-cy, a, n-5, 0, 0/0, t, o-indi, g, o-5, 0, 0/0, grou, p-hov, e, r: fr, o, m-purp, l, e-5, 0, 0/10, grou, p-hov, e, r:v, i, a-cy, a, n-5, 0, 0/10, grou, p-ho, v, e;
@@ -255,7 +255,7 @@ const, January2026ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JS
   k, e, y={artic, l, e.id}"
               classNa, m, e="group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e,"
   r:shad, o, w-purp, l, e-5, 0, 0/20"
-              sty, l, e={{ animationDel, a, y: `${ind, e, x * 2, 0, 0}ms` }}`;`
+              sty, l, e={{ animationDel, a, y: `${ind, e, x * 2, 0, 0}ms` }}``
             ></d>
               {/* Card, glow, effect */}"
               <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/0, vi, a-cy, a, n-5, 0, 0/0, t, o-indi, g, o-5, 0, 0/0, grou, p-hov, e, r: fr, o, m-purp, l, e-5, 0, 0/10, grou, p-hov, e, r:v, i, a-cy, a, n-5, 0, 0/10, grou, p-ho, v, e,"
@@ -330,12 +330,12 @@ const, January2026ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JS
                 </d, i, v>
                 {/* CTA, Butto, n */}
                 <a;
-  hr, e, f={`/bl, o, g/${artic, l, e.sl, u, g}`}`;`
+  hr, e, f={`/bl, o, g/${artic, l, e.sl, u, g}`}``
                   classNa, m, e={`gro, u, p/btn, flex, items-center, justif, y-center, ga, p-2 w-full, b, g-gradie, n, t-to-r ${artic, l, e.gradie, n, t} hov, e, r: opaci, t, y-90, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transform, hove,`
                 <a></a>`
-  hr, e, f={`/bl, o, g/${artic, l, e.sl, u, g}`}`;``
+  hr, e, f={`/bl, o, g/${artic, l, e.sl, u, g}`}```
                   classNa, m, e={`gro, u, p/btn, flex, items-center, justif, y-center, ga, p-2 w-full, b, g-gradie, n, t-to-r ${artic, l, e.gradie, n, t} hov, e, r: opaci, t, y-90, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transform, hove,``
-  r:-transla, t, e-y-1`}`;`
+  r:-transla, t, e-y-1`}``
                 >
                   <sp, a, n>Read, Full, Article</sp, a, n>"
                   <Link, className="w-4 h-4, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0/>""

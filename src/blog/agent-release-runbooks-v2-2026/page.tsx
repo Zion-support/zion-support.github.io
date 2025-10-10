@@ -81,5 +81,5 @@ const AgentReleaseRunbooksV22026Page: React.FC = () => {
       </section>)
     </main>)
 }
-export default AgentReleaseRunbooksV22026Page;
+export default AgentReleaseRunbooksV22026Page
   </h1>

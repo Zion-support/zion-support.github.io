@@ -27,7 +27,7 @@ const AIAccountingAssistantPage: React.FC = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300">
+                <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover: border-cyan-400/50 transition-all duration-300">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mb-6">
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
@@ -40,6 +40,5 @@ const AIAccountingAssistantPage: React.FC = () => {
         </section>
       </div>
     </React.Fragment>
-  );
-};
-export default AIAccountingAssistantPage;
+  )};
+export default AIAccountingAssistantPage

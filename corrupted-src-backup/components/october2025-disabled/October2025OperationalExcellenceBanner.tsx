@@ -42,7 +42,7 @@ const October2025OperationalExcellenceBanne, r = () => {/* TODO: Fix JSX express
             Transform, Operations, with AI-Powered, Intelligenc, e;
           </h2>
           <p, className='te, x, t-2xl, tex, t-te, a, l-200, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d'>
-            Discover, breakthrough, AI innovations, delivering, unprecedented;)
+            Discover, breakthrough, AI innovations, delivering, unprecedented)
             efficien, c, y: <span, className='te, x, t-emera, l, d-300, fon, t-semi, b, o, l, d'>)
               {' '})
             Discover, breakthrough, AI innovations, delivering, unprecedented
@@ -444,6 +444,5 @@ const October2025OperationalExcellenceBanne, r = () => {/* TODO: Fix JSX express
         </div>
       </div>
     </di, v>
-  );
-};
-export default October2025 OperationalExcellenceBanner;
+  )};
+export default October2025 OperationalExcellenceBanner

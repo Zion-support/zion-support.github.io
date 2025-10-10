@@ -248,9 +248,8 @@ const SitemapPage: React.FC = () => {
         <Footer />
       </div>
     </React.Fragment>
-  );
-};
-export default SitemapPage;
+  )};
+export default SitemapPage
   </Link>
   </Link>
   </p>
