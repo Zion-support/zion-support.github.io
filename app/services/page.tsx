@@ -1,7 +1,8 @@
 'use client';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import {Brain,}
+import {
+  Brain,
   Cloud,
   Shield,
   BarChart3,
@@ -18,7 +19,8 @@ import {Brain,}
   Users,
   MessageSquare,
   FileText,
-  Target;} from 'lucide-react';
+  Target
+} from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -166,7 +168,8 @@ const ServicesPage: React.FC = () => {
     {id: 'all', name: 'All Services', count: services.length ,},
     {id: 'ai', name: 'AI Services', count: services.filter(s => s.category === 'ai').length ,},
     {id: 'it', name: 'IT Services', count: services.filter(s => s.category === 'it').length ,},
-    {id: 'saas', name: 'Micro SaaS', count: services.filter(s => s.category === 'saas').length ,}]
+      {id: 'saas', name: 'Micro SaaS', count: services.filter(s => s.category === 'saas').length }
+    ];
 
   const filteredServices = services.filter(service => {)
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||

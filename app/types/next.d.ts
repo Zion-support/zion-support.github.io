@@ -1,9 +1,35 @@
+// Next.js type definitions
+declare module '*.module.css' {
+  const classes: { [key: string]: string };
+  export default classes;
+}
 
+declare module '*.svg' {
+  const content: string;
+  export default content;
+}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+declare module '*.png' {
+  const content: string;
+  export default content;
+}
 
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
+declare module '*.jpg' {
+  const content: string;
+  export default content;
+}
+
+declare module '*.jpeg' {
+  const content: string;
+  export default content;
+}
+
+declare module '*.gif' {
+  const content: string;
+  export default content;
+}
+
+declare module '*.webp' {
+  const content: string;
+  export default content;
+}

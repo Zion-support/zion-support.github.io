@@ -1,21 +1,40 @@
 #!/bin/bash
 
-# Find all files with merge conflicts and clean them up
-find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | while read file; do
-  if grep -q "\|
-    echo "Fixing merge conflicts in: $file"
+echo "🔧 Fixing merge conflicts in critical files..."
+
+# Find all files with merge conflicts
+files_with_conflicts=$(find app -name "*.tsx" -o -name "*.ts" | xargs grep -l "<<<<<<< HEAD" 2>/dev/null || true)
+
+if [ -z "$files_with_conflicts" ]; then
+    echo "✅ No merge conflicts found!"
+    exit 0
+fi
+
+echo "📁 Found files with merge conflicts:"
+echo "$files_with_conflicts"
+
+# Fix each file by keeping the HEAD version
+for file in $files_with_conflicts; do
+    echo "🔨 Fixing: $file"
     
     # Create a backup
     cp "$file" "$file.backup"
     
-    # Remove merge conflict markers and keep the newer version (after =======)
-    awk '
-    // { in_old = 0; in_new = 1; next }
-    /
-    in_old { next }
-    { print }
-    ' "$file" > "$file.tmp" && mv "$file.tmp" "$file"
-  fi
+    # Use sed to remove merge conflict markers and keep HEAD version
+    sed -i '/^<<<<<<< HEAD/,/^=======/!d; /^=======/d; /^>>>>>>>/d' "$file"
+    
+    # Clean up any remaining conflict markers
+    sed -i '/^<<<<<<< /d; /^=======/d; /^>>>>>>> /d' "$file"
 done
 
-echo "Merge conflicts fixed!"
+echo "✅ Merge conflicts fixed!"
+echo "🔍 Running build check..."
+
+# Try to build
+if npm run build > /dev/null 2>&1; then
+    echo "✅ Build successful!"
+else
+    echo "⚠️  Build failed, but merge conflicts were fixed"
+fi
+
+echo "🎉 Process completed!"
