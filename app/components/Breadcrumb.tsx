@@ -34,5 +34,5 @@ const Breadcrumb: React.FC = () => {
         </ol></span>
 </div>
     </nav>
-}
+
 export default Breadcrumb</Link>

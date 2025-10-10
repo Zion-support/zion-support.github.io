@@ -9,7 +9,7 @@ interface SEOHeadProps {
   ogType?: string
   twitterCard?: string
   structuredData?: object
-}
+
 const SEOHead: React.FC<SEOHeadProps> = ({
   title = 'Zion Tech Group - Advanced AI & IT Solutions',
   description = 'Transform your business with cutting-edge artificial intelligence, cloud infrastructure, and innovative technology solutions. Expert AI and IT consulting services.',
@@ -47,19 +47,19 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       "https://www.linkedin.com/company/zion-tech-group",
       "https://twitter.com/ziontechgroup"
     ]
-  }
+
   return (
     <Helmet>
-      {/* Basic Meta Tags */}
+
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta name="author" content="Zion Tech Group" />
       <meta name="robots" content="index, follow" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      {/* Canonical URL */}
+
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-      {/* Open Graph Meta Tags */}
+
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:type" content={ogType} />
@@ -67,20 +67,20 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta property="og:image" content={ogImage} />
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
-      {/* Twitter Card Meta Tags */}
+
       <meta name="twitter:card" content={twitterCard} />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
-      {/* Additional SEO Meta Tags */}
+
       <meta name="theme-color" content="#0f172a" />
       <meta name="msapplication-TileColor" content="#0f172a" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-      {/* Structured Data */}
+
       <script type="application/ld+json">
         {JSON.stringify(structuredData || defaultStructuredData)}
       </script>
     </Helmet>
-}
+
 export default SEOHead</SEOHeadProps>

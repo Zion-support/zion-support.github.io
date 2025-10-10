@@ -60,5 +60,5 @@ const ItServicesPage: React.FC = () => {
         </section>
 </div>
     </React.Fragment>
-}
+
 export default ItServicesPage

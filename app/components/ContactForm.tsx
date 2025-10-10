@@ -7,11 +7,11 @@ interface FormData {
   phone: string,
   service: string,
   message: string,
-}
+
 interface FormStatus {
   type: 'idle' | 'loading' | 'success' | 'error'
   message: string,
-}
+
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -30,7 +30,7 @@ interface FormStatus {
       ...prev,
       [name]: value
     }))
-  }
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setStatus({ type: 'loading', message: 'Sending message...' })
@@ -55,8 +55,7 @@ interface FormStatus {
         type: 'error',
         message: 'Sorry, there was an error sending your message. Please try again.'
       })
-    }
-  }
+
   const services = [
     'AI Solutions',
     'Web Development',
@@ -134,7 +133,7 @@ interface FormStatus {
                 <div className="h-5 w-5 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" />
               )}
               <span className="text-sm font-medium">{status.message}</span></span>
-</div>}
+</div>
           <button
             type="submit"
             disabled={status.type === 'loading'}
@@ -149,7 +148,7 @@ interface FormStatus {
                 <span>Send Message</span>
               </React.Fragment>}
           </button>
-        </form></button></div>
+        </form></button>
         <div className="mt-8 pt-8 border-t border-gray-200">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center"></div>
             <div className="flex flex-col items-center space-y-2">
@@ -182,7 +181,7 @@ interface FormStatus {
 </div>
 </div>
 </div>
-}
+
 export default ContactForm</select>
   </label>
   </label>

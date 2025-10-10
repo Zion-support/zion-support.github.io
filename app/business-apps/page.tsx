@@ -4,41 +4,41 @@ import { Helmet } from 'react-helmet-async'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Smartphone, Monitor, Cloud } from 'lucide-react'
 const BusinessAppsPage: React.FC = () => {
   const features = [
-    {
+
       icon: Smartphone,
       title: 'Mobile Apps',
       description: 'Custom mobile applications for iOS and Android platforms'
     },
-    {
+
       icon: Monitor,
       title: 'Web Applications',
       description: 'Responsive web applications with modern UI/UX design'
     },
-    {
+
       icon: Cloud,
       title: 'Cloud Integration',
       description: 'Seamless cloud integration and deployment solutions'
     },
-    {
+
       icon: Brain,
 title: 'AI-Powered Business Apps',
       description: 'Advanced AI technology to transform your business applications and improve efficiency'
     },
-    {
+
       icon: Zap,
       title: 'High Performance',
       description: 'Lightning-fast processing and real-time analytics for optimal business results'
     },
-    {
+
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards for your business data'
     },
-    {
+
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international business applications'
-    }
+
   ]
   const benefits = [
 'Advanced AI technology integration',
@@ -56,7 +56,7 @@ title: 'AI-Powered Business Apps',
         <title>Business Apps | Zion Tech Group</title>
 <meta name="description" content="Professional Business Apps development by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="business apps, mobile apps, web apps, AI solutions, IT services, Zion Tech Group" />
-      </Helmet>/* Hero Section */}
+      </Helmet>
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -64,10 +64,10 @@ title: 'AI-Powered Business Apps',
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business with our advanced business app solutions. 
             Powered by cutting-edge AI technology and industry expertise.
-          </p></h1></p>
-</div></h1></p>
+          </p>
+</div>
       </section>
-        {/* Features Section */}</section>
+        {</section>
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-12"></h1>
@@ -76,16 +76,17 @@ title: 'AI-Powered Business Apps',
             </h2></p>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our business app solutions deliver unmatched performance, security, and scalability.
-            </p></h1></p>
+            </p>
 </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (</div>
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
                 <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p></h1></p>
+                <p className="text-gray-300">{feature.description}</p>
 </div>)}</div>
-</div>/* Benefits Section */}
+</div>
+
       <section className="py-16 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-12"></h1>
@@ -93,7 +94,7 @@ title: 'AI-Powered Business Apps',
               Key Benefits</p>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our business app solutions for your business.
-            </p></h1></p>
+            </p>
 </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (</div>
@@ -138,7 +139,7 @@ title: 'AI-Powered Business Apps',
 </div>
 </div>
 </div>
-}
+
 export default BusinessAppsPage</button>
   </button>
   </button>

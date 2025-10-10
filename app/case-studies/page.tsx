@@ -14,10 +14,10 @@ interface CaseStudy {
   image: string
   duration: string
   team: string
-}
+
 const CaseStudiesPage: React.FC = () => {
   const caseStudies: CaseStudy[] = [
-    {
+
 id: '1',
       title: 'AI-Powered Customer Service Transformation',
       client: 'TechCorp Solutions',
@@ -34,7 +34,7 @@ id: '1',
       duration: '3 months',
       team: '8 specialists'
     },
-    {
+
       id: '2',
       title: 'Cloud Migration for Financial Services',
       client: 'FinanceCorp',
@@ -51,7 +51,7 @@ challenge: 'Legacy on-premises infrastructure limiting scalability and increasin
       duration: '6 months',
       team: '12 specialists'
     },
-    {
+
       id: '3',
       title: 'Blockchain Supply Chain Optimization',
       client: 'Global Logistics Inc.',
@@ -67,7 +67,7 @@ challenge: 'Legacy on-premises infrastructure limiting scalability and increasin
       image: '/images/case-studies/blockchain-supply-chain.jpg',
       duration: '4 months',
       team: '6 specialists'
-    }
+
   ]
   const stats = [
     { icon: TrendingUp, value: '150+', label: 'Projects Completed' },
@@ -90,8 +90,8 @@ challenge: 'Legacy on-premises infrastructure limiting scalability and increasin
             Case Studies
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Discover how we've helped businesses transform with cutting-edge AI and IT solutions.
-          </p></h1></p>
-</div></h1></p>
+          </p>
+</div>
       </section>
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto"></div>
@@ -107,7 +107,7 @@ challenge: 'Legacy on-premises infrastructure limiting scalability and increasin
 </div>
 </div>
                 <div className="p-6"></h1>
-                  <h3 className="text-xl font-semibold text-white mb-2">{study.title}</h3></h1></div>
+                  <h3 className="text-xl font-semibold text-white mb-2">{study.title}</h3>
                   <div className="flex items-center space-x-2 text-sm text-gray-400 mb-4">
                     <Users className="w-4 h-4" />
                     <span>{study.client}</span></span>
@@ -122,7 +122,8 @@ challenge: 'Legacy on-premises infrastructure limiting scalability and increasin
                         <li key={resultIndex} className="flex items-center space-x-2">
                           <TrendingUp className="w-3 h-3 text-green-400" /></span>
                           <span>{result}</span>
-                        </li>)}
+                        </li>
+              ))}
                     </ul></p>
 </div></div>
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -184,10 +185,10 @@ challenge: 'Legacy on-premises infrastructure limiting scalability and increasin
               <ExternalLink className="w-5 h-5 ml-2" />
             </Link>
 </div>
-</div></h1></p>
+</div>
       </section>
 </div>
-}
+
 export default CaseStudiesPage</button>
 </div>
 </div>

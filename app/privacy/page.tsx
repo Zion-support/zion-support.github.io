@@ -4,68 +4,68 @@ import { Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, 
 export default function PrivacyPage() {
   const lastUpdated = 'January 1, 2024'
   const dataTypes = [
-    {
+
       category: 'Personal Information',
       icon: User,
       description: 'Name, email address, phone number, company information',
       examples: ['Contact forms', 'Newsletter signups', 'Account creation']
     },
-    {
+
       category: 'Usage Data',
       icon: Database,
       description: 'Information about how you use our website and services',
       examples: ['Page views', 'Time spent', 'Features used', 'Device information']
     },
-    {
+
       category: 'Technical Data',
       icon: Server,
       description: 'IP address, browser type, operating system, cookies',
       examples: ['IP addresses', 'Browser fingerprints', 'Device identifiers', 'Cookies and tracking pixels']
-    }
+
   ]
   const purposes = [
-    {
+
       title: 'Service Provision',
       icon: Globe,
       description: 'To provide and maintain our services'
     },
-    {
+
       title: 'Communication',
       icon: Mail,
       description: 'To communicate with you about our services'
     },
-    {
+
       title: 'Improvement',
       icon: ArrowRight,
       description: 'To improve and develop new features'
     },
-    {
+
       title: 'Security',
       icon: Shield,
       description: 'To protect against fraud and abuse'
-    }
+
   ]
   const rights = [
-    {
+
       title: 'Access',
       description: 'Request access to your personal data',
       icon: Eye
     },
-    {
+
       title: 'Rectification',
       description: 'Correct inaccurate or incomplete data',
       icon: CheckCircle
     },
-    {
+
       title: 'Erasure',
       description: 'Request deletion of your personal data',
       icon: Lock
     },
-    {
+
       title: 'Portability',
       description: 'Receive your data in a structured format',
       icon: Database
-    }
+
   ]
   return (
     <div className="min-h-screen bg-white"></div></div>
@@ -85,7 +85,7 @@ export default function PrivacyPage() {
       <div className="py-20"></div></div>
         <div className="container mx-auto px-4"></div>
           <div className="max-w-4xl mx-auto space-y-12">
-            {/* Introduction */}</div>
+            {</div>
             <section></h1>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Introduction</h2></p>
               <p className="text-gray-700 leading-relaxed mb-4">
@@ -93,7 +93,7 @@ export default function PrivacyPage() {
               </p>
               <p className="text-gray-700 leading-relaxed">
                 By using our services, you agree to the collection and use of information in accordance with this policy.
-              </p></h1></p>
+              </p>
             </section>
             <section>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Information We Collect</h2>
@@ -107,27 +107,28 @@ export default function PrivacyPage() {
                     <p className="text-gray-700 mb-3">{type.description}</p>
                     <ul className="text-sm text-gray-600 space-y-1">
                       {type.examples.map((example, idx) => (
-                        <li key={idx}>• {example}</li>)}
+                        <li key={idx}>• {example}</li>
+              ))}
                     </ul></p>
-</div>)}</div></h1></p>
+</div>)}</div>
             </section>
             <section>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">How We Use Your Information</h2>
               <div className="grid md:grid-cols-2 gap-6">
-                {purposes.map((purpose, index) => (</h1></div></div>
+                {purposes.map((purpose, index) => (</h1>
                   <div key={index} className="flex items-start"></div>
                     <div className="flex-shrink-0 mr-4"></div>
                       <purpose.icon className="h-6 w-6 text-blue-600" /></p>
 </div></div>
                     <div></div></h1>
                       <h3 className="text-lg font-semibold text-gray-900 mb-2">{purpose.title}</h3></p>
-                      <p className="text-gray-700">{purpose.description}</p></h1></p>
+                      <p className="text-gray-700">{purpose.description}</p>
 </div>
-</div>)}</div></h1></p>
+</div>)}</div>
             </section>
             <section>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Data Security</h2>
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6"></h1></div></div>
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6"></h1>
                 <div className="flex items-start"></div>
                   <Shield className="h-6 w-6 text-blue-600 mr-3 mt-1" />
                   <div></div></h1>
@@ -140,13 +141,13 @@ export default function PrivacyPage() {
                       <li>• Regular security audits and assessments</li>
                       <li>• Access controls and authentication systems</li>
                       <li>• Employee training on data protection</li>
-                    </ul></h1></p>
+                    </ul>
 </div>
 </div>
-</div></h1></p>
+</div>
             </section>
             <section>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Your Rights</h2></h1></div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Your Rights</h2>
               <div className="grid md:grid-cols-2 gap-6">
                 {rights.map((right, index) => (</div>
                   <div key={index} className="bg-white border border-gray-200 rounded-lg p-6"></div></div>
@@ -155,7 +156,7 @@ export default function PrivacyPage() {
                       <h3 className="text-lg font-semibold text-gray-900">{right.title}</h3></h1>
 </div></p>
                     <p className="text-gray-700">{right.description}</p></p>
-</div>)}</div></h1></p>
+</div>)}</div>
             </section>
             <section className="bg-gray-50 rounded-lg p-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Contact Us</h2>
@@ -189,13 +190,12 @@ export default function PrivacyPage() {
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">Policy Updates</h3></p>
                     <p className="text-gray-700">
                       We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date.
-                    </p></h1></p>
+                    </p>
 </div>
 </div>
-</div></h1></p>
+</div>
             </section>
 </div>
 </div>
 </div>
 </div>
-}

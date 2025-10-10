@@ -28,8 +28,7 @@ const Sidebar: React.FC = () => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
         setIsOpen(false)
-      }
-    }
+
     window.addEventListener('resize', handleResize)
     return () => window.removeEventListener('resize', handleResize)
   }, [])
@@ -39,11 +38,11 @@ const Sidebar: React.FC = () => {
       newExpanded.delete(section)
     } else {
       newExpanded.add(section)
-    }
+
     setExpandedSections(newExpanded)
-  }
+
   const navigationSections = [
-    {
+
       title: 'Main',
       items: [
         { name: 'Home', path: '/', icon: Home },
@@ -54,7 +53,7 @@ const Sidebar: React.FC = () => {
         { name: 'Case Studies', path: '/case-studies', icon: BarChart },
       ]
     },
-    {
+
       title: 'AI Services',
       key: 'ai-services',
       items: [
@@ -73,7 +72,7 @@ const Sidebar: React.FC = () => {
         { name: 'Energy Management', path: '/ai-services/energy-management', icon: Settings },
       ]
     },
-    {
+
       title: 'Micro SaaS',
       key: 'micro-saas',
       items: [
@@ -92,7 +91,7 @@ const Sidebar: React.FC = () => {
         { name: 'Content Generator', path: '/micro-saas/content-generator', icon: Settings },
       ]
     },
-    {
+
       title: 'IT Services',
       key: 'it-services',
       items: [
@@ -107,7 +106,7 @@ const Sidebar: React.FC = () => {
         { name: 'Managed IT', path: '/managed-it', icon: Settings },
       ]
     },
-    {
+
       title: 'Company',
       items: [
         { name: 'Team', path: '/team', icon: Users },
@@ -116,7 +115,7 @@ const Sidebar: React.FC = () => {
         { name: 'Pricing', path: '/pricing', icon: BarChart },
       ]
     },
-    {
+
       title: 'Resources',
       items: [
         { name: 'Documentation', path: '/docs', icon: Settings },
@@ -124,36 +123,36 @@ const Sidebar: React.FC = () => {
         { name: 'Support', path: '/support', icon: Users },
         { name: 'Status', path: '/status', icon: Settings },
       ]
-    }
+
   ]
   const contactInfo = {
     phone: '(302) 464-0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown, DE 19709',
     hours: 'Mon-Fri 9AM-6PM EST'
-  }
+
   return (
     <React.Fragment>
-      {/* Mobile Menu Button */}
+
       <button
         onClick={() => setIsOpen(true)}
         className="lg:hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hover:bg-slate-700/90 transition-all"
         aria-label="Open sidebar"
       >
         <Menu className="w-6 h-6" />
-      </button>/* Sidebar Overlay */}
+      </button>
       {isOpen && (
         <div 
           className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
           onClick={() => setIsOpen(false)}
         />
       )}
-      {/* Sidebar */}</button></div>
+      {</button>
       <aside className={`fixed top-0 left-0 h-full w-80 bg-slate-900/95 backdrop-blur-lg border-r border-cyan-400/20 z-50 transform transition-transform duration-300 ${
         isOpen ? 'translate-x-0' : '-translate-x-full'
       } lg:translate-x-0 lg:static lg:z-auto`}></div>
         <div className="flex flex-col h-full">
-          {/* Header */}</div>
+          {</div>
           <div className="flex items-center justify-between p-6 border-b border-slate-700/50">
             <Link to="/" className="flex items-center space-x-3" onClick={() => setIsOpen(false)}></div>
               <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center">
@@ -161,7 +160,7 @@ const Sidebar: React.FC = () => {
 </div>
               <div></div>
                 <h2 className="text-xl font-bold text-white cyber-text">Zion Tech Group</h2>
-                <p className="text-xs text-cyan-400">AI & IT Solutions</p></h1></p>
+                <p className="text-xs text-cyan-400">AI & IT Solutions</p>
 </div>
             </Link></button>
             <button
@@ -171,7 +170,8 @@ const Sidebar: React.FC = () => {
             >
               <X className="w-6 h-6" />
             </button></button>
-</div>/* Navigation */}</div>
+</div>
+          {</div>
           <div className="flex-1 overflow-y-auto py-6">
             <nav className="space-y-2 px-4">
               {navigationSections.map((section, sectionIndex) => (
@@ -184,7 +184,7 @@ const Sidebar: React.FC = () => {
                         <ChevronDown className="w-4 h-4" /> : 
                         <ChevronRight className="w-4 h-4" />
                     )}
-                  </button>(!section.key || expandedSections.has(section.key)) && (</button></div>
+                  </button>(!section.key || expandedSections.has(section.key)) && (</button>
                     <div className="ml-4 space-y-1">
                       {section.items.map((item, itemIndex) => (</div>
                         <Link
@@ -202,9 +202,10 @@ const Sidebar: React.FC = () => {
                         </Link>)}</span>
 </div>}</div>)}
             </nav>
-</div>/* Contact Info */}
+</div>
+
           <div className="border-t border-slate-700/50 p-6"></h1>
-            <h3 className="text-sm font-semibold text-cyan-400 mb-4">Contact Information</h3></h1></div>
+            <h3 className="text-sm font-semibold text-cyan-400 mb-4">Contact Information</h3>
             <div className="space-y-3 text-sm text-gray-300">
               <div className="flex items-center space-x-3">
                 <Phone className="w-4 h-4 text-cyan-400 flex-shrink-0" />
@@ -225,7 +226,7 @@ const Sidebar: React.FC = () => {
 </div>
       </aside>
     </React.Fragment>
-}
+
 Sidebar.displayName = 'Sidebar'
 export default Sidebar</div>
   </string>

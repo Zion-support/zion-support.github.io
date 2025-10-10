@@ -26,32 +26,30 @@ export const useRouter = () => {}
     back,
     forward,
     refresh}
-  }
-}
+
 export const usePathname = useCallback((...args) => {}
   return window.location.pathname }
-}
+
 export const useSearchParams = useCallback((...args) => {}
   const params = new URLSearchParams(window.location.search)
   return params }
-}
+
 export default { useRouter, usePathname, useSearchParams }
-export const useRouter = () => {/* TODO: Fix JSX expression */}
+export const useRouter = () => {
   }, [])
   const replace = useCallback((ur)
-  l: string) => {/* TODO: Fix JSX expression */}
+  l: string) => {
   }, [])
-  const back = useCallback(() => {/* TODO: Fix JSX expression */}
+  const back = useCallback(() => {
   }, [])
-  const forward = useCallback(() => {/* TODO: Fix JSX expression */}
+  const forward = useCallback(() => {
   }, [])
-  const refresh = useCallback(() => {/* TODO: Fix JSX expression */}
+  const refresh = useCallback(() => {
   }, [])
-  return {/* TODO: Fix JSX expression */}
-  }
-}
-export const usePathname = () => {/* TODO: Fix JSX expression */}
-}
-export const useSearchParams = () => {/* TODO: Fix JSX expression */}
-}
+  return {
+
+export const usePathname = () => {
+
+export const useSearchParams = () => {
+
 export default { useRouter, usePathname, useSearchParams }

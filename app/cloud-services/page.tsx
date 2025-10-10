@@ -4,26 +4,26 @@ import { Helmet } from 'react-helmet-async'
 import { Cloud, Server, Database, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react'
 const CloudServicesPage: React.FC = () => {
 const features = [
-    {
+
       icon: Shield,
       title: 'Secure Cloud Services',
       description: 'Comprehensive cloud services with enterprise-grade security and reliability'
     },
-    {
+
       icon: Zap,
       title: 'High Performance',
       description: 'Lightning-fast cloud services with optimized performance and scalability'
     },
-    {
+
       icon: Brain,
       title: 'AI-Powered Management',
       description: 'Intelligent cloud management powered by advanced AI technology'
     },
-    {
+
       icon: Globe,
       title: 'Global Deployment',
       description: 'Worldwide cloud services deployment and support'
-    }
+
   ]
   const benefits = [
 'Advanced cloud technology integration',
@@ -52,19 +52,19 @@ const features = [
           </p></p>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Our cloud services deliver unmatched performance, security, and scalability.
-          </p></h1></p>
+          </p>
 </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {features.map((feature, index) => (</div>
             <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
               <feature.icon className="h-12 w-12 text-purple-400 mx-auto mb-4" /></h1>
               <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-              <p className="text-gray-300">{feature.description}</p></h1></p>
+              <p className="text-gray-300">{feature.description}</p>
 </div>)}</div>
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-8">
             Why Choose Our Cloud Services?
-          </h2></h1></div>
+          </h2>
           <div className="grid md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-center space-x-3">
@@ -78,7 +78,7 @@ const features = [
               <h2 className="text-3xl font-bold text-white mb-6">Our Cloud Services</h2></p>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Comprehensive cloud solutions designed to accelerate your digital transformation.
-              </p></h1></p>
+              </p>
 </div></div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {services.map((service, index) => (
@@ -95,10 +95,11 @@ const features = [
                       <li key={featureIndex} className="flex items-center gap-2 text-gray-300 text-sm">
                         <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                         {feature}
-                      </li>)}
-                  </ul></h1></p>
+                      </li>
+              ))}
+                  </ul>
 </div>)}</div>
-</div></h1></p>
+</div>
         </section>
         <section className="py-20 px-4 bg-white/5">
           <div className="max-w-7xl mx-auto"></div>
@@ -106,7 +107,7 @@ const features = [
               <h2 className="text-3xl font-bold text-white mb-6">Why Choose Our Cloud Services?</h2></p>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Experience the benefits of cloud computing with our expert guidance and support.
-              </p></h1></p>
+              </p>
 </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {benefits.map((benefit, index) => (</div>
@@ -136,7 +137,7 @@ const features = [
         </section>
 </div>
     </React.Fragment>
-}
+
 export default CloudServicesPage</button>
   </button>
   </h1>

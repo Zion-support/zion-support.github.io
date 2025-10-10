@@ -4,24 +4,24 @@ import { Helmet } from 'react-helmet-async'
 import { Play, ArrowRight, CheckCircle } from 'lucide-react'
 const DemoPage: React.FC = () => {
   const demos = [
-    {
+
       title: 'AI Analytics Dashboard',
       description: 'See how our AI analytics can transform your business intelligence',
       duration: '5 min',
       features: ['Real-time data visualization', 'Predictive analytics', 'Custom reports']
     },
-    {
+
       title: 'AI Customer Support Bot',
       description: 'Experience our intelligent customer support automation',
       duration: '3 min',
       features: ['Natural language processing', 'Multi-channel support', 'Sentiment analysis']
     },
-    {
+
       title: 'AI Content Generation',
       description: 'Watch our AI create high-quality content in seconds',
       duration: '4 min',
       features: ['Blog posts', 'Social media content', 'Product descriptions']
-    }
+
   ]
   return (
     <React.Fragment>
@@ -50,13 +50,14 @@ const DemoPage: React.FC = () => {
 </div></h1>
                   <h3 className="text-xl font-semibold text-white mb-3">{demo.title}</h3></p>
                   <p className="text-gray-300 mb-4">{demo.description}</p>
-                  <div className="text-sm text-cyan-400 mb-4">Duration: {demo.duration}</h1></p></div>
+                  <div className="text-sm text-cyan-400 mb-4">Duration: {demo.duration}</h1>
                   <ul className="space-y-2 mb-6">
                     {demo.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
                         {feature}
-                      </li>)}
+                      </li>
+              ))}
                   </ul>
                   <button className="w-full bg-cyan-500 hover:bg-cyan-600 text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center">
                     <Play className="w-4 h-4 mr-2" />
@@ -76,12 +77,12 @@ const DemoPage: React.FC = () => {
                 className="inline-flex items-center px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white font-medium rounded-lg transition-colors">
                 Schedule Demo
                 <ArrowRight className="w-4 h-4 ml-2" />
-              </a></h1></p>
+              </a>
 </div>
-</div></h1></p>
+</div>
         </section>
 </div>
     </React.Fragment>
-}
+
 export default DemoPage</button>
   </h1>

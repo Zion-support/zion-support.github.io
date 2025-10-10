@@ -4,64 +4,64 @@ import { Helmet } from 'react-helmet-async'
 import { CheckCircle, Eye, MousePointer, Volume2, Shield, Users, Globe, Zap, ArrowRight, Star } from 'lucide-react'
 const AccessibilityPage: React.FC = () => {
   const features = [
-    {
+
       icon: Eye,
       title: 'Visual Accessibility',
       description: 'Comprehensive visual accessibility features including high contrast modes, text scaling, and screen reader compatibility.',
       benefits: ['High contrast mode', 'Text scaling', 'Screen reader support', 'Color blind friendly']
     },
-    {
+
       icon: MousePointer,
       title: 'Motor Accessibility',
       description: 'Keyboard navigation and alternative input methods for users with motor impairments.',
       benefits: ['Keyboard navigation', 'Voice commands', 'Switch control', 'Customizable controls']
     },
-    {
+
       icon: Volume2,
       title: 'Audio Accessibility',
       description: 'Audio alternatives and visual indicators for users with hearing impairments.',
       benefits: ['Audio descriptions', 'Visual alerts', 'Captions', 'Sign language support']
     },
-    {
+
       icon: Shield,
       title: 'Security & Privacy',
       description: 'Secure accessibility features that protect user data while providing inclusive experiences.',
       benefits: ['Data protection', 'Secure forms', 'Privacy controls', 'Encrypted communications']
     },
-    {
+
       icon: Users,
       title: 'Inclusive Design',
       description: 'Design principles that ensure our solutions work for users of all abilities and backgrounds.',
       benefits: ['Universal design', 'Cultural sensitivity', 'Language support', 'Age-friendly interfaces']
     },
-    {
+
       icon: Globe,
       title: 'Global Standards',
       description: 'Compliance with international accessibility standards including WCAG 2.1 AA and Section 508.',
       benefits: ['WCAG 2.1 AA', 'Section 508', 'ADA compliance', 'International standards']
-    }
+
   ]
   const standards = [
-    {
+
       name: 'WCAG 2.1 AA',
       description: 'Web Content Accessibility Guidelines 2.1 Level AA compliance',
       status: 'Fully Compliant'
     },
-    {
+
       name: 'Section 508',
       description: 'US federal accessibility standards for electronic and information technology',
       status: 'Fully Compliant'
     },
-    {
+
       name: 'ADA',
       description: 'Americans with Disabilities Act compliance for digital accessibility',
       status: 'Fully Compliant'
     },
-    {
+
       name: 'EN 301 549',
       description: 'European accessibility standard for ICT products and services',
       status: 'Fully Compliant'
-    }
+
   ]
   return (
     <React.Fragment>
@@ -71,7 +71,7 @@ const AccessibilityPage: React.FC = () => {
         <meta name="keywords" content="accessibility, WCAG, ADA compliance, inclusive design, digital accessibility, Zion Tech Group" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
+
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
@@ -93,7 +93,7 @@ const AccessibilityPage: React.FC = () => {
 </div>
 </div></button>
         </section>
-        {/* Features Section */}</section>
+        {</section>
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16"></h1>
@@ -101,7 +101,7 @@ const AccessibilityPage: React.FC = () => {
                 Comprehensive Accessibility Features</p>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our solutions cover all aspects of digital accessibility to ensure inclusive experiences for all users.
-              </p></h1></p>
+              </p>
 </div></div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
@@ -120,10 +120,11 @@ const AccessibilityPage: React.FC = () => {
                       <li key={benefitIndex} className="flex items-center text-gray-300 text-sm">
                         <CheckCircle className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" />
                         {benefit}
-                      </li>)}
-                  </ul></h1></p>
+                      </li>
+              ))}
+                  </ul>
 </div>)}</div>
-</div></h1></p>
+</div>
         </section>
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto"></div>
@@ -132,7 +133,7 @@ const AccessibilityPage: React.FC = () => {
                 Standards Compliance</p>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 We ensure full compliance with international accessibility standards and regulations.
-              </p></h1></p>
+              </p>
 </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {standards.map((standard, index) => (</div>
@@ -170,7 +171,7 @@ const AccessibilityPage: React.FC = () => {
         </section>
 </div>
     </React.Fragment>
-}
+
 export default AccessibilityPage</button>
   </button>
   </h2>

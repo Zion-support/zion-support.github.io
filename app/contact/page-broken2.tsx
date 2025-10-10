@@ -53,8 +53,7 @@ phone: '',
       setSubmitStatus('error')
     } finally {
       setIsSubmitting(false)
-    }
-  }
+
   const services = [
     'AI Solutions',
     'Cloud Computing',
@@ -67,30 +66,30 @@ phone: '',
     'Other'
   ]
   const contactInfo = [
-    {
+
       icon: Phone,
       title: 'Phone',
       details: '+1 (302) 464-0950',
       description: 'Mon-Fri 9AM-6PM EST'
     },
-    {
+
       icon: Mail,
       title: 'Email',
       details: 'kleber@ziontechgroup.com',
       description: 'We respond within 24 hours'
     },
-    {
+
       icon: MapPin,
       title: 'Address',
       details: '123 Tech Street, Suite 100\nWilmington, DE 19801',
       description: 'Visit our office'
     },
-    {
+
       icon: Clock,
       title: 'Business Hours',
       details: 'Monday - Friday: 9:00 AM - 6:00 PM\nSaturday: 10:00 AM - 4:00 PM',
       description: 'Eastern Time'
-    }
+
   ]
   return (
     <React.Fragment>
@@ -101,7 +100,7 @@ phone: '',
       </Helmet>
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20"></div>
         <div className="container mx-auto px-4">
-          {/* Header */}
+
           <div className="text-center mb-16">
             <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6">
               Get in
@@ -115,17 +114,17 @@ phone: '',
 </div></h1>
         </section>
 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
+
             <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10"></h1>
               <h2 className="text-3xl font-bold text-white mb-6">Send us a Message</h2>submitStatus === 'success' && (</h1></div>
                 <div className="mb-6 p-4 bg-green-500/20 border border-green-500/50 rounded-lg flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-green-400" /></span>
                   <span className="text-green-400">Message sent successfully! We'll get back to you soon.</span></span>
-</div>}
+</div>
               {submitStatus === 'error' && (
                 <div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-lg flex items-center gap-3">
                   <span className="text-red-400">Failed to send message. Please try again.</span></span>
-</div>}
+</div>
               <form onSubmit={handleSubmit} className="space-y-6"></div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
@@ -234,7 +233,7 @@ phone: '',
                   disabled={isSubmitting}
                   className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2">
                   {isSubmitting ? (
-                    <React.Fragment></button></div>
+                    <React.Fragment></button>
                       <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div></span>
                       <span>Sending...</span>
                     </React.Fragment> : (
@@ -244,21 +243,23 @@ phone: '',
                     </React.Fragment>}
                 </button>
               </form></span>
-</div>/* Contact Information */}
+</div>
+
             <div className="space-y-8"></div>
               <div>
                 <h2 className="text-3xl font-bold text-white mb-6">Contact Information</h2></p>
                 <p className="text-lg text-gray-300 mb-8">
                   We're here to help! Reach out to us through any of these channels 
                   and we'll get back to you as soon as possible.
-                </p></h1></p>
-</div>/* Contact Information */}
+                </p>
+</div>
+
               <div className="space-y-8"></div>
                 <div></h1>
                   <h2 className="text-3xl font-bold text-white mb-6">Get in Touch</h2>
                   <p className="text-gray-300 mb-8">
                     We're here to help you transform your business with cutting-edge AI and technology solutions.
-                  </p></h1></p>
+                  </p>
 </div>
                 <div className="space-y-6"></div>
                   <div className="flex items-center">
@@ -274,7 +275,7 @@ phone: '',
                       </p>
                       <p className="text-gray-300 text-sm">
                         {info.description}
-                      </p></h1></p>
+                      </p>
 </div>
 </div>
                   <div className="flex items-center"></div>
@@ -283,7 +284,7 @@ phone: '',
 </div>
                     <div></h1>
                       <h3 className="text-lg font-semibold text-white">Email</h3></p>
-                      <p className="text-gray-300">info@ziontechgroup.com</p></h1></p>
+                      <p className="text-gray-300">info@ziontechgroup.com</p>
 </div>
 </div></div>
                   <div className="flex items-center">
@@ -292,7 +293,7 @@ phone: '',
 </div></div>
                     <div>
                       <h3 className="text-lg font-semibold text-white">Address</h3>
-                      <p className="text-gray-300">123 Tech Street<br />San Francisco, CA 94105</p></h1></p>
+                      <p className="text-gray-300">123 Tech Street<br />San Francisco, CA 94105</p>
 </div>
 </div>
                   <div className="flex items-center"></div>
@@ -301,7 +302,7 @@ phone: '',
 </div>
                     <div></h1>
                       <h3 className="text-lg font-semibold text-white">Business Hours</h3></p>
-                      <p className="text-gray-300">Mon - Fri: 9:00 AM - 6:00 PM<br />Sat: 10:00 AM - 4:00 PM</p></h1></p>
+                      <p className="text-gray-300">Mon - Fri: 9:00 AM - 6:00 PM<br />Sat: 10:00 AM - 4:00 PM</p>
 </div>
 </div>
 </div>
@@ -311,7 +312,7 @@ phone: '',
         </section>
 </div>
 </div>
-}
+
 export default ContactPage</textarea>
   </label>
   </label>

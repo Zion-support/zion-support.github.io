@@ -4,26 +4,26 @@ import { Helmet } from 'react-helmet-async'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 const AnalyticsToolsPage: React.FC = () => {
   const features = [
-    {
+
       icon: Brain,
       title: 'AI-Powered Analytics',
       description: 'Advanced AI technology to transform your data analysis and business intelligence'
     },
-    {
+
       icon: Zap,
       title: 'Real-Time Processing',
       description: 'Lightning-fast data processing and real-time analytics for optimal insights'
     },
-    {
+
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards for your data'
     },
-    {
+
       icon: Globe,
       title: 'Global Scalability',
       description: 'Worldwide deployment and support for international business analytics'
-    }
+
   ]
   const benefits = [
     'Advanced AI-powered data analysis',
@@ -49,10 +49,10 @@ const AnalyticsToolsPage: React.FC = () => {
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business with our advanced analytics tools. 
             Powered by cutting-edge AI technology and industry expertise.
-          </p></h1></p>
-</div></h1></p>
+          </p>
+</div>
       </section>
-        {/* Features Section */}
+
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12"></h1>
@@ -61,16 +61,17 @@ const AnalyticsToolsPage: React.FC = () => {
             </h2></p>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our analytics tools deliver unmatched performance, security, and scalability.
-            </p></h1></p>
+            </p>
 </div></div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
                 <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p></h1></p>
+                <p className="text-gray-300">{feature.description}</p>
 </div>)}</div>
-</div>/* Benefits Section */}</h1></p></section>
+</div>
+          {</h1>
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12"></h1>
@@ -78,7 +79,7 @@ const AnalyticsToolsPage: React.FC = () => {
               Key Benefits</p>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our analytics tools for your business.
-            </p></h1></p>
+            </p>
 </div></div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
@@ -123,7 +124,7 @@ const AnalyticsToolsPage: React.FC = () => {
 </div>
 </div>
 </div>
-}
+
 export default AnalyticsToolsPage</button>
   </button>
   </button>

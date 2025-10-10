@@ -6,42 +6,42 @@ import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Users, Shield } from 'lucide-react'
 const ConsultationPage: React.FC = () => {
   const services = [
-    {
+
       icon: Star,
       title: 'AI Strategy',
       description: 'Develop a comprehensive AI strategy tailored to your business needs.',
       benefits: ['AI readiness assessment', 'Technology roadmap', 'ROI analysis', 'Implementation planning']
     },
-    {
+
       icon: Shield,
       title: 'Cybersecurity Audit',
       description: 'Comprehensive security assessment and recommendations.',
       benefits: ['Security vulnerability analysis', 'Compliance review', 'Risk assessment', 'Remediation plan']
     },
-    {
+
       icon: Users,
       title: 'Digital Transformation',
       description: 'Guide your organization through digital transformation.',
       benefits: ['Process optimization', 'Technology integration', 'Change management', 'Training programs']
-    }
+
   ]
   const process = [
-    {
+
       step: '1',
       title: 'Initial Assessment',
       description: 'We analyze your current technology landscape and business objectives.'
     },
-    {
+
       step: '2',
       title: 'Strategy Development',
       description: 'Create a customized strategy based on your specific needs and goals.'
     },
-    {
+
       step: '3',
       title: 'Implementation Plan',
       description: 'Develop a detailed roadmap with timelines and milestones.'
     },
-    {
+
       step: '4',
       title: 'Ongoing Support',
       description: 'Provide continuous guidance and support throughout implementation.'
@@ -57,11 +57,11 @@ interface ConsultationType {
   price: string
   features: string[]
   popular: boolean
-}
+
 const ConsultationPage: React.FC = () => {
   const [selectedType, setSelectedType] = useState<string>('')
   const consultationTypes: ConsultationType[] = [
-    {
+
       id: 'strategy',
       name: 'IT Strategy Consultation',
       description: 'Comprehensive analysis of your current IT infrastructure and strategic planning for digital transformation.',
@@ -76,7 +76,7 @@ const ConsultationPage: React.FC = () => {
       ],
       popular: false
     },
-    {
+
       id: 'ai',
       name: 'AI Implementation Consultation',
       description: 'Expert guidance on integrating AI solutions into your business processes and workflows.',
@@ -91,7 +91,7 @@ const ConsultationPage: React.FC = () => {
       ],
       popular: true
     },
-    {
+
       id: 'cloud',
       name: 'Cloud Migration Consultation',
       description: 'Strategic planning and execution guidance for migrating your infrastructure to the cloud.',
@@ -106,7 +106,7 @@ const ConsultationPage: React.FC = () => {
       ],
       popular: false
     },
-    {
+
       id: 'security',
       name: 'Cybersecurity Audit',
       description: 'Comprehensive security assessment and recommendations to protect your digital assets.',
@@ -120,36 +120,36 @@ const ConsultationPage: React.FC = () => {
         'Incident response planning'
       ],
       popular: false
-    }
+
   ]
   const experts = [
-    {
+
       name: 'Dr. Sarah Chen',
       role: 'AI & Machine Learning Specialist',
       experience: '15+ years',
       expertise: ['AI Strategy', 'Machine Learning', 'Data Science'],
       image: '/images/experts/sarah-chen.jpg'
     },
-    {
+
       name: 'Michael Rodriguez',
       role: 'Cloud Architecture Expert',
       experience: '12+ years',
       expertise: ['Cloud Migration', 'DevOps', 'Infrastructure'],
       image: '/images/experts/michael-rodriguez.jpg'
     },
-    {
+
       name: 'Alex Thompson',
       role: 'Cybersecurity Consultant',
       experience: '10+ years',
       expertise: ['Security Audits', 'Compliance', 'Risk Management'],
       image: '/images/experts/alex-thompson.jpg'
-    }
+
   ]
   const handleBooking = (typeId: string) => {
     setSelectedType(typeId)
     // In a real app, this would open a booking modal or redirect to a booking page
     console.log(`Booking consultation: ${typeId}`)
-  }
+
   return (
     <React.Fragment>
       <Helmet>
@@ -165,8 +165,9 @@ const ConsultationPage: React.FC = () => {
                 Expert IT Consultation
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Get personalized guidance from our experts to transform your business with cutting-edge AI and IT solutions.
-              </p></h1></p>
-</div>/* Consultation Types */}</div>
+              </p>
+</div>
+          {</div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
               {consultationTypes.map((type, index) => (
                 <div
@@ -189,17 +190,19 @@ const ConsultationPage: React.FC = () => {
                       <li key={featureIndex} className="flex items-center text-gray-300 text-sm">
                         <CheckCircle className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" />
                         {feature}
-                      </li>)}
+                      </li>
+              ))}
                   </ul>
                   <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold py-3 rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
                     Schedule Consultation</button>
-</div>)}</div>/* Contact Information */}
+</div>)}</div>
+
             <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10"></div>
               <div className="text-center mb-8">
                 <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
                 <p className="text-gray-300 mb-8">
                   Contact our experts to discuss your specific needs and schedule a consultation.
-                </p></h1></p>
+                </p>
 </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
                 <div className="text-center">
@@ -208,7 +211,7 @@ const ConsultationPage: React.FC = () => {
 </div></h1>
                   <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3></p>
                   <p className="text-gray-300 mb-2">(302) 464-0950</p>
-                  <p className="text-sm text-gray-400">Mon-Fri: 9AM-6PM EST</p></h1></p>
+                  <p className="text-sm text-gray-400">Mon-Fri: 9AM-6PM EST</p>
 </div></div>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -216,7 +219,7 @@ const ConsultationPage: React.FC = () => {
 </div>
                   <h3 className="text-xl font-semibold text-white mb-2">Email Us</h3></p>
                   <p className="text-gray-300 mb-2">kleber@ziontechgroup.com</p>
-                  <p className="text-sm text-gray-400">We'll respond within 24 hours</p></h1></p>
+                  <p className="text-sm text-gray-400">We'll respond within 24 hours</p>
 </div></div>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -224,8 +227,8 @@ const ConsultationPage: React.FC = () => {
 </div></h1>
                   <h3 className="text-xl font-semibold text-white mb-2">Schedule Online</h3></p>
                   <p className="text-gray-300 mb-2">Book a consultation</p>
-                  <p className="text-sm text-gray-400">Available 24/7</p>/* Hero Section */}</button></section>
-        <section className="py-20 px-4"></h1></p></div>
+                  <p className="text-sm text-gray-400">Available 24/7</p></button></section>
+        <section className="py-20 px-4"></h1>
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Expert <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Consultation</span>
@@ -270,7 +273,7 @@ const ConsultationPage: React.FC = () => {
               <h2 className="text-3xl font-bold text-white mb-6">Choose Your Consultation Type</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Select the consultation that best fits your needs. All sessions include detailed reports and actionable recommendations.
-              </p></h1></p>
+              </p>
 </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {consultationTypes.map((type) => (</div>
@@ -285,7 +288,7 @@ const ConsultationPage: React.FC = () => {
                   {type.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
                       <div className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                        Most Popular</div>}
+                        Most Popular</div>
                   <div className="text-center mb-6">
                     <h3 className="text-xl font-bold text-white mb-3">{type.name}</h3></p>
                     <p className="text-gray-300 text-sm mb-4">{type.description}</p>
@@ -300,7 +303,8 @@ const ConsultationPage: React.FC = () => {
                       <li key={index} className="flex items-center text-gray-300 text-sm">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                         {feature}
-                      </li>)}
+                      </li>
+              ))}
                   </ul>
                   <button
                     onClick={() => handleBooking(type.id)}
@@ -320,7 +324,7 @@ const ConsultationPage: React.FC = () => {
               <h2 className="text-3xl font-bold text-white mb-6">Meet Our Experts</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our team of experienced professionals brings deep expertise across all areas of technology.
-              </p></h1></p>
+              </p>
 </div></div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {experts.map((expert, index) => (
@@ -347,7 +351,7 @@ const ConsultationPage: React.FC = () => {
                 <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2></p>
                 <p className="text-xl text-gray-300">
                   Contact us today to schedule your consultation or learn more about our services.
-                </p></h1></p>
+                </p>
 </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12"></div>
                 <div className="text-center">
@@ -355,21 +359,21 @@ const ConsultationPage: React.FC = () => {
                     <Phone className="w-8 h-8 text-white" />
 </div>
                   <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>
-                  <p className="text-gray-300">+1 (555) 123-4567</p></h1></p>
+                  <p className="text-gray-300">+1 (555) 123-4567</p>
 </div></div>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
                     <Mail className="w-8 h-8 text-white" />
 </div></h1>
                   <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3></p>
-                  <p className="text-gray-300">consultation@ziontech.com</p></h1></p>
+                  <p className="text-gray-300">consultation@ziontech.com</p>
 </div></div>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
                     <MapPin className="w-8 h-8 text-white" />
 </div>
                   <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>
-                  <p className="text-gray-300">123 Tech Street, Silicon Valley</p></h1></p>
+                  <p className="text-gray-300">123 Tech Street, Silicon Valley</p>
 </div>
 </div></div>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -384,13 +388,13 @@ const ConsultationPage: React.FC = () => {
                   className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
                   View All Services</div>
 </div>
-</div></h1></p>
+</div>
         </section>
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-12"></h1>
             <h2 className="text-3xl font-bold text-white mb-4">Consultation Services</h2></p>
-            <p className="text-xl text-gray-300">Comprehensive technology consulting tailored to your business needs</p></h1></p>
+            <p className="text-xl text-gray-300">Comprehensive technology consulting tailored to your business needs</p>
 </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {consultationServices.map((service, index) => (</div>
@@ -399,15 +403,15 @@ const ConsultationPage: React.FC = () => {
                   <CheckCircle className="h-6 w-6 text-white" />
 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{service}</h3>
-                <p className="text-gray-300">Expert guidance and strategic planning for your technology initiatives.</p></h1></p>
+                <p className="text-gray-300">Expert guidance and strategic planning for your technology initiatives.</p>
 </div>)}</div>
-</div></h1></p>
+</div>
       </section>
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12"></h1>
             <h2 className="text-3xl font-bold text-white mb-4">Our Process</h2></p>
-            <p className="text-xl text-gray-300">How we deliver exceptional consultation services</p></h1></p>
+            <p className="text-xl text-gray-300">How we deliver exceptional consultation services</p>
 </div></div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center"></div>
@@ -415,21 +419,21 @@ const ConsultationPage: React.FC = () => {
                 <span className="text-2xl font-bold text-white">1</span></span>
 </div>
               <h3 className="text-xl font-semibold text-white mb-3">Discovery</h3>
-              <p className="text-gray-300">We analyze your current technology landscape and business objectives.</p></h1></p>
+              <p className="text-gray-300">We analyze your current technology landscape and business objectives.</p>
 </div>
             <div className="text-center"></div>
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-white">2</span></span>
 </div></h1>
               <h3 className="text-xl font-semibold text-white mb-3">Strategy</h3></p>
-              <p className="text-gray-300">We develop a customized roadmap aligned with your goals.</p></h1></p>
+              <p className="text-gray-300">We develop a customized roadmap aligned with your goals.</p>
 </div>
             <div className="text-center"></div>
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4"></span>
                 <span className="text-2xl font-bold text-white">3</span></span>
 </div>
               <h3 className="text-xl font-semibold text-white mb-3">Implementation</h3>
-              <p className="text-gray-300">We guide you through execution and provide ongoing support.</p></h1></p>
+              <p className="text-gray-300">We guide you through execution and provide ongoing support.</p>
 </div>
 </div>
 </div></h1>
@@ -454,7 +458,7 @@ const ConsultationPage: React.FC = () => {
       </section>
 </div>
     </React.Fragment>
-}
+
 export default ConsultationPage</button>
   </button>
   </Link>

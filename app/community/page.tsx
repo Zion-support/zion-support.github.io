@@ -4,26 +4,26 @@ import { Helmet } from 'react-helmet-async'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Users, MessageCircle, Calendar } from 'lucide-react'
 const CommunityPage: React.FC = () => {
   const features = [
-    {
+
       icon: Users,
       title: 'Active Community',
       description: 'Join our vibrant community of developers, entrepreneurs, and tech enthusiasts'
     },
-    {
+
       icon: MessageCircle,
       title: 'Knowledge Sharing',
       description: 'Share knowledge, ask questions, and collaborate with like-minded professionals'
     },
-    {
+
       icon: Calendar,
       title: 'Events & Meetups',
       description: 'Participate in regular events, workshops, and networking opportunities'
     },
-    {
+
       icon: Globe,
       title: 'Global Network',
       description: 'Connect with professionals from around the world'
-    }
+
   ]
   const benefits = [
     'Access to exclusive community resources',
@@ -52,14 +52,14 @@ const CommunityPage: React.FC = () => {
           </p></p>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Our community provides opportunities for networking, learning, and collaboration.
-          </p></h1></p>
+          </p>
 </div></div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {features.map((feature, index) => (
             <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
               <feature.icon className="h-12 w-12 text-purple-400 mx-auto mb-4" /></h1>
               <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-              <p className="text-gray-300">{feature.description}</p></h1></p>
+              <p className="text-gray-300">{feature.description}</p>
 </div>)}</div></div>
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-8">
@@ -90,7 +90,7 @@ const CommunityPage: React.FC = () => {
 </div>
 </div>
 </div>
-}
+
 export default CommunityPage</button>
   </button>
   </h1>

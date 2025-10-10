@@ -7,7 +7,7 @@ import { Helmet } from 'react-helmet-async'
         <title>Page | Zion Tech Group</title>
         <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
-      </Helmet>/* Hero Section */}
+      </Helmet>
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
@@ -20,7 +20,7 @@ import { Helmet } from 'react-helmet-async'
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your business with our advanced page solutions. 
               Powered by cutting-edge AI technology and industry expertise.
-            </p></h1></div>
+            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
                 Get Started
@@ -33,6 +33,6 @@ import { Helmet } from 'react-helmet-async'
 </div></button>
       </section>
 </div>
-}
+
 export default PagePage</button>
   </span>

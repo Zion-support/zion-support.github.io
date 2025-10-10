@@ -25,26 +25,26 @@ import {
 } from 'lucide-react'
 const ProcessAutomationPage: React.FC = () => {
   const features = [
-    {
+
       icon: Zap,
       title: 'Workflow Automation',
       description: 'Streamline your business processes with intelligent automation that reduces manual work and errors.'
     },
-    {
+
       icon: Bot,
       title: 'AI-Powered Automation',
       description: 'Leverage artificial intelligence to create smart, adaptive automation solutions for complex processes.'
     },
-    {
+
       icon: Settings,
       title: 'Custom Integration',
       description: 'Seamlessly integrate with your existing systems and tools for a unified automation experience.'
     },
-    {
+
       icon: BarChart,
       title: 'Performance Monitoring',
       description: 'Track and optimize your automated processes with real-time analytics and reporting.'
-    }
+
   ]
   const benefits = [
     'Reduce manual work and human errors',
@@ -64,7 +64,7 @@ const ProcessAutomationPage: React.FC = () => {
         <meta name="keywords" content="process automation, workflow automation, business automation, AI automation, Zion Tech Group" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
+
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -85,7 +85,7 @@ const ProcessAutomationPage: React.FC = () => {
 </div>
 </div></button>
         </section>
-        {/* Features Section */}</section>
+        {</section>
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></h1>
@@ -93,7 +93,7 @@ const ProcessAutomationPage: React.FC = () => {
                 Our Automation Solutions</p>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 We provide comprehensive process automation services to transform your business operations.
-              </p></h1></p>
+              </p>
 </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (</div>
@@ -102,9 +102,9 @@ const ProcessAutomationPage: React.FC = () => {
                     <feature.icon className="h-6 w-6 text-white" />
 </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p></h1></p>
+                  <p className="text-gray-300">{feature.description}</p>
 </div>)}</div>
-</div></h1></p>
+</div>
         </section>
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="max-w-7xl mx-auto">
@@ -113,7 +113,7 @@ const ProcessAutomationPage: React.FC = () => {
                 Key Benefits</p>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Transform your business with our comprehensive process automation services.
-              </p></h1></p>
+              </p>
 </div></div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {benefits.map((benefit, index) => (
@@ -121,7 +121,7 @@ const ProcessAutomationPage: React.FC = () => {
                   <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                   <p className="text-gray-300 text-lg">{benefit}</p></p>
 </div>)}</div>
-</div></h1></p>
+</div>
         </section>
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="max-w-4xl mx-auto text-center">
@@ -145,7 +145,7 @@ const ProcessAutomationPage: React.FC = () => {
         </section>
 </div>
     </React.Fragment>
-}
+
 export default ProcessAutomationPage</button>
   </button>
   </h2>

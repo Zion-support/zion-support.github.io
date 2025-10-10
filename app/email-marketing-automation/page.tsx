@@ -24,26 +24,26 @@ import {
 } from 'lucide-react'
 const EmailMarketingAutomationPage: React.FC = () => {
   const features = [
-    {
+
       icon: Mail,
       title: 'Automated Campaigns',
       description: 'Create and manage sophisticated email marketing campaigns with AI-powered automation.'
     },
-    {
+
       icon: Target,
       title: 'Advanced Segmentation',
       description: 'Intelligent audience segmentation and personalization for maximum engagement and conversion.'
     },
-    {
+
       icon: BarChart,
       title: 'Analytics & Insights',
       description: 'Comprehensive analytics and reporting to track performance and optimize your campaigns.'
     },
-    {
+
       icon: Zap,
       title: 'Smart Triggers',
       description: 'Behavior-based triggers and workflows to send the right message at the right time.'
-    }
+
   ]
   const benefits = [
     'Increase email engagement rates',
@@ -63,7 +63,7 @@ const EmailMarketingAutomationPage: React.FC = () => {
         <meta name="keywords" content="email marketing automation, marketing platform, email campaigns, marketing automation, Zion Tech Group" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
+
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -84,7 +84,7 @@ const EmailMarketingAutomationPage: React.FC = () => {
 </div>
 </div></button>
         </section>
-        {/* Features Section */}</section>
+        {</section>
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></h1>
@@ -92,7 +92,7 @@ const EmailMarketingAutomationPage: React.FC = () => {
                 Platform Features</p>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our email marketing automation platform provides everything you need to succeed.
-              </p></h1></p>
+              </p>
 </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (</div>
@@ -101,9 +101,9 @@ const EmailMarketingAutomationPage: React.FC = () => {
                     <feature.icon className="h-6 w-6 text-white" />
 </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p></h1></p>
+                  <p className="text-gray-300">{feature.description}</p>
 </div>)}</div>
-</div></h1></p>
+</div>
         </section>
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="max-w-7xl mx-auto">
@@ -112,7 +112,7 @@ const EmailMarketingAutomationPage: React.FC = () => {
                 Key Benefits</p>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Drive better results with our comprehensive email marketing automation platform.
-              </p></h1></p>
+              </p>
 </div></div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {benefits.map((benefit, index) => (
@@ -120,7 +120,7 @@ const EmailMarketingAutomationPage: React.FC = () => {
                   <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                   <p className="text-gray-300 text-lg">{benefit}</p></p>
 </div>)}</div>
-</div></h1></p>
+</div>
         </section>
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="max-w-4xl mx-auto text-center">
@@ -144,7 +144,7 @@ const EmailMarketingAutomationPage: React.FC = () => {
         </section>
 </div>
     </React.Fragment>
-}
+
 export default EmailMarketingAutomationPage</button>
   </button>
   </h2>

@@ -10,11 +10,11 @@ interface Slide {
     value: string
     label: string
   }[]
-}
+
 const ContentCarousel: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
   const slides: Slide[] = [
-    {
+
       icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency',
@@ -25,7 +25,7 @@ const ContentCarousel: React.FC = () => {
         { value: '24/7', label: 'Automation' }
       ]
     },
-    {
+
       icon: Zap,
       title: 'High Performance',
       description: 'Lightning-fast processing and real-time analytics for optimal results',
@@ -36,7 +36,7 @@ const ContentCarousel: React.FC = () => {
         { value: '10M+', label: 'Requests/Day' }
       ]
     },
-    {
+
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards',
@@ -47,7 +47,7 @@ const ContentCarousel: React.FC = () => {
         { value: 'Zero', label: 'Security Breaches' }
       ]
     },
-    {
+
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses',
@@ -57,14 +57,14 @@ const ContentCarousel: React.FC = () => {
         { value: '15+', label: 'Languages' },
         { value: '24/7', label: 'Global Support' }
       ]
-    }
+
   ]
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length)
-  }
+
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
-  }
+
   useEffect(() => {
     const timer = setInterval(nextSlide, 5000)
     return () => clearInterval(timer)
@@ -78,7 +78,7 @@ const ContentCarousel: React.FC = () => {
             Discover Our Solutions
           <p className="text-xl text-purple-100 max-w-3xl mx-auto">
             Explore our comprehensive suite of AI-powered solutions designed to transform your business.
-          </p></h1></p>
+          </p>
 </div></div>
         <div className="relative">
 <div className="overflow-hidden rounded-xl"></div>
@@ -94,7 +94,7 @@ const ContentCarousel: React.FC = () => {
                         <slide.icon className="h-10 w-10 text-white" />
 </div></h1>
                       <h3 className="text-2xl font-bold mb-4">{slide.title}</h3></p>
-                      <p className="text-purple-100 text-lg max-w-2xl mx-auto">{slide.description}</p></h1></p>
+                      <p className="text-purple-100 text-lg max-w-2xl mx-auto">{slide.description}</p>
 </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       {slide.features.map((feature, featureIndex) => (</div>
@@ -106,7 +106,7 @@ const ContentCarousel: React.FC = () => {
 </div>)}
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4"></div>
       <div className="max-w-7xl mx-auto">
-        {/* Header */}
+
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Discover Our</span> <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
@@ -114,11 +114,12 @@ const ContentCarousel: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Explore our comprehensive suite of AI and IT solutions designed to transform your business.
           </p></h1>
-</div>/* Carousel Container */}</div>
+</div>
+          {</div>
         <div className="relative">
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 md:p-12 border border-white/20 overflow-hidden"></div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              {/* Content */}
+
               <div className="space-y-8"></div>
                 <div className="flex items-center gap-4">
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center">
@@ -130,9 +131,10 @@ const ContentCarousel: React.FC = () => {
                     </h3></p>
                     <p className="text-gray-300 text-lg">
                       {currentSlideData.description}
-                    </p></h1></p>
+                    </p>
 </div>
-</div>/* Features */}
+</div>
+
                 <div className="space-y-4">
                   <h4 className="text-lg font-semibold text-white mb-4">Key Features:</h4></div>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -141,15 +143,16 @@ const ContentCarousel: React.FC = () => {
                         <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                         <span className="text-gray-300">{feature}</span></span>
 </div>)}</div>
-</div>/* Stats */}
+</div>
+
                 {currentSlideData.stats && (</div>
                   <div className="grid grid-cols-3 gap-6">
                     {currentSlideData.stats.map((stat, index) => (
                       <div key={index} className="text-center"></div>
                         <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
                         <div className="text-gray-400 text-sm">{stat.label}</div>
-</div>)}</div>}
-                {/* CTA */}</div>
+</div>)}</div>
+                {</div>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
                     <Zap className="w-5 h-5" />
@@ -158,7 +161,8 @@ const ContentCarousel: React.FC = () => {
                     <ArrowRight className="w-5 h-5" />
                     Learn More</button>
 </div>
-</div>/* Visual Element */}
+</div>
+
               <div className="relative"></div>
                 <div className="aspect-square bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-2xl flex items-center justify-center">
                   <div className="text-center"></div>
@@ -173,7 +177,8 @@ const ContentCarousel: React.FC = () => {
 </div>
 </div>
 </div>
-</div>/* Navigation Buttons */}
+</div>
+
           <button
             onClick={prevSlide}
             className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20">
@@ -184,7 +189,8 @@ const ContentCarousel: React.FC = () => {
             className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20">
             <ChevronRight className="h-6 w-6" />
           </button></button>
-</div>/* Slide Indicators */}
+</div>
+
         <div className="flex justify-center mt-8 space-x-2">
           {slides.map((_, index) => (
             <button
@@ -195,7 +201,8 @@ const ContentCarousel: React.FC = () => {
               }`}
             />
           ))}</button>
-</div>/* Additional Info */}</div>
+</div>
+          {</div>
         <div className="mt-16 text-center">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto"></div>
             <div className="flex items-center justify-center gap-3 text-white">
@@ -223,7 +230,7 @@ const ContentCarousel: React.FC = () => {
 </div>
 </div>
 </div>
-}
+
 export default ContentCarousel</button>
   </button>
   </button>

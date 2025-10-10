@@ -4,42 +4,42 @@ import { Helmet } from 'react-helmet-async'
 import { Wifi, Zap, Shield, Globe, CheckCircle, ArrowRight, Phone, Mail, MapPin, Clock, Users, BarChart } from 'lucide-react'
 const FiveGImplementationPage: React.FC = () => {
   const features = [
-    {
+
       icon: Wifi,
       title: '5G Network Design',
       description: 'Complete 5G network design and implementation with optimal coverage and performance.',
       benefits: ['Network planning', 'Coverage optimization', 'Performance tuning']
     },
-    {
+
       icon: Zap,
       title: 'Ultra-Low Latency',
       description: 'Ultra-low latency 5G networks for real-time applications and mission-critical operations.',
       benefits: ['< 1 ms latency', 'Real-time apps', 'Mission critical']
     },
-    {
+
       icon: Clock,
       title: '24/7 Network Monitoring',
       description: 'Continuous monitoring of 5G network performance with real-time analytics and alerts.',
       benefits: ['Network monitoring', 'Performance analytics', 'Proactive maintenance']
     },
-    {
+
       icon: Users,
       title: 'Scalable Infrastructure',
       description: 'Scalable 5G infrastructure that grows with your business needs and user demands.',
       benefits: ['Auto-scaling', 'Capacity planning', 'Future-proof design']
     },
-    {
+
       icon: Shield,
       title: 'Enhanced Security',
       description: 'Advanced encryption and security protocols for enterprise-grade protection',
       benefits: ['End-to-end encryption', 'Security protocols', 'Threat detection']
     },
-    {
+
       icon: BarChart,
       title: 'Performance Analytics',
       description: 'Advanced analytics and reporting for 5G network performance and optimization.',
       benefits: ['Performance insights', 'Usage analytics', 'Optimization recommendations']
-    }
+
   ]
   return (
     <React.Fragment>
@@ -49,7 +49,7 @@ const FiveGImplementationPage: React.FC = () => {
         <meta name="keywords" content="5G implementation, network infrastructure, IoT connectivity, edge computing, Zion Tech Group" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
+
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
@@ -72,7 +72,7 @@ const FiveGImplementationPage: React.FC = () => {
 </div>
 </div></button>
         </section>
-        {/* Features Section */}</section>
+        {</section>
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="container mx-auto">
             <div className="text-center mb-16"></h1>
@@ -94,10 +94,11 @@ const FiveGImplementationPage: React.FC = () => {
                         <li key={idx} className="flex items-center text-sm text-gray-400">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                           {benefit}
-                        </li>)}
+                        </li>
+              ))}
                     </ul>}</h1></p>
 </div>)}</div>
-</div></h1></p>
+</div>
         </section>
         <section className="py-20 px-4">
           <div className="container mx-auto text-center"></div>
@@ -119,7 +120,7 @@ const FiveGImplementationPage: React.FC = () => {
         </section>
 </div>
     </React.Fragment>
-}
+
 export default FiveGImplementationPage</button>
   </button>
   </p>

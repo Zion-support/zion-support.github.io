@@ -5,14 +5,13 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react'
     },
-    {
+
       icon: Clock,
       title: '24/7 Monitoring',
       description: 'Continuous monitoring of IoT devices and systems with intelligent alerting.',
       benefits: ['Continuous monitoring', 'Smart alerts', 'Predictive maintenance']
     },
-    {
-    }
+
   ]
   return (
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -32,16 +31,16 @@ import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } fr
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our IoT platform supports a wide range of industries and applications, 
               from smart manufacturing to connected cities.
-            </p></h1></p>
+            </p>
 </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index) => (</div>
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300">
                 <div className="text-4xl mb-4">{useCase.icon}</div></h1>
                 <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
-                <p className="text-gray-300">{useCase.description}</p></h1></p>
+                <p className="text-gray-300">{useCase.description}</p>
 </div>)}</div>
-</div></h1></p>
+</div>
       </section>
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="max-w-7xl mx-auto">
@@ -52,7 +51,7 @@ import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } fr
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the benefits of a comprehensive IoT platform designed for scale, 
               security, and performance.
-            </p></h1></p>
+            </p>
 </div></div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => (
@@ -62,7 +61,7 @@ import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } fr
 </div></h1>
                 <h3 className="text-lg font-semibold text-white">{benefit}</h3></h1>
 </div>)}</div>
-</div></h1></p>
+</div>
       </section>
           <p className="text-xl text-gray-300 mb-8">
             Start building your IoT platform today. Get started with a free consultation 
@@ -76,6 +75,6 @@ import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } fr
       </section>
       <Footer />
 </div>
-}
+
 export default PagePage</button>
   </h2>

@@ -17,9 +17,9 @@ const ContentStatistics: React.FC = () => {
     years: 15,
     countries: 50,
     uptime: 99
-  }
+
   const statistics = [
-    {
+
       icon: Users,
       value: counters.clients,
       label: 'Happy Clients',
@@ -27,7 +27,7 @@ const ContentStatistics: React.FC = () => {
       color: 'text-blue-400',
       description: 'Businesses trust our solutions'
     },
-    {
+
       icon: Award,
       value: counters.projects,
       label: 'Projects Completed',
@@ -35,7 +35,7 @@ const ContentStatistics: React.FC = () => {
       color: 'text-purple-400',
       description: 'Successful implementations'
     },
-    {
+
       icon: TrendingUp,
       value: counters.satisfaction,
       label: 'Client Satisfaction',
@@ -43,7 +43,7 @@ const ContentStatistics: React.FC = () => {
       color: 'text-green-400',
       description: 'Customer satisfaction rate'
     },
-    {
+
       icon: Clock,
       value: counters.years,
       label: 'Years Experience',
@@ -51,7 +51,7 @@ const ContentStatistics: React.FC = () => {
       color: 'text-yellow-400',
       description: 'Industry expertise'
     },
-    {
+
       icon: Globe,
       value: counters.countries,
       label: 'Countries Served',
@@ -59,32 +59,32 @@ const ContentStatistics: React.FC = () => {
       color: 'text-cyan-400',
       description: 'Global presence'
     },
-    {
+
       icon: BarChart3,
       value: counters.uptime,
       label: 'Uptime Guarantee',
       suffix: '%',
       color: 'text-red-400',
       description: 'Service reliability'
-    }
+
   ]
   const achievements = [
-    {
+
       icon: Brain,
       title: 'AI Innovation',
       description: 'Leading the industry in AI-powered solutions'
     },
-    {
+
       icon: Shield,
       title: 'Security Excellence',
       description: 'Bank-level security for all our solutions'
     },
-    {
+
       icon: Globe,
       title: 'Global Reach',
 description: 'Worldwide deployment and support for international businesses',
       stats: ['50+ Countries', '15+ Languages', '24/7 Support']
-    }
+
   ]
   const benefits = [
     'Advanced AI technology integration',
@@ -97,24 +97,24 @@ description: 'Worldwide deployment and support for international businesses',
     'Proven track record of success'
   ]
   const achievements = [
-    {
+
       icon: Star,
       title: 'Industry Recognition',
       description: 'Awarded Best AI Solutions Provider 2024',
       value: '25+'
     },
-    {
+
       icon: Target,
       title: 'Success Rate',
       description: 'Projects delivered on time and within budget',
       value: '98%'
     },
-    {
+
       icon: Rocket,
       title: 'Growth Rate',
       description: 'Year-over-year business growth',
       value: '300%'
-    }
+
   ]
   useEffect(() => {
     const duration = 3000 // 3 seconds
@@ -131,15 +131,14 @@ setCounters(prev => {
             return {
               ...prev,
               [key]: Math.min(current + increment, target)
-            }
-          }
+
           return prev
         })
       }, 16)
     })
     return () => {
       timers.forEach(timer => clearInterval(timer))
-    }
+
   }, [])
   return (
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4 sm:px-6 lg:px-8"></div>
@@ -149,8 +148,9 @@ setCounters(prev => {
             Our Impact in Numbers
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             See how we've transformed businesses and delivered exceptional results.
-          </p></h1></p>
-</div>/* Statistics Grid */}</div>
+          </p>
+</div>
+          {</div>
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {statistics.map((stat, index) => (
             <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 text-center"></div>
@@ -162,7 +162,8 @@ setCounters(prev => {
               <div className={`text-3xl font-bold ${stat.color} mb-2`}>
                 {Math.floor(stat.value)}{stat.suffix}</div>
               <div className="text-gray-300">{stat.label}</div>
-</div>)}</div>/* Achievements */}</div>
+</div>)}</div>
+          {</div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {achievements.map((achievement, index) => (
             <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300"></div>
@@ -170,7 +171,7 @@ setCounters(prev => {
                 <achievement.icon className="h-6 w-6 text-white" />
 </div></h1>
               <h3 className="text-xl font-semibold text-white mb-2">{achievement.title}</h3></p>
-              <p className="text-gray-300 text-sm">{achievement.description}</p></h1></p>
+              <p className="text-gray-300 text-sm">{achievement.description}</p>
 </div>)}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {statistics.map((stat, index) => (</div>
@@ -182,13 +183,14 @@ setCounters(prev => {
                 {stat.value.toLocaleString()}{stat.suffix}</div>
               <div className="text-lg font-semibold text-white mb-2">{stat.label}</div></div>
               <div className="text-gray-400 text-sm">{stat.description}</div>
-</div>)}</div>/* Features Section */}
+</div>)}</div>
+
         <div className="mb-16"></div>
           <div className="text-center mb-12">
             <h3 className="text-2xl font-bold text-white mb-4">Why We're the Right Choice</h3>
             <p className="text-gray-300 max-w-3xl mx-auto">
               Our comprehensive solutions deliver measurable results across all key business metrics.
-            </p></h1></p>
+            </p>
 </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (</div>
@@ -199,20 +201,21 @@ setCounters(prev => {
                 <h4 className="text-lg font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
                   {feature.title}
                 </h4></p>
-                <p className="text-gray-300 text-sm mb-4">{feature.description}</p></p></div>
+                <p className="text-gray-300 text-sm mb-4">{feature.description}</p>
                 <div className="space-y-2">
                   {feature.stats.map((stat, statIndex) => (
                     <div key={statIndex} className="flex items-center text-xs text-gray-400">
                       <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                       {stat}</div>)}</div>
 </div>)}</div>
-</div>/* Achievements Section */}</div>
+</div>
+          {</div>
         <div className="mb-16">
           <div className="text-center mb-12"></h1>
             <h3 className="text-2xl font-bold text-white mb-4">Key Achievements</h3>
             <p className="text-gray-300 max-w-3xl mx-auto">
               Recognition and awards that validate our commitment to excellence and innovation.
-            </p></h1></p>
+            </p>
 </div></div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {achievements.map((achievement, index) => (
@@ -224,13 +227,14 @@ setCounters(prev => {
                 <div className="text-lg font-semibold text-white mb-2">{achievement.title}</div>
                 <div className="text-gray-400 text-sm">{achievement.description}</div>
 </div>)}</div>
-</div>/* Benefits Section */}</div>
+</div>
+          {</div>
         <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 mb-16">
           <div className="text-center mb-8">
             <h3 className="text-2xl font-bold text-white mb-4">Comprehensive Benefits</h3></p>
             <p className="text-gray-300 max-w-3xl mx-auto">
               Our solutions provide a complete package of benefits designed to accelerate your business growth.
-            </p></h1></p>
+            </p>
 </div></div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index) => (
@@ -238,7 +242,8 @@ setCounters(prev => {
                 <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
                 <span className="text-gray-300">{benefit}</span></span>
 </div>)}</div>
-</div>/* CTA Section */}</div>
+</div>
+          {</div>
         <div className="text-center">
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-12"></h1>
             <h3 className="text-3xl font-bold text-white mb-4">
@@ -259,7 +264,7 @@ setCounters(prev => {
 </div>
 </div>
 </div>
-}
+
 export default ContentStatistics</button>
   </h2>
 </div>

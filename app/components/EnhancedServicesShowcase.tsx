@@ -2,7 +2,7 @@ import React from 'react'
 import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Users, Award, Clock, Globe } from 'lucide-react'
 const EnhancedServicesShowcase: React.FC = () => {
   const services = [
-    {
+
       title: 'AI Solutions',
       description: 'Transform your business with cutting-edge artificial intelligence',
       icon: Brain,
@@ -10,7 +10,7 @@ const EnhancedServicesShowcase: React.FC = () => {
       features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
       stats: '300% ROI'
     },
-    {
+
       title: 'IT Infrastructure',
       description: 'Build and maintain robust technology foundations',
       icon: Cloud,
@@ -18,7 +18,7 @@ const EnhancedServicesShowcase: React.FC = () => {
       features: ['Cloud Migration', 'Server Management', 'Network Security', 'Data Backup'],
       stats: '99.9% Uptime'
     },
-    {
+
       title: 'Cybersecurity',
       description: 'Protect your business with enterprise-grade security',
       icon: Shield,
@@ -26,14 +26,14 @@ const EnhancedServicesShowcase: React.FC = () => {
       features: ['Threat Detection', 'Security Audits', 'Compliance', 'Incident Response'],
       stats: 'Zero Breaches'
     },
-    {
+
       title: 'Automation',
       description: 'Streamline processes with intelligent automation',
       icon: Zap,
       color: 'text-yellow-400',
       features: ['Workflow Automation', 'Process Optimization', 'Smart Scheduling', 'Task Management'],
       stats: '95% Efficiency'
-    }
+
   ]
   return (
     <section className="py-16">
@@ -59,7 +59,8 @@ const EnhancedServicesShowcase: React.FC = () => {
                   <li key={featureIndex} className="flex items-center text-sm text-gray-400">
                     <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                     {feature}
-                  </li>)}
+                  </li>
+              ))}
               </ul>
               <a
                 href="/services"
@@ -74,8 +75,8 @@ const EnhancedServicesShowcase: React.FC = () => {
             View All Services
             <ArrowRight className="w-5 h-5 ml-2" />
           </a>
-</div></h1></p>
+</div>
     </section>
-}
+
 export default EnhancedServicesShowcase</p>
   </h2>

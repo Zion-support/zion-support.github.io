@@ -6,30 +6,30 @@ import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 const FuturisticBackgroundPage: React.FC = () => {
   const features = [
-    {
+
       icon: Brain,
       title: 'AI-Powered Analysis',
       description: 'Advanced AI algorithms provide intelligent insights and recommendations.',
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
-    {
+
       icon: BarChart,
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
     },
-    {
+
       icon: Target,
       title: 'Precision Targeting',
       description: 'Target specific goals and objectives with precision and accuracy.',
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
     },
-    {
+
       icon: TrendingUp,
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
+
   ]
   return (
     <React.Fragment>
@@ -39,7 +39,7 @@ const FuturisticBackgroundPage: React.FC = () => {
       </Helmet>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
+
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
@@ -57,7 +57,7 @@ const FuturisticBackgroundPage: React.FC = () => {
 </div>
 </div></button>
         </section>
-        {/* Features Section */}</section>
+        {</section>
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16"></h1>
@@ -79,10 +79,11 @@ const FuturisticBackgroundPage: React.FC = () => {
                         <li key={idx} className="flex items-center text-sm text-gray-400">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                           {benefit}
-                        </li>)}
+                        </li>
+              ))}
                     </ul>}</h1></p>
 </div>)}</div>
-</div></h1></p>
+</div>
         </section>
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center"></div>
@@ -105,7 +106,7 @@ const FuturisticBackgroundPage: React.FC = () => {
 </div>
       <Footer />
     </React.Fragment>
-}
+
 export default FuturisticBackgroundPage</button>
   </button>
   </p>

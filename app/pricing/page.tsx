@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import { CheckCircle, Star, ArrowRight, Zap } from 'lucide-react'
 const PricingPage: React.FC = () => {
   const plans = [
-    {
+
       name: 'Starter',
       price: '$2,999',
       period: '/month',
@@ -19,7 +19,7 @@ const PricingPage: React.FC = () => {
       ],
       popular: false
     },
-    {
+
       name: 'Professional',
       price: '$7,999',
       period: '/month',
@@ -35,7 +35,7 @@ const PricingPage: React.FC = () => {
       ],
       popular: true
     },
-    {
+
       name: 'Enterprise',
       price: 'Custom',
       period: '',
@@ -51,7 +51,7 @@ const PricingPage: React.FC = () => {
         'SLA Guarantee'
       ],
       popular: false
-    }
+
   ]
   return (
     <React.Fragment>
@@ -68,7 +68,7 @@ const PricingPage: React.FC = () => {
                 Transparent Pricing
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Choose the perfect plan for your business needs. All plans include our core AI and IT services.
-              </p></h1></p>
+              </p>
 </div></div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
@@ -95,7 +95,8 @@ const PricingPage: React.FC = () => {
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
                         {feature}
-                      </li>)}
+                      </li>
+              ))}
                   </ul>
                   <button className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
@@ -154,7 +155,8 @@ const PricingPage: React.FC = () => {
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       {feature}
-                    </li>)}
+                    </li>
+              ))}
                 </ul>
                 <Link
                   to="/contact"
@@ -186,7 +188,7 @@ const PricingPage: React.FC = () => {
 </div>
 </div>
     </React.Fragment>
-}
+
 export default PricingPage</Link>
 </div>
   </button>

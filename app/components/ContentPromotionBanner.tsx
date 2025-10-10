@@ -3,26 +3,26 @@ import React from 'react'
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp } from 'lucide-react'
 const ContentPromotionBanner: React.FC = () => {
   const features = [
-    {
+
       icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency'
     },
-    {
+
       icon: Zap,
       title: 'High Performance',
       description: 'Lightning-fast processing and real-time analytics for optimal results'
     },
-    {
+
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards'
     },
-    {
+
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment with local support and compliance'
-    }
+
   ]
   const benefits = [
     'Advanced AI technology integration',
@@ -35,36 +35,36 @@ const ContentPromotionBanner: React.FC = () => {
     'Proven track record of success'
   ]
   const stats = [
-    {
+
       icon: Users,
       value: '10,000+',
       label: 'Happy Customers',
       description: 'Businesses trust our solutions'
     },
-    {
+
       icon: TrendingUp,
       value: '99.9%',
       label: 'Uptime',
       description: 'Reliable service guarantee'
     },
-    {
+
       icon: Star,
       value: '4.9/5',
       label: 'Rating',
       description: 'Highly rated by clients'
-    }
+
   ]
   return (
 <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4"></div>
       <div className="max-w-7xl mx-auto">
-        {/* Hero Section */}
+
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Transform Your Business with <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">AI Solutions</span>
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Join thousands of businesses that have revolutionized their operations with our cutting-edge AI and IT solutions.
-          </p></h1></div>
+          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
               <Zap className="w-5 h-5" />
@@ -73,7 +73,8 @@ const ContentPromotionBanner: React.FC = () => {
               <ArrowRight className="w-5 h-5" />
               Learn More</button>
 </div>
-</div>/* Stats Section */}
+</div>
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {stats.map((stat, index) => (</div>
             <div key={index} className="text-center">
@@ -93,8 +94,9 @@ const ContentPromotionBanner: React.FC = () => {
                   <li key={index} className="flex items-center">
                     <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" /></span>
                     <span className="text-purple-100">{benefit}</span>
-                  </li>)}
-              </ul></h1></span>
+                  </li>
+              ))}
+              </ul>
 </div></div>
             <div>
               <h3 className="text-2xl font-bold mb-4">Additional Benefits</h3>
@@ -103,15 +105,17 @@ const ContentPromotionBanner: React.FC = () => {
                   <li key={index} className="flex items-center">
                     <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
                     <span className="text-purple-100">{benefit}</span>
-                  </li>)}
-              </ul></h1></span>
+                  </li>
+              ))}
+              </ul>
 </div>
 </div>
           <div className="text-center mt-8">
             <button className="bg-white text-purple-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
               Get Started Today</button>
 </div>
-</div>/* Features Grid */}</div>
+</div>
+          {</div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {features.map((feature, index) => (
             <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 text-center hover:border-purple-400 transition-all duration-300"></div>
@@ -119,14 +123,15 @@ const ContentPromotionBanner: React.FC = () => {
                 <feature.icon className="w-8 h-8 text-white" />
 </div></h1>
               <h3 className="text-lg font-bold text-white mb-3">{feature.title}</h3></p>
-              <p className="text-gray-300 text-sm">{feature.description}</p></h1></p>
-</div>)}</div>/* Benefits Section */}
+              <p className="text-gray-300 text-sm">{feature.description}</p>
+</div>)}</div>
+
         <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 mb-16"></div>
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-white mb-4">Why Choose Our Solutions?</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               We provide comprehensive AI and IT solutions that deliver real results for your business.
-            </p></h1></p>
+            </p>
 </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index) => (</div>
@@ -134,7 +139,8 @@ const ContentPromotionBanner: React.FC = () => {
                 <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" /></span>
                 <span className="text-gray-300">{benefit}</span></span>
 </div>)}</div>
-</div>/* CTA Section */}
+</div>
+
         <div className="text-center"></div>
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-12"></h1>
             <h2 className="text-3xl font-bold text-white mb-4">
@@ -155,7 +161,7 @@ const ContentPromotionBanner: React.FC = () => {
 </div>
 </div>
 </div>
-}
+
 export default ContentPromotionBanner</button>
   </button>
   </button>

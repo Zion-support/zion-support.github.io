@@ -26,26 +26,26 @@ import {
 } from 'lucide-react'
 const CloudInfrastructureManagerPage: React.FC = () => {
   const features = [
-    {
+
       icon: Cloud,
       title: 'Multi-Cloud Management',
       description: 'Manage and monitor your infrastructure across AWS, Azure, Google Cloud, and other platforms from a single dashboard.'
     },
-    {
+
       icon: Settings,
       title: 'Automated Scaling',
       description: 'Intelligent auto-scaling based on demand to optimize costs and performance automatically.'
     },
-    {
+
       icon: BarChart,
       title: 'Cost Optimization',
       description: 'Advanced analytics and recommendations to reduce cloud costs while maintaining performance.'
     },
-    {
+
       icon: Zap,
       title: 'DevOps Integration',
       description: 'Seamless integration with CI/CD pipelines and DevOps tools for streamlined operations.'
-    }
+
   ]
   const benefits = [
     'Centralized cloud infrastructure management',
@@ -65,7 +65,7 @@ const CloudInfrastructureManagerPage: React.FC = () => {
         <meta name="keywords" content="cloud infrastructure manager, cloud management, multi-cloud, cloud optimization, Zion Tech Group" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
+
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -86,7 +86,7 @@ const CloudInfrastructureManagerPage: React.FC = () => {
 </div>
 </div></button>
         </section>
-        {/* Features Section */}</section>
+        {</section>
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></h1>
@@ -94,7 +94,7 @@ const CloudInfrastructureManagerPage: React.FC = () => {
                 Platform Features</p>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our cloud infrastructure manager provides everything you need to optimize your cloud operations.
-              </p></h1></p>
+              </p>
 </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (</div>
@@ -103,9 +103,9 @@ const CloudInfrastructureManagerPage: React.FC = () => {
                     <feature.icon className="h-6 w-6 text-white" />
 </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p></h1></p>
+                  <p className="text-gray-300">{feature.description}</p>
 </div>)}</div>
-</div></h1></p>
+</div>
         </section>
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="max-w-7xl mx-auto">
@@ -114,7 +114,7 @@ const CloudInfrastructureManagerPage: React.FC = () => {
                 Key Benefits</p>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Optimize your cloud infrastructure with our comprehensive management platform.
-              </p></h1></p>
+              </p>
 </div></div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {benefits.map((benefit, index) => (
@@ -122,7 +122,7 @@ const CloudInfrastructureManagerPage: React.FC = () => {
                   <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                   <p className="text-gray-300 text-lg">{benefit}</p></p>
 </div>)}</div>
-</div></h1></p>
+</div>
         </section>
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="max-w-4xl mx-auto text-center">
@@ -146,7 +146,7 @@ const CloudInfrastructureManagerPage: React.FC = () => {
         </section>
 </div>
     </React.Fragment>
-}
+
 export default CloudInfrastructureManagerPage</button>
   </button>
   </h2>

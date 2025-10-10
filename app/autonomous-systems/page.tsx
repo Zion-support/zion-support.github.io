@@ -21,5 +21,5 @@ const AutonomousSystemsPage: React.FC = () => {
 </div>
 </div>
     </React.Fragment>
-}
+
 export default AutonomousSystemsPage

@@ -4,26 +4,26 @@ import { Helmet } from 'react-helmet-async'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 const CloudMigrationServicesPage: React.FC = () => {
   const features = [
-    {
+
 icon: Shield,
       title: 'Secure Cloud Migration',
       description: 'Safe and secure migration of your applications and data to the cloud'
     },
-    {
+
       icon: Zap,
       title: 'Zero Downtime Migration',
       description: 'Seamless migration with minimal to zero downtime for your business'
     },
-    {
+
       icon: Brain,
       title: 'AI-Powered Migration',
       description: 'Intelligent migration planning and execution powered by AI technology'
     },
-    {
+
       icon: Globe,
       title: 'Multi-Cloud Support',
       description: 'Support for migration to AWS, Azure, GCP, and other cloud platforms'
-    }
+
   ]
   const benefits = [
 'Advanced cloud migration technology',
@@ -52,14 +52,14 @@ icon: Shield,
           </p></p>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Our cloud migration solutions deliver unmatched performance, security, and scalability.
-          </p></h1></p>
+          </p>
 </div></div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {features.map((feature, index) => (
             <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
               <feature.icon className="h-12 w-12 text-purple-400 mx-auto mb-4" /></h1>
               <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-              <p className="text-gray-300">{feature.description}</p></h1></p>
+              <p className="text-gray-300">{feature.description}</p>
 </div>)}</div></div>
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-8">
@@ -96,7 +96,7 @@ icon: Shield,
               Key Benefits
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our cloud migration solutions for your business.
-            </p></h1></p>
+            </p>
 </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (</div>
@@ -125,7 +125,7 @@ icon: Shield,
 </div></button>
       </section>
 </div>
-}
+
 export default CloudMigrationServicesPage</button>
   </button>
   </h2>

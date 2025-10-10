@@ -4,26 +4,26 @@ import { Helmet } from 'react-helmet-async'
 import { CheckCircle, ArrowRight, Phone, Mail, Shield, Brain, Globe, Zap } from 'lucide-react'
 const BlockchainPage: React.FC = () => {
   const features = [
-    {
+
       icon: Shield,
       title: 'Secure Blockchain Solutions',
       description: 'Advanced blockchain technology with enterprise-grade security and compliance'
     },
-    {
+
       icon: Zap,
       title: 'High Performance',
       description: 'Lightning-fast blockchain transactions and smart contract execution'
     },
-    {
+
       icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Intelligent blockchain solutions powered by advanced AI technology'
     },
-    {
+
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide blockchain deployment and support for international businesses'
-    }
+
   ]
   const benefits = [
     'Advanced blockchain technology integration',
@@ -52,14 +52,14 @@ const BlockchainPage: React.FC = () => {
           </p></p>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Our blockchain solutions deliver unmatched performance, security, and scalability.
-          </p></h1></p>
+          </p>
 </div></div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {features.map((feature, index) => (
             <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
               <feature.icon className="h-12 w-12 text-purple-400 mx-auto mb-4" /></h1>
               <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-              <p className="text-gray-300">{feature.description}</p></h1></p>
+              <p className="text-gray-300">{feature.description}</p>
 </div>)}</div></div>
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-8">
@@ -71,7 +71,8 @@ const BlockchainPage: React.FC = () => {
                 <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
                 <span className="text-gray-300">{benefit}</span></span>
 </div>)}</div>
-</div>/* Key Benefits */}
+</div>
+
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
             <div className="text-center mb-12"></h1>
@@ -87,28 +88,28 @@ const BlockchainPage: React.FC = () => {
                   <Link className="w-8 h-8 text-blue-600" />
 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Blockchain Experts</h3>
-                <p className="text-gray-600">Certified blockchain developers and architects</p></h1></p>
+                <p className="text-gray-600">Certified blockchain developers and architects</p>
 </div></div>
               <div className="text-center">
                 <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Shield className="w-8 h-8 text-green-600" />
 </div></h1>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Security First</h3></p>
-                <p className="text-gray-600">Comprehensive security audits and best practices</p></h1></p>
+                <p className="text-gray-600">Comprehensive security audits and best practices</p>
 </div></div>
               <div className="text-center">
                 <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Zap className="w-8 h-8 text-purple-600" />
 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Rapid Development</h3>
-                <p className="text-gray-600">Fast delivery with proven development frameworks</p></h1></p>
+                <p className="text-gray-600">Fast delivery with proven development frameworks</p>
 </div></div>
               <div className="text-center">
                 <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Target className="w-8 h-8 text-orange-600" />
 </div></h1>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Custom Solutions</h3></p>
-                <p className="text-gray-600">Tailored blockchain solutions for your specific needs</p></h1></p>
+                <p className="text-gray-600">Tailored blockchain solutions for your specific needs</p>
 </div>
 </div>
 </div></h1>
@@ -130,7 +131,7 @@ const BlockchainPage: React.FC = () => {
                       <div className="text-4xl mb-4">{service.icon}</div></h1>
                       <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3></p>
                       <p className="text-gray-600 mb-4">{service.description}</p>
-                      <div className="mb-4"></h1></p></div>
+                      <div className="mb-4"></h1>
                         <div className="flex items-center justify-between mb-2"></span>
                           <span className="text-2xl font-bold text-blue-600">{service.price}</span>
                           <span className="text-sm text-gray-500">Market: {service.marketPrice}</span></span>
@@ -144,7 +145,8 @@ const BlockchainPage: React.FC = () => {
                             <li key={featureIndex} className="flex items-center text-sm text-gray-600">
                               <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                               {feature}
-                            </li>)}
+                            </li>
+              ))}
                         </ul>
 </div>
                       <div className="mb-4">
@@ -163,7 +165,8 @@ const BlockchainPage: React.FC = () => {
                             <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
                               <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" />
                               {benefit}
-                            </li>)}
+                            </li>
+              ))}
                         </ul>
 </div>
                       <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
@@ -171,7 +174,7 @@ const BlockchainPage: React.FC = () => {
 </div>)}</div>
 </div></button>
           </section>)}
-        {/* Blockchain Capabilities Showcase */}
+
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
@@ -184,35 +187,35 @@ const BlockchainPage: React.FC = () => {
               <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg">
                 <Link className="w-12 h-12 text-blue-600 mx-auto mb-4" /></h1>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Smart Contracts</h3></p>
-                <p className="text-gray-600">Automated contract execution with transparency and security</p></h1></p>
+                <p className="text-gray-600">Automated contract execution with transparency and security</p>
 </div></div>
               <div className="text-center p-6 bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg">
                 <Shield className="w-12 h-12 text-green-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">DeFi Protocols</h3>
-                <p className="text-gray-600">Decentralized finance solutions for modern financial services</p></h1></p>
+                <p className="text-gray-600">Decentralized finance solutions for modern financial services</p>
 </div>
               <div className="text-center p-6 bg-gradient-to-br from-purple-50 to-violet-100 rounded-lg">
                 <Cpu className="w-12 h-12 text-purple-600 mx-auto mb-4" /></h1>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">NFT Marketplaces</h3></p>
-                <p className="text-gray-600">Digital asset trading and ownership verification platforms</p></h1></p>
+                <p className="text-gray-600">Digital asset trading and ownership verification platforms</p>
 </div></div>
               <div className="text-center p-6 bg-gradient-to-br from-orange-50 to-amber-100 rounded-lg">
                 <Target className="w-12 h-12 text-orange-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Enterprise Solutions</h3>
-                <p className="text-gray-600">Private and consortium blockchains for business applications</p></h1></p>
+                <p className="text-gray-600">Private and consortium blockchains for business applications</p>
 </div>
               <div className="text-center p-6 bg-gradient-to-br from-pink-50 to-rose-100 rounded-lg">
                 <Sparkles className="w-12 h-12 text-pink-600 mx-auto mb-4" /></h1>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Web3 Applications</h3></p>
-                <p className="text-gray-600">Decentralized applications with user-friendly interfaces</p></h1></p>
+                <p className="text-gray-600">Decentralized applications with user-friendly interfaces</p>
 </div></div>
               <div className="text-center p-6 bg-gradient-to-br from-indigo-50 to-blue-100 rounded-lg">
                 <BarChart className="w-12 h-12 text-indigo-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Blockchain Analytics</h3>
-                <p className="text-gray-600">Comprehensive data analysis and visualization tools</p></h1></p>
+                <p className="text-gray-600">Comprehensive data analysis and visualization tools</p>
 </div>
 </div>
-</div></h1></p>
+</div>
         </section>
         <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></h1>
@@ -220,7 +223,7 @@ const BlockchainPage: React.FC = () => {
               Ready to Transform with Blockchain?
             </h2></p>
             <p className="text-xl mb-8 text-blue-100">
-              Contact our blockchain experts for a free consultation and custom blockchain strategy development</h1></p></div>
+              Contact our blockchain experts for a free consultation and custom blockchain strategy development</h1>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="tel:+13024640950"
@@ -233,11 +236,11 @@ const BlockchainPage: React.FC = () => {
             <div className="mt-8 text-sm text-blue-200">
               <p>📍 364 E Main St STE 1008, Middletown DE 19709</p></p>
 </div>
-</div></h1></p>
+</div>
         </section>
 </div>
 </div>
-}
+
 export default BlockchainPage</a>
   </a>
   </p>

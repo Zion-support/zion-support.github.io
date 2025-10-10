@@ -26,26 +26,26 @@ import {
 } from 'lucide-react'
 const SecurityMonitoringSuitePage: React.FC = () => {
   const features = [
-    {
+
       icon: Monitor,
       title: 'Real-time Dashboard',
       description: 'Comprehensive security monitoring dashboard with live threat detection and incident tracking.'
     },
-    {
+
       icon: AlertTriangle,
       title: 'Advanced Alerts',
       description: 'Intelligent alerting system that notifies you of security threats and anomalies instantly.'
     },
-    {
+
       icon: BarChart,
       title: 'Security Analytics',
       description: 'Detailed security reports and analytics to help you understand and improve your security posture.'
     },
-    {
+
       icon: Zap,
       title: 'Automated Response',
       description: 'Automated incident response and threat mitigation to protect your systems 24/7.'
-    }
+
   ]
   const benefits = [
     '24/7 security monitoring and protection',
@@ -65,7 +65,7 @@ const SecurityMonitoringSuitePage: React.FC = () => {
         <meta name="keywords" content="security monitoring suite, cybersecurity platform, threat detection, security alerts, Zion Tech Group" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
+
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -86,7 +86,7 @@ const SecurityMonitoringSuitePage: React.FC = () => {
 </div>
 </div></button>
         </section>
-        {/* Features Section */}</section>
+        {</section>
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></h1>
@@ -94,7 +94,7 @@ const SecurityMonitoringSuitePage: React.FC = () => {
                 Platform Features</p>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our security monitoring suite provides everything you need to protect your business from cyber threats.
-              </p></h1></p>
+              </p>
 </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (</div>
@@ -103,9 +103,9 @@ const SecurityMonitoringSuitePage: React.FC = () => {
                     <feature.icon className="h-6 w-6 text-white" />
 </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p></h1></p>
+                  <p className="text-gray-300">{feature.description}</p>
 </div>)}</div>
-</div></h1></p>
+</div>
         </section>
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="max-w-7xl mx-auto">
@@ -115,7 +115,7 @@ const SecurityMonitoringSuitePage: React.FC = () => {
               </h2></p>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Experience comprehensive security protection with our all-in-one monitoring platform.
-              </p></h1></p>
+              </p>
 </div></div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {benefits.map((benefit, index) => (
@@ -123,7 +123,7 @@ const SecurityMonitoringSuitePage: React.FC = () => {
                   <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                   <p className="text-gray-300 text-lg">{benefit}</p></p>
 </div>)}</div>
-</div></h1></p>
+</div>
         </section>
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="max-w-4xl mx-auto text-center">
@@ -147,7 +147,7 @@ const SecurityMonitoringSuitePage: React.FC = () => {
         </section>
 </div>
     </React.Fragment>
-}
+
 export default SecurityMonitoringSuitePage</button>
   </button>
   </h2>

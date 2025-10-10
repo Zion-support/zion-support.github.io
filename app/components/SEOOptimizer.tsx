@@ -8,7 +8,7 @@ interface SEOOptimizerProps {
   canonicalUrl?: string
   ogImage?: string
   structuredData?: Record<string, unknown>
-}
+
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
@@ -37,7 +37,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     // Add structured data
     if (structuredData) {
       addStructuredData(structuredData)
-    }
+
     // Add breadcrumb structured data
     addBreadcrumbStructuredData()
     // Add organization structured data
@@ -49,18 +49,18 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       meta = document.createElement('meta')
       meta.setAttribute(attribute, name)
       document.head.appendChild(meta)
-    }
+
     meta.setAttribute('content', content)
-  }
+
   const updateCanonicalUrl = (url: string) => {
     let canonical = document.querySelector('link[rel="canonical"]')
     if (!canonical) {
       canonical = document.createElement('link')
       canonical.setAttribute('rel', 'canonical')
       document.head.appendChild(canonical)
-    }
+
     canonical.setAttribute('href', url)
-  }
+
   const addStructuredData = (data: Record<string, unknown>) => {
     const script = document.createElement('script')
     script.type = 'application/ld+json'
@@ -70,22 +70,22 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     const existing = document.getElementById('structured-data')
     if (existing) {
       existing.remove()
-    }
+
     document.head.appendChild(script)
-  }
+
   const addBreadcrumbStructuredData = () => {
     const breadcrumbData = {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       'itemListElement': [
-        {
+
           '@type': 'ListItem',
           'position': 1,
           'name': 'Home',
           'item': 'https://ziontechgroup.com'
-        }
+
       ]
-    }
+
     const script = document.createElement('script')
     script.type = 'application/ld+json'
     script.textContent = JSON.stringify(breadcrumbData)
@@ -94,9 +94,9 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     const existing = document.getElementById('breadcrumb-structured-data')
     if (existing) {
       existing.remove()
-    }
+
     document.head.appendChild(script)
-  }
+
   const addOrganizationStructuredData = () => {
     const organizationData = {
       '@context': 'https://schema.org',
@@ -127,7 +127,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
         'https://twitter.com/ziontechgroup',
         'https://linkedin.com/company/ziontechgroup'
       ]
-    }
+
     const script = document.createElement('script')
     script.type = 'application/ld+json'
     script.textContent = JSON.stringify(organizationData)
@@ -136,9 +136,9 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     const existing = document.getElementById('organization-structured-data')
     if (existing) {
       existing.remove()
-    }
+
     document.head.appendChild(script)
-  }
+
   return (
     <Head>
       <title>{title}</title>
@@ -153,5 +153,5 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       <meta name="twitter:image" content={ogImage} />
       <link rel="canonical" href={canonicalUrl} />
     </Head>
-}
+
 export default SEOOptimizer</SEOOptimizerProps>

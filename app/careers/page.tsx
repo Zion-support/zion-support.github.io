@@ -15,10 +15,10 @@ interface JobPosition {
   benefits?: string[]
   posted: string
   featured: boolean
-}
+
 const CareersPage: React.FC = () => {
   const openPositions: JobPosition[] = [
-    {
+
       id: '1',
       title: 'Senior AI Engineer',
       department: 'AI Solutions',
@@ -42,7 +42,7 @@ description: 'Lead the development of cutting-edge AI solutions and machine lear
       posted: '2 days ago',
       featured: true
     },
-    {
+
       id: '2',
       title: 'Cloud Architect',
       department: 'Cloud Services',
@@ -51,7 +51,7 @@ description: 'Lead the development of cutting-edge AI solutions and machine lear
       experience: '7+ years',
       description: 'Design and implement scalable cloud infrastructure solutions for enterprise clients.',
       requirements: ['AWS, Azure, GCP', '7+ years cloud experience', 'Architecture certifications']
-    }
+
   ]
   const benefits = [
     'Competitive salary and equity',
@@ -66,52 +66,52 @@ description: 'Lead the development of cutting-edge AI solutions and machine lear
     'Mental health support'
   ]
   const values = [
-    {
+
       icon: Lightbulb,
       title: 'Innovation',
       description: 'We push the boundaries of what\'s possible with technology',
       color: 'text-yellow-400'
     },
-    {
+
       icon: Users,
       title: 'Collaboration',
       description: 'We work together to achieve extraordinary results',
       color: 'text-blue-400'
     },
-    {
+
       icon: Target,
       title: 'Excellence',
       description: 'We strive for the highest quality in everything we do',
       color: 'text-green-400'
     },
-    {
+
       icon: Heart,
       title: 'Integrity',
       description: 'We build trust through transparency and honesty',
       color: 'text-red-400'
-    }
+
   ]
   const culture = [
-    {
+
       stat: '98%',
       label: 'Employee Satisfaction',
       description: 'Our team loves working here'
     },
-    {
+
       stat: '50+',
       label: 'Team Members',
       description: 'Growing team of experts'
     },
-    {
+
       stat: '15+',
       label: 'Countries',
       description: 'Global remote team'
     },
-    {
+
       stat: '4.9/5',
       label: 'Glassdoor Rating',
       description: 'Highly rated workplace'
-    }
+
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -128,18 +128,18 @@ description: 'Lead the development of cutting-edge AI solutions and machine lear
             Join Our Team
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Work on cutting-edge AI and IT solutions that transform businesses worldwide.
-          </p></h1></p>
-</div></h1></p>
+          </p>
+</div>
       </section>
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto"></h1>
-          <h2 className="text-3xl font-bold text-white mb-8 text-center">Open Positions</h2></h1></div>
+          <h2 className="text-3xl font-bold text-white mb-8 text-center">Open Positions</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
             {openPositions.map((position, index) => (
               <div
                 key={index}
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
-                <h3 className="text-xl font-semibold text-white mb-2">{position.title}</h3></h1></div>
+                <h3 className="text-xl font-semibold text-white mb-2">{position.title}</h3>
                 <div className="flex flex-wrap gap-4 text-sm text-gray-300 mb-4">
                   <div className="flex items-center space-x-1">
                     <Briefcase className="w-4 h-4" />
@@ -154,7 +154,7 @@ description: 'Lead the development of cutting-edge AI solutions and machine lear
                     <span>{position.type}</span></span>
 </div></div>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
+
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto text-center"></h1>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -162,7 +162,7 @@ description: 'Lead the development of cutting-edge AI solutions and machine lear
             </h1></p>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
               Be part of the future of technology. Join our team of innovators, creators, and problem-solvers who are building the next generation of AI and IT solutions.
-            </p></h1></div>
+            </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               {culture.map((item, index) => (
                 <div key={index} className="text-center"></div>
@@ -178,7 +178,7 @@ description: 'Lead the development of cutting-edge AI solutions and machine lear
               <h2 className="text-3xl font-bold text-white mb-6">Our Values</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 These core values guide everything we do and shape our company culture.
-              </p></h1></p>
+              </p>
 </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {values.map((value, index) => (</div>
@@ -187,9 +187,9 @@ description: 'Lead the development of cutting-edge AI solutions and machine lear
                     <value.icon className="w-8 h-8" />
 </div></h1>
                   <h3 className={`text-xl font-bold ${value.color} mb-4`}>{value.title}</h3></p>
-                  <p className="text-gray-300">{value.description}</p></h1></p>
+                  <p className="text-gray-300">{value.description}</p>
 </div>)}</div>
-</div></h1></p>
+</div>
         </section>
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="max-w-7xl mx-auto">
@@ -197,7 +197,7 @@ description: 'Lead the development of cutting-edge AI solutions and machine lear
               <h2 className="text-3xl font-bold text-white mb-6">Benefits & Perks</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 We offer comprehensive benefits and perks to support our team members' well-being and growth.
-              </p></h1></p>
+              </p>
 </div></div>
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -215,7 +215,7 @@ description: 'Lead the development of cutting-edge AI solutions and machine lear
               <h2 className="text-3xl font-bold text-white mb-6">Open Positions</h2></p>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Explore our current job openings and find the perfect role for you.
-              </p></h1></p>
+              </p>
 </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {openPositions.map((position) => (</div>
@@ -235,13 +235,13 @@ description: 'Lead the development of cutting-edge AI solutions and machine lear
                       <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">
                         {position.title}
                       </h3>
-                      <p className="text-gray-300">{position.department}</p></h1></p>
+                      <p className="text-gray-300">{position.department}</p>
 </div>
                     <span className="px-3 py-1 bg-purple-500/20 text-purple-400 text-sm rounded-full">
                       {position.type}
                     </span></span>
 </div></p>
-                  <p className="text-gray-300 mb-6">{position.description}</p></p></div>
+                  <p className="text-gray-300 mb-6">{position.description}</p>
                   <div className="flex items-center gap-4 mb-6 text-sm text-gray-400">
                     <div className="flex items-center gap-1">
                       <MapPin className="w-4 h-4" /></span>
@@ -259,7 +259,7 @@ description: 'Lead the development of cutting-edge AI solutions and machine lear
                   <button className="w-full bg-gradient-to-r from-purple-500 to-blue-500 text-white py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300">
                     Apply Now</button>
 </div>
-<p className="text-gray-300 mb-4">{position.description}</p></p></div>
+<p className="text-gray-300 mb-4">{position.description}</p>
                 <div className="mb-4">
                   <h4 className="text-sm font-semibold text-white mb-2">Requirements:</h4>
                   <ul className="text-sm text-gray-300 space-y-1">
@@ -267,7 +267,8 @@ description: 'Lead the development of cutting-edge AI solutions and machine lear
                       <li key={reqIndex} className="flex items-center space-x-2">
                         <span className="w-1 h-1 bg-purple-400 rounded-full"></span></span>
                         <span>{req}</span>
-                      </li>)}
+                      </li>
+              ))}
                   </ul></span>
 </div></button>
                 <button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
@@ -308,9 +309,9 @@ description: 'Lead the development of cutting-edge AI solutions and machine lear
                   <value.icon className="w-8 h-8 text-white" />
 </div></h1>
                 <h3 className="text-xl font-semibold text-white mb-2">{value.title}</h3>
-                <p className="text-gray-300">{value.description}</p></h1></p>
+                <p className="text-gray-300">{value.description}</p>
 </div>)}</div>
-</div></h1></p>
+</div>
       </section>
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="max-w-4xl mx-auto text-center">
@@ -329,10 +330,10 @@ description: 'Lead the development of cutting-edge AI solutions and machine lear
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
 </div>
-</div></h1></span>
+</div>
       </section>
 </div>
-}
+
 export default CareersPage</Link>
   </button>
   </button>

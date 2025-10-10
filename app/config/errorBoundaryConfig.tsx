@@ -39,8 +39,7 @@ export interface ErrorBoundaryConfig {
     default: React.ComponentType<{ error: Error resetError: () => void }>
     network: React.ComponentType<{ error: Error resetError: () => void }>
     notFound: React.ComponentType<{ error: Error resetError: () => void }>
-  }
-}
+
 /**
  * Default error messages
  */
@@ -51,7 +50,7 @@ const DEFAULT_ERROR_MESSAGES = {
   timeout: 'Request timed out. Please try again.',
   serverError: 'Server error occurred. Please try again later.',
   validation: 'Validation error. Please check your input.',
-}
+
 /**
  * Get error boundary configuration based on environment
  */
@@ -68,8 +67,7 @@ export function getErrorBoundaryConfig(): ErrorBoundaryConfig {return {
       network: NetworkErrorFallback,
       notFound: NotFoundFallback,
     },
-  }
-}
+
 /**
  * Default error fallback component
  */
@@ -97,7 +95,7 @@ function DefaultErrorFallback({ error, resetError }: { error: Error resetError: 
         <p className="mt-2 text-center text-gray-600">
           {error.message || 'An unexpected error occurred'}
         </p>process.env['NODE_ENV'] === 'development' && (
-          <pre className="mt-4 p-4 bg-gray-100 rounded text-xs overflow-auto">{error.stack}</pre>}</h1></p></div>
+          <pre className="mt-4 p-4 bg-gray-100 rounded text-xs overflow-auto">{error.stack}</pre>}</h1>
         <div className="mt-6 flex gap-4"></div>
           <button
             onClick={resetError}
@@ -110,7 +108,7 @@ function DefaultErrorFallback({ error, resetError }: { error: Error resetError: 
 </div>
 </div>
 </div>
-}
+
 /**
  * Network error fallback component
  */
@@ -145,7 +143,7 @@ function NetworkErrorFallback({ resetError }: { error: Error resetError: () => v
 </div>
 </div>
 </div>
-}
+
 /**
  * Not found error fallback component
  */
@@ -170,28 +168,28 @@ function NotFoundFallback(): JSX.Element {
 </div>
 </div>
 </div>
-}
+
 /**
  * Get error type from error object
  */
 export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES {
   if (error.message.includes('Network') || error.message.includes('fetch')) {
     return 'network'
-  }
+
   if (error.message.includes('404') || error.message.includes('not found')) {
     return 'notFound'
-  }
+
   if (error.message.includes('timeout')) {
     return 'timeout'
-  }
+
   if (error.message.includes('500') || error.message.includes('server')) {
     return 'serverError'
-  }
+
   if (error.message.includes('validation')) {
     return 'validation'
-  }
+
   return 'default'
-}
+
 /**
  * Format error for logging
  */
@@ -204,8 +202,7 @@ export function formatErrorForLogging(error: Error): Record<string, unknown> {
     timestamp: new Date().toISOString(),
     userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',
     url: typeof window !== 'undefined' ? window.location.href : 'unknown',
-  }
-}
+
 export default getErrorBoundaryConfig</button>
   </button>
   </button>

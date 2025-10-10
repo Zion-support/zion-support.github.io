@@ -4,7 +4,7 @@ import React from 'react'
 import React, { useEffect, useState } from 'react'
 interface UserExperienceEnhancerProps {
   children: React.ReactNode
-}
+
 const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ children }) => {
   const [loadingStates, setLoadingStates] = useState<Record<string, boolean>>({})
   useEffect(() => {
@@ -28,10 +28,10 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ childre
         *:focus {
           outline: 2px solid #06b6d4
           outline-offset: 2px,
-        }
+
       `
       document.head.appendChild(style)
-    }
+
     enhanceUX()
   }, [])
   return <React.Fragment>{children}</React.Fragment>

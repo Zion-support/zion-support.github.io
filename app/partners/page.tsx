@@ -12,10 +12,10 @@ interface Partner {
   category: string
   website?: string
   tier: 'strategic' | 'preferred' | 'certified'
-}
+
 const PartnersPage: React.FC = () => {
   const partners: Partner[] = [
-    {
+
       name: 'Microsoft',
       logo: '/images/partners/microsoft.png',
       description: 'Strategic partnership for Azure cloud solutions and AI services',
@@ -23,7 +23,7 @@ const PartnersPage: React.FC = () => {
       website: 'https://microsoft.com',
       tier: 'strategic'
     },
-    {
+
       name: 'Amazon Web Services',
       logo: '/images/partners/aws.png',
       description: 'Leading cloud infrastructure and machine learning platform provider',
@@ -31,18 +31,18 @@ const PartnersPage: React.FC = () => {
       website: 'https://aws.amazon.com',
       tier: 'strategic'
     },
-    {
+
       name: 'Google Cloud',
 logo: '/api/placeholder/200/100',
       description: 'Advanced cloud computing and AI platform solutions',
       category: 'Cloud & AI'
     },
-    {
+
       name: 'IBM',
       logo: '/api/placeholder/200/100',
       description: 'Enterprise AI and hybrid cloud solutions',
       category: 'Enterprise AI'
-    }
+
   ]
   const benefits = [
     'Access to cutting-edge technology',
@@ -57,7 +57,7 @@ logo: '/api/placeholder/200/100',
       website: 'https://cloud.google.com',
       tier: 'strategic'
     },
-    {
+
       name: 'IBM',
       logo: '/images/partners/ibm.png',
       description: 'Enterprise AI solutions and hybrid cloud platform',
@@ -65,7 +65,7 @@ logo: '/api/placeholder/200/100',
       website: 'https://ibm.com',
       tier: 'preferred'
     },
-    {
+
       name: 'Salesforce',
       logo: '/images/partners/salesforce.png',
       description: 'Customer relationship management and business automation',
@@ -73,7 +73,7 @@ logo: '/api/placeholder/200/100',
       website: 'https://salesforce.com',
       tier: 'preferred'
     },
-    {
+
       name: 'Oracle',
       logo: '/images/partners/oracle.png',
       description: 'Database solutions and enterprise applications',
@@ -81,7 +81,7 @@ logo: '/api/placeholder/200/100',
       website: 'https://oracle.com',
       tier: 'preferred'
     },
-    {
+
       name: 'ServiceNow',
       logo: '/images/partners/servicenow.png',
       description: 'IT service management and workflow automation',
@@ -89,14 +89,14 @@ logo: '/api/placeholder/200/100',
       website: 'https://servicenow.com',
       tier: 'certified'
     },
-    {
+
       name: 'Splunk',
       logo: '/images/partners/splunk.png',
       description: 'Data analytics and security monitoring platform',
       category: 'Analytics & Security',
       website: 'https://splunk.com',
       tier: 'certified'
-    }
+
   ]
   const benefits = [
     'Access to cutting-edge technology platforms',
@@ -111,7 +111,7 @@ logo: '/api/placeholder/200/100',
     'Dedicated partner success managers'
   ]
   const partnershipTiers = [
-    {
+
       name: 'Strategic Partners',
       description: 'Deep integration and joint development',
       icon: Award,
@@ -119,7 +119,7 @@ logo: '/api/placeholder/200/100',
       bgColor: 'bg-yellow-400/10',
       borderColor: 'border-yellow-400/30'
     },
-    {
+
       name: 'Preferred Partners',
       description: 'Certified solutions and priority support',
       icon: Handshake,
@@ -127,18 +127,18 @@ logo: '/api/placeholder/200/100',
       bgColor: 'bg-blue-400/10',
       borderColor: 'border-blue-400/30'
     },
-    {
+
       name: 'Certified Partners',
       description: 'Authorized implementation and support',
       icon: CheckCircle,
       color: 'text-green-400',
       bgColor: 'bg-green-400/10',
       borderColor: 'border-green-400/30'
-    }
+
   ]
   const getTierInfo = (tier: string) => {
     return partnershipTiers.find(t => t.name.toLowerCase().includes(tier)) || partnershipTiers[2]
-  }
+
   return (
     <React.Fragment>
       <Helmet>
@@ -148,15 +148,15 @@ logo: '/api/placeholder/200/100',
       </Helmet>
       <Navigation />
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
+
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Our Partners
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               We work with industry leaders to deliver cutting-edge AI and IT solutions.
-            </p></h1></p>
-</div></h1></p>
+            </p>
+</div>
         </section>
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="max-w-7xl mx-auto">
@@ -174,9 +174,9 @@ logo: '/api/placeholder/200/100',
         <title>Partners - Zion Tech Group | Strategic Technology Partnerships</title>
         <meta name="description" content="Explore our strategic partnerships with leading technology companies. We work with Microsoft, AWS, Google Cloud, and more to deliver cutting-edge solutions." />
         <meta name="keywords" content="technology partners, strategic partnerships, Microsoft, AWS, Google Cloud, IBM, enterprise solutions" />
-      </Helmet></h1></div>
+      </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
+
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -184,7 +184,7 @@ logo: '/api/placeholder/200/100',
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
               We partner with industry leaders to deliver cutting-edge AI and IT solutions. Our strategic alliances ensure you get the best technology available.
-            </p></h1></div>
+            </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
               <div className="text-center"></div>
                 <div className="text-3xl font-bold text-white mb-2">50+</div>
@@ -207,7 +207,7 @@ logo: '/api/placeholder/200/100',
               <h2 className="text-3xl font-bold text-white mb-6">Partnership Tiers</h2></p>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our partnerships are structured to provide maximum value and support for our clients.
-              </p></h1></p>
+              </p>
 </div></div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {partnershipTiers.map((tier, index) => (
@@ -216,9 +216,9 @@ logo: '/api/placeholder/200/100',
                     <tier.icon className={`w-8 h-8 ${tier.color}`} />
 </div>
                   <h3 className={`text-2xl font-bold ${tier.color} mb-4`}>{tier.name}</h3>
-                  <p className="text-gray-300">{tier.description}</p></h1></p>
+                  <p className="text-gray-300">{tier.description}</p>
 </div>)}</div>
-</div></h1></p>
+</div>
         </section>
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto"></div>
@@ -226,7 +226,7 @@ logo: '/api/placeholder/200/100',
               <h2 className="text-3xl font-bold text-white mb-6">Our Technology Partners</h2></p>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 We work with the world's leading technology companies to deliver comprehensive solutions.
-              </p></h1></p>
+              </p>
 </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {partners.map((partner, index) => {
@@ -253,7 +253,7 @@ logo: '/api/placeholder/200/100',
                         </a>}</div>
 </div>
               })}</div>
-</div></h1></p>
+</div>
         </section>
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto"></div>
@@ -261,14 +261,14 @@ logo: '/api/placeholder/200/100',
               <h2 className="text-3xl font-bold text-white mb-6">Partnership Benefits</h2></p>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our strategic partnerships provide significant advantages for your business.
-              </p></h1></p>
+              </p>
 </div>
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20"></div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {benefits.map((benefit, index) => (
                   <div key={index} className="flex items-start space-x-3">
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" /></span>
-                    <span className="text-gray-300">{benefit}</span></span></div>
+                    <span className="text-gray-300">{benefit}</span></span>
             <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
               <h2 className="text-2xl font-bold text-white mb-6 text-center">Partnership Benefits</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -292,7 +292,7 @@ logo: '/api/placeholder/200/100',
       </main>
       <Footer />
     </React.Fragment>
-}
+
 export default PartnersPage</button>
   </h2>
 </div>

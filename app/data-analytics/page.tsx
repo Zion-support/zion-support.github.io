@@ -25,26 +25,26 @@ import {
 } from 'lucide-react'
 const DataAnalyticsPage: React.FC = () => {
   const features = [
-    {
+
       icon: BarChart,
       title: 'Advanced Data Visualization',
       description: 'Transform complex data into clear, actionable insights with interactive dashboards and reports.'
     },
-    {
+
       icon: Brain,
       title: 'AI-Powered Analytics',
       description: 'Leverage machine learning and artificial intelligence to uncover hidden patterns and trends.'
     },
-    {
+
       icon: Database,
       title: 'Data Integration',
       description: 'Connect and analyze data from multiple sources to get a complete picture of your business.'
     },
-    {
+
       icon: TrendingUp,
       title: 'Predictive Analytics',
       description: 'Forecast future trends and make data-driven decisions with predictive modeling.'
-    }
+
   ]
   const benefits = [
     'Make data-driven business decisions',
@@ -64,7 +64,7 @@ const DataAnalyticsPage: React.FC = () => {
         <meta name="keywords" content="data analytics, business intelligence, data visualization, AI analytics, Zion Tech Group" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
+
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -85,7 +85,7 @@ const DataAnalyticsPage: React.FC = () => {
 </div>
 </div></button>
         </section>
-        {/* Features Section */}</section>
+        {</section>
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></h1>
@@ -93,7 +93,7 @@ const DataAnalyticsPage: React.FC = () => {
                 Our Analytics Solutions</p>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 We provide comprehensive data analytics services to help you unlock the power of your data.
-              </p></h1></p>
+              </p>
 </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (</div>
@@ -102,9 +102,9 @@ const DataAnalyticsPage: React.FC = () => {
                     <feature.icon className="h-6 w-6 text-white" />
 </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p></h1></p>
+                  <p className="text-gray-300">{feature.description}</p>
 </div>)}</div>
-</div></h1></p>
+</div>
         </section>
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="max-w-7xl mx-auto">
@@ -113,7 +113,7 @@ const DataAnalyticsPage: React.FC = () => {
                 Key Benefits</p>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Drive business success with our comprehensive data analytics services.
-              </p></h1></p>
+              </p>
 </div></div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {benefits.map((benefit, index) => (
@@ -121,7 +121,7 @@ const DataAnalyticsPage: React.FC = () => {
                   <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                   <p className="text-gray-300 text-lg">{benefit}</p></p>
 </div>)}</div>
-</div></h1></p>
+</div>
         </section>
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="max-w-4xl mx-auto text-center">
@@ -145,7 +145,7 @@ const DataAnalyticsPage: React.FC = () => {
         </section>
 </div>
     </React.Fragment>
-}
+
 export default DataAnalyticsPage</button>
   </button>
   </h2>

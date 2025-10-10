@@ -6,42 +6,42 @@ import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 const AiAnalyticsPage: React.FC = () => {
   const features = [
-    {
+
       icon: Brain,
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
-    {
+
       icon: BarChart,
 title: 'Real-Time Dashboards',
       description: 'Monitor your business metrics in real-time with customizable, interactive dashboards.',
       benefits: ['Live data updates', 'Custom widgets', 'Interactive charts', 'Mobile responsive']
     },
-    {
+
       icon: TrendingUp,
       title: 'Performance Optimization',
       description: 'Optimize your business performance with AI-driven recommendations and insights.',
       benefits: ['Performance tracking', 'Optimization suggestions', 'ROI analysis', 'Growth strategies']
     },
-    {
+
       icon: Zap,
       title: 'Fast Processing',
       description: 'Process large datasets in seconds with our optimized AI analytics engine.',
       benefits: ['High-speed processing', 'Scalable infrastructure', 'Real-time analysis', 'Batch processing']
     },
-    {
+
       icon: Eye,
       title: 'Visual Analytics',
       description: 'Transform complex data into intuitive visualizations and interactive charts.',
       benefits: ['Interactive charts', 'Custom visualizations', 'Data storytelling', 'Export capabilities']
     },
-    {
+
       icon: Shield,
       title: 'Data Security',
       description: 'Enterprise-grade security to protect your sensitive business data and analytics.',
       benefits: ['End-to-end encryption', 'Access controls', 'Audit trails', 'Compliance support']
-    }
+
   ]
   const benefits = [
     'Increase efficiency by up to 50%',
@@ -51,36 +51,36 @@ title: 'Real-Time Dashboards',
     'Gain competitive advantage with advanced technology'
   ]
   const useCases = [
-    {
+
       title: 'Business Intelligence',
       description: 'Transform raw data into actionable business insights',
       icon: '📊'
     },
-    {
+
       title: 'Marketing Analytics',
       description: 'Optimize marketing campaigns with AI-powered insights',
       icon: '📈'
     },
-    {
+
       title: 'Financial Analysis',
       description: 'Monitor financial performance and identify trends',
       icon: '💰'
     },
-    {
+
       title: 'Customer Analytics',
       description: 'Understand customer behavior and preferences',
       icon: '👥'
     },
-    {
+
       title: 'Operations Monitoring',
       description: 'Track operational metrics and optimize processes',
       icon: '⚙️'
     },
-    {
+
       title: 'Risk Management',
       description: 'Identify and mitigate business risks proactively',
       icon: '🛡️'
-    }
+
   ]
   return (
     <React.Fragment>
@@ -91,7 +91,7 @@ title: 'Real-Time Dashboards',
       </Helmet>
       <Navigation />
       <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-        {/* Hero Section */}
+
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center">
@@ -109,7 +109,7 @@ title: 'Real-Time Dashboards',
 </div>
 </div></button>
         </section>
-        {/* Features Section */}</section>
+        {</section>
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16"></h1>
@@ -117,7 +117,7 @@ title: 'Real-Time Dashboards',
                 Powerful AI Analytics Features</p>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Discover how our AI analytics platform can revolutionize your business intelligence.
-              </p></h1></p>
+              </p>
 </div></div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
@@ -132,10 +132,11 @@ title: 'Real-Time Dashboards',
                       <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
                         <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
                         {benefit}
-                      </li>)}
+                      </li>
+              ))}
                   </ul></p>
 </div>)}</div>
-</div></h1></p>
+</div>
         </section>
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-600">
           <div className="max-w-4xl mx-auto text-center"></h1>
@@ -152,7 +153,7 @@ title: 'Real-Time Dashboards',
       </main>
       <Footer />
     </React.Fragment>
-}
+
 export default AiAnalyticsPage</button>
   </h2>
   </button>

@@ -21,9 +21,9 @@ import React from 'react'
       </section>
 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3></p>
-                <p className="text-gray-300">{feature.description}</p></h1></p>
+                <p className="text-gray-300">{feature.description}</p>
 </div>)}</div>
-</div></h1></p>
+</div>
       </section>
 </div>)}</div>
 </div>
@@ -49,6 +49,6 @@ import React from 'react'
 </div></button>
       </section>
 </div>
-}
+
 export default PagePage</button>
   </button>

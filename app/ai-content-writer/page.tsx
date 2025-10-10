@@ -6,21 +6,21 @@ import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight } from 'lucide-react'
 const AIContentWriterPage: React.FC = () => {
   const features = [
-    {
+
       title: 'AI Writing Assistant',
       description: 'Generate high-quality content using advanced AI algorithms',
       benefits: ['Automated writing', 'Content optimization', 'Multi-language support']
     },
-    {
+
       title: 'Content Templates',
       description: 'Professional templates for various content types',
       benefits: ['Blog posts', 'Social media', 'Marketing copy']
     },
-    {
+
       title: 'SEO Optimization',
       description: 'Optimize content for search engines automatically',
       benefits: ['Keyword research', 'SEO scoring', 'Content suggestions']
-    }
+
   ]
   const benefits = [
     'Increase content production by 10x',
@@ -38,7 +38,7 @@ const AIContentWriterPage: React.FC = () => {
         <meta name="keywords" content="ai content writer, AI solutions, IT services, Zion Tech Group" />
       </Helmet>
       <Navigation />
-      {/* Hero Section */}
+
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
@@ -62,7 +62,7 @@ const AIContentWriterPage: React.FC = () => {
 </div>
 </div></button>
       </section>
-        {/* Features Section */}</section>
+        {</section>
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16"></h1>
@@ -83,10 +83,11 @@ const AIContentWriterPage: React.FC = () => {
                     <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
                       <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
                       {benefit}
-                    </li>)}
-                </ul></h1></p>
+                    </li>
+              ))}
+                </ul>
 </div>)}</div>
-</div></h1></p>
+</div>
       </section>
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto"></div>
@@ -103,7 +104,7 @@ const AIContentWriterPage: React.FC = () => {
 </div>
                 <h3 className="text-lg font-semibold text-white">{benefit}</h3></h1>
 </div>)}</div>
-</div></h1></p>
+</div>
       </section>
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="max-w-4xl mx-auto text-center"></h1>
@@ -118,7 +119,7 @@ const AIContentWriterPage: React.FC = () => {
 </div>
 </div></button>
       </section>
-        {/* Features Section */}
+
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
@@ -136,7 +137,7 @@ const AIContentWriterPage: React.FC = () => {
 </div>
 </div></button>
         </section>
-        {/* Features Section */}</section>
+        {</section>
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></h1>
@@ -144,7 +145,7 @@ const AIContentWriterPage: React.FC = () => {
                 Powerful AI Features
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Discover how our AI platform can revolutionize your business operations.
-              </p></h1></p>
+              </p>
 </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (</div>
@@ -159,10 +160,11 @@ const AIContentWriterPage: React.FC = () => {
                       <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
                         <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
                         {benefit}
-                      </li>)}
+                      </li>
+              ))}
                   </ul></p>
 </div>)}</div>
-</div></h1></p>
+</div>
         </section>
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="max-w-4xl mx-auto text-center"></h1>
@@ -179,7 +181,7 @@ const AIContentWriterPage: React.FC = () => {
       </main>
       <Footer />
     </React.Fragment>
-}
+
 export default AiContentWriterPage</button>
   </h2>
   </button>

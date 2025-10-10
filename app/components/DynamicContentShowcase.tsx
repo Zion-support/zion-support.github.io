@@ -9,7 +9,7 @@ interface Feature {
     value: string
     label: string
   }[]
-}
+
 interface Testimonial {
   name: string
   company: string
@@ -17,12 +17,12 @@ interface Testimonial {
   content: string
   rating: number
   avatar?: string
-}
+
 const DynamicContentShowcase: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isPlaying, setIsPlaying] = useState(true)
   const features: Feature[] = [
-    {
+
       icon: Brain,
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that learn and adapt to your business needs in real-time',
@@ -32,7 +32,7 @@ const DynamicContentShowcase: React.FC = () => {
         { value: '24/7', label: 'Learning' }
       ]
     },
-    {
+
       icon: Zap,
       title: 'Lightning Fast Performance',
       description: 'Optimized for speed with sub-second response times and seamless user experience',
@@ -42,7 +42,7 @@ const DynamicContentShowcase: React.FC = () => {
         { value: '10M+', label: 'Requests' }
       ]
     },
-    {
+
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with end-to-end encryption and compliance standards',
@@ -52,7 +52,7 @@ const DynamicContentShowcase: React.FC = () => {
         { value: 'Zero', label: 'Breaches' }
       ]
     },
-    {
+
       icon: Globe,
       title: 'Global Scalability',
       description: 'Scale effortlessly across multiple regions with automatic load balancing',
@@ -61,7 +61,7 @@ const DynamicContentShowcase: React.FC = () => {
         { value: '15+', label: 'Languages' },
         { value: '24/7', label: 'Support' }
       ]
-    }
+
   ]
   const benefits = [
     'Advanced AI technology integration',
@@ -74,34 +74,34 @@ const DynamicContentShowcase: React.FC = () => {
     'Proven track record of success'
   ]
   const testimonials: Testimonial[] = [
-    {
+
       name: 'Sarah Johnson',
       company: 'TechCorp Inc.',
       role: 'CTO',
       content: 'This solution transformed our operations completely. The AI insights are incredible and have helped us make data-driven decisions that increased our efficiency by 300%.',
       rating: 5
     },
-    {
+
       name: 'Michael Chen',
       company: 'DataFlow Systems',
       role: 'CEO',
 content: 'The performance improvements we\'ve seen are remarkable. Highly recommended!',
       rating: 5
     },
-    {
+
       name: 'Emily Rodriguez',
 company: 'InnovateLab',
       role: 'Product Manager',
       content: 'The best investment we made this year. ROI was evident within the first month, and the support team is absolutely fantastic.',
       rating: 5
     },
-    {
+
       name: 'David Kim',
       company: 'CloudFirst Solutions',
       role: 'VP Engineering',
       content: 'Seamless integration with our existing systems. The scalability and performance exceeded our expectations.',
       rating: 5
-    }
+
   ]
   useEffect(() => {
     if (!isPlaying) return
@@ -112,17 +112,17 @@ setCurrentIndex((prev) => (prev + 1) % testimonials.length)
   }, [isPlaying, testimonials.length])
   const nextTestimonial = () => {
     setCurrentIndex((prev) => (prev + 1) % testimonials.length)
-  }
+
   const prevTestimonial = () => {
     setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length)
-  }
+
   const togglePlayPause = () => {
     setIsPlaying(!isPlaying)
-  }
+
   const currentTestimonial = testimonials[currentIndex]
   return (
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 min-h-screen">
-      {/* Hero Section */}
+
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -140,7 +140,8 @@ setCurrentIndex((prev) => (prev + 1) % testimonials.length)
               <ArrowRight className="w-5 h-5" />
               Learn More</button>
 </div>
-</div>/* Features Grid */}</div>
+</div>
+          {</div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {features.map((feature, index) => (
             <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300"></div>
@@ -148,17 +149,19 @@ setCurrentIndex((prev) => (prev + 1) % testimonials.length)
                 <feature.icon className="h-6 w-6 text-white" />
 </div></h1>
               <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3></p>
-              <p className="text-gray-300">{feature.description}</p></h1></p>
-</div>)}</div>/* Benefits Section */}
+              <p className="text-gray-300">{feature.description}</p>
+</div>)}</div>
+
         <div className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10 mb-16">
-          <h3 className="text-2xl font-bold text-white mb-6 text-center">Why Choose Us?</h3></h1></div>
+          <h3 className="text-2xl font-bold text-white mb-6 text-center">Why Choose Us?</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-center">
                 <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" /></span>
                 <span className="text-gray-300">{benefit}</span></span>
 </div>)}</div>
-</div>/* Testimonials */}</div>
+</div>
+          {</div>
         <div className="text-center"></h1>
           <h3 className="text-2xl font-bold text-white mb-8">What Our Clients Say</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -168,14 +171,15 @@ setCurrentIndex((prev) => (prev + 1) % testimonials.length)
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
                   ))}</div>
-                <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p></p></div>
+                <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
                 <div className="text-center"></p>
                   <p className="text-white font-semibold">{testimonial.name}</p>
                   <p className="text-gray-400 text-sm">{testimonial.role}, {testimonial.company}</p></p>
 </div>
 </div>)}</div>
 </div>
-</div>/* Features Section */}</button></section>
+</div>
+          {</button></section>
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16">
@@ -184,7 +188,7 @@ setCurrentIndex((prev) => (prev + 1) % testimonials.length)
             </h2></p>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our solutions deliver unmatched performance, security, and scalability for modern businesses.
-            </p></h1></p>
+            </p>
 </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (</div>
@@ -195,14 +199,14 @@ setCurrentIndex((prev) => (prev + 1) % testimonials.length)
                 <h3 className="text-xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors">
                   {feature.title}
                 </h3>
-                <p className="text-gray-300 mb-6">{feature.description}</p>feature.stats && (</h1></p></div>
+                <p className="text-gray-300 mb-6">{feature.description}</p>feature.stats && (</h1>
                   <div className="grid grid-cols-3 gap-4">
                     {feature.stats.map((stat, statIndex) => (
                       <div key={statIndex} className="text-center"></div>
                         <div className="text-lg font-bold text-white">{stat.value}</div>
                         <div className="text-gray-400 text-xs">{stat.label}</div>
 </div>)}</div>}</div>)}</div>
-</div></h1></p>
+</div>
       </section>
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="max-w-6xl mx-auto">
@@ -210,7 +214,7 @@ setCurrentIndex((prev) => (prev + 1) % testimonials.length)
             <h2 className="text-3xl font-bold text-white mb-6">What Our Customers Say</h2></p>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Don't just take our word for it. Here's what our satisfied customers have to say about their experience.
-            </p></h1></p>
+            </p>
 </div></div>
           <div className="relative">
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-white/20"></div>
@@ -233,7 +237,8 @@ setCurrentIndex((prev) => (prev + 1) % testimonials.length)
 </div>
 </div>
 </div>
-</div>/* Navigation Controls */}</div>
+</div>
+          {</div>
             <div className="flex items-center justify-center gap-4 mt-8">
               <button
                 onClick={prevTestimonial}
@@ -250,7 +255,8 @@ setCurrentIndex((prev) => (prev + 1) % testimonials.length)
                 className="p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors duration-200">
                 <ChevronRight className="w-6 h-6" />
               </button></button>
-</div>/* Dots Indicator */}
+</div>
+
             <div className="flex justify-center mt-6 space-x-2">
               {testimonials.map((_, index) => (</button>
                 <button
@@ -271,7 +277,7 @@ setCurrentIndex((prev) => (prev + 1) % testimonials.length)
             <h2 className="text-3xl font-bold text-white mb-6">Comprehensive Benefits</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our solutions provide a complete package of benefits designed to accelerate your business growth.
-            </p></h1></p>
+            </p>
 </div></div>
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -304,7 +310,7 @@ setCurrentIndex((prev) => (prev + 1) % testimonials.length)
 </div></button>
       </section>
 </div>
-}
+
 export default DynamicContentShowcase</button>
   </button>
   </button>

@@ -6,7 +6,7 @@ interface AnalyticsProps {
   enablePerformanceMonitoring?: boolean
   enableErrorTracking?: boolean
   enableUserBehaviorTracking?: boolean
-}
+
 const Analytics: React.FC<AnalyticsProps> = ({
   enableGoogleAnalytics = true,
   enablePerformanceMonitoring = true,
@@ -16,16 +16,16 @@ const Analytics: React.FC<AnalyticsProps> = ({
   useEffect(() => {
     if (enableGoogleAnalytics) {
       initializeGoogleAnalytics()
-    }
+
     if (enablePerformanceMonitoring) {
       initializePerformanceMonitoring()
-    }
+
     if (enableErrorTracking) {
       initializeErrorTracking()
-    }
+
     if (enableUserBehaviorTracking) {
       initializeUserBehaviorTracking()
-    }
+
   }, [enableGoogleAnalytics, enablePerformanceMonitoring, enableErrorTracking, enableUserBehaviorTracking])
   const initializeGoogleAnalytics = () => {
     // Load Google Analytics
@@ -37,7 +37,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
     (window as any).dataLayer = (window as any).dataLayer || []
     function gtag(...args: any[]) {
       (window as any).dataLayer.push(args)
-    }
+
     (window as any).gtag = gtag
     gtag('js', new Date())
     gtag('config', 'GA_MEASUREMENT_ID', {
@@ -45,7 +45,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
       page_location: window.location.href,
       send_page_view: true
     })
-  }
+
   const initializePerformanceMonitoring = () => {
     if ('PerformanceObserver' in window) {
       // Monitor Core Web Vitals
@@ -59,9 +59,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
           } else if (entry.entryType === 'layout-shift') {
             if (!(entry as any).hadRecentInput) {
               trackEvent('web_vitals', 'CLS', (entry as any).value)
-            }
-          }
-        }
+
       })
       observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] })
       // Monitor page load time
@@ -69,10 +67,9 @@ const Analytics: React.FC<AnalyticsProps> = ({
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
         if (navigation) {
           trackEvent('performance', 'page_load_time', Math.round(navigation.loadEventEnd - navigation.fetchStart))
-        }
+
       })
-    }
-  }
+
   const initializeErrorTracking = () => {
     // Track JavaScript errors
     window.addEventListener('error', (event) => {
@@ -99,9 +96,9 @@ const Analytics: React.FC<AnalyticsProps> = ({
           src: (event.target as any).src || (event.target as any).href,
           error: event.type
         })
-      }
+
     }, true)
-  }
+
   const initializeUserBehaviorTracking = () => {
     // Track page views
     trackEvent('page_view', 'page_view', {
@@ -117,8 +114,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
         maxScroll = scrollPercent
         if (maxScroll % 25 === 0) { // Track at 25%, 50%, 75%, 100%
           trackEvent('engagement', 'scroll_depth', maxScroll)
-        }
-      }
+
     })
     // Track time on page
     const startTime = Date.now()
@@ -141,7 +137,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
           button_text: target.textContent?.trim(),
           button_class: target.className
         })
-      }
+
     })
     // Track form submissions
     document.addEventListener('submit', (event) => {
@@ -152,7 +148,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
         form_action: form.action
       })
     })
-  }
+
   const trackEvent = (category: string, action: string, value?: any) => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', action, {
@@ -160,17 +156,15 @@ const Analytics: React.FC<AnalyticsProps> = ({
         event_label: typeof value === 'object' ? JSON.stringify(value) : value,
         value: typeof value === 'number' ? value : undefined
       })
-    }
-  }
+
   return null
-}
+
 // Extend Window interface for gtag
 declare global {
   interface Window {
     dataLayer: any[]
     gtag: (...args: any[]) => void
-  }
-}
+
 export default Analytics
 // Analytics Provider for context
 export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {

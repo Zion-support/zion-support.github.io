@@ -4,26 +4,26 @@ import { Helmet } from 'react-helmet-async'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 const ARVRPlatformPage: React.FC = () => {
   const features = [
-    {
+
       icon: Brain,
       title: 'AI-Powered AR/VR',
       description: 'Advanced AI technology to create immersive augmented and virtual reality experiences'
     },
-    {
+
       icon: Zap,
       title: 'Real-Time Rendering',
       description: 'Lightning-fast 3D rendering and real-time interaction for optimal user experience'
     },
-    {
+
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards for your AR/VR data'
     },
-    {
+
       icon: Globe,
       title: 'Cross-Platform Support',
       description: 'Deploy across multiple devices and platforms for maximum reach and accessibility'
-    }
+
   ]
   const benefits = [
     'Advanced AR/VR technology integration',
@@ -41,7 +41,7 @@ const ARVRPlatformPage: React.FC = () => {
         <title>AR/VR Platform | Zion Tech Group</title>
         <meta name="description" content="Professional AR/VR Platform services by Zion Tech Group. Advanced AI and IT solutions for your business." />
 <meta name="keywords" content="AR VR platform, AI solutions, IT services, Zion Tech Group, augmented reality, virtual reality" />
-      </Helmet>/* Hero Section */}
+      </Helmet>
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
@@ -54,7 +54,7 @@ const ARVRPlatformPage: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your business with our advanced AR/VR platform solutions. 
               Powered by cutting-edge AI technology and industry expertise.
-            </p></h1></div>
+            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
                 Get Started
@@ -66,7 +66,7 @@ const ARVRPlatformPage: React.FC = () => {
 </div>
 </div></button>
       </section>
-        {/* Features Section */}</section>
+        {</section>
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></h1>
@@ -75,16 +75,16 @@ const ARVRPlatformPage: React.FC = () => {
             </h2></p>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
 Our AR/VR solutions deliver unmatched performance, security, and scalability.
-            </p></h1></p>
+            </p>
 </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (</div>
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
                 <feature.icon className="h-12 w-12 text-purple-400 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p></h1></p>
+                <p className="text-gray-300">{feature.description}</p>
 </div>)}</div>
-</div></h1></p>
+</div>
       </section>
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto"></div>
@@ -93,7 +93,7 @@ Our AR/VR solutions deliver unmatched performance, security, and scalability.
               Key Benefits</p>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
 Experience the power of our AR/VR platform solutions for your business.
-            </p></h1></p>
+            </p>
 </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (</div>
@@ -124,7 +124,7 @@ Experience the power of our AR/VR platform solutions for your business.
 </div></button>
       </section>
 </div>
-}
+
 export default ARVRPlatformPage</button>
   </button>
   </h2>

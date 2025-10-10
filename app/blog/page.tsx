@@ -15,13 +15,13 @@ interface BlogPost {
   tags: string[]
   image: string
   featured: boolean
-}
+
 const BlogPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('all')
   const [filteredPosts, setFilteredPosts] = useState<BlogPost[]>([])
   const blogPosts: BlogPost[] = [
-    {
+
       id: '1',
       title: 'The Future of AI in Enterprise Solutions',
       excerpt: 'Exploring how artificial intelligence is transforming business operations and creating new opportunities for growth.',
@@ -34,7 +34,7 @@ const BlogPage: React.FC = () => {
       image: '/images/blog/ai-enterprise.jpg',
       featured: true
     },
-    {
+
       id: '2',
       title: 'Cloud Migration Best Practices',
       excerpt: 'A comprehensive guide to successfully migrating your infrastructure to the cloud.',
@@ -47,7 +47,7 @@ const BlogPage: React.FC = () => {
       image: '/images/blog/cloud-migration.jpg',
       featured: false
     },
-    {
+
       id: '3',
       title: 'Cybersecurity Trends for 2024',
       excerpt: 'Stay ahead of the latest cybersecurity threats and protection strategies.',
@@ -60,7 +60,7 @@ const BlogPage: React.FC = () => {
       image: '/images/blog/cybersecurity.jpg',
       featured: true
     },
-    {
+
       id: '4',
       title: 'Building Scalable Web Applications',
       excerpt: 'Learn the principles and techniques for creating applications that can handle millions of users.',
@@ -72,7 +72,7 @@ const BlogPage: React.FC = () => {
       tags: ['Web Development', 'Scalability', 'Architecture'],
       image: '/images/blog/scalable-apps.jpg',
       featured: false
-    }
+
   ]
   const categories = ['all', 'AI & Machine Learning', 'Cloud Computing', 'Cybersecurity', 'Development']
   useEffect(() => {
@@ -83,10 +83,10 @@ const BlogPage: React.FC = () => {
         post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
         post.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
       )
-    }
+
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(post => post.category === selectedCategory)
-    }
+
     setFilteredPosts(filtered)
   }, [searchTerm, selectedCategory])
   return (
@@ -98,7 +98,7 @@ import { Link } from 'react-router-dom'
 import { ArrowRight, Calendar, User, Tag } from 'lucide-react'
 const BlogPage: React.FC = () => {
   const blogPosts = [
-    {
+
       id: 1,
       title: 'The Future of AI in Business: Trends and Predictions for 2024',
       excerpt: 'Explore the latest AI trends that are reshaping how businesses operate and compete in the digital landscape.',
@@ -107,7 +107,7 @@ const BlogPage: React.FC = () => {
       category: 'AI & Technology',
       readTime: '5 min read'
     },
-    {
+
       id: 2,
       title: 'Cloud Migration Best Practices: A Complete Guide',
       excerpt: 'Learn the essential steps and strategies for successful cloud migration that minimizes downtime and maximizes benefits.',
@@ -116,7 +116,7 @@ const BlogPage: React.FC = () => {
       category: 'Cloud Services',
       readTime: '8 min read'
     },
-    {
+
       id: 3,
       title: 'Cybersecurity in the Age of AI: Protecting Your Digital Assets',
       excerpt: 'Discover how AI is both enhancing cybersecurity capabilities and creating new challenges that businesses must address.',
@@ -125,7 +125,7 @@ const BlogPage: React.FC = () => {
       category: 'Cybersecurity',
       readTime: '6 min read'
     },
-    {
+
       id: 4,
       title: 'Micro SaaS Solutions: Building Scalable AI-Powered Tools',
       excerpt: 'Learn how to create and scale micro SaaS applications that leverage AI to solve specific business problems.',
@@ -133,7 +133,7 @@ const BlogPage: React.FC = () => {
       date: '2024-01-01',
       category: 'Micro SaaS',
       readTime: '7 min read'
-    }
+
   ]
   const categories = ['All', 'AI & Technology', 'Cloud Services', 'Cybersecurity', 'Micro SaaS', 'Industry Insights']
   return (
@@ -151,7 +151,7 @@ const BlogPage: React.FC = () => {
                 Tech Insights & Updates
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Stay ahead with the latest trends, insights, and best practices in AI, cloud computing, and technology.
-              </p></h1></p>
+              </p>
 </div>
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               {categories.map((category) => (
@@ -197,7 +197,7 @@ const BlogPage: React.FC = () => {
                       className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors font-medium">
                       Read More
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                    </Link></h1></p>
+                    </Link>
 </div>
                 </article>
         <title>Blog - Zion Tech Group</title>
@@ -205,14 +205,14 @@ const BlogPage: React.FC = () => {
         <meta name="keywords" content="tech blog, AI insights, blockchain news, cloud computing, IT solutions" />
       </Helmet></div>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}</button></section>
+        {</button></section>
         <section className="relative py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Tech Insights & News
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Stay updated with the latest trends in AI, blockchain, cloud computing, and IT solutions.
-            </p>/* Search Bar */}</h1></p></div>
+            </p></h1>
             <div className="max-w-2xl mx-auto mb-8">
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -224,7 +224,8 @@ const BlogPage: React.FC = () => {
                   className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
                 />
 </div>
-</div>/* Category Filter */}</div>
+</div>
+          {</div>
             <div className="flex flex-wrap justify-center gap-2 mb-8">
               {categories.map((category) => (</button>
                 <button
@@ -238,7 +239,8 @@ const BlogPage: React.FC = () => {
                 >
                   {category === 'all' ? 'All Posts' : category}
                 </button>)}</button>
-</div>/* Blog Posts */}
+</div>
+
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto"></div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -302,7 +304,7 @@ const BlogPage: React.FC = () => {
                 <p className="text-gray-400 text-lg">No articles found matching your search criteria.</p></p>
 </div>}</div>}</div>
 </div>
-}
+
 export default BlogPage</span></button>
   </section>
   </h1>

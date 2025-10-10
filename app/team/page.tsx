@@ -17,7 +17,7 @@ const TeamPage: React.FC = () => {
             <div className="max-w-4xl mx-auto"></div>
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
                 Our Team</h1>
-              </h1></h1></div>
+              </h1>
               <div className="prose prose-lg max-w-none"></div>
                 <p className="text-xl text-gray-600 mb-8">
                   Meet the experts behind our success.
@@ -32,5 +32,5 @@ const TeamPage: React.FC = () => {
         <Footer />
 </div>
     </React.Fragment>
-}
+
 export default TeamPage

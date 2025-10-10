@@ -7,11 +7,11 @@ interface PerformanceMetrics {
   cls: number | null
   ttfb: number | null
   memory: number | null
-}
+
 interface PerformanceMonitorProps {
   onMetricsUpdate?: (metrics: PerformanceMetrics) => void
   enableRealTimeMonitoring?: boolean
-}
+
 const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   onMetricsUpdate,
   enableRealTimeMonitoring = true,
@@ -43,8 +43,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         observers.push(lcpObserver)
       } catch (error) {
         // eslint-disable-next-line no-console
-      }
-    }
+
     // Measure First Input Delay (FID)
     if ('PerformanceObserver' in window) {
       try {
@@ -61,15 +60,14 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
                 ...prev,
                 fid: fidEntry.processingStart - fidEntry.startTime,
               }))
-            }
+
           })
         })
         fidObserver.observe({ entryTypes: ['first-input'] })
         observers.push(fidObserver)
       } catch (error) {
         // eslint-disable-next-line no-console
-      }
-    }
+
     // Measure Cumulative Layout Shift (CLS)
     if ('PerformanceObserver' in window) {
       try {
@@ -86,16 +84,14 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
               if (!clsEntry.hadRecentInput) {
                 clsValue += clsEntry.value
                 setMetrics(prev => ({ ...prev, cls: clsValue }))
-              }
-            }
+
           })
         })
         clsObserver.observe({ entryTypes: ['layout-shift'] })
         observers.push(clsObserver)
       } catch (error) {
         // eslint-disable-next-line no-console
-      }
-    }
+
     // Measure Time to First Byte (TTFB)
     try {
       const navigationEntries = performance.getEntriesByType?.('navigation') || []
@@ -115,7 +111,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       }))
     } catch (error) {
       // eslint-disable-next-line no-console
-    }
+
     // Cleanup observers
     return () => {
       observers.forEach(observer => {
@@ -123,9 +119,9 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           observer.disconnect()
         } catch (error) {
           // eslint-disable-next-line no-console
-        }
+
       })
-    }
+
   }, [])
   const measureResourceTiming = useCallback(() => {
     if (typeof window === 'undefined' || !('performance' in window)) return
@@ -143,7 +139,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           size: r.transferSize,
         }))
       )
-    }
+
   }, [])
   const measureCoreWebVitals = useCallback(() => {
     if (typeof window === 'undefined') return
@@ -156,29 +152,29 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
             onCLS((metric: { value: number }) =>
               setMetrics(prev => ({ ...prev, cls: metric.value }))
             )
-          }
+
           if (onFCP) {
             onFCP((metric: { value: number }) =>
               setMetrics(prev => ({ ...prev, fcp: metric.value }))
             )
-          }
+
           if (onLCP) {
             onLCP((metric: { value: number }) =>
               setMetrics(prev => ({ ...prev, lcp: metric.value }))
             )
-          }
+
           if (onTTFB) {
             onTTFB((metric: { value: number }) =>
               setMetrics(prev => ({ ...prev, ttfb: metric.value }))
             )
-          }
+
         })
         .catch(() => {
           // web-vitals not available, continue without it
         })
     } catch {
       // web-vitals not available, continue without it
-    }
+
   }, [])
   useEffect(() => {
     if (!enableRealTimeMonitoring) return
@@ -192,7 +188,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     return () => {
       if (cleanup) cleanup()
       clearInterval(interval)
-    }
+
   }, [
     enableRealTimeMonitoring,
     measureWebVitals,
@@ -202,7 +198,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   useEffect(() => {
     if (onMetricsUpdate) {
       onMetricsUpdate(metrics)
-    }
+
   }, [metrics, onMetricsUpdate])
   // Performance recommendations
   const getPerformanceRecommendations = useCallback(() => {
@@ -211,34 +207,34 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       recommendations.push(
         'First Contentful Paint is slow. Consider optimizing critical rendering path.'
       )
-    }
+
     if (metrics.lcp && metrics.lcp > 2500) {
       recommendations.push(
         'Largest Contentful Paint is slow. Optimize images and reduce render-blocking resources.'
       )
-    }
+
     if (metrics.fid && metrics.fid > 100) {
       recommendations.push(
         'First Input Delay is high. Reduce JavaScript execution time.'
       )
-    }
+
     if (metrics.cls && metrics.cls > 0.1) {
       recommendations.push(
         'Cumulative Layout Shift is high. Ensure stable layout and avoid dynamic content insertion.'
       )
-    }
+
     if (metrics.ttfb && metrics.ttfb > 600) {
       recommendations.push(
         'Time to First Byte is slow. Optimize server response time.'
       )
-    }
+
     return recommendations
   }, [metrics])
   const _recommendations = getPerformanceRecommendations()
   if (process.env.NODE_ENV === 'development') {
     return (
       <div className='fixed bottom-4 right-4 bg-white p-4 rounded-lg shadow-lg border max-w-sm z-50'>
-        <h3 className='font-semibold text-sm mb-2'>Performance Monitor</h3></h1></div>
+        <h3 className='font-semibold text-sm mb-2'>Performance Monitor</h3>
         <div className='text-xs space-y-1'>
           <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : 'N/A'}</div></div>
           <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : 'N/A'}</div>
@@ -257,11 +253,12 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
             </h4>
             <ul className='text-xs text-red-600'>
               {_recommendations.map((rec, index) => (
-                <li key={index}>• {rec}</li>)}
+                <li key={index}>• {rec}</li>
+              ))}
             </ul>
 </div>}</div>
-  }
+
   return null
-}
+
 export default AdvancedPerformanceMonitor</PerformanceMetrics>
   </PerformanceMonitorProps>

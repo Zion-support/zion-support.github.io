@@ -4,7 +4,7 @@ import { Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react'
 interface PerformanceOptimizerProps {
   children: React.ReactNode
   className?: string
-}
+
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children, className = '' }) => {
   const [isOptimizing, setIsOptimizing] = useState(false)
   const [optimizations, setOptimizations] = useState<string[]>([])
@@ -14,10 +14,10 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children, c
     images.forEach((img) => {
       if (!img.loading) {
         img.loading = 'lazy'
-      }
+
       if (!img.decoding) {
         img.decoding = 'async'
-      }
+
     })
   }, [])
   const optimizeMemory = useCallback(() => {
@@ -27,9 +27,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children, c
         // Trigger garbage collection if available
         if (window.gc) {
           window.gc()
-        }
-      }
-    }
+
   }, [])
   const runOptimizations = useCallback(async () => {
     setIsOptimizing(true)
@@ -79,7 +77,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children, c
             {optimizations.map((optimization, index) => (</div>
               <div key={index} className="flex items-center text-sm text-green-600">
                 <CheckCircle className="h-4 w-4 mr-2" />
-                {optimization}</div>)}</div>}
+                {optimization}</div>)}</div>
         {performanceScore && (
           <div className="mt-4"></div>
             <div className="flex items-center justify-between mb-2">
@@ -102,7 +100,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children, c
                 </span></span>
 </div>}</div>}</div>
     </React.Fragment>
-}
+
 export default PerformanceOptimizer</h3>
 </div>
   </number>

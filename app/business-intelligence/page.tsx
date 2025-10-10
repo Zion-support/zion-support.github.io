@@ -4,26 +4,26 @@ import { Helmet } from 'react-helmet-async'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, BarChart, Database, TrendingUp } from 'lucide-react'
 const BusinessIntelligencePage: React.FC = () => {
   const features = [
-    {
+
 icon: Brain,
       title: 'AI-Powered Analytics',
       description: 'Advanced AI technology to transform your business intelligence and data analysis'
     },
-    {
+
       icon: Zap,
       title: 'Real-Time Insights',
       description: 'Lightning-fast data processing and real-time business intelligence'
     },
-    {
+
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards for your data'
     },
-    {
+
       icon: Globe,
       title: 'Global Analytics',
       description: 'Worldwide business intelligence deployment and support'
-    }
+
   ]
   const benefits = [
     'Advanced AI technology integration',
@@ -52,14 +52,14 @@ icon: Brain,
           </p></p>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Our business intelligence solutions deliver unmatched performance, security, and scalability.
-          </p></h1></p>
+          </p>
 </div></div>
 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {features.map((feature, index) => (
             <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
               <feature.icon className="h-12 w-12 text-purple-400 mx-auto mb-4" /></h1>
               <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-              <p className="text-gray-300">{feature.description}</p></h1></p>
+              <p className="text-gray-300">{feature.description}</p>
 </div>)}</div></div>
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-8">
@@ -71,7 +71,8 @@ icon: Brain,
                 <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
                 <span className="text-gray-300">{benefit}</span></span>
 </div>)}</div>
-</div>/* Benefits Section */}
+</div>
+
       <section className="py-16 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-12"></h1>
@@ -79,7 +80,7 @@ icon: Brain,
               Key Benefits</p>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our business intelligence solutions for your business.
-            </p></h1></p>
+            </p>
 </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (</div>
@@ -108,7 +109,7 @@ icon: Brain,
 </div></button>
       </section>
 </div>
-}
+
 export default BusinessIntelligencePage</button>
   </button>
   </h2>

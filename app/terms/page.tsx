@@ -4,46 +4,46 @@ import { FileText, Scale, Shield, AlertTriangle, CheckCircle, ArrowRight, Globe,
 export default function TermsPage() {
   const lastUpdated = 'January 1, 2024'
   const sections = [
-    {
+
       title: 'Acceptance of Terms',
       icon: CheckCircle,
       content: 'By accessing and using our website and services, you accept and agree to be bound by the terms and provision of this agreement.'
     },
-    {
+
       title: 'Use License',
       icon: Key,
       content: 'Permission is granted to temporarily download one copy of the materials on our website for personal, non-commercial transitory viewing only.'
     },
-    {
+
       title: 'Service Availability',
       icon: Server,
       content: 'We strive to maintain high service availability but cannot guarantee uninterrupted access to our services.'
     },
-    {
+
       title: 'Limitation of Liability',
       icon: Shield,
       content: 'In no event shall Zion Tech Group or its suppliers be liable for any damages arising out of the use or inability to use our services.'
     },
-    {
+
       title: 'Privacy Policy',
       icon: Lock,
       content: 'Your privacy is important to us. Please review our Privacy Policy, which also governs your use of our services.'
     },
-    {
+
       title: 'Intellectual Property',
       icon: Database,
       content: 'All content, trademarks, and other intellectual property on this website are the property of Zion Tech Group.'
     },
-    {
+
       title: 'Termination',
       icon: AlertTriangle,
       content: 'We may terminate or suspend your access to our services immediately, without prior notice, for any reason whatsoever.'
     },
-    {
+
       title: 'Governing Law',
       icon: Scale,
       content: 'These terms shall be governed by and construed in accordance with the laws of the United States.'
-    }
+
   ]
   return (
     <div className="min-h-screen bg-white"></div></div>
@@ -53,7 +53,7 @@ export default function TermsPage() {
             Terms of Service</h1>
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-            Please read these terms carefully before using our services</h1></p></div>
+            Please read these terms carefully before using our services</h1>
           <div className="flex items-center justify-center text-sm text-blue-200"></div>
             <Calendar className="h-4 w-4 mr-2" />
             Last updated: {lastUpdated}</div>
@@ -75,7 +75,7 @@ export default function TermsPage() {
                       </h2></p>
                       <p className="text-gray-700 leading-relaxed">
                         {section.content}
-                      </p></h1></p>
+                      </p>
 </div>
 </div>
 </div>)}</div>
@@ -112,5 +112,5 @@ export default function TermsPage() {
 </div>
 </div>
 </div>
-}
+
   </p>

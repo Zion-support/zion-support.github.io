@@ -17,7 +17,7 @@ const $1: React.FC = () => {
       features: ['React/Next.js', 'Vue.js/Angular', 'Responsive Design', 'PWA Development'],
       benefits: ['50% faster load times', 'Mobile-first approach', 'SEO optimized'],
       color: 'text-blue-400'},
-    {
+
       title: 'Backend Development',
       description: 'Scalable server-side solutions and API development',
       icon: Database,
@@ -25,7 +25,7 @@ const $1: React.FC = () => {
       features: ['Node.js/Python', 'RESTful APIs', 'Microservices', 'Database Design'],
       benefits: ['99.9% uptime', 'Scalable architecture', 'Secure APIs'],
       color: 'text-green-400'},
-    {
+
       title: 'Full-Stack Development',
       description: 'Complete web solutions from frontend to backend',
       icon: Globe,
@@ -33,7 +33,7 @@ const $1: React.FC = () => {
       features: ['End-to-end development', 'Cloud deployment', 'DevOps integration', 'Testing & QA'],
       benefits: ['Unified solution', 'Faster development', 'Better performance'],
       color: 'text-purple-400'},
-    {
+
       title: 'E-commerce Development',
       description: 'Custom e-commerce platforms and online stores',
       icon: Smartphone,
@@ -41,7 +41,7 @@ const $1: React.FC = () => {
       features: ['Custom platforms', 'Payment integration', 'Inventory management', 'Analytics'],
       benefits: ['Higher conversion rates', 'Mobile optimized', 'Secure payments'],
       color: 'text-orange-400'},
-    {
+
       title: 'Maintenance & Support',
       description: 'Ongoing maintenance and support for your web applications',
       icon: Users,
@@ -58,30 +58,30 @@ const $1: React.FC = () => {
     { name: 'Docker/Kubernetes', icon: Shield, description: 'Containerization' }
   ]
   const process = [
-    {
+
       step: '01',
       title: 'Discovery & Planning',
       description: 'We analyze your requirements and create a detailed project plan',
       icon: BarChart,
     },
-    {
+
       step: '02',
       title: 'Design & Prototyping',
       description: 'Create wireframes and prototypes to visualize your solution',
       icon: Code,
     },
-    {
+
       step: '03',
       title: 'Development',
       description: 'Build your web application using modern technologies and best practices',
       icon: Globe,
     },
-    {
+
       step: '04',
       title: 'Testing & Launch',
       description: 'Thorough testing and deployment with ongoing support',
       icon: Shield,
-    }
+
   ]
   return(<React.Fragment>
       <SEOOptimizer
@@ -113,11 +113,11 @@ const $1: React.FC = () => {
 </div></div>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         <Navigation />
-        <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
+        <main className="container mx-auto px-4 py-16 pt-24">{</main>
           <section className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">Web Development Services</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Build modern, scalable, and high-performance web applications with our expert development team.</p>rom frontend to backend, we deliver solutions that drive business growth.</p></main>
         <main className="container mx-auto px-4 py-16 pt-24">
-          {/* Hero Section */}</h1></p></section>
+          {</h1>
           <section className="text-center mb-16"></h1>
             <h1 className="text-4xl md: text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">
               Web Development Services</h1>
@@ -126,9 +126,9 @@ const $1: React.FC = () => {
               Build modern, scalable, and high-performance web applications with our expert development team.
               From frontend to backend, we deliver solutions that drive business growth.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></h1></p></div>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></h1>
               <a</div>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></h1></p></section>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></h1>
               <a
                 href="/contact"
                 className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300">Start Your Project<a
@@ -142,9 +142,9 @@ const $1: React.FC = () => {
 </div>
           </section>
 ,
-          {/* Services Grid */}
+
           <section className="mb-20">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Our Web Development Services<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{webServices.map((service, index) => (</h1></div></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Our Web Development Services<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{webServices.map((service, index) => (</h1>
                 <div key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300"></div>
                   <div className="flex items-center mb-6"></div></div>
                     <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mr-4"></div>
@@ -163,19 +163,19 @@ const $1: React.FC = () => {
                     <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mr-4">,</div>
                       <service.icon className="w-8 h-8 text-white" />,</div>
                     <div>,</div></h1>
-                      <h3 className="text-2xl font-bold text-white mb-2 neon-text">{service.title}</h3></h1></div>
+                      <h3 className="text-2xl font-bold text-white mb-2 neon-text">{service.title}</h3>
                       <div className={`font-semibold ${service.color}`}>{service.price}</div>
 </div>
 </div></p>
                   <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Our Web Development Services</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{webServices.map((service, index) => (</h1></p></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Our Web Development Services</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{webServices.map((service, index) => (</h1>
                 <div key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300"></div>
                   <div className="flex items-center mb-6"></div></div>
                     <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mr-4"></div>
                       <service.icon className="w-8 h-8 text-white" />
 </div>
                     <div></div></h1>
-                      <h3 className="text-2xl font-bold text-white mb-2 neon-text">{service.title}</h3></h1></div><div className={`font-semibold ${service.color}`}>{service.price}</div><p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
+                      <h3 className="text-2xl font-bold text-white mb-2 neon-text">{service.title}</h3><div className={`font-semibold ${service.color}`}>{service.price}</div><p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
                   <div className="mb-6"></p></div>
                     <h4 className="text-lg font-semibold text-white mb-3">Features<ul className="space-y-2">{service.features.map((feature, featureIndex) => (</ul>
                         <li key={featureIndex} className="flex items-center text-gray-300">
@@ -189,17 +189,17 @@ const $1: React.FC = () => {
                             <ArrowRight className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0">{benefit}</ArrowRight>
                           </ArrowRight>)}
                       </ul>
-</div>}
+</div>
                   <a
                     href="/contact"
                     className="w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 hover:scale-105 cyber-button">Get Started</a>
                   </a>
 </div>lassName="w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 hover: scale-105 cyber-button">
                     Get Started</a>
-</div>)}</div></h1></p>
+</div>)}</div>
           </section>
           <section className="mb-20">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Technologies We Use<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">{technologies.map((tech, index) => (</h1></div></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Technologies We Use<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">{technologies.map((tech, index) => (</h1>
                 <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300"></div>
                   <tech.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" /></h1>
                   <h3 className="text-lg font-semibold text-white mb-2">{tech.name}</p><p className="text-sm text-gray-300">{tech.description}</p>
@@ -212,14 +212,14 @@ const $1: React.FC = () => {
                   <tech.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />,</h1>
                   <h3 className="text-lg font-semibold text-white mb-2">{tech.name}</h3>
                   <p className="text-sm text-gray-300">{tech.description}</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Technologies We Use</h2><div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">{technologies.map((tech, index) => (</h1></p></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Technologies We Use</h2><div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">{technologies.map((tech, index) => (</h1>
                 <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300"></div>
                   <tech.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" /></h1>
-                  <h3 className="text-lg font-semibold text-white mb-2">{tech.name}</h3></p><p className="text-sm text-gray-300">{tech.description}</p></h1></p>
-</div>)}</div></h1></p>
+                  <h3 className="text-lg font-semibold text-white mb-2">{tech.name}</h3></p><p className="text-sm text-gray-300">{tech.description}</p>
+</div>)}</div>
           </section>
           <section className="mb-20">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Our Development Process<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{process.map((step, index) => (</h1></div></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Our Development Process<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{process.map((step, index) => (</h1>
                 <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300"></div>
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                     <span className="text-2xl font-bold text-white">{step.step}</h1><h3 className="text-xl font-bold text-white mb-3 neon-text">{step.title}<p className="text-gray-300">{step.description}</p>
@@ -249,12 +249,12 @@ const $1: React.FC = () => {
               <p className="text-xl text-gray-300 mb-8">
                 Let's discuss your project requirements and create a custom solution that drives your business forward.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center"></h1></p></div>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"></h1>
                 <a</div>
-            <div className="cyber-card p-12 max-w-4xl mx-auto"></h1></p></section>
+            <div className="cyber-card p-12 max-w-4xl mx-auto"></h1>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Ready to Build Your Next Web Application?</h2></p><p className="text-xl text-gray-300 mb-8">Let's discuss your project requirements and create a custom solution that drives your business forward.</p>
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center"></h1></p></div>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"></h1>
                 <a
                   href="/contact"
                   className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300">Start Your Project<a
@@ -266,13 +266,13 @@ const $1: React.FC = () => {
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
                   Call +1 302 464 0950</a>
 </div>
-</div></h1></p>
+</div>
           </section>
         </main>
         <Footer />
 </div>
     </React.Fragment>
-}
+
 export default WebDevelopmentPage</h2>
   </span>
   </h2>

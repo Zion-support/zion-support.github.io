@@ -20,15 +20,15 @@ const preloadComponents = () => {
       import('./components/ContentPromotionBanner')
       import('./components/ContentCarousel')
     }, 100)
-  }
-}
+
 // Loading skeleton component
 const ServiceCardSkeleton: React.FC = memo(() => (
-  <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card"></div>
+  <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
     <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
-    <div className="h-4 bg-gray-200 rounded mb-2"></div></div>
+    <div className="h-4 bg-gray-200 rounded mb-2"></div>
     <div className="h-4 bg-gray-200 rounded w-5/6"></div>
-</div>)
+  </div>
+))
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton'
 const HomePage: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false)
@@ -90,7 +90,7 @@ const HomePage: React.FC = () => {
             addressRegion: 'DE',
             postalCode: '19709',
             addressCountry: 'US'
-          }
+
         }}
       />
       <PerformanceOptimizer
@@ -106,19 +106,19 @@ const HomePage: React.FC = () => {
         enableFocusManagement={true}
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain">
-        {/* Navigation */}
+
         <Navigation />
-        {/* Skip to main content for accessibility */}
+
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50">
           Skip to main content
-      {/* Content Promotion Banner */}
+
       <Suspense fallback={</div><div className="h-16 bg-gray-100 animate-pulse"></div>>
         <ContentPromotionBanner />
       </Suspense>
       <main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main">
-        {/* Hero Section */}
+
         <section
           className={`text-center mb-16 transition-all duration-1000 cyber-scan-line ${
             isLoaded && isVisible 
@@ -140,29 +140,30 @@ const HomePage: React.FC = () => {
               Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
               Transform your business with our cutting-edge technology and achieve unprecedented growth. We serve Fortune 500 companies,
               startups, and enterprises worldwide with proven results and 24/7 expert support.
-            </p>/* Key Benefits */}</h1></p></div>
+            </p></h1>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto mb-12">
               <div className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></div>
                 <div className="text-2xl sm:text-3xl mb-3">🚀</div></h1>
                 <h3 className="font-bold text-white mb-3 text-base sm:text-lg">AI-Powered Solutions</h3>
-                <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Transform your business with cutting-edge artificial intelligence, machine learning, and automation technologies</p></h1></p>
+                <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Transform your business with cutting-edge artificial intelligence, machine learning, and automation technologies</p>
 </div>
               <div className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></div>
                 <div className="text-2xl sm:text-3xl mb-3">⚡</div>
                 <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Proven Results</h3></p>
-                <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Delivering $50M+ annual savings, 95% process automation, and 300% ROI for enterprise clients</p></h1></p>
+                <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Delivering $50M+ annual savings, 95% process automation, and 300% ROI for enterprise clients</p>
 </div>
               <div className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></div>
                 <div className="text-2xl sm:text-3xl mb-3">🔒</div></h1>
                 <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Enterprise Security</h3>
-                <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Bank-level security and compliance for your critical data and infrastructure</p></h1></p>
+                <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Bank-level security and compliance for your critical data and infrastructure</p>
 </div>
               <div className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300 sm:col-span-2 lg:col-span-1 xl:col-span-1"></div>
                 <div className="text-2xl sm:text-3xl mb-3">🌐</div>
                 <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Global Reach</h3></p>
-                <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Serving clients worldwide with 24/7 support and multi-language capabilities</p></h1></p>
+                <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Serving clients worldwide with 24/7 support and multi-language capabilities</p>
 </div>
-</div>/* CTA Buttons */}
+</div>
+
             <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href="tel:+13024640950"
@@ -178,30 +179,31 @@ const HomePage: React.FC = () => {
               <a 
                 href="/contact"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300">
-                Get Free Consultation</div>/* Contact Info */}</div>
+                Get Free Consultation</div>
+          {</div>
             <div className="mt-8 text-center">
               <p className="text-gray-300 text-sm mb-2">
                 📍 364 E Main St STE 1008, Middletown, DE 19709</p>
               <p className="text-gray-300 text-sm">
                 ⏰ Mon-Fri: 9AM-6PM EST | 24/7 Emergency Support Available</p>
 </div>
-</div></h1></p>
+</div>
         </section>
         <section className="mb-16" aria-labelledby="services-heading"></h1>
           <h2 id="services-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
             Our Services
           <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
             Comprehensive AI and IT solutions designed to transform your business operations
-          {/* Primary Services Grid */}
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12">
             <Suspense fallback={<ServiceCardSkeleton />}>
-              <article className="quantum-card p-4 sm:p-6 energy-pulse"></h1></p></div>
+              <article className="quantum-card p-4 sm:p-6 energy-pulse"></h1>
                 <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">🤖</div>
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text">AI Services</h3></p>
                 <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
                   Advanced artificial intelligence solutions including machine learning, natural language processing, and computer vision.
                 </p>
-                <div className="text-center"></h1></p></div>
+                <div className="text-center"></h1>
                   <div className="text-lg sm:text-2xl font-bold text-cyan-400 mb-2 neon-text">Starting at $1,500/month</div>
                   <a href="/ai-services" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow">
                     Learn More →
@@ -231,7 +233,7 @@ const HomePage: React.FC = () => {
                 <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
                   Intelligent automation of business processes with decision-making capabilities and exception handling.
                 </p>
-                <div className="text-center"></h1></p></div>
+                <div className="text-center"></h1>
                   <div className="text-lg sm:text-2xl font-bold text-blue-400 mb-2 neon-text">Starting at $399/month</div>
                   <a href="/ai-automation" className="text-blue-400 hover:text-blue-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow">
                     Learn More →
@@ -239,7 +241,8 @@ const HomePage: React.FC = () => {
 </div>
               </article>
             </Suspense>
-</div>/* Secondary Services Grid */}
+</div>
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12">
             <Suspense fallback={<ServiceCardSkeleton />}>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></div>
@@ -248,7 +251,7 @@ const HomePage: React.FC = () => {
                 <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
                   Cutting-edge AI solutions for medical imaging, drug discovery, and personalized medicine.
                 </p>
-                <div className="text-center"></h1></p></div>
+                <div className="text-center"></h1>
                   <div className="text-lg sm:text-2xl font-bold text-green-400 mb-2">Starting at $1,999/month</div>
                   <a href="/ai-healthcare" className="text-green-400 hover:text-green-300 font-medium text-sm sm:text-base">
                     Learn More →
@@ -278,7 +281,7 @@ const HomePage: React.FC = () => {
                 <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
                   Next-generation quantum computing capabilities for complex problem solving and optimization.
                 </p>
-                <div className="text-center"></h1></p></div>
+                <div className="text-center"></h1>
                   <div className="text-lg sm:text-2xl font-bold text-purple-400 mb-2">Custom Pricing</div>
                   <a href="/quantum-computing" className="text-purple-400 hover:text-purple-300 font-medium text-sm sm:text-base">
                     Learn More →
@@ -286,7 +289,8 @@ const HomePage: React.FC = () => {
 </div>
               </article>
             </Suspense>
-</div>/* Micro SAAS Services Grid */}
+</div>
+
           <div className="mb-12">
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
               Micro SAAS Solutions</h1></div>
@@ -313,7 +317,7 @@ const HomePage: React.FC = () => {
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
                     Real-time business intelligence with AI-powered insights, custom dashboards, and automated reporting.
                   </p>
-                  <div className="text-center"></h1></p></div>
+                  <div className="text-center"></h1>
                     <div className="text-lg sm:text-2xl font-bold text-cyan-400 mb-2">$199/month</div>
                     <a href="/ai-analytics" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm sm:text-base">
                       Learn More →
@@ -343,7 +347,7 @@ const HomePage: React.FC = () => {
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
                     Create intelligent chatbots for customer support, sales, and lead generation with no coding required.
                   </p>
-                  <div className="text-center"></h1></p></div>
+                  <div className="text-center"></h1>
                     <div className="text-lg sm:text-2xl font-bold text-green-400 mb-2">$99/month</div>
                     <a href="/ai-chatbot-builder" className="text-green-400 hover:text-green-300 font-medium text-sm sm:text-base">
                       Learn More →
@@ -373,7 +377,7 @@ const HomePage: React.FC = () => {
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
                     Build native mobile apps with AI assistance, drag-and-drop interface, and instant deployment.
                   </p>
-                  <div className="text-center"></h1></p></div>
+                  <div className="text-center"></h1>
                     <div className="text-lg sm:text-2xl font-bold text-blue-400 mb-2">$399/month</div>
                     <a href="/ai-mobile-builder" className="text-blue-400 hover:text-blue-300 font-medium text-sm sm:text-base">
                       Learn More →
@@ -403,7 +407,7 @@ const HomePage: React.FC = () => {
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
                     Automated invoice creation, payment tracking, and financial reporting with AI-powered insights.
                   </p>
-                  <div className="text-center"></h1></p></div>
+                  <div className="text-center"></h1>
                     <div className="text-lg sm:text-2xl font-bold text-indigo-400 mb-2">$79/month</div>
                     <a href="/ai-invoice-generator" className="text-indigo-400 hover:text-indigo-300 font-medium text-sm sm:text-base">
                       Learn More →
@@ -412,7 +416,8 @@ const HomePage: React.FC = () => {
                 </article>
               </Suspense>
 </div>
-</div>/* IT Services & Infrastructure */}
+</div>
+
           <div className="mb-12"></h1>
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
               IT Services & Infrastructure</h1></div>
@@ -436,7 +441,7 @@ const HomePage: React.FC = () => {
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   Comprehensive security solutions with threat detection, vulnerability assessment, and automated response.
                 </p>
-                <div className="text-center"></h1></p></div>
+                <div className="text-center"></h1>
                   <div className="text-lg sm:text-2xl font-bold text-red-400 mb-2">$799/month</div>
                   <a href="/cybersecurity-suite" className="text-red-400 hover:text-red-300 font-medium text-sm sm:text-base">
                     Learn More →
@@ -462,7 +467,7 @@ const HomePage: React.FC = () => {
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   Database design, optimization, migration, and management with AI-powered performance tuning.
                 </p>
-                <div className="text-center"></h1></p></div>
+                <div className="text-center"></h1>
                   <div className="text-lg sm:text-2xl font-bold text-teal-400 mb-2">$399/month</div>
                   <a href="/database-management" className="text-teal-400 hover:text-teal-300 font-medium text-sm sm:text-base">
                     Learn More →
@@ -488,7 +493,7 @@ const HomePage: React.FC = () => {
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   Native and cross-platform mobile applications with AI integration and modern UX design.
                 </p>
-                <div className="text-center"></h1></p></div>
+                <div className="text-center"></h1>
                   <div className="text-lg sm:text-2xl font-bold text-purple-400 mb-2">$1,999/month</div>
                   <a href="/mobile-app-development" className="text-purple-400 hover:text-purple-300 font-medium text-sm sm:text-base">
                     Learn More →
@@ -514,7 +519,7 @@ const HomePage: React.FC = () => {
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   Comprehensive IT support, system maintenance, and troubleshooting with guaranteed response times.
                 </p>
-                <div className="text-center"></h1></p></div>
+                <div className="text-center"></h1>
                   <div className="text-lg sm:text-2xl font-bold text-cyan-400 mb-2">$499/month</div>
                   <a href="/it-support" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm sm:text-base">
                     Learn More →
@@ -522,7 +527,8 @@ const HomePage: React.FC = () => {
 </div>
               </article>
 </div>
-</div>/* New AI Services Grid */}
+</div>
+
           <div className="mb-12">
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
               Advanced AI Services</h1></div>
@@ -546,7 +552,7 @@ const HomePage: React.FC = () => {
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   Boost sales by 300% with intelligent lead scoring, automated outreach, and CRM integration.
                 </p>
-                <div className="text-center"></h1></p></div>
+                <div className="text-center"></h1>
                   <div className="text-lg sm:text-2xl font-bold text-blue-400 mb-2">Starting at $299/month</div>
                   <a href="/ai-sales-automation" className="text-blue-400 hover:text-blue-300 font-medium text-sm sm:text-base">
                     Learn More →
@@ -572,7 +578,7 @@ const HomePage: React.FC = () => {
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   Transform data into actionable insights with AI-powered visualization, interactive dashboards, and 100+ data sources.
                 </p>
-                <div className="text-center"></h1></p></div>
+                <div className="text-center"></h1>
                   <div className="text-lg sm:text-2xl font-bold text-cyan-400 mb-2">Starting at $149/month</div>
                   <a href="/ai-data-visualization" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm sm:text-base">
                     Learn More →
@@ -598,7 +604,7 @@ const HomePage: React.FC = () => {
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   Automatically extract, process, and analyze documents with AI-powered OCR and intelligent data extraction.
                 </p>
-                <div className="text-center"></h1></p></div>
+                <div className="text-center"></h1>
                   <div className="text-lg sm:text-2xl font-bold text-indigo-400 mb-2">Starting at $149/month</div>
                   <a href="/ai-document-processing" className="text-indigo-400 hover:text-indigo-300 font-medium text-sm sm:text-base">
                     Learn More →
@@ -606,7 +612,8 @@ const HomePage: React.FC = () => {
 </div>
               </article>
 </div>
-</div>/* Emerging Technologies Grid */}
+</div>
+
           <div className="mb-12"></h1>
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
               Emerging Technologies</h1></div>
@@ -630,7 +637,7 @@ const HomePage: React.FC = () => {
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   Connected devices and edge computing solutions for smart cities and industrial automation.
                 </p>
-                <div className="text-center"></h1></p></div>
+                <div className="text-center"></h1>
                   <div className="text-lg font-bold text-green-400 mb-2">Starting at $499/month</div>
                   <a href="/iot-edge-computing" className="text-green-400 hover:text-green-300 font-medium text-sm">
                     Learn More →
@@ -656,7 +663,7 @@ const HomePage: React.FC = () => {
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   Data-driven insights and predictive analytics to optimize business performance and decision-making.
                 </p>
-                <div className="text-center"></h1></p></div>
+                <div className="text-center"></h1>
                   <div className="text-lg font-bold text-pink-400 mb-2">Starting at $399/month</div>
                   <a href="/business-intelligence" className="text-pink-400 hover:text-pink-300 font-medium text-sm">
                     Learn More →
@@ -664,7 +671,8 @@ const HomePage: React.FC = () => {
 </div>
               </article>
 </div>
-</div>/* IT Services Grid */}
+</div>
+
           <div className="mb-12">
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
               IT Services & Infrastructure</h1></div>
@@ -688,7 +696,7 @@ const HomePage: React.FC = () => {
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   Native and cross-platform mobile applications with AI integration and modern UX design.
                 </p>
-                <div className="text-center"></h1></p></div>
+                <div className="text-center"></h1>
                   <div className="text-lg font-bold text-indigo-400 mb-2">Starting at $1,299/month</div>
                   <a href="/ai-mobile-app-development" className="text-indigo-400 hover:text-indigo-300 font-medium text-sm">
                     Learn More →
@@ -709,14 +717,14 @@ const HomePage: React.FC = () => {
 </div>
               </article>
 </div>
-</div></h1></p>
+</div>
         </section>
         <section className="mb-16" aria-labelledby="micro-saas-heading">
           <h2 id="micro-saas-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
             Micro SAAS Solutions
           <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
             Affordable, powerful AI-driven tools for modern businesses. 50+ ready-to-use applications.
-          </p>/* Productivity Tools */}</h1></p></div>
+          </p></h1>
           <div className="mb-12"></h1>
             <h3 className="text-xl sm:text-2xl font-bold text-white mb-6 text-center neon-text">
               Productivity & Business Tools
@@ -727,7 +735,7 @@ const HomePage: React.FC = () => {
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   Advanced AI writing tool for blogs, emails, reports, and content creation with 50+ templates.
                 </p>
-                <div className="text-center"></h1></p></div>
+                <div className="text-center"></h1>
                   <div className="text-lg font-bold text-blue-400 mb-2">$29/month</div>
                   <a href="/ai-writing-assistant" className="text-blue-400 hover:text-blue-300 font-medium text-sm">
                     Try Free →
@@ -753,7 +761,7 @@ const HomePage: React.FC = () => {
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   Intelligent scheduling with calendar optimization, meeting coordination, and time management.
                 </p>
-                <div className="text-center"></h1></p></div>
+                <div className="text-center"></h1>
                   <div className="text-lg font-bold text-purple-400 mb-2">$19/month</div>
                   <a href="/ai-scheduler" className="text-purple-400 hover:text-purple-300 font-medium text-sm">
                     Try Free →
@@ -779,7 +787,7 @@ const HomePage: React.FC = () => {
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   Advanced task management with AI prioritization, team collaboration, and progress tracking.
                 </p>
-                <div className="text-center"></h1></p></div>
+                <div className="text-center"></h1>
                   <div className="text-lg font-bold text-indigo-400 mb-2">$39/month</div>
                   <a href="/task-manager-pro" className="text-indigo-400 hover:text-indigo-300 font-medium text-sm">
                     Try Free →
@@ -805,7 +813,7 @@ const HomePage: React.FC = () => {
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   AI-powered email optimization with subject line suggestions, send time optimization, and A/B testing.
                 </p>
-                <div className="text-center"></h1></p></div>
+                <div className="text-center"></h1>
                   <div className="text-lg font-bold text-cyan-400 mb-2">$25/month</div>
                   <a href="/email-optimizer" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm">
                     Try Free →
@@ -826,7 +834,8 @@ const HomePage: React.FC = () => {
 </div>
               </article>
 </div>
-</div>/* Marketing & Sales Tools */}</div>
+</div>
+          {</div>
           <div className="mb-12">
             <h3 className="text-xl sm:text-2xl font-bold text-white mb-6 text-center neon-text">
               Marketing & Sales Tools
@@ -837,7 +846,7 @@ const HomePage: React.FC = () => {
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   Create stunning graphics, logos, and marketing materials with AI-powered design tools.
                 </p>
-                <div className="text-center"></h1></p></div>
+                <div className="text-center"></h1>
                   <div className="text-lg font-bold text-pink-400 mb-2">$35/month</div>
                   <a href="/ai-design-studio" className="text-pink-400 hover:text-pink-300 font-medium text-sm">
                     Try Free →
@@ -863,7 +872,7 @@ const HomePage: React.FC = () => {
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   AI-powered SEO analysis and optimization with keyword research and content suggestions.
                 </p>
-                <div className="text-center"></h1></p></div>
+                <div className="text-center"></h1>
                   <div className="text-lg font-bold text-green-400 mb-2">$49/month</div>
                   <a href="/seo-optimizer" className="text-green-400 hover:text-green-300 font-medium text-sm">
                     Try Free →
@@ -884,7 +893,8 @@ const HomePage: React.FC = () => {
 </div>
               </article>
 </div>
-</div>/* Developer Tools */}</div>
+</div>
+          {</div>
           <div className="mb-12"></h1>
             <h3 className="text-xl sm:text-2xl font-bold text-white mb-6 text-center neon-text">
               Developer Tools
@@ -895,7 +905,7 @@ const HomePage: React.FC = () => {
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   AI-powered code completion, debugging, and optimization for multiple programming languages.
                 </p>
-                <div className="text-center"></h1></p></div>
+                <div className="text-center"></h1>
                   <div className="text-lg font-bold text-cyan-400 mb-2">$39/month</div>
                   <a href="/code-assistant" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm">
                     Try Free →
@@ -921,7 +931,7 @@ const HomePage: React.FC = () => {
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   Advanced bug tracking with AI-powered issue detection, prioritization, and resolution suggestions.
                 </p>
-                <div className="text-center"></h1></p></div>
+                <div className="text-center"></h1>
                   <div className="text-lg font-bold text-red-400 mb-2">$25/month</div>
                   <a href="/bug-tracker-pro" className="text-red-400 hover:text-red-300 font-medium text-sm">
                     Try Free →
@@ -942,20 +952,20 @@ const HomePage: React.FC = () => {
 </div>
               </article>
 </div>
-</div></h1></p>
+</div>
         </section>
         <Suspense fallback={</div><div className="h-32 bg-gray-100 animate-pulse rounded-lg"></div>>
           <ContentStatistics />
-        </Suspense>/* Content Carousel */}
+        </Suspense>
         <Suspense fallback={<div className="h-64 bg-gray-100 animate-pulse rounded-lg"></div>>
           <ContentCarousel />
-        </Suspense>/* Dynamic Content Showcase */}
+        </Suspense>
         <Suspense fallback={</div><div className="h-96 bg-gray-100 animate-pulse rounded-lg"></div>>
           <DynamicContentShowcase />
-        </Suspense>/* Newsletter Signup */}
+        </Suspense>
         <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse rounded-lg"></div>>
           <ContentNewsletterSignup />
-        </Suspense>/* Contact Section */}</section>
+        </Suspense></section>
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="max-w-6xl mx-auto">
             <h2 id="contact-heading" className="text-3xl sm:text-4xl font-bold text-white mb-8 text-center neon-text">
@@ -965,7 +975,7 @@ const HomePage: React.FC = () => {
               Get in touch with our experts to discuss your AI and IT needs. We're here to help you achieve unprecedented growth.
             </p>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {/* Contact Information */}</h1></p></div>
+              {</h1>
               <div className="cyber-card hologram-card p-8"></h1>
                 <h3 className="text-2xl font-bold text-white mb-6 neon-text">Contact Information</h3>
                 <div className="space-y-6"></h1></div>
@@ -1012,7 +1022,8 @@ const HomePage: React.FC = () => {
 </div>
 </div>
 </div>
-</div>/* Quick Contact Form */}</div>
+</div>
+          {</div>
               <div className="cyber-card hologram-card p-8">
                 <h3 className="text-2xl font-bold text-white mb-6 neon-text">Get Free Consultation</h3>
                 <form className="space-y-6">
@@ -1086,11 +1097,11 @@ const HomePage: React.FC = () => {
 </div>
 </div></button>
         </section></button>
-      </main>/* Footer */}
+      </main>
       <Footer />
 </div>
     </React.Fragment>
-}
+
 export default HomePage</button>
   </label>
   </label>

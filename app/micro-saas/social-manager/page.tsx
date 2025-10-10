@@ -23,7 +23,7 @@ const SocialMediaManagerPage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               AI-powered social media management and automation. Schedule posts, analyze engagement, 
               and grow your social presence with intelligent automation.
-            </p></h1></div>
+            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all flex items-center justify-center space-x-2">
                 <span>Get Started</span>
@@ -40,11 +40,11 @@ const SocialMediaManagerPage: React.FC = () => {
               <h2 className="text-4xl font-bold text-white mb-4">Coming Soon</h2></p>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 We're developing powerful social media management solutions. Stay tuned for updates!
-              </p></h1></p>
+              </p>
 </div>
-</div></h1></p>
+</div>
         </section>
 </div>
     </React.Fragment>
-}
+
 export default SocialMediaManagerPage</button>

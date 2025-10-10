@@ -2,7 +2,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
-    }
+
   ]
   const benefits = [
     'Advanced AI technology integration',
@@ -16,7 +16,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
   ]
   return (</div>
       </section>
-        {/* Features Section */}
+
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16">
@@ -25,7 +25,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our enhancedperformancemonitor solutions deliver unmatched performance, security, and scalability.
-            </p></h1></p>
+            </p>
 </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (</div>
@@ -34,9 +34,9 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
                   <feature.icon className="h-6 w-6 text-white" />
 </div></h1>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3></p>
-                <p className="text-gray-300">{feature.description}</p></h1></p>
+                <p className="text-gray-300">{feature.description}</p>
 </div>)}</div>
-</div></h1></p>
+</div>
       </section>
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="max-w-7xl mx-auto">
@@ -45,7 +45,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
               Key Benefits
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our enhancedperformancemonitor solutions for your business.
-            </p></h1></p>
+            </p>
 </div></div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
@@ -53,7 +53,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" /></p>
                 <p className="text-gray-300 text-lg">{benefit}</p></p>
 </div>)}</div>
-</div></h1></p>
+</div>
       </section>
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="max-w-4xl mx-auto text-center">
@@ -74,7 +74,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 </div>
 </div>
 </div>
-}
+
 export default EnhancedPerformanceMonitorPage</button>
   </button></button>
   </section>

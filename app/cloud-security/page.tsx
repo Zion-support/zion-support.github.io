@@ -4,26 +4,26 @@ import { Helmet } from 'react-helmet-async'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Lock, Eye, ShieldCheck } from 'lucide-react'
 const CloudSecurityPage: React.FC = () => {
   const features = [
-    {
+
 icon: Shield,
       title: 'Advanced Cloud Security',
       description: 'Comprehensive cloud security solutions with enterprise-grade protection'
     },
-    {
+
       icon: Zap,
       title: 'Real-Time Monitoring',
       description: 'Continuous monitoring and threat detection for your cloud infrastructure'
     },
-    {
+
       icon: Brain,
       title: 'AI-Powered Security',
       description: 'Intelligent security solutions powered by advanced AI technology'
     },
-    {
+
       icon: Globe,
       title: 'Global Compliance',
       description: 'Worldwide compliance with security standards and regulations'
-    }
+
   ]
   const benefits = [
 'Advanced cloud security technology',
@@ -49,10 +49,10 @@ icon: Shield,
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business with our advanced cloud security solutions. 
             Powered by cutting-edge AI technology and industry expertise.
-          </p></h1></p>
-</div></h1></p>
+          </p>
+</div>
       </section>
-        {/* Features Section */}
+
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12"></h1>
@@ -61,16 +61,17 @@ icon: Shield,
             </h2></p>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our cloud security solutions deliver unmatched performance, security, and scalability.
-            </p></h1></p>
+            </p>
 </div></div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
                 <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p></h1></p>
+                <p className="text-gray-300">{feature.description}</p>
 </div>)}</div>
-</div>/* Benefits Section */}</h1></p></section>
+</div>
+          {</h1>
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12"></h1>
@@ -78,7 +79,7 @@ icon: Shield,
               Key Benefits</p>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our cloud security solutions for your business.
-            </p></h1></p>
+            </p>
 </div></div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
@@ -123,7 +124,7 @@ icon: Shield,
 </div>
 </div>
 </div>
-}
+
 export default CloudSecurityPage</button>
   </button>
   </button>

@@ -3,26 +3,26 @@ import React from 'react'
 'use client'
 const PageBackupPage: React.FC = () => {
   const features = [
-    {
+
       icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency'
     },
-    {
+
       icon: Zap,
       title: 'High Performance',
       description: 'Lightning-fast processing and real-time analytics for optimal results'
     },
-    {
+
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards'
     },
-    {
+
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
-    }
+
   ]
   const benefits = [
     'Advanced AI technology integration',
@@ -46,10 +46,10 @@ const PageBackupPage: React.FC = () => {
             </p></p>
 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p></h1></p>
+                <p className="text-gray-300">{feature.description}</p>
 </div>
 </div>)}</div>
-</div></h1></p>
+</div>
       </section>
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center"></div>
@@ -72,6 +72,6 @@ const PageBackupPage: React.FC = () => {
 </div></button>
       </section>
 </div>
-}
+
 export default PageBackupPage</button>
   </button>

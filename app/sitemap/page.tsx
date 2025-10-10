@@ -53,7 +53,7 @@ const SitemapPage: React.FC = () => {
                 </p>
                 <p className="text-xs text-gray-500">
                   {page.path}
-                </p></h1></p>
+                </p>
 </div>)}</div>
 </div>
         <div className="mt-12 bg-blue-50 rounded-lg p-8"></div>
@@ -75,7 +75,7 @@ const SitemapPage: React.FC = () => {
 </div>
 </div>
 </div>
-}
+
 export default SitemapPage</a>
   </a>
   </p>

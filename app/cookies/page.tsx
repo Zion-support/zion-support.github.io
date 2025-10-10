@@ -17,7 +17,7 @@ const CookiesPage: React.FC = () => {
             <div className="max-w-4xl mx-auto"></div>
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
                 Cookie Policy</h1>
-              </h1></h1></div>
+              </h1>
               <div className="prose prose-lg max-w-none"></div>
                 <p className="text-xl text-gray-600 mb-8">
                   Last updated: {new Date().toLocaleDateString()}
@@ -33,7 +33,7 @@ const CookiesPage: React.FC = () => {
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">Managing Cookies</h2></p>
                 <p className="text-gray-700 mb-6">
                   You can control and/or delete cookies as you wish through your browser settings.
-                </p></h1></p>
+                </p>
 </div>
 </div>
 </div>
@@ -41,5 +41,5 @@ const CookiesPage: React.FC = () => {
         <Footer />
 </div>
     </React.Fragment>
-}
+
 export default CookiesPage

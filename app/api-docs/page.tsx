@@ -11,14 +11,14 @@ export default function APIDocsPage() {
     navigator.clipboard.writeText(code)
     setCopiedCode(id)
     setTimeout(() => setCopiedCode(null), 2000)
-  }
+
   const apiEndpoints = [
-    {
+
       title: 'AI Services',
       description: 'Artificial Intelligence and Machine Learning APIs',
       icon: Brain,
       endpoints: [
-        {
+
           name: 'Text Analysis',
           method: 'POST',
           path: '/api/ai/text-analysis',
@@ -31,7 +31,7 @@ export default function APIDocsPage() {
     "features": ["sentiment", "entities", "key_phrases"]
   }'`
         },
-        {
+
           name: 'Image Recognition',
           method: 'POST',
           path: '/api/ai/image-recognition',
@@ -43,15 +43,15 @@ export default function APIDocsPage() {
     "image_url": "https://example.com/image.jpg",
     "features": ["objects", "faces", "text"]
   }'`
-        }
+
       ]
     },
-    {
+
       title: 'Cloud Services',
       description: 'Cloud infrastructure and deployment APIs',
       icon: Cloud,
       endpoints: [
-        {
+
           name: 'Deploy Application',
           method: 'POST',
           path: '/api/cloud/deploy',
@@ -66,17 +66,17 @@ export default function APIDocsPage() {
       "cpu": "2",
       "memory": "4GB",
       "instances": 3
-    }
+
   }'`
-        }
+
       ]
     },
-    {
+
       title: 'Data Analytics',
       description: 'Data processing and analytics APIs',
       icon: Database,
       endpoints: [
-        {
+
           name: 'Process Data',
           method: 'POST',
           path: '/api/analytics/process',
@@ -89,9 +89,9 @@ export default function APIDocsPage() {
     "operations": ["aggregate", "filter", "transform"],
     "output_format": "json"
   }'`
-        }
+
       ]
-    }
+
   ]
   const filteredEndpoints = apiEndpoints.map(category => ({
     ...category,
@@ -109,7 +109,7 @@ export default function APIDocsPage() {
         keywords="API documentation, REST API, AI API, cloud API, integration, developer tools, API reference"
       />
       <Navigation />
-      {/* Hero Section */}
+
 <section className="relative py-20 px-4 overflow-hidden">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl font-bold text-white mb-6">
@@ -177,7 +177,7 @@ export default function APIDocsPage() {
 </div>
                   <div>
                     <h3 className="text-2xl font-bold text-white mb-2">{category.title}</h3>
-                    <p className="text-gray-300">{category.description}</p></h1></p>
+                    <p className="text-gray-300">{category.description}</p>
 </div>
 </div></div>
                 <div className="space-y-6">
@@ -208,7 +208,7 @@ export default function APIDocsPage() {
                             </React.Fragment>}
                         </button></button>
 </div></p>
-                      <p className="text-gray-300 mb-4">{endpoint.description}</p></p></div>
+                      <p className="text-gray-300 mb-4">{endpoint.description}</p>
                       <div className="bg-slate-900 rounded-lg p-4 overflow-x-auto">
                         <pre className="text-gray-300 text-sm">
                           <code>{endpoint.code}</code>
@@ -236,7 +236,7 @@ export default function APIDocsPage() {
       </section>
       <Footer />
 </div>
-}
+
   </button>
   </button>
   </button>

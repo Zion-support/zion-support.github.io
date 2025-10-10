@@ -26,26 +26,26 @@ import {
 } from 'lucide-react'
 const PenetrationTestingPage: React.FC = () => {
   const features = [
-    {
+
       icon: Search,
       title: 'Comprehensive Vulnerability Assessment',
       description: 'Thorough testing of your systems to identify security weaknesses and potential attack vectors.'
     },
-    {
+
       icon: Target,
       title: 'Simulated Attack Scenarios',
       description: 'Real-world attack simulations to test your defenses and response capabilities.'
     },
-    {
+
       icon: BarChart,
       title: 'Detailed Security Reports',
       description: 'Comprehensive reports with prioritized recommendations and remediation guidance.'
     },
-    {
+
       icon: Zap,
       title: 'Expert Security Analysis',
       description: 'Professional security experts conduct thorough testing using industry-standard methodologies.'
-    }
+
   ]
   const benefits = [
     'Identify security vulnerabilities before attackers do',
@@ -65,7 +65,7 @@ const PenetrationTestingPage: React.FC = () => {
         <meta name="keywords" content="penetration testing, security assessment, vulnerability testing, security audit, Zion Tech Group" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
+
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -86,7 +86,7 @@ const PenetrationTestingPage: React.FC = () => {
 </div>
 </div></button>
         </section>
-        {/* Features Section */}</section>
+        {</section>
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></h1>
@@ -94,7 +94,7 @@ const PenetrationTestingPage: React.FC = () => {
                 Our Penetration Testing Approach</p>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 We use industry-standard methodologies and cutting-edge tools to thoroughly assess your security posture.
-              </p></h1></p>
+              </p>
 </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (</div>
@@ -103,9 +103,9 @@ const PenetrationTestingPage: React.FC = () => {
                     <feature.icon className="h-6 w-6 text-white" />
 </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p></h1></p>
+                  <p className="text-gray-300">{feature.description}</p>
 </div>)}</div>
-</div></h1></p>
+</div>
         </section>
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="max-w-7xl mx-auto">
@@ -114,7 +114,7 @@ const PenetrationTestingPage: React.FC = () => {
                 Key Benefits</p>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Strengthen your security defenses with our comprehensive penetration testing services.
-              </p></h1></p>
+              </p>
 </div></div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {benefits.map((benefit, index) => (
@@ -122,7 +122,7 @@ const PenetrationTestingPage: React.FC = () => {
                   <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                   <p className="text-gray-300 text-lg">{benefit}</p></p>
 </div>)}</div>
-</div></h1></p>
+</div>
         </section>
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="max-w-4xl mx-auto text-center">
@@ -146,7 +146,7 @@ const PenetrationTestingPage: React.FC = () => {
         </section>
 </div>
     </React.Fragment>
-}
+
 export default PenetrationTestingPage</button>
   </button>
   </h2>

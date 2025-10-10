@@ -27,7 +27,7 @@ interface ImageProps {}
   style?: React.CSSProperties
   onLoad?: () => void
   onError?: () => void }
-}
+
 export const Image: React.FC<ImageProps>= ({
 export const Image: React.FC<ImageProps> = ({}
   src,
@@ -74,7 +74,7 @@ export const Image: React.FC<ImageProps> = ({,
       height: '100%',
       objectFit: 'cover'}
     })
-  }
+
   if (hasError) {</ImageProps>eturn (</ImageProps>f (hasError) {}
     return (
       <div}
@@ -82,19 +82,19 @@ export const Image: React.FC<ImageProps> = ({,
     return(<div}
 'use client'
 import React, { useState, useCallback } from 'react'
-interface ImageProps {/* TODO: Fix JSX expression */}
-}
+interface ImageProps {
+
 export const,
-  Image: React.FC<ImageProps> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
+  Image: React.FC<ImageProps> = ({)
+}) => {
   }, [onLoad])
-  const handleError = useCallback(() => {/* TODO: Fix JSX expression */}
+  const handleError = useCallback(() => {
   }, [onError])
   const,
-  imageStyle: React.CSSProperties = {/* TODO: Fix JSX expression */}
+  imageStyle: React.CSSProperties = {
     })
-  }
-  if (hasError) {/* TODO: Fix JSX expression */}
+
+  if (hasError) {
         className={`bg-gray-200 flex items-center justify-center ${className}`}
         style={imageStyle}
         {...props})
@@ -106,7 +106,7 @@ export const,
       ></div>
         <span className="text-gray-500 text-sm"></span></span><span className="sr-only">Screen reader: </span>ailed to load image</span></span>
 </div>
-  }
+
   return(<img
   return (<img></img>rc={src}
       alt={alt}
@@ -125,11 +125,11 @@ export const,
       {...props})
     />)
   )
-}
+
 export default Image
     />)
   )
-}
+
 export default Image
 "`
   </ImageProps>

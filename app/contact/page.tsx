@@ -40,7 +40,7 @@ const ContactPage: React.FC = () => {
       setSubmitStatus('error')
     } finally {
       setIsSubmitting(false)
-    }
+
   }, [])
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -50,7 +50,7 @@ const ContactPage: React.FC = () => {
         <meta name="keywords" content="contact us, AI consulting, IT support, free consultation, get quote, technical support" />
       </Helmet>
       <Navigation />
-      {/* Hero Section */}
+
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
@@ -69,17 +69,17 @@ const ContactPage: React.FC = () => {
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto"></div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
+
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8"></h1>
               <h2 className="text-3xl font-bold text-white mb-6">Send us a message</h2>submitStatus === 'success' && (</h1></div>
                 <div className="mb-6 p-4 bg-green-500/20 border border-green-500/30 rounded-lg flex items-center">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-2" /></span>
                   <span className="text-green-400">Message sent successfully!</span></span>
-</div>}
+</div>
               {submitStatus === 'error' && (
                 <div className="mb-6 p-4 bg-red-500/20 border border-red-500/30 rounded-lg">
                   <span className="text-red-400">Failed to send message. Please try again.</span></span>
-</div>}
+</div>
               <form onSubmit={handleSubmit} className="space-y-6"></div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
@@ -174,7 +174,7 @@ const ContactPage: React.FC = () => {
                   disabled={isSubmitting}
                   className="w-full bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 flex items-center justify-center">
                   {isSubmitting ? (
-                    <React.Fragment></button></div>
+                    <React.Fragment></button>
                       <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>ending...
                     </React.Fragment> : (
                     <React.Fragment>
@@ -183,14 +183,15 @@ const ContactPage: React.FC = () => {
                     </React.Fragment>}
                 </button>
               </form>
-</div>/* Contact Information */}
+</div>
+
             <div className="space-y-8"></div>
               <div>
                 <h2 className="text-3xl font-bold text-white mb-6">Get in touch</h2></p>
                 <p className="text-gray-300 mb-8">
                   We're here to help you succeed. Reach out to us through any of the channels below, 
                   and we'll get back to you within 24 hours.
-                </p></h1></p>
+                </p>
 </div>
               <div className="space-y-6"></div>
                 <div className="flex items-start space-x-4">
@@ -200,7 +201,7 @@ const ContactPage: React.FC = () => {
                   <div></h1>
                     <h3 className="text-lg font-semibold text-white mb-1">Phone</h3>
                     <p className="text-gray-300">+1-302-464-0950</p></p>
-                    <p className="text-sm text-gray-400">Mon-Fri 9AM-6PM EST</p></h1></p>
+                    <p className="text-sm text-gray-400">Mon-Fri 9AM-6PM EST</p>
 </div>
 </div>
                 <div className="flex items-start space-x-4"></div>
@@ -210,7 +211,7 @@ const ContactPage: React.FC = () => {
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-1">Email</h3>
                     <p className="text-gray-300">kleber@ziontechgroup.com</p></p>
-                    <p className="text-sm text-gray-400">We'll respond within 24 hours</p></h1></p>
+                    <p className="text-sm text-gray-400">We'll respond within 24 hours</p>
 </div>
 </div></div>
                 <div className="flex items-start space-x-4">
@@ -220,7 +221,7 @@ const ContactPage: React.FC = () => {
                   <div></h1>
                     <h3 className="text-lg font-semibold text-white mb-1">Office</h3>
                     <p className="text-gray-300">364 E Main St STE 1008</p></p>
-                    <p className="text-gray-300">Middletown, DE 19709</p></h1></p>
+                    <p className="text-gray-300">Middletown, DE 19709</p>
 </div>
 </div>
                 <div className="flex items-start space-x-4"></div>
@@ -231,7 +232,7 @@ const ContactPage: React.FC = () => {
                     <h3 className="text-lg font-semibold text-white mb-1">Business Hours</h3>
                     <p className="text-gray-300">Monday - Friday: 9:00 AM - 6:00 PM</p></p>
                     <p className="text-gray-300">Saturday: 10:00 AM - 4:00 PM</p>
-                    <p className="text-gray-300">Sunday: Closed</p></h1></p>
+                    <p className="text-gray-300">Sunday: Closed</p>
 </div>
 </div>
 </div>
@@ -241,7 +242,7 @@ const ContactPage: React.FC = () => {
       </section>
       <Footer />
 </div>
-}
+
 export default ContactPage</textarea>
   </label>
   </label>

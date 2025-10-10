@@ -3,36 +3,36 @@ import { Helmet } from 'react-helmet-async'
 import { BarChart, TrendingUp, Users, DollarSign, Zap, Target, ArrowRight, CheckCircle, Star, Award, Clock, Shield } from 'lucide-react'
 const AIAnalyticsDashboardPage: React.FC = () => {
   const features = [
-    {
+
       icon: BarChart,
       title: 'Real-time Analytics',
       description: 'Live data visualization with instant updates and interactive charts.'
     },
-    {
+
       icon: TrendingUp,
       title: 'Predictive Insights',
       description: 'AI-powered forecasting and trend analysis for better decision making.'
     },
-    {
+
       icon: Users,
       title: 'User Behavior Tracking',
       description: 'Comprehensive user analytics and engagement metrics tracking.'
     },
-    {
+
       icon: DollarSign,
       title: 'Revenue Analytics',
       description: 'Detailed financial metrics and revenue optimization insights.'
     },
-    {
+
       icon: Zap,
       title: 'Custom Dashboards',
       description: 'Build personalized dashboards tailored to your business needs.'
     },
-    {
+
       icon: Target,
       title: 'Goal Tracking',
       description: 'Monitor KPIs and business objectives with automated alerts.'
-    }
+
   ]
   const benefits = [
     'Real-time data visualization and reporting',
@@ -57,7 +57,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
         <link rel="canonical" href="https://ziontechgroup.com/micro-saas/analytics-dashboard" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}</div>
+        {</div>
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div></div>
@@ -84,7 +84,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
 </div>
 </div></button>
         </section>
-        {/* Features Section */}</section>
+        {</section>
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div></h1>
@@ -99,9 +99,9 @@ const AIAnalyticsDashboardPage: React.FC = () => {
                     <feature.icon className="w-6 h-6 text-white" />
 </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p></h1></p>
+                  <p className="text-gray-300">{feature.description}</p>
 </div>)}</div>
-</div></h1></p>
+</div>
         </section>
         <section className="py-16 px-4 bg-slate-800/30">
           <div className="max-w-7xl mx-auto"></div></div>
@@ -119,7 +119,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
                   <div className="text-3xl font-bold text-white mb-2">{metric.value}</div>
                   <div className="text-gray-300">{metric.label}</div>
 </div>)}</div>
-</div></h1></p>
+</div>
         </section>
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="max-w-7xl mx-auto"></div>
@@ -136,7 +136,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
                     <span className="text-gray-300 text-lg">{benefit}</span></span>
 </div>)}</div>
               <div className="bg-gradient-to-br from-green-600/20 to-cyan-600/20 rounded-lg p-8 border border-green-500/30"></div></h1>
-                <h3 className="text-2xl font-bold text-white mb-4">Success Stories</h3></h1></div>
+                <h3 className="text-2xl font-bold text-white mb-4">Success Stories</h3>
                 <div className="space-y-4"></div>
                   <div className="flex items-center space-x-3"></div>
                     <Star className="w-5 h-5 text-yellow-400" />
@@ -178,7 +178,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
         </section>
 </div>
     </React.Fragment>
-}
+
 export default AIAnalyticsDashboardPage</button>
   </p>
   </p>

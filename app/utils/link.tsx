@@ -9,7 +9,7 @@ interface LinkProps {}
   rel?: string
   onClick?: () => void
   'aria-label'?: string }
-}
+
 export const Link: React.FC<LinkProps>= ({
 export const Link: React.FC<LinkProps> = ({}
   href,
@@ -20,7 +20,7 @@ export const Link: React.FC<LinkProps> = ({}
   rel?: string
   onClick?: () => void
   'aria-label'?: string }
-}
+
 export const Link: React.FC<LinkProps> = ({,
   href
   children,
@@ -34,28 +34,27 @@ export const Link: React.FC<LinkProps> = ({,
   const handleClick = useCallback((...args) => {}
     if (onClick) {}
       onClick() }
-    }
+
     // Handle internal navigation
     if (href.startsWith('/') && !href.startsWith('//')) {
     // Handle internal navigation
     if (href.startsWith('/') && !href.startsWith('//')) {}
       e.preventDefault()
       window.location.href = href }
-    }
+
   }</LinkProps>eturn (<a
-  }
+
   return(<a
 import React from 'react'
-interface LinkProps {/* TODO: Fix JSX expression */}
-}
+interface LinkProps {
+
 export const,
-  Link: React.FC<LinkProps> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
-    }
+  Link: React.FC<LinkProps> = ({)
+}) => {
+
     // Handle internal navigation
-    if (href.startsWith('/') && !href.startsWith('//')) {/* TODO: Fix JSX expression */}
-    }
-  }
+    if (href.startsWith('/') && !href.startsWith('//')) {
+
   return (<a></a>ref={href}
       className={className}
       target={target}
@@ -70,13 +69,13 @@ export const,
       {children})
     </a>
   )
-}
+
 export default Link
     >
       {children}
     </a>
   )
-}
+
 export default Link</LinkProps>
   </LinkProps>
   </LinkProps>

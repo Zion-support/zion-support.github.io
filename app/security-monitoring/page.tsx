@@ -24,26 +24,26 @@ import {
 } from 'lucide-react'
 const SecurityMonitoringPage: React.FC = () => {
   const features = [
-    {
+
       icon: Eye,
       title: '24/7 Real-time Monitoring',
       description: 'Continuous surveillance of your entire IT infrastructure with instant threat detection and response.'
     },
-    {
+
       icon: AlertTriangle,
       title: 'Advanced Threat Detection',
       description: 'AI-powered analysis to identify sophisticated cyber threats before they impact your business.'
     },
-    {
+
       icon: BarChart,
       title: 'Comprehensive Analytics',
       description: 'Detailed security reports and insights to help you understand and improve your security posture.'
     },
-    {
+
       icon: Zap,
       title: 'Instant Response',
       description: 'Automated incident response and immediate notification systems to minimize security breaches.'
-    }
+
   ]
   const benefits = [
     '24/7 continuous security monitoring',
@@ -63,7 +63,7 @@ const SecurityMonitoringPage: React.FC = () => {
         <meta name="keywords" content="security monitoring, cybersecurity, threat detection, 24/7 monitoring, security alerts, Zion Tech Group" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
+
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -84,7 +84,7 @@ const SecurityMonitoringPage: React.FC = () => {
 </div>
 </div></button>
         </section>
-        {/* Features Section */}</section>
+        {</section>
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></h1>
@@ -93,7 +93,7 @@ const SecurityMonitoringPage: React.FC = () => {
               </h2></p>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our security monitoring solutions deliver unmatched protection with cutting-edge technology and expert oversight.
-              </p></h1></p>
+              </p>
 </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (</div>
@@ -102,9 +102,9 @@ const SecurityMonitoringPage: React.FC = () => {
                     <feature.icon className="h-6 w-6 text-white" />
 </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p></h1></p>
+                  <p className="text-gray-300">{feature.description}</p>
 </div>)}</div>
-</div></h1></p>
+</div>
         </section>
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="max-w-7xl mx-auto">
@@ -113,7 +113,7 @@ const SecurityMonitoringPage: React.FC = () => {
                 Key Benefits</p>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Experience comprehensive security protection with our advanced monitoring services.
-              </p></h1></p>
+              </p>
 </div></div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {benefits.map((benefit, index) => (
@@ -121,7 +121,7 @@ const SecurityMonitoringPage: React.FC = () => {
                   <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                   <p className="text-gray-300 text-lg">{benefit}</p></p>
 </div>)}</div>
-</div></h1></p>
+</div>
         </section>
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="max-w-4xl mx-auto text-center">
@@ -145,7 +145,7 @@ const SecurityMonitoringPage: React.FC = () => {
         </section>
 </div>
     </React.Fragment>
-}
+
 export default SecurityMonitoringPage</button>
   </button>
   </h2>

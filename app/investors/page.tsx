@@ -4,12 +4,12 @@ import { Helmet } from 'react-helmet-async'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 const PagePage: React.FC = () => {
   const features = [
-    {
+
       icon: Zap,
       title: 'High Performance',
       description: 'Lightning-fast processing and real-time analytics for optimal results'
     },
-    {
+
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -17,29 +17,29 @@ const PagePage: React.FC = () => {
         <title>Page | Zion Tech Group</title>
         <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
-      </Helmet>/* Hero Section */}
+      </Helmet>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our Page?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our page solutions deliver unmatched performance, security, and scalability.
-            </p></h1></p>
+            </p>
 </div></h1>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3></p>
-                <p className="text-gray-300">{feature.description}</p></h1></p>
+                <p className="text-gray-300">{feature.description}</p>
 </div>)}</div>
-</div></h1></p>
+</div>
       </section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Key Benefits
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our page solutions for your business.
-            </p></h1></p>
+            </p>
 </div>)}</div>
-</div></h1></p>
-      </section>
 </div>
       </section>
 </div>
-}
+      </section>
+</div>
+
 export default PagePage</h2>

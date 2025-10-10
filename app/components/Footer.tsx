@@ -91,11 +91,12 @@ const Footer: React.FC = memo(() => {
     hours: 'Mon-Fri: 9AM-6PM EST',
     emergency: '24/7 Emergency Support Available'
   }
+
   return (
     <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-12"></div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-          {/* AI Services */}
+
           <div>
             <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
               <Brain className="w-5 h-5 mr-2" />
@@ -120,7 +121,7 @@ const Footer: React.FC = memo(() => {
               </li>
             </ul>
           </div>
-          {/* IT Services */}
+
           <div>
             <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
               <Cloud className="w-5 h-5 mr-2" />
@@ -145,7 +146,7 @@ const Footer: React.FC = memo(() => {
               </li>
             </ul>
           </div>
-          {/* Micro SAAS */}
+
           <div>
             <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
               <Code className="w-5 h-5 mr-2" />
@@ -158,7 +159,8 @@ const Footer: React.FC = memo(() => {
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
                     {service.name}
                   </Link>
-                </li>)}
+                </li>
+              ))}
               <li>
                 <Link 
                   href="/micro-saas"
@@ -167,7 +169,8 @@ const Footer: React.FC = memo(() => {
                 </Link>
               </li>
             </ul></h1>
-</div>/* Emerging Technologies */}</div>
+</div>
+          {</div>
           <div></h1>
             <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
               <Zap className="w-5 h-5 mr-2" />
@@ -180,9 +183,11 @@ const Footer: React.FC = memo(() => {
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
                     {service.name}
                   </Link>
-                </li>)}
+                </li>
+              ))}
             </ul></h1>
-</div>/* Company & Support */}
+</div>
+
           <div>
             <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
               <Users className="w-5 h-5 mr-2" />
@@ -195,7 +200,8 @@ const Footer: React.FC = memo(() => {
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
                     {link.name}
                   </Link>
-                </li>)}
+                </li>
+              ))}
             </ul></h1>
             <h3 className="text-lg font-semibold mb-4 text-cyan-400">Support</h3>
             <ul className="space-y-2 mb-6">
@@ -206,8 +212,9 @@ const Footer: React.FC = memo(() => {
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
                     {link.name}
                   </Link>
-                </li>)}
-            </ul></h1></div>
+                </li>
+              ))}
+            </ul>
             <div className="space-y-3">
               <div className="flex items-center text-sm text-gray-300">
                 <Phone className="w-4 h-4 mr-2 text-cyan-400" />

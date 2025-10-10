@@ -3,26 +3,26 @@ import React from 'react'
 import { Helmet } from 'react-helmet-async'
 const ServiceWorkerRegistrationPage: React.FC = () => {
   const features = [
-    {
+
       icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency'
     },
-    {
+
       icon: Zap,
       title: 'High Performance',
       description: 'Lightning-fast processing and real-time analytics for optimal results'
     },
-    {
+
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards'
     },
-    {
+
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
-    }
+
   ]
   const benefits = [
     'Advanced AI technology integration',
@@ -40,7 +40,7 @@ const ServiceWorkerRegistrationPage: React.FC = () => {
         <title>ServiceWorkerRegistration | Zion Tech Group</title>
         <meta name="description" content="Professional ServiceWorkerRegistration services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="ServiceWorkerRegistration, AI solutions, IT services, Zion Tech Group, serviceworkerregistration" />
-      </Helmet>/* Hero Section */}
+      </Helmet>
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
@@ -53,7 +53,7 @@ const ServiceWorkerRegistrationPage: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your business with our advanced serviceworkerregistration solutions. 
               Powered by cutting-edge AI technology and industry expertise.
-            </p></h1></div>
+            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
                 Get Started
@@ -65,7 +65,7 @@ const ServiceWorkerRegistrationPage: React.FC = () => {
 </div>
 </div></button>
       </section>
-        {/* Features Section */}</section>
+        {</section>
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></h1>
@@ -74,7 +74,7 @@ const ServiceWorkerRegistrationPage: React.FC = () => {
             </h2></p>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our serviceworkerregistration solutions deliver unmatched performance, security, and scalability.
-            </p></h1></p>
+            </p>
 </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (</div>
@@ -83,9 +83,9 @@ const ServiceWorkerRegistrationPage: React.FC = () => {
                   <feature.icon className="h-6 w-6 text-white" />
 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p></h1></p>
+                <p className="text-gray-300">{feature.description}</p>
 </div>)}</div>
-</div></h1></p>
+</div>
       </section>
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="max-w-7xl mx-auto">
@@ -94,7 +94,7 @@ const ServiceWorkerRegistrationPage: React.FC = () => {
               Key Benefits</p>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our serviceworkerregistration solutions for your business.
-            </p></h1></p>
+            </p>
 </div></div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
@@ -102,7 +102,7 @@ const ServiceWorkerRegistrationPage: React.FC = () => {
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-lg">{benefit}</p></p>
 </div>)}</div>
-</div></h1></p>
+</div>
       </section>
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="max-w-4xl mx-auto text-center">
@@ -125,7 +125,7 @@ const ServiceWorkerRegistrationPage: React.FC = () => {
 </div></button>
       </section>
 </div>
-}
+
 export default ServiceWorkerRegistrationPage</button>
   </button>
   </h2>

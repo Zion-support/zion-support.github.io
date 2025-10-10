@@ -11,29 +11,29 @@ interface ContentNewsletterSignupProps {
     text: string
   }>
   onSubscribe?: (email: string) => void
-}
+
 const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
   title = "Stay Updated with Our Latest Insights",
   subtitle = "Get exclusive content, industry insights, and early access to new features delivered to your inbox.",
   placeholder = "Enter your email address",
   buttonText = "Subscribe Now",
   features = [
-    {
+
       icon: CheckCircle,
       text: "Weekly industry insights"
     },
-    {
+
       icon: Star,
       text: "Exclusive content and tips"
     },
-    {
+
       icon: Users,
       text: "Join 10,000+ subscribers"
     },
-    {
+
       icon: Globe,
       text: "Global community access"
-    }
+
   ],
   onSubscribe
 }) => {
@@ -50,15 +50,14 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
       } else {
         // Simulate API call
         await new Promise(resolve => setTimeout(resolve, 1000))
-      }
+
       setIsSubscribed(true)
       setEmail('')
     } catch (error) {
       console.error('Subscription failed:', error)
     } finally {
       setIsLoading(false)
-    }
-  }
+
   if (isSubscribed) {
     return (
       <div className="bg-gradient-to-r from-green-500 to-blue-600 py-16 px-4"></div>
@@ -78,12 +77,12 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
             Subscribe another email</button>
 </div>
 </div>
-  }
+
   return (</div>
     <div className="bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 py-16 px-4">
       <div className="max-w-6xl mx-auto"></div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Content */}
+
           <div></h1>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               {title}
@@ -99,7 +98,8 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
 </div>
                   <span className="text-blue-100">{feature.text}</span></span>
 </div>)}</div>
-</div>/* Newsletter Form */}
+</div>
+
           <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8">
             <form onSubmit={handleSubmit} className="space-y-6"></div>
               <div>
@@ -121,7 +121,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
                 className="w-full bg-white text-purple-600 font-bold py-3 px-6 rounded-lg hover:bg-blue-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 flex items-center justify-center">
                 {isLoading ? (
                   <React.Fragment>
-                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-purple-600 mr-2"></button></div>ubscribing...
+                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-purple-600 mr-2"></button>ubscribing...
                   </React.Fragment> : (
                   <React.Fragment>
                     {buttonText}
@@ -136,7 +136,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
 </div>
 </div>
 </div>
-}
+
 export default ContentNewsletterSignup</label>
   </button>
   </ContentNewsletterSignupProps>

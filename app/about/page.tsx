@@ -45,7 +45,7 @@ const AboutPage: React.FC = () => {
         <meta name="keywords" content="about us, Zion Tech Group, AI solutions, IT services, team, mission, values, innovation" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
+
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -53,9 +53,9 @@ const AboutPage: React.FC = () => {
                 About Zion Tech Group
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 We are pioneers in AI and IT solutions, dedicated to transforming businesses through innovative technology and cutting-edge artificial intelligence.
-              </p></h1></p>
+              </p>
 </div>
-</div></h1></p>
+</div>
         </section>
 <section className="relative py-20 px-4 overflow-hidden">
           <div className="container mx-auto px-4">
@@ -113,7 +113,7 @@ const AboutPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Our Values</h2></p>
-              <p className="text-xl text-gray-300">The principles that guide everything we do</p></h1></p>
+              <p className="text-xl text-gray-300">The principles that guide everything we do</p>
 </div></div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="cyber-card p-6"></div>
@@ -121,24 +121,24 @@ const AboutPage: React.FC = () => {
                   <Shield className="w-6 h-6 text-white" />
 </div></h1>
                 <h3 className="text-xl font-semibold text-white mb-3">Innovation</h3>
-                <p className="text-gray-300">We constantly push the boundaries of what's possible with technology.</p></h1></p>
+                <p className="text-gray-300">We constantly push the boundaries of what's possible with technology.</p>
 </div>
               <div className="cyber-card p-6"></div>
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">
                   <Users className="w-6 h-6 text-white" />
 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">Collaboration</h3></p>
-                <p className="text-gray-300">We work closely with our clients to achieve their goals.</p></h1></p>
+                <p className="text-gray-300">We work closely with our clients to achieve their goals.</p>
 </div>
               <div className="cyber-card p-6"></div>
                 <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-red-600 rounded-lg flex items-center justify-center mb-4">
                   <Target className="w-6 h-6 text-white" />
 </div></h1>
                 <h3 className="text-xl font-semibold text-white mb-3">Excellence</h3>
-                <p className="text-gray-300">We deliver exceptional results that exceed expectations.</p></h1></p>
+                <p className="text-gray-300">We deliver exceptional results that exceed expectations.</p>
 </div>
 </div>
-</div></h1></p>
+</div>
         </section>
         <section className="py-16 px-4 bg-gradient-to-r from-cyan-600 to-purple-600">
           <div className="max-w-4xl mx-auto text-center">
@@ -156,7 +156,7 @@ const AboutPage: React.FC = () => {
         </section>
 </div>
     </React.Fragment>
-}
+
 export default AboutPage</button>
   </button>
   </h1>

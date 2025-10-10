@@ -16,11 +16,11 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
               Key Benefits
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our page solutions for your business.
-            </p></h1></p>
+            </p>
 </div>
 </div>
-</div></h1></p>
+</div>
       </section>
 </div>
-}
+
 export default PagePage</h2>

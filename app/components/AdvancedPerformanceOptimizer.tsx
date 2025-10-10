@@ -3,7 +3,7 @@ import React, { useEffect, useState, useCallback } from 'react'
 interface PerformanceOptimizerProps {
   children: React.ReactNode
   enableOptimizations?: boolean
-}
+
 const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   children,
   enableOptimizations = true
@@ -24,12 +24,12 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       if (!img.hasAttribute('loading')) {
         img.setAttribute('loading', 'lazy')
         optimizedCount++
-      }
+
       // Add decoding attribute for better performance
       if (!img.hasAttribute('decoding')) {
         img.setAttribute('decoding', 'async')
         optimizedCount++
-      }
+
     })
     return optimizedCount
   }, [])
@@ -42,7 +42,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       if (!script.hasAttribute('defer') && !script.hasAttribute('async')) {
         script.setAttribute('defer', '')
         optimizedCount++
-      }
+
     })
     return optimizedCount
   }, [])
@@ -56,7 +56,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         link.setAttribute('media', 'print')
         link.setAttribute('onload', "this.media='all'")
         optimizedCount++
-      }
+
     })
     return optimizedCount
   }, [])
@@ -88,8 +88,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           const navEntry = entry as PerformanceNavigationTiming
           if (navEntry.loadEventEnd - navEntry.loadEventStart > 1000) {
             console.warn('Page load time exceeded 1 second')
-          }
-        }
+
       })
     })
     observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] })
@@ -115,5 +114,5 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           <div>CSS: {optimizationMetrics.cssOptimized}</div></div>
           <div>Total: {optimizationMetrics.totalSavings}</div>
 </div>}</div>
-}
+
 export default AdvancedPerformanceOptimizer</PerformanceOptimizerProps>

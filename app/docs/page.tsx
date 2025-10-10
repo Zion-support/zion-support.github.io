@@ -7,7 +7,7 @@ import SEOOptimizer from '../components/SEOOptimizer'
 export default function DocsPage() {
   const [searchQuery, setSearchQuery] = useState('')
   const docCategories = [
-    {
+
       title: 'Getting Started',
       icon: 'rocket',
       description: 'Quick start guides and basic setup instructions',
@@ -17,7 +17,7 @@ export default function DocsPage() {
         { title: 'Configuration', description: 'Configure your environment', link: '/docs/configuration' }
       ]
     },
-    {
+
       title: 'API Reference',
       icon: 'code',
       description: 'Complete API documentation and endpoints',
@@ -27,7 +27,7 @@ export default function DocsPage() {
         { title: 'SDKs', description: 'Client SDKs and libraries', link: '/docs/api/sdks' }
       ]
     },
-    {
+
       title: 'AI Solutions',
       icon: 'brain',
       description: 'AI and machine learning documentation',
@@ -37,7 +37,7 @@ export default function DocsPage() {
         { title: 'Deployment', description: 'Deploying AI models to production', link: '/docs/ai/deployment' }
       ]
     },
-    {
+
       title: 'Cloud Services',
       icon: 'cloud',
       description: 'Cloud infrastructure and services',
@@ -46,7 +46,7 @@ export default function DocsPage() {
         { title: 'Security', description: 'Cloud security best practices', link: '/docs/cloud/security' },
         { title: 'Monitoring', description: 'Monitoring and logging', link: '/docs/cloud/monitoring' }
       ]
-    }
+
   ]
   const popularDocs = [
     { title: 'Quick Start Guide', description: 'Get started in minutes', category: 'Getting Started', link: '/docs/quick-start' },
@@ -94,13 +94,13 @@ export default function DocsPage() {
                   className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 font-medium transition-colors text-sm">
                   Read More
                   <ArrowRight className="w-4 h-4" />
-                </a></h1></p>
+                </a>
 </div>)}</div>
 </div></h1>
       </section>
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-12 text-center">Browse by Category</h2></h1></div>
+          <h2 className="text-3xl font-bold text-white mb-12 text-center">Browse by Category</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {filteredDocs.map((category, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10"></div>
@@ -110,7 +110,7 @@ export default function DocsPage() {
 </div></div>
                   <div></h1>
                     <h3 className="text-2xl font-bold text-white mb-2">{category.title}</h3></p>
-                    <p className="text-gray-300">{category.description}</p></h1></p>
+                    <p className="text-gray-300">{category.description}</p>
 </div>
 </div>
                 <div className="space-y-4">
@@ -130,7 +130,7 @@ export default function DocsPage() {
 </div>
                     </a>)}</div>
 </div>)}</div>
-</div></h1></p>
+</div>
       </section>
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="max-w-4xl mx-auto text-center">
@@ -150,7 +150,7 @@ export default function DocsPage() {
       </section>
       <Footer />
 </div>
-}
+
   </button>
   </button>
   </SEOOptimizer>

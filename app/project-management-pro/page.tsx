@@ -25,26 +25,26 @@ import {
 } from 'lucide-react'
 const ProjectManagementProPage: React.FC = () => {
   const features = [
-    {
+
       icon: CheckSquare,
       title: 'Task Management',
       description: 'Organize and track tasks with advanced project management tools and AI-powered insights.'
     },
-    {
+
       icon: Users,
       title: 'Team Collaboration',
       description: 'Seamless team collaboration with real-time updates, comments, and file sharing.'
     },
-    {
+
       icon: BarChart,
       title: 'Progress Tracking',
       description: 'Comprehensive project analytics and reporting to track progress and performance.'
     },
-    {
+
       icon: Zap,
       title: 'Automation',
       description: 'Automate repetitive tasks and workflows to improve efficiency and productivity.'
-    }
+
   ]
   const benefits = [
     'Improve project delivery times',
@@ -64,7 +64,7 @@ const ProjectManagementProPage: React.FC = () => {
         <meta name="keywords" content="project management, team collaboration, task management, project tracking, Zion Tech Group" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
+
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -85,7 +85,7 @@ const ProjectManagementProPage: React.FC = () => {
 </div>
 </div></button>
         </section>
-        {/* Features Section */}</section>
+        {</section>
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></h1>
@@ -93,7 +93,7 @@ const ProjectManagementProPage: React.FC = () => {
                 Platform Features</p>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our project management platform provides everything you need to succeed.
-              </p></h1></p>
+              </p>
 </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (</div>
@@ -102,9 +102,9 @@ const ProjectManagementProPage: React.FC = () => {
                     <feature.icon className="h-6 w-6 text-white" />
 </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p></h1></p>
+                  <p className="text-gray-300">{feature.description}</p>
 </div>)}</div>
-</div></h1></p>
+</div>
         </section>
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="max-w-7xl mx-auto">
@@ -113,7 +113,7 @@ const ProjectManagementProPage: React.FC = () => {
                 Key Benefits</p>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Transform your project management with our comprehensive platform.
-              </p></h1></p>
+              </p>
 </div></div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {benefits.map((benefit, index) => (
@@ -121,7 +121,7 @@ const ProjectManagementProPage: React.FC = () => {
                   <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                   <p className="text-gray-300 text-lg">{benefit}</p></p>
 </div>)}</div>
-</div></h1></p>
+</div>
         </section>
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="max-w-4xl mx-auto text-center">
@@ -145,7 +145,7 @@ const ProjectManagementProPage: React.FC = () => {
         </section>
 </div>
     </React.Fragment>
-}
+
 export default ProjectManagementProPage</button>
   </button>
   </h2>

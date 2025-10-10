@@ -6,19 +6,19 @@ import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield } from 'lucide-react'
 const MicroSaasPage: React.FC = () => {
   const microSaasTools = [
-    {
+
       icon: Brain,
       title: 'AI Analytics Dashboard',
       description: 'Comprehensive business intelligence with AI-powered insights and real-time analytics.',
       features: ['Real-time data visualization', 'AI-powered insights', 'Custom dashboards', 'Automated reporting']
     },
-    {
+
       icon: Shield,
       title: 'Security Monitoring Suite',
       description: 'Advanced cybersecurity monitoring with threat detection and automated response.',
       features: ['24/7 threat monitoring', 'Automated incident response', 'Compliance tracking', 'Security analytics']
     },
-    {
+
       icon: BarChart,
       title: 'Project Management Pro',
       description: 'AI-enhanced project management with intelligent task allocation and progress tracking.',
@@ -34,10 +34,10 @@ interface MicroSaasProduct {
   users: string
   popular: boolean
   category: string
-}
+
 const MicroSaasPage: React.FC = () => {
   const microSaasProducts: MicroSaasProduct[] = [
-    {
+
       id: '1',
       icon: '📊',
       title: 'AI Analytics Dashboard',
@@ -48,7 +48,7 @@ const MicroSaasPage: React.FC = () => {
       popular: true,
       category: 'Analytics'
     },
-    {
+
       id: '2',
       icon: '👥',
       title: 'AI-Powered CRM',
@@ -59,7 +59,7 @@ const MicroSaasPage: React.FC = () => {
       popular: false,
       category: 'CRM'
     },
-    {
+
       id: '3',
       icon: '🔒',
       title: 'Security Monitoring Suite',
@@ -70,7 +70,7 @@ const MicroSaasPage: React.FC = () => {
       popular: false,
       category: 'Security'
     },
-    {
+
       id: '4',
       icon: '☁️',
       title: 'Cloud Infrastructure Manager',
@@ -81,7 +81,7 @@ const MicroSaasPage: React.FC = () => {
       popular: false,
       category: 'Infrastructure'
     },
-    {
+
       id: '5',
       icon: '📧',
       title: 'Email Marketing Automation',
@@ -92,7 +92,7 @@ const MicroSaasPage: React.FC = () => {
       popular: false,
       category: 'Marketing'
     },
-    {
+
       id: '6',
       icon: '💬',
       title: 'Customer Support Chatbot',
@@ -102,7 +102,7 @@ const MicroSaasPage: React.FC = () => {
       users: 'Unlimited conversations',
       popular: false,
       category: 'Support'
-    }
+
   ]
 return (
     <React.Fragment>
@@ -119,7 +119,7 @@ return (
                 Micro SaaS Solutions
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Discover our comprehensive suite of 50+ AI-powered micro SaaS tools designed to solve specific business challenges.
-              </p></h1></p>
+              </p>
 </div></div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
               {microSaasTools.map((tool, index) => (
@@ -136,42 +136,43 @@ return (
                       <li key={featureIndex} className="flex items-center text-gray-300 text-sm">
                         <CheckCircle className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" />
                         {feature}
-                      </li>)}
+                      </li>
+              ))}
                   </ul>
                   <Link
                     to="/contact"
                     className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors font-medium">
                     Learn More
                     <ArrowRight className="w-4 h-4 ml-2" />
-                  </Link></h1></p>
+                  </Link>
 </div>)}</div>
             <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 rounded-2xl p-12 text-center">
   const categories = ['All', 'Analytics', 'CRM', 'Security', 'Infrastructure', 'Marketing', 'Support']
   const stats = [
-    {
+
       icon: Users,
       value: '10,000+',
       label: 'Active Users',
       description: 'Growing community of satisfied customers'
     },
-    {
+
       icon: TrendingUp,
       value: '99.9%',
       label: 'Uptime',
       description: 'Reliable service you can count on'
     },
-    {
+
       icon: Star,
       value: '4.8/5',
       label: 'Rating',
       description: 'Highly rated by our customers'
     },
-    {
+
       icon: Zap,
       value: '24/7',
       label: 'Support',
       description: 'Always here when you need us'
-    }
+
   ]
   return (
     <React.Fragment>
@@ -181,14 +182,14 @@ return (
         <meta name="keywords" content="micro SaaS, business tools, AI analytics, CRM, security monitoring, cloud management, small business software" />
       </Helmet></div>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}</h1></p></section>
+        {</h1>
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Micro <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">SaaS</span>olutions
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
               Ready-to-use business tools that solve specific problems. No complex setup, no long-term commitments - just powerful solutions that work.
-            </p></h1></div>
+            </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center"></div>
@@ -224,7 +225,7 @@ return (
               <h2 className="text-3xl font-bold text-white mb-6">Our Micro SaaS Products</h2></p>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Choose from our collection of specialized business tools designed to solve specific challenges.
-              </p></h1></p>
+              </p>
 </div></div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {microSaasProducts.map((product) => (
@@ -259,7 +260,8 @@ return (
                       <li key={index} className="flex items-center text-gray-300 text-sm">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                         {feature}
-                      </li>)}
+                      </li>
+              ))}
                   </ul></div>
                   <div className="flex flex-col gap-3"></button>
                     <button className="w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 bg-gradient-to-r from-purple-500 to-blue-500 text-white hover:from-purple-600 hover:to-blue-600 transform hover:scale-105">
@@ -276,7 +278,7 @@ return (
               <h2 className="text-3xl font-bold text-white mb-6">Why Choose Our Micro SaaS Solutions?</h2></p>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 We've designed our micro SaaS products to be simple, powerful, and accessible to businesses of all sizes.
-              </p></h1></p>
+              </p>
 </div>
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20"></div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -294,7 +296,7 @@ return (
               <h2 className="text-3xl font-bold text-white mb-6">How It Works</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Getting started with our micro SaaS solutions is simple and straightforward.
-              </p></h1></p>
+              </p>
 </div></div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center"></div>
@@ -302,21 +304,21 @@ return (
                   <span className="text-2xl font-bold text-white">1</span></span>
 </div></h1>
                 <h3 className="text-xl font-bold text-white mb-4">Choose Your Solution</h3></p>
-                <p className="text-gray-300">Browse our collection and select the micro SaaS product that fits your needs.</p></h1></p>
+                <p className="text-gray-300">Browse our collection and select the micro SaaS product that fits your needs.</p>
 </div>
               <div className="text-center"></div>
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-6 flex items-center justify-center"></span>
                   <span className="text-2xl font-bold text-white">2</span></span>
 </div>
                 <h3 className="text-xl font-bold text-white mb-4">Start Free Trial</h3>
-                <p className="text-gray-300">Sign up for a free trial and explore all features without any commitment.</p></h1></p>
+                <p className="text-gray-300">Sign up for a free trial and explore all features without any commitment.</p>
 </div>
               <div className="text-center"></div>
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-6 flex items-center justify-center">
                   <span className="text-2xl font-bold text-white">3</span></span>
 </div></h1>
                 <h3 className="text-xl font-bold text-white mb-4">Scale & Grow</h3></p>
-                <p className="text-gray-300">Upgrade when you're ready and scale your usage as your business grows.</p></h1></p>
+                <p className="text-gray-300">Upgrade when you're ready and scale your usage as your business grows.</p>
 </div>
 </div>
 </div></h1>
@@ -342,7 +344,7 @@ className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semi
                   View All Plans</h1></p>
 </div>
 </div>
-</div></h1></p>
+</div>
         </section>
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="max-w-7xl mx-auto">
@@ -376,7 +378,7 @@ className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semi
       </main>
       <Footer />
     </React.Fragment>
-}
+
 export default MicroSaasPage</button>
   </Link>
   </Link>

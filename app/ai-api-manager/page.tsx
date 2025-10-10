@@ -6,30 +6,30 @@ import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 const AiApiManagerPage: React.FC = () => {
   const features = [
-    {
+
       icon: Brain,
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
-    {
+
       icon: BarChart,
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
     },
-    {
+
       icon: Target,
       title: 'Precision Targeting',
       description: 'Target specific goals and objectives with precision and accuracy.',
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
     },
-    {
+
       icon: TrendingUp,
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
+
   ]
   return (
     <React.Fragment>
@@ -39,7 +39,7 @@ const AiApiManagerPage: React.FC = () => {
         <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group" />
       </Helmet>
       <Navigation />
-      {/* Hero Section */}
+
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" /></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
@@ -51,7 +51,7 @@ const AiApiManagerPage: React.FC = () => {
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
             Professional page solutions by Zion Tech Group. Advanced AI and IT solutions for your business.
-          </p></h1></div>
+          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25">
               Get Started Today
@@ -62,7 +62,7 @@ const AiApiManagerPage: React.FC = () => {
 </div>
 </div></button>
       </section>
-        {/* Features Section */}</section>
+        {</section>
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></h1>
@@ -83,10 +83,11 @@ const AiApiManagerPage: React.FC = () => {
                     <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
                       <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
                       {benefit}
-                    </li>)}
-                </ul></h1></p>
+                    </li>
+              ))}
+                </ul>
 </div>)}</div>
-</div></h1></p>
+</div>
       </section>
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="max-w-7xl mx-auto">
@@ -103,13 +104,13 @@ const AiApiManagerPage: React.FC = () => {
 </div>
                 <h3 className="text-lg font-semibold text-white">{benefit}</h3></h1>
 </div>)}</div>
-</div></h1></p>
+</div>
       </section>
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center"></h1>
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
           <p className="text-xl text-gray-300 mb-8">
-            Transform your business with our page solutions today</h1></p></div>
+            Transform your business with our page solutions today</h1>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
               Start Free Trial</button>
@@ -118,7 +119,7 @@ const AiApiManagerPage: React.FC = () => {
 </div>
 </div></button>
       </section>
-        {/* Features Section */}
+
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16">
@@ -126,7 +127,7 @@ const AiApiManagerPage: React.FC = () => {
                 Powerful AI Features</p>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Discover how our AI platform can revolutionize your business operations.
-              </p></h1></p>
+              </p>
 </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (</div>
@@ -141,10 +142,11 @@ const AiApiManagerPage: React.FC = () => {
                       <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
                         <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
                         {benefit}
-                      </li>)}
+                      </li>
+              ))}
                   </ul></p>
 </div>)}</div>
-</div></h1></p>
+</div>
         </section>
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="max-w-4xl mx-auto text-center">
@@ -161,7 +163,7 @@ const AiApiManagerPage: React.FC = () => {
       </main>
       <Footer />
     </React.Fragment>
-}
+
 export default AiApiManagerPage</button>
   </h2>
   </button>

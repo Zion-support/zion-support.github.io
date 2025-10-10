@@ -4,26 +4,26 @@ import { Helmet } from 'react-helmet-async'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Cloud, Server, Database } from 'lucide-react'
 const CloudInfrastructurePage: React.FC = () => {
   const features = [
-    {
+
 icon: Shield,
       title: 'Secure Cloud Infrastructure',
       description: 'Enterprise-grade cloud infrastructure with advanced security and compliance'
     },
-    {
+
       icon: Zap,
       title: 'High Performance',
       description: 'Lightning-fast cloud services with optimized performance and scalability'
     },
-    {
+
       icon: Brain,
       title: 'AI-Powered Management',
       description: 'Intelligent cloud management powered by advanced AI technology'
     },
-    {
+
       icon: Globe,
       title: 'Global Deployment',
       description: 'Worldwide cloud infrastructure deployment and support'
-    }
+
   ]
   const benefits = [
 'Advanced cloud technology integration',
@@ -49,7 +49,7 @@ icon: Shield,
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business with our advanced cloud infrastructure solutions. 
             Powered by cutting-edge AI technology and industry expertise.
-          </p></h1></p>
+          </p>
 </div></div>
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16"></h1>
           <h2 className="text-3xl font-bold text-white text-center mb-8">
@@ -59,7 +59,7 @@ icon: Shield,
             {benefits.map((benefit, index) => (</h1></div>
               <div key={index} className="flex items-center space-x-3">
                 <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
-      {/* Features Section */}
+
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-12">
@@ -68,16 +68,16 @@ icon: Shield,
             </h2></p>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our cloud infrastructure solutions deliver unmatched performance, security, and scalability.
-            </p></h1></p>
+            </p>
 </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (</div>
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
                 <feature.icon className="w-12 h-12 text-purple-400 mb-4" /></h1>
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p></h1></p>
+                <p className="text-gray-300">{feature.description}</p>
 </div>)}</div>
-</div></h1></p>
+</div>
       </section>
       <section className="py-16 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto"></div>
@@ -86,7 +86,7 @@ icon: Shield,
               Key Benefits</p>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our cloud infrastructure solutions for your business.
-            </p></h1></p>
+            </p>
 </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (</div>
@@ -94,7 +94,8 @@ icon: Shield,
                 <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
                 <span className="text-gray-300">{benefit}</span></span>
 </div>)}</div>
-</div>/* CTA Section */}
+</div>
+
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center"></h1>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -114,7 +115,7 @@ icon: Shield,
 </div>
 </div>
 </div>
-}
+
 export default CloudInfrastructurePage</button>
   </button></button>
   </section>

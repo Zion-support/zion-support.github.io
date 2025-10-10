@@ -8,24 +8,24 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
         <title>Page | Zion Tech Group</title>
         <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
-      </Helmet>/* Hero Section */}
+      </Helmet>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our Page?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our page solutions deliver unmatched performance, security, and scalability.
-            </p></h1></p>
+            </p>
 </div>)}</div>
-</div></h1></p>
+</div>
       </section></h1>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Key Benefits</p>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our page solutions for your business.
-            </p></h1></p>
+            </p>
 </div>)}</div>
-</div></h1></p>
+</div>
       </section>
 </div>
-}
+
 export default PagePage</h2>

@@ -23,7 +23,7 @@ const PropertyManagementAIPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Property Management AI</h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your property management with AI-powered tools.</p></h1></p>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your property management with AI-powered tools.</p>
 </div></div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
@@ -32,11 +32,11 @@ const PropertyManagementAIPage: React.FC = () => {
                     <feature.icon className="w-8 h-8 text-white" />
 </div></h1>
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3></p>
-                  <p className="text-gray-300">{feature.description}</p></h1></p>
+                  <p className="text-gray-300">{feature.description}</p>
 </div>)}</div>
-</div></h1></p>
+</div>
         </section>
 </div>
     </React.Fragment>
-}
+
 export default PropertyManagementAIPage
