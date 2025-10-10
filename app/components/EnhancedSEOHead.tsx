@@ -12,27 +12,46 @@ interface SEOHeadProps {
   twitterCard?: string;
 }
 
-const SEOHead: React.FC<SEOHeadProps> = ()
+const SEOHead: React.FC<SEOHeadProps> = ({
+  title,
+  description,
+  keywords = [],
+  canonicalUrl,
+  structuredData,
+  ogImage,
+  twitterCard = 'summary_large_image'
 }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   
-  return ()
-      <meta name="keywords" content={keywords.join(', ')} /></meta>
-      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}, {/* Open Graph Tags */}
-      <meta property="og:title" content={fullTitle} /></meta>
-      <meta property="og:description" content={description} /></meta>
-      <meta property="og:type" content="website" /></meta>
-      {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}, {ogImage && <meta property="og:image" content={ogImage} />}
-      <meta property="og:site_name" content="Zion Tech Group" /></meta>
+  return (
+    <Helmet>
+      <title>{fullTitle}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords.join(', ')} />
+      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+      
+      {/* Open Graph Tags */}
+      <meta property="og:title" content={fullTitle} />
+      <meta property="og:description" content={description} />
+      <meta property="og:type" content="website" />
+      {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
+      {ogImage && <meta property="og:image" content={ogImage} />}
+      <meta property="og:site_name" content="Zion Tech Group" />
+      
       {/* Twitter Card Tags */}
-      <meta name="twitter:card" content={twitterCard} /></meta>
-      <meta name="twitter:title" content={fullTitle} /></meta>
-      <meta name="twitter:description" content={description} /></meta>
-      {ogImage && <meta name="twitter:image" content={ogImage} />}, {/* Additional SEO Tags */}
-      <meta name="robots" content="index, follow" /></meta>
-      <meta name="author" content="Zion Tech Group" /></meta>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" /></meta>
-      {/* Structured Data */}, {structuredData && ()
+      <meta name="twitter:card" content={twitterCard} />
+      <meta name="twitter:title" content={fullTitle} />
+      <meta name="twitter:description" content={description} />
+      {ogImage && <meta name="twitter:image" content={ogImage} />}
+      
+      {/* Additional SEO Tags */}
+      <meta name="robots" content="index, follow" />
+      <meta name="author" content="Zion Tech Group" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      
+      {/* Structured Data */}
+      {structuredData && (
+        <script type="application/ld+json">
           {JSON.stringify(structuredData)}
         </script>
       )}
