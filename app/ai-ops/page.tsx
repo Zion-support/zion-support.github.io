@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { 
   Brain, 
@@ -23,17 +19,12 @@ import {
 } from 'lucide-react';
 
 const AIOpsPage: React.FC = () => {
-=======
 import { Brain, Cpu, Database, Shield, Zap, TrendingUp, CheckCircle, ArrowRight, Settings, BarChart, Users, Clock, Target, Award, Star, Globe, Phone, Mail, MapPin, Calendar, MessageSquare } from 'lucide-react';
 
 export default function AIOpsPage() {
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
-=======
 import { Brain, Cpu, Database, Shield, Zap, TrendingUp, CheckCircle, ArrowRight, Settings, BarChart, Users, Clock, Target, Award, Star, Globe, Phone, Mail, MapPin, Calendar, MessageSquare } from 'lucide-react';
 
 export default function AIOpsPage() {
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
@@ -56,14 +47,10 @@ import {
 } from 'lucide-react';
 
 const AIOpsPage: React.FC = () => {
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
   const features = [
     {
       icon: Brain,
       title: 'Intelligent Monitoring',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       description: 'AI-powered infrastructure monitoring with predictive analytics and anomaly detection.',
       benefits: ['Predictive failure detection', 'Automated root cause analysis', 'Real-time performance insights']
     },
@@ -78,7 +65,6 @@ const AIOpsPage: React.FC = () => {
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with ML-driven insights and performance optimization.',
       benefits: ['Performance trend analysis', 'Capacity planning', 'Cost optimization recommendations']
-=======
       description: 'AI-powered system monitoring that predicts issues before they impact your business operations.',
       benefits: ['Predictive analytics', 'Anomaly detection', 'Automated alerting', 'Performance optimization']
     },
@@ -93,17 +79,12 @@ const AIOpsPage: React.FC = () => {
       title: 'Advanced Analytics',
       description: 'Comprehensive insights into your IT infrastructure performance and optimization opportunities.',
       benefits: ['Performance metrics', 'Capacity planning', 'Cost optimization', 'Trend analysis']
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
     },
     {
       icon: Shield,
       title: 'Security Integration',
-<<<<<<< HEAD
       description: 'Built-in security monitoring and threat detection with automated response capabilities.',
       benefits: ['Threat detection', 'Automated security patches', 'Compliance monitoring']
-=======
-=======
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
       description: 'AI-powered system monitoring that predicts and prevents issues before they impact your business.',
       benefits: ['Predictive Analytics', 'Anomaly Detection', 'Automated Alerts']
     },
@@ -124,24 +105,15 @@ const AIOpsPage: React.FC = () => {
       title: 'Enhanced Security',
       description: 'AI-powered security monitoring and threat detection to protect your infrastructure.',
       benefits: ['Threat Detection', 'Security Analytics', 'Compliance Monitoring']
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
-=======
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
-=======
       description: 'Built-in security monitoring and threat detection across your entire IT environment.',
       benefits: ['Threat detection', 'Vulnerability scanning', 'Compliance monitoring', 'Security automation']
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
     }
   ];
 
   const capabilities = [
-<<<<<<< HEAD
     {
       title: 'Infrastructure Monitoring',
       description: 'Comprehensive monitoring of servers, networks, applications, and cloud resources.',
-<<<<<<< HEAD
-<<<<<<< HEAD
       icon: Monitor
     },
     {
@@ -163,9 +135,6 @@ const AIOpsPage: React.FC = () => {
       title: 'Capacity Planning',
       description: 'Predictive capacity planning based on usage patterns and growth projections.',
       icon: BarChart
-=======
-=======
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
       icon: '🖥️'
     },
     {
@@ -182,20 +151,11 @@ const AIOpsPage: React.FC = () => {
       title: 'Capacity Planning',
       description: 'Predictive capacity planning to ensure optimal resource utilization.',
       icon: '📊'
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
-=======
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
     },
     {
       title: 'Cost Optimization',
       description: 'AI-driven cost analysis and optimization recommendations for cloud resources.',
-<<<<<<< HEAD
-<<<<<<< HEAD
       icon: Settings
-=======
-=======
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
       icon: '💰'
     },
     {
@@ -225,11 +185,6 @@ const AIOpsPage: React.FC = () => {
       metric: '24/7',
       label: 'Monitoring',
       description: 'Continuous AI-powered monitoring and alerting'
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
-=======
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
-=======
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
@@ -273,14 +228,10 @@ const AIOpsPage: React.FC = () => {
       title: 'Performance Analytics',
       description: 'Comprehensive analytics to track IT performance and identify optimization opportunities.',
       benefits: ['Performance insights', 'Trend analysis', 'Optimization recommendations']
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-db70
     }
   ];
 
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     <>
       <Helmet>
         <title>AI IT Operations (AIOps) - Zion Tech Group</title>
@@ -320,7 +271,6 @@ const AIOpsPage: React.FC = () => {
                   <Zap className="w-4 h-4 ml-2" />
                 </button>
                 <button className="px-8 py-4 border border-cyan-400 text-cyan-400 rounded-lg hover:bg-cyan-400/10 transition-all">
-=======
     'Infrastructure as Code (IaC) automation',
     'Multi-cloud monitoring and management',
     'Container orchestration optimization',
@@ -372,28 +322,23 @@ const AIOpsPage: React.FC = () => {
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </button>
                 <button className="border border-purple-400 text-purple-300 hover:bg-purple-400/10 px-8 py-4 rounded-lg font-semibold transition-all duration-300">
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
                   View Demo
                 </button>
               </div>
             </div>
 
             {/* Stats */}
-<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
               <div className="text-center">
                 <div className="text-4xl font-bold text-cyan-400 mb-2">99.9%</div>
                 <div className="text-gray-300">Uptime Guarantee</div>
               </div>
-=======
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mt-16">
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
               <div className="text-center">
                 <div className="text-4xl font-bold text-purple-400 mb-2">90%</div>
                 <div className="text-gray-300">Reduction in Downtime</div>
               </div>
               <div className="text-center">
-<<<<<<< HEAD
                 <div className="text-4xl font-bold text-pink-400 mb-2">50%</div>
                 <div className="text-gray-300">Faster Issue Resolution</div>
               </div>
@@ -401,7 +346,6 @@ const AIOpsPage: React.FC = () => {
                 <div className="text-4xl font-bold text-green-400 mb-2">24/7</div>
                 <div className="text-gray-300">Automated Monitoring</div>
               </div>
-=======
                 <div className="text-4xl font-bold text-pink-400 mb-2">300%</div>
                 <div className="text-gray-300">Efficiency Improvement</div>
               </div>
@@ -413,7 +357,6 @@ const AIOpsPage: React.FC = () => {
                 <div className="text-4xl font-bold text-green-400 mb-2">99.9%</div>
                 <div className="text-gray-300">System Uptime</div>
               </div>
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
             </div>
           </div>
         </section>
@@ -423,7 +366,6 @@ const AIOpsPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-6">
-<<<<<<< HEAD
                 Powerful AIOps Capabilities
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -447,7 +389,6 @@ const AIOpsPage: React.FC = () => {
                           <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
                             <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                             {benefit}
-=======
                 AI-Powered IT Operations
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -471,7 +412,6 @@ const AIOpsPage: React.FC = () => {
                           <li key={benefitIndex} className="flex items-center space-x-2 text-gray-300">
                             <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                             <span>{benefit}</span>
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
                           </li>
                         ))}
                       </ul>
@@ -483,16 +423,12 @@ const AIOpsPage: React.FC = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Capabilities Grid */}
-=======
         {/* Capabilities Section */}
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
         <section className="py-20 px-4 bg-slate-800/30">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-6">
-<<<<<<< HEAD
                 Complete AIOps Solution
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -508,7 +444,6 @@ const AIOpsPage: React.FC = () => {
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-3">{capability.title}</h3>
                   <p className="text-gray-300 text-sm">{capability.description}</p>
-=======
                 Comprehensive AIOps Capabilities
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -526,7 +461,6 @@ const AIOpsPage: React.FC = () => {
                     </div>
                     <span className="text-white font-medium">{capability}</span>
                   </div>
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
                 </div>
               ))}
             </div>
@@ -540,7 +474,6 @@ const AIOpsPage: React.FC = () => {
               Ready to Transform Your IT Operations?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-<<<<<<< HEAD
               Join hundreds of companies already using our AIOps platform to achieve 
               better performance, reliability, and efficiency.
             </p>
@@ -551,7 +484,6 @@ const AIOpsPage: React.FC = () => {
               </button>
               <button className="px-8 py-4 border border-cyan-400 text-cyan-400 rounded-lg hover:bg-cyan-400/10 transition-all">
                 Schedule Demo
-=======
               Join leading enterprises that have revolutionized their IT operations with AI-powered automation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -561,7 +493,6 @@ const AIOpsPage: React.FC = () => {
               </button>
               <button className="border border-purple-400 text-purple-300 hover:bg-purple-400/10 px-8 py-4 rounded-lg font-semibold transition-all duration-300">
                 Schedule Consultation
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
               </button>
             </div>
           </div>
@@ -571,11 +502,7 @@ const AIOpsPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default AIOpsPage;
-=======
-=======
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
@@ -603,7 +530,6 @@ export default AIOpsPage;
                 <span className="text-white font-medium">Secure</span>
               </div>
             </div>
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       
@@ -631,12 +557,10 @@ export default AIOpsPage;
             <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
               Schedule Demo
             </button>
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-db70
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Features */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -716,7 +640,6 @@ export default AIOpsPage;
                 <div className="text-gray-300 text-sm">
                   {benefit.description}
                 </div>
-=======
       {/* Features Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -743,7 +666,6 @@ export default AIOpsPage;
                     </li>
                   ))}
                 </ul>
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-db70
               </div>
             ))}
           </div>
@@ -751,7 +673,6 @@ export default AIOpsPage;
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
@@ -780,13 +701,8 @@ export default AIOpsPage;
       </section>
     </div>
   );
-<<<<<<< HEAD
 }
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
-=======
 }
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
-=======
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your IT Operations?</h2>
@@ -810,7 +726,4 @@ export default AIOpsPage;
 };
 
 export default AIOpsPage;
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-db70
-=======
 export default AIOpsPage;
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8

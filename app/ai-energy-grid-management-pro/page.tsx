@@ -352,7 +352,6 @@ export default AIEnergyGridManagementProPage;
 };
 
 export default aienergygridmanagementproPage;
-=======
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
@@ -626,5 +625,4 @@ const AIEnergyGridManagementPro: React.FC = () => {
 };
 
 export default AIEnergyGridManagementPro;
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-d464
 

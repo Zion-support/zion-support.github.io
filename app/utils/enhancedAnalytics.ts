@@ -10,17 +10,13 @@ export interface AnalyticsEvent {
   action: string;
   label?: string;
   value?: number;
-<<<<<<< HEAD
   customParameters?: Record<string, any>;
-=======
   metadata?: Record<string, unknown>;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
 }
 
 export interface UserProperties {
   userId?: string;
   sessionId?: string;
-<<<<<<< HEAD
   userType?: 'new' | 'returning' | 'premium';
   deviceType?: 'mobile' | 'tablet' | 'desktop';
   browser?: string;
@@ -265,7 +261,6 @@ class EnhancedAnalytics {
 
   getUserProperties(): UserProperties {
     return { ...this.userProperties };
-=======
   userType?: string;
   [key: string]: unknown;
 }
@@ -548,16 +543,13 @@ class EnhancedAnalytics {
       sessionId: this.sessionId,
       userProperties: this.userProperties
     };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
   }
 }
 
 // Create singleton instance
-<<<<<<< HEAD
 export const enhancedAnalytics = new EnhancedAnalytics();
 
 export default EnhancedAnalytics;
-=======
 export const analytics = new EnhancedAnalytics();
 
 // Auto-initialize in browser
@@ -566,4 +558,3 @@ if (typeof window !== 'undefined') {
 }
 
 export default analytics;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367

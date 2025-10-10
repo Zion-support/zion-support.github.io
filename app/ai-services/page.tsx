@@ -18,16 +18,13 @@ import {
   Award,
   Stethoscope,
   Truck,
-<<<<<<< HEAD
   Cpu,
   Rocket,
   Scale,
   Phone,
   Mail,
   MapPin
-=======
   Rocket
->>>>>>> origin/main
 } from 'lucide-react';
 
 const AIServicesPage: React.FC = () => {
@@ -599,7 +596,6 @@ const AIServicesPage: React.FC = () => {
         '30% inventory optimization',
         'Real-time tracking',
         'Predictive analytics'
-<<<<<<< HEAD
       ],
       link: 'https://ziontechgroup.com/ai-supply-chain-optimization'
     },
@@ -648,12 +644,10 @@ const AIServicesPage: React.FC = () => {
         'Performance Optimization',
         'Edge Computing',
         'Autonomous Navigation'
-=======
       ]
     },
     {
       id: 11,
-<<<<<<< HEAD
       name: 'AI Quantum Financial Oracle',
       description: 'Revolutionary quantum-powered financial modeling and risk assessment for high-frequency trading and portfolio optimization',
       icon: Brain,
@@ -678,7 +672,6 @@ const AIServicesPage: React.FC = () => {
         '99.9% prediction accuracy',
         'Quantum advantage',
         'Real-time risk modeling'
-=======
       name: 'AI Quantum Computing Platform',
       description: 'Revolutionary quantum computing solutions with AI optimization for complex problem solving',
       icon: Brain,
@@ -708,7 +701,6 @@ const AIServicesPage: React.FC = () => {
     },
     {
       id: 12,
-<<<<<<< HEAD
       name: 'AI Climate Solutions Pro',
       description: 'Advanced climate modeling and environmental impact analysis with carbon footprint optimization and sustainability planning',
       icon: Globe,
@@ -733,7 +725,6 @@ const AIServicesPage: React.FC = () => {
         'Real-time environmental monitoring',
         'Sustainability optimization',
         'Climate risk assessment'
-=======
       name: 'AI Autonomous Vehicle Systems',
       description: 'Advanced autonomous vehicle technology with AI-powered navigation and safety systems',
       icon: Car,
@@ -746,13 +737,11 @@ const AIServicesPage: React.FC = () => {
         'Predictive Maintenance',
         'Fleet Management',
         'Safety Monitoring'
->>>>>>> origin/main
       ],
       category: 'Autonomous Systems',
       popular: true,
       rating: 4.8,
       users: '200+',
-<<<<<<< HEAD
       color: 'from-cyan-500 to-blue-600',
       pricing: 'Starting at $4,999/mo',
       capabilities: [
@@ -806,7 +795,6 @@ const AIServicesPage: React.FC = () => {
         'Launch Optimization',
         'Space Debris Tracking',
         'Interplanetary Navigation'
-=======
       color: 'from-blue-500 to-cyan-600',
       pricing: 'Starting at $8,500/mo',
       capabilities: [
@@ -819,7 +807,6 @@ const AIServicesPage: React.FC = () => {
     },
     {
       id: 13,
-<<<<<<< HEAD
       name: 'AI Space Technology Pro',
       description: 'Cutting-edge AI solutions for space exploration, satellite management, and space mission optimization',
       icon: Rocket,
@@ -832,12 +819,10 @@ const AIServicesPage: React.FC = () => {
         'Communication Optimization',
         'Navigation Systems',
         'Space Mission Analytics'
->>>>>>> origin/main
       ],
       category: 'Space Tech',
       popular: false,
       rating: 4.9,
-<<<<<<< HEAD
       users: '25+',
       color: 'from-slate-500 to-gray-600',
       pricing: 'Starting at $19,999/mo',
@@ -1026,7 +1011,6 @@ const AIServicesPage: React.FC = () => {
   ];
 
   const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Processing', 'Customer Experience', 'Content Creation', 'Industrial AI', 'Financial AI', 'Healthcare AI', 'Supply Chain', 'Quantum AI', 'Autonomous Systems', 'Blockchain AI', 'Space Tech', 'Climate AI', 'FinTech AI', 'AgTech AI', 'Energy AI', 'Legal AI'];
-=======
       users: '50+',
       color: 'from-indigo-500 to-blue-600',
       pricing: 'Starting at $4,999/mo',
@@ -1035,7 +1019,6 @@ const AIServicesPage: React.FC = () => {
         'Real-time space monitoring',
         'Advanced orbital calculations',
         'Space debris mitigation'
-=======
       name: 'AI Space Exploration Platform',
       description: 'AI-powered space exploration and satellite management with advanced mission planning',
       icon: Rocket,
@@ -1065,7 +1048,6 @@ const AIServicesPage: React.FC = () => {
     },
     {
       id: 14,
-<<<<<<< HEAD
       name: 'AI Drug Discovery Pro',
       description: 'Revolutionary AI-powered drug discovery platform with molecular modeling, clinical trial optimization, and personalized medicine',
       icon: Stethoscope,
@@ -1090,7 +1072,6 @@ const AIServicesPage: React.FC = () => {
         '90% accuracy in predictions',
         'Personalized treatment plans',
         'Reduced clinical trial costs'
-=======
       name: 'AI Climate Intelligence',
       description: 'Advanced climate monitoring and prediction with AI-powered environmental analysis',
       icon: Globe,
@@ -1120,7 +1101,6 @@ const AIServicesPage: React.FC = () => {
     },
     {
       id: 15,
-<<<<<<< HEAD
       name: 'AI Neural Memory Assistant',
       description: 'Advanced AI system that mimics human memory patterns for enhanced learning, recall, and cognitive assistance',
       icon: Brain,
@@ -1145,7 +1125,6 @@ const AIServicesPage: React.FC = () => {
         '90% better retention rates',
         'Adaptive memory patterns',
         'Cognitive enhancement'
-=======
       name: 'AI Drug Discovery Platform',
       description: 'Revolutionary pharmaceutical research with AI-powered molecular analysis and drug development',
       icon: Stethoscope,
@@ -1175,16 +1154,11 @@ const AIServicesPage: React.FC = () => {
     }
   ];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Processing', 'Customer Experience', 'Content Creation', 'Industrial AI', 'Financial AI', 'Healthcare AI', 'Supply Chain', 'Quantum Computing', 'Advanced AI', 'Immersive Technology', 'Climate Tech', 'Pharmaceutical AI', 'Fashion Tech', 'Creative AI', 'Energy Tech', 'Autonomous Systems', 'Blockchain AI'];
-=======
   const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Processing', 'Customer Experience', 'Content Creation', 'Industrial AI', 'Financial AI', 'Healthcare AI', 'Supply Chain', 'Quantum Finance', 'Climate Tech', 'Space Tech', 'Pharmaceutical AI', 'Cognitive AI'];
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-c63e
-=======
   const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Processing', 'Customer Experience', 'Content Creation', 'Industrial AI', 'Financial AI', 'Healthcare AI', 'Supply Chain', 'Quantum Computing', 'Autonomous Systems', 'Space Technology', 'Environmental AI', 'Pharmaceutical AI'];
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-32a7
->>>>>>> origin/main
 
   if (!isLoaded) {
     return (
@@ -1195,7 +1169,6 @@ const AIServicesPage: React.FC = () => {
   }
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 relative overflow-hidden">
       {/* Futuristic Background Effects */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(0,255,255,0.1)_0%,transparent_50%)] animate-pulse" />
@@ -1207,15 +1180,12 @@ const AIServicesPage: React.FC = () => {
         <div className="absolute top-0 left-0 w-full h-full bg-[linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px)] bg-[length:100px_100px] animate-pulse" />
       </div>
 
-=======
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 cyber-grid">
->>>>>>> origin/main
       {/* Header */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16 relative z-10">
           <div className="text-center">
-<<<<<<< HEAD
             <div className="inline-block mb-6">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 neon-text">
                 AI Services
@@ -1243,7 +1213,6 @@ const AIServicesPage: React.FC = () => {
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-green-400/20">
                 <div className="text-3xl font-bold text-green-400 mb-2">24/7</div>
                 <div className="text-gray-300">AI Support</div>
-=======
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
               AI Services
             </h1>
@@ -1259,7 +1228,6 @@ const AIServicesPage: React.FC = () => {
               </div>
               <div className="holographic px-6 py-3 rounded-lg">
                 <span className="text-pink-400 font-semibold">99.9% Accuracy</span>
->>>>>>> origin/main
               </div>
             </div>
           </div>
@@ -1286,13 +1254,10 @@ const AIServicesPage: React.FC = () => {
           {services.map((service) => (
             <div
               key={service.id}
-<<<<<<< HEAD
               className={`group bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 relative overflow-hidden ${
                 service.popular ? 'ring-2 ring-purple-500/50 shadow-lg shadow-purple-500/20' : ''
-=======
               className={`futuristic-card hover-lift p-8 ${
                 service.popular ? 'ring-2 ring-purple-500 neon-glow-purple' : ''
->>>>>>> origin/main
               }`}
             >
               {/* Animated Background */}
@@ -1391,7 +1356,6 @@ const AIServicesPage: React.FC = () => {
       </div>
 
       {/* CTA Section */}
-<<<<<<< HEAD
       <div className="relative bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 py-20 overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(255,255,255,0.1)_0%,transparent_50%)] animate-pulse" />
@@ -1439,7 +1403,6 @@ const AIServicesPage: React.FC = () => {
               <h3 className="text-white font-bold text-lg mb-2">Address</h3>
               <p className="text-gray-200">364 E Main St STE 1008<br />Middletown, DE 19709</p>
             </div>
-=======
       <div className="bg-gradient-to-r from-purple-600 to-blue-600 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -1464,7 +1427,6 @@ const AIServicesPage: React.FC = () => {
           </div>
           <div className="text-purple-100 text-sm">
             <p>📧 kleber@ziontechgroup.com | 📍 364 E Main St STE 1008, Middletown, DE 19709</p>
->>>>>>> origin/main
           </div>
         </div>
       </div>

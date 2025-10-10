@@ -1,15 +1,10 @@
-<<<<<<< HEAD
-=======
 'use client';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
 /**
  * API Cache Utility
-<<<<<<< HEAD
  * Provides intelligent caching for API requests
  */
 
-<<<<<<< HEAD
 import { memoryCache } from './advancedCaching';
 
 export interface ApiCacheOptions {
@@ -31,7 +26,6 @@ class ApiCache {
   private cache = memoryCache;
   private defaultTTL = 300000; // 5 minutes
 
-<<<<<<< HEAD
   constructor(maxSize: number = 100, defaultTTL: number = 5 * 60 * 1000) {
     this.maxSize = maxSize;
     this.defaultTTL = defaultTTL;
@@ -50,7 +44,6 @@ class ApiCache {
       const oldestKey = this.cache.keys().next().value;
       this.cache.delete(oldestKey);
     }
-=======
   /**
    * Generate cache key for API request
    */
@@ -94,12 +87,10 @@ class ApiCache {
       timestamp: Date.now(),
       ttl,
     };
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1595
 
     this.cache.set(key, entry);
   }
 
-<<<<<<< HEAD
   get(key: string): any | null {
     const entry = this.cache.get(key);
     if (!entry) return null;
@@ -167,7 +158,6 @@ class ApiCache {
 export const apiCache = new APICache();
 
 export default APICache;
-=======
   /**
    * Clear cache for specific URL pattern
    */
@@ -204,8 +194,6 @@ export default APICache;
 
 export const apiCache = new ApiCache();
 export default apiCache;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1595
-=======
  * Provides intelligent caching for API responses
  */
 
@@ -242,7 +230,6 @@ class APICache {
       const oldestKey = this.cache.keys().next().value;
       if (oldestKey) {
         this.cache.delete(oldestKey);
-=======
 interface ApiCacheConfig {
   ttl?: number;
   maxRetries?: number;
@@ -430,13 +417,11 @@ export class ApiCache {
     for (const [key, cached] of this.cache.entries()) {
       if (now > cached.expiry) {
         expiredKeys.push(key);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
       }
     }
 
     expiredKeys.forEach(key => this.cache.delete(key));
   }
-<<<<<<< HEAD
 
   set<T>(key: string, data: T, ttl?: number): void {
     this.evictOldest();
@@ -491,12 +476,9 @@ export class ApiCache {
 export const apiCache = new APICache();
 
 export default APICache;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4ed2
-=======
 }
 
 // Create singleton instance
 export const apiCache = new ApiCache();
 
 export default ApiCache;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367

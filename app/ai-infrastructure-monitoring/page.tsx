@@ -352,7 +352,6 @@ export default AIInfrastructureMonitoringProPage;
 };
 
 export default aiinfrastructuremonitoringPage;
-=======
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
@@ -394,7 +393,6 @@ const AIInfrastructureMonitoringPro: React.FC = () => {
                 <Eye className="w-5 h-5 mr-2" />
                 Watch Demo
               </button>
-=======
 import React from 'react';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
@@ -571,7 +569,6 @@ export default function AIInfrastructureMonitoringPage() {
                 <Phone className="w-5 h-5 mr-2" />
                 Call: (302) 464-0950
               </a>
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-f003
             </div>
           </div>
         </div>
@@ -598,7 +595,6 @@ export default function AIInfrastructureMonitoringPage() {
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-f003
               </div>
             ))}
           </div>
@@ -624,7 +620,6 @@ export default function AIInfrastructureMonitoringPage() {
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium">
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-f003
                       Most Popular
                     </span>
                   </div>
@@ -632,7 +627,6 @@ export default function AIInfrastructureMonitoringPage() {
 
                 
                 <div className="text-center mb-6">
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-f003
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-gray-300 mb-4">{plan.description}</p>
                   <div className="flex items-baseline justify-center">
@@ -699,7 +693,6 @@ export default function AIInfrastructureMonitoringPage() {
                     <div className="text-gray-400 text-sm">{testimonial.role}</div>
                   </div>
                 </div>
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-f003
               </div>
             ))}
           </div>
@@ -731,7 +724,6 @@ export default function AIInfrastructureMonitoringPage() {
               <Phone className="w-5 h-5 mr-2" />
               Call: (302) 464-0950
             </a>
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-f003
           </div>
         </div>
       </section>
@@ -741,5 +733,4 @@ export default function AIInfrastructureMonitoringPage() {
   );
 
 }
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-f003
 

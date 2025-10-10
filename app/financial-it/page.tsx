@@ -1,16 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import React from 'react';
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
 import { Helmet } from 'react-helmet-async';
 import { 
   CreditCard, 
   Shield, 
-<<<<<<< HEAD
   Lock, 
   BarChart, 
   TrendingUp, 
@@ -25,14 +18,11 @@ import {
   Settings,
   FileText
 } from 'lucide-react';
-=======
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Star, Zap, DollarSign, Clock, Users, Shield, BarChart, ArrowRight, Phone, Mail } from 'lucide-react';
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-db70
-=======
   BarChart3, 
   Lock, 
   CheckCircle, 
@@ -48,20 +38,14 @@ import { CheckCircle, Star, Zap, DollarSign, Clock, Users, Shield, BarChart, Arr
   Users,
   Database
 } from 'lucide-react';
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
 
 const FinancialITPage: React.FC = () => {
   const features = [
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
       icon: Shield,
       title: 'SOX Compliance',
       description: 'Full compliance with Sarbanes-Oxley Act and financial regulatory requirements.',
       benefits: ['Audit trail management', 'Financial controls', 'Risk assessment', 'Compliance reporting']
-=======
-=======
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
 import { DollarSign, Shield, Database, Users, CheckCircle, ArrowRight, Phone, Mail, MapPin, Calendar, MessageSquare, CreditCard, BarChart, Lock, Globe, Award, Star, Zap, Brain, TrendingUp } from 'lucide-react';
 
 export default function FinancialITPage() {
@@ -71,16 +55,10 @@ export default function FinancialITPage() {
       title: 'SOX-Compliant Infrastructure',
       description: 'Secure, compliant IT infrastructure designed for financial services organizations.',
       features: ['SOX Compliance', 'Data Encryption', 'Access Controls', 'Audit Logging']
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
-=======
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
     },
     {
       icon: Database,
       title: 'Financial Data Management',
-<<<<<<< HEAD
-<<<<<<< HEAD
       description: 'Secure financial data storage, processing, and analytics with real-time insights.',
       benefits: ['Real-time reporting', 'Data integrity', 'Automated reconciliation', 'Multi-currency support']
     },
@@ -118,9 +96,6 @@ export default function FinancialITPage() {
       title: 'Payment Processing',
       description: 'Secure payment processing and transaction management systems.',
       icon: DollarSign
-=======
-=======
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
       description: 'Advanced data management systems for financial data processing and analytics.',
       features: ['Real-time Processing', 'Data Warehousing', 'Analytics', 'Reporting']
     },
@@ -167,7 +142,6 @@ export default function FinancialITPage() {
       metric: '24/7',
       label: 'Monitoring',
       description: 'Round-the-clock monitoring of financial systems'
-=======
       icon: Shield,
       title: 'SOX Compliance',
       description: 'Full SOX compliance solutions that meet all Sarbanes-Oxley Act requirements for financial reporting and internal controls.',
@@ -190,12 +164,10 @@ export default function FinancialITPage() {
       title: 'Data Security',
       description: 'Bank-grade security measures that protect sensitive financial data and ensure regulatory compliance.',
       benefits: ['End-to-end encryption', 'Access controls', 'Data masking', 'Security monitoring']
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
     }
   ];
 
   const solutions = [
-<<<<<<< HEAD
     {
       title: 'Core Banking Systems',
       description: 'Modern core banking platforms with real-time processing capabilities.',
@@ -205,25 +177,16 @@ export default function FinancialITPage() {
       title: 'Payment Processing',
       description: 'Secure payment processing systems for various payment methods.',
       icon: '💳'
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
-=======
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
     },
     {
       title: 'Trading Platforms',
       description: 'High-performance trading platforms with low-latency execution.',
-<<<<<<< HEAD
-<<<<<<< HEAD
       icon: TrendingUp
     },
     {
       title: 'Customer Portal',
       description: 'Secure customer-facing applications and self-service portals.',
       icon: Smartphone
-=======
-=======
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
       icon: '📈'
     },
     {
@@ -240,11 +203,6 @@ export default function FinancialITPage() {
       title: 'Customer Portal',
       description: 'Secure customer portals for online banking and financial services.',
       icon: '👤'
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
-=======
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
-=======
       icon: DollarSign,
       title: 'SOX Compliance',
       description: 'Full SOX compliance solutions with automated controls, monitoring, and reporting capabilities.',
@@ -279,14 +237,10 @@ export default function FinancialITPage() {
       title: 'Financial Analytics',
       description: 'Comprehensive analytics and reporting for financial operations and compliance.',
       benefits: ['Real-time reporting', 'Predictive analytics', 'Risk assessment']
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-db70
     }
   ];
 
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     <>
       <Helmet>
         <title>Financial Services IT - Zion Tech Group</title>
@@ -327,7 +281,6 @@ export default function FinancialITPage() {
                 </button>
                 <button className="px-8 py-4 border border-cyan-400 text-cyan-400 rounded-lg hover:bg-cyan-400/10 transition-all">
                   View Demo
-=======
     'Core Banking Systems',
     'Payment Gateway Integration',
     'Risk Management Platforms',
@@ -393,13 +346,11 @@ export default function FinancialITPage() {
                 </button>
                 <button className="border border-green-400 text-green-300 hover:bg-green-400/10 px-8 py-4 rounded-lg font-semibold transition-all duration-300">
                   View Compliance Guide
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
                 </button>
               </div>
             </div>
 
             {/* Stats */}
-<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
               <div className="text-center">
                 <div className="text-4xl font-bold text-cyan-400 mb-2">100%</div>
@@ -417,7 +368,6 @@ export default function FinancialITPage() {
                 <div className="text-4xl font-bold text-green-400 mb-2">24/7</div>
                 <div className="text-gray-300">Monitoring</div>
               </div>
-=======
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mt-16">
               <div className="text-center">
                 <div className="text-4xl font-bold text-green-400 mb-2">100%</div>
@@ -435,7 +385,6 @@ export default function FinancialITPage() {
                 <div className="text-4xl font-bold text-purple-400 mb-2">200+</div>
                 <div className="text-gray-300">Financial Institutions</div>
               </div>
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
             </div>
           </div>
         </section>
@@ -445,7 +394,6 @@ export default function FinancialITPage() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-6">
-<<<<<<< HEAD
                 Secure Financial Technology
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -468,7 +416,6 @@ export default function FinancialITPage() {
                           <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
                             <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                             {benefit}
-=======
                 Comprehensive Financial IT Solutions
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -492,7 +439,6 @@ export default function FinancialITPage() {
                           <li key={benefitIndex} className="flex items-center space-x-2 text-gray-300">
                             <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                             <span>{benefit}</span>
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
                           </li>
                         ))}
                       </ul>
@@ -504,16 +450,12 @@ export default function FinancialITPage() {
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Services Grid */}
-=======
         {/* Solutions Section */}
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
         <section className="py-20 px-4 bg-slate-800/30">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-6">
-<<<<<<< HEAD
                 Comprehensive Financial Services
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -529,7 +471,6 @@ export default function FinancialITPage() {
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-3">{service.title}</h3>
                   <p className="text-gray-300 text-sm">{service.description}</p>
-=======
                 Financial Services Solutions
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -547,7 +488,6 @@ export default function FinancialITPage() {
                     </div>
                     <span className="text-white font-medium">{solution}</span>
                   </div>
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
                 </div>
               ))}
             </div>
@@ -557,7 +497,6 @@ export default function FinancialITPage() {
         {/* Compliance Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
-<<<<<<< HEAD
             <div className="bg-gradient-to-r from-slate-800 to-slate-700 rounded-2xl p-12">
               <div className="text-center mb-12">
                 <h2 className="text-4xl font-bold text-white mb-6">
@@ -591,7 +530,6 @@ export default function FinancialITPage() {
                   <p className="text-gray-300">Service Organization Control 2 Type II certification</p>
                 </div>
               </div>
-=======
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-6">
                 Regulatory Compliance & Security
@@ -611,13 +549,11 @@ export default function FinancialITPage() {
                   <h3 className="text-white font-semibold mb-2">{standard}</h3>
                 </div>
               ))}
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -634,7 +570,6 @@ export default function FinancialITPage() {
               </button>
               <button className="px-8 py-4 border border-cyan-400 text-cyan-400 rounded-lg hover:bg-cyan-400/10 transition-all">
                 Download Brochure
-=======
         <section className="py-20 px-4 bg-slate-800/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -650,7 +585,6 @@ export default function FinancialITPage() {
               </button>
               <button className="border border-green-400 text-green-300 hover:bg-green-400/10 px-8 py-4 rounded-lg font-semibold transition-all duration-300">
                 Schedule Consultation
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
               </button>
             </div>
           </div>
@@ -660,11 +594,7 @@ export default function FinancialITPage() {
   );
 };
 
-<<<<<<< HEAD
 export default FinancialITPage;
-=======
-=======
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
@@ -692,7 +622,6 @@ export default FinancialITPage;
                 <span className="text-white font-medium">Secure</span>
               </div>
             </div>
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
       <Navigation />
       
@@ -720,12 +649,10 @@ export default FinancialITPage;
             <button className="border border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
               Schedule Demo
             </button>
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-db70
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Services */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -828,7 +755,6 @@ export default FinancialITPage;
                 <div className="text-gray-300 text-sm">
                   {benefit.description}
                 </div>
-=======
       {/* Features Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -855,7 +781,6 @@ export default FinancialITPage;
                     </li>
                   ))}
                 </ul>
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-db70
               </div>
             ))}
           </div>
@@ -863,7 +788,6 @@ export default FinancialITPage;
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
@@ -892,13 +816,8 @@ export default FinancialITPage;
       </section>
     </div>
   );
-<<<<<<< HEAD
 }
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
-=======
 }
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
-=======
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Ready for Financial IT Excellence?</h2>
@@ -922,7 +841,4 @@ export default FinancialITPage;
 };
 
 export default FinancialITPage;
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-db70
-=======
 export default FinancialITPage;
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8

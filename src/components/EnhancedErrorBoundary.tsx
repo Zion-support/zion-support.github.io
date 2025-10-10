@@ -1,40 +1,23 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { AlertTriangle, RefreshCw, Home, Bug } from 'lucide-react';
-=======
 import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-69ae
-=======
 import { AlertTriangle, RefreshCw, Home, Bug } from 'lucide-react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1595
 
 interface Props {
   children: ReactNode;
-<<<<<<< HEAD
-=======
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-9813
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1595
 }
 
 interface State {
   hasError: boolean;
-<<<<<<< HEAD
-<<<<<<< HEAD
   error?: Error;
-=======
   error?: Error;
   errorInfo?: ErrorInfo;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-69ae
 }
 
 class EnhancedErrorBoundary extends Component<Props, State> {
-<<<<<<< HEAD
   public state: State = {
     hasError: false
   };
@@ -63,47 +46,35 @@ class EnhancedErrorBoundary extends Component<Props, State> {
             >
               Refresh Page
             </button>
-=======
   error: Error | null;
   errorInfo: ErrorInfo | null;
   errorId: string | null;
 }
 
 class EnhancedErrorBoundary extends Component<Props, State> {
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1595
   private retryCount = 0;
   private maxRetries = 3;
 
   constructor(props: Props) {
     super(props);
-<<<<<<< HEAD
     this.state = {
       hasError: false,
       error: null,
       errorInfo: null,
-<<<<<<< HEAD
       errorId: null
-=======
       errorId: '',
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1595
     };
-=======
     this.state = { hasError: false };
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-69ae
   }
 
-<<<<<<< HEAD
   static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
-=======
   static getDerivedStateFromError(error: Error): Partial<State> {
     return {
       hasError: true,
       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
     };
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1595
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
@@ -112,26 +83,21 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       errorInfo,
     });
 
-<<<<<<< HEAD
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-<<<<<<< HEAD
       console.error('Error Boundary caught an error:', error, errorInfo);
     }
 
-=======
       console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
 
     // Report error to monitoring service
     this.reportError(error, errorInfo);
 
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1595
     // Call custom error handler
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
     }
-<<<<<<< HEAD
 
     // Log error to external service in production
     if (process.env.NODE_ENV === 'production') {
@@ -143,14 +109,12 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     try {
       // Example: Send to error tracking service
       const errorData = {
-=======
   }
 
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
     try {
       // Send error to monitoring service
       const errorReport = {
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1595
         message: error.message,
         stack: error.stack,
         componentStack: errorInfo.componentStack,
@@ -158,24 +122,20 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         timestamp: new Date().toISOString(),
         userAgent: navigator.userAgent,
         url: window.location.href,
-<<<<<<< HEAD
         userId: this.getUserId(),
         sessionId: this.getSessionId()
       };
 
       // Send to your error tracking service
-=======
         retryCount: this.retryCount,
       };
 
       // Send to your error reporting service
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1595
       fetch('/api/errors', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-<<<<<<< HEAD
         body: JSON.stringify(errorData)
       }).catch(console.error);
     } catch (loggingError) {
@@ -218,7 +178,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     window.location.reload();
   };
 
-=======
         body: JSON.stringify(errorReport),
       }).catch(() => {
         // Silently fail if error reporting fails
@@ -244,13 +203,11 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     }
   };
 
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1595
   private handleGoHome = () => {
     window.location.href = '/';
   };
 
   private handleReportBug = () => {
-<<<<<<< HEAD
     const errorData = {
       error: this.state.error?.message,
       stack: this.state.error?.stack,
@@ -263,7 +220,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
     const mailtoLink = `mailto:support@ziontechgroup.com?subject=Error Report - ${this.state.errorId}&body=${encodeURIComponent(JSON.stringify(errorData, null, 2))}`;
     window.open(mailtoLink);
-=======
     // Log error to analytics or error reporting service
     console.error('Error caught by boundary:', error, errorInfo);
     
@@ -273,8 +229,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
   handleRetry = () => {
     this.setState({ hasError: false, error: undefined, errorInfo: undefined });
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-69ae
-=======
     const errorDetails = {
       errorId: this.state.errorId,
       message: this.state.error?.message,
@@ -287,7 +241,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
     const mailtoLink = `mailto:support@ziontechgroup.com?subject=Error Report - ${this.state.errorId}&body=${encodeURIComponent(JSON.stringify(errorDetails, null, 2))}`;
     window.open(mailtoLink);
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1595
   };
 
   render() {
@@ -298,21 +251,17 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       }
 
       return (
-<<<<<<< HEAD
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
-<<<<<<< HEAD
           <div className="max-w-2xl w-full">
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 text-center">
               {/* Error Icon */}
               <div className="w-20 h-20 mx-auto mb-6 bg-red-500/20 rounded-full flex items-center justify-center">
                 <AlertTriangle className="w-10 h-10 text-red-400" />
-=======
         <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
           <div className="max-w-md mx-auto text-center p-8">
             <div className="mb-8">
               <div className="w-24 h-24 mx-auto bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center mb-6">
                 <AlertTriangle className="w-12 h-12 text-white" />
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-69ae
               </div>
               <h1 className="text-3xl font-bold text-white mb-4">
                 Oops! Something went wrong
@@ -320,7 +269,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               <p className="text-gray-300 mb-6">
                 We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
               </p>
-<<<<<<< HEAD
 
               {/* Error Details (Development Only) */}
               {process.env.NODE_ENV === 'development' && this.state.error && (
@@ -380,8 +328,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                 </p>
               </div>
             </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-9813
-=======
             </div>
 
             <div className="space-y-4">
@@ -432,8 +378,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                 </div>
               </details>
             )}
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-69ae
-=======
           <div className="max-w-md w-full bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center border border-white/20">
             <div className="mb-6">
               <div className="w-16 h-16 mx-auto bg-red-500/20 rounded-full flex items-center justify-center mb-4">
@@ -488,7 +432,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
             <div className="mt-6 text-xs text-gray-400">
               Error ID: {this.state.errorId}
             </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1595
           </div>
         </div>
       );

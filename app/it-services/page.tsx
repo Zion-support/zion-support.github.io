@@ -1,10 +1,7 @@
 'use client';
 import React, { useState } from 'react';
-<<<<<<< HEAD
 import { Cloud, Shield, Settings, Database, Smartphone, Lock, BarChart, Users, CheckCircle, ArrowRight, Phone, Mail, MapPin, Clock, Star, Zap, Cpu, HardDrive, Wifi, Server, Code, Globe, Target, TrendingUp, Award, DollarSign, Clock as ClockIcon, Shield as ShieldIcon, Users as UsersIcon, TrendingUp as TrendingUpIcon, MessageSquare, Calendar, Brain } from 'lucide-react';
-=======
 import { Cloud, Shield, Settings, Database, Smartphone, Lock, BarChart, Users, CheckCircle, ArrowRight, Phone, Mail, MapPin, Clock, Star, Zap, Cpu, HardDrive, Wifi, Server, Code, Globe, Target, TrendingUp, Award, DollarSign, Clock as ClockIcon, Shield as ShieldIcon, Users as UsersIcon, TrendingUp as TrendingUpIcon, MessageSquare, Calendar } from 'lucide-react';
->>>>>>> origin/main
 
 export default function ITServicesPage() {
   const [activeTab, setActiveTab] = useState('overview');
@@ -239,7 +236,6 @@ export default function ITServicesPage() {
           popular: false
         },
         {
-<<<<<<< HEAD
           name: 'AI-Powered IT Operations',
           description: 'Intelligent IT operations with AI-driven automation, predictive maintenance, and self-healing systems',
           features: ['AI Automation', 'Predictive Maintenance', 'Self-healing Systems', 'Intelligent Alerting', 'Root Cause Analysis', 'Performance Optimization', 'Capacity Planning', 'Cost Optimization'],
@@ -430,7 +426,6 @@ export default function ITServicesPage() {
           timeline: '6-12 weeks',
           link: 'https://ziontechgroup.com/iot-platform',
           popular: true
-=======
           name: 'AI-Powered Infrastructure Management',
           description: 'Intelligent infrastructure management with AI-driven optimization and predictive maintenance',
           features: ['AI Optimization', 'Predictive Maintenance', 'Automated Scaling', 'Performance Tuning', 'Cost Optimization'],
@@ -738,7 +733,6 @@ export default function ITServicesPage() {
   ];
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       {/* Futuristic Background Effects */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(0,255,255,0.1)_0%,transparent_50%)] animate-pulse" />
@@ -750,15 +744,12 @@ export default function ITServicesPage() {
         <div className="absolute top-0 left-0 w-full h-full bg-[linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px)] bg-[length:100px_100px] animate-pulse" />
       </div>
 
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 matrix-bg">
->>>>>>> origin/main
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 animate-pulse"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-<<<<<<< HEAD
             <div className="inline-block mb-6">
               <h1 className="text-4xl lg:text-6xl font-bold text-white mb-4 neon-text">
                 IT Services
@@ -766,12 +757,10 @@ export default function ITServicesPage() {
               <div className="h-1 w-32 bg-gradient-to-r from-cyan-400 to-purple-600 mx-auto rounded-full"></div>
             </div>
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
-=======
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
               IT Services
             </h1>
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed neon-glow-cyan">
->>>>>>> origin/main
               Comprehensive IT solutions that keep your business running smoothly, securely, and efficiently. 
               From infrastructure to security, we've got you covered.
             </p>
@@ -860,14 +849,11 @@ export default function ITServicesPage() {
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
                   {category.services.map((service, serviceIndex) => (
-<<<<<<< HEAD
                     <div key={serviceIndex} className="group bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 relative overflow-hidden">
                       {/* Animated Background */}
                       <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-purple-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                       
-=======
                     <div key={serviceIndex} className="futuristic-card hover-lift p-6 relative">
->>>>>>> origin/main
                       {service.popular && (
                         <div className="absolute -top-2 -right-2 bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">
                           Popular
@@ -1060,7 +1046,6 @@ export default function ITServicesPage() {
           <h2 className="text-4xl lg:text-6xl font-bold text-white mb-6 neon-text">
             Ready to Modernize Your IT Infrastructure?
           </h2>
-<<<<<<< HEAD
           <p className="text-xl text-gray-200 mb-12 max-w-3xl mx-auto leading-relaxed">
             Join hundreds of enterprises that have already transformed their IT operations with our cutting-edge solutions.
           </p>
@@ -1069,7 +1054,6 @@ export default function ITServicesPage() {
             <a
               href="/contact"
               className="bg-white text-cyan-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-white/25 inline-flex items-center"
-=======
           <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
             Join 500+ enterprises that have already transformed their IT operations with our solutions. Get started today!
           </p>
@@ -1077,14 +1061,12 @@ export default function ITServicesPage() {
             <a
               href="https://ziontechgroup.com/contact"
               className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors inline-flex items-center"
->>>>>>> origin/main
             >
               <MessageSquare className="w-5 h-5 mr-2" />
               Get Started Today
             </a>
             <a
               href="tel:+13024640950"
-<<<<<<< HEAD
               className="border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-cyan-600 transition-all duration-300 inline-flex items-center"
             >
               <Phone className="w-5 h-5 mr-2" />
@@ -1109,7 +1091,6 @@ export default function ITServicesPage() {
               <h3 className="text-white font-bold text-lg mb-2">Address</h3>
               <p className="text-gray-200">364 E Main St STE 1008<br />Middletown, DE 19709</p>
             </div>
-=======
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-cyan-600 transition-colors inline-flex items-center"
             >
               <Phone className="w-5 h-5 mr-2" />
@@ -1118,7 +1099,6 @@ export default function ITServicesPage() {
           </div>
           <div className="text-gray-200 text-sm">
             <p>📧 kleber@ziontechgroup.com | 📍 364 E Main St STE 1008, Middletown, DE 19709</p>
->>>>>>> origin/main
           </div>
         </div>
       </section>

@@ -352,7 +352,6 @@ export default BlockchainIntegrationServicesProPage;
 };
 
 export default blockchainintegrationservicesPage;
-=======
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
@@ -626,5 +625,4 @@ const BlockchainIntegrationServicesPro: React.FC = () => {
 };
 
 export default BlockchainIntegrationServicesPro;
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-d464
 

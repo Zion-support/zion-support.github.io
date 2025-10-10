@@ -280,7 +280,6 @@ const healthPage: React.FC = () => {
 };
 
 export default healthPage;
-=======
 'use client';
 import React, { useState, useEffect } from 'react';
 import { CheckCircle, XCircle, AlertTriangle, Clock, Server, Database, Cloud, Shield, Activity, TrendingUp, Users, Globe } from 'lucide-react';
@@ -352,7 +351,6 @@ const HealthPage: React.FC = () => {
       case 'degraded':
         return 'text-yellow-400';
       case 'outage':
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
@@ -438,7 +436,6 @@ const HealthPage: React.FC = () => {
       case 'warning':
         return 'text-orange-400';
       case 'critical':
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-dd48
         return 'text-red-400';
       default:
         return 'text-gray-400';
@@ -559,7 +556,6 @@ export default function HealthPage() {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008, Middletown, DE 19709'
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-f003
   };
 
   return (
@@ -614,7 +610,6 @@ export default function HealthPage() {
               <div className="inline-flex items-center px-6 py-3 bg-green-500/20 border border-green-500/50 rounded-full text-green-400 font-semibold">
                 <div className="w-3 h-3 bg-green-400 rounded-full mr-3 animate-pulse"></div>
                 All Systems Operational
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-dd48
               </div>
             </div>
           </div>
@@ -646,7 +641,6 @@ export default function HealthPage() {
                     {metric.value}
                   </div>
                   <p className="text-sm text-gray-400">{metric.description}</p>
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-dd48
                 </div>
               ))}
             </div>
@@ -686,7 +680,6 @@ export default function HealthPage() {
                       </div>
                     </div>
                   </div>
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-dd48
                 </div>
               ))}
             </div>
@@ -726,7 +719,6 @@ export default function HealthPage() {
                   <div className="text-sm text-gray-400">Uptime (30 days)</div>
                 </div>
               ))}
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-dd48
             </div>
           </div>
         </section>
@@ -940,15 +932,12 @@ export default function HealthPage() {
           </div>
         </div>
       </section>
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-f003
 
       <Footer />
     </div>
   );
 
 }
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-f003
-=======
         {/* Contact Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-600 to-purple-600">
           <div className="max-w-4xl mx-auto text-center">
@@ -974,5 +963,4 @@ export default function HealthPage() {
 };
 
 export default HealthPage;
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-dd48
 

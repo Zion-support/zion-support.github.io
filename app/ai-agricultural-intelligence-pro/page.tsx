@@ -352,7 +352,6 @@ export default AIAgriculturalIntelligenceProPage;
 };
 
 export default aiagriculturalintelligenceproPage;
-=======
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
@@ -626,5 +625,4 @@ const AIAgriculturalIntelligencePro: React.FC = () => {
 };
 
 export default AIAgriculturalIntelligencePro;
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-d464
 

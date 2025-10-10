@@ -1,7 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import { Loader2, Brain, Zap, Cloud, Shield } from 'lucide-react';
 
 interface LoadingSpinnerProps {
@@ -23,7 +20,6 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     <Loader2 className={`animate-spin ${sizeClasses[size]} ${className}`} />
   );
 };
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-69ae
 
 interface SkeletonCardProps {
   className?: string;
@@ -48,19 +44,16 @@ export const SkeletonCard: React.FC<SkeletonCardProps> = ({ className = '' }) =>
 
 interface PageLoaderProps {
   message?: string;
-<<<<<<< HEAD
 }
 
 export const PageLoader: React.FC<PageLoaderProps> = ({ 
   message = "Loading..." 
-=======
   showIcon?: boolean;
 }
 
 export const PageLoader: React.FC<PageLoaderProps> = ({ 
   message = "Loading...", 
   showIcon = true 
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-69ae
 }) => {
   const icons = [Brain, Zap, Cloud, Shield];
   const randomIcon = icons[Math.floor(Math.random() * icons.length)];
@@ -69,10 +62,8 @@ export const PageLoader: React.FC<PageLoaderProps> = ({
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="text-center">
-<<<<<<< HEAD
         <div className="loading-spinner mx-auto mb-4"></div>
         <p className="text-gray-300 text-lg">{message}</p>
-=======
 import { Loader2, Zap, Brain, Cloud, Code } from 'lucide-react';
 
 interface PageLoaderProps {
@@ -170,7 +161,6 @@ const PageLoader: React.FC<PageLoaderProps> = ({
           <div className="w-2 h-2 bg-cyan-400 rounded-full animate-bounce"></div>
           <div className="w-2 h-2 bg-purple-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
           <div className="w-2 h-2 bg-pink-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
-=======
         {showIcon && (
           <div className="mb-6">
             <div className="w-20 h-20 mx-auto bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full flex items-center justify-center animate-pulse">
@@ -186,21 +176,14 @@ const PageLoader: React.FC<PageLoaderProps> = ({
           <div className="w-64 h-1 bg-white/10 rounded-full overflow-hidden">
             <div className="h-full bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full animate-pulse"></div>
           </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-69ae
         </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-9813
       </div>
     </div>
   );
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default PageLoader;
-=======
 export { PageLoader };
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-9813
-=======
 interface ContentSkeletonProps {
   count?: number;
   className?: string;
@@ -246,4 +229,3 @@ export default {
   ContentSkeleton,
   ButtonLoading
 };
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-69ae

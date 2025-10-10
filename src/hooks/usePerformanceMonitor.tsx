@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useEffect } from 'react';
 
 export const usePerformanceMonitor = () => {
@@ -31,7 +29,6 @@ export const usePerformanceMonitor = () => {
     };
   }, []);
 };
-=======
 import { useEffect, useCallback } from 'react';
 import { useLocation } from 'react-router-dom';
 
@@ -296,8 +293,6 @@ const usePerformanceMonitor = (options: PerformanceMonitorOptions = {}) => {
 };
 
 export default usePerformanceMonitor;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-9813
-=======
 import { useEffect, useCallback } from 'react';
 
 interface PerformanceMetrics {
@@ -496,4 +491,3 @@ export const usePerformanceMonitor = () => {
     preloadCriticalResources
   };
 };
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-69ae

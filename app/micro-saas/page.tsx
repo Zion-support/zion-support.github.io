@@ -26,16 +26,13 @@ import {
   Database,
   ShoppingCart,
   Scale,
-<<<<<<< HEAD
   Palette,
   Music,
   Cpu,
   Sprout,
   Phone,
   MapPin
-=======
   Palette
->>>>>>> origin/main
 } from 'lucide-react';
 
 const MicroSAASPage: React.FC = () => {
@@ -59,12 +56,9 @@ const MicroSAASPage: React.FC = () => {
       rating: 4.8,
       users: '2,500+',
       trial: '14-day free trial',
-<<<<<<< HEAD
       link: 'https://ziontechgroup.com/ai-project-manager'
-=======
       link: 'https://ziontechgroup.com/ai-project-manager',
       capabilities: ['40% faster project delivery', '60% reduction in project overruns', 'Real-time team insights', 'Automated risk detection']
->>>>>>> origin/main
     },
     { 
       name: 'AI Smart Calendar Pro', 
@@ -349,17 +343,13 @@ const MicroSAASPage: React.FC = () => {
       popular: true,
       rating: 4.6,
       users: '1,700+',
-<<<<<<< HEAD
       trial: '21-day free trial',
       link: 'https://ziontechgroup.com/ai-hr-assistant'
     },
 
     // Advanced AI & Machine Learning
-=======
-<<<<<<< HEAD
       trial: '21-day free trial'
     },
-<<<<<<< HEAD
     { 
       name: 'AI Quantum Financial Oracle', 
       href: '/ai-quantum-financial-oracle', 
@@ -368,16 +358,13 @@ const MicroSAASPage: React.FC = () => {
       price: '$2,999/mo',
       description: 'Revolutionary quantum-powered financial analysis with ultra-fast market predictions and risk assessment',
       features: ['Quantum Market Analysis', 'Ultra-fast Predictions', 'Risk Assessment', 'Portfolio Optimization', 'Cryptocurrency Analysis', 'Real-time Trading Signals'],
-=======
 
     // Advanced AI Solutions
->>>>>>> origin/main
     { 
       name: 'AI Quantum Financial Oracle', 
       href: '/ai-quantum-financial-oracle', 
       icon: Brain, 
       category: 'Quantum AI', 
-<<<<<<< HEAD
       price: '$2,999/mo',
       description: 'Revolutionary quantum-powered financial prediction system with 99.7% accuracy in market forecasting',
       features: ['Quantum Market Analysis', 'Real-time Risk Assessment', 'Portfolio Optimization', 'Crypto Prediction', 'Economic Modeling', 'Quantum Encryption'],
@@ -502,7 +489,6 @@ const MicroSAASPage: React.FC = () => {
       users: '900+',
       trial: '14-day free trial',
       link: 'https://ziontechgroup.com/ai-music-composition'
-=======
       price: '$8,500/mo',
       description: 'Revolutionary quantum-powered financial predictions with 99.7% accuracy and real-time market analysis',
       features: ['Quantum Risk Analysis', 'Market Prediction', 'Portfolio Optimization', 'Real-time Trading Signals', 'Fraud Detection', 'Compliance Monitoring'],
@@ -513,7 +499,6 @@ const MicroSAASPage: React.FC = () => {
       trial: '30-day free trial'
     },
     { 
-<<<<<<< HEAD
       name: 'AI 3D Generation Studio', 
       href: '/ai-3d-generation', 
       icon: FileText, 
@@ -523,7 +508,6 @@ const MicroSAASPage: React.FC = () => {
       features: ['3D Model Generation', 'Animation Creation', 'Virtual Environments', 'Texture Generation', 'Rigging Automation', 'Rendering Optimization'],
       popular: true,
       rating: 4.7,
-=======
       name: 'AI Neural Memory Assistant', 
       href: '/ai-neural-memory-assistant', 
       icon: Brain, 
@@ -538,7 +522,6 @@ const MicroSAASPage: React.FC = () => {
       trial: '14-day free trial'
     },
     { 
-<<<<<<< HEAD
       name: 'AI Mobile App Builder Pro', 
       href: '/ai-mobile-app-builder', 
       icon: Smartphone, 
@@ -550,7 +533,6 @@ const MicroSAASPage: React.FC = () => {
       rating: 4.8,
       users: '2,300+',
       trial: '21-day free trial'
-=======
       trial: '21-day free trial',
       link: 'https://ziontechgroup.com/ai-hr-assistant',
       capabilities: ['50% faster hiring process', '80% reduction in HR admin time', 'Automated compliance tracking', 'Employee satisfaction insights']
@@ -662,12 +644,10 @@ const MicroSAASPage: React.FC = () => {
       link: 'https://ziontechgroup.com/ai-password-generator',
       capabilities: ['Military-grade encryption', 'Real-time breach monitoring', 'Cross-platform sync', 'Team password sharing']
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-c63e
->>>>>>> origin/main
     },
     { 
       name: 'AI Logo Designer Pro', 
       href: '/ai-logo-designer', 
-<<<<<<< HEAD
       icon: Palette, 
       category: 'Design', 
       price: '$99/mo',
@@ -756,8 +736,6 @@ const MicroSAASPage: React.FC = () => {
   ];
 
   const categories = ['All', 'Productivity', 'Content', 'Marketing', 'Business', 'Finance', 'Development', 'Security', 'Healthcare', 'Legal', 'E-commerce', 'HR', 'Quantum AI', 'AI Memory', 'Immersive Tech', 'Climate Tech', 'Space Tech', 'FinTech', 'Creative', 'Design', 'Supply Chain', 'Energy', 'Agriculture', 'Autonomous', 'Blockchain'];
-=======
-<<<<<<< HEAD
       icon: FileText, 
       category: 'Design', 
       price: '$89/mo',
@@ -914,7 +892,6 @@ const MicroSAASPage: React.FC = () => {
   ];
 
   const categories = ['All', 'Productivity', 'Content', 'Marketing', 'Business', 'Finance', 'Development', 'Security', 'Healthcare', 'Legal', 'E-commerce', 'HR', 'Creative', 'Computer Vision', 'Manufacturing', 'Insurance', 'Testing', 'Education', 'Health', 'Analytics', 'Industrial', 'Language', 'Design'];
-=======
       icon: Palette, 
       category: 'Design', 
       price: '$79/mo',
@@ -961,7 +938,6 @@ const MicroSAASPage: React.FC = () => {
 
   const categories = ['All', 'Productivity', 'Content', 'Marketing', 'Business', 'Finance', 'Development', 'Security', 'Healthcare', 'Legal', 'E-commerce', 'HR', 'AI Tools', 'Document Management', 'Communication', 'Web Development', 'Analytics', 'Email Tools', 'Design', 'Social Media'];
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-c63e
-=======
       name: 'AI Holographic Workspace', 
       href: '/ai-holographic-workspace', 
       icon: Rocket, 
@@ -1056,7 +1032,6 @@ const MicroSAASPage: React.FC = () => {
 
   const categories = ['All', 'Productivity', 'Content', 'Marketing', 'Business', 'Finance', 'Development', 'Security', 'Healthcare', 'Legal', 'E-commerce', 'HR', 'Quantum AI', 'Cognitive AI', 'Immersive Tech', 'Autonomous AI', 'Blockchain AI', 'Energy AI', 'Space Tech', 'Environmental AI', 'Pharma AI'];
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-32a7
->>>>>>> origin/main
 
   if (!isLoaded) {
     return (
@@ -1067,7 +1042,6 @@ const MicroSAASPage: React.FC = () => {
   }
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 relative overflow-hidden">
       {/* Futuristic Background Effects */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(0,255,255,0.1)_0%,transparent_50%)] animate-pulse" />
@@ -1079,15 +1053,12 @@ const MicroSAASPage: React.FC = () => {
         <div className="absolute top-0 left-0 w-full h-full bg-[linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px)] bg-[length:100px_100px] animate-pulse" />
       </div>
 
-=======
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 matrix-bg">
->>>>>>> origin/main
       {/* Header */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16 relative z-10">
           <div className="text-center">
-<<<<<<< HEAD
             <div className="inline-block mb-6">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 neon-text">
                 Micro SAAS Solutions
@@ -1111,7 +1082,6 @@ const MicroSAASPage: React.FC = () => {
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-pink-400/20">
                 <div className="text-3xl font-bold text-pink-400 mb-2">99.9%</div>
                 <div className="text-gray-300">Uptime SLA</div>
-=======
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
               Micro SAAS Solutions
             </h1>
@@ -1127,7 +1097,6 @@ const MicroSAASPage: React.FC = () => {
               </div>
               <div className="holographic px-6 py-3 rounded-lg">
                 <span className="text-pink-400 font-semibold">99.9% Uptime</span>
->>>>>>> origin/main
               </div>
             </div>
           </div>
@@ -1154,13 +1123,10 @@ const MicroSAASPage: React.FC = () => {
           {microSAASServices.map((service) => (
             <div
               key={service.name}
-<<<<<<< HEAD
               className={`group bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 relative overflow-hidden ${
                 service.popular ? 'ring-2 ring-purple-500/50 shadow-lg shadow-purple-500/20' : ''
-=======
               className={`futuristic-card hover-lift p-8 ${
                 service.popular ? 'ring-2 ring-purple-500 neon-glow-purple' : ''
->>>>>>> origin/main
               }`}
             >
               {/* Animated Background */}
@@ -1193,7 +1159,6 @@ const MicroSAASPage: React.FC = () => {
                   {service.description}
                 </p>
 
-<<<<<<< HEAD
                 <div className="mb-6">
                   <h4 className="text-lg font-semibold text-white mb-3 flex items-center">
                     <Zap className="w-4 h-4 mr-2 text-cyan-400" />
@@ -1212,7 +1177,6 @@ const MicroSAASPage: React.FC = () => {
                       </li>
                     )}
                   </ul>
-=======
               <div className="mb-6">
                 <h4 className="text-lg font-semibold text-white mb-3">Key Features:</h4>
                 <ul className="space-y-2">
@@ -1242,7 +1206,6 @@ const MicroSAASPage: React.FC = () => {
               <div className="flex items-center justify-between mb-6">
                 <div className="text-2xl font-bold text-white">
                   {service.price}
->>>>>>> origin/main
                 </div>
 
                 <div className="flex items-center justify-between mb-6">
@@ -1280,8 +1243,6 @@ const MicroSAASPage: React.FC = () => {
                   </a>
                 </div>
               </div>
-<<<<<<< HEAD
-=======
 
               <div className="flex items-center justify-between mb-6 text-sm">
                 <div className="flex items-center text-gray-400">
@@ -1302,14 +1263,12 @@ const MicroSAASPage: React.FC = () => {
                 Get Started
                 <ArrowRight className="w-4 h-4 ml-2" />
               </a>
->>>>>>> origin/main
             </div>
           ))}
         </div>
       </div>
 
       {/* CTA Section */}
-<<<<<<< HEAD
       <div className="relative bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 py-20 overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(255,255,255,0.1)_0%,transparent_50%)] animate-pulse" />
@@ -1357,7 +1316,6 @@ const MicroSAASPage: React.FC = () => {
               <h3 className="text-white font-bold text-lg mb-2">Address</h3>
               <p className="text-gray-200">364 E Main St STE 1008<br />Middletown, DE 19709</p>
             </div>
-=======
       <div className="bg-gradient-to-r from-purple-600 to-blue-600 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -1382,7 +1340,6 @@ const MicroSAASPage: React.FC = () => {
           </div>
           <div className="text-purple-100 text-sm">
             <p>📧 kleber@ziontechgroup.com | 📍 364 E Main St STE 1008, Middletown, DE 19709</p>
->>>>>>> origin/main
           </div>
         </div>
       </div>

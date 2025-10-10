@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { 
   Users, 
@@ -65,9 +64,7 @@ import {
   Eye,
   Sparkles
 } from 'lucide-react';
-=======
 import { Users, Award, Star, CheckCircle, ArrowRight, Brain, Cloud, Shield, Code, BarChart, Globe, Phone, Mail, MapPin, Clock } from 'lucide-react';
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-b3bb
 
 export default function TeamPage() {
   const teamMembers = [
@@ -75,7 +72,6 @@ export default function TeamPage() {
       id: 1,
       name: 'Kleber Santos',
       role: 'CEO & Founder',
-<<<<<<< HEAD
       title: 'Chief Executive Officer',
       image: '/images/team/kleber-santos.jpg',
       bio: 'Visionary leader with 15+ years in AI and enterprise solutions. Former CTO at Fortune 500 companies, Kleber founded Zion Tech Group to democratize AI for businesses worldwide.',
@@ -253,7 +249,6 @@ export default function TeamPage() {
       title: 'Excellence',
       description: 'We strive for excellence in everything we do, from code quality to client relationships',
       icon: Award
-=======
       image: '/images/team/kleber-santos.jpg',
       bio: 'Visionary leader with 15+ years in AI and enterprise solutions',
       expertise: ['AI Strategy', 'Enterprise Architecture', 'Digital Transformation'],
@@ -298,23 +293,18 @@ export default function TeamPage() {
       bio: 'Product strategist focused on user experience and market innovation',
       expertise: ['Product Strategy', 'UX Design', 'Market Research'],
       linkedin: 'https://linkedin.com/in/lisa-thompson'
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-b3bb
     }
   ];
 
   const stats = [
-<<<<<<< HEAD
-<<<<<<< HEAD
     { number: '100+', label: 'Team Members', icon: Users },
     { number: '15+', label: 'Years Experience', icon: Award },
     { number: '50+', label: 'Patents Filed', icon: Brain },
     { number: '99%', label: 'Client Satisfaction', icon: Star }
   ];
-=======
     { label: 'Team Members', value: '50+' },
     { label: 'Years Experience', value: '15+' },
     { label: 'Projects Completed', value: '500+' }
-=======
     { number: '50+', label: 'Team Members', icon: Users },
     { number: '15+', label: 'Years Experience', icon: Award },
     { number: '500+', label: 'Projects Delivered', icon: Star },
@@ -342,12 +332,10 @@ export default function TeamPage() {
       title: 'Global Impact',
       description: 'We build technology that makes the world better'
     }
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-b3bb
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-<<<<<<< HEAD
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-4xl font-bold text-white mb-4">Our Team</h1>
@@ -372,7 +360,6 @@ export default function TeamPage() {
           ))}
         </div>
       </div>
-=======
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div>
@@ -520,11 +507,9 @@ export default function TeamPage() {
           </div>
         </div>
       </section>
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-b3bb
     </div>
   );
 };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0013
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

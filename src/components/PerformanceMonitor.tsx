@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 'use client';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fd
 import React, { useEffect, useState } from 'react';
 import { Activity, Zap, Clock, TrendingUp } from 'lucide-react';
 
@@ -59,7 +55,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           event_label: 'page_load',
           value: Math.round(performanceMetrics.loadTime),
           custom_parameters: performanceMetrics,
-=======
 import React, { useEffect } from 'react';
 import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
 
@@ -89,12 +84,10 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children }) => 
           metric_value: metric.value,
           metric_delta: metric.delta,
           metric_id: metric.id,
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-fb25
         });
       }
     };
 
-<<<<<<< HEAD
     // Measure performance after page load
     if (document.readyState === 'complete') {
       measurePerformance();
@@ -196,7 +189,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children }) => 
       )}
     </div>
   );
-=======
     // Measure Core Web Vitals
     getCLS(sendToAnalytics);
     getFID(sendToAnalytics);
@@ -255,7 +247,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children }) => 
   }, []);
 
   return <>{children}</>;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-fb25
 };
 
 export default PerformanceMonitor;

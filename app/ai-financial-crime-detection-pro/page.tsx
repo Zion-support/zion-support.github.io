@@ -308,7 +308,6 @@ export default AIFinancialCrimeDetectionProPage;
 };
 
 export default aifinancialcrimedetectionproPage;
-=======
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
@@ -551,5 +550,4 @@ const AIFinancialCrimeDetectionPro: React.FC = () => {
 };
 
 export default AIFinancialCrimeDetectionPro;
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-d464
 

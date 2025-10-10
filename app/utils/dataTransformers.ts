@@ -5,7 +5,6 @@
  * Provides data transformation and formatting functions
  */
 
-<<<<<<< HEAD
 export interface TransformOptions {
   format?: 'json' | 'xml' | 'csv' | 'yaml';
   encoding?: 'utf8' | 'base64';
@@ -79,7 +78,6 @@ class DataTransformer {
           xml += `${indent}<${key}>${newline}${this.toXML(value, pretty)}${newline}${indent}</${key}>${newline}`;
         } else {
           xml += `${indent}<${key}>${value}</${key}>${newline}`;
-=======
 /**
  * Deep clone an object
  */
@@ -209,21 +207,16 @@ export function unflattenObject(obj: Record<string, any>): Record<string, any> {
       for (let i = 0; i < keys.length - 1; i++) {
         if (!current[keys[i]]) {
           current[keys[i]] = {};
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
         }
         current = current[keys[i]];
       }
-<<<<<<< HEAD
       return xml;
-=======
       
       current[keys[keys.length - 1]] = obj[key];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
     }
     
     return String(data);
   }
-<<<<<<< HEAD
 
   /**
    * Convert data to CSV format
@@ -348,7 +341,6 @@ export function unflattenObject(obj: Record<string, any>): Record<string, any> {
 export const dataTransformer = new DataTransformer();
 
 export default DataTransformer;
-=======
   
   return result;
 }
@@ -652,4 +644,3 @@ export default {
   debounce,
   throttle
 };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367

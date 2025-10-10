@@ -28,22 +28,16 @@ export interface Metadata {
     }>;
     locale?: string;
     type?: string;
-<<<<<<< HEAD
-=======
     authors?: Array<{ name: string; url?: string }> | string[];
     publishedTime?: string;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0013
   };
   twitter?: {
     card?: string;
     title?: string;
     description?: string;
     images?: string[];
-<<<<<<< HEAD
-=======
     site?: string;
     creator?: string;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0013
   };
   robots?: {
     index?: boolean;
@@ -58,7 +52,6 @@ export interface Metadata {
   };
   verification?: {
     google?: string;
-<<<<<<< HEAD
     yandex?: string;
     yahoo?: string;
     other?: Record<string, string>;
@@ -81,7 +74,6 @@ export interface GenerateMetadataParams {
 
 export type GenerateMetadata = (params: GenerateMetadataParams) => Metadata | Promise<Metadata>;
 export type GenerateViewport = (params: GenerateMetadataParams) => Viewport | Promise<Viewport>;
-=======
   };
 }
 
@@ -99,4 +91,3 @@ export interface MetadataRouteSitemap {
   changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
   priority?: number;
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0013

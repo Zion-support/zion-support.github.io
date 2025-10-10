@@ -1,28 +1,16 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 'use client'
 
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1595
-=======
 'use client';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
 /**
-<<<<<<< HEAD
  * Configuration Manager
  * Centralized configuration management for the application
  */
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export type Environment = 'development' | 'staging' | 'production' | 'test'
 
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1595
 export interface AppConfig {
   api: {
-<<<<<<< HEAD
     baseURL: string
     timeout: number
     retryAttempts: number
@@ -58,7 +46,6 @@ export interface AppConfig {
     enableConsole: boolean
     enableNetwork: boolean
   }
-=======
     baseURL: string;
     timeout: number;
     retryAttempts: number;
@@ -128,7 +115,6 @@ export interface AppConfig {
     enableUserAnalytics: boolean;
     enableRealTimeMonitoring: boolean;
   };
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1595
 }
 
 const defaultConfig: AppConfig = {
@@ -136,11 +122,8 @@ const defaultConfig: AppConfig = {
     baseURL: process.env.VITE_API_BASE_URL || 'https://api.ziontechgroup.com',
     timeout: 10000,
     retryAttempts: 3,
-<<<<<<< HEAD
     enableCaching: true
-=======
     enableCaching: true,
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1595
   },
   features: {
     enableAnalytics: true,
@@ -148,36 +131,26 @@ const defaultConfig: AppConfig = {
     enablePerformanceMonitoring: true,
     enableAccessibility: true,
     enableSEO: true,
-<<<<<<< HEAD
     enablePWA: true
-=======
     enablePWA: true,
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1595
   },
   performance: {
     enableCodeSplitting: true,
     enableLazyLoading: true,
     enableImageOptimization: true,
-<<<<<<< HEAD
     enableCaching: true
-=======
     enableCaching: true,
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1595
   },
   security: {
     enableCSP: true,
     enableCORS: true,
     enableRateLimiting: true,
-<<<<<<< HEAD
     maxRequestsPerMinute: 100
-=======
     maxRequestsPerMinute: 100,
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1595
   },
   ui: {
     theme: 'dark',
     language: 'en',
-<<<<<<< HEAD
     timezone: 'UTC'
   },
   logging: {
@@ -253,7 +226,6 @@ class ConfigManager {
 
   public isStaging(): boolean {
     return this.config.environment === 'staging'
-=======
     enableAnimations: true,
     enableNotifications: true,
   },
@@ -316,7 +288,6 @@ class ConfigManager {
     }
     if (process.env.VITE_FB_PIXEL_ID) {
       this.config.analytics.facebookPixelId = process.env.VITE_FB_PIXEL_ID;
-=======
  * Configuration Manager Utility
  * Provides centralized configuration management for the application
  */
@@ -461,7 +432,6 @@ class ConfigManager {
           console.error(`Error in config listener for ${key}:`, error);
         }
       });
-=======
 export type Environment = 'development' | 'staging' | 'production' | 'test';
 
 export interface AppConfig {
@@ -778,7 +748,6 @@ export class ConfigManager {
     this.overrides = {};
     if (typeof window !== 'undefined') {
       localStorage.removeItem('config-overrides');
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
     }
     this.reset();
   }
@@ -793,7 +762,6 @@ export class ConfigManager {
       this.config = { ...this.config, ...parsed };
     } catch (error) {
       console.error('Failed to parse config JSON:', error);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4ed2
     }
   }
 
@@ -845,29 +813,19 @@ export class ConfigManager {
 
   public isSecurityEnabled(feature: keyof AppConfig['security']): boolean {
     return this.config.security[feature];
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1595
   }
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 // Export singleton instance
-<<<<<<< HEAD
 export const configManager = new ConfigManager()
 export default configManager
-=======
 export const configManager = new ConfigManager();
 export default configManager;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1595
-=======
 // Create singleton instance
 export const configManager = new ConfigManager();
 
 export default ConfigManager;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4ed2
-=======
 // Create singleton instance
 export const configManager = new ConfigManager();
 
 export default ConfigManager;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367

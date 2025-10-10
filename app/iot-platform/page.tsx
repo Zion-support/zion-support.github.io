@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { 
   Wifi, 
@@ -20,14 +16,11 @@ import {
   Network,
   Server
 } from 'lucide-react';
-=======
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Star, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight, Phone, Mail } from 'lucide-react';
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-db70
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
@@ -47,14 +40,11 @@ import {
   Cloud,
   Radio
 } from 'lucide-react';
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
 
 const IoTPlatformPage: React.FC = () => {
   const features = [
     {
-<<<<<<< HEAD
       icon: Wifi,
-<<<<<<< HEAD
       title: 'Device Connectivity',
       description: 'Connect and manage millions of IoT devices with our scalable connectivity platform.',
       benefits: ['Multi-protocol support', 'Device management', 'Remote provisioning', 'OTA updates']
@@ -70,7 +60,6 @@ const IoTPlatformPage: React.FC = () => {
       title: 'Cloud Integration',
       description: 'Seamless integration with cloud platforms and enterprise systems.',
       benefits: ['Cloud-native architecture', 'Auto-scaling', 'Global deployment', 'API integration']
-=======
       icon: Globe,
       title: 'Device Management',
       description: 'Comprehensive IoT device management platform that handles millions of connected devices with ease.',
@@ -81,12 +70,10 @@ const IoTPlatformPage: React.FC = () => {
       title: 'Edge Processing',
       description: 'Process data at the edge for real-time insights and reduced latency in IoT applications.',
       benefits: ['Local data processing', 'Real-time analytics', 'Reduced latency', 'Offline capability']
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
     },
     {
       icon: Shield,
       title: 'Security & Compliance',
-<<<<<<< HEAD
       description: 'End-to-end security for IoT devices, data, and communications.',
       benefits: ['Device authentication', 'Data encryption', 'Access control', 'Compliance ready']
     }
@@ -123,7 +110,6 @@ const IoTPlatformPage: React.FC = () => {
       description: 'Vehicle tracking and management solutions for transportation companies.',
       icon: Network
     }
-=======
       description: 'End-to-end security for IoT devices and data with industry-standard encryption and protocols.',
       benefits: ['Device authentication', 'Data encryption', 'Secure communication', 'Compliance support']
     },
@@ -159,14 +145,12 @@ const IoTPlatformPage: React.FC = () => {
     'Custom dashboard creation',
     'Alert and notification systems',
     'Data visualization tools'
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
   ];
 
   return (
     <>
       <Helmet>
         <title>IoT Platform Development - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name="description" content="Comprehensive IoT platform development services including device connectivity, data processing, and cloud integration for smart applications." />
         <meta name="keywords" content="IoT platform, IoT development, smart devices, IoT connectivity, industrial IoT, smart cities" />
         <link rel="canonical" href="https://ziontechgroup.com/iot-platform" />
@@ -204,7 +188,6 @@ const IoTPlatformPage: React.FC = () => {
                 </button>
                 <button className="px-8 py-4 border border-cyan-400 text-cyan-400 rounded-lg hover:bg-cyan-400/10 transition-all">
                   View Demo
-=======
         <meta name="description" content="Comprehensive IoT platform development services for connected devices, edge computing, and smart solutions. Scale your IoT infrastructure." />
         <meta name="keywords" content="IoT platform, connected devices, edge computing, smart solutions, device management, IoT analytics" />
       </Helmet>
@@ -241,13 +224,11 @@ const IoTPlatformPage: React.FC = () => {
                 </button>
                 <button className="border border-teal-400 text-teal-300 hover:bg-teal-400/10 px-8 py-4 rounded-lg font-semibold transition-all duration-300">
                   View IoT Solutions
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
                 </button>
               </div>
             </div>
 
             {/* Stats */}
-<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
               <div className="text-center">
                 <div className="text-4xl font-bold text-cyan-400 mb-2">10M+</div>
@@ -265,7 +246,6 @@ const IoTPlatformPage: React.FC = () => {
                 <div className="text-4xl font-bold text-green-400 mb-2">Global</div>
                 <div className="text-gray-300">Cloud Coverage</div>
               </div>
-=======
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mt-16">
               <div className="text-center">
                 <div className="text-4xl font-bold text-teal-400 mb-2">1M+</div>
@@ -283,7 +263,6 @@ const IoTPlatformPage: React.FC = () => {
                 <div className="text-4xl font-bold text-purple-400 mb-2">50+</div>
                 <div className="text-gray-300">Protocols Supported</div>
               </div>
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
             </div>
           </div>
         </section>
@@ -293,7 +272,6 @@ const IoTPlatformPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-6">
-<<<<<<< HEAD
                 Comprehensive IoT Platform
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -316,7 +294,6 @@ const IoTPlatformPage: React.FC = () => {
                           <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
                             <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                             {benefit}
-=======
                 IoT Platform Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -340,7 +317,6 @@ const IoTPlatformPage: React.FC = () => {
                           <li key={benefitIndex} className="flex items-center space-x-2 text-gray-300">
                             <CheckCircle className="w-4 h-4 text-teal-400 flex-shrink-0" />
                             <span>{benefit}</span>
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
                           </li>
                         ))}
                       </ul>
@@ -352,16 +328,12 @@ const IoTPlatformPage: React.FC = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Use Cases Grid */}
-=======
         {/* Solutions Section */}
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
         <section className="py-20 px-4 bg-slate-800/30">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-6">
-<<<<<<< HEAD
                 IoT Use Cases & Applications
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -377,7 +349,6 @@ const IoTPlatformPage: React.FC = () => {
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-3">{useCase.title}</h3>
                   <p className="text-gray-300 text-sm">{useCase.description}</p>
-=======
                 IoT Solutions & Applications
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -395,14 +366,12 @@ const IoTPlatformPage: React.FC = () => {
                     </div>
                     <span className="text-white font-medium">{solution}</span>
                   </div>
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Platform Architecture */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -446,7 +415,6 @@ const IoTPlatformPage: React.FC = () => {
                   <p className="text-gray-300">Business applications and user interfaces</p>
                 </div>
               </div>
-=======
         {/* Capabilities Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -469,23 +437,18 @@ const IoTPlatformPage: React.FC = () => {
                   <h3 className="text-white font-semibold mb-2">{capability}</h3>
                 </div>
               ))}
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4">
-=======
         <section className="py-20 px-4 bg-slate-800/30">
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Build Your IoT Platform?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-<<<<<<< HEAD
               Join thousands of companies already using our IoT platform to create 
               innovative connected solutions and drive digital transformation.
             </p>
@@ -496,7 +459,6 @@ const IoTPlatformPage: React.FC = () => {
               </button>
               <button className="px-8 py-4 border border-cyan-400 text-cyan-400 rounded-lg hover:bg-cyan-400/10 transition-all">
                 Contact Experts
-=======
               Transform your business with comprehensive IoT solutions and connected device management.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -506,7 +468,6 @@ const IoTPlatformPage: React.FC = () => {
               </button>
               <button className="border border-teal-400 text-teal-300 hover:bg-teal-400/10 px-8 py-4 rounded-lg font-semibold transition-all duration-300">
                 Schedule Consultation
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
               </button>
             </div>
           </div>
@@ -516,11 +477,7 @@ const IoTPlatformPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default IoTPlatformPage;
-=======
-=======
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
 import { Wifi, Cpu, Database, Shield, CheckCircle, ArrowRight, Phone, Mail, MapPin, Calendar, MessageSquare, Network, Zap, Target, Award, Star, Brain, TrendingUp, Smartphone, Globe } from 'lucide-react';
 
 export default function IoTPlatformPage() {
@@ -542,7 +499,6 @@ export default function IoTPlatformPage() {
       title: 'Data Storage',
       description: 'Scalable data storage solutions for massive IoT data volumes.',
       features: ['Time Series DB', 'Data Lake', 'Data Warehousing', 'Data Archiving']
-=======
       title: 'Device Management',
       description: 'Comprehensive IoT device management with remote monitoring, updates, and configuration.',
       benefits: ['Remote monitoring', 'OTA updates', 'Device configuration']
@@ -564,12 +520,10 @@ export default function IoTPlatformPage() {
       title: 'Scalable Infrastructure',
       description: 'Easily scale your IoT platform as your device fleet grows with millions of connected devices.',
       benefits: ['Auto-scaling', 'Device onboarding', 'Fleet management']
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-db70
     },
     {
       icon: Shield,
       title: 'IoT Security',
-<<<<<<< HEAD
       description: 'End-to-end security solutions for IoT devices and data.',
       features: ['Device Authentication', 'Data Encryption', 'Network Security', 'Threat Detection']
     }
@@ -668,7 +622,6 @@ export default function IoTPlatformPage() {
                 <span className="text-white font-medium">Secure</span>
               </div>
             </div>
-=======
       description: 'Comprehensive security measures designed specifically for IoT environments and devices.',
       benefits: ['Device security', 'Data encryption', 'Access controls']
     },
@@ -708,12 +661,10 @@ export default function IoTPlatformPage() {
             <button className="border border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
               Schedule Demo
             </button>
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-db70
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Services */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -816,7 +767,6 @@ export default function IoTPlatformPage() {
                 <div className="text-gray-300 text-sm">
                   {benefit.description}
                 </div>
-=======
       {/* Features Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -843,7 +793,6 @@ export default function IoTPlatformPage() {
                     </li>
                   ))}
                 </ul>
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-db70
               </div>
             ))}
           </div>
@@ -851,7 +800,6 @@ export default function IoTPlatformPage() {
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
@@ -880,13 +828,8 @@ export default function IoTPlatformPage() {
       </section>
     </div>
   );
-<<<<<<< HEAD
 }
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
-=======
 }
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
-=======
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Build Your IoT Platform?</h2>
@@ -910,7 +853,4 @@ export default function IoTPlatformPage() {
 };
 
 export default IoTPlatformPage;
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-db70
-=======
 export default IoTPlatformPage;
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8

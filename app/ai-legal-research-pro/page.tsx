@@ -352,7 +352,6 @@ export default AILegalResearchProPage;
 };
 
 export default ailegalresearchproPage;
-=======
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
@@ -626,5 +625,4 @@ const AILegalResearchPro: React.FC = () => {
 };
 
 export default AILegalResearchPro;
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-d464
 

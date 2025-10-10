@@ -1,17 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import React from 'react';
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
 import { Helmet } from 'react-helmet-async';
 import { 
   Wifi, 
   Zap, 
   Globe, 
-<<<<<<< HEAD
   Smartphone, 
   CheckCircle, 
   AlertTriangle,
@@ -24,14 +17,11 @@ import {
   Network,
   Server
 } from 'lucide-react';
-=======
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Star, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight, Phone, Mail } from 'lucide-react';
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-db70
-=======
   Shield, 
   CheckCircle, 
   ArrowRight,
@@ -45,13 +35,10 @@ import { CheckCircle, Star, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRigh
   Cloud,
   Radio
 } from 'lucide-react';
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
 
 const FiveGImplementationPage: React.FC = () => {
   const features = [
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
       icon: Zap,
       title: 'Ultra-Fast Speeds',
       description: 'Deploy 5G networks with speeds up to 10 Gbps for next-generation applications.',
@@ -68,7 +55,6 @@ const FiveGImplementationPage: React.FC = () => {
       title: 'Network Slicing',
       description: 'Create virtual networks tailored for specific applications and use cases.',
       benefits: ['Custom network slices', 'QoS guarantees', 'Resource isolation', 'Flexible deployment']
-=======
       icon: Zap,
       title: 'Ultra-Fast Speeds',
       description: 'Deploy 5G networks with speeds up to 10 Gbps for lightning-fast data transmission and real-time applications.',
@@ -79,12 +65,10 @@ const FiveGImplementationPage: React.FC = () => {
       title: 'Massive Connectivity',
       description: 'Support millions of connected devices per square kilometer with advanced 5G infrastructure.',
       benefits: ['IoT device support', 'Dense urban coverage', 'Smart city enablement', 'Industrial automation']
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
     },
     {
       icon: Shield,
       title: 'Enhanced Security',
-<<<<<<< HEAD
       description: 'Advanced security features designed for 5G networks and IoT applications.',
       benefits: ['End-to-end encryption', 'Identity management', 'Threat detection', 'Privacy protection']
     }
@@ -121,7 +105,6 @@ const FiveGImplementationPage: React.FC = () => {
       description: '5G edge computing for real-time data processing and decision making.',
       icon: Server
     }
-=======
       description: 'Built-in 5G security features including network slicing and advanced encryption protocols.',
       benefits: ['Network slicing', 'End-to-end encryption', 'Identity management', 'Threat protection']
     },
@@ -157,14 +140,12 @@ const FiveGImplementationPage: React.FC = () => {
     'Network slicing capabilities',
     'Edge computing integration',
     'Improved energy efficiency'
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
   ];
 
   return (
     <>
       <Helmet>
         <title>5G Network Implementation - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name="description" content="Complete 5G network implementation services including infrastructure deployment, network slicing, and IoT connectivity solutions." />
         <meta name="keywords" content="5G implementation, 5G networks, network deployment, IoT connectivity, smart cities, edge computing" />
         <link rel="canonical" href="https://ziontechgroup.com/5g-implementation" />
@@ -202,7 +183,6 @@ const FiveGImplementationPage: React.FC = () => {
                 </button>
                 <button className="px-8 py-4 border border-cyan-400 text-cyan-400 rounded-lg hover:bg-cyan-400/10 transition-all">
                   View Demo
-=======
         <meta name="description" content="Complete 5G network implementation services for ultra-fast, low-latency connectivity. Transform your business with next-generation wireless technology." />
         <meta name="keywords" content="5G implementation, 5G networks, wireless technology, IoT connectivity, smart cities, network slicing" />
       </Helmet>
@@ -239,13 +219,11 @@ const FiveGImplementationPage: React.FC = () => {
                 </button>
                 <button className="border border-indigo-400 text-indigo-300 hover:bg-indigo-400/10 px-8 py-4 rounded-lg font-semibold transition-all duration-300">
                   View 5G Applications
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
                 </button>
               </div>
             </div>
 
             {/* Stats */}
-<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
               <div className="text-center">
                 <div className="text-4xl font-bold text-cyan-400 mb-2">10 Gbps</div>
@@ -253,7 +231,6 @@ const FiveGImplementationPage: React.FC = () => {
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold text-purple-400 mb-2">&lt; 1ms</div>
-=======
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mt-16">
               <div className="text-center">
                 <div className="text-4xl font-bold text-indigo-400 mb-2">10 Gbps</div>
@@ -261,7 +238,6 @@ const FiveGImplementationPage: React.FC = () => {
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold text-purple-400 mb-2">&lt;1ms</div>
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
                 <div className="text-gray-300">Ultra-Low Latency</div>
               </div>
               <div className="text-center">
@@ -269,13 +245,10 @@ const FiveGImplementationPage: React.FC = () => {
                 <div className="text-gray-300">Devices per km²</div>
               </div>
               <div className="text-center">
-<<<<<<< HEAD
                 <div className="text-4xl font-bold text-green-400 mb-2">99.9%</div>
                 <div className="text-gray-300">Reliability</div>
-=======
                 <div className="text-4xl font-bold text-cyan-400 mb-2">100x</div>
                 <div className="text-gray-300">Faster than 4G</div>
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
               </div>
             </div>
           </div>
@@ -286,7 +259,6 @@ const FiveGImplementationPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-6">
-<<<<<<< HEAD
                 Advanced 5G Capabilities
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -309,7 +281,6 @@ const FiveGImplementationPage: React.FC = () => {
                           <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
                             <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                             {benefit}
-=======
                 5G Network Capabilities
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -333,7 +304,6 @@ const FiveGImplementationPage: React.FC = () => {
                           <li key={benefitIndex} className="flex items-center space-x-2 text-gray-300">
                             <CheckCircle className="w-4 h-4 text-indigo-400 flex-shrink-0" />
                             <span>{benefit}</span>
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
                           </li>
                         ))}
                       </ul>
@@ -345,16 +315,12 @@ const FiveGImplementationPage: React.FC = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Use Cases Grid */}
-=======
         {/* Applications Section */}
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
         <section className="py-20 px-4 bg-slate-800/30">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-6">
-<<<<<<< HEAD
                 5G Use Cases & Applications
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -370,7 +336,6 @@ const FiveGImplementationPage: React.FC = () => {
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-3">{useCase.title}</h3>
                   <p className="text-gray-300 text-sm">{useCase.description}</p>
-=======
                 5G Applications & Use Cases
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -388,14 +353,12 @@ const FiveGImplementationPage: React.FC = () => {
                     </div>
                     <span className="text-white font-medium">{application}</span>
                   </div>
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Implementation Process */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -439,7 +402,6 @@ const FiveGImplementationPage: React.FC = () => {
                   <p className="text-gray-300">Network launch and ongoing support services</p>
                 </div>
               </div>
-=======
         {/* Benefits Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -462,23 +424,18 @@ const FiveGImplementationPage: React.FC = () => {
                   <h3 className="text-white font-semibold mb-2">{benefit}</h3>
                 </div>
               ))}
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4">
-=======
         <section className="py-20 px-4 bg-slate-800/30">
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Deploy 5G?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-<<<<<<< HEAD
               Join the 5G revolution with our comprehensive implementation services. 
               Get ahead of the competition with next-generation connectivity.
             </p>
@@ -489,7 +446,6 @@ const FiveGImplementationPage: React.FC = () => {
               </button>
               <button className="px-8 py-4 border border-cyan-400 text-cyan-400 rounded-lg hover:bg-cyan-400/10 transition-all">
                 Contact Experts
-=======
               Transform your business with next-generation 5G wireless technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -499,7 +455,6 @@ const FiveGImplementationPage: React.FC = () => {
               </button>
               <button className="border border-indigo-400 text-indigo-300 hover:bg-indigo-400/10 px-8 py-4 rounded-lg font-semibold transition-all duration-300">
                 Schedule Consultation
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
               </button>
             </div>
           </div>
@@ -509,11 +464,7 @@ const FiveGImplementationPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default FiveGImplementationPage;
-=======
-=======
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
 import { Wifi, Zap, Globe, Shield, CheckCircle, ArrowRight, Phone, Mail, MapPin, Calendar, MessageSquare, Network, Cpu, Target, Award, Star, Brain, TrendingUp, Smartphone } from 'lucide-react';
 
 export default function FiveGImplementationPage() {
@@ -535,7 +486,6 @@ export default function FiveGImplementationPage() {
       title: '5G Optimization',
       description: 'Continuous optimization of 5G networks for maximum performance and efficiency.',
       features: ['Performance Tuning', 'Load Balancing', 'QoS Management', 'Network Monitoring']
-=======
       icon: Wifi,
       title: '5G Network Design',
       description: 'Complete 5G network design and implementation with optimal coverage and performance.',
@@ -558,12 +508,10 @@ export default function FiveGImplementationPage() {
       title: 'Scalable Infrastructure',
       description: 'Scalable 5G infrastructure that grows with your business needs and user demands.',
       benefits: ['Auto-scaling', 'Capacity planning', 'Future-proof design']
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-db70
     },
     {
       icon: Shield,
       title: '5G Security',
-<<<<<<< HEAD
       description: 'Comprehensive security solutions for 5G networks and connected devices.',
       features: ['Network Security', 'Device Security', 'Data Protection', 'Threat Detection']
     }
@@ -662,7 +610,6 @@ export default function FiveGImplementationPage() {
                 <span className="text-white font-medium">Secure</span>
               </div>
             </div>
-=======
       description: 'Comprehensive security measures designed specifically for 5G networks and applications.',
       benefits: ['Network security', 'Data protection', 'Threat detection']
     },
@@ -702,12 +649,10 @@ export default function FiveGImplementationPage() {
             <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
               Schedule Demo
             </button>
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-db70
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Services */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -810,7 +755,6 @@ export default function FiveGImplementationPage() {
                 <div className="text-gray-300 text-sm">
                   {benefit.description}
                 </div>
-=======
       {/* Features Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -837,7 +781,6 @@ export default function FiveGImplementationPage() {
                     </li>
                   ))}
                 </ul>
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-db70
               </div>
             ))}
           </div>
@@ -845,7 +788,6 @@ export default function FiveGImplementationPage() {
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
@@ -874,13 +816,8 @@ export default function FiveGImplementationPage() {
       </section>
     </div>
   );
-<<<<<<< HEAD
 }
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
-=======
 }
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
-=======
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Ready for 5G Implementation?</h2>
@@ -904,7 +841,4 @@ export default function FiveGImplementationPage() {
 };
 
 export default FiveGImplementationPage;
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-db70
-=======
 export default FiveGImplementationPage;
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8

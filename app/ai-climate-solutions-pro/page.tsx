@@ -1,5 +1,4 @@
 'use client';
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { 
   Leaf, 
@@ -193,7 +192,6 @@ const AIClimateSolutionsProPage: React.FC = () => {
       popular: false,
       cta: 'Contact Sales'
     }
-=======
 
 import React from 'react';
 import { Globe, Leaf, Wind, Sun, Droplets, TreePine, Zap, Shield, Target, Award, CheckCircle, ArrowRight, Star, Users, Clock, DollarSign, Phone, Mail, MapPin } from 'lucide-react';
@@ -211,12 +209,10 @@ export default function AIClimateSolutionsProPage() {
     'Emission Reduction Planning',
     'Environmental Monitoring',
     'ESG Reporting Automation'
->>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d44d
   ];
 
   const benefits = [
     {
-<<<<<<< HEAD
       icon: BarChart,
       title: 'Measurable Impact',
       description: 'Track and measure your environmental impact with precise AI analytics',
@@ -327,7 +323,6 @@ export default function AIClimateSolutionsProPage() {
       {/* Solutions Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-=======
       icon: Leaf,
       title: '50% Carbon Reduction',
       description: 'Achieve significant carbon footprint reduction within 12 months'
@@ -509,13 +504,11 @@ export default function AIClimateSolutionsProPage() {
       {/* Solutions Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
->>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d44d
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Comprehensive Climate Solutions
             </h2>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-<<<<<<< HEAD
               Our AI-powered climate solutions cover every aspect of environmental sustainability
             </p>
           </div>
@@ -545,7 +538,6 @@ export default function AIClimateSolutionsProPage() {
                 <button className="w-full bg-gradient-to-r from-green-600 to-teal-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-green-700 hover:to-teal-700 transition-all">
                   Learn More
                 </button>
-=======
               Address every aspect of your environmental impact with our AI-powered platform
             </p>
           </div>
@@ -587,7 +579,6 @@ export default function AIClimateSolutionsProPage() {
                 <p className="text-gray-400 text-sm">
                   AI-powered {feature.toLowerCase()} with real-time monitoring and optimization
                 </p>
->>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d44d
               </div>
             ))}
           </div>
@@ -595,7 +586,6 @@ export default function AIClimateSolutionsProPage() {
       </section>
 
       {/* Benefits Section */}
-<<<<<<< HEAD
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -613,7 +603,6 @@ export default function AIClimateSolutionsProPage() {
                   <benefit.icon className="w-10 h-10 text-white" />
                 </div>
                 <div className="text-2xl font-bold text-white mb-2">{benefit.stat}</div>
-=======
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -631,7 +620,6 @@ export default function AIClimateSolutionsProPage() {
                 <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <benefit.icon className="w-10 h-10 text-white" />
                 </div>
->>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d44d
                 <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
                 <p className="text-gray-300 text-sm leading-relaxed">{benefit.description}</p>
               </div>
@@ -641,7 +629,6 @@ export default function AIClimateSolutionsProPage() {
       </section>
 
       {/* Pricing Section */}
-<<<<<<< HEAD
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -683,7 +670,6 @@ export default function AIClimateSolutionsProPage() {
                 }`}>
                   {plan.cta}
                 </button>
-=======
       <section className="py-20 bg-slate-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -729,14 +715,12 @@ export default function AIClimateSolutionsProPage() {
                 >
                   {tier.name === 'Global Corporation' ? 'Contact Sales' : 'Start Free Trial'}
                 </a>
->>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d44d
               </div>
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Case Studies Section */}
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
@@ -777,7 +761,6 @@ export default function AIClimateSolutionsProPage() {
                         </li>
                       ))}
                     </ul>
-=======
       {/* Testimonials Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -808,7 +791,6 @@ export default function AIClimateSolutionsProPage() {
                   <div>
                     <div className="font-semibold text-white">{testimonial.name}</div>
                     <div className="text-sm text-green-400">{testimonial.role}, {testimonial.company}</div>
->>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d44d
                   </div>
                 </div>
               </div>
@@ -818,7 +800,6 @@ export default function AIClimateSolutionsProPage() {
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className="py-20 bg-gradient-to-r from-green-600 to-teal-600">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
@@ -850,7 +831,6 @@ export default function AIClimateSolutionsProPage() {
 };
 
 export default AIClimateSolutionsProPage;
-=======
       <section className="py-20 bg-gradient-to-r from-green-600 to-blue-700">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
@@ -887,4 +867,3 @@ export default AIClimateSolutionsProPage;
     </div>
   );
 }
->>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d44d

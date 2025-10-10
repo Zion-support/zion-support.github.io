@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Accessibility utilities for improving user experience and compliance
 
 export const generateId = (prefix: string = 'id'): string => {
@@ -247,18 +246,7 @@ export const setupLandmarkNavigation = (): void => {
     subtree: true
   });
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1595
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4ed2
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0dd2
 /**
  * Accessibility Utilities
  * Provides accessibility enhancements and monitoring

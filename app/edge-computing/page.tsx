@@ -1,17 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import React from 'react';
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
 import { Helmet } from 'react-helmet-async';
 import { 
   Cpu, 
   Zap, 
   Globe, 
-<<<<<<< HEAD
   Smartphone, 
   CheckCircle, 
   AlertTriangle,
@@ -24,14 +17,11 @@ import {
   Network,
   Server
 } from 'lucide-react';
-=======
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Star, Zap, Cpu, Clock, Users, Shield, BarChart, ArrowRight, Phone, Mail } from 'lucide-react';
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-db70
-=======
   Shield, 
   CheckCircle, 
   ArrowRight,
@@ -45,20 +35,14 @@ import { CheckCircle, Star, Zap, Cpu, Clock, Users, Shield, BarChart, ArrowRight
   Smartphone,
   Cloud
 } from 'lucide-react';
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
 
 const EdgeComputingPage: React.FC = () => {
   const features = [
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
       icon: Zap,
       title: 'Ultra-Low Latency',
       description: 'Process data at the edge for sub-millisecond response times and real-time applications.',
       benefits: ['< 1ms latency', 'Real-time processing', 'Instant decisions', 'High-frequency trading']
-=======
-=======
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
 import { Cpu, Zap, Globe, Shield, CheckCircle, ArrowRight, Phone, Mail, MapPin, Calendar, MessageSquare, Database, Network, Clock, Target, Award, Star, Brain, TrendingUp } from 'lucide-react';
 
 export default function EdgeComputingPage() {
@@ -74,16 +58,10 @@ export default function EdgeComputingPage() {
       title: 'Edge AI Processing',
       description: 'Run AI models and machine learning algorithms directly at the edge.',
       features: ['Local AI', 'Real-time Inference', 'Reduced Bandwidth', 'Privacy Protection']
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
-=======
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
     },
     {
       icon: Globe,
       title: 'Global Edge Network',
-<<<<<<< HEAD
-<<<<<<< HEAD
       description: 'Deploy applications across our global edge network for optimal performance worldwide.',
       benefits: ['200+ locations', 'Global coverage', 'Local processing', 'Reduced bandwidth costs']
     },
@@ -92,15 +70,10 @@ export default function EdgeComputingPage() {
       title: 'Edge Data Processing',
       description: 'Process and analyze data locally before sending to the cloud, reducing costs and improving privacy.',
       benefits: ['Local analytics', 'Data filtering', 'Bandwidth optimization', 'Privacy compliance']
-=======
       description: 'Worldwide edge computing network for optimal performance and reliability.',
       features: ['Global Coverage', 'Load Balancing', 'Failover Protection', 'CDN Integration']
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
-=======
       description: 'Worldwide edge computing network for optimal performance and reliability.',
       features: ['Global Coverage', 'Load Balancing', 'Failover Protection', 'CDN Integration']
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
-=======
       icon: Cpu,
       title: 'Low-Latency Processing',
       description: 'Process data at the edge for ultra-low latency applications and real-time decision making.',
@@ -123,25 +96,16 @@ export default function EdgeComputingPage() {
       title: 'Scalable Infrastructure',
       description: 'Easily scale your edge computing infrastructure as your needs grow.',
       benefits: ['Auto-scaling', 'Flexible deployment', 'Resource optimization']
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-db70
     },
     {
       icon: Shield,
       title: 'Edge Security',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       description: 'Comprehensive security at the edge with encryption, authentication, and threat detection.',
       benefits: ['End-to-end encryption', 'Zero-trust security', 'Threat detection', 'Compliance ready']
-=======
       description: 'Comprehensive security solutions for edge computing environments.',
       features: ['Zero Trust', 'Data Encryption', 'Access Control', 'Threat Detection']
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
-=======
       description: 'Comprehensive security solutions for edge computing environments.',
       features: ['Zero Trust', 'Data Encryption', 'Access Control', 'Threat Detection']
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
-=======
       icon: Zap,
       title: 'Ultra-Low Latency',
       description: 'Process data at the edge with sub-millisecond latency for real-time applications and IoT devices.',
@@ -164,15 +128,11 @@ export default function EdgeComputingPage() {
       title: 'AI at the Edge',
       description: 'Run machine learning models directly on edge devices for intelligent, autonomous operations.',
       benefits: ['Local AI inference', 'Autonomous operation', 'Reduced cloud dependency', 'Real-time decisions']
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
     }
   ];
 
   const useCases = [
-<<<<<<< HEAD
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
       title: 'IoT Applications',
       description: 'Real-time processing of IoT sensor data for smart cities and industrial automation.',
       icon: Activity
@@ -201,7 +161,6 @@ export default function EdgeComputingPage() {
       title: 'Manufacturing',
       description: 'Real-time monitoring and control systems for smart manufacturing and Industry 4.0.',
       icon: Server
-=======
       description: 'Comprehensive security measures designed specifically for edge computing environments.',
       benefits: ['Data protection', 'Secure communication', 'Compliance ready']
     },
@@ -210,12 +169,10 @@ export default function EdgeComputingPage() {
       title: 'Performance Monitoring',
       description: 'Monitor edge performance with real-time analytics and optimization recommendations.',
       benefits: ['Live monitoring', 'Performance insights', 'Proactive optimization']
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-db70
     }
   ];
 
   return (
-<<<<<<< HEAD
     <>
       <Helmet>
         <title>Edge Computing Solutions - Zion Tech Group</title>
@@ -256,7 +213,6 @@ export default function EdgeComputingPage() {
                 </button>
                 <button className="px-8 py-4 border border-cyan-400 text-cyan-400 rounded-lg hover:bg-cyan-400/10 transition-all">
                   View Demo
-=======
     'Industrial IoT and Manufacturing',
     'Autonomous Vehicles',
     'Smart Cities Infrastructure',
@@ -322,13 +278,11 @@ export default function EdgeComputingPage() {
                 </button>
                 <button className="border border-orange-400 text-orange-300 hover:bg-orange-400/10 px-8 py-4 rounded-lg font-semibold transition-all duration-300">
                   View Use Cases
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
                 </button>
               </div>
             </div>
 
             {/* Stats */}
-<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
               <div className="text-center">
                 <div className="text-4xl font-bold text-cyan-400 mb-2">&lt; 1ms</div>
@@ -345,7 +299,6 @@ export default function EdgeComputingPage() {
               <div className="text-center">
                 <div className="text-4xl font-bold text-green-400 mb-2">Global</div>
                 <div className="text-gray-300">Coverage</div>
-=======
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mt-16">
               <div className="text-center">
                 <div className="text-4xl font-bold text-orange-400 mb-2">&lt;1ms</div>
@@ -362,7 +315,6 @@ export default function EdgeComputingPage() {
               <div className="text-center">
                 <div className="text-4xl font-bold text-blue-400 mb-2">24/7</div>
                 <div className="text-gray-300">Edge Monitoring</div>
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
               </div>
             </div>
           </div>
@@ -373,7 +325,6 @@ export default function EdgeComputingPage() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-6">
-<<<<<<< HEAD
                 Powerful Edge Capabilities
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -396,7 +347,6 @@ export default function EdgeComputingPage() {
                           <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
                             <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                             {benefit}
-=======
                 Edge Computing Capabilities
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -420,7 +370,6 @@ export default function EdgeComputingPage() {
                           <li key={benefitIndex} className="flex items-center space-x-2 text-gray-300">
                             <CheckCircle className="w-4 h-4 text-orange-400 flex-shrink-0" />
                             <span>{benefit}</span>
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
                           </li>
                         ))}
                       </ul>
@@ -432,11 +381,8 @@ export default function EdgeComputingPage() {
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Use Cases Grid */}
-=======
         {/* Use Cases Section */}
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
         <section className="py-20 px-4 bg-slate-800/30">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -444,7 +390,6 @@ export default function EdgeComputingPage() {
                 Edge Computing Use Cases
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-<<<<<<< HEAD
                 From IoT to autonomous vehicles, edge computing powers the next generation of applications.
               </p>
             </div>
@@ -457,7 +402,6 @@ export default function EdgeComputingPage() {
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-3">{useCase.title}</h3>
                   <p className="text-gray-300 text-sm">{useCase.description}</p>
-=======
                 Discover how edge computing can transform your industry with real-time processing 
                 and intelligent decision-making capabilities.
               </p>
@@ -472,14 +416,12 @@ export default function EdgeComputingPage() {
                     </div>
                     <span className="text-white font-medium">{useCase}</span>
                   </div>
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Architecture Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -516,7 +458,6 @@ export default function EdgeComputingPage() {
                   <p className="text-gray-300">IoT devices, mobile apps, and user endpoints</p>
                 </div>
               </div>
-=======
         {/* Benefits Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -539,13 +480,11 @@ export default function EdgeComputingPage() {
                   <h3 className="text-white font-semibold mb-2">{benefit}</h3>
                 </div>
               ))}
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -562,7 +501,6 @@ export default function EdgeComputingPage() {
               </button>
               <button className="px-8 py-4 border border-cyan-400 text-cyan-400 rounded-lg hover:bg-cyan-400/10 transition-all">
                 Contact Sales
-=======
         <section className="py-20 px-4 bg-slate-800/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -578,7 +516,6 @@ export default function EdgeComputingPage() {
               </button>
               <button className="border border-orange-400 text-orange-300 hover:bg-orange-400/10 px-8 py-4 rounded-lg font-semibold transition-all duration-300">
                 Schedule Consultation
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
               </button>
             </div>
           </div>
@@ -588,11 +525,7 @@ export default function EdgeComputingPage() {
   );
 };
 
-<<<<<<< HEAD
 export default EdgeComputingPage;
-=======
-=======
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
       title: 'IoT Data Processing',
       description: 'Process IoT sensor data at the edge for real-time insights and control.',
       icon: '🌐'
@@ -684,7 +617,6 @@ export default EdgeComputingPage;
                 <span className="text-white font-medium">Secure</span>
               </div>
             </div>
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Navigation />
       
@@ -712,12 +644,10 @@ export default EdgeComputingPage;
             <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
               Schedule Demo
             </button>
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-db70
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Services */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -820,7 +750,6 @@ export default EdgeComputingPage;
                 <div className="text-gray-300 text-sm">
                   {benefit.description}
                 </div>
-=======
       {/* Features Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -847,7 +776,6 @@ export default EdgeComputingPage;
                     </li>
                   ))}
                 </ul>
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-db70
               </div>
             ))}
           </div>
@@ -855,7 +783,6 @@ export default EdgeComputingPage;
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
@@ -884,13 +811,8 @@ export default EdgeComputingPage;
       </section>
     </div>
   );
-<<<<<<< HEAD
 }
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
-=======
 }
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
-=======
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Deploy Edge Computing?</h2>
@@ -914,7 +836,4 @@ export default EdgeComputingPage;
 };
 
 export default EdgeComputingPage;
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-db70
-=======
 export default EdgeComputingPage;
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8

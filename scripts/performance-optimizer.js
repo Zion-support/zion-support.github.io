@@ -20,7 +20,6 @@ class PerformanceOptimizer {
     this.generatePerformanceReport();
   }
 
-<<<<<<< HEAD
 // Optimize index.html
 const indexPath = path.join(__dirname, '../dist/index.html');
 if (fs.existsSync(indexPath)) {
@@ -98,7 +97,6 @@ fs.writeFileSync(path.join(__dirname, '../dist/.htaccess'), htaccessContent);
 console.log('✅ Created .htaccess');
 
 console.log('🎉 Performance optimization completed!');
-=======
   /**
    * Optimize images
    */
@@ -301,4 +299,3 @@ console.log('🎉 Performance optimization completed!');
 
 // Run the optimizer
 new PerformanceOptimizer();
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1595

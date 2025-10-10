@@ -2,15 +2,11 @@
 import React, { useState, useEffect } from 'react';
 import { 
   Brain, 
-<<<<<<< HEAD
   DollarSign, 
-=======
->>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8798
   TrendingUp, 
   Shield, 
   Zap, 
   BarChart, 
-<<<<<<< HEAD
   Target, 
   Clock, 
   CheckCircle, 
@@ -29,7 +25,6 @@ import {
   RefreshCw,
   Database,
   Server
-=======
   DollarSign, 
   Clock, 
   Users, 
@@ -50,7 +45,6 @@ import {
   Mail,
   MapPin,
   Phone
->>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8798
 } from 'lucide-react';
 
 const AIQuantumFinancialOraclePage: React.FC = () => {
@@ -63,7 +57,6 @@ const AIQuantumFinancialOraclePage: React.FC = () => {
   const features = [
     {
       icon: Brain,
-<<<<<<< HEAD
       title: 'Quantum Risk Modeling',
       description: 'Advanced quantum algorithms for ultra-precise risk assessment and portfolio optimization',
       benefits: ['99.9% accuracy in risk predictions', 'Real-time market analysis', 'Multi-dimensional risk factors']
@@ -151,7 +144,6 @@ const AIQuantumFinancialOraclePage: React.FC = () => {
         'Risk management suite'
       ],
       popular: false
-=======
       title: 'Quantum-Enhanced Predictions',
       description: 'Leverage quantum computing algorithms for ultra-accurate financial forecasting with 99.7% accuracy',
       benefits: ['99.7% prediction accuracy', 'Real-time market analysis', 'Quantum risk assessment', 'Portfolio optimization']
@@ -229,13 +221,11 @@ const AIQuantumFinancialOraclePage: React.FC = () => {
       ],
       popular: false,
       cta: 'Contact Sales'
->>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8798
     }
   ];
 
   const capabilities = [
     {
-<<<<<<< HEAD
       title: 'Quantum Advantage',
       description: 'Leverage quantum computing for problems that are intractable for classical computers',
       metrics: ['1000x faster calculations', 'Exponential speedup', 'Quantum supremacy']
@@ -254,7 +244,6 @@ const AIQuantumFinancialOraclePage: React.FC = () => {
       title: 'Market Coverage',
       description: 'Global market coverage with real-time data from 100+ exchanges',
       metrics: ['100+ exchanges', 'Real-time data', 'Global coverage']
-=======
       title: 'Quantum Portfolio Optimization',
       description: 'Optimize investment portfolios using quantum algorithms that consider thousands of variables simultaneously',
       impact: 'Average 23% better returns',
@@ -277,28 +266,23 @@ const AIQuantumFinancialOraclePage: React.FC = () => {
       description: 'Ensure regulatory compliance with AI-powered monitoring and automated reporting',
       impact: '100% compliance rate',
       icon: Shield
->>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8798
     }
   ];
 
   const testimonials = [
     {
-<<<<<<< HEAD
       name: 'Dr. Sarah Chen',
       role: 'Chief Investment Officer',
       company: 'Quantum Capital Partners',
       content: 'The quantum financial oracle has revolutionized our trading strategies. We\'ve seen a 300% improvement in returns while reducing risk by 50%.',
-=======
       name: 'Sarah Chen',
       role: 'Chief Investment Officer',
       company: 'Quantum Capital Partners',
       content: 'The AI Quantum Financial Oracle has revolutionized our investment strategy. We\'ve seen a 35% improvement in portfolio performance and 60% reduction in risk exposure.',
->>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8798
       rating: 5
     },
     {
       name: 'Michael Rodriguez',
-<<<<<<< HEAD
       role: 'Portfolio Manager',
       company: 'Neo Investment Group',
       content: 'The accuracy of market predictions is incredible. We\'ve been able to capitalize on market movements that others miss completely.',
@@ -309,7 +293,6 @@ const AIQuantumFinancialOraclePage: React.FC = () => {
       role: 'Head of Risk Management',
       company: 'Global Financial Corp',
       content: 'The quantum risk modeling capabilities are unmatched. We can now assess risks in real-time with unprecedented accuracy.',
-=======
       role: 'Head of Trading',
       company: 'Global Finance Corp',
       content: 'The quantum-enhanced predictions are incredibly accurate. We\'ve been able to capitalize on market opportunities we would have missed otherwise.',
@@ -320,25 +303,20 @@ const AIQuantumFinancialOraclePage: React.FC = () => {
       role: 'Risk Management Director',
       company: 'Secure Investments Ltd',
       content: 'The fraud detection capabilities are outstanding. We\'ve prevented millions in potential losses and our compliance rate is now 100%.',
->>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8798
       rating: 5
     }
   ];
 
   if (!isLoaded) {
     return (
-<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
-=======
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 flex items-center justify-center">
->>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8798
         <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-white"></div>
       </div>
     );
   }
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 matrix-bg">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -382,7 +360,6 @@ const AIQuantumFinancialOraclePage: React.FC = () => {
               >
                 Call: +1 (302) 464-0950
               </a>
-=======
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900">
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
@@ -424,14 +401,12 @@ const AIQuantumFinancialOraclePage: React.FC = () => {
                 <Phone className="w-5 h-5 mr-2" />
                 Schedule Demo
               </button>
->>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8798
             </div>
           </div>
         </div>
       </div>
 
       {/* Features Section */}
-<<<<<<< HEAD
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 neon-glow-cyan">
@@ -492,7 +467,6 @@ const AIQuantumFinancialOraclePage: React.FC = () => {
                 </div>
               </div>
             ))}
-=======
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -547,13 +521,11 @@ const AIQuantumFinancialOraclePage: React.FC = () => {
                 <p className="text-gray-300 text-sm leading-relaxed">{capability.description}</p>
               </div>
             ))}
->>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8798
           </div>
         </div>
       </div>
 
       {/* Pricing Section */}
-<<<<<<< HEAD
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -630,7 +602,6 @@ const AIQuantumFinancialOraclePage: React.FC = () => {
                 </div>
               </div>
             ))}
-=======
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -705,13 +676,11 @@ const AIQuantumFinancialOraclePage: React.FC = () => {
                 </div>
               </div>
             ))}
->>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8798
           </div>
         </div>
       </div>
 
       {/* CTA Section */}
-<<<<<<< HEAD
       <div className="bg-gradient-to-r from-cyan-600 to-purple-700 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -740,7 +709,6 @@ const AIQuantumFinancialOraclePage: React.FC = () => {
           </div>
         </div>
       </div>
-=======
       <section className="py-20 bg-gradient-to-r from-purple-600 to-cyan-600">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
@@ -766,7 +734,6 @@ const AIQuantumFinancialOraclePage: React.FC = () => {
           </div>
         </div>
       </section>
->>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8798
     </div>
   );
 };

@@ -1,5 +1,4 @@
 'use client';
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { 
   Palette, 
@@ -36,11 +35,9 @@ const AI3DGenerationPage: React.FC = () => {
   useEffect(() => {
     setIsLoaded(true);
   }, []);
-=======
 import React, { lazy } from 'react';
 import { Helmet } from 'react-helmet-async'
 import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Cube, ArrowRight } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4ed2
 
   const features = [
     {
@@ -491,12 +488,6 @@ import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Cube, ArrowRight } from '
   );
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default AI3DGenerationPage;
-=======
 export default AI3DGenerationPage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-fb25
-=======
 export default AI3DGenerationPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0013

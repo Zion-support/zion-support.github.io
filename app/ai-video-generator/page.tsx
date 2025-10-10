@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 import { 
   Video, 
   Play, 
-<<<<<<< HEAD
   Pause, 
   Square, 
   SkipForward, 
@@ -164,7 +163,6 @@ import {
   Music as MusicIcon, 
   Headphones as HeadphonesIcon, 
   Speaker as SpeakerIcon
-=======
   Camera, 
   Mic, 
   Edit3, 
@@ -185,7 +183,6 @@ import {
   Shield,
   Globe,
   Sparkles
->>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-92bf
 } from 'lucide-react';
 
 const AIVideoGeneratorPage: React.FC = () => {
@@ -197,7 +194,6 @@ const AIVideoGeneratorPage: React.FC = () => {
 
   const features = [
     {
-<<<<<<< HEAD
       category: 'AI Video Creation',
       icon: Brain,
       color: 'from-purple-500 to-pink-600',
@@ -248,7 +244,6 @@ const AIVideoGeneratorPage: React.FC = () => {
         'Asset sharing library',
         'Client review portal'
       ]
-=======
       icon: Brain,
       title: 'AI Script Generation',
       description: 'Generate compelling video scripts from simple prompts using advanced natural language processing.',
@@ -283,7 +278,6 @@ const AIVideoGeneratorPage: React.FC = () => {
       title: 'One-Click Publishing',
       description: 'Publish directly to YouTube, TikTok, Instagram, and other platforms with optimized settings.',
       benefits: ['Multi-platform publishing', 'Auto optimization', 'Scheduling tools', 'Analytics integration']
->>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-92bf
     }
   ];
 
@@ -294,21 +288,18 @@ const AIVideoGeneratorPage: React.FC = () => {
       period: '/month',
       description: 'Perfect for content creators and small businesses',
       features: [
-<<<<<<< HEAD
         'Up to 10 hours of video/month',
         'HD video export',
         'Basic AI features',
         'Standard templates',
         'Email support',
         'Watermark on exports'
-=======
         '10 videos per month',
         'HD quality export',
         'Basic AI voices',
         'Standard templates',
         'Email support',
         'Social media publishing'
->>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-92bf
       ],
       popular: false,
       cta: 'Start Free Trial'
@@ -317,7 +308,6 @@ const AIVideoGeneratorPage: React.FC = () => {
       name: 'Professional',
       price: '$199',
       period: '/month',
-<<<<<<< HEAD
       description: 'Advanced features for professional video creators',
       features: [
         'Up to 50 hours of video/month',
@@ -328,7 +318,6 @@ const AIVideoGeneratorPage: React.FC = () => {
         'No watermark',
         'Brand kit integration',
         'API access'
-=======
       description: 'Ideal for marketing teams and agencies',
       features: [
         'Unlimited videos',
@@ -339,7 +328,6 @@ const AIVideoGeneratorPage: React.FC = () => {
         'White-label options',
         'Team collaboration',
         'Custom branding'
->>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-92bf
       ],
       popular: true,
       cta: 'Start Free Trial'
@@ -348,7 +336,6 @@ const AIVideoGeneratorPage: React.FC = () => {
       name: 'Enterprise',
       price: '$399',
       period: '/month',
-<<<<<<< HEAD
       description: 'Complete solution for large teams and agencies',
       features: [
         'Unlimited video generation',
@@ -359,7 +346,6 @@ const AIVideoGeneratorPage: React.FC = () => {
         'White-label solution',
         'Custom integrations',
         'SLA guarantee'
-=======
       description: 'For large organizations and media companies',
       features: [
         'Everything in Professional',
@@ -370,7 +356,6 @@ const AIVideoGeneratorPage: React.FC = () => {
         'Custom integrations',
         'SLA guarantee',
         'On-premise deployment'
->>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-92bf
       ],
       popular: false,
       cta: 'Contact Sales'
@@ -422,7 +407,6 @@ const AIVideoGeneratorPage: React.FC = () => {
 
   const useCases = [
     {
-<<<<<<< HEAD
       title: 'Social Media Marketing',
       description: 'Create engaging social media content that drives engagement and conversions',
       icon: Smartphone,
@@ -448,7 +432,6 @@ const AIVideoGeneratorPage: React.FC = () => {
     }
   ];
 
-=======
       title: 'Marketing Videos',
       description: 'Create engaging promotional content for social media and advertising campaigns.',
       icon: Target,
@@ -495,7 +478,6 @@ const AIVideoGeneratorPage: React.FC = () => {
     }
   ];
 
->>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-92bf
   if (!isLoaded) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
@@ -507,7 +489,6 @@ const AIVideoGeneratorPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
       {/* Hero Section */}
-<<<<<<< HEAD
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div>
         <div className="container mx-auto px-4 relative z-10">
@@ -730,7 +711,6 @@ const AIVideoGeneratorPage: React.FC = () => {
                 >
                   {plan.cta}
                 </a>
-=======
       <div className="relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
           <div className="text-center">
@@ -833,12 +813,10 @@ const AIVideoGeneratorPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
->>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-92bf
               </div>
             ))}
           </div>
         </div>
-<<<<<<< HEAD
       </section>
 
       {/* Testimonials Section */}
@@ -871,7 +849,6 @@ const AIVideoGeneratorPage: React.FC = () => {
                   ))}
                 </div>
                 <p className="text-gray-300 italic">"{testimonial.content}"</p>
-=======
       </div>
 
       {/* Pricing Section */}
@@ -961,12 +938,10 @@ const AIVideoGeneratorPage: React.FC = () => {
                   <div className="font-semibold text-white">{testimonial.name}</div>
                   <div className="text-gray-400 text-sm">{testimonial.role}</div>
                 </div>
->>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-92bf
               </div>
             ))}
           </div>
         </div>
-<<<<<<< HEAD
       </section>
 
       {/* CTA Section */}
@@ -996,7 +971,6 @@ const AIVideoGeneratorPage: React.FC = () => {
           </div>
         </div>
       </section>
-=======
       </div>
 
       {/* CTA Section */}
@@ -1021,7 +995,6 @@ const AIVideoGeneratorPage: React.FC = () => {
           </p>
         </div>
       </div>
->>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-92bf
     </div>
   );
 };

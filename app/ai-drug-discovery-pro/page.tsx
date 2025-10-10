@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 'use client';
 import React, { useState, useEffect } from 'react';
 import { 
-<<<<<<< HEAD
   Stethoscope, 
   Pill, 
   Microscope, 
@@ -38,7 +34,6 @@ import {
   Atom,
   Search,
   Clock
-=======
   Brain, 
   FlaskConical, 
   Shield, 
@@ -92,21 +87,16 @@ import {
   Syringe,
   Thermometer,
   Droplets
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3064
 } from 'lucide-react';
 
 const AIDrugDiscoveryProPage: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
-<<<<<<< HEAD
-=======
   const [activeTab, setActiveTab] = useState('overview');
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3064
 
   useEffect(() => {
     setIsLoaded(true);
   }, []);
 
-<<<<<<< HEAD
   const solutions = [
     {
       icon: Dna,
@@ -203,7 +193,6 @@ const AIDrugDiscoveryProPage: React.FC = () => {
       impact: '5x faster repurposing process',
       pricing: 'Starting at $30,000/month',
       category: 'Drug Repurposing'
-=======
   const features = [
     {
       icon: Brain,
@@ -240,8 +229,6 @@ const AIDrugDiscoveryProPage: React.FC = () => {
       title: 'Clinical Trial Optimization',
       description: 'Optimize clinical trial design and patient selection using AI insights',
       details: ['Trial design', 'Patient stratification', 'Endpoint prediction', 'Risk assessment']
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3064
-=======
 import React from 'react';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
@@ -249,7 +236,6 @@ import SEOOptimizer from '../../components/SEOOptimizer';
 import { Stethoscope, Brain, Shield, CheckCircle, Star, ArrowRight, Zap, Globe, Phone, Mail, MapPin, Award, TrendingUp, MessageSquare, Cpu, Database, Smartphone, Settings, FileText, Star as StarIcon, Award as AwardIcon, Shield as ShieldIcon, Users as UsersIcon } from 'lucide-react';
 
 export default function AIDrugDiscoveryProPage() {
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
@@ -270,12 +256,10 @@ import {
 } from 'lucide-react';
 
 const AIDrugDiscoveryProPage: React.FC = () => {
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-dd48
   const features = [
     {
       icon: Brain,
       title: 'AI-Powered Molecular Design',
-<<<<<<< HEAD
       description: 'Advanced machine learning algorithms to design and optimize drug molecules with unprecedented precision.'
     },
     {
@@ -302,14 +286,11 @@ const AIDrugDiscoveryProPage: React.FC = () => {
       icon: BarChart,
       title: 'Clinical Trial Optimization',
       description: 'AI-powered patient selection and trial design to maximize success rates and reduce costs.'
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-f003
     }
   ];
 
   const pricingPlans = [
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
       name: 'Research Starter',
       price: '$15,000',
       period: '/month',
@@ -321,7 +302,6 @@ const AIDrugDiscoveryProPage: React.FC = () => {
         'Up to 10 users',
         'Monthly reports',
         'Basic training'
-=======
       name: 'Research',
       price: 2500,
       originalPrice: 3500,
@@ -335,13 +315,11 @@ const AIDrugDiscoveryProPage: React.FC = () => {
         'Basic reporting',
         '30-day data retention',
         'Academic licensing'
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3064
       ],
       popular: false,
       cta: 'Start Free Trial'
     },
     {
-<<<<<<< HEAD
       name: 'Pharma Professional',
       price: '$75,000',
       period: '/month',
@@ -355,7 +333,6 @@ const AIDrugDiscoveryProPage: React.FC = () => {
         'API access',
         'Advanced training',
         'Regulatory support'
-=======
       name: 'Professional',
       price: 7500,
       originalPrice: 10000,
@@ -371,13 +348,11 @@ const AIDrugDiscoveryProPage: React.FC = () => {
         '1-year data retention',
         'Advanced analytics',
         'Clinical trial support'
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3064
       ],
       popular: true,
       cta: 'Start Free Trial'
     },
     {
-<<<<<<< HEAD
       name: 'Enterprise Discovery',
       price: '$200,000',
       period: '/month',
@@ -392,7 +367,6 @@ const AIDrugDiscoveryProPage: React.FC = () => {
         'SLA guarantee',
         'Dedicated team',
         'Custom development'
-=======
       name: 'Enterprise',
       price: 25000,
       originalPrice: 35000,
@@ -410,14 +384,12 @@ const AIDrugDiscoveryProPage: React.FC = () => {
         'Regulatory compliance',
         'SLA guarantee',
         'On-premise deployment'
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3064
       ],
       popular: false,
       cta: 'Contact Sales'
     }
   ];
 
-<<<<<<< HEAD
   const capabilities = [
     {
       title: 'Accelerated Discovery',
@@ -442,7 +414,6 @@ const AIDrugDiscoveryProPage: React.FC = () => {
       description: 'Predict and prevent adverse effects before clinical trials',
       impact: '90% safety prediction accuracy',
       icon: Shield
-=======
   const useCases = [
     {
       title: 'Oncology Drug Discovery',
@@ -467,8 +438,6 @@ const AIDrugDiscoveryProPage: React.FC = () => {
       description: 'Accelerate drug discovery for rare and orphan diseases with limited patient populations',
       icon: Target,
       examples: ['Orphan drugs', 'Gene therapies', 'Enzyme replacements', 'Small molecule drugs']
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3064
-=======
       name: 'Research',
       price: '$4,500',
       period: '/month',
@@ -478,7 +447,6 @@ const AIDrugDiscoveryProPage: React.FC = () => {
         'Up to 10 projects',
         'Standard support',
         'Academic licensing',
-=======
 'use client';
 
 import React from 'react';
@@ -533,7 +501,6 @@ export default function AIDrugDiscoveryProPage() {
         'Basic AI models',
         'Standard datasets',
         'Email support',
->>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d44d
         'Basic analytics'
       ],
       popular: false
@@ -542,21 +509,18 @@ export default function AIDrugDiscoveryProPage() {
       name: 'Pharmaceutical',
       price: '$12,000',
       period: '/month',
-<<<<<<< HEAD
       description: 'For pharmaceutical companies',
       features: [
         'Advanced AI models',
         'Unlimited projects',
         'Priority support',
         'Commercial licensing',
-=======
       description: 'For mid-size pharma companies',
       features: [
         'Up to 50 researchers',
         'Advanced AI models',
         'Full dataset access',
         'Priority support',
->>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d44d
         'Advanced analytics',
         'Custom integrations'
       ],
@@ -564,7 +528,6 @@ export default function AIDrugDiscoveryProPage() {
     },
     {
       name: 'Enterprise',
-<<<<<<< HEAD
       price: '$25,000',
       period: '/month',
       description: 'For large pharma companies',
@@ -577,8 +540,6 @@ export default function AIDrugDiscoveryProPage() {
         'SLA guarantee'
       ],
       popular: false
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-f003
-=======
       price: 'Custom',
       period: '',
       description: 'For large pharmaceutical companies',
@@ -591,18 +552,14 @@ export default function AIDrugDiscoveryProPage() {
         'On-premise deployment'
       ],
       popular: false
->>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d44d
     }
   ];
 
   const testimonials = [
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
       name: 'Dr. Sarah Johnson',
       role: 'Chief Scientific Officer',
       company: 'BioPharma Innovations',
-<<<<<<< HEAD
       content: 'The AI Drug Discovery Pro platform has revolutionized our research. We\'ve identified 3 new drug candidates in just 6 months, compared to our previous 2-year timeline.',
       rating: 5
     },
@@ -698,7 +655,6 @@ export default function AIDrugDiscoveryProPage() {
               <button className="border-2 border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-bold hover:bg-blue-400 hover:text-white transition-all inline-flex items-center">
                 <Phone className="w-5 h-5 mr-2" />
                 Schedule Demo
-=======
       content: 'AI Drug Discovery Pro has accelerated our drug development timeline by 60%. The AI predictions are remarkably accurate and have led to several promising candidates.',
       rating: 5,
       avatar: '/images/testimonials/sarah-johnson.jpg'
@@ -792,7 +748,6 @@ export default function AIDrugDiscoveryProPage() {
             <div className="inline-flex items-center space-x-2 bg-purple-500/20 px-4 py-2 rounded-full mb-6">
               <FlaskConical className="w-5 h-5 text-purple-400" />
               <span className="text-purple-400 font-medium">AI Drug Discovery Technology</span>
-=======
       name: 'Dr. Sarah Chen',
       role: 'Head of Research, PharmaCorp',
       content: 'AI Drug Discovery Pro has accelerated our drug development process by 300%. We\'ve identified promising compounds in months instead of years.',
@@ -839,7 +794,6 @@ export default function AIDrugDiscoveryProPage() {
             <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full px-4 py-2 mb-6">
               <Stethoscope className="w-4 h-4 text-cyan-400" />
               <span className="text-cyan-400 text-sm font-medium">AI Drug Discovery Pro</span>
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-f003
             </div>
             
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
@@ -847,7 +801,6 @@ export default function AIDrugDiscoveryProPage() {
             </h1>
             
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
-<<<<<<< HEAD
               Accelerate drug discovery with AI-powered molecular design, virtual screening, 
               and predictive analytics. Discover breakthrough treatments 60% faster than traditional methods.
             </p>
@@ -875,12 +828,9 @@ export default function AIDrugDiscoveryProPage() {
               <button className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-bold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center">
                 <Eye className="w-5 h-5 mr-2" />
                 Watch Demo
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3064
               </button>
-=======
               Revolutionary AI-powered drug discovery platform with molecular design, predictive toxicology, 
               and clinical trial optimization. Accelerate drug development by 300%.
-=======
       name: 'Dr. Sarah Chen',
       company: 'Merck Research Labs',
       role: 'Head of AI Research',
@@ -900,7 +850,6 @@ export default function AIDrugDiscoveryProPage() {
       role: 'VP of R&D',
       content: 'We achieved a 95% success rate in Phase II trials using AI Drug Discovery Pro, compared to the industry average of 30%.',
       rating: 5
-=======
       description: 'Advanced algorithms for designing novel drug compounds with optimal properties.',
       benefits: ['Molecular optimization', 'Drug-likeness prediction', 'ADMET profiling']
     },
@@ -948,12 +897,10 @@ export default function AIDrugDiscoveryProPage() {
       description: 'Expert consultation on AI-driven drug discovery strategies',
       price: '$500/hour',
       features: ['Strategy development', 'Technology assessment', 'Implementation guidance', 'Training']
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-dd48
     }
   ];
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       <ScrollToTop />
@@ -975,12 +922,10 @@ export default function AIDrugDiscoveryProPage() {
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed max-w-4xl mx-auto">
               Revolutionize pharmaceutical research with AI-powered drug discovery. 
               Accelerate development timelines, reduce costs, and improve success rates with our cutting-edge platform.
->>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d44d
             </p>
             
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               <div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg">
-<<<<<<< HEAD
                 <Star className="w-5 h-5 text-cyan-400" />
                 <span className="text-white font-medium">4.9/5 Rating</span>
               </div>
@@ -991,7 +936,6 @@ export default function AIDrugDiscoveryProPage() {
               <div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg">
                 <TrendingUp className="w-5 h-5 text-green-400" />
                 <span className="text-white font-medium">300% Faster Development</span>
-=======
                 <Clock className="w-5 h-5 text-cyan-400" />
                 <span className="text-white font-medium">10x Faster Discovery</span>
               </div>
@@ -1002,14 +946,12 @@ export default function AIDrugDiscoveryProPage() {
               <div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg">
                 <Target className="w-5 h-5 text-green-400" />
                 <span className="text-white font-medium">95% Success Rate</span>
->>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d44d
               </div>
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
-<<<<<<< HEAD
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 inline-flex items-center"
               >
                 Request Demo
@@ -1022,14 +964,11 @@ export default function AIDrugDiscoveryProPage() {
                 <Phone className="w-5 h-5 mr-2" />
                 Call: (302) 464-0950
               </a>
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-f003
             </div>
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
       {/* Solutions Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -1067,7 +1006,6 @@ export default function AIDrugDiscoveryProPage() {
                 <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all">
                   Learn More
                 </button>
-=======
       {/* Stats Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -1079,14 +1017,12 @@ export default function AIDrugDiscoveryProPage() {
                 </div>
                 <div className="text-4xl font-bold text-white mb-2 neon-text">{stat.number}</div>
                 <div className="text-gray-400 font-medium">{stat.label}</div>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3064
               </div>
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Capabilities Section */}
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
@@ -1107,7 +1043,6 @@ export default function AIDrugDiscoveryProPage() {
                 <div className="text-3xl font-bold text-white mb-2">{capability.impact}</div>
                 <h3 className="text-xl font-bold text-white mb-3">{capability.title}</h3>
                 <p className="text-gray-300 text-sm leading-relaxed">{capability.description}</p>
-=======
       {/* Features Section */}
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
@@ -1184,7 +1119,6 @@ export default function AIDrugDiscoveryProPage() {
                     <Clock className="w-4 h-4 mr-2" />
                     {step.duration}
                   </div>
-=======
     <>
       <Helmet>
         <title>AI Drug Discovery Pro - Zion Tech Group</title>
@@ -1257,12 +1191,10 @@ export default function AIDrugDiscoveryProPage() {
                       </li>
                     ))}
                   </ul>
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-dd48
                 </div>
               ))}
             </div>
           </div>
-<<<<<<< HEAD
         </div>
       </section>
 
@@ -1333,8 +1265,6 @@ export default function AIDrugDiscoveryProPage() {
                     ))}
                   </div>
                 </div>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3064
-=======
       {/* Features Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -1355,8 +1285,6 @@ export default function AIDrugDiscoveryProPage() {
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-f003
-=======
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 inline-flex items-center"
               >
                 <span>Start Free Trial</span>
@@ -1422,7 +1350,6 @@ export default function AIDrugDiscoveryProPage() {
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
                 <p className="text-gray-300 text-sm leading-relaxed">{benefit.description}</p>
->>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d44d
               </div>
             ))}
           </div>
@@ -1430,9 +1357,6 @@ export default function AIDrugDiscoveryProPage() {
       </section>
 
       {/* Pricing Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -1463,7 +1387,6 @@ export default function AIDrugDiscoveryProPage() {
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
-=======
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -1501,46 +1424,38 @@ export default function AIDrugDiscoveryProPage() {
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3064
                       {feature}
                     </li>
                   ))}
                 </ul>
-<<<<<<< HEAD
                 <button className={`w-full py-3 px-6 rounded-lg font-bold transition-all ${
                   plan.popular 
                     ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700' 
                     : 'border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white'
-=======
 
                 <button className={`w-full py-3 px-6 rounded-lg font-bold transition-all duration-300 ${
                   plan.popular 
                     ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:from-purple-600 hover:to-pink-700' 
                     : 'border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-slate-900'
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3064
                 }`}>
                   {plan.cta}
                 </button>
-=======
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Research-Grade Pricing
-=======
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Flexible Pricing Plans
->>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d44d
             </h2>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
               Choose the plan that fits your research needs and budget
             </p>
           </div>
           
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`bg-slate-800/50 rounded-lg p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
@@ -1580,8 +1495,6 @@ export default function AIDrugDiscoveryProPage() {
                 >
                   Get Started
                 </a>
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-f003
-=======
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingTiers.map((tier, index) => (
               <div key={index} className={`bg-slate-800/50 rounded-2xl p-8 relative ${tier.popular ? 'ring-2 ring-cyan-400' : ''}`}>
@@ -1616,7 +1529,6 @@ export default function AIDrugDiscoveryProPage() {
                 >
                   {tier.name === 'Enterprise' ? 'Contact Sales' : 'Start Free Trial'}
                 </a>
->>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d44d
               </div>
             ))}
           </div>
@@ -1624,32 +1536,22 @@ export default function AIDrugDiscoveryProPage() {
       </section>
 
       {/* Testimonials Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       <section className="py-20 bg-slate-800/50">
-=======
       <section className="py-20">
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-f003
         <div className="container mx-auto px-4">
-=======
       <section className="py-20 bg-slate-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
->>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d44d
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Trusted by Leading Researchers
             </h2>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-<<<<<<< HEAD
-<<<<<<< HEAD
               See what industry experts say about our AI drug discovery platform
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="bg-slate-800/50 rounded-lg p-6">
-=======
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -1667,7 +1569,6 @@ export default function AIDrugDiscoveryProPage() {
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center mr-4">
                     <span className="text-white font-bold text-lg">
-=======
               Join the world's top pharmaceutical companies and research institutions
             </p>
           </div>
@@ -1675,7 +1576,6 @@ export default function AIDrugDiscoveryProPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="bg-slate-800/50 rounded-lg p-6">
-=======
               See how top pharmaceutical companies and research institutions are using AI Drug Discovery Pro
             </p>
           </div>
@@ -1683,42 +1583,33 @@ export default function AIDrugDiscoveryProPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="bg-slate-800/50 rounded-2xl p-6">
->>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d44d
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
                 <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
-<<<<<<< HEAD
                 <div className="flex items-center space-x-3">
                   <div className="w-10 h-10 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full flex items-center justify-center">
                     <span className="text-white font-bold text-sm">
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-f003
-=======
                 <div className="flex items-center">
                   <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mr-4">
                     <span className="text-white font-bold text-lg">
->>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d44d
                       {testimonial.name.split(' ').map(n => n[0]).join('')}
                     </span>
                   </div>
                   <div>
-<<<<<<< HEAD
-<<<<<<< HEAD
                     <h4 className="text-white font-semibold">{testimonial.name}</h4>
                     <p className="text-purple-400 text-sm">{testimonial.role}</p>
                     <p className="text-gray-400 text-sm">{testimonial.company}</p>
                   </div>
                 </div>
                 
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3064
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                   ))}
                 </div>
-<<<<<<< HEAD
                 <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
                 <div>
                   <div className="font-bold text-white">{testimonial.name}</div>
@@ -1773,22 +1664,16 @@ export default function AIDrugDiscoveryProPage() {
                     </ul>
                   </div>
                 </div>
-=======
                 
                 <p className="text-gray-300 italic">"{testimonial.content}"</p>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3064
-=======
                     <div className="text-white font-semibold">{testimonial.name}</div>
                     <div className="text-gray-400 text-sm">{testimonial.role}</div>
                   </div>
                 </div>
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-f003
-=======
                     <div className="font-semibold text-white">{testimonial.name}</div>
                     <div className="text-sm text-cyan-400">{testimonial.role}, {testimonial.company}</div>
                   </div>
                 </div>
->>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d44d
               </div>
             ))}
           </div>
@@ -1796,9 +1681,6 @@ export default function AIDrugDiscoveryProPage() {
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
@@ -1821,7 +1703,6 @@ export default function AIDrugDiscoveryProPage() {
             <p>📞 <strong>Phone:</strong> +1 302 464 0950</p>
             <p>✉️ <strong>Email:</strong> kleber@ziontechgroup.com</p>
             <p>📍 <strong>Address:</strong> 364 E Main St STE 1008, Middletown DE 19709</p>
-=======
       <section className="py-20 bg-gradient-to-r from-purple-600 to-pink-700">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
@@ -1845,7 +1726,6 @@ export default function AIDrugDiscoveryProPage() {
             <p>📧 Email: kleber@ziontechgroup.com</p>
             <p>📞 Phone: +1 (302) 464-0950</p>
             <p>📍 Address: 364 E Main St STE 1008, Middletown DE 19709</p>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3064
           </div>
         </div>
       </section>
@@ -1854,29 +1734,22 @@ export default function AIDrugDiscoveryProPage() {
 };
 
 export default AIDrugDiscoveryProPage;
-=======
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
         <div className="container mx-auto px-4 text-center">
-=======
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
         <div className="max-w-7xl mx-auto px-4 text-center">
->>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d44d
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
             Ready to Revolutionize Drug Discovery?
           </h2>
           <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
-<<<<<<< HEAD
             Join the future of pharmaceutical research with AI-powered drug discovery.
-=======
             Join leading pharmaceutical companies and research institutions using AI to accelerate drug discovery.
->>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d44d
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="/contact"
               className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors inline-flex items-center"
             >
-<<<<<<< HEAD
               <Stethoscope className="w-5 h-5 mr-2" />
               Request Demo
             </a>
@@ -1888,7 +1761,6 @@ export default AIDrugDiscoveryProPage;
               Call: (302) 464-0950
             </a>
           </div>
-=======
               <FlaskConical className="w-5 h-5 mr-2" />
               Start Free Trial
             </a>
@@ -1905,20 +1777,14 @@ export default AIDrugDiscoveryProPage;
             <p>✉️ Email: <a href="mailto:kleber@ziontechgroup.com" className="text-white hover:text-cyan-200">kleber@ziontechgroup.com</a></p>
             <p>📍 Address: 364 E Main St STE 1008, Middletown DE 19709</p>
           </div>
->>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d44d
         </div>
       </section>
 
       <Footer />
     </div>
   );
-<<<<<<< HEAD
 }
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-f003
-=======
 }
->>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d44d
-=======
         </section>
 
         {/* Services Section */}
@@ -2021,4 +1887,3 @@ export default AIDrugDiscoveryProPage;
 };
 
 export default AIDrugDiscoveryProPage;
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-dd48

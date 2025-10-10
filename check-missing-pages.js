@@ -2,11 +2,9 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-<<<<<<< HEAD
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-<<<<<<< HEAD
 // Navigation links from the Navigation component
 const navigationLinks = [
   // Main navigation
@@ -97,7 +95,6 @@ const navigationLinks = [
 function checkPageExists(pagePath) {
   if (pagePath === '/') {
     return fs.existsSync(path.join(__dirname, 'app', 'page.tsx'));
-=======
 class PageChecker {
   constructor() {
     this.appDir = '/workspace/app';
@@ -319,7 +316,6 @@ class PageChecker {
     }
     
     return recommendations;
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-ce29
   }
   
   const pageDir = path.join(__dirname, 'app', pagePath);
@@ -328,7 +324,6 @@ class PageChecker {
   return fs.existsSync(pageFile);
 }
 
-<<<<<<< HEAD
 function findMissingPages() {
   const missingPages = [];
   
@@ -399,7 +394,6 @@ if (unlinkedPages.length > 0) {
     console.log(`${index + 1}. ${page}`);
   });
 }
-=======
 // Service paths from navigation and footer
 const servicePaths = [
   // Micro SAAS
@@ -507,9 +501,6 @@ fs.writeFileSync(path.join(__dirname, 'missing-pages.json'), JSON.stringify({
   existing: existingPages,
   total: servicePaths.length
 }, null, 2));
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
-=======
 // Run the page checker
 const checker = new PageChecker();
 checker.checkAllPages();
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-ce29

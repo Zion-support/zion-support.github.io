@@ -1,17 +1,12 @@
-<<<<<<< HEAD
 import React, { useEffect } from 'react';
-=======
 import React, { useEffect, useCallback } from 'react';
 import { useLocation } from 'react-router-dom';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-9813
 
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
 }
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
-<<<<<<< HEAD
-<<<<<<< HEAD
   useEffect(() => {
     // Add keyboard navigation support
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -42,7 +37,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       buttons.forEach(button => {
         if (!button.getAttribute('aria-label') && button.textContent) {
           button.setAttribute('aria-label', button.textContent.trim());
-=======
   const location = useLocation();
 
   // Focus management
@@ -56,12 +50,10 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
         if (target) {
           target.focus();
           target.scrollIntoView({ behavior: 'smooth' });
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-9813
         }
       });
     }
 
-<<<<<<< HEAD
       const links = document.querySelectorAll('a:not([aria-label])');
       links.forEach(link => {
         if (!link.getAttribute('aria-label') && link.textContent) {
@@ -79,7 +71,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
       document.removeEventListener('mousedown', handleMouseDown);
-=======
   useEffect(() => {
     // Add keyboard navigation support
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -164,7 +155,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       document.removeEventListener('keydown', handleKeyDown);
       document.removeEventListener('focusin', handleFocusIn);
       document.removeEventListener('focusout', handleFocusOut);
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-fb25
     };
   }, []);
 
@@ -172,7 +162,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 };
 
 export default AccessibilityEnhancer;
-=======
     // Focus trap for modals
     const trapFocus = (element: HTMLElement) => {
       const focusableElements = element.querySelectorAll(
@@ -459,4 +448,3 @@ export default AccessibilityEnhancer;
 };
 
 export default AccessibilityEnhancer;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-9813

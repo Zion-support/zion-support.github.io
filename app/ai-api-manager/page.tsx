@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 
 const aiapimanagerPage: React.FC = () => {
@@ -63,7 +62,6 @@ const aiapimanagerPage: React.FC = () => {
 };
 
 export default aiapimanagerPage;
-=======
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 import SEOOptimizer from '../../components/SEOOptimizer';
@@ -398,4 +396,3 @@ export default function AIAPIManagerPage() {
     </div>
   );
 }
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-f003

@@ -1,28 +1,20 @@
-<<<<<<< HEAD
-=======
 'use client';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
 /**
-<<<<<<< HEAD
  * API Interceptor
  * Intercepts and modifies API requests and responses
  */
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 interface InterceptorConfig {
   onRequest?: (config: any) => any;
   onResponse?: (response: any) => any;
   onError?: (error: any) => any;
-=======
 import { apiClient } from './apiClient';
 
 export interface InterceptorConfig {
   request?: (config: RequestInit) => RequestInit | Promise<RequestInit>;
   response?: (response: Response) => Response | Promise<Response>;
   error?: (error: Error) => Error | Promise<Error>;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1595
 }
 
 class ApiInterceptor {
@@ -55,7 +47,6 @@ class ApiInterceptor {
    * Remove request interceptor
    */
   removeRequestInterceptor(interceptor: (config: RequestInit) => RequestInit | Promise<RequestInit>): void {
-=======
  * API Interceptor Utility
  * Provides request/response interceptors for API calls
  */
@@ -84,43 +75,34 @@ class APIInterceptor {
   }
 
   removeRequestInterceptor(interceptor: (config: any) => any): void {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4ed2
     const index = this.requestInterceptors.indexOf(interceptor);
     if (index > -1) {
       this.requestInterceptors.splice(index, 1);
     }
   }
 
-<<<<<<< HEAD
   /**
    * Remove response interceptor
    */
   removeResponseInterceptor(interceptor: (response: Response) => Response | Promise<Response>): void {
-=======
   removeResponseInterceptor(interceptor: (response: any) => any): void {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4ed2
     const index = this.responseInterceptors.indexOf(interceptor);
     if (index > -1) {
       this.responseInterceptors.splice(index, 1);
     }
   }
 
-<<<<<<< HEAD
   /**
    * Remove error interceptor
    */
   removeErrorInterceptor(interceptor: (error: Error) => Error | Promise<Error>): void {
-=======
   removeErrorInterceptor(interceptor: (error: any) => any): void {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4ed2
     const index = this.errorInterceptors.indexOf(interceptor);
     if (index > -1) {
       this.errorInterceptors.splice(index, 1);
     }
   }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   // Apply request interceptors
   applyRequestInterceptors(config: any): any {
     return this.requestInterceptors.reduce((acc, interceptor) => {
@@ -156,13 +138,10 @@ class APIInterceptor {
 
   // Clear all interceptors
   clearAll(): void {
-=======
   /**
    * Clear all interceptors
    */
   clear(): void {
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1595
-=======
   interceptRequest(config: any): any {
     let modifiedConfig = config;
     
@@ -206,14 +185,11 @@ class APIInterceptor {
   }
 
   clear(): void {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4ed2
     this.requestInterceptors = [];
     this.responseInterceptors = [];
     this.errorInterceptors = [];
   }
-<<<<<<< HEAD
 
-<<<<<<< HEAD
   // Get interceptor counts
   getInterceptorCounts(): {
     request: number;
@@ -226,16 +202,12 @@ class APIInterceptor {
       error: this.errorInterceptors.length
     };
   }
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4ed2
 }
 
 // Create singleton instance
 export const apiInterceptor = new APIInterceptor();
 
-<<<<<<< HEAD
 export default APIInterceptor;
-=======
   /**
    * Apply request interceptors
    */
@@ -244,7 +216,6 @@ export default APIInterceptor;
     
     for (const interceptor of this.requestInterceptors) {
       modifiedConfig = await interceptor(modifiedConfig);
-=======
 // ErrorHandler class definition
 class ErrorHandler {
   private static instance: ErrorHandler;
@@ -484,14 +455,12 @@ export class APIClient {
       
       this.errorHandler.handleNetworkError(error as Error, url, config);
       throw error;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
     }
     
     return modifiedConfig;
   }
 
   /**
-<<<<<<< HEAD
    * Apply response interceptors
    */
   async applyResponseInterceptors(response: Response): Promise<Response> {
@@ -520,11 +489,7 @@ export class APIClient {
 
 export const apiInterceptor = new ApiInterceptor();
 export default apiInterceptor;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1595
-=======
 export default APIInterceptor;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4ed2
-=======
    * Parse response based on content type
    */
   private async parseResponse<T>(response: Response): Promise<T> {
@@ -629,4 +594,3 @@ export default APIInterceptor;
 export const apiClient = new APIClient();
 
 export default APIClient;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367

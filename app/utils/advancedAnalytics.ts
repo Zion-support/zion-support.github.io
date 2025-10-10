@@ -1,16 +1,9 @@
-<<<<<<< HEAD
 'use client'
-<<<<<<< HEAD
-=======
-=======
 'use client';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0013
 /**
  * Advanced Analytics utilities
  */
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5ee5
 
 interface UserEvent {
   id: string
@@ -56,15 +49,12 @@ class AdvancedAnalytics {
   private config: AnalyticsConfig
   private currentSession: UserSession
   private eventQueue: UserEvent[] = []
-<<<<<<< HEAD
 
   constructor() {
-=======
   private maxQueueSize = 1000
   private isOnline = true
 
   private constructor() {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5ee5
     this.config = {
       enableTracking: true,
       enableHeatmaps: true,
@@ -91,11 +81,8 @@ class AdvancedAnalytics {
    */
   private initializeTracking(): void {
     if (typeof window === 'undefined' || !this.config.enableTracking) return
-<<<<<<< HEAD
 
-=======
     
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5ee5
     // Track page views
     this.trackPageView()
     
@@ -138,15 +125,9 @@ class AdvancedAnalytics {
       device: this.detectDevice(),
       browser: this.detectBrowser(),
       os: this.detectOS(),
-<<<<<<< HEAD
-<<<<<<< HEAD
       referrer: document.referrer
-=======
       referrer: typeof window !== 'undefined' ? document.referrer : ''
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5ee5
-=======
       referrer: document.referrer
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
     }
   }
 
@@ -164,16 +145,13 @@ class AdvancedAnalytics {
       sessionId: this.currentSession.id,
       url: url || window.location.href,
       metadata: {
-<<<<<<< HEAD
         title: title || document.title,
         referrer: document.referrer
-=======
         referrer: document.referrer,
         viewport: {
           width: window.innerWidth,
           height: window.innerHeight
         }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5ee5
       }
     }
 
@@ -181,7 +159,6 @@ class AdvancedAnalytics {
     this.currentSession.pageViews++
   }
 
-<<<<<<< HEAD
   /**
    * Track custom events
    */
@@ -200,13 +177,10 @@ class AdvancedAnalytics {
     this.addEvent(event)
   }
 
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5ee5
   /**
    * Track clicks
    */
   private trackClicks(): void {
-<<<<<<< HEAD
     document.addEventListener('click', (event) => {
       const target = event.target as HTMLElement
       const element = target.closest('a, button, [role="button"]')
@@ -218,7 +192,6 @@ class AdvancedAnalytics {
           href: (element as HTMLAnchorElement).href,
           className: element.className
         })
-=======
     if (typeof window === 'undefined') return
     
     document.addEventListener('click', event => {
@@ -236,10 +209,8 @@ class AdvancedAnalytics {
         url: window.location.href,
         metadata: {
           element: element.tagName,
-<<<<<<< HEAD
           text: element.text,
           position: element.position
-=======
           id: element.id,
           className: element.className,
           text: element.text?.substring(0, 100),
@@ -247,9 +218,7 @@ class AdvancedAnalytics {
             x: event.clientX,
             y: event.clientY
           }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
         }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5ee5
       }
     })
   }
@@ -265,7 +234,6 @@ class AdvancedAnalytics {
     window.addEventListener('scroll', () => {
       clearTimeout(scrollTimeout)
       scrollTimeout = setTimeout(() => {
-<<<<<<< HEAD
         const scrollPercent = Math.round(
           (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100
         )
@@ -274,7 +242,6 @@ class AdvancedAnalytics {
           scrollY: window.scrollY,
           scrollPercent
         })
-=======
         const scrollEvent: UserEvent = {
           id: this.generateEventId(),
           type: 'scroll',
@@ -284,9 +251,7 @@ class AdvancedAnalytics {
           timestamp: new Date().toISOString(),
           sessionId: this.currentSession.id,
           userId: this.getUserId(),
-<<<<<<< HEAD
           url: window.location.href
-=======
           url: window.location.href,
           metadata: {
             scrollY: window.scrollY,
@@ -294,10 +259,8 @@ class AdvancedAnalytics {
               (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100
             )
           }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
         }
         this.trackEvent(scrollEvent)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5ee5
       }, 150)
     })
   }
@@ -306,7 +269,6 @@ class AdvancedAnalytics {
    * Track form submissions
    */
   private trackFormSubmissions(): void {
-<<<<<<< HEAD
     document.addEventListener('submit', (event) => {
       const form = event.target as HTMLFormElement
       this.trackEvent('form_submit', undefined, {
@@ -315,7 +277,6 @@ class AdvancedAnalytics {
         formMethod: form.method,
         fieldCount: form.elements.length
       })
-=======
     if (typeof window === 'undefined') return
     
     document.addEventListener('submit', event => {
@@ -333,17 +294,13 @@ class AdvancedAnalytics {
         metadata: {
           formId: form.id,
           formClass: form.className,
-<<<<<<< HEAD
           formAction: form.action
-=======
           formAction: form.action,
           formMethod: form.method,
           fields: formFields
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
         }
       }
       this.trackEvent(formEvent)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5ee5
     })
   }
 
@@ -351,7 +308,6 @@ class AdvancedAnalytics {
    * Track downloads
    */
   private trackDownloads(): void {
-<<<<<<< HEAD
     document.addEventListener('click', (event) => {
       const target = event.target as HTMLElement
       const link = target.closest('a[href]') as HTMLAnchorElement
@@ -362,7 +318,6 @@ class AdvancedAnalytics {
           fileType: link.href.split('.').pop(),
           href: link.href
         })
-=======
     if (typeof window === 'undefined') return
     
     document.addEventListener('click', event => {
@@ -381,15 +336,11 @@ class AdvancedAnalytics {
           url: window.location.href,
           metadata: {
             downloadUrl: link.href,
-<<<<<<< HEAD
             downloadText: link.textContent || ''
-=======
             downloadText: link.textContent?.substring(0, 100)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
           }
         }
         this.trackEvent(downloadEvent)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5ee5
       }
     })
   }
@@ -398,8 +349,6 @@ class AdvancedAnalytics {
    * Track performance metrics
    */
   private trackPerformance(): void {
-<<<<<<< HEAD
-<<<<<<< HEAD
     if (typeof window.performance === 'undefined') return
 
     window.addEventListener('load', () => {
@@ -413,14 +362,12 @@ class AdvancedAnalytics {
           firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime,
           firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime
         })
-=======
     if (typeof window === 'undefined') return
     
     window.addEventListener('load', () => {
       setTimeout(() => {
         const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
         const perfEvent: UserEvent = {
-=======
     if ('PerformanceObserver' in window) {
       // Track Core Web Vitals
       new PerformanceObserver(list => {
@@ -451,7 +398,6 @@ class AdvancedAnalytics {
           'navigation'
         )[0] as PerformanceNavigationTiming
         const performanceEvent: UserEvent = {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
           id: this.generateEventId(),
           type: 'custom',
           category: 'performance',
@@ -462,21 +408,17 @@ class AdvancedAnalytics {
           userId: this.getUserId(),
           url: window.location.href,
           metadata: {
-<<<<<<< HEAD
             loadTime: perfData.loadEventEnd - perfData.loadEventStart,
             domContentLoaded: perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart,
             firstPaint: this.getFirstPaint(),
             firstContentfulPaint: this.getFirstContentfulPaint()
-=======
             loadTime: navigation.loadEventEnd - navigation.loadEventStart,
             domContentLoaded:
               navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
             firstByte: navigation.responseStart - navigation.requestStart
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
           }
         }
         this.trackEvent(perfEvent)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5ee5
       }, 0)
     })
   }
@@ -485,7 +427,6 @@ class AdvancedAnalytics {
    * Track user journey
    */
   private trackUserJourney(): void {
-<<<<<<< HEAD
     // Track page visibility changes
     document.addEventListener('visibilitychange', () => {
       this.trackEvent('visibility_change', undefined, {
@@ -502,7 +443,6 @@ class AdvancedAnalytics {
     window.addEventListener('blur', () => {
       this.trackEvent('window_blur')
     })
-=======
     if (typeof window === 'undefined') return
     
     // Track page transitions
@@ -513,22 +453,17 @@ class AdvancedAnalytics {
         lastUrl = window.location.href
       }
     })
-<<<<<<< HEAD
     observer.observe(document, { subtree: true, childList: true })
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5ee5
-=======
     observer.observe(document.body, {
       childList: true,
       subtree: true
     })
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
   }
 
   /**
    * Setup network monitoring
    */
   private setupNetworkMonitoring(): void {
-<<<<<<< HEAD
     if ('connection' in navigator) {
       const connection = (navigator as any).connection
       this.trackEvent('connection_info', undefined, {
@@ -537,7 +472,6 @@ class AdvancedAnalytics {
         rtt: connection.rtt
       })
     }
-=======
     if (typeof window === 'undefined') return
     
     window.addEventListener('online', () => {
@@ -548,20 +482,17 @@ class AdvancedAnalytics {
     window.addEventListener('offline', () => {
       this.isOnline = false
     })
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5ee5
   }
 
   /**
    * Add event to queue and session
    */
-<<<<<<< HEAD
   private addEvent(event: UserEvent): void {
     this.eventQueue.push(event)
     this.currentSession.events.push(event)
     
     // Send to analytics service (implement based on your needs)
     this.sendToAnalytics(event)
-=======
   trackCustomEvent(category: string, action: string, label?: string, value?: number, metadata?: Record<string, unknown>): void {
     const event: UserEvent = {
       id: this.generateEventId(),
@@ -585,37 +516,27 @@ class AdvancedAnalytics {
   private trackEvent(event: UserEvent): void {
     this.currentSession.events.push(event)
     this.eventQueue.push(event)
-<<<<<<< HEAD
     
     if (this.eventQueue.length >= this.maxQueueSize) {
       this.flushEventQueue()
-=======
     // Keep queue size manageable
     if (this.eventQueue.length > this.maxQueueSize) {
       this.eventQueue.shift()
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
     }
     
     if (this.isOnline) {
-<<<<<<< HEAD
       this.sendEventToServer(event)
-=======
       this.sendEvent(event)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
     }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5ee5
   }
 
   /**
    * Send event to server
    */
-<<<<<<< HEAD
   private sendToAnalytics(event: UserEvent): void {
     // Implement your analytics service integration here
     
-=======
   private async sendEventToServer(event: UserEvent): Promise<void> {
-=======
 
 export interface AnalyticsEvent {
   name: string;
@@ -744,25 +665,20 @@ class AnalyticsManager {
   }
 
   private async sendToCustomEndpoint(event: AnalyticsEvent): Promise<void> {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0013
     try {
-<<<<<<< HEAD
       // In a real implementation, you would send to your analytics server
       console.log('Analytics event:', event)
     } catch (error) {
       console.error('Failed to send analytics event:', error)
-=======
       await fetch('/api/analytics', {
         method: 'POST',
         headers: {
-<<<<<<< HEAD
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(event)
       })
     } catch (error) {
       // Handle error silently
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
     }
   }
 
@@ -774,24 +690,19 @@ class AnalyticsManager {
     
     const events = [...this.eventQueue]
     this.eventQueue = []
-<<<<<<< HEAD
     
     // Send all events to server
     events.forEach(event => this.sendEventToServer(event))
-=======
     for (const event of eventsToSend) {
       await this.sendEvent(event)
     }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
   }
 
   /**
    * Generate unique session ID
    */
-<<<<<<< HEAD
   private generateSessionId(): string {
     return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-=======
   private getElementInfo(element: HTMLElement): {
     category: string
     label: string
@@ -823,23 +734,19 @@ class AnalyticsManager {
       className,
       text
     }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
   }
 
   /**
    * Generate unique event ID
    */
-<<<<<<< HEAD
   private generateEventId(): string {
     return `event_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-=======
   private isDownloadLink(link: HTMLAnchorElement): boolean {
     return (
       link.download !== '' ||
       !!link.href.match(/\.(pdf|doc|docx|xls|xlsx|ppt|pptx|zip|rar|7z|tar|gz)$/i) ||
       link.getAttribute('data-download') === 'true'
     )
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
   }
 
   /**
@@ -879,11 +786,8 @@ class AnalyticsManager {
     if (userAgent.includes('Firefox')) return 'Firefox'
     if (userAgent.includes('Safari')) return 'Safari'
     if (userAgent.includes('Edge')) return 'Edge'
-<<<<<<< HEAD
     return 'Other'
-=======
     return 'Unknown'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
   }
 
   /**
@@ -898,17 +802,13 @@ class AnalyticsManager {
     if (userAgent.includes('Linux')) return 'Linux'
     if (userAgent.includes('Android')) return 'Android'
     if (userAgent.includes('iOS')) return 'iOS'
-<<<<<<< HEAD
     return 'Other'
-=======
     return 'Unknown'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
   }
 
   /**
    * Get element information for click tracking
    */
-<<<<<<< HEAD
   private getElementInfo(element: HTMLElement): {
     category: string
     label: string
@@ -923,7 +823,6 @@ class AnalyticsManager {
       tagName: element.tagName,
       text: element.textContent?.substring(0, 100) || '',
       position: { x: rect.left, y: rect.top }
-=======
   private generateSessionId(): string {
     return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
   }
@@ -995,21 +894,18 @@ class AnalyticsManager {
       eventsByCategory,
       topPages: topPages.slice(0, 10),
       conversionRate
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
     }
   }
 
   /**
    * Get element category for analytics
    */
-<<<<<<< HEAD
   private getElementCategory(element: HTMLElement): string {
     if (element.tagName === 'A') return 'link'
     if (element.tagName === 'BUTTON') return 'button'
     if (element.tagName === 'INPUT') return 'input'
     if (element.tagName === 'FORM') return 'form'
     return 'other'
-=======
   private async sendSessionData(session: UserSession): Promise<void> {
     try {
       await fetch('/api/analytics/session', {
@@ -1022,13 +918,11 @@ class AnalyticsManager {
     } catch (error) {
       // Handle error silently
     }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
   }
 
   /**
    * Check if link is a download link
    */
-<<<<<<< HEAD
   private isDownloadLink(link: HTMLAnchorElement): boolean {
     const downloadExtensions = ['.pdf', '.doc', '.docx', '.xls', '.xlsx', '.zip', '.rar', '.exe', '.dmg']
     const href = link.href.toLowerCase()
@@ -1076,7 +970,6 @@ class AnalyticsManager {
    */
   updateConfig(newConfig: Partial<AnalyticsConfig>): void {
     this.config = { ...this.config, ...newConfig }
-=======
   endSession(): void {
     this.currentSession.endTime = new Date().toISOString()
     this.currentSession.duration =
@@ -1088,15 +981,12 @@ class AnalyticsManager {
     }
     // Create new session
     this.currentSession = this.createNewSession()
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
   }
 }
 
 // Export singleton instance
 export const analytics = AdvancedAnalytics.getInstance()
 export default analytics
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5ee5
-=======
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
@@ -1194,4 +1084,3 @@ export function trackError(error: Error, context?: string): void {
     },
   });
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0013

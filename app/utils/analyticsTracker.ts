@@ -1,31 +1,19 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 'use client';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
-=======
 'use client';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
 /**
  * Analytics Tracker
  * Comprehensive analytics tracking for user interactions and performance
  */
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 interface AnalyticsEvent {
   action: string;
   category: string;
-=======
 export interface AnalyticsEvent {
   name: string;
   category: string;
   action: string;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1595
   label?: string;
   value?: number;
   customParameters?: Record<string, any>;
@@ -62,7 +50,6 @@ class AnalyticsTracker {
     this.initialize();
   }
 
-<<<<<<< HEAD
   /**
    * Track a page view
    */
@@ -70,11 +57,9 @@ class AnalyticsTracker {
     const event = () => {
       // Add your analytics implementation here
     };
-=======
   private generateSessionId(): string {
     return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
   }
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1595
 
   private initialize(): void {
     if (typeof window === 'undefined') return;
@@ -205,7 +190,6 @@ class AnalyticsTracker {
     }
   }
 
-=======
 interface AnalyticsEvent {
   category: string
   action: string
@@ -230,7 +214,6 @@ interface ErrorReport {
 class AnalyticsTracker {
   private isInitialized = false
   private queue: Array<() => void> = []
-=======
 interface AnalyticsEvent {
   category: string;
   action: string;
@@ -255,8 +238,6 @@ interface ErrorReport {
 class AnalyticsTracker {
   private isInitialized = false;
   private queue: Array<() => void> = [];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
-=======
 interface AnalyticsEvent {
   category: string;
   action: string;
@@ -281,14 +262,11 @@ interface ErrorReport {
 class AnalyticsTracker {
   private isInitialized = false;
   private queue: Array<() => void> = [];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
 
   /**
    * Initialize the analytics tracker
    */
   initialize(): void {
-<<<<<<< HEAD
-<<<<<<< HEAD
     if (typeof window === 'undefined') return
     
     this.isInitialized = true
@@ -301,8 +279,6 @@ class AnalyticsTracker {
     this.trackPageView(window.location.pathname)
   }
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4ed2
-=======
     if (typeof window === 'undefined') return;
     
     this.isInitialized = true;
@@ -315,8 +291,6 @@ class AnalyticsTracker {
     this.trackPageView(window.location.pathname);
   }
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
-=======
     if (typeof window === 'undefined') return;
 
     this.isInitialized = true;
@@ -329,15 +303,10 @@ class AnalyticsTracker {
     this.trackPageView(window.location.pathname);
   }
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
   /**
    * Track a custom event
    */
-<<<<<<< HEAD
   trackEvent(event: AnalyticsEvent): void {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     const trackFn = () => {
       // Add your analytics implementation here
     };
@@ -346,7 +315,6 @@ class AnalyticsTracker {
       trackFn();
     } else {
       this.queue.push(trackFn);
-=======
   public trackEvent(event: AnalyticsEvent): void {
     if (!this.isInitialized) {
       this.eventQueue.push(event);
@@ -368,43 +336,32 @@ class AnalyticsTracker {
       this.sendToAnalytics(event);
     } catch (error) {
       console.error('Failed to track event:', error);
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1595
-=======
     if (typeof window === 'undefined') return
 
     const track = () => {
       // Send to analytics service
-=======
     if (typeof window === 'undefined') return;
     
     const track = () => {
       // Send to analytics service (replace with your preferred service)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
       if (typeof gtag !== 'undefined') {
         gtag('event', event.action, {
-=======
     if (typeof window === 'undefined') return;
 
     const track = () => {
       // Google Analytics 4
       if (typeof window !== 'undefined' && 'gtag' in window) {
         (window as any).gtag('event', event.action, {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
           event_category: event.category,
           event_label: event.label,
           value: event.value,
           non_interaction: event.nonInteraction
-<<<<<<< HEAD
-<<<<<<< HEAD
         })
-=======
         });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
       }
       
       // Also log to console in development
       if (process.env.NODE_ENV === 'development') {
-<<<<<<< HEAD
         console.log('Analytics Event:', event)
       }
     }
@@ -434,11 +391,9 @@ class AnalyticsTracker {
       track()
     } else {
       this.queue.push(track)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4ed2
     }
   }
 
-=======
         console.log('Analytics Event:', event);
       }
     };
@@ -450,7 +405,6 @@ class AnalyticsTracker {
     }
   }
 
-=======
         });
       }
 
@@ -467,38 +421,31 @@ class AnalyticsTracker {
     }
   }
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
   /**
    * Track page view
    */
   trackPageView(path: string, title?: string): void {
     if (typeof window === 'undefined') return;
-<<<<<<< HEAD
     
     const track = () => {
       if (typeof gtag !== 'undefined') {
         gtag('config', 'GA_MEASUREMENT_ID', {
-=======
 
     const track = () => {
       if (typeof window !== 'undefined' && 'gtag' in window) {
         (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
           page_path: path,
           page_title: title || document.title
         });
       }
-<<<<<<< HEAD
       
       if (process.env.NODE_ENV === 'development') {
         console.log('Page View:', { path, title: title || document.title });
       }
     };
     
-=======
     };
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
     if (this.isInitialized) {
       track();
     } else {
@@ -506,18 +453,10 @@ class AnalyticsTracker {
     }
   }
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
   /**
    * Track performance metrics
    */
-<<<<<<< HEAD
   trackPerformance(metrics: PerformanceMetrics): void {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     const trackFn = () => {
       // Add your performance tracking implementation here
     };
@@ -526,7 +465,6 @@ class AnalyticsTracker {
       trackFn();
     } else {
       this.queue.push(trackFn);
-=======
     if (typeof window === 'undefined') return
 
     const track = () => {
@@ -537,7 +475,6 @@ class AnalyticsTracker {
           event_category: 'Performance'
         })
       }
-=======
     if (typeof window === 'undefined') return;
     
     const track = () => {
@@ -558,8 +495,6 @@ class AnalyticsTracker {
       track();
     } else {
       this.queue.push(track);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
-=======
     if (typeof window === 'undefined') return;
 
     const track = () => {
@@ -581,16 +516,13 @@ class AnalyticsTracker {
       track();
     } else {
       this.queue.push(track);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
     }
 
     if (this.isInitialized) {
       track()
     } else {
       this.queue.push(track)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4ed2
     }
-=======
   public trackPerformance(metrics: PerformanceMetrics): void {
     this.trackEvent({
       name: 'performance_metrics',
@@ -598,25 +530,14 @@ class AnalyticsTracker {
       action: 'measure',
       customParameters: metrics,
     });
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1595
   }
 
   /**
-<<<<<<< HEAD
-<<<<<<< HEAD
    * Track an error
-=======
    * Track error
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
-=======
    * Track error
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
    */
-<<<<<<< HEAD
   trackError(error: ErrorReport): void {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     const trackFn = () => {
       // Add your error tracking implementation here
     };
@@ -625,7 +546,6 @@ class AnalyticsTracker {
       trackFn();
     } else {
       this.queue.push(trackFn);
-=======
     if (typeof window === 'undefined') return
 
     const track = () => {
@@ -641,8 +561,6 @@ class AnalyticsTracker {
       track()
     } else {
       this.queue.push(track)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4ed2
-=======
     if (typeof window === 'undefined') return;
     
     const track = () => {
@@ -657,7 +575,6 @@ class AnalyticsTracker {
       console.error('Analytics Error:', error);
     };
     
-=======
     if (typeof window === 'undefined') return;
 
     const track = () => {
@@ -675,24 +592,15 @@ class AnalyticsTracker {
       }
     };
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
     if (this.isInitialized) {
       track();
     } else {
       this.queue.push(track);
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
     }
   }
 
   /**
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
    * Track user interaction
-=======
   public trackError(error: any): void {
     this.trackEvent({
       name: 'error',
@@ -710,7 +618,6 @@ class AnalyticsTracker {
 
   /**
    * Track page view
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1595
    */
   public trackPageView(page: string, title?: string): void {
     this.trackEvent({
@@ -751,7 +658,6 @@ class AnalyticsTracker {
       category: 'user',
       action: 'update',
       customParameters: properties,
-=======
    * Track user engagement
    */
   trackEngagement(action: string, element?: string): void {
@@ -759,22 +665,18 @@ class AnalyticsTracker {
       category: 'Engagement',
       action,
       label: element
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
     });
   }
 
   /**
    * Track conversion
    */
-<<<<<<< HEAD
   public trackConversion(conversionId: string, value?: number, currency?: string): void {
     this.trackEvent({
-<<<<<<< HEAD
       action: 'conversion',
       category: conversionType,
       value
     });
-=======
       name: 'conversion',
       category: 'conversion',
       action: 'completed',
@@ -809,7 +711,6 @@ class AnalyticsTracker {
     } catch (error) {
       console.error('Failed to send analytics data:', error);
     }
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1595
   }
 
   /**
@@ -821,7 +722,6 @@ class AnalyticsTracker {
       if (event) {
         this.trackEvent(event);
       }
-=======
   trackConversion(action: string, value?: number): void {
     this.trackEvent({
       category: 'Conversion',
@@ -863,12 +763,10 @@ class AnalyticsTracker {
         value,
         currency
       });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
     }
   }
 
   /**
-<<<<<<< HEAD
    * Get current session ID
    */
   public getSessionId(): string {
@@ -883,17 +781,13 @@ class AnalyticsTracker {
   }
 }
 
-<<<<<<< HEAD
 // Create singleton instance
 export const analyticsTracker = new AnalyticsTracker();
 
 export default AnalyticsTracker;
-=======
 // Export singleton instance
 export const analyticsTracker = new AnalyticsTracker();
 export default analyticsTracker;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1595
-=======
    * Track user engagement
    */
   trackEngagement(action: string, value?: number): void {
@@ -926,8 +820,6 @@ if (typeof window !== 'undefined') {
 }
 
 export default AnalyticsTracker
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4ed2
-=======
    * Track user engagement
    */
   trackEngagement(action: string, element?: string): void {
@@ -1099,8 +991,6 @@ if (typeof window !== 'undefined') {
 }
 
 export default analytics;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
-=======
    * Track custom dimension
    */
   trackCustomDimension(dimension: string, value: string): void {
@@ -1130,4 +1020,3 @@ export const trackTransaction = (transactionId: string, value: number, currency?
 export const trackCustomDimension = (dimension: string, value: string) => analyticsTracker.trackCustomDimension(dimension, value);
 
 export default analyticsTracker;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa

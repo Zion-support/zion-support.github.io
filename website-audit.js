@@ -10,7 +10,6 @@ class WebsiteAuditor {
     this.visitedUrls = new Set();
     this.brokenLinks = [];
     this.missingPages = [];
-<<<<<<< HEAD
     this.validLinks = [];
     this.allLinks = new Set();
     this.auditResults = {
@@ -277,7 +276,6 @@ class WebsiteAuditor {
 
     fs.writeFileSync('website-audit-report.json', JSON.stringify(report, null, 2));
     console.log('\n💾 Detailed report saved to: website-audit-report.json');
-=======
     this.allLinks = new Set();
     this.pageContent = new Map();
     this.auditResults = {
@@ -673,12 +671,10 @@ class WebsiteAuditor {
     
     fs.writeFileSync('website-audit-report.json', JSON.stringify(report, null, 2));
     console.log('\n💾 Detailed report saved to website-audit-report.json');
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-ce29
   }
 
   generateRecommendations() {
     const recommendations = [];
-<<<<<<< HEAD
 
     if (this.brokenLinks.length > 0) {
       recommendations.push({
@@ -716,7 +712,6 @@ class WebsiteAuditor {
       action: 'Implement code splitting and optimize images and assets'
     });
 
-=======
     
     if (this.auditResults.brokenLinks.length > 0) {
       recommendations.push({
@@ -745,15 +740,11 @@ class WebsiteAuditor {
       });
     }
     
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-ce29
     return recommendations;
   }
 }
 
 // Run the audit
 const auditor = new WebsiteAuditor();
-<<<<<<< HEAD
 auditor.performComprehensiveAudit().catch(console.error);
-=======
 auditor.auditWebsite().catch(console.error);
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-ce29

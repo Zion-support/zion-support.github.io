@@ -5,9 +5,7 @@ import { useLocation } from 'react-router-dom';
 interface SEOHeadProps {
   title?: string;
   description?: string;
-<<<<<<< HEAD
   keywords?: string;
-<<<<<<< HEAD
   image?: string;
   url?: string;
   type?: string;
@@ -22,7 +20,6 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
   type = "website"
 }) => {
   const structuredData = {
-=======
   keywords?: string[];
   image?: string;
   url?: string;
@@ -32,7 +29,6 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
 
 const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
   title = "Zion Tech Group - Advanced AI and IT Solutions",
-<<<<<<< HEAD
   description = "Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services. Transform your business with our advanced AI capabilities.",
   keywords = [
     "AI solutions",
@@ -46,10 +42,8 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
     "cybersecurity",
     "cloud computing"
   ],
-=======
   description = "Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services. Transform your business with cutting-edge technology.",
   keywords = "AI solutions, quantum computing, autonomous systems, digital transformation, enterprise AI, machine learning, automation, cloud services, cybersecurity, business intelligence, micro SAAS",
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-ce29
   image = "https://ziontechgroup.com/og-image.jpg",
   url,
   type = "website",
@@ -59,7 +53,6 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
   const currentUrl = url || `https://ziontechgroup.com${location.pathname}`;
   
   const defaultStructuredData = {
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-69ae
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
@@ -100,17 +93,13 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
     ]
   };
 
-<<<<<<< HEAD
-=======
   canonical?: string;
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;
   structuredData?: object;
 }
-=======
   const finalStructuredData = structuredData || defaultStructuredData;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-69ae
 
 const defaultSEO = {
   title: 'Zion Tech Group - Advanced AI & IT Solutions | Transform Your Business',
@@ -182,16 +171,13 @@ const SEOHead: React.FC<SEOHeadProps> = ({
 }) => {
   const finalStructuredData = customStructuredData || structuredData;
 
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-9813
   return (
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{title}</title>
       <meta name="description" content={description} />
-<<<<<<< HEAD
       <meta name="keywords" content={keywords} />
       <meta name="author" content="Zion Tech Group" />
-<<<<<<< HEAD
       <meta name="robots" content="index, follow" />
       <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
@@ -218,7 +204,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       
       {/* Canonical URL */}
       <link rel="canonical" href={url} />
-=======
       <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
       <meta name="googlebot" content="index, follow" />
       <meta name="bingbot" content="index, follow" />
@@ -226,7 +211,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       {/* Canonical URL */}
       <link rel="canonical" href={canonical} />
       
-=======
       <meta name="keywords" content={keywords.join(", ")} />
       <meta name="author" content="Zion Tech Group" />
       <meta name="robots" content="index, follow" />
@@ -237,12 +221,10 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="distribution" content="global" />
       <meta name="rating" content="general" />
 
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-69ae
       {/* Open Graph Meta Tags */}
       <meta property="og:type" content={type} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-<<<<<<< HEAD
       <meta property="og:url" content={canonical} />
       <meta property="og:image" content={ogImage} />
       <meta property="og:image:width" content="1200" />
@@ -264,8 +246,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="theme-color" content="#00ffff" />
       <meta name="msapplication-TileColor" content="#00ffff" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-9813
-=======
       <meta property="og:url" content={currentUrl} />
       <meta property="og:image" content={image} />
       <meta property="og:image:width" content="1200" />
@@ -290,7 +270,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       
       {/* Canonical URL */}
       <link rel="canonical" href={currentUrl} />
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-69ae
       
       {/* Preconnect to external domains */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -313,7 +292,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
       <link rel="manifest" href="/site.webmanifest" />
-<<<<<<< HEAD
       
       {/* Structured Data */}
       <script type="application/ld+json">
@@ -326,11 +304,8 @@ const SEOHead: React.FC<SEOHeadProps> = ({
           "@context": "https://schema.org",
           "@type": "WebSite",
           "name": "Zion Tech Group",
-<<<<<<< HEAD
           "url": "https://ziontechgroup.com/",
-=======
           "url": "https://ziontechgroup.com",
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-9813
           "potentialAction": {
             "@type": "SearchAction",
             "target": "https://ziontechgroup.com/search?q={search_term_string}",
@@ -338,19 +313,15 @@ const SEOHead: React.FC<SEOHeadProps> = ({
           }
         })}
       </script>
-<<<<<<< HEAD
-=======
       
       {/* Performance Hints */}
       <meta httpEquiv="x-dns-prefetch-control" content="on" />
       <meta name="format-detection" content="telephone=no" />
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-9813
       
       {/* Performance Hints */}
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       <link rel="dns-prefetch" href="//fonts.gstatic.com" />
       <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-=======
 
       {/* Preconnect to external domains */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -388,13 +359,9 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       {/* Performance Hints */}
       <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
       <link rel="preload" href="/images/hero-bg.jpg" as="image" />
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-69ae
     </Helmet>
   );
 };
 
-<<<<<<< HEAD
 export default EnhancedSEOHead;
-=======
 export default EnhancedSEOHead;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-69ae

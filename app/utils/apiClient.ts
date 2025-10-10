@@ -1,22 +1,14 @@
-<<<<<<< HEAD
-=======
 'use client';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
 /**
-<<<<<<< HEAD
  * API Client
  * Centralized API client with caching and error handling
-=======
  * API Client Utility
  * Provides a centralized way to make API calls with error handling and caching
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4ed2
  */
-<<<<<<< HEAD
 
 import { apiCache } from './apiCache';
 
-<<<<<<< HEAD
 export interface ApiResponse<T = any> {
   data: T;
   status: number;
@@ -39,13 +31,11 @@ class ApiClient {
     this.baseURL = baseURL;
     this.defaultHeaders = {
       'Content-Type': 'application/json',
-<<<<<<< HEAD
       ...defaultHeaders
     };
   }
 
   private async makeRequest<T>(
-=======
 export interface APIResponse<T> {
   data: T;
   status: number;
@@ -78,7 +68,6 @@ class APIClient {
   }
 
   private async request<T>(
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4ed2
     endpoint: string,
     config: RequestConfig = {}
   ): Promise<APIResponse<T>> {
@@ -91,7 +80,6 @@ class APIClient {
     } = config;
 
     const url = `${this.baseURL}${endpoint}`;
-<<<<<<< HEAD
     const cacheKey = apiCache.generateKey(url, body);
 
     // Check cache for GET requests
@@ -99,7 +87,6 @@ class APIClient {
       const cachedData = apiCache.get(cacheKey);
       if (cachedData) {
         return cachedData;
-=======
     };
   }
 
@@ -119,8 +106,6 @@ class APIClient {
           statusText: 'OK',
           headers: cached.headers || {},
         };
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1595
-=======
     const cacheKey = `${method}:${url}:${JSON.stringify(body || {})}`;
 
     // Check cache for GET requests
@@ -131,33 +116,24 @@ class APIClient {
           data: cachedData,
           status: 200
         };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4ed2
       }
     }
 
     try {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4ed2
       const response = await fetch(url, {
         method,
         headers: {
           ...this.defaultHeaders,
-<<<<<<< HEAD
           ...headers
         },
         body: body ? JSON.stringify(body) : undefined
-=======
           ...headers,
         },
         body: body ? JSON.stringify(body) : undefined,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4ed2
       });
 
       const data = await response.json();
 
-<<<<<<< HEAD
       const apiResponse: APIResponse<T> = {
         data,
         status: response.status,
@@ -173,7 +149,6 @@ class APIClient {
       return apiResponse;
     } catch (error) {
       throw new Error(`API request failed: ${error instanceof Error ? error.message : 'Unknown error'}`);
-=======
       if (!response.ok) {
         throw new Error(data.message || `HTTP error! status: ${response.status}`);
       }
@@ -193,12 +168,10 @@ class APIClient {
         status: 500,
         code: 'NETWORK_ERROR'
       } as APIError;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4ed2
     }
   }
 
   async get<T>(endpoint: string, config: Omit<RequestConfig, 'method' | 'body'> = {}): Promise<APIResponse<T>> {
-<<<<<<< HEAD
     return this.makeRequest<T>(endpoint, { ...config, method: 'GET' });
   }
 
@@ -224,7 +197,6 @@ class APIClient {
   }
 
   // Set default headers
-=======
       const response = await fetch(fullUrl, {
         method: 'GET',
         headers: { ...this.defaultHeaders, ...options?.headers },
@@ -371,16 +343,13 @@ class APIClient {
   /**
    * Set default headers
    */
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1595
   setDefaultHeaders(headers: Record<string, string>): void {
     this.defaultHeaders = { ...this.defaultHeaders, ...headers };
   }
 
-<<<<<<< HEAD
   // Clear cache
   clearCache(): void {
     apiCache.clear();
-=======
     return this.request<T>(endpoint, { ...config, method: 'GET' });
   }
 
@@ -398,16 +367,13 @@ class APIClient {
 
   async patch<T>(endpoint: string, body?: any, config: Omit<RequestConfig, 'method'> = {}): Promise<APIResponse<T>> {
     return this.request<T>(endpoint, { ...config, method: 'PATCH', body });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4ed2
   }
 }
 
 // Create singleton instance
 export const apiClient = new APIClient();
 
-<<<<<<< HEAD
 export default APIClient;
-=======
   /**
    * Set base URL
    */
@@ -418,11 +384,7 @@ export default APIClient;
 
 export const apiClient = new ApiClient();
 export default apiClient;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1595
-=======
 export default APIClient;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4ed2
-=======
 
 export interface ApiClientConfig {
   baseURL?: string;
@@ -736,4 +698,3 @@ export class ApiClient {
 export const apiClient = new ApiClient();
 
 export default ApiClient;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367

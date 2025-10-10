@@ -1,15 +1,12 @@
-<<<<<<< HEAD
 import React, { createContext, useContext, useEffect, useCallback } from 'react';
 import { useLocation } from 'react-router-dom';
 
-<<<<<<< HEAD
 interface AnalyticsContextType {
   trackEvent: (eventName: string, properties?: Record<string, any>) => void;
   trackPageView: (pageName: string) => void;
 }
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
-=======
 interface AnalyticsEvent {
   action: string;
   category: string;
@@ -24,7 +21,6 @@ interface AnalyticsContextType {
   trackConversion: (conversionId: string, value?: number) => void;
   setUserProperties: (properties: Record<string, any>) => void;
   setUserId: (userId: string) => void;
-=======
 import React, { createContext, useContext, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
@@ -32,14 +28,10 @@ interface AnalyticsContextType {
   trackEvent: (eventName: string, parameters?: Record<string, any>) => void;
   trackPageView: (pageName: string, pagePath: string) => void;
   trackConversion: (conversionName: string, value?: number) => void;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-69ae
 }
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-9813
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
-<<<<<<< HEAD
-=======
 export const useAnalytics = () => {
   const context = useContext(AnalyticsContext);
   if (!context) {
@@ -48,35 +40,27 @@ export const useAnalytics = () => {
   return context;
 };
 
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-69ae
 interface AnalyticsProviderProps {
   children: React.ReactNode;
   googleAnalyticsId?: string;
   googleTagManagerId?: string;
-<<<<<<< HEAD
   facebookPixelId?: string;
   enableDebug?: boolean;
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-69ae
 }
 
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
   children,
-<<<<<<< HEAD
   googleAnalyticsId = process.env.VITE_GA_MEASUREMENT_ID,
   googleTagManagerId = process.env.VITE_GTM_ID,
   facebookPixelId = process.env.VITE_FB_PIXEL_ID,
   enableDebug = process.env.NODE_ENV === 'development'
-=======
   googleAnalyticsId = 'G-XXXXXXXXXX',
   googleTagManagerId = 'GTM-XXXXXXX'
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-69ae
 }) => {
   const location = useLocation();
 
   // Initialize Google Analytics
   useEffect(() => {
-<<<<<<< HEAD
     if (!googleAnalyticsId || typeof window === 'undefined') return;
 
     // Load Google Analytics script
@@ -112,7 +96,6 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     // GTM script
     const gtmScript = document.createElement('script');
     gtmScript.innerHTML = `
-=======
     if (typeof window === 'undefined') return;
 
     // Load Google Analytics
@@ -138,14 +121,12 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     // Load Google Tag Manager
     const script2 = document.createElement('script');
     script2.innerHTML = `
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-69ae
       (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
       new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
       j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
       })(window,document,'script','dataLayer','${googleTagManagerId}');
     `;
-<<<<<<< HEAD
     document.head.appendChild(gtmScript);
 
     // GTM noscript
@@ -267,7 +248,6 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     if (window.gtag) {
       window.gtag('event', 'conversion', {
         send_to: conversionId,
-=======
     document.head.appendChild(script2);
 
     // GTM NoScript
@@ -332,12 +312,10 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('event', 'conversion', {
         send_to: `${googleAnalyticsId}/${conversionName}`,
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-69ae
         value: value,
         currency: 'USD'
       });
     }
-<<<<<<< HEAD
 
     // Google Tag Manager
     if (window.dataLayer) {
@@ -464,20 +442,15 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       document.removeEventListener('submit', handleFormSubmit);
     };
   }, [trackEvent]);
-=======
   };
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-69ae
 
   const contextValue: AnalyticsContextType = {
     trackEvent,
     trackPageView,
-<<<<<<< HEAD
     trackConversion,
     setUserProperties,
     setUserId
-=======
     trackConversion
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-69ae
   };
 
   return (
@@ -487,7 +460,6 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
   );
 };
 
-<<<<<<< HEAD
 export const useAnalytics = (): AnalyticsContextType => {
   const context = useContext(AnalyticsContext);
   if (!context) {
@@ -505,7 +477,6 @@ declare global {
   }
 }
 
-<<<<<<< HEAD
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   useEffect(() => {
     // Initialize analytics
@@ -538,10 +509,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     </AnalyticsContext.Provider>
   );
 };
-=======
 export default AnalyticsProvider;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-9813
-=======
 // Hook for tracking specific events
 export const useEventTracking = () => {
   const { trackEvent } = useAnalytics();
@@ -604,4 +572,3 @@ export const useEventTracking = () => {
 };
 
 export default AnalyticsProvider;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-69ae

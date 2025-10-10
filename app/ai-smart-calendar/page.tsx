@@ -352,9 +352,6 @@ export default AISmartCalendarProPage;
 };
 
 export default aismartcalendarPage;
-=======
-=======
->>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-92bf
 'use client';
 import React, { useState, useEffect } from 'react';
 import { 
@@ -378,7 +375,6 @@ import {
   Award,
   Shield,
   Globe
->>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-92bf
 } from 'lucide-react';
 
 const AISmartCalendarPage: React.FC = () => {
@@ -425,8 +421,6 @@ const AISmartCalendarPage: React.FC = () => {
       title: 'Multi-Platform Sync',
       description: 'Seamless integration with Google Calendar, Outlook, Apple Calendar, and 50+ other platforms.',
       benefits: ['Universal calendar sync', 'Real-time updates', 'Cross-platform compatibility']
->>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-92bf
-=======
 import React from 'react';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
@@ -464,7 +458,6 @@ export default function AISmartCalendarPage() {
       icon: BarChart,
       title: 'Analytics & Insights',
       description: 'Detailed analytics on meeting patterns, productivity metrics, and time optimization.'
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-f003
     }
   ];
 
@@ -479,8 +472,6 @@ export default function AISmartCalendarPage() {
         'Standard support'
       ],
       popular: false
->>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-92bf
-=======
       description: 'Perfect for small teams',
       features: [
         'Up to 5 users',
@@ -490,7 +481,6 @@ export default function AISmartCalendarPage() {
         'Mobile app access'
       ],
       popular: false
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-f003
     },
     {
       name: 'Professional',
@@ -507,8 +497,6 @@ export default function AISmartCalendarPage() {
         'API access'
       ],
       popular: true
->>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-92bf
-=======
       description: 'Ideal for growing businesses',
       features: [
         'Up to 25 users',
@@ -519,7 +507,6 @@ export default function AISmartCalendarPage() {
         'Analytics dashboard'
       ],
       popular: true
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-f003
     },
     {
       name: 'Enterprise',
@@ -540,7 +527,6 @@ export default function AISmartCalendarPage() {
     }
   ];
 
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-f003
   const testimonials = [
     {
       name: 'Sarah Johnson',
@@ -549,7 +535,6 @@ export default function AISmartCalendarPage() {
       content: 'AI Smart Calendar has revolutionized how we manage our time. The AI suggestions have increased our productivity by 40%.',
       rating: 5,
       avatar: '/images/testimonials/sarah-johnson.jpg'
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-f003
     },
     {
       name: 'Michael Chen',
@@ -589,7 +574,6 @@ export default function AISmartCalendarPage() {
     }
   ];
 
->>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-92bf
   if (!isLoaded) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
@@ -632,7 +616,6 @@ export default function AISmartCalendarPage() {
       <Navigation />
       
       {/* Hero Section */}
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-f003
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div>
         <div className="container mx-auto px-4 relative z-10">
@@ -681,14 +664,12 @@ export default function AISmartCalendarPage() {
               >
                 <Phone className="w-5 h-5 mr-2" />
                 Call: (302) 464-0950
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-f003
               </a>
             </div>
           </div>
         </div>
       </section>
 
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-f003
       {/* Features Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -710,7 +691,6 @@ export default function AISmartCalendarPage() {
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-f003
               </div>
             ))}
           </div>
@@ -730,7 +710,6 @@ export default function AISmartCalendarPage() {
             </p>
           </div>
           
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-f003
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`bg-slate-800/50 rounded-lg p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
@@ -828,10 +807,7 @@ export default function AISmartCalendarPage() {
                 {plan.popular && (
                   <div className="text-center mb-4">
                     <span className="inline-block bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
->>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-92bf
-=======
                     <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium">
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-f003
                       Most Popular
                     </span>
                   </div>
@@ -839,11 +815,8 @@ export default function AISmartCalendarPage() {
 
                 
                 <div className="text-center mb-6">
->>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-92bf
-=======
                 
                 <div className="text-center mb-6">
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-f003
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-gray-300 mb-4">{plan.description}</p>
                   <div className="flex items-baseline justify-center">
@@ -854,7 +827,6 @@ export default function AISmartCalendarPage() {
                 </div>
 
                 <ul className="space-y-3 mb-8">
->>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-92bf
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
@@ -885,7 +857,6 @@ export default function AISmartCalendarPage() {
                   }`}
                 >
                   Get Started
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-f003
                 </a>
               </div>
             ))}
@@ -900,7 +871,6 @@ export default function AISmartCalendarPage() {
                 }`}>
                   Start Free Trial
                 </button>
->>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-92bf
               </div>
             ))}
           </div>
@@ -908,7 +878,6 @@ export default function AISmartCalendarPage() {
 
       {/* Testimonials Section */}
       <section className="py-20">
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-f003
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -920,7 +889,6 @@ export default function AISmartCalendarPage() {
           </div>
 
           
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-f003
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="bg-slate-800/50 rounded-lg p-6">
@@ -942,7 +910,6 @@ export default function AISmartCalendarPage() {
                     <div className="text-gray-400 text-sm">{testimonial.role}</div>
                   </div>
                 </div>
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-f003
               </div>
             ))}
           </div>
@@ -958,7 +925,6 @@ export default function AISmartCalendarPage() {
           </h2>
           <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
             Start your free trial today and experience the power of AI-driven scheduling.
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-f003
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -975,7 +941,6 @@ export default function AISmartCalendarPage() {
             >
               <Phone className="w-5 h-5 mr-2" />
               Call: (302) 464-0950
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-f003
             </a>
           </div>
         </div>
@@ -1037,18 +1002,14 @@ export default function AISmartCalendarPage() {
           </p>
         </div>
       </div>
->>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-92bf
     </div>
   );
 };
 
 export default AISmartCalendarPage;
->>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-92bf
-=======
 
       <Footer />
     </div>
   );
 }
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-f003
 

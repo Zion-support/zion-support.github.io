@@ -1,16 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import React from 'react';
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
 import { Helmet } from 'react-helmet-async';
 import { 
   Stethoscope, 
   Shield, 
-<<<<<<< HEAD
   Lock, 
   FileText, 
   Users, 
@@ -25,14 +18,11 @@ import {
   BarChart,
   Settings
 } from 'lucide-react';
-=======
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Star, Zap, Heart, Clock, Users, Shield, BarChart, ArrowRight, Phone, Mail } from 'lucide-react';
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-db70
-=======
   Database, 
   Users, 
   FileText, 
@@ -47,28 +37,22 @@ import { CheckCircle, Star, Zap, Heart, Clock, Users, Shield, BarChart, ArrowRig
   Zap,
   Globe
 } from 'lucide-react';
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
 
 const HealthcareITPage: React.FC = () => {
   const features = [
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
       icon: Shield,
       title: 'HIPAA Compliance',
       description: 'Fully compliant with HIPAA regulations and healthcare data protection standards.',
       benefits: ['End-to-end encryption', 'Audit trails', 'Access controls', 'Data anonymization']
-=======
       icon: Shield,
       title: 'HIPAA Compliance',
       description: 'Fully compliant healthcare IT solutions that meet all HIPAA requirements and healthcare regulations.',
       benefits: ['Data encryption', 'Access controls', 'Audit trails', 'Risk assessments']
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
     },
     {
       icon: Database,
       title: 'Electronic Health Records',
-<<<<<<< HEAD
       description: 'Secure EHR integration and management with seamless data interoperability.',
       benefits: ['FHIR compliance', 'Real-time sync', 'Data migration', 'Interoperability']
     },
@@ -116,9 +100,6 @@ const HealthcareITPage: React.FC = () => {
       title: 'Compliance Management',
       description: 'HIPAA, HITECH, and other regulatory compliance management.',
       icon: CheckCircle
-=======
-=======
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
 import { Stethoscope, Shield, Database, Users, CheckCircle, ArrowRight, Phone, Mail, MapPin, Calendar, MessageSquare, Heart, Activity, FileText, Lock, Globe, Award, Star, Zap, Brain } from 'lucide-react';
 
 export default function HealthcareITPage() {
@@ -178,7 +159,6 @@ export default function HealthcareITPage() {
       metric: '24/7',
       label: 'Support',
       description: 'Round-the-clock technical support for healthcare facilities'
-=======
       description: 'Secure, scalable EHR systems that integrate seamlessly with existing healthcare workflows.',
       benefits: ['Patient data management', 'Clinical workflows', 'Interoperability', 'Data analytics']
     },
@@ -193,12 +173,10 @@ export default function HealthcareITPage() {
       title: 'Patient Engagement',
       description: 'Comprehensive patient portal and engagement solutions that improve care coordination.',
       benefits: ['Patient portals', 'Telehealth integration', 'Appointment scheduling', 'Health monitoring']
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
     }
   ];
 
   const solutions = [
-<<<<<<< HEAD
     {
       title: 'Hospital Information Systems',
       description: 'Comprehensive HIS solutions for patient management, billing, and operations.',
@@ -228,11 +206,6 @@ export default function HealthcareITPage() {
       title: 'Revenue Cycle Management',
       description: 'Comprehensive RCM solutions for billing and claims processing.',
       icon: '💰'
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
-=======
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
-=======
       icon: Heart,
       title: 'HIPAA Compliance',
       description: 'Full HIPAA compliance solutions with automated controls, monitoring, and reporting capabilities.',
@@ -267,14 +240,10 @@ export default function HealthcareITPage() {
       title: 'Healthcare Analytics',
       description: 'Comprehensive analytics and reporting for healthcare operations and patient outcomes.',
       benefits: ['Patient insights', 'Operational metrics', 'Outcome tracking']
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-db70
     }
   ];
 
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     <>
       <Helmet>
         <title>Healthcare IT Solutions - Zion Tech Group</title>
@@ -315,7 +284,6 @@ export default function HealthcareITPage() {
                 </button>
                 <button className="px-8 py-4 border border-cyan-400 text-cyan-400 rounded-lg hover:bg-cyan-400/10 transition-all">
                   View Demo
-=======
     'Electronic Health Records (EHR) Systems',
     'Practice Management Software',
     'Telehealth and Remote Monitoring',
@@ -381,13 +349,11 @@ export default function HealthcareITPage() {
                 </button>
                 <button className="border border-blue-400 text-blue-300 hover:bg-blue-400/10 px-8 py-4 rounded-lg font-semibold transition-all duration-300">
                   View Compliance Guide
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
                 </button>
               </div>
             </div>
 
             {/* Stats */}
-<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
               <div className="text-center">
                 <div className="text-4xl font-bold text-cyan-400 mb-2">100%</div>
@@ -403,7 +369,6 @@ export default function HealthcareITPage() {
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold text-green-400 mb-2">24/7</div>
-=======
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mt-16">
               <div className="text-center">
                 <div className="text-4xl font-bold text-blue-400 mb-2">100%</div>
@@ -419,7 +384,6 @@ export default function HealthcareITPage() {
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold text-purple-400 mb-2">24/7</div>
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
                 <div className="text-gray-300">Support Available</div>
               </div>
             </div>
@@ -431,7 +395,6 @@ export default function HealthcareITPage() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-6">
-<<<<<<< HEAD
                 Secure Healthcare Technology
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -454,7 +417,6 @@ export default function HealthcareITPage() {
                           <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
                             <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                             {benefit}
-=======
                 Comprehensive Healthcare IT Solutions
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -478,7 +440,6 @@ export default function HealthcareITPage() {
                           <li key={benefitIndex} className="flex items-center space-x-2 text-gray-300">
                             <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                             <span>{benefit}</span>
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
                           </li>
                         ))}
                       </ul>
@@ -490,16 +451,12 @@ export default function HealthcareITPage() {
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Services Grid */}
-=======
         {/* Solutions Section */}
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
         <section className="py-20 px-4 bg-slate-800/30">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-6">
-<<<<<<< HEAD
                 Comprehensive Healthcare Services
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -515,7 +472,6 @@ export default function HealthcareITPage() {
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-3">{service.title}</h3>
                   <p className="text-gray-300 text-sm">{service.description}</p>
-=======
                 Healthcare IT Solutions
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -533,7 +489,6 @@ export default function HealthcareITPage() {
                     </div>
                     <span className="text-white font-medium">{solution}</span>
                   </div>
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
                 </div>
               ))}
             </div>
@@ -543,7 +498,6 @@ export default function HealthcareITPage() {
         {/* Compliance Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
-<<<<<<< HEAD
             <div className="bg-gradient-to-r from-slate-800 to-slate-700 rounded-2xl p-12">
               <div className="text-center mb-12">
                 <h2 className="text-4xl font-bold text-white mb-6">
@@ -577,7 +531,6 @@ export default function HealthcareITPage() {
                   <p className="text-gray-300">Service Organization Control 2 Type II certification for security</p>
                 </div>
               </div>
-=======
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-6">
                 Regulatory Compliance & Security
@@ -597,13 +550,11 @@ export default function HealthcareITPage() {
                   <h3 className="text-white font-semibold mb-2">{feature}</h3>
                 </div>
               ))}
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -620,7 +571,6 @@ export default function HealthcareITPage() {
               </button>
               <button className="px-8 py-4 border border-cyan-400 text-cyan-400 rounded-lg hover:bg-cyan-400/10 transition-all">
                 Download Brochure
-=======
         <section className="py-20 px-4 bg-slate-800/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -636,7 +586,6 @@ export default function HealthcareITPage() {
               </button>
               <button className="border border-blue-400 text-blue-300 hover:bg-blue-400/10 px-8 py-4 rounded-lg font-semibold transition-all duration-300">
                 Schedule Consultation
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
               </button>
             </div>
           </div>
@@ -646,11 +595,7 @@ export default function HealthcareITPage() {
   );
 };
 
-<<<<<<< HEAD
 export default HealthcareITPage;
-=======
-=======
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
@@ -678,7 +623,6 @@ export default HealthcareITPage;
                 <span className="text-white font-medium">Secure</span>
               </div>
             </div>
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
       <Navigation />
       
@@ -706,12 +650,10 @@ export default HealthcareITPage;
             <button className="border border-red-400 text-red-400 hover:bg-red-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
               Schedule Demo
             </button>
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-db70
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Services */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -814,7 +756,6 @@ export default HealthcareITPage;
                 <div className="text-gray-300 text-sm">
                   {benefit.description}
                 </div>
-=======
       {/* Features Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -841,7 +782,6 @@ export default HealthcareITPage;
                     </li>
                   ))}
                 </ul>
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-db70
               </div>
             ))}
           </div>
@@ -849,7 +789,6 @@ export default HealthcareITPage;
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
@@ -878,13 +817,8 @@ export default HealthcareITPage;
       </section>
     </div>
   );
-<<<<<<< HEAD
 }
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
-=======
 }
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
-=======
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Ready for Healthcare IT Excellence?</h2>
@@ -908,7 +842,4 @@ export default HealthcareITPage;
 };
 
 export default HealthcareITPage;
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-db70
-=======
 export default HealthcareITPage;
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8

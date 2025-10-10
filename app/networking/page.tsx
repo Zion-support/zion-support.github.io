@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 import SEOOptimizer from '../../components/SEOOptimizer';
@@ -11,7 +10,6 @@ export default function NetworkingPage() {
       icon: Wifi,
       title: 'Enterprise Network Design',
       description: 'Custom network architecture designed for scalability, security, and performance optimization.'
-=======
 import { Helmet } from 'react-helmet-async';
 import { 
   Network, 
@@ -40,12 +38,10 @@ const NetworkingPage: React.FC = () => {
       title: 'Enterprise Network Design',
       description: 'Custom network architectures designed for scalability, security, and performance.',
       benefits: ['High availability', 'Load balancing', 'Redundancy planning']
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-dd48
     },
     {
       icon: Shield,
       title: 'Network Security',
-<<<<<<< HEAD
       description: 'Comprehensive security solutions including firewalls, intrusion detection, and threat monitoring.'
     },
     {
@@ -67,7 +63,6 @@ const NetworkingPage: React.FC = () => {
       icon: Settings,
       title: '24/7 Monitoring',
       description: 'Round-the-clock network monitoring and support to prevent downtime and ensure reliability.'
-=======
       description: 'Comprehensive security solutions to protect your network infrastructure.',
       benefits: ['Firewall management', 'Intrusion detection', 'VPN solutions']
     },
@@ -82,14 +77,12 @@ const NetworkingPage: React.FC = () => {
       title: 'Wide Area Networks',
       description: 'Connect multiple locations with secure and reliable WAN solutions.',
       benefits: ['Site-to-site connectivity', 'Cloud integration', 'Global reach']
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-dd48
     }
   ];
 
   const services = [
     {
       title: 'Network Assessment',
-<<<<<<< HEAD
       description: 'Comprehensive analysis of your current network infrastructure and performance.',
       price: 'Starting at $2,500'
     },
@@ -332,7 +325,6 @@ const NetworkingPage: React.FC = () => {
     </div>
   );
 }
-=======
       description: 'Comprehensive analysis of your current network infrastructure',
       price: 'Starting at $2,500',
       features: ['Infrastructure audit', 'Performance analysis', 'Security review', 'Recommendations report']
@@ -537,4 +529,3 @@ const NetworkingPage: React.FC = () => {
 };
 
 export default NetworkingPage;
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-dd48

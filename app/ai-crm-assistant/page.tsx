@@ -222,7 +222,6 @@ const AICRMAssistantProPage: React.FC = () => {
 
 <!-- Merged from origin/main -->
 import React from 'react';
-=======
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 import SEOOptimizer from '../../components/SEOOptimizer';
@@ -557,5 +556,4 @@ export default function AICRMAssistantPage() {
     </div>
   );
 }
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-f003
 

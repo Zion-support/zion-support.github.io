@@ -352,7 +352,6 @@ export default AISupplyChainOptimizationProPage;
 };
 
 export default aisupplychainoptimizationproPage;
-=======
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
@@ -626,5 +625,4 @@ const AISupplyChainOptimizationPro: React.FC = () => {
 };
 
 export default AISupplyChainOptimizationPro;
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-d464
 
