@@ -69,7 +69,15 @@ const Navigation: React.FC = () => {
     { name: 'AI Environmental', href: '/ai-environmental', icon: Globe, description: 'Environmental AI' },
     { name: 'AI Retail', href: '/ai-retail', icon: Globe, description: 'Retail AI' },
     { name: 'AI Sports', href: '/ai-sports', icon: BarChart, description: 'Sports AI' },
-    { name: 'AI Mental Health', href: '/ai-mental-health', icon: Users, description: 'Mental Health AI' }
+    { name: 'AI Mental Health', href: '/ai-mental-health', icon: Users, description: 'Mental Health AI' },
+    // New Advanced AI Services
+    { name: 'AI Drug Discovery', href: '/ai-drug-discovery', icon: Brain, description: 'Pharmaceutical AI' },
+    { name: 'AI Climate Solutions', href: '/ai-climate-solutions', icon: Globe, description: 'Environmental AI' },
+    { name: 'Autonomous Vehicle AI', href: '/autonomous-vehicle-ai', icon: Globe, description: 'Vehicle AI' },
+    { name: 'AI Creative Studio', href: '/ai-creative-studio', icon: Code, description: 'Creative AI' },
+    { name: 'AI Manufacturing', href: '/ai-manufacturing', icon: Settings, description: 'Industrial AI' },
+    { name: 'AI Smart City', href: '/ai-smart-city', icon: Globe, description: 'Urban AI' },
+    { name: 'AI Research Assistant', href: '/ai-research-assistant', icon: Brain, description: 'Research AI' }
   ];
   const itServices = [
     { name: 'Cloud Services', href: '/cloud-services', icon: Cloud, description: 'Cloud Solutions' },
@@ -100,7 +108,14 @@ const Navigation: React.FC = () => {
     { name: 'Hybrid Cloud', href: '/hybrid-cloud', icon: Cloud, description: 'Hybrid Solutions' },
     { name: 'Data Migration', href: '/data-migration', icon: Database, description: 'Migration Services' },
     { name: 'API Development', href: '/api-development', icon: Globe, description: 'API Services' },
-    { name: 'IT Governance', href: '/it-governance', icon: Settings, description: 'Governance Solutions' }
+    { name: 'IT Governance', href: '/it-governance', icon: Settings, description: 'Governance Solutions' },
+    // New Advanced IT Services
+    { name: 'AI-Powered DevOps', href: '/ai-devops', icon: Zap, description: 'Intelligent DevOps' },
+    { name: 'Predictive IT Analytics', href: '/predictive-it-analytics', icon: BarChart, description: 'AI IT Analytics' },
+    { name: 'Edge Computing', href: '/edge-computing', icon: Globe, description: 'Edge Solutions' },
+    { name: 'Quantum Infrastructure', href: '/quantum-infrastructure', icon: Cpu, description: 'Quantum-Ready' },
+    { name: 'AI Infrastructure Automation', href: '/ai-infrastructure-automation', icon: Settings, description: 'Self-Healing IT' },
+    { name: 'Zero-Trust Security', href: '/zero-trust-security', icon: Shield, description: 'Zero-Trust Architecture' }
   ];
   const microSaasServices = [
     { name: 'Micro SAAS Solutions', href: '/micro-saas', icon: Cpu, description: '50+ AI Tools' },
@@ -134,7 +149,16 @@ const Navigation: React.FC = () => {
     { name: 'Property Management AI', href: '/property-management-ai', icon: BarChart, description: 'Real Estate' },
     { name: 'Legal Document Manager', href: '/legal-document-manager', icon: Shield, description: 'Legal & Compliance' },
     { name: 'Online Learning Platform', href: '/online-learning-platform', icon: Users, description: 'Education' },
-    { name: 'Supply Chain Optimizer', href: '/supply-chain-optimizer', icon: BarChart, description: 'Manufacturing' }
+    { name: 'Supply Chain Optimizer', href: '/supply-chain-optimizer', icon: BarChart, description: 'Manufacturing' },
+    // New Innovative Micro SAAS Services
+    { name: 'AI Code Assistant Pro', href: '/ai-code-assistant-pro', icon: Code, description: 'Advanced Coding AI' },
+    { name: 'AI Design Studio Pro', href: '/ai-design-studio-pro', icon: Sparkles, description: 'Professional Design' },
+    { name: 'AI Sales Predictor', href: '/ai-sales-predictor', icon: BarChart, description: 'Sales Forecasting' },
+    { name: 'AI Security Monitor', href: '/ai-security-monitor', icon: Shield, description: 'Cybersecurity AI' },
+    { name: 'AI Lead Scoring', href: '/ai-lead-scoring', icon: Target, description: 'Lead Qualification' },
+    { name: 'AI Financial Analyzer', href: '/ai-financial-analyzer', icon: BarChart, description: 'Financial AI' },
+    { name: 'AI Health Monitor', href: '/ai-health-monitor', icon: Shield, description: 'Health Tracking' },
+    { name: 'AI Learning Platform', href: '/ai-learning-platform', icon: Users, description: 'Educational AI' }
   ];
   const emergingTech = [
     { name: 'Quantum Computing', href: '/quantum-computing', icon: Cpu, description: 'Quantum Solutions' },
