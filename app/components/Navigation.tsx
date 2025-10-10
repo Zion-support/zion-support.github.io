@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Globe, Database, Settings, Target, MessageSquare, Eye, Cpu, Lock, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Truck, Smartphone, TrendingUp } from 'lucide-react';
 
 const Navigation: React.FC = () => {
@@ -7,6 +8,36 @@ const Navigation: React.FC = () => {
   const [isAIOpen, setIsAIOpen] = useState(false);
   const [isITOpen, setIsITOpen] = useState(false);
   const [isSpecializedOpen, setIsSpecializedOpen] = useState(false);
+=======
+import { Link } from 'react-router-dom';
+import { 
+  ChevronDown, 
+  Phone, 
+  Mail, 
+  MapPin, 
+  Menu, 
+  X, 
+  Brain, 
+  Cloud, 
+  Shield, 
+  Code, 
+  BarChart, 
+  Users, 
+  Zap,
+  Star,
+  TrendingUp,
+  Settings,
+  Globe,
+  Target
+} from 'lucide-react';
+
+const Navigation: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const [aiServicesOpen, setAiServicesOpen] = useState(false);
+  const [itServicesOpen, setItServicesOpen] = useState(false);
+  const [microSaasOpen, setMicroSaasOpen] = useState(false);
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-abbf
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
