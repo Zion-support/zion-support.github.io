@@ -1,7 +1,6 @@
 'use client'
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom'
 import { 
   Cloud, 
@@ -1051,37 +1050,10 @@ const ItServicesPage: React.FC = () => {
   )
   return (
     <>
-=======
-import { Link } from 'react-router-dom';
-import { Cloud, Shield, Settings, Database, Smartphone, Globe, Zap, ArrowRight } from 'lucide-react';
-;
-const ItServicesPage: React.FC = () => {
-const itServices = [
-];
-};
-    { name: 'Cloud Services', href: '/cloud-services', icon: Cloud, description: 'Cloud Solutions' },
-    { name: 'Cloud Migration', href: '/cloud-migration', icon: Cloud, description: 'Seamless Migration' },
-    { name: 'DevOps & CI/CD', href: '/devops', icon: Settings, description: 'Development Operations' },
-    { name: 'Database Services', href: '/database', icon: Database, description: 'Data Management' },
-    { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield, description: 'Security Solutions' },
-    { name: 'Security Monitoring', href: '/security-monitoring', icon: Shield, description: '24/7 Security' },
-    { name: 'Penetration Testing', href: '/penetration-testing', icon: Shield, description: 'Security Testing' },
-    { name: 'IT Infrastructure', href: '/it-infrastructure', icon: Cloud, description: 'Infrastructure Setup' },
-    { name: 'Managed IT Services', href: '/managed-it', icon: Settings, description: '24/7 IT Support' },
-    { name: 'IT Consulting', href: '/it-consulting', icon: Globe, description: 'IT Strategy' },
-    { name: 'Data Analytics', href: '/data-analytics', icon: Database, description: 'Business Intelligence' },
-    { name: 'Mobile Development', href: '/mobile-development', icon: Smartphone, description: 'Mobile Apps' },
-    { name: 'Web Development', href: '/web-development', icon: Globe, description: 'Web Applications' },
-    { name: 'Process Automation', href: '/process-automation', icon: Zap, description: 'Workflow Automation' };
-  ];
-  return (
-    <React .Fragment>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <Helmet>
         <title>IT Services - Zion Tech Group</title>
         <meta name="description" content="Comprehensive IT services including cloud infrastructure, cybersecurity, DevOps, database management, and web development." />
       </Helmet>
-<<<<<<< HEAD
       
       <Navigation />
       
@@ -1246,8 +1218,8 @@ export default ItServicesPage
 =======
         </section>
       </div>
-    </React.Fragment>)
-  );
-};
-export default ItServicesPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+    </>
+  )
+}
+
+export default ItServicesPage
