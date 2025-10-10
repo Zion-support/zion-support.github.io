@@ -9,10 +9,10 @@ interface SkipLinkProps {
 
 const SkipLink: React.FC<SkipLinkProps> = ({ to, children }) => {
   return (
-    <a;
+    <a
       href={to}
       className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-600 text-white px-4 py-2 rounded-lg font-semibold z-50"
-    ></a>
+    >
       {children}
     </a>
   );
