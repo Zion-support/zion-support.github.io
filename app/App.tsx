@@ -6,6 +6,7 @@ import ErrorBoundary from './components/ErrorBoundary';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import LoadingSpinner from './components/LoadingSpinner';
+import FuturisticBackground from './components/FuturisticBackground';
 // Lazy load pages for better performance
 
 const HomePage = lazy(() => import('./page'));
@@ -66,7 +67,8 @@ const App: React.FC = () => {
     <ErrorBoundary>
       <HelmetProvider>
         <BrowserRouter>
-          <div className="App">
+          <div className="App min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced neural-network-bg-enhanced matrix-rain-enhanced quantum-energy-field">
+            <FuturisticBackground />
             <PerformanceMonitor>
               <AccessibilityEnhancer />
             </PerformanceMonitor>

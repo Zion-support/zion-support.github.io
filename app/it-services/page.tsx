@@ -1008,6 +1008,500 @@ const ItServicesPage: React.FC = () => {
       category: 'Cloud Security',
       popular: true,
       icon: Shield
+    },
+    {
+      id: 'ai-infrastructure-management',
+      name: 'AI Infrastructure Management',
+      description: 'AI-powered infrastructure management with automated optimization and monitoring',
+      price: '$2,800/month',
+      marketPrice: '$5500-15000/month',
+      features: [
+        'AI-powered resource optimization',
+        'Automated scaling and load balancing',
+        'Predictive maintenance and monitoring',
+        'Cost optimization algorithms',
+        'Performance analytics and insights',
+        'Integration with cloud platforms',
+        'Custom AI model development',
+        'Real-time infrastructure monitoring'
+      ],
+      benefits: [
+        'Reduce infrastructure costs by 40%',
+        'Automated optimization',
+        'Better performance monitoring',
+        'Predictive maintenance'
+      ],
+      category: 'AI Integration',
+      popular: true,
+      icon: Cpu
+    },
+    {
+      id: 'quantum-computing-services',
+      name: 'Quantum Computing Services',
+      description: 'Quantum computing solutions and consulting for advanced computational problems',
+      price: '$5,000/month',
+      marketPrice: '$10000-50000/month',
+      features: [
+        'Quantum algorithm development',
+        'Quantum software optimization',
+        'Quantum hardware integration',
+        'Quantum simulation services',
+        'Quantum cryptography implementation',
+        'Quantum machine learning',
+        'Quantum consulting and training',
+        'Hybrid classical-quantum solutions'
+      ],
+      benefits: [
+        'Solve complex computational problems',
+        'Exponential speed improvements',
+        'Future-proof technology',
+        'Competitive advantage'
+      ],
+      category: 'Quantum Computing',
+      popular: false,
+      icon: Cpu
+    },
+    {
+      id: 'edge-computing-infrastructure',
+      name: 'Edge Computing Infrastructure',
+      description: 'Edge computing solutions for low-latency applications and IoT deployments',
+      price: '$2,200/month',
+      marketPrice: '$4500-12000/month',
+      features: [
+        'Edge server deployment and management',
+        'Low-latency application hosting',
+        'IoT device integration',
+        'Edge data processing and analytics',
+        'CDN and content delivery optimization',
+        'Edge security implementation',
+        'Real-time monitoring and management',
+        'Global edge network deployment'
+      ],
+      benefits: [
+        'Reduce latency by 90%',
+        'Improve application performance',
+        'Better IoT device management',
+        'Global edge coverage'
+      ],
+      category: 'Edge Computing',
+      popular: true,
+      icon: Server
+    },
+    {
+      id: '5g-network-implementation',
+      name: '5G Network Implementation',
+      description: '5G network design, implementation, and optimization services',
+      price: '$4,500/month',
+      marketPrice: '$9000-25000/month',
+      features: [
+        '5G network architecture design',
+        'Small cell deployment and optimization',
+        'Network slicing implementation',
+        '5G core network setup',
+        'Performance optimization and tuning',
+        'Integration with existing networks',
+        '5G security implementation',
+        'Testing and validation services'
+      ],
+      benefits: [
+        'Ultra-fast network speeds',
+        'Low latency connectivity',
+        'Massive IoT device support',
+        'Future-ready infrastructure'
+      ],
+      category: '5G Networks',
+      popular: true,
+      icon: Wifi
+    },
+    {
+      id: 'blockchain-infrastructure',
+      name: 'Blockchain Infrastructure',
+      description: 'Blockchain network setup, management, and optimization services',
+      price: '$3,500/month',
+      marketPrice: '$7000-20000/month',
+      features: [
+        'Blockchain network design and deployment',
+        'Smart contract development and auditing',
+        'Consensus mechanism implementation',
+        'Blockchain security and compliance',
+        'Node management and monitoring',
+        'Integration with existing systems',
+        'Blockchain consulting and training',
+        'Custom blockchain solutions'
+      ],
+      benefits: [
+        'Decentralized and secure solutions',
+        'Transparent and immutable records',
+        'Reduced transaction costs',
+        'Enhanced security and trust'
+      ],
+      category: 'Blockchain',
+      popular: true,
+      icon: Link
+    },
+    {
+      id: 'ai-ops-platform',
+      name: 'AI Ops Platform',
+      description: 'AI-powered operations platform for intelligent IT management and automation',
+      price: '$2,600/month',
+      marketPrice: '$5000-15000/month',
+      features: [
+        'AI-powered incident detection and resolution',
+        'Automated root cause analysis',
+        'Predictive maintenance and alerting',
+        'Intelligent capacity planning',
+        'Automated remediation workflows',
+        'Performance optimization recommendations',
+        'Integration with monitoring tools',
+        'Custom AI model training'
+      ],
+      benefits: [
+        'Reduce downtime by 70%',
+        'Automated incident resolution',
+        'Predictive maintenance',
+        'Better resource utilization'
+      ],
+      category: 'AI Operations',
+      popular: true,
+      icon: Settings
+    },
+    {
+      id: 'zero-trust-security',
+      name: 'Zero Trust Security Architecture',
+      description: 'Zero trust security implementation with continuous verification and monitoring',
+      price: '$3,800/month',
+      marketPrice: '$7500-20000/month',
+      features: [
+        'Zero trust network architecture design',
+        'Identity and access management',
+        'Continuous verification and monitoring',
+        'Micro-segmentation implementation',
+        'Threat detection and response',
+        'Compliance and audit support',
+        'Security policy automation',
+        'Integration with existing security tools'
+      ],
+      benefits: [
+        'Enhanced security posture',
+        'Reduced attack surface',
+        'Better compliance',
+        'Automated security management'
+      ],
+      category: 'Security',
+      popular: true,
+      icon: Shield
+    },
+    {
+      id: 'hyperconverged-infrastructure',
+      name: 'Hyperconverged Infrastructure',
+      description: 'Hyperconverged infrastructure solutions for simplified data center management',
+      price: '$4,200/month',
+      marketPrice: '$8500-25000/month',
+      features: [
+        'HCI platform design and implementation',
+        'Storage, compute, and networking integration',
+        'Automated resource management',
+        'Disaster recovery and backup solutions',
+        'Performance optimization and monitoring',
+        'Scalability and expansion planning',
+        'Migration from traditional infrastructure',
+        'Training and support services'
+      ],
+      benefits: [
+        'Simplified infrastructure management',
+        'Reduced operational costs',
+        'Better resource utilization',
+        'Easier scaling and expansion'
+      ],
+      category: 'Infrastructure',
+      popular: true,
+      icon: Server
+    },
+    {
+      id: 'ai-powered-monitoring',
+      name: 'AI-Powered Monitoring',
+      description: 'Intelligent monitoring platform with AI-driven insights and automated responses',
+      price: '$1,800/month',
+      marketPrice: '$3500-10000/month',
+      features: [
+        'AI-powered anomaly detection',
+        'Predictive monitoring and alerting',
+        'Automated incident response',
+        'Performance optimization recommendations',
+        'Custom monitoring dashboards',
+        'Integration with existing tools',
+        'Machine learning-based insights',
+        'Real-time monitoring and reporting'
+      ],
+      benefits: [
+        'Proactive issue detection',
+        'Reduced false positives',
+        'Automated response actions',
+        'Better system performance'
+      ],
+      category: 'Monitoring',
+      popular: true,
+      icon: Monitor
+    },
+    {
+      id: 'container-orchestration',
+      name: 'Container Orchestration',
+      description: 'Advanced container orchestration and management services for microservices',
+      price: '$2,400/month',
+      marketPrice: '$4800-15000/month',
+      features: [
+        'Kubernetes cluster design and deployment',
+        'Container lifecycle management',
+        'Service mesh implementation',
+        'Auto-scaling and load balancing',
+        'Container security and compliance',
+        'CI/CD pipeline integration',
+        'Monitoring and logging setup',
+        'Training and support services'
+      ],
+      benefits: [
+        'Simplified container management',
+        'Better resource utilization',
+        'Automated scaling',
+        'Enhanced security and compliance'
+      ],
+      category: 'DevOps',
+      popular: true,
+      icon: Settings
+    },
+    {
+      id: 'ai-data-lake',
+      name: 'AI Data Lake Platform',
+      description: 'AI-powered data lake platform for big data analytics and machine learning',
+      price: '$3,200/month',
+      marketPrice: '$6500-18000/month',
+      features: [
+        'Data lake architecture design',
+        'Data ingestion and processing automation',
+        'AI-powered data cataloging and discovery',
+        'Machine learning model deployment',
+        'Real-time data analytics',
+        'Data governance and compliance',
+        'Integration with analytics tools',
+        'Custom AI model development'
+      ],
+      benefits: [
+        'Centralized data management',
+        'AI-powered data insights',
+        'Better data governance',
+        'Faster analytics and ML development'
+      ],
+      category: 'Data Analytics',
+      popular: true,
+      icon: Database
+    },
+    {
+      id: 'ai-network-optimization',
+      name: 'AI Network Optimization',
+      description: 'AI-powered network optimization and management for improved performance',
+      price: '$2,100/month',
+      marketPrice: '$4200-12000/month',
+      features: [
+        'AI-powered network analysis',
+        'Traffic optimization and routing',
+        'Bandwidth management and allocation',
+        'Network performance monitoring',
+        'Predictive network maintenance',
+        'Quality of service optimization',
+        'Integration with network equipment',
+        'Custom optimization algorithms'
+      ],
+      benefits: [
+        'Improved network performance',
+        'Reduced network congestion',
+        'Better resource utilization',
+        'Predictive maintenance'
+      ],
+      category: 'Networking',
+      popular: true,
+      icon: Wifi
+    },
+    {
+      id: 'ai-backup-recovery',
+      name: 'AI Backup & Recovery',
+      description: 'AI-powered backup and disaster recovery solutions with intelligent automation',
+      price: '$1,600/month',
+      marketPrice: '$3200-8000/month',
+      features: [
+        'AI-optimized backup scheduling',
+        'Intelligent data deduplication',
+        'Automated recovery testing',
+        'Predictive failure detection',
+        'Cross-platform backup support',
+        'Real-time backup monitoring',
+        'Compliance and audit reporting',
+        'Custom recovery workflows'
+      ],
+      benefits: [
+        'Automated backup optimization',
+        'Faster recovery times',
+        'Reduced storage costs',
+        'Better data protection'
+      ],
+      category: 'Data Management',
+      popular: true,
+      icon: Database
+    },
+    {
+      id: 'ai-devops-automation',
+      name: 'AI DevOps Automation',
+      description: 'AI-powered DevOps automation with intelligent CI/CD and deployment optimization',
+      price: '$2,800/month',
+      marketPrice: '$5600-15000/month',
+      features: [
+        'AI-powered CI/CD optimization',
+        'Intelligent deployment strategies',
+        'Automated testing and quality assurance',
+        'Performance monitoring and optimization',
+        'Infrastructure as Code automation',
+        'Security scanning and compliance',
+        'Integration with development tools',
+        'Custom automation workflows'
+      ],
+      benefits: [
+        'Faster deployment cycles',
+        'Reduced deployment failures',
+        'Automated quality assurance',
+        'Better development productivity'
+      ],
+      category: 'DevOps',
+      popular: true,
+      icon: Settings
+    },
+    {
+      id: 'ai-cloud-migration',
+      name: 'AI Cloud Migration',
+      description: 'AI-powered cloud migration services with automated optimization and cost management',
+      price: '$3,600/month',
+      marketPrice: '$7200-20000/month',
+      features: [
+        'AI-powered migration planning',
+        'Automated application assessment',
+        'Intelligent workload placement',
+        'Cost optimization recommendations',
+        'Migration automation and orchestration',
+        'Performance monitoring and tuning',
+        'Security and compliance migration',
+        'Post-migration optimization'
+      ],
+      benefits: [
+        'Faster and safer migrations',
+        'Reduced migration costs',
+        'Better performance optimization',
+        'Minimized downtime'
+      ],
+      category: 'Cloud Migration',
+      popular: true,
+      icon: Cloud
+    },
+    {
+      id: 'ai-cybersecurity-advanced',
+      name: 'AI Cybersecurity Advanced',
+      description: 'Advanced AI-powered cybersecurity platform with threat hunting and automated response',
+      price: '$4,500/month',
+      marketPrice: '$9000-25000/month',
+      features: [
+        'AI-powered threat hunting',
+        'Behavioral analysis and anomaly detection',
+        'Automated incident response',
+        'Real-time threat intelligence',
+        'Advanced persistent threat detection',
+        'Security orchestration and automation',
+        'Compliance monitoring and reporting',
+        'Custom security AI models'
+      ],
+      benefits: [
+        'Proactive threat detection',
+        'Automated security response',
+        'Reduced security incidents',
+        'Better threat intelligence'
+      ],
+      category: 'Cybersecurity',
+      popular: true,
+      icon: Shield
+    },
+    {
+      id: 'ai-performance-optimization',
+      name: 'AI Performance Optimization',
+      description: 'AI-powered application and infrastructure performance optimization services',
+      price: '$2,200/month',
+      marketPrice: '$4400-12000/month',
+      features: [
+        'AI-powered performance analysis',
+        'Automated optimization recommendations',
+        'Real-time performance monitoring',
+        'Predictive performance modeling',
+        'Resource allocation optimization',
+        'Code and infrastructure tuning',
+        'Load testing and optimization',
+        'Custom performance metrics'
+      ],
+      benefits: [
+        'Improved application performance',
+        'Reduced infrastructure costs',
+        'Better resource utilization',
+        'Predictive performance insights'
+      ],
+      category: 'Performance',
+      popular: true,
+      icon: Zap
+    },
+    {
+      id: 'ai-compliance-automation',
+      name: 'AI Compliance Automation',
+      description: 'AI-powered compliance automation and monitoring for regulatory requirements',
+      price: '$2,900/month',
+      marketPrice: '$5800-15000/month',
+      features: [
+        'AI-powered compliance monitoring',
+        'Automated policy enforcement',
+        'Regulatory reporting automation',
+        'Risk assessment and management',
+        'Audit trail and documentation',
+        'Integration with compliance frameworks',
+        'Custom compliance rules',
+        'Real-time compliance dashboards'
+      ],
+      benefits: [
+        'Automated compliance management',
+        'Reduced compliance costs',
+        'Better risk management',
+        'Audit readiness'
+      ],
+      category: 'Compliance',
+      popular: true,
+      icon: CheckCircle
+    },
+    {
+      id: 'ai-infrastructure-as-code',
+      name: 'AI Infrastructure as Code',
+      description: 'AI-powered Infrastructure as Code platform with intelligent automation and optimization',
+      price: '$2,500/month',
+      marketPrice: '$5000-15000/month',
+      features: [
+        'AI-powered IaC generation',
+        'Automated infrastructure optimization',
+        'Intelligent resource provisioning',
+        'Cost optimization recommendations',
+        'Security policy automation',
+        'Multi-cloud infrastructure management',
+        'Version control and collaboration',
+        'Custom automation workflows'
+      ],
+      benefits: [
+        'Faster infrastructure deployment',
+        'Reduced configuration errors',
+        'Better cost optimization',
+        'Enhanced security and compliance'
+      ],
+      category: 'Infrastructure',
+      popular: true,
+      icon: Code
     }
   ];
 
@@ -1044,7 +1538,14 @@ const ItServicesPage: React.FC = () => {
     { id: 'Cloud Optimization', name: 'Cloud Optimization', count: services.filter(s => s.category === 'Cloud Optimization').length },
     { id: 'Security Automation', name: 'Security Automation', count: services.filter(s => s.category === 'Security Automation').length },
     { id: 'Data Visualization', name: 'Data Visualization', count: services.filter(s => s.category === 'Data Visualization').length },
-    { id: 'Automation', name: 'Automation', count: services.filter(s => s.category === 'Automation').length }
+    { id: 'Automation', name: 'Automation', count: services.filter(s => s.category === 'Automation').length },
+    { id: 'Quantum Computing', name: 'Quantum Computing', count: services.filter(s => s.category === 'Quantum Computing').length },
+    { id: 'Edge Computing', name: 'Edge Computing', count: services.filter(s => s.category === 'Edge Computing').length },
+    { id: '5G Networks', name: '5G Networks', count: services.filter(s => s.category === '5G Networks').length },
+    { id: 'AI Operations', name: 'AI Operations', count: services.filter(s => s.category === 'AI Operations').length },
+    { id: 'Infrastructure', name: 'Infrastructure', count: services.filter(s => s.category === 'Infrastructure').length },
+    { id: 'Monitoring', name: 'Monitoring', count: services.filter(s => s.category === 'Monitoring').length },
+    { id: 'Data Management', name: 'Data Management', count: services.filter(s => s.category === 'Data Management').length }
   ];
 
   const filteredServices = services.filter(service => 

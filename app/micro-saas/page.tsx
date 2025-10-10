@@ -1072,6 +1072,500 @@ const MicroSaasPage: React.FC = () => {
       category: 'Document Processing',
       popular: true,
       users: 'Up to 25 users'
+    },
+    {
+      id: 'ai-video-generator',
+      name: 'Zion AI Video Generator',
+      description: 'AI-powered video creation platform with automated editing, effects, and content generation',
+      price: '$299/month',
+      marketPrice: '$600-2000/month',
+      features: [
+        'AI-powered video generation from text',
+        'Automated video editing and trimming',
+        'Smart scene detection and transitions',
+        'AI-generated voiceovers and subtitles',
+        'Background removal and replacement',
+        'Social media optimization',
+        'Template library with 1000+ designs',
+        'Cloud-based rendering and storage'
+      ],
+      benefits: [
+        'Create videos 10x faster',
+        'Professional quality output',
+        'Automated optimization',
+        'Multi-platform publishing'
+      ],
+      category: 'Video Production',
+      popular: true,
+      users: 'Up to 15 users'
+    },
+    {
+      id: 'ai-voice-cloning',
+      name: 'Zion AI Voice Cloning',
+      description: 'Advanced voice cloning and synthesis platform with natural-sounding voice generation',
+      price: '$399/month',
+      marketPrice: '$800-2500/month',
+      features: [
+        'High-quality voice cloning from samples',
+        'Multi-language voice synthesis',
+        'Emotional expression control',
+        'Real-time voice conversion',
+        'Custom voice training',
+        'API integration for applications',
+        'Voice authentication and security',
+        'Batch processing capabilities'
+      ],
+      benefits: [
+        'Create custom voices instantly',
+        'Maintain brand consistency',
+        'Improve accessibility',
+        'Professional audio quality'
+      ],
+      category: 'Voice AI',
+      popular: true,
+      users: 'Up to 20 users'
+    },
+    {
+      id: 'ai-code-generator',
+      name: 'Zion AI Code Generator',
+      description: 'Intelligent code generation platform with automated coding, debugging, and optimization',
+      price: '$199/month',
+      marketPrice: '$400-1200/month',
+      features: [
+        'AI-powered code generation from descriptions',
+        'Automated bug detection and fixing',
+        'Code optimization suggestions',
+        'Multi-language support (Python, JavaScript, Java, etc.)',
+        'Integration with popular IDEs',
+        'Code review and documentation',
+        'Custom code templates',
+        'Real-time collaboration features'
+      ],
+      benefits: [
+        'Reduce coding time by 70%',
+        'Improve code quality',
+        'Automated debugging',
+        'Faster development cycles'
+      ],
+      category: 'Development Tools',
+      popular: true,
+      users: 'Up to 30 users'
+    },
+    {
+      id: 'ai-3d-model-generator',
+      name: 'Zion AI 3D Model Generator',
+      description: 'AI-powered 3D model creation and optimization platform for designers and developers',
+      price: '$499/month',
+      marketPrice: '$1000-3000/month',
+      features: [
+        'AI-generated 3D models from text descriptions',
+        'Automated 3D model optimization',
+        'Texture generation and mapping',
+        'Animation and rigging automation',
+        'Export to multiple 3D formats',
+        'Cloud-based rendering',
+        'Integration with popular 3D software',
+        'Custom model training'
+      ],
+      benefits: [
+        'Create 3D models 5x faster',
+        'Professional quality output',
+        'Automated optimization',
+        'Multiple format support'
+      ],
+      category: '3D Design',
+      popular: true,
+      users: 'Up to 10 users'
+    },
+    {
+      id: 'ai-music-composer',
+      name: 'Zion AI Music Composer',
+      description: 'Intelligent music composition platform with AI-generated melodies, harmonies, and arrangements',
+      price: '$149/month',
+      marketPrice: '$300-800/month',
+      features: [
+        'AI-powered music composition',
+        'Multiple genre support',
+        'Custom melody generation',
+        'Harmony and arrangement automation',
+        'Real-time music generation',
+        'Export to multiple audio formats',
+        'Integration with DAWs',
+        'Royalty-free music library'
+      ],
+      benefits: [
+        'Create music instantly',
+        'Professional quality compositions',
+        'Multiple genre options',
+        'Royalty-free usage'
+      ],
+      category: 'Music Production',
+      popular: true,
+      users: 'Up to 25 users'
+    },
+    {
+      id: 'ai-logo-generator',
+      name: 'Zion AI Logo Generator',
+      description: 'AI-powered logo design platform with automated branding and design generation',
+      price: '$79/month',
+      marketPrice: '$150-400/month',
+      features: [
+        'AI-generated logo designs',
+        'Brand color palette generation',
+        'Multiple logo variations',
+        'Vector format export',
+        'Brand guideline generation',
+        'Social media kit creation',
+        'Custom font integration',
+        'High-resolution downloads'
+      ],
+      benefits: [
+        'Create logos in minutes',
+        'Professional design quality',
+        'Complete branding package',
+        'Multiple format support'
+      ],
+      category: 'Design Tools',
+      popular: true,
+      users: 'Up to 20 users'
+    },
+    {
+      id: 'ai-email-writer',
+      name: 'Zion AI Email Writer',
+      description: 'Intelligent email composition platform with automated writing, personalization, and optimization',
+      price: '$99/month',
+      marketPrice: '$200-500/month',
+      features: [
+        'AI-powered email composition',
+        'Tone and style customization',
+        'Personalization and segmentation',
+        'A/B testing automation',
+        'Subject line optimization',
+        'Email template library',
+        'Integration with email platforms',
+        'Performance analytics'
+      ],
+      benefits: [
+        'Write emails 10x faster',
+        'Improve open rates by 40%',
+        'Automated personalization',
+        'Better email performance'
+      ],
+      category: 'Email Marketing',
+      popular: true,
+      users: 'Up to 30 users'
+    },
+    {
+      id: 'ai-presentation-builder',
+      name: 'Zion AI Presentation Builder',
+      description: 'AI-powered presentation creation platform with automated design and content generation',
+      price: '$129/month',
+      marketPrice: '$250-700/month',
+      features: [
+        'AI-generated presentation content',
+        'Automated slide design',
+        'Template library with 500+ designs',
+        'Data visualization automation',
+        'Speaker notes generation',
+        'Multi-language support',
+        'Export to multiple formats',
+        'Collaboration features'
+      ],
+      benefits: [
+        'Create presentations 5x faster',
+        'Professional design quality',
+        'Automated content generation',
+        'Better presentation impact'
+      ],
+      category: 'Presentation Tools',
+      popular: true,
+      users: 'Up to 25 users'
+    },
+    {
+      id: 'ai-social-media-manager',
+      name: 'Zion AI Social Media Manager',
+      description: 'Comprehensive social media management platform with AI-powered content creation and scheduling',
+      price: '$179/month',
+      marketPrice: '$350-1000/month',
+      features: [
+        'AI-powered content creation',
+        'Multi-platform scheduling',
+        'Hashtag optimization',
+        'Engagement analytics',
+        'Competitor analysis',
+        'Content calendar management',
+        'Social listening tools',
+        'Team collaboration features'
+      ],
+      benefits: [
+        'Increase engagement by 300%',
+        'Save 80% content creation time',
+        'Better social media performance',
+        'Comprehensive analytics'
+      ],
+      category: 'Social Media',
+      popular: true,
+      users: 'Up to 20 users'
+    },
+    {
+      id: 'ai-customer-feedback-analyzer',
+      name: 'Zion AI Customer Feedback Analyzer',
+      description: 'Advanced customer feedback analysis platform with sentiment tracking and actionable insights',
+      price: '$199/month',
+      marketPrice: '$400-1200/month',
+      features: [
+        'AI-powered sentiment analysis',
+        'Multi-channel feedback collection',
+        'Automated insight generation',
+        'Trend analysis and reporting',
+        'Integration with CRM systems',
+        'Real-time feedback monitoring',
+        'Custom dashboard creation',
+        'Alert and notification system'
+      ],
+      benefits: [
+        'Improve customer satisfaction by 50%',
+        'Real-time feedback insights',
+        'Automated analysis',
+        'Better customer understanding'
+      ],
+      category: 'Customer Analytics',
+      popular: true,
+      users: 'Up to 35 users'
+    },
+    {
+      id: 'ai-competitor-analyzer',
+      name: 'Zion AI Competitor Analyzer',
+      description: 'Intelligent competitor analysis platform with automated monitoring and strategic insights',
+      price: '$299/month',
+      marketPrice: '$600-1800/month',
+      features: [
+        'Automated competitor monitoring',
+        'Price tracking and analysis',
+        'Content strategy analysis',
+        'Social media monitoring',
+        'SEO competitor analysis',
+        'Market trend identification',
+        'Custom reporting and alerts',
+        'Integration with business tools'
+      ],
+      benefits: [
+        'Stay ahead of competition',
+        'Automated market monitoring',
+        'Strategic insights',
+        'Better market positioning'
+      ],
+      category: 'Market Intelligence',
+      popular: true,
+      users: 'Up to 25 users'
+    },
+    {
+      id: 'ai-email-verifier',
+      name: 'Zion AI Email Verifier',
+      description: 'Advanced email validation platform with AI-powered verification and deliverability optimization',
+      price: '$89/month',
+      marketPrice: '$180-500/month',
+      features: [
+        'AI-powered email validation',
+        'Real-time verification',
+        'Deliverability scoring',
+        'Bounce rate reduction',
+        'Email list cleaning',
+        'API integration',
+        'Bulk verification capabilities',
+        'Detailed reporting and analytics'
+      ],
+      benefits: [
+        'Reduce bounce rates by 90%',
+        'Improve deliverability',
+        'Clean email lists',
+        'Better email performance'
+      ],
+      category: 'Email Tools',
+      popular: true,
+      users: 'Up to 40 users'
+    },
+    {
+      id: 'ai-website-analyzer',
+      name: 'Zion AI Website Analyzer',
+      description: 'Comprehensive website analysis platform with AI-powered insights and optimization recommendations',
+      price: '$149/month',
+      marketPrice: '$300-800/month',
+      features: [
+        'AI-powered website analysis',
+        'Performance optimization recommendations',
+        'SEO analysis and suggestions',
+        'User experience evaluation',
+        'Competitor comparison',
+        'Technical issue detection',
+        'Custom reporting',
+        'Integration with analytics tools'
+      ],
+      benefits: [
+        'Improve website performance by 60%',
+        'Better SEO rankings',
+        'Enhanced user experience',
+        'Automated optimization'
+      ],
+      category: 'Web Analytics',
+      popular: true,
+      users: 'Up to 30 users'
+    },
+    {
+      id: 'ai-chatbot-builder',
+      name: 'Zion AI Chatbot Builder',
+      description: 'No-code chatbot creation platform with AI-powered conversation design and deployment',
+      price: '$199/month',
+      marketPrice: '$400-1200/month',
+      features: [
+        'Drag-and-drop chatbot builder',
+        'AI-powered conversation design',
+        'Multi-channel deployment',
+        'Integration with business tools',
+        'Analytics and reporting',
+        'Custom training capabilities',
+        'Live chat handoff',
+        'Multi-language support'
+      ],
+      benefits: [
+        'Create chatbots without coding',
+        'Improve customer service',
+        '24/7 automated support',
+        'Better customer engagement'
+      ],
+      category: 'Chatbot Tools',
+      popular: true,
+      users: 'Up to 25 users'
+    },
+    {
+      id: 'ai-form-builder',
+      name: 'Zion AI Form Builder',
+      description: 'Intelligent form creation platform with AI-powered design and optimization',
+      price: '$79/month',
+      marketPrice: '$150-400/month',
+      features: [
+        'AI-powered form design',
+        'Smart field suggestions',
+        'Conditional logic automation',
+        'Multi-step form creation',
+        'Integration with business tools',
+        'Analytics and reporting',
+        'Custom styling options',
+        'Mobile optimization'
+      ],
+      benefits: [
+        'Create forms 5x faster',
+        'Improve conversion rates',
+        'Better user experience',
+        'Automated optimization'
+      ],
+      category: 'Form Tools',
+      popular: true,
+      users: 'Up to 35 users'
+    },
+    {
+      id: 'ai-calendar-scheduler',
+      name: 'Zion AI Calendar Scheduler',
+      description: 'Intelligent scheduling platform with AI-powered optimization and automation',
+      price: '$99/month',
+      marketPrice: '$200-500/month',
+      features: [
+        'AI-powered scheduling optimization',
+        'Automated meeting coordination',
+        'Time zone management',
+        'Integration with calendar apps',
+        'Smart conflict resolution',
+        'Custom scheduling rules',
+        'Analytics and insights',
+        'Team scheduling features'
+      ],
+      benefits: [
+        'Reduce scheduling time by 80%',
+        'Eliminate double bookings',
+        'Better time management',
+        'Automated coordination'
+      ],
+      category: 'Scheduling Tools',
+      popular: true,
+      users: 'Up to 30 users'
+    },
+    {
+      id: 'ai-password-manager',
+      name: 'Zion AI Password Manager',
+      description: 'Advanced password management platform with AI-powered security and automation',
+      price: '$59/month',
+      marketPrice: '$120-300/month',
+      features: [
+        'AI-powered password generation',
+        'Secure password storage',
+        'Automated password updates',
+        'Multi-device synchronization',
+        'Security breach monitoring',
+        'Two-factor authentication',
+        'Team password sharing',
+        'Compliance reporting'
+      ],
+      benefits: [
+        'Enhance security posture',
+        'Automated password management',
+        'Reduce security risks',
+        'Better compliance'
+      ],
+      category: 'Security Tools',
+      popular: true,
+      users: 'Up to 50 users'
+    },
+    {
+      id: 'ai-expense-categorizer',
+      name: 'Zion AI Expense Categorizer',
+      description: 'Intelligent expense management platform with AI-powered categorization and reporting',
+      price: '$89/month',
+      marketPrice: '$180-500/month',
+      features: [
+        'AI-powered expense categorization',
+        'Receipt scanning and OCR',
+        'Automated expense reporting',
+        'Policy compliance checking',
+        'Integration with accounting software',
+        'Mobile app with GPS tracking',
+        'Custom reporting',
+        'Team expense management'
+      ],
+      benefits: [
+        'Save 90% expense entry time',
+        'Automated categorization',
+        'Better expense control',
+        'Improved compliance'
+      ],
+      category: 'Finance Tools',
+      popular: true,
+      users: 'Up to 25 users'
+    },
+    {
+      id: 'ai-task-automator',
+      name: 'Zion AI Task Automator',
+      description: 'Intelligent task automation platform with AI-powered workflow optimization',
+      price: '$149/month',
+      marketPrice: '$300-800/month',
+      features: [
+        'AI-powered task automation',
+        'Workflow optimization',
+        'Integration with 500+ apps',
+        'Custom automation rules',
+        'Task prioritization',
+        'Team collaboration features',
+        'Analytics and reporting',
+        'Mobile app support'
+      ],
+      benefits: [
+        'Automate 80% of repetitive tasks',
+        'Improve productivity',
+        'Better task management',
+        'Enhanced team collaboration'
+      ],
+      category: 'Automation Tools',
+      popular: true,
+      users: 'Up to 30 users'
     }
   ];
 
@@ -1114,7 +1608,21 @@ const MicroSaasPage: React.FC = () => {
     { id: 'Security & Fraud', name: 'Security & Fraud', count: products.filter(p => p.category === 'Security & Fraud').length },
     { id: 'Customer Service', name: 'Customer Service', count: products.filter(p => p.category === 'Customer Service').length },
     { id: 'Marketing Automation', name: 'Marketing Automation', count: products.filter(p => p.category === 'Marketing Automation').length },
-    { id: 'Document Processing', name: 'Document Processing', count: products.filter(p => p.category === 'Document Processing').length }
+    { id: 'Document Processing', name: 'Document Processing', count: products.filter(p => p.category === 'Document Processing').length },
+    { id: 'Voice AI', name: 'Voice AI', count: products.filter(p => p.category === 'Voice AI').length },
+    { id: '3D Design', name: '3D Design', count: products.filter(p => p.category === '3D Design').length },
+    { id: 'Music Production', name: 'Music Production', count: products.filter(p => p.category === 'Music Production').length },
+    { id: 'Design Tools', name: 'Design Tools', count: products.filter(p => p.category === 'Design Tools').length },
+    { id: 'Presentation Tools', name: 'Presentation Tools', count: products.filter(p => p.category === 'Presentation Tools').length },
+    { id: 'Market Intelligence', name: 'Market Intelligence', count: products.filter(p => p.category === 'Market Intelligence').length },
+    { id: 'Email Tools', name: 'Email Tools', count: products.filter(p => p.category === 'Email Tools').length },
+    { id: 'Web Analytics', name: 'Web Analytics', count: products.filter(p => p.category === 'Web Analytics').length },
+    { id: 'Chatbot Tools', name: 'Chatbot Tools', count: products.filter(p => p.category === 'Chatbot Tools').length },
+    { id: 'Form Tools', name: 'Form Tools', count: products.filter(p => p.category === 'Form Tools').length },
+    { id: 'Scheduling Tools', name: 'Scheduling Tools', count: products.filter(p => p.category === 'Scheduling Tools').length },
+    { id: 'Security Tools', name: 'Security Tools', count: products.filter(p => p.category === 'Security Tools').length },
+    { id: 'Finance Tools', name: 'Finance Tools', count: products.filter(p => p.category === 'Finance Tools').length },
+    { id: 'Automation Tools', name: 'Automation Tools', count: products.filter(p => p.category === 'Automation Tools').length }
   ];
 
   return (
