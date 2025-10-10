@@ -1,9 +1,14 @@
-'use client'
+'use client';
+
 /**
  * Cache Manager Utility
  * Provides centralized cache management for the application
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
 export enum CacheStorage {
   Memory = 'memory',
   LocalStorage = 'localStorage',
@@ -37,6 +42,10 @@ export interface CacheStats {
 
 export class CacheManager<T = unknown> {
   private cache: Map<string, CacheEntry<T>> = new Map();
+<<<<<<< HEAD
+=======
+  private config: Required<CacheConfig>;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
   private stats: CacheStats = {
     hits: 0,
     misses: 0,
@@ -44,7 +53,10 @@ export class CacheManager<T = unknown> {
     count: 0,
     entries: 0
   };
+<<<<<<< HEAD
   private config: Required<CacheConfig>;
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
 
   constructor(config: CacheConfig = {}) {
     this.config = {
@@ -56,6 +68,7 @@ export class CacheManager<T = unknown> {
   /**
    * Set a value in the cache
    */
+<<<<<<< HEAD
   set(key: string, value: T, ttl?: number): void {
 =======
 
@@ -110,19 +123,33 @@ class CacheManager {
     this.evictOldest(cacheName);
     
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4ed2
+=======
+  set(key: string, value: T, options?: CacheOptions): void {
+    const ttl = options?.ttl || this.config.defaultTTL;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
     const entry: CacheEntry<T> = {
       data,
       timestamp: Date.now(),
 <<<<<<< HEAD
+<<<<<<< HEAD
       ttl: ttl || this.config.defaultTTL
+=======
+      ttl
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
     };
 
     this.cache.set(key, entry);
     this.stats.entries = this.cache.size;
 
+<<<<<<< HEAD
     // Save to persistent storage if needed
     if (this.config.storage !== CacheStorage.Memory) {
       this.saveToStorage();
+=======
+    // Store in persistent storage if configured
+    if (this.config.storage !== CacheStorage.Memory) {
+      this.persistToStorage(key, entry);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
     }
   }
 
@@ -131,18 +158,29 @@ class CacheManager {
    */
   get(key: string): T | null {
     const entry = this.cache.get(key);
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
     if (!entry) {
       this.stats.misses++;
       this.updateHitRate();
       return null;
     }
 
+<<<<<<< HEAD
     // Check if entry has expired
     if (Date.now() - entry.timestamp > entry.ttl) {
       this.cache.delete(key);
       this.stats.misses++;
       this.stats.entries = this.cache.size;
+=======
+    // Check if expired
+    if (this.isExpired(entry)) {
+      this.cache.delete(key);
+      this.stats.misses++;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
       this.updateHitRate();
       return null;
     }
@@ -160,6 +198,7 @@ class CacheManager {
     
     if (!entry) {
       return false;
+<<<<<<< HEAD
 =======
       ttl: ttl || this.config.ttl,
       key
@@ -215,6 +254,35 @@ class CacheManager {
   }
 
 <<<<<<< HEAD
+=======
+    }
+
+    // Check if expired
+    if (this.isExpired(entry)) {
+      this.cache.delete(key);
+      return false;
+    }
+
+    return true;
+  }
+
+  /**
+   * Delete a value from the cache
+   */
+  delete(key: string): boolean {
+    const deleted = this.cache.delete(key);
+    if (deleted) {
+      this.stats.entries = this.cache.size;
+      
+      // Remove from persistent storage
+      if (this.config.storage !== CacheStorage.Memory) {
+        this.removeFromStorage(key);
+      }
+    }
+    return deleted;
+  }
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
   /**
    * Delete a key from the cache
    */
@@ -237,18 +305,47 @@ class CacheManager {
   clear(): void {
     this.cache.clear();
     this.stats.entries = 0;
+<<<<<<< HEAD
     
     // Clear persistent storage if needed
+=======
+    this.stats.hits = 0;
+    this.stats.misses = 0;
+    this.stats.hitRate = 0;
+
+    // Clear persistent storage
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
     if (this.config.storage !== CacheStorage.Memory) {
       this.clearStorage();
     }
   }
 
   /**
+<<<<<<< HEAD
    * Get all keys in the cache
    */
   keys(): string[] {
     return Array.from(this.cache.keys());
+=======
+   * Get all cache keys
+   */
+  keys(): string[] {
+    return Array.from(this.cache.keys());
+  }
+
+  /**
+   * Get all cache values
+   */
+  values(): T[] {
+    return Array.from(this.cache.values()).map(entry => entry.value);
+  }
+
+  /**
+   * Get all cache entries
+   */
+  entries(): Array<[string, T]> {
+    return Array.from(this.cache.entries()).map(([key, entry]) => [key, entry.value]);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
   }
 
   /**
@@ -256,6 +353,7 @@ class CacheManager {
    */
   getStats(): CacheStats {
     return { ...this.stats };
+<<<<<<< HEAD
   }
 
   /**
@@ -276,8 +374,81 @@ class CacheManager {
       if (now - entry.timestamp > entry.ttl) {
         this.cache.delete(key);
         cleaned++;
+=======
+  }
+
+  /**
+   * Clean expired entries
+   */
+  cleanExpired(): void {
+    const now = Date.now();
+    const expiredKeys: string[] = [];
+
+    for (const [key, entry] of this.cache.entries()) {
+      if (this.isExpired(entry)) {
+        expiredKeys.push(key);
       }
     }
+
+    expiredKeys.forEach(key => this.cache.delete(key));
+    this.stats.entries = this.cache.size;
+  }
+
+  /**
+   * Check if an entry is expired
+   */
+  private isExpired(entry: CacheEntry<T>): boolean {
+    return Date.now() - entry.timestamp > entry.ttl;
+  }
+
+  /**
+   * Update hit rate
+   */
+  private updateHitRate(): void {
+    const total = this.stats.hits + this.stats.misses;
+    this.stats.hitRate = total > 0 ? this.stats.hits / total : 0;
+  }
+
+  /**
+   * Persist entry to storage
+   */
+  private persistToStorage(key: string, entry: CacheEntry<T>): void {
+    if (typeof window === 'undefined') return;
+
+    try {
+      const storage = this.getStorage();
+      if (storage) {
+        const data = {
+          key,
+          entry: {
+            value: entry.value,
+            timestamp: entry.timestamp,
+            ttl: entry.ttl
+          }
+        };
+        storage.setItem(`cache_${key}`, JSON.stringify(data));
+      }
+    } catch (error) {
+      console.warn('Failed to persist to storage:', error);
+    }
+  }
+
+  /**
+   * Remove entry from storage
+   */
+  private removeFromStorage(key: string): void {
+    if (typeof window === 'undefined') return;
+
+    try {
+      const storage = this.getStorage();
+      if (storage) {
+        storage.removeItem(`cache_${key}`);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
+      }
+    } catch (error) {
+      console.warn('Failed to remove from storage:', error);
+    }
+<<<<<<< HEAD
     
     this.stats.entries = this.cache.size;
     
@@ -358,6 +529,33 @@ class CacheManager {
   private getStorage(): Storage | null {
     if (typeof window === 'undefined') return null;
     
+=======
+  }
+
+  /**
+   * Clear storage
+   */
+  private clearStorage(): void {
+    if (typeof window === 'undefined') return;
+
+    try {
+      const storage = this.getStorage();
+      if (storage) {
+        const keys = Object.keys(storage).filter(key => key.startsWith('cache_'));
+        keys.forEach(key => storage.removeItem(key));
+      }
+    } catch (error) {
+      console.warn('Failed to clear storage:', error);
+    }
+  }
+
+  /**
+   * Get storage instance
+   */
+  private getStorage(): Storage | null {
+    if (typeof window === 'undefined') return null;
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
     switch (this.config.storage) {
       case CacheStorage.LocalStorage:
         return window.localStorage;
@@ -365,6 +563,7 @@ class CacheManager {
         return window.sessionStorage;
       default:
         return null;
+<<<<<<< HEAD
 =======
   size(cacheName?: string): number {
     if (cacheName) {
@@ -394,10 +593,44 @@ class CacheManager {
       
       expiredKeys.forEach(key => cache.delete(key));
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4ed2
+=======
+    }
+  }
+
+  /**
+   * Load from storage on initialization
+   */
+  loadFromStorage(): void {
+    if (typeof window === 'undefined') return;
+    if (this.config.storage === CacheStorage.Memory) return;
+
+    try {
+      const storage = this.getStorage();
+      if (!storage) return;
+
+      const keys = Object.keys(storage).filter(key => key.startsWith('cache_'));
+      
+      keys.forEach(key => {
+        try {
+          const data = JSON.parse(storage.getItem(key) || '{}');
+          if (data.key && data.entry) {
+            this.cache.set(data.key, data.entry);
+          }
+        } catch (error) {
+          // Remove corrupted entry
+          storage.removeItem(key);
+        }
+      });
+
+      this.stats.entries = this.cache.size;
+    } catch (error) {
+      console.warn('Failed to load from storage:', error);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
     }
   }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 // Create singleton instances for different use cases
 export const memoryCache = new CacheManager({ storage: CacheStorage.Memory });
@@ -413,5 +646,11 @@ export const sessionStorageCache = new CacheManager({
 // Create singleton instance
 export const cacheManager = new CacheManager();
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4ed2
+=======
+// Create singleton instances
+export const memoryCache = new CacheManager({ storage: CacheStorage.Memory });
+export const localStorageCache = new CacheManager({ storage: CacheStorage.LocalStorage });
+export const sessionStorageCache = new CacheManager({ storage: CacheStorage.SessionStorage });
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
 
 export default CacheManager;
