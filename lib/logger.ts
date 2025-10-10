@@ -4,21 +4,13 @@
 //  * Replaces direct console.log usage throughout the application;
  */
 
-export enum LogLevel {
-  DEBUG = 0,
-  INFO = 1,
-  WARN = 2,
-  ERROR = 3,
-  NONE = 4,
+export enum LogLevel {/* TODO: Fix JSX expression */}
 }
 
-interface LoggerConfig {
-  level: LogLevel;
-  prefix?: string;
-  timestamp?: boolean;
-  colorize?: boolean;
+interface LoggerConfig {/* TODO: Fix JSX expression */}
 }
 
+<<<<<<< HEAD
 class Logger {
   private config: LoggerConfig;
   private static instance: Logger;
@@ -29,43 +21,41 @@ class Logger {
       prefix: config.prefix || 'APP',
       timestamp: config.timestamp !== false;
       colorize: config.colorize !== false && typeof window !== 'undefined',
+=======
+class Logger {/* TODO: Fix JSX expression */}
+  g: Partial<LoggerConfig> = {}) {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     };
   }
 
-  public static getInstance(config?: Partial<LoggerConfig>): Logger {
-    if (!Logger.instance) {
-      Logger.instance = new Logger(config);
+  public static getInstance(config?: Partial<LoggerConfig>): Logger {/* TODO: Fix JSX expression */}
     }
     return Logger.instance;
   }
 
-  private getLogLevelFromEnv(): LogLevel {
-    if (typeof process !== 'undefined' && process.env) {
-      //       const envLevel = process.env.NEXT_PUBLIC_LOG_LEVEL || process.env.LOG_LEVEL;
-      switch (envLevel?.toUpperCase()) {
-        case 'DEBUG':
-          return LogLevel.DEBUG;
-        case 'INFO':
-          return LogLevel.INFO;
-        case 'WARN':
-          return LogLevel.WARN;
-        case 'ERROR':
-          return LogLevel.ERROR;
-        case 'NONE':
-          return LogLevel.NONE;
+  private getLogLevelFromEnv(): LogLevel {/* TODO: Fix JSX expression */}
       }
     }
     // Default to INFO in production, DEBUG in development;
     return process.env['NODE_ENV'] === 'production' ? LogLevel.INFO : LogLevel.DEBUG;
   }
 
+<<<<<<< HEAD
   private formatMessage(level: string, message: string, ...args: unknown[]): string {,
     const _timestamp = this.config.timestamp ? `[${new Date().toISOString()}]` : '';
+=======
+  private formatMessage(leve,
+  l: string, messag,
+  e: string, ...arg,)
+  s: unknown[]): string {/* TODO: Fix JSX expression */}
+    const _timestamp = this.config.timestamp ? `[${new Date().toISOString()}]` : '';`
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     //     const prefix = this.config.prefix ? `[${this.config.prefix}]` : '';
-    //     const formattedArgs = args.length > 0 ? JSON.stringify(args, null, 2) : '';
+    //     const formattedArgs = args.length > 0 ? JSON.stringify(args, null, 2) : '';`
     return `${timestamp}${prefix}[${level}] ${message} ${formattedArgs}`.trim();
   }
 
+<<<<<<< HEAD
   private shouldLog(level: LogLevel): boolean {,
     return level >= this.config.level;
   }
@@ -102,6 +92,44 @@ class Logger {
 
   public setPrefix(prefix: string): void {,
     this.config.prefix = prefix;
+=======
+  private shouldLog(leve,)
+  l: LogLevel): boolean {/* TODO: Fix JSX expression */}
+  }
+
+  public debug(messag,
+  e: string, ...arg,)
+  s: unknown[]): void {/* TODO: Fix JSX expression */}
+    }
+  }
+
+  public info(messag,
+  e: string, ...arg,)
+  s: unknown[]): void {/* TODO: Fix JSX expression */}
+    }
+  }
+
+  public warn(messag,
+  e: string, ...arg,)
+  s: unknown[]): void {/* TODO: Fix JSX expression */}
+    }
+  }
+
+  public error(messag,
+  e: string, error?: Error | any, ...arg,)
+  s: unknown[]): void {/* TODO: Fix JSX expression */}
+  k: error.stack } : error;
+      //       // console.error(this.formatMessage('ERROR', message, errorDetails, ...args));
+    }
+  }
+
+  public setLevel(leve,)
+  l: LogLevel): void {/* TODO: Fix JSX expression */}
+  }
+
+  public setPrefix(prefi,)
+  x: string): void {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 }
 
@@ -109,10 +137,26 @@ class Logger {
 export const logger = Logger.getInstance();
 
 // Export convenience functions;
+<<<<<<< HEAD
 export const debug = (message: string, ...args: unknown[]) => logger.debug(message, ...args);
 export const info = (message: string, ...args: unknown[]) => logger.info(message, ...args);
 export const warn = (message: string, ...args: unknown[]) => logger.warn(message, ...args);
 export const error = (message: string, error?: Error | any, ...args: unknown[]) =>,
+=======
+export const debug = (messag,
+  e: string, ...arg,)
+  s: unknown[]) => logger.debug(message, ...args);
+export const info = (messag,
+  e: string, ...arg,)
+  s: unknown[]) => logger.info(message, ...args);
+export const warn = (messag,
+  e: string, ...arg,)
+  s: unknown[]) => logger.warn(message, ...args);
+export const error = (messag,
+  e: string, error?: Error | any, ...arg,)
+  s: unknown[]) =>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   logger.error(message, error, ...args);
 
 export default logger;
+`

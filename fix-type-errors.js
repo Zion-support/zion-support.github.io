@@ -12,6 +12,7 @@ const filesToFix = [
 ];
 
 // // Function to process a single file;
+<<<<<<< HEAD
 function processFile(filePath) {
   try {
     // Fix <a> tags with 'to' prop to use Link components;
@@ -19,6 +20,10 @@ function processFile(filePath) {
       // Add Link import if not present;
       if (!content.includes("import { Link } from 'react-router-dom';")) {
         content = content.replace(/import React from 'react';/)
+=======
+function processFile(filePath) {/* TODO: Fix JSX expression */}
+      if (!content.includes("import { Link } from 'react-router-dom';")) {/* TODO: Fix JSX expression */}"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           "import React from 'react';\nimport { Link } from 'react-router-dom';"
         );
         modified = true;
@@ -31,6 +36,7 @@ function processFile(filePath) {
     }
 
     // Fix href to to for Link components;
+<<<<<<< HEAD
     if (content.includes('<Link') && content.includes('href=')) {
       content = content.replace(/href=/g, 'to=');
       modified = true;
@@ -41,6 +47,14 @@ function processFile(filePath) {
       // Add lazy import if not present;
       if (!content.includes("import { lazy } from 'react';")) {
         content = content.replace(/import React from 'react';/)
+=======
+    if (content.includes('<Link') && content.includes('href=')) {/* TODO: Fix JSX expression */}
+    }
+
+    // Fix dynamic imports from Next.js to React lazy;
+    if (content.includes('dynamic(')) {/* TODO: Fix JSX expression */}"
+      if (!content.includes("import { lazy } from 'react';")) {/* TODO: Fix JSX expression */}"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           "import React, { lazy } from 'react';"
         );
         modified = true;
@@ -52,6 +66,7 @@ function processFile(filePath) {
     }
 
     // Fix Image component issues;
+<<<<<<< HEAD
     if (content.includes('next/image')) {
       // Replace Next.js Image with regular img tag;
       content = content.replace(/import Image from 'next\/image';/g, '');
@@ -63,25 +78,30 @@ function processFile(filePath) {
       content = content.replace(/height={/g, 'height={');
       content = content.replace(/className={/g, 'className={');}
       modified = true;}
+=======
+    if (content.includes('next/image')) {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
 
-    if (modified) {
-      fs.writeFileSync(filePath, content);
-      //       return true;
+    if (modified) {/* TODO: Fix JSX expression */}
     }
 
     return false;
-  } catch (error) {
-    //     return false;
+  } catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 
 // Process all files;
+<<<<<<< HEAD
 filesToFix.forEach(file => {)
   if (processFile(file)) {
     fixedCount++;
   }
+=======
+filesToFix.forEach(file => {/* TODO: Fix JSX expression */}
+  })
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 });
 
 // 
-}}}}}}}}}}
+}}}}}}}}}}"

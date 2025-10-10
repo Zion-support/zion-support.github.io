@@ -10,6 +10,7 @@ const STATIC_ASSETS = [
   '/manifest.json'
 ];
 
+<<<<<<< HEAD
 // Install event - cache resources;
   '/index.html',
   '/manifest.json',
@@ -49,6 +50,12 @@ self.addEventListener('install', (event) => {
       .then(() => {
         console.log('Service Worker: Static assets cached');
         return self.skipWaiting();
+=======
+// Install event - cache static assets;
+self.addEventListener('install', (event) => {/* TODO: Fix JSX expression */}
+      })
+      .then(() => {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       })
       .catch((error) => {
         console.error('Service Worker: Failed to cache static assets', error);
@@ -64,6 +71,7 @@ self.addEventListener('install', (event) => {
   );
 });
 
+<<<<<<< HEAD
 // Fetch event - serve from cache when offline;
 self.addEventListener('fetch', (event) => {
   event.respondWith(
@@ -110,16 +118,31 @@ self.addEventListener('activate', (event) => {
       .then(() => {
         console.log('Service Worker: Activated');
         return self.clients.claim();
+=======
+// Activate event - clean up old caches;
+self.addEventListener('activate', (event) => {/* TODO: Fix JSX expression */}
+            })
+            .map((cacheName) => {/* TODO: Fix JSX expression */}
+            })
+        );
+      })
+      .then(() => {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       })
   );
 });
 
 // Fetch event - serve from cache or network;
+<<<<<<< HEAD
 self.addEventListener('fetch', (event) => {
+=======
+self.addEventListener('fetch', (event) => {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   const { request } = event;
   const url = new URL(request.url);
 
   // Skip non-GET requests;
+<<<<<<< HEAD
   if (request.method !== 'GET') {
     return;
   }
@@ -127,10 +150,18 @@ self.addEventListener('fetch', (event) => {
   // Skip chrome-extension and other non-http requests;
   if (!url.protocol.startsWith('http')) {
     return;
+=======
+  if (request.method !== 'GET') {/* TODO: Fix JSX expression */}
   }
 
-  event.respondWith(
+  // Skip chrome-extension and other non-http requests;
+  if (!url.protocol.startsWith('http')) {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
+  }
+
+  event.respondWith()
     caches.match(request)
+<<<<<<< HEAD
       .then((cachedResponse) => {
         // Return cached version if available;
         if (cachedResponse) {
@@ -200,10 +231,34 @@ self.addEventListener('fetch', (event) => {
               );
             });
         }
+=======
+      .then((cachedResponse) => {/* TODO: Fix JSX expression */}
+        }
+
+        // Otherwise fetch from network;
+        return fetch(request)
+          .then((response) => {/* TODO: Fix JSX expression */}
+            }
+
+            // Clone the response;
+            const responseToCache = response.clone();
+
+            // Cache dynamic content;
+            caches.open(DYNAMIC_CACHE)
+              .then((cache) => {/* TODO: Fix JSX expression */}
+              });
+
+            return response;
+          })
+          .catch(() => {/* TODO: Fix JSX expression */}
+            }
+          });
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       })
   );
 });
 
+<<<<<<< HEAD
 // Background sync for offline actions;
 self.addEventListener('sync', (event) => {
   console.log('Service Worker: Background sync', event.tag);
@@ -212,10 +267,15 @@ self.addEventListener('sync', (event) => {
     event.waitUntil(// Handle background sync tasks;)
       handleBackgroundSync()
     );
+=======
+// Background sync for offline form submissions;
+self.addEventListener('sync', (event) => {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 });
 
 // Push notifications;
+<<<<<<< HEAD
 self.addEventListener('push', (event) => {
   console.log('Service Worker: Push notification received');
   
@@ -238,15 +298,25 @@ self.addEventListener('push', (event) => {
         action: 'close',
         title: 'Close',
         icon: '/icon-192x192.png',
+=======
+self.addEventListener('push', (event) => {/* TODO: Fix JSX expression */}
+    },
+    action,
+  s: [
+      {/* TODO: Fix JSX expression */}
+      },
+      {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
     ]
   };
 
-  event.waitUntil(
+  event.waitUntil()
     self.registration.showNotification('Zion Tech Group', options)
   );
 });
 
+<<<<<<< HEAD
 // Notification click handler;
 self.addEventListener('notificationclick', (event) => {
   console.log('Service Worker: Notification clicked');
@@ -317,3 +387,18 @@ console.log('Service Worker: Loaded successfully');
 =======
 ,
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
+=======
+// Handle notification clicks;
+self.addEventListener('notificationclick', (event) => {/* TODO: Fix JSX expression */}
+  }
+});
+
+// Helper function for offline form submissions;
+async function handleOfflineSubmissions() {/* TODO: Fix JSX expression */}
+}
+  // Implementation for handling offline form submissions;
+  // This would typically involve storing form data in IndexedDB;
+  // and syncing when back online;
+  console.log('Handling offline submissions...');
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

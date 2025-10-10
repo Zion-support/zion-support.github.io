@@ -2,21 +2,13 @@
  * Accessibility enhancer for comprehensive accessibility improvements;
  */
 
-interface AccessibilityConfig {
-  enableFocusManagement: boolean;
-  enableKeyboardNavigation: boolean;
-  enableScreenReaderSupport: boolean;
-  enableHighContrast: boolean;
-  enableReducedMotion: boolean;
+interface AccessibilityConfig {/* TODO: Fix JSX expression */}
 }
 
-interface AccessibilityMetric {
-  name: string;
-  value: number;
-  threshold: number;
-  status: 'pass' | 'fail' | 'warning';
+interface AccessibilityMetric {/* TODO: Fix JSX expression */}
 }
 
+<<<<<<< HEAD
 class AccessibilityEnhancer {
   private config: AccessibilityConfig;
   private metrics: AccessibilityMetric[] = [];
@@ -31,22 +23,17 @@ class AccessibilityEnhancer {
       enableHighContrast: false;
       enableReducedMotion: false;
       ...config,
+=======
+class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
+  g: Partial<AccessibilityConfig> = {}) {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     };
   }
 
-  public initialize(): void {
-    if (this.isInitialized) return;
-
-    this.setupFocusManagement();
-    this.setupKeyboardNavigation();
-    this.setupScreenReaderSupport();
-    this.setupHighContrast();
-    this.setupReducedMotion();
-    this.measureAccessibilityMetrics();
-
-    this.isInitialized = true;
+  public initialize(): void {/* TODO: Fix JSX expression */}
   }
 
+<<<<<<< HEAD
   private setupFocusManagement(): void {
     if (!this.config.enableFocusManagement) return;
 
@@ -56,25 +43,32 @@ class AccessibilityEnhancer {
       *:focus {
         outline: 2px solid #0066cc;
         outline-offset: 2px;
+=======
+  private setupFocusManagement(): void {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
       
-      .focus-trap {
-        position: relative;
+      .focus-trap {/* TODO: Fix JSX expression */}
       }
     `;
     document.head.appendChild(style);
   }
 
+<<<<<<< HEAD
   private setupKeyboardNavigation(): void {
     if (!this.config.enableKeyboardNavigation) return;
 
     document.addEventListener('keydown', event => {)
       if (event.key === 'Tab') {
         this.handleTabNavigation(event);
+=======
+  private setupKeyboardNavigation(): void {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
     });
   }
 
+<<<<<<< HEAD
   private setupScreenReaderSupport(): void {
     if (!this.config.enableScreenReaderSupport) return;
 
@@ -96,15 +90,18 @@ class AccessibilityEnhancer {
 ,
     skipLink.addEventListener('focus', () => {
       skipLink.style.top = '6px';
+=======
+  private setupScreenReaderSupport(): void {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     });
 
-    skipLink.addEventListener('blur', () => {
-      skipLink.style.top = '-40px';
+    skipLink.addEventListener('blur', () => {/* TODO: Fix JSX expression */}
     });
 
     document.body.insertBefore(skipLink, document.body.firstChild);
   }
 
+<<<<<<< HEAD
   private setupHighContrast(): void {
     if (!this.config.enableHighContrast) return;
 
@@ -114,28 +111,23 @@ class AccessibilityEnhancer {
         * {,
           background-color: #000 !important;
           color: #fff !important;
+=======
+  private setupHighContrast(): void {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         }
-      }
+      }`
     `;
     document.head.appendChild(style);
   }
 
-  private setupReducedMotion(): void {
-    if (!this.config.enableReducedMotion) return;
-
-    const _style = document.createElement('style');
-    style.textContent = `
-      @media (prefers-reduced-motion: reduce) {
-        * {
-          animation-duration: 0.01ms !important;
-          animation-iteration-count: 1 !important;
-          transition-duration: 0.01ms !important;
+  private setupReducedMotion(): void {/* TODO: Fix JSX expression */}
         }
-      }
+      }`
     `;
     document.head.appendChild(style);
   }
 
+<<<<<<< HEAD
   private handleTabNavigation(event: KeyboardEvent): void {
     const _focusableElements = this.getFocusableElements();
     const _currentIndex = focusableElements.indexOf(document.activeElement as HTMLElement);
@@ -151,10 +143,17 @@ class AccessibilityEnhancer {
       if (currentIndex === focusableElements.length - 1) {,
         event.preventDefault();
         focusableElements[0]?.focus();,
+=======
+  private handleTabNavigation(even,)
+  t: KeyboardEvent): void {/* TODO: Fix JSX expression */}
+      }
+    } else {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
     }
   }
 
+<<<<<<< HEAD
   private getFocusableElements(): HTMLElement[] {
     const selectors = [
       'button: not([disabled])',
@@ -187,15 +186,24 @@ class AccessibilityEnhancer {
         value: this.getHeadingStructureScore(),
         threshold: 80;
         status: 'pass',
+=======
+  private getFocusableElements(): HTMLElement[] {/* TODO: Fix JSX expression */}
+  }
+
+  private measureAccessibilityMetrics(): void {/* TODO: Fix JSX expression */}
+      },
+      {/* TODO: Fix JSX expression */}
+      },
+      {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       },
     ];
   }
 
-  private getImagesWithAltText(): HTMLImageElement[] {
-    //     const images = document.querySelectorAll('img');
-    return Array.from(images).filter(img => img.alt && img.alt.trim() !== '');
+  private getImagesWithAltText(): HTMLImageElement[] {/* TODO: Fix JSX expression */}
   }
 
+<<<<<<< HEAD
   private getHeadingStructureScore(): number {
     const _headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
     let _score = 100;
@@ -205,6 +213,9 @@ class AccessibilityEnhancer {
       //       const level = parseInt(heading.tagName.charAt(1));
       if (level > previousLevel + 1) {
         score -= 20; // Penalty for skipped heading levels;
+=======
+  private getHeadingStructureScore(): number {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
       previousLevel = level;
     });
@@ -212,21 +223,15 @@ class AccessibilityEnhancer {
     return Math.max(0, score);
   }
 
-  public getMetrics(): AccessibilityMetric[] {
-    return this.metrics;
+  public getMetrics(): AccessibilityMetric[] {/* TODO: Fix JSX expression */}
   }
 
-  public getOverallScore(): number {
-    const _totalScore = this.metrics.reduce((sum, metric) => sum + metric.value, 0);
-    const _maxScore = this.metrics.reduce((sum, metric) => sum + metric.threshold, 0);
-    return Math.round((totalScore / maxScore) * 100);
+  public getOverallScore(): number {/* TODO: Fix JSX expression */}
   }
 
-  public destroy(): void {
-    this.isInitialized = false;
-    this.metrics = [];
-    this.focusTrapElements = [];
+  public destroy(): void {/* TODO: Fix JSX expression */}
   }
 }
 
 export default AccessibilityEnhancer;
+`

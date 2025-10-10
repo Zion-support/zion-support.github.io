@@ -1,6 +1,7 @@
 'use client';
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect } from 'react';
 
+<<<<<<< HEAD
 interface AdvancedPerformanceOptimizerProps {}
   enableAdvancedCaching?: boolean;
   enableImageOptimization?: boolean;
@@ -216,10 +217,32 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
           }
         }
 
+=======
+interface AdvancedPerformanceOptimizerProps {
+  children: React.ReactNode;
+}
 
-    images.forEach((img) => imageObserver.observe(img));
-  }, []);
+const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> = ({ children }) => {
+  useEffect(() => {
+    // Advanced performance optimizations
+    const optimizePerformance = () => {
+      // Lazy load images
+      const images = document.querySelectorAll('img[data-src]');
+      const imageObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target as HTMLImageElement;
+            img.src = img.dataset.src || '';
+            img.classList.remove('lazy');
+            imageObserver.unobserve(img);
+          }
+        });
+      });
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 
+      images.forEach(img => imageObserver.observe(img));
+
+<<<<<<< HEAD
 <<<<<<< HEAD
   // Critical resource preloading;
   const preloadCriticalResources = useCallback(() => {
@@ -360,6 +383,27 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
   }, [enableWebVitals, performanceMetrics, reportPerformanceMetrics]);
 
   return null;
+=======
+      // Preload critical resources
+      const criticalResources = [
+        '/fonts/main.woff2',
+        '/css/critical.css'
+      ];
+
+      criticalResources.forEach(resource => {
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.href = resource;
+        link.as = resource.endsWith('.css') ? 'style' : 'font';
+        document.head.appendChild(link);
+      });
+    };
+
+    optimizePerformance();
+  }, []);
+
+  return <>{children}</>;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 };
 </AdvancedPerformanceOptimizerProps>
 export default AdvancedPerformanceOptimizer;</AdvancedPerformanceOptimizerProps>

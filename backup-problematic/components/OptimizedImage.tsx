@@ -1,9 +1,9 @@
 import React from 'react';
 
-interface OptimizedImageProps {
-  className?: string;
+interface OptimizedImageProps {/* TODO: Fix JSX expression */}
 }
 
+<<<<<<< HEAD
 const OptimizedImage = React.memo(function OptimizedImage({ className = '' }: OptimizedImageProps) {
 <<<<<<< HEAD
   return(<div className={`bg-blue-100 p-4 rounded-lg ${className}`}>)
@@ -14,6 +14,11 @@ const OptimizedImage = React.memo(function OptimizedImage({ className = '' }: Op
   return (
     <div className={`bg-blue-100 p-4 rounded-lg ${className}`}></div>
       <h3 className="text-lg font-semibold text-blue-800">OptimizedImage</h3>
+=======
+const OptimizedImage = React.memo(function OptimizedImage({ className = '' }: OptimizedImageProps) {/* TODO: Fix JSX expression */}
+    <div className={`bg-blue-100 p-4 rounded-lg ${className}`}></div>
+      <h3 className="text-lg font-semibold text-blue-800">OptimizedImage</h3>"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       <p className="text-blue-600">This component is under development.</p>
     </div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
@@ -21,3 +26,4 @@ const OptimizedImage = React.memo(function OptimizedImage({ className = '' }: Op
 });
 
 export default OptimizedImage;
+"`

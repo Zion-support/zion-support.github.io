@@ -6,7 +6,9 @@ import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 
 export default [
+  // Ignore disabled directories
   {
+<<<<<<< HEAD
     ignores: [,
       'node_modules/**',
       '.next/**',
@@ -20,52 +22,32 @@ export default [
       '_conflicted_disabled/**',
       '_pages_api_disabled/**',
       '_pages_disabled/**',
+=======
+    ignores: [
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'admin-api-disabled/**',
       'api-disabled/**',
       'api.disabled/**',
-      'api.disabled.temp/**',
       'api-backup/**',
-      'apps.backup/**',
+      'components-disabled/**',
+      'components.disabled/**',
       'automation_backup/**',
-      'ai-optimization-backups/**',
-      'automation_logs/**',
-      'all-automations-reports/**',
-      'accessibility-reports/**',
-      'corrupted-files-backup/**',
-      'corrupted_backup/**',
-      'corrupted_files_backup_2/**',
-      'content/**',
-      'contracts/**',
-      'components_backup/**',
-      'data/**',
-      'data_backup/**',
-      'dao/**',
-      'deployments/**',
-      'disabled-api/**',
-      'e2e/**',
-      'factories/**',
-      'hooks/**',
-      'lib_backup/**',
-      'services/**',
-      'middleware/**',
-      'automation/**',
-      '**/*.test.js.skip',
-      '**/*.broken',
-      '**/*.bak',
-      '**/*.backup',
-      '**/zion-os/**',
-      '**/zion-website/**',
-      '**/corrupted-src-backup/**',
-      '**/temp-files/**',
+      'backup*/**',
+      '*-disabled/**',
+      '*.disabled/**',
+      '*.broken',
+      '*.backup',
+      'temp-files/**',
+      'cache/**',
+      'dist/**',
+      'node_modules/**',
+      'analyze-*.js',
+      'check-*.js',
+      'clean-*.js',
+      'fix-*.js',
       '*.cjs',
-      '*.js',
-      '*.mjs',
-      '*.test.tsx',
-      '*.test.ts',
-      '*.test.js',
-      '*.test.jsx',
-      '__tests__/**'
-    ]
+      '*.js.broken'
+    ],
   },
   // Base JavaScript configuration;
   {
@@ -75,6 +57,7 @@ export default [
       parserOptions: {,
         ecmaVersion: 'latest',
         sourceType: 'module',
+<<<<<<< HEAD
         ecmaFeatures: {,
           jsx: true;
         },
@@ -84,6 +67,12 @@ export default [
       ...js.configs.recommended.rules;
       'no-unused-vars': 'warn',
       'no-console': 'warn',
+=======
+      },
+    },
+    rules: {
+      ...js.configs.recommended.rules,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     },
   },
   // TypeScript configuration;
@@ -105,9 +94,16 @@ export default [
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
     },
+<<<<<<< HEAD
     rules: {,
       ...tseslint.configs.recommended.rules;
       ...reactHooks.configs.recommended.rules,
+=======
+    rules: {
+      ...tseslint.configs.recommended.rules,
+      'react-hooks/rules-of-hooks': 'error',
+      'react-hooks/exhaustive-deps': 'warn',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'react-refresh/only-export-components': [
         'warn',
         { allowConstantExport: true },

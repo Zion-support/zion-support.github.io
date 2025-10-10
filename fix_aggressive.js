@@ -7,6 +7,7 @@ import { fileURLToPath } from 'url';
 // const __dirname = path.dirname(__filename);
 
 //Function to aggressively fix corrupted syntax;
+<<<<<<< HEAD
 function fixCorruptedSyntax(text) {
 
   //Fix import statements that got completely corrupted;
@@ -18,10 +19,16 @@ function fixCorruptedSyntax(text) {
         .replace(/,\s*,/g, ',')
         .replace(/\s*,\s*/g, ', ')
         .trim();
+=======
+function fixCorruptedSyntax(text) {/* TODO: Fix JSX expression */}
+    /import\s*React,\s*\{([^}]+)\}\s*from\s*['"]react['"];?/g,
+    (match, imports) => {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   );
 
   //Fix corrupted import statements;
+<<<<<<< HEAD
   fixed = fixed.replace(
     /import\s*\{([^}]+)\}\s*from\s*['"]([^'"]+)['"];?/g,
     (match, imports, module) => {
@@ -29,27 +36,44 @@ function fixCorruptedSyntax(text) {
         .replace(/,\s*,/g, ',')
         .replace(/\s*,\s*/g, ', ')
         .trim();
+=======
+  fixed = fixed.replace(")
+    /import\s*\{([^}]+)\}\s*from\s*['"]([^'"]+)['"];?/g,
+    (match, imports, module) => {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   );
 
   //Fix corrupted variable declarations;
+<<<<<<< HEAD
   fixed = fixed.replace(
+=======
+  fixed = fixed.replace()
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     /const\s*\[([^,]+),\s*([^,]+)\]\s*=\s*useState\s*\(/g,
     'const [$1, $2] = useState(')
   );
-  fixed = fixed.replace(
+  fixed = fixed.replace()
     /const\s*\[([^,]+),\s*([^,]+)\]\s*=\s*useState\s*\(/g,
     'const [$1, $2] = useState(')
   );
 
   //Fix corrupted function declarations;
+<<<<<<< HEAD
   fixed = fixed.replace(
+=======
+  fixed = fixed.replace()
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     /export\s*default\s*function\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\(/g,
     'export default function $1(')
   );
-  fixed = fixed.replace(
+  fixed = fixed.replace()
     /const\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*:\s*React\.FC\s*=\s*\(/g,
+<<<<<<< HEAD
     'const $1: React.FC = (',
+=======
+    'const $1: React.FC = (')
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   );
   fixed = fixed.replace(/const\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=\s*\(/g, 'const $1 = (');
 
@@ -58,7 +82,11 @@ function fixCorruptedSyntax(text) {
   fixed = fixed.replace(/<\/\s*([A-Z][a-zA-Z0-9_$]*)\s*>/g, '</$1>');
 
   //Fix corrupted object properties;
+<<<<<<< HEAD
   fixed = fixed.replace(
+=======
+  fixed = fixed.replace()
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     /\{\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*:\s*([^,}]+),\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*:\s*([^,}]+)\s*\}/g,
     '{ $1: $2, $3: $4 }'
   );
@@ -70,11 +98,18 @@ function fixCorruptedSyntax(text) {
   fixed = fixed.replace(/([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\(\s*([^)]*)\s*\)/g, '$1($2)');
 
   //Fix corrupted arrow functions;
+<<<<<<< HEAD
   fixed = fixed.replace(/\([^)]*\)\s*=>\s*\{/g, match => {
     return match.replace(/\s+/g, ' ').trim();
   });
 
   //Fix corrupted string literals;
+=======
+  fixed = fixed.replace(/\([^)]*\)\s*=>\s*\{/* TODO: Fix JSX expression */}
+  });
+
+  //Fix corrupted string literals;"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   fixed = fixed.replace(/['"]([^'"]*),\s*([^'"]*)['"]/g, '"$1$2"');
 
   //Fix corrupted template literals;
@@ -89,6 +124,7 @@ function fixCorruptedSyntax(text) {
   fixed = fixed.replace(/return\s*([^;]+);?/g, 'return $1;');
 
   //Fix corrupted if statements;
+<<<<<<< HEAD
   fixed = fixed.replace(/if\s*\(\s*([^)]+)\s*\)\s*\{/g, 'if ($1) {');
 
   //Fix corrupted for loops;
@@ -143,6 +179,9 @@ function fixCorruptedSyntax(text) {
   //Fix corrupted spaces;
   fixed = fixed.replace(/\s+/g, ' ');
   fixed = fixed.replace(/\s*{\s*/g, ' {');
+=======
+  fixed = fixed.replace(/if\s*\(\s*([^)]+)\s*\)\s*\{/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   fixed = fixed.replace(/\s*}\s*/g, ' }');
   fixed = fixed.replace(/\s*\(\s*/g, ' (');
   fixed = fixed.replace(/\s*\)\s*/g, ') ');
@@ -153,8 +192,13 @@ function fixCorruptedSyntax(text) {
   fixed = fixed.replace(/\n\s*\n/g, '\n');
 
   //Fix specific corrupted patterns;
+<<<<<<< HEAD
   fixed = fixed.replace(/useStateuseEffectSuspenselazyuseCallback/g)
     'useState, useEffect, Suspense'
+=======
+  fixed = fixed.replace(/useStateuseEffectSuspenselazyuseCallback/g,
+    'useState, useEffect, Suspense')
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   );
   fixed = fixed.replace(/RouterRoutesRoute/g, 'Router, Routes, Route');
   fixed = fixed.replace(/HelmetProvider/g, 'HelmetProvider');
@@ -165,6 +209,7 @@ function fixCorruptedSyntax(text) {
   fixed = fixed.replace(/resourceindex/g, 'resource, index');
   fixed = fixed.replace(/itemindex/g, 'item, index');
   fixed = fixed.replace(/MenuX/g, 'Menu, X');
+<<<<<<< HEAD
   fixed = fixed.replace(/isMobileMenuOpensetIsMobileMenuOpen/g)
     'isMobileMenuOpen, setIsMobileMenuOpen'
   );
@@ -173,12 +218,23 @@ function fixCorruptedSyntax(text) {
   );
   fixed = fixed.replace(/performanceMetricssetPerformanceMetrics/g)
     'performanceMetrics, setPerformanceMetrics'
+=======
+  fixed = fixed.replace(/isMobileMenuOpensetIsMobileMenuOpen/g,
+    'isMobileMenuOpen, setIsMobileMenuOpen')
+  );
+  fixed = fixed.replace(/showPerformanceMonitorsetShowPerformanceMonitor/g,
+    'showPerformanceMonitor, setShowPerformanceMonitor')
+  );
+  fixed = fixed.replace(/performanceMetricssetPerformanceMetrics/g,
+    'performanceMetrics, setPerformanceMetrics')
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   );
 
   return fixed;
 }
 
 //Function to process a file;
+<<<<<<< HEAD
 function processFile(filePath) {
   try {
     //     const content = fs.readFileSync(filePath, 'utf8');
@@ -187,14 +243,17 @@ function processFile(filePath) {
     if (content !== fixedContent) {
       fs.writeFileSync(filePath, fixedContent, 'utf8');
       //       return true;
+=======
+function processFile(filePath) {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
     return false;
-  } catch (error) {
-    //     return false;
+  } catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 
 //Function to recursively find and process files;
+<<<<<<< HEAD
 function processDirectory(dirPath) {
 
   try {
@@ -207,19 +266,20 @@ function processDirectory(dirPath) {
         //Skip node_modules and other common directories;
         if (!['node_modules', '.git', 'dist', 'build'].includes(item)) {
           processedCount += processDirectory(fullPath);
+=======
+function processDirectory(dirPath) {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         }
-      } else if (
+      } else if ()
         item.endsWith('.ts') ||
         item.endsWith('.tsx') ||
         item.endsWith('.js') ||
         item.endsWith('.jsx')
-      ) {
-        if (processFile(fullPath)) {
-          processedCount++;
+      ) {/* TODO: Fix JSX expression */}
         }
       }
     }
-  } catch (error) {
+  } catch (error) {/* TODO: Fix JSX expression */}
     //     }
 
   return processedCount;
@@ -229,4 +289,4 @@ function processDirectory(dirPath) {
 // let processedCount = processDirectory('./src');
 processedCount += processDirectory('./utils');
 // 
-}}}}}}}}}}}}}
+}}}}}}}}}}}}}"`

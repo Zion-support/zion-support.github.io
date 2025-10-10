@@ -1,6 +1,7 @@
 impo, r, t { ArrowLe, f, t, DollarSi, g, n, Targ, e, t, Use, r, s, Z, a, p } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 
+<<<<<<< HEAD
 export default function RealtimePersonalizationEngine20, 2, 5() { 
   return(:src/pages/blog/ai-2025-oct-realtime-personalization-engine/page.tsx;
     <>
@@ -425,6 +426,9 @@ export default function RealtimePersonalizationEngine20, 2, 5() {
                 <Target className="ml-2 h-5 w-5 ">,
                 <Target className="ml-2 h-5 w-5" />,
   );
+=======
+export default function RealtimePersonalizationEngine20, 2, 5() {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 };
   </div>
   </div>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export type CaseStudy = {
   id: string;
   title: string;
@@ -188,5 +189,29 @@ export const caseStudies: CaseStudy[] = [
     technologies: ['RAG', 'Vector DB', 'TypeScript', 'OpenAI', 'ClickHouse'],
     duration: '10 weeks',
     imageUrl: '/images/case-studies/enterprise-rag.jpg',
+=======
+export type CaseStudy = {/* TODO: Fix JSX expression */}
+};
+
+export const,
+  caseStudies: CaseStudy[] = [
+  {/* TODO: Fix JSX expression */}
+  },
+  {/* TODO: Fix JSX expression */}
+  },
+  {/* TODO: Fix JSX expression */}
+  },
+  {/* TODO: Fix JSX expression */}
+  },
+  {/* TODO: Fix JSX expression */}
+  },
+  {/* TODO: Fix JSX expression */}
+  },
+  {/* TODO: Fix JSX expression */}
+  },
+  {/* TODO: Fix JSX expression */}
+  },
+  {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
 ];

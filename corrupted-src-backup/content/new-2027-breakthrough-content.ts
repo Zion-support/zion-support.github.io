@@ -1,6 +1,7 @@
 // Revolutionary AI 2027 Breakthrough Content;
 // Latest cutting-edge AI technologies and enterprise transformations;
 export const breakthroughContent2027 = [
+<<<<<<< HEAD
   {
     id: 'ai-2027-ultimate-consciousness-breakthrough',
     title: 'AI 2027 Ultimate Consciousness Breakthrough: The Dawn of True Artificial Awareness',
@@ -75,5 +76,18 @@ export const caseStudies2027 = [
     tags: ['singularity', 'quantum', 'consciousness', 'AI 2027', 'transcendence'],
     featured: true;
     readTime: '20 min read',
+=======
+  {/* TODO: Fix JSX expression */}
+  },
+  {/* TODO: Fix JSX expression */}
+  },
+  {/* TODO: Fix JSX expression */}
+  },
+];
+export const caseStudies2027 = [
+  {/* TODO: Fix JSX expression */}
+  },
+  {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
 ];

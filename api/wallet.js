@@ -2,37 +2,38 @@ const { withSentry } = require('./withSentry.cjs');
 
 async function handler(req, res) {
   if (req.method !== 'POST') {
-    res.statusCode = 405;
-    res.setHeader('Allow', 'POST');
-    res.end('Method Not Allowed');
-    return;
+    return res.status(405).json({ error: 'Method not allowed' });
   }
 
   const { action, amount, currency = 'USD' } = req.body || {};
 
   if (!action) {
-    res.statusCode = 400;
-    res.json({ error: 'Action is required' });
-    return;
+    return res.status(400).json({ error: 'Action is required' });
   }
 
   try {
     switch (action) {
       case 'create_payment_intent': {
         if (!amount) {
-          res.statusCode = 400;
-          res.json({ error: 'Amount is required for payment intent' });
-          return;
+          return res.status(400).json({ error: 'Amount is required for payment intent' });
         }
 
         const timestamp = Date.now();
         const random = Math.random().toString(36).substr(2, 9);
         const paymentIntent = {
+<<<<<<< HEAD
           id: 'pi_' + timestamp;
           amount: Math.round(amount * 100)
           currency: currency.toLowerCase(),
           status: 'requires_payment_method',
           client_secret: 'pi_' + timestamp + '_secret_' + random;
+=======
+          id: `pi_${timestamp}_${random}`,
+          amount: Math.round(amount * 100), // Convert to cents
+          currency,
+          status: 'requires_payment_method',
+          created: timestamp
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         };
 
         res.statusCode = 200;
@@ -42,9 +43,15 @@ async function handler(req, res) {
 
       case 'get_balance': {
         const balance = {
+<<<<<<< HEAD
           available: 1000.0;
           pending: 0.0;
           currency: currency.toUpperCase(),
+=======
+          available: 0,
+          pending: 0,
+          currency
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         };
 
         res.statusCode = 200;
@@ -55,9 +62,9 @@ async function handler(req, res) {
       default: res.statusCode = 400;
         res.json({ error: 'Invalid action' });
     }
-  } catch {
-    //     res.statusCode = 500;
-    res.json({ error: 'Wallet operation failed' });
+  } catch (error) {
+    console.error('Wallet operation error:', error);
+    res.status(500).json({ error: 'Wallet operation failed' });
   }
 }
 

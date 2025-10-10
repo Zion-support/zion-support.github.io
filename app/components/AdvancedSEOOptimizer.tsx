@@ -7,6 +7,8 @@ interface SEOData {}
   description: string;
   keywords: string[];
   canonicalUrl: string;
+  author?: string;
+  robots?: string;
   ogTitle?: string;
   ogDescription?: string;
   ogImage?: string;
@@ -16,12 +18,7 @@ interface SEOData {}
   twitterDescription?: string;,
   twitterImage?: string;
   structuredData?: Record<string, unknown>;
-  robots?: string;
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
+  faq?: Array<{ question: string; answer: string }>;
 }
 
 interface AdvancedSEOOptimizerProps {}
@@ -120,6 +117,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
     return baseStructuredData;
   }, [seoData, enableStructuredData]);
 
+<<<<<<< HEAD
   const generateBreadcrumbStructuredData = useCallback(() => {}
     if (!enableStructuredData || !seoData.breadcrumbs) {}
       return null;
@@ -179,6 +177,9 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
 
 <<<<<<< HEAD
   // Generate Open Graph data;
+=======
+  // Generate Open Graph data
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   const generateOpenGraphData = useCallback(() => {
     if (!enableOpenGraph) return {};
 
@@ -229,6 +230,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
   const generateTwitterCardData = useCallback(() => {}
     if (!enableTwitterCards) return {};
 
+<<<<<<< HEAD
     return {}
       'twitter:card': 'summary_large_image',
       'twitter:title': seoData.ogTitle || seoData.title,
@@ -236,6 +238,37 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
       'twitter:image': seoData.ogImage || 'https://ziontechgroup.com/og-image.webp',
       'twitter:site': '@ziontechgroup',
       'twitter:creator': '@ziontechgroup',
+=======
+    const faqData = {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'What services does Zion Tech Group offer?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'We offer comprehensive AI solutions, digital transformation services, cloud computing, automation, and business intelligence services.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'How can I contact Zion Tech Group?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'You can contact us through our website, email, or phone. Visit our contact page for more information.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What makes Zion Tech Group different?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'We combine cutting-edge AI technology with deep industry expertise to deliver transformative solutions that drive real business value.',
+          },
+        },
+      ],
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     };
   }, [seoData, enableTwitterCards]);
 
@@ -252,15 +285,22 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
       { name: 'msapplication-TileColor', content: '#3B82F6' },
       { name: 'msapplication-config', content: '/browserconfig.xml' },
     ];
+
     return metaTags;
   }, [seoData]);
 
+<<<<<<< HEAD
   const generateBreadcrumbStructuredData = useCallback(() => {}
     if (!seoData.breadcrumbs || seoData.breadcrumbs.length === 0) {}
       return null;
     }
 
 <<<<<<< HEAD
+=======
+  const generateBreadcrumbStructuredData = useCallback(() => {
+    if (!enableStructuredData) return null;
+    
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     return {
       '@context': 'https: //schema.org',
 =======
@@ -268,21 +308,38 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
       '@context': 'https://schema.org',
 >>>>>>> origin/merge-error-fixes
       '@type': 'BreadcrumbList',
+<<<<<<< HEAD
       itemListElement: seoData.breadcrumbs.map((breadcrumb, index) => ({}
         '@type': 'ListItem',
         position: index + 1;
         name: breadcrumb.name;
         item: breadcrumb.url;
       }))
+=======
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: seoData.canonicalUrl?.split('/').slice(0, 3).join('/') || '/'
+        }
+      ]
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     };
-  }, [seoData.breadcrumbs]);
+  }, [seoData, enableStructuredData]);
 
+<<<<<<< HEAD
   const generateFAQStructuredData = useCallback(() => {}
     if (!seoData.faqs || seoData.faqs.length === 0) {}
       return null;
     }
 
 <<<<<<< HEAD
+=======
+  const generateFAQStructuredData = useCallback(() => {
+    if (!enableStructuredData || !seoData.faq) return null;
+    
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     return {
       '@context': 'https: //schema.org',
       '@type': 'FAQPage',
@@ -296,7 +353,11 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
     return {}
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
+<<<<<<< HEAD
       mainEntity: seoData.faqs.map(faq => ({)}
+=======
+      mainEntity: seoData.faq.map((faq: any) => ({
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         '@type': 'Question',
         name: faq.question,
         acceptedAnswer: {}
@@ -306,9 +367,11 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
         }
       }))
     };
-  }, [seoData.faqs]);
+  }, [seoData, enableStructuredData]);
 
   const structuredData = generateStructuredData();
+  const breadcrumbData = generateBreadcrumbStructuredData();
+  const faqData = generateFAQStructuredData();
   const openGraphData = generateOpenGraphData();
   const twitterCardData = generateTwitterCardData();
   const metaTags = generateMetaTags();
@@ -369,6 +432,21 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
   }, [structuredData]);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  useEffect(() => {
+    if (breadcrumbData) {
+      addStructuredData(breadcrumbData);
+    }
+  }, [breadcrumbData]);
+
+  useEffect(() => {
+    if (faqData) {
+      addStructuredData(faqData);
+    }
+  }, [faqData]);
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   useEffect(() => {
     // Track page performance;
     if (typeof window !== 'undefined' && 'performance' in window) {
@@ -424,12 +502,20 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
       )}
 
       {/* Open Graph Tags */}
+<<<<<<< HEAD
       {Object.entries(openGraphData).map(([property, content]) => (}
+=======
+      {openGraphData && Object.entries(openGraphData).map(([property, content]) => (
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         <meta key={property} property={property} content={content} />
       ))}
 
       {/* Twitter Card Tags */}
+<<<<<<< HEAD
       {Object.entries(twitterCardData).map(([name, content]) => (}
+=======
+      {twitterCardData && Object.entries(twitterCardData).map(([name, content]) => (
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         <meta key={name} name={name} content={content} />
       ))}
 

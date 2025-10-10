@@ -1,15 +1,27 @@
 // netlify/functions/broken-image-scanner-scheduler.js;
+<<<<<<< HEAD
 exports.config = { schedule: '0 */6 * * *' };
 exports.handler = async function () {
   const { execSync } = require('child_process');
   try {execSync('node automation/broken-image-scanner.cjs || true', {)
       stdio: inherit),
         shell: true}
+=======
+exports.config = {/* TODO: Fix JSX expression */}
+  e: '0 */6 * * *' };
+exports.handler = async function () {/* TODO: Fix JSX expression */}
+  const { execSync } = require('child_process');
+  try {/* TODO: Fix JSX expression */}
+  l: true}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     });
-    execSync(
+    execSync()
       'git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(images): broken image scan report [ci skip]" || true) && (git push origin main || true)',
-      {stdio: 'inherit'} shell: true },
+      {/* TODO: Fix JSX expression */}
+  o: 'inherit'} shel,
+  l: true },
     );
+<<<<<<< HEAD
     return {statusCode: 200;
       body: JSON.stringify({,)
         ok: true),
@@ -20,10 +32,18 @@ exports.handler = async function () {
       statusCode: 200;
       body: JSON.stringify({ ok: false),
         error: String(e;),
+=======
+    return {/* TODO: Fix JSX expression */}
+  k: 'broken-image-scanner-scheduler'}
+      });
+    };
+  } catch (e) {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
     };
   }
 };
+<<<<<<< HEAD
 // netlify/functions/broken-image-scanner-scheduler.js exports.config = { schedule: '0 */6 * * *' }; exports.handler = async function() {' const { execSync } = require('child_process'); try {' execSync('node automation/broken-image-scanner.cjs || true') { stdio: 'inherit'} shell: true;
       });' execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(images): broken image scan report [ci skip]" || true) && (git push origin main || true)', {stdio: 'inherit'} shell: true;
       });' return {statusCode: 200;
@@ -32,3 +52,15 @@ exports.handler = async function () {
         body: JSON.stringify({ok: false),
         error: String(e;),
       }) }; } };'
+=======
+// netlify/functions/broken-image-scanner-scheduler.js exports.config = {/* TODO: Fix JSX expression */}
+  e: '0 */6 * * *' }; exports.handler = async function() {' const { execSync } = require('child_process'); try {/* TODO: Fix JSX expression */}
+  o: 'inherit'} shel,
+  l: true;"
+      });' execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(images): broken image scan report [ci skip]" || true) && (git push origin main || true)', {/* TODO: Fix JSX expression */}
+  o: 'inherit'} shel,
+  l: true;
+      });' return {/* TODO: Fix JSX expression */}
+  k: 'broken-image-scanner-scheduler' }) }; } catch (e) {/* TODO: Fix JSX expression */}
+      }) }; } };'"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

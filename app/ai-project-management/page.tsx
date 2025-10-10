@@ -1,11 +1,16 @@
 'use client';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Phone, Mail, Calendar, Users, Target, CheckCircle } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
 export default function AIProjectManagementPage() {
 <<<<<<< HEAD
   return(<div><Helmet>
 =======
   return (
+<<<<<<< HEAD
     <div></div><Helmet>
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
         <title>AI Project Management Solutions - Zion Tech Group</title>
@@ -94,11 +99,42 @@ export default function AIProjectManagementPage() {
                 <div className="text-4xl mb-4 text-center">📈</div><h3 className="text-xl font-bold text-white mb-4 text-center">Performance Tracking</h3><p className="text-gray-300 text-center">Advanced metrics and KPIs to track team productivity and project success rates.</p>
                 </p>
               </div>
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>AI Project Management Solutions - Zion Tech Group</title>
+        <meta name="description" content="Intelligent AI-powered project management with automated scheduling, resource optimization, and risk prediction. Starting at $249/month." />
+        <meta name="keywords" content="AI project management, automated scheduling, resource optimization, project analytics" />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-project-management" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="pt-24 pb-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          {/* Hero Section */}
+          <section className="text-center mb-16">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
+              AI Project Management Solutions
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Streamline your projects with AI-powered management tools that optimize resources, predict risks, and ensure timely delivery.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="tel:+13024640950"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center gap-2"
+              >
+                <Phone className="w-5 h-5" />
+                Call Now
+              </a>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
             </div>
           </section>
 
-          {/* Pricing Section */}
+          {/* Features Section */}
           <section className="mb-16">
+<<<<<<< HEAD
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Pricing Plans</h2>
 <<<<<<< HEAD
             <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
@@ -178,6 +214,29 @@ export default function AIProjectManagementPage() {
               <div className="cyber-card p-6 text-center"></div>
                 <div className="text-4xl font-bold text-yellow-400 mb-4">85%</div><h3 className="text-xl font-bold text-white mb-2">Team Productivity</h3><p className="text-gray-300">85% increase in team productivity</p>
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
+=======
+            <h2 className="text-3xl font-bold text-white text-center mb-12">Key Features</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 text-center">
+                <Calendar className="w-12 h-12 text-blue-400 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-3">Smart Scheduling</h3>
+                <p className="text-gray-300">AI-powered project scheduling and timeline optimization</p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 text-center">
+                <Users className="w-12 h-12 text-green-400 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-3">Resource Optimization</h3>
+                <p className="text-gray-300">Automatically assign and optimize team resources</p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 text-center">
+                <Target className="w-12 h-12 text-purple-400 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-3">Risk Prediction</h3>
+                <p className="text-gray-300">Identify potential risks and suggest mitigation strategies</p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 text-center">
+                <CheckCircle className="w-12 h-12 text-yellow-400 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-3">Progress Tracking</h3>
+                <p className="text-gray-300">Real-time project progress monitoring and reporting</p>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               </div>
             </div>
           </section>
@@ -192,6 +251,7 @@ export default function AIProjectManagementPage() {
 ),
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
           {/* CTA Section */}
+<<<<<<< HEAD
           <section className="text-center">
             <h2 className="text-3xl font-bold text-white mb-6">Transform Your Project Management Today</h2><p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">Join 1,000+ teams using our AI project management solutions to deliver better projects faster and more efficiently.</p>
             </p>
@@ -218,5 +278,25 @@ export default function AIProjectManagementPage() {
         <Footer />
       </div>,
     </div>,
+=======
+          <section className="text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-12">
+            <h2 className="text-3xl font-bold text-white mb-4">Ready to Optimize Your Projects?</h2>
+            <p className="text-xl text-blue-100 mb-8">Let our AI solutions streamline your project management</p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="tel:+13024640950"
+                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center gap-2"
+              >
+                <Phone className="w-5 h-5" />
+                Call (302) 464-0950
+              </a>
+            </div>
+          </section>
+        </div>
+      </main>
+      
+      <Footer />
+    </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   );
 }

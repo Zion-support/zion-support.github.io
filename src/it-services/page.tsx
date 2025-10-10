@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
@@ -471,3 +472,36 @@ $4},
 };
 
 export default ITServicesPage;
+=======
+import { Cloud, ArrowRight } from 'lucide-react';
+
+export default function ITServicesPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="container mx-auto px-4 py-20">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
+            IT Services
+          </h1>
+          <p className="text-xl text-gray-300 mb-8">
+            Comprehensive IT support and services to keep your business running smoothly.
+          </p>
+          <div className="bg-slate-800/50 rounded-lg p-8">
+            <h2 className="text-2xl font-bold text-white mb-4">IT Services Solutions</h2>
+            <p className="text-gray-300 mb-6">
+              Get expert IT support, infrastructure management, and technology consulting.
+            </p>
+            <a
+              href="/contact"
+              className="bg-cyan-500 text-white px-6 py-3 rounded-lg font-bold hover:bg-cyan-600 transition-colors inline-flex items-center"
+            >
+              <ArrowRight className="w-5 h-5 mr-2" />
+              Contact Us
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

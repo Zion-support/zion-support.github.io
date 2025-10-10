@@ -4,6 +4,7 @@ import path from 'path';
 import { readdir } from 'fs/promises';
 
 // Function to fix malformed Netlify function syntax;
+<<<<<<< HEAD
 function fixNetlifyFunction(content) {
   // Remove malformed function signatures and fix syntax;
   let fixed = content;
@@ -19,6 +20,12 @@ function fixNetlifyFunction(content) {
     // Remove duplicate exports and malformed code;
     .replace(/\/\/ exports\.handler = .*$/gm, '')
     // Fix missing commas in arrays and objects;
+=======
+function fixNetlifyFunction(content) {/* TODO: Fix JSX expression */}
+    .replace(/(\w+)\s*}\s*(\w+)/g, '$1,\n        $2')
+    // Fix malformed JSON.stringify calls;
+    .replace(/JSON\.stringify\(\{/* TODO: Fix JSX expression */})
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     .replace(/(\w+)\s*}\s*\)/g, '$1\n      })')
     .replace(/(\w+)\s*\)\s*}/g, '$1\n      }')
     // Clean up extra whitespace and newlines;
@@ -26,6 +33,7 @@ function fixNetlifyFunction(content) {
     .replace(/\s+$/gm, '');
 
   // Ensure proper function structure;
+<<<<<<< HEAD
   if (!fixed.includes('exports.handler = async function')) {
     return content; // Skip if no proper function found;
   }
@@ -47,10 +55,24 @@ function fixNetlifyFunction(content) {
         error: 'Function failed'),
         message: error.message),
         timestamp: new Date().toISOString(),
-      }),
-      headers: {'Content-Type': 'application/json'}
-    };
+=======
+  if (!fixed.includes('exports.handler = async function')) {/* TODO: Fix JSX expression */}
   }
+
+  // Add proper error handling if missing;
+  if (!fixed.includes('try {/* TODO: Fix JSX expression */})
+    const _handlerMatch = fixed.match(/exports\.handler = async function[^{]*{([^}]*)}/);
+    if (handlerMatch) {/* TODO: Fix JSX expression */}
+        /exports\.handler = async function[^{]*{[^}]*}/,
+        `exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
+    ${body}
+  } catch (error) {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
+      }),
+      header,
+  s: {'Content-Type': 'application/json'}
+    };
+  }`
 }`
       );
     }
@@ -60,7 +82,12 @@ function fixNetlifyFunction(content) {
 }
 
 // Main function to process all Netlify functions;
+<<<<<<< HEAD
 async function main() {
+=======
+async function main() {/* TODO: Fix JSX expression */}
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   const _functionsDir = 'netlify/functions';
   const _pattern = path.join(functionsDir, '*.js');
 
@@ -70,6 +97,7 @@ async function main() {
   let _fixedCount = 0;
   let _errorCount = 0;
   
+<<<<<<< HEAD
   files.forEach(filePath => {)
     try {)
       const _content = fs.readFileSync(filePath, 'utf8');
@@ -78,26 +106,27 @@ async function main() {
       if (content !== fixed) {
         fs.writeFileSync(filePath, fixed, 'utf8');
         // console.log(`✅ Fixed: ${path.basename(filePath)}`);
+=======
+  files.forEach(filePath => {/* TODO: Fix JSX expression */})`
+  d: ${path.basename(filePath)}`);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         fixedCount++;
-      } else {
-        // console.log(`⏭️  Skipped: ${path.basename(filePath)} (no changes needed)`);
+      } else {/* TODO: Fix JSX expression */}`
+  d: ${path.basename(filePath)} (no changes needed)`);
       }
-    } catch (error) {
-
-      errorCount++;
+    } catch (error) {/* TODO: Fix JSX expression */}
     }
   });
 
 
 
 
-  if (errorCount > 0) {
-    process.exit(1);
+  if (errorCount > 0) {/* TODO: Fix JSX expression */}
   }
 }
-
-if (import.meta.url === `file://${process.argv[1]}`) {
-  main().catch(console.error);
+`
+if (import.meta.url === `fil,)`
+  e://${process.argv[1]}`) {/* TODO: Fix JSX expression */}
 }
 
-export { fixNetlifyFunction };
+export { fixNetlifyFunction };`

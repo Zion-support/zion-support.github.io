@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 module.exports = {
   metaTags: {,
     viewport: 'width=device-width, initial-scale=1, viewport-fit=cover',
@@ -66,14 +67,54 @@ module.exports = {
       about: 0.8;
       contact: 0.7;
       blog: 0.6;
+=======
+module.exports = {/* TODO: Fix JSX expression */}
     },
-    changefreq: {
-      home: 'daily',
-      services: 'weekly',
-      about: 'monthly',
-      contact: 'monthly',
-      blog: 'daily',
+    twitterCard,
+  s: {/* TODO: Fix JSX expression */}
     },
+    additiona,
+  l: {/* TODO: Fix JSX expression */}
+    },
+  },
+  structuredDat,
+  a: {/* TODO: Fix JSX expression */}
+      },
+      sameA,
+  s: [
+        'http,
+  s://twitter.com/ZionTechGroup',
+        'http,
+  s://linkedin.com/company/zion-tech-group',
+        'http,
+  s://github.com/Zion-Holdings',
+      ],
+    },
+    websit,
+  e: {/* TODO: Fix JSX expression */}
+  s://zion.app/search?q={search_term_string}',
+        'query-input': 'required name=search_term_string',
+      },
+    },
+    breadcrumb,
+  s: true,
+    service,
+  s: true,
+    fa,
+  q: true,
+    review,
+  s: true,
+    event,
+  s: true,
+  },
+  sitemapOptimizatio,
+  n: {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
+    },
+    changefre,
+  q: {/* TODO: Fix JSX expression */}
+    },
+<<<<<<< HEAD
     lastmod: true;
     images: true;
     videos: true;
@@ -90,7 +131,27 @@ module.exports = {
     cls: {,
       target: 0.1;
       optimization: 'image-dimensions, font-loading, dynamic-content',
+=======
+    lastmo,
+  d: true,
+    image,
+  s: true,
+    video,
+  s: true,
+  },
+  coreWebVital,
+  s: {/* TODO: Fix JSX expression */}
+    },
+    fi,
+  d: {/* TODO: Fix JSX expression */}
+    },
+    cl,
+  s: {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     },
   },
-  timestamp: '2025-10-06T04:49:10.507Z',
+  timestam,
+  p: '2025-10-06T0,
+  4:4,
+  9:10.507Z',
 };

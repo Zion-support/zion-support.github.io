@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+<<<<<<< HEAD
 import {Calendar, Users, Zap, Brain, Shield, CheckCircle, Star, Phone, Target} from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -226,3 +227,8 @@ $4}
 };
 
 export default AISchedulerPage;
+=======
+import { ArrowRight, CheckCircle, Calendar, Clock, Users, Zap, Brain, Target, Shield, Globe, Phone, Mail } from 'lucide-react';
+
+export default AISchedulerPage;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

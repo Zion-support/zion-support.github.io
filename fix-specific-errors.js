@@ -3,15 +3,21 @@ import fs from 'fs';
 import { glob } from 'glob';
 
 // Function to process a file;
+<<<<<<< HEAD
 function processFile(filePath) {
   try {
     // Fix malformed closing tags;
     if (content.includes('</div>}')) {
+=======
+function processFile(filePath) {/* TODO: Fix JSX expression */}
+    if (content.includes('</div>}')) {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       content = content.replace(/<\/div>\}/g, '}');
       modified = true;
     }
 
     // Fix malformed closing tags with semicolons;
+<<<<<<< HEAD
     if (content.includes('</div>;')) {
       content = content.replace(/<\/div>;/g, ';');
       modified = true;
@@ -41,33 +47,51 @@ function processFile(filePath) {
           );
           modified = true;
         }
+=======
+    if (content.includes('</div>;')) {/* TODO: Fix JSX expression */}
+    }
+
+    // Fix malformed closing tags with commas;
+    if (content.includes('</div>,') && !content.includes('</div>, ')) {/* TODO: Fix JSX expression */}
+    }
+
+    // Fix unterminated regular expressions;
+    if (content.includes('const regex = /')) {/* TODO: Fix JSX expression */}
+    }
+
+    // Fix malformed object properties;
+    if (content.includes('const config = {/* TODO: Fix JSX expression */}
+        })
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         newLines.push(line);
       }
-      if (modified) {
-        content = newLines.join('\n');
+      if (modified) {/* TODO: Fix JSX expression */}
       }
     }
 
-    if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
-
-      return true;
+    if (modified) {/* TODO: Fix JSX expression */}
     }
 
     return false;
-  } catch (error) {
-
-    return false;
+  } catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 
 // Main execution;
+<<<<<<< HEAD
 async function main() {
   // Find all TypeScript/JavaScript files in app directory;
   files.forEach(file => {)
     if (processFile(file)) {
       fixedCount++;
     }
+=======
+async function main() {/* TODO: Fix JSX expression */}
+}
+  // Find all TypeScript/JavaScript files in app directory;
+  files.forEach(file => {/* TODO: Fix JSX expression */}
+    })
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   });
 
 }

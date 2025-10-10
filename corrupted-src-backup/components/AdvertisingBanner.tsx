@@ -1,15 +1,9 @@
 import React from 'react';
 
-interface AdvertisingBannerProps {
-  title: string;
-  description: string;
-  ctaText: string;
-  ctaUrl: string;
-  imageUrl?: string;
-  backgroundColor?: string;
-  textColor?: string;
+interface AdvertisingBannerProps {/* TODO: Fix JSX expression */}
 }
 
+<<<<<<< HEAD
 const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({,
   title;
   description,
@@ -47,11 +41,23 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({,
               width: '200px',
               height: 'auto'),}
               borderRadius: '0.25rem')}
+=======
+const,
+  AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({/* TODO: Fix JSX expression */})
+}) => {/* TODO: Fix JSX expression */}
+      }}
+    >
+      {/* TODO: Fix JSX expression */}
+            src={imageUrl}
+            alt={title}
+            style={/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
             }}
           />
         </div>
       )}
 
+<<<<<<< HEAD
       <div className="banner-content" style={{ flex: 1 }}></div>
         <h2 style={{ margin: '0 0 1rem 0', fontSize: '1.5rem' }}>{title}</h2>
         <p style={{ margin: '0 0 1.5rem 0', fontSize: '1rem', opacity: 0.9 }}>{description}</p>
@@ -72,6 +78,21 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({,
           }}
           onMouseOut={e => {}
             e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';}
+=======
+      <div className="banner-content" style={/* TODO: Fix JSX expression */}
+  x: 1 }}></div>
+        <h2 style={/* TODO: Fix JSX expression */}
+  e: '1.5rem' }}>{title}</h2>
+        <p style={/* TODO: Fix JSX expression */}
+  y: 0.9 }}>{description}</p>
+        <a></a>
+          href={ctaUrl}
+          style={/* TODO: Fix JSX expression */}
+          }}
+          onMouseOver={/* TODO: Fix JSX expression */}
+          }}
+          onMouseOut={/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           }}
         >
           {ctaText}
@@ -82,3 +103,4 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({,
 };
 
 export default AdvertisingBanner;
+"

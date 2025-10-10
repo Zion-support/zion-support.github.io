@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
 import fs from 'fs';
 import { glob } from 'glob';
@@ -151,3 +152,7 @@ if (import.meta.url === `file://${process.argv[1]}`) {
 }
 
 export { processFile, fixSyntaxErrors };
+=======
+// #!/usr/bin/env node import fs from 'fs'' import path from 'path'' import { glob } from 'glob' ' // Find all TypeScript/JavaScript files' const files = await glob('src/**/*.{ts,tsx,js}jsx}') {/* TODO: Fix JSX expression */}
+  d: '/workspace' }); let totalFixed = 0; let totalErrors = 0; for (const file of files) {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

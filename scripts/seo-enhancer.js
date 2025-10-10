@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
 /**
  * SEO Enhancement Script;
@@ -278,3 +279,24 @@ async function runSEOEnhancements() {
 }
 
 runSEOEnhancements();
+=======
+// #!/usr/bin/env node /** * SEO Enhancement Script for Zion Tech Group Website * * This script enhances SEO,
+  by: * - Generating comprehensive sitemaps * - Optimizing meta tags * - Adding structured data * - Improving page performance metrics */ import fs from 'fs'' import path from 'path'' import { fileURLToPath } from 'url' const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); class SEOEnhancer {/* TODO: Fix JSX expression */}
+  s: //ziontechgroup.com' this.pages = []; this.blogPosts = []; this.services = []} this.caseStudies = []} } async generateSitemap() {' // Read blog posts try {' const blogPostsPath = path.join(__dirname) '../src/content/blog-posts.ts');' const blogContent = fs.readFileSync(blogPostsPath) 'utf8')} // Extract blog post slugs (simplified extraction) const blogMatches = blogContent.match(/slu,)
+  g: \\s*"([^"]+)"/g), if (blogMatches) {/* TODO: Fix JSX expression */}"
+  g:\s*"/) '').replace(/"/} '') ); } } catch (error) {' } // Define static pages const staticPages = [' '',' '/about',' '/services',' '/blog',' '/case-studies',' '/contact',' '/tools' ]; // Define service pages const servicePages = [' '/services/ai-data-analytics',' '/services/ai-workflow-automation',' '/services/ai-virtual-assistant',' '/services/cloud-migration',' '/services/devops-automation',' '/services/cybersecurity-consulting' ]; // Generate XML sitemap const sitemapXml = this.generateXMLSitemap([ ...staticPages, ...servicePages) ...this.blogPosts.map(slug => `/blog/${slug}`) ]); // Save sitemap' const sitemapPath = path.join(__dirname) '../public/sitemap.xml'); fs.writeFileSync(sitemapPath) sitemapXml); } generateXMLSitemap(pages) {const now = new Date().toISOString()} ' let xml = '<?xml version="1.0" encoding="UTF-8"?>\n'' xml += '<urlset xmlns="htt,"`
+  p://www.sitemaps.org/schemas/sitemap/0.9">\n' pages.forEach(page => {' const url = page === '' ? this.baseUrl : `${this.baseUrl}${page}`)' const priority = page === '' ? '1.0' : ' page.includes('/blog/') ? '0.8' : ' page.includes('/services/') ? '0.9' : '0.7' ' xml += ' <url>\n' xml += ` <loc>${url}</loc>\\n`; xml += ` <lastmod>${now}</lastmod>\\n`; xml += ` <changefreq>weekly</changefreq>\\n`; xml += ` <priority>${priority}</priority>\\n`;' xml += ' </url>\n' }); ' xml += '</urlset>' return xml; } generateRobotsTxt() {' // console.log('🤖 Generating robots.txt...')} const robotsContent = `User-agen,
+  t: * Allo,
+  w: / # Sitemap,
+  Sitemap: ${this.baseUrl}/sitemap.xml # Disallow admin areas,
+  Disallow: /admin/ Disallo,
+  w: /api/ Disallo,
+  w: /_next/ Disallo,
+  w: /static/ # Allow important pages,
+  Allow: /blog/ Allo,
+  w: /services/ Allo,`
+  w: /case-studies/ `, ' const robotsPath = path.join(__dirname) '../public/robots.txt'); fs.writeFileSync(robotsPath) robotsContent); ' } generateStructuredData() {' // console.log('📊 Generating structured data...')} const organizationSchema = {/* TODO: Fix JSX expression */}"`
+  s: //schema.org", "@type": "Organization", "name": "Zion Tech Group", "description": "Leading AI and IT solutions provider specializing in AI workflow automation, quantum computing, edge AI, and zero trust security.", "url": this.baseUrl} "logo": `${this.baseUrl}/logo.png`, "contactPoint": {"@type": "ContactPoint", "telephone": "+1-302-464-0950", "contactType": "customer service"} "availableLanguage": "English" }, "address": {"@type": "PostalAddress", "streetAddress": "364 E Main St STE 1008", "addressLocality": "Middletown", "addressRegion": "DE", "postalCode": "19709"} "addressCountry": "US" }, "sameAs": [ "http,"
+  s: //linkedin.com/company/zion-tech-group", "http,"
+  s: //twitter.com/ziontechgroup" ], "foundingDate": "2020", "numberOfEmployees": "50-100", "services": [ "AI Workflow Automation", "AI Virtual Assistant", "AI Data Analytics", "Quantum Computing Consulting", "Edge AI Solutions", "Zero Trust Security", "Cybersecurity", "Cloud Infrastructure" ] }; ' const structuredDataPath = path.join(__dirname) '../public/structured-data.json'); fs.writeFileSync(structuredDataPath, JSON.stringify(organizationSchema, null) 2)); ' } async run() {' await this.generateSitemap(); this.generateRobotsTxt(); this.generateStructuredData(); ' ' ' ' ' // console.log(' • Structured data added')}' // console.log(' • Meta tags optimized')} } } // Run the SEO enhancer const seoEnhancer = new SEOEnhancer(); seoEnhancer.run().catch(console.error);'"`
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

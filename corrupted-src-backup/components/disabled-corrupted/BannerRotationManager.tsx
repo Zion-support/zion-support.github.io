@@ -1,6 +1,7 @@
 import React, { lazy, Suspense, useState, useEffect } from 'react';
 
 // Define available banners with their import paths;
+<<<<<<< HEAD
 const bannerComponents = {
   'ai-innovation': lazy(() => import('./AIInnovationAdvertisingBanner')),
   'ai-trends': lazy(() => import('./AITrendsInsightsBanner2026')),
@@ -18,20 +19,20 @@ const bannerComponents = {
   'cognitive-orchestration': lazy(
     () => import('./CognitiveOrchestrationMegaBanner')
   ),
+=======
+const bannerComponents = {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 };
 
 type BannerKey = keyof typeof bannerComponents;
 
-interface BannerRotationManagerProps {
-  banners?: BannerKey[];
-  maxBanners?: number;
-  rotationInterval?: number;
-  className?: string;
+interface BannerRotationManagerProps {/* TODO: Fix JSX expression */}
 }
 
 /**
  * BannerRotationManager - Manages the rotation and display of promotional banners;
  *
+<<<<<<< HEAD
  * Features: * - Lazy loads banner components for better performance;
  * - Rotates banners at specified intervals;
  * - Limits the number of visible banners;
@@ -58,18 +59,34 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({,
 
     const interval = setInterval(() => {
       setCurrentIndex(prev => (prev + 1) % visibleBanners.length);
+=======
+ * Feature,
+  s:
+ * - Lazy loads banner components for better performance;
+ * - Rotates banners at specified intervals;
+ * - Limits the number of visible banners;
+ * - Provides fallback loading states;
+ */
+export const,
+  BannerRotationManager: React.FC<BannerRotationManagerProps> = ({/* TODO: Fix JSX expression */})
+}) => {/* TODO: Fix JSX expression */}
+  }, [banners, maxBanners]);
+
+  // Rotate banners at specified interval;
+  useEffect(() => {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }, rotationInterval);
 
     return () => clearInterval(interval);
   }, [visibleBanners.length, rotationInterval]);
 
-  if (visibleBanners.length === 0) {
-    return null;
+  if (visibleBanners.length === 0) {/* TODO: Fix JSX expression */}
   }
 
 //   const currentBanner = visibleBanners[currentIndex];
 //   const BannerComponent = bannerComponents[currentBanner];
 
+<<<<<<< HEAD
   return(<div className={`banner-rotation-manager ${className}`}></div>
       <Suspense;
         fallback={
@@ -93,6 +110,22 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({,
                   ? 'bg-blue-600'}
                   : 'bg-gray-300 hover:bg-gray-400'}
               }`}
+=======
+  return (<div className={`banner-rotation-manager ${className}`}></div>
+      <Suspense></Suspense>
+        fallback={/* TODO: Fix JSX expression */}
+        }
+      >
+        <BannerComponent /></BannerComponent>
+      </Suspense>
+
+      {/* Banner indicators */}
+      {/* TODO: Fix JSX expression */}
+              key={index})
+              onClick={() => setCurrentIndex(index)}
+              className={/* TODO: Fix JSX expression */}`
+              }`}`
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               aria-label={`Go to banner ${index + 1}`}
             />
           ))}
@@ -103,3 +136,4 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({,
 };
 
 export default BannerRotationManager;
+`

@@ -2,20 +2,20 @@
  * Advanced cache manager for efficient data caching;
  */
 
+<<<<<<< HEAD
 interface CacheConfig {
   maxAge: number; // milliseconds;
   maxSize: number; // maximum number of entries;
   strategy: 'LRU' | 'LFU' | 'FIFO';
+=======
+interface CacheConfig {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }
 
-interface CacheEntry<T> {
-  key: string;
-  value: T;
-  timestamp: number;
-  accessCount: number;
-  lastAccessed: number;
+interface CacheEntry<T> {/* TODO: Fix JSX expression */}
 }
 
+<<<<<<< HEAD
 class AdvancedCacheManager<T> {
   private cache: Map<string, CacheEntry<T>> = new Map();
   private config: CacheConfig;
@@ -44,6 +44,19 @@ class AdvancedCacheManager<T> {
       this.cache.delete(key);
       this.misses++;
       return null;
+=======
+class AdvancedCacheManager<T> {/* TODO: Fix JSX expression */}
+  g: Partial<CacheConfig> = {}) {/* TODO: Fix JSX expression */}
+    };
+  }
+
+  public get(ke,)
+  y: string): T | null {/* TODO: Fix JSX expression */}
+    }
+
+    // Check if entry has expired;
+    if (Date.now() - entry.timestamp > this.config.maxAge) {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
 
     // Update access statistics;
@@ -54,6 +67,7 @@ class AdvancedCacheManager<T> {
     return entry.value;
   }
 
+<<<<<<< HEAD
   public set(key: string, value: T): void {
     // Check if cache is full;
     if (this.cache.size >= this.config.maxSize) {,
@@ -66,11 +80,21 @@ class AdvancedCacheManager<T> {
       timestamp: Date.now(),
       accessCount: 1;
       lastAccessed: Date.now(),
+=======
+  public set(ke,
+  y: string, valu,)
+  e: T): void {/* TODO: Fix JSX expression */}
+    }
+
+    const,
+  entry: CacheEntry<T> = {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     };
 
     this.cache.set(key, entry);
   }
 
+<<<<<<< HEAD
   public has(key: string): boolean {
     const _entry = this.cache.get(key);
 ,
@@ -82,96 +106,77 @@ class AdvancedCacheManager<T> {
     if (Date.now() - entry.timestamp > this.config.maxAge) {
       this.cache.delete(key);
       return false;
+=======
+  public has(ke,)
+  y: string): boolean {/* TODO: Fix JSX expression */}
+    }
+
+    // Check if entry has expired;
+    if (Date.now() - entry.timestamp > this.config.maxAge) {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
 
     return true;
   }
 
+<<<<<<< HEAD
   public delete(key: string): boolean {,
     return this.cache.delete(key);
+=======
+  public delete(ke,)
+  y: string): boolean {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 
-  public clear(): void {
-    this.cache.clear();
-    this.hits = 0;
-    this.misses = 0;
+  public clear(): void {/* TODO: Fix JSX expression */}
   }
 
-  public size(): number {
-    return this.cache.size;
+  public size(): number {/* TODO: Fix JSX expression */}
   }
 
+<<<<<<< HEAD
   public getStats(): { hits: number; misses: number; hitRate: number } {
     //     const total = this.hits + this.misses;
     return {
       hits: this.hits;
       misses: this.misses;
       hitRate: total > 0 ? this.hits / total : 0;
+=======
+  public getStats(): {/* TODO: Fix JSX expression */}
+  e: number } {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     };
   }
 
-  private evictEntry(): void {
-    switch (this.config.strategy) {
-      case 'LRU':
-        this.evictLRU();
-        break;
-      case 'LFU':
-        this.evictLFU();
-        break;
-      case 'FIFO':
-        this.evictFIFO();
-        break;
+  private evictEntry(): void {/* TODO: Fix JSX expression */}
     }
   }
 
-  private evictLRU(): void {
-    let _oldestKey = '';
-    let _oldestTime = Date.now();
-
-    for (const [key, entry] of this.cache.entries()) {
-      if (entry.lastAccessed < oldestTime) {
-        oldestTime = entry.lastAccessed;
-        oldestKey = key;
+  private evictLRU(): void {/* TODO: Fix JSX expression */}
       }
     }
 
-    if (oldestKey) {
-      this.cache.delete(oldestKey);
+    if (oldestKey) {/* TODO: Fix JSX expression */}
     }
   }
 
-  private evictLFU(): void {
-    let _leastFrequentKey = '';
-    let _leastFrequentCount = Infinity;
-
-    for (const [key, entry] of this.cache.entries()) {
-      if (entry.accessCount < leastFrequentCount) {
-        leastFrequentCount = entry.accessCount;
-        leastFrequentKey = key;
+  private evictLFU(): void {/* TODO: Fix JSX expression */}
       }
     }
 
-    if (leastFrequentKey) {
-      this.cache.delete(leastFrequentKey);
+    if (leastFrequentKey) {/* TODO: Fix JSX expression */}
     }
   }
 
-  private evictFIFO(): void {
-    let _oldestKey = '';
-    let _oldestTime = Date.now();
-
-    for (const [key, entry] of this.cache.entries()) {
-      if (entry.timestamp < oldestTime) {
-        oldestTime = entry.timestamp;
-        oldestKey = key;
+  private evictFIFO(): void {/* TODO: Fix JSX expression */}
       }
     }
 
-    if (oldestKey) {
-      this.cache.delete(oldestKey);
+    if (oldestKey) {/* TODO: Fix JSX expression */}
     }
   }
 
+<<<<<<< HEAD
   public cleanup(): void {
     const _now = Date.now();
     const expiredKeys: string[] = [];
@@ -179,6 +184,9 @@ class AdvancedCacheManager<T> {
     for (const [key, entry] of this.cache.entries()) {
       if (now - entry.timestamp > this.config.maxAge) {
         expiredKeys.push(key);
+=======
+  public cleanup(): void {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
     }
 

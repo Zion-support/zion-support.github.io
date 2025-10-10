@@ -1,6 +1,7 @@
 impo, r, t { ArrowLe, f, t, Bra, i, n, Sear, c, h, Trending, U, p, Z, a, p } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 
+<<<<<<< HEAD
 export default function CognitiveSearchEnterprise20, 2, 5() { 
   return(:src/pages/blog/ai-2025-oct-cognitive-search-enterprise/page.tsx;
     <>
@@ -442,6 +443,9 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
                 <Brain className="ml-2 h-5 w-5 ">,
                 <Brain className="ml-2 h-5 w-5" />,
   );
+=======
+export default function CognitiveSearchEnterprise20, 2, 5() {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 };
   </div>
   </div>

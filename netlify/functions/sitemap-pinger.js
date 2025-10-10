@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 exports.handler = async (event, context) => {
   try {
     // Ping search engines about sitemap updates;
@@ -18,6 +19,12 @@ exports.handler = async (event, context) => {
       body: JSON.stringify({),
         error: 'Failed to ping sitemap'),
         message: error.message;
+=======
+exports.handler = async (event, context) => {/* TODO: Fix JSX expression */}
+      })
+    };
+  } catch (error) {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       })
     };
   }

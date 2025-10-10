@@ -1,9 +1,9 @@
 import React from 'react';
 
-interface EnhancedServicesShowcaseProps {
-  className?: string;
+interface EnhancedServicesShowcaseProps {/* TODO: Fix JSX expression */}
 }
 
+<<<<<<< HEAD
 const EnhancedServicesShowcase = React.memo(function EnhancedServicesShowcase({)
   className = '')
 }: EnhancedServicesShowcaseProps) {
@@ -16,6 +16,12 @@ const EnhancedServicesShowcase = React.memo(function EnhancedServicesShowcase({)
   return (
     <div className={`bg-blue-100 p-4 rounded-lg ${className}`}></div>
       <h3 className="text-lg font-semibold text-blue-800">EnhancedServicesShowcase</h3>
+=======
+const EnhancedServicesShowcase = React.memo(function EnhancedServicesShowcase({/* TODO: Fix JSX expression */})
+}: EnhancedServicesShowcaseProps) {/* TODO: Fix JSX expression */}
+    <div className={`bg-blue-100 p-4 rounded-lg ${className}`}></div>
+      <h3 className="text-lg font-semibold text-blue-800">EnhancedServicesShowcase</h3>"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       <p className="text-blue-600">This component is under development.</p>
     </div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
@@ -23,3 +29,4 @@ const EnhancedServicesShowcase = React.memo(function EnhancedServicesShowcase({)
 });
 
 export default EnhancedServicesShowcase;
+"`

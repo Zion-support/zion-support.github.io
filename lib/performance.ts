@@ -1,7 +1,6 @@
-import { onCLS, onFCP, onLCP, onTTFB } from 'web-vitals';
-import type { Metric } from 'web-vitals';
-import { onCLS, onFCP, onLCP, onTTFB, type Metric } from 'web-vitals';
+import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
 
+<<<<<<< HEAD
 /**
  * Performance Monitoring Utility;
  * Tracks and reports web vitals and performance metrics;
@@ -16,6 +15,17 @@ declare global {
 
 // Types;
 interface PerformanceMetric {
+=======
+
+export interface Metric {
+  name: string;
+  value: number;
+  delta: number;
+  id: string;
+}
+
+export interface PerformanceMetric {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   name: string;
   value: number;
   rating: 'good' | 'needs-improvement' | 'poor';
@@ -23,6 +33,7 @@ interface PerformanceMetric {
   id: string;
 }
 
+<<<<<<< HEAD
 // Extended Performance interface for memory API;
 interface PerformanceMemory {
   usedJSHeapSize: number;
@@ -109,9 +120,41 @@ function sendToAnalytics(metric: Metric): void {,
   if (process.env['NODE_ENV'] === 'development') {
     // eslint-disable-next-line no-console;
 //     }
+=======
+function getRating(name: string, value: number): 'good' | 'needs-improvement' | 'poor' {
+  const thresholds = {
+    CLS: [0.1, 0.25],
+    FID: [100, 300],
+    FCP: [1800, 3000],
+    LCP: [2500, 4000],
+    TTFB: [800, 1800],
+  };
+
+  const [good, poor] = thresholds[name as keyof typeof thresholds] || [0, 0];
+  
+  if (value <= good) return 'good';
+  if (value <= poor) return 'needs-improvement';
+  return 'poor';
+}
+
+function sendToAnalytics(metric: Metric): void {
+  const performanceMetric: PerformanceMetric = {
+    name: metric.name,
+    value: metric.value,
+    rating: getRating(metric.name, metric.value),
+    delta: metric.delta,
+    id: metric.id
+  };
+
+  // Log in development
+  if (process.env.NODE_ENV === 'development') {
+    console.log('Performance metric:', performanceMetric);
+  }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 
   // Send to analytics;
   if (typeof window !== 'undefined' && window.gtag) {
+<<<<<<< HEAD
     window.gtag('event', metric.name, {)
       event_category: 'Web Vitals')
       value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value;)
@@ -125,11 +168,21 @@ function sendToAnalytics(metric: Metric): void {,
       non_interaction: true;
       non_interaction: true;
       non_interaction: true;
+=======
+    window.gtag('event', metric.name, {
+      event_category: 'Web Vitals',
+      value: Math.round(
+        metric.name === 'CLS' ? metric.value * 1000 : metric.value
+      ),
+      event_label: metric.id,
+      non_interaction: true,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     });
   }
 
   // Send to custom endpoint;
   if (process.env.NEXT_PUBLIC_PERFORMANCE_ENDPOINT) {
+<<<<<<< HEAD
     fetch(process.env.NEXT_PUBLIC_PERFORMANCE_ENDPOINT, {)
   if (process.env.NEXT_PUBLIC_PERFORMANCE_ENDPOINT) {
     fetch(process.env.NEXT_PUBLIC_PERFORMANCE_ENDPOINT, {)
@@ -244,6 +297,20 @@ export function generatePerformanceReport(): PerformanceReport {
   if (typeof window === 'undefined') return;
 
   // Track Core Web Vitals;
+=======
+    fetch(process.env.NEXT_PUBLIC_PERFORMANCE_ENDPOINT, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(performanceMetric),
+    }).catch(console.error);
+  }
+}
+
+export function reportWebVitals(): void {
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   getCLS(sendToAnalytics);
   getFID(sendToAnalytics);
   getFCP(sendToAnalytics);
@@ -251,6 +318,7 @@ export function generatePerformanceReport(): PerformanceReport {
   getTTFB(sendToAnalytics);
 }
 
+<<<<<<< HEAD
 /**
  * Get current performance report;
  */
@@ -658,12 +726,41 @@ export function generatePerformanceReport(): PerformanceReport {
     url: typeof window !== 'undefined' ? window.location.href : '',
     userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : '',
   };
+=======
+
+export function measurePerformance(name: string, fn: () => void): void {
+  const start = performance.now();
+  fn();
+  const end = performance.now();
+  
+  sendToAnalytics({
+    name,
+    value: end - start,
+    delta: end - start,
+    id: `${name}-${Date.now()}`,
+  });
 }
 
-/**
-): PerformanceObserver | null {
-  if (typeof PerformanceObserver === 'undefined') return null;
+export function measureAsyncPerformance<T>(
+  name: string,
+  fn: () => Promise<T>
+): Promise<T> {
+  const start = performance.now();
+  return fn().then((result) => {
+    const end = performance.now();
+    sendToAnalytics({
+      name,
+      value: end - start,
+      delta: end - start,
+      id: `${name}-${Date.now()}`,
+    });
+    return result;
+  });
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
+}
 
+
+<<<<<<< HEAD
   try {
     const observer = new PerformanceObserver(list => {)
       const _entries = list.getEntries();
@@ -1010,3 +1107,5 @@ export function usePerformanceMonitoring() {
 };
 
 export default performanceUtils;
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

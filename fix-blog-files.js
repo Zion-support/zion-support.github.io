@@ -4,6 +4,7 @@ import { fileURLToPath } from 'url';
 
 
 // Function to fix blog files with parsing errors;
+<<<<<<< HEAD
 function fixBlogFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
@@ -11,6 +12,10 @@ function fixBlogFile(filePath) {
 
     // Fix missing closing parenthesis and return statement;
     if (content.includes('};') && !content.includes('  );')) {
+=======
+function fixBlogFile(filePath) {/* TODO: Fix JSX expression */}
+    if (content.includes('};') && !content.includes('  );')) {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       content = content.replace(/};$/, '  );\n};');
       modified = true;
     }
@@ -20,11 +25,10 @@ function fixBlogFile(filePath) {
       return;
     }
 
-    if (modified) {
-      fs.writeFileSync(filePath, content);
+    if (modified) {/* TODO: Fix JSX expression */}`
       console.log(`✓ Fixed ${filePath}`);
     }
-  } catch (error) {
+  } catch (error) {/* TODO: Fix JSX expression */}`
     console.log(`✗ Error processing ${filePath}: ${error.message}`);
   }
 }
@@ -53,11 +57,8 @@ const blogFiles = [
   'src/blog/ai-trends-2026-future-enterprise-transformation/page.tsx'
 ];
 
-for (const file of blogFiles) {
-  const fullPath = path.join(__dirname, file);
-  if (fs.existsSync(fullPath)) {
-    fixBlogFile(fullPath);
+for (const file of blogFiles) {/* TODO: Fix JSX expression */}
   }
 }
 
-console.log('\n✅ Blog files fixed!');
+console.log('\n✅ Blog files fixed!');`

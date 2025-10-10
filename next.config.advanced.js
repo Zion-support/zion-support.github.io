@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+<<<<<<< HEAD
 const nextConfig = {
   experimental: {,
     optimizeCss: true;
@@ -8,10 +9,14 @@ const nextConfig = {
         '*.svg': {,
           loaders: ['@svgr/webpack'],
           as: '*.js',
+=======
+const nextConfig = {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         },
       },
     },
   },
+<<<<<<< HEAD
   compiler: {,
     removeConsole: process.env.NODE_ENV === 'production',
     styledComponents: true;
@@ -32,23 +37,32 @@ const nextConfig = {
           {,
             key: 'X-Frame-Options',
             value: 'DENY',
+=======
+  compile,
+  r: {/* TODO: Fix JSX expression */}
+  },
+  image,
+  s: {/* TODO: Fix JSX expression */}
+  },
+  async headers() {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           },
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
+          {/* TODO: Fix JSX expression */}
           },
-          {
-            key: 'Referrer-Policy',
-            value: 'strict-origin-when-cross-origin',
+          {/* TODO: Fix JSX expression */}
           },
         ],
       },
+<<<<<<< HEAD
       {
         source: '/static/(.*)',
         headers: [,
           {,
             key: 'Cache-Control',
             value: 'public, max-age=31536000, immutable',
+=======
+      {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           },
         ],
       },

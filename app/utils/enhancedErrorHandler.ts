@@ -4,6 +4,7 @@
  * Provides comprehensive error tracking, reporting, and recovery mechanisms;
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface ErrorContext {
   userId?: string;
   sessionId?: string;
@@ -114,10 +115,23 @@ class EnhancedErrorHandler {}
       ...config}
     }
     this.initialize()
+=======
+interface ErrorContext {/* TODO: Fix JSX expression */}
+}
+interface ErrorReport {/* TODO: Fix JSX expression */}
+}
+interface ErrorHandlerConfig {/* TODO: Fix JSX expression */}
+}
+class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
+  g: Partial<ErrorHandlerConfig> = {}) {/* TODO: Fix JSX expression */}
+    };
+    this.initialize();
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
   /**
    * Initialize the error handler;
    */
+<<<<<<< HEAD
 <<<<<<< HEAD
   private initialize(): void {
     if (this.isInitialized) return;
@@ -134,11 +148,15 @@ class EnhancedErrorHandler {}
     this.setupErrorCleanup()
     this.isInitialized = true;
     if (process.env['NODE_ENV'] === 'development') {}
+=======
+  private initialize(): void {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
   }
   /**
    * Setup global error handlers;
    */
+<<<<<<< HEAD
 <<<<<<< HEAD
   private setupGlobalErrorHandlers(): void {
     window.addEventListener('error', event => {
@@ -163,10 +181,16 @@ class EnhancedErrorHandler {}
         error: event.error}
       })
     })
+=======
+  private setupGlobalErrorHandlers(): void {/* TODO: Fix JSX expression */}
+      });
+    });
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
   /**
    * Setup unhandled promise rejection handler;
    */
+<<<<<<< HEAD
 <<<<<<< HEAD
   private setupUnhandledRejectionHandler(): void {
     window.addEventListener('unhandledrejection', event => {)
@@ -183,10 +207,16 @@ class EnhancedErrorHandler {}
         reason: event.reason}
       })
     })
+=======
+  private setupUnhandledRejectionHandler(): void {/* TODO: Fix JSX expression */}
+      });
+    });
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
   /**
    * Setup resource error handler;
    */
+<<<<<<< HEAD
 <<<<<<< HEAD
   private setupResourceErrorHandler(): void {
     window.addEventListener('error')
@@ -222,10 +252,26 @@ class EnhancedErrorHandler {}
       },
       true;
     )
+=======
+  private setupResourceErrorHandler(): void {/* TODO: Fix JSX expression */}
+          };
+          this.handleError({/* TODO: Fix JSX expression */}
+  resource: ${target?.src || target?.href}`,
+            elemen,
+  t: event.target?.constructor.name,
+            sr,
+  c: target?.src || target?.href;)
+          });
+        }
+      },
+      true;
+    );
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
   /**
    * Setup network error handler;
    */
+<<<<<<< HEAD
 <<<<<<< HEAD
   private setupNetworkErrorHandler(): void {
     // Monitor fetch requests;
@@ -274,6 +320,26 @@ class EnhancedErrorHandler {}
           error: error instanceof Error ? error : new Error(String(error))
 >>>>>>> origin/merge-error-fixes
         })
+=======
+  private setupNetworkErrorHandler(): void {/* TODO: Fix JSX expression */}`
+  failed: ${response.status} ${response.statusText}`,
+            ur,
+  l: args[0] as string,
+            statu,
+  s: response.status,
+            statusTex,
+  t: response.statusText;
+          });
+        }
+        return response;
+      } catch (error) {/* TODO: Fix JSX expression */}`
+  failed: ${error}`,
+          ur,
+  l: args[0] as string,
+          erro,
+  r: error instanceof Error ? error : new Error(String(error))
+        });
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         throw error;
       }
     }
@@ -281,6 +347,7 @@ class EnhancedErrorHandler {}
   /**
    * Setup performance error handler;
    */
+<<<<<<< HEAD
 <<<<<<< HEAD
   private setupPerformanceErrorHandler(): void {
     if (!this.config.enablePerformanceImpact) return;
@@ -315,12 +382,28 @@ class EnhancedErrorHandler {}
         })
         observer.observe({ type: 'longtask', buffered: true })
       } catch (error) {}
+=======
+  private setupPerformanceErrorHandler(): void {/* TODO: Fix JSX expression */}`
+  detected: ${entry.duration.toFixed(2)}ms`,
+                duratio,
+  n: entry.duration,
+                categor,
+  y: 'performance'
+              });
+            }
+          });
+        });
+        observer.observe({/* TODO: Fix JSX expression */})
+  d: true });
+      } catch (error) {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         }
     }
   }
   /**
    * Setup error recovery mechanisms;
    */
+<<<<<<< HEAD
 <<<<<<< HEAD
   private setupErrorRecovery(): void {
     if (!this.config.enableErrorRecovery) return;
@@ -333,11 +416,15 @@ class EnhancedErrorHandler {}
     setInterval(() => {}
 >>>>>>> origin/merge-error-fixes
       this.attemptErrorRecovery();}
+=======
+  private setupErrorRecovery(): void {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }, 30000); // Check every 30 seconds;
   }
   /**
    * Setup error cleanup;
    */
+<<<<<<< HEAD
 <<<<<<< HEAD
   private setupErrorCleanup(): void {
     // Clean up old errors;
@@ -350,6 +437,9 @@ class EnhancedErrorHandler {}
       () => {}
 >>>>>>> origin/merge-error-fixes
         this.cleanupOldErrors();}
+=======
+  private setupErrorCleanup(): void {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       },
       24 * 60 * 60 * 1000;
     ); // Daily cleanup;
@@ -357,6 +447,7 @@ class EnhancedErrorHandler {}
   /**
    * Handle error with comprehensive processing;
    */
+<<<<<<< HEAD
   private handleError(errorData: {)}
 // type: ErrorReport['type'];
 // message: string;
@@ -389,6 +480,11 @@ class EnhancedErrorHandler {}
     if (!this.checkRateLimit()) {}
 >>>>>>> origin/merge-error-fixes
       return;}
+=======
+  private handleError(errorDat,
+  a: {/* TODO: Fix JSX expression */})
+  }): void {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
     const errorReport = this.createErrorReport(errorData)
     this.processError(errorReport)
@@ -396,6 +492,7 @@ class EnhancedErrorHandler {}
   /**
    * Create comprehensive error report;
    */
+<<<<<<< HEAD
   private createErrorReport(errorData: {)}
 // type: ErrorReport['type'];
 // message: string;
@@ -469,10 +566,20 @@ class EnhancedErrorHandler {}
       },
       resolved: false;
     }
+=======
+  private createErrorReport(errorDat,
+  a: {/* TODO: Fix JSX expression */})
+  }): ErrorReport {/* TODO: Fix JSX expression */}
+      },
+      resolve,
+  d: false;
+    };
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
   /**
    * Process error report;
    */
+<<<<<<< HEAD
 <<<<<<< HEAD
   private processError(errorReport: ErrorReport): void {
     // Add to errors array;
@@ -515,11 +622,25 @@ class EnhancedErrorHandler {}
     if (this.config.enablePerformanceImpact) {}
 >>>>>>> origin/merge-error-fixes
       this.assessPerformanceImpact(errorReport);}
+=======
+  private processError(errorRepor,)
+  t: ErrorReport): void {/* TODO: Fix JSX expression */}
+    }
+    // Remote reporting;
+    if (this.config.enableRemoteReporting) {/* TODO: Fix JSX expression */}
+    }
+    // Error aggregation;
+    if (this.config.enableErrorAggregation) {/* TODO: Fix JSX expression */}
+    }
+    // Performance impact;
+    if (this.config.enablePerformanceImpact) {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   }
   /**
    * Get error context;
    */
+<<<<<<< HEAD
 <<<<<<< HEAD
   private getErrorContext(): ErrorContext {
     return {
@@ -535,10 +656,15 @@ class EnhancedErrorHandler {}
       sessionId: this.getSessionId(),
       userId: this.getUserId()}
     }
+=======
+  private getErrorContext(): ErrorContext {/* TODO: Fix JSX expression */}
+    };
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
   /**
    * Determine error severity;
    */
+<<<<<<< HEAD
 <<<<<<< HEAD
   private determineSeverity(errorData: {)
     type: ErrorReport['type']),
@@ -575,12 +701,26 @@ class EnhancedErrorHandler {}
     }
     if (errorData.type === 'promise') {}
       return 'medium';}
+=======
+  private determineSeverity(errorDat,
+  a: {/* TODO: Fix JSX expression */})
+  }): ErrorReport['severity'] {/* TODO: Fix JSX expression */}
+    }
+    if (errorData.type === 'javascript' &&)
+      errorData.message.includes('Cannot read property')
+    ) {/* TODO: Fix JSX expression */}
+    }
+    if (errorData.type === 'resource' && errorData.element === 'img') {/* TODO: Fix JSX expression */}
+    }
+    if (errorData.type === 'promise') {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
     return 'low'
   }
   /**
    * Categorize error;
    */
+<<<<<<< HEAD
 <<<<<<< HEAD
   private categorizeError(errorData: {,)
     type: ErrorReport['type']),
@@ -595,10 +735,18 @@ class EnhancedErrorHandler {}
     }
     if (errorData.type === 'resource') {}
       return 'performance';}
+=======
+  private categorizeError(errorDat,
+  a: {/* TODO: Fix JSX expression */})
+  }): ErrorReport['category'] {/* TODO: Fix JSX expression */}
     }
-    if (
+    if (errorData.type === 'resource') {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
+    }
+    if ()
       errorData.message.includes('SecurityError') ||
       errorData.message.includes('CORS')
+<<<<<<< HEAD
     ) {}
       return 'security';}
     }
@@ -607,12 +755,20 @@ class EnhancedErrorHandler {}
     }
     if (errorData.type === 'promise') {}
       return 'runtime';}
+=======
+    ) {/* TODO: Fix JSX expression */}
+    }
+    if (errorData.message.includes('SyntaxError')) {/* TODO: Fix JSX expression */}
+    }
+    if (errorData.type === 'promise') {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
     return 'unknown'
   }
   /**
    * Generate error tags;
    */
+<<<<<<< HEAD
 <<<<<<< HEAD
   private generateTags(errorData: {),
     filename?: string;),
@@ -640,35 +796,62 @@ class EnhancedErrorHandler {}
     }
     if (errorData.duration && errorData.duration > 1000) {}
       tags.push('slow');}
+=======
+  private generateTags(errorDat,
+  a: {/* TODO: Fix JSX expression */})
+  }): string[] {/* TODO: Fix JSX expression */}
+    }
+    if (errorData.type === 'network') {/* TODO: Fix JSX expression */}
+    }
+    if (errorData.type === 'resource') {/* TODO: Fix JSX expression */}
+    }
+    if (errorData.duration && errorData.duration > 1000) {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
     return tags;
   }
   /**
    * Generate unique error ID;
    */
+<<<<<<< HEAD
   private generateErrorId(): string {`}
     return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+=======
+  private generateErrorId(): string {/* TODO: Fix JSX expression */}`
+    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
   /**
    * Get session ID;
    */
+<<<<<<< HEAD
   private getSessionId(): string {}
     let sessionId = sessionStorage.getItem('error_session_id')
     if (!sessionId) {`}
       sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
       sessionStorage.setItem('error_session_id', sessionId)
+=======
+  private getSessionId(): string {/* TODO: Fix JSX expression */}`
+      sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+      sessionStorage.setItem('error_session_id', sessionId);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
     return sessionId;
   }
   /**
    * Get user ID;
    */
+<<<<<<< HEAD
   private getUserId(): string | undefined {}
     return localStorage.getItem('user_id') || undefined;}
+=======
+  private getUserId(): string | undefined {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
   /**
    * Check rate limiting;
    */
+<<<<<<< HEAD
   private checkRateLimit(): boolean {}
     const now = Date.now()
 <<<<<<< HEAD
@@ -686,6 +869,11 @@ class EnhancedErrorHandler {}
       }
     } else {}
       this.errorRateLimit = 1;}
+=======
+  private checkRateLimit(): boolean {/* TODO: Fix JSX expression */}
+      }
+    } else {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
     this.lastErrorTime = now;
     return true;
@@ -693,6 +881,7 @@ class EnhancedErrorHandler {}
   /**
    * Update error counters;
    */
+<<<<<<< HEAD
   private updateErrorCounts(errorReport: ErrorReport): void {`}
     this.errorCounts.set(key, (this.errorCounts.get(key) || 0) + 1)
 <<<<<<< HEAD
@@ -704,10 +893,20 @@ class EnhancedErrorHandler {}
       (this.errorCategories.get(errorReport.category) || 0) + 1
 >>>>>>> origin/merge-error-fixes
     )
+=======
+  private updateErrorCounts(errorRepor,)
+  t: ErrorReport): void {/* TODO: Fix JSX expression */}`
+    const key = `${errorReport.type}_${errorReport.category}`;
+    this.errorCounts.set(key, (this.errorCounts.get(key) || 0) + 1);
+    this.errorCategories.set(errorReport.category,)
+      (this.errorCategories.get(errorReport.category) || 0) + 1;
+    );
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
   /**
    * Log error to console;
    */
+<<<<<<< HEAD
 <<<<<<< HEAD
   private logError(errorReport: ErrorReport): void {,
 =======
@@ -716,12 +915,20 @@ class EnhancedErrorHandler {}
     const emoji = this.getSeverityEmoji(errorReport.severity);`}
 
     if (errorReport.stack) {}
+=======
+  private logError(errorRepor,)
+  t: ErrorReport): void {/* TODO: Fix JSX expression */}`
+    console.group(`${emoji} Error,)`
+  Report: ${errorReport.id}`);
+    if (errorReport.stack) {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
 
   }
   /**
    * Get severity emoji;
    */
+<<<<<<< HEAD
   private getSeverityEmoji(severity: ErrorReport['severity']): string {}
     switch (severity) {}
       case 'critical':
@@ -734,11 +941,16 @@ class EnhancedErrorHandler {}
         return '🟢',
       default:,
         return '❓';}
+=======
+  private getSeverityEmoji(severit,)
+  y: ErrorReport['severity']): string {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   }
   /**
    * Report to remote service;
    */
+<<<<<<< HEAD
 <<<<<<< HEAD
   private async reportToRemote(errorReport: ErrorReport): Promise<void> {,
     if (!this.config.remoteEndpoint) return;
@@ -760,21 +972,37 @@ class EnhancedErrorHandler {}
         body: JSON.stringify(errorReport),
       })
     } catch (error) {}
+=======
+  private async reportToRemote(errorRepor,)
+  t: ErrorReport): Promise<void> {/* TODO: Fix JSX expression */}`
+  n: `Bearer ${this.config.apiKey}`
+        },
+        bod,
+  y: JSON.stringify(errorReport)
+      });
+    } catch (error) {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
   }
   /**
    * Aggregate error data;
    */
 <<<<<<< HEAD
+<<<<<<< HEAD
   private aggregateError(errorReport: ErrorReport): void {,
 =======
   private aggregateError(errorReport: ErrorReport): void {}
 >>>>>>> origin/merge-error-fixes
     // This could be expanded to include more sophisticated aggregation}
+=======
+  private aggregateError(errorRepor,)
+  t: ErrorReport): void {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   /**
    * Assess performance impact;
    */
+<<<<<<< HEAD
 <<<<<<< HEAD
   private assessPerformanceImpact(errorReport: ErrorReport): void {,
     if(errorReport.type === 'resource' ||,)
@@ -786,11 +1014,16 @@ class EnhancedErrorHandler {}
       errorReport.category === 'performance'
 >>>>>>> origin/merge-error-fixes
     ) {}
+=======
+  private assessPerformanceImpact(errorRepor,)
+  t: ErrorReport): void {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
   }
   /**
    * Attempt error recovery;
    */
+<<<<<<< HEAD
 <<<<<<< HEAD
   private attemptErrorRecovery(): void {
     const recentErrors = this.errors.filter(error =>)
@@ -809,11 +1042,18 @@ class EnhancedErrorHandler {}
         }
       // Implement recovery strategies here;
       this.clearErrorState()
+=======
+  private attemptErrorRecovery(): void {/* TODO: Fix JSX expression */}
+        }
+      // Implement recovery strategies here;
+      this.clearErrorState();
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   }
   /**
    * Clear error state;
    */
+<<<<<<< HEAD
 <<<<<<< HEAD
   private clearErrorState(): void {
     // Reset error counters;
@@ -825,11 +1065,15 @@ class EnhancedErrorHandler {}
     this.errorCategories.clear()
     this.errorRateLimit = 0;
     if (process.env['NODE_ENV'] === 'development') { }
+=======
+  private clearErrorState(): void {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
   }
   /**
    * Clean up old errors;
    */
+<<<<<<< HEAD
   private cleanupOldErrors(): void {}
     const cutoffDate = new Date()
     cutoffDate.setDate(cutoffDate.getDate() - this.config.errorRetentionDays)
@@ -842,11 +1086,15 @@ class EnhancedErrorHandler {}
 >>>>>>> origin/merge-error-fixes
     )
     if (process.env['NODE_ENV'] === 'development') { }
+=======
+  private cleanupOldErrors(): void {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
   }
   /**
    * Get error statistics;
    */
+<<<<<<< HEAD
 <<<<<<< HEAD
   public getErrorStatistics(): {
     totalErrors: number;
@@ -874,6 +1122,17 @@ class EnhancedErrorHandler {}
       errorsBySeverity[error.severity] =
         (errorsBySeverity[error.severity] || 0) + 1;}
     })
+=======
+  public getErrorStatistics(): {/* TODO: Fix JSX expression */}
+  } {/* TODO: Fix JSX expression */}
+  errorsByType: Record<string, number> = {};
+    const,
+  errorsByCategory: Record<string, number> = {};
+    const,
+  errorsBySeverity: Record<string, number> = {};
+    this.errors.forEach(error => {/* TODO: Fix JSX expression */})
+    });
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     const recentErrors = this.errors;
       .filter(error => !error.resolved)
       .sort()
@@ -881,6 +1140,7 @@ class EnhancedErrorHandler {}
           new Date(b.context.timestamp).getTime() -
           new Date(a.context.timestamp).getTime()
       )
+<<<<<<< HEAD
       .slice(0, 10)
 <<<<<<< HEAD
     return {
@@ -894,10 +1154,16 @@ class EnhancedErrorHandler {}
       errorsBySeverity,
       recentErrors}
     }
+=======
+      .slice(0, 10);
+    return {/* TODO: Fix JSX expression */}
+    };
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
   /**
    * Export error data;
    */
+<<<<<<< HEAD
 <<<<<<< HEAD
   public exportErrorData(): string {
     return JSON.stringify({)
@@ -915,10 +1181,18 @@ class EnhancedErrorHandler {}
       null,
       2;
     )
+=======
+  public exportErrorData(): string {/* TODO: Fix JSX expression */}
+      },
+      null,
+      2;
+    );
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
   /**
    * Manually report error;
    */
+<<<<<<< HEAD
 <<<<<<< HEAD
   public reportError(message: string, context?: Partial<ErrorContext>): string {
     const errorReport = this.createErrorReport({)
@@ -933,10 +1207,17 @@ class EnhancedErrorHandler {}
       ...context}
     })
     this.processError(errorReport)
+=======
+  public reportError(messag,)
+  e: string, context?: Partial<ErrorContext>): string {/* TODO: Fix JSX expression */}
+    });
+    this.processError(errorReport);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     return errorReport.id;
   }
 }
 // Export singleton instance;
+<<<<<<< HEAD
 export const errorHandler = new EnhancedErrorHandler()
 <<<<<<< HEAD
 // Export class for custom instances;
@@ -950,3 +1231,10 @@ export {}
   type ErrorContext,
   type ErrorHandlerConfig}
 }
+=======
+export const errorHandler = new EnhancedErrorHandler();
+// Export class for custom instances;
+export {/* TODO: Fix JSX expression */}
+};
+`
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

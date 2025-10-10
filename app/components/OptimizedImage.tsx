@@ -2,6 +2,7 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 
+<<<<<<< HEAD
 interface OptimizedImageProps {
   src: string;,
     alt: string;
@@ -185,3 +186,29 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({,
 };
 
 export default OptimizedImage;
+=======
+interface OptimizedImageProps {/* TODO: Fix JSX expression */}
+}
+
+const,
+  OptimizedImage: React.FC<OptimizedImageProps> = ({/* TODO: Fix JSX expression */})
+}) => {/* TODO: Fix JSX expression */}
+      src={src}
+      alt={alt}
+      width={width}
+      height={height}
+      className={`${className}`}
+      loading={priority ? 'eager' : 'lazy'}
+      decoding="async"
+      style={/* TODO: Fix JSX expression */}`
+  h: width ? `${width}px` : 'auto',
+        heigh,`
+  t: height ? `${height}px` : 'auto'
+      }}
+    />
+  );
+};
+
+export default OptimizedImage;
+"`
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

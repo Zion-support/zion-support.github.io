@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const, October2025NewAIBreakthroughContentBanne, r: Rea, c, t.FC = () => {
 <<<<<<< HEAD
   return(<div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/40, vi, a-indi, g, o-9, 0, 0/40, t, o-emera, l, d-9, 0, 0/40, borde, r-2, borde, r-purp, l, e-5, 0, 0/40, rounde, d-2x, l, p-8, m, y-12, shado, w-2, x, l">";
@@ -274,6 +275,9 @@ const, October2025NewAIBreakthroughContentBanne, r: Rea, c, t.FC = () => {
       </d, i, v>
     </d, i, v>
   );
+=======
+const, October2025NewAIBreakthroughContentBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 };
 export default October2025NewAIBreakthroughContentBanner;
 ;

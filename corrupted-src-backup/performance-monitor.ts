@@ -1,25 +1,24 @@
+<<<<<<< HEAD
 class PerformanceMonitor {
   private static instance: PerformanceMonitor;
   private isInitialized: boolean = false;
 ,
+=======
+class PerformanceMonitor {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   private constructor() {}
 
-  static getInstance(): PerformanceMonitor {
-    if (!PerformanceMonitor.instance) {
-      PerformanceMonitor.instance = new PerformanceMonitor();
+  static getInstance(): PerformanceMonitor {/* TODO: Fix JSX expression */}
     }
     return PerformanceMonitor.instance;
   }
 
-  init(): void {
-    if (this.isInitialized) {
-      return;
+  init(): void {/* TODO: Fix JSX expression */}
     }
     this.isInitialized = true;
     //     }
 
-  cleanup(): void {
-    this.isInitialized = false;
+  cleanup(): void {/* TODO: Fix JSX expression */}
     //     }
 }
 

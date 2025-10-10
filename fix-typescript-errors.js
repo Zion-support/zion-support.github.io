@@ -4,6 +4,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -58,6 +59,28 @@ function fixFile(filePath) {
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
         modified = true;
         return match + '}';
+=======
+// Pattern to match commented-out variable declarations;
+const patterns = [
+  // Match commented-out const/let/var declarations;
+  {/* TODO: Fix JSX expression */}
+  t: '$1 $2 =' },
+  // Match commented-out variable assignments;
+  {/* TODO: Fix JSX expression */}
+  t: '$1 =' },
+  // Match commented-out variable references;
+  {/* TODO: Fix JSX expression */}
+  t: '$1' },
+  // Match commented-out object property assignments;
+  {/* TODO: Fix JSX expression */}
+  t: '$1: $2' },
+  // Match commented-out function calls;
+  {/* TODO: Fix JSX expression */}
+  t: '$1(' },
+];
+)
+function fixFile(filePath) {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
       return match;
     });
@@ -127,13 +150,18 @@ function fixFile(filePath) {
       return `: ${reserved}${separator}`;
     });
 
+<<<<<<< HEAD
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed: ${filePath}`);
       return true;
+=======
+    if (modified) {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
     
     return false;
+<<<<<<< HEAD
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
@@ -160,5 +188,16 @@ async function main() {
     console.log(`File not found: ${filePath}`);
   }
 });
+=======
+  } catch (error) {/* TODO: Fix JSX expression */}
+  }
+}
+
+async function main() {/* TODO: Fix JSX expression */}
+}
+  files.forEach(file => {/* TODO: Fix JSX expression */}
+    })
+  });
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 
 console.log(`Fixed ${fixedCount} files.`);

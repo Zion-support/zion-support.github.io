@@ -3,33 +3,33 @@ const { isValidEmail } = require('../emailUtils.cjs');
 
 async function handler(req, res) {
   if (req.method !== 'POST') {
-    res.statusCode = 405;
-    res.setHeader('Allow', 'POST');
-    res.end('Method Not Allowed');
-    return;
+    return res.status(405).json({ error: 'Method not allowed' });
   }
+
   try {
     const { email } = req.body || {};
 
     if (!email) {
-      res.statusCode = 400;
-      res.json({ error: 'Email is required' });
-      return;
+      return res.status(400).json({ error: 'Email is required' });
     }
 
     if (!isValidEmail(email)) {
-      res.statusCode = 400;
-      res.json({ error: 'Invalid email format' });
-      return;
+      return res.status(400).json({ error: 'Invalid email format' });
     }
+<<<<<<< HEAD
     // Save subscription logic here;
+=======
+
+    // Save subscription logic here
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     const subscription = {
       email,
       subscribedAt: new Date().toISOString(),
-      status: 'active',
+      status: 'active'
     };
 
     res.statusCode = 200;
+<<<<<<< HEAD
     res.json({)
       message: 'Successfully subscribed to newsletter'),
       subscription),
@@ -37,6 +37,12 @@ async function handler(req, res) {
   } catch {
     //     res.statusCode = 500;
     res.json({ error: 'Failed to subscribe to newsletter' });
+=======
+    res.json({ success: true, message: 'Successfully subscribed to newsletter' });
+  } catch (error) {
+    console.error('Newsletter subscription error:', error);
+    res.status(500).json({ error: 'Failed to subscribe to newsletter' });
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 }
 

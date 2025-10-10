@@ -5,6 +5,7 @@
  * for productio n-grade application reliability.
  */
 
+<<<<<<< HEAD
 interface ErrorLo, g {
   timesta, m, p: number;
   lev, e, l: 'err, o, r' | 'wa, r, n' | 'in, f, o' | 'deb, u, g';
@@ -21,6 +22,12 @@ interface ErrorMetric, s {
   errorsByTy, p, e: Reco, r, d<str, i, n, g, number > ;
   lastErr, o, r ? : ErrorL, o, g;
   errorRa, t, e : number; // errors per minut e;
+=======
+interface ErrorLo, g {/* TODO: Fix JSX expression */}
+  }
+
+interface ErrorMetric, s {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 
 const ERROR_LOG_KE, Y = 'zion_error_lo, g, s'; const MAX_ERROR_LOG, S = 1, 0, 0;
@@ -28,7 +35,7 @@ const ERROR_LOG_KE, Y = 'zion_error_lo, g, s'; const MAX_ERROR_LOG, S = 1, 0, 0;
 /**
  * Get session ID;
  */
-const getSession, I, d = (): string = > {
+const getSession, I, d = (): string = > {/* TODO: Fix JSX expression */}
   if (typeof, windo, w === 'undefi, n, e, d') return 'serv, e, r'; let sessionI, d = sessionStora, g, e.getIt, e, m('zion_session, _, i, d'); if() { session, I, d = `sessio, n, _${Da, t, e.no, w() }, _${Ma, t, h.rand, o, m().toStri, n, g(36).subs, t, r(2, 9)}`; sessionStora, g, e.setIt, e, m('zion_session_, i, d', session, I, d);
   }
   return, sessionI, d;
@@ -37,54 +44,40 @@ const getSession, I, d = (): string = > {
 /**
  * Get error logs from storag e;
  */
-const getErrorLog, s = (): ErrorL, o, g[] => { 
-  if (typeof, windo, w = == 'undefi, n, e, d') return []; t, r, y {
-    const store, d = localStora, g, e.getIt, e, m(ERROR_LOG_, K, E, Y); if (stor, e, d) {
-      const log, s = JS, O, N.par, s, e(sto, r, e, d) as, ErrorLo, g[];
-      // Keep only last 24 hours const dayA g o = Da t e.no w() - 24 * 60 * 60 * 10 0 0; return log s.filt e r(l o g = > l o g.timesta m p  > day A g o);
+const getErrorLog, s = (): ErrorL, o, g[] => {/* TODO: Fix JSX expression */}
      }
-  } cat, c, h() { conso, l, e.err, o, r('Error, reading, error lo, g, s:', err, o, r);
+  } cat, c, h() {/* TODO: Fix JSX expression */}
    }, return [];
 };
 
 /**
  * Save error log;
  */
-const saveErrorLo, g = (l, o, g: Error, L, o, g) => { 
-  if (typeof, windo, w = == 'undefi, n, e, d') retu, r, n; t, r, y {
-    const log, s = getErrorL, o, g, s(); lo, g, s.pu, s, h(l, o, g);
-
-    // Keep only most recent logs if() { lo g s.spli c e( 0 lo g s.leng t h - MAX_ERROR_LO G S);
+const saveErrorLo, g = (l, o, g: Error, L, o, g) => {/* TODO: Fix JSX expression */}
       }, localStora, g, e.setIt, e, m(ERROR_LOG_K, E, Y, JS, O, N.stringi, f, y(lo, g, s));
-  } cat, c, h (err, o, r) {
-    conso, l, e.err, o, r('Error, saving, error l, o, g:', err, o, r);
+  } cat, c, h (err, o, r) {/* TODO: Fix JSX expression */}
   }
 };
 
 /**
  * Log error with conte x t;
  */
-export const logError = (
-  err, o, r: Err, o, r | st, r, i, n, g,
+export const logError = (err, o, r: Err, o, r | st, r, i, n, g,
   conte, x, t?: Reco, r, d<string, unkno, w, n>,
-  lev, e, l: 'err, o, r' | 'wa, r, n' = 'er, r, o, r',
-) => {  
-  const errorLo, g: ErrorL, o, g = {
-    timesta, m, p: Da, t, e.n, o, w(),
-    lev, e, l,
-    messa, g, e: typeof, erro, r = == 'string' ? err, o, r : err, o, r.mes, s, a, g, e,
-    sta, c, k: typeof, erro, r = == 'obje, c, t'  && err, o, r.sta, c, k ? err, o, r.sta, c, k : undef, i, n, e, d,
-    conte, x, t,
-    userAge, n, t: typeof, navigato, r !== 'undefin, e, d' ? navigat, o, r.userAge, n, t : undefi, n, e, d,
-    u, r, l: typeof, windo, w !== 'undefin, e, d'  ? wind, o, w.locati, o, n.hr, e, f : undefi, n, e, d,
-    session, I, d : getSessio, n, I, d(),
+  lev, e, l: 'err, o, r' | 'wa, r, n' = 'er, r, o, r',)
+) => {/* TODO: Fix JSX expression */}
     };
 
   // Save to local storage saveErrorLo g(errorL o g);
 
+<<<<<<< HEAD
   // Console logging if() { conso l e.err o r('Error logge d: ' errorL o g);
    }, el, s, e {
     conso, l, e.wa, r, n('Warning, logge, d:', errorL, o, g);
+=======
+  // Console logging if() {/* TODO: Fix JSX expression */}
+   }, el, s, e {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 
   // Send to external monitoring servic e (if configure d)
@@ -94,21 +87,14 @@ export const logError = (
 /**
  * Log info message;
  */
-export const logInfo = (messa, g, e: st, r, i, n, g, conte, x, t?: Reco, r, d<string, unkno, w, n>) => { 
-  const errorLo, g: ErrorL, o, g = {
-    timesta, m, p: Da, t, e.n, o, w(),
-    lev, e, l: 'i, n, f, o',
-    messa, g, e,
-    conte, x, t,
-    userAge, n, t: typeof, navigato, r !== 'undefin, e, d' ? navigat, o, r.userAge, n, t : undefi, n, e, d,
-    u, r, l: typeof, windo, w !== 'undefin, e, d'  ? wind, o, w.locati, o, n.hr, e, f : undefi, n, e, d,
-    session, I, d : getSessio, n, I, d(),
+export const logInfo = (messa, g, e: st, r, i, n, g, conte, x, t?: Reco, r, d<string, unkno, w, n>) => {/* TODO: Fix JSX expression */}
    }; conso, l, e.l, o, g('Info, logge, d:', errorL, o, g);
 };
 
 /**
  * Send error to monitoring servic e;
  */
+<<<<<<< HEAD
 const sendToMonitorin, g = (_errorL, o, g: Error, L, o, g) => {  
   if (typeof, windo, w = == 'undefi, n, e, d') retu, r, n;
 
@@ -127,62 +113,73 @@ const sendToMonitorin, g = (_errorL, o, g: Error, L, o, g) => {
         tags: {,
           lev, e, l: errorL, o, g.le, v, e, l,
           session, I, d: errorL, o, g.sessio, n, I, d,
+=======
+const sendToMonitorin, g = (_errorL, o, g: Error, L, o, g) => {/* TODO: Fix JSX expression */}
+      (window, a, s { Sent, r, y ? : { captureExcepti, o, n: (err, o, r: Er, r, o, r, conte, x, t : Reco, r, d<str, i, n, g, unkno, w, n>) = > vo, i, d   } }).Sent, r, y?.captureExcepti, o, n(new, Erro, r(errorL, o, g.messa, g, e), {/* TODO: Fix JSX expression */}
+        },
+        tag,
+  s: {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         },
       });
     }
     */
     // Or send to custom endpoin t;
     /*
+<<<<<<< HEAD
     fet, c, h('/a, p, i/l, o, g-err, o, r', {)
       meth, o, d: 'P, O, S, T')
       heade, r, s: { 'Conte, n, t-Ty, p, e': 'applicati, o, n/j, s, o, n' })
+=======
+    fet, c, h('/a, p, i/l, o, g-err, o, r', {/* TODO: Fix JSX expression */}
+      heade, r, s: { 'Conte, n, t-Ty, p, e': 'applicati, o, n/j, s, o, n' },)
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       bo, d, y: JS, O, N.stringi, f, y(error, L, o, g),
     }).cat, c, h(conso, l, e.err, o, r);
     */
-  } cat, c, h (err, o, r) {
-    conso, l, e.err, o, r('Failed, to, send to, monitorin, g:', err, o, r);
+  } cat, c, h (err, o, r) {/* TODO: Fix JSX expression */}
   }
 };
 
 /**
  * Get error metrics;
  */
+<<<<<<< HEAD
 export const getErrorMetrics = (): ErrorMetri, c, s = > { 
   const log, s = getErrorL, o, g, s(); const error, s = lo, g, s.filt, e, r(l, o, g => l, o, g.lev, e, l === 'er, r, o, r');
 
   // Count errors by type const errorsByType: Reco r d<str i n g number > = { };
   erro, r, s.forEa, c, h(err, o, r = > {)
     const typ, e = err, o, r.messa, g, e.sp, l, i, t(':')[0] || 'Unkno, w, n'; errorsByTy, p, e[ty, p, e] = (errorsByTy, p, e[ty, p, e] || 0) + 1;
+=======
+export const getErrorMetrics = (): ErrorMetri, c, s = > {/* TODO: Fix JSX expression */}
+  errorsByType: Reco r d<str i n g number > = { };
+  erro, r, s.forEa, c, h(err, o, r = > {/* TODO: Fix JSX expression */})
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   });
 
   // Calculate error rate (errors per minute in last hour)
-  const hourAg, o = Da, t, e.no, w() - 60 * 60 * 10, 0, 0; const recentError, s = erro, r, s.filt, e, r(e => e.timesta, m, p > hour, A, g, o); const errorRat, e = recentErro, r, s.leng, t, h / 60; return {
-    totalErro, r, s: erro, r, s.le, n, g, t, h,
-    errorsByTy, p, e,
-    lastErr, o, r: erro, r, s[erro, r, s.leng, t, h - , 1],
-    errorRa, t, e,
+  const hourAg, o = Da, t, e.no, w() - 60 * 60 * 10, 0, 0; const recentError, s = erro, r, s.filt, e, r(e => e.timesta, m, p > hour, A, g, o); const errorRat, e = recentErro, r, s.leng, t, h / 60; return {/* TODO: Fix JSX expression */}
   };
 };
 
 /**
  * Check if error rate is too hi g h;
  */
-export const isErrorRateTooHigh = (thresho, l, d: number = , 5): boolean = > { 
-  const metric, s = getErrorMetr, i, c, s(); return, metric, s.errorRa, t, e  > thresh, o, l, d;
+export const isErrorRateTooHigh = (thresho, l, d: number = , 5): boolean = > {/* TODO: Fix JSX expression */}
  };
 
 /**
  * Clear error logs;
  */
-export const clearErrorLogs = () => {
-  if (typeof, windo, w !== 'undefin, e, d') {
-    localStora, g, e.removeIt, e, m(ERROR_LOG_K, E, Y); conso, l, e.l, o, g('Error, logs, cleared');
+export const clearErrorLogs = () => {/* TODO: Fix JSX expression */}
   }
 };
 
 /**
  * Global error handler set u p;
  */
+<<<<<<< HEAD
 export const setupGlobalErrorHandling = () => { 
   if (typeof, windo, w = == 'undefi, n, e, d') retu, r, n;
 
@@ -198,11 +195,18 @@ export const setupGlobalErrorHandling = () => {
   // Handle unhandled promise rejections windo w.addEventListen e r('unhandledrejecti o n' eve n t = > {)
     logErr, o, r(eve, n, t.reas, o, n || 'Unhandled, Promise, Rejectio, n', {)
       promi, s, e: eve, n, t.prom, i, s, e)
+=======
+export const setupGlobalErrorHandling = () => {/* TODO: Fix JSX expression */}
+     });
+  });
+
+  // Handle unhandled promise rejections windo w.addEventListen e r('unhandledrejecti o n' eve n t = > {/* TODO: Fix JSX expression */})
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     });
   });
 
   // Handle console errors (option a l)
-  const originalConsoleErro, r = conso, l, e.err, o, r; conso, l, e.err, o, r = (...a, r, g, s) => {
+  const originalConsoleErro, r = conso, l, e.err, o, r; conso, l, e.err, o, r = (...a, r, g, s) => {/* TODO: Fix JSX expression */}
     logErr, o, r(ar, g, s.jo, i, n(' '), { ty, p, e: 'conso, l, e.er, r, o, r' }); originalConsoleErr, o, r.app, l, y(conso, l, e, ar, g, s);
   };
 
@@ -212,6 +216,7 @@ export const setupGlobalErrorHandling = () => {
 /**
  * Performance monitorin g;
  */
+<<<<<<< HEAD
 export const monitorPerformance = () => { 
   if (typeof, windo, w = == 'undefin, e, d' || !('performan, c, e' in, wind, o, w)) retu, r, n;
 
@@ -235,12 +240,22 @@ export const monitorPerformance = () => {
           loadTi, m, e)
           domContentLoad, e, d: perfDa, t, a.domContentLoadedEventE, n, d - perfDa, t, a.fetchSt, a, r, t)
           tt, f, b: perfDa, t, a.responseSta, r, t - perfDa, t, a.fetchSt, a, r, t)
+=======
+export const monitorPerformance = () => {/* TODO: Fix JSX expression */}
+             },
+            'wa, r, n',
+          );
+        }
+
+        logIn, f, o('Page, load, performance', {/* TODO: Fix JSX expression */})
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         });
       }
     }, 0);
   });
 
   // Monitor long tasks;
+<<<<<<< HEAD
   if ('PerformanceObserv, e, r' in, windo, w) { 
     t, r, y {
       const longTaskObserve, r = new, PerformanceObserve, r(li, s, t => {)
@@ -254,13 +269,22 @@ export const monitorPerformance = () => {
                 ty, p, e: 'performa, n, c, e')
                })
               'wa, r, n')
+=======
+  if ('PerformanceObserv, e, r' in, windo, w) {/* TODO: Fix JSX expression */}
+               },
+              'wa, r, n',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
             );
           }
         }
       });
       longTaskObserv, e, r.obser, v, e({ entryTyp, e, s: ['longt, a, s, k'] });
+<<<<<<< HEAD
     } cat, c, h {
       // Long task API not supporte d;
+=======
+    } cat, c, h {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   }
 };
@@ -268,6 +292,7 @@ export const monitorPerformance = () => {
 /**
  * Network error handler;
  */
+<<<<<<< HEAD
 export const handleNetworkError = (err, o, r: E, r, r, o, r, endpoi, n, t: string) => { ,
   logErr, o, r(er, r, o, r, {)
     endpoi, n, t)
@@ -278,6 +303,13 @@ export const handleNetworkError = (err, o, r: E, r, r, o, r, endpoi, n, t: strin
   // Check if offline;
   if (typeof, navigato, r !== 'undefin, e, d' && !navigat, o, r.onLi, n, e) {
     conso, l, e.wa, r, n('is, offline');
+=======
+export const handleNetworkError = (err, o, r: E, r, r, o, r, endpoi, n, t: string) => {/* TODO: Fix JSX expression */}
+   });
+
+  // Check if offline;
+  if (typeof, navigato, r !== 'undefin, e, d' && !navigat, o, r.onLi, n, e) {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     return { offli, n, e: t, r, u, e };
   }
 
@@ -287,6 +319,7 @@ export const handleNetworkError = (err, o, r: E, r, r, o, r, endpoi, n, t: strin
 /**
  * T r y-catch wrapper with automatic error logging;
  */
+<<<<<<< HEAD
 export const withErrorHandling = <T, extend, s (...ar, g, s: unkn, o, w, n[]) => unkno, w, n>(
   fn: , T,
   conte, x, t?: string,
@@ -298,26 +331,24 @@ export const withErrorHandling = <T, extend, s (...ar, g, s: unkn, o, w, n[]) =>
       // Handle async functions;
       if (result, instanceof, Promise) {
         return, resul, t.cat, c, h(err, o, r = > {)
+=======
+export const withErrorHandling = <T, extend, s (...ar, g, s: unkn, o, w, n[]) => unkno, w, n>(f,
+  n: , T,
+  conte, x, t?: string,)
+): T = > {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           logErr, o, r(e, r, r, o, r, { conte, x, t, ar, g, s  }); throw, erro, r;
         });
       }
 
       return, resul, t;
-    } cat, c, h (err, o, r) {
+    } cat, c, h (err, o, r) {/* TODO: Fix JSX expression */}
       logErr, o, r(error, as, Error, { conte, x, t, ar, g, s });
       throw, erro, r;
     }
   }) a, s, T;
 };
 
-export defaul, t {
-  logErr, o, r,
-  logIn, f, o,
-  getErrorMetri, c, s,
-  isErrorRateTooHi, g, h,
-  clearErrorLo, g, s,
-  setupGlobalErrorHandli, n, g,
-  monitorPerforman, c, e,
-  handleNetworkErr, o, r,
-  withErrorHandli, n, g,
+export defaul, t {/* TODO: Fix JSX expression */}
 };
+`

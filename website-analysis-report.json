@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "timestamp": "2025-10-10T07:28:42.185Z",
   "baseUrl": "https://ziontechgroup.com",
   "summary": {
@@ -18,4 +19,22 @@
   "brokenLinks": [],
   "missingPages": [],
   "errors": []
+=======
+  "timestamp": "2025-10-09T17:00:53.717Z",
+  "baseUrl": "https://ziontechgroup.com",
+  "statistics": {
+    "totalPages": 1,
+    "totalLinks": 0,
+    "brokenLinks": 0
+  },
+  "brokenLinks": [],
+  "pages": [
+    {
+      "url": "https://ziontechgroup.com",
+      "title": "Zion Tech Group - Technology Solutions",
+      "linkCount": 0,
+      "links": []
+    }
+  ]
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }

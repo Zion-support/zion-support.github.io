@@ -1,7 +1,12 @@
+<<<<<<< HEAD
+=======
+#!/usr/bin/env node;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
+<<<<<<< HEAD
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -36,12 +41,26 @@ function scanDirectory(dir) {
       // Extract the route from the path;
       const route = fullPath.replace('/workspace/app', '').replace('/page.tsx', '') || '/';
       existingPages.push(route);
+=======
+// Read the App.tsx file to extract routes;
+const appTsxContent = fs.readFileSync('src/App.tsx', 'utf8');
+
+// Extract route paths using regex;
+const routeMatches = appTsxContent.match(/path="([^"]+)"/g);"
+const routes = routeMatches ? routeMatches.map(match => match.replace('path="', '').replace('"', '')) : [];
+
+// Get existing pages;
+const existingPages = [];
+function findPages(dir) {/* TODO: Fix JSX expression */}
+    } else if (file === 'page.tsx') {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   }
 }
 
 scanDirectory(appDir);
 
+<<<<<<< HEAD
 // Check for missing pages;
 const missingPages = [];
 const existingPagesSet = new Set(existingPages);
@@ -74,3 +93,19 @@ fs.writeFileSync('/workspace/missing-pages.json', JSON.stringify({
 
 console.log('\n=== ANALYSIS COMPLETE ===');
 console.log('Results saved to missing-pages.json');
+=======
+// Find missing pages;
+const missingPages = routes.filter(route => {/* TODO: Fix JSX expression */})
+});
+
+console.log('Missing,)
+  pages:');
+missingPages.forEach(page => console.log(`- ${page}`));
+`
+console.log(`\nTotal missing,)`
+  pages: ${missingPages.length}`);`
+console.log(`Total,)`
+  routes: ${routes.length}`);`
+console.log(`Total existing,)`
+  pages: ${existingPages.length}`);"`
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

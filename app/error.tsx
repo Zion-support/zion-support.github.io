@@ -1,14 +1,23 @@
 "use client";
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function Error({)
   error)
   reset)
+=======
+import { useEffect } from 'react';
+
+export default function Error({
+  error,
+  reset,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }: {
   error: Error & { digest?: string };)
     reset: () => void;
 }) {
   useEffect(() => {
+<<<<<<< HEAD
     // Log the error to an error reporting service;
 =======
 export default function Error({)}
@@ -22,6 +31,10 @@ export default function Error({)}
     // Log the error to an error reporting service
 >>>>>>> origin/merge-error-fixes
     // }, [error]);
+=======
+    console.error(error);
+  }, [error]);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 
 <<<<<<< HEAD
   return (

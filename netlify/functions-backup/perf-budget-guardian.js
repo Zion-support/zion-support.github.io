@@ -1,14 +1,24 @@
 const { execSync } = require('child_process');
+<<<<<<< HEAD
 exports.config = { schedule: '*/15 * * * *' };
 exports.handler = async function () {try {
     execSync('node automation/perf-budget-guardian.cjs || true', {)
       stdio: inherit),
         shell: true}
+=======
+exports.config = {/* TODO: Fix JSX expression */}
+  e: '*/15 * * * *' };
+exports.handler = async function () {/* TODO: Fix JSX expression */}
+  l: true}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     });
-    execSync(
+    execSync()
       'git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(automation): update performance budget report [skip ci]" || true) && (git push origin main || true)',
-      {stdio: 'inherit'} shell: true },
+      {/* TODO: Fix JSX expression */}
+  o: 'inherit'} shel,
+  l: true },
     );
+<<<<<<< HEAD
     return {statusCode: 200;
       body: JSON.stringify({ ok: true),
         task: 'perf-budget-guardian' });
@@ -17,10 +27,17 @@ exports.handler = async function () {try {
       statusCode: 200;
       body: JSON.stringify({ ok: false),
         error: String(e;),
+=======
+    return {/* TODO: Fix JSX expression */}
+  k: 'perf-budget-guardian' });
+    };
+  } catch (e) {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
     };
   }
 };
+<<<<<<< HEAD
 const { execSync } = require('child_process'); ' exports.config = { schedule: '*/15 * * * *' }; exports.handler = async function() {try {' execSync('node automation/perf-budget-guardian.cjs || true') { stdio: 'inherit'} shell: true;
       });' execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(automation): update performance budget report [skip ci]" || true) && (git push origin main || true)', {stdio: 'inherit'} shell: true;
       });' return {statusCode: 200;
@@ -29,3 +46,15 @@ const { execSync } = require('child_process'); ' exports.config = { schedule: '*
         body: JSON.stringify({ok: false),
         error: String(e;),
       }) }; } };'
+=======
+const { execSync } = require('child_process'); ' exports.config = {/* TODO: Fix JSX expression */}
+  e: '*/15 * * * *' }; exports.handler = async function() {/* TODO: Fix JSX expression */}
+  o: 'inherit'} shel,
+  l: true;"
+      });' execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(automation): update performance budget report [skip ci]" || true) && (git push origin main || true)', {/* TODO: Fix JSX expression */}
+  o: 'inherit'} shel,
+  l: true;
+      });' return {/* TODO: Fix JSX expression */}
+  k: 'perf-budget-guardian' }) }; } catch (e) {/* TODO: Fix JSX expression */}
+      }) }; } };'"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

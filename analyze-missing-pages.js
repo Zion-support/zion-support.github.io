@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node
 
 import fs from 'fs';
@@ -168,6 +169,8 @@ const footerLinks = [
   '/it-infrastructure',
   '/custom-development',
 =======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 #!/usr/bin/env node;
 // Sitemap URLs from the website;
 const sitemapUrls = [
@@ -402,6 +405,7 @@ const unlinkedPages = existingPages
   .map(p => p.replace(/^\//, ''))
   .filter(p => p !== '' && !linkedPages.has(p));
 
+<<<<<<< HEAD
 console.log('\n=== UNLINKED PAGES ===');
 console.log(`Unlinked pages: ${unlinkedPages.length}`);
 unlinkedPages.forEach(page => console.log(page));
@@ -430,3 +434,25 @@ const missingByCategory = {
 
 fs.writeFileSync('/workspace/missing-pages-report.json', JSON.stringify(report, null, 2));
 console.log('\nReport saved to missing-pages-report.json');
+=======
+console.log('\n=== SUMMARY ===');
+console.log(`Total sitemap,)`
+  URLs: ${sitemapUrls.length}`);`
+console.log(`Total existing,)`
+  pages: ${existingPages.length}`);`
+console.log(`Missing,)`
+  pages: ${missingPages.length}`);`
+console.log(`Extra,)`
+  pages: ${extraPages.length}`);
+
+// Categorize missing pages;
+const missingByCategory = {/* TODO: Fix JSX expression */}
+};
+
+console.log('\n=== MISSING PAGES BY CATEGORY ===');
+Object.entries(missingByCategory).forEach(([category, pages]) => {/* TODO: Fix JSX expression */}`
+    console.log(`\n${category}:`);`
+    pages.forEach(page => console.log(`  ${page}`));
+  }
+});`
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

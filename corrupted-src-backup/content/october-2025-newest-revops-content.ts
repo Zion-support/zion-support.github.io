@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface RevOpsContent {
   id: string;
   title: string;
@@ -13,16 +14,18 @@ export interface RevOpsContent {
   highlights: string[];
   metrics: {,
     [key: string]: string;
+=======
+export interface RevOpsContent {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   };
   icon?: string;
   gradient?: string;
   breaking?: boolean;
-  cta?: {
-    text: string;
-    link: string;
+  cta?: {/* TODO: Fix JSX expression */}
   };
 }
 
+<<<<<<< HEAD
 export const octoberNewestRevOpsContent: RevOpsContent[] = [
   {
     id: 'ai-revops-automation-2025'
@@ -89,18 +92,26 @@ export const octoberNewestRevOpsContent: RevOpsContent[] = [
       winRate: '+42%',
       velocity: '3.2x',
       roi: '704%',
+=======
+export const,
+  octoberNewestRevOpsContent: RevOpsContent[] = [
+  {/* TODO: Fix JSX expression */}
+    },
+    ct,
+  a: {/* TODO: Fix JSX expression */}
+    },
+  },
+  {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     },
   },
 ];
 
-export const getFeaturedRevOpsContent = () => {
-  return octoberNewestRevOpsContent.filter(content => content.featured);
+export const getFeaturedRevOpsContent = () => {/* TODO: Fix JSX expression */}
 };
 
-export const getBreakingRevOpsContent = () => {
-  return octoberNewestRevOpsContent.filter(content => content.tags.includes('Breaking'));
+export const getBreakingRevOpsContent = () => {/* TODO: Fix JSX expression */}
 };
 
-export const getAllRevOpsContent = () => {
-  return octoberNewestRevOpsContent;
+export const getAllRevOpsContent = () => {/* TODO: Fix JSX expression */}
 };

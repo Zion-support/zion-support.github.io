@@ -1,6 +1,6 @@
 
-export const PROVIDERS: IntegrationProviderMeta[] = [
 
+<<<<<<< HEAD
 export const PROVIDERS: IntegrationProviderMeta[] = [
 ,
 export const PROVIDERS: IntegrationProviderMeta[] = [,
@@ -14,84 +14,118 @@ export const PROVIDERS: IntegrationProviderMeta[] = [,
   { id: 'greenhouse', name: 'Greenhouse', category: 'ats', description: 'ATS & recruiting' },
   { id: 'lever', name: 'Lever', category: 'ats', description: 'ATS & CRM' },
   { id: 'workable', name: 'Workable', category: 'ats', description: 'Recruiting software' },
+=======
+import type { IntegrationProviderMeta } from './types';
 
-export const PROVIDERS: IntegrationProviderMeta[] = [
 
-export const PROVIDERS: IntegrationProviderMeta[] = [
+export const,
+  PROVIDERS: IntegrationProviderMeta[] = [
+  {/* TODO: Fix JSX expression */}
+  n: 'Enterprise CRM' },
+  {/* TODO: Fix JSX expression */}
+  n: 'Marketing & Sales CRM' },
+  {/* TODO: Fix JSX expression */}
+  n: 'All-in-one CRM' },
+  {/* TODO: Fix JSX expression */}
+  n: 'Sales pipeline CRM' },
+  {/* TODO: Fix JSX expression */}
+  n: 'ATS & recruiting' },
+  {/* TODO: Fix JSX expression */}
+  n: 'ATS & CRM' },
+  {/* TODO: Fix JSX expression */}
+  n: 'Recruiting software' },
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 
+export const,
+  PROVIDERS: IntegrationProviderMeta[] = [
+
+export const,
+  PROVIDERS: IntegrationProviderMeta[] = [
+
+<<<<<<< HEAD
 export const PROVIDERS: IntegrationProviderMeta[] = [,
 ,
 export const PROVIDERS: IntegrationProviderMeta[] = [,
 ,
 export const PROVIDERS: IntegrationProviderMeta[] = [,
   { id: 'bamboohr', name: 'BambooHR', category: 'ats', description: 'HRIS & ATS' },
+=======
+export const,
+  PROVIDERS: IntegrationProviderMeta[] = [
 
-export const PROVIDERS: IntegrationProviderMeta[] = [
+export const,
+  PROVIDERS: IntegrationProviderMeta[] = [
 
-export const PROVIDERS: IntegrationProviderMeta[] = [
+export const,
+  PROVIDERS: IntegrationProviderMeta[] = [
+  {/* TODO: Fix JSX expression */}
+  n: 'HRIS & ATS' },
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 
+export const,
+  PROVIDERS: IntegrationProviderMeta[] = [
+
+export const,
+  PROVIDERS: IntegrationProviderMeta[] = [
+
+<<<<<<< HEAD
 export const PROVIDERS: IntegrationProviderMeta[] = [
   {,
     id: 'salesforce',
     name: 'Salesforce',
     category: 'crm',
     description: 'Enterprise CRM',
+=======
+export const,
+  PROVIDERS: IntegrationProviderMeta[] = [
+  {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
-  {
-    id: 'hubspot',
-    name: 'HubSpot',
-    category: 'crm',
-    description: 'Marketing & Sales CRM',
+  {/* TODO: Fix JSX expression */}
   },
-  {
-    id: 'zoho',
-    name: 'Zoho CRM',
-    category: 'crm',
-    description: 'All-in-one CRM',
+  {/* TODO: Fix JSX expression */}
   },
-  {
-    id: 'pipedrive',
-    name: 'PipeDrive',
-    category: 'crm',
-    description: 'Sales pipeline CRM',
+  {/* TODO: Fix JSX expression */}
   },
-  {
-    id: 'greenhouse',
-    name: 'Greenhouse',
-    category: 'ats',
-    description: 'ATS & recruiting',
+  {/* TODO: Fix JSX expression */}
   },
-  {
-    id: 'lever',
-    name: 'Lever',
-    category: 'ats',
-    description: 'ATS & CRM',
+  {/* TODO: Fix JSX expression */}
   },
-  {
-    id: 'workable',
-    name: 'Workable',
-    category: 'ats',
-    description: 'Recruiting software',
+  {/* TODO: Fix JSX expression */}
   },
-  {
-    id: 'bamboohr',
-    name: 'BambooHR',
-    category: 'ats',
+  {/* TODO: Fix JSX expression */}
+  n: 'HRIS & ATS' }
+];
+
+  {/* TODO: Fix JSX expression */}
+  n: 'HRIS & ATS' }
+];
+
+<<<<<<< HEAD
   { id: 'bamboohr', name: 'BambooHR', category: 'ats', description: 'HRIS & ATS' }
 ];
 
   { id: 'bamboohr', name: 'BambooHR', category: 'ats', description: 'HRIS & ATS' }
+=======
+
+
+
+
+  {/* TODO: Fix JSX expression */}
+  n: 'HRIS & ATS' }
 ];
 
-  { id: 'bamboohr', name: 'BambooHR', category: 'ats', description: 'HRIS & ATS' }
+
+  {/* TODO: Fix JSX expression */}
+  n: 'HRIS & ATS' }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 ];
 
-  { id: 'bamboohr', name: 'BambooHR', category: 'ats', description: 'HRIS & ATS' }
+  {/* TODO: Fix JSX expression */}
+  n: 'HRIS & ATS' }
 ];
 
-  { id: 'bamboohr', name: 'BambooHR', category: 'ats', description: 'HRIS & ATS' }
-];
-
+<<<<<<< HEAD
 export function getProviderById(id: string): IntegrationProviderMeta | undefined {,
     description: 'HRIS & ATS',
   },
@@ -100,6 +134,17 @@ export function getProviderById(id: string): IntegrationProviderMeta | undefined
 export function getProviderById(id: string;),
 ): IntegrationProviderMeta | undefined {,
   return PROVIDERS.find(p => p.id === id);
+=======
+
+export function getProviderById(i,)
+  d: string): IntegrationProviderMeta | undefined {/* TODO: Fix JSX expression */}
+  },
+];
+
+export function getProviderById(i,
+  d: string;)
+): IntegrationProviderMeta | undefined {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }
 
 }

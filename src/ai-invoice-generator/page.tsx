@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {Phone, Star, Zap, Shield, Globe, Brain, BarChart, Eye, CheckCircle, Smartphone, Settings, ShoppingCart, Building, Car, Briefcase, Calculator, Zap as Lightning, Shield as Security, Star as StarIcon, CheckCircle as Check, Phone as PhoneIcon, Receipt, Calculator as CalculatorIcon} from 'lucide-react';
 'use client';
 import React, { memo } from 'react';
@@ -291,4 +292,11 @@ namename: 'Emily Rodriguez',
 });
 
 AIInvoiceGeneratorPage.displayName = 'AIInvoiceGeneratorPage';
+=======
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { FileText, DollarSign, Clock, CheckCircle, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, Award, Lock, Database, Cloud, Code, Smartphone, Settings, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 export default AIInvoiceGeneratorPage;

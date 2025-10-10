@@ -2,6 +2,7 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
+<<<<<<< HEAD
 const NewsPage: React.FC = () => {
 <<<<<<< HEAD
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -49,3 +50,5 @@ const NewsPage: React.FC = () => {
 };
 
 export default NewsPage;
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

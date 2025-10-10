@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client'
 import React, { useState, useCallback } from 'react'
 <<<<<<< HEAD
@@ -101,6 +102,23 @@ export const Image: React.FC<ImageProps> = ({,
   if (hasError) {
     return(<div}
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
+=======
+'use client';
+import React, { useState, useCallback } from 'react';
+interface ImageProps {/* TODO: Fix JSX expression */}
+}
+export const,
+  Image: React.FC<ImageProps> = ({/* TODO: Fix JSX expression */})
+}) => {/* TODO: Fix JSX expression */}
+  }, [onLoad]);
+  const handleError = useCallback(() => {/* TODO: Fix JSX expression */}
+  }, [onError]);
+  const,
+  imageStyle: React.CSSProperties = {/* TODO: Fix JSX expression */}
+    })
+  };
+  if (hasError) {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         className={`bg-gray-200 flex items-center justify-center ${className}`}
         style={imageStyle}
 <<<<<<< HEAD
@@ -117,7 +135,11 @@ export const Image: React.FC<ImageProps> = ({,
     )
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
   }
+<<<<<<< HEAD
   return(<img;
+=======
+  return (<img></img>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       src={src}
       alt={alt}
       width={width}
@@ -130,6 +152,7 @@ export const Image: React.FC<ImageProps> = ({,
       onLoad={handleLoad}
       onError={handleError}
       {...props}
+<<<<<<< HEAD
     >)</img>
 }</img>
 export default Image</img>
@@ -143,3 +166,10 @@ export default Image</img>
 }
 export default Image;
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
+=======
+    />)
+  );
+};
+export default Image;
+"`
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

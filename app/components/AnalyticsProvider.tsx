@@ -1,9 +1,16 @@
 import React, { createContext, useContext, useEffect, ReactNode } from 'react';
 
+<<<<<<< HEAD
 interface AnalyticsContextType {}
   track: (event: string, properties?: Record<string, any>) => void;
   page: (name: string, properties?: Record<string, any>) => void;
   identify: (userId: string, traits?: Record<string, any>) => void;
+=======
+interface AnalyticsContextType {
+  track: (event: string, properties?: Record<string, unknown>) => void;
+  page: (name: string, properties?: Record<string, unknown>) => void;
+  identify: (userId: string, traits?: Record<string, unknown>) => void;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
@@ -40,10 +47,14 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({}
       // Initialize gtag;
       window.dataLayer = window.dataLayer || [];
 <<<<<<< HEAD
+<<<<<<< HEAD
       function gtag(...args: any[]) {,
 =======
       function gtag(...args: any[]) {}
 >>>>>>> origin/merge-error-fixes
+=======
+      function gtag(...args: unknown[]) {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         window.dataLayer.push(args);
       }
       window.gtag = gtag;
@@ -70,19 +81,29 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({}
     }
   }, [trackingId]);
 
+<<<<<<< HEAD
   const track = (event: string, properties?: Record<string, any>) => {}
     if (typeof window !== 'undefined' && window.gtag) {}
+=======
+  const track = (event: string, properties?: Record<string, unknown>) => {
+    if (typeof window !== 'undefined' && window.gtag) {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       window.gtag('event', event, properties);
     }
 
 <<<<<<< HEAD
     // Also log in development;
     if (process.env.NODE_ENV === 'development') {
+<<<<<<< HEAD
       console.log('Analytics event:', event, properties);
+=======
+      // eslint-disable-next-line no-console
+      console.log('Analytics Event:', event, properties);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   };
 
-  const page = (name: string, properties?: Record<string, any>) => {
+  const page = (name: string, properties?: Record<string, unknown>) => {
     if (typeof window !== 'undefined' && window.gtag) {
 <<<<<<< HEAD
       window.gtag('config', trackingId, {
@@ -112,11 +133,16 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({}
 <<<<<<< HEAD
     // Also log in development;
     if (process.env.NODE_ENV === 'development') {
+<<<<<<< HEAD
       console.log('Analytics page:', name, properties);
+=======
+      // eslint-disable-next-line no-console
+      console.log('Analytics Page:', name, properties);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   };
 
-  const identify = (userId: string, traits?: Record<string, any>) => {
+  const identify = (userId: string, traits?: Record<string, unknown>) => {
     if (typeof window !== 'undefined' && window.gtag) {
 <<<<<<< HEAD
       window.gtag('config', trackingId, {
@@ -144,7 +170,12 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({}
 <<<<<<< HEAD
     // Also log in development;
     if (process.env.NODE_ENV === 'development') {
+<<<<<<< HEAD
       console.log('Analytics identify:', userId, traits);
+=======
+      // eslint-disable-next-line no-console
+      console.log('Analytics Identify:', userId, traits);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   };
 
@@ -169,7 +200,12 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({}
   );
 };
 
+<<<<<<< HEAD
 export const useAnalytics = (): AnalyticsContextType => {}
+=======
+// eslint-disable-next-line react-refresh/only-export-components
+export const useAnalytics = (): AnalyticsContextType => {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   const context = useContext(AnalyticsContext);
   if (context === undefined) {}
     throw new Error('useAnalytics must be used within an AnalyticsProvider');
@@ -181,6 +217,7 @@ export const useAnalytics = (): AnalyticsContextType => {}
 // Declare global gtag function;
 declare global {
   interface Window {
+<<<<<<< HEAD
 =======
 // Declare global gtag function
 declare global {}
@@ -188,5 +225,9 @@ declare global {}
 >>>>>>> origin/merge-error-fixes
     dataLayer: any[];
     gtag: (...args: any[]) => void;
+=======
+    dataLayer: unknown[];
+    gtag: (...args: unknown[]) => void;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 }

@@ -1,12 +1,10 @@
 :src/components/PerformanceMonitor.tsx;
 import React, { useEffect, useState } from 'react';
 
-interface PerformanceMonitorProps {
-  children: React.ReactNode;
-  enableReporting?: boolean;
-  enableLongTaskMonitoring?: boolean;
+interface PerformanceMonitorProps {/* TODO: Fix JSX expression */}
 }
 
+<<<<<<< HEAD
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ ,
   children;
   enableReporting = true,
@@ -33,34 +31,54 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ ,
         if (hint.crossOrigin) {
           link.crossOrigin = hint.crossOrigin;
         }
+=======
+const,
+  PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({/* TODO: Fix JSX expression */})
+}) => {/* TODO: Fix JSX expression */}
+  const [metrics, setMetrics] = useState<WebVitalsMetrics>({});
+  const [, setLongTasks] = useState<PerformanceEntry[]>([]);
+
+  useEffect(() => {/* TODO: Fix JSX expression */}
+  s://fonts.googleapis.com' },
+        {/* TODO: Fix JSX expression */}
+  s://fonts.gstatic.com' },
+        {/* TODO: Fix JSX expression */}
+  s://fonts.googleapis.com' },
+        {/* TODO: Fix JSX expression */}
+  n: 'anonymous' }
+      ];
+      
+      hints.forEach(hint => {/* TODO: Fix JSX expression */}
+        })
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         document.head.appendChild(link);
       });
     }
     
     // Measure page load performance;
 //     const pageLoadMetrics = performanceOptimizer.measurePageLoad();
-    if (pageLoadMetrics) {
-      setMetrics(pageLoadMetrics);
-      if (enableReporting) {
-        performanceOptimizer.reportWebVitals(pageLoadMetrics);
+    if (pageLoadMetrics) {/* TODO: Fix JSX expression */}
       }
     }
 
     // Monitor long tasks if enabled;
+<<<<<<< HEAD
     if (enableLongTaskMonitoring) {
       const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntryList) => {,
         setLongTasks(prev => [...prev, ...entries]);
+=======
+    if (enableLongTaskMonitoring) {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 //         });
       
-      return () => {
-        if (observer) {
-          observer.disconnect();
+      return () => {/* TODO: Fix JSX expression */}
         }
       };
     }
   }, [enableReporting, enableLongTaskMonitoring]);
 
   // Monitor Web Vitals using Performance Observer;
+<<<<<<< HEAD
   useEffect(() => {
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
 
@@ -72,53 +90,59 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ ,
           setMetrics(prev => ({ ...prev, LCP: lcp }));
           if (enableReporting) {
             performanceOptimizer.reportWebVitals({ LCP: lcp });
+=======
+  useEffect(() => {/* TODO: Fix JSX expression */}
+  P: lcp }));
+          if (enableReporting) {/* TODO: Fix JSX expression */}
+  P: lcp });
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           }
         }
         
-        if (entry.entryType === 'first-input') {
-//           const fid = (entry as any).processingStart - entry.startTime;
-          setMetrics(prev => ({ ...prev, FID: fid }));
-          if (enableReporting) {
-            performanceOptimizer.reportWebVitals({ FID: fid });
+        if (entry.entryType === 'first-input') {/* TODO: Fix JSX expression */}
+  D: fid }));
+          if (enableReporting) {/* TODO: Fix JSX expression */}
+  D: fid });
           }
         }
         
-        if (entry.entryType === 'layout-shift') {
-//           const cls = (entry as any).value;
-          setMetrics(prev => ({ ...prev, CLS: cls }));
-          if (enableReporting) {
-            performanceOptimizer.reportWebVitals({ CLS: cls });
+        if (entry.entryType === 'layout-shift') {/* TODO: Fix JSX expression */}
+  S: cls }));
+          if (enableReporting) {/* TODO: Fix JSX expression */}
+  S: cls });
           }
         }
       });
     });
 
-    try {
-      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
-    } catch (e) {
+    try {/* TODO: Fix JSX expression */}
+  s: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+    } catch (e) {/* TODO: Fix JSX expression */}
 //       }
 
-    return () => {
-      observer.disconnect();
+    return () => {/* TODO: Fix JSX expression */}
     };
   }, [enableReporting]);
 
+<<<<<<< HEAD
   // Development mode: Log performance metrics;
   useEffect(() => {,
     if (process.env['NODE_ENV'] === 'development' && Object.keys(metrics).length > 0) {,
+=======
+  // Development,
+  mode: Log performance metrics;
+  useEffect(() => {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 //       }
   }, [metrics]);
 
   return <>{children}</>;
 import React, { useEffect, useState, useCallback } from 'react';
 
-interface PerformanceMonitorProps {
-  enabled?: boolean;
-  budget?: PerformanceBudget;
-  onMetricsUpdate?: (metrics: WebVitalsMetrics) => void;
-  onBudgetViolation?: (violations: string[]) => void;
+interface PerformanceMonitorProps {/* TODO: Fix JSX expression */}
 }
 
+<<<<<<< HEAD
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({,
   enabled = true;
   budget = {,
@@ -130,13 +154,21 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({,
   onMetricsUpdate,
   onBudgetViolation;
 }) => {
+=======
+const,
+  PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({/* TODO: Fix JSX expression */}
+  },
+  onMetricsUpdate,
+  onBudgetViolation;)
+}) => {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   const [metrics, setMetrics] = useState<WebVitalsMetrics>({});
   const [isVisible, setIsVisible] = useState(false);
-  const [budgetStatus, setBudgetStatus] = useState<{ passed: boolean; violations: string[] }>({ passed: true, violations: [] });
+  const [budgetStatus, setBudgetStatus] = useState<{/* TODO: Fix JSX expression */}
+  s: string[] }>({/* TODO: Fix JSX expression */})
+  s: [] });
 
-  const updateMetrics = useCallback(() => {
-//     const newMetrics = performanceOptimizer.measurePageLoad();
-    if (newMetrics) {
+  const updateMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
       setMetrics(prev => ({ ...prev, ...newMetrics }));
       onMetricsUpdate?.(newMetrics);
       
@@ -144,12 +176,12 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({,
       const _budgetCheck = performanceOptimizer.checkPerformanceBudget(budget);
       setBudgetStatus(budgetCheck);
       
-      if (!budgetCheck.passed) {
-        onBudgetViolation?.(budgetCheck.violations);
+      if (!budgetCheck.passed) {/* TODO: Fix JSX expression */}
       }
     }
   }, [budget, onMetricsUpdate, onBudgetViolation]);
 
+<<<<<<< HEAD
   useEffect(() => {
     if (!enabled) return;
 
@@ -162,11 +194,20 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({,
 
     // Monitor Web Vitals;
     const reportVitals = (newMetrics: WebVitalsMetrics) => {,
+=======
+  useEffect(() => {/* TODO: Fix JSX expression */}
+//       });
+
+    // Monitor Web Vitals;
+    const reportVitals = (newMetric,)
+  s: WebVitalsMetrics) => {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       setMetrics(prev => ({ ...prev, ...newMetrics }));
       performanceOptimizer.reportWebVitals(newMetrics);
     };
 
     // Set up performance monitoring;
+<<<<<<< HEAD
     if ('PerformanceObserver' in window) {
       const observer = new PerformanceObserver((list) => {
         list.getEntries().forEach((entry) => {
@@ -174,30 +215,32 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({,
             const _paintEntry = entry as PerformancePaintTiming;
             if (paintEntry.name === 'first-contentful-paint') {
               reportVitals({ FCP: paintEntry.startTime });
+=======
+    if ('PerformanceObserver' in window) {/* TODO: Fix JSX expression */}
+  P: paintEntry.startTime });
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
             }
           }
-          if (entry.entryType === 'largest-contentful-paint') {
-            const _lcpEntry = entry as PerformanceEntry;
-            reportVitals({ LCP: lcpEntry.startTime });
+          if (entry.entryType === 'largest-contentful-paint') {/* TODO: Fix JSX expression */}
+  P: lcpEntry.startTime });
           }
         });
       });
 
-      observer.observe({ entryTypes: ['paint', 'largest-contentful-paint'] });
+      observer.observe({/* TODO: Fix JSX expression */})
+  s: ['paint', 'largest-contentful-paint'] });
 
-      return () => {
-        observer.disconnect();
-        longTaskObserver?.disconnect();
+      return () => {/* TODO: Fix JSX expression */}
       };
     }
 
-    return () => {
-      longTaskObserver?.disconnect();
+    return () => {/* TODO: Fix JSX expression */}
     };
   }, [enabled, updateMetrics]);
 
   if (!enabled) return null;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   return(<div className="performance-monitor">)
       {/* Toggle button */})
@@ -269,11 +312,62 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({,
               <span className="font-medium text-gray-700 dark:text-gray-300">TTFB:</span>
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
               <span className={`ml-2 ${metrics.TTFB && metrics.TTFB < 600 ? 'text-green-600' : 'text-red-600'}`}>
+=======
+  return (<div className="performance-monitor"></div>
+      {/* Toggle button */}
+      <button></button>)
+        onClick={() => setIsVisible(!isVisible)}"
+        className="fixed bottom-4 right-4 z-50 bg-blue-600 text-white p-2 rounded-full shadow-lg,"
+  hover:bg-blue-700 transition-colors""
+        aria-label="Toggle performance monitor"
+      >
+        📊
+      </button>
+
+      {/* Performance panel */}
+      {/* TODO: Fix JSX expression */}
+              onClick={() => setIsVisible(false)}"
+              className="text-gray-500,
+  hover:text-gray-700,
+  dark:text-gray-400,
+  dark:hove,"
+  r:text-gray-200""
+              aria-label="Close performance monitor"
+            >
+              ✕
+            </button>
+          </div>
+
+          {/* Metrics */}"
+          <div className="space-y-2 mb-4"></div>"
+            <div className="text-sm"></div>"
+              <span className="font-medium text-gray-700,"
+  dark:text-gray-300">FC,
+  P:</span>
+              <span className={`ml-2 ${metrics.FCP && metrics.FCP < 1800 ? 'text-green-600' : 'text-red-600'}`}></span>`
+                {metrics.FCP ? `${Math.round(metrics.FCP)}ms` : 'N/A'}
+              </span>
+            </div>"
+            <div className="text-sm"></div>"
+              <span className="font-medium text-gray-700,"
+  dark:text-gray-300">LC,
+  P:</span>`
+              <span className={`ml-2 ${metrics.LCP && metrics.LCP < 2500 ? 'text-green-600' : 'text-red-600'}`}></span>`
+                {metrics.LCP ? `${Math.round(metrics.LCP)}ms` : 'N/A'}
+              </span>
+            </div>"
+            <div className="text-sm"></div>"
+              <span className="font-medium text-gray-700,"
+  dark:text-gray-300">TTF,
+  B:</span>`
+              <span className={`ml-2 ${metrics.TTFB && metrics.TTFB < 600 ? 'text-green-600' : 'text-red-600'}`}></span>`
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 {metrics.TTFB ? `${Math.round(metrics.TTFB)}ms` : 'N/A'}
               </span>
             </div>
           </div>
 
+<<<<<<< HEAD
           {/* Budget Status */}
 <<<<<<< HEAD
           <div className="border-t pt-3">
@@ -296,12 +390,26 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({,
               <div className="text-xs text-red-600 dark:text-red-400">
                 {budgetStatus.violations.map((violation, index) => (</div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
+=======
+          {/* Budget Status */}"
+          <div className="border-t pt-3"></div>"
+            <div className="flex items-center gap-2 mb-2"></div>"
+              <span className="text-sm font-medium text-gray-700,"
+  dark:text-gray-300">Budget,
+  Status:</span>`
+              <span className={`text-sm font-bold ${budgetStatus.passed ? 'text-green-600' : 'text-red-600'}`}></span>
+                {budgetStatus.passed ? '✓ PASSED' : '✗ FAILED'}
+              </span>
+            </div>
+            {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   <div key={index}>• {violation}</div>
                 ))}
               </div>
             )}
           </div>
 
+<<<<<<< HEAD
           {/* Connection Quality */}
 <<<<<<< HEAD
           <div className="border-t pt-3 mt-3">
@@ -326,6 +434,23 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({,
               <span className="font-medium text-gray-700 dark:text-gray-300">WebP Support:</span>
               <span className="ml-2 text-blue-600">
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
+=======
+          {/* Connection Quality */}"
+          <div className="border-t pt-3 mt-3"></div>"
+            <div className="text-sm"></div>"
+              <span className="font-medium text-gray-700,"
+  dark:text-gray-300">Connectio,
+  n:</span>"
+              <span className="ml-2 text-blue-600"></span>
+                {performanceOptimizer.getConnectionQuality().toUpperCase()}
+              </span>
+            </div>"
+            <div className="text-sm"></div>"
+              <span className="font-medium text-gray-700,"
+  dark:text-gray-300">WebP,
+  Support:</span>"
+              <span className="ml-2 text-blue-600"></span>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 {performanceOptimizer.shouldUseWebP() ? 'YES' : 'NO'}
               </span>
             </div>
@@ -337,4 +462,4 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({,
 };
 
 export default PerformanceMonitor;
-}
+}"`

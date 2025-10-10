@@ -1,13 +1,8 @@
-impo, r, t {
-  ArrowLe, f, t,
-  DollarSi, g, n,
-  Glo, b, e,
-  Packa, g, e,
-  Trending, U, p,
-  Z, a, p,
+impo, r, t {/* TODO: Fix JSX expression */}
 } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 
+<<<<<<< HEAD
 export default function AutonomousSupplyChainRevolution20, 2, 5() {  
   return(:src/pages/blog/ai-2025-oct-autonomous-supply-chain-revolution/page.tsx;
     <>
@@ -452,6 +447,9 @@ export default function AutonomousSupplyChainRevolution20, 2, 5() {
                 <ArrowLeft className="ml-2 h-5 w-5 rotate-180 ">,
                 <ArrowLeft className="ml-2 h-5 w-5 rotate-180" />,
   );
+=======
+export default function AutonomousSupplyChainRevolution20, 2, 5() {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 };
   </div>
   </div>

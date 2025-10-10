@@ -1,5 +1,6 @@
 'use client';
 
+<<<<<<< HEAD
 interface UserExperienceEnhancerProps {
   enableSmoothScrolling?: boolean;
   enableLoadingStates?: boolean;
@@ -43,6 +44,29 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
         @media (prefers-reduced-motion: reduce) {
           html {
             scroll-behavior: auto;
+=======
+
+interface UserExperienceEnhancerProps {/* TODO: Fix JSX expression */}
+}
+
+const,
+  UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({/* TODO: Fix JSX expression */})
+}) => {/* TODO: Fix JSX expression */}
+  const [loadingStates, setLoadingStates] = useState<Record<string, boolean>>({});
+
+  // Handle online/offline status;
+  useEffect(() => {/* TODO: Fix JSX expression */}
+
+    };
+
+
+  // Smooth scrolling;
+  useEffect(() => {/* TODO: Fix JSX expression */}
+        }
+        
+        @media (prefers-reduced-motio,)
+  n: reduce) {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           }
         }
       `;
@@ -50,6 +74,7 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
     }
   }, [enableSmoothScrolling]);
 
+<<<<<<< HEAD
   // Loading states management
   const setLoading = useCallback((key: string, loading: boolean) => {
     setLoadingStates(prev => ({ ...prev, [key]: loading }));
@@ -64,6 +89,17 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
         link.addEventListener('click', (e) => {
           const href = link.getAttribute('href');
           if (href && !href.startsWith('#') && !href.startsWith('mailto:') && !href.startsWith('tel:')) {
+=======
+  // Loading states management;
+  const setLoading = useCallback((ke,
+  y: string, loadin,)
+  g: boolean) => {/* TODO: Fix JSX expression */}
+    setLoadingStates(prev => ({ ...prev, [key]: loading }));
+  }, []);
+
+  // Global loading state;
+  useEffect(() => {/* TODO: Fix JSX expression */}`
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
             setLoading(`link-${href}`, true);
           }
         });
@@ -71,6 +107,7 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
     }
   }, [enableLoadingStates, setLoading]);
 
+<<<<<<< HEAD
   // Error boundary enhancement
   useEffect(() => {
     if (enableErrorBoundaries) {
@@ -82,10 +119,15 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
           (window as any).gtag('event', 'exception', {
             description: event.error?.message || 'Unknown error',
             fatal: false
+=======
+  // Error boundary enhancement;
+  useEffect(() => {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           });
         }
       };
 
+<<<<<<< HEAD
       const handleUnhandledRejection = (event: PromiseRejectionEvent) => {
         // console.error('Unhandled promise rejection:', event.reason);
         
@@ -93,6 +135,10 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
           (window as any).gtag('event', 'exception', {
             description: event.reason?.message || 'Unhandled promise rejection',
             fatal: false
+=======
+      const handleUnhandledRejection = (even,)
+  t: PromiseRejectionEvent) => {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           });
         }
       };
@@ -100,13 +146,18 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
       window.addEventListener('error', handleError);
       window.addEventListener('unhandledrejection', handleUnhandledRejection);
 
+<<<<<<< HEAD
       return () => {
         window.removeEventListener('error', handleError);
         window.removeEventListener('unhandledrejection', handleUnhandledRejection);
+=======
+      return () => {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       };
     }
   }, [enableErrorBoundaries]);
 
+<<<<<<< HEAD
   // Analytics enhancement
   useEffect(() => {
     if (enableAnalytics && typeof window !== 'undefined') {
@@ -123,10 +174,19 @@ $4});
             (window as any).gtag('event', 'page_visible', {
               event_category:             ,
 $4});
+=======
+  // Analytics enhancement;
+  useEffect(() => {/* TODO: Fix JSX expression */}
+            });
+          }
+        } else {/* TODO: Fix JSX expression */}
+            });
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           }
         }
       };
 
+<<<<<<< HEAD
       // Track scroll depth
       const handleScroll = () => {
         const scrollDepth = Math.round(
@@ -163,12 +223,27 @@ $4});
               (window as any).gtag('event', 'scroll', {
                 event_category: 'engagement',
                 value: 90
+=======
+      // Track scroll depth;
+      let maxScrollDepth = 0;
+      const handleScroll = () => {/* TODO: Fix JSX expression */}
+              });
+            }
+          } else if (maxScrollDepth >= 50 && maxScrollDepth < 75) {/* TODO: Fix JSX expression */}
+              });
+            }
+          } else if (maxScrollDepth >= 75 && maxScrollDepth < 90) {/* TODO: Fix JSX expression */}
+              });
+            }
+          } else if (maxScrollDepth >= 90) {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               });
             }
           }
         }
       };
 
+<<<<<<< HEAD
       // Track time on page
       const startTime = Date.now();
       const handleBeforeUnload = () => {
@@ -179,10 +254,17 @@ $4});
             value: timeOnPage,
             event_category:           ,
 $4});
+=======
+      // Track time on page;
+      const startTime = Date.now();
+      const handleBeforeUnload = () => {/* TODO: Fix JSX expression */}
+          });
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         }
       };
 
       document.addEventListener('visibilitychange', handleVisibilityChange);
+<<<<<<< HEAD
       window.addEventListener('scroll', handleScroll, { passive: true });
       window.addEventListener('beforeunload', handleBeforeUnload);
 
@@ -190,10 +272,18 @@ $4});
         document.removeEventListener('visibilitychange', handleVisibilityChange);
         window.removeEventListener('scroll', handleScroll);
         window.removeEventListener('beforeunload', handleBeforeUnload);
+=======
+      window.addEventListener('scroll', handleScroll, {/* TODO: Fix JSX expression */})
+  e: true });
+      window.addEventListener('beforeunload', handleBeforeUnload);
+
+      return () => {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       };
     }
   }, [enableAnalytics]);
 
+<<<<<<< HEAD
   // Notifications
   useEffect(() => {
     if (enableNotifications && !isOnline) {
@@ -210,10 +300,18 @@ $4});
       return () => {
         clearTimeout(timer);
         notification.remove();
+=======
+  // Notifications;
+  useEffect(() => {/* TODO: Fix JSX expression */}
+      }, 5000);
+
+      return () => {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       };
     }
   }, [isOnline, enableNotifications]);
 
+<<<<<<< HEAD
   // Performance monitoring
   useEffect(() => {
     if (typeof window !== 'undefined' && 'performance' in window) {
@@ -244,21 +342,46 @@ $4});
                   value: Math.round((entry as any).value * 1000),
                   event_category:                 ,
 $4});
+=======
+  // Performance monitoring;
+  useEffect(() => {/* TODO: Fix JSX expression */}
+              });
+            }
+          } else if (entry.entryType === 'first-input') {/* TODO: Fix JSX expression */}
+              });
+            }
+          } else if (entry.entryType === 'layout-shift') {/* TODO: Fix JSX expression */}
+                });
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               }
             }
           }
         }
       });
 
+<<<<<<< HEAD
       observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
 
       return () => {
         observer.disconnect();
+=======
+      observer.observe({/* TODO: Fix JSX expression */})
+  s: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+
+      return () => {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       };
     }
   }, []);
 
   return null;
+<<<<<<< HEAD
 };
 
 export default UserExperienceEnhancer;
+=======
+
+};
+
+export default UserExperienceEnhancer;`
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

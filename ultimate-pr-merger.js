@@ -3,29 +3,45 @@ import { execSync } from 'child_process';
 import fs from 'fs';
 
 // // //Function to safely execute git commands;
+<<<<<<< HEAD
 function safeGitCommand(command, description) {
   try {
 //     //     const result = execSync(command, { encoding: 'utf8', stdio: 'pipe' });
 //     return { success: true, result };
   } catch (error) {
 //     return { success: false, error: error.message };
+=======
+function safeGitCommand(command, description) {/* TODO: Fix JSX expression */}
+  o: 'pipe' });
+//     return {/* TODO: Fix JSX expression */}
+  s: true, result };
+  } catch (error) {/* TODO: Fix JSX expression */}
+  r: error.message };
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 }
 
 //Function to check if branch exists;
+<<<<<<< HEAD
 function branchExists(branchName) {
   try {
     execSync(`git show-ref --verify --quiet refs/remotes/origin/${branchName}`)
       { stdio: 'pipe' }
+=======
+function branchExists(branchName) {/* TODO: Fix JSX expression */}
+      `git show-ref --verify --quiet refs/remotes/origin/${branchName}`,
+      {/* TODO: Fix JSX expression */}
+  o: 'pipe' }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     );
     return true;
-  } catch {
-    return false;
+  } catch {/* TODO: Fix JSX expression */}
   }
 }
 
 //All PRs to process;
 const allPRs = [
+<<<<<<< HEAD
   {
     number: 11935;
     title: 'Fix web application console errors'
@@ -57,6 +73,15 @@ const allPRs = [
     sha: '29f97d68b44ddf467a8bada29cb68cb2100d59db',
     priority: 'high',
     description: 'Remove unused PerformanceOptimizer import',
+=======
+  {/* TODO: Fix JSX expression */}
+  },
+  {/* TODO: Fix JSX expression */}
+  },
+  {/* TODO: Fix JSX expression */}
+  },
+  {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
 ];
 
@@ -68,6 +93,7 @@ safeGitCommand('git pull origin main', 'Pull latest changes from main');
 // const skippedCount = 0;
 
 //Process each PR;
+<<<<<<< HEAD
 for (const pr of allPRs) {
 //   // console.log(
     `\n--- Processing PR #${pr.number}: ${pr.title} (Priority: ${pr.priority}) ---`
@@ -81,10 +107,19 @@ for (const pr of allPRs) {
       status: 'not_found'),
       branch: pr.branch),
       priority: pr.priority),
+=======
+for (const pr of allPRs) {/* TODO: Fix JSX expression */}`
+    `\n--- Processing PR #${pr.number}: ${pr.title} (Priorit,)`
+  y: ${pr.priority}) ---`
+  );
+//   //Check if branch exists;
+  if (!branchExists(pr.branch)) {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     });
     continue;
   }
 
+<<<<<<< HEAD
 //   //Try to merge the branch;
   const mergeResult = safeGitCommand(`git merge origin/${pr.branch} --no-ff -m "Merge PR #${pr.number}: ${pr.title}"`)
     `Merge ${pr.branch}`
@@ -111,11 +146,25 @@ for (const pr of allPRs) {
       branch: pr.branch;),
       priority: pr.priority),
       error: mergeResult.error),
+=======
+//   //Try to merge the branch;`
+  const mergeResult = safeGitCommand(`git merge origin/${pr.branch} --no-ff -m "Merge PR #${pr.number}: ${pr.title}"`,`
+    `Merge ${pr.branch}`)
+  );
+
+  if (mergeResult.success) {/* TODO: Fix JSX expression */}
+    });
+  } else {/* TODO: Fix JSX expression */}`
+    safeGitCommand('git merge --abort', `Abort merge for ${pr.branch}`);
+
+    results.push({/* TODO: Fix JSX expression */})
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     });
   }
 }
 
 //Run comprehensive system checks;
+<<<<<<< HEAD
 // const typeCheck = safeGitCommand('pnpm run type-check')
   'TypeScript type checking'
 );
@@ -130,10 +179,24 @@ if (mergedCount > 0) {
   );
   if (pushResult.success) {,
 //     } else {
+=======
+// const typeCheck = safeGitCommand('pnpm run type-check',
+  'TypeScript type checking')
+);
+const buildCheck = safeGitCommand('pnpm run,
+  build:no-check',
+  'Production build')
+);
+
+//Push changes if any were merged;
+if (mergedCount > 0) {/* TODO: Fix JSX expression */}
+//     } else {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 //     }
 }
 
 //Generate comprehensive final report;
+<<<<<<< HEAD
 const finalReport = {
   timestamp: new Date().toISOString()
   summary: {
@@ -160,16 +223,35 @@ const finalReport = {
     branch: 'main',
     status: 'clean',
     lastCommit: execSync('git log --oneline -1', { encoding: 'utf8' }).trim(),
+=======
+const finalReport = {/* TODO: Fix JSX expression */}`
+  e: `${Math.round((mergedCount / allPRs.length) * 100)}%`,
+  },
+  systemCheck,
+  s: {/* TODO: Fix JSX expression */}
+  },
+  result,
+  s: results,
+  statu,
+  s: mergedCount > 0 ? 'success' : 'no-changes',
+  repositor,
+  y: {/* TODO: Fix JSX expression */}
+  g: 'utf8' }).trim(),
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
 };
 
 //Save detailed final report;
+<<<<<<< HEAD
 fs.writeFileSync('ultimate-pr-merge-report.json')
+=======
+fs.writeFileSync('ultimate-pr-merge-report.json',)
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   JSON.stringify(finalReport, null, 2)
 );
 
-// // // // // // // // // // // if (finalReport.systemChecks.allPassed) {
-//   } else {
+// // // // // // // // // // // if (finalReport.systemChecks.allPassed) {/* TODO: Fix JSX expression */}
+//   } else {/* TODO: Fix JSX expression */}
 //   }
 
-// // // 
+// // // "`

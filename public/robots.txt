@@ -14,6 +14,7 @@ Disallow: /_next/
 Disallow: /static/
 
 # Allow important pages
+<<<<<<< HEAD
 Allow: /ai-services
 Allow: /it-services
 Allow: /micro-saas
@@ -22,3 +23,11 @@ Allow: /contact
 Allow: /pricing
 Allow: /case-studies
 Allow: /blog
+=======
+Allow: /
+Allow: /about
+Allow: /services
+Allow: /contact
+Allow: /blog
+Allow: /case-studies
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

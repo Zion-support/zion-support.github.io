@@ -7,19 +7,31 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Function to fix JSX tags that were incorrectly prefixed with underscores;
+<<<<<<< HEAD
 function fixJSXTags(content) {
   // Fix JSX opening tags;
   content = content.replace(/<(_[a-zA-Z][a-zA-Z0-9]*)/g, (match, tagName) => {
+=======
+function fixJSXTags(content) {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     return `<${tagName.substring(1)}`; // Remove the underscore;
   });
   
   // Fix JSX closing tags;
+<<<<<<< HEAD
   content = content.replace(/<\/(_[a-zA-Z][a-zA-Z0-9]*)>/g, (match, tagName) => {
+=======
+  content = content.replace(/<\/(_[a-zA-Z][a-zA-Z0-9]*)>/g, (match, tagName) => {/* TODO: Fix JSX expression */}`
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     return `</${tagName.substring(1)}>`; // Remove the underscore;
   });
   
   // Fix self-closing JSX tags;
+<<<<<<< HEAD
   content = content.replace(/<(_[a-zA-Z][a-zA-Z0-9]*)\s*\/>/g, (match, tagName) => {
+=======
+  content = content.replace(/<(_[a-zA-Z][a-zA-Z0-9]*)\s*\/>/g, (match, tagName) => {/* TODO: Fix JSX expression */}`
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     return `<${tagName.substring(1)} />`; // Remove the underscore;
   });
   
@@ -27,6 +39,7 @@ function fixJSXTags(content) {
 }
 
 // Function to fix variable names that were incorrectly prefixed with underscores in destructuring;
+<<<<<<< HEAD
 function fixDestructuringVariables(content) {
   // Fix destructuring in function parameters;
   content = content.replace(/function\s+\w+\s*\([^)]*\)/g, (match) => {
@@ -44,9 +57,20 @@ function fixDestructuringVariables(content) {
       const trimmed = v.trim();
       if (trimmed.startsWith('_') && trimmed.length > 1) {
         return trimmed.substring(1);
+=======
+function fixDestructuringVariables(content) {/* TODO: Fix JSX expression */}
+  });
+  
+  // Fix arrow function parameters;
+  content = content.replace(/\([^)]*\)\s*=>/g, (match) => {/* TODO: Fix JSX expression */}
+  });
+  
+  // Fix destructuring assignments;
+  content = content.replace(/const\s*{\s*([^}]+)\s*}\s*=\s*([^;]+);/g, (match, vars, assignment) => {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
       return trimmed;
-    }).join(', ');
+    }).join(', ');`
     return `const { ${fixedVars} } = ${assignment};`;
   });
   
@@ -54,6 +78,7 @@ function fixDestructuringVariables(content) {
 }
 
 // Function to process a single file;
+<<<<<<< HEAD
 function processFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
@@ -68,16 +93,20 @@ function processFile(filePath) {
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
       modified = true;
+=======
+function processFile(filePath) {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
 
     return modified;
-  } catch (error) {
+  } catch (error) {/* TODO: Fix JSX expression */}`
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
 
 // Function to find all TypeScript/JavaScript files;
+<<<<<<< HEAD
 function findSourceFiles(dir) {
   const files = [];
   
@@ -97,6 +126,11 @@ function findSourceFiles(dir) {
         // Check for TypeScript/JavaScript files;
         if (/\.(ts|tsx|js|jsx)$/.test(item)) {
           files.push(fullPath);
+=======
+function findSourceFiles(dir) {/* TODO: Fix JSX expression */}
+        }
+      } else if (stat.isFile()) {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         }
       }
     }
@@ -112,29 +146,23 @@ console.log('Starting JSX tag fixes...');
 const srcDir = path.join(__dirname, 'src');
 const appDir = path.join(__dirname, 'app');
 const files = [...findSourceFiles(srcDir), ...findSourceFiles(appDir)];
-
+`
 console.log(`Found ${files.length} files to process`);
 
 let processedCount = 0;
-for (const file of files) {
-  if (processFile(file)) {
-    processedCount++;
-    console.log(`Fixed: ${file}`);
+for (const file of files) {/* TODO: Fix JSX expression */}`
+  d: ${file}`);
   }
 }
-
+`
 console.log(`Processed ${processedCount} files`);
 
 // Also process root level files;
 const rootFiles = ['App.tsx', 'main.tsx', 'page.tsx', 'layout.tsx'];
-for (const file of rootFiles) {
-  const filePath = path.join(__dirname, file);
-  if (fs.existsSync(filePath)) {
-    if (processFile(filePath)) {
-      processedCount++;
-      console.log(`Fixed: ${file}`);
+for (const file of rootFiles) {/* TODO: Fix JSX expression */}`
+  d: ${file}`);
     }
   }
 }
 
-console.log('JSX tag fixes completed!');
+console.log('JSX tag fixes completed!');`

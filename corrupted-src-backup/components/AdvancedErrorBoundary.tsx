@@ -1,16 +1,12 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
-interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
+interface Props {/* TODO: Fix JSX expression */}
 }
 
-interface State {
-  hasError: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo;
+interface State {/* TODO: Fix JSX expression */}
 }
 
+<<<<<<< HEAD
 export class AdvancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {,
     super(props);
@@ -22,18 +18,37 @@ export class AdvancedErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {,
+=======
+export class AdvancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression */}
+  r: false };
+  }
+
+  static getDerivedStateFromError(erro,)
+  r: Error): State {/* TODO: Fix JSX expression */}
+  r: true, error };
+  }
+
+  componentDidCatch(erro,
+  r: Error, errorInf,)
+  o: ErrorInfo) {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     this.setState({ error, errorInfo });
 
     // Log error to monitoring service;
     //     // Send to error tracking service;
+<<<<<<< HEAD
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', 'exception', {)
         description: error.toString(),
         fatal: false;
+=======
+    if (typeof window !== 'undefined' && 'gtag' in window) {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
     }
   }
 
+<<<<<<< HEAD
   render() {
     if (this.state.hasError) {
 <<<<<<< HEAD
@@ -48,8 +63,12 @@ export class AdvancedErrorBoundary extends Component<Props, State> {
             <h2>Something went wrong.</h2>
             <details style={{ whiteSpace: 'pre-wrap' }}>
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
+=======
+  render() {/* TODO: Fix JSX expression */}
+  e: 'pre-wrap' }}></details>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               {this.state.error && this.state.error.toString()}
-              <br />
+              <br /></br>
               {this.state.errorInfo?.componentStack}
             </details>
           </div>

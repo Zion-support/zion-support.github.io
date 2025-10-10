@@ -8,6 +8,7 @@ export type IntegrationProviderId =
   | 'workable'
   | 'bamboohr';
 
+<<<<<<< HEAD
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
@@ -17,10 +18,15 @@ export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
+=======
+export type SyncStatus = 'connected' | 'warning' | 'disconnected';
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 
 export interface IntegrationProviderMeta {
   id: IntegrationProviderId;
   name: string;
+<<<<<<< HEAD
   category: 'crm' | 'ats';
   description: string;
 
@@ -58,6 +64,13 @@ export interface ProviderConnection {
   expiresAt?: number;
   config?: Record<string, any>;
 }
+=======
+  category: 'crm' | 'ats' | 'hr';
+  description: string;
+  logoUrl?: string;
+  websiteUrl?: string;
+  apiDocsUrl?: string;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }
 
 export interface ProviderConnection {
@@ -71,28 +84,8 @@ export interface ProviderConnection {
   lastSyncAt?: number;
   createdAt: number;
   updatedAt: number;
-}
-  expiresAt?: number;
-}
-
-export interface ProviderConnection {
-  id: string;
-  providerId: IntegrationProviderId;
-  name: string;
-  status: SyncStatus;
-}
-
-  status: SyncStatus;
-  lastSync?: number;
-}
-
-  status: SyncStatus;
-  lastSync?: number;
-  createdAt: number;
-  updatedAt: number;
-  status: SyncStatus;
-  lastSync?: number;
   config?: Record<string, any>;
+<<<<<<< HEAD
   expiresAt?: number;
   status: SyncStatus;
   lastSync?: number;
@@ -127,6 +120,8 @@ export type SyncStatus = 'connected' | 'warning' | 'disconnected';
   config: Record<string, unknown>;
   createdAt: Date;
   updatedAt: Date;
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }
 
 export interface SyncLogEntry {
@@ -134,6 +129,7 @@ export interface SyncLogEntry {
   connectionId: string;
   action: string;
   details?: Record<string, any>;
+<<<<<<< HEAD
 }
 
   details?: Record<string, any>;
@@ -177,11 +173,17 @@ export interface ZapierEvent {
   type: 'zion.job.posted' | 'zion.talent.matched';
   timestamp: number;
 export interface IntegrationProviderMeta {,
+=======
+  timestamp: number;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   status: 'success' | 'error' | 'warning';
   message: string;
-  details?: Record<string, unknown>;
-  timestamp: Date;
+
 }
+
+export interface ManualOverride {/* TODO: Fix JSX expression */}
+}
+
 
 export interface IntegrationOverride {
   id: string;
@@ -191,44 +193,17 @@ export interface IntegrationOverride {
   reason: string;
   createdAt: Date;
   updatedAt: Date;
+
 }
 
-export interface IntegrationEvent {
+export interface IntegrationEvent {/* TODO: Fix JSX expression */}
+}
+
+
+export interface ZapierEvent {
   id: string;
-  type: 'sync' | 'error' | 'warning' | 'connection';
-  connectionId?: string;
-  message: string;
-  details?: Record<string, unknown>;
-  timestamp: Date;
-}
-
-export interface IntegrationsState {
-  connections: ProviderConnection[];
-  logs: SyncLogEntry[];
-
-export interface IntegrationProviderMeta {
-  id: IntegrationProviderId;
-  name: string;
-  category: 'crm' | 'ats';
-  description: string;
-  payload: Record<string, any>;
-}
-
-  payload: Record<string, any>;
-}
-
-export interface IntegrationProviderMeta {
-  id: string;
-  name: string;
-  category: 'crm' | 'ats';
-  description: string;
-}
-
-}
-
-  payload: Record<string, any>;
-}
-
+  type: 'zion.job.posted' | 'zion.talent.matched';
+  timestamp: number;
   payload: Record<string, any>;
 }
 
@@ -239,21 +214,9 @@ export interface IntegrationsState {
   events: ZapierEvent[];
   lastError?: string | null;,
 }
-}
-}
-}
-}
-  payload: Record<string, any>;
-}
 
-export interface IntegrationProviderMeta {
-  id: IntegrationProviderId;
-  name: string;
-  category: 'crm' | 'ats';
-  description: string;
-  payload: Record<string, any>;
-}
 
+<<<<<<< HEAD
 export interface IntegrationsState {
   connections: ProviderConnection[];
   logs: SyncLogEntry[];
@@ -300,3 +263,5 @@ export interface IntegrationsState {
   overrides: IntegrationOverride[];
   events: IntegrationEvent[];
 }
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 exports.handler = async function (event, context) {
   try {
     // Unused media scanning simulation;
@@ -33,6 +34,20 @@ exports.handler = async function (event, context) {
         error: 'Internal server error'),
         message: error.message),
         function: 'unused-media-scanner',
+=======
+exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
+      },
+      bod,
+  y: JSON.stringify({/* TODO: Fix JSX expression */}
+        })
+      })
+    };
+    return result;
+  } catch (error) {/* TODO: Fix JSX expression */}
+      },
+      bod,
+  y: JSON.stringify({/* TODO: Fix JSX expression */})
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       })
     };
   }

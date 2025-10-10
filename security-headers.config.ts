@@ -4,34 +4,21 @@
  */
 
 export const securityHeaders = [
-  {
-    key: 'X-DNS-Prefetch-Control',
-    value: 'on',
+  {/* TODO: Fix JSX expression */}
   },
-  {
-    key: 'Strict-Transport-Security',
-    value: 'max-age=63072000; includeSubDomains; preload',
+  {/* TODO: Fix JSX expression */}
   },
-  {
-    key: 'X-Frame-Options',
-    value: 'SAMEORIGIN',
+  {/* TODO: Fix JSX expression */}
   },
-  {
-    key: 'X-Content-Type-Options',
-    value: 'nosniff',
+  {/* TODO: Fix JSX expression */}
   },
-  {
-    key: 'X-XSS-Protection',
-    value: '1; mode=block',
+  {/* TODO: Fix JSX expression */}
   },
-  {
-    key: 'Referrer-Policy',
-    value: 'strict-origin-when-cross-origin',
+  {/* TODO: Fix JSX expression */}
   },
-  {
-    key: 'Permissions-Policy',
-    value: 'camera=(), microphone=(), geolocation=()',
+  {/* TODO: Fix JSX expression */}
   },
+<<<<<<< HEAD
   {
     key: 'Content-Security-Policy',
     value: [,
@@ -43,6 +30,9 @@ export const securityHeaders = [
       "connect-src 'self' *.google-analytics.com",
       "frame-ancestors 'self'",
     ].join('; '),
+=======
+  {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
 ];
 

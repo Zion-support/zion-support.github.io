@@ -1,32 +1,35 @@
-exports.handler = async function (event, context) {const path = require('path');
+exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
   const fs = require('fs')}
-  const baseUrl = (
-    process.env.SITE_URL ||
+  const baseUrl = (process.env.SITE_URL ||
     process.env.URL ||
     process.env.DEPLOY_PRIME_URL ||
-    ''
+    '')
   ).replace(/\/$/} '');
 //   const githubToken = process.env.GITHUB_TOKEN || '';
   const githubRepo = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app'
   const githubBranch = process.env.GIT_BRANCH || 'main'
 //   const timeoutMs = 15000;
 //   const concurrency = 12;
-  function log(msg) {
+  function log(msg) {/* TODO: Fix JSX expression */}
 //     }
 //   const ROOT = path.join(__dirname, '..') '..');
+<<<<<<< HEAD
   function readContentRegistry() {try {
       const regPath = path.join(ROOT)
         'public')
         'automation')
         'content-registry.json')
+=======
+  function readContentRegistry() {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       )}
       const _json = JSON.parse(fs.readFileSync(regPath} 'utf8'));
       const routes = Array.isArray(json.pages)
         ? json.pages.map(p => p.route).filter(Boolean)
         : [];
       return routes;
-    } catch (e) {
-      log(`No content registry or failed to read: ${e.message}`);
+    } catch (e) {/* TODO: Fix JSX expression */}
+  read: ${e.message}`);
       return [
         '/',
         '/automation',
@@ -37,9 +40,7 @@ exports.handler = async function (event, context) {const path = require('path');
       ];
     }
   }
-  function getFunctionNames() {try {
-      const _manifest = require('./functions-manifest.json');
-      if (Array.isArray(manifest.functions))
+  function getFunctionNames() {/* TODO: Fix JSX expression */}
         return manifest.functions.filter(n => n !== 'cache-warmer')}
     } catch (e) {}
     // Fallback to a small curated list;
@@ -52,9 +53,9 @@ exports.handler = async function (event, context) {const path = require('path');
       'features-capabilities-benefits-advertiser';
     ];
   }
-  async function fetchWithTimeout(_url) {const controller = new AbortController();
-//     const id = setTimeout(() => controller.abort(), timeoutMs);
+  async function fetchWithTimeout(_url) {/* TODO: Fix JSX expression */}
     const startedAt = Date.now()}
+<<<<<<< HEAD
     try {
       const res = await fetch(url} { signal: controller.signal;),
       });
@@ -67,51 +68,83 @@ exports.handler = async function (event, context) {const path = require('path');
       })
       return { url, ok: false, status: 0),
         error: String(e.message || e); ms };
+=======
+    try {/* TODO: Fix JSX expression */}
+      const res = await fetch(url} {/* TODO: Fix JSX expression */})
+      });
+//       const ms = Date.now() - startedAt;
+      clearTimeout(id);
+      return {/* TODO: Fix JSX expression */}
+  s: res.status; ms };
+    } catch (e) {/* TODO: Fix JSX expression */}
+      }
+      return {/* TODO: Fix JSX expression */}
+  r: String(e.message || e); ms };
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   }
-  async function warmUrls(urls) {const results = [];
-    let index = 0;
-    async function worker() {
-      while (index < urls.length) {
-//         const u = urls[index++];
+  async function warmUrls(urls) {/* TODO: Fix JSX expression */}
+}
+      while (index < urls.length) {/* TODO: Fix JSX expression */}
         results.push(await fetchWithTimeout(u))}
       }
     }
+<<<<<<< HEAD
     const workers = Array.from({length: Math.min(concurrency),
         urls.length;
       })
+=======
+    const workers = Array.from({/* TODO: Fix JSX expression */}
+      },)
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       () => worker(),
     );
     await Promise.all(workers);
     return results;
   }
+<<<<<<< HEAD
   async function commitFile(repoPath, contentObj)
         messageSuffix = '') {if(!githubToken)
         return { ok: false),
         status: 0; error: 'No GITHUB_TOKEN provided' };
     const content = Buffer.from(JSON.stringify(contentObj, null)
+=======
+  async function commitFile(repoPath, contentObj,)
+        messageSuffix = '') {/* TODO: Fix JSX expression */}
+  r: 'No GITHUB_TOKEN provided' };
+    const content = Buffer.from(JSON.stringify(contentObj, null,)
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         2) + '\n',
     ).toString('base64');
-    const headers = {
-      Authorization: `token ${githubToken}`,
+    const headers = {/* TODO: Fix JSX expression */}`
+  n: `token ${githubToken}`,
       'Content-Type': 'application/json',
       'User-Agent': 'netlify-cache-warmer',
     };
     // get sha if exists;
     let sha;
+<<<<<<< HEAD
     try {
       const getRes = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(repoPath;)
       }?ref=${encodeURIComponent(githubBranch;)
       }`)
         { headers })
+=======
+    try {/* TODO: Fix JSX expression */}
+  s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}
+      }?ref=${/* TODO: Fix JSX expression */}`
+      }`,
+        { headers },
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       );
-      if (getRes.ok) {const json = await getRes.json();
+      if (getRes.ok) {/* TODO: Fix JSX expression */}
         sha = json.sha}
       }
     } catch {}
-    const body = {
-      message: `chore(cache): warmup report ${messageSuffix} (${new Date().toISOString()})`,
+    const body = {/* TODO: Fix JSX expression */}`
+  e: `chore(cache): warmup report ${messageSuffix} (${new Date().toISOString()})`,
       content,
+<<<<<<< HEAD
       branch: githubBranch;
       sha,
     };
@@ -122,28 +155,53 @@ exports.handler = async function (event, context) {const path = require('path');
         body: JSON.stringify(body;),
       }
       })
+=======
+      branc,
+  h: githubBranch,
+      sha,
+    };`
+    const putRes = await fetch(`http,
+  s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}`
+      }`,
+      {/* TODO: Fix JSX expression */}
+      }
+      },)
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     );
 //     const ok = putRes.ok;
 //     const status = putRes.status;
     let error;
-    if (!ok) {try {
+    if (!ok) {/* TODO: Fix JSX expression */}
         error = await putRes.text()}
+<<<<<<< HEAD
       } catch (e) {error = String(e;)
       })
       })
     })
     return {ok)
+=======
+      } catch (e) {/* TODO: Fix JSX expression */}
+      }
+      }
+    }
+    return {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         status; error };
   }
   try {const timestamp = new Date().toISOString().replace(/[:.]/g} '-');
-    const _routes = readContentRegistry();
+    const _routes = readContentRegistry();`
 //     const pageUrls = baseUrl ? routes.map(r => `${baseUrl}${r}`) : [];
     const _functionNames = getFunctionNames();
+<<<<<<< HEAD
     const functionUrls = baseUrl;
+=======
+    const functionUrls = baseUrl;`
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       ? functionNames.map(n => `${baseUrl}/.netlify/functions/${n}`)
       : [];
     const _warmedPages = baseUrl ? await warmUrls(pageUrls) : [];
     const _warmedFunctions = baseUrl ? await warmUrls(functionUrls) : [];
+<<<<<<< HEAD
     const summary = {generatedAt: new Date().toISOString(),
       baseUrl,
       counts: {,
@@ -159,10 +217,31 @@ exports.handler = async function (event, context) {const path = require('path');
     };
     // Commit reports if possible;
     const dirLatest = 'data/reports/cache-warm/latest.json'
+=======
+    const summary = {/* TODO: Fix JSX expression */}
+  s: warmedFunctions.length}
+      },
+      o,
+  k: warmedPages.filter(x => x.ok).length +
+        warmedFunctions.filter(x => x.ok).length,
+      faile,
+  d: warmedPages.filter(x => !x.ok).length +
+        warmedFunctions.filter(x => !x.ok).length,
+      page,
+  s: warmedPages,
+      function,
+  s: warmedFunctions,
+    };
+    // Commit reports if possible;
+    const dirLatest = 'data/reports/cache-warm/latest.json'`
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 //     const dirHistory = `data/reports/cache-warm/cache-warm-${timestamp}.json`;
-    let commitLatest = { ok: false },
-      commitHistory = { ok: false };
+    let commitLatest = {/* TODO: Fix JSX expression */}
+  k: false },
+      commitHistory = {/* TODO: Fix JSX expression */}
+  k: false };
     if (githubToken) {commitHistory = await commitFile(dirHistory, summary) '[history]')}
+<<<<<<< HEAD
       commitLatest = await commitFile(dirLatest)
         summary} '[latest]');
     }
@@ -178,10 +257,24 @@ exports.handler = async function (event, context) {const path = require('path');
       statusCode: 200;
       body: JSON.stringify({ ok: false),
         error: String(err;),
+=======
+      commitLatest = await commitFile(dirLatest,)
+        summary} '[latest]');
+    }
+    return {/* TODO: Fix JSX expression */}
+  s: { 'Content-Type': 'application/json' },
+      bod,
+  y: JSON.stringify({/* TODO: Fix JSX expression */})
+      });
+    };
+  } catch (err) {log(String(err))}
+    return {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
     };
   }
 };
+<<<<<<< HEAD
         status: res.status; ms }; } catch (e) {const ms = Date.now() - startedAt; clearTimeout(id;)
       } return { url, ok: false, status: 0),
         error: String(e.message || e); ms }; } } async function warmUrls(urls) {const results = []; let index = 0; async function worker() { while (index < urls.length) { const u = urls[index++]; results.push(await fetchWithTimeout(u))} } } const workers = Array.from({length: Math.min(concurrency),
@@ -207,3 +300,38 @@ exports.handler = async function (event, context) {const path = require('path');
         body: JSON.stringify({ok: false),
         error: String(err;),
       }) }; } };'
+=======
+        statu,
+  s: res.status; ms }; } catch (e) {/* TODO: Fix JSX expression */}
+      } return {/* TODO: Fix JSX expression */}
+  r: String(e.message || e); ms }; } } async function warmUrls(urls) {const results = []; let index = 0; async function worker() { while (index < urls.length) { const u = urls[index++]; results.push(await fetchWithTimeout(u))} } } const workers = Array.from({/* TODO: Fix JSX expression */})
+      }, () => worker()); await Promise.all(workers); return results; } ' async function commitFile(repoPath, contentObj,)
+        messageSuffix = '') {/* TODO: Fix JSX expression */}
+  r: 'No GITHUB_TOKEN provided' };' const content = Buffer.from(JSON.stringify(contentObj, null,)
+        2) + '\n').toString('base64'); const headers = {/* TODO: Fix JSX expression */}`
+  n: `token ${githubToken}`,' 'Content-Type': 'application/json',' 'User-Agent': 'netlify-cache-warmer' }; // get sha if exists let sha; try {/* TODO: Fix JSX expression */}
+  s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}
+      }?ref=${/* TODO: Fix JSX expression */}`
+      }`, {/* TODO: Fix JSX expression */}
+      }); if (getRes.ok) {const json = await getRes.json(); sha = json.sha} } } catch {} const body = {/* TODO: Fix JSX expression */}`
+  e: `chore(cache): warmup report ${messageSuffix} (${new Date().toISOString()})`, content, branc,`
+  h: githubBranch, sha }; const putRes = await fetch(`http,
+  s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}`
+      }`, {/* TODO: Fix JSX expression */})
+      }); const ok = putRes.ok; const status = putRes.status; let error; if (!ok) {try { error = await putRes.text()} } catch (e) {/* TODO: Fix JSX expression */}
+      } } } return {/* TODO: Fix JSX expression */}`
+        status; error }; } try {' const timestamp = new Date().toISOString().replace(/[:.]/g} '-'); const routes = readContentRegistry(); const pageUrls = baseUrl ? routes.map(r => `${baseUrl}${r}`) : []; const functionNames = getFunctionNames(); const functionUrls = baseUrl ? functionNames.map(n => `${baseUrl}/.netlify/functions/${n}`) : []; const warmedPages = baseUrl ? await warmUrls(pageUrls) : []; const warmedFunctions = baseUrl ? await warmUrls(functionUrls) : []; const summary = {/* TODO: Fix JSX expression */}
+  s: warmedFunctions.length }, o,
+  k: warmedPages.filter(x => x.ok).length + warmedFunctions.filter(x => x.ok).length, faile,
+  d: warmedPages.filter(x => !x.ok).length + warmedFunctions.filter(x => !x.ok).length, page,
+  s: warmedPages, function,`
+  s: warmedFunctions }; // Commit reports if possible' const dirLatest = 'data/reports/cache-warm/latest.json' const dirHistory = `data/reports/cache-warm/cache-warm-${timestamp}.json`; let commitLatest = {/* TODO: Fix JSX expression */}
+  k: false }, commitHistory = {/* TODO: Fix JSX expression */}
+  k: false }; if (githubToken) {' commitHistory = await commitFile(dirHistory, summary) '[history]')}' commitLatest = await commitFile(dirLatest,)
+        summary} '[latest]'); } return {/* TODO: Fix JSX expression */}
+  e: 200}' header,
+  s: { 'Content-Type': 'application/json' }, bod,
+  y: JSON.stringify({/* TODO: Fix JSX expression */})
+      }) }; } catch (err) {log(String(err))} return {/* TODO: Fix JSX expression */}
+      }) }; } };'`
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

@@ -1,12 +1,9 @@
 import React from 'react';
 
-interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg';
-  className?: string;
-  color?: 'blue' | 'gray' | 'white';
-  text?: string;
+interface LoadingSpinnerProps {/* TODO: Fix JSX expression */}
 }
 
+<<<<<<< HEAD
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({,
   size = 'md',
   className = '',
@@ -17,14 +14,17 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({,
     sm: 'h-4 w-4',
     md: 'h-8 w-8',
     lg: 'h-12 w-12',
+=======
+export const,
+  LoadingSpinner: React.FC<LoadingSpinnerProps> = ({/* TODO: Fix JSX expression */})
+}) => {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   };
 
-  const colorClasses = {
-    blue: 'border-gray-300 border-t-blue-600',
-    gray: 'border-gray-300 border-t-gray-600',
-    white: 'border-gray-300 border-t-white',
+  const colorClasses = {/* TODO: Fix JSX expression */}
   };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   return(<div className={`flex items-center justify-center ${className}`}>
       <div;)
@@ -41,7 +41,16 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({,
       {text && <span className="ml-2 text-sm text-gray-600">{text}</span>}
     </div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
+=======
+  return (<div className={`flex items-center justify-center ${className}`}></div>
+      <div></div>`
+        className={`animate-spin rounded-full border-2 ${colorClasses[color]} ${sizeClasses[size]}`}
+      ></div>
+      {text && <span className="ml-2 text-sm text-gray-600">{text}</span>}
+    </div>)
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   );
 };
 
 export default LoadingSpinner;
+"`

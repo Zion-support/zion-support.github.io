@@ -11,6 +11,7 @@ import './index.css';
 // const Privacy = lazy(() => import('./pages/Privacy'));
 // const Terms = lazy(() => import('./pages/Terms'));
 
+<<<<<<< HEAD
 function App() {
   useEffect(() => {
     // Initialize basic optimizations;
@@ -28,38 +29,58 @@ function App() {
       <div></div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
         <Router>
+=======
+function App() {/* TODO: Fix JSX expression */}
+}
+  useEffect(() => {/* TODO: Fix JSX expression */}
+      //       };
+  }, []);
+
+  return (<ErrorBoundary></ErrorBoundary>
+      <div></div>
+        <Router></Router>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           <Suspense fallback={<div>Loading...</div>}>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/services" element={<Services />} />
-              <Route path="/blog" element={<Blog />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/team" element={<Team />} />
-              <Route path="/privacy" element={<Privacy />} />
+            <Routes></Routes>
+              <Route path="/" element={<Home />} />"
+              <Route path="/about" element={<About />} />"
+              <Route path="/services" element={<Services />} />"
+              <Route path="/blog" element={<Blog />} />"
+              <Route path="/contact" element={<Contact />} />"
+              <Route path="/team" element={<Team />} />"
+              <Route path="/privacy" element={<Privacy />} />"
               <Route path="/terms" element={<Terms />} />
+<<<<<<< HEAD
             </Routes>)
           </Suspense>)
         </Router>)
       </div>)
+=======
+            </Routes>
+          </Suspense>
+        </Router>
+      </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     </ErrorBoundary>)
   );
 }
 
 // Simple Error Boundary;
 class ErrorBoundary extends React.Component<
-  { children: React.ReactNode; fallback?: React.ReactNode },
-  { hasError: boolean }
-> {
-  constructor(props: { children: React.ReactNode; fallback?: React.ReactNode }) {
-    super(props);
-    this.state = { hasError: false };
+  {/* TODO: Fix JSX expression */}
+  n: React.ReactNode; fallback?: React.ReactNode },
+  {/* TODO: Fix JSX expression */}
+  r: boolean }
+> {/* TODO: Fix JSX expression */}
+  n: React.ReactNode; fallback?: React.ReactNode }) {/* TODO: Fix JSX expression */}
+  r: false };
   }
 
-  static getDerivedStateFromError() {
-    return { hasError: true };
+  static getDerivedStateFromError() {/* TODO: Fix JSX expression */}
+  r: true };
   }
 
+<<<<<<< HEAD
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {,
     //     }
 
@@ -81,6 +102,17 @@ class ErrorBoundary extends React.Component<
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 onClick={() => this.setState({ hasError: false })}
                 className="bg-blue-600 text-white px-4 py-2 rounded hover: bg-blue-700"
+=======
+  componentDidCatch(erro,
+  r: Error, errorInf,)
+  o: React.ErrorInfo) {/* TODO: Fix JSX expression */}
+    //     }
+
+  render() {/* TODO: Fix JSX expression */}
+  r: false })}"
+                className="bg-blue-600 text-white px-4 py-2 rounded,"
+  hover:bg-blue-700"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               >
                 Try again;
               </button>
@@ -95,3 +127,4 @@ class ErrorBoundary extends React.Component<
 }
 
 export default App;
+"

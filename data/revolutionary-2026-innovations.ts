@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
   id: string;
   name: string;
   tagline: string;
@@ -13,22 +14,61 @@
     email: string;
 export interface Revolutionary2026Innovation {;,
     address: string}
+=======
+  i,
+  d: string;
+  nam,
+  e: string;
+  taglin,
+  e: string,
+  pric,
+  e: string,
+  descriptio,
+  n: string;
+  feature,
+  s: string[];
+  lin,
+  k: string;
+  categor,
+  y: string;
+  realImplementatio,
+  n: boolean;
+  contactInf,
+  o: unknown;
+    mobil,
+  e: string;
+    emai,
+  l: string;
+export interface Revolutionary2026Innovation {/* TODO: Fix JSX expression */}
+  s: string}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 };
-  id: string;
-  name: string;
-  tagline: string;
-  price: string,,
-  description: string;
-  features: string[];
-  link: string;
-  category: string;
-  realImplementation: boolean;
-  contactInfo: {,
-    mobile: string;
-    email: string}
-    address: string}
+  i,
+  d: string;
+  nam,
+  e: string;
+  taglin,
+  e: string;
+  pric,
+  e: string,,
+  descriptio,
+  n: string;
+  feature,
+  s: string[];
+  lin,
+  k: string;
+  categor,
+  y: string;
+  realImplementatio,
+  n: boolean;
+  contactInf,
+  o: {/* TODO: Fix JSX expression */}
+  l: string}
+    addres,
+  s: string}
   }
 }
+<<<<<<< HEAD
       address: "364 E Main St STE 1008 Middletown DE 19709",
     }
   }
@@ -67,10 +107,82 @@ export const revolutionary2026Innovations: Revolutionary2026Innovation[] = [,
 ];
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
+=======
+      addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];
+  i,
+  d: string, nam,
+  e: string,
+  taglin,
+  e: string, pric,
+  e: string,
+  descriptio,
+  n: string, feature,
+  s: string[],
+  lin,
+  k: string, categor,
+  y: string,
+  realImplementatio,
+  n: boolean,
+  contactInf,
+  o: unknown,
+    mobil,
+  e: string, emai,
+  l: string,
+    addres,
+  s: string,
+  }
+}
+export const,
+  revolutionary2026Innovations: Revolutionary2026Innovation[] = [,
+    i,"
+  d: "2026-revolutionary-innovation", nam,"
+  e: "2026 Revolutionary Innovation Platform",
+    taglin,"
+  e: "Breakthrough innovations for 2026", pric,"
+  e: "$399/month",
+    descriptio,"
+  n: "Platform showcasing revolutionary innovations and breakthrough technologies for 2026.",
+    feature,
+  s: [;"
+      "Revolutionary innovations""
+      "Breakthrough technologies""
+      "Future capabilities""
+      "Innovation platform""
+      "Expert insights"
+    ],
+    lin,"
+  k: "/services/2026-revolutionary-innovation", categor,"
+  y: "Revolutionary 2026 Innovations",
+    realImplementatio,
+  n: true,
+    contactInf,
+  o: addres,"
+  s: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];
+      mobil,"
+  e: "+1 302 464 0950", emai,"
+  l: "kleber@ziontechgroup.com",
+      addres,"
+  s: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];
+      emai,"
+  l: "kleber@ziontechgroup.com",
+  addres,"
+  s: "364 E Main St STE 1008 Middletown DE 19709"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   }
 ];
 ;
+<<<<<<< HEAD
     id: "2026-revolutionary-innovation"
     name: "2026 Revolutionary Innovation Platform",
     tagline: "Breakthrough innovations for 2026",
@@ -99,7 +211,135 @@ export const revolutionary2026Innovations: Revolutionary2026Innovation[] = [,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
+=======
+    i,"
+  d: "2026-revolutionary-innovation",
+    nam,"
+  e: "2026 Revolutionary Innovation Platform",
+    taglin,"
+  e: "Breakthrough innovations for 2026",
+    pric,"
+  e: "$399/month",
+    descriptio,"
+  n: "Platform showcasing revolutionary innovations and breakthrough technologies for 2026.",
+    feature,
+  s: [,"
+      "Revolutionary innovations","
+      "Breakthrough technologies","
+      "Future capabilities","
+      "Innovation platform","
+      "Expert insights"
+    ],
+    lin,"
+  k: "/services/2026-revolutionary-innovation",
+    categor,"
+  y: "Revolutionary 2026 Innovations",
+    realImplementatio,
+  n: true,
+    contactInf,
+  o: unknown,
+      mobil,"
+  e: "+1 302 464 0950",
+      emai,"
+  l: "kleber@ziontechgroup.com",
+      mobil,
+  e: '+1 302 464 0950',
+      emai,
+  l: 'kleber@ziontechgroup.com',
+      addres,
+  s: '364 E Main St STE 1008 Middletown DE 19709',
+    },
+  };
+];      mobil,"
+  e: "+1 302 464 0950",
+  emai,"
+  l: "kleber@ziontechgroup.com"
+      mobil,"
+  e: "+1 302 464 0950",
+      emai,"
+  l: "kleber@ziontechgroup.com",
+      addres,"
+  s: "364 E Main St STE 1008 Middletown DE 19709"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   }
 ];
-id: string; name: string; tagline: string, price: string, description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: mobile: string; email: string; export interface Revolutionary2026Innovation {, address: string }; id: string,; name: string,; tagline: string,; price: string, description: string,; features: string[],; link: string,; category: string,; realImplementation: boolean,; contactInfo: {, mobile: string,; email: string,} address: string} } } address: "364 E Main St STE 1008 Middletown DE 19709" } } ]; id: string, name: string, tagline: string, price: string, description: string, features: string[], link: string, category: string, realImplementation: boolean, contactInfo: mobile: string, email: string, address: string } } export const revolutionary2026Innovations: Revolutionary2026Innovation[] = [ id: "2026-revolutionary-innovation", name: "2026 Revolutionary Innovation Platform", tagline: "Breakthrough innovations for 2026", price: "$399/month", description: "Platform showcasing revolutionary innovations and breakthrough technologies for 2026.", features: [ "Revolutionary innovations" "Breakthrough technologies" "Future capabilities" "Innovation platform" "Expert insights" ], link: "/services/2026-revolutionary-innovation", category: "Revolutionary 2026 Innovations", realImplementation: true, contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709" } } ]; mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com", address: "364 E Main St STE 1008 Middletown DE 19709" } } ]; email: "kleber@ziontechgroup.com" address: "364 E Main St STE 1008 Middletown DE 19709" } } ]; id: "2026-revolutionary-innovation", name: "2026 Revolutionary Innovation Platform", tagline: "Breakthrough innovations for 2026", price: "$399/month", description: "Platform showcasing revolutionary innovations and breakthrough technologies for 2026.", features: [ "Revolutionary innovations", "Breakthrough technologies", "Future capabilities", "Innovation platform", "Expert insights" ], link: "/services/2026-revolutionary-innovation", category: "Revolutionary 2026 Innovations", realImplementation: true, contactInfo: mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com", mobile: '+1 302 464 0950',' email: 'kleber@ziontechgroup.com',' address: '364 E Main St STE 1008 Middletown DE 19709', }, },; ]; mobile: "+1 302 464 0950" email: "kleber@ziontechgroup.com" mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com", address: "364 E Main St STE 1008 Middletown DE 19709" } } ]; '
+i,
+  d: string; nam,
+  e: string; taglin,
+  e: string, pric,
+  e: string, descriptio,
+  n: string; feature,
+  s: string[]; lin,
+  k: string; categor,
+  y: string; realImplementatio,
+  n: boolean; contactInf,
+  o: mobil,
+  e: string; emai,
+  l: string; export interface Revolutionary2026Innovation {/* TODO: Fix JSX expression */}
+  s: string }; i,
+  d: string,; nam,
+  e: string,; taglin,
+  e: string,; pric,
+  e: string, descriptio,
+  n: string,; feature,
+  s: string[],; lin,
+  k: string,; categor,
+  y: string,; realImplementatio,
+  n: boolean,; contactInf,
+  o: {/* TODO: Fix JSX expression */}
+  l: string,} addres,
+  s: string} } } addres,"
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,
+  d: string, nam,
+  e: string, taglin,
+  e: string, pric,
+  e: string, descriptio,
+  n: string, feature,
+  s: string[], lin,
+  k: string, categor,
+  y: string, realImplementatio,
+  n: boolean, contactInf,
+  o: mobil,
+  e: string, emai,
+  l: string, addres,
+  s: string } } export const,
+  revolutionary2026Innovations: Revolutionary2026Innovation[] = [ i,"
+  d: "2026-revolutionary-innovation", nam,"
+  e: "2026 Revolutionary Innovation Platform", taglin,"
+  e: "Breakthrough innovations for 2026", pric,"
+  e: "$399/month", descriptio,"
+  n: "Platform showcasing revolutionary innovations and breakthrough technologies for 2026.", feature,"
+  s: [ "Revolutionary innovations" "Breakthrough technologies" "Future capabilities" "Innovation platform" "Expert insights" ], lin,"
+  k: "/services/2026-revolutionary-innovation", categor,"
+  y: "Revolutionary 2026 Innovations", realImplementatio,
+  n: true, contactInf,
+  o: addres,"
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; mobil,"
+  e: "+1 302 464 0950", emai,"
+  l: "kleber@ziontechgroup.com", addres,"
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; emai,"
+  l: "kleber@ziontechgroup.com",
+  addres,"
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,"
+  d: "2026-revolutionary-innovation", nam,"
+  e: "2026 Revolutionary Innovation Platform", taglin,"
+  e: "Breakthrough innovations for 2026", pric,"
+  e: "$399/month", descriptio,"
+  n: "Platform showcasing revolutionary innovations and breakthrough technologies for 2026.", feature,"
+  s: [ "Revolutionary innovations", "Breakthrough technologies", "Future capabilities", "Innovation platform", "Expert insights" ], lin,"
+  k: "/services/2026-revolutionary-innovation", categor,"
+  y: "Revolutionary 2026 Innovations", realImplementatio,
+  n: true, contactInf,
+  o: mobil,"
+  e: "+1 302 464 0950", emai,"
+  l: "kleber@ziontechgroup.com", mobil,
+  e: '+1 302 464 0950',' emai,
+  l: 'kleber@ziontechgroup.com',' addres,
+  s: '364 E Main St STE 1008 Middletown DE 19709', }, },; ]; mobil,"
+  e: "+1 302 464 0950",
+  emai,"
+  l: "kleber@ziontechgroup.com" mobil,"
+  e: "+1 302 464 0950", emai,"
+  l: "kleber@ziontechgroup.com", addres,"
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; '"

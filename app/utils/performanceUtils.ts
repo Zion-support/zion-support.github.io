@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Performance utilities for optimizing React components and application performance;
 export const debounce = <T extends (...args: any[]) => any>(
 <<<<<<< HEAD
@@ -628,12 +629,19 @@ class PerformanceOptimizer {}
     // Preload critical resources;
 =======
   private setupPreloading(): void {}
+=======
+// Performance optimization utilities
+export const performanceOptimizer = () => {
+  // Performance optimization logic
+  if (typeof window !== 'undefined') {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     // Preload critical resources
 >>>>>>> origin/merge-error-fixes
     const criticalResources = [
-      '/fonts/inter.woff2',
-      '/css/critical.css',
+      '/src/main.tsx',
+      'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap'
     ];
+<<<<<<< HEAD
 
     criticalResources.forEach((resource) => {}
       const link = document.createElement('link');
@@ -643,10 +651,20 @@ class PerformanceOptimizer {}
       if (resource.endsWith('.woff2')) {}
         link.crossOrigin = 'anonymous';
       }
+=======
+    
+    criticalResources.forEach(resource => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = resource;
+      link.as = resource.endsWith('.css') ? 'style' : 'script';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       document.head.appendChild(link);
 
   }
+};
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   private setupCaching(): void {
     // Setup service worker for caching;
@@ -846,11 +864,46 @@ export function preloadCriticalResources(): void {}
 export function collectPerformanceMetrics(): PerformanceMetrics | null {}
   if (typeof window === 'undefined' || !('performance' in window)) {}
     return null;
+=======
+export const performanceMonitor = () => {
+  // Performance monitoring logic
+  if (typeof window !== 'undefined' && 'performance' in window) {
+    // Monitor Core Web Vitals
+    const observer = new PerformanceObserver((list) => {
+      for (const entry of list.getEntries()) {
+        console.log('Performance metric:', entry.name, entry.value);
+      }
+    });
+    
+    try {
+      observer.observe({ entryTypes: ['measure', 'navigation', 'paint'] });
+    } catch (error) {
+      console.warn('Performance monitoring not supported:', error);
+    }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
+};
 
-  const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-  const paintEntries = performance.getEntriesByType('paint');
+export const seoOptimizer = () => {
+  // SEO optimization logic
+  if (typeof window !== 'undefined') {
+    // Add structured data
+    const structuredData = {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com",
+      "description": "Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services."
+    };
+    
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify(structuredData);
+    document.head.appendChild(script);
+  }
+};
 
+<<<<<<< HEAD
   const firstContentfulPaint = paintEntries.find()
     (entry) => entry.name === 'first-contentful-paint'
   )?.startTime || 0;
@@ -875,3 +928,31 @@ export function collectPerformanceMetrics(): PerformanceMetrics | null {}
 // Export instances;
 export const performanceOptimizer = new PerformanceOptimizer();
 export const performanceMonitor = new PerformanceMonitor();
+=======
+export const accessibilityEnhancer = () => {
+  // Accessibility enhancement logic
+  if (typeof window !== 'undefined') {
+    // Add skip navigation link
+    const skipLink = document.createElement('a');
+    skipLink.href = '#main-content';
+    skipLink.textContent = 'Skip to main content';
+    skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded';
+    document.body.insertBefore(skipLink, document.body.firstChild);
+  }
+};
+
+export const collectPerformanceMetrics = () => {
+  // Collect performance metrics
+  if (typeof window !== 'undefined' && 'performance' in window) {
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        if (navigation) {
+          console.log('Page load time:', navigation.loadEventEnd - navigation.loadEventStart);
+          console.log('DOM content loaded:', navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart);
+        }
+      }, 0);
+    });
+  }
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

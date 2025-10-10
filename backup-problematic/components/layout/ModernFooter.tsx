@@ -1,9 +1,9 @@
 import React from 'react';
 
-interface ModernFooterProps {
-  className?: string;
+interface ModernFooterProps {/* TODO: Fix JSX expression */}
 }
 
+<<<<<<< HEAD
 const ModernFooter = React.memo(function ModernFooter({ className = '' }: ModernFooterProps) {
 <<<<<<< HEAD
   return(<div className={`bg-blue-100 p-4 rounded-lg ${className}`}>)
@@ -14,6 +14,11 @@ const ModernFooter = React.memo(function ModernFooter({ className = '' }: Modern
   return (
     <div className={`bg-blue-100 p-4 rounded-lg ${className}`}></div>
       <h3 className="text-lg font-semibold text-blue-800">ModernFooter</h3>
+=======
+const ModernFooter = React.memo(function ModernFooter({ className = '' }: ModernFooterProps) {/* TODO: Fix JSX expression */}
+    <div className={`bg-blue-100 p-4 rounded-lg ${className}`}></div>
+      <h3 className="text-lg font-semibold text-blue-800">ModernFooter</h3>"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       <p className="text-blue-600">This component is under development.</p>
     </div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
@@ -21,3 +26,4 @@ const ModernFooter = React.memo(function ModernFooter({ className = '' }: Modern
 });
 
 export default ModernFooter;
+"`

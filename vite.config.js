@@ -12,7 +12,7 @@ export default defineConfig({
     }),
     visualizer({
       filename: 'dist/stats.html',
-      open: false,
+      open: true,
       gzipSize: true,
       brotliSize: true,
     }),
@@ -20,9 +20,8 @@ export default defineConfig({
   root: '.',
   build: {
     outDir: 'dist',
-    target: 'es2015',
-    minify: 'terser',
     sourcemap: false,
+<<<<<<< HEAD
     chunkSizeWarningLimit: 1000,
     cssCodeSplit: true,
     assetsInlineLimit: 4096,
@@ -41,6 +40,16 @@ export default defineConfig({
           // Core React libraries
           if (id.includes('node_modules/react') || id.includes('node_modules/react-dom')) {
             return 'vendor';
+=======
+    minify: 'esbuild',
+    target: 'es2015',
+    rollupOptions: {
+      output: {
+        manualChunks: (id) => {
+          // React and React DOM
+          if (id.includes('node_modules/react') || id.includes('node_modules/react-dom')) {
+            return 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           }
           // Router library
           if (id.includes('node_modules/react-router-dom')) {
@@ -55,11 +64,19 @@ export default defineConfig({
           }
           // Utilities and web vitals
           if (id.includes('node_modules/web-vitals')) {
+<<<<<<< HEAD
             return 'page';
           }
           // Split other node_modules into separate chunks
           if (id.includes('node_modules')) {
             return 'libs';
+=======
+            return 'vitals';
+          }
+          // Split other node_modules into separate chunks
+          if (id.includes('node_modules')) {
+            return 'vendor';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           }
         },
         assetFileNames: 'assets/[name]-[hash][extname]',
@@ -67,6 +84,7 @@ export default defineConfig({
         entryFileNames: 'assets/[name]-[hash].js',
       },
     },
+<<<<<<< HEAD
     // Enhanced performance optimizations
     terserOptions: {
       compress: {
@@ -130,12 +148,19 @@ export default defineConfig({
     hmr: {
       overlay: true,
     },
+=======
+  },
+  server: {
+    port: 3000,
+    open: true,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
   preview: {
     port: 4173,
-    host: true,
+    open: true,
   },
   optimizeDeps: {
+<<<<<<< HEAD
     include: [
       'react',
       'react-dom', 
@@ -147,11 +172,15 @@ export default defineConfig({
     ],
     // Exclude problematic dependencies
     exclude: ['@vite/client', '@vite/env'],
+=======
+    include: ['react', 'react-dom', 'react-router-dom'],
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
   css: {
-    devSourcemap: false,
+    devSourcemap: true,
   },
   esbuild: {
+<<<<<<< HEAD
     drop: ['console', 'debugger'],
     // Optimize JSX
     jsxFactory: 'React.createElement',
@@ -170,4 +199,8 @@ export default defineConfig({
       '@components': '/app/components',
     },
   },
+=======
+    target: 'es2015',
+  },
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 });

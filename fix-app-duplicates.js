@@ -4,6 +4,13 @@ import fs from 'fs';
 // let content = fs.readFileSync('App.tsx', 'utf8');
 
 // Remove the second ErrorBoundary class and its interfaces;
+<<<<<<< HEAD
 content = content.replace(
   /interface ErrorBoundaryState \{\s*hasError: boolean;\s*error: Error \| null;\s*\}\s*interface ErrorBoundaryProps \{\s*children: React\.ReactNode;\s*\}\s*class ErrorBoundary extends React\.Component<ErrorBoundaryProps, ErrorBoundaryState> \{[\s\S]*?\}\s*const App: React\.FC = \(\) => \{/g;
+=======
+content = content.replace(/interface ErrorBoundaryState \{/* TODO: Fix JSX expression */}
+  r: Error \| null;\s*\}\s*interface ErrorBoundaryProps \{/* TODO: Fix JSX expression */}
+  n: React\.ReactNode;\s*\}\s*class ErrorBoundary extends React\.Component<ErrorBoundaryProps, ErrorBoundaryState> \{[\s\S]*?\}\s*const,)
+  App: React\.FC = \(\) => \{/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }

@@ -5,6 +5,7 @@ import { fileURLToPath } from 'url';
 
 
 // Function to fix console statements;
+<<<<<<< HEAD
 function fixConsoleStatements(content) {
   // Replace console.log with proper logging in production;
   content = content.replace(/console\.(log|error|warn|info)\(/g, (match, method) => {
@@ -13,8 +14,16 @@ function fixConsoleStatements(content) {
 
   // Add closing parenthesis for the if statement;
   content = content.replace(
+=======
+function fixConsoleStatements(content) {/* TODO: Fix JSX expression */}
+    return `if (process.env.NODE_ENV === 'development') console.${method}(`;)
+  });
+
+  // Add closing parenthesis for the if statement;
+  content = content.replace()
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     /if \(process\.env\.NODE_ENV === 'development'\) console\.(log|error|warn|info)\([^)]*\);/g,
-    match => {
+    match => {/* TODO: Fix JSX expression */}
       return match.replace(/\);$/, '); }');
     }
   );
@@ -23,6 +32,7 @@ function fixConsoleStatements(content) {
 }
 
 // Function to fix unused variables by prefixing with underscore;
+<<<<<<< HEAD
 function fixUnusedVariables(content) {
   // Fix unused function parameters;
   content = content.replace(/(\w+)\s*:\s*any\s*,\s*(\w+)\s*:\s*any/g, '_$1: any, _$2: any');
@@ -39,6 +49,13 @@ function fixFile(filePath) {
     if (!fs.existsSync(fullPath)) {
 
       return;
+=======
+function fixUnusedVariables(content) {/* TODO: Fix JSX expression */}
+}
+
+// Function to fix specific files;
+function fixFile(filePath) {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
 
 
@@ -48,8 +65,7 @@ function fixFile(filePath) {
 
     fs.writeFileSync(fullPath, content);
 
-  } catch (error) {
-
+  } catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 
@@ -85,3 +101,4 @@ const filesToFix = [
 
 // Fix all files;
 filesToFix.forEach(fixFile);
+`

@@ -3,6 +3,7 @@
  * Advanced Accessibility Enhancement Utility;
  * Provides comprehensive accessibility improvements and monitoring;
  */
+<<<<<<< HEAD
 interface AccessibilityConfig {}
   enableKeyboardNavigation: boolean;
   enableScreenReaderSupport: boolean;
@@ -68,11 +69,22 @@ class AccessibilityEnhancer {}
       screenReaderScore: 0,
       overallScore: 0
 >>>>>>> origin/merge-error-fixes
+=======
+interface AccessibilityConfig {/* TODO: Fix JSX expression */}
+}
+interface AccessibilityMetrics {/* TODO: Fix JSX expression */}
+}
+class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
+  g: Partial<AccessibilityConfig> = {}) {/* TODO: Fix JSX expression */}
+    };
+    this.metrics = {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     };
   }
   /**
    * Initialize accessibility enhancements;
    */
+<<<<<<< HEAD
   init(): void {}
     if (this.isInitialized || typeof window === 'undefined') return;
     this.isInitialized = true;
@@ -92,10 +104,14 @@ class AccessibilityEnhancer {}
     this.setupMetricsCollection();
     // Initial scan;
     this.scanAccessibility();
+=======
+  init(): void {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
   /**
    * Setup keyboard navigation enhancements;
    */
+<<<<<<< HEAD
   private setupKeyboardNavigation(): void {}
     if (!this.config.enableKeyboardNavigation) return;
 <<<<<<< HEAD
@@ -127,12 +143,23 @@ class AccessibilityEnhancer {}
       if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(event.key)) {}
 >>>>>>> origin/merge-error-fixes
         this.handleArrowNavigation(event);
+=======
+  private setupKeyboardNavigation(): void {/* TODO: Fix JSX expression */}
+      } else if (event.key === 'Tab') {/* TODO: Fix JSX expression */}
+      }
+      // Escape key handling;
+      if (event.key === 'Escape') {/* TODO: Fix JSX expression */}
+      }
+      // Arrow key navigation for custom components;
+      if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(event.key)) {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
 
   }
   /**
    * Handle tab navigation;
    */
+<<<<<<< HEAD
   private handleTabNavigation(event: KeyboardEvent, isShift: boolean): void {}
     const focusableElements = this.getFocusableElements();
     const currentIndex = focusableElements.indexOf(document.activeElement as HTMLElement);
@@ -146,6 +173,12 @@ class AccessibilityEnhancer {}
       nextIndex = currentIndex > 0 ? currentIndex - 1 : focusableElements.length - 1;
     } else {}
       nextIndex = currentIndex < focusableElements.length - 1 ? currentIndex + 1 : 0;
+=======
+  private handleTabNavigation(even,
+  t: KeyboardEvent, isShif,)
+  t: boolean): void {/* TODO: Fix JSX expression */}
+    } else {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
     focusableElements[nextIndex]?.focus();
     event.preventDefault();
@@ -153,6 +186,7 @@ class AccessibilityEnhancer {}
   /**
    * Handle escape key;
    */
+<<<<<<< HEAD
 <<<<<<< HEAD
   private handleEscapeKey(event: KeyboardEvent): void {
     // Close any open modals or dropdowns;
@@ -174,6 +208,14 @@ class AccessibilityEnhancer {}
 =======
     menus.forEach(menu => {)}
 >>>>>>> origin/merge-error-fixes
+=======
+  private handleEscapeKey(even,)
+  t: KeyboardEvent): void {/* TODO: Fix JSX expression */}
+    });
+    // Close any open menus;
+    const menus = document.querySelectorAll('[role="menu"][aria-expanded="true"]');
+    menus.forEach(menu => {/* TODO: Fix JSX expression */}")
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       const trigger = document.querySelector(`[aria-controls="${menu.id}"]`) as HTMLElement;
       trigger?.click();
 
@@ -181,6 +223,7 @@ class AccessibilityEnhancer {}
   /**
    * Handle arrow key navigation;
    */
+<<<<<<< HEAD
   private handleArrowNavigation(event: KeyboardEvent): void {}
     const currentElement = document.activeElement as HTMLElement;
     if (!currentElement) return;
@@ -200,11 +243,19 @@ class AccessibilityEnhancer {}
     if (currentElement.getAttribute('role') === 'menuitem') {}
 >>>>>>> origin/merge-error-fixes
       this.handleMenuNavigation(event, currentElement);
+=======
+  private handleArrowNavigation(even,)
+  t: KeyboardEvent): void {/* TODO: Fix JSX expression */}
+    }
+    // Handle menu navigation;
+    if (currentElement.getAttribute('role') === 'menuitem') {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   }
   /**
    * Handle radio group navigation;
    */
+<<<<<<< HEAD
 <<<<<<< HEAD
   private handleRadioGroupNavigation(event: KeyboardEvent, currentElement: HTMLInputElement): void {,
 =======
@@ -223,6 +274,17 @@ class AccessibilityEnhancer {}
       nextIndex = currentIndex > 0 ? currentIndex - 1 : radioButtons.length - 1;
     } else {}
       nextIndex = currentIndex < radioButtons.length - 1 ? currentIndex + 1 : 0;
+=======
+  private handleRadioGroupNavigation(even,
+  t: KeyboardEvent, currentElemen,)
+  t: HTMLInputElement): void {/* TODO: Fix JSX expression */}"`
+    const radioButtons = Array.from(document.querySelectorAll(`input[type="radio"][name="${name}"]`)) as HTMLInputElement[];
+    const currentIndex = radioButtons.indexOf(currentElement);
+    let,
+  nextIndex: number;
+    if (event.key === 'ArrowUp' || event.key === 'ArrowLeft') {/* TODO: Fix JSX expression */}
+    } else {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
     radioButtons[nextIndex]?.focus();
     radioButtons[nextIndex]?.click();
@@ -231,6 +293,7 @@ class AccessibilityEnhancer {}
   /**
    * Handle menu navigation;
    */
+<<<<<<< HEAD
   private handleMenuNavigation(event: KeyboardEvent, currentElement: HTMLElement): void {}
     const menu = currentElement.closest('[role="menu"]');
     if (!menu) return;
@@ -247,6 +310,13 @@ class AccessibilityEnhancer {}
       nextIndex = currentIndex < menuItems.length - 1 ? currentIndex + 1 : 0;
     } else {}
       return;
+=======
+  private handleMenuNavigation(even,
+  t: KeyboardEvent, currentElemen,)
+  t: HTMLElement): void {/* TODO: Fix JSX expression */}
+    } else if (event.key === 'ArrowDown') {/* TODO: Fix JSX expression */}
+    } else {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
     menuItems[nextIndex]?.focus();
     event.preventDefault();
@@ -254,6 +324,7 @@ class AccessibilityEnhancer {}
   /**
    * Setup screen reader support;
    */
+<<<<<<< HEAD
   private setupScreenReaderSupport(): void {}
     if (!this.config.enableScreenReaderSupport) return;
     // Add skip links;
@@ -264,10 +335,14 @@ class AccessibilityEnhancer {}
     this.addAriaLandmarks();
     // Setup live regions for dynamic content;
     this.setupLiveRegions();
+=======
+  private setupScreenReaderSupport(): void {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
   /**
    * Add skip links;
    */
+<<<<<<< HEAD
   private addSkipLinks(): void {}
     const skipLinks = document.createElement('div');
     skipLinks.className = 'skip-links';
@@ -303,7 +378,15 @@ class AccessibilityEnhancer {}
       .skip-link:focus {}
 >>>>>>> origin/merge-error-fixes
         top: 6px;
+=======
+  private addSkipLinks(): void {/* TODO: Fix JSX expression */}
       }
+      .skip-link {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
+      }
+      .skip-lin,
+  k:focus {/* TODO: Fix JSX expression */}
+      }`
     `;
     document.head.appendChild(style);
     document.body.insertBefore(skipLinks, document.body.firstChild);
@@ -311,6 +394,7 @@ class AccessibilityEnhancer {}
   /**
    * Enhance form labels;
    */
+<<<<<<< HEAD
   private enhanceFormLabels(): void {}
     const inputs = document.querySelectorAll('input, textarea, select');
     inputs.forEach((input) => {}
@@ -344,12 +428,23 @@ class AccessibilityEnhancer {}
 >>>>>>> origin/merge-error-fixes
         element.setAttribute('aria-invalid', 'true');
         this.announceToScreenReader('Error in form field');
+=======
+  private enhanceFormLabels(): void {/* TODO: Fix JSX expression */}
+        }
+      }
+      // Add required attribute announcement;
+      if (element.hasAttribute('required')) {/* TODO: Fix JSX expression */}
+      }
+      // Add error states;
+      if (element.classList.contains('error') || element.getAttribute('aria-invalid') === 'true') {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
 
   }
   /**
    * Add ARIA landmarks;
    */
+<<<<<<< HEAD
 <<<<<<< HEAD
   private addAriaLandmarks(): void {
     // Main content;
@@ -370,11 +465,23 @@ class AccessibilityEnhancer {}
     const footer = document.querySelector('footer') || document.querySelector('[role="contentinfo"]');
     if (footer) {}
       footer.setAttribute('id', 'footer');
+=======
+  private addAriaLandmarks(): void {/* TODO: Fix JSX expression */}
+    }
+    // Navigation;"
+    const nav = document.querySelector('nav') || document.querySelector('[role="navigation"]');
+    if (nav) {/* TODO: Fix JSX expression */}
+    }
+    // Footer;"
+    const footer = document.querySelector('footer') || document.querySelector('[role="contentinfo"]');
+    if (footer) {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   }
   /**
    * Setup live regions;
    */
+<<<<<<< HEAD
 <<<<<<< HEAD
   private setupLiveRegions(): void {
     // Create live region for announcements;
@@ -395,10 +502,14 @@ class AccessibilityEnhancer {}
     assertiveRegion.className = 'sr-only';
     assertiveRegion.id = 'assertive-live-region';
     document.body.appendChild(assertiveRegion);
+=======
+  private setupLiveRegions(): void {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
   /**
    * Setup focus management;
    */
+<<<<<<< HEAD
   private setupFocusManagement(): void {}
     if (!this.config.enableFocusManagement) return;
 <<<<<<< HEAD
@@ -413,10 +524,17 @@ class AccessibilityEnhancer {}
     document.addEventListener('focusout', (event) => {}
       this.handleFocusOut(event);
 
+=======
+  private setupFocusManagement(): void {/* TODO: Fix JSX expression */}
+    });
+    document.addEventListener('focusout', (event) => {/* TODO: Fix JSX expression */}
+    });
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
   /**
    * Handle focus in;
    */
+<<<<<<< HEAD
   private handleFocusIn(event: FocusEvent): void {}
     const element = event.target as HTMLElement;
     // Add focus indicator;
@@ -429,11 +547,17 @@ class AccessibilityEnhancer {}
     if (element.getAttribute('role') === 'button' || element.tagName === 'BUTTON') {}
 >>>>>>> origin/merge-error-fixes
       this.announceToScreenReader(`Focused on button: ${element.textContent?.trim() || element.getAttribute('aria-label') || 'button'}`);
+=======
+  private handleFocusIn(even,)
+  t: FocusEvent): void {/* TODO: Fix JSX expression */}`
+  button: ${element.textContent?.trim() || element.getAttribute('aria-label') || 'button'}`);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   }
   /**
    * Handle focus out;
    */
+<<<<<<< HEAD
 <<<<<<< HEAD
   private handleFocusOut(event: FocusEvent): void {,
 =======
@@ -441,10 +565,15 @@ class AccessibilityEnhancer {}
 >>>>>>> origin/merge-error-fixes
     const element = event.target as HTMLElement;
     element.classList.remove('focus-visible');
+=======
+  private handleFocusOut(even,)
+  t: FocusEvent): void {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
   /**
    * Setup high contrast mode;
    */
+<<<<<<< HEAD
   private setupHighContrastMode(): void {}
     if (!this.config.enableHighContrast) return;
 <<<<<<< HEAD
@@ -467,12 +596,21 @@ class AccessibilityEnhancer {}
         document.body.classList.add('high-contrast');
       } else {}
         document.body.classList.remove('high-contrast');
+=======
+  private setupHighContrastMode(): void {/* TODO: Fix JSX expression */}
+    }
+    // Listen for changes;
+    window.matchMedia('(prefers-contras,)
+  t: high)').addEventListener('change', (e) => {/* TODO: Fix JSX expression */}
+      } else {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
 
   }
   /**
    * Setup reduced motion;
    */
+<<<<<<< HEAD
   private setupReducedMotion(): void {}
     if (!this.config.enableReducedMotion) return;
 <<<<<<< HEAD
@@ -495,12 +633,21 @@ class AccessibilityEnhancer {}
         document.body.classList.add('reduced-motion');
       } else {}
         document.body.classList.remove('reduced-motion');
+=======
+  private setupReducedMotion(): void {/* TODO: Fix JSX expression */}
+    }
+    // Listen for changes;
+    window.matchMedia('(prefers-reduced-motio,)
+  n: reduce)').addEventListener('change', (e) => {/* TODO: Fix JSX expression */}
+      } else {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
 
   }
   /**
    * Setup ARIA labels;
    */
+<<<<<<< HEAD
 <<<<<<< HEAD
   private setupAriaLabels(): void {
     // Add ARIA labels to interactive elements without text;
@@ -533,12 +680,21 @@ class AccessibilityEnhancer {}
       if (!element.textContent?.trim()) {}
 >>>>>>> origin/merge-error-fixes
         element.setAttribute('aria-label', 'Link');
+=======
+  private setupAriaLabels(): void {/* TODO: Fix JSX expression */}
+      }
+    });
+    // Add ARIA labels to links without text;
+    const links = document.querySelectorAll('a:not([aria-label]):not([aria-labelledby])');
+    links.forEach((link) => {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
 
   }
   /**
    * Setup color contrast checking;
    */
+<<<<<<< HEAD
 <<<<<<< HEAD
   private setupColorContrast(): void {
     // This would typically use a color contrast library;
@@ -549,34 +705,46 @@ class AccessibilityEnhancer {}
     // For now, we'll just count potential issues
 >>>>>>> origin/merge-error-fixes
     this.metrics.colorContrastIssues = 0;
+=======
+  private setupColorContrast(): void {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
   /**
    * Setup image alt text checking;
    */
+<<<<<<< HEAD
   private setupImageAltText(): void {}
     const images = document.querySelectorAll('img');
     this.metrics.imagesWithoutAlt = 0;
     images.forEach((img) => {}
       if (!img.alt) {}
         this.metrics.imagesWithoutAlt++;
+=======
+  private setupImageAltText(): void {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
 
   }
   /**
    * Setup heading structure checking;
    */
+<<<<<<< HEAD
   private setupHeadingStructure(): void {}
     const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
     this.metrics.headingsWithoutContent = 0;
     headings.forEach((heading) => {}
       if (!heading.textContent?.trim()) {}
         this.metrics.headingsWithoutContent++;
+=======
+  private setupHeadingStructure(): void {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
 
   }
   /**
    * Setup form accessibility;
    */
+<<<<<<< HEAD
   private setupFormAccessibility(): void {}
     const forms = document.querySelectorAll('form');
 <<<<<<< HEAD
@@ -595,6 +763,14 @@ class AccessibilityEnhancer {}
           const label = form.querySelector(`label[for="${id}"]`);
           if (label) {}
             element.setAttribute('aria-labelledby', id);
+=======
+  private setupFormAccessibility(): void {/* TODO: Fix JSX expression */}`
+        const id = element.id || `input-${Math.random().toString(36).substr(2, 9)}`;
+        element.id = id;
+        if (!element.getAttribute('aria-label') && !element.getAttribute('aria-labelledby')) {/* TODO: Fix JSX expression */}"`
+          const label = form.querySelector(`label[for="${id}"]`);
+          if (label) {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           }
         }
 
@@ -603,6 +779,7 @@ class AccessibilityEnhancer {}
   /**
    * Setup navigation accessibility;
    */
+<<<<<<< HEAD
   private setupNavigationAccessibility(): void {}
     const navs = document.querySelectorAll('nav');
 <<<<<<< HEAD
@@ -623,12 +800,19 @@ class AccessibilityEnhancer {}
       if (!nav.getAttribute('aria-label')) {}
 >>>>>>> origin/merge-error-fixes
         nav.setAttribute('aria-label', 'Main navigation');
+=======
+  private setupNavigationAccessibility(): void {/* TODO: Fix JSX expression */}
+      }
+      // Add aria-label if not present;
+      if (!nav.getAttribute('aria-label')) {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
 
   }
   /**
    * Setup content announcements;
    */
+<<<<<<< HEAD
   private setupContentAnnouncements(): void {}
     if (!this.config.announceChanges) return;
 <<<<<<< HEAD
@@ -653,10 +837,14 @@ class AccessibilityEnhancer {}
               if (element.getAttribute('aria-live') === 'polite') {}
 >>>>>>> origin/merge-error-fixes
                 this.announceToScreenReader(element.textContent || '');
+=======
+  private setupContentAnnouncements(): void {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               }
             }
 
         }
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -669,11 +857,18 @@ class AccessibilityEnhancer {}
       subtree: true
 
 >>>>>>> origin/merge-error-fixes
+=======
+      });
+    });
+    observer.observe(document.body, {/* TODO: Fix JSX expression */})
+    });
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     this.observers.push(observer);
   }
   /**
    * Setup metrics collection;
    */
+<<<<<<< HEAD
 <<<<<<< HEAD
   private setupMetricsCollection(): void {
     // Collect metrics periodically;
@@ -684,11 +879,15 @@ class AccessibilityEnhancer {}
     setInterval(() => {}
 >>>>>>> origin/merge-error-fixes
       this.scanAccessibility();
+=======
+  private setupMetricsCollection(): void {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }, 5000);
   }
   /**
    * Scan accessibility issues;
    */
+<<<<<<< HEAD
   private scanAccessibility(): void {}
     this.metrics.focusableElements = this.getFocusableElements().length;
     this.metrics.imagesWithoutAlt = document.querySelectorAll('img: not([alt])').length;
@@ -696,10 +895,14 @@ class AccessibilityEnhancer {}
     this.metrics.headingsWithoutContent = document.querySelectorAll('h1, h2, h3, h4, h5, h6').length -
       Array.from(document.querySelectorAll('h1, h2, h3, h4, h5, h6')).filter(h => h.textContent?.trim()).length;
     this.calculateScores();
+=======
+  private scanAccessibility(): void {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
   /**
    * Calculate accessibility scores;
    */
+<<<<<<< HEAD
 <<<<<<< HEAD
   private calculateScores(): void {
     // Keyboard navigation score;
@@ -720,20 +923,28 @@ class AccessibilityEnhancer {}
       (this.metrics.keyboardNavigationScore + this.metrics.screenReaderScore) / 2
 >>>>>>> origin/merge-error-fixes
     );
+=======
+  private calculateScores(): void {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
   /**
    * Calculate keyboard navigation score;
    */
+<<<<<<< HEAD
   private calculateKeyboardScore(): number {}
     const focusableElements = this.getFocusableElements();
     const totalElements = document.querySelectorAll('*').length;
     if (totalElements === 0) return 0;
     const focusableRatio = focusableElements.length / totalElements;
     return Math.min(100, Math.round(focusableRatio * 100));
+=======
+  private calculateKeyboardScore(): number {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
   /**
    * Calculate screen reader score;
    */
+<<<<<<< HEAD
   private calculateScreenReaderScore(): number {}
     let score = 100;
     // Deduct for missing alt text;
@@ -743,10 +954,14 @@ class AccessibilityEnhancer {}
     // Deduct for empty headings;
     score -= this.metrics.headingsWithoutContent * 2;
     return Math.max(0, score);
+=======
+  private calculateScreenReaderScore(): number {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
   /**
    * Get focusable elements;
    */
+<<<<<<< HEAD
   private getFocusableElements(): HTMLElement[] {}
     const focusableSelectors = [
       'a[href]',
@@ -758,10 +973,14 @@ class AccessibilityEnhancer {}
       '[contenteditable="true"]'
     ];
     return Array.from(document.querySelectorAll(focusableSelectors.join(', '))) as HTMLElement[];
+=======
+  private getFocusableElements(): HTMLElement[] {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
   /**
    * Announce to screen reader;
    */
+<<<<<<< HEAD
 <<<<<<< HEAD
   private announceToScreenReader(message: string, priority: 'polite' | 'assertive' = 'polite'): void {
     const liveRegion = document.getElementById(priority === 'assertive' ? 'assertive-live-region' : 'live-region')
@@ -781,18 +1000,28 @@ class AccessibilityEnhancer {}
       setTimeout(() => {}
 >>>>>>> origin/merge-error-fixes
         liveRegion.textContent = '';
+=======
+  private announceToScreenReader(messag,
+  e: string, priorit,)
+  y: 'polite' | 'assertive' = 'polite'): void {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }, 1000);
     }
   }
   /**
    * Get accessibility metrics;
    */
+<<<<<<< HEAD
   getMetrics(): AccessibilityMetrics {}
+=======
+  getMetrics(): AccessibilityMetrics {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     return { ...this.metrics };
   }
   /**
    * Get accessibility report;
    */
+<<<<<<< HEAD
   getReport(): string {}
     const metrics = this.getMetrics();
     return `
@@ -804,3 +1033,10 @@ Accessibility Report:
     `;
   }
 }
+=======
+
+  getReport(): string {/* TODO: Fix JSX expression */}
+}}"`
+
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

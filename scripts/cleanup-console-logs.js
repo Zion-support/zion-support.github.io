@@ -2,6 +2,7 @@ import fs from 'fs';
 import { glob } from 'glob';
 
 // Function to remove console.log statements from a file;
+<<<<<<< HEAD
 function removeConsoleLogs(filePath) {
   try {
     let _content = fs.readFileSync(filePath, 'utf8');
@@ -18,16 +19,23 @@ function removeConsoleLogs(filePath) {
     if (content !== originalContent) {
       modified = true;
       fs.writeFileSync(filePath, content, 'utf8');
+=======
+function removeConsoleLogs(filePath) {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 //       }
     
     return modified;
-  } catch (error) {
-//     return false;
+  } catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 
 // Function to process all TypeScript and JavaScript files;
+<<<<<<< HEAD
 async function processFiles() {
+=======
+async function processFiles() {/* TODO: Fix JSX expression */}
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   const patterns = [
     'src/**/*.{ts,tsx,js,jsx}',
     'app/**/*.{ts,tsx,js,jsx}'
@@ -36,6 +44,7 @@ async function processFiles() {
   let _totalFiles = 0;
   let _modifiedFiles = 0;
   
+<<<<<<< HEAD
   for (const pattern of patterns) {
     const files = await glob(pattern, { )
       ignore: [,)
@@ -52,6 +61,13 @@ async function processFiles() {
       if (removeConsoleLogs(file)) {
         modifiedFiles++;
       }
+=======
+  for (const pattern of patterns) {/* TODO: Fix JSX expression */}
+    });
+    
+    files.forEach(file => {/* TODO: Fix JSX expression */}
+      })
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     });
   });
   

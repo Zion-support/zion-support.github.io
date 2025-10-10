@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
+<<<<<<< HEAD
 export default function BlogPost(): React.JSX.Element {
   return(<>
       <Header />
@@ -83,14 +84,39 @@ export default function BlogPost(): React.JSX.Element {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-white bg-opacity-20 hover: bg-opacity-30 px-4 py-2 rounded-lg transition-colors"
+=======
+export default function BlogPost(): React.JSX.Element {/* TODO: Fix JSX expression */}
+  s://twitter.com/intent/tweet?text=${encodeURIComponent('Edge 2026 Consentless Journeys Blueprint')}&url=${encodeURIComponent(window.location.href)}`}
+                    target="_blank""
+                    rel="noopener noreferrer""
+                    className="bg-white bg-opacity-20,"
+  hover:bg-opacity-30 px-4 py-2 rounded-lg transition-colors"
+                  >
+                    Twitter;
+                  </a>
+                  <a></a>
+                    href={/* TODO: Fix JSX expression */}`
+  s://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}`}"
+                    target="_blank""
+                    rel="noopener noreferrer""
+                    className="bg-white bg-opacity-20,"
+  hover:bg-opacity-30 px-4 py-2 rounded-lg transition-colors"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   >
                     LinkedIn;
                   </a>
                 </div>
               </div>
+<<<<<<< HEAD
               <a;
                 href="/blog"
                 className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+=======
+              <a></a>"
+                href="/blog""
+                className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold,"
+  hover:bg-gray-100 transition-colors"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               >
                 Back to Blog;
               </a>
@@ -101,3 +127,4 @@ export default function BlogPost(): React.JSX.Element {
     </>,
   );
 }
+"`

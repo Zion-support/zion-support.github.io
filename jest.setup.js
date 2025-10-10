@@ -38,20 +38,19 @@ global.TextDecoder = TextDecoder;
 // Mock files that use import.meta.env;
 jest.mock('./app/utils/logger.ts', () => ({
   logger: {
-    debug: jest.fn(),
     info: jest.fn(),
-    warn: jest.fn(),
     error: jest.fn(),
-    log: jest.fn(),
+    warn: jest.fn(),
+    debug: jest.fn(),
   },
 }));
 
 jest.mock('./app/utils/analytics.ts', () => ({
   trackEvent: jest.fn(),
   trackPageView: jest.fn(),
-  initAnalytics: jest.fn(),
 }));
 
+<<<<<<< HEAD
 jest.mock('./app/utils/errorTracking.ts', () => ({
   reportError: jest.fn(),
   initErrorReporting: jest.fn(),
@@ -110,6 +109,36 @@ Object.defineProperty(window, 'matchMedia', {)
     onchange: null;
     addListener: jest.fn()
     removeListener: jest.fn()
+=======
+jest.mock('./src/utils/errorTracking.ts', () => ({
+  captureException: jest.fn(),
+  captureMessage: jest.fn(),
+}));
+
+// Mock React Router
+jest.mock('react-router-dom', () => ({
+  BrowserRouter: ({ children }) => children,
+  Routes: ({ children }) => children,
+  Route: ({ children }) => children,
+  Link: ({ children, to, ...props }) => {
+    const React = require('react');
+    return React.createElement('a', { href: to, ...props }, children);
+  },
+  useNavigate: () => jest.fn(),
+  useLocation: () => ({ pathname: '/' }),
+  useParams: () => ({}),
+}));
+
+// Mock window.matchMedia
+Object.defineProperty(window, 'matchMedia', {
+  writable: true,
+  value: jest.fn().mockImplementation(query => ({
+    matches: false,
+    media: query,
+    onchange: null,
+    addListener: jest.fn(),
+    removeListener: jest.fn(),
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
     dispatchEvent: jest.fn(),
@@ -121,9 +150,7 @@ global.IntersectionObserver = class IntersectionObserver {
   constructor() {}
   disconnect() {}
   observe() {}
-  takeRecords() {
-    return [];
-  }
+  takeRecords() { return []; }
   unobserve() {}
 };
 
@@ -132,19 +159,25 @@ let _originalError;
 
 beforeAll(() => {
   _originalError = console.error;
+<<<<<<< HEAD
   console.error = jest.fn((...args) => {
     if(typeof args[0] === 'string' &&)
       (args[0].includes('Warning: ReactDOM.render') ||,
         args[0].includes('Not implemented: HTMLFormElement.prototype.submit')),
     ) {,
+=======
+  console.error = (...args) => {
+    if (
+      typeof args[0] === 'string' &&
+      args[0].includes('Warning: ReactDOM.render is no longer supported')
+    ) {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       return;
     }
     _originalError.call(console, ...args);
-  });
+  };
 });
 
 afterAll(() => {
-  if (_originalError) {
-    console.error = _originalError;
-  }
+  console.error = _originalError;
 });

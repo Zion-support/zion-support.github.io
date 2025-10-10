@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 
 // Function to fix unused imports in a single file;
+<<<<<<< HEAD
 function fixUnusedImports(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
@@ -53,21 +54,38 @@ function fixUnusedImports(filePath) {
           } else {
             // Other import types, keep them;
             newLines.push(line);
+=======
+function fixUnusedImports(filePath) {/* TODO: Fix JSX expression */}
+        const importMatch = trimmedLine.match(/import\s*{([^}]+)}\s*from/);
+        if (importMatch) {/* TODO: Fix JSX expression */}
+                   !contentWithoutImport.includes(`import ${name}`) &&`
+                   !contentWithoutImport.includes(`{ ${name}`) &&`
+                   !contentWithoutImport.includes(`{${name}`);
+          });
+          
+          if (usedImports.length === 0) {/* TODO: Fix JSX expression */}
+          } else if (usedImports.length < imports.length) {/* TODO: Fix JSX expression */}
+          } else {/* TODO: Fix JSX expression */}
+          }
+        } else {/* TODO: Fix JSX expression */}`
+                !contentWithoutImport.includes(`import ${name}`)) {/* TODO: Fix JSX expression */}
+            }
+            // If not used, skip the line (don't add it)
+          } else {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           }
         }
-      } else {
-        newLines.push(line);
+      } else {/* TODO: Fix JSX expression */}
       }
     }
     
     const newContent = newLines.join('\n');
-    if (newContent !== content) {
-      fs.writeFileSync(filePath, newContent, 'utf8');
-      console.log(`Fixed unused imports in: ${filePath}`);
+    if (newContent !== content) {/* TODO: Fix JSX expression */}`
+  in: ${filePath}`);
       return true;
     }
     
-  } catch (error) {
+  } catch (error) {/* TODO: Fix JSX expression */}`
     console.error(`Error processing ${filePath}:`, error.message);
   }
   
@@ -75,6 +93,7 @@ function fixUnusedImports(filePath) {
 }
 
 // Function to fix parsing errors in blog files;
+<<<<<<< HEAD
 function fixParsingErrors(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
@@ -85,22 +104,30 @@ function fixParsingErrors(filePath) {
       const newContent = content + '\n\nexport default BlogPost;';
       fs.writeFileSync(filePath, newContent, 'utf8');
       console.log(`Fixed parsing error in: ${filePath}`);
+=======
+function fixParsingErrors(filePath) {/* TODO: Fix JSX expression */}`
+  in: ${filePath}`);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       return true;
     }
     
     // Check for missing closing braces;
+<<<<<<< HEAD
     const openBraces = (content.match(/\{/g) || []).length;
+=======
+    const openBraces = (content.match(/\{/* TODO: Fix JSX expression */})
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     const closeBraces = (content.match(/\}/g) || []).length;
     
-    if (openBraces > closeBraces) {
-      const missingBraces = openBraces - closeBraces;
+    if (openBraces > closeBraces) {/* TODO: Fix JSX expression */}
       const newContent = content + '\n' + '}'.repeat(missingBraces);
-      fs.writeFileSync(filePath, newContent, 'utf8');
-      console.log(`Fixed missing braces in: ${filePath}`);
+      fs.writeFileSync(filePath, newContent, 'utf8');`
+      console.log(`Fixed missing braces,)`
+  in: ${filePath}`);
       return true;
     }
     
-  } catch (error) {
+  } catch (error) {/* TODO: Fix JSX expression */}`
     console.error(`Error processing ${filePath}:`, error.message);
   }
   
@@ -108,6 +135,7 @@ function fixParsingErrors(filePath) {
 }
 
 // Function to fix unused variables by prefixing with underscore;
+<<<<<<< HEAD
 function fixUnusedVariables(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
@@ -127,15 +155,29 @@ function fixUnusedVariables(filePath) {
         newContent = newContent.replace(pattern.regex, pattern.replacement);
         changed = true;
       }
+=======
+function fixUnusedVariables(filePath) {/* TODO: Fix JSX expression */}
+  t: '_$1: $2 = ' },
+      {/* TODO: Fix JSX expression */}
+  t: 'const _$1 = ' },
+      {/* TODO: Fix JSX expression */}
+  t: 'let _$1 = ' },
+      {/* TODO: Fix JSX expression */}
+  t: 'var _$1 = ' }
+    ];
+    
+    let changed = false;
+    patterns.forEach(pattern => {/* TODO: Fix JSX expression */}
+      })
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     });
     
-    if (changed) {
-      fs.writeFileSync(filePath, newContent, 'utf8');
-      console.log(`Fixed unused variables in: ${filePath}`);
+    if (changed) {/* TODO: Fix JSX expression */}`
+  in: ${filePath}`);
       return true;
     }
     
-  } catch (error) {
+  } catch (error) {/* TODO: Fix JSX expression */}`
     console.error(`Error processing ${filePath}:`, error.message);
   }
   
@@ -143,6 +185,7 @@ function fixUnusedVariables(filePath) {
 }
 
 // Get all TypeScript/JavaScript files in src directory;
+<<<<<<< HEAD
 function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
   let results = [];
   const list = fs.readdirSync(dir);
@@ -155,11 +198,11 @@ function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
       // Skip node_modules and other common directories;
       if (!['node_modules', '.git', 'dist', '.next', 'out', 'build'].includes(file)) {
         results = results.concat(getAllFiles(filePath, extensions));
+=======
+function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
-    } else {
-      const ext = path.extname(file);
-      if (extensions.includes(ext)) {
-        results.push(filePath);
+    } else {/* TODO: Fix JSX expression */}
       }
     }
   });
@@ -173,6 +216,7 @@ console.log('Fixing all remaining issues in src directory...');
 const files = getAllFiles('./src', ['.ts', '.tsx', '.js', '.jsx']);
 
 let fixedCount = 0;
+<<<<<<< HEAD
 files.forEach(file => {)
   let fileFixed = false;)
   )
@@ -189,11 +233,21 @@ files.forEach(file => {)
   // Fix unused variables;
   if (fixUnusedVariables(file)) {
     fileFixed = true;
+=======
+files.forEach(file => {/* TODO: Fix JSX expression */}
   }
   
-  if (fileFixed) {
-    fixedCount++;
+  // Fix parsing errors;)
+  if (fixParsingErrors(file)) {/* TODO: Fix JSX expression */}
+  }
+  
+  // Fix unused variables;
+  if (fixUnusedVariables(file)) {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
+  }
+  
+  if (fileFixed) {/* TODO: Fix JSX expression */}
   }
 });
-
-console.log(`Fixed ${fixedCount} files`);
+`
+console.log(`Fixed ${fixedCount} files`);`

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const, October2025UltimateEnterpriseBanne, r = () => {
   con, s, t [multiCloudConte, n, t, conversationalAIConte, n, t] = octoberUltimateEnterpriseConte, n, t;
   return(<div, className="relative, p, y-16, p, x-4, s, m: px-6 l;
@@ -22,9 +23,24 @@ const, October2025UltimateEnterpriseBanne, r = () => {
       <div, className="absolute, inse, t-0, opacit, y-20">";</div>
         <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";
         <div, className="absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pulse, dela, y-10, 0, 0"></d, i, v>";
+=======
+const, October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expression */}
+      {/* Animated, Backgroun, d */};
+      <div, className="absolute, inse, t-0, opacit, y-20"></div>"
+        <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>"
+        <div, className="absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pulse, dela, y-10, 0, 0"></d, i, v>"
+        <div, className="absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, filter, blur-3xl, animat, e-pulse, dela, y-20, 0, 0"></d, i, v>"
+    <div, className="relative, p, y-16, p, x-4, s, m: px-6 l,"
+  g:px-8, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, overflo, w-hidd, e, n">";
+      {/* Animated, Backgroun, d */};"
+      <div, className="absolute, inse, t-0, opacit, y-20">";"
+        <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";"
+        <div, className="absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pulse, dela, y-10, 0, 0"></d, i, v>";"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         <div, className="absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, filter, blur-3xl, animat, e-pulse, dela, y-20, 0, 0"></d, i, v>";
-      </d, i, v>
+      </d, i, v>"
       <div, className="relative, ma, x-w-7xl, m, x-au, t, o">";
+<<<<<<< HEAD
         {/* Header, Sectio, n */}</div>
         <div, className="text-center mb-12"></div>
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-500, rounde, d-full, tex, t-white, fon, t-bold, tex, t-sm, m, b-6, animat, e-bounce, shado, w-2, x, l"></div>
@@ -36,16 +52,35 @@ const, October2025UltimateEnterpriseBanne, r = () => {
             <span, className="bg-cl, i, p-text, tex, t-transparent, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, vi, a-bl, u, e-400, t, o-purp, l, e-4, 0, 0"></span>
         <div, className="text-center mb-12">";</div>
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-500, rounde, d-full, tex, t-white, fon, t-bold, tex, t-sm, m, b-6, animat, e-bounce, shado, w-2, x, l">";</div>
+=======
+        {/* Header, Sectio, n */}"
+        <div, className="text-center mb-12"></div>"
+          <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-500, rounde, d-full, tex, t-white, fon, t-bold, tex, t-sm, m, b-6, animat, e-bounce, shado, w-2, x, l"></div>"
+            <Sparkles, className="w-5 h-5, animat, e-sp, i, n  /></Sparkles>
+            <sp, a, n>OCTOBER, 202, 5 - JUST, PUBLISHE, D</sp, a, n>"
+            <Sparkles, className="w-5 h-5, animat, e-sp, i, n  /></Sparkles>
+          </d, i, v>"
+          <h2, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, tex, t-white, m, b-6, leadin, g-tig, h, t">""
+            <span, className="bg-cl, i, p-text, tex, t-transparent, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, vi, a-bl, u, e-400, t, o-purp, l, e-4, 0, 0"></span>"
+        <div, className="text-center mb-12">";"
+          <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-500, rounde, d-full, tex, t-white, fon, t-bold, tex, t-sm, m, b-6, animat, e-bounce, shado, w-2, x, l">";"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
             <Sparkles, className="w-5 h-5, animat, e-sp, i, n" />";
-            <sp, a, n>OCTOBER, 202, 5 - JUST, PUBLISHE, D</sp, a, n>
+            <sp, a, n>OCTOBER, 202, 5 - JUST, PUBLISHE, D</sp, a, n>"
             <Sparkles, className="w-5 h-5, animat, e-sp, i, n" />";
+<<<<<<< HEAD
           </d, i, v>
           <h2, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, tex, t-white, m, b-6, leadin, g-tig, h, t">";</h2>
+=======
+          </d, i, v>"
+          <h2, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, tex, t-white, m, b-6, leadin, g-tig, h, t">";"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
             <span, className="bg-cl, i, p-text, tex, t-transparent, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, vi, a-bl, u, e-400, t, o-purp, l, e-4, 0, 0">";
               Ultimate, Enterprise, AI;
             </sp, a, n>
-            <br   />
+            <br   /></br>"
             <span, className="te, x, t-whi, t, e">Revolution, 202, 5</sp, a, n>";
+<<<<<<< HEAD
           </h2>
           <p, className="te, x, t-2xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, fon, t-medi, u, m">
             Breakthrough, solutions, delivering</p> <span, className="te, x, t-cy, a, n-400, fon, t-bo, l, d">1, 5, 6%-1, 8, 4% R, O, I</sp, a, n>
@@ -54,11 +89,22 @@ const, October2025UltimateEnterpriseBanne, r = () => {
           <p, className="te, x, t-2xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, fon, t-medi, u, m">";
             Breakthrough, solutions, delivering</p> <span, className="te, x, t-cy, a, n-400, fon, t-bo, l, d">1, 5, 6%-1, 8, 4% R, O, I</sp, a, n>, ";
             <span, className="te, x, t-purp, l, e-400, fon, t-bo, l, d"> $26, 2, M+ savin, g, s</sp, a, n>, a, n, d ";
+=======
+          </h2>"
+          <p, className="te, x, t-2xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, fon, t-medi, u, m"></p>"
+            Breakthrough, solutions, delivering <span, className="te, x, t-cy, a, n-400, fon, t-bo, l, d">1, 5, 6%-1, 8, 4% R, O, I</sp, a, n>"
+            <span, className="te, x, t-purp, l, e-400, fon, t-bo, l, d"> $26, 2, M+ savin, g, s</sp, a, n>, a, n, d;"
+            <span, className="te, x, t-bl, u, e-400, fon, t-bo, l, d"> transformative, result, s</sp, a, n>"
+          <p, className="te, x, t-2xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, fon, t-medi, u, m">";"
+            Breakthrough, solutions, delivering <span, className="te, x, t-cy, a, n-400, fon, t-bo, l, d">1, 5, 6%-1, 8, 4% R, O, I</sp, a, n>, ";"
+            <span, className="te, x, t-purp, l, e-400, fon, t-bo, l, d"> $26, 2, M+ savin, g, s</sp, a, n>, a, n, d ";"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
             <span, className="te, x, t-bl, u, e-400, fon, t-bo, l, d"> transformative, result, s</sp, a, n>";
           </p>
         </d, i, v>
-        {/* Content, Card, s */}
+        {/* Content, Card, s */}"
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12">"
+<<<<<<< HEAD
 <<<<<<< HEAD
           {/* Mul, t, i-Cloud, Intelligence, Card */}
           <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-6, 0, 0/20, vi, a-cy, a, n-6, 0, 0/20, t, o-te, a, l-6, 0, 0/20, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-cy, a, n-5, 0, 0/30, hove, r: bord, e, r-cy, a, n-400, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e;
@@ -86,12 +132,33 @@ const, October2025UltimateEnterpriseBanne, r = () => {
               </d, i, v>
               <div, className="fl, e, x-1">";</div>
                 <div, className="flex, item, s-center, ga, p-2, m, b-3">";</div>
+=======
+          {/* Mul, t, i-Cloud, Intelligence, Card */}"
+          <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-6, 0, 0/20, vi, a-cy, a, n-6, 0, 0/20, t, o-te, a, l-6, 0, 0/20, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-cy, a, n-5, 0, 0/30, hove, r: bord, e, r-cy, a, n-400, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e,"
+  r:shad, o, w-cy, a, n-5, 0, 0/50, grou, p">""
+            <div, className="flex, item, s-start, ga, p-4, m, b-6"></div>"
+              <div, className="fl, e, x-shri, n, k-0"></div>"
+                <div, className="w-1, 6, h-16, b, g-gradie, n, t-to-br, fro, m-cy, a, n-500, t, o-bl, u, e-600, rounde, d-2xl, flex, items-center, justif, y-center, shado, w-lg, transform, group-hov, e, r: rota, t, e-12, transitio, n-transform, duratio, n-3, 0, 0">""
+                  <Cloud, className="w-9 h-9, tex, t-whi, t, e  /></Cloud>"
+        <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12">";
+          {/* Mul, t, i-Cloud, Intelligence, Card */}"
+          <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-6, 0, 0/20, vi, a-cy, a, n-6, 0, 0/20, t, o-te, a, l-6, 0, 0/20, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-cy, a, n-5, 0, 0/30, hove, r: bord, e, r-cy, a, n-400, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-cy, a, n-5, 0, 0/50, grou, p">";"
+            <div, className="flex, item, s-start, ga, p-4, m, b-6">";"
+              <div, className="fl, e, x-shri, n, k-0">";"
+                <div, className="w-1, 6, h-16, b, g-gradie, n, t-to-br, fro, m-cy, a, n-500, t, o-bl, u, e-600, rounde, d-2xl, flex, items-center, justif, y-center, shado, w-lg, transform, group-hov, e, r: rota, t, e-12, transitio, n-transform, duratio, n-3, 0, 0">";"
+                  <Cloud, className="w-9 h-9, tex, t-whi, t, e" />";
+                </d, i, v>
+              </d, i, v>"
+              <div, className="fl, e, x-1">";"
+                <div, className="flex, item, s-center, ga, p-2, m, b-3">";"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   <span, className="px-3, p, y-1, b, g-cy, a, n-500, tex, t-white, tex, t-xs, fon, t-bold, rounde, d-full, uppercase, tracking-wid, e, r">";
                     NEW, RELEAS, E;
-                  </sp, a, n>
+                  </sp, a, n>"
                   <span, className="px-3, p, y-1, b, g-gradie, n, t-to-r, fro, m-yell, o, w-500, t, o-oran, g, e-500, tex, t-white, tex, t-xs, fon, t-bold, rounde, d-full, animat, e-pul, s, e">";
                     🔥 H, O, T;
                   </sp, a, n>
+<<<<<<< HEAD
                 </d, i, v>
 <<<<<<< HEAD
                 <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e;
@@ -100,14 +167,20 @@ const, October2025UltimateEnterpriseBanne, r = () => {
                 <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e
   r: te, x, t-cy, a, n-400, transitio, n-colo, r, s">"</h3>
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
+=======
+                </d, i, v>"
+                <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e,"
+  r: te, x, t-cy, a, n-400, transitio, n-colo, r, s">""
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-cy, a, n-400, transitio, n-colo, r, s">";
                   {multiCloudConte, n, t.ic, o, n} Adaptive, Mult, i-Cloud, Intelligenc, e;
-                </h3>
+                </h3>"
                 <p, className="te, x, t-gr, a, y-300, tex, t-lg, leadin, g-relaxed, m, b-4">";
                   {multiCloudConte, n, t.descripti, o, n}
                 </p>
               </d, i, v>
             </d, i, v>
+<<<<<<< HEAD
             {/* Metrics, Gri, d */}
             <div, className="grid, gri, d-co, l, s-2, ga, p-4, m, b-6"></div>
               <div, className="bg-cy, a, n-5, 0, 0/10, rounde, d-x, l, p-4, border, border-cy, a, n-5, 0, 0/20, hove, r: bord, e, r-cy, a, n-4, 0, 0/50, transitio, n-colo, r, s">"</div>
@@ -146,33 +219,84 @@ const, October2025UltimateEnterpriseBanne, r = () => {
   r: bord, e, r-cy, a, n-4, 0, 0/50, transitio, n-colo, r, s">";</div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-cy, a, n-400, m, b-1">4.5x</d, i, v>";
+=======
+            {/* Metrics, Gri, d */}"
+            <div, className="grid, gri, d-co, l, s-2, ga, p-4, m, b-6"></div>"
+              <div, className="bg-cy, a, n-5, 0, 0/10, rounde, d-x, l, p-4, border, border-cy, a, n-5, 0, 0/20, hove, r: bord, e, r-cy, a, n-4, 0, 0/50, transitio, n-colo, r, s">""
+                <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-cy, a, n-400, m, b-1">1, 5, 6%</d, i, v>"
+                <div, className="te, x, t-sm, tex, t-gr, a, y-300, fon, t-medi, u, m">ROI, in, 18 Mont, h, s</d, i, v>
+              </d, i, v>"
+              <div, className="bg-bl, u, e-5, 0, 0/10, rounde, d-x, l, p-4, border, border-bl, u, e-5, 0, 0/20, hove, r: bord, e, r-bl, u, e-4, 0, 0/50, transitio, n-colo, r, s">""
+                <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-bl, u, e-400, m, b-1">$8, 9, M</d, i, v>"
+                <div, className="te, x, t-sm, tex, t-gr, a, y-300, fon, t-medi, u, m">Annual, Saving, s</d, i, v>
+              </d, i, v>"
+              <div, className="bg-te, a, l-5, 0, 0/10, rounde, d-x, l, p-4, border, border-te, a, l-5, 0, 0/20, hove, r: bord, e, r-te, a, l-4, 0, 0/50, transitio, n-colo, r, s">""
+                <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-te, a, l-400, m, b-1">91%</d, i, v>"
+                <div, className="te, x, t-sm, tex, t-gr, a, y-300, fon, t-medi, u, m">Cost, Optimizatio, n</d, i, v>
+              </d, i, v>"
+              <div, className="bg-cy, a, n-5, 0, 0/10, rounde, d-x, l, p-4, border, border-cy, a, n-5, 0, 0/20, hove, r: bord, e, r-cy, a, n-4, 0, 0/50, transitio, n-colo, r, s">""
+                <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-cy, a, n-400, m, b-1">4.5x</d, i, v>"
+                <div, className="te, x, t-sm, tex, t-gr, a, y-300, fon, t-medi, u, m">Efficiency, Gai, n</d, i, v>"
+            <div, className="grid, gri, d-co, l, s-2, ga, p-4, m, b-6">";"
+              <div, className="bg-cy, a, n-5, 0, 0/10, rounde, d-x, l, p-4, border, border-cy, a, n-5, 0, 0/20, hove, r: bord, e, r-cy, a, n-4, 0, 0/50, transitio, n-colo, r, s">";"
+                <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-cy, a, n-400, m, b-1">1, 5, 6%</d, i, v>";"
+                <div, className="te, x, t-sm, tex, t-gr, a, y-300, fon, t-medi, u, m">ROI, in, 18 Mont, h, s</d, i, v>";
+              </d, i, v>"
+              <div, className="bg-bl, u, e-5, 0, 0/10, rounde, d-x, l, p-4, border, border-bl, u, e-5, 0, 0/20, hove, r: bord, e, r-bl, u, e-4, 0, 0/50, transitio, n-colo, r, s">";"
+                <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-bl, u, e-400, m, b-1">$8, 9, M</d, i, v>";"
+                <div, className="te, x, t-sm, tex, t-gr, a, y-300, fon, t-medi, u, m">Annual, Saving, s</d, i, v>";
+              </d, i, v>"
+              <div, className="bg-te, a, l-5, 0, 0/10, rounde, d-x, l, p-4, border, border-te, a, l-5, 0, 0/20, hove, r: bord, e, r-te, a, l-4, 0, 0/50, transitio, n-colo, r, s">";"
+                <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-te, a, l-400, m, b-1">91%</d, i, v>";"
+                <div, className="te, x, t-sm, tex, t-gr, a, y-300, fon, t-medi, u, m">Cost, Optimizatio, n</d, i, v>";
+              </d, i, v>"
+              <div, className="bg-cy, a, n-5, 0, 0/10, rounde, d-x, l, p-4, border, border-cy, a, n-5, 0, 0/20, hov, e,"
+  r: bord, e, r-cy, a, n-4, 0, 0/50, transitio, n-colo, r, s">";"
+                <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-cy, a, n-400, m, b-1">4.5x</d, i, v>";"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 <div, className="te, x, t-sm, tex, t-gr, a, y-300, fon, t-medi, u, m">Efficiency, Gai, n</d, i, v>";
               </d, i, v>
             </d, i, v>
-            {/* Key, Highlight, s */}
+            {/* Key, Highlight, s */}"
             <div, className="spa, c, e-y-2, m, b-6">";
+<<<<<<< HEAD
               {multiCloudConte, n, t.highligh, t, s.sli, c, e(0, 4).m, a, p((highlig, h, t, ind, e, x) => (</div>
                 <div, ke, y={ind, e, x} classNa, m, e="flex, item, s-start, ga, p-3, tex, t-gr, a, y-2, 0, 0"></div>
                   <CheckCircle, className="w-5 h-5, tex, t-cy, a, n-400, fle, x-shri, n, k-0, m, t-0.5  />
                   <span, className="te, x, t-sm, leadin, g-relax, e, d">{highlig, h, t}</sp, a, n>
                 <div, ke, y={ind, e, x} classNa, m, e="flex, item, s-start, ga, p-3, tex, t-gr, a, y-2, 0, 0">";</div>
                   <CheckCircle, className="w-5 h-5, tex, t-cy, a, n-400, fle, x-shri, n, k-0, m, t-0.5" />";
+=======
+              {/* TODO: Fix JSX expression */}"
+                <div, ke, y={ind, e, x} classNa, m, e="flex, item, s-start, ga, p-3, tex, t-gr, a, y-2, 0, 0"></div>"
+                  <CheckCircle, className="w-5 h-5, tex, t-cy, a, n-400, fle, x-shri, n, k-0, m, t-0.5  /></CheckCircle>"
+                  <span, className="te, x, t-sm, leadin, g-relax, e, d">{highlig, h, t}</sp, a, n>"
+                <div, ke, y={ind, e, x} classNa, m, e="flex, item, s-start, ga, p-3, tex, t-gr, a, y-2, 0, 0">";"
+                  <CheckCircle, className="w-5 h-5, tex, t-cy, a, n-400, fle, x-shri, n, k-0, m, t-0.5" />";"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   <span, className="te, x, t-sm, leadin, g-relax, e, d">{highlig, h, t}</sp, a, n>";
                 </d, i, v>
               ))}
             </d, i, v>
             {/* CTA, Butto, n */}
             <Li, n, k;
+<<<<<<< HEAD
   to={multiCloudConte, n, t.c, t, a.li, n, k}
               classNa, m, e="flex, item, s-center, justif, y-center, ga, p-2 w-full, p, y-4, p, x-6, b, g-gradie, n, t-to-r, fro, m-cy, a, n-600, t, o-bl, u, e-600, hove, r: fr, o, m-cy, a, n-500, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e;
+=======
+  to={multiCloudConte, n, t.c, t, a.li, n, k}"
+              classNa, m, e="flex, item, s-center, justif, y-center, ga, p-2 w-full, p, y-4, p, x-6, b, g-gradie, n, t-to-r, fro, m-cy, a, n-600, t, o-bl, u, e-600, hove, r: fr, o, m-cy, a, n-500, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hove,
+  r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e,"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   r:shad, o, w-cy, a, n-5, 0, 0/50, grou, p"
-            >
-              <span, className="te, x, t-lg">{multiCloudConte, n, t.c, t, a.te, x, t}</sp, a, n>
-              <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m/>"
-              <span, className="te, x, t-lg">{multiCloudConte, n, t.c, t, a.te, x, t}</sp, a, n>";
+            ></Li>"
+              <span, className="te, x, t-lg">{multiCloudConte, n, t.c, t, a.te, x, t}</sp, a, n>"
+              <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m/>""
+              <span, className="te, x, t-lg">{multiCloudConte, n, t.c, t, a.te, x, t}</sp, a, n>";"
               <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m" />";
             </Li, n, k>
           </d, i, v>
+<<<<<<< HEAD
           {/* Conversational, AI, Card */}
 <<<<<<< HEAD
           <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-6, 0, 0/20, vi, a-pi, n, k-6, 0, 0/20, t, o-ro, s, e-6, 0, 0/20, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-purp, l, e-5, 0, 0/30, hove, r: bord, e, r-purp, l, e-400, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e;
@@ -197,12 +321,31 @@ const, October2025UltimateEnterpriseBanne, r = () => {
               </d, i, v>
               <div, className="fl, e, x-1">";</div>
                 <div, className="flex, item, s-center, ga, p-2, m, b-3">";</div>
+=======
+          {/* Conversational, AI, Card */}"
+          <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-6, 0, 0/20, vi, a-pi, n, k-6, 0, 0/20, t, o-ro, s, e-6, 0, 0/20, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-purp, l, e-5, 0, 0/30, hove, r: bord, e, r-purp, l, e-400, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e,"
+  r:shad, o, w-purp, l, e-5, 0, 0/50, grou, p">""
+            <div, className="flex, item, s-start, ga, p-4, m, b-6"></div>"
+              <div, className="fl, e, x-shri, n, k-0"></div>"
+                <div, className="w-1, 6, h-16, b, g-gradie, n, t-to-br, fro, m-purp, l, e-500, t, o-pi, n, k-600, rounde, d-2xl, flex, items-center, justif, y-center, shado, w-lg, transform, group-hov, e, r: rota, t, e-12, transitio, n-transform, duratio, n-3, 0, 0">""
+                  <MessageSquare, className="w-9 h-9, tex, t-whi, t, e  /></MessageSquare>"
+          <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-6, 0, 0/20, vi, a-pi, n, k-6, 0, 0/20, t, o-ro, s, e-6, 0, 0/20, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-purp, l, e-5, 0, 0/30, hove, r: bord, e, r-purp, l, e-400, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, grou, p">";"
+            <div, className="flex, item, s-start, ga, p-4, m, b-6">";"
+              <div, className="fl, e, x-shri, n, k-0">";"
+                <div, className="w-1, 6, h-16, b, g-gradie, n, t-to-br, fro, m-purp, l, e-500, t, o-pi, n, k-600, rounde, d-2xl, flex, items-center, justif, y-center, shado, w-lg, transform, group-hov, e, r: rota, t, e-12, transitio, n-transform, duratio, n-3, 0, 0">";"
+                  <MessageSquare, className="w-9 h-9, tex, t-whi, t, e" />";
+                </d, i, v>
+              </d, i, v>"
+              <div, className="fl, e, x-1">";"
+                <div, className="flex, item, s-center, ga, p-2, m, b-3">";"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   <span, className="px-3, p, y-1, b, g-purp, l, e-500, tex, t-white, tex, t-xs, fon, t-bold, rounde, d-full, uppercase, tracking-wid, e, r">";
                     FEATUR, E, D;
-                  </sp, a, n>
+                  </sp, a, n>"
                   <span, className="px-3, p, y-1, b, g-gradie, n, t-to-r, fro, m-yell, o, w-500, t, o-oran, g, e-500, tex, t-white, tex, t-xs, fon, t-bold, rounde, d-full, animat, e-pul, s, e">";
                     ⭐ TRENDI, N, G;
                   </sp, a, n>
+<<<<<<< HEAD
                 </d, i, v>
 <<<<<<< HEAD
                 <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e;
@@ -211,14 +354,20 @@ const, October2025UltimateEnterpriseBanne, r = () => {
                 <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e
   r: te, x, t-purp, l, e-400, transitio, n-colo, r, s">"</h3>
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
+=======
+                </d, i, v>"
+                <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e,"
+  r: te, x, t-purp, l, e-400, transitio, n-colo, r, s">""
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-purp, l, e-400, transitio, n-colo, r, s">";
                   {conversationalAIConte, n, t.ic, o, n} Conversational, AI, Revolution;
-                </h3>
+                </h3>"
                 <p, className="te, x, t-gr, a, y-300, tex, t-lg, leadin, g-relaxed, m, b-4">";
                   {conversationalAIConte, n, t.descripti, o, n}
                 </p>
               </d, i, v>
             </d, i, v>
+<<<<<<< HEAD
             {/* Metrics, Gri, d */}
             <div, className="grid, gri, d-co, l, s-2, ga, p-4, m, b-6"></div>
               <div, className="bg-purp, l, e-5, 0, 0/10, rounde, d-x, l, p-4, border, border-purp, l, e-5, 0, 0/20, hove, r: bord, e, r-purp, l, e-4, 0, 0/50, transitio, n-colo, r, s">"</div>
@@ -257,34 +406,85 @@ const, October2025UltimateEnterpriseBanne, r = () => {
   r: bord, e, r-purp, l, e-4, 0, 0/50, transitio, n-colo, r, s">";</div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-purp, l, e-400, m, b-1">$17, 3, M</d, i, v>";
+=======
+            {/* Metrics, Gri, d */}"
+            <div, className="grid, gri, d-co, l, s-2, ga, p-4, m, b-6"></div>"
+              <div, className="bg-purp, l, e-5, 0, 0/10, rounde, d-x, l, p-4, border, border-purp, l, e-5, 0, 0/20, hove, r: bord, e, r-purp, l, e-4, 0, 0/50, transitio, n-colo, r, s">""
+                <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-purp, l, e-400, m, b-1">1, 8, 4%</d, i, v>"
+                <div, className="te, x, t-sm, tex, t-gr, a, y-300, fon, t-medi, u, m">ROI, in, 14 Mont, h, s</d, i, v>
+              </d, i, v>"
+              <div, className="bg-pi, n, k-5, 0, 0/10, rounde, d-x, l, p-4, border, border-pi, n, k-5, 0, 0/20, hove, r: bord, e, r-pi, n, k-4, 0, 0/50, transitio, n-colo, r, s">""
+                <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-pi, n, k-400, m, b-1">94%</d, i, v>"
+                <div, className="te, x, t-sm, tex, t-gr, a, y-300, fon, t-medi, u, m">Customer, Satisfactio, n</d, i, v>
+              </d, i, v>"
+              <div, className="bg-ro, s, e-5, 0, 0/10, rounde, d-x, l, p-4, border, border-ro, s, e-5, 0, 0/20, hove, r: bord, e, r-ro, s, e-4, 0, 0/50, transitio, n-colo, r, s">""
+                <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-ro, s, e-400, m, b-1">5.7x</d, i, v>"
+                <div, className="te, x, t-sm, tex, t-gr, a, y-300, fon, t-medi, u, m">Productivity, Boos, t</d, i, v>
+              </d, i, v>"
+              <div, className="bg-purp, l, e-5, 0, 0/10, rounde, d-x, l, p-4, border, border-purp, l, e-5, 0, 0/20, hove, r: bord, e, r-purp, l, e-4, 0, 0/50, transitio, n-colo, r, s">""
+                <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-purp, l, e-400, m, b-1">$17, 3, M</d, i, v>"
+                <div, className="te, x, t-sm, tex, t-gr, a, y-300, fon, t-medi, u, m">Annual, Saving, s</d, i, v>"
+            <div, className="grid, gri, d-co, l, s-2, ga, p-4, m, b-6">";"
+              <div, className="bg-purp, l, e-5, 0, 0/10, rounde, d-x, l, p-4, border, border-purp, l, e-5, 0, 0/20, hove, r: bord, e, r-purp, l, e-4, 0, 0/50, transitio, n-colo, r, s">";"
+                <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-purp, l, e-400, m, b-1">1, 8, 4%</d, i, v>";"
+                <div, className="te, x, t-sm, tex, t-gr, a, y-300, fon, t-medi, u, m">ROI, in, 14 Mont, h, s</d, i, v>";
+              </d, i, v>"
+              <div, className="bg-pi, n, k-5, 0, 0/10, rounde, d-x, l, p-4, border, border-pi, n, k-5, 0, 0/20, hove, r: bord, e, r-pi, n, k-4, 0, 0/50, transitio, n-colo, r, s">";"
+                <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-pi, n, k-400, m, b-1">94%</d, i, v>";"
+                <div, className="te, x, t-sm, tex, t-gr, a, y-300, fon, t-medi, u, m">Customer, Satisfactio, n</d, i, v>";
+              </d, i, v>"
+              <div, className="bg-ro, s, e-5, 0, 0/10, rounde, d-x, l, p-4, border, border-ro, s, e-5, 0, 0/20, hove, r: bord, e, r-ro, s, e-4, 0, 0/50, transitio, n-colo, r, s">";"
+                <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-ro, s, e-400, m, b-1">5.7x</d, i, v>";"
+                <div, className="te, x, t-sm, tex, t-gr, a, y-300, fon, t-medi, u, m">Productivity, Boos, t</d, i, v>";
+              </d, i, v>"
+              <div, className="bg-purp, l, e-5, 0, 0/10, rounde, d-x, l, p-4, border, border-purp, l, e-5, 0, 0/20, hov, e,"
+  r: bord, e, r-purp, l, e-4, 0, 0/50, transitio, n-colo, r, s">";"
+                <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-purp, l, e-400, m, b-1">$17, 3, M</d, i, v>";"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 <div, className="te, x, t-sm, tex, t-gr, a, y-300, fon, t-medi, u, m">Annual, Saving, s</d, i, v>";
               </d, i, v>
             </d, i, v>
-            {/* Key, Highlight, s */}
+            {/* Key, Highlight, s */}"
             <div, className="spa, c, e-y-2, m, b-6">";
+<<<<<<< HEAD
               {conversationalAIConte, n, t.highligh, t, s.sli, c, e(0, 4).m, a, p((highlig, h, t, ind, e, x) => (</div>
                 <div, ke, y={ind, e, x} classNa, m, e="flex, item, s-start, ga, p-3, tex, t-gr, a, y-2, 0, 0"></div>
                   <CheckCircle, className="w-5 h-5, tex, t-purp, l, e-400, fle, x-shri, n, k-0, m, t-0.5  />
                   <span, className="te, x, t-sm, leadin, g-relax, e, d">{highlig, h, t}</sp, a, n>
                 <div, ke, y={ind, e, x} classNa, m, e="flex, item, s-start, ga, p-3, tex, t-gr, a, y-2, 0, 0">";</div>
                   <CheckCircle, className="w-5 h-5, tex, t-purp, l, e-400, fle, x-shri, n, k-0, m, t-0.5" />";
+=======
+              {/* TODO: Fix JSX expression */}"
+                <div, ke, y={ind, e, x} classNa, m, e="flex, item, s-start, ga, p-3, tex, t-gr, a, y-2, 0, 0"></div>"
+                  <CheckCircle, className="w-5 h-5, tex, t-purp, l, e-400, fle, x-shri, n, k-0, m, t-0.5  /></CheckCircle>"
+                  <span, className="te, x, t-sm, leadin, g-relax, e, d">{highlig, h, t}</sp, a, n>"
+                <div, ke, y={ind, e, x} classNa, m, e="flex, item, s-start, ga, p-3, tex, t-gr, a, y-2, 0, 0">";"
+                  <CheckCircle, className="w-5 h-5, tex, t-purp, l, e-400, fle, x-shri, n, k-0, m, t-0.5" />";"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   <span, className="te, x, t-sm, leadin, g-relax, e, d">{highlig, h, t}</sp, a, n>";
                 </d, i, v>
               ))}
             </d, i, v>
             {/* CTA, Butto, n */}
             <Li, n, k;
+<<<<<<< HEAD
   to={conversationalAIConte, n, t.c, t, a.li, n, k}
               classNa, m, e="flex, item, s-center, justif, y-center, ga, p-2 w-full, p, y-4, p, x-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-pi, n, k-600, hove, r: fr, o, m-purp, l, e-500, hove, r:to-pi, n, k-500, tex, t-white, fon, t-bold, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e;
+=======
+  to={conversationalAIConte, n, t.c, t, a.li, n, k}"
+              classNa, m, e="flex, item, s-center, justif, y-center, ga, p-2 w-full, p, y-4, p, x-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-pi, n, k-600, hove, r: fr, o, m-purp, l, e-500, hove, r:to-pi, n, k-500, tex, t-white, fon, t-bold, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hove,
+  r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e,"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   r:shad, o, w-purp, l, e-5, 0, 0/50, grou, p"
-            >
-              <span, className="te, x, t-lg">{conversationalAIConte, n, t.c, t, a.te, x, t}</sp, a, n>
-              <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m/>"
-              <span, className="te, x, t-lg">{conversationalAIConte, n, t.c, t, a.te, x, t}</sp, a, n>";
+            ></Li>"
+              <span, className="te, x, t-lg">{conversationalAIConte, n, t.c, t, a.te, x, t}</sp, a, n>"
+              <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m/>""
+              <span, className="te, x, t-lg">{conversationalAIConte, n, t.c, t, a.te, x, t}</sp, a, n>";"
               <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m" />";
             </Li, n, k>
           </d, i, v>
         </d, i, v>
+<<<<<<< HEAD
         {/* Combined, Value, Proposition */}
         <div, className="bg-gradie, n, t-to-r, fro, m-cy, a, n-6, 0, 0/20, vi, a-purp, l, e-6, 0, 0/20, t, o-pi, n, k-6, 0, 0/20, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/20"></div>
           <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-6, tex, t-cent, e, r">"</div>
@@ -295,10 +495,23 @@ const, October2025UltimateEnterpriseBanne, r = () => {
           <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-6, tex, t-cent, e, r">";</div>
             <div, className="group, hove, r: sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0">";</div>
               <div, className="flex, item, s-center, justif, y-center, m, b-3">";</div>
+=======
+        {/* Combined, Value, Proposition */}"
+        <div, className="bg-gradie, n, t-to-r, fro, m-cy, a, n-6, 0, 0/20, vi, a-purp, l, e-6, 0, 0/20, t, o-pi, n, k-6, 0, 0/20, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/20"></div>"
+          <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-6, tex, t-cent, e, r">""
+            <div, className="group, hove, r: sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0">""
+              <div, className="flex, item, s-center, justif, y-center, m, b-3"></div>"
+                <Award, className="w-1, 0, h-10, tex, t-yell, o, w-4, 0, 0  /></Award>"
+        <div, className="bg-gradie, n, t-to-r, fro, m-cy, a, n-6, 0, 0/20, vi, a-purp, l, e-6, 0, 0/20, t, o-pi, n, k-6, 0, 0/20, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/20">";"
+          <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-6, tex, t-cent, e, r">";"
+            <div, className="group, hove, r: sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0">";"
+              <div, className="flex, item, s-center, justif, y-center, m, b-3">";"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 <Award, className="w-1, 0, h-10, tex, t-yell, o, w-4, 0, 0" />";
-              </d, i, v>
-              <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-white, m, b-2">3, 4, 0%+</d, i, v>";
+              </d, i, v>"
+              <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-white, m, b-2">3, 4, 0%+</d, i, v>";"
               <div, className="te, x, t-sm, tex, t-gr, a, y-300, fon, t-medi, u, m">Combined, RO, I</d, i, v>";
+<<<<<<< HEAD
             </d, i, v>
 <<<<<<< HEAD
             <div, className="group, hov, e;
@@ -312,10 +525,20 @@ const, October2025UltimateEnterpriseBanne, r = () => {
                 <TrendingUp, className="w-1, 0, h-10, tex, t-gre, e, n-4, 0, 0  />
             <div, className="group, hove, r: sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0">";</div>
               <div, className="flex, item, s-center, justif, y-center, m, b-3">";</div>
+=======
+            </d, i, v>"
+            <div, className="group, hov, e,"
+  r: sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0">""
+              <div, className="flex, item, s-center, justif, y-center, m, b-3"></div>"
+                <TrendingUp, className="w-1, 0, h-10, tex, t-gre, e, n-4, 0, 0  /></TrendingUp>"
+            <div, className="group, hove, r: sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0">";"
+              <div, className="flex, item, s-center, justif, y-center, m, b-3">";"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 <TrendingUp, className="w-1, 0, h-10, tex, t-gre, e, n-4, 0, 0" />";
-              </d, i, v>
-              <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-white, m, b-2">$26, 2, M+</d, i, v>";
+              </d, i, v>"
+              <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-white, m, b-2">$26, 2, M+</d, i, v>";"
               <div, className="te, x, t-sm, tex, t-gr, a, y-300, fon, t-medi, u, m">Total, Saving, s</d, i, v>";
+<<<<<<< HEAD
             </d, i, v>
 <<<<<<< HEAD
             <div, className="group, hov, e;
@@ -329,10 +552,20 @@ const, October2025UltimateEnterpriseBanne, r = () => {
                 <Zap, className="w-1, 0, h-10, tex, t-cy, a, n-4, 0, 0  />
             <div, className="group, hove, r: sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0">";</div>
               <div, className="flex, item, s-center, justif, y-center, m, b-3">";</div>
+=======
+            </d, i, v>"
+            <div, className="group, hov, e,"
+  r: sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0">""
+              <div, className="flex, item, s-center, justif, y-center, m, b-3"></div>"
+                <Zap, className="w-1, 0, h-10, tex, t-cy, a, n-4, 0, 0  /></Zap>"
+            <div, className="group, hove, r: sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0">";"
+              <div, className="flex, item, s-center, justif, y-center, m, b-3">";"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 <Zap, className="w-1, 0, h-10, tex, t-cy, a, n-4, 0, 0" />";
-              </d, i, v>
-              <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-white, m, b-2">5.1x</d, i, v>";
+              </d, i, v>"
+              <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-white, m, b-2">5.1x</d, i, v>";"
               <div, className="te, x, t-sm, tex, t-gr, a, y-300, fon, t-medi, u, m">Avg, Efficienc, y</d, i, v>";
+<<<<<<< HEAD
             </d, i, v>
 <<<<<<< HEAD
             <div, className="group, hov, e;
@@ -346,13 +579,23 @@ const, October2025UltimateEnterpriseBanne, r = () => {
                 <Sparkles, className="w-1, 0, h-10, tex, t-purp, l, e-4, 0, 0  />
             <div, className="group, hove, r: sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0">";</div>
               <div, className="flex, item, s-center, justif, y-center, m, b-3">";</div>
+=======
+            </d, i, v>"
+            <div, className="group, hov, e,"
+  r: sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0">""
+              <div, className="flex, item, s-center, justif, y-center, m, b-3"></div>"
+                <Sparkles, className="w-1, 0, h-10, tex, t-purp, l, e-4, 0, 0  /></Sparkles>"
+            <div, className="group, hove, r: sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0">";"
+              <div, className="flex, item, s-center, justif, y-center, m, b-3">";"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 <Sparkles, className="w-1, 0, h-10, tex, t-purp, l, e-4, 0, 0" />";
-              </d, i, v>
-              <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-white, m, b-2">Fortune, 10, 0</d, i, v>";
+              </d, i, v>"
+              <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-white, m, b-2">Fortune, 10, 0</d, i, v>";"
               <div, className="te, x, t-sm, tex, t-gr, a, y-300, fon, t-medi, u, m">Proven, Result, s</d, i, v>";
             </d, i, v>
           </d, i, v>
         </d, i, v>
+<<<<<<< HEAD
         {/* Bottom, CT, A */}
         <div, className="te, x, t-center, m, t-12">";</div>
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, m, b-6, fon, t-medi, u, m">";
@@ -369,15 +612,35 @@ const, October2025UltimateEnterpriseBanne, r = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
   to="/conta, c, t"
               classNa, m, e="px-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-cy, a, n-600, vi, a-bl, u, e-600, t, o-purp, l, e-600, hove, r: fr, o, m-cy, a, n-500, hove, r:v, i, a-bl, u, e-500, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e;
+=======
+        {/* Bottom, CT, A */}"
+        <div, className="te, x, t-center, m, t-12">";"
+          <p, className="te, x, t-xl, tex, t-gr, a, y-300, m, b-6, fon, t-medi, u, m">";
+            Ready, to, transform your, enterprise, with cutti, n, g-edge, AI, solutions?
+          </p>"
+          <div, className="flex, fle, x-col, s, m: fl, e, x-row, item, s-center, justif, y-center, ga, p-4">""
+          <div, className="flex, fle, x-col, s, m: fl, e, x-row, item, s-center, justif, y-center, ga, p-4">";
+            <Li, n, k;"
+  to="/conta, c, t""
+              classNa, m, e="px-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-cy, a, n-600, vi, a-bl, u, e-600, t, o-purp, l, e-600, hove, r: fr, o, m-cy, a, n-500, hove, r:v, i, a-bl, u, e-500, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hove,
+  r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e,"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   r:shad, o, w-bl, u, e-5, 0, 0/50, tex, t-lg"
-            >
+            ></Li>
               Schedule, Free, Assessment;
             </Li, n, k>
+<<<<<<< HEAD
             <Li, n, k;
   to="/bl, o, g"
               classNa, m, e="px-8, p, y-4, b, g-whi, t, e/10, hove, r: bg-whi, t, e/20, tex, t-white, fon, t-bold, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-105, borde, r-2, borde, r-whi, t, e/30, hov, e;
+=======
+            <Li, n, k;"
+  to="/bl, o, g""
+              classNa, m, e="px-8, p, y-4, b, g-whi, t, e/10, hove, r: bg-whi, t, e/20, tex, t-white, fon, t-bold, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hove,
+  r:sca, l, e-105, borde, r-2, borde, r-whi, t, e/30, hov, e,"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   r:bord, e, r-whi, t, e/50, tex, t-lg"
-            >
+            ></Li>
               Explore, All, Insights;
             </Li, n, k>
           </d, i, v>
@@ -387,4 +650,4 @@ const, October2025UltimateEnterpriseBanne, r = () => {
   );
 };
 export default October2025UltimateEnterpriseBanner;
-;
+;"

@@ -5,13 +5,13 @@
  * to improve initial page load performance.
  */
 
-interface BannerModule {
-  default: ComponentType<Record<string, unknown>>;
+interface BannerModule {/* TODO: Fix JSX expression */}
 }
 
 /**
  * Lazy load a banner component with retry logic;
  */
+<<<<<<< HEAD
 export const lazyLoadBanner = (
   importFn: () => Promise<BannerModule>
       // Retry once after a delay;
@@ -20,6 +20,12 @@ export const lazyLoadBanner = (
           importFn()
             .then(resolve),
             .catch(retryError => {),
+=======
+export const lazyLoadBanner = (importF,)
+  n: () => Promise<BannerModule>,
+      // Retry once after a delay;
+      return new Promise<BannerModule>(resolve => {/* TODO: Fix JSX expression */})
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
             });
         }, 1000);
       });
@@ -30,6 +36,7 @@ export const lazyLoadBanner = (
 /**
  * Preload banner components for better performance;
  */
+<<<<<<< HEAD
 export const preloadBanner = (importFn: () => Promise<BannerModule>): void => {
   if (typeof window !== 'undefined') {
     // Preload on idle;
@@ -37,6 +44,10 @@ export const preloadBanner = (importFn: () => Promise<BannerModule>): void => {
       requestIdleCallback(() => {,
         importFn().catch(() => {,
           // Silently fail for preload;
+=======
+export const preloadBanner = (importF,)
+  n: () => Promise<BannerModule>): void => {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         });
       });
   }
@@ -45,6 +56,7 @@ export const preloadBanner = (importFn: () => Promise<BannerModule>): void => {
 /**
  * Banner loader with intersection observer;
  */
+<<<<<<< HEAD
 export const createBannerLoader = () => {
   const observer = new IntersectionObserver(
         if (entry.isIntersecting) {
@@ -53,16 +65,17 @@ export const createBannerLoader = () => {
           if (importFn) {
             // Load the banner when it comes into view;
             eval(importFn)();
+=======
+export const createBannerLoader = () => {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           }
         }
       });
     },
-    { rootMargin: '50px' }
+    {/* TODO: Fix JSX expression */}
+  n: '50px' }
   );
 
-  return {
-    observe: (element: HTMLElement) => observer.observe(element),
-    unobserve: (element: HTMLElement) => observer.unobserve(element),
-    disconnect: () => observer.disconnect(),
+  return {/* TODO: Fix JSX expression */}
   };
 };

@@ -4,6 +4,7 @@ import { Shield, CheckCircle, FileText, Award, Lock, Eye, Database, UserCheck } 
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
+<<<<<<< HEAD
 const CompliancePage: React.FC = () => {,
   const complianceFrameworks = [,
     {,
@@ -522,3 +523,5 @@ const CompliancePage: React.FC = () => {,
 };
 
 export default CompliancePage;
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

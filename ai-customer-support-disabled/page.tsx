@@ -4,6 +4,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { MessageCircle, Headphones, Bot, Zap, Shield, BarChart, Clock, Users, CheckCircle, Star, ArrowRight, Phone, Mail } from 'lucide-react';
+<<<<<<< HEAD
 const AICustomerSupportPage: React.FC = () => {
   const features = [
     {
@@ -29,35 +30,38 @@ const AICustomerSupportPage: React.FC = () => {
       title: 'Knowledge Base Integration',
       description: 'Seamlessly integrated knowledge base that provides accurate, up-to-date information to both AI and human agents.',
       benefits: ['Real-time Updates', 'Version Control', 'Search Optimization', 'Content Management']
+=======
+const,
+  AICustomerSupportPage: React.FC = () => {/* TODO: Fix JSX expression */}
+    },
+    {/* TODO: Fix JSX expression */}
+    },
+    {/* TODO: Fix JSX expression */}
+    },
+    {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   ];
 
   const pricing = [
-    {
-      name: 'Starter',
-      price: '$149/month',
-      description: 'Perfect for small businesses',
-      features: ['Up to 1,000 conversations/month', 'Basic AI chatbot', 'Email support', 'Standard integrations']
+    {/* TODO: Fix JSX expression */}
     },
-    {
-      name: 'Professional',
-      price: '$299/month',
-      description: 'Ideal for growing companies',
-      features: ['Up to 10,000 conversations/month', 'Advanced AI with learning', 'Phone & email support', 'Advanced integrations', 'Analytics dashboard']
+    {/* TODO: Fix JSX expression */}
     },
-    {
-      name: 'Enterprise',
-      price: '$599/month',
-      description: 'For large organizations',
-      features: ['Unlimited conversations', 'Custom AI training', '24/7 human support', 'Custom integrations', 'Advanced analytics', 'Dedicated account manager']
+    {/* TODO: Fix JSX expression */}
     }
   ];
   const stats = [
-    { number: '95%', label: 'Customer Satisfaction' },
-    { number: '60%', label: 'Faster Resolution' },
-    { number: '24/7', label: 'Availability' },
-    { number: '50+', label: 'Languages Supported' }
+    {/* TODO: Fix JSX expression */}
+  l: 'Customer Satisfaction' },
+    {/* TODO: Fix JSX expression */}
+  l: 'Faster Resolution' },
+    {/* TODO: Fix JSX expression */}
+  l: 'Availability' },
+    {/* TODO: Fix JSX expression */}
+  l: 'Languages Supported' }
   ];
+<<<<<<< HEAD
   return(<>
       <SEOOptimizer;
         title="AI Customer Support Solutions - Zion Tech Group"
@@ -97,11 +101,45 @@ const AICustomerSupportPage: React.FC = () => {
                 <a
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   href="tel:+13024640950"
+=======
+  return (<>
+      <SEOOptimizer></SEOOptimizer>
+        title="AI Customer Support Solutions - Zion Tech Group""
+        description="Revolutionary AI-powered customer support with chatbots, omnichannel support, and intelligent automation. Boost satisfaction by 95% and reduce costs by 60%."
+        keywords={['AI customer support', 'chatbots', 'omnichannel support', 'customer service automation', 'AI helpdesk']}"
+        canonicalUrl="http,"
+  s://ziontechgroup.com/ai-customer-support"
+      />"
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+        <Navigation /></Navigation>"
+        <main className="pt-16"></main>
+          {/* Hero Section */}"
+          <section className="container mx-auto px-4 py-16 text-center"></section>"
+            <div className="max-w-4xl mx-auto"></div>"
+              <h1 className="text-4xl,"
+  md:text-6xl font-bold text-white mb-6 neon-text"></h1>
+                AI Customer Support Solutions;
+              </h1>"
+              <p className="text-xl,"
+  md:text-2xl text-cyan-400 mb-8"></p>
+                Transform your customer service with intelligent AI that never sleeps;
+              </p>"
+              <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto"></p>
+                Our AI-powered customer support platform combines advanced chatbots, omnichannel communication, 
+                and intelligent automation to deliver exceptional customer experiences while reducing costs by up to 60%.
+              </p>"
+              <div className="flex flex-col,"
+  sm:flex-row gap-4 justify-center items-center mb-16"></div>
+                <a></a>"
+                  href="te,"
+  l:+13024640950""
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   className="cyber-button flex items-center space-x-2"
-                >
-                  <Phone className="w-5 h-5" />
+                >"
+                  <Phone className="w-5 h-5" /></Phone>)
                   <span>Call (302) 464-0950</span>
                 </a>
+<<<<<<< HEAD
                 <a;
                   href="mailto:kleber@ziontechgroup.com",
                   className="cyber-button flex items-center space-x-2",
@@ -116,8 +154,28 @@ const AICustomerSupportPage: React.FC = () => {
                 {stats.map((stat, index) => (
                   <div key={index} className="cyber-card p-6 text-center">
                     <div className="text-3xl md: text-4xl font-bold text-cyan-400 mb-2 neon-text">,
+=======
+                <a></a>"
+                  href="mailt,"
+  o:kleber@ziontechgroup.com""
+                  className="cyber-button flex items-center space-x-2"
+                  style={/* TODO: Fix JSX expression */}
+  d: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
+                >"
+                  <Mail className="w-5 h-5" /></Mail>
+                  <span>Get Free Demo</span>
+                </a>
+              </div>
+              {/* Stats */}"
+              <div className="grid grid-cols-2,"
+  md:grid-cols-4 gap-8 mb-16"></div>
+                {/* TODO: Fix JSX expression */}"
+                  <div key={index} className="cyber-card p-6 text-center"></div>"
+                    <div className="text-3xl,"
+  md:text-4xl font-bold text-cyan-400 mb-2 neon-text"></div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                       {stat.number}
-                    </div>
+                    </div>"
                     <div className="text-gray-300 font-medium">{stat.label}</div>
                   </div>
                 ))}
@@ -129,6 +187,7 @@ const AICustomerSupportPage: React.FC = () => {
     </>
   );
 };
+
 
 const AICustomerSupportPage2: React.FC = () => {
 <<<<<<< HEAD
@@ -147,6 +206,7 @@ const AICustomerSupportPage2: React.FC = () => {
           {/* Hero Section */}</div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
           <section className="text-center mb-16">
+<<<<<<< HEAD
             <h1 className="text-4xl sm: text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
               AI Customer Support;
             </h1>,
@@ -299,8 +359,23 @@ const AICustomerSupportPage2: React.FC = () => {
         </main>
         <Footer />
       </div>
+=======
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
+              AI Customer Support
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your customer support with intelligent AI solutions that provide 24/7 assistance, 
+            </p>
+          </section>
+        </div>
+      </main>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     </div>
   );
 };
 
-export default AICustomerSupportPage2;
+
+export default AICustomerSupportPage;
+
+
+

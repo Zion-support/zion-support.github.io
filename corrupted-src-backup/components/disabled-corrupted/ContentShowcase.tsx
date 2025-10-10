@@ -1,12 +1,6 @@
 import React from 'react';
 
-interface ContentItem {
-  id: number;
-  title: string;
-  description: string;
-  category: string;
-  readTime: string;
-  image: string;
+interface ContentItem {/* TODO: Fix JSX expression */}
 }
 
 export default ContentShowcase;

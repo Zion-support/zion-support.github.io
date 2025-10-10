@@ -1,5 +1,6 @@
 'use client';
 
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
@@ -384,3 +385,5 @@ const DocsPage: React.FC = () => {,
 };
 
 export default DocsPage;
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

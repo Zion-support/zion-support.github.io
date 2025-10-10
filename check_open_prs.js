@@ -2,6 +2,7 @@
 import https from 'https';
 
 // GitHub API configuration;
+<<<<<<< HEAD
 function makeGitHubRequest(endpoint) {
   return new Promise((resolve, reject) => {
     const options = {
@@ -12,30 +13,29 @@ function makeGitHubRequest(endpoint) {
       headers: {,
         'User-Agent': 'Zion-App-Automation',
         'Accept': 'application/vnd.github.v3+json',
+=======
+function makeGitHubRequest(endpoint) {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
     };
 
-    const req = https.request(options, (res) => {
-      res.on('data', (chunk) => {
-        data += chunk;
+    const req = https.request(options, (res) => {/* TODO: Fix JSX expression */}
       });
-      res.on('end', () => {
-        try {
-          resolve(jsonData);
-        } catch (error) {
-          reject(new Error(`Failed to parse JSON: ${error.message}`));
+      res.on('end', () => {/* TODO: Fix JSX expression */}
+        } catch (error) {/* TODO: Fix JSX expression */}
+  JSON: ${error.message}`));
         }
       });
     });
 
-    req.on('error', (error) => {
-      reject(error);
+    req.on('error', (error) => {/* TODO: Fix JSX expression */}
     });
 
     req.end();
   });
 }
 
+<<<<<<< HEAD
 async function checkOpenPRs() {
   try {
     // Get open pull requests;
@@ -63,18 +63,26 @@ async function checkOpenPRs() {
         hasConflicts),
         mergeable: prDetail.mergeable),
         mergeable_state: prDetail.mergeable_state;
+=======
+async function checkOpenPRs() {/* TODO: Fix JSX expression */}
+}
+  try {/* TODO: Fix JSX expression */}
+    }
+    
+    
+    for (const pr of prs) {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
     }
     
     return prDetails;
     
-  } catch (error) {
-
-    return [];
+  } catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 
 // Run the check;
+<<<<<<< HEAD
 checkOpenPRs().then(prs => {)
 )
   process.exit(0);
@@ -82,3 +90,8 @@ checkOpenPRs().then(prs => {)
 )
   process.exit(1);
 });
+=======
+checkOpenPRs().then(prs => {/* TODO: Fix JSX expression */})
+}).catch(error => {/* TODO: Fix JSX expression */})
+});`
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

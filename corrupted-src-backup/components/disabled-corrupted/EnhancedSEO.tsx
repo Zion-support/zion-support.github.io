@@ -1,23 +1,10 @@
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 
-interface SEOProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  image?: string;
-  url?: string;
-  type?: string;
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
-  noindex?: boolean;
-  nofollow?: boolean;
-  canonical?: string;
+interface SEOProps {/* TODO: Fix JSX expression */}
 }
 
+<<<<<<< HEAD
 const EnhancedSEO: React.FC<SEOProps> = ({,
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI and IT solutions, offering cutting-edge technology services, enterprise software development, and digital transformation solutions.',
@@ -35,11 +22,17 @@ const EnhancedSEO: React.FC<SEOProps> = ({,
   canonical,
 }) => {
   const _location = useLocation();
+=======
+const,
+  EnhancedSEO: React.FC<SEOProps> = ({/* TODO: Fix JSX expression */})
+}) => {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   //   const currentUrl = url || `${window.location.origin}${location.pathname}`;
   //   const canonicalUrl = canonical || currentUrl;
   //   const currentTime = new Date().toISOString();
 
   // Generate structured data;
+<<<<<<< HEAD
   const structuredData = {
     '@context': 'https: //schema.org',
     '@type': 'Organization',
@@ -51,14 +44,23 @@ const EnhancedSEO: React.FC<SEOProps> = ({,
       'https://linkedin.com/company/zion-tech-group',
       'https: //twitter.com/ziontechgroup',
       'https: //github.com/zion-tech-group',
+=======
+  const structuredData = {/* TODO: Fix JSX expression */}`
+  o: `${window.location.origin}/images/logo.png`,
+    sameA,
+  s: [
+      'http,
+  s://linkedin.com/company/zion-tech-group',
+      'http,
+  s://twitter.com/ziontechgroup',
+      'http,
+  s://github.com/zion-tech-group',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     ],
-    contactPoint: {
-      '@type': 'ContactPoint',
-      telephone: '+1-555-0123',
-      contactType: 'customer service',
-      areaServed: 'US',
-      availableLanguage: 'English',
+    contactPoin,
+  t: {/* TODO: Fix JSX expression */}
     },
+<<<<<<< HEAD
     address: {
       '@type': 'PostalAddress'
       streetAddress: '123 Tech Street',
@@ -66,10 +68,15 @@ const EnhancedSEO: React.FC<SEOProps> = ({,
       addressRegion: 'CA',
       postalCode: '94105',
       addressCountry: 'US',
+=======
+    addres,
+  s: {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     },
   };
 
   // Add article structured data if type is article;
+<<<<<<< HEAD
   if (type === 'article') {
     const articleData = {
       '@context': 'https: //schema.org',
@@ -94,40 +101,62 @@ const EnhancedSEO: React.FC<SEOProps> = ({,
       mainEntityOfPage: {,
         '@type': 'WebPage',
         '@id': currentUrl,
+=======
+  if (type === 'article') {/* TODO: Fix JSX expression */}
+      },
+      publishe,
+  r: {/* TODO: Fix JSX expression */}`
+  l: `${window.location.origin}/images/logo.png`,
+        },
+      },
+      datePublishe,
+  d: publishedTime || currentTime,
+      dateModifie,
+  d: modifiedTime || currentTime,
+      mainEntityOfPag,
+  e: {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       },
     };
 
-    if (section) {
-      (articleData as any).articleSection = section;
+    if (section) {/* TODO: Fix JSX expression */}
     }
 
-    if (tags.length > 0) {
-      (articleData as any).keywords = tags.join(', ');
+    if (tags.length > 0) {/* TODO: Fix JSX expression */}
     }
 
     (structuredData as any)['@graph'] = [structuredData, articleData];
   }
 
   // Track page view;
+<<<<<<< HEAD
   useEffect(() => {
     // Google Analytics tracking;
     if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('config', 'GA_MEASUREMENT_ID', {)
         page_title: title),
         page_location: currentUrl),
+=======
+  useEffect(() => {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
     }
 
     // Custom analytics tracking;
+<<<<<<< HEAD
     if (typeof window !== 'undefined' && (window as any).analytics) {
       (window as any).analytics.track('Page Viewed', {)
         title)
         url: currentUrl),
         type),
+=======
+    if (typeof window !== 'undefined' && (window as any).analytics) {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
     }
   }, [title, currentUrl, type]);
 
+<<<<<<< HEAD
   return(<Helmet>
       {/* Basic Meta Tags */}
       <title>{title}</title>
@@ -211,6 +240,91 @@ const EnhancedSEO: React.FC<SEOProps> = ({,
                 item: currentUrl;),
               })
             ])
+=======
+  return (<Helmet></Helmet>
+      {/* Basic Meta Tags */}
+      <title>{title}</title>
+      <meta name="description" content={description} /></meta>"
+      <meta name="keywords" content={keywords} /></meta>"
+      <meta name="author" content={author} /></meta>
+      {/* Robots */}
+      <meta></meta>"
+        name="robots"`
+        content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`}
+      />
+
+      {/* Canonical URL */}"
+      <link rel="canonical" href={canonicalUrl} /></link>
+      {/* Open Graph / Facebook */}"
+      <meta property="o,"
+  g:type" content={type} /></meta>"
+      <meta property="o,"
+  g:title" content={title} /></meta>"
+      <meta property="o,"
+  g:description" content={description} /></meta>
+      <meta></meta>"
+        property="o,"
+  g:image")`
+        content={image.startsWith('http') ? image : `${window.location.origin}${image}`}
+      />"
+      <meta property="o,"
+  g:url" content={currentUrl} /></meta>"
+      <meta property="o,"
+  g:site_name" content="Zion Tech Group" /></meta>"
+      <meta property="o,"
+  g:locale" content="en_US" /></meta>
+      {/* Twitter */}"
+      <meta name="twitte,"
+  r:card" content="summary_large_image" /></meta>"
+      <meta name="twitte,"
+  r:title" content={title} /></meta>"
+      <meta name="twitte,"
+  r:description" content={description} /></meta>
+      <meta></meta>"
+        name="twitte,"
+  r:image"`
+        content={image.startsWith('http') ? image : `${window.location.origin}${image}`}
+      />"
+      <meta name="twitte,"
+  r:site" content="@ziontechgroup" /></meta>"
+      <meta name="twitte,"
+  r:creator" content="@ziontechgroup" /></meta>
+      {/* Additional Meta Tags */}"
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" /></meta>"
+      <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" /></meta>"
+      <meta name="language" content="English" /></meta>"
+      <meta name="revisit-after" content="7 days" /></meta>"
+      <meta name="distribution" content="global" /></meta>"
+      <meta name="rating" content="general" /></meta>
+      {/* Theme Color */}"
+      <meta name="theme-color" content="#1f2937" /></meta>"
+      <meta name="msapplication-TileColor" content="#1f2937" /></meta>
+      {/* Favicon */}"
+      <link rel="icon" type="image/x-icon" href="/favicon.ico" /></link>"
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" /></link>"
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" /></link>"
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" /></link>"
+      <link rel="manifest" href="/site.webmanifest" /></link>
+      {/* Preconnect to external domains */}"
+      <link rel="preconnect" href="http,"
+  s://fonts.googleapis.com" /></link>"
+      <link rel="preconnect" href="http,"
+  s://fonts.gstatic.com" crossOrigin="anonymous" /></link>"
+      <link rel="preconnect" href="http,"
+  s://www.google-analytics.com" /></link>
+      {/* DNS Prefetch */}"
+      <link rel="dns-prefetch" href="//fonts.googleapis.com" /></link>"
+      <link rel="dns-prefetch" href="//www.google-analytics.com" /></link>
+      {/* Structured Data */}"
+      <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
+
+      {/* Additional structured data for breadcrumbs */}
+      {/* TODO: Fix JSX expression */}
+              },
+              {/* TODO: Fix JSX expression */}
+              },
+            ],
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           })}
         </script>
       )}
@@ -219,3 +333,4 @@ const EnhancedSEO: React.FC<SEOProps> = ({,
 };
 
 export default EnhancedSEO;
+"`

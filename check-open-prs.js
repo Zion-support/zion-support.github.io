@@ -3,6 +3,7 @@ import https from 'https';
 import fs from 'fs';
 
 //GitHub API configuration;
+<<<<<<< HEAD
 const options = {
   hostname: 'api.github.com',
   path: '/repos/Zion-Holdings/zion.app/pulls?state=open',
@@ -17,23 +18,32 @@ const options = {
 )
   res.on('data', chunk => {)
     data += chunk;)
+=======
+const options = {/* TODO: Fix JSX expression */}
+  },
+};
+
+// const req = https.get(options, res => {/* TODO: Fix JSX expression */})
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   });
 
-  res.on('end', () => {
-    try {
-      //       prs.forEach((pr, index) => {
+  res.on('end', () => {/* TODO: Fix JSX expression */}
         //         //         //         //         //         //         });
 
       // Save PR data to file;
       fs.writeFileSync('open_prs_data.json', JSON.stringify(prs, null, 2));
-      //       if (prs.length === 0) {
+      //       if (prs.length === 0) {/* TODO: Fix JSX expression */}
         //         }
-    } catch (error) {
+    } catch (error) {/* TODO: Fix JSX expression */}
       //       //       }
   });
 });
 
+<<<<<<< HEAD
 req.on('error', error => {)
+=======
+req.on('error', error => {/* TODO: Fix JSX expression */})
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   //   });
 
 req.end();

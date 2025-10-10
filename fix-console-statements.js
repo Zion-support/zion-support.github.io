@@ -5,27 +5,39 @@ import { fileURLToPath } from 'url';
 
 
 // Function to properly fix console statements;
+<<<<<<< HEAD
 function fixConsoleStatements(content) {
   // Fix console statements that are already wrapped in if conditions;
   content = content.replace(
+=======
+function fixConsoleStatements(content) {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     /if \(process\.env\.NODE_ENV === 'development'\) console\.(log|error|warn|info)\([^)]*\); \}/g,
-    match => {
+    match => {/* TODO: Fix JSX expression */}
       return match.replace(/; \}$/, '; }');
     }
   );
 
   // Fix console statements that are missing closing brace;
+<<<<<<< HEAD
   content = content.replace(
+=======
+  content = content.replace()
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     /if \(process\.env\.NODE_ENV === 'development'\) console\.(log|error|warn|info)\([^)]*\);$/gm,
-    match => {
+    match => {/* TODO: Fix JSX expression */}
       return match + ' }';
     }
   );
 
   // Fix console statements that have extra closing brace;
+<<<<<<< HEAD
   content = content.replace(
+=======
+  content = content.replace()
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     /if \(process\.env\.NODE_ENV === 'development'\) console\.(log|error|warn|info)\([^)]*\); \}\s*$/gm,
-    match => {
+    match => {/* TODO: Fix JSX expression */}
       return match.replace(/; \}\s*$/, '; }');
     }
   );
@@ -49,11 +61,7 @@ const filesToFix = [
   'app/utils/analyticsTracker.ts',
 ];
 
-function fixFile(filePath) {
-  try {
-    if (!fs.existsSync(fullPath)) {
-
-      return;
+function fixFile(filePath) {/* TODO: Fix JSX expression */}
     }
 
 
@@ -62,8 +70,7 @@ function fixFile(filePath) {
 
     fs.writeFileSync(fullPath, content);
 
-  } catch (error) {
-
+  } catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 

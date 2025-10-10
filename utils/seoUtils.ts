@@ -2,6 +2,7 @@
  * SEO utility functions;
  */
 
+<<<<<<< HEAD
 export interface SEOConfig {
   title: string;
   description: string;
@@ -11,28 +12,41 @@ export interface SEOConfig {
 }
 
 export const generateMetaTags = (config: SEOConfig): string => {,
+=======
+export interface SEOConfig {/* TODO: Fix JSX expression */}
+}
+
+export const generateMetaTags = (confi,)
+  g: SEOConfig): string => {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   const { title, description, keywords, ogImage, canonicalUrl } = config;
 
-  let _tags = `<title>${title}</title>`;
+  let _tags = `<title>${title}</title>`;`
   tags += `<meta name="description" content="${description}" />`;
 
-  if (keywords && keywords.length > 0) {
+  if (keywords && keywords.length > 0) {/* TODO: Fix JSX expression */}"`
     tags += `<meta name="keywords" content="${keywords.join(', ')}" />`;
   }
 
-  if (ogImage) {
-    tags += `<meta property="og:image" content="${ogImage}" />`;
+  if (ogImage) {/* TODO: Fix JSX expression */}"`
+  g:image" content="${ogImage}" />`;
   }
 
-  if (canonicalUrl) {
+  if (canonicalUrl) {/* TODO: Fix JSX expression */}"`
     tags += `<link rel="canonical" href="${canonicalUrl}" />`;
   }
 
   return tags;
 };
 
+<<<<<<< HEAD
 export const updatePageTitle = (title: string) => {,
   if (typeof window !== 'undefined') {,
     document.title = title;
+=======
+export const updatePageTitle = (titl,)
+  e: string) => {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 };
+"`

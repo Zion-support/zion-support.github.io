@@ -3,12 +3,9 @@ import React, { useState, useEffect } from "react";
 // import { securityAuditor } from '../utils/securityAuditor';
 // import EnhancedUXManager from '../utils/enhancedUXManager';
 
-interface DashboardData {
-  analytics: {
-    pageViews: number;
-    sessions: number;
-    bounceRate: number;
+interface DashboardData {/* TODO: Fix JSX expression */}
   };
+<<<<<<< HEAD
   performance: {,
     loadTime: number;
     responseTime: number;
@@ -16,9 +13,16 @@ interface DashboardData {
   security: {,
     threatsBlocked: number;
     vulnerabilities: number;
+=======
+  performanc,
+  e: {/* TODO: Fix JSX expression */}
+  };
+  securit,
+  y: {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   };
 }
 
 export default AdvancedDashboard;
 
-}
+}"

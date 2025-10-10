@@ -1,31 +1,10 @@
-export interface BlogPost {
-  id: string;
-  title: string;
-  excerpt: string;
-  date: string;
-  category: string;
-  readTime: string;
-  image: string;
-  featured?: boolean;
-  slug: string;
-  tags: string[];
+export interface BlogPost {/* TODO: Fix JSX expression */}
 }
 
-export interface CaseStudy {
-  id: string;
-  title: string;
-  excerpt: string;
-  company: string;
-  industry: string;
-  challenge: string;
-  solution: string;
-  result: string;
-  metric: string;
-  featured?: boolean;
-  slug: string;
-  tags: string[];
+export interface CaseStudy {/* TODO: Fix JSX expression */}
 }
 
+<<<<<<< HEAD
 export interface Service {
   id: string;
   title: string;
@@ -34,12 +13,19 @@ export interface Service {
   pricing: {,
     starting: string;
     popular?: boolean;
+=======
+export interface Service {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   };
-  features: string[];
-  primary: string;
-  secondary: string;
+  feature,
+  s: string[];
+  primar,
+  y: string;
+  secondar,
+  y: string;
 }
 
+<<<<<<< HEAD
 export const getRecentContent = (limit: number = 3) => {
   const allContent: (BlogPost | CaseStudy)[] = [
     // This would be populated with actual content arrays;
@@ -48,6 +34,13 @@ export const getRecentContent = (limit: number = 3) => {
     .sort((a, b) => {
       const _aTime = 'date' in a ? new Date((a as { date: string }).date).getTime() : 0;
       const _bTime = 'date' in b ? new Date((b as { date: string }).date).getTime() : 0;
+=======
+export const getRecentContent = (limi,)
+  t: number = 3) => {/* TODO: Fix JSX expression */}
+  e: string }).date).getTime() : 0;
+      const _bTime = 'date' in b ? new Date((b as {/* TODO: Fix JSX expression */})
+  e: string }).date).getTime() : 0;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       return bTime - aTime;
     })
     .slice(0, limit);

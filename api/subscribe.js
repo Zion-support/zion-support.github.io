@@ -4,25 +4,18 @@ const path = require('path');
 
 async function handler(req, res) {
   if (req.method !== 'POST') {
-    res.statusCode = 405;
-    res.setHeader('Allow', 'POST');
-    res.end('Method Not Allowed');
-    return;
+    return res.status(405).json({ error: 'Method not allowed' });
   }
 
   const { email, name, source = 'website' } = req.body || {};
 
   if (!email) {
-    res.statusCode = 400;
-    res.json({ error: 'Email is required' });
-    return;
+    return res.status(400).json({ error: 'Email is required' });
   }
 
   try {
     if (!isValidEmail(email)) {
-      res.statusCode = 400;
-      res.json({ error: 'Invalid email' });
-      return;
+      return res.status(400).json({ error: 'Invalid email' });
     }
 
     const file = path.join(process.cwd(), 'data', 'newsletter-subscriptions.json');
@@ -30,6 +23,7 @@ async function handler(req, res) {
     let existing = [];
 
     try {
+<<<<<<< HEAD
       existing = JSON.parse(fs.readFileSync(file, 'utf8'));
       if (!Array.isArray(existing)) existing = [];
     } catch {
@@ -40,15 +34,29 @@ async function handler(req, res) {
       email)
       name: name || ''),
       source),
+=======
+      if (fs.existsSync(file)) {
+        existing = JSON.parse(fs.readFileSync(file, 'utf8'));
+      }
+    } catch (error) {
+      console.error('Error reading existing subscriptions:', error);
+    }
+
+    existing.push({
+      email,
+      name,
+      source,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       subscribedAt: new Date().toISOString(),
+      status: 'active'
     });
 
     fs.writeFileSync(file, JSON.stringify(existing, null, 2));
     res.statusCode = 200;
-    res.json({ success: true });
+    res.json({ success: true, message: 'Successfully subscribed to newsletter' });
   } catch (err) {
-    res.statusCode = 500;
-    res.json({ error: err.message || 'Subscription failed' });
+    console.error('Subscription error:', err);
+    res.status(500).json({ error: err.message || 'Subscription failed' });
   }
 }
 

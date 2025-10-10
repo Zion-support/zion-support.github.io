@@ -1,5 +1,6 @@
 import '../styles/globals.css';
 
+<<<<<<< HEAD
 export default function App({ Component, pageProps }: AppProps) {
   return(<>
       <Head>
@@ -12,5 +13,10 @@ export default function App({ Component, pageProps }: AppProps) {
       </Head>)
       <Component {...pageProps} />)
     </>)
+=======
+export default function App({ Component, pageProps }: AppProps) {/* TODO: Fix JSX expression */}
+      <Component {...pageProps} /></Component>
+    </>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   );
 }

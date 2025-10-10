@@ -2,6 +2,7 @@ import fs from 'fs';
 import { fileURLToPath } from 'url';
 
 
+<<<<<<< HEAD
 function processFile(filePath) {
   try {
     // Determine correct relative paths based on file location;
@@ -22,10 +23,17 @@ function processFile(filePath) {
     } else {
       utilsPath = './utils/';
       typesPath = './types/';
+=======
+function processFile(filePath) {/* TODO: Fix JSX expression */}
+    } else if (isInComponents) {/* TODO: Fix JSX expression */}
+    } else if (isInApp) {/* TODO: Fix JSX expression */}
+    } else {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
 
     // Fix import paths;
     const replacements = [
+<<<<<<< HEAD
       {
         pattern: /import\s+Link\s+from\s+'\.\/utils\/link';/g;
         replacement: `import Link from '${utilsPath}link';`,
@@ -37,58 +45,71 @@ function processFile(filePath) {
       {
         pattern: /import\s+dynamic\s+from\s+'\.\/utils\/dynamic';/g;
         replacement: `import dynamic from '${utilsPath}dynamic';`,
+=======
+      {/* TODO: Fix JSX expression */}
+  t: `import Link from '${utilsPath}link';`,
       },
-      {
-        pattern: /import\s+{\s*useRouter\s*}\s+from\s+'\.\/utils\/navigation';/g,
-        replacement: `import { useRouter } from '${utilsPath}navigation';`,
+      {/* TODO: Fix JSX expression */}`
+  t: `import Image from '${utilsPath}image';`,
       },
-      {
-        pattern: /import\s+{\s*usePathname\s*}\s+from\s+'\.\/utils\/navigation';/g,
-        replacement: `import { usePathname } from '${utilsPath}navigation';`,
+      {/* TODO: Fix JSX expression */}`
+  t: `import dynamic from '${utilsPath}dynamic';`,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       },
-      {
-        pattern: /import\s+{\s*useSearchParams\s*}\s+from\s+'\.\/utils\/navigation';/g,
-        replacement: `import { useSearchParams } from '${utilsPath}navigation';`,
+      {/* TODO: Fix JSX expression */}
+  n: /import\s+{\s*useRouter\s*}\s+from\s+'\.\/utils\/navigation';/g,
+        replacemen,`
+  t: `import { useRouter } from '${utilsPath}navigation';`,
       },
-      {
-        pattern: /import\s+{\s*Metadata\s*}\s+from\s+'\.\/types\/next';/g,
-        replacement: `import { Metadata } from '${typesPath}next';`,
+      {/* TODO: Fix JSX expression */}
+  n: /import\s+{\s*usePathname\s*}\s+from\s+'\.\/utils\/navigation';/g,
+        replacemen,`
+  t: `import { usePathname } from '${utilsPath}navigation';`,
       },
-      {
-        pattern: /import\s+{\s*MetadataRoute\s*}\s+from\s+'\.\/types\/next';/g,
-        replacement: `import { MetadataRoute } from '${typesPath}next';`,
+      {/* TODO: Fix JSX expression */}
+  n: /import\s+{\s*useSearchParams\s*}\s+from\s+'\.\/utils\/navigation';/g,
+        replacemen,`
+  t: `import { useSearchParams } from '${utilsPath}navigation';`,
       },
-      {
-        pattern: /import\s+type\s+{\s*Metadata\s*}\s+from\s+'\.\/types\/next';/g,
-        replacement: `import type { Metadata } from '${typesPath}next';`,
+      {/* TODO: Fix JSX expression */}
+  n: /import\s+{\s*Metadata\s*}\s+from\s+'\.\/types\/next';/g,
+        replacemen,`
+  t: `import { Metadata } from '${typesPath}next';`,
+      },
+      {/* TODO: Fix JSX expression */}
+  n: /import\s+{\s*MetadataRoute\s*}\s+from\s+'\.\/types\/next';/g,
+        replacemen,`
+  t: `import { MetadataRoute } from '${typesPath}next';`,
+      },
+      {/* TODO: Fix JSX expression */}
+  n: /import\s+type\s+{\s*Metadata\s*}\s+from\s+'\.\/types\/next';/g,
+        replacemen,`
+  t: `import type { Metadata } from '${typesPath}next';`,
       },
     ];
 
-    replacements.forEach(({ pattern, replacement }) => {
-      if (pattern.test(content)) {
-        content = content.replace(pattern, replacement);
-        modified = true;
+    replacements.forEach(({ pattern, replacement }) => {/* TODO: Fix JSX expression */}
       }
     });
 
     // Fix MetadataRoute namespace issue;
+<<<<<<< HEAD
     if (content.includes('MetadataRoute.')) {
       content = content.replace(/MetadataRoute\./g, 'MetadataRoute.');
       modified = true;
+=======
+    if (content.includes('MetadataRoute.')) {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
 
-    if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
-
-      return true;
+    if (modified) {/* TODO: Fix JSX expression */}
     }
     return false;
-  } catch (error) {
-
-    return false;
+  } catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 
+<<<<<<< HEAD
 function processDirectory(dirPath) {
 
   items.forEach(item => {)
@@ -98,6 +119,10 @@ function processDirectory(dirPath) {
     } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
       if (processFile(fullPath)) {
         totalFixed++;
+=======
+function processDirectory(dirPath) {/* TODO: Fix JSX expression */}
+    } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
     }
   });
@@ -105,4 +130,8 @@ function processDirectory(dirPath) {
   return totalFixed;
 }
 
+<<<<<<< HEAD
 // Process the app directory;
+=======
+// Process the app directory;`
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

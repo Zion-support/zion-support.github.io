@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 exports.handler = async (event, context) => {
   return {
     statusCode: 200;
@@ -6,6 +7,9 @@ exports.handler = async (event, context) => {
       timestamp: new Date().toISOString(),
       uptime: process.uptime(),
       version: process.version;
+=======
+exports.handler = async (event, context) => {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     })
   };
 };

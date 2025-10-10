@@ -1,5 +1,6 @@
 
 // Performance monitoring script;
+<<<<<<< HEAD
 (function() {
   'use strict';
   
@@ -16,26 +17,39 @@
       new PerformanceObserver((list) => {
         const _entries = list.getEntries();
         entries.forEach((entry) => {
+=======
+(function() {/* TODO: Fix JSX expression */}
+}
+    if ('PerformanceObserver' in window) {/* TODO: Fix JSX expression */}
+//         }).observe({/* TODO: Fix JSX expression */})
+  s: ['largest-contentful-paint'] });
+      
+      // FID;
+      new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 //           });
-      }).observe({ entryTypes: ['first-input'] });
+      }).observe({/* TODO: Fix JSX expression */})
+  s: ['first-input'] });
       
       // CLS;
       let _clsValue = 0;
-      new PerformanceObserver((list) => {
-        const _entries = list.getEntries();
-        entries.forEach((entry) => {
-          if (!entry.hadRecentInput) {
-            clsValue += entry.value;
+      new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
           }
         });
-//         }).observe({ entryTypes: ['layout-shift'] });
+//         }).observe({/* TODO: Fix JSX expression */})
+  s: ['layout-shift'] });
     }
   }
   
   // Start monitoring when DOM is ready;
+<<<<<<< HEAD
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', observeWebVitals);
   } else {
     observeWebVitals();
+=======
+  if (document.readyState === 'loading') {/* TODO: Fix JSX expression */}
+  } else {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 })();

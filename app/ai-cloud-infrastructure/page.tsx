@@ -3,6 +3,7 @@ import React, { useState, useCallback, memo } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Cloud, Server, Database, Shield, CheckCircle, Phone, Mail } from 'lucide-react';
 
+<<<<<<< HEAD
 const AICloudInfrastructurePage: React.FC = memo(() => {,
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -397,3 +398,5 @@ const AICloudInfrastructurePage: React.FC = memo(() => {,
 AICloudInfrastructurePage.displayName = 'AICloudInfrastructurePage';
 ,
 export default AICloudInfrastructurePage;
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

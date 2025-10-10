@@ -1,15 +1,14 @@
-import { Helmet } from "react-helmet-async";
-impo, r, t { Trending, U, p } fr, o, m "luci, d, e-rea, c, t";
-import, Header, from "../../componen, t, s/Head, e, r";
+import { Helmet } from "react-helmet-async";"
+impo, r, t { Trending, U, p } fr, o, m "luci, d, e-rea, c, t";"
+import, Header, from "../../componen, t, s/Head, e, r";"
 import, Footer, from "../../componen, t, s/Foot, e, r";
-impo, r, t {
-Helm, e, t;
+impo, r, t {/* TODO: Fix JSX expression */}"
 } fr, o, m "rea, c, t-helm, e, t-asy, n, c";';
-impo, r, t {
-Trending, U, p;
-} fr, o, m "luci, d, e-rea, c, t";';
-import, Header, from "../../componen, t, s/Head, e, r";';
+impo, r, t {/* TODO: Fix JSX expression */}"
+} fr, o, m "luci, d, e-rea, c, t";';"
+import, Header, from "../../componen, t, s/Head, e, r";';"
 import, Footer, from "../../componen, t, s/Foot, e, r";';
+<<<<<<< HEAD
 const, AIEmailMarketin, g: Rea, c, t.FC = () => {
   const, feature, s = [
     {
@@ -255,68 +254,104 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {
       ic, o, n: Bra, i, n;
       descripti, o, n: "Student, engagemen, t, course, update, s, enrollment, campaign, s, and, alumni, communication.",";
       benefi, t, s: ["55% enrollment, increas, e", "60% course, completio, n", "80% student, satisfactio, n"]";
+=======
+const, AIEmailMarketin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
+    }
+    {/* TODO: Fix JSX expression */}
+    }
+    {/* TODO: Fix JSX expression */}
+    }
+    {/* TODO: Fix JSX expression */}
+    }
+    {/* TODO: Fix JSX expression */}
+    }
+    {/* TODO: Fix JSX expression */}
+    }
+  ];
+  const, pricin, g = [
+    {/* TODO: Fix JSX expression */}
+    }
+    {/* TODO: Fix JSX expression */}
+    }
+    {/* TODO: Fix JSX expression */}
+    }
+    {/* TODO: Fix JSX expression */}
+    }
+    {/* TODO: Fix JSX expression */}
+    }
+  ];
+  const, testimonial, s = [
+    {/* TODO: Fix JSX expression */}
+    }
+    {/* TODO: Fix JSX expression */}
+    }
+    {/* TODO: Fix JSX expression */}
+    }
+  ];
+  const, useCase, s = [
+    {/* TODO: Fix JSX expression */}
+    }
+    {/* TODO: Fix JSX expression */}
+    }
+    {/* TODO: Fix JSX expression */}
+    }
+    {/* TODO: Fix JSX expression */}
+    }
+    {/* TODO: Fix JSX expression */}
+    }
+    {/* TODO: Fix JSX expression */}
+    }
+    {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   ];
   const, capabilitie, s = [
-    {
-      tit, l, e: "Content, Personalizatio, n","
-      descripti, o, n: "AI, generates, unique email, content, for each, recipient, based on, their, behavior, preferenc, e, s, and, engagement, history."
+    {/* TODO: Fix JSX expression */}
     }
-    {
-      tit, l, e: "Behavioral, Trigger, s","
-      descripti, o, n: "Automated, campaigns, triggered by, customer, actions like, website, visits, product, view, s, or, purchase, history."
+    {/* TODO: Fix JSX expression */}
     }
-    {
-      tit, l, e: "Predictive, Segmentatio, n","
-      descripti, o, n: "Machine, learning, algorithms identify, hig, h-value, segments, and predict, customer, lifetime val, u, e."
+    {/* TODO: Fix JSX expression */}
     }
-    {
-      tit, l, e: "Subject, Line, Optimization","
-      descripti, o, n: "AI, tests, and optimizes, subject, lines for, maximum, open rates, using, natural language, processin, g."
+    {/* TODO: Fix JSX expression */}
     }
-    {
-      tit, l, e: "Send, Time, Optimization","
-      descripti, o, n: "Advanced, algorithms, determine the, optimal, send time, for, each individual, recipien, t."
+    {/* TODO: Fix JSX expression */}
     }
-    {
-      tit, l, e: "Performance, Predictio, n","
-      tit, l, e: "Content, Personalizatio, n",";
-      descripti, o, n: "AI, generates, unique email, content, for each, recipient, based on, their, behavior, preferenc, e, s, and, engagement, history."
+    {/* TODO: Fix JSX expression */}
     }
-    {
-      tit, l, e: "Behavioral, Trigger, s",";
-      descripti, o, n: "Automated, campaigns, triggered by, customer, actions like, website, visits, product, view, s, or, purchase, history."
+    {/* TODO: Fix JSX expression */}
     }
-    {
-      tit, l, e: "Predictive, Segmentatio, n",";
-      descripti, o, n: "Machine, learning, algorithms identify, hig, h-value, segments, and predict, customer, lifetime val, u, e."
+    {/* TODO: Fix JSX expression */}
     }
-    {
-      tit, l, e: "Subject, Line, Optimization",";
-      descripti, o, n: "AI, tests, and optimizes, subject, lines for, maximum, open rates, using, natural language, processin, g."
+    {/* TODO: Fix JSX expression */}
     }
-    {
-      tit, l, e: "Send, Time, Optimization",";
-      descripti, o, n: "Advanced, algorithms, determine the, optimal, send time, for, each individual, recipien, t."
+    {/* TODO: Fix JSX expression */}
     }
-    {
-      tit, l, e: "Performance, Predictio, n",";
-      descripti, o, n: "Predict, campaign, performance before, sending, and optimize, for, maximum R, O, I."
+    {/* TODO: Fix JSX expression */}
     }
   ];
+<<<<<<< HEAD
   return(<>
       <Helmet>
         <title>AI, Email, Marketing - Zion, Tech, Group | Intelligent, Email, Automation</title>
         <me, t, a;
   na, m, e="descripti, o, n"
           content="Transform, your, email marketing, with, AI-powered, personalizatio, n, automati, o, n, and, analytic, s. 3, 0, 0% increase, in, open rat, e, s, 85% improvement, in, CTR, and, 25, 0% ROI, improvemen, t." /><meta name="keywor, d, s" content="AI, email, marketing, email, automatio, n, personalized, email, s, email, analytic, s, marketing, automatio, n, email, campaign, s, AI, content, generation" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/ai-ema, i, l-marketi, n, g/>"
+=======
+  return (<>
+      <Helmet></Helmet>
+        <title>AI, Email, Marketing - Zion, Tech, Group | Intelligent, Email, Automation</title>
+        <me, t, a;"
+  na, m, e="descripti, o, n""
+          content="Transform, your, email marketing, with, AI-powered, personalizatio, n, automati, o, n, and, analytic, s. 3, 0, 0% increase, in, open rat, e, s, 85% improvement, in, CTR, and, 25, 0% ROI, improvemen, t." /><meta name="keywor, d, s" content="AI, email, marketing, email, automatio, n, personalized, email, s, email, analytic, s, marketing, automatio, n, email, campaign, s, AI, content, generation" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/ai-ema, i, l-marketi, n, g/>""
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           content="Transform, your, email marketing, with, AI-powered, personalizatio, n, automati, o, n, and, analytic, s. 3, 0, 0% increase, in, open rat, e, s, 85% improvement, in, CTR, and, 25, 0% ROI, improvemen, t."
-         />
-        <meta name="keywor, d, s" content="AI, email, marketing, email, automatio, n, personalized, email, s, email, analytic, s, marketing, automatio, n, email, campaign, s, AI, content, generation" />";
+         />"
+        <meta name="keywor, d, s" content="AI, email, marketing, email, automatio, n, personalized, email, s, email, analytic, s, marketing, automatio, n, email, campaign, s, AI, content, generation" />";"
         <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/servic, e, s/ai-ema, i, l-marketi, n, g" />";
       </Helmet>
-      <Head, e, r   />
+      <Head, e, r   /></Head>"
       <main, className="m, i, n-h-screen, b, g-whi, t, e">";
+<<<<<<< HEAD
         {/* Hero, Sectio, n */}
         <section, className="bg-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-gre, e, n-800, t, o-te, a, l-900, tex, t-white, p, y-20">
 <<<<<<< HEAD
@@ -361,25 +396,62 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
   hr, e, f="/conta, c, t"
                   classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, b, g-emera, l, d-600, hov, e;
+=======
+        {/* Hero, Sectio, n */}"
+        <section, className="bg-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-gre, e, n-800, t, o-te, a, l-900, tex, t-white, p, y-20"></section>"
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"
+  g:px-8">""
+            <div, className="te, x, t-cent, e, r"></div>"
+              <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">""
+                AI, Emai, l <span, className="bg-gradie, n, t-to-r, fro, m-emera, l, d-400, t, o-te, a, l-400, b, g-cl, i, p-text, tex, t-transpare, n, t">Marketi, n, g</sp, a, n>
+              </h1>"
+              <p, className="te, x, t-xl, m, d: te, x, t-2xl, tex, t-emera, l, d-100, ma, x-w-4xl, m, x-auto, m, b-8">"
+                Transform, your, email marketing, with, AI-powered, personalizatio, n, automati, o, n, and, analytic, s. 
+                3, 0, 0% increase, in, open rat, e, s, 85% improvement, in, CTR, and, 25, 0% ROI, improvemen, t.
+              </p>"
+              <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">""
+        <section, className="bg-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-gre, e, n-800, t, o-te, a, l-900, tex, t-white, p, y-20">";"
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";"
+            <div, className="te, x, t-cent, e, r">";"
+              <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">";"
+                AI, Emai, l <span, className="bg-gradie, n, t-to-r, fro, m-emera, l, d-400, t, o-te, a, l-400, b, g-cl, i, p-text, tex, t-transpare, n, t">Marketi, n, g</sp, a, n>";
+              </h1>"
+              <p, className="te, x, t-x, l, m,"
+  d: te, x, t-2xl, tex, t-emera, l, d-100, ma, x-w-4xl, m, x-auto, m, b-8">";
+                Transform, your, email marketing, with, AI-powered, personalizatio, n, automati, o, n, and, analytic, s. 
+                3, 0, 0% increase, in, open rat, e, s, 85% improvement, in, CTR, and, 25, 0% ROI, improvemen, t.
+              </p>"
+              <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
+                <a></a>"
+  hr, e, f="/conta, c, t""
+                  classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, b, g-emera, l, d-600, hov, e,"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   r: bg-emera, l, d-700, tex, t-white, fon, t-semibold, rounde, d-lg, transitio, n-colo, r, s"
-                >
-                  <Phone, className="w-5 h-5, m, r-2  />
+                >"
+                  <Phone, className="w-5 h-5, m, r-2  /></Phone>"
                   <Phone, className="w-5 h-5, m, r-2" />";
                   Schedule, Dem, o;
                 </a>
+<<<<<<< HEAD
                 <a;
   hr, e, f="#prici, n, g"
                   classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, borde, r-2, borde, r-white, tex, t-white, hove, r: bg-white, hov, e;
+=======
+                <a></a>"
+  hr, e, f="#prici, n, g""
+                  classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, borde, r-2, borde, r-white, tex, t-white, hove, r: bg-white, hov, e,"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   r:te, x, t-emera, l, d-900, fon, t-semibold, rounde, d-lg, transitio, n-colo, r, s"
                 >
-                  View, Pricin, g;
-                  <Link, className="w-5 h-5, m, l-2  />
+                  View, Pricin, g;"
+                  <Link, className="w-5 h-5, m, l-2  /></Link>"
                   <Link, className="w-5 h-5, m, l-2" />";
                 </a>
               </d, i, v>
             </d, i, v>
           </d, i, v>
         </secti, o, n>
+<<<<<<< HEAD
         {/* Key, Benefit, s */}
         <section, className="py-16, b, g-gr, a, y-50">
 <<<<<<< HEAD
@@ -401,12 +473,25 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {
   g:px-8">";</section>
             <div, className="text-center mb-12">";</div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
+=======
+        {/* Key, Benefit, s */}"
+        <section, className="py-16, b, g-gr, a, y-50"></section>"
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"
+  g:px-8">""
+            <div, className="text-center mb-12"></div>"
+              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>"
+        <section, className="py-16, b, g-gr, a, y-50">";"
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"
+  g:px-8">";"
+            <div, className="text-center mb-12">";"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";
                 Why, Choose, AI Email, Marketin, g?
-              </h2>
+              </h2>"
               <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Leverage, artificial, intelligence to, create, more effecti, v, e, personaliz, e, d, and, profitable, email campaig, n, s.
               </p>
+<<<<<<< HEAD
             </d, i, v>
             <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-8">"</div>
               <div, className="te, x, t-cent, e, r"></div>
@@ -415,44 +500,82 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {
             <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-8">";</div>
               <div, className="te, x, t-cent, e, r">";</div>
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-emera, l, d-100, rounde, d-full, m, b-4">";</div>
+=======
+            </d, i, v>"
+            <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-8">""
+              <div, className="te, x, t-cent, e, r"></div>"
+                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-emera, l, d-100, rounde, d-full, m, b-4"></div>"
+                  <Target, className="w-8 h-8, tex, t-emera, l, d-6, 0, 0  /></Target>"
+            <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-8">";"
+              <div, className="te, x, t-cent, e, r">";"
+                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-emera, l, d-100, rounde, d-full, m, b-4">";"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   <Target, className="w-8 h-8, tex, t-emera, l, d-6, 0, 0" />";
-                </d, i, v>
-                <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">3, 0, 0% Open, Rate, Boost</h3>";
+                </d, i, v>"
+                <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">3, 0, 0% Open, Rate, Boost</h3>";"
                 <p, className="te, x, t-gr, a, y-6, 0, 0">AI-optimized, content, and timi, n, g</p>";
+<<<<<<< HEAD
               </d, i, v>
               <div, className="te, x, t-cent, e, r"></div>
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-full, m, b-4"></div>
                   <BarChart3, className="w-8 h-8, tex, t-gre, e, n-6, 0, 0  />
               <div, className="te, x, t-cent, e, r">";</div>
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-full, m, b-4">";</div>
+=======
+              </d, i, v>"
+              <div, className="te, x, t-cent, e, r"></div>"
+                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-full, m, b-4"></div>"
+                  <BarChart3, className="w-8 h-8, tex, t-gre, e, n-6, 0, 0  /></BarChart3>"
+              <div, className="te, x, t-cent, e, r">";"
+                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-full, m, b-4">";"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   <BarChart3, className="w-8 h-8, tex, t-gre, e, n-6, 0, 0" />";
-                </d, i, v>
-                <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">2, 5, 0% ROI, Improvemen, t</h3>";
+                </d, i, v>"
+                <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">2, 5, 0% ROI, Improvemen, t</h3>";"
                 <p, className="te, x, t-gr, a, y-6, 0, 0">Predictive, analytics, and optimizati, o, n</p>";
+<<<<<<< HEAD
               </d, i, v>
               <div, className="te, x, t-cent, e, r"></div>
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-te, a, l-100, rounde, d-full, m, b-4"></div>
                   <Zap, className="w-8 h-8, tex, t-te, a, l-6, 0, 0  />
               <div, className="te, x, t-cent, e, r">";</div>
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-te, a, l-100, rounde, d-full, m, b-4">";</div>
+=======
+              </d, i, v>"
+              <div, className="te, x, t-cent, e, r"></div>"
+                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-te, a, l-100, rounde, d-full, m, b-4"></div>"
+                  <Zap, className="w-8 h-8, tex, t-te, a, l-6, 0, 0  /></Zap>"
+              <div, className="te, x, t-cent, e, r">";"
+                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-te, a, l-100, rounde, d-full, m, b-4">";"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   <Zap, className="w-8 h-8, tex, t-te, a, l-6, 0, 0" />";
-                </d, i, v>
-                <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">70% Less, Manual, Work</h3>";
+                </d, i, v>"
+                <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">70% Less, Manual, Work</h3>";"
                 <p, className="te, x, t-gr, a, y-6, 0, 0">Intelligent, automation, workflows</p>";
+<<<<<<< HEAD
               </d, i, v>
               <div, className="te, x, t-cent, e, r"></div>
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-bl, u, e-100, rounde, d-full, m, b-4"></div>
                   <Shield, className="w-8 h-8, tex, t-bl, u, e-6, 0, 0  />
               <div, className="te, x, t-cent, e, r">";</div>
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-bl, u, e-100, rounde, d-full, m, b-4">";</div>
+=======
+              </d, i, v>"
+              <div, className="te, x, t-cent, e, r"></div>"
+                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-bl, u, e-100, rounde, d-full, m, b-4"></div>"
+                  <Shield, className="w-8 h-8, tex, t-bl, u, e-6, 0, 0  /></Shield>"
+              <div, className="te, x, t-cent, e, r">";"
+                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-bl, u, e-100, rounde, d-full, m, b-4">";"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   <Shield, className="w-8 h-8, tex, t-bl, u, e-6, 0, 0" />";
-                </d, i, v>
-                <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">98% Deliverabili, t, y</h3>";
+                </d, i, v>"
+                <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">98% Deliverabili, t, y</h3>";"
                 <p, className="te, x, t-gr, a, y-6, 0, 0">Advanced, inbox, placement optimizati, o, n</p>";
               </d, i, v>
             </d, i, v>
           </d, i, v>
         </secti, o, n>
+<<<<<<< HEAD
         {/* Use, Case, s */}
         <section, className="py-20">
 <<<<<<< HEAD
@@ -472,12 +595,24 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";</section>
             <div, className="te, x, t-center, m, b-16">";</div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
+=======
+        {/* Use, Case, s */}"
+        <section, className="py-20"></section>"
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"
+  g:px-8">""
+            <div, className="te, x, t-center, m, b-16"></div>"
+              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>"
+        <section, className="py-20">";"
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";"
+            <div, className="te, x, t-center, m, b-16">";"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";
                 Industry, Application, s;
-              </h2>
+              </h2>"
               <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 AI, email, marketing solutions, tailored, for different, industries, and business, model, s.
               </p>
+<<<<<<< HEAD
             </d, i, v>
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;
   g:gr, i, d-co, l, s-4, ga, p-8">"
@@ -517,8 +652,33 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {
                           <span, className="te, x, t-gr, a, y-7, 0, 0">{benef, i, t}</sp, a, n>
                         <li, ke, y={benefitInd, e, x} classNa, m, e="flex, item, s-center, tex, t-sm">";
                           <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0" />";
+=======
+            </d, i, v>"
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l,"
+  g:gr, i, d-co, l, s-4, ga, p-8">"
+              {/* TODO: Fix JSX expression */}"
+                  <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">""
+                    <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-emera, l, d-100, rounde, d-full, m, b-6"></div>"
+                      <Icon, className="w-8 h-8, tex, t-emera, l, d-6, 0, 0  /></Icon>"
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l,"
+  g:gr, i, d-co, l, s-4, ga, p-8">";
+              {/* TODO: Fix JSX expression */}"
+                  <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";"
+                    <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-emera, l, d-100, rounde, d-full, m, b-6">";"
+                      <Icon, className="w-8 h-8, tex, t-emera, l, d-6, 0, 0" />";
+                    </d, i, v>"
+                    <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">{useCa, s, e.tit, l, e}</h3>";"
+                    <p, className="te, x, t-gr, a, y-600, m, b-6">{useCa, s, e.descripti, o, n}</p>";"
+                    <ul, className="spa, c, e-y-2">";
+                      {/* TODO: Fix JSX expression */}"
+                        <li, ke, y={benefitInd, e, x} classNa, m, e="flex, item, s-center, tex, t-sm"></li>"
+                          <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0  /></CheckCircle>"
+                          <span, className="te, x, t-gr, a, y-7, 0, 0">{benef, i, t}</sp, a, n>"
+                        <li, ke, y={benefitInd, e, x} classNa, m, e="flex, item, s-center, tex, t-sm">";"
+                          <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0" />";"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                           <span, className="te, x, t-gr, a, y-7, 0, 0">{benef, i, t}</sp, a, n>";
-                        </li>
+                        </li>)
                       ))}
                     </ul>
                   </d, i, v>
@@ -527,6 +687,7 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {
             </d, i, v>
           </d, i, v>
         </secti, o, n>
+<<<<<<< HEAD
         {/* Capabiliti, e, s */}
         <section, className="py-20, b, g-gr, a, y-50">
 <<<<<<< HEAD
@@ -546,12 +707,24 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";</section>
             <div, className="te, x, t-center, m, b-16">";</div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
+=======
+        {/* Capabiliti, e, s */}"
+        <section, className="py-20, b, g-gr, a, y-50"></section>"
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"
+  g:px-8">""
+            <div, className="te, x, t-center, m, b-16"></div>"
+              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>"
+        <section, className="py-20, b, g-gr, a, y-50">";"
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";"
+            <div, className="te, x, t-center, m, b-16">";"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";
                 AI-Powered, Capabilitie, s;
-              </h2>
+              </h2>"
               <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Advanced, artificial, intelligence features, that, make your, email, marketing more, effectiv, e.
               </p>
+<<<<<<< HEAD
             </d, i, v>
 <<<<<<< HEAD
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;
@@ -566,12 +739,23 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {
               {capabiliti, e, s.m, a, p((capabili, t, y, ind, e, x) => (</div>
                 <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">";</div>
                   <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">{capabili, t, y.tit, l, e}</h3>";
+=======
+            </d, i, v>"
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l,"
+  g:gr, i, d-co, l, s-3, ga, p-8">""
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l,"
+  g:gr, i, d-co, l, s-3, ga, p-8">";
+              {/* TODO: Fix JSX expression */}"
+                <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">";"
+                  <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">{capabili, t, y.tit, l, e}</h3>";"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   <p, className="te, x, t-gr, a, y-6, 0, 0">{capabili, t, y.descripti, o, n}</p>";
                 </d, i, v>
               ))}
             </d, i, v>
           </d, i, v>
         </secti, o, n>
+<<<<<<< HEAD
         {/* Featur, e, s */}
         <section, className="py-20">
 <<<<<<< HEAD
@@ -593,12 +777,25 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {
   g:px-8">";</section>
             <div, className="te, x, t-center, m, b-16">";</div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
+=======
+        {/* Featur, e, s */}"
+        <section, className="py-20"></section>"
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"
+  g:px-8">""
+            <div, className="te, x, t-center, m, b-16"></div>"
+              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>"
+        <section, className="py-20">";"
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"
+  g:px-8">";"
+            <div, className="te, x, t-center, m, b-16">";"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";
                 Comprehensive, Email, Marketing Featur, e, s;
-              </h2>
+              </h2>"
               <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Everything, you, need to, creat, e, se, n, d, and, optimize, high-performing, email, campaigns.
               </p>
+<<<<<<< HEAD
             </d, i, v>
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;
   g:gr, i, d-co, l, s-3, ga, p-8">"
@@ -641,6 +838,30 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{featu, r, e.tit, l, e}</h3>";
                     <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}</p>";
                     <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">";</div>
+=======
+            </d, i, v>"
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l,"
+  g:gr, i, d-co, l, s-3, ga, p-8">"
+              {/* TODO: Fix JSX expression */}"
+                  <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">""
+                    <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-emera, l, d-100, rounde, d-lg, m, b-4"></div>"
+                      <Icon, className="w-6 h-6, tex, t-emera, l, d-6, 0, 0  /></Icon>
+                    </d, i, v>"
+                    <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{featu, r, e.tit, l, e}</h3>"
+                    <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}</p>"
+                    <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm"></div>"
+                      <CheckCircle, className="w-4 h-4, m, r-1  /></CheckCircle>"
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l,"
+  g:gr, i, d-co, l, s-3, ga, p-8">";
+              {/* TODO: Fix JSX expression */}"
+                  <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";"
+                    <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-emera, l, d-100, rounde, d-lg, m, b-4">";"
+                      <Icon, className="w-6 h-6, tex, t-emera, l, d-6, 0, 0" />";
+                    </d, i, v>"
+                    <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{featu, r, e.tit, l, e}</h3>";"
+                    <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}</p>";"
+                    <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">";"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                       <CheckCircle, className="w-4 h-4, m, r-1" />";
                       {featu, r, e.benef, i, t})
                     </d, i, v>)
@@ -650,6 +871,7 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {
             </d, i, v>
           </d, i, v>
         </secti, o, n>
+<<<<<<< HEAD
         {/* Prici, n, g */}
         <section, i, d="prici, n, g" classNa, m, e="py-20, b, g-gr, a, y-50">
 <<<<<<< HEAD
@@ -669,12 +891,24 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";</section>
             <div, className="te, x, t-center, m, b-16">";</div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
+=======
+        {/* Prici, n, g */}"
+        <section, i, d="prici, n, g" classNa, m, e="py-20, b, g-gr, a, y-50"></section>"
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"
+  g:px-8">""
+            <div, className="te, x, t-center, m, b-16"></div>"
+              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>"
+        <section, i, d="prici, n, g" classNa, m, e="py-20, b, g-gr, a, y-50">";"
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";"
+            <div, className="te, x, t-center, m, b-16">";"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";
                 Affordable, Pricing, for Every, Busines, s;
-              </h2>
+              </h2>"
               <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Choose, the, plan that, fits, your email, marketing, needs and, subscriber, count.
               </p>
+<<<<<<< HEAD
             </d, i, v>
 <<<<<<< HEAD
             <div, className="gri, d, m;
@@ -697,21 +931,36 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {
                     <h3, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">{pl, a, n.na, m, e}</h3>";
                     <div, className="flex, item, s-center, justif, y-center, m, b-2">";</div>
                       <span, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-9, 0, 0">{pl, a, n.pri, c, e}</sp, a, n>";
+=======
+            </d, i, v>"
+            <div, className="gri, d, m,"
+  d: gr, i, d-co, l, s-3, ga, p-8">""
+            <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8">";
+              {/* TODO: Fix JSX expression */}
+                <div, ke, y={ind, e, x} classNa, m, e={`bg-white, rounde, d-2xl, shado, w-l, g, p-8 ${pl, a, n.popul, a, r ? 'ri, n, g-2, rin, g-emera, l, d-500, relativ, e' : ''}`}>`;`
+                  {/* TODO: Fix JSX expression */}
+                  )}"
+                  <div, className="te, x, t-center, m, b-8">";"
+                    <h3, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">{pl, a, n.na, m, e}</h3>";"
+                    <div, className="flex, item, s-center, justif, y-center, m, b-2">";"
+                      <span, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-9, 0, 0">{pl, a, n.pri, c, e}</sp, a, n>";"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                       <span, className="te, x, t-gr, a, y-600, m, l-1">/{pl, a, n.peri, o, d}</sp, a, n>";
-                    </d, i, v>
+                    </d, i, v>"
                     <p, className="te, x, t-gr, a, y-6, 0, 0">{pl, a, n.descripti, o, n}</p>";
-                  </d, i, v>
+                  </d, i, v>"
                   <ul, className="spa, c, e-y-4, m, b-8">";
-                    {pl, a, n.featur, e, s.m, a, p((featu, r, e, featureInd, e, x) => (
-                      <li, ke, y={featureInd, e, x} classNa, m, e="flex, item, s-cent, e, r">
-                        <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3, fle, x-shri, n, k-0  />
-                        <span, className="te, x, t-gr, a, y-7, 0, 0">{featu, r, e}</sp, a, n>
-                      <li, ke, y={featureInd, e, x} classNa, m, e="flex, item, s-cent, e, r">";
-                        <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3, fle, x-shri, n, k-0" />";
+                    {/* TODO: Fix JSX expression */}"
+                      <li, ke, y={featureInd, e, x} classNa, m, e="flex, item, s-cent, e, r"></li>"
+                        <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3, fle, x-shri, n, k-0  /></CheckCircle>"
+                        <span, className="te, x, t-gr, a, y-7, 0, 0">{featu, r, e}</sp, a, n>"
+                      <li, ke, y={featureInd, e, x} classNa, m, e="flex, item, s-cent, e, r">";"
+                        <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3, fle, x-shri, n, k-0" />";"
                         <span, className="te, x, t-gr, a, y-7, 0, 0">{featu, r, e}</sp, a, n>";
                       </li>
                     ))}
                   </ul>
+<<<<<<< HEAD
                   <a;
   hr, e, f="/conta, c, t"
                     classNa, m, e={
@@ -721,26 +970,40 @@ pl, a, n.popul, a, r;
 ? 'bg-emera, l, d-600, tex, t-white, hov, e;
   r: bg-emera, l, d-7, 0, 0',';}
 : 'bg-gr, a, y-100, tex, t-gr, a, y-900, hove, r:bg-gr, a, y-2, 0, 0'}
+=======
+                  <a></a>"
+  hr, e, f="/conta, c, t"
+                    classNa, m, e={/* TODO: Fix JSX expression */}`
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }`}`;`
                   >
                     Get, Starte, d;
                   </a>
                 </d, i, v>
               ))}
+<<<<<<< HEAD
             </d, i, v>
             <div, className="te, x, t-center, m, t-12">";</div>
               <p, className="te, x, t-gr, a, y-600, m, b-4">Need, a, custom email, marketing, solution?</p>";
               <a;
   hr, e, f="/conta, c, t"
+=======
+            </d, i, v>"
+            <div, className="te, x, t-center, m, t-12">";"
+              <p, className="te, x, t-gr, a, y-600, m, b-4">Need, a, custom email, marketing, solution?</p>";
+              <a></a>"
+  hr, e, f="/conta, c, t""
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 classNa, m, e="inli, n, e-flex, item, s-center, tex, t-emera, l, d-600, hove, r: te, x, t-emera, l, d-700, fon, t-semibo, l, d"
               >
-                Contact, our, Marketing Te, a, m;
-                <Link, className="w-4 h-4, m, l-1  />
+                Contact, our, Marketing Te, a, m;"
+                <Link, className="w-4 h-4, m, l-1  /></Link>"
                 <Link, className="w-4 h-4, m, l-1" />";
               </a>
             </d, i, v>
           </d, i, v>
         </secti, o, n>
+<<<<<<< HEAD
         {/* Testimonia, l, s */}
         <section, className="py-20">
 <<<<<<< HEAD
@@ -760,12 +1023,24 @@ pl, a, n.popul, a, r;
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";</section>
             <div, className="te, x, t-center, m, b-16">";</div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
+=======
+        {/* Testimonia, l, s */}"
+        <section, className="py-20"></section>"
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"
+  g:px-8">""
+            <div, className="te, x, t-center, m, b-16"></div>"
+              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>"
+        <section, className="py-20">";"
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";"
+            <div, className="te, x, t-center, m, b-16">";"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";
                 What, Our, Clients S, a, y;
-              </h2>
+              </h2>"
               <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Join, hundreds, of companies, already, using our, AI, email marketing, to, boost their, campaign, s.
               </p>
+<<<<<<< HEAD
             </d, i, v>
 <<<<<<< HEAD
             <div, className="gri, d, m;
@@ -780,15 +1055,26 @@ pl, a, n.popul, a, r;
                   <div, className="flex, item, s-center, m, b-4">";
                     {[...Arr, a, y(testimoni, a, l.rati, n, g)].m, a, p((_, i) => (</div>
                       <Star, ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t  />
+=======
+            </d, i, v>"
+            <div, className="gri, d, m,"
+  d: gr, i, d-co, l, s-3, ga, p-8">""
+            <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8">";
+              {/* TODO: Fix JSX expression */}"
+                <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">";"
+                  <div, className="flex, item, s-center, m, b-4">";
+                    {/* TODO: Fix JSX expression */}"
+                      <Star, ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t  /></Star>"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                       <Star, ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t" />";
                     ))}
-                  </d, i, v>
-                  <blockquote, className="te, x, t-gr, a, y-700, m, b-6, itali, c">";
+                  </d, i, v>"
+                  <blockquote, className="te, x, t-gr, a, y-700, m, b-6, itali, c">";"
                     "{testimoni, a, l.conte, n, t}"
                   </blockquo, t, e>
-                  <d, i, v>
-                    <div, className="fo, n, t-semibold, tex, t-gr, a, y-9, 0, 0">{testimoni, a, l.na, m, e}</d, i, v>";
-                    <div, className="te, x, t-gr, a, y-600, tex, t-sm">{testimoni, a, l.ro, l, e}</d, i, v>";
+                  <d, i, v></d>"
+                    <div, className="fo, n, t-semibold, tex, t-gr, a, y-9, 0, 0">{testimoni, a, l.na, m, e}</d, i, v>";"
+                    <div, className="te, x, t-gr, a, y-600, tex, t-sm">{testimoni, a, l.ro, l, e}</d, i, v>";"
                     <div, className="te, x, t-emera, l, d-600, tex, t-sm, fon, t-medi, u, m">{testimoni, a, l.compa, n, y}</d, i, v>";
                   </d, i, v>
                 </d, i, v>
@@ -796,6 +1082,7 @@ pl, a, n.popul, a, r;
             </d, i, v>
           </d, i, v>
         </secti, o, n>
+<<<<<<< HEAD
         {/* CTA, Sectio, n */}
         <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-gre, e, n-800, t, o-te, a, l-900, tex, t-whi, t, e">
 <<<<<<< HEAD
@@ -809,11 +1096,21 @@ pl, a, n.popul, a, r;
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
         <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-gre, e, n-800, t, o-te, a, l-900, tex, t-whi, t, e">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, tex, t-cent, e, r">";</section>
+=======
+        {/* CTA, Sectio, n */}"
+        <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-gre, e, n-800, t, o-te, a, l-900, tex, t-whi, t, e"></section>"
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"
+  g:px-8, tex, t-cent, e, r">""
+            <h2, className="te, x, t-4xl, fon, t-bold, m, b-6"></h2>"
+        <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-gre, e, n-800, t, o-te, a, l-900, tex, t-whi, t, e">";"
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, tex, t-cent, e, r">";"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
             <h2, className="te, x, t-4xl, fon, t-bold, m, b-6">";
               Ready, to, Transform Your, Email, Marketing?
-            </h2>
+            </h2>"
             <p, className="te, x, t-xl, tex, t-emera, l, d-100, ma, x-w-3xl, m, x-auto, m, b-8">";
               Start, using, AI-powered, email, marketing to, achieve, 300% higher, open, rates and, 25, 0% better, RO, I.
+<<<<<<< HEAD
             </p>
 <<<<<<< HEAD
             <div, className="flex, fle, x-co, l, s;
@@ -828,28 +1125,43 @@ pl, a, n.popul, a, r;
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
   hr, e, f="/conta, c, t"
                 classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, b, g-emera, l, d-600, hov, e;
+=======
+            </p>"
+            <div, className="flex, fle, x-co, l, s,"
+  m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">""
+            <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
+              <a></a>"
+  hr, e, f="/conta, c, t""
+                classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, b, g-emera, l, d-600, hov, e,"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   r: bg-emera, l, d-700, tex, t-white, fon, t-semibold, rounde, d-lg, transitio, n-colo, r, s"
-              >
-                <Phone, className="w-5 h-5, m, r-2  />
+              >"
+                <Phone, className="w-5 h-5, m, r-2  /></Phone>"
                 <Phone, className="w-5 h-5, m, r-2" />";
                 Schedule, Dem, o;
               </a>
+<<<<<<< HEAD
               <a;
   hr, e, f="/ca, s, e-studi, e, s"
                 classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, borde, r-2, borde, r-white, tex, t-white, hove, r: bg-white, hov, e;
+=======
+              <a></a>"
+  hr, e, f="/ca, s, e-studi, e, s""
+                classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, borde, r-2, borde, r-white, tex, t-white, hove, r: bg-white, hov, e,"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   r:te, x, t-emera, l, d-900, fon, t-semibold, rounde, d-lg, transitio, n-colo, r, s"
               >
-                View, Success, Stories;
-                <Link, className="w-5 h-5, m, l-2  />
+                View, Success, Stories;"
+                <Link, className="w-5 h-5, m, l-2  /></Link>"
                 <Link, className="w-5 h-5, m, l-2" />";
               </a>
             </d, i, v>
           </d, i, v>
         </secti, o, n>
       </ma, i, n>
-      <Foot, e, r   />
+      <Foot, e, r   /></Foot>
     < />
   );
 };
 export default AIEmailMarketing;
-}}}}
+}}}}"`

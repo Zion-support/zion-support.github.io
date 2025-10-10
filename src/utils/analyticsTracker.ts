@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 /**
  * Enhanced Analytics Tracker
@@ -55,10 +56,102 @@ class AnalyticsTracker {
     };
     if (this.isInitialized) {
     } else {
+=======
+
+'use client'
+/**
+ * Enhanced Analytics Tracker;
+ * Provides comprehensive tracking for user interactions, performance metrics, and errors;
+ */
+
+interface AnalyticsEvent {// TODO: Add content;}
+};
+  category: string;,
+    action: string
+  label?: string
+  value?: number
+  nonInteraction?: boolean
+}
+interface PerformanceMetrics {// TODO: Add content;}
+};
+  metric: string;,
+    value: number
+  rating?: 'good' | 'needs-improvement' | 'poor'
+}
+interface ErrorReport {// TODO: Add content;}
+
+};
+  messag,
+  e: string;
+  stack?: string;
+  componentStack?: string;,
+    severit,
+  y: 'low' | 'medium' | 'high' | 'critical'
+}
+
+class AnalyticsTracker {// TODO: Add content;}
+
+}
+  private isInitialized = false;
+  private,
+  queue: Array;
+          <() => void> = [];
+  /**
+   * Initialize the analytics tracker;
+   */
+
+  initialize(): void {// TODO: Add content;}
+
+}
+    if (typeof window === 'undefined') return;
+    this.isInitialized = true;
+    // Process queued events;
+    this.queue.forEach(fn => fn());
+    this.queue = [];
+    // Track initial page view;
+    this.trackPageView(window.location.pathname);
+  }
+  /**
+   * Track a custom event;
+   */
+
+  trackEvent(event: AnalyticsEvent): void {// TODO: Add content;}
+
+}
+    if (typeof window === 'undefined') return;
+      if (window.gtag) {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
+        window.gtag('event', event.action, {/* TODO: Fix JSX expression */}
+  O: Add content;}
+};
+  event_categor,
+  y: event.category,
+          event_labe,
+  l: event.label,
+          valu,
+  e: event.value,
+          non_interactio,
+  n: event.nonInteraction;)
+        });
+      }
+      // Also log to console in development;
+      if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
+        }
+    }
+
+    if (this.isInitialized) {
+    } else {// TODO: Add content;}
+
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       this.queue.push(track);
     }
   }
   /**
+<<<<<<< HEAD
    * Track page views
    */
   trackPageView(path: string): void {
@@ -76,10 +169,49 @@ class AnalyticsTracker {
     };
     if (this.isInitialized) {
     } else {
+=======
+   * Track performance metrics;
+   */
+
+  trackPerformance(metrics: PerformanceMetrics): void {// TODO: Add content;}
+
+}
+    if (typeof window === 'undefined') return;
+    const track = () => {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
+      if (window.gtag) {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
+        window.gtag('event', 'performance', {/* TODO: Fix JSX expression */}
+  O: Add content;}
+};
+  event_categor,
+  y: 'Web Vitals',
+          event_labe,
+  l: metrics.metric,
+          valu,)
+  e: Math.round(metrics.value),
+          metric_ratin,
+  g: metrics.rating;
+        });
+      }
+      if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
+        }
+    }
+
+    if (this.isInitialized) {
+    } else {// TODO: Add content;}
+
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       this.queue.push(track);
     }
   }
   /**
+<<<<<<< HEAD
    * Track performance metrics
    */
   trackPerformance(metrics: PerformanceMetrics): void {
@@ -162,10 +294,49 @@ $4});
     };
     if (this.isInitialized) {
     } else {
+=======
+   * Track user timing;
+   */
+
+  trackTiming(category: string, variable: string, value: number, label?: string): void {// TODO: Add content;}
+
+}
+    if (typeof window === 'undefined') return;
+    const track = () => {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
+      if (window.gtag) {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
+        window.gtag('event', 'timing_complete', {/* TODO: Fix JSX expression */}
+  O: Add content;}
+};
+  nam,
+  e: variable,
+          valu,)
+  e: Math.round(value),
+          event_categor,
+  y: category,
+          event_labe,
+  l: label;
+        });
+      }
+      if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
+        }
+    }
+
+    if (this.isInitialized) {
+    } else {// TODO: Add content;}
+
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       this.queue.push(track);
     }
   }
 }
+<<<<<<< HEAD
 // Export singleton instance
 export const analyticsTracker = new AnalyticsTracker();
 // Auto-initialize when window is available
@@ -174,8 +345,32 @@ if (typeof window !== 'undefined') {
     analyticsTracker.initialize();
   } else {
     window.addEventListener('load', () => {
+=======
+// Export singleton instance;
+export const analyticsTracker = new AnalyticsTracker();
+// Auto-initialize when window is available;
+if (typeof window !== 'undefined') {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
+  if (document.readyState === 'complete') {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
+    analyticsTracker.initialize();
+  } else {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
+    window.addEventListener('load', () => {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       analyticsTracker.initialize();
     });
   }
 }
+<<<<<<< HEAD
 export default analyticsTracker;
+=======
+
+export default analyticsTracker;
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

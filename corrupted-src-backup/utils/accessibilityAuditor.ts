@@ -5,16 +5,13 @@
 /**
  * Interface for accessibility issues;
  */
-interface AccessibilityIssue {
-  severity: 'critical' | 'serious' | 'moderate' | 'minor';
-  element: string;
-  issue: string;
-  recommendation: string;
+interface AccessibilityIssue {/* TODO: Fix JSX expression */}
 }
 
 /**
  * Accessibility auditor class;
  */
+<<<<<<< HEAD
 export class AccessibilityAuditor {
   private issues: AccessibilityIssue[] = [];
 
@@ -43,12 +40,21 @@ export class AccessibilityAuditor {
         this.addIssue('critical')
           `img[${index}]`)
           'Missing alt attribute')
+=======
+export class AccessibilityAuditor {/* TODO: Fix JSX expression */}
+  }
+
+  private checkImages(): void {/* TODO: Fix JSX expression */}
+          `img[${index}]`,
+          'Missing alt attribute',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           'Add descriptive alt text for all images'
         );
       }
     });
   }
 
+<<<<<<< HEAD
   private checkHeadings(): void {
     const _headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
     let _previousLevel = 0;
@@ -60,6 +66,11 @@ export class AccessibilityAuditor {
         this.addIssue('serious')
           `heading[${index}]`)
           'Heading level skipped')
+=======
+  private checkHeadings(): void {/* TODO: Fix JSX expression */}`
+          `heading[${index}]`,
+          'Heading level skipped',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           'Use proper heading hierarchy'
         );
       }
@@ -68,6 +79,7 @@ export class AccessibilityAuditor {
     });
   }
 
+<<<<<<< HEAD
   private checkLinks(): void {
     const _links = document.querySelectorAll('a');
     links.forEach((link, index) => {
@@ -75,12 +87,18 @@ export class AccessibilityAuditor {
         this.addIssue('serious')
           `a[${index}]`)
           'Link without href')
+=======
+  private checkLinks(): void {/* TODO: Fix JSX expression */}`
+          `a[${index}]`,
+          'Link without href',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           'Add href attribute or role="button"'
         );
       }
     });
   }
 
+<<<<<<< HEAD
   private checkForms(): void {
     const _inputs = document.querySelectorAll('input, textarea, select');
     inputs.forEach((input, index) => {
@@ -88,12 +106,18 @@ export class AccessibilityAuditor {
         this.addIssue('serious')
           `input[${index}]`)
           'Form control without label')
+=======
+  private checkForms(): void {/* TODO: Fix JSX expression */}`
+          `input[${index}]`,
+          'Form control without label',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           'Add id and associated label or aria-label'
         );
       }
     });
   }
 
+<<<<<<< HEAD
   private checkButtons(): void {
     const _buttons = document.querySelectorAll('button');
     buttons.forEach((button, index) => {
@@ -101,12 +125,18 @@ export class AccessibilityAuditor {
         this.addIssue('serious')
           `button[${index}]`)
           'Button without accessible name')
+=======
+  private checkButtons(): void {/* TODO: Fix JSX expression */}`
+          `button[${index}]`,
+          'Button without accessible name',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           'Add text content or aria-label'
         );
       }
     });
   }
 
+<<<<<<< HEAD
   private checkColorContrast(): void {
     // This is a simplified check - in practice, you'd use a library like axe-core;
     this.addIssue('moderate')
@@ -124,12 +154,21 @@ export class AccessibilityAuditor {
         this.addIssue('moderate')
           `element[${index}]`)
           'Focusable element hidden from keyboard')
+=======
+  private checkColorContrast(): void {/* TODO: Fix JSX expression */}
+  }
+
+  private checkKeyboardNavigation(): void {/* TODO: Fix JSX expression */}`
+          `element[${index}]`,
+          'Focusable element hidden from keyboard',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           'Consider if element should be focusable'
         );
       }
     });
   }
 
+<<<<<<< HEAD
   private checkARIALabels(): void {
     const _elementsWithAria = document.querySelectorAll('[aria-label], [aria-labelledby]');
     elementsWithAria.forEach((element, index) => {
@@ -140,12 +179,18 @@ export class AccessibilityAuditor {
         this.addIssue('moderate')
           `element[${index}]`)
           'Conflicting ARIA labels')
+=======
+  private checkARIALabels(): void {/* TODO: Fix JSX expression */}`
+          `element[${index}]`,
+          'Conflicting ARIA labels',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           'Use either aria-label or aria-labelledby, not both'
         );
       }
     });
   }
 
+<<<<<<< HEAD
   private addIssue(severity: AccessibilityIssue['severity'])
     element: string)
     issue: string)
@@ -156,19 +201,36 @@ export class AccessibilityAuditor {
       element)
       issue)
       recommendation)
+=======
+  private addIssue(severit,
+  y: AccessibilityIssue['severity'],
+    elemen,
+  t: string,
+    issu,
+  e: string,
+    recommendatio,
+  n: string;)
+  ): void {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     });
   }
 
   /**
    * Get issues by severity;
    */
+<<<<<<< HEAD
   public getIssuesBySeverity(severity: AccessibilityIssue['severity']): AccessibilityIssue[] {,
     return this.issues.filter(issue => issue.severity === severity);
+=======
+  public getIssuesBySeverity(severit,)
+  y: AccessibilityIssue['severity']): AccessibilityIssue[] {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 
   /**
    * Get summary of audit results;
    */
+<<<<<<< HEAD
   public getSummary(): {
     total: number;
     critical: number;
@@ -182,6 +244,10 @@ export class AccessibilityAuditor {
       serious: this.getIssuesBySeverity('serious').length;
       moderate: this.getIssuesBySeverity('moderate').length;
       minor: this.getIssuesBySeverity('minor').length;
+=======
+  public getSummary(): {/* TODO: Fix JSX expression */}
+  } {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     };
   }
 }
@@ -189,7 +255,6 @@ export class AccessibilityAuditor {
 /**
  * Utility function to run accessibility audit;
  */
-export const runAccessibilityAudit = (): AccessibilityIssue[] => {
-  const _auditor = new AccessibilityAuditor();
-  return auditor.audit();
+export const runAccessibilityAudit = (): AccessibilityIssue[] => {/* TODO: Fix JSX expression */}
 };
+"`

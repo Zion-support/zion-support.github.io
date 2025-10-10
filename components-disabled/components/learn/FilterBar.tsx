@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 export default function FilterBar(): unknown ({category) level} isFree; onChange }: Props) {; } return (; <div className="text-left" sm":grid-cols-3 gap-3">)" import React from 'react'' export default function FilterBar(): unknown ({category) level} isFree; onChange }: Props) {; } return (;</div> <div className="text-left" sm":grid-cols-3 gap-3">)"' import React from 'react'' '</div>
+=======
+export default function FilterBar(): unknown ({category) level} isFree; onChange }: Props) {; } return (; <div className="text-left" sm":grid-cols-3 gap-3">)" import React from 'react'' export default function FilterBar(): unknown ({category) level} isFree; onChange }: Props) {; } return (; <div className="text-left" sm":grid-cols-3 gap-3">)"' import React from 'react'' '"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

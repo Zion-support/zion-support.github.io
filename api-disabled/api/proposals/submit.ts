@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 async function submitByEmail(to: string;)
   subject: string)
   text: string)
@@ -33,39 +34,83 @@ async function submitByEmail(to: string;)
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {,
   if (req.method !== 'POST') {,
     return res.status(405).json({ error: 'Method not allowed' });
+=======
+async function submitByEmail(t,
+  o: string,
+  subjec,
+  t: string,
+  tex,
+  t: string,
+  attachment,
+  s: unknown[] = [])
+) {/* TODO: Fix JSX expression */}
   }
 
-  try {
+  const transporter = nodemailer.createTransporter({/* TODO: Fix JSX expression */}
+  h: { user, pass },)
+  });
+
+  await transporter.sendMail({/* TODO: Fix JSX expression */})
+  });
+}
+
+export default async function handler(re,
+  q: NextApiRequest, re,)
+  s: NextApiResponse) {/* TODO: Fix JSX expression */}
+  r: 'Method not allowed' });
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
+  }
+
+  try {/* TODO: Fix JSX expression */}
     const { id, channels = ['email'], emailTo, delegateNote } = req.body || {};
 
-    if (!id) {
-      return res.status(400).json({ error: 'Proposal ID required' });
+    if (!id) {/* TODO: Fix JSX expression */}
+  r: 'Proposal ID required' });
     }
 
     const _meta = getProposal(id);
-    if (!meta) {
-      return res.status(404).json({ error: 'Proposal not found' });
+    if (!meta) {/* TODO: Fix JSX expression */}
+  r: 'Proposal not found' });
     }
 
     // Email submission;
+<<<<<<< HEAD
     if (channels.includes('email')) {
       //       const to = emailTo || process.env.UN_GATEWAY_EMAIL || 'example@un.org';
       //       const subject = `[Proposal] ${meta.title} - ${meta.targetInstitution}`;
+=======
+    if (channels.includes('email')) {/* TODO: Fix JSX expression */}
+      //       const subject = `[Proposal] ${meta.title} - ${meta.targetInstitution}`;`
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       const text = `Please find the proposal attached.
 
-Title: ${meta.title}
-Target: ${meta.targetInstitution}
-Type: ${meta.type}
-Region: ${meta.regionalScope}
-Budget/Resolution: ${meta.budgetOrResolution}
+Titl,
+  e: ${meta.title}
+Targe,
+  t: ${meta.targetInstitution}
+Typ,
+  e: ${meta.type}
+Regio,
+  n: ${meta.regionalScope}
+Budget/Resolutio,
+  n: ${meta.budgetOrResolution}
 
+<<<<<<< HEAD
 DAO Governance: See document.,
 ,
 Delegate Note: ${delegateNote || 'N/A'}`;
+=======
+DAO,
+  Governance: See document.
+
+Delegate,`
+  Note: ${delegateNote || 'N/A'}`;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 
       await submitByEmail(to, subject, text);
     }
 
+<<<<<<< HEAD
     // ENS record hash (default: compute and store hash only)
     let ensRecordHash: string | undefined;
     try {,
@@ -84,5 +129,26 @@ Delegate Note: ${delegateNote || 'N/A'}`;
     return res.status(200).json({ meta: updated });
   } catch (error: unknown) {,
     return res.status(500).json({ error: error?.message || 'Submission failed' });
+=======
+    // ENS record hash (defaul,)
+  t: compute and store hash only)
+    let,
+  ensRecordHash: string | undefined;
+    try {/* TODO: Fix JSX expression */}`
+      ensRecordHash = `0x${hash}`;
+      updateArtifacts(id, { ensRecordHash });
+    } catch {/* TODO: Fix JSX expression */}
+    }
+
+    const updated = updateProposalMeta(id, m => ({/* TODO: Fix JSX expression */})
+    }));
+
+    return res.status(200).json({/* TODO: Fix JSX expression */})
+  a: updated });
+  } catch (erro,)
+  r: unknown) {/* TODO: Fix JSX expression */}
+  r: error?.message || 'Submission failed' });
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 }
+`

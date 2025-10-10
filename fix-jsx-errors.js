@@ -5,6 +5,7 @@ import path from 'path';
 import { execSync } from 'child_process';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Function to process a file;
 function processFile(filePath) {
   try {
@@ -79,11 +80,24 @@ function fixFile(filePath) {
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
         modified = true;
         console.log(`Applied ${fix.description} to ${filePath}`);
+=======
+// Function to process a file;
+function processFile(filePath) {/* TODO: Fix JSX expression */}
+    }
+
+    // Fix malformed JSX fragments;
+    if (content.includes('<>') && !content.includes('</>')) {/* TODO: Fix JSX expression */}
+    }
+
+    // Fix missing closing tags by counting opening and closing divs;
+    if (openDivs > closeDivs) {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
 <<<<<<< HEAD
     }
 
     // Fix malformed Helmet tags;
+<<<<<<< HEAD
     if (content.includes('<Helmet>') && !content.includes('</Helmet>')) {
       content = content.replace(/<Helmet>/g, '<div>');
       content = content.replace(/<\/Helmet>/g, '</div>');
@@ -210,8 +224,19 @@ function fixFile(filePath) {
       console.log(`Fixed: ${filePath}`);
 >>>>>>> cursor/fix-errors-and-merge-to-main-33bd
       return true;
+=======
+    if (content.includes('<Helmet>') && !content.includes('</Helmet>')) {/* TODO: Fix JSX expression */}
+    }
+
+    // Fix other common JSX issues;
+    if (content.includes('</Helmet>') && !content.includes('<Helmet>')) {/* TODO: Fix JSX expression */}
+    }
+
+    if (modified) {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
     return false;
+<<<<<<< HEAD
   } catch (error) {
 <<<<<<< HEAD
     console.error(`Error processing ${filePath}:`, error.message);
@@ -248,6 +273,20 @@ function findTsxFiles(dir) {
   }
   
   return files;
+=======
+  } catch (error) {/* TODO: Fix JSX expression */}
+  }
+}
+
+// Main execution;
+async function main() {/* TODO: Fix JSX expression */}
+}
+  // Find all TypeScript/JavaScript files in app directory;
+  files.forEach(file => {/* TODO: Fix JSX expression */}
+    })
+  });
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }
 
 // Main execution

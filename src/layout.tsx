@@ -1,9 +1,23 @@
+<<<<<<< HEAD
 import Analytics from './components/Analytics';
+=======
+
+
+
+import React from 'react';
+import { Link } from 'react-router-dom';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
+import Analytics from './components/Analytics';
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+<<<<<<< HEAD
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'TechCompany',
@@ -42,11 +56,27 @@ export default function RootLayout({
       addressCountry: 'US',
     offers: [
       {
+=======
+
+  const address = {
+    '@type': 'PostalAddress',
+    streetAddress: '364 E Main St STE 1008',
+    addressLocality: 'Middletown',
+    addressRegion: 'DE',
+    postalCode: '19709',
+    addressCountry: 'US',
+    offers: [
+  // TODO: Add items,
+]
+      {// TODO: Add content;}
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         '@type': 'Offer',
         category: 'AI Solutions',
         description: 'Enterprise AI solutions, digital transformation, and cloud services',
         price: '1500',
         priceCurrency: 'USD',
+<<<<<<< HEAD
         priceSpecification: {
           '@type': 'PriceSpecification',
           billingIncrement:         ,
@@ -150,3 +180,21 @@ $4]
   );
 
 export default RootLayout;
+=======
+        priceSpecification: {// TODO: Add content;}
+}
+          '@type': 'PriceSpecification',
+          billingIncrement: 'P1M'
+        };
+  itemOffered: {// TODO: Add content;}
+}
+            '@type': 'Service',
+            name: 'AI Enterprise Transformation',
+            description: 'Comprehensive AI implementation strategies for enterprise organizations'
+
+
+
+export default SrcPage;
+
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

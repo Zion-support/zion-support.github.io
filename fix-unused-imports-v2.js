@@ -3,6 +3,7 @@ import path from 'path';
 import { execSync } from 'child_process';
 
 // Get all TypeScript/JavaScript files;
+<<<<<<< HEAD
 function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
   let files = [];
   const items = fs.readdirSync(dir);
@@ -15,6 +16,10 @@ function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
       files = files.concat(getAllFiles(fullPath, extensions));
     } else if (extensions.some(ext => item.endsWith(ext))) {
       files.push(fullPath);
+=======
+function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {/* TODO: Fix JSX expression */}
+    } else if (extensions.some(ext => item.endsWith(ext))) {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   }
   
@@ -22,6 +27,7 @@ function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
 }
 
 // Remove unused imports from a file;
+<<<<<<< HEAD
 function removeUnusedImports(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
@@ -37,6 +43,14 @@ function removeUnusedImports(filePath) {
       const result = execSync(`npx eslint "${filePath}" --format=json --no-eslintrc --config .eslintrc.json`, { )
         encoding: 'utf8'),
         stdio: 'pipe',
+=======
+function removeUnusedImports(filePath) {/* TODO: Fix JSX expression */}
+    }
+    
+    // Get unused variables using ESLint;
+    try {/* TODO: Fix JSX expression */}
+      const result = execSync(`npx eslint "${filePath}" --format=json --no-eslintrc --config .eslintrc.json`, {/* TODO: Fix JSX expression */})
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
       
       const lintResults = JSON.parse(result);
@@ -44,16 +58,21 @@ function removeUnusedImports(filePath) {
       
       const unusedVars = lintResults[0].messages;
         .filter(msg => msg.ruleId === '@typescript-eslint/no-unused-vars' && msg.message.includes('is defined but never used'))
+<<<<<<< HEAD
         .map(msg => {)
           const match = msg.message.match(/'([^']+)'/);
           return match ? match[1] : null;
+=======
+        .map(msg => {/* TODO: Fix JSX expression */})
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         })
         .filter(Boolean);
       
       if (unusedVars.length === 0) return;
-      
+      `
       console.log(`Fixing ${unusedVars.length} unused imports in ${filePath}`);
       
+<<<<<<< HEAD
       // Remove unused imports from import statements;
       const importRegex = /import\s*{([^}]+)}\s*from\s*['"][^'"]+['"];?/g;
       content = content.replace(importRegex, (match, imports) => {
@@ -65,31 +84,50 @@ function removeUnusedImports(filePath) {
         
         if (usedImports.length === 0) {
           return ''; // Remove entire import if no imports are used;
+=======
+      // Remove unused imports from import statements;"
+      const importRegex = /import\s*{([^}]+)}\s*from\s*['"][^'"]+['"];?/g;
+      content = content.replace(importRegex, (match, imports) => {/* TODO: Fix JSX expression */}
+        });
+        
+        if (usedImports.length === 0) {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         }
         
         return match.replace(imports, usedImports.join(', '));
       });
       
+<<<<<<< HEAD
       // Remove entire import lines that are now empty;
       content = content.replace(/import\s*{\s*}\s*from\s*['"][^'"]+['"];?\s*\n?/g, '');
       
       // Remove unused variable declarations;
       unusedVars.forEach(varName => {)
+=======
+      // Remove entire import lines that are now empty;"
+      content = content.replace(/import\s*{\s*}\s*from\s*['"][^'"]+['"];?\s*\n?/g, '');
+      
+      // Remove unused variable declarations;
+      unusedVars.forEach(varName => {/* TODO: Fix JSX expression */})`
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         const varRegex = new RegExp(`const\\s+${varName}\\s*=\\s*[^;]+;?\\s*\\n?`, 'g');
         content = content.replace(varRegex, '');
       });
       
-      if (content !== originalContent) {
-        fs.writeFileSync(filePath, content);
+      if (content !== originalContent) {/* TODO: Fix JSX expression */}`
         console.log(`Fixed unused imports in ${filePath}`);
       }
       
+<<<<<<< HEAD
     } catch (error) {
       // Skip files that can't be linted;
       return;
+=======
+    } catch (error) {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
     
-  } catch (error) {
+  } catch (error) {/* TODO: Fix JSX expression */}`
     console.error(`Error processing ${filePath}:`, error.message);
   }
 }
@@ -97,17 +135,22 @@ function removeUnusedImports(filePath) {
 // Main execution;
 console.log('Starting to fix unused imports...');
 
-const files = getAllFiles('./src');
+const files = getAllFiles('./src');`
 console.log(`Found ${files.length} files to process`);
 
 // Process files in batches to avoid overwhelming the system;
 const batchSize = 10;
+<<<<<<< HEAD
 for (let i = 0; i < files.length; i += batchSize) {
   const batch = files.slice(i, i + batchSize);
   batch.forEach(file => {)
     removeUnusedImports(file);
   });
+=======
+for (let i = 0; i < files.length; i += batchSize) {/* TODO: Fix JSX expression */}
+  });`
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   console.log(`Processed batch ${Math.floor(i / batchSize) + 1}/${Math.ceil(files.length / batchSize)}`);
 }
 
-console.log('Finished fixing unused imports');
+console.log('Finished fixing unused imports');"`

@@ -3,6 +3,7 @@
  * Comprehensive security headers for production applications;
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface SecurityHeadersConfig {
   contentSecurityPolicy?: string;
   strictTransportSecurity?: string;
@@ -91,12 +92,40 @@ export function getSecurityHeaders()
   }
   if (config.permissionsPolicy) {}
     headers['Permissions-Policy'] = config.permissionsPolicy;}
+=======
+export interface SecurityHeadersConfig {/* TODO: Fix JSX expression */}
+}
+export const,
+  defaultSecurityHeaders: SecurityHeadersConfig = {/* TODO: Fix JSX expression */}
+};
+/**
+ * Get security headers as key-value pairs;
+ */
+export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig></SecurityHeadersConfig>)
+): Record<string, string> {/* TODO: Fix JSX expression */}
+  const config = { ...defaultSecurityHeaders, ...customConfig };
+  const,
+  headers: Record<string, string> = {/* TODO: Fix JSX expression */}
+  };
+  if (config.contentSecurityPolicy) {/* TODO: Fix JSX expression */}
+  }
+  if (config.strictTransportSecurity) {/* TODO: Fix JSX expression */}
+  }
+  if (config.xFrameOptions) {/* TODO: Fix JSX expression */}
+  }
+  if (config.xContentTypeOptions) {/* TODO: Fix JSX expression */}
+  }
+  if (config.referrerPolicy) {/* TODO: Fix JSX expression */}
+  }
+  if (config.permissionsPolicy) {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
   return headers;
 }
 /**
  * Get security headers in Next.js format;
  */
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>)
 ): Array<{ key: string; value: string }> {
@@ -110,5 +139,11 @@ export function getNextSecurityHeaders()
     key,
     value}
   }))
+=======
+export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig></SecurityHeadersConfig>)
+): Array<{/* TODO: Fix JSX expression */}
+  e: string }> {/* TODO: Fix JSX expression */}
+  }));
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }
 export default defaultSecurityHeaders;

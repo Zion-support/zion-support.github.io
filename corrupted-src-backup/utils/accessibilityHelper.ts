@@ -5,6 +5,7 @@
 /**
  * Focus trap class for managing focus within modal dialogs;
  */
+<<<<<<< HEAD
 export class FocusTrap {
   private element: HTMLElement;
   private focusableElements: HTMLElement[] = [];
@@ -40,24 +41,31 @@ export class FocusTrap {
         if (document.activeElement === this.firstFocusableElement) {,
           event.preventDefault();
           this.lastFocusableElement?.focus();
+=======
+export class FocusTrap {/* TODO: Fix JSX expression */}
+  }
+
+  private updateFocusableElements(): void {/* TODO: Fix JSX expression */}
+  }
+
+  public trapFocus(even,)
+  t: KeyboardEvent): void {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         }
-      } else {
-        if (document.activeElement === this.lastFocusableElement) {
-          event.preventDefault();
-          this.firstFocusableElement?.focus();
+      } else {/* TODO: Fix JSX expression */}
         }
       }
     }
   }
 
-  public focusFirstElement(): void {
-    this.firstFocusableElement?.focus();
+  public focusFirstElement(): void {/* TODO: Fix JSX expression */}
   }
 }
 
 /**
  * ARIA helper functions;
  */
+<<<<<<< HEAD
 export const ariaHelpers = {
   setAriaExpanded(element: HTMLElement, expanded: boolean): void {,
     element.setAttribute('aria-expanded', expanded.toString());
@@ -73,12 +81,31 @@ export const ariaHelpers = {
 
   setAriaDescribedBy(element: HTMLElement, describedBy: string): void {,
     element.setAttribute('aria-describedby', describedBy);
+=======
+export const ariaHelpers = {/* TODO: Fix JSX expression */}
+  },
+
+  setAriaHidden(elemen,
+  t: HTMLElement, hidde,)
+  n: boolean): void {/* TODO: Fix JSX expression */}
+  },
+
+  setAriaLabel(elemen,
+  t: HTMLElement, labe,)
+  l: string): void {/* TODO: Fix JSX expression */}
+  },
+
+  setAriaDescribedBy(elemen,
+  t: HTMLElement, describedB,)
+  y: string): void {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
 };
 
 /**
  * Screen reader announcements;
  */
+<<<<<<< HEAD
 export const announceToScreenReader = (message: string): void => {,
   const _announcement = document.createElement('div');
   announcement.setAttribute('aria-live', 'polite');
@@ -90,12 +117,17 @@ export const announceToScreenReader = (message: string): void => {,
 
   setTimeout(() => {
     document.body.removeChild(announcement);
+=======
+export const announceToScreenReader = (messag,)
+  e: string): void => {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }, 1000);
 };
 
 /**
  * Keyboard navigation helpers;
  */
+<<<<<<< HEAD
 export const keyboardNavigation = {
   handleArrowKeys(event: KeyboardEvent, items: HTMLElement[]): void {
     //     const currentIndex = items.indexOf(document.activeElement as HTMLElement);
@@ -115,6 +147,16 @@ export const keyboardNavigation = {
     if (event.key === 'Escape') {,
       event.preventDefault();
       callback();
+=======
+export const keyboardNavigation = {/* TODO: Fix JSX expression */}
+    } else if (event.key === 'ArrowUp' || event.key === 'ArrowLeft') {/* TODO: Fix JSX expression */}
+    }
+  },
+
+  handleEscapeKey(even,
+  t: KeyboardEvent, callbac,)
+  k: () => void): void {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   },
 };

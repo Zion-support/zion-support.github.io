@@ -1,15 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-interface SEOProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  image?: string;
-  url?: string;
-  type?: string;
+interface SEOProps {/* TODO: Fix JSX expression */}
 }
 
+<<<<<<< HEAD
 const SEO: React.FC<SEOProps> = ({,
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of advanced AI solutions, enterprise automation, and cutting-edge technology services. Transform your business with our innovative AI-powered solutions.',
@@ -32,8 +27,36 @@ const SEO: React.FC<SEOProps> = ({,
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
       <link rel="canonical" href={url} />
+=======
+const,
+  SEO: React.FC<SEOProps> = ({/* TODO: Fix JSX expression */})
+}) => {/* TODO: Fix JSX expression */}
+      <title>{title}</title>
+      <meta name="description" content={description} /></meta>"
+      <meta name="keywords" content={keywords} /></meta>"
+      <meta property="o,"
+  g:title" content={title} /></meta>"
+      <meta property="o,"
+  g:description" content={description} /></meta>"
+      <meta property="o,"
+  g:image" content={image} /></meta>"
+      <meta property="o,"
+  g:url" content={url} /></meta>"
+      <meta property="o,"
+  g:type" content={type} /></meta>"
+      <meta name="twitte,"
+  r:card" content="summary_large_image" /></meta>"
+      <meta name="twitte,"
+  r:title" content={title} /></meta>"
+      <meta name="twitte,"
+  r:description" content={description} /></meta>"
+      <meta name="twitte,"
+  r:image" content={image} /></meta>"
+      <link rel="canonical" href={url} /></link>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     </Helmet>
   );
 };
 
 export default SEO;
+"

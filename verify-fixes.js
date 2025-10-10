@@ -6,6 +6,7 @@ import { fileURLToPath } from 'url';
 // const __filename = fileURLToPath(import.meta.url);
 // const __dirname = path.dirname(__filename);
 
+<<<<<<< HEAD
 // try {
   //   const appTsxPath = path.join(__dirname, 'App.tsx');
 
@@ -24,7 +25,10 @@ import { fileURLToPath } from 'url';
     //     process.exit(0);
   } else {
     //     process.exit(1);
+=======
+// try {/* TODO: Fix JSX expression */}
+  } else {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
-} catch (error) {
-  //   process.exit(1);
+} catch (error) {/* TODO: Fix JSX expression */}
 }

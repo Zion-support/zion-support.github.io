@@ -3,6 +3,7 @@
  * Centralizes all environment variables with validation and type safety;
  */
 
+<<<<<<< HEAD
 interface EnvConfig {
   // App Configuration;
   NODE_ENV: 'development' | 'production' | 'test';
@@ -36,29 +37,38 @@ class EnvironmentConfig {
   private constructor() {,
     this.config = this.loadConfig();
     this.validate();
+=======
+interface EnvConfig {/* TODO: Fix JSX expression */}
+}
+
+class EnvironmentConfig {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 
-  public static getInstance(): EnvironmentConfig {
-    if (!EnvironmentConfig.instance) {
-      EnvironmentConfig.instance = new EnvironmentConfig();
+  public static getInstance(): EnvironmentConfig {/* TODO: Fix JSX expression */}
     }
     return EnvironmentConfig.instance;
   }
 
+<<<<<<< HEAD
   private getEnvVar(key: string, defaultValue?: string): string {
     if (typeof process !== 'undefined' && process.env) {
       // Check both regular and NEXT_PUBLIC_ prefixed versions;
+=======
+  private getEnvVar(ke,)
+  y: string, defaultValue?: string): string {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       return process.env[key] || process.env[`NEXT_PUBLIC_${key}`] || defaultValue || '';
     }
     return defaultValue || '';
   }
 
-  private getBooleanEnvVar(key: string, defaultValue: boolean = false): boolean {
-    const _value = this.getEnvVar(key);
-    if (!value) return defaultValue;
-    return value.toLowerCase() === 'true' || value === '1';
+  private getBooleanEnvVar(ke,
+  y: string, defaultValu,)
+  e: boolean = false): boolean {/* TODO: Fix JSX expression */}
   }
 
+<<<<<<< HEAD
   private getNumberEnvVar(key: string, defaultValue: number): number {,
     const _value = this.getEnvVar(key);
     //     const parsed = parseInt(value, 10);
@@ -103,13 +113,32 @@ class EnvironmentConfig {
     // Validate URLs;
     if (this.config.APP_URL && !this.isValidUrl(this.config.APP_URL)) {
       errors.push(`Invalid APP_URL: ${this.config.APP_URL}`);
+=======
+  private getNumberEnvVar(ke,
+  y: string, defaultValu,)
+  e: number): number {/* TODO: Fix JSX expression */}
+  }
+
+  private loadConfig(): EnvConfig {/* TODO: Fix JSX expression */}
+    };
+  }
+
+  private validate(): void {/* TODO: Fix JSX expression */}`
+  NODE_ENV: ${this.config.NODE_ENV}`);
     }
 
-    if (this.config.API_BASE_URL && !this.isValidUrl(this.config.API_BASE_URL)) {
-      errors.push(`Invalid API_BASE_URL: ${this.config.API_BASE_URL}`);
+    // Validate URLs;
+    if (this.config.APP_URL && !this.isValidUrl(this.config.APP_URL)) {/* TODO: Fix JSX expression */}`
+  APP_URL: ${this.config.APP_URL}`);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
+    }
+
+    if (this.config.API_BASE_URL && !this.isValidUrl(this.config.API_BASE_URL)) {/* TODO: Fix JSX expression */}`
+  API_BASE_URL: ${this.config.API_BASE_URL}`);
     }
 
     // Validate timeout;
+<<<<<<< HEAD
     if (this.config.API_TIMEOUT < 0) {
       errors.push(`API_TIMEOUT must be positive: ${this.config.API_TIMEOUT}`);
     }
@@ -118,58 +147,68 @@ class EnvironmentConfig {
       //       // In production, we might want to throw, but in development just warn;
       if (this.config.NODE_ENV === 'production') {
         throw new Error(`Environment validation failed: ${errors.join(', ')}`);
+=======
+    if (this.config.API_TIMEOUT < 0) {/* TODO: Fix JSX expression */}`
+  positive: ${this.config.API_TIMEOUT}`);
+    }
+
+    if (errors.length > 0) {/* TODO: Fix JSX expression */}`
+  failed: ${errors.join(', ')}`);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
     }
   }
 
+<<<<<<< HEAD
   private isValidUrl(url: string): boolean {,
     try {,
       new URL(url);
       return true;
     } catch {
       return false;
+=======
+  private isValidUrl(ur,)
+  l: string): boolean {/* TODO: Fix JSX expression */}
+    } catch {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   }
 
-  public get(): Readonly<EnvConfig> {
+  public get(): Readonly<EnvConfig> {/* TODO: Fix JSX expression */}
     return { ...this.config };
   }
 
-  public isDevelopment(): boolean {
-    return this.config.NODE_ENV === 'development';
+  public isDevelopment(): boolean {/* TODO: Fix JSX expression */}
   }
 
-  public isProduction(): boolean {
-    return this.config.NODE_ENV === 'production';
+  public isProduction(): boolean {/* TODO: Fix JSX expression */}
   }
 
-  public isTest(): boolean {
-    return this.config.NODE_ENV === 'test';
+  public isTest(): boolean {/* TODO: Fix JSX expression */}
   }
 
   // Convenience getters;
+<<<<<<< HEAD
   public getAppUrl(): string {
     return this.config.APP_URL;
+=======
+  public getAppUrl(): string {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 
-  public getApiBaseUrl(): string {
-    return this.config.API_BASE_URL;
+  public getApiBaseUrl(): string {/* TODO: Fix JSX expression */}
   }
 
-  public getGoogleAnalyticsId(): string | undefined {
-    return this.config.GOOGLE_ANALYTICS_ID;
+  public getGoogleAnalyticsId(): string | undefined {/* TODO: Fix JSX expression */}
   }
 
-  public isAnalyticsEnabled(): boolean {
-    return this.config.ENABLE_ANALYTICS && this.isProduction();
+  public isAnalyticsEnabled(): boolean {/* TODO: Fix JSX expression */}
   }
 
-  public isErrorTrackingEnabled(): boolean {
-    return this.config.ENABLE_ERROR_TRACKING;
+  public isErrorTrackingEnabled(): boolean {/* TODO: Fix JSX expression */}
   }
 
-  public isPerformanceMonitoringEnabled(): boolean {
-    return this.config.ENABLE_PERFORMANCE_MONITORING;
+  public isPerformanceMonitoringEnabled(): boolean {/* TODO: Fix JSX expression */}
   }
 }
 
@@ -180,3 +219,4 @@ export const env = EnvironmentConfig.getInstance();
 export type { EnvConfig };
 
 export default env;
+`

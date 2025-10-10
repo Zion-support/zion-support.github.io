@@ -1,5 +1,6 @@
 'use client';
 
+<<<<<<< HEAD
 const PerformanceOptimizerComponent: React.FC<PerformanceOptimizerProps> = ({,
  children;
 }) => {
@@ -30,6 +31,11 @@ const PerformanceOptimizerComponent: React.FC<PerformanceOptimizerProps> = ({,
  largestContentfulPaint: lcp ? lcp.startTime : 0;
  cumulativeLayoutShift: 0, // Would need to be measured with observer;
  firstInputDelay: 0 // Would need to be measured with observer;
+=======
+const,
+  PerformanceOptimizerComponent: React.FC<PerformanceOptimizerProps> = ({/* TODO: Fix JSX expression */})
+}) => {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
  };
  
  setMetrics(metrics);
@@ -44,6 +50,7 @@ const PerformanceOptimizerComponent: React.FC<PerformanceOptimizerProps> = ({,
  };
 
  // Measure after page load;
+<<<<<<< HEAD
  if (document.readyState === 'complete') {
  measurePerformance();
  } else {
@@ -64,10 +71,19 @@ const PerformanceOptimizerComponent: React.FC<PerformanceOptimizerProps> = ({,
  link.as = 'image';
  link.href = src;
  document.head.appendChild(link);origin/
+=======
+ if (document.readyState === 'complete') {/* TODO: Fix JSX expression */}
+ } else {/* TODO: Fix JSX expression */}
+ }
+
+ // Preload critical resources;
+ const preloadCriticalResources = () => {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
  });
  };
 
  // Optimize images;
+<<<<<<< HEAD
  const optimizeImages = () => {
  const images = document.querySelectorAll('img');
  images.forEach(img => {)
@@ -79,21 +95,33 @@ const PerformanceOptimizerComponent: React.FC<PerformanceOptimizerProps> = ({,
  // Add decoding="async" for better performance;
  if (!img.hasAttribute('decoding')) {
  img.setAttribute('decoding', 'async');
+=======
+ const optimizeImages = () => {/* TODO: Fix JSX expression */}
+ }
+ 
+ // Add decoding="async" for better performance;
+ if (!img.hasAttribute('decoding')) {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
  }
  });
  };
 
  // Intersection Observer for animations;
+<<<<<<< HEAD
  const setupIntersectionObserver = () => {
  const observer = new IntersectionObserver(
  (entries) => {
  entries.forEach(entry => {)
  if (entry.isIntersecting) {
  entry.target.classList.add('animate-fade-in');
+=======
+ const setupIntersectionObserver = () => {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
  }
  });
  },
- { threshold: 0.1 }
+ {/* TODO: Fix JSX expression */}
+  d: 0.1 }
  );
 
  const elements = document.querySelectorAll('.animate-on-scroll');
@@ -107,9 +135,13 @@ const PerformanceOptimizerComponent: React.FC<PerformanceOptimizerProps> = ({,
  setupIntersectionObserver();
 
  // Cleanup;
+<<<<<<< HEAD
  return () => {
  // Cleanup if needed;
+=======
+ return () => {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
  };
  }, []);
 
-}}}
+}}}"

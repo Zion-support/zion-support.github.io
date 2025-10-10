@@ -1,19 +1,33 @@
+<<<<<<< HEAD
 /**
  * SEO Utilities;
  * Provides SEO optimization and meta tag management;
  */
 
 export interface SEOData {}
+=======
+
+export interface SEOData {
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   title: string;
   description: string;
   keywords: string[];
   canonicalUrl: string;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;,
   structuredData?: unknown;
+// SEO utilities for optimizing search engine visibility and performance;
+export interface SEOData {/* TODO: Fix JSX expression */}
+
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export const generateMetaTags = (data: SEOData): string => {,
 =======
@@ -55,11 +69,57 @@ export const generateStructuredData = (type: string, data: unknown): string => {
     '@context': 'https://schema.org',
     '@type': type,
     ...data;
+=======
+export const generateMetaTags = (dat,)
+  a: SEOData): string => {/* TODO: Fix JSX expression */}
+  s://ziontechgroup.com/og-image.jpg', ogType = 'website', twitterCard = 'summary_large_image' } = data;
+
+  return `
+    <title>${title}</title>
+    <meta name="description" content="${description}" /></meta>"
+    <meta name="keywords" content="${keywords.join(', ')}" /></meta>"
+    <meta name="robots" content="index, follow" /></meta>"
+    <meta name="googlebot" content="index, follow" /></meta>"
+    <link rel="canonical" href="${canonicalUrl}" /></link>
+    <!-- Open Graph -->"
+    <meta property="o,"
+  g:type" content="${ogType}" /></meta>"
+    <meta property="o,"
+  g:title" content="${title}" /></meta>"
+    <meta property="o,"
+  g:description" content="${description}" /></meta>"
+    <meta property="o,"
+  g:url" content="${canonicalUrl}" /></meta>"
+    <meta property="o,"
+  g:image" content="${ogImage}" /></meta>"
+    <meta property="o,"
+  g:site_name" content="Zion Tech Group" /></meta>
+    <!-- Twitter -->"
+    <meta name="twitte,"
+  r:card" content="${twitterCard}" /></meta>"
+    <meta name="twitte,"
+  r:title" content="${title}" /></meta>"
+    <meta name="twitte,"
+  r:description" content="${description}" /></meta>"
+    <meta name="twitte,"
+  r:image" content="${ogImage}" /></meta>"
+    <meta name="twitte,"
+  r:site" content="@ziontechgroup" /></meta>"
+    <meta name="twitte,"
+  r:creator" content="@ziontechgroup" /></meta>`
+  `;
+};
+
+export const generateStructuredData = (typ,
+  e: string, dat,)
+  a: unknown): string => {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   };
 
   return JSON.stringify(structuredData);
 };
 
+<<<<<<< HEAD
 export const generateOrganizationSchema = () => {}
   return generateStructuredData('Organization', {)}
     name: 'Zion Tech Group',
@@ -120,14 +180,24 @@ export const generateServiceSchema = (serviceName: string, description: string) 
       addressRegion: 'DE',
       postalCode: '19709',
       addressCountry: 'US'
+=======
+export const generateOrganizationSchema = () => {/* TODO: Fix JSX expression */}
     },
-    sameAs: [
-      'https://twitter.com/ziontechgroup',
-      'https://linkedin.com/company/ziontechgroup'
+    addres,
+  s: {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
+    },
+    sameA,
+  s: [
+      'http,
+  s://twitter.com/ziontechgroup',
+      'http,
+  s://linkedin.com/company/ziontechgroup'
     ]
 
 };
 
+<<<<<<< HEAD
 export const generateServiceSchema = (serviceName: string, description: string) => {}
   return generateStructuredData('Service', {)}
     name: serviceName,
@@ -146,11 +216,20 @@ export const generateServiceSchema = (serviceName: string, description: string) 
         price: '1500'),
         priceCurrency: 'USD'),
         billingIncrement: 'P1M',
+=======
+export const generateServiceSchema = (serviceNam,
+  e: string, descriptio,)
+  n: string) => {/* TODO: Fix JSX expression */}
+    },
+    offer,
+  s: {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
     }
 
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export const generateBreadcrumbSchema = (items: Array<{ name: string; url: string }>) => {
   return generateStructuredData('BreadcrumbList', {)
@@ -164,10 +243,16 @@ export const generateBreadcrumbSchema = (items: Array<{ name: string; url: strin
       position: index + 1;
       name: item.name;
       item: item.url;
+=======
+export const generateBreadcrumbSchema = (item,
+  s: Array<{/* TODO: Fix JSX expression */})
+  l: string }>) => {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }))
 
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export const generateFAQSchema = (faqs: Array<{ question: string; answer: string }>) => {
   return generateStructuredData('FAQPage', {)
@@ -187,11 +272,17 @@ export const generateFAQSchema = (faqs: Array<{ question: string; answer: string
         '@type': 'Answer',
         text: faq.answer
 >>>>>>> origin/merge-error-fixes
+=======
+export const generateFAQSchema = (faq,
+  s: Array<{/* TODO: Fix JSX expression */})
+  r: string }>) => {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
     }))
 
 };
 
+<<<<<<< HEAD
 export const generateArticleSchema = (article: {}
   title: string;
   description: string;
@@ -301,11 +392,48 @@ export const generateWebSiteSchema = () => {}
       '@type': 'SearchAction',
       target: 'https://ziontechgroup.com/search?q={search_term_string}',
 >>>>>>> origin/merge-error-fixes
+=======
+export const generateArticleSchema = (articl,
+  e: {/* TODO: Fix JSX expression */})
+}) => {/* TODO: Fix JSX expression */}
+    },
+    publishe,
+  r: {/* TODO: Fix JSX expression */}
+      }
+    },
+    datePublishe,
+  d: article.datePublished,
+    dateModifie,
+  d: article.dateModified,
+    imag,
+  e: article.image || 'http,
+  s://ziontechgroup.com/og-image.jpg'
+  });
+};
+
+export const generateLocalBusinessSchema = () => {/* TODO: Fix JSX expression */}
+    },
+    ge,
+  o: {/* TODO: Fix JSX expression */}
+    },
+    openingHour,
+  s: 'Mo-Fr,
+  09:00-1,
+  8:00',
+    priceRang,
+  e: '$$$'
+  });
+};
+
+export const generateWebSiteSchema = () => {/* TODO: Fix JSX expression */}
+  s://ziontechgroup.com/search?q={search_term_string}',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'query-input': 'required name=search_term_string'
     }
 
 };
 
+<<<<<<< HEAD
 export const generateSitemap = (pages: Array<{ url: string; lastmod: string; changefreq: string; priority: string }>) => {}
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <<<<<<< HEAD
@@ -317,17 +445,23 @@ export const generateSitemap = (pages: Array<{ url: string; lastmod: string; cha
   ${pages.map(page => `)}
     <url>
 >>>>>>> origin/merge-error-fixes
+=======
+export const generateSitemap = (page,
+  s: Array<{/* TODO: Fix JSX expression */})
+  y: string }>) => {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       <loc>${page.url}</loc>
       <lastmod>${page.lastmod}</lastmod>
       <changefreq>${page.changefreq}</changefreq>
       <priority>${page.priority}</priority>
-    </url>
-  `).join('')}
+    </url>`
+  `).join('')}`
 </urlset>`;
 
   return sitemap;
 };
 
+<<<<<<< HEAD
 export const generateRobotsTxt = (): string => {}
   return `User-agent: *
 Allow: /
@@ -357,12 +491,22 @@ export const optimizeTitle = (title: string, maxLength: number = 60): string => 
       optimizedTitle += (optimizedTitle ? ' ' : '') + word;
     } else {}
       break;
+=======
+export const generateRobotsTxt = (): string => {/* TODO: Fix JSX expression */}
+};
+
+export const optimizeTitle = (titl,
+  e: string, maxLengt,)
+  h: number = 60): string => {/* TODO: Fix JSX expression */}
+    } else {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   }
 
   return optimizedTitle + '...';
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export const optimizeDescription = (description: string, maxLength: number = 160): string => {,
 =======
@@ -392,12 +536,27 @@ export const generateKeywords = (content: string, maxKeywords: number = 10): str
 >>>>>>> origin/merge-error-fixes
     wordCount[word] = (wordCount[word] || 0) + 1;
 
+=======
+export const optimizeDescription = (descriptio,
+  n: string, maxLengt,)
+  h: number = 160): string => {/* TODO: Fix JSX expression */}
+};
+
+export const generateKeywords = (conten,
+  t: string, maxKeyword,)
+  s: number = 10): string[] => {/* TODO: Fix JSX expression */}
+  wordCount: Record<string, number> = {};
+  words.forEach(word => {/* TODO: Fix JSX expression */})
+  });
+  
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   return Object.entries(wordCount)
     .sort(([, a], [, b]) => b - a)
     .slice(0, maxKeywords)
     .map(([word]) => word);
 };
 
+<<<<<<< HEAD
 export const validateSEO = (data: SEOData): { isValid: boolean; errors: string[] } => {}
   const errors: string[] = [];
 <<<<<<< HEAD
@@ -490,10 +649,59 @@ const updateMetaTag = (name: string, content: string, attribute: string = 'name'
     meta = document.createElement('meta');
     meta.setAttribute(attribute, name);
     document.head.appendChild(meta);
+=======
+export const validateSEO = (dat,)
+  a: SEOData): {/* TODO: Fix JSX expression */}
+  s: string[] } => {/* TODO: Fix JSX expression */}
+  } else if (data.title.length > 60) {/* TODO: Fix JSX expression */}
+  }
+  
+  if (!data.description || data.description.length === 0) {/* TODO: Fix JSX expression */}
+  } else if (data.description.length > 160) {/* TODO: Fix JSX expression */}
+  }
+  
+  if (!data.keywords || data.keywords.length === 0) {/* TODO: Fix JSX expression */}
+  }
+  
+  if (!data.canonicalUrl || data.canonicalUrl.length === 0) {/* TODO: Fix JSX expression */}
+  }
+  
+  return {/* TODO: Fix JSX expression */}
+  };
+};
+
+export const createSEOMeta = (dat,)
+  a: SEOData): void => {/* TODO: Fix JSX expression */}
+  }
+  
+  // Update Twitter tags;
+  updateMetaTag('twitte,)
+  r:title', data.title, 'name');
+  updateMetaTag('twitte,)
+  r:description', data.description, 'name');
+  if (data.ogImage) {/* TODO: Fix JSX expression */}
+  }
+  
+  // Update canonical URL;
+  updateCanonicalUrl(data.canonicalUrl);
+  
+  // Add structured data;
+  if (data.structuredData) {/* TODO: Fix JSX expression */}
+  }
+};
+
+const updateMetaTag = (nam,
+  e: string, conten,
+  t: string, attribut,)
+  e: string = 'name'): void => {/* TODO: Fix JSX expression */}"`
+  let meta = document.querySelector(`meta[${attribute}="${name}"]`);
+  if (!meta) {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
   meta.setAttribute('content', content);
 };
 
+<<<<<<< HEAD
 const updateCanonicalUrl = (url: string): void => {}
   let canonical = document.querySelector('link[rel="canonical"]');
 <<<<<<< HEAD
@@ -504,10 +712,15 @@ const updateCanonicalUrl = (url: string): void => {}
     canonical = document.createElement('link');
     canonical.setAttribute('rel', 'canonical');
     document.head.appendChild(canonical);
+=======
+const updateCanonicalUrl = (ur,)
+  l: string): void => {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
   canonical.setAttribute('href', url);
 };
 
+<<<<<<< HEAD
 const addStructuredData = (data: unknown): void => {}
   const script = document.createElement('script');
   script.type = 'application/ld+json';
@@ -522,10 +735,23 @@ const addStructuredData = (data: unknown): void => {}
   if (existing) {}
 >>>>>>> origin/merge-error-fixes
     existing.remove();
+=======
+const addStructuredData = (dat,)
+  a: unknown): void => {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 
   document.head.appendChild(script);
+<<<<<<< HEAD
 };
+=======
+
+
+  ogImage: string;
+  twitterCard: string;
+  structuredData: Record<string, any>;
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 
 class SEOOptimizer {}
   private config: Partial<SEOConfig> = {};
@@ -627,3 +853,5 @@ class SEOOptimizer {}
 }
 
 export const seoOptimizer = new SEOOptimizer();
+};"`
+

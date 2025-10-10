@@ -1,15 +1,7 @@
-export interface Insight {
-  id: string;
-  title: string;
-  summary: string;
-  category: string;
-  date: string;
-  readMinutes: number;
-  featured: boolean;
-  tags: string[];
-  content: string;
+export interface Insight {/* TODO: Fix JSX expression */}
 }
 
+<<<<<<< HEAD
 export const newInsights: Insight[] = [
   {
     id: 'ai-platform-optimization-insights'
@@ -50,5 +42,12 @@ Protect your AI systems with next-generation quantum security frameworks.
 - Zero-trust architecture eliminates security vulnerabilities;
 - Real-time monitoring provides instant threat response;
     `,
+=======
+export const,
+  newInsights: Insight[] = [
+  {/* TODO: Fix JSX expression */}
+  },
+  {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
 ];

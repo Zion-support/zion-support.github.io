@@ -3,6 +3,7 @@ import React from 'react';
 // import { logger } from '@/utils/productionLogger';
 
 // Simple button component replacement;
+<<<<<<< HEAD
 const Button: React.FC<{
   onClick: () => void;
   variant?: string;
@@ -10,18 +11,34 @@ const Button: React.FC<{
   children: React.ReactNode;
 }> = ({ onClick, className = '', children }) => (
   <button onClick={onClick} className={`px-4 py-2 rounded ${className}`}>
+=======
+const,
+  Button: React.FC<{/* TODO: Fix JSX expression */}
+}> = ({ onClick, className = '', children }) => (<button onClick={onClick} className={`px-4 py-2 rounded ${className}`}></button>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     {children}
-  </button>
+  </button>)
 );
 
 // Simple logger replacement;
+<<<<<<< HEAD
 const logger = {
   error: (message: string, error?: unknown, meta?: unknown) => {
+=======
+const logger = {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     //     },
-  warn: (message: string, error?: unknown, meta?: unknown) => {
+  war,
+  n: (messag,)
+  e: string, error?: unknown, meta?: unknown) => {/* TODO: Fix JSX expression */}
     //     },
-  info: (message: string, meta?: unknown) => {
+  inf,
+  o: (messag,)
+  e: string, meta?: unknown) => {/* TODO: Fix JSX expression */}
     //     },
-  debug: (message: string, meta?: unknown) => {
+  debu,
+  g: (messag,)
+  e: string, meta?: unknown) => {/* TODO: Fix JSX expression */}
     //     },
 };
+`

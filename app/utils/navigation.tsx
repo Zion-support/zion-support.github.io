@@ -1,5 +1,6 @@
 'use client';
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const useRouter = () => {
   const push = useCallback((url: string) => {,
     window.location.href = url;}
@@ -39,3 +40,24 @@ export const useSearchParams = useCallback((...args) => {}
   return params;}
 }
 export default { useRouter, usePathname, useSearchParams }
+=======
+export const useRouter = () => {/* TODO: Fix JSX expression */}
+  }, []);
+  const replace = useCallback((ur,)
+  l: string) => {/* TODO: Fix JSX expression */}
+  }, []);
+  const back = useCallback(() => {/* TODO: Fix JSX expression */}
+  }, []);
+  const forward = useCallback(() => {/* TODO: Fix JSX expression */}
+  }, []);
+  const refresh = useCallback(() => {/* TODO: Fix JSX expression */}
+  }, []);
+  return {/* TODO: Fix JSX expression */}
+  };
+};
+export const usePathname = () => {/* TODO: Fix JSX expression */}
+};
+export const useSearchParams = () => {/* TODO: Fix JSX expression */}
+};
+export default { useRouter, usePathname, useSearchParams };
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

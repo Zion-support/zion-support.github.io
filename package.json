@@ -10,7 +10,10 @@
     "build:no-check": "vite build",
     "build:analyze": "vite build --mode analyze && npx vite-bundle-analyzer dist/stats.html",
     "preview": "vite preview",
+<<<<<<< HEAD
     "start": "vite preview",
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     "lint": "eslint . --ext .ts,.tsx,.js,.jsx --max-warnings 0",
     "lint:fix": "eslint . --ext .ts,.tsx,.js,.jsx --fix --max-warnings 0",
     "type-check": "tsc --noEmit --skipLibCheck",

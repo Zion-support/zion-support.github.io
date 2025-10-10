@@ -1,13 +1,21 @@
-exports.handler = async function () {
+exports.handler = async function () {/* TODO: Fix JSX expression */}
   const { execSync } = require('child_process');
+<<<<<<< HEAD
   try {execSync('node automation/a11y-alt-text-auditor.cjs || true', {)
       stdio: inherit),
         shell: true}
+=======
+  try {/* TODO: Fix JSX expression */}
+  l: true}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     });
-    execSync(
+    execSync()
       'git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "feat(a11y): alt-text audit + fixes [ci skip]" || true) && (git push origin main || true)',
-      {stdio: 'inherit'} shell: true },
+      {/* TODO: Fix JSX expression */}
+  o: 'inherit'} shel,
+  l: true },
     );
+<<<<<<< HEAD
     return {statusCode: 200;
       body: JSON.stringify({ ok: true),
         task: 'a11y-alt-text-auditor-runner' });
@@ -16,10 +24,17 @@ exports.handler = async function () {
       statusCode: 200;
       body: JSON.stringify({ ok: false),
         error: String(e;),
+=======
+    return {/* TODO: Fix JSX expression */}
+  k: 'a11y-alt-text-auditor-runner' });
+    };
+  } catch (e) {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
     };
   }
 };
+<<<<<<< HEAD
 exports.handler = async function() { const { execSync } = require('child_process'); try {' execSync('node automation/a11y-alt-text-auditor.cjs || true') { stdio: 'inherit'} shell: true;
       });' execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "feat(a11y): alt-text audit + fixes [ci skip]" || true) && (git push origin main || true)', {stdio: 'inherit'} shell: true;
       });' return {statusCode: 200;
@@ -28,3 +43,14 @@ exports.handler = async function() { const { execSync } = require('child_process
         body: JSON.stringify({ok: false),
         error: String(e;),
       }) }; } };'
+=======
+exports.handler = async function() { const { execSync } = require('child_process'); try {/* TODO: Fix JSX expression */}
+  o: 'inherit'} shel,
+  l: true;"
+      });' execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "feat(a11y): alt-text audit + fixes [ci skip]" || true) && (git push origin main || true)', {/* TODO: Fix JSX expression */}
+  o: 'inherit'} shel,
+  l: true;
+      });' return {/* TODO: Fix JSX expression */}
+  k: 'a11y-alt-text-auditor-runner' }) }; } catch (e) {/* TODO: Fix JSX expression */}
+      }) }; } };'"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

@@ -3,38 +3,16 @@
  * Captures, categorizes, and reports errors with detailed context;
  */
 
-interface ErrorContext {
-  timestamp: string;
-  url: string;
-  userAgent: string;
-  userId?: string;
-  sessionId: string;
-  stackTrace?: string;
-  componentStack?: string;
-  props?: unknown;
-  state?: unknown;
+interface ErrorContext {/* TODO: Fix JSX expression */}
 }
 
-interface ErrorReport {
-  id: string;
-  type: 'javascript' | 'network' | 'react' | 'promise' | 'resource';
-  severity: 'low' | 'medium' | 'high' | 'critical';
-  message: string;
-  context: ErrorContext;
-  frequency: number;
-  firstOccurrence: string;
-  lastOccurrence: string;
-  resolved: boolean;
+interface ErrorReport {/* TODO: Fix JSX expression */}
 }
 
-interface ErrorMetrics {
-  totalErrors: number;
-  errorsByType: Record<string, number>;
-  errorsBySeverity: Record<string, number>;
-  errorRate: number;
-  averageResolutionTime: number;
+interface ErrorMetrics {/* TODO: Fix JSX expression */}
 }
 
+<<<<<<< HEAD
 class ErrorHandler {
   private static instance: ErrorHandler;
   private errors: Map<string, ErrorReport> = new Map();
@@ -45,18 +23,17 @@ class ErrorHandler {
 ,
   private constructor() {,
     this.sessionId = this.generateSessionId();
+=======
+class ErrorHandler {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 
-  static getInstance(): ErrorHandler {
-    if (!ErrorHandler.instance) {
-      ErrorHandler.instance = new ErrorHandler();
+  static getInstance(): ErrorHandler {/* TODO: Fix JSX expression */}
     }
     return ErrorHandler.instance;
   }
 
-  init(): void {
-    if (this.isInitialized) {
-      return;
+  init(): void {/* TODO: Fix JSX expression */}
     }
 
     this.setupGlobalErrorHandlers();
@@ -67,10 +44,11 @@ class ErrorHandler {
     this.isInitialized = true;
     //     }
 
-  private generateSessionId(): string {
+  private generateSessionId(): string {/* TODO: Fix JSX expression */}
     return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
   }
 
+<<<<<<< HEAD
   private setupGlobalErrorHandlers(): void {
     if (typeof window === 'undefined') return;
 
@@ -83,19 +61,27 @@ class ErrorHandler {
         lineno: event.lineno;,)
         colno: event.colno),
         error: event.error),
+=======
+  private setupGlobalErrorHandlers(): void {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
     });
 
     // Unhandled promise rejection handler;
+<<<<<<< HEAD
     window.addEventListener('unhandledrejection', event => {)
       this.handleError({)
         type: 'promise',)
         message: event.reason?.message || 'Unhandled promise rejection'),
         error: event.reason),
+=======
+    window.addEventListener('unhandledrejection', event => {/* TODO: Fix JSX expression */})
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
     });
   }
 
+<<<<<<< HEAD
   private setupUnhandledRejectionHandler(): void {
     if (typeof window === 'undefined') return;
 
@@ -104,10 +90,14 @@ class ErrorHandler {
         type: 'promise',)
         message: event.reason?.message || 'Unhandled promise rejection'),
         error: event.reason),
+=======
+  private setupUnhandledRejectionHandler(): void {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
     });
   }
 
+<<<<<<< HEAD
   private setupNetworkErrorHandler(): void {
     if (typeof window === 'undefined') return;
 
@@ -131,12 +121,25 @@ class ErrorHandler {
           message: error.message;),
           url: args[0] as string),
           error),
+=======
+  private setupNetworkErrorHandler(): void {/* TODO: Fix JSX expression */}`
+  e: `HTTP ${response.status}: ${response.statusText}`,
+            ur,
+  l: args[0] as string,
+            statu,
+  s: response.status,
+          });
+        }
+        return response;
+      } catch (error) {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         });
         throw error;
       }
     };
   }
 
+<<<<<<< HEAD
   private setupReactErrorBoundary(): void {
     // This would integrate with React Error Boundary;
     //     }
@@ -166,10 +169,19 @@ class ErrorHandler {
       componentStack: errorData.componentStack;
       props: errorData.props;
       state: errorData.state;
+=======
+  private setupReactErrorBoundary(): void {/* TODO: Fix JSX expression */}
+    //     }
+
+  handleError(errorDat,
+  a: {/* TODO: Fix JSX expression */})
+  }): void {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     };
 
     const _severity = this.determineSeverity(errorData);
 
+<<<<<<< HEAD
     if (this.errors.has(errorId)) {
       // Update existing error;
       const _existingError = this.errors.get(errorId)!;
@@ -188,6 +200,10 @@ class ErrorHandler {
         firstOccurrence: now;
         lastOccurrence: now;
         resolved: false;
+=======
+    if (this.errors.has(errorId)) {/* TODO: Fix JSX expression */}
+    } else {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       };
 
       this.errors.set(errorId, errorReport);
@@ -196,6 +212,7 @@ class ErrorHandler {
     this.errorCount++;
 
     // Log error for development;
+<<<<<<< HEAD
     if (process.env['NODE_ENV'] === 'development') {
       //       }
 
@@ -211,12 +228,29 @@ class ErrorHandler {
   }
 
   private generateErrorId(errorData: unknown): string {,
+=======
+    if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}
+      //       }
+
+    // Send to error reporting service in production;
+    if (process.env['NODE_ENV'] === 'production') {/* TODO: Fix JSX expression */}
+    }
+
+    // Cleanup old errors if we exceed the limit;
+    if (this.errors.size > this.maxErrors) {/* TODO: Fix JSX expression */}
+    }
+  }
+
+  private generateErrorId(errorDat,)
+  a: unknown): string {/* TODO: Fix JSX expression */}`
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     //     const key = `${errorData.type}_${errorData.message}_${errorData.filename || ''}_${errorData.lineno || ''}`;
     return btoa(key)
       .replace(/[^a-zA-Z0-9]/g, '')
       .substr(0, 16);
   }
 
+<<<<<<< HEAD
   private determineSeverity(errorData: unknown): ErrorReport['severity'] {,
     // Critical: Network errors, unhandled rejections;
     if (errorData.type === 'network' || errorData.type === 'promise') {
@@ -260,38 +294,65 @@ class ErrorHandler {
 
     errorsToKeep.forEach(error => {)
       this.errors.set(error.id, error);
+=======
+  private determineSeverity(errorDat,)
+  a: unknown): ErrorReport['severity'] {/* TODO: Fix JSX expression */}
+    }
+
+    // Hig,
+  h: JavaScript errors in production;
+    if (errorData.type === 'javascript' && process.env['NODE_ENV'] === 'production') {/* TODO: Fix JSX expression */}
+    }
+
+    // Mediu,
+  m: React errors, resource loading errors;
+    if (errorData.type === 'react' || errorData.type === 'resource') {/* TODO: Fix JSX expression */}
+    }
+
+    // Lo,
+  w: Everything else;
+    return 'low';
+  }
+
+  private sendErrorReport(errorRepor,)
+  t: ErrorReport): void {/* TODO: Fix JSX expression */}
+  s: { 'Content-Type': 'application/json' },
+    //   bod,
+  y: JSON.stringify(errorReport)
+    // }).catch(err => // console.error('Failed to send error,)
+  report:', err));
+  }
+
+  private cleanupOldErrors(): void {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     });
   }
 
-  getErrors(): ErrorReport[] {
-    return Array.from(this.errors.values());
+  getErrors(): ErrorReport[] {/* TODO: Fix JSX expression */}
   }
 
+<<<<<<< HEAD
   getErrorById(id: string): ErrorReport | undefined {,
     return this.errors.get(id);
+=======
+  getErrorById(i,)
+  d: string): ErrorReport | undefined {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 
-  getErrorMetrics(): ErrorMetrics {
-    const _errors = this.getErrors();
-    //     const totalErrors = errors.length;
-
-    const errorsByType = errors.reduce(
-      (acc, error) => {
-        acc[error.type] = (acc[error.type] || 0) + 1;
-        return acc;
+  getErrorMetrics(): ErrorMetrics {/* TODO: Fix JSX expression */}
       },
-      {} as Record<string, number>
+      {} as Record<string, number></string>
     );
 
-    const errorsBySeverity = errors.reduce(
-      (acc, error) => {
-        acc[error.severity] = (acc[error.severity] || 0) + 1;
-        return acc;
+    const errorsBySeverity = errors.reduce()
+      (acc, error) => {/* TODO: Fix JSX expression */}
       },
-      {} as Record<string, number>
+      {} as Record<string, number></string>
     );
 
     const errorRate = (this.errorCount / (Date.now() - new Date().getTime())) * 1000; // errors per second;
+<<<<<<< HEAD
     return {
       totalErrors,
       errorsByType,
@@ -324,29 +385,61 @@ Errors by Type: ${Object.entries(metrics.errorsByType),
   .join('\n')}
 
 Errors by Severity: ${Object.entries(metrics.errorsBySeverity),
+=======
+    return {/* TODO: Fix JSX expression */}
+    };
+  }
+
+  markErrorResolved(errorI,)
+  d: string): void {/* TODO: Fix JSX expression */}
+    }
+  }
+
+  generateErrorReport(): string {/* TODO: Fix JSX expression */}
+  Errors: ${metrics.totalErrors}
+Error,
+  Rate: ${metrics.errorRate.toFixed(4)} errors/second;
+Errors by,
+  Type:
+${/* TODO: Fix JSX expression */}`
+  .map(([type, count]) => `- ${type}: ${count}`)
+  .join('\n')}
+
+Errors by,
+  Severity:
+${/* TODO: Fix JSX expression */}`
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   .map(([severity, count]) => `- ${severity}: ${count}`)
   .join('\n')}
 
-Critical Errors: ${criticalErrors.length}
-Unresolved Errors: ${unresolvedErrors.length}
+Critical,
+  Errors: ${criticalErrors.length}
+Unresolved,
+  Errors: ${unresolvedErrors.length}
 
+<<<<<<< HEAD
 Recent Errors: ${errors;
   .slice(-5),
   .map(error =>),
+=======
+Recent,
+  Errors:
+${/* TODO: Fix JSX expression */}`
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       `- [${error.severity.toUpperCase()}] ${error.type}: ${error.message} (${error.frequency}x)`
   )
   .join('\n')}
 
-Session ID: ${this.sessionId}
-Last Updated: ${new Date().toISOString()}
+Session,
+  ID: ${this.sessionId}
+Last,
+  Updated: ${new Date().toISOString()}`
     `.trim();
   }
 
-  cleanup(): void {
-    this.errors.clear();
-    this.isInitialized = false;
-    this.errorCount = 0;
+  cleanup(): void {/* TODO: Fix JSX expression */}
     //     }
 }
 
 export default ErrorHandler;
+`
