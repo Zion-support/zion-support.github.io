@@ -184,6 +184,7 @@ const,
           </section>
         </main>
       </div>
+    </div>
     </>
   );
 };
