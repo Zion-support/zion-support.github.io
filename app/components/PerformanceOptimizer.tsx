@@ -55,10 +55,10 @@ const link = document.createElement('link');
               img.src = img.dataset.src;
               img.removeAttribute('data-src');
               observer.unobserve(img);
-          }
-        })});
-;
-const lazyImages = document.querySelectorAll('img[data-src]');
+            }
+          });
+        });
+        const lazyImages = document.querySelectorAll('img[data-src]');
       lazyImages.forEach(img => imageObserver.observe(img));
     // Performance monitoring
     if ($1) { const observer = new PerformanceObserver((list) => {
