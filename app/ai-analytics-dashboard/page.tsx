@@ -1,5 +1,4 @@
 'use client';
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
@@ -481,4 +480,3 @@ const AIAnalyticsDashboard: React.FC = () => {
 };
 
 export default AIAnalyticsDashboard;
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a8d8
