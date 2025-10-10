@@ -4,30 +4,80 @@ import { resolve } from 'path';
 
 export default defineConfig({
   plugins: [react()],
+  root: 'src',
+  publicDir: '../public',
   resolve: {
     alias: {
-      '@': resolve(__dirname, './app'),
-      '@/components': resolve(__dirname, './app/components'),
-      '@/pages': resolve(__dirname, './app'),
-      '@/utils': resolve(__dirname, './utils'),
-      '@/types': resolve(__dirname, './types'),
-      '@/hooks': resolve(__dirname, './hooks'),
-      '@/config': resolve(__dirname, './config'),
-      '@/data': resolve(__dirname, './data'),
-      '@/content': resolve(__dirname, './content')
-    }
+      '@': resolve(__dirname, './src'),
+      '@components': resolve(__dirname, './src/components'),
+      '@utils': resolve(__dirname, './src/utils'),
+      '@hooks': resolve(__dirname, './src/hooks'),
+      '@types': resolve(__dirname, './src/types'),
+    },
   },
   build: {
     target: 'esnext',
     minify: 'terser',
     sourcemap: false,
-    cssMinify: true,
-    reportCompressedSize: true,
-    chunkSizeWarningLimit: 1000,
-    assetsInlineLimit: 4096,
-    cssCodeSplit: true,
-    outDir: 'dist',
-    assetsDir: 'assets',
+    rollupOptions: {
+      plugins: [
+        {
+          name: 'add-preload-attributes',
+          generateBundle(options, bundle) {
+            // This plugin will add as="script" to modulepreload links
+            for (const fileName in bundle) {
+              const chunk = bundle[fileName];
+              if (chunk.type === 'asset' && fileName.endsWith('.html')) {
+                let source = chunk.source;
+                if (typeof source === 'string') {
+                  source = source.replace(
+                    /<link rel="modulepreload"([^>]*)>/g,
+                    '<link rel="modulepreload"$1 as="script">'
+                  );
+                  chunk.source = source;
+                }
+              }
+            }
+          }
+        }
+      ],
+      output: {
+        manualChunks: (id) => {
+          // Vendor chunks
+          if (id.includes('node_modules')) {
+            if (id.includes('react') || id.includes('react-dom')) {
+              return 'vendor-react';
+            }
+            if (id.includes('framer-motion') || id.includes('lucide-react') || id.includes('@heroicons')) {
+              return 'vendor-ui';
+            }
+            if (id.includes('recharts')) {
+              return 'vendor-charts';
+            }
+            if (id.includes('react-router-dom')) {
+              return 'vendor-router';
+            }
+            return 'vendor';
+          }
+          // Page chunks - group similar pages
+          if (id.includes('/src/ai-') || id.includes('/src/machine-learning') || id.includes('/src/nlp') || id.includes('/src/computer-vision')) {
+            return 'pages-ai';
+          }
+          if (id.includes('/src/it-') || id.includes('/src/cloud-') || id.includes('/src/cybersecurity') || id.includes('/src/devops')) {
+            return 'pages-it';
+          }
+          if (id.includes('/src/blog/')) {
+            return 'pages-blog';
+          }
+          if (id.includes('/src/')) {
+            return 'pages-other';
+          }
+        },
+        chunkFileNames: 'assets/[name]-[hash].js',
+        entryFileNames: 'assets/[name]-[hash].js',
+        assetFileNames: 'assets/[name]-[hash].[ext]',
+      },
+    },
     terserOptions: {
       compress: {
         drop_console: true,
@@ -86,106 +136,23 @@ export default defineConfig({
         wrap_func_args: true,
       }
     },
-    rollupOptions: {
-      output: {
-        manualChunks: (id) => {
-          // Vendor chunks - more granular splitting
-          if (id.includes('node_modules')) {
-            if (id.includes('react') || id.includes('react-dom')) {
-              return 'vendor-react';
-            }
-            if (id.includes('react-router')) {
-              return 'vendor-router';
-            }
-            if (id.includes('framer-motion')) {
-              return 'vendor-animations';
-            }
-            if (id.includes('lucide-react') || id.includes('@heroicons')) {
-              return 'vendor-icons';
-            }
-            if (id.includes('recharts')) {
-              return 'vendor-charts';
-            }
-            if (id.includes('web-vitals')) {
-              return 'vendor-analytics';
-            }
-            if (id.includes('clsx') || id.includes('tailwind-merge')) {
-              return 'vendor-utils';
-            }
-            if (id.includes('react-helmet-async')) {
-              return 'vendor-seo';
-            }
-            if (id.includes('gray-matter')) {
-              return 'vendor-content';
-            }
-            return 'vendor';
-          }
-          
-          // Component chunks - split by functionality
-          if (id.includes('/app/components/')) {
-            if (id.includes('Navigation') || id.includes('Footer')) {
-              return 'layout';
-            }
-            if (id.includes('SEO') || id.includes('Analytics')) {
-              return 'seo';
-            }
-            if (id.includes('Performance') || id.includes('Accessibility')) {
-              return 'optimization';
-            }
-            return 'components';
-          }
-          
-          // Page chunks - split by category
-          if (id.includes('/app/')) {
-            if (id.includes('/ai-') && !id.includes('/ai-services')) {
-              return 'ai-pages';
-            }
-            if (id.includes('/it-') || id.includes('/cloud-') || id.includes('/cybersecurity')) {
-              return 'it-pages';
-            }
-            if (id.includes('/micro-saas')) {
-              return 'saas-pages';
-            }
-            if (id.includes('/about') || id.includes('/contact') || id.includes('/team')) {
-              return 'company-pages';
-            }
-            return 'pages';
-          }
-          
-          return null;
-        },
-        chunkFileNames: 'assets/[name]-[hash].js',
-        entryFileNames: 'assets/[name]-[hash].js',
-        assetFileNames: (assetInfo) => {
-          const info = assetInfo.name?.split('.');
-          const ext = info?.[info.length - 1];
-          if (/\.(css)$/i.test(assetInfo.name || '')) {
-            return `assets/css/[name]-[hash].${ext}`;
-          }
-          if (/\.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name || '')) {
-            return `assets/images/[name]-[hash].${ext}`;
-          }
-          if (/\.(woff2?|eot|ttf|otf)$/i.test(assetInfo.name || '')) {
-            return `assets/fonts/[name]-[hash].${ext}`;
-          }
-          return `assets/[name]-[hash].${ext}`;
-        }
-      }
-    }
+    chunkSizeWarningLimit: 500,
+    reportCompressedSize: false,
+    cssCodeSplit: true,
+    assetsInlineLimit: 4096,
   },
   server: {
     port: 3000,
-    host: true
+    host: true,
   },
   preview: {
     port: 4173,
-    host: true
+    host: true,
   },
   optimizeDeps: {
-    include: ['react', 'react-dom', 'framer-motion', 'lucide-react', 'react-router-dom']
+    include: ['react', 'react-dom', 'framer-motion'],
   },
   css: {
-    devSourcemap: true,
-    postcss: './postcss.config.js'
-  }
+    postcss: './postcss.config.js',
+  },
 });
