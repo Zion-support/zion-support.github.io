@@ -34,6 +34,7 @@ async function handler(req, res) {
     };
 
     res.statusCode = 200;
+<<<<<<< HEAD
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({
       message: 'Payment intent created successfully',
@@ -41,6 +42,11 @@ async function handler(req, res) {
     }));
   } catch (error) {
     console.error('Payment intent creation error:', error);
+=======
+    res.json({ paymentIntent });
+  } catch (err) {
+    console.error("Error:", err);
+>>>>>>> origin/resolve-merge-conflicts
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to create payment intent' }));

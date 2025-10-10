@@ -1,10 +1,10 @@
-'use client';
 import React from 'react';
 import { Loader2 } from 'lucide-react';
 
-interface LoadingSpinnerProps {/* TODO: Fix JSX expression */}
+interface LoadingSpinnerProps {
 }
 
+<<<<<<< HEAD
 const LoadingSpinner: React.FC<LoadingSpinnerProps>= ({
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({,
   size = 'md',
@@ -32,9 +32,23 @@ const,
       <Loader2 className={`${sizeClasses[size]} text-cyan-400 animate-spin`} /></Loader2>
       {/* TODO: Fix JSX expression */}
         <p className="text-gray-300 text-sm animate-pulse">{text}</p>)
+=======
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
+  size = 'md',
+>>>>>>> origin/resolve-merge-conflicts
       )}
     </div>
   );
+
+  if (fullScreen) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+        {spinner}
+      </div>
+    );
+  }
+
+  return spinner;
 };
 
-export default LoadingSpinner;"`
+export default LoadingSpinner;

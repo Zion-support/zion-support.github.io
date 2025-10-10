@@ -3,6 +3,7 @@ const { withSentry } = require('./withSentry.cjs');
 async function handler(req, res) {
   if (req.method !== 'POST') {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     return res.status(405).json({ error: 'Method not allowed' });
 >>>>>>> cursor/fix-errors-and-merge-to-main-e8ab
@@ -10,11 +11,14 @@ async function handler(req, res) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Method not allowed' }));
     return;
+=======
+>>>>>>> origin/resolve-merge-conflicts
   }
 
   const { action, amount, currency = 'USD' } = req.body || {};
 
   if (!action) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     return res.status(400).json({ error: 'Action is required' });
@@ -23,12 +27,15 @@ async function handler(req, res) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Action is required' }));
     return;
+=======
+>>>>>>> origin/resolve-merge-conflicts
   }
 
   try {
     switch (action) {
       case 'create_payment_intent': {
         if (!amount) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
           return res.status(400).json({ error: 'Amount is required for payment intent' });
@@ -76,11 +83,24 @@ async function handler(req, res) {
           message: 'Payment intent created successfully',
           paymentIntent
         }));
+=======
+        }
+
+        const timestamp = Date.now();
+        const random = Math.random().toString(36).substr(2, 9);
+        const paymentIntent = {
+          id: `pi_${timestamp}_${random}`,
+        };
+
+        res.statusCode = 200;
+        res.json({ success: true, paymentIntent });
+>>>>>>> origin/resolve-merge-conflicts
         break;
       }
 
       case 'get_balance': {
         const balance = {
+<<<<<<< HEAD
 <<<<<<< HEAD
           currency,
           amount: 0, // In a real app, this would come from a database
@@ -139,6 +159,22 @@ async function handler(req, res) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Wallet operation failed' }));
 >>>>>>> cursor/fix-errors-and-merge-to-main-e8ab
+=======
+        };
+
+        res.statusCode = 200;
+        res.json({ success: true, balance });
+        break;
+      }
+
+      default:
+        res.statusCode = 400;
+        res.json({ error: 'Invalid action' });
+    }
+  } catch (err) {
+    console.error("Error:", err);
+    res.status(500).json({ error: 'Wallet operation failed' });
+>>>>>>> origin/resolve-merge-conflicts
   }
 }
 

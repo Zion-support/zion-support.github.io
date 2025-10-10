@@ -5,6 +5,7 @@ const path = require('path');
 async function handler(req, res) {
   if (req.method !== 'POST') {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     return res.status(405).json({ error: 'Method not allowed' });
 >>>>>>> cursor/fix-errors-and-merge-to-main-e8ab
@@ -12,11 +13,14 @@ async function handler(req, res) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Method not allowed' }));
     return;
+=======
+>>>>>>> origin/resolve-merge-conflicts
   }
 
   const { email, name, source = 'website' } = req.body || {};
 
   if (!email) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     return res.status(400).json({ error: 'Email is required' });
@@ -25,10 +29,13 @@ async function handler(req, res) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Email is required' }));
     return;
+=======
+>>>>>>> origin/resolve-merge-conflicts
   }
 
   try {
     if (!isValidEmail(email)) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       return res.status(400).json({ error: 'Invalid email' });
@@ -37,6 +44,8 @@ async function handler(req, res) {
       res.setHeader('Content-Type', 'application/json');
       res.end(JSON.stringify({ error: 'Invalid email format' }));
       return;
+=======
+>>>>>>> origin/resolve-merge-conflicts
     }
 
 <<<<<<< HEAD
@@ -57,6 +66,7 @@ async function handler(req, res) {
     let existing = [];
 
     try {
+<<<<<<< HEAD
       existing = JSON.parse(fs.readFileSync(file, 'utf8'));
       if (!Array.isArray(existing)) existing = [];
     } catch {
@@ -93,8 +103,18 @@ async function handler(req, res) {
       subscribedAt: new Date().toISOString()
     });
 >>>>>>> cursor/fix-errors-and-merge-to-main-e8ab
+=======
+    }
+
+    existing.push({
+      email,
+      source,
+      subscribedAt: new Date().toISOString()
+    });
+>>>>>>> origin/resolve-merge-conflicts
 
     res.statusCode = 200;
+<<<<<<< HEAD
 <<<<<<< HEAD
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({
@@ -121,3 +141,10 @@ async function handler(req, res) {
 }
 
 module.exports = handler;
+=======
+    res.status(500).json({ error: err.message || 'Subscription failed' });
+  }
+}
+
+module.exports = { handler };
+>>>>>>> origin/resolve-merge-conflicts

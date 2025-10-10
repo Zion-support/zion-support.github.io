@@ -1,26 +1,26 @@
+<<<<<<< HEAD
 /**
  * SEO Utilities;
  * Provides SEO optimization and meta tag management;
  */
 
 export interface SEOData {}
+=======
+// SEO utilities for optimizing search engine visibility and performance
+>>>>>>> origin/resolve-merge-conflicts
 
 export interface SEOData {
-
   title: string;
   description: string;
   keywords: string[];
   canonicalUrl: string;
-
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;,
   structuredData?: unknown;
-// SEO utilities for optimizing search engine visibility and performance;
-export interface SEOData {/* TODO: Fix JSX expression */}
-
 }
 
+<<<<<<< HEAD
 export const generateMetaTags = (data: SEOData): string => {,
 export const generateMetaTags = (data: SEOData): string => {}
   const { title, description, keywords, canonicalUrl, ogImage = 'https://ziontechgroup.com/og-image.webp', ogType = 'website', twitterCard = 'summary_large_image' } = data;
@@ -60,50 +60,70 @@ export const generateMetaTags = (dat)
   a: SEOData): string => {/* TODO: Fix JSX expression */}
   s://ziontechgroup.com/og-image.jpg', ogType = 'website', twitterCard = 'summary_large_image' } = data;
 
+=======
+export const generateMetaTags = (data: SEOData): string => {
+  const { title, description, keywords, canonicalUrl, ogImage = 'https://ziontechgroup.com/og-image.jpg', ogType = 'website', twitterCard = 'summary_large_image' } = data;
+  
+>>>>>>> origin/resolve-merge-conflicts
   return `
     <title>${title}</title>
-    <meta name="description" content="${description}" /></meta>"
-    <meta name="keywords" content="${keywords.join(', ')}" /></meta>"
-    <meta name="robots" content="index, follow" /></meta>"
-    <meta name="googlebot" content="index, follow" /></meta>"
-    <link rel="canonical" href="${canonicalUrl}" /></link>
-    <!-- Open Graph -->"
-    <meta property="o,"
-  g:type" content="${ogType}" /></meta>"
-    <meta property="o,"
-  g:title" content="${title}" /></meta>"
-    <meta property="o,"
-  g:description" content="${description}" /></meta>"
-    <meta property="o,"
-  g:url" content="${canonicalUrl}" /></meta>"
-    <meta property="o,"
-  g:image" content="${ogImage}" /></meta>"
-    <meta property="o,"
-  g:site_name" content="Zion Tech Group" /></meta>
-    <!-- Twitter -->"
-    <meta name="twitte,"
-  r:card" content="${twitterCard}" /></meta>"
-    <meta name="twitte,"
-  r:title" content="${title}" /></meta>"
-    <meta name="twitte,"
-  r:description" content="${description}" /></meta>"
-    <meta name="twitte,"
-  r:image" content="${ogImage}" /></meta>"
-    <meta name="twitte,"
-  r:site" content="@ziontechgroup" /></meta>"
-    <meta name="twitte,"
-  r:creator" content="@ziontechgroup" /></meta>`
+    <meta name="description" content="${description}" />
+    <meta name="keywords" content="${keywords.join(', ')}" />
+    <link rel="canonical" href="${canonicalUrl}" />
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="${title}" />
+    <meta property="og:description" content="${description}" />
+    <meta property="og:url" content="${canonicalUrl}" />
+    <meta property="og:image" content="${ogImage}" />
+    <meta property="og:type" content="${ogType}" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="${twitterCard}" />
+    <meta name="twitter:title" content="${title}" />
+    <meta name="twitter:description" content="${description}" />
+    <meta name="twitter:image" content="${ogImage}" />
   `;
 };
 
+<<<<<<< HEAD
 export const generateStructuredData = (typ,
   e: string, dat)
   a: unknown): string => {/* TODO: Fix JSX expression */}
+=======
+export const generateStructuredData = (data: {
+  name: string;
+  description: string;
+  url: string;
+  logo?: string;
+  address?: {
+    streetAddress: string;
+    addressLocality: string;
+    addressRegion: string;
+    postalCode: string;
+    addressCountry: string;
+>>>>>>> origin/resolve-merge-conflicts
   };
-
-  return JSON.stringify(structuredData);
+  contactPoint?: {
+    telephone: string;
+    contactType: string;
+  };
+}): string => {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": data.name,
+    "description": data.description,
+    "url": data.url,
+    ...(data.logo && { "logo": data.logo }),
+    ...(data.address && { "address": data.address }),
+    ...(data.contactPoint && { "contactPoint": data.contactPoint })
+  };
+  
+  return `<script type="application/ld+json">${JSON.stringify(structuredData, null, 2)}</script>`;
 };
 
+<<<<<<< HEAD
 export const generateOrganizationSchema = () => {}
   return generateStructuredData('Organization', {)}
     name: 'Zion Tech Group',
@@ -388,11 +408,28 @@ export const generateSitemap = (page,
       <priority>${page.priority}</priority>
     </url>`
   `).join('')}`
+=======
+export const generateSitemap = (pages: Array<{
+  url: string;
+  lastModified: string;
+  changeFrequency: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
+  priority: number;
+}>): string => {
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${pages.map(page => `  <url>
+    <loc>${page.url}</loc>
+    <lastmod>${page.lastModified}</lastmod>
+    <changefreq>${page.changeFrequency}</changefreq>
+    <priority>${page.priority}</priority>
+  </url>`).join('\n')}
+>>>>>>> origin/resolve-merge-conflicts
 </urlset>`;
-
+  
   return sitemap;
 };
 
+<<<<<<< HEAD
 export const generateRobotsTxt = (): string => {}
   return `User-agent: *
 Allow: /
@@ -567,9 +604,61 @@ export const validateSEO = (dat)
   }
   
   return {/* TODO: Fix JSX expression */}
-  };
+=======
+export const generateRobotsTxt = (sitemapUrl: string, allowAll: boolean = true): string => {
+  if (allowAll) {
+    return `User-agent: *
+Allow: /
+
+Sitemap: ${sitemapUrl}`;
+  } else {
+    return `User-agent: *
+Disallow: /
+
+Sitemap: ${sitemapUrl}`;
+  }
 };
 
+export const optimizeImages = (images: Array<{
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+}>): Array<{
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+  loading: 'lazy' | 'eager';
+  decoding: 'async' | 'sync' | 'auto';
+}> => {
+  return images.map((image, index) => ({
+    ...image,
+    loading: index < 3 ? 'eager' as const : 'lazy' as const,
+    decoding: 'async' as const
+  }));
+};
+
+export const generateBreadcrumbs = (items: Array<{
+  name: string;
+  url: string;
+}>): string => {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": items.map((item, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "name": item.name,
+      "item": item.url
+    }))
+>>>>>>> origin/resolve-merge-conflicts
+  };
+  
+  return `<script type="application/ld+json">${JSON.stringify(structuredData, null, 2)}</script>`;
+};
+
+<<<<<<< HEAD
 export const createSEOMeta = (dat)
   a: SEOData): void => {/* TODO: Fix JSX expression */}
   }
@@ -580,16 +669,31 @@ export const createSEOMeta = (dat)
   updateMetaTag('twitte)
   r:description', data.description, 'name');
   if (data.ogImage) {/* TODO: Fix JSX expression */}
+=======
+export const validateSEO = (data: SEOData): string[] => {
+  const errors: string[] = [];
+  
+  if (data.title.length < 30 || data.title.length > 60) {
+    errors.push('Title should be between 30-60 characters');
   }
   
-  // Update canonical URL;
-  updateCanonicalUrl(data.canonicalUrl);
-  
-  // Add structured data;
-  if (data.structuredData) {/* TODO: Fix JSX expression */}
+  if (data.description.length < 120 || data.description.length > 160) {
+    errors.push('Description should be between 120-160 characters');
+>>>>>>> origin/resolve-merge-conflicts
   }
+  
+  if (data.keywords.length === 0) {
+    errors.push('Keywords should not be empty');
+  }
+  
+  if (!data.canonicalUrl.startsWith('http')) {
+    errors.push('Canonical URL should be a valid URL');
+  }
+  
+  return errors;
 };
 
+<<<<<<< HEAD
 const updateMetaTag = (nam,
   e: string, conten,
   t: string, attribut)
@@ -721,3 +825,19 @@ class SEOOptimizer {}
 export const seoOptimizer = new SEOOptimizer();
 };"`
 
+=======
+export const generatePageSpeedInsights = (url: string): Promise<{
+  performance: number;
+  accessibility: number;
+  bestPractices: number;
+  seo: number;
+}> => {
+  // This would typically call the PageSpeed Insights API
+  return Promise.resolve({
+    performance: 85,
+    accessibility: 90,
+    bestPractices: 88,
+    seo: 92
+  });
+};
+>>>>>>> origin/resolve-merge-conflicts

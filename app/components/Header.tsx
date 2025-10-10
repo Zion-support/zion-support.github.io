@@ -16,7 +16,7 @@ const Header: React.FC = () => {,
     </>,
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Phone, Mail, ChevronDown, Brain, Cloud, Shield, Code, Users, Briefcase, BookOpen, MessageSquare } from 'lucide-react';
+import { Menu, X, Phone, Mail, ChevronDown, Brain, Cloud, Shield, Code, Users, Briefcase, BookOpen, MessageSquare, Target, Zap, Stethoscope, CreditCard, FileText, BarChart, Atom, Bot, Link as LinkIcon, Smartphone, Settings, Eye, Activity } from 'lucide-react';
 
 const Header: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -34,6 +34,7 @@ const Header: React.FC = () => {
       { name: 'IT Services', href: '/it-services', icon: Code, description: 'Information Technology Services' },
       { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: Cloud, description: 'Cloud Migration & Setup' },
       { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield, description: 'Security Solutions' },
+      { name: 'Micro SaaS', href: '/micro-saas', icon: Settings, description: 'Ready-to-Use SaaS Solutions' },
       { name: 'All Services', href: '/services', icon: Briefcase, description: 'View All Services' }
     ],
     'AI Solutions': [
@@ -42,21 +43,33 @@ const Header: React.FC = () => {
       { name: 'AI Healthcare', href: '/ai-healthcare', icon: Stethoscope, description: 'Medical AI Solutions' },
       { name: 'AI Fintech', href: '/ai-fintech', icon: CreditCard, description: 'Financial AI' },
       { name: 'AI Content Generation', href: '/ai-content-generation', icon: FileText, description: 'Content Creation' },
-      { name: 'AI Data Analytics', href: '/ai-data-analytics', icon: BarChart, description: 'Data Insights' }
+      { name: 'AI Data Analytics', href: '/ai-data-analytics', icon: BarChart, description: 'Data Insights' },
+      { name: 'AI CRM', href: '/ai-crm', icon: Users, description: 'AI Customer Management' },
+      { name: 'AI Project Management', href: '/ai-project-management', icon: Briefcase, description: 'Smart Project Tools' }
     ],
     'Emerging Tech': [
       { name: 'Quantum Computing', href: '/quantum-computing', icon: Atom, description: 'Next-Gen Computing' },
       { name: 'Autonomous Systems', href: '/autonomous-systems', icon: Bot, description: 'Self-Managing Systems' },
-      { name: 'Blockchain', href: '/blockchain', icon: Link, description: 'Decentralized Solutions' },
+      { name: 'Blockchain', href: '/blockchain', icon: LinkIcon, description: 'Decentralized Solutions' },
       { name: 'IoT Edge Computing', href: '/iot-edge-computing', icon: Smartphone, description: 'Connected Devices' },
-      { name: 'Robotics', href: '/robotics', icon: Bot, description: 'Intelligent Robots' }
+      { name: 'Robotics', href: '/robotics', icon: Bot, description: 'Intelligent Robots' },
+      { name: 'AR/VR Solutions', href: '/ar-vr-solutions', icon: Eye, description: 'Immersive Technology' }
     ],
     'Company': [
       { name: 'About Us', href: '/about', icon: Users, description: 'Our Story & Mission' },
       { name: 'Our Team', href: '/team', icon: Users, description: 'Meet Our Experts' },
       { name: 'Careers', href: '/careers', icon: Briefcase, description: 'Join Our Team' },
       { name: 'Case Studies', href: '/case-studies', icon: BookOpen, description: 'Success Stories' },
+      { name: 'Blog', href: '/blog', icon: FileText, description: 'Latest News & Insights' },
       { name: 'Contact', href: '/contact', icon: MessageSquare, description: 'Get In Touch' }
+    ],
+    'Resources': [
+      { name: 'Documentation', href: '/docs', icon: FileText, description: 'Technical Documentation' },
+      { name: 'API Docs', href: '/api-docs', icon: Code, description: 'API Reference' },
+      { name: 'Support', href: '/support', icon: MessageSquare, description: 'Get Help & Support' },
+      { name: 'Pricing', href: '/pricing', icon: CreditCard, description: 'Service Pricing' },
+      { name: 'Free Consultation', href: '/consultation', icon: Phone, description: 'Schedule a Call' },
+      { name: 'Status', href: '/status', icon: Activity, description: 'System Status' }
     ]
   };
 

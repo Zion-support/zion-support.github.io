@@ -2,6 +2,7 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { resolve } from 'path';
 
+<<<<<<< HEAD
 export default defineConfig({)
   plugins: [react()],
   root: '.',
@@ -14,6 +15,8 @@ export default defineConfig({)
       '@hooks': resolve(__dirname, 'app/hooks'),
       '@types': resolve(__dirname, 'app/types'),
 
+=======
+>>>>>>> origin/resolve-merge-conflicts
 export default defineConfig({
   plugins: [react()],
   resolve: {
@@ -29,6 +32,7 @@ export default defineConfig({
       '@/content': resolve(__dirname, './content')
     }
   },
+<<<<<<< HEAD
   buil,
   d: {/* TODO: Fix JSX expression */}
 export default defineConfig({
@@ -41,6 +45,8 @@ export default defineConfig({
       '@hooks': resolve(__dirname, './src/hooks'),
       '@types': resolve(__dirname, './src/types'),
       '@app': resolve(__dirname, './app')}},
+=======
+>>>>>>> origin/resolve-merge-conflicts
   build: {
     target: 'esnext'
     minify: 'terser'
@@ -180,6 +186,10 @@ export default defineConfig({
     assetsDir: 'assets',
     sourcemap: false,
     minify: 'terser',
+    target: 'es2020',
+    cssTarget: 'chrome80',
+    reportCompressedSize: true,
+    chunkSizeWarningLimit: 1000,
     rollupOptions: {
       output: {
         manualChunks: (id) => {
@@ -202,7 +212,6 @@ export default defineConfig({
             }
             return 'vendor-misc';
           }
-          
           // App chunks
           if (id.includes('/app/ai-')) {
             return 'ai-services';
@@ -213,6 +222,7 @@ export default defineConfig({
           if (id.includes('/app/components/')) {
             return 'components';
           }
+<<<<<<< HEAD
 export default defineConfig({
   plugins: [react()],
   resolve: {
@@ -232,6 +242,8 @@ export default defineConfig({
           router: ['react-router-dom'],
           utils: ['clsx', 'tailwind-merge']
           return null;
+=======
+>>>>>>> origin/resolve-merge-conflicts
           return 'app';
         },
         chunkFileNames: 'assets/[name]-[hash].js'
@@ -271,6 +283,7 @@ export default defineConfig({
     terserOptions: {
       compress: {
         drop_console: true,
+<<<<<<< HEAD
         drop_debugger: true},
       mangle: {
         safari10: true},
@@ -283,11 +296,27 @@ export default defineConfig({
       },
       format: {
         comments: false
+=======
+        drop_debugger: true,
+        pure_funcs: ['console.log', 'console.info', 'console.debug'],
+        passes: 2,
+      },
+      mangle: {
+        safari10: true,
+        properties: {
+          regex: /^_/
+        }
+      },
+      format: {
+        comments: false,
+        ascii_only: true
+>>>>>>> origin/resolve-merge-conflicts
       }
     },
     chunkSizeWarningLimit: 500,
     reportCompressedSize: true,
     cssCodeSplit: true,
+<<<<<<< HEAD
     assetsInlineLimit: 4096},
   server: {
     port: 3000,
@@ -303,6 +332,12 @@ export default defineConfig({
   },
   server: {
     port: 3000,
+=======
+    assetsInlineLimit: 4096,
+  },
+  server: {
+    port: 3000,
+>>>>>>> origin/resolve-merge-conflicts
     host: true
   },
   preview: {
@@ -315,4 +350,8 @@ export default defineConfig({
   css: {
     devSourcemap: true
   }
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> origin/resolve-merge-conflicts

@@ -31,12 +31,19 @@ async function handler(req, res) {
 
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
+<<<<<<< HEAD
     res.end(JSON.stringify({
       message: 'Checkout session created successfully',
       session: sessionData
     }));
   } catch (error) {
     console.error('Checkout session creation error:', error);
+=======
+    res.end(JSON.stringify({ session: sessionData }));
+  } catch (err) {
+    console.error("Error:", err);
+    console.error('Error creating checkout session:', err);
+>>>>>>> origin/resolve-merge-conflicts
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to create checkout session' }));

@@ -3,6 +3,7 @@ const { withSentry } = require('./withSentry.cjs');
 async function handler(req, res) {
   if (req.method !== 'POST') {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     return res.status(405).json({ error: 'Method not allowed' });
 >>>>>>> cursor/fix-errors-and-merge-to-main-e8ab
@@ -10,6 +11,8 @@ async function handler(req, res) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Method not allowed' }));
     return;
+=======
+>>>>>>> origin/resolve-merge-conflicts
   }
 
   try {
@@ -18,6 +21,7 @@ async function handler(req, res) {
 
     if (!apiKey) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       return res.status(500).json({ error: 'EasyPost API key not configured' });
 >>>>>>> cursor/fix-errors-and-merge-to-main-e8ab
@@ -25,10 +29,13 @@ async function handler(req, res) {
       res.setHeader('Content-Type', 'application/json');
       res.end(JSON.stringify({ error: 'EasyPost API key not configured' }));
       return;
+=======
+>>>>>>> origin/resolve-merge-conflicts
     }
 
     const response = await fetch('https://api.easypost.com/v2/shipments', {
       method: 'POST',
+<<<<<<< HEAD
 <<<<<<< HEAD
       headers: {
         'Content-Type': 'application/json',
@@ -46,16 +53,25 @@ async function handler(req, res) {
       headers: {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${apiKey}`},
+=======
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${apiKey}`,
+      },
+>>>>>>> origin/resolve-merge-conflicts
       body: JSON.stringify({
         shipment: {
           to_address: toAddress,
           from_address: fromAddress,
           parcel: parcel
         }
+<<<<<<< HEAD
           from_address: fromAddress,
           to_address: toAddress,
           parcel: parcel
         }
+=======
+>>>>>>> origin/resolve-merge-conflicts
       }),
       headers: {
         'Content-Type': 'application/json',
@@ -71,6 +87,7 @@ async function handler(req, res) {
       })
     });
 
+<<<<<<< HEAD
     if (!response.ok) {
 <<<<<<< HEAD
       throw new Error(`EasyPost API error: ${response.status}`);
@@ -81,12 +98,18 @@ async function handler(req, res) {
       res.end(JSON.stringify({ error: data.error || 'Failed to fetch rates' }));
       return;
 >>>>>>> cursor/fix-errors-and-merge-to-main-e8ab
+=======
+    const data = await response.json();
+
+    if (!response.ok) {
+>>>>>>> origin/resolve-merge-conflicts
     }
 
     const data = await response.json();
     const rates = data.shipment.rates || [];
 
     res.statusCode = 200;
+<<<<<<< HEAD
 <<<<<<< HEAD
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({
@@ -116,6 +139,12 @@ async function handler(req, res) {
     res.statusCode = 500;
     res.json({ error: err.message });
 >>>>>>> cursor/fix-errors-and-merge-to-main-e8ab
+=======
+    res.json({ success: true, rates: data.rates });
+  } catch (err) {
+    console.error("Error:", err);
+    res.status(500).json({ error: err.message });
+>>>>>>> origin/resolve-merge-conflicts
   }
 }
 

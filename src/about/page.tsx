@@ -58,7 +58,6 @@ const AboutPage: React.FC = () => {
             We are a leading technology company specializing in AI and IT solutions that transform businesses and drive innovation.
           </p>
 import { Users, CheckCircle, Star, Shield, Award, Target, Globe, Brain, Cloud, Code, BarChart, TrendingUp, Phone, Mail, MapPin, Clock, ArrowRight, Zap, Cpu, Database, Lock, Smartphone, Settings, Calendar, FileText, MessageSquare, Star as StarIcon, Award as AwardIcon, Shield as ShieldIcon, Users as UsersIcon } from 'lucide-react';
-
 export default function AboutPage() {
   const teamMembers = [
     {
@@ -90,7 +89,6 @@ export default function AboutPage() {
       expertise: ['NLP', 'Computer Vision', 'Deep Learning']
     }
   ];
-
   const values = [
     {
       icon: Brain,
@@ -113,14 +111,12 @@ export default function AboutPage() {
       description: 'We believe technology should make the world better, more efficient, and more connected.'
     }
   ];
-
   const achievements = [
     { number: '500+', label: 'Successful Projects', icon: Target },
     { number: '100+', label: 'Enterprise Clients', icon: Users },
     { number: '300%', label: 'Average ROI', icon: TrendingUp },
     { number: '99.9%', label: 'Uptime Guarantee', icon: Shield }
   ];
-
   const timeline = [
     {
       year: '2018',
@@ -158,7 +154,6 @@ export default function AboutPage() {
       description: 'Awarded "AI Innovation Leader" by TechCrunch and "Best AI Solutions Provider" by Gartner.'
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
@@ -358,6 +353,7 @@ export default function AboutPage() {
           </div>
         </section>
       </div>
+<<<<<<< HEAD
 
       <Footer />
     </div>
@@ -365,6 +361,8 @@ export default function AboutPage() {
 };
 
 export default AboutPage;
+=======
+>>>>>>> origin/resolve-merge-conflicts
       {/* Stats Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -405,7 +403,6 @@ export default AboutPage;
           </div>
         </div>
       </section>
-
       {/* Mission & Vision */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -463,7 +460,6 @@ export default AboutPage;
           </div>
         </div>
       </section>
-
       {/* Values */}
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
@@ -488,7 +484,6 @@ export default AboutPage;
           </div>
         </div>
       </section>
-
       {/* Team */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -523,7 +518,6 @@ export default AboutPage;
           </div>
         </div>
       </section>
-
       {/* Achievements */}
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
@@ -552,7 +546,6 @@ export default AboutPage;
           </div>
         </div>
       </section>
-
       {/* Timeline */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -584,7 +577,6 @@ export default AboutPage;
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
         <div className="container mx-auto px-4 text-center">

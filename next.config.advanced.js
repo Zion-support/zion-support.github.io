@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+<<<<<<< HEAD
   experimental: {,
     optimizeCss: true;
     optimizePackageImports: ['@mui/material', '@mui/icons-material'],
@@ -31,14 +32,40 @@ const nextConfig = {/* TODO: Fix JSX expression */}
             value: 'DENY',
   compile,
   r: {/* TODO: Fix JSX expression */}
+=======
+  reactStrictMode: true,
+  swcMinify: true,
+  compress: true,
+  poweredByHeader: false,
+  generateEtags: false,
+  experimental: {
+    optimizeCss: true,
+    optimizePackageImports: ['@heroicons/react', 'lucide-react', 'framer-motion'],
   },
-  image,
-  s: {/* TODO: Fix JSX expression */}
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+>>>>>>> origin/resolve-merge-conflicts
   },
-  async headers() {/* TODO: Fix JSX expression */}
+  images: {
+    formats: ['image/webp', 'image/avif'],
+    minimumCacheTTL: 60,
+    dangerouslyAllowSVG: true,
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+  },
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'X-Frame-Options',
+            value: 'DENY',
           },
-          {/* TODO: Fix JSX expression */}
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
           },
+<<<<<<< HEAD
           {/* TODO: Fix JSX expression */}
           }]},
       {
@@ -50,5 +77,25 @@ const nextConfig = {/* TODO: Fix JSX expression */}
       {/* TODO: Fix JSX expression */}
           }]}];
   }};
+=======
+          {
+            key: 'Referrer-Policy',
+            value: 'origin-when-cross-origin',
+          },
+        ],
+      },
+      {
+        source: '/api/(.*)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=3600, s-maxage=3600',
+          },
+        ],
+      },
+    ];
+  },
+};
+>>>>>>> origin/resolve-merge-conflicts
 
 module.exports = nextConfig;

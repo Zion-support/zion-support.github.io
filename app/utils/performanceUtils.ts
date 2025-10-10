@@ -758,6 +758,7 @@ export const performanceMonitor = () => {
     // Monitor Core Web Vitals
     const observer = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
+        // eslint-disable-next-line no-console
         console.log('Performance metric:', entry.name, entry.value);
       }
     });
@@ -765,6 +766,7 @@ export const performanceMonitor = () => {
     try {
       observer.observe({ entryTypes: ['measure', 'navigation', 'paint'] });
     } catch (error) {
+      // eslint-disable-next-line no-console
       console.warn('Performance monitoring not supported:', error);
     }
   }
@@ -829,7 +831,9 @@ export const collectPerformanceMetrics = () => {
       setTimeout(() => {
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         if (navigation) {
+          // eslint-disable-next-line no-console
           console.log('Page load time:', navigation.loadEventEnd - navigation.loadEventStart);
+          // eslint-disable-next-line no-console
           console.log('DOM content loaded:', navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart);
         }
       }, 0);

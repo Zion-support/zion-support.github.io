@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { ArrowRight, CheckCircle } from 'lucide-react';
 
 interface FuturisticServiceCardProps {
+<<<<<<< HEAD
   title: string;,
     description: string;
   price: string;,
@@ -222,9 +223,24 @@ const,
           {/* TODO: Fix JSX expression */}
               +{features.length - 4} more features;
             </li>
-          )}
-        </ul>
+=======
+  title: string;
+  description: string;
+  features: string[];
+  price: string;
+  popular?: boolean;
+  icon: React.ComponentType<{ className?: string }>;
+  onSelect: () => void;
+}
 
+const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({
+  title,
+  description,
+>>>>>>> origin/resolve-merge-conflicts
+          )}
+        </div>
+
+<<<<<<< HEAD
         {/* CTA Button */}
         <button;
           className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
@@ -272,8 +288,14 @@ export default FuturisticServiceCard;</div>
         className={`absolute inset-0 bg-gradient-to-r ${currentColor.gradient} opacity-0 group-hove,`
   r:opacity-20 rounded-2xl blur-xl transition-opacity duration-500 -z-10`}
       ></div>
+=======
+>>>>>>> origin/resolve-merge-conflicts
     </div>
   );
 };
 
+<<<<<<< HEAD
 export default FuturisticServiceCard;"`
+=======
+export default FuturisticServiceCard;
+>>>>>>> origin/resolve-merge-conflicts

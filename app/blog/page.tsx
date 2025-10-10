@@ -1,4 +1,5 @@
 'use client';
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Calendar, Clock, ArrowRight, Search, Filter, TrendingUp, Star, Eye, MessageCircle, BookOpen, Brain, Cloud, Shield, Code } from 'lucide-react';
 
@@ -34,13 +35,15 @@ export default function BlogPage() {}
     comments: 23;
     featured: true;
   };
+=======
+>>>>>>> origin/resolve-merge-conflicts
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { Calendar, User, ArrowRight, Tag } from 'lucide-react';
 
 const BlogPage: React.FC = () => {
+<<<<<<< HEAD
   const blogPosts = [
     {
       id: 2;
@@ -278,6 +281,8 @@ const BlogPage: React.FC = () => {
   }
 >>>>>>> origin/resolve-merge-conflicts-1759965566
 
+=======
+>>>>>>> origin/resolve-merge-conflicts
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}</div>
       <section className="relative py-20 lg:py-32 overflow-hidden">
@@ -313,21 +318,20 @@ const BlogPage: React.FC = () => {
               </div>
     <>
       <Helmet>
-        <title>Blog - Zion Tech Group | AI & IT Insights</title>
-        <meta name="description" content="Stay updated with the latest insights on AI, IT solutions, cybersecurity, and emerging technologies from Zion Tech Group experts." />
-        <meta name="keywords" content="AI blog, IT insights, technology trends, cybersecurity, automation, cloud computing, business technology" />
+        <title>Blog - Zion Tech Group</title>
+        <meta name="description" content="Read our latest insights on AI, technology, and business solutions. Stay updated with industry trends and best practices." />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         <Navigation />
         
-        <main className="pt-24">
-          {/* Hero Section */}
-          <section className="container mx-auto px-4 py-16">
-            <div className="text-center mb-16">
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
+        <main className="pt-20">
+          <div className="container mx-auto px-4 py-16">
+            <div className="max-w-4xl mx-auto">
+              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
                 Our Blog
               </h1>
+<<<<<<< HEAD
               <p className="text-xl text-cyan-400 mb-8 max-w-4xl mx-auto">
                 Stay ahead of the curve with insights, trends, and expert advice on AI, IT solutions, 
                 and emerging technologies that are shaping the future of business.
@@ -673,11 +677,22 @@ const BlogPage: React.FC = () => {
                 <button className="cyber-button px-6 py-3">
                   Subscribe
                 </button>
+=======
+              
+              <div className="prose prose-lg max-w-none">
+                <p className="text-xl text-gray-600 mb-8">
+                  Insights, trends, and best practices in AI and technology.
+                </p>
+                
+                <p className="text-gray-700 mb-6">
+                  Coming soon - stay tuned for our latest articles and insights!
+                </p>
+>>>>>>> origin/resolve-merge-conflicts
               </div>
             </div>
-          </section>
+          </div>
         </main>
-
+        
         <Footer />
       </div>
     </>

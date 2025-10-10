@@ -227,8 +227,17 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
           name: 'What makes Zion Tech Group different?',
           acceptedAnswer: {
             '@type': 'Answer',
+<<<<<<< HEAD
             text: 'We combine cutting-edge AI technology with deep industry expertise to deliver transformative solutions that drive real business value.'}}]};
   }, [seoData, enableTwitterCards]);
+=======
+            text: 'We combine cutting-edge AI technology with deep industry expertise to deliver transformative solutions that drive real business value.',
+          },
+        },
+      ],
+    };
+  }, [enableTwitterCards]);
+>>>>>>> origin/resolve-merge-conflicts
 
   // Generate meta tags
   const generateMetaTags = useCallback(() => {}
@@ -295,8 +304,12 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
     return {}
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
+<<<<<<< HEAD
       mainEntity: seoData.faqs.map(faq => ({)}
       mainEntity: seoData.faq.map((faq: any) => ({
+=======
+      mainEntity: seoData.faq.map((faq: { question: string; answer: string }) => ({
+>>>>>>> origin/resolve-merge-conflicts
         '@type': 'Question',
         name: faq.question,
         acceptedAnswer: {}
@@ -381,6 +394,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
     if (typeof window !== 'undefined' && 'performance' in window) {
       const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       if (perfData) {
+<<<<<<< HEAD
         // Track performance metrics;
         if (typeof (window as any).gtag === 'function') {
           (window as any).gtag('event', 'page_load_performance', {
@@ -392,6 +406,11 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
         // Track performance metrics
         if (typeof (window as any).gtag === 'function') {}
           (window as any).gtag('event', 'page_load_performance', {)}
+=======
+        // Track performance metrics
+        if (typeof (window as unknown as { gtag?: (...args: unknown[]) => void }).gtag === 'function') {
+          (window as unknown as { gtag: (...args: unknown[]) => void }).gtag('event', 'page_load_performance', {
+>>>>>>> origin/resolve-merge-conflicts
             event_category: 'Performance',
             event_label: 'Page Load',
             value: Math.round(perfData.loadEventEnd - perfData.fetchStart)
