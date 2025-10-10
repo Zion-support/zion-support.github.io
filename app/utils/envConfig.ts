@@ -11,14 +11,14 @@ export interface EnvConfig {}
   enableLogging: boolean,
   logLevel: 'debug' | 'info' | 'warn' | 'error',
   sentryDsn?: string;
-  gaTrackingId?: string;}
+  gaTrackingId?: string}
 }
 class EnvironmentConfig {
   private config: EnvConfig,
   private isInitialized = false;
   constructor() {,
     this.config = this.loadConfig(),
-    this.isInitialized = true;}
+    this.isInitialized = true}
   }
   private loadConfig(): EnvConfig {
     // Safely access environment variables with defaults;
@@ -28,7 +28,7 @@ class EnvironmentConfig {}
   private isInitialized = false
   constructor() {}
     this.config = this.loadConfig()
-    this.isInitialized = true;}
+    this.isInitialized = true}
   }
   private loadConfig(): EnvConfig {}
     // Safely access environment variables with defaults
@@ -49,22 +49,20 @@ export interface EnvConfig {/* TODO: Fix JSX expression */}
 class EnvironmentConfig {/* TODO: Fix JSX expression */}
   }
   private loadConfig(): EnvConfig {/* TODO: Fix JSX expression */}
-    };
-  }
+    }}
   /**
    * Get the entire configuration object;
    */
   public getConfig(): Readonly<EnvConfig> {}
     return Object.freeze({ ...this.config })
   public getConfig(): Readonly<EnvConfig> {/* TODO: Fix JSX expression */}
-    return Object.freeze({ ...this.config });
-  }
+    return Object.freeze({ ...this.config })}
   /**
    * Get a specific configuration value;
    */
   public get<K extends keyof EnvConfig>(key: K): EnvConfig[K] {,
   public get<K extends keyof EnvConfig>(key: K): EnvConfig[K] {}
-    return this.config[key];}
+    return this.config[key]}
   public get<K extends keyof EnvConfig>(ke)
   y: K): EnvConfig[K] {/* TODO: Fix JSX expression */}
   }
@@ -72,21 +70,21 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
    * Check if running in production;
    */
   public isProduction(): boolean {}
-    return this.config.nodeEnv === 'production';}
+    return this.config.nodeEnv === 'production'}
   public isProduction(): boolean {/* TODO: Fix JSX expression */}
   }
   /**
    * Check if running in development;
    */
   public isDevelopment(): boolean {}
-    return this.config.nodeEnv === 'development';}
+    return this.config.nodeEnv === 'development'}
   public isDevelopment(): boolean {/* TODO: Fix JSX expression */}
   }
   /**
    * Check if running in test mode;
    */
   public isTest(): boolean {}
-    return this.config.nodeEnv === 'test';}
+    return this.config.nodeEnv === 'test'}
   public isTest(): boolean {/* TODO: Fix JSX expression */}
   }
   /**
@@ -94,24 +92,24 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
    */
   public validate(requiredVars: (keyof EnvConfig)[]): {,
     valid: boolean,
-    missing: string[];}
+    missing: string[]}
   } {
     const missing: string[] = [],
     for (const varName of requiredVars) {,
       if (!this.config[varName]) {,
-        missing.push(varName);}
+        missing.push(varName)}
       }
     }
     return {
       valid: missing.length === 0;
   public validate(requiredVars: (keyof EnvConfig)[]): {}
     valid: boolean
-    missing: string[];}
+    missing: string[]}
   } {}
     const missing: string[] = []
     for (const varName of requiredVars) {}
       if (!this.config[varName]) {}
-        missing.push(varName);}
+        missing.push(varName)}
       }
     }
     return {}
@@ -124,8 +122,7 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
       }
     }
     return {/* TODO: Fix JSX expression */}
-    };
-  }
+    }}
   /**
    * Get API headers with authentication;
    */
@@ -138,18 +135,15 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
   public getApiHeaders(): Record<string, string> {/* TODO: Fix JSX expression */}
     };
     if (this.config.apiKey) {/* TODO: Fix JSX expression */}
-      headers['Authorization'] = `Bearer ${this.config.apiKey}`;
-    }
-    return headers;
-  }
+      headers['Authorization'] = `Bearer ${this.config.apiKey}`}
+    return headers}
   /**
    * Log configuration in development mode;
    */
   public logConfig(): void {}
     if (this.isDevelopment()) {}
   public logConfig(): void {/* TODO: Fix JSX expression */}
-      });
-    }
+      })}
   }
 }
 // Export singleton instance;

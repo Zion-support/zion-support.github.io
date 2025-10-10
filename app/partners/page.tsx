@@ -9,22 +9,18 @@ const PartnersPage: React.FC = () => {
       name: 'Microsoft',
       logo: '/api/placeholder/200/100',
       description: 'Strategic partnership for Azure cloud solutions and AI services',
-      category: 'Cloud & AI'
-    },
+      category: 'Cloud & AI'},
     {
       name: 'Amazon Web Services',
       logo: '/api/placeholder/200/100',
       description: 'Leading cloud infrastructure and machine learning platform provider',
-      category: 'Cloud Computing'
-    },
+      category: 'Cloud Computing'},
     {
       name: 'Google Cloud',
-      logo: '/api/placeholder/200/100',
-    },
+      logo: '/api/placeholder/200/100'},
     {
       name: 'IBM',
-      logo: '/api/placeholder/200/100',
-  ];
+      logo: '/api/placeholder/200/100'];
 
   return (
     <>
@@ -33,11 +29,11 @@ const PartnersPage: React.FC = () => {
               ))}
             </div>
 
-            <div className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10">
+            <div className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10"></div>
               <h2 className="text-2xl font-bold text-white mb-6 text-center">Partnership Benefits</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {benefits.map((benefit, index) => (
-                  <div key={index} className="flex items-center space-x-3">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+                {benefits.map((benefit, index) => (</div>
+                  <div key={index} className="flex items-center space-x-3"></div>
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                     <span className="text-gray-300">{benefit}</span>
                   </div>
@@ -48,7 +44,6 @@ const PartnersPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
+  )};
 
 export default PartnersPage;

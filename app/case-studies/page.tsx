@@ -6,20 +6,17 @@ import { ArrowRight, ExternalLink } from 'lucide-react';
 const CaseStudiesPage: React.FC = () => {
   const caseStudies = [
     {
-      image: '/api/placeholder/600/400'
-    },
+      image: '/api/placeholder/600/400'},
     {
       title: 'Cloud Migration for Financial Services',
       client: 'FinanceCorp',
       industry: 'Financial Services',
-      image: '/api/placeholder/600/400'
-    },
+      image: '/api/placeholder/600/400'},
     {
       title: 'Cybersecurity Enhancement for Healthcare',
       client: 'MediCare Plus',
       industry: 'Healthcare',
-      image: '/api/placeholder/600/400'
-    }
+      image: '/api/placeholder/600/400'}
   ];
 
   return (
@@ -30,7 +27,7 @@ const CaseStudiesPage: React.FC = () => {
         <meta name="keywords" content="case studies, success stories, AI solutions, IT services, business transformation" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
             </p>
           </div>
         </section>
@@ -41,7 +38,6 @@ const CaseStudiesPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
+  )};
 
 export default CaseStudiesPage;

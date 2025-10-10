@@ -1,8 +1,6 @@
 'use client';
 import React from 'react';
-'use client';
-
-  ];
+'use client'];
 
   return (
     <>
@@ -12,7 +10,7 @@ import React from 'react';
         <meta name="keywords" content="IT consultation, AI consulting, cloud consulting, cybersecurity consulting, technology strategy" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
                 </div>
               </div>
             </div>
@@ -20,6 +18,5 @@ import React from 'react';
         </section>
       </div>
     </>
-  );
-};
+  )};
 

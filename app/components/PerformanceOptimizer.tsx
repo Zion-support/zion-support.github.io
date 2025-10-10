@@ -7,8 +7,7 @@ import { Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react';
 
 interface PerformanceOptimizerProps {
   children: React.ReactNode;
-  className?: string;
-}
+  className?: string}
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children, className = '' }) => {
   const [isOptimizing, setIsOptimizing] = useState(false);
@@ -19,13 +18,10 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children, c
     const images = document.querySelectorAll('img');
     images.forEach((img) => {
       if (!img.loading) {
-        img.loading = 'lazy';
-      }
+        img.loading = 'lazy'}
       if (!img.decoding) {
-        img.decoding = 'async';
-      }
-    });
-  }, []);
+        img.decoding = 'async'}
+    })}, []);
 
   const optimizeMemory = useCallback(() => {
     if ('memory' in performance) {
@@ -33,8 +29,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children, c
       if (memory.usedJSHeapSize > memory.jsHeapSizeLimit * 0.8) {
         // Trigger garbage collection if available
         if (window.gc) {
-          window.gc();
-        }
+          window.gc()}
       }
     }
   }, []);
@@ -57,8 +52,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children, c
     newOptimizations.push(`Performance score: ${score}/100`);
 
     setOptimizations(newOptimizations);
-    setIsOptimizing(false);
-  }, [optimizeImages, optimizeMemory]);
+    setIsOptimizing(false)}, [optimizeImages, optimizeMemory]);
 
   useEffect(() => {
     // Initial optimization
@@ -68,19 +62,17 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children, c
     const observer = new MutationObserver(optimizeImages);
     observer.observe(document.body, { childList: true, subtree: true });
 
-    return () => observer.disconnect();
-  }, [optimizeImages]);
+    return () => observer.disconnect()}, [optimizeImages]);
 
   useEffect(() => {
     const interval = setInterval(optimizeMemory, 30000); // Check every 30 seconds
-    return () => clearInterval(interval);
-  }, [optimizeMemory]);
+    return () => clearInterval(interval)}, [optimizeMemory]);
 
   return (
     <>
       {children}
-      <div className={`bg-white rounded-lg shadow-lg p-6 ${className}`}>
-        <div className="flex items-center justify-between mb-4">
+      <div className={`bg-white rounded-lg shadow-lg p-6 ${className}`}></div>
+        <div className="flex items-center justify-between mb-4"></div>
           <h3 className="text-lg font-semibold text-gray-900 flex items-center">
             <Settings className="h-5 w-5 mr-2 text-blue-600" />
             Performance Optimizer
@@ -96,9 +88,9 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children, c
         </div>
 
         {optimizations.length > 0 && (
-          <div className="space-y-2 mb-4">
-            {optimizations.map((optimization, index) => (
-              <div key={index} className="flex items-center text-sm text-green-600">
+          <div className="space-y-2 mb-4"></div>
+            {optimizations.map((optimization, index) => (</div>
+              <div key={index} className="flex items-center text-sm text-green-600"></div>
                 <CheckCircle className="h-4 w-4 mr-2" />
                 {optimization}
               </div>
@@ -107,22 +99,22 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children, c
         )}
 
         {performanceScore && (
-          <div className="mt-4">
-            <div className="flex items-center justify-between mb-2">
+          <div className="mt-4"></div>
+            <div className="flex items-center justify-between mb-2"></div>
               <span className="text-sm font-medium text-gray-700">Performance Score</span>
               <span className="text-sm font-bold text-gray-900">{performanceScore}/100</span>
             </div>
-            <div className="w-full bg-gray-200 rounded-full h-2">
+            <div className="w-full bg-gray-200 rounded-full h-2"></div>
               <div
                 className={`h-2 rounded-full transition-all duration-500 ${
                   performanceScore >= 90 ? 'bg-green-500' : 
                   performanceScore >= 70 ? 'bg-yellow-500' : 'bg-red-500'
                 }`}
-                style={{ width: `${performanceScore}%` }}
-              />
+                style={{ width: `${performanceScore}%` }}</div>
+              /></div>
             </div>
             {performanceScore < 90 && (
-              <div className="mt-2 flex items-center">
+              <div className="mt-2 flex items-center"></div>
                 <AlertTriangle className="h-4 w-4 text-yellow-600" />
                 <span className="text-sm text-yellow-800 ml-2">
                   Performance can be improved. Consider additional optimizations.
@@ -133,7 +125,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children, c
         )}
       </div>
     </>
-  );
-};
+  )};
 
 export default PerformanceOptimizer;

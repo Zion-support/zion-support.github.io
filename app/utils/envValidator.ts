@@ -7,8 +7,7 @@ export interface EnvConfig {}
   NODE_ENV: 'development' | 'production' | 'test';
   NEXT_PUBLIC_API_URL?: string;
   NEXT_PUBLIC_GA_ID?: string;
-  NEXT_PUBLIC_SITE_URL?: string;
-}
+  NEXT_PUBLIC_SITE_URL?: string}
 class EnvValidator {
   private errors: string[] = [],
   private warnings: string[] = [],
@@ -41,8 +40,7 @@ export interface EnvConfig {/* TODO: Fix JSX expression */}
 }
 class EnvValidator {/* TODO: Fix JSX expression */}
   s: string[] } {/* TODO: Fix JSX expression */}
-    };
-  }
+    }}
   /**
    * Get validated environment configuration;
    */
@@ -50,7 +48,7 @@ class EnvValidator {/* TODO: Fix JSX expression */}
     const validation = this.validate()
     if (!validation.isValid) {}
       throw new Error()
-        `Environment validation failed:\n${validation.errors.join('\n')}`
+        `Environment validation failed: \n${validation.errors.join('\n')}`
       )
     }
     if (validation.warnings.length > 0) {}
@@ -61,20 +59,17 @@ class EnvValidator {/* TODO: Fix JSX expression */}
       NODE_ENV: this.getNodeEnv(),
       NEXT_PUBLIC_API_URL: process.env['NEXT_PUBLIC_API_URL'],
       NEXT_PUBLIC_GA_ID: process.env['NEXT_PUBLIC_GA_ID'],
-      NEXT_PUBLIC_SITE_URL: process.env['NEXT_PUBLIC_SITE_URL']};
-  }
+      NEXT_PUBLIC_SITE_URL: process.env['NEXT_PUBLIC_SITE_URL']}}
   private validateNodeEnv(): void {}
     const nodeEnv = process.env['NODE_ENV']
     const validEnvs = ['development', 'production', 'test']
     if (!nodeEnv) {}
       this.errors.push('NODE_ENV is not set');
-      return;
-    }
+      return}
     if (!validEnvs.includes(nodeEnv)) {}
       this.errors.push()
         `NODE_ENV must be one of: ${validEnvs.join(', ')}. Got: ${nodeEnv}`
-      );
-    }
+      )}
   }
   private validateOptionalVars(): void {}
     const nodeEnv = this.getNodeEnv()
@@ -110,8 +105,7 @@ ${validation.errors.join('
       )
     }
     return {/* TODO: Fix JSX expression */}
-    };
-  }
+    }}
 
   private validateNodeEnv(): void {/* TODO: Fix JSX expression */}
 
@@ -120,9 +114,7 @@ ${validation.errors.join('
     if (!validEnvs.includes(nodeEnv)) {
       this.errors.push(
         `NODE_ENV must be one of: ${validEnvs.join(', ')}. Got: ${nodeEnv}`
-      );
-
-    }
+      )}
   }
   private validateOptionalVars(): void {/* TODO: Fix JSX expression */}
       }

@@ -8,23 +8,19 @@ const PagePage: React.FC = () => {
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-    },
+      description: 'Advanced AI technology to transform your business operations and improve efficiency'},
     {
       icon: Zap,
       title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-    },
+      description: 'Lightning-fast processing and real-time analytics for optimal results'},
     {
       icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-    },
+      description: 'Bank-level security with encryption and compliance standards'},
     {
       icon: Globe,
       title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
-    }
+      description: 'Worldwide deployment and support for international businesses'}
   ];
 
   const benefits = [
@@ -47,7 +43,7 @@ const PagePage: React.FC = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8"></section>
           </div>
         </div>
       </section>
@@ -56,7 +52,7 @@ const PagePage: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
               </div>
             ))}
           </div>
@@ -64,7 +60,7 @@ const PagePage: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5"></section>
               </div>
             ))}
           </div>
@@ -72,12 +68,11 @@ const PagePage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
           </div>
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default PagePage;

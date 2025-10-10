@@ -9,8 +9,7 @@ interface SEOHeadProps {
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;
-  structuredData?: object;
-}
+  structuredData?: object}
 
 const SEOHead: React.FC<SEOHeadProps> = ({
   title = 'Zion Tech Group - Advanced AI & IT Solutions',
@@ -22,15 +21,15 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   twitterCard = 'summary_large_image',
   structuredData
 }) => {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
+  const fullTitle = title.includes('Zion Tech Group') ? title: `${title} | Zion Tech Group`;
   const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '');
 
   const defaultStructuredData = {
-    "@context": "https://schema.org",
+    "@context": "https: //schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
-    "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/logo.png",
+    "url": "https: //ziontechgroup.com",
+    "logo": "https: //ziontechgroup.com/logo.png",
     "description": "Advanced AI and IT Solutions company providing cutting-edge technology services",
     "address": {
       "@type": "PostalAddress",
@@ -47,7 +46,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       "email": "kleber@ziontechgroup.com"
     },
     "sameAs": [
-      "https://www.linkedin.com/company/zion-tech-group",
+      "https: //www.linkedin.com/company/zion-tech-group",
       "https://twitter.com/ziontechgroup"
     ]
   };
@@ -66,19 +65,19 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
       
       {/* Open Graph Meta Tags */}
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />
-      <meta property="og:type" content={ogType} />
-      <meta property="og:url" content={canonicalUrl} />
-      <meta property="og:image" content={ogImage} />
+      <meta property="og: title" content={fullTitle} />
+      <meta property="og: description" content={description} />
+      <meta property="og: type" content={ogType} />
+      <meta property="og: url" content={canonicalUrl} />
+      <meta property="og: image" content={ogImage} />
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
       
       {/* Twitter Card Meta Tags */}
-      <meta name="twitter:card" content={twitterCard} />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
+      <meta name="twitter: card" content={twitterCard} />
+      <meta name="twitter: title" content={fullTitle} />
+      <meta name="twitter: description" content={description} />
+      <meta name="twitter: image" content={ogImage} />
       
       {/* Additional SEO Meta Tags */}
       <meta name="theme-color" content="#0f172a" />
@@ -91,7 +90,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
         {JSON.stringify(structuredData || defaultStructuredData)}
       </script>
     </Helmet>
-  );
-};
+  )};
 
 export default SEOHead;

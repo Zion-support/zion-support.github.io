@@ -11,16 +11,14 @@ export interface PerformanceMetrics {
   cls?: number;
   fcp?: number;
   ttfb?: number;
-  inp?: number;
-}
+  inp?: number}
 export interface ErrorReport {
   message: string,
   stack?: string;
   component?: string;
   timestamp: number,
   userAgent: string,
-  url: string,
-}
+  url: string}
 class MonitoringService {
   private metrics: PerformanceMetrics = {}
   private errors: ErrorReport[] = []
@@ -56,9 +54,7 @@ class MonitoringService {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
             this.metrics.fid = (entry as any).processingStart - entry.startTime;
-            this.reportMetric('fid', this.metrics.fid);
-          });
-        });
+            this.reportMetric('fid', this.metrics.fid)})});
         fidObserver.observe({ entryTypes: ['first-input'] });
         // Cumulative Layout Shift
         let clsValue = 0;
@@ -68,8 +64,7 @@ class MonitoringService {
             if (!(entry as any).hadRecentInput) {
     // Keep HEAD version
               this.metrics.cls = clsValue;
-              this.reportMetric('cls', clsValue);
-            }
+              this.reportMetric('cls', clsValue)}
           })
         })
         clsObserver.observe({ entryTypes: ['layout-shift'] })
@@ -78,11 +73,8 @@ class MonitoringService {
           const entries = list.getEntries();
           entries.forEach(entry => {
             this.metrics.fcp = entry.startTime;
-            this.reportMetric('fcp', entry.startTime);
-          });
-        });
-        fcpObserver.observe({ entryTypes: ['paint'] });
-      } catch (error) {
+            this.reportMetric('fcp', entry.startTime)})});
+        fcpObserver.observe({ entryTypes: ['paint'] })} catch (error) {
     // Keep HEAD version
     }
   }
@@ -105,10 +97,8 @@ class MonitoringService {
         const resourceObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
     // Keep HEAD version
-          });
-        });
-        resourceObserver.observe({ entryTypes: ['resource'] });
-      } catch (_error) {
+          })});
+        resourceObserver.observe({ entryTypes: ['resource'] })} catch (_error) {
     // Keep HEAD version
     }
   }
@@ -120,8 +110,7 @@ class MonitoringService {
         stack: event.error?.stack,
         timestamp: Date.now(),
         userAgent: navigator.userAgent,
-        url: window.location.href
-      })
+        url: window.location.href})
     })
     // Unhandled promise rejection handler
     window.addEventListener('unhandledrejection', (event) => {
@@ -129,8 +118,7 @@ class MonitoringService {
         message: `Unhandled Promise Rejection: ${event.reason}`,
         timestamp: Date.now(),
         userAgent: navigator.userAgent,
-        url: window.location.href
-      })
+        url: window.location.href})
     })
   }
   private reportMetric(name: string, value: number): void {
@@ -146,8 +134,7 @@ class MonitoringService {
     if (typeof (window as any).gtag === 'function') {
       (window as any).gtag('event', name, {
         value: Math.round(name === 'cls' ? value * 1000 : value),
-        event_category: 'Web Vitals'
-      })
+        event_category: 'Web Vitals'})
     }
   }
   public logError(error: ErrorReport): void {

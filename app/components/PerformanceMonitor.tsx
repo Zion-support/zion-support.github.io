@@ -30,35 +30,26 @@ const PerformanceMonitor: React.FC = () => {
             loadTime: Math.round(loadTime),
             memoryUsage,
             connectionSpeed,
-            renderTime: Math.round(domContentLoaded)
-          });
-        }
+            renderTime: Math.round(domContentLoaded)})}
       }
     };
 
     // Track performance after page load
     if (document.readyState === 'complete') {
-      measureWebVitals();
-    } else {
-      window.addEventListener('load', measureWebVitals);
-    }
+      measureWebVitals()} else {
+      window.addEventListener('load', measureWebVitals)}
 
     // Keyboard shortcut to toggle visibility
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.ctrlKey && e.shiftKey && e.key === 'P') {
         e.preventDefault();
-        setIsVisible(prev => !prev);
-      }
+        setIsVisible(prev => !prev)}
     };
 
     window.addEventListener('keydown', handleKeyDown);
 
     return () => {
       window.removeEventListener('load', measureWebVitals);
-      window.removeEventListener('keydown', handleKeyDown);
-    };
-  }, []);
-
-};
+      window.removeEventListener('keydown', handleKeyDown)}}, [])};
 
 export default PerformanceMonitor;

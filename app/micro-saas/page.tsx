@@ -12,32 +12,28 @@ const MicroSaasPage: React.FC = () => {
       description: 'Real-time business intelligence and predictive analytics for small to medium businesses',
       features: ['Real-time dashboards', 'Predictive analytics', 'Custom reports', 'Mobile app'],
       price: '$99/month',
-      users: 'Up to 50 users',
-    },
+      users: 'Up to 50 users'},
     {
       icon: '👥',
       title: 'AI-Powered CRM',
       description: 'Intelligent customer relationship management with automated lead scoring and personalized interactions',
       features: ['Lead management', 'Email automation', 'Sales forecasting', 'Integration APIs'],
       price: '$149/month',
-      users: 'Up to 100 users',
-    },
+      users: 'Up to 100 users'},
     {
       icon: '🔒',
       title: 'Security Monitoring Suite',
       description: 'Comprehensive cybersecurity monitoring and threat detection for growing businesses',
       features: ['Threat detection', 'Vulnerability scanning', 'Compliance reporting', '24/7 monitoring'],
       price: '$199/month',
-      users: 'Up to 200 users',
-    },
+      users: 'Up to 200 users'},
     {
       icon: '☁️',
       title: 'Cloud Infrastructure Manager',
       description: 'Automated cloud resource management and cost optimization for multi-cloud environments',
       features: ['Resource optimization', 'Cost tracking', 'Auto-scaling', 'Multi-cloud support'],
       price: '$299/month',
-      users: 'Unlimited users',
-    }
+      users: 'Unlimited users'}
   ];
 
   const benefits = [
@@ -55,9 +51,9 @@ const MicroSaasPage: React.FC = () => {
       <Helmet>
 
         {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12">
+        <section className="py-20 px-4"></section>
+          <div className="max-w-4xl mx-auto text-center"></div>
+            <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12"></div>
               <h2 className="text-4xl font-bold text-white mb-4">
                 Ready to Get Started?
               </h2>
@@ -65,7 +61,7 @@ const MicroSaasPage: React.FC = () => {
                 Choose the micro SaaS solution that fits your business needs. 
                 Start with a free trial and scale as you grow.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                 <Link
                   to="/contact"
                   className="bg-white text-cyan-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center space-x-2"
@@ -85,7 +81,6 @@ const MicroSaasPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
+  )};
 
 export default MicroSaasPage;

@@ -29,23 +29,18 @@ const Sidebar: React.FC = () => {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
-        setIsOpen(false);
-      }
+        setIsOpen(false)}
     };
 
     window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+    return () => window.removeEventListener('resize', handleResize)}, []);
 
   const toggleSection = (section: string) => {
     const newExpanded = new Set(expandedSections);
     if (newExpanded.has(section)) {
-      newExpanded.delete(section);
-    } else {
-      newExpanded.add(section);
-    }
-    setExpandedSections(newExpanded);
-  };
+      newExpanded.delete(section)} else {
+      newExpanded.add(section)}
+    setExpandedSections(newExpanded)};
 
   const navigationSections = [
     {
@@ -56,8 +51,7 @@ const Sidebar: React.FC = () => {
         { name: 'Services', path: '/services', icon: Settings },
         { name: 'Contact', path: '/contact', icon: Phone },
         { name: 'Blog', path: '/blog', icon: BarChart },
-        { name: 'Case Studies', path: '/case-studies', icon: BarChart },
-      ]
+        { name: 'Case Studies', path: '/case-studies', icon: BarChart }]
     },
     {
       title: 'AI Services',
@@ -75,8 +69,7 @@ const Sidebar: React.FC = () => {
         { name: 'HR Analytics', path: '/ai-services/hr-analytics', icon: BarChart },
         { name: 'Process Automation', path: '/ai-services/process-automation', icon: Settings },
         { name: 'Quality Assurance', path: '/ai-services/quality-assurance', icon: Shield },
-        { name: 'Energy Management', path: '/ai-services/energy-management', icon: Settings },
-      ]
+        { name: 'Energy Management', path: '/ai-services/energy-management', icon: Settings }]
     },
     {
       title: 'Micro SaaS',
@@ -94,8 +87,7 @@ const Sidebar: React.FC = () => {
         { name: 'Appointment Scheduler', path: '/micro-saas/appointment-scheduler', icon: Clock },
         { name: 'Chat Analytics', path: '/micro-saas/chat-analytics', icon: BarChart },
         { name: 'Expense Tracker', path: '/micro-saas/expense-tracker', icon: BarChart },
-        { name: 'Content Generator', path: '/micro-saas/content-generator', icon: Settings },
-      ]
+        { name: 'Content Generator', path: '/micro-saas/content-generator', icon: Settings }]
     },
     {
       title: 'IT Services',
@@ -109,8 +101,7 @@ const Sidebar: React.FC = () => {
         { name: 'Cloud Migration', path: '/cloud-migration', icon: Cloud },
         { name: 'Cybersecurity', path: '/cybersecurity', icon: Shield },
         { name: 'Database Management', path: '/database-management', icon: Settings },
-        { name: 'Managed IT', path: '/managed-it', icon: Settings },
-      ]
+        { name: 'Managed IT', path: '/managed-it', icon: Settings }]
     },
     {
       title: 'Company',
@@ -118,8 +109,7 @@ const Sidebar: React.FC = () => {
         { name: 'Team', path: '/team', icon: Users },
         { name: 'Careers', path: '/careers', icon: Users },
         { name: 'Consultation', path: '/consultation', icon: Phone },
-        { name: 'Pricing', path: '/pricing', icon: BarChart },
-      ]
+        { name: 'Pricing', path: '/pricing', icon: BarChart }]
     },
     {
       title: 'Resources',
@@ -127,8 +117,7 @@ const Sidebar: React.FC = () => {
         { name: 'Documentation', path: '/docs', icon: Settings },
         { name: 'API Docs', path: '/api-docs', icon: Code },
         { name: 'Support', path: '/support', icon: Users },
-        { name: 'Status', path: '/status', icon: Settings },
-      ]
+        { name: 'Status', path: '/status', icon: Settings }]
     }
   ];
 
@@ -136,8 +125,7 @@ const Sidebar: React.FC = () => {
     phone: '(302) 464-0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown, DE 19709',
-    hours: 'Mon-Fri 9AM-6PM EST'
-  };
+    hours: 'Mon-Fri 9AM-6PM EST'};
 
   return (
     <>
@@ -156,17 +144,17 @@ const Sidebar: React.FC = () => {
           className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
           onClick={() => setIsOpen(false)}
         />
-      )}
-
+      )}</div>
+</div>
       {/* Sidebar */}</div>
       <aside className={`fixed top-0 left-0 h-full w-80 bg-slate-900/95 backdrop-blur-lg border-r border-cyan-400/20 z-50 transform transition-transform duration-300 ${
         isOpen ? 'translate-x-0' : '-translate-x-full'
-      } lg:translate-x-0 lg:static lg:z-auto`}>
-        <div className="flex flex-col h-full">
+      } lg: translate-x-0 lg:static lg:z-auto`}>
+        <div className="flex flex-col h-full"></div>
           {/* Header */}</div>
-          <div className="flex items-center justify-between p-6 border-b border-slate-700/50">
+          <div className="flex items-center justify-between p-6 border-b border-slate-700/50"></div>
             <Link to="/" className="flex items-center space-x-3" onClick={() => setIsOpen(false)}>
-              <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center">
+              <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center"></div>
                 <Brain className="w-6 h-6 text-white" />
               </div>
               <div></div>
@@ -184,10 +172,10 @@ const Sidebar: React.FC = () => {
           </div>
 
           {/* Navigation */}
-          <div className="flex-1 overflow-y-auto py-6">
+          <div className="flex-1 overflow-y-auto py-6"></div>
             <nav className="space-y-2 px-4">
               {navigationSections.map((section, sectionIndex) => (
-                <div key={sectionIndex} className="space-y-1">
+                <div key={sectionIndex} className="space-y-1"></div>
                   <button
                     onClick={() => section.key && toggleSection(section.key)}
                     className="flex items-center justify-between w-full px-3 py-2 text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition-colors"
@@ -201,7 +189,7 @@ const Sidebar: React.FC = () => {
                   </button>
                   
                   {(!section.key || expandedSections.has(section.key)) && (
-                    <div className="ml-4 space-y-1">
+                    <div className="ml-4 space-y-1"></div>
                       {section.items.map((item, itemIndex) => (</div>
                         <Link
                           key={itemIndex}
@@ -210,8 +198,7 @@ const Sidebar: React.FC = () => {
                           className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-sm transition-all ${
                             location.pathname === item.path
                               ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-400/30'
-                              : 'text-gray-300 hover:text-white hover:bg-slate-800/50'
-                          }`}
+                              : 'text-gray-300 hover: text-white hover:bg-slate-800/50'}`}
                         >
                           <item.icon className="w-4 h-4 flex-shrink-0" />
                           <span>{item.name}</span>
@@ -225,30 +212,29 @@ const Sidebar: React.FC = () => {
           </div>
 
           {/* Contact Info */}
-          <div className="border-t border-slate-700/50 p-6">
+          <div className="border-t border-slate-700/50 p-6"></div>
             <h3 className="text-sm font-semibold text-cyan-400 mb-4">Contact Information</h3>
-            <div className="space-y-3 text-sm text-gray-300">
-              <div className="flex items-center space-x-3">
+            <div className="space-y-3 text-sm text-gray-300"></div>
+              <div className="flex items-center space-x-3"></div>
                 <Phone className="w-4 h-4 text-cyan-400 flex-shrink-0" />
                 <span>{contactInfo.phone}</span>
               </div>
-              <div className="flex items-center space-x-3">
+              <div className="flex items-center space-x-3"></div>
                 <Mail className="w-4 h-4 text-cyan-400 flex-shrink-0" />
                 <span className="truncate">{contactInfo.email}</span>
               </div>
-              <div className="flex items-center space-x-3">
+              <div className="flex items-center space-x-3"></div>
                 <MapPin className="w-4 h-4 text-cyan-400 flex-shrink-0" />
                 <span className="text-xs">{contactInfo.address}</span>
               </div>
-              <div className="flex items-center space-x-3">
+              <div className="flex items-center space-x-3"></div>
                 <Clock className="w-4 h-4 text-cyan-400 flex-shrink-0" />
                 <span className="text-xs">{contactInfo.hours}</span>
               </div>
           </div>
       </aside>
     </>
-  );
-};
+  )};
 
 Sidebar.displayName = 'Sidebar';
 

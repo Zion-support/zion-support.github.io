@@ -4,8 +4,7 @@ import React from 'react';
 
 interface SkipLinkProps {
   to: string;
-  children: React.ReactNode;
-}
+  children: React.ReactNode}
 
 const SkipLink: React.FC<SkipLinkProps> = ({ to, children }) => {
   return (
@@ -15,7 +14,6 @@ const SkipLink: React.FC<SkipLinkProps> = ({ to, children }) => {
     >
       {children}
     </a>
-  );
-};
+  )};
 
 export default SkipLink;

@@ -74,7 +74,7 @@ const App: React.FC = () => {
     <ErrorBoundary>
       <HelmetProvider>
         <BrowserRouter>
-          <div className="App">
+          <div className="App"></div>
             <PerformanceMonitor />
             <AccessibilityEnhancer />
             <Suspense fallback={<AppLoadingSpinner />}>
@@ -136,7 +136,6 @@ const App: React.FC = () => {
         </BrowserRouter>
       </HelmetProvider>
     </ErrorBoundary>
-  );
-};
+  )};
 
 export default App;

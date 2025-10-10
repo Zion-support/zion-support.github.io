@@ -111,8 +111,7 @@ const ITConsultingPage: React.FC = () => {
       support: '24/7 technical support',
       certifications: ['Cisco', 'Microsoft', 'VMware', 'AWS', 'Azure'],
       link: 'https://ziontechgroup.com/it-infrastructure-design',
-      caseStudy: 'Manufacturing company reduced IT downtime by 95% with our infrastructure design'
-    },
+      caseStudy: 'Manufacturing company reduced IT downtime by 95% with our infrastructure design'},
     {
       id: 'cloud-migration-services',
       name: 'Cloud Migration & Optimization',
@@ -143,8 +142,7 @@ const ITConsultingPage: React.FC = () => {
       support: 'Migration specialist and ongoing support',
       certifications: ['AWS', 'Azure', 'Google Cloud', 'VMware'],
       link: 'https://ziontechgroup.com/cloud-migration-services',
-      caseStudy: 'Retail chain saved $2M annually by migrating to cloud infrastructure'
-    },
+      caseStudy: 'Retail chain saved $2M annually by migrating to cloud infrastructure'},
     {
       id: 'cybersecurity-services',
       name: 'Cybersecurity Solutions',
@@ -175,8 +173,7 @@ const ITConsultingPage: React.FC = () => {
       support: 'Security specialist and 24/7 monitoring',
       certifications: ['CISSP', 'CISM', 'CEH', 'CompTIA Security+'],
       link: 'https://ziontechgroup.com/cybersecurity-services',
-      caseStudy: 'Healthcare provider achieved 100% compliance with HIPAA regulations'
-    },
+      caseStudy: 'Healthcare provider achieved 100% compliance with HIPAA regulations'},
     {
       id: 'network-design-optimization',
       name: 'Network Design & Optimization',
@@ -207,8 +204,7 @@ const ITConsultingPage: React.FC = () => {
       support: 'Network specialist and ongoing optimization',
       certifications: ['CCNA', 'CCNP', 'JNCIA', 'CompTIA Network+'],
       link: 'https://ziontechgroup.com/network-design-optimization',
-      caseStudy: 'Law firm improved network speed by 300% and eliminated connectivity issues'
-    },
+      caseStudy: 'Law firm improved network speed by 300% and eliminated connectivity issues'},
     {
       id: 'database-management',
       name: 'Database Management & Optimization',
@@ -239,8 +235,7 @@ const ITConsultingPage: React.FC = () => {
       support: 'Database specialist and 24/7 monitoring',
       certifications: ['Oracle', 'Microsoft SQL Server', 'MySQL', 'PostgreSQL'],
       link: 'https://ziontechgroup.com/database-management',
-      caseStudy: 'E-commerce platform improved query performance by 400% and reduced costs by 60%'
-    },
+      caseStudy: 'E-commerce platform improved query performance by 400% and reduced costs by 60%'},
     {
       id: 'it-support-services',
       name: 'Managed IT Support Services',
@@ -271,8 +266,7 @@ const ITConsultingPage: React.FC = () => {
       support: 'Dedicated support team',
       certifications: ['Microsoft', 'CompTIA', 'Cisco', 'VMware'],
       link: 'https://ziontechgroup.com/it-support-services',
-      caseStudy: 'Marketing agency reduced IT issues by 90% and improved employee productivity'
-    },
+      caseStudy: 'Marketing agency reduced IT issues by 90% and improved employee productivity'},
     {
       id: 'software-development',
       name: 'Custom Software Development',
@@ -303,8 +297,7 @@ const ITConsultingPage: React.FC = () => {
       support: 'Development team and ongoing maintenance',
       technologies: ['React', 'Node.js', 'Python', 'Java', 'C#', 'PHP', 'Mobile'],
       link: 'https://ziontechgroup.com/software-development',
-      caseStudy: 'Logistics company automated 80% of manual processes with custom software'
-    },
+      caseStudy: 'Logistics company automated 80% of manual processes with custom software'},
     {
       id: 'it-consulting',
       name: 'Strategic IT Consulting',
@@ -335,8 +328,7 @@ const ITConsultingPage: React.FC = () => {
       support: 'Senior consultant and ongoing guidance',
       certifications: ['PMP', 'ITIL', 'COBIT', 'TOGAF'],
       link: 'https://ziontechgroup.com/it-consulting',
-      caseStudy: 'Manufacturing company achieved 40% cost reduction through strategic IT planning'
-    },
+      caseStudy: 'Manufacturing company achieved 40% cost reduction through strategic IT planning'},
     {
       id: 'disaster-recovery',
       name: 'Disaster Recovery & Business Continuity',
@@ -367,8 +359,7 @@ const ITConsultingPage: React.FC = () => {
       support: 'Recovery specialist and ongoing testing',
       certifications: ['CBCP', 'DRII', 'ITIL', 'ISO 22301'],
       link: 'https://ziontechgroup.com/disaster-recovery',
-      caseStudy: 'Financial services firm achieved 99.9% uptime with our disaster recovery solution'
-    },
+      caseStudy: 'Financial services firm achieved 99.9% uptime with our disaster recovery solution'},
     {
       id: 'compliance-auditing',
       name: 'IT Compliance & Auditing',
@@ -399,8 +390,7 @@ const ITConsultingPage: React.FC = () => {
       support: 'Compliance specialist and ongoing monitoring',
       standards: ['HIPAA', 'SOX', 'PCI-DSS', 'GDPR', 'ISO 27001', 'NIST'],
       link: 'https://ziontechgroup.com/compliance-auditing',
-      caseStudy: 'Healthcare provider achieved 100% HIPAA compliance and passed all audits'
-    }
+      caseStudy: 'Healthcare provider achieved 100% HIPAA compliance and passed all audits'}
   ];
 
   const categories = [
@@ -421,13 +411,12 @@ const ITConsultingPage: React.FC = () => {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
+    return matchesCategory && matchesSearch});
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       {/* Hero Section */}</div>
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 cyber-grid">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 cyber-grid"></section>
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20" aria-hidden="true"></div>
         <div className="relative z-10 max-w-7xl mx-auto text-center"></div>
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight cyber-text neon-pulse"></h1>
@@ -457,9 +446,9 @@ const ITConsultingPage: React.FC = () => {
       </section>
 
       {/* Search and Filter Section */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8">
+      <section className="py-12 px-4 sm:px-6 lg:px-8"></section>
         <div className="max-w-7xl mx-auto"></div>
-          <div className="flex flex-col lg:flex-row gap-6 mb-8">
+          <div className="flex flex-col lg:flex-row gap-6 mb-8"></div>
             {/* Search */}</div>
             <div className="flex-1"></div>
               <div className="relative"></div>
@@ -491,7 +480,7 @@ const ITConsultingPage: React.FC = () => {
           </div>
 
           {/* Category Pills */}
-          <div className="flex flex-wrap gap-2 mb-8">
+          <div className="flex flex-wrap gap-2 mb-8"></div>
             {categories.map((category) => (</div>
               <button
                 key={category.id}
@@ -499,8 +488,7 @@ const ITConsultingPage: React.FC = () => {
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                   selectedCategory === category.id
                     ? 'bg-cyan-500 text-white'
-                    : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 hover:text-cyan-400'
-                }`}
+                    : 'bg-slate-800/50 text-gray-300 hover: bg-slate-700/50 hover:text-cyan-400'}`}
               >
                 {category.name}
               </button>
@@ -510,9 +498,9 @@ const ITConsultingPage: React.FC = () => {
       </section>
 
       {/* Services Grid */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8">
+      <section className="py-12 px-4 sm:px-6 lg:px-8"></section>
         <div className="max-w-7xl mx-auto"></div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
             {filteredServices.map((service) => (</div>
               <div key={service.id} className="quantum-card p-6 group hover:scale-105 transition-all duration-300 energy-pulse"></div>
                 <div className="flex items-start justify-between mb-4"></div>
@@ -599,7 +587,7 @@ const ITConsultingPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 cyber-scan-effect">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 cyber-scan-effect"></section>
         <div className="max-w-4xl mx-auto text-center"></div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text neon-pulse">
             Ready to Optimize Your IT Infrastructure?
@@ -627,7 +615,6 @@ const ITConsultingPage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default ITConsultingPage;

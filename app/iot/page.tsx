@@ -148,9 +148,9 @@ const IoTPage: React.FC = () => {
         <meta name="keywords" content="IoT services, smart cities, industrial IoT, smart agriculture, connected devices, Internet of Things" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-green-50">
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-green-50"></div>
         {/* Hero Section */}</div>
-        <section className="relative overflow-hidden bg-gradient-to-r from-green-600 to-teal-800 text-white py-20">
+        <section className="relative overflow-hidden bg-gradient-to-r from-green-600 to-teal-800 text-white py-20"></section>
           <div className="absolute inset-0 bg-black opacity-30"></div>
           <div className="absolute inset-0 bg-gradient-to-r from-green-600/50 to-teal-800/50"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
@@ -174,7 +174,7 @@ const IoTPage: React.FC = () => {
         </section>
 
         {/* Key Benefits */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-white"></section>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
             <div className="text-center mb-12"></div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -219,7 +219,7 @@ const IoTPage: React.FC = () => {
 
         {/* Services by Category */}
         {categories.map(category => (
-          <section key={category} className="py-16 bg-gray-50">
+          <section key={category} className="py-16 bg-gray-50"></section>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
               <div className="text-center mb-12"></div>
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -230,8 +230,8 @@ const IoTPage: React.FC = () => {
                 </p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {iotServices
-                  .filter(service => service.category === category)
+                {iotServices</div>
+                  .filter(service => service.category === category)</div>
                   .map((service, index) => (</div>
                     <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"></div>
                       <div className="text-4xl mb-4">{service.icon}</div>
@@ -243,7 +243,7 @@ const IoTPage: React.FC = () => {
                           <span className="text-2xl font-bold text-green-600">{service.price}</span>
                           <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
                         </div>
-                        <div className="text-sm text-green-600 font-semibold">
+                        <div className="text-sm text-green-600 font-semibold"></div>
                           Save up to 40% vs market rates</div>
                         </div>
                       </div>
@@ -262,7 +262,7 @@ const IoTPage: React.FC = () => {
 
                       <div className="mb-4"></div>
                         <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
-                        <div className="flex flex-wrap gap-2">
+                        <div className="flex flex-wrap gap-2"></div>
                           {service.technologies.map((tech, techIndex) => (</div>
                             <span key={techIndex} className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">
                               {tech}
@@ -294,7 +294,7 @@ const IoTPage: React.FC = () => {
         ))}
 
         {/* IoT Capabilities Showcase */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-white"></section>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
             <div className="text-center mb-12"></div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -340,7 +340,7 @@ const IoTPage: React.FC = () => {
         </section>
 
         {/* Contact Section */}
-        <section className="py-16 bg-gradient-to-r from-green-600 to-teal-600 text-white">
+        <section className="py-16 bg-gradient-to-r from-green-600 to-teal-600 text-white"></section>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Ready to Connect Your World?
@@ -369,7 +369,6 @@ const IoTPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
+  )};
 
 export default IoTPage;

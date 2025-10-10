@@ -12,8 +12,7 @@ const ContactPage: React.FC = () => {
     company: '',
     phone: '',
     service: '',
-    message: ''
-  });
+    message: ''});
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
@@ -22,8 +21,7 @@ const ContactPage: React.FC = () => {
     setFormData(prev => ({
       ...prev,
       [e.target.name]: e.target.value
-    }));
-  }, []);
+    }))}, []);
 
   const handleSubmit = useCallback(async (e: React.FormEvent) => {
     e.preventDefault();
@@ -39,17 +37,13 @@ const ContactPage: React.FC = () => {
         company: '',
         phone: '',
         service: '',
-        message: ''
-      });
-    } catch (error) {
-      setSubmitStatus('error');
-    } finally {
-      setIsSubmitting(false);
-    }
+        message: ''})} catch (error) {
+      setSubmitStatus('error')} finally {
+      setIsSubmitting(false)}
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet>
         <title>Contact Us - Zion Tech Group | Get in Touch</title>
         <meta name="description" content="Contact Zion Tech Group for AI and IT solutions. Get a free consultation, quote, or support. Call +1-302-464-0950 or email kleber@ziontechgroup.com" />
@@ -59,10 +53,10 @@ const ContactPage: React.FC = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-        <div className="relative max-w-7xl mx-auto text-center">
+      <section className="relative py-20 px-4 overflow-hidden"></section>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
+        <div className="relative max-w-7xl mx-auto text-center"></div>
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             Get in
             <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
@@ -77,29 +71,29 @@ const ContactPage: React.FC = () => {
       </section>
 
       {/* Contact Form and Info */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
+      <section className="py-20 px-4"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12"></div>
+            {/* Contact Form */}</div>
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8"></div>
               <h2 className="text-3xl font-bold text-white mb-6">Send us a message</h2>
               
               {submitStatus === 'success' && (
-                <div className="mb-6 p-4 bg-green-500/20 border border-green-500/30 rounded-lg flex items-center">
+                <div className="mb-6 p-4 bg-green-500/20 border border-green-500/30 rounded-lg flex items-center"></div>
                   <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
                   <span className="text-green-400">Message sent successfully!</span>
                 </div>
               )}
 
               {submitStatus === 'error' && (
-                <div className="mb-6 p-4 bg-red-500/20 border border-red-500/30 rounded-lg">
+                <div className="mb-6 p-4 bg-red-500/20 border border-red-500/30 rounded-lg"></div>
                   <span className="text-red-400">Failed to send message. Please try again.</span>
                 </div>
               )}
 
               <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+                  <div></div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                       Full Name *
                     </label>
@@ -113,7 +107,7 @@ const ContactPage: React.FC = () => {
                       className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     />
                   </div>
-                  <div>
+                  <div></div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
                       Email Address *
                     </label>
@@ -129,8 +123,8 @@ const ContactPage: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+                  <div></div>
                     <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
                       Company Name
                     </label>
@@ -143,7 +137,7 @@ const ContactPage: React.FC = () => {
                       className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     />
                   </div>
-                  <div>
+                  <div></div>
                     <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
                       Phone Number
                     </label>
@@ -158,7 +152,7 @@ const ContactPage: React.FC = () => {
                   </div>
                 </div>
 
-                <div>
+                <div></div>
                   <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
                     Service Interest
                   </label>
@@ -178,7 +172,7 @@ const ContactPage: React.FC = () => {
                   </select>
                 </div>
 
-                <div>
+                <div></div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
                     Message *
                   </label>
@@ -215,8 +209,8 @@ const ContactPage: React.FC = () => {
             </div>
 
             {/* Contact Information */}
-            <div className="space-y-8">
-              <div>
+            <div className="space-y-8"></div>
+              <div></div>
                 <h2 className="text-3xl font-bold text-white mb-6">Get in touch</h2>
                 <p className="text-gray-300 mb-8">
                   We're here to help you succeed. Reach out to us through any of the channels below, 
@@ -224,45 +218,45 @@ const ContactPage: React.FC = () => {
                 </p>
               </div>
 
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center flex-shrink-0">
+              <div className="space-y-6"></div>
+                <div className="flex items-start space-x-4"></div>
+                  <div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center flex-shrink-0"></div>
                     <Phone className="w-6 h-6 text-white" />
                   </div>
-                  <div>
+                  <div></div>
                     <h3 className="text-lg font-semibold text-white mb-1">Phone</h3>
                     <p className="text-gray-300">+1-302-464-0950</p>
                     <p className="text-sm text-gray-400">Mon-Fri 9AM-6PM EST</p>
                   </div>
                 </div>
 
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="flex items-start space-x-4"></div>
+                  <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center flex-shrink-0"></div>
                     <Mail className="w-6 h-6 text-white" />
                   </div>
-                  <div>
+                  <div></div>
                     <h3 className="text-lg font-semibold text-white mb-1">Email</h3>
                     <p className="text-gray-300">kleber@ziontechgroup.com</p>
                     <p className="text-sm text-gray-400">We'll respond within 24 hours</p>
                   </div>
                 </div>
 
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="flex items-start space-x-4"></div>
+                  <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center flex-shrink-0"></div>
                     <MapPin className="w-6 h-6 text-white" />
                   </div>
-                  <div>
+                  <div></div>
                     <h3 className="text-lg font-semibold text-white mb-1">Office</h3>
                     <p className="text-gray-300">364 E Main St STE 1008</p>
                     <p className="text-gray-300">Middletown, DE 19709</p>
                   </div>
                 </div>
 
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="flex items-start space-x-4"></div>
+                  <div className="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center flex-shrink-0"></div>
                     <Clock className="w-6 h-6 text-white" />
                   </div>
-                  <div>
+                  <div></div>
                     <h3 className="text-lg font-semibold text-white mb-1">Business Hours</h3>
                     <p className="text-gray-300">Monday - Friday: 9:00 AM - 6:00 PM</p>
                     <p className="text-gray-300">Saturday: 10:00 AM - 4:00 PM</p>
@@ -277,7 +271,6 @@ const ContactPage: React.FC = () => {
 
       <Footer />
     </div>
-  );
-};
+  )};
 
 export default ContactPage;

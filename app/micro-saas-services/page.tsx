@@ -29,15 +29,12 @@ export interface MicroSaasService {
     languages: string[];
     frameworks: string[];
     databases: string[];
-    cloudProviders: string[];
-  };
+    cloudProviders: string[]};
   pricing: {
     monthly: number,
     yearly: number,
     enterprise: number,
-    features: string[];
-  };
-}
+    features: string[]}}
 
 export const microSaasServices: MicroSaasService[] = [
   // AI-Powered Productivity Tools;

@@ -46,17 +46,14 @@ const ContentCarousel: React.FC = () => {
   ];
 
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
-  };
+    setCurrentSlide((prev) => (prev + 1) % slides.length)};
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-  };
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)};
 
   useEffect(() => {
     const timer = setInterval(nextSlide, 5000);
-    return () => clearInterval(timer);
-  }, []);
+    return () => clearInterval(timer)}, []);
 
   return (
             </div>
@@ -77,8 +74,8 @@ const ContentCarousel: React.FC = () => {
           </button>
 
           {/* Dots Indicator */}
-          <div className="flex justify-center mt-6 space-x-2">
-            {slides.map((_, index) => (
+          <div className="flex justify-center mt-6 space-x-2"></div>
+            {slides.map((_, index) => (</div>
               <button
                 key={index}
                 onClick={() => setCurrentSlide(index)}
@@ -91,7 +88,6 @@ const ContentCarousel: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )};
 
 export default ContentCarousel;

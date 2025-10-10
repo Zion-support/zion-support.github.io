@@ -100,7 +100,7 @@ const EnterprisePage: React.FC = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
+      <section className="relative py-20 px-4 overflow-hidden"></section>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
         <div className="relative max-w-7xl mx-auto text-center"></div>
@@ -127,12 +127,12 @@ const EnterprisePage: React.FC = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="flex justify-center mb-4">
+      <section className="py-20 px-4"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8"></div>
+            {stats.map((stat, index) => (</div>
+              <div key={index} className="text-center"></div>
+                <div className="flex justify-center mb-4"></div>
                   <stat.icon className="w-12 h-12 text-purple-400" />
                 </div>
                 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
@@ -144,7 +144,7 @@ const EnterprisePage: React.FC = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4"></section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -155,7 +155,7 @@ const EnterprisePage: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
                   <feature.icon className="w-8 h-8 text-purple-400 mr-3" />
                   <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
                 </div>
@@ -192,7 +192,7 @@ const EnterprisePage: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4"></section>
                 </button>
               </div>
             </div>
@@ -201,7 +201,7 @@ const EnterprisePage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4"></section>
         <div className="max-w-4xl mx-auto text-center"></div>
           <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Transform Your Enterprise?
@@ -223,7 +223,6 @@ const EnterprisePage: React.FC = () => {
 
       <Footer />
     </div>
-  );
-};
+  )};
 
 export default EnterprisePage;

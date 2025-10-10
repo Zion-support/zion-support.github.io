@@ -16,7 +16,6 @@ import { Helmet } from 'react-helmet-async';
         </div>
       </div>
     </div>
-  );
-};
+  )};
 
 export default PagePage;

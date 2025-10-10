@@ -7,16 +7,14 @@ interface PerformanceMetrics {
   loadTime: number,
   renderTime: number,
   memoryUsage: number,
-  fps: number,
-}
+  fps: number}
 
 interface PerformanceMetrics {
   loadTime: number,
   renderTime: number,
   memoryUsage: number,
   fps: number,
-  [key: string]: number;
-}
+  [key: string]: number}
 
 
 const PerformanceDashboard: React.FC = () => {
@@ -24,8 +22,7 @@ const PerformanceDashboard: React.FC = () => {
     loadTime: 0,
     renderTime: 0,
     memoryUsage: 0,
-    fps: 0,
-  });
+    fps: 0});
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -39,8 +36,7 @@ const PerformanceDashboard: React.FC = () => {
 
       // Measure render time// Measure memory usage
       let _memoryUsage = 0;
-      if ('memory' in performance) {memoryUsage = memory?.usedJSHeapSize || 0;
-      }
+      if ('memory' in performance) {memoryUsage = memory?.usedJSHeapSize || 0}
 
       // Measure FPS (simplified)
       let _fps = 0;
@@ -52,25 +48,19 @@ const PerformanceDashboard: React.FC = () => {
           if (currentTime - lastTime >= 1000) {
             fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
             frameCount = 0;
-            lastTime = currentTime;
-          }
-          requestAnimationFrame(measureFPS);
-        };
-        requestAnimationFrame(measureFPS);
-      }
+            lastTime = currentTime}
+          requestAnimationFrame(measureFPS)};
+        requestAnimationFrame(measureFPS)}
 
       setMetrics({
         loadTime,
         renderTime,
         memoryUsage,
-        fps,
-      });
-    };
+        fps})};
 
     updateMetrics();
 
-    // Update metrics every 5 secondsreturn () => clearInterval(interval);
-  }, []);
+    // Update metrics every 5 secondsreturn () => clearInterval(interval)}, []);
 
   if (!isVisible) {
     return (
@@ -80,12 +70,11 @@ const PerformanceDashboard: React.FC = () => {
       >
         Show Performance
       </button>
-    );
-  }
+    )}
 
   return (
-    <div className="fixed bottom-4 right-4 bg-white border border-gray-300 rounded-lg shadow-lg p-4 w-80 max-h-96 overflow-y-auto">
-      <div className="flex justify-between items-center mb-4">
+    <div className="fixed bottom-4 right-4 bg-white border border-gray-300 rounded-lg shadow-lg p-4 w-80 max-h-96 overflow-y-auto"></div>
+      <div className="flex justify-between items-center mb-4"></div>
         <h3 className="text-lg font-semibold text-gray-800">Performance Dashboard</h3>
         <button
           onClick={() => setIsVisible(false)}
@@ -95,39 +84,38 @@ const PerformanceDashboard: React.FC = () => {
         </button>
       </div>
 
-      <div className="space-y-3">
-        <div className="flex justify-between">
+      <div className="space-y-3"></div>
+        <div className="flex justify-between"></div>
           <span className="text-sm text-gray-600">Load Time:</span>
           <span className="text-sm font-mono">
             {metrics.loadTime.toFixed(2)}ms
           </span>
         </div>
 
-        <div className="flex justify-between">
+        <div className="flex justify-between"></div>
           <span className="text-sm text-gray-600">Render Time:</span>
           <span className="text-sm font-mono">
             {metrics.renderTime.toFixed(2)}ms
           </span>
         </div>
 
-        <div className="flex justify-between">
+        <div className="flex justify-between"></div>
           <span className="text-sm text-gray-600">Memory Usage:</span>
           <span className="text-sm font-mono">
             {(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB
           </span>
         </div>
 
-        <div className="flex justify-between">
+        <div className="flex justify-between"></div>
           <span className="text-sm text-gray-600">FPS:</span>
           <span className="text-sm font-mono">{metrics.fps}</span>
         </div>
 
-        <div className="pt-2 border-t border-gray-200">
-          <div className="text-xs text-gray-500">
+        <div className="pt-2 border-t border-gray-200"></div>
+          <div className="text-xs text-gray-500"></div>
             Last updated: {new Date().toLocaleTimeString()}</div>
         </div>
     </div>
-  );
-};
+  )};
 
 export default PerformanceDashboard;

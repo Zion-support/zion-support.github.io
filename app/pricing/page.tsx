@@ -19,8 +19,7 @@ const PricingPage: React.FC = () => {
         'Monthly Reports',
         'Basic Analytics Dashboard'
       ],
-      popular: false
-    },
+      popular: false},
     {
       name: 'Professional',
       price: '$7,999',
@@ -35,8 +34,7 @@ const PricingPage: React.FC = () => {
         'API Access',
         'Training Sessions'
       ],
-      popular: true
-    },
+      popular: true},
     {
       name: 'Enterprise',
       price: 'Custom',
@@ -52,8 +50,7 @@ const PricingPage: React.FC = () => {
         'On-site Training',
         'SLA Guarantee'
       ],
-      popular: false
-    }
+      popular: false}
   ];
 
   return (
@@ -65,7 +62,6 @@ const PricingPage: React.FC = () => {
       </Helmet>
       </div>
     </>
-  );
-};
+  )};
 
 export default PricingPage;

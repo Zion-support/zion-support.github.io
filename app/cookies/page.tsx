@@ -49,7 +49,6 @@ const CookiesPage: React.FC = () => {
         <Footer />
       </div>
     </>
-  );
-};
+  )};
 
 export default CookiesPage;

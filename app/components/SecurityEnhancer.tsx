@@ -4,8 +4,7 @@ import React from 'react';
 import React, { useEffect } from 'react';
 
 interface SecurityEnhancerProps {
-  children: React.ReactNode;
-}
+  children: React.ReactNode}
 
 const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {
   useEffect(() => {
@@ -27,21 +26,16 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {
 
       // Disable right-click context menu
       document.addEventListener('contextmenu', (e) => {
-        e.preventDefault();
-      });
+        e.preventDefault()});
 
       // Disable F12 and other dev tools shortcuts
       document.addEventListener('keydown', (e) => {
         if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {
-          e.preventDefault();
-        }
-      });
-    };
+          e.preventDefault()}
+      })};
 
-    enhanceSecurity();
-  }, []);
+    enhanceSecurity()}, []);
 
-  return <>{children}</>;
-};
+  return <>{children}</>};
 
 export default SecurityEnhancer;

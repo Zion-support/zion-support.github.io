@@ -26,7 +26,7 @@ interface ImageProps {}
   sizes?: string;
   style?: React.CSSProperties;
   onLoad?: () => void;
-  onError?: () => void;}
+  onError?: () => void}
 }
 export const Image: React.FC<ImageProps>= ({
 export const Image: React.FC<ImageProps> = ({}
@@ -52,11 +52,11 @@ export const Image: React.FC<ImageProps> = ({,
   const [hasError, setHasError] = useState(false)
   const handleLoad = useCallback(() => {}
     setIsLoaded(true)
-    if (onLoad) onLoad();}
+    if (onLoad) onLoad()}
   }, [onLoad])
   const handleError = useCallback(() => {}
     setHasError(true)
-    if (onError) onError();}
+    if (onError) onError()}
   }, [onError])
   const imageStyle: React.CSSProperties = {
     ...style;
@@ -98,8 +98,8 @@ export const,
   };
   if (hasError) {/* TODO: Fix JSX expression */}
         className={`bg-gray-200 flex items-center justify-center ${className}`}
-        style={imageStyle}
-        {...props})
+        style={imageStyle}</div>
+        {...props})</div>
       >)</div>
         <span className="text-gray-500 text-sm"><span className="sr-only">Screen reader: </span>Failed to load image</span>)
       </div>)
@@ -135,7 +135,6 @@ export default Image</img>
 }
 export default Image;
     />)
-  );
-};
+  )};
 export default Image;
 "`

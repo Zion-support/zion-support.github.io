@@ -9,15 +9,13 @@ const ContentStatistics: React.FC = () => {
     clients: 0,
     projects: 0,
     satisfaction: 0,
-    years: 0
-  });
+    years: 0});
 
   const targetCounters = {
     clients: 500,
     projects: 1000,
     satisfaction: 99,
-    years: 10
-  };
+    years: 10};
 
   const statistics = [
     {
@@ -25,52 +23,44 @@ const ContentStatistics: React.FC = () => {
       value: counters.clients,
       label: 'Happy Clients',
       suffix: '+',
-      color: 'text-cyan-400'
-    },
+      color: 'text-cyan-400'},
     {
       icon: Award,
       value: counters.projects,
       label: 'Projects Completed',
       suffix: '+',
-      color: 'text-purple-400'
-    },
+      color: 'text-purple-400'},
     {
       icon: TrendingUp,
       value: counters.satisfaction,
       label: 'Client Satisfaction',
       suffix: '%',
-      color: 'text-green-400'
-    },
+      color: 'text-green-400'},
     {
       icon: Clock,
       value: counters.years,
       label: 'Years Experience',
       suffix: '+',
-      color: 'text-yellow-400'
-    }
+      color: 'text-yellow-400'}
   ];
 
   const features = [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-    },
+      description: 'Advanced AI technology to transform your business operations and improve efficiency'},
     {
       icon: Zap,
       title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-    },
+      description: 'Lightning-fast processing and real-time analytics for optimal results'},
     {
       icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-    },
+      description: 'Bank-level security with encryption and compliance standards'},
     {
       icon: Globe,
       title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
-    }
+      description: 'Worldwide deployment and support for international businesses'}
   ];
 
   const benefits = [
@@ -98,26 +88,20 @@ const ContentStatistics: React.FC = () => {
         current += increment;
         if (current >= target) {
           current = target;
-          clearInterval(timers[0]);
-        }
+          clearInterval(timers[0])}
         setCounters(prev => ({
           ...prev,
           [key]: Math.floor(current)
-        }));
-      }, stepDuration);
-    });
+        }))}, stepDuration)});
 
     return () => {
-      timers.forEach(timer => clearInterval(timer));
-    };
-  }, []);
+      timers.forEach(timer => clearInterval(timer))}}, []);
 
   return (
           </div>
         </div>
       </div>
     </div>
-  );
-};
+  )};
 
 export default ContentStatistics;

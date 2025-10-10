@@ -4,7 +4,7 @@ interface DynamicOptions {
   loading?: () => React.ReactElement;
 interface DynamicOptions {}
   loading?: () => React.ReactElement
-  ssr?: boolean;}
+  ssr?: boolean}
 }
 export function dynamic<T extends ComponentType<unknown>>(</T></<<<T>importFunc</T>: () => Promise<{ default: T }>,
   options: DynamicOptions = {}

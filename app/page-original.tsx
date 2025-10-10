@@ -22,9 +22,7 @@ const preloadComponents = () => {
     // Preload critical components after initial render
     setTimeout(() => {
       import('./components/ContentPromotionBanner');
-      import('./components/ContentCarousel');
-    }, 100);
-  }
+      import('./components/ContentCarousel')}, 100)}
 };
 // Loading skeleton component
 const ServiceCardSkeleton: React.FC = memo(() => (
@@ -45,16 +43,13 @@ const HomePage: React.FC = memo(() => {
     const timer = setTimeout(() => setIsVisible(true), 100);
     // Preload components
     preloadComponents();
-    return () => clearTimeout(timer);
-  }, []);
+    return () => clearTimeout(timer)}, []);
   // Analytics tracking for phone clicks - optimized
   const handlePhoneClick = useCallback(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', 'phone_click', {
         event_category: 'engagement',
-        event_label: 'main_phone_number'
-      });
-    }
+        event_label: 'main_phone_number'})}
   }, []);
   return (
     <>
@@ -64,7 +59,7 @@ const HomePage: React.FC = memo(() => {
         keywords={['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services']}
         canonicalUrl="https://ziontechgroup.com"
         structuredData={{
-          '@context': 'https://schema.org',
+          '@context': 'https: //schema.org',
           '@type': 'TechCompany',
           name: 'Zion Tech Group',
           url: 'https://ziontechgroup.com',
@@ -86,16 +81,14 @@ const HomePage: React.FC = memo(() => {
             telephone: '+1-302-464-0950',
             contactType: 'Customer Service',
             areaServed: 'US',
-            availableLanguage: 'en'
-          },
+            availableLanguage: 'en'},
           address: {
             '@type': 'PostalAddress',
             streetAddress: '364 E Main St STE 1008',
             addressLocality: 'Middletown',
             addressRegion: 'DE',
             postalCode: '19709',
-            addressCountry: 'US'
-          }
+            addressCountry: 'US'}
         }}
       />
       <PerformanceOptimizer
@@ -125,7 +118,7 @@ const HomePage: React.FC = memo(() => {
         enableClickjackingProtection={true}
         enableContentTypeSniffingProtection={true}
       />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain"></div>
         {/* Navigation */}</div>
         <Navigation />
         {/* Skip to main content for accessibility */}
@@ -148,7 +141,7 @@ const HomePage: React.FC = memo(() => {
               : 'opacity-0 translate-y-8'
           }`}
           aria-labelledby="hero-heading"
-        >
+        ></section>
           <div className="max-w-6xl mx-auto"></div>
             <h1 
               id="hero-heading" 
@@ -170,12 +163,12 @@ const HomePage: React.FC = memo(() => {
               <div className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></div>
                 <div className="text-2xl sm:text-3xl mb-3">🚀</div>
                 <h3 className="font-bold text-white mb-3 text-base sm:text-lg">AI-Powered Solutions</h3>
-                <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Transform your business with cutting-edge artificial intelligence, machine learning, and automation technologies</p>
+                <p className="text-xs sm: text-sm text-gray-300 leading-relaxed">Transform your business with cutting-edge artificial intelligence, machine learning, and automation technologies</p>
               </div>
               <div className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></div>
                 <div className="text-2xl sm:text-3xl mb-3">⚡</div>
                 <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Proven Results</h3>
-                <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Delivering $50M+ annual savings, 95% process automation, and 300% ROI for enterprise clients</p>
+                <p className="text-xs sm: text-sm text-gray-300 leading-relaxed">Delivering $50M+ annual savings, 95% process automation, and 300% ROI for enterprise clients</p>
               </div>
               <div className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></div>
                 <div className="text-2xl sm:text-3xl mb-3">🔒</div>
@@ -209,7 +202,7 @@ const HomePage: React.FC = memo(() => {
         </div>
         </section>
         {/* Services Section */}
-        <section className="mb-16" aria-labelledby="services-heading">
+        <section className="mb-16" aria-labelledby="services-heading"></section>
           <h2 id="services-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
             Our Services
           </h2>
@@ -226,7 +219,7 @@ const HomePage: React.FC = memo(() => {
                   Advanced artificial intelligence solutions including machine learning, natural language processing, and computer vision.
                 </p>
                 <div className="text-center"></div>
-                  <div className="text-lg sm:text-2xl font-bold text-cyan-400 mb-2 neon-text">Starting at $1,500/month</div>
+                  <div className="text-lg sm: text-2xl font-bold text-cyan-400 mb-2 neon-text">Starting at $1,500/month</div>
                   <a href="/ai-services" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow">
                     Learn More →
                   </a>
@@ -274,7 +267,7 @@ const HomePage: React.FC = memo(() => {
                   Cutting-edge AI solutions for medical imaging, drug discovery, and personalized medicine.
                 </p>
                 <div className="text-center"></div>
-                  <div className="text-lg sm:text-2xl font-bold text-green-400 mb-2">Starting at $1,999/month</div>
+                  <div className="text-lg sm: text-2xl font-bold text-green-400 mb-2">Starting at $1,999/month</div>
                   <a href="/ai-healthcare" className="text-green-400 hover:text-green-300 font-medium text-sm sm:text-base">
                     Learn More →
                   </a>
@@ -289,7 +282,7 @@ const HomePage: React.FC = memo(() => {
                   Revolutionary AI-powered financial services including trading, fraud detection, and risk management.
                 </p>
                 <div className="text-center"></div>
-                  <div className="text-lg sm:text-2xl font-bold text-indigo-400 mb-2">Starting at $1,499/month</div>
+                  <div className="text-lg sm: text-2xl font-bold text-indigo-400 mb-2">Starting at $1,499/month</div>
                   <a href="/ai-fintech" className="text-indigo-400 hover:text-indigo-300 font-medium text-sm sm:text-base">
                     Learn More →
                   </a>
@@ -588,7 +581,7 @@ const HomePage: React.FC = memo(() => {
                   Seamless cloud migration with AWS, Azure, and GCP. 99.9% uptime guarantee and 24/7 expert support.
                 </p>
                 <div className="text-center"></div>
-                  <div className="text-lg sm:text-2xl font-bold text-blue-400 mb-2">$1,299/month</div>
+                  <div className="text-lg sm: text-2xl font-bold text-blue-400 mb-2">$1,299/month</div>
                   <a href="/cloud-migration" className="text-blue-400 hover:text-blue-300 font-medium text-sm sm:text-base">
                     Learn More →
                   </a>
@@ -653,7 +646,7 @@ const HomePage: React.FC = memo(() => {
                   Native and cross-platform mobile applications with AI integration and modern UX design.
                 </p>
                 <div className="text-center"></div>
-                  <div className="text-lg sm:text-2xl font-bold text-purple-400 mb-2">$1,999/month</div>
+                  <div className="text-lg sm: text-2xl font-bold text-purple-400 mb-2">$1,999/month</div>
                   <a href="/mobile-app-development" className="text-purple-400 hover:text-purple-300 font-medium text-sm sm:text-base">
                     Learn More →
                   </a>
@@ -705,7 +698,7 @@ const HomePage: React.FC = memo(() => {
                   Custom IT infrastructure design, architecture planning, and technology stack optimization.
                 </p>
                 <div className="text-center"></div>
-                  <div className="text-lg sm:text-2xl font-bold text-emerald-400 mb-2">$1,499/month</div>
+                  <div className="text-lg sm: text-2xl font-bold text-emerald-400 mb-2">$1,499/month</div>
                   <a href="/it-infrastructure-design" className="text-emerald-400 hover:text-emerald-300 font-medium text-sm sm:text-base">
                     Learn More →
                   </a>
@@ -757,7 +750,7 @@ const HomePage: React.FC = memo(() => {
                   Large-scale enterprise IT solutions, ERP integration, and digital transformation services.
                 </p>
                 <div className="text-center"></div>
-                  <div className="text-lg sm:text-2xl font-bold text-sky-400 mb-2">$2,999/month</div>
+                  <div className="text-lg sm: text-2xl font-bold text-sky-400 mb-2">$2,999/month</div>
                   <a href="/enterprise-solutions" className="text-sky-400 hover:text-sky-300 font-medium text-sm sm:text-base">
                     Learn More →
                   </a>
@@ -1057,7 +1050,7 @@ const HomePage: React.FC = memo(() => {
           </div>
         </section>
         {/* Micro SAAS Solutions Section */}
-        <section className="mb-16" aria-labelledby="micro-saas-heading">
+        <section className="mb-16" aria-labelledby="micro-saas-heading"></section>
           <h2 id="micro-saas-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
             Micro SAAS Solutions
           </h2>
@@ -1315,7 +1308,7 @@ const HomePage: React.FC = memo(() => {
         </Suspense>
 
         {/* Contact Section */}
-        <section className="mb-16" aria-labelledby="contact-heading">
+        <section className="mb-16" aria-labelledby="contact-heading"></section>
           <div className="max-w-6xl mx-auto"></div>
             <h2 id="contact-heading" className="text-3xl sm:text-4xl font-bold text-white mb-8 text-center neon-text">
               Ready to Transform Your Business?
@@ -1324,7 +1317,7 @@ const HomePage: React.FC = memo(() => {
               Get in touch with our experts to discuss your AI and IT needs. We're here to help you achieve unprecedented growth.
             </p>
             
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8"></div>
               {/* Contact Information */}</div>
               <div className="cyber-card hologram-card p-8"></div>
                 <h3 className="text-2xl font-bold text-white mb-6 neon-text">Contact Information</h3>
@@ -1473,8 +1466,7 @@ const HomePage: React.FC = memo(() => {
       <Footer />
     </div>
     </>
-  );
-});
+  )});
 
 HomePage.displayName = 'HomePage';
 export default HomePage;

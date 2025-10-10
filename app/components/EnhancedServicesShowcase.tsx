@@ -9,38 +9,34 @@ const EnhancedServicesShowcase: React.FC = () => {
       icon: Brain,
       color: 'text-purple-400',
       features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
-      stats: '300% ROI'
-    },
+      stats: '300% ROI'},
     {
       title: 'IT Infrastructure',
       description: 'Build and maintain robust technology foundations',
       icon: Cloud,
       color: 'text-blue-400',
       features: ['Cloud Migration', 'Server Management', 'Network Security', 'Data Backup'],
-      stats: '99.9% Uptime'
-    },
+      stats: '99.9% Uptime'},
     {
       title: 'Cybersecurity',
       description: 'Protect your business with enterprise-grade security',
       icon: Shield,
       color: 'text-green-400',
       features: ['Threat Detection', 'Security Audits', 'Compliance', 'Incident Response'],
-      stats: 'Zero Breaches'
-    },
+      stats: 'Zero Breaches'},
     {
       title: 'Automation',
       description: 'Streamline processes with intelligent automation',
       icon: Zap,
       color: 'text-yellow-400',
       features: ['Workflow Automation', 'Process Optimization', 'Smart Scheduling', 'Task Management'],
-      stats: '95% Efficiency'
-    }
+      stats: '95% Efficiency'}
   ];
 
   return (
-    <section className="py-16">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+    <section className="py-16"></section>
+      <div className="container mx-auto px-4"></div>
+        <div className="text-center mb-16"></div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text neon-pulse">
             Our Core Services
           </h2>
@@ -49,10 +45,10 @@ const EnhancedServicesShowcase: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
           {services.map((service, index) => (</div>
-            <div key={index} className="cyber-card hologram-card p-6 group hover:scale-105 transition-all duration-300">
-              <div className="flex items-center mb-4">
+            <div key={index} className="cyber-card hologram-card p-6 group hover:scale-105 transition-all duration-300"></div>
+              <div className="flex items-center mb-4"></div>
                 <service.icon className={`w-12 h-12 ${service.color} mr-4`} />
                 <div></div>
                   <h3 className="text-xl font-bold text-white">{service.title}</h3>
@@ -80,7 +76,7 @@ const EnhancedServicesShowcase: React.FC = () => {
           ))}
         </div>
 
-        <div className="text-center mt-12">
+        <div className="text-center mt-12"></div>
           <a
             href="/services"
             className="cyber-button inline-flex items-center"
@@ -90,7 +86,6 @@ const EnhancedServicesShowcase: React.FC = () => {
           </a>
         </div>
     </section>
-  );
-};
+  )};
 
 export default EnhancedServicesShowcase;

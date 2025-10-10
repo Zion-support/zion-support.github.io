@@ -9,13 +9,11 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
     // Add keyboard navigation support
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Tab') {
-        document.body.classList.add('keyboard-navigation');
-      }
+        document.body.classList.add('keyboard-navigation')}
     };
 
     const handleMouseDown = () => {
-      document.body.classList.remove('keyboard-navigation');
-    };
+      document.body.classList.remove('keyboard-navigation')};
 
     // Add focus indicators
     const addFocusStyles = () => {
@@ -23,11 +21,9 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
       style.textContent = `
         .keyboard-navigation *:focus {
           outline: 2px solid #06b6d4 !important;
-          outline-offset: 2px !important;
-        }
+          outline-offset: 2px !important}
       `;
-      document.head.appendChild(style);
-    };
+      document.head.appendChild(style)};
 
     // Initialize accessibility features
     addFocusStyles();
@@ -36,11 +32,8 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
 
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
-      document.removeEventListener('mousedown', handleMouseDown);
-    };
-  }, []);
+      document.removeEventListener('mousedown', handleMouseDown)}}, []);
 
-  return <>{children}</>;
-};
+  return <>{children}</>};
 
 export default AccessibilityEnhancer;

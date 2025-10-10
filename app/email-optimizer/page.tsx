@@ -42,7 +42,6 @@ const PagePage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default PagePage;

@@ -21,8 +21,7 @@ const DemoPage: React.FC = () => {
       ],
       icon: BarChart,
       duration: '5 min demo',
-      category: 'AI Solutions'
-    },
+      category: 'AI Solutions'},
     {
       id: 'ai-chatbot',
       title: 'AI Customer Service Bot',
@@ -35,8 +34,7 @@ const DemoPage: React.FC = () => {
       ],
       icon: Users,
       duration: '3 min demo',
-      category: 'AI Solutions'
-    },
+      category: 'AI Solutions'},
     {
       id: 'cloud-migration',
       title: 'Cloud Migration Tool',
@@ -49,8 +47,7 @@ const DemoPage: React.FC = () => {
       ],
       icon: Zap,
       duration: '7 min demo',
-      category: 'Cloud Services'
-    },
+      category: 'Cloud Services'},
     {
       id: 'cybersecurity',
       title: 'AI Security Monitor',
@@ -63,8 +60,7 @@ const DemoPage: React.FC = () => {
       ],
       icon: Shield,
       duration: '4 min demo',
-      category: 'Cybersecurity'
-    }
+      category: 'Cybersecurity'}
   ];
 
   const testimonials = [
@@ -73,28 +69,25 @@ const DemoPage: React.FC = () => {
       company: 'TechCorp Inc.',
       role: 'CTO',
       quote: 'The AI analytics demo showed us exactly how we could transform our data insights. The implementation was seamless.',
-      rating: 5
-    },
+      rating: 5},
     {
       name: 'Michael Chen',
       company: 'RetailMax',
       role: 'Head of Operations',
       quote: 'The chatbot demo exceeded our expectations. It handled complex queries better than we imagined.',
-      rating: 5
-    },
+      rating: 5},
     {
       name: 'Emily Rodriguez',
       company: 'FinanceFlow',
       role: 'IT Director',
       quote: 'The cloud migration demo convinced us to move forward. The automation saved us months of work.',
-      rating: 5
-    }
+      rating: 5}
   ];
 
   const selectedDemoData = demos.find(demo => demo.id === selectedDemo);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet>
         <title>Live Demos - Zion Tech Group | See Our Solutions in Action</title>
         <meta name="description" content="Experience our AI and IT solutions through interactive demos. See how our technology can transform your business with real-time demonstrations." />
@@ -104,10 +97,10 @@ const DemoPage: React.FC = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-        <div className="relative max-w-7xl mx-auto text-center">
+      <section className="relative py-20 px-4 overflow-hidden"></section>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
+        <div className="relative max-w-7xl mx-auto text-center"></div>
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             See It in
             <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
@@ -118,7 +111,7 @@ const DemoPage: React.FC = () => {
             Experience our AI and IT solutions through interactive demos. 
             See exactly how our technology can transform your business.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center">
               <Play className="w-5 h-5 mr-2" />
               Start Demo
@@ -131,30 +124,29 @@ const DemoPage: React.FC = () => {
       </section>
 
       {/* Demo Selection */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
+      <section className="py-16 px-4"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-12"></div>
             <h2 className="text-4xl font-bold text-white mb-4">Choose Your Demo</h2>
             <p className="text-xl text-gray-300">Select a solution to see it in action</p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {demos.map((demo) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+            {demos.map((demo) => (</div>
               <button
                 key={demo.id}
                 onClick={() => setSelectedDemo(demo.id)}
                 className={`p-6 rounded-xl border transition-all duration-300 text-left ${
                   selectedDemo === demo.id
                     ? 'border-purple-500 bg-purple-500/10'
-                    : 'border-white/10 bg-white/5 hover:bg-white/10'
-                }`}
+                    : 'border-white/10 bg-white/5 hover: bg-white/10'}`}
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mb-4 flex items-center justify-center">
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mb-4 flex items-center justify-center"></div>
                   <demo.icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{demo.title}</h3>
                 <p className="text-gray-300 text-sm mb-3">{demo.description}</p>
-                <div className="flex items-center justify-between">
+                <div className="flex items-center justify-between"></div>
                   <span className="text-xs text-gray-400">{demo.category}</span>
                   <span className="text-xs text-cyan-400">{demo.duration}</span>
                 </div>
@@ -166,16 +158,16 @@ const DemoPage: React.FC = () => {
 
       {/* Selected Demo Details */}
       {selectedDemoData && (
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <div>
-                  <div className="flex items-center mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mr-4 flex items-center justify-center">
+        <section className="py-16 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8"></div>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8"></div>
+                <div></div>
+                  <div className="flex items-center mb-6"></div>
+                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mr-4 flex items-center justify-center"></div>
                       <selectedDemoData.icon className="w-8 h-8 text-white" />
                     </div>
-                    <div>
+                    <div></div>
                       <h3 className="text-2xl font-bold text-white">{selectedDemoData.title}</h3>
                       <p className="text-gray-400">{selectedDemoData.duration}</p>
                     </div>
@@ -183,7 +175,7 @@ const DemoPage: React.FC = () => {
                   
                   <p className="text-gray-300 mb-6">{selectedDemoData.description}</p>
                   
-                  <div className="mb-6">
+                  <div className="mb-6"></div>
                     <h4 className="text-lg font-semibold text-white mb-3">Key Features</h4>
                     <ul className="space-y-2">
                       {selectedDemoData.features.map((feature, index) => (
@@ -195,7 +187,7 @@ const DemoPage: React.FC = () => {
                     </ul>
                   </div>
                   
-                  <div className="flex flex-col sm:flex-row gap-4">
+                  <div className="flex flex-col sm:flex-row gap-4"></div>
                     <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center">
                       <Play className="w-5 h-5 mr-2" />
                       Start Demo
@@ -207,9 +199,9 @@ const DemoPage: React.FC = () => {
                   </div>
                 </div>
                 
-                <div className="bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-xl p-8 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-24 h-24 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-xl p-8 flex items-center justify-center"></div>
+                  <div className="text-center"></div>
+                    <div className="w-24 h-24 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                       <Play className="w-12 h-12 text-white" />
                     </div>
                     <h4 className="text-xl font-semibold text-white mb-2">Interactive Demo</h4>
@@ -223,25 +215,25 @@ const DemoPage: React.FC = () => {
       )}
 
       {/* Testimonials */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
+      <section className="py-16 px-4"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-12"></div>
             <h2 className="text-4xl font-bold text-white mb-4">What Our Clients Say</h2>
             <p className="text-xl text-gray-300">See how our demos led to successful implementations</p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
-                <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
+            {testimonials.map((testimonial, index) => (</div>
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6"></div>
+                <div className="flex items-center mb-4"></div>
+                  {[...Array(testimonial.rating)].map((_, i) => (</div>
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
                 <blockquote className="text-gray-300 mb-4 italic">
                   "{testimonial.quote}"
                 </blockquote>
-                <div>
+                <div></div>
                   <div className="font-semibold text-white">{testimonial.name}</div>
                   <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
                 </div>
@@ -252,8 +244,8 @@ const DemoPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="py-20 px-4"></section>
+        <div className="max-w-4xl mx-auto text-center"></div>
           <h2 className="text-4xl font-bold text-white mb-6">
             Ready to See More?
           </h2>
@@ -261,7 +253,7 @@ const DemoPage: React.FC = () => {
             Schedule a personalized demo with our experts. We'll show you exactly 
             how our solutions can address your specific business needs.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
               Schedule Live Demo
             </button>
@@ -274,7 +266,6 @@ const DemoPage: React.FC = () => {
 
       <Footer />
     </div>
-  );
-};
+  )};
 
 export default DemoPage;
