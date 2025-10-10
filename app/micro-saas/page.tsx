@@ -336,7 +336,6 @@ const MicroSAASPage: React.FC = () => {
       popular: true,
       rating: 4.6,
       users: '1,700+',
-<<<<<<< HEAD
       trial: '21-day free trial'
     },
     { 
@@ -376,8 +375,6 @@ const MicroSAASPage: React.FC = () => {
       popular: true,
       rating: 4.8,
       users: '2,300+',
-      trial: '21-day free trial'
-=======
       trial: '21-day free trial',
       link: 'https://ziontechgroup.com/ai-hr-assistant',
       capabilities: ['50% faster hiring process', '80% reduction in HR admin time', 'Automated compliance tracking', 'Employee satisfaction insights']
@@ -488,12 +485,10 @@ const MicroSAASPage: React.FC = () => {
       trial: '14-day free trial',
       link: 'https://ziontechgroup.com/ai-password-generator',
       capabilities: ['Military-grade encryption', 'Real-time breach monitoring', 'Cross-platform sync', 'Team password sharing']
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-c63e
     },
     { 
       name: 'AI Logo Designer Pro', 
-      href: '/ai-logo-designer', 
-<<<<<<< HEAD
+      href: '/ai-logo-designer',
       icon: FileText, 
       category: 'Design', 
       price: '$89/mo',
@@ -650,7 +645,6 @@ const MicroSAASPage: React.FC = () => {
   ];
 
   const categories = ['All', 'Productivity', 'Content', 'Marketing', 'Business', 'Finance', 'Development', 'Security', 'Healthcare', 'Legal', 'E-commerce', 'HR', 'Creative', 'Computer Vision', 'Manufacturing', 'Insurance', 'Testing', 'Education', 'Health', 'Analytics', 'Industrial', 'Language', 'Design'];
-=======
       icon: Palette, 
       category: 'Design', 
       price: '$79/mo',
