@@ -2,16 +2,7 @@
 
 import React from 'react';
 
-<<<<<<< HEAD
 const SkipLink: React.FC = () => {
-=======
-interface SkipLinkProps {
-  to: string,
-  children: React.ReactNode;
-}
-
-const SkipLink: React.FC<SkipLinkProps> = ({ to, children }) => {
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
   return (
     <a
       href="#main-content"
