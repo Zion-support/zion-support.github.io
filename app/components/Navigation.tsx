@@ -799,6 +799,7 @@ const Navigation: React.FC = () => {
   ];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -995,6 +996,11 @@ const Navigation: React.FC = () => {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg border-b border-cyan-400/20' : 'bg-transparent'
 >>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d44d
+=======
+  return (
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg border-b border-cyan-400/20' : 'bg-transparent'
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-acb8
     }`}>
 <<<<<<< HEAD
 >>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-aeba
@@ -1044,6 +1050,7 @@ const Navigation: React.FC = () => {
             </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             <span className="text-white cyber-text font-bold">
 <<<<<<< HEAD
 =======
@@ -1063,6 +1070,9 @@ const Navigation: React.FC = () => {
 =======
             <span className="text-white bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent font-bold">
 >>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d44d
+=======
+            <span className="text-white bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent font-bold">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-acb8
               Zion Tech Group
 <<<<<<< HEAD
 =======
@@ -1105,6 +1115,7 @@ const Navigation: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium neon-glow-cyan"
 =======
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium neon-text"
@@ -1115,6 +1126,9 @@ const Navigation: React.FC = () => {
 =======
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium neon-glow cyber-scan-effect"
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3064
+=======
+              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-acb8
               onClick={closeAllMenus}
             >
               Home
@@ -1820,6 +1834,7 @@ const Navigation: React.FC = () => {
 <<<<<<< HEAD
 export default Navigation;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/analyze-improve-and-deploy-application-58b3
 =======
 export default Navigation;
@@ -1832,3 +1847,5 @@ export default Navigation;
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e939
 =======
 >>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d44d
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-acb8

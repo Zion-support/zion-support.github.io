@@ -476,6 +476,7 @@ const App: React.FC = memo(() => {
           />
           <meta
             name="keywords"
+<<<<<<< HEAD
             content="AI, artificial intelligence, enterprise solutions, digital transformation, IT services, quantum computing, automation, micro SAAS, machine learning, business intelligence"
           />
           <meta name="author" content="Zion Tech Group" />
@@ -485,6 +486,17 @@ const App: React.FC = memo(() => {
           
           {/* Open Graph */}
           <meta property="og:title" content="Zion Tech Group - AI & IT Solutions | Enterprise AI Services" />
+=======
+            content="AI, artificial intelligence, enterprise solutions, digital transformation, IT services, machine learning, quantum computing, automation, cybersecurity, cloud computing"
+          />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <meta name="theme-color" content="#06b6d4" />
+          <meta name="robots" content="index, follow" />
+          <meta name="author" content="Zion Tech Group" />
+          <meta name="language" content="en" />
+          <meta name="revisit-after" content="7 days" />
+          <meta property="og:title" content="Zion Tech Group - AI & IT Solutions" />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-acb8
           <meta
             property="og:description"
             content="Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains. Quantum computing, automation, and micro SAAS solutions."
@@ -495,15 +507,19 @@ const App: React.FC = memo(() => {
           <meta property="og:image:width" content="1200" />
           <meta property="og:image:height" content="630" />
           <meta property="og:site_name" content="Zion Tech Group" />
+<<<<<<< HEAD
           <meta property="og:locale" content="en_US" />
           
           {/* Twitter */}
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-acb8
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content="Zion Tech Group - AI & IT Solutions" />
           <meta
             name="twitter:description"
             content="Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains"
           />
+<<<<<<< HEAD
           <meta name="twitter:image" content="https://ziontechgroup.com/twitter-image.jpg" />
           <meta name="twitter:site" content="@ziontechgroup" />
           <meta name="twitter:creator" content="@ziontechgroup" />
@@ -517,11 +533,22 @@ const App: React.FC = memo(() => {
           <meta name="ICBM" content="39.4496, -75.7163" />
           
           {/* Structured Data */}
+=======
+          <meta name="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
+          <link rel="canonical" href="https://ziontechgroup.com" />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-acb8
           <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
         </Helmet>
         <Router>
           <div className="min-h-screen bg-white">
+            <a 
+              href="#main-content" 
+              className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-600 text-white px-4 py-2 rounded-lg z-50"
+            >
+              Skip to main content
+            </a>
             <Navigation />
+<<<<<<< HEAD
             <main>
               <Suspense fallback={
                 <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -539,6 +566,26 @@ const App: React.FC = memo(() => {
                       <ContentShowcase />
                       <InteractiveContentShowcase2026 />
                     </Suspense>
+=======
+            <main id="main-content" role="main" aria-label="Main content">
+              <Suspense fallback={<LoadingSpinner />}>
+                <Routes>
+                  <Route path="/" element={
+                    <>
+                      <section aria-label="Hero section">
+                        <UnifiedContentPromotion />
+                      </section>
+                      <section aria-label="ROI Calculator">
+                        <InteractiveAIROICalculator />
+                      </section>
+                      <section aria-label="Services showcase">
+                        <ContentShowcase />
+                      </section>
+                      <section aria-label="Interactive solutions">
+                        <InteractiveContentShowcase2026 />
+                      </section>
+                    </>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-acb8
                   } />
                   <Route path="/about" element={<AboutPage />} />
                   <Route path="/contact" element={<ContactPage />} />
