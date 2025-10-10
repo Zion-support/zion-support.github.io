@@ -73,40 +73,27 @@ const Footer: React.FC = memo(() => {
 
           {/* AI Services */}
           <div>
-<<<<<<< HEAD
             <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
               <Brain className="w-5 h-5 mr-2" />
-              AI Services;
-  </
-=======
-            <h3 className="text-lg font-semibold mb-4">AI Services</h3>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+              AI Services
+            </h3>
             <ul className="space-y-2">
               {aiServices.slice(0, 6).map((service, index) => (
                 <li key={index}>
                   <Link 
-<<<<<<< HEAD
-                    href={service.url}
+                    to={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
-=======
-                    href={service.url} 
-                    className="text-gray-300 hover:text-white text-sm transition-colors"
-                  >
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                     {service.name}
                   </Link>
                 </li>
               ))}
-<<<<<<< HEAD
               <li>
                 <Link 
-                  href="/ai-services"
+                  to="/ai-services"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium">
                   View All AI Services →
                 </Link>
               </li>
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
             </ul>
           </div>
 
