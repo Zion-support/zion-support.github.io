@@ -98,17 +98,23 @@ const Footer: React.FC = memo(() => {
     { name: 'Zion AI SEO Optimizer', url: '/zion-ai-seo-optimizer', description: 'SEO optimization' },
     { name: 'Zion AI Data Cleaner', url: '/zion-ai-data-cleaner', description: 'Data cleaning & validation' },
     { name: 'Zion AI Contract Analyzer', url: '/zion-ai-contract-analyzer', description: 'Contract analysis' },
-    { name: 'Zion AI Survey Builder', url: '/zion-ai-survey-builder', description: 'Intelligent surveys' },
-    { name: 'Zion AI Accounting Assistant', url: '/zion-ai-accounting-assistant', description: 'AI accounting' },
-    { name: 'Zion AI Recruitment Pro', url: '/zion-ai-recruitment-pro', description: 'AI recruitment' },
-    { name: 'Zion AI Content Moderation', url: '/zion-ai-content-moderation', description: 'Content moderation' },
-    { name: 'Zion AI Predictive Maintenance', url: '/zion-ai-predictive-maintenance', description: 'Equipment maintenance' },
-    { name: 'Zion AI Energy Manager', url: '/zion-ai-energy-manager', description: 'Energy optimization' },
-    { name: 'Zion AI Supply Chain Optimizer', url: '/zion-ai-supply-chain-optimizer', description: 'Supply chain AI' },
-    { name: 'Zion AI Fraud Detector', url: '/zion-ai-fraud-detector', description: 'Fraud detection' },
-    { name: 'Zion AI Customer Service Pro', url: '/zion-ai-customer-service-pro', description: 'Advanced customer service' },
-    { name: 'Zion AI Marketing Automation', url: '/zion-ai-marketing-automation', description: 'Marketing AI' },
-    { name: 'Zion AI Document AI', url: '/zion-ai-document-ai', description: 'Document processing' }
+    { name: 'Zion AI Code Assistant Pro', url: '/zion-ai-code-assistant-pro', description: 'AI-powered coding' },
+    { name: 'Zion AI Video Analytics', url: '/zion-ai-video-analytics', description: 'Video content analysis' },
+    { name: 'Zion AI Security Monitor', url: '/zion-ai-security-monitor', description: 'Security monitoring' },
+    { name: 'Zion AI Financial Planner', url: '/zion-ai-financial-planner', description: 'Financial planning' },
+    { name: 'Zion AI Workflow Automation', url: '/zion-ai-workflow-automation', description: 'Process automation' }
+  ];
+
+  const emergingTechServices = [
+    { name: 'Quantum Computing', url: '/quantum-computing', description: 'Revolutionary processing' },
+    { name: 'AR/VR Solutions', url: '/ar-vr-solutions', description: 'Immersive experiences' },
+    { name: 'Blockchain & Web3', url: '/blockchain-web3', description: 'Decentralized solutions' },
+    { name: 'IoT & Smart Cities', url: '/iot-smart-city', description: 'Connected infrastructure' },
+    { name: 'AI Holographic Workspaces', url: '/ai-holographic-workspace', description: 'Immersive collaboration' },
+    { name: 'Autonomous Security', url: '/autonomous-security', description: 'AI-powered protection' },
+    { name: '5G Implementation', url: '/5g-implementation', description: 'Ultra-fast connectivity' },
+    { name: 'Edge Computing', url: '/edge-computing', description: 'Distributed processing' },
+    { name: 'Machine Learning Ops', url: '/machine-learning-ops', description: 'ML deployment' }
   ];
 
   const companyLinks = [
@@ -278,6 +284,36 @@ const Footer: React.FC = memo(() => {
                   to="/micro-saas"
                   className="text-green-400 hover:text-green-300 transition-all duration-300 text-sm font-semibold flex items-center group">
                   View All Micro SAAS
+                  <Zap className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Emerging Technologies */}
+          <div className="cyber-card-enhanced p-6 rounded-2xl">
+            <h3 className="text-lg font-bold mb-6 text-orange-400 flex items-center neon-text-enhanced">
+              <div className="w-8 h-8 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center mr-3">
+                <Zap className="w-5 h-5 text-white" />
+              </div>
+              Emerging Tech
+            </h3>
+            <ul className="space-y-3">
+              {emergingTechServices.slice(0, 6).map((service, index) => (
+                <li key={index}>
+                  <Link 
+                    to={service.url}
+                    className="text-gray-300 hover:text-orange-400 transition-all duration-300 text-sm group flex items-center">
+                    <div className="w-1.5 h-1.5 bg-orange-400 rounded-full mr-3 group-hover:scale-150 transition-transform"></div>
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
+              <li className="pt-2 border-t border-orange-500/20">
+                <Link 
+                  to="/emerging-tech"
+                  className="text-orange-400 hover:text-orange-300 transition-all duration-300 text-sm font-semibold flex items-center group">
+                  View All Emerging Tech
                   <Zap className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </li>
