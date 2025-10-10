@@ -9,6 +9,10 @@ interface SEOProps {
   url?: string;
   type?: string;
   structuredData?: object;
+  canonicalUrl?: string;
+  noIndex?: boolean;
+  locale?: string;
+  alternateLocales?: Array<{ hreflang: string; href: string }>;
 }
 
 const EnhancedSEO: React.FC<SEOProps> = ({
@@ -18,7 +22,11 @@ const EnhancedSEO: React.FC<SEOProps> = ({
   image = 'https://ziontechgroup.com/og-image.jpg',
   url = 'https://ziontechgroup.com',
   type = 'website',
-  structuredData
+  structuredData,
+  canonicalUrl,
+  noIndex = false,
+  locale = 'en_US',
+  alternateLocales = []
 }) => {
   const defaultStructuredData = {
     '@context': 'https://schema.org',
@@ -64,12 +72,21 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta name="author" content="Zion Tech Group" />
-      <meta name="robots" content="index, follow" />
-      <meta name="googlebot" content="index, follow" />
-      <meta name="bingbot" content="index, follow" />
+      <meta name="robots" content={noIndex ? "noindex, nofollow" : "index, follow"} />
+      <meta name="googlebot" content={noIndex ? "noindex, nofollow" : "index, follow"} />
+      <meta name="bingbot" content={noIndex ? "noindex, nofollow" : "index, follow" />
       
       {/* Canonical URL */}
-      <link rel="canonical" href={url} />
+      <link rel="canonical" href={canonicalUrl || url} />
+      
+      {/* Language and Locale */}
+      <meta name="language" content="English" />
+      <meta name="locale" content={locale} />
+      
+      {/* Alternate Language Links */}
+      {alternateLocales.map((alt, index) => (
+        <link key={index} rel="alternate" hrefLang={alt.hreflang} href={alt.href} />
+      ))}
       
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={type} />

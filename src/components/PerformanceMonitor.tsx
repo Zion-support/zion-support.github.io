@@ -151,6 +151,24 @@ const PerformanceMonitor: React.FC = () => {
     }
   }, [metrics]);
 
+  // Performance budget alerts
+  useEffect(() => {
+    const performanceBudgets = {
+      fcp: 1800,  // First Contentful Paint
+      lcp: 2500,  // Largest Contentful Paint
+      fid: 100,   // First Input Delay
+      cls: 0.1,   // Cumulative Layout Shift
+      ttfb: 600   // Time to First Byte
+    };
+
+    Object.entries(performanceBudgets).forEach(([metric, threshold]) => {
+      const value = metrics[metric as keyof PerformanceMetrics];
+      if (value !== null && value > threshold) {
+        console.warn(`⚠️ Performance Budget Exceeded: ${metric.toUpperCase()} is ${value}ms (threshold: ${threshold}ms)`);
+      }
+    });
+  }, [metrics]);
+
   return null; // This component doesn't render anything
 };
 
