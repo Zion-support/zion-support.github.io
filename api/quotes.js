@@ -28,8 +28,8 @@ export default async function handler(req, res) {
       email,
       phone,
       details,
-      country: country || 'Not specified',
-      service: service || 'General inquiry',
+      country: req.body.country || 'Not specified',
+      service: req.body.service || 'General inquiry',
       timestamp: new Date().toISOString(),
       status: 'pending'
     };
