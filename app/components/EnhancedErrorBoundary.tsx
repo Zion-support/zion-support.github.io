@@ -1,4 +1,5 @@
 'use client';
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
@@ -94,17 +95,27 @@ export default EnhancedErrorBoundaryPage
   </button>
   </button>
   </h2>
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-e765
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
 
 interface Props {
+<<<<<<< HEAD
   children: ReactNode
   fallback?: ReactNode
+=======
+  children: ReactNode;
+>>>>>>> cursor/analyze-improve-and-deploy-application-e765
 }
 interface State {
+<<<<<<< HEAD
   hasError: boolean
   error?: Error
   errorInfo?: ErrorInfo
+=======
+  hasError: boolean;
+  error?: Error;
+>>>>>>> cursor/analyze-improve-and-deploy-application-e765
 }
 class EnhancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
@@ -115,6 +126,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     return { hasError: true, error }
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+<<<<<<< HEAD
     this.setState({
       error,
       errorInfo
@@ -130,18 +142,41 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       if (this.props.fallback) {
         return this.props.fallback
       }
+=======
+    console.error('Error caught by boundary:', error, errorInfo);
+    
+    // Log error to analytics or error reporting service
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, any>) => void }).gtag;
+      gtag('event', 'exception', {
+        description: error.message,
+        fatal: false
+      });
+    }
+  }
+
+  render() {
+    if (this.state.hasError) {
+>>>>>>> cursor/analyze-improve-and-deploy-application-e765
       return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
-          <div className="max-w-md w-full bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center">
-            <div className="w-16 h-16 bg-red-500/20 rounded-2xl flex items-center justify-center mb-6 mx-auto">
-              <AlertTriangle className="w-8 h-8 text-red-400" />
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+          <div className="text-center max-w-md mx-auto p-8">
+            <div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.5 0L4.268 19.5c-.77.833.192 2.5 1.732 2.5z" />
+              </svg>
             </div>
+<<<<<<< HEAD
             <h1 className="text-2xl font-bold text-white mb-4">
               Oops! Something went wrong
             </h1>
+=======
+            <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
+>>>>>>> cursor/analyze-improve-and-deploy-application-e765
             <p className="text-gray-300 mb-6">
-              We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
+              We're sorry, but something unexpected happened. Please try refreshing the page.
             </p>
+<<<<<<< HEAD
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="mb-6 text-left">
                 <summary className="text-sm text-gray-400 cursor-pointer mb-2">
@@ -181,6 +216,14 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                 support@ziontechgroup.com
               </a>
             </div>
+=======
+            <button
+              onClick={() => window.location.reload()}
+              className="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-2 px-4 rounded transition-colors"
+            >
+              Refresh Page
+            </button>
+>>>>>>> cursor/analyze-improve-and-deploy-application-e765
           </div>
         </div>
       )

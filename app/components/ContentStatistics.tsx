@@ -1,5 +1,6 @@
 'use client';
 import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, Award, Clock, Star, BarChart3, Target, Rocket } from 'lucide-react';
 const ContentStatistics: React.FC = () => {
   const [counters, setCounters] = useState({
@@ -139,9 +140,87 @@ setCounters(prev => {
     });
     return () => {
       timers.forEach(timer => clearInterval(timer));
+=======
+import { TrendingUp, Users, Star, Award, CheckCircle, ArrowRight } from 'lucide-react';
+
+interface Statistic {
+  id: string;
+  label: string;
+  value: string;
+  icon: React.ComponentType<any>;
+  color: string;
+  trend?: {
+    value: number;
+    isPositive: boolean;
+  };
+}
+
+interface ContentStatisticsProps {
+  statistics: Statistic[];
+  title?: string;
+  description?: string;
+  showTrends?: boolean;
+  showIcons?: boolean;
+  backgroundColor?: string;
+  textColor?: string;
+  gridCols?: number;
+}
+
+const ContentStatistics: React.FC<ContentStatisticsProps> = ({
+  statistics,
+  title = 'Our Impact',
+  description = 'Numbers that speak for themselves',
+  showTrends = true,
+  showIcons = true,
+  backgroundColor = 'bg-slate-800',
+  textColor = 'text-white',
+  gridCols = 4
+}) => {
+  const [animatedStats, setAnimatedStats] = useState<{ [key: string]: number }>({});
+
+  useEffect(() => {
+    const animateStats = () => {
+      statistics.forEach((stat) => {
+        const numericValue = parseFloat(stat.value.replace(/[^\d.]/g, ''));
+        if (!isNaN(numericValue)) {
+          const duration = 2000; // 2 seconds
+          const steps = 60;
+          const stepValue = numericValue / steps;
+          let currentStep = 0;
+
+          const timer = setInterval(() => {
+            currentStep++;
+            setAnimatedStats(prev => ({
+              ...prev,
+              [stat.id]: Math.min(stepValue * currentStep, numericValue)
+            }));
+
+            if (currentStep >= steps) {
+              clearInterval(timer);
+            }
+          }, duration / steps);
+        }
+      });
+>>>>>>> cursor/analyze-improve-and-deploy-application-e765
     };
-  }, []);
+
+    animateStats();
+  }, [statistics]);
+
+  const getGridColsClass = () => {
+    switch (gridCols) {
+      case 1: return 'grid-cols-1';
+      case 2: return 'grid-cols-1 md:grid-cols-2';
+      case 3: return 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3';
+      case 4: return 'grid-cols-1 md:grid-cols-2 lg:grid-cols-4';
+      case 5: return 'grid-cols-1 md:grid-cols-2 lg:grid-cols-5';
+      case 6: return 'grid-cols-1 md:grid-cols-2 lg:grid-cols-6';
+      default: return 'grid-cols-1 md:grid-cols-2 lg:grid-cols-4';
+    }
+  };
+
   return (
+<<<<<<< HEAD
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
@@ -160,8 +239,18 @@ setCounters(prev => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             See how we've helped businesses transform with our AI and IT solutions.
           </p>
+=======
+    <div className={`${backgroundColor} ${textColor} py-16 px-4 sm:px-6 lg:px-8`}>
+      <div className="max-w-7xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold mb-4">{title}</h2>
+          <p className="text-xl text-gray-300">{description}</p>
+>>>>>>> cursor/analyze-improve-and-deploy-application-e765
         </div>
+
         {/* Statistics Grid */}
+<<<<<<< HEAD
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {statistics.map((stat, index) => (
             <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 text-center">
@@ -223,10 +312,49 @@ setCounters(prev => {
                     <div key={statIndex} className="flex items-center text-gray-300 text-sm">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                       <span>{stat}</span>
+=======
+        <div className={`grid ${getGridColsClass()} gap-8`}>
+          {statistics.map((stat) => {
+            const IconComponent = stat.icon;
+            const animatedValue = animatedStats[stat.id] || 0;
+            const displayValue = stat.value.includes('%') 
+              ? `${Math.round(animatedValue)}%`
+              : stat.value.includes('+')
+              ? `${Math.round(animatedValue)}+`
+              : stat.value.includes('K')
+              ? `${Math.round(animatedValue)}K`
+              : stat.value.includes('M')
+              ? `${Math.round(animatedValue)}M`
+              : Math.round(animatedValue).toString();
+
+            return (
+              <div key={stat.id} className="text-center">
+                <div className="bg-slate-700/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-600 hover:border-slate-500 transition-all duration-300">
+                  {showIcons && (
+                    <div className={`w-16 h-16 ${stat.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}>
+                      <IconComponent className="w-8 h-8 text-white" />
+>>>>>>> cursor/analyze-improve-and-deploy-application-e765
                     </div>
-                  ))}
+                  )}
+                  
+                  <div className="text-4xl font-bold mb-2">{displayValue}</div>
+                  <div className="text-lg text-gray-300 mb-4">{stat.label}</div>
+                  
+                  {showTrends && stat.trend && (
+                    <div className={`flex items-center justify-center space-x-1 ${
+                      stat.trend.isPositive ? 'text-green-400' : 'text-red-400'
+                    }`}>
+                      <TrendingUp className={`w-4 h-4 ${
+                        stat.trend.isPositive ? 'rotate-0' : 'rotate-180'
+                      }`} />
+                      <span className="text-sm font-semibold">
+                        {stat.trend.isPositive ? '+' : ''}{stat.trend.value}%
+                      </span>
+                    </div>
+                  )}
                 </div>
               </div>
+<<<<<<< HEAD
             ))}
           </div>
         </div>
@@ -293,3 +421,14 @@ export default ContentStatistics
   </button>
   </h2>
   </div>
+=======
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ContentStatistics;
+>>>>>>> cursor/analyze-improve-and-deploy-application-e765

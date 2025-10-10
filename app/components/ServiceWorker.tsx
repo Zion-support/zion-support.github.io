@@ -1,4 +1,5 @@
 'use client';
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
@@ -127,10 +128,14 @@ export default ServiceWorkerPage
   </button>
   </h1>
 import { useEffect } from 'react';
+=======
+import React, { useEffect } from 'react';
+>>>>>>> cursor/analyze-improve-and-deploy-application-e765
 
 const ServiceWorker: React.FC = () => {
   useEffect(() => {
     if ('serviceWorker' in navigator) {
+<<<<<<< HEAD
       navigator.serviceWorker
         .register('/sw.js')
         .then((registration) => {
@@ -139,10 +144,22 @@ const ServiceWorker: React.FC = () => {
         .catch((registrationError) => {
           console.log('SW registration failed: ', registrationError)
         })
+=======
+      const registerServiceWorker = async () => {
+        try {
+          const registration = await navigator.serviceWorker.register('/sw.js');
+          console.log('Service Worker registered successfully:', registration);
+        } catch (error) {
+          console.log('Service Worker registration failed:', error);
+        }
+      };
+
+      registerServiceWorker();
+>>>>>>> cursor/analyze-improve-and-deploy-application-e765
     }
   }, []);
 
-  return null;
+  return null; // This component doesn't render anything visible
 };
 
 export default ServiceWorker;

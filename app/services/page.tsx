@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client'import React, { useState } from 'react'
 import { Helmet } from 'react-helmet-async'import {
   Brain,
@@ -513,74 +514,105 @@ const ServicesPage: React.FC = () => {
       category: 'IT Services'
     },
     // Micro SAAS Services
+=======
+'use client';
+import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { 
+  Brain, 
+  Cloud, 
+  Shield, 
+  Code, 
+  BarChart, 
+  Users, 
+  Zap, 
+  Target, 
+  Globe, 
+  Database, 
+  Smartphone, 
+  Lock, 
+  TrendingUp, 
+  Settings, 
+  Calendar, 
+  CheckSquare, 
+  FileText,
+  Filter
+} from 'lucide-react';
+
+const ServicesPage: React.FC = () => {
+  const [selectedCategory, setSelectedCategory] = useState('all');
+
+  const services = [
+>>>>>>> cursor/analyze-improve-and-deploy-application-e765
     {
       id: 1,
       title: 'AI Solutions',
-      description: 'Comprehensive artificial intelligence solutions for business automation and optimization.',
+      description: 'Comprehensive artificial intelligence solutions including machine learning, natural language processing, and computer vision.',
       icon: Brain,
-      category: 'AI',
-      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
-      price: 'Starting at $5,000/month'
+      category: 'ai',
+      price: 'Starting at $1,500/month',
+      features: ['Machine Learning', 'NLP', 'Computer Vision', 'Predictive Analytics']
     },
     {
       id: 2,
-      title: 'Cloud Services',
-      description: 'Scalable cloud infrastructure and migration services for modern businesses.',
+      title: 'Cloud Infrastructure',
+      description: 'Scalable and secure cloud solutions with AWS, Azure, and GCP integration.',
       icon: Cloud,
-      category: 'Cloud',
-      features: ['AWS/Azure/GCP', 'Cloud Migration', 'Auto-scaling', 'Disaster Recovery'],
-      price: 'Starting at $2,000/month'
+      category: 'infrastructure',
+      price: 'Starting at $999/month',
+      features: ['AWS/Azure/GCP', 'Auto-scaling', 'Load Balancing', 'Disaster Recovery']
     },
     {
       id: 3,
       title: 'Cybersecurity',
       description: 'Advanced security solutions to protect your digital assets and data.',
       icon: Shield,
-      category: 'Security',
-      features: ['Threat Detection', 'Vulnerability Assessment', 'Compliance', 'Incident Response'],
-      price: 'Starting at $3,000/month'
+      category: 'security',
+      price: 'Starting at $799/month',
+      features: ['Threat Detection', 'Vulnerability Assessment', 'Compliance', 'Incident Response']
     },
     {
       id: 4,
-      title: 'Data Analytics',
-      description: 'Transform your data into actionable insights with advanced analytics tools.',
-      icon: BarChart3,
-      category: 'Analytics',
-      features: ['Business Intelligence', 'Real-time Dashboards', 'Data Visualization', 'Reporting'],
-      price: 'Starting at $1,500/month'
+      title: 'Custom Development',
+      description: 'Tailored software solutions designed specifically for your business requirements.',
+      icon: Code,
+      category: 'development',
+      price: 'Starting at $2,000/month',
+      features: ['Web Applications', 'Mobile Apps', 'API Development', 'System Integration']
     },
     {
       id: 5,
-      title: 'Mobile Development',
-      description: 'Custom mobile applications for iOS and Android platforms.',
-      icon: Smartphone,
-      category: 'Development',
-      features: ['iOS Apps', 'Android Apps', 'Cross-platform', 'UI/UX Design'],
-      price: 'Starting at $8,000/project'
+      title: 'Data Analytics',
+      description: 'Transform your data into actionable insights with advanced analytics tools.',
+      icon: BarChart,
+      category: 'analytics',
+      price: 'Starting at $1,299/month',
+      features: ['Business Intelligence', 'Real-time Dashboards', 'Data Visualization', 'Reporting']
     },
     {
       id: 6,
-      title: 'Database Services',
-      description: 'Database design, optimization, and management services.',
-      icon: Database,
-      category: 'Database',
-      features: ['Database Design', 'Performance Optimization', 'Data Migration', 'Backup & Recovery'],
-      price: 'Starting at $1,000/month'
+      title: 'IT Consulting',
+      description: 'Expert guidance to help you make the right technology decisions.',
+      icon: Users,
+      category: 'consulting',
+      price: '$299/hour',
+      features: ['Technology Strategy', 'Digital Transformation', 'Process Optimization', 'Training']
     }
   ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/analyze-improve-and-deploy-application-e765
   const categories = [
-    'All',
-    'AI Services',
-    'Cloud Services',
-    'Cybersecurity',
-    'Data Analytics',
-    'Mobile Development',
-    'Database Services',
-    'Automation',
-    'Web Development',
-    'IT Services',
-    'Micro SAAS'
+    { id: 'all', name: 'All Services' },
+    { id: 'ai', name: 'AI Solutions' },
+    { id: 'infrastructure', name: 'Infrastructure' },
+    { id: 'security', name: 'Security' },
+    { id: 'development', name: 'Development' },
+    { id: 'analytics', name: 'Analytics' },
+    { id: 'consulting', name: 'Consulting' }
   ];
+<<<<<<< HEAD
   const [selectedCategory, setSelectedCategory] = React.useState('All');
   const [searchTerm, setSearchTerm] = React.useState('');
   const [currentPage, setCurrentPage] = React.useState(1);
@@ -601,11 +633,21 @@ const ServicesPage: React.FC = () => {
   }, [selectedCategory, searchTerm]);
   return (
     <React.Fragment>
+=======
+
+  const filteredServices = selectedCategory === 'all' 
+    ? services 
+    : services.filter(service => service.category === selectedCategory);
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+>>>>>>> cursor/analyze-improve-and-deploy-application-e765
       <Helmet>
-        <title>Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive AI and IT services including AI solutions, cloud services, cybersecurity, data analytics, and more." />
-        <meta name="keywords" content="services, AI solutions, cloud services, cybersecurity, data analytics, mobile development, database services" />
+        <title>Our Services | Zion Tech Group</title>
+        <meta name="description" content="Explore our comprehensive range of AI and IT services. From AI solutions to cloud infrastructure, we provide cutting-edge technology services for your business." />
+        <meta name="keywords" content="AI services, IT services, cloud solutions, cybersecurity, custom development, data analytics, IT consulting" />
       </Helmet>
+<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -773,20 +815,98 @@ const ServicesPage: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+=======
+
+      {/* Hero Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            Our <span className="text-cyan-400">Services</span>
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Comprehensive AI and IT solutions designed to transform your business operations 
+            and drive unprecedented growth.
+          </p>
+        </div>
+      </section>
+
+      {/* Filter Section */}
+      <section className="py-8 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-wrap justify-center gap-4">
+            {categories.map((category) => (
+              <button
+                key={category.id}
+                onClick={() => setSelectedCategory(category.id)}
+                className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
+                  selectedCategory === category.id
+                    ? 'bg-cyan-500 text-white'
+                    : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
+                }`}
+              >
+                {category.name}
+              </button>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Services Grid */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredServices.map((service) => (
+              <div key={service.id} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700 hover:border-cyan-500 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-2xl flex items-center justify-center mb-6">
+                  <service.icon className="w-8 h-8 text-slate-900" />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
+                <p className="text-gray-300 mb-6">{service.description}</p>
+                <div className="mb-6">
+                  <h4 className="text-lg font-semibold text-cyan-400 mb-3">Key Features:</h4>
+                  <ul className="space-y-2">
+                    {service.features.map((feature, index) => (
+                      <li key={index} className="flex items-center text-gray-300">
+                        <CheckSquare className="w-4 h-4 text-cyan-400 mr-2" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-cyan-400 mb-4">{service.price}</div>
+                  <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300">
+                    Learn More
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-3xl p-12 border border-slate-700">
+            <h2 className="text-4xl font-bold text-white mb-6">
+>>>>>>> cursor/analyze-improve-and-deploy-application-e765
               Ready to Get Started?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Let's discuss your project and find the perfect solution for your business needs.
+              Let's discuss how our services can help transform your business. 
+              Contact us today for a free consultation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Get Free Consultation;
-  </
-              <button className="border border-white/20 text-white font-semibold py-4 px-8 rounded-lg hover:bg-white/10 transition-all duration-300">
-                View Portfolio;
-  </
+              <button className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                Get Free Consultation
+              </button>
+              <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                View Our Work
+              </button>
             </div>
           </div>
+<<<<<<< HEAD
         </section>
       </div>
     </React.Fragment>
@@ -802,3 +922,12 @@ export default ServicesPage;
   </span>
   </h1>
   </div>
+=======
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default ServicesPage;
+>>>>>>> cursor/analyze-improve-and-deploy-application-e765
