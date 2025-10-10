@@ -253,6 +253,20 @@ const Navigation: React.FC = () => {
             >
               Pricing
             </Link>
+            <Link 
+              to="/team" 
+              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium hover:neon-glow-cyan"
+              onClick={closeAllMenus}
+            >
+              Team
+            </Link>
+            <Link 
+              to="/careers" 
+              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium hover:neon-glow-cyan"
+              onClick={closeAllMenus}
+            >
+              Careers
+            </Link>
 
             {/* Services Dropdown */}
             <div className="relative">
@@ -327,15 +341,31 @@ const Navigation: React.FC = () => {
               Contact
             </Link>
             
-            {/* CTA Button */}
-            <Link
-              to="/contact"
-              className="neon-button hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 inline-flex items-center"
-              onClick={closeAllMenus}
-            >
-              Get Started
-              <ArrowRight className="w-4 h-4 ml-2" />
-            </Link>
+            {/* CTA Buttons */}
+            <div className="flex items-center space-x-4">
+              <Link
+                to="/demo"
+                className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+                onClick={closeAllMenus}
+              >
+                Demo
+              </Link>
+              <Link
+                to="/consultation"
+                className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+                onClick={closeAllMenus}
+              >
+                Consultation
+              </Link>
+              <Link
+                to="/contact"
+                className="neon-button hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 inline-flex items-center"
+                onClick={closeAllMenus}
+              >
+                Get Started
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Link>
+            </div>
           </div>
 
           {/* Mobile Menu Buttons */}
@@ -389,6 +419,20 @@ const Navigation: React.FC = () => {
                 onClick={closeAllMenus}
               >
                 Pricing
+              </Link>
+              <Link 
+                to="/team" 
+                className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
+                onClick={closeAllMenus}
+              >
+                Team
+              </Link>
+              <Link 
+                to="/careers" 
+                className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
+                onClick={closeAllMenus}
+              >
+                Careers
               </Link>
 
               {/* Mobile Services */}
@@ -449,13 +493,29 @@ const Navigation: React.FC = () => {
               </Link>
               
               {/* Mobile CTA */}
-              <Link
-                to="/contact"
-                className="block bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg font-medium transition-colors text-center mt-4"
-                onClick={closeAllMenus}
-              >
-                Get Started
-              </Link>
+              <div className="space-y-3 mt-4">
+                <Link
+                  to="/demo"
+                  className="block border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-6 py-3 rounded-lg font-medium transition-colors text-center"
+                  onClick={closeAllMenus}
+                >
+                  View Demo
+                </Link>
+                <Link
+                  to="/consultation"
+                  className="block border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-slate-900 px-6 py-3 rounded-lg font-medium transition-colors text-center"
+                  onClick={closeAllMenus}
+                >
+                  Free Consultation
+                </Link>
+                <Link
+                  to="/contact"
+                  className="block bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg font-medium transition-colors text-center"
+                  onClick={closeAllMenus}
+                >
+                  Get Started
+                </Link>
+              </div>
             </div>
           </div>
         )}
