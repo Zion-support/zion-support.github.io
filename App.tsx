@@ -3,6 +3,7 @@ import React, { Suspense, memo } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import './src/styles/futuristic.css';
+import './src/styles/optimized.css';
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
 import HomePage from './app/page';
@@ -14,6 +15,8 @@ import PerformanceOptimizer from './src/components/PerformanceOptimizer';
 import AccessibilityEnhancer from './src/components/AccessibilityEnhancer';
 import { usePerformanceMonitor } from './src/hooks/usePerformanceMonitor';
 import { AnalyticsProvider } from './src/components/Analytics';
+import PerformanceMonitor from './src/components/PerformanceMonitor';
+import SEOOptimizer from './src/components/SEOOptimizer';
 
 // Structured data for SEO
 const structuredData = {
@@ -176,6 +179,8 @@ const App: React.FC = memo(() => {
         <AnalyticsProvider>
           <PerformanceOptimizer>
             <AccessibilityEnhancer>
+              <PerformanceMonitor />
+              <SEOOptimizer />
               <AppWithPerformanceMonitoring>
                 <SEOHead />
                 <Router>
