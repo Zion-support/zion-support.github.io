@@ -23,7 +23,11 @@ import {
   FileText,
   Cpu,
   Link,
-  Server
+  Server,
+  Car,
+  Home,
+  Gamepad2,
+  Truck
 } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -1011,6 +1015,552 @@ const AiServicesPage: React.FC = () => {
       category: 'Content Generation',
       popular: true,
       icon: FileText
+    },
+    {
+      id: 'ai-voice-cloning',
+      name: 'AI Voice Cloning',
+      description: 'Advanced voice cloning technology for creating custom voice models and synthetic speech',
+      price: '$799/month',
+      marketPrice: '$1500-5000/month',
+      features: [
+        'High-quality voice cloning',
+        'Custom voice model training',
+        'Multi-language voice synthesis',
+        'Emotion and tone control',
+        'Real-time voice conversion',
+        'Voice authentication',
+        'Integration with voice platforms',
+        'Custom voice applications'
+      ],
+      benefits: [
+        'Create unique voice experiences',
+        'Personalized voice interactions',
+        'Accessibility improvements',
+        'Cost-effective voice solutions'
+      ],
+      category: 'Voice AI',
+      popular: true,
+      icon: Mic
+    },
+    {
+      id: 'ai-3d-model-generation',
+      name: 'AI 3D Model Generation',
+      description: 'AI-powered 3D model creation and generation for gaming, AR/VR, and design applications',
+      price: '$999/month',
+      marketPrice: '$2000-8000/month',
+      features: [
+        'AI-powered 3D model generation',
+        'Text-to-3D conversion',
+        'Image-to-3D reconstruction',
+        '3D model optimization',
+        'Texture and material generation',
+        'Animation and rigging',
+        'Integration with 3D software',
+        'Custom 3D applications'
+      ],
+      benefits: [
+        'Faster 3D content creation',
+        'Reduce design costs',
+        'Automated 3D modeling',
+        'Enhanced creative workflows'
+      ],
+      category: '3D Generation',
+      popular: false,
+      icon: Box
+    },
+    {
+      id: 'ai-drug-discovery',
+      name: 'AI Drug Discovery',
+      description: 'Advanced AI platform for pharmaceutical drug discovery and molecular design',
+      price: '$2999/month',
+      marketPrice: '$5000-20000/month',
+      features: [
+        'Molecular design and optimization',
+        'Drug-target interaction prediction',
+        'ADMET property prediction',
+        'Chemical synthesis planning',
+        'Clinical trial optimization',
+        'Patent analysis and generation',
+        'Integration with research databases',
+        'Custom drug discovery workflows'
+      ],
+      benefits: [
+        'Accelerate drug development',
+        'Reduce research costs',
+        'Improve success rates',
+        'Faster time to market'
+      ],
+      category: 'Healthcare',
+      popular: false,
+      icon: Heart
+    },
+    {
+      id: 'ai-quantum-computing',
+      name: 'AI Quantum Computing',
+      description: 'AI-powered quantum computing solutions for complex optimization and simulation problems',
+      price: '$4999/month',
+      marketPrice: '$10000-50000/month',
+      features: [
+        'Quantum algorithm optimization',
+        'Quantum machine learning',
+        'Quantum simulation',
+        'Optimization problem solving',
+        'Cryptographic applications',
+        'Quantum error correction',
+        'Integration with quantum hardware',
+        'Custom quantum applications'
+      ],
+      benefits: [
+        'Solve complex problems faster',
+        'Exponential computational power',
+        'Breakthrough optimization',
+        'Future-proof technology'
+      ],
+      category: 'Quantum Computing',
+      popular: false,
+      icon: Cpu
+    },
+    {
+      id: 'ai-autonomous-vehicles',
+      name: 'AI Autonomous Vehicles',
+      description: 'AI-powered autonomous vehicle systems with computer vision and decision-making capabilities',
+      price: '$1999/month',
+      marketPrice: '$4000-15000/month',
+      features: [
+        'Computer vision for navigation',
+        'Object detection and tracking',
+        'Path planning and optimization',
+        'Real-time decision making',
+        'Sensor fusion and processing',
+        'Safety and compliance systems',
+        'Integration with vehicle systems',
+        'Custom autonomous applications'
+      ],
+      benefits: [
+        'Safer transportation',
+        'Reduced human error',
+        'Improved efficiency',
+        'Cost-effective mobility'
+      ],
+      category: 'Autonomous Systems',
+      popular: false,
+      icon: Car
+    },
+    {
+      id: 'ai-robotics-control',
+      name: 'AI Robotics Control',
+      description: 'Advanced AI robotics control systems for industrial automation and service robots',
+      price: '$1499/month',
+      marketPrice: '$3000-12000/month',
+      features: [
+        'Robotic motion planning',
+        'Object manipulation',
+        'Human-robot interaction',
+        'Adaptive learning algorithms',
+        'Safety and collision avoidance',
+        'Multi-robot coordination',
+        'Integration with robotic systems',
+        'Custom robotic applications'
+      ],
+      benefits: [
+        'Improved robotic efficiency',
+        'Enhanced safety',
+        'Reduced programming time',
+        'Better human-robot collaboration'
+      ],
+      category: 'Robotics',
+      popular: true,
+      icon: Settings
+    },
+    {
+      id: 'ai-space-exploration',
+      name: 'AI Space Exploration',
+      description: 'AI-powered space exploration systems for satellite operations and space mission planning',
+      price: '$3999/month',
+      marketPrice: '$8000-30000/month',
+      features: [
+        'Satellite constellation management',
+        'Space mission planning',
+        'Orbital mechanics optimization',
+        'Space debris tracking',
+        'Earth observation analysis',
+        'Communication optimization',
+        'Integration with space systems',
+        'Custom space applications'
+      ],
+      benefits: [
+        'Optimize space operations',
+        'Reduce mission costs',
+        'Improve satellite efficiency',
+        'Enhanced space safety'
+      ],
+      category: 'Space Technology',
+      popular: false,
+      icon: Globe
+    },
+    {
+      id: 'ai-climate-modeling',
+      name: 'AI Climate Modeling',
+      description: 'Advanced AI climate modeling and environmental prediction systems',
+      price: '$1999/month',
+      marketPrice: '$4000-15000/month',
+      features: [
+        'Climate pattern prediction',
+        'Weather forecasting',
+        'Environmental impact analysis',
+        'Carbon footprint optimization',
+        'Renewable energy optimization',
+        'Disaster prediction and response',
+        'Integration with climate data',
+        'Custom environmental applications'
+      ],
+      benefits: [
+        'Better climate predictions',
+        'Environmental protection',
+        'Disaster preparedness',
+        'Sustainable solutions'
+      ],
+      category: 'Environmental AI',
+      popular: true,
+      icon: Zap
+    },
+    {
+      id: 'ai-neuroscience',
+      name: 'AI Neuroscience',
+      description: 'AI-powered neuroscience research and brain-computer interface systems',
+      price: '$2999/month',
+      marketPrice: '$6000-25000/month',
+      features: [
+        'Brain signal analysis',
+        'Neural network modeling',
+        'Brain-computer interfaces',
+        'Cognitive assessment',
+        'Mental health monitoring',
+        'Neurofeedback systems',
+        'Integration with medical devices',
+        'Custom neuroscience applications'
+      ],
+      benefits: [
+        'Advance neuroscience research',
+        'Improve mental health care',
+        'Enhanced brain-computer interfaces',
+        'Better cognitive understanding'
+      ],
+      category: 'Neuroscience',
+      popular: false,
+      icon: Brain
+    },
+    {
+      id: 'ai-materials-science',
+      name: 'AI Materials Science',
+      description: 'AI-powered materials discovery and property prediction for advanced materials',
+      price: '$2499/month',
+      marketPrice: '$5000-20000/month',
+      features: [
+        'Materials property prediction',
+        'Crystal structure optimization',
+        'Alloy design and optimization',
+        'Materials performance analysis',
+        'Synthesis pathway prediction',
+        'Materials database integration',
+        'Integration with research tools',
+        'Custom materials applications'
+      ],
+      benefits: [
+        'Faster materials discovery',
+        'Optimize material properties',
+        'Reduce research costs',
+        'Innovative material solutions'
+      ],
+      category: 'Materials Science',
+      popular: false,
+      icon: Box
+    },
+    {
+      id: 'ai-financial-trading',
+      name: 'AI Financial Trading',
+      description: 'Advanced AI trading algorithms and financial market analysis systems',
+      price: '$1999/month',
+      marketPrice: '$4000-15000/month',
+      features: [
+        'Algorithmic trading strategies',
+        'Market prediction models',
+        'Risk management systems',
+        'Portfolio optimization',
+        'High-frequency trading',
+        'Market sentiment analysis',
+        'Integration with trading platforms',
+        'Custom trading applications'
+      ],
+      benefits: [
+        'Improved trading performance',
+        'Better risk management',
+        'Automated trading strategies',
+        'Enhanced market insights'
+      ],
+      category: 'Financial Services',
+      popular: true,
+      icon: TrendingUp
+    },
+    {
+      id: 'ai-cybersecurity-advanced',
+      name: 'AI Advanced Cybersecurity',
+      description: 'Next-generation AI cybersecurity platform with threat hunting and automated response',
+      price: '$1499/month',
+      marketPrice: '$3000-12000/month',
+      features: [
+        'AI-powered threat hunting',
+        'Behavioral anomaly detection',
+        'Automated incident response',
+        'Zero-day threat detection',
+        'Security orchestration',
+        'Threat intelligence analysis',
+        'Integration with security tools',
+        'Custom security applications'
+      ],
+      benefits: [
+        'Proactive threat detection',
+        'Faster incident response',
+        'Reduced security risks',
+        'Automated security operations'
+      ],
+      category: 'Cybersecurity',
+      popular: true,
+      icon: Shield
+    },
+    {
+      id: 'ai-energy-optimization',
+      name: 'AI Energy Optimization',
+      description: 'AI-powered energy management and optimization for smart grids and renewable energy',
+      price: '$1799/month',
+      marketPrice: '$3500-12000/month',
+      features: [
+        'Smart grid optimization',
+        'Renewable energy forecasting',
+        'Energy storage optimization',
+        'Demand response management',
+        'Carbon footprint reduction',
+        'Energy efficiency analysis',
+        'Integration with energy systems',
+        'Custom energy applications'
+      ],
+      benefits: [
+        'Optimize energy consumption',
+        'Reduce carbon footprint',
+        'Improve grid efficiency',
+        'Cost-effective energy solutions'
+      ],
+      category: 'Energy Management',
+      popular: true,
+      icon: Zap
+    },
+    {
+      id: 'ai-agriculture-intelligence',
+      name: 'AI Agriculture Intelligence',
+      description: 'AI-powered agricultural optimization and precision farming systems',
+      price: '$1299/month',
+      marketPrice: '$2500-8000/month',
+      features: [
+        'Crop yield prediction',
+        'Precision agriculture',
+        'Pest and disease detection',
+        'Soil analysis and optimization',
+        'Irrigation management',
+        'Livestock monitoring',
+        'Integration with farm equipment',
+        'Custom agricultural applications'
+      ],
+      benefits: [
+        'Increase crop yields',
+        'Reduce resource usage',
+        'Improve farm efficiency',
+        'Sustainable agriculture'
+      ],
+      category: 'Agriculture',
+      popular: true,
+      icon: Globe
+    },
+    {
+      id: 'ai-education-personalization',
+      name: 'AI Education Personalization',
+      description: 'AI-powered personalized learning and educational content optimization',
+      price: '$899/month',
+      marketPrice: '$1800-5000/month',
+      features: [
+        'Personalized learning paths',
+        'Adaptive content delivery',
+        'Learning analytics',
+        'Student performance prediction',
+        'Curriculum optimization',
+        'Automated assessment',
+        'Integration with LMS platforms',
+        'Custom educational applications'
+      ],
+      benefits: [
+        'Improve learning outcomes',
+        'Personalized education',
+        'Better student engagement',
+        'Optimized teaching methods'
+      ],
+      category: 'Education',
+      popular: true,
+      icon: Users
+    },
+    {
+      id: 'ai-legal-document-analysis',
+      name: 'AI Legal Document Analysis',
+      description: 'Advanced AI legal document analysis and contract review platform',
+      price: '$1999/month',
+      marketPrice: '$4000-15000/month',
+      features: [
+        'Contract analysis and review',
+        'Legal document classification',
+        'Risk assessment and compliance',
+        'Legal research automation',
+        'Case law analysis',
+        'Document generation',
+        'Integration with legal systems',
+        'Custom legal applications'
+      ],
+      benefits: [
+        'Faster legal document review',
+        'Reduce legal costs',
+        'Improve accuracy',
+        'Better compliance management'
+      ],
+      category: 'Legal Tech',
+      popular: true,
+      icon: FileText
+    },
+    {
+      id: 'ai-real-estate-valuation',
+      name: 'AI Real Estate Valuation',
+      description: 'AI-powered real estate valuation and market analysis platform',
+      price: '$799/month',
+      marketPrice: '$1500-5000/month',
+      features: [
+        'Property valuation models',
+        'Market trend analysis',
+        'Investment opportunity identification',
+        'Risk assessment',
+        'Comparative market analysis',
+        'Rental yield prediction',
+        'Integration with real estate platforms',
+        'Custom real estate applications'
+      ],
+      benefits: [
+        'Accurate property valuations',
+        'Better investment decisions',
+        'Market insights',
+        'Risk mitigation'
+      ],
+      category: 'Real Estate',
+      popular: true,
+      icon: Home
+    },
+    {
+      id: 'ai-sports-analytics',
+      name: 'AI Sports Analytics',
+      description: 'AI-powered sports performance analysis and prediction platform',
+      price: '$1299/month',
+      marketPrice: '$2500-8000/month',
+      features: [
+        'Player performance analysis',
+        'Game strategy optimization',
+        'Injury prediction and prevention',
+        'Talent scouting',
+        'Fan engagement analytics',
+        'Broadcast enhancement',
+        'Integration with sports data',
+        'Custom sports applications'
+      ],
+      benefits: [
+        'Improve team performance',
+        'Better player development',
+        'Enhanced fan experience',
+        'Data-driven decisions'
+      ],
+      category: 'Sports Analytics',
+      popular: true,
+      icon: Target
+    },
+    {
+      id: 'ai-gaming-intelligence',
+      name: 'AI Gaming Intelligence',
+      description: 'AI-powered gaming systems with intelligent NPCs and procedural content generation',
+      price: '$999/month',
+      marketPrice: '$2000-6000/month',
+      features: [
+        'Intelligent NPC behavior',
+        'Procedural content generation',
+        'Player behavior analysis',
+        'Game balancing optimization',
+        'Cheat detection',
+        'Personalized gaming experiences',
+        'Integration with game engines',
+        'Custom gaming applications'
+      ],
+      benefits: [
+        'Enhanced gaming experiences',
+        'Dynamic content generation',
+        'Better game balance',
+        'Improved player engagement'
+      ],
+      category: 'Gaming',
+      popular: true,
+      icon: Gamepad2
+    },
+    {
+      id: 'ai-logistics-optimization',
+      name: 'AI Logistics Optimization',
+      description: 'AI-powered logistics and supply chain optimization platform',
+      price: '$1799/month',
+      marketPrice: '$3500-12000/month',
+      features: [
+        'Route optimization',
+        'Warehouse management',
+        'Inventory optimization',
+        'Demand forecasting',
+        'Fleet management',
+        'Last-mile delivery optimization',
+        'Integration with logistics systems',
+        'Custom logistics applications'
+      ],
+      benefits: [
+        'Reduce logistics costs',
+        'Improve delivery efficiency',
+        'Optimize supply chain',
+        'Better customer service'
+      ],
+      category: 'Logistics',
+      popular: true,
+      icon: Truck
+    },
+    {
+      id: 'ai-insurance-claims',
+      name: 'AI Insurance Claims',
+      description: 'AI-powered insurance claims processing and fraud detection platform',
+      price: '$1499/month',
+      marketPrice: '$3000-10000/month',
+      features: [
+        'Automated claims processing',
+        'Fraud detection and prevention',
+        'Damage assessment',
+        'Risk evaluation',
+        'Claims settlement optimization',
+        'Customer service automation',
+        'Integration with insurance systems',
+        'Custom insurance applications'
+      ],
+      benefits: [
+        'Faster claims processing',
+        'Reduce fraud losses',
+        'Improve accuracy',
+        'Better customer experience'
+      ],
+      category: 'Insurance',
+      popular: true,
+      icon: Shield
     }
   ];
 
@@ -1042,7 +1592,22 @@ const AiServicesPage: React.FC = () => {
     { id: 'Conversational AI', name: 'Conversational AI', count: services.filter(s => s.category === 'Conversational AI').length },
     { id: 'Knowledge Management', name: 'Knowledge Management', count: services.filter(s => s.category === 'Knowledge Management').length },
     { id: 'Reporting & Analytics', name: 'Reporting & Analytics', count: services.filter(s => s.category === 'Reporting & Analytics').length },
-    { id: 'Content Generation', name: 'Content Generation', count: services.filter(s => s.category === 'Content Generation').length }
+    { id: 'Content Generation', name: 'Content Generation', count: services.filter(s => s.category === 'Content Generation').length },
+    { id: '3D Generation', name: '3D Generation', count: services.filter(s => s.category === '3D Generation').length },
+    { id: 'Quantum Computing', name: 'Quantum Computing', count: services.filter(s => s.category === 'Quantum Computing').length },
+    { id: 'Autonomous Systems', name: 'Autonomous Systems', count: services.filter(s => s.category === 'Autonomous Systems').length },
+    { id: 'Robotics', name: 'Robotics', count: services.filter(s => s.category === 'Robotics').length },
+    { id: 'Space Technology', name: 'Space Technology', count: services.filter(s => s.category === 'Space Technology').length },
+    { id: 'Environmental AI', name: 'Environmental AI', count: services.filter(s => s.category === 'Environmental AI').length },
+    { id: 'Neuroscience', name: 'Neuroscience', count: services.filter(s => s.category === 'Neuroscience').length },
+    { id: 'Materials Science', name: 'Materials Science', count: services.filter(s => s.category === 'Materials Science').length },
+    { id: 'Agriculture', name: 'Agriculture', count: services.filter(s => s.category === 'Agriculture').length },
+    { id: 'Education', name: 'Education', count: services.filter(s => s.category === 'Education').length },
+    { id: 'Real Estate', name: 'Real Estate', count: services.filter(s => s.category === 'Real Estate').length },
+    { id: 'Sports Analytics', name: 'Sports Analytics', count: services.filter(s => s.category === 'Sports Analytics').length },
+    { id: 'Gaming', name: 'Gaming', count: services.filter(s => s.category === 'Gaming').length },
+    { id: 'Logistics', name: 'Logistics', count: services.filter(s => s.category === 'Logistics').length },
+    { id: 'Insurance', name: 'Insurance', count: services.filter(s => s.category === 'Insurance').length }
   ];
 
   const filteredServices = services.filter(service => 
