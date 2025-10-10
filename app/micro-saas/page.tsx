@@ -1,97 +1,15 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
-<<<<<<< HEAD
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield } from 'lucide-react'
-=======
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Users, Mail, DollarSign, Globe, Eye, Code, Search, Filter, ExternalLink } from 'lucide-react';
-
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-3339
 const MicroSaasPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = React.useState('');
   const [selectedCategory, setSelectedCategory] = React.useState('all');
 
   const microSaasTools = [
     {
-<<<<<<< HEAD
-      title: 'AI Content Generator',
-      description: 'Generate high-quality content for blogs, social media, and marketing materials using advanced AI.',
-      features: ['Multi-language support', 'SEO optimization', 'Brand voice customization', 'Content scheduling'],
-      price: '$29/month',
-      icon: Zap
-=======
-import { Link } from 'react-router-dom';
-import { CheckCircle, ArrowRight, Zap, Star, Users, TrendingUp, Shield, Cloud, BarChart3, MessageSquare } from 'lucide-react';
-interface MicroSaasProduct {
-}
-}
-  id: string;
-  icon: React.ComponentType<any>;
-  title: string;
-  description: string;
-  features: string[];
-  price: string;
-  users: string;
-  popular: boolean;
-  category: string;
-};
-const MicroSaasPage: React.FC = () => {
-};
-  const microSaasProducts: MicroSaasProduct[] = [
-    {
-      id: '1',
-      icon: '📊',
-      title: 'AI Analytics Dashboard',
-      description: 'Real-time business intelligence and predictive analytics for small to medium businesses',
-      features: ['Real-time dashboards', 'Predictive analytics', 'Custom reports', 'Mobile app', 'API integration'],
-      price: '$99/month',
-      users: 'Up to 50 users',
-      popular: true,
-      category: 'Analytics'
-    },
-    },
-      category: 'Analytics'});;)
-},
-    {
-      id: '2',
-      icon: '👥',
-      title: 'AI-Powered CRM',
-      description: 'Intelligent customer relationship management with automated lead scoring and personalized interactions',
-      features: ['Lead management', 'Email automation', 'Sales forecasting', 'Integration APIs', 'Custom fields'],
-      price: '$149/month',
-      users: 'Up to 100 users',
-      popular: false,
-      category: 'CRM'
-    },
-    },
-    {
-      id: '3',
-      icon: '🔒',
-      title: 'Security Monitoring Suite',
-      description: 'Comprehensive cybersecurity monitoring and threat detection for growing businesses',
-      features: ['Threat detection', 'Vulnerability scanning', 'Compliance reporting', '24/7 monitoring', 'Incident response'],
-      price: '$199/month',
-      users: 'Up to 200 users',
-      popular: false,
-      category: 'Security'
-    },
-    },
-    {
-      id: '4',
-      icon: '☁️',
-      title: 'Cloud Infrastructure Manager',
-      description: 'Automated cloud resource management and cost optimization for multi-cloud environments',
-      features: ['Resource optimization', 'Cost tracking', 'Auto-scaling', 'Multi-cloud support', 'Backup management'],
-      price: '$299/month',
-      users: 'Unlimited users',
-      popular: false,
-      category: 'Infrastructure'
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-=======
       title: 'Zion AI Content Studio Pro',
       description: 'Advanced AI-powered content creation platform with GPT-4 integration, brand voice training, and multi-channel publishing.',
       features: ['GPT-4 & Claude Integration', 'Brand Voice AI Training', 'Multi-language Support (50+ languages)', 'SEO Optimization Engine', 'Content Calendar & Scheduling', 'Plagiarism Detection', 'A/B Testing Tools', 'Social Media Auto-Posting'],
@@ -101,7 +19,6 @@ const MicroSaasPage: React.FC = () => {
       icon: Zap,
       category: 'content',
       link: 'https://ziontechgroup.com/zion-ai-content-studio-pro'
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-3339
     },
     {
       title: 'Zion Analytics Intelligence',
@@ -170,14 +87,6 @@ const MicroSaasPage: React.FC = () => {
       link: 'https://ziontechgroup.com/zion-invoice-genius-ai'
     },
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      title: 'Security Monitor',
-      description: 'Advanced security monitoring and threat detection for your applications.',
-      features: ['Real-time monitoring', 'Threat detection', 'Automated alerts', 'Compliance reporting'],
-      price: '$39/month',
-      icon: Shield
-=======
       title: 'Zion Social Scheduler AI',
       description: 'Intelligent social media management with AI content optimization, optimal posting times, and engagement analytics.',
       features: ['AI Content Optimization', 'Optimal Posting Time Detection', 'Multi-platform Publishing', 'Engagement Analytics', 'Hashtag Research', 'Competitor Analysis', 'Content Calendar', 'Team Collaboration'],
@@ -187,7 +96,6 @@ const MicroSaasPage: React.FC = () => {
       icon: Globe,
       category: 'social',
       link: 'https://ziontechgroup.com/zion-social-scheduler-ai'
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-3339
     },
     {
       title: 'Zion AI Video Editor Pro',
@@ -232,6 +140,61 @@ const MicroSaasPage: React.FC = () => {
       icon: Users,
       category: 'analytics',
       link: 'https://ziontechgroup.com/zion-ai-customer-insights'
+    },
+    {
+      title: 'Zion AI HR Assistant Pro',
+      description: 'Intelligent HR management platform with AI-powered recruitment, employee analytics, and automated workflows.',
+      features: ['AI Resume Screening', 'Candidate Matching', 'Interview Scheduling', 'Employee Performance Analytics', 'Automated Onboarding', 'Skills Assessment', 'Compliance Management', 'Payroll Integration'],
+      price: '$129/month',
+      marketPrice: '$300-800/month',
+      benefits: ['Reduce hiring time by 60%', 'Improve candidate quality', 'Automated HR processes', 'Better employee insights'],
+      icon: Users,
+      category: 'hr',
+      link: 'https://ziontechgroup.com/zion-ai-hr-assistant-pro'
+    },
+    {
+      title: 'Zion AI Accounting Suite',
+      description: 'Comprehensive AI-powered accounting platform with automated bookkeeping, tax preparation, and financial forecasting.',
+      features: ['Automated Bookkeeping', 'AI Tax Preparation', 'Financial Forecasting', 'Expense Categorization', 'Invoice Processing', 'Bank Reconciliation', 'Compliance Reporting', 'Multi-currency Support'],
+      price: '$149/month',
+      marketPrice: '$400-1000/month',
+      benefits: ['Save 90% bookkeeping time', 'Automated tax filing', 'Real-time financial insights', 'Compliance assurance'],
+      icon: DollarSign,
+      category: 'finance',
+      link: 'https://ziontechgroup.com/zion-ai-accounting-suite'
+    },
+    {
+      title: 'Zion AI Inventory Manager',
+      description: 'Smart inventory management with AI demand forecasting, automated reordering, and supply chain optimization.',
+      features: ['AI Demand Forecasting', 'Automated Reordering', 'Supply Chain Optimization', 'Real-time Inventory Tracking', 'Supplier Management', 'Cost Analysis', 'Multi-location Support', 'Integration APIs'],
+      price: '$99/month',
+      marketPrice: '$250-600/month',
+      benefits: ['Reduce inventory costs by 30%', 'Prevent stockouts', 'Optimize supply chain', 'Real-time visibility'],
+      icon: BarChart3,
+      category: 'inventory',
+      link: 'https://ziontechgroup.com/zion-ai-inventory-manager'
+    },
+    {
+      title: 'Zion AI Legal Assistant',
+      description: 'AI-powered legal document analysis, contract review, and compliance monitoring platform.',
+      features: ['Contract Analysis', 'Legal Document Review', 'Compliance Monitoring', 'Risk Assessment', 'Document Templates', 'Legal Research', 'Case Law Analysis', 'Client Portal'],
+      price: '$199/month',
+      marketPrice: '$500-1500/month',
+      benefits: ['Reduce legal review time by 80%', 'Improve accuracy', 'Compliance assurance', 'Cost savings'],
+      icon: Shield,
+      category: 'legal',
+      link: 'https://ziontechgroup.com/zion-ai-legal-assistant'
+    },
+    {
+      title: 'Zion AI Healthcare Analytics',
+      description: 'HIPAA-compliant healthcare analytics platform with patient insights, treatment optimization, and predictive diagnostics.',
+      features: ['Patient Analytics', 'Treatment Optimization', 'Predictive Diagnostics', 'HIPAA Compliance', 'Medical Image Analysis', 'Drug Interaction Checking', 'Clinical Decision Support', 'Electronic Health Records Integration'],
+      price: '$299/month',
+      marketPrice: '$800-2000/month',
+      benefits: ['Improve patient outcomes', 'Reduce diagnostic errors', 'Optimize treatments', 'Compliance ready'],
+      icon: Shield,
+      category: 'healthcare',
+      link: 'https://ziontechgroup.com/zion-ai-healthcare-analytics'
     }
   ]
 
@@ -247,7 +210,11 @@ const MicroSaasPage: React.FC = () => {
     { id: 'social', name: 'Social Media', count: microSaasTools.filter(t => t.category === 'social').length },
     { id: 'video', name: 'Video & Media', count: microSaasTools.filter(t => t.category === 'video').length },
     { id: 'translation', name: 'Translation', count: microSaasTools.filter(t => t.category === 'translation').length },
-    { id: 'development', name: 'Development', count: microSaasTools.filter(t => t.category === 'development').length }
+    { id: 'development', name: 'Development', count: microSaasTools.filter(t => t.category === 'development').length },
+    { id: 'hr', name: 'HR & Recruitment', count: microSaasTools.filter(t => t.category === 'hr').length },
+    { id: 'inventory', name: 'Inventory Management', count: microSaasTools.filter(t => t.category === 'inventory').length },
+    { id: 'legal', name: 'Legal & Compliance', count: microSaasTools.filter(t => t.category === 'legal').length },
+    { id: 'healthcare', name: 'Healthcare', count: microSaasTools.filter(t => t.category === 'healthcare').length }
   ]
 
   const filteredTools = microSaasTools.filter(tool => {
@@ -418,109 +385,6 @@ const MicroSaasPage: React.FC = () => {
                 Choose from our ready-made solutions or let us build a custom micro SaaS tool for your specific needs.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
-                <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
-                  Browse Solutions
-                </button>
-                <button className="px-8 py-4 bg-white/10 text-white font-semibold rounded-full hover:bg-white/20 transition-all duration-300">
-                  Custom Development
-                </button>
-=======
-      id: '6',
-      icon: MessageSquare,
-      title: 'Customer Support Chatbot',
-      description: 'Intelligent chatbot solution for 24/7 customer support and lead generation',
-      features: ['Natural language processing', 'Multi-channel support', 'Knowledge base', 'Analytics', 'Custom training'],
-      price: '$129/month',
-      users: 'Unlimited conversations',
-      popular: false,
-      category: 'Support'
-    };
-    };
-  ];
-  const benefits = [
-];
-    'No upfront costs or setup fees',
-    'Quick deployment in 24-48 hours',
-    'Scalable solutions that grow with you',
-    'Regular updates and new features',
-    '24/7 technical support',
-    'Easy integration with existing tools',
-    'Free trial for all products',
-    'Cancel anytime, no long-term contracts'
-  ];
-  const categories = ['All', 'Analytics', 'CRM', 'Security', 'Infrastructure', 'Marketing', 'Support'];
-  const stats = [
-[
-        {
-      icon: Users,
-      value: '10,000+',
-      label: 'Active Users',
-      description: 'Growing community of satisfied customers'
-    },
-        {
-      icon: TrendingUp,
-      value: '99.9%',
-      label: 'Uptime',
-      description: 'Reliable service you can count on'
-    },
-        {
-      icon: Star,
-      value: '4.8/5',
-      label: 'Rating',
-      description: 'Highly rated by our customers'
-    },
-        {
-      icon: Zap,
-      value: '24/7',
-      label: 'Support',
-      description: 'Always here when you need us'
-    };
-  ];
-  return (
-    <>
-      <Helmet>
-        <title>Micro SaaS Solutions - Zion Tech Group | Ready-to-Use Business Tools</title>
-        <meta name="description" content="Discover our collection of micro SaaS solutions designed for small to medium businesses. AI-powered tools for analytics, CRM, security, and more." />
-        <meta name="keywords" content="micro SaaS, business tools, AI analytics, CRM, security monitoring, cloud management, small business software" />
-                Ready to Get Started?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Choose the micro SaaS solution that fits your business needs. 
-                Start with a free trial and scale as you grow.
-              <
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link to="/contact"
-                  className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
-                  <Zap className="w-5 h-5" />
-                  Start Free Trial
-                </Link>
-                <Link to="/pricing"
-                  className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
-                  View All Plans
-                <
-              <
-            <
-          <
-        <
-      <
-    <)
-  );
-                Choose the micro SaaS solution that fits your business needs. 
-                Start with a free trial and scale as you grow.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link to="/contact"
-                  className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900 px-8 py-4 rounded-lg font-semibold hover:from-cyan-300 hover:to-purple-300 transition-all duration-300 transform hover:scale-105">
-                  <Zap className="w-5 h-5" />
-                  Start Free Trial
-                </Link>
-                <Link to="/pricing"
-                  className="inline-flex items-center gap-2 bg-slate-700 text-white px-8 py-4 rounded-lg font-semibold border border-slate-600 hover:bg-slate-600 transition-all duration-300">
-                  View All Plans
-                </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-=======
                 <a
                   href="/contact"
                   className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
@@ -536,13 +400,11 @@ const MicroSaasPage: React.FC = () => {
               </div>
               <div className="mt-6 text-sm text-gray-400">
                 <p>📧 kleber@ziontechgroup.com | 📍 364 E Main St STE 1008, Middletown DE 19709</p>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-3339
               </div>
             </div>
           </div>
         </section>
       </div>
-<<<<<<< HEAD
 
       <Footer />
     </>
@@ -550,9 +412,3 @@ const MicroSaasPage: React.FC = () => {
 }
 
 export default MicroSaasPage
-=======
-    </>
-  );
-};
-export default MicroSaasPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
