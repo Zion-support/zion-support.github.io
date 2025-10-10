@@ -37,7 +37,7 @@ constructor(props: Props) {
     this.setState({
       error,
       errorInfo
-    });
+    })
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
@@ -72,7 +72,7 @@ const errorData = {
       gtag('event', 'exception', {
         description: error.message,
         fatal: false
-      });
+      })
     }
 
     // console.error removed for production
@@ -83,7 +83,7 @@ const errorData = {
       hasError: false,
       error: null,
       errorInfo: null
-    });
+    })
   };
   
   handleGoHome = () => {
@@ -128,14 +128,14 @@ const errorData = {
                       <pre className="whitespace-pre-wrap mt-1">
                         {this.state.error.stack}
                       </pre>
-                    </div>);
+                    </div>
                   {this.state.errorInfo && (
                     <div>
                       <strong>Component Stack:</strong>
                       <pre className="whitespace-pre-wrap mt-1">
                         {this.state.errorInfo.componentStack}
                       </pre>
-                    </div>);
+                    </div>
                 </div>
               </details>);
             <div className="flex flex-col sm:flex-row gap-4">
@@ -168,7 +168,7 @@ const errorData = {
               </p>
             </div>
           </div>
-        </div>);
+        </div>
     return this.props.children}
 }
 

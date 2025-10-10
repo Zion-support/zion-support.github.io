@@ -273,6 +273,6 @@ const contactInfo = {
         </div>
       </div>
     </footer>
-  )});
+  )})
 Footer.displayName = 'Footer'
 export default Footer;

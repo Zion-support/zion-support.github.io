@@ -88,9 +88,9 @@ const faqs = [
                   {openItems.includes(index) && (
                     <div className="px-6 pb-4">
                       <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
-                    </div>);
+                    </div>
                 </div>
-              ));
+              ))
             </div>
           </div>
         </section>

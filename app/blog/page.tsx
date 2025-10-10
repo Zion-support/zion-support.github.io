@@ -85,10 +85,10 @@ const BlogPage: React.FC = () => {
     return blogPosts.filter(post => {
       const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           post.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+                           post.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
       const matchesCategory = selectedCategory === 'all' || post.category === selectedCategory;
       return matchesSearch && matchesCategory;
-    });
+    })
   }, [searchTerm, selectedCategory]);
 
   const featuredPosts = blogPosts.filter(post => post.featured);

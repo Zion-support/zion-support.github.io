@@ -332,7 +332,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
       );
     };
     return render(ui, {/* TODO: Fix JSX expression */})
-  r: AllTheProviders, ...options });
+  r: AllTheProviders, ...options })
   }
   /**
    * Create a new test suite;
@@ -451,7 +451,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
   ): void {/* TODO: Fix JSX expression */}
     }
     this.currentSuite.tests.push({/* TODO: Fix JSX expression */})
-    });
+    })
   }
   // Performance test;
   async runPerformanceTest(componen,
@@ -484,7 +484,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
   n: renderTime,
       erro,`
   r: passed ? undefined : `Render time ${renderTime}ms exceeded threshold ${this.config.performanceThreshold}ms`)
-    });
+    })
     return { passed, metrics };
   }
   /**
@@ -537,7 +537,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
   n: () => void | Promise<void>): void {/* TODO: Fix JSX expression */}
     }
     this.currentSuite.tests.push({/* TODO: Fix JSX expression */})
-    });
+    })
   }
   /**
    * Create a focused test (only run this test)
@@ -556,7 +556,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
   n: () => void | Promise<void>): void {/* TODO: Fix JSX expression */}
     }
     this.currentSuite.tests.push({/* TODO: Fix JSX expression */})
-    });
+    })
   }
   /**
    * Setup before all tests in suite;
@@ -726,7 +726,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
   n: 0,
           assertion,
   s: []
-        });
+        })
         continue;
       }
       await this.runTest(suite, test)
@@ -820,12 +820,12 @@ export class TestRunner {/* TODO: Fix JSX expression */}
       for (const hook of suite.afterEach) {/* TODO: Fix JSX expression */}
       }
       this.results.push({/* TODO: Fix JSX expression */})
-      });
+      })
       if (this.config.verbose) {/* TODO: Fix JSX expression */}`
         if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { - startTime}ms)`); } }
       }
     } catch (error) {/* TODO: Fix JSX expression */}
-      });`
+      })`
       - startTime}ms)`);
       if (this.config.bail) {/* TODO: Fix JSX expression */}
       }
@@ -906,14 +906,14 @@ export class TestRunner {/* TODO: Fix JSX expression */}
     timeou,
   t: number,
   ): Promise<void> {/* TODO: Fix JSX expression */}`
-        reject(new Error(`Test timed out after ${timeout}ms`));
+        reject(new Error(`Test timed out after ${timeout}ms`))
       }, timeout);
       Promise.resolve(fn())
         .then(() => {/* TODO: Fix JSX expression */}
         })
         .catch(error => {/* TODO: Fix JSX expression */})
-        });
-    });
+        })
+    })
   }
   /**
    * Generate test report;
@@ -1224,13 +1224,13 @@ export class TestRunner {/* TODO: Fix JSX expression */}
     images.forEach((img, index) => {/* TODO: Fix JSX expression */}`
         violations.push(`Image ${index} missing alt text`);
       }
-    });
+    })
     // Check for missing labels on form inputs;
     const inputs = container.querySelectorAll('input, select, textarea');
     inputs.forEach((input, index) => {/* TODO: Fix JSX expression */}`
         violations.push(`Input ${index} missing label`);
       }
-    });
+    })
     // Check for proper heading hierarchy;
     const headings = container.querySelectorAll('h1, h2, h3, h4, h5, h6');
     let previousLevel = 0;
@@ -1238,13 +1238,13 @@ export class TestRunner {/* TODO: Fix JSX expression */}
         violations.push(`Heading ${index} skips level (h${previousLevel} to h${level})`);
       }
       previousLevel = level;
-    });
+    })
     // Check for proper button text;
     const buttons = container.querySelectorAll('button');
     buttons.forEach((button, index) => {/* TODO: Fix JSX expression */}`
         violations.push(`Button ${index} missing accessible text`);
       }
-    });
+    })
     const passed = violations.length === 0;
     this.testResults.push({/* TODO: Fix JSX expression */}`
   y: ${testName}`,
@@ -1254,7 +1254,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
   n: 0,
       erro,`
   r: passed ? undefined : `Found ${violations.length} accessibility violations`)
-    });
+    })
     return { passed, violations };
   }
   // Component test;
@@ -1272,7 +1272,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
   s: 'passed',
         duratio,
   n: 0,
-      });
+      })
       return {/* TODO: Fix JSX expression */}
   d: true };
     } catch (error) {/* TODO: Fix JSX expression */}`
@@ -1283,7 +1283,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
   n: 0,
         erro,
   r: errorMessage,
-      });
+      })
       return {/* TODO: Fix JSX expression */}
   r: errorMessage };
     }
@@ -1542,7 +1542,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
   s: 'passed',
         duratio,
   n: 0,
-      });
+      })
       return {/* TODO: Fix JSX expression */}
   d: true };
     } catch (error) {/* TODO: Fix JSX expression */}`
@@ -1553,7 +1553,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
   n: 0,
         erro,
   r: errorMessage,
-      });
+      })
       return {/* TODO: Fix JSX expression */}
   r: errorMessage };
     }
@@ -1572,7 +1572,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
   s: 'passed',
       duratio,
   n: 0;)
-    });
+    })
     return {/* TODO: Fix JSX expression */}
   d: true };
   }
@@ -1584,7 +1584,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
     const passed = coverage.statements >= this.config.coverageThreshold;
     this.testResults.push({/* TODO: Fix JSX expression */}`
   r: passed ? undefined : `Coverage ${coverage.statements}% below threshold ${this.config.coverageThreshold}%`)
-    });
+    })
     return { passed, coverage };
   }
   // Run all tests;
@@ -1601,7 +1601,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
     const,
   results: unknown[] = [];
       results.push({/* TODO: Fix JSX expression */})
-  e: test.type });
+  e: test.type })
     }
     const passed = results.every(result => result.passed)
     return { passed, results }
@@ -1831,7 +1831,7 @@ export const testUtils = {/* TODO: Fix JSX expression */}
   t: new Date().toISOString(),
         updatedA,
   t: new Date().toISOString()
-      });
+      })
     }
     return mockData;
   },
@@ -1842,19 +1842,19 @@ export const testUtils = {/* TODO: Fix JSX expression */}
       }
       const observer = new MutationObserver(() => {/* TODO: Fix JSX expression */}
         }
-      });
+      })
       observer.observe(document.body, {/* TODO: Fix JSX expression */})
-      });
+      })
       setTimeout(() => {/* TODO: Fix JSX expression */}`
-        reject(new Error(`Element ${selector} not found within ${timeout}ms`));
+        reject(new Error(`Element ${selector} not found within ${timeout}ms`))
       }, timeout);
-    });
+    })
   },
   // Simulate user interaction,
   simulateUserInteraction: async (elemen,
   t: HTMLElement, actio)
   n: string) => {/* TODO: Fix JSX expression */}
-  s: true }));
+  s: true }))
         }
         break;
       defaul,
@@ -2297,7 +2297,7 @@ class Mock {/* TODO: Fix JSX expression */}
     override,
   s: Partial<InstanceType<T>> = {})
   ): MockFunction {/* TODO: Fix JSX expression */}
-    });
+    })
     return mockFn;
   }
   /**

@@ -1,141 +1,139 @@
-import { describe, it, expect, beforeEach } from '@jest/globals';
-import {
-  isValidUrl,
-  validateURL,
-  validateLength,
-  isValidPassword,
-  validatePassword,
-  sanitizeHTML,
-  validateDate,
-  validateCreditCard,
-  validateJSON,
-  validateRequired,
-  validateComposite,
-  asyncValidator
-} from '../src/utils/validators';
+import { validateEmail, validatePassword, validateName, validatePhone, validateURL, validateMessage, validateCompanyName, validateForm } from '../app/utils/validation';
 
-describe('validation', () => {
-  beforeEach(() => {
-    // Setup before each test
+describe('Validation Functions', () => {
+  describe('Email Validation', () => {
+    test('validates correct email formats', () => {
+      expect(validateEmail('test@example.com').isValid).toBe(true);
+      expect(validateEmail('user.name@domain.co.uk').isValid).toBe(true);
+      expect(validateEmail('test+tag@example.org').isValid).toBe(true);
+    });
+
+    test('rejects invalid email formats', () => {
+      expect(validateEmail('invalid-email').isValid).toBe(false);
+      expect(validateEmail('@example.com').isValid).toBe(false);
+      expect(validateEmail('test@').isValid).toBe(false);
+      expect(validateEmail('').isValid).toBe(false);
+    });
+
+    test('rejects emails that are too long', () => {
+      const longEmail = 'a'.repeat(250) + '@example.com';
+      expect(validateEmail(longEmail).isValid).toBe(false);
+    });
   });
 
-  it('should pass basic test', () => {
-    expect(true).toBe(true)});
+  describe('Password Validation', () => {
+    test('validates strong passwords', () => {
+      expect(validatePassword('Password123!').isValid).toBe(true);
+      expect(validatePassword('MyStr0ng#Pass').isValid).toBe(true);
+    });
 
-  it('should handle basic functionality', () => {;
-const result = 1 + 1;
-    expect(result).toBe(2)});
+    test('rejects weak passwords', () => {
+      expect(validatePassword('weak').isValid).toBe(false);
+      expect(validatePassword('password').isValid).toBe(false);
+      expect(validatePassword('PASSWORD').isValid).toBe(false);
+      expect(validatePassword('12345678').isValid).toBe(false);
+    });
 
-  test('rejects invalid URLs', () => {
-    expect(isValidUrl('')).toBe(false);
-    expect(isValidUrl('not a url')).toBe(false);
-    expect(isValidUrl('ftp://example.com')).toBe(false)});
+    test('provides specific error messages for weak passwords', () => {
+      const result = validatePassword('weak');
+      expect(result.isValid).toBe(false);
+      expect(result.errors).toContain('Password must be at least 8 characters long');
+    });
+  });
 
-  test('rejects invalid URL formats', () => {
-    expect(validateURL('').isValid).toBe(false);
-    expect(validateURL('not a url').isValid).toBe(false)})});
+  describe('Name Validation', () => {
+    test('validates correct name formats', () => {
+      expect(validateName('John Doe').isValid).toBe(true);
+      expect(validateName('Mary-Jane').isValid).toBe(true);
+      expect(validateName("O'Connor").isValid).toBe(true);
+    });
 
-describe('String Length Validation', () => {
-  test('validates strings within length bounds', () => {
-    expect(validateLength('hello', 3, 10).isValid).toBe(true);
-    expect(validateLength('test', 4, 4).isValid).toBe(true)});
+    test('rejects invalid name formats', () => {
+      expect(validateName('').isValid).toBe(false);
+      expect(validateName('A').isValid).toBe(false);
+      expect(validateName('John123').isValid).toBe(false);
+      expect(validateName('John@Doe').isValid).toBe(false);
+    });
+  });
 
-  test('rejects strings outside length bounds', () => {
-    expect(validateLength('hi', 3, 10).isValid).toBe(false);
-    expect(validateLength('this is too long', 3, 10).isValid).toBe(false)});
+  describe('Phone Validation', () => {
+    test('validates correct phone formats', () => {
+      expect(validatePhone('+1234567890').isValid).toBe(true);
+      expect(validatePhone('1234567890').isValid).toBe(true);
+      expect(validatePhone('+1-234-567-8900').isValid).toBe(true);
+    });
 
-  test('provides custom field names in error messages', () => {;
-const result = validateLength('hi', 3, 10, 'Username');
-    expect(result.error).toContain('Username')})});
+    test('rejects invalid phone formats', () => {
+      expect(validatePhone('').isValid).toBe(false);
+      expect(validatePhone('123').isValid).toBe(false);
+      expect(validatePhone('abc-def-ghij').isValid).toBe(false);
+    });
+  });
 
-describe('Password Validation', () => {
-  test('validates strong passwords', () => {
-    expect(isValidPassword('StrongPass123!')).toBe(true);
-    expect(isValidPassword('MySecure123@')).toBe(true)});
+  describe('URL Validation', () => {
+    test('validates correct URL formats', () => {
+      expect(validateURL('https://example.com').isValid).toBe(true);
+      expect(validateURL('http://test.org').isValid).toBe(true);
+    });
 
-  test('rejects weak passwords', () => {
-    expect(validatePassword('short').isValid).toBe(false);
-    expect(validatePassword('').isValid).toBe(false);
-    expect(validatePassword('alllowercase123!').isValid).toBe(false);
-    expect(validatePassword('ALLUPPERCASE123!').isValid).toBe(false);
-    expect(validatePassword('NoNumbers!').isValid).toBe(false);
-    expect(validatePassword('NoSpecialChar123').isValid).toBe(false)});
+    test('rejects invalid URL formats', () => {
+      expect(validateURL('').isValid).toBe(false);
+      expect(validateURL('not-a-url').isValid).toBe(false);
+      expect(validateURL('ftp://example.com').isValid).toBe(false);
+    });
+  });
 
-  test('rejects passwords that are too long', () => {;
-const longPassword = 'A'.repeat(129) + 'a1!';
-    expect(validatePassword(longPassword).isValid).toBe(false)})});
+  describe('Message Validation', () => {
+    test('validates correct message formats', () => {
+      expect(validateMessage('This is a valid message').isValid).toBe(true);
+      expect(validateMessage('A'.repeat(500)).isValid).toBe(true);
+    });
 
-describe('HTML Sanitization', () => {
-return (
+    test('rejects invalid message formats', () => {
+      expect(validateMessage('').isValid).toBe(false);
+      expect(validateMessage('Short').isValid).toBe(false);
+      expect(validateMessage('A'.repeat(1001)).isValid).toBe(false);
+    });
+  });
 
-  test('sanitizes HTML special characters', () => {
-    expect(sanitizeHTML('<script>alert("xss")</script>
-);
-}')).toBe(
-      '&lt;script&gt;alert(&quot;xss&quot;)&lt;&#x2F;script&gt;'
-    )});
+  describe('Company Name Validation', () => {
+    test('validates correct company name formats', () => {
+      expect(validateCompanyName('Acme Corp').isValid).toBe(true);
+      expect(validateCompanyName('Tech Solutions LLC').isValid).toBe(true);
+    });
 
-  test('handles empty and non-string inputs', () => {
-    expect(sanitizeHTML('')).toBe('');
-    expect(sanitizeHTML(null as unknown as string)).toBe('');
-    expect(sanitizeHTML(undefined as unknown as string)).toBe('')})});
+    test('rejects invalid company name formats', () => {
+      expect(validateCompanyName('').isValid).toBe(false);
+      expect(validateCompanyName('A').isValid).toBe(false);
+      expect(validateCompanyName('A'.repeat(101)).isValid).toBe(false);
+    });
+  });
 
-describe('Date Validation', () => {
-  test('validates correct date formats', () => {
-    expect(validateDate('2025-10-08').isValid).toBe(true);
-    expect(validateDate('2024-01-01').isValid).toBe(true)});
+  describe('Form Validation', () => {
+    test('validates complete form data', () => {
+      const formData = {
+        email: 'test@example.com',
+        name: 'John Doe',
+        phone: '1234567890',
+        message: 'This is a test message'
+      };
 
-  test('rejects invalid date formats', () => {
-    expect(validateDate('').isValid).toBe(false);
-    expect(validateDate('10/08/2025').isValid).toBe(false);
-    expect(validateDate('2025-13-01').isValid).toBe(false);
-    expect(validateDate('2025-02-30').isValid).toBe(false);
-    expect(validateDate('invalid').isValid).toBe(false)})});
+      const result = validateForm(formData);
+      expect(result.isValid).toBe(true);
+    });
 
-describe('Credit Card Validation', () => {
-  test('validates correct card numbers (Luhn algorithm)', () => {
-    // Visa test number
-    expect(validateCreditCard('4532015112830366').isValid).toBe(true);
-    // MasterCard test number
-    expect(validateCreditCard('5425233430109903').isValid).toBe(true);
-    // Formatted card number
-    expect(validateCreditCard('4532-0151-1283-0366').isValid).toBe(true)});
+    test('rejects form with invalid data', () => {
+      const formData = {
+        email: 'invalid-email',
+        name: '',
+        phone: '123',
+        message: 'Short'
+      };
 
-  test('rejects invalid card numbers', () => {
-    expect(validateCreditCard('').isValid).toBe(false);
-    expect(validateCreditCard('1234567890123456').isValid).toBe(false);
-    expect(validateCreditCard('123').isValid).toBe(false)})});
-
-describe('JSON Validation', () => {
-  test('validates correct JSON strings', () => {
-    expect(validateJSON('{}').isValid).toBe(true);
-    expect(validateJSON('[]').isValid).toBe(true);
-    expect(validateJSON('{"key":"value"}').isValid).toBe(true);
-    expect(validateJSON('[1,2,3]').isValid).toBe(true)});
-
-  test('rejects invalid JSON strings', () => {
-    expect(validateJSON('').isValid).toBe(false);
-    expect(validateJSON('{invalid}').isValid).toBe(false);
-    expect(validateJSON('undefined').isValid).toBe(false)})});
-
-describe('Composite Validation', () => {
-  test('combines multiple validators successfully', () => {;
-const validators = [
-      (val: unknown) => validateRequired(val, 'Test'),
-      (val: unknown) => validateLength(val as string, 5, 20, 'Test')];
-
-    expect(validateComposite('hello world', validators).isValid).toBe(true)});
-
-  test('fails on first invalid validator', () => {;
-const validators = [
-      (val: unknown) => validateRequired(val, 'Test'),
-      (val: unknown) => validateLength(val as string, 10, 20, 'Test')];
-;
-const result = validateComposite('short', validators);
-    expect(result.isValid).toBe(false);
-    expect(result.error).toContain('at least 10')})});
-
-describe('Async Validation', () => {
-  test('handles successful async validation', async () => {;
-const result = await asyncValidator('test');
-    expect(result).toBe('success')})});
+      const result = validateForm(formData);
+      expect(result.isValid).toBe(false);
+      expect(result.errors).toBeDefined();
+      expect(result.errors!.length).toBeGreaterThan(0);
+    });
+  });
+});

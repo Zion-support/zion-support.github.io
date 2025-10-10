@@ -67,10 +67,10 @@ const BlockchainWeb3Page: React.FC = () => {const features = [
                       <CheckCircle className="w-5 h-5 text-cyan-400 mr-3" />
                       {benefit}
                     </li>
-                  ));
+                  ))
                 </ul>
               </div>
-            ));
+            ))
           </div>
         </div>
       </div>

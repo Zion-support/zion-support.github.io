@@ -22,32 +22,32 @@ const ContactForm: React.FC = () => {const [formData, setFormData] = useState<Fo
     phone: '',
     service: '',
     message: ''
-  });
+  })
 ;
 const [status, setStatus] = useState<FormStatus>({
     type: 'idle',
     message: ''
-  });
+  })
 ;
 const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
 const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }));
+    }))
 ;
 const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setStatus({ type: 'loading', message: 'Sending message...' });
+    setStatus({ type: 'loading', message: 'Sending message...' })
 
     try {
       // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      await new Promise(resolve => setTimeout(resolve, 2000))
       
       setStatus({
         type: 'success',
         message: 'Thank you! Your message has been sent successfully.'
-      });
+      })
       
       // Reset form
       setFormData({
@@ -61,7 +61,7 @@ const handleSubmit = async (e: React.FormEvent) => {
       setStatus({
         type: 'error',
         message: 'Sorry, there was an error sending your message. Please try again.'
-      });
+      })
   }
 const services = [
     'AI & Machine Learning',
@@ -166,7 +166,7 @@ const services = [
                 <option key={service} value={service}>
                   {service}
                 </option>
-              ));
+              ))
             </select>
           </div>
 
@@ -200,7 +200,7 @@ const services = [
                 <AlertCircle className="w-5 h-5 mr-2" />
               ) : null}
               <span>{status.message}</span>
-            </div>);
+            </div>
           <button
             type="submit"
             disabled={status.type === 'loading'}
