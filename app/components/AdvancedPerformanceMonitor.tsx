@@ -7,30 +7,6 @@ interface PerformanceMetrics {
   fid: number | null;
   cls: number | null;
   ttfb: number | null;
-<<<<<<< HEAD
-  memory: number | null;);
-interface PerformanceMonitorProps {
-  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
-  enableRealTimeMonitoring?: boolean;);
-const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps></PerformanceMonitorProps> = ({
-  onMetricsUpdate,
-  enableRealTimeMonitoring = true,;)
-}); => {;
-const [metrics, setMetrics] = useState<PerformanceMetrics></PerformanceMetrics>({
-  memory: number | null}
-
-interface PerformanceMonitorProps {
-  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
-  enableRealTimeMonitoring?: boolean}
-;
-const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
-  onMetricsUpdate,
-  enableRealTimeMonitoring = true}) => {
-return (;
-const [metrics, setMetrics] = useState<PerformanceMetrics>
-);
-}({
-=======
   memory: number | null]
     }
 
@@ -47,31 +23,20 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps></Performance
   enableRealTimeMonitoring = true
 }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     fcp: null,
     lcp: null,
     fid: null,
     cls: null,
     ttfb: null,
-<<<<<<< HEAD
-    memory: null,;)
-});
+    memory: null,]
+    });memory: null
+  });
 const [isMonitoring, setIsMonitoring] = useState(false);
 const updateMetrics = useCallback((newMetrics: Partial<PerformanceMetrics>) => {
-=======
-    memory: null,]
-    });;
-    memory: null
-  });
-
-  const [isMonitoring, setIsMonitoring] = useState(false);
-
-  const updateMetrics = useCallback((newMetrics: Partial<PerformanceMetrics>) => {
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     setMetrics(prev => ({ ...prev, ...newMetrics }));
     if (onMetricsUpdate) {
       onMetricsUpdate({ ...metrics, ...newMetrics });
-    }
+}
   }, [metrics, onMetricsUpdate]);
 const measurePerformance = useCallback(() => {
     if (typeof window === 'undefined' || !window.performance) return;
@@ -80,14 +45,10 @@ const measurePerformance = useCallback(() => {
 const fcpEntry = performance.getEntriesByName('first-contentful-paint')[0];
     if (fcpEntry) {
       updateMetrics({ fcp: fcpEntry.startTime });
-    }
-    memory: null});
-;
-const measureWebVitals = useCallback(() => {
+}
+    memory: null});const measureWebVitals = useCallback(() => {
     if (typeof window === 'undefined' || !('performance' in window)) return;
-    if (typeof PerformanceObserver === 'undefined') return;
-;
-const observers: PerformanceObserver[] = [];
+    if (typeof PerformanceObserver === 'undefined') return;const observers: PerformanceObserver[] = [];
 
     // Measure First Contentful Paint (FCP);
 const fcpEntries = performance.getEntriesByName('first-contentful-paint') || [];
@@ -95,30 +56,15 @@ const fcp = fcpEntries.length > 0 ? fcpEntries[0].startTime : null;
 
     // Measure Largest Contentful Paint (LCP)
     if ('PerformanceObserver' in window) {
-<<<<<<< HEAD
-      try {;
-const lcpObserver = new PerformanceObserver(list => {;
-const entries = list.getEntries();
-const lastEntry = entries[entries.length - 1];
-          setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }););)
-});;
-        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });;
-        observers.push(lcpObserver);)
-} catch (error) {
-        // eslint-disable-next-line no-console;);
-=======
       try {
         const lcpObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
-          const lastEntry = entries[entries.length - 1];
+const lastEntry = entries[entries.length - 1];
           setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime });)]
-    });;
-        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });;
-        observers.push(lcpObserver)]
+    });lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });observers.push(lcpObserver)]
     } catch (error) {
         // eslint-disable-next-line no-console]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     }
 
     // Measure First Input Delay (FID)
@@ -134,9 +80,7 @@ fid: fidEntry.processingStart - fidEntry.startTime,]
     });)]
     }
           });]
-    });;
-        fidObserver.observe({ entryTypes: ['first-input'] });;
-        observers.push(fidObserver)]
+    });fidObserver.observe({ entryTypes: ['first-input'] });observers.push(fidObserver)]
     } catch (error) {
         // eslint-disable-next-line no-console]
     }
@@ -152,17 +96,11 @@ const entries = list.getEntries();
             if ($1) { const clsEntry = entry as LayoutShift;
               if (!clsEntry.hadRecentInput) {
                 clsValue += clsEntry.value;
-<<<<<<< HEAD
-                setMetrics(prev => ({ ...prev, cls: clsValue });););
-=======
                 setMetrics(prev => ({ ...prev, cls: clsValue });)]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
             });
 });]
-    });;
-        clsObserver.observe({ entryTypes: ['layout-shift'] });;
-observers.push(clsObserver)]
+    });clsObserver.observe({ entryTypes: ['layout-shift'] });observers.push(clsObserver)]
     } catch (error) {
         // eslint-disable-next-line no-console]
     }
@@ -194,15 +132,6 @@ memory,]
     return () => {
       observers.forEach(observer => {
         try {
-<<<<<<< HEAD
-          observer.disconnect();)
-} catch (error) {
-          // eslint-disable-next-line no-console;);
-      });;)
-};)
-}, []);
-const measureResourceTiming = useCallback(() => {
-=======
           observer.disconnect()]
     } catch (error) {
           // eslint-disable-next-line no-console]
@@ -210,12 +139,8 @@ const measureResourceTiming = useCallback(() => {
       });]
     }]
     }, []);
-
-  const measureResourceTiming = useCallback(() => {
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-    if (typeof window === 'undefined' || !('performance' in window)) return;
-;
-const resources = performance.getEntriesByType('resource');
+const measureResourceTiming = useCallback(() => {
+    if (typeof window === 'undefined' || !('performance' in window)) return;const resources = performance.getEntriesByType('resource');
 const slowResources = resources.filter(
       (resource: PerformanceResourceTiming) => resource.duration > 1000
     );
@@ -231,9 +156,7 @@ size: r.transferSize,]
     });)
       )]
     }
-  }, []);
-;
-const measureCoreWebVitals = useCallback(() => {
+  }, []);const measureCoreWebVitals = useCallback(() => {
     if (typeof window === 'undefined') return;
 
     // Use web-vitals library if available
@@ -245,30 +168,6 @@ const { onCLS, onFCP, onLCP, onTTFB } = webVitals;
           if (onCLS) {
             onCLS((metric: { value: number }); =>
               setMetrics(prev => ({ ...prev, cls: metric.value });)
-<<<<<<< HEAD
-            ););
-          if (onFCP) {
-            onFCP((metric: { value: number }); =>
-              setMetrics(prev => ({ ...prev, fcp: metric.value });)
-            ););
-          if (onLCP) {
-            onLCP((metric: { value: number }); =>
-              setMetrics(prev => ({ ...prev, lcp: metric.value });)
-            ););
-          if (onTTFB) {
-            onTTFB((metric: { value: number }); =>
-              setMetrics(prev => ({ ...prev, ttfb: metric.value });)
-            ););
-        });
-        .catch(() => {
-          // web-vitals not available, continue without it;)
-});;)
-} catch {
-      // web-vitals not available, continue without it;);
-  }, []);
-const lcpEntries = performance.getEntriesByType('largest-contentful-paint');
-    if ($1) { const lcp = lcpEntries[lcpEntries.length - 1];
-=======
             )]
     }
           if (onFCP) {
@@ -294,26 +193,23 @@ const lcpEntries = performance.getEntriesByType('largest-contentful-paint');
       // web-vitals not available, continue without it]
     }
   }, []);
-    const lcpEntries = performance.getEntriesByType('largest-contentful-paint');
+const lcpEntries = performance.getEntriesByType('largest-contentful-paint');
     if (lcpEntries.length > 0) {
       const lcp = lcpEntries[lcpEntries.length - 1];
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
       updateMetrics({ lcp: lcp.startTime });
-    }
-
+}
     // Measure First Input Delay (FID);
 const fidEntries = performance.getEntriesByType('first-input');
     if ($1) { const fid = fidEntries[0] as PerformanceEventTiming;
       updateMetrics({ fid: fid.processingStart - fid.startTime });
-    }
-
+}
     // Measure Cumulative Layout Shift (CLS);
 let clsValue = 0;
 const clsEntries = performance.getEntriesByType('layout-shift');
     clsEntries.forEach((entry: any) => {
       if (!entry.hadRecentInput) {
         clsValue += entry.value;
-      }
+}
     });
     updateMetrics({ cls: clsValue });
 
@@ -321,8 +217,7 @@ const clsEntries = performance.getEntriesByType('layout-shift');
 const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     if (navigationEntry) {
       updateMetrics({ ttfb: navigationEntry.responseStart - navigationEntry.requestStart });
-    }
-
+}
     // Measure memory usage
     if ($1) { const memory = (performance as any).memory;
       updateMetrics({ memory: memory.usedJSHeapSize / 1024 / 1024 }); // Convert to MB
@@ -337,17 +232,10 @@ const startMonitoring = () => {
       // Initial measurement
       measurePerformance();
 
-<<<<<<< HEAD
-    // Monitor performance every 5 seconds;
-const interval = setInterval(() => {
-      measureResourceTiming();)
-}, 5000);
-=======
     // Monitor performance every 5 seconds
     const interval = setInterval(() => {
       measureResourceTiming()]
     }, 5000);
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 
     return () => {
       if (cleanup) cleanup();
@@ -361,18 +249,11 @@ const interval = setInterval(() => {
 
   useEffect(() => {
     if (onMetricsUpdate) {
-<<<<<<< HEAD
-      onMetricsUpdate(metrics););
-  }, [metrics, onMetricsUpdate]);
-      // Set up periodic monitoring;
-const interval = setInterval(measurePerformance, 5000);
-=======
       onMetricsUpdate(metrics)]
     }
   }, [metrics, onMetricsUpdate]);
       // Set up periodic monitoring
       const interval = setInterval(measurePerformance, 5000);
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 
       // Set up performance observer for real-time updates;
 const observer = new PerformanceObserver((list) => {
@@ -387,7 +268,7 @@ const observer = new PerformanceObserver((list) => {
                 ...prev, 
                 cls: (prev.cls || 0) + cls.value 
               }));
-            }
+}
           }
         });
       });
@@ -399,16 +280,11 @@ const observer = new PerformanceObserver((list) => {
         observer.disconnect();
         setIsMonitoring(false);
       };
-    }
+}
 const cleanup = startMonitoring();
     return cleanup;
   }, [enableRealTimeMonitoring, measurePerformance, updateMetrics]);
-<<<<<<< HEAD
 const getPerformanceScore = (metric: number | null, thresholds: { good: number; poor: number }): string => {
-=======
-
-  const getPerformanceScore = (metric: number | null, thresholds: { good: number; poor: number }): string => {
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     if (metric === null) return 'N/A';
     if (metric <= thresholds.good) return 'Good';
     if (metric <= thresholds.poor) return 'Needs Improvement';
@@ -418,28 +294,6 @@ const getPerformanceScore = (metric: number | null, thresholds: { good: number; 
     if (metrics.fcp && metrics.fcp > 1800) {
       recommendations.push(
         'First Contentful Paint is slow. Consider optimizing critical rendering path.'
-<<<<<<< HEAD
-      ););
-    if (metrics.lcp && metrics.lcp > 2500) {
-      recommendations.push(
-        'Largest Contentful Paint is slow. Optimize images and reduce render-blocking resources.'
-      ););
-    if (metrics.fid && metrics.fid > 100) {
-      recommendations.push(
-        'First Input Delay is high. Reduce JavaScript execution time.'
-      ););
-    if (metrics.cls && metrics.cls > 0.1) {
-      recommendations.push(
-        'Cumulative Layout Shift is high. Ensure stable layout and avoid dynamic content insertion.'
-      ););
-    if (metrics.ttfb && metrics.ttfb > 600) {
-      recommendations.push(
-        'Time to First Byte is slow. Optimize server response time.'
-      ););
-    return recommendations;)
-}, [metrics]);
-const _recommendations = getPerformanceRecommendations();
-=======
       )]
     }
 
@@ -469,9 +323,7 @@ const _recommendations = getPerformanceRecommendations();
 
     return recommendations]
     }, [metrics]);
-
-  const _recommendations = getPerformanceRecommendations();
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
+const _recommendations = getPerformanceRecommendations();
 
   if (process.env['NODE_ENV'] === 'development') {
     return (
@@ -500,17 +352,10 @@ const _recommendations = getPerformanceRecommendations();
                 <li key={index}></l>• {rec}</li>
               ));
             </ul>
-<<<<<<< HEAD
-          </div>
-        );
-      </div>
-    ););
-  return null;)
-=======
   const fcpScore = getPerformanceScore(metrics.fcp, { good: 1800, poor: 3000 });
-  const lcpScore = getPerformanceScore(metrics.lcp, { good: 2500, poor: 4000 });
-  const fidScore = getPerformanceScore(metrics.fid, { good: 100, poor: 300 });
-  const clsScore = getPerformanceScore(metrics.cls, { good: 0.1, poor: 0.25 });
+const lcpScore = getPerformanceScore(metrics.lcp, { good: 2500, poor: 4000 });
+const fidScore = getPerformanceScore(metrics.fid, { good: 100, poor: 300 });
+const clsScore = getPerformanceScore(metrics.cls, { good: 0.1, poor: 0.25 });
 
   return (
     <div className="performance-monitor p-4 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20">
@@ -598,11 +443,8 @@ const _recommendations = getPerformanceRecommendations();
 
   return null]
     };
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default AdvancedPerformanceMonitor;
 }
-
       <div className="mt-4 pt-4 border-t border-white/10">
         <div className="flex items-center justify-between">
           <span className="text-sm text-gray-300">Monitoring Status</span>

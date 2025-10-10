@@ -4,18 +4,11 @@ import { execSync } from 'child_process';
 
 // GitHub API configuration;
 function makeGitHubRequest(endpoint) {
-<<<<<<< HEAD
-  return new Promise((resolve, reject) => {;
-const options = {
-      hostname: 'api.github.com'
-      port: 443;
-=======
   return new Promise((resolve, reject) => {
     const options = {
       hostname: 'api.github.com',
       port:
         port: 443;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       path: endpoint;
       method: 'GET',
       headers:
@@ -24,9 +17,7 @@ const options = {
         'Accept': 'application/vnd.github.v3+json',;
 function makeGitHubRequest(endpoint) {/* TODO: Fix JSX expression */}
       }
-    };
-;
-const req = https.request(options, (res) => {/* TODO: Fix JSX expression */}
+    };const req = https.request(options, (res) => {/* TODO: Fix JSX expression */}
       });
       res.on('end', () => {/* TODO: Fix JSX expression */}
         } catch (error) {/* TODO: Fix JSX expression */}
@@ -48,8 +39,7 @@ async function getOpenPRs() {/* TODO: Fix JSX expression */}
 async function getPRDetails(prNumber) {/* TODO: Fix JSX expression */}
   } catch (error) {/* TODO: Fix JSX expression */}
   }
-}
-;
+};
 function runGitCommand(command) {
   try {;
 const result = execSync(command, { )
@@ -142,14 +132,12 @@ async function mergeAllPRsWithGit() {/* TODO: Fix JSX expression */}
   try {/* TODO: Fix JSX expression */}
     }
 
-
     // Filter PRs that target main branch;
     if (mainPRs.length === 0) {
 
       return;
     if (mainPRs.length === 0) {/* TODO: Fix JSX expression */}
     }
-
 
     // Process PRs one by one;
     for (const pr of mainPRs) {
@@ -162,10 +150,6 @@ async function mergeAllPRsWithGit() {/* TODO: Fix JSX expression */}
       
       // Add a small delay between merges;
       await new Promise(resolve => setTimeout(resolve, 2000))}
-
-
-
-
 
   } catch (error) {/* TODO: Fix JSX expression */}
   }

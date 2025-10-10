@@ -72,24 +72,12 @@ import {
   Smartphone as SmartphoneIcon2, Laptop as LaptopIcon,
   Tablet as TabletIcon, Headphones as HeadphonesIcon2,
   Keyboard as KeyboardIcon, Mouse as MouseIcon,
-<<<<<<< HEAD
-  Webcam as WebcamIcon, Speaker as SpeakerIcon;)
-} from 'lucide-react';
-;
-const ITConsultingPage: React.FC = () => {const [selectedCategory, setSelectedCategory] = useState('all');
-const [searchTerm, setSearchTerm] = useState('');
-;
-const itServices = [
-=======
   Webcam as WebcamIcon, Speaker as SpeakerIcon]
     } from 'lucide-react';
-
 const ITConsultingPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
-
-  const itServices = [
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
+const [searchTerm, setSearchTerm] = useState('');
+const itServices = [
     // IT Infrastructure Services
     {
       id: 'it-infrastructure-design',
@@ -411,9 +399,7 @@ const ITConsultingPage: React.FC = () => {
       link: 'https://ziontechgroup.com/compliance-auditing',
 caseStudy: 'Healthcare provider achieved 100% HIPAA compliance and passed all audits']
     }
-  ];
-;
-const categories = [
+  ];const categories = [
     { id: 'all', name: 'All IT Services', icon: Grid3X3 },
     { id: 'infrastructure', name: 'Infrastructure', icon: Server },
     { id: 'cloud', name: 'Cloud Services', icon: Cloud },
@@ -425,16 +411,12 @@ const categories = [
     { id: 'consulting', name: 'Consulting', icon: Briefcase },
     { id: 'recovery', name: 'Disaster Recovery', icon: RefreshCw },
     { id: 'compliance', name: 'Compliance', icon: CheckSquare }
-  ];
-;
-const filteredServices = itServices.filter(service => {;
+  ];const filteredServices = itServices.filter(service => {;
 const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
 const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch]
-    });;
-
-  return (
+    });return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       {/* Hero Section */}</div>
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 cyber-grid"></section>

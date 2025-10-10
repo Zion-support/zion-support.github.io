@@ -1,5 +1,4 @@
 'use client';
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -11,22 +10,8 @@ interface SEOOptimizerProps {
   structuredData?: any;
   ogImage?: string;
   ogType?: string;
-  twitterCard?: string}
-;
+  twitterCard?: string};
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
-<<<<<<< HEAD
-  title,
-  description,
-  keywords,
-  canonicalUrl,
-  structuredData,
-  ogImage = '/images/og-image.jpg',
-  ogType = 'website',
-  twitterCard = 'summary_large_image'
-}) => {;
-const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-const fullDescription = description || 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.';
-=======
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
   keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI'],
@@ -38,8 +23,7 @@ const fullDescription = description || 'Leading provider of AI-powered enterpris
     // Update page title
     if (typeof document !== 'undefined') {
       document.title = title;
-    }
-
+}
     // Add structured data
     if (structuredData && typeof document !== 'undefined') {
       const script = document.createElement('script');
@@ -51,11 +35,9 @@ const fullDescription = description || 'Leading provider of AI-powered enterpris
       const existing = document.getElementById('structured-data');
       if (existing) {
         existing.remove();
-      }
-      
+}
       document.head.appendChild(script);
-    }
-
+}
     // Add breadcrumb structured data
     if (typeof document !== 'undefined') {
       const breadcrumbData = {
@@ -70,8 +52,7 @@ const fullDescription = description || 'Leading provider of AI-powered enterpris
           }
         ]
       };
-
-      const script = document.createElement('script');
+const script = document.createElement('script');
       script.type = 'application/ld+json';
       script.textContent = JSON.stringify(breadcrumbData);
       script.id = 'breadcrumb-structured-data';
@@ -80,12 +61,10 @@ const fullDescription = description || 'Leading provider of AI-powered enterpris
       const existing = document.getElementById('breadcrumb-structured-data');
       if (existing) {
         existing.remove();
-      }
-      
+}
       document.head.appendChild(script);
-    }
+}
   }, [title, structuredData]);
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 
   return (
     <Helmet>

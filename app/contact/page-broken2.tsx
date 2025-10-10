@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 'use client';
-
 import React, { useState, useCallback } from 'react';
 import { Helmet } from 'react-helmet-async';
 import {
@@ -10,18 +9,10 @@ import {
   MapPin,
   Clock,
   Send,
-<<<<<<< HEAD
-  CheckCircle;)
-} from 'lucide-react';
-;
-const ContactPage: React.FC = () => {const [formData, setFormData] = useState({
-=======
   CheckCircle]
     } from 'lucide-react';
-
 const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     name: '',
     email: '',
     company: '',
@@ -29,36 +20,17 @@ phone: '',
     service: '',
     budget: '',
     timeline: '',
-<<<<<<< HEAD
-    message: '';)
-});
-const [isSubmitting, setIsSubmitting] = useState(false);
-const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {;
-const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value;)
-}););)
-}, []);
-const handleSubmit = async (e: React.FormEvent) => {
-=======
     message: '']
-    });;
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-
-  const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {
+    });const [isSubmitting, setIsSubmitting] = useState(false);
+const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value]
     });)]
     }, []);
-
-  const handleSubmit = async (e: React.FormEvent) => {
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
+const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus('idle');
@@ -82,9 +54,7 @@ message: '']
     } finally {
       setIsSubmitting(false)]
     }
-  };
-;
-const services = [
+  };const services = [
     'AI Solutions',
     'Cloud Computing',
     'Mobile App Development',
@@ -94,9 +64,7 @@ const services = [
     'DevOps',
     'Consulting',
     'Other'
-  ];
-;
-const contactInfo = [
+  ];const contactInfo = [
     {
       icon: Phone,
       title: 'Phone',

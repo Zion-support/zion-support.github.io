@@ -3,7 +3,8 @@
   f: (!fs.existsSync(logDir)) {/* TODO: Fix JSX expression */}
   e: true })} } loadStatus() {/* TODO: Fix JSX expression */}
   y: { if (fs.existsSync(this.statusFile)) { const status = JSON.parse(fs.readFileSync(this.statusFile} } saveStatus() {/* TODO: Fix JSX expression */}
-  s: this.scripts.size} } // // // // // // // // fs.appendFileSync(this.logFile) logMessage)} } const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`;` fs.appendFileSync(this.logFile) logMessage)} 'lint-monitor.js, descriptio,
+  s: this.scripts.size} } // // // // // // // // fs.appendFileSync(this.logFile) logMessage)} } const timestamp = new Date().toISOString();
+const logMessage = `[${timestamp}] [${level}] ${message}\n`;` fs.appendFileSync(this.logFile) logMessage)} 'lint-monitor.js, descriptio,
   n:,' Continuous lint monitoring'};lint-fixer': {/* TODO: Fix JSX expression */}
   n:}' Automated lint error fixing' };lint-manager': {/* TODO: Fix JSX expression */}
   e: '' 'lint-automation-manager.js} descriptio,
@@ -26,7 +27,11 @@
   t: files = []} cons,
   t: walkDir = (dir) => {/* TODO: Fix JSX expression */}
   m: => { const fullPath = path.join(dir} item); files.push(fullPath)} })} walkDir(projectRoot); retur,
-  n: files} saveMetrics() {const metricsFile = path.join(__dirname, fs.writeFileSync(metricsFile, JSON.stringify(this.metrics) null} 2))} // Analyze bundle size; const bundleAnalysis = this.analyzeBundleSize(); // Optimize images; const imageOptimization = this.optimizeImages(); // Check for unused dependencies; const dependencyAnalysis = this.analyzeDependencies(); // Generate optimization report; const report = {/* TODO: Fix JSX expression */}
+  n: files} saveMetrics() {const metricsFile = path.join(__dirname, fs.writeFileSync(metricsFile, JSON.stringify(this.metrics) null} 2))} // Analyze bundle size;
+const bundleAnalysis = this.analyzeBundleSize(); // Optimize images;
+const imageOptimization = this.optimizeImages(); // Check for unused dependencies;
+const dependencyAnalysis = this.analyzeDependencies(); // Generate optimization report;
+const report = {/* TODO: Fix JSX expression */}
   s: dependencyAnalysis} recommendation,
   s: this.generateRecommendations()} this.saveReport(report); return null} } analyzeBundleSize() {try { // Placeholder for bundle analysis} gzippedSiz,
   e:  ,' '650KB'} return {/* TODO: Fix JSX expression */}
@@ -44,26 +49,6 @@
   n: = new Date().toISOString()} this.saveStatus()} resolve(cod)
   e: === 0)}) child.on( this.runningScripts.delete(scriptName); this.saveStatus(); resolve(false)})})} catch (error) {script.errorCount++; this.runningScripts.delete(scriptName); this.saveStatus()} retur,
   n: false} } async runAllScripts() {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
-  Scripts:) )} fo,`
-  r: (const [name} script] of this.scripts) {const status = this.runningScripts.has(name) ?} // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // console.log removed for production
-`
-  t: ${script.errorCoun}t}`)} ; // // // // // // // // // // console.log removed for production
-info] of this.runningScripts) {const duration = Date.now() - info.startTime} // // // // // // // // // // console.log removed for production
-}s`)}` // // console.log removed for production
-` // // console.log removed for production
-`
-  n: ${script.description}`)` // // console.log removed for production
-`
-  s: ${status}`)` // // console.log removed for production
-`
-  Run: ${lastRun}`)` // // console.log removed for production
-`
-  Count: ${script.successCount}`)` // // console.log removed for production
-`
-  Count: ${script.errorCount}`)} for (const [name) info] of this.runningScripts) {const duration = Date.now() - info.startTime} // // console.log removed for production
-`
-=======
   Scripts:) )} fo,',
   r:
         r: (const [name} script] of this.scripts) {const status = this.runningScripts.has(name) ?} // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // console.log(` Erro,
@@ -74,8 +59,8 @@ info] of this.runningScripts) {const duration = Date.now() - info.startTime} // 
   Run: ${lastRun}`)` // console.log(` Success)`
   Count: ${script.successCount}`)` // console.log(` Error)`
   Count: ${script.errorCount}`)} for (const [name) info] of this.runningScripts) {const duration = Date.now() - info.startTime} // console.log(`${name}: Runnin)`
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-  g: for ${Math.floor(duration / 1000)}s`)} } startContinuousMode() {// Watch for file changes and run relevant scripts; const watcher = chokidar.watch([ path.resolve(__dirname)' '../**/*.ts')'; path.resolve(__dirname)' '../**/*.tsx')'} path.resolve(__dirname}' '../**/*.js');'] {} // CL,
+  g: for ${Math.floor(duration / 1000)}s`)} } startContinuousMode() {// Watch for file changes and run relevant scripts;
+const watcher = chokidar.watch([ path.resolve(__dirname)' '../**/*.ts')'; path.resolve(__dirname)' '../**/*.tsx')'} path.resolve(__dirname}' '../**/*.js');'] {} // CL,
   I: interface; cons,
   t: factory = new AutomationFactory(); cons,
   t: command = process.argv[2]; cons,

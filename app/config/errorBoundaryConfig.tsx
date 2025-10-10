@@ -46,15 +46,10 @@ export interface ErrorBoundaryConfig {
   fallbackComponents: {,
   default: React.ComponentType<{ error: Error; resetError: () => void }>;
     network: React.ComponentType<{ error: Error; resetError: () => void }>;
-<<<<<<< HEAD
-    notFound: React.ComponentType<{ error: Error; resetError: () => void }>;)
-};);
-=======
     notFound: React.ComponentType<{ error: Error; resetError: () => void }>]
     }]
     }
 
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 /**
  * Default error messages
  */;
@@ -233,14 +228,9 @@ export function formatErrorForLogging(error: Error): Record<string, unknown></st
     type: getErrorType(error),
     timestamp: new Date().toISOString(),
     userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',
-<<<<<<< HEAD
-    url: typeof window !== 'undefined' ? window.location.href : 'unknown',;)
-};)
-=======
     url: typeof window !== 'undefined' ? window.location.href : 'unknown',]
     }]
     }
 
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default getErrorBoundaryConfig;
 }

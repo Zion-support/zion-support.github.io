@@ -45,17 +45,6 @@ const [isVisible, setIsVisible] = useState(false);
 const timer = setTimeout(() => setIsVisible(true), 100);
     // Preload components
     preloadComponents();
-<<<<<<< HEAD
-    return () => clearTimeout(timer);)
-}, []);
-  // Analytics tracking for phone clicks - optimized;
-const handlePhoneClick = useCallback(() => {
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', 'phone_click', {
-        event_category: 'engagement',
-        event_label: 'main_phone_number';)
-});;);
-=======
     return () => clearTimeout(timer)]
     }, []);
   // Analytics tracking for phone clicks - optimized
@@ -66,7 +55,6 @@ const handlePhoneClick = useCallback(() => {
         event_label: 'main_phone_number']
     });]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }, []);
   return (
     <React.Fragment>
@@ -1480,7 +1468,5 @@ addressCountry: 'US']
     </div>
     </>
   )]
-    });;
-
-HomePage.displayName = 'HomePage'
+    });HomePage.displayName = 'HomePage'
 export default HomePage;

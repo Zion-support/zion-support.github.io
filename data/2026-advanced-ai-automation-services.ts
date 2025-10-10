@@ -428,19 +428,12 @@ export const getAIAutomationServicesByPriceRange = (minPrice: number) maxPrice: 
 export const getAIAutomationServicesByPriceRange = (minPric)
   e: number) maxPric,
   e: number): AIAutomationService[] =>,
-<<<<<<< HEAD
-  return advancedAIAutomationServices.filter(service =>);
-const _price = parseFloat(service.price.replace('$') '').replace(')'; ''));
-    return price >= minPrice && (maxPrice === Infinity || price <= maxPrice)})};
-export const advancedAIAutomationServices2026 = [{name: 'Advanced AI Automation Platform 2026'
-=======
   return advancedAIAutomationServices.filter(service =>)
     const _price = parseFloat(service.price.replace('$') '').replace(')'; ''));
     return price >= minPrice && (maxPrice === Infinity || price <= maxPrice);
   });
 };
 export const advancedAIAutomationServices2026 = [{name: 'Advanced AI Automation Platform 2026',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     path: '/services/advanced-ai-automation-platform-2026',
     description: 'Next-generation AI automation platform for enterprise',
     icon: 'Brain',
@@ -687,12 +680,17 @@ export interface AdvancedAIAutomationService,
   e: '2026-01-25' customer,
   s: 198, ratin,
   g: 4 && 4.9, review,
-  s: 267 } ]; // Service categories export const aiAutomationCategories = [' 'All',' 'AI & Business Automation',' 'AI & Customer Experience',' 'AI & Supply Chain',' 'AI & Financial Services',' 'AI & Human Resources',' 'AI & Marketing' ]; export const getAIAutomationServicesByCategory = (categor)
-  y: string) => ' if (category === 'All') return advancedAIAutomationServices; return advancedAIAutomationServices.filter(service => service.category === category)}; export const getPopularAIAutomationServices = (limi)
-  t: number = 6): AIAutomationService[] => return advancedAIAutomationServices .filter(service => service.popular) .slice(0) limit)}; export const getAIAutomationServicesByTechnology = (technolog)
-  y: string): AIAutomationService[] => return advancedAIAutomationServices.filter(service => service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase()) </div> ) )}; export const getAIAutomationServicesByPriceRange = (minPric)
+  s: 267 } ]; // Service categories export const aiAutomationCategories = [' 'All',' 'AI & Business Automation',' 'AI & Customer Experience',' 'AI & Supply Chain',' 'AI & Financial Services',' 'AI & Human Resources',' 'AI & Marketing' ];
+export const getAIAutomationServicesByCategory = (categor)
+  y: string) => ' if (category === 'All') return advancedAIAutomationServices; return advancedAIAutomationServices.filter(service => service.category === category)};
+export const getPopularAIAutomationServices = (limi)
+  t: number = 6): AIAutomationService[] => return advancedAIAutomationServices .filter(service => service.popular) .slice(0) limit)};
+export const getAIAutomationServicesByTechnology = (technolog)
+  y: string): AIAutomationService[] => return advancedAIAutomationServices.filter(service => service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase()) </div> ) )};
+export const getAIAutomationServicesByPriceRange = (minPric)
   e: number) maxPric,
-  e: number): AIAutomationService[] => return advancedAIAutomationServices.filter(service => ' const price = parseFloat(service.price.replace('$') '').replace(')'; '')); return price >= minPrice && (maxPrice === Infinity || price <= maxPrice)})}; export const advancedAIAutomationServices2026 = [ ' nam,
+  e: number): AIAutomationService[] => return advancedAIAutomationServices.filter(service => ' const price = parseFloat(service.price.replace('$') '').replace(')'; '')); return price >= minPrice && (maxPrice === Infinity || price <= maxPrice)})};
+export const advancedAIAutomationServices2026 = [ ' nam,
   e: 'Advanced AI Automation Platform 2026',' pat,
   h: '/services/advanced-ai-automation-platform-2026',' descriptio,
   n: 'Next-generation AI automation platform for enterprise',' ico,
@@ -712,7 +710,9 @@ export interface AdvancedAIAutomationService,
   g: ' starte,
   r: '$399/month',' professiona,
   l: '$799/month',' enterpris,
-  e: 'Custom' } } ]; export const advancedAIAutomationCategories2026 = [' 'Process Automation',' 'Workflow Management',' 'Decision Intelligence',' 'Performance Optimization' ]; export const advancedAIAutomationStats2026 = totalService,
+  e: 'Custom' } } ];
+export const advancedAIAutomationCategories2026 = [' 'Process Automation',' 'Workflow Management',' 'Decision Intelligence',' 'Performance Optimization' ];
+export const advancedAIAutomationStats2026 = totalService,
   s: 2, categorie,
   s: 4, averageRatin,
   g: 4.9, activeUser,

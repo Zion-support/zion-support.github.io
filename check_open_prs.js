@@ -3,18 +3,11 @@ import https from 'https';
 
 // GitHub API configuration;
 function makeGitHubRequest(endpoint) {
-<<<<<<< HEAD
-  return new Promise((resolve, reject) => {;
-const options = {
-      hostname: 'api.github.com'
-      port: 443;
-=======
   return new Promise((resolve, reject) => {
     const options = {
       hostname: 'api.github.com',
       port:
         port: 443;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       path: endpoint;
       method: 'GET',
       headers:
@@ -23,9 +16,7 @@ const options = {
         'Accept': 'application/vnd.github.v3+json',;
 function makeGitHubRequest(endpoint) {/* TODO: Fix JSX expression */}
       }
-    };
-;
-const req = https.request(options, (res) => {/* TODO: Fix JSX expression */}
+    };const req = https.request(options, (res) => {/* TODO: Fix JSX expression */}
       });
       res.on('end', () => {/* TODO: Fix JSX expression */}
         } catch (error) {/* TODO: Fix JSX expression */}
@@ -43,14 +34,8 @@ async function checkOpenPRs() {
     if (prs.length === 0) {
 
       return []}
-    
-    
+
     for (const pr of prs) {
-
-
-
-
-
 
       // Check if PR has merge conflicts;
       prDetails.push({
@@ -67,8 +52,7 @@ async function checkOpenPRs() {/* TODO: Fix JSX expression */}
 }
   try {/* TODO: Fix JSX expression */}
     }
-    
-    
+
     for (const pr of prs) {/* TODO: Fix JSX expression */}
       })}
     

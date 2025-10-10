@@ -2,7 +2,6 @@
 import React from 'react';
 import React, { memo, useMemo } from 'react';
 
-
 interface OptimizedLoadingSpinnerProps {
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
   variant?: 'dots' | 'pulse' | 'spinner' | 'skeleton' | 'bars';
@@ -18,15 +17,9 @@ variant = 'spinner',
     text = 'Loading...',
     className = '',
     color = 'blue',
-<<<<<<< HEAD
-    fullScreen = false,;)
-}); => {;
-const sizeClasses = useMemo(
-=======
     fullScreen = false,]
     }); => {
     const sizeClasses = useMemo(
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
       () => ({
         xs: 'h-3 w-3',
         sm: 'h-4 w-4',
@@ -35,9 +28,7 @@ const sizeClasses = useMemo(
         xl: 'h-16 w-16',]
     });,
       []
-    );
-;
-const textSizeClasses = useMemo(
+    );const textSizeClasses = useMemo(
       () => ({
         xs: 'text-xs',
         sm: 'text-sm',
@@ -46,9 +37,7 @@ const textSizeClasses = useMemo(
         xl: 'text-xl',]
     });,
       []
-    );
-;
-const colorClasses = useMemo(
+    );const colorClasses = useMemo(
       () => ({
         blue: 'border-blue-600 bg-blue-600',
         gray: 'border-gray-600 bg-gray-600',
@@ -57,9 +46,7 @@ const colorClasses = useMemo(
         purple: 'border-purple-600 bg-purple-600',]
     });,
       []
-    );
-;
-const renderSpinner = useMemo(() => {
+    );const renderSpinner = useMemo(() => {
 return (
 switch (variant) {
         case 'dots':
@@ -114,19 +101,11 @@ switch (variant) {
               role='status'
               aria-label='Loading'
             />
-<<<<<<< HEAD
-          ););
-    }, [size, variant, color, sizeClasses, colorClasses]);
-const containerClasses = useMemo(() => {return `${baseClasses} ${fullScreenClasses} ${className}`;)
-}, [fullScreen, className]);
-=======
           )]
     }
     }, [size, variant, color, sizeClasses, colorClasses]);
-
-    const containerClasses = useMemo(() => {return `${baseClasses} ${fullScreenClasses} ${className}`]
+const containerClasses = useMemo(() => {return `${baseClasses} ${fullScreenClasses} ${className}`]
     }, [fullScreen, className]);
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 
     return (</div>
       <div>

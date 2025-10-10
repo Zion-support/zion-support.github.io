@@ -11,7 +11,6 @@ export enum LogLevel {
   ERROR = 3,
   FATAL = 4});
 }
-
 export interface LogContext {
   userId?: string;
   sessionId?: string;
@@ -19,7 +18,6 @@ export interface LogContext {
   action?: string;
   [key: string]: unknown});
 }
-
 class Logger {
   private logLevel: LogLevel = LogLevel.INFO;
   private logs: Array<{,
@@ -33,16 +31,9 @@ class Logger {
   setLogLevel(level: LogLevel): void {,
     this.logLevel = level});
 }
-
   getLogLevel(): LogLevel {
     return this.logLevel});
 }
-
-<<<<<<< HEAD
-  debug(message: string, context?: LogContext, metadata?: Record<strin></strin>): void {</<<<strin></strin>this</string>.log(LogLevel.DEBUG, message, context, metadata););
-  info(message: string, context?: LogContext, metadata?: Record<strin></strin>): void {</<<<strin></strin>this</string>.log(LogLevel.INFO, message, context, metadata););
-  warn(message: string, context?: LogContext, metadata?: Record<strin></strin>): void {</<<<strin></strin>this</string>.log(LogLevel.WARN, message, context, metadata););
-=======
   debug(message: string, context?: LogContext, metadata?: Record<strin></strin>): void {</<<<strin></strin>this</string>.log(LogLevel.DEBUG, message, context, metadata)]
     }
 
@@ -52,7 +43,6 @@ class Logger {
   warn(message: string, context?: LogContext, metadata?: Record<strin></strin>): void {</<<<strin></strin>this</string>.log(LogLevel.WARN, message, context, metadata)]
     }
 
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   error(message: string},
     errorOrContextOrMetadata?: Error | string | Record<string></string>)
     contextOrMetadata?: string | Record<string></string>)
@@ -98,32 +88,20 @@ l: LogLevel): void {/* TODO: Fix JSX expression */});]
    * Log a debug message;
    */
   debug(messag)
-<<<<<<< HEAD
-  e: string, context?: LogContext, metadata?: Record<string></string>): void {/* TODO: Fix JSX expression */});;);
-=======
   e: string, context?: LogContext, metadata?: Record<string></string>): void {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Log an info message;
    */
   info(messag)
-<<<<<<< HEAD
-  e: string, context?: LogContext, metadata?: Record<string></string>): void {/* TODO: Fix JSX expression */});;);
-=======
   e: string, context?: LogContext, metadata?: Record<string></string>): void {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Log a warning message;
    */
   warn(messag)
-<<<<<<< HEAD
-  e: string, context?: LogContext, metadata?: Record<string></string>): void {/* TODO: Fix JSX expression */});;);
-=======
   e: string, context?: LogContext, metadata?: Record<string></string>): void {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Log an error message;
    */
@@ -136,11 +114,6 @@ l: LogLevel): void {/* TODO: Fix JSX expression */});]
     } else if (typeof errorOrContextOrMetadata === 'string') {/* TODO: Fix JSX expression */}
   t: errorOrContextOrMetadata };
       meta = contextOrMetadata as Record<string></string>});
-<<<<<<< HEAD
-} else if (typeof errorOrContextOrMetadata === 'object') {/* TODO: Fix JSX expression */});;);
-    this.log(LogLevel.ERROR, message, context, { ...meta, error: error?.stack });;);
-  fatal(message: string, context?: LogContext, metadata?: Record<strin></strin>): void {</<<<strin></strin>this</string>.log(LogLevel.FATAL, message, context, metadata););
-=======
 } else if (typeof errorOrContextOrMetadata === 'object') {/* TODO: Fix JSX expression */});]
     }
 
@@ -150,7 +123,6 @@ l: LogLevel): void {/* TODO: Fix JSX expression */});]
   fatal(message: string, context?: LogContext, metadata?: Record<strin></strin>): void {</<<<strin></strin>this</string>.log(LogLevel.FATAL, message, context, metadata)]
     }
 
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   private log(level: LogLevel},
     message: string),
     context?: LogContext),
@@ -168,13 +140,9 @@ const logEntry = {
 
     // Keep only last 1000 logs;
     if (this.logs.length > 1000) {
-<<<<<<< HEAD
-      this.logs = this.logs.slice(-1000););
-=======
       this.logs = this.logs.slice(-1000)]
     }
 
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     // Console output;
 const levelName = LogLevel[level];
 const timestamp = new Date().toISOString();
@@ -205,12 +173,8 @@ const logMessage = `[${timestamp}] ${levelName}: ${message}${contextStr}${metaSt
    * Log a fatal error message;
    */
   fatal(messag)
-<<<<<<< HEAD
-  e: string, context?: LogContext, metadata?: Record<string></string>): void {/* TODO: Fix JSX expression */});;);
-=======
   e: string, context?: LogContext, metadata?: Record<string></string>): void {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Core logging method;
    */
@@ -220,31 +184,19 @@ const logMessage = `[${timestamp}] ${levelName}: ${message}${contextStr}${metaSt
   e: string,
     context?: LogContext,
     metadata?: Record<string></string>)
-<<<<<<< HEAD
-  ): void {/* TODO: Fix JSX expression */});;);
-    const,
-  logEntry: LogMetadata = {/* TODO: Fix JSX expression */});;);
-=======
   ): void {/* TODO: Fix JSX expression */});]
     }
     const,
   logEntry: LogMetadata = {/* TODO: Fix JSX expression */});]
     };
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     // Format the log entry;
 const formattedMessage = this.formatLogEntry(logEntry);
     // Output to console in development;
-<<<<<<< HEAD
-    if (this.isDevelopment && typeof console !== 'undefined') {/* TODO: Fix JSX expression */});;);
-    // In production, you might want to send to a logging service;
-    if (!this.isDevelopment) {/* TODO: Fix JSX expression */});;);
-=======
     if (this.isDevelopment && typeof console !== 'undefined') {/* TODO: Fix JSX expression */});]
     }
     // In production, you might want to send to a logging service;
     if (!this.isDevelopment) {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   /**
    * Format a log entry for output;

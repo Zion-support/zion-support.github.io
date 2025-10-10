@@ -6,9 +6,7 @@
 
 import fs from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
-;
-const __filename = fileURLToPath(import.meta.url);
+import { fileURLToPath } from 'url';const __filename = fileURLToPath(import.meta.url);
 // __dirname removed
 // console.log removed for production
 // Create accessibility improvements for the main HTML file;
@@ -86,21 +84,15 @@ const controls = document.createElement('div');
             display: flex;
             flex-direction: column;
             gap: 5 px;
-          \`;
-          ;
-const increaseBtn = document.createElement('button');
+          \`;const increaseBtn = document.createElement('button');
           increaseBtn.textContent = 'A+';
           increaseBtn.addEventListener('click', () => {;
 const currentSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
-            document.documentElement.style.fontSize = (currentSize + 2) + 'px'});
-          ;
-const decreaseBtn = document.createElement('button');
+            document.documentElement.style.fontSize = (currentSize + 2) + 'px'});const decreaseBtn = document.createElement('button');
           decreaseBtn.textContent = 'A-';
           decreaseBtn.addEventListener('click', () => {;
 const currentSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
-            document.documentElement.style.fontSize = Math.max(currentSize - 2, 12) + 'px'});
-          ;
-const resetBtn = document.createElement('button');
+            document.documentElement.style.fontSize = Math.max(currentSize - 2, 12) + 'px'});const resetBtn = document.createElement('button');
           resetBtn.textContent = 'Reset';
           resetBtn.addEventListener('click', () => {
             document.documentElement.style.fontSize = '16 px'});
@@ -120,8 +112,8 @@ const modal = document.querySelector('.modal:not([style*="display: none"])');
 const focusableElements = modal.querySelectorAll(
                   'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
                 );
-                const firstElement = focusableElements[0];
-                const lastElement = focusableElements[focusableElements.length - 1];
+const firstElement = focusableElements[0];
+const lastElement = focusableElements[focusableElements.length - 1];
                 
                 if (e.shiftKey) {
                   if (document.activeElement === firstElement) {
@@ -213,9 +205,7 @@ const highContrastStyles = \`
           .high-contrast button,
           .high-contrast a {
             border: 2 px solid currentColor !important}
-        \`;
-        ;
-const styleSheet = document.createElement('style');
+        \`;const styleSheet = document.createElement('style');
         styleSheet.textContent = highContrastStyles;
         document.head.appendChild(styleSheet)})();
     </script>
@@ -232,8 +222,7 @@ const styleSheet = document.createElement('style');
 const accessibilityStatement = `# Accessibility Statement
 // 1. Generate accessibility report;
 function generateAccessibilityReport() {
-  // console.log removed for production
-;
+  // console.log removed for production;
 const accessibilityReport = {
     timestamp: new Date().toISOString()
     version: '1.0.0',
@@ -304,19 +293,10 @@ const accessibilityReport = {
 
 // 2. Generate accessibility checklist;
 function generateAccessibilityChecklist() {
-<<<<<<< HEAD
-  // console.log removed for production
-;
-const checklist = {
-    title: "Zion Tech Group Accessibility Checklist"
-    version: "1.0.0"
-=======
   console.log('✅ Generating accessibility checklist...');
-  
-  const checklist = {
+const checklist = {
     title: 'Zion Tech Group Accessibility Checklist',
     version: '1.0.0',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     lastUpdated: new Date().toISOString()
     categories: [,
       {,
@@ -376,8 +356,7 @@ const checklist = {
 
 // 3. Generate accessibility improvements;
 function generateAccessibilityImprovements() {
-  // console.log removed for production
-;
+  // console.log removed for production;
 const improvements = [
     {
       id: "skip-links",
@@ -420,19 +399,10 @@ const improvements = [
 
 // 4. Generate accessibility testing guide;
 function generateAccessibilityTestingGuide() {
-<<<<<<< HEAD
-  // console.log removed for production
-;
-const testingGuide = {
-    title: "Accessibility Testing Guide"
-    version: "1.0.0"
-=======
   console.log('🧪 Generating accessibility testing guide...');
-  
-  const testingGuide = {
+const testingGuide = {
     title: 'Accessibility Testing Guide',
     version: '1.0.0',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     lastUpdated: new Date().toISOString()
     tools: [,
       {,

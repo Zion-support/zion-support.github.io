@@ -9,17 +9,11 @@ interface ContentNewsletterSignupProps {
   buttonText?: string;
   features?: Array<{
     icon: React.ComponentType<{ className?: string }>;
-<<<<<<< HEAD
-    text: string;)
-}>;
-  onSubscribe?: (email: string) => void;);
-=======
     text: string]
     }>;
   onSubscribe?: (email: string) => void]
     }
 
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps></ContentNewsletterSignupProps> = ({
   title = "Stay Updated with Our Latest Insights",
   subtitle = "Get exclusive content, industry insights, and early access to new features delivered to your inbox.",
@@ -40,27 +34,15 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps></ContentNe
     },
     {
       icon: Globe,
-<<<<<<< HEAD
-      text: "Global community access";);
-  ],
-  onSubscribe;)
-}); => {;
-const [email, setEmail] = useState('');
-const [isSubscribed, setIsSubscribed] = useState(false);
-const [isLoading, setIsLoading] = useState(false);
-const handleSubmit = async (e: React.FormEvent) => {
-=======
       text: "Global community access"]
     }
   ],
   onSubscribe]
     }); => {
   const [email, setEmail] = useState('');
-  const [isSubscribed, setIsSubscribed] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent) => {
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
+const [isSubscribed, setIsSubscribed] = useState(false);
+const [isLoading, setIsLoading] = useState(false);
+const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email) return;
 
@@ -71,16 +53,6 @@ const handleSubmit = async (e: React.FormEvent) => {
         await onSubscribe(email)]
     } else {
         // Simulate API call
-<<<<<<< HEAD
-        await new Promise(resolve => setTimeout(resolve, 1000)););
-      setIsSubscribed(true);
-      setEmail('');)
-} catch (error) {
-      // console.error removed for production
-)
-} finally {
-      setIsLoading(false););
-=======
         await new Promise(resolve => setTimeout(resolve, 1000))]
     }
       
@@ -91,7 +63,6 @@ const handleSubmit = async (e: React.FormEvent) => {
     } finally {
       setIsLoading(false)]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   };
 
   if (isSubscribed) {

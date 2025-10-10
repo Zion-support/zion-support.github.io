@@ -1,5 +1,4 @@
 'use client';
-
 import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
@@ -8,8 +7,7 @@ interface PerformanceMetrics {
   fid: number | null;
   cls: number | null;
   ttfb: number | null;
-}
-;
+};
 const PerformanceMonitor: React.FC = () => {const [metrics, setMetrics] = useState<PerformanceMetrics>({
     fcp: null,
     lcp: null,
@@ -21,8 +19,7 @@ const PerformanceMonitor: React.FC = () => {const [metrics, setMetrics] = useSta
   useEffect(() => {
     if (typeof window === 'undefined' || !('performance' in window)) {
       return;
-    }
-
+}
     // Web Vitals measurement;
 const measureWebVitals = () => {
       // First Contentful Paint (FCP);
@@ -31,7 +28,7 @@ const entries = list.getEntries();
 const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
         if (fcpEntry) {
           setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
-        }
+}
       });
       fcpObserver.observe({ entryTypes: ['paint'] });
 
@@ -60,7 +57,7 @@ const entries = list.getEntries();
           if (!entry.hadRecentInput) {
             clsValue += entry.value;
             setMetrics(prev => ({ ...prev, cls: clsValue }));
-          }
+}
         });
       });
       clsObserver.observe({ entryTypes: ['layout-shift'] });
@@ -69,8 +66,7 @@ const entries = list.getEntries();
 const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       if (navigationEntry) {
         setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart }));
-      }
-
+}
       // Cleanup observers after 10 seconds
       setTimeout(() => {
         fcpObserver.disconnect();
@@ -80,25 +76,17 @@ const navigationEntry = performance.getEntriesByType('navigation')[0] as Perform
       }, 10000);
     };
 
-<<<<<<< HEAD
-    // Show performance panel after 3 seconds;
-const timer = setTimeout(() => setIsVisible(true), 3000);
-=======
     // Show performance panel after 3 seconds
     const timer = setTimeout(() => setIsVisible(true), 3000);
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     return () => clearTimeout(timer);
   }, []);
 
   if (!isVisible || Object.keys(metrics).length === 0) {
-    return null}
-;
+    return null};
 const getScoreColor = (value: number, thresholds: { good: number; poor: number }) => {
 if (value <= thresholds.good) return 'text-green-400';
     if (value <= thresholds.poor) return 'text-yellow-400';
-    return 'text-red-400'};
-;
-const getScoreText = (value: number, thresholds: { good: number; poor: number }) =>
+    return 'text-red-400'};const getScoreText = (value: number, thresholds: { good: number; poor: number }) =>
 );
 } {
     if (value <= thresholds.good) return 'Good';
@@ -121,8 +109,7 @@ interface PerformanceMetrics {
   cls: number | null; // Cumulative Layout Shift
   ttfb: number | null; // Time to First Byte
   fmp: number | null; // First Meaningful Paint
-}
-;
+};
 const PerformanceMonitor: React.FC = () => {const [metrics, setMetrics] = useState<PerformanceMetrics>({
     fcp: null,
     lcp: null,
@@ -153,7 +140,7 @@ const { trackEvent } = useAnalytics();
     // Show performance panel in development
     if (process.env.NODE_ENV === 'development') {
       setIsVisible(true);
-    }
+}
   }, []);
 const monitorCoreWebVitals = () => {
     // First Contentful Paint (FCP)
@@ -167,7 +154,7 @@ const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
             value: Math.round(fcpEntry.startTime),
             category: 'performance'
           });
-        }
+}
       });
       fcpObserver.observe({ entryTypes: ['paint'] });
 
@@ -211,11 +198,11 @@ const entries = list.getEntries();
               value: Math.round(clsValue * 1000) / 1000,
               category: 'performance'
             });
-          }
+}
         });
       });
       clsObserver.observe({ entryTypes: ['layout-shift'] });
-    }
+}
   }
 const monitorPerformanceMetrics = () => {
     // Time to First Byte (TTFB)
@@ -228,7 +215,7 @@ const navigation = performance.getEntriesByType('navigation')[0] as PerformanceN
           value: Math.round(ttfb),
           category: 'performance'
         });
-      }
+}
     });
 
     // First Meaningful Paint (FMP) - approximation
@@ -242,10 +229,10 @@ const fmpEntry = entries.find(entry => entry.name === 'first-meaningful-paint');
             value: Math.round(fmpEntry.startTime),
             category: 'performance'
           });
-        }
+}
       });
       fmpObserver.observe({ entryTypes: ['paint'] });
-    }
+}
   }
 const monitorResourceLoading = () => {
     if ($1) { const resourceObserver = new PerformanceObserver((list) => {;
@@ -258,11 +245,11 @@ const entries = list.getEntries();
               size: entry.transferSize || 0,
               category: 'performance'
             });
-          }
+}
         });
       });
       resourceObserver.observe({ entryTypes: ['resource'] });
-    }
+}
   }
 const monitorMemoryUsage = () => {
     if ($1) { const checkMemory = () => {const memory = (performance as any).memory;
@@ -284,7 +271,7 @@ const getScoreColor = (value: number | null, thresholds: { good: number; needsIm
     if (value <= thresholds.good) return 'text-green-500';
     if (value <= thresholds.needsImprovement) return 'text-yellow-500';
     return 'text-red-500';
-  }
+}
 const getScoreText = (value: number | null, thresholds: { good: number; needsImprovement: number }) => {
     if (value === null) return 'N/A';
     if (value <= thresholds.good) return 'Good';
@@ -305,13 +292,10 @@ const getScoreText = (value: number | null, thresholds: { good: number; needsImp
           ×
         </button>
       </div>
-<<<<<<< HEAD
-=======
     // Resource timing analysis
     const analyzeResources = () => {
       const resources = performance.getEntriesByType('resource');
-      const slowResources = resources.filter((resource: any) => resource.duration > 1000);
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
+const slowResources = resources.filter((resource: any) => resource.duration > 1000);
       
       if (slowResources.length > 0) {
         // console.warn removed for production
@@ -320,7 +304,7 @@ const getScoreText = (value: number | null, thresholds: { good: number; needsImp
           duration: r.duration,
           size: r.transferSize
         })));
-      }
+}
     };
 
     // Memory usage monitoring;
@@ -376,9 +360,6 @@ const logMetrics = () => {
             <span className={getScoreColor(metrics.ttfb, { good: 800, poor: 1800 })}>
               {Math.round(metrics.ttfb)}ms ({getScoreText(metrics.ttfb, { good: 800, poor: 1800 })})
             </span>
-<<<<<<< HEAD
-          </div>);
-=======
           </div>
         )}
 
@@ -456,7 +437,6 @@ const logMetrics = () => {
         >
           Refresh Metrics
         </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
       </div>
     </div>
   );
@@ -465,7 +445,7 @@ const logMetrics = () => {
         if (metrics.fid) gtag('event', 'web_vitals', { metric_name: 'FID', metric_value: Math.round(metrics.fid) });
         if (metrics.cls) gtag('event', 'web_vitals', { metric_name: 'CLS', metric_value: Math.round(metrics.cls * 1000) / 1000 });
         if (metrics.ttfb) gtag('event', 'web_vitals', { metric_name: 'TTFB', metric_value: Math.round(metrics.ttfb) });
-      }
+}
     };
 
     // Log metrics after a delay to allow for measurements;

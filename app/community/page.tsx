@@ -7,19 +7,15 @@ const CommunityPage: React.FC = () => {const communityFeatures = [
       icon: Users,
       title: 'Expert Network',
       description: 'Connect with industry professionals and AI experts from around the world.'
-<<<<<<< HEAD
-=======
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Users, MessageCircle, Calendar, Award } from 'lucide-react';
-
 const CommunityPage: React.FC = () => {
   const features = [
     {
       icon: Users,
       title: 'Expert Community',
       description: 'Connect with industry experts and like-minded professionals'
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     },
     {
       icon: MessageCircle,
@@ -30,15 +26,12 @@ const CommunityPage: React.FC = () => {
       icon: Calendar,
       title: 'Events & Webinars',
       description: 'Join our regular events, workshops, and educational sessions.'
-<<<<<<< HEAD
-=======
       description: 'Share insights and learn from community discussions'
     },
     {
       icon: Calendar,
       title: 'Events & Workshops',
       description: 'Participate in exclusive events and training sessions'
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     },
     {
       icon: Award,
@@ -75,14 +68,10 @@ const CommunityPage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Connect with like-minded professionals, share knowledge, and grow together in the world of AI and technology.
             </p>
-<<<<<<< HEAD
-            ));
-=======
       description: 'Get recognized for your contributions and achievements'
     }
   ];
-
-  const benefits = [
+const benefits = [
     'Access to exclusive content',
     'Networking opportunities',
     'Expert mentorship',
@@ -153,7 +142,6 @@ const CommunityPage: React.FC = () => {
                 <p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
           </div>
         </section>
 
@@ -192,8 +180,6 @@ const CommunityPage: React.FC = () => {
         </section>
       </div>
     </>
-<<<<<<< HEAD
-=======
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -213,7 +199,6 @@ const CommunityPage: React.FC = () => {
                 <p className="text-gray-300 text-lg">{benefit}</p>
               </div>
             ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
           </div>
         </div>
       </section>

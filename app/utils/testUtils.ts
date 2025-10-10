@@ -46,16 +46,10 @@ export const mockFetch = (
         status,
         headers: new Headers(headers),
         json: async () => response;
-<<<<<<< HEAD
-        text: async () => JSON.stringify(response);)
-} as Response)
-    ) as typeof fetch;);
-=======
         text: async () => JSON.stringify(response)]
     } as Response)
     ) as typeof fetch]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 }
 /**
  * Mock local storage;
@@ -399,7 +393,8 @@ this.mock()]
   clear(): void {}
     this.logs = []
     this.errors = []
-    this.warnings = [];}
+    this.warnings = [];
+}
 export const deepClone = <T></T>(ob)
   j: T): T => {/* TODO: Fix JSX expression */});
 };
@@ -465,8 +460,7 @@ const promise = new Promise<T></T>((res, rej) => {}
 export interface Deferred<T></T> {/* TODO: Fix JSX expression */});
 }
 export const createDeferred = <T></T>(): Deferred<T></T> => {/* TODO: Fix JSX expression */});
-});;
-return { promise, resolve, reject }]
+});return { promise, resolve, reject }]
     };
 /**
  * Retry a function with exponential backoff;
@@ -510,7 +504,8 @@ export const measureExecutionTime = async <T></T>(
 ): Promise<{ result: T; duration: number }> => {}
   const start = performance.now();
 const result = await fn();
-const duration = performance.now() - start;}
+const duration = performance.now() - start;
+}
   return { result, duration });
 }
 export default {}
