@@ -18,7 +18,7 @@ export class A11yManager {
       announceChanges: true,
       focusManagement: true,
       keyboardNavigation: true,
-      screenReaderSupport: true,
+      screenReaderSupport: true}
       ...options
     };
 

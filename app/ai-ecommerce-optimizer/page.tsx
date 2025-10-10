@@ -173,7 +173,7 @@ const AIEcommerceOptimizerPage: React.FC = () => {
               AI E-commerce <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Optimizer</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your online store with AI-powered optimization. Increase conversions, reduce cart abandonment,
+              Transform your online store with AI-powered optimization. Increase conversions, reduce cart abandonment)
               and maximize revenue with intelligent automation and analytics.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

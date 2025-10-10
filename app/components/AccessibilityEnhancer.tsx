@@ -18,15 +18,11 @@ const AccessibilityEnhancer: React.FC = () => {
     highContrast: false,
     reducedMotion: false,
     fontSize: 'medium',
-<<<<<<< HEAD
     focusVisible: true,
     screenReader: false,
     keyboardNavigation: true,
     colorBlind: false,
-    dyslexia: false
-=======
-    focusVisible: true
->>>>>>> cursor/fix-errors-and-merge-to-main-dffe
+      dyslexia: false
   });
 
   useEffect(() => {
@@ -36,8 +32,8 @@ const AccessibilityEnhancer: React.FC = () => {
 
     setSettings(prev => ({
       ...prev,
-      reducedMotion: prefersReducedMotion,
-      highContrast: prefersHighContrast
+      reducedMotion: prefersReducedMotion)
+      highContrast: prefersHighContrast  });
     }));
 
     // Listen for changes in user preferences
@@ -67,7 +63,7 @@ const AccessibilityEnhancer: React.FC = () => {
 
     // High contrast mode
     if (settings.highContrast) {
-      root.classList.add('high-contrast');
+      root.classList.add('high-contrast');  });
     } else {
       root.classList.remove('high-contrast');
     }
@@ -91,13 +87,12 @@ const AccessibilityEnhancer: React.FC = () => {
     }
   }, [settings]);
 
-<<<<<<< HEAD
   // Screen reader optimizations
   useEffect(() => {
     const root = document.documentElement;
     
     if (settings.screenReader) {
-      root.classList.add('screen-reader-optimized');
+      root.classList.add('screen-reader-optimized');  });
     } else {
       root.classList.remove('screen-reader-optimized');
     }
@@ -127,8 +122,6 @@ const AccessibilityEnhancer: React.FC = () => {
     localStorage.setItem('accessibility-settings', JSON.stringify(settings));
   }, [settings]);
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-dffe
   // Add CSS for accessibility features
   useEffect(() => {
     const style = document.createElement('style');
@@ -142,7 +135,7 @@ const AccessibilityEnhancer: React.FC = () => {
         --neon-orange: #ff8000;
         --neon-red: #ff0040;
         --neon-yellow: #ffff00;
-        --neon-blue: #0080ff;
+        --neon-blue: #0080ff;  });
       }
 
       .high-contrast .neon-text {

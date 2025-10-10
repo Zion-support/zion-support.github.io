@@ -61,11 +61,11 @@ export class PerformanceMetrics {
               this.recordMetric({
                 name: 'pageLoadTime',
                 value: navEntry.loadEventEnd - navEntry.fetchStart,
-                unit: 'ms',
+                unit: 'ms')
                 timestamp: new Date(),
                 category: 'load',
-                metadata: {
-                  domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.fetchStart,
+      metadata: {
+                  domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.fetchStart,  });
                   domInteractive: navEntry.domInteractive - navEntry.fetchStart}
                 }
               })
@@ -82,8 +82,8 @@ export class PerformanceMetrics {
               this.recordMetric({
                 name: 'FCP',
                 value: entry.startTime,
-                unit: 'ms',
-                timestamp: new Date(),
+      unit: 'ms')
+                timestamp: new Date(),  });
                 category: 'load'}
               })
             }
@@ -100,8 +100,8 @@ export class PerformanceMetrics {
             this.recordMetric({
               name: 'LCP',
               value: lastEntry.startTime,
-              unit: 'ms',
-              timestamp: new Date(),
+      unit: 'ms')
+              timestamp: new Date(),  });
               category: 'load'}
             })
           }
@@ -119,8 +119,8 @@ export class PerformanceMetrics {
           this.recordMetric({
             name: 'CLS',
             value: clsValue,
-            unit: 'score',
-            timestamp: new Date(),
+      unit: 'score')
+            timestamp: new Date(),  });
             category: 'runtime'}
           })
         })
@@ -150,13 +150,13 @@ export class PerformanceMetrics {
     this.recordMetric({
       name: 'pageLoad',
       value: pageLoadTime,
-      unit: 'ms',
+      unit: 'ms')
       timestamp: new Date(),
       category: 'load',
       metadata: {
         dnsLookup: perfData.domainLookupEnd - perfData.domainLookupStart,
         tcpConnection: perfData.connectEnd - perfData.connectStart,
-        serverResponse: perfData.responseEnd - perfData.requestStart,
+      serverResponse: perfData.responseEnd - perfData.requestStart,  });
         domParsing: perfData.domComplete - perfData.domLoading}
       }
     })
@@ -168,11 +168,11 @@ export class PerformanceMetrics {
     this.recordMetric({
       name: 'networkRequest',
       value: duration,
-      unit: 'ms',
+      unit: 'ms')
       timestamp: new Date(),
       category: 'network',
       metadata: {
-        url,
+        url,  });
         status}
       }
     })
@@ -187,12 +187,12 @@ export class PerformanceMetrics {
     this.recordMetric({
       name: 'memoryUsage',
       value: memory.usedJSHeapSize,
-      unit: 'bytes',
+      unit: 'bytes')
       timestamp: new Date(),
       category: 'memory',
       metadata: {
         total: memory.totalJSHeapSize,
-        limit: memory.jsHeapSizeLimit,
+      limit: memory.jsHeapSizeLimit,  });
         percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100}
       }
     })
@@ -204,10 +204,10 @@ export class PerformanceMetrics {
     const startTime = performance.now()
     const result = fn()
     const endTime = performance.now()
-    this.recordMetric({}
+    this.recordMetric({,
       name: `function:${name}`,
       value: endTime - startTime,
-      unit: 'ms',
+      unit: 'ms')
       timestamp: new Date(),
       category: 'runtime'
     })
@@ -220,10 +220,10 @@ export class PerformanceMetrics {
     const startTime = performance.now()
     const result = await fn()
     const endTime = performance.now()
-    this.recordMetric({`}
+    this.recordMetric({`,
       name: `async:${name}`,
       value: endTime - startTime,
-      unit: 'ms',
+      unit: 'ms')
       timestamp: new Date(),
       category: 'runtime'
     })
@@ -320,7 +320,7 @@ export class PerformanceMetrics {
         avgLoadTime,
         totalMetrics: this.metrics.length,
         performanceScore: this.calculatePerformanceScore(),
-        recommendations: this.getRecommendations()}
+      recommendations: this.getRecommendations()}
       },
       timestamp: new Date()
     }

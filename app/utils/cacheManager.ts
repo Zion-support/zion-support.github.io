@@ -41,7 +41,7 @@ export class CacheManager<T = unknown> {
     misses: 0,
     hitRate: 0,
     count: 0,
-    entries: 0
+      entries: 0
   };
   private config: Required<CacheConfig>;
 
@@ -211,7 +211,7 @@ export class CacheManager<T = unknown> {
         const data = {
           entries: Object.fromEntries(this.cache),
           stats: this.stats,
-          timestamp: Date.now()
+      timestamp: Date.now()
         };
         storage.setItem('cache-manager', JSON.stringify(data));
       }
@@ -275,10 +275,10 @@ export class CacheManager<T = unknown> {
 export const memoryCache = new CacheManager({ storage: CacheStorage.Memory });
 export const localStorageCache = new CacheManager({
   storage: CacheStorage.LocalStorage,
-  defaultTTL: 30 * 60 * 1000 // 30 minutes
+      defaultTTL: 30 * 60 * 1000 // 30 minutes
 
 export const sessionStorageCache = new CacheManager({
-  storage: CacheStorage.SessionStorage,
+  storage: CacheStorage.SessionStorage)
   defaultTTL: 60 * 60 * 1000 // 1 hour
 
-export default CacheManager;
+export default CacheManager;  });

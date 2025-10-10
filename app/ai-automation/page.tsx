@@ -110,7 +110,7 @@ const AIAutomationPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
       <Helmet>
         <title>AI Automation - Intelligent Process Automation | Zion Tech Group</title>
         <meta name="description" content="Transform your business with intelligent process automation. Achieve 80% efficiency increase and 60% time savings with AI-powered automation." />
@@ -132,7 +132,7 @@ const AIAutomationPage: React.FC = () => {
                 Intelligent process automation with decision-making capabilities
               </p>
               <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
-                Transform your business operations with cutting-edge AI automation. Achieve 80% efficiency increase,
+                Transform your business operations with cutting-edge AI automation. Achieve 80% efficiency increase)
                 60% time savings, and zero human error with our intelligent automation platform.
               </p>
 

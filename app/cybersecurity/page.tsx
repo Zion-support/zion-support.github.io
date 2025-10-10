@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 
 const CybersecurityPage: React.FC = () => {
   const features = [
-    'Threat Detection & Prevention',
+    'Threat Detection & Prevention'}
     'Vulnerability Assessment',
     'Security Monitoring',
     'Incident Response',

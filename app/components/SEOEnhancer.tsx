@@ -15,7 +15,7 @@ interface SEOEnhancerProps {
 }
 
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
-  children,
+  children}
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with cutting-edge technology.',
   keywords = [
@@ -27,28 +27,28 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     'machine learning',
   ],
   canonicalUrl,
-  ogImage = 'https://ziontechgroup.com/og-image.webp',
+  ogImage = 'https://ziontechgroup.com/og-image.webp'}
   ogType = 'website',
   structuredData,
   noIndex = false,
 }) => {
   const defaultStructuredData = {
-    '@context': 'https://schema.org',
+    '@context': 'https://schema.org'}
     '@type': 'Organization',
-    name: 'Zion Tech Group',
+    name: 'Zion Tech Group'}
     description,
     url: 'https://ziontechgroup.com',
     logo: 'https://ziontechgroup.com/logo.webp',
     sameAs: [
       'https://linkedin.com/company/zion-tech-group',
-      'https://twitter.com/ziontechgroup',
-      'https://github.com/zion-tech-group',
+        'https://twitter.com/ziontechgroup',
+        'https://github.com/zion-tech-group'}
     ],
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: '+1-555-ZION-TECH',
       contactType: 'customer service',
-      availableLanguage: 'English',
+      availableLanguage: 'English'}
     },
     address: {
       '@type': 'PostalAddress',
@@ -56,7 +56,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       addressLocality: 'San Francisco',
       addressRegion: 'CA',
       postalCode: '94105',
-      addressCountry: 'US',
+      addressCountry: 'US'}
     },
   };
 

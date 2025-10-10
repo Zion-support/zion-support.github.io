@@ -80,7 +80,7 @@ export default function TeamPage() {
       social: {
         linkedin: 'https://linkedin.com/in/klebersantos',
         twitter: 'https://twitter.com/klebersantos',
-        email: 'kleber@ziontechgroup.com'
+      email: 'kleber@ziontechgroup.com'
       },
       specialties: ['Strategic Planning', 'AI Implementation', 'Team Leadership'],
       certifications: ['AWS Solutions Architect', 'Google Cloud Professional', 'Microsoft Azure Expert']
@@ -99,7 +99,7 @@ export default function TeamPage() {
       social: {
         linkedin: 'https://linkedin.com/in/sarahchen',
         twitter: 'https://twitter.com/sarahchen',
-        github: 'https://github.com/sarahchen'
+      github: 'https://github.com/sarahchen'
       },
       specialties: ['Deep Learning', 'Quantum Algorithms', 'Research Strategy'],
       certifications: ['Deep Learning Specialization', 'Quantum Computing Certificate', 'AI Ethics Certification']
@@ -118,7 +118,7 @@ export default function TeamPage() {
       social: {
         linkedin: 'https://linkedin.com/in/michaelrodriguez',
         twitter: 'https://twitter.com/michaelrod',
-        github: 'https://github.com/michaelrod'
+      github: 'https://github.com/michaelrod'
       },
       specialties: ['Scalable Systems', 'Cloud Architecture', 'Team Management'],
       certifications: ['AWS Solutions Architect', 'Kubernetes Administrator', 'Docker Certified']
@@ -137,7 +137,7 @@ export default function TeamPage() {
       social: {
         linkedin: 'https://linkedin.com/in/emilywatson',
         twitter: 'https://twitter.com/emilywatson',
-        github: 'https://github.com/emilywatson'
+      github: 'https://github.com/emilywatson'
       },
       specialties: ['Language Models', 'Computer Vision', 'Research Innovation'],
       certifications: ['NLP Specialization', 'Computer Vision Certificate', 'Deep Learning Nanodegree']
@@ -156,7 +156,7 @@ export default function TeamPage() {
       social: {
         linkedin: 'https://linkedin.com/in/davidkim',
         twitter: 'https://twitter.com/davidkim',
-        email: 'david@ziontechgroup.com'
+      email: 'david@ziontechgroup.com'
       },
       specialties: ['AI Product Strategy', 'User Research', 'Go-to-Market'],
       certifications: ['Product Management Certificate', 'UX Design Certificate', 'Agile Certified']
@@ -175,7 +175,7 @@ export default function TeamPage() {
       social: {
         linkedin: 'https://linkedin.com/in/lisawang',
         twitter: 'https://twitter.com/lisawang',
-        github: 'https://github.com/lisawang'
+      github: 'https://github.com/lisawang'
       },
       specialties: ['Predictive Analytics', 'Data Engineering', 'MLOps'],
       certifications: ['Data Science Professional', 'Big Data Certificate', 'Machine Learning Engineer']

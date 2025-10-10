@@ -15,8 +15,7 @@ export const SecurityEnhancer: React.FC = () => {
     cspViolations: 0,
     xssAttempts: 0,
     csrfAttempts: 0,
-    suspiciousActivity: 0,
-
+    suspiciousActivity: 0}
   const [isSecure, setIsSecure] = useState(true);
   const [securityWarnings, setSecurityWarnings] = useState<string[]>([]);
 
@@ -109,7 +108,7 @@ export const SecurityEnhancer: React.FC = () => {
             setMetrics(prev => ({ ...prev, suspiciousActivity: prev.suspiciousActivity + 1 }));
             logger.warn('Suspicious code pattern detected', {
               pattern: pattern.toString(),
-              script: script.id || 'inline'
+      script: script.id || 'inline'
 
           }
 
@@ -193,7 +192,7 @@ export const SecurityEnhancer: React.FC = () => {
 
     // Set up periodic security checks
     const interval = setInterval(() => {
-      validateSecurityHeaders();
+      validateSecurityHeaders();  });
     }, 30000); // Check every 30 seconds
 
     return () => clearInterval(interval);
@@ -213,8 +212,7 @@ export const SecurityEnhancer: React.FC = () => {
       (window as any).gtag('event', 'security_event', {
         event_category: 'Security',
         event_label: event,
-        custom_map: data,
-
+      custom_map: data)
     }
   }, [rateLimit]);
 
@@ -227,7 +225,7 @@ export const SecurityEnhancer: React.FC = () => {
         rateLimit,
         metrics,
         isSecure,
-        warnings: securityWarnings,
+        warnings: securityWarnings,  });
       };
     }
   }, [sanitizeInput, validateURL, rateLimit, metrics, isSecure, securityWarnings]);

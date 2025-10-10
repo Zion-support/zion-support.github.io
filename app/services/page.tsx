@@ -78,7 +78,7 @@ const ServicesPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState('overview');
 
   useEffect(() => {
-    setIsLoaded(true);
+    setIsLoaded(true);  });
   }, []);
 
   const serviceCategories = [
@@ -93,28 +93,28 @@ const ServicesPage: React.FC = () => {
           name: 'AI Analytics Platform',
           description: 'Predictive analytics and real-time insights',
           price: 'Starting at $299/mo',
-          features: ['Predictive Analytics', 'Real-time Processing', 'Custom Dashboards'],
+      features: ['Predictive Analytics', 'Real-time Processing', 'Custom Dashboards'],
           popular: true
         },
         {
           name: 'AI Workflow Automation',
           description: 'Intelligent business process automation',
           price: 'Starting at $199/mo',
-          features: ['Visual Workflow Builder', 'Smart Triggers', 'Error Handling'],
+      features: ['Visual Workflow Builder', 'Smart Triggers', 'Error Handling'],
           popular: true
         },
         {
           name: 'AI Cybersecurity Platform',
           description: 'Next-gen security with AI threat detection',
           price: 'Starting at $399/mo',
-          features: ['Threat Detection', 'Anomaly Analysis', 'Automated Response'],
+      features: ['Threat Detection', 'Anomaly Analysis', 'Automated Response'],
           popular: true
         },
         {
           name: 'AI Content Generation',
           description: 'Advanced content creation with AI',
           price: 'Starting at $179/mo',
-          features: ['Multi-format Creation', 'SEO Optimization', 'Brand Voice Training'],
+      features: ['Multi-format Creation', 'SEO Optimization', 'Brand Voice Training'],
           popular: true
         }
       ]
@@ -128,7 +128,7 @@ const ServicesPage: React.FC = () => {
       services: [
         {
           name: 'Cloud Migration & Setup',
-          description: 'Seamless migration to AWS, Azure, or GCP',
+      description: 'Seamless migration to AWS, Azure, or GCP',
           price: 'Starting at $10,000',
           features: ['Multi-cloud Strategy', 'Cost Optimization', 'Security Implementation'],
           popular: true
@@ -136,21 +136,21 @@ const ServicesPage: React.FC = () => {
         {
           name: 'Enterprise Cybersecurity',
           description: 'Comprehensive security solutions',
-          price: 'Starting at $8,000/mo',
+      price: 'Starting at $8,000/mo',
           features: ['Threat Detection', 'Vulnerability Assessment', '24/7 Monitoring'],
           popular: true
         },
         {
           name: '24/7 IT Support',
           description: 'Round-the-clock technical support',
-          price: 'Starting at $2,000/mo',
+      price: 'Starting at $2,000/mo',
           features: ['Help Desk Support', 'Remote Monitoring', 'Proactive Maintenance'],
           popular: true
         },
         {
           name: 'Custom Software Development',
           description: 'Tailored software solutions',
-          price: 'Starting at $15,000',
+      price: 'Starting at $15,000',
           features: ['Web Applications', 'Mobile Apps', 'API Development'],
           popular: true
         }
@@ -167,28 +167,28 @@ const ServicesPage: React.FC = () => {
           name: 'AI Project Manager Pro',
           description: 'Intelligent project management with AI insights',
           price: '$199/mo',
-          features: ['Smart Task Assignment', 'Progress Tracking', 'Resource Optimization'],
+      features: ['Smart Task Assignment', 'Progress Tracking', 'Resource Optimization'],
           popular: true
         },
         {
           name: 'AI Content Writer Pro',
           description: 'Advanced AI content creation',
           price: '$129/mo',
-          features: ['SEO Optimization', 'Brand Voice', 'Multi-language Support'],
+      features: ['SEO Optimization', 'Brand Voice', 'Multi-language Support'],
           popular: true
         },
         {
           name: 'AI Financial Advisor Pro',
           description: 'Personalized financial planning and advice',
           price: '$299/mo',
-          features: ['Portfolio Analysis', 'Risk Assessment', 'Investment Recommendations'],
+      features: ['Portfolio Analysis', 'Risk Assessment', 'Investment Recommendations'],
           popular: true
         },
         {
           name: 'AI Code Assistant Pro',
           description: 'Advanced AI coding assistant',
           price: '$179/mo',
-          features: ['Code Generation', 'Debug Assistant', 'Code Review'],
+      features: ['Code Generation', 'Debug Assistant', 'Code Review'],
           popular: true
         }
       ]

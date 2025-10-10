@@ -54,22 +54,22 @@ class EnhancedAnalytics {
     this.isInitialized = true
     this.userProperties = {
       ...this.userProperties,
-      sessionId: this.sessionId,
+      sessionId: this.sessionId}
       ...config}
     }
     // Track initialization
     this.trackEvent({
       category: 'System',
-      action: 'Analytics Initialized',
+      action: 'Analytics Initialized')
       metadata: {
-        timestamp: new Date().toISOString(),
+        timestamp: new Date().toISOString(),  });
         userAgent: navigator.userAgent}
       }
     })
   }
   public setUserProperties(properties: UserProperties): void {
     this.userProperties = {
-      ...this.userProperties,
+      ...this.userProperties}
       ...properties}
     }
   }
@@ -80,7 +80,7 @@ class EnhancedAnalytics {
         ...event.metadata,
         sessionId: this.sessionId,
         timestamp: new Date().toISOString(),
-        url: typeof window !== 'undefined' ? window.location.href : ''}
+      url: typeof window !== 'undefined' ? window.location.href : ''}
       }
     }
     // Add to queue
@@ -108,7 +108,7 @@ class EnhancedAnalytics {
       ).gtag('event', event.action, {
         event_category: event.category,
         event_label: event.label,
-        value: event.value,
+      value: event.value)
         ...event.metadata}
       })
     }
@@ -117,18 +117,18 @@ class EnhancedAnalytics {
     this.trackEvent({
       category: 'Navigation',
       action: 'Page View',
-      label: pagePath,
+      label: pagePath)
       metadata: {
-        pageTitle: pageTitle || document.title,
+        pageTitle: pageTitle || document.title,  });
         referrer: document.referrer}
       }
     })
   }
   public trackUserInteraction(action: string, label?: string, value?: number): void {
     this.trackEvent({
-      category: 'User Interaction',
-      action,
-      label,
+      category: 'User Interaction'}
+      action)
+      label,  });
       value}
     })
   }
@@ -136,9 +136,9 @@ class EnhancedAnalytics {
     this.trackEvent({
       category: 'Error',
       action: 'Error Occurred',
-      label: error.message,
+      label: error.message)
       metadata: {
-        stack: error.stack,
+        stack: error.stack,  });
         ...context}
       }
     })
@@ -146,9 +146,9 @@ class EnhancedAnalytics {
   public trackPerformance(metric: string, value: number, rating?: string): void {
     this.trackEvent({
       category: 'Performance',
-      action: metric,
+      action: metric)
       value: Math.round(value),
-      metadata: {
+      metadata: {  });
         rating}
       }
     })
@@ -156,25 +156,25 @@ class EnhancedAnalytics {
   public trackConversion(conversionType: string, value?: number): void {
     this.trackEvent({
       category: 'Conversion',
-      action: conversionType,
-      value,
-      metadata: {`}
-        conversionId: `conv-${Date.now()}
+      action: conversionType)
+      value,  });
+      metadata: {`,
+      conversionId: `conv-${Date.now()}
       }
     })
   }
   public trackCustomEvent(
     category: string,
-    action: string,
+    action: string}
     label?: string,
-    value?: number,
+    value?: number)
     metadata?: Record<string, unknown>
   ): void {
     this.trackEvent({
       category,
       action,
-      label,
-      value,
+      label)
+      value,  });
       metadata}
     })
   }

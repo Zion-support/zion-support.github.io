@@ -15,7 +15,7 @@ const DynamicContentShowcase: React.FC = () => {
       content: {
         title: 'Revolutionary AI Solutions',
         description: 'Transform your business with cutting-edge artificial intelligence technologies',
-        features: [
+      features: [
           { name: 'Machine Learning Models', description: 'Custom ML models for your specific needs', icon: '🧠' },
           { name: 'Natural Language Processing', description: 'Advanced text analysis and understanding', icon: '💬' },
           { name: 'Computer Vision', description: 'Image and video analysis capabilities', icon: '👁️' },
@@ -37,7 +37,7 @@ const DynamicContentShowcase: React.FC = () => {
       content: {
         title: 'Enterprise IT Solutions',
         description: 'Comprehensive IT services to keep your business running smoothly',
-        features: [
+      features: [
           { name: 'Cloud Infrastructure', description: 'Scalable and secure cloud solutions', icon: '☁️' },
           { name: 'Cybersecurity', description: 'Advanced security measures and monitoring', icon: '🔒' },
           { name: 'Network Management', description: 'Optimized network performance and reliability', icon: '🌐' },
@@ -59,7 +59,7 @@ const DynamicContentShowcase: React.FC = () => {
       content: {
         title: 'Digital Transformation',
         description: 'Modernize your business processes with our digital transformation services',
-        features: [
+      features: [
           { name: 'Process Automation', description: 'Streamline workflows with intelligent automation', icon: '⚙️' },
           { name: 'Legacy Modernization', description: 'Update outdated systems and technologies', icon: '🔄' },
           { name: 'Data Migration', description: 'Secure and efficient data transfer solutions', icon: '📦' },

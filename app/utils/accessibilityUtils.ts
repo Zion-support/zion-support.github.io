@@ -134,7 +134,7 @@ export const createReducedMotionMode = (): void => {
   style.id = 'reduced-motion-mode';
   style.textContent = `
     @media (prefers-reduced-motion: reduce) {
-      *,
+      *}
       *::before,
       *::after {
         animation-duration: 0.01ms !important;
@@ -241,7 +241,7 @@ export const setupLandmarkNavigation = (): void => {
     createLandmarkNavigation();
 
   observer.observe(document.body, {
-    childList: true,
+    childList: true)
     subtree: true
 
 };
@@ -280,7 +280,7 @@ class AccessibilityEnhancer {
       enableKeyboardNavigation: true,
       enableScreenReaderSupport: true,
       enableFocusManagement: true,
-      enableAriaLabels: true,
+      enableAriaLabels: true}
       ...config,
     };
   }
@@ -412,7 +412,7 @@ class AccessibilityEnhancer {
       focusManagement: this.checkFocusManagement(),
       ariaLabels: this.checkAriaLabels(),
       headingStructure: this.checkHeadingStructure(),
-      altText: this.checkAltText(),
+      altText: this.checkAltText()}
     };
 
     // Calculate overall score

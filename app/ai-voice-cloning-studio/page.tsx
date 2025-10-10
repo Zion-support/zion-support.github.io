@@ -716,8 +716,8 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
   const [voiceSettings, setVoiceSettings] = useState({
     pitch: 0,
     speed: 1,
-    emotion: 'neutral',
-    language: 'en-US'
+      emotion: 'neutral')
+    language: 'en-US'  });
   });
 
   const [isGenerating, setIsGenerating] = useState(false);
@@ -888,7 +888,7 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
             </p>
 
             <p className="text-lg text-gray-400 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Create realistic voice clones with just 30 seconds of audio. Perfect for content creators,
+              Create realistic voice clones with just 30 seconds of audio. Perfect for content creators}
               businesses, and developers. Support for 50+ languages with emotion control and real-time processing.
             </p>
 

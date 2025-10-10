@@ -34,7 +34,7 @@ class APIClient {
 
   private async makeRequest<T>(
     endpoint: string,
-    config: RequestConfig = {}
+      config: RequestConfig = {}
   ): Promise<APIResponse<T>> {
     const {
       method = 'GET',
@@ -59,9 +59,9 @@ class APIClient {
       const response = await fetch(url, {
         method,
         headers: {
-          ...this.defaultHeaders,
+          ...this.defaultHeaders}
           ...headers
-        },
+        })
         body: body ? JSON.stringify(body) : undefined
 
       const data = await response.json();
@@ -70,7 +70,7 @@ class APIClient {
         data,
         status: response.status,
         statusText: response.statusText,
-        headers: Object.fromEntries(response.headers.entries())
+      headers: Object.fromEntries(response.headers.entries())
       };
 
       // Cache successful GET requests

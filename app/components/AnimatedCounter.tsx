@@ -10,7 +10,7 @@ interface AnimatedCounterProps {
 }
 
 const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
-  end,
+  end}
   duration = 2000,
   suffix = '',
   prefix = '',
@@ -19,16 +19,12 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   const [count, setCount] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const [setNode, entry] = useIntersectionObserver({
-<<<<<<< HEAD
-    threshold: 0.5,
-=======
-    threshold: 0.5
->>>>>>> cursor/fix-errors-and-merge-to-main-dffe
+    threshold: 0.5  });
   });
 
   useEffect(() => {
     if (entry?.isIntersecting && !isVisible) {
-      setIsVisible(true);
+      setIsVisible(true);  });
     }
   }, [entry, isVisible]);
 
@@ -49,7 +45,7 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
       setCount(currentCount);
 
       if (progress < 1) {
-        animationFrame = requestAnimationFrame(animate);
+        animationFrame = requestAnimationFrame(animate);  });
       }
     };
 

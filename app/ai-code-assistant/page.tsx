@@ -7,7 +7,7 @@ const AICodeAssistant: React.FC = memo(() => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   React.useEffect(() => {
-    setIsLoaded(true);
+    setIsLoaded(true);  });
   }, []);
 
   const features = [

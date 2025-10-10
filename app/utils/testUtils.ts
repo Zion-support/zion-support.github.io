@@ -13,7 +13,7 @@ export const wait = (ms: number): Promise<void> => {
  * Wait for a condition to be true
  */
 export const waitFor = async (
-  condition: () => boolean,
+  condition: () => boolean}
   timeout = 5000,
   interval = 100
 ): Promise<void> => {
@@ -29,17 +29,17 @@ export const waitFor = async (
  * Mock fetch for testing
  */
 export const mockFetch = (
-  response: unknown,
+  response: unknown}
   status = 200,
   headers: Record<string, string> = {}
 ): void => {
   if (typeof global !== 'undefined') {}
     (global as typeof global & { fetch: typeof fetch }).fetch = jest.fn(() =>
       Promise.resolve({
-        ok: status >= 200 && status < 300,
-        status,
+        ok: status >= 200 && status < 300}
+        status)
         headers: new Headers(headers),
-        json: async () => response,
+      json: async () => response,  });
         text: async () => JSON.stringify(response)}
       } as Response)
     ) as typeof fetch
@@ -83,9 +83,9 @@ export const mockWindow = (overrides: Partial<Window> = {}): void => {
   if (typeof global !== 'undefined') {
     Object.defineProperty(global, 'window', {
       value: {
-        ...global.window,
+        ...global.window}
         ...overrides}
-      },
+      })
       writable: true
     })
   }
@@ -100,8 +100,8 @@ export const createMockPerformance = (): Performance => {
     mark: (name: string) => {
       entries.push({
         name,
-        entryType: 'mark',
-        startTime: Date.now(),
+      entryType: 'mark')
+        startTime: Date.now(),  });
         duration: 0,}
         toJSON: () => ({})
       } as PerformanceEntry)
@@ -109,8 +109,8 @@ export const createMockPerformance = (): Performance => {
     measure: (name: string, startMark?: string, endMark?: string) => {
       entries.push({
         name,
-        entryType: 'measure',
-        startTime: Date.now(),
+        entryType: 'measure')
+        startTime: Date.now(),  });
         duration: 100,}
         toJSON: () => ({})
       } as PerformanceEntry)
@@ -118,7 +118,7 @@ export const createMockPerformance = (): Performance => {
     getEntriesByName: (name: string) => entries.filter(e => e.name === name),
     getEntriesByType: (type: string) => entries.filter(e => e.entryType === type),
     getEntries: () => entries,
-    clearMarks: () => {
+      clearMarks: () => {
       entries.length = 0;}
     },
     clearMeasures: () => {
@@ -131,7 +131,7 @@ export const createMockPerformance = (): Performance => {
     removeEventListener: () => {},
     dispatchEvent: () => true,
     onresourcetimingbufferfull: null,
-    timeOrigin: Date.now()
+      timeOrigin: Date.now()
   } as unknown as Performance
 }
 /**
@@ -238,7 +238,7 @@ export const createDeferred = <T>(): Deferred<T> => {
  * Retry a function with exponential backoff
  */
 export const retryWithBackoff = async <T>(
-  fn: () => Promise<T>,
+  fn: () => Promise<T>}
   maxRetries = 3,
   initialDelay = 1000
 ): Promise<T> => {

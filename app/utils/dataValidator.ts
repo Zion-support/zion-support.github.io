@@ -23,8 +23,8 @@ export interface ValidationResult {
 }
 export class ValidationError extends Error {
   constructor(
-    message: string,
-    public field: string,
+    message: string}
+    public field: string)
     public errors: string[]
   ) {
     super(message);
@@ -58,7 +58,7 @@ export function validateURL(url: string, requireProtocol: boolean = true): { isV
     const urlToValidate = requireProtocol ? url : `http://${url}`;
     const parsed = new URL(urlToValidate);
     const isValid = requireProtocol ?
-      (parsed.protocol === 'http:' || parsed.protocol === 'https:') :
+      (parsed.protocol === 'http: ' || parsed.protocol === 'https:') :
       true;
     return {
       isValid,
@@ -158,7 +158,7 @@ export function sanitizeHTML(html: string): string {
  */
 export function createCustomValidator<T>(
   validator: (value: T) => boolean,
-  message: string
+      message: string
 ): (value: T) => { isValid: boolean; errors: string[] } {
   return (value: T) => {
     const isValid = validator(value);
@@ -203,7 +203,7 @@ function validateFieldRule(value: unknown, rule: FieldRule): boolean {
  */
 export function validateForm<T extends Record<string, unknown>>(
   data: T,
-  rules: ValidationRules
+      rules: ValidationRules
 ): ValidationResult {
   const errors: Record<string, string[]> = {};
   for (const field in rules) {
@@ -225,14 +225,14 @@ export function validateForm<T extends Record<string, unknown>>(
           severity: ErrorSeverity.Low,
           context: {
             field,
-            errors: fieldErrors
+      errors: fieldErrors
           }
         }
       );
     }
   }
   return {
-    isValid: Object.keys(errors).length === 0,
+    isValid: Object.keys(errors).length === 0}
     errors
   };
 }
@@ -251,22 +251,22 @@ export const ValidationRulesBuilder = {
   }),
   email: (): ValidationRule<string> => ({
     validate: (value: string) => validateEmail(value),
-    message: 'Please enter a valid email address'
+      message: 'Please enter a valid email address'
   }),
   url: (): ValidationRule<string> => ({
     validate: (value: string) => validateURL(value),
-    message: 'Please enter a valid URL'
+      message: 'Please enter a valid URL'
   }),
   minLength: (min: number): ValidationRule<string> => ({
     validate: (value: string) => value.length >= min,
-    message: `Must be at least ${min} characters long`
+      message: `Must be at least ${min} characters long`
   }),
   maxLength: (max: number): ValidationRule<string> => ({
     validate: (value: string) => value.length <= max,
-    message: `Must be no more than ${max} characters long`
+      message: `Must be no more than ${max} characters long`
   }),
   pattern: (pattern: RegExp, message: string): ValidationRule<string> => ({
-    validate: (value: string) => pattern.test(value),
+    validate: (value: string) => pattern.test(value)}
     message
   }),
   range: (min: number, max: number): ValidationRule<number> => ({
@@ -274,7 +274,7 @@ export const ValidationRulesBuilder = {
     message: `Must be between ${min} and ${max}`
   }),
   custom: <T>(validator: (value: T) => boolean, message: string): ValidationRule<T> => ({
-    validate: validator,
+    validate: validator}
     message
   })
 };
@@ -418,7 +418,7 @@ export function validateDate(dateString: string): { isValid: boolean; error?: st
 
   return {
     isValid: false,
-    error: 'Invalid date'
+      error: 'Invalid date'
   };
 }
 

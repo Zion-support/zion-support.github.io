@@ -14,7 +14,7 @@ interface AdvancedPerformanceOptimizerProps {
 }
 
 const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> = ({
-  enableAdvancedCaching = true,
+  enableAdvancedCaching = true}
   enableImageOptimization = true,
   enableLazyLoading = true,
   enablePreloading = true,
@@ -28,8 +28,8 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
     fcp: 0,
     lcp: 0,
     fid: 0,
-    cls: 0,
-    ttfb: 0
+      cls: 0)
+    ttfb: 0  });
   });
 
   // Web Vitals monitoring
@@ -39,7 +39,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
         // First Contentful Paint
         new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
-            if (entry.name === 'first-contentful-paint') {
+            if (entry.name === 'first-contentful-paint') {  });
               setPerformanceMetrics(prev => ({ ...prev, fcp: entry.startTime }));
             }
           }
@@ -205,13 +205,13 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
     if ('gtag' in window) {
       (window as any).gtag('event', 'web_vitals', {
         event_category: 'Performance',
-        event_label: 'Core Web Vitals',
+        event_label: 'Core Web Vitals')
         value: Math.round(performanceMetrics.lcp),
         custom_map: {
           fcp: Math.round(performanceMetrics.fcp),
           lcp: Math.round(performanceMetrics.lcp),
           fid: Math.round(performanceMetrics.fid),
-          cls: Math.round(performanceMetrics.cls * 1000) / 1000
+      cls: Math.round(performanceMetrics.cls * 1000) / 1000
         }
 
     }
@@ -219,7 +219,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
 
   useEffect(() => {
     if (enableAdvancedCaching) {
-      setupAdvancedCaching();
+      setupAdvancedCaching();  });
     }
     if (enableImageOptimization) {
       optimizeImages();
@@ -237,7 +237,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
 
   useEffect(() => {
     if (enableWebVitals && performanceMetrics.lcp > 0) {
-      reportPerformanceMetrics();
+      reportPerformanceMetrics();  });
     }
   }, [enableWebVitals, performanceMetrics, reportPerformanceMetrics]);
 

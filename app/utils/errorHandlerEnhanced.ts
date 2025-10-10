@@ -21,7 +21,7 @@ export const errorHandler = (error: AppError | Error) => {
 
   return {
     message: appError.isOperational ? appError.message : 'An unexpected error occurred',
-    statusCode: appError.statusCode || 500
+      statusCode: appError.statusCode || 500
   };
 };
 export const asyncHandler = (fn: (req: unknown, res: unknown, next: unknown) => unknown) => (req: unknown, res: unknown, next: unknown) => {

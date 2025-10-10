@@ -7,7 +7,7 @@ import React from 'react';
 // Debounce function for performance optimization
 export const debounce = <T extends (...args: unknown[]) => unknown>(
   func: T,
-  wait: number
+      wait: number
 ): ((...args: Parameters<T>) => void) => {
   let timeout: NodeJS.Timeout;
   return (...args: Parameters<T>) => {
@@ -18,7 +18,7 @@ export const debounce = <T extends (...args: unknown[]) => unknown>(
 // Throttle function for performance optimization
 export const throttle = <T extends (...args: unknown[]) => unknown>(
   func: T,
-  limit: number
+      limit: number
 ): ((...args: Parameters<T>) => void) => {
   let inThrottle: boolean;
   return (...args: Parameters<T>) => {
@@ -93,7 +93,7 @@ export const usePerformanceMonitor = (componentName: string) => {
     return () => {
       const renderTime = performance.now() - renderStartTime.current;
       monitor.trackRender(componentName, renderTime);
-      monitor.trackMemory(componentName);
+      monitor.trackMemory(componentName);  });
     };
   }, [componentName, monitor]);
   return {
@@ -224,7 +224,7 @@ export const getMemoryUsage = () => {
     used: memory.usedJSHeapSize,
     total: memory.totalJSHeapSize,
     limit: memory.jsHeapSizeLimit,
-    percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100
+      percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100
   };
 };
 // Performance metrics collection
@@ -234,8 +234,8 @@ export const collectPerformanceMetrics = () => {
   const paint = performance.getEntriesByType('paint');
   return {
     navigation: {
-// domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-// loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
+// domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart}
+// loadComplete: navigation.loadEventEnd - navigation.loadEventStart}
 // totalTime: navigation.loadEventEnd - navigation.fetchStart
     },
     paint: {

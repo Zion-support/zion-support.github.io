@@ -14,33 +14,33 @@ export interface AppConfig {
     timeout: number
     retryAttempts: number
     enableCaching: boolean
-  }
-  features: {
+  ,
+      features: {
     enableAnalytics: boolean
     enableErrorReporting: boolean
     enablePerformanceMonitoring: boolean
     enableAccessibility: boolean
     enableSEO: boolean
     enablePWA: boolean
-  }
-  performance: {
+  ,
+      performance: {
     enableCodeSplitting: boolean
     enableLazyLoading: boolean
     enableImageOptimization: boolean
     enableCaching: boolean
-  }
-  security: {
+  ,
+      security: {
     enableCSP: boolean
     enableCORS: boolean
     enableRateLimiting: boolean
     maxRequestsPerMinute: number
-  }
-  ui: {
+  ,
+      ui: {
     theme: 'light' | 'dark' | 'auto'
     language: string
     timezone: string
-  }
-  logging: {
+  ,
+      logging: {
     level: 'debug' | 'info' | 'warn' | 'error'
     enableConsole: boolean
     enableNetwork: boolean
@@ -53,7 +53,7 @@ const defaultConfig: AppConfig = {
     baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
     timeout: 30000,
     retryAttempts: 3,
-    enableCaching: true
+      enableCaching: true
   },
   features: {
     enableAnalytics: true,
@@ -61,29 +61,29 @@ const defaultConfig: AppConfig = {
     enablePerformanceMonitoring: true,
     enableAccessibility: true,
     enableSEO: true,
-    enablePWA: true
+      enablePWA: true
   },
   performance: {
     enableCodeSplitting: true,
     enableLazyLoading: true,
     enableImageOptimization: true,
-    enableCaching: true
+      enableCaching: true
   },
   security: {
     enableCSP: true,
     enableCORS: true,
     enableRateLimiting: true,
-    maxRequestsPerMinute: 100
+      maxRequestsPerMinute: 100
   },
   ui: {
     theme: 'auto',
     language: 'en',
-    timezone: 'UTC'
+      timezone: 'UTC'
   },
   logging: {
     level: 'info',
     enableConsole: true,
-    enableNetwork: false
+      enableNetwork: false
   }
 }
 

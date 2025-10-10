@@ -15,8 +15,7 @@ export const UserExperienceEnhancer: React.FC = () => {
     theme: 'auto',
     language: 'en',
     notifications: true,
-    analytics: true,
-
+    analytics: true}
   const [isLoading, setIsLoading] = useState(true);
   const [showWelcome, setShowWelcome] = useState(false);
 
@@ -26,7 +25,7 @@ export const UserExperienceEnhancer: React.FC = () => {
     if (savedPreferences) {
       try {
         const parsed = JSON.parse(savedPreferences);
-        setPreferences(parsed);
+        setPreferences(parsed);  });
       } catch (error) {
         logger.error('Failed to parse user preferences', error);
       }
@@ -69,7 +68,7 @@ export const UserExperienceEnhancer: React.FC = () => {
     // Store preferences
     localStorage.setItem('user-preferences', JSON.stringify(preferences));
 
-    logger.info('User preferences applied', preferences);
+    logger.info('User preferences applied', preferences);  });
   }, [preferences, isLoading, applyTheme]);
 
   // Handle theme change
@@ -116,8 +115,7 @@ export const UserExperienceEnhancer: React.FC = () => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', action, {
         event_category: 'User Interaction',
-        event_label: element,
-
+      event_label: element)
     }
   }, [preferences.analytics]);
 
@@ -127,7 +125,7 @@ export const UserExperienceEnhancer: React.FC = () => {
       const target = event.target as HTMLElement;
       const element = target.tagName.toLowerCase();
       const text = target.textContent?.slice(0, 50) || '';
-
+  });
       trackInteraction('click', `${element}: ${text}`);
     };
 
@@ -140,10 +138,10 @@ export const UserExperienceEnhancer: React.FC = () => {
     if (showWelcome) {
       setTimeout(() => {
         showNotification(
-          'Welcome to Zion Tech Group!',
+          'Welcome to Zion Tech Group!')
           'Discover our advanced AI and IT solutions.'
         );
-        setShowWelcome(false);
+        setShowWelcome(false);  });
       }, 2000);
     }
   }, [showWelcome, showNotification]);
@@ -156,7 +154,7 @@ export const UserExperienceEnhancer: React.FC = () => {
         event.preventDefault();
         const searchInput = document.querySelector('input[type="search"]') as HTMLInputElement;
         if (searchInput) {
-          searchInput.focus();
+          searchInput.focus();  });
         }
       }
 

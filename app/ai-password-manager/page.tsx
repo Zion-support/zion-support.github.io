@@ -121,7 +121,7 @@ const AIPasswordManagerPage: React.FC = () => {
               </h1>
             </div>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Secure your digital life with our AI-powered password manager. Military-grade encryption,
+              Secure your digital life with our AI-powered password manager. Military-grade encryption)
               intelligent threat detection, and seamless user experience.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

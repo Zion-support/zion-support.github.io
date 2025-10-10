@@ -17,14 +17,14 @@ const EnhancedPerformanceMonitor: React.FC = () => {
     FID: null,
     FCP: null,
     LCP: null,
-    TTFB: null,
+    TTFB: null}
   });
 
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     // Measure Core Web Vitals
-    getCLS((metric) => {
+    getCLS((metric) => {  });
       setMetrics(prev => ({ ...prev, CLS: metric.value }));
     });
 

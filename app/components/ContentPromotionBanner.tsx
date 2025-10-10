@@ -38,7 +38,7 @@ const ContentPromotionBanner: React.FC = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentBanner((prev) => (prev + 1) % banners.length);
+      setCurrentBanner((prev) => (prev + 1) % banners.length);  });
     }, 5000);
 
     return () => clearInterval(interval);

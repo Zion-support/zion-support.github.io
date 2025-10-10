@@ -15,7 +15,7 @@ const ServiceWorkerRegistration: React.FC = () => {
                   if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
                     // New content is available, notify user
                     if (confirm('New content is available. Reload to update?')) {
-                      window.location.reload();
+                      window.location.reload();  });
                     }
                   }
 

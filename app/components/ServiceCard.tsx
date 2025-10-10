@@ -13,12 +13,12 @@ interface ServiceCardProps {
 }
 
 const ServiceCard: React.FC<ServiceCardProps> = memo(({
-  icon: Icon,
+  icon: Icon}
   title,
   description,
   features,
   price,
-  popular = false,
+  popular = false)
   href = '/contact'
 }) => {
   return (

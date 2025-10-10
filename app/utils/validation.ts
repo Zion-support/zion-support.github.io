@@ -36,7 +36,7 @@ export function validateURL(url: string): ValidationResult {
 
   try {
     const urlObj = new URL(url);
-    const isValid = urlObj.protocol === 'http:' || urlObj.protocol === 'https:';
+    const isValid = urlObj.protocol === 'http: ' || urlObj.protocol === 'https:';
     return {
       isValid,
       error: isValid ? undefined : 'Invalid URL format'
@@ -52,7 +52,7 @@ export function validateURL(url: string): ValidationResult {
 export function validateLength(
   value: string,
   min: number,
-  max: number,
+  max: number)
   fieldName: string = 'Field'
 ): ValidationResult {
   if (value.length < min) {
@@ -232,7 +232,7 @@ export function sanitizeHTML(html: string): string {
  * Composite validation
  */
 export function validateComposite(
-  value: unknown,
+  value: unknown)
   validators: Array<(val: unknown) => ValidationResult>
 ): ValidationResult {
   for (const validator of validators) {
@@ -249,7 +249,7 @@ export function validateComposite(
  */
 export async function validateAsync(
   validator: (val: unknown) => Promise<ValidationResult>,
-  value: unknown
+      value: unknown
 ): Promise<ValidationResult> {
   try {
     return await validator(value);

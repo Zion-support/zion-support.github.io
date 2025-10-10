@@ -14,7 +14,7 @@ const PrivacyPage: React.FC = () => {
       content: [
         {
           subtitle: 'Personal Information',
-          items: [
+      items: [
             'Name, email address, phone number, and company information when you contact us',
             'Billing and payment information for service purchases',
             'Account credentials and preferences for our services',
@@ -23,7 +23,7 @@ const PrivacyPage: React.FC = () => {
         },
         {
           subtitle: 'Technical Information',
-          items: [
+      items: [
             'IP address, browser type, and device information',
             'Website usage data and analytics',
             'Cookies and similar tracking technologies',
@@ -34,7 +34,7 @@ const PrivacyPage: React.FC = () => {
           subtitle: 'Business Information',
           items: [
             'Project requirements and specifications',
-            'Business goals and objectives',
+        'Business goals and objectives',
             'Technical infrastructure details',
             'Performance metrics and outcomes'
           ]
@@ -49,7 +49,7 @@ const PrivacyPage: React.FC = () => {
           subtitle: 'Service Delivery',
           items: [
             'Provide and maintain our AI and IT services',
-            'Process transactions and manage accounts',
+        'Process transactions and manage accounts',
             'Deliver customer support and technical assistance',
             'Customize solutions to meet your specific needs'
           ]
@@ -58,7 +58,7 @@ const PrivacyPage: React.FC = () => {
           subtitle: 'Communication',
           items: [
             'Send service updates and important notifications',
-            'Respond to inquiries and support requests',
+        'Respond to inquiries and support requests',
             'Share relevant industry insights and updates',
             'Conduct surveys and gather feedback'
           ]
@@ -67,7 +67,7 @@ const PrivacyPage: React.FC = () => {
           subtitle: 'Business Operations',
           items: [
             'Improve our services and develop new solutions',
-            'Analyze usage patterns and optimize performance',
+        'Analyze usage patterns and optimize performance',
             'Ensure security and prevent fraud',
             'Comply with legal and regulatory requirements'
           ]
@@ -80,7 +80,7 @@ const PrivacyPage: React.FC = () => {
       content: [
         {
           subtitle: 'We Do Not Sell Your Data',
-          items: [
+      items: [
             'We never sell, rent, or trade your personal information to third parties',
             'We do not share your data for marketing purposes without consent',
             'Your information is only shared as described in this policy'
@@ -90,7 +90,7 @@ const PrivacyPage: React.FC = () => {
           subtitle: 'Limited Sharing Scenarios',
           items: [
             'With trusted service providers who assist in our operations',
-            'When required by law or to protect our rights',
+        'When required by law or to protect our rights',
             'In case of business transfers or mergers',
             'With your explicit consent for specific purposes'
           ]
@@ -105,7 +105,7 @@ const PrivacyPage: React.FC = () => {
           subtitle: 'Security Measures',
           items: [
             'End-to-end encryption for all data transmission',
-            'Secure data centers with physical and digital security',
+        'Secure data centers with physical and digital security',
             'Regular security audits and penetration testing',
             'Employee training on data protection best practices'
           ]
@@ -114,7 +114,7 @@ const PrivacyPage: React.FC = () => {
           subtitle: 'Access Controls',
           items: [
             'Role-based access controls for all systems',
-            'Multi-factor authentication for sensitive data',
+        'Multi-factor authentication for sensitive data',
             'Regular access reviews and permissions audits',
             'Secure development and deployment practices'
           ]
@@ -129,7 +129,7 @@ const PrivacyPage: React.FC = () => {
           subtitle: 'Access and Control',
           items: [
             'Request access to your personal information',
-            'Correct inaccurate or incomplete data',
+        'Correct inaccurate or incomplete data',
             'Delete your personal information (right to be forgotten)',
             'Object to processing of your personal data'
           ]
@@ -138,7 +138,7 @@ const PrivacyPage: React.FC = () => {
           subtitle: 'Data Portability',
           items: [
             'Receive a copy of your data in a structured format',
-            'Transfer your data to another service provider',
+        'Transfer your data to another service provider',
             'Request data processing restrictions',
             'Withdraw consent for data processing'
           ]
@@ -153,7 +153,7 @@ const PrivacyPage: React.FC = () => {
           subtitle: 'Types of Cookies',
           items: [
             'Essential cookies for website functionality',
-            'Analytics cookies to understand usage patterns',
+        'Analytics cookies to understand usage patterns',
             'Preference cookies to remember your settings',
             'Marketing cookies for targeted content (with consent)'
           ]
@@ -162,7 +162,7 @@ const PrivacyPage: React.FC = () => {
           subtitle: 'Cookie Management',
           items: [
             'You can control cookies through your browser settings',
-            'Opt-out options for non-essential cookies',
+        'Opt-out options for non-essential cookies',
             'Clear information about cookie purposes and duration',
             'Regular review and update of cookie policies'
           ]

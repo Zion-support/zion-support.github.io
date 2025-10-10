@@ -28,8 +28,7 @@ class ErrorBoundary extends Component<Props, State> {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'exception', {
         description: error.message,
-        fatal: false,
-
+      fatal: false)
     }
   }
 

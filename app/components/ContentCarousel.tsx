@@ -46,7 +46,7 @@ const ContentCarousel: React.FC = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
+      setCurrentSlide((prev) => (prev + 1) % slides.length);  });
     }, 6000);
 
     return () => clearInterval(interval);

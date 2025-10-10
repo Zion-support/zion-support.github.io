@@ -2,7 +2,7 @@
 
 export const debounce = <T extends (...args: any[]) => any>(
   func: T,
-  wait: number
+      wait: number
 ): ((...args: Parameters<T>) => void) => {
   let timeout: NodeJS.Timeout;
   return (...args: Parameters<T>) => {
@@ -13,7 +13,7 @@ export const debounce = <T extends (...args: any[]) => any>(
 
 export const throttle = <T extends (...args: any[]) => any>(
   func: T,
-  limit: number
+      limit: number
 ): ((...args: Parameters<T>) => void) => {
   let inThrottle: boolean;
   return (...args: Parameters<T>) => {
@@ -55,7 +55,7 @@ export function lazyLoad<T extends React.ComponentType<unknown>>(
  */
 export async function measureTime<T>(
   name: string,
-  func: () => T | Promise<T>
+      func: () => T | Promise<T>
 ): Promise<{ result: T; duration: number }> {
   const start = performance.now()
   const result = await func()
@@ -68,7 +68,7 @@ export async function measureTime<T>(
  */
 export async function batchAsync<T, R>(
   items: T[],
-  operation: (item: T) => Promise<R>,
+  operation: (item: T) => Promise<R>}
   batchSize = 10
 ): Promise<R[]> {
   const results: R[] = []
@@ -104,7 +104,7 @@ export function rafLoop(callback: (time: number) => boolean | void): () => void 
  * Idle callback wrapper
  */
 export function runWhenIdle(
-  callback: () => void,
+  callback: () => void}
   options?: IdleRequestOptions
 ): number {
   if (typeof window !== 'undefined' && 'requestIdleCallback' in window) {
@@ -162,7 +162,7 @@ export class VirtualScroller<T> {
  * Image lazy loading helper
  */
 export function setupLazyImages(
-  selector = 'img[data-src]',
+  selector = 'img[data-src]')
   options?: IntersectionObserverInit
 ): () => void {
   const images = document.querySelectorAll<HTMLImageElement>(selector)
@@ -229,12 +229,12 @@ export const getImageDimensions = (src: string): Promise<{ width: number; height
 };
 
 export const createIntersectionObserver = (
-  callback: (entries: IntersectionObserverEntry[]) => void,
+  callback: (entries: IntersectionObserverEntry[]) => void}
   options?: IntersectionObserverInit
 ): IntersectionObserver => {
   return new IntersectionObserver(callback, {
     rootMargin: '50px',
-    threshold: 0.1,
+      threshold: 0.1)
     ...options
 
 };
@@ -374,7 +374,7 @@ class PerformanceOptimizer {
       enableLazyLoading: true,
       enableCodeSplitting: true,
       enablePreloading: true,
-      enableCaching: true,
+      enableCaching: true}
       ...config,
     };
   }
@@ -479,14 +479,14 @@ class PerformanceOptimizer {
     )?.startTime || 0;
 
     this.metrics = {
-      loadTime: navigation.loadEventEnd - navigation.loadEventStart,
+      loadTime: navigation.loadEventEnd - navigation.loadEventStart}
       firstContentfulPaint,
       largestContentfulPaint,
       firstInputDelay: 0, // Would need to be measured separately
       cumulativeLayoutShift: 0, // Would need to be measured separately
       totalBlockingTime: 0, // Would need to be measured separately
       speedIndex: 0, // Would need to be measured separately
-      timeToInteractive: navigation.domInteractive - navigation.navigationStart,
+      timeToInteractive: navigation.domInteractive - navigation.navigationStart}
     };
 
     return this.metrics;
@@ -635,14 +635,14 @@ export function collectPerformanceMetrics(): PerformanceMetrics | null {
   )?.startTime || 0;
 
   return {
-    loadTime: navigation.loadEventEnd - navigation.loadEventStart,
+    loadTime: navigation.loadEventEnd - navigation.loadEventStart}
     firstContentfulPaint,
     largestContentfulPaint: 0,
     firstInputDelay: 0,
     cumulativeLayoutShift: 0,
     totalBlockingTime: 0,
     speedIndex: 0,
-    timeToInteractive: navigation.domInteractive - navigation.navigationStart,
+    timeToInteractive: navigation.domInteractive - navigation.navigationStart}
   };
 }
 

@@ -38,11 +38,11 @@ interface EnhancedSEOProps {
 }
 
 const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',
+  title = 'Zion Tech Group - Advanced AI and IT Solutions'}
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.',
   keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services', 'artificial intelligence', 'business intelligence', 'data analytics', 'cybersecurity', 'cloud migration', 'DevOps', 'IT consulting'],
-  canonicalUrl = 'https://ziontechgroup.com',
-  ogImage = 'https://ziontechgroup.com/og-image.webp',
+  canonicalUrl = 'https://ziontechgroup.com'}
+  ogImage = 'https://ziontechgroup.com/og-image.webp'}
   ogType = 'website',
   twitterCard = 'summary_large_image',
   structuredData,
@@ -67,7 +67,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   const robotsContent = robots || `${noIndex ? 'noindex' : 'index'}, ${noFollow ? 'nofollow' : 'follow'}`;
 
   const defaultStructuredData = {
-    '@context': 'https://schema.org',
+    '@context': 'https://schema.org'}
     '@type': 'Organization',
     name: 'Zion Tech Group',
     description: 'Advanced AI and IT Solutions',
@@ -77,7 +77,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       '@type': 'ContactPoint',
       telephone: '+1-302-464-0950',
       contactType: 'customer service',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup.com'}
     },
     address: {
       '@type': 'PostalAddress',
@@ -85,15 +85,15 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       addressLocality: 'Middletown',
       addressRegion: 'DE',
       postalCode: '19709',
-      addressCountry: 'US',
+      addressCountry: 'US'}
     },
     sameAs: [
-      'https://linkedin.com/company/zion-tech-group',
-      'https://twitter.com/ziontechgroup',
-      'https://facebook.com/ziontechgroup',
+      'https://linkedin.com/company/zion-tech-group'}
+      'https://twitter.com/ziontechgroup'}
+      'https://facebook.com/ziontechgroup'}
       'https://instagram.com/ziontechgroup',
-      'https://github.com/ziontechgroup',
-      'https://youtube.com/@ziontechgroup'
+        'https://github.com/ziontechgroup',
+        'https://youtube.com/@ziontechgroup'
     ],
     offers: {
       '@type': 'Offer',
@@ -101,7 +101,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       description: 'Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains',
       price: '50000',
       priceCurrency: 'USD',
-      availability: 'https://schema.org/InStock',
+      availability: 'https://schema.org/InStock'}
     },
   };
 

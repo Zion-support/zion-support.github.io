@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 
 const DatabasePage: React.FC = () => {
   const features = [
-    'Database Design & Architecture',
+    'Database Design & Architecture'}
     'Performance Tuning',
     'Backup & Recovery',
     'Security Hardening',

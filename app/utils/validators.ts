@@ -147,7 +147,7 @@ export function sanitizeHtml(html: string): string {
  */
 export function validateObject<T extends Record<string, unknown>>(
   obj: T,
-  schema: Record<keyof T, (value: unknown) => boolean>
+      schema: Record<keyof T, (value: unknown) => boolean>
 ): ValidationResult {
   const errors: string[] = [];
   for (const key in schema) {
@@ -158,7 +158,7 @@ export function validateObject<T extends Record<string, unknown>>(
     }
   }
   return {
-    isValid: errors.length === 0,
+    isValid: errors.length === 0}
     errors
   };
 }
@@ -195,15 +195,15 @@ export function validateForm(
  */
 export const validators = {
   required: (message = 'This field is required') => ({
-    validate: isRequired,
+    validate: isRequired}
     message
   }),
   email: (message = 'Please enter a valid email address') => ({
-    validate: isValidEmail,
+    validate: isValidEmail}
     message
   }),
   phone: (message = 'Please enter a valid phone number') => ({
-    validate: isValidPhone,
+    validate: isValidPhone}
     message
   }),
   minLength: (min: number, message = `Minimum length is ${min} characters`) => ({
@@ -215,7 +215,7 @@ export const validators = {
     message
   }),
   password: (message = 'Password must be at least 8 characters with uppercase, lowercase, and number') => ({
-    validate: isStrongPassword,
+    validate: isStrongPassword}
     message
   })
 };
@@ -427,7 +427,7 @@ export function validateComposite(value: unknown, validators: Array<(val: unknow
  */
 export async function validateAsync(
   validator: (val: unknown) => Promise<ValidationResult>,
-  value: unknown
+      value: unknown
 ): Promise<ValidationResult> {
   try {
     return await validator(value);

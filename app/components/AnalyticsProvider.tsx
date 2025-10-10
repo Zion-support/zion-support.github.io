@@ -14,7 +14,7 @@ interface AnalyticsProviderProps {
 }
 
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
-  children,
+  children}
   trackingId = 'G-XXXXXXXXXX'
 }) => {
   useEffect(() => {
@@ -22,7 +22,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     if (typeof window !== 'undefined' && trackingId !== 'G-XXXXXXXXXX') {
       // Load Google Analytics script
       const script = document.createElement('script');
-      script.async = true;
+      script.async = true;  });
       script.src = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
       document.head.appendChild(script);
 
@@ -36,8 +36,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       gtag('js', new Date());
       gtag('config', trackingId, {
         page_title: document.title,
-        page_location: window.location.href,
-
+      page_location: window.location.href)
     }
   }, [trackingId]);
 
@@ -55,9 +54,8 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', trackingId, {
         page_title: name,
-        page_location: window.location.href,
-        ...properties,
-
+        page_location: window.location.href}
+        ...properties)
     }
 
     // Also log in development
@@ -68,9 +66,8 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
   const identify = (userId: string, traits?: Record<string, any>) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', trackingId, {
-        user_id: userId,
-        ...traits,
-
+        user_id: userId}
+        ...traits)
     }
 
     // Also log in development
@@ -79,7 +76,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
   };
 
   const value: AnalyticsContextType = {
-    track,
+    track}
     page,
     identify,
   };

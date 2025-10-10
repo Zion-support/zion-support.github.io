@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 
 const AINLPPage: React.FC = () => {
   const features = [
-    'Text Analysis & Processing',
+    'Text Analysis & Processing'}
     'Sentiment Analysis',
     'Language Translation',
     'Chatbot Development',

@@ -17,7 +17,7 @@ interface ImageProps {
   onError?: () => void;}
 }
 export const Image: React.FC<ImageProps> = ({
-  src,
+  src}
   alt,
   width,
   height,
@@ -44,7 +44,7 @@ export const Image: React.FC<ImageProps> = ({
     if (onError) onError();}
   }, [onError])
   const imageStyle: React.CSSProperties = {
-    ...style,
+    ...style}
     ...(fill && {
       position: 'absolute',
       top: 0,

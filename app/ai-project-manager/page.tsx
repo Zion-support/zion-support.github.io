@@ -194,7 +194,7 @@ export default function AIProjectManagerPro() {
             </p>
 
             <p className="text-lg text-gray-400 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Transform your project management with our advanced AI platform. Get smart scheduling,
+              Transform your project management with our advanced AI platform. Get smart scheduling)
               risk prediction, team optimization, and automated workflows that adapt to your team's needs.
             </p>
 

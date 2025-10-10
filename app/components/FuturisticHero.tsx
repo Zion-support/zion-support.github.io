@@ -16,7 +16,7 @@ const FuturisticHero: React.FC = memo(() => {
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
-      setCurrentText((prev) => (prev + 1) % heroTexts.length);
+      setCurrentText((prev) => (prev + 1) % heroTexts.length);  });
     }, 3000);
     return () => clearInterval(interval);
   }, []);

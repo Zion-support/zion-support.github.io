@@ -18,7 +18,7 @@ export default function BlogPage() {
   const featuredPost = {
     id: 1,
     title: 'The Future of AI in Enterprise: 2024 Trends and Predictions',
-    excerpt: 'Explore the latest trends in enterprise AI adoption, from quantum computing integration to autonomous systems, and discover how businesses are leveraging AI for competitive advantage.',
+      excerpt: 'Explore the latest trends in enterprise AI adoption, from quantum computing integration to autonomous systems, and discover how businesses are leveraging AI for competitive advantage.',
     author: 'Dr. Sarah Chen',
     authorRole: 'Head of AI Research',
     authorImage: '/images/authors/sarah-chen.webp',
@@ -26,11 +26,11 @@ export default function BlogPage() {
     readTime: '8 min read',
     category: 'ai',
     image: '/images/blog/ai-enterprise-future.webp',
-    tags: ['AI', 'Enterprise', 'Future Tech', 'Innovation'],
+      tags: ['AI', 'Enterprise', 'Future Tech', 'Innovation'],
     views: 1250,
     likes: 89,
     comments: 23,
-    featured: true
+      featured: true
   };
 
   const blogPosts = [
@@ -155,7 +155,7 @@ export default function BlogPage() {
               Blog & Insights
             </h1>
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Stay updated with the latest trends in AI, cloud computing, cybersecurity,
+              Stay updated with the latest trends in AI, cloud computing, cybersecurity)
               and digital transformation. Expert insights from our team of specialists.
             </p>
             <div className="flex flex-wrap justify-center gap-4">

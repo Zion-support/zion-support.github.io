@@ -25,7 +25,7 @@ const AIServicesPage: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    setIsLoaded(true);
+    setIsLoaded(true);  });
   }, []);
 
   const services = [
@@ -1229,7 +1229,6 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
               </div>
             </div>
           </div>
-<<<<<<< HEAD
         </section>
 
         <section className="py-20">
@@ -1237,17 +1236,6 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
               AI Services
             </h1>
-=======
-        </div>
-      </div>
-
-      {/* Main Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent neon-glow-cyan">
-            AI Services
-          </h1>
->>>>>>> cursor/fix-errors-and-merge-to-main-dffe
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto neon-glow-cyan">
               Transform your business with our comprehensive suite of AI-powered solutions
             </p>
@@ -1260,12 +1248,10 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
               </div>
               <div className="holographic px-6 py-3 rounded-lg">
                 <span className="text-pink-400 font-semibold">99.9% Accuracy</span>
-
               </div>
             </div>
           </div>
-        </div>
-      </div>
+        </section>
 
       {/* Category Filter */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">

@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 
 const AIPredictiveMaintenancePage: React.FC = () => {
   const features = [
-    'Machine learning algorithms for failure prediction',
+    'Machine learning algorithms for failure prediction'}
     'Real-time sensor data analysis',
     'Predictive maintenance scheduling',
     'Equipment health monitoring',

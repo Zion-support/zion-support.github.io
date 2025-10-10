@@ -137,7 +137,7 @@ const AICustomerSupportPage: React.FC = () => {
               Revolutionary AI-powered customer support solutions
             </p>
             <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">
-              Transform your customer service with intelligent chatbots, omnichannel communication,
+              Transform your customer service with intelligent chatbots, omnichannel communication)
               and automated workflows that deliver exceptional customer experiences 24/7.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

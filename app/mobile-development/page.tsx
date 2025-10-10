@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 
 const MobileDevelopmentPage: React.FC = () => {
   const features = [
-    'iOS & Android Development',
+    'iOS & Android Development'}
     'Cross-platform Solutions',
     'UI/UX Design',
     'App Store Optimization',

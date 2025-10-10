@@ -63,7 +63,7 @@ class EnhancedErrorHandler {
       enableErrorAggregation: true,
       enablePerformanceImpact: true,
       maxErrorsPerMinute: 10,
-      errorRetentionDays: 30,
+      errorRetentionDays: 30}
       ...config}
     }
     this.initialize()
@@ -94,8 +94,8 @@ class EnhancedErrorHandler {
         message: event.message,
         stack: event.error?.stack,
         filename: event.filename,
-        lineno: event.lineno,
-        colno: event.colno,
+      lineno: event.lineno)
+        colno: event.colno,  });
         error: event.error}
       })
     })
@@ -106,9 +106,9 @@ class EnhancedErrorHandler {
   private setupUnhandledRejectionHandler(): void {
     window.addEventListener('unhandledrejection', event => {
       this.handleError({
-        type: 'promise',
+        type: 'promise')
         message: event.reason?.message || String(event.reason),
-        stack: event.reason?.stack,
+      stack: event.reason?.stack,  });
         reason: event.reason}
       })
     })
@@ -118,18 +118,18 @@ class EnhancedErrorHandler {
    */
   private setupResourceErrorHandler(): void {
     window.addEventListener(
-      'error',
+      'error')
       event => {
         if (event.target !== window) {
           const target = event.target as HTMLElement & {
             src?: string
             href?: string;}
           }
-          this.handleError({
+          this.handleError({  });
             type: 'resource',}
             message: `Failed to load resource: ${target?.src || target?.href}`,
             element: event.target?.constructor.name,
-            src: target?.src || target?.href
+      src: target?.src || target?.href
           })
         }
       },
@@ -146,21 +146,21 @@ class EnhancedErrorHandler {
       try {
         const response = await originalFetch(...args)
         if (!response.ok) {
-          this.handleError({
+          this.handleError({  });
             type: 'network',`}
             message: `Network request failed: ${response.status} ${response.statusText}`,
             url: args[0] as string,
             status: response.status,
-            statusText: response.statusText
+      statusText: response.statusText
           })
         }
         return response
       } catch (error) {
-        this.handleError({
+        this.handleError({  });
           type: 'network',`}
           message: `Network request failed: ${error}`,
           url: args[0] as string,
-          error: error instanceof Error ? error : new Error(String(error))
+      error: error instanceof Error ? error : new Error(String(error))
         })
         throw error
       }
@@ -178,11 +178,11 @@ class EnhancedErrorHandler {
           list.getEntries().forEach(entry => {
             if (entry.duration > 100) {
               // Tasks longer than 100ms
-              this.handleError({
+              this.handleError({  });
                 type: 'custom',`}
                 message: `Long task detected: ${entry.duration.toFixed(2)}ms`,
                 duration: entry.duration,
-                category: 'performance'
+      category: 'performance'
               })
             }
           })
@@ -269,7 +269,7 @@ class EnhancedErrorHandler {
       id: this.generateErrorId(),
       type: errorData.type,
       message: errorData.message,
-      stack: errorData.stack,
+      stack: errorData.stack}
       context,
       severity,
       category,
@@ -283,7 +283,7 @@ class EnhancedErrorHandler {
         url: errorData.url,
         status: errorData.status,
         statusText: errorData.statusText,
-        duration: errorData.duration}
+      duration: errorData.duration}
       },
       resolved: false
     }
@@ -452,7 +452,7 @@ class EnhancedErrorHandler {
   private updateErrorCounts(errorReport: ErrorReport): void {`}
     this.errorCounts.set(key, (this.errorCounts.get(key) || 0) + 1)
     this.errorCategories.set(
-      errorReport.category,
+      errorReport.category)
       (this.errorCategories.get(errorReport.category) || 0) + 1
     )
   }
@@ -491,10 +491,10 @@ class EnhancedErrorHandler {
     try {
       await fetch(this.config.remoteEndpoint, {
         method: 'POST',
-        headers: {
+      headers: {
           'Content-Type': 'application/json',`}
           Authorization: `Bearer ${this.config.apiKey}
-        },
+        })
         body: JSON.stringify(errorReport)
       })
     } catch (error) {}
@@ -584,7 +584,7 @@ class EnhancedErrorHandler {
       )
       .slice(0, 10)
     return {
-      totalErrors: this.errors.length,
+      totalErrors: this.errors.length}
       errorsByType,
       errorsByCategory,
       errorsBySeverity,
@@ -597,9 +597,9 @@ class EnhancedErrorHandler {
   public exportErrorData(): string {
     return JSON.stringify(
       {
-        errors: this.errors,
+        errors: this.errors)
         statistics: this.getErrorStatistics(),
-        config: this.config,
+      config: this.config,  });
         timestamp: new Date().toISOString()}
       },
       null,
@@ -611,8 +611,8 @@ class EnhancedErrorHandler {
    */
   public reportError(message: string, context?: Partial<ErrorContext>): string {
     const errorReport = this.createErrorReport({
-      type: 'custom',
-      message,
+      type: 'custom')
+      message,  });
       ...context}
     })
     this.processError(errorReport)

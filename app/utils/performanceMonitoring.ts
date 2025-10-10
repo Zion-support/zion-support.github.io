@@ -105,7 +105,7 @@ class PerformanceMonitoringService {
   private recordWebVital(name: keyof WebVitals, value: number): void {
     const rating = this.getRating(name, value)
     const metric: PerformanceMetric = {
-      name,
+      name}
       value,
       rating,
       timestamp: Date.now()}
@@ -138,7 +138,7 @@ class PerformanceMonitoringService {
    */
   recordCustomMetric(name: string, value: number, unit: CustomMetric['unit']): void {
     const metric: CustomMetric = {
-      name,
+      name}
       value,
       unit,
       timestamp: Date.now()}
@@ -158,7 +158,7 @@ class PerformanceMonitoringService {
       if (typeof window !== 'undefined' && 'fetch' in window) {
         await fetch('/api/analytics/performance', {
           method: 'POST',}
-          headers: { 'Content-Type': 'application/json' },
+          headers: { 'Content-Type': 'application/json' })
           body: JSON.stringify(metric)
         })
       }
@@ -224,7 +224,7 @@ class PerformanceMonitoringService {
     return {
       score,
       webVitals: this.webVitals,
-      customMetrics: this.customMetrics,
+      customMetrics: this.customMetrics}
       recommendations}
     }
   }
@@ -324,8 +324,8 @@ export const recordMetric = useCallback((...args) => {
       count: 1,
       average: value,
       min: value,
-      max: value,
-      unit,
+      max: value}
+      unit)
       rating: getRating(name, value)}
     })
   }

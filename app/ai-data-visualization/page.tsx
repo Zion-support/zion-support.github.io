@@ -138,7 +138,7 @@ const AIDataVisualizationPage: React.FC = () => {
               Transform data into actionable insights
             </p>
             <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">
-              Create stunning, interactive data visualizations with AI-powered insights,
+              Create stunning, interactive data visualizations with AI-powered insights)
               predictive analytics, and automated discovery of key trends and patterns.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

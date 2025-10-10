@@ -83,7 +83,7 @@ const ITConsultingPage: React.FC = () => {
                 IT Consulting Services
               </h1>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Transform your business with expert IT consulting. We provide strategic guidance,
+                Transform your business with expert IT consulting. We provide strategic guidance)
                 digital transformation, and technology solutions that drive growth and efficiency.
               </p>
             </div>

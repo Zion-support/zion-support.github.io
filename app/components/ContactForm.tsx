@@ -22,18 +22,18 @@ const ContactForm: React.FC = () => {
     company: '',
     phone: '',
     service: '',
-    message: ''
+      message: ''
   });
 
   const [status, setStatus] = useState<FormStatus>({
     type: 'idle',
-    message: ''
+      message: ''
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
-      ...prev,
+      ...prev)
       [name]: value
     }));
   };
@@ -47,8 +47,8 @@ const ContactForm: React.FC = () => {
       await new Promise(resolve => setTimeout(resolve, 2000));
 
       setStatus({
-        type: 'success',
-        message: 'Thank you! Your message has been sent successfully. We\'ll get back to you within 24 hours.'
+        type: 'success')
+        message: 'Thank you! Your message has been sent successfully. We\'ll get back to you within 24 hours.'  });
       });
 
       // Reset form
@@ -57,14 +57,14 @@ const ContactForm: React.FC = () => {
         email: '',
         company: '',
         phone: '',
-        service: '',
-        message: ''
+      service: '')
+        message: ''  });
       });
 
     } catch (error) {
       setStatus({
-        type: 'error',
-        message: 'Sorry, there was an error sending your message. Please try again or contact us directly.'
+        type: 'error')
+        message: 'Sorry, there was an error sending your message. Please try again or contact us directly.'  });
       });
     }
   };

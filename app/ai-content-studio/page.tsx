@@ -264,7 +264,7 @@ export default function AIContentStudioPage() {
             </p>
 
             <p className="text-lg text-gray-400 mb-8 max-w-3xl mx-auto leading-relaxed">
-              The ultimate content creation platform powered by AI. Generate high-quality content,
+              The ultimate content creation platform powered by AI. Generate high-quality content)
               design stunning visuals, and manage your entire content workflow in one place.
             </p>
 

@@ -171,7 +171,7 @@ const AIBlockchainSolutionsPage: React.FC = () => {
               AI Blockchain <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Solutions</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Combine the power of artificial intelligence with blockchain technology to create secure,
+              Combine the power of artificial intelligence with blockchain technology to create secure)
               intelligent, and decentralized solutions for the modern world.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

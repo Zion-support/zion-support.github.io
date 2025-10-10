@@ -689,22 +689,22 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
     { id: 2, name: 'Bedroom Light', type: 'light', status: 'off', brightness: 0, room: 'Bedroom' },
     { id: 3, name: 'Thermostat', type: 'thermostat', status: 'on', temperature: 72, room: 'Living Room' },
     { id: 4, name: 'Security Camera', type: 'camera', status: 'on', room: 'Front Door' },
-    { id: 5, name: 'Smart Speaker', type: 'speaker', status: 'on', volume: 50, room: 'Living Room' },
+    { id: 5, name: 'Smart Speaker', type: 'speaker', status: 'on', volume: 50, room: 'Living Room' })
     { id: 6, name: 'Door Lock', type: 'lock', status: 'locked', room: 'Front Door' }
   ]);
 
   const [scenes, setScenes] = useState([
     { id: 1, name: 'Good Morning', icon: Sun, devices: ['Living Room Light', 'Thermostat'], active: false },
     { id: 2, name: 'Movie Night', icon: Video, devices: ['Living Room Light', 'Smart Speaker'], active: false },
-    { id: 3, name: 'Sleep Mode', icon: Moon, devices: ['All Lights', 'Thermostat'], active: false },
+    { id: 3, name: 'Sleep Mode', icon: Moon, devices: ['All Lights', 'Thermostat'], active: false })
     { id: 4, name: 'Away Mode', icon: Shield, devices: ['All Lights', 'Door Lock', 'Security Camera'], active: false }
   ]);
 
   const [energyUsage, setEnergyUsage] = useState({
     today: 45.2,
     thisWeek: 312.8,
-    thisMonth: 1284.5,
-    savings: 15.3
+      thisMonth: 1284.5)
+    savings: 15.3  });
   };
 
   const features = [

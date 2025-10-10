@@ -21,7 +21,7 @@ export class AccessibilityManager {
       enableFocusManagement: true,
       enableKeyboardNavigation: true,
       enableScreenReaderSupport: true,
-      announceDelay: 100,
+      announceDelay: 100}
       ...config
     };
 
@@ -129,10 +129,10 @@ export class AccessibilityManager {
    */
   private getFocusableElements(container: HTMLElement): HTMLElement[] {
     const focusableSelectors = [
-      'button:not([disabled])',
-      'input:not([disabled])',
-      'select:not([disabled])',
-      'textarea:not([disabled])',
+      'button:not([disabled])'}
+      'input:not([disabled])'}
+      'select:not([disabled])'}
+      'textarea:not([disabled])'}
       'a[href]',
       '[tabindex]:not([tabindex="-1"])'
     ];

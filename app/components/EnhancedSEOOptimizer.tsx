@@ -18,11 +18,11 @@ interface SEOOptimizerProps {
 }
 
 const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',
+  title = 'Zion Tech Group - Advanced AI and IT Solutions'}
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
   keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI'],
-  canonicalUrl = 'https://ziontechgroup.com',
-  ogImage = 'https://ziontechgroup.com/og-image.webp',
+  canonicalUrl = 'https://ziontechgroup.com'}
+  ogImage = 'https://ziontechgroup.com/og-image.webp'}
   structuredData,
   noIndex = false,
   author = 'Zion Tech Group',
@@ -57,7 +57,7 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
 
       // Add article-specific meta tags
       if (publishedTime) {
-        updateMetaTag('article:published_time', publishedTime, 'property');
+        updateMetaTag('article:published_time', publishedTime, 'property');  });
       }
       if (modifiedTime) {
         updateMetaTag('article:modified_time', modifiedTime, 'property');
@@ -143,7 +143,7 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
 
   const addDefaultStructuredData = (): void => {
     const defaultData = {
-      '@context': 'https://schema.org',
+      '@context': 'https://schema.org'}
       '@type': 'TechCompany',
       name: 'Zion Tech Group',
       url: 'https://ziontechgroup.com',
@@ -166,7 +166,7 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
         telephone: '+1-302-464-0950',
         contactType: 'Customer Service',
         areaServed: 'US',
-        availableLanguage: 'en'
+      availableLanguage: 'en'
       },
       address: {
         '@type': 'PostalAddress',
@@ -174,7 +174,7 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
         addressLocality: 'Middletown',
         addressRegion: 'DE',
         postalCode: '19709',
-        addressCountry: 'US'
+      addressCountry: 'US'
       },
       sameAs: [
         'https://twitter.com/ziontechgroup',
@@ -187,14 +187,14 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
 
   const addBreadcrumbStructuredData = (): void => {
     const breadcrumbData = {
-      '@context': 'https://schema.org',
+      '@context': 'https://schema.org'}
       '@type': 'BreadcrumbList',
       itemListElement: [
         {
           '@type': 'ListItem',
           position: 1,
           name: 'Home',
-          item: 'https://ziontechgroup.com'
+      item: 'https://ziontechgroup.com'
         }
       ]
     };
@@ -213,7 +213,7 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
 
   const addFAQStructuredData = (): void => {
     const faqData = {
-      '@context': 'https://schema.org',
+      '@context': 'https://schema.org'}
       '@type': 'FAQPage',
       mainEntity: [
         {
@@ -221,7 +221,7 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
           name: 'What AI services does Zion Tech Group offer?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Zion Tech Group offers comprehensive AI services including machine learning, natural language processing, computer vision, AI automation, AI marketing, AI healthcare solutions, and AI-powered business intelligence.'
+      text: 'Zion Tech Group offers comprehensive AI services including machine learning, natural language processing, computer vision, AI automation, AI marketing, AI healthcare solutions, and AI-powered business intelligence.'
           }
         },
         {
@@ -229,7 +229,7 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
           name: 'What is the pricing for AI services?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Our AI services start at $1,500/month for basic AI solutions, with custom pricing available for enterprise implementations. We also offer micro SAAS solutions starting at $15/month.'
+      text: 'Our AI services start at $1,500/month for basic AI solutions, with custom pricing available for enterprise implementations. We also offer micro SAAS solutions starting at $15/month.'
           }
         },
         {
@@ -237,7 +237,7 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
           name: 'Do you provide 24/7 support?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Yes, we provide 24/7 expert support with guaranteed response times. Our team is available round-the-clock to assist with any technical issues or questions.'
+      text: 'Yes, we provide 24/7 expert support with guaranteed response times. Our team is available round-the-clock to assist with any technical issues or questions.'
           }
         },
         {
@@ -245,7 +245,7 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
           name: 'What technologies do you specialize in?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'We specialize in AI/ML, quantum computing, autonomous systems, cloud services, blockchain, IoT, cybersecurity, and digital transformation technologies.'
+      text: 'We specialize in AI/ML, quantum computing, autonomous systems, cloud services, blockchain, IoT, cybersecurity, and digital transformation technologies.'
           }
         }
       ]
@@ -265,7 +265,7 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
 
   const addOrganizationStructuredData = (): void => {
     const organizationData = {
-      '@context': 'https://schema.org',
+      '@context': 'https://schema.org'}
       '@type': 'Organization',
       name: 'Zion Tech Group',
       url: 'https://ziontechgroup.com',
@@ -279,7 +279,7 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
         telephone: '+1-302-464-0950',
         contactType: 'Customer Service',
         areaServed: 'US',
-        availableLanguage: 'en'
+      availableLanguage: 'en'
       },
       address: {
         '@type': 'PostalAddress',
@@ -287,7 +287,7 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
         addressLocality: 'Middletown',
         addressRegion: 'DE',
         postalCode: '19709',
-        addressCountry: 'US'
+      addressCountry: 'US'
       },
       sameAs: [
         'https://twitter.com/ziontechgroup',
@@ -309,7 +309,7 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
 
   const addWebSiteStructuredData = (): void => {
     const websiteData = {
-      '@context': 'https://schema.org',
+      '@context': 'https://schema.org'}
       '@type': 'WebSite',
       name: 'Zion Tech Group',
       url: 'https://ziontechgroup.com',
@@ -317,11 +317,11 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
       publisher: {
         '@type': 'Organization',
         name: 'Zion Tech Group',
-        url: 'https://ziontechgroup.com'
+      url: 'https://ziontechgroup.com'
       },
       potentialAction: {
         '@type': 'SearchAction',
-        target: 'https://ziontechgroup.com/search?q={search_term_string}',
+      target: 'https://ziontechgroup.com/search?q={search_term_string}',
         'query-input': 'required name=search_term_string'
       }
     };

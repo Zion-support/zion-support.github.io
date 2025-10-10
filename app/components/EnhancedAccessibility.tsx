@@ -14,15 +14,14 @@ const EnhancedAccessibility: React.FC = () => {
     highContrast: false,
     reducedMotion: false,
     screenReader: false,
-    keyboardNavigation: false,
-
+    keyboardNavigation: false}
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     // Load saved settings from localStorage
     const savedSettings = localStorage.getItem('accessibility-settings');
     if (savedSettings) {
-      setSettings(JSON.parse(savedSettings));
+      setSettings(JSON.parse(savedSettings));  });
     }
 
     // Detect screen reader usage
@@ -47,7 +46,7 @@ const EnhancedAccessibility: React.FC = () => {
     const root = document.documentElement;
 
     // Font size
-    root.style.setProperty('--font-size-multiplier',
+    root.style.setProperty('--font-size-multiplier')
       newSettings.fontSize === 'small' ? '0.875' :
       newSettings.fontSize === 'large' ? '1.25' : '1'
     );
@@ -275,7 +274,7 @@ const EnhancedAccessibility: React.FC = () => {
                   highContrast: false,
                   reducedMotion: false,
                   screenReader: false,
-                  keyboardNavigation: false,
+                  keyboardNavigation: false}
                 };
                 setSettings(defaultSettings);
                 applyAccessibilitySettings(defaultSettings);

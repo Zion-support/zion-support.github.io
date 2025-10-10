@@ -28,7 +28,7 @@ const APIDocsPage: React.FC = () => {
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json" \\
   -d '{
-    "model_id": "sentiment-analysis-v1",
+    "model_id": "sentiment-analysis-v1"}
     "input_data": {
       "text": "I love this product!"
     }
@@ -43,7 +43,7 @@ const APIDocsPage: React.FC = () => {
   -H "Content-Type: application/json" \\
   -d '{
     "model_name": "custom-classifier",
-    "training_data": [...],
+        "training_data": [...],
     "model_type": "classification"
   }'`
         }
@@ -57,7 +57,7 @@ const APIDocsPage: React.FC = () => {
           method: 'GET',
           path: '/api/v1/micro-saas/tools',
           description: 'Get list of available micro SAAS tools',
-          example: `curl -X GET "https://api.ziontechgroup.com/v1/micro-saas/tools" \\
+      example: `curl -X GET "https://api.ziontechgroup.com/v1/micro-saas/tools" \\
   -H "Authorization: Bearer YOUR_API_KEY"`
         },
         {
@@ -69,7 +69,7 @@ const APIDocsPage: React.FC = () => {
   -H "Content-Type: application/json" \\
   -d '{
     "tool_id": "content-generator",
-    "parameters": {
+        "parameters": {
       "topic": "AI Technology",
       "length": "500"
     }

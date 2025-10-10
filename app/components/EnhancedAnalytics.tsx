@@ -13,7 +13,7 @@ interface EnhancedAnalyticsProps {
 }
 
 const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
-  enableGoogleAnalytics = true,
+  enableGoogleAnalytics = true}
   enableGoogleTagManager = true,
   enableFacebookPixel = false,
   enableCustomEvents = true,
@@ -45,13 +45,12 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     gtag('config', GA_MEASUREMENT_ID, {
       page_title: document.title,
       page_location: window.location.href,
-      send_page_view: true,
-
+      send_page_view: true}
     // Enhanced ecommerce tracking
     gtag('config', GA_MEASUREMENT_ID, {
       custom_map: {
-        'custom_parameter_1': 'service_category',
-        'custom_parameter_2': 'service_type',
+        'custom_parameter_1': 'service_category'}
+        'custom_parameter_2': 'service_type')
         'custom_parameter_3': 'user_type'
       }
 
@@ -66,7 +65,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     // GTM script
     const gtmScript = document.createElement('script');
     gtmScript.innerHTML = `
-      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  });
       new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
       j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
@@ -137,7 +136,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
             event_label: buttonText,
             button_class: buttonClass,
             button_id: buttonId,
-            page_location: window.location.href,
+      page_location: window.location.href)
             page_title: document.title
 
         }
@@ -157,7 +156,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
           event_label: 'Form Submission',
           form_id: formId,
           form_class: formClass,
-          form_action: formAction,
+      form_action: formAction)
           page_location: window.location.href
 
       }
@@ -175,7 +174,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
             window.gtag('event', 'click', {
               event_category: 'Outbound',
               event_label: target.href,
-              transport_type: 'beacon',
+      transport_type: 'beacon')
               page_location: window.location.href
 
           }
@@ -198,7 +197,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
           if (typeof window !== 'undefined' && window.gtag) {
             window.gtag('event', 'scroll', {
               event_category: 'Engagement',
-              event_label: `${scrollPercent}%`,
+      event_label: `${scrollPercent}%`)
               page_location: window.location.href
 
           }
@@ -217,14 +216,14 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       if (document.hidden) {
         if (typeof window !== 'undefined' && window.gtag) {
           window.gtag('event', 'page_hide', {
-            event_category: 'Engagement',
+            event_category: 'Engagement')
             page_location: window.location.href
 
         }
       } else {
         if (typeof window !== 'undefined' && window.gtag) {
           window.gtag('event', 'page_show', {
-            event_category: 'Engagement',
+            event_category: 'Engagement')
             page_location: window.location.href
 
         }
@@ -257,9 +256,9 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
         if (typeof window !== 'undefined' && window.gtag) {
           window.gtag('event', 'web_vitals', {
             event_category: 'Performance',
-            event_label: 'LCP',
+            event_label: 'LCP')
             value: Math.round(lastEntry.startTime),
-            custom_parameter_1: 'largest_contentful_paint'
+      custom_parameter_1: 'largest_contentful_paint'
 
         }
       }).observe({ entryTypes: ['largest-contentful-paint'] });
@@ -273,9 +272,9 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
           if (typeof window !== 'undefined' && window.gtag) {
             window.gtag('event', 'web_vitals', {
               event_category: 'Performance',
-              event_label: 'FID',
+              event_label: 'FID')
               value: Math.round(fid),
-              custom_parameter_1: 'first_input_delay'
+      custom_parameter_1: 'first_input_delay'
 
           }
 
@@ -294,9 +293,9 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
         if (typeof window !== 'undefined' && window.gtag) {
           window.gtag('event', 'web_vitals', {
             event_category: 'Performance',
-            event_label: 'CLS',
+            event_label: 'CLS')
             value: Math.round(clsValue * 1000),
-            custom_parameter_1: 'cumulative_layout_shift'
+      custom_parameter_1: 'cumulative_layout_shift'
 
         }
       }).observe({ entryTypes: ['layout-shift'] });
@@ -312,9 +311,9 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       if (typeof window !== 'undefined' && window.gtag) {
         window.gtag('event', 'page_load_time', {
           event_category: 'Performance',
-          event_label: 'Page Load',
+          event_label: 'Page Load')
           value: Math.round(loadTime),
-          custom_parameter_1: 'load_time'
+      custom_parameter_1: 'load_time'
 
       }
 
@@ -334,7 +333,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
         window.gtag('event', 'time_on_page', {
           event_category: 'Engagement',
           event_label: 'Time on Page',
-          value: timeOnPage,
+      value: timeOnPage)
           custom_parameter_1: 'seconds'
 
       }
@@ -354,7 +353,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
             window.gtag('event', 'mouse_movement', {
               event_category: 'User Behavior',
               event_label: 'Mouse Activity',
-              value: mouseMovements,
+      value: mouseMovements)
               custom_parameter_1: 'movement_count'
 
           }
@@ -381,7 +380,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
           window.gtag('event', 'conversion', {
             event_category: 'Conversion',
             event_label: 'Contact Form Submission',
-            value: 1,
+      value: 1)
             custom_parameter_1: 'lead_generation'
 
         }
@@ -396,7 +395,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
           window.gtag('event', 'conversion', {
             event_category: 'Conversion',
             event_label: 'Phone Click',
-            value: 1,
+      value: 1)
             custom_parameter_1: 'phone_lead'
 
         }
@@ -411,7 +410,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
           window.gtag('event', 'conversion', {
             event_category: 'Conversion',
             event_label: 'Email Click',
-            value: 1,
+      value: 1)
             custom_parameter_1: 'email_lead'
 
         }
@@ -441,7 +440,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     ].filter(Boolean);
 
     return () => {
-      cleanupFunctions.forEach(cleanup => cleanup && cleanup());
+      cleanupFunctions.forEach(cleanup => cleanup && cleanup());  });
     };
   }, [
     setupGoogleAnalytics,

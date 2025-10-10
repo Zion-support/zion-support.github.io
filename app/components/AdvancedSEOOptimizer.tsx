@@ -33,7 +33,7 @@ interface AdvancedSEOOptimizerProps {
 }
 
 const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
-  seoData,
+  seoData}
   enableStructuredData = true,
   enableOpenGraph = true,
   enableTwitterCards = true,
@@ -47,7 +47,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     }
 
     const baseStructuredData = {
-      '@context': 'https://schema.org',
+      '@context': 'https://schema.org'}
       '@type': 'TechCompany',
       name: 'Zion Tech Group',
       description: seoData.description,
@@ -56,13 +56,13 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       sameAs: [
         'https://linkedin.com/company/zion-tech-group',
         'https://twitter.com/ziontechgroup',
-        'https://github.com/zion-tech-group',
+        'https://github.com/zion-tech-group'}
       ],
       contactPoint: {
         '@type': 'ContactPoint',
         telephone: '+1-555-ZION-TECH',
         contactType: 'customer service',
-        availableLanguage: 'English',
+        availableLanguage: 'English'}
       },
       address: {
         '@type': 'PostalAddress',
@@ -70,7 +70,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
         addressLocality: 'San Francisco',
         addressRegion: 'CA',
         postalCode: '94105',
-        addressCountry: 'US',
+        addressCountry: 'US'}
       },
       ...seoData.structuredData,
     };
@@ -78,7 +78,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     if (seoData.author) {
       baseStructuredData.author = {
         '@type': 'Person',
-        name: seoData.author,
+        name: seoData.author}
       };
     }
 
@@ -107,13 +107,13 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     }
 
     return {
-      '@context': 'https://schema.org',
+      '@context': 'https://schema.org'}
       '@type': 'BreadcrumbList',
       itemListElement: seoData.breadcrumbs.map((breadcrumb: any, index: number) => ({
         '@type': 'ListItem',
         position: index + 1,
         name: breadcrumb.name,
-        item: breadcrumb.url
+      item: breadcrumb.url
       }))
     };
   }, [seoData, enableStructuredData]);
@@ -124,14 +124,14 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     }
 
     return {
-      '@context': 'https://schema.org',
+      '@context': 'https://schema.org'}
       '@type': 'FAQPage',
       mainEntity: seoData.faqs.map((faq: any) => ({
         '@type': 'Question',
         name: faq.question,
         acceptedAnswer: {
           '@type': 'Answer',
-          text: faq.answer
+      text: faq.answer
         }
       }))
     };
@@ -142,13 +142,13 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     if (!enableOpenGraph) return {};
 
     return {
-      'og:title': seoData.ogTitle || seoData.title,
-      'og:description': seoData.ogDescription || seoData.description,
-      'og:url': seoData.canonicalUrl,
-      'og:type': seoData.ogType || 'website',
-      'og:image': seoData.ogImage || '/og-image.webp',
-      'og:site_name': 'Zion Tech Group',
-      'og:locale': 'en_US',
+      'og:title': seoData.ogTitle || seoData.title}
+      'og:description': seoData.ogDescription || seoData.description}
+      'og:url': seoData.canonicalUrl}
+      'og:type': seoData.ogType || 'website'}
+      'og:image': seoData.ogImage || '/og-image.webp'}
+      'og:site_name': 'Zion Tech Group'}
+      'og:locale': 'en_US'}
     };
   }, [seoData, enableOpenGraph]);
 
@@ -157,12 +157,12 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     if (!enableTwitterCards) return {};
 
     return {
-      'twitter:card': 'summary_large_image',
-      'twitter:title': seoData.ogTitle || seoData.title,
-      'twitter:description': seoData.ogDescription || seoData.description,
-      'twitter:image': seoData.ogImage || 'https://ziontechgroup.com/og-image.webp',
-      'twitter:site': '@ziontechgroup',
-      'twitter:creator': '@ziontechgroup',
+      'twitter:card': 'summary_large_image'}
+      'twitter:title': seoData.ogTitle || seoData.title}
+      'twitter:description': seoData.ogDescription || seoData.description}
+      'twitter:image': seoData.ogImage || 'https://ziontechgroup.com/og-image.webp'}
+      'twitter:site': '@ziontechgroup'}
+      'twitter:creator': '@ziontechgroup'}
     };
   }, [seoData, enableTwitterCards]);
 
@@ -187,13 +187,13 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     }
 
     return {
-      '@context': 'https://schema.org',
+      '@context': 'https://schema.org'}
       '@type': 'BreadcrumbList',
       itemListElement: seoData.breadcrumbs.map((breadcrumb, index) => ({
         '@type': 'ListItem',
         position: index + 1,
         name: breadcrumb.name,
-        item: breadcrumb.url
+      item: breadcrumb.url
       }))
     };
   }, [seoData.breadcrumbs]);
@@ -204,13 +204,13 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     }
 
     return {
-      '@context': 'https://schema.org',
+      '@context': 'https://schema.org'}
       '@type': 'FAQPage',
       mainEntity: seoData.faqs.map(faq => ({
         '@type': 'Question',
         name: faq.question,
-        acceptedAnswer: {
-          '@type': 'Answer',
+      acceptedAnswer: {
+          '@type': 'Answer')
           text: faq.answer
         }
       }))
@@ -231,7 +231,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       if (!metaDescription) {
         metaDescription = document.createElement('meta');
         metaDescription.setAttribute('name', 'description');
-        document.head.appendChild(metaDescription);
+        document.head.appendChild(metaDescription);  });
       }
       metaDescription.setAttribute('content', seoData.description);
 
@@ -261,7 +261,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
 
   useEffect(() => {
     if (structuredData) {
-      addStructuredData(structuredData);
+      addStructuredData(structuredData);  });
     }
   }, [structuredData]);
 
@@ -274,9 +274,9 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
         if (typeof (window as any).gtag === 'function') {
           (window as any).gtag('event', 'page_load_performance', {
             event_category: 'Performance',
-            event_label: 'Page Load',
-            value: Math.round(perfData.loadEventEnd - perfData.fetchStart),
-
+            event_label: 'Page Load')
+            value: Math.round(perfData.loadEventEnd - perfData.fetchStart)}
+  });
         }
       }
     }

@@ -15,7 +15,7 @@ interface AdvancedAccessibilityEnhancerProps {
 }
 
 const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps> = ({
-  enableKeyboardNavigation = true,
+  enableKeyboardNavigation = true}
   enableScreenReader = true,
   enableHighContrast = true,
   enableFocusManagement = true,
@@ -30,8 +30,8 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
     highContrast: false,
     reducedMotion: false,
     fontSize: 'normal',
-    screenReader: false,
-    keyboardNavigation: false
+      screenReader: false)
+    keyboardNavigation: false  });
   });
 
   // Detect user preferences
@@ -49,8 +49,8 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
 
     setAccessibilitySettings(prev => ({
       ...prev,
-      reducedMotion: prefersReducedMotion,
-      highContrast: prefersHighContrast
+      reducedMotion: prefersReducedMotion)
+      highContrast: prefersHighContrast  });
     }));
 
     // Listen for changes in user preferences
@@ -82,7 +82,7 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
 
     // Apply high contrast mode
     if (accessibilitySettings.highContrast) {
-      root.classList.add('high-contrast');
+      root.classList.add('high-contrast');  });
     } else {
       root.classList.remove('high-contrast');
     }
@@ -341,7 +341,7 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
   // Initialize all accessibility features
   useEffect(() => {
     if (enableKeyboardNavigation) {
-      setupKeyboardNavigation();
+      setupKeyboardNavigation();  });
     }
     if (enableScreenReader) {
       setupScreenReaderSupport();

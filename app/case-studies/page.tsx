@@ -109,13 +109,13 @@ export default function CaseStudiesPage() {
         quote: "The AI diagnostic system has transformed our hospital operations. We can now provide faster, more accurate diagnoses, ultimately saving more lives.",
         author: "Dr. Sarah Johnson",
         role: "Chief Medical Officer",
-        avatar: "SJ"
+      avatar: "SJ"
       },
       metrics: {
         roi: '400%',
         timesSaved: '2.5 days',
         accuracy: '95%',
-        costReduction: '60%'
+      costReduction: '60%'
       }
     },
     {
@@ -140,13 +140,13 @@ export default function CaseStudiesPage() {
         quote: "Our AI fraud detection system has saved us millions and given our customers peace of mind. The accuracy is remarkable.",
         author: "Michael Chen",
         role: "Chief Security Officer",
-        avatar: "MC"
+      avatar: "MC"
       },
       metrics: {
         roi: '500%',
         accuracy: '99.8%',
         falsePositives: '80%',
-        lossesReduced: '50%'
+      lossesReduced: '50%'
       }
     },
     {
@@ -171,13 +171,13 @@ export default function CaseStudiesPage() {
         quote: "The smart factory transformation has revolutionized our operations. We're producing more with less waste and higher quality.",
         author: "Emily Rodriguez",
         role: "Operations Director",
-        avatar: "ER"
+      avatar: "ER"
       },
       metrics: {
         roi: '350%',
         efficiency: '30%',
         costReduction: '25%',
-        quality: '99.5%'
+      quality: '99.5%'
       }
     },
     {
@@ -202,13 +202,13 @@ export default function CaseStudiesPage() {
         quote: "Our AI-powered customer experience has transformed our business. Customers love the personalized recommendations and instant support.",
         author: "David Kim",
         role: "Chief Marketing Officer",
-        avatar: "DK"
+      avatar: "DK"
       },
       metrics: {
         roi: '280%',
         engagement: '45%',
         conversion: '35%',
-        orderValue: '25%'
+      orderValue: '25%'
       }
     },
     {
@@ -233,13 +233,13 @@ export default function CaseStudiesPage() {
         quote: "The AI learning platform has revolutionized education. Students are more engaged and achieving better results than ever before.",
         author: "Professor Lisa Wang",
         role: "Dean of Technology",
-        avatar: "LW"
+      avatar: "LW"
       },
       metrics: {
         roi: '320%',
         performance: '50%',
         completion: '40%',
-        satisfaction: '85%'
+      satisfaction: '85%'
       }
     },
     {
@@ -264,13 +264,13 @@ export default function CaseStudiesPage() {
         quote: "The cloud migration has transformed our business. We can now scale instantly and deploy new features in minutes instead of days.",
         author: "Robert Johnson",
         role: "CTO",
-        avatar: "RJ"
+      avatar: "RJ"
       },
       metrics: {
         roi: '450%',
         costReduction: '70%',
         uptime: '99.9%',
-        deployment: '5x'
+      deployment: '5x'
       }
     }
   ];

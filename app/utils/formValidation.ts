@@ -22,7 +22,7 @@ export const validationRules = {
    * Validate required field
    */
   required: (message = 'This field is required'): ValidationRule<string> => ({
-    validate: (value: string) => value !== null && value !== undefined && value.trim().length > 0,
+    validate: (value: string) => value !== null && value !== undefined && value.trim().length > 0}
     message}
   }),
   /**
@@ -84,14 +84,14 @@ export const validationRules = {
    * Validate pattern match
    */
   pattern: (regex: RegExp, message = 'Invalid format'): ValidationRule<string> => ({
-    validate: (value: string) => regex.test(value),
+    validate: (value: string) => regex.test(value)}
     message}
   }),
   /**
    * Validate custom condition
    */
   custom: <T>(validator: (value: T) => boolean, message: string): ValidationRule<T> => ({
-    validate: validator,
+    validate: validator}
     message}
   }),
   /**
@@ -146,7 +146,7 @@ export function validateField<T>(value: T, rules: ValidationRule<T>[]): Validati
     }
   }
   return {
-    valid: errors.length === 0,
+    valid: errors.length === 0}
     errors}
   }
 }
@@ -155,7 +155,7 @@ export function validateField<T>(value: T, rules: ValidationRule<T>[]): Validati
  */
 export function validateForm<T extends Record<string, unknown>>(
   formData: T,
-  validationSchema: Record<keyof T, ValidationRule[]>
+      validationSchema: Record<keyof T, ValidationRule[]>
 ): Record<keyof T, ValidationResult> {}
   const results = {} as Record<keyof T, ValidationResult>
   for (const fieldName in validationSchema) {
@@ -202,7 +202,7 @@ export function sanitizeInput(input: string): string {
  */
 export function debounce<T extends (...args: Parameters<T>) => ReturnType<T>>(
   func: T,
-  wait: number
+      wait: number
 ): (...args: Parameters<T>) => void {
   let timeout: NodeJS.Timeout | null = null
   return function executedFunction(...args: Parameters<T>) {

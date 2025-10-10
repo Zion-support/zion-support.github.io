@@ -31,15 +31,15 @@ const HelpPage: React.FC = () => {
       questions: [
         {
           question: 'How do I get started with Zion Tech Group services?',
-          answer: 'Getting started is easy! Simply contact our sales team through the contact form or call us directly. We\'ll schedule a consultation to understand your needs and recommend the best solutions.'
+      answer: 'Getting started is easy! Simply contact our sales team through the contact form or call us directly. We\'ll schedule a consultation to understand your needs and recommend the best solutions.'
         },
         {
           question: 'What AI services do you offer?',
-          answer: 'We offer comprehensive AI services including workflow automation, customer support, data analytics, content generation, healthcare solutions, fintech platforms, and much more. Check our services page for a complete list.'
+      answer: 'We offer comprehensive AI services including workflow automation, customer support, data analytics, content generation, healthcare solutions, fintech platforms, and much more. Check our services page for a complete list.'
         },
         {
           question: 'Do you offer free consultations?',
-          answer: 'Yes! We provide free initial consultations to assess your needs and recommend the best solutions for your business. Contact us to schedule yours today.'
+      answer: 'Yes! We provide free initial consultations to assess your needs and recommend the best solutions for your business. Contact us to schedule yours today.'
         }
       ]
     },
@@ -49,15 +49,15 @@ const HelpPage: React.FC = () => {
       questions: [
         {
           question: 'How do I access technical support?',
-          answer: 'You can access technical support through our support portal, email support@ziontechgroup.com, or call our 24/7 support line at +1 (302) 464-0950.'
+      answer: 'You can access technical support through our support portal, email support@ziontechgroup.com, or call our 24/7 support line at +1 (302) 464-0950.'
         },
         {
           question: 'What are your support hours?',
-          answer: 'We provide 24/7 technical support for all our clients. Our support team is always available to help with any issues or questions you may have.'
+      answer: 'We provide 24/7 technical support for all our clients. Our support team is always available to help with any issues or questions you may have.'
         },
         {
           question: 'How do I report a bug or issue?',
-          answer: 'You can report bugs through our support portal, email support@ziontechgroup.com, or contact your dedicated account manager. We typically respond within 2 hours.'
+      answer: 'You can report bugs through our support portal, email support@ziontechgroup.com, or contact your dedicated account manager. We typically respond within 2 hours.'
         }
       ]
     },
@@ -67,15 +67,15 @@ const HelpPage: React.FC = () => {
       questions: [
         {
           question: 'What are your pricing models?',
-          answer: 'We offer flexible pricing models including subscription-based plans, project-based pricing, and enterprise agreements. Contact our sales team for a customized quote.'
+      answer: 'We offer flexible pricing models including subscription-based plans, project-based pricing, and enterprise agreements. Contact our sales team for a customized quote.'
         },
         {
           question: 'Do you offer volume discounts?',
-          answer: 'Yes, we offer volume discounts for enterprise clients and long-term contracts. Contact our sales team to discuss your specific needs and pricing options.'
+      answer: 'Yes, we offer volume discounts for enterprise clients and long-term contracts. Contact our sales team to discuss your specific needs and pricing options.'
         },
         {
           question: 'How do I update my billing information?',
-          answer: 'You can update your billing information through your account dashboard or contact our billing team at billing@ziontechgroup.com.'
+      answer: 'You can update your billing information through your account dashboard or contact our billing team at billing@ziontechgroup.com.'
         }
       ]
     }

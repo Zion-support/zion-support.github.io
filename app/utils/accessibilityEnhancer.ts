@@ -33,7 +33,7 @@ class AccessibilityEnhancer {
       enableHighContrast: true,
       enableReducedMotion: true,
       enableFocusManagement: true,
-      announceChanges: true,
+      announceChanges: true}
       ...config
     };
     this.metrics = {
@@ -474,7 +474,7 @@ class AccessibilityEnhancer {
 
 
     observer.observe(document.body, {
-      childList: true,
+      childList: true)
       subtree: true
 
     this.observers.push(observer);
@@ -541,10 +541,10 @@ class AccessibilityEnhancer {
   private getFocusableElements(): HTMLElement[] {
     const focusableSelectors = [
       'a[href]',
-      'button:not([disabled])',
-      'input:not([disabled])',
-      'select:not([disabled])',
-      'textarea:not([disabled])',
+      'button:not([disabled])'}
+      'input:not([disabled])'}
+      'select:not([disabled])'}
+      'textarea:not([disabled])'}
       '[tabindex]:not([tabindex="-1"])',
       '[contenteditable="true"]'
     ];
@@ -579,8 +579,8 @@ class AccessibilityEnhancer {
     return `
 Accessibility Report:
     Score: ${metrics.score}/100
-    Errors: ${metrics.errors}
-    Warnings: ${metrics.warnings}
+    Errors: ${metrics.errors,
+      Warnings: ${metrics.warnings}
     Recommendations: ${metrics.recommendations}
     `;
   }

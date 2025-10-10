@@ -9,7 +9,7 @@ interface LinkProps {
   'aria-label'?: string;}
 }
 export const Link: React.FC<LinkProps> = ({
-  href,
+  href}
   children,
   className,
   target,

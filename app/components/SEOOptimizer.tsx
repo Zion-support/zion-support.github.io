@@ -15,10 +15,10 @@ interface SEOData {
 export const SEOOptimizer: React.FC = () => {
   const seoData: SEOData = {
     title: 'Zion Tech Group - AI-Powered Enterprise Solutions',
-    description: 'Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services. Transform your business with our advanced AI capabilities.',
+      description: 'Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services. Transform your business with our advanced AI capabilities.',
     keywords: [
       'AI solutions',
-      'artificial intelligence',
+        'artificial intelligence',
       'machine learning',
       'quantum computing',
       'digital transformation',
@@ -30,7 +30,7 @@ export const SEOOptimizer: React.FC = () => {
     ogImage: 'https://ziontechgroup.com/og-image.webp',
     twitterCard: 'summary_large_image',
     structuredData: {
-      '@context': 'https://schema.org',
+      '@context': 'https://schema.org'}
       '@type': 'Organization',
       name: 'Zion Tech Group',
       url: 'https://ziontechgroup.com',
@@ -42,13 +42,13 @@ export const SEOOptimizer: React.FC = () => {
         addressLocality: 'Middletown',
         addressRegion: 'DE',
         postalCode: '19709',
-        addressCountry: 'US'
+      addressCountry: 'US'
       },
       contactPoint: {
         '@type': 'ContactPoint',
         telephone: '+1-302-464-0950',
         contactType: 'customer service',
-        email: 'kleber@ziontechgroup.com'
+      email: 'kleber@ziontechgroup.com'
       },
       sameAs: [
         'https://linkedin.com/company/zion-tech-group',
@@ -68,7 +68,7 @@ export const SEOOptimizer: React.FC = () => {
     // Remove existing structured data
     const existingScript = document.getElementById('structured-data');
     if (existingScript) {
-      existingScript.remove();
+      existingScript.remove();  });
     }
 
     document.head.appendChild(script);

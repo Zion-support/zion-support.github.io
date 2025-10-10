@@ -814,7 +814,7 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
         id: Date.now() + 1,
         type: 'ai',
         content: "I understand how you're feeling. It's important to acknowledge your emotions. Would you like to talk about what's on your mind?",
-        timestamp: new Date()
+      timestamp: new Date()
       };
       setChatMessages(prev => [...prev, aiResponse]);
       setIsTyping(false);

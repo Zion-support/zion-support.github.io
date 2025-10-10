@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 
 const DevOpsPage: React.FC = () => {
   const features = [
-    'CI/CD Pipeline Setup',
+    'CI/CD Pipeline Setup'}
     'Automated Testing',
     'Container Orchestration',
     'Infrastructure as Code',

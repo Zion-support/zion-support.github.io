@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 
 const BlockchainPage: React.FC = () => {
   const features = [
-    'Smart Contract Development',
+    'Smart Contract Development'}
     'DApp Development',
     'Token Creation',
     'DeFi Solutions',

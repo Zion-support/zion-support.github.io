@@ -16,7 +16,7 @@ interface PerformanceOptimizerProps {
 }
 
 const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
-  enableImageOptimization = true,
+  enableImageOptimization = true}
   enableLazyLoading = true,
   enableCodeSplitting = true,
   enablePreloading = true,
@@ -40,7 +40,7 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         const imageElement = img as HTMLImageElement;
         if (imageElement.dataset.src) {
           imageElement.src = imageElement.dataset.src;
-          imageElement.removeAttribute('data-src');
+          imageElement.removeAttribute('data-src');  });
         }
 
     };
@@ -64,7 +64,7 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     const observerOptions = {
       root: null,
       rootMargin: '50px',
-      threshold: 0.1
+      threshold: 0.1  });
     };
 
     const imageObserver = new IntersectionObserver((entries) => {
@@ -96,9 +96,9 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     const addResourceHints = () => {
       // Preconnect to external domains
       const domains = [
-        'https://fonts.googleapis.com',
-        'https://fonts.gstatic.com',
-        'https://www.google-analytics.com',
+        'https://fonts.googleapis.com'}
+        'https://fonts.gstatic.com'}
+        'https://www.google-analytics.com'}
         'https://www.googletagmanager.com'
       ];
 
@@ -111,7 +111,7 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
       // DNS prefetch for additional domains
       const dnsPrefetchDomains = [
-        'https://cdn.gpteng.co',
+        'https://cdn.gpteng.co'}
         'https://api.ziontechgroup.com'
       ];
 
@@ -120,7 +120,7 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         link.rel = 'dns-prefetch';
         link.href = domain;
         document.head.appendChild(link);
-
+  });
     };
 
     addResourceHints();
@@ -137,7 +137,7 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       criticalCSS.href = '/critical.css';
       criticalCSS.as = 'style';
       criticalCSS.onload = () => {
-        criticalCSS.rel = 'stylesheet';
+        criticalCSS.rel = 'stylesheet';  });
       };
       document.head.appendChild(criticalCSS);
 
@@ -169,7 +169,7 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     const registerServiceWorker = async () => {
       try {
         const registration = await navigator.serviceWorker.register('/sw.js');
-        // Service Worker registered successfully
+        // Service Worker registered successfully  });
       } catch (error) {
         // Service Worker registration failed
       }
@@ -187,7 +187,7 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     if (!enableWebVitals || typeof window === 'undefined') return;
 
     const reportWebVitals = async () => {
-      try {
+      try {  });
         const { getCLS, getFID, getFCP, getLCP, getTTFB } = await import('web-vitals');
 
         const reportMetric = (metric: any) => {
@@ -195,10 +195,9 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           if ('gtag' in window) {
             (window as any).gtag('event', 'web_vitals', {
               event_category: 'Performance',
-              event_label: metric.name,
+              event_label: metric.name)
               value: Math.round(metric.value),
-              non_interaction: true,
-
+              non_interaction: true}
           }
         };
 
@@ -235,7 +234,7 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           link.rel = 'prefetch';
           link.href = page;
           document.head.appendChild(link);
-
+  });
       }, 3000);
     };
 
@@ -260,7 +259,7 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           -moz-transform: translateZ(0);
           -ms-transform: translateZ(0);
           -o-transform: translateZ(0);
-          transform: translateZ(0);
+          transform: translateZ(0);  });
         }
 
         /* Optimize repaints */
@@ -290,7 +289,7 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         const elements = document.querySelectorAll('[data-cleanup]');
         elements.forEach((element) => {
           element.removeAttribute('data-cleanup');
-
+  });
       };
 
       // Run cleanup every 5 minutes
@@ -314,7 +313,7 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         domContentLoaded: navigation.domContentLoadedEventEnd - navigation.fetchStart,
         loadComplete: navigation.loadEventEnd - navigation.fetchStart,
         firstByte: navigation.responseStart - navigation.fetchStart,
-        domInteractive: navigation.domInteractive - navigation.fetchStart
+      domInteractive: navigation.domInteractive - navigation.fetchStart
       };
 
       // Performance metrics collected
@@ -324,18 +323,16 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         Object.entries(metrics).forEach(([key, value]) => {
           (window as any).gtag('event', 'performance_metric', {
             event_category: 'Performance',
-            event_label: key,
+            event_label: key)
             value: Math.round(value),
-            non_interaction: true,
-
-
+            non_interaction: true}
       }
     }
   }, []);
 
   useEffect(() => {
     if (document.readyState === 'complete') {
-      measurePerformance();
+      measurePerformance();  });
     } else {
       window.addEventListener('load', measurePerformance);
     }

@@ -109,7 +109,7 @@ export default function AIClimateSolutionsProPage() {
     yearly: 32000,
     features: [
       'Unlimited environmental monitoring',
-      'Advanced AI climate models',
+        'Advanced AI climate models',
       'Real-time data processing',
       '24/7 technical support',
       'Custom model training',
@@ -121,17 +121,17 @@ export default function AIClimateSolutionsProPage() {
       {
         name: 'Custom Climate Models',
         price: 1500,
-        description: 'Train AI models on your specific climate data'
+      description: 'Train AI models on your specific climate data'
       },
       {
         name: 'Dedicated Support',
         price: 800,
-        description: 'Dedicated environmental specialist'
+      description: 'Dedicated environmental specialist'
       },
       {
         name: 'On-premise Deployment',
         price: 3000,
-        description: 'Deploy on your infrastructure'
+      description: 'Deploy on your infrastructure'
       }
     ]
   };
@@ -173,7 +173,7 @@ export default function AIClimateSolutionsProPage() {
   const contactInfo = {
     phone: '+1 (302) 464-0950',
     email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008, Middletown, DE 19709'
+      address: '364 E Main St STE 1008, Middletown, DE 19709'
   };
 
   return (
@@ -198,7 +198,7 @@ export default function AIClimateSolutionsProPage() {
             </h1>
 
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Combat climate change with intelligent environmental monitoring, carbon footprint optimization,
+              Combat climate change with intelligent environmental monitoring, carbon footprint optimization)
               and sustainability planning. Make data-driven decisions for a greener future.
             </p>
 

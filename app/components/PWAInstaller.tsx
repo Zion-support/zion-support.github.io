@@ -14,7 +14,7 @@ const PWAInstaller: React.FC = () => {
     // Check if app is already installed
     if (window.matchMedia('(display-mode: standalone)').matches) {
       setIsInstalled(true);
-      return;
+      return;  });
     }
 
     // Listen for the beforeinstallprompt event

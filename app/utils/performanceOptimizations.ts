@@ -3,7 +3,7 @@
 // Debounce utility for performance
 export const debounce = <T extends (...args: any[]) => any>(
   func: T,
-  wait: number
+      wait: number
 ): ((...args: Parameters<T>) => void) => {
   let timeout: NodeJS.Timeout
   return (...args: Parameters<T>) => {
@@ -14,7 +14,7 @@ export const debounce = <T extends (...args: any[]) => any>(
 // Throttle utility for performance
 export const throttle = <T extends (...args: any[]) => any>(
   func: T,
-  limit: number
+      limit: number
 ): ((...args: Parameters<T>) => void) => {
   let inThrottle: boolean
   return (...args: Parameters<T>) => {
@@ -28,14 +28,14 @@ export const throttle = <T extends (...args: any[]) => any>(
 // Intersection Observer hook for lazy loading
 export const useIntersectionObserver = (
   callback: (entries: IntersectionObserverEntry[]) => void,
-  options: IntersectionObserverInit = {}
+      options: IntersectionObserverInit = {}
 ) => {
   const observer = useMemo(
     () =>
       typeof window !== 'undefined'
         ? new IntersectionObserver(callback, {
             threshold: 0.1,
-            rootMargin: '50px',
+      rootMargin: '50px')
             ...options}
           })
         : null,
@@ -56,7 +56,7 @@ export const useIntersectionObserver = (
       observer.disconnect();}
     }
   }, [observer])
-  useEffect(() => {
+  useEffect(() => {  });
     return () => disconnect();}
   }, [disconnect])
   return { observe, disconnect }
@@ -105,8 +105,8 @@ export const usePerformanceMonitoring = useCallback((...args) => {
       const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime
       const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime
       setMetrics({
-        fcp,
-        lcp,
+        fcp,  });
+        lcp,  });
         ttfb: navigation?.responseStart - navigation?.requestStart}
       })
     }
@@ -145,8 +145,8 @@ export const useMemoryMonitoring = useCallback((...args) => {
       const memory = (performance as any).memory
       if (memory) {
         setMemoryInfo({
-          usedJSHeapSize: memory.usedJSHeapSize,
-          totalJSHeapSize: memory.totalJSHeapSize,
+          usedJSHeapSize: memory.usedJSHeapSize,  });
+          totalJSHeapSize: memory.totalJSHeapSize,  });
           jsHeapSizeLimit: memory.jsHeapSizeLimit}
         })
       }
@@ -197,7 +197,7 @@ export const useBundleSizeMonitoring = useCallback((...args) => {
       resources.forEach((resource) => {
         const size = (resource as PerformanceResourceTiming).transferSize || 0
         totalSize += size
-        if (resource.name.includes('.js')) {
+        if (resource.name.includes('.js')) {  });
           jsSize += size;}
         } else if (resource.name.includes('.css')) {
           cssSize += size;}
@@ -207,8 +207,8 @@ export const useBundleSizeMonitoring = useCallback((...args) => {
       })
       setBundleSize({
         totalSize,
-        jsSize,
-        cssSize,
+        jsSize)
+        cssSize,  });
         imageSize}
       })
     }

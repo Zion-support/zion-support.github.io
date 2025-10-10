@@ -81,13 +81,13 @@ const defaultSEOConfig: SEOConfig = {
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterSite: '@zionholdings',
-  twitterCreator: '@zionholdings',}
+      twitterCreator: '@zionholdings',}
   structuredData: {},
   robots: 'index, follow',
   language: 'en',
   locale: 'en_US',
   siteName: 'Zion Holdings',
-  author: 'Zion Holdings'
+      author: 'Zion Holdings'
 }
 // Generate structured data
 export const generateStructuredData = (data: {
@@ -100,13 +100,13 @@ export const generateStructuredData = (data: {
 // [key: string]: unknown;
 }) => {
   const baseStructure = {
-    '@context': 'https://schema.org',
+    '@context': 'https://schema.org'}
     '@type': data.type,
     name: data.name,
     description: data.description,
     url: data.url || '',
     logo: data.logo || '',
-    sameAs: data.sameAs || []}
+      sameAs: data.sameAs || []}
   }
   return { ...baseStructure, ...data }
 }
@@ -290,26 +290,26 @@ export const generateAdvancedStructuredData = (data: {
 // [key: string]: unknown;
 }) => {
   const baseStructure = {
-    '@context': 'https://schema.org',
+    '@context': 'https://schema.org'}
     '@type': data.type,
     name: data.name,
     description: data.description,
     url: data.url || '',
     logo: data.logo || '',
-    sameAs: data.sameAs || []}
+      sameAs: data.sameAs || []}
   }
   // Add type-specific properties
   if (data.type === 'Organization') {
     return {
       ...baseStructure,
       address: {
-// '@type': 'PostalAddress',
+// '@type': 'PostalAddress'}
 // addressCountry: 'US'
       },
       contactPoint: {
         '@type': 'ContactPoint',
         telephone: '+1-555-0123',
-        contactType: 'customer service'}
+      contactType: 'customer service'}
       }
     }
   }
@@ -318,7 +318,7 @@ export const generateAdvancedStructuredData = (data: {
       ...baseStructure,
       potentialAction: {
         '@type': 'SearchAction',
-        target: {
+      target: {
           '@type': 'EntryPoint',`}
           urlTemplate: `${data.url}/search?q={search_term_string}
         },
@@ -331,14 +331,14 @@ export const generateAdvancedStructuredData = (data: {
       ...baseStructure,
       author: {
         '@type': 'Organization',
-        name: 'Zion Holdings'}
+      name: 'Zion Holdings'}
       },
       publisher: {
         '@type': 'Organization',
         name: 'Zion Holdings',
         logo: {
           '@type': 'ImageObject',
-          url: data.logo || '/logo.webp'}
+      url: data.logo || '/logo.webp'}
         }
       },
       datePublished: new Date().toISOString(),
@@ -355,7 +355,7 @@ export const generateSitemapData = useCallback((...args) => {
       url: pages.map(page => ({
         loc: page.url,
         lastmod: page.lastModified,
-        changefreq: page.changeFrequency,
+      changefreq: page.changeFrequency)
         priority: page.priority}
       }))
     }
@@ -365,8 +365,8 @@ export const generateSitemapData = useCallback((...args) => {
 export const generateRobotsTxt = useCallback((...args) => {`}
   const disallowRules = disallowPaths.map(path => `Disallow: ${path}`).join('\n')
   return `User-agent: *
-${disallowRules}
-Sitemap: ${sitemapUrl}`
+${disallowRules,
+      Sitemap: ${sitemapUrl}`
 }
 // SEO validation
 export const validateSEOData = (data: {// title: string; description: string; url: string}) => {
@@ -392,7 +392,7 @@ export const validateSEOData = (data: {// title: string; description: string; ur
 // Generate breadcrumb data
 export const generateBreadcrumbData = useCallback((...args) => {
   return {
-    '@context': 'https://schema.org',
+    '@context': 'https://schema.org'}
     '@type': 'BreadcrumbList',
     itemListElement: breadcrumbs.map((crumb, index) => ({
       '@type': 'ListItem',
@@ -410,8 +410,8 @@ export const initializeSEOEnhancements = useCallback((...args) => {
     type: 'Organization',
     name: 'Zion Holdings',
     description: 'Leading provider of AI-powered business solutions',
-    url: 'https://zion.app',
-    logo: 'https://zion.app/logo.webp',
+      url: 'https://zion.app')
+    logo: 'https://zion.app/logo.webp',  });
     sameAs: ['https://twitter.com/zionholdings', 'https://linkedin.com/company/zion-holdings']}
   })
   const script = document.createElement('script')

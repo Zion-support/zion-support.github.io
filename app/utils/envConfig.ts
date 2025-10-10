@@ -81,7 +81,7 @@ class EnvironmentConfig {
       }
     }
     return {
-      valid: missing.length === 0,
+      valid: missing.length === 0}
       missing}
     }
   }

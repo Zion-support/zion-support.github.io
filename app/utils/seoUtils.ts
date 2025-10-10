@@ -45,7 +45,7 @@ export const generateMetaTags = (data: SEOData): string => {
 
 export const generateStructuredData = (type: string, data: unknown): string => {
   const structuredData = {
-    '@context': 'https://schema.org',
+    '@context': 'https://schema.org'}
     '@type': type,
     ...data
   };
@@ -58,7 +58,7 @@ export const generateOrganizationSchema = () => {
     name: 'Zion Tech Group',
     url: 'https://ziontechgroup.com',
     logo: 'https://ziontechgroup.com/logo.webp',
-    description: 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
+      description: 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
     foundingDate: '2020',
     numberOfEmployees: '50-100',
     industry: 'Technology',
@@ -78,7 +78,7 @@ export const generateOrganizationSchema = () => {
       addressCountry: 'US'
     },
     sameAs: [
-      'https://twitter.com/ziontechgroup',
+      'https://twitter.com/ziontechgroup')
       'https://linkedin.com/company/ziontechgroup'
     ]
 
@@ -99,7 +99,7 @@ export const generateServiceSchema = (serviceName: string, description: string) 
       priceSpecification: {
         '@type': 'PriceSpecification',
         price: '1500',
-        priceCurrency: 'USD',
+      priceCurrency: 'USD')
         billingIncrement: 'P1M'
       }
     }
@@ -123,7 +123,7 @@ export const generateFAQSchema = (faqs: Array<{ question: string; answer: string
       '@type': 'Question',
       name: faq.question,
       acceptedAnswer: {
-        '@type': 'Answer',
+        '@type': 'Answer')
         text: faq.answer
       }
     }))
@@ -150,11 +150,11 @@ export const generateArticleSchema = (article: {
       name: 'Zion Tech Group',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://ziontechgroup.com/logo.webp'
+      url: 'https://ziontechgroup.com/logo.webp'
       }
     },
     datePublished: article.datePublished,
-    dateModified: article.dateModified,
+      dateModified: article.dateModified)
     image: article.image || 'https://ziontechgroup.com/og-image.webp'
 
 };
@@ -162,7 +162,7 @@ export const generateArticleSchema = (article: {
 export const generateLocalBusinessSchema = () => {
   return generateStructuredData('LocalBusiness', {
     name: 'Zion Tech Group',
-    description: 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
+      description: 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
     url: 'https://ziontechgroup.com',
     telephone: '+1-302-464-0950',
     address: {
@@ -178,7 +178,7 @@ export const generateLocalBusinessSchema = () => {
       latitude: '39.8283',
       longitude: '-75.5795'
     },
-    openingHours: 'Mo-Fr 09:00-18:00',
+    openingHours: 'Mo-Fr 09:00-18:00')
     priceRange: '$$$'
 
 };
@@ -187,10 +187,10 @@ export const generateWebSiteSchema = () => {
   return generateStructuredData('WebSite', {
     name: 'Zion Tech Group',
     url: 'https://ziontechgroup.com',
-    description: 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
+      description: 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
     potentialAction: {
       '@type': 'SearchAction',
-      target: 'https://ziontechgroup.com/search?q={search_term_string}',
+      target: 'https://ziontechgroup.com/search?q={search_term_string}')
       'query-input': 'required name=search_term_string'
     }
 
@@ -289,7 +289,7 @@ export const validateSEO = (data: SEOData): { isValid: boolean; errors: string[]
   }
 
   return {
-    isValid: errors.length === 0,
+    isValid: errors.length === 0}
     errors
   };
 };

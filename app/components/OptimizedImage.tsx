@@ -17,7 +17,7 @@ interface OptimizedImageProps {
 }
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
-  src,
+  src}
   alt,
   width,
   height,
@@ -41,12 +41,12 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsInView(true);
-          observer.disconnect();
+          observer.disconnect();  });
         }
       },
       {
         threshold: 0.1,
-        rootMargin: '50px'
+      rootMargin: '50px'
       }
     );
 
@@ -119,7 +119,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
           style={{
             backgroundImage: `url(${generatePlaceholder()})`,
             backgroundSize: 'cover',
-            backgroundPosition: 'center'
+      backgroundPosition: 'center'
           }}
         />
       )}
@@ -142,7 +142,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
           style={{
             width: '100%',
             height: '100%',
-            objectFit: 'cover'
+      objectFit: 'cover'
           }}
         />
       )}

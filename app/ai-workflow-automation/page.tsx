@@ -138,7 +138,7 @@ const AIWorkflowAutomationPage: React.FC = () => {
               Automate any business process with intelligent workflows
             </p>
             <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">
-              Transform your business operations with AI-powered workflow automation that learns,
+              Transform your business operations with AI-powered workflow automation that learns)
               adapts, and optimizes your processes for maximum efficiency and productivity.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

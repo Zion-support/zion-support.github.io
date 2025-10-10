@@ -180,7 +180,7 @@ const CloudMigrationServicesPage: React.FC = () => {
             Cloud Migration Services
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Seamlessly migrate your infrastructure to the cloud with our expert team. Zero-downtime deployment,
+            Seamlessly migrate your infrastructure to the cloud with our expert team. Zero-downtime deployment)
             security-first approach, and automated migration processes. Reduce costs by 40% while improving performance.
           </p>
 

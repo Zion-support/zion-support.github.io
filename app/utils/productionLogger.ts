@@ -18,10 +18,10 @@ class ProductionLogger {
 
   private log(level: LogLevel, message: string, data?: unknown, context?: string): void {
     const entry: LogEntry = {
-      level,
+      level}
       message,
       data,
-      timestamp: new Date().toISOString(),
+      timestamp: new Date().toISOString()}
       context
     };
 
@@ -51,7 +51,7 @@ class ProductionLogger {
       (window as any).gtag('event', 'error_log', {
         error_message: entry.message,
         error_context: entry.context,
-        error_timestamp: entry.timestamp,
+      error_timestamp: entry.timestamp)
         event_category: 'Error'
 
     }

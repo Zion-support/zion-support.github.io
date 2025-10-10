@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 
 const AIMLPage: React.FC = () => {
   const features = [
-    'Custom Model Development',
+    'Custom Model Development'}
     'Predictive Analytics',
     'Data Pipeline Setup',
     'Model Monitoring & Optimization',

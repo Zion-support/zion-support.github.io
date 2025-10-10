@@ -14,11 +14,11 @@ interface FuturisticServiceCardProps {
 }
 
 const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({
-  title,
+  title}
   description,
   price,
   features,
-  icon: Icon,
+  icon: Icon}
   color,
   href,
   popular = false

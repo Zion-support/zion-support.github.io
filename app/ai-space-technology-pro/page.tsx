@@ -109,7 +109,7 @@ export default function AISpaceTechnologyProPage() {
     yearly: 55000,
     features: [
       'Unlimited satellite operations',
-      'Advanced AI algorithms',
+        'Advanced AI algorithms',
       'Real-time data processing',
       '24/7 technical support',
       'Custom model training',
@@ -121,17 +121,17 @@ export default function AISpaceTechnologyProPage() {
       {
         name: 'Custom Space Models',
         price: 2500,
-        description: 'Train AI models on your specific space data'
+      description: 'Train AI models on your specific space data'
       },
       {
         name: 'Dedicated Support',
         price: 1500,
-        description: 'Dedicated space technology specialist'
+      description: 'Dedicated space technology specialist'
       },
       {
         name: 'On-premise Deployment',
         price: 8000,
-        description: 'Deploy on your infrastructure'
+      description: 'Deploy on your infrastructure'
       }
     ]
   };
@@ -173,7 +173,7 @@ export default function AISpaceTechnologyProPage() {
   const contactInfo = {
     phone: '+1 (302) 464-0950',
     email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008, Middletown, DE 19709'
+      address: '364 E Main St STE 1008, Middletown, DE 19709'
   };
 
   return (
@@ -198,7 +198,7 @@ export default function AISpaceTechnologyProPage() {
             </h1>
 
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Advanced space exploration and satellite management with AI-powered mission planning,
+              Advanced space exploration and satellite management with AI-powered mission planning)
               orbital mechanics optimization, and astronomical data analysis. Reach for the stars.
             </p>
 

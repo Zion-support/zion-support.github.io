@@ -21,7 +21,7 @@ const EnhancedHero: React.FC = () => {
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
-      setCurrentStat((prev) => (prev + 1) % stats.length);
+      setCurrentStat((prev) => (prev + 1) % stats.length);  });
     }, 3000);
     return () => clearInterval(interval);
   }, [stats.length]);
@@ -30,8 +30,7 @@ const EnhancedHero: React.FC = () => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', 'phone_click', {
         event_category: 'engagement',
-        event_label: 'main_phone_number',
-
+      event_label: 'main_phone_number')
     }
   }, []);
 
@@ -42,7 +41,7 @@ const EnhancedHero: React.FC = () => {
       y: 0,
       transition: {
         duration: 0.8,
-        staggerChildren: 0.2
+      staggerChildren: 0.2
       }
     }
   };
@@ -93,7 +92,7 @@ const EnhancedHero: React.FC = () => {
           transition={{
             duration: 4,
             repeat: Infinity,
-            ease: "easeInOut"
+      ease: "easeInOut"
           }}
         />
         <motion.div
@@ -105,7 +104,7 @@ const EnhancedHero: React.FC = () => {
           }}
           transition={{
             duration: 3,
-            repeat: Infinity,
+      repeat: Infinity)
             ease: "easeInOut"
           }}
         />

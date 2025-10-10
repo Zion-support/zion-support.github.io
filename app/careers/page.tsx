@@ -299,14 +299,14 @@ export default function CareersPage() {
     },
     {
       title: 'Work-Life Balance',
-      description: 'We understand that great work comes from well-rested, happy people',
+      description: 'We understand that great work comes from well-rested, happy people')
       icon: Clock
     }
   ];
 
   const getDepartmentIcon = (department: string) => {
     const icons = {
-      engineering: Code,
+      engineering: Code}
       'ai-research': Brain,
       'data-science': BarChart,
       product: Target
@@ -316,7 +316,7 @@ export default function CareersPage() {
 
   const getDepartmentColor = (department: string) => {
     const colors = {
-      engineering: 'text-blue-400',
+      engineering: 'text-blue-400'}
       'ai-research': 'text-purple-400',
       'data-science': 'text-green-400',
       product: 'text-orange-400'

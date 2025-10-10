@@ -63,7 +63,7 @@ export const defaultErrorHandlerConfig: ErrorHandlerConfig = {
   enableUserNotification: true,
   enableConsoleLogging: true,
   enableNetworkLogging: true,
-  logLevel: 'error'
+      logLevel: 'error'
 };
 // Error Handler class
 export class ErrorHandler {
@@ -91,7 +91,7 @@ export class ErrorHandler {
       timestamp: new Date(),
       url: typeof window !== 'undefined' ? window.location.href : undefined,
       userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
-      componentStack: errorInfo?.componentStack ?? undefined,
+      componentStack: errorInfo?.componentStack ?? undefined}
       context,
       resolved: false,
       retryCount: 0
@@ -234,9 +234,9 @@ export class ErrorHandler {
     try {
       await fetch(this.config.reportEndpoint, {
         method: 'POST',
-        headers: {
+      headers: {
           'Content-Type': 'application/json'
-        },
+        })
         body: JSON.stringify(error)
 
     } catch (err) {
@@ -248,12 +248,12 @@ export class ErrorHandler {
     try {
       await fetch(this.config.reportEndpoint, {
         method: 'POST',
-        headers: {
+      headers: {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          ...error,
-          timestamp: error.timestamp.toISOString()
+          ...error)
+          timestamp: error.timestamp.toISOString()  });
         })
 
     } catch (err) {
@@ -457,7 +457,7 @@ export class ErrorBoundary extends React.Component<
                 color: 'white',
                 border: 'none',
                 borderRadius: '4px',
-                cursor: 'pointer'
+      cursor: 'pointer'
               }}
             >
               Try again
@@ -496,7 +496,7 @@ export const useErrorHandler = () => {
     handleValidationError,
     getErrors: () => errorHandler.getErrors(),
     getErrorStatistics: () => errorHandler.getErrorStatistics(),
-    clearResolvedErrors: () => errorHandler.clearResolvedErrors()
+      clearResolvedErrors: () => errorHandler.clearResolvedErrors()
   };
 };
 export default ErrorHandler;

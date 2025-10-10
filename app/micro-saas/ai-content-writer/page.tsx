@@ -154,7 +154,7 @@ export default function AIContentWriterPage() {
               Advanced AI-powered content creation platform
             </p>
             <p className="text-base sm:text-lg text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">
-              Transform your content strategy with our cutting-edge AI technology. Generate high-quality,
+              Transform your content strategy with our cutting-edge AI technology. Generate high-quality)
               SEO-optimized content at scale while maintaining your unique brand voice.
             </p>
 
@@ -385,7 +385,7 @@ export default function AIContentWriterPage() {
             {activeTab === 'faq' && (
               <div className="space-y-16">
                 <div className="text-center">
-                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
+                  <h2 className="text-3xl md: text-4xl font-bold text-white mb-6 neon-text">
                     Frequently Asked Questions
                   </h2>
                 </div>
@@ -394,27 +394,27 @@ export default function AIContentWriterPage() {
                   {[
                     {
                       question: "How does the AI content generation work?",
-                      answer: "Our platform uses GPT-4 technology combined with advanced prompts and your brand guidelines to generate high-quality content. You simply provide a topic, tone, and any specific requirements, and our AI creates content that matches your brand voice."
+      answer: "Our platform uses GPT-4 technology combined with advanced prompts and your brand guidelines to generate high-quality content. You simply provide a topic, tone, and any specific requirements, and our AI creates content that matches your brand voice."
                     },
                     {
                       question: "Can I customize the AI to match my brand voice?",
-                      answer: "Yes! You can train the AI on your existing content to learn your brand voice, tone, and style. You can also create multiple brand profiles for different content types or audiences."
+      answer: "Yes! You can train the AI on your existing content to learn your brand voice, tone, and style. You can also create multiple brand profiles for different content types or audiences."
                     },
                     {
                       question: "Is the content SEO-optimized?",
-                      answer: "Absolutely. Every piece of content is automatically optimized for SEO with keyword integration, meta descriptions, proper heading structure, and readability optimization. You can also specify target keywords for each piece of content."
+      answer: "Absolutely. Every piece of content is automatically optimized for SEO with keyword integration, meta descriptions, proper heading structure, and readability optimization. You can also specify target keywords for each piece of content."
                     },
                     {
                       question: "What content types can I create?",
-                      answer: "You can create blog posts, articles, social media content, email campaigns, product descriptions, press releases, white papers, ad copy, landing pages, and much more. We also support multiple languages."
+      answer: "You can create blog posts, articles, social media content, email campaigns, product descriptions, press releases, white papers, ad copy, landing pages, and much more. We also support multiple languages."
                     },
                     {
                       question: "How accurate is the content?",
-                      answer: "Our AI generates highly accurate and relevant content, but we always recommend reviewing and editing the output to ensure it meets your specific needs. The platform also includes plagiarism detection and fact-checking tools."
+      answer: "Our AI generates highly accurate and relevant content, but we always recommend reviewing and editing the output to ensure it meets your specific needs. The platform also includes plagiarism detection and fact-checking tools."
                     },
                     {
                       question: "Can I collaborate with my team?",
-                      answer: "Yes! The Professional and Enterprise plans include team collaboration features, approval workflows, and shared brand guidelines. You can assign roles and permissions to team members."
+      answer: "Yes! The Professional and Enterprise plans include team collaboration features, approval workflows, and shared brand guidelines. You can assign roles and permissions to team members."
                     }
                   ].map((faq, index) => (
                     <div key={index} className="cyber-card hologram-card p-6">

@@ -7,7 +7,7 @@ const AIHealthcarePage: React.FC = memo(() => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   React.useEffect(() => {
-    setIsLoaded(true);
+    setIsLoaded(true);  });
   }, []);
 
   const features = [
@@ -146,7 +146,7 @@ const AIHealthcarePage: React.FC = memo(() => {
           </h1>
 
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Transform healthcare delivery with AI-powered medical imaging, diagnostic assistance,
+            Transform healthcare delivery with AI-powered medical imaging, diagnostic assistance)
             and patient monitoring. Improve outcomes, reduce costs, and enhance patient care.
           </p>
 

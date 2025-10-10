@@ -109,7 +109,7 @@ export default function AIDrugDiscoveryProPage() {
     yearly: 45000,
     features: [
       'Unlimited molecular modeling',
-      'Advanced AI algorithms',
+        'Advanced AI algorithms',
       'Real-time collaboration',
       '24/7 technical support',
       'Custom model training',
@@ -121,17 +121,17 @@ export default function AIDrugDiscoveryProPage() {
       {
         name: 'Custom Model Training',
         price: 2000,
-        description: 'Train AI models on your specific data'
+      description: 'Train AI models on your specific data'
       },
       {
         name: 'Dedicated Support',
         price: 1000,
-        description: 'Dedicated technical specialist'
+      description: 'Dedicated technical specialist'
       },
       {
         name: 'On-premise Deployment',
         price: 5000,
-        description: 'Deploy on your infrastructure'
+      description: 'Deploy on your infrastructure'
       }
     ]
   };
@@ -173,7 +173,7 @@ export default function AIDrugDiscoveryProPage() {
   const contactInfo = {
     phone: '+1 (302) 464-0950',
     email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008, Middletown, DE 19709'
+      address: '364 E Main St STE 1008, Middletown, DE 19709'
   };
 
   return (
@@ -198,7 +198,7 @@ export default function AIDrugDiscoveryProPage() {
             </h1>
 
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Accelerate pharmaceutical research with AI-powered molecular analysis, drug interaction prediction,
+              Accelerate pharmaceutical research with AI-powered molecular analysis, drug interaction prediction)
               and clinical trial optimization. Discover new treatments 10x faster.
             </p>
 

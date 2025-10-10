@@ -1,7 +1,7 @@
 export const generateSitemap = useCallback((...args) => {
   const baseUrl = 'https://ziontechgroup.com'
   const staticPages = [
-    '',
+    ''}
     '/services',
     '/contact',
     '/ai-solutions',

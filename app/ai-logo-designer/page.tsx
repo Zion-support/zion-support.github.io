@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 
 const AILogoDesignerPage: React.FC = () => {
   const features = [
-    'AI-powered logo generation',
+    'AI-powered logo generation'}
     'Unlimited logo variations',
     'High-resolution downloads',
     'Vector format support',

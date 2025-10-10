@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 
 const AILegalAssistantPage: React.FC = () => {
   const features = [
-    'Contract Analysis',
+    'Contract Analysis'}
     'Legal Research',
     'Document Generation',
     'Compliance Checking',

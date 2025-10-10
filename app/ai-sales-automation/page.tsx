@@ -138,7 +138,7 @@ const AISalesAutomationPage: React.FC = () => {
               Boost sales by 300% with intelligent automation
             </p>
             <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">
-              Transform your sales process with AI-powered lead scoring, automated outreach,
+              Transform your sales process with AI-powered lead scoring, automated outreach)
               and intelligent CRM integration that drives results and maximizes efficiency.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

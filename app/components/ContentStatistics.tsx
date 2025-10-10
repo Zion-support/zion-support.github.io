@@ -9,8 +9,8 @@ const ContentStatistics: React.FC = () => {
     clients: 0,
     uptime: 0,
     satisfaction: 0,
-    countries: 0,
-    years: 0
+      countries: 0)
+    years: 0  });
   });
 
   const stats = [
@@ -80,7 +80,7 @@ const ContentStatistics: React.FC = () => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsVisible(true);
+          setIsVisible(true);  });
         }
       },
       { threshold: 0.1 }
@@ -112,7 +112,7 @@ const ContentStatistics: React.FC = () => {
           currentStep++;
           setCounts((prev) => ({
             ...prev,
-            [stat.id]: Math.min(Math.floor(increment * currentStep), stat.value)
+            [stat.id]: Math.min(Math.floor(increment * currentStep), stat.value)  });
           }));
 
           if (currentStep >= steps) {

@@ -33,14 +33,14 @@ class EnhancedErrorTracker {
     if (typeof window !== 'undefined') {
       window.addEventListener('error', event => {
         this.trackError(event.error, {
-          component: 'Global',
+          component: 'Global')
           action: 'Uncaught Error'}
         })
       })
       window.addEventListener('unhandledrejection', event => {
         this.trackError(new Error(event.reason), {
           component: 'Global',
-          action: 'Unhandled Promise Rejection'}
+      action: 'Unhandled Promise Rejection'}
         })
       })
     }
@@ -52,7 +52,7 @@ class EnhancedErrorTracker {
       stack: error.stack,
       context: {
         ...context,
-        sessionId: this.sessionId}
+      sessionId: this.sessionId}
       },
       timestamp: new Date().toISOString(),
       userAgent: navigator.userAgent,
@@ -84,7 +84,7 @@ class EnhancedErrorTracker {
         }
       ).gtag('event', 'exception', {
         description: error.message,
-        fatal: false,
+      fatal: false)
         component: error.context.component}
       })
     }
@@ -106,7 +106,7 @@ class EnhancedErrorTracker {
       byComponent[component] = (byComponent[component] || 0) + 1;}
     })
     return {
-      total: this.errors.length,
+      total: this.errors.length}
       byComponent,
       recent: this.errors.slice(-10)}
     }

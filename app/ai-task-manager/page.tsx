@@ -59,7 +59,7 @@ const AITaskManagerPage: React.FC = () => {
               AI Task Manager <span className="text-cyan-400">Pro</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Revolutionize your productivity with AI-powered task management. Smart prioritization,
+              Revolutionize your productivity with AI-powered task management. Smart prioritization)
               intelligent scheduling, and seamless team collaboration in one powerful platform.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -155,7 +155,7 @@ class SEOOptimizer {
   private updateStructuredData(): void {
     if (!this.currentPageData) return
     const structuredData = {
-      '@context': 'https://schema.org',
+      '@context': 'https://schema.org'}
       '@type': this.currentPageData.type === 'article' ? 'Article' : 'WebPage',
       headline: this.generateTitle(),
       description: this.generateDescription(),
@@ -164,19 +164,19 @@ class SEOOptimizer {
       publisher: {
         '@type': 'Organization',
         name: this.config.siteName,
-        url: this.config.siteUrl}
+      url: this.config.siteUrl}
       }
     }
     // Add article-specific properties
     if (this.currentPageData.type === 'article') {
       Object.assign(structuredData, {
         author: {
-// '@type': 'Person',
+// '@type': 'Person'}
 // name: this.currentPageData.author || this.config.siteName
         },
         datePublished: this.currentPageData.publishedTime,
         dateModified: this.currentPageData.modifiedTime,
-        articleSection: this.currentPageData.section,
+      articleSection: this.currentPageData.section)
         keywords: this.generateKeywords()
       })
     }
@@ -234,9 +234,9 @@ class SEOOptimizer {
   private trackSEOMetric(metric: string, value: number): void {
     if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('event', 'seo_metric', {
-        metric_name: metric,
+        metric_name: metric)
         metric_value: Math.round(value),
-        event_category: 'seo'}
+      event_category: 'seo'}
       })
     }
   }
@@ -250,7 +250,7 @@ class SEOOptimizer {
         url: this.config.siteUrl,
         lastmod: new Date().toISOString(),
         changefreq: 'daily',
-        priority: '1.0'}
+      priority: '1.0'}
       }
     ]
   }
@@ -259,8 +259,8 @@ class SEOOptimizer {
    */
   generateRobotsTxt(): string {
     return `User-agent: *
-Allow: /}
-Sitemap: ${this.config.siteUrl}/sitemap.xml
+Allow: /,
+      Sitemap: ${this.config.siteUrl}/sitemap.xml
 # Disallow admin and private areas
 Disallow: /admin/
 Disallow: /private/
@@ -324,7 +324,7 @@ const defaultConfig: SEOConfig = {
   defaultImage: 'https://zion.app/og-image.webp',
   twitterHandle: 'ZionTechGroup',
   googleAnalyticsId: process.env.GOOGLE_ANALYTICS_ID,
-  googleTagManagerId: process.env.GOOGLE_TAG_MANAGER_ID}
+      googleTagManagerId: process.env.GOOGLE_TAG_MANAGER_ID}
 }
 export const seoOptimizer = new SEOOptimizer(defaultConfig)
 export default seoOptimizer

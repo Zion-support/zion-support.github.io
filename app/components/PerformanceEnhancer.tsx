@@ -29,7 +29,7 @@ interface PerformanceEnhancerProps {
 }
 
 const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
-  enableWebVitals = true,
+  enableWebVitals = true}
   enableResourceTiming = true,
   enableMemoryMonitoring = true,
   enableNetworkMonitoring = true,
@@ -50,7 +50,7 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
     fid: 100,
     cls: 0.1,
     fcp: 1800,
-    ttfb: 600
+      ttfb: 600
   }
 }) => {
 
@@ -59,11 +59,11 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
     webVitals: {} as Record<string, any>,
     resourceTiming: [] as PerformanceEntry[],
     userTiming: [] as PerformanceEntry[],
-    memoryUsage: {} as any,
+      memoryUsage: {} as any,
     networkInfo: {} as any,
     longTasks: [] as PerformanceEntry[],
     layoutShifts: [] as PerformanceEntry[],
-    errors: [] as any[]
+      errors: [] as any[]
   }), []);
 
   // Enhanced error reporting
@@ -88,7 +88,7 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
         event_category: 'Performance',
         event_label: context || 'PerformanceEnhancer',
         value: 1,
-        custom_parameter_1: error.message,
+      custom_parameter_1: error.message)
         custom_parameter_2: error.stack
 
     }
@@ -110,7 +110,7 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
         // Check performance budget
         if (enablePerformanceBudget && performanceBudget[metric.name as keyof typeof performanceBudget]) {
           const budget = performanceBudget[metric.name as keyof typeof performanceBudget];
-          if (budget && metric.value > budget) {
+          if (budget && metric.value > budget) {  });
             reportError(new Error(`Performance budget exceeded for ${metric.name}: ${metric.value} > ${budget}`), 'PerformanceBudget');
           }
         }
@@ -119,11 +119,11 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
         if (enableAnalytics && typeof window !== 'undefined' && 'gtag' in window) {
           (window as any).gtag('event', 'web_vitals', {
             event_category: 'Performance',
-            event_label: metric.name,
+            event_label: metric.name)
             value: Math.round(metric.value),
             non_interaction: true,
             custom_parameter_1: metric.delta,
-            custom_parameter_2: metric.id
+      custom_parameter_2: metric.id
 
         }
 
@@ -134,13 +134,13 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
             value: metric.value,
             delta: metric.delta,
             id: metric.id,
-            navigationType: metric.navigationType,
+            navigationType: metric.navigationType)
             timestamp: Date.now(),
             url: window.location.href,
             userAgent: navigator.userAgent,
-            performanceMetrics: performanceMetrics
+      performanceMetrics: performanceMetrics
 
-          navigator.sendBeacon('/api/analytics/performance', data);
+          navigator.sendBeacon('/api/analytics/performance', data);  });
         }
 
         if (enableConsoleLogging) {
@@ -195,7 +195,7 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
           resource.duration > 1000 || resource.transferSize > 1000000
         );
 
-        if (slowResources.length > 0) {
+        if (slowResources.length > 0) {  });
           reportError(new Error(`Slow resources detected: ${slowResources.length} resources`), 'ResourceTiming');
         }
 
@@ -229,7 +229,7 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
             usedJSHeapSize: memory.usedJSHeapSize,
             totalJSHeapSize: memory.totalJSHeapSize,
             jsHeapSizeLimit: memory.jsHeapSizeLimit,
-            timestamp: Date.now()
+      timestamp: Date.now()  });
           };
 
           // Check for memory leaks
@@ -265,7 +265,7 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
             downlink: connection.downlink,
             rtt: connection.rtt,
             saveData: connection.saveData,
-            timestamp: Date.now()
+      timestamp: Date.now()  });
           };
 
           if (enableConsoleLogging) {
@@ -290,7 +290,7 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
 
         // Report long tasks
         entries.forEach(entry => {
-          if (entry.duration > 50) {
+          if (entry.duration > 50) {  });
             reportError(new Error(`Long task detected: ${entry.duration}ms`), 'LongTaskMonitoring');
           }
 
@@ -316,7 +316,7 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
 
         // Report significant layout shifts
         entries.forEach(entry => {
-          if (entry.value > 0.1) {
+          if (entry.value > 0.1) {  });
             reportError(new Error(`Significant layout shift detected: ${entry.value}`), 'LayoutShiftMonitoring');
           }
 
@@ -340,7 +340,7 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
         const userTiming = performance.getEntriesByType('measure') as PerformanceMeasure[];
         performanceMetrics.userTiming = userTiming;
 
-        if (enableConsoleLogging) {
+        if (enableConsoleLogging) {  });
           }
       } catch (error) {
         reportError(error, 'UserTiming');
@@ -371,14 +371,14 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
           networkInfo: performanceMetrics.networkInfo,
           errorCount: performanceMetrics.errors.length,
           timestamp: Date.now(),
-          url: window.location.href
+      url: window.location.href  });
         };
 
         if (enableAnalytics && typeof window !== 'undefined' && 'gtag' in window) {
           (window as any).gtag('event', 'performance_summary', {
             event_category: 'Performance',
             event_label: 'Summary',
-            value: 1,
+      value: 1)
             custom_parameter_1: JSON.stringify(summary)
 
         }

@@ -69,7 +69,7 @@ class ErrorTrackingService {
         context: {
           filename: event.filename,
           lineno: event.lineno,
-          colno: event.colno
+      colno: event.colno
         }
       })
     })
@@ -79,13 +79,13 @@ class ErrorTrackingService {
       this.trackError(new Error(`Unhandled Promise Rejection: ${event.reason}`), {
         category: ErrorCategory.Runtime,
         severity: ErrorSeverity.High,
-        context: { reason: event.reason }
+      context: { reason: event.reason }
       })
     })
   }
 
   trackError(
-    error: Error,
+    error: Error)
     metadata: Partial<ErrorMetadata> & { category: ErrorCategory; severity: ErrorSeverity }
   ): string {
     const errorId = this.generateErrorId(error.message)
@@ -104,7 +104,7 @@ class ErrorTrackingService {
         timestamp: now,
         stackTrace: error.stack,
         userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
-        url: typeof window !== 'undefined' ? window.location.href : undefined
+      url: typeof window !== 'undefined' ? window.location.href : undefined
       },
       occurrences: 1,
       firstSeen: now,
@@ -132,7 +132,7 @@ class ErrorTrackingService {
     logger.error('Error tracked', {
       errorId,
       message: error.message,
-      category: metadata.category,
+      category: metadata.category)
       severity: metadata.severity
     })
 
@@ -225,7 +225,7 @@ class ErrorTrackingService {
     })
 
     return {
-      total: errors.length,
+      total: errors.length}
       byCategory,
       bySeverity
     }

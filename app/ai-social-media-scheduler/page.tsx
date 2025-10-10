@@ -7,7 +7,7 @@ const AISocialMediaScheduler: React.FC = memo(() => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   React.useEffect(() => {
-    setIsLoaded(true);
+    setIsLoaded(true);  });
   }, []);
 
   const features = [
@@ -148,7 +148,7 @@ const AISocialMediaScheduler: React.FC = memo(() => {
           </h1>
 
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Streamline your social media strategy with AI-powered scheduling, content generation,
+            Streamline your social media strategy with AI-powered scheduling, content generation)
             and analytics. Manage all platforms from one intelligent dashboard.
           </p>
 

@@ -14,7 +14,7 @@ interface EnhancedAccessibilityEnhancerProps {
 }
 
 const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps> = ({
-  enableKeyboardNavigation = true,
+  enableKeyboardNavigation = true}
   enableScreenReader = true,
   enableHighContrast = true,
   enableFocusManagement = true,
@@ -393,7 +393,7 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
     ].filter(Boolean);
 
     return () => {
-      cleanupFunctions.forEach(cleanup => cleanup && cleanup());
+      cleanupFunctions.forEach(cleanup => cleanup && cleanup());  });
     };
   }, [
     enhanceKeyboardNavigation,

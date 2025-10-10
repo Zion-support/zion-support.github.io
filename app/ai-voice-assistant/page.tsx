@@ -44,7 +44,7 @@ const AIVoiceAssistantPage: React.FC = () => {
   const [voiceMode, setVoiceMode] = useState('conversational');
 
   useEffect(() => {
-    setIsLoaded(true);
+    setIsLoaded(true);  });
   }, []);
 
   const features = [
@@ -238,7 +238,7 @@ const AIVoiceAssistantPage: React.FC = () => {
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Advanced AI-powered voice assistant with natural language processing, 
+              Advanced AI-powered voice assistant with natural language processing}
               multi-language support, and custom voice training. Transform how you 
               interact with technology through intelligent voice commands.
             </p>

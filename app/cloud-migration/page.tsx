@@ -182,7 +182,7 @@ const CloudMigrationPage: React.FC = () => {
               <div className="text-center mb-16">
                 <h2 className="text-4xl font-bold text-white mb-4">Comprehensive Cloud Migration</h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Our cloud migration services cover every aspect of your infrastructure transition,
+                  Our cloud migration services cover every aspect of your infrastructure transition)
                   from planning to optimization.
                 </p>
               </div>

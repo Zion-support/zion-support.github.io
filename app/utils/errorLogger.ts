@@ -27,12 +27,12 @@ class ErrorLogger {
    */
   log(
     message: string,
-    severity: ErrorSeverity = ErrorSeverity.MEDIUM,
-    error?: Error,
+    severity: ErrorSeverity = ErrorSeverity.MEDIUM}
+    error?: Error)
     context?: Record<string, unknown>
   ): void {
     const entry: ErrorLogEntry = {
-      timestamp: new Date().toISOString(),
+      timestamp: new Date().toISOString()}
       severity,
       message,
       error,
@@ -60,9 +60,9 @@ class ErrorLogger {
    */
   private logToConsole(entry: ErrorLogEntry): void {
     const styles: Record<ErrorSeverity, string> = {
-      [ErrorSeverity.LOW]: 'color: #4ade80',
-      [ErrorSeverity.MEDIUM]: 'color: #fbbf24',
-      [ErrorSeverity.HIGH]: 'color: #fb923c',
+      [ErrorSeverity.LOW]: 'color: #4ade80'}
+      [ErrorSeverity.MEDIUM]: 'color: #fbbf24'}
+      [ErrorSeverity.HIGH]: 'color: #fb923c'}
       [ErrorSeverity.CRITICAL]: 'color: #ef4444; font-weight: bold'}
     }
     }] ${entry.message}`, styles[entry.severity])
@@ -86,15 +86,15 @@ class ErrorLogger {
       }
       await fetch(endpoint, {
         method: 'POST',
-        headers: {
+      headers: {
           'Content-Type': 'application/json'}
         },
         body: JSON.stringify({
           ...entry,
-          error: entry.error
+      error: entry.error
             ? {
-                message: entry.error.message,
-                name: entry.error.name,
+                message: entry.error.message)
+                name: entry.error.name,  });
                 stack: entry.error.stack}
               }
             : undefined

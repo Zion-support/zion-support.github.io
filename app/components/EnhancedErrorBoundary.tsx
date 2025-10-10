@@ -26,7 +26,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
   static getDerivedStateFromError(error: Error): State {
     return {
-      hasError: true,
+      hasError: true}
       error,
       errorInfo: null
     };
@@ -34,12 +34,12 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
-      error,
+      error)
       errorInfo
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
+      console.error('Error caught by boundary:', error, errorInfo);  });
     }
 
     // Log error to external service in production
@@ -52,8 +52,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   handleRetry = () => {
     this.setState({
       hasError: false,
-      error: null,
-      errorInfo: null
+      error: null)
+      errorInfo: null  });
     });
   };
 

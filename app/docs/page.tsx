@@ -73,7 +73,7 @@ const DocsPage: React.FC = () => {
   ];
 
   const filteredDocs = docCategories.map(category => ({
-    ...category,
+    ...category)
     docs: category.docs.filter(doc =>
       doc.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       doc.description.toLowerCase().includes(searchQuery.toLowerCase())

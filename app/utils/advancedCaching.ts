@@ -69,7 +69,7 @@ class AdvancedCache<T = unknown> {
       const storage = this.getStorage();
       const data = {
         cache: Object.fromEntries(this.cache),
-        accessOrder: this.accessOrder
+      accessOrder: this.accessOrder
       };
       storage?.setItem(this.storageKey, JSON.stringify(data));
     } catch (error) {
@@ -248,7 +248,7 @@ class AdvancedCache<T = unknown> {
 
     return {
       size: this.cache.size,
-      maxSize: this.options.maxSize,
+      maxSize: this.options.maxSize}
       hitRate,
       oldestEntry,
       newestEntry
@@ -260,12 +260,12 @@ class AdvancedCache<T = unknown> {
 export const memoryCache = new AdvancedCache({ storage: 'memory' });
 export const localStorageCache = new AdvancedCache({
   storage: 'localStorage',
-  ttl: 30 * 60 * 1000, // 30 minutes
+      ttl: 30 * 60 * 1000, // 30 minutes
   maxSize: 50
 
 export const sessionStorageCache = new AdvancedCache({
-  storage: 'sessionStorage',
+  storage: 'sessionStorage')
   ttl: 10 * 60 * 1000, // 10 minutes
   maxSize: 25
 
-export default AdvancedCache;
+export default AdvancedCache;  });

@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 
 const AIVisionPage: React.FC = () => {
   const features = [
-    'Object Detection & Recognition',
+    'Object Detection & Recognition'}
     'Image Classification',
     'Video Analysis',
     'Facial Recognition',

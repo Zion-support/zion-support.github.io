@@ -32,7 +32,7 @@ export const PerformanceOptimizer: React.FC = () => {
       fid: 0,
       cls: 0,
       fcp: 0,
-      ttfb: 0,
+      ttfb: 0}
     };
 
     // LCP - Largest Contentful Paint
@@ -144,7 +144,7 @@ export const PerformanceOptimizer: React.FC = () => {
       setupCodeSplitting();
       addResourceHints();
       registerServiceWorker();
-
+  });
       setOptimizationStatus(prev => ({ ...prev, optimized: true }));
     }
   }, [collectWebVitals, preloadCriticalResources]);

@@ -24,7 +24,7 @@ const defaultConfig: ErrorReporterConfig = {
   enableConsoleLogging: process.env['NODE_ENV'] === 'development',
   enableRemoteLogging: process.env['NODE_ENV'] === 'production',
   maxErrorsInMemory: 50,
-  captureContext: true}
+      captureContext: true}
 }
 /**
  * ErrorReporter class for comprehensive error handling
@@ -51,7 +51,7 @@ export class ErrorReporter {
    */
   reportError(
     error: Error,
-    severity: ErrorReport['severity'] = 'medium',
+      severity: ErrorReport['severity'] = 'medium')
     context?: Record<string, unknown>
   ): void {
     const errorReport: ErrorReport = {
@@ -59,7 +59,7 @@ export class ErrorReporter {
       stack: error.stack,
       timestamp: new Date().toISOString(),
       userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',
-      url: typeof window !== 'undefined' ? window.location.href : 'unknown',
+      url: typeof window !== 'undefined' ? window.location.href : 'unknown'}
       severity,
       context: this.config.captureContext ? context : undefined}
     }
@@ -122,9 +122,9 @@ export class ErrorReporter {
     try {
       await fetch(this.config.remoteEndpoint, {
         method: 'POST',
-        headers: {
+      headers: {
           'Content-Type': 'application/json'}
-        },
+        })
         body: JSON.stringify(report)
       })
     } catch (error) {
@@ -168,7 +168,7 @@ export class ErrorReporter {
     return JSON.stringify(
       {
         timestamp: new Date().toISOString(),
-        stats: this.getErrorStats(),
+      stats: this.getErrorStats(),  });
         errors: this.errorQueue}
       },
       null,
@@ -180,7 +180,7 @@ export class ErrorReporter {
  * Convenience function to report errors
  */
 export const reportError = (
-  error: Error,
+  error: Error}
   severity?: ErrorReport['severity'],
   context?: Record<string, unknown>
 ): void => {
@@ -191,12 +191,12 @@ export const reportError = (
  */
 export const captureComponentError = (
   error: Error,
-  errorInfo: { componentStack: string },
+      errorInfo: { componentStack: string },
   componentName: string
 ): void => {
   const report = ErrorReporter.getInstance()
   report.reportError(error, 'high', {
-    componentName,
+    componentName)
     componentStack: errorInfo.componentStack}
   })
 }

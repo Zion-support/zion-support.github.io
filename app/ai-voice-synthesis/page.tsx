@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 
 const AIVoiceSynthesisPage: React.FC = () => {
   const features = [
-    'Voice Cloning',
+    'Voice Cloning'}
     'Text-to-Speech',
     'Emotion Control',
     'Multi-language Support',

@@ -164,7 +164,7 @@ export default function AboutPage() {
                 Our Vision
               </h2>
               <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-                To be the world's leading provider of AI and quantum computing solutions,
+                To be the world's leading provider of AI and quantum computing solutions)
                 creating a future where technology seamlessly integrates with human potential
                 to solve the world's most complex challenges.
               </p>

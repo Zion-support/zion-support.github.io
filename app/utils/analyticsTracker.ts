@@ -110,9 +110,9 @@ class AnalyticsTracker {
   trackInteraction(action: string, element?: string): void {
     this.trackEvent({
       action,
-      category: 'user-interaction',
+      category: 'user-interaction')
       label: element
-
+  });
   }
 
   /**
@@ -121,9 +121,9 @@ class AnalyticsTracker {
   trackConversion(conversionType: string, value?: number): void {
     this.trackEvent({
       action: 'conversion',
-      category: conversionType,
+      category: conversionType)
       value
-
+  });
   }
 
   /**
@@ -132,9 +132,9 @@ class AnalyticsTracker {
   trackExternalLink(url: string, linkText?: string): void {
     this.trackEvent({
       category: 'Outbound',
-      action: 'click',
+      action: 'click')
       label: linkText || url
-
+  });
   }
 
   /**
@@ -144,9 +144,9 @@ class AnalyticsTracker {
     this.trackEvent({
       category: 'Search',
       action: 'search',
-      label: query,
+      label: query)
       value: resultsCount
-
+  });
   }
 
   /**
@@ -154,11 +154,11 @@ class AnalyticsTracker {
    */
   trackVideoInteraction(videoId: string, action: 'play' | 'pause' | 'complete', progress?: number): void {
     this.trackEvent({
-      category: 'Video',
+      category: 'Video'}
       action,
-      label: videoId,
+      label: videoId)
       value: progress
-
+  });
   }
 
   /**
@@ -166,8 +166,8 @@ class AnalyticsTracker {
    */
   trackDownload(fileName: string, fileType: string): void {
     this.trackEvent({
-      category: 'Download',
-      action: 'download',
+      category: 'Download')
+      action: 'download',  });
       label: `${fileName}.${fileType}`
 
   }

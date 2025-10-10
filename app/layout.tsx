@@ -7,16 +7,16 @@ import EnhancedSEOHead from './components/EnhancedSEOHead';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 
 export default function RootLayout({
-  children,
+  children,  });
 }: {
   children: React.ReactNode;
 }) {
   return (
     <html lang="en" className="dark">
       <head>
-    <link rel="preload" href="/assets/vendor-ConSr3PY.js" as="script" crossorigin>
-    <link rel="preload" href="/assets/index-BRi0Fmgq.js" as="script" crossorigin>
-    <link rel="preload" href="/assets/index-C1QbpZNs.css" as="style">
+    <link rel="preload" href="/assets/vendor-ConSr3PY.js" as="script" crossOrigin />
+    <link rel="preload" href="/assets/index-BRi0Fmgq.js" as="script" crossOrigin />
+    <link rel="preload" href="/assets/index-C1QbpZNs.css" as="style" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.webp" />
         <link rel="manifest" href="/manifest.json" />
@@ -41,7 +41,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              '@context': 'https://schema.org',
+              '@context': 'https://schema.org'}
               '@type': 'Organization',
               name: 'Zion Tech Group',
               url: 'https://ziontechgroup.com',
@@ -52,39 +52,39 @@ export default function RootLayout({
                 streetAddress: '364 E Main St STE 1008',
                 addressLocality: 'Middletown',
                 addressRegion: 'DE',
-                postalCode: '19709',
-                addressCountry: 'US',
+      postalCode: '19709')
+                addressCountry: 'US',  });
               },
               contactPoint: {
                 '@type': 'ContactPoint',
                 telephone: '+1-302-464-0950',
                 contactType: 'customer service',
                 areaServed: 'US',
-                availableLanguage: 'English',
+                availableLanguage: 'English'}
               },
               sameAs: [
-                'https://facebook.com/ziontechgroup',
-                'https://twitter.com/ziontechgroup',
-                'https://linkedin.com/company/ziontechgroup',
+                'https://facebook.com/ziontechgroup'}
+                'https://twitter.com/ziontechgroup'}
+                'https://linkedin.com/company/ziontechgroup'}
                 'https://instagram.com/ziontechgroup',
-                'https://youtube.com/@ziontechgroup',
-                'https://github.com/ziontechgroup',
+        'https://youtube.com/@ziontechgroup',
+        'https://github.com/ziontechgroup'}
               ],
               service: [
                 {
                   '@type': 'Service',
                   name: 'AI Services',
-                  description: 'Advanced artificial intelligence solutions',
+                  description: 'Advanced artificial intelligence solutions'}
                 },
                 {
                   '@type': 'Service',
                   name: 'IT Services',
-                  description: 'Comprehensive IT support and infrastructure',
+                  description: 'Comprehensive IT support and infrastructure'}
                 },
                 {
                   '@type': 'Service',
                   name: 'Digital Transformation',
-                  description: 'Business modernization and process automation',
+                  description: 'Business modernization and process automation'}
                 },
               ],
             }),

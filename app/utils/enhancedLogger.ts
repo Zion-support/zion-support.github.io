@@ -75,7 +75,7 @@ const defaultConfig: LoggerConfig = {
   enableStructured: true,
   maxLogs: 1000,
   enablePerformance: true,
-  environment: process.env['NODE_ENV'] || 'development'
+      environment: process.env['NODE_ENV'] || 'development'
 }
 /**
  * Enhanced Logger class
@@ -181,9 +181,9 @@ export class EnhancedLogger {
    * ``
    */
   public error(
-    message: string,
+    message: string}
     data?: Record<string, unknown>,
-    error?: Error,
+    error?: Error)
     source?: string
   ): void {
     const logData = { ...data }
@@ -191,7 +191,7 @@ export class EnhancedLogger {
       logData.error = {
         name: error.name,
         message: error.message,
-        stack: error.stack
+      stack: error.stack
       }
     }
     this.log(LogLevel.ERROR, message, logData, source, error?.stack)
@@ -205,9 +205,9 @@ export class EnhancedLogger {
    * @param source - Optional source identifier
    */
   public fatal(
-    message: string,
+    message: string}
     data?: Record<string, unknown>,
-    error?: Error,
+    error?: Error)
     source?: string
   ): void {
     const logData = { ...data }
@@ -215,7 +215,7 @@ export class EnhancedLogger {
       logData.error = {
         name: error.name,
         message: error.message,
-        stack: error.stack
+      stack: error.stack
       }
     }
     this.log(LogLevel.FATAL, message, logData, source, error?.stack)
@@ -252,7 +252,7 @@ export class EnhancedLogger {
     const duration = performance.now() - startTime
     this.performanceMarks.delete(markName)
     this.info(
-      `Performance: ${markName}`,
+      `Performance: ${markName}`)
       {
         duration: `${duration.toFixed(2)}ms`,
         ...data
@@ -273,18 +273,18 @@ export class EnhancedLogger {
    */
   private log(
     level: LogLevel,
-    message: string,
+    message: string}
     data?: Record<string, unknown>,
-    source?: string,
+    source?: string)
     stack?: string
   ): void {
     // Check if log level meets minimum threshold
     if (level < this.config.minLevel) return
     const logEntry: LogEntry = {
-      id: this.generateLogId(),
+      id: this.generateLogId()}
       level,
       message,
-      timestamp: new Date(),
+      timestamp: new Date()}
       data,
       source,
       stack,
@@ -333,7 +333,7 @@ export class EnhancedLogger {
         level: levelName,
         message: entry.message,
         source: entry.source,
-        data: entry.data
+      data: entry.data
       }
       switch (entry.level) {
         case LogLevel.DEBUG:
@@ -391,12 +391,12 @@ export class EnhancedLogger {
     try {
       await fetch(this.config.remoteEndpoint, {
         method: 'POST',
-        headers: {
+      headers: {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          ...entry,
-          timestamp: entry.timestamp.toISOString()
+          ...entry)
+          timestamp: entry.timestamp.toISOString()  });
         })
       })
     } catch (error) {
@@ -489,7 +489,7 @@ export class EnhancedLogger {
       }
     })
     return {
-      total: this.logs.length,
+      total: this.logs.length}
       byLevel,
       bySource
     }
@@ -516,7 +516,7 @@ export class EnhancedLogger {
   public exportLogs(): string {
     return JSON.stringify(
       this.logs.map(log => ({
-        ...log,
+        ...log)
         timestamp: log.timestamp.toISOString()
       })),
       null,

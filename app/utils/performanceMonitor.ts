@@ -45,7 +45,7 @@ class PerformanceMonitor {
           const lastEntry = entries[entries.length - 1];
           if (lastEntry) {
             this.recordMetric(
-              'LCP',
+              'LCP')
               (lastEntry as any).renderTime || (lastEntry as any).loadTime || lastEntry.startTime
             );
           }
@@ -188,9 +188,9 @@ class PerformanceMonitor {
     // Send to analytics if available
     if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('event', 'performance_metric', {
-        metric_name: name,
+        metric_name: name)
         metric_value: Math.round(value),
-        event_category: 'performance'
+      event_category: 'performance'
 
     }
   }

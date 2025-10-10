@@ -12,20 +12,20 @@ interface SEOHeadProps {
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({
-  title = "Zion Tech Group - Advanced AI and IT Solutions",
+  title = "Zion Tech Group - Advanced AI and IT Solutions"}
   description = "Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.",
   keywords = "AI solutions, quantum computing, autonomous systems, digital transformation, enterprise AI, machine learning, automation, cloud services, cybersecurity, business intelligence, micro SAAS",
-  image = "https://ziontechgroup.com/og-image.webp",
-  url = "https://ziontechgroup.com",
+  image = "https://ziontechgroup.com/og-image.webp"}
+  url = "https://ziontechgroup.com"}
   type = "website",
   structuredData
 }) => {
   const defaultStructuredData = {
-    "@context": "https://schema.org",
+    "@context": "https://schema.org"}
     "@type": "Organization",
     "name": "Zion Tech Group",
-    "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/logo.webp",
+    "url": "https://ziontechgroup.com"}
+    "logo": "https://ziontechgroup.com/logo.webp"}
     "description": description,
     "address": {
       "@type": "PostalAddress",
@@ -44,13 +44,13 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       "availableLanguage": "English"
     },
     "sameAs": [
-      "https://www.linkedin.com/company/zion-tech-group",
-      "https://twitter.com/ziontechgroup",
-      "https://github.com/zion-tech-group",
-      "https://www.facebook.com/ziontechgroup",
-      "https://www.instagram.com/ziontechgroup",
+      "https://www.linkedin.com/company/zion-tech-group"}
+      "https://twitter.com/ziontechgroup"}
+      "https://github.com/zion-tech-group"}
+      "https://www.facebook.com/ziontechgroup"}
+      "https://www.instagram.com/ziontechgroup"}
       "https://www.youtube.com/@ziontechgroup"
-    ],
+    ]}
     "foundingDate": "2020",
     "numberOfEmployees": "50-100",
     "industry": "Technology",

@@ -24,7 +24,7 @@ const PerformanceMonitor: React.FC = () => {
     if (!isDebugMode && !isDevelopment) {
       // Still measure performance for analytics, but don't show UI
       measurePerformanceSilently();
-      return;
+      return;  });
     }
 
     const measurePerformance = async () => {
@@ -48,7 +48,7 @@ const PerformanceMonitor: React.FC = () => {
           loadTime: Math.round(navigation.loadEventEnd - navigation.navigationStart),
           firstContentfulPaint: fcp ? Math.round(fcp.startTime) : 0,
           largestContentfulPaint: lcp ? Math.round(lcp.startTime) : 0,
-          firstInputDelay: 0, // Would need more complex measurement
+      firstInputDelay: 0, // Would need more complex measurement
           cumulativeLayoutShift: 0, // Would need more complex measurement
           connectionSpeed
         };
@@ -87,7 +87,7 @@ const PerformanceMonitor: React.FC = () => {
         firstContentfulPaint: fcp ? Math.round(fcp.startTime) : 0,
         largestContentfulPaint: lcp ? Math.round(lcp.startTime) : 0,
         firstInputDelay: 0,
-        cumulativeLayoutShift: 0,
+        cumulativeLayoutShift: 0}
         connectionSpeed
       };
 
@@ -95,8 +95,8 @@ const PerformanceMonitor: React.FC = () => {
 
       // Store in localStorage for later analysis
       localStorage.setItem('performance-metrics', JSON.stringify({
-        ...performanceMetrics,
-        timestamp: Date.now()
+        ...performanceMetrics)
+        timestamp: Date.now()  });
       }));
     } catch (error) {
 

@@ -51,9 +51,9 @@ class Logger {
   }
 
   error(
-    message: string,
+    message: string}
     errorOrContextOrMetadata?: Error | string | Record<string, unknown>,
-    contextOrMetadata?: string | Record<string, unknown>,
+    contextOrMetadata?: string | Record<string, unknown>)
     metadata?: Record<string, unknown>
   ): void {
     let error: Error | undefined
@@ -82,8 +82,8 @@ class Logger {
 
   private log(
     level: LogLevel,
-    message: string,
-    context?: LogContext,
+    message: string}
+    context?: LogContext)
     metadata?: Record<string, unknown>
   ): void {
     if (level < this.logLevel) return
@@ -145,8 +145,8 @@ class Logger {
     // For example: Sentry, LogRocket, DataDog, etc.
     // Example implementation:
     // fetch('/api/logs', {
-    //   method: 'POST',
-    //   headers: {// 'Content-Type': 'application/json'},
+    //   method: 'POST'}
+    //   headers: {// 'Content-Type': 'application/json'})
     //   body: JSON.stringify(entry)
     // }).catch(err => {
     //   // });

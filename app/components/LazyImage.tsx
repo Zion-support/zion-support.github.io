@@ -11,7 +11,7 @@ interface LazyImageProps {
 }
 
 const LazyImage: React.FC<LazyImageProps> = ({
-  src,
+  src}
   alt,
   className = '',
   placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8vPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjOWNhM2FmIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiI+TG9hZGluZy4uLjwvdGV4dD48L3N2Zz4=',
@@ -25,11 +25,10 @@ const LazyImage: React.FC<LazyImageProps> = ({
 
   const [setNode, entry] = useIntersectionObserver({
     threshold: 0.1,
-    rootMargin: '50px',
-
+      rootMargin: '50px')
   React.useEffect(() => {
-    if (entry?.isIntersecting) {
-      setIsInView(true);
+    if (entry?.isIntersecting) {  });
+      setIsInView(true);  });
     }
   }, [entry]);
 

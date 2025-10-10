@@ -132,7 +132,7 @@ class AdvancedAnalytics {
       url: url || window.location.href,
       metadata: {
         title: title || document.title,
-        referrer: document.referrer
+      referrer: document.referrer
       }
     }
 
@@ -146,12 +146,12 @@ class AdvancedAnalytics {
   trackEvent(name: string, value?: number, metadata?: Record<string, unknown>): void {
     const event: UserEvent = {
       id: this.generateEventId(),
-      type: 'custom_event',
+      type: 'custom_event'}
       name,
       value,
       timestamp: new Date().toISOString(),
       sessionId: this.currentSession.id,
-      url: window.location.href,
+      url: window.location.href}
       metadata
     }
 
@@ -171,7 +171,7 @@ class AdvancedAnalytics {
           element: element.tagName.toLowerCase(),
           text: element.textContent?.trim(),
           href: (element as HTMLAnchorElement).href,
-          className: element.className
+      className: element.className
         })
       }
     })
@@ -191,7 +191,7 @@ class AdvancedAnalytics {
         )
 
         this.trackEvent('scroll', scrollPercent, {
-          scrollY: window.scrollY,
+          scrollY: window.scrollY)
           scrollPercent
         })
       }, 150)
@@ -207,7 +207,7 @@ class AdvancedAnalytics {
       this.trackEvent('form_submit', undefined, {
         formId: form.id,
         formAction: form.action,
-        formMethod: form.method,
+      formMethod: form.method)
         fieldCount: form.elements.length
       })
     })
@@ -225,7 +225,7 @@ class AdvancedAnalytics {
         this.trackEvent('download', undefined, {
           fileName: link.href.split('/').pop(),
           fileType: link.href.split('.').pop(),
-          href: link.href
+      href: link.href
         })
       }
     })
@@ -244,9 +244,9 @@ class AdvancedAnalytics {
 
         this.trackEvent('performance', undefined, {
           loadTime: navigation.loadEventEnd - navigation.loadEventStart,
-          domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+          domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart)
           firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime,
-          firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime
+      firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime
         })
       }, 0)
     })
@@ -259,7 +259,7 @@ class AdvancedAnalytics {
     // Track page visibility changes
     document.addEventListener('visibilitychange', () => {
       this.trackEvent('visibility_change', undefined, {
-        hidden: document.hidden,
+        hidden: document.hidden)
         visibilityState: document.visibilityState
       })
     })
@@ -282,7 +282,7 @@ class AdvancedAnalytics {
       const connection = (navigator as any).connection
       this.trackEvent('connection_info', undefined, {
         effectiveType: connection.effectiveType,
-        downlink: connection.downlink,
+      downlink: connection.downlink)
         rtt: connection.rtt
       })
     }
