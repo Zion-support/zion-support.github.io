@@ -7,7 +7,7 @@ import SEOHead from './components/SEOHead';
 import ErrorBoundary from './components/ErrorBoundary';
 import Loading from './components/Loading';
 import PerformanceMonitor from './components/PerformanceMonitor';
-import ServiceCardSkeleton from './components/ServiceCardSkeleton';
+import { ServiceCardSkeleton } from '../src/components/LoadingStates';
 import LazyImage from './components/LazyImage';
 import AnimatedCounter from './components/AnimatedCounter';
 import Navigation from './components/Navigation';
