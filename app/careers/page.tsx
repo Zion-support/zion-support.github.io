@@ -237,7 +237,9 @@ const CareersPage: React.FC = () => {
                       <span>Posted {position.posted}</span>
                     </div>
                   </div>
-
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
@@ -263,48 +265,6 @@ const CareersPage: React.FC = () => {
                   Contact Us
                 </Link>
               </div>
-=======
-                  {position.requirements && (
-                    <div className="mb-6">
-                      <h4 className="text-white font-semibold mb-2">Key Requirements:</h4>
-                      <ul className="space-y-1">
-                        {position.requirements.map((req, reqIndex) => (
-                          <li key={reqIndex} className="text-gray-300 text-sm flex items-center">
-                            <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
-                            {req}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
-
-                  <Link
-                    to="/contact"
-                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group"
-                  >
-                    Apply Now
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </Link>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Benefits Section */}
-        <section className="py-20 px-4 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl font-bold text-white mb-12 text-center">Why Work With Us?</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {values.map((value, index) => (
-                <div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <value.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{value.title}</h3>
-                  <p className="text-gray-300">{value.description}</p>
-                </div>
-              ))}
             </div>
           </div>
         </section>
