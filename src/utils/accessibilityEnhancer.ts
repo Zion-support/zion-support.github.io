@@ -7,7 +7,7 @@ interface AccessibilityConfig {
   enableScreenReaderSupport: boolean;
   enableHighContrast: boolean
   enableFocusIndicators: boolean
-  enableAriaLabels: boolean,
+  enableAriaLabels: boolean
 }
 
 class AccessibilityEnhancer {
@@ -47,7 +47,7 @@ class AccessibilityEnhancer {
         *:focus {
     outline: 2px solid #0066cc
   }
-          outline-offset: 2px,
+          outline-offset: 2px
         }
 
       `

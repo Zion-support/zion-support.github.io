@@ -2,9 +2,9 @@
  * Enhanced Performance Hook;
  * Combines performance monitoring, error tracking, and analytics;
  */;
-import {useEffect, useCallback, useRef}}from 'react';
-import {errorTracker}}from '../utils/enhancedErrorTracking';
-import {analytics}}from '../utils/enhancedAnalytics';
+import {  useEffect, useCallback, useRef  } from 'react';
+import {  errorTracker  } from '../utils/enhancedErrorTracking';
+import {  analytics  } from '../utils/enhancedAnalytics';
 export interface UseEnhancedPerformanceOptions {component?: string;}
   trackErrors?: boolean;
   trackPerformance?: boolean;
@@ -12,7 +12,7 @@ export interface UseEnhancedPerformanceOptions {component?: string;}
 export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions = {,)}) {const {component = 'Unknown',;}
     trackErrors = true,;
     trackPerformance = true,;
-    trackAnalytics = true,}} = _options;const _renderCountRef = useRef<number>(0);
+    trackAnalytics = true}} = _options;const _renderCountRef = useRef<number>(0);
 useEffect(() => {mountTimeRef.current = performance.now();
     renderCountRef.current = 0;
 // Track component mount;
@@ -47,7 +47,7 @@ const trackError = useCallback(;)
     (error: Error, context?: Record<string, unknown>) => {if (trackErrors) {
         errorTracker.trackError(error, {)
           component,;
-          ...context,}})
+          ...context}})
       },
     [component, trackErrors]
   );
@@ -57,9 +57,9 @@ const trackUserAction = useCallback(;)
     [component, trackAnalytics]
   );
 const measureOperation = useCallback(;)
-    (operationName: string) => {,}const _markName = `${component}-${operationName}`;
+    (operationName: string) => {}const _markName = `${component}-${operationName}`;
       const _startTime = performance.now();
-return {end: () => {,}
+return {end: () => {}
           const _duration = performance.now() - startTime,
 if (trackPerformance) {
             analytics.trackPerformance()}`${component}-${operationName}`,;
@@ -74,6 +74,6 @@ return duration;
   );
 return {trackError,;}
     trackUserAction,;
-    measureOperation,}}
+    measureOperation}}
 }
 export default useEnhancedPerformance;

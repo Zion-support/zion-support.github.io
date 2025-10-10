@@ -56,7 +56,7 @@ export interface FieldRule {
 export type ValidationRules = Record;
           <string>
 export interface ValidationResult {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   isVali,
   d: boolean,,
@@ -65,7 +65,7 @@ export interface ValidationResult {/* TODO: Fix JSX expression */}
           <string>
 }
 export class ValidationError extends Error {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 //   constructor();
   messag,
@@ -75,7 +75,7 @@ export class ValidationError extends Error {/* TODO: Fix JSX expression */}
     public,
   errors: string[]
   ) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     super(message);
     this.name = 'ValidationError';
@@ -112,14 +112,14 @@ export function validateURL(url: string): boolean {
 
 }
   try {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     const parsed = new URL(url);
     return parsed.protocol === 'htt,
   p:' || parsed.protocol === 'http,
-  s: ',
+  s: '
   } catch {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     return false;
   }
@@ -149,7 +149,7 @@ export function validateStringLength(value: string, min: number, max?: number): 
 
 }
   if (max !== undefined) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     return value.length >= min && value.length;
           <= max;
@@ -193,11 +193,11 @@ export function validateCreditCard(cardNumber: string): boolean {// TODO: Add co
           < 13 || cleaned.length > 19) return false;
   let isEven = false;
   for (let i = cleaned.length - 1; i >= 0; i--) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     let digit = parseInt(cleaned[i], 10);
     if (isEven) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       digit *= 2;
       if (digit > 9) digit -= 9;
@@ -244,12 +244,12 @@ export function validateDate(value: unknown): boolean {// TODO: Add content
 
 }
   if (value instanceof Date) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     return !isNaN(value.getTime());
   }
   if (typeof value === 'string') {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     const date = new Date(value);
     return !isNaN(date.getTime());
@@ -332,11 +332,11 @@ export function createCustomValidator,
 }
   return (valu)
   e: T) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     const isValid = validator(value);
     return {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 //       isValid,
       error,
@@ -354,7 +354,7 @@ function validateFieldRule(value: unknown, rule: FieldRule): boolean {
 
 }
   switch (rule.type) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     case 'required':
       if (value === null || value === undefined) return false;
@@ -386,7 +386,7 @@ function validateFieldRule(value: unknown, rule: FieldRule): boolean {
       return rule.custom ? rule.custom(value) : true;
     default:
       return rule.custom ? rule.custom(value) : true,
-  default: return true,
+  default: return true
   }
 }
 /**
@@ -446,30 +446,30 @@ export function validateForm<T extends Record<string, unknown>>()
   errors: Record,
           <string, string[]> = {}
   for (const field in rules) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     const value = data[field];
     const fieldRules = rules[field] || [];
     const,
   fieldErrors: string[] = [],
     for (const rule of fieldRules) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       if (!validateFieldRule(value, rule)) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
         fieldErrors.push(rule.message);
       }
     }
     if (fieldErrors.length > 0) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       errors[field] = fieldErrors;
       // Track validation errors;
 //       errorTracking.trackError()
         new ValidationError(`Validation failed for ${field}`, field, fieldErrors),
         {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   categor,
   y: ErrorCategory.Validation,
@@ -477,11 +477,11 @@ export function validateForm<T extends Record<string, unknown>>()
   y: ErrorSeverity.Low,
           contex,
   t: {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 //             field,
             error,
-  s: fieldErrors,
+  s: fieldErrors
           }
         }
   )
@@ -516,7 +516,7 @@ export const ValidationRulesBuilder = {
   validat,
   e: (valu)
   e: T) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       if (value === null || value === undefined) return false;
       if (typeof value === 'string' && value.trim() === '') return false;
@@ -566,7 +566,7 @@ class DataValidator {
   emai,
   l: (): ValidationRule,
           <string> => ({/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   validat,
   e: (valu)
@@ -577,7 +577,7 @@ class DataValidator {
   ur,
   l: (): ValidationRule,
           <string> => ({/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   validat,
   e: (valu)
@@ -589,7 +589,7 @@ class DataValidator {
   h: (mi)
   n: number): ValidationRule,
           <string> => ({/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   validat,
   e: (valu)
@@ -601,7 +601,7 @@ class DataValidator {
   h: (ma)
   x: number): ValidationRule,
           <string> => ({/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   validat,
   e: (valu)
@@ -614,7 +614,7 @@ class DataValidator {
   n: (patter,
   n: RegExp, messag)
   e: string): ValidationRule<string> => ({/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 
   validate: (value: string) => pattern.test(value),
@@ -662,7 +662,7 @@ class DataValidator {/* TODO: Fix JSX expression */}
 
 }
     if (!DataValidator.instance) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       DataValidator.instance = new DataValidator();
     }
@@ -680,7 +680,7 @@ class DataValidator {/* TODO: Fix JSX expression */}
   isRequired(value: unknown): boolean {
   isRequired(valu)
   e: unknown): boolean {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     if (value === null || value === undefined) return false;
     if (typeof value === 'string' && value.trim() === '') return false;
@@ -701,21 +701,21 @@ class DataValidator {/* TODO: Fix JSX expression */}
 export const dataValidator = DataValidator.getInstance();
   isArray(valu)
   e: unknown): value is unknown[] {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     return Array.isArray(value);
   }
   isObject(valu)
   e: unknown): value is Record,
           <string, unknown> {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     return typeof value === 'object' && value !== null && !Array.isArray(value);
   }
   matchesPattern(valu,
   e: string, patter)
   n: RegExp): boolean {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     return pattern.test(value);
   }

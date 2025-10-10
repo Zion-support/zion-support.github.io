@@ -273,7 +273,7 @@ export class PerformanceOptimizer {/* TODO: Fix JSX expression */}
     th, i, s.observe, r, s = []
   }
 
-  // Additional methods for compatibility public startRender(componentNa m e: str i n g): vo i d {,
+  // Additional methods for compatibility public startRender(componentNa m e: str i n g): vo i d {
     // This method is for compatibility with the old interface;
     // The actual tracking is handled by the performance monitoring;
     conso, l, e.l, o, g(`Starting, render, tracking f, o, r: ${componentN, a, m, e}`);

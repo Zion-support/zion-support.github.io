@@ -607,7 +607,7 @@ export const real2027Q3Additions = [{/* TODO: Fix JSX expression */}
   n: unknown,
       'Continuously map APIs and detect OWASP API Top 10 risks with CI gating and drift detection.',
     feature,
-  s: [,
+  s: [
     ],
     categor,
   y: 'Security & Identity'
@@ -1155,7 +1155,7 @@ export const real2027Q3Additions = [ export const real2027Q3Additions = [ i,
   e: '$199',' perio,
   d: '/month', descriptio,
   n:  ,' 'Continuously map APIs and detect OWASP API Top 10 risks with CI gating and drift detection.', feature,
-  s: [, ],' categor,
+  s: [ ],' categor,
   y: 'Security & Identity'' lin,
   k: '/api - security - scanner' real_servic,
   e: true,' ro,

@@ -1,5 +1,5 @@
 'use client';
-import { Helmet } from 'react-helmet-async';
+import {  Helmet  } from 'react-helmet-async';
 export default function AICustomerServicePage() {/* TODO: Fix JSX expression */}
 }
   return (<div><Helmet></Helmet>
@@ -186,5 +186,5 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression */}
         <Footer /></Footer>
       </div>
     </div>
-  ),
+  )
 }"

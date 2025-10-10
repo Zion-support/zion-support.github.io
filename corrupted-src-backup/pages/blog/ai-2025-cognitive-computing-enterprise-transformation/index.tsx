@@ -7,7 +7,7 @@ impo, r, t { CheckCirc, l, e } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { ArrowRig, h, t } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Awa, r, d } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Lightbu, l, b } fr, o, m 'luci, d, e-rea, c, t';
-const CognitiveComputingTransformatio, n: React.FC = () => { ,
+const CognitiveComputingTransformatio, n: React.FC = () => {
   return(<React.Fragment>,
       <Helm, e, t>
         <title>

@@ -236,7 +236,7 @@ export const,
       launch_date: '2025 - 08 - 15'
       customers: 800
       rating: 4 && 4.9
-      reviews: 400,
+      reviews: 400
     },
         'AI-powered edge orchestration',
     // Edge Computing Orchestration Platform;
@@ -397,7 +397,7 @@ export const,
       launch_date: '2025 - 07 - 20'
       customers: 1200
       rating: 4 && 4.8
-      reviews: 600,
+      reviews: 600
     },
     // Zero - Trust Network Architecture;
       id: 'zero - trust - network - architecture',
@@ -556,7 +556,7 @@ export const,
       launch_date: '2025 - 09 - 10'
       customers: 900
       rating: 4 && 4.9
-      reviews: 450,
+      reviews: 450
     },
         'AI-powered CI/CD automation',
     // AI - Powered DevOps Platform;
@@ -897,7 +897,7 @@ export const,
       launchDate: '2025-11-20'
       customers: 1100
       rating: 4 && 4.8
-      reviews: 550,
+      reviews: 550
     }
   ];    features: [,
 export interface Innovative2026ITInfrastructureService {id: string, name: string,
@@ -921,7 +921,7 @@ export interface Innovative2026ITInfrastructureService {id: string, name: string
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number
   rating: number
-  reviews: number,
+  reviews: number
 }
 export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastructureService[] = [,
   // Quantum-Enhanced Cloud Infrastructure;
@@ -994,7 +994,7 @@ export const,
       launchDate: '2025-11-20'
       customers: 1100
       rating: 4.8
-      reviews: 550,
+      reviews: 550
     }
   ];    features: [,
       'Quantum-resistant encryptionMulti-layer securityAutomated backup and recoveryGlobal data distributionCompliance certificationsReal-time monitoringDisaster recoveryData deduplication',
@@ -1083,7 +1083,7 @@ export interface Innovative2026ITInfrastructureService {
   marketSize: string
   growthRate: string
   variant: ServiceVariant,
-  contactInfo: {,
+  contactInfo: {
     mobile: string
     email: string,
     address: string}
@@ -1094,7 +1094,7 @@ export interface Innovative2026ITInfrastructureService {
   launchDate: string;
   customers: number
   rating: number
-  reviews: number,
+  reviews: number
       ]
       ro,
   i: 'Average customer saves $500K annually through improved security and compliance management.'
@@ -1261,7 +1261,7 @@ export interface Innovative2026ITInfrastructureService {
     ratin,
   g: 4.8,
     review,
-  s: 550,
+  s: 550
 ],
 export interface Innovative2026ITInfrastructureService {/* TODO: Fix JSX expression */}
   s: string}
@@ -1323,7 +1323,7 @@ export const,
     launchDate: '2025-08-15';
     customers: 800
     rating: 4.9
-    reviews: 400,
+    reviews: 400
   }
   // Edge Computing Orchestration Platform;
   {
@@ -1366,7 +1366,7 @@ export const,
     launchDate: '2025-07-20';
     customers: 1200
     rating: 4.8
-    reviews: 600,
+    reviews: 600
   }
   // Zero-Trust Network Architecture;
   {
@@ -1409,7 +1409,7 @@ export const,
     launchDate: '2025-09-10';
     customers: 900
     rating: 4.9
-    reviews: 450,
+    reviews: 450
   }
   // AI-Powered DevOps Platform;
   {
@@ -1452,7 +1452,7 @@ export const,
     launchDate: '2025-10-15';
     customers: 2500
     rating: 4.7
-    reviews: 1250,
+    reviews: 1250
   }
   // Quantum-Safe Data Storage;
   {
@@ -1623,7 +1623,7 @@ export const,
     ratin,
   g: 4.8,
     review,
-  s: 550,
+  s: 550
 ]}
 ];
 }
@@ -1696,7 +1696,7 @@ export const,
     launchDate: '2025-08-15';
     customers: 800
     rating: 4.9
-    reviews: 400,
+    reviews: 400
   }
   // Edge Computing Orchestration Platform;
   {
@@ -1739,7 +1739,7 @@ export const,
     launchDate: '2025-07-20';
     customers: 1200
     rating: 4.8
-    reviews: 600,
+    reviews: 600
   }
   // Zero-Trust Network Architecture;
   {
@@ -1782,7 +1782,7 @@ export const,
     launchDate: '2025-09-10';
     customers: 900
     rating: 4.9
-    reviews: 450,
+    reviews: 450
   }
   // AI-Powered DevOps Platform;
   {
@@ -1825,7 +1825,7 @@ export const,
     launchDate: '2025-10-15';
     customers: 2500
     rating: 4.7
-    reviews: 1250,
+    reviews: 1250
   }
   // Quantum-Safe Data Storage;
   {
@@ -2387,7 +2387,7 @@ i,
   e: '2025 - 11 - 20', customer,
   s: 1100, ratin,
   g: 4.8, review,
-  s: 550, ], ' import { ServiceVariant } from '../types/service-variants'; export interface Innovative2026ITInfrastructureService {/* TODO: Fix JSX expression */}
+  s: 550 ], ' import {  ServiceVariant  } from '../types/service-variants'; export interface Innovative2026ITInfrastructureService {/* TODO: Fix JSX expression */}
   s: string} websit,
   e: string} } realImplementatio,
   n: boolean, implementationDetail,
@@ -2446,7 +2446,7 @@ i,
   e: '2025-11-20', customer,
   s: 1100, ratin,
   g: 4.8, review,
-  s: 550, ]} ]; ; } ]; } ];' import { ServiceVariant } from '../types/service-variants'; export interface Innovative2026ITInfrastructureService {/* TODO: Fix JSX expression */}
+  s: 550 ]} ]; ; } ]; } ];' import {  ServiceVariant  } from '../types/service-variants'; export interface Innovative2026ITInfrastructureService {/* TODO: Fix JSX expression */}
   s: string} websit,
   e: string} } realImplementatio,
   n: boolean, implementationDetail,

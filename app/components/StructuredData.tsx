@@ -2,12 +2,12 @@
 import React from 'react';
 
 interface StructuredDataProps {type?: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'LocalBusiness';}
-  data?: Record<string, unknown>;}const StructuredData: React.FC<StructuredDataProps> = ({,
+  data?: Record<string, unknown>;}const StructuredData: React.FC<StructuredDataProps> = ({
   type = 'Organization', 
   data;}) => {const getDefaultData = () => {
     switch (type) {
       case 'Organization':
-        return {"@context": "https://schema.org",}
+        return {"@context": "https://schema.org"}
           "@type": "Organization",
           "name": "Zion Tech Group",
           "description": "Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.",
@@ -26,7 +26,7 @@ interface StructuredDataProps {type?: 'Organization' | 'WebSite' | 'WebPage' | '
             "addressCountry": "US"},
           "sameAs": [
             "https://twitter.com/ziontechgroup",
-            "https: //linkedin.com/company/ziontechgroup",
+            "https: //linkedin.com/company/ziontechgroup"
           ],
           "foundingDate": "2020",
           "numberOfEmployees": "50+",
@@ -44,7 +44,7 @@ interface StructuredDataProps {type?: 'Organization' | 'WebSite' | 'WebPage' | '
         }
       
       case 'WebSite':
-        return {"@context": "https://schema.org",}
+        return {"@context": "https://schema.org"}
           "@type": "WebSite",
           "name": "Zion Tech Group",
           "url": "https://ziontechgroup.com",
@@ -53,13 +53,13 @@ interface StructuredDataProps {type?: 'Organization' | 'WebSite' | 'WebPage' | '
             "@type": "Organization",
             "name": "Zion Tech Group"},
           "potentialAction": {"@type": "SearchAction",
-            "target": "https: //ziontechgroup.com/search?q={search_term_string,}",
+            "target": "https: //ziontechgroup.com/search?q={search_term_string}",
             "query-input": "required name=search_term_string"
           }
         }
       
       case 'WebPage':
-        return {"@context": "https://schema.org",}
+        return {"@context": "https://schema.org"}
           "@type": "WebPage",
           "name": "Zion Tech Group - Advanced AI and IT Solutions",
           "description": "Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.",
@@ -67,7 +67,7 @@ interface StructuredDataProps {type?: 'Organization' | 'WebSite' | 'WebPage' | '
           "isPartOf": {
             "@type": "WebSite",
             "name": "Zion Tech Group",
-            "url": "https: //ziontechgroup.com",},
+            "url": "https: //ziontechgroup.com"},
           "about": {"@type": "Organization",
             "name": "Zion Tech Group"},
           "breadcrumb": {"@type": "BreadcrumbList",
@@ -76,19 +76,19 @@ interface StructuredDataProps {type?: 'Organization' | 'WebSite' | 'WebPage' | '
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https: //ziontechgroup.com",}]
+                "item": "https: //ziontechgroup.com"}]
           }
         }
       
       case 'Service':
-        return {"@context": "https://schema.org",}
+        return {"@context": "https://schema.org"}
           "@type": "Service",
           "name": "AI and IT Solutions",
           "description": "Comprehensive AI and IT solutions including machine learning, cloud infrastructure, cybersecurity, and digital transformation services.",
           "provider": {
             "@type": "Organization",
             "name": "Zion Tech Group",
-            "url": "https: //ziontechgroup.com",},
+            "url": "https: //ziontechgroup.com"},
           "areaServed": "Worldwide",
           "serviceType": [
             "AI Solutions",
@@ -100,10 +100,10 @@ interface StructuredDataProps {type?: 'Organization' | 'WebSite' | 'WebPage' | '
           ],
           "offers": {"@type": "Offer",
             "description": "Professional AI and IT consulting services",
-            "availability": "https: //schema.org/InStock",}}
+            "availability": "https: //schema.org/InStock"}}
       
       case 'LocalBusiness':
-        return {"@context": "https://schema.org",}
+        return {"@context": "https://schema.org"}
           "@type": "LocalBusiness",
           "name": "Zion Tech Group",
           "description": "Leading provider of AI-powered enterprise solutions and digital transformation services.",
@@ -131,7 +131,7 @@ interface StructuredDataProps {type?: 'Organization' | 'WebSite' | 'WebPage' | '
           }
         }
       
-      default: return {,}}}
+      default: return {}}}
   }
 
   const structuredData = data || getDefaultData();

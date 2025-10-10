@@ -10,7 +10,7 @@ export interface SEOConfig {
   canonicalUrl?: string
   }
 
-export const generateMetaTags = (config: SEOConfig): string => {,
+export const generateMetaTags = (config: SEOConfig): string => {
 export interface SEOConfig {/* TODO: Fix JSX expression */}
 }
 
@@ -36,8 +36,8 @@ export const generateMetaTags = (confi)
   return tags;
 }
 
-export const updatePageTitle = (title: string) => {,
-  if (typeof window !== 'undefined') {,
+export const updatePageTitle = (title: string) => {
+  if (typeof window !== 'undefined') {
     document.title = title;
 export const updatePageTitle = (titl)
   e: string) => {/* TODO: Fix JSX expression */}

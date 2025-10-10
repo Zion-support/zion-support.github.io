@@ -16,11 +16,11 @@ interface SEOConfig {
   language?: string;
   author?: string
   publisher?: string
-  lastModified?: string,
+  lastModified?: string
 }
 
 class SEOEnhancer {/* TODO: Fix JSX expression */}
-  config: SEOConfig,}
+  config: SEOConfig}
   constructor(confi)
   g: SEOConfig) {
     this.config = config

@@ -1,7 +1,7 @@
-import {ShoppingCart, Users, Wrench, Search, Filter, Star, Clock, CheckCircle, ArrowRight, Phone, Mail, Award} from 'lucide-react';
+import { ShoppingCart, Users, Wrench, Search, Filter, Star, Clock, CheckCircle, ArrowRight, Phone, Mail, Award } from 'lucide-react';
 'use client';
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import {  Link  } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const MarketplacePage: React.FC = () => {
@@ -305,13 +305,13 @@ icon$5: Award,
       <Footer />
   return (
     <div>Coming Soon</div>
-  ),
+  )
 }
   const [activeCategory, setActiveCategory] = useState('products');
   const [searchTerm, setSearchTerm] = useState('');
 const categories = [
     {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   i,
   d: 'products',

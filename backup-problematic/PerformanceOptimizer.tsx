@@ -1,6 +1,6 @@
 import React from 'react';
 'use client';
-const PerformanceOptimizerComponent: React.FC<PerformanceOptimizerProps> = ({,
+const PerformanceOptimizerComponent: React.FC<PerformanceOptimizerProps> = ({
  children;
 }) => {
  // Preload critical resources;

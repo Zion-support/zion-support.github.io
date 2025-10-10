@@ -1,132 +1,140 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
+
 import fs from 'fs';
-import path from 'path';
 import { glob } from 'glob';
 
-//Function to fix JSX syntax errors;
+// Function to fix JSX syntax issues
 function fixJSXSyntax(content) {
-
-  //Fix function declarations with malformed comments;
-  fixed = fixed.replace(
-    /const\s+(\w+):\s+React\.FC\s*=\s*\(\)\s*=>\s*\{\/\*\s*content\s*\/\}/g,
-    'const $1: React.FC = () => {'
-  );
-,
-  //Fix malformed JSX elements that are self-closing but shouldn't be;
-  //Pattern: <div></div> followed by content that should be inside;
-  fixed = fixed.replace(/<(\w+)([^>]*?)><\/\1>\s*([^<]+)/g, '<$1$2>$3</$1>');
-
-  //Fix malformed JSX elements with attributes;
-  fixed = fixed.replace(/<(\w+)([^>]*?)><\/\1>\s*<(\w+)([^>]*?)><\/\3>/g, '<$1$2><$3$4></$3></$1>');
-
-  //Fix array syntax issues;
-  fixed = fixed.replace(/\[\s*\{\/\*\s*content\s*\/\}/g, '[{');
-
-  //Fix object syntax issues;
-  fixed = fixed.replace(/\{\/\*\s*content\s*\/\}/g, '{');
-
-  //Fix missing closing braces for objects;
-  fixed = fixed.replace(
-function fixJSXSyntax(content) {/* TODO: Fix JSX expression */}
-    /const\s+(\w+):\s+React\.FC\s*=\s*\(\)\s*=>\s*\{\/\*\s*content\s*\/\}/g,
-    'const $1: React.FC = () => {/* TODO: Fix JSX expression */}
-  fixed = fixed.replace(/\[\s*\{\/\*\s*content\s*\/\}/g, '[{/* TODO: Fix JSX expression */}
-  fixed = fixed.replace(/\{\/\*\s*content\s*\/\}/g, '{/* TODO: Fix JSX expression */})
-    /(\w+):\s*'([^']*)',?\s*(\w+):\s*'([^']*)',?\s*(\w+):\s*'([^']*)',?\s*(\w+):\s*'([^']*)',?\s*\}/g,
-    "$1: '$2',\n      $3: '$4',\n      $5: '$6',\n      $7: '$8'\n    }"
-  );
-
-  return fixed;
+  // Fix broken JSX fragments and tags
+  
+  // Fix broken div tags with comments
+  content = content.replace(/<div[^>]*>\{\/\*[^}]*\*\/\}<\/div>/g, (match) => {
+    const divMatch = match.match(/<div([^>]*)>/);
+    if (divMatch) {
+      return `<div${divMatch[1]}>`;
+    }
+    return match;
+  });
+  
+  // Fix broken h1 tags with commas
+  content = content.replace(/<h1[^>]*>,\s*<\/h1>/g, '<h1>');
+  
+  // Fix broken p tags with commas
+  content = content.replace(/<p[^>]*>,\s*<\/p>/g, '<p>');
+  
+  // Fix broken div tags with commas
+  content = content.replace(/<div[^>]*>,\s*<\/div>/g, '<div>');
+  
+  // Fix broken section tags with commas
+  content = content.replace(/<section[^>]*>,\s*<\/section>/g, '<section>');
+  
+  // Fix broken JSX expressions with commas
+  content = content.replace(/\{\s*,\s*\}/g, '{}');
+  content = content.replace(/\{\s*,\s*$/gm, '{');
+  
+  // Fix broken className attributes
+  content = content.replace(/className="[^"]*,\s*"/g, (match) => {
+    return match.replace(/,\s*"/, '"');
+  });
+  
+  // Fix broken text content with commas
+  content = content.replace(/>,\s*</g, '><');
+  
+  // Fix broken closing tags
+  content = content.replace(/<\/h1>\s*,\s*<\/h1>/g, '</h1>');
+  content = content.replace(/<\/p>\s*,\s*<\/p>/g, '</p>');
+  content = content.replace(/<\/div>\s*,\s*<\/div>/g, '</div>');
+  content = content.replace(/<\/section>\s*,\s*<\/section>/g, '</section>');
+  
+  // Fix broken JSX fragments
+  content = content.replace(/<>,\s*<\/>/g, '<></>');
+  
+  // Fix broken return statements
+  content = content.replace(/return\s*\(\s*,\s*\)/g, 'return (');
+  
+  return content;
 }
 
-//Function to process a single file;
+// Function to fix specific file issues
+function fixSpecificFiles(content, filePath) {
+  // Fix 5g-implementation page specific issues
+  if (filePath.includes('5g-implementation')) {
+    // Fix the broken hero section
+    content = content.replace(
+      /<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">\{\/\* Hero Section \*\/\}<\/div>\s*<section/g,
+      '<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">\n      <section'
+    );
+    
+    // Fix broken h1 tag
+    content = content.replace(
+      /<h1 className="text-4xl md: text-6xl font-bold text-white mb-6">,\s*<\/h1>\s*5G Network/g,
+      '<h1 className="text-4xl md:text-6xl font-bold text-white mb-6">\n        5G Network'
+    );
+    
+    // Fix broken p tag
+    content = content.replace(
+      /<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">[^<]*<\/p>\s*<\/p>/g,
+      '<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Complete 5G network implementation services with ultra-low latency, high-speed connectivity, and advanced features for modern applications and IoT ecosystems.</p>'
+    );
+    
+    // Fix broken div tag
+    content = content.replace(
+      /<div className="flex flex-col sm: flex-row gap-4 justify-center">,\s*<\/div>/g,
+      '<div className="flex flex-col sm:flex-row gap-4 justify-center">'
+    );
+  }
+  
+  return content;
+}
+
+// Main function to process files
 function processFile(filePath) {
   try {
-    //     const content = fs.readFileSync(filePath, 'utf8');
-
-    if (content !== fixed) {
-      fs.writeFileSync(filePath, fixed, 'utf8');
-      //       return true;
-function processFile(filePath) {/* TODO: Fix JSX expression */}
-    }
-  },
-  // Fix malformed JSX fragments
-  {
-    pattern: /<>\s*<div([^>]*)>([^<]*?)<\/div>\s*<\/>/g,
-    replacement: '<div$1>$2</div>'
-  }
-];
-
-function fixFile(filePath) {
-  try {
     let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
+    const originalContent = content;
     
-    fixes.forEach(fix => {
-      const newContent = content.replace(fix.pattern, fix.replacement);
-      if (newContent !== content) {
-        content = newContent;
-        modified = true;
-      }
-    });
+    // Apply fixes
+    content = fixJSXSyntax(content);
+    content = fixSpecificFiles(content, filePath);
     
-    if (modified) {
+    // Only write if content changed
+    if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
+      console.log(`Fixed JSX: ${filePath}`);
       return true;
     }
     
     return false;
-  } catch (error) {/* TODO: Fix JSX expression */}
+  } catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false;
   }
 }
 
-//Main function;
+// Main function to process files
 async function main() {
-  // Get all TSX files in the app directory
-  const files = await glob('app/**/*.tsx', { cwd: process.cwd() });
+  const patterns = [
+    'app/**/*.tsx',
+    'app/**/*.ts'
+  ];
 
-  console.log(`Found ${files.length} TSX files to check...`);
+  let totalFiles = 0;
+  let fixedFiles = 0;
 
   for (const pattern of patterns) {
-    const files = await glob(pattern, {
-      ignore: [,
-        '**/node_modules/**',
-        '**/dist/**',
-        '**/build/**',
-        '**/__tests__/**',
-        '**/_app_disabled/**',
-        '**/_conflicted_disabled/**',
-        '**/_pages_api_disabled/**',
-        '**/_pages_disabled/**',
-        '**/admin-api-disabled/**',
-        '**/api-disabled/**',
-        '**/api.disabled/**',
-        '**/api.disabled.temp/**',
-        '**/api-backup/**',
-        '**/apps.backup/**',
-        '**/automation_backup/**')
-        '**/ai-optimization-backups/**')
-        '**/automation_logs/**')
-        '**/all-automations-reports/**')
-        '**/accessibility-reports/**')
-      ])
-async function main() {/* TODO: Fix JSX expression */}
-}
-  for (const pattern of patterns) {/* TODO: Fix JSX expression */}
+    const files = await glob(pattern, { 
+      ignore: ['node_modules/**', 'dist/**', '.next/**', 'build/**'] 
     });
-
-    for (const file of files) {/* TODO: Fix JSX expression */}
+    
+    for (const file of files) {
+      totalFiles++;
+      if (processFile(file)) {
+        fixedFiles++;
       }
     }
-  });
+  }
 
-  //   }
-
-if (import.meta.url === `fil)`
-  e://${process.argv[1]}`) {/* TODO: Fix JSX expression */}
+  console.log(`\nProcessed ${totalFiles} files, fixed ${fixedFiles} files`);
 }
 
-export { fixJSXSyntax, processFile };
-
-}"`
+main().catch(console.error);

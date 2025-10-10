@@ -11,7 +11,6 @@ interface ImageOptimizerProps {
   onError?: () => void
   }
 const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
-    ,
   src;
   alt,
   className = '',

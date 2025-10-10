@@ -11,7 +11,7 @@
   contactInfo: unknown
     mobile: string
     email: string,
-export interface EnterpriseIt2026ServiceV3 {,
+export interface EnterpriseIt2026ServiceV3 {
     address: string}
   i,
   d: string,
@@ -75,7 +75,7 @@ export interface EnterpriseIt2026ServiceV3 {/* TODO: Fix JSX expression */}
   realImplementation: boolean
   contactInfo: unknown,
     mobile: string, email: string
-    address: string,
+    address: string
   }
 }
 export const enterpriseIT2026 ServicesV3: EnterpriseIt2026 ServiceV3[] = [,

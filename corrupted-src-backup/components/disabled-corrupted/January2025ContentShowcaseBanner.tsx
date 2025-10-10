@@ -1,5 +1,5 @@
 import React from 'react';
-const January2025ContentShowcaseBanne, r: React.FC = () => { ,
+const January2025ContentShowcaseBanne, r: React.FC = () => {
   return()
     <div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-9, 0, 0' > {' ' })
       {/* Animated, Backgroun, d */})

@@ -1,10 +1,10 @@
 'use client';
 import React from 'react';
-import {Helmet}}from 'react-helmet-async';
+import {  Helmet  } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings}}from 'lucide-react';
-const AiWorkflowAutomationPage: React.FC = () => {,
+import {  CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings  } from 'lucide-react';
+const AiWorkflowAutomationPage: React.FC = () => {
     const features = [
     {
       icon: Brain,
@@ -31,7 +31,8 @@ const benefits = [
     'Scale operations without proportional staff increases',;
     'Gain competitive advantage with advanced technology';
   ]
-return(<>)
+return (
+    <>
       <Helmet />
         <title>Ai Workflow Automation - Zion Tech Group</title>
         <meta />
@@ -41,14 +42,13 @@ return(<>)
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-violet-900 to-slate-900"></div>
         {/* Hero Section */} <section className="relative py-20 px-4 overflow-hidden"></section>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' ,}} /></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
           <div className="relative max-w-7xl mx-auto text-center"></div>
             <h1>Ai Workflow Automation;</h1>
             </h1>
             <p>Advanced AI-powered ai workflow automation solution for modern businesses.;</p>
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
-              <button>Get Started;</button>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div><button>Get Started;</button>
               </button>
               <button>View Demo,</button>
               </button>
@@ -64,9 +64,7 @@ return(<>)
               </p>
             </div>
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>,
-              {features.map((feature, index) => (} <div key={index}className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group"></div>,
-                  <div className="w-16 h-16 bg-gradient-to-br from-violet-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>,
-                    <feature>
+              {features.map((feature, index) => (} <div key={index}className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group"></div><div className="w-16 h-16 bg-gradient-to-br from-violet-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div><feature>
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description</p>}</p>
@@ -75,13 +73,13 @@ return(<>)
                       {feature.benefits.map((benefit, idx) => (} <li>
                           <CheckCircle />
 
-import React, {useState, useEffect}from 'react';
+import React, {useState, useEffect} from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-import {Zap, Workflow, Target, CheckCircle, Phone, Mail, Brain, Database, Settings, Globe, BarChart, Users}}from 'lucide-react';
+import {  Zap, Workflow, Target, CheckCircle, Phone, Mail, Brain, Database, Settings, Globe, BarChart, Users  } from 'lucide-react';
 
-const AIWorkflowAutomation: React.FC = () => {,
+const AIWorkflowAutomation: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
@@ -131,12 +129,13 @@ const AIWorkflowAutomation: React.FC = () => {,
       benefits: ['Custom AI models', 'Dedicated support', 'White-label options']}];
 
   const stats = [
-    {number: '90%', label: 'Time Savings' ,},
-    {number: '75%', label: 'Error Reduction' ,},
-    {number: '500+', label: 'Integrations' ,},
-    {number: '24/7', label: 'Automation' ,}];
+    {number: '90%', label: 'Time Savings' },
+    {number: '75%', label: 'Error Reduction' },
+    {number: '500+', label: 'Integrations' },
+    {number: '24/7', label: 'Automation' }];
 
-  return(<>)
+  return (
+    <>
       <SEOOptimizer;
         title="AI Workflow Automation Platform - Zion Tech Group"
         description="Automate business processes with AI-powered workflows. 90% time savings, 500+ integrations, and intelligent decision making. No coding required."
@@ -147,17 +146,17 @@ const AIWorkflowAutomation: React.FC = () => {,
         
         <main className="pt-16">{/* Hero Section */</main>} <section className="container mx-auto px-4 py-16 text-center">
             <div className="max-w-4xl mx-auto">
-              <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text">,</h1>
+              <h1>
                 AI Workflow Automation Platform;
               </h1>
-              <p className="text-xl md: text-2xl text-yellow-400 mb-8">,</p>
+              <p>
                 Automate any business process with intelligent workflows;
               </p>
               <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">Our AI-powered workflow automation platform helps businesses eliminate manual tasks,</p>
                 reduce errors by 75%, and save 90% of processing time with intelligent automation.
               </p>
               
-              <div className="flex flex-col sm: flex-row gap-4 justify-center items-center mb-16">,</div>
+              <div>
                 <a;
                   href="tel: +13024640950",
                   className="cyber-button flex items-center space-x-2"
@@ -175,10 +174,10 @@ const AIWorkflowAutomation: React.FC = () => {,
                 </a>
               </div>
 
-              {/* Stats */} <div className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16">,</div>
+              {/* Stats */} <div>
                 {stats.map((stat, index) => (
                   <div key={index}className="hologram-card-enhanced p-6 text-center">
-                    <div className="text-3xl md: text-4xl font-bold text-yellow-400 mb-2 neon-text">,</div>
+                    <div>
                       {stat.number} </div>
                     <div className="text-gray-300 font-medium">{stat.label</div>}</div>
                   </div>
@@ -189,13 +188,13 @@ const AIWorkflowAutomation: React.FC = () => {,
 
           {/* Features Section */} <section className="py-16">
             <div className="container mx-auto px-4">
-              <h2 className="text-3xl md: text-4xl font-bold text-white text-center mb-12 neon-text">,</h2>
+              <h2 className="text-3xl md: text-4xl font-bold text-white text-center mb-12 neon-text"></h2>
                 Powerful Automation Features;
               </h2>
               
-              <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,</div>
+              <div>
                 {features.map((feature, index) => (
-                  <div key={index}className="hologram-card-enhanced p-6 hover: scale-105 transition-all duration-300">,</div>
+                  <div>
                     <div className="text-4xl mb-4 text-yellow-400">
                       <feature.icon className="w-10 h-10" />
                     </div>
@@ -224,9 +223,7 @@ const AIWorkflowAutomation: React.FC = () => {,
               </p>
             </div>
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div>,
-              {benefits.map((benefit, index) => (} <div key={index}className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group"></div>,
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>,
-                    <CheckCircle />
+              {benefits.map((benefit, index) => (} <div key={index}className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group"></div><div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div><CheckCircle />
                   </div>
                   <p className="text-lg text-white font-medium">{benefit</p>}</p>
                 </div>
@@ -241,8 +238,7 @@ const AIWorkflowAutomation: React.FC = () => {,
               </h2>
               <p>Contact our experts to discuss your requirements and get started today.;</p>
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
-                <button>Contact Us;</button>
+              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div><button>Contact Us;</button>
                 </button>
                 <button>Learn More;</button>
                 </button>
@@ -254,13 +250,13 @@ const AIWorkflowAutomation: React.FC = () => {,
 
           {/* Services Section */} <section className="py-16 bg-gray-900/50">
             <div className="container mx-auto px-4">
-              <h2 className="text-3xl md: text-4xl font-bold text-white text-center mb-12 neon-text">,</h2>
+              <h2 className="text-3xl md: text-4xl font-bold text-white text-center mb-12 neon-text"></h2>
                 Automation Services;
               </h2>
               
-              <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,</div>
+              <div>
                 {services.map((service, index) => (
-                  <div key={index}className="hologram-card-enhanced p-6 hover: scale-105 transition-all duration-300">,</div>
+                  <div>
                     <div className="text-4xl mb-4 text-cyan-400">
                       <service.icon className="w-10 h-10" />
                     </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 'use client';
 interface SEOHeadProps {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   title?: string;
   description?: string;

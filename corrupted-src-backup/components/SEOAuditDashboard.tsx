@@ -20,7 +20,7 @@ totalIssu, e, s: numb, e, r;
 erro, r, s: numb, e, r;
 warnin, g, s: numb, e, r;
 issu, e, s: SEOIss, u, e[]
-metri, c, s: {,
+metri, c, s: {
 pageTit, l, e: stri, n, g;
 metaDescripti, o, n: stri, n, g;
 overallSco, r, e: numb, e, r;
@@ -29,7 +29,7 @@ erro, r, s: numb, e, r;
 warnin, g, s: numb, e, r;
 issu, e, s: SEOIss, u, e[];
 metr, i, c;
-  s: {,
+  s: {
 pageTit, l, e: stri, n, g;
 metaDescripti, o, n: stri, n, g;
 headin, g, s: { h1: numb, e, r; h2: numb, e, r; h3: numb, e, r; h4: numb, e, r; h5: numb, e, r; h;
@@ -253,7 +253,7 @@ const, SEOAuditDashboar, d: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */
       erro, r, s;
       warnin, g, s;
       issu, e, s;
-      metri, c, s: {,
+      metri, c, s: {
         pageTit, l, e: 'Zion, Tech, Group - Leading, A, I & Technology, Solution, s'
         metaDescripti, o, n: 'Cutti, n, g-edge, A, I, clo, u, d, and, digital, transformation solutions, for, modern enterpris, e, s. Expert, IT, consulting and, innovative, technology implementatio, n, s.'
         headin, g, s: { h,
@@ -280,7 +280,7 @@ const, SEOAuditDashboar, d: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */
         lin, k, s: {/* TODO: Fix JSX expression */}
   l: 45, intern, a, l: 32, extern, a, l: 13 }
         wordCou, n, t: 28, 4, 7;
-        readabilitySco, r, e: 72,
+        readabilitySco, r, e: 72
       })
       lastUpdat, e, d: Da, t, e.n, o, w()
         pageTi, t, l,
@@ -293,7 +293,7 @@ const, SEOAuditDashboar, d: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */
         lin, k, s: {/* TODO: Fix JSX expression */}
   l: 45, intern, a, l: 32, extern, a, l: 13 }
         wordCou, n, t: 28, 4, 7;
-        readabilitySco, r, e: 72,
+        readabilitySco, r, e: 72
       }
       lastUpdat, e, d: Da, t, e.n, o, w()
     });

@@ -11,7 +11,7 @@ export class FocusTrap {
   private firstFocusableElement?: HTMLElement
   private lastFocusableElement?: HTMLElement,
 
-  constructor(element: HTMLElement) {,
+  constructor(element: HTMLElement) {
     this.element = element;
     this.updateFocusableElements()
   }
@@ -34,9 +34,9 @@ export class FocusTrap {
   }
 
   public trapFocus(event: KeyboardEvent): void {
-    if (event.key === 'Tab') {,
-      if (event.shiftKey) {,
-        if (document.activeElement === this.firstFocusableElement) {,
+    if (event.key === 'Tab') {
+      if (event.shiftKey) {
+        if (document.activeElement === this.firstFocusableElement) {
           event.preventDefault();
           this.lastFocusableElement?.focus();
 export class FocusTrap {/* TODO: Fix JSX expression */}
@@ -62,21 +62,19 @@ export class FocusTrap {/* TODO: Fix JSX expression */}
  * ARIA helper functions;
  */
 export const ariaHelpers = {
-    setAriaExpanded(element: HTMLElement, expanded: boolean): void {,
+    setAriaExpanded(element: HTMLElement, expanded: boolean): void {
     element.setAttribute('aria-expanded', expanded.toString())
   },
 
   setAriaHidden(element: HTMLElement, hidden: boolean): void {
-    ,
     element.setAttribute('aria-hidden', hidden.toString())
   },
 
   setAriaLabel(element: HTMLElement, label: string): void {
-    ,
     element.setAttribute('aria-label', label)
   },
 
-  setAriaDescribedBy(element: HTMLElement, describedBy: string): void {,
+  setAriaDescribedBy(element: HTMLElement, describedBy: string): void {
     element.setAttribute('aria-describedby', describedBy);
 export const ariaHelpers = {/* TODO: Fix JSX expression */}
   },
@@ -99,7 +97,7 @@ export const ariaHelpers = {/* TODO: Fix JSX expression */}
 /**
  * Screen reader announcements;
  */
-export const announceToScreenReader = (message: string): void => {,
+export const announceToScreenReader = (message: string): void => {
   const _announcement = document.createElement('div');
   announcement.setAttribute('aria-live', 'polite');
   announcement.setAttribute('aria-atomic', 'true');
@@ -132,8 +130,8 @@ export const keyboardNavigation = {
   }
   },
 
-  handleEscapeKey(event: KeyboardEvent, callback: () => void): void {,
-    if (event.key === 'Escape') {,
+  handleEscapeKey(event: KeyboardEvent, callback: () => void): void {
+    if (event.key === 'Escape') {
       event.preventDefault();
       callback();
 export const keyboardNavigation = {/* TODO: Fix JSX expression */}

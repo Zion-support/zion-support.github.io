@@ -733,7 +733,7 @@ export const real2026Q2Additions = [
   i: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',
     lin,
   k: 'http,
-  s: //ziontechgroup.com/services/msp-remote-device-ops',
+  s: //ziontechgroup.com/services/msp-remote-device-ops'
   }
       'Training data augmentation',
       'Privacy - preserving analytics',
@@ -1941,7 +1941,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
   i: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',
     lin,
   k: 'http,
-  s: //ziontechgroup.com/services/msp-remote-device-ops',
+  s: //ziontechgroup.com/services/msp-remote-device-ops'
   }
 ];      'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering, and alertsTicketing and customer portals'
     i,
@@ -1967,7 +1967,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     setupTime: 'Fast'
     marketPosition: 'Cost-effective RMM for partners and IT teams',
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%'
-    link: 'https://ziontechgroup.com/services/msp-remote-device-ops',
+    link: 'https://ziontechgroup.com/services/msp-remote-device-ops'
   }
 ];      'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering, and alertsTicketing and customer portals'
     ];
@@ -2049,7 +2049,7 @@ export const real2026Q2Additions = [
   i: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',
     lin,
   k: 'http,
-  s: //ziontechgroup.com/services/msp-remote-device-ops',
+  s: //ziontechgroup.com/services/msp-remote-device-ops'
   }
 ];      'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering, and alertsTicketing and customer portals'
     ];
@@ -3834,7 +3834,7 @@ export const real2026Q2Additions = [ 'Jira',' 'ServiceNow',' 'Slack',' 'GitHub',
   e: '$4', ' ro,
   i: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',' lin,
   k: 'http,
-  s: //ziontechgroup.com/services/msp-remote-device-ops', } ' 'Training data augmentation',' 'Privacy - preserving analytics',' 'Test data generation'],' integration,
+  s: //ziontechgroup.com/services/msp-remote-device-ops' } ' 'Training data augmentation',' 'Privacy - preserving analytics',' 'Test data generation'],' integration,
   s: ['S3', 'BigQuery', 'Snowflake', 'Databricks'],' competitor,
   s: ['Mostly AI', 'Gretel', 'YData'],' pric,
   e: '$1, 200',' perio,
@@ -4181,7 +4181,7 @@ export const real2026Q2Additions = [ 'Jira',' 'ServiceNow',' 'Slack',' 'GitHub',
   e: '$4', ' ro,
   i: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',' lin,
   k: 'http,
-  s: //ziontechgroup.com/services/msp-remote-device-ops', } ' ]; 'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering, and alertsTicketing and customer portals' ' i,
+  s: //ziontechgroup.com/services/msp-remote-device-ops' } ' ]; 'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering, and alertsTicketing and customer portals' ' i,
   d: 'ai-governance-compliance-hub', nam,
   e: 'AI Governance & Compliance Hub',' categor,
   y: 'AI & Data',' taglin,
@@ -4201,7 +4201,7 @@ export const real2026Q2Additions = [ 'Jira',' 'ServiceNow',' 'Slack',' 'GitHub',
   n: 'Cost-effective RMM for partners and IT teams',' ro,
   i: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',' lin,
   k: 'http,
-  s: //ziontechgroup.com/services/msp-remote-device-ops', }' ]; 'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering, and alertsTicketing and customer portals' ];' use_case,
+  s: //ziontechgroup.com/services/msp-remote-device-ops' }' ]; 'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering, and alertsTicketing and customer portals' ];' use_case,
   s: ['MSPs and IT providers_internal IT for SMBsBYOD governance'],' integration,
   s: ['Azure ADOktaSlackServiceNow'],' competitor,
   s: ['AteraNinjaOne'],' pric,

@@ -1,15 +1,15 @@
 'use client';
-import React, {useState, useEffect}from 'react';
-import {Activity, Zap, Cpu, MemoryStick, TrendingUp, AlertTriangle}}from 'lucide-react';
-interface PerformanceMetrics {loadTime: number;,}
+import React, {useState, useEffect} from 'react';
+import {  Activity, Zap, Cpu, MemoryStick, TrendingUp, AlertTriangle  } from 'lucide-react';
+interface PerformanceMetrics {loadTime: number;}
   renderTime: number;,
   memoryUsage: number;,
   fps: number,
-  [key: string]: number;,}interface PerformanceProps {onMetricsUpdate?: (metrics: PerformanceMetrics) => void;,}}const PerformanceDashboard: React.FC<PerformanceProps> = ({onMetricsUpdate ,}) => {const [metrics, setMetrics] = useState<PerformanceMetrics>({
+  [key: string]: number;}interface PerformanceProps {onMetricsUpdate?: (metrics: PerformanceMetrics) => void;}}const PerformanceDashboard: React.FC<PerformanceProps> = ({onMetricsUpdate }) => {const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
     renderTime: 0,
     memoryUsage: 0,
-    fps: 0;,})
+    fps: 0;})
   const [isMonitoring, setIsMonitoring] = useState(false);
   const [alerts, setAlerts] = useState<string[]>([]);
   useEffect(() => {const updateMetrics = () => {
@@ -24,7 +24,7 @@ interface PerformanceMetrics {loadTime: number;,}
       // Measure memory usage;
       let memoryUsage = 0;
       if ('memory' in performance) {
-        const memory = (performance as {memory?: { usedJSHeapSize: number ,}}}).memory;
+        const memory = (performance as {memory?: { usedJSHeapSize: number }}}).memory;
         memoryUsage = memory?.usedJSHeapSize || 0;
       }
       // Measure FPS (simplified)
@@ -40,7 +40,7 @@ interface PerformanceMetrics {loadTime: number;,}
             lastTime = currentTime;}if (isMonitoring) {requestAnimationFrame(measureFPS)}}
         requestAnimationFrame(measureFPS);
       }
-      const newMetrics: PerformanceMetrics = {,
+      const newMetrics: PerformanceMetrics = {
         loadTime,
         renderTime,
         memoryUsage,
@@ -52,18 +52,18 @@ interface PerformanceMetrics {loadTime: number;,}
     if (isMonitoring) {updateMetrics();
       const interval = setInterval(updateMetrics, 1000);
       return () => clearInterval(interval)}}, [isMonitoring, onMetricsUpdate]);
-  const checkPerformanceAlerts = (currentMetrics: PerformanceMetrics) => {,
+  const checkPerformanceAlerts = (currentMetrics: PerformanceMetrics) => {
     const newAlerts: string[] = [],
     if (currentMetrics.loadTime > 3000) {
       newAlerts.push('Load time is above 3 seconds')}if (currentMetrics.memoryUsage > 50 * 1024 * 1024) {// 50MB;
       newAlerts.push('Memory usage is high')}if (currentMetrics.fps < 30) {newAlerts.push('FPS is below 30')}setAlerts(newAlerts);
   }
-  const toggleMonitoring = () => {setIsMonitoring(!isMonitoring)}const formatBytes = (bytes: number) => {,
+  const toggleMonitoring = () => {setIsMonitoring(!isMonitoring)}const formatBytes = (bytes: number) => {
     if (bytes === 0) return '0 Bytes'
     const k = 1024,
     const sizes = ['Bytes', 'KB', 'MB', 'GB']
     const i = Math.floor(Math.log(bytes) / Math.log(k));
-    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i]}const getPerformanceColor = (value: number, thresholds: {good: number, warning: number ,}) => {if (value <= thresholds.good) return 'text-green-400';
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i]}const getPerformanceColor = (value: number, thresholds: {good: number, warning: number }) => {if (value <= thresholds.good) return 'text-green-400';
     if (value <= thresholds.warning) return 'text-yellow-400';
     return 'text-red-400'}return(<div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">)</div>
       <div className="flex items-center justify-between mb-6">
@@ -75,7 +75,7 @@ interface PerformanceMetrics {loadTime: number;,}
           onClick={toggleMonitoring}className={`px-4 py-2 rounded-lg font-medium transition-colors ${
             isMonitoring;
               ? 'bg-red-600 text-white hover: bg-red-700',
-              : 'bg-green-600 text-white hover: bg-green-700',}`}
+              : 'bg-green-600 text-white hover: bg-green-700'}`}
         >{isMonitoring ? 'Stop Monitoring' : 'Start Monitoring'</button>} </button>
       </div>
       {alerts.length > 0 && (
@@ -91,7 +91,7 @@ interface PerformanceMetrics {loadTime: number;,}
           </ul>
         </div>
       )}
-      <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-4">,</div>
+      <div>
         <div className="bg-white/5 rounded-lg p-4">
           <div className="flex items-center gap-2 mb-2">
             <Zap className="w-4 h-4 text-blue-400" />

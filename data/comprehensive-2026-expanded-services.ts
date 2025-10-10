@@ -310,7 +310,7 @@ export const,
     launchDate: '2025-01-20'
     customers: 73
     rating: 4.7
-    reviews: 41,
+    reviews: 41
   },
   // Cloud & Infrastructure Services;
     id: 'autonomous-cloud-cost-optimization',
@@ -412,7 +412,7 @@ export const,
     launchDate: '2025-01-10'
     customers: 128
     rating: 4.9
-    reviews: 89,
+    reviews: 89
   },
     id: 'zero-trust-security-platform'
     name: 'Zero Trust Security Platform'
@@ -606,7 +606,7 @@ export const,
     launchDate: '2025-02-15'
     customers: 94
     rating: 4.7
-    reviews: 67,
+    reviews: 67
   },
   // Data & Analytics Services;
     id: 'real-time-data-pipeline-platform'
@@ -801,7 +801,7 @@ export const,
     launchDate: '2025-02-10'
     customers: 112
     rating: 4.6
-    reviews: 78,
+    reviews: 78
   },
   // Developer Tools & DevOps;
     id: 'ai-code-review-assistant',
@@ -996,7 +996,7 @@ export const,
     launchDate: '2025-01-30'
     customers: 89
     rating: 4.8
-    reviews: 67,
+    reviews: 67
   },
   // Industry-Specific Solutions;
     id: 'healthcare-ai-compliance-platform',
@@ -1098,7 +1098,7 @@ export const,
     launchDate: '2025-01-15'
     customers: 45
     rating: 4.9
-    reviews: 34,
+    reviews: 34
   },
     id: 'fintech-fraud-detection-ai'
     name: 'FinTech Fraud Detection AI'
@@ -1199,7 +1199,7 @@ export const,
     launchDate: '2025-02-01'
     customers: 67
     rating: 4.8
-    reviews: 52,
+    reviews: 52
   },
   // Micro SaaS Services;
     id: 'ai-email-automation-suite',
@@ -1580,7 +1580,7 @@ export const,
     launchDate: '2025-02-01'
     customers: 167
     rating: 4.5
-    reviews: 112,
+    reviews: 112
   },
   // IT Services;
     id: 'managed-it-support-services',
@@ -1868,7 +1868,7 @@ export const,
     launchDate: '2025-01-25'
     customers: 67
     rating: 4.9
-    reviews: 45,
+    reviews: 45
   },
   // Advanced AI Services;
     id: 'ai-document-processing-platform',
@@ -2063,7 +2063,7 @@ export const,
     launchDate: '2025-02-05'
     customers: 78
     rating: 4.7
-    reviews: 56,
+    reviews: 56
   },
   // Emerging Technology Services;
     id: 'quantum-computing-simulation-platform',
@@ -2258,7 +2258,7 @@ export const,
     launchDate: '2025-02-15'
     customers: 34
     rating: 4.7
-    reviews: 28,
+    reviews: 28
   }
 ];
 export const serviceCategories = [{name: 'Micro SaaS',

@@ -3,8 +3,8 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-import {CheckCircle, TrendingUp, Phone, Mail, MapPin, Building, Users, Shield, Globe, Brain, Cloud, Code, BarChart, Zap, ArrowRight, Star, Award, Target, Clock, Settings, Lock, Database, Smartphone, Eye, Sparkles}}from 'lucide-react';
-const EnterprisePage: React.FC = () => {,
+import {  CheckCircle, TrendingUp, Phone, Mail, MapPin, Building, Users, Shield, Globe, Brain, Cloud, Code, BarChart, Zap, ArrowRight, Star, Award, Target, Clock, Settings, Lock, Database, Smartphone, Eye, Sparkles  } from 'lucide-react';
+const EnterprisePage: React.FC = () => {
     const features = [
     {
       icon: Shield,
@@ -63,10 +63,10 @@ const benefits = [
     'Provide 24/7 support and monitoring'
   ]
 const stats = [
-    {number: '500+', label: 'Enterprise Clients', icon: Building ,},
-    {number: '99.9%', label: 'Uptime Guarantee', icon: Shield ,},
-    {number: '50%', label: 'Cost Reduction', icon: TrendingUp ,},
-    {number: '24/7', label: 'Support Available', icon: Clock ,}]
+    {number: '500+', label: 'Enterprise Clients', icon: Building },
+    {number: '99.9%', label: 'Uptime Guarantee', icon: Shield },
+    {number: '50%', label: 'Cost Reduction', icon: TrendingUp },
+    {number: '24/7', label: 'Support Available', icon: Clock }]
 return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>)
       <SEOOptimizer>
       <Navigation />
@@ -79,7 +79,7 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
           </div>
         </section>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' ,}} /></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
         <div className="relative max-w-7xl mx-auto text-center"></div>
           <h1>
             Enterprise</h1>
@@ -89,8 +89,7 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
           <p>Comprehensive enterprise-grade solutions designed for large-scale business operations.;</p>
             Transform your organization with cutting-edge technology and expert implementation.
           </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
-            <button>Get Enterprise Consultation;</button>
+          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div><button>Get Enterprise Consultation;</button>
               <ArrowRight>
             </button>
             <button>View Case Studies,</button>
@@ -135,8 +134,7 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
             <p>Built for scale, security, and performance to meet the demands of large organizations.</p>
             </p>
           </div>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div>,
-                  <feature>
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div><feature>
                   <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
                 </div>
                 <p className="text-gray-300 mb-4">{feature.description</p>}</p>
@@ -195,8 +193,7 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
           </h2>
           <p>Join hundreds of enterprise clients who trust our solutions for their mission-critical operations.</p>
           </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
-            <button>Contact Enterprise Sales;</button>
+          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div><button>Contact Enterprise Sales;</button>
               <ArrowRight>
             </button>
             <button>Learn More;</button>
@@ -205,7 +202,7 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
         </div>
       </section>
       <Footer />
-  ),
+  )
 };
 
 export default EnterprisePage;

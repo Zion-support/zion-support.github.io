@@ -35,9 +35,9 @@ export interface ErrorBoundaryConfig {/**;}
 /**
    * Fallback UI components;
    */,
-  fallbackComponents: {,}default: React.ComponentType<{error: Error, resetError: () => void ,}>;
-    network: React.ComponentType<{error: Error, resetError: () => void ,}>;
-    notFound: React.ComponentType<{error: Error, resetError: () => void ,}>;
+  fallbackComponents: {}default: React.ComponentType<{error: Error, resetError: () => void }>;
+    network: React.ComponentType<{error: Error, resetError: () => void }>;
+    notFound: React.ComponentType<{error: Error, resetError: () => void }>;
   }
 }
 /**;
@@ -48,7 +48,7 @@ const DEFAULT_ERROR_MESSAGES = {default: 'Something went wrong. Please try again
   notFound: 'The requested resource was not found.',
   timeout: 'Request timed out. Please try again.',
   serverError: 'Server error occurred. Please try again later.',
-  validation: 'Validation error. Please check your input.',}}
+  validation: 'Validation error. Please check your input.'}}
 /**;
  * Get error boundary configuration based on environment;
  */;
@@ -60,16 +60,16 @@ export function getErrorBoundaryConfig(): ErrorBoundaryConfig {return {}
     showErrorOverlay: isDevelopment,
     maxStoredErrors: 50,
     customMessages: DEFAULT_ERROR_MESSAGES,
-    fallbackComponents: {,
+    fallbackComponents: {
       default: DefaultErrorFallback,
       network: NetworkErrorFallback,
-      notFound: NotFoundFallback,},
+      notFound: NotFoundFallback}
   }
 }
 /**;
  * Default error fallback component;
  */;
-function DefaultErrorFallback({error, resetError)}: {error: Error, resetError: () => void ,}) {return(<div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>)
+function DefaultErrorFallback({error, resetError)}: {error: Error, resetError: () => void }) {return(<div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>)
       <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6"></div>
         <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full"></div>
           <svg>
@@ -92,12 +92,12 @@ function DefaultErrorFallback({error, resetError)}: {error: Error, resetError: (
         </div>
       </div>
     </div>
-  ),
+  )
 }
 /**;
  * Network error fallback component;
  */;
-function NetworkErrorFallback({resetError)}: {error: Error, resetError: () => void ,}) {return(<div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>)
+function NetworkErrorFallback({resetError)}: {error: Error, resetError: () => void }) {return(<div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>)
       <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6"></div>
         <div className="flex items-center justify-center w-12 h-12 mx-auto bg-yellow-100 rounded-full"></div>
           <svg>
@@ -135,12 +135,12 @@ function NotFoundFallback(): JSX.Element {return(<div className="min-h-screen fl
         </div>
       </div>
     </div>
-  ),
+  )
 }
 /**;
  * Get error type from error object;
  */;
-export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES {,}
+export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES {}
     if (error.message.includes('Network') || error.message.includes('fetch')) {
     return 'network'}}
   if (error.message.includes('404') || error.message.includes('not found')) {return 'notFound'}}
@@ -152,13 +152,13 @@ export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES 
 /**;
  * Format error for logging;
  */;
-export function formatErrorForLogging(error: Error): Record<string, unknown> {return {message: error.message,}
+export function formatErrorForLogging(error: Error): Record<string, unknown> {return {message: error.message}
     stack: error.stack,
     name: error.name,
     type: getErrorType(error),
     timestamp: new Date().toISOString(),
     userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',
-    url: typeof window !== 'undefined' ? window.location.href : 'unknown',}}
+    url: typeof window !== 'undefined' ? window.location.href : 'unknown'}}
 };
 
 export default getErrorBoundaryConfig;

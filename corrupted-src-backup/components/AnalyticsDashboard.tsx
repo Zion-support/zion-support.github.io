@@ -6,11 +6,11 @@ interface AnalyticsData {
   bounceRate: number
   avgSessionDuration: number
   conversionRate: number,
-  topPages: Array<{,
+  topPages: Array<{
     path: string,
     views: number
   }>;
-  trafficSources: Array<{,
+  trafficSources: Array<{
     source: string
     percentage: number,
 interface AnalyticsData {/* TODO: Fix JSX expression */}

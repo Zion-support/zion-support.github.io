@@ -29,12 +29,12 @@ const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({</SEOHeadPro>title</SEOH
       'htt, p, s: //linked i n.c o m/company/zi o n-te c h-gr o u p' ,
       'htt, p, s: //twitt e r.c o m/ziontechgr o u p' ,
       'htt, p, s: //gith u b.c o m/ZionClo u d s' ],
-    contactPoi, n, t: {,
+    contactPoi, n, t: {
       '@ty, p, e': 'ContactPo, i, n, t',
       telepho, n, e: '+1-5, 5, 5-1, 2, 3-4, 5, 6, 7',
       contactTy, p, e: 'customer, servi, c, e',
       ema, i, l : 'in, f, o@ziontechgro, u, p.co, m'},
-    addre, s, s: {,
+    addre, s, s: {
       '@ty, p, e': 'PostalAddr, e, s, s',
       streetAddre, s, s: '123, Innovation, Driv, e',
       addressLocali, t, y: 'San, Francis, c, o',

@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react';
 interface PerformanceMonitorProps {/* TODO: Fix JSX expression */}
 }
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
-    ,
   children;
   enableReporting = true,
   enableLongTaskMonitoring = true
@@ -54,7 +53,7 @@ const,
     }
     // Monitor long tasks if enabled;
     if (enableLongTaskMonitoring) {
-      const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntryList) => {,
+      const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntryList) => {
         setLongTasks(prev => [...prev, ...entries]);
     if (enableLongTaskMonitoring) {/* TODO: Fix JSX expression */}
 //         });
@@ -102,8 +101,8 @@ const,
     }
   }, [enableReporting]);
   // Development mode: Log performance metrics,
-  useEffect(() => {,
-    if (process.env['NODE_ENV'] === 'development' && Object.keys(metrics).length > 0) {,
+  useEffect(() => {
+    if (process.env['NODE_ENV'] === 'development' && Object.keys(metrics).length > 0) {
   // Development,
   mode: Log performance metrics,
   useEffect(() => {/* TODO: Fix JSX expression */}
@@ -114,9 +113,8 @@ import React, { useEffect, useState, useCallback } from 'react';
 interface PerformanceMonitorProps {/* TODO: Fix JSX expression */}
 }
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
-    ,
   enabled = true;
-  budget = {,
+  budget = {
     maxBundleSize: 500, // 500KB;
     maxImageSize: 100, // 100KB;
     maxFirstLoad: 3000, // 3 seconds;
@@ -154,7 +152,7 @@ const,
     const longTaskObserver = performanceOptimizer.monitorLongTasks((entries) => {
 //       });
     // Monitor Web Vitals;
-    const reportVitals = (newMetrics: WebVitalsMetrics) => {,
+    const reportVitals = (newMetrics: WebVitalsMetrics) => {
   useEffect(() => {/* TODO: Fix JSX expression */}
 //       });
     // Monitor Web Vitals;

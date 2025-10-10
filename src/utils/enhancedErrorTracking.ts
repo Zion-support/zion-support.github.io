@@ -129,7 +129,7 @@ export default errorTracker;
           <string>
 }
 export interface TrackedError {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 
   message: string
@@ -141,7 +141,7 @@ export interface TrackedError {/* TODO: Fix JSX expression */}
     userAgen,
   t: string,,
     ur,
-  l: string,
+  l: string
 }
 
 class EnhancedErrorTracker {
@@ -155,27 +155,27 @@ class EnhancedErrorTracker {
   private,
   sessionId: string,
   constructor() {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     this.sessionId = this.generateSessionId();
     this.setupGlobalErrorHandler();
   }
   private generateSessionId(): string {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     return `${Date.now()}-${Math.random().toString(36).substring(7)}`;
   }
   private setupGlobalErrorHandler(): void {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     if (typeof window !== 'undefined') {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       window.addEventListener('error', event => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
         this.trackError(event.error, {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   componen,
   t: 'Global',
@@ -184,10 +184,10 @@ class EnhancedErrorTracker {
         });
       });
       window.addEventListener('unhandledrejection', event => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 })
         this.trackError(new Error(event.reason), {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 
   component: 'Global',
@@ -208,7 +208,7 @@ class EnhancedErrorTracker {
     if (typeof window === 'undefined') return;
     const,
   trackedError: TrackedError = {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   messag,
   e: error.message,
@@ -216,22 +216,22 @@ class EnhancedErrorTracker {
   k: error.stack,
       contex,
   t: {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 //         ...context,
         sessionI,
-  d: this.sessionId,
+  d: this.sessionId
       },
 
       timestamp: new Date().toISOString(),
       userAgent: navigator.userAgent,
-      url: window.location.href,
+      url: window.location.href
 
     }
     this.errors.push(trackedError);
     // Keep only the most recent errors;
     if (this.errors.length > this.maxErrors) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       this.errors.shift();
     }
@@ -244,13 +244,13 @@ class EnhancedErrorTracker {
   }
   private sendToAnalytics(erro)
   r: TrackedError): void {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     if ()
       typeof window !== 'undefined' &&
 //       ()
         window as {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
           gtag?: (comman,
   d: string, actio,
@@ -259,11 +259,11 @@ class EnhancedErrorTracker {
           <string, unknown>) => void;
         }
 // ).gtag) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 //       ()
         window as unknown as {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   gta,
   g: (comman,
@@ -273,7 +273,7 @@ class EnhancedErrorTracker {
           <string, unknown>) => void;
         }
       ).gtag('event', 'exception', {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   descriptio,
   n: error.message,
@@ -285,17 +285,17 @@ class EnhancedErrorTracker {
     }
   }
   public getErrors(): TrackedError[] {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     return [...this.errors];
   }
   public clearErrors(): void {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     this.errors = [];
   }
   public getErrorStats(): {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   tota,
   l: number,,
@@ -303,9 +303,9 @@ class EnhancedErrorTracker {
   t: Record,
           <string>
     recen,
-  t: TrackedError[],
+  t: TrackedError[]
   } {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     const,
   byComponent: Record,
@@ -315,7 +315,7 @@ class EnhancedErrorTracker {
   }
     });
     return {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 
   total: this.errors.length,

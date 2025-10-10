@@ -1,10 +1,10 @@
 'use client';
-import React, {useState}from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {ChevronDown, ChevronUp}}from 'lucide-react';
-const FAQPage: React.FC = () => {,
+import React, {useState} from 'react';
+import {  Helmet  } from 'react-helmet-async';
+import {  ChevronDown, ChevronUp  } from 'lucide-react';
+const FAQPage: React.FC = () => {
   const [openItems, setOpenItems] = useState<number[]>([]);
-  const toggleItem = (index: number) => {,
+  const toggleItem = (index: number) => {
     setOpenItems(prev =>)
       prev.includes(index) 
         ? prev.filter(item => item !== index)
@@ -26,7 +26,8 @@ const FAQPage: React.FC = () => {,
       answer: "Absolutely! We work with businesses of all sizes, from startups to enterprise organizations. Our micro SAAS solutions are specifically designed for small businesses looking to leverage AI technology."},
     {question: "What industries do you serve?",
       answer: "We serve a wide range of industries including healthcare, finance, e-commerce, manufacturing, education, real estate, legal, and more. Our solutions are tailored to meet industry-specific requirements and compliance standards."}]
-  return(<React.Fragment>)</React.Fragment>
+  return (
+      <React.Fragment></React.Fragment>
       <Helmet />
         <title>FAQ - Zion Tech Group | Frequently Asked Questions</title>
         <meta name="description" content="Find answers to frequently asked questions about our AI and IT services, pricing, implementation, and support." />
@@ -35,7 +36,7 @@ const FAQPage: React.FC = () => {,
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">,</h1>
+            <h1>
               Frequently Asked <span className="text-cyan-400">Questions</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Find answers to common questions about our AI and IT services, pricing, and implementation.</p>
@@ -47,8 +48,7 @@ const FAQPage: React.FC = () => {,
             <div className="space-y-4">{faqs.map((faq, index) => (</div>
                 <div key={index}className="bg-slate-800/50 backdrop-blur-sm rounded-lg border border-cyan-500/20">
                   <button;
-                    onClick={() =>toggleItem(index)</button>}className="w-full px-6 py-4 text-left flex items-center justify-between hover: bg-slate-700/30 transition-colors">,
-                    <h3 className="text-lg font-semibold text-white pr-4">{faq.question}</h3>
+                    onClick={() =>toggleItem(index)</button>}className="w-full px-6 py-4 text-left flex items-center justify-between hover: bg-slate-700/30 transition-colors"><h3 className="text-lg font-semibold text-white pr-4">{faq.question}</h3>
                     {openItems.includes(index) ? (
                       <ChevronUp className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                     ) : (

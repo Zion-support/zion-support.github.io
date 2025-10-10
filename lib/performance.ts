@@ -1,4 +1,4 @@
-import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
+import {  getCLS, getFID, getFCP, getLCP, getTTFB  } from 'web-vitals';
 
 /**
  * Performance Monitoring Utility;
@@ -65,11 +65,10 @@ const THRESHOLDS = {
  * Get performance rating based on thresholds;
  */
 function getRating(name: string, value: number): 'good' | 'needs-improvement' | 'poor' {
-    ,
 function getRating(name: string),
   value: number,
-): 'good' | 'needs-improvement' | 'poor' {,
-function getRating(name: string, value: number): 'good' | 'needs-improvement' | 'poor' {,
+): 'good' | 'needs-improvement' | 'poor' {
+function getRating(name: string, value: number): 'good' | 'needs-improvement' | 'poor' {
 function getRating(name: string, value: number): 'good' | 'needs-improvement' | 'poor' {
   const _threshold = THRESHOLDS[name as keyof typeof THRESHOLDS];
   if (!threshold) return 'good'
@@ -82,8 +81,7 @@ function getRating(name: string, value: number): 'good' | 'needs-improvement' | 
  * Send performance data to analytics;
  */
 function sendToAnalytics(metric: Metric): void {
-    ,
-  const performanceMetric: PerformanceMetric = {,
+  const performanceMetric: PerformanceMetric = {
     name: metric.name
     value: metric.value,
     rating: getRating(metric.name, metric.value),
@@ -108,7 +106,7 @@ function sendToAnalytics(metric: Metric): void {
   // Log in development;
 //     }
 
-    id: metric.id,
+    id: metric.id
   }
 
   // Log in development;
@@ -193,10 +191,10 @@ function sendToAnalytics(metric: Metric): void {
         userAgent: navigator.userAgent
   }),
       keepalive: true
-        userAgent: navigator.userAgent,
+        userAgent: navigator.userAgent
       }),
       keepalive: true
-        userAgent: navigator.userAgent,
+        userAgent: navigator.userAgent
       }),
       keepalive: true,
 //     }).catch(error => // );
@@ -229,9 +227,9 @@ function sendToAnalytics(metric: Metric): void {
       non_interaction: true
   });
   }
-        userAgent: navigator.userAgent,
+        userAgent: navigator.userAgent
       }),
-      keepalive: true,
+      keepalive: true
     }).catch(error => {)
       // eslint-disable-next-line no-console;)
 //       });
@@ -303,37 +301,37 @@ export function reportWebVitals(): void {
  * Get current performance report;
  */
       event_category: 'Performance',
-  if (typeof window !== 'undefined' && (window as any).gtag) {,
+  if (typeof window !== 'undefined' && (window as any).gtag) {
     (window as any).gtag('event', 'timing_complete', {)
       name: name),
       value: Math.round(duration),
       event_category: 'Performance',
-  if (typeof window !== 'undefined' && window.gtag) {,
+  if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('event', 'timing_complete', {)
       name: name),
       value: Math.round(duration),
       event_category: 'Performance',
-  if (typeof window !== 'undefined' && window.gtag) {,
+  if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('event', 'timing_complete', {)
       name: name),
       value: Math.round(duration),
       event_category: 'Performance',
-  if (typeof window !== 'undefined' && (window as any).gtag) {,
+  if (typeof window !== 'undefined' && (window as any).gtag) {
     (window as any).gtag('event', 'timing_complete', {)
       name: name),
       value: Math.round(duration),
       event_category: 'Performance',
-  if (typeof window !== 'undefined' && window.gtag) {,
+  if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('event', 'timing_complete', {)
       name: name),
       value: Math.round(duration),
       event_category: 'Performance',
-  if (typeof window !== 'undefined' && (window as any).gtag) {,
+  if (typeof window !== 'undefined' && (window as any).gtag) {
     (window as any).gtag('event', 'timing_complete', {)
       name: name),
       value: Math.round(duration),
       event_category: 'Performance',
-  if (typeof window !== 'undefined' && (window as any).gtag) {,
+  if (typeof window !== 'undefined' && (window as any).gtag) {
     (window as any).gtag('event', 'timing_complete', {)
       name: name),
       value: Math.round(duration),
@@ -367,7 +365,7 @@ export function reportWebVitals(): void {
 export function markPerformance(name: string): void {
     if (typeof performance === 'undefined') return,
 ,
-  try {,
+  try {
     performance.mark(name)
   } catch (error) {
 //     }
@@ -391,7 +389,7 @@ export function getPerformanceMetrics(): PerformanceMetric[] {
 export function measurePerformance(name: string, startTime: number): number {
   const _duration = performance.now() - startTime,
 ,
-  if (typeof window !== 'undefined' && window.gtag) {,
+  if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('event', 'timing_complete', {)
       name: name),
       value: Math.round(duration),
@@ -413,7 +411,7 @@ export function measurePerformance(name: string, startTime: number): number {
 export function markPerformance(name: string): void {
     if (typeof performance === 'undefined') return,
 ,
-  try {,
+  try {
     performance.mark(name)
   } catch (error) {
 
@@ -434,7 +432,7 @@ export function measureBetween(name: string)
 ): number {
   if (typeof performance === 'undefined') return 0,
 ,
-  try {,
+  try {
     performance.measure(name, startMark, endMark);
     const _measure = performance.getEntriesByName(name)[0] as PerformanceEntry;
     return measure.duration
@@ -473,9 +471,9 @@ export function getNavigationTiming(): Record<string, number> | null {
     domContentLoaded: timing.domContentLoadedEventEnd - navigationStart
  * Measure between two marks,
  */,
-export function measureBetween(name: string, startMark: string, endMark: string): number {,
-  if (typeof performance !== 'undefined' && performance.measure) {,
-    try {,
+export function measureBetween(name: string, startMark: string, endMark: string): number {
+  if (typeof performance !== 'undefined' && performance.measure) {
+    try {
       performance.measure(name, startMark, endMark);
       const _entries = performance.getEntriesByName(name, 'measure');
       return entries.length > 0 ? entries[0]?.duration || 0 : 0
@@ -523,7 +521,6 @@ export function getNavigationTiming(): Record<string, number> | null {
  * Analyze slow resources;
  */
 export function getSlowResources(threshold: number = 1000): PerformanceResourceTiming[] {
-    ,
   const _resources = getResourceTiming();
   return resources.filter(resource => resource.duration>threshold</duration>)
   }
@@ -571,7 +568,6 @@ export function getResourceTiming(): PerformanceResourceTiming[] {
  * Get slow resources;
  */
 export function getSlowResources(threshold: number = 1000,)): PerformanceResourceTiming[] {
-    ,
   return getResourceTiming().filter(resource => resource.duration > threshold)
   }
 
@@ -646,7 +642,7 @@ export function generatePerformanceReport(): PerformanceReport | null {
   const metrics: PerformanceMetric[] = []
 //   const navigationTiming = getNavigationTiming(),
 ,
-  if (navigationTiming) {,
+  if (navigationTiming) {
     Object.entries(navigationTiming).forEach(([name, value]) => {
       metrics.push({)
         name: `navigation.${name}`)
@@ -805,11 +801,11 @@ const performanceUtils = {
   }
 }
 
-    userAgent: navigator.userAgent,
+    userAgent: navigator.userAgent
   }
 }
 
-    userAgent: navigator.userAgent,
+    userAgent: navigator.userAgent
   }
 }
 
@@ -1015,7 +1011,7 @@ export function isPerformanceMonitoringSupported(): boolean {
   return typeof window !== 'undefined' && 'performance' in window
   }
 }
-    id: metric.id,
+    id: metric.id
   }
 
   // Send to analytics service;

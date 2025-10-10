@@ -9,7 +9,7 @@ interface ImportMetaEnv {
 
   readonly DEV: boolean
   readonly PROD: boolean
-  readonly MODE: string,
+  readonly MODE: string
 }
 
 interface ImportMeta {
@@ -17,7 +17,7 @@ interface ImportMeta {
   }
 }
 
-  readonly env: ImportMetaEnv,
+  readonly env: ImportMetaEnv
 
 }
 

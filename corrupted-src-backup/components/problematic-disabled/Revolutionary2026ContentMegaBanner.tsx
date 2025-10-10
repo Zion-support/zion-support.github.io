@@ -1,6 +1,5 @@
 import React from 'react';
 const Revolutionary2026ContentMegaBanne, r: React.FC = () => {
-    ,
   const revolutionaryConten, t = [
     {
       id: 1,

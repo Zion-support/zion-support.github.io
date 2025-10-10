@@ -1027,7 +1027,7 @@ const AIAgentOrchestrationEnterprise202, 5 = () => {/* TODO: Fix JSX expression 
                   Schedule Architecture Review""
                   <ArrowLeft className="w-5 h-5 ml-2 rotate-180 "></ArrowLeft>"
                   <ArrowLeft className="w-5 h-5 ml-2 rotate-180" /></ArrowLeft>
-  ),
+  )
 }
 export default AIAgentOrchestrationEnterprise2025;;
   </div>

@@ -1,30 +1,30 @@
-import React, {useState}from 'react';
-import {Mail, Phone, MapPin, Send, CheckCircle, AlertCircle}}from 'lucide-react';
+import React, {useState} from 'react';
+import {  Mail, Phone, MapPin, Send, CheckCircle, AlertCircle  } from 'lucide-react';
 
-interface FormData {name: string,}
+interface FormData {name: string}
   email: string,
   company: string,
   phone: string,
   service: string,
-  message: string,}interface FormStatus {type: 'idle' | 'loading' | 'success' | 'error';,}
-  message: string,}const [formData, setFormData] = useState<FormData>({name: '',
+  message: string}interface FormStatus {type: 'idle' | 'loading' | 'success' | 'error';}
+  message: string}const [formData, setFormData] = useState<FormData>({name: '',
     email: '',
     company: '',
     phone: '',
     service: '',
-    message: '',})
+    message: ''})
 
   const [status, setStatus] = useState<FormStatus>({type: 'idle',
-    message: '',})
+    message: ''})
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {,
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const {name, value}}= e.target;
     setFormData(prev => ({)
       ...prev,
       [name]: value;}));
   }
 
-  const handleSubmit = async (e: React.FormEvent) => {,
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus({ type: 'loading', message: 'Sending message...' ,)})
 
@@ -33,7 +33,7 @@ interface FormData {name: string,}
 
       setStatus({)
         type: 'success',
-        message: 'Thank you! Your message has been sent successfully. We\'ll get back to you within 24 hours.',})
+        message: 'Thank you! Your message has been sent successfully. We\'ll get back to you within 24 hours.'})
 
       // Reset form;
       setFormData({)
@@ -42,7 +42,7 @@ interface FormData {name: string,}
         company: '',
         phone: '',
         service: '',
-        message: '',})
+        message: ''})
     } catch (error) {setStatus({)
         type: 'error',
         message: 'Sorry, there was an error sending your message. Please try again.'})
@@ -91,7 +91,7 @@ interface FormData {name: string,}
               />
             </div>
 
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-6">,</div>
+          <div>
             <div>
               <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
                 Company;
@@ -152,7 +152,7 @@ interface FormData {name: string,}
         </form>
 
         <div className="mt-8 pt-8 border-t border-gray-200">
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-6 text-center">,</div>
+          <div>
             <div className="flex flex-col items-center space-y-2">
               <div className="p-3 bg-blue-100 rounded-full">
                 <Phone className="h-6 w-6 text-blue-600" />

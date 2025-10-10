@@ -1,5 +1,5 @@
-import { describe, it, expect, beforeEach } from '@jest/globals';
-import {
+import {  describe, it, expect, beforeEach  } from '@jest/globals';
+import { 
   isValidUrl,
   validateURL,
   validateLength,
@@ -12,7 +12,7 @@ import {
   validateRequired,
   validateComposite,
   asyncValidator
-} from '../src/utils/validators';
+ } from '../src/utils/validators';
 
 describe('validation', () => {
   beforeEach(() => {
@@ -143,7 +143,7 @@ describe('Composite Validation', () => {
   test('combines multiple validators successfully', () => {
     const validators = [
       (val: unknown) => validateRequired(val, 'Test'),
-      (val: unknown) => validateLength(val as string, 5, 20, 'Test'),
+      (val: unknown) => validateLength(val as string, 5, 20, 'Test')
     ];
 
     expect(validateComposite('hello world', validators).isValid).toBe(true);
@@ -152,7 +152,7 @@ describe('Composite Validation', () => {
   test('fails on first invalid validator', () => {
     const validators = [
       (val: unknown) => validateRequired(val, 'Test'),
-      (val: unknown) => validateLength(val as string, 10, 20, 'Test'),
+      (val: unknown) => validateLength(val as string, 10, 20, 'Test')
     ];
 
     const result = validateComposite('short', validators);

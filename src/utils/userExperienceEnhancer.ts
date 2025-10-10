@@ -637,7 +637,7 @@ interface UXConfig {
   enableOfflineSupport: boolean;
   enablePushNotifications: boolean
   enableDarkMode: boolean
-  enableAnimations: boolean,
+  enableAnimations: boolean
 }
 
 interface UXMetrics {
@@ -647,7 +647,7 @@ interface UXMetrics {
   bounceRate: number;
   userSatisfaction: number
   accessibilityScore: number
-  performanceScore: number,
+  performanceScore: number
 }
 
 class UserExperienceEnhancer {

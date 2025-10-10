@@ -5,36 +5,36 @@ import React from 'react';
 // ErrorInfo interface removed as it's not used in this hook;
 // Global type definitions for browser events;
 declare global {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   interface Window {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     __REACT_ERROR_HANDLER__?: (erro,
   r: Error, errorInf)
-  o: unknown) => void,
+  o: unknown) => void
   }
 }
 export const _useErrorMonitoring = () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   const { trackError } = useAnalytics();
   const reportError = useCallback()
     (erro)
   r: Error, context?: string) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       trackError(error, context);
     },
 //     [trackError]
   );
   useEffect(() => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     // Global error handler;
 const handleError = (even)
   t: unknown) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       const errorEvent = event as {/* TODO: Fix JSX expression */}
   e: string, error?: Error }
@@ -45,7 +45,7 @@ const handleError = (even)
     // Unhandled promise rejection handler;
 const handleUnhandledRejection = (even)
   t: unknown) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       const rejectionEvent = event as {/* TODO: Fix JSX expression */}
   n: unknown }
@@ -59,7 +59,7 @@ const handleUnhandledRejection = (even)
     const handleReactError = (erro,
   r: Error, errorInf)
   o: unknown) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       const componentStack =
         (errorInfo as { componentStack?: string })?.componentStack || 'unknown';
@@ -72,12 +72,12 @@ const handleUnhandledRejection = (even)
     // Expose React error handler globally for error boundaries;
 //     ()
       window as Window & {/* TODO: Fix JSX expression */}
-  o: unknown) => void,}
+  o: unknown) => void}
       }
     ).__REACT_ERROR_HANDLER__ = handleReactError;
     // Cleanup;
     return () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       window.removeEventListener('error', handleError);
       window.removeEventListener('unhandledrejection', handleUnhandledRejection);
@@ -85,7 +85,7 @@ const handleUnhandledRejection = (even)
     }
   }, [reportError]);
   return {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 //     reportError;
   }

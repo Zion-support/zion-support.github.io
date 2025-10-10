@@ -1,14 +1,14 @@
 'use client';
-import React, {useEffect, useState, useCallback}from 'react';
-interface PerformanceOptimizerProps {children: React.ReactNode,}
-  enableOptimizations?: boolean;}const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
+import React, {useEffect, useState, useCallback} from 'react';
+interface PerformanceOptimizerProps {children: React.ReactNode}
+  enableOptimizations?: boolean;}const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   children,
   enableOptimizations = true;}) => {const [isOptimized, setIsOptimized] = useState(false);
   const [optimizationMetrics, setOptimizationMetrics] = useState({)
     imagesOptimized: 0,
     scriptsOptimized: 0,
     cssOptimized: 0,
-    totalSavings: 0;,})
+    totalSavings: 0;})
   const optimizeImages = useCallback(() => {if (typeof window === 'undefined') return;
     const images = document.querySelectorAll('img');
     let optimizedCount = 0;
@@ -50,7 +50,7 @@ interface PerformanceOptimizerProps {children: React.ReactNode,}
       imagesOptimized,
       scriptsOptimized,
       cssOptimized,
-      totalSavings: imagesOptimized + scriptsOptimized + cssOptimized;,})
+      totalSavings: imagesOptimized + scriptsOptimized + cssOptimized;})
     setIsOptimized(true);
   }, [enableOptimizations, optimizeImages, optimizeScripts, optimizeCSS]);
   useEffect(() => {// Run optimizations after component mount;
@@ -80,7 +80,7 @@ interface PerformanceOptimizerProps {children: React.ReactNode,}
           padding: '10px',
           borderRadius: '5px',
           fontSize: '12px',
-          zIndex: 1000;,}}>
+          zIndex: 1000;}}>
           <div>Images: {optimizationMetrics.imagesOptimized,</div>}</div>
           <div>Scripts: {optimizationMetrics.scriptsOptimized,</div>}</div>
           <div>CSS: {optimizationMetrics.cssOptimized,</div>}</div>

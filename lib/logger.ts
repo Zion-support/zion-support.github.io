@@ -37,7 +37,7 @@ class Logger {/* TODO: Fix JSX expression */}
     return process.env['NODE_ENV'] === 'production' ? LogLevel.INFO : LogLevel.DEBUG;
   }
 
-  private formatMessage(level: string, message: string, ...args: unknown[]): string {,
+  private formatMessage(level: string, message: string, ...args: unknown[]): string {
     const _timestamp = this.config.timestamp ? `[${new Date().toISOString()}]` : '';
   private formatMessage(leve,
   l: string, messag,
@@ -50,33 +50,29 @@ class Logger {/* TODO: Fix JSX expression */}
   }
 
   private shouldLog(level: LogLevel): boolean {
-    ,
     return level >= this.config.level
   }
 
   public debug(message: string, ...args: unknown[]): void {
-    ,
-    if (this.shouldLog(LogLevel.DEBUG)) {,
+    if (this.shouldLog(LogLevel.DEBUG)) {
       //       // )
   }
   }
 
   public info(message: string, ...args: unknown[]): void {
-    ,
-    if (this.shouldLog(LogLevel.INFO)) {,
+    if (this.shouldLog(LogLevel.INFO)) {
       //       )
   }
   }
 
   public warn(message: string, ...args: unknown[]): void {
-    ,
-    if (this.shouldLog(LogLevel.WARN)) {,
+    if (this.shouldLog(LogLevel.WARN)) {
       //       // )
   }
   }
 
-  public error(message: string, error?: Error | any, ...args: unknown[]): void {,
-    if (this.shouldLog(LogLevel.ERROR)) {,
+  public error(message: string, error?: Error | any, ...args: unknown[]): void {
+    if (this.shouldLog(LogLevel.ERROR)) {
       const errorDetails =,
         error instanceof Error ? { message: error.message, stack: error.stack } : error;
       //       // );
@@ -84,11 +80,10 @@ class Logger {/* TODO: Fix JSX expression */}
   }
 
   public setLevel(level: LogLevel): void {
-    ,
     this.config.level = level
   }
 
-  public setPrefix(prefix: string): void {,
+  public setPrefix(prefix: string): void {
     this.config.prefix = prefix;
   private shouldLog(leve)
   l: LogLevel): boolean {/* TODO: Fix JSX expression */}

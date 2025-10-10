@@ -1,7 +1,7 @@
-import { Link } from 'react-router-dom';
-import { ArrowLeft, ArrowRight, Target, CheckCircle, Star } from 'lucide-react';
+import {  Link  } from 'react-router-dom';
+import {  ArrowLeft, ArrowRight, Target, CheckCircle, Star  } from 'lucide-react';
 export default function ServicesAdvertisingPage() {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   return (<div>Coming Soon</div>)
   )
@@ -216,7 +216,7 @@ Ready to Transform Your Advertising?
               className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center" Get Free Assessment
               href="/case-studies" className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
               View Success Stories
-  ),
+  )
 }
 export default ServicesAdvertisingPage;
   </p>

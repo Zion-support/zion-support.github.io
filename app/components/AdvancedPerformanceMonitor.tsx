@@ -1,20 +1,20 @@
 'use client';
-import React, {useEffect, useState, useCallback}from 'react';
-interface PerformanceMetrics {fcp: number | null;,}
+import React, {useEffect, useState, useCallback} from 'react';
+interface PerformanceMetrics {fcp: number | null;}
   lcp: number | null;,
   fid: number | null;,
   cls: number | null;,
   ttfb: number | null,
-  memory: number | null;,}interface PerformanceMonitorProps {onMetricsUpdate?: (metrics: PerformanceMetrics) => void,}
-  enableRealTimeMonitoring?: boolean;}const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({,
+  memory: number | null;}interface PerformanceMonitorProps {onMetricsUpdate?: (metrics: PerformanceMetrics) => void}
+  enableRealTimeMonitoring?: boolean;}const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   onMetricsUpdate,
-  enableRealTimeMonitoring = true,}) => {const [metrics, setMetrics] = useState<PerformanceMetrics>({
+  enableRealTimeMonitoring = true}) => {const [metrics, setMetrics] = useState<PerformanceMetrics>({
     fcp: null,
     lcp: null,
     fid: null,
     cls: null,
     ttfb: null,
-    memory: null,})
+    memory: null})
   const measureWebVitals = useCallback(() => {if (typeof window === 'undefined' || !('performance' in window)) return;
     if (typeof PerformanceObserver === 'undefined') return;
     const observers: PerformanceObserver[] = [],
@@ -42,7 +42,7 @@ interface PerformanceMetrics {fcp: number | null;,}
               const fidEntry = entry as PerformanceEventTiming;
               setMetrics(prev => ({)
                 ...prev,
-                fid: fidEntry.processingStart - fidEntry.startTime,}));
+                fid: fidEntry.processingStart - fidEntry.startTime}));
             }
           })
         })
@@ -77,13 +77,13 @@ interface PerformanceMetrics {fcp: number | null;,}
         : null;
       // Measure Memory Usage;
       const memory =
-        (performance as Performance & { memory?: { usedJSHeapSize: number ,}})
+        (performance as Performance & { memory?: { usedJSHeapSize: number }})
           .memory?.usedJSHeapSize || null;
       setMetrics(prev => ({)
         ...prev,
         fcp,
         ttfb,
-        memory,}));
+        memory}));
     } catch (error) {// eslint-disable-next-line no-console;}// Cleanup observers;
     return () => {observers.forEach(observer => {)
         try {observer.disconnect()}}catch (error) {// eslint-disable-next-line no-console;}})
@@ -97,10 +97,10 @@ interface PerformanceMetrics {fcp: number | null;,}
     if (slowResources.length > 0) {
       // eslint-disable-next-line no-console;
       console.log('Slow resources detected:',)
-        slowResources.map((r: PerformanceResourceTiming) => ({,
+        slowResources.map((r: PerformanceResourceTiming) => ({
           name: r.name,
           duration: r.duration,
-          size: r.transferSize,}))
+          size: r.transferSize}))
       );
     }
   }, []);
@@ -140,7 +140,7 @@ interface PerformanceMetrics {fcp: number | null;,}
     enableRealTimeMonitoring,
     measureWebVitals,
     measureResourceTiming,
-    measureCoreWebVitals,
+    measureCoreWebVitals
   ]);
   useEffect(() => {if (onMetricsUpdate) {
       onMetricsUpdate(metrics)}}, [metrics, onMetricsUpdate]);
@@ -171,8 +171,7 @@ interface PerformanceMetrics {fcp: number | null;,}
         {_recommendations.length > 0 && (
           <div className='mt-2'>
             <h4 className='font-semibold text-xs text-red-600'>
-              Recommendations: </h4>,
-            <ul className='text-xs text-red-600'>
+              Recommendations: </h4><ul className='text-xs text-red-600'>
               {_recommendations.map((rec, index) => (
                 <li key={index}>• {rec}</li>
               ))}

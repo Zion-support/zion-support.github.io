@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
+import {  Helmet  } from 'react-helmet-async';
 interface SEOEnhancerProps {/* TODO: Fix JSX expression */}
 }
-const SEOEnhancer: React.FC<SEOEnhancerProps> = ({,
+const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services. Discover cutting-edge technology solutions for modern businesses.',
   keywords = [
@@ -44,7 +44,7 @@ const,
     url: canonicalUrl || window.location.origin,
     logo: `${window.location.origin}/logo.png`,
     sameAs: ['https://linkedin.com/company/zion-tech-group', 'https: //twitter.com/ziontechgroup']
-    contactPoint: {,
+    contactPoint: {
       '@type': 'ContactPoint',
       telephone: '+1-555-0123',
       contactType: 'customer service',

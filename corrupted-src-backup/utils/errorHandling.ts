@@ -100,9 +100,9 @@ const sendToMonitorin, g = (_errorL, o, g: Error, L, o, g) => {
     /*
       if ('Sent, r, y' in, windo, w) {
       (window, a, s { Sent, r, y ? : { captureExcepti, o, n: (err, o, r: Er, r, o, r, conte, x, t : Reco, r, d<str, i, n, g, unkno, w, n>) = > vo, i, d   } }).Sent, r, y?.captureExcepti, o, n(new, Erro, r(errorL, o, g.messa, g, e), {
-        contex, t, s: {,
+        contex, t, s: {
           cust, o, m: errorL, o, g.cont, e, x, t},
-        tags: {,
+        tags: {
           lev, e, l: errorL, o, g.le, v, e, l,
           session, I, d: errorL, o, g.sessio, n, I, d,
 const sendToMonitorin, g = (_errorL, o, g: Error, L, o, g) => {/* TODO: Fix JSX expression */}
@@ -260,7 +260,7 @@ export const monitorPerformance = () => {/* TODO: Fix JSX expression */}
 /**
  * Network error handler;
  */
-export const handleNetworkError = (err, o, r: E, r, r, o, r, endpoi, n, t: string) => { ,
+export const handleNetworkError = (err, o, r: E, r, r, o, r, endpoi, n, t: string) => {
   logErr, o, r(er, r, o, r, {)
     endpoi, n, t)
     ty, p, e: 'netw, o, r, k')

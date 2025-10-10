@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import {  Helmet  } from 'react-helmet-async';
 interface SEOHeadProps {
     title?: string;
   description?: string;
@@ -170,6 +170,6 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({</SEOHeadProps>title</SEOHeadP
       <meta name="theme-color" content="#00 ffff" media="(prefers-color-scheme: light)" /></meta>
       <meta name="theme-color" content="#0 f172 a" media="(prefers-color-scheme: dark)" /></meta>
     </Helmet>
-  ),
+  )
 }
 export default EnhancedSEOHead;

@@ -37,8 +37,8 @@ export const preloadBanner = (importFn: () => Promise<BannerModule>): void => {
   if (typeof window !== 'undefined') {
     // Preload on idle,
     if ('requestIdleCallback' in window) {
-      requestIdleCallback(() => {,
-        importFn().catch(() => {,
+      requestIdleCallback(() => {
+        importFn().catch(() => {
           // Silently fail for preload;
 export const preloadBanner = (importF)
   n: () => Promise<BannerModule>): void => {/* TODO: Fix JSX expression */}

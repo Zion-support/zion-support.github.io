@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import {  Link  } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 'use client';
@@ -80,10 +80,10 @@ $4}
                     />
                   </div>
     <div>Coming Soon</div>
-  ),
+  )
 }
   const [formData, setFormData] = useState({/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   emai,
   l: '',
@@ -96,18 +96,18 @@ $4}
   const [isLoading, setIsLoading] = useState(false);
   const _handleInputChange = (e: React.ChangeEvent,)
           <HTMLInputElement>) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     const { name, value, type, checked } = e.target;
     setFormData(prev => ({/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 //       ...prev,
       [name]: type === 'checkbox' ? checked : value;)
     }));
   }
   const handleSubmit = async (e: React.FormEvent) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     e.preventDefault();
     setIsLoading(true);
@@ -122,7 +122,7 @@ $4}
   O: Add items
 ],
     {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   ico,
   n: Shield,
@@ -132,7 +132,7 @@ $4}
   n: 'Bank-level security with multi-factor authentication'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   ico,
   n: CheckCircle,
@@ -142,7 +142,7 @@ $4}
   n: 'Round-the-clock support for all your needs'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   ico,
   n: Phone,
@@ -439,7 +439,7 @@ type="submit" disabled={isLoading}
       <Footer />
     </React.Fragment>
     </div>
-  ),
+  )
 }
 export default LoginPage;
   </a>

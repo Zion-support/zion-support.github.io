@@ -47,7 +47,7 @@ $4}
       </div>
 'use client';
 interface ModernLoadingSpinnerProps {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   size?: 'sm' | 'md' | 'lg' | 'xl';
   color?: 'primary' | 'secondary' | 'accent';
@@ -57,7 +57,7 @@ interface ModernLoadingSpinnerProps {/* TODO: Fix JSX expression */}
 const,
   ModernLoadingSpinner: React.FC,
           <ModernLoadingSpinnerProps> = ({/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   size = 'md',
   color = 'primary',
@@ -73,7 +73,7 @@ const,
   l: 'w-16 h-16'
   }
   const colorClasses = {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   primar,
   y: 'text-cyan-400',

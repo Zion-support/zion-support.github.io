@@ -1,9 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import {  Link  } from 'react-router-dom';
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { Code, Zap, BarChart, Target, Users, TrendingUp } from 'lucide-react';
+import {  Code, Zap, BarChart, Target, Users, TrendingUp  } from 'lucide-react';
 const DeveloperToolsPage: React.FC = () => {
   const _devTools = [
     {
@@ -106,14 +106,14 @@ $4}
                 <div className="flex items-center space-x-2">
                   <MapPin className="w-5 h-5" />
     <div>Coming Soon</div>
-  ),
+  )
 }
   const _devTools = [
   // TOD,
   O: Add items
 ],
     {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   titl,
   e: 'AI Code Generator',
@@ -129,7 +129,7 @@ $4}
   e: 'Starting at $99/month'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   titl,
   e: 'API Testing Suite',
@@ -145,7 +145,7 @@ $4}
   e: 'Starting at $149/month'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   titl,
   e: 'Database Management Tool',
@@ -161,7 +161,7 @@ $4}
   e: 'Starting at $199/month'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   titl,
   e: 'DevOps Automation',
@@ -177,7 +177,7 @@ $4}
   e: 'Starting at $299/month'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   titl,
   e: 'Code Review Assistant',
@@ -193,7 +193,7 @@ $4}
   e: 'Starting at $79/month'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   titl,
   e: 'Performance Profiler',
@@ -426,7 +426,7 @@ $4}
       </main>
       <Footer /></Footer>
     </div>
-  ),
+  )
 }
 export default DeveloperToolsPage;
   </a>

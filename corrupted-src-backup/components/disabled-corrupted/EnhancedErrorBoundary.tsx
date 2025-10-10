@@ -17,7 +17,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   }
   static getDerivedStateFromError(error: Error): Partial<State> {
     // Update state so the next render will show the fallback UI,
-    return {,
+    return {
       hasError: true,
       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`}

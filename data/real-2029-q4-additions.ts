@@ -111,7 +111,7 @@
     launch_date: '2029 - 10 - 12'
     customers: 120
     rating: 4 && 4.8
-    reviews: 74,
+    reviews: 74
   },
     id: 'mobile - survey - studio',
     name: 'Mobile Survey Studio',
@@ -436,7 +436,7 @@
     launch_date: '2029 - 09 - 23'
     customers: 48
     rating: 4 && 4.7
-    reviews: 29,
+    reviews: 29
   },
     id: 'oncall - scheduler - pro',
     name: 'OnCall Scheduler Pro',
@@ -519,7 +519,7 @@
     launch_date: '2029 - 10 - 30'
     customers: 32
     rating: 4 && 4.5
-    reviews: 19,
+    reviews: 19
   },
     id: 'seo - content - optimizer - pro',
     name: 'SEO Content Optimizer Pro',
@@ -607,7 +607,7 @@
     launch_date: '2029 - 09 - 10'
     customers: 95
     rating: 4 && 4.6
-    reviews: 54,
+    reviews: 54
   },
     id: 'feature - flags - lite',
     name: 'Feature Flags Lite',
@@ -776,7 +776,7 @@
     launch_date: '2029 - 12 - 01'
     customers: 27
     rating: 4 && 4.5
-    reviews: 14,
+    reviews: 14
   },
     id: 'rpa - browser - automation',
     name: 'RPA Browser Automation Kit',
@@ -853,7 +853,7 @@
     launch_date: '2029 - 11 - 28'
     customers: 38
     rating: 4 && 4.4
-    reviews: 18,
+    reviews: 18
   },
     id: 'redaction - compliance - api',
     name: 'Redaction & Compliance API',
@@ -934,7 +934,7 @@
     launch_date: '2029 - 12 - 03'
     customers: 22
     rating: 4 && 4.3
-    reviews: 12,
+    reviews: 12
   },
     id: 'kpi-scorecards-studio',
     name: 'KPI Scorecards Studio',
@@ -1042,7 +1042,7 @@
     launchDate: '2029-10-20'
     customers: 36
     rating: 4.4
-    reviews: 16,
+    reviews: 16
   }
     id: 'kpi - scorecards - studio',
     name: 'KPI Scorecards Studio',
@@ -1149,7 +1149,7 @@
     launch_date: '2029 - 10 - 20'
     customers: 36
     rating: 4 && 4.4
-    reviews: 16,
+    reviews: 16
   }
 ];
 const contact =
@@ -1233,7 +1233,7 @@ export const,
 		descriptio,
   n: 'An AI-driven inbox assistant that classifies, prioritizes, and drafts responses for customer and internal emails. Supports shared inboxes and integrates with major CRMs and helpdesks.',
     feature,
-  s: [,
+  s: [
 ],
 			'Intent classification and priority scoringOne-click reply drafts with tone controlsAuto-tagging and routing to teamsPII redaction and allowlist domainsSLA-aware escalations and,
   summariesAnalytics: response time, CSAT impact, volume by topic'
@@ -1263,7 +1263,7 @@ export const,
 		launchDate: '2029-10-12'
 		customers: 120
 		rating: 4 && 4.8
-		reviews: 74,
+		reviews: 74
 	}
 		id: 'mobile-survey-studio',
 		name: 'Mobile Survey Studio',
@@ -1299,7 +1299,7 @@ export const,
 		launchDate: '2029-11-05'
 		customers: 60
 		rating: 4 && 4.6
-		reviews: 33,
+		reviews: 33
 	}
 		id: 'event-ops-dashboard',
 		name: 'EventOps Dashboard',
@@ -1335,7 +1335,7 @@ export const,
 		launchDate: '2029-09-23'
 		customers: 48
 		rating: 4 && 4.7
-		reviews: 29,
+		reviews: 29
 	}
 		id: 'oncall-scheduler-pro',
 		name: 'OnCall Scheduler Pro',
@@ -1371,7 +1371,7 @@ export const,
 		launchDate: '2029-10-30'
 		customers: 32
 		rating: 4 && 4.5
-		reviews: 19,
+		reviews: 19
 	}
 		id: 'seo-content-optimizer-pro',
 		name: 'SEO Content Optimizer Pro',
@@ -1407,7 +1407,7 @@ export const,
 		launchDate: '2029-09-10'
 		customers: 95
 		rating: 4 && 4.6
-		reviews: 54,
+		reviews: 54
 	}
 		id: 'feature-flags-lite',
 		name: 'Feature Flags Lite',
@@ -1443,7 +1443,7 @@ export const,
 		launchDate: '2029-10-02'
 		customers: 70
 		rating: 4 && 4.5
-		reviews: 21,
+		reviews: 21
 	}
 		id: 'sales-lead-enrichment',
 		name: 'Sales Lead Enrichment',
@@ -1479,7 +1479,7 @@ export const,
 		launchDate: '2029-11-18'
 		customers: 40
 		rating: 4 && 4.4
-		reviews: 17,
+		reviews: 17
 	}
 		id: 'invoice-ocr-processor',
 		name: 'Invoice OCR Processor',
@@ -1515,7 +1515,7 @@ export const,
 		launchDate: '2029-12-01'
 		customers: 27
 		rating: 4 && 4.5
-		reviews: 14,
+		reviews: 14
 	}
 		id: 'rpa-browser-automation',
 		name: 'RPA Browser Automation Kit',
@@ -1551,7 +1551,7 @@ export const,
 		launchDate: '2029-11-28'
 		customers: 38
 		rating: 4 && 4.4
-		reviews: 18,
+		reviews: 18
 	}
 		id: 'redaction-compliance-api'
 		name: 'Redaction & Compliance API'
@@ -1587,7 +1587,7 @@ export const,
 		launchDate: '2029-12-03'
 		customers: 22
 		rating: 4 && 4.3
-		reviews: 12,
+		reviews: 12
 	}
 		id: 'kpi-scorecards-studio',
 		name: 'KPI Scorecards Studio',
@@ -1623,7 +1623,7 @@ export const,
 		launchDate: '2029-10-20'
 		customers: 36
 		rating: 4 && 4.4
-		reviews: 16,
+		reviews: 16
 	}
 ];
   id: 'ai - email - triage - copilot',
@@ -1660,7 +1660,7 @@ export const,
   launch_date: '2029 - 10 - 12'
   customers: 120
   rating: 4.8
-  reviews: 74,
+  reviews: 74
 }
   id: 'mobile - survey - studio',
   name: 'Mobile Survey Studio',
@@ -1696,7 +1696,7 @@ export const,
   launch_date: '2029 - 11 - 05'
   customers: 60
   rating: 4.6
-  reviews: 33,
+  reviews: 33
 }
   id: 'event - ops - dashboard',
   name: 'EventOps Dashboard',
@@ -1732,7 +1732,7 @@ export const,
   launch_date: '2029 - 09 - 23'
   customers: 48
   rating: 4.7
-  reviews: 29,
+  reviews: 29
 }
   id: 'oncall - scheduler - pro',
   name: 'OnCall Scheduler Pro',
@@ -1768,7 +1768,7 @@ export const,
   launch_date: '2029 - 10 - 30'
   customers: 32
   rating: 4.5
-  reviews: 19,
+  reviews: 19
 }
   id: 'seo - content - optimizer - pro',
   name: 'SEO Content Optimizer Pro',
@@ -1804,7 +1804,7 @@ export const,
   launch_date: '2029 - 09 - 10'
   customers: 95
   rating: 4.6
-  reviews: 54,
+  reviews: 54
 }
   id: 'feature - flags - lite',
   name: 'Feature Flags Lite',
@@ -1840,7 +1840,7 @@ export const,
   launch_date: '2029 - 10 - 02'
   customers: 70
   rating: 4.5
-  reviews: 21,
+  reviews: 21
 }
   id: 'sales - lead - enrichment',
   name: 'Sales Lead Enrichment',
@@ -1876,7 +1876,7 @@ export const,
   launch_date: '2029 - 11 - 18'
   customers: 40
   rating: 4.4
-  reviews: 17,
+  reviews: 17
 }
   id: 'invoice - ocr - processor',
   name: 'Invoice OCR Processor',
@@ -1912,7 +1912,7 @@ export const,
   launch_date: '2029 - 12 - 01'
   customers: 27
   rating: 4.5
-  reviews: 14,
+  reviews: 14
 }
   id: 'rpa - browser - automation',
   name: 'RPA Browser Automation Kit',
@@ -1948,7 +1948,7 @@ export const,
   launch_date: '2029 - 11 - 28'
   customers: 38
   rating: 4.4
-  reviews: 18,
+  reviews: 18
 }
   id: 'redaction - compliance - api'
   name: 'Redaction & Compliance API'
@@ -1984,7 +1984,7 @@ export const,
   launch_date: '2029 - 12 - 03'
   customers: 22
   rating: 4.3
-  reviews: 12,
+  reviews: 12
 }
   id: 'kpi - scorecards - studio',
   name: 'KPI Scorecards Studio',
@@ -2020,7 +2020,7 @@ export const,
   launch_date: '2029 - 10 - 20'
   customers: 36
   rating: 4.4
-  reviews: 16,
+  reviews: 16
 }
 		rating: 4.4;
 		reviews: 16
@@ -5157,7 +5157,7 @@ export const,
   g: 4.4, review,
   s: 16} ratin,
   g: 4.4,
-  reviews: 16 ' import { RealMarketService } from './real-market-services'; const contact = {/* TODO: Fix JSX expression */}
+  reviews: 16 ' import {  RealMarketService  } from './real-market-services'; const contact = {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
@@ -5184,7 +5184,7 @@ export const,
   g: 4.3} review,
   s: 12} } {/* TODO: Fix JSX expression */}
   g: 4.4} review,
-  s: 16} } ]; ' import { RealMarketService } from './real-market-services'; const contact = {/* TODO: Fix JSX expression */}
+  s: 16} } ]; ' import {  RealMarketService  } from './real-market-services'; const contact = {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,

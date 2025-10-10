@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Cloud, Shield, Zap, Target, TrendingUp, CheckCircle, ArrowRight, Star, Award, Globe, Server, Database, Users, Clock, Phone } from 'lucide-react';
+import {  Helmet  } from 'react-helmet-async';
+import {  Cloud, Shield, Zap, Target, TrendingUp, CheckCircle, ArrowRight, Star, Award, Globe, Server, Database, Users, Clock, Phone  } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const,
@@ -393,7 +393,7 @@ const,
         <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg,"
   hover: bg-cyan-600 transition-colors"></a>
           Contact Us
-  ),
+  )
 }
 export default CloudMigrationPage;
 "`

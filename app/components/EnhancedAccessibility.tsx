@@ -1,16 +1,16 @@
 'use client';
-import React, {useEffect, useState}from 'react';
-import {useAnalytics}}from './EnhancedAnalytics';
+import React, {useEffect, useState} from 'react';
+import {  useAnalytics  } from './EnhancedAnalytics';
 
-interface AccessibilitySettings {highContrast: boolean;,}
+interface AccessibilitySettings {highContrast: boolean;}
   reducedMotion: boolean;,
   fontSize: 'small' | 'medium' | 'large',
   screenReader: boolean,
-  keyboardNavigation: boolean;,}interface EnhancedAccessibilityProps {children: React.ReactNode;,}
+  keyboardNavigation: boolean;}interface EnhancedAccessibilityProps {children: React.ReactNode;}
   enableKeyboardNavigation?: boolean;
   enableScreenReaderSupport?: boolean;
   enableHighContrast?: boolean,
-  enableFocusManagement?: boolean;}const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({,
+  enableFocusManagement?: boolean;}const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
   children,
   enableKeyboardNavigation = true,
   enableScreenReaderSupport = true,
@@ -20,7 +20,7 @@ interface AccessibilitySettings {highContrast: boolean;,}
     reducedMotion: false,
     fontSize: 'medium',
     screenReader: false,
-    keyboardNavigation: false;,})
+    keyboardNavigation: false;})
 
   const analytics = useAnalytics();
 
@@ -31,21 +31,21 @@ interface AccessibilitySettings {highContrast: boolean;,}
     setSettings(prev => ({)
       ...prev,
       reducedMotion: prefersReducedMotion,
-      highContrast: prefersHighContrast;,}));
+      highContrast: prefersHighContrast;}));
 
     // Apply initial accessibility settings;
     applyAccessibilitySettings({)
       ...settings,
       reducedMotion: prefersReducedMotion,
-      highContrast: prefersHighContrast;,})
+      highContrast: prefersHighContrast;})
 
     // Track accessibility usage;
     analytics?.track('accessibility_initialized', {)
       reduced_motion: prefersReducedMotion,
-      high_contrast: prefersHighContrast;,})
+      high_contrast: prefersHighContrast;})
   }, []);
 
-  const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {,
+  const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {
     const root = document.documentElement;
     
     // High contrast mode;
@@ -58,7 +58,7 @@ interface AccessibilitySettings {highContrast: boolean;,}
     // Screen reader optimizations;
     if (newSettings.screenReader) {root.classList.add('screen-reader-optimized')}else {root.classList.remove('screen-reader-optimized')}}}
 
-  const updateSettings = (newSettings: Partial<AccessibilitySettings>) => {,
+  const updateSettings = (newSettings: Partial<AccessibilitySettings>) => {
     const updatedSettings = { ...settings, ...newSettings}setSettings(updatedSettings);
     applyAccessibilitySettings(updatedSettings);
     
@@ -68,7 +68,7 @@ interface AccessibilitySettings {highContrast: boolean;,}
   // Keyboard navigation support;
   useEffect(() => {if (!enableKeyboardNavigation) return;
 
-    const handleKeyDown = (event: KeyboardEvent) => {,
+    const handleKeyDown = (event: KeyboardEvent) => {
       // Skip to main content;
       if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
         const skipLink = document.querySelector('a[href="#main-content"]') as HTMLAnchorElement;
@@ -89,14 +89,14 @@ interface AccessibilitySettings {highContrast: boolean;,}
   // Focus management;
   useEffect(() => {if (!enableFocusManagement) return;
 
-    const handleFocusIn = (event: FocusEvent) => {,
+    const handleFocusIn = (event: FocusEvent) => {
       const target = event.target as HTMLElement;
       
       // Ensure focus is visible;
       if (target && target.classList) {
         target.classList.add('focus-visible');}}
 
-    const handleFocusOut = (event: FocusEvent) => {,
+    const handleFocusOut = (event: FocusEvent) => {
       const target = event.target as HTMLElement;
       
       // Remove focus styling;
@@ -110,7 +110,7 @@ interface AccessibilitySettings {highContrast: boolean;,}
       document.removeEventListener('focusout', handleFocusOut)}}, [enableFocusManagement]);
 
   // Screen reader announcements;
-  const announceToScreenReader = (message: string) => {,
+  const announceToScreenReader = (message: string) => {
     if (!enableScreenReaderSupport) return;
     const announcement = document.createElement('div');
     announcement.setAttribute('aria-live', 'polite');

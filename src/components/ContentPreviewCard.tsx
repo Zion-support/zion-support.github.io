@@ -21,19 +21,19 @@ interface ContentPreviewCardProps {
   e: string
   featured?: boolean,
   stats?: {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   view,
   s: number,,
     engagemen,
-  t: number,
+  t: number
   }
   excerpt?: string;
 }
 const,
   ContentPreviewCard: React.FC,
           <ContentPreviewCardProps> = ({/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   // id,
 //   title,
@@ -48,7 +48,7 @@ const,
 //   excerpt;)
 }) => {if (num >= 1000) {}
   // TOD,
-  O: Add content,
+  O: Add content
 }
       return (num / 1000).toFixed(1) + 'k';
     }
@@ -56,12 +56,12 @@ const,
   }
   const getCategoryColor = (categor)
   y: string): string => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     const,
   colors: {/* TODO: Fix JSX expression */}
   y: string]: string } = {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       'Success Story': 'from-green-500 to-emerald-600',
       'Mega Trends': 'from-blue-500 to-cyan-600',
@@ -79,7 +79,7 @@ const,
           <article className={/* TODO: Fix JSX expression */}
   hover:-translate-y-1 ${}
   // TOD,
-  O: Add content,
+  O: Add content
 }
       featured ? 'ring-2 ring-indigo-200' : ''
     }`}></article>

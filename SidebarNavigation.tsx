@@ -1,6 +1,6 @@
-import { X, Home, User, Settings, HelpCircle } from 'lucide-react';
+import {  X, Home, User, Settings, HelpCircle  } from 'lucide-react';
 import React from 'react';
-import { Link } from 'react-router-dom';
+import {  Link  } from 'react-router-dom';
 interface SidebarNavigationProps {
   isOpen: boolean;
   onClose: () => void;
@@ -10,7 +10,7 @@ const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }
     { name: 'Home', href: '/', icon: Home },
     { name: 'About', href: '/about', icon: User },
     { name: 'Services', href: '/services', icon: Settings },
-    { name: 'Contact', href: '/contact', icon: HelpCircle },
+    { name: 'Contact', href: '/contact', icon: HelpCircle }
   ];
   return (
     <React.Fragment>

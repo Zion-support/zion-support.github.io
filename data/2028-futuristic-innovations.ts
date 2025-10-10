@@ -26,10 +26,10 @@ export interface FuturisticInnovation2028 {/* TODO: Fix JSX expression */}
   s: string}
   }
 }
-    address: string,
+    address: string
   }
 export const futuristic2028Services: FuturisticInnovation2028[] = [
-    address: string,
+    address: string
   }
 export const futuristic2028Services: FuturisticInnovation2028[] = [
     id: '2028 - futuristic - innovation',
@@ -100,7 +100,7 @@ export const,
   realImplementation: boolean
   contactInfo: unknown,
     mobile: string, email: string
-    address: string,
+    address: string
   }
 }
 export const futuristic2028 Services: FuturisticInnovation2028[] = [,

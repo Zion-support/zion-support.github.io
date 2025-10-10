@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import {  Link  } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const AiCostOptimizationBreakthrough2026Page: React.FC = () => {
@@ -143,7 +143,7 @@ export default function AICostOptimizationBreakthrough2026() {
           </a>
 href="/services" className="inline-block bg-white text-green-600 px-6 py-3 rounded-lg border-2 border-green-600 hover:bg-green-50 transition-colors">
                   Explore AI Services
-  ),
+  )
 }
 export default AiCostOptimizationBreakthrough2026Page;
 export default AICostOptimizationBreakthrough2026Page;

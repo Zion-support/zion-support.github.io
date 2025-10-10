@@ -8,7 +8,7 @@ export function middleware(request: NextRequest) {
   const _response = NextResponse.next();
 
   // Security Headers;
-  const securityHeaders = {,
+  const securityHeaders = {
     // Prevent XSS attacks;
     'X-Content-Type-Options': 'nosniff',
     'X-Frame-Options': 'DENY',

@@ -13,7 +13,7 @@ export interface RateLimitConfig {
   max: number; // Maximum number of requests per window;
   message?: string; // Custom error message
   skipSuccessfulRequests?: boolean
-  skipFailedRequests?: boolean,
+  skipFailedRequests?: boolean
 }
 interface RequestRecord {
     count: number
@@ -159,7 +159,7 @@ export function getClientIdentifier(request: Request): string {
     this.requests.delete(identifier);
    * Cleanup expired entries;
   private cleanup(): void {for (const [key, record] of this.requests.entries()) {}
-  // TODO: Add content,
+  // TODO: Add content
 }
       if (now > record.resetTime) {
     // TODO: Add content

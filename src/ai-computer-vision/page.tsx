@@ -1,9 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import {  Link  } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { Eye, Camera, Video, Target, Shield, CheckCircle, ArrowRight, Settings } from 'lucide-react';
-import { Target, Shield, Eye,  Camera,  Target,  Shield,  Settings } from 'lucide-react';
+import {  Eye, Camera, Video, Target, Shield, CheckCircle, ArrowRight, Settings  } from 'lucide-react';
+import {  Target, Shield, Eye,  Camera,  Target,  Shield,  Settings  } from 'lucide-react';
 const AIComputerVisionPage: React.FC = () => {
     const features = [],
   return (
@@ -168,7 +168,7 @@ Most Popular;
                       {feature}`
                   className={`block w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}
   // TOD,
-  O: Add content,
+  O: Add content
 }
 //                     plan.popular;
 //                       ? 'cyber-button'
@@ -192,7 +192,7 @@ Ready to See the Future?"
       </main>
       <Footer /></Footer>
     </div>
-  ),
+  )
 }
 export default PagePage;
   </p>

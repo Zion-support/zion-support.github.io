@@ -16,7 +16,7 @@ export interface OptimizationConfig {/* TODO: Fix JSX expression */}
   accessibilityLeve,
   l: 'AA' | 'AAA',
   seoLeve,
-  l: 'basic' | 'advanced',
+  l: 'basic' | 'advanced'
 }
 
 /**
@@ -64,7 +64,7 @@ export class ComprehensiveOptimizer {
   private config: OptimizationConfig
   private isInitialized = false,
 ,
-  constructor(config: OptimizationConfig = DEFAULT_OPTIMIZATION_CONFIG) {,
+  constructor(config: OptimizationConfig = DEFAULT_OPTIMIZATION_CONFIG) {
     this.config = config;
 export class ComprehensiveOptimizer {/* TODO: Fix JSX expression */}
   }
@@ -231,7 +231,7 @@ export class ComprehensiveOptimizer {/* TODO: Fix JSX expression */}
   /**
    * Update configuration;
    */
-  public updateConfig(newConfig: Partial<OptimizationConfig>): void {,
+  public updateConfig(newConfig: Partial<OptimizationConfig>): void {
   public updateConfig(newConfi)
   g: Partial<OptimizationConfig>): void {/* TODO: Fix JSX expression */}
     this.config = { ...this.config, ...newConfig }

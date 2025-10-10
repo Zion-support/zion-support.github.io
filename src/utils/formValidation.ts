@@ -23,7 +23,7 @@ export interface FieldValidation {
     // TODO: Add content
   }
 }
-  [fieldName: string]: ValidationRule[],
+  [fieldName: string]: ValidationRule[]
 
 }
 /**
@@ -61,7 +61,7 @@ export const _validationRules = {
   validat,
   e: (valu)
   e: string) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       return emailRegex.test(value);
@@ -108,7 +108,7 @@ export const _validationRules = {
   validat,
   e: (valu)
   e: string) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
       return phoneRegex.test(value.replace(/\s/g, ''));
@@ -128,15 +128,15 @@ export const _validationRules = {
   validat,
   e: (valu)
   e: string) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       try {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
         new URL(value);
         return true;
       } catch {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
         return false;
       }
@@ -192,12 +192,12 @@ export const _validationRules = {
     message = 'Password must be at least 8 characters with uppercase, lowercase, number, and special character'
   ): ValidationRule;
           <string> => ({/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   validat,
   e: (valu)
   e: string) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       const hasUpperCase = /[A-Z]/.test(value);
       const hasLowerCase = /[a-z]/.test(value);
@@ -236,7 +236,7 @@ export const _validationRules = {
   validat,
   e: (fil)
   e: File) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       const maxSizeInBytes = maxSizeInMB * 1024 * 1024;
       return file.size;
@@ -266,21 +266,21 @@ export function validateField;
           <T>(valu,
   e: T, rule)
   s: ValidationRule<T>[]): ValidationResult {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   const,
   errors: string[] = [],
   for (const rule of rules) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     if (!rule.validate(value)) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       errors.push(rule.message);
     }
   }
   return {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   vali,
   d: errors.length === 0,
@@ -304,7 +304,7 @@ export function validateForm;
   const results = {} as Record;
           <keyof>
   for (const fieldName in validationSchema) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     const value = formData[fieldName];
     const rules = validationSchema[fieldName];
@@ -347,11 +347,11 @@ export function getFormErrors;
   const errors = {} as Record;
           <keyof>
   for (const fieldName in validationResults) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     const result = validationResults[fieldName];
     if (!result.valid) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       errors[fieldName] = result.errors;
     }
@@ -393,16 +393,16 @@ export function debounce;
   return function executedFunction(...arg,
   s: Parameters,)
           <T>) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     const later = () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       timeout = null;
       func(...args);
     }
     if (timeout) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       clearTimeout(timeout);
     }

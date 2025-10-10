@@ -7,7 +7,7 @@
  * Real-time application monitoring, performance tracking, and error reporting;
  */
 export interface PerformanceMetrics {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   lcp?: number;
   fid?: number;
@@ -17,7 +17,7 @@ export interface PerformanceMetrics {/* TODO: Fix JSX expression */}
   inp?: number;
 }
 export interface ErrorReport {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   messag,
   e: string
@@ -30,7 +30,7 @@ export interface ErrorReport {/* TODO: Fix JSX expression */}
     ur,
   l: string,
 class MonitoringService {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 
 class MonitoringService {

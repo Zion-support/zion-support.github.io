@@ -12,10 +12,10 @@ export interface AdditionalRealService {id: string;
     mobile: string}
     email: string}
 }
-    address: string,
+    address: string
   }
 export const additionalEnhancedServices: AdditionalRealService[] = [
-    address: string,
+    address: string
   }
 export const additionalEnhancedServices: AdditionalRealService[] = [
     id: 'ai - automation - suite',
@@ -81,7 +81,7 @@ export const,
   contactInfo: unknown;
     mobile: string
     email: string
-    address: string,
+    address: string
   }
 }
 }
@@ -585,7 +585,7 @@ export const,
     launchDate: '2025-04-10'
     customers: 35
     rating: 4.6
-    reviews: 24,
+    reviews: 24
   },
     id: 'churn-risk-alerts'
     name: 'Churn Risk Alerts for Slack'
@@ -1913,7 +1913,7 @@ export const,
     launchDate: '2025-02-01'
     customers: 33
     rating: 4.5
-    reviews: 11,
+    reviews: 11
   },
     id: 'status-pages-slo'
     name: 'Status Pages & SLO'
@@ -3685,7 +3685,7 @@ export const,
     launchDate: '2025-02-03'
     customers: 15
     rating: 4.5
-    reviews: 7,
+    reviews: 7
   },
     id: 'data-masking-proxy'
     name: 'Data Masking Proxy'
@@ -3889,7 +3889,7 @@ export const,
     launchDate: '2025-02-04'
     customers: 28
     rating: 4.6
-    reviews: 13,
+    reviews: 13
   },
     id: 'compliance-policy-as-code'
     name: 'Compliance Policy as Code'
@@ -4689,7 +4689,7 @@ export const,
     launchDate: '2025-01-30'
     customers: 22
     rating: 4.3
-    reviews: 13,
+    reviews: 13
   },
     id: 'quantum-ai-fusion-platform'
     name: 'Quantum AI Fusion Platform'
@@ -5390,7 +5390,7 @@ export const,
     launchDate: '2025-02-20'
     customers: 52
     rating: 4.7
-    reviews: 38,
+    reviews: 38
   },
     id: 'quantum-cryptography-suite'
     name: 'Quantum Cryptography Suite'
@@ -6388,7 +6388,7 @@ export const,
     launchDate: '2025-07-30'
     customers: 22
     rating: 4.6
-    reviews: 16,
+    reviews: 16
   },
     id: 'quantum-cybersecurity-suite'
     name: 'Quantum Cybersecurity Suite'

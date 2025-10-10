@@ -163,7 +163,7 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 01 - 15'
     customers: 25
     rating: 5 && 5.0
-    reviews: 12,
+    reviews: 12
   },
       'Multi-satellite coordination',
     id: 'satellite - constellation - management',
@@ -312,7 +312,7 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 02 - 01'
     customers: 40
     rating: 4 && 4.9
-    reviews: 20,
+    reviews: 20
   },
       'Real-time debris tracking',
     id: 'space - debris - monitoring - system',
@@ -461,7 +461,7 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 02 - 10'
     customers: 60
     rating: 4 && 4.9
-    reviews: 30,
+    reviews: 30
   },
     id: 'space - weather - forecasting',
     name: 'Space Weather Forecasting & Alert System',
@@ -608,7 +608,7 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 02 - 15'
     customers: 80
     rating: 4 && 4.8
-    reviews: 40,
+    reviews: 40
   },
     id: 'orbital - launch - coordination',
     name: 'Orbital Launch Coordination Platform',
@@ -755,7 +755,7 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 02 - 20'
     customers: 35
     rating: 4 && 4.9
-    reviews: 18,
+    reviews: 18
   },
     id: 'ground - station - network - management',
     name: 'Ground Station Network Management System',
@@ -902,7 +902,7 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 02 - 25'
     customers: 50
     rating: 4 && 4.8
-    reviews: 25,
+    reviews: 25
   },
     id: 'space - research - data - platform',
     name: 'Space Research Data & Analytics Platform',
@@ -1049,7 +1049,7 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 03 - 01'
     customers: 200
     rating: 4 && 4.9
-    reviews: 100,
+    reviews: 100
   },
     id: 'space - commerce - platform',
     name: 'Space Commerce & Trading Platform',
@@ -1196,7 +1196,7 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 03 - 05'
     customers: 30
     rating: 5 && 5.0
-    reviews: 15,
+    reviews: 15
   },
     id: 'space - education - platform'
     name: 'Space Education & Training Platform',
@@ -1343,7 +1343,7 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 03 - 10'
     customers: 500
     rating: 4 && 4.9
-    reviews: 250,
+    reviews: 250
   }];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
   id: string, name: string,
@@ -1362,12 +1362,12 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
   contactInfo: unknown,
     mobile: string, email: string
     address: string
-    website: string,
+    website: string
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number
   rating: number
-  reviews: number,
+  reviews: number
 }
 export const spaceTechServices: SpaceTechService[] = [,
     id: 'space-mission-management-platform', name: 'Space Mission Management Platform',
@@ -1576,7 +1576,7 @@ realImplementation: true,
     launchDate: '2024-01-15'
     customers: 25
     rating: 5.0
-    reviews: 12,
+    reviews: 12
   }
     id: 'satellite-constellation-management',
     name: 'Satellite Constellation Management System',
@@ -2074,7 +2074,7 @@ realImplementation: true,
     launchDate: '2024-03-10'
     customers: 500
     rating: 4.9
-    reviews: 250,
+    reviews: 250
   }];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -2153,7 +2153,7 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
   launchDate: string;
   customers: number
   rating: number
-  reviews: number,
+  reviews: number
 }
 export const spaceTechServices: SpaceTechService[] = [;
   {

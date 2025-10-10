@@ -32,7 +32,7 @@ class EnvironmentConfig {
   private static instance: EnvironmentConfig
   private config: EnvConfig,
 
-  private constructor() {,
+  private constructor() {
     this.config = this.loadConfig();
     this.validate();
 interface EnvConfig {/* TODO: Fix JSX expression */}
@@ -62,7 +62,6 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
   }
 
   private getNumberEnvVar(key: string, defaultValue: number): number {
-    ,
     const _value = this.getEnvVar(key);
     //     const parsed = parseInt(value, 10);
     return isNaN(parsed) ? defaultValue : parsed
@@ -147,8 +146,7 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
   }
 
   private isValidUrl(url: string): boolean {
-    ,
-    try {,
+    try {
       new URL(url);
       return true
   } catch {

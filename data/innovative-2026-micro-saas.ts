@@ -11,7 +11,7 @@
   contactInfo: unknown
     mobile: string
     email: string,
-export interface Innovative2026MicroSaas {,
+export interface Innovative2026MicroSaas {
     address: string}
   i,
   d: string,
@@ -75,7 +75,7 @@ export interface Innovative2026MicroSaas {/* TODO: Fix JSX expression */}
   realImplementation: boolean
   contactInfo: unknown,
     mobile: string, email: string
-    address: string,
+    address: string
   }
 }
 export const innovative2026 MicroSaasServices: Innovative2026 MicroSaas[] = [,

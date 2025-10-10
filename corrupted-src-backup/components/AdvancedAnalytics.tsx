@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 interface AdvancedAnalyticsProps {/* TODO: Fix JSX expression */}
 }
-const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({,
+const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
   enableConversionTracking = true;
   enablePerformanceTracking = true,
   enableErrorTracking = true}) => {

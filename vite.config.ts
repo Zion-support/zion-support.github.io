@@ -1,6 +1,6 @@
-import { defineConfig } from 'vite';
+import {  defineConfig  } from 'vite';
 import react from '@vitejs/plugin-react';
-import { resolve } from 'path';
+import {  resolve  } from 'path';
 
 export default defineConfig({
   plugins: [react()],
@@ -84,7 +84,7 @@ export default defineConfig({
         drop_console: true,
         drop_debugger: true,
         pure_funcs: ['console.log', 'console.info', 'console.debug'],
-        passes: 2,
+        passes: 2
       },
       mangle: {
         safari10: true,
@@ -100,7 +100,7 @@ export default defineConfig({
     chunkSizeWarningLimit: 500,
     reportCompressedSize: true,
     cssCodeSplit: true,
-    assetsInlineLimit: 4096,
+    assetsInlineLimit: 4096
   },
   server: {
     port: 3000,

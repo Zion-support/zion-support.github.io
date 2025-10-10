@@ -20,7 +20,7 @@ export interface BlogPost {/* TODO: Fix JSX expression */}
  * October 2025 Breakthrough Content;
  */
 export const october2025Breakthroughs: BlogPost[] = [,
-  {,
+  {
     slug: 'ai-2025-oct-01-neural-architecture-evolution-breakthrough',
     title: 'Neural Architecture Evolution 2025',
     description:,
@@ -139,7 +139,7 @@ export const,
 /**
  * Helper functions,
  */,
-export function getFeaturedPosts(): BlogPost[] {,
+export function getFeaturedPosts(): BlogPost[] {
   return allBlogPosts.filter(post => post.featured);
  */
 export function getFeaturedPosts(): BlogPost[] {/* TODO: Fix JSX expression */}

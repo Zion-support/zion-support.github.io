@@ -1,6 +1,6 @@
 import type { Config } from 'tailwindcss';
 
-const config: Config = {,
+const config: Config = {
   content: [,
     './app/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -17,12 +17,12 @@ const config: Config = {,
           orange: '#f59e0b',
           red: '#ef4444',
           yellow: '#eab308'},
-        dark: {,
+        dark: {
           bg: '#0a0a0a',
           darker: '#050505',
           card: '#1 a1 a1 a',
           border: '#2 a2 a2 a'}},
-      fontFamily: {,
+      fontFamily: {
         orbitron: ['Orbitron', 'monospace'],
         rajdhani: ['Rajdhani', 'sans-serif'],
         exo: ['Exo 2', 'sans-serif'],
@@ -36,14 +36,14 @@ const config: Config = {,
           900: '#0f172a'}},
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif']},
-      animation: {,
+      animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',
         'slide-up': 'slideUp 0.3s ease-out'},
-      keyframes: {,
-        fadeIn: {,
+      keyframes: {
+        fadeIn: {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' }},
-        slideUp: {,
+        slideUp: {
           '0%': { transform: 'translateY(20px)', opacity: '0' },
         slideUp: {
           '0%': { transform: 'translateY(10px)', opacity: '0' },

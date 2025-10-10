@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import {  Link  } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { MessageSquare, Brain, FileText, Globe, CheckCircle, Star,  MessageSquare,  Brain,  Globe } from 'lucide-react';
+import {  MessageSquare, Brain, FileText, Globe, CheckCircle, Star,  MessageSquare,  Brain,  Globe  } from 'lucide-react';
 const AINLPPage: React.FC = () => {
     const features = [],
   return (

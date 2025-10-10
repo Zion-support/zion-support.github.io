@@ -1115,7 +1115,7 @@ export const,
     setupTime: '2 hours',
     contactInfo;
   }
-];import { ServiceVariant  } from "../types/service-variants"
+];import {  ServiceVariant   } from "../types/service-variants"
 export interface MarketValidatedService {id: 'vector - search - starter'
     name: 'Vector Search Starter',
     tagline: 'Deploy a production - grade vector database and APIs',
@@ -1152,9 +1152,9 @@ export interface MarketValidatedService {id: 'vector - search - starter'
   s: 14,
     setupTim,
   e: '2 hours'
-    contactInfo,
+    contactInfo
   }
-];import { ServiceVariant } from '../types/service-variants';
+];import {  ServiceVariant  } from '../types/service-variants';
 export interface MarketValidatedService {/* TODO: Fix JSX expression */}
     contact_info}
   },
@@ -1185,7 +1185,7 @@ export interface MarketValidatedService {}
     setupTime: '2 hours',
     contactInfo}
   }
-];import { ServiceVariant  } from "../types/service-variants"
+];import {  ServiceVariant   } from "../types/service-variants"
 export interface MarketValidatedService {
 	id: string;
 	name: string;
@@ -1234,7 +1234,7 @@ export interface MarketValidatedService {}
   e: '2 hours',
     contactInfo}
   }
-];import { ServiceVariant } from '../types/service-variants';
+];import {  ServiceVariant  } from '../types/service-variants';
 export interface MarketValidatedService {/* TODO: Fix JSX expression */}
   s: string}
 		website?: string}
@@ -1243,7 +1243,7 @@ export interface MarketValidatedService {/* TODO: Fix JSX expression */}
 export const,
   marketValidatedServices: MarketValidatedService[] = [
 	// AI and Assistants,
-	{,
+	{
 		id: "ai-assistant-pro",
 		name: "AI Assistant Pro",
 		tagline: "Branded copilot with RAG, guardrails, and analytics",
@@ -1578,7 +1578,7 @@ export const,
 		rating: 4 && 4.5
 		customers: 420,
 		trialDays: 14}
-];import { ServiceVariant   } from '../types / service - variants'
+];import {  ServiceVariant    } from '../types / service - variants'
 export interface MarketValidatedService {id: string;
 name: string;
 tagline: string;
@@ -1663,7 +1663,7 @@ address: "364 E Main St STE 1008 Middletown DE 19709",
 },
 	{/* TODO: Fix JSX expression */}
   s: 14}
-];import { ServiceVariant } from '../types / service - variants';
+];import {  ServiceVariant  } from '../types / service - variants';
 export interface MarketValidatedService {/* TODO: Fix JSX expression */}
   l: string}
   addres,
@@ -2883,7 +2883,7 @@ i,
   g: 4.6,
   customers: 410,
   trialDays: 14' setupTim,"
-  e: '2 hours' contactInfo } ];import { ServiceVariant } from "../types/service-variants" export interface MarketValidatedService ' i,
+  e: '2 hours' contactInfo } ];import {  ServiceVariant  } from "../types/service-variants" export interface MarketValidatedService ' i,
   d: 'vector - search - starter',' nam,
   e: 'Vector Search Starter',' taglin,
   e: 'Deploy a production - grade vector database and APIs',' pric,
@@ -2907,7 +2907,7 @@ i,
   s: 14,' setup_tim,
   e: '2 hours', contact_info}, export interface MarketValidatedService export interface MarketValidatedService { export interface MarketValidatedService export interface MarketValidatedService {} trialDay,
   s: 14,' setupTim,"
-  e: '2 hours', contactInfo} } ];import { ServiceVariant } from "../types/service-variants" export interface MarketValidatedService {/* TODO: Fix JSX expression */}
+  e: '2 hours', contactInfo} } ];import {  ServiceVariant  } from "../types/service-variants" export interface MarketValidatedService {/* TODO: Fix JSX expression */}
   s: string} website?: string} } } export const,
   marketValidatedServices: MarketValidatedService[] = [; // AI and Assistants, {/* TODO: Fix JSX expression */}"
   e: "30 minutes", contactInfo}} }, {/* TODO: Fix JSX expression */}"
@@ -2928,7 +2928,7 @@ i,
   e: "1 day", contactInfo}} }, {/* TODO: Fix JSX expression */}"
   e: "2 hours", contactInfo}} }, // Developer and Ops Utilities; {/* TODO: Fix JSX expression */}"
   e: "10 minutes", contactInfo}} }, {/* TODO: Fix JSX expression */}
-  s: 14} ' ];import { ServiceVariant } from '../types / service - variants' export interface MarketValidatedService,
+  s: 14} ' ];import {  ServiceVariant  } from '../types / service - variants' export interface MarketValidatedService,
   id: string, nam,
   e: string, taglin,
   e: string, pric,

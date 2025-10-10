@@ -692,7 +692,7 @@ export const cuttingEdgeMicroSaasServices2025 = [{/* TODO: Fix JSX expression */
   s: ['Bloomberg TerminalReuters EikonTrading PlatformsRisk Management SystemsFinancial Data Providers']
 compliance: ['Basel IIISolvency IIDodd-FrankFinancial RegulationsRisk Management Standards'],
 export const cuttingEdgeMicroSaasServices2025 = [,
-  {,
+  {
     id: 'customer-success-ai-pro',
     name: 'Customer Success AI Pro',,
   description: 'Intelligent customer success platform that uses AI to predict customer churn, optimize engagement strategies, and maximize customer lifetime value through predictive analytics.';
@@ -701,7 +701,7 @@ export const cuttingEdgeMicroSaasServices2025 = [,
       'Performance metrics and reportingCustom AI model training'
     ],
     pricing: {
-      starter: {,
+      starter: {
         price: 199,
         period: 'month'}
         features: ['Up to 1}000 customersBasic AI featuresEmail support'];
@@ -729,7 +729,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
     category: 'Customer Success'
     tags: ['Customer SuccessAIChurn PredictionEngagementAnalytics']
     website: 'https://ziontechgroup.com/customer-success-ai-pro',
-    contact: {,
+    contact: {
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com'}
     marketSize: '$11.8 B',
@@ -772,7 +772,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
       'Multi-modal transportation planningReal-time collaboration tools'
     ],
     pricing: {
-      starter: {,
+      starter: {
         price: 299,
         period: 'month'}
         features: ['Basic optimization featuresStandard analyticsEmail support']}
@@ -797,7 +797,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
     category: 'Supply Chain'
     tags: ['Supply ChainQuantum ComputingLogisticsOptimizationAnalytics']
     website: 'https://ziontechgroup.com/quantum-supply-chain-optimizer',
-    contact: {,
+    contact: {
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com'}
     marketSize: '$15.4 B',
@@ -840,7 +840,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
       'Mobile and web applicationsWhite-label solutions'
     ],
     pricing: {
-      starter: {,
+      starter: {
         price: 149,
         period: 'month'}
         features: ['Up to 1}000 verificationsBasic verification featuresEmail support'];
@@ -865,7 +865,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
     category: 'Identity Verification'
     tags: ['Identity VerificationBlockchainBiometricsSecurityCompliance']
     website: 'https://ziontechgroup.com/blockid-verify-pro',
-    contact: {,
+    contact: {
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com'}
     marketSize: '$13.7 B',
@@ -908,7 +908,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
       'Integration with HR systemsPredictive modeling capabilities'
     ],
     pricing: {
-      starter: {,
+      starter: {
         price: 249,
         period: 'month'}
         features: ['Up to 500 employeesBasic analytics featuresEmail support']}
@@ -933,7 +933,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
     category: 'HR Analytics'
     tags: ['HR AnalyticsAIPerformance ManagementEmployee EngagementPredictive Analytics']
     website: 'https://ziontechgroup.com/hr-analytics-ai-suite',
-    contact: {,
+    contact: {
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com'}
     marketSize: '$9.8 B',
@@ -976,7 +976,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
       'Performance attribution analysisComprehensive risk reporting'
     ],
     pricing: {
-      starter: {,
+      starter: {
         price: 399,
         period: 'month'}
         features: ['Basic risk managementStandard analyticsEmail support']}
@@ -1001,7 +1001,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
     category: 'Financial Risk Management'
     tags: ['Risk ManagementQuantum ComputingFinancial AnalyticsPortfolio OptimizationCompliance']
     website: 'https://ziontechgroup.com/quantum-risk-financial-manager',
-    contact: {,
+    contact: {
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com'}
     marketSize: '$28.9 B',

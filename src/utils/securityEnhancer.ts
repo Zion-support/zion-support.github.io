@@ -7,7 +7,7 @@ interface SecurityConfig {
   enableHTTPS: boolean;
   enableXSSProtection: boolean
   enableCSRFProtection: boolean
-  enableContentSecurityPolicy: boolean,
+  enableContentSecurityPolicy: boolean
 }
 
 class SecurityEnhancer {

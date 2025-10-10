@@ -229,7 +229,7 @@ export default function ContactSection() {
         </div>
       </div>
     </section>
-  ),
+  )
 }
   </button>
   </textarea>

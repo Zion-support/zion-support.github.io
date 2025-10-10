@@ -1,6 +1,6 @@
 'use client';
 import React, { useEffect, useCallback, useRef } from 'react';
-import { Helmet } from 'react-helmet-async';
+import {  Helmet  } from 'react-helmet-async';
 interface SEOData {
  title: string;
  description: string;
@@ -24,7 +24,7 @@ interface SEOData {/* TODO: Fix JSX expression */}
 }
 interface AdvancedSEOOptimizerProps {/* TODO: Fix JSX expression */}
 }
-const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({,
+const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
  seoData;
  enableStructuredData = true,
  enableOpenGraph = true,
@@ -46,7 +46,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({,
  addressRegion: 'DE',
  postalCode: '19709',
  addressCountry: 'US'},
- contactPoint: {,
+ contactPoint: {
  '@type': 'ContactPoint',
  telephone: '+1-302-464-0950',
  contactType: 'customer service',
@@ -100,22 +100,22 @@ const,
  '@context': 'https: //schema.org',
  '@type': 'FAQPage',
  mainEntity: [
- {,
+ {
  '@type': 'Question',
  name: 'What services does Zion Tech Group offer?',
- acceptedAnswer: {,
+ acceptedAnswer: {
  '@type': 'Answer',
  text: 'Zion Tech Group offers comprehensive AI-powered enterprise solutions, digital transformation services, automation, cloud services, AI consulting, business intelligence, and machine learning solutions.'}},
  {
  '@type': 'Question',
  name: 'How can I contact Zion Tech Group?',
- acceptedAnswer: {,
+ acceptedAnswer: {
  '@type': 'Answer',
  text: 'You can contact us at kleber@ziontechgroup.com or call +1 302 464 0950. Our office is located at 364 E Main St STE 1008, Middletown DE 19709.'}},
  {
  '@type': 'Question',
  name: 'What makes Zion Tech Group different?',
- acceptedAnswer: {,
+ acceptedAnswer: {
  '@type': 'Answer',
  text: 'We specialize in cutting-edge AI micro SaaS services, cloud automation, and provide comprehensive digital transformation solutions with a focus on enterprise-grade security and performance.',
  const generateFAQStructuredData = useCallback(() => {/* TODO: Fix JSX expression */}
@@ -148,7 +148,7 @@ const,
  canonicalLink.setAttribute('href', seoData.canonicalUrl);
  }
  }, [seoData]);
- // const _addMetaTag = (name: string, content: string, attribute: string = 'name') => {,
+ // const _addMetaTag = (name: string, content: string, attribute: string = 'name') => {
  // const metaTag = document.createElement('meta');
  // metaTag.setAttribute(attribute, name);
  // metaTag.content = content;
@@ -157,7 +157,7 @@ const,
  // const _updateCanonicalUrl = (url: string) => {
  // let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
  // ,
- // if (canonicalLink) {,
+ // if (canonicalLink) {
  // canonicalLink.href = url;
  // } else {
  // canonicalLink = document.createElement('link');
@@ -197,8 +197,8 @@ const,
  document.head.appendChild(script);
  structuredDataRef.current = script;
  };
- const _trackPageView = (config: SEOData) => {,
- if (typeof window !== 'undefined' && 'gtag' in window) {,
+ const _trackPageView = (config: SEOData) => {
+ if (typeof window !== 'undefined' && 'gtag' in window) {
  (window as unknown as { gtag: (command: string, targetId: string, config: Record<string, unknown>) => void }).gtag('config', 'GA_MEASUREMENT_ID', {)
  page_title: config.title),
  page_location: config.canonicalUrl),

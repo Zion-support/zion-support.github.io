@@ -27,7 +27,7 @@
   contactInfo: unknown
     mobile: string
     email: string,
-export interface EnterpriseItService2029 {,
+export interface EnterpriseItService2029 {
     address: string}
   i,
   d: string,
@@ -123,7 +123,7 @@ export interface EnterpriseItService2029 {/* TODO: Fix JSX expression */}
   realImplementation: boolean
   contactInfo: unknown,
     mobile: string, email: string
-    address: string,
+    address: string
   }
 }
 export const enterpriseITServices2029: EnterpriseItService2029[] = [,

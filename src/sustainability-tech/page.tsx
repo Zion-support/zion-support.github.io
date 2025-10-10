@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import {  Link  } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { Leaf, Target, Zap, Settings, CheckCircle, Star,  Leaf,  Target,  Settings } from 'lucide-react';
+import {  Leaf, Target, Zap, Settings, CheckCircle, Star,  Leaf,  Target,  Settings  } from 'lucide-react';
 const SustainabilityTechPage: React.FC = () => {
     const features = [],
   return (

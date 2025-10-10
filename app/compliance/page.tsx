@@ -1,22 +1,22 @@
 'use client';
 import React from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, FileCheck, Lock, Award}}from 'lucide-react';
-const CompliancePage: React.FC = () => {,
+import {  Helmet  } from 'react-helmet-async';
+import {  CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, FileCheck, Lock, Award  } from 'lucide-react';
+const CompliancePage: React.FC = () => {
   const features = [
     {
       icon: FileCheck,
       title: 'Compliance Management',
-      description: 'Comprehensive compliance management solutions for various industry standards',},
+      description: 'Comprehensive compliance management solutions for various industry standards'},
     {icon: Lock,
       title: 'Security Compliance',
-      description: 'Ensure your systems meet the highest security and compliance standards',},
+      description: 'Ensure your systems meet the highest security and compliance standards'},
     {icon: Award,
       title: 'Certification Support',
-      description: 'Get support for achieving and maintaining industry certifications',},
+      description: 'Get support for achieving and maintaining industry certifications'},
     {icon: Shield,
       title: 'Audit Readiness',
-      description: 'Stay audit-ready with continuous compliance monitoring and reporting',}];
+      description: 'Stay audit-ready with continuous compliance monitoring and reporting'}];
   const benefits = [
     'Advanced compliance technology integration',
     'Real-time compliance monitoring',
@@ -43,9 +43,9 @@ const CompliancePage: React.FC = () => {,
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">Our compliance solutions deliver unmatched performance, security, and scalability.</p>
           </p>
         </div>
-        <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8 mb-16">,</div>
+        <div>
           {features.map((feature, index) => (
-            <div key={index}className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover: bg-white/20 transition-all duration-300">,</div>
+            <div>
               <feature.icon className="h-12 w-12 text-purple-400 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
               <p className="text-gray-300">{feature.description</p>}</p>
@@ -55,7 +55,7 @@ const CompliancePage: React.FC = () => {,
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-8">Why Choose Our Compliance Solutions?</h2>
           </h2>
-          <div className="grid md: grid-cols-2 gap-6">,</div>
+          <div>
             {benefits.map((benefit, index) => (
               <div key={index}className="flex items-center space-x-3">
                 <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
@@ -69,12 +69,12 @@ const CompliancePage: React.FC = () => {,
           </h2>
           <p className="text-xl text-purple-100 mb-8">Contact our experts to discuss your compliance needs and get a customized solution.</p>
           </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">,</div>
-            <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-all duration-300 flex items-center justify-center">,</button>
+          <div>
+            <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-all duration-300 flex items-center justify-center"></button>
               <Phone className="mr-2 h-5 w-5" />
               Call Now;
   </
-            <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">,</button>
+            <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center"></button>
               <Mail className="mr-2 h-5 w-5" />
               Email Us;
   </
@@ -82,7 +82,7 @@ const CompliancePage: React.FC = () => {,
         </div>
       </div>
     </div>
-  ),
+  )
 };
 
 export default CompliancePage;

@@ -1,7 +1,7 @@
 import React from 'react';
 interface SEOProps {/* TODO: Fix JSX expression */}
 }
-const SEO: React.FC<SEOProps> = ({,
+const SEO: React.FC<SEOProps> = ({
   title = 'Zion Tech Group - AI-Powered Enterprise Solutions',
   description = 'Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains.',
   keywords = ['AI solutions', 'enterprise automation', 'business intelligence'],

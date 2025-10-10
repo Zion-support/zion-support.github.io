@@ -1,9 +1,9 @@
 import React from 'react';
-import { Brain, TrendingUp, Shield, BarChart, Users, Clock, Star } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import {CheckCircle, Star, Users, TrendingUp, Clock, Shield, Brain, Phone} from 'lucide-react';
-import { Brain, TrendingUp, Shield, Users, Clock, Star } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import {  Brain, TrendingUp, Shield, BarChart, Users, Clock, Star  } from 'lucide-react';
+import {  Helmet  } from 'react-helmet-async';
+import { CheckCircle, Star, Users, TrendingUp, Clock, Shield, Brain, Phone } from 'lucide-react';
+import {  Brain, TrendingUp, Shield, Users, Clock, Star  } from 'lucide-react';
+import {  Link  } from 'react-router-dom';
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
@@ -161,7 +161,7 @@ Learn More
           </div>
       <Footer />
     </div>
-  ),
+  )
 }
 export default $1;
 export default AiMlPlatformPage;

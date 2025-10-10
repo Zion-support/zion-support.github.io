@@ -8,16 +8,16 @@ export interface SecurityHeadersConfig {contentSecurityPolicy?: string;}
   xContentTypeOptions?: string;
   referrerPolicy?: string;}permissionsPolicy?: string;}
 }
-export const defaultSecurityHeaders: SecurityHeadersConfig = {,
+export const defaultSecurityHeaders: SecurityHeadersConfig = {
     // Content Security Policy,
-  contentSecurityPolicy: [,}export interface SecurityHeadersConfig {}}contentSecurityPolicy?: string;
+  contentSecurityPolicy: [}export interface SecurityHeadersConfig {}}contentSecurityPolicy?: string;
   strictTransportSecurity?: string;
   xFrameOptions?: string;
   xContentTypeOptions?: string;
   referrerPolicy?: string;
   permissionsPolicy?: string;}
 }
-export const defaultSecurityHeaders: SecurityHeadersConfig = {,}// Content Security Policy;
+export const defaultSecurityHeaders: SecurityHeadersConfig = {}// Content Security Policy;
   contentSecurityPolicy: [,
     "default-src 'self'",;
     "script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com https://www.google-analytics.com",
@@ -69,33 +69,33 @@ export function getSecurityHeaders();
   if (config.referrerPolicy) {}headers['Referrer-Policy'] = config.referrerPolicy;}
   }
   if (config.permissionsPolicy) {}headers['Permissions-Policy'] = config.permissionsPolicy;}
-export interface SecurityHeadersConfig {/* TODO: Fix JSX expression */,}}}
+export interface SecurityHeadersConfig {/* TODO: Fix JSX expression */}}}
 export const,;
-  defaultSecurityHeaders: SecurityHeadersConfig = {/* TODO: Fix JSX expression */,}}
+  defaultSecurityHeaders: SecurityHeadersConfig = {/* TODO: Fix JSX expression */}}
 /**;
  * Get security headers as key-value pairs;
  */;
 export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig />);
-): Record<string, string> {/* TODO: Fix JSX expression */,}const config = {...defaultSecurityHeaders, ...customConfig}const,;
-  headers: Record<string, string> = {/* TODO: Fix JSX expression */,}}
-  if (config.contentSecurityPolicy) {/* TODO: Fix JSX expression */,}}
-  if (config.strictTransportSecurity) {/* TODO: Fix JSX expression */,}}
-  if (config.xFrameOptions) {/* TODO: Fix JSX expression */,}}
-  if (config.xContentTypeOptions) {/* TODO: Fix JSX expression */,}}
-  if (config.referrerPolicy) {/* TODO: Fix JSX expression */,}}
-  if (config.permissionsPolicy) {/* TODO: Fix JSX expression */,}}
+): Record<string, string> {/* TODO: Fix JSX expression */}const config = {...defaultSecurityHeaders, ...customConfig}const,;
+  headers: Record<string, string> = {/* TODO: Fix JSX expression */}}
+  if (config.contentSecurityPolicy) {/* TODO: Fix JSX expression */}}
+  if (config.strictTransportSecurity) {/* TODO: Fix JSX expression */}}
+  if (config.xFrameOptions) {/* TODO: Fix JSX expression */}}
+  if (config.xContentTypeOptions) {/* TODO: Fix JSX expression */}}
+  if (config.referrerPolicy) {/* TODO: Fix JSX expression */}}
+  if (config.permissionsPolicy) {/* TODO: Fix JSX expression */}}
   return headers;
 }
 /**;
  * Get security headers in Next.js format;
  */;
 export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>);
-): Array<{key: string, value: string ,}> {export function getNextSecurityHeaders();
-  customConfig?: Partial<SecurityHeadersConfig>}): Array<{key: string, value: string ,}> {}const headers = getSecurityHeaders(customConfig);
+): Array<{key: string, value: string }> {export function getNextSecurityHeaders();
+  customConfig?: Partial<SecurityHeadersConfig>}): Array<{key: string, value: string }> {}const headers = getSecurityHeaders(customConfig);
   return Object.entries(headers).map(([key, value]) => ({}key,;
     value}
   }));
 export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig />);
-): Array<{/* TODO: Fix JSX expression */,}e: string ,}> {/* TODO: Fix JSX expression */,}}));
+): Array<{/* TODO: Fix JSX expression */}e: string }> {/* TODO: Fix JSX expression */}}));
 }
 export default defaultSecurityHeaders;

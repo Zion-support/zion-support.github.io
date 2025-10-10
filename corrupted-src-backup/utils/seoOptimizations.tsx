@@ -2,7 +2,7 @@
  * SEO Optimization Utilities;
  * Comprehensive SEO enhancements for the Zion website;
  */
-import { Helmet } from 'react-helmet-async';
+import {  Helmet  } from 'react-helmet-async';
 // Meta tags utilities;
 export const seoUtils = {/* content */}
   // Generate structured data for organization;
@@ -47,7 +47,7 @@ export const seoUtils = {/* content */}
     datePublished: string;
     dateModified: string
     image?: string
-    url: string,
+    url: string
   }) => ({/* content */}
     "@context": "https: //schema.org",
     "@type": "Article",
@@ -290,7 +290,7 @@ export const performanceSEO = {/* content */}
     width?: number
     height?: number,
     loadin,
-  g: 'lazy',
+  g: 'lazy'
   } => {/* content */}
     return {/* content */}
       sr,`
@@ -300,7 +300,7 @@ export const performanceSEO = {/* content */}
       height,
       loading: 'lazy' as const,
       loadin,
-  g: 'lazy' as const,
+  g: 'lazy' as const
     }
   }
 }
@@ -381,7 +381,7 @@ export const coreWebVitals = {/* content */}
         metric_i,
   d: metric.id,
         metric_delt,
-  a: metric.delta,
+  a: metric.delta
       });
     }
     // Import and track web vitals;

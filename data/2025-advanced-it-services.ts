@@ -59,7 +59,7 @@ export const advancedITServices2025 = [
     category: 'Edge Computing'
     tags: ['AIEdge ComputingIoTDistributed Computing']
     website: 'https://ziontechgroup.com/edge-computing-ai',
-    contact: {,
+    contact: {
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com',
     categor,
@@ -105,7 +105,7 @@ export const advancedITServices2025 = [
     category: 'Cybersecurity'
     tags: ['Zero TrustCybersecurityIdentity ManagementThreat Detection']
     website: 'https://ziontechgroup.com/zero-trust-security-pro',
-    contact: {,
+    contact: {
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com',
     categor,
@@ -150,7 +150,7 @@ export const advancedITServices2025 = [
     category: 'Blockchain'
     tags: ['BlockchainSmart ContractsEnterpriseCompliance']
     website: 'https://ziontechgroup.com/enterprise-blockchain-pro',
-    contact: {,
+    contact: {
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com',
     categor,
@@ -197,7 +197,7 @@ export const advancedITServices2025 = [
     category: 'DevOps'
     tags: ['AIDevOpsCI/CDAutomation']
     website: 'https://ziontechgroup.com/devops-ai-pro',
-    contact: {,
+    contact: {
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com',
     categor,
@@ -244,7 +244,7 @@ export const advancedITServices2025 = [
     category: 'Quantum Networking'
     tags: ['Quantum ComputingNetworkingSecurityHigh-Speed Communication']
     website: 'https://ziontechgroup.com/quantum-net-pro',
-    contact: {,
+    contact: {
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com',
     categor,
@@ -290,7 +290,7 @@ export const advancedITServices2025 = [
     category: 'IT Operations'
     tags: ['AIAutonomous OperationsInfrastructure ManagementAutomation']
     website: 'https://ziontechgroup.com/autonomous-it-pro',
-    contact: {,
+    contact: {
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com',
     categor,
@@ -337,7 +337,7 @@ export const advancedITServices2025 = [
     category: 'Data Center'
     tags: ['Quantum ComputingData CenterInfrastructureEnergy Efficiency']
     website: 'https://ziontechgroup.com/quantum-data-center-pro',
-    contact: {,
+    contact: {
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com',
     categor,
@@ -383,7 +383,7 @@ export const advancedITServices2025 = [
     category: 'Quantum Cybersecurity'
     tags: ['Quantum ComputingCybersecurityEncryptionThreat Detection']
     website: 'https://ziontechgroup.com/quantum-cyber-pro',
-    contact: {,
+    contact: {
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com',
     categor,
@@ -429,7 +429,7 @@ export const advancedITServices2025 = [
     category: 'Cloud Migration'
     tags: ['Quantum ComputingCloud MigrationAIZero Downtime']
     website: 'https://ziontechgroup.com/quantum-migration-pro',
-    contact: {,
+    contact: {
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com',
     categor,
@@ -800,7 +800,7 @@ export const advancedITServices2025 = [
     category: 'Cloud Infrastructure'
     tags: ['Quantum ComputingCloud InfrastructureSecurityScalability']
     website: 'https://ziontechgroup.com/quantum-cloud-infrastructure',
-    contact: {,
+    contact: {
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com',
     categor,
@@ -847,7 +847,7 @@ export const advancedITServices2025 = [
     category: 'Edge Computing'
     tags: ['AIEdge ComputingIoTDistributed Computing']
     website: 'https://ziontechgroup.com/edge-computing-ai',
-    contact: {,
+    contact: {
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com',
     categor,
@@ -893,7 +893,7 @@ export const advancedITServices2025 = [
     category: 'Cybersecurity'
     tags: ['Zero TrustCybersecurityIdentity ManagementThreat Detection']
     website: 'https://ziontechgroup.com/zero-trust-security-pro',
-    contact: {,
+    contact: {
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com',
     categor,
@@ -938,7 +938,7 @@ export const advancedITServices2025 = [
     category: 'Blockchain'
     tags: ['BlockchainSmart ContractsEnterpriseCompliance']
     website: 'https://ziontechgroup.com/enterprise-blockchain-pro',
-    contact: {,
+    contact: {
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com',
     categor,
@@ -985,7 +985,7 @@ export const advancedITServices2025 = [
     category: 'DevOps'
     tags: ['AIDevOpsCI/CDAutomation']
     website: 'https://ziontechgroup.com/devops-ai-pro',
-    contact: {,
+    contact: {
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com',
     categor,
@@ -1032,7 +1032,7 @@ export const advancedITServices2025 = [
     category: 'Quantum Networking'
     tags: ['Quantum ComputingNetworkingSecurityHigh-Speed Communication']
     website: 'https://ziontechgroup.com/quantum-net-pro',
-    contact: {,
+    contact: {
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com',
     categor,
@@ -1078,7 +1078,7 @@ export const advancedITServices2025 = [
     category: 'IT Operations'
     tags: ['AIAutonomous OperationsInfrastructure ManagementAutomation']
     website: 'https://ziontechgroup.com/autonomous-it-pro',
-    contact: {,
+    contact: {
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com',
     categor,
@@ -1125,7 +1125,7 @@ export const advancedITServices2025 = [
     category: 'Data Center'
     tags: ['Quantum ComputingData CenterInfrastructureEnergy Efficiency']
     website: 'https://ziontechgroup.com/quantum-data-center-pro',
-    contact: {,
+    contact: {
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com',
     categor,
@@ -1171,7 +1171,7 @@ export const advancedITServices2025 = [
     category: 'Quantum Cybersecurity'
     tags: ['Quantum ComputingCybersecurityEncryptionThreat Detection']
     website: 'https://ziontechgroup.com/quantum-cyber-pro',
-    contact: {,
+    contact: {
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com',
     categor,
@@ -1217,7 +1217,7 @@ export const advancedITServices2025 = [
     category: 'Cloud Migration'
     tags: ['Quantum ComputingCloud MigrationAIZero Downtime']
     website: 'https://ziontechgroup.com/quantum-migration-pro',
-    contact: {,
+    contact: {
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com',
     categor,
@@ -1292,7 +1292,7 @@ export const advancedITServices2025 = [
     category: 'Edge Computing'
     tags: ['AIEdge ComputingIoTDistributed Computing']
     website: 'https://ziontechgroup.com/edge-computing-ai',
-    contact: {,
+    contact: {
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com',
     categor,
@@ -1338,7 +1338,7 @@ export const advancedITServices2025 = [
     category: 'Cybersecurity'
     tags: ['Zero TrustCybersecurityIdentity ManagementThreat Detection']
     website: 'https://ziontechgroup.com/zero-trust-security-pro',
-    contact: {,
+    contact: {
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com',
     categor,
@@ -1383,7 +1383,7 @@ export const advancedITServices2025 = [
     category: 'Blockchain'
     tags: ['BlockchainSmart ContractsEnterpriseCompliance']
     website: 'https://ziontechgroup.com/enterprise-blockchain-pro',
-    contact: {,
+    contact: {
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com',
     categor,
@@ -1430,7 +1430,7 @@ export const advancedITServices2025 = [
     category: 'DevOps'
     tags: ['AIDevOpsCI/CDAutomation']
     website: 'https://ziontechgroup.com/devops-ai-pro',
-    contact: {,
+    contact: {
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com',
     categor,
@@ -1477,7 +1477,7 @@ export const advancedITServices2025 = [
     category: 'Quantum Networking'
     tags: ['Quantum ComputingNetworkingSecurityHigh-Speed Communication']
     website: 'https://ziontechgroup.com/quantum-net-pro',
-    contact: {,
+    contact: {
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com',
     categor,
@@ -1523,7 +1523,7 @@ export const advancedITServices2025 = [
     category: 'IT Operations'
     tags: ['AIAutonomous OperationsInfrastructure ManagementAutomation']
     website: 'https://ziontechgroup.com/autonomous-it-pro',
-    contact: {,
+    contact: {
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com',
     categor,
@@ -1570,7 +1570,7 @@ export const advancedITServices2025 = [
     category: 'Data Center'
     tags: ['Quantum ComputingData CenterInfrastructureEnergy Efficiency']
     website: 'https://ziontechgroup.com/quantum-data-center-pro',
-    contact: {,
+    contact: {
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com',
     categor,
@@ -1616,7 +1616,7 @@ export const advancedITServices2025 = [
     category: 'Quantum Cybersecurity'
     tags: ['Quantum ComputingCybersecurityEncryptionThreat Detection']
     website: 'https://ziontechgroup.com/quantum-cyber-pro',
-    contact: {,
+    contact: {
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com',
     categor,
@@ -1662,7 +1662,7 @@ export const advancedITServices2025 = [
     category: 'Cloud Migration'
     tags: ['Quantum ComputingCloud MigrationAIZero Downtime']
     website: 'https://ziontechgroup.com/quantum-migration-pro',
-    contact: {,
+    contact: {
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com',
     categor,

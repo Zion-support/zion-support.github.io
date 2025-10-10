@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { CheckCircle, X, Zap, Brain, Cloud, ArrowRight, Star, Users, Shield, Clock } from 'lucide-react';
+import {  Link  } from 'react-router-dom';
+import {  CheckCircle, X, Zap, Brain, Cloud, ArrowRight, Star, Users, Shield, Clock  } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const PricingPage: React.FC = () => {
@@ -318,7 +318,7 @@ const PricingPage: React.FC = () => {
       </section>
       <Footer />
     </div>
-  ),
+  )
 }
 export default PricingPage;
   </Link>

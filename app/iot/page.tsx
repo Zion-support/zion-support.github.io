@@ -1,7 +1,7 @@
 import React from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {CheckCircle, Star, Wifi, Shield, Zap, Target, BarChart, Cpu, Sparkles}}from 'lucide-react';
-const IoTPage: React.FC = () => {,
+import {  Helmet  } from 'react-helmet-async';
+import {  CheckCircle, Star, Wifi, Shield, Zap, Target, BarChart, Cpu, Sparkles  } from 'lucide-react';
+const IoTPage: React.FC = () => {
     const iotServices = [
     {
       title: 'IoT Device Management Platform',
@@ -114,7 +114,8 @@ const IoTPage: React.FC = () => {,
       technologies: ['Apache Kafka', 'Apache Spark', 'InfluxDB', 'Grafana', 'Machine Learning']}}
   ]
 const categories = [...new Set(iotServices.map(service => service.category))]
-return(<>)
+return (
+    <>
       <Helmet />
         <title>IoT Services - Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
@@ -132,15 +133,13 @@ return(<>)
         </section>
           <div className="absolute inset-0 bg-black opacity-30"></div>
           <div className="absolute inset-0 bg-gradient-to-r from-green-600/50 to-teal-800/50"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"></div>,
-            <div className="text-center"></div>
+          <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"></div><div className="text-center"></div>
               <h1>
                 IoT Solutions</h1>
               </h1>
               <p>Connect, monitor, and optimize your world with intelligent Internet of Things solutions;</p>
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
-                <button>Explore IoT Solutions;</button>
+              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div><button>Explore IoT Solutions;</button>
                 </button>
                 <button>Schedule IoT Consultation,</button>
                 </button>
@@ -156,15 +155,13 @@ return(<>)
             </div>
           </div>
         </section>
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"></div>,
-            <div className="text-center mb-12"></div>
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"></div><div className="text-center mb-12"></div>
               <h2>Why Choose Our IoT Services?,</h2>
               </h2>
               <p>End-to-end IoT solutions with proven expertise in connectivity, security, and analytics;</p>
               </p>
             </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>,
-              <div className="text-center"></div>
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div><div className="text-center"></div>
                 <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                   <Wifi />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Connectivity Experts</h3>
@@ -201,8 +198,7 @@ return(<>)
             </div>
           </div>
         </section>
-            <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"></div>,
-              <div className="text-center mb-12"></div>
+            <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"></div><div className="text-center mb-12"></div>
                 <h2>{category</h2>}Solutions;
                 </h2>
                 <p>Specialized {category.toLowerCase()</p>}}solutions powered by IoT technology;
@@ -211,8 +207,7 @@ return(<>)
               <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div>,
                 {iotServices;
                   .filter(service => service.category === category),
-                  .map((service, index) => (</div>} <div key={index}className="bg-white rounded-lg shadow-lg p-6 hover: shadow-xl transition-shadow"></div>,
-                      <div className="text-4xl mb-4">{service.icon</div>}</div>
+                  .map((service, index) => (</div>} <div key={index}className="bg-white rounded-lg shadow-lg p-6 hover: shadow-xl transition-shadow"></div><div className="text-4xl mb-4">{service.icon</div>}</div>
                       <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
                       <p className="text-gray-600 mb-4">{service.description</p>}</p>
                       <div className="mb-4"></div>
@@ -225,8 +220,7 @@ return(<>)
                         </div>
                       </div>
                       <div className="mb-4"></div>
-                        <h4 className="font-semibold text-gray-900 mb-2">Key Features: </h4>,
-                        <ul>
+                        <h4 className="font-semibold text-gray-900 mb-2">Key Features: </h4><ul>
                           {service.features.map((feature, featureIndex) => (} <li>
                               <CheckCircle />
 
@@ -236,16 +230,14 @@ return(<>)
                         </ul>
                       </div>
                       <div className="mb-4"></div>
-                        <h4 className="font-semibold text-gray-900 mb-2">Technologies: </h4>,
-                        <div className="flex flex-wrap gap-2"></div>
+                        <h4 className="font-semibold text-gray-900 mb-2">Technologies: </h4><div className="flex flex-wrap gap-2"></div>
                           {service.technologies.map((tech, techIndex) => (</div>} <span>{tech</span>} </span>
                           ))}
 
                         </div>
                       </div>
                       <div className="mb-6"></div>
-                        <h4 className="font-semibold text-gray-900 mb-2">Business Benefits: </h4>,
-                        <ul>
+                        <h4 className="font-semibold text-gray-900 mb-2">Business Benefits: </h4><ul>
                           {service.benefits.map((benefit, benefitIndex) => (} <li>
                               <Star>
 
@@ -271,15 +263,13 @@ return(<>)
             </div>
           </div>
         </section>
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"></div>,
-            <div className="text-center mb-12"></div>
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"></div><div className="text-center mb-12"></div>
               <h2>Our IoT Capabilities;</h2>
               </h2>
               <p>Comprehensive IoT technologies and methodologies for connected solutions,</p>
               </p>
             </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div>,
-              <div className="text-center p-6 bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg"></div>
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div><div className="text-center p-6 bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg"></div>
                 <Wifi>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Connectivity</h3>
                 <p className="text-gray-600">Multi-protocol connectivity including WiFi, LoRaWAN, NB-IoT, and 5G</p>
@@ -320,13 +310,11 @@ return(<>)
             </div>
           </div>
         </section>
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center"></div>,
-            <h2>Ready to Connect Your World?</h2>
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center"></div><h2>Ready to Connect Your World?</h2>
             </h2>
             <p>Contact our IoT experts for a free consultation and custom IoT strategy development;</p>
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
-              <a>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div><a>
                 📞 +1 302 464 0950;
               </a>
               <a>

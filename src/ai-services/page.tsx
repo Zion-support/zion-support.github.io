@@ -1,8 +1,8 @@
 import React from 'react';
-import { Brain, Zap, Shield, BarChart } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import {Brain, Zap, Shield, BarChart, CheckCircle, Star, Phone} from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
+import {  Brain, Zap, Shield, BarChart  } from 'lucide-react';
+import {  Link  } from 'react-router-dom';
+import { Brain, Zap, Shield, BarChart, CheckCircle, Star, Phone } from 'lucide-react';
+import {  Helmet  } from 'react-helmet-async';
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -58,17 +58,17 @@ $4}
               Learn More
   </
       <Footer />
-  ),
+  )
 }
 export default $1;
 'use client';
 import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { 
+import {  Helmet  } from 'react-helmet-async';
+import {  
   Brain, Zap, Shield, TrendingUp, CheckCircle, ArrowRight, Star, 
   Phone, Mail, MapPin, Clock, Users, Award, Target, BarChart,
   Cpu, Database, Globe, Lock, Sparkles, Code, Eye, MessageSquare
-} from 'lucide-react';
+ } from 'lucide-react';
 export default function AIServicesPage() {
     const [activeTab, setActiveTab] = useState('overview');
   const [isVisible, setIsVisible] = useState(false);
@@ -362,7 +362,7 @@ export default function AIServicesPage() {
         </section>
       </div>
     </React.Fragment>
-  ),
+  )
 }
   </a>
   </a>

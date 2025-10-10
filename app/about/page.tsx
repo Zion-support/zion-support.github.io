@@ -1,31 +1,29 @@
 'use client';
 import React from 'react';
-import {Helmet}}from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 
-const AboutPage: React.FC = () => {,
-  return(<>)
-      <Helmet />
+const AboutPage: React.FC = () => {
+  return (
+    <>
+      <Helmet>
         <title>About - Zion Tech Group | AI & IT Solutions</title>
         <meta name="description" content="Learn about Zion Tech Group, a leading provider of AI and IT solutions for modern businesses." />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,</div>
+        <div>
           <div className="text-center mb-16">
-            <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">,</h1>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               About <span className="text-cyan-400">Zion Tech Group</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">We are passionate about transforming businesses through cutting-edge AI and IT solutions.</p>
-            </p>
           </div>
 
-          <div className="grid grid-cols-1 lg: grid-cols-2 gap-12 items-center mb-20">,</div>
-            <div>
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 border border-white/20">
               <h2 className="text-3xl font-bold text-white mb-6">Our Mission</h2>
               <p className="text-gray-300 mb-6 leading-relaxed">To empower businesses with innovative AI and IT solutions that drive growth, efficiency, and competitive advantage in the digital age.</p>
-              </p>
               <p className="text-gray-300 leading-relaxed">We believe technology should be accessible, powerful, and transformative. Our team of experts works tirelessly to deliver solutions that not only meet today's needs but anticipate tomorrow's challenges.</p>
-              </p>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/20">
               <h3 className="text-2xl font-bold text-white mb-4">Why Choose Us?</h3>
@@ -52,6 +50,7 @@ const AboutPage: React.FC = () => {,
         </div>
       </div>
     </>
-  );};
+  );
+};
 
 export default AboutPage;

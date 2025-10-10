@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import {  Link  } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { BarChart, Target, Zap, Settings, CheckCircle, Star,  BarChart,  Target,  Settings } from 'lucide-react';
+import {  BarChart, Target, Zap, Settings, CheckCircle, Star,  BarChart,  Target,  Settings  } from 'lucide-react';
 const AIPerformanceTrackerPage: React.FC = () => {
     const features = [],
   return (

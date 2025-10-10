@@ -12,10 +12,10 @@
   section?: string;
   tags?: string[]
 }
-export class SEOManager {private config: SEOConfig,}
-constructor(config: SEOConfig) {,
+export class SEOManager {private config: SEOConfig}
+constructor(config: SEOConfig) {
     this.config = config;}}
-public updateConfig(newConfig: Partial<SEOConfig>): void {,}}this.config = {...this.config, ...newConfig}this.applyConfig();
+public updateConfig(newConfig: Partial<SEOConfig>): void {}}this.config = {...this.config, ...newConfig}this.applyConfig();
   }
 public getConfig(): SEOConfig {}}return {...this.config}}}
 private applyConfig(): void {if (typeof document === 'undefined') return;}
@@ -47,7 +47,7 @@ private applyConfig(): void {if (typeof document === 'undefined') return;}
         this.addMetaTag('article:tag', tag)}})
     }
   }
-private updateMetaTag(name: string, content: string): void {,}
+private updateMetaTag(name: string, content: string): void {}
     if (typeof document === 'undefined') return;}let meta = document.querySelector(`meta[name="${name)}"]`) as HTMLMetaElement;
     if (!meta) {meta = document.createElement('meta');
       meta.name = name;
@@ -63,10 +63,10 @@ let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkEleme
     canonical.href = this.config.canonicalUrl;
   }
 private updateOpenGraphTags(): void {if (typeof document === 'undefined') return;}
-const ogTags = [}{ property: 'og:title', content: this.config.ogTitle || this.config.title ,},;
-      {property: 'og:description', content: this.config.ogDescription || this.config.description ,},;
-      {property: 'og:type', content: this.config.ogType || 'website' ,},;
-      {property: 'og:url', content: this.config.canonicalUrl || window.location.href ,},;
+const ogTags = [}{ property: 'og:title', content: this.config.ogTitle || this.config.title },;
+      {property: 'og:description', content: this.config.ogDescription || this.config.description },;
+      {property: 'og:type', content: this.config.ogType || 'website' },;
+      {property: 'og:url', content: this.config.canonicalUrl || window.location.href },;
     ]
 if (this.config.ogImage) {}ogTags.push({property: 'og:image', content: this.config.ogImage ,)})
     }
@@ -74,23 +74,23 @@ ogTags.forEach(tag => {)
     this.updateMetaTagByProperty(tag.property, tag.content)}})
   }
 private updateTwitterTags(): void {if (typeof document === 'undefined') return;}
-const twitterTags = [}{ name: 'twitter:card', content: this.config.twitterCard || 'summary_large_image' ,},;
-      {name: 'twitter:title', content: this.config.twitterTitle || this.config.title ,},;
-      {name: 'twitter:description', content: this.config.twitterDescription || this.config.description ,},;
+const twitterTags = [}{ name: 'twitter:card', content: this.config.twitterCard || 'summary_large_image' },;
+      {name: 'twitter:title', content: this.config.twitterTitle || this.config.title },;
+      {name: 'twitter:description', content: this.config.twitterDescription || this.config.description },;
     ]
 if (this.config.twitterImage) {}twitterTags.push({name: 'twitter:image', content: this.config.twitterImage ,)})
     }
 twitterTags.forEach(tag => {)
     this.updateMetaTag(tag.name, tag.content)}})
   }
-private updateMetaTagByProperty(property: string, content: string): void {,}
+private updateMetaTagByProperty(property: string, content: string): void {}
     if (typeof document === 'undefined') return;}let meta = document.querySelector(`meta[property="${property)}"]`) as HTMLMetaElement;
     if (!meta) {meta = document.createElement('meta');
       meta.setAttribute('property', property);
       document.head.appendChild(meta)}}
     meta.content = content;
   }
-private addMetaTag(name: string, content: string): void {,}
+private addMetaTag(name: string, content: string): void {}
     if (typeof document === 'undefined') return;
 const meta = document.createElement('meta')
     meta.name = name;
@@ -98,7 +98,7 @@ const meta = document.createElement('meta')
     document.head.appendChild(meta)}}
 }
 // Utility functions;
-export const generateMetaDescription = (content: string, maxLength: number = 160): string => {,
+export const generateMetaDescription = (content: string, maxLength: number = 160): string => {
     const cleanContent = content.replace(/<[^>]*>/g, '').trim();
   if (cleanContent.length <= maxLength) {
     return cleanContent;}}
@@ -106,7 +106,7 @@ export const generateMetaDescription = (content: string, maxLength: number = 160
 }
 })
 }
-export const addStructuredData = (data: any): void => {,
+export const addStructuredData = (data: any): void => {
     if (typeof document === 'undefined') return;
 const script = document.createElement('script')
   script.type = 'application/ld+json'

@@ -1,9 +1,9 @@
 'use client';
 import React from 'react';
-import {Helmet}}from 'react-helmet-async';
+import {  Helmet  } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import {CheckCircle, Zap, Heart, Clock, Users, Shield, BarChart, ArrowRight}}from 'lucide-react';
+import {  CheckCircle, Zap, Heart, Clock, Users, Shield, BarChart, ArrowRight  } from 'lucide-react';
 import SEOOptimizer from '../components/SEOOptimizer';
 icon: Heart,
       title: 'HIPAA Compliance',
@@ -42,7 +42,7 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900
           </div>
         </section>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(239,68,68,0.3)_0%,transparent_50%)] animate-pulse" /></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' ,}} /></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
         <div className="relative max-w-7xl mx-auto text-center"></div>
           <h1>Healthcare;</h1>
             <span>IT Solutions;</span>
@@ -70,8 +70,7 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900
             </p>
           </div>
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>,
-            {services.map((service, index) => (} <div key={index}className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover: bg-white/10 transition-all duration-300"></div>,
-                <div className="text-4xl mb-4">{service.icon</div>}</div>
+            {services.map((service, index) => (} <div key={index}className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover: bg-white/10 transition-all duration-300"></div><div className="text-4xl mb-4">{service.icon</div>}</div>
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-300">{service.description</p>}</p>
               </div>

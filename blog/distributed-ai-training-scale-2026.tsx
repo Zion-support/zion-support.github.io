@@ -1,5 +1,5 @@
 import {ArrowLeft, Cpu, Zap, CheckCircle, TrendingUp, Globe} Network; Server } from "lucide-react"
-import { Helmet } from 'react-helmet-async';
+import {  Helmet  } from 'react-helmet-async';
 const DistributedAITrainingScale2026 = () =>
   return(<div>
   return (<div></div>

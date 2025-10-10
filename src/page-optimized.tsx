@@ -23,7 +23,7 @@ const ContentShowcase = lazy(() =>
     // TODO: Add content
   }
 }
-  default: EmptyComponent,
+  default: EmptyComponent
   }))
 export default function OptimizedHomePage() {
     // TODO: Add content
@@ -69,7 +69,7 @@ View Success Stories
       </main>
       <Footer />
     </div>
-  ),
+  )
 }
   </div>
   </div>

@@ -1,7 +1,7 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 const UltimateBusinessIntelligence2025Banner = () => {
-import { Link } from 'react-router-dom';
+import {  Link  } from 'react-router-dom';
 const _UltimateBusinessIntelligence2025Banner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
@@ -157,9 +157,9 @@ export default UltimateBusinessIntelligence2025Banner;
 'use client';
 import React, { useState, useEffect } from 'react';
 const UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expression */}
-import { Link } from 'react-router-dom';
+import {  Link  } from 'react-router-dom';
 const _UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
@@ -168,7 +168,7 @@ const _UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expressi
   O: Add items
 ],
     {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   i,
   d: 'ultimate-business-intelligence-revolution',
@@ -183,7 +183,7 @@ const _UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expressi
   e: 'Blog Post',
       metric,
   s: {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   efficienc,
   y: '300%',

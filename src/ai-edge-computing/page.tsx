@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import {  Link  } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { Cpu, Zap, Globe, Shield, CheckCircle, Star,  Cpu,  Zap,  Shield } from 'lucide-react';
+import {  Cpu, Zap, Globe, Shield, CheckCircle, Star,  Cpu,  Zap,  Shield  } from 'lucide-react';
 const AIEdgeComputingPage: React.FC = () => {
     const features = [],
   return (

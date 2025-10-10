@@ -9,7 +9,7 @@ export interface Service {
   title: string
   description: string
   category: string,
-  pricing: {,
+  pricing: {
     starting: string
     popular?: boolean,
 export interface Service {/* TODO: Fix JSX expression */}
@@ -19,7 +19,7 @@ export interface Service {/* TODO: Fix JSX expression */}
   primar,
   y: string,
   secondar,
-  y: string,
+  y: string
 }
 
 export const getRecentContent = (limit: number = 3) => {

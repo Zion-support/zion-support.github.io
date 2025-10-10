@@ -1,5 +1,5 @@
 'use client';
-import { Helmet } from 'react-helmet-async';
+import {  Helmet  } from 'react-helmet-async';
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -186,5 +186,5 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
         <Footer /></Footer>
       </div>
     </div>
-  ),
+  )
 }"

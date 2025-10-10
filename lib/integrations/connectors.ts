@@ -1,11 +1,11 @@
-import { ProviderConnection, SyncLogEntry } from './types';
+import {  ProviderConnection, SyncLogEntry  } from './types';
 
 export async function simulateAction<T = unknown>(
   connection: ProviderConnection
   action: string,
   details: Record<string, unknown> = {}
 ): Promise<{ log: SyncLogEntry, result: T }> {
-    const log: SyncLogEntry = {,
+    const log: SyncLogEntry = {
     id: Math.random().toString(36).substr(2, 9),
 // Simple UUID generator since uuid package is not available
   }
@@ -21,7 +21,7 @@ export async function simulateAction<T = any>(
   action: string,
   details: Record<string, any> = {}
 ): Promise<{ log: SyncLogEntry, result: T }> {
-  const log: SyncLogEntry = {,
+  const log: SyncLogEntry = {
     id: `log_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
     id: uuidv4()
     id: uuidv4()
@@ -94,7 +94,7 @@ export async function simulateAction<T = any>(connectio,
   if (Math.random() < 0.1) {/* TODO: Fix JSX expression */}`
     log.message = `Action ${action} faile,`
   d: Simulated error`
-    throw new Error(log.message),
+    throw new Error(log.message)
   }
 
   // Simulate occasional warnings;
@@ -163,8 +163,7 @@ export const ats = {/* TODO: Fix JSX expression */}
   },
 
 export async function testConnection(connection: ProviderConnection,)): Promise<boolean> {
-    ,
-  try {,
+  try {
     await simulateAction(connection, 'test_connection');
     return true
   } catch {
@@ -173,7 +172,7 @@ export async function testConnection(connection: ProviderConnection,)): Promise<
 }
 
 export async function syncData(connection: ProviderConnection,)
-): Promise<SyncLogEntry[]> {,
+): Promise<SyncLogEntry[]> {
   const logs: SyncLogEntry[] = [],
 ,
   async updateStatus(connection: ProviderConnection, change: Record<string, any>) {

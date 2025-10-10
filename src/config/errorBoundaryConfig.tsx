@@ -84,7 +84,7 @@ export function getErrorBoundaryConfig(): ErrorBoundaryConfig {
 }
   const isDevelopment = process.env['NODE_ENV'] === 'development';
   return {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   logErrors: true,
     showDetails: isDevelopment,
@@ -99,7 +99,7 @@ export function getErrorBoundaryConfig(): ErrorBoundaryConfig {
 }
   default: DefaultErrorFallback,
       network: NetworkErrorFallback,
-      notFound: NotFoundFallback,
+      notFound: NotFoundFallback
     }
   }
 }
@@ -248,27 +248,27 @@ export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES 
   }
 }
   if (error.message.includes('Network') || error.message.includes('fetch')) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     return 'network';
   }
   if (error.message.includes('404') || error.message.includes('not found')) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     return 'notFound';
   }
   if (error.message.includes('timeout')) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     return 'timeout';
   }
   if (error.message.includes('500') || error.message.includes('server')) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     return 'serverError';
   }
   if (error.message.includes('validation')) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     return 'validation';
   }
@@ -285,7 +285,7 @@ export function formatErrorForLogging(error: Error): Record,
   }
 }
   return {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   message: error.message,
     stack: error.stack,

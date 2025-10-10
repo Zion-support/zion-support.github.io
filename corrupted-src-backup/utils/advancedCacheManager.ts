@@ -29,7 +29,7 @@ class AdvancedCacheManager<T> {
   public get(key: string): T | null {
     const _entry = this.cache.get(key),
 
-    if (!entry) {,
+    if (!entry) {
       this.misses++;
       return null
   }
@@ -62,11 +62,11 @@ class AdvancedCacheManager<T> {/* TODO: Fix JSX expression */}
 
   public set(key: string, value: T): void {
     // Check if cache is full,
-    if (this.cache.size >= this.config.maxSize) {,
+    if (this.cache.size >= this.config.maxSize) {
       this.evictEntry()
   }
 
-    const entry: CacheEntry<T> = {,
+    const entry: CacheEntry<T> = {
       key;
       value,
       timestamp: Date.now(),
@@ -87,7 +87,7 @@ class AdvancedCacheManager<T> {/* TODO: Fix JSX expression */}
   public has(key: string): boolean {
     const _entry = this.cache.get(key),
 ,
-    if (!entry) {,
+    if (!entry) {
       return false
   }
 
@@ -106,7 +106,7 @@ class AdvancedCacheManager<T> {/* TODO: Fix JSX expression */}
     return true;
   }
 
-  public delete(key: string): boolean {,
+  public delete(key: string): boolean {
     return this.cache.delete(key);
   public delete(ke)
   y: string): boolean {/* TODO: Fix JSX expression */}

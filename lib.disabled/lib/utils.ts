@@ -1,9 +1,9 @@
 
-export function cn(...inputs: ClassValue[]) {,
+export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-export function formatPhoneNumber(phone: string): string {,
+export function formatPhoneNumber(phone: string): string {
   const _cleaned = phone.replace(/\D/g, '');
 export function cn(...input)
   s: ClassValue[]) {/* TODO: Fix JSX expression */}
@@ -18,7 +18,7 @@ export function formatPhoneNumber(phon)
   return phone;
 }
 
-export function formatEmail(email: string): string {,
+export function formatEmail(email: string): string {
   return email.toLowerCase().trim();
 }
 
@@ -27,7 +27,7 @@ export function debounce<T extends (...args: unknown[]) => any>(
   wait: number;
 ): (...args: Parameters<T>) => void {
   let timeout: NodeJS.Timeout;
-  return (...args: Parameters<T>) => {,
+  return (...args: Parameters<T>) => {
     clearTimeout(timeout);
     timeout = setTimeout(() => func(...args), wait);
   };
@@ -39,7 +39,7 @@ export function throttle<T extends (...args: unknown[]) => any>(
 ): (...args: Parameters<T>) => void {
   let inThrottle: boolean;
   return (...args: Parameters<T>) => {
-    if (!inThrottle) {,
+    if (!inThrottle) {
       func(...args);
       inThrottle = true;
       setTimeout(() => (inThrottle = false), limit);

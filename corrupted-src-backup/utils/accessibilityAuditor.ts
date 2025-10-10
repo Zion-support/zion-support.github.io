@@ -173,7 +173,7 @@ export class AccessibilityAuditor {/* TODO: Fix JSX expression */}
     element: string)
     issue: string)
     recommendation: string,
-  ): void {,
+  ): void {
     this.issues.push({)
       severity;)
       element)
@@ -194,7 +194,7 @@ export class AccessibilityAuditor {/* TODO: Fix JSX expression */}
   /**
    * Get issues by severity;
    */
-  public getIssuesBySeverity(severity: AccessibilityIssue['severity']): AccessibilityIssue[] {,
+  public getIssuesBySeverity(severity: AccessibilityIssue['severity']): AccessibilityIssue[] {
     return this.issues.filter(issue => issue.severity === severity);
   public getIssuesBySeverity(severit)
   y: AccessibilityIssue['severity']): AccessibilityIssue[] {/* TODO: Fix JSX expression */}

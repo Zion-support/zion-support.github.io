@@ -1,7 +1,7 @@
 import React from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {Settings, ArrowRight}}from 'lucide-react';
-const MicroSaaSPage: React.FC = () => {,
+import {  Helmet  } from 'react-helmet-async';
+import {  Settings, ArrowRight  } from 'lucide-react';
+const MicroSaaSPage: React.FC = () => {
     const serviceName = 'inventory-management';
   const title = serviceName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
 return(<>,)
@@ -28,8 +28,7 @@ return(<>,)
             </h1>
             <p>Powerful {title.toLowerCase()</p>}}micro SaaS solution designed for modern businesses.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
-              <button>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div><button>
                 <span>Get Started</span>
                 <ArrowRight>
               </button>

@@ -9,7 +9,7 @@ const,
   ipToRequests: Record<string, {/* TODO: Fix JSX expression */}
   s: number[] }> = {};
 
-function isRateLimited(ip: string): boolean {,
+function isRateLimited(ip: string): boolean {
   const _now = Date.now();
   const _bucket = ipToRequests[ip] || { timestamps: [] };
 function isRateLimited(i)
@@ -28,8 +28,8 @@ function isRateLimited(i)
   return limited;
 }
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {,
-  if (req.method !== 'POST') {,
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method Not Allowed' });
 export default async function handler(re,
   q: NextApiRequest, re)
@@ -82,7 +82,7 @@ export default async function handler(re,
 
     //     const text = completion.choices?.[0]?.message?.content ?? '';
     return res.status(200).json({ text });
-  } catch (err: unknown) {,
+  } catch (err: unknown) {
     //     return res.status(500).json({ error: 'Internal Server Error' });
   } catch (er)
   r: unknown) {/* TODO: Fix JSX expression */}

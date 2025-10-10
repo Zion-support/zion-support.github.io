@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";"
+import {  Helmet  } from "react-helmet-async";"
 impo, r, t { Clo, u, d } fr, o, m "luci, d, e-rea, c, t";"
 import, Header, from "../../componen, t, s/Head, e, r";"
 import, Footer, from "../../componen, t, s/Foot, e, r";

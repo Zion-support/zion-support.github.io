@@ -1,7 +1,7 @@
 import React from 'react';
 // Real Micro SAAS Services for Zion Tech Group;
 // Comprehensive list of innovative, real-world micro SAAS solutions;
-export interface MicroSaasService {id: string,}
+export interface MicroSaasService {id: string}
   title: string,
   description: string,
   shortDescription: string,
@@ -25,20 +25,20 @@ export interface MicroSaasService {id: string,}
   whiteLabel: boolean,
   support: string,
   setupTime: string,
-  technicalSpecs: {,
+  technicalSpecs: {
     languages: string[],
     frameworks: string[],
     databases: string[],
-    cloudProviders: string[],}}
-  pricing: {,
+    cloudProviders: string[]}}
+  pricing: {
     monthly: number,
     yearly: number,
     enterprise: number,
-    features: string[],}}
+    features: string[]}}
 }
 export const microSaasServices: MicroSaasService[] = [,
   // AI-Powered Productivity Tools,
-  {,
+  {
     id: 'ai-project-manager-pro',
     title: 'AI Project Manager Pro',
     description: 'Revolutionary AI-powered project management platform that uses machine learning to predict project outcomes, optimize resource allocation, and prevent delays. Trusted by 15,000+ teams worldwide.',
@@ -113,12 +113,12 @@ export const microSaasServices: MicroSaasService[] = [,
     whiteLabel: true,
     support: '24/7 Priority Support',
     setupTime: '15 minutes',
-    technicalSpecs: {,
+    technicalSpecs: {
       languages: ['Python', 'JavaScript', 'TypeScript', 'Go'],
       frameworks: ['React', 'Node.js', 'FastAPI', 'TensorFlow', 'PyTorch'],
       databases: ['PostgreSQL', 'MongoDB', 'Redis', 'Elasticsearch'],
       cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'DigitalOcean']},
-    pricing: {,
+    pricing: {
     monthly: 99,
       yearly: 990,
       enterprise: 299,
@@ -197,12 +197,12 @@ export const microSaasServices: MicroSaasService[] = [,
     whiteLabel: false,
     support: 'Email & Chat Support',
     setupTime: '5 minutes',
-    technicalSpecs: {,
+    technicalSpecs: {
       languages: ['JavaScript', 'TypeScript', 'Python'],
       frameworks: ['React Native', 'Node.js', 'Express', 'TensorFlow Lite'],
       databases: ['SQLite', 'PostgreSQL', 'Redis'],
       cloudProviders: ['AWS', 'Google Cloud', 'Firebase']},
-    pricing: {,
+    pricing: {
     monthly: 49,
       yearly: 490,
       enterprise: 149,
@@ -282,12 +282,12 @@ export const microSaasServices: MicroSaasService[] = [,
     whiteLabel: true,
     support: '24/7 Support',
     setupTime: '10 minutes',
-    technicalSpecs: {,
+    technicalSpecs: {
       languages: ['Python', 'JavaScript', 'TypeScript'],
       frameworks: ['FastAPI', 'React', 'Next.js', 'OpenAI API', 'Hugging Face'],
       databases: ['PostgreSQL', 'MongoDB', 'Redis'],
       cloudProviders: ['AWS', 'Google Cloud', 'Azure']},
-    pricing: {,
+    pricing: {
     monthly: 79,
       yearly: 790,
       enterprise: 199,
@@ -367,12 +367,12 @@ export const microSaasServices: MicroSaasService[] = [,
     whiteLabel: true,
     support: '24/7 Support',
     setupTime: '20 minutes',
-    technicalSpecs: {,
+    technicalSpecs: {
       languages: ['Python', 'JavaScript', 'TypeScript'],
       frameworks: ['Django', 'React', 'FastAPI', 'TensorFlow', 'OpenCV'],
       databases: ['PostgreSQL', 'MongoDB', 'Redis', 'Elasticsearch'],
       cloudProviders: ['AWS', 'Google Cloud', 'Azure']},
-    pricing: {,
+    pricing: {
     monthly: 89,
       yearly: 890,
       enterprise: 249,
@@ -453,12 +453,12 @@ export const microSaasServices: MicroSaasService[] = [,
     whiteLabel: true,
     support: '24/7 Priority Support',
     setupTime: '30 minutes',
-    technicalSpecs: {,
+    technicalSpecs: {
       languages: ['Python', 'JavaScript', 'TypeScript', 'Java'],
       frameworks: ['Django', 'React', 'FastAPI', 'Spring Boot', 'TensorFlow'],
       databases: ['PostgreSQL', 'MongoDB', 'Redis', 'Elasticsearch'],
       cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'Salesforce']},
-    pricing: {,
+    pricing: {
     monthly: 129,
       yearly: 1290,
       enterprise: 399,
@@ -538,12 +538,12 @@ export const microSaasServices: MicroSaasService[] = [,
     whiteLabel: true,
     support: '24/7 Expert Support',
     setupTime: '45 minutes',
-    technicalSpecs: {,
+    technicalSpecs: {
       languages: ['Python', 'R', 'Julia', 'JavaScript'],
       frameworks: ['TensorFlow', 'PyTorch', 'Pandas', 'NumPy', 'Scikit-learn'],
       databases: ['PostgreSQL', 'InfluxDB', 'TimescaleDB', 'Redis'],
       cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'Bloomberg Cloud']},
-    pricing: {,
+    pricing: {
     monthly: 199,
       yearly: 1990,
       enterprise: 599,
@@ -620,12 +620,12 @@ export const microSaasServices: MicroSaasService[] = [,
     whiteLabel: true,
     support: '24/7 Support',
     setupTime: '15 minutes',
-    technicalSpecs: {,
+    technicalSpecs: {
       languages: ['Python', 'JavaScript', 'TypeScript'],
       frameworks: ['FastAPI', 'React', 'OpenAI GPT', 'Hugging Face', 'Rasa'],
       databases: ['PostgreSQL', 'MongoDB', 'Redis', 'Elasticsearch'],
       cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'Dialogflow']},
-    pricing: {,
+    pricing: {
     monthly: 59,
       yearly: 590,
       enterprise: 199,
@@ -706,12 +706,12 @@ export const microSaasServices: MicroSaasService[] = [,
     whiteLabel: true,
     support: 'Developer Support',
     setupTime: '10 minutes',
-    technicalSpecs: {,
+    technicalSpecs: {
       languages: ['Python', 'JavaScript', 'TypeScript', 'Java', 'C#', 'Go'],
       frameworks: ['TensorFlow', 'PyTorch', 'SonarQube', 'ESLint', 'Prettier'],
       databases: ['PostgreSQL', 'MongoDB', 'Redis'],
       cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'GitHub Actions']},
-    pricing: {,
+    pricing: {
     monthly: 79,
       yearly: 790,
       enterprise: 249,
@@ -792,12 +792,12 @@ export const microSaasServices: MicroSaasService[] = [,
     whiteLabel: true,
     support: '24/7 Medical Support',
     setupTime: '60 minutes',
-    technicalSpecs: {,
+    technicalSpecs: {
       languages: ['Python', 'JavaScript', 'TypeScript', 'Java'],
       frameworks: ['FastAPI', 'React Native', 'TensorFlow', 'PyTorch', 'OpenCV'],
       databases: ['PostgreSQL', 'MongoDB', 'Redis', 'Encrypted storage'],
       cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'HIPAA-compliant hosting']},
-    pricing: {,
+    pricing: {
     monthly: 149,
       yearly: 1490,
       enterprise: 499,
@@ -878,12 +878,12 @@ export const microSaasServices: MicroSaasService[] = [,
     whiteLabel: true,
     support: '24/7 Support',
     setupTime: '30 minutes',
-    technicalSpecs: {,
+    technicalSpecs: {
       languages: ['Python', 'JavaScript', 'TypeScript', 'Java'],
       frameworks: ['Django', 'React', 'FastAPI', 'TensorFlow', 'PyTorch'],
       databases: ['PostgreSQL', 'MongoDB', 'Redis', 'Elasticsearch'],
       cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'Shopify Plus']},
-    pricing: {,
+    pricing: {
     monthly: 119,
       yearly: 1190,
       enterprise: 399,
@@ -964,12 +964,12 @@ export const microSaasServices: MicroSaasService[] = [,
     whiteLabel: true,
     support: 'Educational Support',
     setupTime: '45 minutes',
-    technicalSpecs: {,
+    technicalSpecs: {
       languages: ['Python', 'JavaScript', 'TypeScript', 'Java'],
       frameworks: ['Django', 'React', 'FastAPI', 'TensorFlow', 'PyTorch'],
       databases: ['PostgreSQL', 'MongoDB', 'Redis', 'Elasticsearch'],
       cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'Education-specific hosting']},
-    pricing: {,
+    pricing: {
     monthly: 89,
       yearly: 890,
       enterprise: 299,
@@ -996,17 +996,15 @@ export const serviceCategories = [
   'Automation'
 ]
 // Pricing tiers for comparison;
-export const pricingTiers = {starter: {,
+export const pricingTiers = {starter: {
     name: 'Starter',
     price: '$29-99/month',
     features: ['Basic AI features', 'Standard support', 'Limited integrations', 'Basic analytics']},
-  professional: {,
-    ,
+  professional: {
     name: 'Professional',
     price: '$99-299/month',
     features: ['Advanced AI features', 'Priority support', 'Full integrations', 'Advanced analytics', 'API access']},
-  enterprise: {,
-    ,
+  enterprise: {
     name: 'Enterprise',
     price: '$299-999/month',
     features: ['Custom AI models', '24/7 support', 'White-label options', 'Custom integrations', 'Dedicated support', 'SLA guarantees']}}
@@ -1016,4 +1014,4 @@ export const contactInfo = {phone: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008, Middletown, DE 19709',
   website: 'https://ziontechgroup.com',
-  hours: '24/7 Support Available',}timezone: 'EST (Eastern Standard Time)',}
+  hours: '24/7 Support Available'}timezone: 'EST (Eastern Standard Time)'}

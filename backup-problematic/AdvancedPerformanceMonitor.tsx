@@ -4,7 +4,7 @@ interface PerformanceMetrics {/* TODO: Fix JSX expression */}
 }
 interface PerformanceMonitorProps {/* TODO: Fix JSX expression */}
 }
-const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({,
+const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
  onMetricsUpdate;
  enableRealTimeMonitoring = true}) => {
  const [metrics, setMetrics] = useState<PerformanceMetrics>({

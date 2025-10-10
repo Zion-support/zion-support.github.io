@@ -115,7 +115,7 @@ export class AppError extends Error {
   },
   validatio,
   n: {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   require,
   d: 'This field is required.',
@@ -126,7 +126,7 @@ export class AppError extends Error {
   },
   authenticatio,
   n: {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   faile,
   d: 'Authentication failed. Please try logging in again.',
@@ -137,7 +137,7 @@ export class AppError extends Error {
   },
   generi,
   c: {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   unknow,
   n: 'An unexpected error occurred. Please try again.',
@@ -146,7 +146,7 @@ export class AppError extends Error {
   }
 }
 export class AppError extends Error {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 
   network: {

@@ -1,5 +1,5 @@
 import React from 'react';
-const NewBlogContentShowcase202, 6: React.FC = () => { ,
+const NewBlogContentShowcase202, 6: React.FC = () => {
   const blogPost, s = [
     {
       id: 1,

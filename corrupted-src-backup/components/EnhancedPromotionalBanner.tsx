@@ -1,7 +1,7 @@
 import React from 'react';
 interface EnhancedPromotionalBannerProps {/* TODO: Fix JSX expression */}
 }
-const EnhancedPromotionalBanner: React.FC<EnhancedPromotionalBannerProps> = ({,
+const EnhancedPromotionalBanner: React.FC<EnhancedPromotionalBannerProps> = ({
   banner;
   className = ''}) => {
   const variantStyles = {

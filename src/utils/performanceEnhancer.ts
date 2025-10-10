@@ -8,7 +8,7 @@ interface PerformanceMetrics {
   cls: number;
   fcp: number
   ttfb: number
-  tbt: number,
+  tbt: number
 }
 
 interface OptimizationConfig {
@@ -20,7 +20,7 @@ interface OptimizationConfig {
   enableServiceWorker: boolean;
   enableResourceHints: boolean
   enableCompression: boolean
-  enableCaching: boolean,
+  enableCaching: boolean
 }
 
 class PerformanceEnhancer {

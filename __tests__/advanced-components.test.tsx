@@ -1,6 +1,6 @@
-import { render, screen, fireEvent, waitFor } from '@testing-library/react';
-import { HelmetProvider } from 'react-helmet-async';
-import { MemoryRouter } from 'react-router-dom';
+import {  render, screen, fireEvent, waitFor  } from '@testing-library/react';
+import {  HelmetProvider  } from 'react-helmet-async';
+import {  MemoryRouter  } from 'react-router-dom';
 
 // Mock component that throws an error
 const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {

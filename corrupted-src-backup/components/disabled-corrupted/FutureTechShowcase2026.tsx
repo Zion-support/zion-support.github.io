@@ -1,5 +1,5 @@
 import React from 'react';
-const FutureTechShowcase202, 6: React.FC = () => { ,
+const FutureTechShowcase202, 6: React.FC = () => {
   const futureTechArticle, s = [
     {
       id: 1,

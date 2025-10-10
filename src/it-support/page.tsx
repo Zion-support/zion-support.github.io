@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { ArrowRight, CheckCircle, Headphones, Clock, Shield, Zap, Brain, Target, Users, BarChart, Globe, Phone } from 'lucide-react';
+import {  ArrowRight, CheckCircle, Headphones, Clock, Shield, Zap, Brain, Target, Users, BarChart, Globe, Phone  } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const ITSupportPage: React.FC = () => {

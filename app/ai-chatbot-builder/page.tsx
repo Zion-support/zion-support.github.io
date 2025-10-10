@@ -1,10 +1,10 @@
 'use client';
 import React from 'react';
-import {Helmet}}from 'react-helmet-async';
+import {  Helmet  } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings}}from 'lucide-react';
-const AiChatbotBuilderPage: React.FC = () => {,
+import {  CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings  } from 'lucide-react';
+const AiChatbotBuilderPage: React.FC = () => {
     const features = [
     {
       icon: Brain,
@@ -31,7 +31,8 @@ const benefits = [
     'Scale operations without proportional staff increases',;
     'Gain competitive advantage with advanced technology';
   ]
-return(<>)
+return (
+    <>
       <Helmet />
         <title>Ai Chatbot Builder - Zion Tech Group</title>
         <meta />
@@ -41,14 +42,13 @@ return(<>)
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         {/* Hero Section */} <section className="relative py-20 px-4 overflow-hidden"></section>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' ,}} /></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
           <div className="relative max-w-7xl mx-auto text-center"></div>
             <h1>Ai Chatbot Builder;</h1>
             </h1>
             <p>Advanced AI-powered ai chatbot builder solution for modern businesses.;</p>
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
-              <button>Get Started;</button>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div><button>Get Started;</button>
               </button>
               <button>View Demo,</button>
               </button>
@@ -64,9 +64,7 @@ return(<>)
               </p>
             </div>
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>,
-              {features.map((feature, index) => (} <div key={index}className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group"></div>,
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>,
-                    <feature>
+              {features.map((feature, index) => (} <div key={index}className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group"></div><div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div><feature>
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description</p>}</p>
@@ -75,12 +73,12 @@ return(<>)
                       {feature.benefits.map((benefit, idx) => (} <li>
                           <CheckCircle />
 
-import React, {useState, useEffect}from 'react';
+import React, {useState, useEffect} from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import {MessageCircle, Bot, Zap, Shield, CheckCircle, Star, ArrowRight, Brain, Globe, Users, Settings, BarChart}}from 'lucide-react';
+import {  MessageCircle, Bot, Zap, Shield, CheckCircle, Star, ArrowRight, Brain, Globe, Users, Settings, BarChart  } from 'lucide-react';
 
-const AIChatbotBuilder: React.FC = () => {,
+const AIChatbotBuilder: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
@@ -142,7 +140,7 @@ const AIChatbotBuilder: React.FC = () => {,
         'Email support',
         'Standard templates'
       ],
-      popular: false;,},
+      popular: false;},
     {name: 'Professional',
       price: '$149',
       period: '/month',
@@ -155,7 +153,7 @@ const AIChatbotBuilder: React.FC = () => {,
         'Custom integrations',
         'Analytics dashboard'
       ],
-      popular: true;,},
+      popular: true;},
     {name: 'Enterprise',
       price: '$299',
       period: '/month',
@@ -168,21 +166,21 @@ const AIChatbotBuilder: React.FC = () => {,
         'White-label options',
         'Dedicated account manager'
       ],
-      popular: false;,}];
+      popular: false;}];
 
   const testimonials = [
     {name: 'David Kim',
       role: 'Customer Success Manager, TechFlow',
       content: 'Our chatbot handles 80% of customer inquiries automatically. Customer satisfaction increased by 40%.',
-      rating: 5;,},
+      rating: 5;},
     {name: 'Lisa Martinez',
       role: 'Marketing Director, GrowthHub',
       content: 'The lead generation chatbot has increased our qualified leads by 250%. Setup was incredibly easy.',
-      rating: 5;,},
+      rating: 5;},
     {name: 'James Wilson',
       role: 'CEO, StartupXYZ',
       content: 'We saved $50,000 annually in support costs. The AI responses are so natural, customers love it.',
-      rating: 5;,}];
+      rating: 5;}];
 
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced neural-network-bg matrix-bg quantum-particles">)</div>
       <Navigation />
@@ -194,11 +192,11 @@ const AIChatbotBuilder: React.FC = () => {,
             <span className="text-green-400 text-sm font-medium">AI Chatbot Platform</span>
           </div>
           
-          <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text">,</h1>
+          <h1>
             AI Chatbot Builder;
           </h1>
           
-          <p className="text-xl md: text-2xl text-green-400 mb-8 font-medium">,</p>
+          <p>
             Create Intelligent Chatbots in Minutes;
           </p>
           
@@ -206,7 +204,7 @@ const AIChatbotBuilder: React.FC = () => {,
             No coding required. Deploy in 50+ languages with enterprise-grade security.
           </p>
 
-          <div className="flex flex-col sm: flex-row gap-4 justify-center items-center mb-16">,</div>
+          <div>
             <a;
               href="tel: +13024640950",
               className="cyber-button w-full sm: w-auto text-center",
@@ -222,7 +220,7 @@ const AIChatbotBuilder: React.FC = () => {,
             </a>
           </div>
 
-          {/* Key Stats */} <div className="grid grid-cols-1 sm: grid-cols-3 gap-8 max-w-4xl mx-auto">,</div>
+          {/* Key Stats */} <div>
             <div className="hologram-card-enhanced p-6 text-center">
               <div className="text-3xl font-bold text-green-400 mb-2">70%</div>
               <div className="text-gray-300">Reduction in Support Tickets</div>
@@ -239,13 +237,13 @@ const AIChatbotBuilder: React.FC = () => {,
         </section>
 
         {/* Features Section */} <section className="mb-16">
-          <h2 className="text-3xl md: text-4xl font-bold text-white mb-4 text-center neon-text mb-12">,</h2>
+          <h2 className="text-3xl md: text-4xl font-bold text-white mb-4 text-center neon-text mb-12"></h2>
             Powerful Features;
           </h2>
           
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,</div>
+          <div>
             {features.map((feature, index) => (
-              <div key={index}className="hologram-card-enhanced p-6 hover: scale-105 transition-all duration-300">,</div>
+              <div>
                 <div className="text-4xl mb-4 text-green-400">
                   <feature.icon className="w-10 h-10" />
                 </div>
@@ -264,13 +262,13 @@ const AIChatbotBuilder: React.FC = () => {,
         </section>
 
         {/* Use Cases Section */} <section className="mb-16">
-          <h2 className="text-3xl md: text-4xl font-bold text-white mb-4 text-center neon-text mb-12">,</h2>
+          <h2 className="text-3xl md: text-4xl font-bold text-white mb-4 text-center neon-text mb-12"></h2>
             Use Cases;
           </h2>
           
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">,</div>
+          <div>
             {useCases.map((useCase, index) => (
-              <div key={index}className="hologram-card-enhanced p-8 hover: scale-105 transition-all duration-300">,</div>
+              <div>
                 <div className="flex items-start space-x-4">
                   <div className="text-4xl text-green-400">
                     <useCase.icon className="w-10 h-10" />
@@ -301,9 +299,7 @@ const AIChatbotBuilder: React.FC = () => {,
               </p>
             </div>
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div>,
-              {benefits.map((benefit, index) => (} <div key={index}className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group"></div>,
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>,
-                    <CheckCircle />
+              {benefits.map((benefit, index) => (} <div key={index}className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group"></div><div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div><CheckCircle />
                   </div>
                   <p className="text-lg text-white font-medium">{benefit</p>}</p>
                 </div>
@@ -318,8 +314,7 @@ const AIChatbotBuilder: React.FC = () => {,
               </h2>
               <p>Contact our experts to discuss your requirements and get started today.;</p>
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
-                <button>Contact Us;</button>
+              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div><button>Contact Us;</button>
                 </button>
                 <button>Learn More;</button>
                 </button>
@@ -330,7 +325,7 @@ const AIChatbotBuilder: React.FC = () => {,
       </div>
       <Footer>
     </>
-  ),
+  )
 }
 export default AiChatbotBuilderPage;
 
@@ -342,11 +337,11 @@ export default AiChatbotBuilderPage;
         </section>
 
         {/* Pricing Section */} <section className="mb-16">
-          <h2 className="text-3xl md: text-4xl font-bold text-white mb-4 text-center neon-text mb-12">,</h2>
+          <h2 className="text-3xl md: text-4xl font-bold text-white mb-4 text-center neon-text mb-12"></h2>
             Simple Pricing;
           </h2>
           
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6xl mx-auto">,</div>
+          <div>
             {pricingPlans.map((plan, index) => (
               <div key={index}className={`hologram-card-enhanced p-8 relative ${
                 plan.popular ? 'ring-2 ring-green-400 scale-105' : ''}`}>{plan.popular && (</div>
@@ -376,7 +371,7 @@ export default AiChatbotBuilderPage;
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular;
                       ? 'bg-gradient-to-r from-green-400 to-cyan-500 text-white hover: from-green-500 hover:to-cyan-600',
-                      : 'bg-gray-800 text-white hover: bg-gray-700 border border-gray-600',}`}
+                      : 'bg-gray-800 text-white hover: bg-gray-700 border border-gray-600'}`}
                 >
                   Get Started;
                 </a>
@@ -386,11 +381,11 @@ export default AiChatbotBuilderPage;
         </section>
 
         {/* Testimonials Section */} <section className="mb-16">
-          <h2 className="text-3xl md: text-4xl font-bold text-white mb-4 text-center neon-text mb-12">,</h2>
+          <h2 className="text-3xl md: text-4xl font-bold text-white mb-4 text-center neon-text mb-12"></h2>
             Customer Success Stories;
           </h2>
           
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">,</div>
+          <div>
             {testimonials.map((testimonial, index) => (
               <div key={index}className="hologram-card-enhanced p-6">
                 <div className="flex items-center mb-4">{[...Array(testimonial.rating)].map((_, i) => (</div>
@@ -409,12 +404,12 @@ export default AiChatbotBuilderPage;
 
         {/* CTA Section */} <section className="text-center">
           <div className="hologram-card-enhanced p-12 max-w-4xl mx-auto">
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">,</h2>
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6"></h2>
               Ready to Build Your AI Chatbot?
             </h2>
             <p className="text-xl text-gray-300 mb-8">Join thousands of businesses using our platform to automate customer interactions and boost efficiency.</p>
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">,</div>
+            <div>
               <a;
                 href="tel: +13024640950",
                 className="cyber-button w-full sm: w-auto text-center",

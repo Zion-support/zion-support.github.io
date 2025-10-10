@@ -5,8 +5,8 @@
 
 export const securityConfig = {
   // Content Security Policy;
-  csp: {,
-    directives: {,
+  csp: {
+    directives: {
       'default-src': ["'self'"],
       'script-src': [,
         "'self'",
@@ -20,11 +20,11 @@ export const securityConfig = {
       'frame-ancestors': ["'none'"],
       'base-uri': ["'self'"],
       'form-action': ["'self'"]},
-    reportOnly: false,
+    reportOnly: false
   },
 
   // Security Headers;
-  headers: {,
+  headers: {
     'X-Frame-Options': 'DENY',
     'X-Content-Type-Options': 'nosniff',
     'X-XSS-Protection': '1; mode=block',
@@ -34,7 +34,6 @@ export const securityConfig = {
 
   // Input validation;
   validation: {
-    ,
     maxInputLength: 10000,
     allowedFileTypes: ['image/jpeg', 'image/png', 'image/webp', 'image/gif', 'application/pdf'],
     maxFileSize: 10 * 1024 * 1024, // 10MB
@@ -42,7 +41,6 @@ export const securityConfig = {
 
   // Rate limiting;
   rateLimit: {
-    ,
     windowMs: 15 * 60 * 1000, // 15 minutes;
     maxRequests: 100
     skipSuccessfulRequests: false,
@@ -51,7 +49,6 @@ export const securityConfig = {
 
   // CORS configuration;
   cors: {
-    ,
     origin: process.env.ALLOWED_ORIGINS?.split(',') || ['http: //localhost:3000'],
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
     allowedHeaders: ['Content-Type', 'Authorization'],
@@ -61,7 +58,6 @@ export const securityConfig = {
 
   // Authentication;
   auth: {
-    ,
     sessionTimeout: 3600000, // 1 hour;
     maxLoginAttempts: 5,
     lockoutDuration: 900000, // 15 minutes;

@@ -1,9 +1,9 @@
-import { Link } from 'react-router-dom';
-import { ArrowLeft } from 'lucide-react';
-// import { Metadata } from 'next'; // Removed for Vite;
+import {  Link  } from 'react-router-dom';
+import {  ArrowLeft  } from 'lucide-react';
+// import {  Metadata  } from 'next'; // Removed for Vite;
 // Metadata removed for Vite compatibility;
 export default function AutonomousBusinessProcessesBlog() {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   return (<div className="min-h-screen bg-gray-50"><div className="max-w-4xl mx-auto px-4 py-8"><div className="bg-white rounded-lg shadow-lg p-8"><div className="mb-6"><Link href="/blog" className="text-indigo-600,"
   hover: text-indigo-700 flex items-center mb-4"><ArrowLeft className="w-4 h-4 mr-2" /></ArrowLeft>
@@ -48,7 +48,7 @@ export default function AutonomousBusinessProcessesBlog() {/* TODO: Fix JSX expr
   hover: bg-blue-50 transition-colors">
                   Explore AI Services
                 </a></div></div></div></div></div></div>
-  ),
+  )
 }
 export default AiPoweredAutonomousBusinessProcesses2026Page;
   </div>

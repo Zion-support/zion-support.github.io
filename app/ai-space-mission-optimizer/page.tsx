@@ -1,9 +1,9 @@
 'use client';
-import React, {useState, useEffect}from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {Rocket, Globe, Target, BarChart, Shield, Clock, Users, ArrowRight, Star, TrendingUp, Lock, FileText, DollarSign, CheckCircle, Phone, Mail, MapPin, Database, Settings, Calendar, Award, Eye, MessageSquare, CheckSquare, Cpu, Brain, Zap}}from 'lucide-react';
+import React, {useState, useEffect} from 'react';
+import {  Helmet  } from 'react-helmet-async';
+import {  Rocket, Globe, Target, BarChart, Shield, Clock, Users, ArrowRight, Star, TrendingUp, Lock, FileText, DollarSign, CheckCircle, Phone, Mail, MapPin, Database, Settings, Calendar, Award, Eye, MessageSquare, CheckSquare, Cpu, Brain, Zap  } from 'lucide-react';
 
-const AISpaceMissionOptimizer: React.FC = () => {,
+const AISpaceMissionOptimizer: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -40,7 +40,7 @@ const AISpaceMissionOptimizer: React.FC = () => {,
         'Mission reports',
         'Basic analytics'
       ],
-      popular: false;,},
+      popular: false;},
     {name: 'Mission Control',
       price: '$12,999',
       period: '/month',
@@ -55,7 +55,7 @@ const AISpaceMissionOptimizer: React.FC = () => {,
         'Mission simulation',
         'API integration'
       ],
-      popular: true;,},
+      popular: true;},
     {name: 'Space Agency',
       price: '$49,999',
       period: '/month',
@@ -71,39 +71,36 @@ const AISpaceMissionOptimizer: React.FC = () => {,
         'Research collaboration',
         'Training programs'
       ],
-      popular: false;,}];
+      popular: false;}];
 
   const useCases = [
     {title: 'Satellite Constellation Management',
       description: 'Optimize satellite constellation deployment and maintenance operations',
       icon: Globe,
-      results: '40% reduction in operational costs',},
+      results: '40% reduction in operational costs'},
     {title: 'Mars Mission Planning',
       description: 'Comprehensive mission planning for Mars exploration and colonization',
       icon: Rocket,
-      results: 'Optimized Mars mission trajectories',},
+      results: 'Optimized Mars mission trajectories'},
     {title: 'Space Station Operations',
       description: 'Optimize space station operations and supply missions',
       icon: Target,
-      results: '25% improvement in efficiency',},
+      results: '25% improvement in efficiency'},
     {title: 'Deep Space Exploration',
       description: 'Mission planning for deep space exploration and scientific missions',
       icon: Eye,
-      results: 'Enhanced mission success rates',}];
+      results: 'Enhanced mission success rates'}];
 
-  return(<>)
+  return (
+    <>
       <Helmet />
         <title>AI Space Mission Optimizer - Advanced Space Mission Planning | Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI-powered space mission optimization for trajectory planning, payload optimization, and risk assessment. Advanced space mission planning solutions." />
         <meta name="keywords" content="space mission optimization, trajectory planning, satellite management, space exploration, mission planning, space AI, aerospace technology" />
-        <meta property="og: title" content="AI Space Mission Optimizer - Advanced Space Mission Planning" />,
-        <meta property="og:description" content="Revolutionary AI-powered space mission optimization for trajectory planning, payload optimization, and risk assessment." />
-        <meta property="og: type" content="website" />,
-        <meta property="og: url" content="https://ziontechgroup.com/ai-space-mission-optimizer" />,
-        <link rel="canonical" href="https: //ziontechgroup.com/ai-space-mission-optimizer" />,
-      </Helmet>
+        <meta property="og: title" content="AI Space Mission Optimizer - Advanced Space Mission Planning" /><meta property="og:description" content="Revolutionary AI-powered space mission optimization for trajectory planning, payload optimization, and risk assessment." />
+        <meta property="og: type" content="website" /><meta property="og: url" content="https://ziontechgroup.com/ai-space-mission-optimizer" /><link rel="canonical" href="https: //ziontechgroup.com/ai-space-mission-optimizer" /></Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">{/* Hero Section */</div>} <section className="relative py-20 px-4 sm: px-6 lg:px-8 overflow-hidden">,</section>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">{/* Hero Section */</div>} <section>
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10"></div>
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-500/20 via-transparent to-transparent"></div>
           
@@ -114,16 +111,16 @@ const AISpaceMissionOptimizer: React.FC = () => {,
                 <span className="text-blue-400 font-semibold">Space Technology</span>
               </div>
               
-              <h1 className="text-5xl md: text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">,</h1>
+              <h1>
                 AI Space Mission Optimizer;
               </h1>
               
-              <p className="text-xl md: text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">,</p>
+              <p>
                 Revolutionary AI-powered space mission optimization for trajectory planning, 
                 payload optimization, and comprehensive risk assessment for space exploration.
               </p>
               
-              <div className="flex flex-col sm: flex-row gap-4 justify-center items-center mb-12">,</div>
+              <div>
                 <div className="flex items-center space-x-2 text-blue-400">
                   <Rocket className="w-5 h-5" />
                   <span className="font-semibold">30% Fuel Savings</span>
@@ -138,7 +135,7 @@ const AISpaceMissionOptimizer: React.FC = () => {,
                 </div>
               </div>
               
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">,</div>
+              <div>
                 <a;
                   href="tel: +13024640950",
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-600 text-white font-semibold rounded-xl hover: from-blue-600 hover:to-cyan-700 transition-all duration-300 shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 hover:scale-105",
@@ -158,10 +155,10 @@ const AISpaceMissionOptimizer: React.FC = () => {,
           </div>
         </section>
 
-        {/* Features Section */} <section className="py-20 px-4 sm: px-6 lg:px-8">,</section>
+        {/* Features Section */} <section>
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">,</h2>
+              <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent"></h2>
                 Advanced Space Mission Features;
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">Our AI-powered space mission optimizer provides cutting-edge solutions;</p>
@@ -169,7 +166,7 @@ const AISpaceMissionOptimizer: React.FC = () => {,
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">,</div>
+            <div>
               {features.map((feature, index) => (
                 <div;
                   key={index}className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-8 border border-blue-500/20 hover: border-blue-500/40 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-blue-500/10",
@@ -192,10 +189,10 @@ const AISpaceMissionOptimizer: React.FC = () => {,
           </div>
         </section>
 
-        {/* Use Cases Section */} <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-slate-800/30 to-slate-900/30">,</section>
+        {/* Use Cases Section */} <section>
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">,</h2>
+              <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent"></h2>
                 Space Mission Applications;
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">Our AI space mission optimizer is trusted by leading space agencies;</p>
@@ -203,7 +200,7 @@ const AISpaceMissionOptimizer: React.FC = () => {,
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">,</div>
+            <div>
               {useCases.map((useCase, index) => (
                 <div;
                   key={index}className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-8 border border-cyan-500/20 hover: border-cyan-500/40 transition-all duration-300 hover:scale-105",
@@ -220,10 +217,10 @@ const AISpaceMissionOptimizer: React.FC = () => {,
           </div>
         </section>
 
-        {/* Pricing Section */} <section className="py-20 px-4 sm: px-6 lg:px-8">,</section>
+        {/* Pricing Section */} <section>
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">,</h2>
+              <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"></h2>
                 Mission-Ready Pricing;
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">Choose the perfect space mission optimization plan for your needs.</p>
@@ -231,13 +228,13 @@ const AISpaceMissionOptimizer: React.FC = () => {,
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">,</div>
+            <div>
               {pricingPlans.map((plan, index) => (
                 <div;
-                  key={index}className={`relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-8 border transition-all duration-300 hover: scale-105 hover:shadow-xl ${,
+                  key={index}className={`relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-8 border transition-all duration-300 hover: scale-105 hover:shadow-xl ${
                     plan.popular;
                       ? 'border-blue-500/50 shadow-blue-500/20' 
-                      : 'border-gray-700/50 hover: border-blue-500/30',}`}
+                      : 'border-gray-700/50 hover: border-blue-500/30'}`}
                 >{plan.popular && (</div>
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <div className="bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-6 py-2 rounded-full text-sm font-semibold">Most Popular;</div>
@@ -265,7 +262,7 @@ const AISpaceMissionOptimizer: React.FC = () => {,
                     className={`w-full py-3 px-6 rounded-xl font-semibold text-center transition-all duration-300 ${
                       plan.popular;
                         ? 'bg-gradient-to-r from-blue-500 to-cyan-600 text-white hover: from-blue-600 hover:to-cyan-700',
-                        : 'bg-gradient-to-r from-gray-700 to-gray-600 text-white hover: from-gray-600 hover:to-gray-500',}`}
+                        : 'bg-gradient-to-r from-gray-700 to-gray-600 text-white hover: from-gray-600 hover:to-gray-500'}`}
                   >
                     Get Started;
                   </a>
@@ -275,15 +272,15 @@ const AISpaceMissionOptimizer: React.FC = () => {,
           </div>
         </section>
 
-        {/* CTA Section */} <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-blue-500/10 via-cyan-500/10 to-purple-500/10">,</section>
+        {/* CTA Section */} <section>
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">,</h2>
+            <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"></h2>
               Launch Your Space Mission Success;
             </h2>
             <p className="text-xl text-gray-300 mb-8">Join leading space agencies and commercial space companies using our AI-powered;</p>
               mission optimizer to achieve mission success and operational excellence.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">,</div>
+            <div>
               <a;
                 href="tel: +13024640950",
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-600 text-white font-semibold rounded-xl hover: from-blue-600 hover:to-cyan-700 transition-all duration-300 shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 hover:scale-105",

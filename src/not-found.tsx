@@ -1,4 +1,4 @@
-import { Home, Phone } from 'lucide-react';
+import {  Home, Phone  } from 'lucide-react';
 export default function NotFound() {
   const popularPages = [
     {
@@ -36,7 +36,7 @@ export default function NotFound() {
       description: 'Get in touch with our AI experts',
       href: '/contact',
       icon: '📞'
-    },
+    }
   ];
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
@@ -92,7 +92,7 @@ export default function NotFound() {
         </div>
       </div>
     </div>
-  ),
+  )
 }
   </Link>
   </Link>

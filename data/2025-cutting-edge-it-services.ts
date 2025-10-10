@@ -675,7 +675,7 @@ export const cuttingEdgeITServices2025 = [];      'Software development automati
     integrations: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud']
     compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols'],
 export const cuttingEdgeITServices2025 = [,
-  {,
+  {
     id: 'quantum-cloud-infrastructure-platform',
     name: 'Quantum Cloud Infrastructure Platform',,
   description: 'Next-generation cloud infrastructure that leverages quantum computing principles for enhanced security, performance, and scalability across distributed systems.';
@@ -684,7 +684,7 @@ export const cuttingEdgeITServices2025 = [,
       'Quantum-enhanced data processingAutomated infrastructure management'
     ],
     pricing: {
-      starter: {,
+      starter: {
         price: 399,
         period: 'month'}
         features: ['Basic quantum infrastructureStandard security protocolsEmail support']}
@@ -722,7 +722,7 @@ export const cuttingEdgeITServices2025 = [
     category: 'Quantum IT'
     tags: ['Quantum ComputingCloud InfrastructureSecurityPerformanceScalability']
     website: 'https://ziontechgroup.com/quantum-cloud-infrastructure-platform',
-    contact: {,
+    contact: {
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com'}
     marketSize: '$22.1 B',
@@ -765,7 +765,7 @@ export const cuttingEdgeITServices2025 = [
       'Edge-to-cloud synchronizationPerformance optimization algorithms'
     ],
     pricing: {
-      starter: {,
+      starter: {
         price: 299,
         period: 'month'}
         features: ['Basic edge orchestrationStandard monitoringEmail support']}
@@ -790,7 +790,7 @@ export const cuttingEdgeITServices2025 = [
     category: 'Edge Computing'
     tags: ['Edge ComputingOrchestrationReal-time ProcessingAI DeploymentLow Latency']
     website: 'https://ziontechgroup.com/edge-computing-orchestration-platform',
-    contact: {,
+    contact: {
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com'}
     marketSize: '$18.7 B',
@@ -833,7 +833,7 @@ export const cuttingEdgeITServices2025 = [
       'Automated security responsesComprehensive audit logging'
     ],
     pricing: {
-      starter: {,
+      starter: {
         price: 499,
         period: 'month'}
         features: ['Basic zero-trust featuresStandard authenticationEmail support']}
@@ -858,7 +858,7 @@ export const cuttingEdgeITServices2025 = [
     category: 'Cybersecurity'
     tags: ['Zero TrustSecurityAuthenticationIAMThreat Detection']
     website: 'https://ziontechgroup.com/zero-trust-security-platform',
-    contact: {,
+    contact: {
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com'}
     marketSize: '$31.2 B',
@@ -901,7 +901,7 @@ export const cuttingEdgeITServices2025 = [
       'Multi-party workflow automationComprehensive reporting and analytics'
     ],
     pricing: {
-      starter: {,
+      starter: {
         price: 599,
         period: 'month'}
         features: ['Basic blockchain featuresStandard smart contractsEmail support']}
@@ -926,7 +926,7 @@ export const cuttingEdgeITServices2025 = [
     category: 'Blockchain'
     tags: ['BlockchainSmart ContractsDistributed LedgerEnterpriseAutomation']
     website: 'https://ziontechgroup.com/blockchain-enterprise-platform',
-    contact: {,
+    contact: {
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com'}
     marketSize: '$19.9 B',
@@ -969,7 +969,7 @@ export const cuttingEdgeITServices2025 = [
       'Automated security scanningComprehensive analytics and reporting'
     ],
     pricing: {
-      starter: {,
+      starter: {
         price: 399,
         period: 'month'}
         features: ['Basic AI DevOps featuresStandard automationEmail support']}
@@ -994,7 +994,7 @@ export const cuttingEdgeITServices2025 = [
     category: 'DevOps'
     tags: ['AI DevOpsAutomationCI/CDMonitoringPerformance']
     website: 'https://ziontechgroup.com/ai-powered-devops-platform',
-    contact: {,
+    contact: {
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com'}
     marketSize: '$25.6 B',

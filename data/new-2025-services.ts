@@ -88,7 +88,7 @@ export const,
     roi: 'Reduce incidents by 70% and review cost by 50% in 8 weeks'
     competitors: ['LakeraGuardrails AIAzure AI Content Safety'],
     rating: 4 && 4.8
-    reviews: 11,
+    reviews: 11
   }
     id: 'serverless-cron-orchestrator',
     name: 'Serverless Cron Orchestrator',
@@ -120,7 +120,7 @@ export const,
     launch_date: '2025 - 03 - 10'
     customers: 25
     rating: 4.8
-    reviews: 11,
+    reviews: 11
   }
     id: 'serverless - cron - orchestrator',
     name: 'Serverless Cron Orchestrator',
@@ -158,7 +158,7 @@ export const,
     launch_date: '2025 - 02 - 20'
     customers: 40
     rating: 4.7
-    reviews: 19,
+    reviews: 19
   }
     id: 'gdpr - dsar - automation - pro'
     name: 'GDPR / CCPA DSAR Automation Pro',
@@ -204,7 +204,7 @@ export const,
     launch_date: '2025 - 01 - 28'
     customers: 18
     rating: 4.7
-    reviews: 13,
+    reviews: 13
   }
     id: 'api - contract - testing - hub',
     name: 'API Contract Testing Hub',
@@ -232,7 +232,7 @@ export const,
     roi: 'Cut API incidents by 50% within 60 days'
     competitors: ['StoplightOpticRedocly'],
     rating: 4 && 4.6
-    reviews: 10,
+    reviews: 10
   }
     id: 'cloud-cost-finops-copilot'
     name: 'Cloud Cost FinOps Copilot'
@@ -245,7 +245,7 @@ export const,
     launch_date: '2025 - 03 - 12'
     customers: 22
     rating: 4.6
-    reviews: 10,
+    reviews: 10
   }
     id: 'cloud - cost - finops - copilot',
     name: 'Cloud Cost FinOps Copilot',
@@ -278,7 +278,7 @@ export const,
     roi: 'Save 1035% cloud spend in first 90 days'
     competitors: ['CloudHealthVantageCloudZero'],
     rating: 4 && 4.7
-    reviews: 14,
+    reviews: 14
   }
     id: 'email-deliverability-warmup-monitor'
     name: 'Email Deliverability Warmup & Monitor'
@@ -291,7 +291,7 @@ export const,
     launch_date: '2025 - 02 - 05'
     customers: 33
     rating: 4.7
-    reviews: 14,
+    reviews: 14
   }
     id: 'email - deliverability - warmup - monitor',
     name: 'Email Deliverability Warmup & Monitor',
@@ -337,7 +337,7 @@ export const,
     launch_date: '2025 - 03 - 02'
     customers: 28
     rating: 4.6
-    reviews: 12,
+    reviews: 12
   }
     id: 'vector - search - starter - pro',
     name: 'Vector Search Starter Pro',
@@ -383,7 +383,7 @@ export const,
     launch_date: '2025 - 02 - 12'
     customers: 31
     rating: 4 && 4.7
-    reviews: 16,
+    reviews: 16
   }
     id: 'api-security-attack-surface-scanner',
     name: 'API Security Attack Surface Scanner',
@@ -407,7 +407,7 @@ export const,
     realService: true,
     technology: ['Node && Node.jsOpenAPIeBPF (optional)'],
     rating: 4.7
-    reviews: 16,
+    reviews: 16
   }
     id: 'api - security - attack - surface - scanner',
     name: 'API Security Attack Surface Scanner',
@@ -435,7 +435,7 @@ export const,
     roi: 'Cut API incidents by 40%+ in 90 days'
     competitors: ['Salt SecurityNoname Security'],
     rating: 4 && 4.7
-    reviews: 8,
+    reviews: 8
   }
     id: 'reliability-slo-guard',
     name: 'Reliability SLO Guard',
@@ -449,7 +449,7 @@ export const,
     launch_date: '2025 - 03 - 06'
     customers: 14
     rating: 4.7
-    reviews: 8,
+    reviews: 8
   }
     id: 'reliability - slo - guard',
     name: 'Reliability SLO Guard',
@@ -487,7 +487,7 @@ export const,
     launch_date: '2025 - 02 - 18'
     customers: 20
     rating: 4.6
-    reviews: 9,
+    reviews: 9
   }
     id: 'ai - website - personalization - pro',
     name: 'AI Website Personalization Pro',
@@ -515,7 +515,7 @@ export const,
     roi: 'Boost conversion by 1025% in 60 days'
     competitors: ['MutinyOptimizely'],
     rating: 4 && 4.7
-    reviews: 13,
+    reviews: 13
   }
     id: 'sso-scim-starter-kit',
     name: 'SSO + SCIM Starter Kit',
@@ -547,7 +547,7 @@ export const,
     launch_date: '2025 - 02 - 25'
     customers: 27
     rating: 4.7
-    reviews: 13,
+    reviews: 13
   }
     id: 'sso - scim - starter - kit',
     name: 'SSO + SCIM Starter Kit',
@@ -585,7 +585,7 @@ export const,
     rating: 4 && 4.8;
     reviews: 9
     rating: 4.8
-    reviews: 9,
+    reviews: 9
   }
     id: 'managed - postgres - ha - pro',
     name: 'Managed Postgres HA Pro',
@@ -621,7 +621,7 @@ export const,
     launch_date: '2025 - 03 - 04'
     customers: 8
     rating: 4 && 4.6
-    reviews: 5,
+    reviews: 5
   }
     id: 'ai-sales-email-copilot',
     name: 'AI Sales Email Copilot',
@@ -645,7 +645,7 @@ export const,
     realService: true,
     technology: ['Next && Next.jsLLM APIs'],
     rating: 4.6
-    reviews: 5,
+    reviews: 5
   }
     id: 'ai - sales - email - copilot',
     name: 'AI Sales Email Copilot',
@@ -683,7 +683,7 @@ export const,
     launch_date: '2025 - 02 - 16'
     customers: 42
     rating: 4.7
-    reviews: 21,
+    reviews: 21
   }
     id: 'it - asset - discovery - agent - pro',
     name: 'IT Asset Discovery Agent Pro',
@@ -721,7 +721,7 @@ export const,
     launch_date: '2025 - 01 - 22'
     customers: 12
     rating: 4.5
-    reviews: 6,
+    reviews: 6
   }
     id: 'edge - feature - flags - pro',
     name: 'Edge Feature Flags Pro',
@@ -749,7 +749,7 @@ export const,
     roi: 'Reduce incident blast radius and speed up experiments'
     competitors: ['LaunchDarklyGrowthBookStatsig'],
     rating: 4 && 4.6
-    reviews: 7,
+    reviews: 7
   }
     id: 'llm-finetune-ops-manager',
     name: 'LLM Fine-tune Ops Manager',
@@ -778,7 +778,7 @@ export const,
     launch_date: '2025 - 03 - 14'
     customers: 17
     rating: 4.6
-    reviews: 7,
+    reviews: 7
   }
     id: 'llm - finetune - ops - manager',
     name: 'LLM Fine - tune Ops Manager',
@@ -806,7 +806,7 @@ export const,
     roi: 'Increase task success rate 1025% with controlled spend'
     competitors: ['OpenAI finetune UIHF AutoTrain'],
     rating: 4 && 4.7
-    reviews: 6,
+    reviews: 6
   }
     id: 'browser-performance-monitor-pro',
     name: 'Browser Performance Monitor Pro',
@@ -835,7 +835,7 @@ export const,
     launch_date: '2025 - 03 - 13'
     customers: 9
     rating: 4.7
-    reviews: 6,
+    reviews: 6
   }
     id: 'browser - performance - monitor - pro',
     name: 'Browser Performance Monitor Pro',
@@ -863,7 +863,7 @@ export const,
     roi: 'Boost conversion 310% by improving CWV'
     competitors: ['SpeedCurveCalibre'],
     rating: 4 && 4.5
-    reviews: 5,
+    reviews: 5
   }
     id: 'ai-governance-registry'
     name: 'AI Governance Registry'
@@ -876,7 +876,7 @@ export const,
     launch_date: '2025 - 03 - 11'
     customers: 13
     rating: 4.5
-    reviews: 5,
+    reviews: 5
   }
     id: 'ai - governance - registry',
     name: 'AI Governance Registry',
@@ -909,7 +909,7 @@ export const,
     roi: 'Reduce compliance cycle time by 50%'
     competitors: ['Model governance suites'],
     rating: 4 && 4.6
-    reviews: 6,
+    reviews: 6
   }
 ];
     realImplementation: true,
@@ -923,7 +923,7 @@ export const,
     launch_date: '2025 - 03 - 07'
     customers: 10
     rating: 4.6
-    reviews: 6,
+    reviews: 6
   }
 ];
     real_implementation: true
@@ -932,7 +932,7 @@ export const,
     launch_date: '2025 - 03 - 10'
     customers: 25
     rating: 4 && 4.8
-    reviews: 11,
+    reviews: 11
   },
       'Human-readable schedules',
     id: 'serverless - cron - orchestrator',
@@ -2635,7 +2635,7 @@ export const,
     launch_date: '2025 - 02 - 20'
     customers: 40
     rating: 4 && 4.7
-    reviews: 19,
+    reviews: 19
   },
     id: 'gdpr - dsar - automation - pro'
     name: 'GDPR / CCPA DSAR Automation Pro',
@@ -2745,7 +2745,7 @@ export const,
     launch_date: '2025 - 01 - 28'
     customers: 18
     rating: 4 && 4.7
-    reviews: 13,
+    reviews: 13
   },
     id: 'api - contract - testing - hub'
     name: 'API Contract Testing Hub',
@@ -2854,7 +2854,7 @@ export const,
     launch_date: '2025 - 03 - 12'
     customers: 22
     rating: 4 && 4.6
-    reviews: 10,
+    reviews: 10
   },
     id: 'cloud - cost - finops - copilot',
     name: 'Cloud Cost FinOps Copilot',
@@ -2963,7 +2963,7 @@ export const,
     launch_date: '2025 - 02 - 05'
     customers: 33
     rating: 4 && 4.7
-    reviews: 14,
+    reviews: 14
   },
     id: 'email - deliverability - warmup - monitor',
     name: 'Email Deliverability Warmup & Monitor',
@@ -3103,7 +3103,7 @@ export const,
     launch_date: '2025 - 03 - 02'
     customers: 28
     rating: 4 && 4.6
-    reviews: 12,
+    reviews: 12
   },
     id: 'vector - search - starter - pro',
     name: 'Vector Search Starter Pro',
@@ -3183,7 +3183,7 @@ export const,
     launch_date: '2025 - 02 - 12'
     customers: 31
     rating: 4 && 4.7
-    reviews: 16,
+    reviews: 16
   },
     id: 'api - security - attack - surface - scanner',
     name: 'API Security Attack Surface Scanner',
@@ -3290,7 +3290,7 @@ export const,
     launch_date: '2025 - 03 - 06'
     customers: 14
     rating: 4 && 4.7
-    reviews: 8,
+    reviews: 8
   },
     id: 'reliability - slo - guard',
     name: 'Reliability SLO Guard',
@@ -3396,7 +3396,7 @@ export const,
     launch_date: '2025 - 02 - 18'
     customers: 20
     rating: 4 && 4.6
-    reviews: 9,
+    reviews: 9
   },
       'Audience/intent models',
     id: 'ai - website - personalization - pro'
@@ -3505,7 +3505,7 @@ export const,
     launch_date: '2025 - 02 - 25'
     customers: 27
     rating: 4 && 4.7
-    reviews: 13,
+    reviews: 13
   },
       'SAML/OIDC templates',
     id: 'sso - scim - starter - kit',
@@ -3614,7 +3614,7 @@ export const,
     launch_date: '2025 - 01 - 30'
     customers: 19
     rating: 4 && 4.8
-    reviews: 9,
+    reviews: 9
   },
     id: 'managed - postgres - ha - pro'
     name: 'Managed Postgres HA Pro',
@@ -3720,7 +3720,7 @@ export const,
     launch_date: '2025 - 03 - 04'
     customers: 8
     rating: 4 && 4.6
-    reviews: 5,
+    reviews: 5
   },
     id: 'ai - sales - email - copilot',
     name: 'AI Sales Email Copilot',
@@ -3826,7 +3826,7 @@ export const,
     launch_date: '2025 - 02 - 16'
     customers: 42
     rating: 4 && 4.7
-    reviews: 21,
+    reviews: 21
   },
     id: 'it - asset - discovery - agent - pro'
     name: 'IT Asset Discovery Agent Pro',
@@ -3932,7 +3932,7 @@ export const,
     launch_date: '2025 - 01 - 22'
     customers: 12
     rating: 4 && 4.5
-    reviews: 6,
+    reviews: 6
   },
       'Edge-evaluated rules',
     id: 'edge - feature - flags - pro'
@@ -4041,7 +4041,7 @@ export const,
     launch_date: '2025 - 03 - 14'
     customers: 17
     rating: 4 && 4.6
-    reviews: 7,
+    reviews: 7
   },
       'Dataset/version registry',
     id: 'llm - finetune - ops - manager',
@@ -4151,7 +4151,7 @@ export const,
     launch_date: '2025 - 03 - 13'
     customers: 9
     rating: 4 && 4.7
-    reviews: 6,
+    reviews: 6
   },
     id: 'browser - performance - monitor - pro',
     name: 'Browser Performance Monitor Pro',
@@ -4258,7 +4258,7 @@ export const,
     launch_date: '2025 - 03 - 11'
     customers: 13
     rating: 4 && 4.5
-    reviews: 5,
+    reviews: 5
   },
     id: 'ai - governance - registry',
     name: 'AI Governance Registry',
@@ -4364,7 +4364,7 @@ export const,
     launch_date: '2025 - 03 - 07'
     customers: 10
     rating: 4 && 4.6
-    reviews: 6,
+    reviews: 6
   },
     id: 'llm-safety-observability-suite', name: 'LLM Safety & Observability Suite',
     tagline: 'Detect jailbreaks, PII leaks and drift with real-time dashboards',
@@ -4386,7 +4386,7 @@ export const,
     implementationDetails: 'Inline middleware, policy DSL, exporters and dashboards.',
     launchDate: '2025-03-10', customers: 25
     rating: 4.8
-    reviews: 11,
+    reviews: 11
   }
     id: 'serverless-cron-orchestrator', name: 'Serverless Cron Orchestrator',
     tagline: 'Reliable schedules, retries and dead-lettering across clouds',
@@ -4408,7 +4408,7 @@ export const,
     implementationDetails: 'Config registry, scheduler runners, and audit dashboard.',
     launchDate: '2025-02-20', customers: 40
     rating: 4.7
-    reviews: 19,
+    reviews: 19
   }
     id: 'gdpr-dsar-automation-pro', name: 'GDPR/CCPA DSAR Automation Pro',
     tagline: 'Automate data subject access requests across SaaS systems', price: '$199',
@@ -4430,7 +4430,7 @@ export const,
     implementationDetails: 'Workflow engine, connectors, secure storage and audit logs.',
     launchDate: '2025-01-28', customers: 18
     rating: 4.7
-    reviews: 13,
+    reviews: 13
   }
     id: 'api-contract-testing-hub', name: 'API Contract Testing Hub',
     tagline: 'OpenAPI/GraphQL contract tests with cloud runners', price: '$79',
@@ -4452,7 +4452,7 @@ export const,
     implementationDetails: 'Contract diffing, runners, and PR integrations.',
     launchDate: '2025-03-12', customers: 22
     rating: 4.6
-    reviews: 10,
+    reviews: 10
   }
     id: 'cloud-cost-finops-copilot', name: 'Cloud Cost FinOps Copilot',
     tagline: 'Automated cost insights, rightsizing and anomaly alerts',
@@ -4474,7 +4474,7 @@ export const,
     implementationDetails: 'Ingestion, heuristics engine and alerting with reports.',
     launchDate: '2025-02-05', customers: 33
     rating: 4.7
-    reviews: 14,
+    reviews: 14
   }
     id: 'email-deliverability-warmup-monitor', name: 'Email Deliverability Warmup & Monitor',
     tagline: 'Automated warmup, inbox placement tests and reputation alerts',
@@ -4496,7 +4496,7 @@ export const,
     implementationDetails: 'Mailbox network, test harness and alerting.',
     launchDate: '2025-03-02', customers: 28
     rating: 4.6
-    reviews: 12,
+    reviews: 12
   }
     id: 'vector-search-starter-pro', name: 'Vector Search Starter Pro',
     tagline: 'Blueprints for Pinecone/Weaviate/PGVector with evals & dashboards', price: '$89',
@@ -4518,7 +4518,7 @@ export const,
     contactInfo: contact, realImplementation: true,
     implementationDetails: 'Scaffold generators and eval harness.', launchDate: '2025-02-12',
     customers: 31, rating: 4.7
-    reviews: 16,
+    reviews: 16
   }
     id: 'api-security-attack-surface-scanner', name: 'API Security Attack Surface Scanner',
     tagline: 'Discover shadow APIs, auth gaps and drift with actionable fixes',
@@ -4540,7 +4540,7 @@ export const,
     implementationDetails: 'Passive discovery, analyzers, and PR bots.',
     launchDate: '2025-03-06', customers: 14
     rating: 4.7
-    reviews: 8,
+    reviews: 8
   }
     id: 'reliability-slo-guard', name: 'Reliability SLO Guard',
     tagline: 'Error budgets, burn rates and policy-based alerts as-a-service',
@@ -4562,7 +4562,7 @@ export const,
     implementationDetails: 'SLO engine, alerting and reports.',
     launchDate: '2025-02-18', customers: 20
     rating: 4.6
-    reviews: 9,
+    reviews: 9
   }
     id: 'ai-website-personalization-pro', name: 'AI Website Personalization Pro',
     tagline: 'On-site experiences tailored by intent and persona', price: '$129',
@@ -4584,7 +4584,7 @@ export const,
     implementationDetails: 'Audience engine, variant manager and edge runtime.',
     launchDate: '2025-02-25', customers: 27
     rating: 4.7
-    reviews: 13,
+    reviews: 13
   }
     id: 'sso-scim-starter-kit', name: 'SSO + SCIM Starter Kit',
     tagline: 'Enterprise authentication and provisioning in weeks, not months',
@@ -4605,7 +4605,7 @@ export const,
     realImplementation: true, implementationDetails: 'Reference implementations and test harnesses.',
     launchDate: '2025-01-30', customers: 19
     rating: 4.8
-    reviews: 9,
+    reviews: 9
   }
     id: 'managed-postgres-ha-pro', name: 'Managed Postgres HA Pro',
     tagline: 'Production-grade Postgres with automated backups and failover', price: '$179',
@@ -4626,7 +4626,7 @@ export const,
     realImplementation: true, implementationDetails: 'IaC blueprints and managed ops playbooks.',
     launchDate: '2025-03-04', customers: 8
     rating: 4.6
-    reviews: 5,
+    reviews: 5
   }
     id: 'ai-sales-email-copilot', name: 'AI Sales Email Copilot',
     tagline: 'Personalized, compliant, on-brand sales emails at scale',
@@ -4648,7 +4648,7 @@ export const,
     implementationDetails: 'Sequence engine, inbox rotation and safety checks.',
     launchDate: '2025-02-16', customers: 42
     rating: 4.7
-    reviews: 21,
+    reviews: 21
   }
     id: 'it-asset-discovery-agent-pro', name: 'IT Asset Discovery Agent Pro',
     tagline: 'Continuous inventory and risk visibility across networks', price: '$119',
@@ -4670,7 +4670,7 @@ export const,
     implementationDetails: 'Lightweight agents, collectors and API.',
     launchDate: '2025-01-22', customers: 12
     rating: 4.5
-    reviews: 6,
+    reviews: 6
   }
     id: 'edge-feature-flags-pro', name: 'Edge Feature Flags Pro',
     tagline: 'Zero-latency feature rollout and A/B at the edge', price: '$99',
@@ -4692,7 +4692,7 @@ export const,
     implementationDetails: 'Rule engine, SDKs, metrics pipeline and UI.',
     launchDate: '2025-03-14', customers: 17
     rating: 4.6
-    reviews: 7,
+    reviews: 7
   }
     id: 'llm-finetune-ops-manager', name: 'LLM Fine-tune Ops Manager',
     tagline: 'Datasets, runs, evals and deployment for fine-tuned models',
@@ -4714,7 +4714,7 @@ export const,
     implementationDetails: 'Run tracker, registry and eval pipelines.',
     launchDate: '2025-03-13', customers: 9
     rating: 4.7
-    reviews: 6,
+    reviews: 6
   }
     id: 'browser-performance-monitor-pro', name: 'Browser Performance Monitor Pro',
     tagline: 'LCP/INP tracking, synthetic journeys and Core Web Vitals fixes',
@@ -4737,7 +4737,7 @@ export const,
     implementationDetails: 'RUM collector, synthetic runner and PR bots.',
     launchDate: '2025-03-11', customers: 13
     rating: 4.5
-    reviews: 5,
+    reviews: 5
   }
     id: 'ai-governance-registry', name: 'AI Governance Registry',
     tagline: 'Track models, datasets, policies and approvals for AI features',
@@ -7757,7 +7757,7 @@ review,
     launchDate: '2025-03-07'
     customers: 10
     rating: 4.6
-reviews: 6,
+reviews: 6
   }
 ];
     reviews: 6,

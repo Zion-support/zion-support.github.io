@@ -1,5 +1,5 @@
 import React from 'react';
-import {Helmet}}from 'react-helmet-async';
+import {  Helmet  } from 'react-helmet-async';
 interface SEOHeadProps {title?: string;}
   description?: string;
   keywords?: string;
@@ -8,7 +8,7 @@ interface SEOHeadProps {title?: string;}
   ogType?: string;
   twitterCard?: string;
   structuredData?: object;}}
-const SEOHead: React.FC<SEOHeadProps> = ({,
+const SEOHead: React.FC<SEOHeadProps> = ({
     title = 'Zion Tech Group - Advanced AI & IT Solutions',
   description = 'Transform your business with cutting-edge artificial intelligence, cloud infrastructure, and innovative technology solutions. Expert AI and IT consulting services.',
   keywords = 'AI solutions, IT consulting, cloud infrastructure, cybersecurity, automation, machine learning, artificial intelligence, business transformation',
@@ -41,10 +41,11 @@ const defaultStructuredData = {"@context": "https: //schema.org",
       "email": "kleber@ziontechgroup.com"},
     "sameAs": [;
       "https: //www.linkedin.com/company/zion-tech-group",
-      "https: //twitter.com/ziontechgroup",
-    ],
+      "https: //twitter.com/ziontechgroup"
+    ]
   }
-return(<Helmet />)
+return (
+      <Helmet />
       {/* Basic Meta Tags */} <title>{fullTitle}</title>
       <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />

@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import {  Link  } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 'use client';
@@ -245,7 +245,7 @@ $4}
   O: Add items
 ],
     {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   i,
   d: 'ai',
@@ -261,7 +261,7 @@ $4}
   n: 'Transform your business with cutting-edge artificial intelligence'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   i,
   d: 'it',
@@ -277,7 +277,7 @@ $4}
   n: 'Robust and scalable IT infrastructure solutions'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   i,
   d: 'security',
@@ -293,7 +293,7 @@ $4}
   n: 'Comprehensive security solutions for your digital assets'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   i,
   d: 'automation',
@@ -310,14 +310,14 @@ $4}
     }
   ];
   const solutions = {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   a,
   i: [
   // TOD,
   O: Add items]
       {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   titl,
   e: 'AI-Powered Analytics',
@@ -333,7 +333,7 @@ $4}
   r: 'text-blue-400'
       },
       {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   titl,
   e: 'AI Marketing Automation',
@@ -349,7 +349,7 @@ $4}
   r: 'text-pink-400'
       },
       {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   titl,
   e: 'AI Customer Support',
@@ -365,7 +365,7 @@ $4}
   r: 'text-green-400'
       },
       {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   titl,
   e: 'AI Process Automation',
@@ -386,7 +386,7 @@ $4}
   // TOD,
   O: Add items]
       {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   titl,
   e: 'Cloud Migration',
@@ -402,7 +402,7 @@ $4}
   r: 'text-blue-400'
       },
       {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   titl,
   e: 'IT Infrastructure Management',
@@ -418,7 +418,7 @@ $4}
   r: 'text-green-400'
       },
       {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   titl,
   e: 'DevOps & CI/CD',
@@ -434,7 +434,7 @@ $4}
   r: 'text-purple-400'
       },
       {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   titl,
   e: 'Database Management',
@@ -455,7 +455,7 @@ $4}
   // TOD,
   O: Add items]
       {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   titl,
   e: 'Cybersecurity Suite',
@@ -471,7 +471,7 @@ $4}
   r: 'text-red-400'
       },
       {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   titl,
   e: 'AI Security Monitoring',
@@ -487,7 +487,7 @@ $4}
   r: 'text-purple-400'
       },
       {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   titl,
   e: 'Compliance Management',
@@ -503,7 +503,7 @@ $4}
   r: 'text-green-400'
       },
       {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   titl,
   e: 'Security Training',
@@ -524,7 +524,7 @@ $4}
   // TOD,
   O: Add items]
       {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   titl,
   e: 'Business Process Automation',
@@ -540,7 +540,7 @@ $4}
   r: 'text-yellow-400'
       },
       {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   titl,
   e: 'IT Automation',
@@ -556,7 +556,7 @@ $4}
   r: 'text-blue-400'
       },
       {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   titl,
   e: 'Marketing Automation',
@@ -572,7 +572,7 @@ $4}
   r: 'text-pink-400'
       },
       {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   titl,
   e: 'Data Automation',
@@ -594,7 +594,7 @@ $4}
   O: Add items
 ],
     {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   ico,
   n: Star,
@@ -604,7 +604,7 @@ $4}
   n: '300% average ROI and 95% process automation for our clients'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   ico,
   n: Shield,
@@ -614,7 +614,7 @@ $4}
   n: 'Bank-level security and compliance for all our solutions'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   ico,
   n: Globe,
@@ -624,7 +624,7 @@ $4}
   n: '24/7 support and services across multiple time zones'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   ico,
   n: Users,
@@ -660,7 +660,7 @@ $4}
                   onClick={() => setActiveTab(category.id)}
                   className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${}
   // TOD,
-  O: Add content,
+  O: Add content
 }
                     activeTab === category.id;`
                       ? `${category.bgColor} ${category.color} border-2 border-current`
@@ -850,7 +850,7 @@ $4}
       <Footer />
     </React.Fragment>
     </div>
-  ),
+  )
 }
 export default SolutionsPage;
   </a>

@@ -11,7 +11,7 @@
   contactInfo: unknown
     mobile: string
     email: string,
-export interface ComprehensiveItSolution {,
+export interface ComprehensiveItSolution {
     address: string}
   i,
   d: string,
@@ -75,7 +75,7 @@ export interface ComprehensiveItSolution {/* TODO: Fix JSX expression */}
   realImplementation: boolean
   contactInfo: unknown,
     mobile: string, email: string
-    address: string,
+    address: string
   }
 }
 export const comprehensiveITSolutions: ComprehensiveItSolution[] = [,

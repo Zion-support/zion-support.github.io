@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 interface AccessibilityEnhancerProps {/* TODO: Fix JSX expression */}
 }
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({,
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   children;
   enableKeyboardNavigation = true,
   enableScreenReaderSupport = true,
@@ -45,7 +45,7 @@ const,
         // Skip to main content
         if (e.key === 'Tab' && e.shiftKey && e.target === document.body) {
           const _skipLink = document.querySelector('.skip-link') as HTMLElement,
-          if (skipLink) {,
+          if (skipLink) {
             skipLink.focus();
             e.preventDefault();
   useEffect(() => {/* TODO: Fix JSX expression */}
@@ -67,7 +67,7 @@ const,
         // Announce focus changes to screen readers
         if (enableScreenReaderSupport && target.getAttribute('aria-label')) {
           const _announcement = target.getAttribute('aria-label'),
-          if (announcement) {,
+          if (announcement) {
             announceToScreenReader(announcement);
       const handleFocusIn = (e: FocusEvent) => {/* TODO: Fix JSX expression */}
           }
@@ -101,8 +101,8 @@ const,
     }
   }, [isHighContrast, isReducedMotion, focusVisible]);
   // Announce to screen reader;
-  const announceToScreenReader = (message: string) => {,
-    if (enableScreenReaderSupport) {,
+  const announceToScreenReader = (message: string) => {
+    if (enableScreenReaderSupport) {
       const _announcement = document.createElement('div');
       announcement.setAttribute('aria-live', 'polite');
       announcement.setAttribute('aria-atomic', 'true');

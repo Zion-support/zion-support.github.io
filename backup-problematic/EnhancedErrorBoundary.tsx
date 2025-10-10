@@ -5,14 +5,14 @@ interface Props {/* TODO: Fix JSX expression */}
 interface State {/* TODO: Fix JSX expression */}
 }
 class EnhancedErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {,
+  constructor(props: Props) {
     super(props);
     this.state = { hasError: false };
   }
-  static getDerivedStateFromError(error: Error): State {,
+  static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
   }
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {,
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({)
       error),
       errorInfo;

@@ -50,7 +50,7 @@
     launch_date: '2025 - 02 - 10'
     customers: 25
     rating: 4 && 4.6
-    reviews: 12,
+    reviews: 12
   },
     id: 'db - index - advisor'
     name: 'DB Index Advisor',
@@ -157,7 +157,7 @@
     launch_date: '2025 - 02 - 12'
     customers: 18
     rating: 4 && 4.5
-    reviews: 9,
+    reviews: 9
   }
       'Modern alternative to legacy APM addons with focused insights.'
     targetAudience: 'DBA, Backend, Platform'
@@ -179,7 +179,7 @@
     launchDate: '2025-02-12'
     customers: 18
     rating: 4.5
-    reviews: 9,
+    reviews: 9
   }
       'Modern alternative to legacy APM addons with focused insights.',
     targetAudience: 'DBA, Backend, Platform',
@@ -201,7 +201,7 @@
     launchDate: '2025-02-12'
     customers: 18
     rating: 4.5
-    reviews: 9,
+    reviews: 9
   }
 ];
 		period: '/month',
@@ -236,7 +236,7 @@
 		launchDate: '2025-02-01'
 		customers: 40
 		rating: 4 && 4.7
-		reviews: 18,
+		reviews: 18
 	}
 		id: 'finops-scheduler-optimizer'
 		name: 'FinOps Scheduler Optimizer'
@@ -270,7 +270,7 @@
 		launchDate: '2025-02-10'
 		customers: 25
 		rating: 4 && 4.6
-		reviews: 12,
+		reviews: 12
 	}
 		id: 'db-index-advisor'
 		name: 'DB Index Advisor'
@@ -304,7 +304,7 @@
 		launchDate: '2025-02-12'
 		customers: 18
 		rating: 4 && 4.5
-		reviews: 9,
+		reviews: 9
 	}
 ];
   id: 'ai - redteam - evaluator',
@@ -339,7 +339,7 @@
   launch_date: '2025 - 02 - 01'
   customers: 40
   rating: 4.7
-  reviews: 18,
+  reviews: 18
 }
   id: 'finops - scheduler - optimizer'
   name: 'FinOps Scheduler Optimizer'
@@ -373,7 +373,7 @@
   launch_date: '2025 - 02 - 10'
   customers: 25
   rating: 4.6
-  reviews: 12,
+  reviews: 12
 }
   id: 'db - index - advisor'
   name: 'DB Index Advisor'
@@ -407,7 +407,7 @@
   launch_date: '2025 - 02 - 12'
   customers: 18
   rating: 4.5
-  reviews: 9,
+  reviews: 9
 }
 		rating: 4.5;
 		reviews: 9
@@ -1403,7 +1403,7 @@ i,
   g: 4.5, review,
   s: 9} ratin,
   g: 4.5,
-  reviews: 9 ' import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services'; const contact = {/* TODO: Fix JSX expression */}
+  reviews: 9 ' import {  EnhancedRealMicroSaasService  } from './enhanced-real-micro-saas-services'; const contact = {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
@@ -1414,7 +1414,7 @@ i,
   g: 4.6} review,
   s: 12} } {/* TODO: Fix JSX expression */}
   g: 4.5} review,
-  s: 9} } ]; ' import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services'; const contact = {/* TODO: Fix JSX expression */}
+  s: 9} } ]; ' import {  EnhancedRealMicroSaasService  } from './enhanced-real-micro-saas-services'; const contact = {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,

@@ -44,8 +44,7 @@ const getStoredImpressions = (): BannerImpression[] => {/* TODO: Fix JSX express
  * Store impressions;
  */
 const storeImpressions = (impressions: BannerImpression[]): void => {
-    ,
-  try {,
+  try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(impressions))
   } catch {
     // Silently fail if localStorage is not available;
@@ -94,7 +93,7 @@ export const getBannerImpressionCount = (bannerI,
 /**
  * Check if banner should be shown based on impression limits;
  */
-export const shouldShowBanner = (banner: BannerConfig): boolean => {,
+export const shouldShowBanner = (banner: BannerConfig): boolean => {
   if (!banner.maxDailyImpressions) return true;
 ,
   //   const todayImpressions = getBannerImpressionCount(banner.id, 24);

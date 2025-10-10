@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import {  Link  } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { Globe, Shield, Zap, Settings, CheckCircle, Star,  Globe,  Shield,  Settings } from 'lucide-react';
+import {  Globe, Shield, Zap, Settings, CheckCircle, Star,  Globe,  Shield,  Settings  } from 'lucide-react';
 const NetworkSolutionsPage: React.FC = () => {
     const features = [],
   return (

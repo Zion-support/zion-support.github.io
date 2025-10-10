@@ -13,7 +13,7 @@ export function generateId(prefix = 'a11y'): string {}}return `${prefix}-${Math.
 export function announceToScreenReader(;)
   message: string,
   priority: 'polite' | 'assertive' = 'polite',
-): void {const announcement = document.createElement('div'),}
+): void {const announcement = document.createElement('div')}
   announcement.setAttribute('aria-live', priority);
   announcement.setAttribute('aria-atomic', 'true');
   announcement.className = 'sr-only';
@@ -26,7 +26,7 @@ document.body.appendChild(announcement);
 /**;
  * Trap focus within a container (useful for modals);
  */;
-export function trapFocus(element: HTMLElement): () => void {,}
+export function trapFocus(element: HTMLElement): () => void {}
     const focusableElements = element.querySelectorAll(,)
     'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
   );
@@ -36,7 +36,7 @@ const handleKeyDown = (;
     if (e.key === 'Tab') {
       if (e.shiftKey) {
         if (document.activeElement === firstFocusable) {
-          lastFocusable?.focus();) => {
+          lastFocusable?.focus(); => {
   return($3;)
   )}e.preventDefault();}
         }
@@ -53,7 +53,7 @@ return () => {element.removeEventListener('keydown', handleKeyDown)}}
 /**;
  * Check if element is keyboard accessible;
  */;
-export function isKeyboardAccessible(element: HTMLElement): boolean {,}
+export function isKeyboardAccessible(element: HTMLElement): boolean {}
     const tabIndex = element.getAttribute('tabindex'),
   return tabIndex !== null && tabIndex !== '-1'}}
 /**;
@@ -62,13 +62,13 @@ export function isKeyboardAccessible(element: HTMLElement): boolean {,}
 export function makeKeyboardAccessible(;)
   element: HTMLElement,
   onClick: (e: Event) => void,
-  options: {,
+  options: {
     role?: string,
     tabindex?: number;}} = {}): () => void {}}const {role = 'button', tabindex = 0}}= options;
 element.setAttribute('role', role);
   element.setAttribute('tabindex', tabindex.toString());
 const handleKeyDown = (;
-    if (e.key === 'Enter' || e.key === ' ') {e.preventDefault();) => {
+    if (e.key === 'Enter' || e.key === ' ') {e.preventDefault(); => {
   return($3;)
   )}onClick(e);}
     }
@@ -81,8 +81,8 @@ return () => {element.removeEventListener('click', onClick);
 /**;
  * Check color contrast ratio (WCAG 2.1);
  */;
-export function getContrastRatio(color1: string, color2: string): number {,}
-    const getLuminance = (color: string): number => {,
+export function getContrastRatio(color1: string, color2: string): number {}
+    const getLuminance = (color: string): number => {
     const rgb = color.match(/\d+/g)?.map(Number) || [0, 0, 0]
     const [r, g, b] = rgb.map(c => {)
       c = c / 255;
@@ -126,11 +126,11 @@ return skipLink;
 /**;
  * Detect if user prefers reduced motion;
  */;
-export function prefersReducedMotion(): boolean {return window.matchMedia('(prefers-reduced-motion: reduce)').matches;,}}}
+export function prefersReducedMotion(): boolean {return window.matchMedia('(prefers-reduced-motion: reduce)').matches;}}}
 /**;
  * Detect if user prefers dark mode;
  */;
-export function prefersDarkMode(): boolean {return window.matchMedia('(prefers-color-scheme: dark)').matches;,}}}
+export function prefersDarkMode(): boolean {return window.matchMedia('(prefers-color-scheme: dark)').matches;}}}
 /**;
  * Get ARIA label for form validation error;
  */;
@@ -196,12 +196,12 @@ return () => {trigger.removeEventListener('mouseenter', showTooltip);
 /**;
  * Manage focus restoration (useful for modals);
  */;
-export class FocusManager {private previousActiveElement: HTMLElement | null = null,}
+export class FocusManager {private previousActiveElement: HTMLElement | null = null}
 saveFocus(): void {this.previousActiveElement = document.activeElement as HTMLElement;}}}
 restoreFocus(): void {if (this.previousActiveElement) {}
       this.previousActiveElement.focus()}}
   }
-moveFocusInside(container: HTMLElement): void {,}
+moveFocusInside(container: HTMLElement): void {}
     const focusableElements = container.querySelectorAll(,)
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
     );

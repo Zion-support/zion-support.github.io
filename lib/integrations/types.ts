@@ -61,7 +61,7 @@ export interface ProviderConnection {
   description: string;
   logoUrl?: string
   websiteUrl?: string
-  apiDocsUrl?: string,
+  apiDocsUrl?: string
 }
 
 export interface ProviderConnection {
@@ -92,7 +92,7 @@ export type SyncStatus = 'connected' | 'warning' | 'disconnected';
   status: SyncStatus;
   lastSync?: number
   createdAt: number
-  expiresAt?: number,
+  expiresAt?: number
 }
 
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
@@ -101,14 +101,14 @@ export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 
   status: SyncStatus
   lastSync?: number
-  createdAt: number,
+  createdAt: number
 }
 
 }
 
   lastSync?: Date;
   config: Record<string></string>createdAt</string>: Date
-  updatedAt: Date,
+  updatedAt: Date
 }
 
 export interface SyncLogEntry {
@@ -158,7 +158,7 @@ export interface ZapierEvent {
     id: string
   type: 'zion.job.posted' | 'zion.talent.matched'
   timestamp: number,
-export interface IntegrationProviderMeta {,
+export interface IntegrationProviderMeta {
   timestamp: number
   status: 'success' | 'error' | 'warning',
   message: string
@@ -239,5 +239,5 @@ export interface IntegrationsState {
 }
 }
   overrides: IntegrationOverride[]
-  events: IntegrationEvent[],
+  events: IntegrationEvent[]
 }

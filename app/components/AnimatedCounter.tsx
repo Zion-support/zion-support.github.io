@@ -1,12 +1,12 @@
 'use client';
 import React from 'react';
-import React, {useState, useEffect}from 'react';
+import React, {useState, useEffect} from 'react';
 
-interface AnimatedCounterProps {end: number,}
+interface AnimatedCounterProps {end: number}
   duration?: number;
   prefix?: string;
   suffix?: string;
-  className?: string;}const AnimatedCounter: React.FC<AnimatedCounterProps> = ({,
+  className?: string;}const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   end,
   duration = 2000,
   prefix = '',
@@ -17,7 +17,7 @@ interface AnimatedCounterProps {end: number,}
     let startTime: number;,
     let animationFrame: number;,
 
-    const animate = (currentTime: number) => {,
+    const animate = (currentTime: number) => {
       if (!startTime) startTime = currentTime;
       const progress = Math.min((currentTime - startTime) / duration, 1);
       

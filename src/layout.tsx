@@ -1,6 +1,6 @@
 import Analytics from './components/Analytics';
 import React from 'react';
-import { Link } from 'react-router-dom';
+import {  Link  } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import Analytics from './components/Analytics';
@@ -185,6 +185,6 @@ export default RootLayout;
             '@type': 'Service',
             name: 'AI Enterprise Transformation',
             description: 'Comprehensive AI implementation strategies for enterprise organizations'
-export default SrcPage,
+export default SrcPage
 }
   </script>

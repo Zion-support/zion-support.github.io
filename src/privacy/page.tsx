@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, ArrowRight, Globe, Server, Key, FileText, AlertTriangle } from 'lucide-react';
+import {  Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, ArrowRight, Globe, Server, Key, FileText, AlertTriangle  } from 'lucide-react';
 export default function PrivacyPage() {
   const lastUpdated = 'January 1, 2024';
   const dataTypes = [
@@ -271,7 +271,7 @@ export default function PrivacyPage() {
         </div>
       </section>
     </div>
-  ),
+  )
 }
   </a>
   </h1>

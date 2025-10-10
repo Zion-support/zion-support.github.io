@@ -158,7 +158,7 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 01 - 01'
     customers: 800
     rating: 4 && 4.9
-    reviews: 400,
+    reviews: 400
   },
     id: 'edge - computing - platform'
     name: 'Edge Computing Platform',
@@ -313,7 +313,7 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 01 - 10'
     customers: 1500
     rating: 4 && 4.8
-    reviews: 750,
+    reviews: 750
   },
     id: 'quantum - computing - as - a-service'
     name: 'Quantum Computing as a Service',
@@ -467,7 +467,7 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 01 - 05'
     customers: 300
     rating: 4 && 4.9
-    reviews: 150,
+    reviews: 150
   },
       'Multi-consensus algorithms',
     id: 'blockchain - enterprise - platform'
@@ -625,7 +625,7 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 01 - 15'
     customers: 600
     rating: 4 && 4.8
-    reviews: 300,
+    reviews: 300
   },
       'CI/CD pipelines',
     id: 'devops - automation - platform'
@@ -785,7 +785,7 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 01 - 20'
     customers: 2500
     rating: 4 && 4.7
-    reviews: 1250,
+    reviews: 1250
   }];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
   id: string, name: string,
@@ -804,12 +804,12 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
   contactInfo: unknown,
     mobile: string, email: string
     address: string
-    website: string,
+    website: string
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number
   rating: number
-  reviews: number,
+  reviews: number
 }
 export const innovativeITServices: InnovativeITService[] = [,
     id: 'zero-trust-security-platform', name: 'Zero Trust Security Platform',
@@ -1014,7 +1014,7 @@ realImplementation: true,
     launchDate: '2024-01-01'
     customers: 800
     rating: 4.9
-    reviews: 400,
+    reviews: 400
   }
     id: 'edge-computing-platform'
     name: 'Edge Computing Platform',
@@ -1342,7 +1342,7 @@ realImplementation: true,
     launchDate: '2024-01-20'
     customers: 2500
     rating: 4.7
-    reviews: 1250,
+    reviews: 1250
   }];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1415,7 +1415,7 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
   launchDate: string;
   customers: number
   rating: number
-  reviews: number,
+  reviews: number
 }
 export const innovativeITServices: InnovativeITService[] = [;
   {

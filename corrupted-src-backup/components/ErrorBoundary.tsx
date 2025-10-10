@@ -1,23 +1,22 @@
-import { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
+import {  Component, ErrorInfo, ReactNode  } from 'react';
+import {  AlertTriangle, RefreshCw, Home  } from 'lucide-react';
 interface Props {/* TODO: Fix JSX expression */}
 }
 interface State {/* TODO: Fix JSX expression */}
 }
 class ErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {,
+  constructor(props: Props) {
     super(props);
     this.state = { hasError: false }
   }
-  static getDerivedStateFromError(error: Error): State {,
-    return {,
+  static getDerivedStateFromError(error: Error): State {
+    return {
       hasError: true,
       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     }
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    ,
 //     // Report error to analytics/monitoring service;
     this.reportError(error, errorInfo);
     // Call custom error handler if provided;
@@ -25,13 +24,13 @@ class ErrorBoundary extends Component<Props, State> {
       this.props.onError(error, errorInfo)
   }
   }
-  private reportError = (error: Error, errorInfo: ErrorInfo) => {,
+  private reportError = (error: Error, errorInfo: ErrorInfo) => {
     // Report to external service (e.g., Sentry, LogRocket, etc.)
     if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('event', 'exception', {)
         description: error.message,)
         fatal: false)
-        custom_map: {,
+        custom_map: {
           error_id: this.state.errorId),
           component_stack: errorInfo.componentStack,
 class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression */}

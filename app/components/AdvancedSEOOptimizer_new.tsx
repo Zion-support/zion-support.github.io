@@ -1,6 +1,6 @@
 'use client';
-import React, {useEffect, useState, useCallback}from 'react';
-import {Helmet}}from 'react-helmet-async';
+import React, {useEffect, useState, useCallback} from 'react';
+import {  Helmet  } from 'react-helmet-async';
 interface SEOOptimizerProps {title?: string;}
   description?: string;
   keywords?: string;
@@ -8,7 +8,7 @@ interface SEOOptimizerProps {title?: string;}
   ogImage?: string;
   twitterCard?: string;
   structuredData?: object;
-  children: React.ReactNode;,}const AdvancedSEOOptimizerNew: React.FC<SEOOptimizerProps> = ({,
+  children: React.ReactNode;}const AdvancedSEOOptimizerNew: React.FC<SEOOptimizerProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Professional AI and IT solutions for your business. Advanced technology, expert support, and proven results.',
   keywords = 'AI solutions, IT services, technology, business solutions, Zion Tech Group',
@@ -47,24 +47,25 @@ interface SEOOptimizerProps {title?: string;}
       "logo": ogImage,
       "sameAs": [
         "https://twitter.com/ziontechgroup",
-        "https: //linkedin.com/company/ziontechgroup",
+        "https: //linkedin.com/company/ziontechgroup"
       ]}return structuredData || defaultStructuredData;
   }
-  return(<React.Fragment>)</React.Fragment>
+  return (
+      <React.Fragment></React.Fragment>
       <Helmet />
         <title>{title}</title>
         <meta name="description" content={description}/>
         <meta name="keywords" content={keywords}/>
         {canonicalUrl && <link rel="canonical" href={canonicalUrl}/>}
-        {/* Open Graph */} <meta property="og: title" content={title,}/>
-        <meta property="og: description" content={description,}/>
-        <meta property="og: image" content={ogImage,}/>
+        {/* Open Graph */} <meta property="og: title" content={title}/>
+        <meta property="og: description" content={description}/>
+        <meta property="og: image" content={ogImage}/>
         <meta property="og: type" content="website" />,
-        {canonicalUrl && <meta property="og: url" content={canonicalUrl,}/>}
-        {/* Twitter Card */} <meta name="twitter: card" content={twitterCard,}/>
-        <meta name="twitter: title" content={title,}/>
-        <meta name="twitter: description" content={description,}/>
-        <meta name="twitter: image" content={ogImage,}/>
+        {canonicalUrl && <meta property="og: url" content={canonicalUrl}/>}
+        {/* Twitter Card */} <meta name="twitter: card" content={twitterCard}/>
+        <meta name="twitter: title" content={title}/>
+        <meta name="twitter: description" content={description}/>
+        <meta name="twitter: image" content={ogImage}/>
         {/* Structured Data */} <script type="application/ld+json">
           {JSON.stringify(generateStructuredData())} </script>
       </Helmet>
@@ -79,12 +80,11 @@ interface SEOOptimizerProps {title?: string;}
           borderRadius: '5px',
           fontSize: '12px',
           zIndex: 1000,
-          maxWidth: '300px',}}>
+          maxWidth: '300px'}}>
           <div>SEO Score: {seoScore,</div>}/100</div>
           {recommendations.length > 0 && (
             <div>
-              <div>Recommendations: </div>,
-              <ul style={{ margin: '5px 0', paddingLeft: '15px' ,}}>
+              <div>Recommendations: </div><ul style={{ margin: '5px 0', paddingLeft: '15px' }}>
                 {recommendations.map((rec, index) => (
                   <li key={index}>{rec}</li>
                 ))}

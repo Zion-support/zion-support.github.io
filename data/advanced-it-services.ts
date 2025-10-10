@@ -153,7 +153,7 @@ export const,
     launchDate: '2024-12-01'
     customers: 8
     rating: 4.9
-    reviews: 4,
+    reviews: 4
   },
     id: 'edge-computing-orchestrator',
     name: 'Edge Computing Orchestrator',
@@ -381,7 +381,7 @@ export const,
     launch_date: '2024 - 12 - 01'
     customers: 8
     rating: 4 && 4.9
-    reviews: 4,
+    reviews: 4
   },
     id: 'edge - computing - orchestrator',
     name: 'Edge Computing Orchestrator',
@@ -518,7 +518,7 @@ export const,
     launchDate: '2024-10-01'
     customers: 156
     rating: 4 && 4.7
-    reviews: 89,
+    reviews: 89
   },
     id: 'zero - trust - security - platform',
     name: 'Zero Trust Security Platform',
@@ -801,7 +801,7 @@ export const,
     launchDate: '2024-10-01'
     customers: 89
     rating: 4.8
-    reviews: 45,
+    reviews: 45
   }
   },
       'AI-powered automation',
@@ -943,7 +943,7 @@ export const,
     launchDate: '2024-08-01'
     customers: 234
     rating: 4 && 4.6
-    reviews: 123,
+    reviews: 123
   },
     id: 'blockchain - enterprise - platform',
     name: 'Blockchain Enterprise Platform',
@@ -1038,7 +1038,7 @@ export const,
     launchDate: '2024-07-01'
     customers: 67
     rating: 4 && 4.7
-    reviews: 34,
+    reviews: 34
   },
     id: 'quantum - data - center',
     name: 'Quantum Data Center',
@@ -1213,7 +1213,7 @@ export const,
     launch_date: '2024 - 11 - 01'
     customers: 12
     rating: 4 && 4.9
-    reviews: 6,
+    reviews: 6
   },
     id: 'ai - powered - network - security',
     name: 'AI - Powered Network Security',
@@ -1356,7 +1356,7 @@ export const,
     launch_date: '2024 - 09 - 15'
     customers: 178
     rating: 4 && 4.7
-    reviews: 89,
+    reviews: 89
   },
     id: 'quantum - iot - platform',
     name: 'Quantum IoT Platform',
@@ -1499,7 +1499,7 @@ export const,
     launch_date: '2024 - 08 - 15'
     customers: 234
     rating: 4 && 4.6
-    reviews: 123,
+    reviews: 123
   },
     id: 'ai - powered - cloud - migration',
     name: 'AI - Powered Cloud Migration',
@@ -1591,7 +1591,7 @@ export const,
     launchDate: '2024-10-01'
     customers: 89
     rating: 4 && 4.8
-    reviews: 45,
+    reviews: 45
   }];      mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -1698,7 +1698,7 @@ export interface AdvancedITService {/* TODO: Fix JSX expression */}
   launchDate: string;
   customers: number
   rating: number
-  reviews: number,
+  reviews: number
 }
 export const advancedITServices: AdvancedITService[] = [;
   {
@@ -1741,7 +1741,7 @@ export const advancedITServices: AdvancedITService[] = [;
     launchDate: '2024-12-01';
     customers: 8
     rating: 4.9
-    reviews: 4,
+    reviews: 4
   }
   {
     id: 'edge-computing-orchestrator'
@@ -1783,7 +1783,7 @@ export const advancedITServices: AdvancedITService[] = [;
     launchDate: '2024-10-01';
     customers: 156
     rating: 4.7
-    reviews: 89,
+    reviews: 89
   }
   {
     id: 'zero-trust-security-platform'
@@ -1825,7 +1825,7 @@ export const advancedITServices: AdvancedITService[] = [;
     launchDate: '2024-09-01';
     customers: 89
     rating: 4.8
-    reviews: 45,
+    reviews: 45
   }
   {
     id: 'ai-powered-devops-platform'
@@ -1867,7 +1867,7 @@ export const advancedITServices: AdvancedITService[] = [;
     launchDate: '2024-08-01';
     customers: 234
     rating: 4.6
-    reviews: 123,
+    reviews: 123
   }
   {
     id: 'blockchain-enterprise-platform'
@@ -1909,7 +1909,7 @@ export const advancedITServices: AdvancedITService[] = [;
     launchDate: '2024-07-01';
     customers: 67
     rating: 4.7
-    reviews: 34,
+    reviews: 34
   }
   {
     id: 'quantum-data-center'
@@ -1951,7 +1951,7 @@ export const advancedITServices: AdvancedITService[] = [;
     launchDate: '2024-11-01';
     customers: 12
     rating: 4.9
-    reviews: 6,
+    reviews: 6
   }
   {
     id: 'ai-powered-network-security'
@@ -1993,7 +1993,7 @@ export const advancedITServices: AdvancedITService[] = [;
     launchDate: '2024-09-15';
     customers: 178
     rating: 4.7
-    reviews: 89,
+    reviews: 89
   }
   {
     id: 'quantum-iot-platform'
@@ -2035,7 +2035,7 @@ export const advancedITServices: AdvancedITService[] = [;
     launchDate: '2024-08-15';
     customers: 234
     rating: 4.6
-    reviews: 123,
+    reviews: 123
   }
   {
     id: 'ai-powered-cloud-migration'

@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Users, Award, Brain, Shield, Linkedin, Mail, Github, Twitter } from 'lucide-react';
+import {  Link  } from 'react-router-dom';
+import {  Users, Award, Brain, Shield, Linkedin, Mail, Github, Twitter  } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const TeamPage: React.FC = () => {
@@ -220,7 +220,7 @@ const TeamPage: React.FC = () => {
       </section>
       <Footer />
     </div>
-  ),
+  )
 }
 export default TeamPage;
   </Link>

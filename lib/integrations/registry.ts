@@ -62,7 +62,7 @@ export const,
   PROVIDERS: IntegrationProviderMeta[] = [
 
 export const PROVIDERS: IntegrationProviderMeta[] = [
-  {,
+  {
     id: 'salesforce',
     name: 'Salesforce',
     category: 'crm',
@@ -108,10 +108,10 @@ export const,
   n: 'HRIS & ATS' }
 ];
 
-export function getProviderById(id: string): IntegrationProviderMeta | undefined {,
+export function getProviderById(id: string): IntegrationProviderMeta | undefined {
     description: 'HRIS & ATS'}];
 
-export function getProviderById(id: string,)): IntegrationProviderMeta | undefined {,
+export function getProviderById(id: string,)): IntegrationProviderMeta | undefined {
   return PROVIDERS.find(p => p.id === id);
 
 export function getProviderById(i)

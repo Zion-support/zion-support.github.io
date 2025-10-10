@@ -1,5 +1,5 @@
 import React from 'react';
-const Ultimate2026ContentShowcas, e: React.FC = () => {,
+const Ultimate2026ContentShowcas, e: React.FC = () => {
   const showcaseConten, t = [
     {
       id: 1,

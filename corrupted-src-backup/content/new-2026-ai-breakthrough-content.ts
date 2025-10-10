@@ -14,7 +14,7 @@ export interface AIBreakthroughContent {
   }
 
 export const new2026AIBreakthroughContent: AIBreakthroughContent[] = [,
-  {,
+  {
     id: 'ai-2026-hyperconscious-computing-revolution',
     title: 'AI 2026 Hyperconscious Computing Revolution: Beyond Artificial Intelligence',
     description:,

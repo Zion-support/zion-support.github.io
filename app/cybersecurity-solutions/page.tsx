@@ -1,8 +1,9 @@
 import React from 'react';
-import {Helmet}}from 'react-helmet-async';
+import {  Helmet  } from 'react-helmet-async';
 
-const CybersecuritySolutionsPage: React.FC = () => {,
-  return(<>)
+const CybersecuritySolutionsPage: React.FC = () => {
+  return (
+    <>
       <Helmet />
         <title>Cybersecurity Solutions - Zion Tech Group</title>
         <meta name="description" content="Comprehensive cybersecurity solutions including threat detection, vulnerability assessment, security monitoring, and compliance management." />
@@ -19,7 +20,7 @@ const CybersecuritySolutionsPage: React.FC = () => {,
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">,</div>
+          <div>
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
               <h3 className="text-2xl font-bold text-cyan-400 mb-4">Threat Detection</h3>
               <p className="text-gray-300 mb-4">Advanced threat detection systems to identify and respond to security threats in real-time.</p>
@@ -94,13 +95,12 @@ const CybersecuritySolutionsPage: React.FC = () => {,
           </div>
 
           <div className="text-center">
-            <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">,</button>
-              Secure Your Organization;
-            </button>
+            <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">Secure Your Organization</button>
           </div>
         </div>
       </div>
     </>
-  );};
+  );
+};
 
 export default CybersecuritySolutionsPage;

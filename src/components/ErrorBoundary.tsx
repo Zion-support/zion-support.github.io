@@ -1,6 +1,6 @@
 'use client';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
+import {  AlertTriangle, RefreshCw, Home, Mail  } from 'lucide-react';
 interface Props {/* TODO: Fix JSX expression */}
 }
 interface State {/* TODO: Fix JSX expression */}
@@ -108,7 +108,7 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
             </div>
           </div>
         </div>
-      ),
+      )
     }
     return this.props.children;
   }

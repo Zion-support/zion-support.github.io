@@ -9,7 +9,6 @@ export interface Insight {
 
 export const insights: Insight[] = [,
   {
-    ,
     id: 'ai-cost-governance-framework',
     title: 'AI Cost Governance: FinOps Framework for ML Teams',
     summary:,

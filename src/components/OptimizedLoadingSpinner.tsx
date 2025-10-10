@@ -6,7 +6,7 @@ interface OptimizedLoadingSpinnerProps {
   className?: string;
 'use client';
 interface OptimizedLoadingSpinnerProps {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   size?: 'sm' | 'md' | 'lg';
   color?: 'primary' | 'secondary' | 'white';
@@ -23,7 +23,7 @@ const,
   g: 'w-12 h-12'
     }
     const colorClasses = {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   primar,
   y: 'text-cyan-400',
@@ -61,7 +61,7 @@ className="opacity-75""
 // />
           </svg>
       </div>
-    ),
+    )
   }
 );
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';
@@ -104,7 +104,7 @@ $4}
           />
         </svg>
       </div>
-    ),
+    )
   }
 );
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';

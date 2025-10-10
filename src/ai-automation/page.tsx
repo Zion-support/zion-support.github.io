@@ -1,8 +1,8 @@
 'use client';
 import React from 'react';
-import { Zap, ArrowRight } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Settings, Phone } from 'lucide-react';
+import {  Zap, ArrowRight  } from 'lucide-react';
+import {  Helmet  } from 'react-helmet-async';
+import {  CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Settings, Phone  } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const AIAutomationPage: React.FC = () => {

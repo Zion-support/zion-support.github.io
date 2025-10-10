@@ -196,7 +196,7 @@ export const,
   link: string
   category: string
   realImplementation: boolean,
-  contactInfo: {,
+  contactInfo: {
     mobile: string,
     email: string}
     address: string}
@@ -224,7 +224,7 @@ export const practicalBusinessSolutionServices2029: PracticalBusinessSolution202
     real_implementation: true
     contact_info: unknown,
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",      address: "364 E Main St STE 1008 Middletown DE 19709",
-export interface PracticalBusinessSolution2029 {,
+export interface PracticalBusinessSolution2029 {
       "Affordable pricing"],
     link: "/services/2029-practical-business-solution",
     category: "Practical Business Solutions 2029",
@@ -452,7 +452,7 @@ export const,
   link: string
   category: string
   realImplementation: boolean,
-  contactInfo: {,
+  contactInfo: {
     mobile: string,
     email: string}
     address: string}

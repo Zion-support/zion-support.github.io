@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Search, X, ArrowRight, Clock, TrendingUp, Star } from 'lucide-react';
+import {  Search, X, ArrowRight, Clock, TrendingUp, Star  } from 'lucide-react';
 interface SearchResult {
     id: string;
   title: string;

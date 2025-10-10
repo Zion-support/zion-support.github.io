@@ -1,7 +1,7 @@
 'use client';
-import React, {useEffect, useRef}from 'react';
+import React, {useEffect, useRef} from 'react';
 
-const FuturisticBackground: React.FC = () => {,
+const FuturisticBackground: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -17,14 +17,14 @@ const FuturisticBackground: React.FC = () => {,
     window.addEventListener('resize', resizeCanvas);
 
     // Quantum particles;
-    const particles: Array<{,
+    const particles: Array<{
       x: number;,
       y: number;,
       vx: number;,
       vy: number;,
       size: number;,
       opacity: number;,
-      color: string;,}> = []
+      color: string;}> = []
 
     const colors = ['#00ffff', '#8b5cf6', '#ec4899', '#10b981', '#3b82f6']
 
@@ -36,7 +36,7 @@ const FuturisticBackground: React.FC = () => {,
         vy: (Math.random() - 0.5) * 0.5,
         size: Math.random() * 3 + 1,
         opacity: Math.random() * 0.5 + 0.2,
-        color: colors[Math.floor(Math.random() * colors.length)],})
+        color: colors[Math.floor(Math.random() * colors.length)]})
     }
 
     const animate = () => {ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -98,7 +98,7 @@ const FuturisticBackground: React.FC = () => {,
 
   return(<canvas;)
       ref={canvasRef}className="fixed top-0 left-0 w-full h-full pointer-events-none z-0"
-      style={{ background: 'transparent' ,}}
+      style={{ background: 'transparent' }}
     />
   );
 };

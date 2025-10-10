@@ -1,9 +1,9 @@
 'use client';
-import React, {useState, useEffect}from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {Cpu, Zap, Brain, Target, BarChart, Shield, Clock, Users, ArrowRight, Star, TrendingUp, Lock, FileText, DollarSign, CheckCircle, Phone, Mail, MapPin, Globe, Database, Settings, Calendar, Award, Rocket, Eye, MessageSquare, CheckSquare}}from 'lucide-react';
+import React, {useState, useEffect} from 'react';
+import {  Helmet  } from 'react-helmet-async';
+import {  Cpu, Zap, Brain, Target, BarChart, Shield, Clock, Users, ArrowRight, Star, TrendingUp, Lock, FileText, DollarSign, CheckCircle, Phone, Mail, MapPin, Globe, Database, Settings, Calendar, Award, Rocket, Eye, MessageSquare, CheckSquare  } from 'lucide-react';
 
-const AIQuantumComputingSimulator: React.FC = () => {,
+const AIQuantumComputingSimulator: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -40,7 +40,7 @@ const AIQuantumComputingSimulator: React.FC = () => {,
         'Export to QASM',
         'Basic error modeling'
       ],
-      popular: false;,},
+      popular: false;},
     {name: 'Developer',
       price: '$499',
       period: '/month',
@@ -55,7 +55,7 @@ const AIQuantumComputingSimulator: React.FC = () => {,
         'Quantum algorithm library',
         'Performance analytics'
       ],
-      popular: true;,},
+      popular: true;},
     {name: 'Enterprise',
       price: '$1,299',
       period: '/month',
@@ -71,39 +71,36 @@ const AIQuantumComputingSimulator: React.FC = () => {,
         'Quantum cloud access',
         'Research collaboration tools'
       ],
-      popular: false;,}];
+      popular: false;}];
 
   const useCases = [
     {title: 'Quantum Algorithm Development',
       description: 'Develop and test quantum algorithms for optimization, cryptography, and machine learning',
       icon: Brain,
-      results: '50% faster algorithm development',},
+      results: '50% faster algorithm development'},
     {title: 'Quantum Machine Learning',
       description: 'Simulate quantum machine learning models and quantum neural networks',
       icon: Target,
-      results: 'Advanced quantum ML capabilities',},
+      results: 'Advanced quantum ML capabilities'},
     {title: 'Cryptography Research',
       description: 'Test quantum cryptographic protocols and post-quantum security',
       icon: Lock,
-      results: 'Enhanced security analysis',},
+      results: 'Enhanced security analysis'},
     {title: 'Quantum Chemistry',
       description: 'Simulate molecular systems and quantum chemical reactions',
       icon: Zap,
-      results: 'Accurate molecular modeling',}];
+      results: 'Accurate molecular modeling'}];
 
-  return(<>)
+  return (
+    <>
       <Helmet />
         <title>AI Quantum Computing Simulator - Advanced Quantum Simulation | Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered quantum computing simulator with up to 50 qubit simulation, quantum circuit optimization, and 3D visualization. Perfect for research and development." />
         <meta name="keywords" content="quantum computing simulator, quantum circuits, quantum algorithms, quantum machine learning, quantum simulation, quantum development" />
-        <meta property="og: title" content="AI Quantum Computing Simulator - Advanced Quantum Simulation" />,
-        <meta property="og:description" content="Advanced AI-powered quantum computing simulator with up to 50 qubit simulation, quantum circuit optimization, and 3D visualization." />
-        <meta property="og: type" content="website" />,
-        <meta property="og: url" content="https://ziontechgroup.com/ai-quantum-computing-simulator" />,
-        <link rel="canonical" href="https: //ziontechgroup.com/ai-quantum-computing-simulator" />,
-      </Helmet>
+        <meta property="og: title" content="AI Quantum Computing Simulator - Advanced Quantum Simulation" /><meta property="og:description" content="Advanced AI-powered quantum computing simulator with up to 50 qubit simulation, quantum circuit optimization, and 3D visualization." />
+        <meta property="og: type" content="website" /><meta property="og: url" content="https://ziontechgroup.com/ai-quantum-computing-simulator" /><link rel="canonical" href="https: //ziontechgroup.com/ai-quantum-computing-simulator" /></Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">{/* Hero Section */</div>} <section className="relative py-20 px-4 sm: px-6 lg:px-8 overflow-hidden">,</section>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">{/* Hero Section */</div>} <section>
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10"></div>
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-500/20 via-transparent to-transparent"></div>
           
@@ -114,16 +111,16 @@ const AIQuantumComputingSimulator: React.FC = () => {,
                 <span className="text-purple-400 font-semibold">Quantum Computing</span>
               </div>
               
-              <h1 className="text-5xl md: text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">,</h1>
+              <h1>
                 AI Quantum Computing Simulator;
               </h1>
               
-              <p className="text-xl md: text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">,</p>
+              <p>
                 Advanced AI-powered quantum computing simulator with up to 50 qubit simulation, 
                 quantum circuit optimization, and interactive 3D visualization for research and development.
               </p>
               
-              <div className="flex flex-col sm: flex-row gap-4 justify-center items-center mb-12">,</div>
+              <div>
                 <div className="flex items-center space-x-2 text-purple-400">
                   <Cpu className="w-5 h-5" />
                   <span className="font-semibold">Up to 50 Qubits</span>
@@ -138,7 +135,7 @@ const AIQuantumComputingSimulator: React.FC = () => {,
                 </div>
               </div>
               
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">,</div>
+              <div>
                 <a;
                   href="tel: +13024640950",
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-xl hover: from-purple-600 hover:to-pink-700 transition-all duration-300 shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40 hover:scale-105",
@@ -158,10 +155,10 @@ const AIQuantumComputingSimulator: React.FC = () => {,
           </div>
         </section>
 
-        {/* Features Section */} <section className="py-20 px-4 sm: px-6 lg:px-8">,</section>
+        {/* Features Section */} <section>
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">,</h2>
+              <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"></h2>
                 Advanced Quantum Simulation Features;
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">Our AI-powered quantum computing simulator provides cutting-edge tools;</p>
@@ -169,7 +166,7 @@ const AIQuantumComputingSimulator: React.FC = () => {,
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">,</div>
+            <div>
               {features.map((feature, index) => (
                 <div;
                   key={index}className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-8 border border-purple-500/20 hover: border-purple-500/40 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/10",
@@ -192,10 +189,10 @@ const AIQuantumComputingSimulator: React.FC = () => {,
           </div>
         </section>
 
-        {/* Use Cases Section */} <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-slate-800/30 to-slate-900/30">,</section>
+        {/* Use Cases Section */} <section>
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-pink-400 to-cyan-400 bg-clip-text text-transparent">,</h2>
+              <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-pink-400 to-cyan-400 bg-clip-text text-transparent"></h2>
                 Quantum Computing Applications;
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">Explore the vast potential of quantum computing across various domains;</p>
@@ -203,7 +200,7 @@ const AIQuantumComputingSimulator: React.FC = () => {,
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">,</div>
+            <div>
               {useCases.map((useCase, index) => (
                 <div;
                   key={index}className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-8 border border-pink-500/20 hover: border-pink-500/40 transition-all duration-300 hover:scale-105",
@@ -220,10 +217,10 @@ const AIQuantumComputingSimulator: React.FC = () => {,
           </div>
         </section>
 
-        {/* Pricing Section */} <section className="py-20 px-4 sm: px-6 lg:px-8">,</section>
+        {/* Pricing Section */} <section>
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">,</h2>
+              <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent"></h2>
                 Flexible Pricing Plans;
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">Choose the perfect quantum simulation plan for your research needs.</p>
@@ -231,13 +228,13 @@ const AIQuantumComputingSimulator: React.FC = () => {,
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">,</div>
+            <div>
               {pricingPlans.map((plan, index) => (
                 <div;
-                  key={index}className={`relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-8 border transition-all duration-300 hover: scale-105 hover:shadow-xl ${,
+                  key={index}className={`relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-8 border transition-all duration-300 hover: scale-105 hover:shadow-xl ${
                     plan.popular;
                       ? 'border-purple-500/50 shadow-purple-500/20' 
-                      : 'border-gray-700/50 hover: border-purple-500/30',}`}
+                      : 'border-gray-700/50 hover: border-purple-500/30'}`}
                 >{plan.popular && (</div>
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <div className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-6 py-2 rounded-full text-sm font-semibold">Most Popular;</div>
@@ -265,7 +262,7 @@ const AIQuantumComputingSimulator: React.FC = () => {,
                     className={`w-full py-3 px-6 rounded-xl font-semibold text-center transition-all duration-300 ${
                       plan.popular;
                         ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white hover: from-purple-600 hover:to-pink-700',
-                        : 'bg-gradient-to-r from-gray-700 to-gray-600 text-white hover: from-gray-600 hover:to-gray-500',}`}
+                        : 'bg-gradient-to-r from-gray-700 to-gray-600 text-white hover: from-gray-600 hover:to-gray-500'}`}
                   >
                     Get Started;
                   </a>
@@ -275,15 +272,15 @@ const AIQuantumComputingSimulator: React.FC = () => {,
           </div>
         </section>
 
-        {/* CTA Section */} <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-cyan-500/10">,</section>
+        {/* CTA Section */} <section>
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">,</h2>
+            <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent"></h2>
               Start Your Quantum Journey Today;
             </h2>
             <p className="text-xl text-gray-300 mb-8">Join leading researchers and developers using our AI-powered quantum computing simulator;</p>
               to unlock the potential of quantum technology.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">,</div>
+            <div>
               <a;
                 href="tel: +13024640950",
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-xl hover: from-purple-600 hover:to-pink-700 transition-all duration-300 shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40 hover:scale-105",

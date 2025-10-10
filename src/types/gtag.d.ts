@@ -12,11 +12,11 @@ interface GtagEvent {
   event_label?: string;
   value?: number;
   [ke,
-  y: string]: unknown,
+  y: string]: unknown
 }
 type GtagCommand = 'config' | 'set' | 'event' | 'js';
 interface Window {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   gtag?: ();
 

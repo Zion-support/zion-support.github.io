@@ -29,7 +29,7 @@
     mobile: string;
     email: string
     address: string
-    website: string,
+    website: string
   }
   real_implementation: boolean;
   implementation_details: string;
@@ -40,7 +40,7 @@
   benefits: string[]
   marketAdvantage: string,
   capabilities: string[],
-  market_advantage: string,
+  market_advantage: string
 }
 const contact =
   mobile: '+1 302 464 0950',
@@ -563,7 +563,7 @@ export interface ComprehensiveInnovativeService {
   marketSize: string
   growthRate: string
   variant: ServiceVariant,
-  contactInfo: {,
+  contactInfo: {
     mobile: string
     email: string,
     address: string}
@@ -577,7 +577,7 @@ export interface ComprehensiveInnovativeService {
   reviews: number;
   benefits: string[]
   capabilities: string[]
-  marketAdvantage: string,
+  marketAdvantage: string
 }
 // const contact = {
   mobile: '+1 302 464 0950'
@@ -2053,7 +2053,7 @@ i,
   s: 78, ratin,
   g: 4 && 4.6, review,
   s: 56, benefit,
-  s: [,' '25% energy cost reduction40% sustainability improvement_renewable integration_grid optimization_carbon tracking' ], ' import { ServiceVariant } from '../types/service-variants'; export interface ComprehensiveInnovativeService {/* TODO: Fix JSX expression */}
+  s: [,' '25% energy cost reduction40% sustainability improvement_renewable integration_grid optimization_carbon tracking' ], ' import {  ServiceVariant  } from '../types/service-variants'; export interface ComprehensiveInnovativeService {/* TODO: Fix JSX expression */}
   s: string} websit,
   e: string} } realImplementatio,
   n: boolean, implementationDetail,
@@ -2072,7 +2072,7 @@ i,
   comprehensiveInnovativeServices: ComprehensiveInnovativeService[] = [; // AI & Machine Learning Services, {/* TODO: Fix JSX expression */}
   s: [,' '80% faster content creation40% increase in engagementSEO optimization built-inMulti-language supportBrand voice consistency' ]} capabilitie,
   s: [,' 'Renewable energy management_energy optimization_grid integration_sustainability reporting_predictive maintenance' ]}' market_advantag,
-  e: 'Advanced AI energy platform with comprehensive sustainability features' } ]; export default comprehensiveInnovativeServices; ' import { ServiceVariant } from '../types/service-variants'; export interface ComprehensiveInnovativeService {/* TODO: Fix JSX expression */}
+  e: 'Advanced AI energy platform with comprehensive sustainability features' } ]; export default comprehensiveInnovativeServices; ' import {  ServiceVariant  } from '../types/service-variants'; export interface ComprehensiveInnovativeService {/* TODO: Fix JSX expression */}
   s: string} websit,
   e: string} } realImplementatio,
   n: boolean, implementationDetail,

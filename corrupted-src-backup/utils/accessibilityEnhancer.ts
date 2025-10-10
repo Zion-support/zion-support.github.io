@@ -94,8 +94,8 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
 
     const _style = document.createElement('style');
     style.textContent = `
-      @media (prefers-contrast: high) {,
-        * {,
+      @media (prefers-contrast: high) {
+        * {
           background-color: #000 !important
           color: #fff !important,
   private setupHighContrast(): void {/* TODO: Fix JSX expression */}
@@ -117,13 +117,13 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
     const _currentIndex = focusableElements.indexOf(document.activeElement as HTMLElement)
     if (event.shiftKey) {
       // Shift + Tab: move backwards,
-      if (currentIndex === 0) {,
+      if (currentIndex === 0) {
         event.preventDefault();
         focusableElements[focusableElements.length - 1]?.focus()
   }
     } else {
       // Tab: move forwards,
-      if (currentIndex === focusableElements.length - 1) {,
+      if (currentIndex === focusableElements.length - 1) {
         event.preventDefault();
         focusableElements[0]?.focus();,
   private handleTabNavigation(even)

@@ -20,7 +20,7 @@ export interface EnvConfig {
     logLeve,
   l: 'debug' | 'info' | 'warn' | 'error'
   sentryDsn?: string
-  gaTrackingId?: string,
+  gaTrackingId?: string
 }
 
 class EnvironmentConfig {
@@ -32,7 +32,7 @@ class EnvironmentConfig {
   config: EnvConfig
   private isInitialized = false,
   constructor() {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     this.config = this.loadConfig();
     this.isInitialized = true;
@@ -41,7 +41,7 @@ class EnvironmentConfig {
     // Safely access environment variables with defaults
   }
     return {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 //       nodeEnv,
       apiUr,
@@ -61,7 +61,7 @@ class EnvironmentConfig {
         (nodeEnv === 'production' ? 'warn' : 'debug')) as EnvConfig['logLevel'],
 
       sentryDsn: process.env.NEXT_PUBLIC_SENTRY_DSN || process.env.VITE_SENTRY_DSN,
-      gaTrackingId: process.env.NEXT_PUBLIC_GA_TRACKING_ID || process.env.VITE_GA_TRACKING_ID,
+      gaTrackingId: process.env.NEXT_PUBLIC_GA_TRACKING_ID || process.env.VITE_GA_TRACKING_ID
 
     }
   }
@@ -70,7 +70,7 @@ class EnvironmentConfig {
    */
   public getConfig(): Readonly;
           <EnvConfig> {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     return Object.freeze({ ...this.config });
   }
@@ -80,7 +80,7 @@ class EnvironmentConfig {
   public get;
           <K extends keyof EnvConfig>(ke)
   y: K): EnvConfig[K] {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     return this.config[key];
   }
@@ -129,23 +129,23 @@ class EnvironmentConfig {
   vali,
   d: boolean,,
     missin,
-  g: string[],
+  g: string[]
   } {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     const,
   missing: string[] = [],
     for (const varName of requiredVars) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       if (!this.config[varName]) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
         missing.push(varName);
       }
     }
     return {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   vali,
   d: missing.length === 0,
@@ -157,17 +157,17 @@ class EnvironmentConfig {
    */
   public getApiHeaders(): Record;
           <string, string> {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     const,
   headers: Record,
           <string, string> = {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       'Content-Type': 'application/json'
     }
     if (this.config.apiKey) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       headers['Authorization'] = `Bearer ${this.config.apiKey}`;
     }
@@ -187,11 +187,11 @@ class EnvironmentConfig {
 
 }
     if (this.isDevelopment()) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       console.group(' Environment Configuration');
       console.table({/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 
   Environment: this.config.nodeEnv,

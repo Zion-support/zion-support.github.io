@@ -1,8 +1,8 @@
-export const metadata: Metadata = {,
+export const metadata: Metadata = {
   title: 'Quantum Neural Consensus Implementation | Zion Tech Group',
   description: 'Professional Quantum Neural Consensus Implementation services from Zion Tech Group.',
   keywords: 'Quantum Neural Consensus Implementation, services, technology, enterprise',
-  openGraph: {,
+  openGraph: {
     title: 'Quantum Neural Consensus Implementation',
     description: 'Professional Quantum Neural Consensus Implementation services from Zion Tech Group.',
     type: 'website'}}

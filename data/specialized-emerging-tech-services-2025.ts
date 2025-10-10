@@ -29,7 +29,7 @@
     mobile: string;
     email: string
     address: string
-    website: string,
+    website: string
   }
   real_implementation: boolean;
   implementation_details: string;
@@ -260,7 +260,7 @@ export interface SpecializedEmergingTechService {/* TODO: Fix JSX expression */}
   reviews: number;
   benefits: string[]
   capabilities: string[]
-  marketAdvantage: string,
+  marketAdvantage: string
 }
 marketSize: '$2.1B neuromorphic computing market', growthRate: '450% annual growth',
     variant: 'ai-futuristic', contactInfo: contact,
@@ -269,7 +269,7 @@ marketSize: '$2.1B neuromorphic computing market', growthRate: '450% annual grow
     rating: 4.8, reviews: 34,
     benefits: ['Energy efficiencyCognitive capabilitiesReal-time learningBrain-inspired processing'], capabilities: ['Neural architecturesCognitive computingHardware integrationCustom algorithms'],
     marketAdvantage: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'
-const contact = {,
+const contact = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709'}
@@ -894,7 +894,7 @@ i,
   s: 34' benefit,
   s: ['Energy efficiencyCognitive capabilitiesReal-time learningBrain-inspired processing'], capabilitie,
   s: ['Neural architecturesCognitive computingHardware integrationCustom algorithms']' marketAdvantag,
-  e: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities' } ]; ' import { ServiceVariant } from '../types/service-variants'; export interface SpecializedEmergingTechService {/* TODO: Fix JSX expression */}
+  e: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities' } ]; ' import {  ServiceVariant  } from '../types/service-variants'; export interface SpecializedEmergingTechService {/* TODO: Fix JSX expression */}
   s: string} websit,
   e: string} } realImplementatio,
   n: boolean, implementationDetail,

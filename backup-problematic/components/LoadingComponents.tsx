@@ -1,7 +1,7 @@
 import React from 'react';
 interface LoadingSpinnerProps {/* TODO: Fix JSX expression */}
 }
-export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({,
+export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md',
   className = '',
   color = 'blue',

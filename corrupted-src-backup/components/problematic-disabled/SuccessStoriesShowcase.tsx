@@ -1,5 +1,5 @@
 import React from 'react';
-const SuccessStoriesShowcas, e: React.FC = () => { ,
+const SuccessStoriesShowcas, e: React.FC = () => {
   const storie, s = [
     {
       company: "TechCorp, Internatio, n, a, l",

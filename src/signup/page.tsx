@@ -1,7 +1,7 @@
-import {Eye, EyeOff, Mail, Lock, User, Building, Phone, CheckCircle, Shield, Award, Globe} from 'lucide-react';
+import { Eye, EyeOff, Mail, Lock, User, Building, Phone, CheckCircle, Shield, Award, Globe } from 'lucide-react';
 'use client';
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import {  Link  } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const SignupPage: React.FC = () => {
@@ -66,7 +66,7 @@ $4];
   );
 }
   const [formData, setFormData] = useState({/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   firstNam,
   e: '',
@@ -94,24 +94,24 @@ const handleInputChange = (e: React.ChangeEvent,)
           <HTMLInputElement>) => {/* TODO: Fix JSX expression */}
     const { name, value, type, checked } = e.target;
     setFormData(prev => ({/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 //       ...prev,
       [name]: type === 'checkbox' ? checked : value;)
     }));
   }
   const handleSubmit = async (e: React.FormEvent) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     e.preventDefault();
     if (formData.password !== formData.confirmPassword) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       alert('Passwords do not match');
       return;
     }
     if (!formData.agreeToTerms) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       alert('Please agree to the terms and conditions');
     setIsLoading(true);
@@ -125,7 +125,7 @@ const handleInputChange = (e: React.ChangeEvent,)
   O: Add items
 ],
     {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   ico,
   n: Shield,

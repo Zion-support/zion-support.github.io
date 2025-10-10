@@ -18,7 +18,7 @@ private measureCoreWebVitals(): void {// First Contentful Paint;}
 // Cumulative Layout Shift;
     this.observeCLS();
   }
-private observePaint(type: string, callback: (entry: PerformanceEntry) => void): void {,}
+private observePaint(type: string, callback: (entry: PerformanceEntry) => void): void {}
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return,
 try {const observer = new PerformanceObserver((list) => {}
         for (const entry of list.getEntries()) {
@@ -80,7 +80,7 @@ export const performanceMonitor = new PerformanceMonitor();
 export const measureFunction = <T extends (...args: any[]) => any>(,
   fn: T,
   name?: string;
-): T => {return ((...args: Parameters<T>) => {,
+): T => {return ((...args: Parameters<T>) => {
     const start = performance.now()
     const result = fn(...args)
     const end = performance.now(),
@@ -93,7 +93,7 @@ export const debounce = <T extends (...args: any[]) => any>(,
   func: T,
   wait: number;,
 ): T => {let timeout: NodeJS.Timeout;,
-return ((...args: Parameters<T>) => {,
+return ((...args: Parameters<T>) => {
     clearTimeout(timeout),
     timeout = setTimeout(() => func(...args), wait)}}) as T;
 }
@@ -101,23 +101,23 @@ export const throttle = <T extends (...args: any[]) => any>(,
   func: T,
   limit: number;,
 ): T => {let inThrottle: boolean;,
-return ((...args: Parameters<T>) => {,
+return ((...args: Parameters<T>) => {
     if (!inThrottle) {
       func(...args)
       inThrottle = true,
       setTimeout(() => inThrottle = false, limit)}}
   }) as T;
 }
-export const lazyLoad = (callback: () => void): void => {,
+export const lazyLoad = (callback: () => void): void => {
     if ('requestIdleCallback' in window) {
     requestIdleCallback(callback)}} else {setTimeout(callback, 1)}}}
 }
-export const preloadImage = (src: string): Promise<void> => {,
+export const preloadImage = (src: string): Promise<void> => {
     return new Promise((resolve, reject) => {
     const img = new Image();
     img.onload = () => resolve();
     img.onerror = reject;
     img.src = src;}})
 }
-export const preloadImages = (srcs: string[]): Promise<void[]> => {,
+export const preloadImages = (srcs: string[]): Promise<void[]> => {
     return Promise.all(srcs.map(preloadImage))}}

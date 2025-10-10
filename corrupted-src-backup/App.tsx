@@ -64,7 +64,7 @@ class ErrorBoundary extends React.Component<
   static getDerivedStateFromError() {/* TODO: Fix JSX expression */}
   r: true }
   }
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {,
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     //     }
   render() {
     if (this.state.hasError) {
@@ -93,7 +93,7 @@ class ErrorBoundary extends React.Component<
                 Try again
               </button>
             </div>
-          </div>)),
+          </div>))
     }
     return this.props.children;
   }

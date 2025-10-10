@@ -10,7 +10,6 @@
  */
 
 export interface BannerConfig {
-    ,
   id: string
   name: string
   priority: number, // 1 = highest priority, 100 = lowest;

@@ -97,7 +97,7 @@
     implementation_details: unknown;
     customers: 3200
     rating: 4 && 4.8
-    reviews: 1600,
+    reviews: 1600
   },
     id: 'smart - contract - automation'
     name: 'Smart Contract Automation',
@@ -224,7 +224,7 @@
     launch_date: '2024 - 01 - 10'
     customers: 1800
     rating: 4 && 4.9
-    reviews: 900,
+    reviews: 900
   },
       'AI-powered sentiment analysis',
       'Multi-channel feedback collection',
@@ -387,7 +387,7 @@
     launch_date: '2024 - 01 - 20'
     customers: 2800
     rating: 4 && 4.7
-    reviews: 1400,
+    reviews: 1400
   },
       'AI-powered scheduling',
       'AI-powered scheduling',
@@ -531,7 +531,7 @@
     launch_date: '2024 - 01 - 25'
     customers: 4500
     rating: 4 && 4.8
-    reviews: 2250,
+    reviews: 2250
   },
       'AI-powered planning',
       'AI-powered planning',
@@ -685,7 +685,7 @@
     launch_date: '2024 - 01 - 30'
     customers: 3200
     rating: 4 && 4.8
-    reviews: 1600,
+    reviews: 1600
   }];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
   id: string, name: string,
@@ -704,7 +704,7 @@
   contactInfo: unknown,
     mobile: string, email: string
     address: string
-    website: string,
+    website: string
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number
@@ -1004,7 +1004,7 @@ export interface InnovativeMicroSaas {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 01 - 20'
     customers: 2800
     rating: 4 && 4.7
-    reviews: 1400,
+    reviews: 1400
   },
       'AI-powered scheduling',
     id: 'automated - social - media - scheduler'
@@ -1163,7 +1163,7 @@ export interface InnovativeMicroSaas {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 01 - 25'
     customers: 4500
     rating: 4 && 4.8
-    reviews: 2250,
+    reviews: 2250
   },
       'AI-powered planning',
     id: 'intelligent - project - management'
@@ -1314,7 +1314,7 @@ export interface InnovativeMicroSaas {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 01 - 30'
     customers: 3200
     rating: 4 && 4.8
-    reviews: 1600,
+    reviews: 1600
   }];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
   id: string, name: string,
@@ -1333,7 +1333,7 @@ export interface InnovativeMicroSaas {/* TODO: Fix JSX expression */}
   contactInfo: unknown,
     mobile: string, email: string
     address: string
-    website: string,
+    website: string
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number
@@ -1472,7 +1472,7 @@ export const,
     launchDate: '2024-01-15'
     customers: 3200
     rating: 4.8
-    reviews: 1600,
+    reviews: 1600
   }
     id: 'smart-contract-automation'
     name: 'Smart Contract Automation',
@@ -1646,7 +1646,7 @@ export const,
     launchDate: '2024-01-10'
     customers: 1800
     rating: 4.9
-    reviews: 900,
+    reviews: 900
   }
     id: 'ai-powered-customer-feedback-analyzer'
     name: 'AI-Powered Customer Feedback Analyzer',
@@ -1810,7 +1810,7 @@ export const,
     launchDate: '2024-01-20'
     customers: 2800
     rating: 4.7
-    reviews: 1400,
+    reviews: 1400
   }
     id: 'automated-social-media-scheduler'
     name: 'Automated Social Media Scheduler',
@@ -1969,7 +1969,7 @@ export const,
     launchDate: '2024-01-25'
     customers: 4500
     rating: 4.8
-    reviews: 2250,
+    reviews: 2250
   }
     id: 'intelligent-project-management'
     name: 'Intelligent Project Management',
@@ -2117,13 +2117,13 @@ export const,
     launchDate: '2024-01-30'
     customers: 3200
     rating: 4.8
-    reviews: 1600,
+    reviews: 1600
   }
       'Complete project management platform with AI-powered planning, resource optimization, and comprehensive collaboration features.',
     launchDate: '2024-01-30'
     customers: 3200
     rating: 4.8
-    reviews: 1600,
+    reviews: 1600
   }
 ];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -2242,7 +2242,7 @@ export interface InnovativeMicroSaas {/* TODO: Fix JSX expression */}
   launchDate: string;
   customers: number
   rating: number
-  reviews: number,
+  reviews: number
 }
 export const innovativeMicroSaas: InnovativeMicroSaas[] = [;
   {
@@ -2285,7 +2285,7 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [;
     launchDate: '2024-01-15';
     customers: 3200
     rating: 4.8
-    reviews: 1600,
+    reviews: 1600
   }
   {
     id: 'smart-contract-automation';
@@ -2327,7 +2327,7 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [;
     launchDate: '2024-01-10';
     customers: 1800
     rating: 4.9
-    reviews: 900,
+    reviews: 900
   }
   {
     id: 'ai-powered-customer-feedback-analyzer';
@@ -2369,7 +2369,7 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [;
     launchDate: '2024-01-20';
     customers: 2800
     rating: 4.7
-    reviews: 1400,
+    reviews: 1400
   }
   {
     id: 'automated-social-media-scheduler';
@@ -2411,7 +2411,7 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [;
     launchDate: '2024-01-25';
     customers: 4500
     rating: 4.8
-    reviews: 2250,
+    reviews: 2250
   }
   {
     id: 'intelligent-project-management';

@@ -132,8 +132,8 @@ export class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   }
 
   // Add Web Vitals reporting method;
-  reportWebVitals(metrics: unknown): void {,
-    if (process.env['NODE_ENV'] === 'development') {,
+  reportWebVitals(metrics: unknown): void {
+    if (process.env['NODE_ENV'] === 'development') {
   reportWebVitals(metric)
   s: unknown): void {/* TODO: Fix JSX expression */}
       //       }

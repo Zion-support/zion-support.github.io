@@ -45,13 +45,13 @@
   contact_info: unknown;
     mobile: string
     email: string
-    address: string,
+    address: string
 }
 export const specializedITSolutions2026: SpecializedITSolution2026[] = [;
   // Cloud Infrastructure & DevOps
 export const specializedITSolutions2026: SpecializedITSolution2026[] = [
   // Cloud Infrastructure & DevOps,,
-    website: string,
+    website: string
   }
   realImplementation: boolean;
   implementationDetails: string;
@@ -91,7 +91,7 @@ const contact =
   contactInfo: unknown,
     mobile: string, email: string
     address: string
-    website: string,
+    website: string
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number
@@ -561,7 +561,7 @@ export const,
     launch_date: '2024 - 11 - 15'
     customers: 156
     rating: 4 && 4.7
-    reviews: 78,
+    reviews: 78
   },
       'AI-powered ETL pipeline automation',
   // Data Engineering & Analytics;
@@ -697,7 +697,7 @@ export const,
     launch_date: '2024 - 10 - 20'
     customers: 67
     rating: 4 && 4.6
-    reviews: 34,
+    reviews: 34
   },
       'AI-powered API design and documentation',
   // API Management & Integration;
@@ -828,7 +828,7 @@ export const,
     launch_date: '2024 - 09 - 25'
     customers: 43
     rating: 4 && 4.5
-    reviews: 22,
+    reviews: 22
   },
       'AI-powered network performance monitoring',
   // Network Monitoring & Management;
@@ -952,7 +952,7 @@ export const,
     launch_date: '2024 - 08 - 30'
     customers: 78
     rating: 4 && 4.4
-    reviews: 39,
+    reviews: 39
   },
       'AI-powered query optimization',
   // Database Management & Optimization;
@@ -1094,7 +1094,7 @@ export const,
     launch_date: '2024 - 07 - 15'
     customers: 54
     rating: 4 && 4.3
-    reviews: 28,
+    reviews: 28
   },
       'AI-powered ticket routing and prioritization',
   // IT Service Management;
@@ -1228,7 +1228,7 @@ export const,
     launch_date: '2024 - 06 - 20'
     customers: 89
     rating: 4 && 4.5
-    reviews: 45,
+    reviews: 45
   },
       'AI-powered backup optimization',
   // Backup & Disaster Recovery;
@@ -1361,13 +1361,13 @@ export const,
     launchDate: '2024-05-25'
     customers: 67
     rating: 4.4
-    reviews: 33,
+    reviews: 33
   }
       'AI-powered backup and disaster recovery platform with intelligent optimization, automated testing, and comprehensive recovery orchestration.',
     launchDate: '2024-05-25'
     customers: 67
     rating: 4.4
-    reviews: 33,
+    reviews: 33
   }
 ];
 export const getSpecializedITSolutions2026ByCategory = (category: string) =>,
@@ -1431,7 +1431,7 @@ export const getSpecializedITSolutions2026ByPriceRange = (minPric)
 ) =>
   return specializedITSolutions2026 && specializedITSolutions2026.filter(solution =>)
     const _price = parseInt(solution && solution.price.replace('$') ''))
-    return price >= minPrice && price <= maxPrice,
+    return price >= minPrice && price <= maxPrice
   })
 }    return price >= minPrice && price <= maxPrice;
   })
@@ -1458,7 +1458,7 @@ export const getSpecializedITSolutions2026ByPriceRange = (minPric)
     implementationDetails: 'Cloud-native infrastructure automation platform with AI-powered optimization, multi-cloud orchestration, and comprehensive DevOps tools.',
     launchDate: '2024-12-01', customers: 89
     rating: 4.8
-    reviews: 45,
+    reviews: 45
   }
   // Cybersecurity & Threat Intelligence;
     id: 'ai-cybersecurity-threat-intelligence', name: 'AI Cybersecurity Threat Intelligence Platform',
@@ -1483,7 +1483,7 @@ export const getSpecializedITSolutions2026ByPriceRange = (minPric)
     implementationDetails: 'AI-powered cybersecurity platform with machine learning algorithms for threat detection, automated response, and comprehensive security analytics.',
     launchDate: '2024-11-15', customers: 156
     rating: 4.7
-    reviews: 78,
+    reviews: 78
   }
   // Data Engineering & Analytics;
     id: 'ai-data-engineering-platform', name: 'AI Data Engineering Platform',
@@ -1508,7 +1508,7 @@ export const getSpecializedITSolutions2026ByPriceRange = (minPric)
     implementationDetails: 'AI-powered data engineering platform with automated pipeline creation, data quality monitoring, and comprehensive analytics capabilities.',
     launchDate: '2024-10-20', customers: 67
     rating: 4.6
-    reviews: 34,
+    reviews: 34
   }
   // API Management & Integration;
     id: 'ai-api-management-platform', name: 'AI API Management Platform',
@@ -1533,7 +1533,7 @@ export const getSpecializedITSolutions2026ByPriceRange = (minPric)
     implementationDetails: 'AI-powered API management platform with intelligent optimization, comprehensive monitoring, and developer experience enhancement.',
     launchDate: '2024-09-25', customers: 43
     rating: 4.5
-    reviews: 22,
+    reviews: 22
   }
   // Network Monitoring & Management;
     id: 'ai-network-monitoring-suite', name: 'AI Network Monitoring Suite',
@@ -1558,7 +1558,7 @@ export const getSpecializedITSolutions2026ByPriceRange = (minPric)
     implementationDetails: 'AI-powered network monitoring platform with intelligent issue detection, automated resolution, and comprehensive analytics.',
     launchDate: '2024-08-30', customers: 78
     rating: 4.4
-    reviews: 39,
+    reviews: 39
   }
   // Database Management & Optimization;
     id: 'ai-database-optimization-platform', name: 'AI Database Optimization Platform',
@@ -1583,7 +1583,7 @@ export const getSpecializedITSolutions2026ByPriceRange = (minPric)
     implementationDetails: 'AI-powered database optimization platform with intelligent tuning, performance monitoring, and automated maintenance capabilities.',
     launchDate: '2024-07-15', customers: 54
     rating: 4.3
-    reviews: 28,
+    reviews: 28
   }
   // IT Service Management;
     id: 'ai-itsm-platform', name: 'AI IT Service Management Platform',
@@ -1608,7 +1608,7 @@ export const getSpecializedITSolutions2026ByPriceRange = (minPric)
     implementationDetails: 'AI-powered IT service management platform with intelligent automation, workflow optimization, and comprehensive service analytics.',
     launchDate: '2024-06-20', customers: 89
     rating: 4.5
-    reviews: 45,
+    reviews: 45
   }
   // Backup & Disaster Recovery;
     id: 'ai-backup-disaster-recovery', name: 'AI Backup & Disaster Recovery Platform',
@@ -1633,7 +1633,7 @@ export const getSpecializedITSolutions2026ByPriceRange = (minPric)
     implementationDetails: 'AI-powered backup and disaster recovery platform with intelligent optimization, automated testing, and comprehensive recovery orchestration.',
     launchDate: '2024-05-25', customers: 67
     rating: 4.4
-    reviews: 33,
+    reviews: 33
   }
 ];
 export const getSpecializedITSolutions2026ByCategory = (category: string) =>,
@@ -2125,7 +2125,7 @@ export const getSpecializedITSolutions2026ByCategory = (category: string) =>: un
 export const getSpecializedITSolutions2026ByCategory = (categor)
   y: string) =>: unknown
   return specializedITSolutions2026.filter ()
-    solution => solution.category === category),
+    solution => solution.category === category)
 }
 export const getPopularSpecializedITSolutions2026 = () =>: unknown;
   return specializedITSolutions2026.filter (solution => solution.popular);
@@ -2154,7 +2154,7 @@ export const getSpecializedITSolutions2026ByCategory = (category: string) =>: un
 export const getSpecializedITSolutions2026ByCategory = (categor)
   y: string) =>: unknown
   return specializedITSolutions2026.filter ()
-    solution => solution.category === category),
+    solution => solution.category === category)
 }
 export interface SpecializedITSolution2026 {/* TODO: Fix JSX expression */}
   s: string}
@@ -2596,7 +2596,7 @@ i,
   s: 33} ]; export const getSpecializedITSolutions2026ByCategory = (categor)
   y: string) => return specializedITSolutions2026.filter(solution => solution.category === category) )} export const getPopularSpecializedITSolutions2026 = () => } export const getPopularSpecializedITSolutions2026 = () => { return specializedITSolutions2026.filter(solution => solution.popular)} } ]; return specializedITSolutions2026 && specializedITSolutions2026.filter(solution => solution && solution.popular); } export const getSpecializedITSolutions2026ByPriceRange = (minPric,
   e: number)
-  maxPrice: number ) => return specializedITSolutions2026 && specializedITSolutions2026.filter(solution => ' const price = parseInt(solution && solution.price.replace('$') '')); return price >= minPrice && price <= maxPrice, }) } return price >= minPrice && price <= maxPrice }) } ' i,
+  maxPrice: number ) => return specializedITSolutions2026 && specializedITSolutions2026.filter(solution => ' const price = parseInt(solution && solution.price.replace('$') '')); return price >= minPrice && price <= maxPrice }) } return price >= minPrice && price <= maxPrice }) } ' i,
   d: 'cloud-infrastructure-automation', nam,
   e: 'Cloud Infrastructure Automation Platform',' taglin,
   e: 'Automate cloud infrastructure deployment and management with intelligent orchestration', pric,
@@ -2872,11 +2872,11 @@ i,
   y: string) => return specializedITSolutions2026.filter(solution => solution.category === category) } export const getPopularSpecializedITSolutions2026 = () => return specializedITSolutions2026.filter(solution => solution.popular) } export const getSpecializedITSolutions2026ByPriceRange = (minPric)
   e: number) maxPric,
   e: number) => return specializedITSolutions2026.filter(solution => ' const price = parseInt(solution.price.replace('$') '')), return price >= minPrice && price <= maxPrice }) } export const getSpecializedITSolutions2026ByCategory = (categor)
-  y: string) =>: unknown return specializedITSolutions2026.filter ( solution => solution.category === category), } export const getPopularSpecializedITSolutions2026 = () =>: unknown return specializedITSolutions2026.filter (solution => solution.popular); } export const getSpecializedITSolutions2026ByPriceRange = (min_pric)
+  y: string) =>: unknown return specializedITSolutions2026.filter ( solution => solution.category === category) } export const getPopularSpecializedITSolutions2026 = () =>: unknown return specializedITSolutions2026.filter (solution => solution.popular); } export const getSpecializedITSolutions2026ByPriceRange = (min_pric)
   e: number) max_pric,
-  e: number) =>: unknown return specializedITSolutions2026.filter (solution => ' const price = parse_int (solution.price.replace ('$') '')); return price >= min_price && price <= max_price, }); } return price >= min_price && price <= max_price; }); } export interface SpecializedITSolution2026 {/* TODO: Fix JSX expression */}
+  e: number) =>: unknown return specializedITSolutions2026.filter (solution => ' const price = parse_int (solution.price.replace ('$') '')); return price >= min_price && price <= max_price }); } return price >= min_price && price <= max_price; }); } export interface SpecializedITSolution2026 {/* TODO: Fix JSX expression */}
   e: string} } }) } export const getSpecializedITSolutions2026ByCategory = (categor)
-  y: string) =>: unknown return specializedITSolutions2026.filter ( solution => solution.category === category), } export interface SpecializedITSolution2026 {/* TODO: Fix JSX expression */}
+  y: string) =>: unknown return specializedITSolutions2026.filter ( solution => solution.category === category) } export interface SpecializedITSolution2026 {/* TODO: Fix JSX expression */}
   s: string} websit,
   e: string} } realImplementatio,
   n: boolean, implementationDetail,
@@ -2886,4 +2886,4 @@ i,
   g: number, review,
   s: number} export const getPopularSpecializedITSolutions2026 = () =>: unknown return specializedITSolutions2026.filter (solution => solution.popular); } export const getSpecializedITSolutions2026ByPriceRange = (min_pric)
   e: number) max_pric,
-  e: number) =>: unknown return specializedITSolutions2026.filter (solution => ' const price = parse_int (solution.price.replace ('$') '')); return price >= min_price && price <= max_price, }); } return price >= min_price && price <= max_price; }); } export interface SpecializedITSolution2026 } '
+  e: number) =>: unknown return specializedITSolutions2026.filter (solution => ' const price = parse_int (solution.price.replace ('$') '')); return price >= min_price && price <= max_price }); } return price >= min_price && price <= max_price; }); } export interface SpecializedITSolution2026 } '

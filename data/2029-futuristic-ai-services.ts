@@ -11,7 +11,7 @@
   contactInfo: unknown
     mobile: string
     email: string,
-export interface FuturisticAiService2029 {,
+export interface FuturisticAiService2029 {
     address: string}
   i,
   d: string,
@@ -75,7 +75,7 @@ export interface FuturisticAiService2029 {/* TODO: Fix JSX expression */}
   realImplementation: boolean
   contactInfo: unknown,
     mobile: string, email: string
-    address: string,
+    address: string
   }
 }
 export const futuristicAIServices2029: FuturisticAiService2029[] = [,

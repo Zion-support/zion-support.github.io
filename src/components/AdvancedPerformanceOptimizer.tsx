@@ -92,7 +92,7 @@ const,
       .cyber-card {/* TODO: Fix JSX expression */}
   r: 1px solid rgba(255, 255, 255, 0.1); }
       .cyber-button {/* TODO: Fix JSX expression */}
-  n: all 0.3s ease, }
+  n: all 0.3s ease }
       .cyber-butto,
   n:hover {/* TODO: Fix JSX expression */}
   w: 0 10px 20px rgba(0,0,0,0.2); }`

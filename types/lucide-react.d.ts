@@ -130,5 +130,5 @@ declare module 'lucide-react' {/* TODO: Fix JSX expression */}
   Database: LucideIcon,
   export const,
   Cloud: LucideIcon
-  // Add more icons as needed,
+  // Add more icons as needed
 }

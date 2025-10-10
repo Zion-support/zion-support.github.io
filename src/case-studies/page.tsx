@@ -1,6 +1,6 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowLeft, TrendingUp, CheckCircle } from 'lucide-react';
+import {  Helmet  } from 'react-helmet-async';
+import {  ArrowLeft, TrendingUp, CheckCircle  } from 'lucide-react';
 const CaseStudiesPage: React.FC = () => {
   const caseStudies = [
     {
@@ -216,7 +216,7 @@ const CaseStudiesPage: React.FC = () => {
         </section>
       </div>
     </React.Fragment>
-  ),
+  )
 }
 export default CaseStudiesPage;
   </Link>

@@ -1,7 +1,7 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import {CheckCircle, Star, Users, TrendingUp, Clock, BarChart, Target, Phone} from 'lucide-react';
-import { BarChart, Target, TrendingUp, Users, Clock, Star } from 'lucide-react';
+import {  Helmet  } from 'react-helmet-async';
+import { CheckCircle, Star, Users, TrendingUp, Clock, BarChart, Target, Phone } from 'lucide-react';
+import {  BarChart, Target, TrendingUp, Users, Clock, Star  } from 'lucide-react';
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
@@ -89,12 +89,12 @@ const AiProjectManagerPage: React.FC = () => {
               Learn More
   </
       <Footer />
-  ),
+  )
 }
 export default $1;
 'use client';
 import React, { useState, useEffect } from 'react';
-import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
+import {  Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location  } from 'lucide-react';
 export default AIProjectManagerPage;
   </button>
   </button>

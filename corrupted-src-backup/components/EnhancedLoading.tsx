@@ -1,7 +1,7 @@
 import React from 'react';
 interface LoadingProps {/* TODO: Fix JSX expression */}
 }
-const EnhancedLoading: React.FC<LoadingProps> = ({,
+const EnhancedLoading: React.FC<LoadingProps> = ({
   message = 'Loading...',
   size = 'md',
   variant = 'spinner'}) => {

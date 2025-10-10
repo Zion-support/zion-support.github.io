@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import {  Link  } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { Eye, Target, Zap, Settings, CheckCircle, Star,  Eye,  Target,  Settings } from 'lucide-react';
+import {  Eye, Target, Zap, Settings, CheckCircle, Star,  Eye,  Target,  Settings  } from 'lucide-react';
 const AICustomerInsightsPage: React.FC = () => {
     const features = [],
   return (

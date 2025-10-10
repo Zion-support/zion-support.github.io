@@ -35,7 +35,7 @@ export interface InnovativeITService2024 {id: string;
   realImplementation: boolean;
   implementationDetails: string
   launchDate: string
-  reviews: number,
+  reviews: number
 }
 export const innovativeITServices2024: InnovativeITService2024[] = [
     id: "autonomous-devops-platform",

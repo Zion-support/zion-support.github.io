@@ -1,8 +1,9 @@
 import React from 'react';
-import {Helmet}}from 'react-helmet-async';
+import {  Helmet  } from 'react-helmet-async';
 
-const CustomSoftwarePage: React.FC = () => {,
-  return(<>)
+const CustomSoftwarePage: React.FC = () => {
+  return (
+    <>
       <Helmet />
         <title>Custom Software Development - Zion Tech Group</title>
         <meta name="description" content="Tailored custom software solutions designed specifically for your business needs including web applications, mobile apps, and enterprise software." />
@@ -19,7 +20,7 @@ const CustomSoftwarePage: React.FC = () => {,
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">,</div>
+          <div>
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
               <h3 className="text-2xl font-bold text-cyan-400 mb-4">Web Applications</h3>
               <p className="text-gray-300 mb-4">Modern, responsive web applications built with the latest technologies.</p>
@@ -94,13 +95,12 @@ const CustomSoftwarePage: React.FC = () => {,
           </div>
 
           <div className="text-center">
-            <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">,</button>
-              Start Your Custom Project;
-            </button>
+            <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">Start Your Custom Project</button>
           </div>
         </div>
       </div>
     </>
-  );};
+  );
+};
 
 export default CustomSoftwarePage;

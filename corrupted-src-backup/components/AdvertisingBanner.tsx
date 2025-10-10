@@ -1,7 +1,7 @@
 import React from 'react';
 interface AdvertisingBannerProps {/* TODO: Fix JSX expression */}
 }
-const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({,
+const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({
   title;
   description,
   ctaText,

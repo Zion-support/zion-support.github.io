@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Phone, CheckCircle, Star, ArrowRight } from 'lucide-react';
+import {  Link  } from 'react-router-dom';
+import {  Phone, CheckCircle, Star, ArrowRight  } from 'lucide-react';
 // eslint-disable-next-line react-refresh/only-export-components
 export const metadata = {
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
@@ -104,7 +104,7 @@ Ready to Transform Your Business?
               <p className="text-gray-400 text-sm">
 © 2026 Zion Tech Group. All rights reserved.
       </footer>
-  ),
+  )
 }
   </p>
   </div>

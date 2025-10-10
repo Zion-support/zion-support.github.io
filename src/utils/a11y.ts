@@ -39,13 +39,13 @@ export function announceToScreenReader()
   document.body.appendChild(announcement);
   // Set message after a slight delay to ensure screen readers pick it up;
   setTimeout(() => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     announcement.textContent = message;
   }, 100);
   // Remove announcement after it's been read;
   setTimeout(() => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     document.body.removeChild(announcement);
   }, 3000);
@@ -70,25 +70,25 @@ export function trapFocus(element: HTMLElement): () => void {
   const firstFocusable = focusableElements[0];
   const lastFocusable = focusableElements[focusableElements.length - 1];
   const handleKeyDown = (e: KeyboardEvent) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     if (e.key !== 'Tab') return;
     if (e.shiftKey) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       // Shift + Tab;
       if (document.activeElement === firstFocusable) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
         e.preventDefault();
         lastFocusable?.focus();
       }
     } else {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       // Tab;
       if (document.activeElement === lastFocusable) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
         e.preventDefault();
         firstFocusable?.focus();
@@ -100,7 +100,7 @@ export function trapFocus(element: HTMLElement): () => void {
   firstFocusable?.focus();
   // Return cleanup function;
   return () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     element.removeEventListener('keydown', handleKeyDown);
   }
@@ -142,16 +142,16 @@ export function makeKeyboardAccessible()
     tabindex?: number;
   } = {}
 ): () => void {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   const { role = 'button', tabindex = 0 } = options;
   element.setAttribute('role', role);
   element.setAttribute('tabindex', tabindex.toString());
   const handleKeyDown = (e: KeyboardEvent) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     if (e.key === 'Enter' || e.key === ' ') {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       e.preventDefault();
       onClick(e);
@@ -160,7 +160,7 @@ export function makeKeyboardAccessible()
   element.addEventListener('click', onClick);
   element.addEventListener('keydown', handleKeyDown);
   return () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     element.removeEventListener('click', onClick);
     element.removeEventListener('keydown', handleKeyDown);
@@ -177,12 +177,12 @@ export function getContrastRatio(color1: string, color2: string): number {
 }
   const getLuminance = (colo)
   r: string): number => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     // Simple RGB to luminance conversion;
 const rgb = color.match(/\d+/g)?.map(Number) || [0, 0, 0];
     const [r, g, b] = rgb.map(val => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       const normalized = val / 255;
       return normalized;
@@ -214,7 +214,7 @@ export function meetsContrastRequirements()
 }
   const ratio = getContrastRatio(color1, color2);
   if (level === 'AAA') {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     return fontSize === 'large' ? ratio >= 4.5 : ratio >= 7;
   }
@@ -247,12 +247,12 @@ export function createSkipLink(targetId: string, text = 'Skip to main content'):
   skipLink.style.textDecoration = 'none';
   skipLink.style.zIndex = '100';
   skipLink.addEventListener('focus', () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     skipLink.style.top = '0';
   });
   skipLink.addEventListener('blur', () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     skipLink.style.top = '-40px';
   });
@@ -267,7 +267,7 @@ export function prefersReducedMotion(): boolean {
   }
 }
   if (typeof window === 'undefined') return false;
-  return window.matchMedia('(prefers-reduced-motion: reduce)').matches,
+  return window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
 }
 /**
@@ -279,7 +279,7 @@ export function prefersDarkMode(): boolean {
   }
 }
   if (typeof window === 'undefined') return false;
-  return window.matchMedia('(prefers-color-scheme: dark)').matches,
+  return window.matchMedia('(prefers-color-scheme: dark)').matches
 
 }
 /**
@@ -294,10 +294,10 @@ export function getAriaInvalid(hasError: boolean): {
   'aria-invalid': boolean;
   'aria-describedby'?: string;
 } {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   return {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     'aria-invalid': hasError,
     ...(hasError && { 'aria-describedby': generateId('error') }
@@ -333,12 +333,12 @@ export function createAccessibleTooltip()
   document.body.appendChild(tooltip);
   trigger.setAttribute('aria-describedby', tooltipId);
   const showTooltip = () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     tooltip.style.display = 'block';
     const triggerRect = trigger.getBoundingClientRect();
     switch (placement) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 
       case 'top':
@@ -361,7 +361,7 @@ export function createAccessibleTooltip()
     }
   }
   const hideTooltip = () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     tooltip.style.display = 'none';
   }
@@ -370,7 +370,7 @@ export function createAccessibleTooltip()
   trigger.addEventListener('focus', showTooltip);
   trigger.addEventListener('blur', hideTooltip);
   return () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     trigger.removeEventListener('mouseenter', showTooltip);
     trigger.removeEventListener('mouseleave', hideTooltip);
@@ -391,15 +391,15 @@ export class FocusManager {
   private,
   previousFocus: HTMLElement | null = null,
   saveFocus(): void {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     this.previousFocus = document.activeElement as HTMLElement;
   }
   restoreFocus(): void {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     if (this.previousFocus) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       this.previousFocus.focus();
       this.previousFocus = null;
@@ -407,7 +407,7 @@ export class FocusManager {
   }
   moveFocusInside(containe)
   r: HTMLElement): void {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     const focusable = container.querySelector;
 

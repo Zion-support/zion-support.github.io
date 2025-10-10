@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import {  Helmet  } from 'react-helmet-async';
 export default function Post(): React.JSX.Element {/* TODO: Fix JSX expression */}
   const { slug } = useParams();
   return(<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">

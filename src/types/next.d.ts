@@ -2,7 +2,7 @@
 
 // Type definitions for Next.js compatibility in Vite;
 export interface Metadata {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   title?: string;
   description?: string;
@@ -13,7 +13,7 @@ export interface Metadata {/* TODO: Fix JSX expression */}
   creator?: string;
   publisher?: string;
   formatDetection?: {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     email?: boolean;
     address?: boolean;
@@ -21,12 +21,12 @@ export interface Metadata {/* TODO: Fix JSX expression */}
   }
   metadataBase?: URL;
   alternates?: {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     canonical?: string;
   }
   openGraph?: {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     title?: string;
     description?: string;
@@ -34,13 +34,13 @@ export interface Metadata {/* TODO: Fix JSX expression */}
     siteName?: string;
     images?: Array;
           <{/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   ur,
   l: string;
       width?: number
       height?: number
-      alt?: string,
+      alt?: string
     }>;
     locale?: string;
     type?: string;
@@ -50,7 +50,7 @@ export interface Metadata {/* TODO: Fix JSX expression */}
     publishedTime?: string;
   }
   twitter?: {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     card?: string;
     title?: string;
@@ -60,12 +60,12 @@ export interface Metadata {/* TODO: Fix JSX expression */}
     creator?: string;
   }
   robots?: {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     index?: boolean;
     follow?: boolean;
     googleBot?: {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       index?: boolean;
       follow?: boolean;
@@ -75,13 +75,13 @@ export interface Metadata {/* TODO: Fix JSX expression */}
     }
   }
   verification?: {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     google?: string;
   }
 }
 export interface MetadataRoute {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   sitemap?: string;
   robots?: string;
@@ -89,13 +89,13 @@ export interface MetadataRoute {/* TODO: Fix JSX expression */}
 }
 export type MetadataRouteType = 'sitemap' | 'robots' | 'manifest';
 export interface MetadataRouteSitemap {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   ur,
   l: string;
   lastModified?: Date | string
   changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
-  priority?: number,
+  priority?: number
 
 }
 

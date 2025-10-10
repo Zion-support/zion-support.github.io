@@ -1,6 +1,6 @@
 import React from 'react';
-import {BarChart, Target, Zap, Brain, Shield, CheckCircle, Star, Phone, Mail, MapPin, Users} from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { BarChart, Target, Zap, Brain, Shield, CheckCircle, Star, Phone, Mail, MapPin, Users } from 'lucide-react';
+import {  Link  } from 'react-router-dom';
 import React from 'react';
 const SmartAnalyticsPage: React.FC = () => {
   const features = [
@@ -140,7 +140,7 @@ $4}
                   Get Started
         {/* CTA Section */}
         <section className="text-center bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12">
-import { Link } from 'react-router-dom';
+import {  Link  } from 'react-router-dom';
 const SmartAnalyticsPage: React.FC = () => {
     const features = [],
   return (
@@ -214,7 +214,7 @@ const PagePage: React.FC = () => {
                 </ul>
                   className={`w-full block text-center py-3 rounded-lg font-semibold transition-colors ${}
   // TOD,
-  O: Add content,
+  O: Add content
 }
 //                     plan.popular;
                       ? 'bg-cyan-600 text-white,

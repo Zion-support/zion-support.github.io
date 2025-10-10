@@ -1,19 +1,19 @@
 'use client';
-import React, {useState}from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {Search, BookOpen, Code, Zap, Shield, Cloud, Brain, Users, ArrowRight, CheckCircle, ExternalLink, Download, FileText, Settings, Database}}from 'lucide-react';
+import React, {useState} from 'react';
+import {  Helmet  } from 'react-helmet-async';
+import {  Search, BookOpen, Code, Zap, Shield, Cloud, Brain, Users, ArrowRight, CheckCircle, ExternalLink, Download, FileText, Settings, Database  } from 'lucide-react';
 
-const DocsPage: React.FC = () => {,
+const DocsPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const categories = [
-    { id: 'all', name: 'All Documentation', icon: BookOpen ,},
-    {id: 'getting-started', name: 'Getting Started', icon: Zap ,},
-    {id: 'ai-services', name: 'AI Services', icon: Brain ,},
-    {id: 'it-services', name: 'IT Services', icon: Cloud ,},
-    {id: 'api', name: 'API Reference', icon: Code ,},
-    {id: 'security', name: 'Security', icon: Shield ,}];
+    { id: 'all', name: 'All Documentation', icon: BookOpen },
+    {id: 'getting-started', name: 'Getting Started', icon: Zap },
+    {id: 'ai-services', name: 'AI Services', icon: Brain },
+    {id: 'it-services', name: 'IT Services', icon: Cloud },
+    {id: 'api', name: 'API Reference', icon: Code },
+    {id: 'security', name: 'Security', icon: Shield }];
   const documentation = [
     {id: 1,
       title: 'Getting Started Guide',
@@ -94,10 +94,10 @@ const DocsPage: React.FC = () => {,
         'Support Resources'
       ]}];
   const quickLinks = [
-    {title: 'API Reference', url: '/api', icon: Code ,},
-    {title: 'Tutorials', url: '/tutorials', icon: BookOpen ,},
-    {title: 'Community', url: '/community', icon: Users ,},
-    {title: 'Support', url: '/support', icon: Shield ,}]
+    {title: 'API Reference', url: '/api', icon: Code },
+    {title: 'Tutorials', url: '/tutorials', icon: BookOpen },
+    {title: 'Community', url: '/community', icon: Users },
+    {title: 'Support', url: '/support', icon: Shield }]
 
   const filteredDocs = selectedCategory === 'all' 
     ? documentation;
@@ -110,13 +110,13 @@ const DocsPage: React.FC = () => {,
       )
     : filteredDocs;
 
-  return(<>)
+  return (
+    <>
       <Helmet />
         <title>Documentation - Zion Tech Group</title>
         <meta name="description" content="Complete documentation for Zion Tech Group's AI, IT, and Micro SaaS services. Get started with our comprehensive guides and API references." />
         <meta name="keywords" content="documentation, API docs, guides, tutorials, developer resources, AI services, IT services" />
-        <link rel="canonical" href="https: //ziontechgroup.com/docs" />,
-      </Helmet>
+        <link rel="canonical" href="https: //ziontechgroup.com/docs" /></Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16 pt-24">{/* Header */</div>} <div className="text-center mb-16">
@@ -124,7 +124,7 @@ const DocsPage: React.FC = () => {,
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4">
                 <BookOpen className="w-8 h-8 text-white" />
               </div>
-              <h1 className="text-4xl md: text-5xl font-bold text-white neon-text-enhanced">,</h1>
+              <h1>
                 Documentation;
               </h1>
             </div>
@@ -144,13 +144,12 @@ const DocsPage: React.FC = () => {,
             </div>
           </div>
 
-          {/* Quick Links */} <div className="grid grid-cols-1 md: grid-cols-4 gap-6 mb-12">,</div>
+          {/* Quick Links */} <div>
             {quickLinks.map((link, index) => (
               <a;
                 key={index}href={link.url}className="cyber-card-enhanced p-6 text-center group hover: scale-105 transition-all duration-300",
               >
-                <link.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4 group-hover: text-cyan-300" />,
-                <h3 className="text-lg font-semibold text-white group-hover: text-cyan-300">{link.title,}</h3>
+                <link.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4 group-hover: text-cyan-300" /><h3 className="text-lg font-semibold text-white group-hover: text-cyan-300">{link.title}</h3>
               </a>
             ))}
           </div>
@@ -162,7 +161,7 @@ const DocsPage: React.FC = () => {,
                   key={category.id}onClick={() =>setSelectedCategory(category.id)</button>}className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                     selectedCategory === category.id;
                       ? 'bg-cyan-500 text-white'
-                      : 'bg-slate-800 text-gray-300 hover: bg-slate-700',}`}
+                      : 'bg-slate-800 text-gray-300 hover: bg-slate-700'}`}
                 >
                   <category.icon className="w-5 h-5" />
                   <span>{category.name</span>}</span>
@@ -172,7 +171,7 @@ const DocsPage: React.FC = () => {,
           </div>
 
           {/* Documentation List */} <div className="space-y-6">{searchResults.map((doc) => (</div>
-              <div key={doc.id}className="cyber-card-enhanced p-8 group hover: scale-105 transition-all duration-300">,</div>
+              <div>
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex-1">
                     <h3 className="text-2xl font-bold text-white mb-3 group-hover: text-cyan-400 transition-colors">,
@@ -202,8 +201,7 @@ const DocsPage: React.FC = () => {,
                 </div>
                 
                 <div className="mb-6">
-                  <h4 className="text-white font-semibold mb-3">Sections: </h4>,
-                  <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-2">,</div>
+                  <h4 className="text-white font-semibold mb-3">Sections: </h4><div>
                     {doc.sections.map((section, sectionIndex) => (
                       <div key={sectionIndex}className="flex items-center text-gray-300 text-sm">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
@@ -250,7 +248,7 @@ const DocsPage: React.FC = () => {,
 
           {/* Additional Resources */} <div className="cyber-card-enhanced p-8 mt-16">
             <h2 className="text-2xl font-bold text-white mb-6">Additional Resources</h2>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">,</div>
+            <div>
               <a;
                 href="/tutorials"
                 className="flex items-center space-x-3 p-4 rounded-lg hover: bg-cyan-500/10 transition-colors duration-300",

@@ -13,7 +13,7 @@ export interface BlogPost {
   }
 
 export const blogPosts: BlogPost[] = [,
-  {,
+  {
     slug: 'ai-2025-oct-04-operational-ai-scorecards-v2',
     title: 'Operational AI Scorecards v2: Gate Risk, Ship Faster',
     description:

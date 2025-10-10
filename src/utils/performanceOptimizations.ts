@@ -33,10 +33,10 @@ export const throttle =
   return (...arg,
   s: Parameters,)
           <T>) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     if (!inThrottle) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       func(...args);
       inThrottle = true;
@@ -58,7 +58,7 @@ export const useIntersectionObserver = ()
     () =>
       typeof window !== 'undefined'
         ? new IntersectionObserver(callback, {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   threshol,
   d: 0.1,
@@ -77,7 +77,7 @@ export const useIntersectionObserver = ()
 
 }
       if (observer && element) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
         observer.observe(element);
         return () => observer.unobserve(element);
@@ -87,16 +87,16 @@ export const useIntersectionObserver = ()
 //     [observer]
   );
   const disconnect = useCallback(() => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     if (observer) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       observer.disconnect();
     }
   }, [observer]);
   useEffect(() => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     return () => disconnect();
   }, [disconnect]);
@@ -105,7 +105,7 @@ export const useIntersectionObserver = ()
 // Image lazy loading hook;
 export const useLazyImage = (sr)
   c: string, placeholder?: string) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   const [imageSrc, setImageSrc] = useState(placeholder || '');
   const [isLoaded, setIsLoaded] = useState(false);
@@ -113,23 +113,23 @@ export const useLazyImage = (sr)
   const { observe } = useIntersectionObserver()
 //     useCallback()
       (entries) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
         entries.forEach((entry) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
           if (entry.isIntersecting && !isLoaded && !isError) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
             const img = new Image();
             img.onload = () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
               setImageSrc(src);
               setIsLoaded(true);
             }
             img.onerror = () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
               setIsError(true);
             }
@@ -145,11 +145,11 @@ export const useLazyImage = (sr)
 }
 // Performance monitoring hook;
 export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   const [metrics, setMetrics] = useState;
           <{/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     fcp?: number;
     lcp?: number;
@@ -158,18 +158,18 @@ export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
     ttfb?: number;
   }>({});
   useEffect(() => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     if (typeof window === 'undefined') return;
     const updateMetrics = () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const paint = performance.getEntriesByType('paint');
       const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime;
       const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime;
       setMetrics({/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 //         fcp,
 //         lcp,
@@ -180,16 +180,16 @@ export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
     // Monitor performance after page load;
     if (document.readyState === 'complete') {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       window.addEventListener('load', updateMetrics);
     }
     // Monitor Core Web Vitals;
     if ('web-vitals' in window) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
         getCLS((metric) => setMetrics(prev => ({/* TODO: Fix JSX expression */})
   s: metric.value })));
@@ -204,7 +204,7 @@ export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
       });
     }
     return () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       window.removeEventListener('load', updateMetrics);
     }
@@ -213,29 +213,29 @@ export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
 }
 // Memory usage monitoring;
 export const useMemoryMonitoring = () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   const [memoryInfo, setMemoryInfo] = useState;
           <{/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     usedJSHeapSize?: number;
     totalJSHeapSize?: number;
     jsHeapSizeLimit?: number;
   }>({});
   useEffect(() => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     if (typeof window === 'undefined' || !('memory' in performance)) return;
     const updateMemoryInfo = () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       const memory = (performance as any).memory;
       if (memory) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
         setMemoryInfo({/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   usedJSHeapSiz,
   e: memory.usedJSHeapSize,
@@ -255,7 +255,7 @@ export const useMemoryMonitoring = () => {/* TODO: Fix JSX expression */}
 export const preloadResource = (hre,
   f: string, a)
   s: string) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   if (typeof window === 'undefined') return;
   const link = document.createElement('link');
@@ -266,7 +266,7 @@ export const preloadResource = (hre,
 }
 // Critical resource preloading;
 export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   if (typeof window === 'undefined') return;
   // Preload critical fonts;
@@ -280,11 +280,11 @@ export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */}
 }
 // Bundle size monitoring;
 export const useBundleSizeMonitoring = () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   const [bundleSize, setBundleSize] = useState;
           <{/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     totalSize?: number;
     jsSize?: number;
@@ -292,37 +292,37 @@ export const useBundleSizeMonitoring = () => {/* TODO: Fix JSX expression */}
     imageSize?: number;
   }>({});
   useEffect(() => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     if (typeof window === 'undefined') return;
     const calculateBundleSize = () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       const resources = performance.getEntriesByType('resource');
       let jsSize = 0;
       let cssSize = 0;
       let imageSize = 0;
       resources.forEach((resource) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
         const size = (resource as PerformanceResourceTiming).transferSize || 0;
         totalSize += size;
         if (resource.name.includes('.js')) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
           jsSize += size;
         } else if (resource.name.includes('.css')) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
           cssSize += size;
         } else if (resource.name.match(/\.(jpg|jpeg|png|gif|webp|svg)$/)) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
           imageSize += size;
         }
       });
       setBundleSize({/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 //         totalSize,
 //         jsSize,
@@ -333,12 +333,12 @@ export const useBundleSizeMonitoring = () => {/* TODO: Fix JSX expression */}
     // Calculate after page load;
     if (document.readyState === 'complete') {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       window.addEventListener('load', calculateBundleSize);
     }
     return () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       window.removeEventListener('load', calculateBundleSize);
     }
@@ -346,7 +346,7 @@ export const useBundleSizeMonitoring = () => {/* TODO: Fix JSX expression */}
   return bundleSize;
 }
 export default {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 //   debounce,
 //   throttle,

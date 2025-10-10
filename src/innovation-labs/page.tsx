@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import {  Link  } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { FlaskConical, Target, Zap, Settings, CheckCircle, Star,  FlaskConical,  Target,  Settings } from 'lucide-react';
+import {  FlaskConical, Target, Zap, Settings, CheckCircle, Star,  FlaskConical,  Target,  Settings  } from 'lucide-react';
 const InnovationLabsPage: React.FC = () => {
     const features = [],
   return (

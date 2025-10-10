@@ -3,14 +3,14 @@
  */
 
 export const performanceOptimizer = {
-  init: () => {,
-    if (typeof window !== 'undefined') {,
+  init: () => {
+    if (typeof window !== 'undefined') {
       //       }
   },
 
-  getMetrics: () => {,
-    if (typeof window !== 'undefined' && 'performance' in window) {,
-      return {,
+  getMetrics: () => {
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      return {
         navigation: performance.getEntriesByType('navigation')[0],
         resources: performance.getEntriesByType('resource'),
 export const performanceOptimizer = {/* TODO: Fix JSX expression */}

@@ -1284,7 +1284,7 @@ export interface ResearchDevelopmentService2029 {/* TODO: Fix JSX expression */}
   }
 }
 export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] = [,
-  {,
+  {
     id: 'advanced-research-automation',
     name: 'Advanced Research Automation',,
   description: 'Comprehensive research automation platform that streamlines research workflows, automates data collection, and accelerates discovery across all scientific disciplines.';

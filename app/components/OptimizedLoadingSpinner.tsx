@@ -1,5 +1,5 @@
 'use client';
-import React, {Suspense, lazy}from 'react';
+import React, {Suspense, lazy} from 'react';
 interface OptimizedLoadingSpinnerProps {size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';}
   variant?: 'dots' | 'pulse' | 'spinner' | 'skeleton' | 'bars';
   text?: string;
@@ -12,13 +12,13 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(,)
     text = 'Loading...',
     className = '',
     color = 'blue',
-    fullScreen = false,}}) => {const sizeClasses = useMemo(;)
+    fullScreen = false}}) => {const sizeClasses = useMemo(;)
       () => ({
         xs: 'h-3 w-3',
         sm: 'h-4 w-4',
         md: 'h-8 w-8',
         lg: 'h-12 w-12',
-        xl: 'h-16 w-16',}}),
+        xl: 'h-16 w-16'}}),
       []
     );
 const textSizeClasses = useMemo(;)
@@ -26,7 +26,7 @@ const textSizeClasses = useMemo(;)
         sm: 'text-sm',
         md: 'text-base',
         lg: 'text-lg',
-        xl: 'text-xl',}}),
+        xl: 'text-xl'}}),
       []
     );
 const colorClasses = useMemo(;)
@@ -34,7 +34,7 @@ const colorClasses = useMemo(;)
         gray: 'border-gray-600 bg-gray-600',
         green: 'border-green-600 bg-green-600',
         red: 'border-red-600 bg-red-600',
-        purple: 'border-purple-600 bg-purple-600',}}),
+        purple: 'border-purple-600 bg-purple-600'}}),
       []
     );
 const renderSpinner = useMemo(() => {switch (variant) {
@@ -42,7 +42,7 @@ const renderSpinner = useMemo(() => {switch (variant) {
           return(<div className='flex space-x-1' role='status' aria-label='Loading'></div>)
               {[0, 1, 2].map(i => (</div>)
                 <div;}key={i}className={`w-2 h-2 rounded-full animate-bounce ${colorClasses[color].split(' ')[1]}`}
-                  style={{ animationDelay: `${i * 0.1,}s` }}
+                  style={{ animationDelay: `${i * 0.1}s` }}
                 /></div>
               ))}</div>
           );
@@ -62,25 +62,25 @@ case 'skeleton':;
               /></div>
               <div;
                 className={`h-4 bg-gray-200 rounded animate-pulse ${sizeClasses[size]}`}
-                style={{ width: '75%' ,}}
+                style={{ width: '75%' }}
               /></div>
               <div;
                 className={`h-4 bg-gray-200 rounded animate-pulse ${sizeClasses[size]}`}
-                style={{ width: '50%' ,}}
+                style={{ width: '50%' }}
               /></div>
           );
 case 'bars':;
           return(<div className='flex space-x-1' role='status' aria-label='Loading'></div>)
               {[0, 1, 2, 3].map(i => (</div>)
                 <div;}key={i}className={`w-1 ${colorClasses[color].split(' ')[1]}animate-pulse`}
-                  style={{}height: `${12 + i * 4,}px`,
-                    animationDelay: `${i * 0.1,}s`,
+                  style={{}height: `${12 + i * 4}px`,
+                    animationDelay: `${i * 0.1}s`
                   }}
                 /></div>
               ))}</div>
           );
 case 'spinner':;
-        default: return(,)
+        default: return (
             <div,
 
               className={`${baseClasses}rounded-full border-2 border-t-transparent animate-spin`}

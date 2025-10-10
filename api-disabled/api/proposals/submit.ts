@@ -10,7 +10,7 @@ async function submitByEmail(to: string;)
   //   const pass = process.env.EMAIL_PASS;
   //   const from = process.env.EMAIL_FROM || user;
 ,
-  if (!host || !user || !pass) {,
+  if (!host || !user || !pass) {
     throw new Error('Email not configured');
   }
 
@@ -30,8 +30,8 @@ async function submitByEmail(to: string;)
   });
 }
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {,
-  if (req.method !== 'POST') {,
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
 async function submitByEmail(t,
   o: string,
@@ -103,7 +103,7 @@ Delegate,`
 
     // ENS record hash (default: compute and store hash only)
     let ensRecordHash: string | undefined;
-    try {,
+    try {
       const _hash = crypto.createHash('sha256').update(JSON.stringify(meta)).digest('hex');
       ensRecordHash = `0 x${hash}`;
       updateArtifacts(id, { ensRecordHash });
@@ -116,7 +116,7 @@ Delegate,`
       status: 'Submitted')}));
 
     return res.status(200).json({ meta: updated });
-  } catch (error: unknown) {,
+  } catch (error: unknown) {
     return res.status(500).json({ error: error?.message || 'Submission failed' });
     // ENS record hash (defaul)
   t: compute and store hash only)

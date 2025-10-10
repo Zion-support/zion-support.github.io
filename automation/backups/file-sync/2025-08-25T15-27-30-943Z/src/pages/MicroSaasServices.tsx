@@ -14,7 +14,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       benefits: ["Increased productivity", "Better team coordination", "Project visibility", "Easy to use"],
       targetAudience: ["Small teams", "Startups", "Freelancers", "Small businesses"],
       tags: ["Task Management", "Productivity", "Collaboration", "Project Management"],
-      contactInfo: {,
+      contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
@@ -31,7 +31,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       benefits: ["Faster development", "Code quality improvement", "Reduced bugs", "Time savings"],
       targetAudience: ["Software developers", "Dev teams", "Startups", "Tech companies"],
       tags: ["AI Development", "Code Generation", "Code Review", "Automation", "Productivity"],
-      contactInfo: {,
+      contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
@@ -48,7 +48,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       benefits: ["Future-proof decisions", "Competitive advantage", "Data-driven insights", "Scalable analytics"],
       targetAudience: ["Data scientists", "Business analysts", "Executives", "Consulting firms"],
       tags: ["Quantum Analytics", "Predictive Modeling", "Business Intelligence", "AI", "Real-time"],
-      contactInfo: {,
+      contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
@@ -65,7 +65,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       benefits: ["Transparency", "Security", "Cost reduction", "Innovation leadership"],
       targetAudience: ["Fintech companies", "Supply chain", "Real estate", "Healthcare"],
       tags: ["Blockchain", "Smart Contracts", "DeFi", "Cryptocurrency", "Business Solutions"],
-      contactInfo: {,
+      contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
@@ -82,7 +82,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       benefits: ["Operational efficiency", "Cost reduction", "Predictive maintenance", "Data insights"],
       targetAudience: ["Manufacturing", "Healthcare", "Smart cities", "Agriculture"],
       tags: ["IoT", "Device Management", "Real-time Monitoring", "Automation", "Enterprise"],
-      contactInfo: {,
+      contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
@@ -99,7 +99,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       benefits: ["Immersive experiences", "Training efficiency", "Customer engagement", "Innovation"],
       targetAudience: ["Game developers", "Training companies", "Real estate", "Education"],
       tags: ["AR/VR", "3D Modeling", "Immersive Tech", "Training", "Development"],
-      contactInfo: {,
+      contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
@@ -116,7 +116,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       benefits: ["Time savings", "Accuracy improvement", "Tax compliance", "Financial insights"],
       targetAudience: ["Small businesses", "Freelancers", "Consultants", "Service providers"],
       tags: ["Invoicing", "Finance", "AI", "Tax Preparation", "Expense Tracking"],
-      contactInfo: {,
+      contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
@@ -133,7 +133,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       benefits: ["Time efficiency", "Better engagement", "Data insights", "Brand consistency"],
       targetAudience: ["Marketing teams", "Small businesses", "Agencies", "Content creators"],
       tags: ["Social Media", "Marketing", "Analytics", "Content Management", "Automation"],
-      contactInfo: {,
+      contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
@@ -150,7 +150,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       benefits: ["Better customer relationships", "Sales improvement", "Data organization", "Team collaboration"],
       targetAudience: ["Sales teams", "Small businesses", "Startups", "Consultants"],
       tags: ["CRM", "Sales", "Customer Management", "Pipeline", "Reporting"],
-      contactInfo: {,
+      contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
@@ -167,7 +167,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       benefits: ["Data insights", "Better decisions", "Visual communication", "Time savings"],
       targetAudience: ["Business analysts", "Marketing teams", "Executives", "Data teams"],
       tags: ["Analytics", "Data Visualization", "Dashboards", "Business Intelligence", "Reporting"],
-      contactInfo: {,
+      contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
@@ -184,7 +184,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       benefits: ["Reduced no-shows", "24/7 booking", "Payment collection", "Time savings"],
       targetAudience: ["Service businesses", "Consultants", "Healthcare", "Beauty salons"],
       tags: ["Scheduling", "Appointments", "Booking", "Calendar", "Automation"],
-      contactInfo: {,
+      contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
@@ -201,7 +201,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       benefits: ["Content creation speed", "SEO improvement", "Engagement increase", "Time efficiency"],
       targetAudience: ["Content marketers", "Bloggers", "Agencies", "Small businesses"],
       tags: ["Content Creation", "AI", "SEO", "Marketing", "Automation"],
-      contactInfo: {,
+      contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
@@ -218,7 +218,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       benefits: ["Enhanced security", "Compliance", "Risk reduction", "Peace of mind"],
       targetAudience: ["Small businesses", "Healthcare", "Finance", "Legal services"],
       tags: ["Security", "Compliance", "Password Management", "Access Control", "Risk Management"],
-      contactInfo: {,
+      contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
@@ -235,7 +235,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       benefits: ["Better organization", "Team collaboration", "Time savings", "Asset protection"],
       targetAudience: ["Design teams", "Marketing agencies", "Photographers", "Content creators"],
       tags: ["Media Management", "Digital Assets", "Collaboration", "Organization", "Creative Tools"],
-      contactInfo: {,
+      contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
@@ -252,7 +252,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       benefits: ["Training efficiency", "Progress monitoring", "Cost reduction", "Scalability"],
       targetAudience: ["Corporate training", "Educational institutions", "Online courses", "Skill development"],
       tags: ["LMS", "Education", "Training", "Online Learning", "Assessment"],
-      contactInfo: {,
+      contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
@@ -269,7 +269,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       benefits: ["Environmental impact", "Regulatory compliance", "Brand reputation", "Cost savings"],
       targetAudience: ["Manufacturing", "Retail", "Service businesses", "Sustainability-focused companies"],
       tags: ["Sustainability", "Environmental Impact", "Carbon Tracking", "Reporting", "Compliance"],
-      contactInfo: {,
+      contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
@@ -286,7 +286,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       benefits: ["Cost reduction", "Legal protection", "Time savings", "Compliance"],
       targetAudience: ["Small businesses", "Startups", "Freelancers", "Legal professionals"],
       tags: ["Legal Tech", "AI", "Document Generation", "Contract Management", "Compliance"],
-      contactInfo: {,
+      contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
@@ -303,7 +303,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       benefits: ["Better health outcomes", "Patient engagement", "Data insights", "Preventive care"],
       targetAudience: ["Small clinics", "Wellness centers", "Personal trainers", "Individuals"],
       tags: ["Healthcare", "Wellness", "Health Monitoring", "Patient Portal", "Preventive Care"],
-      contactInfo: {,
+      contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
@@ -320,7 +320,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       benefits: ["Event success", "Revenue increase", "Attendee satisfaction", "Data insights"],
       targetAudience: ["Event organizers", "Conferences", "Workshops", "Entertainment"],
       tags: ["Event Management", "Ticketing", "Planning", "Attendee Management", "Analytics"],
-      contactInfo: {,
+      contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
@@ -337,7 +337,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       benefits: ["Stock optimization", "Cost reduction", "Better planning", "Customer satisfaction"],
       targetAudience: ["Retail stores", "E-commerce", "Manufacturing", "Distribution"],
       tags: ["Inventory Management", "Supply Chain", "Forecasting", "Analytics", "Optimization"],
-      contactInfo: {,
+      contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
@@ -354,7 +354,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       benefits: ["Enhanced security", "Real-time protection", "Compliance", "Peace of mind"],
       targetAudience: ["Financial services", "Healthcare", "Government", "Enterprise"],
       tags: ["Cybersecurity", "AI Security", "Threat Detection", "Compliance", "Enterprise"],
-      contactInfo: {,
+      contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
@@ -371,7 +371,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       benefits: ["Environmental impact", "Regulatory compliance", "Brand reputation", "Cost savings"],
       targetAudience: ["Manufacturing", "Retail", "Service businesses", "ESG-focused companies"],
       tags: ["Sustainability", "ESG", "Carbon Tracking", "Green Tech", "Compliance"],
-      contactInfo: {,
+      contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
@@ -388,7 +388,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       benefits: ["Hands-free operation", "Increased efficiency", "Better accessibility", "Modern interface"],
       targetAudience: ["Customer service", "Sales teams", "Administrative staff", "Accessibility needs"],
       tags: ["Voice AI", "Automation", "Accessibility", "Customer Service", "AI Assistant"],
-      contactInfo: {,
+      contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
@@ -405,7 +405,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       benefits: ["Superior accuracy", "Competitive advantage", "Risk reduction", "Future-proof technology"],
       targetAudience: ["Investment firms", "Banks", "Hedge funds", "Financial advisors"],
       tags: ["Quantum Finance", "Risk Assessment", "Portfolio Management", "Financial Modeling", "AI"],
-      contactInfo: {,
+      contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
@@ -422,7 +422,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       benefits: ["Reduced latency", "Better performance", "Cost efficiency", "Scalability"],
       targetAudience: ["IoT applications", "Gaming", "Real-time systems", "Distributed computing"],
       tags: ["Edge Computing", "Real-time Processing", "IoT", "Performance", "Infrastructure"],
-      contactInfo: {,
+      contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com",

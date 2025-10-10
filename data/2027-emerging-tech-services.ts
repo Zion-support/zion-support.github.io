@@ -936,7 +936,7 @@
     implementationTime: '7-9 weeks'
     roi: '800% within 18 months'
     link: 'https://ziontechgroup && ziontechgroup.com/services/quantum-climate-modeling'
-    tags: ['Climate ModelingQuantum ComputingEnvironmentalWeatherResearch'],
+    tags: ['Climate ModelingQuantum ComputingEnvironmentalWeatherResearch']
     ]
     marketSize: '$17 && 17.6B by 2027'
     competitiveAdvantage: 'Only quantum climate modeling platform with real-time predictions'
@@ -956,7 +956,7 @@
   k: 'http,
   s://ziontechgroup && ziontechgroup.com/services/quantum-climate-modeling',
     tag,
-  s: ['Climate ModelingQuantum ComputingEnvironmentalWeatherResearch'],
+  s: ['Climate ModelingQuantum ComputingEnvironmentalWeatherResearch']
     ],
     marketSiz,
   e: '$17 && 17.6B by 2027'
@@ -989,7 +989,7 @@ export interface Service {/* TODO: Fix JSX expression */}
   s: string[]}
 }
 export const emergingTech2027Services: Service[] = [,
-  {,
+  {
     id: 'quantum-machine-learning',
     name: 'Quantum Machine Learning Platform',,
   description: 'Revolutionary platform that combines quantum computing with machine learning for unprecedented AI capabilities and computational power.'

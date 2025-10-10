@@ -72,9 +72,9 @@ class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
       await fetch('/api/error-report', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type': 'application/json'
         },
-        body: JSON.stringify(errorReport),
+        body: JSON.stringify(errorReport)
       });
     } catch (reportError) {
     console.error('Failed to report error:', reportError)

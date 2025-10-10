@@ -13,8 +13,8 @@ async function fetchFromGitHub(): Promise<any[]> {/* TODO: Fix JSX expression */
     const _jsonFiles = files.filter((f) => f.type === 'file' && f.name.endsWith('.json'));
     const results: unknown[] = [];
     ,
-    for (const f of jsonFiles.slice(-50).reverse()) {,
-      try {,
+    for (const f of jsonFiles.slice(-50).reverse()) {
+      try {
         const _r = await fetch(f.download_url, { headers });
         if (!r.ok) continue;
         const _j = await r.json();
@@ -39,7 +39,7 @@ async function fetchFromGitHub(): Promise<any[]> {/* TODO: Fix JSX expression */
   }
 }
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {,
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 //   const dir = path.join(process.cwd(), 'automation_logs');
   
   try {

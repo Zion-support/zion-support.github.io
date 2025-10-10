@@ -1,5 +1,5 @@
 import React from 'react';
-const January2026RevolutionaryContentBanne, r: React.FC = () => {,
+const January2026RevolutionaryContentBanne, r: React.FC = () => {
   const revolutionaryConten, t = [
     {
       title: 'Ne, x, t-Generation, Enterprise, Automation: The, 2026, AI Revolu, t, i, o, n',

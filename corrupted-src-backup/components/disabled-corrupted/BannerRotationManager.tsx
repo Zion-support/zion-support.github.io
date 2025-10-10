@@ -30,7 +30,7 @@ interface BannerRotationManagerProps {/* TODO: Fix JSX expression */}
  * - Limits the number of visible banners
  * - Provides fallback loading states,
  */,
-export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({,
+export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
   banners = [],
   maxBanners = 3,
   rotationInterval = 10000,

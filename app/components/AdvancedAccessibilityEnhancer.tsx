@@ -1,6 +1,6 @@
 'use client';
-import React, {useEffect, useState}from 'react';
-interface AccessibilityEnhancerProps {children: React.ReactNode;,}}const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({children ,}) => {const [isHighContrast, setIsHighContrast] = useState(false);
+import React, {useEffect, useState} from 'react';
+interface AccessibilityEnhancerProps {children: React.ReactNode;}}const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({children }) => {const [isHighContrast, setIsHighContrast] = useState(false);
   const [fontSize, setFontSize] = useState('medium');
   const [isReducedMotion, setIsReducedMotion] = useState(false);
   useEffect(() => {
@@ -14,7 +14,7 @@ interface AccessibilityEnhancerProps {children: React.ReactNode;,}}const Advance
     document.documentElement.setAttribute('data-accessibility-enhanced', 'true');
     if (isHighContrast) {
       document.documentElement.classList.add('high-contrast')}if (isReducedMotion) {document.documentElement.classList.add('reduced-motion')}// Add keyboard navigation support;
-    const handleKeyDown = (event: KeyboardEvent) => {,
+    const handleKeyDown = (event: KeyboardEvent) => {
     if (event.key === 'Tab') {
         document.body.classList.add('keyboard-navigation')}}
     const handleMouseDown = () => {document.body.classList.remove('keyboard-navigation')}document.addEventListener('keydown', handleKeyDown);
@@ -22,10 +22,10 @@ interface AccessibilityEnhancerProps {children: React.ReactNode;,}}const Advance
     return () => {document.removeEventListener('keydown', handleKeyDown);
       document.removeEventListener('mousedown', handleMouseDown)}}, [isHighContrast, isReducedMotion]);
   const toggleHighContrast = () => {setIsHighContrast(!isHighContrast);
-    document.documentElement.classList.toggle('high-contrast')}const changeFontSize = (size: string) => {,
+    document.documentElement.classList.toggle('high-contrast')}const changeFontSize = (size: string) => {
     setFontSize(size),
     document.documentElement.setAttribute('data-font-size', size)}return(<div className="accessibility-enhanced">)</div>
-      <div className="accessibility-controls" style={{ position: 'fixed', top: '10px', right: '10px', zIndex: 1000 ,}}>
+      <div className="accessibility-controls" style={{ position: 'fixed', top: '10px', right: '10px', zIndex: 1000 }}>
         <button;
           onClick={toggleHighContrast}className="accessibility-button"
           aria-label="Toggle high contrast"

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heart, Play, Download, Share, Star, CheckCircle, Zap, Clock, Users, Award, ArrowRight, Sparkles } from 'lucide-react';
+import {  Heart, Play, Download, Share, Star, CheckCircle, Zap, Clock, Users, Award, ArrowRight, Sparkles  } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
@@ -190,7 +190,7 @@ const AIFitnessCoachPage: React.FC = () => {
         <Footer />
       </div>
     </React.Fragment>
-  ),
+  )
 }
 export default AIFitnessCoachPage;
   </a>

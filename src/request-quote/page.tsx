@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import {  Link  } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 'use client';
@@ -417,10 +417,10 @@ $4}
                   </a>
                 </div>
     <div>Coming Soon</div>
-  ),
+  )
 }
   const [formData, setFormData] = useState({/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   nam,
   e: '',
@@ -492,18 +492,18 @@ $4}
   ];
   const handleInputChange = (e: React.ChangeEvent,)
           <HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     const { name, value } = e.target;
     setFormData(prev => ({/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 //       ...prev,
       [name]: value;)
     }));
   }
   const handleSubmit = async (e: React.FormEvent) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     e.preventDefault();
     setIsSubmitting(true);
@@ -517,7 +517,7 @@ $4}
   O: Add items
 ],
     {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   ico,
   n: Calculator,
@@ -527,7 +527,7 @@ $4}
   n: 'Get a detailed, no-obligation quote within 24 hours'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   ico,
   n: Clock,
@@ -537,7 +537,7 @@ $4}
   n: 'We respond to all quote requests within 4 hours'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   ico,
   n: CheckCircle,
@@ -547,7 +547,7 @@ $4}
   n: 'Clear, detailed pricing with no hidden fees'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   ico,
   n: Star,
@@ -562,7 +562,7 @@ $4}
   O: Add items
 ],
     {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   ico,
   n: Users,
@@ -572,7 +572,7 @@ $4}
   n: 'Proven track record of delivering results'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   ico,
   n: Award,
@@ -582,7 +582,7 @@ $4}
   n: 'Our clients see significant returns on investment'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   ico,
   n: Clock,
@@ -592,7 +592,7 @@ $4}
   n: 'Round-the-clock support for all our clients'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   ico,
   n: Star,
@@ -603,7 +603,7 @@ $4}
     }
   ];
   if (isSubmitted) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     return (<div>Coming Soon</div>)
   )
@@ -663,7 +663,7 @@ $4}
     </React.Fragment>
         <Footer /></Footer>
       </React.Fragment>
-    ),
+    )
   }
   return (<div>Coming Soon</div>)
   )

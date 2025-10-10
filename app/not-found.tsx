@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import {Home, ArrowLeft, RefreshCw}}from 'lucide-react';
+import {  Home, ArrowLeft, RefreshCw  } from 'lucide-react';
 export default function NotFound() {return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4"></div>)
       <div className="max-w-md w-full bg-gray-800 rounded-xl shadow-2xl p-8 text-center"></div>
         <div className="flex justify-center mb-6"></div>
@@ -11,8 +11,7 @@ export default function NotFound() {return(<div className="min-h-screen bg-gradi
         </h1>
         <p>Sorry, we couldn't find the page you're looking for. It might have been moved, deleted, or doesn't exist.</p>
         </p>
-        <div className="flex flex-col sm: flex-row gap-3"></div>,
-          <Link>
+        <div className="flex flex-col sm: flex-row gap-3"></div><Link>
             <Home>
             Go Home,
           </Link>

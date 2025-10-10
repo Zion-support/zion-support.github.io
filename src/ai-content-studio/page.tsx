@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Palette, Brain, FileText, ArrowRight, CheckCircle, Star, Users, Shield, Clock, Zap } from 'lucide-react';
+import {  Palette, Brain, FileText, ArrowRight, CheckCircle, Star, Users, Shield, Clock, Zap  } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const AIContentStudioPage: React.FC = () => {

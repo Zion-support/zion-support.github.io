@@ -1,6 +1,6 @@
-import { Facebook, Github, Linkedin, Mail, MapPin, Phone, Twitter } from 'lucide-react';
+import {  Facebook, Github, Linkedin, Mail, MapPin, Phone, Twitter  } from 'lucide-react';
 import React from 'react';
-import { Link } from 'react-router-dom';
+import {  Link  } from 'react-router-dom';
 const EnhancedFooter: React.FC = () => {
   const currentYear = new Date().getFullYear();
   const services = [
@@ -9,13 +9,13 @@ const EnhancedFooter: React.FC = () => {
     { name: 'Web Development', href: '/services/web' },
     { name: 'Mobile Apps', href: '/services/mobile' },
     { name: 'Data Analytics', href: '/services/analytics' },
-    { name: 'DevOps', href: '/services/devops' },
+    { name: 'DevOps', href: '/services/devops' }
   ];
   const products = [
     { name: 'AI Platform', href: '/products/ai-platform' },
     { name: 'Cloud Suite', href: '/products/cloud-suite' },
     { name: 'Analytics Dashboard', href: '/products/analytics' },
-    { name: 'Mobile SDK', href: '/products/mobile-sdk' },
+    { name: 'Mobile SDK', href: '/products/mobile-sdk' }
   ];
   const quickLinks = [
     { name: 'About Us', href: '/about' },
@@ -23,7 +23,7 @@ const EnhancedFooter: React.FC = () => {
     { name: 'Blog', href: '/blog' },
     { name: 'Careers', href: '/careers' },
     { name: 'Privacy Policy', href: '/legal/privacy' },
-    { name: 'Terms of Service', href: '/legal/terms' },
+    { name: 'Terms of Service', href: '/legal/terms' }
   ];
   return (
     <footer className="bg-gray-900 text-white">

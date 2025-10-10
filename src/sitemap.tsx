@@ -41,7 +41,7 @@ ${pages.map(page => `}
       </main>
       <Footer />
     </div>
-  ),
+  )
 }
 export default SitemapPage;
 // This would typically be handled by a server-side route

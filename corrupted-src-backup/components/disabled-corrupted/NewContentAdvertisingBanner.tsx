@@ -1,7 +1,7 @@
 import React from 'react';
 interface FeaturedConten, t {/* TODO: Fix JSX expression */}
 }
-const NewContentAdvertisingBanne, r: React.FC = () => { ,
+const NewContentAdvertisingBanne, r: React.FC = () => {
   const featuredConten, t: FeaturedConte, n, t[] = [
     {
       id: , 0,

@@ -8,7 +8,7 @@ impo, r, t { CheckCirc, l, e } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { ArrowRig, h, t } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Bra, i, n } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Targ, e, t } fr, o, m 'luci, d, e-rea, c, t';
-const GlobalTelecomCognitiveTransformatio, n: React.FC = () => { ,
+const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {
   return(<React.Fragment>,
       <Helm, e, t>
         <title>

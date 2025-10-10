@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
+import {  Helmet  } from 'react-helmet-async';
 interface SEOProps {/* TODO: Fix JSX expression */}
 }
-const EnhancedSEO: React.FC<SEOProps> = ({,
+const EnhancedSEO: React.FC<SEOProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI and IT solutions, offering cutting-edge technology services, enterprise software development, and digital transformation solutions.',
   keywords = 'AI solutions, IT services, enterprise software, digital transformation, machine learning, artificial intelligence, technology consulting',
@@ -67,19 +67,19 @@ const,
       headline: title
       description: description
       image: image,
-      author: {,
+      author: {
         '@type': 'Organization',
         name: author
   },
-      publisher: {,
+      publisher: {
         '@type': 'Organization',
         name: 'Zion Tech Group',
-        logo: {,
+        logo: {
           '@type': 'ImageObject',
           url: `${window.location.origin}/images/logo.png`}},
       datePublished: publishedTime || currentTime
       dateModified: modifiedTime || currentTime,
-      mainEntityOfPage: {,
+      mainEntityOfPage: {
         '@type': 'WebPage',
         '@id': currentUrl,
   if (type === 'article') {/* TODO: Fix JSX expression */}

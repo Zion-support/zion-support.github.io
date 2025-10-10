@@ -1,4 +1,4 @@
-import {Leaf, Recycle, Zap, Globe, Target, CheckCircle, ArrowRight, Phone, Mail, Award, Users, TrendingUp} from 'lucide-react';
+import { Leaf, Recycle, Zap, Globe, Target, CheckCircle, ArrowRight, Phone, Mail, Award, Users, TrendingUp } from 'lucide-react';
 'use client';
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
@@ -301,10 +301,10 @@ valuevalue: '100%',
                 Email Us
       <Footer />
     </React.Fragment>
-  ),
+  )
 }
 export default GreenITPage;
-import { Link } from 'react-router-dom';
+import {  Link  } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const GreenITPage: React.FC = () => {
@@ -315,7 +315,7 @@ const GreenITPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState('solutions');
 const tabs = [
     {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   i,
   d: 'solutions',
@@ -593,7 +593,7 @@ const tabs = [
                   onClick={() => setActiveTab(tab.id)}`
                   className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${}
   // TOD,
-  O: Add content,
+  O: Add content
 }
                     activeTab === tab.id;`
                       ? `${tab.bgColor} ${tab.color} border-2 border-current`
@@ -708,7 +708,7 @@ Benefits of Green IT;"
                 Email Us
       <Footer />
     </div>
-  ),
+  )
 }
 export default GreenItPage;
   </div>

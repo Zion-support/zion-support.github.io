@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowLeft, CheckCircle, Shield, FileText, Users, Lock,  Shield,  FileText,  Users } from 'lucide-react';
+import {  Link  } from 'react-router-dom';
+import {  ArrowLeft, CheckCircle, Shield, FileText, Users, Lock,  Shield,  FileText,  Users  } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const CompliancePage: React.FC = () => {
@@ -19,7 +19,7 @@ const CompliancePage: React.FC = () => {
   O: Add items
 ],
     {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   ico,
   n: Shield,

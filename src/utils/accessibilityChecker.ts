@@ -105,7 +105,7 @@ export interface A11yIssue {// TODO: Add content
   /** Suggested fix */
   fix?: string
   /** Code example for the fix */
-  codeExample?: string,
+  codeExample?: string
 }
 /**
  * Accessibility check result
@@ -166,7 +166,7 @@ export interface A11yCheckResult {// TODO: Add content
   /** Overall accessibility score (0-100) */,
 
   scor,
-  e: number,
+  e: number
 }
 /**
  * Accessibility Checker class;
@@ -180,7 +180,7 @@ export interface A11yCheckResult {// TODO: Add content
  * ```
  */
 export class AccessibilityChecker {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 
   private issues: A11yIssue[] = [];
@@ -250,7 +250,7 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
         this.addIssue({
           type: 'missing-alt-text',
     return {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 
   passed: this.issues.length === 0,
@@ -273,17 +273,17 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
 
 }
     if (typeof document === 'undefined') {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       return {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 
   passed: true,
         issueCount: 0,
         issues: [],
         timestamp: new Date(),
-        score: 100,
+        score: 100
 
       }
     }
@@ -303,16 +303,16 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
 }
     const images = element.querySelectorAll('img');
     images.forEach((img, index) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       const alt = img.getAttribute('alt');
       const role = img.getAttribute('role');
       // Check for missing alt attribute;
       if (alt === null && role !== 'presentation') {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
         this.addIssue({/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 
   type: 'missing-alt-text',
@@ -338,10 +338,10 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
       }
       // Check for empty alt on decorative images without role;
       if (alt === '' && role !== 'presentation') {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
         this.addIssue({/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 
   type: 'empty-alt-without-role',
@@ -396,15 +396,15 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
     const headings = Array.from(element.querySelectorAll('h1, h2, h3, h4, h5, h6'));
     if (headings.length === 0) return;
     headings.forEach((heading, index) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       const level = parseInt(heading.tagName.charAt(1));
       // Check for skipped heading levels;
       if (level > previousLevel + 1 && previousLevel !== 0) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
         this.addIssue({/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 
   type: 'skipped-heading-level',
@@ -425,10 +425,10 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
       }
       // Check for empty headings;
       if (!heading.textContent?.trim()) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
         this.addIssue({/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 
   type: 'empty-heading',
@@ -457,10 +457,10 @@ $4});
     // Check for multiple h1s;
 const h1Count = element.querySelectorAll('h1').length;
     if (h1Count > 1) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       this.addIssue({/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 
   type: 'multiple-h1',
@@ -502,7 +502,7 @@ $4});
 }
     const links = element.querySelectorAll('a');
     links.forEach((link, index) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       const text = link.textContent?.trim();
       const ariaLabel = link.getAttribute('aria-label');
@@ -514,10 +514,10 @@ $4});
           type: 'link-no-text',
       // Check for links without accessible text;
       if (!text && !ariaLabel && !ariaLabelledBy && !title) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
         this.addIssue({/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 
   type: 'link-no-text',
@@ -543,10 +543,10 @@ $4});
       }
       // Check for generic link text;
       if (text && ['click here', 'read more', 'more', 'link'].includes(text.toLowerCase())) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
         this.addIssue({/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 
   type: 'generic-link-text',
@@ -583,7 +583,7 @@ const target = link.getAttribute('target')
 
 }
         this.addIssue({/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 
   type: 'new-window-no-warning',
@@ -640,17 +640,17 @@ const target = link.getAttribute('target')
 }
     const buttons = element.querySelectorAll('button');
     buttons.forEach((button, index) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       const text = button.textContent?.trim();
       const ariaLabel = button.getAttribute('aria-label');
       const ariaLabelledBy = button.getAttribute('aria-labelledby');
       // Check for buttons without accessible text;
       if (!text && !ariaLabel && !ariaLabelledBy) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
         this.addIssue({/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 
   type: 'button-no-text',
@@ -709,7 +709,7 @@ const target = link.getAttribute('target')
 }
     const inputs = element.querySelectorAll('input, select, textarea');
     inputs.forEach((input, index) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       const id = input.getAttribute('id');
       const ariaLabel = input.getAttribute('aria-label');
@@ -720,10 +720,10 @@ const target = link.getAttribute('target')
       if (type === 'hidden' || type === 'submit' || type === 'button') return;
       // Check for form controls without labels;
       if (!label && !ariaLabel && !ariaLabelledBy) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
         this.addIssue({/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 
   type: 'form-no-label',
@@ -775,15 +775,15 @@ const target = link.getAttribute('target')
     // computing actual rendered colors which is complex;"
 const elementsWithColor = element.querySelectorAll('[style*="color"]');
     elementsWithColor.forEach(el => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 })
       const style = el.getAttribute('style');
       if (style?.includes('colo)
   r: ') && !style.includes('background')) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
         this.addIssue({/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 
   type: 'color-without-background',
@@ -834,14 +834,14 @@ $4});
     // Check for interactive elements with tabindex="-1"
     const interactiveElements = element.querySelectorAll('a, button, input, select, textarea');
     interactiveElements.forEach(el => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 })
       const tabindex = el.getAttribute('tabindex');
       if (tabindex === '-1') {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
         this.addIssue({/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 
   type: 'interactive-not-focusable',
@@ -875,16 +875,16 @@ $4});
     // Check for divs/spans with onclick but no keyboard handler;
 const clickableNonInteractive = element.querySelectorAll('[onclick]:not(a):not(button)');
     clickableNonInteractive.forEach(el => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 })
       const role = el.getAttribute('role');
       const tabindex = el.getAttribute('tabindex');
       const onKeyDown = el.getAttribute('onkeydown');
       if (!role || !tabindex || !onKeyDown) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
         this.addIssue({/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 
   type: 'click-without-keyboard',
@@ -958,7 +958,7 @@ $4});
 //       '[role], [aria-label], [aria-labelledby], [aria-describedby]'
     );
     elementsWithAria.forEach(el => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 })
       const role = el.getAttribute('role');
       // Check for invalid ARIA roles;
@@ -984,10 +984,10 @@ const validRoles = [
 //         'note',
 //         'presentation'];
       if (role && !validRoles.includes(role)) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
         this.addIssue({/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 
   type: 'invalid-aria-role',
@@ -1014,14 +1014,14 @@ $4});
       // Check aria-labelledby references;
 const labelledBy = el.getAttribute('aria-labelledby');
       if (labelledBy) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
         const referencedElement = document.getElementById(labelledBy);
         if (!referencedElement) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
           this.addIssue({/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 
   type: 'aria-labelledby-missing',
@@ -1072,10 +1072,10 @@ $4});
 
     // const hasNav = element.querySelector('nav, [role="navigation"]');
     if (!hasMain) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       this.addIssue({/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 
   type: 'missing-main-landmark',
@@ -1181,7 +1181,7 @@ $4});
 
 }
     this.issues.push({/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   i)
   d: this.generateIssueId(),
@@ -1216,7 +1216,7 @@ $4});
 }
     if (this.issues.length === 0) return 100;
     const severityWeights = {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       [A11ySeverity.MINOR]: 1,
       [A11ySeverity.MODERATE]: 3,
@@ -1224,7 +1224,7 @@ $4});
       [A11ySeverity.CRITICAL]: 15;
     }
     const totalPenalty = this.issues.reduce((sum, issue) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       return sum + severityWeights[issue.severity];
     }, 0);
@@ -1272,7 +1272,7 @@ const score = Math.max(0, 100 - totalPenalty);
 
 }
     if (this.issues.length === 0) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       return 'No accessibility issues found. Great job!';
     }

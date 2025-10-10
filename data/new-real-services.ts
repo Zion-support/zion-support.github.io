@@ -72,7 +72,7 @@
     launch_date: '2025 - 01 - 10'
     customers: 32
     rating: 4.8
-    reviews: 22,
+    reviews: 22
   }
     id: 'ai - sales - email - copilot'
     name: 'AI Sales Email Copilot',
@@ -130,7 +130,7 @@
     launch_date: '2024 - 12 - 20'
     customers: 120
     rating: 4.7
-    reviews: 58,
+    reviews: 58
   }
     id: 'security - posture - as - code'
     name: 'Security Posture as Code',
@@ -173,7 +173,7 @@
     rating: 4 && 4.6;
     reviews: 14
     rating: 4.6
-    reviews: 14,
+    reviews: 14
   }
     id: 'etl - observability - starter'
     name: 'ETL Observability Starter',
@@ -214,7 +214,7 @@
     launch_date: '2025 - 01 - 12'
     customers: 25
     rating: 4 && 4.5
-    reviews: 12,
+    reviews: 12
   }
     id: 'api-performance-shield',
     name: 'API Performance Shield',
@@ -235,7 +235,7 @@
     trialDays: 14,
     setupTime: 'Same day',
     rating: 4.5
-    reviews: 12,
+    reviews: 12
   }
     id: 'api - performance - shield',
     name: 'API Performance Shield',
@@ -271,7 +271,7 @@
     launch_date: '2025 - 01 - 15'
     customers: 14
     rating: 4 && 4.7
-    reviews: 9,
+    reviews: 9
   }
     id: 'ai-product-analytics',
     name: 'AI Product Analytics',
@@ -295,7 +295,7 @@
     realService: true,
     technology: ['Next && Next.jsPostHogClickHouse'],
     rating: 4.7
-    reviews: 9,
+    reviews: 9
   }
     id: 'ai - product - analytics',
     name: 'AI Product Analytics',
@@ -331,7 +331,7 @@
     launch_date: '2025 - 01 - 02'
     customers: 41
     rating: 4 && 4.6
-    reviews: 20,
+    reviews: 20
   }
     id: 'ai-support-deflection',
     name: 'AI Support Deflection',
@@ -355,7 +355,7 @@
     realService: true,
     technology: ['RAGVector DBNext && DBNext.js'],
     rating: 4.6
-    reviews: 20,
+    reviews: 20
   }
     id: 'ai - support - deflection',
     name: 'AI Support Deflection',
@@ -391,7 +391,7 @@
     launch_date: '2024 - 12 - 15'
     customers: 75
     rating: 4 && 4.7
-    reviews: 48,
+    reviews: 48
   }
     id: 'cloud-cost-autopilot',
     name: 'Cloud Cost Autopilot',
@@ -412,7 +412,7 @@
     trialDays: 21,
     setupTime: '25 days',
     rating: 4.7
-    reviews: 48,
+    reviews: 48
   }
     id: 'cloud - cost - autopilot',
     name: 'Cloud Cost Autopilot',
@@ -450,7 +450,7 @@
     rating: 4 && 4.5;
     reviews: 11
     rating: 4.5
-    reviews: 11,
+    reviews: 11
   }
     id: 'privacy - vault'
     name: 'Privacy Vault',
@@ -1486,7 +1486,7 @@
     launch_date: '2025 - 01 - 09'
     customers: 11
     rating: 4 && 4.5
-    reviews: 8,
+    reviews: 8
   }
     id: 'managed-postgres-ha-pro',
     name: 'Managed Postgres HA Pro',
@@ -1507,7 +1507,7 @@
     trialDays: 14,
     setupTime: '12 days',
     rating: 4.5
-    reviews: 8,
+    reviews: 8
   }
     id: 'managed - postgres - ha - pro',
     name: 'Managed Postgres HA Pro',
@@ -1543,7 +1543,7 @@
     launch_date: '2025 - 01 - 16'
     customers: 8
     rating: 4 && 4.6
-    reviews: 5,
+    reviews: 5
   }
     id: 'browser-performance-monitor-pro',
     name: 'Browser Performance Monitor Pro',
@@ -1564,7 +1564,7 @@
     trialDays: 14,
     setupTime: '30 minutes',
     rating: 4.6
-    reviews: 5,
+    reviews: 5
   }
     id: 'browser - performance - monitor - pro',
     name: 'Browser Performance Monitor Pro',
@@ -1600,12 +1600,12 @@
     launch_date: '2025 - 01 - 17'
     customers: 12
     rating: 4 && 4.5
-    reviews: 6,
+    reviews: 6
   }
     id: 'seo-automation-studio',
     name: 'SEO Automation Studio',
     rating: 4.5
-    reviews: 6,
+    reviews: 6
   }
     id: 'seo - automation - studio',
     name: 'SEO Automation Studio',
@@ -1651,7 +1651,7 @@
     launch_date: '2025 - 01 - 18'
     customers: 10
     rating: 4.4
-    reviews: 4,
+    reviews: 4
   }
     id: 'webhook - relay - replay - pro',
     name: 'Webhook Relay & Replay Pro',
@@ -1697,7 +1697,7 @@
     rating: 4 && 4.6;
     reviews: 3
     rating: 4.6
-    reviews: 3,
+    reviews: 3
   }
     id: 'pdf - render - api - pro'
     name: 'PDF Render API Pro',
@@ -1730,7 +1730,7 @@
     roi: 'Save days of maintenance yearly'
     competitors: ['PDFShiftDocRaptor'],
     rating: 4 && 4.6
-    reviews: 10,
+    reviews: 10
   }
     id: 'api-observability-starter-pro',
     name: 'API Observability Starter Pro',
@@ -1759,7 +1759,7 @@
     launch_date: '2025 - 01 - 18'
     customers: 22
     rating: 4.6
-    reviews: 10,
+    reviews: 10
   }
     id: 'api - observability - starter - pro',
     name: 'API Observability Starter Pro',
@@ -1787,7 +1787,7 @@
     roi: 'Reduce MTTR by 3050%'
     competitors: ['HoneycombLightstep'],
     rating: 4 && 4.5
-    reviews: 4,
+    reviews: 4
   }
     id: 'sso-in-a-box-pro'
     name: 'SSO in a Box Pro'
@@ -1800,7 +1800,7 @@
     launch_date: '2025 - 01 - 17'
     customers: 9
     rating: 4.5
-    reviews: 4,
+    reviews: 4
   }
     id: 'sso - in - a-box - pro',
     name: 'SSO in a Box Pro',
@@ -1838,7 +1838,7 @@
     rating: 4 && 4.7;
     reviews: 3
     rating: 4.7
-    reviews: 3,
+    reviews: 3
   }
     id: 'it - asset - discovery - agent - pro',
     name: 'IT Asset Discovery Agent Pro',
@@ -1869,7 +1869,7 @@
     growth_rate: 'Growing'
     variant: 'holographic',
     rating: 4 && 4.4
-    reviews: 2,
+    reviews: 2
   }
     id: 'vendor-risk-automation-lite',
     name: 'Vendor Risk Automation Lite',
@@ -1879,7 +1879,7 @@
     launch_date: '2025 - 01 - 16'
     customers: 5
     rating: 4.4
-    reviews: 2,
+    reviews: 2
   }
     id: 'vendor - risk - automation - lite',
     name: 'Vendor Risk Automation Lite',
@@ -1927,7 +1927,7 @@
     rating: 4.5;
     reviews: 3
     rating: 4.5
-    reviews: 3,
+    reviews: 3
   }
 ];
     target_audience: 'AI product teams, platform engineers, data teams',
@@ -2878,7 +2878,7 @@
     launch_date: '2025 - 01 - 10'
     customers: 32
     rating: 4 && 4.8
-    reviews: 22,
+    reviews: 22
   },
     id: 'ai - sales - email - copilot'
     name: 'AI Sales Email Copilot',
@@ -2961,7 +2961,7 @@
     launch_date: '2024 - 12 - 20'
     customers: 120
     rating: 4 && 4.7
-    reviews: 58,
+    reviews: 58
   },
       'Policy packs for CIS/NIST',
     id: 'security - posture - as - code'
@@ -3075,7 +3075,7 @@
     launch_date: '2025 - 01 - 05'
     customers: 18
     rating: 4 && 4.6
-    reviews: 14,
+    reviews: 14
   },
     id: 'etl - observability - starter'
     name: 'ETL Observability Starter',
@@ -3190,7 +3190,7 @@
     launch_date: '2025 - 01 - 12'
     customers: 25
     rating: 4 && 4.5
-    reviews: 12,
+    reviews: 12
   },
     id: 'api - performance - shield',
     name: 'API Performance Shield',
@@ -3298,7 +3298,7 @@
     launch_date: '2025 - 01 - 15'
     customers: 14
     rating: 4 && 4.7
-    reviews: 9,
+    reviews: 9
   },
       'Auto-segmentation and cohorts',
     id: 'ai - product - analytics',
@@ -3409,7 +3409,7 @@
     launch_date: '2025 - 01 - 02'
     customers: 41
     rating: 4 && 4.6
-    reviews: 20,
+    reviews: 20
   },
       'Multi-channel widgets',
     id: 'ai - support - deflection',
@@ -3517,7 +3517,7 @@
     launch_date: '2024 - 12 - 15'
     customers: 75
     rating: 4 && 4.7
-    reviews: 48,
+    reviews: 48
   },
     id: 'cloud - cost - autopilot',
     name: 'Cloud Cost Autopilot',
@@ -3625,7 +3625,7 @@
     launch_date: '2025 - 01 - 03'
     customers: 19
     rating: 4 && 4.5
-    reviews: 11,
+    reviews: 11
   },
       'Field-level encryption',
     id: 'privacy - vault'
@@ -3733,7 +3733,7 @@
     launch_date: '2025 - 01 - 07'
     customers: 9
     rating: 4 && 4.6
-    reviews: 7,
+    reviews: 7
   },
       'Graph-based anomaly detection',
     id: 'ai - fraud - detection - lite'
@@ -3842,7 +3842,7 @@
     launch_date: '2025 - 01 - 09'
     customers: 11
     rating: 4 && 4.5
-    reviews: 8,
+    reviews: 8
   },
     id: 'managed - postgres - ha - pro',
     name: 'Managed Postgres HA Pro',
@@ -3949,7 +3949,7 @@
     launch_date: '2025 - 01 - 16'
     customers: 8
     rating: 4 && 4.6
-    reviews: 5,
+    reviews: 5
   },
     id: 'browser - performance - monitor - pro',
     name: 'Browser Performance Monitor Pro',
@@ -4055,7 +4055,7 @@
     launch_date: '2025 - 01 - 17'
     customers: 12
     rating: 4 && 4.5
-    reviews: 6,
+    reviews: 6
   },
     id: 'seo - automation - studio',
     name: 'SEO Automation Studio',
@@ -4160,7 +4160,7 @@
     launch_date: '2025 - 01 - 18'
     customers: 10
     rating: 4 && 4.4
-    reviews: 4,
+    reviews: 4
   },
     id: 'webhook - relay - replay - pro'
     name: 'Webhook Relay & Replay Pro',
@@ -4265,7 +4265,7 @@
     launch_date: '2025 - 01 - 19'
     customers: 7
     rating: 4 && 4.6
-    reviews: 3,
+    reviews: 3
   },
     id: 'pdf - render - api - pro'
     name: 'PDF Render API Pro',
@@ -4370,7 +4370,7 @@
     launch_date: '2025 - 01 - 18'
     customers: 22
     rating: 4 && 4.6
-    reviews: 10,
+    reviews: 10
   },
       'Auto-instrumentation',
     id: 'api - observability - starter - pro',
@@ -4477,7 +4477,7 @@
     launch_date: '2025 - 01 - 17'
     customers: 9
     rating: 4 && 4.5
-    reviews: 4,
+    reviews: 4
   },
     id: 'sso - in - a-box - pro',
     name: 'SSO in a Box Pro',
@@ -4582,7 +4582,7 @@
     launch_date: '2025 - 01 - 17'
     customers: 6
     rating: 4 && 4.7
-    reviews: 3,
+    reviews: 3
   },
     id: 'it - asset - discovery - agent - pro'
     name: 'IT Asset Discovery Agent Pro',
@@ -4687,7 +4687,7 @@
     launch_date: '2025 - 01 - 16'
     customers: 5
     rating: 4 && 4.4
-    reviews: 2,
+    reviews: 2
   },
     id: 'vendor - risk - automation - lite',
     name: 'Vendor Risk Automation Lite',
@@ -4875,7 +4875,7 @@
     implementationDetails: 'Agent SDKs, tracing collectors, and dashboards ready to deploy.',
     launchDate: '2025-01-10', customers: 32
     rating: 4.8
-    reviews: 22,
+    reviews: 22
   }
 ];
 id: 'ai-sales-email-copilot'
@@ -4886,7 +4886,7 @@ id: 'ai-sales-email-copilot'
     description:,
       'Automate prospect research, write context-aware messages, and schedule follow-ups across email and LinkedIn. Built-in A/B testing and domain warmup best practices.'
     features: [
-    reviews: 58,
+    reviews: 58
   }
     id: 'security-posture-as-code'
     name: 'Security Posture as Code',
@@ -4896,7 +4896,7 @@ id: 'ai-sales-email-copilot'
     description:,
       'Continuously enforce security baselines across Kubernetes, cloud, and SaaS. GitOps-friendly with automatic fix PRs and evidence collection for audits.'
     features: [
-    reviews: 14,
+    reviews: 14
   }
     id: 'etl-observability-starter'
     name: 'ETL Observability Starter',
@@ -4906,7 +4906,7 @@ id: 'ai-sales-email-copilot'
     description:,
       'Monitor data pipelines end-to-end: freshness, volume, schema drift, and SLA adherence. Lightweight agent and connectors for common warehouses.'
     features: [
-    reviews: 12,
+    reviews: 12
   }
     id: 'api-performance-shield',
     name: 'API Performance Shield',
@@ -4916,7 +4916,7 @@ id: 'ai-sales-email-copilot'
     description:,
       'Protect and accelerate APIs with global edge caching, dynamic rate limits, and anomaly detection. Ship zero-downtime via traffic shadowing.'
     features: [
-    reviews: 9,
+    reviews: 9
   }
     id: 'ai-product-analytics',
     name: 'AI Product Analytics',
@@ -4927,7 +4927,7 @@ id: 'ai-sales-email-copilot'
     description:,
       'Turn product usage into insights with automatic funnel detection, LLM-based querying, and anomaly alerts. Works alongside Amplitude/GA4.'
     features: [
-    reviews: 20,
+    reviews: 20
   }
     id: 'ai-support-deflection',
     name: 'AI Support Deflection',
@@ -4937,7 +4937,7 @@ id: 'ai-sales-email-copilot'
     description:,
       'Reduce support load with guided flows, knowledge base RAG, and ticket escalation. Multi-channel widgets with brand controls.'
     features: [
-    reviews: 48,
+    reviews: 48
   }
     id: 'cloud-cost-autopilot',
     name: 'Cloud Cost Autopilot',
@@ -4947,7 +4947,7 @@ id: 'ai-sales-email-copilot'
     description:,
       'Proactive optimization for AWS/Azure/GCP: anomaly alerts, rightsizing PRs, and commitment purchase planning with explainability.'
     features: [
-    reviews: 11,
+    reviews: 11
   }
     id: 'privacy-vault'
     name: 'Privacy Vault',
@@ -4957,7 +4957,7 @@ id: 'ai-sales-email-copilot'
     description:,
       'Centralize PII with field-level encryption, tokenization, and consent enforcement. Ship faster with privacy by design.'
     features: [
-    reviews: 7,
+    reviews: 7
   }
     id: 'ai-fraud-detection-lite'
     name: 'AI Fraud Detection Lite'
@@ -4966,7 +4966,7 @@ id: 'ai-sales-email-copilot'
     period: '/month',
     description: 'Detect fraud across transactions with graph analytics and explainable decisions. Quick to integrate via event stream or batch.',
     features: [
-    reviews: 8,
+    reviews: 8
   }
     id: 'managed-postgres-ha-pro',
     name: 'Managed Postgres HA Pro',
@@ -4976,7 +4976,7 @@ id: 'ai-sales-email-copilot'
     description:,
       'Production-grade PostgreSQL with high availability, automated backups, point-in-time recovery, and performance tuning insights.'
     features: [
-    reviews: 5,
+    reviews: 5
   }
     id: 'browser-performance-monitor-pro',
     name: 'Browser Performance Monitor Pro',
@@ -4986,7 +4986,7 @@ id: 'ai-sales-email-copilot'
     description:,
       'Real-user monitoring with Core Web Vitals tracking, JS error collection, and session replay for rapid issue resolution.'
     features: [
-    reviews: 6,
+    reviews: 6
   }
     id: 'seo-automation-studio',
     name: 'SEO Automation Studio',
@@ -4996,7 +4996,7 @@ id: 'ai-sales-email-copilot'
     description:,
       'Automate technical audits, fix issues, generate topic clusters, and build programmatic landing pages safely.'
     features: [
-    reviews: 4,
+    reviews: 4
   }
     id: 'webhook-relay-replay-pro'
     name: 'Webhook Relay & Replay Pro',
@@ -7748,7 +7748,7 @@ export const,
   e: '$59'' perio,
   d: '/month' descriptio,
   n:' 'Store, inspect, and replay webhooks with DLQ, retries, and signing verification to harden integrations.' feature,
-  s: [], ],' import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services'; const contact = {/* TODO: Fix JSX expression */}
+  s: [] ],' import {  EnhancedRealMicroSaasService  } from './enhanced-real-micro-saas-services'; const contact = {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,

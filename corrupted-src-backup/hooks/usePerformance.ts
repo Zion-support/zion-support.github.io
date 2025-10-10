@@ -17,8 +17,8 @@ export interface UsePerformanceOptions {/* TODO: Fix JSX expression */}
 /**
  * Hook for monitoring component performance;
  */
-export const usePerformance = (options: UsePerformanceOptions) => {,
-  const {,
+export const usePerformance = (options: UsePerformanceOptions) => {
+  const {
     componentName;
     trackRenderTime = true,
     trackMemoryUsage = false,
@@ -51,7 +51,7 @@ export const usePerformance = (option)
       //       const renderTime = performance.now() - renderStartTimeRef.current;
       //       const isSlowRender = renderTime>slowRenderThreshold</renderTime>
 
-      const metrics: PerformanceMetrics = {,
+      const metrics: PerformanceMetrics = {
         renderTime;
         componentMountTime: performance.now() - mountTimeRef.current,
         isSlowRender}

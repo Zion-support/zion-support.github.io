@@ -45,7 +45,7 @@ function ErrorFallback({ error, resetError }: ErrorFallbackProps) {
         </div>
       </div>
     </div>
-  ),
+  )
 }
 interface AppErrorBoundaryProps {
     children: ReactNode

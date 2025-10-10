@@ -1,4 +1,4 @@
-import {BarChart, TrendingUp, Target, Zap, Brain, CheckCircle, Phone, Mail, Star, Users, Award} from 'lucide-react';
+import { BarChart, TrendingUp, Target, Zap, Brain, CheckCircle, Phone, Mail, Star, Users, Award } from 'lucide-react';
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
@@ -19,7 +19,7 @@ const AIAnalyticsPage: React.FC = () => {
       icon: BarChart,
       title: 'Real-time Dashboards',
       description: 'Interactive dashboards that provide instant insights into your business performance',
-import { Link } from 'react-router-dom';
+import {  Link  } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const AIAnalyticsPage: React.FC = () => {
@@ -303,7 +303,7 @@ icon$5: Award,
                 Email Us
       <Footer />
     </React.Fragment>
-  ),
+  )
 }
 export default AIAnalyticsPage;
 {/* Use Cases */}
@@ -342,7 +342,7 @@ export default AIAnalyticsPage;
                         {feature}
                   <a
                     href="/contact" className={`w-full block text-center py-3 px-4 rounded-lg font-medium transition-all duration-300 ${}
-  // TODO: Add content,
+  // TODO: Add content
 }
 //                       tier.popular;
                         ? 'bg-cyan-400 text-slate-900,
@@ -378,7 +378,7 @@ export default AIAnalyticsPage;
                 Email Us
       <Footer />
     </div>
-  ),
+  )
 }
 export default AiAnalyticsPage;
   </div>

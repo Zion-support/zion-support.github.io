@@ -4,20 +4,20 @@
  * Real-time application monitoring, performance tracking, and error reporting;
  */;
 import React from 'react';
-import {performanceConfig}}from '../../performance.config';
+import {  performanceConfig  } from '../../performance.config';
 export interface PerformanceMetrics {lcp?: number;}
   fid?: number;
   cls?: number;
   fcp?: number;
   ttfb?: number;
   inp?: number;}}
-export interface ErrorReport {message: string,}
+export interface ErrorReport {message: string}
   stack?: string;
   component?: string;
   timestamp: number,
   userAgent: string,
-  url: string,}}
-class MonitoringService {}}private metrics: PerformanceMetrics = {,}private errors: ErrorReport[] = [],
+  url: string}}
+class MonitoringService {}}private metrics: PerformanceMetrics = {}private errors: ErrorReport[] = [],
   private observer: PerformanceObserver | null = null,
   constructor() {if (typeof window !== 'undefined') {
       this.initializeMonitoring()}}
@@ -39,7 +39,7 @@ class MonitoringService {}}private metrics: PerformanceMetrics = {,}private erro
         lcpObserver.observe({entryTypes: ['largest-contentful-paint'] ,)})
         // First Input Delay;
         const fidObserver = new PerformanceObserver((list) => {const entries = list.getEntries();
-          entries.forEach((entry: PerformanceEntry) => {,
+          entries.forEach((entry: PerformanceEntry) => {
             this.metrics.fid = (entry as any).processingStart - entry.startTime,
             this.reportMetric('fid', this.metrics.fid)}})
         })
@@ -48,7 +48,7 @@ class MonitoringService {}}private metrics: PerformanceMetrics = {,}private erro
         let clsValue = 0;
         const clsObserver = new PerformanceObserver(list => {)
     const entries = list.getEntries();
-          entries.forEach((entry: PerformanceEntry) => {,
+          entries.forEach((entry: PerformanceEntry) => {
             if (!(entry as any).hadRecentInput) {
     // Keep HEAD version;
               this.metrics.cls = clsValue,
@@ -89,17 +89,17 @@ class MonitoringService {}}private metrics: PerformanceMetrics = {,}private erro
         stack: event.error?.stack,
         timestamp: Date.now(),
         userAgent: navigator.userAgent,
-        url: window.location.href;,}})
+        url: window.location.href;}})
     })
     // Unhandled promise rejection handler;
-    window.addEventListener('unhandledrejection', (event) => {this.logError({)}message: `Unhandled Promise Rejection: ${event.reason,}`,;
+    window.addEventListener('unhandledrejection', (event) => {this.logError({)}message: `Unhandled Promise Rejection: ${event.reason}`,;
         timestamp: Date.now(),
         userAgent: navigator.userAgent,
-        url: window.location.href,
+        url: window.location.href
       })
     })
   }
-  private reportMetric(name: string, value: number): void {,}
+  private reportMetric(name: string, value: number): void {}
     // Sample rate,
     if (Math.random() > performanceConfig.monitoring.sampleRate) {
       return;}}
@@ -110,10 +110,10 @@ class MonitoringService {}}private metrics: PerformanceMetrics = {,}private erro
     if (typeof (window as any).gtag === 'function') {
       (window as any).gtag('event', name, {)
         value: Math.round(name === 'cls' ? value * 1000 : value),
-        event_category: 'Web Vitals',}})
+        event_category: 'Web Vitals'}})
     }
   }
-  public logError(error: ErrorReport): void {,}
+  public logError(error: ErrorReport): void {}
     this.errors.push(error)
     // Keep only last 50 errors,
     if (this.errors.length > 50) {
@@ -123,7 +123,7 @@ class MonitoringService {}}private metrics: PerformanceMetrics = {,}private erro
   public getMetrics(): PerformanceMetrics {}}return {...this.metrics}}}
   public getErrors(): ErrorReport[] {return [...this.errors]}}
   public clearErrors(): void {this.errors = []}}}
-  public measureMemory(): void {if ('memory' in performance && performanceConfig.monitoring.enableMemoryMonitoring) {}}const memory = (performance as Performance & {memory?: { usedJSHeapSize: number; totalJSHeapSize: number, jsHeapSizeLimit: number ,}}).memory;
+  public measureMemory(): void {if ('memory' in performance && performanceConfig.monitoring.enableMemoryMonitoring) {}}const memory = (performance as Performance & {memory?: { usedJSHeapSize: number; totalJSHeapSize: number, jsHeapSizeLimit: number }}).memory;
       if (memory) {// Keep HEAD version;}}
     }
   }

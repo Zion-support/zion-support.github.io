@@ -1,75 +1,104 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
+
 import fs from 'fs';
 import path from 'path';
+import { glob } from 'glob';
 
-//Mapping of broken imports to correct imports;
-const iconMappings = {
-  rrowleft: 'ArrowLeft'
-  alendar: 'Calendar'
-  ser: 'User'
-  lock: 'Clock'
-  ag: 'Tag'
-  rendingup: 'TrendingUp'
-  ollarsign: 'DollarSign'
-  sers: 'Users'
-  arget: 'Target'
-  rain: 'Brain'
-  ap: 'Zap'
-  hield: 'Shield'
-  rrowright: 'ArrowRight'
-  og: 'Log'
-  pu: 'Cpu'
-  lobe: 'Globe'
-  ocket: 'Rocket'
-  heckcircle: 'CheckCircle',
-  hare2: 'Share2',
-  ookmark: 'Bookmark',
-  ot: 'Bot',
-  ookopen: 'BookOpen'};
-
-//Function to fix imports in a file;
-function fixImportsInFile(filePath) {
-  try {
-    //Fix lucide-react imports;
-    for (const [broken, correct] of Object.entries(iconMappings)) {
-      //       const oldImport = `lucide-react/dist/esm/icons/${broken}`;
-const iconMappings = {/* TODO: Fix JSX expression */}
-};
-
-//Function to fix imports in a file;
-function fixImportsInFile(filePath) {/* TODO: Fix JSX expression */}
-      //       const oldImport = `lucide-react/dist/esm/icons/${broken}`;`
-      //       const newImport = `lucide-react`;
-
-      if (content.includes(oldImport)) {/* TODO: Fix JSX expression */}`
-          new RegExp(`import ${correct} from '${oldImport}';`, 'g'));
-        modified = true;
-      }
-    }
-
-    //Fix Link imports if missing;
-    if (content.includes('Link') && !content.includes("import Link from 'next/link'")) {
-      content = "import Link from 'next/link';\n" + content;
-      modified = true;
-    if (content.includes('Link') && !content.includes("import Link from 'next/link'")) {/* TODO: Fix JSX expression */}
-    }
-
-    if (modified) {/* TODO: Fix JSX expression */}
-      //       }
-  } catch (error) {/* TODO: Fix JSX expression */}
-    //     }
+// Function to fix import statements
+function fixImportStatements(content) {
+  // Fix }from -> } from
+  content = content.replace(/}from/g, '} from');
+  
+  // Fix }from -> } from (with spaces)
+  content = content.replace(/\s+}from/g, '} from');
+  
+  // Fix ,from -> , from
+  content = content.replace(/,from/g, ', from');
+  
+  // Fix const Component: React.FC = () => {, -> const Component: React.FC = () => {
+  content = content.replace(/= \(\) => \{,/g, '= () => {');
+  
+  // Fix extra semicolons after imports
+  content = content.replace(/from 'react-helmet-async';\s*;/g, "from 'react-helmet-async';");
+  content = content.replace(/from 'lucide-react';\s*;/g, "from 'lucide-react';");
+  content = content.replace(/from 'react';\s*;/g, "from 'react';");
+  
+  return content;
 }
 
-//Get all blog files;
-// const blogDir = '/workspace/app/blog';
-const files = fs;
-  .readdirSync(blogDir, { recursive: true })
-  .readdirSync(blogDir, {/* TODO: Fix JSX expression */})
-  e: true })
-  .filter(file => file.endsWith('.tsx'))
-  .map(file => path.join(blogDir, file));
+// Function to remove merge conflict markers
+function removeMergeConflicts(content) {
+  // Remove merge conflict markers
+  content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+  content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]+/g, '');
+  content = content.replace(/=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+  
+  return content;
+}
 
-// Process each file;
-files.forEach(fixImportsInFile);
+// Function to fix JSX syntax issues
+function fixJSXSyntax(content) {
+  // Fix missing closing tags - basic patterns
+  // This is a simplified fix, more complex cases need manual review
+  
+  // Fix common JSX issues
+  content = content.replace(/\{\s*,\s*\}/g, '{}');
+  content = content.replace(/\{\s*,\s*$/gm, '{');
+  
+  return content;
+}
 
-// "`
+// Main function to process files
+function processFile(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    const originalContent = content;
+    
+    // Apply fixes
+    content = fixImportStatements(content);
+    content = removeMergeConflicts(content);
+    content = fixJSXSyntax(content);
+    
+    // Only write if content changed
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed: ${filePath}`);
+      return true;
+    }
+    
+    return false;
+  } catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false;
+  }
+}
+
+// Find all TypeScript/JavaScript files
+async function main() {
+  const patterns = [
+    'app/**/*.tsx',
+    'app/**/*.ts',
+    '**/*.tsx',
+    '**/*.ts'
+  ];
+
+  let totalFiles = 0;
+  let fixedFiles = 0;
+
+  for (const pattern of patterns) {
+    const files = await glob(pattern, { 
+      ignore: ['node_modules/**', 'dist/**', '.next/**', 'build/**'] 
+    });
+    
+    for (const file of files) {
+      totalFiles++;
+      if (processFile(file)) {
+        fixedFiles++;
+      }
+    }
+  }
+
+  console.log(`\nProcessed ${totalFiles} files, fixed ${fixedFiles} files`);
+}
+
+main().catch(console.error);

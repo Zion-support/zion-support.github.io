@@ -5,7 +5,7 @@
 // Focus management utilities;
 export const focusManagement = {
   // Trap focus within an element;
-  trapFocus: (element: HTMLElement): (() => void) => {,
+  trapFocus: (element: HTMLElement): (() => void) => {
     const focusableElements = element.querySelectorAll()
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
     );
@@ -15,9 +15,9 @@ export const focusManagement = {
     ] as HTMLElement;
 
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Tab') {,
-        if (e.shiftKey) {,
-          if (document.activeElement === firstElement) {,
+      if (e.key === 'Tab') {
+        if (e.shiftKey) {
+          if (document.activeElement === firstElement) {
             lastElement.focus();
             e.preventDefault();
 export const focusManagement = {/* TODO: Fix JSX expression */}
@@ -37,14 +37,13 @@ export const focusManagement = {/* TODO: Fix JSX expression */}
 
   // Restore focus to previous element;
   restoreFocus: (element: HTMLElement): void => {
-    ,
     element.focus()
   },
 
   // Skip to main content;
   skipToMain: (): void => {
     const _mainElement = document.querySelector('main') as HTMLElement,
-    if (mainElement) {,
+    if (mainElement) {
       mainElement.focus();
       mainElement.scrollIntoView();
   // Restore focus to previous element,
@@ -60,7 +59,7 @@ export const focusManagement = {/* TODO: Fix JSX expression */}
 // ARIA utilities;
 export const ariaUtils = {
   // Generate unique IDs for ARIA relationships;
-  generateId: (prefix: string = 'aria'): string => {,
+  generateId: (prefix: string = 'aria'): string => {
 export const ariaUtils = {/* TODO: Fix JSX expression */}
     return `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
   },
@@ -89,7 +88,7 @@ export const keyboardNavigation = {
     event: KeyboardEvent
     items: HTMLElement[]
     currentIndex: number,
-    switch (event.key) {,
+    switch (event.key) {
       case isVertical ? 'ArrowDown' : 'ArrowRight':,
         event.preventDefault();
         return Math.min(currentIndex + 1, items.length - 1);
@@ -106,8 +105,8 @@ export const keyboardNavigation = {
   }
   },
   // Handle Enter and Space key activation;
-  handleActivation: (event: KeyboardEvent, callback: () => void): void => {,
-    if (event.key === 'Enter' || event.key === ' ') {,
+  handleActivation: (event: KeyboardEvent, callback: () => void): void => {
+    if (event.key === 'Enter' || event.key === ' ') {
       event.preventDefault();
       callback();
 export const keyboardNavigation = {/* TODO: Fix JSX expression */}
@@ -122,7 +121,7 @@ export const keyboardNavigation = {/* TODO: Fix JSX expression */}
 // Color contrast utilities;
 export const colorContrast = {
   // Calculate relative luminance;
-  getLuminance: (r: number, g: number, b: number): number => {,
+  getLuminance: (r: number, g: number, b: number): number => {
     const [rs, gs, bs] = [r, g, b].map(c => {)
       c = c / 255;)
       return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
@@ -137,26 +136,23 @@ export const colorContrast = {/* TODO: Fix JSX expression */}
 
   // Check if contrast meets WCAG standards;
   meetsWCAG: (contrastRatio: number, level: 'AA' | 'AAA' = 'AA'): boolean => {
-    ,
     return level === 'AA' ? contrastRatio >= 4.5 : contrastRatio >= 7
   }}
 // Motion and animation utilities;
 export const motionUtils = {
     // Check if user prefers reduced motion;
-  prefersReducedMotion: (): boolean => {,
+  prefersReducedMotion: (): boolean => {
     return window.matchMedia('(prefers-reduced-motion: reduce)').matches
   },
   // Apply reduced motion styles;
   applyReducedMotion: (element: HTMLElement): void => {
-    ,
-    if (motionUtils.prefersReducedMotion()) {,
+    if (motionUtils.prefersReducedMotion()) {
       element.style.animation = 'none';
       element.style.transition = 'none'
   }
   },
   // Respect user's motion preferences;
   conditionalAnimation: (animation: string, fallback: string = ''): string => {
-    ,
     return motionUtils.prefersReducedMotion() ? fallback : animation
   }}
 // Form accessibility utilities;
@@ -164,7 +160,7 @@ export const formAccessibility = {
   // Associate label with input;
   associateLabel: (
     input: HTMLInputElement,
-  ): HTMLLabelElement => {,
+  ): HTMLLabelElement => {
     const _label = document.createElement('label');
     label.textContent = labelText;
     label.setAttribute('for', input.id || formAccessibility.generateInputId());
@@ -195,7 +191,7 @@ export const formAccessibility = {/* TODO: Fix JSX expression */}
   },
 
   // Generate unique input ID;
-  generateInputId: (): string => {,
+  generateInputId: (): string => {
   // Generate unique input ID,
   generateInputId: (): string => {/* TODO: Fix JSX expression */}`
     return `input-${Math.random().toString(36).substr(2, 9)}`;
@@ -212,12 +208,11 @@ export const formAccessibility = {/* TODO: Fix JSX expression */}
 // Screen reader utilities;
 export const screenReaderUtils = {
     // Hide element from screen readers;
-  hideFromScreenReader: (element: HTMLElement): void => {,
+  hideFromScreenReader: (element: HTMLElement): void => {
     element.setAttribute('aria-hidden', 'true')
   },
   // Show element to screen readers;
   showToScreenReader: (element: HTMLElement): void => {
-    ,
     element.removeAttribute('aria-hidden')
   },
   // Create screen reader only text;
@@ -230,7 +225,7 @@ export const screenReaderUtils = {
 // Accessibility testing utilities;
 export const accessibilityTesting = {
     // Check for missing alt text on images;
-  checkImageAltText: (): {,
+  checkImageAltText: (): {
     missing: HTMLImageElement[],
     empty: HTMLImageElement[]
   } => {
@@ -268,7 +263,7 @@ export const accessibilityTesting = {/* TODO: Fix JSX expression */}
     const,
   structure: string[] = []
     let _previousLevel = 0,
-      if (index === 0 && level !== 1) {,
+      if (index === 0 && level !== 1) {
         issues.push('First heading should be h1');
       if (index === 0 && level !== 1) {/* TODO: Fix JSX expression */}
       }
@@ -277,11 +272,11 @@ export const accessibilityTesting = {/* TODO: Fix JSX expression */}
       previousLevel = level;
     });
   // Generate accessibility report;
-  generateReport: (): {,
+  generateReport: (): {
     images: { missing: number, empty: number }
     forms: { unlabeled: number }
     headings: { issues: string[], structure: string[] }
-    score: number,
+    score: number
   } => {
     const _imageCheck = accessibilityTesting.checkImageAltText();
     const _formCheck = accessibilityTesting.checkFormLabels();
@@ -293,7 +288,7 @@ export const accessibilityTesting = {/* TODO: Fix JSX expression */}
       headingCheck.issues.length;
 //     const score = Math.max(0, 100 - totalIssues * 10);
     return {
-      images: {,
+      images: {
         missing: imageCheck.missing.length,
         empty: imageCheck.empty.length
   },
@@ -309,7 +304,7 @@ export const accessibilityTesting = {/* TODO: Fix JSX expression */}
   s: {/* TODO: Fix JSX expression */}
   e: string[] }
     scor,
-  e: number,
+  e: number
   } => {/* TODO: Fix JSX expression */}
       },
       form,

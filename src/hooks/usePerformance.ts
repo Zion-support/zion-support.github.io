@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+import {  useState, useEffect, useCallback  } from 'react';
 
 interface PerformanceMetrics {
     loadTime: number
@@ -48,7 +48,7 @@ export const usePerformance = () => {
 
 'use client';
 interface PerformanceMetrics {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 
   loadTime: number,,
@@ -67,11 +67,11 @@ export const _usePerformance = () => {
           <PerformanceMetrics | null>(null);
   const [isMonitoring, setIsMonitoring] = useState(false);
   useEffect(() => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     if (typeof window === 'undefined' || !('performance' in window)) return;
     const measurePerformance = () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       const navigation = performance.getEntriesByType()
 //         'navigation'
@@ -89,16 +89,16 @@ export const _usePerformance = () => {
 
 }
         const observer = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 })
           for (const entry of list.getEntries()) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
             if ()
               entry.entryType === 'layout-shift' &&
               !(entry as unknown as {/* TODO: Fix JSX expression */})
   t: boolean }).hadRecentInput) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 
               cumulativeLayoutShift += (entry as unknown as { value: number }).value;
@@ -119,13 +119,13 @@ export const _usePerformance = () => {
 
 }
         const observer = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 })
           for (const entry of list.getEntries()) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
             if (entry.entryType === 'first-input') {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 
             if (entry.entryType === 'first-input') {
@@ -178,12 +178,12 @@ export const _usePerformance = () => {
     // Measure performance after page load;
     if (document.readyState === 'complete') {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       window.addEventListener('load', measurePerformance);
     }
     return () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       window.removeEventListener('load', measurePerformance);
     }

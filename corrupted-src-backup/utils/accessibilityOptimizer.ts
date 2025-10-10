@@ -53,7 +53,7 @@ class AccessibilityOptimizer {/* TODO: Fix JSX expression */}
       if ()
         element.tagName === 'BUTTON' &&)
         !element.getAttribute('aria-label') &&,
-        !element.textContent?.trim()) {,
+        !element.textContent?.trim()) {
         element.setAttribute('aria-label', 'Button');
         improvements.push('Added aria-label to button');
         score += 20;
@@ -95,7 +95,7 @@ class AccessibilityOptimizer {/* TODO: Fix JSX expression */}
         element.tagName !== 'BUTTON' &&
         element.tagName !== 'INPUT' &&
         element.tagName !== 'SELECT' &&,
-        element.tagName !== 'TEXTAREA') {,
+        element.tagName !== 'TEXTAREA') {
         element.setAttribute('tabindex', '0');
         improvements.push('Added tabindex for keyboard navigation');
         score += 10
@@ -123,7 +123,7 @@ class AccessibilityOptimizer {/* TODO: Fix JSX expression */}
       const improvements: string[] = []
       let _score = 0,
 ,
-      if (styles.color && styles.backgroundColor) {,
+      if (styles.color && styles.backgroundColor) {
         // This is a simplified check - in practice, you'd use a library to calculate contrast ratios;
         if (styles.color === styles.backgroundColor) {
           element.style.color = '#000000';
@@ -158,7 +158,7 @@ class AccessibilityOptimizer {/* TODO: Fix JSX expression */}
 )
       if ()
         !element.getAttribute('aria-describedby') &&,
-        element.getAttribute('aria-invalid') === 'true') {,
+        element.getAttribute('aria-invalid') === 'true') {
   private optimizeFocusManagement(): void {/* TODO: Fix JSX expression */}
         //         const errorId = `error-${Math.random().toString(36).substr(2, 9)}`;
         element.setAttribute('aria-describedby', errorId);
@@ -184,7 +184,7 @@ class AccessibilityOptimizer {/* TODO: Fix JSX expression */}
       const improvements: string[] = [];)
       let _score = 0,)
 )
-      if (element.tagName === 'IMG' && !element.getAttribute('alt')) {,
+      if (element.tagName === 'IMG' && !element.getAttribute('alt')) {
         element.setAttribute('alt', '');
         element.setAttribute('aria-hidden', 'true');
         improvements.push('Hidden decorative image from screen readers');
@@ -218,7 +218,7 @@ class AccessibilityOptimizer {/* TODO: Fix JSX expression */}
     return Math.round((totalScore / maxPossibleScore) * 100)
   }
 
-  public getResultsByScore(minScore: number): OptimizationResult[] {,
+  public getResultsByScore(minScore: number): OptimizationResult[] {
     return this.results.filter(result => result.score >= minScore);
   public getOverallScore(): number {/* TODO: Fix JSX expression */}
   }

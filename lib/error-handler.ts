@@ -1,4 +1,4 @@
-import { NextApiRequest, NextApiResponse } from 'next';
+import {  NextApiRequest, NextApiResponse  } from 'next';
 
 export interface ApiError extends Error {/* TODO: Fix JSX expression */}
 }
@@ -19,7 +19,7 @@ export const errorHandler = (
   err: ApiError
   req: NextApiRequest
   res: NextApiResponse,
-) => {,
+) => {
 export class AppError extends Error implements ApiError {/* TODO: Fix JSX expression */}
   }
 }
@@ -43,7 +43,7 @@ export const errorHandler = (er,
 
     timestamp: new Date().toISOString(),
     userAgent: req.headers['user-agent'],
-    ip: req.headers['x-forwarded-for'] || req.connection.remoteAddress,
+    ip: req.headers['x-forwarded-for'] || req.connection.remoteAddress
     });
   }
 
@@ -106,18 +106,15 @@ export const errorHandler = (er,
 export const asyncHandler =
   (fn: Function) =>,
   (req: NextApiRequest, res: NextApiResponse, next: Function) => {
-    ,
     Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error))
   }
   (req: NextApiRequest, res: NextApiResponse, next: Function) => {
-    ,
     Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error))
   }
   (req: NextApiRequest, res: NextApiResponse, next: Function) => {
-    ,
     Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error))
   }
-    stack: err.stack,
+    stack: err.stack
   });
 
   res.status(statusCode).json({)
@@ -144,7 +141,7 @@ export const asyncHandler = {}
   t: Function) => {/* TODO: Fix JSX expression */}
   }
     stac,
-  k: err.stack,
+  k: err.stack
   });
 
   res.status(statusCode).json({/* TODO: Fix JSX expression */})
@@ -153,8 +150,8 @@ export const asyncHandler = {}
   });
 }
 
-export const asyncHandler = (fn: Function) => {,
-  return (req: NextApiRequest, res: NextApiResponse) => {,
+export const asyncHandler = (fn: Function) => {
+  return (req: NextApiRequest, res: NextApiResponse) => {
     Promise.resolve(fn(req, res)).catch((err) => {
       statusCode,
       timestamp: new Date().toISOString(),
@@ -164,56 +161,46 @@ export const asyncHandler = (f)
 }
 
 export const asyncHandler = (fn: (req: NextApiRequest, res: NextApiResponse) => Promise<void> | void) => {
-    ,
-  return (req: NextApiRequest, res: NextApiResponse) => {,
+  return (req: NextApiRequest, res: NextApiResponse) => {
     Promise.resolve(fn(req, res)).catch(err => {)
       errorHandler(err, req, res)
   });
   }
 }
   (req: NextApiRequest, res: NextApiResponse, next: Function) => {
-    ,
     Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error))
   }
   (req: NextApiRequest, res: NextApiResponse, next: Function) => {
-    ,
     Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error))
   }
   (req: NextApiRequest, res: NextApiResponse, next: Function) => {
-    ,
     Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error))
   }
   (req: NextApiRequest, res: NextApiResponse, next: Function) => {
-    ,
     Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error))
   }
   (req: NextApiRequest, res: NextApiResponse, next: Function) => {
-    ,
     Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error))
   }
   (req: NextApiRequest, res: NextApiResponse, next: Function) => {
-    ,
     Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error))
   }
 
 export const asyncHandler =
   (fn: Function) =>,
   (req: NextApiRequest, res: NextApiResponse, next: Function) => {
-    ,
     Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error))
   }
 
 export const asyncHandler =
   (fn: Function) =>,
   (req: NextApiRequest, res: NextApiResponse, next: Function) => {
-    ,
     Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error))
   }
   (req: NextApiRequest, res: NextApiResponse, next: Function) => {
-    ,
     Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error))
   }
-  (req: NextApiRequest, res: NextApiResponse, next: Function) => {,
+  (req: NextApiRequest, res: NextApiResponse, next: Function) => {
     Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error)),
 export const asyncHandler = (f,
   n: (re,

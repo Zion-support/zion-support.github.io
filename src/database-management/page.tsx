@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Database, Shield, Zap, ArrowRight, CheckCircle, Star, Users, Clock, Settings, TrendingUp } from 'lucide-react';
+import {  Database, Shield, Zap, ArrowRight, CheckCircle, Star, Users, Clock, Settings, TrendingUp  } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const DatabaseManagementPage: React.FC = () => {

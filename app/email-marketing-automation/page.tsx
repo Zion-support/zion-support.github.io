@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {Mail,}
+import {  Helmet  } from 'react-helmet-async';
+import {Mail}
   Target,
   CheckCircle,
   BarChart,
@@ -23,22 +23,22 @@ import {Mail,}
 
   Send,
 
-  PieChart;}} from 'lucide-react'
-const EmailMarketingAutomationPage: React.FC = () => {,
+  PieChart;} from 'lucide-react'
+const EmailMarketingAutomationPage: React.FC = () => {
     const features = [
     {
       icon: Mail,
       title: 'Automated Campaigns',
-      description: 'Create and manage sophisticated email marketing campaigns with AI-powered automation.',},
+      description: 'Create and manage sophisticated email marketing campaigns with AI-powered automation.'},
     {icon: Target,
       title: 'Advanced Segmentation',
-      description: 'Intelligent audience segmentation and personalization for maximum engagement and conversion.',},
+      description: 'Intelligent audience segmentation and personalization for maximum engagement and conversion.'},
     {icon: BarChart,
       title: 'Analytics & Insights',
-      description: 'Comprehensive analytics and reporting to track performance and optimize your campaigns.',},
+      description: 'Comprehensive analytics and reporting to track performance and optimize your campaigns.'},
     {icon: Zap,
       title: 'Smart Triggers',
-      description: 'Behavior-based triggers and workflows to send the right message at the right time.',}}
+      description: 'Behavior-based triggers and workflows to send the right message at the right time.'}}
   ]
 const benefits = [
     'Increase email engagement rates',
@@ -54,7 +54,8 @@ const benefits = [
 
     'Save time and resources'
   ]
-return(<>)
+return (
+    <>
       <Helmet />
         <title>Email Marketing Automation - Zion Tech Group | Marketing Platform</title>
         <meta name="description" content="AI-powered solution" />
@@ -76,8 +77,7 @@ return(<>)
               <p>Transform your email marketing with our AI-powered automation platform.;</p>
                 Create engaging campaigns, automate workflows, and drive better results.
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
-                <button>
+              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div><button>
                   <Mail>
                   Start Free Trial;
                 </button>
@@ -106,8 +106,7 @@ return(<>)
             </div>
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>,
               {features.map((feature, index) => (
-                <div key={index}className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-300"></div>,
-                  <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"></div>
+                <div key={index}className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-300"></div><div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"></div>
                     <feature />
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description</p>}</p>
@@ -150,13 +149,11 @@ return(<>)
           </div>
         </section>
           <div className="max-w-4xl mx-auto text-center"></div>
-            <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md: p-12"></div>,
-              <h2>Ready to Automate Your Marketing?</h2>
+            <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md: p-12"></div><h2>Ready to Automate Your Marketing?</h2>
               </h2>
               <p>Start your free trial today and transform your email marketing with automation.</p>
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
-                <button>
+              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div><button>
                   <Phone>
                   Call (302) 464-0950;
                 </button>
@@ -170,7 +167,7 @@ return(<>)
         </section>
       </div>
     </>
-  ),
+  )
 };
 
 export default EmailMarketingAutomationPage;

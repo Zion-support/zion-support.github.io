@@ -35,7 +35,7 @@ export interface PerformanceReport {
     memor,
   y: MemoryStats | null,,
     timestam,
-  p: number,
+  p: number
 }
 /**
  * Resource Statistics Interface;
@@ -109,7 +109,7 @@ export interface PerformanceWithMemory extends Performance {
 }
   memor,
   y: {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 
   usedJSHeapSize: number,,

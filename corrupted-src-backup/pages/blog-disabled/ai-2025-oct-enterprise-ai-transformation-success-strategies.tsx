@@ -682,7 +682,7 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
                   </Link>"
                   <Link to="/services"></Link>"
   className= " />
-  ),
+  )
 }
 export default EnterpriseAITransformationSuccessStrategies;;
   </div>

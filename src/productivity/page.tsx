@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import {  Link  } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, Star } from 'lucide-react';
+import {  CheckCircle, Star  } from 'lucide-react';
 const ProductivityPage: React.FC = () => {
   return (
     <div>
@@ -86,7 +86,7 @@ className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 round
             >Call (302) 464-0950</a>
       </main>
       <Footer /></Footer>
-</div>),
+</div>)
 }
 export default ProductivityPage;
   </section>

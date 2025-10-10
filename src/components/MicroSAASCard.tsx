@@ -1,11 +1,11 @@
 import React from 'react';
 'use client';
 interface MicroSAASCardProps {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   servic,
   e: {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   titl,
   e: string,
@@ -27,7 +27,7 @@ interface MicroSAASCardProps {/* TODO: Fix JSX expression */}
     contactInf,
   o: string
     link?: string
-    popular?: boolean,
+    popular?: boolean
   }
 }
 const MicroSAASCard: React.FC,

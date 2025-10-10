@@ -1,8 +1,8 @@
 const errorHandler = {
-  setReportingEnabled: (enabled: boolean) => {,
+  setReportingEnabled: (enabled: boolean) => {
     //     },
 
-  handleError: (error: unknown) => {,
+  handleError: (error: unknown) => {
 const errorHandler = {/* TODO: Fix JSX expression */}
     //     },
 

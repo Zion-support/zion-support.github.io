@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {BarChart,}
+import {  Helmet  } from 'react-helmet-async';
+import {BarChart}
   TrendingUp,
   Database,
   CheckCircle,
@@ -24,8 +24,8 @@ import {BarChart,}
 
   PieChart,
 
-  LineChart;}} from 'lucide-react'
-const DataAnalyticsPage: React.FC = () => {,
+  LineChart;} from 'lucide-react'
+const DataAnalyticsPage: React.FC = () => {
     const features = [
     {
       icon: BarChart,
@@ -33,13 +33,13 @@ const DataAnalyticsPage: React.FC = () => {,
       description: 'Transform complex data into clear, actionable insights with interactive dashboards and reports.'},
     {icon: Brain,
       title: 'AI-Powered Analytics',
-      description: 'Leverage machine learning and artificial intelligence to uncover hidden patterns and trends.',},
+      description: 'Leverage machine learning and artificial intelligence to uncover hidden patterns and trends.'},
     {icon: Database,
       title: 'Data Integration',
-      description: 'Connect and analyze data from multiple sources to get a complete picture of your business.',},
+      description: 'Connect and analyze data from multiple sources to get a complete picture of your business.'},
     {icon: TrendingUp,
       title: 'Predictive Analytics',
-      description: 'Forecast future trends and make data-driven decisions with predictive modeling.',}}
+      description: 'Forecast future trends and make data-driven decisions with predictive modeling.'}}
   ]
 const benefits = [
     'Make data-driven business decisions',
@@ -55,7 +55,8 @@ const benefits = [
 
     'Custom analytics solutions'
   ]
-return(<>)
+return (
+    <>
       <Helmet />
         <title>Data Analytics Services - Zion Tech Group | Business Intelligence</title>
         <meta name="description" content="AI-powered solution" />
@@ -77,8 +78,7 @@ return(<>)
               <p>Transform your data into actionable insights with our advanced analytics solutions.;</p>
                 Make smarter decisions and drive business growth with AI-powered data analysis.
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
-                <button>
+              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div><button>
                   <BarChart>
                   Get Analytics Now;
                 </button>
@@ -107,8 +107,7 @@ return(<>)
             </div>
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>,
               {features.map((feature, index) => (
-                <div key={index}className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-300"></div>,
-                  <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"></div>
+                <div key={index}className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-300"></div><div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"></div>
                     <feature />
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description</p>}</p>
@@ -151,13 +150,11 @@ return(<>)
           </div>
         </section>
           <div className="max-w-4xl mx-auto text-center"></div>
-            <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md: p-12"></div>,
-              <h2>Ready to Unlock Your Data?</h2>
+            <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md: p-12"></div><h2>Ready to Unlock Your Data?</h2>
               </h2>
               <p>Contact our analytics experts to discuss your data needs and get a customized solution.</p>
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
-                <button>
+              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div><button>
                   <Phone>
                   Call (302) 464-0950;
                 </button>
@@ -171,7 +168,7 @@ return(<>)
         </section>
       </div>
     </>
-  ),
+  )
 };
 
 export default DataAnalyticsPage;

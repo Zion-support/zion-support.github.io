@@ -96,15 +96,15 @@ interface AppErrorBoundaryProps {/* TODO: Fix JSX expression */}
 interface AppErrorBoundaryState {/* TODO: Fix JSX expression */}
 }
 export class AppErrorBoundary extends Component<AppErrorBoundaryProps, AppErrorBoundaryState> {
-  constructor(props: AppErrorBoundaryProps) {,
+  constructor(props: AppErrorBoundaryProps) {
     super(props);
     this.state = { hasError: false, error: undefined };
   }
-  static getDerivedStateFromError(error: Error): AppErrorBoundaryState {,
+  static getDerivedStateFromError(error: Error): AppErrorBoundaryState {
     return { hasError: true, error };
   }
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {,
-    if (process.env['NODE_ENV'] === 'development') {,
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    if (process.env['NODE_ENV'] === 'development') {
       // console.error('Error caught by boundary:', error, errorInfo);
 export class AppErrorBoundary extends Component<AppErrorBoundaryProps, AppErrorBoundaryState> {/* TODO: Fix JSX expression */}
   r: undefined };

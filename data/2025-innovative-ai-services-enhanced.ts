@@ -106,7 +106,7 @@
     launch_date: '2024 - 03 - 25'
     customers: 156
     rating: 4 && 4.8
-    reviews: 89,
+    reviews: 89
   }];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -138,7 +138,7 @@ export interface InnovativeAIService2025 {id: string, name: string,
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number
   rating: number
-  reviews: number,
+  reviews: number
 }
 export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [,
   // AI Consciousness & Emotional Intelligence;
@@ -171,7 +171,7 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [,
     implementationDetails: 'Advanced AI consciousness development platform with research tools, monitoring systems, and evolutionary learning capabilities.',
     launchDate: '2024-12-01', customers: 12
     rating: 4.9
-    reviews: 8,
+    reviews: 8
   }
   // AI Autonomous Ecosystem Platform;
     id: 'ai-autonomous-ecosystem', name: 'AI Autonomous Ecosystem Platform',
@@ -202,7 +202,7 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [,
     implementationDetails: 'Autonomous AI ecosystem platform with self-management capabilities, evolutionary algorithms, and comprehensive monitoring tools.',
     launchDate: '2024-11-15', customers: 28
     rating: 4.8
-    reviews: 19,
+    reviews: 19
   }
   // AI Ethics & Governance Platform;
     id: 'ai-ethics-governance', name: 'AI Ethics & Governance Platform',
@@ -232,7 +232,7 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [,
     implementationDetails: 'Comprehensive AI ethics and governance platform with automated monitoring, bias detection, and compliance management tools.',
     launchDate: '2024-10-20', customers: 45
     rating: 4.7
-    reviews: 31,
+    reviews: 31
   }
   // AI Creativity Studio Platform;
     id: 'ai-creativity-studio', name: 'AI Creativity Studio Platform',
@@ -262,7 +262,7 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [,
     implementationDetails: 'AI-powered creativity platform with advanced generation models, collaborative tools, and comprehensive creative workflow management.',
     launchDate: '2024-09-15', customers: 156
     rating: 4.8
-    reviews: 89,
+    reviews: 89
   }
   // AI Education Platform;
     id: 'ai-education-platform', name: 'AI Education Platform',
@@ -319,7 +319,7 @@ export interface InnovativeAIService2025 {
   marketSize: string
   growthRate: string
   variant: string,
-  contactInfo: {,
+  contactInfo: {
     mobile: string
     email: string,
     address: string}
@@ -784,7 +784,7 @@ export const,
     launchDate: '2024-12-01';
     customers: 12
     rating: 4.9
-    reviews: 8,
+    reviews: 8
   }
   // AI Autonomous Ecosystem Platform;
   {
@@ -827,7 +827,7 @@ export const,
     launchDate: '2024-11-15';
     customers: 28
     rating: 4.8
-    reviews: 19,
+    reviews: 19
   }
   // AI Ethics & Governance Platform;
   {
@@ -870,7 +870,7 @@ export const,
     launchDate: '2024-10-20';
     customers: 45
     rating: 4.7
-    reviews: 31,
+    reviews: 31
   }
   // AI Creativity Studio Platform;
   {
@@ -913,7 +913,7 @@ export const,
     launchDate: '2024-09-15';
     customers: 156
     rating: 4.8
-    reviews: 89,
+    reviews: 89
   }
   // AI Education Platform;
   {
@@ -956,7 +956,7 @@ export const,
     launchDate: '2024-03-25';
     customers: 156
     rating: 4.8
-    reviews: 89,
+    reviews: 89
   }
 ];
 rating: 4.8
@@ -996,7 +996,7 @@ export interface InnovativeAIService2025 {
   marketSize: string
   growthRate: string
   variant: string,
-  contactInfo: {,
+  contactInfo: {
     mobile: string
     email: string,
     address: string}
@@ -1224,7 +1224,7 @@ export const,
     launchDate: '2024-12-01';
     customers: 12
     rating: 4.9
-    reviews: 8,
+    reviews: 8
   }
   // AI Autonomous Ecosystem Platform;
   {
@@ -1267,7 +1267,7 @@ export const,
     launchDate: '2024-11-15';
     customers: 28
     rating: 4.8
-    reviews: 19,
+    reviews: 19
   }
   // AI Ethics & Governance Platform;
   {
@@ -1310,7 +1310,7 @@ export const,
     launchDate: '2024-10-20';
     customers: 45
     rating: 4.7
-    reviews: 31,
+    reviews: 31
   }
   // AI Creativity Studio Platform;
   {
@@ -1353,7 +1353,7 @@ export const,
     launchDate: '2024-09-15';
     customers: 156
     rating: 4.8
-    reviews: 89,
+    reviews: 89
   }
   // AI Education Platform;
   {
@@ -1814,7 +1814,7 @@ i,
   e: '2024-03-25', customer,
   s: 156, ratin,
   g: 4.8, review,
-  s: 89, ' import { ServiceVariant } from '../types/service-variants'; export interface InnovativeAIService2025 {/* TODO: Fix JSX expression */}
+  s: 89, ' import {  ServiceVariant  } from '../types/service-variants'; export interface InnovativeAIService2025 {/* TODO: Fix JSX expression */}
   s: string} websit,
   e: string} } realImplementatio,
   n: boolean, implementationDetail,
@@ -1884,7 +1884,7 @@ i,
   n: true,' implementationDetail,
   s: 'AI-powered education platform with personalized learning algorithms and adaptive curriculum generation.'' launchDat,
   e: '2024-03-25' customer,
-  s: 156, ' import { ServiceVariant } from '../types/service-variants'; export interface InnovativeAIService2025 {/* TODO: Fix JSX expression */}
+  s: 156, ' import {  ServiceVariant  } from '../types/service-variants'; export interface InnovativeAIService2025 {/* TODO: Fix JSX expression */}
   s: string} websit,
   e: string} } realImplementatio,
   n: boolean, implementationDetail,

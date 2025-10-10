@@ -1,8 +1,8 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import {  Helmet  } from 'react-helmet-async';
 interface SEOProps {/* TODO: Fix JSX expression */}
 }
-const SEO: React.FC<SEOProps> = ({,
+const SEO: React.FC<SEOProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of advanced AI solutions, enterprise automation, and cutting-edge technology services. Transform your business with our innovative AI-powered solutions.',
   keywords = 'AI solutions, enterprise automation, artificial intelligence, machine learning, business transformation, technology consulting',

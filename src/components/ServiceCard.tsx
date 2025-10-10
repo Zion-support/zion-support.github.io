@@ -1,6 +1,6 @@
 'use client';
 import React, { memo } from 'react';
-import { LucideIcon, ArrowRight } from 'lucide-react';
+import {  LucideIcon, ArrowRight  } from 'lucide-react';
 interface ServiceCardProps {/* TODO: Fix JSX expression */}
 }
 const,

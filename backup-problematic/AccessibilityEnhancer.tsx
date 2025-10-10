@@ -6,7 +6,7 @@ interface AccessibilityEnhancerProps {/* TODO: Fix JSX expression */}
  * Accessibility Enhancer Component;
  * Provides comprehensive accessibility improvements;
  */
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({,
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
  children;
  enableSkipLinks = true,
  enableKeyboardNav = true,
@@ -32,7 +32,7 @@ const,
  const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
  setIsReducedMotion(mediaQuery.matches);
 ,
- const handleChange = (e: MediaQueryListEvent) => {,
+ const handleChange = (e: MediaQueryListEvent) => {
  setIsReducedMotion(e.matches);
  useEffect(() => {/* TODO: Fix JSX expression */}
  };
@@ -43,7 +43,7 @@ const,
  childList: true),
  subtree: true)});
  }
- const handleContrastChange = (e: MediaQueryListEvent) => {,
+ const handleContrastChange = (e: MediaQueryListEvent) => {
  setIsHighContrast(e.matches);
  if (titleElement) {/* TODO: Fix JSX expression */}
  });
@@ -57,7 +57,7 @@ const,
  const rootFontSize = parseFloat(computedStyle.fontSize);
  setFontSize(rootFontSize);
 ,
- return () => {,
+ return () => {
  mediaQuery.removeEventListener('change', handleChange);
  highContrastQuery.removeEventListener('change', handleContrastChange);
  const fontSizeQuery = window.matchMedia('(min-widt)
@@ -77,7 +77,7 @@ const,
  if (e.altKey && e.key === 'm') {
  e.preventDefault();
  const _main = document.querySelector('main');
- if (main) {,
+ if (main) {
  (main as HTMLElement).focus();
  (main as HTMLElement).scrollIntoView({ behavior: 'smooth' });
  useEffect(() => {/* TODO: Fix JSX expression */}
@@ -127,7 +127,7 @@ const,
  target.classList.add('keyboard-focus');
  }
  }, []);
- const handleFocusOut = useCallback((event: FocusEvent) => {,
+ const handleFocusOut = useCallback((event: FocusEvent) => {
  const target = event.target as HTMLElement;
  target.classList.remove('keyboard-focus');
  }, []);
@@ -166,12 +166,12 @@ const,
  /* Skip link styles */
  .skip-link {/* TODO: Fix JSX expression */}
  }
- .skip-link: focus {,
+ .skip-link: focus {
  top: 0;
  }
  /* High contrast mode support */
- @media (prefers-contrast: high) {,
- * {,
+ @media (prefers-contrast: high) {
+ * {
  border-width: 2px !important;
  .skip-lin,
   k:focus {/* TODO: Fix JSX expression */}
@@ -182,7 +182,7 @@ const,
  }
  }
  /* Reduced motion support */
- @media (prefers-reduced-motion: reduce) {,
+ @media (prefers-reduced-motion: reduce) {
  *,
  *::before,
  *::after {
@@ -195,7 +195,7 @@ const,
  }
  }
  /* Focus visible polyfill */
- *:focus: not(:focus-visible) {,
+ *:focus: not(:focus-visible) {
  outline: none;
  *:focu,
   s:not(:focus-visible) {/* TODO: Fix JSX expression */}
@@ -208,7 +208,7 @@ const,
  };
  }, [handleFocusIn, handleFocusOut]);
  // Screen reader announcements;
- const announceToScreenReader = useCallback((message: string) => {,
+ const announceToScreenReader = useCallback((message: string) => {
  const announcement = document.createElement('div');
  announcement.setAttribute('aria-live', 'polite');
  announcement.setAttribute('aria-atomic', 'true');

@@ -5,7 +5,7 @@ import React from 'react'
  * useForm Hook;
  * Provides form state management and validation;
  */
-// import { logger } from '../utils/logger';
+// import {  logger  } from '../utils/logger';
 
 import {
     // TODO: Add content
@@ -21,7 +21,7 @@ import {
 } from '../utils/formValidation';
 export interface UseFormConfig;
           <T extends Record<string, unknown>> {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   initialValue,
   s: T
@@ -31,10 +31,10 @@ export interface UseFormConfig;
   t: (value)
   s: T) => void | Promise<void>
   validateOnChange?: boolean
-  validateOnBlur?: boolean,
+  validateOnBlur?: boolean
 }
 export interface UseFormReturn<T extends Record<string, unknown>> {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   value,
   s: T,,
@@ -63,7 +63,7 @@ export function useForm<T extends Record<string, unknown>>({
   t: _onSubmit, validateOnChange = true, validateOnBlur = true;
 }: UseFormConfig;)
           <T>): UseFormReturn<T> {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   const [values, setValues] = useState;
           <T>(initialValues);
@@ -74,14 +74,14 @@ export function useForm<T extends Record<string, unknown>>({
 const validateSingleField = useCallback()
     (fiel)
   d: keyof T): void => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       if (!validationSchema[field]) return;
       const fieldValue = values[field];
       const rules = validationSchema[field];
       const result = validateField(fieldValue, rules);
       setErrors(prev => ({/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 //         ...prev,
         [field]: result.errors;)
@@ -91,7 +91,7 @@ const validateSingleField = useCallback()
   );
   // Validate all fields;
 const validateAllFields = useCallback((): boolean => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     if (Object.keys(validationSchema).length === 0) return true;
     const validationResults = validateForm(values, validationSchema as Record;)
@@ -104,7 +104,7 @@ const validateAllFields = useCallback((): boolean => {/* TODO: Fix JSX expressio
 const handleChange = useCallback()
     (e: ChangeEvent,)
           <HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       const { name, value, type } = e.target;
       const fieldName = name as keyof T;
@@ -112,7 +112,7 @@ const handleChange = useCallback()
 let,
   fieldValue: unknown = value,
       if (type === 'checkbox' && 'checked' in e.target) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
         fieldValue = (e.target as HTMLInputElement).checked;
       setValues(prev => ({
@@ -120,7 +120,7 @@ let,
   }
       // Validate on change if enabled;)
       if (validateOnChange && touched[fieldName]) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
         setTimeout(() => validateSingleField(fieldName), 0);
     [validateOnChange, touched, validateSingleField]
@@ -134,7 +134,7 @@ let,
   }
       // Validate on blur if enabled;)
       if (validateOnBlur) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
         validateSingleField(fieldName);
 [validateOnBlur, validateSingleField]
@@ -150,7 +150,7 @@ let,
       e.preventDefault();
       // Mark all fields as touched;
 const allTouched = Object.keys(values).reduce((acc, key) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
         acc[key as keyof T] = true;
         return acc;
@@ -175,7 +175,7 @@ const allTouched = Object.keys(values).reduce((acc, key) => {/* TODO: Fix JSX ex
   e: T[keyof T]) => {[field]: value
   }
     if (validateOnChange && touched[field]) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       setTimeout(() => validateSingleField(field), 0);
   }, [validateOnChange, touched, validateSingleField]);

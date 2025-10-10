@@ -6,7 +6,7 @@
   y: \'string]: string | number | boolean | File\'} ; interface ComponentProps {; className?: string} children?: React.ReactNode [ke,
   y: \'string]: unknown\'} ; const,
   PerformanceMonitor: React.F,
-  C: = () => {, useEffect(() => {} i,"
+  C: = () => { useEffect(() => {} i,"
   f: (typeof window = == \"undefined\") return}const,
   metrics: PerformanceMetric,
   s: = {} ; const fcpObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}"
@@ -81,7 +81,7 @@
   y: "string]: string | number | boolean | File"} ; interface ComponentProps {; className?: string} children?: React.ReactNode [ke,"
   y: "string]: unknown"} ; const,
   PerformanceMonitor: React.F,
-  C: = () => {, useEffect(() => {} i,"
+  C: = () => { useEffect(() => {} i,"
   f: (typeof window = == "undefined") return}const,
   metrics: PerformanceMetric,
   s: = {} ; const fcpObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}"
@@ -156,7 +156,7 @@
   y: 'string]: string | number | boolean | File'} ; interface ComponentProps {; className?: string} children?: _React.ReactNode [ke,
   y: 'string]: unknown'} ; const,
   PerformanceMonitor: _React.F,
-  C: = () => {, useEffect(() => {} i,"
+  C: = () => { useEffect(() => {} i,"
   f: (typeof window = == "undefined") return}const,
   metrics: PerformanceMetric,
   s: = {} ; const fcpObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}"

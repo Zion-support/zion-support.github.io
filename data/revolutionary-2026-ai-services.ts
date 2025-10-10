@@ -11,7 +11,7 @@
   contactInfo: unknown
     mobile: string
     email: string,
-export interface Revolutionary2026AiService {,
+export interface Revolutionary2026AiService {
     address: string}
   i,
   d: string,
@@ -75,7 +75,7 @@ export interface Revolutionary2026AiService {/* TODO: Fix JSX expression */}
   realImplementation: boolean
   contactInfo: unknown,
     mobile: string, email: string
-    address: string,
+    address: string
   }
 }
 export const revolutionary2026 AIServices: Revolutionary2026 AiService[] = [,

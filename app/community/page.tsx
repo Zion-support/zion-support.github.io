@@ -1,73 +1,73 @@
 'use client';
-import React, {useState}from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {Users, MessageCircle, Calendar, Star, ArrowRight, ExternalLink, Mail, Phone, MapPin, Clock, CheckCircle, Award, TrendingUp, Heart}}from 'lucide-react';
+import React, {useState} from 'react';
+import {  Helmet  } from 'react-helmet-async';
+import {  Users, MessageCircle, Calendar, Star, ArrowRight, ExternalLink, Mail, Phone, MapPin, Clock, CheckCircle, Award, TrendingUp, Heart  } from 'lucide-react';
 
-const CommunityPage: React.FC = () => {,
+const CommunityPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState('overview');
 
   const communityStats = [
-    { icon: Users, value: '5,000+', label: 'Active Members' ,},
-    {icon: MessageCircle, value: '50+', label: 'Discussions Daily' ,},
-    {icon: Calendar, value: '12', label: 'Events Monthly' ,},
-    {icon: Star, value: '4.9', label: 'Average Rating' ,}];
+    { icon: Users, value: '5,000+', label: 'Active Members' },
+    {icon: MessageCircle, value: '50+', label: 'Discussions Daily' },
+    {icon: Calendar, value: '12', label: 'Events Monthly' },
+    {icon: Star, value: '4.9', label: 'Average Rating' }];
   const events = [
     {title: 'AI Development Workshop',
       date: '2024-02-15',
       time: '2:00 PM EST',
       type: 'Workshop',
       attendees: 150,
-      description: 'Learn advanced AI development techniques and best practices',},
+      description: 'Learn advanced AI development techniques and best practices'},
     {title: 'Cloud Infrastructure Meetup',
       date: '2024-02-20',
       time: '6:00 PM EST',
       type: 'Meetup',
       attendees: 75,
-      description: 'Discuss cloud architecture and deployment strategies',},
+      description: 'Discuss cloud architecture and deployment strategies'},
     {title: 'SaaS Business Growth Panel',
       date: '2024-02-25',
       time: '3:00 PM EST',
       type: 'Panel',
       attendees: 200,
-      description: 'Expert panel on scaling SaaS businesses',}];
+      description: 'Expert panel on scaling SaaS businesses'}];
   const forums = [
     {name: 'AI Services',
       description: 'Discuss AI development, machine learning, and automation',
       posts: 1250,
-      members: 1800;,},
+      members: 1800;},
     {name: 'IT Services',
       description: 'Cloud infrastructure, DevOps, and system administration',
       posts: 980,
-      members: 1200;,},
+      members: 1200;},
     {name: 'Micro SaaS',
       description: 'Building and scaling micro SaaS applications',
       posts: 750,
-      members: 900;,},
+      members: 900;},
     {name: 'General Discussion',
       description: 'General tech discussions and community updates',
       posts: 2100,
-      members: 3000;,}];
+      members: 3000;}];
   const benefits = [
     {icon: Users,
       title: 'Network with Peers',
-      description: 'Connect with like-minded developers and entrepreneurs',},
+      description: 'Connect with like-minded developers and entrepreneurs'},
     {icon: MessageCircle,
       title: 'Expert Support',
-      description: 'Get help from our team of experts and community members',},
+      description: 'Get help from our team of experts and community members'},
     {icon: Calendar,
       title: 'Exclusive Events',
       description: 'Access to workshops, webinars, and networking events'},
     {icon: Award,
       title: 'Recognition',
-      description: 'Showcase your projects and get community recognition',}]
+      description: 'Showcase your projects and get community recognition'}]
 
-  return(<>)
+  return (
+    <>
       <Helmet />
         <title>Community - Zion Tech Group</title>
         <meta name="description" content="Join the Zion Tech Group community. Connect with developers, entrepreneurs, and tech enthusiasts. Learn, share, and grow together." />
         <meta name="keywords" content="community, developers, tech community, networking, events, forums, AI community" />
-        <link rel="canonical" href="https: //ziontechgroup.com/community" />,
-      </Helmet>
+        <link rel="canonical" href="https: //ziontechgroup.com/community" /></Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16 pt-24">{/* Header */</div>} <div className="text-center mb-16">
@@ -75,7 +75,7 @@ const CommunityPage: React.FC = () => {,
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4">
                 <Users className="w-8 h-8 text-white" />
               </div>
-              <h1 className="text-4xl md: text-5xl font-bold text-white neon-text-enhanced">,</h1>
+              <h1>
                 Community;
               </h1>
             </div>
@@ -104,7 +104,7 @@ const CommunityPage: React.FC = () => {,
             </div>
           </div>
 
-          {/* Stats */} <div className="grid grid-cols-1 md: grid-cols-4 gap-6 mb-16">,</div>
+          {/* Stats */} <div>
             {communityStats.map((stat, index) => (
               <div key={index}className="cyber-card-enhanced p-6 text-center">
                 <stat.icon className="w-8 h-8 text-cyan-400 mx-auto mb-4" />
@@ -116,15 +116,15 @@ const CommunityPage: React.FC = () => {,
 
           {/* Tabs */} <div className="mb-8">
             <div className="flex flex-wrap justify-center gap-4">{[</div>
-                { id: 'overview', name: 'Overview' ,},
-                {id: 'events', name: 'Events' ,},
-                {id: 'forums', name: 'Forums' ,},
-                {id: 'benefits', name: 'Benefits' ,}].map((tab) => (
+                { id: 'overview', name: 'Overview' },
+                {id: 'events', name: 'Events' },
+                {id: 'forums', name: 'Forums' },
+                {id: 'benefits', name: 'Benefits' }].map((tab) => (
                 <button;
                   key={tab.id}onClick={() =>setActiveTab(tab.id)</button>}className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                     activeTab === tab.id;
                       ? 'bg-cyan-500 text-white'
-                      : 'bg-slate-800 text-gray-300 hover: bg-slate-700',}`}
+                      : 'bg-slate-800 text-gray-300 hover: bg-slate-700'}`}
                 >
                   {tab.name} </button>
               ))}
@@ -140,7 +140,7 @@ const CommunityPage: React.FC = () => {,
                   just starting out or you're a seasoned professional, you'll find value in our diverse and;
                   welcoming community.
                 </p>
-                <div className="grid grid-cols-1 md: grid-cols-2 gap-6">,</div>
+                <div>
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-3">What You'll Find</h3>
                     <ul className="space-y-2">
@@ -233,7 +233,7 @@ const CommunityPage: React.FC = () => {,
             <div className="space-y-8">
               <div className="cyber-card-enhanced p-8">
                 <h2 className="text-2xl font-bold text-white mb-6">Community Forums</h2>
-                <div className="grid grid-cols-1 md: grid-cols-2 gap-6">,</div>
+                <div>
                   {forums.map((forum, index) => (
                     <div key={index}className="bg-slate-800 rounded-lg p-6">
                       <h3 className="text-lg font-semibold text-white mb-2">{forum.name}</h3>
@@ -268,7 +268,7 @@ const CommunityPage: React.FC = () => {,
             <div className="space-y-8">
               <div className="cyber-card-enhanced p-8">
                 <h2 className="text-2xl font-bold text-white mb-6">Community Benefits</h2>
-                <div className="grid grid-cols-1 md: grid-cols-2 gap-6">,</div>
+                <div>
                   {benefits.map((benefit, index) => (
                     <div key={index}className="flex items-start space-x-4">
                       <div className="flex-shrink-0">
@@ -310,7 +310,7 @@ const CommunityPage: React.FC = () => {,
 
           {/* Contact Information */} <div className="cyber-card-enhanced p-8 mt-8">
             <h2 className="text-2xl font-bold text-white mb-6 text-center">Get in Touch</h2>
-            <div className="grid grid-cols-1 md: grid-cols-3 gap-6">,</div>
+            <div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-6 h-6 text-cyan-400" />
                 <div>

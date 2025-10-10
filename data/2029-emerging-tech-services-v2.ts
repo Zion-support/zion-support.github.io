@@ -33,7 +33,7 @@
     mobile: string;
     email: string
     website: string
-    address: string,
+    address: string
   }
 export const emergingTechServices2029 V2: EmergingTechService2029 V2[] = [,
     id: 'quantum - internet - security - gateway',
@@ -1368,7 +1368,7 @@ export interface EmergingTechService2029V2 {/* TODO: Fix JSX expression */}
   }
 }
 export const emergingTechServices2029V2: EmergingTechService2029V2[] = [,
-  {,
+  {
     id: 'quantum-internet-security-gateway',
     name: 'Quantum Internet Security Gateway',,
   description: 'Next-generation quantum internet security platform that provides unbreakable encryption and quantum-safe communication protocols for the future quantum internet infrastructure.'

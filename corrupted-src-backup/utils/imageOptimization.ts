@@ -7,7 +7,6 @@
 export const getOptimizedUrl = (
   s, r, c: st, r, i, n, g,
   optio, n, s: {
-    ,
     wid, t, h?: number; heig, h, t?: number;
     quali, t, y?: number;
     form, a, t ?  : 'we, b, p' | 'av, i, f' | 'j, p, g' | 'pn, g'

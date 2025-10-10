@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import {  Link  } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-import { Search, BookOpen, Code, Zap, Brain, Shield, Database, Cloud, Settings, BarChart, MessageSquare, Eye, Cpu, Target, Lock, BarChart3, FileText, Bot, Calculator, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, Calendar, Clock3, Compass, PieChart, TrendingDown, Activity, CheckCircle, ArrowRight, ExternalLink, Download, Play, Users, Award, Globe } from 'lucide-react';
+import {  Search, BookOpen, Code, Zap, Brain, Shield, Database, Cloud, Settings, BarChart, MessageSquare, Eye, Cpu, Target, Lock, BarChart3, FileText, Bot, Calculator, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, Calendar, Clock3, Compass, PieChart, TrendingDown, Activity, CheckCircle, ArrowRight, ExternalLink, Download, Play, Users, Award, Globe  } from 'lucide-react';
 const DocsPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -319,7 +319,7 @@ const DocsPage: React.FC = () => {
         <Footer />
       </div>
     </React.Fragment>
-  ),
+  )
 }
 export default DocsPage;
   </Link>

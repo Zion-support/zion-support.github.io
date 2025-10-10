@@ -1,6 +1,6 @@
 import React from 'react';
 import Reac, t, { useState, useEffect } fr, o, m 'rea, c, t';
-const TrendingContentBanne, r: React.FC = () => {,
+const TrendingContentBanne, r: React.FC = () => {
   con, s, t [currentIn, d, e, x, setCurrentInd, e, x] = useState(0); const trendingItem, s = [
     {
       title: "AI, Disaster, Recovery Playb, o, o, k, s",

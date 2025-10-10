@@ -1262,7 +1262,7 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
                   Request Security Assessment""
                   <ArrowLeft className="w-5 h-5 ml-2 rotate-180 "></ArrowLeft>"
                   <ArrowLeft className="w-5 h-5 ml-2 rotate-180" /></ArrowLeft>
-  ),
+  )
 }
 export default ZeroTrustAISecurityFramework2025;;
   </div>

@@ -1,9 +1,9 @@
 'use client';
 import React from 'react';
-import { Brain, Shield, Target, Users } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import { Link } from 'react-router-dom';
-import { Users, Target, Brain, Shield } from 'lucide-react';
+import {  Brain, Shield, Target, Users  } from 'lucide-react';
+import {  Link  } from 'react-router-dom';
+import {  Link  } from 'react-router-dom';
+import {  Users, Target, Brain, Shield  } from 'lucide-react';
 import Footer from '../components/Footer';
 const AboutPage: React.FC = () => {
   const team = [
@@ -53,7 +53,7 @@ const AboutPage: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             We are a leading technology company specializing in AI and IT solutions that transform businesses and drive innovation.
           </p>
-import { Users, CheckCircle, Star, Shield, Award, Target, Globe, Brain, Cloud, Code, BarChart, TrendingUp, Phone, Mail, MapPin, Clock, ArrowRight, Zap, Cpu, Database, Lock, Smartphone, Settings, Calendar, FileText, MessageSquare, Star as StarIcon, Award as AwardIcon, Shield as ShieldIcon, Users as UsersIcon } from 'lucide-react';
+import {  Users, CheckCircle, Star, Shield, Award, Target, Globe, Brain, Cloud, Code, BarChart, TrendingUp, Phone, Mail, MapPin, Clock, ArrowRight, Zap, Cpu, Database, Lock, Smartphone, Settings, Calendar, FileText, MessageSquare, Star as StarIcon, Award as AwardIcon, Shield as ShieldIcon, Users as UsersIcon  } from 'lucide-react';
 export default function AboutPage() {
   const teamMembers = [
     {
@@ -578,7 +578,7 @@ export default function AboutPage() {
         </div>
       </section>
     </div>
-  ),
+  )
 }
   </a>
   </a>

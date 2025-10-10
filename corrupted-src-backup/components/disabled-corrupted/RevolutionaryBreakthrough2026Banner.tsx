@@ -1,5 +1,5 @@
 import React from 'react';
-const RevolutionaryBreakthrough2026Banne, r: React.FC = () => {,
+const RevolutionaryBreakthrough2026Banne, r: React.FC = () => {
   const breakthroughConten, t = [
     {
       id: 1,

@@ -1,6 +1,6 @@
 'use client';
-import React, {useEffect, useState, useCallback}from 'react';
-import {Helmet}}from 'react-helmet-async';
+import React, {useEffect, useState, useCallback} from 'react';
+import {  Helmet  } from 'react-helmet-async';
 
 interface SEOOptimizerProps {title?: string;}
   description?: string;
@@ -9,7 +9,7 @@ interface SEOOptimizerProps {title?: string;}
   ogImage?: string;
   twitterCard?: string;
   structuredData?: object;
-  children: React.ReactNode;,}const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({,
+  children: React.ReactNode;}const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Professional AI and IT solutions for your business. Advanced technology, expert support, and proven results.',
   keywords = 'AI solutions, IT services, technology, business solutions, Zion Tech Group',
@@ -53,15 +53,15 @@ interface SEOOptimizerProps {title?: string;}
       "logo": ogImage,
       "sameAs": [
         "https://twitter.com/ziontechgroup",
-        "https: //linkedin.com/company/ziontechgroup",
+        "https: //linkedin.com/company/ziontechgroup"
       ]}return structuredData || defaultStructuredData;
   }
 
-  const _trackPageView = (config: SEOData) => {,
+  const _trackPageView = (config: SEOData) => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as unknown as {gtag: (command: string, targetId: string, config: Record<string, unknown>) => void}}).gtag('config', 'GA_MEASUREMENT_ID', {)
         page_title: config.title,
-        page_location: config.canonicalUrl,})
+        page_location: config.canonicalUrl})
     }
   }
 
@@ -72,28 +72,29 @@ interface SEOOptimizerProps {title?: string;}
           (window as unknown as {gtag: (command: string, action: string, parameters: Record<string, unknown>) => void}}).gtag('event', 'page_load_performance', {)
             event_category: 'Performance',
             event_label: 'Page Load',
-            value: Math.round(_perfData.loadEventEnd - _perfData.fetchStart),})
+            value: Math.round(_perfData.loadEventEnd - _perfData.fetchStart)})
         }
       })
     }
   }
-  return(<>)
+  return (
+    <>
       <Helmet />
         <title>{title}</title>
         <meta name="description" content={description}/>
         <meta name="keywords" content={keywords}/>
         {canonicalUrl && <link rel="canonical" href={canonicalUrl}/>}
         
-        {/* Open Graph */} <meta property="og: title" content={title,}/>
-        <meta property="og: description" content={description,}/>
-        <meta property="og: image" content={ogImage,}/>
+        {/* Open Graph */} <meta property="og: title" content={title}/>
+        <meta property="og: description" content={description}/>
+        <meta property="og: image" content={ogImage}/>
         <meta property="og: type" content="website" />,
-        {canonicalUrl && <meta property="og: url" content={canonicalUrl,}/>}
+        {canonicalUrl && <meta property="og: url" content={canonicalUrl}/>}
         
-        {/* Twitter Card */} <meta name="twitter: card" content={twitterCard,}/>
-        <meta name="twitter: title" content={title,}/>
-        <meta name="twitter: description" content={description,}/>
-        <meta name="twitter: image" content={ogImage,}/>
+        {/* Twitter Card */} <meta name="twitter: card" content={twitterCard}/>
+        <meta name="twitter: title" content={title}/>
+        <meta name="twitter: description" content={description}/>
+        <meta name="twitter: image" content={ogImage}/>
         
         {/* Structured Data */} <script type="application/ld+json">
           {JSON.stringify(generateStructuredData())} </script>
@@ -110,12 +111,11 @@ interface SEOOptimizerProps {title?: string;}
           borderRadius: '5px',
           fontSize: '12px',
           zIndex: 1000,
-          maxWidth: '300px',}}>
+          maxWidth: '300px'}}>
           <div>SEO Score: {seoScore,</div>}/100</div>
           {recommendations.length > 0 && (
             <div>
-              <div>Recommendations: </div>,
-              <ul style={{ margin: '5px 0', paddingLeft: '15px' ,}}>
+              <div>Recommendations: </div><ul style={{ margin: '5px 0', paddingLeft: '15px' }}>
                 {recommendations.map((rec, index) => (
                   <li key={index}>{rec}</li>
                 ))}
@@ -125,15 +125,12 @@ interface SEOOptimizerProps {title?: string;}
         </div>
       )}
 
-      {/* Twitter Card Tags */} <meta name="twitter: card" content="summary_large_image" />,
-      <meta name="twitter: title" content={title,}/>
-      <meta name="twitter: description" content={description,}/>
-      <meta name="twitter: image" content={ogImage,}/>
-      <meta name="twitter: site" content="@ziontechgroup" />,
-      <meta name="twitter: creator" content="@ziontechgroup" />,
+      {/* Twitter Card Tags */} <meta name="twitter: card" content="summary_large_image" /><meta name="twitter: title" content={title}/>
+      <meta name="twitter: description" content={description}/>
+      <meta name="twitter: image" content={ogImage}/>
+      <meta name="twitter: site" content="@ziontechgroup" /><meta name="twitter: creator" content="@ziontechgroup" />,
 
-      {/* Additional SEO Meta Tags */} <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview: -1" />,
-      <meta name="googlebot" content="index, follow" />
+      {/* Additional SEO Meta Tags */} <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview: -1" /><meta name="googlebot" content="index, follow" />
       <meta name="bingbot" content="index, follow" />
       <meta name="author" content="Zion Tech Group" />
       <meta name="publisher" content="Zion Tech Group" />
@@ -146,16 +143,12 @@ interface SEOOptimizerProps {title?: string;}
       <meta name="msapplication-TileColor" content="#1a1a2e" />
       <meta name="msapplication-config" content="/browserconfig.xml" />
 
-      {/* Open Graph Tags */} <meta property="og: type" content="website" />,
-      <meta property="og: title" content={title,}/>
-      <meta property="og: description" content={description,}/>
-      <meta property="og: url" content={canonicalUrl,}/>
-      <meta property="og: image" content={ogImage,}/>
-      <meta property="og: image:width" content="1200" />,
-      <meta property="og: image:height" content="630" />,
-      <meta property="og: image:alt" content={title,}/>
-      <meta property="og: site_name" content="Zion Tech Group" />,
-      <meta property="og: locale" content="en_US" />,
+      {/* Open Graph Tags */} <meta property="og: type" content="website" /><meta property="og: title" content={title}/>
+      <meta property="og: description" content={description}/>
+      <meta property="og: url" content={canonicalUrl}/>
+      <meta property="og: image" content={ogImage}/>
+      <meta property="og: image:width" content="1200" /><meta property="og: image:height" content="630" /><meta property="og: image:alt" content={title}/>
+      <meta property="og: site_name" content="Zion Tech Group" /><meta property="og: locale" content="en_US" />,
 
       {/* Canonical URL */}{canonicalUrl && <link rel="canonical" href={canonicalUrl}/>}
 

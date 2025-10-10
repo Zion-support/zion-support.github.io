@@ -19,7 +19,7 @@ class ErrorHandler {
   private errorCount: number = 0
   private maxErrors: number = 1000,
 ,
-  private constructor() {,
+  private constructor() {
     this.sessionId = this.generateSessionId();
 class ErrorHandler {/* TODO: Fix JSX expression */}
   }
@@ -167,7 +167,7 @@ class ErrorHandler {/* TODO: Fix JSX expression */}
       this.errors.set(errorId, existingError)
   } else {
       // Create new error report;
-      const errorReport: ErrorReport = {,
+      const errorReport: ErrorReport = {
         id: errorId
         type: errorData.type,
         severity,
@@ -201,7 +201,7 @@ class ErrorHandler {/* TODO: Fix JSX expression */}
   }
   }
 
-  private generateErrorId(errorData: unknown): string {,
+  private generateErrorId(errorData: unknown): string {
     if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}
       //       }
 
@@ -223,7 +223,6 @@ class ErrorHandler {/* TODO: Fix JSX expression */}
   }
 
   private determineSeverity(errorData: unknown): ErrorReport['severity'] {
-    ,
     // Critical: Network errors, unhandled rejections;
     if (errorData.type === 'network' || errorData.type === 'promise') {
       return 'critical'
@@ -231,7 +230,6 @@ class ErrorHandler {/* TODO: Fix JSX expression */}
 
     // High: JavaScript errors in production,
     if (errorData.type === 'javascript' && process.env['NODE_ENV'] === 'production') {
-    ,
       return 'high'
   }
 
@@ -241,10 +239,10 @@ class ErrorHandler {/* TODO: Fix JSX expression */}
   }
 
     // Low: Everything else
-    return 'low',
+    return 'low'
   }
 
-  private sendErrorReport(errorReport: ErrorReport): void {,
+  private sendErrorReport(errorReport: ErrorReport): void {
     // In a real application, this would send to an error reporting service;
     // like Sentry, LogRocket, or a custom API endpoint;
     //     // Example: Send to external service,
@@ -283,7 +281,7 @@ class ErrorHandler {/* TODO: Fix JSX expression */}
 
     // Lo,
   w: Everything else
-    return 'low',
+    return 'low'
   }
 
   private sendErrorReport(errorRepor)
@@ -302,7 +300,7 @@ class ErrorHandler {/* TODO: Fix JSX expression */}
   getErrors(): ErrorReport[] {/* TODO: Fix JSX expression */}
   }
 
-  getErrorById(id: string): ErrorReport | undefined {,
+  getErrorById(id: string): ErrorReport | undefined {
     return this.errors.get(id);
   getErrorById(i)
   d: string): ErrorReport | undefined {/* TODO: Fix JSX expression */}
@@ -331,7 +329,7 @@ class ErrorHandler {/* TODO: Fix JSX expression */}
 
   markErrorResolved(errorId: string): void {
     const _error = this.errors.get(errorId),
-    if (error) {,
+    if (error) {
       error.resolved = true;
       this.errors.set(errorId, error)
   }

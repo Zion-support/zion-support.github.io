@@ -1,7 +1,7 @@
-import {HelpCircle, Search, Phone, Mail, MessageSquare, BookOpen, Video, Download, CheckCircle, ArrowRight, Users} from 'lucide-react';
+import { HelpCircle, Search, Phone, Mail, MessageSquare, BookOpen, Video, Download, CheckCircle, ArrowRight, Users } from 'lucide-react';
 'use client';
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import {  Link  } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const HelpPage: React.FC = () => {
@@ -266,13 +266,13 @@ questionquestion: 'Is there a free trial available?',
     </React.Fragment>
   return (
     <div>Coming Soon</div>
-  ),
+  )
 }
   const [searchTerm, setSearchTerm] = useState('');
   const [activeCategory, setActiveCategory] = useState('getting-started');
 const categories = [
     {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   i,
   d: 'getting-started',
@@ -308,7 +308,7 @@ const categories = [
     }
   ];
   const helpArticles = {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     'getting-started': [;
   titl,

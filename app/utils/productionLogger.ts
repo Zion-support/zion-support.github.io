@@ -10,8 +10,8 @@ interface LogEntry {}}level: LogLevel,
 }
 class ProductionLogger {}}private isDevelopment = process.env.NODE_ENV === 'development';
   private isProduction = process.env.NODE_ENV === 'production';
-private log(level: LogLevel, message: string, data?: unknown, context?: string): void {const entry: LogEntry = {,}
-      level;}private log(level: LogLevel, message: string, data?: unknown, context?: string): void {}}const entry: LogEntry = {,}level,;
+private log(level: LogLevel, message: string, data?: unknown, context?: string): void {const entry: LogEntry = {}
+      level;}private log(level: LogLevel, message: string, data?: unknown, context?: string): void {}}const entry: LogEntry = {}level,;
       message,;
       data,;
       timestamp: new Date().toISOString(),
@@ -33,7 +33,7 @@ private log(level: LogLevel, message: string, data?: unknown, context?: string):
     if (this.isProduction && level === 'error') {// In production, send critical errors to monitoring service;}if (this.isProduction && level === 'error') {}this.sendToMonitoring(entry);
     }
   }
-private sendToMonitoring(entry: LogEntry): void {,}
+private sendToMonitoring(entry: LogEntry): void {}
     ,
     // Send to analytics/monitoring service;
     if (typeof window !== 'undefined' && 'gtag' in window) {,;
@@ -41,12 +41,12 @@ private sendToMonitoring(entry: LogEntry): void {,}
         error_message: entry.message;),
         error_context: entry.context),
         error_timestamp: entry.timestamp),
-        event_category: 'Error',
-,}private sendToMonitoring(entry: LogEntry): void {,}}// Send to analytics/monitoring service;
+        event_category: 'Error'
+}private sendToMonitoring(entry: LogEntry): void {}}// Send to analytics/monitoring service;
     if (typeof window !== 'undefined' && 'gtag' in window) {}(window as any).gtag('event', 'error_log', {)}error_message: entry.message,
         error_context: entry.context,
         error_timestamp: entry.timestamp,
-        event_category: 'Error',
+        event_category: 'Error'
     }
   }
 debug(message: string, data?: unknown, context?: string): void {}}this.log('debug', message, data, context);

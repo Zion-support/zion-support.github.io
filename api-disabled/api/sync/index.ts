@@ -2,7 +2,7 @@
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const _state = readState();
 ,
-  if (req.method === 'GET') {,
+  if (req.method === 'GET') {
     //     const scope = state.config.scope;
     const _scopedEvents = filterEventsByScope(state.events, scope);
 

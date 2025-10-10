@@ -1,14 +1,14 @@
 'use client';
-import React, {useState}from 'react';
-import {Mail, CheckCircle, AlertCircle}}from 'lucide-react';
+import React, {useState} from 'react';
+import {  Mail, CheckCircle, AlertCircle  } from 'lucide-react';
 
-const ContentNewsletterSignup: React.FC = () => {,
+const ContentNewsletterSignup: React.FC = () => {
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {,
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email) return;
 
@@ -48,7 +48,7 @@ const ContentNewsletterSignup: React.FC = () => {,
       </div>
 
       <form onSubmit={handleSubmit}className="max-w-md mx-auto">
-        <div className="flex flex-col sm: flex-row gap-3">,</div>
+        <div>
           <input;
             type="email"
             value={email}onChange={(e) => setEmail(e.target.value)}placeholder="Enter your email address"
@@ -69,7 +69,7 @@ const ContentNewsletterSignup: React.FC = () => {,
         </p>
       </form>
 
-      <div className="mt-6 grid grid-cols-1 sm: grid-cols-3 gap-4 text-center">,</div>
+      <div>
         <div className="text-sm">
           <div className="text-2xl font-bold text-blue-400">10K+</div>
           <div className="text-gray-400">Subscribers</div>

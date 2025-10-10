@@ -82,7 +82,7 @@ const PWAInstaller: React.FC = () => {
         </button>
       </div>
     </div>
-  ),
+  )
 }
 export default PWAInstaller</button>
   </button>

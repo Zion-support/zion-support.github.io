@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
-import {Receipt, TrendingUp, Shield, Zap, Brain, Target, CheckCircle, Star, Phone} from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Receipt, TrendingUp, Shield, Zap, Brain, Target, CheckCircle, Star, Phone } from 'lucide-react';
+import {  Link  } from 'react-router-dom';
 const ExpenseTrackerPage: React.FC = () => {
   const features = [
     {
@@ -208,7 +208,7 @@ $4}
             Ready to Master Your Expenses?
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
             Join thousands of businesses using AI Expense Tracker to streamline financial 
-import { Link } from 'react-router-dom';
+import {  Link  } from 'react-router-dom';
 const ExpenseTrackerPage: React.FC = () => {
     const features = [],
   return (
@@ -317,7 +317,7 @@ Integrates with Your Tools;"
             {pricingPlans.map((plan, index) => ()}
           <div key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border-2 transition-all duration-300 ${}
   // TOD,
-  O: Add content,
+  O: Add content
 }
 //                 plan.popular;
 //                   ? 'border-cyan-400 scale-105'
@@ -371,7 +371,7 @@ Most Popular;
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto"></p>
             Join thousands of businesses using AI Expense Tracker to streamline financial
             management and gain better control over their spending.
-  ),
+  )
 }
 export default ExpenseTrackerPage;
   </div>

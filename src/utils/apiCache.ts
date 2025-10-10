@@ -46,14 +46,14 @@ $4});
     setInterval(() => {
 interface PendingRequest;
           <T> {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 
   promise: Promise,
 
           <T>,
     timestam,
-  p: number,
+  p: number
 }
 /**
  * API Cache Manager with request deduplication;
@@ -73,10 +73,10 @@ export class ApiCache {
   config: Required<ApiCacheConfig>
   constructor(_confi)
   g: ApiCacheConfig = {}) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     this.cache = new CacheManager({/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   maxSiz,
   e: 500,
@@ -86,7 +86,7 @@ export class ApiCache {
   e: 'memory')
     });
     this.config = {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   tt,
   l: config.ttl || 5 * 60 * 1000,
@@ -95,11 +95,11 @@ export class ApiCache {
       retryDela,
   y: config.retryDelay || 1000,
       deduplicat,
-  e: config.deduplicate ?? true,
+  e: config.deduplicate ?? true
     }
     // Auto-cleanup every 5 minutes;
     setInterval(() => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       this.cache.cleanup();
       this.cleanupPendingRequests();
@@ -163,18 +163,18 @@ export class ApiCache {
     const mergedConfig = { ...this.config, ...cacheConfig }
     // Check cache first;
     if (this.cache.has(cacheKey)) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       return this.cache.get(cacheKey) as T;
     }
     // Check if there's a pending request;
     if (mergedConfig.deduplicate && this.pendingRequests.has(cacheKey)) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       const pending = this.pendingRequests.get(cacheKey);
       if (pending && Date.now() - pending.timestamp;
           < 30000) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
         // Reuse pending request if less than 30 seconds old;
         return pending.promise as Promise;
@@ -190,10 +190,10 @@ const requestPromise = this.fetchWithRetry;
 //       mergedConfig.retryDelay);
     // Store pending request;
     if (mergedConfig.deduplicate) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       this.pendingRequests.set(cacheKey, {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 
   promise: requestPromise,
@@ -211,7 +211,7 @@ const requestPromise = this.fetchWithRetry;
       this.cache.set(cacheKey, data, mergedConfig.ttl);
       return data;
     } finally {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       // Clean up pending request;
       this.pendingRequests.delete(cacheKey);
@@ -273,14 +273,14 @@ const requestPromise = this.fetchWithRetry;
   y: number,
     attempt = 1): Promise;
           <T> {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     try {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       const response = await fetch(url, options);
       if (!response.ok) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
         // Retry on 5xx errors and 429 (rate limit)
         if ()
@@ -305,12 +305,12 @@ const requestPromise = this.fetchWithRetry;
       const data = await response.json();
       return data as T;
     } catch (error) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       // Retry on network errors;
       if (attempt;)
           < maxRetries) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
         await this.delay(retryDelay * attempt);
         return this.fetchWithRetry;
@@ -408,11 +408,11 @@ const requestPromise = this.fetchWithRetry;
 
 }
     return {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 //       ...this.cache.stats(),
       pendingRequest,
-  s: this.pendingRequests.size,
+  s: this.pendingRequests.size
     }
   }
   /**
@@ -433,12 +433,12 @@ const requestPromise = this.fetchWithRetry;
 
 }
     try {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       await this.fetch;
           <T>(url, options, cacheConfig);
     } catch (error) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       // Silent fail for prefetch;
       }
@@ -480,10 +480,10 @@ const requestPromise = this.fetchWithRetry;
     const now = Date.now();
     const timeout = 60000; // 1 minute;
     for (const [key, pending] of this.pendingRequests.entries()) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       if (now - pending.timestamp > timeout) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
         this.pendingRequests.delete(key);
       }
@@ -598,7 +598,7 @@ export function createCachedApi(baseUrl: string, defaultOptions: RequestInit = {
 }
   const cache = new ApiCache();
   return {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 
   get: 
@@ -617,7 +617,7 @@ export function createCachedApi(baseUrl: string, defaultOptions: RequestInit = {
   d: 'POST',
         header,
   s: {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 
           'Content-Type': 'application/json',
@@ -644,7 +644,7 @@ export function createCachedApi(baseUrl: string, defaultOptions: RequestInit = {
   d: 'PUT',
         header,
   s: {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 
           'Content-Type': 'application/json',

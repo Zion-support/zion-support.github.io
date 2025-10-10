@@ -6,15 +6,15 @@
  */
 // ErrorHandler class definition;
 class ErrorHandler {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   private static,
   instance: ErrorHandler,
   static getInstance(): ErrorHandler {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     if (!ErrorHandler.instance) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       ErrorHandler.instance = new ErrorHandler();
     }
@@ -41,7 +41,7 @@ export interface APIConfig {
   headers?: Record,
           <string>
   interceptors?: {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     request?: (confi)
   g: RequestConfig) => RequestConfig | Promise,
@@ -53,7 +53,7 @@ export interface APIConfig {
   }
 }
 export interface RequestConfig {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   ur,
   l: string,,
@@ -65,10 +65,10 @@ export interface RequestConfig {/* TODO: Fix JSX expression */}
   params?: Record<string>
   timeout?: number
   cache?: boolean
-  retryAttempts?: number,
+  retryAttempts?: number
 }
 export interface APIResponse<T = unknown> {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 
   data: T,,
@@ -86,7 +86,7 @@ export interface CacheEntry {
   timestam,
   p: number,,
     expiresA,
-  t: number,
+  t: number
 }
 
 export class APIInterceptor {
@@ -107,10 +107,10 @@ export class APIInterceptor {
   pendingRequests: Map<string, Promise<APIResponse>> = new Map();
   constructor(confi)
   g: Partial<APIConfig> = {}) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     this.config = {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 
   baseURL: config.baseURL || '',
@@ -131,7 +131,7 @@ export class APIInterceptor {
 
 }
     if (!APIInterceptor.instance) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       APIInterceptor.instance = new APIInterceptor(config);
     }
@@ -147,11 +147,11 @@ export class APIInterceptor {
   }
     // Check cache for GET requests;
     if (fullConfig.method === 'GET' && fullConfig.cache !== false && this.config.enableCaching) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       const cachedResponse = this.getFromCache(cacheKey);
       if (cachedResponse) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
         return cachedResponse as APIResponse;
           <T>
@@ -159,7 +159,7 @@ export class APIInterceptor {
     }
     // Check for pending identical requests;
     if (this.pendingRequests.has(cacheKey)) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       return this.pendingRequests.get(cacheKey) as Promise;
           <APIResponse<T>>;
@@ -169,18 +169,18 @@ const requestPromise = this.executeRequest;
           <T>(fullConfig);
     this.pendingRequests.set(cacheKey, requestPromise as Promise<APIResponse>);
     try {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       const response = await requestPromise;
       // Cache successful GET requests;
       if (fullConfig.method === 'GET' && fullConfig.cache !== false && this.config.enableCaching) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
         this.setInCache(cacheKey, response);
       }
       return response;
     } finally {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       this.pendingRequests.delete(cacheKey);
     }
@@ -191,7 +191,7 @@ const requestPromise = this.executeRequest;
   private async executeRequest;
           <T>(confi)
   g: RequestConfig, attempt = 1): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     const startTime = performance.now();
     try {/* TODO: Fix JSX expression */}
@@ -209,14 +209,14 @@ const requestPromise = this.executeRequest;
       performanceMetrics.recordNetworkRequest(url, duration, response.status);
       // Handle non-2xx responses;
       if (!response.ok) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
         throw new Error(`HTTP ${response.status}: ${response.statusText}`);
       }
       // Apply response interceptor;
 let finalResponse = response;
       if (this.config.interceptors?.response) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
         finalResponse = await this.config.interceptors.response(response);
       }
@@ -224,18 +224,18 @@ let finalResponse = response;
 const data = await this.parseResponse;
           <T>(finalResponse);
       return {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 //         data,
 
         status: finalResponse.status,
         statusText: finalResponse.statusText,
         headers: finalResponse.headers,
-        config: finalConfig,
+        config: finalConfig
 
       }
     } catch (error) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       const duration = performance.now() - startTime;
       const err = error as Error;
@@ -246,7 +246,7 @@ const data = await this.parseResponse;
       // Retry logic;
       if (attempt;)
           < (config.retryAttempts || this.config.retryAttempts)) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
         await this.delay(this.config.retryDelay * attempt);
         return this.executeRequest;
@@ -254,7 +254,7 @@ const data = await this.parseResponse;
       }
       // Apply error interceptor;
       if (this.config.interceptors?.error) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
         const modifiedError = await this.config.interceptors.error(err);
         throw modifiedError;
@@ -366,12 +366,12 @@ const data = await this.parseResponse;
 
 }
     return {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 //       ...config,
       header,
   s: {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 //         ...this.config.headers,
 //         ...config.headers;
@@ -379,7 +379,7 @@ const data = await this.parseResponse;
 
       timeout: config.timeout || this.config.timeout,
       retryAttempts: config.retryAttempts ?? this.config.retryAttempts,
-      cache: config.cache ?? this.config.enableCaching,
+      cache: config.cache ?? this.config.enableCaching
 
     }
   }
@@ -394,11 +394,11 @@ const data = await this.parseResponse;
 
     let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${config.url}`;
     if (config.params) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       const params = new URLSearchParams();
       Object.entries(config.params).forEach(([key, value]) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
         params.append(key, String(value));
       });`
@@ -420,7 +420,7 @@ const data = await this.parseResponse;
     headers.set('Content-Type', 'application/json');
     // Add config headers;
     Object.entries(config.headers || {}).forEach(([key, value]) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       headers.set(key, value);
     });
@@ -445,16 +445,16 @@ const data = await this.parseResponse;
   private async parseResponse;
           <T>(respons)
   e: Response): Promise<T> {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     const contentType = response.headers.get('content-type');
     if (contentType?.includes('application/json')) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       return await response.json();
     }
     if (contentType?.includes('text/')) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       return (await response.text()) as T;
     }
@@ -484,7 +484,7 @@ const data = await this.parseResponse;
     const entry = this.cache.get(key);
     if (!entry) return null;
     if (Date.now() > entry.expiresAt) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       this.cache.delete(key);
       return null;
@@ -501,14 +501,14 @@ const data = await this.parseResponse;
 
 }
     this.cache.set(key, {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   dat,
   a: response,
       timestam)
   p: Date.now(),
       expiresA,
-  t: Date.now() + this.config.cacheTimeout,
+  t: Date.now() + this.config.cacheTimeout
     });
   }
   /**
@@ -533,10 +533,10 @@ const data = await this.parseResponse;
 }
     const now = Date.now();
     for (const [key, entry] of this.cache.entries()) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       if (now > entry.expiresAt) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
         this.cache.delete(key);
       }
@@ -557,7 +557,7 @@ const data = await this.parseResponse;
           <= e.expiresAt).length;
     const expired = entries.length - valid;
     return {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 
   total: entries.length,

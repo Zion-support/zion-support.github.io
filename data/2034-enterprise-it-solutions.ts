@@ -293,7 +293,7 @@ export const,
     use_cases: ['Developer productivity', 'Standardized delivery'],
     link: 'https://ziontechgroup.com / services / platform - engineering - foundation',
     real_service: true
-    rating: 4.8,
+    rating: 4.8
   }},
     id: 'enterprise - data - mesh',
     name: 'Enterprise Data Mesh',
@@ -360,7 +360,7 @@ export const,
     integrations: ['Snowflake', 'Databricks', 'BigQuery'],
     use_cases: ['Faster analytics', 'Federated governance'],
     link: 'https://ziontechgroup.com / services / enterprise - data - mesh',
-    real_service: true,
+    real_service: true
   }},
     id: 'cloud - migration - accelerator',
     name: 'Cloud Migration Accelerator',
@@ -422,7 +422,7 @@ export const,
     integrations: ['AWS', 'Azure', 'GCP'],
     use_cases: ['Datacenter exit', 'Hybrid cloud enablement'],
     link: 'https://ziontechgroup.com / services / cloud - landing - zone',
-    real_service: true,
+    real_service: true
   }},
       'Detections-as-code',
     id: 'threat - detection - response',
@@ -483,7 +483,7 @@ export const,
     integrations: ['CrowdStrike', 'Wiz', 'Snyk', 'Cloudflare'],
     use_cases: ['Compliance readiness', 'Breaches prevention'],
     link: 'https://ziontechgroup.com / services / quantum - cybersecurity - services',
-    real_service: true,
+    real_service: true
   }},
     id: 'observability - platform - starter',
     name: 'Observability Platform Starter',
@@ -545,7 +545,7 @@ export const,
     integrations: ['Grafana', 'Datadog', 'PagerDuty'],
     use_cases: ['MTTR reduction', 'Reliability governance'],
     link: 'https://ziontechgroup.com / services / api - observability - starter',
-    real_service: true,
+    real_service: true
   }},
     id: 'cost - governance - suite',
     name: 'Cloud Cost Governance Suite',
@@ -580,7 +580,7 @@ export const,
     integrations: ['AWS CUR', 'Azure Cost', 'GCP Billing'],
     use_cases: ['Cost optimization', 'Budget adherence'],
     link: 'https://ziontechgroup.com / cloud - cost - optimizer',
-    real_service: true,
+    real_service: true
   },
     id: 'identity - governance - administration',
     useCases: ['MTTR reduction', 'Reliability governance'],
@@ -624,7 +624,7 @@ export const,
     integrations: ['AWS CUR', 'Azure Cost', 'GCP Billing'],
     useCases: ['Cost optimization', 'Budget adherence'],
     link: 'https://ziontechgroup.com/cloud-cost-optimizer',
-    realService: true,
+    realService: true
   },
     id: 'identity-governance-administration',
     name: 'Identity Governance & Administration',
@@ -825,7 +825,7 @@ export type EnterpriseITSolution =
 		useCases: ['Developer productivityStandardized delivery']
 		link: 'https://ziontechgroup && ziontechgroup.com/services/platform-engineering-foundation',
 		realService: true
-		rating: 4 && 4.8,
+		rating: 4 && 4.8
 	}
 		id: 'enterprise-data-mesh',
 		name: 'Enterprise Data Mesh',
@@ -836,7 +836,7 @@ export type EnterpriseITSolution =
 		integrations: ['SnowflakeDatabricksBigQuery'],
 		useCases: ['Faster analyticsFederated governance'],
 		link: 'https://ziontechgroup && ziontechgroup.com/services/enterprise-data-mesh',
-		realService: true,
+		realService: true
 	}
 		id: 'cloud-migration-accelerator',
 		name: 'Cloud Migration Accelerator',
@@ -847,7 +847,7 @@ export type EnterpriseITSolution =
 		integrations: ['AWSAzureGCP'],
 		useCases: ['Datacenter exitHybrid cloud enablement'],
 		link: 'https://ziontechgroup && ziontechgroup.com/services/cloud-landing-zone',
-		realService: true,
+		realService: true
 	}
 		id: 'threat-detection-response',
 		name: 'Threat Detection & Response',
@@ -858,7 +858,7 @@ export type EnterpriseITSolution =
 		integrations: ['CrowdStrikeWizSnykCloudflare'],
 		useCases: ['Compliance readinessBreaches prevention'],
 		link: 'https://ziontechgroup && ziontechgroup.com/services/quantum-cybersecurity-services',
-		realService: true,
+		realService: true
 	}
 		id: 'observability-platform-starter',
 		name: 'Observability Platform Starter',
@@ -869,7 +869,7 @@ export type EnterpriseITSolution =
 		integrations: ['GrafanaDatadogPagerDuty'],
 		useCases: ['MTTR reductionReliability governance'],
 		link: 'https://ziontechgroup && ziontechgroup.com/services/api-observability-starter',
-		realService: true,
+		realService: true
 	}
 		id: 'cost-governance-suite',
 		name: 'Cloud Cost Governance Suite',
@@ -880,7 +880,7 @@ export type EnterpriseITSolution =
 		integrations: ['AWS CURAzure CostGCP Billing'],
 		useCases: ['Cost optimizationBudget adherence'],
 		link: 'https://ziontechgroup && ziontechgroup.com/cloud-cost-optimizer',
-		realService: true,
+		realService: true
 	}
 		id: 'identity-governance-administration',
 		name: 'Identity Governance & Administration',
@@ -1072,7 +1072,7 @@ tagline: 'Identity-first perimeterless security for modern enterprises',
 		useCases: ['Developer productivityStandardized delivery'],
 		link: 'https://ziontechgroup.com/services/platform-engineering-foundation',
 		realService: true
-		rating: 4.8,
+		rating: 4.8
 	},
 		id: 'enterprise-data-mesh',
 		name: 'Enterprise Data Mesh',
@@ -1083,7 +1083,7 @@ tagline: 'Identity-first perimeterless security for modern enterprises',
 		integrations: ['SnowflakeDatabricksBigQuery'],
 		useCases: ['Faster analyticsFederated governance'],
 		link: 'https://ziontechgroup.com/services/enterprise-data-mesh',
-		realService: true,
+		realService: true
 	},
 		id: 'cloud-migration-accelerator',
 		name: 'Cloud Migration Accelerator',
@@ -1094,7 +1094,7 @@ tagline: 'Identity-first perimeterless security for modern enterprises',
 		integrations: ['AWSAzureGCP'],
 		useCases: ['Datacenter exitHybrid cloud enablement'],
 		link: 'https://ziontechgroup.com/services/cloud-landing-zone',
-		realService: true,
+		realService: true
 	},
 		id: 'threat-detection-response',
 		name: 'Threat Detection & Response',
@@ -1105,7 +1105,7 @@ tagline: 'Identity-first perimeterless security for modern enterprises',
 		integrations: ['CrowdStrikeWizSnykCloudflare'],
 		useCases: ['Compliance readinessBreaches prevention'],
 		link: 'https://ziontechgroup.com/services/quantum-cybersecurity-services',
-		realService: true,
+		realService: true
 	},
 		id: 'observability-platform-starter',
 		name: 'Observability Platform Starter',
@@ -1116,7 +1116,7 @@ tagline: 'Identity-first perimeterless security for modern enterprises',
 		integrations: ['GrafanaDatadogPagerDuty'],
 		useCases: ['MTTR reductionReliability governance'],
 		link: 'https://ziontechgroup.com/services/api-observability-starter',
-		realService: true,
+		realService: true
 	},
 		id: 'cost-governance-suite',
 		name: 'Cloud Cost Governance Suite',
@@ -1127,7 +1127,7 @@ tagline: 'Identity-first perimeterless security for modern enterprises',
 		integrations: ['AWS CURAzure CostGCP Billing'],
 		useCases: ['Cost optimizationBudget adherence'],
 		link: 'https://ziontechgroup.com/cloud-cost-optimizer',
-		realService: true,
+		realService: true
 	},
 		id: 'identity-governance-administration',
 		name: 'Identity Governance & Administration',
@@ -1138,21 +1138,21 @@ tagline: 'Identity-first perimeterless security for modern enterprises',
 		integrations: ['OktaAzure ADGoogle Workspace'],
 		useCases: ['Audit readinessInsider risk reduction'],
 		link: 'https://ziontechgroup.com/services/sso-and-user-lifecycle-hub',
-		realService: true,
+		realService: true
 	}
 ];
     use_cases: ['Audit readiness', 'Insider risk reduction'],
     link: 'https://ziontechgroup.com / services / sso - and - user - lifecycle - hub',
-    real_service: true,
+    real_service: true
   }];
 real_service: true,
 launch_date: '2025 - 11 - 01'}
 link: 'https://ziontechgroup.com / services / platform - engineering - foundation',
 real_service: true
-rating: 4.8,
+rating: 4.8
 }
 link: 'https://ziontechgroup.com / services / sso - and - user - lifecycle - hub',
-real_service: true,
+real_service: true
 }];	id: string
 name: string,
 tagline?: string,
@@ -1413,7 +1413,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [,
   use_cases: ['Developer productivity_standardized delivery']
   link: 'https://ziontechgroup.com / services / platform - engineering - foundation',
   real_service: true
-  rating: 4.8,
+  rating: 4.8
 }
   id: 'enterprise - data - mesh',
   name: 'Enterprise Data Mesh',
@@ -1424,7 +1424,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [,
   integrations: ['SnowflakeDatabricksBigQuery'],
   use_cases: ['Faster analytics_federated governance'],
   link: 'https://ziontechgroup.com / services / enterprise - data - mesh',
-  real_service: true,
+  real_service: true
 }
   id: 'cloud - migration - accelerator',
   name: 'Cloud Migration Accelerator',
@@ -1435,7 +1435,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [,
   integrations: ['AWSAzureGCP'],
   use_cases: ['Datacenter exit_hybrid cloud enablement'],
   link: 'https://ziontechgroup.com / services / cloud - landing - zone',
-  real_service: true,
+  real_service: true
 }
   id: 'threat - detection - response',
   name: 'Threat Detection & Response',
@@ -1446,7 +1446,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [,
   integrations: ['CrowdStrikeWizSnykCloudflare'],
   use_cases: ['Compliance readiness_breaches prevention'],
   link: 'https://ziontechgroup.com / services / quantum - cybersecurity - services',
-  real_service: true,
+  real_service: true
 }
   id: 'observability - platform - starter',
   name: 'Observability Platform Starter',
@@ -1457,7 +1457,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [,
   integrations: ['GrafanaDatadogPagerDuty'],
   use_cases: ['MTTR reduction_reliability governance'],
   link: 'https://ziontechgroup.com / services / api - observability - starter',
-  real_service: true,
+  real_service: true
 }
   id: 'cost - governance - suite',
   name: 'Cloud Cost Governance Suite',
@@ -1468,7 +1468,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [,
   integrations: ['AWS CURAzure CostGCP Billing'],
   use_cases: ['Cost optimization_budget adherence'],
   link: 'https://ziontechgroup.com / cloud - cost - optimizer',
-  real_service: true,
+  real_service: true
 }
   id: 'identity - governance - administration',
   name: 'Identity Governance & Administration',
@@ -1697,7 +1697,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [,
 		useCases: ['Developer productivityStandardized delivery'],
 		link: 'https://ziontechgroup.com/services/platform-engineering-foundation',
 		realService: true
-		rating: 4.8,
+		rating: 4.8
 	},
 		id: 'enterprise-data-mesh',
 		name: 'Enterprise Data Mesh',
@@ -1708,7 +1708,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [,
 		integrations: ['SnowflakeDatabricksBigQuery'],
 		useCases: ['Faster analyticsFederated governance'],
 		link: 'https://ziontechgroup.com/services/enterprise-data-mesh',
-		realService: true,
+		realService: true
 	},
 		id: 'cloud-migration-accelerator',
 		name: 'Cloud Migration Accelerator',
@@ -1719,7 +1719,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [,
 		integrations: ['AWSAzureGCP'],
 		useCases: ['Datacenter exitHybrid cloud enablement'],
 		link: 'https://ziontechgroup.com/services/cloud-landing-zone',
-		realService: true,
+		realService: true
 	},
 		id: 'threat-detection-response',
 		name: 'Threat Detection & Response',
@@ -1730,7 +1730,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [,
 		integrations: ['CrowdStrikeWizSnykCloudflare'],
 		useCases: ['Compliance readinessBreaches prevention'],
 		link: 'https://ziontechgroup.com/services/quantum-cybersecurity-services',
-		realService: true,
+		realService: true
 	},
 		id: 'observability-platform-starter',
 		name: 'Observability Platform Starter',
@@ -1741,7 +1741,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [,
 		integrations: ['GrafanaDatadogPagerDuty'],
 		useCases: ['MTTR reductionReliability governance'],
 		link: 'https://ziontechgroup.com/services/api-observability-starter',
-		realService: true,
+		realService: true
 	},
 		id: 'cost-governance-suite',
 		name: 'Cloud Cost Governance Suite',
@@ -1752,7 +1752,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [,
 		integrations: ['AWS CURAzure CostGCP Billing'],
 		useCases: ['Cost optimizationBudget adherence'],
 		link: 'https://ziontechgroup.com/cloud-cost-optimizer',
-		realService: true,
+		realService: true
 	},
 		id: 'identity-governance-administration',
 		name: 'Identity Governance & Administration',
@@ -1770,7 +1770,7 @@ export type EnterpriseITSolution = {
 	tagline?: string,,
 	description: string,
 	category: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity'}
-	pricing: {,
+	pricing: {
 		starter: string, // e.g. "$2}999/mo"
 		professional?: string;
 		enterprise?: string;
@@ -1997,7 +1997,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [;
 		useCases: ['Developer productivityStandardized delivery'];
 		link: 'https://ziontechgroup.com/services/platform-engineering-foundation'
 		realService: true
-		rating: 4.8,
+		rating: 4.8
 	}
 	{
 		id: 'enterprise-data-mesh'
@@ -2009,7 +2009,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [;
 		integrations: ['SnowflakeDatabricksBigQuery'];
 		useCases: ['Faster analyticsFederated governance']
 		link: 'https://ziontechgroup.com/services/enterprise-data-mesh'
-		realService: true,
+		realService: true
 	}
 	{
 		id: 'cloud-migration-accelerator'
@@ -2021,7 +2021,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [;
 		integrations: ['AWSAzureGCP'];
 		useCases: ['Datacenter exitHybrid cloud enablement']
 		link: 'https://ziontechgroup.com/services/cloud-landing-zone'
-		realService: true,
+		realService: true
 	}
 	{
 		id: 'threat-detection-response'
@@ -2033,7 +2033,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [;
 		integrations: ['CrowdStrikeWizSnykCloudflare'];
 		useCases: ['Compliance readinessBreaches prevention']
 		link: 'https://ziontechgroup.com/services/quantum-cybersecurity-services'
-		realService: true,
+		realService: true
 	}
 	{
 		id: 'observability-platform-starter'
@@ -2045,7 +2045,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [;
 		integrations: ['GrafanaDatadogPagerDuty'];
 		useCases: ['MTTR reductionReliability governance']
 		link: 'https://ziontechgroup.com/services/api-observability-starter'
-		realService: true,
+		realService: true
 	}
 	{
 		id: 'cost-governance-suite'
@@ -2057,7 +2057,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [;
 		integrations: ['AWS CURAzure CostGCP Billing'];
 		useCases: ['Cost optimizationBudget adherence']
 		link: 'https://ziontechgroup.com/cloud-cost-optimizer'
-		realService: true,
+		realService: true
 	}
 	{
 		id: 'identity-governance-administration'

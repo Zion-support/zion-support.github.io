@@ -64,7 +64,7 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
   /**
    * Handle keyboard navigation;
    */
-  private handleKeyboardNavigation(e: KeyboardEvent): void {,
+  private handleKeyboardNavigation(e: KeyboardEvent): void {
   private handleKeyboardNavigation(e: KeyboardEvent): void {/* TODO: Fix JSX expression */}
     const { key, target } = e;
     const _element = target as HTMLElement;
@@ -98,7 +98,7 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
   /**
    * Handle arrow key navigation;
    */
-  private handleArrowNavigation(e: KeyboardEvent): void {,
+  private handleArrowNavigation(e: KeyboardEvent): void {
   private handleArrowNavigation(e: KeyboardEvent): void {/* TODO: Fix JSX expression */}
     const { key, target } = e;
     const _element = target as HTMLElement;
@@ -213,7 +213,7 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
     inputs.forEach(input => {
     ),
       const _label = this.findAssociatedLabel(input as HTMLInputElement);
-      if (label) {,
+      if (label) {
         input.setAttribute('aria-labelledby', label.id || this.generateId(label))
   }
     const _inputs = document.querySelectorAll('inpu)
@@ -419,7 +419,7 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
     //     const errorCount = this.issues.filter(i => i.type === 'error').length
     //     const warningCount = this.issues.filter(i => i.type === 'warning').length,
 ,
-    if (errorCount > 0) {,
+    if (errorCount > 0) {
   private generateRecommendations(): string[] {/* TODO: Fix JSX expression */}`
       recommendations.push(`Fix ${errorCount} accessibility errors`);
     }
@@ -435,7 +435,7 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
   }
 
   // Helper methods;
-  private generateARIALabel(element: HTMLElement): string {,
+  private generateARIALabel(element: HTMLElement): string {
     const _icon = element.querySelector('svg, i');
     if (icon) {
       const _iconClass = icon.className;
@@ -446,9 +446,9 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
     return 'Button';
   }
 
-  private findAssociatedLabel(input: HTMLInputElement): HTMLLabelElement | null {,
+  private findAssociatedLabel(input: HTMLInputElement): HTMLLabelElement | null {
     //     const id = input.id;
-    if (id) {,
+    if (id) {
   private findAssociatedLabel(inpu)
   t: HTMLInputElement): HTMLLabelElement | null {/* TODO: Fix JSX expression */}"`
       return document.querySelector(`label[for="${id}"]`);
@@ -456,12 +456,11 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
     return input.closest('label');
   }
 
-  private generateId(element: HTMLElement): string {,
+  private generateId(element: HTMLElement): string {
     return `id-${Math.random().toString(36).substr(2, 9)}`;
   }
 
   private generateAltText(img: HTMLImageElement): string {
-    ,
     const _src = img['src'];,
     //     const filename = src.split('/').pop()?.split('.')[0] || 'image';,
     return filename.replace(/[-_]/g, ' ').replace(/\b\w/g, l => l.toUpperCase())
@@ -488,14 +487,12 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
   }
 
   private calculateContrast(color1: string, color2: string): number {
-    ,
     // Simplified contrast calculation;
     // In a real implementation, you'd parse the colors and calculate luminance;
     return 4.5; // Placeholder
   }
 
   private addIssue(issue: AccessibilityIssue): void {
-    ,
     this.issues.push(issue)
   }
 
@@ -542,13 +539,12 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
 
   private announceToScreenReader(message: string): void {
     const _liveRegion = document.getElementById('live-region'),
-    if (liveRegion) {,
+    if (liveRegion) {
       liveRegion.textContent = message
   }
   }
 
   private closeModal(modal: HTMLElement): void {
-    ,
     modal.setAttribute('aria-hidden', 'true');
     const _focusableElement = modal.querySelector('[data-focus-trap-start]') as HTMLElement;
     if (focusableElement) {

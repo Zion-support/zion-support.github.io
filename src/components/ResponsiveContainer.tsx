@@ -7,7 +7,7 @@ interface ResponsiveContainerProps {
   n: React.ReactNode
   className?: string,
   breakpoints?: {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     sm?: string;
     md?: string;
@@ -20,14 +20,14 @@ interface ResponsiveContainerProps {
 const,
   ResponsiveContainer: React.FC,
           <ResponsiveContainerProps> = ({/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 //   children,
   className = '',
   breakpoints = {},
 //   fallback)
 }) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   const [isClient, setIsClient] = useState(false);
   const [screenSize, setScreenSize] = useState;
@@ -39,40 +39,40 @@ const,
   const isLargeDesktop = useMediaQuery({/* TODO: Fix JSX expression */})
   h: 1280 });
   useEffect(() => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     setIsClient(true);
   }, []);
   useEffect(() => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     if (!isClient) return;
     if (isLargeDesktop) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       setScreenSize('2xl');
     } else if (isDesktop) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       setScreenSize('xl');
     } else if (isTablet) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       setScreenSize('md');
     } else {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       setScreenSize('sm');
     }
   }, [isClient, isMobile, isTablet, isDesktop, isLargeDesktop]);
   if (!isClient) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     return fallback || 
           <div className={className}>{children}</div>
   }
   const getResponsiveClasses = () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     const baseClasses = className;
     const responsiveClasses = breakpoints[screenSize] || '';
@@ -96,7 +96,7 @@ export const useResponsiveValue = {}
 // '2xl'?: T;
 // default?: T;)
 }): T => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   const isMobile = useMediaQuery({/* TODO: Fix JSX expression */})
   h: 767 });
@@ -107,22 +107,22 @@ export const useResponsiveValue = {}
   const isLargeDesktop = useMediaQuery({/* TODO: Fix JSX expression */})
   h: 1280 });
   if (isLargeDesktop && values['2xl'] !== undefined) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     return values['2xl'];
   }
   if (isDesktop && values.xl !== undefined) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     return values.xl;
   }
   if (isTablet && values.md !== undefined) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     return values.md;
   }
   if (isMobile && values.sm !== undefined) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     return values.sm;
   }
@@ -130,7 +130,7 @@ export const useResponsiveValue = {}
 }
 // Hook for responsive breakpoints;
 export const useBreakpoint = () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   const isMobile = useMediaQuery({/* TODO: Fix JSX expression */})
   h: 767 });
@@ -141,7 +141,7 @@ export const useBreakpoint = () => {/* TODO: Fix JSX expression */}
   const isLargeDesktop = useMediaQuery({/* TODO: Fix JSX expression */})
   h: 1280 });
   return {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 //     isMobile,
 //     isTablet,

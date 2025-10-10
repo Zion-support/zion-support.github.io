@@ -1,4 +1,4 @@
-import {ChevronDown, ChevronUp, Search, Phone, Mail, MessageSquare} from 'lucide-react';
+import { ChevronDown, ChevronUp, Search, Phone, Mail, MessageSquare } from 'lucide-react';
 'use client';
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
@@ -154,7 +154,7 @@ $4];
       <Footer />
     </React.Fragment>
 export default FAQPage,
-import { Link } from 'react-router-dom';
+import {  Link  } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const FAQPage: React.FC = () => {
@@ -176,7 +176,7 @@ const toggleItem = (inde)
   O: Add items
 ],
     {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   categor,
   y: 'General Questions',
@@ -293,7 +293,7 @@ const toggleItem = (inde)
   r: 'We respond to support requests within 1 hour during business hours and within 4 hours for non-critical issues outside business hours. Critical issues receive immediate attention.'
   ],
   const filteredData = faqData.map(category => ({/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
 //     ...category,
     question,
@@ -340,7 +340,7 @@ type="text" placeholder="Search FAQs..."
                 <div className="space-y-4"></div>
                   {category.questions.map((item, itemIndex) => {}
   // TOD,
-  O: Add content,
+  O: Add content
 }
                     const globalIndex = categoryIndex * 100 + itemIndex;
                     const isOpen = openItems.includes(globalIndex);

@@ -1,27 +1,27 @@
 import React from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {BarChart, TrendingUp, Users, DollarSign, Zap, Target, ArrowRight, CheckCircle, Star, Award, Clock, Shield}}from 'lucide-react';
-const AIAnalyticsDashboardPage: React.FC = () => {,
+import {  Helmet  } from 'react-helmet-async';
+import {  BarChart, TrendingUp, Users, DollarSign, Zap, Target, ArrowRight, CheckCircle, Star, Award, Clock, Shield  } from 'lucide-react';
+const AIAnalyticsDashboardPage: React.FC = () => {
     const features = [
     {
       icon: BarChart,
       title: 'Real-time Analytics',
-      description: 'Live data visualization with instant updates and interactive charts.',},
+      description: 'Live data visualization with instant updates and interactive charts.'},
     {icon: TrendingUp,
       title: 'Predictive Insights',
-      description: 'AI-powered forecasting and trend analysis for better decision making.',},
+      description: 'AI-powered forecasting and trend analysis for better decision making.'},
     {icon: Users,
       title: 'User Behavior Tracking',
-      description: 'Comprehensive user analytics and engagement metrics tracking.',},
+      description: 'Comprehensive user analytics and engagement metrics tracking.'},
     {icon: DollarSign,
       title: 'Revenue Analytics',
-      description: 'Detailed financial metrics and revenue optimization insights.',},
+      description: 'Detailed financial metrics and revenue optimization insights.'},
     {icon: Zap,
       title: 'Custom Dashboards',
-      description: 'Build personalized dashboards tailored to your business needs.',},
+      description: 'Build personalized dashboards tailored to your business needs.'},
     {icon: Target,
       title: 'Goal Tracking',
-      description: 'Monitor KPIs and business objectives with automated alerts.',}}
+      description: 'Monitor KPIs and business objectives with automated alerts.'}}
   ]
 const benefits = [
     'Real-time data visualization and reporting',
@@ -36,11 +36,12 @@ const benefits = [
     'Mobile-responsive design'
   ]
 const metrics = [
-    {label: 'Data Sources', value: '50+', icon: BarChart ,},
-    {label: 'Update Frequency', value: 'Real-time', icon: Clock ,},
-    {label: 'Accuracy Rate', value: '99.9%', icon: Shield ,},
-    {label: 'User Satisfaction', value: '4.9/5', icon: Star ,}]
-return(<>)
+    {label: 'Data Sources', value: '50+', icon: BarChart },
+    {label: 'Update Frequency', value: 'Real-time', icon: Clock },
+    {label: 'Accuracy Rate', value: '99.9%', icon: Shield },
+    {label: 'User Satisfaction', value: '4.9/5', icon: Star }]
+return (
+    <>
       <Helmet />
         <title>AI Analytics Dashboard | Zion Tech Group - Real-time Business Intelligence</title>
         <meta name="description" content="AI-powered solution" />
@@ -70,8 +71,7 @@ return(<>)
               <p>Transform your data into actionable insights with our AI-powered analytics dashboard.;</p>
                 Get real-time visualization, predictive analytics, and custom reporting in one powerful platform.
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
-                <button>
+              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div><button>
                   <span>Start Free Trial</span>
                   <ArrowRight>
                 </button>
@@ -96,9 +96,7 @@ return(<>)
               </p>
             </div>
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div>,
-              {features.map((feature, index) => (</div>} <div key={index}className="bg-slate-800/50 backdrop-blur-lg rounded-lg p-6 border border-slate-700/50 hover: border-cyan-400/50 transition-all group"></div>,
-                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4 group-hover: scale-110 transition-transform"></div>,
-                    <feature />
+              {features.map((feature, index) => (</div>} <div key={index}className="bg-slate-800/50 backdrop-blur-lg rounded-lg p-6 border border-slate-700/50 hover: border-cyan-400/50 transition-all group"></div><div className="w-12 h-12 bg-gradient-to-r from-green-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4 group-hover: scale-110 transition-transform"></div><feature />
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description</p>}</p>
                 </div>
@@ -145,8 +143,7 @@ return(<>)
               <p>Experience the difference with our AI-powered analytics platform;</p>
               </p>
             </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 gap-8"></div>,
-              <div className="space-y-6"></div>
+            <div className="grid grid-cols-1 md: grid-cols-2 gap-8"></div><div className="space-y-6"></div>
                 {benefits.map((benefit, index) => (</div>} <div key={index}className="flex items-start space-x-3"></div>
                     <CheckCircle />
                     <span className="text-gray-300 text-lg">{benefit</span>}</span>
@@ -188,8 +185,7 @@ return(<>)
               <p>Join thousands of businesses already using our AI analytics dashboard;</p>
                 to make smarter, data-driven decisions.
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
-                <button>
+              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div><button>
                   <span>Start Free Trial</span>
                   <ArrowRight>
                 </button>
@@ -201,7 +197,7 @@ return(<>)
         </section>
       </div>
     </>
-  ),
+  )
 };
 
 export default AIAnalyticsDashboardPage;

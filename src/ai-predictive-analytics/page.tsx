@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin, BarChart3, Brain, Target, Zap, Shield, Clock, Users, Star, ArrowRight, Database, Cpu, Eye, Globe, Lock } from 'lucide-react';
+import {  Helmet  } from 'react-helmet-async';
+import {  CheckCircle, TrendingUp, Phone, Mail, MapPin, BarChart3, Brain, Target, Zap, Shield, Clock, Users, Star, ArrowRight, Database, Cpu, Eye, Globe, Lock  } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const AIPredictiveAnalyticsPage: React.FC = () => {

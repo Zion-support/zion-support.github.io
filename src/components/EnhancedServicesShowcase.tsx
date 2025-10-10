@@ -1,7 +1,7 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import { Phone, Mail, ExternalLink, Star, CheckCircle, ArrowRight, Zap, Brain, Cloud, Rocket, TrendingUp, Users, Award, Shield, Clock, DollarSign, Target, BarChart, Sparkles } from 'lucide-react';
-import { services, serviceCategories, contactInfo } from '../data/services';
+import {  Phone, Mail, ExternalLink, Star, CheckCircle, ArrowRight, Zap, Brain, Cloud, Rocket, TrendingUp, Users, Award, Shield, Clock, DollarSign, Target, BarChart, Sparkles  } from 'lucide-react';
+import {  services, serviceCategories, contactInfo  } from '../data/services';
 interface ServiceCardProps {
     service: typeof services[0],
   index: number

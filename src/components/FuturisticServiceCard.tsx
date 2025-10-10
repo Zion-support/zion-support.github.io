@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import { ArrowRight, Star, Zap, CheckCircle } from 'lucide-react';
+import {  ArrowRight, Star, Zap, CheckCircle  } from 'lucide-react';
 interface FuturisticServiceCardProps {/* TODO: Fix JSX expression */}
 }
 const,

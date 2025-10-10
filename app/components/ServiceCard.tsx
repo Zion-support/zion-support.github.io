@@ -1,13 +1,13 @@
 'use client';
 import React from 'react';
-import {ArrowRight, CheckCircle}}from 'lucide-react';
-interface ServiceCardProps {title: string;,}
+import {  ArrowRight, CheckCircle  } from 'lucide-react';
+interface ServiceCardProps {title: string;}
   description: string;,
   features: string[],
   price?: string;
   popular?: boolean;
   onSelect?: () => void,
-  className?: string;}const ServiceCard: React.FC<ServiceCardProps> = ({,
+  className?: string;}const ServiceCard: React.FC<ServiceCardProps> = ({
   title,
   description,
   features,
@@ -39,10 +39,9 @@ interface ServiceCardProps {title: string;,}
       )}
       {onSelect && (
         <button;
-          onClick={onSelect}className="w-full bg-gradient-to-r from-purple-500 to-blue-500 text-white py-3 rounded-lg font-semibold hover: from-purple-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center gap-2 group">,</button>
+          onClick={onSelect}className="w-full bg-gradient-to-r from-purple-500 to-blue-500 text-white py-3 rounded-lg font-semibold hover: from-purple-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center gap-2 group"></button>
           Get Started;
-          <ArrowRight className="w-4 h-4 group-hover: translate-x-1 transition-transform" />,
-        </button>
+          <ArrowRight className="w-4 h-4 group-hover: translate-x-1 transition-transform" /></button>
       )}
     </div>
   );

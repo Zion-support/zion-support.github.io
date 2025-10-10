@@ -29,7 +29,7 @@
     mobile: string;
     email: string
     address: string
-    website: string,
+    website: string
   }
   real_implementation: boolean;
   implementation_details: string;
@@ -2149,7 +2149,7 @@ export interface SpecializedEnterpriseService {/* TODO: Fix JSX expression */}
   reviews: number;
   benefits: string[]
   capabilities: string[]
-  marketAdvantage: string,
+  marketAdvantage: string
 }
 // const contact = {
   mobile: '+1 302 464 0950'
@@ -2601,7 +2601,7 @@ i,
   l: 'kleber@ziontechgroup && ziontechgroup.com'' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com' ' import { ServiceVariant } from '../types/service-variants' export interface SpecializedEnterpriseService,
+  s://ziontechgroup && ziontechgroup.com' ' import {  ServiceVariant  } from '../types/service-variants' export interface SpecializedEnterpriseService,
   id: string, nam,
   e: string, taglin,
   e: string, pric,
@@ -3174,7 +3174,7 @@ i,
   s: 145, benefit,
   s: [;' '60% decision accuracy improvement35% operational cost reduction_advanced ML algorithms_real - time predictions_custom model development' ], capabilitie,
   s: [,' 'Predictive modeling_time series forecasting_trend analysis_anomaly detection_scenario modeling' ],' market_advantag,
-  e: 'Advanced predictive analytics platform with custom ML model development' } ]; export default specializedEnterpriseServices; export default specializedEnterpriseServices; ; export default specializedEnterpriseServices; ' import { ServiceVariant } from '../types/service-variants'; export interface SpecializedEnterpriseService {/* TODO: Fix JSX expression */}
+  e: 'Advanced predictive analytics platform with custom ML model development' } ]; export default specializedEnterpriseServices; export default specializedEnterpriseServices; ; export default specializedEnterpriseServices; ' import {  ServiceVariant  } from '../types/service-variants'; export interface SpecializedEnterpriseService {/* TODO: Fix JSX expression */}
   s: string} websit,
   e: string} } realImplementatio,
   n: boolean, implementationDetail,

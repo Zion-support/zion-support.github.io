@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { MapPin, Clock, Users, Briefcase, ArrowRight, CheckCircle, Star, Heart, Zap, Shield } from 'lucide-react';
+import {  Link  } from 'react-router-dom';
+import {  MapPin, Clock, Users, Briefcase, ArrowRight, CheckCircle, Star, Heart, Zap, Shield  } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const CareersPage: React.FC = () => {
@@ -333,7 +333,7 @@ const CareersPage: React.FC = () => {
       </section>
       <Footer />
     </div>
-  ),
+  )
 }
 export default CareersPage;
   </Link>

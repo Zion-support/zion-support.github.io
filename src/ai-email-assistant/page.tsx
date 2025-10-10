@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import {  Link  } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
   return (
@@ -157,6 +157,6 @@ import Footer from '../components/Footer';
       </main>
       <Footer /></Footer>
     </div>
-  ),
+  )
 }
 export default PagePage;

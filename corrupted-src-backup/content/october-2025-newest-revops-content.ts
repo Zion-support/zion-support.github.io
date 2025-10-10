@@ -11,7 +11,7 @@ export interface RevOpsContent {
   author?: string
   valueProposition?: string
   highlights: string[],
-  metrics: {,
+  metrics: {
     [key: string]: string,
 export interface RevOpsContent {/* TODO: Fix JSX expression */}
   }
@@ -48,7 +48,7 @@ export const octoberNewestRevOpsContent: RevOpsContent[] = [
       pipelineVelocity: '3.2 x',
       revenue: '$127 M',
       efficiency: '85%'},
-    cta: {,
+    cta: {
       text: 'Read the Complete RevOps Guide',
       link: '/blog/ai-2025-oct-01-autonomous-revenue-operations-revolution'}},
   {

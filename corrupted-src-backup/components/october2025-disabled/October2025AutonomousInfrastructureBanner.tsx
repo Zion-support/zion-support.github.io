@@ -588,7 +588,7 @@ const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expres
               <div className="text-2xl font-bold text-white mb-1">1.8mo</div>
               <div>Average Payback Period</div>
       </div>
-  ),
+  )
 }
 export default October2025 AutonomousInfrastructureBanner;
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>"

@@ -1,29 +1,29 @@
 'use client';
-import React, {useState, useCallback}from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {Phone, Mail, MapPin, Clock, Send, CheckCircle}}from 'lucide-react';
+import React, {useState, useCallback} from 'react';
+import {  Helmet  } from 'react-helmet-async';
+import {  Phone, Mail, MapPin, Clock, Send, CheckCircle  } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const ContactPage: React.FC = () => {,
+const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({)
     name: '',
     email: '',
     company: '',
     phone: '',
     service: '',
-    message: '',})
+    message: ''})
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-  const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {,
+  const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const {name, value}}= e.target;
     setFormData(prev => ({)
       ...prev,
       [name]: value;}));
   }, []);
 
-  const handleSubmit = useCallback(async (e: React.FormEvent) => {,
+  const handleSubmit = useCallback(async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus('idle');
@@ -37,10 +37,11 @@ const ContactPage: React.FC = () => {,
         company: '',
         phone: '',
         service: '',
-        message: '',})
+        message: ''})
     } catch (error) {setSubmitStatus('error');}finally {setIsSubmitting(false);}}}, []);
 
-  return(<>)
+  return (
+    <>
       <Helmet />
         <title>Contact Us - Zion Tech Group</title>
         <meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions. Contact us for consultations, support, and inquiries." />
@@ -52,14 +53,14 @@ const ContactPage: React.FC = () => {,
         <div className="container mx-auto px-4 py-16">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h1 className="text-4xl md: text-5xl font-bold text-white mb-6">,</h1>
+              <h1>
                 Contact Us;
               </h1>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">Ready to transform your business? Get in touch with our experts for a free consultation.</p>
               </p>
             </div>
 
-            <div className="grid grid-cols-1 lg: grid-cols-2 gap-12">,</div>
+            <div>
               {/* Contact Information */} <div className="space-y-8">
                 <div>
                   <h2 className="text-2xl font-bold text-white mb-6">Get in Touch</h2>
@@ -69,8 +70,7 @@ const ContactPage: React.FC = () => {,
                       <div>
                         <h3 className="text-lg font-semibold text-white">Phone</h3>
                         <p className="text-gray-300">+1 302 464 0950</p>
-                        <p className="text-sm text-gray-400">Mon-Fri: 9AM-6PM EST</p>,
-                      </div>
+                        <p className="text-sm text-gray-400">Mon-Fri: 9AM-6PM EST</p></div>
                     </div>
                     
                     <div className="flex items-start space-x-4">
@@ -130,7 +130,7 @@ const ContactPage: React.FC = () => {,
                 )}
 
                 <form onSubmit={handleSubmit}className="space-y-6">
-                  <div className="grid grid-cols-1 md: grid-cols-2 gap-4">,</div>
+                  <div>
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                         Name *
@@ -160,7 +160,7 @@ const ContactPage: React.FC = () => {,
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 md: grid-cols-2 gap-4">,</div>
+                  <div>
                     <div>
                       <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
                         Company;

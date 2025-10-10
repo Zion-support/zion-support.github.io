@@ -1,8 +1,8 @@
-export const metadata: Metadata = {,
+export const metadata: Metadata = {
   title: 'About | Zion Tech Group',
   description: 'Discover the latest AI breakthroughs and enterprise automation solutions from Zion Tech Group.',
   keywords: 'AI, automation, enterprise, breakthrough, technology',
-  openGraph: {,
+  openGraph: {
     title: 'About',
     description: 'Discover the latest AI breakthroughs and enterprise automation solutions.',
     type: 'article'}}

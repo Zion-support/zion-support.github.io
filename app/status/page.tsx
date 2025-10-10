@@ -1,6 +1,6 @@
 'use client';
-import React, {useState, useEffect}from 'react';
-import {CheckCircle, XCircle, AlertTriangle, Clock, RefreshCw, Globe, Server, Database, Cloud, Shield, Zap, Activity, TrendingUp, Users, Eye, BarChart}}from 'lucide-react';
+import React, {useState, useEffect} from 'react';
+import {  CheckCircle, XCircle, AlertTriangle, Clock, RefreshCw, Globe, Server, Database, Cloud, Shield, Zap, Activity, TrendingUp, Users, Eye, BarChart  } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
@@ -19,37 +19,37 @@ const services = [
       uptime: '99.9%',
       responseTime: '45ms',
       lastIncident: '2024-01-15',
-      description: 'Core API endpoints and authentication',},
+      description: 'Core API endpoints and authentication'},
     {name: 'AI Services',
       status: 'operational',
       uptime: '99.8%',
       responseTime: '120ms',
       lastIncident: '2024-01-10',
-      description: 'Machine learning and AI processing',},
+      description: 'Machine learning and AI processing'},
     {name: 'Cloud Infrastructure',
       status: 'operational',
       uptime: '99.95%',
       responseTime: '25ms',
       lastIncident: '2024-01-05',
-      description: 'Cloud hosting and storage services',},
+      description: 'Cloud hosting and storage services'},
     {name: 'Database',
       status: 'operational',
       uptime: '99.9%',
       responseTime: '15ms',
       lastIncident: '2024-01-12',
-      description: 'Primary and backup databases',},
+      description: 'Primary and backup databases'},
     {name: 'CDN',
       status: 'operational',
       uptime: '99.99%',
       responseTime: '8ms',
       lastIncident: '2024-01-08',
-      description: 'Content delivery network',},
+      description: 'Content delivery network'},
     {name: 'Monitoring',
       status: 'operational',
       uptime: '100%',
       responseTime: '5ms',
       lastIncident: 'Never',
-      description: 'System monitoring and alerts',}}
+      description: 'System monitoring and alerts'}}
   ]
 const incidents = [
     {id: 1,
@@ -78,7 +78,7 @@ const getStatusIcon = (;
       case 'outage':;
         return <XCircle>
 
-      default: ;) => {,
+      default: ;) => {
   return($3;)
   )}return <Clock>}
     }
@@ -90,7 +90,7 @@ const getStatusColor = (;
         return 'text-yellow-400';
       case 'outage':;
         return 'text-red-400';
-      default: ;) => {,
+      default: ;) => {
   return($3;)
   )}return 'text-gray-400';}
     }
@@ -102,7 +102,7 @@ const getSeverityColor = (;
         return 'bg-orange-500/20 text-orange-400 border-orange-500/50';
       case 'minor':;
         return 'bg-yellow-500/20 text-yellow-400 border-yellow-500/50';
-      default: ;) => {,
+      default: ;) => {
   return($3;)
   )}return 'bg-gray-500/20 text-gray-400 border-gray-500/50';}
     }
@@ -142,8 +142,7 @@ return(</h1>)
         <div className="max-w-7xl mx-auto"></div>
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Service Status</h2>
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6"></div>,
-            {services.map((service, index) => (} <div key={index}className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover: border-purple-500/50 transition-all duration-300"></div>,
-                <div className="flex items-center justify-between mb-4"></div>
+            {services.map((service, index) => (} <div key={index}className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover: border-purple-500/50 transition-all duration-300"></div><div className="flex items-center justify-between mb-4"></div>
                   <div className="flex items-center gap-3"></div>
                     {getStatusIcon(service.status)} <h3 className="text-lg font-semibold text-white">{service.name}</h3>
                   </div>
@@ -152,16 +151,13 @@ return(</h1>)
                 <p className="text-gray-300 text-sm mb-4">{service.description</p>}</p>
                 <div className="space-y-2 text-sm"></div>
                   <div className="flex justify-between"></div>
-                    <span className="text-gray-400">Uptime: </span>,
-                    <span className="text-white">{service.uptime</span>}</span>
+                    <span className="text-gray-400">Uptime: </span><span className="text-white">{service.uptime</span>}</span>
                   </div>
                   <div className="flex justify-between"></div>
-                    <span className="text-gray-400">Response Time: </span>,
-                    <span className="text-white">{service.responseTime</span>}</span>
+                    <span className="text-gray-400">Response Time: </span><span className="text-white">{service.responseTime</span>}</span>
                   </div>
                   <div className="flex justify-between"></div>
-                    <span className="text-gray-400">Last Incident: </span>,
-                    <span className="text-white">{service.lastIncident</span>}</span>
+                    <span className="text-gray-400">Last Incident: </span><span className="text-white">{service.lastIncident</span>}</span>
                   </div>
                 </div>
               </div>
@@ -197,8 +193,7 @@ return(</h1>)
                 </div>
                 <p className="text-gray-300 mb-4">{incident.description</p>}</p>
                 <div />
-                  <span className="text-gray-400 text-sm">Affected Services: </span>,
-                  <span className="text-white text-sm">{incident.affectedServices.join(', ')</span>}</span>
+                  <span className="text-gray-400 text-sm">Affected Services: </span><span className="text-white text-sm">{incident.affectedServices.join(', ')</span>}</span>
                 </div>
               </div>
             ))}
@@ -215,8 +210,7 @@ return(</h1>)
         </section>
         <div className="max-w-7xl mx-auto"></div>
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Performance Metrics</h2>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6"></div>,
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center"></div>
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6"></div><div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center"></div>
               <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-lg flex items-center justify-center mx-auto mb-4"></div>
                 <TrendingUp />
               <div className="text-3xl font-bold text-white mb-2">99.9%</div>
@@ -256,8 +250,7 @@ return(</h1>)
           </h2>
           <p>Subscribe to status updates or contact our support team for more details.</p>
           </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
-            <button>Subscribe to Updates;</button>
+          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div><button>Subscribe to Updates;</button>
             </button>
             <button>Contact Support;</button>
             </button>

@@ -2,17 +2,17 @@
 
 // Sitemap generator utility;
 export interface SitemapUrl {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   lo,
   c: string;
   lastmod?: string
   changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
-  priority?: number,
+  priority?: number
 }
 export const _generateSitemap = (url)
   s: SitemapUrl[]): string => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   const baseUrl = 'http,
   s: //ziontechgroup.com'

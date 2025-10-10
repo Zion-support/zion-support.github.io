@@ -126,10 +126,10 @@ class AnalyticsTracker {
 }
     if (typeof window === 'undefined') return;
       if (window.gtag) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
         window.gtag('event', event.action, {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   event_categor,
   y: event.category,
@@ -143,7 +143,7 @@ class AnalyticsTracker {
       }
       // Also log to console in development;
       if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
         }
     }
@@ -181,13 +181,13 @@ class AnalyticsTracker {
 }
     if (typeof window === 'undefined') return;
     const track = () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       if (window.gtag) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
         window.gtag('event', 'performance', {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   event_categor,
   y: 'Web Vitals',
@@ -196,11 +196,11 @@ class AnalyticsTracker {
           valu)
   e: Math.round(metrics.value),
           metric_ratin,
-  g: metrics.rating,
+  g: metrics.rating
         });
       }
       if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
         }
     }
@@ -298,13 +298,13 @@ $4});
 }
     if (typeof window === 'undefined') return;
     const track = () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       if (window.gtag) {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
         window.gtag('event', 'timing_complete', {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   nam,
   e: variable,
@@ -313,11 +313,11 @@ $4});
           event_categor,
   y: category,
           event_labe,
-  l: label,
+  l: label
         });
       }
       if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
         }
     }
@@ -343,17 +343,17 @@ if (typeof window !== 'undefined') {
 export const analyticsTracker = new AnalyticsTracker();
 // Auto-initialize when window is available;
 if (typeof window !== 'undefined') {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
   if (document.readyState === 'complete') {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     analyticsTracker.initialize();
   } else {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
     window.addEventListener('load', () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content}
 }
       analyticsTracker.initialize();
     });

@@ -11,7 +11,7 @@
   contactInfo: unknown
     mobile: string
     email: string,
-export interface EmergingTechnologyService {,
+export interface EmergingTechnologyService {
     address: string}
   i,
   d: string,
@@ -75,7 +75,7 @@ export interface EmergingTechnologyService {/* TODO: Fix JSX expression */}
   realImplementation: boolean
   contactInfo: unknown,
     mobile: string, email: string
-    address: string,
+    address: string
   }
 }
 export const emergingTechnologyServices: EmergingTechnologyService[] = [,

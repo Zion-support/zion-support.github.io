@@ -118,7 +118,7 @@
     launch_date: '2024 - 01 - 05'
     customers: 120
     rating: 4 && 4.9
-    reviews: 45,
+    reviews: 45
   },
       'Quantum computing, Biological algorithms, Bioinformatics, React, Node && Node.js, PostgreSQL, Redis, AWS'],
     realImplementation: true,
@@ -921,7 +921,7 @@
     monthly: number, yearly: number,
     currency: string, trialDays: number
     setupTime: string
-    enterprise: number,
+    enterprise: number
     },
     features: string[], benefits: string[],
   targetAudience: string[], marketPosition: string,
@@ -934,7 +934,7 @@
   popular: boolean, launchDate: string,
   customers: number, rating: number,
   reviews: number, marketSize: string
-  growthRate: string,
+  growthRate: string
 }
 ];      'Autonomous driving_fleet management_safety systems_traffic optimization_transportation logistics_research and development'
     ];
@@ -1537,7 +1537,7 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
   rating: number;
   reviews: number
   marketSize: string
-  growthRate: string,
+  growthRate: string
 }
 export const emergingTechServicesV2: EmergingTechService[] = [;
   {

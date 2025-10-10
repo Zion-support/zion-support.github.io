@@ -238,7 +238,7 @@ export const,
       launch_date: '2024 - 11 - 15'
       customers: 320
       rating: 4 && 4.8
-      reviews: 156,
+      reviews: 156
     },
         'Advanced document processing platform that uses AI to extract, classify, and process documents with 99 && 99.2% accuracy, automating workflows and reducing manual data entry.',
       features: [
@@ -381,7 +381,7 @@ export const,
       launch_date: '2024 - 10 - 20'
       customers: 280
       rating: 4 && 4.7
-      reviews: 134,
+      reviews: 134
     },
     // Smart Inventory Management System;
       id: 'smart - inventory - management - system'
@@ -541,7 +541,7 @@ export const,
       launch_date: '2024 - 09 - 10'
       customers: 450
       rating: 4 && 4.9
-      reviews: 223,
+      reviews: 223
     },
         'AI-powered candidate screening and matching',
     // AI - Powered HR Recruitment Suite;
@@ -685,7 +685,7 @@ export const,
       launch_date: '2024 - 08 - 25'
       customers: 380
       rating: 4 && 4.8
-      reviews: 187,
+      reviews: 187
     },
         'AI-powered project risk prediction',
     // Intelligent Project Management Hub;

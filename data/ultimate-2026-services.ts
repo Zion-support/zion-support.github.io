@@ -10,7 +10,7 @@
   contactInfo: unknown
     mobile: string
     email: string,
-export interface Ultimate2026Service {,
+export interface Ultimate2026Service {
     address: string}
 }
   id: string
@@ -22,7 +22,7 @@ export interface Ultimate2026Service {,
   link: string
   category: string
   realImplementation: boolean,
-  contactInfo: {,
+  contactInfo: {
     mobile: string,
     email: string}
     address: string}
@@ -114,7 +114,7 @@ export const,
   realImplementation: boolean
   contactInfo: unknown,
     mobile: string, email: string
-    address: string,
+    address: string
   }
 }
 export const ultimate2026 Services: Ultimate2026 Service[] = [,

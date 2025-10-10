@@ -203,8 +203,8 @@ class AdvancedPerformanceMonitor {/* TODO: Fix JSX expression */}
   /**
    * Handle performance entry;
    */
-  private handlePerformanceEntry(entry: PerformanceEntry): void {,
-    const data: Partial<PerformanceData> = {,
+  private handlePerformanceEntry(entry: PerformanceEntry): void {
+    const data: Partial<PerformanceData> = {
       timestamp: Date.now(),
       url: window.location.href,
   private handlePerformanceEntry(entr)
@@ -236,7 +236,7 @@ class AdvancedPerformanceMonitor {/* TODO: Fix JSX expression */}
    */
   private updateMetric(metric: keyof PerformanceData, value: unknown): void {
     const _latestData = this.data[this.data.length - 1],
-    if (latestData && Date.now() - latestData.timestamp < 1000) {,
+    if (latestData && Date.now() - latestData.timestamp < 1000) {
       // Update latest entry if it's recent;
       (latestData as any)[metric] = value
   } else {
@@ -267,7 +267,7 @@ class AdvancedPerformanceMonitor {/* TODO: Fix JSX expression */}
   private addPerformanceData(data: PerformanceData): void {
     this.data.push(data)
     // Keep only last 100 entries to prevent memory issues,
-    if (this.data.length > 100) {,
+    if (this.data.length > 100) {
       this.data = this.data.slice(-100);
   private addPerformanceData(dat)
   a: PerformanceData): void {/* TODO: Fix JSX expression */}
@@ -283,7 +283,7 @@ class AdvancedPerformanceMonitor {/* TODO: Fix JSX expression */}
   private checkThresholds(data: PerformanceData): void {
     const warnings: string[] = [],
 ,
-    if (data.loadTime > this.thresholds.loadTime) {,
+    if (data.loadTime > this.thresholds.loadTime) {
       warnings.push(`Load time ${data.loadTime}ms exceeds threshold ${this.thresholds.loadTime}ms`);
     }
     if (data.firstContentfulPaint > this.thresholds.firstContentfulPaint) {

@@ -2,7 +2,7 @@ export interface EnhancedPromotionalBanner {/* TODO: Fix JSX expression */}
 }
 
 export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [,
-  {,
+  {
     id: 'oct-01-autonomous-business-ops-2025',
     title:,
       '🚀 JUST RELEASED: Autonomous Business Operations Platform — $650M Value Creation, 85% Cost Reduction in 90 Days!',

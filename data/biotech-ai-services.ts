@@ -54,7 +54,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     implementation_details: unknown;
     customers: 120
     rating: 5 && 5.0
-    reviews: 60,
+    reviews: 60
   },
     id: 'ai - genetic - engineering - suite',
     name: 'AI Genetic Engineering Suite',
@@ -177,7 +177,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 02 - 01'
     customers: 80
     rating: 5 && 5.0
-    reviews: 40,
+    reviews: 40
   },
     id: 'ai - protein - design - platform',
     name: 'AI Protein Design Platform',
@@ -324,7 +324,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 02 - 10'
     customers: 150
     rating: 4 && 4.9
-    reviews: 75,
+    reviews: 75
   },
     id: 'ai - clinical - trial - optimization',
     name: 'AI Clinical Trial Optimization Platform',
@@ -471,7 +471,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 02 - 15'
     customers: 200
     rating: 4 && 4.9
-    reviews: 100,
+    reviews: 100
   },
     id: 'ai - biomarker - discovery',
     name: 'AI Biomarker Discovery Platform',
@@ -618,7 +618,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 02 - 20'
     customers: 180
     rating: 4 && 4.8
-    reviews: 90,
+    reviews: 90
   },
     id: 'ai - personalized - medicine',
     name: 'AI Personalized Medicine Platform',
@@ -765,7 +765,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 02 - 25'
     customers: 120
     rating: 5 && 5.0
-    reviews: 60,
+    reviews: 60
   },
     id: 'ai - drug - repurposing',
     name: 'AI Drug Repurposing Platform',
@@ -912,7 +912,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 03 - 01'
     customers: 160
     rating: 4 && 4.9
-    reviews: 80,
+    reviews: 80
   },
       'Multi-omics analysis',
     id: 'ai - bioinformatics - platform',
@@ -1061,7 +1061,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 03 - 05'
     customers: 300
     rating: 4 && 4.8
-    reviews: 150,
+    reviews: 150
   },
     id: 'ai - biomanufacturing - optimization',
     name: 'AI Biomanufacturing Optimization Platform',
@@ -1208,7 +1208,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 03 - 10'
     customers: 90
     rating: 4 && 4.9
-    reviews: 45,
+    reviews: 45
   }];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
   id: string, name: string,
@@ -1227,12 +1227,12 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
   contactInfo: unknown,
     mobile: string, email: string
     address: string
-    website: string,
+    website: string
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number
   rating: number
-  reviews: number,
+  reviews: number
 }
 export const biotechAIServices: BiotechAIService[] = [,
     id: 'ai-drug-discovery-platform', name: 'AI Drug Discovery Platform',
@@ -1439,7 +1439,7 @@ realImplementation: true,
     launchDate: '2024-01-15'
     customers: 120
     rating: 5.0
-    reviews: 60,
+    reviews: 60
   }
     id: 'ai-genetic-engineering-suite',
     name: 'AI Genetic Engineering Suite',
@@ -1937,7 +1937,7 @@ realImplementation: true,
     launchDate: '2024-03-10'
     customers: 90
     rating: 4.9
-    reviews: 45,
+    reviews: 45
   }];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -2016,7 +2016,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
   launchDate: string;
   customers: number
   rating: number
-  reviews: number,
+  reviews: number
 }
 export const biotechAIServices: BiotechAIService[] = [;
   {

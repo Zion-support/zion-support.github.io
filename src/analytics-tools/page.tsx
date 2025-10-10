@@ -1,6 +1,6 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import {CheckCircle, Star, TrendingUp, Brain, Target, BarChart, Phone, Mail, MapPin} from 'lucide-react';
+import {  Helmet  } from 'react-helmet-async';
+import { CheckCircle, Star, TrendingUp, Brain, Target, BarChart, Phone, Mail, MapPin } from 'lucide-react';
 import React from 'react';
 const AnalyticsToolsPage: React.FC = () => {
   const analyticsTools = [
@@ -59,7 +59,7 @@ icon$5: Brain,
       description: 'Leverage advanced AI algorithms for deeper insights and automation'
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-import { Link } from 'react-router-dom';
+import {  Link  } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const PagePage: React.FC = () => {
@@ -242,7 +242,7 @@ Why Choose Our Analytics Tools?"
               href="mailto:kleber@ziontechgroup.com"
               className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
               Email Us
-  ),
+  )
 }
 Ready to Unlock Your Data?
           <p className="text-xl text-purple-100 mb-8">
@@ -252,7 +252,7 @@ Ready to Unlock Your Data?
 Call (302) 464-0950
               href="mailto:kleber@ziontechgroup.com" className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
               Email Us
-  ),
+  )
 }
 export default AnalyticsToolsPage;
   </div>

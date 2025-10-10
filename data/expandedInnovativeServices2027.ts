@@ -18,10 +18,10 @@ export type ExpandedService2027 =
       starter: number;
       professional: number
       enterprise: number
-      custom: string,
+      custom: string
     }
     freeTier: boolean
-    trialPeriod: string,
+    trialPeriod: string
   }
   marketPrice: string;
   competitors: string[];
@@ -36,14 +36,14 @@ export type ExpandedService2027 =
     phone: string;
     email: string
     website: string
-    address: string,
+    address: string
   }
   technicalSpecs: unknown;
     uptime: string;
     security: string[];
     compliance: string[]
     apiEndpoints: number
-    scalability: string,
+    scalability: string
   }
   support: string;
   rating: number
@@ -2199,18 +2199,18 @@ export const getExpandedServicesByCategory = (category: string): ExpandedService
 export const getExpandedServicesByCategory = (categor)
   y: string): ExpandedService2027[] =>
   if (category === 'All')
-    return ALL_EXPANDED_SERVICES_2027,
+    return ALL_EXPANDED_SERVICES_2027
   }
   return ALL_EXPANDED_SERVICES_2027.filter(service => service.category === category);
 }
 // Helper function to get services by subcategory;
 export const getExpandedServicesBySubcategory = (subcategory: string): ExpandedService2027[] =>
-  return ALL_EXPANDED_SERVICES_2027.filter(service => service.subcategory === subcategory),}
+  return ALL_EXPANDED_SERVICES_2027.filter(service => service.subcategory === subcategory)}
 // Helper function to search services;
 export const searchExpandedServices = (query: string): ExpandedService2027[] =>
 export const getExpandedServicesBySubcategory = (subcategor)
   y: string): ExpandedService2027[] =>
-  return ALL_EXPANDED_SERVICES_2027.filter(service => service.subcategory === subcategory),
+  return ALL_EXPANDED_SERVICES_2027.filter(service => service.subcategory === subcategory)
 }
 // Helper function to search services;
 export const searchExpandedServices = (quer)
@@ -2828,6 +2828,6 @@ export const searchExpandedServices = (quer)
   s: 289,' launchDat,
   e: '2027-01-15',' statu,
   s: 'active' } ]; // Export all expanded services export const ALL_EXPANDED_SERVICES_2027 = [ ...advancedCybersecurityServices, ...advancedDataAnalyticsServices, ...advancedCloudDevOpsServices, ...advancedIoTServices, ...advancedFinTechServices, ...advancedHealthcareServices ]; // Service categories for filtering export const EXPANDED_SERVICE_CATEGORIES = [' 'All',' 'Cybersecurity',' 'Data Analytics',' 'Cloud & DevOps',' 'IoT & Edge Computing',' 'Financial Technology',' 'Healthcare Technology' ]; // Helper function to get services by category export const getExpandedServicesByCategory = (categor)
-  y: string): ExpandedService2027[] => ' if (category === 'All') return ALL_EXPANDED_SERVICES_2027, } return ALL_EXPANDED_SERVICES_2027.filter(service => service.category === category); } // Helper function to get services by subcategory export const getExpandedServicesBySubcategory = (subcategor)
-  y: string): ExpandedService2027[] => return ALL_EXPANDED_SERVICES_2027.filter(service => service.subcategory === subcategory), } // Helper function to search services export const searchExpandedServices = (quer)
-  y: string): ExpandedService2027[] => const lowercaseQuery = query.toLowerCase(); return ALL_EXPANDED_SERVICES_2027.filter(service => service.name.toLowerCase().includes(lowercaseQuery) || service.description.toLowerCase().includes(lowercaseQuery) || service.category.toLowerCase().includes(lowercaseQuery) || service.subcategory.toLowerCase().includes(lowercaseQuery) || service.category.toLowerCase().includes(lowercaseQuery) || service.subcategory.toLowerCase().includes(lowercaseQuery) ), }'
+  y: string): ExpandedService2027[] => ' if (category === 'All') return ALL_EXPANDED_SERVICES_2027 } return ALL_EXPANDED_SERVICES_2027.filter(service => service.category === category); } // Helper function to get services by subcategory export const getExpandedServicesBySubcategory = (subcategor)
+  y: string): ExpandedService2027[] => return ALL_EXPANDED_SERVICES_2027.filter(service => service.subcategory === subcategory) } // Helper function to search services export const searchExpandedServices = (quer)
+  y: string): ExpandedService2027[] => const lowercaseQuery = query.toLowerCase(); return ALL_EXPANDED_SERVICES_2027.filter(service => service.name.toLowerCase().includes(lowercaseQuery) || service.description.toLowerCase().includes(lowercaseQuery) || service.category.toLowerCase().includes(lowercaseQuery) || service.subcategory.toLowerCase().includes(lowercaseQuery) || service.category.toLowerCase().includes(lowercaseQuery) || service.subcategory.toLowerCase().includes(lowercaseQuery) ) }'
