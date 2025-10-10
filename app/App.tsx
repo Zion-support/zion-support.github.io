@@ -1,113 +1,200 @@
 'use client';
+
 import React, { Suspense, lazy, useEffect } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+// Components
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import PerformanceDashboard from './components/PerformanceDashboard';
+import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
+import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
+import SEOEnhancer from './components/SEOEnhancer';
+import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
+import LoadingSpinner from './components/LoadingSpinner';
+import Navigation from './components/Navigation';
+import Footer from './components/Footer';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
+import Analytics from './components/Analytics';
+
+// Lazy load components for better performance
+const _ContentShowcase = lazy(() => import('./components/ContentShowcase'));
+const InteractiveContentShowcase2026 = lazy(
+  () => import('./components/InteractiveContentShowcase2026')
+);
+const InteractiveAIROICalculator = lazy(
+  () => import('./components/InteractiveAIROICalculator')
+);
 
 // Lazy load pages for better performance
-const HomePage = lazy(() => import('./page'));
-const AboutPage = lazy(() => import('./about/page'));
-const ContactPage = lazy(() => import('./contact/page'));
-const ServicesPage = lazy(() => import('./services/page'));
-const PricingPage = lazy(() => import('./pricing/page'));
-const CaseStudiesPage = lazy(() => import('./case-studies/page'));
-const BlogPage = lazy(() => import('./blog/page'));
-const TeamPage = lazy(() => import('./team/page'));
-const CareersPage = lazy(() => import('./careers/page'));
+const _HomePage = lazy(() => import('./page'));
+const _AboutPage = lazy(() => import('./about/page'));
+const _ServicesPage = lazy(() => import('./services/page'));
+const _ContactPage = lazy(() => import('./contact/page'));
+const _TeamPage = lazy(() => import('./team/page'));
+const _PrivacyPage = lazy(() => import('./privacy/page'));
+const _TermsPage = lazy(() => import('./terms/page'));
+const _EnterprisePage = lazy(() => import('./enterprise/page'));
+const _ServicesAdvertisingPage = lazy(() => import('./services-advertising/page'));
+const _CaseStudiesPage = lazy(() => import('./case-studies/page'));
+const _SitemapPage = lazy(() => import('./sitemap/page'));
 
-// AI Services
-const AiServicesPage = lazy(() => import('./ai-services/page'));
-const AiMarketingPage = lazy(() => import('./ai-marketing/page'));
-const AiAutomationPage = lazy(() => import('./ai-automation/page'));
-const AiHealthcarePage = lazy(() => import('./ai-healthcare/page'));
-const AiFintechPage = lazy(() => import('./ai-fintech/page'));
-const AiContentGenerationPage = lazy(() => import('./ai-content-generation/page'));
-const AiDataAnalyticsPage = lazy(() => import('./ai-data-analytics/page'));
-const AiCybersecurityPage = lazy(() => import('./ai-cybersecurity/page'));
-const AiWorkflowAutomationPage = lazy(() => import('./ai-workflow-automation/page'));
-const AiCustomerSupportPage = lazy(() => import('./ai-customer-support/page'));
-const AiSalesAutomationPage = lazy(() => import('./ai-sales-automation/page'));
-const AiDataVisualizationPage = lazy(() => import('./ai-data-visualization/page'));
+// Utils
+import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics, performanceOptimizer } from './utils/performanceOptimizer';
+import { logger } from './utils/logger';
+import performanceMonitor from './utils/performanceMonitor';
+import seoOptimizer from './utils/seoOptimizer';
+import accessibilityEnhancer from './utils/accessibilityEnhancer';
 
-// IT Services
-const ItServicesPage = lazy(() => import('./it-services/page'));
-const ItInfrastructurePage = lazy(() => import('./it-infrastructure/page'));
-const CloudServicesPage = lazy(() => import('./cloud-services/page'));
-const CybersecurityPage = lazy(() => import('./cybersecurity/page'));
-const DevOpsPage = lazy(() => import('./devops/page'));
-const DatabasePage = lazy(() => import('./database/page'));
-const MobileDevelopmentPage = lazy(() => import('./mobile-development/page'));
-const WebDevelopmentPage = lazy(() => import('./web-development/page'));
+// Styles
+import './globals.css';
 
-// Loading component
-const LoadingSpinner: React.FC = React.memo(() => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-    <div className="text-center">
-      <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-400 mx-auto mb-4"></div>
-      <p className="text-cyan-400 text-lg">Loading Zion Tech Group...</p>
-    </div>
-  </div>
-));
-
-// Main App component
 const App: React.FC = () => {
   useEffect(() => {
-    // Preload critical resources
-    const preloadCriticalResources = () => {
-      // Preload critical CSS
-      const criticalCSS = document.createElement('link');
-      criticalCSS.rel = 'preload';
-      criticalCSS.href = '/styles/critical.css';
-      criticalCSS.as = 'style';
-      document.head.appendChild(criticalCSS);
-    };
+    // Initialize global error handling
+    logger.info('initialized', { component: 'App' });
 
+    // Initialize performance monitoring
+    lazyLoadImages();
     preloadCriticalResources();
+    performanceOptimizer.init();
+    performanceMonitor.init();
+    
+    // Initialize SEO optimization
+    seoOptimizer.init();
+    
+    // Initialize accessibility enhancements
+    accessibilityEnhancer.init();
+    
+    // Initialize Web Vitals monitoring
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      const pageLoadMetrics = collectPerformanceMetrics();
+      const metrics = performanceOptimizer.getMetrics();
+      const performanceMetrics = performanceMonitor.getMetrics();
+      
+      if (pageLoadMetrics) {
+        // eslint-disable-next-line no-console
+        console.log('Performance metrics collected:', pageLoadMetrics);
+      }
+      if (metrics) {
+        // eslint-disable-next-line no-console
+        console.log('Performance metrics:', metrics);
+      }
+      if (performanceMetrics) {
+        // eslint-disable-next-line no-console
+        console.log('Core Web Vitals:', performanceMetrics);
+      }
+    }
+    
+    // Log performance and accessibility metrics periodically
+    const metricsInterval = setInterval(() => {
+      const performanceMetrics = performanceMonitor.getMetrics();
+      const accessibilityMetrics = accessibilityEnhancer.getMetrics();
+      
+      if (process.env.NODE_ENV === 'development') {
+        // eslint-disable-next-line no-console
+        console.log('Performance Score:', performanceMonitor.getScore());
+        // eslint-disable-next-line no-console
+        console.log('Accessibility Score:', accessibilityMetrics.overallScore);
+      }
+    }, 30000);
+    
+    logger.info('performance monitoring initialized', { component: 'App' });
+    logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', { component: 'App' });
+
+    return () => {
+      // Cleanup
+      performanceOptimizer.cleanup();
+      performanceMonitor.cleanup();
+      accessibilityEnhancer.cleanup();
+      clearInterval(metricsInterval);
+    };
   }, []);
 
   return (
     <HelmetProvider>
-      <BrowserRouter>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-          <Suspense fallback={<LoadingSpinner />}>
-            <Routes>
-              {/* Main Pages */}
-              <Route path="/" element={<HomePage />} />
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/contact" element={<ContactPage />} />
-              <Route path="/services" element={<ServicesPage />} />
-              <Route path="/pricing" element={<PricingPage />} />
-              <Route path="/case-studies" element={<CaseStudiesPage />} />
-              <Route path="/blog" element={<BlogPage />} />
-              <Route path="/team" element={<TeamPage />} />
-              <Route path="/careers" element={<CareersPage />} />
-
-              {/* AI Services */}
-              <Route path="/ai-services" element={<AiServicesPage />} />
-              <Route path="/ai-marketing" element={<AiMarketingPage />} />
-              <Route path="/ai-automation" element={<AiAutomationPage />} />
-              <Route path="/ai-healthcare" element={<AiHealthcarePage />} />
-              <Route path="/ai-fintech" element={<AiFintechPage />} />
-              <Route path="/ai-content-generation" element={<AiContentGenerationPage />} />
-              <Route path="/ai-data-analytics" element={<AiDataAnalyticsPage />} />
-              <Route path="/ai-cybersecurity" element={<AiCybersecurityPage />} />
-              <Route path="/ai-workflow-automation" element={<AiWorkflowAutomationPage />} />
-              <Route path="/ai-customer-support" element={<AiCustomerSupportPage />} />
-              <Route path="/ai-sales-automation" element={<AiSalesAutomationPage />} />
-              <Route path="/ai-data-visualization" element={<AiDataVisualizationPage />} />
-
-              {/* IT Services */}
-              <Route path="/it-services" element={<ItServicesPage />} />
-              <Route path="/it-infrastructure" element={<ItInfrastructurePage />} />
-              <Route path="/cloud-services" element={<CloudServicesPage />} />
-              <Route path="/cybersecurity" element={<CybersecurityPage />} />
-              <Route path="/devops" element={<DevOpsPage />} />
-              <Route path="/database" element={<DatabasePage />} />
-              <Route path="/mobile-development" element={<MobileDevelopmentPage />} />
-              <Route path="/web-development" element={<WebDevelopmentPage />} />
-            </Routes>
-          </Suspense>
-        </div>
-      </BrowserRouter>
+      <AdvancedErrorBoundary
+        enableErrorReporting={true}
+        enableRetry={true}
+        onError={(error, errorInfo) => {
+          logger.error(error.message, { error, errorInfo });
+        }}
+      >
+        <PerformanceOptimizer>
+          <AccessibilityEnhancer>
+            <SEOEnhancer
+              title="Zion Tech Group - Advanced AI and IT Solutions"
+              description="Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology."
+            >
+              <AdvancedSEOOptimizer
+                config={{
+                  title: 'Zion Tech Group - Advanced AI and IT Solutions',
+                  description: 'Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology.',
+                  keywords: ['AI solutions', 'enterprise AI', 'quantum computing', 'autonomous systems', 'digital transformation', 'automation', 'cloud services', 'AI consulting', 'business intelligence', 'machine learning'],
+                  canonicalUrl: 'https://ziontechgroup.com',
+                  ogImage: 'https://ziontechgroup.com/og-image.jpg',
+                  structuredData: {
+                    '@type': 'TechCompany',
+                    name: 'Zion Tech Group',
+                    description: 'Advanced AI and IT Solutions Provider',
+                    foundingDate: '2020',
+                    numberOfEmployees: '50-100',
+                    industry: 'Technology',
+                    services: [
+                      'AI Solutions',
+                      'Digital Transformation',
+                      'Cloud Services',
+                      'Automation',
+                      'Business Intelligence'
+                    ]
+                  }
+                }}
+                enableStructuredData={true}
+                enableOpenGraph={true}
+                enableTwitterCards={true}
+                enableSchemaMarkup={true}
+              />
+              <Router>
+                <div className="App">
+                  <Analytics trackingId="G-XXXXXXXXXX" />
+                  <Navigation />
+                  <main id="main-content">
+                    <Suspense fallback={<LoadingSpinner />}>
+                      <Routes>
+                        <Route path="/" element={<_HomePage />} />
+                        <Route path="/about" element={<_AboutPage />} />
+                        <Route path="/services" element={<_ServicesPage />} />
+                        <Route path="/contact" element={<_ContactPage />} />
+                        <Route path="/team" element={<_TeamPage />} />
+                        <Route path="/privacy" element={<_PrivacyPage />} />
+                        <Route path="/terms" element={<_TermsPage />} />
+                        <Route path="/enterprise" element={<_EnterprisePage />} />
+                        <Route path="/services-advertising" element={<_ServicesAdvertisingPage />} />
+                        <Route path="/case-studies" element={<_CaseStudiesPage />} />
+                        <Route path="/sitemap" element={<_SitemapPage />} />
+                      </Routes>
+                    </Suspense>
+                  </main>
+                  <Footer />
+                  
+                  {/* Performance Dashboard */}
+                  <PerformanceDashboard />
+                  
+                  {/* Advanced Performance Monitor */}
+                  <AdvancedPerformanceMonitor
+                    enableRealTimeMonitoring={process.env['NODE_ENV'] === 'development'}
+                    onMetricsUpdate={(metrics) => {
+                      if (process.env['NODE_ENV'] === 'development') {
+                        logger.info('Performance Metrics', { component: 'PerformanceMonitor', metrics });
+                      }
+                    }}
+                  />
+                </div>
+              </Router>
+            </SEOEnhancer>
+          </AccessibilityEnhancer>
+        </PerformanceOptimizer>
+      </AdvancedErrorBoundary>
     </HelmetProvider>
   );
 };
