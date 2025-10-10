@@ -179,6 +179,7 @@ const ConsultationPage: React.FC = () => {
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Consultation Form */}
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto">
@@ -278,6 +279,25 @@ const ConsultationPage: React.FC = () => {
                   >
                     <Calendar className="w-5 h-5 mr-2" />
                     Schedule Consultation
+=======
+      {/* Consultation Form */}
+      <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
+              <h2 className="text-3xl font-bold text-white mb-6">Schedule Your Consultation</h2>
+              
+              {isSubmitted ? (
+                <div className="text-center py-12">
+                  <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
+                  <h3 className="text-2xl font-bold text-white mb-2">Consultation Scheduled!</h3>
+
+                  <p className="text-gray-300 mb-6">
+                    Schedule your free consultation and let's discuss how we can help transform your business.
+                  </p>
+                  <button className="w-full bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
+                    Schedule Free Consultation
+                    <ArrowRight className="inline-block ml-2 w-4 h-4" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2d0
                   </button>
                 </form>
               </div>
@@ -340,9 +360,17 @@ const ConsultationPage: React.FC = () => {
               </div>
             </div>
           </div>
+<<<<<<< HEAD
         </section>
       </div>
     </>
+=======
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2d0
   );
 };
 

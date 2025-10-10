@@ -196,9 +196,14 @@ const PartnersPage: React.FC = () => {
             </button>
           </div>
         </section>
+<<<<<<< HEAD
 >>>>>>> origin/main
       </div>
     </>
+=======
+      </div>
+    </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2d0
   );
 };
 
