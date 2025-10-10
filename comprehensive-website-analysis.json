@@ -1,0 +1,22 @@
+{
+  "timestamp": "2025-10-10T12:21:49.763Z",
+  "baseUrl": "https://ziontechgroup.com",
+  "summary": {
+    "totalLinks": 1,
+    "workingLinks": 1,
+    "brokenLinks": 0,
+    "missingPages": 0,
+    "errors": 0
+  },
+  "workingLinks": [
+    {
+      "url": "https://ziontechgroup.com",
+      "statusCode": 200,
+      "depth": 0,
+      "title": "No title found"
+    }
+  ],
+  "brokenLinks": [],
+  "missingPages": [],
+  "errors": []
+}

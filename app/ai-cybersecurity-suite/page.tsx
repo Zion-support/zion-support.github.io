@@ -39,60 +39,12 @@ const PagePage: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Page | Zion Tech Group</title>
         <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
       </Helmet>
-=======
-    <ErrorBoundary></ErrorBoundar>
-      <SEOHead 
-        title="AI Cybersecurity Suite - Advanced Threat Protection | Zion Tech Group"
-        description="Comprehensive AI-powered cybersecurity solutions with real-time threat detection, automated response, and advanced analytics. Starting at $1,999/month."
-        keywords="AI cybersecurity, threat detection, security automation, cyber defense, AI security, threat intelligence, security analytics"
-        canonical="https://ziontechgroup.com/ai-cybersecurity-suite"
-      /></SEOHea>
-      <Navigation /></Navigatio>
-      
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900"></mai>
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto"></section>
-            <div className="text-center"></div>
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-red-100 text-red-800 text-sm font-medium mb-6"></div>
-                <Shield className="w-4 h-4 mr-2" />
-                AI Security Technology
-              </div>
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
-                AI Cybersecurity Suite</h1>
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-400">
-                  Advanced Threat Protection
-                </span>
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto">
-                Protect your organization with AI-powered cybersecurity solutions. Real-time threat detection, 
-                automated response, and advanced analytics for comprehensive security.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-                <a 
-                  href="#pricing" 
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-600 to-orange-600 text-white font-semibold rounded-lg hover:from-red-700 hover:to-orange-700 transition-all duration-300 transform hover:scale-105"
-                ></a></<<<a>Get</a></<<a>Security</a> Assessment
-                  <ArrowRight className="ml-2 w-5 h-5" /></ArrowRigh>
-                </a>
-                <a 
-                  href="#demo" 
-                  className="inline-flex items-center px-8 py-4 border border-red-400 text-red-400 font-semibold rounded-lg hover:bg-red-400 hover:text-white transition-all duration-300"
-                ></a>
-                  <Eye className="mr-2 w-5 h-5" /></Eye></<<<Eye>View</Eye></<<Eye>Demo</Eye>
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -192,17 +144,9 @@ const PagePage: React.FC = () => {
               </button>
             </div>
           </div>
-<<<<<<< HEAD
         </div>
       </section>
     </div>
-=======
-        </section>
-      </main>
-
-      <Footer /></Footer>
-    </ErrorBoundary>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
   );
 };
 

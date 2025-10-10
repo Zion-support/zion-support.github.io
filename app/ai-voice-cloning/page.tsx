@@ -39,7 +39,6 @@ const PagePage: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Page | Zion Tech Group</title>
@@ -70,50 +69,6 @@ const PagePage: React.FC = () => {
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                 Learn More
               </button>
-=======
-    <ErrorBoundary></ErrorBoundar>
-      <SEOHead 
-        title="AI Voice Cloning Pro - Professional Voice Synthesis | Zion Tech Group"
-        description="Create realistic voice clones with our advanced AI voice cloning technology. Perfect for content creators, businesses, and developers. Starting at $199/month."
-        keywords="AI voice cloning, voice synthesis, text to speech, voice generation, AI voice technology, voice cloning software"
-        canonical="https://ziontechgroup.com/ai-voice-cloning"
-      /></SEOHea>
-      <Navigation /></Navigatio>
-      
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></mai>
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto"></section>
-            <div className="text-center"></div>
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-100 text-purple-800 text-sm font-medium mb-6"></div>
-                <Mic className="w-4 h-4 mr-2" />
-                AI Voice Technology
-              </div>
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
-                AI Voice Cloning</h1>
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
-                  Professional Voice Synthesis
-                </span>
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto">
-                Create realistic voice clones with our advanced AI technology. Perfect for content creators, 
-                businesses, and developers who need high-quality voice synthesis.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-                <a 
-                  href="#pricing" 
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
-                ></a></<<<a>Start</a></<<a>Free</a> Trial
-                  <ArrowRight className="ml-2 w-5 h-5" /></ArrowRigh>
-                </a>
-                <a 
-                  href="#demo" 
-                  className="inline-flex items-center px-8 py-4 border border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300"
-                ></a>
-                  <Play className="mr-2 w-5 h-5" /></Play></<<<Play>Watch</Play></<<Play>Demo</Play>
-                </a>
-              </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
             </div>
           </div>
         </div>
@@ -189,37 +144,9 @@ const PagePage: React.FC = () => {
               </button>
             </div>
           </div>
-<<<<<<< HEAD
         </div>
       </section>
     </div>
-=======
-        </section>
-
-        {/* Contact Info */}
-        <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-900">
-          <div className="max-w-4xl mx-auto text-center"></section>
-            <div className="grid md:grid-cols-3 gap-8 text-white"></div>
-              <div className="flex items-center justify-center"></div>
-                <Phone className="w-5 h-5 mr-2" />
-                <span>+1 302 464 0950</span>
-              </div>
-              <div className="flex items-center justify-center"></div>
-                <Mail className="w-5 h-5 mr-2" />
-                <span>kleber@ziontechgroup.com</span>
-              </div>
-              <div className="flex items-center justify-center"></div>
-                <MapPin className="w-5 h-5 mr-2" />
-                <span>364 E Main St STE 1008, Middletown DE 19709</span>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
-
-      <Footer /></Footer>
-    </ErrorBoundary>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
   );
 };
 

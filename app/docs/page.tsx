@@ -75,7 +75,6 @@ export default function DocsPage() {
       />
       <Navigation />
       
-<<<<<<< HEAD
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
@@ -103,38 +102,6 @@ export default function DocsPage() {
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
               />
-=======
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
-        <Navigation />
-        
-        <main className="pt-20">
-          <div className="container mx-auto px-4 py-16"></div>
-            <div className="max-w-4xl mx-auto"></div>
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
-                Documentation</h1>
-              </h1>
-              
-              <div className="prose prose-lg max-w-none"></div>
-                <p className="text-xl text-gray-600 mb-8">
-                  Welcome to our documentation center. Find everything you need to get started with our services.
-                </p>
-                
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">Getting Started</h2>
-                <p className="text-gray-700 mb-6">
-                  Learn how to set up and configure our AI and IT services for your business.
-                </p>
-                
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">API Reference</h2>
-                <p className="text-gray-700 mb-6">
-                  Complete API documentation with examples and code snippets.
-                </p>
-                
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">Tutorials</h2>
-                <p className="text-gray-700 mb-6">
-                  Step-by-step guides to help you make the most of our platform.
-                </p>
-              </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
             </div>
           </div>
         </div>

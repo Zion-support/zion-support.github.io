@@ -39,7 +39,6 @@ const LoadingPage: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Loading | Zion Tech Group</title>
@@ -147,25 +146,6 @@ const LoadingPage: React.FC = () => {
           </div>
         </div>
       </section>
-=======
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center"></div>
-      <div className="text-center"></div>
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div><p className="text-gray-600">Loading...</p>
-      </div>
-    </div>
-  return(<div className="min-h-screen bg-gray-50 flex items-center justify-center"></div>
-      <div className="text-center">)</div>
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>)
-        <p className="text-gray-600">Loading...</p>)
-      </div>)
-    </div>)
-  return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center"></div>
-      <div className="text-center"></div>
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
-        <p className="text-gray-600">Loading...</p>
-      </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
     </div>
   );
 };

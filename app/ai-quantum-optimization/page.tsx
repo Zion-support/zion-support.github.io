@@ -39,60 +39,12 @@ const PagePage: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Page | Zion Tech Group</title>
         <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
       </Helmet>
-=======
-    <ErrorBoundary></ErrorBoundar>
-      <SEOHead 
-        title="AI Quantum Optimization Platform - Next-Gen Computing | Zion Tech Group"
-        description="Revolutionary quantum optimization platform powered by AI. Solve complex problems with quantum computing. Starting at $2,999/month."
-        keywords="quantum optimization, quantum computing, AI quantum, quantum algorithms, quantum machine learning, quantum solutions"
-        canonical="https://ziontechgroup.com/ai-quantum-optimization"
-      /></SEOHea>
-      <Navigation /></Navigatio>
-      
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900"></mai>
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto"></section>
-            <div className="text-center"></div>
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-indigo-100 text-indigo-800 text-sm font-medium mb-6"></div>
-                <Atom className="w-4 h-4 mr-2" />
-                Quantum AI Technology
-              </div>
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
-                AI Quantum Optimization</h1>
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">
-                  Next-Generation Computing
-                </span>
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto">
-                Harness the power of quantum computing with our AI-powered optimization platform. 
-                Solve complex problems that are impossible with classical computers.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-                <a 
-                  href="#pricing" 
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-                ></a></<<<a>Request</a></<<a>Demo</a>
-                  <ArrowRight className="ml-2 w-5 h-5" /></ArrowRigh>
-                </a>
-                <a 
-                  href="#contact" 
-                  className="inline-flex items-center px-8 py-4 border border-indigo-400 text-indigo-400 font-semibold rounded-lg hover:bg-indigo-400 hover:text-white transition-all duration-300"
-                ></a>
-                  <Microscope className="mr-2 w-5 h-5" /></Microscope></<<<Microscope>Learn</Microscope></<<Microscope>More</Microscope>
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -192,17 +144,9 @@ const PagePage: React.FC = () => {
               </button>
             </div>
           </div>
-<<<<<<< HEAD
         </div>
       </section>
     </div>
-=======
-        </section>
-      </main>
-
-      <Footer /></Footer>
-    </ErrorBoundary>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
   );
 };
 

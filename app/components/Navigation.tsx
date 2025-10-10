@@ -78,6 +78,7 @@ const Navigation: React.FC = () => {
     { name: 'Home', href: '/', icon: Home },
     { name: 'About', href: '/about', icon: Users },
     { name: 'Services', href: '/services', icon: Briefcase },
+    { name: 'Solutions', href: '/solutions', icon: Target },
     { name: 'Pricing', href: '/pricing', icon: DollarSign },
     { name: 'Blog', href: '/blog', icon: FileText },
     { name: 'Contact', href: '/contact', icon: MessageSquare },
@@ -96,6 +97,8 @@ const Navigation: React.FC = () => {
         { name: 'AI Data Analytics', href: '/ai-data-analytics' },
         { name: 'AI Healthcare', href: '/ai-healthcare' },
         { name: 'AI Fintech', href: '/ai-fintech' },
+        { name: 'AI Content Generation', href: '/ai-content-generation' },
+        { name: 'AI Computer Vision', href: '/ai-computer-vision' },
       ]
     },
     {
@@ -109,7 +112,9 @@ const Navigation: React.FC = () => {
         { name: 'IT Support', href: '/it-support' },
         { name: 'Cybersecurity', href: '/cybersecurity' },
         { name: 'Green IT', href: '/green-it' },
-        { name: 'IoT Edge Computing', href: '/iot-edge-computing' },
+        { name: 'Networking', href: '/networking' },
+        { name: 'Cloud Migration', href: '/cloud-migration' },
+        { name: 'IT Infrastructure', href: '/it-infrastructure' },
       ]
     },
     {
@@ -122,8 +127,10 @@ const Navigation: React.FC = () => {
         { name: '5G Implementation', href: '/5g-implementation' },
         { name: 'AI 3D Generation', href: '/ai-3d-generation' },
         { name: 'Smart Analytics', href: '/smart-analytics' },
-        { name: 'Task Manager Pro', href: '/task-manager-pro' },
-        { name: 'Networking', href: '/networking' },
+        { name: 'Blockchain Solutions', href: '/blockchain-solutions' },
+        { name: 'Edge Computing', href: '/edge-computing' },
+        { name: 'IoT Platform', href: '/iot-platform' },
+        { name: 'Digital Transformation', href: '/digital-transformation' },
       ]
     }
   ];

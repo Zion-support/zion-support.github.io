@@ -147,13 +147,6 @@ const PagePage: React.FC = () => {
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-=======
-  return(<div>)</div>
-      <h1>Test Page</h1>)
-      <p>This is a simple test page</p>)
-    </div>)
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
   );
 };
 

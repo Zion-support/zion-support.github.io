@@ -25,6 +25,7 @@ import PerformanceMonitor from './app/components/PerformanceMonitor';
 const AboutPage = React.lazy(() => import('./app/about/page'));
 const ContactPage = React.lazy(() => import('./app/contact/page'));
 const ServicesPage = React.lazy(() => import('./app/services/page'));
+const SolutionsPage = React.lazy(() => import('./app/solutions/page'));
 const PricingPage = React.lazy(() => import('./app/pricing/page'));
 const BlogPage = React.lazy(() => import('./app/blog/page'));
 const CaseStudiesPage = React.lazy(() => import('./app/case-studies/page'));
@@ -66,6 +67,7 @@ const App: React.FC = () => {
                             <Route path="/about" element={<AboutPage />} />
                             <Route path="/contact" element={<ContactPage />} />
                             <Route path="/services" element={<ServicesPage />} />
+                            <Route path="/solutions" element={<SolutionsPage />} />
                             <Route path="/pricing" element={<PricingPage />} />
                             <Route path="/blog" element={<BlogPage />} />
                             <Route path="/case-studies" element={<CaseStudiesPage />} />

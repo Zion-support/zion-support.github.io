@@ -54,13 +54,27 @@ const Footer: React.FC = () => {
       { name: 'Careers', href: '/careers' },
       { name: 'Partners', href: '/partners' },
       { name: 'Case Studies', href: '/case-studies' },
+      { name: 'Contact', href: '/contact' },
     ],
     services: [
-      { name: 'AI Solutions', href: '/services' },
-      { name: 'IT Infrastructure', href: '/services' },
+      { name: 'AI Solutions', href: '/ai-solutions' },
+      { name: 'IT Infrastructure', href: '/it-infrastructure' },
       { name: 'Cloud Services', href: '/cloud-services' },
       { name: 'Cybersecurity', href: '/cybersecurity' },
+      { name: 'Green IT', href: '/green-it' },
+      { name: 'Networking', href: '/networking' },
       { name: 'Consulting', href: '/consultation' },
+      { name: 'Support', href: '/support' },
+    ],
+    solutions: [
+      { name: 'Micro SaaS', href: '/micro-saas' },
+      { name: 'Quantum Computing', href: '/quantum-computing' },
+      { name: 'Robotics', href: '/robotics' },
+      { name: '5G Implementation', href: '/5g-implementation' },
+      { name: 'Blockchain', href: '/blockchain-solutions' },
+      { name: 'Edge Computing', href: '/edge-computing' },
+      { name: 'IoT Platform', href: '/iot-platform' },
+      { name: 'Digital Transformation', href: '/digital-transformation' },
     ],
     resources: [
       { name: 'Blog', href: '/blog' },
@@ -68,12 +82,17 @@ const Footer: React.FC = () => {
       { name: 'Support', href: '/support' },
       { name: 'FAQ', href: '/faq' },
       { name: 'News', href: '/news' },
+      { name: 'Pricing', href: '/pricing' },
+      { name: 'Demo', href: '/demo' },
+      { name: 'Status', href: '/status' },
     ],
     legal: [
       { name: 'Privacy Policy', href: '/privacy' },
       { name: 'Terms of Service', href: '/terms' },
       { name: 'Cookie Policy', href: '/cookies' },
       { name: 'GDPR Compliance', href: '/gdpr' },
+      { name: 'Security', href: '/security' },
+      { name: 'Compliance', href: '/compliance' },
     ]
   };
 
@@ -88,7 +107,7 @@ const Footer: React.FC = () => {
     <footer className="bg-slate-900 text-white">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
             <Link to="/" className="flex items-center space-x-2 mb-6">
@@ -172,6 +191,24 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-3">
               {footerLinks.services.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    to={link.href}
+                    className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center group"
+                  >
+                    <span>{link.name}</span>
+                    <ArrowRight className="w-4 h-4 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Solutions Links */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Solutions</h3>
+            <ul className="space-y-3">
+              {footerLinks.solutions.map((link) => (
                 <li key={link.name}>
                   <Link
                     to={link.href}

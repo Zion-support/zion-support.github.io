@@ -100,7 +100,6 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -112,28 +111,6 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
               Experience the power of our enhancedseooptimizer solutions for your business.
             </p>
           </div>
-=======
-  const addBreadcrumbStructuredData = (): void => {
-    const breadcrumbData = {
-      '@context': 'https: //schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        {
-          '@type': 'ListItem'
-          position: 1,
-  const addBreadcrumbStructuredData = (): void => {}
-    const breadcrumbData = {}
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        {}
-          '@type': 'ListItem',
-          position: 1,
-          name: 'Home',
-          item: 'https://ziontechgroup.com'}
-      ]
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (

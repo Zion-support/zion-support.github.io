@@ -113,41 +113,6 @@ budget: '',
     console.log('Form submitted:', formData);
   };
 
-const consultationTypes = [
-    {
-      icon: Zap,
-      title: 'AI Strategy Consultation',
-      description: 'Develop a comprehensive AI strategy for your business',
-      duration: '2-3 hours',
-      price: 'Free'
-    },
-    {
-      icon: Shield,
-      title: 'Security Assessment',
-      description: 'Evaluate your current security posture and identify improvements',
-      duration: '1-2 hours',
-      price: 'Free'
-    },
-    {
-      icon: BarChart,
-      title: 'Technology Audit',
-      description: 'Review your current technology stack and recommend optimizations',
-      duration: '2-4 hours',
-      price: 'Free'
-
-    }
-  ];
-
-  const benefits = [
-    'Free initial consultation',
-    'Customized recommendations',
-    'No obligation to proceed',
-    'Expert insights and advice',
-    'Detailed project roadmap',
-    'Transparent pricing'
-
-  ];
-
   return (
     <>
       <Helmet>
@@ -155,7 +120,6 @@ const consultationTypes = [
         <meta name="description" content="Schedule a free consultation with our AI and IT experts. Get personalized advice on how to transform your business with technology." />
         <meta name="keywords" content="free consultation, AI consultation, IT consultation, business transformation, Zion Tech Group" />
       </Helmet>
-<<<<<<< HEAD
 
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
         <div className="container mx-auto px-4">
@@ -218,9 +182,11 @@ const consultationTypes = [
 
             </div>
           </div>
-        </section>
+        </div>
 
-{/* Consultation Form */}
+        {/* Consultation Form */}
+        <section className="py-16 px-4">
+          <div className="max-w-4xl mx-auto">
             <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl font-bold text-white mb-6">Schedule Your Consultation</h2>
               
@@ -228,49 +194,101 @@ const consultationTypes = [
                 <div className="text-center py-12">
                   <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
                   <h3 className="text-2xl font-bold text-white mb-2">Consultation Scheduled!</h3>
-
                   <p className="text-gray-300 mb-6">
-                    Schedule your free consultation and let's discuss how we can help transform your business.
+                    Thank you for scheduling your consultation. We'll be in touch soon!
                   </p>
-                  <button className="w-full bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
+                </div>
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label className="block text-sm font-medium text-gray-300 mb-2">
+                        Full Name
+                      </label>
+                      <input
+                        type="text"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        required
+                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
+                        placeholder="Enter your full name"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-300 mb-2">
+                        Email
+                      </label>
+                      <input
+                        type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        required
+                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
+                        placeholder="Enter your email"
+                      />
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <label className="block text-sm font-medium text-gray-300 mb-2">
+                      Company
+                    </label>
+                    <input
+                      type="text"
+                      name="company"
+                      value={formData.company}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
+                      placeholder="Enter your company name"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label className="block text-sm font-medium text-gray-300 mb-2">
+                      Consultation Type
+                    </label>
+                    <select
+                      name="consultationType"
+                      value={formData.consultationType}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-500"
+                    >
+                      <option value="">Select consultation type</option>
+                      <option value="ai-strategy">AI Strategy Consultation</option>
+                      <option value="security-assessment">Security Assessment</option>
+                      <option value="technology-audit">Technology Audit</option>
+                    </select>
+                  </div>
+                  
+                  <div>
+                    <label className="block text-sm font-medium text-gray-300 mb-2">
+                      Message
+                    </label>
+                    <textarea
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
+                      rows={4}
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
+                      placeholder="Tell us about your project or questions"
+                    />
+                  </div>
+                  
+                  <button
+                    type="submit"
+                    className="w-full bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25"
+                  >
                     Schedule Free Consultation
                     <ArrowRight className="inline-block ml-2 w-4 h-4" />
                   </button>
-
-                </div>
-=======
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
-        <Navigation />
-        
-        <main className="pt-20">
-          <div className="container mx-auto px-4 py-16"></div>
-            <div className="max-w-4xl mx-auto"></div>
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
-                Free Consultation</h1>
-              </h1>
-              
-              <div className="prose prose-lg max-w-none"></div>
-                <p className="text-xl text-gray-600 mb-8">
-                  Get expert advice on how AI and IT solutions can transform your business.
-                </p>
-                
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">What to Expect</h2>
-                <p className="text-gray-700 mb-6">
-                  Our 30-minute consultation will help you understand how our services can benefit your business.
-                </p>
-                
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">Schedule Your Call</h2>
-                <p className="text-gray-700 mb-6">
-                  Contact us at (302) 464-0950 or email info@ziontechgroup.com to schedule your free consultation.
-                </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
-              </div>
+                </form>
+              )}
             </div>
           </div>
-</div>
+        </section>
       </div>
     </>
-
   );
 }

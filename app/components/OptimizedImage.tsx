@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
 const OptimizedImagePage: React.FC = () => {
   const features = [
     {
@@ -38,15 +37,6 @@ const OptimizedImagePage: React.FC = () => {
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
-=======
-interface OptimizedImageProps {
-  src: string,
-  alt: string,
-  width?: number;
-  height?: number;
-  className?: string;
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
