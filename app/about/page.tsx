@@ -99,6 +99,7 @@ const AboutPage: React.FC = () => {
     { number: '24/7', label: 'Support Available' }
   ];
 
+const AboutPage: React.FC = () => {
   return (
     <>
       <Helmet>
