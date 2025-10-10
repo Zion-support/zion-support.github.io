@@ -189,7 +189,6 @@ const Navigation: React.FC = () => {
     }
   };
 
-<<<<<<< HEAD
   const toggleServices = () => {
     setIsServicesOpen(!isServicesOpen);
   };
@@ -240,8 +239,6 @@ const Navigation: React.FC = () => {
     { name: 'Robotics Solutions', href: '/robotics', icon: Settings, price: '$3,500/mo' }
   ];
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-90b7
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'

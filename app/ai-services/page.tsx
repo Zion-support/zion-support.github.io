@@ -77,8 +77,6 @@ const AIServicesPage: React.FC = () => {
         'ROI Tracking & Analytics',
         'Cross-Platform Integration'
       ],
-<<<<<<< HEAD
-=======
       icon: <Target className="w-8 h-8" />,
       category: 'Marketing',
       popular: true,
@@ -91,7 +89,6 @@ const AIServicesPage: React.FC = () => {
         'Real-time performance tracking',
         'Predictive customer behavior'
       ],
-      category: 'AI Automation & Workflow',
       icon: Zap,
       color: 'text-yellow-400',
       bgColor: 'bg-yellow-500/10',
@@ -236,7 +233,6 @@ const AIServicesPage: React.FC = () => {
     },
     {
       category: 'AI Industry-Specific Solutions',
->>>>>>> cursor/fix-errors-and-merge-to-main-90b7
       icon: Target,
       color: 'text-orange-600',
       bgColor: 'bg-orange-50'
@@ -330,7 +326,6 @@ const AIServicesPage: React.FC = () => {
                     Most Popular
                   </span>
                 </div>
-<<<<<<< HEAD
               )}
               
               <div className="p-8">
@@ -347,20 +342,20 @@ const AIServicesPage: React.FC = () => {
                 </p>
                 
                 <div className="mb-6">
+                  <div className="flex items-center space-x-2">
+                    {service.popular && (
+                      <span className="px-2 py-1 bg-orange-500 text-white text-xs rounded-full flex items-center">
+                        <Star className="w-3 h-3 mr-1" />
+                        Popular
+                      </span>
+                    )}
+                    <div className="flex items-center text-yellow-400">
+                      <Star className="w-4 h-4 fill-current" />
+                      <span className="ml-1 text-sm font-medium">{service.rating}</span>
+                    </div>
+                  </div>
                   <div className="text-3xl font-bold text-gray-900 mb-2">
                     {service.price}
-=======
-                <div className="flex items-center space-x-2">
-                  {service.popular && (
-                    <span className="px-2 py-1 bg-orange-500 text-white text-xs rounded-full flex items-center">
-                      <Star className="w-3 h-3 mr-1" />
-                      Popular
-                    </span>
-                  )}
-                  <div className="flex items-center text-yellow-400">
-                    <Star className="w-4 h-4 fill-current" />
-                    <span className="ml-1 text-sm font-medium">{service.rating}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-90b7
                   </div>
                   <div className="text-sm text-gray-500">per month</div>
                 </div>
