@@ -18,6 +18,7 @@ import { ServiceCardSkeleton, HeroSkeleton } from './components/LoadingSkeleton'
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import EnhancedSEO from './components/EnhancedSEO';
+import FuturisticHero from './components/FuturisticHero';
 'use client';
 
 // Dynamically import heavy components for better performance
@@ -91,6 +92,58 @@ const HomePage: React.FC = () => {
       freeTrial: '14 days'
     },
     {
+      popular: true,
+      category: 'Productivity',
+      rating: 4.8,
+      users: '20,000+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Document Intelligence Pro',
+      description: 'Transform any document into actionable insights with AI-powered analysis, summarization, and knowledge extraction.',
+      icon: '📄',
+      price: '$89/month',
+      originalPrice: '$129/month',
+      features: ['Document analysis', 'Smart summarization', 'Knowledge extraction', 'Search & discovery', 'Version control', 'Collaboration tools', 'OCR processing', 'Multi-format support'],
+      benefits: ['80% faster document processing', 'Better knowledge retention', 'Improved search', 'Enhanced collaboration'],
+      link: '/ai-document-intelligence',
+      popular: true,
+      category: 'Productivity',
+      rating: 4.7,
+      users: '15,000+',
+      freeTrial: '7 days'
+    },
+    {
+      title: 'AI Personal Assistant Pro',
+      description: 'Your intelligent personal assistant that manages emails, schedules, and tasks with natural language processing.',
+      icon: '🤖',
+      price: '$49/month',
+      originalPrice: '$79/month',
+      features: ['Email management', 'Smart scheduling', 'Task automation', 'Voice commands', 'Calendar sync', 'Reminder system', 'Travel planning', 'Expense tracking'],
+      benefits: ['50% time savings', 'Never miss important tasks', 'Better organization', 'Reduced stress'],
+      link: '/ai-personal-assistant',
+      popular: true,
+      category: 'Productivity',
+      rating: 4.9,
+      users: '45,000+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Team Collaboration Hub',
+      description: 'Advanced team collaboration platform with AI-powered insights, smart notifications, and productivity analytics.',
+      icon: '👥',
+      price: '$99/month',
+      originalPrice: '$149/month',
+      features: ['Team analytics', 'Smart notifications', 'Project tracking', 'Communication tools', 'File sharing', 'Video conferencing', 'Task management', 'Performance insights'],
+      benefits: ['35% team productivity increase', 'Better communication', 'Reduced meetings', 'Improved outcomes'],
+      link: '/ai-team-collaboration',
+      popular: true,
+      category: 'Productivity',
+      rating: 4.8,
+      users: '25,000+',
+      freeTrial: '14 days'
+    },
+    {
       title: 'AI Quantum Task Optimizer',
       description: 'Revolutionary quantum-inspired task optimization that processes millions of task combinations to find the perfect workflow. Achieve 99.9% efficiency.',
       icon: '⚛️',
@@ -151,6 +204,7 @@ const HomePage: React.FC = () => {
       freeTrial: '7 days'
     },
     {
+>>>>>>> cursor/website-audit-and-update-with-deployment-74f7
       title: 'AI Task Manager Pro',
       description: 'Smart task management with AI prioritization, deadline prediction, and productivity insights. Boost your productivity by 60%.',
       icon: '✅',
@@ -1949,6 +2003,322 @@ const HomePage: React.FC = () => {
       rating: 4.8,
       users: '30,000+',
       freeTrial: '7 days'
+    },
+    // NEW INNOVATIVE MICRO SAAS SERVICES
+    {
+      title: 'AI Climate Intelligence Pro',
+      description: 'Advanced climate monitoring and carbon footprint optimization with AI-powered sustainability insights. Help businesses achieve net-zero goals.',
+      icon: '🌱',
+      price: '$199/month',
+      originalPrice: '$299/month',
+      features: ['Carbon footprint tracking', 'Sustainability analytics', 'Green energy optimization', 'ESG reporting', 'Climate risk assessment', 'Supply chain sustainability', 'Renewable energy planning', 'Compliance monitoring'],
+      benefits: ['50% carbon reduction', 'ESG compliance', 'Cost savings', 'Brand reputation'],
+      link: '/ai-climate-intelligence',
+      popular: true,
+      category: 'Sustainability',
+      rating: 4.9,
+      users: '5,000+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Quantum Computing Simulator Pro',
+      description: 'Advanced quantum computing simulation and algorithm development platform. Explore quantum algorithms without expensive hardware.',
+      icon: '⚛️',
+      price: '$299/month',
+      originalPrice: '$499/month',
+      features: ['Quantum circuit simulator', 'Algorithm development', 'Quantum machine learning', 'Error correction', 'Performance optimization', 'Cloud quantum access', 'Educational modules', 'Research tools'],
+      benefits: ['No hardware needed', 'Advanced algorithms', 'Research capabilities', 'Cost effective'],
+      link: '/ai-quantum-simulator',
+      popular: true,
+      category: 'Quantum Computing',
+      rating: 4.8,
+      users: '2,000+',
+      freeTrial: '7 days'
+    },
+    {
+      title: 'AI Space Analytics Pro',
+      description: 'Satellite data analysis and space industry intelligence with AI-powered insights for space missions and Earth observation.',
+      icon: '🛰️',
+      price: '$399/month',
+      originalPrice: '$599/month',
+      features: ['Satellite data processing', 'Earth observation analytics', 'Space weather monitoring', 'Mission planning', 'Orbital mechanics', 'Space debris tracking', 'Climate monitoring', 'Agricultural insights'],
+      benefits: ['Space industry insights', 'Environmental monitoring', 'Mission optimization', 'Data-driven decisions'],
+      link: '/ai-space-analytics',
+      popular: true,
+      category: 'Space Technology',
+      rating: 4.9,
+      users: '1,500+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Metaverse Builder Pro',
+      description: 'Create immersive virtual worlds and metaverse experiences with AI-powered 3D environments and avatar generation.',
+      icon: '🥽',
+      price: '$249/month',
+      originalPrice: '$399/month',
+      features: ['3D world generation', 'Avatar creation', 'Virtual event hosting', 'NFT integration', 'Blockchain connectivity', 'VR/AR support', 'Social features', 'Monetization tools'],
+      benefits: ['Immersive experiences', 'Easy creation', 'Monetization ready', 'Future-proof'],
+      link: '/ai-metaverse-builder',
+      popular: true,
+      category: 'Metaverse',
+      rating: 4.7,
+      users: '8,000+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Edge Computing Manager Pro',
+      description: 'Intelligent edge computing orchestration with AI-powered resource optimization and real-time processing capabilities.',
+      icon: '⚡',
+      price: '$179/month',
+      originalPrice: '$279/month',
+      features: ['Edge resource optimization', 'Real-time processing', 'IoT device management', 'Latency optimization', 'Bandwidth management', 'Security monitoring', 'Auto-scaling', 'Performance analytics'],
+      benefits: ['Reduced latency', 'Better performance', 'Cost optimization', 'Scalable infrastructure'],
+      link: '/ai-edge-computing',
+      popular: true,
+      category: 'Edge Computing',
+      rating: 4.8,
+      users: '3,500+',
+      freeTrial: '7 days'
+    },
+    {
+      title: 'AI Digital Twin Creator Pro',
+      description: 'Create digital twins of physical assets with AI-powered simulation, monitoring, and predictive maintenance capabilities.',
+      icon: '🔄',
+      price: '$329/month',
+      originalPrice: '$499/month',
+      features: ['3D asset modeling', 'Real-time monitoring', 'Predictive analytics', 'Simulation engine', 'IoT integration', 'Performance optimization', 'Maintenance scheduling', 'Data visualization'],
+      benefits: ['Better asset management', 'Predictive maintenance', 'Cost reduction', 'Performance optimization'],
+      link: '/ai-digital-twin',
+      popular: true,
+      category: 'Digital Twin',
+      rating: 4.9,
+      users: '2,500+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Blockchain Analytics Pro',
+      description: 'Advanced blockchain data analysis with AI-powered insights for DeFi, NFT markets, and cryptocurrency trading.',
+      icon: '⛓️',
+      price: '$199/month',
+      originalPrice: '$299/month',
+      features: ['Blockchain data analysis', 'DeFi analytics', 'NFT market insights', 'Trading signals', 'Risk assessment', 'Smart contract analysis', 'Token tracking', 'Market prediction'],
+      benefits: ['Better trading decisions', 'Risk mitigation', 'Market insights', 'Profit optimization'],
+      link: '/ai-blockchain-analytics',
+      popular: true,
+      category: 'Blockchain',
+      rating: 4.8,
+      users: '4,000+',
+      freeTrial: '7 days'
+    },
+    {
+      title: 'AI Autonomous Vehicle Simulator Pro',
+      description: 'Advanced autonomous vehicle simulation and testing platform with AI-powered scenario generation and safety validation.',
+      icon: '🚗',
+      price: '$499/month',
+      originalPrice: '$799/month',
+      features: ['Vehicle simulation', 'Scenario generation', 'Safety testing', 'Performance optimization', 'Traffic modeling', 'Weather simulation', 'Sensor simulation', 'Regulatory compliance'],
+      benefits: ['Safe testing environment', 'Cost effective', 'Faster development', 'Regulatory ready'],
+      link: '/ai-autonomous-vehicle-sim',
+      popular: true,
+      category: 'Autonomous Vehicles',
+      rating: 4.9,
+      users: '1,200+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Neural Interface Pro',
+      description: 'Brain-computer interface development platform with AI-powered neural signal processing and mind-controlled applications.',
+      icon: '🧠',
+      price: '$399/month',
+      originalPrice: '$599/month',
+      features: ['Neural signal processing', 'BCI development', 'Mind control apps', 'Medical applications', 'Research tools', 'Real-time analysis', 'Safety monitoring', 'API integration'],
+      benefits: ['Revolutionary technology', 'Medical applications', 'Research capabilities', 'Future innovation'],
+      link: '/ai-neural-interface',
+      popular: true,
+      category: 'Neural Interface',
+      rating: 4.8,
+      users: '800+',
+      freeTrial: '30 days'
+    },
+    {
+      title: 'AI Synthetic Biology Designer Pro',
+      description: 'AI-powered synthetic biology platform for designing biological systems, genetic circuits, and bio-manufacturing processes.',
+      icon: '🧬',
+      price: '$599/month',
+      originalPrice: '$999/month',
+      features: ['Genetic circuit design', 'Protein engineering', 'Bio-manufacturing', 'Drug discovery', 'Synthetic biology', 'Lab automation', 'Safety protocols', 'Regulatory compliance'],
+      benefits: ['Revolutionary biology', 'Drug discovery', 'Sustainable manufacturing', 'Medical breakthroughs'],
+      link: '/ai-synthetic-biology',
+      popular: true,
+      category: 'Synthetic Biology',
+      rating: 4.9,
+      users: '500+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Augmented Reality Studio Pro',
+      description: 'Create immersive AR experiences with AI-powered object recognition, spatial mapping, and interactive content generation.',
+      icon: '📱',
+      price: '$179/month',
+      originalPrice: '$279/month',
+      features: ['AR content creation', 'Object recognition', 'Spatial mapping', 'Interactive elements', 'Multi-platform support', 'Real-time rendering', 'Cloud processing', 'Analytics dashboard'],
+      benefits: ['Immersive AR experiences', 'Easy development', 'Cross-platform', 'Engaging content'],
+      link: '/ai-ar-studio',
+      popular: true,
+      category: 'Augmented Reality',
+      rating: 4.7,
+      users: '6,000+',
+      freeTrial: '7 days'
+    },
+    {
+      title: 'AI Smart City Manager Pro',
+      description: 'Intelligent smart city management with AI-powered traffic optimization, energy management, and citizen services automation.',
+      icon: '🏙️',
+      price: '$2,999/month',
+      originalPrice: '$4,999/month',
+      features: ['Traffic optimization', 'Energy management', 'Citizen services', 'IoT integration', 'Predictive analytics', 'Emergency response', 'Resource optimization', 'Sustainability tracking'],
+      benefits: ['Efficient city management', 'Better citizen services', 'Cost reduction', 'Sustainability goals'],
+      link: '/ai-smart-city-manager',
+      popular: true,
+      category: 'Smart Cities',
+      rating: 4.9,
+      users: '50+',
+      freeTrial: '30 days'
+    },
+    {
+      title: 'AI Precision Agriculture Pro',
+      description: 'Smart farming solutions with AI-powered crop monitoring, yield prediction, and automated agricultural management.',
+      icon: '🌾',
+      price: '$149/month',
+      originalPrice: '$229/month',
+      features: ['Crop monitoring', 'Yield prediction', 'Soil analysis', 'Weather integration', 'Pest detection', 'Irrigation control', 'Harvest optimization', 'Sustainability tracking'],
+      benefits: ['Higher yields', 'Resource optimization', 'Sustainable farming', 'Cost reduction'],
+      link: '/ai-precision-agriculture',
+      popular: true,
+      category: 'Agriculture',
+      rating: 4.8,
+      users: '3,000+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Ocean Intelligence Pro',
+      description: 'Marine ecosystem monitoring and ocean data analysis with AI-powered insights for conservation and sustainable ocean management.',
+      icon: '🌊',
+      price: '$279/month',
+      originalPrice: '$429/month',
+      features: ['Marine monitoring', 'Ecosystem analysis', 'Pollution tracking', 'Species identification', 'Climate impact', 'Conservation planning', 'Data visualization', 'Research tools'],
+      benefits: ['Ocean conservation', 'Ecosystem protection', 'Research insights', 'Sustainable management'],
+      link: '/ai-ocean-intelligence',
+      popular: true,
+      category: 'Marine Science',
+      rating: 4.9,
+      users: '1,800+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Energy Grid Optimizer Pro',
+      description: 'Intelligent energy grid management with AI-powered load balancing, renewable energy integration, and smart grid optimization.',
+      icon: '⚡',
+      price: '$1,999/month',
+      originalPrice: '$2,999/month',
+      features: ['Load balancing', 'Renewable integration', 'Grid optimization', 'Demand forecasting', 'Energy storage', 'Fault detection', 'Maintenance scheduling', 'Cost optimization'],
+      benefits: ['Grid efficiency', 'Renewable integration', 'Cost reduction', 'Reliability improvement'],
+      link: '/ai-energy-grid-optimizer',
+      popular: true,
+      category: 'Energy',
+      rating: 4.8,
+      users: '200+',
+      freeTrial: '30 days'
+    },
+    {
+      title: 'AI Mental Health Companion Pro',
+      description: 'AI-powered mental health support with mood tracking, therapy assistance, and personalized wellness recommendations.',
+      icon: '🧘',
+      price: '$79/month',
+      originalPrice: '$129/month',
+      features: ['Mood tracking', 'Therapy assistance', 'Wellness recommendations', 'Crisis support', 'Progress monitoring', 'Professional integration', 'Privacy protection', '24/7 support'],
+      benefits: ['Better mental health', 'Personalized support', 'Crisis prevention', 'Professional guidance'],
+      link: '/ai-mental-health-companion',
+      popular: true,
+      category: 'Mental Health',
+      rating: 4.9,
+      users: '15,000+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Personal Finance Optimizer Pro',
+      description: 'Intelligent personal finance management with AI-powered budgeting, investment optimization, and financial goal tracking.',
+      icon: '💰',
+      price: '$49/month',
+      originalPrice: '$79/month',
+      features: ['Smart budgeting', 'Investment optimization', 'Goal tracking', 'Expense categorization', 'Bill management', 'Tax optimization', 'Retirement planning', 'Financial insights'],
+      benefits: ['Better financial health', 'Investment growth', 'Goal achievement', 'Cost savings'],
+      link: '/ai-personal-finance-optimizer',
+      popular: true,
+      category: 'Personal Finance',
+      rating: 4.8,
+      users: '25,000+',
+      freeTrial: '7 days'
+    },
+    {
+      title: 'AI Home Automation Pro',
+      description: 'Smart home management with AI-powered automation, energy optimization, and intelligent device control.',
+      icon: '🏠',
+      price: '$89/month',
+      originalPrice: '$139/month',
+      features: ['Device automation', 'Energy optimization', 'Security monitoring', 'Voice control', 'Predictive maintenance', 'Usage analytics', 'Remote control', 'Integration hub'],
+      benefits: ['Convenience', 'Energy savings', 'Security', 'Cost reduction'],
+      link: '/ai-home-automation',
+      popular: true,
+      category: 'Smart Home',
+      rating: 4.7,
+      users: '12,000+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Language Translation Pro',
+      description: 'Advanced AI-powered translation with real-time voice translation, document processing, and cultural context understanding.',
+      icon: '🌐',
+      price: '$69/month',
+      originalPrice: '$109/month',
+      features: ['Real-time translation', 'Voice translation', 'Document processing', 'Cultural context', 'Multi-language support', 'Offline capability', 'API integration', 'Custom models'],
+      benefits: ['Accurate translation', 'Cultural understanding', 'Real-time communication', 'Global connectivity'],
+      link: '/ai-language-translation-pro',
+      popular: true,
+      category: 'Translation',
+      rating: 4.9,
+      users: '40,000+',
+      freeTrial: '7 days'
+    },
+    {
+      title: 'AI Cybersecurity Threat Hunter Pro',
+      description: 'Advanced threat hunting with AI-powered security analysis, incident response, and proactive threat detection.',
+      icon: '🛡️',
+      price: '$299/month',
+      originalPrice: '$449/month',
+      features: ['Threat hunting', 'Incident response', 'Security analysis', 'Threat intelligence', 'Behavioral analysis', 'Forensic tools', 'Compliance reporting', '24/7 monitoring'],
+      benefits: ['Proactive security', 'Faster response', 'Better protection', 'Compliance ready'],
+      link: '/ai-cybersecurity-threat-hunter',
+      popular: true,
+      category: 'Cybersecurity',
+      rating: 4.9,
+      users: '1,500+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Quantum Machine Learning Pro',
+      description: 'Quantum-enhanced machine learning with quantum algorithms for optimization, pattern recognition, and advanced AI capabilities.',
+      icon: '⚛️',
+      price: '$399/month',
+      originalPrice: '$599/month',
+      features: ['Quantum algorithms', 'Quantum optimization', 'Pattern recognition', 'Quantum neural networks', 'Hybrid classical-quantum', 'Performance optimization', 'Research tools', 'Cloud access'],
+      benefits: ['Quantum advantage', 'Advanced algorithms', 'Research capabilities', 'Future technology'],
+      link: '/ai-quantum-machine-learning',
+      popular: true,
+      category: 'Quantum AI',
+      rating: 4.8,
+      users: '800+',
+      freeTrial: '14 days'
     }
   ];
 
@@ -2478,6 +2848,82 @@ const HomePage: React.FC = () => {
       rating: 4.8,
       users: '1,000+',
       freeTrial: '14 days'
+    },
+    // NEW ADVANCED AI SERVICES
+    {
+      title: 'AI Quantum Machine Learning Pro',
+      description: 'Revolutionary quantum-enhanced machine learning with quantum algorithms for optimization and pattern recognition.',
+      icon: Brain,
+      price: '$2,999/month',
+      originalPrice: '$4,999/month',
+      features: ['Quantum Algorithms', 'Quantum Optimization', 'Pattern Recognition', 'Quantum Neural Networks', 'Hybrid Classical-Quantum', 'Performance Optimization', 'Research Tools', 'Cloud Quantum Access'],
+      benefits: ['Quantum advantage', 'Advanced algorithms', 'Research capabilities', 'Future technology'],
+      link: '/ai-quantum-ml-pro',
+      popular: true,
+      category: 'Quantum AI',
+      rating: 4.9,
+      users: '200+',
+      freeTrial: '30 days'
+    },
+    {
+      title: 'AI Autonomous Systems Pro',
+      description: 'Advanced autonomous systems with self-learning capabilities, decision-making algorithms, and real-world adaptation.',
+      icon: Cpu,
+      price: '$3,500/month',
+      originalPrice: '$5,000/month',
+      features: ['Self-Learning Systems', 'Decision Making', 'Real-world Adaptation', 'Sensor Fusion', 'Path Planning', 'Obstacle Avoidance', 'Performance Optimization', 'Safety Protocols'],
+      benefits: ['Autonomous operation', 'Self-improvement', 'Real-world ready', 'Safety first'],
+      link: '/ai-autonomous-systems-pro',
+      popular: true,
+      category: 'Autonomous Systems',
+      rating: 4.8,
+      users: '150+',
+      freeTrial: '30 days'
+    },
+    {
+      title: 'AI Blockchain Solutions Pro',
+      description: 'Comprehensive blockchain solutions with smart contracts, DeFi protocols, and decentralized applications.',
+      icon: Shield,
+      price: '$2,200/month',
+      originalPrice: '$3,200/month',
+      features: ['Smart Contracts', 'DeFi Protocols', 'DApp Development', 'Token Economics', 'Consensus Mechanisms', 'Security Audits', 'Cross-chain Integration', 'Governance Systems'],
+      benefits: ['Decentralized solutions', 'Smart contracts', 'DeFi integration', 'Security audited'],
+      link: '/ai-blockchain-solutions-pro',
+      popular: true,
+      category: 'Blockchain',
+      rating: 4.7,
+      users: '300+',
+      freeTrial: '30 days'
+    },
+    {
+      title: 'AI Robotics Solutions Pro',
+      description: 'Advanced robotics solutions with AI-powered control systems, computer vision, and autonomous operation.',
+      icon: Settings,
+      price: '$4,000/month',
+      originalPrice: '$6,000/month',
+      features: ['Robotic Control Systems', 'Computer Vision', 'Autonomous Operation', 'Manipulation Planning', 'Human-Robot Interaction', 'Safety Systems', 'Performance Optimization', 'Custom Development'],
+      benefits: ['Advanced robotics', 'Autonomous operation', 'Human-robot collaboration', 'Custom solutions'],
+      link: '/ai-robotics-solutions-pro',
+      popular: true,
+      category: 'Robotics',
+      rating: 4.9,
+      users: '100+',
+      freeTrial: '30 days'
+    },
+    {
+      title: 'AI Quantum Computing Solutions',
+      description: 'Quantum computing solutions with quantum algorithms, optimization, and quantum machine learning capabilities.',
+      icon: Brain,
+      price: '$5,000/month',
+      originalPrice: '$8,000/month',
+      features: ['Quantum Algorithms', 'Quantum Optimization', 'Quantum Machine Learning', 'Quantum Simulation', 'Error Correction', 'Quantum Hardware Access', 'Research Collaboration', 'Custom Development'],
+      benefits: ['Quantum advantage', 'Advanced algorithms', 'Research capabilities', 'Hardware access'],
+      link: '/ai-quantum-computing-solutions',
+      popular: true,
+      category: 'Quantum Computing',
+      rating: 4.9,
+      users: '50+',
+      freeTrial: '30 days'
     }
   ];
 
@@ -2902,6 +3348,187 @@ const HomePage: React.FC = () => {
       rating: 4.9,
       users: '200+',
       freeTrial: '30 days'
+    },
+    // NEW ADVANCED IT SERVICES
+    {
+      title: 'AI-Powered IT Operations',
+      description: 'Intelligent IT operations with AI-powered monitoring, predictive maintenance, and automated incident response.',
+      icon: Brain,
+      price: '$2,200/month',
+      originalPrice: '$3,200/month',
+      features: ['AI Monitoring', 'Predictive Maintenance', 'Automated Incident Response', 'Performance Optimization', 'Capacity Planning', 'Cost Optimization', 'Security Analysis', 'Compliance Monitoring'],
+      benefits: ['Proactive operations', 'Reduced downtime', 'Cost optimization', 'Better performance'],
+      link: '/ai-powered-it-operations',
+      popular: true,
+      category: 'AI Operations',
+      rating: 4.8,
+      users: '150+',
+      freeTrial: '30 days'
+    },
+    {
+      title: 'Edge Computing Solutions',
+      description: 'Advanced edge computing with real-time processing, low latency, and distributed intelligence for IoT and mobile applications.',
+      icon: Globe,
+      price: '$1,800/month',
+      originalPrice: '$2,600/month',
+      features: ['Edge Infrastructure', 'Real-time Processing', 'Low Latency', 'Distributed Intelligence', 'IoT Integration', 'Mobile Edge', 'Security', 'Monitoring'],
+      benefits: ['Ultra-low latency', 'Real-time processing', 'Better performance', 'Cost efficiency'],
+      link: '/edge-computing-solutions',
+      popular: true,
+      category: 'Edge Computing',
+      rating: 4.7,
+      users: '200+',
+      freeTrial: '30 days'
+    },
+    {
+      title: 'Quantum-Safe Security',
+      description: 'Future-proof security solutions with quantum-resistant cryptography and post-quantum security protocols.',
+      icon: Shield,
+      price: '$2,500/month',
+      originalPrice: '$3,500/month',
+      features: ['Quantum-Resistant Cryptography', 'Post-Quantum Security', 'Key Management', 'Encryption Services', 'Security Audits', 'Compliance', 'Migration Planning', 'Training'],
+      benefits: ['Future-proof security', 'Quantum resistance', 'Compliance ready', 'Advanced protection'],
+      link: '/quantum-safe-security',
+      popular: true,
+      category: 'Security',
+      rating: 4.9,
+      users: '100+',
+      freeTrial: '30 days'
+    },
+    {
+      title: '5G Network Solutions',
+      description: 'Comprehensive 5G network solutions with ultra-fast connectivity, IoT integration, and edge computing capabilities.',
+      icon: Wifi,
+      price: '$3,500/month',
+      originalPrice: '$5,000/month',
+      features: ['5G Infrastructure', 'Ultra-fast Connectivity', 'IoT Integration', 'Edge Computing', 'Network Slicing', 'Low Latency', 'High Bandwidth', 'Security'],
+      benefits: ['Ultra-fast speeds', 'Low latency', 'IoT ready', 'Future technology'],
+      link: '/5g-network-solutions',
+      popular: true,
+      category: '5G Networks',
+      rating: 4.8,
+      users: '80+',
+      freeTrial: '30 days'
+    },
+    {
+      title: 'Hybrid Cloud Management',
+      description: 'Intelligent hybrid cloud management with seamless integration, cost optimization, and automated scaling.',
+      icon: Cloud,
+      price: '$2,800/month',
+      originalPrice: '$4,000/month',
+      features: ['Multi-Cloud Management', 'Seamless Integration', 'Cost Optimization', 'Automated Scaling', 'Security Management', 'Compliance', 'Monitoring', 'Migration Services'],
+      benefits: ['Flexible deployment', 'Cost optimization', 'Better performance', 'Simplified management'],
+      link: '/hybrid-cloud-management',
+      popular: true,
+      category: 'Cloud Management',
+      rating: 4.7,
+      users: '250+',
+      freeTrial: '30 days'
+    },
+    {
+      title: 'AI Data Center Optimization',
+      description: 'Intelligent data center optimization with AI-powered resource management, energy efficiency, and performance tuning.',
+      icon: Database,
+      price: '$4,000/month',
+      originalPrice: '$6,000/month',
+      features: ['AI Resource Management', 'Energy Optimization', 'Performance Tuning', 'Capacity Planning', 'Cooling Optimization', 'Power Management', 'Monitoring', 'Automation'],
+      benefits: ['Energy savings', 'Better performance', 'Cost reduction', 'Automated management'],
+      link: '/ai-data-center-optimization',
+      popular: true,
+      category: 'Data Center',
+      rating: 4.8,
+      users: '120+',
+      freeTrial: '30 days'
+    },
+    {
+      title: 'Zero Trust Security Architecture',
+      description: 'Comprehensive zero trust security with identity verification, micro-segmentation, and continuous monitoring.',
+      icon: Lock,
+      price: '$2,200/month',
+      originalPrice: '$3,200/month',
+      features: ['Identity Verification', 'Micro-segmentation', 'Continuous Monitoring', 'Access Control', 'Threat Detection', 'Compliance', 'Policy Management', 'Incident Response'],
+      benefits: ['Enhanced security', 'Zero trust model', 'Better compliance', 'Proactive protection'],
+      link: '/zero-trust-security',
+      popular: true,
+      category: 'Security',
+      rating: 4.9,
+      users: '180+',
+      freeTrial: '30 days'
+    },
+    {
+      title: 'AI-Powered Network Analytics',
+      description: 'Advanced network analytics with AI-powered insights, anomaly detection, and predictive network management.',
+      icon: BarChart,
+      price: '$1,600/month',
+      originalPrice: '$2,400/month',
+      features: ['AI Network Insights', 'Anomaly Detection', 'Predictive Analytics', 'Performance Monitoring', 'Traffic Analysis', 'Security Analysis', 'Capacity Planning', 'Automated Alerts'],
+      benefits: ['Better network insights', 'Proactive management', 'Performance optimization', 'Security enhancement'],
+      link: '/ai-network-analytics',
+      popular: true,
+      category: 'Network Analytics',
+      rating: 4.7,
+      users: '300+',
+      freeTrial: '30 days'
+    },
+    {
+      title: 'Sustainable IT Solutions',
+      description: 'Eco-friendly IT solutions with green computing, energy efficiency, and carbon footprint reduction.',
+      icon: Globe,
+      price: '$1,400/month',
+      originalPrice: '$2,000/month',
+      features: ['Green Computing', 'Energy Efficiency', 'Carbon Footprint Reduction', 'Sustainable Hardware', 'Renewable Energy', 'Waste Reduction', 'Compliance', 'Reporting'],
+      benefits: ['Environmental responsibility', 'Cost savings', 'Compliance', 'Brand reputation'],
+      link: '/sustainable-it-solutions',
+      popular: true,
+      category: 'Sustainability',
+      rating: 4.8,
+      users: '220+',
+      freeTrial: '30 days'
+    },
+    {
+      title: 'AI-Powered Backup & Recovery',
+      description: 'Intelligent backup and recovery with AI-powered data protection, automated testing, and instant recovery capabilities.',
+      icon: HardDrive,
+      price: '$1,200/month',
+      originalPrice: '$1,800/month',
+      features: ['AI Data Protection', 'Automated Testing', 'Instant Recovery', 'Disaster Recovery', 'Data Deduplication', 'Encryption', 'Compliance', 'Monitoring'],
+      benefits: ['Reliable data protection', 'Fast recovery', 'Cost optimization', 'Peace of mind'],
+      link: '/ai-backup-recovery',
+      popular: true,
+      category: 'Data Protection',
+      rating: 4.8,
+      users: '400+',
+      freeTrial: '30 days'
+    },
+    {
+      title: 'Microservices Architecture',
+      description: 'Modern microservices architecture with containerization, orchestration, and scalable application development.',
+      icon: Settings,
+      price: '$2,000/month',
+      originalPrice: '$3,000/month',
+      features: ['Microservices Design', 'Containerization', 'Orchestration', 'API Gateway', 'Service Mesh', 'Monitoring', 'Security', 'Scalability'],
+      benefits: ['Scalable architecture', 'Better performance', 'Easier maintenance', 'Team productivity'],
+      link: '/microservices-architecture',
+      popular: true,
+      category: 'Architecture',
+      rating: 4.7,
+      users: '350+',
+      freeTrial: '30 days'
+    },
+    {
+      title: 'AI-Powered IT Support',
+      description: 'Intelligent IT support with AI-powered helpdesk, automated troubleshooting, and predictive issue resolution.',
+      icon: Users,
+      price: '$1,000/month',
+      originalPrice: '$1,500/month',
+      features: ['AI Helpdesk', 'Automated Troubleshooting', 'Predictive Resolution', 'Knowledge Base', 'Ticket Management', 'User Analytics', 'Self-Service', '24/7 Support'],
+      benefits: ['Faster resolution', 'Better user experience', 'Cost reduction', 'Proactive support'],
+      link: '/ai-it-support',
+      popular: true,
+      category: 'Support',
+      rating: 4.8,
+      users: '500+',
+      freeTrial: '30 days'
     }
   ];
 
@@ -3221,79 +3848,8 @@ const HomePage: React.FC = () => {
           
           <Navigation />
           
-          {/* Hero Section */}
-          <section className="relative pt-20 pb-16 overflow-hidden cyber-grid neural-network-bg particle-field">
-            <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20"></div>
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyan-500/10 via-transparent to-transparent"></div>
-            
-            {/* Floating Elements */}
-            <div className="absolute top-20 left-10 w-4 h-4 bg-cyan-400 rounded-full animate-bounce delay-100"></div>
-            <div className="absolute top-40 right-20 w-3 h-3 bg-purple-400 rounded-full animate-bounce delay-300"></div>
-            <div className="absolute bottom-20 left-1/4 w-2 h-2 bg-cyan-300 rounded-full animate-bounce delay-500"></div>
-            <div className="absolute top-60 right-1/3 w-3 h-3 bg-purple-300 rounded-full animate-bounce delay-700"></div>
-            
-            <div className="container mx-auto px-4 relative z-10">
-              <div className="text-center max-w-5xl mx-auto">
-                <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-400/20 mb-8 backdrop-blur-sm">
-                  <Sparkles className="w-4 h-4 text-cyan-400 mr-2 animate-pulse" />
-                  <span className="text-cyan-300 text-sm font-medium">Trusted by 500+ Fortune 500 Companies</span>
-                </div>
-                
-                <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight">
-                  Transform Your Business with
-                  <span className="block bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-pulse">
-                    AI-Powered Solutions
-                  </span>
-                </h1>
-                
-                <p className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 leading-relaxed max-w-4xl mx-auto">
-                  Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. 
-                  <span className="text-cyan-400 font-semibold"> Achieve 300% ROI</span> with our cutting-edge technology.
-                </p>
-                
-                <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
-                  <a
-                    href="/contact"
-                    className="group relative px-8 py-4 bg-gradient-to-r from-cyan-600 to-purple-600 text-white text-lg font-semibold rounded-xl hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25"
-                    onClick={handlePhoneClick}
-                  >
-                    <span className="relative z-10">Get Started Today</span>
-                    <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-xl blur opacity-75 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  </a>
-                  <a
-                    href="tel:+13024640950"
-                    className="flex items-center space-x-3 text-cyan-400 hover:text-white transition-all duration-300 text-lg font-medium group"
-                    onClick={handlePhoneClick}
-                  >
-                    <div className="p-2 bg-cyan-500/10 rounded-full group-hover:bg-cyan-500/20 transition-colors duration-300">
-                      <Phone className="w-5 h-5" />
-                    </div>
-                    <span>+1 302 464 0950</span>
-                  </a>
-                </div>
-                
-                {/* Stats */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-                  <div className="text-center">
-                    <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">500+</div>
-                    <div className="text-gray-300 text-sm">Enterprise Clients</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">99.9%</div>
-                    <div className="text-gray-300 text-sm">Uptime SLA</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl md:text-4xl font-bold text-pink-400 mb-2">300%</div>
-                    <div className="text-gray-300 text-sm">Average ROI</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">24/7</div>
-                    <div className="text-gray-300 text-sm">Expert Support</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
+          {/* Futuristic Hero Section */}
+          <FuturisticHero />
 
           {/* Micro SAAS Services Section */}
           <section className="py-20 bg-slate-800/50 relative overflow-hidden">
@@ -3703,6 +4259,242 @@ const HomePage: React.FC = () => {
                   <span>View All Specialized Solutions</span>
                   <ArrowRight className="w-5 h-5" />
                 </a>
+              </div>
+            </div>
+          </section>
+
+          {/* Testimonials Section */}
+          <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid">
+            <div className="container mx-auto px-4">
+              <div className="text-center mb-16">
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text-3d neon-text">
+                  What Our Clients Say
+                </h2>
+                <p className="text-xl text-gray-300 max-w-3xl mx-auto neon-pulse">
+                  Don't just take our word for it. Here's what industry leaders say about our solutions.
+                </p>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    <div className="flex text-yellow-400">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-5 h-5 fill-current" />
+                      ))}
+                    </div>
+                  </div>
+                  <p className="text-gray-300 mb-6 italic">
+                    "ZionTechGroup's AI solutions transformed our entire workflow. We've seen a 300% increase in productivity and our team loves the intuitive interface."
+                  </p>
+                  <div className="flex items-center">
+                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+                      JS
+                    </div>
+                    <div>
+                      <h4 className="text-white font-semibold">John Smith</h4>
+                      <p className="text-gray-400 text-sm">CEO, TechCorp Inc.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-purple-500/20 hover:border-purple-400/40 transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    <div className="flex text-yellow-400">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-5 h-5 fill-current" />
+                      ))}
+                    </div>
+                  </div>
+                  <p className="text-gray-300 mb-6 italic">
+                    "The quantum optimization tools are revolutionary. We've reduced our processing time by 99% and our energy costs by 60%. Absolutely game-changing."
+                  </p>
+                  <div className="flex items-center">
+                    <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+                      MJ
+                    </div>
+                    <div>
+                      <h4 className="text-white font-semibold">Maria Johnson</h4>
+                      <p className="text-gray-400 text-sm">CTO, Quantum Solutions</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-green-500/20 hover:border-green-400/40 transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    <div className="flex text-yellow-400">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-5 h-5 fill-current" />
+                      ))}
+                    </div>
+                  </div>
+                  <p className="text-gray-300 mb-6 italic">
+                    "Their AI-powered analytics helped us identify market opportunities we never knew existed. Revenue increased by 250% in just 6 months."
+                  </p>
+                  <div className="flex items-center">
+                    <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+                      DR
+                    </div>
+                    <div>
+                      <h4 className="text-white font-semibold">David Rodriguez</h4>
+                      <p className="text-gray-400 text-sm">VP Strategy, Global Dynamics</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-orange-500/20 hover:border-orange-400/40 transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    <div className="flex text-yellow-400">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-5 h-5 fill-current" />
+                      ))}
+                    </div>
+                  </div>
+                  <p className="text-gray-300 mb-6 italic">
+                    "The holographic workspace is the future of remote work. Our team collaboration has never been more efficient and engaging."
+                  </p>
+                  <div className="flex items-center">
+                    <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+                      SL
+                    </div>
+                    <div>
+                      <h4 className="text-white font-semibold">Sarah Lee</h4>
+                      <p className="text-gray-400 text-sm">Head of Innovation, FutureTech</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-pink-500/20 hover:border-pink-400/40 transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    <div className="flex text-yellow-400">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-5 h-5 fill-current" />
+                      ))}
+                    </div>
+                  </div>
+                  <p className="text-gray-300 mb-6 italic">
+                    "The neural memory assistant is incredible. It learns our patterns and anticipates our needs. It's like having a super-intelligent colleague."
+                  </p>
+                  <div className="flex items-center">
+                    <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+                      AW
+                    </div>
+                    <div>
+                      <h4 className="text-white font-semibold">Alex Wang</h4>
+                      <p className="text-gray-400 text-sm">Lead Developer, AI Innovations</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-teal-500/20 hover:border-teal-400/40 transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    <div className="flex text-yellow-400">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-5 h-5 fill-current" />
+                      ))}
+                    </div>
+                  </div>
+                  <p className="text-gray-300 mb-6 italic">
+                    "ZionTechGroup's security solutions are top-notch. We've had zero breaches since implementation and our compliance scores are perfect."
+                  </p>
+                  <div className="flex items-center">
+                    <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+                      EB
+                    </div>
+                    <div>
+                      <h4 className="text-white font-semibold">Emily Brown</h4>
+                      <p className="text-gray-400 text-sm">CISO, SecureCorp</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* FAQ Section */}
+          <section className="py-20 bg-slate-900 cyber-grid">
+            <div className="container mx-auto px-4">
+              <div className="text-center mb-16">
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text-3d neon-text">
+                  Frequently Asked Questions
+                </h2>
+                <p className="text-xl text-gray-300 max-w-3xl mx-auto neon-pulse">
+                  Get answers to common questions about our AI and IT solutions.
+                </p>
+              </div>
+              
+              <div className="max-w-4xl mx-auto space-y-6">
+                <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300">
+                  <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
+                    <span className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-sm mr-4">1</span>
+                    What makes ZionTechGroup's AI solutions different from competitors?
+                  </h3>
+                  <p className="text-gray-300 ml-12">
+                    Our AI solutions combine cutting-edge quantum computing principles with advanced machine learning algorithms, 
+                    offering 99.9% efficiency rates and real-time adaptation capabilities. We provide enterprise-grade security, 
+                    24/7 support, and custom integration services that most competitors can't match.
+                  </p>
+                </div>
+
+                <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-purple-500/20 hover:border-purple-400/40 transition-all duration-300">
+                  <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
+                    <span className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white font-bold text-sm mr-4">2</span>
+                    Do you offer free trials for your services?
+                  </h3>
+                  <p className="text-gray-300 ml-12">
+                    Yes! Most of our services come with free trial periods ranging from 7 to 30 days, depending on the complexity 
+                    of the solution. This allows you to test our AI capabilities, explore features, and see the value before making 
+                    any commitment. No credit card required for most trials.
+                  </p>
+                </div>
+
+                <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-green-500/20 hover:border-green-400/40 transition-all duration-300">
+                  <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
+                    <span className="w-8 h-8 bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center text-white font-bold text-sm mr-4">3</span>
+                    How quickly can you implement your solutions in our organization?
+                  </h3>
+                  <p className="text-gray-300 ml-12">
+                    Implementation timelines vary based on the solution complexity and your organization's requirements. 
+                    Simple micro SAAS solutions can be deployed in 1-2 weeks, while enterprise AI platforms typically 
+                    take 4-8 weeks. We provide dedicated project managers and technical support throughout the process.
+                  </p>
+                </div>
+
+                <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-orange-500/20 hover:border-orange-400/40 transition-all duration-300">
+                  <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
+                    <span className="w-8 h-8 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center text-white font-bold text-sm mr-4">4</span>
+                    What kind of support do you provide?
+                  </h3>
+                  <p className="text-gray-300 ml-12">
+                    We offer comprehensive 24/7 support including live chat, email support, phone support, and dedicated 
+                    account managers for enterprise clients. Our support team includes AI specialists, security experts, 
+                    and integration specialists who can help with any technical challenges or questions.
+                  </p>
+                </div>
+
+                <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-pink-500/20 hover:border-pink-400/40 transition-all duration-300">
+                  <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
+                    <span className="w-8 h-8 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-sm mr-4">5</span>
+                    Are your solutions secure and compliant with industry standards?
+                  </h3>
+                  <p className="text-gray-300 ml-12">
+                    Absolutely. All our solutions are built with enterprise-grade security, including end-to-end encryption, 
+                    SOC 2 Type II compliance, GDPR compliance, and regular security audits. We also offer custom compliance 
+                    solutions for specific industry requirements like HIPAA, PCI-DSS, and ISO 27001.
+                  </p>
+                </div>
+
+                <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-teal-500/20 hover:border-teal-400/40 transition-all duration-300">
+                  <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
+                    <span className="w-8 h-8 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-bold text-sm mr-4">6</span>
+                    Can I customize the AI solutions to fit my specific business needs?
+                  </h3>
+                  <p className="text-gray-300 ml-12">
+                    Yes! We specialize in custom AI solutions tailored to your specific business requirements. Our team of 
+                    AI engineers and data scientists can modify existing solutions or build completely custom AI applications 
+                    that integrate seamlessly with your existing systems and workflows.
+                  </p>
+                </div>
               </div>
             </div>
           </section>
