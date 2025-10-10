@@ -259,7 +259,8 @@
         {/* Services Grid */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
-                {services.map((service) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {services.map((service) => (
               <div
                 key={service.id}
                 className={`bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105 ${
@@ -331,7 +332,6 @@
               </button>
             </div>
           ))}
-            </div>
           </div>
         </section>
 

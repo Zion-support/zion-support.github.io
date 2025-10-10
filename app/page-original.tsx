@@ -84,7 +84,7 @@ const HomePage: React.FC = React.memo((props) => {
             addressLocality: 'Middletown',
             addressRegion: 'DE',
             postalCode: '19709',
-            addressCountry: 'US'}
+            addressCountry: 'US'
           }
         }}
       />
@@ -122,16 +122,15 @@ const HomePage: React.FC = React.memo((props) => {
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50"
-         aria-label="
-          Skip to main content
-        ">
+          aria-label="Skip to main content"
+        >
           Skip to main content
         </a>
       {/* Content Promotion Banner */}
       <Suspense fallback={<div className="h-16 bg-gray-100 animate-pulse"></div>}>
         <ContentPromotionBanner />
       </Suspense>
-      <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50" aria-label="Skip to main content">Skip to main content</a><main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main" id="main-content">
+      <main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main">
         {/* Hero Section */}
         <section
           className={`text-center mb-16 transition-all duration-1000 cyber-scan-line ${
@@ -1618,7 +1617,6 @@ const HomePage: React.FC = React.memo((props) => {
       {/* Footer */}
       <Footer />
     </div>
-    </>
   )
 }
 export default HomePage
