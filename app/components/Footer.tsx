@@ -85,8 +85,14 @@ const Footer: React.FC = memo(() => {
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'Blog', href: '/blog' },
     { name: 'Pricing', href: '/pricing' },
+<<<<<<< HEAD
     { name: 'Demo', href: '/demo' },
     { name: 'Consultation', href: '/consultation' }
+=======
+    { name: 'Micro SAAS', href: '/micro-saas' },
+    { name: 'AI Services', href: '/ai-services' },
+    { name: 'IT Services', href: '/it-services' }
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8860
   ];
 
   const supportLinks = [
